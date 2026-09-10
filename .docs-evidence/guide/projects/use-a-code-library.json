@@ -1,0 +1,10 @@
+{
+  "sources": ["dashboard/app/controllers/libraries_controller.rb", "dashboard/app/models/library.rb"],
+  "tests": [],
+  "routes": ["GET /libraries", "GET /projects/libraries"],
+  "flags": [],
+  "journey": null,
+  "verification": {"result": "STRONGLY_SUPPORTED", "revision": "9793f8d36ae", "date": "2026-09-09", "notes": "Library routes and model from controller code. Library manager UI not exercised in journey."},
+  "screenshots": [],
+  "unresolved": ["Library manager UI steps are inferred from code; not verified in browser."]
+}

@@ -1,0 +1,40 @@
+{
+  "sources": [
+    "dashboard/app/models/user.rb",
+    "dashboard/config/initializers/devise.rb",
+    "dashboard/config/initializers/session_store.rb",
+    "dashboard/app/controllers/omniauth_callbacks_controller.rb",
+    "dashboard/app/models/authentication_option.rb",
+    "dashboard/app/models/ability.rb",
+    "dashboard/app/models/user_permission.rb",
+    "dashboard/app/controllers/lti_v1_controller.rb",
+    "dashboard/lib/policies/child_account.rb",
+    "lib/cdo/shared_constants.rb"
+  ],
+  "tests": [
+    "dashboard/test/models/ability_test.rb",
+    "frontend/packages/e2e-tests/tests/sign-in/signing-in.spec.ts"
+  ],
+  "routes": [
+    "GET /users/sign_in",
+    "POST /users/sign_in",
+    "GET /users/auth/:provider",
+    "GET /users/auth/:provider/callback",
+    "POST /lti/v1/login",
+    "POST /lti/v1/authenticate",
+    "PATCH /users/user_type"
+  ],
+  "flags": ["frontend_studio_enabled"],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "All claims from code analysis. Downgrade guard OBSERVED via rails runner. OmniAuth providers from devise.rb. Section login types from SharedConstants."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "How does an LTI launch hand off into the Devise session cookie",
+    "Three ParentMailer methods have no in-repo caller"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "sources": ["lib/cdo/shared_constants.rb", "apps/src/code-studio/headerShare.js", "dashboard/app/controllers/projects_controller.rb"],
+  "tests": [],
+  "routes": ["GET /projects/:project_type/:channel_id/can_publish_age_status"],
+  "flags": [],
+  "journey": null,
+  "verification": {"result": "STRONGLY_SUPPORTED", "revision": "9793f8d36ae", "date": "2026-09-09", "notes": "All four tiers and their members read directly from shared_constants.rb."},
+  "screenshots": [],
+  "unresolved": []
+}

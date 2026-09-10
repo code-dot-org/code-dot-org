@@ -1,0 +1,36 @@
+{
+  "sources": [
+    "apps/src/templates/studioHomepages/TeacherHomepage.jsx"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts"
+  ],
+  "routes": [
+    "GET /home"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09"
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/images/your-home-page-home.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/teachers/images/your-home-page-section-cards.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/teachers/images/your-home-page-new-class-section.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

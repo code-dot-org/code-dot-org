@@ -1,0 +1,18 @@
+{
+  "sources": [
+    "apps/src/aichat",
+    "apps/src/ailab"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Merged from train-an-ai-model (STRONGLY_SUPPORTED) and use-ai-chat (STRONGLY_SUPPORTED). Lowest grade: STRONGLY_SUPPORTED."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

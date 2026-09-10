@@ -1,0 +1,38 @@
+{
+  "sources": [
+    "dashboard/app/controllers/pd/workshop_dashboard_controller.rb",
+    "dashboard/app/controllers/api/v1/pd/workshops_controller.rb",
+    "dashboard/app/controllers/pd/workshop_user_management_controller.rb",
+    "dashboard/app/controllers/api/v1/pd/workshop_summary_report_controller.rb",
+    "dashboard/app/controllers/api/v1/pd/teacher_attendance_report_controller.rb",
+    "dashboard/app/models/ability.rb"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/acquisition_products/pd/dashboard_view.feature",
+    "dashboard/test/ui/features/acquisition_products/pl_landing_page.feature"
+  ],
+  "routes": [
+    "GET /pd/workshop_dashboard",
+    "GET /pd/workshop_dashboard/*path",
+    "GET /api/v1/pd/workshops",
+    "GET /pd/workshop_user_management/facilitator_courses"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/professional-learning.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Workshop dashboard controller confirmed. Cucumber features confirm Facilitator Center, Workshop Organizer, and Regional Partner Center tabs on PL page. Dashboard returns 404 for teachers without permission (confirmed in browser). CanCanCan abilities for WORKSHOP_ADMIN, WORKSHOP_ORGANIZER, PROGRAM_MANAGER, FACILITATOR confirmed in ability.rb."
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/professional-learning/images/manage-workshops-workshop-dashboard.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/professional-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "PL tabs crop skipped: workshop_admin role sees 'Extra Links' on PL landing, not the Facilitator Center / Workshop Organizer / Regional Partner Center tabs described in the docs. Those tabs appear for facilitator or workshop_organizer roles. A second journey with one of those roles would be needed."
+  ]
+}

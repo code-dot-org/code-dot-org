@@ -1,0 +1,25 @@
+{
+  "sources": [
+    "dashboard/app/models/sections/google_classroom_section.rb",
+    "dashboard/app/controllers/api/v1/roster/clever/sections_controller.rb",
+    "dashboard/app/controllers/lti/v1/sections_controller.rb",
+    "dashboard/lib/policies/lti.rb"
+  ],
+  "tests": [],
+  "routes": [
+    "GET /api/v1/roster/clever/sections",
+    "POST /lti/v1/sync_course"
+  ],
+  "flags": [
+    "google_classroom_family_name"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Roster sync code examined for all three providers. Cannot browser-verify without external OAuth credentials."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

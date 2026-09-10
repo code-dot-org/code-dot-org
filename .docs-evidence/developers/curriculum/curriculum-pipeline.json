@@ -1,0 +1,26 @@
+{
+  "sources": [
+    "bin/cron/commit_content",
+    "bin/cron/merge_lb_to_staging",
+    "bin/cron/deploy_to_levelbuilder",
+    "bin/content-push",
+    "dashboard/lib/services/script_seed.rb",
+    "dashboard/lib/tasks/seed.rake",
+    "dashboard/lib/services/level_files.rb"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [
+    "DTS (deploy to staging) Slack topic flag",
+    "DTL (deploy to levelbuilder) Slack topic flag"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Pipeline scripts read in full. merge_lb_to_staging confirmed: creates dts_candidate branch, opens and merges PR, gated on DevelopersTopic.dts?. commit_content confirmed: runs bin/content-push on the levelbuilder server. deploy_to_levelbuilder confirmed: merges test green commit into levelbuilder with 5-minute delay. Seed task lists confirmed from seed.rake source. Robo-commit message format confirmed from git log (commit b42439deba0)."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

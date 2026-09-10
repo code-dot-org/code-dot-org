@@ -1,0 +1,26 @@
+{
+  "sources": [
+    "dashboard/app/controllers/pd/professional_learning_controller.rb",
+    "dashboard/app/models/plc/user_course_enrollment.rb",
+    "dashboard/app/models/plc/course.rb",
+    "dashboard/app/models/course_offering.rb"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/acquisition_products/pl_landing_page.feature"
+  ],
+  "routes": [
+    "GET /professional-learning/courses",
+    "GET /plc/user_course_enrollments",
+    "POST /plc/course_units/launch_plc_course"
+  ],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Self-paced catalog rendered at /professional-learning/courses, H1 'Explore self-paced professional learning', 40+ course cards with Start buttons. 29 PLC courses in local DB."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

@@ -1,0 +1,27 @@
+{
+  "sources": [
+    "apps/src/code-studio/components/Instructions.jsx",
+    "apps/src/code-studio/components/InstructionsDialog.jsx",
+    "apps/src/templates/instructions/InstructionsCSF.jsx"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Alt text fixed: instructions-panel image shows the Instructions button label (not a full panel as previously claimed); show-code-toggle image shows 'Show Code' (not 'Show Text' as previously claimed). Choose-an-activity section INFERRED."
+  },
+  "screenshots": [
+    {"path": "docs/students/learning/images/working-on-a-level-run-button.png", "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/learning/images/working-on-a-level-reset-button.png", "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/learning/images/working-on-a-level-start-over.png", "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/learning/images/working-on-a-level-instructions-panel.png", "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/learning/images/working-on-a-level-show-code-toggle.png", "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts", "revision": "9793f8d36ae"}
+  ],
+  "unresolved": []
+}

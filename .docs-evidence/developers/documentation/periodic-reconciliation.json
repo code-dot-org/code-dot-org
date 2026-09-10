@@ -1,0 +1,24 @@
+{
+  "sources": [
+    "docs/site/scripts/evidence-check.mjs",
+    ".docs-evidence/schema.json"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Parity check from evidence-check.mjs. Vanished-sources and orphan-images checks are shell one-liners. Journey runner from platform.md."
+  },
+  "screenshots": [
+    {
+      "path": "docs/developers/documentation/images/*.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/misc-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

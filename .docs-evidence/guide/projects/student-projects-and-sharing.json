@@ -1,0 +1,22 @@
+{
+  "sources": [
+    "apps/src/templates/projects/ProjectsList.jsx",
+    "apps/src/code-studio/components/ShareDialog.jsx"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts"
+  ],
+  "routes": [
+    "GET /teacher_dashboard/sections/:id/projects"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Merged from see-student-projects (VERIFIED), manage-sharing-for-your-class (STRONGLY_SUPPORTED), share-a-library-with-your-class (INFERRED). Lowest: INFERRED for library sharing."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

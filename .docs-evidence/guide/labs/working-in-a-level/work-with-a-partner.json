@@ -1,0 +1,13 @@
+{
+  "sources": ["dashboard/app/controllers/pairings_controller.rb", "apps/src/code-studio/pairing.js", "dashboard/app/models/paired_user_level.rb"],
+  "tests": [""],
+  "routes": ["GET /pairing", "PATCH /pairing"],
+  "flags": [""],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Not verified in browser; pairing requires two simultaneous sessions"
+  }
+}

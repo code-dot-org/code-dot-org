@@ -1,0 +1,22 @@
+{
+  "sources": [
+    "dashboard/app/models/ability.rb",
+    "dashboard/app/models/unit.rb",
+    "dashboard/app/models/unit_group.rb",
+    "dashboard/app/models/course_offering.rb",
+    "lib/cdo/shared_constants/curriculum/shared_course_constants.rb",
+    "dashboard/app/models/concerns/curriculum/course_types.rb"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Visibility matrix derived from ability.rb can:read rules for UnitGroup (lines 379-392), Unit.has_pilot_access? (line 1947), UnitGroup.has_pilot_access? (line 649), and catalog filter assignable_published_for_students_course_offerings (line 244). Cross-referenced with published_state constants."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

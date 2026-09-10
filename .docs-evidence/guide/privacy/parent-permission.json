@@ -1,0 +1,24 @@
+{
+  "sources": [
+    "dashboard/lib/policies/child_account.rb",
+    "dashboard/app/models/parental_permission_request.rb",
+    "dashboard/app/controllers/policy_compliance_controller.rb",
+    "dashboard/app/mailers/parent_mailer.rb",
+    "dashboard/test/ui/features/platform/policy_compliance/parental_permission.feature"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/tests/policy-compliance/parental-permission.spec.ts",
+    "frontend/packages/e2e-tests/tests/policy-compliance/lockout-phase.spec.ts"
+  ],
+  "routes": ["GET /policy_compliance/pending_permission_request", "GET /lockout"],
+  "flags": ["cpa_experience", "cap_<state_code>_lockout_date_override"],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "CAP flow confirmed from Policies::ChildAccount code, Cucumber feature, and Playwright specs. Lockout panel UI text from parental_permission.feature."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

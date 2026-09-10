@@ -1,0 +1,12 @@
+{
+  "sources": ["apps/src/blockly/constants.ts", "apps/src/blockly/blocklyWrapper.ts", "frontend/packages/blockly"],
+  "tests": [""],
+  "routes": [""],
+  "flags": ["blockly-keyboard-navigation", "blockly_i18n_in_text", "cdo-blockly-usage"],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09"
+  }
+}

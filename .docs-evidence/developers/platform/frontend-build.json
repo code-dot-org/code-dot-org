@@ -1,0 +1,41 @@
+{
+  "sources": [
+    "apps/README.md",
+    "apps/webpackEntryPoints.js",
+    "apps/package.json",
+    "apps/webpack.config.js",
+    "frontend/AGENTS.md",
+    "frontend/README.md",
+    "frontend/turbo.json",
+    "frontend/packages/component-library/package.json",
+    "frontend/packages/component-library-styles/package.json",
+    "frontend/packages/core/package.json",
+    "frontend/apps/studio/src/modules/labs/router/getLabEntrypoint.ts",
+    "dashboard/app/controllers/frontend_studio_controller.rb",
+    "dashboard/config/routes.rb",
+    "config/i18n/locales.yml",
+    "config/i18n/cdo-languages.csv",
+    "lib/cdo/global_edition.rb",
+    "lib/cdo/brand.rb"
+  ],
+  "tests": [],
+  "routes": [
+    "GET /frontend-studio/*path"
+  ],
+  "flags": [
+    "frontend_studio_enabled",
+    "global_edition_enabled_regions"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Portal deps from apps/package.json. frontend_studio_enabled default from FrontendStudioController code. Entry point count from webpackEntryPoints.js. Package count from ls. No Crowdin config found by grep."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Translation sync pipeline not visible in this codebase -- runs externally.",
+    "DSCO-to-MUI migration state not tracked in a single in-repo document."
+  ]
+}

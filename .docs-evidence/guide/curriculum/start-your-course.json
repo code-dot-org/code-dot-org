@@ -1,0 +1,23 @@
+{
+  "sources": [
+    "dashboard/app/controllers/home_controller.rb",
+    "apps/src/templates/studioHomepages",
+    "dashboard/app/controllers/lessons_controller.rb"
+  ],
+  "tests": [],
+  "routes": [
+    "GET /home",
+    "GET /",
+    "GET /s/:script_name/lessons/:position/student"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/assign-course.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Student created, joined section with assigned course, navigated to /home. Student lesson plan route confirmed by controller code."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

@@ -1,0 +1,40 @@
+{
+  "sources": [
+    "dashboard/app/controllers/scripts_controller.rb",
+    "dashboard/app/models/unit.rb",
+    "apps/src/templates/courseOverview",
+    "dashboard/app/controllers/lessons_controller.rb",
+    "dashboard/app/controllers/lessons/slides_controller.rb",
+    "apps/src/templates/lessonOverview",
+    "apps/src/templates/teacherNavigation/lessonMaterials",
+    "dashboard/lib/services/curriculum_pdfs.rb",
+    "dashboard/lib/services/curriculum_pdfs/resources.rb"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/teacher_tools/script_overview.feature"
+  ],
+  "routes": [
+    "GET /s/:script_name",
+    "GET /s/:script_name/vocab",
+    "GET /s/:script_name/standards",
+    "GET /s/:script_name/code",
+    "GET /s/:script_name/resources",
+    "GET /s/:script_name/lessons/:position",
+    "GET /s/:script_name/lessons/:position/slides",
+    "GET /s/:script_name/lessons/:position/student"
+  ],
+  "flags": [
+    "use-ghostscript-to-generate-pdfs"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Code and Cucumber features confirm unit overview tabs, lesson plan structure, slides route, and PDF generation. Ghostscript flag gates a PDF generation fallback only."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "The existing docs/pdf-lesson-plan-generation.md is stale and should be deleted or replaced."
+  ]
+}

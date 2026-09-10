@@ -1,0 +1,18 @@
+{
+  "sources": [
+    "dashboard/app/controllers/registrations_controller.rb",
+    "dashboard/app/models/user.rb"
+  ],
+  "tests": [],
+  "routes": ["DELETE /users"],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Merged from teachers/account/delete-your-account (STRONGLY_SUPPORTED) and students/account/delete-your-account (STRONGLY_SUPPORTED)."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

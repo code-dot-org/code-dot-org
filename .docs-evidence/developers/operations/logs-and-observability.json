@@ -1,0 +1,30 @@
+{
+  "sources": [
+    "docs/where-are-the-logs.md",
+    "docs/logging.md",
+    "docs/log-formats.md",
+    "docs/server-sessions.md",
+    "dashboard/app/controllers/browser_events_controller.rb",
+    "apps/src/logToCloud.js"
+  ],
+  "tests": [],
+  "routes": [
+    "POST /browser_events/put_logs",
+    "POST /browser_events/put_metric_data"
+  ],
+  "flags": [
+    "browser-events-enabled",
+    "browser-cloudwatch-metrics",
+    "frontend-observability-enabled",
+    "frontend-observability-sampling-config"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Log locations from docs/where-are-the-logs.md and docs/logging.md. Server access from docs/server-sessions.md. Browser telemetry from controller and logToCloud.js. Staleness from existing-docs.md audit."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

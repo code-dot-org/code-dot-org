@@ -1,0 +1,12 @@
+{
+  "sources": ["apps/src/lab2", "dashboard/app/models/levels", "dashboard/app/models/game.rb", "apps/webpackEntryPoints.js"],
+  "tests": [""],
+  "routes": [""],
+  "flags": [""],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09"
+  }
+}

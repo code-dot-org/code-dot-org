@@ -1,0 +1,44 @@
+{
+  "sources": [
+    "dashboard/app/jobs/evaluate_rubric_job.rb",
+    "dashboard/app/jobs/concerns/ai_rubric_config.rb",
+    "dashboard/app/models/rubric_ai_evaluation.rb",
+    "dashboard/app/models/learning_goal_ai_evaluation.rb",
+    "dashboard/lib/policies/ai.rb",
+    "lib/cdo/shared_constants.rb",
+    "apps/src/templates/rubrics/RunAIAssessmentButton.jsx",
+    "apps/src/templates/rubrics/AiAssessmentBox.jsx",
+    "apps/src/templates/rubrics/AiAssessmentFeedbackRadio.jsx",
+    "apps/src/templates/rubrics/RubricSettings.jsx",
+    "apps/i18n/common/en_us.json",
+    "dashboard/app/controllers/learning_goal_ai_evaluation_feedbacks_controller.rb",
+    "dashboard/app/controllers/ai_interaction_feedback_controller.rb"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/teacher_tools/rubrics/ai_evaluate_student_code.feature",
+    "dashboard/test/ui/features/teacher_tools/rubrics/teacher_view_of_rubric.feature"
+  ],
+  "routes": [
+    "POST /rubrics/:id/run_ai_evaluations_for_user",
+    "POST /rubrics/:id/run_ai_evaluations_for_all",
+    "GET /rubrics/:id/get_ai_evaluations",
+    "GET /rubrics/:id/ai_evaluation_status_for_user",
+    "POST /learning_goal_ai_evaluation_feedbacks",
+    "POST /ai_interaction_feedback",
+    "POST /api/v1/users/ai_rubrics_disabled"
+  ],
+  "flags": [
+    "ai-gateway-enabled"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Button labels verified from i18n: 'Run AI Assessment for Project' (runAiAssessment), 'Run AI Assessment for Class' (runAiAssessmentClass). Verified teacher prerequisite linked with instructions for checking AI toggle. Journey BLOCKED: requires rubric level with student work and AI provider credentials."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Cannot verify the full AI evaluation flow locally: no AI provider credentials in development."
+  ]
+}

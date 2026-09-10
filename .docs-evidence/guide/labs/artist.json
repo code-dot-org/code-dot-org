@@ -1,0 +1,44 @@
+{
+  "sources": [
+    "apps/src/turtle",
+    "apps/src/turtle/dropletConfig.js",
+    "apps/src/turtle/blocks.js"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Workspace retaken with blocks added via Blockly API. Canvas still shows turtle at start (trail not visible in static crop)."
+  },
+  "screenshots": [
+    {
+      "path": "docs/students/labs/images/artist-workspace.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/artist-toolbox.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/artist-run-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/artist-show-code.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "Orientation/region images for regions that render empty or in a cross-origin iframe locally were removed (image-truth rule); retake when a realistic state is reachable."
+  ]
+}

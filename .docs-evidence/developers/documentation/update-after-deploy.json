@@ -1,0 +1,20 @@
+{
+  "sources": [
+    "docs/site/scripts/affected-docs.sh",
+    "docs/site/package.json",
+    ".docs-evidence/schema.json",
+    ".docs-work/domains.md"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "affected-docs.sh written and tested against HEAD~20..HEAD. npm script wired. Domain list from domains.md."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

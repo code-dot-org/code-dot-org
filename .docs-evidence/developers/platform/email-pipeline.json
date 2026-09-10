@@ -1,0 +1,32 @@
+{
+  "sources": [
+    "lib/cdo/poste.rb",
+    "bin/cron/deliver_poste_messages_process.rb",
+    "config/config.yml.erb",
+    "dashboard/config/environments/production.rb",
+    "dashboard/config/environments/staging.rb",
+    "dashboard/config/environments/development.rb",
+    "dashboard/config/environments/test.rb",
+    "dashboard/app/mailers/application_mailer.rb",
+    "dashboard/app/mailers/email_delivery_interceptor.rb",
+    "dashboard/app/mailers/email_delivery_observer.rb",
+    "dashboard/config/initializers/email_delivery_watchers.rb",
+    "lib/cdo/mailjet.rb",
+    "dashboard/app/mailers/pd/workshop_mailjet_mailer.rb",
+    "dashboard/app/models/sections/section.rb"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [
+    "use_mailjet"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "OBSERVED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "ActionMailer delivery method verified OBSERVED via rails runner (Poste2::DeliveryMethod). Poste2 queue-to-MySQL, SES SMTP relay, and Mailjet DCDO gate confirmed by code reading. SMTP endpoint from config.yml.erb."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

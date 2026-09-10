@@ -1,0 +1,45 @@
+{
+  "sources": [
+    "apps/src/dance",
+    "apps/src/dance/constants.js"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Workspace + 4 region crops. Stage retaken after Run; shows dancers."
+  },
+  "screenshots": [
+    {
+      "path": "docs/students/labs/images/dance-party-workspace.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/dance-party-stage.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/dance-party-song-picker.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/dance-party-toolbox.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/dance-party-run-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ]
+}

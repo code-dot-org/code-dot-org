@@ -1,0 +1,39 @@
+{
+  "sources": [
+    "dashboard/app/controllers/sessions_controller.rb",
+    "dashboard/app/views/devise/sessions/new.html.haml"
+  ],
+  "tests": [],
+  "routes": ["GET /users/sign_in", "POST /users/sign_in"],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/sign-in-student.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Merged from teachers/account/sign-in (STRONGLY_SUPPORTED) and students/getting-started/sign-in (VERIFIED). Lowest grade applies to teacher sections only."
+  },
+  "screenshots": [
+    {
+      "path": "docs/guide/getting-started/images/sign-in-forgot-password-link.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/sign-in-student.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/sign-in-section-code-field.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/sign-in-student.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/sign-in-picture-password-grid.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/sign-in-student.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/sign-in-word-password-entry.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/sign-in-student.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

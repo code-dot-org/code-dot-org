@@ -1,0 +1,32 @@
+{
+  "sources": [
+    "dashboard/app/helpers/aichat_safety_helper.rb",
+    "dashboard/app/helpers/ai_podcasts_safety_helper.rb",
+    "dashboard/app/controllers/profanity_controller.rb",
+    "lib/cdo/web_purify.rb",
+    "dashboard/app/controllers/aidiff_threads_controller.rb",
+    "dashboard/lib/policies/ai.rb",
+    "apps/src/aichat/api/client/helpers/safetyHelpers.ts",
+    "dashboard/app/models/learning_goal.rb",
+    "dashboard/db/schema.rb"
+  ],
+  "tests": [],
+  "routes": [
+    "POST /aichat/find_toxicity",
+    "POST /profanity/find"
+  ],
+  "flags": [
+    "aichat-output-image-llm-safety-judge-enabled"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Rewritten from capability inventory to help-oriented sections. AI evaluation availability stated: levels where learning_goals.ai_enabled is true, currently in CSD/CSP units with rubrics. Presence of Run AI Assessment button named as the user-visible indicator. Verified teacher prerequisite linked."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Exact list of course names with AI-enabled rubric levels cannot be enumerated from code alone; depends on curriculum data (learning_goals.ai_enabled per level). CSD and CSP are the known carriers per the announcements dialog text."
+  ]
+}

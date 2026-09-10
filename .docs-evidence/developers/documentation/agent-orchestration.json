@@ -1,0 +1,18 @@
+{
+  "sources": [
+    ".docs-work/domains.md",
+    ".docs-work/decisions.md"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Role model from domains.md. Working area layout from direct observation. Decision history from decisions.md."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

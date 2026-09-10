@@ -1,0 +1,26 @@
+{
+  "sources": [
+    "dashboard/app/models/pd/application/principal_approval_application.rb",
+    "dashboard/app/models/pd/application/teacher_application.rb",
+    "dashboard/app/mailers/pd/application/teacher_application_mailer.rb",
+    "dashboard/app/views/pd/application/teacher_application_mailer/admin_approval.html.haml",
+    "lib/cdo/shared_constants/pd/principal_approval_application_constants.rb",
+    ".docs-work/raw/pd-application-routing.md"
+  ],
+  "tests": [
+    "dashboard/test/models/pd/application/principal_approval_application_test.rb"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Public application forms and their routes were removed in commits 2f2f2700ad3 (2025-09-03) and 15fdd07b819 (2025-09-04). No in-studio application or principal approval form exists at this revision. The PrincipalApprovalApplication model and mailer templates still exist but the routes and controllers are gone. pd_application_principal_approval_url is undefined and would raise NoMethodError. Production intake is external at code.org/apply. Email template for admin_approval still references the broken URL helper."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "pd_application_principal_approval_url is undefined (route removed 2025-09-03); four mailer templates reference it and would raise if rendered."
+  ]
+}

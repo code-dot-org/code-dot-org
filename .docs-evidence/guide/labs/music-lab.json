@@ -1,0 +1,41 @@
+{
+  "sources": [
+    "apps/src/music",
+    "apps/src/music/views/Controls.tsx",
+    "apps/src/music/views/AdvancedControls.tsx"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Toolbox retaken with Sounds flyout open showing blocks. Timeline still empty. Workspace shows sound blocks."
+  },
+  "screenshots": [
+    {
+      "path": "docs/students/labs/images/music-lab-workspace.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/music-lab-toolbox.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/music-lab-playback-controls.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "Sound library: dropdown inside Blockly field, no stable crop selector",
+    "Advanced controls: not exposed on the freeplay level used",
+    "Orientation/region images for regions that render empty or in a cross-origin iframe locally were removed (image-truth rule); retake when a realistic state is reachable."
+  ]
+}

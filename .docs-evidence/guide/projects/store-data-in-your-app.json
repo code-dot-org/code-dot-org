@@ -1,0 +1,10 @@
+{
+  "sources": ["dashboard/app/controllers/datablock_storage_controller.rb", "dashboard/app/models/datablock_storage_table.rb", "dashboard/app/controllers/datasets_controller.rb"],
+  "tests": [],
+  "routes": ["GET /datablock_storage/:channel_id/*", "GET /datasets"],
+  "flags": ["datablock_storage_request_limit_per_ten_seconds"],
+  "journey": null,
+  "verification": {"result": "STRONGLY_SUPPORTED", "revision": "9793f8d36ae", "date": "2026-09-09", "notes": "Rate limit and data model from controller and model code."},
+  "screenshots": [],
+  "unresolved": []
+}

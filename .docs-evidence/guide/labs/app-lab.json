@@ -1,0 +1,80 @@
+{
+  "sources": [
+    "apps/src/applab",
+    "apps/src/applab/designElements",
+    "apps/src/applab/designElements/library.js",
+    "apps/src/applab/designElements/button.jsx",
+    "apps/src/applab/designElements/screen.jsx",
+    "apps/src/applab/designElements/ZOrderRow.jsx",
+    "apps/src/applab/designElements/CopyElementToScreenButton.jsx",
+    "apps/src/applab/designElements/DuplicateElementButton.jsx",
+    "apps/src/applab/designElements/DeleteElementButton.jsx",
+    "apps/src/applab/designElements/DefaultScreenButtonPropertyRow.jsx",
+    "apps/src/applab/designElements/ThemeDropdown.tsx",
+    "apps/src/applab/constants.js",
+    "apps/src/applab/dropletConfig.js",
+    "apps/src/applab/ApplabVisualizationColumn.jsx",
+    "apps/src/templates/ShowCodeToggle.js",
+    "apps/src/lib/tools/jsdebugger/DebugConsole.jsx",
+    "apps/src/lib/util/audioApiDropletConfig.js",
+    "apps/i18n/applab/en_us.json",
+    "apps/i18n/common/en_us.json"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Reference page with orientation and per-region crops from journey. 9 screenshots total: 1 viewport + 8 locator crops."
+  },
+  "screenshots": [
+    {
+      "path": "docs/students/labs/images/app-lab-element-tray.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/app-lab-properties-panel.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/app-lab-screen-dropdown.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/app-lab-toolbox.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/app-lab-show-code-toggle.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/app-lab-run-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/app-lab-reset-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/app-lab-debug-console.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "Orientation/region images for regions that render empty or in a cross-origin iframe locally were removed (image-truth rule); retake when a realistic state is reachable."
+  ]
+}

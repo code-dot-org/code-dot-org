@@ -1,0 +1,14 @@
+{
+  "sources": ["apps/src/maze", "apps/src/maze/blocks.js", "apps/src/maze/beeBlocks.js", "apps/src/maze/harvesterBlocks.js", "apps/src/maze/collectorBlocks.js"],
+  "tests": ["frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts"],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+  "verification": {"result": "VERIFIED", "revision": "9793f8d36ae", "date": "2026-09-10", "notes": "Workspace + 2 region crops. Toolbox flyout empty in this simple level. Feedback dialog not captured."},
+  "screenshots": [
+    {"path": "docs/students/labs/images/maze-and-puzzles-workspace.png", "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/labs/images/maze-and-puzzles-grid.png", "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/labs/images/maze-and-puzzles-run-button.png", "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts", "revision": "9793f8d36ae"}
+  ],
+  "unresolved": ["Toolbox: coursea level uses flyout with only 1 block; richer toolbox needs a later course", "Feedback dialog: animation completes after variable delay; crop unreliable"]
+}

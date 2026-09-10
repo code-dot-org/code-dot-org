@@ -1,0 +1,33 @@
+{
+  "sources": [
+    "dashboard/app/controllers/course_offerings_controller.rb",
+    "dashboard/lib/quick_assign_helper.rb",
+    "apps/src/templates/MultipleSectionsAssigner.jsx",
+    "apps/src/templates/MultipleAssignButton.jsx",
+    "dashboard/app/models/sections/section.rb"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/acquisition_products/curriculum_catalog_assign_unassign.feature",
+    "dashboard/test/ui/features/teacher_tools/assign_modular_course.feature"
+  ],
+  "routes": [
+    "GET /course_offerings/quick_assign_course_offerings",
+    "PATCH /api/v1/sections/:id"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/assign-course.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Full assign flow verified: teacher creates section, browses catalog, assigns via API, student joins and sees home page. Screenshot captured from catalog."
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/classes/images/assign-a-course-course-catalog.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

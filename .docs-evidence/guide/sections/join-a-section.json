@@ -1,0 +1,24 @@
+{
+  "sources": [
+    "dashboard/app/controllers/follower_controller.rb",
+    "apps/src/templates/studioHomepages/JoinSectionArea.jsx"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/join-section.spec.ts"
+  ],
+  "routes": [
+    "POST /api/v1/sections/:code/join",
+    "POST /join/:code",
+    "DELETE /api/v1/sections/:id/members/:user_id"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/join-section.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Merged from join-a-section and leave-a-section. Both verified. Join button label asserted by journey (locale join_section.code.submit = 'Join')."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

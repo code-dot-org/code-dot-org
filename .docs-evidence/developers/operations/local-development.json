@@ -1,0 +1,22 @@
+{
+  "sources": [
+    "SETUP.md",
+    "bin/dashboard-server",
+    "apps/README.md",
+    "locals.yml.default",
+    "dashboard/public/blockly",
+    "dashboard/lib/tasks/seed.rake"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Commands from SETUP.md and apps/README.md; symlink verified OBSERVED; rspack from apps/README.md. Prerequisites section added. Troubleshooting entries for level-not-loading and dashboard-server-exits added; seed commands from seed.rake."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

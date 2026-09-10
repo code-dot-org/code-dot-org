@@ -1,0 +1,24 @@
+{
+  "sources": [
+    "dashboard/app/controllers/sections_controller.rb",
+    "dashboard/app/models/sections/section.rb",
+    "apps/i18n/common/en_us.json"
+  ],
+  "tests": [],
+  "routes": [
+    "POST /sections/archive_all"
+  ],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "archive_all sets hidden=true on all sections. CSRF skip is AMBIGUOUS (cannot trace rationale in shallow clone)."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "archive_all skips CSRF verification. Rationale unrecoverable from shallow clone.",
+    "Section menu screenshot skipped: three-dot menu locator not reliable"
+  ]
+}

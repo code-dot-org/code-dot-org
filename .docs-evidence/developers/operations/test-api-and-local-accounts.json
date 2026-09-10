@@ -1,0 +1,30 @@
+{
+  "sources": [
+    "dashboard/app/controllers/test_controller.rb",
+    "dashboard/config/routes.rb",
+    "frontend/packages/e2e-tests/tests/shared/auth.ts",
+    "frontend/packages/e2e-tests/tests/shared/api.ts",
+    "frontend/packages/e2e-tests/tests/fixtures.ts",
+    "dashboard/test/factories/factories.rb",
+    "dashboard/app/controllers/api/v1/test_logs_controller.rb"
+  ],
+  "tests": [],
+  "routes": [
+    "POST /api/test/create_user",
+    "GET /api/v1/test_logs/*prefix/since/:time",
+    "GET /api/v1/test_logs/*prefix/:name"
+  ],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Test API guard STRONGLY_SUPPORTED from routes.rb:1145-1156. test_logs outside guard STRONGLY_SUPPORTED from routes.rb:1237-1238. FactoryBot loaded in dev OBSERVED via rails runner. Endpoint list from test_controller.rb. Curl example added; which-mechanism table added. Curl body params INFERRED from controller source (not run against live server)."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Should Api::V1::TestLogsController be reachable in production? It has no environment guard.",
+    "Curl example params inferred from test_controller.rb create_user method; exact required params not exercised live."
+  ]
+}

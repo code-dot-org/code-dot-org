@@ -1,0 +1,34 @@
+{
+  "sources": [
+    "dashboard/config/application.rb",
+    "dashboard/config.ru",
+    "dashboard/db/schema.rb",
+    "dashboard/legacy/README.md",
+    "dashboard/legacy/middleware/files_api.rb",
+    "dashboard/legacy/middleware/channels_api.rb",
+    "shared/middleware/shared_resources.rb",
+    "deployment.rb",
+    "lib/cdo.rb",
+    "apps/webpackEntryPoints.js",
+    "frontend/turbo.json",
+    "apps/package.json",
+    "dashboard/config/initializers/session_store.rb",
+    "ARCHITECTURE.md"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [
+    "frontend_studio_enabled"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "OBSERVED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Controller/model/migration counts, middleware stack order, and cache store class verified via rails runner. Portal deps and entry point count verified from package.json and webpackEntryPoints.js."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Exact boundary of what in shared/ still needs pegasus is not enumerated."
+  ]
+}

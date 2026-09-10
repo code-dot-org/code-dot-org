@@ -1,0 +1,44 @@
+{
+  "sources": [
+    "dashboard/app/controllers/admin_users_controller.rb",
+    "dashboard/app/controllers/admin_reports_controller.rb",
+    "dashboard/app/controllers/admin_search_controller.rb",
+    "dashboard/app/controllers/admin_nps_controller.rb",
+    "dashboard/app/controllers/featured_projects_controller.rb",
+    "dashboard/app/controllers/report_abuse_controller.rb",
+    "dashboard/app/controllers/student_work_evaluations_controller.rb",
+    "dashboard/app/models/user_permission.rb",
+    "dashboard/app/models/concerns/user_permission_grantee.rb",
+    "dashboard/config/routes.rb",
+    "dashboard/app/models/ability.rb"
+  ],
+  "tests": [],
+  "routes": [
+    "GET /admin/assume_identity_form",
+    "POST /admin/assume_identity",
+    "GET /admin/account_repair",
+    "GET /admin/lookup_by_email",
+    "GET /admin/permissions",
+    "POST /admin/grant_permission",
+    "GET /admin/lookup_section",
+    "POST /admin/undelete_section",
+    "GET /admin/find_students",
+    "GET /admin/",
+    "GET /admin/levels",
+    "GET /admin/nps/nps_form",
+    "GET /projects/featured",
+    "DELETE /v3/channels/:channel_id/abuse"
+  ],
+  "flags": [
+    "nps_audience"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Routes from routes.rb:763-832. Permission list from user_permission.rb:31-59. Admin validation from user.rb:558-641. Admin boolean and CanCanCan from ability.rb. Permission grant logging from roles-and-permissions.md. Local DB has 0 admin users OBSERVED."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

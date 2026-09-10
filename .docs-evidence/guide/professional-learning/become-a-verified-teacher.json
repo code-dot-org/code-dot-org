@@ -1,0 +1,28 @@
+{
+  "sources": [
+    "dashboard/app/models/concerns/user/verifiable.rb",
+    "dashboard/app/models/pd/enrollment.rb",
+    "dashboard/app/models/plc/user_course_enrollment.rb",
+    "dashboard/app/controllers/registrations_controller.rb",
+    "dashboard/app/controllers/api_controller.rb",
+    "dashboard/app/controllers/omniauth_callbacks_controller.rb",
+    "dashboard/app/controllers/pd/international_opt_in_controller.rb",
+    "dashboard/lib/policies/user.rb",
+    "dashboard/lib/services/lti/account_linker.rb",
+    "dashboard/app/models/user_permission.rb"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [
+    "experiment teacher-preverification (AI chat access for unverified teachers)"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "All seven verify_teacher! call sites confirmed in code. AUTHORIZED_TEACHER grant in enrollment.rb:321 (workshop) and user_course_enrollment.rb:106 (PLC). SCHOOL_OWNED_TYPES = Clever, LTI_V1, ClassLink. Google verification uses non-gmail domain check. INSTRUCTOR_ACCESS_PERMISSIONS constant confirmed in verifiable.rb. Application section added: applications submitted externally at code.org/apply; public form routes removed in 2025 (confirmed via .docs-work/raw/pd-application-routing.md)."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

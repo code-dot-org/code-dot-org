@@ -1,0 +1,22 @@
+{
+  "sources": [
+    "dashboard/app/models/user.rb",
+    "dashboard/lib/policies/user.rb",
+    "lib/cdo/shared_constants.rb",
+    ".docs-work/roles-and-permissions.md"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Absence of district admin role confirmed from code search and roles-and-permissions analysis. Regional partner path confirmed from SchoolDistrict.has_many :regional_partners."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Regional partner data-sharing specifics are outside this domain. Linked to code.org/educate/regional-partner as the entry point."
+  ]
+}

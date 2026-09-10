@@ -1,0 +1,36 @@
+{
+  "sources": [
+    "dashboard/engines/observability/lib/observability/errors.rb",
+    "dashboard/engines/observability/lib/observability/sentry.rb",
+    "dashboard/engines/observability/lib/observability/engine.rb",
+    "dashboard/engines/observability/observability.gemspec",
+    "dashboard/engines/observability/README.md",
+    "dashboard/Gemfile",
+    "dashboard/config/honeybadger.yml",
+    "lib/cdo/honeybadger.rb",
+    "dashboard/config/initializers/sentry.rb",
+    "dashboard/config/initializers/lograge.rb",
+    "config/production.yml.erb",
+    "config/staging.yml.erb",
+    "config/levelbuilder.yml.erb",
+    "config/test.yml.erb",
+    "docs/logging.md",
+    "docs/log-formats.md"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [
+    "enable_sentry"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Dual-vendor wiring confirmed by code reading of errors.rb (dual-notify), Honeybadger unconditional (no flag gate), Sentry flag-gated (CDO.enable_sentry). enable_sentry=true in all non-dev yml.erb files. DSN is an uncommitted secret -- live Sentry activation AMBIGUOUS."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Sentry's actual production activation depends on an uncommitted DSN secret; live status inferred, not observed."
+  ]
+}

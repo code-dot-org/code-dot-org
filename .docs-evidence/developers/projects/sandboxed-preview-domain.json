@@ -1,0 +1,10 @@
+{
+  "sources": ["dashboard/app/controllers/codeprojects_preview_controller.rb", "apps/src/util/sandboxedPreviewDomain.ts", "dashboard/config/routes.rb", "docs/weblab-preview-domain-migration.md"],
+  "tests": ["dashboard/test/integration/preview_hosts_test.rb"],
+  "routes": ["GET / on preview host"],
+  "flags": ["sandboxed-preview-domain", "new-preview-domain"],
+  "journey": null,
+  "verification": {"result": "STRONGLY_SUPPORTED", "revision": "9793f8d36ae", "date": "2026-09-09", "notes": "Domain selection, route containment, and migration plan from source and existing docs."},
+  "screenshots": [],
+  "unresolved": []
+}

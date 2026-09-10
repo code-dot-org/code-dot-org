@@ -1,0 +1,29 @@
+{
+  "sources": [
+    "dashboard/app/models/sections/section.rb",
+    "dashboard/app/controllers/api/v1/sections_controller.rb",
+    "apps/src/templates/teacherNavigation/TeacherNavigationPaths.tsx",
+    "apps/i18n/common/en_us.json",
+    "lib/cdo/shared_constants.rb"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/platform/teacher_dashboard/manage_students_tab.feature"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "From code, model, controller, i18n, and Cucumber features."
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/classes/images/edit-section-settings-settings-form.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

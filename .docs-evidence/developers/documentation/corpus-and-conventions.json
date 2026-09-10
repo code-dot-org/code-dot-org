@@ -1,0 +1,25 @@
+{
+  "sources": [
+    "docs/README.md",
+    ".docs-work/domains.md",
+    ".docs-evidence/schema.json"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Conventions from domains.md. Schema from schema.json. Stylebook mapping from docs/README.md."
+  },
+  "screenshots": [
+    {
+      "path": "docs/developers/documentation/images/` directory beside the page, named `<page-slug>-<what>.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/misc-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

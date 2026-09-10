@@ -1,0 +1,35 @@
+{
+  "sources": [
+    ".drone.yml",
+    ".github/workflows/frontend-ci.yml",
+    ".github/workflows/dtt.yml",
+    ".github/workflows/k8s.yml",
+    "dashboard/app/controllers/dev_controller.rb",
+    "dashboard/config/routes.rb",
+    "cookbooks/cdo-apps/templates/default/crontab.erb",
+    "k8s/README.md",
+    "k8s/docs/ARCHITECTURE.md",
+    "docker/README.md",
+    "aws/cloudformation",
+    "bin/deploy-adhoc",
+    "dashboard/config/environments/adhoc.rb",
+    "docs/build-assets-on-adhoc.md"
+  ],
+  "tests": [],
+  "routes": [
+    "POST /api/dev/check-dts",
+    "POST /api/dev/start-build"
+  ],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Branch model from git log and remote branches. Drone pipelines from .drone.yml. GHA from workflow files. Crontab from crontab.erb. k8s not in production: no file claims it serves live traffic. Dev controller guard from routes.rb."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Exact production traffic split between Chef/EC2 and k8s not verified."
+  ]
+}

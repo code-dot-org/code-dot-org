@@ -1,0 +1,10 @@
+{
+  "sources": ["lib/cdo/shared_constants.rb", "dashboard/app/controllers/report_abuse_controller.rb", "lib/cdo/share_filtering.rb", "dashboard/app/controllers/media_proxy_controller.rb", "dashboard/app/controllers/xhr_proxy_controller.rb", "dashboard/app/controllers/redirect_proxy_controller.rb", "apps/src/code-studio/headerShare.js", "apps/src/code-studio/components/ShareAllowedDialog.jsx"],
+  "tests": ["dashboard/test/ui/features/teacher_tools/report_abuse.feature", "dashboard/test/ui/features/teacher_tools/projects/project_sharing.feature"],
+  "routes": ["GET /report_abuse", "POST /report_abuse", "GET /media", "GET /xhr", "GET /redirected_url"],
+  "flags": ["restrict-abuse-reporting-to-verified", "webpurify", "share_filtering_blockly_json_max_depth"],
+  "journey": null,
+  "verification": {"result": "STRONGLY_SUPPORTED", "revision": "9793f8d36ae", "date": "2026-09-09", "notes": "Abuse threshold 15 from shared_constants.rb; proxy allowlists from controller code; no in-repo rate limiting confirmed."},
+  "screenshots": [],
+  "unresolved": ["WebPurify calls skipped locally; Zendesk POST skipped in dev. AWS WAF limits not checked."]
+}

@@ -1,0 +1,30 @@
+{
+  "sources": [
+    "dashboard/lib/services/lti.rb",
+    "dashboard/lib/policies/lti.rb",
+    "dashboard/app/models/sections/clever_section.rb",
+    "dashboard/app/models/sections/google_classroom_section.rb",
+    "dashboard/app/models/sections/section.rb",
+    "dashboard/app/controllers/lti_v1_controller.rb",
+    "dashboard/app/models/user.rb"
+  ],
+  "tests": [
+    "dashboard/test/lib/services/lti_test.rb",
+    "dashboard/test/controllers/lti_v1_controller_test.rb"
+  ],
+  "routes": [
+    "POST /lti/v1/sync_course"
+  ],
+  "flags": [
+    "google_classroom_family_name"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Sync mechanisms documented from service layer and section models. Provider-specific OAuth flows not exercisable locally."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

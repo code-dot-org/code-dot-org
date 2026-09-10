@@ -1,0 +1,34 @@
+{
+  "sources": [
+    "dashboard/app/models/sections/section.rb",
+    "dashboard/app/controllers/api/v1/sections_controller.rb",
+    "lib/cdo/shared_constants.rb",
+    "apps/i18n/common/en_us.json",
+    "apps/src/templates/studioHomepages/teacherHomepageV2/Header.tsx"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/platform/teacher_dashboard/manage_students_tab.feature",
+    "frontend/packages/e2e-tests/tests/manage-students/manage-students-tab.spec.ts"
+  ],
+  "routes": [
+    "POST /dashboardapi/sections",
+    "POST /api/v1/sections",
+    "GET /sections/new"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/create-section.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Button label updated from 'Create a section' to 'New class section' per i18n newClassSection. Journey asserts button visible with correct label. Prerequisite added for teacher account."
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/classes/images/create-a-section-new-class-section-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/create-section.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

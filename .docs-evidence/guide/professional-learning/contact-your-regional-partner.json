@@ -1,0 +1,26 @@
+{
+  "sources": [
+    "dashboard/app/controllers/pd/regional_partner_contact_controller.rb",
+    "dashboard/app/controllers/pd/regional_partner_mini_contact_controller.rb",
+    "apps/src/regionalPartnerMiniContact",
+    "dashboard/app/mailers/pd/regional_partner_mini_contact_mailer.rb"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/acquisition_products/pd/regional_partner_mini_contact.feature"
+  ],
+  "routes": [
+    "GET /professional-learning/contact-regional-partner",
+    "GET /pd/regional_partner_contact/new",
+    "GET /pd/regional_partner_mini_contact/new"
+  ],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Contact form rendered at /professional-learning/contact-regional-partner. H1 'Contact your local Regional Partner'. Fields confirmed: Name, Email, School ZIP Code, Grade Level checkboxes (K-5, 6-8, 9-12), Your role, Questions text area, Send button."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

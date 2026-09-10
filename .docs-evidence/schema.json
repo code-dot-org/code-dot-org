@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "File paths examined as evidence for this page."
+    },
+    "tests": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Test file paths that cover behavior described on this page."
+    },
+    "routes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "HTTP routes relevant to this page (e.g. GET /users/sign_in)."
+    },
+    "flags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Feature flags gating behavior described on this page."
+    },
+    "journey": {
+      "type": ["string", "null"],
+      "description": "Path to the Playwright spec that verifies this page, or null."
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "string",
+          "enum": ["VERIFIED", "OBSERVED", "STRONGLY_SUPPORTED", "INFERRED", "AMBIGUOUS", "BLOCKED", "CONTRADICTED"]
+        },
+        "revision": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
+        "notes": { "type": "string" }
+      },
+      "required": ["result", "revision", "date"]
+    },
+    "screenshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "journey": { "type": "string" },
+          "revision": { "type": "string" }
+        },
+        "required": ["path", "journey", "revision"]
+      }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Open questions or issues for this page."
+    }
+  },
+  "required": ["sources", "verification"],
+  "additionalProperties": false
+}

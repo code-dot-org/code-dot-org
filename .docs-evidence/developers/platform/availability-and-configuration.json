@@ -1,0 +1,62 @@
+{
+  "sources": [
+    "lib/dynamic_config/dcdo.rb",
+    "lib/dynamic_config/gatekeeper.rb",
+    "lib/dynamic_config/dynamic_config_base.rb",
+    "lib/dynamic_config/datastore_cache.rb",
+    "lib/dynamic_config/adapters/dynamodb_adapter.rb",
+    "dashboard/app/controllers/dcdo_controller.rb",
+    "dashboard/app/controllers/gatekeeper_controller.rb",
+    "dashboard/app/controllers/feature_mode_controller.rb",
+    "dashboard/app/controllers/dynamic_config_controller.rb",
+    "dashboard/app/controllers/admin_pilots_controller.rb",
+    "dashboard/app/controllers/experiments_controller.rb",
+    "dashboard/app/models/experiments/pilot.rb",
+    "dashboard/app/models/experiments/single_user_experiment.rb",
+    "dashboard/lib/feature_mode_manager.rb",
+    "dashboard/config/environments/development.rb",
+    "dashboard/config/environments/test.rb",
+    "dashboard/config/environments/staging.rb",
+    "dashboard/config/environments/production.rb",
+    "dashboard/config/environments/levelbuilder.rb",
+    "dashboard/config/environments/adhoc.rb",
+    "locals.yml.default",
+    "deployment.rb",
+    ".docs-work/raw/oq-platform.md"
+  ],
+  "tests": [],
+  "routes": [
+    "GET /admin/dcdo",
+    "PATCH /admin/dcdo",
+    "GET /admin/gatekeeper",
+    "PATCH /admin/gatekeeper",
+    "DELETE /admin/gatekeeper",
+    "GET /admin/feature_mode",
+    "PATCH /admin/feature_mode",
+    "GET /admin/dynamic_config",
+    "GET /admin/pilots",
+    "GET /admin/pilots/:pilot_name",
+    "POST /admin/pilots/add_to_pilot",
+    "POST /admin/pilots/remove_from_pilot",
+    "GET /experiments/set_single_user_experiment/:name",
+    "GET /experiments/disable_single_user_experiment/:name",
+    "GET /experiments"
+  ],
+  "flags": [
+    "frontend_studio_enabled",
+    "use_mailjet",
+    "enable_sentry"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "DCDO class and backend verified OBSERVED via rails runner. DatastoreCache 30s expiry confirmed from code. Pilot model schema confirmed from file. DCDO conflict list from oq-platform.md section G. Environment files and cache_store settings verified by grep. Prerequisites and Pilot lookup snippet added. Permission difference (authorize! :read, :reports vs require_admin) documented."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "DCDO key typo (proper0ties) is in production use; cannot rename without coordination.",
+    "Default-value conflicts across call sites are documented but not programmatically enforced."
+  ]
+}

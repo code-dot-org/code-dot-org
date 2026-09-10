@@ -1,0 +1,27 @@
+{
+  "sources": [
+    "TESTING.md",
+    "apps/README.md",
+    "dashboard/test/ui/README.md",
+    "frontend/packages/e2e-tests/README.md",
+    "frontend/packages/e2e-tests/playwright.config.ts",
+    ".drone.yml",
+    ".github/workflows/frontend-ci.yml",
+    ".github/workflows/dtt.yml",
+    "lib/rake/test.rake"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Suite commands from TESTING.md, apps/README.md, e2e-tests README. Drone pipelines from .drone.yml. GHA from workflow files. Tag counts from verification-infra.md. Troubleshooting section added: flake-vs-break triage, Drone restart, seed issues. Drone Restart button location INFERRED from standard Drone UI (not verified in browser)."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Drone Restart button position described from standard Drone UI; not VERIFIED against drone.cdn-code.org."
+  ]
+}

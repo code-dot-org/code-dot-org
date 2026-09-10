@@ -1,0 +1,59 @@
+{
+  "sources": [
+    "dashboard/app/controllers/lti_v1_controller.rb",
+    "dashboard/app/controllers/lti/v1/integrations_controller.rb",
+    "dashboard/app/controllers/lti/v1/dynamic_registration_controller.rb",
+    "dashboard/app/controllers/lti/v1/account_linking_controller.rb",
+    "dashboard/app/controllers/lti/v1/deep_linking_controller.rb",
+    "dashboard/app/controllers/oauth_jwks_controller.rb",
+    "dashboard/app/controllers/discourse_sso_controller.rb",
+    "dashboard/lib/policies/lti.rb",
+    "dashboard/lib/services/lti.rb",
+    "dashboard/app/models/lti_integration.rb",
+    "dashboard/app/models/lti_user_identity.rb",
+    "dashboard/app/models/lti_course.rb",
+    "dashboard/app/models/lti_deployment.rb",
+    "dashboard/app/models/lti_section.rb",
+    "docs/jwks.md"
+  ],
+  "tests": [
+    "dashboard/test/controllers/lti_v1_controller_test.rb",
+    "dashboard/test/models/lti_integration_test.rb",
+    "dashboard/test/models/lti_user_identity_test.rb",
+    "dashboard/test/models/lti_course_test.rb",
+    "dashboard/test/models/lti_deployment_test.rb",
+    "dashboard/test/models/lti_section_test.rb",
+    "dashboard/test/lib/services/lti_test.rb",
+    "dashboard/test/lib/queries/lti_test.rb"
+  ],
+  "routes": [
+    "GET /lti/v1/login",
+    "POST /lti/v1/authenticate",
+    "POST /lti/v1/sync_course",
+    "GET /lti/v1/integrations/new",
+    "POST /lti/v1/integrations",
+    "GET /lti/v1/dynamic_registration",
+    "POST /lti/v1/dynamic_registration",
+    "GET /lti/v1/account_linking/landing",
+    "POST /lti/v1/account_linking/link_email",
+    "POST /lti/v1/account_linking/new_account",
+    "POST /lti/v1/account_linking/unlink",
+    "GET /lti/v1/deep_linking",
+    "POST /lti/v1/deep_linking/submit",
+    "GET /oauth/jwks",
+    "GET /discourse/sso",
+    "GET /zendesk_session"
+  ],
+  "flags": [
+    "schoology_deep_linking_enabled"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Architecture documented from controllers, services, policies, and models. JWKS operational procedure from docs/jwks.md. Full LTI launch not exercisable locally."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

@@ -1,0 +1,28 @@
+{
+  "sources": [
+    "dashboard/app/controllers/pd/session_attendance_controller.rb",
+    "dashboard/app/models/pd/attendance.rb",
+    "dashboard/app/controllers/pd/workshop_daily_survey_controller.rb",
+    "dashboard/app/controllers/pd/workshop_certificate_controller.rb",
+    "dashboard/config/routes.rb"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/acquisition_products/pd/workshop_certificates.feature"
+  ],
+  "routes": [
+    "GET /pd/attend/:session_code",
+    "POST /pd/attend/:session_code",
+    "GET /pd/attend/:session_code/join",
+    "GET /pd/generate_workshop_certificate/:enrollment_code"
+  ],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Routes and controllers confirmed in code. Attendance and certificate flows confirmed in Cucumber features. No browser walk of attendance flow (requires active workshop session)."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

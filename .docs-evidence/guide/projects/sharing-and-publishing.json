@@ -1,0 +1,35 @@
+{
+  "sources": [
+    "apps/src/code-studio/components/ShareDialog.jsx",
+    "apps/src/code-studio/components/AbuseExclamation.jsx",
+    "apps/src/templates/projects/PublicGallery.jsx"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts"
+  ],
+  "routes": [
+    "GET /projects/public",
+    "POST /channels/:id/abuse"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Merged from share-your-project (VERIFIED), publish-to-the-gallery (STRONGLY_SUPPORTED), remix-a-project (VERIFIED), browse-the-public-gallery (VERIFIED), report-a-project (STRONGLY_SUPPORTED). Lowest: STRONGLY_SUPPORTED."
+  },
+  "screenshots": [
+    {
+      "path": "docs/students/projects/images/sharing-and-publishing-share-dialog.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/projects/images/sharing-and-publishing-remix-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

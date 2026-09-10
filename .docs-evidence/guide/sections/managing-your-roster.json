@@ -1,0 +1,42 @@
+{
+  "sources": [
+    "dashboard/app/models/sections/section.rb",
+    "dashboard/app/controllers/api/v1/sections_controller.rb",
+    "apps/src/templates/manageStudents",
+    "apps/src/templates/manageStudents/ManageStudentsActionsCell.jsx",
+    "apps/src/templates/manageStudents/ShowSecret.jsx",
+    "apps/i18n/common/en_us.json"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/tests/manage-students/manage-students-tab.spec.ts",
+    "frontend/packages/e2e-tests/docs-journeys/teacher-dashboard-screenshots.spec.ts"
+  ],
+  "routes": [
+    "GET /teacher_dashboard/sections/:id",
+    "POST /dashboardapi/sections/:id/students",
+    "PATCH /dashboardapi/sections/:id/students/:student_id"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/manage-students.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Labels corrected: 'Edit' replaced with actions menu (three-dot icon) per ManageStudentsActionsCell. Secret reset path corrected to 'Show picture'/'Show words' then 'Reset' per ShowSecret.jsx. 'Remove' replaced with 'Remove student' per locale. Troubleshooting added for invalid section code and sign-in failures. Journey asserts 'Show words' button text."
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/classes/images/managing-your-roster-roster.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/teachers/classes/images/managing-your-roster-roster-row-controls.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "M5: Product inconsistency: the Login Info page says 'Manage Students tab' (loginInfo_noStudents, loginInfoResetSecretPicDesc, loginInfoResetSecretWordDesc, loginInfo_resetPasswordBody in en_us.json) but the sidebar label is 'Roster' (i18n.roster()). The docs use 'Roster' to match the sidebar. The in-product Login Info text is stale."
+  ]
+}

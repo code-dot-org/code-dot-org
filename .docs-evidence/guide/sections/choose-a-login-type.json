@@ -1,0 +1,26 @@
+{
+  "sources": [
+    "dashboard/app/models/sections/section.rb",
+    "lib/cdo/shared_constants.rb",
+    "apps/i18n/common/en_us.json",
+    "apps/src/templates/teacherDashboard/LoginTypePicker.jsx"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/create-section.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Labels updated to match i18n en_us.json: Picture password (loginTypePictureUpdated), Secret words (loginTypeWordUpdated), Personal logins (loginTypePersonal). Journey asserts card titles."
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/classes/images/choose-a-login-type-login-type-picker.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/create-section.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

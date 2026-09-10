@@ -1,0 +1,10 @@
+{
+  "sources": ["dashboard/app/models/channel_token.rb", "dashboard/app/models/project_storage.rb", "dashboard/legacy/middleware/channels_api.rb", "shared/middleware/helpers/storage_id.rb", "dashboard/app/controllers/datablock_storage_controller.rb"],
+  "tests": [],
+  "routes": ["GET /v3/channels", "GET /projects/:type/:channel_id", "GET /datablock_storage/:channel_id/*"],
+  "flags": ["project-uuid-in-url", "datablock_storage_request_limit_per_ten_seconds"],
+  "journey": null,
+  "verification": {"result": "STRONGLY_SUPPORTED", "revision": "9793f8d36ae", "date": "2026-09-09", "notes": "Channel token model, S3 bucket names, authenticate_user! exceptions from projects_controller.rb. No-session access confirmed by code inspection."},
+  "screenshots": [],
+  "unresolved": []
+}

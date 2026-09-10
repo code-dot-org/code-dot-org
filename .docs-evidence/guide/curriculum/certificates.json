@@ -1,0 +1,23 @@
+{
+  "sources": [
+    "dashboard/app/controllers/certificates_controller.rb"
+  ],
+  "tests": [],
+  "routes": ["GET /certificates"],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Merged from teachers/print-certificates (STRONGLY_SUPPORTED) and students/activities/get-your-certificate (STRONGLY_SUPPORTED)."
+  },
+  "screenshots": [
+    {
+      "path": "docs/guide/curriculum/images/print-certificates-certificates-page.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/teacher-dashboard-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,49 @@
+{
+  "sources": [
+    "apps/src/templates/sectionProgress",
+    "apps/src/templates/sectionAssessments",
+    "apps/src/templates/teacherNavigation/TeacherNavigationPaths.tsx"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+    "frontend/packages/e2e-tests/docs-journeys/give-feedback.spec.ts"
+  ],
+  "routes": [
+    "GET /teacher_dashboard/sections/:id/progress",
+    "GET /teacher_dashboard/sections/:id/assessments",
+    "GET /teacher_dashboard/sections/:id/text_responses"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/give-feedback.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Progress grid, text responses tab, and assessments tab captured with real student FreeResponse and Multi milestone data via API seeding. Assessments tab shows the default feedback-download view; individual assessment result tables require a LevelGroup submission which is blocked by expired AWS tokens on level pages."
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/progress/images/tracking-progress-progress.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/give-feedback.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/teachers/progress/images/tracking-progress-sidebar-tabs.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/view-progress.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/teachers/progress/images/tracking-progress-text-responses.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/give-feedback.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/teachers/progress/images/tracking-progress-assessments.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/give-feedback.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "Assessment results table (individual student answers to Multi questions) requires LevelGroup submission; level pages blocked by Aws::STS::Errors::ExpiredTokenException"
+  ]
+}

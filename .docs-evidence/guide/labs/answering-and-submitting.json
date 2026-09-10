@@ -1,0 +1,17 @@
+{
+  "sources": [
+    "apps/src/templates/instructions/InstructionsCSF.jsx"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "INFERRED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Merged from answer-a-question (INFERRED) and practice-with-challenges (INFERRED). Both INFERRED."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

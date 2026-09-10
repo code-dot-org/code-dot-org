@@ -1,0 +1,39 @@
+{
+  "sources": [
+    "apps/src/p5lab/spritelab",
+    "dashboard/app/models/levels/gamelab_jr.rb"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Workspace + 3 region crops. Costumes dropdown not croppable in isolation."
+  },
+  "screenshots": [
+    {
+      "path": "docs/students/labs/images/sprite-lab-workspace.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/sprite-lab-toolbox.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/sprite-lab-run-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "Costumes: costume dropdown is inside a Blockly field; no stable selector for crop",
+    "Orientation/region images for regions that render empty or in a cross-origin iframe locally were removed (image-truth rule); retake when a realistic state is reachable."
+  ]
+}

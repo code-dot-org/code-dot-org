@@ -1,0 +1,12 @@
+{
+  "sources": ["dashboard/app/controllers/home_controller.rb", "dashboard/app/helpers/locale_helper.rb"],
+  "tests": ["frontend/packages/e2e-tests/tests/foundations/i18n.spec.ts"],
+  "routes": ["POST /locale", "GET /lang/:locale"],
+  "flags": [""],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09"
+  }
+}

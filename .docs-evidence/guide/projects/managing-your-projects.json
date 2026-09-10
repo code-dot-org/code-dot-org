@@ -1,0 +1,33 @@
+{
+  "sources": [
+    "apps/src/templates/projects/ProjectsList.jsx",
+    "apps/src/templates/projects/ProjectsGallery.tsx",
+    "apps/src/templates/projects/PersonalProjectsTableActionsCell.jsx",
+    "apps/src/templates/projects/StartNewProject.jsx",
+    "apps/src/code-studio/components/backpack"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts"
+  ],
+  "routes": [
+    "GET /projects"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Images retaken: gallery-filters now shows 3 projects in different labs (Dance Party, Sprite Lab, Artist). Viewport orientation shows hero + lab cards. Actions menu and new-project crops unchanged. Alt text updated to match actual image content."
+  },
+  "screenshots": [
+    {"path": "docs/students/projects/images/managing-your-projects-projects-page.png", "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/projects/images/managing-your-projects-gallery-filters.png", "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/projects/images/managing-your-projects-new-project.png", "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/projects/images/managing-your-projects-project-actions-menu.png", "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts", "revision": "9793f8d36ae"}
+  ],
+  "unresolved": [
+    "Backpack crop: the backpack icon renders inside lab editors, not on the /projects list page.",
+    "Version History crop: requires opening a project editor. Omitted from this pass."
+  ]
+}

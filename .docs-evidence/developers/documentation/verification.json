@@ -1,0 +1,21 @@
+{
+  "sources": [
+    ".docs-evidence/schema.json",
+    ".docs-evidence/README.md",
+    "frontend/packages/e2e-tests/docs-journeys/helpers.ts",
+    "frontend/packages/e2e-tests/playwright.docs.config.ts",
+    "docs/site/scripts/evidence-check.mjs"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Evidence schema from schema.json. Journey infrastructure from platform.md. docsScreenshot from helpers.ts."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

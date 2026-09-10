@@ -1,0 +1,25 @@
+{
+  "sources": [
+    "dashboard/app/controllers/programming_environments_controller.rb",
+    "dashboard/app/controllers/programming_expressions_controller.rb",
+    "dashboard/app/controllers/data_docs_controller.rb",
+    "dashboard/app/controllers/reference_guides_controller.rb",
+    "apps/src/templates/codeDocs",
+    "apps/src/templates/dataDocs",
+    "apps/src/templates/referenceGuides"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/tests/documentation/documentation-landing-page.spec.ts"
+  ],
+  "routes": ["GET /docs/", "GET /docs/:programming_environment_name", "GET /docs/:env/:expression_key", "GET /docs/concepts/data-library", "GET /courses/:course_name/guides/:key"],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Controllers and existing Playwright spec confirm routes and structure."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

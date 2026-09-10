@@ -1,0 +1,30 @@
+{
+  "sources": [
+    "apps/src/weblab",
+    "dashboard/app/models/levels/weblab.rb",
+    "docs/weblab-preview-domain-migration.md"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Bramble iframe is cross-origin; file tree, editor, preview not croppable."
+  },
+  "screenshots": [
+    {
+      "path": "docs/students/labs/images/web-lab-version-history-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "File tree, code editor, preview pane: all inside cross-origin Bramble iframe",
+    "Orientation/region images for regions that render empty or in a cross-origin iframe locally were removed (image-truth rule); retake when a realistic state is reachable."
+  ]
+}

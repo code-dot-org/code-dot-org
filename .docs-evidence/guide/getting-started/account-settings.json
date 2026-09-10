@@ -1,0 +1,59 @@
+{
+  "sources": [
+    "dashboard/app/controllers/registrations_controller.rb",
+    "apps/src/signUpFlow/signUpFlowConstants.ts"
+  ],
+  "tests": [],
+  "routes": ["GET /users/edit", "PATCH /users"],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/misc-screenshots.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Merged from teachers/account/manage-your-settings (STRONGLY_SUPPORTED) and students/account/manage-your-settings (STRONGLY_SUPPORTED)."
+  },
+  "screenshots": [
+    {
+      "path": "docs/guide/getting-started/images/manage-your-settings-settings-page.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/manage-your-settings-account-information.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/manage-your-settings-sign-in-methods.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/manage-your-settings-account-type.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/manage-your-settings-delete-account.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/manage-your-settings-settings.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/misc-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/manage-your-settings-account-info.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/misc-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/guide/getting-started/images/manage-your-settings-school-info.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/misc-screenshots.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

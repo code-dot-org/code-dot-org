@@ -1,0 +1,19 @@
+{
+  "sources": [
+    "apps/src/studio",
+    "dashboard/app/models/levels/studio.rb"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-learning.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "; No workspace screenshot (lab not reached in journey tests)"
+  },
+  "screenshots": []
+}

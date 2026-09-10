@@ -1,0 +1,28 @@
+{
+  "sources": [
+    "apps/src/templates/progress/ProgressBubbleSet.jsx",
+    "apps/src/templates/progress/SummaryProgressTable.jsx",
+    "apps/src/code-studio/components/TeacherFeedback.jsx"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Images pass: viewport orientation of course progress view + status-indicators crop. Progress circles show empty state (no completed levels). Completing levels programmatically is BLOCKED for CSF concept/video levels -- they do not expose appOptions or Run buttons for milestone POSTs. The status legend at the bottom of the viewport image demonstrates all circle states. Alt text updated to match actual image content."
+  },
+  "screenshots": [
+    {"path": "docs/students/images/your-progress-progress-view.png", "journey": "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts", "revision": "9793f8d36ae"},
+    {"path": "docs/students/images/your-progress-status-indicators.png", "journey": "frontend/packages/e2e-tests/docs-journeys/student-screenshots.spec.ts", "revision": "9793f8d36ae"}
+  ],
+  "unresolved": [
+    "Progress circles show empty state only. Completing CSF levels programmatically BLOCKED: concept/video levels do not expose appOptions, milestone POSTs require script_level_ids not discoverable from the page. Needs a course with simple Blockly puzzle levels, or a direct DB seed (disallowed by brief).",
+    "Teacher feedback indicator crop: BLOCKED (data).",
+    "Code review section crop: BLOCKED (data)."
+  ]
+}

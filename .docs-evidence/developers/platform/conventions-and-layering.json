@@ -1,0 +1,23 @@
+{
+  "sources": [
+    "dashboard/lib/services/README.md",
+    "dashboard/lib/policies/README.md",
+    "dashboard/lib/queries/README.md",
+    "dashboard/lib/forms/README.md",
+    "dashboard/engines/observability/README.md",
+    "dashboard/engines/cdo_contentful/lib/cdo_contentful/engine.rb",
+    "dashboard/engines/hoc_legacy/lib/hoc_legacy/engine.rb"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "File counts for services/policies/queries/forms verified via find. READMEs read in full. Engine directories confirmed by ls."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

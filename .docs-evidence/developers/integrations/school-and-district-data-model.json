@@ -1,0 +1,30 @@
+{
+  "sources": [
+    "dashboard/app/models/school.rb",
+    "dashboard/app/models/school_district.rb",
+    "dashboard/app/models/school_info.rb",
+    "dashboard/app/models/user_school_info.rb",
+    "dashboard/lib/school_info_deduplicator.rb",
+    "dashboard/app/models/school_stats_by_year.rb",
+    "dashboard/app/models/SCHOOL_DATA_README.md",
+    "dashboard/lib/tasks/seed.rake"
+  ],
+  "tests": [],
+  "routes": [
+    "GET /api/v1/school-districts/:state",
+    "GET /api/v1/schools/:school_district_id/:school_type",
+    "PATCH /api/v1/user_school_infos",
+    "PATCH /api/v1/user_school_infos/:id/update_last_confirmation_date",
+    "POST /api/v1/census"
+  ],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Schema information from model annotations. Data quality notes from SCHOOL_DATA_README.md. No district-level authority model confirmed from codebase search."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

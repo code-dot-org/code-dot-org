@@ -1,0 +1,33 @@
+{
+  "sources": [
+    "dashboard/app/controllers/application_controller.rb:282-310",
+    "dashboard/app/models/user_permission.rb:31-59",
+    "dashboard/app/models/ability.rb:484-520",
+    "dashboard/config/environments/levelbuilder.rb",
+    "dashboard/config/environments/development.rb:78-80",
+    "dashboard/config/environments/staging.rb:67",
+    "dashboard/config/environments/production.rb:69",
+    "dashboard/config/environments/test.rb:66"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/teacher_tools/levelbuilder/level_edit_page.feature"
+  ],
+  "routes": [
+    "GET /levels/new",
+    "GET /levels/:id/edit",
+    "GET /lessons/:id/edit",
+    "GET /s/:script_name/edit"
+  ],
+  "flags": [
+    "levelbuilder_mode (Rails.application.config, from CDO/locals.yml)"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "All claims from code reading. levelbuilder_mode confirmed false locally via rails runner (OBSERVED). CanCanCan grant confirmed from ability.rb. English-only guard confirmed from application_controller.rb. Environment defaults confirmed from all five environment files."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

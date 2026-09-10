@@ -1,0 +1,31 @@
+{
+  "sources": [
+    "dashboard/config/application.rb",
+    "dashboard/config/initializers/delayed_job_config.rb",
+    "dashboard/lib/delayed_job_manager.rb",
+    "dashboard/app/jobs/",
+    "k8s/kustomize/components/backend/active-job-worker-deployment.yaml",
+    "cookbooks/cdo-apps/templates/default/crontab.erb",
+    "cookbooks/cdo-apps/recipes/crontab.rb",
+    "bin/cron/deliver_poste_messages_process.rb",
+    "lib/cdo/honeybadger.rb",
+    "config/development.yml.erb",
+    "config/test.yml.erb",
+    "locals.yml.default",
+    "python/README.md"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "ActiveJob adapter class verified OBSERVED via rails runner (AsyncAdapter in dev). delayed_job Gemfile dep confirmed. k8s deployment YAML read. Crontab template read line-by-line for the full job list. Job file count from find."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Cdo::ActiveJobBackend (lib/cdo/active_job_backend.rb) production caller not found -- may be a legacy EC2 path."
+  ]
+}

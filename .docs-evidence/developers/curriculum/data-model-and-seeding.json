@@ -1,0 +1,44 @@
+{
+  "sources": [
+    "dashboard/app/models/course_offering.rb",
+    "dashboard/app/models/course_version.rb",
+    "dashboard/app/models/unit_group.rb",
+    "dashboard/app/models/unit.rb (self.table_name = 'scripts')",
+    "dashboard/app/models/lesson.rb (table: stages)",
+    "dashboard/app/models/lesson_activity.rb",
+    "dashboard/app/models/activity_section.rb",
+    "dashboard/app/models/script_level.rb",
+    "dashboard/app/models/levels/level.rb",
+    "dashboard/lib/services/script_seed.rb",
+    "dashboard/lib/services/deprecated_level_loader.rb",
+    "dashboard/lib/tasks/seed.rake",
+    "dashboard/test/ui/config/README.md",
+    "dashboard/app/controllers/curriculum_proxy_controller.rb",
+    "dashboard/engines/hoc_legacy/",
+    "docs/update-levelbuilder.md",
+    "bin/curriculum/README.md",
+    "dashboard/lib/services/README.md",
+    "dashboard/config/deprecated_levels/blockly_levels.json"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/teacher_tools/levelbuilder/level_edit_page.feature",
+    "dashboard/engines/hoc_legacy/test/integration/hoc_legacy/api_flow_test.rb"
+  ],
+  "routes": [
+    "GET /docs/*path (curriculum_proxy#get_doc)",
+    "GET /curriculum/*path (curriculum_proxy#get_curriculum)"
+  ],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Model table names confirmed from schema comments in each model file. Unit.table_name='scripts' confirmed from unit.rb:66. Lesson table 'stages' confirmed from lesson.rb schema comment. ScriptSeed serialize/seed methods confirmed from script_seed.rb. Seed task lists confirmed from seed.rake. Deprecated level loader confirmed from deprecated_level_loader.rb. Test-only config tree naming convention confirmed from dashboard/test/ui/config/README.md. Curriculum proxy confirmed from curriculum_proxy_controller.rb. hoc_legacy engine confirmed from engine directory. Troubleshooting patterns carried from docs/update-levelbuilder.md (RecordNotFound, .seeded, locale conflicts, PID stale)."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "Curriculum proxy: no deprecation plan found. Status AMBIGUOUS.",
+    "hoc_legacy: confirmed purpose but engine boundary and lifecycle not fully traced."
+  ]
+}

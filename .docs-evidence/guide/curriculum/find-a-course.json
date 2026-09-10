@@ -1,0 +1,31 @@
+{
+  "sources": [
+    "dashboard/app/controllers/curriculum_catalog_controller.rb",
+    "dashboard/app/models/course_offering.rb",
+    "apps/src/templates/curriculumCatalog",
+    "lib/cdo/shared_constants/curriculum/shared_course_constants.rb",
+    "dashboard/app/controllers/courses_controller.rb",
+    "dashboard/app/models/unit_group.rb",
+    "apps/src/templates/courseOverview"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/acquisition_products/curriculum_catalog.feature",
+    "dashboard/test/ui/features/acquisition_products/curriculum_catalog_filters.feature",
+    "dashboard/test/ui/features/teacher_tools/course_overview.feature",
+    "dashboard/test/ui/features/teacher_tools/course_versions.feature"
+  ],
+  "routes": [
+    "GET /catalog",
+    "GET /courses/:course_name"
+  ],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/browse-catalog.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Catalog loads, filters visible, course cards rendered. Course overview structure confirmed by code and Cucumber features."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

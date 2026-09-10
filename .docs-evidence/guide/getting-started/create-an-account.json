@@ -1,0 +1,25 @@
+{
+  "sources": [
+    "dashboard/app/controllers/registrations_controller.rb",
+    "dashboard/app/views/devise/registrations/new.html.haml",
+    "apps/src/signUpFlow/signUpFlowConstants.ts"
+  ],
+  "tests": [],
+  "routes": ["GET /users/sign_up", "POST /users"],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/create-student-account.spec.ts",
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Merged from teachers/account/create-a-teacher-account (STRONGLY_SUPPORTED) and students/getting-started/create-an-account (STRONGLY_SUPPORTED)."
+  },
+  "screenshots": [
+    {
+      "path": "docs/guide/getting-started/images/create-an-account-account-type-chooser.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/create-student-account.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": []
+}

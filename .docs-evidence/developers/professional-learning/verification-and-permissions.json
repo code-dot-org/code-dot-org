@@ -1,0 +1,29 @@
+{
+  "sources": [
+    "dashboard/app/models/concerns/user/verifiable.rb",
+    "dashboard/app/models/user_permission.rb",
+    "dashboard/app/models/ability.rb",
+    "dashboard/app/models/pd/enrollment.rb",
+    "dashboard/app/models/plc/user_course_enrollment.rb",
+    "dashboard/app/controllers/registrations_controller.rb",
+    "dashboard/app/controllers/api_controller.rb",
+    "dashboard/app/controllers/omniauth_callbacks_controller.rb",
+    "dashboard/app/controllers/pd/international_opt_in_controller.rb",
+    "dashboard/lib/policies/user.rb",
+    "dashboard/lib/services/lti/account_linker.rb",
+    "dashboard/app/models/regional_partner_program_manager.rb",
+    "dashboard/app/models/concerns/user_permission_grantee.rb"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "All seven verify_teacher! call sites confirmed. CanCanCan ability rules for all PD permissions confirmed with line numbers. SCHOOL_OWNED_TYPES confirmed as Clever, LTI_V1, ClassLink. RegionalPartnerProgramManager after_create/after_destroy callbacks confirmed."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

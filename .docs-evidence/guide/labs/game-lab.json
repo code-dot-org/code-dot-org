@@ -1,0 +1,45 @@
+{
+  "sources": [
+    "apps/src/p5lab/gamelab/dropletConfig.js",
+    "apps/src/p5lab"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Animation tab retaken showing Animation Library with categories. Workspace/canvas still empty (blank project, code injection not feasible). Java console empty (javabuilder unavailable)."
+  },
+  "screenshots": [
+    {
+      "path": "docs/students/labs/images/game-lab-toolbox.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/game-lab-animation-tab.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/game-lab-run-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    },
+    {
+      "path": "docs/students/labs/images/game-lab-reset-button.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/labs-reference.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "game-lab-workspace and game-lab-canvas remain empty state: blank project has no starter code and Droplet editor API not accessible from Playwright",
+    "game-lab-animation-tab shows library picker dialog, not the tab with loaded animations",
+    "Orientation/region images for regions that render empty or in a cross-origin iframe locally were removed (image-truth rule); retake when a realistic state is reachable."
+  ]
+}

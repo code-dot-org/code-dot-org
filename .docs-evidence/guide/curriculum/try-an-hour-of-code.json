@@ -1,0 +1,32 @@
+{
+  "sources": [
+    "dashboard/engines/hoc_legacy",
+    "dashboard/app/controllers/script_levels_controller.rb",
+    "apps/src/flappy",
+    "apps/src/bounce",
+    "apps/src/jigsaw"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/student_learning/hour_of_code/starwars.feature"
+  ],
+  "routes": [
+    "GET /hoc/:chapter",
+    "GET /flappy/:chapter",
+    "GET /jigsaw/:chapter"
+  ],
+  "flags": [
+    "hoc_mode",
+    "hoc_secret"
+  ],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/hour-of-code.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Anonymous visitor navigates /hoc/1, redirects to a level page. Congrats page at /congrats loads without error."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "hoc_legacy engine: what it still serves and whether it can be retired is not resolved."
+  ]
+}

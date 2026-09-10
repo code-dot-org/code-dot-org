@@ -1,0 +1,36 @@
+{
+  "sources": [
+    "dashboard/app/models/pd/workshop.rb",
+    "dashboard/app/models/pd/session.rb",
+    "dashboard/app/models/pd/enrollment.rb",
+    "dashboard/app/models/pd/attendance.rb",
+    "dashboard/app/models/pd/application/application_base.rb",
+    "dashboard/app/models/pd/application/teacher_application.rb",
+    "dashboard/app/models/pd/application/principal_approval_application.rb",
+    "dashboard/app/models/regional_partner.rb",
+    "dashboard/app/models/regional_partner_program_manager.rb",
+    "dashboard/app/models/plc/course.rb",
+    "dashboard/app/models/plc/user_course_enrollment.rb",
+    "dashboard/app/models/plc/README.md",
+    "dashboard/config/foorm",
+    "dashboard/app/models/foorm/simple_survey_form.rb"
+  ],
+  "tests": [],
+  "routes": [],
+  "flags": [
+    "DCDO foorm_simple_survey_disabled",
+    "DCDO jotform_redirect",
+    "Gatekeeper pd_teacher_application"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "All models confirmed in code. Workshop count 6, PLC course count 29 in local DB. RegionalPartner count 0 locally. Application statuses confirmed from TeacherApplication.statuses. Public application form routes removed in commits 2f2f2700ad3 (2025-09-03) and 15fdd07b819 (2025-09-04). pd_application_principal_approval_url is a dangling reference in teacher_application.rb:255-256."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "pd_application_principal_approval_url in teacher_application.rb:255-256 references a removed route; four mailer templates would raise NoMethodError if rendered."
+  ]
+}

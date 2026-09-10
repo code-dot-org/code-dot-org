@@ -1,0 +1,20 @@
+{
+  "sources": [
+    "apps/src/templates/manageStudents",
+    "dashboard/app/models/follower.rb"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/tests/manage-students/manage-students-tab.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Teacher visibility scoped to section membership via Follower model. Lockout risk column visible for covered-state students."
+  },
+  "screenshots": [],
+  "unresolved": []
+}

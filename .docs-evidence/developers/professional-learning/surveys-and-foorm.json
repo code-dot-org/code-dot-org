@@ -1,0 +1,41 @@
+{
+  "sources": [
+    "dashboard/app/controllers/pd/workshop_daily_survey_controller.rb",
+    "dashboard/app/controllers/pd/pre_workshop_survey_controller.rb",
+    "dashboard/app/controllers/pd/post_course_survey_controller.rb",
+    "dashboard/app/controllers/pd/misc_survey_controller.rb",
+    "dashboard/app/controllers/foorm/simple_survey_forms_controller.rb",
+    "dashboard/app/models/foorm/simple_survey_form.rb",
+    "dashboard/app/helpers/pd/jot_form/embed_helper.rb",
+    "dashboard/app/helpers/pd/workshop_survey_results_helper.rb",
+    "dashboard/config/foorm",
+    "docs/plc/survey-summary-design.md"
+  ],
+  "tests": [
+    "dashboard/test/ui/features/acquisition_products/pd/daily_survey_results.feature"
+  ],
+  "routes": [
+    "GET /pd/workshop_survey/day/:day",
+    "GET /pd/workshop_daily_survey/day/:day",
+    "GET /pd/workshop_pre_survey",
+    "GET /pd/workshop_post_survey",
+    "GET /pd/workshop_survey/post/:enrollment_code",
+    "GET /pd/post_course_survey/:course_initials",
+    "GET /pd/misc_survey/:form_tag"
+  ],
+  "flags": [
+    "DCDO foorm_simple_survey_disabled (array of disabled form names)",
+    "DCDO jotform_redirect (default false)"
+  ],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "All survey routes confirmed in routes.rb. Foorm form directory confirmed at dashboard/config/foorm. Jotform redirect flag confirmed in embed_helper.rb:41. Survey summary design doc confirmed stale (dated April 2019)."
+  },
+  "screenshots": [],
+  "unresolved": [
+    "docs/plc/survey-summary-design.md is stale (April 2019); current implementation has diverged."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "sources": ["dashboard/app/helpers/levels_helper.rb", "apps/src/StudioApp.js", "apps/src/appMain.js", "apps/src/lab2/hooks/useLoadLevelProperties.ts"],
+  "tests": [""],
+  "routes": ["GET /s/:script_name/lessons/:lesson/levels/:level", "GET /lessons/:id/level_properties"],
+  "flags": ["lab2-fetch-level-properties-by-lesson-id"],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09"
+  }
+}

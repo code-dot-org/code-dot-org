@@ -1,0 +1,10 @@
+{
+  "sources": ["lib/cdo/shared_constants.rb", "dashboard/app/models/user.rb", "dashboard/app/models/sections/section.rb", "apps/src/templates/ShareWarnings.jsx", "apps/src/shareWarnings.js"],
+  "tests": ["dashboard/test/ui/features/teacher_tools/projects/project_sharing.feature"],
+  "routes": [],
+  "flags": ["webpurify"],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/projects-and-sharing.spec.ts",
+  "verification": {"result": "STRONGLY_SUPPORTED", "revision": "9793f8d36ae", "date": "2026-09-09", "notes": "Sharing tiers from shared_constants.rb; sharing_disabled logic from user.rb and section.rb; under-13 redirect verified in journey."},
+  "screenshots": [],
+  "unresolved": []
+}

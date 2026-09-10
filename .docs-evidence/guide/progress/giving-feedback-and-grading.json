@@ -1,0 +1,31 @@
+{
+  "sources": [
+    "apps/src/templates/instructions/TeacherFeedback.jsx",
+    "apps/src/templates/rubrics",
+    "apps/src/templates/rubrics/RunAIAssessmentButton.jsx",
+    "apps/src/templates/rubrics/RubricSettings.jsx",
+    "apps/i18n/common/en_us.json"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/docs-journeys/give-feedback.spec.ts"
+  ],
+  "routes": [],
+  "flags": [],
+  "journey": "frontend/packages/e2e-tests/docs-journeys/give-feedback.spec.ts",
+  "verification": {
+    "result": "VERIFIED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-10",
+    "notes": "Teacher views student FreeResponse work with rubric and teacher panel captured via milestone API seeding. Feedback comment input and submit button are not visible on standalone FreeResponse levels (they appear on code levels with the instructions panel Feedback tab). Text Responses and Assessments tabs captured in tracking-progress."
+  },
+  "screenshots": [
+    {
+      "path": "docs/teachers/progress/images/giving-feedback-and-grading-student-work-feedback.png",
+      "journey": "frontend/packages/e2e-tests/docs-journeys/give-feedback.spec.ts",
+      "revision": "9793f8d36ae"
+    }
+  ],
+  "unresolved": [
+    "Feedback comment input (#ui-test-feedback-input) and submit button (#ui-test-submit-feedback) require a code level (Applab/Weblab) with student work and the instructions panel Feedback tab visible; level pages crash with Aws::STS::Errors::ExpiredTokenException on this dev environment"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "sources": [
+    "dashboard/app/controllers/policy_compliance_controller.rb",
+    "dashboard/lib/services/child_account.rb",
+    "dashboard/app/mailers/parent_mailer.rb"
+  ],
+  "tests": [
+    "frontend/packages/e2e-tests/tests/policy-compliance/parental-permission.spec.ts"
+  ],
+  "routes": ["GET /policy_compliance/child_account_consent", "POST /policy_compliance/child_account_consent"],
+  "flags": [],
+  "journey": null,
+  "verification": {
+    "result": "STRONGLY_SUPPORTED",
+    "revision": "9793f8d36ae",
+    "date": "2026-09-09",
+    "notes": "Parent consent page is unauthenticated, keyed by ParentalPermissionRequest uuid. Confirmed from controller and service code. Data categories listed from parent_permission_request email template."
+  },
+  "screenshots": [],
+  "unresolved": []
+}
