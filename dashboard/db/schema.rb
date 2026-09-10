@@ -273,7 +273,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
     t.integer "game_id"
-    t.index ["game_id"], name: "fk_rails_5ae7249531"
     t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
     t.index ["user_id", "game_id"], name: "index_backpacks_on_user_id_and_game_id", unique: true
   end
