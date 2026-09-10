@@ -1,9 +1,14 @@
 module Cdo
   module ClearStaleCache
+    CACHE_KEY = 'last_git_revision'
+
     def self.call
       curr_git_revision = GitUtils.git_revision
-      last_git_revision = Rails.cache.fetch('last_git_revision') {curr_git_revision}
-      Rails.cache.clear unless last_git_revision == curr_git_revision
+      last_git_revision = Rails.cache.fetch(CACHE_KEY) {curr_git_revision}
+      unless last_git_revision == curr_git_revision
+        Rails.cache.clear
+        Rails.cache.write(CACHE_KEY, curr_git_revision)
+      end
     end
   end
 end
