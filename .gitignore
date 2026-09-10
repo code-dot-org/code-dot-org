@@ -120,3 +120,16 @@ CLAUDE.local.md
 # playwright-best-practices: managed by skills-lock.json, not vendored.
 # Restore with `npx skills experimental_install` (see e2e-tests/README.md).
 .agents/skills/playwright-best-practices/
+
+# Agent Stylebooks (Neeeophytee/agent-stylebooks): managed by skills-lock.json, not vendored.
+# Restore with `npx skills experimental_install` (see docs/README.md).
+.agents/skills/github-docs/
+.agents/skills/gitlab-docs/
+.agents/skills/google-developer-docs/
+.agents/skills/govuk/
+.agents/skills/mdn-web-docs/
+.agents/skills/microsoft-writing-style/
+
+# docs site (Docusaurus, in frontend/apps/docs/)
+/frontend/apps/docs/.docusaurus/
+/frontend/apps/docs/build/

@@ -1,6 +1,42 @@
 {
   "version": 1,
   "skills": {
+    "github-docs": {
+      "source": "Neeeophytee/agent-stylebooks",
+      "sourceType": "github",
+      "skillPath": "skills/github-docs/SKILL.md",
+      "computedHash": "d842c6167635fb8013f91bb62b0eb35d207c15d6b65181652169d17c39259da1"
+    },
+    "gitlab-docs": {
+      "source": "Neeeophytee/agent-stylebooks",
+      "sourceType": "github",
+      "skillPath": "skills/gitlab-docs/SKILL.md",
+      "computedHash": "6c778eaa61682406933f5a292c8b3f237364853284022d531507588addfc798f"
+    },
+    "google-developer-docs": {
+      "source": "Neeeophytee/agent-stylebooks",
+      "sourceType": "github",
+      "skillPath": "skills/google-developer-docs/SKILL.md",
+      "computedHash": "fc9cab1c8ce661b934d0fe566a6b7d98352b4b1fc7547dddfbf2a80295515dfe"
+    },
+    "govuk": {
+      "source": "Neeeophytee/agent-stylebooks",
+      "sourceType": "github",
+      "skillPath": "skills/govuk/SKILL.md",
+      "computedHash": "88f3cbcf9f88b2b2eaf129a1e876b5999b1919b1d50a4d5746442c2b10f4d310"
+    },
+    "mdn-web-docs": {
+      "source": "Neeeophytee/agent-stylebooks",
+      "sourceType": "github",
+      "skillPath": "skills/mdn-web-docs/SKILL.md",
+      "computedHash": "eede3199062d0a67920702166f98c4b2d229705d7c26d4ede6dd111f2c02bea8"
+    },
+    "microsoft-writing-style": {
+      "source": "Neeeophytee/agent-stylebooks",
+      "sourceType": "github",
+      "skillPath": "skills/microsoft-writing-style/SKILL.md",
+      "computedHash": "2474ee1b56ce80dbf93bbcfa6051c102552053cd3f30f813a4e11cde5e9442fb"
+    },
     "playwright-best-practices": {
       "source": "currents-dev/playwright-best-practices-skill",
       "sourceType": "github",
