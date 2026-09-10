@@ -196,7 +196,9 @@ const ruleFile = (name: string, ...members: object[]): string => {
     },
   });
 };
-const prop = (type: string, name: string, def: string): object => ({
+// A vector's default is one field holding both axes; every other type here is
+// one value. A point would be two fields, `DEFAULT` and `DEFAULT_Y`.
+const prop = (type: string, name: string, def: unknown): object => ({
   type: 'world_rule_property',
   fields: {TYPE: type, NAME: name, DEFAULT: def},
 });
@@ -454,7 +456,7 @@ describe('parseRuleMeta', () => {
       ruleFile(
         'X',
         prop('boolean', 'active', 'true'),
-        prop('vector', 'gust', '3, 4'),
+        prop('vector', 'gust', {x: 3, y: 4}),
         prop('string', 'label', 'windy'),
       ),
     );
@@ -505,7 +507,7 @@ describe('ruleMetaToModule', () => {
   it('imports Vector only when a property needs it', () => {
     const withVec = parseRuleMeta(
       'rules/x',
-      ruleFile('X', prop('vector', 'gust direction', '0, 1')),
+      ruleFile('X', prop('vector', 'gust direction', {x: 0, y: 1})),
     )!;
     const code = ruleMetaToModule(withVec);
     expect(code).toContain(`import {RuleBuilder, Vector} from 'world-lab';`);

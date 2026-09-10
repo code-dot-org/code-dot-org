@@ -40,7 +40,7 @@ import type {ParamType} from './enums';
 import {localActorVar} from './localActors';
 import {
   designedName,
-  parseDefault,
+  propertyDefault,
   pascal,
   PROPERTY_TYPES,
   slug,
@@ -402,7 +402,12 @@ function declarationsFrom(
       id,
       name: declared,
       type,
-      default: parseDefault(field(block, 'DEFAULT'), type),
+      default: propertyDefault(
+        type,
+        // Raw, not `field()`: a vector's default is an object, not a string.
+        block.fields?.DEFAULT,
+        block.fields?.DEFAULT_Y,
+      ),
       // Meaningful here, and not the same no-op it would be if these were
       // visible elsewhere. An actor's declaring scope is a DECLARATION, not a
       // body — there is nowhere in it to run a `set` — so read-only means no
@@ -643,7 +648,10 @@ export function ownPropertyDeclarationFor(
   fields: {
     name: string;
     type: string;
-    default: string;
+    /** The `DEFAULT` field, whatever it holds — see {@link propertyDefault}. */
+    default: unknown;
+    /** A point's second axis; nothing at all for every other type. */
+    defaultY?: unknown;
     access: string;
   },
   /**
@@ -670,7 +678,7 @@ export function ownPropertyDeclarationFor(
     false,
     {
       type,
-      value: parseDefault(fields.default, type),
+      value: propertyDefault(type, fields.default, fields.defaultY),
       name: declared,
       readonly: fields.access === 'readonly',
     },

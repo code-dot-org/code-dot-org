@@ -60,7 +60,11 @@ const PROJECT_RULE = parseRuleMeta(
               next: {
                 block: {
                   type: 'world_rule_property',
-                  fields: {TYPE: 'vector', NAME: 'direction', DEFAULT: '0,1'},
+                  fields: {
+                    TYPE: 'vector',
+                    NAME: 'direction',
+                    DEFAULT: {x: 0, y: 1},
+                  },
                   next: {
                     block: {
                       type: 'world_rule_block',

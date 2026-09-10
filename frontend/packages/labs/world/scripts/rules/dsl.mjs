@@ -701,14 +701,23 @@ function property(ruleName, traitId, {name, type, value: initial, readonly}) {
     traitId,
     declaration: {
       type: 'world_rule_property',
+      // TYPE FIRST, and it matters. `define property` puts the editor for the
+      // default in the slot the TYPE calls for — the arrow grid for a vector,
+      // an x and a y for a point — and Blockly applies a saved block's fields
+      // in the order the file lists them, so the type has to arrive before the
+      // value it decides the shape of.
       fields: {
         TYPE: type,
         ACCESS: readonly ? 'readonly' : 'writable',
         NAME: name,
-        DEFAULT:
-          type === 'point' || type === 'vector'
-            ? `${initial?.x ?? 0},${initial?.y ?? 0}`
-            : String(initial ?? ''),
+        // A vector is one field holding both axes, the same `{x, y}` its own
+        // `world_vector` literal saves; a point is two number fields, the same
+        // two numbers its setter takes. Everything else is one value, as text.
+        ...(type === 'vector'
+          ? {DEFAULT: {x: initial?.x ?? 0, y: initial?.y ?? 0}}
+          : type === 'point'
+            ? {DEFAULT: initial?.x ?? 0, DEFAULT_Y: initial?.y ?? 0}
+            : {DEFAULT: String(initial ?? '')}),
       },
     },
     /** `get <name> of <subject>` — for everything but a point. */

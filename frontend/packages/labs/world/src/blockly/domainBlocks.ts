@@ -8,8 +8,13 @@
 // `import * as WorldLab from 'world-lab'`, so no per-block import analysis is
 // needed; the compiler rewrites `world-lab` to the self-hosted engine.
 
-import type {Block, BlockSvg, FieldDropdown} from 'blockly';
-import {Events} from 'blockly/core';
+import type {Block, BlockSvg, Field, FieldDropdown} from 'blockly';
+// From `blockly/core`, NOT `blockly`: the bundle entry point re-installs the
+// default English messages, which puts `colour` back on every color block after
+// `installColorMessages` has spelled them the lab's way
+// (`blockly/colorMessages`). A type-only import of the same names is free; a
+// value import is not.
+import {Events, FieldLabel, FieldNumber, FieldTextInput} from 'blockly/core';
 import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {
@@ -130,7 +135,10 @@ import {
   type BlockDrawing,
 } from './fields/FieldPropertyPreview';
 import {fieldSliderArg} from './fields/FieldSlider';
-import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
+import fieldVectorPlugin, {
+  fieldVectorArg,
+  type VectorValue,
+} from './fields/FieldVector';
 import {VARIABLE_NAME_FIELD} from './fields/variableName';
 import {ROOT_HOMES, type FileKind} from './fileKind';
 import {
@@ -189,7 +197,7 @@ import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
 import {
   designedName,
-  parseDefault,
+  propertyDefault,
   pascal,
   PROPERTY_TYPES,
   slug,
@@ -492,6 +500,13 @@ const hasActorInScope = (block: Block): boolean => {
 };
 
 /**
+ * A point's second axis, which is the one type whose default takes two fields.
+ * Named here because it is read where a declaration is generated and written
+ * where `define property` is built, a few thousand lines apart.
+ */
+const DEFAULT_Y_FIELD = 'DEFAULT_Y';
+
+/**
  * The `const`s for everything a world-defined actor declares.
  *
  * `on` is the actor's own variable, because these are emitted at the world
@@ -511,7 +526,8 @@ const ownDeclarationsIn = (
       {
         name: at.getFieldValue('NAME') ?? '',
         type: at.getFieldValue('TYPE') ?? '',
-        default: at.getFieldValue('DEFAULT') ?? '',
+        default: at.getFieldValue('DEFAULT'),
+        defaultY: at.getFieldValue(DEFAULT_Y_FIELD),
         access: at.getFieldValue('ACCESS') ?? '',
       },
       {...on, blockId: block.id},
@@ -6999,6 +7015,10 @@ const worldRuleTrait = defineBlock({
 const PROPERTY_ACCESS_FIELD = 'ACCESS';
 const WRITABLE = 'writable';
 const READONLY = 'readonly';
+const DEFAULT_FIELD = 'DEFAULT';
+/** The labels that make a point's two number fields read as an x and a y. */
+const DEFAULT_X_LABEL = 'DEFAULT_X_LABEL';
+const DEFAULT_Y_LABEL = 'DEFAULT_Y_LABEL';
 /** The rows the previews hang off, and the fields that draw them. */
 const GET_PREVIEW_ROW = 'GET_PREVIEW_ROW';
 const SET_PREVIEW_ROW = 'SET_PREVIEW_ROW';
@@ -7044,10 +7064,102 @@ const propertyOn = (block: Block): PropertyShapeInput => {
     type,
     // Read exactly as `parseRuleMeta` reads it, so what is drawn starts with
     // the same value the real block will be seeded with.
-    default: parseDefault(String(block.getFieldValue('DEFAULT') ?? ''), type),
+    default: propertyDefault(
+      type,
+      block.getFieldValue('DEFAULT'),
+      block.getFieldValue(DEFAULT_Y_FIELD),
+    ),
     scope: propertyScopeOf(block),
   };
 };
+
+/**
+ * How the `with default` slot is edited, which is a fact about the TYPE.
+ *
+ * `text` is a box to type into and covers every single-value type. The two
+ * two-number types get the editors their SETTERS get, so that what a learner
+ * types on the definition and what they type on the block it makes are the same
+ * control: the arrow grid for a vector (`world_vector`), an x and a y for a
+ * point (two number sockets).
+ */
+type DefaultShape = 'text' | 'vector' | 'point';
+
+const defaultShapeFor = (type: string): DefaultShape =>
+  type === 'vector' ? 'vector' : type === 'point' ? 'point' : 'text';
+
+/** The vector field's class, for the one place that builds one by hand. */
+const VectorField = fieldVectorPlugin.field as new (
+  value: VectorValue,
+) => Field;
+
+/**
+ * Put the right editor in the `with default` slot, carrying the value across.
+ *
+ * The fields are REPLACED rather than hidden, so nothing a file does not use is
+ * written into it: a number property saves `DEFAULT: "0"` exactly as before, and
+ * only a point ever writes a `DEFAULT_Y`.
+ *
+ * Carrying matters because the swap can happen after a value has landed. Blockly
+ * applies a saved block's fields in the order the file lists them (core's
+ * `blocks.ts`), and the saver writes them in on-block order — TYPE first, DEFAULT
+ * third — so the ordinary path reshapes before the default arrives. A file
+ * written by hand need not be in that order, and there the old field has already
+ * taken the value; converting it here is what makes the two orders agree.
+ */
+function shapeDefaultField(block: Block, type: string): void {
+  const row = block.inputList[0];
+  const wanted = defaultShapeFor(type);
+  const held = block.getFieldValue(DEFAULT_FIELD);
+  const heldY = block.getFieldValue(DEFAULT_Y_FIELD);
+  const current: DefaultShape =
+    block.getField(DEFAULT_Y_FIELD) !== null
+      ? 'point'
+      : block.getField(DEFAULT_FIELD) instanceof VectorField
+        ? 'vector'
+        : 'text';
+  if (!row || current === wanted) {
+    return;
+  }
+  const carried = propertyDefault(
+    current === 'vector' ? 'vector' : current === 'point' ? 'point' : 'number',
+    held,
+    heldY,
+  ) as number | {x: number; y: number};
+  const point =
+    typeof carried === 'number'
+      ? {x: carried, y: 0}
+      : {x: carried.x, y: carried.y};
+  for (const name of [
+    DEFAULT_X_LABEL,
+    DEFAULT_FIELD,
+    DEFAULT_Y_LABEL,
+    DEFAULT_Y_FIELD,
+  ]) {
+    if (block.getField(name)) {
+      row.removeField(name);
+    }
+  }
+  // Appended, not inserted: the default is the last thing on the row, which is
+  // what `define %1 %2 with default %3` already put it at the end of.
+  if (wanted === 'vector') {
+    row.appendField(new VectorField(point), DEFAULT_FIELD);
+  } else if (wanted === 'point') {
+    row
+      .appendField(new FieldLabel('x'), DEFAULT_X_LABEL)
+      .appendField(new FieldNumber(point.x), DEFAULT_FIELD)
+      .appendField(new FieldLabel('y'), DEFAULT_Y_LABEL)
+      .appendField(new FieldNumber(point.y), DEFAULT_Y_FIELD);
+  } else {
+    // Leaving a two-number type, the x is the one number a text box can hold;
+    // leaving a text box, whatever was typed survives untouched.
+    row.appendField(
+      new FieldTextInput(
+        current === 'text' ? String(held ?? '') : String(point.x),
+      ),
+      DEFAULT_FIELD,
+    );
+  }
+}
 
 /** One of the two drawings, from the shared shape. */
 const propertyDrawing = (
@@ -7123,6 +7235,8 @@ const propertyDesignerExtension = defineExtension(PROPERTY_DESIGNER_EXTENSION, {
     });
 
     block.rebuildDesign_ = () => {
+      // The editor first, so what is read below is read from the right field.
+      shapeDefaultField(block, String(block.getFieldValue('TYPE') ?? ''));
       const property = propertyOn(block);
       const readonly = block.getFieldValue(PROPERTY_ACCESS_FIELD) === READONLY;
       // The glyph is measured, not just drawn (`FieldButton.updateSize_`), so
@@ -7161,6 +7275,17 @@ const propertyDesignerExtension = defineExtension(PROPERTY_DESIGNER_EXTENSION, {
         'given a setter for one of those writes a value the next tick ' +
         'overwrites, and the block looks broken.',
     );
+
+    // ON THE VALIDATOR, which is what makes a saved block come back right.
+    // A validator runs INSIDE `setValue`, so the slot is reshaped while
+    // Blockly is still applying the file's fields — before it reaches
+    // `DEFAULT`, which the saver always writes after `TYPE`. The change event
+    // that `rebuildDesign_` listens for is fired asynchronously and would
+    // arrive far too late for that (`Events.fire`).
+    (block.getField('TYPE') as FieldDropdown | null)?.setValidator(value => {
+      shapeDefaultField(block, String(value));
+      return undefined;
+    });
 
     block.rebuildDesign_();
 

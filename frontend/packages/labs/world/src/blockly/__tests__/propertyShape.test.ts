@@ -26,7 +26,7 @@ const shapeOf = (over: Partial<Parameters<typeof propertyShape>[0]> = {}) =>
 
 /** A `.rule` declaring one property, at rule level or inside a trait. */
 const ruleWith = (
-  fields: Record<string, string>,
+  fields: Record<string, unknown>,
   inTrait?: 'actor' | 'camera',
 ) => {
   const property = {
@@ -173,5 +173,54 @@ describe('the blocks a property really makes', () => {
     expect(ruleWith({NAME: 'falling'}).properties[0]).toMatchObject({
       readonly: false,
     });
+  });
+});
+
+describe('the default a declaration holds', () => {
+  // It used to be a string for these two — `"0,1"` — split on the comma when it
+  // was read. `define property` puts the real editor in the slot now, so the
+  // value arrives in the shape the editor holds it in.
+  it('reads a vector out of the one field that edits both axes', () => {
+    expect(
+      ruleWith({NAME: 'gust', TYPE: 'vector', DEFAULT: {x: 3, y: -4}})
+        .properties[0].default,
+    ).toEqual({x: 3, y: -4});
+  });
+
+  it('reads a point out of the two number fields that edit it', () => {
+    expect(
+      ruleWith({NAME: 'slack', TYPE: 'point', DEFAULT: 48, DEFAULT_Y: 32})
+        .properties[0].default,
+    ).toEqual({x: 48, y: 32});
+  });
+
+  it('seeds both of a point setter’s sockets from them', () => {
+    const {set} = propertyShape({
+      name: 'slack',
+      type: 'point',
+      default: {x: 48, y: 32},
+      scope: 'world',
+    });
+    expect(set.message0).toBe('set slack to x %1  y %2');
+    expect(set.shadows).toEqual([
+      {name: 'X', shadow: {type: 'math_number', fields: {NUM: 48}}},
+      {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 32}}},
+    ]);
+  });
+
+  it('seeds a vector setter with the arrow-grid literal it is edited by', () => {
+    expect(
+      propertyShape({
+        name: 'gust',
+        type: 'vector',
+        default: {x: 3, y: -4},
+        scope: 'world',
+      }).set.shadows,
+    ).toEqual([
+      {
+        name: 'VALUE',
+        shadow: {type: 'world_vector', fields: {VECTOR: {x: 3, y: -4}}},
+      },
+    ]);
   });
 });

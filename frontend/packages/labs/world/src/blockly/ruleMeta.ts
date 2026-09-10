@@ -512,7 +512,28 @@ const QUERY_RETURN_TYPES: ReadonlySet<string> = new Set([
 ]);
 
 /** Parse an authored default (a text field) into a value of the property's type. */
-export const parseDefault = (text: string, type: PropertyType): unknown => {
+/** A number, or zero — what a field that should hold one actually held. */
+const numberOf = (value: unknown): number => {
+  const n = Number(value);
+  return Number.isFinite(n) ? n : 0;
+};
+
+/**
+ * A property's declared default, read off the fields that hold it.
+ *
+ * Most types keep it in one field, `DEFAULT`, as text. The two-number types do
+ * not, and used to: a vector was the string `"0,1"` and a point was the string
+ * `"110,160"`, split on the comma here. `define property` puts the real editor
+ * in that slot now — the arrow grid for a vector, an x and a y for a point,
+ * which is what their setters take — so a vector arrives as `{x, y}` (the same
+ * shape `world_vector`'s own field saves) and a point arrives as two numbers in
+ * `DEFAULT` and `DEFAULT_Y`.
+ */
+export const propertyDefault = (
+  type: PropertyType,
+  value: unknown,
+  y?: unknown,
+): unknown => {
   switch (type) {
     // No actors. There is no other sensible starting value for a set a rule
     // works out each tick, and no text a learner could type that would be one.
@@ -529,19 +550,24 @@ export const parseDefault = (text: string, type: PropertyType): unknown => {
     case 'actor':
       return [];
     case 'boolean':
-      return text.trim().toLowerCase() === 'true';
+      return (
+        String(value ?? '')
+          .trim()
+          .toLowerCase() === 'true'
+      );
     case 'string':
     case 'color':
-      return text;
-    case 'vector':
-    case 'point': {
-      const [x, y] = text.split(',').map(part => Number(part.trim()));
-      return {x: Number.isFinite(x) ? x : 0, y: Number.isFinite(y) ? y : 0};
+      return String(value ?? '');
+    // One field holding both axes, because one field edits both.
+    case 'vector': {
+      const held = (value ?? {}) as {x?: unknown; y?: unknown};
+      return {x: numberOf(held.x), y: numberOf(held.y)};
     }
-    default: {
-      const n = Number(text);
-      return Number.isFinite(n) ? n : 0;
-    }
+    // Two fields, because a point is two numbers a learner types.
+    case 'point':
+      return {x: numberOf(value), y: numberOf(y)};
+    default:
+      return numberOf(value);
   }
 };
 
@@ -656,7 +682,12 @@ export function parseRuleMeta(
       id: slug(name),
       name,
       type,
-      default: parseDefault(field(block, 'DEFAULT'), type),
+      default: propertyDefault(
+        type,
+        // Raw, not `field()`: a vector's default is an object, not a string.
+        block.fields?.DEFAULT,
+        block.fields?.DEFAULT_Y,
+      ),
       // Absent on a workspace saved before the field existed, which reads as
       // writable — the behavior those files already had.
       readonly: field(block, 'ACCESS') === 'readonly',
