@@ -14,6 +14,7 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
+    "docs:journeys": "playwright test --config=playwright.docs.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
