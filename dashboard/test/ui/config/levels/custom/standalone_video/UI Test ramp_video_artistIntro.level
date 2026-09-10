@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-09-08T23:34:22.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "C2_artist_intro",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "hint_prompt_attempts_threshold": 2
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-08T23:34:22.871+00:00\",\"changed\":[\"cloned from \\\"ramp_video_artistIntro\\\"\"],\"cloned_from\":\"ramp_video_artistIntro\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

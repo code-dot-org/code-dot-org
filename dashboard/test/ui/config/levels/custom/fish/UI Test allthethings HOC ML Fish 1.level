@@ -1,0 +1,14 @@
+<Fish>
+  <config><![CDATA[{
+  "game_id": 66,
+  "created_at": "2026-09-08T23:34:33.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "mode": "short"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-08T23:34:33.645+00:00\",\"changed\":[\"cloned from \\\"allthethings HOC ML Fish 1\\\"\"],\"cloned_from\":\"allthethings HOC ML Fish 1\"}]"
+}]]></config>
+</Fish>

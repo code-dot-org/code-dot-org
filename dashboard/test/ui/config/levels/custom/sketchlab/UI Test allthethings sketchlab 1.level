@@ -1,0 +1,29 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-09-08T23:34:40.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This is the first allthethings level for Sketch Lab! It is used for UI tests and relies on the canvas starting out blank.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -400.578125,
+          "y": -231,
+          "zoom": 2
+        }
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-08T23:34:40.023+00:00\",\"changed\":[\"cloned from \\\"allthethings sketchlab 1\\\"\"],\"cloned_from\":\"allthethings sketchlab 1\"}]"
+}]]></config>
+</Sketchlab>

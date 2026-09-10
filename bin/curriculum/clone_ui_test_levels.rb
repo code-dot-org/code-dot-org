@@ -154,13 +154,21 @@ def migrate_unit(unit)
   raise "#{unit.name.dump} is not a ui-test-* unit" unless unit.name.start_with?('ui-test-')
 
   unit.script_levels.each do |script_level|
-    raise "script_level #{script_level.id} uses variants, which this script does not handle" if script_level.variants.present?
+    originals = script_level.levels.to_a
+    mapped_levels = originals.map {|level| clone_level(level)}
+    next if mapped_levels == originals
 
-    mapped_levels = script_level.levels.map {|level| clone_level(level)}
-    next if mapped_levels == script_level.levels.to_a
+    # A swapped level's script_level holds its level_keys in an order the
+    # levels association does not reproduce, and names the inactive variant in
+    # a variants hash, so rewrite both entry by entry rather than rebuilding
+    # them from the association.
+    key_map = originals.map(&:key).zip(mapped_levels.map(&:key)).to_h
+    name_map = originals.map(&:name).zip(mapped_levels.map(&:name)).to_h
 
     script_level.levels = mapped_levels
-    script_level.update!(level_keys: mapped_levels.map(&:key))
+    script_level.level_keys = (script_level.level_keys || originals.map(&:key)).map {|key| key_map.fetch(key, key)}
+    script_level.variants = script_level.variants.transform_keys {|name| name_map.fetch(name, name)} if script_level.variants.present?
+    script_level.save!
     puts "repointed script_level #{script_level.id}: #{mapped_levels.map(&:name).join(', ')}" if $verbose
   end
 

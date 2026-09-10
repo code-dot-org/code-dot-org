@@ -1,0 +1,15 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2026-09-08T23:34:30.000Z",
+  "level_num": "custom",
+  "user_id": 556,
+  "properties": {
+    "instructions_important": "false",
+    "reference": "/docs/concepts/app-lab/the-counter-pattern/index.html"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-08T23:34:30.342+00:00\",\"changed\":[\"cloned from \\\"allthethings_map\\\"\"],\"cloned_from\":\"allthethings_map\"}]"
+}]]></config>
+</Map>

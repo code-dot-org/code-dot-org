@@ -1,0 +1,6 @@
+name 'UI Test student-labs-text-match-1'
+title 'Convert the blocks to an expression'
+placeholder 'Type the arithmetic expression here'
+content1 'Type the arithmetic expression that matches this code.'
+answer '4+5'
+answer '(4+5)'
