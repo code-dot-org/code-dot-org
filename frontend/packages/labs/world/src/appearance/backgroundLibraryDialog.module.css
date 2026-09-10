@@ -14,6 +14,8 @@
    that one's 56px: these are whole scenes rather than a 32-pixel drawing, and a
    cave is not a city at thumbnail size unless you can see it. */
 .shelf {
+  --tile: 96px;
+
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -30,8 +32,8 @@
   align-items: center;
   justify-content: center;
   box-sizing: content-box;
-  width: 96px;
-  height: 96px;
+  width: var(--tile);
+  height: var(--tile);
   padding: 2px;
   border: 2px solid transparent;
   border-radius: 4px;
@@ -53,10 +55,18 @@
 }
 
 /* Drawn as the game draws it: stretched to fill, not fitted. A shelf that
-   showed a backdrop letterboxed would be promising something else. */
-.thumb {
-  width: 100%;
-  height: 100%;
+   showed a backdrop letterboxed would be promising something else.
+
+   In pixels, and under two classes, to beat the design system's `Dialog`: it
+   styles every `img` in its custom-content section to a fixed 260 by 138, which
+   is right for the one picture a dialog is about and wrong for a grid of them.
+   This shelf was drawing every backdrop half again as wide as its tile and over
+   the top of its neighbours (`backgroundPickerDialog.module.css` says more). */
+.shelf .thumb {
+  display: block;
+  width: var(--tile);
+  height: var(--tile);
+  min-width: 0;
   object-fit: fill;
   border-radius: 2px;
 }
