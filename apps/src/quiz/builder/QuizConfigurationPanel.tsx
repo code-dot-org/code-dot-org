@@ -1,8 +1,8 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Typography} from '@mui/material';
-import React, {useState} from 'react';
+import {Alert} from '@mui/material';
+import React, {useEffect, useRef, useState} from 'react';
 
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
@@ -87,10 +87,10 @@ const ConfigCard: React.FunctionComponent<{
   label: string;
   children: React.ReactNode;
 }> = ({label, children}) => (
-  <div className={styles.configCard}>
-    <div className={styles.configCardHeader}>{label}</div>
+  <fieldset className={styles.configCard}>
+    <legend className={styles.configCardHeader}>{label}</legend>
     <div className={styles.configCardContent}>{children}</div>
-  </div>
+  </fieldset>
 );
 
 interface QuizConfigurationPanelProps {
@@ -110,6 +110,10 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const [timeLimitMinutes, setTimeLimitMinutes] = useState(
     initialValues.timeLimitMinutes?.toString() || ''
   );
+  // What the field held on focus - compared on blur so a save only fires
+  // when the value actually changed during that focus.
+  const [timeLimitMinutesAtFocus, setTimeLimitMinutesAtFocus] =
+    useState(timeLimitMinutes);
   const [showCorrectness, setShowCorrectness] = useState(
     initialValues.showCorrectness
   );
@@ -123,8 +127,22 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const [allowMultipleAttempts, setAllowMultipleAttempts] = useState(
     initialValues.allowMultipleAttempts
   );
-  const [isSaving, setIsSaving] = useState(false);
+  const [savingField, setSavingField] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [timeLimitError, setTimeLimitError] = useState<string | null>(null);
+
+  const panelRef = useRef<HTMLDivElement>(null);
+  const previousSavingFieldRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (previousSavingFieldRef.current && !savingField) {
+      panelRef.current
+        ?.querySelector<HTMLElement>(
+          `[name="${previousSavingFieldRef.current}"]`
+        )
+        ?.focus();
+    }
+    previousSavingFieldRef.current = savingField;
+  }, [savingField]);
 
   // Every field autosaves individually.
   const handleSave = async (
@@ -135,9 +153,11 @@ const QuizConfigurationPanel: React.FunctionComponent<
       showIntroScreen: boolean;
       purpose: string | null;
       allowMultipleAttempts: boolean;
-    }> = {}
+    }> = {},
+    savingFieldName: string | null = null
   ): Promise<boolean> => {
     setError(null);
+    setTimeLimitError(null);
     // Blank means "no time limit" which will be set to null. Otherwise, we need a positive integer.
     const parsedTimeLimitMinutes =
       'timeLimitMinutes' in updatedConfigValues
@@ -149,9 +169,10 @@ const QuizConfigurationPanel: React.FunctionComponent<
       parsedTimeLimitMinutes !== null &&
       (!Number.isInteger(parsedTimeLimitMinutes) || parsedTimeLimitMinutes <= 0)
     ) {
-      setError(
-        'Time limit must be a whole number of minutes greater than 0, or left blank for no limit.'
-      );
+      const message =
+        'Time limit must be a whole number of minutes greater than 0, or left blank for no limit.';
+      setError(message);
+      setTimeLimitError(message);
       return false;
     }
     const effectiveShowIntroScreen =
@@ -163,7 +184,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
       setError('Show intro screen is required when a time limit is set.');
       return false;
     }
-    setIsSaving(true);
+    setSavingField(savingFieldName);
     try {
       const response = await HttpClient.put(
         `/levels/${quizId}/quiz_configuration`,
@@ -186,16 +207,122 @@ const QuizConfigurationPanel: React.FunctionComponent<
       setError(await saveErrorMessage(error));
       return false;
     } finally {
-      setIsSaving(false);
+      setSavingField(null);
     }
   };
 
+  const handleChoosePurpose = (purposeValue: string) => {
+    // Only reachable while purpose is unset (the chooser only shows then)
+    // - assumed to only happen for a brand-new quiz level.
+    const defaults = PURPOSE_DEFAULTS[purposeValue];
+    setPurpose(purposeValue);
+    setShowIntroScreen(defaults.showIntroScreen);
+    setTimeLimitMinutes(defaults.timeLimitMinutes?.toString() ?? '');
+    setAllowMultipleAttempts(defaults.allowMultipleAttempts);
+    setShowCorrectness(defaults.showCorrectness);
+    setRevealAnswerExplanation(defaults.revealAnswerExplanation);
+    void handleSave(
+      {
+        purpose: purposeValue,
+        ...defaults,
+      },
+      'purpose'
+    ).then(ok => {
+      if (!ok) setPurpose('');
+    });
+  };
+
+  const handlePurposeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newPurpose = e.target.value;
+    const previous = purpose;
+    setPurpose(newPurpose);
+    void handleSave({purpose: newPurpose}, 'purpose').then(ok => {
+      if (!ok) setPurpose(previous);
+    });
+  };
+
+  const handleShowIntroScreenChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    setShowIntroScreen(checked);
+    void handleSave({showIntroScreen: checked}, 'showIntroScreen').then(ok => {
+      if (!ok) setShowIntroScreen(!checked);
+    });
+  };
+
+  const handleTimeLimitFocus = () => {
+    setTimeLimitMinutesAtFocus(timeLimitMinutes);
+  };
+
+  // Saves on blur rather than per keystroke, and only when the value
+  // actually changed during this focus.
+  const handleTimeLimitBlur = () => {
+    if (timeLimitMinutes !== timeLimitMinutesAtFocus) {
+      void handleSave(undefined, 'timeLimitMinutes');
+    }
+  };
+
+  const handleAllowMultipleAttemptsChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    setAllowMultipleAttempts(checked);
+    void handleSave(
+      {allowMultipleAttempts: checked},
+      'allowMultipleAttempts'
+    ).then(ok => {
+      if (!ok) setAllowMultipleAttempts(!checked);
+    });
+  };
+
+  const handleShowCorrectnessChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    const previousReveal = revealAnswerExplanation;
+    setShowCorrectness(checked);
+    // Mirrors reveal_answer_explanation_requires_show_correctness - turning
+    // correctness off while explanation reveal is on would otherwise be
+    // silently invalid.
+    if (!checked) {
+      setRevealAnswerExplanation(false);
+    }
+    void handleSave(
+      {
+        showCorrectness: checked,
+        ...(!checked && {revealAnswerExplanation: false}),
+      },
+      'showCorrectness'
+    ).then(ok => {
+      if (!ok) {
+        setShowCorrectness(!checked);
+        if (!checked) {
+          setRevealAnswerExplanation(previousReveal);
+        }
+      }
+    });
+  };
+
+  const handleRevealAnswerExplanationChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const checked = e.target.checked;
+    setRevealAnswerExplanation(checked);
+    void handleSave(
+      {revealAnswerExplanation: checked},
+      'revealAnswerExplanation'
+    ).then(ok => {
+      if (!ok) setRevealAnswerExplanation(!checked);
+    });
+  };
+
   return (
-    <div className={styles.panel}>
+    <div className={styles.panel} ref={panelRef}>
       {error && (
-        <Typography variant="body3" color="error">
+        <Alert severity="error" role="alert">
           {error}
-        </Typography>
+        </Alert>
       )}
 
       {!purpose ? (
@@ -212,26 +339,8 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 key={option.value}
                 type="button"
                 className={styles.optionCard}
-                disabled={isSaving}
-                onClick={() => {
-                  // Only reachable while purpose is unset (the chooser only
-                  // shows then) - assumed to only happen for a brand-new quiz level.
-                  const defaults = PURPOSE_DEFAULTS[option.value];
-                  setPurpose(option.value);
-                  setShowIntroScreen(defaults.showIntroScreen);
-                  setTimeLimitMinutes(
-                    defaults.timeLimitMinutes?.toString() ?? ''
-                  );
-                  setAllowMultipleAttempts(defaults.allowMultipleAttempts);
-                  setShowCorrectness(defaults.showCorrectness);
-                  setRevealAnswerExplanation(defaults.revealAnswerExplanation);
-                  void handleSave({
-                    purpose: option.value,
-                    ...defaults,
-                  }).then(ok => {
-                    if (!ok) setPurpose('');
-                  });
-                }}
+                disabled={savingField === 'purpose'}
+                onClick={() => handleChoosePurpose(option.value)}
               >
                 <span className={styles.optionName}>{option.text}</span>
                 <span className={styles.optionDescription}>
@@ -249,15 +358,8 @@ const QuizConfigurationPanel: React.FunctionComponent<
             labelText="Purpose"
             items={PURPOSE_OPTIONS}
             selectedValue={purpose}
-            disabled={isSaving}
-            onChange={e => {
-              const newPurpose = e.target.value;
-              const previous = purpose;
-              setPurpose(newPurpose);
-              void handleSave({purpose: newPurpose}).then(ok => {
-                if (!ok) setPurpose(previous);
-              });
-            }}
+            disabled={savingField === 'purpose'}
+            onChange={handlePurposeChange}
             styleAsFormField
             className={styles.fullWidthDropdown}
           />
@@ -274,15 +376,9 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   name="showIntroScreen"
                   aria-label="Show intro screen"
                   size="s"
-                  disabled={isSaving}
+                  disabled={savingField === 'showIntroScreen'}
                   checked={showIntroScreen}
-                  onChange={e => {
-                    const checked = e.target.checked;
-                    setShowIntroScreen(checked);
-                    void handleSave({showIntroScreen: checked}).then(ok => {
-                      if (!ok) setShowIntroScreen(!checked);
-                    });
-                  }}
+                  onChange={handleShowIntroScreenChange}
                 />
               </div>
               <p className={styles.cardHelperText}>
@@ -303,11 +399,12 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 className={styles.fullWidthField}
                 placeholder="minutes"
                 helperMessage="Leave unset for no time limit"
-                disabled={isSaving}
+                errorMessage={timeLimitError ?? undefined}
+                disabled={savingField === 'timeLimitMinutes'}
                 value={timeLimitMinutes}
                 onChange={e => setTimeLimitMinutes(e.target.value)}
-                // Saves on blur rather than per keystroke.
-                onBlur={() => void handleSave()}
+                onFocus={handleTimeLimitFocus}
+                onBlur={handleTimeLimitBlur}
               />
             </div>
             <div className={styles.cardRow}>
@@ -319,17 +416,9 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   name="allowMultipleAttempts"
                   aria-label="Allow multiple attempts"
                   size="s"
-                  disabled={isSaving}
+                  disabled={savingField === 'allowMultipleAttempts'}
                   checked={allowMultipleAttempts}
-                  onChange={e => {
-                    const checked = e.target.checked;
-                    setAllowMultipleAttempts(checked);
-                    void handleSave({allowMultipleAttempts: checked}).then(
-                      ok => {
-                        if (!ok) setAllowMultipleAttempts(!checked);
-                      }
-                    );
-                  }}
+                  onChange={handleAllowMultipleAttemptsChange}
                 />
               </div>
             </div>
@@ -343,30 +432,9 @@ const QuizConfigurationPanel: React.FunctionComponent<
                   name="showCorrectness"
                   aria-label="Show correctness"
                   size="s"
-                  disabled={isSaving}
+                  disabled={savingField === 'showCorrectness'}
                   checked={showCorrectness}
-                  onChange={e => {
-                    const checked = e.target.checked;
-                    const previousReveal = revealAnswerExplanation;
-                    setShowCorrectness(checked);
-                    // Mirrors reveal_answer_explanation_requires_show_correctness -
-                    // turning correctness off while explanation reveal is on would
-                    // otherwise be silently invalid.
-                    if (!checked) {
-                      setRevealAnswerExplanation(false);
-                    }
-                    void handleSave({
-                      showCorrectness: checked,
-                      ...(!checked && {revealAnswerExplanation: false}),
-                    }).then(ok => {
-                      if (!ok) {
-                        setShowCorrectness(!checked);
-                        if (!checked) {
-                          setRevealAnswerExplanation(previousReveal);
-                        }
-                      }
-                    });
-                  }}
+                  onChange={handleShowCorrectnessChange}
                 />
               </div>
               {showCorrectness && (
@@ -379,17 +447,9 @@ const QuizConfigurationPanel: React.FunctionComponent<
                       name="revealAnswerExplanation"
                       aria-label="Reveal answer and explanation"
                       size="s"
-                      disabled={isSaving}
+                      disabled={savingField === 'revealAnswerExplanation'}
                       checked={revealAnswerExplanation}
-                      onChange={e => {
-                        const checked = e.target.checked;
-                        setRevealAnswerExplanation(checked);
-                        void handleSave({
-                          revealAnswerExplanation: checked,
-                        }).then(ok => {
-                          if (!ok) setRevealAnswerExplanation(!checked);
-                        });
-                      }}
+                      onChange={handleRevealAnswerExplanationChange}
                     />
                   </div>
                   <p className={styles.cardHelperText}>

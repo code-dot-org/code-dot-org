@@ -94,6 +94,9 @@
 }
 
 .configCard {
+  margin: 0;
+  min-width: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -106,12 +109,14 @@
 }
 
 .configCardHeader {
-  display: flex;
-  align-items: center;
-  height: 32px;
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 0 10px;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 10px;
+  height: 32px;
+  line-height: 32px;
   border-bottom: 1px solid var(--border-neutral-primary, #d3d6da);
   background: var(--background-neutral-secondary, #f1f2f4);
   font-weight: 600;

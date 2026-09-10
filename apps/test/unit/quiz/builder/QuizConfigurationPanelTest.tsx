@@ -131,13 +131,42 @@ describe('QuizConfigurationPanel', () => {
     fireEvent.click(toggle);
     expect(toggle.checked).toBe(false);
 
-    await waitFor(() =>
-      expect(screen.getByText('Something went wrong.')).toBeInTheDocument()
+    await waitFor(() => {
+      expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+    });
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'Something went wrong.'
     );
     expect(toggle.checked).toBe(true);
   });
 
-  it('disables controls while a save is in flight', async () => {
+  it('disables only the field being saved, not other controls, while a save is in flight', async () => {
+    let resolvePut: (response: Response) => void = () => {};
+    put.mockReturnValue(
+      new Promise(resolve => {
+        resolvePut = resolve;
+      })
+    );
+    renderPanel();
+
+    const introToggle = screen.getByLabelText(
+      'Show intro screen'
+    ) as HTMLInputElement;
+    const attemptsToggle = screen.getByLabelText('Allow multiple attempts');
+    fireEvent.click(introToggle);
+
+    expect(introToggle).toBeDisabled();
+    // A single shared "isSaving" boolean used to disable every control, so
+    // a click on this one delivered right after another field's
+    // blur-triggered save started could land on a target a re-render just
+    // disabled, dropping the click.
+    expect(attemptsToggle).not.toBeDisabled();
+
+    resolvePut(jsonResponse(INITIAL_VALUES));
+    await waitFor(() => expect(introToggle).not.toBeDisabled());
+  });
+
+  it('restores focus to a field once its save completes, since disabling it mid-save blurs it', async () => {
     let resolvePut: (response: Response) => void = () => {};
     put.mockReturnValue(
       new Promise(resolve => {
@@ -149,11 +178,12 @@ describe('QuizConfigurationPanel', () => {
     const toggle = screen.getByLabelText(
       'Show intro screen'
     ) as HTMLInputElement;
+    toggle.focus();
     fireEvent.click(toggle);
     expect(toggle).toBeDisabled();
 
     resolvePut(jsonResponse(INITIAL_VALUES));
-    await waitFor(() => expect(toggle).not.toBeDisabled());
+    await waitFor(() => expect(toggle).toHaveFocus());
   });
 
   it('saves the time limit on blur, not on every keystroke', () => {
@@ -165,6 +195,16 @@ describe('QuizConfigurationPanel', () => {
 
     fireEvent.blur(field);
     expect(put).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not save when the field is focused and blurred without changing its value', () => {
+    renderPanel({initialValues: {...INITIAL_VALUES, timeLimitMinutes: 10}});
+    const field = screen.getByLabelText(TIME_LIMIT_LABEL);
+
+    fireEvent.focus(field);
+    fireEvent.blur(field);
+
+    expect(put).not.toHaveBeenCalled();
   });
 
   it('sends a blank time limit as null', async () => {
@@ -188,11 +228,13 @@ describe('QuizConfigurationPanel', () => {
     fireEvent.change(field, {target: {value: '0'}});
     fireEvent.blur(field);
 
-    expect(
-      await screen.findByText(
-        'Time limit must be a whole number of minutes greater than 0, or left blank for no limit.'
-      )
-    ).toBeInTheDocument();
+    const message =
+      'Time limit must be a whole number of minutes greater than 0, or left blank for no limit.';
+    // Shown twice on purpose: once in the page-level alert (announced
+    // regardless of focus), once via the field's own errorMessage (which
+    // marks the field itself invalid) - not a duplication bug.
+    expect(await screen.findAllByText(message)).toHaveLength(2);
+    await waitFor(() => expect(field).toHaveAttribute('aria-invalid', 'true'));
     expect(put).not.toHaveBeenCalled();
   });
 
