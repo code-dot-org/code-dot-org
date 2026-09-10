@@ -988,9 +988,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
-  // The play-music block's songs, fetched once per level. The flyout
-  // usually renders first: it is redrawn with them, and a block placed
-  // meanwhile, holding no song, is given the newest.
+  // The play-music block's songs: fetched once per user session (the list
+  // is level-independent; musicProjects.ts caches the fetch) and put in
+  // redux on each level. The flyout usually renders first: it is redrawn
+  // with them, and a block placed meanwhile, holding no song, is given the
+  // newest.
   const musicProjects = useAppSelector(state => state.spriteLab2.musicProjects);
   useEffect(() => {
     if (musicSeededRef.current) {
@@ -1022,10 +1024,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [levelProperties.id, dispatch, refreshToolbox]);
 
-  const {nowPlaying, playMusic} = useSceneMusic(
-    activeTab === 'Play',
-    musicProjects
-  );
+  const {nowPlaying, playMusic, stopMusic} = useSceneMusic(musicProjects);
+  // Music belongs to the game: leaving the Play tab silences it.
+  useEffect(() => {
+    if (activeTab !== 'Play') {
+      stopMusic();
+    }
+  }, [activeTab, stopMusic]);
 
   // Hidden tabs stay mounted behind a clip-path, which hides them visually
   // but leaves their contents (workspace, palette, grid) in the tab order
@@ -1150,7 +1155,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setJumpCover(false);
     };
     engine.onSceneJumpCancel = () => setJumpCover(false);
-    engine.onPlayMusic = playMusic;
+    // Gated here, not in the hook: the same compiled program also runs as
+    // the Code tab's live preview, which must stay silent.
+    engine.onPlayMusic = (channel: string) => {
+      if (isPlayingRef.current) {
+        playMusic(channel);
+      }
+    };
   }, [
     engineReady,
     playMusic,

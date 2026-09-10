@@ -1,41 +1,31 @@
-import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import ProjectPlayer from '@cdo/apps/music/ProjectPlayer';
 
-// The first measure of a song; playback positions are 1-based measures.
-const FIRST_MEASURE = 1;
-
-function createMusicPlayers(): {
-  musicPlayer: MusicPlayer;
-  projectPlayer: ProjectPlayer;
-} {
-  const musicPlayer = new MusicPlayer();
-  return {musicPlayer, projectPlayer: new ProjectPlayer(musicPlayer)};
-}
+/** The slice of ProjectPlayer this class drives; tests hand in fakes. */
+export type BackgroundPlayer = Pick<
+  ProjectPlayer,
+  'loadProject' | 'getMetadata' | 'playLooping' | 'stop'
+>;
 
 /**
  * Background music for a game: one Music Lab project at a time, repeating
  * from its first measure to its last; asking for the song already playing
- * changes nothing. The players are created on the first song, since most
- * games have none.
+ * changes nothing. Constructing the player builds Music Lab's whole chain,
+ * which is fine here because a SceneMusic is only made on the first
+ * play-music block — most games have none.
  */
 export default class SceneMusic {
-  private musicPlayer: MusicPlayer | null = null;
-  private projectPlayer: ProjectPlayer | null = null;
   private current: string | null = null;
   // The last channel whose load failed, so a repeating event can't fetch
   // a broken song once per firing. stop() or a different song clears it;
   // the next run retries.
   private failed: string | null = null;
   private request = 0;
-  // Loads run one at a time: the players are shared and stateful, so a
-  // second load must not start until the first has settled.
-  private queue: Promise<unknown> = Promise.resolve();
+  // The in-flight start, if any: the player is shared and stateful, so a
+  // new start first waits for the previous one to settle.
+  private starting: Promise<unknown> = Promise.resolve();
 
   constructor(
-    private readonly createPlayers: () => {
-      musicPlayer: MusicPlayer;
-      projectPlayer: ProjectPlayer;
-    } = createMusicPlayers
+    private readonly player: BackgroundPlayer = new ProjectPlayer()
   ) {}
 
   /** The channel of the song playing or loading, if any. */
@@ -58,12 +48,16 @@ export default class SceneMusic {
     }
     this.failed = null;
     const request = ++this.request;
-    this.stopPlayback();
+    this.player.stop();
     this.current = channelId;
-    const run = () => this.startSong(channelId, request);
-    const result = this.queue.then(run, run);
-    this.queue = result.catch(() => {});
-    return result;
+    const previous = this.starting;
+    const started = (async () => {
+      // A rejected predecessor already reported to its own caller.
+      await previous.catch(() => {});
+      return this.startSong(channelId, request);
+    })();
+    this.starting = started.catch(() => {});
+    return started;
   }
 
   private async startSong(
@@ -73,12 +67,8 @@ export default class SceneMusic {
     if (request !== this.request) {
       return false;
     }
-    if (!this.musicPlayer || !this.projectPlayer) {
-      ({musicPlayer: this.musicPlayer, projectPlayer: this.projectPlayer} =
-        this.createPlayers());
-    }
     try {
-      await this.projectPlayer.loadProject(channelId);
+      await this.player.loadProject(channelId);
     } catch (e) {
       this.forget(channelId, request);
       throw e;
@@ -86,18 +76,13 @@ export default class SceneMusic {
     if (request !== this.request) {
       return false;
     }
-    const metadata = this.projectPlayer.getMetadata();
     // A project that would not load comes back as Music Lab's built-in
     // metadata: silence, not the built-in song.
-    if (metadata.channelId !== channelId) {
+    if (this.player.getMetadata().channelId !== channelId) {
       this.forget(channelId, request);
       return false;
     }
-    const {playbackEvents, lastMeasure} = metadata;
-    this.musicPlayer.setLoopStart(FIRST_MEASURE);
-    this.musicPlayer.setLoopEnd(lastMeasure + 1);
-    this.musicPlayer.setLoopEnabled(true);
-    this.musicPlayer.playSong(playbackEvents);
+    this.player.playLooping();
     return true;
   }
 
@@ -112,15 +97,8 @@ export default class SceneMusic {
 
   stop(): void {
     this.request++;
-    this.stopPlayback();
+    this.player.stop();
     this.current = null;
     this.failed = null;
-  }
-
-  private stopPlayback(): void {
-    if (this.musicPlayer) {
-      this.musicPlayer.stopSong();
-      this.musicPlayer.setLoopEnabled(false);
-    }
   }
 }
