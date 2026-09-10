@@ -1,4 +1,4 @@
-import {VideoRecorder} from '@code-dot-org/lesson-deep-dive';
+import {VideoCanvas} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -182,7 +182,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
 
   return (
     <div className={styles.videoContainer}>
-      <VideoRecorder
+      <VideoCanvas
         key={resetKey}
         isRecording={isRecording}
         onRecordingChange={setHasRecording}
