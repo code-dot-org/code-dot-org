@@ -1,6 +1,8 @@
 import {
   findOpaqueBounds,
+  getTrimmedThumbnail,
   loadedAnimations,
+  trimAnimationListImages,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 
 // Build RGBA data for a w x h image from a rows array of 0/1 (1 = opaque).
@@ -97,5 +99,20 @@ describe('SpriteLab2 loadedAnimations', () => {
       orderedKeys: [],
       propsByKey: {},
     });
+  });
+});
+
+describe('SpriteLab2 trimAnimationListImages save-time flag', () => {
+  it('a trimmed-at-save single passes through untouched', async () => {
+    const dataURI = 'data:image/png;base64,already-cropped';
+    const list = {
+      orderedKeys: ['a'],
+      propsByKey: {
+        a: {name: 'wizard', dataURI, trimmed: true, frameCount: 1},
+      },
+    };
+    const out = await trimAnimationListImages(list);
+    expect(out.propsByKey.a.dataURI).toBe(dataURI);
+    expect(getTrimmedThumbnail('wizard')).toBe(dataURI);
   });
 });

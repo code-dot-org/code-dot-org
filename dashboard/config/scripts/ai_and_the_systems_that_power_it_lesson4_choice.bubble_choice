@@ -1,0 +1,9 @@
+name 'ai-and-the-systems-that-power-it-lesson4-choice'
+display_name 'Computer System Scavenger Hunt'
+description 'Complete a computer system scavenger hunt in Sketch Lab using a computer simulation or your own device'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson4-scavenger-hunt'
+level 'ai-and-the-systems-that-power-it-lesson4-computer-sim'
+
+uses_lab2

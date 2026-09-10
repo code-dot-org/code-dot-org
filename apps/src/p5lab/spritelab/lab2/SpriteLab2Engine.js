@@ -3,6 +3,7 @@ import * as BlocklyCore from 'blockly/core';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
+import {setRetainBlobsOnLoad} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -22,6 +23,7 @@ import {
   nextFacing,
   pickPose,
   poseFrame,
+  poseStartTick,
   posesByImageName,
   teeterTicks,
 } from './characterAnimations';
@@ -110,6 +112,10 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
+    // This lab saves images through its own asset uploads, so loaded
+    // animations don't keep their Blobs (legacy needs them for
+    // cloneAnimation).
+    setRetainBlobsOnLoad(false);
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
@@ -972,7 +978,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       if (pick.key !== state.key) {
         state.key = pick.key;
-        state.tick = 0;
+        // A strip's walk starts on the mid-stride frame, so the first
+        // step is visible the moment movement starts (see poseStartTick).
+        state.tick = poseStartTick(poses, pick);
       }
       // Frames drawn facing the other way are shown mirrored; a set drawn
       // facing right only turns left this way.

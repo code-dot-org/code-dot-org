@@ -128,10 +128,11 @@ export function posePrompt(
   );
 }
 
-// The strip's square cell. Cells at the model's native 1024 would break
-// the 4MB asset bound comfortably kept below; five of these stay a modest
-// PNG while a sprite drawn at playspace sizes (50-300px) loses nothing.
-const STRIP_CELL_PX = 768;
+// The strip's square cell. 512 covers typical on-screen sprite sizes 1:1
+// (a large story-scene sprite on a high-density screen can exceed it and
+// render softer — the accepted tradeoff), and the decoded strip is a third
+// the memory of the previous 768 cells.
+const STRIP_CELL_PX = 512;
 
 // If an unusually detailed strip still encodes too large, redraw it smaller
 // once; past that, let it through and take the upload as it comes.
@@ -213,6 +214,9 @@ async function composeStrip(
   strip.height = cell;
   const ctx = strip.getContext('2d')!;
   ctx.imageSmoothingEnabled = style === 'smooth';
+  // The cell is now half the model's output, so this draw is a real
+  // downscale; default (low) smoothing visibly softens it.
+  ctx.imageSmoothingQuality = 'high';
   rasters.forEach((raster, index) => {
     ctx.drawImage(
       raster.canvas,

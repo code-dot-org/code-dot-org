@@ -66,8 +66,9 @@
       ]
     },
     "display_name": "Layla Haddad",
-    "bubble_choice_description": "Online resources to troubleshoot the DispenseRight pill dispensing machine"
+    "bubble_choice_description": "Online resources to troubleshoot the DispenseRight pill dispensing machine",
+    "thumbnail_url": "https://images.code.org/114b86d16db63de8b3dcf02224f90bfd-Layla.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-04T15:51:58.731+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-online-resources-joaquin\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-online-resources-joaquin\"},{\"changed_at\":\"2026-09-04 15:52:04 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 15:52:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 15:55:36 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-04T15:51:58.731+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-online-resources-joaquin\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-online-resources-joaquin\"},{\"changed_at\":\"2026-09-04 15:52:04 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 15:52:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 15:55:36 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:21:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

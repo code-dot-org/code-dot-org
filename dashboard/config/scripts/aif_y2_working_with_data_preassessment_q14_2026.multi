@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q14-2026'
+
+right 'Cleaning and transforming data'
+wrong 'Analyzing data'
+wrong 'Communicating findings'
+wrong 'Learning new tools'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Data scientists tend to report spending most of their time...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Preparing Data
+MARKDOWN
