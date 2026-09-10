@@ -62,6 +62,7 @@ import {IconButtonWithTooltip} from '@code-dot-org/lab/components';
 import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
+import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {label} from '../blockly/label';
 import {authoredName} from '../blockly/projectModules';
@@ -70,7 +71,12 @@ import {resolveRuleContents} from '../rules/ruleReference';
 import {filePath} from '../runtime/projectFiles';
 
 import styles from './fileMenus.module.css';
-import {FOLDER_MENUS, type FolderMenu, type Makeable} from './folderMenus';
+import {
+  ACTORS_FOLDER,
+  FOLDER_MENUS,
+  type FolderMenu,
+  type Makeable,
+} from './folderMenus';
 import {fileStem, renamed, seedFor} from './newThing';
 import {renameThing} from './renameThing';
 
@@ -80,6 +86,14 @@ interface RowMenu {
   /** What the row SHOWED, which is what a menu about it should say. */
   name: string;
   anchor: HTMLElement;
+  /**
+   * Whether this kind can be GIVEN something (`folderMenus.enhances`).
+   *
+   * Carried on the row rather than read off the open folder menu, because the
+   * actors reach this menu from a grid that is not one (`onOptions` below) and
+   * there is no open folder menu to ask.
+   */
+  enhances: boolean;
 }
 
 export const FileMenus = () => {
@@ -93,6 +107,16 @@ export const FileMenus = () => {
   const {promptForName, confirm, alert} = usePrompts();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
   const [open, setOpen] = useState<{menu: FolderMenu; anchor: HTMLElement}>();
+  /**
+   * Whether the actor grid is up.
+   *
+   * The actors read as a grid rather than a list, because an actor is a thing
+   * you can see and the lab draws it everywhere else it is named
+   * (`actors/ActorPickerDialog`). Every act in it is still this component's —
+   * the same `make`, the same shelf, the same row menu — so the two readings
+   * cannot drift.
+   */
+  const [picking, setPicking] = useState(false);
   const [row, setRow] = useState<RowMenu>();
   // The tolerant form: this renders inside the lab, which provides a theme,
   // and in a bare tree in tests, which does not — and a menu is not worth a
@@ -185,6 +209,7 @@ export const FileMenus = () => {
    */
   const thenAsk = useCallback(async () => {
     setRow(undefined);
+    setPicking(false);
     close();
     await new Promise(resolve => setTimeout(resolve, 0));
   }, [close]);
@@ -450,6 +475,33 @@ export const FileMenus = () => {
 
   const files = open ? filesIn(open.menu.folder) : [];
 
+  /** The folder menu the actors' grid stands in for — its `New`, its shelf. */
+  const actorsMenu = FOLDER_MENUS.find(
+    menu => menu.folder === ACTORS_FOLDER,
+  ) as FolderMenu;
+
+  /**
+   * The actors, as the grid needs them.
+   *
+   * The `moduleKey` is what the picture registries are keyed by — a file's
+   * path without its extension, which is how every other surface asks for an
+   * actor's picture (`blockly/moduleOptions.pictured`).
+   */
+  const actorTiles: ActorTile[] = useMemo(
+    () =>
+      picking
+        ? filesIn(ACTORS_FOLDER).map(({file, name}) => ({
+            fileId: file.id,
+            name,
+            moduleKey: (filePath(ops.source, file.id) ?? file.name).replace(
+              /\.[^./]+$/,
+              '',
+            ),
+          }))
+        : [],
+    [picking, filesIn, ops.source],
+  );
+
   return (
     <div className={styles.menus}>
       {FOLDER_MENUS.map((menu, at) => (
@@ -468,13 +520,17 @@ export const FileMenus = () => {
             tooltipSize="xs"
             tooltipDirection="onBottom"
             theme={theme}
-            onClick={() =>
+            onClick={() => {
+              if (menu.folder === ACTORS_FOLDER) {
+                setPicking(true);
+                return;
+              }
               setOpen(
                 anchors[at].current
                   ? {menu, anchor: anchors[at].current!}
                   : undefined,
-              )
-            }
+              );
+            }}
           />
         </span>
       ))}
@@ -555,7 +611,12 @@ export const FileMenus = () => {
                 className={styles.rowOptions}
                 onClick={event => {
                   event.stopPropagation();
-                  setRow({file, name, anchor: event.currentTarget});
+                  setRow({
+                    file,
+                    name,
+                    anchor: event.currentTarget,
+                    enhances: Boolean(open?.menu.enhances),
+                  });
                 }}
               >
                 <FontAwesomeV6Icon iconName="ellipsis-v" iconStyle="solid" />
@@ -564,6 +625,35 @@ export const FileMenus = () => {
           </MenuItem>
         ))}
       </Menu>
+      {picking && (
+        <ActorPickerDialog
+          actors={actorTiles}
+          readOnly={isReadOnly}
+          onOpen={fileId => {
+            ops.activateFile(fileId);
+            setPicking(false);
+          }}
+          onNew={() => void make(actorsMenu, actorsMenu.makes[0])}
+          onImport={() => void importInto(actorsMenu)}
+          // The grid closes and the menu opens off the ACTORS BUTTON, which is
+          // still there — rather than off the tile, which is not. Two focus
+          // traps in a stack is the bug `thenAsk` exists for, and the way past
+          // it is the same: let one go before the next arrives.
+          onOptions={actor => {
+            const file = ops.source.files[actor.fileId];
+            const anchor = anchors[FOLDER_MENUS.indexOf(actorsMenu)].current;
+            if (!file || !anchor) {
+              return;
+            }
+            setPicking(false);
+            setTimeout(
+              () => setRow({file, name: actor.name, anchor, enhances: true}),
+              0,
+            );
+          }}
+          onCancel={() => setPicking(false)}
+        />
+      )}
       {/* One input for all nine menus: which folder asked is a ref, because the
           browser's file picker answers long after the click that opened it. */}
       <input
@@ -581,7 +671,7 @@ export const FileMenus = () => {
           list: {'aria-label': row && `Options for ${row.name}`, dense: true},
         }}
       >
-        {row && open?.menu.enhances && (
+        {row?.enhances && (
           // First, because it is the only one of these that ADDS something —
           // the rest rename, copy and remove. An actor is the only kind with
           // anything to be given (`actors/enhance`).

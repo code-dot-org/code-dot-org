@@ -291,9 +291,22 @@ describe('the file menus', () => {
   });
 
   it('says what is not there yet, rather than showing a blank menu', () => {
+    // The rules' menu, since the actors are a grid and say it their own way.
+    render(<FileMenus />);
+    fireEvent.click(screen.getByRole('button', {name: 'Effects'}));
+
+    expect(screen.getByText('(no effects yet)')).toBeTruthy();
+  });
+
+  it('reads the actors as a grid, with both ways to get another', () => {
+    // An actor is a thing you can see, and the lab draws it everywhere else it
+    // is named; only the list of them was words (`actors/ActorPickerDialog`).
     openMenu('Actors');
 
-    expect(screen.getByText('(no actors yet)')).toBeTruthy();
+    expect(screen.getByRole('dialog')).toBeTruthy();
+    expect(screen.getByText('Import')).toBeTruthy();
+    expect(screen.getByText('New')).toBeTruthy();
+    expect(screen.getByText('This project has no actors yet.')).toBeTruthy();
   });
 
   it('offers both ways in for a folder the project has not got', () => {
@@ -329,7 +342,7 @@ describe('the file menus', () => {
     promptForName.mockResolvedValueOnce('Health Bar');
     openMenu('Actors');
 
-    fireEvent.click(screen.getByText('New actor'));
+    fireEvent.click(screen.getByText('New'));
     await vi.waitFor(() =>
       expect(createNewFile).toHaveBeenCalledWith(
         expect.objectContaining({fileName: 'healthBar.actor', folderId: 'f2'}),
@@ -343,7 +356,7 @@ describe('the file menus', () => {
     // one row in the lab showing a file name.
     openMenu('Actors');
 
-    fireEvent.click(screen.getByText('New actor'));
+    fireEvent.click(screen.getByText('New'));
     await vi.waitFor(() => expect(createNewFile).toHaveBeenCalled());
     const {contents} = createNewFile.mock.calls.at(-1)![0] as unknown as {
       contents: string;

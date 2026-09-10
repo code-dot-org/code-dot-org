@@ -1,0 +1,123 @@
+/* The actor picker's CONTENT. The dialog itself — surface, width, padding, the
+   button row — is the design system's `Dialog`. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* One wrapped run of squares: the two ways to get a new actor, then every
+   actor the project has. */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* A fixed square whatever the art's shape, and the name under it. An actor is
+   picked by sight, and read to be sure. */
+
+/* The square and whatever hangs off it — the options button is positioned
+   against this rather than against the button, which a press must not include. */
+.holder {
+  position: relative;
+}
+
+.tile {
+  display: flex;
+  width: 88px;
+  height: 92px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  gap: 4px;
+}
+
+.tile:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+/* The picture, on the dark ground a world is drawn against — so a white sprite
+   is a sprite rather than a hole. */
+.picture {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #101020;
+  overflow: hidden;
+}
+
+.picture img {
+  max-width: 48px;
+  max-height: 48px;
+  image-rendering: pixelated;
+}
+
+/* An actor with no picture yet says its initial instead: the grid keeps its
+   shape, and the tile is still identifiable while the world compiles. */
+.initial {
+  color: #e8eaed;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.name {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The two ways to get one more, drawn as tiles so they are where the eye
+   already is — and outlined rather than filled, because they are not actors. */
+.action .picture {
+  border: 1px dashed var(--borders-neutral-primary, #d4dae1);
+  background: none;
+  color: var(--text-neutral-primary);
+}
+
+/* Rename, clone, delete — everything done TO an actor rather than with it.
+   Shown on hover and whenever the keyboard is on the tile, so it is reachable
+   without a pointer and out of the way with one. */
+.options {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.holder:hover .options,
+.holder:focus-within .options,
+.options:focus-visible {
+  opacity: 1;
+}
+
+.empty {
+  padding: 0.5rem 0;
+  color: var(--text-neutral-secondary);
+}

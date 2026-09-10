@@ -28,6 +28,13 @@ import {requestEffectImport} from '../blockly/effectImport';
 import {requestRuleImport} from '../blockly/ruleImport';
 import {requestSoundImport} from '../sound/soundImport';
 
+/**
+ * The actors' folder, named because two places need to agree about it: this
+ * list, and the file menus, whose Actors button opens a grid of them rather
+ * than a menu (`actors/ActorPickerDialog`).
+ */
+export const ACTORS_FOLDER = 'actors';
+
 /** One kind of file a folder's `New` can make. */
 export interface Makeable {
   /** What the menu item says — "New actor". */
@@ -86,7 +93,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     makes: [{label: 'New world', extension: 'world', placeholder: 'My World'}],
   },
   {
-    folder: 'actors',
+    folder: ACTORS_FOLDER,
     label: 'Actors',
     icon: 'masks-theater',
     makes: [{label: 'New actor', extension: 'actor', placeholder: 'Chaser'}],
