@@ -167,6 +167,35 @@ describe('isTourEnabledOnLevel', () => {
 });
 
 describe('isTourAvailableOnLevel', () => {
+  describe('when the level disables product tours', () => {
+    it('returns false even for a tour the lab auto-runs', () => {
+      expect(
+        isTourAvailableOnLevel(
+          ProductTour.Weblab2Intro,
+          makeLevelProperties('weblab2', {disableProductTours: true})
+        )
+      ).toBe(false);
+    });
+
+    it('disables through isTourEnabledOnLevel too', () => {
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.Weblab2Intro,
+          makeLevelProperties('weblab2', {disableProductTours: true})
+        )
+      ).toBe(false);
+    });
+
+    it('stays enabled when the flag is absent', () => {
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.Weblab2Intro,
+          makeLevelProperties('weblab2')
+        )
+      ).toBe(true);
+    });
+  });
+
   describe('when the tour is not registered for the lab', () => {
     it('returns false for a tour absent from the lab list', () => {
       expect(

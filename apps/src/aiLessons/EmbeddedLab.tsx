@@ -465,6 +465,9 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
         appName: 'weblab2' as AppName,
         isProjectLevel: true,
         usesProjects: true,
+        // No lab product tours here: they reference UI this surface
+        // hides (resource panel), and the tutor does the introducing.
+        disableProductTours: true,
       };
     }
     if (labType === 'music') {
@@ -475,6 +478,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
         appName: 'music' as AppName,
         isProjectLevel: true,
         usesProjects: true,
+        disableProductTours: true,
         levelData: {
           startSources: MUSIC_START_SOURCES,
           library: 'launch2024',

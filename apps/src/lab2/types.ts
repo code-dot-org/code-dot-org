@@ -313,6 +313,10 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   productTours?: string[];
+  // Suppresses every product tour on this level, including tours a lab
+  // auto-runs on first visit (triggeredByLevel: false).  For embedded
+  // surfaces where the tour's UI references don't exist.
+  disableProductTours?: boolean;
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
