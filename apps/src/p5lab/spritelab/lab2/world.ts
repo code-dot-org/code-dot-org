@@ -3,6 +3,8 @@
 
 import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
+import {noteImageReference} from './imageReferences';
+
 // Cells per side of the playfield, for a world being created now. The stored
 // world is WORLD_MULTIPLE times this per side, authored ahead of a
 // scrollable playfield; only the top-left scene-sized corner runs today.
@@ -128,6 +130,9 @@ export function compileWorldPrelude(world?: World): string {
       const location = `{x: ${cell / 2 + cell * col}, y: ${
         cell / 2 + cell * row
       }}`;
+      // The prelude references this image the way a block would; register
+      // it for the scene preload's reference set.
+      noteImageReference(placement.image);
       const image = JSON.stringify(placement.image);
       if (placement.kind === 'block') {
         blocks.push(`makeNewGroupSprite(${image}, 'walls', ${location});`);

@@ -15,6 +15,7 @@ import {
   ImageSize,
   MODEL_OUTPUT_PX,
   SINGLE_IMAGE_SIZE,
+  STORED_MAX_PX,
   getImageModel,
   imageProviderOptions,
 } from './modelHelpers';
@@ -112,6 +113,8 @@ export interface GeneratedImageResult {
   mediaType: string;
   /** Set when pixel-style output was normalized: physical px per art pixel. */
   pixelGridSize?: number;
+  /** The image is already cropped to content: load-time trimming skips it. */
+  trimmed?: boolean;
   /** How this image was made, to record on its animation. */
   generation: ImageGenerationMetadata;
   /**
@@ -191,6 +194,43 @@ export function rawImageToBlob(raw: RawImage): Blob {
   return new Blob([new Uint8Array(raw.uint8Array).buffer as ArrayBuffer], {
     type: raw.mediaType,
   });
+}
+
+/**
+ * Downscale so the longest side fits maxPx; returns the input unchanged when
+ * it already does. High-quality filter: downscaling the model's 1K render is
+ * what anti-aliases the stored image.
+ */
+async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
+  try {
+    const probe = await createImageBitmap(blob);
+    const scale = maxPx / Math.max(probe.width, probe.height);
+    if (scale >= 1) {
+      probe.close();
+      return blob;
+    }
+    const width = Math.max(1, Math.round(probe.width * scale));
+    const height = Math.max(1, Math.round(probe.height * scale));
+    probe.close();
+    const resized = await createImageBitmap(blob, {
+      resizeWidth: width,
+      resizeHeight: height,
+      resizeQuality: 'high',
+    });
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    canvas.getContext('2d')?.drawImage(resized, 0, 0);
+    resized.close();
+    const out = await new Promise<Blob | null>(resolve =>
+      canvas.toBlob(resolve, 'image/png')
+    );
+    return out || blob;
+  } catch {
+    // e.g. a browser without createImageBitmap resize options: store the
+    // full-size image, exactly the pre-downscale behavior.
+    return blob;
+  }
 }
 
 /**
@@ -277,8 +317,13 @@ export async function generateImage(
   if (imageType === 'sprite' || imageType === 'block') {
     blob = await removeBackground(blob, {soft: style === 'smooth'});
   }
-  if (imageType === 'block') {
+  // Smooth sprites are cropped like blocks always were, so the stored image
+  // is what the runtime trim pass would have made anyway (pixel sprites
+  // keep their edge-aligned grid; cropping would shift it).
+  let trimmed = false;
+  if (imageType === 'block' || (imageType === 'sprite' && style !== 'pixel')) {
     blob = await cropToContent(blob);
+    trimmed = true;
   }
   if (imageType === 'background') {
     blob = await flattenOntoGround(blob);
@@ -290,6 +335,11 @@ export async function generateImage(
     });
     blob = normalized.blob;
     pixelGridSize = normalized.pixelGridSize;
+  } else {
+    const maxPx = STORED_MAX_PX[imageType];
+    if (maxPx) {
+      blob = await downscaleToFit(blob, maxPx);
+    }
   }
   await imageVerdict;
   return {
@@ -297,6 +347,7 @@ export async function generateImage(
     uint8Array: new Uint8Array(await blob.arrayBuffer()),
     mediaType: 'image/png',
     pixelGridSize,
+    trimmed,
     generation,
   };
 }
