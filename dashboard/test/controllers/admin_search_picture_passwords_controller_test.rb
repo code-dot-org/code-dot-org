@@ -91,11 +91,31 @@ class AdminSearchPicturePasswordsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'rejects missing unknown and deleted sections without changing passwords' do
+  test 'rejects blank section codes without looking up a demo section' do
+    demo_section = create(:section, demo_type: 'elementary', login_type: Section::LOGIN_TYPE_PICTURE)
+    demo_student = create(:student, secret_picture: @original_picture)
+    create(:follower, section: demo_section, student_user: demo_student)
+    assert_nil demo_section.code
+    Section.expects(:with_deleted).never
+    CDO.log.expects(:warn).never
+
+    [nil, '', " \t\n"].each do |code|
+      request_params = {secret_picture_id: @picture.id}
+      request_params[:section_code] = code unless code.nil?
+      post :set_section_picture_passwords, params: request_params
+
+      assert_response :unprocessable_entity
+      assert_select '.alert-danger', 'Section code not found'
+      assert_select 'input[name=secret_picture_id]', 0
+      assert_equal @original_picture.id, demo_student.reload.secret_picture_id
+    end
+  end
+
+  test 'rejects unknown and deleted sections without changing passwords' do
     deleted_section = create(:section)
     deleted_section.destroy!
 
-    [nil, '', 'missing', deleted_section.code, @section.id.to_s].each do |code|
+    ['missing', deleted_section.code, @section.id.to_s].each do |code|
       post :set_section_picture_passwords, params: {section_code: code, secret_picture_id: @picture.id}
 
       assert_response :unprocessable_entity

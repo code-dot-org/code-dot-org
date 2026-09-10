@@ -106,7 +106,9 @@ class AdminSearchController < ApplicationController
   end
 
   private def load_section
-    @section = Section.with_deleted.find_by_code params[:section_code]
+    @section = if params[:section_code].present?
+                 Section.with_deleted.find_by_code params[:section_code]
+               end
     if @section.nil?
       flash.now[:alert] = 'Section code not found'
     elsif @section.deleted?
