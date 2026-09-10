@@ -22,6 +22,8 @@ export interface Alternative {
       plain picture. Restoring the entry restores this too. */
   frames?: GeneratedImageResult['frames'];
   pixelGridSize?: number;
+  /** The stored image is cropped to content (imageGeneration.ts). */
+  trimmed?: boolean;
   generation?: ImageGenerationMetadata;
 }
 
@@ -58,6 +60,7 @@ export function alternativeFromAnimation(props?: {
   looping?: boolean;
   poses?: AnimationPoses;
   pixelGridSize?: number;
+  trimmed?: boolean;
   generation?: ImageGenerationMetadata;
 }): Alternative | null {
   const thumb = props?.dataURI || props?.sourceUrl;
@@ -72,6 +75,7 @@ export function alternativeFromAnimation(props?: {
     frameSize: props.frameSize || null,
     frames: framesFromAnimation(props),
     pixelGridSize: props.pixelGridSize,
+    trimmed: props.trimmed,
     generation: props.generation,
   };
 }
