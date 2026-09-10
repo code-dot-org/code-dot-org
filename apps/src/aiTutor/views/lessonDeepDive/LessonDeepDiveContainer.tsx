@@ -82,7 +82,11 @@ const CARD_SLOT_OFFSETS = {
 type RecapVariant = {
   welcome: string;
   levels: {headline: string; headlineFirst: boolean};
-  time: {headline: string; headlineFirst: boolean; headlineAlign?: 'left' | 'right'};
+  time: {
+    headline: string;
+    headlineFirst: boolean;
+    headlineAlign?: 'left' | 'right';
+  };
   validated: {headline: string; headlineAlign: 'left' | 'right'};
   summary: string;
 };
