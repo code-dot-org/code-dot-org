@@ -1350,6 +1350,7 @@ DEPENDENCIES
   ruby-prof (>= 1.7.0)
   ruby-progressbar
   rubyzip
+  sass (~> 3.2)
   scenic
   scenic-mysql_adapter
   scss_lint
