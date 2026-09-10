@@ -23,6 +23,7 @@ export type Route =
   | {kind: 'edit'; lessonId: string}
   | {kind: 'show'; lessonId: string}
   | {kind: 'progress'}
+  | {kind: 'ailogs'}
   | {kind: 'not-found'; path: string};
 
 const PATTERNS: Array<(p: string) => Route | undefined> = [
@@ -30,6 +31,7 @@ const PATTERNS: Array<(p: string) => Route | undefined> = [
     p === '/ai_lessons' || p === '/ai_lessons/' ? {kind: 'index'} : undefined,
   p => (p === '/ai_lessons/new' ? {kind: 'new'} : undefined),
   p => (p === '/ai_lessons/progress' ? {kind: 'progress'} : undefined),
+  p => (p === '/ai_lessons/ailogs' ? {kind: 'ailogs'} : undefined),
   p => {
     const m = p.match(/^\/ai_lessons\/([^/]+)\/edit$/);
     return m ? {kind: 'edit', lessonId: m[1]} : undefined;

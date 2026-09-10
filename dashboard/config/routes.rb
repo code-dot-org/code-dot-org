@@ -1399,6 +1399,7 @@ Dashboard::Application.routes.draw do
     # specific routes match first.
     get '/ai_lessons/data/lessons', to: 'ai_lessons#lessons_data'
     get '/ai_lessons/data/progress', to: 'ai_lessons#progress_data'
+    get '/ai_lessons/data/ailogs', to: 'ai_lessons#ailogs_data'
     get '/ai_lessons/:id.json', to: 'ai_lessons#read', defaults: {format: 'json'}
 
     # Page paths — all render the same SPA shell.  Constrained to
@@ -1408,6 +1409,7 @@ Dashboard::Application.routes.draw do
     constraints format: 'html' do
       get '/ai_lessons', to: 'ai_lessons#app', as: :ai_lessons
       get '/ai_lessons/progress', to: 'ai_lessons#app', as: :ai_lessons_progress
+      get '/ai_lessons/ailogs', to: 'ai_lessons#app', as: :ai_lessons_ailogs
       get '/ai_lessons/new', to: 'ai_lessons#app', as: :new_ai_lesson
       get '/ai_lessons/:id', to: 'ai_lessons#app', as: :ai_lesson
       get '/ai_lessons/:id/edit', to: 'ai_lessons#app', as: :edit_ai_lesson
@@ -1430,6 +1432,7 @@ Dashboard::Application.routes.draw do
     put '/ai_lessons/:id/progress', to: 'ai_lessons#write_progress'
     get '/ai_lessons/:id/inputs', to: 'ai_lessons#read_inputs'
     put '/ai_lessons/:id/inputs', to: 'ai_lessons#write_inputs'
+    put '/ai_lessons/:id/ailog', to: 'ai_lessons#write_ailog'
     get '/ai_lessons/:id/overlay', to: 'ai_lessons#read_overlay'
     put '/ai_lessons/:id/overlay', to: 'ai_lessons#write_overlay'
 

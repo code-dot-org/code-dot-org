@@ -5,6 +5,7 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import React, {useEffect} from 'react';
 
+import AiLogReviewPage from './AiLogReviewPage';
 import AuthorPage from './AuthorPage';
 import {applyDemoTheme, loadDemoSettings} from './demoSettings';
 import LessonsListPage from './LessonsListPage';
@@ -36,6 +37,8 @@ const AiLessonsApp: React.FC = () => {
       return <StudentPage lessonId={route.lessonId} />;
     case 'progress':
       return <TeacherProgressPage />;
+    case 'ailogs':
+      return <AiLogReviewPage />;
     case 'not-found':
       return (
         <div className={styles.listPage}>

@@ -11,7 +11,7 @@ import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {AiLogCall, getAiLogRows, subscribeAiLog} from './aiLog';
+import {AiLogCall, AiLogRow, getAiLogRows, subscribeAiLog} from './aiLog';
 
 import styles from './aiLessons.module.scss';
 
@@ -189,13 +189,42 @@ const CallRow: React.FunctionComponent<{
   );
 };
 
+// The row list itself, shared with the post-playtest review page
+// (AiLogReviewPage renders persisted rows through the same components).
+export const AiLogRowList: React.FunctionComponent<{rows: AiLogRow[]}> = ({
+  rows,
+}) => {
+  // At most one call row open at a time.
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+  return (
+    <>
+      {rows.length === 0 && <div className={styles.muted}>No AI calls.</div>}
+      {rows.map(row =>
+        row.kind === 'step' ? (
+          <div key={row.id} className={styles.aiLogStepMarker}>
+            <FontAwesomeV6Icon iconName="shoe-prints" iconStyle="solid" />
+            <span>{row.title}</span>
+          </div>
+        ) : (
+          <CallRow
+            key={row.id}
+            call={row}
+            expanded={expandedId === row.id}
+            onToggle={() =>
+              setExpandedId(current => (current === row.id ? null : row.id))
+            }
+          />
+        )
+      )}
+    </>
+  );
+};
+
 const AiLogDialog: React.FunctionComponent<{onClose: () => void}> = ({
   onClose,
 }) => {
   const {theme} = useTheme();
   const [logRows, setLogRows] = useState(getAiLogRows());
-  // At most one call row open at a time.
-  const [expandedId, setExpandedId] = useState<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => subscribeAiLog(() => setLogRows(getAiLogRows())), []);
@@ -220,26 +249,7 @@ const AiLogDialog: React.FunctionComponent<{onClose: () => void}> = ({
         exactly what was sent and what came back.
       </p>
       <div className={styles.aiLogList} ref={scrollRef}>
-        {logRows.length === 0 && (
-          <div className={styles.muted}>No AI calls yet.</div>
-        )}
-        {logRows.map(row =>
-          row.kind === 'step' ? (
-            <div key={row.id} className={styles.aiLogStepMarker}>
-              <FontAwesomeV6Icon iconName="shoe-prints" iconStyle="solid" />
-              <span>{row.title}</span>
-            </div>
-          ) : (
-            <CallRow
-              key={row.id}
-              call={row}
-              expanded={expandedId === row.id}
-              onToggle={() =>
-                setExpandedId(current => (current === row.id ? null : row.id))
-              }
-            />
-          )
-        )}
+        <AiLogRowList rows={logRows} />
       </div>
     </CustomDialog>
   );

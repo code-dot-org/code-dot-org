@@ -32,6 +32,11 @@ class AiLessonsController < ApplicationController
     render json: list_all_progress
   end
 
+  # Every persisted AI log, for the URL-only review page.
+  def ailogs_data
+    render json: list_all_ailogs
+  end
+
   # JSON: full LessonPlan for a single lesson (used by the student
   # player and the edit page to hydrate themselves on mount).
   def read
@@ -64,6 +69,7 @@ class AiLessonsController < ApplicationController
     FileUtils.rm_rf(File.join(storage_dir, 'progress', params[:id]))
     FileUtils.rm_rf(File.join(storage_dir, 'inputs', params[:id]))
     FileUtils.rm_rf(File.join(storage_dir, 'overlays', params[:id]))
+    FileUtils.rm_rf(File.join(storage_dir, 'ailogs', params[:id]))
     render json: {id: params[:id]}
   rescue ArgumentError
     head :bad_request
@@ -80,6 +86,9 @@ class AiLessonsController < ApplicationController
     FileUtils.rm_rf(File.join(storage_dir, 'progress', id))
     FileUtils.rm_rf(File.join(storage_dir, 'inputs', id))
     FileUtils.rm_rf(File.join(storage_dir, 'overlays', id))
+    # ailogs deliberately survive a reset: they're the reviewer's record
+    # of what happened, not student state; a restart just opens a new
+    # session block in the same file.
     render json: {id: id}
   rescue ArgumentError
     head :bad_request
@@ -170,6 +179,30 @@ class AiLessonsController < ApplicationController
     path = progress_path(params[:id], current_user.id)
     FileUtils.mkdir_p(File.dirname(path))
     File.write(path, JSON.pretty_generate(parsed))
+    head :no_content
+  rescue ArgumentError, JSON::ParserError
+    head :bad_request
+  end
+
+  # Upserts one session's AI-log rows for the current user.  The client
+  # resends the session's whole row list on each flush, so the write is
+  # an idempotent overwrite of that session; other sessions in the file
+  # are untouched.  Row shape is client-controlled.
+  def write_ailog
+    return head :not_found unless load_lesson_json(params[:id])
+    return head :payload_too_large if request.raw_post.bytesize > 5_000_000
+    parsed = JSON.parse(request.raw_post)
+    session_key = parsed['session'].to_s
+    rows = parsed['rows']
+    unless session_key.match?(/\A[0-9TZ:.\-]{10,40}\z/) && rows.is_a?(Array)
+      return head :bad_request
+    end
+    path = ailog_path(params[:id], current_user.id)
+    data = File.exist?(path) ? JSON.parse(File.read(path)) : {}
+    data['sessions'] = {} unless data['sessions'].is_a?(Hash)
+    data['sessions'][session_key] = rows
+    FileUtils.mkdir_p(File.dirname(path))
+    File.write(path, JSON.generate(data))
     head :no_content
   rescue ArgumentError, JSON::ParserError
     head :bad_request
@@ -488,6 +521,42 @@ class AiLessonsController < ApplicationController
     raise ArgumentError, "bad id" unless id.is_a?(String) && id.match?(/\A[a-z0-9_-]{1,64}\z/)
     raise ArgumentError, "bad user_id" unless user_id.is_a?(Integer) && user_id.positive?
     File.join(storage_dir, 'inputs', id, "#{user_id}.json")
+  end
+
+  private def ailog_path(id, user_id)
+    raise ArgumentError, "bad id" unless id.is_a?(String) && id.match?(/\A[a-z0-9_-]{1,64}\z/)
+    raise ArgumentError, "bad user_id" unless user_id.is_a?(Integer) && user_id.positive?
+    File.join(storage_dir, 'ailogs', id, "#{user_id}.json")
+  end
+
+  # Every persisted AI log: one entry per (lesson, student), sessions
+  # keyed by their start timestamp, enriched with user and lesson labels
+  # the same way the progress roll-up is.
+  private def list_all_ailogs
+    root = File.join(storage_dir, 'ailogs')
+    return [] unless Dir.exist?(root)
+
+    user_cache = {}
+    lesson_cache = {}
+    Dir.glob(File.join(root, '*', '*.json')).sort.filter_map do |path|
+      lesson_id = File.basename(File.dirname(path))
+      user_id = File.basename(path, '.json').to_i
+      next if user_id <= 0
+      parsed = begin
+        JSON.parse(File.read(path))
+      rescue JSON::ParserError
+        next
+      end
+      lesson = lesson_cache[lesson_id] ||= load_lesson_json(lesson_id)
+      user = user_cache[user_id] ||= User.find_by(id: user_id)
+      {
+        'lesson_id' => lesson_id,
+        'lesson_title' => lesson&.[]('title') || lesson_id,
+        'user_id' => user_id,
+        'user_label' => user ? (user.name.presence || user.username.presence || "Student ##{user_id}") : "Student ##{user_id}",
+        'sessions' => parsed['sessions'].is_a?(Hash) ? parsed['sessions'] : {},
+      }
+    end
   end
 
   private def overlay_path(id, user_id)

@@ -9,6 +9,7 @@
 // calls by the step the student was on.
 
 import {generateText} from '@cdo/apps/aiGateway';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 type GenerateTextArgs = Parameters<typeof generateText>[0];
 type GenerateTextResponse = Awaited<ReturnType<typeof generateText>>;
@@ -55,6 +56,48 @@ function notifyAiLog() {
   while (rows.length > MAX_LOG_ROWS) rows.shift();
   snapshot = [...rows];
   listeners.forEach(l => l());
+  scheduleAiLogFlush();
+}
+
+// ---- Server persistence (playtest review) ----
+//
+// While a lesson is open, the whole row list is flushed (debounced) to
+// the server, keyed by the session that started at this pageload.  The
+// server file per (lesson, user) holds every session, so restarts and
+// returns read as session boundaries in one timeline; overwriting this
+// session's rows wholesale each flush keeps the protocol idempotent
+// (a pending call resolves → the next flush carries the update).
+
+const sessionStartedAt = new Date().toISOString();
+const FLUSH_DELAY_MS = 2000;
+let persistLessonId: string | undefined;
+let flushTimer: number | undefined;
+
+export function enableAiLogPersistence(lessonId: string) {
+  if (persistLessonId === lessonId) return;
+  // A different lesson in the same pageload must not inherit rows the
+  // student produced elsewhere: the log restarts with the lesson.
+  if (rows.length > 0) {
+    rows.length = 0;
+    snapshot = [];
+    listeners.forEach(l => l());
+  }
+  persistLessonId = lessonId;
+}
+
+function scheduleAiLogFlush() {
+  if (!persistLessonId || flushTimer !== undefined) return;
+  flushTimer = window.setTimeout(() => {
+    flushTimer = undefined;
+    const lessonId = persistLessonId;
+    if (!lessonId) return;
+    HttpClient.put(
+      `/ai_lessons/${lessonId}/ailog`,
+      JSON.stringify({session: sessionStartedAt, rows: snapshot}),
+      true,
+      {'Content-Type': 'application/json'}
+    ).catch(e => console.warn('AI log persist failed', e));
+  }, FLUSH_DELAY_MS);
 }
 
 export function subscribeAiLog(listener: () => void): () => void {

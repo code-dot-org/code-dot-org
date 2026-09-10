@@ -549,7 +549,12 @@ dashboard/tmp/ai_lessons/
 ├── images/<lessonId>/<random>.png            # panel illustrations
 ├── sources/<lessonId>/<userId>/<scope>.json  # per-(lesson, user, scope) saved source
 ├── inputs/<lessonId>/<userId>.json           # per-(lesson, user) question answers
-└── progress/<lessonId>/<userId>.json         # per-(lesson, user) progress + summary
+├── progress/<lessonId>/<userId>.json         # per-(lesson, user) progress + summary
+├── overlays/<lessonId>/<userId>.json         # per-(lesson, user) generated steps
+└── ailogs/<lessonId>/<userId>.json           # per-(lesson, user) AI-call log,
+                                              #   sessions keyed by start timestamp;
+                                              #   survives reset_progress, reviewed
+                                              #   at /ai_lessons/ailogs (URL-only)
 ```
 
 Authored `<lessonId>`s are `<timestamp36>-<random6>` (e.g. `tezm2v-b8930f`);

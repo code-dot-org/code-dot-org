@@ -25,7 +25,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {recordStepMarker} from './aiLog';
+import {enableAiLogPersistence, recordStepMarker} from './aiLog';
 import AiLogDialog from './AiLogDialog';
 import {loadLesson, resetLessonProgress} from './api';
 import {generateLessonArc} from './arcGenerator';
@@ -428,6 +428,11 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     },
     [lesson]
   );
+
+  // Persist this lesson's AI log to the server for post-playtest review.
+  useEffect(() => {
+    if (authoredLesson.id) enableAiLogPersistence(authoredLesson.id);
+  }, [authoredLesson.id]);
 
   // Mark step arrivals in the AI log, so the log dialog can group the
   // calls by the step the student was on.
