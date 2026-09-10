@@ -1,7 +1,7 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Button as MuiButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
@@ -85,7 +85,16 @@ const QuizConfigurationPanel: React.FunctionComponent<
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSave = async () => {
+  // Every field autosaves individually.
+  const handleSave = async (
+    overrides: Partial<{
+      showCorrectness: boolean;
+      revealAnswerExplanation: boolean;
+      showIntroScreen: boolean;
+      purpose: string | null;
+      allowMultipleAttempts: boolean;
+    }> = {}
+  ): Promise<boolean> => {
     setError(null);
     // Blank means "no time limit" - QuizConfigurationData needs a real
     // positive integer otherwise. Checked here too, not just server-side
@@ -100,14 +109,16 @@ const QuizConfigurationPanel: React.FunctionComponent<
       setError(
         'Time limit must be a whole number of minutes greater than 0, or left blank for no limit.'
       );
-      return;
+      return false;
     }
+    const effectiveShowIntroScreen =
+      overrides.showIntroScreen ?? showIntroScreen;
     // Mirrors show_intro_screen_required_when_time_limit - a time limit
     // with no intro screen means a student could start the timer without
     // ever being told there is one.
-    if (parsedTimeLimitMinutes !== null && !showIntroScreen) {
+    if (parsedTimeLimitMinutes !== null && !effectiveShowIntroScreen) {
       setError('Show intro screen is required when a time limit is set.');
-      return;
+      return false;
     }
     setIsSaving(true);
     try {
@@ -117,17 +128,20 @@ const QuizConfigurationPanel: React.FunctionComponent<
           timeLimitMinutes: parsedTimeLimitMinutes,
           showCorrectness,
           revealAnswerExplanation,
-          showIntroScreen,
+          showIntroScreen: effectiveShowIntroScreen,
           purpose: purpose || null,
           allowMultipleAttempts,
+          ...overrides,
         }),
         true,
         {'Content-Type': 'application/json'}
       );
       const saved: QuizConfigurationData = await response.json();
       onSaved(saved);
+      return true;
     } catch (error) {
       setError(await saveErrorMessage(error));
+      return false;
     } finally {
       setIsSaving(false);
     }
@@ -155,7 +169,13 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 key={option.value}
                 type="button"
                 className={styles.optionCard}
-                onClick={() => setPurpose(option.value)}
+                disabled={isSaving}
+                onClick={() => {
+                  setPurpose(option.value);
+                  void handleSave({purpose: option.value}).then(ok => {
+                    if (!ok) setPurpose('');
+                  });
+                }}
               >
                 <span className={styles.optionName}>{option.text}</span>
                 <span className={styles.optionDescription}>
@@ -173,7 +193,15 @@ const QuizConfigurationPanel: React.FunctionComponent<
             labelText="Purpose"
             items={PURPOSE_OPTIONS}
             selectedValue={purpose}
-            onChange={e => setPurpose(e.target.value)}
+            disabled={isSaving}
+            onChange={e => {
+              const newPurpose = e.target.value;
+              const previous = purpose;
+              setPurpose(newPurpose);
+              void handleSave({purpose: newPurpose}).then(ok => {
+                if (!ok) setPurpose(previous);
+              });
+            }}
             styleAsFormField
             className={styles.fullWidthDropdown}
           />
@@ -189,8 +217,15 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 label="Show intro screen"
                 size="s"
                 position="right"
+                disabled={isSaving}
                 checked={showIntroScreen}
-                onChange={e => setShowIntroScreen(e.target.checked)}
+                onChange={e => {
+                  const checked = e.target.checked;
+                  setShowIntroScreen(checked);
+                  void handleSave({showIntroScreen: checked}).then(ok => {
+                    if (!ok) setShowIntroScreen(!checked);
+                  });
+                }}
               />
               <p className={styles.cardHelperText}>
                 Edit intro screen contents in the workspace
@@ -210,8 +245,11 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 className={styles.fullWidthField}
                 placeholder="minutes"
                 helperMessage="Leave unset for no time limit"
+                disabled={isSaving}
                 value={timeLimitMinutes}
                 onChange={e => setTimeLimitMinutes(e.target.value)}
+                // Saves on blur rather than per keystroke.
+                onBlur={() => void handleSave()}
               />
             </div>
             <div className={styles.cardRow}>
@@ -220,8 +258,15 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 label="Allow multiple attempts"
                 size="s"
                 position="right"
+                disabled={isSaving}
                 checked={allowMultipleAttempts}
-                onChange={e => setAllowMultipleAttempts(e.target.checked)}
+                onChange={e => {
+                  const checked = e.target.checked;
+                  setAllowMultipleAttempts(checked);
+                  void handleSave({allowMultipleAttempts: checked}).then(ok => {
+                    if (!ok) setAllowMultipleAttempts(!checked);
+                  });
+                }}
               />
             </div>
           </ConfigCard>
@@ -233,15 +278,27 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 label="Show correctness"
                 size="s"
                 position="right"
+                disabled={isSaving}
                 checked={showCorrectness}
                 onChange={e => {
-                  setShowCorrectness(e.target.checked);
+                  const checked = e.target.checked;
+                  const previousReveal = revealAnswerExplanation;
+                  setShowCorrectness(checked);
                   // Mirrors reveal_answer_explanation_requires_show_correctness -
                   // turning correctness off while explanation reveal is on would
-                  // otherwise be silently invalid until the next save attempt.
-                  if (!e.target.checked) {
+                  // otherwise be silently invalid.
+                  if (!checked) {
                     setRevealAnswerExplanation(false);
                   }
+                  void handleSave({
+                    showCorrectness: checked,
+                    ...(!checked && {revealAnswerExplanation: false}),
+                  }).then(ok => {
+                    if (!ok) {
+                      setShowCorrectness(!checked);
+                      if (!checked) setRevealAnswerExplanation(previousReveal);
+                    }
+                  });
                 }}
               />
               {showCorrectness && (
@@ -251,8 +308,17 @@ const QuizConfigurationPanel: React.FunctionComponent<
                     label="Reveal answer and explanation"
                     size="s"
                     position="right"
+                    disabled={isSaving}
                     checked={revealAnswerExplanation}
-                    onChange={e => setRevealAnswerExplanation(e.target.checked)}
+                    onChange={e => {
+                      const checked = e.target.checked;
+                      setRevealAnswerExplanation(checked);
+                      void handleSave({revealAnswerExplanation: checked}).then(
+                        ok => {
+                          if (!ok) setRevealAnswerExplanation(!checked);
+                        }
+                      );
+                    }}
                   />
                   <p className={styles.cardHelperText}>
                     Reveal the correct answer and the explanation.
@@ -261,18 +327,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
               )}
             </div>
           </ConfigCard>
-
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            type="button"
-            loading={isSaving}
-            disabled={isSaving}
-            onClick={() => handleSave()}
-          >
-            Save
-          </MuiButton>
         </>
       )}
     </div>
