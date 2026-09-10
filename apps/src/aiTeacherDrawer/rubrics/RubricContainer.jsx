@@ -8,6 +8,10 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  loadAllTeacherEvaluationData,
+  loadAiEvalStatusForAll,
+} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -23,10 +27,6 @@ import {
 } from './rubricShapes';
 import RubricSubmitFooter from './RubricSubmitFooter';
 import RubricTabButtons from './RubricTabButtons';
-import {
-  loadAllTeacherEvaluationData,
-  loadAiEvalStatusForAll,
-} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 
 import style from './rubrics.module.scss';
 

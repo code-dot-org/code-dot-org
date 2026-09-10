@@ -13,12 +13,12 @@ import {
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {selectStudentProgressStatusMap} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {reload} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {reportingDataShape} from './rubricShapes';
-import {selectStudentProgressStatusMap} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 
 import style from './rubrics.module.scss';
 

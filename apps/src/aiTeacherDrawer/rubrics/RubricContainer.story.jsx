@@ -3,9 +3,8 @@ import {Provider} from 'react-redux';
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
-
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import RubricContainer from './RubricContainer';
 

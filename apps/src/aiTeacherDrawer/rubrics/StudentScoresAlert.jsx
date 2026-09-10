@@ -4,11 +4,10 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {selectReadyStudentCount} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
-
-import {selectReadyStudentCount} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
 
 import style from './rubrics.module.scss';
 
