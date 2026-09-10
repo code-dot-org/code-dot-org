@@ -185,6 +185,10 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
 gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 
+# Used by legacy SharedResources middleware; can be removed once we're no
+# longer serving CSS from /shared
+gem 'sass', '~> 3.2'
+
 gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
