@@ -173,6 +173,7 @@ module Dashboard
       video-js/*.css
       legacy-prerequisites.css
       legacy-styles.css
+      brand-fonts.css
     )
 
     # Support including code from directories outside of the normal Rails directory
