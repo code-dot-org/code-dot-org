@@ -46,8 +46,9 @@
         "gemini-2.5-flash"
       ],
       "multimodalEnabled": true
-    }
+    },
+    "thumbnail_url": "https://images.code.org/697b758706cd9a6438783c14d9c6fb6a-Denise.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-04T16:25:37.556+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-chat-amara\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-chat-amara\"},{\"changed_at\":\"2026-09-04 16:38:32 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 16:43:16 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 16:43:49 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-04T16:25:37.556+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-chat-amara\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-chat-amara\"},{\"changed_at\":\"2026-09-04 16:38:32 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 16:43:16 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 16:43:49 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:24:31 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

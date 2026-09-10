@@ -50,6 +50,7 @@ import defaultSources from '../defaultSources.json';
 import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {
   removeImageReferences,
+  collectImageReferences,
   removeImageReferencesOnWorkspace,
   renameImageReferences,
   renameImageReferencesOnWorkspace,
@@ -765,9 +766,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     dispatch(setIsRunning(true));
-    engine.runProgram(
-      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
+    const {result: program, referencedImages} = collectImageReferences(
+      () => compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
     );
+    engine.runProgram(program, referencedImages);
   }, [dispatch, getCode]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
@@ -792,20 +794,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       currentExternalProjectRef.current = null;
       engine.preloadAnimationsOverride = null;
       currentPlayingRef.current = {kind: 'local', scene};
-      const prelude = compileWorldPrelude(worldFor(scene));
-      let code = '';
-      try {
-        const live = scene.id === activeSceneId ? getCode() : null;
-        code =
-          live ??
-          getCodeFromSerializedWorkspace(scene.source ?? DEFAULT_SCENE_SOURCE);
-      } catch (e) {
-        // A scene that fails to compile shouldn't kill the jump entirely;
-        // run it as an empty scene.
-        console.error('Failed to compile scene', scene.id, e);
-      }
+      const {result: program, referencedImages} = collectImageReferences(() => {
+        const prelude = compileWorldPrelude(worldFor(scene));
+        let code = '';
+        try {
+          const live = scene.id === activeSceneId ? getCode() : null;
+          code =
+            live ??
+            getCodeFromSerializedWorkspace(
+              scene.source ?? DEFAULT_SCENE_SOURCE
+            );
+        } catch (e) {
+          // A scene that fails to compile shouldn't kill the jump
+          // entirely; run it as an empty scene.
+          console.error('Failed to compile scene', scene.id, e);
+        }
+        return prelude + code;
+      });
       dispatch(setIsRunning(true));
-      engine.runProgram(prelude + code);
+      engine.runProgram(program, referencedImages);
     },
     [dispatch, activeSceneId, getCode, worldFor]
   );
@@ -893,13 +900,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // An external scene runs at the playfield size ITS project authored —
       // reshaping it to this level's size would resize every cell under a
       // layout built for the other one.
-      const prelude = compileWorldPrelude(scene.world);
-      let code = '';
-      try {
-        code = compileExternalScene(scene, project);
-      } catch (e) {
-        console.error('Failed to compile external scene', sceneId, e);
-      }
+      const {result: program, referencedImages} = collectImageReferences(() => {
+        const prelude = compileWorldPrelude(scene.world);
+        let code = '';
+        try {
+          code = compileExternalScene(scene, project);
+        } catch (e) {
+          console.error('Failed to compile external scene', sceneId, e);
+        }
+        return prelude + code;
+      });
       // Preload the external project's images. Their saved animations carry
       // sourceUrl (dataURI is stripped on save); p5.loadImage takes URLs too.
       const theirs = project.animations;
@@ -913,7 +923,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ),
       };
       dispatch(setIsRunning(true));
-      engine.runProgram(prelude + code);
+      engine.runProgram(program, referencedImages);
     },
     [dispatch, compileExternalScene]
   );

@@ -4,7 +4,7 @@ module OverrideUpdateTrackedFields
     if persisted? && id
       SignIn.create(
         user_id: id,
-        anon_user_id: AnonUserId.valid_value(request.session[:statsig_stable_id]),
+        anon_user_id: request.anon_user_id,
         sign_in_at: DateTime.now,
         sign_in_count: sign_in_count
       )

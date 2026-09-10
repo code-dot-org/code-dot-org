@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-04 16:20:11 UTC",
+    "serialized_at": "2026-09-09 14:35:50 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -8130,16 +8130,6 @@
       }
     },
     {
-      "key": "module",
-      "word": "module",
-      "definition": "a Python file that can be imported into other Python files",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "module"
-      }
-    },
-    {
       "key": "multimodal_model",
       "word": "multimodal model",
       "definition": "an AI system that can process information from multiple types of input.",
@@ -8385,12 +8375,6 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "vocabulary.key": "interpretability"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "module"
       }
     },
     {

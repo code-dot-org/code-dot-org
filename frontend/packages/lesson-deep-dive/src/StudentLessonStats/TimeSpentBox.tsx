@@ -1,17 +1,35 @@
 import {type FC, useEffect, useState} from 'react';
 
-import styles from './time-spent-box.module.scss';
+import RecapStoryCard from '../RecapStoryCard';
+
+import styles from './stat-card.module.scss';
 
 const ANIMATION_DURATION_MS = 1200;
 
 interface TimeSpentBoxProps {
+  gradient: string;
+  headline: string;
+  headlineFirst: boolean;
+  headlineAlign?: 'left' | 'right';
   lessonName: string;
   timeSpentSeconds: number;
+  autoAdvanceDurationMs: number;
+  currentSlide: number;
+  totalSlides: number;
+  onNext?: () => void;
 }
 
 const TimeSpentBox: FC<TimeSpentBoxProps> = ({
+  gradient,
+  headline,
+  headlineFirst,
+  headlineAlign = 'left',
   lessonName,
   timeSpentSeconds,
+  autoAdvanceDurationMs,
+  currentSlide,
+  totalSlides,
+  onNext,
 }) => {
   const totalMinutes = Math.round(timeSpentSeconds / 60);
   const [displayMinutes, setDisplayMinutes] = useState(0);
@@ -35,14 +53,39 @@ const TimeSpentBox: FC<TimeSpentBoxProps> = ({
   }, [totalMinutes]);
 
   return (
-    <div className={styles.container}>
-      <p className={styles.label}>Time on task</p>
-      <div className={styles.statBlock}>
-        <div className={styles.bigNumber}>{displayMinutes}</div>
-        <p className={styles.statHeading}>minutes</p>
-        <p className={styles.statSubtitle}>spent on {lessonName}</p>
+    <RecapStoryCard
+      gradient={gradient}
+      lessonLabel={`${lessonName} Recap`}
+      autoAdvanceDurationMs={autoAdvanceDurationMs}
+      currentSlide={currentSlide}
+      totalSlides={totalSlides}
+      onSkip={onNext}
+    >
+      <div className={styles.body}>
+        {headlineFirst && (
+          <h2
+            className={`${styles.headline} ${headlineAlign === 'right' ? styles.headlineRight : ''}`}
+          >
+            {headline}
+          </h2>
+        )}
+        <div className={styles.metricRow}>
+          <div className={styles.bigNumber}>{displayMinutes}</div>
+          <p className={styles.caption}>
+            minutes
+            <br />
+            working
+          </p>
+        </div>
+        {!headlineFirst && (
+          <h2
+            className={`${styles.headline} ${headlineAlign === 'right' ? styles.headlineRight : ''}`}
+          >
+            {headline}
+          </h2>
+        )}
       </div>
-    </div>
+    </RecapStoryCard>
   );
 };
 
