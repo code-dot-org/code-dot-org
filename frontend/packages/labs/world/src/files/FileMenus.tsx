@@ -64,6 +64,8 @@ import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
+import {SpritePickerDialog} from '../animationEditor/SpritePickerDialog';
+import {useProjectImages} from '../appearance/useProjectImages';
 import {label} from '../blockly/label';
 import {authoredName} from '../blockly/projectModules';
 import {folderIn} from '../projectWrite';
@@ -74,6 +76,7 @@ import styles from './fileMenus.module.css';
 import {
   ACTORS_FOLDER,
   FOLDER_MENUS,
+  SPRITES_FOLDER,
   type FolderMenu,
   type Makeable,
 } from './folderMenus';
@@ -117,6 +120,14 @@ export const FileMenus = () => {
    * cannot drift.
    */
   const [picking, setPicking] = useState(false);
+  /**
+   * …and whether the picture palette is.
+   *
+   * The same reading for the same reason, and the SAME DIALOG: choosing a
+   * picture to draw with and choosing one to open are one grid of the project's
+   * pictures, differing in what a press means (`SpritePickerDialog`).
+   */
+  const [painting, setPainting] = useState(false);
   const [row, setRow] = useState<RowMenu>();
   // The tolerant form: this renders inside the lab, which provides a theme,
   // and in a bare tree in tests, which does not — and a menu is not worth a
@@ -475,6 +486,18 @@ export const FileMenus = () => {
 
   const files = open ? filesIn(open.menu.folder) : [];
 
+  /** The pictures under `sprites/`, and those decoded to draw them. */
+  const spriteFiles = useMemo(
+    () => (painting ? filesIn(SPRITES_FOLDER) : []),
+    [painting, filesIn],
+  );
+  const decoded = useProjectImages(painting ? ops.source : undefined);
+
+  /** The folder menu the sprites' palette stands in for. */
+  const spritesMenu = FOLDER_MENUS.find(
+    menu => menu.folder === SPRITES_FOLDER,
+  ) as FolderMenu;
+
   /** The folder menu the actors' grid stands in for — its `New`, its shelf. */
   const actorsMenu = FOLDER_MENUS.find(
     menu => menu.folder === ACTORS_FOLDER,
@@ -523,6 +546,10 @@ export const FileMenus = () => {
             onClick={() => {
               if (menu.folder === ACTORS_FOLDER) {
                 setPicking(true);
+                return;
+              }
+              if (menu.folder === SPRITES_FOLDER) {
+                setPainting(true);
                 return;
               }
               setOpen(
@@ -652,6 +679,38 @@ export const FileMenus = () => {
             );
           }}
           onCancel={() => setPicking(false)}
+        />
+      )}
+      {painting && (
+        <SpritePickerDialog
+          title="Sprites"
+          description="Open one to draw on, or bring in another."
+          // The FILES, not their cells: a spritesheet is one picture to open,
+          // and a cell of one is not a thing this can open at all. Which cell
+          // is a question the animation editor asks, where it has an answer.
+          sprites={spriteFiles.map(({file}) => file.name)}
+          images={decoded}
+          sheets={{}}
+          chooseOnPress
+          onPick={({sprite}) => {
+            const file = spriteFiles.find(one => one.file.name === sprite);
+            if (file) {
+              ops.activateFile(file.file.id);
+            }
+            setPainting(false);
+          }}
+          onImport={() => void importInto(spritesMenu)}
+          onNew={
+            isReadOnly
+              ? undefined
+              : () => void make(spritesMenu, spritesMenu.makes[0])
+          }
+          onUpload={
+            isReadOnly || !uploading.enabled
+              ? undefined
+              : () => void uploadInto(spritesMenu)
+          }
+          onCancel={() => setPainting(false)}
         />
       )}
       {/* One input for all nine menus: which folder asked is a ref, because the

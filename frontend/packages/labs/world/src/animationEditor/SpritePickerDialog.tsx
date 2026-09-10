@@ -10,12 +10,18 @@
 // and in a tooltip, because "which one was that" is a fair question to ask of a
 // palette; they are simply not what the eye has to read to choose.
 //
-// The last tile is how you get more: the stock library, the same `(import…)` the
-// blocks offer. A picture is a file in the project (appearance/importStock) and
-// nothing here can draw one that is not — so the way to more of them belongs
-// where you notice you want one.
+// The FIRST tiles are how you get more: the stock library, a blank one to draw
+// on, a file off your own machine. A picture is a file in the project
+// (appearance/importStock) and nothing here can draw one that is not — so the
+// ways to more of them belong where you notice you want one, which is while you
+// are looking at the ones you have.
+//
+// IT ANSWERS TWO QUESTIONS. "Which drawing shall this frame use", where a press
+// selects and the button confirms — a click that changed the drawing under you
+// would make browsing them costly — and "which picture shall I open", where the
+// press is the whole act. `chooseOnPress` is which.
 
-import {Button, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import {useMemo, useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
@@ -47,6 +53,9 @@ interface Tile extends PickedSprite {
 }
 
 export interface SpritePickerDialogProps {
+  /** What the dialog is called, when it is not choosing a drawing. */
+  title?: string;
+  description?: string;
   /** The project's image file names, in the order to offer them. */
   sprites: readonly string[];
   /** Those images, decoded — the editor already holds them for its canvases. */
@@ -58,6 +67,19 @@ export interface SpritePickerDialogProps {
   onPick: (picked: PickedSprite) => void;
   /** Go to the stock library instead — this dialog closes as that one opens. */
   onImport: () => void;
+  /** Make a blank one to draw on. Absent leaves the tile out. */
+  onNew?: () => void;
+  /** Take one off this machine. Absent leaves the tile out. */
+  onUpload?: () => void;
+  /**
+   * Whether a press CHOOSES rather than selects.
+   *
+   * The palette picks a drawing for something being edited, so it selects and
+   * confirms. The file menus pick a picture to OPEN, and there the press is the
+   * whole act — the same reading the actors' grid has
+   * (`actors/ActorPickerDialog`).
+   */
+  chooseOnPress?: boolean;
   onCancel: () => void;
 }
 
@@ -65,12 +87,17 @@ export interface SpritePickerDialogProps {
 const TILE = 56;
 
 export const SpritePickerDialog = ({
+  title = 'Choose a picture',
+  description = 'Everything we can draw!',
   sprites,
   images,
   sheets,
   current,
   onPick,
   onImport,
+  onNew,
+  onUpload,
+  chooseOnPress = false,
   onCancel,
 }: SpritePickerDialogProps) => {
   const tiles = useMemo((): Tile[] => {
@@ -128,65 +155,85 @@ export const SpritePickerDialog = ({
   const [chosen, setChosen] = useState(keyOf(current));
   const picked = tiles.find(tile => tile.key === chosen);
 
+  /** One of the ways to get another picture, drawn as a tile of the grid. */
+  const action = (
+    key: string,
+    icon: string,
+    label: string,
+    onClick: () => void,
+  ) => (
+    <li key={key}>
+      <button
+        type="button"
+        className={`${styles.tile} ${styles.action}`}
+        aria-label={label}
+        title={label}
+        onClick={onClick}
+      >
+        <FontAwesomeV6Icon iconName={icon} iconStyle="solid" />
+        <Typography variant="body4">{label}</Typography>
+      </button>
+    </li>
+  );
+
   return (
     <Dialog
       role="dialog"
-      title="Choose a picture"
-      description="Everything we can draw!"
+      title={title}
+      description={description}
       onClose={onCancel}
       closeLabel="Close"
-      primaryButtonProps={{
-        children: 'Use this picture',
-        disabled: !picked,
-        onClick: () => picked && onPick(chose(picked)),
-      }}
-      secondaryButtonProps={{
-        children: 'Cancel',
-        onClick: onCancel,
-      }}
+      primaryButtonProps={
+        chooseOnPress
+          ? {children: 'Done', onClick: onCancel}
+          : {
+              children: 'Use this picture',
+              disabled: !picked,
+              onClick: () => picked && onPick(chose(picked)),
+            }
+      }
+      secondaryButtonProps={
+        chooseOnPress ? undefined : {children: 'Cancel', onClick: onCancel}
+      }
       customContent={
         <div className={styles.body}>
-          {tiles.length === 0 ? (
+          <ul className={styles.palette}>
+            {action('import', 'download', 'Import', onImport)}
+            {onNew && action('new', 'plus', 'New', onNew)}
+            {onUpload && action('upload', 'upload', 'Upload', onUpload)}
+            {tiles.map(tile => (
+              <li key={tile.key}>
+                <button
+                  type="button"
+                  className={
+                    tile.key === chosen
+                      ? `${styles.tile} ${styles.tileChosen}`
+                      : styles.tile
+                  }
+                  aria-pressed={chooseOnPress ? undefined : tile.key === chosen}
+                  aria-label={tile.label}
+                  title={tile.label}
+                  onClick={() =>
+                    chooseOnPress ? onPick(chose(tile)) : setChosen(tile.key)
+                  }
+                  onDoubleClick={() => onPick(chose(tile))}
+                >
+                  <CellThumb
+                    image={tile.image}
+                    cell={tile.area}
+                    scale={
+                      TILE / Math.max(tile.area.width, tile.area.height, 1)
+                    }
+                  />
+                </button>
+              </li>
+            ))}
+          </ul>
+          {tiles.length === 0 && (
             <Typography variant="body2">
               This project has no pictures yet.
             </Typography>
-          ) : (
-            <ul className={styles.palette}>
-              {tiles.map(tile => (
-                <li key={tile.key}>
-                  <button
-                    type="button"
-                    className={
-                      tile.key === chosen
-                        ? `${styles.tile} ${styles.tileChosen}`
-                        : styles.tile
-                    }
-                    aria-pressed={tile.key === chosen}
-                    aria-label={tile.label}
-                    title={tile.label}
-                    onClick={() => setChosen(tile.key)}
-                    onDoubleClick={() => onPick(chose(tile))}
-                  >
-                    <CellThumb
-                      image={tile.image}
-                      cell={tile.area}
-                      scale={
-                        TILE / Math.max(tile.area.width, tile.area.height, 1)
-                      }
-                    />
-                  </button>
-                </li>
-              ))}
-            </ul>
           )}
-          <Button
-            variant="text"
-            size="small"
-            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
-            onClick={onImport}
-          >
-            Import a picture
-          </Button>
         </div>
       }
     />

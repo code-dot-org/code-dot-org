@@ -35,6 +35,12 @@ import {requestSoundImport} from '../sound/soundImport';
  */
 export const ACTORS_FOLDER = 'actors';
 
+/**
+ * The sprites' folder, named for the same reason: its button opens the picture
+ * palette rather than a menu (`animationEditor/SpritePickerDialog`).
+ */
+export const SPRITES_FOLDER = 'sprites';
+
 /** One kind of file a folder's `New` can make. */
 export interface Makeable {
   /** What the menu item says — "New actor". */
@@ -108,7 +114,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     shelf: requestRuleImport,
   },
   {
-    folder: 'sprites',
+    folder: SPRITES_FOLDER,
     label: 'Sprites',
     icon: 'image',
     // A blank one to draw on, which is what the image editor is for. It was

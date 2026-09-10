@@ -50,6 +50,21 @@
   outline-offset: 2px;
 }
 
+/* The ways to get another picture, drawn as tiles so they are where the eye
+   already is — outlined rather than filled, because they are not pictures. */
+.action {
+  flex-direction: column;
+  gap: 4px;
+  border-color: var(--borders-neutral-primary, #d4dae1);
+  border-style: dashed;
+  background-color: transparent;
+  color: var(--text-neutral-primary);
+}
+
+.action:hover {
+  border-style: solid;
+}
+
 .tileChosen {
   border-color: var(--borders-brand-primary, #0093a4);
 }

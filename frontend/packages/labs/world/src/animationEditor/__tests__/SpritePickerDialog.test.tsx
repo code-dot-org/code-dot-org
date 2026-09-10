@@ -94,12 +94,41 @@ describe('SpritePickerDialog', () => {
   });
 
   it('leads to the library, and says when there is nothing yet', () => {
+    // In the GRID, where the eye already is: noticing you want another picture
+    // happens while you are looking at the ones you have.
     const onImport = vi.fn();
     open({sprites: [], images: {}, onImport});
 
     expect(screen.getByText(/no pictures yet/)).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', {name: /Import a picture/}));
+    fireEvent.click(screen.getByRole('button', {name: 'Import'}));
     expect(onImport).toHaveBeenCalled();
+  });
+
+  it('offers the other two ways only when there are two ways', () => {
+    // A blank one to draw on and a file off this machine are the file menus'
+    // to offer; the palette inside the animation editor has neither.
+    const onNew = vi.fn();
+    const onUpload = vi.fn();
+    open({onNew, onUpload});
+
+    screen.getByRole('button', {name: 'New'}).click();
+    screen.getByRole('button', {name: 'Upload'}).click();
+    expect(onNew).toHaveBeenCalled();
+    expect(onUpload).toHaveBeenCalled();
+  });
+
+  it('opens on a press where a press is the whole act', () => {
+    // The file menus pick a picture to OPEN, and waiting for a second click
+    // there would be asking twice for one answer.
+    const onPick = vi.fn();
+    open({onPick, chooseOnPress: true});
+
+    fireEvent.click(screen.getByRole('button', {name: 'player.png'}));
+    expect(onPick).toHaveBeenCalledWith({
+      sprite: 'player.png',
+      cell: undefined,
+      rect: undefined,
+    });
   });
 
   it('leaves out an image that has not decoded', () => {

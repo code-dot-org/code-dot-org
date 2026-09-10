@@ -382,9 +382,11 @@ describe('the file menus', () => {
     // A blank tile to draw on: an empty PNG is not a starting point for a game
     // and is exactly one for a drawing. It goes through the other write, the
     // one that puts a file on a URL.
+    // The sprites read as a palette, so `New` is a tile of it rather than a
+    // menu row (`animationEditor/SpritePickerDialog`).
     openMenu('Sprites');
 
-    fireEvent.click(screen.getByText('New sprite'));
+    fireEvent.click(screen.getByRole('button', {name: 'New'}));
     await vi.waitFor(() =>
       expect(createExternalFile).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -401,7 +403,7 @@ describe('the file menus', () => {
     // and the same bytes in `sprites/` are a sprite (BACKGROUNDS.md §5).
     openMenu('Sprites');
 
-    expect(screen.getByText('Upload…')).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Upload'})).toBeTruthy();
   });
 
   it('does not offer an upload where one would mean nothing', () => {
