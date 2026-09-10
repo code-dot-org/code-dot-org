@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-09-07T19:36:01.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n\r\nUsing the values you found for Athlete 1 and Athlete 2, answer these questions.\r\n\r\n- Which sprinter is faster?\r\n- Which sprinter is more consistent? \r\n- Which sprinter would you want on your team? Why? Consider your analysis’s strengths and limitations.\r\n",
+    "stay_on_level_after_submit": "false",
+    "submittable": "true",
+    "allow_multiple_attempts": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "title": "Check Your Understanding",
+    "display_name": "Sprinting",
+    "bubble_choice_description": "Compare two sprinters running a 100-meter race.",
+    "thumbnail_url": "https://images.code.org/59c2513811d7622bb7a7623110ada6f9-sprinter.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 19:38:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 19:38:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 19:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 19:42:55 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

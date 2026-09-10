@@ -1,5 +1,10 @@
 @import '@code-dot-org/component-library-styles/font';
 
+.main:has(:global(.announcement-notification)) .titleWrapper {
+  // Wider than the gap between two banners, so the header reads as a new block.
+  margin-top: var(--spacing-p-m);
+}
+
 .heading {
   width: 100%;
 }
@@ -13,9 +18,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
-  // Wider than the gap between two banners, so the header reads as a new block.
-  margin-top: var(--spacing-p-m);
 }
 
 .title {

@@ -1,0 +1,1299 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-09-09T18:30:24.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Scavenger Hunt",
+    "long_instructions": "#Software Scavenger Hunt\r\n\r\nRead the scenarios presented on the canvas. Provide either written text or a screenshot to answer the question asked.",
+    "bubble_choice_description": "Use this canvas to document your scavenger hunt through a computer system.",
+    "thumbnail_url": "https://images.code.org/4812adb46ac71557af9a128f143691a3-sketch-lab-icon.png",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "48567a9d-0db8-4fcc-8f8a-562d252dcab3",
+            "type": "text",
+            "data": {
+              "text": "Scavenger Hunt Activity - Instructions\n",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -4428.39248033287,
+              "y": -777.5443920813617
+            },
+            "width": 503.1997896425863,
+            "height": 55.157165665103946,
+            "measured": {
+              "width": 503,
+              "height": 55
+            },
+            "dragging": false
+          },
+          {
+            "id": "0d5dc2d1-6f26-4741-abd0-2ae3f92d9228",
+            "type": "text",
+            "data": {
+              "text": "1. Pair Up: Work with a partner to complete this scavenger hunt. You can use your own device (laptop, phone, or tablet) or use the computer simulation level.\n\n2. Search and Capture: For each task on the list, search your device or the computer simulation slide deck to find examples of operating systems, application software, or utility software.\n\n3. Document Your Findings:\n\n     - Take a screenshot of where you found the software (if using your device, ensure no personal information is visible).\n     - Answer the question provided for each task in the Activity Guide.\n\n4. Discussion Prep: Be ready to share your findings with the class and explain how the software you found fits its category and role.",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -4428.782073192224,
+              "y": -726.9062468941146
+            },
+            "width": 737.3492506109637,
+            "height": 291.92245304582224,
+            "measured": {
+              "width": 737,
+              "height": 292
+            },
+            "dragging": false
+          },
+          {
+            "id": "4b43cc99-d7b6-4e66-9e9e-4b6a3971eb66",
+            "type": "text",
+            "data": {
+              "text": "Identify your OS",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -3627.2256796225843,
+              "y": -152.41669635612118
+            },
+            "width": 537.6607402924974,
+            "height": 49.41367389011879,
+            "measured": {
+              "width": 538,
+              "height": 49
+            },
+            "dragging": false
+          },
+          {
+            "id": "1b498cd2-1916-4d16-8ed0-b4fdd72158a2",
+            "type": "text",
+            "data": {
+              "text": "Manage System Settings",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": -2370.3757563882077,
+              "y": -787.6453078593175
+            },
+            "width": 503.1997896425863,
+            "height": 55.157165665103946,
+            "measured": {
+              "width": 503,
+              "height": 55
+            },
+            "dragging": false
+          },
+          {
+            "id": "c22b9754-db1b-417e-8960-e7097f9e04a6",
+            "type": "text",
+            "data": {
+              "text": "Scenario: You’re a help desk technician assisting someone whose device isn’t working properly. Your first step is to find out which operating system their device is running.\n\nDo this: Find where your device shows the name of its operating system.\n\nQuestion: What does this operating system allow your device to do?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -3627.597611006324,
+              "y": -110.16740924073645
+            },
+            "width": 755.555677577903,
+            "height": 171.517356187796,
+            "measured": {
+              "width": 756,
+              "height": 172
+            },
+            "dragging": false
+          },
+          {
+            "id": "41cdbd54-0022-4238-a34a-a9d0216fe34a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson4-scavenger-hunt/uuid/cb3ce9e3-9d61-403d-a75c-ead716d93d6d.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": -3801.8503118758617,
+              "y": -143.84551087086834
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "19e81b14-9b1a-4cc0-ad58-74b0b9f15f23",
+            "type": "text",
+            "data": {
+              "text": "Operating Systems (OS) Task 1",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": -3794.4329127871574,
+              "y": -140.75412243234268
+            },
+            "width": 141.85676622687276,
+            "height": 92.78031643091572,
+            "measured": {
+              "width": 142,
+              "height": 93
+            },
+            "dragging": false
+          },
+          {
+            "id": "50eb1a88-3314-418a-a162-a6a952e6f133",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fff8e0",
+              "strokeColor": "#ffe278",
+              "locked": true
+            },
+            "position": {
+              "x": -3780.325075231257,
+              "y": 114.17617005223701
+            },
+            "width": 913.7688940290134,
+            "height": 608.2179269859691,
+            "measured": {
+              "width": 914,
+              "height": 608
+            },
+            "dragging": false
+          },
+          {
+            "id": "cf70d27d-5ff3-4c57-be6f-2c4e0eb7bb61",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": -4328.884906149523,
+              "y": -439.5147616236215
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "c06668ea-090e-426c-a5fd-2ec60b48a302",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": -3823.9634889820763,
+              "y": -107.29712685838595
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -1
+          },
+          {
+            "id": "17353e51-622f-4571-98ba-1d7190fce7a9",
+            "type": "text",
+            "data": {
+              "text": "Scenario: You’re a cybersecurity specialist setting up a new device for a client. You need to adjust the system settings to connect to Wi-Fi securely and set up privacy controls.\n\nDo This: Open the settings menu and explore the options for network and privacy settings.\n\nQuestion: What are two examples of tasks you can manage in this menu, and how do they help protect the user?\n",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -2247.5443971549894,
+              "y": -730.5321479222052
+            },
+            "width": 755.555677577903,
+            "height": 169.622710479658,
+            "measured": {
+              "width": 756,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "c05e0b91-2ff0-406e-9a23-8400949bb1c3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson4-scavenger-hunt/uuid/cb3ce9e3-9d61-403d-a75c-ead716d93d6d.png",
+              "altText": "",
+              "locked": true
+            },
+            "position": {
+              "x": -2440.6449329163747,
+              "y": -767.1839488482676
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "e83c9c58-e438-4698-9dea-fe98572962fc",
+            "type": "text",
+            "data": {
+              "text": "Operating Systems (OS) Task 2",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": -2432.4243105194178,
+              "y": -767.881851826018
+            },
+            "width": 141.85676622687276,
+            "height": 92.78031643091572,
+            "measured": {
+              "width": 142,
+              "height": 93
+            },
+            "dragging": false
+          },
+          {
+            "id": "54565d44-7fbe-4666-9bca-2a4145cc5f18",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fff8e0",
+              "strokeColor": "#ffe278",
+              "locked": true
+            },
+            "position": {
+              "x": -2424.307314528386,
+              "y": -491.7622122086972
+            },
+            "width": 913.7688940290134,
+            "height": 608.2179269859691,
+            "measured": {
+              "width": 914,
+              "height": 608
+            },
+            "dragging": false
+          },
+          {
+            "id": "ee1d67b8-fc84-4a9e-902c-c63facca7970",
+            "type": "text",
+            "data": {
+              "text": "put your screenshot or written response here",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "center",
+              "fontFamily": "monospace",
+              "locked": true
+            },
+            "position": {
+              "x": -2301.5818537950604,
+              "y": 58.07480120971641
+            },
+            "width": 702.599229139109,
+            "height": 54.36182855551712,
+            "measured": {
+              "width": 703,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "0c723bbe-a070-40e2-8912-a498a0e220c6",
+            "type": "text",
+            "data": {
+              "text": "put your screenshot or written response here",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "center",
+              "fontFamily": "monospace",
+              "locked": true
+            },
+            "position": {
+              "x": -3657.41496546166,
+              "y": 661.7496703883137
+            },
+            "width": 702.599229139109,
+            "height": 54.36182855551712,
+            "measured": {
+              "width": 703,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "dd1cc787-0ff0-45ae-bf33-a1d30014d42a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": -2454.4526113164543,
+              "y": -735.3045880353569
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "c4caa577-9425-43b9-9902-c18c1f018740",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": -3040.835738153074,
+              "y": -41.73282222065766
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "6c9e6548-94c7-45de-9450-a66a989b7781",
+            "type": "text",
+            "data": {
+              "text": "Productivity Tools",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -856.6393742714336,
+              "y": -97.19583386944765
+            },
+            "width": 503.1997896425863,
+            "height": 55.157165665103946,
+            "measured": {
+              "width": 503,
+              "height": 55
+            },
+            "dragging": false
+          },
+          {
+            "id": "bf0e5636-6ad9-483b-ad86-4170d64ed817",
+            "type": "text",
+            "data": {
+              "text": "Scenario: You’re an aspiring author working on your new book and need to prepare your draft for submission to your editor. You’ll use a writing program to create, edit, and format your manuscript.\n\nDo This: Find an app or program on your device that helps you create, edit and format your book. If you don’t have one, research an app, platform, or website that would help you accomplish this task. \n\nQuestion: What tasks can this app help you accomplish, and why is it useful for writing a book?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -858.4586532736363,
+              "y": -44.89001037608165
+            },
+            "width": 755.555677577903,
+            "height": 169.622710479658,
+            "measured": {
+              "width": 756,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "0606eb7f-aa0e-4471-a24d-19f3dc10ed3e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson4-scavenger-hunt/uuid/b9112961-9d09-4083-80fa-a8d29a2135a8.png",
+              "altText": "post-it (3)",
+              "locked": true
+            },
+            "position": {
+              "x": -1038.4248469569206,
+              "y": -90.8071192767398
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "15eb9d27-c8f1-40a9-8a23-f797bd116b0d",
+            "type": "text",
+            "data": {
+              "text": "Application Software Task 1",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": -1017.2884093330658,
+              "y": -84.61174255487953
+            },
+            "width": 117.44692618318584,
+            "height": 92.78031643091572,
+            "measured": {
+              "width": 117,
+              "height": 93
+            },
+            "dragging": false
+          },
+          {
+            "id": "5a663bc4-62ab-48d7-a1cb-dc6473b7790c",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e3fdf1",
+              "strokeColor": "#5ad6a1",
+              "locked": true
+            },
+            "position": {
+              "x": -1025.509119216047,
+              "y": 163.7852028070476
+            },
+            "width": 913.7688940290134,
+            "height": 608.2179269859691,
+            "measured": {
+              "width": 914,
+              "height": 608
+            },
+            "dragging": false
+          },
+          {
+            "id": "07bb3838-40ca-42fe-956e-f5f40d3dee97",
+            "type": "text",
+            "data": {
+              "text": "put your screenshot or written response here",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "center",
+              "fontFamily": "monospace",
+              "locked": true
+            },
+            "position": {
+              "x": -913.1208783099988,
+              "y": 702.2543419766333
+            },
+            "width": 702.599229139109,
+            "height": 54.36182855551712,
+            "measured": {
+              "width": 703,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "9c3aaf17-383d-4830-b9fb-8e0e07103380",
+            "type": "text",
+            "data": {
+              "text": "Communication",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 635.6813535714134,
+              "y": -746.2674905204847
+            },
+            "width": 503.1997896425863,
+            "height": 55.157165665103946,
+            "measured": {
+              "width": 503,
+              "height": 55
+            },
+            "dragging": false
+          },
+          {
+            "id": "9f5f8ba0-2880-4194-ba52-032e7011a94b",
+            "type": "text",
+            "data": {
+              "text": "Scenario: You’re an event planner organizing a virtual conference. You need to schedule meetings and communicate with team members.\n\nDo This: Find an app or program on your device for communication. If you don’t have one, research an app, platform, or website that would help you accomplish this task. \n\nQuestion: How might this app help you collaborate effectively for your event?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 632.6027248420505,
+              "y": -687.5769046895964
+            },
+            "width": 755.555677577903,
+            "height": 169.622710479658,
+            "measured": {
+              "width": 756,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "86bc6bc9-50a8-4265-8546-fdaced7a17b4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson4-scavenger-hunt/uuid/b9112961-9d09-4083-80fa-a8d29a2135a8.png",
+              "altText": "post-it (3)",
+              "locked": true
+            },
+            "position": {
+              "x": 445.6960912433385,
+              "y": -734.8787759277768
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "bbc42bf8-b67c-448c-8675-7d30654be8c9",
+            "type": "text",
+            "data": {
+              "text": "Application Software Task 2",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 464.27945505037906,
+              "y": -728.6833992059164
+            },
+            "width": 117.44692618318584,
+            "height": 92.78031643091572,
+            "measured": {
+              "width": 117,
+              "height": 93
+            },
+            "dragging": false
+          },
+          {
+            "id": "77c1fd37-a63a-4487-a141-1996fa06b835",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e3fdf1",
+              "strokeColor": "#5ad6a1",
+              "locked": true
+            },
+            "position": {
+              "x": 479.26608735100433,
+              "y": -452.21085139014747
+            },
+            "width": 913.7688940290134,
+            "height": 608.2179269859691,
+            "measured": {
+              "width": 914,
+              "height": 608
+            },
+            "dragging": false
+          },
+          {
+            "id": "c85e8b4b-0a64-4103-be4e-badcea068dad",
+            "type": "text",
+            "data": {
+              "text": "put your screenshot or written response here",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "center",
+              "fontFamily": "monospace",
+              "locked": true
+            },
+            "position": {
+              "x": 586.4519310389727,
+              "y": 82.46899636316226
+            },
+            "width": 702.599229139109,
+            "height": 54.36182855551712,
+            "measured": {
+              "width": 703,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "cdc8cabf-deaa-4c12-bbc0-e1fa20f4ab46",
+            "type": "text",
+            "data": {
+              "text": "System Maintenance Tools",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2089.6866539129514,
+              "y": -21.936431828508034
+            },
+            "width": 503.1997896425863,
+            "height": 55.157165665103946,
+            "measured": {
+              "width": 503,
+              "height": 55
+            },
+            "dragging": false
+          },
+          {
+            "id": "0a1e54fb-5a76-460a-bbba-10b2a5f6ea43",
+            "type": "text",
+            "data": {
+              "text": "Scenario: You’re a system administrator responsible for keeping company computers running smoothly. You need to clear unnecessary files to improve performance.\n\nDo This: Find a utility program on your device that helps clean up disk space or manage files. If you don’t have one, research an app, platform, or website that would help you accomplish this task. \n\nQuestion: Why is this tool important for maintaining a computer’s performance?\n",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 2088.6928596742564,
+              "y": 30.113676176555146
+            },
+            "width": 755.555677577903,
+            "height": 169.622710479658,
+            "measured": {
+              "width": 756,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "1f702f43-d3be-4aa7-bb5d-4d346cce819f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson4-scavenger-hunt/uuid/6fc16128-64fe-4efb-9d33-ab95259a318e.png",
+              "altText": "post-it (4)",
+              "locked": true
+            },
+            "position": {
+              "x": 1914.0705064956928,
+              "y": -3.0132282931147074
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "b46672ae-f5a4-48c7-b655-b6e64e09a0b6",
+            "type": "text",
+            "data": {
+              "text": "Utility Software Task 1",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 1930.8934828491206,
+              "y": 3.226242318612208
+            },
+            "width": 117.44692618318584,
+            "height": 92.78031643091572,
+            "measured": {
+              "width": 117,
+              "height": 93
+            },
+            "dragging": false
+          },
+          {
+            "id": "6716dfa1-5d40-496b-92db-fdeab344b684",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e2f2fe",
+              "strokeColor": "#8ecffd",
+              "locked": true
+            },
+            "position": {
+              "x": 1937.7179689276618,
+              "y": 211.40566809749208
+            },
+            "width": 913.7688940290134,
+            "height": 608.2179269859691,
+            "measured": {
+              "width": 914,
+              "height": 608
+            },
+            "dragging": false
+          },
+          {
+            "id": "66bf3fe4-c404-47a0-9dc5-bd8443ca250a",
+            "type": "text",
+            "data": {
+              "text": "put your screenshot or written response here",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "center",
+              "fontFamily": "monospace",
+              "locked": true
+            },
+            "position": {
+              "x": 2063.544240899003,
+              "y": 758.3199614570466
+            },
+            "width": 702.599229139109,
+            "height": 54.36182855551712,
+            "measured": {
+              "width": 703,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "ec993608-5c0f-4224-8f23-4088fe117fc7",
+            "type": "text",
+            "data": {
+              "text": "Battery Performance",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 3544.040403149126,
+              "y": -692.6549505454635
+            },
+            "width": 503.1997896425863,
+            "height": 55.157165665103946,
+            "measured": {
+              "width": 503,
+              "height": 55
+            },
+            "dragging": false
+          },
+          {
+            "id": "96560132-7556-498a-bd6f-eb9156af2223",
+            "type": "text",
+            "data": {
+              "text": "Scenario: You’re a field technician working in remote areas where you must monitor your device’s battery health to ensure it lasts all day.\n\nDo This: Locate where your device shows battery health or performance statistics. \n\nQuestion: How can this information help you troubleshoot issues or prevent problems while working in the field?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 3547.2955863063544,
+              "y": -640.6048425404003
+            },
+            "width": 755.555677577903,
+            "height": 169.622710479658,
+            "measured": {
+              "width": 756,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "b30ea2c7-0849-42f2-9ff0-e591da95f0ff",
+            "type": "text",
+            "data": {
+              "text": "Utility Software Task 2",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "locked": true
+            },
+            "position": {
+              "x": 3380.3602400679465,
+              "y": -667.4922763983432
+            },
+            "width": 117.44692618318584,
+            "height": 92.78031643091572,
+            "measured": {
+              "width": 117,
+              "height": 93
+            },
+            "dragging": false,
+            "zIndex": 1
+          },
+          {
+            "id": "3363d8b3-9bb7-451b-a90f-e31c81010576",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson4-scavenger-hunt/uuid/6fc16128-64fe-4efb-9d33-ab95259a318e.png",
+              "altText": "post-it (4)",
+              "locked": true
+            },
+            "position": {
+              "x": 3366.9155621830078,
+              "y": -673.7317470100702
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "767c7616-69c8-420f-b5ec-42729d684922",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#e2f2fe",
+              "strokeColor": "#8ecffd",
+              "locked": true
+            },
+            "position": {
+              "x": 3373.894670126925,
+              "y": -450.6073449865021
+            },
+            "width": 913.7688940290134,
+            "height": 608.2179269859691,
+            "measured": {
+              "width": 914,
+              "height": 608
+            },
+            "dragging": false
+          },
+          {
+            "id": "882d8416-7c2a-43b9-9fc2-3c29f9b990ce",
+            "type": "text",
+            "data": {
+              "text": "put your screenshot or written response here",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "textAlign": "center",
+              "fontFamily": "monospace",
+              "locked": true
+            },
+            "position": {
+              "x": 3486.6015303582285,
+              "y": 94.13057196481208
+            },
+            "width": 702.599229139109,
+            "height": 54.36182855551712,
+            "measured": {
+              "width": 703,
+              "height": 54
+            },
+            "dragging": false
+          },
+          {
+            "id": "0744f58f-39c3-4944-aee7-5f09f3a89332",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": -1068.579481087082,
+              "y": 512.753724555637
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -3
+          },
+          {
+            "id": "cd2a0937-60f7-44e2-b7e5-110e1eab8ad9",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 3332.6751794216243,
+              "y": -642.4307466961927
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -8
+          },
+          {
+            "id": "823cacd3-918f-4066-9e41-9782c893b048",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 406.1794407910257,
+              "y": -708.6481114852304
+            },
+            "width": 160,
+            "height": 71.367874248828,
+            "measured": {
+              "width": 160,
+              "height": 71
+            },
+            "dragging": false,
+            "zIndex": -6
+          },
+          {
+            "id": "4839fb4e-ed01-4cb2-8671-fdaa4aa25df4",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 1895.780185237391,
+              "y": 550.9037982563441
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -9
+          },
+          {
+            "id": "c4d64afe-acde-4556-b8b1-05b502a1c675",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": -1724.4494532472975,
+              "y": 93.76806633582746
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "7d966bd9-5c13-4a02-bf8e-11fde766459d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": -216.50436134528798,
+              "y": -45.52211363693197
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "d041be83-44bb-42b5-b4a2-c4e80ecff10a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 1211.2416177585628,
+              "y": 135.68852566430863
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -10
+          },
+          {
+            "id": "82861d3b-28ff-4b3d-b9ad-469877a5a33e",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": 2684.9620760019843,
+              "y": 13.430999649761098
+            },
+            "width": 160,
+            "height": 60,
+            "measured": {
+              "width": 160,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": -7
+          },
+          {
+            "id": "4558e583-765d-440a-840a-c608596290e9",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson4-scavenger-hunt/uuid/b6ef4ed1-ef3b-4bd3-a77a-20688054e3da.png",
+              "altText": "arrow-right (3)",
+              "locked": true
+            },
+            "position": {
+              "x": -4610.326976100371,
+              "y": -813.5302536745678
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "c7213ed6-ace2-495f-8c7c-bab4e2d5bbf8",
+            "type": "text",
+            "data": {
+              "text": "Start\nHere",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "fontColor": "var(--sketchlab-stroke-yellow)",
+              "locked": true
+            },
+            "position": {
+              "x": -4655.326976100371,
+              "y": -900.4052536745673
+            },
+            "width": 134.4497896425877,
+            "height": 78.90716566510383,
+            "measured": {
+              "width": 134,
+              "height": 79
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "12ad6b21-3700-4eb2-94aa-c7ac411785cd",
+            "source": "cf70d27d-5ff3-4c57-be6f-2c4e0eb7bb61",
+            "target": "c06668ea-090e-426c-a5fd-2ec60b48a302",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "sourceHandle": "bottom-source",
+            "targetHandle": "left-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "87397973-b7c9-49bc-8c34-2ed501678c28",
+            "source": "c4caa577-9425-43b9-9902-c18c1f018740",
+            "target": "dd1cc787-0ff0-45ae-bf33-a1d30014d42a",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "5d81ad46-ea00-41a6-9c75-0ceeff884617",
+            "source": "c4d64afe-acde-4556-b8b1-05b502a1c675",
+            "target": "0744f58f-39c3-4944-aee7-5f09f3a89332",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "sourceHandle": "bottom-source",
+            "targetHandle": "left-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "b7a3b830-2299-498d-8afa-78771729653a",
+            "source": "7d966bd9-5c13-4a02-bf8e-11fde766459d",
+            "target": "823cacd3-918f-4066-9e41-9782c893b048",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "2fc8485a-c9a2-4b88-b201-8834417bf9df",
+            "source": "d041be83-44bb-42b5-b4a2-c4e80ecff10a",
+            "target": "4839fb4e-ed01-4cb2-8671-fdaa4aa25df4",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "sourceHandle": "bottom-source",
+            "targetHandle": "left-target",
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "5588288c-45c6-41be-8793-e2ee5153feb0",
+            "source": "82861d3b-28ff-4b3d-b9ad-469877a5a33e",
+            "target": "cd2a0937-60f7-44e2-b7e5-110e1eab8ad9",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 5,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "data": {
+              "locked": true
+            }
+          }
+        ],
+        "viewport": {
+          "x": 2516.939793676024,
+          "y": 562.8557385645731,
+          "zoom": 0.52780316430916
+        }
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-09 18:31:25 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:07:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:13:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:15:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:20:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:22:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:22:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:35:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:36:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:40:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:42:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:52:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:55:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:05:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:06:59 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

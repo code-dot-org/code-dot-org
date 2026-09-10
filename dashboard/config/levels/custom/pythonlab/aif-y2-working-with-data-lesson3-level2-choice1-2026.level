@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-07T15:14:03.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Music",
+    "long_instructions": "You’re working with the same data and code as earlier, except this snippet seems to not be working. Follow the instructions and fix the errors. \r\n\r\n**☑️ Do This:**\r\n\r\n- Run the buggy code below and read the error message.\r\n- Update the Python code to address the error.\r\n- Run the code again, you should see a *different* error. Read it carefully.\r\n- Open the CSV file and look for what the error might be. Pay particular attention to the first line.\r\n- Fix the CSV file, then run your code again to confirm it works.\r\n\r\n**💻 Coding Tip**\r\n\r\nIf you need help debugging the error, try asking your AI tutor a question like: “What does this error mean?”",
+    "bubble_choice_description": "Debug issues with a music dataset.",
+    "thumbnail_url": "https://images.code.org/ab7c8d391b8b86255945017bed5b763f-music.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfile = open(\"music.csv\")\nreader = csv.DictReader(file)\n\nfor row in reader:\n  decade = row[\"decade\"] \n  print(f\"Song from {decade}\")\n  length = row[\"length\"] \n  print(f\"Song length: {length}\")\n\nfile.close()",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "music.csv",
+          "contents": "decadelength\n1940,161\n1950,156\n1960,179\n1970,235\n1980,248\n1990,254\n2000,250\n2010,266\n2020,198",
+          "folderId": "1",
+          "active": false
+        }
+      },
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "data",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY7BNp8jT43rHb8p\n7zx8RLmIUgH9SQP78XAHCiJWRuKDxLHUBwiZMzDBCGwi40hqRxbagbCSO3nV\n/g9fRof8nHdv37Lm+suIp9gB0UemUvr4Hjg1lo9UAebLhmNJ2N7AK7QFgfnr\nJ9NpkWif3SHcVXNpPvQregdcbiRGm3qhoS1L45+DWj8ttHOvezBYRyciS1iR\nBfoUgIKwQ+Yzkyrc6bkJvz3JOZ/Gu3SH/maDZhmkE+V4STWkYxBmXsdwXaIN\nVK3Pjnk37nIrICKRs04E49k8cJaNzoghEtzcxtI3JvHcZx7eY88V7IH5foKH\nKux3mbPsUepScZIP++J5blbXK0R6eUttGcGngrFNI0hHezMifu1KEiu1MeDl\nntHSSou64d/0y7dTszCe+NG5J0MF0tDG89a2kX4Qbl5siD7sKTWvntOKVJEl\nja6HXL5dhPS3orKotPX6joif3UXM0kKA8A8buj9z/9OgmTT5wz4SLJr0S6lO\n448DJ8k+QkjOv1mkvk+ZimOgu6F6prGAla154TPzOIYycigmzX/u2KNFh7W6\nePKH5LXjTSFrp4ElwoP1sOZz0CiLHdmMJFRZVsq05yCbcnViweH8vZWkk7Wq\nXCse3ORX7qm60DNh5tQhe8BmokVmEyYiROSHw7h7RsJsn62drQNnCM2wtc68\n11CHgWs/WF5vIviEc7jQgA6AkAoflAbuQTrIn2QymAB9RdZSqWIN\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-07 15:14:36 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:17:52 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:18:09 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:18:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

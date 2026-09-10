@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def play_song(song, artist):\n    # TODO 1: Fill in the message to tell the user the current song and artist\n    print(f\"\")\n\nplay_song(\"Blinding Lights\", \"the Weeknd\")\nplay_song(\"Rolling in the Deep\", \"Adele\")\n\n# TODO 2: Add a third song to play.",
+          "contents": "def play_song(song, artist):\n  # TODO 1: Fill in the message to tell the user the current song and artist\n  print(f\"\")\n\nplay_song(\"Blinding Lights\", \"the Weeknd\")\nplay_song(\"Rolling in the Deep\", \"Adele\")\n\n# TODO 2: Add a third song to play.",
           "folderId": "0",
           "active": true
         }
@@ -36,9 +36,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrWj4OgGHCs90v3\n1hMTdyO6dU5A1CaptGwOfjxL9TwXy5FuOtR/0TZGG2ZQ0GvVmrKh1Fzox8Ss\nN/uDzLMqdnvg8yd4QoA+WlDS2GHFDjIx0E5P6gizRUC8Ryz7NDPfsyQLD9qw\nSi8Tczuj/ldB/HeS1KxAG1G8kzTYHpnqQQ8uD0WCs8aFVx05gmXts957VjK2\nfQ4hMRtvaxDy9qvAWqzn5vk/6fa/drHhDi1k8o9U3R2LUopf93mzK9ewa/ll\nfIDFor1akLeJc6LASfEwgwjWHFU/uecMM41lTVi51icGUr3OS3wiFq+ISyC4\n8m0MOI9ZDq4pFd9UJ66Piw4pIWGgAtwSvfAC3f85rZ6PTN/frPSm/K4SN1yS\npup3b63GkX/NWw4Bz2reqKWH9M3L/3r7\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo5ro0jYIb7VRbK\ntFwSF8+tsVeuS9pabUPMu8xzBewVJD1A0TBVe5Ij9vQgobyzTdPdc/G2FEzv\n4tWMqG/hJyz36kX2IGz/T72uQjOgdR9a9vEb38Mmio3zuxqzLurFsIuOmZhc\nq/Kg8MCtn7UrIxCwc/Cs70zMXvQOGGlaG+MaQhjiKmuJueLKKlFo7Tb897Iu\ny6mE7PFoAhE/gDOBL+hLVslhyC2MR/wM+e4MZhHvKGJUnJLG+tRfOHnNXNdI\nsV3VmjumE2pHsZ1VnCJwiy00es47lKdLDqnZujePVZj5UUr+eeORn/yp/97+\nN53xi8voZ2mzfW37N9mCj8zG02ka3gheYoZbDFeoBBNYyX0j/fPKxDXVCirm\nqpuA+hYUT+hJisinwTjSD+i2/zbOAftv\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:41:26 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:58:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:41:26 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:58:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:08:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:08:38 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

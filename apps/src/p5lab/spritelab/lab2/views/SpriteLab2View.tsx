@@ -51,6 +51,7 @@ import defaultSources from '../defaultSources.json';
 import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {
   removeImageReferences,
+  collectImageReferences,
   removeImageReferencesOnWorkspace,
   renameImageReferences,
   renameImageReferencesOnWorkspace,
@@ -373,7 +374,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Start Over (the reinit count in the deps). On a scene-less project the
   // pin becomes the only scene — materializing the synthesized default too
   // would leave a stray "Scene 1" in every level sharing the project.
-  const {pinnedSceneId, pinnedSceneName} = levelProperties;
+  // A toolbox has no scenes to pin. Cleared at the one read of the
+  // property, so every downstream consumer sees no pin.
+  const pinnedSceneId = isToolboxMode
+    ? undefined
+    : levelProperties.pinnedSceneId;
+  const {pinnedSceneName} = levelProperties;
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
@@ -764,9 +770,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     dispatch(setIsRunning(true));
-    engine.runProgram(
-      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
+    const {result: program, referencedImages} = collectImageReferences(
+      () => compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
     );
+    engine.runProgram(program, referencedImages);
   }, [dispatch, getCode]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
@@ -791,20 +798,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       currentExternalProjectRef.current = null;
       engine.preloadAnimationsOverride = null;
       currentPlayingRef.current = {kind: 'local', scene};
-      const prelude = compileWorldPrelude(worldFor(scene));
-      let code = '';
-      try {
-        const live = scene.id === activeSceneId ? getCode() : null;
-        code =
-          live ??
-          getCodeFromSerializedWorkspace(scene.source ?? DEFAULT_SCENE_SOURCE);
-      } catch (e) {
-        // A scene that fails to compile shouldn't kill the jump entirely;
-        // run it as an empty scene.
-        console.error('Failed to compile scene', scene.id, e);
-      }
+      const {result: program, referencedImages} = collectImageReferences(() => {
+        const prelude = compileWorldPrelude(worldFor(scene));
+        let code = '';
+        try {
+          const live = scene.id === activeSceneId ? getCode() : null;
+          code =
+            live ??
+            getCodeFromSerializedWorkspace(
+              scene.source ?? DEFAULT_SCENE_SOURCE
+            );
+        } catch (e) {
+          // A scene that fails to compile shouldn't kill the jump
+          // entirely; run it as an empty scene.
+          console.error('Failed to compile scene', scene.id, e);
+        }
+        return prelude + code;
+      });
       dispatch(setIsRunning(true));
-      engine.runProgram(prelude + code);
+      engine.runProgram(program, referencedImages);
     },
     [dispatch, activeSceneId, getCode, worldFor]
   );
@@ -892,13 +904,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // An external scene runs at the playfield size ITS project authored —
       // reshaping it to this level's size would resize every cell under a
       // layout built for the other one.
-      const prelude = compileWorldPrelude(scene.world);
-      let code = '';
-      try {
-        code = compileExternalScene(scene, project);
-      } catch (e) {
-        console.error('Failed to compile external scene', sceneId, e);
-      }
+      const {result: program, referencedImages} = collectImageReferences(() => {
+        const prelude = compileWorldPrelude(scene.world);
+        let code = '';
+        try {
+          code = compileExternalScene(scene, project);
+        } catch (e) {
+          console.error('Failed to compile external scene', sceneId, e);
+        }
+        return prelude + code;
+      });
       // Preload the external project's images. Their saved animations carry
       // sourceUrl (dataURI is stripped on save); p5.loadImage takes URLs too.
       const theirs = project.animations;
@@ -912,7 +927,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ),
       };
       dispatch(setIsRunning(true));
-      engine.runProgram(prelude + code);
+      engine.runProgram(program, referencedImages);
     },
     [dispatch, compileExternalScene]
   );
@@ -1261,9 +1276,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // A user edit: the workspace already displays this content; persist it
-  // and refresh the preview.
+  // and refresh the preview. In toolbox mode the workspace IS the document
+  // (levelbuilder Save serializes it directly), so there is nothing to do.
   const handleWorkspaceChange = useCallback(
     (source: WorkspaceSerialization) => {
+      if (isToolboxMode) {
+        return;
+      }
       writeActiveSceneSource(source);
       // Keep the live preview in sync with the edited code.
       scheduleRun();
@@ -1278,9 +1297,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [subscribeToChanges, handleWorkspaceChange, scheduleRun]
   );
 
-  // Update the workspace and run the current scene when the active scene code changes.
+  // Update the workspace when its content source changes. In toolbox mode
+  // the workspace holds the toolbox itself, loaded once per sources
+  // generation (so Start Over reloads it); after that the workspace alone
+  // is the document, and the scene machinery below — which would seed the
+  // student default program — never touches it. In program mode the
+  // workspace follows the active scene and re-runs the preview.
+  // Sources generation the toolbox was last loaded from.
+  const toolboxLoadedForRef = useRef(-1);
   useEffect(() => {
     if (!animationsSeeded) {
+      return;
+    }
+    if (isToolboxMode) {
+      if (toolboxLoadedForRef.current !== sourcesReinitializedCount) {
+        toolboxLoadedForRef.current = sourcesReinitializedCount;
+        // Toolbox edit sources always carry the object form (the
+        // container builds them from the toolbox definition).
+        loadCode((currentSources.source ?? {}) as WorkspaceSerialization);
+      }
       return;
     }
     const source = activeScene.source ?? DEFAULT_SCENE_SOURCE;
@@ -1292,9 +1327,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [
     animationsSeeded,
     activeScene,
+    currentSources.source,
     getCurrentBlocks,
     loadCode,
     runLocalScene,
+    sourcesReinitializedCount,
   ]);
 
   const handleSelectScene = useCallback(
@@ -1452,7 +1489,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           ) : undefined
         }
         sceneTabsExtra={
-          animationsSeeded ? (
+          // A toolbox has no scenes; "New scene…" here would put the student
+          // default onto the canvas and into the saved toolbox.
+          animationsSeeded && !isToolboxMode ? (
             <SceneSelector
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}

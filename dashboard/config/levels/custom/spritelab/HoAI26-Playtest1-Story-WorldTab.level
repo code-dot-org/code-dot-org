@@ -60,10 +60,13 @@
         }
       ]
     },
+    "display_name": "Create your World",
+    "bubble_choice_description": "Place your characters in your story.",
+    "thumbnail_url": "https://images.code.org/f7c887901333bbea5ef797b2da3532f1-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-03T01:45:40.898+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-platformer\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-platformer\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:45:40.898+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-platformer\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-platformer\"},{\"changed_at\":\"2026-09-08 16:10:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
   <blocks/>
 </GamelabJr>
