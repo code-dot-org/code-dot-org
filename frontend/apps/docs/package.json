@@ -1,0 +1,45 @@
+{
+  "name": "@code-dot-org/docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "docusaurus build",
+    "clean": "docusaurus clear",
+    "dev": "docusaurus start --port 4321 --host 0.0.0.0",
+    "serve": "docusaurus serve --port 4321 --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "evidence:check": "node scripts/evidence-check.mjs",
+    "docs:affected": "bash scripts/affected-docs.sh"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@easyops-cn/docusaurus-search-local": "^0.48.5",
+    "prism-react-renderer": "^2.4.1",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.10.2",
+    "@docusaurus/tsconfig": "3.10.2",
+    "@docusaurus/types": "3.10.2",
+    "ajv-cli": "5.0.0",
+    "ajv-formats": "3.0.1",
+    "typescript": "~5.9.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

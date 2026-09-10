@@ -1,0 +1,42 @@
+/*
+ * Docusaurus Infima variables set from Code.org design-system tokens.
+ *
+ * Brand purple (#7f4aa9 / --brand-purple-60) is the primary; the shade
+ * ramp follows the design system's primitive-color scale.
+ * Fonts: Geist (body) and Space Grotesk (headings) match fontVariables.css.
+ */
+
+/* Load Geist and Space Grotesk from @fontsource (installed transitively via
+   @code-dot-org/fonts in the workspace). */
+@import '@fontsource/geist/400.css';
+@import '@fontsource/geist/600.css';
+@import '@fontsource/geist/700.css';
+@import '@fontsource-variable/space-grotesk';
+
+:root {
+  /* Primary: brand-purple, shade 60 for sufficient contrast on white. */
+  --ifm-color-primary: #7f4aa9;
+  --ifm-color-primary-dark: #6c468a;
+  --ifm-color-primary-darker: #5c3778;
+  --ifm-color-primary-darkest: #2f1c3e;
+  --ifm-color-primary-light: #9657c7;
+  --ifm-color-primary-lighter: #a86cd8;
+  --ifm-color-primary-lightest: #d4a8f7;
+
+  /* Fonts */
+  --ifm-font-family-base: 'Geist', 'Noto Sans', sans-serif;
+  --ifm-heading-font-family: 'Space Grotesk', 'Geist', 'Noto Sans', sans-serif;
+  --ifm-font-family-monospace: 'Roboto Mono', SFMono-Regular, Menlo, monospace;
+
+  --ifm-code-font-size: 95%;
+}
+
+/* Apply heading font to all heading levels. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ifm-heading-font-family);
+}
