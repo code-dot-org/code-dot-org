@@ -1,0 +1,89 @@
+/* The animations' grid CONTENT. The dialog itself — surface, width, padding,
+   the button row — is the design system's `Dialog`. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* One wrapped run of squares: the two ways to get another animation, then
+   every animation the project has. */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  max-height: 55vh;
+  margin: 0;
+  padding: 2px;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.tile {
+  display: flex;
+  width: 96px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  text-align: center;
+}
+
+.tile:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+/* The picture, on the dark ground a world is drawn against — so a white sprite
+   is a sprite rather than a hole. */
+.picture {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #101020;
+  overflow: hidden;
+}
+
+/* The two ways to get one more, drawn as tiles so they are where the eye
+   already is — outlined rather than filled, because they are not animations. */
+.action .picture {
+  border: 1px dashed var(--borders-neutral-primary, #d4dae1);
+  background: none;
+  color: var(--text-neutral-primary);
+}
+
+.name {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* An animation with no frames yet, or whose pictures have not decoded: the
+   grid keeps its shape and the tile is still identifiable by its name. */
+.blank {
+  color: #5b6770;
+}
+
+.empty {
+  padding: 0.5rem 0;
+  color: var(--text-neutral-secondary);
+}

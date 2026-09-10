@@ -41,6 +41,12 @@ export const ACTORS_FOLDER = 'actors';
  */
 export const SPRITES_FOLDER = 'sprites';
 
+/**
+ * …and the animations', whose button opens a grid of them RUNNING: what tells
+ * two animations of one sprite apart is the motion (`AnimationPickerDialog`).
+ */
+export const ANIMATIONS_FOLDER = 'animations';
+
 /** One kind of file a folder's `New` can make. */
 export interface Makeable {
   /** What the menu item says — "New actor". */
@@ -134,7 +140,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     uploads: true,
   },
   {
-    folder: 'animations',
+    folder: ANIMATIONS_FOLDER,
     label: 'Animations',
     icon: 'film',
     makes: [

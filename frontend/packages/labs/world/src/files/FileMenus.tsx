@@ -64,6 +64,8 @@ import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
+import {AnimationPickerDialog} from '../animationEditor/AnimationPickerDialog';
+import {parseAnim} from '../animationEditor/animDocument';
 import {SpritePickerDialog} from '../animationEditor/SpritePickerDialog';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {label} from '../blockly/label';
@@ -75,6 +77,7 @@ import {filePath} from '../runtime/projectFiles';
 import styles from './fileMenus.module.css';
 import {
   ACTORS_FOLDER,
+  ANIMATIONS_FOLDER,
   FOLDER_MENUS,
   SPRITES_FOLDER,
   type FolderMenu,
@@ -128,6 +131,8 @@ export const FileMenus = () => {
    * pictures, differing in what a press means (`SpritePickerDialog`).
    */
   const [painting, setPainting] = useState(false);
+  /** …and whether the animations are, which is the same grid again, running. */
+  const [playing, setPlaying] = useState(false);
   const [row, setRow] = useState<RowMenu>();
   // The tolerant form: this renders inside the lab, which provides a theme,
   // and in a bare tree in tests, which does not — and a menu is not worth a
@@ -491,7 +496,37 @@ export const FileMenus = () => {
     () => (painting ? filesIn(SPRITES_FOLDER) : []),
     [painting, filesIn],
   );
-  const decoded = useProjectImages(painting ? ops.source : undefined);
+  // Decoded while either grid is up: the pictures are what a sprite tile shows
+  // and what an animation's frames are drawn from.
+  const decoded = useProjectImages(
+    painting || playing ? ops.source : undefined,
+  );
+
+  /**
+   * The animation files, each with the FIRST animation it holds.
+   *
+   * The first because that is the one the editor opens on, and because a tile
+   * showing all of a file's animations would be a second grid inside the first
+   * (`AnimationPickerDialog`).
+   */
+  const animationTiles = useMemo(
+    () =>
+      playing
+        ? filesIn(ANIMATIONS_FOLDER).map(({file, name}) => ({
+            fileId: file.id,
+            name,
+            animation: Object.values(
+              parseAnim(file.contents ?? '').animations,
+            )[0],
+          }))
+        : [],
+    [playing, filesIn],
+  );
+
+  /** The folder menu the animations' grid stands in for. */
+  const animationsMenu = FOLDER_MENUS.find(
+    menu => menu.folder === ANIMATIONS_FOLDER,
+  ) as FolderMenu;
 
   /** The folder menu the sprites' palette stands in for. */
   const spritesMenu = FOLDER_MENUS.find(
@@ -550,6 +585,10 @@ export const FileMenus = () => {
               }
               if (menu.folder === SPRITES_FOLDER) {
                 setPainting(true);
+                return;
+              }
+              if (menu.folder === ANIMATIONS_FOLDER) {
+                setPlaying(true);
                 return;
               }
               setOpen(
@@ -679,6 +718,20 @@ export const FileMenus = () => {
             );
           }}
           onCancel={() => setPicking(false)}
+        />
+      )}
+      {playing && (
+        <AnimationPickerDialog
+          animations={animationTiles}
+          images={decoded}
+          readOnly={isReadOnly}
+          onOpen={fileId => {
+            ops.activateFile(fileId);
+            setPlaying(false);
+          }}
+          onNew={() => void make(animationsMenu, animationsMenu.makes[0])}
+          onImport={() => void importInto(animationsMenu)}
+          onCancel={() => setPlaying(false)}
         />
       )}
       {painting && (

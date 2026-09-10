@@ -55,6 +55,7 @@ import {
   type Frame,
 } from './animDocument';
 import {CellPicker} from './CellPicker';
+import {drawFrame} from './drawFrame';
 import {pingPong, reversed} from './frameOps';
 import {frameAt, previousFrame, startOf, totalTime} from './playback';
 import {cellIndex, sheetCells, type CellRect} from './sheetFrames';
@@ -63,13 +64,8 @@ import {delayOf, durations, retimed, shownRate} from './timing';
 
 /** What a new animation runs at, in frames per second. */
 const DEFAULT_FRAME_RATE = 10;
-// Preview/thumbnail draw scale: a 32px sprite is drawn at 2× so it reads at a
-// glance; the frame's own scale/offset multiply on top.
-const BASE_SCALE = 2;
 const PREVIEW_BOX = 112;
 const THUMB_BOX = 44;
-/** How faint the onion skin is: there, but never mistaken for the frame. */
-const GHOST_ALPHA = 0.28;
 /** Playback speeds the preview offers, as multiples of the authored timing. */
 const SPEEDS = [0.25, 0.5, 1, 2] as const;
 
@@ -82,78 +78,6 @@ const parseNum = (s: string, fallback: number): number => {
   const n = parseFloat(s);
   return Number.isFinite(n) ? n : fallback;
 };
-
-/** Paint one frame into a `box`-sized context, at whatever alpha is set. */
-function paintFrame(
-  ctx: CanvasRenderingContext2D,
-  box: number,
-  frame: Frame,
-  images: Record<string, HTMLImageElement>,
-): void {
-  const img = images[frame.sprite];
-  if (!img) {
-    return;
-  }
-  const cell = frame.position ?? {
-    x: 0,
-    y: 0,
-    width: img.width,
-    height: img.height,
-  };
-  const scale = (frame.scale ?? 1) * BASE_SCALE;
-  const dw = cell.width * scale;
-  const dh = cell.height * scale;
-  const cx = box / 2 + (frame.offset?.x ?? 0) * BASE_SCALE;
-  const cy = box / 2 + (frame.offset?.y ?? 0) * BASE_SCALE;
-  ctx.drawImage(
-    img,
-    cell.x,
-    cell.y,
-    cell.width,
-    cell.height,
-    cx - dw / 2,
-    cy - dh / 2,
-    dw,
-    dh,
-  );
-}
-
-/**
- * Draw one frame centered in a `box`-sized canvas (device-pixel aware).
- *
- * `ghost` is the onion skin: the frame before this one, drawn faint underneath.
- * Offsets and scale are the reason it exists — they are numbers whose whole
- * effect is where a drawing sits RELATIVE to the frame either side of it, and
- * nudging one blind is guesswork.
- */
-function drawFrame(
-  canvas: HTMLCanvasElement,
-  box: number,
-  frame: Frame,
-  images: Record<string, HTMLImageElement>,
-  ghost?: Frame,
-): void {
-  const ctx = canvas.getContext('2d');
-  if (!ctx) {
-    return;
-  }
-  const dpr = window.devicePixelRatio || 1;
-  if (canvas.width !== box * dpr) {
-    canvas.width = box * dpr;
-  }
-  if (canvas.height !== box * dpr) {
-    canvas.height = box * dpr;
-  }
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  ctx.clearRect(0, 0, box, box);
-  ctx.imageSmoothingEnabled = false;
-  if (ghost) {
-    ctx.globalAlpha = GHOST_ALPHA;
-    paintFrame(ctx, box, ghost, images);
-    ctx.globalAlpha = 1;
-  }
-  paintFrame(ctx, box, frame, images);
-}
 
 /** A static thumbnail of one frame (redraws when the frame or images change). */
 const FrameThumb = ({
