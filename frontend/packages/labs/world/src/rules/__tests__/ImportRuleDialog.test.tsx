@@ -8,6 +8,7 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import {describe, expect, it, vi} from 'vitest';
 
+import {demoUrl} from '../demos';
 import {ImportRuleDialog} from '../ImportRuleDialog';
 import {STOCK_RULES} from '../stock';
 import {stockRuleGroups} from '../stockRuleGroups';
@@ -172,15 +173,16 @@ describe('a rule showing what it does', () => {
     expect((demo as HTMLElement).style.getPropertyValue('--frames')).toBe('24');
   });
 
-  it('shows nothing for a rule with no demo yet', () => {
-    // A row with no picture is a row, not a hole — which the dialog needs
+  it('draws a card for a rule that has no demo, and cannot have one', () => {
+    // A tile with no picture is a tile, not a hole — which the dialog needs
     // anyway, since a machine with no `public/demos/` has none of them.
     //
-    // Two of them now, and both for the same honest reason: they are BASES,
-    // and a base does nothing visible on its own. "Notices Collisions" answers
-    // a question that Solid Bodies and Collection then act on, and "Has a
+    // TWO OF THEM, and both for the same honest reason: they are BASES, and a
+    // base does nothing visible on its own. "Notices Collisions" answers a
+    // question that Solid Bodies and Collection then act on, and "Has a
     // Camera" moves the view to wherever something else aimed it. A strip of
-    // either would be a strip of whichever rule was standing on it.
+    // either would be a strip of whichever rule was standing on it. Everything
+    // else on the shelf is recorded.
     open();
 
     expect(
@@ -189,6 +191,7 @@ describe('a rule showing what it does', () => {
     expect(
       rowFor('Has a Camera')?.querySelector('[aria-hidden="true"]'),
     ).toBeNull();
+    expect(screen.getAllByText('What others are built on')).toHaveLength(2);
   });
 
   it('marks the row, so hovering or focusing it plays', () => {
@@ -209,5 +212,27 @@ describe('a rule showing what it does', () => {
 
     const demo = rowFor('Has Gravity')?.querySelector('[aria-hidden="true"]');
     expect(demo).toHaveAttribute('aria-hidden', 'true');
+  });
+});
+
+describe('the shelf’s pictures', () => {
+  // A grid of forty-five tiles where a dozen are blank reads as a dialog that
+  // failed to load rather than as a library. Every rule that CAN be shown
+  // doing something is recorded; the two that cannot are named here, so
+  // deleting a demo is a decision rather than an omission.
+  const BASES = ['collisions', 'camera'];
+
+  it('has a demo for every rule but the two bases', () => {
+    const missing = STOCK_RULES.filter(
+      rule => !demoUrl(rule.id) && !BASES.includes(rule.id),
+    ).map(rule => rule.id);
+
+    expect(missing).toEqual([]);
+  });
+
+  it('has no demo for the bases, which would be a demo of something else', () => {
+    for (const id of BASES) {
+      expect(demoUrl(id), id).toBeUndefined();
+    }
   });
 });

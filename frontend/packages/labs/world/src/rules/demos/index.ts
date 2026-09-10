@@ -16,11 +16,14 @@ import {
   cameraFollowDemo,
 } from './cameras';
 import {carryDemo} from './carry';
+import {climbDemo} from './climb';
 import {collectDemo} from './collect';
 import {conversationDemo} from './conversation';
+import {diggingDemo} from './digging';
 import {dragDemo} from './drag';
 import {driveDemo} from './drive';
 import {expiresDemo} from './expires';
+import {flappingDemo} from './flapping';
 import {goalsDemo} from './goals';
 import {gravityDemo} from './gravity';
 import {gridDemo} from './grid';
@@ -28,16 +31,23 @@ import {healthDemo} from './health';
 import {historyDemo} from './history';
 import {inputDemo} from './input';
 import {inventoryDemo} from './inventory';
+import {jetpackDemo} from './jetpack';
 import {jumpDemo} from './jump';
 import {mouseDemo} from './mouse';
 import {pathDemo} from './path';
 import {patrolDemo} from './patrol';
 import {physicsDemo} from './physics';
+import {prowlingDemo} from './prowling';
 import {scoreDemo} from './score';
 import {solidDemo} from './solid';
 import {spawnerDemo} from './spawner';
 import {steeringDemo} from './steering';
+import {surfacesDemo} from './surfaces';
+import {switchesDemo} from './switches';
+import {tabNavigationDemo} from './tabNavigation';
+import {teleportDemo} from './teleport';
 import {timeDemo} from './time';
+import {turningDemo} from './turning';
 import {turnsDemo} from './turns';
 import {DEMO_FPS, type RuleDemo} from './types';
 import {wrapDemo} from './wrap';
@@ -69,6 +79,16 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   arrows: arrowsDemo,
   gravity: gravityDemo,
   jump: jumpDemo,
+  jetpack: jetpackDemo,
+  climb: climbDemo,
+  surfaces: surfacesDemo,
+  digging: diggingDemo,
+  flapping: flappingDemo,
+  prowling: prowlingDemo,
+  tabNavigation: tabNavigationDemo,
+  turning: turningDemo,
+  teleport: teleportDemo,
+  switches: switchesDemo,
   drive: driveDemo,
   drag: dragDemo,
   zaps: zapsDemo,

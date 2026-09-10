@@ -51,6 +51,24 @@ export const ARROW_CAPS: readonly Cap[] = [
   cap('capRight', 'right arrow', 46, 108),
 ];
 
+/**
+ * One wide key at the bottom left, which is where Tab is.
+ *
+ * Wider than tall and off to the side, so it reads as that key rather than as
+ * the space bar — the two are the only ones this recorder draws, and it can
+ * draw no letters (specs/RULE_DEMOS.md), so the shape and the place are the
+ * whole of what tells them apart.
+ */
+export const TAB_CAP: readonly Cap[] = [
+  {
+    id: 'capTab',
+    key: 'tab',
+    at: new Vector(26, 108),
+    width: 30,
+    height: 12,
+  },
+];
+
 /** One wide bar along the bottom, which is what a space bar looks like. */
 export const SPACE_CAP: readonly Cap[] = [
   {
