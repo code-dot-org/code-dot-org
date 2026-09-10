@@ -153,13 +153,13 @@ beforeEach(() => {
   promptForName.mockResolvedValue('Chaser');
 });
 
-/** Every folder button — a project's folders are its kinds. */
+/** Every folder button, in the order the tab bar puts them. */
 const FOLDERS = [
   'Worlds',
-  'Actors',
-  'Rules',
   'Sprites',
   'Backgrounds',
+  'Actors',
+  'Rules',
   'Animations',
   'Sounds',
   'Effects',
@@ -178,9 +178,16 @@ describe('the file menus', () => {
     // Nine, because a project's folders are its kinds — and the two this
     // project lacks are still offered, since a shelf makes the folder it
     // writes into.
-    for (const label of FOLDERS) {
-      expect(screen.getByRole('button', {name: label}), label).toBeTruthy();
-    }
+    //
+    // IN ORDER, because the order is an argument: a world, then the pictures,
+    // then the things made out of them. An actor is a drawing that was given
+    // behavior, so the drawing comes first (`files/folderMenus`).
+    const buttons = screen
+      .getAllByRole('button')
+      .map(button => button.getAttribute('aria-label') ?? '')
+      .filter(name => FOLDERS.includes(name));
+
+    expect(buttons).toEqual(FOLDERS);
   });
 
   it('lists what is in the folder by NAME, and opens what is clicked', () => {

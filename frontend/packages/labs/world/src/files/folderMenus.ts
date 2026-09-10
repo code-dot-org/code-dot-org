@@ -101,9 +101,13 @@ export interface FolderMenu {
 /**
  * The buttons, left to right, in the order a project is built up in.
  *
- * Worlds and actors first because that is what a game IS; then the rules that
- * give them behavior; then what they look and sound like; then the two
- * documents — a map is a world's arrangement and an effect is a picture's.
+ * A world first, because that is what a project IS. Then the pictures, because
+ * they come before the things made out of them: an actor is a drawing that was
+ * given behavior, and a learner with one in mind draws it or takes it off the
+ * shelf before there is anything to attach it to. Then the actors, the rules
+ * that give them behavior, the animations made of those same pictures, and the
+ * sounds; then the two documents — a map is a world's arrangement and an
+ * effect is a picture's.
  */
 export const FOLDER_MENUS: readonly FolderMenu[] = [
   {
@@ -111,21 +115,6 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     label: 'Worlds',
     icon: 'planet-ringed',
     makes: [{label: 'New world', extension: 'world', placeholder: 'My World'}],
-  },
-  {
-    folder: ACTORS_FOLDER,
-    label: 'Actors',
-    icon: 'masks-theater',
-    makes: [{label: 'New actor', extension: 'actor', placeholder: 'Chaser'}],
-    shelf: requestActorImport,
-    enhances: true,
-  },
-  {
-    folder: 'rules',
-    label: 'Rules',
-    icon: 'scroll',
-    makes: [{label: 'New rule', extension: 'rule', placeholder: 'Gravity'}],
-    shelf: requestRuleImport,
   },
   {
     folder: SPRITES_FOLDER,
@@ -146,6 +135,21 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     makes: [{label: 'New background', extension: 'png', placeholder: 'Cave'}],
     shelf: () => requestAppearanceImport('background'),
     uploads: true,
+  },
+  {
+    folder: ACTORS_FOLDER,
+    label: 'Actors',
+    icon: 'masks-theater',
+    makes: [{label: 'New actor', extension: 'actor', placeholder: 'Chaser'}],
+    shelf: requestActorImport,
+    enhances: true,
+  },
+  {
+    folder: 'rules',
+    label: 'Rules',
+    icon: 'scroll',
+    makes: [{label: 'New rule', extension: 'rule', placeholder: 'Gravity'}],
+    shelf: requestRuleImport,
   },
   {
     folder: ANIMATIONS_FOLDER,
