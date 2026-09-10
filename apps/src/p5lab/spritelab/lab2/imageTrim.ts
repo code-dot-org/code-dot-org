@@ -47,8 +47,6 @@ export function findOpaqueBounds(
   return right < 0 ? null : {left, top, right, bottom};
 }
 
-// Trimming is deterministic; cache by source so re-runs don't redo the work.
-const trimCache = new Map<string, Promise<string>>();
 const frameThumbCache = new Map<string, Promise<string>>();
 
 // Trimmed image per costume name, for the block image fields (dropdown
@@ -82,53 +80,51 @@ export function forgetTrimmedThumbnail(name?: string): void {
  * Load an image (dataURI or URL), crop transparent borders, and return the
  * cropped image as a dataURI. Returns the input unchanged when there's
  * nothing to trim (full-bleed content, fully transparent, or load failure).
+ * Uncached: deterministic work, tens of milliseconds per image, while a
+ * cache keyed by whole source dataURIs — module state that outlives the
+ * level — keeps old sources and their trimmed results alive indefinitely.
  */
 function trimTransparentBorder(source: string): Promise<string> {
-  let cached = trimCache.get(source);
-  if (!cached) {
-    cached = new Promise<string>(resolve => {
-      const img = new Image();
-      img.onload = () => {
-        try {
-          const canvas = document.createElement('canvas');
-          canvas.width = img.naturalWidth;
-          canvas.height = img.naturalHeight;
-          const ctx = canvas.getContext('2d');
-          if (!ctx) {
-            return resolve(source);
-          }
-          ctx.drawImage(img, 0, 0);
-          const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const bounds = findOpaqueBounds(data, canvas.width, canvas.height);
-          if (
-            !bounds ||
-            (bounds.left === 0 &&
-              bounds.top === 0 &&
-              bounds.right === canvas.width - 1 &&
-              bounds.bottom === canvas.height - 1)
-          ) {
-            return resolve(source);
-          }
-          const w = bounds.right - bounds.left + 1;
-          const h = bounds.bottom - bounds.top + 1;
-          const cropped = document.createElement('canvas');
-          cropped.width = w;
-          cropped.height = h;
-          cropped
-            .getContext('2d')
-            ?.drawImage(canvas, bounds.left, bounds.top, w, h, 0, 0, w, h);
-          resolve(cropped.toDataURL('image/png'));
-        } catch (e) {
-          // e.g. a tainted canvas from a cross-origin image: use it as-is.
-          resolve(source);
+  return new Promise<string>(resolve => {
+    const img = new Image();
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          return resolve(source);
         }
-      };
-      img.onerror = () => resolve(source);
-      img.src = source;
-    });
-    trimCache.set(source, cached);
-  }
-  return cached;
+        ctx.drawImage(img, 0, 0);
+        const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const bounds = findOpaqueBounds(data, canvas.width, canvas.height);
+        if (
+          !bounds ||
+          (bounds.left === 0 &&
+            bounds.top === 0 &&
+            bounds.right === canvas.width - 1 &&
+            bounds.bottom === canvas.height - 1)
+        ) {
+          return resolve(source);
+        }
+        const w = bounds.right - bounds.left + 1;
+        const h = bounds.bottom - bounds.top + 1;
+        const cropped = document.createElement('canvas');
+        cropped.width = w;
+        cropped.height = h;
+        cropped
+          .getContext('2d')
+          ?.drawImage(canvas, bounds.left, bounds.top, w, h, 0, 0, w, h);
+        resolve(cropped.toDataURL('image/png'));
+      } catch (e) {
+        // e.g. a tainted canvas from a cross-origin image: use it as-is.
+        resolve(source);
+      }
+    };
+    img.onerror = () => resolve(source);
+    img.src = source;
+  });
 }
 
 /** The animation list restricted to images whose data has arrived. */
@@ -147,7 +143,7 @@ export function loadedAnimations(
 
 /**
  * The first frame of a sprite sheet as a dataURI, for thumbnails. Cached by
- * source like the trims.
+ * source.
  */
 function firstFrameThumbnail(
   source: string,

@@ -243,7 +243,6 @@ class User < ApplicationRecord
     section_attempts
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
-    last_verified_captcha_at
     gender_student_input
     gender_teacher_input
     gender_third_party_input

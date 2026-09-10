@@ -30,18 +30,11 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "Create your world by placing your platform tiles and your player sprite."
-      },
-      {
-        "text": "Nice world!  Continue when you're ready.",
-        "showContinue": true,
-        "after": {
-          "worldBlocks": 7,
-          "worldSprites": 1
-        }
+        "text": "# Build your game world!\n\n1. Place your platform blocks on the grid \n\n1. Add a player sprite.",
+        "showContinue": true
       }
     ],
-    "long_instructions": "# Build your platformer\r\nPlace platform blocks on the grid in the World tab and add a player. Press **Run**, then use the arrow keys to run and jump.",
+    "long_instructions": "# Build your game\r\nPlace platform blocks on the grid in the World tab and add a player. Press **Run**, then use the arrow keys to run and jump.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -127,12 +120,15 @@
         }
       ]
     },
+    "display_name": "Create your World",
+    "bubble_choice_description": "Place the platforms in your game world",
+    "thumbnail_url": "https://images.code.org/93f35a54b33d7343434d7e32f98fd972-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-03T01:45:32.415+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-platformer\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-platformer\"},{\"changed_at\":\"2026-09-03 02:16:54 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:31:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:31:49 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:45:32.415+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-platformer\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-platformer\"},{\"changed_at\":\"2026-09-03 02:16:54 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:31:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 18:31:49 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:09:38 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 19:36:14 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 19:36:16 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:13:31 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:15:25 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:15:28 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:48:56 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:49:49 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:49:51 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

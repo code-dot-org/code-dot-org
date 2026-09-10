@@ -1,0 +1,25 @@
+name 'aif-y2-working-with-data-postassessment-q8-2026'
+
+wrong 'Which day was the most rainy?'
+wrong 'How many hours of sunlight did the plant get?'
+right 'How often does the plant need water?'
+wrong 'How much did the plant grow?'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+The table below represents data of a single plant growing over time.
+
+Which question **can't** be answered by the given data?
+
+| Day | Rainfall (Inches) | Sunlight (Hours) | Plant Height (Inches) |
+|---|---|---|---|
+| September 8 | 1 | 10 | 6 |
+| September 9 | 0 | 10 | 6 |
+| September 10 | 3 | 10 | 6.25 |
+| September 11 | 0 | 9 | 6.25 |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Analyze a Dataset Project
+MARKDOWN

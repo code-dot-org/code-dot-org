@@ -23,10 +23,12 @@
     "project_template_level_name": "HoAI26-Playtest1-Platform-Template",
     "visible_tabs": [
       "Code",
-      "Play"
+      "Play",
+      "Images",
+      "World"
     ],
-    "pinned_scene_id": "story-scene",
-    "pinned_scene_name": "Story",
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
     "guide_mode": "instructions",
     "long_instructions": "# Add your Background\r\n- Add the set background block to your program.",
     "toolbox_definition": {
@@ -41,99 +43,17 @@
         },
         {
           "kind": "block",
-          "type": "gamelab_makeSpritesGrid",
-          "id": "kOCwX|gx-/oBDDn3DQ[)",
+          "type": "spritelab2_setAsPlatformPlayer",
+          "id": "vF#.%mQOJ=%0J4KOD0+B",
           "fields": {
-            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>",
-            "GRID": [
-              [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ]
-            ]
+            "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
           },
           "enabled": true
         },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
-          "id": "T%BXP$5I{[[EahLK`9_e",
+          "id": "aB-!M?ZsYu,hTgu35|C^",
           "fields": {
             "SPEECH": ""
           },
@@ -315,12 +235,22 @@
         }
       ]
     },
+    "display_name": "Code the background",
+    "bubble_choice_description": "Code the background of your game",
+    "thumbnail_url": "https://images.code.org/8bdaa44204726a7eb393727d82610174-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
+    "guide_steps": [
+      {
+        "text": "# Create a background for your game\n\n1. Add a set background block.\n- Then, press make an image.\n- Write a prompt that describes your background, and press **Generate**.\n- Press the Play or Code button to see how it looks on your game!",
+        "showContinue": true
+      }
+    ],
+    "locked_image_type": "background",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-03T18:59:17.918+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-SimpleCode\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-SimpleCode\"},{\"changed_at\":\"2026-09-03 19:12:16 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 21:19:05 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 21:23:30 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-03T18:59:17.918+00:00\",\"changed\":[\"cloned from \\\"HoAI26-Playtest1-Platform-SimpleCode\\\"\"],\"cloned_from\":\"HoAI26-Playtest1-Platform-SimpleCode\"},{\"changed_at\":\"2026-09-03 19:12:16 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 21:19:05 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 21:23:30 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:22:36 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:19:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:19:12 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:20:33 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:21:05 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:51:12 +0000\",\"changed\":[\"visible_tabs\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:51:13 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:01:07 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:10:10 +0000\",\"changed\":[\"pinned_scene_id\",\"pinned_scene_name\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:10:12 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:31:49 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:42:42 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:42:44 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:45:18 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:46:54 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:46:58 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:48:53 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:48:58 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:50:59 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:51:01 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:52:28 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:52:30 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:54:44 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:54:54 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:54:56 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:55:47 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:55:50 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:59:30 +0000\",\"changed\":[\"guide_steps\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:59:32 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-10 00:21:08 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

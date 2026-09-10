@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q1-2026'
+
+wrong 'They ask questions, conduct experiments, and publish their findings in a scientific journal.'
+right 'They ask questions, use data to answer those questions, and communicate their findings.'
+wrong 'They design surveys, test those surveys, and ensure the data collection process is not biased.'
+wrong 'They collect data, create machine learning models, and use those models to make predictions.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which **best** describes the role of a data analyst?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: What is Data Analysis?
+MARKDOWN
