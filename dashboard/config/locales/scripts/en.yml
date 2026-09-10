@@ -7092,6 +7092,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-instructor-in-training:
+          lesson_groups: {}
+          name: ui-test-instructor-in-training
+          title: UI Test Instructor in Training
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         csa7-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:

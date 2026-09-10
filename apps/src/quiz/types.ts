@@ -1,11 +1,11 @@
 import React from 'react';
 
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {ExtraTab} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/types';
 
 export interface QuizViewContent {
   resourcePanelProps: {
-    questionBankContent?: React.ReactNode;
-    configurationContent?: React.ReactNode;
+    extraTabs?: ExtraTab[];
   };
   workspaceContent: React.ReactNode;
 }

@@ -1347,7 +1347,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
-    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}

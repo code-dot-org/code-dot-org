@@ -25,13 +25,20 @@ export default function useQuizBuilderView({
 
   return {
     resourcePanelProps: {
-      configurationContent: (
-        <QuizConfigurationPanel
-          quizId={levelId}
-          initialValues={quizConfig}
-          onSaved={setQuizConfig}
-        />
-      ),
+      extraTabs: [
+        {
+          id: 'configuration',
+          title: 'Configuration',
+          icon: 'wrench',
+          content: (
+            <QuizConfigurationPanel
+              quizId={levelId}
+              initialValues={quizConfig}
+              onSaved={setQuizConfig}
+            />
+          ),
+        },
+      ],
     },
     workspaceContent: <div>Quiz builder workspace placeholder</div>,
   };
