@@ -2,7 +2,7 @@ import {type FC, useEffect, useState} from 'react';
 
 import RecapStoryCard from '../RecapStoryCard';
 
-import styles from './time-spent-box.module.scss';
+import styles from './stat-card.module.scss';
 
 const ANIMATION_DURATION_MS = 1200;
 

@@ -2,7 +2,7 @@ import {type CSSProperties, type FC} from 'react';
 
 import RecapStoryCard from '../RecapStoryCard';
 
-import styles from './levels-attempted-box.module.scss';
+import styles from './stat-card.module.scss';
 
 interface LevelsAttemptedBoxProps {
   gradient: string;
@@ -43,7 +43,7 @@ const LevelsAttemptedBox: FC<LevelsAttemptedBoxProps> = ({
         className={styles.metricRow}
         style={{'--target-count': levelsAttempted} as CSSProperties}
       >
-        <div className={styles.bigNumber} />
+        <div className={styles.bigNumberAnimated} />
         <p className={styles.caption}>
           of {levelsTotal} levels
           <br />

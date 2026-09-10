@@ -1,4 +1,4 @@
-@property --validated-count {
+@property --stat-count {
   syntax: '<integer>';
   inherits: false;
   initial-value: 0;
@@ -6,12 +6,21 @@
 
 @keyframes count-up {
   from {
-    --validated-count: 0;
+    --stat-count: 0;
   }
 
   to {
-    --validated-count: var(--target-count);
+    --stat-count: var(--target-count);
   }
+}
+
+%big-number-base {
+  font-family: var(--font-family-main);
+  font-size: clamp(5rem, 18vw, 7.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #000;
+  flex-shrink: 0;
 }
 
 .body {
@@ -26,18 +35,19 @@
   gap: 16px;
 }
 
+/* Plain big number — rendered value comes from React children (e.g. TimeSpentBox). */
 .bigNumber {
-  font-family: var(--font-family-main);
-  font-size: clamp(5rem, 18vw, 7.5rem);
-  font-weight: 900;
-  line-height: 1;
-  color: #000;
-  counter-reset: validated-count var(--validated-count);
+  @extend %big-number-base;
+}
+
+/* CSS-counter big number — value animates via @property; render via ::after. */
+.bigNumberAnimated {
+  @extend %big-number-base;
+  counter-reset: stat-count var(--stat-count);
   animation: count-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  flex-shrink: 0;
 
   &::after {
-    content: counter(validated-count);
+    content: counter(stat-count);
   }
 }
 
