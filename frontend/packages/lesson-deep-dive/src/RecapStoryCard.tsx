@@ -22,39 +22,37 @@ const RecapStoryCard: FC<RecapStoryCardProps> = ({
   onSkip,
   ctaLabel = 'Skip',
   children,
-}) => {
-  return (
-    <div className={styles.card} style={{background: gradient}}>
-      <div className={styles.progressTracker} aria-hidden="true">
-        {Array.from({length: totalSlides}, (_, i) => {
-          const isPast = i < currentSlide - 1;
-          const isCurrent = i === currentSlide - 1;
-          return (
-            <div
-              key={i}
-              className={`${styles.segment} ${isPast ? styles.segmentFilled : ''}`}
-            >
-              {isCurrent && (
-                <div
-                  className={styles.segmentFill}
-                  style={{animationDuration: `${autoAdvanceDurationMs}ms`}}
-                />
-              )}
-            </div>
-          );
-        })}
-      </div>
-      <p className={styles.lessonLabel}>{lessonLabel}</p>
-      <div className={styles.content}>{children}</div>
-      {onSkip && (
-        <div className={styles.footer}>
-          <button type="button" className={styles.skipButton} onClick={onSkip}>
-            {ctaLabel}
-          </button>
-        </div>
-      )}
+}) => (
+  <div className={styles.card} style={{background: gradient}}>
+    <div className={styles.progressTracker} aria-hidden="true">
+      {Array.from({length: totalSlides}, (_, i) => {
+        const isPast = i < currentSlide - 1;
+        const isCurrent = i === currentSlide - 1;
+        return (
+          <div
+            key={i}
+            className={`${styles.segment} ${isPast ? styles.segmentFilled : ''}`}
+          >
+            {isCurrent && (
+              <div
+                className={styles.segmentFill}
+                style={{animationDuration: `${autoAdvanceDurationMs}ms`}}
+              />
+            )}
+          </div>
+        );
+      })}
     </div>
-  );
-};
+    <p className={styles.lessonLabel}>{lessonLabel}</p>
+    <div className={styles.content}>{children}</div>
+    {onSkip && (
+      <div className={styles.footer}>
+        <button type="button" className={styles.skipButton} onClick={onSkip}>
+          {ctaLabel}
+        </button>
+      </div>
+    )}
+  </div>
+);
 
 export default RecapStoryCard;
