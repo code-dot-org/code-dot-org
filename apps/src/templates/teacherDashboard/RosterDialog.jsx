@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {
+  LmsLoginTypeNames,
+  OAuthSectionTypes,
+} from '@cdo/apps/accounts/constants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 import locale from '@cdo/locale';
@@ -301,7 +304,7 @@ class RosterDialog extends React.Component {
         break;
       case OAuthSectionTypes.classlink:
         title = 'Select a ClassLink section';
-        loginType = 'ClassLink';
+        loginType = LmsLoginTypeNames.classlink;
         break;
     }
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
 import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
@@ -166,7 +167,7 @@ class OAuthLogins extends React.Component {
       loginTypeLabel = i18n.loginTypeClever();
       syncSectionImgSrc = syncClever;
     } else if (loginType === SectionLoginType.classlink) {
-      loginTypeLabel = 'ClassLink';
+      loginTypeLabel = LmsLoginTypeNames.classlink;
     }
 
     return (

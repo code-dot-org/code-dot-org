@@ -19,6 +19,7 @@ export const SingleSignOnProviders = {
 
 export const LmsLoginTypeNames = {
   clever: 'Clever',
+  classlink: 'ClassLink',
   google_classroom: 'Google Classroom',
   canvas: 'Canvas',
   canvas_cloud: 'Canvas',
@@ -32,6 +33,8 @@ export const LmsLoginInstructionUrls = {
     'https://support.code.org/hc/en-us/articles/115002716111-Setting-Up-Sections-with-Clever-Sync',
   google_classroom:
     'https://support.code.org/hc/en-us/articles/115001319312-Setting-Up-Sections-with-Google-Classroom-Sync',
+  classlink:
+    'https://support.code.org/hc/en-us/articles/43950200633869-Adding-CodeAI-to-the-ClassLink-Dashboard',
   canvas:
     'https://support.code.org/hc/en-us/articles/23621973451405-Create-and-sync-rosters-with-Canvas',
   schoology:
