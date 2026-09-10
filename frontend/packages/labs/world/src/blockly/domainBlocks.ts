@@ -14,7 +14,13 @@ import type {Block, BlockSvg, Field, FieldDropdown} from 'blockly';
 // `installColorMessages` has spelled them the lab's way
 // (`blockly/colorMessages`). A type-only import of the same names is free; a
 // value import is not.
-import {Events, FieldLabel, FieldNumber, FieldTextInput} from 'blockly/core';
+import {
+  Events,
+  FieldDropdown as FieldDropdownClass,
+  FieldLabel,
+  FieldNumber,
+  FieldTextInput,
+} from 'blockly/core';
 import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {
@@ -128,6 +134,7 @@ import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
 import {worldContextExtension} from './extensions/worldContext';
+import {FieldColorPicker} from './fields/FieldColorPicker';
 import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {FieldMarkdown} from './fields/FieldMarkdown';
 import {
@@ -7016,6 +7023,15 @@ const PROPERTY_ACCESS_FIELD = 'ACCESS';
 const WRITABLE = 'writable';
 const READONLY = 'readonly';
 const DEFAULT_FIELD = 'DEFAULT';
+/**
+ * The words `with default`, as a field rather than as part of `message0`.
+ *
+ * Because the types that have no default to state must not say the words
+ * either: an actor property and every list property start empty and there is
+ * nothing a learner could type that would be otherwise (`propertyDefault`), so
+ * the row ends after the name.
+ */
+const WITH_DEFAULT_LABEL = 'WITH_DEFAULT';
 /** The labels that make a point's two number fields read as an x and a y. */
 const DEFAULT_X_LABEL = 'DEFAULT_X_LABEL';
 const DEFAULT_Y_LABEL = 'DEFAULT_Y_LABEL';
@@ -7082,15 +7098,40 @@ const propertyOn = (block: Block): PropertyShapeInput => {
  * control: the arrow grid for a vector (`world_vector`), an x and a y for a
  * point (two number sockets).
  */
-type DefaultShape = 'text' | 'vector' | 'point';
+type DefaultShape = 'none' | 'text' | 'vector' | 'point' | 'color' | 'boolean';
 
+const DEFAULT_SHAPES: Readonly<Record<string, DefaultShape>> = {
+  vector: 'vector',
+  point: 'point',
+  color: 'color',
+  boolean: 'boolean',
+  // Nothing to say. An actor property and every list property start empty —
+  // that is what `propertyDefault` answers for them whatever is written down —
+  // so the block does not ask, and does not save an answer either.
+  actor: 'none',
+  actors: 'none',
+  numbers: 'none',
+  words: 'none',
+  vectors: 'none',
+};
+
+/** `text` is a box to type into: a number, a word, anything single. */
 const defaultShapeFor = (type: string): DefaultShape =>
-  type === 'vector' ? 'vector' : type === 'point' ? 'point' : 'text';
+  DEFAULT_SHAPES[type] ?? 'text';
+
+/** What a boolean default may be, in the order the two read. */
+const BOOLEAN_OPTIONS: Array<[string, string]> = [
+  ['true', 'true'],
+  ['false', 'false'],
+];
 
 /** The vector field's class, for the one place that builds one by hand. */
 const VectorField = fieldVectorPlugin.field as new (
   value: VectorValue,
 ) => Field;
+
+/** The color field, under the type `appendField` and `instanceof` both take. */
+const ColorField = FieldColorPicker as unknown as new (value: string) => Field;
 
 /**
  * Put the right editor in the `with default` slot, carrying the value across.
@@ -7111,15 +7152,29 @@ function shapeDefaultField(block: Block, type: string): void {
   const wanted = defaultShapeFor(type);
   const held = block.getFieldValue(DEFAULT_FIELD);
   const heldY = block.getFieldValue(DEFAULT_Y_FIELD);
+  const at = block.getField(DEFAULT_FIELD);
+  // The vector's test comes LAST, and has to. Its class is typed as the base
+  // `Field` (it is built by a plugin factory), so a failed `instanceof` against
+  // it narrows what is left to `null` and every test after it stops compiling.
   const current: DefaultShape =
     block.getField(DEFAULT_Y_FIELD) !== null
       ? 'point'
-      : block.getField(DEFAULT_FIELD) instanceof VectorField
-        ? 'vector'
-        : 'text';
+      : at === null
+        ? 'none'
+        : at instanceof FieldColorPicker
+          ? 'color'
+          : at instanceof FieldDropdownClass
+            ? 'boolean'
+            : at instanceof VectorField
+              ? 'vector'
+              : 'text';
   if (!row || current === wanted) {
     return;
   }
+  // Two ways of reading what is there, because the slot being left and the
+  // slot being entered need not agree about what a value is. A number and a
+  // point can trade; a color and a word are both text; nothing sensible
+  // survives between the two groups, and 0 or white is what arrives then.
   const carried = propertyDefault(
     current === 'vector' ? 'vector' : current === 'point' ? 'point' : 'number',
     held,
@@ -7129,7 +7184,14 @@ function shapeDefaultField(block: Block, type: string): void {
     typeof carried === 'number'
       ? {x: carried, y: 0}
       : {x: carried.x, y: carried.y};
+  const text =
+    current === 'vector' || current === 'point'
+      ? String(point.x)
+      : current === 'none'
+        ? '0' // a property that had no default to state starts at nothing
+        : String(held ?? '');
   for (const name of [
+    WITH_DEFAULT_LABEL,
     DEFAULT_X_LABEL,
     DEFAULT_FIELD,
     DEFAULT_Y_LABEL,
@@ -7139,9 +7201,24 @@ function shapeDefaultField(block: Block, type: string): void {
       row.removeField(name);
     }
   }
-  // Appended, not inserted: the default is the last thing on the row, which is
-  // what `define %1 %2 with default %3` already put it at the end of.
-  if (wanted === 'vector') {
+  if (wanted === 'none') {
+    return;
+  }
+  // Appended, not inserted: the default is the last thing on the row, after the
+  // type and the name that `define %1 %2` puts there.
+  row.appendField(new FieldLabel('with default'), WITH_DEFAULT_LABEL);
+  if (wanted === 'color') {
+    row.appendField(new ColorField(text), DEFAULT_FIELD);
+  } else if (wanted === 'boolean') {
+    // A validator rather than an order: a dropdown given a value it does not
+    // offer falls back to its FIRST option, so a default of `` — which every
+    // reader has always taken as false — would come back true. This says so.
+    const truth = new FieldDropdownClass(BOOLEAN_OPTIONS, value =>
+      String(value) === 'true' ? 'true' : 'false',
+    );
+    truth.setValue(text === 'true' ? 'true' : 'false');
+    row.appendField(truth, DEFAULT_FIELD);
+  } else if (wanted === 'vector') {
     row.appendField(new VectorField(point), DEFAULT_FIELD);
   } else if (wanted === 'point') {
     row
@@ -7150,14 +7227,7 @@ function shapeDefaultField(block: Block, type: string): void {
       .appendField(new FieldLabel('y'), DEFAULT_Y_LABEL)
       .appendField(new FieldNumber(point.y), DEFAULT_Y_FIELD);
   } else {
-    // Leaving a two-number type, the x is the one number a text box can hold;
-    // leaving a text box, whatever was typed survives untouched.
-    row.appendField(
-      new FieldTextInput(
-        current === 'text' ? String(held ?? '') : String(point.x),
-      ),
-      DEFAULT_FIELD,
-    );
+    row.appendField(new FieldTextInput(text), DEFAULT_FIELD);
   }
 }
 
@@ -7320,11 +7390,13 @@ const worldRuleProperty = defineBlock({
   // A DEFINITION, styled and colored like the other definitions — `define
   // rule`, `define trait`, `define block`, `define event` — with the blocks it
   // makes drawn on its own face by the extension below.
-  message0: 'define %1 %2 with default %3',
+  // The default is NOT here: what it is edited by, and whether it is asked for
+  // at all, are facts about the TYPE, so the extension below puts the words and
+  // the editor on the end of this row (`shapeDefaultField`).
+  message0: 'define %1 %2',
   args0: [
     {type: 'field_dropdown', name: 'TYPE', options: PROPERTY_TYPE_OPTIONS},
     {type: 'field_input', name: 'NAME', text: 'strength'},
-    {type: 'field_input', name: 'DEFAULT', text: '0'},
   ],
   // NOT inline: the two drawings are rows under the declaration, the way
   // `define block` puts the block it makes under its own signature. Inline put

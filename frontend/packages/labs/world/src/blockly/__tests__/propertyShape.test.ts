@@ -208,6 +208,19 @@ describe('the default a declaration holds', () => {
     ]);
   });
 
+  it('has none at all for an actor or a list, whatever is written down', () => {
+    // These start empty and there is no other sensible starting value for a
+    // set a rule works out each tick, so `define property` does not ask — the
+    // row ends after the name — and a stale answer in an older file is ignored
+    // rather than believed.
+    for (const type of ['actor', 'actors', 'numbers', 'words', 'vectors']) {
+      expect(
+        ruleWith({NAME: 'contacts', TYPE: type, DEFAULT: '7'}).properties[0]
+          .default,
+      ).toEqual([]);
+    }
+  });
+
   it('seeds a vector setter with the arrow-grid literal it is edited by', () => {
     expect(
       propertyShape({

@@ -688,6 +688,15 @@ export const param = (name, type = 'number') => ({kind: 'param', name, type});
  * `point` is two axes: its getter picks one with a dropdown and its setter takes
  * both. Everything else is a single value.
  */
+/** The types whose default is an empty list, whatever anyone writes down. */
+const EMPTY_BY_NATURE = new Set([
+  'actor',
+  'actors',
+  'numbers',
+  'words',
+  'vectors',
+]);
+
 function property(ruleName, traitId, {name, type, value: initial, readonly}) {
   const exportName = `${PASCAL(name)}Property`;
   const key = `${RULE_SLUG(ruleName)}_${exportName}`;
@@ -712,12 +721,17 @@ function property(ruleName, traitId, {name, type, value: initial, readonly}) {
         NAME: name,
         // A vector is one field holding both axes, the same `{x, y}` its own
         // `world_vector` literal saves; a point is two number fields, the same
-        // two numbers its setter takes. Everything else is one value, as text.
-        ...(type === 'vector'
-          ? {DEFAULT: {x: initial?.x ?? 0, y: initial?.y ?? 0}}
-          : type === 'point'
-            ? {DEFAULT: initial?.x ?? 0, DEFAULT_Y: initial?.y ?? 0}
-            : {DEFAULT: String(initial ?? '')}),
+        // two numbers its setter takes. An actor property and the list types
+        // have NO default field: they start empty whatever is written down, so
+        // the block does not ask and nothing is saved. Everything else is one
+        // value, as text.
+        ...(EMPTY_BY_NATURE.has(type)
+          ? {}
+          : type === 'vector'
+            ? {DEFAULT: {x: initial?.x ?? 0, y: initial?.y ?? 0}}
+            : type === 'point'
+              ? {DEFAULT: initial?.x ?? 0, DEFAULT_Y: initial?.y ?? 0}
+              : {DEFAULT: String(initial ?? '')}),
       },
     },
     /** `get <name> of <subject>` — for everything but a point. */

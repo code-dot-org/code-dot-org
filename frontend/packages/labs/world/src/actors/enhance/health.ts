@@ -178,7 +178,6 @@ const declareBar = (): BlockJson => ({
     TYPE: 'actor',
     ACCESS: 'writable',
     NAME: BAR_PROPERTY,
-    DEFAULT: '',
   },
 });
 

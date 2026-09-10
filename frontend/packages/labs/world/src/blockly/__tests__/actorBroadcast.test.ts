@@ -423,7 +423,6 @@ describe('a property whose value is actors', () => {
                   TYPE: 'actors',
                   ACCESS: 'writable',
                   NAME: 'contacts',
-                  DEFAULT: '',
                 },
               },
             },

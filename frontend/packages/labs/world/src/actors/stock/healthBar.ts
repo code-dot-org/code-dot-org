@@ -59,7 +59,6 @@ export const HEALTH_BAR_SUBJECT = {
     TYPE: 'actor',
     ACCESS: 'writable',
     NAME: 'subject',
-    DEFAULT: '',
   },
 };
 
