@@ -2,6 +2,7 @@
 # as the persistent data storage mechanism.
 
 require 'oj'
+require 'observability/errors'
 
 class JSONFileDatastoreAdapter
   def initialize(file_path)
@@ -26,7 +27,7 @@ class JSONFileDatastoreAdapter
     begin
       return Oj.load(@hash[key])
     rescue => exception
-      Honeybadger.notify(exception)
+      Observability::Errors.report(exception)
     end
     nil
   end
@@ -39,7 +40,7 @@ class JSONFileDatastoreAdapter
       begin
         value = Oj.load(v)
       rescue => exception
-        Honeybadger.notify(exception)
+        Observability::Errors.report(exception)
         nil
       end
       ret[k] = value

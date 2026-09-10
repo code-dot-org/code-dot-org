@@ -1,5 +1,6 @@
 from neighborhood.painter import Painter
 from neighborhood.support.world import World
+from neighborhood.support.neighborhood_runtime_exception import NeighborhoodRuntimeException
 from neighborhood.support.neighborhood_context_type import NeighborhoodContextType
 from support.constants import SAMPLE_MAZE, ALL_PASSABLE_MAZE, BUCKET_MAZE, LARGE_MAZE
 
@@ -114,6 +115,25 @@ def test_scrape_paint():
   assert painter.is_on_paint() is True
   painter.scrape_paint()
   assert painter.is_on_paint() is False
+
+def test_paint_with_rgb_components():
+  painter = Painter()
+  painter.set_paint(3)
+  painter.paint(255, 0, 0)
+  assert painter.get_color() == '#ff0000'
+  assert painter.get_my_paint() == 2
+
+def test_paint_rejects_invalid_colors():
+  painter = Painter()
+  painter.set_paint(3)
+  for bad_color in [('mycustomcolor',), (255, 0), (255, 0, 256), (255, 0, 0, 0)]:
+    try:
+      painter.paint(*bad_color)
+      assert False
+    except NeighborhoodRuntimeException as e:
+      assert str(e) == "INVALID_COLOR"
+  # A rejected color spends no paint.
+  assert painter.get_my_paint() == 3
 
 def test_can_move():
   painter = Painter()

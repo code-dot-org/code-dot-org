@@ -22,7 +22,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def print_recommendation():\n    # TODO 1: Fill in the message with a recommendation of a movie to watch\n    print(\"\")\n\n# TODO 2: Call your print_recommendation function",
+          "contents": "def print_recommendation():\n  # TODO 1: Fill in the message with a recommendation of a movie to watch\n  print(\"\")\n\n# TODO 2: Call your print_recommendation function",
           "folderId": "0",
           "active": true
         }
@@ -43,9 +43,9 @@
       "answerTypeCustomizations": {
       }
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoTVDRTkBEo7wQE\n3DDaVQjdGUh0yvWah6JgIZD0Qf9M9EJ8o11xjbjpr5vWuaTVL4ww6YPuA+6C\nhpwTTw/c8+Tf3PCes8ZTKyVXj27B2+jZU6DUemnEq7o5L7bB/GUyeJGyxZVE\nrzS3rqqpacgDvFXV3PIFHdLLbF8m0WmOEHkhPKMO3MnBT2lwY/kozZronpPH\n70QHHbWq5vr9iNgXh9IA1WXFMQM254ioC9eHadCTXaNz9CK5Qs+OEKRRwano\nf3M=\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrTmQO2YMJd3wWj\nI/5DK1RQOWzf4rhOdHeupMce+xlgo8A9A9Y1+Z4dvtvF4hiGDt+c3Ss+3ctg\nxwaLeM7eFsOlV7CC8DgfM9w93QeRxXQsVk3UGNc0lfhZlwyMFIWkzii1APls\nJKilg0z2GBANou83aAQBWV3STiLyfqVu5Jh8IjoHeM6g7QaU/yMIkVZds62j\n57jUwUfyiiTFAisYqDAxMUlWE70SDJ9ez6qMcOOEiTuLBthB491xrN8L+GJB\nPqM=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:32:02 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 02:35:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:48:26 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:32:02 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 02:35:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:48:26 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 17:08:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 17:08:56 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

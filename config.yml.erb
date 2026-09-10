@@ -148,7 +148,6 @@ pardot_client_secret:
 honeybadger_api_token:
 cronjobs_honeybadger_api_key:  !Secret
 dashboard_honeybadger_api_key: !Secret
-pegasus_honeybadger_api_key:   !Secret
 
 # Zendesk
 zendesk_dev_token: !Secret
@@ -448,10 +447,7 @@ dashboard_session_ttl_days: 40
 override_pegasus: 'code.org' # All deployments link to the production corporate site, now that Pegasus is deprecated.
 pegasus_hostname: 'code.org'
 pegasus_host:
-pegasus_sock:
 pegasus_port:
-pegasus_web_server_name: pegasus
-pegasus_workers: 8
 sinatra_session_secret:
 
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)

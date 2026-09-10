@@ -2393,6 +2393,20 @@ class UnitTest < ActiveSupport::TestCase
     refute unit_without_ai.has_ai_chat_tools?
   end
 
+  # Bandaid: 'csd2-2026' is in
+  # Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS. This test goes
+  # away with the exemption.
+  test 'with_essential_ai_chat_tools excludes an exempt unit' do
+    unit = create(:script, name: 'csd2-2026')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+
+    refute_includes Unit.with_essential_ai_chat_tools, unit
+    refute unit.requires_ai_chat_tools?
+    # The tutor is still there, so the unit still reports it as available.
+    assert unit.has_ai_chat_tools?
+  end
+
   describe '#title_for_display' do
     let(:numbered_units) {nil}
     let(:unit_group) {create(:unit_group, numbered_units: numbered_units)}
@@ -2577,6 +2591,29 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal 'unit prompt', unit.summarize_for_unit_generate[:generateOutline]
   end
 
+  test 'summarize_for_unit_generate exposes course rules for round-trip' do
+    unit = create(:script)
+    unit.update!(properties: unit.properties.merge('generate_drafting_rules' => 'draft', 'generate_authoring_rules' => 'author'))
+    summary = unit.summarize_for_unit_generate
+    assert_equal 'draft', summary[:generateDraftingRules]
+    assert_equal 'author', summary[:generateAuthoringRules]
+  end
+
+  test 'update_lesson_outlines persists course rules; a missing key leaves them alone and empty clears' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    unit.update_lesson_outlines([], generateDraftingRules: 'draft', generateAuthoringRules: 'author')
+    unit.reload
+    assert_equal 'draft', unit.generate_drafting_rules
+    assert_equal 'author', unit.generate_authoring_rules
+
+    unit.update_lesson_outlines([], generateAuthoringRules: '')
+    unit.reload
+    assert_equal 'draft', unit.generate_drafting_rules
+    assert_nil unit.generate_authoring_rules
+  end
+
   test 'update_lesson_outlines creates new lessons in the order given' do
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -2630,7 +2667,7 @@ class UnitTest < ActiveSupport::TestCase
   test 'update_lesson_outlines persists supplied unit-level outline' do
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], 'overall prompt')
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], generateOutline: 'overall prompt')
     assert_equal 'overall prompt', unit.reload.generate_outline
   end
 
@@ -2638,7 +2675,7 @@ class UnitTest < ActiveSupport::TestCase
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     unit.update!(properties: unit.properties.merge('generate_outline' => 'pre'))
-    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], nil)
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}])
     assert_equal 'pre', unit.reload.generate_outline
   end
 

@@ -1,0 +1,3 @@
+name 'UI Test TeacherCon Welcome'
+title 'Welcome to TeacherCon!'
+markdown 'Placeholder welcome level for UI tests. The production level this replaces, "Welcome to TeacherCon!", is encrypted; no UI test opens it.'

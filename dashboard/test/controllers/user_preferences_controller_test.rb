@@ -114,6 +114,18 @@ class UserPreferencesControllerTest < ActionController::TestCase
     assert_equal merged_theme, preference.theme
   end
 
+  test 'updates existing preference for editor_settings and merges successfully' do
+    preference = UserPreference.create!(user_id: @user.id, editor_settings: {'lineNumbers' => false})
+
+    # as: :json so the boolean survives the round trip, as it does from the real client.
+    patch :update, params: {editor_settings: {'autocomplete' => false}}, as: :json
+
+    assert_response :success
+
+    preference.reload
+    assert_equal({'lineNumbers' => false, 'autocomplete' => false}, preference.editor_settings)
+  end
+
   test 'ignores non-permitted parameters' do
     section_order = ['1', '2', '3']
 
@@ -179,6 +191,24 @@ class UserPreferencesControllerTest < ActionController::TestCase
     UserPreference.create!(user_id: @user.id)
 
     get :theme
+
+    assert_response :not_found
+  end
+
+  test 'gets editor_settings for the current user' do
+    editor_settings = {'autocomplete' => false}
+    UserPreference.create!(user_id: @user.id, editor_settings: editor_settings)
+
+    get :editor_settings
+
+    assert_response :success
+    assert_equal editor_settings, JSON.parse(response.body)['editor_settings']
+  end
+
+  test 'returns 404 if no editor_settings exist for the current user' do
+    UserPreference.create!(user_id: @user.id)
+
+    get :editor_settings
 
     assert_response :not_found
   end

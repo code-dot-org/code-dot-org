@@ -3,6 +3,10 @@ import * as BlocklyCore from 'blockly/core';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
+import {
+  setRetainBlobsOnLoad,
+  setStoreLoadedImagesAsObjectUrls,
+} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -16,16 +20,38 @@ import {
   stepZoom,
   worldPoint,
 } from './camera';
-import {trimAnimationListImages} from './imageTrim';
+import {
+  isMoving,
+  jumpFrame,
+  nextFacing,
+  pickPose,
+  poseFrame,
+  poseStartTick,
+  posesByImageName,
+  teeterTicks,
+} from './characterAnimations';
+import {
+  animationNames,
+  filterAnimationsToNames,
+  loadedAnimations,
+  trimAnimationListImages,
+} from './imageTrim';
 import {
   CONTACT_EPSILON,
+  hasSupportAhead,
+  isAtEdge,
   isSupported,
+  PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
 } from './platformPhysics';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
+
+// How long a run waits for the project's images before going ahead without
+// the stragglers.
+const IMAGE_LOAD_GRACE_MS = 10000;
 
 // Default sprite size for non-platformer scenes on platform-pool levels;
 // platformer scenes use CELL_SIZE (one grid cell). A later World-tab UI may
@@ -94,17 +120,29 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
+    // Loaded images live as object URLs, not heap-resident base64 strings
+    // (legacy labs keep dataURIs for Piskel).
+    setStoreLoadedImagesAsObjectUrls(true);
+    // This lab saves images through its own asset uploads, so loaded
+    // animations don't keep their Blobs (legacy needs them for
+    // cloneAnimation).
+    setRetainBlobsOnLoad(false);
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
     this.showMobileControls = NOOP;
     this.debuggerEnabled = false;
     this.userCode = '';
+    // Image names the current program's compile registered
+    // (imageReferences.ts): the preload's scope. Null — a program set
+    // without a collected compile — preloads everything rather than guess.
+    this.referencedImages = null;
     // Scene-jump handlers, set by the view (it compiles the target and
     // re-runs).
     this.onGoToScene = null;
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
+    this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
@@ -124,6 +162,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneJumpInFlight_ = false;
     // Set when the zoomed draw loop has already resolved this frame.
     this.physicsResolvedThisFrame_ = false;
+    // The walls, gathered once per frame (see wallsThisFrame_).
+    this.wallsCache_ = null;
+    // Last frame's platform bodies, so a sprite whose mark stops arriving
+    // is restored to an ordinary sprite (see resolvePlatformPhysics_).
+    this.prevBodies_ = [];
+    // Settles a pending image-grace wait (see
+    // whenAnimationsAreReadyOrGivenUp_).
+    this.imageWaitCancel_ = null;
+    // Unsubscribes the watch that re-runs when images arrive after a
+    // give-up (see onImageLoadGiveUp_).
+    this.lateImagesUnsubscribe_ = null;
   }
 
   /**
@@ -160,10 +209,46 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const size = APP_WIDTH * (this.p5._pixelDensity || 1);
-      if (this.background.width !== size || this.background.height !== size) {
-        this.background.resize(size, size);
+      let buffer = this.background._displayBuffer;
+      if (!buffer || buffer.width !== size || buffer.height !== size) {
+        // A copy sized to the canvas backing: the shared preloaded image is
+        // never mutated (a resize in place changed it for every other
+        // consumer), and the unzoomed draw stays a same-size copy, which
+        // machines without GPU acceleration need to stay cheap.
+        buffer = this.background.get();
+        buffer.resize(size, size);
+        this.background._displayBuffer = buffer;
       }
-      this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
+      this.p5.image(buffer, 0, 0, APP_WIDTH, APP_HEIGHT);
+    };
+    // A costume name the scene-scoped preload never saw (one built
+    // dynamically at runtime) decodes on demand: the sprite changes costume
+    // when the decode lands, instead of p5.play throwing on the missing
+    // label.
+    const engine = this;
+    const baseSetAnimation = library.commands.setAnimation;
+    library.commands.setAnimation = function (spriteArg, animation) {
+      if (engine.p5Wrapper.preloadedSprites?.[animation]) {
+        return baseSetAnimation.call(this, spriteArg, animation);
+      }
+      engine.decodeAnimationOnDemand_(animation).then(found => {
+        if (found) {
+          baseSetAnimation.call(this, spriteArg, animation);
+        }
+      });
+    };
+    // Backgrounds are scene-scoped like costumes, so the same escape hatch:
+    // a cold name applies when its decode lands instead of silently no-oping.
+    const baseSetBackgroundImageAs = library.commands.setBackgroundImageAs;
+    library.commands.setBackgroundImageAs = function (imageName) {
+      if (engine.p5Wrapper.preloadedSprites?.[imageName]) {
+        return baseSetBackgroundImageAs.call(this, imageName);
+      }
+      engine.decodeAnimationOnDemand_(imageName).then(found => {
+        if (found) {
+          baseSetBackgroundImageAs.call(this, imageName);
+        }
+      });
     };
     if (this.usesPlatformPhysics_) {
       // Sized per SCENE, not per level: one project holds both a platformer
@@ -174,8 +259,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
-      // Landings carry sub-pixel float noise; footing checks must not
-      // compare contact exactly.
+      // Landings carry sub-pixel float noise; the classic footing command
+      // must not compare contact exactly.
       library.contactEpsilon = CONTACT_EPSILON;
     }
     // Fresh library = fresh run; gravity returns to the default until a
@@ -205,24 +290,92 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.group = 'players';
       });
     };
-    // Jump against gravity if any player has support in the gravity
-    // direction (the resolver's own footing geometry, so it agrees with
-    // where players actually rest).
-    library.commands.platformJump = speed => {
+    // Footing in the gravity direction — the resolver's own geometry, so it
+    // agrees with where sprites actually rest. Wherever nothing can fall
+    // (outside a platform scene, or at zero gravity for this sprite)
+    // everything counts as supported.
+    const footing = (spriteArg, test) => {
+      if (!this.usesPlatformPhysics_) {
+        return true;
+      }
       const p5 = this.p5Wrapper.p5;
-      const players = library.getSpriteArray({group: 'players'});
-      const walls = library.getSpriteArray({group: 'walls'});
+      const walls = this.wallsThisFrame_(library);
       const view = {width: p5.width, height: p5.height};
-      const grounded = players.some(sprite =>
-        isSupported(sprite, walls, view, this.platformGravity_)
-      );
-      if (!grounded) {
+      return library.getSpriteArray(spriteArg).some(sprite => {
+        const gravity =
+          sprite.group === 'players'
+            ? this.platformGravity_
+            : this.bodyGravity_();
+        return gravity === 0 || test(sprite, walls, view, gravity);
+      });
+    };
+    // Jump against gravity if any player has footing.
+    library.commands.platformJump = speed => {
+      // Weightless, the player is steered up and down instead.
+      if (this.platformGravity_ === 0) {
+        return;
+      }
+      if (!footing({group: 'players'}, isSupported)) {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
-      players.forEach(sprite => {
+      library.getSpriteArray({group: 'players'}).forEach(sprite => {
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
+    };
+    // A behavior that wants gravity for its sprite marks it for the platform
+    // resolver, which otherwise moves only players. The mark lasts one frame
+    // — the resolver consumes it — so a removed behavior stops marking and
+    // its sprite is an ordinary sprite again.
+    library.commands.usePlatformBody = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.__slab2Body = true;
+      });
+    };
+    library.commands.platformGravity = () => this.platformGravity_;
+    library.commands.platformGrounded = spriteArg =>
+      footing(spriteArg, isSupported);
+    library.commands.platformSupportAhead = (spriteArg, direction) =>
+      footing(spriteArg, (sprite, walls, view, gravity) =>
+        hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
+      );
+    library.commands.playMusic = channelId => {
+      if (channelId && this.onPlayMusic) {
+        this.onPlayMusic(String(channelId));
+      }
+    };
+    // p5.play throws on an unknown costume name and the interpreter stops
+    // there; skip the block instead and say so once.
+    const knownCostume = name =>
+      !!(library.p5._predefinedSpriteAnimations || {})[name];
+    const missing = new Set();
+    const warnMissing = name => {
+      if (!missing.has(name)) {
+        missing.add(name);
+        console.warn(
+          name
+            ? `SpriteLab2: no image named ${JSON.stringify(
+                name
+              )} in this project; the block asking for it does nothing.`
+            : 'SpriteLab2: a block has no image chosen; it does nothing.'
+        );
+      }
+    };
+    const addSprite = library.addSprite.bind(library);
+    library.addSprite = opts => {
+      if (opts && opts.animation && !knownCostume(opts.animation)) {
+        warnMissing(opts.animation);
+        return null;
+      }
+      return addSprite(opts);
+    };
+    const setAnimation = library.commands.setAnimation;
+    library.commands.setAnimation = function (spriteArg, animation) {
+      if (!knownCostume(animation)) {
+        warnMissing(animation);
+        return;
+      }
+      return setAnimation.call(this, spriteArg, animation);
     };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
@@ -356,8 +509,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
-  setCode(code) {
+  setCode(code, referencedImages) {
     this.userCode = code || '';
+    this.referencedImages = referencedImages || null;
   }
 
   sceneLooksLikePlatformer_() {
@@ -366,9 +520,9 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /** Run the given compiled JS program from scratch (creates/recreates p5). */
-  run(code) {
+  run(code, referencedImages) {
     if (code !== undefined) {
-      this.setCode(code);
+      this.setCode(code, referencedImages);
     }
     this.execute();
   }
@@ -378,9 +532,9 @@ export default class SpriteLab2Engine extends SpriteLab {
    * via execute(); after that it re-runs inside the existing p5 — recreating
    * p5 per edit flickers and races its own async preload callbacks.
    */
-  runProgram(code) {
+  runProgram(code, referencedImages) {
     if (code !== undefined) {
-      this.setCode(code);
+      this.setCode(code, referencedImages);
     }
     // A second execute() while the first's preload is pending crashes the
     // interpreter (getScope); defer and re-run with the latest code after.
@@ -467,10 +621,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Preload images added since the initial execute() — the costume/
     // background commands silently no-op on unknown names. Already-loaded
     // entries are skipped and trims are cached, so re-runs are cheap.
-    await this.p5Wrapper.preloadSpriteImages(
-      await trimAnimationListImages(
-        this.preloadAnimationsOverride || getStore().getState().animationList
-      )
+    await this.preloadTrimmedImages_(
+      this.preloadAnimationsOverride || getStore().getState().animationList
     );
     p5.allSprites.removeSprites();
     // removeSprites destroyed the edge sprites too; clear the handle so the
@@ -509,38 +661,156 @@ export default class SpriteLab2Engine extends SpriteLab {
   destroy() {
     this.reset();
     this.stopTickTimer();
+    this.imageWaitCancel_?.();
+    this.clearLateImagesWatch_();
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
   // preloadBackgrounds() wedges p5 forever on a failed loadImage (the preload
   // count never decrements).
   preloadLabAssets() {
-    // A single failed image never resolves whenAnimationsAreReady, and the
-    // wedge is invisible; surface what it's stuck on.
-    const watchdog = setTimeout(() => {
-      const list = getStore().getState().animationList;
-      const pending = list.orderedKeys
-        .filter(key => !list.propsByKey[key]?.loadedFromSource)
-        .map(key => list.propsByKey[key]?.name || key);
-      if (pending.length) {
-        console.warn(
-          'SpriteLab2: still waiting on animation image loads after 8s:',
-          pending.join(', '),
-          '— check the Network tab for failing asset requests.'
-        );
-      }
-    }, 8000);
-    return this.preloadTrimmedSpriteImages_().finally(() =>
-      clearTimeout(watchdog)
+    return this.preloadTrimmedSpriteImages_();
+  }
+
+  /**
+   * Wait for the project's images, but not forever: the store never marks
+   * an image whose fetch failed, so after the grace period the run goes
+   * ahead with what has loaded.
+   */
+  whenAnimationsAreReadyOrGivenUp_() {
+    if (this.areAnimationsReady_()) {
+      return Promise.resolve();
+    }
+    return new Promise(resolve => {
+      const finish = () => {
+        clearTimeout(timer);
+        unsubscribe();
+        this.imageWaitCancel_ = null;
+        resolve();
+      };
+      // destroy() settles a pending wait, so a torn-down engine can't warn
+      // or arm a watch afterwards.
+      this.imageWaitCancel_ = finish;
+      const unsubscribe = getStore().subscribe(() => {
+        if (this.areAnimationsReady_()) {
+          finish();
+        }
+      });
+      const timer = setTimeout(() => {
+        finish();
+        this.onImageLoadGiveUp_();
+      }, IMAGE_LOAD_GRACE_MS);
+    });
+  }
+
+  // After a give-up: say what is still missing, and re-run once if it
+  // ever arrives.
+  onImageLoadGiveUp_() {
+    if (this.areAnimationsReady_()) {
+      // Ready and timed out in the same tick; nothing is missing.
+      return;
+    }
+    const list = getStore().getState().animationList;
+    const pending = list.orderedKeys
+      .filter(key => !list.propsByKey[key]?.loadedFromSource)
+      .map(key => list.propsByKey[key]?.name || key);
+    console.warn(
+      `SpriteLab2: ${pending.join(', ')} did not load within ` +
+        `${IMAGE_LOAD_GRACE_MS / 1000}s; running without ` +
+        `${pending.length === 1 ? 'it' : 'them'}. Check the Network tab ` +
+        'for failing asset requests.'
     );
+    this.clearLateImagesWatch_();
+    this.lateImagesUnsubscribe_ = getStore().subscribe(() => {
+      if (!this.areAnimationsReady_()) {
+        return;
+      }
+      // A stopped tick timer may just be mid-start (a run or scene jump
+      // in progress): stay subscribed, and let a preload that sees every
+      // image clear this instead.
+      if (this.isTickTimerRunning()) {
+        this.clearLateImagesWatch_();
+        this.rerun();
+      }
+    });
+  }
+
+  clearLateImagesWatch_() {
+    this.lateImagesUnsubscribe_?.();
+    this.lateImagesUnsubscribe_ = null;
   }
 
   // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
+  // Only images that have loaded are handed to p5: preloading an image with
+  // no data logs an error per image and adds nothing.
   async preloadTrimmedSpriteImages_() {
-    await this.whenAnimationsAreReady();
-    return this.p5Wrapper.preloadSpriteImages(
-      await trimAnimationListImages(getStore().getState().animationList)
+    await this.whenAnimationsAreReadyOrGivenUp_();
+    return this.preloadTrimmedImages_(getStore().getState().animationList);
+  }
+
+  // Decode only what this scene's program references — the names its
+  // compile registered (imageReferences.ts) — then preload the images whose
+  // data has arrived; one without would just make p5 log an error. A jump
+  // to another scene re-preloads behind its fade, and a name the compile
+  // never saw (one built at runtime) decodes on demand (the setAnimation
+  // wrapper in createLibrary). An uncollected program preloads everything.
+  async preloadTrimmedImages_(animationList) {
+    // This preload sees every image the scene can use; the watch has
+    // nothing to recover.
+    if (this.areAnimationsReady_()) {
+      this.clearLateImagesWatch_();
+    }
+    const scoped = this.referencedImages
+      ? filterAnimationsToNames(animationList, this.referencedImages)
+      : animationList;
+    const preloaded = await this.p5Wrapper.preloadSpriteImages(
+      loadedAnimations(
+        await trimAnimationListImages(scoped, animationNames(animationList))
+      ),
+      {multiFrame: true}
     );
+    this.pruneUnusedPreloads_(scoped);
+    return preloaded;
+  }
+
+  // Frees decoded images the current scene can't reference; a later scene
+  // that needs one re-decodes behind its jump fade. On-demand decodes made
+  // after this survive until the next scene's preload.
+  pruneUnusedPreloads_(list) {
+    const sprites = this.p5Wrapper.preloadedSprites;
+    if (!sprites) {
+      return;
+    }
+    const keep = animationNames(list);
+    Object.keys(sprites).forEach(name => {
+      if (!keep.has(name)) {
+        delete sprites[name];
+      }
+    });
+  }
+
+  // Decode one animation by name, mid-run: the escape hatch for a costume
+  // name built dynamically, which the scene-scoped preload cannot see.
+  async decodeAnimationOnDemand_(name) {
+    const list =
+      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const key = (list.orderedKeys || []).find(
+      k => list.propsByKey[k]?.name === name
+    );
+    if (!key) {
+      return false;
+    }
+    const single = {
+      orderedKeys: [key],
+      propsByKey: {[key]: list.propsByKey[key]},
+    };
+    await this.p5Wrapper.preloadSpriteImages(
+      loadedAnimations(
+        await trimAnimationListImages(single, animationNames(list))
+      ),
+      {multiFrame: true}
+    );
+    return true;
   }
 
   /**
@@ -602,41 +872,96 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
   }
 
-  // Platformer physics for players (see platformPhysics.ts for the rules),
-  // run immediately before every paint — after p5's pre-phase velocity
-  // integration and after this frame's behaviors/events have moved
-  // sprites. Program-driven (non-player) sprites keep the stock resolver.
+  // Platformer physics for players and marked sprites (see
+  // platformPhysics.ts for the rules), run immediately before every paint —
+  // after p5's pre-phase velocity integration and after this frame's
+  // behaviors/events have moved sprites.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
     const p5 = this.p5Wrapper.p5;
-    // Snapshot player positions before the stock pass below: the movement
+    // Snapshot positions before the stock pass below: the movement
     // reconstruction must not see its shove.
-    const moved = this.library
-      .getSpriteArray({group: 'players'})
-      .map(sprite => ({
-        sprite,
-        x: sprite.position.x,
-        y: sprite.position.y,
-      }));
-    // Non-player sprites keep the stock resolver; running it pre-paint
-    // means patrollers and props draw already resolved.
+    const snapshot = sprite => ({
+      sprite,
+      x: sprite.position.x,
+      y: sprite.position.y,
+    });
+    const players = [];
+    const bodies = [];
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      // Consuming the one-frame mark: see usePlatformBody.
+      const marked = sprite.__slab2Body;
+      sprite.__slab2Body = false;
+      if (sprite.group === 'players') {
+        players.push(snapshot(sprite));
+      } else if (marked) {
+        bodies.push(snapshot(sprite));
+      }
+    });
+    // A sprite whose mark stopped arriving (its behavior was removed) is an
+    // ordinary sprite again: upright, and not carrying the resolver's last
+    // fall speed.
+    this.prevBodies_.forEach(sprite => {
+      if (
+        !sprite.removed &&
+        sprite.group !== 'players' &&
+        !bodies.some(b => b.sprite === sprite)
+      ) {
+        sprite.mirrorY(1);
+        sprite.velocity.y = 0;
+      }
+    });
+    this.prevBodies_ = bodies.map(b => b.sprite);
+    // Under upward gravity a sprite stands on the ceiling, so it is drawn
+    // upside down — each list under its own gravity's sign. Drawing only:
+    // the body the resolver measures is unchanged.
+    players.forEach(({sprite}) =>
+      sprite.mirrorY(this.platformGravity_ < 0 ? -1 : 1)
+    );
+    const bodyUpright = this.bodyGravity_() < 0 ? -1 : 1;
+    bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
+    // Other sprites keep the stock resolver; running it pre-paint means
+    // props draw already resolved.
     this.library.commands.collide.call(
       this.library,
       'collide',
       {group: ''},
       {group: 'walls'}
     );
-    resolvePlatformPhysics(
-      moved,
-      this.library.getSpriteArray({group: 'walls'}),
-      {
-        width: p5.width,
-        height: p5.height,
-      },
-      this.platformGravity_
-    );
+    const walls = this.library.getSpriteArray({group: 'walls'});
+    const view = {width: p5.width, height: p5.height};
+    resolvePlatformPhysics(players, walls, view, this.platformGravity_);
+    if (bodies.length) {
+      resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
+    }
+  }
+
+  // The walls, gathered once per frame — the footing commands ask several
+  // times a frame (behaviors run per sprite). Keyed on the library too, so
+  // a re-run's fresh library never reads the old scene's walls.
+  wallsThisFrame_(library) {
+    const p5 = this.p5Wrapper.p5;
+    if (
+      this.wallsCache_?.frame !== p5.frameCount ||
+      this.wallsCache_.library !== library
+    ) {
+      this.wallsCache_ = {
+        frame: p5.frameCount,
+        library,
+        walls: library.getSpriteArray({group: 'walls'}),
+      };
+    }
+    return this.wallsCache_.walls;
+  }
+
+  // Marked sprites keep a little downward pull at zero gravity, so
+  // patrollers still settle onto blocks while the player is steered about.
+  bodyGravity_() {
+    return this.platformGravity_ === 0
+      ? PATROLLER_WEIGHTLESS_GRAVITY
+      : this.platformGravity_;
   }
 
   // The resolution must run after this frame's behaviors/events but before
@@ -655,12 +980,147 @@ export default class SpriteLab2Engine extends SpriteLab {
         this.resolvePlatformPhysics_();
       }
       this.physicsResolvedThisFrame_ = false;
+      this.updateCharacterAnimations_();
       return paint(...args);
     };
   }
 
+  // Colliders here multiply width/height by `scale`, expecting them UNSCALED,
+  // but a frame change on a multi-frame sheet makes p5.play re-sync them
+  // pre-scaled (Sprite._syncAnimationSizes) — double-scaled bodies sink into
+  // platforms. Put the unscaled sizes back before anything measures them.
+  unscaleSheetSpriteSizes_() {
+    if (!this.library) {
+      return;
+    }
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      const animation = sprite.animation;
+      if (animation && animation.images.length > 1) {
+        sprite._internalWidth = animation.getWidth();
+        sprite._internalHeight = animation.getHeight();
+      }
+    });
+  }
+
+  /**
+   * Character sets (characterAnimations.ts): once the physics has settled
+   * every sprite for this frame, a sprite wearing a set's sheet shows the
+   * frame for how it moved — walking when it moved sideways, jumping while a
+   * player is off its footing, standing otherwise — facing the way it last
+   * moved. The sheet holds every pose, so this drives the frame index
+   * itself (p5.play would run the whole sheet end to end) and the sprite
+   * never changes costume. A player that stops with its toes over a drop
+   * holds back from the edge: the jump pose's first frame for a moment,
+   * then standing; moving again re-arms it. Only players can be airborne: patrollers and
+   * props ride the stock resolver and would read as jumping at every seam.
+   */
+  updateCharacterAnimations_() {
+    const p5 = this.p5Wrapper.p5;
+    const library = this.library;
+    if (!p5 || !library) {
+      return;
+    }
+    const list =
+      this.preloadAnimationsOverride || getStore().getState().animationList;
+    if (this.posesSource_ !== list) {
+      this.posesSource_ = list;
+      this.posesByName_ = posesByImageName(list);
+    }
+    if (!this.posesByName_.size) {
+      return;
+    }
+    const walls = this.wallsThisFrame_(library);
+    const view = {width: p5.width, height: p5.height};
+    Object.values(library.nativeSpriteMap).forEach(sprite => {
+      const poses = this.posesByName_.get(sprite.getAnimationLabel());
+      const animation = sprite.animation;
+      if (!poses || !animation) {
+        return;
+      }
+      const state =
+        sprite.characterState ||
+        (sprite.characterState = {
+          x: sprite.position.x,
+          facing: 'right',
+          key: null,
+          tick: 0,
+          moving: false,
+          teetering: false,
+        });
+      const dx = sprite.position.x - state.x;
+      state.x = sprite.position.x;
+      state.facing = nextFacing(state.facing, dx);
+      const moving = isMoving(dx);
+      const player = this.usesPlatformPhysics_ && sprite.group === 'players';
+      const airborne =
+        player && !isSupported(sprite, walls, view, this.platformGravity_);
+      if (moving || airborne) {
+        state.teetering = false;
+      } else if (
+        state.moving &&
+        player &&
+        isAtEdge(
+          sprite,
+          walls,
+          view,
+          state.facing === 'right' ? 1 : -1,
+          this.platformGravity_
+        )
+      ) {
+        state.teetering = true;
+      }
+      state.moving = moving;
+      const pick = pickPose(poses, {
+        moving,
+        airborne,
+        teetering: state.teetering,
+        facing: state.facing,
+      });
+      if (!pick) {
+        return;
+      }
+      if (pick.key !== state.key) {
+        state.key = pick.key;
+        // A strip's walk starts on the mid-stride frame, so the first
+        // step is visible the moment movement starts (see poseStartTick).
+        state.tick = poseStartTick(poses, pick);
+      }
+      // Frames drawn facing the other way are shown mirrored; a set drawn
+      // facing right only turns left this way.
+      sprite.mirrorX(pick.facing === state.facing ? 1 : -1);
+      // Ours to drive; p5.play must not advance it.
+      animation.stop();
+      let frame;
+      if (pick.pose === 'jump' && airborne) {
+        frame =
+          pick.range.start +
+          Math.min(
+            jumpFrame(sprite.velocity.y, this.platformGravity_),
+            pick.range.count - 1
+          );
+      } else if (pick.pose === 'jump') {
+        // Teetering: the falling frame, legs loose over the drop.
+        frame = pick.range.start + pick.range.count - 1;
+        if (state.tick + 1 >= teeterTicks(pick.range)) {
+          state.teetering = false;
+        }
+      } else {
+        frame = poseFrame(pick.range, state.tick);
+        // A set without jump frames has nothing to hold back with.
+        state.teetering = false;
+      }
+      animation.changeFrame(frame);
+      state.tick++;
+    });
+  }
+
   onP5Draw() {
     this.wrapDrawSpritesOnce_();
+    // Before the behaviors and events run: p5.play's pre-draw update is
+    // where the sizes go wrong, and a patrol behavior probing its footing
+    // with a 4px-tall sprite reads "airborne" and never checks for the
+    // edge of its platform.
+    this.unscaleSheetSpriteSizes_();
     super.onP5Draw();
   }
 

@@ -3,7 +3,6 @@ import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {getClientApi} from '@cdo/apps/aichat/api/client';
-import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -15,33 +14,52 @@ import {
 
 import {requestEvaluation} from './requestEvaluation';
 
-// import freeResponseStyles from './free-response.module.scss';
 import styles from './video-challenge.module.scss';
 
 interface VideoChallengeProps {
   submitted: boolean;
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
+  // Owned by ChallengeBox, which drives the "Start Recording" / "Stop
+  // Recording" button in the bottom bar (the same button used to record a
+  // whiteboard challenge's audio explanation).
+  isRecording: boolean;
+  setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
+  hasRecording: boolean;
+  setHasRecording: React.Dispatch<React.SetStateAction<boolean>>;
   challenge: Challenge | null;
   lessonId: number;
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
   setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
+  // Reports whether the current recording can be submitted, and hands the
+  // top-bar "Submit for feedback" / "Start over" buttons this modality's
+  // submit and reset handlers.
+  onSubmittableChange: (canSubmit: boolean) => void;
+  submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
+  resetRef: React.MutableRefObject<(() => void) | null>;
 }
 
 const VideoChallenge: FC<VideoChallengeProps> = ({
   submitted,
   submitCallback,
+  isRecording,
+  setIsRecording,
+  hasRecording,
+  setHasRecording,
   lessonId,
   challenge = null,
   setEvaluationStatus,
   setChallengeResponseId,
+  onSubmittableChange,
+  submitRef,
+  resetRef,
 }) => {
-  const [hasRecording, setHasRecording] = useState(false);
-  const [isRecording, setIsRecording] = useState(false);
   const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
   const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const [isUploading, setIsUploading] = useState(false);
+  // Bumped to remount the recorder with a clean slate on "Start over".
+  const [resetKey, setResetKey] = useState(0);
   const canSubmit = !submitted && !isUploading && hasRecording && !isRecording;
   const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
 
@@ -135,12 +153,38 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     }
   };
 
+  // Discard the recording (by remounting the recorder) so the student can
+  // record again from scratch.
+  const handleReset = () => {
+    setRecordedUrl(null);
+    setRecordedAudioUrl(null);
+    setHasRecording(false);
+    setIsRecording(false);
+    setResetKey(key => key + 1);
+  };
+
+  // Keep the top bar's "Submit for feedback" enabled state in sync.
+  useEffect(() => {
+    onSubmittableChange(canSubmit);
+  }, [canSubmit, onSubmittableChange]);
+
+  // Register this modality's handlers for the top-bar buttons. Runs every
+  // render so the refs hold the latest closures, and clears them on unmount
+  // (e.g. switching to the whiteboard modality).
+  useEffect(() => {
+    submitRef.current = handleSubmit;
+    resetRef.current = handleReset;
+    return () => {
+      submitRef.current = null;
+      resetRef.current = null;
+    };
+  });
+
   return (
     <div className={styles.videoContainer}>
-      <div className={styles.questionText}>
-        {challenge ? challenge.question : 'DUMMY PROBLEM TEXT HERE'}
-      </div>
       <VideoRecorder
+        key={resetKey}
+        isRecording={isRecording}
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}
@@ -149,17 +193,6 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         recordedAudioUrl={recordedAudioUrl}
         setRecordedAudioUrl={setRecordedAudioUrl}
       />
-      {isUploading && <WaitingAnimation shouldDisplay={isUploading} />}
-      {!submitted && (
-        <button
-          type="button"
-          className={styles.submitButton}
-          disabled={!canSubmit}
-          onClick={handleSubmit}
-        >
-          Submit
-        </button>
-      )}
     </div>
   );
 };

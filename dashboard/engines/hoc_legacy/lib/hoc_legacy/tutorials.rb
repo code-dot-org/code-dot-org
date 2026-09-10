@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'cdo/honeybadger'
-
 module HocLegacy
   module Tutorials
     CACHE_KEY = 'hoc_legacy:tutorials'
@@ -93,7 +91,7 @@ module HocLegacy
           with_object({}) do |tutorial, data|
             data[tutorial.tutorial_id] = tutorial
           rescue StandardError => exception
-            Honeybadger.notify(
+            Observability::Errors.report(
               exception,
               error_message: '[Contentful] Invalid Tutorial entry',
               context: {

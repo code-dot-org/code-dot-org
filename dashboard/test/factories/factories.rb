@@ -233,14 +233,8 @@ FactoryBot.define do
       trait :not_first_sign_in do
         sign_in_count {2}
       end
-      trait :with_recent_captcha do
-        last_verified_captcha_at {Time.now.utc}
-      end
       factory :terms_of_service_teacher do
         with_terms_of_service
-      end
-      factory :with_recent_captcha_teacher do
-        with_recent_captcha
       end
       factory :levelbuilder do
         after(:create) do |levelbuilder|
@@ -715,6 +709,26 @@ FactoryBot.define do
           version: evaluator.auth_option_version,
           data: {
             oauth_token: 'some-clever-token'
+          }.to_json
+        )
+        user.reload
+      end
+    end
+
+    trait :with_classlink_authentication_option do
+      after(:create) do |user, evaluator|
+        create(
+          :authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLASSLINK,
+          # v1 id: ClassLink's internal UserId, a plain integer string. Still
+          # issued to districts without OneRoster, so this is a current format.
+          authentication_id: rand(10_000_000..99_999_999).to_s,
+          version: evaluator.auth_option_version,
+          data: {
+            oauth_token: 'some-classlink-token'
           }.to_json
         )
         user.reload
@@ -1487,6 +1501,12 @@ FactoryBot.define do
   factory :challenge_response_asset do
     association :challenge_response
     asset_type {'whiteboard_image'}
+  end
+
+  factory :challenge_response_reaction do
+    association :challenge_response
+    association :user, factory: :student
+    emoji {'heart'}
   end
 
   factory :user_lesson_objective_reflection do

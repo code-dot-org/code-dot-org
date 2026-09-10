@@ -3,12 +3,7 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require_relative '../legacy/middleware/files_api'
-require_relative '../legacy/middleware/channels_api'
-require 'shared_resources'
-require_relative '../legacy/middleware/net_sim_api'
-require_relative '../legacy/middleware/sound_library_api'
-require_relative '../legacy/middleware/animation_library_api'
+
 Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
 require 'bootstrap-sass'
@@ -17,6 +12,8 @@ require 'cdo/hash'
 require 'cdo/i18n'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
+require 'cdo/rack/request'
+require 'cdo/rack/response'
 
 # load and configure pycall before numpy and any other python-related gems
 # can be automatically loaded just below.
@@ -52,6 +49,13 @@ module Dashboard
         resource '/dashboardapi/*', headers: :any, methods: [:get]
       end
     end
+
+    # Hotfix: recover users left with two `_learn_session` cookies after the
+    # brief `domain: nil` deploy. Runs outermost so its HTTP_COOKIE rewrite is
+    # seen by every downstream cookie reader. Remove once duplicate cookies have
+    # aged out (~40 days; dashboard_session_ttl_days).
+    require 'cdo/rack/session_cookie_scope_migration'
+    config.middleware.insert_before 0, Rack::SessionCookieScopeMigration
 
     if CDO.use_cookie_dcdo
       # Enables the setting of DCDO via cookies for testing purposes.
@@ -94,13 +98,6 @@ module Dashboard
 
     config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
     config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
-    config.middleware.insert_after Middleware::I18n, FilesApi
-
-    config.middleware.insert_after FilesApi, ChannelsApi
-    config.middleware.insert_after ChannelsApi, SharedResources
-    config.middleware.insert_after SharedResources, NetSimApi
-    config.middleware.insert_after NetSimApi, AnimationLibraryApi
-    config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
@@ -166,6 +163,7 @@ module Dashboard
       video-js/*.css
       legacy-prerequisites.css
       legacy-styles.css
+      brand-fonts.css
     )
 
     # Support including code from directories outside of the normal Rails directory
@@ -292,5 +290,11 @@ module Dashboard
     routes.default_url_options[:protocol] = CDO.default_scheme.chomp(':')
     routes.default_url_options[:host] = CDO.dashboard_site_host
     routes.default_url_options.delete(:port)
+
+    # Ensure legacy APIs are loaded after middleware that provides required
+    # functionality such as I18n, GlobalEdition, Redis-backed sessions, and cookies.
+    initializer 'dashboard.legacy_apis', after: :load_config_initializers do |app|
+      app.config.middleware.insert_after RedisSessionStore, Middleware::LegacyApiStack
+    end
   end
 end

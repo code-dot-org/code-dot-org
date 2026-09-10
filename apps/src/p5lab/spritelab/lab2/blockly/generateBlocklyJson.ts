@@ -1,5 +1,7 @@
 import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
+import {WHEN_RUN_BLOCK_TYPE} from './blockDefinitions/whenRun';
+
 /**
  * Convert indentation-based pseudocode into a Sprite Lab workspace
  * serialization. The grammar is defined by the AI prompt in generateContent.ts;
@@ -259,7 +261,7 @@ export function generateBlocklyJson(
   lines = lines.slice(firstWhenRun);
 
   const root: JsonBlockConfig = {
-    type: 'when_run',
+    type: WHEN_RUN_BLOCK_TYPE,
     id: nextId(),
     x: 20,
     y: 20,

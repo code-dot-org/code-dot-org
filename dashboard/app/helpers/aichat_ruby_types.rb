@@ -11,7 +11,7 @@ module AichatRubyTypes
   # Notify if production or raise an exception otherwise.
   def self.raise_or_notify_type_error(message)
     if rack_env?(:production)
-      Honeybadger.notify(
+      Observability::Errors.report(
         error_class: 'AichatRubyTypesWarning',
         error_message: message
       )

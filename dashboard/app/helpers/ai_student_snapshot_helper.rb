@@ -69,8 +69,14 @@ module AiStudentSnapshotHelper
 
   def self.notify_and_raise(message, context)
     exception = StandardError.new(message)
-    Honeybadger.notify(exception, context: context)
+    Observability::Errors.report(exception, context: context)
     raise exception
+  end
+
+  def self.context_length_exceeded?(response)
+    JSON.parse(response.body).dig('error', 'code') == 'context_length_exceeded'
+  rescue JSON::ParserError
+    false
   end
 
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
@@ -89,7 +95,8 @@ module AiStudentSnapshotHelper
 
     if response.code == 200
       response_body = JSON.parse(response.body)
-      content = response_body['choices'][0]['message']['content']
+      choice = response_body['choices']&.first
+      content = choice&.dig('message', 'content')
       end_time = Time.now
 
       LangfuseHelper.trace_lesson_insight(
@@ -110,10 +117,16 @@ module AiStudentSnapshotHelper
         end_time: end_time,
       )
 
-      parsed_content = JSON.parse(content)
+      parsed_content = begin
+        JSON.parse(content)
+      rescue JSON::ParserError, TypeError => exception
+        notify_and_raise("AI lesson insight response was not valid JSON: #{exception.message}", context)
+      end
       notify_and_raise("AI lesson insight response was not a JSON object: #{content}", context) unless parsed_content.is_a?(Hash)
 
       return {status: response.code, json: parsed_content.slice(*LESSON_INSIGHT_FIELDS).to_json}
+    elsif context_length_exceeded?(response)
+      notify_and_raise("AI lesson insight request exceeded the model's token limit: #{response.body}", context.merge(status: response.code))
     else
       notify_and_raise("Received status code #{response.code} when processing AI lesson insight: #{response.body}", context.merge(status: response.code))
     end
@@ -134,7 +147,8 @@ module AiStudentSnapshotHelper
     end
     if response.code == 200
       response_body = JSON.parse(response.body)
-      content = response_body['choices'][0]['message']['content']
+      choice = response_body['choices']&.first
+      content = choice&.dig('message', 'content')
       end_time = Time.now
 
       LangfuseHelper.trace_lesson_feedback(
@@ -155,10 +169,16 @@ module AiStudentSnapshotHelper
         end_time: end_time,
       )
 
-      feedback_json = JSON.parse(content)
+      feedback_json = begin
+        JSON.parse(content)
+      rescue JSON::ParserError, TypeError => exception
+        notify_and_raise("AI lesson feedback response was not valid JSON: #{exception.message}", context)
+      end
       feedback_string = feedback_json.is_a?(Hash) ? feedback_json['feedback'] : feedback_json
       saved_record = save_lesson_feedback(feedback_string, student_id, lesson_id, section_id, teacher_id)
       return {status: response.code, record: saved_record.as_json(only: LESSON_FEEDBACK_FIELDS)}
+    elsif context_length_exceeded?(response)
+      notify_and_raise("AI lesson feedback request exceeded the model's token limit: #{response.body}", context.merge(status: response.code))
     else
       notify_and_raise("Received status code #{response.code} when processing AI lesson feedback: #{response.body}", context.merge(status: response.code))
     end

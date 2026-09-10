@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-25 21:24:51 UTC",
+    "serialized_at": "2026-09-01 15:55:29 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -689,6 +689,17 @@
       }
     },
     {
+      "name": "AI Foundations & the AI Ready Skills Certification",
+      "url": "https://docs.google.com/document/d/1Pl6f3WpcbSDmJCLMOiCDHMaszkdb5qnjISfanb7lZyA/edit?usp=sharing",
+      "key": "ai_foundations_the_ai_ready_skills_certification_1",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "ai_foundations_the_ai_ready_skills_certification_1"
+      }
+    },
+    {
       "name": "AI Milestone Timeline Card",
       "url": "https://docs.google.com/document/d/1KLNjWoUZDudLX6VKUlcNdrEmgD1ILKiejvWoUWkiMMc/edit?usp=drive_link",
       "key": "ai_milestone_timeline_card",
@@ -818,6 +829,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "ai_foundations_the_ai_ready_skills_certification_1",
+        "script.name": "ai-history-2026"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_resources_13",

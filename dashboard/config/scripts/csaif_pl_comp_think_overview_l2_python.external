@@ -19,12 +19,9 @@ Computational thinking is a problem-solving approach that involves breaking prob
 In **Foundations of AI Programming**, students explore computational thinking skills before diving into the programing lessons. 
 
 
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-      
-        <p style="font-size: 14pt;">
-        Computational thinking builds the problem-solving skills students need for programming by helping them organize their ideas, identify useful patterns, and develop clear, logical steps—preparing them to become effective Python programmers.
-        </p>
-    </div>
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 15px 20px; width: 90%; margin: 20px auto;">
+<p><b>💡 Teacher tip:</b> Computational thinking gives your students the problem-solving habits they need before they ever write a line of Python. When they can organize ideas, spot patterns, and lay out clear logical steps, they walk into the programming lessons ready to think like programmers, not just type code.</p>
+</div>
 
 
 MARKDOWN

@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:34:03.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson5-choice3-2026 + template",
+    "long_instructions": "`csv.DictReader` reads data from a CSV as strings—not numbers. To analyze this data, you need to convert those strings to numbers.\r\n\r\n**☑️ Do This:**\r\n\r\n- Convert the strings from `csv.DictReader` into numbers.\r\n\r\n**💻 Coding Tip**\r\n\r\n- Remember the `float` function casts values to floats.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFQVtb/79n8xK5T0YDPwmG8LP5exwDow2ez7XFdLb\nOQTwpV+o0EA+1INedQHmDgitj6PfB8jVz41dxkAvnySQDi6cKgRbjdHod07g\nXgizu5WTi8JD5SWW0KmC4pKa3Oms6t2KouxPgmjW9tYH7Ndnddc8FpdSqbKj\nFxHJzyb40KRHwHnWuOe9DTRJwl9LvUOj9bv3Yx4LwrBIfJaxNp+MxBLzlRKx\n7oslqUbE7Yht/80vgQfCYbhLum8CPnLJWEKc7uCjkETE1fEYJHVNt7XYmp/X\nHBy1KqAEeybxRpO1hd1FIhy2qu7FHL7n9/Gh8286gIYWYMowYOpjRbhJNt9z\nQOWqKDVtSui1PjmZRX/ILoAgBQkFO/MYlAH8+pR+Tpm0MNlpO4je71v2AaUf\nkC85v9sihCcL8wUChv3HhiVJ0UwycVBPaddgIYL/GPBdgQ10vVK01Ya58FP1\n4isqlJif0ajg4d8njJZL19QdMyKrw62Z+tysRhJMkBEbw7T34RFv9IsAfJfR\nkmeAhRXyWTHfaG8ovKd3PQ4zGELaLfcvmoAcgBFvcrnxmx0wNqRl3OXa7Mqj\nRcqoJzlsOWZ3Apuv62AkDss8Wa5RgJvPxZXGLGHn4VqB19BXvOE82h0IYiHV\nZpJAs241QIgh+y7irj2DiHAxnC+RUTX6cHmgb7CjGXHyWAaLsU0Ilj/n4Kcf\ncjM5Bv9lxLP+bRLu1PrfPf2JRsXTC7+Rc/h1+E8QLczoK+Z5e1s44vtbkWSc\nqDaVernD6a6n2rihENo+PVk/QrhVrCllUh+mKhn1VHdb6Key6D558K2wl75+\nfMcUaIIBSXbV78G7HmYe3rrvfh8oFlTY4xhPBmT5WxvIMC7Hl4c6IjCvNcLJ\nFk1KNkGAIL1ZlMclizxahqMHeG9G02sRU94Z8m1Ji3HMI48E7Z4xXQRZI6b6\ns8+Tt366kYa9vVuGiHS7wu1YbH1mPk2fPgn4U4mBAYLmwVoiYc4IG4J8I6tB\nBdXshz63n8PbrGsUcgeSfVyG1lKxryQnTQEYfhYBS9WDHkDIuxtfA3YKZQyB\nqoZL5LeMGrphA0yBpVwNN+fS3e3orAbLLnJhjo6MRTW9FSYYvXTuWFnPoI8P\nUcG1fiIMF0H4F8HyTQSdCMA+yPGVWr6AaVPkuofH/fzQxhJlv5KVOugiQuhX\n3v/hq1sRwItvQAfjxcNXivZPHepBrezC61VOK7CSeLx9/qkXSMSdGd6A753A\n4HEPOtARv0vlCnW+1snhItEImIqv5VLI4AwYjK/WVUrUndNgMKtLRJsuM4WP\ndCo=\n",
+    "display_name": "Delivery Apps",
+    "bubble_choice_description": "Compare how quickly two delivery apps deliver food.",
+    "thumbnail_url": "https://images.code.org/9f39ea8e24eac2cc2ec7c116848b97bb-delivery.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:36:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:37:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:39:28 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

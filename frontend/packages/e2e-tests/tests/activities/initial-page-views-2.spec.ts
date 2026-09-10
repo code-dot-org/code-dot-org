@@ -8,10 +8,7 @@ import {StandaloneVideoLevel} from '../pages/standalone-video-level';
 import {UnitOverviewPage} from '../pages/unit-overview-page';
 import {createStudent, resetSession, signOut} from '../shared/auth';
 import {analyze, WCAG_AA_TAGS} from '../shared/axe';
-import {
-  waitForHeaderSettled,
-  waitForVisualStability,
-} from '../shared/stability';
+import {waitForVisualStability} from '../shared/stability';
 
 interface ScenarioSurface {
   rootSelector: string;
@@ -64,7 +61,7 @@ const SCENARIOS: Scenario[] = [
     async goto(page) {
       const home = new HomePage(page);
       await home.goto();
-      await waitForHeaderSettled(page);
+      await home.header.waitForSettled();
       return {rootSelector: home.mainContentSelector, masks: []};
     },
     violations: {},
@@ -74,7 +71,7 @@ const SCENARIOS: Scenario[] = [
     async goto(page) {
       const overview = new UnitOverviewPage(page);
       await overview.gotoOverview();
-      await waitForHeaderSettled(page);
+      await overview.header.waitForSettled();
       return {rootSelector: overview.mainContentSelector, masks: []};
     },
     violations: {},
@@ -84,7 +81,7 @@ const SCENARIOS: Scenario[] = [
     async goto(page) {
       const level = new StandaloneVideoLevel(page);
       await level.gotoLevel({lesson: 34, level: 1});
-      await waitForHeaderSettled(page);
+      await level.header.waitForSettled();
       await level.waitForLessonHeaderRendered();
       return {
         rootSelector: level.mainContentSelector,
@@ -102,7 +99,7 @@ const SCENARIOS: Scenario[] = [
       // the curriculum sets on a different external level.
       const level = new LessonLevelPage(page);
       await level.gotoLevel({lesson: 18, level: 14});
-      await waitForHeaderSettled(page);
+      await level.header.waitForSettled();
       await level.waitForLessonHeaderRendered();
       return {rootSelector: level.mainContentSelector, masks: []};
     },
@@ -114,7 +111,7 @@ const SCENARIOS: Scenario[] = [
     async goto(page) {
       const level = new LessonLevelPage(page);
       await level.gotoLevel({lesson: 26, level: 1});
-      await waitForHeaderSettled(page);
+      await level.header.waitForSettled();
       await level.waitForLessonHeaderRendered();
       return {rootSelector: level.mainContentSelector, masks: []};
     },
@@ -126,7 +123,7 @@ const SCENARIOS: Scenario[] = [
     async goto(page) {
       const level = new LessonLevelPage(page);
       await level.gotoLevel({lesson: 27, level: 1});
-      await waitForHeaderSettled(page);
+      await level.header.waitForSettled();
       await level.waitForLessonHeaderRendered();
       return {rootSelector: level.mainContentSelector, masks: []};
     },

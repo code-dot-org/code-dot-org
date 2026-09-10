@@ -257,7 +257,13 @@ class WordOrPictureLogins extends React.Component {
 
   printLoginCards = () => {
     const {section} = this.props;
-    const printArea = document.getElementById('printArea').outerHTML;
+    // The print area does not exist when the section has no saved students,
+    // for example from an autoPrint or stale studentId link.
+    const printAreaElement = document.getElementById('printArea');
+    if (!printAreaElement) {
+      return;
+    }
+    const printArea = printAreaElement.outerHTML;
     // Popup blockers cause issues with creating a new window for printing.
     // Creating a hidden iframe temporarily on the page as a workaround.
     const printIframe = document.createElement('iframe');

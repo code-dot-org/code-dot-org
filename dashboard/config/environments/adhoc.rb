@@ -27,11 +27,12 @@ Dashboard::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = Logger::Formatter.new
 
-  # Log condensed lines to syslog for centralized logging.
-  config.lograge.enabled = false
+  config.lograge.enabled = true
   config.lograge.formatter = Lograge::Formatters::Cee.new
   require 'syslog/logger'
   config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
+
+  config.action_view.logger = nil
 
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails

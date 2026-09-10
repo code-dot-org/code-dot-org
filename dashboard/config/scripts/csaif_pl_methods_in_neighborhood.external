@@ -1,0 +1,95 @@
+name 'csaif-pl_methods-in-neighborhood'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Methods Used with Conditional Statements</h1>
+<p>The following methods can be used in conditional statements to check the Painter's surroundings in the Neighborhood IDE.</p>
+<p>These methods help determine movement, paint status, and direction, allowing the Painter to make decisions before taking action.</p>
+<p>These methods already exist as part of the Painter package, you don't write them yourself, you just call them to check something the Painter already knows how to do.</p>
+<p>Notice these boolean statements can be evaluated as <b>true</b> or <b>false</b>.</p>
+
+<table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <th style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Method</th>
+        <th style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">What It Checks</th>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;"><code style="font-size:14px;">can&#95;move()</code></td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Can the Painter move in the direction it is facing?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;"><code style="font-size:14px;">can&#95;move("direction")</code></td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Could the Painter move in the given direction?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;"><code style="font-size:14px;">is&#95;on&#95;paint()</code></td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Is the Painter standing on a painted square?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;"><code style="font-size:14px;">has&#95;paint()</code></td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Does the Painter have paint to use?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;"><code style="font-size:14px;">is&#95;on&#95;bucket()</code></td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Is the Painter standing on a bucket?</td>
+    </tr>
+    <tr>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;"><code style="font-size:14px;">is&#95;facing&#95;*()</code></td>
+        <td style="font-size: 14pt; padding-top: 5px; padding-bottom: 5px;">Is the Painter facing * direction (* could be north, east, south, or west)?</td>
+    </tr>
+</table>
+
+---
+
+<h2>See It In Code</h2>
+<p>Here's one method used inside an <code style="font-size:14px;">if</code> statement, and a different one used inside a <code style="font-size:14px;">while</code> loop. You've already learned each of these structures on their own.</p>
+
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+
+  <div style="flex: 1; min-width: 260px; max-width: 320px;">
+  <p style="text-align: center; margin-bottom: 8px;"><b>Using <code style="font-size:14px;">if</code></b></p>
+  <div style="border-radius: 10px; overflow: hidden;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 8px 14px;">practice.py</div>
+    <div style="background-color:#1C1F2A; color:#FFFFFF; padding:14px 16px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.8;">
+      <span style="color:#6FCAFF;">if</span> <span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">is&#95;on&#95;bucket</span>():<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">take&#95;paint</span>()
+    </div>
+  </div>
+  <p style="margin-top: 8px; text-align: center;">Checks once: is the painter on a bucket right now?</p>
+  <details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-top: 8px;">
+  <summary style="cursor: pointer; font-weight: bold; color: #1F1976;">What happens after take_paint() runs?</summary>
+  <div style="margin-top: 10px;">
+  <p>Nothing repeats. The <code style="font-size:14px;">if</code> checked the condition one time, ran the code once, and moved on. It won't check again unless the program reaches another <code style="font-size:14px;">if</code> statement later.</p>
+  </div>
+  </details>
+</div>
+
+  <div style="flex: 1; min-width: 260px; max-width: 320px;">
+    <p style="text-align: center; margin-bottom: 8px;"><b>Using <code style="font-size:14px;">while</code></b></p>
+    <div style="border-radius: 10px; overflow: hidden;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 8px 14px;">practice.py</div>
+      <div style="background-color:#1C1F2A; color:#FFFFFF; padding:14px 16px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.8;">
+        <span style="color:#6FCAFF;">while</span> <span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">has&#95;paint</span>():<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#F07FB0;">painter</span>.<span style="color:#F07FB0;">paint</span>(<span style="color:#ACA8EA;">"white"</span>)
+      </div>
+    </div>
+    <p style="margin-top: 8px; text-align: center;">Keeps checking: does the painter still have paint left?</p>
+<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-top: 8px;">
+<summary style="cursor: pointer; font-weight: bold; color: #1F1976;">What happens after paint("white") runs?</summary>
+<div style="margin-top: 10px;">
+<p>The <code style="font-size:14px;">while</code> loop goes right back to checking <code style="font-size:14px;">has_paint()</code> again. As long as it's still true, it keeps repeating. It only stops once the condition finally becomes false.</p>
+</div>
+</details>
+    
+  </div>
+  
+
+</div>
+
+<p style="margin-top: 20px;"><b>The key difference:</b> <code style="font-size:14px;">if</code> checks a condition once and moves on, while <code style="font-size:14px;">while</code> keeps checking that condition and repeats as long as it stays true.</p>
+
+<p>You'll see <code style="font-size:14px;">if</code> and <code style="font-size:14px;">while</code> work together using these same kinds of methods a little later in this lesson.</p>
+
+
+MARKDOWN

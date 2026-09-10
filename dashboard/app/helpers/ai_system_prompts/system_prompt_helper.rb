@@ -47,7 +47,7 @@ module AiSystemPrompts::SystemPromptHelper
     if level_id
       level = begin Level.find(level_id)
       rescue ActiveRecord::RecordNotFound
-        Honeybadger.notify(exception,
+        Observability::Errors.report(exception,
             error_message: 'Invalid level_id in system prompt helper',
             context: {
               level_id: level_id,

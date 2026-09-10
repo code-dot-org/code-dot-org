@@ -36,6 +36,7 @@ class ProjectsListTest < ActionController::TestCase
       updatedAt: '2024-01-25T17:48:12.358-08:00',
       projectType: 'pythonlab',
       hidden: false,
+      labConfig: {standaloneSettings: {projectType: 'console'}},
     }.to_json
     @lab2_project = {id: 44, value: lab2_project_value}
   end
@@ -58,6 +59,12 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal @student.name, project_row['studentName']
     assert_equal 'pythonlab', project_row['type']
     assert_equal '2024-01-25T17:48:12.358-08:00', project_row['updatedAt']
+    assert_equal({'standaloneSettings' => {'projectType' => 'console'}}, project_row['labConfig'])
+  end
+
+  test 'get_project_row_data leaves labConfig out when the project has none' do
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, @student)
+    assert_nil project_row['labConfig']
   end
 
   test 'get_project_row_data ignores hidden projects' do

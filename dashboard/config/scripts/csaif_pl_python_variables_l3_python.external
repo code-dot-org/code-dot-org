@@ -3,74 +3,106 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Variables
+<h1>Variables</h1>
+<p>In the previous level, we observed how computers sort and store data. Let's take a look at how we can declare and define variables in Python.</p>
 
-In the previous level, we observed how computers sort and store data. Let's take a look at how we can declare and define variables in Python.
 
-<img src="https://images.code.org/051f1d57020960bc5c4374e4691379d2-image-1727203669873.png" alt="pandas logo" width="150px" style="border-radius:20px; float:right; margin: 0 0 10px 0px;">
-
-## Variables
-A **variable** is a container that stores a value in memory. 
-A variable can only hold **one value** at a time. 
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>📖 Variable:</b> A container that stores a value in memory. A variable can only hold one value at a time.</p>
+</div>
 
 
 
-## Data Type
-A **data type** is the format of the data that can be stored in a variable.
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>📖 Data Type:</b> The format of the data that can be stored in a variable.</p>
+</div>
 
-<img src="https://images.code.org/83801bad4dc34715b6cfd9ada97d5313-image-1727203773189.png" alt="variable types: int, float, string, boolean" width="650px" style="display: block; margin-left: auto; margin-right: auto;">
+## Common Data Types
 
+<div role="list" aria-label="Common Python data types" style="display:flex; flex-wrap:wrap; align-items:stretch; gap:16px; width:100%; margin:20px 0; font-family:Arial, Helvetica, sans-serif; box-sizing:border-box;">
 
-In Python, you don’t have to say what kind of data you're using when you create a variable — Python figures it out for you based on what you type.
+  <div role="listitem" style="flex:1 1 170px; min-width:150px; background-color:#FFFFFF; border:1px solid #34BD43; border-radius:4px; overflow:hidden; box-sizing:border-box;">
+    <div style="background-color:#CCF1D0; color:#000000; padding:10px; text-align:center; font-family:'Courier New',Courier,monospace; font-size:18px; font-weight:700;">boolean</div>
+    <div style="min-height:82px; padding:14px 10px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; color:#000000; text-align:center; font-size:16px; line-height:1.5;">
+      <div><span style="font-family:'Courier New',Courier,monospace; font-size:16px; color:#000000;">True</span> or <span style="font-family:'Courier New',Courier,monospace; font-size:16px; color:#000000;">False</span></div>
+    </div>
+  </div>
 
-For example, if you write `age = 12`, Python knows that age is a number, and if you write `name = "Alex"`, it knows that name is text because of the quotation marks.
+  <div role="listitem" style="flex:1 1 170px; min-width:150px; background-color:#FFFFFF; border:1px solid #0099F3; border-radius:4px; overflow:hidden; box-sizing:border-box;">
+    <div style="background-color:#D5EFFF; color:#000000; padding:10px; text-align:center; font-family:'Courier New',Courier,monospace; font-size:18px; font-weight:700;">int</div>
+    <div style="min-height:82px; padding:14px 10px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; color:#000000; text-align:center; font-size:16px; line-height:1.5;">
+      <div><div>Whole numbers,</div><div>like <span style="font-family:'Courier New',Courier,monospace; font-size:16px; color:#000000;">7</span> or <span style="font-family:'Courier New',Courier,monospace; font-size:16px; color:#000000;">6784</span></div></div>
+    </div>
+  </div>
 
-## Creating a Variable 
+  <div role="listitem" style="flex:1 1 170px; min-width:150px; background-color:#FFFFFF; border:1px solid #F46B00; border-radius:4px; overflow:hidden; box-sizing:border-box;">
+    <div style="background-color:#FFE3CE; color:#000000; padding:10px; text-align:center; font-family:'Courier New',Courier,monospace; font-size:18px; font-weight:700;">float</div>
+    <div style="min-height:82px; padding:14px 10px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; color:#000000; text-align:center; font-size:16px; line-height:1.5;">
+      <div><div>Decimal numbers,</div><div>like <span style="font-family:'Courier New',Courier,monospace; font-size:16px; color:#000000;">2.5</span> or <span style="font-family:'Courier New',Courier,monospace; font-size:16px; color:#000000;">92.81</span></div></div>
+    </div>
+  </div>
 
-   <table border="1" width="100%" cellpadding="10">
-        <tr>
-            <td width="33%">
-                <img src="https://images.code.org/4c3ef8ef7dc7363dc0b8ed512ab3836a-image-1727209826025.png" alt="my_score=575" width="100%">
-            </td>
-            <td width="67%" style="font-size:14pt;">
-            When we want to create a variable, we write the <b>name</b> we want to use for the information we store. <br> <br>We use <b>snake_case,</b> a naming convention where all letters are lowercase and connected with an underscore.
-            </td>
-        </tr>
-        <tr>
-            <td width="33%">
-                <img src="https://images.code.org/370df57b0518a3aee2e4c9861b45f7a5-image-1727211074412.png" alt="my_score=75" width="100%">
-            </td>
-            <td width="67%" style="font-size:14pt;">
-                We use the <b>assignment operator</b> (=) to set or change the value assigned to the variable.
-            </td>
-        </tr>
-        <tr>
-            <td width="33%">
-                <img src="https://images.code.org/00824a86b12347424b5e6f2cbba0d745-image-1727210984964.png" alt="Image 3" width="100%">
-            </td>
-            <td width="67%" style="font-size:14pt;">
-                Then we can specify the <b>starting value</b> to what we want the variable to store.
-            </td>
-        </tr>
-    </table>
-    
-<br>  
+  <div role="listitem" style="flex:1 1 170px; min-width:150px; background-color:#FFFFFF; border:1px solid #4C42CF; border-radius:4px; overflow:hidden; box-sizing:border-box;">
+    <div style="background-color:#E4E2F8; color:#000000; padding:10px; text-align:center; font-family:'Courier New',Courier,monospace; font-size:18px; font-weight:700;">String</div>
+    <div style="min-height:82px; padding:14px 10px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; color:#000000; text-align:center; font-size:16px; line-height:1.5;">
+      <div><div>A sequence of characters,</div><div>like <span style="font-family:'Courier New',Courier,monospace; font-size:16px; color:#000000;">"purple"</span></div></div>
+    </div>
+  </div>
 
-## Declaring Different Variable Types 
+</div>
 
-Variable types are not named when creating variables, however, how you input the value determines the variable type.
-
-<img src="https://images.code.org/3f2339ba75b14b98c82b78281c4fda38-image-1741196296906.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
-
-**Notice:**
-
-- **String**, or text, variables are defined using quotation marks.
-- **Booleans** are defined using the words True or False.
+---
+<h2>Creating a Variable</h2>
+<p>In Python, you don't have to say what kind of data you're using when you create a variable, Python figures it out for you based on what you type.</p>
+<p>For example, if you write <code style = "font-size: 14px;">age = 12</code>, Python knows that age is a number, and if you write <code style = "font-size: 14px;">name = "Alex"</code>, it knows that name is text because of the quotation marks.</p>
 
 
-##Let's try creating variables in Python Lab! 
+<table border="1" width="100%" cellpadding="10">
+    <tr>
+        <td width="33%">
+            <img src="https://images.code.org/4c3ef8ef7dc7363dc0b8ed512ab3836a-image-1727209826025.png" alt="my_score=575" width="100%">
+        </td>
+        <td width="67%" style="font-size:14pt; padding:18px 22px; line-height:1.6;">
+            When we want to create a variable, we write the <b>name</b> we want to use for the information we store.<br><br>We use <b>snake_case</b>, a naming convention where all letters are lowercase and connected with an underscore.
+        </td>
+    </tr>
+    <tr>
+        <td width="33%">
+            <img src="https://images.code.org/370df57b0518a3aee2e4c9861b45f7a5-image-1727211074412.png" alt="my_score=75" width="100%">
+        </td>
+        <td width="67%" style="font-size:14pt; padding:18px 22px; line-height:1.6;">
+            We use the <b>assignment operator</b> (=) to set or change the value assigned to the variable.
+        </td>
+    </tr>
+    <tr>
+        <td width="33%">
+            <img src="https://images.code.org/00824a86b12347424b5e6f2cbba0d745-image-1727210984964.png" alt="Image 3" width="100%">
+        </td>
+        <td width="67%" style="font-size:14pt; padding:18px 22px; line-height:1.6;">
+            Then we can specify the <b>starting value</b> to what we want the variable to store.
+        </td>
+    </tr>
+</table>
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ The upcoming coding levels are from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
+---
+
+<h2>Declaring Different Variable Types</h2>
+<p>Variable types are not named when creating variables, however, how you input the value determines the variable type.</p>
+
+<div role="region" aria-label="Python variable examples showing integers, strings, booleans, and floats" style="width:100%; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#000000; color:#FFFFFF; border-radius:10px; padding:18px 22px; font-family:'Fira Code','Courier New',Courier,monospace; font-size:16px; line-height:1.7;">
+  <span style="color:#FFFFFF;">house_number</span> = <span style="color:#F07FB0;">102</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># Integer (int)</span><br>
+  <span style="color:#FFFFFF;">street_name</span> = <span style="color:#7CDB87;">"Maple Street"</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># String (str)</span><br>
+  <span style="color:#FFFFFF;">resident_name</span> = <span style="color:#7CDB87;">"Sam"</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># String (str)</span><br>
+  <span style="color:#FFFFFF;">has_garden</span> = <span style="color:#6FCAFF;">True</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># Boolean (bool)</span><br>
+  <span style="color:#FFFFFF;">home_price</span> = <span style="color:#F07FB0;">250000.50</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># Float (float)</span>
+</div>
+<br>
+<h3><b>Notice:</b></h3>
+<p style="margin: 0 0 6px 0;">• <b>String</b>, or text, variables are defined using quotation marks.</p>
+<p style="margin: 0;">• <b>Booleans</b> are defined using the words True or False.</p>
+
+<h2>Let's try creating variables in Python Lab!</h2>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+<p>➡️ The upcoming coding levels are from Lesson 4. You can find more details in the full <a href="https://studio.code.org/s/aif2-2025/lessons/4" target="_blank" rel="noopener noreferrer" style="font-weight:bold;">lesson plan</a>.</p>
+</div>
 MARKDOWN

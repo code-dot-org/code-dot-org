@@ -28,6 +28,12 @@
       "Play"
     ],
     "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Free play!** Everything is unlocked: all of your images, all of your scenes, and the full set of blocks. Finish your game, and finish the lesson whenever you're done.",
+        "showContinue": true
+      }
+    ],
     "long_instructions": "# Free play\nEverything is unlocked: all of your images, all of your scenes, and the full set of blocks. Finish your game!",
     "toolbox_definition": {
       "kind": "categoryToolbox",
@@ -39,6 +45,10 @@
             {
               "kind": "block",
               "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playMusic"
             },
             {
               "kind": "block",
@@ -115,6 +125,10 @@
             {
               "kind": "block",
               "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playMusic"
             },
             {
               "kind": "block",

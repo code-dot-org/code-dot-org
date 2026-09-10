@@ -32,7 +32,7 @@ module Services
               aud_count: id_token[:aud].length,
             }
             event_name = 'Generate Authentication ID error'
-            Honeybadger.notify(event_name, context: attributes)
+            Observability::Errors.report(event_name, context: attributes)
             Clients::LtiLogger.log_event(event_name, attributes)
             raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
           else
