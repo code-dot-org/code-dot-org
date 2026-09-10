@@ -1,8 +1,8 @@
 .panel {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 16px;
+  gap: var(--spacing-p-xxs, 8px);
+  padding: 10px;
   height: 100%;
   overflow-y: auto;
   box-sizing: border-box;
@@ -24,10 +24,15 @@
   }
 }
 
+.chooserSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .chooserHeader {
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
 
 .chooserTitle {
@@ -46,7 +51,7 @@
 .optionsList {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .optionCard {

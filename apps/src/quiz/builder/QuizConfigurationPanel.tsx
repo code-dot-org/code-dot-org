@@ -141,7 +141,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
       )}
 
       {!purpose ? (
-        <div className={styles.section}>
+        <div className={styles.chooserSection}>
           <div className={styles.chooserHeader}>
             <p className={styles.chooserTitle}>What is this quiz for?</p>
             <p className={styles.chooserSubtitle}>
