@@ -20,7 +20,7 @@ import {join} from 'node:path';
 import {describe, expect, it} from 'vitest';
 
 import {drawStrip, rgb, type Cell} from '../../../rules/demos/record/strip';
-import {DEMO_BACKGROUND, DEMO_FPS} from '../../../rules/demos/types';
+import {DEMO_BACKGROUND, DEMO_FPS, framesIn} from '../../../rules/demos/types';
 import {ACTOR_DEMOS} from '../index';
 import {ACTOR_DEMO_SIZE, type ActorDemo} from '../types';
 
@@ -38,6 +38,16 @@ async function play(id: string, demo: ActorDemo): Promise<Cell[][]> {
         frames.push(actorDemoFrame(id, staged.world, demo, tick / 60));
       }
     });
+  }
+  // The same promise the rule recorder checks, for the same reason: the picker
+  // animates with `steps(actorDemoFrames)`, and one cell out slides every frame
+  // part way between two of them (`rules/demos/types.framesIn`).
+  const promised = framesIn(demo.seconds);
+  if (frames.length !== promised) {
+    throw new Error(
+      `actor strip length disagrees with framesIn: kept ${frames.length}, ` +
+        `promised ${promised}.`,
+    );
   }
   return frames;
 }

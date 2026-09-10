@@ -49,7 +49,7 @@ import {teleportDemo} from './teleport';
 import {timeDemo} from './time';
 import {turningDemo} from './turning';
 import {turnsDemo} from './turns';
-import {DEMO_FPS, type RuleDemo} from './types';
+import {framesIn, type RuleDemo} from './types';
 import {wrapDemo} from './wrap';
 import {zapsDemo} from './zaps';
 
@@ -105,7 +105,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
 export const ruleDemo = (id: string): RuleDemo | undefined => RULE_DEMOS[id];
 
 export type {RuleDemo, RuleModules} from './types';
-export {DEMO_FPS, DEMO_SIZE, stepDemo, viewOrigin} from './types';
+export {DEMO_FPS, DEMO_SIZE, framesIn, stepDemo, viewOrigin} from './types';
 
 /**
  * Where a rule's demo strip is served from, or undefined if it has none.
@@ -121,5 +121,5 @@ export function demoUrl(id: string): string | undefined {
 /** How many cells that strip has — what the CSS steps through. */
 export function demoFrames(id: string): number {
   const demo = RULE_DEMOS[id];
-  return demo ? Math.round(demo.seconds * DEMO_FPS) : 0;
+  return demo ? framesIn(demo.seconds) : 0;
 }

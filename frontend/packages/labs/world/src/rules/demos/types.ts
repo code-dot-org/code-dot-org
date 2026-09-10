@@ -56,6 +56,29 @@ export const DEMO_BACKGROUND = '#101020';
  */
 export const DEMO_FPS = 12;
 
+/**
+ * How many cells a recording of `seconds` comes to.
+ *
+ * `seconds × DEMO_FPS` is the obvious answer and it is wrong, which is what
+ * this exists to stop. The recorder ticks a world `round(seconds × 60)` times
+ * and keeps every fifth tick, so a 2.2-second demo is 132 ticks and 27 kept
+ * frames — where the multiplication says 26. The dialog animates the strip with
+ * `steps(frames)`, so being one out does not drop a cell: it divides the strip
+ * into the wrong number of pieces, and every cell after the first is drawn part
+ * way between two of them. The contents slide sideways as it plays.
+ *
+ * Five demos were shipping like that (`goals`, `inventory`, `jetpack`, `path`,
+ * `spawner`) — every one whose length was not a whole number of twelfths.
+ *
+ * So both ends count the same way, from here: the recorder to know what it
+ * wrote, the dialog to know what to animate.
+ */
+export function framesIn(seconds: number): number {
+  const ticks = Math.round(seconds * 60);
+  const every = Math.round(60 / DEMO_FPS);
+  return Math.ceil(ticks / every);
+}
+
 /** How one actor is drawn, in pixels and a CSS color. */
 export interface Look {
   width: number;

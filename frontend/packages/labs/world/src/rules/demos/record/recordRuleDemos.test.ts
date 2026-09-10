@@ -28,6 +28,7 @@ import {RULE_DEMOS} from '../index';
 import {
   DEMO_BACKGROUND,
   DEMO_SIZE,
+  framesIn,
   stepDemo,
   viewOrigin,
   type RuleDemo,
@@ -63,6 +64,11 @@ function play(
   demo: RuleDemo,
   modules: Parameters<RuleDemo['build']>[0],
 ): Box[][] {
+  // What the dialog will be told this strip holds. Checked at the end rather
+  // than used to drive the loop, so the two arithmetics are compared rather
+  // than merged: the recorder's is the one that decides, and `framesIn` is a
+  // promise about it that this refuses to let go stale (`demos/types`).
+  const promised = framesIn(demo.seconds);
   const {world} = demo.build(modules);
   const frames: Box[][] = [];
   const ticks = Math.round(demo.seconds * 60);
@@ -90,6 +96,13 @@ function play(
         }),
       );
     });
+  }
+  if (frames.length !== promised) {
+    throw new Error(
+      `demo strip length disagrees with framesIn: kept ${frames.length}, ` +
+        `promised ${promised}. The dialog animates with steps(framesIn), so ` +
+        `being one out slides every cell part way between two frames.`,
+    );
   }
   return frames;
 }

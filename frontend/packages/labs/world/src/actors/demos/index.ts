@@ -5,7 +5,7 @@
 // to be comfortable with anyway — it showed a still and nothing else until
 // this existed, and still does for the actors whose worth IS the picture.
 
-import {DEMO_FPS} from '../../rules/demos';
+import {framesIn} from '../../rules/demos';
 import {getDemoBaseUrl} from '../../runtime/worldConfig';
 
 import {buttonDemo} from './button';
@@ -57,5 +57,5 @@ export function actorDemoUrl(id: string): string | undefined {
 /** How many cells that strip has — what the CSS steps through. */
 export function actorDemoFrames(id: string): number {
   const demo = ACTOR_DEMOS[id];
-  return demo ? Math.round(demo.seconds * DEMO_FPS) : 0;
+  return demo ? framesIn(demo.seconds) : 0;
 }

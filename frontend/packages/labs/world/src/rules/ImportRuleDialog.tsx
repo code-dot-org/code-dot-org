@@ -51,13 +51,18 @@ export interface ImportRuleDialogProps {
 /**
  * How big a demo is drawn HERE, which is not how big it was recorded.
  *
- * Two thirds of the strip's own 192 by 128 (`demos/types.DEMO_SIZE`). The
- * recording is sized for a row that ran the width of a dialog; a grid of
- * forty-five of them at that size is four screens of scrolling, and at this one
- * it is a screen and a half. The strip scales with it — the whole picture is a
- * background sized in these units — so nothing is cropped.
+ * The recording is 192 by 128 (`demos/types.DEMO_SIZE`), sized for a row that
+ * ran the width of a dialog; a grid of forty-three of them at that size is four
+ * screens of scrolling, and at this one it is a screen and a half. The strip
+ * scales with it — the whole picture is a background sized in these units — so
+ * nothing is cropped.
+ *
+ * THE SAME SHAPE, exactly. 192 by 128 is three to two, and 128 by 85 is not
+ * quite: a third of a pixel of squash, which nobody sees but which makes the
+ * numbers here a rounding of the numbers there rather than a scaling of them.
+ * 132 by 88 is three to two on the nose.
  */
-const TILE = {width: 128, height: 85};
+const TILE = {width: 132, height: 88};
 
 const TILE_SIZE = {
   '--demo-width': `${TILE.width}px`,
