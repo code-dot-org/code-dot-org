@@ -1,6 +1,7 @@
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import {noteImageFieldValue} from '../../imageReferences';
 import {FIELD_GRID_TYPE} from '../gridFields';
 import {FIELD_BLOCK_IMAGE_TYPE} from '../imagePickerFields';
 
@@ -21,7 +22,8 @@ const definition: BlockJson = {
 };
 
 const generator: GeneratorFunction = block =>
-  `makeEnvironmentSprites(${block.getFieldValue('ANIMATION_NAME')}, ` +
-  `'walls', ${JSON.stringify(block.getFieldValue('GRID'))});\n`;
+  `makeEnvironmentSprites(${noteImageFieldValue(
+    block.getFieldValue('ANIMATION_NAME')
+  )}, ` + `'walls', ${JSON.stringify(block.getFieldValue('GRID'))});\n`;
 
 export default {definition, generator};

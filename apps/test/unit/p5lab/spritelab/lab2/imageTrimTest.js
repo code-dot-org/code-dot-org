@@ -1,4 +1,6 @@
 import {
+  animationNames,
+  filterAnimationsToNames,
   findOpaqueBounds,
   getTrimmedThumbnail,
   loadedAnimations,
@@ -114,5 +116,45 @@ describe('SpriteLab2 trimAnimationListImages save-time flag', () => {
     const out = await trimAnimationListImages(list);
     expect(out.propsByKey.a.dataURI).toBe(dataURI);
     expect(getTrimmedThumbnail('wizard')).toBe(dataURI);
+  });
+});
+
+describe('SpriteLab2 filterAnimationsToNames', () => {
+  const list = {
+    orderedKeys: ['a', 'b', 'c', 'd'],
+    propsByKey: {
+      a: {name: 'wizard', dataURI: 'x'},
+      b: {name: 'unused', dataURI: 'x'},
+      c: {name: 'forest', dataURI: 'x', categories: ['backgrounds']},
+      d: {name: 'stone', dataURI: 'x'},
+    },
+  };
+
+  it('keeps the named animations, in list order', () => {
+    const out = filterAnimationsToNames(list, new Set(['stone', 'wizard']));
+    expect(out.orderedKeys).toEqual(['a', 'd']);
+  });
+
+  it('scopes backgrounds like any other image', () => {
+    expect(filterAnimationsToNames(list, new Set()).orderedKeys).toEqual([]);
+    expect(
+      filterAnimationsToNames(list, new Set(['forest'])).orderedKeys
+    ).toEqual(['c']);
+  });
+
+  it('leaves the given list untouched', () => {
+    filterAnimationsToNames(list, new Set(['wizard']));
+    expect(list.orderedKeys).toEqual(['a', 'b', 'c', 'd']);
+  });
+});
+
+describe('SpriteLab2 animationNames', () => {
+  it('collects every named animation', () => {
+    expect([
+      ...animationNames({
+        orderedKeys: ['a', 'b'],
+        propsByKey: {a: {name: 'x'}, b: {}},
+      }),
+    ]).toEqual(['x']);
   });
 });

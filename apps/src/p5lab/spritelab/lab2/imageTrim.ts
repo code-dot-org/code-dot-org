@@ -184,23 +184,57 @@ function firstFrameThumbnail(
   return cached;
 }
 
+/** Every animation name in a list. */
+export function animationNames(list: RuntimeAnimationList): Set<string> {
+  return new Set(
+    (list.orderedKeys || [])
+      .map(key => list.propsByKey[key]?.name)
+      .filter((name): name is string => !!name)
+  );
+}
+
+/**
+ * The list restricted to the given animation names: the ones the program's
+ * generators registered while it compiled (imageReferences.ts), so the
+ * scene preload decodes exactly what the scene can put on stage. A name a
+ * program builds at runtime (no block does today) decodes on demand instead
+ * — the setAnimation wrapper in SpriteLab2Engine.
+ */
+export function filterAnimationsToNames(
+  list: RuntimeAnimationList,
+  names: Set<string>
+): RuntimeAnimationList {
+  const orderedKeys = (list.orderedKeys || []).filter(key => {
+    const name = list.propsByKey[key]?.name;
+    return !!name && names.has(name);
+  });
+  const propsByKey: RuntimeAnimationList['propsByKey'] = {};
+  orderedKeys.forEach(key => {
+    propsByKey[key] = list.propsByKey[key];
+  });
+  return {orderedKeys, propsByKey};
+}
+
 /**
  * Return a copy of a serialized animation list whose costume dataURIs are
  * border-trimmed. Backgrounds are left alone (they should fill the canvas).
  * So are sprite sheets: their frame grid is their geometry, and trimming
  * the sheet's border would shift every frame off it — their thumbnail is
  * their first frame instead.
+ *
+ * keepNames lists every name in the project, so that a scene-scoped
+ * subset doesn't prune thumbnails of images other scenes still use — a
+ * thumbnail is only dropped for a name absent from the whole project.
  */
 export async function trimAnimationListImages(
-  list: RuntimeAnimationList
+  list: RuntimeAnimationList,
+  keepNames?: Set<string>
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
   // Drop cached trims for names absent from the list: a deleted image's
   // thumbnail must not resurface when a new image takes the same name.
-  const currentNames = new Set(
-    (list.orderedKeys || []).map(key => list.propsByKey[key]?.name)
-  );
+  const currentNames = keepNames || animationNames(list);
   for (const name of trimmedByName.keys()) {
     if (!currentNames.has(name)) {
       trimmedByName.delete(name);
