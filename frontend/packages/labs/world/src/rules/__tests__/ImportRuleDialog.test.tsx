@@ -10,7 +10,7 @@ import {describe, expect, it, vi} from 'vitest';
 
 import {ImportRuleDialog} from '../ImportRuleDialog';
 import {STOCK_RULES} from '../stock';
-import {stockRuleRows} from '../stockRuleTree';
+import {stockRuleGroups} from '../stockRuleGroups';
 
 const open = (
   props: Partial<React.ComponentProps<typeof ImportRuleDialog>> = {},
@@ -22,16 +22,17 @@ describe('ImportRuleDialog', () => {
   // and asks the accessibility tree about each, and the library keeps growing
   // — it went over the default the week Turns and History were added, on a
   // machine running the rest of the suite beside it.
-  it('lists every stock rule by the ability it adds', {timeout: 20000}, () => {
+  it('shows every stock rule as a tile', {timeout: 20000}, () => {
     open();
 
-    // `getAllBy`: a rule that needs another names it, so "Has Physics" is on
-    // both its own row and the rows that require it.
+    // One tile each, named by the ability it adds: the dialog answers "what
+    // should this world have?", and a rule's own name is what turns up on its
+    // toolbox category once it is in.
     for (const rule of STOCK_RULES) {
       expect(
-        screen.getAllByRole('button', {name: new RegExp(rule.ability)}).length,
+        screen.getAllByRole('button', {name: rule.ability}).length,
         rule.ability,
-      ).toBeGreaterThan(0);
+      ).toBe(1);
     }
   });
 
@@ -56,7 +57,7 @@ describe('ImportRuleDialog', () => {
     const importButton = screen.getByRole('button', {name: 'Import'});
     expect(importButton).toBeDisabled();
 
-    fireEvent.click(screen.getAllByRole('button', {name: /Has Gravity/})[0]);
+    fireEvent.click(screen.getByRole('button', {name: 'Has Gravity'}));
     expect(onImport).not.toHaveBeenCalled();
 
     fireEvent.click(importButton);
@@ -77,14 +78,15 @@ describe('ImportRuleDialog', () => {
   });
 });
 
-describe('the shelf as a tree', () => {
-  // Twenty-three rules, each carrying four lines, was a page nobody scans. Two
-  // changes, both derived rather than curated: the detail moves to the row a
-  // learner has actually landed on, and the list nests by what each rule is
-  // written against.
-  it('shows the ability and the sentence, and no more, until a row is picked', () => {
+describe('the shelf as a grid, grouped by region', () => {
+  // Forty-five rules as a column of sentences was four screens of scrolling to
+  // answer a question the progression already answers: what kind of game am I
+  // making. Two changes, both derived rather than curated — the detail moves
+  // under the grid to the tile a learner has landed on, and the grouping is
+  // read off the lessons (`stockRuleGroups`).
+  it('shows the ability and no more, until a tile is picked', () => {
     // What a browsing learner needs. "Also adds" and "Gives actors" answer
-    // "what happens if I take THIS one", which is a question about a row you
+    // "what happens if I take THIS one", which is a question about a tile you
     // have already chosen.
     open();
 
@@ -92,10 +94,10 @@ describe('the shelf as a tree', () => {
     expect(screen.queryByText(/Also adds:/)).toBeNull();
   });
 
-  it('says what comes with the row that was picked', () => {
+  it('says what comes with the tile that was picked', () => {
     open();
 
-    fireEvent.click(screen.getByRole('button', {name: /Has Gravity/}));
+    fireEvent.click(screen.getByRole('button', {name: 'Has Gravity'}));
 
     // Gravity is written against Physics and Solid Bodies, and both land in
     // `rules/` with it.
@@ -103,53 +105,43 @@ describe('the shelf as a tree', () => {
     expect(screen.getByText(/Gives actors:/)).toBeInTheDocument();
   });
 
-  it('says it for one row at a time', () => {
+  it('says it for one tile at a time', () => {
     open();
-    fireEvent.click(screen.getByRole('button', {name: /Has Gravity/}));
+    fireEvent.click(screen.getByRole('button', {name: 'Has Gravity'}));
 
-    fireEvent.click(screen.getByRole('button', {name: /Keeps Time/}));
+    fireEvent.click(screen.getByRole('button', {name: 'Keeps Time'}));
 
     expect(screen.getAllByText(/Gives actors:/)).toHaveLength(1);
   });
 
-  it('nests a rule under the one thing it is written against', () => {
-    // Camera Ease is not a peer of Camera — it is a thing you add to one — and
-    // the library already says so in its `use rule`. Nothing here is
-    // maintained by hand (`stockRuleTree`).
-    const rows = stockRuleRows();
-    const depthOf = (ability: string) =>
-      rows.find(row => row.rule.ability === ability)?.depth;
+  it('heads each group with the region its rules come from', () => {
+    // The progression's own names, so a learner meets the same grouping here
+    // that the map taught them.
+    open();
 
-    expect(depthOf('Has a Camera')).toBe(0);
-    expect(depthOf('Catches Up Smoothly')).toBe(1);
-    expect(depthOf('Keeps the View Inside')).toBe(1);
+    expect(screen.getByText('Motion')).toBeInTheDocument();
+    expect(screen.getByText('Platformer')).toBeInTheDocument();
+    expect(screen.getByText('Place')).toBeInTheDocument();
   });
 
-  it('leaves a rule with two requirements at the top', () => {
-    // Gravity is written against Physics AND Solid Bodies. Filing it under
-    // either would pick one arbitrarily and say something untrue about the
-    // other.
-    const rows = stockRuleRows();
+  it('puts every rule in exactly one group', () => {
+    // A rule that fell out of the grouping would be a rule nobody can import,
+    // which is a worse failure than an odd heading.
+    const grouped = stockRuleGroups().flatMap(group =>
+      group.rules.map(rule => rule.id),
+    );
 
-    expect(rows.find(row => row.rule.id === 'gravity')?.depth).toBe(0);
+    expect(grouped.sort()).toEqual(STOCK_RULES.map(rule => rule.id).sort());
   });
 
-  it('still shows every rule', () => {
-    // A tree that hid one would be a worse list, not a shorter one.
-    expect(
-      stockRuleRows()
-        .map(row => row.rule.id)
-        .sort(),
-    ).toEqual(STOCK_RULES.map(rule => rule.id).sort());
-  });
+  it('keeps a rule\u2019s add-ons beside it inside a group', () => {
+    // The nesting is gone from the picture and the ORDER is not: Camera's four
+    // adjustments still read as Camera's four, directly under it.
+    const place = stockRuleGroups().find(group => group.region.id === 'place');
+    const ids = place?.rules.map(rule => rule.id) ?? [];
 
-  it('takes the top level from twenty-three rows to twelve', () => {
-    // The point of the change, as a number: what a learner scans before
-    // opening anything.
-    const top = stockRuleRows().filter(row => row.depth === 0);
-
-    expect(STOCK_RULES.length).toBeGreaterThan(20);
-    expect(top.length).toBeLessThan(STOCK_RULES.length / 1.5);
+    expect(ids.indexOf('cameraFollow')).toBe(ids.indexOf('camera') + 1);
+    expect(ids).toContain('cameraConfined');
   });
 });
 
@@ -158,7 +150,7 @@ describe('a rule showing what it does', () => {
   // learner is choosing between. One strip PNG per demo: frame one is the
   // still, and the selected row steps through the rest (specs/RULE_DEMOS.md).
   const rowFor = (ability: string) =>
-    screen.getByRole('button', {name: new RegExp(ability)}).parentElement;
+    screen.getByRole('button', {name: ability});
 
   it('shows a strip for a rule that has one', () => {
     open();

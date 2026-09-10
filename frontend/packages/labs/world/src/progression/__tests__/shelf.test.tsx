@@ -65,9 +65,21 @@ const dialog = (options: {gated: boolean; done?: TileId[]; open?: TileId}) => {
   );
 };
 
-/** The row for a rule, by the ability it leads with. */
+/** The tile for a rule, by the ability it leads with. */
 const row = (ability: string) =>
-  screen.getByRole('button', {name: new RegExp(ability)});
+  screen.getByRole('button', {name: new RegExp(`^${ability}`)});
+
+/**
+ * Whether a rule is offered — which is not the same as whether its tile is
+ * disabled, and stopped being so when the shelf became a grid.
+ *
+ * A locked tile is a CONTROL: pressing it goes to the lesson that grants it,
+ * which is the one useful thing a locked tile can do (specs/PROGRESSION_UI.md).
+ * So what "locked" looks like is the tile saying which lesson earns it, and
+ * `Import` staying disabled because pressing it chose nothing.
+ */
+const offered = (ability: string) =>
+  !/unlocked by/i.test(row(ability).getAttribute('aria-label') ?? '');
 
 describe('an ungated lab', () => {
   it('offers every rule, whatever anybody has done', () => {
@@ -80,20 +92,21 @@ describe('an ungated lab', () => {
 describe('a gated lab', () => {
   it('refuses a rule whose lesson is not done', () => {
     dialog({gated: true});
-    expect(row('Has Gravity')).toBeDisabled();
+    expect(offered('Has Gravity')).toBe(false);
   });
 
   it('offers it once the lesson is done', () => {
     dialog({gated: true, done: ['motion/gravity']});
-    expect(row('Has Gravity')).toBeEnabled();
+    expect(offered('Has Gravity')).toBe(true);
   });
 
   // A row that has been taken away teaches nothing. A row that is there and
   // says which lesson grants it is a reason to go and do that lesson.
   it('shows a locked rule, and says what would unlock it', () => {
+    // On the tile itself, since the tile is what a learner presses to go there.
     dialog({gated: true});
     expect(
-      screen.getByRole('button', {name: 'Unlocked by: Down'}),
+      screen.getByRole('button', {name: 'Has Gravity — unlocked by Down'}),
     ).toBeInTheDocument();
   });
 
@@ -121,11 +134,11 @@ describe('the lesson being done', () => {
   // itself, which is why `shelfKeys` lends a lesson its own unlocks.
   it('lends the rule its own task asks for', () => {
     dialog({gated: true, open: 'memory/score'});
-    expect(row('Keeps Score')).toBeEnabled();
+    expect(offered('Keeps Score')).toBe(true);
   });
 
   it('takes it back when the lesson is not the project', () => {
     dialog({gated: true});
-    expect(row('Keeps Score')).toBeDisabled();
+    expect(offered('Keeps Score')).toBe(false);
   });
 });

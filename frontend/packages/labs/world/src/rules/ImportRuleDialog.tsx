@@ -6,37 +6,35 @@
 // The panel is about the learner's own project — their file names, their rules
 // — and those are theirs, so it fences them off (`data-notranslate`).
 //
-// The same shape as the effect picker, and what a learner needs to choose is
-// the same: a name, a sentence on what the rule does, and — the part specific
-// to rules — which traits it gives an actor. A rule's traits are how it reaches
-// the actors in a world, so "what will I be able to put on things?" is the
-// question a name alone cannot answer.
+// A GRID OF WHAT EACH RULE DOES, under the heading of the part of the map it
+// comes from. Forty-five rules as a column of sentences was four screens of
+// scrolling to answer a question — "what kind of game am I making" — that the
+// progression already answers: Motion, Platformer, Arcade, Puzzle. The grouping
+// is read off the lessons rather than curated (`stockRuleGroups`), so a rule
+// added tomorrow lands in the right place by saying which lesson teaches it.
 //
-// THE DETAIL IS ON THE SELECTED ROW ONLY, and the list grew into that. Every
-// row used to carry four lines — the ability, the sentence, what else it drags
-// in, and what it gives actors — and twenty-three of those is a page nobody
-// scans. What a browsing learner needs is the ability and the sentence; the
-// other two answer "what happens if I take this one", which is a question about
-// the row they have already landed on.
+// THE DETAIL IS UNDER THE GRID, for the chosen tile only. The ability fits on a
+// tile; the sentence, what else the import drags in and what it gives actors do
+// not, and forty-five copies of them is the page nobody scanned.
 //
-// AND IT IS A TREE, nested by what each rule is written against
-// (`stockRuleTree`). Camera Ease is not a peer of Camera — it is a thing you
-// add to one — and saying so takes twenty-three entries down to twelve without
-// anybody maintaining a taxonomy.
+// A LOCKED TILE IS A CONTROL. In a lab that gates its libraries some of these
+// are earned, and the tile says which lesson earns it and goes there when
+// pressed — the same reading the stock actors have (specs/PROGRESSION_UI.md).
 
-import {Button, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {LessonLink} from '../progression/LessonLink';
+import {LessonLink, unlockLesson} from '../progression/LessonLink';
 import {useMaybeProgression} from '../progression/progressionContext';
 
-import {demoFrames, demoUrl, DEMO_SIZE} from './demos';
+import {demoFrames, demoUrl} from './demos';
 import styles from './importRuleDialog.module.css';
 import {stockRequirements} from './importStockRule';
 import {type StockRule} from './stock';
-import {stockRuleRows} from './stockRuleTree';
+import {stockRuleGroups} from './stockRuleGroups';
 
 export interface ImportRuleDialogProps {
   /** Chosen — copy this into the project. */
@@ -45,17 +43,33 @@ export interface ImportRuleDialogProps {
   onCancel: () => void;
 }
 
+/**
+ * How big a demo is drawn HERE, which is not how big it was recorded.
+ *
+ * Two thirds of the strip's own 192 by 128 (`demos/types.DEMO_SIZE`). The
+ * recording is sized for a row that ran the width of a dialog; a grid of
+ * forty-five of them at that size is four screens of scrolling, and at this one
+ * it is a screen and a half. The strip scales with it — the whole picture is a
+ * background sized in these units — so nothing is cropped.
+ */
+const TILE = {width: 128, height: 85};
+
+const TILE_SIZE = {
+  '--demo-width': `${TILE.width}px`,
+  '--demo-height': `${TILE.height}px`,
+} as React.CSSProperties;
+
 export const ImportRuleDialog = ({
   onImport,
   onCancel,
 }: ImportRuleDialogProps) => {
-  // Picking a row selects it; `Import` is what commits. A rule brings the rules
-  // it needs with it, so the row a learner lands on first is rarely the one
-  // they meant once they have read what else comes along.
+  // Picking a tile selects it; `Import` is what commits. A rule brings the
+  // rules it needs with it, so the tile a learner lands on first is rarely the
+  // one they meant once they have read what else comes along.
   const [chosen, setChosen] = useState<StockRule | null>(null);
   // What this learner has unlocked, when the level gates the library at all
-  // (progression/shelf). Every row is SHOWN either way: a locked row that says
-  // which lesson grants it is a reason to go and do that lesson, and a row that
+  // (progression/shelf). Every tile is SHOWN either way: a locked one that says
+  // which lesson grants it is a reason to go and do that lesson, and one that
   // has been taken away teaches nothing.
   const progression = useMaybeProgression();
   const held = (rule: StockRule) =>
@@ -81,115 +95,170 @@ export const ImportRuleDialog = ({
         onClick: onCancel,
       }}
       customContent={
-        <ul className={styles.list}>
-          {stockRuleRows().map(({rule, depth}) => (
-            <li
-              key={rule.id}
-              className={styles.row}
-              // Indented by what it is written against, so an add-on reads as
-              // one. A depth is a number rather than a class because it is
-              // data — a rule three deep is a rule three deep.
-              style={{marginInlineStart: `${depth * 1.25}rem`}}
-            >
-              <Button
-                className={styles.effect}
-                disabled={!held(rule)}
-                // The design system's own colors, so a row reads as the same
-                // kind of thing as every other button on the site — and its
-                // selected state is the one the system already has a look for.
-                variant={chosen?.id === rule.id ? 'contained' : 'outlined'}
-                color="secondary"
-                size="small"
-                fullWidth
-                aria-pressed={chosen?.id === rule.id}
-                onClick={() => setChosen(rule)}
-                onDoubleClick={() => onImport(rule)}
-              >
-                {/* The ability leads: this dialog answers "what should this
-                  world have?", and the rule's own name is what you will see on
-                  its toolbox category once it is in. */}
-                <Typography component="span" variant="label2" color="inherit">
-                  {rule.ability}
+        <div className={styles.body}>
+          <div className={styles.shelf}>
+            {stockRuleGroups().map(({region, rules}) => (
+              <section key={region.id}>
+                <Typography variant="overline1" className={styles.region}>
+                  {region.name}
                 </Typography>
-                <Typography component="span" variant="body4" color="inherit">
-                  {rule.description}
-                </Typography>
-                {demoUrl(rule.id) && (
-                  // What the rule DOES, which no sentence on this row can say
-                  // (specs/RULE_DEMOS.md). One strip PNG: frame one is the
-                  // still every row shows, and a row that is being LOOKED at
-                  // steps through the rest — hovered, focused or selected.
-                  //
-                  // One asset for both states, rather than a still and a GIF
-                  // beside it: two files would be two things to produce, name,
-                  // cache and keep in step, and the pair could drift. And a
-                  // strip can be HELD, which is what `prefers-reduced-motion`
-                  // asks of it and what a GIF has no way to offer.
-                  <span
-                    className={
-                      chosen?.id === rule.id
-                        ? `${styles.demo} ${styles.playing}`
-                        : styles.demo
-                    }
-                    // Custom properties rather than a class per rule: the frame
-                    // count is a fact about the recording, so it comes from the
-                    // demo rather than from a stylesheet that would have to be
-                    // edited every time one was re-recorded.
-                    style={
-                      {
-                        '--demo': `url(${demoUrl(rule.id)})`,
-                        '--frames': demoFrames(rule.id),
-                        '--demo-width': `${DEMO_SIZE.width}px`,
-                        '--demo-height': `${DEMO_SIZE.height}px`,
-                      } as React.CSSProperties
-                    }
-                    // Decoration beside a row that already says what it is in
-                    // words: a screen reader gains nothing from "a box falls".
-                    aria-hidden="true"
-                  />
+                <ul className={styles.grid}>
+                  {rules.map(rule => {
+                    const locked = !held(rule);
+                    const lesson = unlockLesson(progression, {
+                      kind: 'rule',
+                      id: rule.id,
+                    });
+                    const picked = chosen?.id === rule.id;
+                    const demo = demoUrl(rule.id);
+                    return (
+                      <li key={rule.id} className={styles.holder}>
+                        <button
+                          type="button"
+                          className={[
+                            styles.tile,
+                            picked ? styles.tileChosen : '',
+                            locked ? styles.tileLocked : '',
+                          ]
+                            .filter(Boolean)
+                            .join(' ')}
+                          style={TILE_SIZE}
+                          aria-pressed={picked}
+                          aria-label={
+                            locked && lesson
+                              ? `${rule.ability} — unlocked by ${lesson.title}`
+                              : rule.ability
+                          }
+                          // A locked tile GOES SOMEWHERE. The lesson replaces
+                          // this dialog rather than opening over it: two modals
+                          // at once is the thing the accessibility checklist
+                          // says to avoid rather than manage.
+                          onClick={() => {
+                            if (!locked) {
+                              setChosen(rule);
+                              return;
+                            }
+                            if (lesson) {
+                              onCancel();
+                              lesson.open();
+                            }
+                          }}
+                          onDoubleClick={() => !locked && onImport(rule)}
+                        >
+                          {demo ? (
+                            // What the rule DOES, which no sentence on a tile
+                            // can say (specs/RULE_DEMOS.md). One strip PNG:
+                            // frame one is the still every tile shows, and a
+                            // tile being LOOKED at steps through the rest —
+                            // hovered, focused or selected.
+                            //
+                            // Custom properties rather than a class per rule:
+                            // the frame count is a fact about the recording, so
+                            // it comes from the demo rather than from a
+                            // stylesheet that would have to be edited every
+                            // time one was re-recorded.
+                            <span
+                              className={
+                                picked
+                                  ? `${styles.demo} ${styles.playing}`
+                                  : styles.demo
+                              }
+                              style={
+                                {
+                                  '--demo': `url(${demo})`,
+                                  '--frames': demoFrames(rule.id),
+                                } as React.CSSProperties
+                              }
+                              // Decoration beside a tile that already says what
+                              // it is in words: a screen reader gains nothing
+                              // from "a box falls".
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            // A BASE — a rule that does nothing visible on its
+                            // own because something else stands on it. "Notices
+                            // Collisions" answers a question Solid Bodies and
+                            // Collection then act on; "Has a Camera" moves the
+                            // view to wherever something else aimed it. A strip
+                            // of either would be a strip of whichever rule was
+                            // standing on it, so this is drawn as a card
+                            // instead of as a picture that failed to arrive.
+                            <span className={styles.base}>
+                              <Typography variant="body4">
+                                What others are built on
+                              </Typography>
+                            </span>
+                          )}
+                          <Typography
+                            component="span"
+                            variant="label2"
+                            color="inherit"
+                            className={styles.ability}
+                          >
+                            {rule.ability}
+                          </Typography>
+                          {locked && lesson && (
+                            <Typography
+                              component="span"
+                              variant="body4"
+                              className={styles.unlockedBy}
+                            >
+                              {`Unlocked by ${lesson.title}`}
+                            </Typography>
+                          )}
+                        </button>
+                        {locked && (
+                          <span className={styles.lock}>
+                            <FontAwesomeV6Icon
+                              iconName="lock"
+                              iconStyle="solid"
+                            />
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ))}
+          </div>
+          {/* The sentence about the chosen one, what else its import brings,
+              and the traits it gives. A mechanic is written against other
+              mechanics — gravity against collision and motion — and they come
+              with it, so the dialog says so rather than leaving a learner to
+              wonder where the extra files came from. */}
+          <div className={styles.detail}>
+            {chosen ? (
+              <>
+                <Typography variant="body3">{chosen.description}</Typography>
+                {stockRequirements(chosen).length > 0 && (
+                  <Typography variant="body4">
+                    Also adds:{' '}
+                    {stockRequirements(chosen)
+                      .map(dep => dep.ability)
+                      .join(', ')}
+                  </Typography>
                 )}
-                {chosen?.id === rule.id &&
-                  stockRequirements(rule).length > 0 && (
-                    // What else lands in `rules/`. A mechanic is written
-                    // against other mechanics — gravity against collision and
-                    // motion — and they come with it, so the dialog says so
-                    // rather than leaving a learner to wonder where the extra
-                    // files came from.
-                    <Typography
-                      component="span"
-                      variant="body4"
-                      color="inherit"
-                    >
-                      Also adds:{' '}
-                      {stockRequirements(rule)
-                        .map(dep => dep.ability)
-                        .join(', ')}
-                    </Typography>
-                  )}
-                {chosen?.id === rule.id && rule.provides.length > 0 && (
+                {chosen.provides.length > 0 && (
                   // The traits, named. A rule reaches actors through its
                   // traits, so this is what a learner will actually put on
                   // something.
-                  <Typography component="span" variant="body4" color="inherit">
-                    Gives actors: {rule.provides.join(', ')}
+                  <Typography variant="body4">
+                    Gives actors: {chosen.provides.join(', ')}
                   </Typography>
                 )}
-              </Button>
-              {/* Outside the Button, not inside it: a button within a button is
-                  not a thing HTML has. It appears on the chosen row only, with
-                  the rest of the detail, because "what is this for" is a
-                  question about the row you have landed on. */}
-              {(chosen?.id === rule.id || !held(rule)) && (
                 <LessonLink
-                  className={styles.lesson}
-                  unlock={{kind: 'rule', id: rule.id}}
-                  locked={!held(rule)}
+                  unlock={{kind: 'rule', id: chosen.id}}
                   onNavigate={onCancel}
                 />
-              )}
-            </li>
-          ))}
-        </ul>
+              </>
+            ) : (
+              <Typography variant="body4">
+                Pick one to see what it does.
+              </Typography>
+            )}
+          </div>
+        </div>
       }
     />
   );
