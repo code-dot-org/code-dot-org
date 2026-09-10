@@ -26,19 +26,43 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
+// Remove statsig_stable_id from the visible URL (set by code.ai cross-domain
+// navigation). The value has already been consumed server-side by Rails.
+export function stripStableIdParam() {
+  if (typeof window === 'undefined') {
+    return;
+  }
+  let url;
+  try {
+    url = new URL(window.location.href);
+  } catch {
+    return;
+  }
+  if (!url.searchParams.has(STABLE_ID_KEY)) {
+    return;
+  }
+  url.searchParams.delete(STABLE_ID_KEY);
+  window.history.replaceState(window.history.state, '', url.toString());
+}
+
+// Read the cross-domain stable ID passed from code.ai via a data attribute
+// set by Rails in application.html.haml.
+function getParamStableId() {
+  if (typeof document === 'undefined') {
+    return null;
+  }
+  const el = document.querySelector('script[data-statsig-param-id]');
+  return el ? el.dataset.statsigParamId : null;
+}
+
 export function findOrCreateStableId() {
+  stripStableIdParam();
+
+  const paramId = getParamStableId();
   const cookieId = cookies.get(STABLE_ID_KEY);
   const localStorageId = localStorage.getItem(LOCAL_STORAGE_KEY);
-  let stableId;
-
-  if (cookieId) {
-    // Prefer the cookie value if it exists
-    stableId = cookieId;
-  } else if (localStorageId) {
-    stableId = localStorageId;
-  } else {
-    stableId = createUuid();
-  }
+  // Prefer cross-domain param, then cookie, then localStorage, then new UUID.
+  const stableId = paramId || cookieId || localStorageId || createUuid();
 
   if (consentAllowsStatsigCookie()) {
     cookies.set(STABLE_ID_KEY, stableId, COOKIE_OPTIONS);

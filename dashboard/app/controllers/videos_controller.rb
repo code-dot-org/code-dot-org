@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+  include StableIdRedirect
+
   before_action :authenticate_user!, except: [:test]
   before_action :require_levelbuilder_mode, except: [:test, :index]
   check_authorization except: [:test]
@@ -13,7 +15,7 @@ class VideosController < ApplicationController
 
   # This page is currently deprecated, so let's redirect to related content.
   def test
-    redirect_to CDO.code_org_url('/educate/it')
+    redirect_to_code_org('/educate/it')
   end
 
   def index

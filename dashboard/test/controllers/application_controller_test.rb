@@ -218,6 +218,73 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'initialize_statsig_stable_id' do
+    it 'does not set cookie from URL param (cookie is set client-side after consent)' do
+      uuid = '550e8400-e29b-41d4-a716-446655440000'
+      get root_path, params: {statsig_stable_id: uuid}
+      assert_nil response.cookies['statsig_stable_id']
+    end
+
+    it 'accepts valid UUID param into session' do
+      uuid = '550e8400-e29b-41d4-a716-446655440000'
+      get root_path, params: {statsig_stable_id: uuid}
+      assert_equal uuid, session[:statsig_stable_id]
+    end
+
+    it 'accepts uppercase UUIDs into session' do
+      uuid = '550E8400-E29B-41D4-A716-446655440000'
+      get root_path, params: {statsig_stable_id: uuid}
+      assert_equal uuid, session[:statsig_stable_id]
+    end
+
+    it 'ignores invalid param and generates a session ID' do
+      get root_path, params: {statsig_stable_id: 'not-a-uuid'}
+      assert_match ApplicationController::UUID_REGEX, session[:statsig_stable_id]
+    end
+
+    it 'ignores empty param and generates a session ID' do
+      get root_path, params: {statsig_stable_id: ''}
+      assert_match ApplicationController::UUID_REGEX, session[:statsig_stable_id]
+    end
+
+    it 'param overrides existing cookie in session' do
+      old_uuid = '00000000-0000-0000-0000-000000000001'
+      new_uuid = '00000000-0000-0000-0000-000000000002'
+      cookies[:statsig_stable_id] = old_uuid
+      get root_path, params: {statsig_stable_id: new_uuid}
+      assert_equal new_uuid, session[:statsig_stable_id]
+    end
+
+    it 'preserves existing cookie value in session when no param' do
+      uuid = '550e8400-e29b-41d4-a716-446655440000'
+      cookies[:statsig_stable_id] = uuid
+      get root_path
+      assert_equal uuid, session[:statsig_stable_id]
+    end
+
+    it 'rejects script injection attempts' do
+      get root_path, params: {statsig_stable_id: '<script>alert(1)</script>'}
+      # Session should have a generated UUID, not the injected string
+      refute_equal '<script>alert(1)</script>', session[:statsig_stable_id]
+      assert_match ApplicationController::UUID_REGEX, session[:statsig_stable_id]
+    end
+
+    it 'emits data attribute in rendered page for valid param' do
+      uuid = '550e8400-e29b-41d4-a716-446655440000'
+      user = create(:teacher)
+      sign_in user
+      get home_teacher_dashboard_path, params: {statsig_stable_id: uuid}
+      assert_includes response.body, "data-statsig-param-id=\"#{uuid}\""
+    end
+
+    it 'does not emit data attribute in rendered page for invalid param' do
+      user = create(:teacher)
+      sign_in user
+      get home_teacher_dashboard_path, params: {statsig_stable_id: 'bad'}
+      refute_includes response.body, 'data-statsig-param-id'
+    end
+  end
+
   describe 'exception handling' do
     it 'gracefully handles UnsafeRedirectErrors' do
       Rails.logger.expects(:warn).once
