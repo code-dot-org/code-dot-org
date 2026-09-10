@@ -6,6 +6,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
 import aiBot2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-2.png';
@@ -24,6 +26,7 @@ import {
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
+import {ImageSafetyError} from '../ai/images/imageSafety';
 import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
@@ -218,6 +221,16 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const canUsePrevious = !!existing;
 
   const generate = useCallback(async () => {
+    // true attaches the project context (level path, app) for per-level
+    // breakdowns.
+    analyticsReporter.sendEvent(
+      EVENTS.HOAI2026_IMAGE_PROMPT,
+      {
+        promptText: prompt.trim(),
+        imageType,
+      },
+      true
+    );
     onGenerateStart?.();
     setMode('generating');
     setError(null);
@@ -257,12 +270,23 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       const result = await generateImage(prompt.trim(), options);
       // Apply immediately; the caller flips back to the summary view.
       await onAccept(result, create ? newImageName() : undefined);
-    } catch {
-      setError(
-        makingSet
-          ? "Couldn't finish the character. Try again."
-          : "Couldn't generate the image. Try again."
-      );
+    } catch (e) {
+      if (e instanceof ImageSafetyError) {
+        setError(
+          e.phase === 'prompt'
+            ? "This prompt isn't appropriate for class. Try a different idea."
+            : "The image didn't pass our safety check. Try a different prompt."
+        );
+      } else {
+        // The message stays generic; the cause (judge failure, gateway
+        // error, no image, upload failure) goes to the console.
+        console.error('Image generation failed:', e);
+        setError(
+          makingSet
+            ? "Couldn't finish the character. Try again."
+            : "Couldn't generate the image. Try again."
+        );
+      }
       setMode('prompt');
       setProgress(null);
     }

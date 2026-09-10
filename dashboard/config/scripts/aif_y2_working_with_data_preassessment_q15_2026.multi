@@ -1,0 +1,26 @@
+name 'aif-y2-working-with-data-preassessment-q15-2026'
+
+wrong 'There is a strong relationship between the two variables.'
+wrong 'There isn\'t a strong relationship between the two variables.'
+right 'The more hours someone spends on their phone, the less time they spend reading books.'
+wrong 'The more hours someone spends on their phone, the more time they spend reading books.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A survey asked people about how many hours they spend on their phone and how many hours they spend reading books. Which **best** describes the relationship the data shows between these two variables?
+
+| Daily Hours on Phone | Daily Hours Reading Books |
+|---|---|
+| 5 | 1 |
+| 4 | 1 |
+| 4 | 2 |
+| 3 | 3 | 
+| 3 | 3 |
+| 2 | 4 |
+| 2 | 4 |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Data Research Project
+MARKDOWN

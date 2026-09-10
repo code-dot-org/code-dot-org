@@ -1,0 +1,11 @@
+name 'HoAI26-Choice-WorldTab'
+display_name 'World Tab'
+description "Place your sprites in your world"
+uses_lab2
+
+sublevels
+level 'HoAI26-Playtest1-Platform-WorldTab'
+level 'HoAI26-Playtest1-Story-Timing'
+
+
+navigation_type 'next_sublevel'

@@ -1,0 +1,22 @@
+name 'aif-y2-working-with-data-preassessment-q9-2026'
+
+right '`plt.bar`'
+wrong '`plt.scatter`'
+wrong '`plt.col`'
+wrong '`plt.color`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which `matplotlib` plotting function is most appropriate for visualizing the following data?
+
+| Eye Color | Students |
+|---|---|
+| Blue | 5 |
+| Brown | 15 |
+| Green | 15 |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Visualizing Data (Part 1)
+MARKDOWN

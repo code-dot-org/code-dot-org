@@ -1,3 +1,5 @@
+import {type GeneratedFile} from 'ai';
+
 import {generateText} from '@cdo/apps/aiGateway';
 import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {
@@ -7,11 +9,13 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
+import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
 import {
   ASSUMED_BLOCK,
   ImageSize,
   MODEL_OUTPUT_PX,
   SINGLE_IMAGE_SIZE,
+  STORED_MAX_PX,
   getImageModel,
   imageProviderOptions,
 } from './modelHelpers';
@@ -109,6 +113,8 @@ export interface GeneratedImageResult {
   mediaType: string;
   /** Set when pixel-style output was normalized: physical px per art pixel. */
   pixelGridSize?: number;
+  /** The image is already cropped to content: load-time trimming skips it. */
+  trimmed?: boolean;
   /** How this image was made, to record on its animation. */
   generation: ImageGenerationMetadata;
   /**
@@ -124,11 +130,10 @@ export interface GeneratedImageResult {
   };
 }
 
-/** The model's own output for one request, before any processing. */
-export interface RawImage {
-  uint8Array: Uint8Array;
-  mediaType: string;
-}
+// The model's own output for one request, before any processing. The SDK
+// file carries the gateway's bytes and base64 as lazy views of each other,
+// so consumers pay only for the form they read.
+export type RawImage = GeneratedFile;
 
 export interface ImageRequest {
   seed: number;
@@ -152,34 +157,37 @@ export async function requestImage(
   request: ImageRequest
 ): Promise<RawImage> {
   const references = request.references || [];
-  const {files} = await generateText({
-    model: request.model || getImageModel(),
-    messages: [
-      {
-        role: 'user',
-        content: references.length
-          ? [
-              ...references.map(image => ({type: 'image' as const, image})),
-              {type: 'text' as const, text},
-            ]
-          : text,
-      },
-    ],
-    seed: request.seed,
-    ...(request.temperature !== undefined && {
-      temperature: request.temperature,
-    }),
-    providerOptions: imageProviderOptions(
-      request.imageSize || SINGLE_IMAGE_SIZE
-    ),
-  });
+  const {files} = await generateText(
+    {
+      model: request.model || getImageModel(),
+      messages: [
+        {
+          role: 'user',
+          content: references.length
+            ? [
+                ...references.map(image => ({type: 'image' as const, image})),
+                {type: 'text' as const, text},
+              ]
+            : text,
+        },
+      ],
+      seed: request.seed,
+      ...(request.temperature !== undefined && {
+        temperature: request.temperature,
+      }),
+      providerOptions: imageProviderOptions(
+        request.imageSize || SINGLE_IMAGE_SIZE
+      ),
+    },
+    {phase: 'generation'}
+  );
 
   const images = files.filter(f => f.mediaType.startsWith('image/'));
   const imageFile = images[images.length - 1];
   if (!imageFile) {
     throw new Error('No image was generated');
   }
-  return {uint8Array: imageFile.uint8Array, mediaType: imageFile.mediaType};
+  return imageFile;
 }
 
 export function rawImageToBlob(raw: RawImage): Blob {
@@ -188,13 +196,41 @@ export function rawImageToBlob(raw: RawImage): Blob {
   });
 }
 
-export function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
-  let binary = '';
-  // Chunked: spreading a megabyte-scale array overflows the argument limit.
-  for (let i = 0; i < bytes.length; i += 32768) {
-    binary += String.fromCharCode(...bytes.subarray(i, i + 32768));
+/**
+ * Downscale so the longest side fits maxPx; returns the input unchanged when
+ * it already does. High-quality filter: downscaling the model's 1K render is
+ * what anti-aliases the stored image.
+ */
+async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
+  try {
+    const probe = await createImageBitmap(blob);
+    const scale = maxPx / Math.max(probe.width, probe.height);
+    if (scale >= 1) {
+      probe.close();
+      return blob;
+    }
+    const width = Math.max(1, Math.round(probe.width * scale));
+    const height = Math.max(1, Math.round(probe.height * scale));
+    probe.close();
+    const resized = await createImageBitmap(blob, {
+      resizeWidth: width,
+      resizeHeight: height,
+      resizeQuality: 'high',
+    });
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    canvas.getContext('2d')?.drawImage(resized, 0, 0);
+    resized.close();
+    const out = await new Promise<Blob | null>(resolve =>
+      canvas.toBlob(resolve, 'image/png')
+    );
+    return out || blob;
+  } catch {
+    // e.g. a browser without createImageBitmap resize options: store the
+    // full-size image, exactly the pre-downscale behavior.
+    return blob;
   }
-  return `data:${mediaType};base64,${btoa(binary)}`;
 }
 
 /**
@@ -217,16 +253,33 @@ export async function generateImage(
     fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
   }
 
-  const raw = await requestImage(
-    options.inputImageDataURI
-      ? `Modify the provided image: ${fullPrompt}`
-      : fullPrompt,
-    {
-      seed,
-      temperature: options.temperature,
-      references: options.inputImageDataURI ? [options.inputImageDataURI] : [],
-    }
-  );
+  // The prompt judge and the image model run concurrently — generation is
+  // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks
+  // a generation failure, and its image is discarded unseen.
+  const [promptVerdict, rawResult] = await Promise.allSettled([
+    checkPromptSafety(prompt),
+    requestImage(
+      options.inputImageDataURI
+        ? `Modify the provided image: ${fullPrompt}`
+        : fullPrompt,
+      {
+        seed,
+        temperature: options.temperature,
+        references: options.inputImageDataURI
+          ? [options.inputImageDataURI]
+          : [],
+      }
+    ),
+  ]);
+  if (promptVerdict.status === 'rejected') {
+    throw promptVerdict.reason;
+  }
+  if (rawResult.status === 'rejected') {
+    throw rawResult.reason;
+  }
+  const raw = rawResult.value;
+  // Judge the pixels while the local pipeline crops and downscales them.
+  const imageVerdict = markHandled(checkImageSafety(raw));
 
   const generation: ImageGenerationMetadata = {
     prompt,
@@ -247,6 +300,7 @@ export async function generateImage(
     style !== 'pixel' &&
     raw.mediaType === 'image/jpeg'
   ) {
+    await imageVerdict;
     return {
       filename: `generated-${createUuid()}.jpg`,
       uint8Array: raw.uint8Array,
@@ -263,8 +317,13 @@ export async function generateImage(
   if (imageType === 'sprite' || imageType === 'block') {
     blob = await removeBackground(blob, {soft: style === 'smooth'});
   }
-  if (imageType === 'block') {
+  // Smooth sprites are cropped like blocks always were, so the stored image
+  // is what the runtime trim pass would have made anyway (pixel sprites
+  // keep their edge-aligned grid; cropping would shift it).
+  let trimmed = false;
+  if (imageType === 'block' || (imageType === 'sprite' && style !== 'pixel')) {
     blob = await cropToContent(blob);
+    trimmed = true;
   }
   if (imageType === 'background') {
     blob = await flattenOntoGround(blob);
@@ -276,12 +335,19 @@ export async function generateImage(
     });
     blob = normalized.blob;
     pixelGridSize = normalized.pixelGridSize;
+  } else {
+    const maxPx = STORED_MAX_PX[imageType];
+    if (maxPx) {
+      blob = await downscaleToFit(blob, maxPx);
+    }
   }
+  await imageVerdict;
   return {
     filename: `generated-${createUuid()}.png`,
     uint8Array: new Uint8Array(await blob.arrayBuffer()),
     mediaType: 'image/png',
     pixelGridSize,
+    trimmed,
     generation,
   };
 }

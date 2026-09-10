@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-postassessment-q4-2026'
+
+wrong '10 heads, 10 tails'
+right '18 heads, 2 tails'
+wrong '10 heads, 0 tails'
+wrong '12 heads, 8 tails'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A fair coin has an equal chance of landing "heads" or "tails." Which of these choices represents an anomalous frequency distribution after flipping a fair coin 20 times?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Analyzing Categorical Data
+MARKDOWN

@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:40:50.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’d like to compare the bus wait times between both buses. The code currently prints the minimum, maximum, and range for each bus.\r\n\r\n**☑️ Do This:**\r\n\r\n- Compute the mean for Bus 1 using `statistics.mean`, then print the result.\r\n- Compute the standard deviation for Bus 1 using `statistics.stdev`, then print the result.\r\n- Compute the mean for Bus 2 using `statistics.mean`, then print the result.\r\n- Compute the standard deviation for Bus 2 using `statistics.stdev`, then print the result.\r\n\r\n**💻 Coding Tip**\r\n\r\nYou can use `round` to round your results to a certain number of decimal points. For example, the following code rounds `value` to two decimal points.\r\n```\r\nvalue = round(value, 2)\r\n```\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\nimport statistics\n\nfile_1 = open(\"bus_1.csv\")\nreader_1 = csv.DictReader(file_1)\nbus_1_times = []\nfor row in reader_1:\n    time = float(row[\"wait_time\"])\n    bus_1_times.append(time)\nfile_1.close()\n\nfile_2 = open(\"bus_2.csv\")\nreader_2 = csv.DictReader(file_2)\nbus_2_times = []\nfor row in reader_2:\n    time = float(row[\"wait_time\"])\n    bus_2_times.append(time)\nfile_2.close()\n\nbus_1_min = min(bus_1_times)\nbus_1_max = max(bus_1_times)\nbus_1_range = round(bus_1_max - bus_1_min, 2)\n\nprint(f\"Bus 1 min: {bus_1_min}\")\nprint(f\"Bus 1 max: {bus_1_max}\")\nprint(f\"Bus 1 range: {bus_1_range}\")\n\n# TODO 1: Compute and print the mean value for Bus 1\n# TODO 2: Compute and print the standard deviation for Bus 1\n\nbus_2_min = min(bus_2_times)\nbus_2_max = max(bus_2_times)\nbus_2_range = round(bus_2_max - bus_2_min, 2)\n\nprint(f\"Bus 2 min: {bus_2_min}\")\nprint(f\"Bus 2 max: {bus_2_max}\")\nprint(f\"Bus 2 range: {bus_2_range}\")\n\n# TODO 3: Compute and print the mean value for Bus 2\n# TODO 4: Compute and print the standard deviation for Bus 2",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "bus_1.csv",
+          "contents": "day,wait_time\n1,1.5\n2,17.2\n3,3.8\n4,19.6\n5,2.1\n6,15.4\n7,4.7\n8,0.8\n9,18.9\n10,3.2\n11,16.7\n12,2.6\n13,14.8\n14,4.1\n15,1.9",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "bus_2.csv",
+          "contents": "day,wait_time\n1,11.6\n2,12.1\n3,11.8\n4,12.4\n5,11.5\n6,12.2\n7,11.9\n8,12.0\n9,11.7\n10,12.3\n11,11.6\n12,12.1\n13,11.8\n14,12.2\n15,11.9",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nNcQ=\n",
+    "display_name": "Bus Wait Times",
+    "bubble_choice_description": "Compare two buses to see which one has a shorter wait.",
+    "thumbnail_url": "https://images.code.org/ba8bfe42decf2eadc68ee219f613933f-school-bus.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:46:25 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:48:28 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:48:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:48:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:49:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:49:39 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:56:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
