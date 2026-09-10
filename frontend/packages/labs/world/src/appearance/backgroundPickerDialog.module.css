@@ -1,0 +1,109 @@
+/* The project's backdrops, as a shelf. The dialog itself — surface, width,
+   padding, the button row — is the design system's `Dialog`.
+
+   Deliberately the same measurements as the stock shelf beside it
+   (`backgroundLibraryDialog.module.css`): the two grids hold the same pictures
+   one import apart, and a backdrop that changed size and shape on the way into
+   the project would read as a different picture. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* One wrapped run of thumbnails: the ways to get another backdrop, then every
+   backdrop the project has.
+
+   The tile's size is said once, here, because the thumbnail has to repeat it —
+   see `.thumb`. */
+.shelf {
+  --tile: 96px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  max-height: 50vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: var(--tile);
+  height: var(--tile);
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: #101020;
+  cursor: pointer;
+}
+
+.tile:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+/* The ways to get another backdrop, drawn as tiles so they are where the eye
+   already is — outlined rather than filled, because they are not pictures. */
+.action {
+  flex-direction: column;
+  gap: 4px;
+  border-color: var(--borders-neutral-primary, #d4dae1);
+  border-style: dashed;
+  background-color: transparent;
+  color: var(--text-neutral-primary);
+}
+
+.action:hover {
+  border-style: solid;
+}
+
+/* Drawn as the game draws it: stretched to fill, not fitted — the same choice
+   the stock shelf makes, for the same reason. A backdrop is spread over the
+   viewport whatever shape its file is, so a letterboxed thumbnail would be
+   promising something the world does not do.
+
+   IN PIXELS, AND UNDER TWO CLASSES, both to win a fight. The design system's
+   `Dialog` puts custom content inside a section that styles every `img` in it
+   to a fixed 260 by 138 — a sensible size for the picture a dialog is ABOUT,
+   and a disaster for a grid of them, which is what this looked like: every
+   backdrop overflowing its 96-pixel tile and overlapping its neighbours. That
+   rule is a class and a type, so a plain `.thumb` loses to it and `.shelf
+   .thumb` beats it; `100%` of a flex item whose own minimum size is the
+   picture's is not a size either, so the tile's own measurement is repeated
+   here rather than referred to. */
+.shelf .thumb {
+  display: block;
+  width: var(--tile);
+  height: var(--tile);
+  min-width: 0;
+  object-fit: fill;
+  border-radius: 2px;
+}
+
+/* A backdrop whose bytes are not there to draw — a file the project holds as
+   contents rather than a URL. The tile stays, because it is still the file the
+   learner is looking for. */
+.blank {
+  color: #8a8fa3;
+  font-size: 24px;
+}
+
+.empty {
+  padding: 0.5rem 0;
+  color: var(--text-neutral-secondary);
+}

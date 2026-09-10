@@ -27,6 +27,7 @@ const SOURCE: MultiFileSource = {
     f1: {id: 'f1', name: 'rules', parentId: '0', open: true},
     f2: {id: 'f2', name: 'actors', parentId: '0', open: true},
     f3: {id: 'f3', name: 'sprites', parentId: '0', open: true},
+    f4: {id: 'f4', name: 'backgrounds', parentId: '0', open: true},
   },
   files: {
     a: {
@@ -66,6 +67,18 @@ const SOURCE: MultiFileSource = {
       language: 'rule',
       contents: referenceToStock('solid'),
       folderId: 'f1',
+    },
+    e: {
+      id: 'e',
+      // A backdrop, which is bytes on a URL rather than text: what makes it a
+      // backdrop is the folder and nothing else (`appearance/backgroundsFolder`).
+      name: 'cave.png',
+      language: 'png',
+      // A picture's bytes are on the URL; the text half of a file is empty,
+      // which is how every imported backdrop is written (`importStock`).
+      contents: '',
+      url: 'data:image/png;base64,cave',
+      folderId: 'f4',
     },
   },
   openFiles: ['a'],
@@ -140,6 +153,19 @@ beforeEach(() => {
   promptForName.mockResolvedValue('Chaser');
 });
 
+/** Every folder button — a project's folders are its kinds. */
+const FOLDERS = [
+  'Worlds',
+  'Actors',
+  'Rules',
+  'Sprites',
+  'Backgrounds',
+  'Animations',
+  'Sounds',
+  'Effects',
+  'Maps',
+];
+
 const openMenu = (name: string) => {
   render(<FileMenus />);
   fireEvent.click(screen.getByRole('button', {name}));
@@ -152,17 +178,7 @@ describe('the file menus', () => {
     // Nine, because a project's folders are its kinds — and the two this
     // project lacks are still offered, since a shelf makes the folder it
     // writes into.
-    for (const label of [
-      'Worlds',
-      'Actors',
-      'Rules',
-      'Sprites',
-      'Backgrounds',
-      'Animations',
-      'Sounds',
-      'Effects',
-      'Maps',
-    ]) {
+    for (const label of FOLDERS) {
       expect(screen.getByRole('button', {name: label}), label).toBeTruthy();
     }
   });
@@ -397,7 +413,37 @@ describe('the file menus', () => {
     );
   });
 
-  it.each(['Sprites', 'Animations', 'Actors'])(
+  it('reads the backgrounds as a shelf of the pictures themselves', () => {
+    // A backdrop is a PLACE, and "cave.png" versus "court.png" is a worse
+    // question than looking at the two (`appearance/BackgroundPickerDialog`).
+    openMenu('Backgrounds');
+
+    expect(screen.getByRole('dialog')).toBeTruthy();
+    const tile = screen.getByRole('button', {name: 'Open Cave'});
+    expect(tile.querySelector('img')?.getAttribute('src')).toBe(
+      'data:image/png;base64,cave',
+    );
+    fireEvent.click(tile);
+    expect(activateFile).toHaveBeenCalledWith('e');
+  });
+
+  it('makes a backdrop as bytes, the way it makes a sprite', async () => {
+    promptForName.mockResolvedValueOnce('Cavern');
+    openMenu('Backgrounds');
+
+    fireEvent.click(screen.getByRole('button', {name: 'New'}));
+    await vi.waitFor(() =>
+      expect(createExternalFile).toHaveBeenCalledWith(
+        expect.objectContaining({
+          fileName: 'cavern.png',
+          folderId: 'f4',
+          mimeType: 'image/png',
+        }),
+      ),
+    );
+  });
+
+  it.each(['Sprites', 'Backgrounds', 'Animations', 'Actors'])(
     'gets the %s grid out of the way of the shelf it opens',
     async grid => {
       // TWO FOCUS TRAPS. The grid holds one and so does the dialog its Import

@@ -24,6 +24,7 @@
 
 import {requestActorImport} from '../actors/actorImport';
 import {requestAppearanceImport} from '../appearance/appearanceImport';
+import {BACKGROUNDS_FOLDER} from '../appearance/backgroundsFolder';
 import {requestEffectImport} from '../blockly/effectImport';
 import {requestRuleImport} from '../blockly/ruleImport';
 import {requestSoundImport} from '../sound/soundImport';
@@ -46,6 +47,13 @@ export const SPRITES_FOLDER = 'sprites';
  * two animations of one sprite apart is the motion (`AnimationPickerDialog`).
  */
 export const ANIMATIONS_FOLDER = 'animations';
+
+// The backdrops' folder is the fourth of these and is NOT declared here: it is
+// a rule about which images are backdrops rather than a path, and it is read by
+// the dropdowns and the importer as well as by this menu
+// (`appearance/backgroundsFolder`). Its button opens a shelf of them
+// (`appearance/BackgroundPickerDialog`).
+export {BACKGROUNDS_FOLDER};
 
 /** One kind of file a folder's `New` can make. */
 export interface Makeable {
@@ -132,7 +140,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     uploads: true,
   },
   {
-    folder: 'backgrounds',
+    folder: BACKGROUNDS_FOLDER,
     label: 'Backgrounds',
     icon: 'mountain-sun',
     makes: [{label: 'New background', extension: 'png', placeholder: 'Cave'}],

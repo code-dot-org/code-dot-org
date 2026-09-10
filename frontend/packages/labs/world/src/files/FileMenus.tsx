@@ -67,6 +67,7 @@ import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {AnimationPickerDialog} from '../animationEditor/AnimationPickerDialog';
 import {parseAnim} from '../animationEditor/animDocument';
 import {SpritePickerDialog} from '../animationEditor/SpritePickerDialog';
+import {BackgroundPickerDialog} from '../appearance/BackgroundPickerDialog';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {label} from '../blockly/label';
 import {authoredName} from '../blockly/projectModules';
@@ -78,6 +79,7 @@ import styles from './fileMenus.module.css';
 import {
   ACTORS_FOLDER,
   ANIMATIONS_FOLDER,
+  BACKGROUNDS_FOLDER,
   FOLDER_MENUS,
   SPRITES_FOLDER,
   type FolderMenu,
@@ -133,6 +135,14 @@ export const FileMenus = () => {
   const [painting, setPainting] = useState(false);
   /** …and whether the animations are, which is the same grid again, running. */
   const [playing, setPlaying] = useState(false);
+  /**
+   * …and whether the backdrops are.
+   *
+   * The same reading once more, at the size the stock shelf shows the same
+   * pictures at: a backdrop is a place, and a place is recognized rather than
+   * read (`appearance/BackgroundPickerDialog`).
+   */
+  const [staging, setStaging] = useState(false);
   const [row, setRow] = useState<RowMenu>();
   // The tolerant form: this renders inside the lab, which provides a theme,
   // and in a bare tree in tests, which does not — and a menu is not worth a
@@ -234,6 +244,7 @@ export const FileMenus = () => {
     setPicking(false);
     setPainting(false);
     setPlaying(false);
+    setStaging(false);
     close();
     await new Promise(resolve => setTimeout(resolve, 0));
   }, [close]);
@@ -531,9 +542,34 @@ export const FileMenus = () => {
     [playing, filesIn],
   );
 
+  /**
+   * The backdrops, as the shelf needs them.
+   *
+   * The `url` and not the decoded image: a backdrop is drawn with an `<img>`
+   * stretched over the tile, the way the world stretches it over the viewport,
+   * and every image file in a project carries the URL its bytes are at
+   * (`appearance/useProjectImages` reads the same field).
+   */
+  const backgroundTiles = useMemo(
+    () =>
+      staging
+        ? filesIn(BACKGROUNDS_FOLDER).map(({file, name}) => ({
+            fileId: file.id,
+            name,
+            url: file.url,
+          }))
+        : [],
+    [staging, filesIn],
+  );
+
   /** The folder menu the animations' grid stands in for. */
   const animationsMenu = FOLDER_MENUS.find(
     menu => menu.folder === ANIMATIONS_FOLDER,
+  ) as FolderMenu;
+
+  /** …and the one the backdrops' shelf stands in for. */
+  const backgroundsMenu = FOLDER_MENUS.find(
+    menu => menu.folder === BACKGROUNDS_FOLDER,
   ) as FolderMenu;
 
   /** The folder menu the sprites' palette stands in for. */
@@ -597,6 +633,10 @@ export const FileMenus = () => {
               }
               if (menu.folder === ANIMATIONS_FOLDER) {
                 setPlaying(true);
+                return;
+              }
+              if (menu.folder === BACKGROUNDS_FOLDER) {
+                setStaging(true);
                 return;
               }
               setOpen(
@@ -740,6 +780,27 @@ export const FileMenus = () => {
           onNew={() => void make(animationsMenu, animationsMenu.makes[0])}
           onImport={() => void importInto(animationsMenu)}
           onCancel={() => setPlaying(false)}
+        />
+      )}
+      {staging && (
+        <BackgroundPickerDialog
+          backgrounds={backgroundTiles}
+          onOpen={fileId => {
+            ops.activateFile(fileId);
+            setStaging(false);
+          }}
+          onImport={() => void importInto(backgroundsMenu)}
+          onNew={
+            isReadOnly
+              ? undefined
+              : () => void make(backgroundsMenu, backgroundsMenu.makes[0])
+          }
+          onUpload={
+            isReadOnly || !uploading.enabled
+              ? undefined
+              : () => void uploadInto(backgroundsMenu)
+          }
+          onCancel={() => setStaging(false)}
         />
       )}
       {painting && (
