@@ -10,8 +10,8 @@ const question = (
 ): QuizBuilderQuestion => ({
   id: 1,
   type: 'MultipleChoiceQuestion',
-  questionName: 'Bias in a hiring model',
-  stem: 'Which outcome is most concerning?',
+  questionName: 'JavaScript variable fundamentals',
+  stem: 'What is a variable in JavaScript?',
   choices: [],
   correctChoiceId: null,
   explanation: null,
@@ -58,19 +58,21 @@ describe('QuizBuilderWorkspace', () => {
         question(),
         question({
           id: 2,
-          questionName: 'Reducing harm',
-          stem: 'Which practices?',
+          questionName: 'MVC frameworks',
+          stem: 'Which MVC framework is most popular?',
         }),
       ],
     });
 
     expect(screen.getByText('2 questions')).toBeInTheDocument();
     expect(screen.getAllByText('Multiple choice')).toHaveLength(2);
-    expect(screen.getByText('Bias in a hiring model')).toBeInTheDocument();
     expect(
-      screen.getByText('Which outcome is most concerning?')
+      screen.getByText('JavaScript variable fundamentals')
     ).toBeInTheDocument();
-    expect(screen.getByText('Reducing harm')).toBeInTheDocument();
+    expect(
+      screen.getByText('What is a variable in JavaScript?')
+    ).toBeInTheDocument();
+    expect(screen.getByText('MVC frameworks')).toBeInTheDocument();
   });
 
   it('calls createQuestion when the create button is clicked', () => {
