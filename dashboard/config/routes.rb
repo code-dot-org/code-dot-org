@@ -779,6 +779,7 @@ Dashboard::Application.routes.draw do
           get :find_students
           get :lookup_section
           post :lookup_section
+          post :set_section_picture_passwords
           post :undelete_section
         end
       end
