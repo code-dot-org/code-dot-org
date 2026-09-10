@@ -11,7 +11,7 @@ import {describe, expect, it, vi} from 'vitest';
 import {demoUrl} from '../demos';
 import {ImportRuleDialog} from '../ImportRuleDialog';
 import {STOCK_RULES} from '../stock';
-import {stockRuleGroups} from '../stockRuleGroups';
+import {BASE_RULES, stockRuleGroups} from '../stockRuleGroups';
 
 const open = (
   props: Partial<React.ComponentProps<typeof ImportRuleDialog>> = {},
@@ -23,7 +23,7 @@ describe('ImportRuleDialog', () => {
   // and asks the accessibility tree about each, and the library keeps growing
   // — it went over the default the week Turns and History were added, on a
   // machine running the rest of the suite beside it.
-  it('shows every stock rule as a tile', {timeout: 20000}, () => {
+  it('shows every rule it offers as a tile', {timeout: 20000}, () => {
     open();
 
     // One tile each, named by the ability it adds: the dialog answers "what
@@ -31,10 +31,34 @@ describe('ImportRuleDialog', () => {
     // toolbox category once it is in.
     for (const rule of STOCK_RULES) {
       expect(
-        screen.getAllByRole('button', {name: rule.ability}).length,
+        screen.queryAllByRole('button', {name: rule.ability}).length,
         rule.ability,
-      ).toBe(1);
+      ).toBe(BASE_RULES.includes(rule.id) ? 0 : 1);
     }
+  });
+
+  it('does not offer a rule nobody would reach for', () => {
+    // The bases arrive with whatever needs them and do nothing on their own,
+    // so a tile for one is a tile with nothing to show and nothing to press
+    // for (`stockRuleGroups.BASE_RULES`).
+    open();
+
+    expect(
+      screen.queryByRole('button', {name: 'Notices Collisions'}),
+    ).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Has a Camera'})).toBeNull();
+  });
+
+  it('still says a base is coming, on the rule that brings it', () => {
+    // Not offering one is not hiding it: Gravity is written against Collisions
+    // and the file lands in `rules/` either way, so the dialog says so.
+    open();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Has Gravity'}));
+
+    expect(
+      screen.getByText(/Also adds:.*Notices Collisions/),
+    ).toBeInTheDocument();
   });
 
   it('is a dialog, named and described, not an alert', () => {
@@ -125,24 +149,36 @@ describe('the shelf as a grid, grouped by region', () => {
     expect(screen.getByText('Place')).toBeInTheDocument();
   });
 
-  it('puts every rule in exactly one group', () => {
+  it('puts every offered rule in exactly one group', () => {
     // A rule that fell out of the grouping would be a rule nobody can import,
-    // which is a worse failure than an odd heading.
+    // which is a worse failure than an odd heading. The bases are out of it on
+    // purpose, and they are the only ones.
     const grouped = stockRuleGroups().flatMap(group =>
       group.rules.map(rule => rule.id),
     );
 
-    expect(grouped.sort()).toEqual(STOCK_RULES.map(rule => rule.id).sort());
+    expect(grouped.sort()).toEqual(
+      STOCK_RULES.map(rule => rule.id)
+        .filter(id => !BASE_RULES.includes(id))
+        .sort(),
+    );
   });
 
-  it('keeps a rule\u2019s add-ons beside it inside a group', () => {
+  it('keeps a rule\u2019s add-ons together inside a group', () => {
     // The nesting is gone from the picture and the ORDER is not: Camera's four
-    // adjustments still read as Camera's four, directly under it.
+    // adjustments still read as a family, in a run — even with the Camera they
+    // adjust taken out of the shelf, because the tree is built before it is.
     const place = stockRuleGroups().find(group => group.region.id === 'place');
     const ids = place?.rules.map(rule => rule.id) ?? [];
+    const family = [
+      'cameraFollow',
+      'cameraEase',
+      'cameraDeadzone',
+      'cameraConfined',
+    ];
 
-    expect(ids.indexOf('cameraFollow')).toBe(ids.indexOf('camera') + 1);
-    expect(ids).toContain('cameraConfined');
+    expect(ids).not.toContain('camera');
+    expect(ids.slice(ids.indexOf('cameraFollow'))).toEqual(family);
   });
 });
 
@@ -173,27 +209,6 @@ describe('a rule showing what it does', () => {
     expect((demo as HTMLElement).style.getPropertyValue('--frames')).toBe('24');
   });
 
-  it('draws a card for a rule that has no demo, and cannot have one', () => {
-    // A tile with no picture is a tile, not a hole — which the dialog needs
-    // anyway, since a machine with no `public/demos/` has none of them.
-    //
-    // TWO OF THEM, and both for the same honest reason: they are BASES, and a
-    // base does nothing visible on its own. "Notices Collisions" answers a
-    // question that Solid Bodies and Collection then act on, and "Has a
-    // Camera" moves the view to wherever something else aimed it. A strip of
-    // either would be a strip of whichever rule was standing on it. Everything
-    // else on the shelf is recorded.
-    open();
-
-    expect(
-      rowFor('Notices Collisions')?.querySelector('[aria-hidden="true"]'),
-    ).toBeNull();
-    expect(
-      rowFor('Has a Camera')?.querySelector('[aria-hidden="true"]'),
-    ).toBeNull();
-    expect(screen.getAllByText('What others are built on')).toHaveLength(2);
-  });
-
   it('marks the row, so hovering or focusing it plays', () => {
     // The animation is CSS — `.row:hover .demo`, `.row:focus-within .demo` —
     // which jsdom has no engine for, so what is testable is that the row still
@@ -216,22 +231,24 @@ describe('a rule showing what it does', () => {
 });
 
 describe('the shelf’s pictures', () => {
-  // A grid of forty-five tiles where a dozen are blank reads as a dialog that
-  // failed to load rather than as a library. Every rule that CAN be shown
-  // doing something is recorded; the two that cannot are named here, so
-  // deleting a demo is a decision rather than an omission.
-  const BASES = ['collisions', 'camera'];
-
-  it('has a demo for every rule but the two bases', () => {
-    const missing = STOCK_RULES.filter(
-      rule => !demoUrl(rule.id) && !BASES.includes(rule.id),
-    ).map(rule => rule.id);
+  // A grid where some tiles are blank reads as a dialog that failed to load
+  // rather than as a library, and this is what keeps that from happening:
+  // every rule the shelf OFFERS is one that can be shown doing something, and
+  // is. The two that cannot are the two it does not offer, which is the same
+  // fact said once (`stockRuleGroups.BASE_RULES`).
+  it('has a demo for every rule it offers', () => {
+    const missing = stockRuleGroups()
+      .flatMap(group => group.rules)
+      .filter(rule => !demoUrl(rule.id))
+      .map(rule => rule.id);
 
     expect(missing).toEqual([]);
   });
 
-  it('has no demo for the bases, which would be a demo of something else', () => {
-    for (const id of BASES) {
+  it('has none for the bases, whose demo would be of something else', () => {
+    // A strip of "Notices Collisions" would be a strip of whichever rule was
+    // standing on it. Pinned so that adding one is a decision.
+    for (const id of BASE_RULES) {
       expect(demoUrl(id), id).toBeUndefined();
     }
   });

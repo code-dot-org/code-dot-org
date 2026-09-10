@@ -20,6 +20,11 @@
 // A LOCKED TILE IS A CONTROL. In a lab that gates its libraries some of these
 // are earned, and the tile says which lesson earns it and goes there when
 // pressed — the same reading the stock actors have (specs/PROGRESSION_UI.md).
+//
+// WHAT IS NOT HERE: the two base rules, which do nothing on their own and
+// arrive with whatever needs them (`stockRuleGroups.BASE_RULES`). Every tile
+// left is a thing somebody has a reason to press, and every one of them has a
+// picture of itself working.
 
 import {Typography} from '@mui/material';
 import {useState} from 'react';
@@ -175,17 +180,15 @@ export const ImportRuleDialog = ({
                               aria-hidden="true"
                             />
                           ) : (
-                            // A BASE — a rule that does nothing visible on its
-                            // own because something else stands on it. "Notices
-                            // Collisions" answers a question Solid Bodies and
-                            // Collection then act on; "Has a Camera" moves the
-                            // view to wherever something else aimed it. A strip
-                            // of either would be a strip of whichever rule was
-                            // standing on it, so this is drawn as a card
-                            // instead of as a picture that failed to arrive.
+                            // Nothing recorded yet. Every rule the shelf offers
+                            // has a demo — the two that cannot have one are not
+                            // offered (`stockRuleGroups.BASE_RULES`) — so this
+                            // is what a rule added before its demo looks like,
+                            // and it reads as a card rather than as a picture
+                            // that failed to arrive.
                             <span className={styles.base}>
                               <Typography variant="body4">
-                                What others are built on
+                                No picture yet
                               </Typography>
                             </span>
                           )}

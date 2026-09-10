@@ -12,6 +12,10 @@
 // group by saying which lesson teaches it — which it already has to say, or a
 // gated lab could never unlock it.
 //
+// TWO RULES ARE NOT OFFERED AT ALL. See `BASE_RULES` below: a base does nothing
+// on its own and arrives with whatever needs it, so a tile for one is a tile
+// nobody has a reason to press.
+//
 // THE TREE DOES NOT SURVIVE THE REGROUPING, and nothing is lost. Collection is
 // written against Collisions and belongs to Platformer while Collisions belongs
 // to Logic, so indentation inside a region would show a child with no parent
@@ -25,6 +29,29 @@ import type {Region} from '../progression/types';
 
 import {STOCK_RULES, type StockRule} from './stock';
 import {stockRuleRows, stockRuleTree} from './stockRuleTree';
+
+/**
+ * The rules the shelf does not offer, and why there are any.
+ *
+ * A BASE is a rule that does nothing on its own because something else stands
+ * on it. "Notices Collisions" works out who is touching whom and acts on none
+ * of it — Solid Bodies, Collection and Health are what act; "Has a Camera"
+ * moves the view to wherever something else aimed it, and aiming is the four
+ * rules written against it. Neither has anything to demonstrate, and neither is
+ * a thing to reach for: you reach for the one that does the thing you want, and
+ * the base arrives with it (`Also adds:` on the chosen tile says so).
+ *
+ * NOT THE SAME AS THE `foundational` FLAG this library used to carry. That one
+ * marked the rules a project ran by merely holding, which is every rule now
+ * (`blockly/projectModules`), and it was removed because it marked nothing.
+ * This marks the two with nothing to show.
+ *
+ * Offering them cost more than the room they took. A base has no demo and can
+ * have none, so in a grid they were the two blank tiles among forty-three
+ * pictures — which reads as a dialog that failed to load rather than as a
+ * library with two special cases in it.
+ */
+export const BASE_RULES: readonly string[] = ['collisions', 'camera'];
 
 /** One heading of the shelf, and what is under it. */
 export interface RuleGroup {
@@ -55,7 +82,13 @@ export function regionOfRule(rule: StockRule): Region | undefined {
 export function stockRuleGroups(
   rules: readonly StockRule[] = STOCK_RULES,
 ): RuleGroup[] {
-  const ordered = stockRuleRows(stockRuleTree(rules)).map(row => row.rule);
+  const ordered = stockRuleRows(stockRuleTree(rules))
+    .map(row => row.rule)
+    // The tree is built from ALL of them, and the bases are dropped after: a
+    // base is what several rules are written against, so taking it out first
+    // would scatter its children across the top level for no reason anybody
+    // reading the shelf could see.
+    .filter(rule => !BASE_RULES.includes(rule.id));
   const groups = new Map<string, StockRule[]>();
   const loose: StockRule[] = [];
   for (const rule of ordered) {
