@@ -21,9 +21,7 @@ import type {
   ProjectSources,
   ProjectVersion,
 } from '@cdo/apps/lab2/types';
-import getInitialSources, {
-  copySources,
-} from '@cdo/apps/lab2/utils/getInitialSources';
+import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import configureHeader from './configureHeader';
@@ -232,7 +230,7 @@ export default function useSources<T extends ProjectSources>({
           levelProperties,
           projectAndSources?.sources as T | undefined,
           getToolboxEditSourcesRef.current?.(levelProperties)
-        ) || copySources(defaultSources)
+        ) || defaultSources
       );
 
       // No project; return early.
@@ -301,15 +299,11 @@ export default function useSources<T extends ProjectSources>({
 
   const startOver = useCallback(() => {
     const {templateSources, startSources} = levelProperties;
-    // Copied like the initial load: these are frozen redux references or
-    // the shared default, and the reset sources get edited in place.
-    const startOverSources = copySources(
-      isToolboxMode
-        ? getToolboxEditSourcesRef.current?.(levelProperties) ?? defaultSources
-        : isStartMode
-        ? defaultSources
-        : templateSources || startSources || defaultSources
-    );
+    const startOverSources = isToolboxMode
+      ? getToolboxEditSourcesRef.current?.(levelProperties) ?? defaultSources
+      : isStartMode
+      ? defaultSources
+      : templateSources || startSources || defaultSources;
     projectManagerRef.current?.save(startOverSources as T, true);
     reinitializeSources(startOverSources as T | undefined);
     setHasEdited(false);
