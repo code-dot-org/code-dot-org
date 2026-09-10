@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-09-08T22:49:04.000Z",
   "level_num": "custom",
@@ -23,7 +24,7 @@
     "visible_tabs": [
       "Images"
     ],
-    "locked_image_type": "block",
+    "locked_image_type": "sprite",
     "guide_mode": "instructions",
     "long_instructions": "# Make a platform block\r\nPlatformers are built from blocks. Create a square tile the player can stand on - grass, brick, ice, anything.",
     "embed": "false",
@@ -49,10 +50,18 @@
     "display_name": "Create an object",
     "bubble_choice_description": "Create an object your player is searching for",
     "thumbnail_url": "https://images.code.org/964a851355f4b6c2b66095b459f57ab7-Gemini_Generated_Image_cgry71cgry71cgry.jpeg",
-    "preload_asset_list": null
+    "guide_steps": [
+      {
+        "text": "# Create an Object your player is searching for\n\n1. Press **New Image**\n\n- Write a prompt that describes the object, then press **Generate**.\n- You can always make adjustments and draw your own!",
+        "showContinue": true
+      }
+    ],
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-08T22:49:04.216+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-block\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-block\"},{\"changed_at\":\"2026-09-08 22:53:09 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 22:58:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 22:59:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-08T22:49:04.216+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-block\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-block\"},{\"changed_at\":\"2026-09-08 22:53:09 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 22:58:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 22:59:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:24:16 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:24:18 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 22:00:43 +0000\",\"changed\":[\"locked_image_type\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 22:00:47 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

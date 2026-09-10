@@ -192,10 +192,10 @@
     ],
     "use_links": "true",
     "display_name": "Learn",
-    "bubble_choice_description": "Learn how AI makes images",
+    "bubble_choice_description": "Learn about AI generated images",
     "thumbnail_url": "https://images.code.org/5c645a7e28fbfe0f28387ba6557d16f9-Gemini_Generated_Image_zh9ivazh9ivazh9i.jpeg"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-08T16:27:41.397+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How-AI-TrainingData-Platform\\\"\"],\"cloned_from\":\"HoAI26-How-AI-TrainingData-Platform\"},{\"changed_at\":\"2026-09-08 16:29:17 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-08T16:27:41.397+00:00\",\"changed\":[\"cloned from \\\"HoAI26-How-AI-TrainingData-Platform\\\"\"],\"cloned_from\":\"HoAI26-How-AI-TrainingData-Platform\"},{\"changed_at\":\"2026-09-08 16:29:17 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:44:07 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Panels>

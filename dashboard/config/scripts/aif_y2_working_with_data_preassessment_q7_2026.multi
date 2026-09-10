@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q7-2026'
+
+wrong '`stats`'
+right '`statistics`'
+wrong '`math`'
+wrong '`mathematics`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which Python module offers functions such as `mean` and `stdev`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Analyzing Numerical Data
+MARKDOWN
