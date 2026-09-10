@@ -23,6 +23,11 @@ en:
           description_short: This is a course for allthethings
           description_student: This is a course for allthethings and has a longer description for students
           description_teacher: This is a course for allthethings and has a longer description for teachers
+        ui-test-student-labs:
+          title: All The Student Labs!
+          description_short: This is a course for ui-test-student-labs
+          description_student: This is a course for ui-test-student-labs and has a longer description for students
+          description_teacher: This is a course for ui-test-student-labs and has a longer description for teachers
         csd-2018:
           assignment_family_title: Computer Science Discoveries
           title: Computer Science Discoveries ('18-'19)
@@ -6188,6 +6193,12 @@ en:
           version_title: ''
         original-allthethings-course:
           title: original-allthethings-course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ui-test-original-student-labs:
+          title: ui-test-original-student-labs
           description_short: ''
           description_student: ''
           description_teacher: ''

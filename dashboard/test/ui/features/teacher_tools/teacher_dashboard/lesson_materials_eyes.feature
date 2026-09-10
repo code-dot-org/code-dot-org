@@ -5,7 +5,7 @@ Feature: Lesson materials page - Eyes
   Scenario: Lesson materials page
     When I open my eyes to test "lesson materials"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-student-labs" unit 1 with teacher "Teacher_Sally"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -28,6 +28,6 @@ Feature: Lesson materials page - Eyes
 
     And I click selector "a:contains('Lesson Plan: AI Rubrics')" to load a new tab
     And I wait until element "h1:contains('Lesson 48: AI Rubrics')" is visible
-    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/48"
+    And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/48"
 
     And I close my eyes

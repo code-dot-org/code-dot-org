@@ -1,6 +1,6 @@
 Feature: Dance Lab Age Filter 2
   Scenario: Selecting 13 in age dialog turns filter off
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/1?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/37/levels/1?noautoplay=true"
     And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -13,7 +13,7 @@ Feature: Dance Lab Age Filter 2
     And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
     # session cookie should persist and no dialog should show up
-    Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/5"
+    Then I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/37/levels/5"
     And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -25,7 +25,7 @@ Feature: Dance Lab Age Filter 2
     And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
   Scenario: Song selector is hidden when initializing with teacher flag on and teacher flag stays on after level complete
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/1?noautoplay=true&songfilter=on"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/37/levels/1?noautoplay=true&songfilter=on"
     And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -54,7 +54,7 @@ Feature: Dance Lab Age Filter 2
     And I sign out
 
   Scenario: Song selector is hidden when initializing with teacher flag on for signed in student
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/1?noautoplay=true&songfilter=on"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/37/levels/1?noautoplay=true&songfilter=on"
     And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"

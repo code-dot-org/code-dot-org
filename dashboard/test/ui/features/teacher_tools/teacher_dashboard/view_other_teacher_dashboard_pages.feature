@@ -7,10 +7,10 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
   Scenario: Viewing teacher dashboard pages
     Given I am on "http://studio.code.org"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
-    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
-    And I complete the free response on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"
-    And I submit the assessment on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1"
+    Given I am assigned to course "ui-test-student-labs" with teacher "Teacher_Sally" in a section named "Test Section"
+    And I complete the level on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/1"
+    And I complete the free response on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/27/levels/1"
+    And I submit the assessment on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/33/levels/1"
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
@@ -37,14 +37,14 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     # Text responses tab
     Given I click selector "#ui-test-teacher-sidebar a:contains('Text Responses')" once I see it
     And I wait until element "#unit-selector-v2" is visible
-    And I select the "All the Things! *" option in dropdown "unit-selector-v2"
+    And I select the "All The Student Labs! *" option in dropdown "unit-selector-v2"
     And I wait until element "#text-responses-table" is visible
     And element "#text-responses-table tr:contains(Sally)" contains text "hello world"
 
     # Assessments/Surveys tab: anonymous survey
     Given I click selector "#ui-test-teacher-sidebar a:contains('Assessments')" once I see it
     And I wait until element "#unit-selector-v2" is visible
-    And I select the "All the Things! *" option in dropdown "unit-selector-v2"
+    And I select the "All The Student Labs! *" option in dropdown "unit-selector-v2"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
     And I wait until element "div:contains(this survey is anonymous)" is not visible
     And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"

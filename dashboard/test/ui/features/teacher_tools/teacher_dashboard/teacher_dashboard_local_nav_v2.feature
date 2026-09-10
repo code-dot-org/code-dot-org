@@ -6,7 +6,7 @@ Feature: Using the V2 teacher dashboard local navigation
 
   Scenario: Modifying settings on the teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "All the Things Section"
+    Given I am assigned to course "ui-test-student-labs" with teacher "Teacher_Sally" in a section named "All the Things Section"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access

@@ -17,7 +17,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     And I sign out
     Examples:
       | url                                                                                            | test_name           |
-      | https://studio.code.org/courses/allthethingscourse/units/1/lessons/13/levels/1?noautoplay=true | embedded blocks     |
+      | https://studio.code.org/courses/ui-test-student-labs/units/1/lessons/13/levels/1?noautoplay=true | embedded blocks     |
 
   Scenario Outline: Logged out simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
@@ -30,4 +30,4 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Examples:
       | url                                               | test_name                  |
       | http://studio.code.org/                           | logged out studio homepage |
-      | http://studio.code.org/courses/allthethingscourse/units/1             | logged out script progress |
+      | http://studio.code.org/courses/ui-test-student-labs/units/1             | logged out script progress |

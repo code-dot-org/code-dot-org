@@ -12,7 +12,7 @@ Feature: Viewing and dismissing the login callout
     And I clear session storage
 
   Scenario: See age callout, not signin callout on hour of code
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/2?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/37/levels/2?noautoplay=true"
     And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"

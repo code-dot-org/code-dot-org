@@ -67,23 +67,23 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'artificial-intelligence-foundations-2026', preset[:unit_group_name]
   end
 
-  test 'get_preset uses allthethings curriculum names in test' do
+  test 'get_preset uses ui test curriculum names in test' do
     CDO.stubs(:rack_env?).returns(false)
     CDO.stubs(:rack_env?).with(:test).returns(true)
 
     preset = Policies::DemoSections.get_preset(:high)
 
-    assert_equal 'allthethings', preset[:unit_name]
-    assert_equal 'original-allthethings-course', preset[:unit_group_name]
+    assert_equal 'ui-test-student-labs', preset[:unit_name]
+    assert_equal 'ui-test-original-student-labs', preset[:unit_group_name]
   end
 
-  test 'get_preset uses allthethings curriculum names on ci webserver' do
+  test 'get_preset uses ui test curriculum names on ci webserver' do
     CDO.stubs(:ci_webserver?).returns(true)
 
     preset = Policies::DemoSections.get_preset(:high)
 
-    assert_equal 'allthethings', preset[:unit_name]
-    assert_equal 'original-allthethings-course', preset[:unit_group_name]
+    assert_equal 'ui-test-student-labs', preset[:unit_name]
+    assert_equal 'ui-test-original-student-labs', preset[:unit_group_name]
   end
 
   test 'get_preset uses adhoc curriculum names by demo type from config' do
@@ -144,11 +144,11 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # preset_view
 
   test 'preset_view returns a display projection for a valid preset' do
-    # In the test environment, presets resolve to the allthethings unit and
-    # unit group (see Policies::DemoSections.curriculum_names). The unit's
-    # display name comes from static i18n keyed by its name.
-    unit = create(:unit, name: Policies::DemoSections::ALLTHETHINGS_UNIT_NAME)
-    create(:unit_group_unit, position: 1, script: unit, unit_group: create(:unit_group, name: Policies::DemoSections::ALLTHETHINGS_UNIT_GROUP_NAME))
+    # In the test environment, presets resolve to the ui test unit and unit
+    # group (see Policies::DemoSections.curriculum_names). The unit's display
+    # name comes from static i18n keyed by its name.
+    unit = create(:unit, name: Policies::DemoSections::UI_TEST_UNIT_NAME)
+    create(:unit_group_unit, position: 1, script: unit, unit_group: create(:unit_group, name: Policies::DemoSections::UI_TEST_UNIT_GROUP_NAME))
 
     view = Policies::DemoSections.preset_view(:high)
 
@@ -159,9 +159,9 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'email', view[:login_type]
     assert_equal 'student', view[:participant_type]
     assert_equal %w[9 10 11 12], view[:grades]
-    assert_equal({name: 'allthethings', display_name: 'All the Things!'}, view[:unit])
+    assert_equal({name: 'ui-test-student-labs', display_name: 'All The Student Labs!'}, view[:unit])
     assert_equal(
-      {name: 'original-allthethings-course', display_name: 'original-allthethings-course'},
+      {name: 'ui-test-original-student-labs', display_name: 'ui-test-original-student-labs'},
       view[:unit_group]
     )
   end

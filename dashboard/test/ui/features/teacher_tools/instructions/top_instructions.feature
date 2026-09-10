@@ -4,22 +4,22 @@ Feature: Eyes Tests for Top Instructions
 
 Scenario: CSF Top Instructions
   When I open my eyes to test "top instructions in CSF"
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/3?noautoplay=true"
+  And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/3?noautoplay=true"
   And I wait for the lab page to fully load
   Then I see no difference for "maze short instructions"
 
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/5/levels/4?noautoplay=true"
+  And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/5/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "artist long instructions"
 
-  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/7?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/7?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "maze short instructions with ani gif"
 
   Then I press "ani-gif-preview"
   And I see no difference for "maze ani gif dialog"
 
-  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/1/levels/1?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/1/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "Jigsaw with anigif"
 
@@ -29,7 +29,7 @@ Scenario: CSF Top Instructions
 Scenario: CSF hint top instructions
   When I open my eyes to test "top instructions in CSF with hints"
 
-  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/2?noautoplay=true"
+  Then I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/6/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And I press "runButton"
   And I wait to see ".uitest-topInstructions-inline-feedback"

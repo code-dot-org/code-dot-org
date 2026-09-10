@@ -1,0 +1,7 @@
+name 'UI Test Sample CSP Assessment'
+title 'Sample CSP Assessment'
+submittable 'true'
+
+page
+level 'UI Test CSP PD Example Question 1'
+level 'UI Test CSP PD Example Question 2' 

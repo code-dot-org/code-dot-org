@@ -2,25 +2,25 @@
 Feature: Playing multi levels 3
 
   Scenario: Rendering in another language
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1/lang/es-MX"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/9/levels/1/lang/es-MX"
     Then I wait to see ".submitButton"
     And element ".submitButton" is visible
     Then element ".multi h1" has "es-MX" text from key "data.dsls.K-1 Happy Maps Multi 1.title"
 
   Scenario: Does not scroll horizontally
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/2?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/9/levels/2?noautoplay=true"
     When element ".submitButton" is visible
     Then there is no horizontal scrollbar
 
   Scenario: Can render without a question
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/4?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/9/levels/4?noautoplay=true"
     When element ".submitButton" is visible
     Then element ".multi-question" is not visible
 
   Scenario: Standalone level without retries locks after answer is submitted
     Given I create a student named "Sally Student"
     And I sign in as "Sally Student"
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/5/lang/en-US?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/9/levels/5/lang/en-US?noautoplay=true"
     When I rotate to landscape
     And element ".submitButton" is visible
     And element ".submitButton" is disabled

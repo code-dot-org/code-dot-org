@@ -62,7 +62,7 @@ test.describe('Playing the Artist Game', () => {
     await expect(page).toHaveURL(
       url =>
         url.pathname ===
-        '/courses/allthethingscourse/units/1/lessons/3/levels/3',
+        '/courses/ui-test-student-labs/units/1/lessons/3/levels/3',
     );
   });
 

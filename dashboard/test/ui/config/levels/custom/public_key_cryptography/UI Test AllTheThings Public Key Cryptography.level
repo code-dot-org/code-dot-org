@@ -1,0 +1,18 @@
+<PublicKeyCryptography>
+  <config><![CDATA[{
+  "game_id": 57,
+  "created_at": "2026-09-08T23:34:30.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skip_dialog": true,
+    "href": "public_key_cryptography/public_key_cryptography.html.haml",
+    "cryptography_widget_view": "2"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-09-08T23:34:30.123+00:00\",\"changed\":[\"cloned from \\\"AllTheThings Public Key Cryptography\\\"\"],\"cloned_from\":\"AllTheThings Public Key Cryptography\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</PublicKeyCryptography>

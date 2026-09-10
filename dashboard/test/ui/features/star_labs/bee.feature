@@ -2,7 +2,7 @@
 Feature: Complete a bee level
 
 Scenario: Complete Bee Conditions 4-5 Level 3
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/4?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/4/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
   When I dismiss the login reminder
   # repeat to when run

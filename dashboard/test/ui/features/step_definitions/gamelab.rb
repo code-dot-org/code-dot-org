@@ -1,8 +1,8 @@
 # Gamelab-specific cucumber step definitions
 
-# Which lesson of allthethings.script contains the gamelab levels; this way we
+# Which lesson of ui-test-student-labs contains the gamelab levels; this way we
 # only have to update in one place if this changes.
-GAMELAB_ALLTHETHINGS_LESSON = 19
+GAMELAB_STUDENT_LABS_LESSON = 19
 
 Given /^I start a new Game ?Lab project$/ do
   steps <<-STEPS
@@ -13,7 +13,7 @@ end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Game ?Lab test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/#{GAMELAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
+    And I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/#{GAMELAB_STUDENT_LABS_LESSON}/levels/#{level_index}"
     And I wait for the lab page to fully load
   STEPS
 end

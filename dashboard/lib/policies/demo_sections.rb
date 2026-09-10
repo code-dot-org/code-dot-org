@@ -8,8 +8,10 @@ class Policies::DemoSections
   # Use `DEMO_TYPES` for the active demo types that can be created.
   VALID_DEMO_TYPES = (DEMO_TYPES + [ARCHIVED_DEMO_TYPE]).freeze
 
-  ALLTHETHINGS_UNIT_NAME = 'allthethings'
-  ALLTHETHINGS_UNIT_GROUP_NAME = 'original-allthethings-course'
+  # The ui test environments seed only the ui test curriculum tree, so the
+  # preset they fall back to has to name a unit that lives in it.
+  UI_TEST_UNIT_NAME = 'ui-test-student-labs'
+  UI_TEST_UNIT_GROUP_NAME = 'ui-test-original-student-labs'
 
   DEMO_SECTION_PRESETS = {
     elementary: {
@@ -197,8 +199,8 @@ class Policies::DemoSections
 
     if CDO.ci_webserver? || CDO.rack_env?(:test)
       return {
-        unit_name: ALLTHETHINGS_UNIT_NAME,
-        unit_group_name: ALLTHETHINGS_UNIT_GROUP_NAME,
+        unit_name: UI_TEST_UNIT_NAME,
+        unit_group_name: UI_TEST_UNIT_GROUP_NAME,
       }
     end
 

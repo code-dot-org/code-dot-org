@@ -12,9 +12,9 @@ export type SketchLabShapeType =
   | 'diamond';
 
 /**
- * The allthethings level backing these tests: lesson "Sketch Lab" position 54,
- * level "allthethings sketchlab 1", seeded with no start_sources so the canvas
- * is empty on load.
+ * The ui-test-student-labs level backing these tests: lesson "Sketch Lab"
+ * position 54, level "UI Test allthethings sketchlab 1", seeded with no
+ * start_sources so the canvas is empty on load.
  */
 const SKETCH_LAB_LEVEL: LabLevelUrlParams = {lesson: 54, level: 1};
 
