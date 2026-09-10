@@ -17,8 +17,8 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
+import {bytesToDataURI} from '../ai/images/encoding';
 import {
-  bytesToDataURI,
   GeneratedImageResult,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';

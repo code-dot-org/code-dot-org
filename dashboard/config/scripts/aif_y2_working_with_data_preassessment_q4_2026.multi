@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q4-2026'
+
+wrong 'A description of how frequently a single category of data appears'
+right 'A description of how much data is in different categories'
+wrong 'A description of how data changes frequency over time'
+wrong 'A description of how frequently data is shared between two programs'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A frequency distribution is...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Analyzing Categorical Data
+MARKDOWN
