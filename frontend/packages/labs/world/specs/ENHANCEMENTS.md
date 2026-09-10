@@ -330,6 +330,49 @@ enhancement must never produce. Lifting that limit means hoisting an own
 action's declaration out of the block scope the way a property's already is
 (`ownProperties.ownPropertyDeclarationFor`), and it is not done.
 
+## The assembly: walking and jumping
+
+    actors/<target>.actor    use trait ⟨Jumping#Jumps⟩
+                             use trait ⟨Arrow Keys#Moves Across⟩
+                             use trait ⟨Input#TakesKeyboardInput⟩
+
+                             when ⟨this actor⟩ presses ⟨space⟩:
+                               make ⟨this actor⟩ jump
+
+**Three traits out of three rules, and none of them is a platformer alone.**
+This is the plainest case for the shelf's own test: no companion actor, no line
+aiming two things at each other, just more than one edit — and a learner who
+knows they want a character that runs and jumps should not have to know that
+jumping is a separate rule from walking, and that both are separate from
+reading a key.
+
+**The library already ships this assembly as an ACTOR**, the stock Platformer
+Player, and the difference is whose actor it is. Importing that gives a project
+a new actor with a stock drawing and a stock name; this gives the controls to
+the actor the learner already drew. The two must write the same blocks, so a
+test holds them to it: written twice they would drift, and the one that drifted
+would be the one nobody read.
+
+**Gravity is not elected, and arrives anyway.** `Jumps` is written against
+`Affected by Gravity` and a trait brings its own dependencies, so saying both
+would say the same thing twice — the same reason the stock Player says neither.
+The rule file still lands, which is why `brings` names it: what a learner is
+told is what arrives, not which line asked for it.
+
+**Across, not down.** `Arrow Keys` has two traits and wanting one is not
+wanting the other (`rules/stock/arrows`). A platformer that elected `Moves
+Down` would have an up arrow that flies and a down arrow that beats gravity
+into the floor, so the row says so in its own description rather than leaving
+it to be discovered.
+
+**It asks for the whole handler, not just the hat**, which is where its
+`applied` parts company with the climb enhancement's. That one reads a bound up
+arrow as climbing, because in a game with ladders it is. Space is not like
+that: a project may well press it to shoot or to talk, and reading such a
+handler as "already jumps" would leave an actor that could never be given a
+jump — silently, since an enhancement that believes it is applied does nothing
+at all.
+
 ## Testing one
 
 Two halves, and the second is the one that matters. The patch's arithmetic —
@@ -365,6 +408,11 @@ health` is
 - **A verb it did not have** — zaps, chases, is pushable, damages on touch.
   Collecting is built (above), which also unblocks the Coin's demo: nothing on
   the shelf could collect one until now.
+- **A control scheme** — the keys and the traits behind them, as one act.
+  Walking and jumping is built (above); climbing with the arrows is built and
+  was a rule before it; a top-down scheme and a driving one are the same shape
+  with a different pair of traits. The interesting question each one asks is
+  _which keys_, which is why the answer is left as blocks in the actor's file.
 - **A relationship with the world** — stays in bounds; is a checkpoint. No
   picture at all, pure wiring. The camera is the one of these that is built
   (below).

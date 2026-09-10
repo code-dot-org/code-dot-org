@@ -38,6 +38,7 @@ import {cameraFollowEnhancement} from './cameraFollow';
 import {climbArrowsEnhancement} from './climbArrows';
 import {collectsEnhancement} from './collects';
 import {healthEnhancement} from './health';
+import {platformerControlsEnhancement} from './platformerControls';
 import {scoreboardEnhancement} from './scoreboard';
 import {typesOutTextEnhancement} from './typesOutText';
 
@@ -137,6 +138,11 @@ export interface EnhanceTarget {
 export const ENHANCEMENTS: readonly Enhancement[] = [
   // An actor's, then a world's, in the order a game is built up in: what the
   // actor can do, then what the screen says about it.
+  //
+  // The controls come first among the actor's, because they are the ones that
+  // make an actor a CHARACTER rather than scenery, and everything under them
+  // is something a character then does.
+  platformerControlsEnhancement,
   healthEnhancement,
   collectsEnhancement,
   climbArrowsEnhancement,
