@@ -1,0 +1,15 @@
+{
+  "key": "AIF-Sem1-Unit1-Les3-Data",
+  "description": "",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/AIF-Sem1-Unit1-Les3-Data.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "5a853321-3417-4cf3-8aed-a93140f77b6b",
+    "053a11f0-164d-4b51-905f-364b33cb67dd",
+    "d5fa2ed3-cebe-497e-b58e-592746015d40"
+  ]
+}
