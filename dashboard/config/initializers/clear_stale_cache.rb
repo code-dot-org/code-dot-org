@@ -17,5 +17,5 @@ end
 # from a previous deploy, make sure to clear the cache before service start if
 # we're building from a different git commit.
 Rails.application.config.before_initialize do
-  Cdo::ClearStaleCache.call
+  Cdo::ClearStaleCache.call if CDO.running_web_application?
 end
