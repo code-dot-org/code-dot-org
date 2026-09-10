@@ -9,6 +9,7 @@ import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimatio
 import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 
+import {noteImageFieldValue} from '../imageReferences';
 import {getImageThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
@@ -116,7 +117,8 @@ export function animationPicker(kind: AnimationKind) {
         .appendField(animationDropdown(kind), inputConfig.name);
     },
     generateCode(block: BlocklyCore.Block, arg: {name: string}) {
-      return block.getFieldValue(arg.name);
+      // Registers the name for the scene preload's reference set.
+      return noteImageFieldValue(block.getFieldValue(arg.name));
     },
   };
 }

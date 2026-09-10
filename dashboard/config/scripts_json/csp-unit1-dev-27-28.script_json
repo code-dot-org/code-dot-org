@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-09 05:51:59 UTC",
+    "serialized_at": "2026-09-09 20:41:37 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -596,7 +596,7 @@
       "key": "59266241-8797-4e38-ae4e-c3f35d0bc23b",
       "position": 2,
       "properties": {
-        "progression_name": "Modify"
+        "progression_name": "Modify and Make"
       },
       "seeding_key": {
         "activity_section.key": "59266241-8797-4e38-ae4e-c3f35d0bc23b",
@@ -1028,7 +1028,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Modify"
+        "progression": "Modify and Make"
       },
       "bonus": false,
       "seeding_key": {
@@ -1047,10 +1047,32 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Make: Design Your Own String Generator"
+        "progression": "Modify and Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson25-modify-debug_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59266241-8797-4e38-ae4e-c3f35d0bc23b"
+      },
+      "level_keys": [
+        "csp-unit1-lesson25-modify-debug_27_28"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify and Make"
       },
       "bonus": false,
       "seeding_key": {
@@ -1060,14 +1082,14 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28",
-        "activity_section.key": "efe73363-bf06-4d92-b714-8f210338a202"
+        "activity_section.key": "59266241-8797-4e38-ae4e-c3f35d0bc23b"
       },
       "level_keys": [
         "csp-unit1-lesson25-make_27_28"
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1089,7 +1111,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1111,7 +1133,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1133,7 +1155,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1155,7 +1177,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1177,7 +1199,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1199,7 +1221,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1416,6 +1438,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csp-unit1-lesson25-modify-debug_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson25-modify-debug_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59266241-8797-4e38-ae4e-c3f35d0bc23b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csp-unit1-lesson25-make_27_28",
         "script_level.level_keys": [
           "csp-unit1-lesson25-make_27_28"
@@ -1423,7 +1457,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28",
-        "activity_section.key": "efe73363-bf06-4d92-b714-8f210338a202"
+        "activity_section.key": "59266241-8797-4e38-ae4e-c3f35d0bc23b"
       }
     },
     {

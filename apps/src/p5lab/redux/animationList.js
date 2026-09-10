@@ -702,6 +702,16 @@ export function deleteAnimation(
   };
 }
 
+// Legacy labs must keep each loaded animation's Blob: cloneAnimation copies
+// it and saveAnimations re-uploads it under the clone's key. Sprite Lab in
+// Lab2 persists images through its own asset uploads and never calls
+// saveAnimations, so it opts out and saves the Blob's memory (see
+// SpriteLab2Engine).
+let retainBlobsOnLoad = true;
+export function setRetainBlobsOnLoad(retain) {
+  retainBlobsOnLoad = retain;
+}
+
 /**
  * Load the indicated animation (which must already have an entry in the project
  * animation list) from its source, whether that is S3 or the animation library.
@@ -746,7 +756,7 @@ function loadAnimationFromSource(key, callback) {
           dispatch({
             type: DONE_LOADING_FROM_SOURCE,
             key,
-            blob,
+            blob: retainBlobsOnLoad ? blob : undefined,
             dataURI,
             sourceSize,
           });

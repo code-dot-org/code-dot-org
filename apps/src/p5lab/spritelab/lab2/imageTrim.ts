@@ -47,8 +47,6 @@ export function findOpaqueBounds(
   return right < 0 ? null : {left, top, right, bottom};
 }
 
-// Trimming is deterministic; cache by source so re-runs don't redo the work.
-const trimCache = new Map<string, Promise<string>>();
 const frameThumbCache = new Map<string, Promise<string>>();
 const thumbSourceCache = new Map<string, Promise<string>>();
 
@@ -152,53 +150,51 @@ export function forgetImageThumbnail(name?: string): void {
  * Load an image (dataURI or URL), crop transparent borders, and return the
  * cropped image as a dataURI. Returns the input unchanged when there's
  * nothing to trim (full-bleed content, fully transparent, or load failure).
+ * Uncached: deterministic work, tens of milliseconds per image, while a
+ * cache keyed by whole source dataURIs — module state that outlives the
+ * level — keeps old sources and their trimmed results alive indefinitely.
  */
 function trimTransparentBorder(source: string): Promise<string> {
-  let cached = trimCache.get(source);
-  if (!cached) {
-    cached = new Promise<string>(resolve => {
-      const img = new Image();
-      img.onload = () => {
-        try {
-          const canvas = document.createElement('canvas');
-          canvas.width = img.naturalWidth;
-          canvas.height = img.naturalHeight;
-          const ctx = canvas.getContext('2d');
-          if (!ctx) {
-            return resolve(source);
-          }
-          ctx.drawImage(img, 0, 0);
-          const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const bounds = findOpaqueBounds(data, canvas.width, canvas.height);
-          if (
-            !bounds ||
-            (bounds.left === 0 &&
-              bounds.top === 0 &&
-              bounds.right === canvas.width - 1 &&
-              bounds.bottom === canvas.height - 1)
-          ) {
-            return resolve(source);
-          }
-          const w = bounds.right - bounds.left + 1;
-          const h = bounds.bottom - bounds.top + 1;
-          const cropped = document.createElement('canvas');
-          cropped.width = w;
-          cropped.height = h;
-          cropped
-            .getContext('2d')
-            ?.drawImage(canvas, bounds.left, bounds.top, w, h, 0, 0, w, h);
-          resolve(cropped.toDataURL('image/png'));
-        } catch (e) {
-          // e.g. a tainted canvas from a cross-origin image: use it as-is.
-          resolve(source);
+  return new Promise<string>(resolve => {
+    const img = new Image();
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          return resolve(source);
         }
-      };
-      img.onerror = () => resolve(source);
-      img.src = source;
-    });
-    trimCache.set(source, cached);
-  }
-  return cached;
+        ctx.drawImage(img, 0, 0);
+        const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const bounds = findOpaqueBounds(data, canvas.width, canvas.height);
+        if (
+          !bounds ||
+          (bounds.left === 0 &&
+            bounds.top === 0 &&
+            bounds.right === canvas.width - 1 &&
+            bounds.bottom === canvas.height - 1)
+        ) {
+          return resolve(source);
+        }
+        const w = bounds.right - bounds.left + 1;
+        const h = bounds.bottom - bounds.top + 1;
+        const cropped = document.createElement('canvas');
+        cropped.width = w;
+        cropped.height = h;
+        cropped
+          .getContext('2d')
+          ?.drawImage(canvas, bounds.left, bounds.top, w, h, 0, 0, w, h);
+        resolve(cropped.toDataURL('image/png'));
+      } catch (e) {
+        // e.g. a tainted canvas from a cross-origin image: use it as-is.
+        resolve(source);
+      }
+    };
+    img.onerror = () => resolve(source);
+    img.src = source;
+  });
 }
 
 /** The animation list restricted to images whose data has arrived. */
@@ -217,7 +213,7 @@ export function loadedAnimations(
 
 /**
  * The first frame of a sprite sheet as a dataURI, for thumbnails. Cached by
- * source like the trims.
+ * source.
  */
 function firstFrameThumbnail(
   source: string,
@@ -261,23 +257,57 @@ function firstFrameThumbnail(
   return cached;
 }
 
+/** Every animation name in a list. */
+export function animationNames(list: RuntimeAnimationList): Set<string> {
+  return new Set(
+    (list.orderedKeys || [])
+      .map(key => list.propsByKey[key]?.name)
+      .filter((name): name is string => !!name)
+  );
+}
+
+/**
+ * The list restricted to the given animation names: the ones the program's
+ * generators registered while it compiled (imageReferences.ts), so the
+ * scene preload decodes exactly what the scene can put on stage. A name a
+ * program builds at runtime (no block does today) decodes on demand instead
+ * — the setAnimation wrapper in SpriteLab2Engine.
+ */
+export function filterAnimationsToNames(
+  list: RuntimeAnimationList,
+  names: Set<string>
+): RuntimeAnimationList {
+  const orderedKeys = (list.orderedKeys || []).filter(key => {
+    const name = list.propsByKey[key]?.name;
+    return !!name && names.has(name);
+  });
+  const propsByKey: RuntimeAnimationList['propsByKey'] = {};
+  orderedKeys.forEach(key => {
+    propsByKey[key] = list.propsByKey[key];
+  });
+  return {orderedKeys, propsByKey};
+}
+
 /**
  * Return a copy of a serialized animation list whose costume dataURIs are
  * border-trimmed. Backgrounds are left alone (they should fill the canvas).
  * So are sprite sheets: their frame grid is their geometry, and trimming
  * the sheet's border would shift every frame off it — their thumbnail is
  * their first frame instead.
+ *
+ * keepNames lists every name in the project, so that a scene-scoped
+ * subset doesn't prune thumbnails of images other scenes still use — a
+ * thumbnail is only dropped for a name absent from the whole project.
  */
 export async function trimAnimationListImages(
-  list: RuntimeAnimationList
+  list: RuntimeAnimationList,
+  keepNames?: Set<string>
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
   // Drop cached trims for names absent from the list: a deleted image's
   // thumbnail must not resurface when a new image takes the same name.
-  const currentNames = new Set(
-    (list.orderedKeys || []).map(key => list.propsByKey[key]?.name)
-  );
+  const currentNames = keepNames || animationNames(list);
   for (const name of thumbByName.keys()) {
     if (!currentNames.has(name)) {
       thumbByName.delete(name);
@@ -311,8 +341,12 @@ export async function trimAnimationListImages(
         return;
       }
       const isSheet = props.frameCount > 1 && !!props.frameSize;
+      // An image cropped at save time (props.trimmed) skips the pixel scan
+      // and re-encode; its stored dataURI is already what trimming makes.
       const trimmed = isSheet
         ? await firstFrameThumbnail(props.dataURI, props.frameSize)
+        : props.trimmed
+        ? props.dataURI
         : await trimTransparentBorder(props.dataURI);
       noteThumb(props.name, await thumbnailFromDataURI(trimmed, pixelated));
       propsByKey[key] = isSheet ? props : {...props, dataURI: trimmed};
