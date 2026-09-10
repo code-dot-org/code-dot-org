@@ -1,6 +1,6 @@
 import {DEFAULT_AICHAT_PRESET} from '../ai/aichat';
 import {OutlineLevel, OutlineSublevel} from '../ai/outline';
-import {LevelSpec} from '../types';
+import {LevelSpec, takesSuppliedCode} from '../types';
 
 import {newLevelSpec} from './buildInitialState';
 
@@ -29,6 +29,9 @@ const toSpec = (level: OutlineSublevel): LevelSpec => ({
   ...(level.labType === 'aichat'
     ? {aichatPreset: level.aichatPreset ?? DEFAULT_AICHAT_PRESET}
     : {}),
+  ...(takesSuppliedCode(level.labType) && level.suppliedCode
+    ? {suppliedCode: level.suppliedCode}
+    : {}),
 });
 
 export function specsFromPlannedLevels(levels: OutlineLevel[]): LevelSpec[] {
@@ -41,4 +44,11 @@ export function specsFromPlannedLevels(levels: OutlineLevel[]): LevelSpec[] {
       ? {sublevels: level.sublevels.map(toSpec)}
       : {}),
   }));
+}
+
+export function appendPlannedLevels(
+  prev: LevelSpec[],
+  levels: OutlineLevel[]
+): LevelSpec[] {
+  return appendPlannedSpecs(prev, specsFromPlannedLevels(levels));
 }

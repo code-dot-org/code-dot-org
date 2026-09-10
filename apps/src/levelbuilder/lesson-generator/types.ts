@@ -29,6 +29,20 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   bubbleChoice: 'BubbleChoice',
 };
 
+// Human names, as the lab dropdown and the import prompt show them.
+export const LAB_LABELS = {
+  panels: 'Panels',
+  weblab2: 'Web Lab 2',
+  pythonlab: 'Python Lab',
+  ailab: 'AI Lab',
+  aichat: 'AI Chat',
+  sketchlab: 'Sketch Lab',
+  multi: 'Multiple Choice',
+  match: 'Matching',
+  freeResponse: 'Free Response',
+  bubbleChoice: 'Bubble Choice',
+} as const satisfies Record<LabType, string>;
+
 // Lab types saved as parsed DSL text (dsl_text) rather than serialized
 // JSON properties; createOrFindLevel and updateLevelProperty branch on this.
 export const DSL_LAB_TYPES: readonly LabType[] = [
