@@ -160,7 +160,7 @@ function syncButton(block: Block): void {
   }
   if (!wanted) {
     input.removeField(FIELD_NAME);
-    (block as BlockSvg).render?.();
+    (block as BlockSvg).queueRender?.();
     return;
   }
   input.appendField(
@@ -194,7 +194,7 @@ function syncButton(block: Block): void {
     field.SERIALIZABLE = false;
     field.EDITABLE = false;
   }
-  (block as BlockSvg).render?.();
+  (block as BlockSvg).queueRender?.();
 }
 
 /**

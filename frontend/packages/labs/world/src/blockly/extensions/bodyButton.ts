@@ -91,7 +91,7 @@ function syncButton(block: Block): void {
   } else {
     input.removeField(FIELD_NAME);
   }
-  (block as BlockSvg).render?.();
+  (block as BlockSvg).queueRender?.();
 }
 
 /**

@@ -99,7 +99,7 @@ function syncCount(block: Block): void {
   const text = countText(ruleCount());
   if (field.getText() !== text) {
     field.setValue(text);
-    (block as BlockSvg).render?.();
+    (block as BlockSvg).queueRender?.();
   }
 }
 
