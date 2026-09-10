@@ -2,7 +2,7 @@
 Feature: Playing multi levels 3
 
   Scenario: Rendering in another language
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1/lang/es-MX"
+    Given I am on "http://studio.code.org/courses/ui-test-level-i18n/units/1/lessons/1/levels/5/lang/es-MX"
     Then I wait to see ".submitButton"
     And element ".submitButton" is visible
     Then element ".multi h1" has "es-MX" text from key "data.dsls.K-1 Happy Maps Multi 1.title"
