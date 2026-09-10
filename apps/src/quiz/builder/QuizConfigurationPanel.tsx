@@ -1,7 +1,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
+import Toggle from '@code-dot-org/component-library/toggle';
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useState} from 'react';
 
@@ -43,6 +43,16 @@ const PURPOSE_OPTIONS = [
   },
 ];
 
+const ConfigCard: React.FunctionComponent<{
+  label: string;
+  children: React.ReactNode;
+}> = ({label, children}) => (
+  <div className={styles.configCard}>
+    <div className={styles.configCardHeader}>{label}</div>
+    <div className={styles.configCardContent}>{children}</div>
+  </div>
+);
+
 interface QuizConfigurationPanelProps {
   quizId: number;
   initialValues: QuizConfigurationData;
@@ -54,12 +64,6 @@ interface QuizConfigurationPanelProps {
 const QuizConfigurationPanel: React.FunctionComponent<
   QuizConfigurationPanelProps
 > = ({quizId, initialValues, onSaved}) => {
-  const [displayName, setDisplayName] = useState(
-    initialValues.displayName || ''
-  );
-  const [customIntroText, setCustomIntroText] = useState(
-    initialValues.customIntroText || ''
-  );
   // Kept as a string while editing so the field can be genuinely empty
   // (no time limit) rather than snapping to 0 - converted to a number or
   // null on save.
@@ -111,8 +115,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
       const response = await HttpClient.put(
         `/levels/${quizId}/quiz_configuration`,
         JSON.stringify({
-          displayName,
-          customIntroText,
           timeLimitMinutes: parsedTimeLimitMinutes,
           showCorrectness,
           revealAnswerExplanation,
@@ -179,32 +181,21 @@ const QuizConfigurationPanel: React.FunctionComponent<
 
       {purpose && (
         <>
-          <div className={styles.section}>
-            <TextField
-              label="Quiz title (optional)"
-              name="displayName"
-              size="s"
-              className={styles.fullWidthField}
-              placeholder="(defaults to Name)"
-              value={displayName}
-              onChange={e => setDisplayName(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.section}>
-            <FormFieldWrapper
-              color="black"
-              size="s"
-              label="Intro screen text (optional)"
-              className={styles.fullWidthField}
-            >
-              <textarea
-                className={styles.textarea}
-                value={customIntroText}
-                onChange={e => setCustomIntroText(e.target.value)}
+          <ConfigCard label="content">
+            <div className={styles.cardRow}>
+              <Toggle
+                name="showIntroScreen"
+                label="Show intro screen"
+                size="s"
+                position="right"
+                checked={showIntroScreen}
+                onChange={e => setShowIntroScreen(e.target.checked)}
               />
-            </FormFieldWrapper>
-          </div>
+            </div>
+            <p className={styles.cardHelperText}>
+              Edit intro screen contents in the workspace
+            </p>
+          </ConfigCard>
 
           <div className={styles.section}>
             <TextField
@@ -246,16 +237,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
               checked={revealAnswerExplanation}
               disabled={!showCorrectness}
               onChange={e => setRevealAnswerExplanation(e.target.checked)}
-            />
-          </div>
-
-          <div className={styles.section}>
-            <Checkbox
-              name="showIntroScreen"
-              label="Show intro screen (required when a time limit is set)"
-              size="s"
-              checked={showIntroScreen}
-              onChange={e => setShowIntroScreen(e.target.checked)}
             />
           </div>
 
