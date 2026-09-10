@@ -66,8 +66,9 @@
       ]
     },
     "display_name": "Amara Wanjiru",
-    "bubble_choice_description": "Online resources to troubleshoot the FieldPad system"
+    "bubble_choice_description": "Online resources to troubleshoot the FieldPad system",
+    "thumbnail_url": "https://images.code.org/711feed5fb0aace8c8ce903f9e8e376e-Amara.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-03T19:30:46.860+00:00\",\"changed\":[\"cloned from \\\"Extra links ai-and-the-systems-that-power-it-lesson3-online-resources\\\"\"],\"cloned_from\":\"Extra links ai-and-the-systems-that-power-it-lesson3-online-resources\"},{\"changed_at\":\"2026-09-03 19:31:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 19:34:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 19:35:29 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 15:55:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-03T19:30:46.860+00:00\",\"changed\":[\"cloned from \\\"Extra links ai-and-the-systems-that-power-it-lesson3-online-resources\\\"\"],\"cloned_from\":\"Extra links ai-and-the-systems-that-power-it-lesson3-online-resources\"},{\"changed_at\":\"2026-09-03 19:31:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 19:34:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 19:35:29 +0000\",\"changed\":[\"widget_view\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 15:55:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:21:12 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

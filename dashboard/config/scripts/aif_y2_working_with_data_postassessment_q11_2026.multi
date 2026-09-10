@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-postassessment-q11-2026'
+
+wrong 'Nearly all students dislike relying on AI to do their homework.'
+wrong 'Some students say using AI to do their homework is wrong.'
+wrong 'Most students aren\'t using AI to do their homework.'
+right 'Number of students using AI to do homework triples.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A newspaper reports "Twice as many students used AI to do their homework as last year." Assume this headline is factually true. Which headline must be **false**?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Telling Stories with Data
+MARKDOWN
