@@ -158,6 +158,21 @@
   background: var(--background-neutral-secondary, #f1f2f4);
 }
 
+// Toggle's own label+switch sit bunched together with a fixed gap - it
+// has no prop to space them apart, so the label is rendered as our own
+// sibling text here instead, pinning the switch to the row's far edge.
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.toggleLabel {
+  font-size: 14px;
+  color: var(--text-neutral-primary, #121212);
+}
+
 .cardHelperText {
   margin: 0;
   font-size: 12px;

@@ -268,21 +268,23 @@ const QuizConfigurationPanel: React.FunctionComponent<
         <>
           <ConfigCard label="content">
             <div className={styles.cardRow}>
-              <Toggle
-                name="showIntroScreen"
-                label="Show intro screen"
-                size="s"
-                position="right"
-                disabled={isSaving}
-                checked={showIntroScreen}
-                onChange={e => {
-                  const checked = e.target.checked;
-                  setShowIntroScreen(checked);
-                  void handleSave({showIntroScreen: checked}).then(ok => {
-                    if (!ok) setShowIntroScreen(!checked);
-                  });
-                }}
-              />
+              <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>Show intro screen</span>
+                <Toggle
+                  name="showIntroScreen"
+                  aria-label="Show intro screen"
+                  size="s"
+                  disabled={isSaving}
+                  checked={showIntroScreen}
+                  onChange={e => {
+                    const checked = e.target.checked;
+                    setShowIntroScreen(checked);
+                    void handleSave({showIntroScreen: checked}).then(ok => {
+                      if (!ok) setShowIntroScreen(!checked);
+                    });
+                  }}
+                />
+              </div>
               <p className={styles.cardHelperText}>
                 Edit intro screen contents in the workspace
               </p>
@@ -309,73 +311,87 @@ const QuizConfigurationPanel: React.FunctionComponent<
               />
             </div>
             <div className={styles.cardRow}>
-              <Toggle
-                name="allowMultipleAttempts"
-                label="Allow multiple attempts"
-                size="s"
-                position="right"
-                disabled={isSaving}
-                checked={allowMultipleAttempts}
-                onChange={e => {
-                  const checked = e.target.checked;
-                  setAllowMultipleAttempts(checked);
-                  void handleSave({allowMultipleAttempts: checked}).then(ok => {
-                    if (!ok) setAllowMultipleAttempts(!checked);
-                  });
-                }}
-              />
+              <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>
+                  Allow multiple attempts
+                </span>
+                <Toggle
+                  name="allowMultipleAttempts"
+                  aria-label="Allow multiple attempts"
+                  size="s"
+                  disabled={isSaving}
+                  checked={allowMultipleAttempts}
+                  onChange={e => {
+                    const checked = e.target.checked;
+                    setAllowMultipleAttempts(checked);
+                    void handleSave({allowMultipleAttempts: checked}).then(
+                      ok => {
+                        if (!ok) setAllowMultipleAttempts(!checked);
+                      }
+                    );
+                  }}
+                />
+              </div>
             </div>
           </ConfigCard>
 
           <ConfigCard label="feedback">
             <div className={styles.cardRow}>
-              <Toggle
-                name="showCorrectness"
-                label="Show correctness"
-                size="s"
-                position="right"
-                disabled={isSaving}
-                checked={showCorrectness}
-                onChange={e => {
-                  const checked = e.target.checked;
-                  const previousReveal = revealAnswerExplanation;
-                  setShowCorrectness(checked);
-                  // Mirrors reveal_answer_explanation_requires_show_correctness -
-                  // turning correctness off while explanation reveal is on would
-                  // otherwise be silently invalid.
-                  if (!checked) {
-                    setRevealAnswerExplanation(false);
-                  }
-                  void handleSave({
-                    showCorrectness: checked,
-                    ...(!checked && {revealAnswerExplanation: false}),
-                  }).then(ok => {
-                    if (!ok) {
-                      setShowCorrectness(!checked);
-                      if (!checked) setRevealAnswerExplanation(previousReveal);
+              <div className={styles.toggleRow}>
+                <span className={styles.toggleLabel}>Show correctness</span>
+                <Toggle
+                  name="showCorrectness"
+                  aria-label="Show correctness"
+                  size="s"
+                  disabled={isSaving}
+                  checked={showCorrectness}
+                  onChange={e => {
+                    const checked = e.target.checked;
+                    const previousReveal = revealAnswerExplanation;
+                    setShowCorrectness(checked);
+                    // Mirrors reveal_answer_explanation_requires_show_correctness -
+                    // turning correctness off while explanation reveal is on would
+                    // otherwise be silently invalid.
+                    if (!checked) {
+                      setRevealAnswerExplanation(false);
                     }
-                  });
-                }}
-              />
+                    void handleSave({
+                      showCorrectness: checked,
+                      ...(!checked && {revealAnswerExplanation: false}),
+                    }).then(ok => {
+                      if (!ok) {
+                        setShowCorrectness(!checked);
+                        if (!checked) {
+                          setRevealAnswerExplanation(previousReveal);
+                        }
+                      }
+                    });
+                  }}
+                />
+              </div>
               {showCorrectness && (
                 <div className={styles.conditionalWrap}>
-                  <Toggle
-                    name="revealAnswerExplanation"
-                    label="Reveal answer and explanation"
-                    size="s"
-                    position="right"
-                    disabled={isSaving}
-                    checked={revealAnswerExplanation}
-                    onChange={e => {
-                      const checked = e.target.checked;
-                      setRevealAnswerExplanation(checked);
-                      void handleSave({revealAnswerExplanation: checked}).then(
-                        ok => {
+                  <div className={styles.toggleRow}>
+                    <span className={styles.toggleLabel}>
+                      Reveal answer and explanation
+                    </span>
+                    <Toggle
+                      name="revealAnswerExplanation"
+                      aria-label="Reveal answer and explanation"
+                      size="s"
+                      disabled={isSaving}
+                      checked={revealAnswerExplanation}
+                      onChange={e => {
+                        const checked = e.target.checked;
+                        setRevealAnswerExplanation(checked);
+                        void handleSave({
+                          revealAnswerExplanation: checked,
+                        }).then(ok => {
                           if (!ok) setRevealAnswerExplanation(!checked);
-                        }
-                      );
-                    }}
-                  />
+                        });
+                      }}
+                    />
+                  </div>
                   <p className={styles.cardHelperText}>
                     Reveal the correct answer and the explanation.
                   </p>
