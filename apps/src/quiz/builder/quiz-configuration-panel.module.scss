@@ -144,6 +144,20 @@
   }
 }
 
+// Wraps a child control that only shows while its parent toggle is on
+// (e.g. Reveal answer/explanation under Show correctness).
+.conditionalWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid var(--border-neutral-primary, #d3d6da);
+  border-radius: var(--shape-sm, 6px);
+  background: var(--background-neutral-secondary, #f1f2f4);
+}
+
 .cardHelperText {
   margin: 0;
   font-size: 12px;

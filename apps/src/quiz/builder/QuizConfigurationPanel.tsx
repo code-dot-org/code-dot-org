@@ -1,4 +1,3 @@
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import Toggle from '@code-dot-org/component-library/toggle';
@@ -227,34 +226,41 @@ const QuizConfigurationPanel: React.FunctionComponent<
             </div>
           </ConfigCard>
 
-          <div className={styles.section}>
-            <Checkbox
-              name="showCorrectness"
-              label="Show correctness"
-              size="s"
-              checked={showCorrectness}
-              onChange={e => {
-                setShowCorrectness(e.target.checked);
-                // Mirrors reveal_answer_explanation_requires_show_correctness -
-                // turning correctness off while explanation reveal is on would
-                // otherwise be silently invalid until the next save attempt.
-                if (!e.target.checked) {
-                  setRevealAnswerExplanation(false);
-                }
-              }}
-            />
-          </div>
-
-          <div className={styles.section}>
-            <Checkbox
-              name="revealAnswerExplanation"
-              label="Reveal answer/explanations (requires Show correctness)"
-              size="s"
-              checked={revealAnswerExplanation}
-              disabled={!showCorrectness}
-              onChange={e => setRevealAnswerExplanation(e.target.checked)}
-            />
-          </div>
+          <ConfigCard label="feedback">
+            <div className={styles.cardRow}>
+              <Toggle
+                name="showCorrectness"
+                label="Show correctness"
+                size="s"
+                position="right"
+                checked={showCorrectness}
+                onChange={e => {
+                  setShowCorrectness(e.target.checked);
+                  // Mirrors reveal_answer_explanation_requires_show_correctness -
+                  // turning correctness off while explanation reveal is on would
+                  // otherwise be silently invalid until the next save attempt.
+                  if (!e.target.checked) {
+                    setRevealAnswerExplanation(false);
+                  }
+                }}
+              />
+              {showCorrectness && (
+                <div className={styles.conditionalWrap}>
+                  <Toggle
+                    name="revealAnswerExplanation"
+                    label="Reveal answer and explanation"
+                    size="s"
+                    position="right"
+                    checked={revealAnswerExplanation}
+                    onChange={e => setRevealAnswerExplanation(e.target.checked)}
+                  />
+                  <p className={styles.cardHelperText}>
+                    Reveal the correct answer and the explanation.
+                  </p>
+                </div>
+              )}
+            </div>
+          </ConfigCard>
 
           <MuiButton
             variant="contained"
