@@ -230,7 +230,7 @@ function initialMemberKeys(
  * follows it so the file a block opens is the file the project would compile.
  *
  * `.map` is tried last and is not part of that resolution — a map is data a
- * world names, not a module anything imports. It is here because the eye opens
+ * world names, not a module anything imports. It is here because the open button opens
  * FILES, and a map has an editor like the rest.
  */
 function fileIdForModule(
@@ -1249,7 +1249,7 @@ export const BlocklyFileEditor = ({
     ],
   );
 
-  // The eye on a `use rule` / `use trait` block, and what it does. The handler
+  // The open button on a `use rule` / `use trait` block, and what it does. The handler
   // turns the module path the field hands back into the file the browser would
   // have opened; whether it is offered at all is the level's call.
   useEffect(() => {
@@ -1261,13 +1261,13 @@ export const BlocklyFileEditor = ({
       const sources = sourcesRef.current;
       const fileId = fileIdForModule(sources.source, modulePath);
       if (!fileId) {
-        // The eye is only drawn when the project holds the file
+        // The button is only drawn when the project holds the file
         // (`canOpenModule`), so getting here means the two disagree about what
         // "holds" means — which is what happened when `.actor` was registered
         // as openable and not listed among the extensions tried here. The
         // button did nothing at all, and nothing anywhere said why.
         console.warn(
-          `World Lab: nothing to open for \`${modulePath}\`. The eye offered ` +
+          `World Lab: nothing to open for \`${modulePath}\`. The button offered ` +
             'it, so the openable registry and this resolver disagree.',
         );
         return;

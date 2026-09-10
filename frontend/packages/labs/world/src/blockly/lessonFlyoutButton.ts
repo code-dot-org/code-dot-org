@@ -2,7 +2,7 @@
 //
 // The fourth and last of the back-links specs/PROGRESSION_UI.md asks for. The
 // other three sit where a learner CHOOSES a rule (the import dialogs) or USES
-// one (the button beside the eye on `use trait`); this one sits where they go
+// one (the button beside the open button on `use trait`); this one sits where they go
 // looking for its blocks, which is the drawer named after it.
 //
 // A Blockly flyout button, which is a first-class toolbox item — `{kind:
@@ -59,7 +59,7 @@ export function registerLessonButtons(workspace: Blockly.WorkspaceSvg): void {
     workspace.registerButtonCallback(key(tile.id), () => {
       // After the press, not during it: opening the map takes focus while
       // Blockly is still inside its own gesture handling (the same reason the
-      // eye and the lesson button on a block defer).
+      // open button and the lesson button on a block defer).
       setTimeout(() => openLesson(tile.id), 0);
     });
   }

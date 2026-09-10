@@ -20,18 +20,18 @@
  * The file kinds a module path can name, in the order resolution tries them.
  *
  * ONE LIST, because there are two questions and they must not be able to
- * disagree: which paths get an eye (`setOpenableModules` filters the project's
- * files by this) and which file the eye then opens (`fileIdForModule` tries
+ * disagree: which paths get an open button (`setOpenableModules` filters the project's
+ * files by this) and which file the open button then opens (`fileIdForModule` tries
  * these suffixes in turn). They were separate lists, and `.actor` was added to
- * the first and not the second — so the eye appeared on `create ⟨Coin⟩ in map`
+ * the first and not the second — so the open button appeared on `create ⟨Coin⟩ in map`
  * and clicking it did nothing at all.
  *
  * Ordered, because the first three follow the compiler's own resolution: a
- * module path is tried as `.rule`, then `.js`, then `.ts`, so the file the eye
+ * module path is tried as `.rule`, then `.js`, then `.ts`, so the file the open button
  * opens is the file the project would compile.
  * `.actor` is a module with a namespace of its own. `.map` is last and is not
  * a module at all — a map is data a world names — but it has an editor, and
- * the eye opens FILES.
+ * the open button opens FILES.
  */
 export const OPENABLE_EXTENSIONS = [
   'rule',

@@ -88,7 +88,8 @@ about.
 
 **And on the `define actor` block itself**, as a wand beside the actor's name
 (`blockly/extensions/enhanceButton`) — the third of the buttons that ride on a
-block, after the eye that opens a file and the mortarboard that opens a lesson.
+block, after the open button that opens a file and the mortarboard that opens a
+lesson.
 It is the nearer of the two routes: a learner looking at an actor's blocks and
 wanting it to have health is already pointing at the actor.
 
@@ -97,7 +98,7 @@ subject. A world enhancement is asked for from the world, for the same reason
 an actor's is asked for from the actor.
 
 It is not built on a read-only workspace, and that is where it parts company
-with the eye and the mortarboard beside it: those two READ — a version being
+with the open button and the mortarboard beside it: those two READ — a version being
 previewed can still be looked into — and this one writes.
 
 ## Two kinds of actor, two shapes of patch

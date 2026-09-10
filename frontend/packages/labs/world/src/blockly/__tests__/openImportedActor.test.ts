@@ -72,7 +72,7 @@ describe('a Coin just imported', () => {
 //
 // They asked whether a block could be opened — the registry's question — and
 // never whether anything WOULD open, which is a different list in a different
-// file. `.actor` went into the first and not the second, so the eye appeared
+// file. `.actor` went into the first and not the second, so the button appeared
 // on `create ⟨Coin⟩ in map ⟨…⟩` and clicking it did nothing whatsoever.
 //
 // The lists are now one list. This checks that every kind it names is a kind
@@ -88,7 +88,7 @@ describe('the kinds a module path can name', () => {
   });
 
   it('tries a rule before a script, as the compiler does', () => {
-    // Resolution order is load-bearing: the file the eye opens should be the
+    // Resolution order is load-bearing: the file the button opens should be the
     // file the project would compile.
     const order = [...OPENABLE_EXTENSIONS];
 
@@ -97,7 +97,7 @@ describe('the kinds a module path can name', () => {
   });
 
   it('resolves an imported actor to its actual file', () => {
-    // The end of the chain, and the assertion the eye's promise rests on.
+    // The end of the chain, and the assertion the button's promise rests on.
     const source = importStockActor(
       WORLD_SCENARIOS.empty.source,
       stockActorById('coin')!,

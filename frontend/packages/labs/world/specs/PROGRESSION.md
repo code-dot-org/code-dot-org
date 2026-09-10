@@ -290,7 +290,7 @@ reverse index once from the catalogue, and then:
 - the rule import dialog's row gains a "how this works" link beside its
   description (and a LOCKED row names the tile that would grant it);
 - a rule's toolbox category header gains the same;
-- the `use trait` eye already opens the file behind a trait
+- the `use trait` open button already opens the file behind a trait
   (`showRuleSource`); the lesson link sits beside it, because "show me the
   code" and "show me the lesson" are the two different things a stuck learner
   wants.
@@ -531,7 +531,7 @@ point of the exercise. Here is what it asks for and the lab has not got.
    the sprite/animation/effect libraries should show what is not yet unlocked,
    grayed, naming the tile that grants it. An absent row teaches nothing.
 4. **Lesson back-links** on those rows, on toolbox category headers, and beside
-   the `use trait` eye.
+   the `use trait` open button.
 5. **The tree page** and its progress store.
 6. **An assertion channel on the sandbox.** The lab↔sandbox protocol is already
    a typed two-way message set (`src/runtime/messages.ts` — `ToPreview`,

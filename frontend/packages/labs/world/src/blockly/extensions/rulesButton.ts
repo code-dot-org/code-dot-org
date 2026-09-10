@@ -15,7 +15,7 @@
 // It is not serialized. What the project holds is not a fact about this
 // workspace, and writing it into the file would be a number that could go stale
 // the moment another file changed. The same reasoning — and the same pair of
-// flags, for the same Blockly reasons — as the eye on `use rule`
+// flags, for the same Blockly reasons — as the open button on `use rule`
 // (extensions/openSourceButton).
 
 import type {Block, BlockSvg, Input} from 'blockly';
@@ -68,7 +68,7 @@ function addFields(block: Block): void {
       onClick: () => {
         // After this click is finished with, not during it — the panel is a
         // React dialog and Blockly is still inside its own gesture and focus
-        // handling for the press (the same care the eye takes).
+        // handling for the press (the same care the open button takes).
         setTimeout(() => {
           void requestRulesConfig().then(() => syncCount(block));
         }, 0);

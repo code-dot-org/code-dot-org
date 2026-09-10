@@ -1,8 +1,8 @@
-// The mortarboard beside the eye: open the lesson that taught this.
+// The mortarboard beside the open button: open the lesson that taught this.
 //
 // `use trait ⟨Affected by Gravity⟩` is a block a learner met in a lesson, and
 // four weeks later it is a phrase on a block with no way back to where it was
-// explained. The eye next to it opens the rule's FILE, which answers "how is
+// explained. The open button next to it opens the rule's FILE, which answers "how is
 // this implemented"; this answers the other question, "what was this for", and
 // they are not the same question — a learner stuck on a trait is usually asking
 // the second.
@@ -33,7 +33,7 @@ export const LESSON_BUTTON_EXTENSION = 'world_lesson_button';
 const FIELD_NAME = 'LESSON';
 
 /**
- * FontAwesome's graduation cap, drawn as an SVG glyph like the eye beside it.
+ * FontAwesome's graduation cap, drawn as an SVG glyph like the open button beside it.
  *
  * `graduation-cap` (f19d). In the FREE package as well as the pro one, which
  * is what makes it safe here — see `glyphIcon` on why naming the family is
@@ -113,7 +113,7 @@ function syncButton(block: Block): void {
     );
     const field = block.getField(FIELD_NAME);
     field?.setTooltip('Open the lesson this comes from');
-    // Both flags, for the reasons written out beside the eye: a serializable
+    // Both flags, for the reasons written out beside the open button: a serializable
     // field is written into files that should not have it, and an editable one
     // is serialized anyway with a different warning.
     if (field) {

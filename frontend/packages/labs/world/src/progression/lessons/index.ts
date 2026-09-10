@@ -238,9 +238,9 @@ The Hero is in the air and stays there. The **Gravity** rule is in this project
 2. Give the Ground **use trait ⟨Acts as Ground⟩**. Now it lands.
 3. Add a **when ⟨Hero⟩ stops falling** handler and print something, so you can
    see the moment happen.
-4. Click the **eye** on \`use trait ⟨Affected by Gravity⟩\` to open the rule
-   itself, and find the number that says how hard it pulls. Change it and run
-   again — it is your copy.
+4. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\` to open the
+   rule itself, and find the number that says how hard it pulls. Change it and
+   run again — it is your copy.
 `.trim(),
 };
 
@@ -249,8 +249,8 @@ The Hero is in the air and stays there. The **Gravity** rule is in this project
 const sprite: WorldScenario = {
   // THE FILE BROWSER IS ON, for the same reason `memory/actor-state` has it:
   // the lesson's subject is the file. Step three opens the picture and paints
-  // on it, and a `.png` opens by being opened — there is no eye on `set sprite`
-  // the way there is on `use trait`, and no other way in.
+  // on it, and a `.png` opens by being opened — there is no open button on
+  // `set sprite` the way there is on `use trait`, and no other way in.
   levelData: {showFileBrowser: true},
   name: 'A picture is a file',
   description: 'An actor drawing a gray box, and the picture it could have.',
@@ -4300,10 +4300,10 @@ A sokoban is that with one word changed.
    those is something you wrote.
 3. Push it into a Wall and try again. It stops, and so do you — a push that
    cannot happen is a step that does not.
-4. Click the **eye** on \`use trait ⟨Can Be Pushed⟩\` and find out why one word
-   was enough. The stepping trait asks what is in the tile it is going to; if
-   that thing can be pushed, the step becomes two steps, and both of them have
-   to be possible.
+4. Click the **open** button on \`use trait ⟨Can Be Pushed⟩\` and find out why
+   one word was enough. The stepping trait asks what is in the tile it is going
+   to; if that thing can be pushed, the step becomes two steps, and both of them
+   have to be possible.
 `.trim(),
 };
 
@@ -4480,7 +4480,7 @@ nothing anywhere else changes when you change it.
 
 ### What you do
 
-1. Open \`rules/patrol.rule\` — from the file browser, or the eye on
+1. Open \`rules/patrol.rule\` — from the file browser, or the open button on
    \`use trait ⟨Patrols Across⟩\`.
 2. Find **define number across time with default 1.5** and make it 0.5. The
    Guard turns three times as often.
@@ -4836,7 +4836,7 @@ them.
 
 ### What you do
 
-1. Click the **eye** on \`use trait ⟨Affected by Gravity⟩\`. The rule opens.
+1. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\`. It opens.
 2. Read the top of it. There are two numbers there that belong to the WORLD
    rather than to any actor, and one of them says how hard gravity pulls.
 3. Put that number in **how hard it pulls** at the top of \`main.world\`, so
@@ -6327,7 +6327,7 @@ already in it.
  * thing it invites is the click that leaves the one file the lesson is about.
  *
  * The files are still THERE and still compiled — what is gone is the list. The
- * ways in that belong to a lesson are still on the blocks: the eye beside `use
+ * ways in that belong to a lesson are still on the blocks: the open button beside `use
  * trait` opens the rule behind it, and the rule count on `define world` opens
  * what the project holds.
  *

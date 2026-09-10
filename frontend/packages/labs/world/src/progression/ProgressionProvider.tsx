@@ -3,7 +3,7 @@
 // Everything that can open the map calls `openTree` on the context: the button
 // in the resource panel's icon strip, and — once they are wired — the "how this
 // works" link on a rule's row in the import dialog, on a rule's toolbox
-// category, and beside the `use trait` eye (specs/PROGRESSION_UI.md).
+// category, and beside the `use trait` open button (specs/PROGRESSION_UI.md).
 //
 // One provider at the lab root, and exactly ONE modal, rendered here. A dialog
 // per opener is the bug this shape prevents: two maps on screen, each with its

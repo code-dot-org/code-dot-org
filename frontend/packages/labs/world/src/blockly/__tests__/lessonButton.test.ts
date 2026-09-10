@@ -1,7 +1,7 @@
 // The mortarboard on a `use rule` / `use trait` / `add actor` block: when it is
 // there, and which lesson it points at.
 //
-// The same three-way agreement the eye beside it needs, with one term changed:
+// The same three-way agreement the open button beside it needs, one term changed:
 // the block has to name something, a lesson has to have granted it, and there
 // has to be a progression mounted to open. Each is a way for the button to be
 // wrong — one that opens nothing, or a missing one on a rule the learner was

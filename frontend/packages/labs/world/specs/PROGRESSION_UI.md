@@ -52,7 +52,7 @@ feature: every lab eventually wants one of these.
 The modal is not opened only from that button. [PROGRESSION.md's revisit
 section](./PROGRESSION.md#revisiting-a-lesson) puts a link back to a lesson on
 the rule import dialog's rows, on a rule's toolbox category, and beside the
-`use trait` eye. All of them open the SAME modal, focused on a tile.
+`use trait` open button. All of them open the SAME modal, focused on a tile.
 
 So the opener is a context, not a `useState` in the layout:
 

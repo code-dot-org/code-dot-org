@@ -14,7 +14,7 @@
 // because Sprite Lab's blocks are dark. This lab's block colours are a THEME a
 // learner picks, in light and dark pairs (`worldBlocklyTheme`), so a fixed
 // white would go invisible on half of them. These are `FieldButton`s wearing a
-// FontAwesome glyph — the same button the eye, the mortarboard and the
+// FontAwesome glyph — the same button the open, the mortarboard and the
 // sparkles ride on — which take their colours from the block they land on.
 //
 // WHAT A CALLER OWES is the mutation event. Blockly fires one itself when a

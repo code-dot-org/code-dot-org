@@ -10,7 +10,7 @@
 // socket at zero by zero. The shadow was there in the SVG, correctly connected
 // and carrying its 80 — it had simply been measured before it could be, and
 // nothing measured it again. Its twin `the actors with ⟨Solid⟩ within …` was
-// fine, and the only difference between them was the eye.
+// fine, and the only difference between them was the open button.
 //
 // `queueRender` defers to Blockly's own render management, which runs after
 // construction. The one-line difference is invisible in every test that does

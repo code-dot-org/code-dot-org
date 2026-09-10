@@ -90,7 +90,7 @@ describe('the wand on define actor', () => {
   });
 
   it('is not offered where nothing can be edited', () => {
-    // Where it parts company with the eye and the mortarboard beside it: those
+    // Where it parts company with the open button and the mortarboard beside it:
     // two READ, and a version being previewed can still be looked into. This
     // one writes.
     expect(enhanceTarget({...inFile, readOnly: true})).toBeUndefined();

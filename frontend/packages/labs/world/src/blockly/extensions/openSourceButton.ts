@@ -1,4 +1,4 @@
-// The eye on a `use rule` / `use trait` block: open the file that defines it.
+// The open button on a `use rule` / `use trait` block: open the file that defines it.
 //
 // A block that names a rule is a block that names a FILE, when the rule is the
 // project's own — and until now the only route from one to the other was
@@ -29,12 +29,22 @@ export const OPEN_SOURCE_BUTTON_EXTENSION = 'world_open_source_button';
 const FIELD_NAME = 'OPEN_SOURCE';
 
 /**
- * FontAwesome's eye, drawn as an SVG glyph the way CDO's own fields do it.
+ * FontAwesome's `arrow-up-right-from-square`, drawn as an SVG glyph the way
+ * CDO's own fields do it.
  *
- * `eye` (f06e). In the free package as well as the pro one — see `glyphIcon`,
- * which is what makes that matter.
+ * `arrow-up-right-from-square` (f08e): a box with an arrow leaving it, which is
+ * what every application means by "open this somewhere else". In the free
+ * package as well as the pro one — see `glyphIcon`, which is what makes that
+ * matter.
+ *
+ * IT WAS AN EYE (f06e), and the open button had to move because sight is a better
+ * picture for something else. `define property` uses `eye` / `eye-slash` for
+ * whether the setter it makes is offered outside the rule that owns it, and two
+ * eyes a few blocks apart meaning "look at this file" and "this is visible"
+ * would be one picture for two ideas. This one is not about seeing at all — it
+ * is about going somewhere — so the two stop competing.
  */
-const EYE = '';
+const OPEN = '';
 
 /**
  * The module a `use rule` / `use trait` block names, if it names one.
@@ -114,7 +124,7 @@ function syncButton(block: Block): void {
           // workspace that has gone).
           setTimeout(() => openModule(modulePath), 0);
         },
-        icon: glyphIcon(EYE),
+        icon: glyphIcon(OPEN),
         // A read-only workspace can still be read — that is all this does.
         allowReadOnlyClick: true,
       }),
@@ -122,7 +132,7 @@ function syncButton(block: Block): void {
     );
     const field = block.getField(FIELD_NAME);
     field?.setTooltip('Open the file this comes from');
-    // NOT saved. `FieldButton` sets `SERIALIZABLE = true`, so the eye was
+    // NOT saved. `FieldButton` sets `SERIALIZABLE = true`, so the open button was
     // written into every file that had one — and read back into blocks that do
     // not, since the button is added and removed by context rather than being
     // part of the block. Blockly then said so, once per block, on every load:

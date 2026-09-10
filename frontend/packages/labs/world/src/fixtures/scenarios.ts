@@ -188,7 +188,7 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'it jumps too\n' +
       '- The rules, the animations and the pictures are still files — they ' +
       'were never actors, so there was nothing to move. There is no file ' +
-      'list here, so open a rule from the ⟨eye⟩ on the block that names it',
+      'list here, so open a rule from the ⟨open⟩ button on the block that names it',
   },
   breakout: {
     name: 'Breakout',

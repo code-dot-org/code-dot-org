@@ -1,7 +1,7 @@
 // The sparkles on `define actor` and on `define world`: give this thing
 // something it does not have yet.
 //
-// The third of the buttons that ride on a block — the eye opens the file a
+// The third of the buttons that ride on a block — the open button opens the file a
 // block comes from, the mortarboard opens the lesson it was met in, and this
 // one opens the enhancement shelf for the actor whose file is on screen
 // (specs/ENHANCEMENTS.md). It shares every mechanical detail with the two of
@@ -30,7 +30,7 @@
 // flyout preview — where there is no actor for it to be about.
 //
 // IT IS NOT OFFERED ON A READ-ONLY WORKSPACE, and that is where it parts
-// company with the eye and the cap. Those two READ — a version being previewed
+// company with the open button and the cap. Those two READ — a version being previewed
 // can still be looked into. This one writes.
 
 import type {Block, BlockSvg, Input, WorkspaceSvg} from 'blockly';
@@ -53,7 +53,7 @@ export const ENHANCE_BUTTON_EXTENSION = 'world_enhance_button';
 const FIELD_NAME = 'ENHANCE';
 
 /**
- * FontAwesome's sparkles, drawn as an SVG glyph like the eye beside it.
+ * FontAwesome's sparkles, drawn as an SVG glyph like the open button beside it.
  *
  * `sparkles` (f890): three four-pointed twinkles and no wand. The wand was the
  * first thing tried and it is the wrong picture twice over — `wand-sparkles`
@@ -174,7 +174,7 @@ function syncButton(block: Block): void {
         // After this click is finished with, not during it. An enhancement
         // rewrites the file and the lab re-seeds this workspace from it
         // (SourcesContext), which is a reload underneath a Blockly gesture that
-        // has not finished — the same reason the eye opens its file on a
+        // has not finished — the same reason the open button opens its file on a
         // timeout.
         setTimeout(
           () =>
@@ -188,7 +188,7 @@ function syncButton(block: Block): void {
   );
   const field = block.getField(FIELD_NAME);
   field?.setTooltip('Give this something it does not have yet');
-  // NOT saved, and not editable — see the note on the eye
+  // NOT saved, and not editable — see the note on the open button
   // (extensions/openSourceButton), which cost two Blockly warnings to work out.
   if (field) {
     field.SERIALIZABLE = false;
@@ -200,7 +200,7 @@ function syncButton(block: Block): void {
 /**
  * Keep the button in step with what the workspace is editing.
  *
- * Per block instance, like the eye: whether there is anything to enhance is a
+ * Per block instance, like the open button: whether there is anything to enhance is a
  * fact about the workspace this block was loaded into, and a `define actor`
  * dragged out of a flyout is loaded into a different one from the block it was
  * previewed as.

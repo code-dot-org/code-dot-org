@@ -50,10 +50,10 @@ import {measuredImages, setProjectGrids} from './spriteCells';
 import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 
 /** Extensions a module path can resolve to — what a block may open. */
-// What the eye can open. A `.map` is not a module the compiler resolves — a
+// What the open button can open. A `.map` is not a module the compiler resolves — a
 // world names one in a dropdown and `loadMap` reads it as data — but it IS a
 // file with an editor, which is the only thing the button needs.
-// Built from the one list, so what gets an eye and what the eye can open
+// Built from the one list, so what gets an open button and what the open button can open
 // cannot drift apart (openModule.OPENABLE_EXTENSIONS).
 const MODULE_FILE = new RegExp(`\\.(${OPENABLE_EXTENSIONS.join('|')})$`);
 
@@ -109,7 +109,7 @@ export function refreshProjectDropdowns(
   // rather than by folder (specs/SOUND.md).
   const sounds = projectSoundOptions(soundPaths);
   setProjectSounds(sounds);
-  // Which module paths there is a file to open for — what puts the eye on a
+  // Which module paths there is a file to open for — what puts the open button on a
   // `use rule` / `use trait` block (openModule).
   setOpenableModules(
     Object.keys(files)
