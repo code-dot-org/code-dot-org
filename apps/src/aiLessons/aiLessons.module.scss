@@ -994,6 +994,21 @@ textarea {
   // ease-out so each pulse decelerates as it spreads — feels like a
   // ripple moving away rather than a heartbeat.
   animation: continue-pulse 1.6s ease-out infinite;
+
+  // The loudness is earned only when the button is pressable; a glowing
+  // disabled button ("Preparing your code…") reads as a broken promise.
+  &:disabled {
+    animation: none;
+
+    .shimmerText {
+      animation: none;
+      background: none;
+      background-clip: unset;
+      -webkit-background-clip: unset;
+      color: inherit;
+      text-shadow: none;
+    }
+  }
 }
 
 .shimmerText {
