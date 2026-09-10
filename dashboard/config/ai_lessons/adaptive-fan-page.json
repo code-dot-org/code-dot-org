@@ -1,6 +1,7 @@
 {
   "formatVersion": 2,
   "id": "adaptive-fan-page",
+  "hidden": true,
   "title": "Build a Fan Page with AI",
   "objective": "Learn to direct AI as a creative partner — brainstorming, prompting, and debugging — while building a fan page in Web Lab 2 and picking up the web languages that let you say exactly what you mean.",
   "authorInputs": {

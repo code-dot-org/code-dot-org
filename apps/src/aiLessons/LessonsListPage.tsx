@@ -21,6 +21,10 @@ import styles from './aiLessons.module.scss';
 // a modern lesson through the stale editor would mangle it.
 const SHOW_AUTHORING_ACTIONS = false;
 
+// Hidden for the student playtest; /ai_lessons/progress stays reachable
+// by URL for internal use.
+const SHOW_PROGRESS_LINK = false;
+
 const STATUS_BADGES: {
   [status in NonNullable<LessonIndexEntry['status']>]: {
     label: string;
@@ -126,6 +130,10 @@ const LessonsListPage: React.FunctionComponent = () => {
     };
   }, []);
 
+  // Lessons marked hidden in their JSON stay out of the list but remain
+  // reachable by direct URL.
+  const visibleLessons = (lessons || []).filter(l => !l.hidden);
+
   const handleReset = async (lesson: LessonIndexEntry) => {
     const label = lesson.title || '(untitled)';
     const ok = window.confirm(
@@ -184,19 +192,24 @@ const LessonsListPage: React.FunctionComponent = () => {
               + New lesson
             </Link>
           )}
-          <Link className={styles.secondaryButton} href="/ai_lessons/progress">
-            View student progress
-          </Link>
+          {SHOW_PROGRESS_LINK && (
+            <Link
+              className={styles.secondaryButton}
+              href="/ai_lessons/progress"
+            >
+              View student progress
+            </Link>
+          )}
         </div>
       </header>
       {error && <div className={styles.error}>{error}</div>}
       {lessons === undefined ? (
         <p className={styles.muted}>Loading lessons…</p>
-      ) : lessons.length === 0 ? (
+      ) : visibleLessons.length === 0 ? (
         <p className={styles.muted}>No lessons yet — try creating one.</p>
       ) : (
         <ul className={styles.lessonList}>
-          {lessons.map(l => (
+          {visibleLessons.map(l => (
             <li key={l.id} className={styles.lessonRow}>
               <div className={styles.lessonTitleLine}>
                 <Link href={openHref(l)}>

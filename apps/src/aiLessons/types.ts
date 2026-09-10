@@ -355,6 +355,8 @@ export interface LessonIndexEntry {
   // The adaptivity mode the current user's run started in, when known.
   // The list resumes the lesson in this mode unless a pill overrides it.
   active_mode?: AdaptivityMode | null;
+  // Authored flag: kept out of the lesson list, reachable by URL.
+  hidden?: boolean;
 }
 
 export function isLabStep(step: Step): step is LabStep {

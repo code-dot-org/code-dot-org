@@ -180,6 +180,14 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     () => new URLSearchParams(window.location.search).get('adaptivity'),
     []
   );
+  // Presenter affordances (Controls, AI Log, arc regenerate) hide from
+  // students unless the URL opts in with ?showControls=true.
+  const showControls = useMemo(
+    () =>
+      new URLSearchParams(window.location.search).get('showControls') ===
+      'true',
+    []
+  );
   const [adaptivityMode, setAdaptivityMode] = useState(() =>
     resolveAdaptivity(authoredLesson, requestedMode)
   );
@@ -961,50 +969,55 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
         <header className={styles.tutorHeader}>
           <div className={styles.lessonTitleRow}>
             <div className={styles.lessonTitle}>{lesson.title}</div>
-            <div className={styles.headerIconRow}>
-              <WithTooltip
-                tooltipProps={{
-                  text: 'Controls',
-                  tooltipId: 'tt-controls-gear',
-                  size: 'xs',
-                  direction: 'onBottom',
-                }}
-              >
-                <button
-                  type="button"
-                  className={styles.demoNavArrow}
-                  onClick={() => setSettingsOpen(true)}
-                  aria-label="Open controls"
-                  aria-describedby="tt-controls-gear"
+            {showControls && (
+              <div className={styles.headerIconRow}>
+                <WithTooltip
+                  tooltipProps={{
+                    text: 'Controls',
+                    tooltipId: 'tt-controls-gear',
+                    size: 'xs',
+                    direction: 'onBottom',
+                  }}
                 >
-                  <FontAwesomeV6Icon iconName="gear" iconStyle="solid" />
-                </button>
-              </WithTooltip>
-              <WithTooltip
-                tooltipProps={{
-                  text: 'AI Log — see what goes to and from the AI',
-                  tooltipId: 'tt-ai-log',
-                  size: 'xs',
-                  direction: 'onBottom',
-                }}
-              >
-                <button
-                  type="button"
-                  className={styles.demoNavArrow}
-                  onClick={() => setAiLogOpen(true)}
-                  aria-label="Open the AI Log"
-                  aria-describedby="tt-ai-log"
+                  <button
+                    type="button"
+                    className={styles.demoNavArrow}
+                    onClick={() => setSettingsOpen(true)}
+                    aria-label="Open controls"
+                    aria-describedby="tt-controls-gear"
+                  >
+                    <FontAwesomeV6Icon iconName="gear" iconStyle="solid" />
+                  </button>
+                </WithTooltip>
+                <WithTooltip
+                  tooltipProps={{
+                    text: 'AI Log — see what goes to and from the AI',
+                    tooltipId: 'tt-ai-log',
+                    size: 'xs',
+                    direction: 'onBottom',
+                  }}
                 >
-                  <FontAwesomeV6Icon iconFamily="kit" iconName="ai-bot-solid" />
-                </button>
-              </WithTooltip>
-            </div>
+                  <button
+                    type="button"
+                    className={styles.demoNavArrow}
+                    onClick={() => setAiLogOpen(true)}
+                    aria-label="Open the AI Log"
+                    aria-describedby="tt-ai-log"
+                  >
+                    <FontAwesomeV6Icon
+                      iconFamily="kit"
+                      iconName="ai-bot-solid"
+                    />
+                  </button>
+                </WithTooltip>
+              </div>
+            )}
           </div>
           <div className={styles.checkpointMeta}>
             <span>
               {generatingArc ? 'Designing your learning path…' : step.title}
             </span>
-            {adaptivityMode === 'full' && arcPresent && (
+            {showControls && adaptivityMode === 'full' && arcPresent && (
               <WithTooltip
                 tooltipProps={{
                   text: 'Regenerate the personalized arc from the same diagnostics',

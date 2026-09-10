@@ -1,6 +1,7 @@
 {
   "formatVersion": 2,
   "id": "musical-artist-webpage",
+  "hidden": true,
   "title": "Design a Webpage for Your Favorite Musical Artist",
   "objective": "Learn core HTML and CSS by building a personalized fan page for a musical artist you choose, guided by an AI tutor.",
   "authorInputs": {

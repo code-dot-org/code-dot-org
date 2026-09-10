@@ -385,6 +385,7 @@ class AiLessonsController < ApplicationController
           'order' => parsed['order'].is_a?(Numeric) ? parsed['order'] : nil,
           'status' => status,
           'active_mode' => active_mode,
+          'hidden' => parsed['hidden'] == true,
         }
       rescue JSON::ParserError
         next

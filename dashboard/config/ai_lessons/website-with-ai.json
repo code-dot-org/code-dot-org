@@ -1,6 +1,7 @@
 {
   "formatVersion": 2,
   "id": "website-with-ai",
+  "hidden": true,
   "title": "Create a Website with AI",
   "objective": "Building a world-class website today isn't about memorizing web syntax — it's about curation, problem decomposition, and iterative feedback with AI. Learn to direct AI like an architect: precise structural language first, then style, then motion.",
   "authorInputs": {
