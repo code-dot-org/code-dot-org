@@ -22,6 +22,7 @@ import {
   nextFacing,
   pickPose,
   poseFrame,
+  poseStartTick,
   posesByImageName,
   teeterTicks,
 } from './characterAnimations';
@@ -972,7 +973,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       if (pick.key !== state.key) {
         state.key = pick.key;
-        state.tick = 0;
+        // Walking starts on the mid-stride frame, so the first step is
+        // visible the moment movement starts (see poseStartTick).
+        state.tick = poseStartTick(pick);
       }
       // Frames drawn facing the other way are shown mirrored; a set drawn
       // facing right only turns left this way.

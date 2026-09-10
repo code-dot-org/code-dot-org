@@ -147,6 +147,17 @@ export function poseFrame(range: PoseRange, tick: number): number {
 }
 
 /**
+ * The tick a sprite enters a pose at. Walking starts one frame in, on the
+ * mid-stride frame: the walk range opens with the shared standing frame
+ * (see CHARACTER_STRIP_POSES), so starting at zero shows no change for a
+ * whole frameDelay — the character slides before it visibly steps. Every
+ * other pose starts at its first frame.
+ */
+export function poseStartTick(pick: PickedPose): number {
+  return pick.pose === 'walk' ? pick.range.frameDelay : 0;
+}
+
+/**
  * How long a player that stops with its toes over an edge holds back — the
  * jump pose's falling frame, legs loose over the drop, held for as long as
  * the pose would take to play once — before it stands. The rising frame is
