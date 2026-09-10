@@ -10,7 +10,7 @@ import {
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
-import {getTrimmedThumbnail} from '../imageTrim';
+import {getImageThumbnail} from '../imageTrim';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -117,9 +117,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     }
     // The thumbnail map holds a sheet's first frame; the raw dataURI is the
     // whole strip, which must not render as the ghost.
-    return (
-      getTrimmedThumbnail(ghostCostume) || props.dataURI || props.sourceUrl
-    );
+    return getImageThumbnail(ghostCostume) || props.dataURI || props.sourceUrl;
   });
 
   // Maps screen points to the intrinsic 400x400 space; correct despite the

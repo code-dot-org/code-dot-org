@@ -21,17 +21,22 @@ export interface LessonOutlinePayload {
 // server); we swap the trailing /edit for /lesson_outlines, which sits
 // at the same route family in unit_routes for both URL forms.
 //
-// `generateOutline` (when supplied) is persisted on the Unit so reloads
-// of the /generate page restore the unit-level prompt. Pass undefined to
-// leave the persisted value alone; pass '' to clear it.
+// Unit-level prompts persisted for reloads of the /generate pages. A key
+// left undefined keeps the stored value (JSON.stringify drops it); ''
+// clears it.
+export interface UnitPrompts {
+  generateOutline?: string;
+  generateDraftingRules?: string;
+  generateAuthoringRules?: string;
+}
+
 export async function saveLessonOutlines(
   editUnitUrl: string,
   lessons: LessonOutlinePayload[],
-  generateOutline?: string
+  prompts: UnitPrompts = {}
 ): Promise<{lessons: SerializedLesson[]}> {
   const url = editUnitUrl.replace(/\/edit$/, '/lesson_outlines');
-  const body: Record<string, unknown> = {lessons};
-  if (generateOutline !== undefined) body.generateOutline = generateOutline;
+  const body = {lessons, ...prompts};
   const response = await HttpClient.put(url, JSON.stringify(body), true, {
     'Content-Type': 'application/json;charset=UTF-8',
     Accept: 'application/json',

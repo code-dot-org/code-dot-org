@@ -136,6 +136,7 @@ export type LevelProperty =
   | 'long_instructions'
   | 'generate_outline'
   | 'generate_aichat_preset'
+  | 'generate_supplied_code'
   | 'panels'
   | 'mode'
   | 'dynamic_instructions'
@@ -154,8 +155,17 @@ export async function updateLevelProperty(
   property: LevelProperty,
   value: string
 ): Promise<void> {
+  await updateLevelProperties(levelId, {[property]: value});
+}
+
+export async function updateLevelProperties(
+  levelId: number,
+  properties: Partial<Record<LevelProperty, string>>
+): Promise<void> {
   const form = new FormData();
-  form.append(`level[${property}]`, value);
+  for (const [property, value] of Object.entries(properties)) {
+    if (value !== undefined) form.append(`level[${property}]`, value);
+  }
   await HttpClient.put(`/levels/${levelId}`, form, true);
 }
 

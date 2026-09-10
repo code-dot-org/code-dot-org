@@ -25,6 +25,7 @@ import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {
   isNameUnique,
+  revokeObjectUrlImages,
   SET_INITIAL_ANIMATION_LIST,
   setAnimationName,
   setInitialAnimationList,
@@ -484,6 +485,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // migration rewrites; the next save persists the result.
       const seeded = cloneDeep(animations || EMPTY_ANIMATION_LIST);
       migrateAnimationList(seeded);
+      // Replacing the list frees the outgoing images' Blobs (the seed
+      // carries no pixel data; images reload from their sources).
+      revokeObjectUrlImages(getStore().getState().animationList);
       dispatch(
         setInitialAnimationList(
           seeded,
@@ -1448,6 +1452,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const onSceneTab = activeTab === 'Code' || activeTab === 'World';
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play' ? 'play' : onSceneTab ? 'preview' : 'hidden';
+
+  // Freeze the game while nobody can see it: the playspace hidden behind
+  // another tab, or the whole document hidden. (A hidden document stops
+  // drawing on its own — the browser pauses animation frames — but the
+  // wall clock kept running, so timers jumped forward on return.)
+  const [documentHidden, setDocumentHidden] = useState(
+    () => typeof document !== 'undefined' && document.hidden
+  );
+  useEffect(() => {
+    const onVisibility = () => setDocumentHidden(document.hidden);
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => document.removeEventListener('visibilitychange', onVisibility);
+  }, []);
+  useEffect(() => {
+    engineRef.current?.setDrawPaused(
+      playspaceMode === 'hidden' || documentHidden
+    );
+    // engineReady: a level that STARTS on a hidden tab (an images-only
+    // level) must pause the engine as soon as it exists.
+  }, [playspaceMode, documentHidden, engineReady]);
 
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).

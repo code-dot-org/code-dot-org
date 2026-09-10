@@ -93,6 +93,52 @@ describe('buildInitialState', () => {
     expect(specs[1].aichatPreset).toBeUndefined();
   });
 
+  it('restores supplied code for codebridge labs only', () => {
+    const {specs} = buildInitialState(
+      lessonWith([
+        {
+          id: '1',
+          name: 'l-build',
+          type: 'Pythonlab',
+          generateSuppliedCode: 'print(1)',
+        },
+        {id: '2', name: 'l-intro', type: 'Panels', generateSuppliedCode: 'x'},
+      ])
+    );
+    expect(specs[0].suppliedCode).toBe('print(1)');
+    expect(specs[0].lastGeneratedSuppliedCode).toBe('print(1)');
+    expect(specs[1].suppliedCode).toBeUndefined();
+  });
+
+  it('restores supplied code on codebridge sublevels', () => {
+    const {specs} = buildInitialState(
+      lessonWith([
+        {
+          id: '1',
+          name: 'l-pick',
+          type: 'BubbleChoice',
+          sublevels: [
+            {
+              id: '2',
+              name: 'l-pick-a',
+              type: 'Pythonlab',
+              generateSuppliedCode: 'score = 0',
+            },
+            {
+              id: '3',
+              name: 'l-pick-b',
+              type: 'Panels',
+              generateSuppliedCode: 'x',
+            },
+          ],
+        },
+      ])
+    );
+    const subs = specs[0].sublevels!;
+    expect(subs[0].suppliedCode).toBe('score = 0');
+    expect(subs[1].suppliedCode).toBeUndefined();
+  });
+
   it('hydrates bubble choice sublevels, marking sublevel-disallowed types', () => {
     const {specs} = buildInitialState(
       lessonWith([
