@@ -18,10 +18,8 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 
 const put = HttpClient.put as jest.MockedFunction<typeof HttpClient.put>;
 
+// No time limit by default.
 const INITIAL_VALUES: QuizConfigurationData = {
-  displayName: 'Unit quiz',
-  customIntroText: 'Read the instructions.',
-  timeLimitMinutes: 10,
   showCorrectness: true,
   revealAnswerExplanation: false,
   showIntroScreen: true,
@@ -29,10 +27,9 @@ const INITIAL_VALUES: QuizConfigurationData = {
   allowMultipleAttempts: true,
 };
 
-const SAVED: QuizConfigurationData = {
-  ...INITIAL_VALUES,
-  displayName: 'Saved title',
-};
+function jsonResponse(data: QuizConfigurationData): Response {
+  return {ok: true, json: async () => data} as Response;
+}
 
 function renderPanel(
   overrides: Partial<React.ComponentProps<typeof QuizConfigurationPanel>> = {}
@@ -49,8 +46,8 @@ function renderPanel(
   return {onSaved};
 }
 
-function clickSave() {
-  fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+function lastRequestBody() {
+  return JSON.parse(put.mock.calls[put.mock.calls.length - 1][1] as string);
 }
 
 describe('QuizConfigurationPanel', () => {
@@ -58,61 +55,136 @@ describe('QuizConfigurationPanel', () => {
     put.mockReset();
   });
 
-  it('puts the edited configuration and calls onSaved with the server payload', async () => {
-    put.mockResolvedValue({
-      ok: true,
-      json: async () => SAVED,
-    } as Response);
+  it('shows the chooser when no purpose is set yet, and saves the chosen purpose', async () => {
+    put.mockResolvedValue(jsonResponse({...INITIAL_VALUES, purpose: 'exam'}));
+    const {onSaved} = renderPanel({
+      initialValues: {...INITIAL_VALUES, purpose: undefined},
+    });
+    expect(screen.getByText('What is this quiz for?')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByText('Exam', {exact: true}));
+
+    // Switches to the dropdown right away, without waiting on the save.
+    expect(
+      screen.queryByText('What is this quiz for?')
+    ).not.toBeInTheDocument();
+    expect(screen.getByLabelText('Purpose')).toHaveValue('exam');
+    await waitFor(() => expect(onSaved).toHaveBeenCalled());
+    expect(lastRequestBody().purpose).toBe('exam');
+  });
+
+  it('reverts to the chooser when saving the chosen purpose fails', async () => {
+    put.mockRejectedValue(new Error('network down'));
+    renderPanel({initialValues: {...INITIAL_VALUES, purpose: undefined}});
+
+    fireEvent.click(screen.getByText('Exam', {exact: true}));
+    expect(screen.getByLabelText('Purpose')).toBeInTheDocument();
+
+    await waitFor(() =>
+      expect(screen.getByText('What is this quiz for?')).toBeInTheDocument()
+    );
+  });
+
+  it('saves a purpose changed from the dropdown, reverting on failure', async () => {
+    put.mockRejectedValue(new Error('network down'));
+    renderPanel();
+
+    fireEvent.change(screen.getByLabelText('Purpose'), {
+      target: {value: 'exam'},
+    });
+    expect(screen.getByLabelText('Purpose')).toHaveValue('exam');
+
+    await waitFor(() =>
+      expect(screen.getByLabelText('Purpose')).toHaveValue('practice')
+    );
+  });
+
+  it('saves a toggle change immediately with just that field overridden', async () => {
+    put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     const {onSaved} = renderPanel();
 
-    fireEvent.change(screen.getByLabelText('Quiz title (optional)'), {
-      target: {value: 'Midterm'},
-    });
-    clickSave();
+    fireEvent.click(screen.getByLabelText('Show intro screen'));
 
-    await waitFor(() => expect(onSaved).toHaveBeenCalledWith(SAVED));
-    expect(put).toHaveBeenCalledWith(
-      '/levels/42/quiz_configuration',
-      JSON.stringify({
-        displayName: 'Midterm',
-        customIntroText: 'Read the instructions.',
-        timeLimitMinutes: 10,
-        showCorrectness: true,
-        revealAnswerExplanation: false,
-        showIntroScreen: true,
-        purpose: 'practice',
-        allowMultipleAttempts: true,
-      }),
-      true,
-      {'Content-Type': 'application/json'}
+    await waitFor(() => expect(onSaved).toHaveBeenCalled());
+    expect(lastRequestBody()).toEqual({
+      timeLimitMinutes: null,
+      showCorrectness: true,
+      revealAnswerExplanation: false,
+      showIntroScreen: false,
+      purpose: 'practice',
+      allowMultipleAttempts: true,
+    });
+  });
+
+  it('reverts a toggle when its save is rejected by the server', async () => {
+    put.mockRejectedValue(new Error('network down'));
+    renderPanel();
+
+    const toggle = screen.getByLabelText(
+      'Allow multiple attempts'
+    ) as HTMLInputElement;
+    fireEvent.click(toggle);
+    expect(toggle.checked).toBe(false);
+
+    await waitFor(() =>
+      expect(screen.getByText('Something went wrong.')).toBeInTheDocument()
     );
-    expect(screen.getByRole('button', {name: 'Save'})).toBeEnabled();
+    expect(toggle.checked).toBe(true);
+  });
+
+  it('disables controls while a save is in flight', async () => {
+    let resolvePut: (response: Response) => void = () => {};
+    put.mockReturnValue(
+      new Promise(resolve => {
+        resolvePut = resolve;
+      })
+    );
+    renderPanel();
+
+    const toggle = screen.getByLabelText(
+      'Show intro screen'
+    ) as HTMLInputElement;
+    fireEvent.click(toggle);
+    expect(toggle).toBeDisabled();
+
+    resolvePut(jsonResponse(INITIAL_VALUES));
+    await waitFor(() => expect(toggle).not.toBeDisabled());
+  });
+
+  it('saves the time limit on blur, not on every keystroke', () => {
+    renderPanel();
+
+    fireEvent.change(screen.getByLabelText('Set time limit'), {
+      target: {value: '2'},
+    });
+    expect(put).not.toHaveBeenCalled();
+
+    fireEvent.blur(screen.getByLabelText('Set time limit'));
+    expect(put).toHaveBeenCalledTimes(1);
   });
 
   it('sends a blank time limit as null', async () => {
-    put.mockResolvedValue({
-      ok: true,
-      json: async () => SAVED,
-    } as Response);
+    put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
-      initialValues: {...INITIAL_VALUES, timeLimitMinutes: undefined},
+      initialValues: {...INITIAL_VALUES, timeLimitMinutes: 10},
     });
 
-    clickSave();
+    fireEvent.change(screen.getByLabelText('Set time limit'), {
+      target: {value: ''},
+    });
+    fireEvent.blur(screen.getByLabelText('Set time limit'));
 
     await waitFor(() => expect(put).toHaveBeenCalled());
-    expect(JSON.parse(put.mock.calls[0][1] as string).timeLimitMinutes).toBe(
-      null
-    );
+    expect(lastRequestBody().timeLimitMinutes).toBe(null);
   });
 
-  it('does not put when the time limit is not a positive integer', async () => {
+  it('does not save when the time limit is not a positive integer', async () => {
     renderPanel();
 
-    fireEvent.change(screen.getByLabelText('Time limit (minutes, optional)'), {
+    fireEvent.change(screen.getByLabelText('Set time limit'), {
       target: {value: '0'},
     });
-    clickSave();
+    fireEvent.blur(screen.getByLabelText('Set time limit'));
 
     expect(
       await screen.findByText(
@@ -122,12 +194,15 @@ describe('QuizConfigurationPanel', () => {
     expect(put).not.toHaveBeenCalled();
   });
 
-  it('does not put when a time limit is set without the intro screen', async () => {
+  it('does not save, and reverts, when turning off show intro screen while a time limit is set', async () => {
     renderPanel({
-      initialValues: {...INITIAL_VALUES, showIntroScreen: false},
+      initialValues: {...INITIAL_VALUES, timeLimitMinutes: 10},
     });
 
-    clickSave();
+    const toggle = screen.getByLabelText(
+      'Show intro screen'
+    ) as HTMLInputElement;
+    fireEvent.click(toggle);
 
     expect(
       await screen.findByText(
@@ -135,44 +210,63 @@ describe('QuizConfigurationPanel', () => {
       )
     ).toBeInTheDocument();
     expect(put).not.toHaveBeenCalled();
+    expect(toggle.checked).toBe(true);
   });
 
-  it('shows the server error when put rejects and re-enables Save', async () => {
+  it('turning off show correctness also clears reveal answer/explanation in the same request', async () => {
+    put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
+    renderPanel({
+      initialValues: {...INITIAL_VALUES, revealAnswerExplanation: true},
+    });
+
+    fireEvent.click(screen.getByLabelText('Show correctness'));
+
+    await waitFor(() => expect(put).toHaveBeenCalled());
+    expect(lastRequestBody()).toMatchObject({
+      showCorrectness: false,
+      revealAnswerExplanation: false,
+    });
+    expect(
+      screen.queryByLabelText('Reveal answer and explanation')
+    ).not.toBeInTheDocument();
+  });
+
+  it('reverts both show correctness and reveal answer/explanation together on failure', async () => {
     put.mockRejectedValue(
       new NetworkError(
         '400 Bad Request',
-        new Response(
-          JSON.stringify({
-            error: 'cannot be true unless show_correctness is also true',
-          }),
-          {
-            status: 400,
-            headers: {'Content-Type': 'application/json'},
-          }
-        )
+        new Response(JSON.stringify({error: 'nope'}), {
+          status: 400,
+          headers: {'Content-Type': 'application/json'},
+        })
       )
     );
-    const {onSaved} = renderPanel();
+    renderPanel({
+      initialValues: {...INITIAL_VALUES, revealAnswerExplanation: true},
+    });
 
-    clickSave();
+    fireEvent.click(screen.getByLabelText('Show correctness'));
 
+    expect(await screen.findByText('nope')).toBeInTheDocument();
     expect(
-      await screen.findByText(
-        'cannot be true unless show_correctness is also true'
-      )
-    ).toBeInTheDocument();
-    expect(onSaved).not.toHaveBeenCalled();
-    expect(screen.getByRole('button', {name: 'Save'})).toBeEnabled();
+      (screen.getByLabelText('Show correctness') as HTMLInputElement).checked
+    ).toBe(true);
+    expect(
+      (
+        screen.getByLabelText(
+          'Reveal answer and explanation'
+        ) as HTMLInputElement
+      ).checked
+    ).toBe(true);
   });
 
-  it('shows a fallback message when put rejects without a JSON error', async () => {
-    put.mockRejectedValue(new Error('network down'));
+  it('saves reveal answer/explanation independently once shown', async () => {
+    put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel();
 
-    clickSave();
+    fireEvent.click(screen.getByLabelText('Reveal answer and explanation'));
 
-    expect(
-      await screen.findByText('Something went wrong.')
-    ).toBeInTheDocument();
+    await waitFor(() => expect(put).toHaveBeenCalled());
+    expect(lastRequestBody().revealAnswerExplanation).toBe(true);
   });
 });
