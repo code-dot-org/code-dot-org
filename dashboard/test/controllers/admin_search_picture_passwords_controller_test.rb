@@ -194,6 +194,8 @@ class AdminSearchPicturePasswordsControllerTest < ActionController::TestCase
       token = form.at_css('input[name=authenticity_token]')['value']
       assert token.present?
 
+      # Controller tests retain PATH_INFO between requests, but CSRF tokens are scoped to the form action.
+      @request.delete_header('PATH_INFO')
       post :set_section_picture_passwords, params: {
         section_code: @section.code,
         secret_picture_id: @picture.id,
