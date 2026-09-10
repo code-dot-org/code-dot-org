@@ -1,4 +1,4 @@
-import {isEqual} from 'lodash';
+import {cloneDeep, isEqual} from 'lodash';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
@@ -230,7 +230,11 @@ export default function useSources<T extends ProjectSources>({
           levelProperties,
           projectAndSources?.sources as T | undefined,
           getToolboxEditSourcesRef.current?.(levelProperties)
-        ) || defaultSources
+        ) ||
+          // Copied for the same reason getInitialSources copies level
+          // sources: this is a shared module constant, and labs edit
+          // sources in place.
+          cloneDeep(defaultSources)
       );
 
       // No project; return early.

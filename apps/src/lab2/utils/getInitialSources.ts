@@ -1,3 +1,5 @@
+import {cloneDeep} from 'lodash';
+
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {
   getAppOptionsEditBlocks,
@@ -10,6 +12,15 @@ const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isEditingExemplar = getAppOptionsEditingExemplar();
 const isViewingExemplar = getAppOptionsViewingExemplar();
+
+// Sources read off levelProperties are references into the immer-frozen
+// redux state, and one object would serve every re-initialization: hand each
+// consumer its own mutable copy. Labs migrate and edit sources in place,
+// which throws on a frozen object in the production bundle's strict mode —
+// and silently does nothing in the dev bundle, whose react-refresh wrapping
+// drops 'use strict', so the throw only ever shows in production.
+const ownCopy = <T>(sources: T | undefined): T | undefined =>
+  sources && cloneDeep(sources);
 
 /**
  * Computes which initial sources to present based on level and project information
@@ -25,7 +36,7 @@ export default function <T extends ProjectSources>(
   const predictSettings = levelProperties.predictSettings;
 
   if (isStartMode) {
-    return startSources;
+    return ownCopy(startSources);
   }
 
   if (isToolboxMode) {
@@ -33,7 +44,7 @@ export default function <T extends ProjectSources>(
   }
 
   if (isEditingExemplar || isViewingExemplar) {
-    return exemplarSources;
+    return ownCopy(exemplarSources);
   }
 
   if (
@@ -42,8 +53,10 @@ export default function <T extends ProjectSources>(
   ) {
     // Predict levels only use sources loaded from the server if the code is
     // editable after submit, otherwise use the start sources.
-    return templateSources || startSources;
+    return ownCopy(templateSources || startSources);
   }
 
-  return projectSources || templateSources || startSources;
+  // Project sources arrive freshly parsed from the server and are already
+  // this consumer's own; only the level-derived fallbacks need copying.
+  return projectSources || ownCopy(templateSources || startSources);
 }
