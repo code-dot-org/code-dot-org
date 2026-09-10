@@ -1871,38 +1871,21 @@ describe('the block that raises an event', () => {
   // carries. It replaces a pair of hand-written blocks that named their event
   // in a dropdown and always said "with", whether there was anything to carry
   // or not.
-  const emit = (
-    type: string,
-    values: Record<string, string>,
-    definitions: Record<string, string> = {},
-  ): string =>
-    generatorFor(type)(
-      {getFieldValue: () => null} as never,
-      {
-        definitions_: definitions,
-        valueToCode: (_block: unknown, name: string) => values[name] ?? '',
-      } as never,
-      {} as never,
-    ) as string;
-
-  it('emits a built-in event through the WorldLab namespace', () => {
-    expect(
-      emit('world_emit_Appearance_AnimationEndedEvent', {ACTOR: 'other'}),
-    ).toBe('world.emit(WorldLab.AnimationEndedEvent, other);\n');
-  });
-
-  it('defaults to the principal actor when the socket is empty', () => {
-    expect(emit('world_emit_Appearance_AnimationEndedEvent', {})).toBe(
-      'world.emit(WorldLab.AnimationEndedEvent, actor);\n',
+  it('mints no `emit` for an event the engine owns', () => {
+    // An event says something happened, and who may say so is the source that
+    // owns it. `created`, `removed`, `left the map`, `animation ends` are the
+    // engine's own observations — a block that let a program announce one
+    // would let it announce something untrue, and every handler listening
+    // would believe it. The HAT is still there: hearing one is what it is for.
+    const emits = DOMAIN_BLOCKS.filter(b =>
+      /^world_emit_(Space|Appearance)_/.test(b.type),
     );
-  });
+    const hats = DOMAIN_BLOCKS.filter(b =>
+      /^world_on_(Space|Appearance)_/.test(b.type),
+    );
 
-  it('reads `emit <event> for <actor>`, in the event’s own words', () => {
-    const block = DOMAIN_BLOCKS.find(
-      b => b.type === 'world_emit_Appearance_AnimationEndedEvent',
-    ) as {message0: string} | undefined;
-
-    expect(block?.message0).toBe('emit animation ends for %1');
+    expect(emits).toEqual([]);
+    expect(hats.length).toBeGreaterThan(0);
   });
 
   it('imports a project rule’s event from its module', () => {

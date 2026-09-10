@@ -1440,10 +1440,17 @@ const defineEmitBlock = (event: EventMeta) => {
 const EVENT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
   rule.events.map(event => defineEventBlock(event)),
 );
-/** …and the block that raises each, beside the hat that hears it. */
-const EMIT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
-  rule.events.map(event => defineEmitBlock(event)),
-);
+// AND NO BLOCK RAISES ONE OF THESE. Every other rule's events get an `emit`
+// beside the hat, minted from the same signature (`defineEmitBlock`, called
+// where a project rule or an actor's own file declares one). The engine's do
+// not, and cannot: an event says something happened, and who may say so is the
+// source that owns it. `created`, `removed`, `left the map`, `animation ends`
+// are the engine's own observations — a block that let a program announce one
+// would let it announce something untrue, and every handler listening would
+// believe it.
+//
+// The HATS are still here (`EVENT_BLOCKS` above), because hearing one is
+// exactly what they are for.
 
 /**
  * Root block types — top-level blocks that own the chain below them as a body
@@ -9067,7 +9074,6 @@ export const DOMAIN_BLOCKS = [
   ...ACTION_BLOCKS,
   ...QUERY_BLOCKS,
   ...EVENT_BLOCKS,
-  ...EMIT_BLOCKS,
   worldPrint,
   worldEventActor,
   worldEventValue,
