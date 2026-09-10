@@ -8,7 +8,8 @@
 // `import * as WorldLab from 'world-lab'`, so no per-block import analysis is
 // needed; the compiler rewrites `world-lab` to the self-hosted engine.
 
-import type {Block, FieldDropdown} from 'blockly';
+import type {Block, BlockSvg, FieldDropdown} from 'blockly';
+import {Events} from 'blockly/core';
 import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {
@@ -19,6 +20,7 @@ import {
   type Toolbox,
   type ToolboxCategory,
 } from '@code-dot-org/blockly';
+import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 import fieldColourPlugin from '@code-dot-org/blockly/fields/fieldColour';
 
 import {
@@ -109,6 +111,7 @@ import {
 } from './extensions/effectParamsMutator';
 import {enhanceButtonExtension} from './extensions/enhanceButton';
 import {eventActorToolboxExtension} from './extensions/eventActorToolbox';
+import {glyphIcon} from './extensions/glyphIcon';
 import {installIfPlusMinus} from './extensions/ifPlusMinus';
 import {lessonButtonExtension} from './extensions/lessonButton';
 import {missingRuleExtension} from './extensions/missingRule';
@@ -122,6 +125,10 @@ import {spritePickExtension} from './extensions/spritePickField';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {FieldMarkdown} from './fields/FieldMarkdown';
+import {
+  FieldPropertyPreview,
+  type BlockDrawing,
+} from './fields/FieldPropertyPreview';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {VARIABLE_NAME_FIELD} from './fields/variableName';
@@ -180,7 +187,13 @@ import {
 } from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
-import {designedName, pascal, slug} from './ruleMeta';
+import {
+  designedName,
+  parseDefault,
+  pascal,
+  PROPERTY_TYPES,
+  slug,
+} from './ruleMeta';
 import type {
   ActionMeta,
   EventMeta,
@@ -2120,7 +2133,10 @@ const typedValueInputs = (
  * empty value is a list's empty value, and the one thing that differs is that
  * no `add … to` is generated for it.
  */
-const asTypedValue = (property: PropertyMeta): TypedValue => ({
+const asTypedValue = (property: {
+  type: PropertyType;
+  default?: unknown;
+}): TypedValue => ({
   ...property,
   type: property.type === 'actor' ? 'actors' : property.type,
 });
@@ -2188,12 +2204,57 @@ const valueStyle = (type: PropertyType): string =>
           : 'math_blocks';
 
 /**
- * A "set …" block for one settable property, generated from its definition. An
- * actor property (a trait's) takes an ACTOR value input defaulting to a `this
- * actor` shadow and sets it on that actor; a world property (a rule's own) sets
- * it on `world`. The value input(s) match the property's type.
+ * What a property is, said in the least a block can be built from.
+ *
+ * Not `PropertyMeta`, which carries a `ref` — where the declaration lives and
+ * what to import. A `define property` block being edited has a name, a type and
+ * a default and nothing else yet, and it draws the same two blocks
+ * (`FieldPropertyPreview`), so the shape below is stated in terms of what both
+ * callers actually have.
  */
-const defineSetPropertyBlock = (property: PropertyMeta) => {
+export interface PropertyShapeInput {
+  readonly name: string;
+  readonly type: PropertyType;
+  readonly default?: unknown;
+  readonly scope: MemberScope;
+}
+
+/** One of the two blocks a property makes, as a block definition wants it. */
+export interface PropertyBlockShape {
+  readonly message0: string;
+  readonly args0: BlockArgDefinition[];
+  /** The default shadows its value sockets wear. */
+  readonly shadows: Array<{name: string; shadow: ShadowSpec}>;
+  readonly style: string;
+  /** The check a getter reports; absent on the setter, which reports nothing. */
+  readonly output?: string;
+  /** The subject socket and the block that starts in it, when there is one. */
+  readonly subject?: {name: string; type: string};
+}
+
+/**
+ * The subject a property block is asked OF, as the block that starts in its
+ * socket. An actor's is `this actor`; a camera's is the main camera, because
+ * `this camera` outside a `define camera` body names an identifier nothing
+ * binds (`actorInput.cameraShadow`).
+ */
+const SUBJECT_SHADOW: Record<'actor' | 'camera', string> = {
+  actor: 'world_this_actor',
+  camera: 'world_camera',
+};
+
+/**
+ * THE ONE DESCRIPTION OF WHAT A PROPERTY MAKES.
+ *
+ * Two callers, and they must not drift: the block factories below mint the real
+ * `set …` / `get …` blocks from this, and `define property` draws the very same
+ * shapes on its own face so a learner can see what they are about to get. A
+ * preview that described the blocks in its own words would be right until the
+ * first time one of them changed.
+ */
+export const propertyShape = (
+  property: PropertyShapeInput,
+): {get: PropertyBlockShape; set: PropertyBlockShape} => {
   const name = property.name;
   // Anything that is not the world's own has a SUBJECT, and so takes a socket
   // to say which one. A camera-scoped property is a subject property like an
@@ -2201,6 +2262,18 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
   // generate `world.get(…)` and fail at runtime looking for a slot the world
   // never had (`MemberScope`).
   const subjectScoped = property.scope !== 'world';
+  const subject = subjectScoped
+    ? {
+        name: 'ACTOR',
+        type: SUBJECT_SHADOW[property.scope === 'camera' ? 'camera' : 'actor'],
+      }
+    : undefined;
+  const actorArg: BlockArgDefinition = {
+    type: 'input_value',
+    name: 'ACTOR',
+    check: 'Actor',
+  };
+
   // The value inputs start at %2 after the ACTOR input (%1), else at %1.
   const value = typedValueInputs(asTypedValue(property), subjectScoped ? 2 : 1);
   // No `world` in front of a world property: the name is the whole label. What
@@ -2209,15 +2282,70 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
   // the prefix was answering a question the block never asked. It also read
   // badly the moment a property named itself properly: "set world amount of
   // gravity to" against "set amount of gravity to".
-  const message0 = subjectScoped
-    ? `set ${name} of %1 to ${value.message}`
-    : `set ${name} to ${value.message}`;
-  const args0: BlockArgDefinition[] = subjectScoped
-    ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}, ...value.args]
-    : value.args;
+  const set: PropertyBlockShape = {
+    message0: subjectScoped
+      ? `set ${name} of %1 to ${value.message}`
+      : `set ${name} to ${value.message}`,
+    args0: subjectScoped ? [actorArg, ...value.args] : value.args,
+    shadows: value.shadows,
+    style: 'default',
+    subject,
+  };
+
+  // A point is read one axis at a time (an x/y dropdown → a Number); a vector is
+  // read whole. Everything else is a plain scalar read.
+  const hasComponent = property.type === 'point';
+  const getArgs: BlockArgDefinition[] = [];
+  const slot = (arg: BlockArgDefinition): string => {
+    getArgs.push(arg);
+    return `%${getArgs.length}`;
+  };
+  const component = (): string =>
+    slot({
+      type: 'field_dropdown',
+      name: 'COMPONENT',
+      options: [
+        ['x', 'x'],
+        ['y', 'y'],
+      ],
+    });
+  const actorSocket = (): string => slot(actorArg);
+
+  const get: PropertyBlockShape = {
+    // Unprefixed for a world property, as the setter is above.
+    message0: subjectScoped
+      ? hasComponent
+        ? `get ${name} ${component()} of ${actorSocket()}`
+        : `get ${name} of ${actorSocket()}`
+      : hasComponent
+        ? `get ${name} ${component()}`
+        : `get ${name}`,
+    args0: getArgs,
+    // A read has nothing to seed: what it reports comes from the property.
+    shadows: [],
+    // Style by the value it reports: a boolean reads as logic, a whole vector as
+    // a location, a number/point axis as math.
+    style: valueStyle(property.type),
+    output: outputForType(property.type),
+    subject,
+  };
+
+  return {get, set};
+};
+
+/**
+ * A "set …" block for one settable property, generated from its definition. An
+ * actor property (a trait's) takes an ACTOR value input defaulting to a `this
+ * actor` shadow and sets it on that actor; a world property (a rule's own) sets
+ * it on `world`. The value input(s) match the property's type.
+ */
+const defineSetPropertyBlock = (property: PropertyMeta) => {
+  const name = property.name;
+  const subjectScoped = property.scope !== 'world';
+  const {message0, args0, shadows, style} = propertyShape(property).set;
   const type = setPropertyBlockType(memberKey(property.ref));
   // Seed the value sockets with their default shadow blocks (attached on init).
-  registerValueShadows(type, value.shadows);
+  registerValueShadows(type, shadows);
   registerMemberBlockType(type, property.ref);
   return defineBlock({
     type,
@@ -2232,7 +2360,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
         ? [subjectInputExtension(property.scope), valueShadowExtension]
         : [valueShadowExtension, worldContextExtension],
     ),
-    style: 'default',
+    style,
     tooltip: subjectScoped
       ? `Set an actor's ${name}.`
       : `Set the world's ${name}.`,
@@ -2463,43 +2591,11 @@ const defineValueListPropertyBlocks = (property: PropertyMeta) => {
  */
 const defineGetPropertyBlock = (property: PropertyMeta) => {
   const name = property.name;
-  // Anything that is not the world's own has a SUBJECT, and so takes a socket
-  // to say which one. A camera-scoped property is a subject property like an
-  // actor's — testing `=== 'actor'` here made a camera trait's property
-  // generate `world.get(…)` and fail at runtime looking for a slot the world
-  // never had (`MemberScope`).
   const subjectScoped = property.scope !== 'world';
   // A point is read one axis at a time (an x/y dropdown → a Number); a vector is
   // read whole. Everything else is a plain scalar read.
   const hasComponent = property.type === 'point';
-
-  // Build message + args left-to-right: an optional x/y component dropdown (for
-  // points), then the ACTOR input (for actor properties).
-  const args0: BlockArgDefinition[] = [];
-  const slot = (arg: BlockArgDefinition): string => {
-    args0.push(arg);
-    return `%${args0.length}`;
-  };
-  const component = (): string =>
-    slot({
-      type: 'field_dropdown',
-      name: 'COMPONENT',
-      options: [
-        ['x', 'x'],
-        ['y', 'y'],
-      ],
-    });
-  const actorSocket = (): string =>
-    slot({type: 'input_value', name: 'ACTOR', check: 'Actor'});
-
-  // Unprefixed for a world property, as the setter is above.
-  const message0 = subjectScoped
-    ? hasComponent
-      ? `get ${name} ${component()} of ${actorSocket()}`
-      : `get ${name} of ${actorSocket()}`
-    : hasComponent
-      ? `get ${name} ${component()}`
-      : `get ${name}`;
+  const {message0, args0, style, output} = propertyShape(property).get;
 
   const type = getPropertyBlockType(memberKey(property.ref));
   if (property.type === 'actors' || property.type === 'actor') {
@@ -2520,16 +2616,14 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     message0,
     args0,
     inputsInline: true,
-    output: outputForType(property.type),
+    output,
     // A world property reads from `world`; warn if placed where it is unbound.
     extensions: missingRuleAware(
       subjectScoped
         ? [subjectInputExtension(property.scope)]
         : [worldContextExtension],
     ),
-    // Style by the value it reports: a boolean reads as logic, a whole vector as
-    // a location, a number/point axis as math.
-    style: valueStyle(property.type),
+    style,
     tooltip: subjectScoped
       ? `Get an actor's ${name}.`
       : `Get the world's ${name}.`,
@@ -6898,34 +6992,227 @@ const worldRuleTrait = defineBlock({
   generator: noGenerator,
 });
 
-// `WRITABLE` distinguishes a knob from a readout. A property a STEP owns —
-// gravity's "falling", which its landing step sets and nothing else may — must
-// not grow a `set` block: offering one invites a learner to write a value the
-// next tick overwrites, which looks like the block is broken. The engine has
-// carried `readonly` since the built-in rules were written; there was simply no
-// way to say it in a `.rule`.
-const PROPERTY_ACCESS_OPTIONS: Array<[string, string]> = [
-  ['property', 'writable'],
-  ['read-only property', 'readonly'],
-];
+// The names the pieces of a `define property` go by. `ACCESS` used to be a
+// dropdown reading "property" / "read-only property"; it is the eye now, and
+// keeps the name and both of its values so that every `.rule` and `.actor`
+// already written still loads.
+const PROPERTY_ACCESS_FIELD = 'ACCESS';
+const WRITABLE = 'writable';
+const READONLY = 'readonly';
+/** The rows the previews hang off, and the fields that draw them. */
+const GET_PREVIEW_ROW = 'GET_PREVIEW_ROW';
+const SET_PREVIEW_ROW = 'SET_PREVIEW_ROW';
+const GET_PREVIEW_FIELD = 'GET_PREVIEW';
+const SET_PREVIEW_FIELD = 'SET_PREVIEW';
+
+// FontAwesome f06e / f070: `eye` and `eye-slash`, in the free package as well
+// as the pro one (see `glyphIcon`). The eye means VISIBLE here — whether the
+// setter drawn beside it is a block anyone outside this file is offered — which
+// is why the button that opens a file stopped being an eye and became
+// `arrow-up-right-from-square` (`extensions/openSourceButton`). Two eyes a few
+// blocks apart meaning "look at this file" and "this is visible" would be one
+// picture for two ideas.
+const EYE = '';
+const EYE_SLASH = '';
+
+/**
+ * What the block is a property OF, read from where it sits.
+ *
+ * Placement decides it, exactly as it decides what `parseRuleMeta` and
+ * `ownProperties` make of the same block: chained under a `define trait` it
+ * belongs to whatever that trait elects, and at the top of a rule, an actor or
+ * a world file it belongs to the file.
+ */
+const propertyScopeOf = (block: Block): MemberScope => {
+  const root = block.getRootBlock();
+  if (root?.type === 'world_rule_trait') {
+    return root.getFieldValue('SUBJECT') === 'camera' ? 'camera' : 'actor';
+  }
+  // An `.actor` file's own property is that kind of actor's; a `.world` file's
+  // own and a rule's own are the world's.
+  return root?.type === 'world_actor' ? 'actor' : 'world';
+};
+
+/** The property a `define property` block currently describes. */
+const propertyOn = (block: Block): PropertyShapeInput => {
+  const declared = String(block.getFieldValue('TYPE') ?? 'number');
+  const type = (
+    PROPERTY_TYPES.has(declared) ? declared : 'number'
+  ) as PropertyType;
+  return {
+    name: String(block.getFieldValue('NAME') ?? '').trim(),
+    type,
+    // Read exactly as `parseRuleMeta` reads it, so what is drawn starts with
+    // the same value the real block will be seeded with.
+    default: parseDefault(String(block.getFieldValue('DEFAULT') ?? ''), type),
+    scope: propertyScopeOf(block),
+  };
+};
+
+/** One of the two drawings, from the shared shape. */
+const propertyDrawing = (
+  shape: PropertyBlockShape,
+  muted = false,
+): BlockDrawing => ({
+  definition: {
+    message0: shape.message0,
+    args0: shape.args0,
+    inputsInline: true,
+    ...(shape.output === undefined
+      ? {previousStatement: null, nextStatement: null}
+      : {output: shape.output}),
+    style: shape.style,
+  },
+  shadows: shape.shadows,
+  subject: shape.subject,
+  muted,
+});
+
+const PROPERTY_DESIGNER_EXTENSION = 'world_property_designer';
+
+/**
+ * Draw the two blocks a `define property` makes, and let the eye decide whether
+ * the second one leaves the file.
+ *
+ * The same bargain `define block` and `define event` struck (`blockDesigner`):
+ * a definition should look like the thing defined. A property makes a getter
+ * and a setter, so both are drawn, from the one description the real blocks are
+ * built from (`propertyShape`) — a preview that described them in its own words
+ * would be right until the first time one of them changed.
+ *
+ * READ-ONLY IS A FACT ABOUT THE SETTER, which is why the eye sits beside it. A
+ * property a step owns — gravity's "falling", which its landing step sets and
+ * nothing else may — must not grow a `set` block anyone else can reach:
+ * offering one invites a learner to write a value the next tick overwrites,
+ * which looks like the block is broken. The setter still EXISTS, and the rule
+ * that declared it still uses it, so it is still drawn — faded, which is what
+ * "not offered outside here" looks like.
+ */
+const propertyDesignerExtension = defineExtension(PROPERTY_DESIGNER_EXTENSION, {
+  extension() {
+    const block = this as unknown as Block & {
+      // `rebuildDesign_`, and not a name of its own: `refreshBlockDesigns`
+      // sweeps a workspace for exactly this method after a load made with
+      // events OFF, which is most of them here — the surface swap and every
+      // reload after a rename silence Blockly so the file is not written back.
+      // Unswept, a saved property came back drawn as the `strength` its fields
+      // default to, because Blockly's serializer applies fields AFTER an
+      // extension has run.
+      rebuildDesign_: () => void;
+    };
+    const svg = block as unknown as BlockSvg;
+
+    // The eye, made once. `FieldButton` is serializable by default and that
+    // is wanted here — unlike every other button in this lab, this one holds
+    // a value the file has to remember.
+    const icon = glyphIcon(EYE);
+    const eye = new FieldButton({
+      value: WRITABLE,
+      onClick: () =>
+        eye.setValue(eye.getValue() === READONLY ? WRITABLE : READONLY),
+      icon,
+      // The VALUE is `writable` / `readonly`, and the button draws neither: the
+      // eye is the whole of what it says. Without this the field paints the
+      // word beside the glyph, because `FieldButton` skips its text only when
+      // there is none — and every other button in this lab has none.
+      transformText: () => '',
+      // Read-only workspaces show what a property is; the click is refused by
+      // `setValue` on a block that cannot be edited, and the state still
+      // reads correctly.
+      allowReadOnlyClick: false,
+    });
+
+    block.rebuildDesign_ = () => {
+      const property = propertyOn(block);
+      const readonly = block.getFieldValue(PROPERTY_ACCESS_FIELD) === READONLY;
+      // The glyph is measured, not just drawn (`FieldButton.updateSize_`), so
+      // a swapped one has to ask for its size again — and only when it did
+      // swap, or every keystroke in the name box re-renders it for nothing.
+      const glyph = readonly ? EYE_SLASH : EYE;
+      if (icon.textContent !== glyph) {
+        icon.textContent = glyph;
+        eye.forceRerender();
+      }
+      const get = block.getField(
+        GET_PREVIEW_FIELD,
+      ) as FieldPropertyPreview | null;
+      const set = block.getField(
+        SET_PREVIEW_FIELD,
+      ) as FieldPropertyPreview | null;
+      // Nothing to draw for a property with no name: the blocks it would make
+      // would read `set  of ⟨this actor⟩`, which is not a picture of anything.
+      const shape = property.name ? propertyShape(property) : undefined;
+      get?.setDrawing(shape ? propertyDrawing(shape.get) : null);
+      set?.setDrawing(shape ? propertyDrawing(shape.set, readonly) : null);
+    };
+
+    const getPreview = new FieldPropertyPreview();
+    const setPreview = new FieldPropertyPreview();
+    block
+      .appendDummyInput(GET_PREVIEW_ROW)
+      .appendField(getPreview, GET_PREVIEW_FIELD);
+    block
+      .appendDummyInput(SET_PREVIEW_ROW)
+      .appendField(eye, PROPERTY_ACCESS_FIELD)
+      .appendField(setPreview, SET_PREVIEW_FIELD);
+    eye.setTooltip(
+      'Whether the "set" block below is offered anywhere else. Turn it off ' +
+        'for a value the file declaring it works out for itself — a learner ' +
+        'given a setter for one of those writes a value the next tick ' +
+        'overwrites, and the block looks broken.',
+    );
+
+    block.rebuildDesign_();
+
+    let wasScope = propertyScopeOf(block);
+    block.setOnChange(event => {
+      const mine =
+        event.type === Events.BLOCK_CHANGE &&
+        (event as Events.BlockChange).blockId === block.id;
+      // Where it sits decides whose property it is, and so whether the drawn
+      // blocks take a subject at all. Compared rather than redrawn on every
+      // move: a declaration is dragged around plenty without changing owner.
+      const scope = propertyScopeOf(block);
+      const movedOwner = scope !== wasScope;
+      wasScope = scope;
+      if (
+        mine ||
+        movedOwner ||
+        // Blockly's serializer applies fields AFTER extensions run, so the
+        // drawing built above was drawn against the block's defaults. Every
+        // saved property came back drawn as `strength` until this.
+        event.type === Events.FINISHED_LOADING
+      ) {
+        block.rebuildDesign_();
+        svg.queueRender?.();
+      }
+    });
+  },
+});
 
 const worldRuleProperty = defineBlock({
   type: 'world_rule_property',
-  message0: 'define %1 %2 %3 with default %4',
+  // A DEFINITION, styled and colored like the other definitions — `define
+  // rule`, `define trait`, `define block`, `define event` — with the blocks it
+  // makes drawn on its own face by the extension below.
+  message0: 'define %1 %2 with default %3',
   args0: [
     {type: 'field_dropdown', name: 'TYPE', options: PROPERTY_TYPE_OPTIONS},
-    {type: 'field_dropdown', name: 'ACCESS', options: PROPERTY_ACCESS_OPTIONS},
     {type: 'field_input', name: 'NAME', text: 'strength'},
     {type: 'field_input', name: 'DEFAULT', text: '0'},
   ],
-  inputsInline: true,
+  // NOT inline: the two drawings are rows under the declaration, the way
+  // `define block` puts the block it makes under its own signature. Inline put
+  // the declaration, the getter, the eye and the setter on one line, which ran
+  // off the side of the workspace and read as four unrelated things.
   previousStatement: true,
   nextStatement: true,
-  style: 'default',
+  extensions: [propertyDesignerExtension],
+  style: 'setup_blocks',
   tooltip:
     'Define a property — a world property at the rule level, an actor property ' +
-    'inside a "define trait". A read-only one can be read but not set, for a ' +
-    'value a step owns.',
+    'inside a "define trait". The two blocks below it are what it makes; the ' +
+    'eye says whether the "set" one is offered outside this file.',
   generator: noGenerator,
 });
 

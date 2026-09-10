@@ -1,4 +1,4 @@
-// A field that draws a block.
+// A field that draws the block a `define block` (or `define event`) will make.
 //
 // `define block` designs the block a rule adds to the palette, and the whole
 // point of it is that the definition looks like the thing defined. Laying the
@@ -7,19 +7,13 @@
 // `push [amount] toward [target]` and still has to imagine what will turn up in
 // the toolbox.
 //
-// So this draws the real thing. A field is an SVG group Blockly asks for a size,
-// which means anything that renders into that group works — including blocks. A
-// private `WorkspaceSvg` lives inside the field, holding one block built from
-// the current signature with a getter plugged into each socket, so the drawing
-// carries the shape, the color, the tabs and the parameter names at once. Core
-// does the same thing for mutator bubbles (`MiniWorkspaceBubble`), and CDO
-// Blockly does it for sprite lab's mini-toolboxes (`CdoFieldFlyout`).
+// So this draws the real thing: one block built from the current signature with
+// a getter plugged into each socket, so the drawing carries the shape, the
+// color, the tabs and the parameter names at once. The workspace it draws on,
+// and the care about when that workspace may be made, are `FieldBlockDrawing`.
 //
-// It is a DRAWING, not a workspace you can touch: the mini workspace takes no
-// pointer events, and a transparent overlay over the field turns a press on a
+// What this adds on top is a transparent overlay, which turns a press on a
 // parameter into a getter dragged out onto the real workspace (dragGetterOut).
-// Blocks that could be picked up would be picked up on a workspace with no
-// visible extent, and dropping one anywhere would go nowhere.
 
 import * as Blockly from 'blockly/core';
 
@@ -27,7 +21,7 @@ import {enumOptions, enumRefOfParamType} from '../enums';
 import {paramFlavour} from '../typedVariables';
 
 import {beginGetterDrag} from './dragGetterOut';
-import {markPreviewWorkspace} from './scopedVariable';
+import {DRAWING_PAD, FieldBlockDrawing} from './FieldBlockDrawing';
 
 /**
  * What the design makes: a block to call, or an event's hat.
@@ -72,37 +66,7 @@ const styleForReturn = (returns: string): string =>
  */
 const ANY_CHOICE: [string, string] = ['(any)', ''];
 
-/** Where the drawing sits inside the field, so it does not touch the edges. */
-const PAD = 2;
-
-/** Marks the drawing's container, for the rule below. */
-const PREVIEW_CLASS = 'worldBlockPreview';
-
-// The drawing must not take a single pointer event, and saying so on the
-// container is NOT enough: Blockly's own stylesheet sets `pointer-events` on
-// fields and paths, and a descendant that sets the property wins over an
-// ancestor that set it to `none`. Anything that got through started a gesture on
-// a workspace with no visible extent, which surfaced as:
-//
-//   Tried to call gesture.setStartField, but the gesture had already been started
-//   Block not present in workspace's list of top-most blocks
-//
-// — the second one from a drag whose connection previewer and dragged block had
-// ended up on different workspaces. Hence `!important`, on everything inside.
-Blockly.Css.register(`
-.${PREVIEW_CLASS}, .${PREVIEW_CLASS} * {
-  pointer-events: none !important;
-}
-`);
-
-export class FieldBlockPreview extends Blockly.Field<string> {
-  override EDITABLE = false;
-  override SERIALIZABLE = false;
-
-  /** The workspace the drawing lives on. Disposed with the field. */
-  private mini: Blockly.WorkspaceSvg | null = null;
-  /** The block type registered for this field's drawing; unique per instance. */
-  private previewType = '';
+export class FieldBlockPreview extends FieldBlockDrawing {
   private parts: PreviewPart[] = [];
   private returns = 'none';
   /** What KIND of block is being designed — see `setSignature`. */
@@ -118,12 +82,8 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     h: number;
   }> = [];
   private overlay: SVGRectElement | null = null;
-  /** The deferred draw, so disposing before it lands cancels it. */
-  private pending: ReturnType<typeof setTimeout> | null = null;
-
-  constructor() {
-    super('');
-  }
+  /** Which socket the subject took, or -1 — worked out while drawing. */
+  private subjectSocket = -1;
 
   /**
    * The signature to draw. Safe before the field is in the DOM.
@@ -146,31 +106,15 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     this.returns = returns;
     this.subject = actorScoped;
     this.kind = kind;
-    this.isDirty_ = true;
-    if (this.mini) {
-      this.build();
-      // The drawing decides the field's size, and the field's size decides the
-      // definition block's layout — so a re-signed field has to push a re-render
-      // rather than wait to be asked for its size.
-      this.forceRerender();
-    }
+    this.redraw();
   }
 
-  /**
-   * Build the field: a workspace to draw on, and an overlay to take the presses.
-   *
-   * `super.initView()` is deliberately NOT called — it makes a border rect and a
-   * text element this field has no use for, and the base rendering that would
-   * then measure them is overridden below.
-   */
-  override initView(): void {
-    if (!this.getSourceBlock()?.workspace || !this.fieldGroup_) {
-      return;
-    }
+  /** The overlay that takes the presses, made before the drawing under it. */
+  protected override initChrome(group: SVGGElement): void {
     this.overlay = Blockly.utils.dom.createSvgElement<SVGRectElement>(
       Blockly.utils.Svg.RECT,
       {fill: 'transparent', x: 0, y: 0, width: 0, height: 0},
-      this.fieldGroup_,
+      group,
     );
     Blockly.browserEvents.conditionalBind(
       this.overlay,
@@ -178,169 +122,95 @@ export class FieldBlockPreview extends Blockly.Field<string> {
       this,
       this.onPress,
     );
-    // The drawing itself comes on the next turn of the loop — see `drawLater`.
-    this.pending = setTimeout(() => {
-      this.pending = null;
-      this.drawNow();
-    }, 0);
   }
 
-  /**
-   * Build the drawing's workspace and draw into it.
-   *
-   * NOT in `initView`, and this is the whole reason the field is built in two
-   * halves. A workspace registers itself with Blockly's FocusManager when its
-   * DOM is created, and the manager REFUSES to change state while it is inside
-   * a focus or blur callback:
-   *
-   *   FocusManager state changes cannot happen in a tree/node focus/blur
-   *   callback.
-   *
-   * Returning to the tab does exactly that — the window's focus event reaches
-   * the flyout, which re-creates the blocks it shows, which initialises their
-   * fields. A field that made a workspace there took the toolbox down with it.
-   * There is no public way to ask the manager whether it is locked, so this
-   * waits for the callback to have returned instead, which is a timeout of
-   * zero.
-   */
-  private drawNow(): void {
-    const host = this.getSourceBlock()?.workspace as
-      | Blockly.WorkspaceSvg
-      | undefined;
-    if (!host || !this.fieldGroup_ || this.mini) {
-      return;
-    }
-    // The host's own options, so the drawing gets the same renderer, theme and
-    // constants — otherwise it is the right shape in the wrong colors.
-    this.mini = new Blockly.WorkspaceSvg(host.options);
-    // A picture, not a program: the getters in its sockets name the arguments
-    // and are read by nobody, so they draw what they hold rather than what
-    // some surrounding scope offers (`markPreviewWorkspace`).
-    markPreviewWorkspace(this.mini);
-    const canvas = this.mini.createDom() as SVGGElement;
-    // The drawing is inert: every press belongs to the overlay below, which
-    // knows what to do with it. See the stylesheet registered above — this class
-    // is what turns pointer events off, all the way down.
-    canvas.classList.add(PREVIEW_CLASS);
-    canvas.setAttribute('transform', `translate(${PAD}, ${PAD})`);
-    // Under the overlay, which was made first and must stay on top: a press
-    // belongs to it, not to the drawing.
-    this.fieldGroup_.insertBefore(canvas, this.overlay);
-    this.build();
-    // The drawing decides the field's size, and this one arrived after the
-    // block was laid out — so it has to ask for that layout again.
-    this.forceRerender();
+  protected override resized(size: Blockly.utils.Size): void {
+    this.overlay?.setAttribute('width', String(size.width));
+    this.overlay?.setAttribute('height', String(size.height));
   }
 
-  /** Draw the current signature, and measure what came out. */
-  private build(): void {
-    const mini = this.mini;
-    if (!mini) {
-      return;
+  /** The parameters that get a socket — a hat's are fields, and get none. */
+  private drawnParams(): PreviewPart[] {
+    return this.kind === 'event'
+      ? []
+      : this.parts.filter(part => part.kind === 'param');
+  }
+
+  /** Where the subject's socket landed, or -1 for a block that takes none. */
+  private subjectSlot(params: PreviewPart[]): number {
+    if (this.kind === 'event') {
+      return this.subject ? 0 : -1;
     }
-    // Silently: these blocks are a drawing, and a create event for one would be
-    // recorded in the file's undo stack and re-serialized as if it were content.
-    const enabled = Blockly.Events.isEnabled();
-    if (enabled) {
-      Blockly.Events.disable();
+    if (!this.subject) {
+      return -1;
     }
-    try {
-      mini.clear();
-      this.registerPreviewType();
-      const block = mini.newBlock(this.previewType) as Blockly.BlockSvg;
-      block.initSvg();
-      this.paramBoxes = [];
-      // A hat's parameters are fields on it, not sockets, so there is nothing
-      // to plug in and nothing to drag out of one: the choice a handler filters
-      // on is picked, not passed.
-      const params =
-        this.kind === 'event'
-          ? []
-          : this.parts.filter(part => part.kind === 'param');
-      // The subject's socket, wherever it landed: filled with `this actor`, the
-      // shadow the real call site is seeded with. A hat's leads, when it has
-      // one — an event declared on the RULE is about the world, and its hat
-      // takes no actor at all (`EventMeta.scope`).
-      const subjectSocket =
-        this.kind === 'event'
-          ? this.subject
-            ? 0
-            : -1
-          : this.subject
-            ? this.subject && this.returns && this.returns !== 'none'
-              ? 0
-              : params.length
-            : -1;
-      if (subjectSocket >= 0) {
-        const here = mini.newBlock('world_this_actor') as Blockly.BlockSvg;
-        here.initSvg();
-        block
-          .getInput(`P${subjectSocket}`)
-          ?.connection?.connect(here.outputConnection!);
+    return this.returns && this.returns !== 'none' ? 0 : params.length;
+  }
+
+  protected override fill(
+    block: Blockly.BlockSvg,
+    mini: Blockly.WorkspaceSvg,
+  ): void {
+    this.paramBoxes = [];
+    // A hat's parameters are fields on it, not sockets, so there is nothing
+    // to plug in and nothing to drag out of one: the choice a handler filters
+    // on is picked, not passed.
+    const params = this.drawnParams();
+    // The subject's socket, wherever it landed: filled with `this actor`, the
+    // shadow the real call site is seeded with. A hat's leads, when it has
+    // one — an event declared on the RULE is about the world, and its hat
+    // takes no actor at all (`EventMeta.scope`).
+    this.subjectSocket = this.subjectSlot(params);
+    if (this.subjectSocket >= 0) {
+      const here = mini.newBlock('world_this_actor') as Blockly.BlockSvg;
+      here.initSvg();
+      block
+        .getInput(`P${this.subjectSocket}`)
+        ?.connection?.connect(here.outputConnection!);
+    }
+    params.forEach((part, i) => {
+      const flavour = paramFlavour(part.type ?? 'number');
+      const name = part.name?.trim() || flavour.type.toLowerCase();
+      const variable =
+        mini.getVariableMap().getVariable(name, flavour.type) ??
+        mini.getVariableMap().createVariable(name, flavour.type);
+      const getter = mini.newBlock(flavour.getterType) as Blockly.BlockSvg;
+      getter.setFieldValue(variable.getId(), 'VAR');
+      getter.initSvg();
+      block
+        .getInput(`P${this.slotOf(i)}`)
+        ?.connection?.connect(getter.outputConnection!);
+    });
+  }
+
+  /** A parameter's socket number, once the subject has taken the first one. */
+  private slotOf(i: number): number {
+    return this.subjectSocket === 0 ? i + 1 : i;
+  }
+
+  protected override measured(block: Blockly.BlockSvg): void {
+    // Each parameter's box, in field coordinates, so a press can be matched to
+    // the parameter under it.
+    this.drawnParams().forEach((part, i) => {
+      const getter = block
+        .getInput(`P${this.slotOf(i)}`)
+        ?.connection?.targetBlock() as Blockly.BlockSvg | undefined;
+      if (!getter) {
+        return;
       }
-      const slotOf = (i: number) => (subjectSocket === 0 ? i + 1 : i);
-      params.forEach((part, i) => {
-        const flavour = paramFlavour(part.type ?? 'number');
-        const name = part.name?.trim() || flavour.type.toLowerCase();
-        const variable =
-          mini.getVariableMap().getVariable(name, flavour.type) ??
-          mini.getVariableMap().createVariable(name, flavour.type);
-        const getter = mini.newBlock(flavour.getterType) as Blockly.BlockSvg;
-        getter.setFieldValue(variable.getId(), 'VAR');
-        getter.initSvg();
-        block
-          .getInput(`P${slotOf(i)}`)
-          ?.connection?.connect(getter.outputConnection!);
+      const at = getter.getRelativeToSurfaceXY();
+      const hw = getter.getHeightWidth();
+      this.paramBoxes.push({
+        part,
+        x: at.x + DRAWING_PAD,
+        y: at.y + DRAWING_PAD,
+        w: hw.width,
+        h: hw.height,
       });
-      // Rendered now: everything below measures the drawing, and a queued render
-      // measures as nothing.
-      block.queueRender();
-      Blockly.renderManagement.triggerQueuedRenders(mini);
-
-      const size = block.getHeightWidth();
-      this.size_ = new Blockly.utils.Size(
-        size.width + PAD * 2,
-        size.height + PAD * 2,
-      );
-      this.overlay?.setAttribute('width', String(this.size_.width));
-      this.overlay?.setAttribute('height', String(this.size_.height));
-      // Each parameter's box, in field coordinates, so a press can be matched to
-      // the parameter under it.
-      params.forEach((part, i) => {
-        const getter = block
-          .getInput(`P${slotOf(i)}`)
-          ?.connection?.targetBlock() as Blockly.BlockSvg | undefined;
-        if (!getter) {
-          return;
-        }
-        const at = getter.getRelativeToSurfaceXY();
-        const hw = getter.getHeightWidth();
-        this.paramBoxes.push({
-          part,
-          x: at.x + PAD,
-          y: at.y + PAD,
-          w: hw.width,
-          h: hw.height,
-        });
-      });
-    } finally {
-      if (enabled) {
-        Blockly.Events.enable();
-      }
-    }
+    });
   }
 
-  /**
-   * Define the block being drawn.
-   *
-   * A block definition is global and keyed by type, and the signature changes
-   * with every edit, so each field owns a private type it redefines in place
-   * rather than sharing one that would race with the next `define block`.
-   */
-  private registerPreviewType(): void {
-    if (!this.previewType) {
-      this.previewType = `world_block_preview_${Blockly.utils.idGenerator.genUid()}`;
-    }
+  protected override drawnBlock(): Record<string, unknown> {
     const args: Blockly.utils.toolbox.BlockInfo[] = [];
     let message = '';
     const push = (fragment: string) => {
@@ -420,7 +290,7 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     }
 
     const reports = this.kind !== 'event' && reportsSomething;
-    const definition: Record<string, unknown> = {
+    return {
       // Never empty: Blockly cannot lay out a block with no message at all.
       message0: message || ' ',
       args0: args,
@@ -436,11 +306,6 @@ export class FieldBlockPreview extends Blockly.Field<string> {
               style: styleForReturn(this.returns),
             }
           : {previousStatement: null, nextStatement: null, style: 'default'}),
-    };
-    Blockly.Blocks[this.previewType] = {
-      init: function (this: Blockly.Block) {
-        this.jsonInit(definition);
-      },
     };
   }
 
@@ -476,44 +341,5 @@ export class FieldBlockPreview extends Blockly.Field<string> {
       getterType: paramFlavour(hit.part.type ?? 'number').getterType,
       event: e,
     });
-  }
-
-  /**
-   * Nothing to render: `build` sizes the field when the signature changes, and
-   * the drawing keeps itself. The base implementation would measure a text
-   * element this field never made.
-   */
-  protected override render_(): void {}
-
-  override dispose(): void {
-    // Guarded, and this is not defensive dressing. `WorkspaceSvg.dispose`
-    // unregisters itself from the focus manager unconditionally, and a workspace
-    // that was never injected was never registered, so it throws:
-    //
-    //   Attempted to unregister not registered tree: [object Object]
-    //
-    // A field dispose that throws leaves its BLOCK half-disposed — already out of
-    // the workspace's top-block list, but not marked disposed — and the next
-    // attempt to dispose it reports the corruption somewhere else entirely:
-    //
-    //   Block not present in workspace's list of top-most blocks
-    //
-    // which is what an insertion marker does on every drag. Losing the drawing's
-    // workspace is worth strictly less than breaking connections.
-    if (this.pending) {
-      clearTimeout(this.pending);
-      this.pending = null;
-    }
-    try {
-      this.mini?.dispose();
-    } catch {
-      // Nothing to do: the workspace is being thrown away either way.
-    }
-    this.mini = null;
-    if (this.previewType) {
-      delete Blockly.Blocks[this.previewType];
-      this.previewType = '';
-    }
-    super.dispose();
   }
 }
