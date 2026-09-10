@@ -1,5 +1,6 @@
 require 'cdo/global_edition'
 require 'cdo/statsig'
+require 'cdo/shared_constants'
 
 # This is a wrapper for the Statsig SDK.
 #
@@ -33,7 +34,7 @@ module Metrics
       def log_event(user: nil, event_name:, event_value: nil, metadata: {}, get_enabled_experiments: false, session: nil)
         event_value = event_name if event_value.nil?
         enabled_experiments = get_enabled_experiments && user.present? ? Queries::User::EnabledExperiments.call(user) : nil
-        statsig_stable_id = session&.dig(:statsig_stable_id)
+        statsig_stable_id = session&.dig(SharedConstants::STATSIG_STABLE_ID_KEY)
 
         if CDO.rack_env?(:development) && !ALWAYS_SEND
           log_event_to_stdout(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)

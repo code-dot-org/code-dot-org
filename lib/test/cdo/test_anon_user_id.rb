@@ -1,40 +1,40 @@
 # frozen_string_literal: true
 
-require 'test_helper'
+require_relative '../test_helper'
+require 'cdo/anon_user_id'
 
-class AnonUserIdTest < ActiveSupport::TestCase
+describe Cdo::AnonUserId do
   describe '.generate' do
-    subject(:generate) {AnonUserId.generate}
+    let(:generate) {Cdo::AnonUserId.generate}
 
     it 'returns UUID v4' do
-      _generate.must_match AnonUserId::FORMAT
+      _(generate).must_match Cdo::AnonUserId::FORMAT
     end
   end
 
   describe '.valid?' do
-    subject(:valid?) {AnonUserId.valid?(input)}
-
-    let(:input) {Faker::Internet.uuid}
+    let(:valid?) {Cdo::AnonUserId.valid?(input)}
+    let(:input) {SecureRandom.uuid}
 
     it 'returns true for UUID v4' do
-      _valid?.must_equal true
+      _(valid?).must_equal true
     end
 
     context 'when value is an uppercase UUID' do
-      let(:input) {Faker::Internet.uuid.upcase}
+      let(:input) {SecureRandom.uuid.upcase}
 
       it 'returns true' do
-        _valid?.must_equal true
+        _(valid?).must_equal true
       end
     end
 
     context 'when value is another UUID version' do
       let(:input) do
-        Faker::Internet.uuid.tap {|uuid| uuid[14] = '1'}
+        SecureRandom.uuid.tap {|uuid| uuid[14] = '1'}
       end
 
       it 'returns false' do
-        _valid?.must_equal false
+        _(valid?).must_equal false
       end
     end
 
@@ -42,7 +42,7 @@ class AnonUserIdTest < ActiveSupport::TestCase
       let(:input) {'invalid'}
 
       it 'returns false' do
-        _valid?.must_equal false
+        _(valid?).must_equal false
       end
     end
 
@@ -50,7 +50,7 @@ class AnonUserIdTest < ActiveSupport::TestCase
       let(:input) {nil}
 
       it 'returns false' do
-        _valid?.must_equal false
+        _(valid?).must_equal false
       end
     end
 
@@ -58,25 +58,24 @@ class AnonUserIdTest < ActiveSupport::TestCase
       let(:input) {123}
 
       it 'returns false' do
-        _valid?.must_equal false
+        _(valid?).must_equal false
       end
     end
   end
 
   describe '.valid_value' do
-    subject(:valid_value) {AnonUserId.valid_value(input)}
-
-    let(:input) {Faker::Internet.uuid}
+    let(:valid_value) {Cdo::AnonUserId.valid_value(input)}
+    let(:input) {SecureRandom.uuid}
 
     it 'returns valid anonymous user ID' do
-      _valid_value.must_equal input
+      _(valid_value).must_equal input
     end
 
     context 'when value is invalid' do
       let(:input) {'invalid'}
 
       it 'returns nil' do
-        _valid_value.must_be_nil
+        _(valid_value).must_be_nil
       end
     end
 
@@ -84,7 +83,7 @@ class AnonUserIdTest < ActiveSupport::TestCase
       let(:input) {nil}
 
       it 'returns nil' do
-        _valid_value.must_be_nil
+        _(valid_value).must_be_nil
       end
     end
   end
