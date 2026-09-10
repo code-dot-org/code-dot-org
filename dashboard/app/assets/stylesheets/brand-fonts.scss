@@ -1,0 +1,11 @@
+/**
+ * Web fonts for pages rendered without the application layout. Pages that
+ * use the layout get the same faces through legacy-styles.
+ *
+ * Noto goes first: its file is a remote @import, which CSS ignores once
+ * any other rule precedes it.
+ *
+ *= require fonts/noto-sans
+ *= require fonts/geist
+ *= require fonts/space-grotesk
+ */
