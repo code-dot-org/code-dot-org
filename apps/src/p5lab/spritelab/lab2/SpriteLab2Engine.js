@@ -3,7 +3,10 @@ import * as BlocklyCore from 'blockly/core';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
-import {setRetainBlobsOnLoad} from '@cdo/apps/p5lab/redux/animationList';
+import {
+  setRetainBlobsOnLoad,
+  setStoreLoadedImagesAsObjectUrls,
+} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -117,6 +120,9 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
+    // Loaded images live as object URLs, not heap-resident base64 strings
+    // (legacy labs keep dataURIs for Piskel).
+    setStoreLoadedImagesAsObjectUrls(true);
     // This lab saves images through its own asset uploads, so loaded
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
