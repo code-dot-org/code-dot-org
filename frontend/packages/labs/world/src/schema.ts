@@ -33,6 +33,12 @@ export const WorldLevelDataSchema = z.object({
   // every experienced maker. A level — or, when there is one, an account — says
   // yes to it. See specs/PROGRESSION.md, "Free play".
   gateShelf: z.boolean().optional(),
+  // Whether the color picker offers only its named swatches. Default OFF: the
+  // picker opens with sixteen colors that have names and the whole color range
+  // under them, which is the right answer for anybody making something. A first
+  // lesson about color is not a lesson about picking one exactly, and a level
+  // says so here (`levelData.simpleColors`).
+  simpleColors: z.boolean().optional(),
 });
 
 /**

@@ -134,7 +134,10 @@ import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
 import {worldContextExtension} from './extensions/worldContext';
-import {FieldColorPicker} from './fields/FieldColorPicker';
+import {
+  FieldColorPicker,
+  installColorPickerField,
+} from './fields/FieldColorPicker';
 import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {FieldMarkdown} from './fields/FieldMarkdown';
 import {
@@ -3712,6 +3715,13 @@ function installColorBlocks(): void {
   }
   colorBlocksInstalled = true;
   fieldColourPlugin.initialize?.();
+  // …and then take the field back. The plugin registers the stock swatch grid
+  // under `field_colour`; this puts the lab's picker there instead, so the
+  // `colour_picker` block, the `r g b a` block's preview and a color property's
+  // default all open the same thing (`fields/FieldColorPicker`). After the
+  // plugin, because registering a field type twice is an error and the loser is
+  // whoever went first.
+  installColorPickerField();
 }
 
 // Each channel is seeded with a 0–1 slider, which is `world_slider`'s own
@@ -7130,7 +7140,12 @@ const VectorField = fieldVectorPlugin.field as new (
   value: VectorValue,
 ) => Field;
 
-/** The color field, under the type `appendField` and `instanceof` both take. */
+/**
+ * The color field, under the type `appendField` and `instanceof` both take.
+ *
+ * The same class every other color in the lab uses, so a property's default is
+ * picked from the same swatches as the value that will be set into it.
+ */
 const ColorField = FieldColorPicker as unknown as new (value: string) => Field;
 
 /**

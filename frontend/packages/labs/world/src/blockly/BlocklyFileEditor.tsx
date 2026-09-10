@@ -32,6 +32,7 @@ import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
 import {
   hiddenToolboxCategories,
   showsRuleSource,
+  usesSimpleColors,
   type WorldLevelProperties,
 } from '../levelData';
 import {refreshFor} from '../library/refreshRegistries';
@@ -67,6 +68,7 @@ import {refreshBlockDesigns} from './extensions/blockDesigner';
 import {setBodyOpener} from './extensions/bodyButton';
 import {anchorBodyOwner} from './extensions/bodyOwner';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
+import {setSimpleColors} from './fields/FieldColorPicker';
 import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
 import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
@@ -1254,6 +1256,12 @@ export const BlocklyFileEditor = ({
   // have opened; whether it is offered at all is the level's call.
   useEffect(() => {
     setModuleOpeningOffered(showsRuleSource(levelProperties));
+  }, [levelProperties]);
+
+  // How much of the color picker a level wants offered. A field has no route to
+  // React state, which is what these module-level installers are for.
+  useEffect(() => {
+    setSimpleColors(usesSimpleColors(levelProperties));
   }, [levelProperties]);
 
   useEffect(() => {

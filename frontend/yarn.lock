@@ -2811,6 +2811,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/world-lab@workspace:packages/labs/world"
   dependencies:
+    "@blockly/field-colour": "npm:^6.0.4"
     "@code-dot-org/aitutor": "workspace:*"
     "@code-dot-org/blockly": "workspace:*"
     "@code-dot-org/codebridge": "workspace:*"

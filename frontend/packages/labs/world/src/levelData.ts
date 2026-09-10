@@ -64,6 +64,19 @@ export function hiddenToolboxCategories(
  * cannot simply take everything (specs/PROGRESSION.md) — and it is only fair if
  * saying no to that is one setting away, which is what this is.
  */
+/**
+ * Whether the color picker shows its named swatches and nothing else.
+ *
+ * Off unless a level says otherwise. Sixteen colors and the whole range under
+ * them is the picker worth having; this is for the lesson where the range is
+ * the distraction rather than the point.
+ */
+export function usesSimpleColors(
+  properties: WorldLevelProperties | undefined,
+): boolean {
+  return properties?.levelData?.simpleColors === true;
+}
+
 export function gatesShelf(
   properties: WorldLevelProperties | undefined,
 ): boolean {
