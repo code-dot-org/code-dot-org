@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-08-25T21:12:39.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "> Pick one interaction you've used today in any app.\r\n> \r\n> 1. What was the event (the user action)?\r\n>\r\n> 2. What was the element that responded (what part of the page changed)?\r\n>\r\n> 3. Name one user who might struggle with this interaction, and why.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_aif-6b-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:12:39.494+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson6-level5_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson6-level5_2026\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

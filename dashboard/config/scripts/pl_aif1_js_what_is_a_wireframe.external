@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 <p>📖 <b>Wireframe</b> is a low-fidelity, structural layout showing content and functionality, without visual design.</p>
 </div>
 
-<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 14px 18px; margin: 20px 0; text-align: center;">
+<div style="background-color: #D5EFFF; color: #000000; border-radius: 10px; padding: 14px 18px; margin: 20px 0; text-align: center;">
 <p>Just like an architect sketches a blueprint before building, designers use wireframes to plan a website's structure before coding.</p>
 </div>
 
@@ -39,5 +39,5 @@ markdown <<MARKDOWN
 
 ## Next Up
 
-Take a quick tour of skech lab and then try creating a wireframe. 
+Take a quick tour of Sketch Lab and then try creating a wireframe. 
 MARKDOWN

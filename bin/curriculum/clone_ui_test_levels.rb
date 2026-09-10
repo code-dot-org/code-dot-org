@@ -109,13 +109,17 @@ def clone_dsl_level(level, new_name)
   dsl_text = level.dsl_text
   raise "no dsl text found for level #{level.name.dump}" if dsl_text.blank?
 
-  new_text = dsl_text.sub("name '#{level.name}'", "name '#{new_name}'")
+  # Some hand-written files pad the name keyword with extra spaces
+  # (u1l6_lesson_overview.external has two), so match any run of them.
+  new_text = dsl_text.sub(/name[ \t]+'#{Regexp.escape(level.name)}'/, "name '#{new_name}'")
   raise "name not formatted correctly in dsl text for level #{level.name.dump}" if new_text == dsl_text
 
   if level.is_a?(LevelGroup) || level.is_a?(BubbleChoice)
     level.all_child_levels.uniq.each do |child|
       child_clone = clone_level(child)
-      new_text = new_text.gsub("level '#{child.name}'", "level '#{child_clone.name}'")
+      # A LevelGroup names its External sublevels with the text keyword and
+      # everything else with level; BubbleChoice uses level throughout.
+      new_text = new_text.gsub(/(level|text) '#{Regexp.escape(child.name)}'/) {"#{$1} '#{child_clone.name}'"}
     end
   end
 

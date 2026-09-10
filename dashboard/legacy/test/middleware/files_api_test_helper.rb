@@ -35,6 +35,14 @@ class FilesApiTestHelper
     JSON.parse(last_response.body) unless last_response.body.empty?
   end
 
+  # List the files of several library channels at once, ignoring the channel this
+  # helper was created with. Only the libraries endpoint serves this.
+  # @return [Hash] channel id to file list (or nil for a channel that could not be read)
+  def list_library_objects_for_channels(channel_ids)
+    get "/v3/libraries?channels=#{channel_ids.join(',')}"
+    JSON.parse(last_response.body) if last_response.successful?
+  end
+
   def get_object(filename, body = '', headers = {})
     get "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body

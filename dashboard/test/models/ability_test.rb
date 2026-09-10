@@ -711,31 +711,31 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
   end
 
-  test 'verified teacher can access main javabuilder' do
+  test 'verified teacher can access javabuilder' do
     verified_teacher = create(:authorized_teacher)
-    assert Ability.new(verified_teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
+    assert Ability.new(verified_teacher).can? :get_access_token, :javabuilder_session
   end
 
-  test 'student of verified teacher in CSA section can access main javabuilder' do
+  test 'student of verified teacher in CSA section can access javabuilder' do
     teacher = create(:authorized_teacher)
     csa_script = create(:csa_script)
     create(:single_unit_course, unit: csa_script)
     section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student = create(:follower, section: section).student_user
 
-    assert Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
+    assert Ability.new(student).can? :get_access_token, :javabuilder_session
   end
 
-  test 'unverified teacher cannot access main javabuilder' do
+  test 'unverified teacher cannot access javabuilder' do
     teacher = create(:teacher)
-    refute Ability.new(teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
+    refute Ability.new(teacher).can? :get_access_token, :javabuilder_session
   end
 
-  test 'student in section of unverified teacher cannot access main javabuilder' do
+  test 'student in section of unverified teacher cannot access javabuilder' do
     student = create(:student)
     section = create(:section)
     create(:follower, section: section, student_user: student)
-    refute Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
+    refute Ability.new(student).can? :get_access_token, :javabuilder_session
   end
 
   test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer' do

@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T02:47:24.000Z",
   "level_num": "custom",
@@ -26,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def get_average_length(length1, length2):\n    # TODO 1: Return the average length\n    return\n\nlength1 = 90\nlength2 = 98\n\nprint(f\"The first recommended movie is {length1} minutes long.\")\nprint(f\"The second recommended movie is {length2} minutes long.\")\n\n# TODO 2: Call get_average_length and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average length\n",
+          "contents": "def get_average_length(length1, length2):\n  # TODO 1: Return the average length\n  return\n\nlength1 = 90\nlength2 = 98\n\nprint(f\"The first recommended movie is {length1} minutes long.\")\nprint(f\"The second recommended movie is {length2} minutes long.\")\n\n# TODO 2: Call get_average_length and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average length\n",
           "folderId": "0",
           "active": true
         }
@@ -37,7 +36,7 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoWlYzL+LosDHbr\ngw+oGsCyGwAhUAxPKGu6NIPh+xA3wXctjbQp1+nHP0YE/kKI1q63JtL0WYJc\naoMOdTH1/OQ+felj7UUDKS2XFRK1fJ8rqkHbluHP4Sr94T+ouH1ItBnqixct\nMso7oyH6YfXMRBNLlZ88+5exLLpvg6Imq19aOiw+qf5EZ/uM//55AIkpGd4A\nHyGSJz4GOEUgo/1MPAWH9AGJs8tO9G16tnCKteDgbX88J8E2bgBgvIbqHsWM\n4IJG0Y8bPJYWvLdgOE70syZbq5HGP9Y6gqwPyJqTZMV2mwYl6vumGYyWASx7\nL/UjSWEQEoAZZksSwAWZd/BHpPtHOOt30CxPjbn9BZlELsMlEHsC40kq94bk\nHwfVwq9dZQKn4F0GcxUKET0+sZ5uOOUjp4+tGZB0dfgfoygOq2LZMIoUGJFg\nDe3xI7keXKUzgO6NzejMzpiGBHDPoS1SNMapqFxLbSi9TktIieLUqwM/C45Z\nMwxj7vD0G6ZQ6azSMgHFtyf5jkcOn+Vd4C9M1QEzK2jL97adsuu48J7Me4O+\nlanIN8LJmtKfipZAIH5HU6kVoL6l1H1EaHzfxYdzPHIG\n",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMojVUrNWTItZ1Ay\nIPLvptUDJhdQGrIsaa+PnxQQ3YaWxBWLSZdnIIAo0C5dBR+cxVhJRCWt/h5W\n75P9YyTn6xNIOl9WH+dCnIEcwWA8J57bjZg2wsCDfhQogHMry9TfrOpx4lHs\nms9BJKNqewZ/q0YF3NqWYLA0ladveUszIyw3/JBLomOmVi/wyTAap82b7Clk\nrZU4Qm1SqnCfOz9tXQ51Hl3MF+1ZMBMpwdFgQDjGiEYDhEW3JGSRjDRoiA3R\nPYnqirAGlUZ8BuivM35PbLCagKK3NJ2Sk+MjDP6Bql5f19qAQsxZjOCuBaz8\nwpGkOrkWdUY6ekplB2HxjPJ94KJ2B+ADJqBNBgFGl6zODH+zo3y7w6yIpUDK\nUh4fuIiO3tdjSprvqFyTTCX8BkS2g5XbLJxoNQXuXKeimuEeFLeD+ph1bVQs\nFSMdJs3swmdsUlyVxlEam8nLVK9JpoyLUTCHyu4WxTv89OzMm51snDRjFoO/\nYPF6Mn7VQKMHdPAyQE8t8MwAoAh16keIG2ULD7QF/U2sprTz95WoVb2gqwFP\nrsGofZ1/vyqZ6UmSK+0yuwZWDcVZqzhrjSBb58+AAb2f\n",
     "ai_tutor_prompt_settings": {
       "answerTypes": [
 
@@ -46,6 +45,7 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:47:30 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:20 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:26 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:47:30 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:20 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:26 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:10:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:10:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

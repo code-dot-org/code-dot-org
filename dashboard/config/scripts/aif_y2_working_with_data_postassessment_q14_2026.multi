@@ -1,0 +1,22 @@
+name 'aif-y2-working-with-data-postassessment-q14-2026'
+
+wrong '"Temple Of The Sun"'
+wrong '"Temple of The Sun"'
+wrong '"Temple of the sun"'
+right '"Templ e of the sun"'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which name would this program not properly standardize?
+
+```python
+for row in reader:
+    if row["name"].lower() == "temple of the sun":
+        row["name"] = "Temple of the Sun"
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Preparing Data
+MARKDOWN

@@ -16,17 +16,18 @@ class ChallengeResponsesController < ApplicationController
   # GET /challenge_responses?user_id=:user_id&challenge_id=:challenge_id
   #
   # Final submissions, newest first by default, with presigned download URLs
-  # on each asset. Without section_id this is the signed-in user's own work;
-  # with section_id it is the whole class section's work (the Tutor+ gallery),
-  # available to the section's members and instructors. With user_id it is
-  # that student's submissions (the project page's version switcher), listed
-  # for the same audience that can :read them: the student, their teachers,
-  # and their section peers. The AI feedback stays private: student_feedback
-  # is only included on the caller's own rows.
+  # on each asset. Without section_id this is the signed-in user's own work
+  # ("My Projects"), collapsed to the newest submission per challenge; with
+  # section_id it is the whole class section's work (the Tutor+ gallery),
+  # collapsed per student per challenge, available to the section's members
+  # and instructors. With user_id it is that student's submissions (the
+  # project page's version switcher), uncollapsed, listed only for the
+  # student themselves and their teachers. The AI feedback stays private:
+  # student_feedback is only included on the caller's own rows.
   def index
     responses = gallery_scope.
       order(created_at: params[:sort] == 'oldest' ? :asc : :desc).
-      includes(:user, :challenge_response_assets, challenge: :lesson)
+      includes(:user, :challenge_response_assets, :challenge_response_reactions, challenge: :lesson)
     if params[:unit_id].present?
       # Lesson's table is legacy-named "stages", so address the column
       # through arel rather than a symbol key.
@@ -38,7 +39,7 @@ class ChallengeResponsesController < ApplicationController
     if params[:challenge_id].present?
       responses = responses.where(challenge_id: params[:challenge_id])
     end
-    render json: responses.map {|response| response.summarize(include_feedback: response.user_id == current_user.id)}
+    render json: responses.map {|response| response.summarize(viewer: current_user, include_feedback: response.user_id == current_user.id)}
   end
 
   # GET /challenge_responses/unit_counts?section_id=:section_id
@@ -78,6 +79,7 @@ class ChallengeResponsesController < ApplicationController
   def show
     role = viewer_role
     summary = @challenge_response.summarize(
+      viewer: current_user,
       include_evaluation: role == 'teacher',
       include_feedback: role != 'peer'
     )
@@ -114,10 +116,11 @@ class ChallengeResponsesController < ApplicationController
   # like other per-section listings, e.g. the projects gallery), otherwise
   # the caller's own.
   #
-  # The class gallery shows one card per student per challenge — their most
-  # recent submission; a resubmission replaces its predecessor. The
-  # per-student and own-work views are not collapsed: they list every
-  # submission.
+  # Both gallery views show one card per challenge — the most recent
+  # submission; a resubmission replaces its predecessor. The class gallery
+  # (section_id) collapses per student per challenge; "My Projects" (the
+  # caller's own work) collapses per challenge. Only the per-student version
+  # switcher (user_id) is left uncollapsed: it lists every submission.
   private def gallery_scope
     scope = ChallengeResponse.where(is_final: true)
     if params[:user_id].present?
@@ -125,23 +128,25 @@ class ChallengeResponsesController < ApplicationController
       authorize_student_listing! student
       return scope.where(user_id: student.id)
     end
-    return scope.where(user_id: current_user.id) if params[:section_id].blank?
+    # Final submissions are immutable, so the max id per group is the newest.
+    if params[:section_id].blank?
+      own_scope = scope.where(user_id: current_user.id)
+      return ChallengeResponse.where(id: own_scope.group(:challenge_id).select('MAX(id)'))
+    end
 
     section = Section.find(params[:section_id])
     authorize! :list_projects, section
     section_scope = scope.where(user_id: section.students.select(:id))
-    # Final submissions are immutable, so the max id per (student, challenge)
-    # is the newest.
     ChallengeResponse.where(id: section_scope.group(:challenge_id, :user_id).select('MAX(id)'))
   end
 
-  # Mirrors the audience of the ChallengeResponse :read ability: the student
-  # themselves, a teacher of the student, or a member of one of the
-  # student's sections.
+  # Who may list a student's full submission history (the project page's
+  # version switcher): the student themselves and their teachers only.
+  # Section peers can :read a classmate's linked submission but not page
+  # through their earlier ones, so they are excluded here.
   private def authorize_student_listing!(student)
     return if student.id == current_user.id
     return if current_user.students.exists?(id: student.id)
-    return if Follower.exists?(section_id: current_user.sections_as_student.select(:id), student_user_id: student.id)
     raise CanCan::AccessDenied.new(nil, :index, ChallengeResponse)
   end
 

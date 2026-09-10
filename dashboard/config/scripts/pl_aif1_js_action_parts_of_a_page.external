@@ -13,9 +13,93 @@ markdown <<MARKDOWN
 <li>Typing in a text box</li>
 </ul>
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://images.code.org/0419ecc13c4903e2f6cfca5154f7a4e9-image-1786128123664.png" alt="A five-step diagram. Step one, Initial Page: a screen shows an orange Click button. Step two, User Action: a hand clicks the button. Step three, JavaScript Detects Event: an ear icon and a code bracket icon represent JavaScript noticing the click. Step four, JavaScript Updates DOM: a wrench and screwdriver icon changes a text box labeled text into one labeled Updated text. Step five, Browser Renders Update: the screen now shows a red button labeled Clicked, with a lightbulb above it." style="max-width: 800px; width: 100%; border-radius: 10px;">
+<h2 style="text-align:center;">How JavaScript Responds to a User Action</h2>
+
+<div style="max-width:1000px; margin:24px auto; padding:10px; display:flex; justify-content:space-between; align-items:flex-start; gap:12px; font-family:Arial, Helvetica, sans-serif; box-sizing:border-box;">
+
+  <!-- Initial Page -->
+  <div style="width:19%; min-width:140px; text-align:center;">
+    <div style="height:150px; display:flex; align-items:flex-end; justify-content:center;">
+      <img 
+        src="https://images.code.org/1d0c3df58adae6a4c78a633d629f5b5b-image-1787756015395.png"
+        alt="Initial webpage with a Click button"
+        style="display:block; width:100%; max-width:155px; max-height:145px; object-fit:contain;">
+    </div>
+
+   <p style="margin:18px 0 0 0; font-size:20px; line-height:1.25; font-weight:700; color:#111111;">
+      Initial<br>Page
+    </p>
+  </div>
+
+  <!-- User Action -->
+  <div style="width:19%; min-width:140px; text-align:center;">
+    <div style="height:150px; display:flex; align-items:flex-end; justify-content:center;">
+      <img 
+        src="https://images.code.org/16537f0a53dd68b338344d967ce94af8-image-1787756054361.png"
+        alt="User clicking a button"
+        style="display:block; width:100%; max-width:155px; max-height:145px; object-fit:contain;">
+    </div>
+
+  <p style="margin:18px 0 0 0; font-size:20px; line-height:1.25; font-weight:700; color:#111111;">
+      User<br>Action
+    </p>
+  </div>
+
+  <!-- JavaScript Detects Event -->
+  <div style="width:19%; min-width:140px; text-align:center;">
+    <div style="height:150px; display:flex; align-items:flex-end; justify-content:center;">
+      <img 
+        src="https://images.code.org/96336b73a23beec26dcad73e869f1aa1-image-1787756086097.png"
+        alt="JavaScript listening for and detecting an event"
+        style="display:block; width:100%; max-width:155px; max-height:145px; object-fit:contain;">
+    </div>
+
+   <p style="margin:18px 0 0 0; font-size:20px; line-height:1.25; font-weight:700; color:#111111;">
+      JavaScript<br>Detects<br>Event
+    </p>
+  </div>
+
+  <!-- JavaScript Updates DOM -->
+  <div style="width:19%; min-width:140px; text-align:center;">
+    <div style="height:150px; display:flex; align-items:flex-end; justify-content:center;">
+      <img 
+        src="https://images.code.org/8f2e8e0271e5f239f26cd1226dff4403-image-1787756114658.png"
+        alt="JavaScript changing text in the webpage DOM"
+        style="display:block; width:100%; max-width:165px; max-height:145px; object-fit:contain;">
+    </div>
+
+  <p style="margin:18px 0 0 0; font-size:20px; line-height:1.25; font-weight:700; color:#111111;">
+      JavaScript<br>Updates<br>DOM
+    </p>
+  </div>
+
+  <!-- Browser Renders Update -->
+  <div style="width:19%; min-width:140px; text-align:center;">
+    <div style="height:150px; display:flex; align-items:flex-end; justify-content:center;">
+      <img 
+        src="https://images.code.org/c44bc8607c98a46f706cd0d83de219d9-image-1787756156774.png"
+        alt="Browser displaying the updated webpage"
+        style="display:block; width:100%; max-width:155px; max-height:145px; object-fit:contain;">
+    </div>
+
+  <p style="margin:18px 0 0 0; font-size:20px; line-height:1.25; font-weight:700; color:#111111;">
+      Browser<br>Renders<br>Update
+    </p>
+  </div>
+  </div>
+
+  
+---
+
+<h2>Try It: A Worked Example</h2>
+
+<p>Here's what those five steps look like with a real example: a shop page that checks whether an item is in stock near a customer's zip code. Click the arrow to step through it.</p>
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/how-change-happens-example.html" width="100%" height="350" style="border:none;" title="How Change Happens: the zip code stock check example"></iframe>
 </div>
+
+---
 
 <p>Every one of those five steps matters. A click by itself does nothing, it's only step two. JavaScript has to detect that event, update the DOM to reflect what should change, and only then does the browser actually render that update on screen. That's the connection between Elements, Events, and the DOM you've been building toward across the last few levels: this is the full loop, start to finish.</p>
 
@@ -24,7 +108,5 @@ markdown <<MARKDOWN
 </div>
 
 <p>Next, you'll try this yourself in Web Lab, exploring a page and using AI to make one interaction actually work.</p>
-
-
 
 MARKDOWN

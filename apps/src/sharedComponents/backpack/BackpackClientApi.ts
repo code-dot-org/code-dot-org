@@ -1,34 +1,19 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
+import {
+  BackpackEvent,
+  BackpackEventListener,
+  ErrorCallback,
+  FileMetadata,
+  FilesObject,
+} from './types';
+
 const REQUEST_RETRY_COUNT = 1;
 
-interface FilesObject {
-  [filename: string]: {
-    text: string;
-  };
-}
-interface FileMetadata {
-  filename: string;
-  category?: string;
-  size: number;
-  timestamp: string;
-}
-
-type ErrorCallback = (error?: Error, failedFiles?: string[]) => void;
 const rootUrl = (channelId: string) => `/v3/libraries/${channelId}`;
 // Cache bust suffix ensures we always get the latest version of the file.
 const getCacheBustSuffix = () => `?t=${Date.now()}`;
-
-// Events that can a listener can subscribe to.
-export enum BackpackEvent {
-  FileAdded = 'fileAdded',
-  FileDeleted = 'fileDeleted',
-  UploadStarted = 'uploadStarted',
-  UploadFailed = 'uploadFailed',
-}
-
-type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
 
 export default class BackpackClientApi {
   appType: string;
@@ -155,13 +140,12 @@ export default class BackpackClientApi {
 
   /**
    * Takes a file name and contents and saves to the backpack.
-   * Used in Codebridge labs to save a file.
    * @param {String} filename
    * @param {String} fileContents Contents of file to be saved to the backpack.
    * @param {Function} onError Function to call if file fails to save.
    * @param {Function} onSuccess Function to call if file saves.
    */
-  saveCodebridgeFile(
+  saveFile(
     filename: string,
     fileContents: string,
     onError: ErrorCallback,
@@ -180,7 +164,7 @@ export default class BackpackClientApi {
   /**
    * Save a file to the backpack from the given URL.
    */
-  async saveCodebridgeFileFromUrl(
+  async saveFileFromUrl(
     filename: string,
     fileUrl: string,
     onError?: ErrorCallback,

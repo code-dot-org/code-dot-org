@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-02T22:11:19.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Make: Random Sketch\r\n\r\nUse AI Tutor to build a Theater sketch, then randomize at least two parts of it.\r\n\r\n1. Ask AI Tutor to add a background, details, and music.\r\n2. Use `randint()` to randomize **at least two values**, such as color, position, size, or notes.\r\n3. Add comments explaining what you randomized.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\nfrom random import randint\n\n# Create your sketch below this comment\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nX7jK/AQtuUufbg==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02 22:29:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:30:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:34:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:34:30 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:47:26 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:47:41 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:48:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-03 15:52:52 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

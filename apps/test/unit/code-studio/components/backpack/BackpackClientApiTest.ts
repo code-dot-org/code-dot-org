@@ -146,7 +146,7 @@ describe('BackpackClientApi (jest)', () => {
       expect(HttpClient.delete as jest.Mock).toHaveBeenCalledTimes(2);
     });
 
-    it('saveCodebridgeFileFromUrl uploads file fetched from URL and calls success', async () => {
+    it('saveFileFromUrl uploads file fetched from URL and calls success', async () => {
       // Mock a successful GET that returns a blob
       (HttpClient.get as jest.Mock).mockResolvedValueOnce(
         Promise.resolve({
@@ -158,7 +158,7 @@ describe('BackpackClientApi (jest)', () => {
       );
       setPutResolveOnce();
 
-      await backpackClientApi.saveCodebridgeFileFromUrl(
+      await backpackClientApi.saveFileFromUrl(
         'fromUrl.txt',
         'https://example.com/file.txt',
         errorCallback,
@@ -176,10 +176,10 @@ describe('BackpackClientApi (jest)', () => {
       expect(successCallback).toHaveBeenCalledTimes(1);
     });
 
-    it('saveCodebridgeFileFromUrl calls error when GET throws, does not upload', async () => {
+    it('saveFileFromUrl calls error when GET throws, does not upload', async () => {
       (HttpClient.get as jest.Mock).mockRejectedValueOnce(new Error('network'));
 
-      await backpackClientApi.saveCodebridgeFileFromUrl(
+      await backpackClientApi.saveFileFromUrl(
         'fromUrl.txt',
         'https://example.com/file.txt',
         errorCallback,
@@ -191,7 +191,7 @@ describe('BackpackClientApi (jest)', () => {
       expect(successCallback).not.toHaveBeenCalled();
     });
 
-    it('saveCodebridgeFileFromUrl resolves without callbacks', async () => {
+    it('saveFileFromUrl resolves without callbacks', async () => {
       (HttpClient.get as jest.Mock).mockResolvedValueOnce({
         ok: true,
         blob: jest
@@ -201,7 +201,7 @@ describe('BackpackClientApi (jest)', () => {
       setPutResolveOnce();
 
       await expect(
-        backpackClientApi.saveCodebridgeFileFromUrl(
+        backpackClientApi.saveFileFromUrl(
           'fromUrl.txt',
           'https://example.com/file.txt'
         )
@@ -210,11 +210,11 @@ describe('BackpackClientApi (jest)', () => {
       expect(HttpClient.put).toHaveBeenCalledTimes(1);
     });
 
-    it('saveCodebridgeFileFromUrl throws error if no error callback and GET fails', async () => {
+    it('saveFileFromUrl throws error if no error callback and GET fails', async () => {
       (HttpClient.get as jest.Mock).mockRejectedValueOnce(new Error('network'));
 
       await expect(
-        backpackClientApi.saveCodebridgeFileFromUrl(
+        backpackClientApi.saveFileFromUrl(
           'fromUrl.txt',
           'https://example.com/file.txt'
         )
@@ -327,8 +327,8 @@ describe('BackpackClientApi (jest)', () => {
       fetchChannelIdSpy.mockRestore();
     });
 
-    it('saveCodebridgeFileFromUrl calls error callback when channel id missing', async () => {
-      await backpackClientApi.saveCodebridgeFileFromUrl(
+    it('saveFileFromUrl calls error callback when channel id missing', async () => {
+      await backpackClientApi.saveFileFromUrl(
         'a.txt',
         'https://example.com/a.txt',
         errorCallback,
@@ -340,12 +340,9 @@ describe('BackpackClientApi (jest)', () => {
       expect(HttpClient.put).not.toHaveBeenCalled();
     });
 
-    it('saveCodebridgeFileFromUrl rejects when channel id missing and no error callback', async () => {
+    it('saveFileFromUrl rejects when channel id missing and no error callback', async () => {
       await expect(
-        backpackClientApi.saveCodebridgeFileFromUrl(
-          'a.txt',
-          'https://example.com/a.txt'
-        )
+        backpackClientApi.saveFileFromUrl('a.txt', 'https://example.com/a.txt')
       ).rejects.toThrow('Missing channel id for backpack');
     });
 

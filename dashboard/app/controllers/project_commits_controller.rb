@@ -13,7 +13,7 @@ class ProjectCommitsController < ApplicationController
     if project_commit.persisted?
       # This is a duplicate submission - a comment for this project version already exists.
       # Notify Honeybadger about the duplicate submission and do not overwrite the existing comment.
-      Honeybadger.notify(
+      Observability::Errors.report(
         'Duplicate project commit submission detected.',
         context: {
           project_id: project_id,

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-17 17:15:44 UTC",
+    "serialized_at": "2026-09-02 20:18:32 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -937,6 +937,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-61",
+      "name": "Choice Progression",
+      "absolute_position": 61,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 58,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1705,6 +1720,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "bfcb92a8-3b82-4295-a42f-5b5e1e14432b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bfcb92a8-3b82-4295-a42f-5b5e1e14432b",
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2306,6 +2333,16 @@
       "seeding_key": {
         "activity_section.key": "690b02ba-ac90-4d29-ae32-767d59f0b964",
         "lesson_activity.key": "76e3c318-ebaa-4a69-9c02-da752325271f"
+      }
+    },
+    {
+      "key": "7d3e596e-80eb-4835-91c9-27bbb5213c33",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33",
+        "lesson_activity.key": "bfcb92a8-3b82-4295-a42f-5b5e1e14432b"
       }
     }
   ],
@@ -7934,6 +7971,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab Theater"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8455,6 +8495,27 @@
     },
     {
       "chapter": 254,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Quiz Lab2 Showcase"
+        ],
+        "lesson.key": "lesson-55",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "94cf3670-cb1d-45cc-9491-c754494a2399"
+      },
+      "level_keys": [
+        "Quiz Lab2 Showcase"
+      ]
+    },
+    {
+      "chapter": 255,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8478,7 +8539,7 @@
       ]
     },
     {
-      "chapter": 255,
+      "chapter": 256,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -8502,7 +8563,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 257,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8526,7 +8587,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 258,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8550,7 +8611,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 259,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8574,7 +8635,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 260,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8598,7 +8659,7 @@
       ]
     },
     {
-      "chapter": 260,
+      "chapter": 261,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8622,7 +8683,7 @@
       ]
     },
     {
-      "chapter": 261,
+      "chapter": 262,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8646,7 +8707,7 @@
       ]
     },
     {
-      "chapter": 262,
+      "chapter": 263,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8670,7 +8731,7 @@
       ]
     },
     {
-      "chapter": 263,
+      "chapter": 264,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8694,7 +8755,7 @@
       ]
     },
     {
-      "chapter": 264,
+      "chapter": 265,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8718,7 +8779,7 @@
       ]
     },
     {
-      "chapter": 265,
+      "chapter": 266,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8742,7 +8803,7 @@
       ]
     },
     {
-      "chapter": 266,
+      "chapter": 267,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8766,7 +8827,7 @@
       ]
     },
     {
-      "chapter": 267,
+      "chapter": 268,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -8790,7 +8851,7 @@
       ]
     },
     {
-      "chapter": 268,
+      "chapter": 269,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -8814,7 +8875,7 @@
       ]
     },
     {
-      "chapter": 269,
+      "chapter": 270,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -8838,7 +8899,7 @@
       ]
     },
     {
-      "chapter": 270,
+      "chapter": 271,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8862,7 +8923,7 @@
       ]
     },
     {
-      "chapter": 271,
+      "chapter": 272,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8886,7 +8947,7 @@
       ]
     },
     {
-      "chapter": 272,
+      "chapter": 273,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8910,7 +8971,7 @@
       ]
     },
     {
-      "chapter": 273,
+      "chapter": 274,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8931,6 +8992,102 @@
       },
       "level_keys": [
         "Allthethings AI Lab Lab2 3"
+      ]
+    },
+    {
+      "chapter": 275,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lab2 Bubble Choice Progression 1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lab2 Bubble Choice Progression 1"
+        ],
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
+      },
+      "level_keys": [
+        "Lab2 Bubble Choice Progression 1"
+      ]
+    },
+    {
+      "chapter": 276,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lab2 Bubble Choice Progression 2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lab2 Bubble Choice Progression 2"
+        ],
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
+      },
+      "level_keys": [
+        "Lab2 Bubble Choice Progression 2"
+      ]
+    },
+    {
+      "chapter": 277,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lab2 Bubble Choice Progression 3"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lab2 Bubble Choice Progression 3"
+        ],
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
+      },
+      "level_keys": [
+        "Lab2 Bubble Choice Progression 3"
+      ]
+    },
+    {
+      "chapter": 278,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Choice Progression Ending"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Choice Progression Ending"
+        ],
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
+      },
+      "level_keys": [
+        "Choice Progression Ending"
       ]
     }
   ],
@@ -12099,6 +12256,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Quiz Lab2 Showcase",
+        "script_level.level_keys": [
+          "Quiz Lab2 Showcase"
+        ],
+        "lesson.key": "lesson-55",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "94cf3670-cb1d-45cc-9491-c754494a2399"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-levelgroup-activityguide",
         "script_level.level_keys": [
           "test-levelgroup-activityguide"
@@ -12335,6 +12504,54 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "690b02ba-ac90-4d29-ae32-767d59f0b964"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lab2 Bubble Choice Progression 1",
+        "script_level.level_keys": [
+          "Lab2 Bubble Choice Progression 1"
+        ],
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lab2 Bubble Choice Progression 2",
+        "script_level.level_keys": [
+          "Lab2 Bubble Choice Progression 2"
+        ],
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lab2 Bubble Choice Progression 3",
+        "script_level.level_keys": [
+          "Lab2 Bubble Choice Progression 3"
+        ],
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Choice Progression Ending",
+        "script_level.level_keys": [
+          "Choice Progression Ending"
+        ],
+        "lesson.key": "lesson-61",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
       }
     }
   ],

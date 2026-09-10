@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-08 19:15:07 UTC",
+    "serialized_at": "2026-08-30 18:12:12 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -302,6 +302,21 @@
       },
       "seeding_key": {
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "iterating-with-ai-2026"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "iterating-with-ai-2026"
       }
@@ -818,6 +833,18 @@
       "seeding_key": {
         "lesson_activity.key": "65379993-8df3-4ab4-8c2e-04e2603f0000",
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "iterating-with-ai-2026"
+      }
+    },
+    {
+      "key": "454d2f4b-63f5-44b7-bf2f-419979f100a5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "454d2f4b-63f5-44b7-bf2f-419979f100a5",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "iterating-with-ai-2026"
       }
@@ -3317,6 +3344,17 @@
         "activity_section.key": "0a7a9265-7961-497a-8fde-0f911b28922e",
         "lesson_activity.key": "65379993-8df3-4ab4-8c2e-04e2603f0000"
       }
+    },
+    {
+      "key": "2b7166fa-fb07-4a5e-b6c7-7c4d2c705761",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b7166fa-fb07-4a5e-b6c7-7c4d2c705761",
+        "lesson_activity.key": "454d2f4b-63f5-44b7-bf2f-419979f100a5"
+      }
     }
   ],
   "script_levels": [
@@ -4485,6 +4523,28 @@
       "level_keys": [
         "iterating-with-ai-postassessment_2026"
       ]
+    },
+    {
+      "chapter": 54,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_v2_iterating_with_ai_2026"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "2b7166fa-fb07-4a5e-b6c7-7c4d2c705761"
+      },
+      "level_keys": [
+        "student-eou-survey_-programming_v2_iterating_with_ai_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5122,6 +5182,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "iterating-with-ai-2026",
         "activity_section.key": "0a7a9265-7961-497a-8fde-0f911b28922e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-programming_v2_iterating_with_ai_2026",
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_v2_iterating_with_ai_2026"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "iterating-with-ai-2026",
+        "activity_section.key": "2b7166fa-fb07-4a5e-b6c7-7c4d2c705761"
       }
     }
   ],

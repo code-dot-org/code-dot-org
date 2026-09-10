@@ -108,6 +108,13 @@ describe('fileUtils', () => {
     expect(
       getFileIconNameAndStyle({
         ...defaultFile,
+        name: 'test.wav',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'file-music', iconStyle: 'solid', isBrand: false});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
         name: 'test.png',
         type: ProjectFileType.STARTER,
       })

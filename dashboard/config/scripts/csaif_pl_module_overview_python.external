@@ -3,73 +3,64 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Module Overview
+<h1>Getting Ready for the Curriculum</h1>
 
-This professional learning module is made up of **five lessons:**
+<p>This professional learning module gives you a guided preview of the key concepts and instructional approaches used throughout the unit.</p>
 
+<p>Think of this module as a head start: a chance to build familiarity with the ideas your students will encounter, and to start thinking about how you'll teach them in your classroom.</p>
 
-<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+<p>This module highlights important concepts and teaching strategies, but it doesn't replace reviewing individual lesson materials. Take time to review each lesson before teaching it with students.</p>
 
-  
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/d7a2764589820d4023ca876e49c892c1-image-1740592077414.png" alt="Lesson 1 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-            <h3><b>Lesson 1 - Introduction to Foundations of AI Programming</b></h3>
-            <p style = "font-size: 14pt";><strong>⭐️ You are here!⭐️</strong> </p><p style = "font-size: 14pt";>            
-           This lesson provides an introduction to the Foundations of AI Programming unit and professional learning module.<br><br> It offers a brief overview of course resources and features.<br><br> <em>10 minutes</em></p>
-        </div>
-    </div>
+<h2>What's in this module?</h2>
 
-   
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/3d11b3154389d2caa405683ffda44ff6-image-1740592165845.png" alt="Lesson 2 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
-            <h3> <b>Lesson 2 - Computational Thinking</b></h3>
-            <p style = "font-size: 14pt";>This lesson explores key computational thinking concepts and how they connect to coding instruction.<br><br> By understanding these concepts, you will build a strong foundation for teaching programming and discover strategies to help students develop problem-solving skills.<br><br> <em>20 minutes</em></p>
-        </div>
-    </div>
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 25px auto;">
 
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/10b4eb413e96acd45f934d58dd222cf1-image-1740591937902.png" alt="Lesson 3 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3><b>Lesson 3 - Coding Basics</b></h3>
-            <p style = "font-size: 14pt";>This lesson introduces foundational coding concepts using Code.org’s Neighborhood IDE, or programming platform.<br><br> You will explore key programming elements such as variables, print statements, objects, and functions.<br><br> <em>25 minutes</em></p>
-        </div>
-    </div>
+  <div style="background-color: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Lesson 1 - Introduction to Foundations of AI Programming</h3>
+    <div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; padding: 4px 10px; border-radius: 10px; margin-bottom: 8px;">You are here</div>
+    <p>This lesson provides an introduction to the Foundations of AI Programming unit and professional learning module. It offers a brief overview of course resources and features.</p>
+    <p><i>10 minutes</i></p>
+  </div>
 
-   
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/f96f502d55f08a2f7aa566390c7ee853-image-1740591984866.png" alt="Lesson 4 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3><b>Lesson 4 - Advanced Algorithms</b></h3>
-            <p style = "font-size: 14pt";>In this lesson, you will explore key programming concepts that help control the flow of a program: while loops, if statements, and nested/two-way selection.<br><br> Through interactive coding in Code.org’s Neighborhood IDE, you will learn how to break down problems using flowcharts and implement solutions with structured code.<br><br> <em>25 minutes</em></p>
-        </div>
-    </div>
+  <div style="background-color: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Lesson 2 - Computational Thinking</h3>
+    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lessons 1-3</div>
+    <p>This lesson explores key computational thinking concepts and how they connect to coding instruction. By understanding these concepts, you will build a strong foundation for teaching programming and discover strategies to help students develop problem-solving skills.</p>
+    <p><i>20 minutes</i></p>
+  </div>
 
-    
-<div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/b39dda06cfbafec7aef8b85d0c3caed1-image-1740592349350.png" alt="Lesson 5 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-            <h3><b>Lesson 5 - Preparing for the Final Project</b></h3>
-            <p style = "font-size: 14pt";>In this lesson, you will focus on key instructional strategies for guiding students through their final project.<br><br> You will explore effective collaboration methods, structured feedback approaches, and planning techniques to help students manage their time and workflow. <br><br> <em>10 minutes</em></p>
-        </div>
-    </div>
+  <div style="background-color: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Lesson 3 - Coding Basics</h3>
+    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lessons 4-7</div>
+    <p>This lesson introduces foundational coding concepts using CodeAI's Neighborhood IDE, or programming platform. You will explore key programming elements such as variables, print statements, objects, and functions.</p>
+    <p><i>25 minutes</i></p>
+  </div>
+
+  <div style="background-color: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Lesson 4 - Advanced Algorithms</h3>
+    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lessons 8-12</div>
+    <p>In this lesson, you will explore key programming concepts that help control the flow of a program: while loops, if statements, and nested/two-way selection. Through interactive coding in CodeAI's Neighborhood IDE, you will learn how to break down problems using flowcharts and implement solutions with structured code.</p>
+    <p><i>25 minutes</i></p>
+  </div>
+
+  <div style="background-color: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px;">
+    <h3>Lesson 5 - Preparing for the Final Project</h3>
+    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lesson 13</div>
+    <p>In this lesson, you will focus on key instructional strategies for guiding students through their final project. You will explore effective collaboration methods, structured feedback approaches, and planning techniques to help students manage their time and workflow.</p>
+    <p><i>10 minutes</i></p>
+  </div>
 
 </div>
 
 
-
+**Total suggested time:** 90 minutes
 
 
 ---
 
 ## Engaging with This Module
 
-Feel free to complete as much or as little of this module as is useful for you and your students! 
+As you move through the module, focus on building confidence with the concepts, noticing instructional strategies, and making connections to how students may experience the learning in your classroom.
 
-Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. 
-
-You'll be able to give Code.org your feedback on the last level of this module.
-
-
+Throughout these lessons, you'll also see how **AI-supported teaching strategies** connect to each concept along the way.
 MARKDOWN

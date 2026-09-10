@@ -1,4 +1,5 @@
 require 'cdo/google/drive'
+require 'observability/errors'
 
 # Squash an unhelpful warning that's causing a Honeybadger error when we use
 # this module in a cronjob, because the cronjob helper sends an HB error if
@@ -56,7 +57,7 @@ module Google
           Please check with PLC team that this is intentional!
         ERROR_MSG
 
-        Honeybadger.notify error_msg
+        Observability::Errors.report error_msg
         puts error_msg
       end
     end

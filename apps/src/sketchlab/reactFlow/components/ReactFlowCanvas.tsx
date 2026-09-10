@@ -154,6 +154,9 @@ export interface ReactFlowCanvasProps {
   uploadImage?: ModeratedImageUploader;
   uploadsDisabled?: boolean;
   openUploadsDisabledModal?: () => void;
+  // When false, the toolbar omits the image-upload tool entirely (for hosts
+  // with no upload path, such as the Tutor+ deep dive). Defaults to true.
+  allowImageUpload?: boolean;
   onNodesDeleted?: (deletedNodes: SketchLabNode[]) => void;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
@@ -177,6 +180,7 @@ export default function ReactFlowCanvas({
   uploadImage = uploadImageUnavailable,
   uploadsDisabled = false,
   openUploadsDisabledModal,
+  allowImageUpload = true,
   onNodesDeleted,
   initialNodes,
   initialEdges,
@@ -1139,6 +1143,7 @@ export default function ReactFlowCanvas({
                       onImageUploadError={handleImageUploadError}
                       uploadsDisabled={uploadsDisabled}
                       openUploadsDisabledModal={openUploadsDisabledModal}
+                      allowImageUpload={allowImageUpload}
                       canvasTool={canvasTool}
                       onSetCanvasTool={setCanvasTool}
                     />

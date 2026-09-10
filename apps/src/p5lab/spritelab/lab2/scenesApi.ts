@@ -1,6 +1,7 @@
 // Client for the experimental cross-project scene APIs (scenes UI variant).
 // See dashboard SpriteLab2Controller.
 
+import {JsonBlockConfig} from '@cdo/apps/blockly/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {ExternalSceneOption} from './redux/spriteLab2Redux';
@@ -82,29 +83,55 @@ export async function fetchExternalProject(
  * when the listing API fails or an entry has vanished from it.
  */
 export function collectSavedExternalKeys(scenes: Scene[]): string[] {
-  const keys = new Set<string>();
-  const walkBlock = (block: {
-    type?: string;
-    fields?: {[name: string]: unknown};
-    inputs?: {[name: string]: {block?: object; shadow?: object}};
-    next?: {block?: object};
-  }) => {
+  return collectSavedFieldValues(
+    scenes,
+    'spritelab2_goToExternalScene',
+    'SCENE'
+  );
+}
+
+/** Every block of a serialized workspace: shadows and next chains included. */
+export function forEachSavedBlock(
+  source: unknown,
+  visit: (block: JsonBlockConfig) => void
+): void {
+  const walk = (block?: JsonBlockConfig) => {
     if (!block) {
       return;
     }
-    if (block.type === 'spritelab2_goToExternalScene') {
-      const value = block.fields?.SCENE;
-      if (typeof value === 'string' && value) {
-        keys.add(value);
-      }
-    }
+    visit(block);
     Object.values(block.inputs || {}).forEach(input => {
-      walkBlock((input.block || input.shadow) as typeof block);
+      walk(input.block);
+      walk(input.shadow);
     });
-    walkBlock(block.next?.block as typeof block);
+    if (block.next) {
+      walk(block.next.block);
+      walk(block.next.shadow);
+    }
   };
+  (
+    (source as {blocks?: {blocks?: JsonBlockConfig[]}} | undefined)?.blocks
+      ?.blocks || []
+  ).forEach(walk);
+}
+
+/** Every non-empty value of `fieldName` on saved blocks of `blockType`. */
+export function collectSavedFieldValues(
+  scenes: Scene[],
+  blockType: string,
+  fieldName: string
+): string[] {
+  const values = new Set<string>();
   scenes.forEach(scene =>
-    (scene.source?.blocks?.blocks || []).forEach(walkBlock)
+    forEachSavedBlock(scene.source, block => {
+      if (block.type !== blockType) {
+        return;
+      }
+      const value = block.fields?.[fieldName];
+      if (typeof value === 'string' && value) {
+        values.add(value);
+      }
+    })
   );
-  return [...keys];
+  return [...values];
 }

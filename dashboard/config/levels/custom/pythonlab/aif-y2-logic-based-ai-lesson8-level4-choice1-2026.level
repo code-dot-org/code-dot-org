@@ -33,7 +33,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def simulate(views, growth, target):\n    days = 0\n    print(f\"Day {days}: {views} views\")\n\n    while views < target:\n        views += views * growth\n        days += 1\n        print(f\"Day {days}: {views} views\")\n\n\nsimulate(10, 10, 1000)\n",
+          "contents": "def simulate(views, growth, target):\n  days = 0\n  print(f\"Day {days}: {views} views\")\n\n  while views < target:\n    views += views * growth\n    days += 1\n    print(f\"Day {days}: {views} views\")\n\n\nsimulate(10, 10, 1000)\n",
           "folderId": "0",
           "active": true
         }
@@ -44,9 +44,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMovFfcEd/Z/VTQb\nY5xR4HUKSGdQlaH0jaIABoqK19WME//gTOFyrCSZILLnbYi0FH1cGkvRbzWb\ncRQp4t76nTElvR6/XWRXnJv/6zSoZLcM+CeV/kzrTf148aMoUxrFmfGtC4zB\nbELwMdT8lmipXXRlUU0HO/Y+6pAoVub6oEEpR+1kzSFPJsTdGKhKojkVt2dI\nd2gmrGkFFmKfz2uYe/DbXdiUcHCYMrmtwOSNTmh74R2X/TnYrHUpZFJqTqRc\n4bdHKn9/8NE7MxwnZjM3BJe1H8EneGfKWThY4sBqRb2gQW0Z5swbigiMFGRn\nGH9vhjUgyZdFVmMoHePZ2Fi0snSfIUXB2P3ml0T9Fammb0u6jGRKKCIih/3J\nkxxN+lhuUhqtIcNqq8cfuVs3GMb5DjR0g0k5+LSEQGli+abe/SZ/n3Onr8iq\n4cEk4KrKVBhGcpsRhcX6uD5hLiwJFFxGOAIg\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrzEwWP/IJcDhKw\nA+bgW6O2u5MQkdartw3O5LacB2VFgOv07ysDCOO4Jfo+GFIn30NtmK6KcsDN\nQoZ0iJeDNSd0oRPQzHzouySVuKzuaHdEcbbxMMDXAP40tYR9ZWdstM1qm+ZW\nZ/oeE2iioVi8SUGg1TuNXvdjI2sg4UF8Rv6v2NjrMNRDf3wobbUaNCezVRBp\nLv8cRvYG4BTqxSM/CXGgW6490YhV3cCwsf32q6pifJqleyo43xUqSnB4s5jp\nz23hJqeITQk3S7KtWML10KWU7UIWrbE2nPCWpNitHy1jSGKXjHXtpNseDsO1\n0krjm/Q4cRfld66MJh0b7zbdnlxhD7sAg5CkHm9WJpUmskodgTwCqkdhz2Dp\nsnPcps+6amKzQOw4blBR9U5Y0p0iWziHHwgQxruUmPnaFYWEbHdZMb5SmFDz\nU88hUqu1eYVLaY4=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 17:30:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:32:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:38:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:21:49 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 17:30:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:32:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:38:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:21:49 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:16:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:16:40 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

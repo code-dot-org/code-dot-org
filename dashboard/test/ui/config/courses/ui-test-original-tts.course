@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-original-tts",
+  "script_names": [
+    "ui-test-tts"
+  ],
+  "original_script_names": [
+    "ui-test-tts"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-original-tts",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

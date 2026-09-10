@@ -243,7 +243,7 @@ class RegionalPartner < ApplicationRecord
           end
         rescue StandardError => exception
           # Log geocoding errors to honeybadger but don't fail
-          Honeybadger.notify(exception,
+          Observability::Errors.report(exception,
             error_message: 'Error geocoding regional partner workshop zip_code',
             context: {
               zip_code: zip_code

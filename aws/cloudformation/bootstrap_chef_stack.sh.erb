@@ -22,7 +22,8 @@ CHEF_VERSION=<%=CHEF_VERSION%>
 S3_BUCKET=<%=S3_BUCKET%>
 ENVIRONMENT=<%=environment%>
 RUN_LIST='<%=run_list.join(',')%>'
-INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+IMDS_TOKEN=$(curl -s -X PUT -H "X-aws-ec2-metadata-token-ttl-seconds: 21600" http://169.254.169.254/latest/api/token)
+INSTANCE_ID=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
 

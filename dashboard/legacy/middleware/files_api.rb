@@ -29,6 +29,9 @@ class FilesApi < Sinatra::Base
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
+  # Each channel in a multi-channel library list costs one S3 list request, so bound them.
+  MAX_LIST_CHANNELS = 20
+
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -127,6 +130,31 @@ class FilesApi < Sinatra::Base
     condition do
       (request.host == CDO.canonical_hostname('codeprojects.org')) == val
     end
+  end
+
+  #
+  # GET /v3/libraries?channels=<channel-id>,<channel-id>
+  #
+  # List filenames and sizes for several channels at once. The response maps each
+  # requested channel id to its list of files, or to null if that channel id could
+  # not be read.
+  #
+  get %r{/v3/libraries$} do
+    dont_cache
+    content_type :json
+
+    channel_ids = params['channels'].to_s.split(',').map(&:strip).reject(&:empty?)
+    bad_request if channel_ids.empty? || channel_ids.length > MAX_LIST_CHANNELS
+
+    bucket = LibraryBucket.new
+    channel_ids.uniq.each_with_object({}) do |encrypted_channel_id, files_by_channel|
+      files_by_channel[encrypted_channel_id] =
+        begin
+          bucket.list(encrypted_channel_id)
+        rescue ArgumentError, OpenSSL::Cipher::CipherError
+          nil
+        end
+    end.to_json
   end
 
   #

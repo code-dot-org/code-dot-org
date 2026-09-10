@@ -1,6 +1,7 @@
 require 'aws-sdk-cloudwatch'
 require 'honeybadger/ruby'
 require 'cdo/buffer'
+require 'observability/errors'
 
 module Cdo
   # Singleton interface for asynchronously sending a collection of CloudWatch metrics in batches.
@@ -48,7 +49,7 @@ module Cdo
           metric_data: events
         )
       rescue => exception
-        Honeybadger.notify(
+        Observability::Errors.report(
           exception,
           context: {
             namespace: @namespace,

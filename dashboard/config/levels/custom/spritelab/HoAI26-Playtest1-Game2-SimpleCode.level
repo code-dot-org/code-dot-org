@@ -1,0 +1,74 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2026-09-03T01:47:54.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "Code",
+      "Play"
+    ],
+    "pinned_scene_id": "story-scene",
+    "pinned_scene_name": "Story",
+    "guide_mode": "instructions",
+    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_makeNewSpriteAnon",
+          "inputs": {
+            "LOCATION": {
+              "block": {
+                "type": "gamelab_location_picker",
+                "fields": {
+                  "LOCATION": "{\"x\":200,\"y\":200}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:47:54.324+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-story\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-story\"}]"
+}]]></config>
+  <blocks/>
+</GamelabJr>

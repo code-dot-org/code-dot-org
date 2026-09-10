@@ -3,7 +3,7 @@
 # - production.values.yml
 # argocd-detect-probe: code-dot-org run 10 at 2026-03-22T10:32:51Z
 
-image: code-dot-org:latest
+image: cdo-rails:latest
 imagePullPolicy: IfNotPresent
 command: ["bin/dashboard-server"]
 args:
@@ -13,9 +13,10 @@ RAILS_ENV:
 dnsName: studio-development
 dashboard_workers: 0
 
-# The chart defaults to a backend-only deployment (ActiveJob worker, no
-# dashboard frontend). Stack dashboard.values.yaml (the Skaffold `dashboard`
-# profile does this) to add the dashboard Deployment/Service/Ingress.
+# The chart defaults to the backend deployment: an ActiveJob worker with no
+# dashboard frontend. A future dashboard deployment must use an image from the
+# root docker family that includes the frontend assets; cdo-rails contains only
+# the API/worker source slice.
 dashboard:
   enabled: false
 
@@ -54,10 +55,9 @@ dashboardJob:
   backoffLimit: 1
   ttlSecondsAfterFinished: 3600 # cleanup job an hour after it completes
 
-# ActiveJob (delayed_job) worker, enabled by default: the first piece of the
-# app migrating to Kubernetes. RAILS_ENV, extraEnv, and resources here are
-# pinned per-component (they do NOT inherit the chart-wide values) so the
-# worker renders identically in every environment until k8s-gitops
+# ActiveJob (delayed_job) worker, enabled by default. RAILS_ENV, extraEnv, and
+# resources here are pinned per component; they do not inherit the chart-wide
+# values. This keeps the worker identical in every environment until k8s-gitops
 # configures it per envType. Keep in sync with the static manifest in
 # k8s/kustomize/components/backend/active-job-worker-deployment.yaml.
 activeJobWorker:
@@ -101,24 +101,23 @@ services:
 
 # These should match the docker image's USERNAME, UID and GID args
 #
-# NOTE: these currently have no effect because they are overridden to root
-# in skaffold.yaml due to a bug in skaffold sync
+# NOTE: uid and gid are overridden to root by Skaffold due to a sync bug.
 user:
-  username: code-dot-org
+  username: cdo
   uid: 1000
   gid: 1000
-  home: /home/code-dot-org
+  home: /home/cdo
   allowSudo: false
 
-# Use the AWS creds from your local machine inside the dashboard container
-# Tip: activate with the skaffold local-dev profile: `skaffold dev -p local-dev`
+# Reserved for a future local dashboard profile. There is no Skaffold profile
+# that enables these mounts while the root docker family lacks an image with
+# the frontend assets.
 localDev:
   mounts:
     mountDotAWS: false
     mountDotConfigGcloud: false
 
-    # These are set in the skaffold development profile so we can
-    # use dynamic values appropriate to your particular system
+    # A future profile must set these from the local environment.
     AWS_PROFILE: # for mountDotAWS: match AWS_PROFILE on your local system
     hostPaths:
       home: # ~ on  your local dev box, set automatically by skaffold

@@ -1,0 +1,37 @@
+name 'pl-aif1-js-functions-repeating problems'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Problems with Repeating Code</h1>
+
+<p>Imagine two different buttons on a page both need to add one to a score and update the display. That's the same logic needed in two places, and copying it works, until it needs to happen a third time, or a fourth.</p> 
+<p><i>What happens when the same block of logic needs to run three or four times on the same page?</i> </p>
+
+<p>Copying and pasting those same few lines over and over creates a problem clean code alone can't solve.</p>
+
+<div style="display: flex; gap: 20px; align-items: flex-start; margin: 16px 0;">
+  <div style="flex: 1;">
+    
+<p><b>That repetition is where even clean code runs into a real limit:</b></p>
+
+
+  <p style="margin: 0 0 8px 0;">• It causes bugs, a mistake copied five times is five bugs, not one</p>
+    <p style="margin: 0 0 8px 0;">• It slows teams down, every change has to be made in multiple places</p>
+    <p style="margin: 0 0 8px 0;">• It leads to repeated work, solving the same problem again instead of reusing a solution</p>
+    <p style="margin: 0;">• It makes things harder for AI, messy, repeated code gives AI less to reliably pattern-match against</p>
+  </div>
+  <img src="https://images.code.org/fd0369371e00f1026e6e04c69ecfa396-image-1786458626446.png" alt="An illustration of four people connected to a central screen displaying a chart and code icon, representing developers and AI working on shared code." style="width: 35%; max-width: 200px; flex-shrink: 0;">
+</div>
+
+
+
+<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 16px 20px; margin: 20px 0; text-align: center;">
+<p><b>The solution is functions.</b><br> Instead of copying the same logic everywhere it's needed, write it once and call it wherever it's needed.</p>
+</div>
+
+
+
+<p>Next, you'll learn how functions can be used to reuse code.</p>
+
+MARKDOWN

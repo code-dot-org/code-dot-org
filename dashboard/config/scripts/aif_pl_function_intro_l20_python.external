@@ -3,48 +3,69 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introducing Functions 
+<h1>Introducing Functions</h1>
+<p>If you've ever written the same line of code more than once, or copied and pasted a block of code to use it again, you've already run into a common coding problem: <b>repetition</b>.</p>
 
-If you've ever written the same line of code more than once—or copied and pasted a block of code to use it again—you’ve already run into a common coding problem: **repetition.**
+<h2>Stop Repeating Yourself!</h2>
+<p>When you're just starting out with coding, it's easy to write the same lines of code over and over. For example, imagine you're making a birthday program that prints a greeting for three friends:</p>
 
-## Stop Repeating Yourself! 
+<div style="text-align: center;">
+<div role="region" aria-label="Python code that prints birthday messages for Alex, Jordan, and Taylor" style="max-width:520px; margin:20px auto; padding:18px 22px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#1C1F2A; color:#FFFFFF; border-radius:10px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.7; text-align:left;">
 
-When you're just starting out with coding, it's easy to write the same lines of code over and over. For example, imagine you’re making a birthday program that prints a greeting for three friends:
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Happy Birthday, Alex!"</span>)<br>
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Have a great day!"</span>)<br>
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"🎉 🎂 🎈"</span>)<br>
 
-<img src="https://images.code.org/509ee403d4b4a39439a3248a068054bc-image-1745420914259.png" alt="Python code printing Happy Birthday to 3 different people" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+  <br>
 
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Happy Birthday, Jordan!"</span>)<br>
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Have a great day!"</span>)<br>
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"🎉 🎂 🎈"</span>)<br>
 
-That’s a lot of repeating! It works, but what if you wanted to change the message? You’d have to update every section by hand.
+  <br>
 
-This is where **functions** help.
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Happy Birthday, Taylor!"</span>)<br>
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Have a great day!"</span>)<br>
+  <span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"🎉 🎂 🎈"</span>)
 
+</div>
+</div>
 
+<p>That's a lot of repeating! It works, but what if you wanted to change the message? You'd have to update every section by hand.</p>
+<p>This is where <b>functions</b> help.</p>
 
-> #### A **function** is like a mini-program inside your program. It lets you group a set of instructions under a name, so you can run those instructions whenever you need them—without rewriting the code each time. You **define** a function once, and then you can **call** it as many times as you like.
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>📖 Function:</b> A mini-program inside your program. It lets you group a set of instructions under a name, so you can run those instructions whenever you need them, without rewriting the code each time. You define a function once, and then you can call it as many times as you like.</p>
+</div>
 
-Here's how that birthday example looks using a function: 
+<p>Here's how that birthday example looks using a function:</p>
 
-<img src="https://images.code.org/4bcfc9203dd932bd5393016a5e8a27fb-image-1745421696182.png" alt="Happy birthday Python code condensed with a function" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+<div style="text-align: center;">
+<div role="region" aria-label="Python function that prints personalized birthday messages for Alex, Jordan, and Taylor" style="max-width:520px; margin:20px auto; padding:18px 22px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#1C1F2A; color:#FFFFFF; border-radius:10px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.7; text-align:left;">
 
-Much cleaner, right?
+  <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">birthday&#95;message</span>(name):<br>
 
-Functions make your code **easier to read, easier to reuse, and easier to fix if something changes**. And once you get the hang of them, they make your programs more powerful too!
+  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6FCAFF;">print</span>(<span style="color:#6FCAFF;">f</span><span style="color:#F07FB0;">"Happy Birthday, </span><span style="color:#6FCAFF;">{name}</span><span style="color:#F07FB0;">!"</span>)<br>
 
+  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Have a great day!"</span>)<br>
 
+  &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"🎉 🎂 🎈"</span>)<br>
 
+  <br>
 
+  <span style="color:#F07FB0;">birthday&#95;message</span>(<span style="color:#ACA8EA;">"Alex"</span>)<br>
+  <span style="color:#F07FB0;">birthday&#95;message</span>(<span style="color:#ACA8EA;">"Jordan"</span>)<br>
+  <span style="color:#F07FB0;">birthday&#95;message</span>(<span style="color:#ACA8EA;">"Taylor"</span>)
 
-## Let's look at how to create functions!
+</div>
+</div>
 
+<p>Much cleaner, right?</p>
+<p>Functions make your code <b>easier to read, easier to reuse, and easier to fix if something changes</b>. And once you get the hang of them, they make your programs more powerful too!</p>
 
+<h2>Let's look at how to create functions!</h2>
 
-
----
-
-
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This concept is covered in Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
-
-
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+<p>➡️ This concept is covered in Lesson 6. You can find more details in the full <a href="https://studio.code.org/s/aif2-2025/lessons/6" target="_blank" rel="noopener noreferrer" style="font-weight:bold;">lesson plan</a>.</p>
+</div>
 MARKDOWN

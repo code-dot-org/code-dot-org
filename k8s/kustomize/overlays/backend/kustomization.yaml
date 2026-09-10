@@ -1,8 +1,6 @@
 # Backend-only local development: ActiveJob worker plus cluster-local
 # services (mysql/redis/minio), no dashboard frontend. This is what the
-# Skaffold config deploys by default (bare `skaffold dev`); ../development
-# composes this overlay and adds the dashboard layer on top
-# (`skaffold dev -p dashboard`).
+# Skaffold deploys this overlay by default with bare `skaffold dev`.
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 components:
@@ -11,8 +9,7 @@ components:
   - ../../components/mysql
   - ../../components/minio
 patches:
-  # Local-dev relaxations for the worker, mirroring the dashboard
-  # relaxations in ../development.
+  # Local-development relaxations for the worker.
   - path: active-job-worker.patch.yaml
   - target:
       kind: Deployment

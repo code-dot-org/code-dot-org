@@ -76,7 +76,7 @@ module Cdo
             _(generate_pii_ddl).must_include 'learning_platform_<%=environment_type%>_pii.users'
           end
 
-          it 'uses ERB template variables in the source table path' do
+          it 'uses ERB template variables in the Zero ETL database and schema' do
             _(generate_pii_ddl).must_include '<%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users'
           end
 
@@ -99,6 +99,61 @@ module Cdo
             rendered = ERB.new(generate_pii_ddl).result(binding)
             _(rendered).must_include 'learning_platform_production_pii.users'
             _(rendered).must_include 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
+          end
+        end
+
+        describe 'a model whose table is in the Pegasus database' do
+          before do
+            model.stubs(:table_name).returns("#{CDO.pegasus_db_name}.hoc_activity")
+          end
+
+          it 'renders the irregular production schema name' do
+            environment_type = 'production'
+            rendered = ERB.new(described_instance.generate_pii_ddl).result(binding)
+            _(rendered).must_include 'production_learningplatform_mysql_zeroetl.pegasus.hoc_activity'
+            _(rendered).wont_include 'pegasus_production'
+          end
+
+          it 'renders the test schema name' do
+            environment_type = 'test'
+            rendered = ERB.new(described_instance.generate_pii_ddl).result(binding)
+            _(rendered).must_include 'test_learningplatform_mysql_zeroetl.pegasus_test.hoc_activity'
+          end
+
+          it 'fails loudly when rendered for an environment the override does not name' do
+            environment_type = 'levelbuilder'
+            _ {ERB.new(described_instance.generate_pii_ddl).result(binding)}.must_raise KeyError
+          end
+
+          it 'names the view with the bare table name, unqualified' do
+            _(described_instance.view_name).must_equal 'hoc_activity'
+            _(described_instance.generate_pii_ddl).must_include 'learning_platform_<%=environment_type%>_pii.hoc_activity'
+          end
+
+          it 'reports both expected view FQNs without the database qualifier' do
+            _(described_instance.expected_view_fqns('production')).must_equal(
+              ['learning_platform_production_pii.hoc_activity', 'learning_platform_production.hoc_activity']
+            )
+          end
+
+          it 'writes template files named for the bare table name' do
+            Dir.mktmpdir do |dir|
+              described_class.stub_const(:SQL_VIEW_TEMPLATE_DIR, dir) do
+                described_instance.save_ddl_templates
+              end
+              _(Dir.children(dir).sort).must_equal ['hoc_activity.sql.erb', 'hoc_activity_pii.sql.erb']
+            end
+          end
+        end
+
+        describe 'a model in the primary Rails database' do
+          it 'composes the dashboard schema from the environment' do
+            _(described_instance.generate_pii_ddl).must_include 'dashboard_<%=environment_type%>.users'
+          end
+
+          it 'ignores a qualifier that is not a Pegasus database' do
+            model.stubs(:table_name).returns("#{CDO.dashboard_db_name}.users")
+            _(described_instance.generate_pii_ddl).must_include 'dashboard_<%=environment_type%>.users'
           end
         end
 

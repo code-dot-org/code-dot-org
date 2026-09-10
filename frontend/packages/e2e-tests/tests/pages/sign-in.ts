@@ -7,8 +7,8 @@ export class SignInPage extends BasePage {
   /** The sign-in form container (#signin). Present immediately in server-rendered HTML. */
   readonly signInForm: Locator;
 
-  /** Email/username input. */
-  private readonly loginInput: Locator;
+  /** Email/username input. Exposed for visual masking: its autofocus ring anti-aliases between loads. */
+  readonly loginInput: Locator;
 
   /** Password input. */
   private readonly passwordInput: Locator;

@@ -128,6 +128,30 @@ type ServerChallengeResponseAsset = {
   download_url?: string;
 };
 
+// An emoji reaction tally on a response: the emoji name (mapped to a glyph
+// in the gallery), how many viewers left it, and whether the signed-in
+// viewer is one of them.
+export type Reaction = {
+  emoji: string;
+  count: number;
+  reacted: boolean;
+};
+
+// Normalizes the server's reaction array. A missing or malformed list is
+// treated as no reactions rather than throwing.
+export const parseReactions = (raw: unknown): Reaction[] => {
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+  return (raw as Record<string, unknown>[])
+    .filter(r => typeof r.emoji === 'string')
+    .map(r => ({
+      emoji: r.emoji as string,
+      count: typeof r.count === 'number' ? r.count : 0,
+      reacted: r.reacted === true,
+    }));
+};
+
 // The student-facing shape of a response. student_feedback carries the
 // constructive AI feedback (null until evaluation completes) and is private
 // to the author: the server omits it on rows belonging to section peers.
@@ -147,6 +171,7 @@ export type ChallengeResponse = {
   is_final: boolean;
   created_at: string;
   assets: ChallengeResponseAsset[];
+  reactions: Reaction[];
 };
 
 type ServerChallengeResponse = {
@@ -163,6 +188,7 @@ type ServerChallengeResponse = {
   is_final: boolean;
   created_at: string;
   assets: ServerChallengeResponseAsset[];
+  reactions?: unknown;
 };
 
 export const challengeResponseValidator: ResponseValidator<
@@ -190,6 +216,7 @@ export const challengeResponseValidator: ResponseValidator<
       asset_type: a.asset_type as ChallengeResponseAsset['asset_type'],
       download_url: a.download_url ?? null,
     })),
+    reactions: parseReactions(r.reactions),
   };
 };
 
@@ -210,6 +237,9 @@ export type Challenge = {
   question: string;
   default_modality: 'whiteboard' | 'video' | null;
   whiteboard_starter_image_alt_text: string | null;
+  // Same-origin path to the whiteboard starter image, or null when there is
+  // none. Present only when whiteboard_starter_image_alt_text is set.
+  whiteboard_starter_image_url: string | null;
 };
 
 type ServerChallenge = {
@@ -218,6 +248,7 @@ type ServerChallenge = {
   question: string;
   default_modality: 'whiteboard' | 'video' | null;
   whiteboard_starter_image_alt_text: string | null;
+  whiteboard_starter_image_url: string | null;
   created_at: string;
   updated_at: string;
 };
@@ -242,6 +273,7 @@ export const challengeValidator: ResponseValidator<Challenge[]> = bodyJson => {
     default_modality: c.default_modality ?? null,
     whiteboard_starter_image_alt_text:
       c.whiteboard_starter_image_alt_text ?? null,
+    whiteboard_starter_image_url: c.whiteboard_starter_image_url ?? null,
   }));
 };
 

@@ -301,11 +301,21 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   #
 
   test 'create migrated Clever OAuth student' do
-    assert_created_sso_user_with_oauth_token create(:student, :clever_sso_provider)
+    assert_created_clever_user create(:student, :clever_sso_provider)
   end
 
   test 'create migrated Clever OAuth teacher' do
-    assert_created_sso_user_with_oauth_token create(:teacher, :clever_sso_provider)
+    assert_created_clever_user create(:teacher, :clever_sso_provider)
+  end
+
+  def assert_created_clever_user(user)
+    assert_created_sso_user_with_oauth_token user
+
+    # Clever auth options are stamped v3; the v2 API is retired, so any
+    # uid still on a legacy user is a v3 id.
+    assert_user user, primary_contact_info: {
+      version: AuthenticationOption::Clever::VERSION[:v3]
+    }
   end
 
   def assert_created_sso_user_with_oauth_token(user)
@@ -494,11 +504,19 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
   end
 
   test 'de- and re-migrate Clever OAuth student' do
-    round_trip_sso_with_token create(:student, :clever_sso_provider)
+    round_trip_clever_user create(:student, :clever_sso_provider)
   end
 
   test 'de- and re-migrate Clever OAuth teacher' do
-    round_trip_sso_with_token create(:teacher, :clever_sso_provider)
+    round_trip_clever_user create(:teacher, :clever_sso_provider)
+  end
+
+  def round_trip_clever_user(for_user)
+    round_trip_sso_with_token for_user do |user|
+      assert_user user, primary_contact_info: {
+        version: AuthenticationOption::Clever::VERSION[:v3]
+      }
+    end
   end
 
   def round_trip_sso_with_token(for_user)

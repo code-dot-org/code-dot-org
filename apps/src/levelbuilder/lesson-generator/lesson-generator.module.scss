@@ -81,3 +81,45 @@
 .summaryGood {
   color: #060;
 }
+
+// Bubble Choice sublevel section, rendered inside a parent card's body.
+// Sublevel cards use the same ReorderableCard chrome as top-level cards;
+// the section only owns the outer container + "Add sublevel" affordance.
+.sublevelSection {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.sublevelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sublevelAddButton {
+  padding: 4px 10px;
+  font-size: 13px;
+  line-height: 1.2;
+  height: auto;
+}
+
+.sublevelEmpty {
+  margin: 0;
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+}
+
+.sublevelList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

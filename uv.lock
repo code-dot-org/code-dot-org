@@ -532,7 +532,7 @@ wheels = [
 
 [[package]]
 name = "neighborhood"
-version = "0.5.0"
+version = "0.6.0"
 source = { editable = "python/pythonlab/neighborhood" }
 
 [package.dev-dependencies]
@@ -846,7 +846,7 @@ wheels = [
 
 [[package]]
 name = "pythonlab-setup"
-version = "0.3.0"
+version = "0.4.0"
 source = { editable = "python/pythonlab/pythonlab_setup" }
 dependencies = [
     { name = "matplotlib" },
@@ -857,6 +857,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "pytest" },
+    { name = "theater" },
 ]
 
 [package.metadata]
@@ -867,7 +868,10 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pytest", specifier = ">=8" }]
+dev = [
+    { name = "pytest", specifier = ">=8" },
+    { name = "theater", editable = "python/pythonlab/theater" },
+]
 
 [[package]]
 name = "requests"
@@ -955,7 +959,7 @@ wheels = [
 
 [[package]]
 name = "theater"
-version = "0.4.0"
+version = "0.8.0"
 source = { editable = "python/pythonlab/theater" }
 
 [package.dev-dependencies]

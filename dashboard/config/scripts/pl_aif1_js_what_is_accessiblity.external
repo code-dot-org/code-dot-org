@@ -23,11 +23,92 @@ You've already seen how AI generates pages: it learns patterns from a massive co
 <p>Recognizing patterns of exclusion is the first step to correcting them. That's true of AI the same way it's true of a human designer: neither catches an accessibility gap automatically, it takes someone deciding to look for it.</p>
 
 ---
-
 <div style="text-align: center; margin: 20px 0;">
-<h2>How Inaccessible Web Data Impacts AI Generative Code</h2>
-<img src="https://images.code.org/a1014fa89d351fb4d2e7ecf72bad4593-image-1786029554472.png" alt="A three-step flowchart. Step one, AI Learning: AI learns from web data, shown as webpages funneling into a computer screen. Step two, Internalize Blockers: inaccessible websites become training data, shown as a brain with 95 percent highlighted. Step three, Inaccessible Design: AI generates designs with hidden problems, shown as a webpage mockup with red X marks over several sections." style="max-width: 700px; width: 100%; border-radius: 10px;">
+<h2>How Inaccessible Web Data Impacts AI Generative Code</h2></div>
+
+<div style="max-width:1050px; margin:24px auto; display:flex; align-items:stretch; justify-content:center; font-family:Arial, Helvetica, sans-serif;">
+
+  <!-- AI Learning -->
+  <div style="width:27%; min-width:220px; border-radius:10px 10px 0 0; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:linear-gradient(to bottom, #ffffff 20%, #eef1fa 100%);">
+    
+  <div style="background-color:#7d91c7; color:#ffffff; text-align:center; padding:9px 8px; font-size:21px; font-weight:700;">
+      AI Learning
+    </div>
+    
+  <div style="height:290px; padding:14px 16px 0 16px; text-align:center; box-sizing:border-box;">
+      <p style="font-size:18px; line-height:1.3; margin:0 0 12px 0;">
+        AI learns from<br>web data.
+      </p>
+      
+  <img 
+        src="https://images.code.org/5111cd9ca12c4ab8c104e57e1eef5846-image-1787671024521.png"
+        alt="Computer collecting web data to represent AI learning"
+        style="display:block; width:100%; max-width:210px; height:215px; object-fit:contain; margin:0 auto;">
+    </div>
+  </div>
+
+  <!-- First connector -->
+  <div style="width:9%; min-width:70px; position:relative;">
+    
+  <div aria-hidden="true" style="position:absolute; top:25px; left:0; width:72%; height:10px; background-color:#7d91c7;"></div>
+    <div aria-hidden="true" style="position:absolute; top:16px; right:0; width:0; height:0; border-top:14px solid transparent; border-bottom:14px solid transparent; border-left:22px solid #7d91c7;"></div>
+
+  <div aria-hidden="true" style="position:absolute; top:185px; left:0; width:68%; height:42px; background:linear-gradient(to right, #b8c4e4, #95a7d4);"></div>
+    <div aria-hidden="true" style="position:absolute; top:169px; right:0; width:0; height:0; border-top:37px solid transparent; border-bottom:37px solid transparent; border-left:38px solid #95a7d4;"></div>
+  </div>
+
+  <!-- Internalize Blockers -->
+  <div style="width:27%; min-width:220px; border-radius:10px 10px 0 0; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:linear-gradient(to bottom, #ffffff 20%, #e6f1ef 100%);">
+    
+  <div style="background-color:#87aaa9; color:#ffffff; text-align:center; padding:9px 8px; font-size:21px; font-weight:700;">
+      Internalize Blockers
+    </div>
+    
+  <div style="height:290px; padding:14px 16px 0 16px; text-align:center; box-sizing:border-box;">
+      <p style="font-size:18px; line-height:1.3; margin:0 0 12px 0;">
+        Inaccessible websites<br>become training data.
+      </p>
+      
+  <img 
+        src="https://images.code.org/f23647cd2011f501968f2ea23d1697af-image-1787671058558.png"
+        alt="Brain-shaped network internalizing accessibility blockers"
+        style="display:block; width:100%; max-width:210px; height:215px; object-fit:contain; margin:0 auto;">
+    </div>
+  </div>
+
+  <!-- Second connector -->
+  <div style="width:9%; min-width:70px; position:relative;">
+    
+<div aria-hidden="true" style="position:absolute; top:25px; left:0; width:72%; height:10px; background-color:#87aaa9;"></div>
+    <div aria-hidden="true" style="position:absolute; top:16px; right:0; width:0; height:0; border-top:14px solid transparent; border-bottom:14px solid transparent; border-left:22px solid #87aaa9;"></div>
+
+  <div aria-hidden="true" style="position:absolute; top:185px; left:0; width:68%; height:42px; background:linear-gradient(to right, #c7dcda, #9ebfbd);"></div>
+    <div aria-hidden="true" style="position:absolute; top:169px; right:0; width:0; height:0; border-top:37px solid transparent; border-bottom:37px solid transparent; border-left:38px solid #9ebfbd;"></div>
+  </div>
+
+  <!-- Inaccessible Design -->
+  <div style="width:27%; min-width:220px; border-radius:10px 10px 0 0; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:linear-gradient(to bottom, #ffffff 20%, #f5ece3 100%);">
+    
+  <div style="background-color:#bd7047; color:#ffffff; text-align:center; padding:9px 8px; font-size:21px; font-weight:700;">
+      Inaccessible Design
+    </div>
+    
+  <div style="height:290px; padding:14px 16px 0 16px; text-align:center; box-sizing:border-box;">
+      <p style="font-size:18px; line-height:1.3; margin:0 0 12px 0;">
+        AI generates designs with<br>hidden problems.
+      </p>
+      
+  <img 
+        src="https://images.code.org/6b064c2542bb885d6f26536152904238-image-1787671076327.png"
+        alt="Website design with red X marks showing accessibility problems"
+        style="display:block; width:100%; max-width:225px; height:215px; object-fit:contain; margin:0 auto;">
+    </div>
+  </div>
+
 </div>
+---
+
+
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
 <p><strong>💡 Teacher tip:</strong> this is a good moment to reset student expectations. AI isn't a safety net for accessibility, it's often repeating the same gaps humans have made for decades. Checking for accessibility is real work your students have to do on purpose, not something AI does for them by default.</p>

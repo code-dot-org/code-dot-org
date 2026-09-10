@@ -50,7 +50,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorResponseSchemaSettings,
     tutorVideos,
     config,
-    onImageFlagged,
     onAssetUploaded,
     onAssetRemoved,
     aiTutorInitialWelcomeMessage,
@@ -104,6 +103,11 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
 
   const handleValidate = () => {
     if (onRun) {
+      // The first console write lands before React re-renders, so this has to
+      // be set synchronously.
+      const consoleManager =
+        CodebridgeRegistry.getInstance().getConsoleManager();
+      consoleManager?.setFocusOnWrite(false);
       dispatch(setIsValidating(true));
       sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK);
       logUserLevelInteraction({
@@ -111,9 +115,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         scriptId: scriptId,
         interaction: UserLevelInteractions.click_validate,
       });
-      onRun(true, dispatch, source).finally(() =>
-        dispatch(setIsValidating(false))
-      );
+      onRun(true, dispatch, source).finally(() => {
+        consoleManager?.setFocusOnWrite(true);
+        dispatch(setIsValidating(false));
+      });
       dispatch(setHasValidated(true));
     } else {
       CodebridgeRegistry.getInstance()
@@ -177,7 +182,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         tutorVideos={tutorVideos}
         documentationUrl={documentationUrl}
         backpackProps={backpackProps}
-        onImageFlagged={onImageFlagged}
         hasInstructionsDrawer={appName === 'weblab2'}
         onAssetUploaded={onAssetUploaded}
         onAssetRemoved={onAssetRemoved}

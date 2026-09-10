@@ -24,9 +24,6 @@ class SceneActionType(Enum):
   DRAW_RECTANGLE = auto()
 
 
-# Sentinel for the "size not specified" branch in draw_image.
-UNSPECIFIED = -1
-
 # Simple data classes for various actions in a theater program.
 
 @dataclass
@@ -60,9 +57,10 @@ class DrawImage:
   image: Image
   x: int
   y: int
-  size: int
-  width: int
-  height: int
+  # Either size is given, or width and height are; the other is None.
+  size: Optional[int]
+  width: Optional[int]
+  height: Optional[int]
   rotation: float
   type: SceneActionType = SceneActionType.DRAW_IMAGE
 

@@ -5,7 +5,14 @@ import FontAwesomeV6Icon, {
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
+import React, {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+  useCallback,
+  useRef,
+} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
@@ -41,6 +48,7 @@ import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer'
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import experiments from '@cdo/apps/util/experiments';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -54,6 +62,7 @@ import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawe
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import type {AddFileHandler} from './Backpack/types';
+import UnifiedBackpackPanel from './Backpack/UnifiedBackpackPanel';
 import {
   AI_TUTOR_DOT_SEEN_KEY_PREFIX,
   resourcePanelInstructionsElementId,
@@ -66,7 +75,7 @@ import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
 import StudentResourcesPanel from './StudentResources/StudentResourcesPanel';
-import {Tabs} from './types';
+import {ExtraTab, Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
 } from './Validation/ValidationPanel';
@@ -114,7 +123,7 @@ export interface BackpackProps {
   addFileHandler?: AddFileHandler;
 }
 
-const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
+const builtInTabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
   [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
   [Tabs.StudentRubric]: {
@@ -140,6 +149,19 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.StudentResources]: {title: 'Resources', icon: 'compass'},
 };
 
+function filterExtraTabs(extraTabs: ExtraTab[] | undefined): ExtraTab[] {
+  const builtInTabIds = Object.values(Tabs) as string[];
+  return (extraTabs ?? []).filter(tab => {
+    if (builtInTabIds.includes(tab.id)) {
+      console.warn(
+        `ResourcePanel: extra tab "${tab.id}" was filtered out because its id collides with a built-in tab.`
+      );
+      return false;
+    }
+    return true;
+  });
+}
+
 type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
@@ -158,18 +180,21 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  /** Show the collapse/expand control. Defaults to standalone project levels. */
+  collapsible?: boolean;
   hideCollapsedTabBorder?: boolean;
   backpackProps?: BackpackProps;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
   hasInstructionsDrawer?: boolean;
   validationSettings?: ValidationSettings;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   initialWelcomeMessage?: string;
+  // Hide navigation entirely, in both the Instructions tab and the footer.
+  // hideNavigation alone only controls the Instructions tab navigation.
+  hideAllNavigation?: boolean;
+  extraTabs?: ExtraTab[];
+  // Callback that reports whether any tab ended up available.
+  onHasTabsChange?: (hasTabs: boolean) => void;
 };
 
 /**
@@ -193,19 +218,22 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
+  collapsible,
   hideCollapsedTabBorder = false,
   backpackProps,
-  onImageFlagged,
   hasInstructionsDrawer,
   validationSettings,
   onAssetUploaded,
   onAssetRemoved,
   initialWelcomeMessage,
+  extraTabs,
+  hideAllNavigation = false,
+  onHasTabsChange,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
   const {showRubric} = useRubric();
-  const [currentTab, setCurrentTab] = useState<Tabs | undefined>(undefined);
+  const [currentTab, setCurrentTab] = useState<string | undefined>(undefined);
   const userId = useAppSelector(state => state.currentUser.userId);
   const aiTutorDotSeenKey = userId
     ? `${AI_TUTOR_DOT_SEEN_KEY_PREFIX}_${userId}`
@@ -243,6 +271,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const appName = instructionsProps.levelProperties.appName;
   const isProjectLevel = instructionsProps.levelProperties.isProjectLevel;
+  const isCollapsible = collapsible ?? isProjectLevel;
   const isWidgetView = instructionsProps.levelProperties.widgetView;
   const isPredictLevel =
     instructionsProps.levelProperties.predictSettings?.isPredictLevel;
@@ -282,6 +311,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   });
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
+  const unifiedBackpackEnabled = experiments.isEnabledAllowingQueryString(
+    experiments.UNIFIED_BACKPACK
+  );
   useResourcePanelTours({
     levelProperties,
     isStandaloneCollapsed,
@@ -314,23 +346,29 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     !!hiddenContextCallback &&
     hasInstructions;
 
+  const validExtraTabs = useMemo(() => filterExtraTabs(extraTabs), [extraTabs]);
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     if (sidebarOnly) {
       return {};
     }
-    const tabMap: {[key in Tabs]?: React.ReactNode} = {};
+    const tabMap: Record<string, React.ReactNode> = {};
 
     const instructionsContent = hasInstructions ? (
       <Instructions
         {...instructionsProps}
-        hideNavigation={hideInstructionsNavigation}
+        hideNavigation={hideAllNavigation || hideInstructionsNavigation}
       />
     ) : null;
 
     if (hasInstructions) {
       tabMap[Tabs.Instructions] = instructionsContent;
     }
+
+    validExtraTabs.forEach(tab => {
+      tabMap[tab.id] = tab.content;
+    });
 
     if (validationSettings && hasValidationConditions) {
       tabMap[Tabs.Validation] = <ValidationPanel {...validationSettings} />;
@@ -393,12 +431,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
 
     if (showBackpack) {
+      const BackpackPanelComponent = unifiedBackpackEnabled
+        ? UnifiedBackpackPanel
+        : BackpackPanel;
       tabMap[Tabs.Backpack] = (
-        <BackpackPanel
+        <BackpackPanelComponent
           {...backpackProps}
           openPanelCallback={setBackpackTabAsActive}
           backpackRefreshKey={backpackRefreshKey}
-          onImageFlagged={onImageFlagged}
         />
       );
     }
@@ -437,6 +477,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     levelProperties,
     instructionsProps,
     hideInstructionsNavigation,
+    hideAllNavigation,
+    validExtraTabs,
     validationSettings,
     hasValidationConditions,
     hiddenContextCallback,
@@ -472,13 +514,40 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     backpackProps,
     setBackpackTabAsActive,
     backpackRefreshKey,
-    onImageFlagged,
+    unifiedBackpackEnabled,
     hasInstructions,
   ]);
+
+  const extraTabInfo = useMemo(() => {
+    const info: {[id: string]: {title: string; icon: string}} = {};
+    validExtraTabs.forEach(tab => {
+      info[tab.id] = {title: tab.title, icon: tab.icon};
+    });
+    return info;
+  }, [validExtraTabs]);
+
+  const getTabInfo = (tab: string): {title: string; icon: string} => {
+    if (Object.hasOwn(builtInTabInfo, tab)) {
+      return builtInTabInfo[tab as Tabs];
+    }
+    return extraTabInfo[tab];
+  };
 
   const hasTabs = useMemo(() => {
     return Object.keys(availableTabs).length > 0;
   }, [availableTabs]);
+
+  const displayedTab =
+    currentTab !== undefined && Object.hasOwn(availableTabs, currentTab)
+      ? currentTab
+      : getTypedKeys(availableTabs)[0];
+
+  // useLayoutEffect, not useEffect, so a caller sizing its own layout
+  // around this panel (see onHasTabsChange) sees the right value on the
+  // very first paint instead of a frame later.
+  useLayoutEffect(() => {
+    onHasTabsChange?.(hasTabs);
+  }, [hasTabs, onHasTabsChange]);
 
   const hasAiTutorTab = useMemo(() => {
     return availableTabs[Tabs.AiTutor] !== undefined;
@@ -504,7 +573,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {
       setCurrentTab(getTypedKeys(availableTabs)[0]);
-    } else if (currentTab && !(currentTab in availableTabs)) {
+    } else if (currentTab && !Object.hasOwn(availableTabs, currentTab)) {
       setCurrentTab(getTypedKeys(availableTabs)[0]);
     }
   }, [currentTab, availableTabs]);
@@ -555,7 +624,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   }, [setShowExtraLinksButton]);
 
   const onClickTab = useCallback(
-    (tab: Tabs) => {
+    (tab: string) => {
       if (currentTab && currentTab !== tab) {
         sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
           resourcePanelTabClickedTo: tab,
@@ -651,11 +720,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <div className={styles.topSection}>
             <div className={styles.collapseButtonContainer}>
               {/*
-              For standalone projects with at least one tab, we display the collapse/expand.
-              We hide this button for standalone projects with no tabs, but the bottom buttons
-              will still be available for users to access the settings panel, etc.
+              Hidden when there are no tabs; footer buttons still reach settings.
             */}
-              {isProjectLevel && hasTabs && (
+              {isCollapsible && hasTabs && (
                 <WithTooltip
                   tooltipProps={{
                     text: isStandaloneCollapsed
@@ -699,7 +766,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               {getTypedKeys(availableTabs).map(tab => (
                 <WithTooltip
                   tooltipProps={{
-                    text: tabInfo[tab].title,
+                    text: getTabInfo(tab).title,
                     tooltipId: `tooltip-${tab}`,
                     direction: 'onRight',
                     size: 'xs',
@@ -723,19 +790,19 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                       size="medium"
                       className={classNames(
                         styles.tabButton,
-                        tab === currentTab && styles.selected,
+                        tab === displayedTab && styles.selected,
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
                       id={`resource-panel-tab-button-${tab}`}
                       onClick={() => onClickTab(tab)}
-                      aria-label={tabInfo[tab].title}
+                      aria-label={getTabInfo(tab).title}
                       type="button"
                       key={tab}
                     >
                       <FontAwesomeV6Icon
-                        iconName={tabInfo[tab].icon}
+                        iconName={getTabInfo(tab).icon}
                         iconFamily={
-                          kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
+                          kitIcons.has(getTabInfo(tab).icon) ? 'kit' : undefined
                         }
                       />
                     </MuiIconButton>
@@ -795,13 +862,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         {!isStandaloneCollapsed && hasTabs && (
           <div className={styles.panels}>
             <PanelContainer
-              id={currentTab || 'resource-panel'}
-              headerContent={currentTab && tabInfo[currentTab].title}
+              id={displayedTab || 'resource-panel'}
+              headerContent={displayedTab && getTabInfo(displayedTab).title}
               headerClassName={headerClassName}
               rightHeaderContent={
-                currentTab === Tabs.AiTutor ? (
+                displayedTab === Tabs.AiTutor ? (
                   <AiChatHeaderButtons />
-                ) : currentTab === Tabs.Backpack ? (
+                ) : displayedTab === Tabs.Backpack ? (
                   <BackpackHeaderButtons
                     incrementBackpackRefreshKey={() =>
                       setBackpackRefreshKey(prev => prev + 1)
@@ -820,8 +887,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   renderTabContentPane(
                     'instructions-aitutor-shared',
                     availableTabs[Tabs.AiTutor],
-                    currentTab !== Tabs.Instructions &&
-                      currentTab !== Tabs.AiTutor,
+                    displayedTab !== Tabs.Instructions &&
+                      displayedTab !== Tabs.AiTutor,
                     Tabs.AiTutor
                   )}
                 {getTypedKeys(availableTabs).map(tab => {
@@ -838,13 +905,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   return renderTabContentPane(
                     tab,
                     availableTabs[tab],
-                    tab !== currentTab,
+                    tab !== displayedTab,
                     refTab
                   );
                 })}
               </div>
-              {(hideInstructionsNavigation ||
-                currentTab !== Tabs.Instructions) &&
+              {!hideAllNavigation &&
+                (hideInstructionsNavigation ||
+                  displayedTab !== Tabs.Instructions) &&
                 !isProjectLevel && (
                   <NavigationArea
                     {...instructionsProps}

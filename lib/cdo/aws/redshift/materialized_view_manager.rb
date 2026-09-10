@@ -3,6 +3,7 @@ require 'digest'
 require 'erb'
 require 'fileutils'
 require 'cdo/aws/redshift/client'
+require 'cdo/aws/redshift/zero_etl'
 require 'cdo/aws/metrics'
 
 module Cdo
@@ -114,12 +115,6 @@ module Cdo
         # team's dbt schemas in `dev`.
         VIEW_SCHEMA_PREFIX = 'learning_platform'.freeze
 
-        # Schema prefix of the Zero ETL *source* tables inside the Zero ETL target database, e.g.
-        # `production_learningplatform_mysql_zeroetl.dashboard_production.<table>`. This mirrors
-        # the MySQL `dashboard` database name and is fixed by the Zero ETL integration — it is NOT
-        # the schema our views live in, and must not be renamed.
-        ZERO_ETL_SOURCE_SCHEMA_PREFIX = 'dashboard'.freeze
-
         # ERB template variable for the environment type (e.g., 'test' or 'production').
         ENVIRONMENT_TYPE_ERB = '<%=environment_type%>'.freeze
 
@@ -165,6 +160,18 @@ module Cdo
           view_variants.map {|pii| fully_qualified_view_name(env, pii: pii)}
         end
 
+        # Views share the bare name of their Model's table.
+        # @return [String]
+        def view_name
+          mysql_table_name
+        end
+
+        # The model's table name without any `database.` qualifier.
+        # @return [String]
+        def mysql_table_name
+          model.table_name.to_s.rpartition('.').last
+        end
+
         # Generates the DDL for the PII Materialized View, which projects every column
         # except those classified :highly_restricted.
         def generate_pii_ddl
@@ -189,14 +196,14 @@ module Cdo
 
           pii_ddl = generate_pii_ddl
           if pii_ddl
-            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{model.table_name}_pii.sql.erb")
+            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{view_name}_pii.sql.erb")
             File.write(path, GENERATED_TEMPLATE_HEADER + pii_ddl)
             files << path
           end
 
           non_pii_ddl = generate_non_pii_ddl
           if non_pii_ddl
-            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{model.table_name}.sql.erb")
+            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{view_name}.sql.erb")
             File.write(path, GENERATED_TEMPLATE_HEADER + non_pii_ddl)
             files << path
           end
@@ -402,7 +409,7 @@ module Cdo
           return plan if dry_run
 
           generators.each do |gen|
-            table_name = gen.model.table_name
+            table_name = gen.view_name
             gen_fqns = gen.expected_view_fqns(environment_type)
 
             if gen_fqns.any? && gen_fqns.all? {|fqn| unchanged_fqns.include?(fqn)}
@@ -480,7 +487,7 @@ module Cdo
 
           models.each do |model|
             gen = new(model)
-            table_name = model.table_name
+            table_name = gen.view_name
             expected_fqns = gen.expected_view_fqns(environment_type)
 
             if expected_fqns.empty?
@@ -679,7 +686,7 @@ module Cdo
 
           rows = []
           model_fqns.sort_by {|fqn, m| [m.name, view_type_for.call(fqn)]}.each do |fqn, model|
-            rows << build_row.call(model.name, model.table_name, fqn)
+            rows << build_row.call(model.name, new(model).view_name, fqn)
           end
 
           orphan_fqns = (fqn_to_latest.keys - expected_set.to_a).sort
@@ -935,12 +942,28 @@ module Cdo
           model.column_names_classified_as(*NON_PII_CLASSIFICATIONS)
         end
 
-        # The materialized view shares its source table's name (e.g., `level_sources`). It no
-        # longer carries a `zeroetl_` prefix: the views live in dedicated `learning_platform_*`
-        # schemas (see VIEW_SCHEMA_PREFIX), so there is nothing to disambiguate them from — and
-        # mirroring the source table name reads naturally for analysts and dbt.
-        private def view_name
-          model.table_name
+        # Symbol identifying the logical MySQL database this Model is persisted in, default to `:dashboard`.
+        # @return [Symbol] :dashboard or :pegasus
+        private def mysql_database
+          # `rpartition` returns an empty string for the database when table name is unqualified, which defaults to
+          # Dashboard below.
+          physical_database_name = model.table_name.to_s.rpartition('.').first
+
+          # Match all variations of Pegasus (`pegasus_test`, `pegasus_unittest`, etc.).
+          physical_database_name.start_with?('pegasus') ? :pegasus : :dashboard
+        end
+
+        # The schema holding this Model's table inside the Zero ETL target Redshift database, as an ERB
+        # fragment resolved when the View DDL is rendered for a deployed environment.
+        # # @return [String] ERB fragment embedded in View DDL: `dashboard_<%=environment_type%>`
+        private def zero_etl_schema_erb
+          if mysql_database == :pegasus
+            pairs = ZeroEtl::REDSHIFT_SCHEMA_PEGASUS_BY_ENVIRONMENT.
+              map {|env, schema| "'#{env}' => '#{schema}'"}.join(', ')
+            "<%={#{pairs}}.fetch(environment_type)%>"
+          else
+            "#{ZeroEtl::REDSHIFT_SCHEMA_PREFIX_DASHBOARD}_#{ENVIRONMENT_TYPE_ERB}"
+          end
         end
 
         private def fully_qualified_view_name(env, pii:)
@@ -970,7 +993,7 @@ module Cdo
               AUTO REFRESH NO
             AS SELECT
               #{quoted_columns.join(",\n" + SQL_INDENT)}
-            FROM #{ENVIRONMENT_TYPE_ERB}_learningplatform_mysql_zeroetl.#{ZERO_ETL_SOURCE_SCHEMA_PREFIX}_#{ENVIRONMENT_TYPE_ERB}.#{model.table_name};
+            FROM #{ENVIRONMENT_TYPE_ERB}_learningplatform_mysql_zeroetl.#{zero_etl_schema_erb}.#{mysql_table_name};
           SQL
         end
 

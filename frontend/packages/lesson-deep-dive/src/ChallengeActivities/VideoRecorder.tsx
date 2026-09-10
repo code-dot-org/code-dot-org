@@ -82,7 +82,12 @@ function pickAudioMimeType(): string {
 }
 
 interface VideoRecorderProps {
+  // Caller-controlled: flip this to start/stop the recording (e.g. from a
+  // button in a parent component) rather than clicking a button here.
+  isRecording: boolean;
   onRecordingChange: (hasRecording: boolean) => void;
+  // Called when the recording stops on its own (countdown expiry), so the
+  // caller can bring its `isRecording` state back in sync.
   onIsRecordingChange?: (isRecording: boolean) => void;
   recordedUrl: string | null;
   setRecordedUrl: Dispatch<SetStateAction<string | null>>;
@@ -93,6 +98,7 @@ interface VideoRecorderProps {
 }
 
 const VideoRecorder: FC<VideoRecorderProps> = ({
+  isRecording,
   onRecordingChange,
   onIsRecordingChange,
   recordedUrl,
@@ -131,7 +137,9 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
-        video: true,
+        video: {
+          aspectRatio: 0.5625, // 9/16
+        },
         audio: true,
       });
       streamRef.current = stream;
@@ -183,7 +191,21 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     }
   }, [timeRemaining, recordingState, stopRecording]);
 
-  const startRecording = () => {
+  const startRecording = useCallback(async () => {
+    // Re-recording over a previous take: that stream's tracks were stopped
+    // when the previous recording finished, so get a fresh one first.
+    // Clearing recordedUrl (rather than setting recordingState) is what
+    // switches back to the preview render so the <video ref={previewRef}>
+    // element is mounted in time to receive it — recordingState itself
+    // stays 'recorded' until the new recorder actually starts, since
+    // changing it here would re-trigger the isRecording effect below mid-await
+    // and race a second startRecording() against this one's stale stream.
+    if (recordingState === 'recorded') {
+      setRecordedUrl(null);
+      setRecordedAudioUrl(null);
+      onRecordingChange(false);
+      await startStream();
+    }
     if (!streamRef.current) return;
     chunksRef.current = [];
     audioChunksRef.current = [];
@@ -219,22 +241,32 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
 
     recorder.start();
     audioRecorder.start();
-    onIsRecordingChange?.(true);
     setRecordingState('recording');
 
     timerRef.current = setInterval(() => {
       setTimeRemaining(prev => (prev > 0 ? prev - 1 : 0));
     }, 1000);
-  };
+  }, [
+    recordingState,
+    startStream,
+    timeLimitSeconds,
+    setRecordedUrl,
+    setRecordedAudioUrl,
+    onRecordingChange,
+    onIsRecordingChange,
+  ]);
 
-  const reRecord = async () => {
-    setRecordedUrl(null);
-    setRecordedAudioUrl(null);
-    setTimeRemaining(timeLimitSeconds);
-    onRecordingChange(false);
-    setRecordingState('idle');
-    await startStream();
-  };
+  // Start or stop in response to the caller flipping `isRecording`, rather
+  // than from a button owned by this component. Flipping it back on while
+  // `recordingState` is 'recorded' re-records over the previous take.
+  useEffect(() => {
+    if (disabled) return;
+    if (isRecording && recordingState !== 'recording') {
+      startRecording();
+    } else if (!isRecording && recordingState === 'recording') {
+      stopRecording();
+    }
+  }, [isRecording, recordingState, disabled, startRecording, stopRecording]);
 
   if (error) {
     return <p className={styles.error}>{error}</p>;
@@ -243,17 +275,15 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
   if (recordingState === 'recorded' && recordedUrl) {
     return (
       <div className={styles.container}>
-        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-        <video className={styles.video} src={recordedUrl} controls />
-        {!disabled && (
-          <button
-            type="button"
-            className={styles.reRecordButton}
-            onClick={reRecord}
-          >
-            Re-record
-          </button>
-        )}
+        <div className={styles.previewWrapper}>
+          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+          <video
+            className={styles.video}
+            src={recordedUrl}
+            controls
+            key="playback"
+          />
+        </div>
       </div>
     );
   }
@@ -262,6 +292,7 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     <div className={styles.container}>
       <div className={styles.previewWrapper}>
         <video
+          key="preview"
           ref={previewRef}
           className={styles.video}
           autoPlay
@@ -275,23 +306,6 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
           />
         )}
       </div>
-      {recordingState === 'idle' ? (
-        <button
-          type="button"
-          className={styles.recordButton}
-          onClick={startRecording}
-        >
-          Start Recording
-        </button>
-      ) : (
-        <button
-          type="button"
-          className={styles.stopButton}
-          onClick={stopRecording}
-        >
-          Stop Recording
-        </button>
-      )}
     </div>
   );
 };

@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def predict_flour(cookies):\n    return 8 + 2 * cookies\n\n# TODO 1: Prompt the user for a number of cookies, save the result in a variable\n\n# TODO 2: Calculate a predicted amount of flour for the cookies\n\n# TODO 3: Print a message letting the user know the cookie count and flour amount",
+          "contents": "def predict_flour(cookies):\n  return 8 + 2 * cookies\n\n# TODO 1: Prompt the user for a number of cookies, save the result in a variable\n\n# TODO 2: Calculate a predicted amount of flour for the cookies\n\n# TODO 3: Print a message letting the user know the cookie count and flour amount",
           "folderId": "0",
           "active": true
         }
@@ -36,9 +36,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqj+BN1FcS5dfhh\ns5yhd6BLhPPX3XoaNiwAij2KIrAyhjfxZvMzjlJP2abmNEtVIzOyErG2Uhc2\nyKDCezbQ9gS6FbuPPCUBqWlM5ZPjhjV2t73jZSRIOA1X8eMk/M4Wjwmf24M6\nZO1nEeWzicBkroJRox3LasCUgOl4oCOyf9KUW/ZhoJufKlXBudo8Eo2hBIYD\n7Any7w+E8KdjcFrwLiOQ4PAbGJyiemFPnEIMjhJFj22CGIBUzOe87ZvzJewA\nr42GGQVzioBxQfvr2p1vA+cvEitOMsQeOxdVoRduo4RZ6vxCeET8DjzuClPu\nWA4tR1vrplwD8QV30k2z5m7FYxYGLgv17Y75U9OuGTI4PTlfHYkfINS2k7mD\nI2hHbADzs2JyUHxYsU1/ASl0s1eDJoG6hvupQa5QpFJOOcxk5RqTjgb8iNrK\ne8SGULI5zIx9PqQ=\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo+3BgUWLlFpr4g\noWhpoKR44CPPS3zy2Uy5MGijGOxREGO2jDgYHg1XJgV5SJKqSgNKZBpiHX5s\nFoGUjxbC/m79mhXk09hETUXJdBGSuh8roVqaW8hmrIlhqD593v8t2ZTN1EXm\ntC9FfIY0s4zy2VtmHE+GVVIMpj/zuNSG5DxKp0QITAc5rVkLZHGZkiGxJ7ig\n0BnBcGR3WKmN4DcRPHLLTDxknKpywS2qW/ZWx6+kDrWzyMwi+NKrNIk9hx/c\nBf/HSMGUBqBYRw9++VLBQQUpqC6jspad+Wj/QYH/akS2Ovdfrvo9+nk8ydzs\n7oXlbuHPhcT2ny9/mRFh9Fq0oq7PJmxrQJRPKZGEBxN1ZS+uTlw7QoBlAjfM\nkXq2/NOgCwy7RzRe4btHSAKOVnFAOisjyZUAV0uyYpITMGXqY6hgeJZXIzUX\nM9qPwjtVMGNkRyc=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-21 21:00:13 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:00:21 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-21 21:00:13 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:00:21 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:15:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:15:59 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

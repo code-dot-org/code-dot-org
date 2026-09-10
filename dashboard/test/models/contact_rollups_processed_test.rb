@@ -18,6 +18,26 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     assert_equal 3, ContactRollupsProcessed.count
   end
 
+  test 'import_from_raw_table handles a contact whose aggregated data exceeds 64KB' do
+    # The GROUP_CONCAT-based aggregation this pipeline previously used
+    # silently truncated at group_concat_max_len (65535 in production, 1024
+    # default elsewhere), corrupting the JSON mid-string and dropping the
+    # contact as invalid. JSON_ARRAYAGG has no such ceiling.
+    email = 'prolific@example.domain'
+    filler = 'x' * 1000
+    70.times do |i|
+      create(:contact_rollups_raw, email: email,
+        sources: "dashboard.source_#{i}", data: {filler: filler}
+)
+    end
+
+    results = ContactRollupsProcessed.import_from_raw_table
+
+    assert_equal 1, results[:valid_contacts]
+    assert_equal 0, results[:invalid_contacts]
+    refute_nil ContactRollupsProcessed.find_by_email(email)
+  end
+
   test 'import_from_raw_table inserts records by batch' do
     unique_email_count = 15
     batch_sizes = [1, 5, 7, 11, 20]
@@ -258,23 +278,22 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
         ]
       }
     }
+    # Sections data is pre-aggregated by extract_sections_taught: one row
+    # per teacher with comma-joined distinct values.
     section_courses_input = {
       'dashboard.sections' => {
-        'course_name' => [
-          {'value' => 'csp-2020'},
-          {'value' => 'csd-2019'},
-          {'value' => 'csa-2022'},
-          {'value' => nil},
-        ]
+        'course_name_prefixes' => [{'value' => 'csa,csd,csp'}]
       }
     }
     section_curricula_input = {
       'dashboard.sections' => {
-        'curriculum_umbrella' => [
-          {'value' => 'CSF'},
-          {'value' => 'CSD'},
-          {'value' => nil},
-        ]
+        'curriculum_umbrellas' => [{'value' => 'CSD,CSF'}]
+      }
+    }
+    section_no_curriculum_input = {
+      'dashboard.sections' => {
+        'curriculum_umbrellas' => [{'value' => nil}],
+        'course_name_prefixes' => [{'value' => nil}]
       }
     }
     user_permissions_input = {
@@ -320,6 +339,12 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
         input: section_curricula_input,
         expected_output: {roles: 'CSD Teacher,CSF Teacher'}
       },
+      # A teacher whose sections carry no curriculum data gets no
+      # sections-derived roles.
+      {
+        input: section_no_curriculum_input,
+        expected_output: {}
+      },
       {
         input: user_permissions_input,
         expected_output: {roles: 'Facilitator,Workshop Organizer'}
@@ -339,6 +364,41 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       output = ContactRollupsProcessed.extract_roles test[:input]
       assert_equal test[:expected_output], output, "Test index #{index} failed"
     end
+  end
+
+  test 'sections roles survive the pre-aggregated extraction end to end' do
+    teacher = create(:teacher)
+    2.times do
+      csd_script = create(:csd_script)
+      create(:unit_group_unit, unit_group: create(:unit_group), script: csd_script, position: 1)
+      create(:section, user: teacher, script_id: csd_script.id)
+    end
+    create(:section, user: teacher, course_id: create(:unit_group, name: 'csp-2021').id)
+
+    ContactRollupsRaw.extract_sections_taught
+    ContactRollupsProcessed.import_from_raw_table
+
+    record = ContactRollupsProcessed.find_by_email!(teacher.email)
+    assert_equal 'CSD Teacher,CSP Teacher', record.data['roles']
+  end
+
+  test 'extract_comma_joined_values' do
+    contact_data = {
+      'dashboard.sections' => {
+        'curriculum_umbrellas' => [
+          {'value' => 'CSD,CSF'},
+          {'value' => nil},
+          {'value' => 'CSP'}
+        ]
+      }
+    }
+
+    output = ContactRollupsProcessed.extract_comma_joined_values(
+      contact_data, 'dashboard.sections', 'curriculum_umbrellas'
+    )
+    assert_equal %w[CSD CSF CSP], output
+
+    assert_equal [], ContactRollupsProcessed.extract_comma_joined_values({}, 'a', 'b')
   end
 
   test 'extract_state' do

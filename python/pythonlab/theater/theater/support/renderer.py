@@ -5,7 +5,7 @@ import struct
 from PIL import Image as PILImage
 from PIL import ImageDraw
 
-from .actions import UNSPECIFIED, SceneActionType
+from .actions import SceneActionType
 from .audio import AudioWriter
 from .constants import (
   MAX_AUDIO_SECONDS,
@@ -180,7 +180,7 @@ def _draw_image(canvas, action):
   # resize and paste reject floats, so round here rather than in every caller.
   x = int(round(action.x))
   y = int(round(action.y))
-  if action.size != UNSPECIFIED:
+  if action.size is not None:
     width, height = fit_to_width(source.width, source.height, action.size)
   else:
     width = int(round(action.width))
@@ -270,8 +270,6 @@ def _draw_regular_polygon(draw, action):
 
 def _draw_shape(draw, action):
   points = action.points
-  if len(points) % 2 != 0 or len(points) < 4:
-    raise ValueError("A shape needs an even number of coordinates, at least 4")
   pairs = [(points[i], points[i + 1]) for i in range(0, len(points), 2)]
   if action.close:
     if action.stroke_color is None and action.fill_color is None:

@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class LevelSourcesControllerTest < ActionController::TestCase
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     @admin = create(:admin)
     @level_source = create(:level_source)
@@ -27,7 +29,9 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "should get show with encrypted level source ID" do
-    skip "CDO.properties_encryption_key is not defined" unless CDO.properties_encryption_key
+    # encrypt_level_source_id and the controller's decrypt both run in-process,
+    # so any self-consistent key exercises the /c/:id share link.
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     encrypted = @level_source.encrypt_level_source_id @admin.id
     get :show, params: {level_source_id_and_user_id: encrypted}
     assert_response :success

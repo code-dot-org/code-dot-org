@@ -3,6 +3,7 @@ require 'uri'
 require 'json'
 require 'aws-sdk-pricing'
 require 'active_support/core_ext/integer/time'
+require 'observability/errors'
 
 module AWS
   module EC2
@@ -115,7 +116,7 @@ module AWS
 
       http.request(request)
     rescue StandardError => exception
-      Observability::Errors.capture_exception(exception) if defined?(Observability::Errors)
+      Observability::Errors.report(exception)
       nil
     end
 
@@ -144,7 +145,7 @@ module AWS
 
       parse_on_demand_usd(JSON.parse(product))
     rescue StandardError => exception
-      Observability::Errors.capture_exception(exception) if defined?(Observability::Errors)
+      Observability::Errors.report(exception)
       nil
     end
 

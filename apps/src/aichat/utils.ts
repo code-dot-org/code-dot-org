@@ -1,3 +1,4 @@
+import {IMAGE_MIME_TO_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import {
   AiChatModelIds,
   SafeAndSupportedImageTypes,
@@ -81,3 +82,13 @@ export const getAllowedFileTypes = (
     ? images
     : [...images, 'application/pdf'];
 };
+
+const MIME_TO_EXTENSIONS: Record<string, readonly string[]> = {
+  ...IMAGE_MIME_TO_EXTENSIONS,
+  'application/pdf': ['pdf'],
+};
+
+export const getAllowedFileExtensions = (
+  modelId: ValueOf<typeof AiChatModelIds>
+): string[] =>
+  getAllowedFileTypes(modelId).flatMap(mime => MIME_TO_EXTENSIONS[mime] ?? []);

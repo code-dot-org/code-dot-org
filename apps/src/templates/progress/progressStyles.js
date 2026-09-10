@@ -96,7 +96,7 @@ export function levelProgressStyle(levelStatus) {
 // codeai-next the two tokens resolve close together (#34bd43 on #258830). The
 // success statuses below all draw their border in the fill color instead: on a
 // filled bubble the border disappears into the fill, and on an unfilled one
-// (attempted, passed) it stays a visible green outline.
+// (attempted) it stays a visible green outline.
 const levelSuccessStatusBorderColor = 'var(--background-success-primary)';
 
 const levelStatusStyle = {
@@ -114,8 +114,8 @@ const levelStatusStyle = {
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.passed]: {
-    borderColor: levelSuccessStatusBorderColor,
-    backgroundColor: 'var(--background-success-extra-light)',
+    borderColor: 'var(--background-success-mid)',
+    backgroundColor: 'var(--background-success-mid)',
   },
   // Submitted and completed-assessment levels count as completed work, so
   // they take the same green fill as perfect. Note: there are submittable

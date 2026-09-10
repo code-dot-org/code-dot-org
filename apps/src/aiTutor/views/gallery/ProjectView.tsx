@@ -10,6 +10,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   ChallengeResponse,
+  Reaction,
   challengeResponseListValidator,
 } from '../lessonDeepDive/types';
 
@@ -35,6 +36,10 @@ interface ProjectViewProps {
   // Switch the page to another response (a version of this project, or the
   // teacher's previous/next project).
   onOpenProject: (id: number) => void;
+  // Reports a reaction change on the response with the given id, so the
+  // gallery can update the matching card while the viewer is on the project
+  // page.
+  onReactionsChange?: (responseId: number, reactions: Reaction[]) => void;
 }
 
 // The Tutor+ project page: one submitted challenge project, its media and
@@ -47,6 +52,7 @@ const ProjectView: FC<ProjectViewProps> = ({
   galleryResponses,
   onBack,
   onOpenProject,
+  onReactionsChange,
 }) => {
   const [detail, setDetail] = useState<ChallengeResponseDetail | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -80,8 +86,14 @@ const ProjectView: FC<ProjectViewProps> = ({
 
   const challengeId = detail?.challenge_id;
   const studentId = detail?.user_id;
+  const viewerRole = detail?.viewer_role;
   useEffect(() => {
     if (challengeId === undefined || studentId === undefined) {
+      return;
+    }
+    // Version navigation is for the work's owner and their teachers only;
+    // a section peer sees just the one submission the gallery linked to.
+    if (viewerRole === 'peer') {
       return;
     }
     let cancelled = false;
@@ -106,7 +118,7 @@ const ProjectView: FC<ProjectViewProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [challengeId, studentId]);
+  }, [challengeId, studentId, viewerRole]);
 
   if (loadFailed) {
     return (
@@ -183,35 +195,44 @@ const ProjectView: FC<ProjectViewProps> = ({
           </MuiButton>
         </div>
         <div className={styles.versionControls}>
-          <MuiIconButton
-            type="button"
-            variant="text"
-            color="secondary"
-            size="extraSmall"
-            disabled={!previousVersion}
-            onClick={() => previousVersion && onOpenProject(previousVersion.id)}
-            aria-label="Previous response"
-          >
-            <FontAwesomeV6Icon iconName="angle-left" />
-          </MuiIconButton>
-          <Typography
-            variant="overline2"
-            component="span"
-            className={styles.versionLabel}
-          >
-            {`Response #${versionIndex >= 0 ? versionIndex + 1 : 1}`}
-          </Typography>
-          <MuiIconButton
-            type="button"
-            variant="text"
-            color="secondary"
-            size="extraSmall"
-            disabled={!nextVersion}
-            onClick={() => nextVersion && onOpenProject(nextVersion.id)}
-            aria-label="Next response"
-          >
-            <FontAwesomeV6Icon iconName="angle-right" />
-          </MuiIconButton>
+          {/* Owners and teachers can page through this student's earlier
+              submissions; peers only ever see the one linked from the
+              gallery, so the switcher is left out for them. */}
+          {(isTeacher || isOwner) && (
+            <>
+              <MuiIconButton
+                type="button"
+                variant="text"
+                color="secondary"
+                size="extraSmall"
+                disabled={!previousVersion}
+                onClick={() =>
+                  previousVersion && onOpenProject(previousVersion.id)
+                }
+                aria-label="Previous response"
+              >
+                <FontAwesomeV6Icon iconName="angle-left" />
+              </MuiIconButton>
+              <Typography
+                variant="overline2"
+                component="span"
+                className={styles.versionLabel}
+              >
+                {`Response #${versionIndex >= 0 ? versionIndex + 1 : 1}`}
+              </Typography>
+              <MuiIconButton
+                type="button"
+                variant="text"
+                color="secondary"
+                size="extraSmall"
+                disabled={!nextVersion}
+                onClick={() => nextVersion && onOpenProject(nextVersion.id)}
+                aria-label="Next response"
+              >
+                <FontAwesomeV6Icon iconName="angle-right" />
+              </MuiIconButton>
+            </>
+          )}
         </div>
         <div className={styles.topBarSide}>
           {isTeacher && galleryIndex >= 0 && galleryResponses && (
@@ -266,6 +287,9 @@ const ProjectView: FC<ProjectViewProps> = ({
           <ProjectDetailsCard
             detail={detail}
             unitPosition={unit?.position ?? null}
+            onReactionsChange={reactions =>
+              onReactionsChange?.(detail.id, reactions)
+            }
           />
         </div>
       </div>

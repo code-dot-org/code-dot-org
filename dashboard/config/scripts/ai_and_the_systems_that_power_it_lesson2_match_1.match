@@ -1,0 +1,27 @@
+name 'ai-and-the-systems-that-power-it-lesson2-match-1'
+title 'Component-Definition Match'
+description 'Match the hardware component to its description or function'
+
+question 'Motherboard'
+answer 'Carries power and information between all the other parts. Does no thinking or storing of its own'
+
+question 'CPU'
+answer 'The main processor. Reads instructions and carries them out one at a time, in order, very fast'
+
+question 'GPU'
+answer 'A second processor built to do millions of small calculations all at once instead of one after another'
+
+question 'RAM'
+answer 'Holds whatever is open right now so the computer can reach it quickly. Empties the moment the power goes off'
+
+question 'SSD'
+answer 'Keeps files and programs in place even when the power is off, until something asks for them'
+
+question 'Keyboard'
+answer 'Sends letters, numbers, and commands into the computer when a person presses it'
+
+question 'Monitor'
+answer 'Displays the words and images the computer produced so a person can see them'
+
+height '80'
+allow_multiple_attempts true

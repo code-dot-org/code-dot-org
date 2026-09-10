@@ -1,0 +1,7 @@
+name 'aif-y2-working-with-data-lesson2-level1-choice3-intro-2026'
+title 'Cafeteria Meal Data'
+
+
+markdown <<MARKDOWN
+[This spreadsheet](https://docs.google.com/spreadsheets/d/1bpIy7wASa0nNpZ3P3ia3CQr5iAK_hUAFjT2jb7-rCJ0/edit?gid=0#gid=0) contains tabular data describing a week’s worth of information about a school’s cafeteria meals. Explore the dataset and answer the following questions:
+MARKDOWN

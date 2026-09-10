@@ -16,9 +16,23 @@ def test_blank_image_rejects_oversized_dimensions():
     Image(MAX_IMAGE_PIXELS, 2)
 
 
-def test_blank_image_rejects_negative_dimensions():
+@pytest.mark.parametrize("width,height", [(-5, 10), (10, -5), (-5, -5)])
+def test_blank_image_rejects_negative_dimensions(width, height):
   with pytest.raises(ValueError):
-    Image(-5, 10)
+    Image(width, height)
+
+
+@pytest.mark.parametrize("width,height", [(0, 10), (10, 0), (0, 0)])
+def test_blank_image_rejects_a_zero_dimension(width, height):
+  # An image with no pixels cannot be drawn, and draw_image() divides by the
+  # width to hold the aspect ratio, so a zero width reached the renderer as a
+  # ZeroDivisionError with nothing to point a student at.
+  with pytest.raises(ValueError):
+    Image(width, height)
+
+
+def test_blank_image_allows_a_single_pixel():
+  assert (Image(1, 1).get_width(), Image(1, 1).get_height()) == (1, 1)
 
 
 def test_blank_image_allows_the_largest_permitted_size():

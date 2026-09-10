@@ -10,4 +10,5 @@ require 'cdo/honeybadger'
 # @see https://apidock.com/rails/v6.1.7.7/ActionMailer/MessageDelivery/deliver_later
 class MailDeliveryJob < ActionMailer::MailDeliveryJob
   include ActiveJobMetrics
+  include ActiveJobEnqueueRetry
 end

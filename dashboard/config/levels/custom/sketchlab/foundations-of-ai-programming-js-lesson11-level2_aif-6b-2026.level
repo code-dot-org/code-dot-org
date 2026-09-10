@@ -1,0 +1,1499 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2026-08-25T21:12:57.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "5hHbt7Djp2GMVQgkJCdUu",
+            "type": "shape",
+            "position": {
+              "x": 1051.8057261073457,
+              "y": -1069.5034470702367
+            },
+            "style": {
+              "width": 405.99998474121094,
+              "height": 634.999942779541
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 406,
+              "height": 635
+            },
+            "zIndex": -2
+          },
+          {
+            "id": "XNdJSVkh-6KOnTFmMsH5r",
+            "type": "shape",
+            "position": {
+              "x": 1153.168676750249,
+              "y": -858.4200565164442
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Process",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 193,
+              "height": 70
+            }
+          },
+          {
+            "id": "cDbGK-h1_oE6pkOl98r9O",
+            "type": "shape",
+            "position": {
+              "x": 1101.1685851975146,
+              "y": -752.2200290506239
+            },
+            "style": {
+              "width": 202.4000244140625,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Decision",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 202,
+              "height": 176
+            }
+          },
+          {
+            "id": "Z8amU2c0Iey3laprKfQpQ",
+            "type": "shape",
+            "position": {
+              "x": 1149.1685546799365,
+              "y": -964.420010740077
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start / End",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 198,
+              "height": 85
+            }
+          },
+          {
+            "id": "r5kDRGc2Ks2Lhf7HTS5oW",
+            "type": "text",
+            "position": {
+              "x": 1105.8056650721894,
+              "y": -1047.1701556985736
+            },
+            "data": {
+              "text": "Flowchart Components ",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 254,
+              "height": 46
+            }
+          },
+          {
+            "id": "xhShw5sI7FJ29so5o6ci6",
+            "type": "shape",
+            "position": {
+              "x": 1507.864309442616,
+              "y": -1068.9332988444216
+            },
+            "style": {
+              "width": 1880.0001525878893,
+              "height": 1228.0001068115228
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1880,
+              "height": 1228
+            }
+          },
+          {
+            "id": "v9ficnM254Gzbo9EU5A5f",
+            "type": "text",
+            "position": {
+              "x": 2365.4311327661862,
+              "y": -1045.1002249105022
+            },
+            "data": {
+              "text": "Your Workspace",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 177,
+              "height": 46
+            }
+          },
+          {
+            "id": "LEnD9YX2et5bAI3HzpBpL",
+            "type": "shape",
+            "position": {
+              "x": 1130.5977650810762,
+              "y": -539.2599103405023
+            },
+            "style": {
+              "width": 231.15911762042447,
+              "height": 72.99037364781316
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Variable",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 231,
+              "height": 73
+            }
+          },
+          {
+            "id": "cg_0JRG_zlONx_THocKYO",
+            "type": "shape",
+            "position": {
+              "x": 1700.7638451270545,
+              "y": 217.82676716353865
+            },
+            "style": {
+              "width": 1846.3873599562905,
+              "height": 1373.2446493268699
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1384,
+              "height": 1071
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "width": 1384,
+            "height": 1071,
+            "resizing": false
+          },
+          {
+            "id": "zT9JMSRwh8iu64gEuAjE8",
+            "type": "shape",
+            "position": {
+              "x": 2302.815125399175,
+              "y": 312.3805971199373
+            },
+            "style": {
+              "width": 334.4355755709155,
+              "height": 107.56196588912155
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start workout",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 334,
+              "height": 108
+            }
+          },
+          {
+            "id": "t4aGT98qTNqjaM1F3bdEF",
+            "type": "shape",
+            "position": {
+              "x": 2378.7791850856593,
+              "y": 1041.9609624969812
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Do a push up",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 193,
+              "height": 85
+            },
+            "dragging": false
+          },
+          {
+            "id": "Dp4rOe-iPiE_nzzbd3Ckg",
+            "type": "shape",
+            "position": {
+              "x": 2281.699094999295,
+              "y": 821.5086641509731
+            },
+            "style": {
+              "width": 386.6180947548282,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Does\n\n",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 387,
+              "height": 176
+            },
+            "dragging": false
+          },
+          {
+            "id": "Bpa3bu_mK8Qsem-vbUAI1",
+            "type": "text",
+            "position": {
+              "x": 2376.981760683768,
+              "y": 902.6896539775829
+            },
+            "data": {
+              "text": "pushups == goal?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 192,
+              "height": 46
+            },
+            "dragging": false
+          },
+          {
+            "id": "VwVwJBDH8jcCjQWwOx85T",
+            "type": "shape",
+            "position": {
+              "x": 2342.1366932841734,
+              "y": 482.13075394470826
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Set pushups = 0",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 259,
+              "height": 93
+            },
+            "width": 259,
+            "height": 93,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "Wzl8JmlkDyGPBd8nvH5f2",
+            "type": "shape",
+            "position": {
+              "x": 2709.440559095145,
+              "y": 855.3047975995686
+            },
+            "style": {
+              "width": 334.4355755709155,
+              "height": 107.56196588912155
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Finish workout",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 334,
+              "height": 108
+            },
+            "dragging": false
+          },
+          {
+            "id": "k63QLQif0oaOaDa09dxdk",
+            "type": "shape",
+            "position": {
+              "x": 2379.8192313229997,
+              "y": 1176.0078305484847
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Increase \npushups by 1",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 193,
+              "height": 85
+            },
+            "dragging": false
+          },
+          {
+            "id": "ne7bAjtMGfeupq-vhmhHR",
+            "type": "text",
+            "position": {
+              "x": 1705.035325351311,
+              "y": 383.1457833941584
+            },
+            "data": {
+              "text": "for (pushups = 0; pushups < goal; pushups ++) {\n      doPushup()\n}",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false,
+              "textAlign": "left"
+            },
+            "measured": {
+              "width": 491,
+              "height": 103
+            },
+            "dragging": false
+          },
+          {
+            "id": "gX9ugx9AluPEM7pgtWujf",
+            "type": "shape",
+            "position": {
+              "x": 2648.563367957747,
+              "y": 480.39946303804317
+            },
+            "style": {
+              "width": 202.29915687557042,
+              "height": 96.51582450387939
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "pushups",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 202,
+              "height": 97
+            },
+            "dragging": false
+          },
+          {
+            "id": "3-MoP4VlZPuhqgnDd2IXP",
+            "type": "shape",
+            "position": {
+              "x": 2343.162216606678,
+              "y": 693.3805818257741
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Set goal = 10",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 261,
+              "height": 85
+            },
+            "width": 261,
+            "height": 85,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "Hlk4T2FxwOWhhP09_25si",
+            "type": "shape",
+            "position": {
+              "x": 2656.0408381065467,
+              "y": 688.0675204088175
+            },
+            "style": {
+              "width": 202.29915687557042,
+              "height": 96.51582450387939
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "goal",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 202,
+              "height": 97
+            },
+            "dragging": false
+          },
+          {
+            "id": "77srxHtMnMGO9YSUucmh9",
+            "type": "text",
+            "position": {
+              "x": 2735.130015100762,
+              "y": 427.0108964789818
+            },
+            "data": {
+              "text": "Start value",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 123,
+              "height": 46
+            },
+            "dragging": false
+          },
+          {
+            "id": "pwp3ihhFWEm2H1yAqqIvY",
+            "type": "text",
+            "position": {
+              "x": 2753.188794683636,
+              "y": 639.2635031865506
+            },
+            "data": {
+              "text": "Stop value",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 122,
+              "height": 46
+            },
+            "dragging": false
+          },
+          {
+            "id": "m2Tk82qqJsNngAZSVblxJ",
+            "type": "text",
+            "position": {
+              "x": 2582.0816423724627,
+              "y": 1184.4362078777415
+            },
+            "data": {
+              "text": "Step",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 64,
+              "height": 46
+            },
+            "dragging": false
+          },
+          {
+            "id": "60QRL4cPi6p7IM147Ef--",
+            "type": "text",
+            "position": {
+              "x": 2536.855969001732,
+              "y": 820.5495267053731
+            },
+            "data": {
+              "text": "Stop value check",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 178,
+              "height": 60
+            },
+            "dragging": false,
+            "width": 178,
+            "height": 60,
+            "resizing": false
+          },
+          {
+            "id": "WEDqEb7ZL_TpoOR54nao6",
+            "type": "text",
+            "position": {
+              "x": 1706.241710654914,
+              "y": 327.8482659238763
+            },
+            "data": {
+              "text": "Model",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "extra-large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 101,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "2bf32f1e-9519-4d86-9db8-dc06382149d5",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1356.2353525721894,
+              "y": -580.5034127379613
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "e49e8b4e-2422-4483-87cb-1bb09c95263b",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1400.2353678309785,
+              "y": -747.5034203673558
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "08503f3b-df27-4656-aa18-efe2e969e575",
+            "type": "text",
+            "data": {
+              "text": "Yes",
+              "showHandles": false
+            },
+            "position": {
+              "x": 2629.0145511670676,
+              "y": 925.9537086313021
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            },
+            "dragging": false
+          },
+          {
+            "id": "48803bc3-bc62-48d9-99cd-1aea97a33e21",
+            "type": "text",
+            "data": {
+              "text": "No",
+              "showHandles": false
+            },
+            "position": {
+              "x": 2483.0286356741094,
+              "y": 984.4692015890485
+            },
+            "measured": {
+              "width": 58,
+              "height": 38
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "dcdf5fd9-a05a-4269-9df6-839767a7bc70",
+            "source": "2bf32f1e-9519-4d86-9db8-dc06382149d5",
+            "target": "e49e8b4e-2422-4483-87cb-1bb09c95263b",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "7843bb96-3b3d-49e5-90d7-3b8db6921684",
+            "source": "Dp4rOe-iPiE_nzzbd3Ckg",
+            "target": "Wzl8JmlkDyGPBd8nvH5f2",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "d585f358-7a32-48db-8903-1e666b0788d5",
+            "source": "zT9JMSRwh8iu64gEuAjE8",
+            "target": "VwVwJBDH8jcCjQWwOx85T",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "a017b225-2db0-4515-aecf-c20b7fb59c32",
+            "source": "VwVwJBDH8jcCjQWwOx85T",
+            "target": "3-MoP4VlZPuhqgnDd2IXP",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "ff12d48b-78a9-41db-9213-b4b196a1613b",
+            "source": "t4aGT98qTNqjaM1F3bdEF",
+            "target": "k63QLQif0oaOaDa09dxdk",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "70264737-9bed-4bb3-8073-2a9abe7f314a",
+            "source": "VwVwJBDH8jcCjQWwOx85T",
+            "target": "gX9ugx9AluPEM7pgtWujf",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "e63ea464-44f3-4f5c-8a2d-c46b2ea9ddbd",
+            "source": "3-MoP4VlZPuhqgnDd2IXP",
+            "target": "Hlk4T2FxwOWhhP09_25si",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "e1a96c7f-c595-49da-8718-35378057ecf0",
+            "source": "3-MoP4VlZPuhqgnDd2IXP",
+            "target": "Dp4rOe-iPiE_nzzbd3Ckg",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "source": "k63QLQif0oaOaDa09dxdk",
+            "sourceHandle": "left-source",
+            "target": "Dp4rOe-iPiE_nzzbd3Ckg",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "strokeWidth": 1
+            },
+            "id": "xy-edge__k63QLQif0oaOaDa09dxdkleft-source-Dp4rOe-iPiE_nzzbd3Ckgleft-target",
+            "type": "smoothstep",
+            "style": {
+              "strokeWidth": 1
+            }
+          },
+          {
+            "source": "Dp4rOe-iPiE_nzzbd3Ckg",
+            "sourceHandle": "bottom-source",
+            "target": "t4aGT98qTNqjaM1F3bdEF",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__Dp4rOe-iPiE_nzzbd3Ckgbottom-source-t4aGT98qTNqjaM1F3bdEFtop-target"
+          }
+        ],
+        "viewport": {
+          "x": -322.47872572128745,
+          "y": 473.640883821452,
+          "zoom": 0.38672237697307354
+        }
+      }
+    },
+    "long_instructions": "## Flowcharting a For Loop\r\n\r\nExplore the model **for loop** flowchart. Then create your own **for loop** flowchart to model something that is personally relevant to you. \r\n\r\nSave your flowchart to your backpack when finished.\r\n\r\nMake sure to label your start, stop, and step values clearly. \r\n\r\nChoose from the examples below or come up with your own:\r\n- Playing a video game\r\n- Baking cookies\r\n- Practicing a free throw\r\n- Going to class \r\n\r\n:::details [What are start, stop, and step values?]\r\nWe use start, stop, and step values to control how a loop counts. Think of them like steps on a staircase. The **start value** tells you which step to start on, the **stop value** tells you which step to end on, and the **step** tells you how many stairs to take at a time.\r\n:::",
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "l7bMkdn8siD3BuKhq3-Er",
+            "type": "shape",
+            "position": {
+              "x": -300.7275881478485,
+              "y": -1055.095516631502
+            },
+            "style": {
+              "width": 405.99998474121094,
+              "height": 634.999942779541
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 406,
+              "height": 635
+            }
+          },
+          {
+            "id": "Xn6KXa-uhbWjmAWSx6aZ4",
+            "type": "shape",
+            "position": {
+              "x": -199.36463750494516,
+              "y": -844.0121260777096
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Process",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 193,
+              "height": 70
+            }
+          },
+          {
+            "id": "raki-M6H2j1gF7th7C02E",
+            "type": "shape",
+            "position": {
+              "x": -251.36472905767954,
+              "y": -737.8120986118893
+            },
+            "style": {
+              "width": 202.4000244140625,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Decision",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 202,
+              "height": 176
+            }
+          },
+          {
+            "id": "0FMiXVtPbEUiswUk0lQbP",
+            "type": "shape",
+            "position": {
+              "x": -203.36475957525766,
+              "y": -950.0120803013424
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start / End",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 198,
+              "height": 85
+            }
+          },
+          {
+            "id": "GSUjwt1t6uDbWu1a0-Irc",
+            "type": "text",
+            "position": {
+              "x": -246.72764918300476,
+              "y": -1032.762225259839
+            },
+            "data": {
+              "text": "Flowchart Components ",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 319,
+              "height": 54
+            }
+          },
+          {
+            "id": "4PHKJB5z_VneoijRfi59d",
+            "type": "shape",
+            "position": {
+              "x": 155.33099518742188,
+              "y": -1055.3069302685321
+            },
+            "style": {
+              "width": 1880.0001525878893,
+              "height": 1406.7812070354928
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1880,
+              "height": 1407
+            }
+          },
+          {
+            "id": "mbq1wfbAmQc8jPK0EMALF",
+            "type": "text",
+            "position": {
+              "x": 1012.897818510992,
+              "y": -1030.6922944717676
+            },
+            "data": {
+              "text": "Your Workspace",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 220,
+              "height": 54
+            }
+          },
+          {
+            "id": "jm_lRg1a_gOLKAJaFM7yG",
+            "type": "shape",
+            "position": {
+              "x": -221.93554917411797,
+              "y": -524.8519799017677
+            },
+            "style": {
+              "width": 231.15911762042447,
+              "height": 72.99037364781316
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Variable",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 231,
+              "height": 73
+            }
+          },
+          {
+            "id": "FQo5kw-5zHZWzPO0SEMRJ",
+            "type": "shape",
+            "position": {
+              "x": 945.8122542408353,
+              "y": -950.2013860094664
+            },
+            "style": {
+              "width": 334.4355755709155,
+              "height": 107.56196588912155
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start workout",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 334,
+              "height": 108
+            }
+          },
+          {
+            "id": "E82mTj_JtykILzeDjXLuO",
+            "type": "shape",
+            "position": {
+              "x": 1043.048144913235,
+              "y": 21.104331480253677
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Do a push up",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 193,
+              "height": 85
+            }
+          },
+          {
+            "id": "5X9U_9tQuNYZoAjCyppva",
+            "type": "shape",
+            "position": {
+              "x": 943.0673506015189,
+              "y": -314.40923447138834
+            },
+            "style": {
+              "width": 386.6180947548282,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Does\n\n",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 387,
+              "height": 176
+            }
+          },
+          {
+            "id": "tGyGfAUyR0616KIMEqxnL",
+            "type": "text",
+            "position": {
+              "x": 1048.0190303704987,
+              "y": -229.36063901097577
+            },
+            "data": {
+              "text": "pushups == goal?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 23.72486554546847,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 206,
+              "height": 48
+            }
+          },
+          {
+            "id": "KpQV1yQ9t7bUpV1K_PRW0",
+            "type": "shape",
+            "position": {
+              "x": 1033.1338221258336,
+              "y": -751.4441869311744
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Set pushups = 0",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 193,
+              "height": 85
+            }
+          },
+          {
+            "id": "mG1HPZ7mJqRISTZ8EteK5",
+            "type": "shape",
+            "position": {
+              "x": 1470.2531808945516,
+              "y": -275.58000243124354
+            },
+            "style": {
+              "width": 334.4355755709155,
+              "height": 107.56196588912155
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Finish workout",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 334,
+              "height": 108
+            }
+          },
+          {
+            "id": "UNW1yd5r2TRwejYy4VfLo",
+            "type": "shape",
+            "position": {
+              "x": 1052.1543883336738,
+              "y": 195.49626995429207
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Increase \npushups by 1",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 193,
+              "height": 85
+            }
+          },
+          {
+            "id": "4NFKls7FZ9FYMTtcQUUve",
+            "type": "text",
+            "position": {
+              "x": 274.06069253055995,
+              "y": -545.4759609918607
+            },
+            "data": {
+              "text": "for (pushups = 0; pushups < goal; pushups ++) {\n      doPushup()\n}",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 620,
+              "height": 127
+            }
+          },
+          {
+            "id": "C96xI6xeZef6yEHHfq0Ag",
+            "type": "shape",
+            "position": {
+              "x": 1362.643892468632,
+              "y": -758.8582808873962
+            },
+            "style": {
+              "width": 202.29915687557042,
+              "height": 96.51582450387939
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "pushups",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 202,
+              "height": 97
+            }
+          },
+          {
+            "id": "BMAutW7OhqHZ7CjlAz0GD",
+            "type": "shape",
+            "position": {
+              "x": 1035.0447699069916,
+              "y": -527.0855127542098
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Set goal = 10",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 193,
+              "height": 85
+            }
+          },
+          {
+            "id": "jtcQFmjGENzB9vogY2KSa",
+            "type": "shape",
+            "position": {
+              "x": 1366.5867693306488,
+              "y": -535.4885140946575
+            },
+            "style": {
+              "width": 202.29915687557042,
+              "height": 96.51582450387939
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "goal",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 202,
+              "height": 97
+            }
+          },
+          {
+            "id": "e_rKVAsQ5a8eyf5YcG-jn",
+            "type": "text",
+            "position": {
+              "x": 1377.0164658850906,
+              "y": -652.3092071907014
+            },
+            "data": {
+              "text": "Start value",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 152,
+              "height": 54
+            }
+          },
+          {
+            "id": "6Un-dCbvfq5RUN8ZqV4-9",
+            "type": "text",
+            "position": {
+              "x": 1390.2935969760758,
+              "y": -428.77719927319583
+            },
+            "data": {
+              "text": "Stop value",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 151,
+              "height": 54
+            }
+          },
+          {
+            "id": "6-B_qXTlAERFFqr90tx-b",
+            "type": "text",
+            "position": {
+              "x": 1273.4238416366582,
+              "y": 227.39506981876002
+            },
+            "data": {
+              "text": "Step",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 77,
+              "height": 54
+            }
+          },
+          {
+            "id": "VZpsfKduW51p0mhOmhsM2",
+            "type": "text",
+            "position": {
+              "x": 1249.4699992518429,
+              "y": -331.8056958606504
+            },
+            "data": {
+              "text": "Stop value check\n",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 232,
+              "height": 54
+            }
+          },
+          {
+            "id": "08f473a6-3837-4224-ac4d-c06f775bf1aa",
+            "type": "lineAnchor",
+            "position": {
+              "x": 3.7020383169952424,
+              "y": -566.0954822992267
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "970a1a7b-b74b-43be-a573-45a54d0b268a",
+            "type": "lineAnchor",
+            "position": {
+              "x": 47.702053575784305,
+              "y": -733.0954899286212
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "8e5ed57a-09c2-4fe1-b9dd-003b0bb5d853",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1126.4157304130106,
+              "y": -138.69941449823136
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "56d50856-573f-4177-9dbd-8ec61945014a",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1139.4112453283215,
+              "y": -5.768319796380354
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "de6e0b53-f4fc-46a6-89e4-604ff28c27a7",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1033.388289625657,
+              "y": 226.4889515148775
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "235b6b3b-af62-490e-afc5-9b90fdf03f2b",
+            "type": "lineAnchor",
+            "position": {
+              "x": 994.2639511521115,
+              "y": -211.9702211035318
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "dd6859ed-eb19-4169-98c2-0d143b357945",
+            "source": "08f473a6-3837-4224-ac4d-c06f775bf1aa",
+            "target": "970a1a7b-b74b-43be-a573-45a54d0b268a",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "10a27f46-b044-4dce-8b46-2de983d3bebb",
+            "source": "5X9U_9tQuNYZoAjCyppva",
+            "target": "mG1HPZ7mJqRISTZ8EteK5",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "d0b85807-2776-427f-841a-63d56d144d14",
+            "source": "FQo5kw-5zHZWzPO0SEMRJ",
+            "target": "KpQV1yQ9t7bUpV1K_PRW0",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "76a77cbd-e3b7-4431-9e22-99a99a7a885c",
+            "source": "KpQV1yQ9t7bUpV1K_PRW0",
+            "target": "BMAutW7OhqHZ7CjlAz0GD",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "3c4173ad-b8d0-44e0-a885-b6b8cbc8311c",
+            "source": "8e5ed57a-09c2-4fe1-b9dd-003b0bb5d853",
+            "target": "56d50856-573f-4177-9dbd-8ec61945014a",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "2a2aeb6a-fc3c-4889-8e70-1d8aa25711c4",
+            "source": "E82mTj_JtykILzeDjXLuO",
+            "target": "UNW1yd5r2TRwejYy4VfLo",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "9d901f00-b3f9-43e4-ad2a-8a270b882a31",
+            "source": "de6e0b53-f4fc-46a6-89e4-604ff28c27a7",
+            "target": "235b6b3b-af62-490e-afc5-9b90fdf03f2b",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "476cc6f1-a138-414b-b1d2-1ac8f5a23156",
+            "source": "KpQV1yQ9t7bUpV1K_PRW0",
+            "target": "C96xI6xeZef6yEHHfq0Ag",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "4c357631-19f1-412f-835d-b66a9660cbf4",
+            "source": "BMAutW7OhqHZ7CjlAz0GD",
+            "target": "jtcQFmjGENzB9vogY2KSa",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "529a7d00-fdd9-4739-a8f9-7a59eff3da4c",
+            "source": "BMAutW7OhqHZ7CjlAz0GD",
+            "target": "5X9U_9tQuNYZoAjCyppva",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          }
+        ],
+        "viewport": {
+          "x": 170.71231366872166,
+          "y": 572.7251633156228,
+          "zoom": 0.411376669598734
+        }
+      }
+    },
+    "name_suffix": "_aif-6b-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:12:57.641+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson11-level2_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson11-level2_2026\"}]"
+}]]></config>
+</Sketchlab>

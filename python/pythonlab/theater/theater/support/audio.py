@@ -7,6 +7,42 @@ import numpy as np
 from .constants import CHANNELS, MAX_16_BIT_VALUE, MAX_AUDIO_SECONDS, SAMPLE_RATE
 
 
+_ONLY_INTEGER_PCM = "Only integer PCM WAV data is supported (8, 16, 24, or 32-bit)"
+
+# Silence and full scale for each width we decode. 8-bit WAV data is unsigned
+# with 128 as silence; 9 bits and up are signed two's complement.
+_PCM_SCALE = {
+  1: (128.0, 128.0),
+  2: (0.0, MAX_16_BIT_VALUE),
+  3: (0.0, 2 ** 23),
+  4: (0.0, 2 ** 31),
+}
+
+# numpy offers no 3-byte integer, so 24-bit is absent here and widened by hand.
+_PCM_DTYPES = {1: np.uint8, 2: "<i2", 4: "<i4"}
+
+_WIDTH_24_BIT = 3
+
+# The highest source rate a file may carry for its whole permitted length.
+_MAX_SOURCE_RATE = 48000
+
+# The most frame bytes we will read into memory: a full-length stereo file at
+# that rate and the widest depth above.
+_MAX_FRAME_BYTES = MAX_AUDIO_SECONDS * _MAX_SOURCE_RATE * 2 * max(_PCM_SCALE)
+
+_TOO_LARGE = "The sound file is too large; try a lower sample rate or bit depth"
+
+# Codecs a fmt chunk can name that the wave module reads: uncompressed PCM, and
+# the extensible header whose subformat GUID is PCM.
+_WAVE_FORMAT_PCM = 0x0001
+_WAVE_FORMAT_EXTENSIBLE = 0xFFFE
+_SUBFORMAT_PCM = b"\x01\x00\x00\x00\x00\x00\x10\x00\x80\x00\x00\xaa\x00\x38\x9b\x71"
+
+# Fields of a PCM fmt chunk, and where the extensible one keeps its subformat.
+_MIN_FMT_CHUNK_SIZE = 16
+_SUBFORMAT_RANGE = slice(24, 40)
+
+
 def read_samples_from_wav_bytes(wav_bytes):
   """Read a WAV file into normalized mono float samples in [-1.0, 1.0].
 
@@ -14,30 +50,142 @@ def read_samples_from_wav_bytes(wav_bytes):
   SAMPLE_RATE, since the timeline the samples land on carries no rate of its
   own.
   """
-  with wave.open(io.BytesIO(wav_bytes), "rb") as reader:
-    num_channels = reader.getnchannels()
-    sample_width = reader.getsampwidth()
-    frame_rate = reader.getframerate()
-    num_frames = reader.getnframes()
-    if sample_width != 2:
-      raise ValueError("Only 16-bit PCM WAV data is supported")
-    if frame_rate <= 0:
-      raise ValueError("WAV data declares no sample rate")
-    # Check the header's length before reading, so an outsized file costs
-    # nothing; the timeline it would land on is bounded by the same ceiling.
-    if num_frames / frame_rate > MAX_AUDIO_SECONDS:
-      raise ValueError(
-        f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
+  try:
+    with wave.open(io.BytesIO(wav_bytes), "rb") as reader:
+      num_channels = reader.getnchannels()
+      sample_width = reader.getsampwidth()
+      frame_rate = reader.getframerate()
+      num_frames = reader.getnframes()
+      if sample_width not in _PCM_SCALE:
+        raise ValueError(_ONLY_INTEGER_PCM)
+      if num_channels not in (1, 2):
+        raise ValueError("Only mono or stereo WAV data is supported")
+      if frame_rate <= 0:
+        raise ValueError("WAV data declares no sample rate")
+      # Check the header's length before reading, so an outsized file costs
+      # nothing; the timeline it would land on is bounded by the same ceiling.
+      if num_frames / frame_rate > MAX_AUDIO_SECONDS:
+        raise ValueError(
+          f"The sound is too long; the limit is {MAX_AUDIO_SECONDS} seconds"
+        )
+      # What readframes is about to hand back: the header's own count of frame
+      # bytes, but never more than the file holds.
+      frame_bytes = min(num_frames * num_channels * sample_width, len(wav_bytes))
+      if frame_bytes > _MAX_FRAME_BYTES:
+        raise ValueError(_TOO_LARGE)
+      # Passed straight in, so the frame bytes are released when it returns
+      # rather than sitting alongside the resample that follows.
+      mono = _decode_frames(
+        reader.readframes(num_frames), num_channels, sample_width
       )
-    frames = reader.readframes(num_frames)
-  raw = np.frombuffer(frames, dtype="<i2").astype(np.float64) / MAX_16_BIT_VALUE
-  if num_channels == 1:
-    mono = raw
-  elif num_channels == 2:
-    mono = (raw[0::2] + raw[1::2]) / 2.0
-  else:
-    raise ValueError("Only mono or stereo WAV data is supported")
+  except (wave.Error, EOFError) as error:
+    # The wave module's own wording is about RIFF ids and chunks, and neither
+    # of its exceptions is one a student's except ValueError would catch.
+    if _declares_unsupported_codec(wav_bytes):
+      raise ValueError(_ONLY_INTEGER_PCM) from error
+    # An empty file reaches the end of the stream looking for the first chunk.
+    raise ValueError("This is not a WAV sound file, or it is damaged") from error
   return _to_output_rate(mono, frame_rate)
+
+
+def _find_fmt_chunk(wav_bytes):
+  """The body of the RIFF fmt chunk, or None if there is no readable one."""
+  if wav_bytes[0:4] != b"RIFF" or wav_bytes[8:12] != b"WAVE":
+    return None
+  # Chunks follow the 12-byte RIFF header, each with an 8-byte id and length.
+  # fmt is conventionally first, but a LIST or JUNK chunk may precede it.
+  offset = 12
+  while offset + 8 <= len(wav_bytes):
+    size = int.from_bytes(wav_bytes[offset + 4:offset + 8], "little")
+    if wav_bytes[offset:offset + 4] == b"fmt ":
+      return wav_bytes[offset + 8:offset + 8 + size]
+    # Chunks are padded to an even length, and the pad byte is not in the size.
+    offset += 8 + size + size % 2
+  return None
+
+
+def _declares_unsupported_codec(wav_bytes):
+  """Whether the header names a codec other than PCM.
+
+  The wave module raises the same exception for "a WAV whose codec I don't
+  read" and "not a WAV at all", so read the codec out of the header ourselves
+  rather than tell a student an intact file is damaged.
+  """
+  fmt_chunk = _find_fmt_chunk(wav_bytes)
+  # Short of the PCM fields, nothing in there is a codec to report; that file
+  # is damaged.
+  if fmt_chunk is None or len(fmt_chunk) < _MIN_FMT_CHUNK_SIZE:
+    return False
+  format_tag = int.from_bytes(fmt_chunk[0:2], "little")
+  if format_tag == _WAVE_FORMAT_EXTENSIBLE:
+    # An extensible header names no codec on its own -- the subformat GUID below
+    # it does -- so a body that stops short of a whole GUID has declared nothing
+    # yet, and is damaged rather than unsupported.
+    subformat = fmt_chunk[_SUBFORMAT_RANGE]
+    if len(subformat) < len(_SUBFORMAT_PCM):
+      return False
+    return subformat != _SUBFORMAT_PCM
+  return format_tag != _WAVE_FORMAT_PCM
+
+
+def _decode_frames(frames, num_channels, sample_width):
+  """Normalized mono float32 samples from integer PCM frame bytes.
+
+  Mono or stereo only; the caller rejects anything else from the header, before
+  the frames these come from are read.
+  """
+  # Count whole samples, then whole frames, dropping a partial one of either. A
+  # frame is one sample per channel. Data running short of what the header
+  # promised is common enough that the wave module allows it and other players
+  # play what is there; numpy would otherwise refuse the buffer's size, or fail
+  # to line up two channels of different lengths.
+  num_samples = len(frames) // sample_width
+  num_samples -= num_samples % num_channels
+  if sample_width == _WIDTH_24_BIT:
+    mono = _decode_24_bit_frames(frames, num_samples, num_channels)
+  else:
+    raw = np.frombuffer(frames, dtype=_PCM_DTYPES[sample_width], count=num_samples)
+    if num_channels == 1:
+      mono = raw.astype(np.float32)
+    else:
+      mono = raw[0::2].astype(np.float32)
+      # Added straight from the integer view: numpy converts it in buffered
+      # pieces rather than as a second copy of the track.
+      mono += raw[1::2]
+      mono *= 0.5
+  # Averaging is linear, so an unsigned format's offset survives it and can be
+  # removed here, from half as many samples.
+  zero_point, full_scale = _PCM_SCALE[sample_width]
+  if zero_point:
+    mono -= zero_point
+  mono /= full_scale
+  return mono
+
+
+def _decode_24_bit_frames(frames, num_samples, num_channels):
+  """Mono float32 from 24-bit samples, still at the format's integer scale.
+
+  numpy has no 3-byte integer dtype, so each sample is rebuilt from its bytes.
+  Averaging is linear, so both channels' bytes are summed into one accumulator
+  as it is built, then halved at the end.
+  """
+  triples = np.frombuffer(frames, dtype=np.uint8, count=num_samples * 3)
+  triples = triples.reshape(-1, 3)
+  channels = [triples[channel::num_channels] for channel in range(num_channels)]
+  # An integer cast wraps rather than clamps, so reading the top byte as int8 is
+  # what carries the sign; the two below it are unsigned place values under it.
+  # Even two channels summed stay under 2**24, which float32 counts exactly, so
+  # nothing here is approximate.
+  samples = channels[0][:, 2].astype(np.int8).astype(np.float32)
+  for channel in channels[1:]:
+    samples += channel[:, 2].astype(np.int8)
+  for place in (1, 0):
+    samples *= 256.0
+    for channel in channels:
+      samples += channel[:, place]
+  if num_channels > 1:
+    samples /= num_channels
+  return samples
 
 
 def read_samples_from_file(filename):
@@ -178,6 +326,10 @@ class AudioWriter:
     self._samples.resize(capacity, refcheck=False)
 
 
+# How much of the track to resample at a time.
+_RESAMPLE_CHUNK = SAMPLE_RATE
+
+
 def _to_output_rate(samples, source_rate):
   """Linearly resample to SAMPLE_RATE, preserving the sound's duration.
 
@@ -187,8 +339,19 @@ def _to_output_rate(samples, source_rate):
   if source_rate == SAMPLE_RATE or len(samples) == 0:
     return samples
   new_length = int(len(samples) * SAMPLE_RATE / source_rate)
-  positions = np.arange(new_length) * source_rate / SAMPLE_RATE
-  return np.interp(positions, np.arange(len(samples)), samples)
+  step = source_rate / SAMPLE_RATE
+  resampled = np.empty(new_length, dtype=np.float32)
+  for start in range(0, new_length, _RESAMPLE_CHUNK):
+    stop = min(start + _RESAMPLE_CHUNK, new_length)
+    positions = np.arange(start, stop) * step
+    # The input this block reads from, plus the one sample interpolation looks
+    # ahead to. Positions are absolute, so the indices handed to interp are too.
+    first = int(positions[0])
+    last = min(int(positions[-1]) + 2, len(samples))
+    resampled[start:stop] = np.interp(
+      positions, np.arange(first, last), samples[first:last]
+    )
+  return resampled
 
 
 def _to_int16(samples):

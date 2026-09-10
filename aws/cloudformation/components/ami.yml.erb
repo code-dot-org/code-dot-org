@@ -7,7 +7,8 @@ commit_hash ||= raise('ami commit hash is required')
 
 # Shell script to run when building/updating the AMI-creating instance.
 build_ami ||= <<SH
-INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+IMDS_TOKEN=$(curl -s -X PUT -H "X-aws-ec2-metadata-token-ttl-seconds: 21600" http://169.254.169.254/latest/api/token)
+INSTANCE_ID=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
 STACK=${AWS::StackName}
 RESOURCE_ID=AMICreate#{commit_hash}
 STATUS=SUCCESS
@@ -200,7 +201,8 @@ frontend_device_name ||= '/dev/sda1'
             STACK=${AWS::StackName}
             REGION=${AWS::Region}
 
-            INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+            IMDS_TOKEN=$(curl -s -X PUT -H "X-aws-ec2-metadata-token-ttl-seconds: 21600" http://169.254.169.254/latest/api/token)
+            INSTANCE_ID=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
             <%=indent(build_frontend, 12)%>
             if [ $? -eq 0 ]
             then

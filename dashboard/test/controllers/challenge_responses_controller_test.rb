@@ -29,8 +29,9 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
       before {sign_in student}
 
       it "returns only the current user's final responses, newest first" do
+        other_challenge = create(:challenge)
         older = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 2.days.ago)
-        newer = create(:challenge_response, challenge:, user: student, is_final: true, created_at: 1.day.ago)
+        newer = create(:challenge_response, challenge: other_challenge, user: student, is_final: true, created_at: 1.day.ago)
         create(:challenge_response, challenge:, user: student, is_final: false)
         create(:challenge_response, challenge:, user: other_student, is_final: true)
 
@@ -139,14 +140,16 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json.map {|r| r['id']}.sort).must_equal [latest.id, peers.id].sort
       end
 
-      it 'does not collapse resubmissions in the own-work view' do
-        first = create(:challenge_response, challenge:, user: student, is_final: true)
-        second = create(:challenge_response, challenge:, user: student, is_final: true)
+      it "collapses to the caller's most recent submission per challenge in the own-work view" do
+        other_challenge = create(:challenge)
+        create(:challenge_response, challenge:, user: student, is_final: true)
+        latest = create(:challenge_response, challenge:, user: student, is_final: true)
+        other = create(:challenge_response, challenge: other_challenge, user: student, is_final: true)
 
         get :index
 
         assert_response :success
-        _(response_json.map {|r| r['id']}.sort).must_equal [first.id, second.id].sort
+        _(response_json.map {|r| r['id']}.sort).must_equal [latest.id, other.id].sort
       end
 
       it 'sorts oldest-first on request' do
@@ -212,14 +215,13 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json.first).wont_include 'student_feedback'
       end
 
-      it 'is allowed for a section peer' do
+      it 'is forbidden for a section peer' do
         create(:challenge_response, challenge:, user: student, is_final: true)
         sign_in other_student
 
         get :index, params: {user_id: student.id}
 
-        assert_response :success
-        _(response_json.length).must_equal 1
+        assert_response :forbidden
       end
 
       it 'is forbidden for a user who shares no section with the student' do

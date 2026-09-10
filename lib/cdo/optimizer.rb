@@ -6,6 +6,7 @@ require 'active_support/core_ext/numeric/bytes'
 require 'cdo/shared_cache'
 require 'image_size'
 require 'image_optim'
+require 'observability/errors'
 
 # Optimizes content on-the-fly based on provided content-type.
 # If the process takes longer than specified timeout, the original data will be returned
@@ -101,7 +102,7 @@ module Cdo
       end
     rescue => exception
       # Log error and return original content.
-      Honeybadger.notify(exception,
+      Observability::Errors.report(exception,
         context: {
           key: cache_key
         }

@@ -1,0 +1,13 @@
+name 'pl-aif1-js-reflect-padlet'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>You Made It: Reflect and Share</h1>
+
+<p>That's the whole module, structure and interactivity, styling and accessibility, functions, conditionals, loops, and the final project. Before you go, take a moment to reflect on the journey, and see what stood out to other teachers along the way.</p>
+
+<p class="directions" style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 12px 16px;">Add a note to whichever column speaks to you, one or all three, then read a few of your colleagues' posts.</p>
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/xinrxe1ybpandd2e" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
+MARKDOWN

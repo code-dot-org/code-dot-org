@@ -11,20 +11,7 @@ markdown <<MARKDOWN
 <p>📖 <b>Interactivity</b> is the ability of a software application or website to respond to user input.</p>
 </div>
 
-<details style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
-<summary style="cursor: pointer; font-weight: bold; color: #000000;">⚡ Interactive Elements in Web Apps</summary>
-<div style="margin-top: 12px;">
-<p>Interactive elements come in many forms:</p>
-<ul>
-<li><b>Buttons</b> that trigger actions</li>
-<li><b>Menus</b> that expand or collapse</li>
-<li><b>Search bars</b> that respond as you type</li>
-<li><b>Icons</b> that change color or shape when hovered over</li>
-</ul>
-<p>These small moments of feedback and response are what make a web app feel alive and user-friendly.</p>
-</div>
-</details>
-
+<br>
 <p>Below, try spotting interactivity yourself. Hover or click around the mock site and see what you find.</p>
 
 ---

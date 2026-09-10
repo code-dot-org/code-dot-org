@@ -358,5 +358,29 @@ describe('useResourcePanelTours', () => {
         ][0];
       expect(lastValidationCall.tourAvailable).toBe(true);
     });
+
+    it('unblocks the validation tour after onboarding was shown then hidden on level change', () => {
+      mockTryGetLocalStorage.mockReturnValue('no');
+
+      const {rerender} = renderHook(() => useResourcePanelTours(defaultParams));
+
+      expect(mockUseLab2ProductTour.mock.calls[1][0].tourAvailable).toBe(false);
+
+      mockTryGetLocalStorage.mockReturnValue('yes');
+      act(() => {
+        lifecycleHandlers[LifecycleEvent.LevelLoadStarted]?.(1);
+      });
+      rerender();
+      act(() => {
+        lifecycleHandlers[LifecycleEvent.LevelLoadCompleted]?.();
+      });
+      rerender();
+
+      const lastValidationCall =
+        mockUseLab2ProductTour.mock.calls[
+          mockUseLab2ProductTour.mock.calls.length - 1
+        ][0];
+      expect(lastValidationCall.tourAvailable).toBe(true);
+    });
   });
 });

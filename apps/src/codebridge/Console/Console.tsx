@@ -49,6 +49,11 @@ const Console: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
 
+  // Re-runs when the console is re-created, which rebuilds its live region.
+  useEffect(() => {
+    consoleManager?.setPoliteScreenReaderAnnouncements();
+  }, [consoleManager]);
+
   const clearOutput = useCallback((sendAnalytics: boolean) => {
     CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
     if (sendAnalytics) {
@@ -159,6 +164,8 @@ const Console: React.FunctionComponent = () => {
     // this pr goes in: https://github.com/xtermjs/xterm.js/pull/5253
     // After that, we may just be able to call open() on the existing terminal instance
     // and move it to the new container.
+    // A run in progress keeps the console quiet across the swap.
+    newConsoleManager.setNarrating(!!existingConsoleManager?.isNarrating());
     newConsoleManager.replayTerminalLines(existingTerminalLines);
 
     // Prevent keyboard trap.

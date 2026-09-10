@@ -1,0 +1,10 @@
+name 'HoAI26-Choice-Project-Type'
+display_name 'Choice Progression: Parent Level 1'
+description "This is the first level in a branching choice progression. Use this level to select a branch. Continuing through subsequent levels should keep you on the branch you chose (you should NOT see another bubble choice parent level unless you've navigated there explicitly)."
+uses_lab2
+
+sublevels
+level 'Choice Progression - Music 1'
+level 'Choice Progression - Weblab 1'
+
+navigation_type 'next_sublevel'

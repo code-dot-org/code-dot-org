@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Dialog from '../../curriculum-generator/components/Dialog';
+import Dialog from '@cdo/apps/levelbuilder/curriculum-generator/components/Dialog';
+
 import {GenerationSummary} from '../types';
 
-import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-generator.module.scss';
+import sharedStyles from '@cdo/apps/levelbuilder/curriculum-generator/curriculum-generator.module.scss';
 
 interface SummaryDialogProps {
   summary: GenerationSummary;
@@ -40,6 +41,23 @@ const SummaryDialog: React.FC<SummaryDialogProps> = ({
             {summary.created.map(c => (
               <li key={c.editUrl}>
                 <a href={c.editUrl}>{c.name}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {summary.templates && summary.templates.length > 0 && (
+        <>
+          <h3 className={moduleStyles.summaryGood}>Templates</h3>
+          <p className={sharedStyles.dialogNote}>
+            Shared starter files backing the levels above. Templates sit outside
+            the lesson's activity tree — open each one to tune the files by
+            hand.
+          </p>
+          <ul>
+            {summary.templates.map(t => (
+              <li key={t.editUrl}>
+                <a href={t.editUrl}>{t.name}</a>
               </li>
             ))}
           </ul>
