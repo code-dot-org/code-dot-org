@@ -105,7 +105,7 @@ describe('renameRuleReferences', () => {
     // English, and a learner's message, an actor's name, and another rule's
     // member are none of them references to this rule.
     const contents = workspace(
-      {type: 'world_log', fields: {TEXT: 'Gravity is what pulls you down'}},
+      {type: 'world_comment', fields: {TEXT: 'Gravity is what pulls you down'}},
       {type: 'world_actor', fields: {NAME: 'Gravity'}},
       {type: 'world_get_Gravityish_StrengthProperty'},
       {type: 'world_use_rule', fields: {RULE: 'Gravity Well'}},

@@ -70,7 +70,7 @@ describe('renameAnimationReferences', () => {
   it('leaves a word that is not a reference alone', () => {
     const before = workspace(
       // A message, a sprite's file name, and an actor that shares the name.
-      {type: 'world_log', fields: {MESSAGE: 'coinSpin'}},
+      {type: 'world_comment', fields: {MESSAGE: 'coinSpin'}},
       {type: 'world_set_sprite', fields: {SPRITE: 'coinSpin.png'}},
       {type: 'world_actor', fields: {NAME: 'coinSpin'}},
     );

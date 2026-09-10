@@ -300,15 +300,19 @@ describe('an actor’s own blocks', () => {
       'world_set_ActorsProgressBar_TrackColorProperty',
       'world_get_ActorsProgressBar_TrackColorProperty',
     ]);
-    // THE GENERAL PAIR STAYS in Actor — `set ⟨property⟩ of ⟨actor⟩`, whose
-    // dropdown is every actor-scoped property in play (`propertyOptions`).
-    // That is how a property is reached when you know what you want; the
-    // drawer is how it is found when you do not.
+    // AND THE GENERAL PAIR IS GONE from Actor. `get ⟨property ▾⟩ of ⟨actor⟩`
+    // was twelve blocks, one get and one set per kind, each opening a dropdown
+    // of every actor-scoped property in the project — there because an actor
+    // had no drawer of its own to name them in. It has one now, so they were
+    // twelve ways of saying what a named block already says, at the top of the
+    // drawer a learner opens first.
     expect(
       (general?.blocks ?? []).filter(type =>
         String(type).includes('ActorsHealthBar'),
       ),
     ).toEqual([]);
+    expect(general?.blocks).not.toContain('world_get_number_property');
+    expect(general?.blocks).not.toContain('world_set_actor_property');
     expect(general?.blocks).toContain('world_use_trait');
   });
 

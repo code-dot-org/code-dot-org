@@ -35,7 +35,7 @@ import {resolveRuleContents} from '../rules/ruleReference';
 import {fileStem, renamed} from './newThing';
 
 /** Blocks whose fields are PROSE, and so are never references. */
-const SAYS_WORDS = new Set(['text', 'world_log', 'world_print']);
+const SAYS_WORDS = new Set(['text', 'world_print']);
 
 /** Member block types: `world_get_<owner>_<member>` (`renameRule`). */
 const MEMBER_TYPE =

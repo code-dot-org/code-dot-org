@@ -555,7 +555,12 @@ const saying = (contents: string, hat: Row): string => {
     ...hat,
     x: 420,
     y: 300,
-    next: {block: {type: 'world_log', fields: {TEXT: 'yes'}}},
+    next: {
+      block: {
+        type: 'world_print',
+        inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: 'yes'}}}},
+      },
+    },
   } as Row);
   return JSON.stringify(workspace);
 };
@@ -619,7 +624,14 @@ describe('the key-press lesson’s check', () => {
       under(actorIn(workspace, 'Hero'), {
         type: 'world_trait_step',
         fields: {PHASE: 'decide', NAME: 'shout'},
-        inputs: {DO: {block: {type: 'world_log', fields: {TEXT: 'yes'}}}},
+        inputs: {
+          DO: {
+            block: {
+              type: 'world_print',
+              inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: 'yes'}}}},
+            },
+          },
+        },
       });
       return JSON.stringify(workspace);
     });
@@ -1017,7 +1029,12 @@ describe('the kinds lesson’s check', () => {
               inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
             },
           },
-          DO0: {block: {type: 'world_log', fields: {TEXT: words}}},
+          DO0: {
+            block: {
+              type: 'world_print',
+              inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: words}}}},
+            },
+          },
         },
       });
       // ONE handler, two questions — which is the shape the lesson is about.
@@ -1051,7 +1068,14 @@ describe('the kinds lesson’s check', () => {
                 inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
               },
             },
-            DO0: {block: {type: 'world_log', fields: {TEXT: 'money'}}},
+            DO0: {
+              block: {
+                type: 'world_print',
+                inputs: {
+                  VALUE: {shadow: {type: 'text', fields: {TEXT: 'money'}}},
+                },
+              },
+            },
           },
         },
       };

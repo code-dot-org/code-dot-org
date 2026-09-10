@@ -1093,12 +1093,6 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_log prints the text field', () => {
-    expect(emit('world_log', {TEXT: 'Player landed!'})).toBe(
-      'console.log("Player landed!");\n',
-    );
-  });
-
   it('world_print logs a value input', () => {
     expect(emit('world_print', {}, {}, {VALUE: 'eventValue'})).toBe(
       'console.log(eventValue);\n',

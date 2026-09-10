@@ -47,8 +47,15 @@ const project = (): MultiFileSource => ({
                   next: {
                     block: {
                       // Prose that happens to say the same words.
-                      type: 'world_log',
-                      fields: {TEXT: 'actors/player'},
+                      type: 'world_print',
+                      inputs: {
+                        VALUE: {
+                          shadow: {
+                            type: 'text',
+                            fields: {TEXT: 'actors/player'},
+                          },
+                        },
+                      },
                     },
                   },
                 },
@@ -125,7 +132,7 @@ describe('renaming an actor', () => {
 
     const {source: next} = renameThing(source, source.files.a, 'Hero');
     const said = JSON.parse(read(next, 'w')).blocks.blocks[0].next.block.next
-      .block.fields.TEXT;
+      .block.inputs.VALUE.shadow.fields.TEXT;
 
     expect(said).toBe('actors/player');
   });

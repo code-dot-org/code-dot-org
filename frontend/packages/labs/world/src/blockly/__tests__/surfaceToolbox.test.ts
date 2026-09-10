@@ -63,7 +63,7 @@ describe('a body surface', () => {
     expect(body).toContain('world_step_delta');
     // …and the ordinary run of blocks a body is made of.
     expect(body).toContain('world_add_trait');
-    expect(body).toContain('world_get_number_property');
+    expect(body).toContain('world_this_actor');
     expect(body.length).toBeGreaterThan(100);
   });
 });

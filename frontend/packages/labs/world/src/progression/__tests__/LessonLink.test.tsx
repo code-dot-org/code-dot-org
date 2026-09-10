@@ -66,7 +66,7 @@ describe('a lesson link', () => {
     // Every stock RULE has a lesson (the layout test says so), so the example
     // has to be something else — a block nothing unlocks.
     const {container} = inLab(
-      <LessonLink unlock={{kind: 'block', type: 'world_log'}} />,
+      <LessonLink unlock={{kind: 'block', type: 'world_comment'}} />,
     );
     expect(container).toBeEmptyDOMElement();
   });

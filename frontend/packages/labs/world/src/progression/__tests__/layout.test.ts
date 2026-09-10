@@ -235,20 +235,31 @@ describe('what a tile unlocks', () => {
     expect(missing).toEqual([]);
   });
 
-  it('gives every tile something to give, bar the one that is an assembly', () => {
-    // `adventure/rooms` grants nothing, and it is the only one. A door is
-    // `clear world` and `load map` in a handler, and both blocks are already
-    // somebody's to give (`arcade/bricks`, `place/map`); what the lesson adds
-    // is that the two together are a way out of the room, which is not a thing
-    // that can be put on a shelf. Inventing a block to have something to unlock
-    // would be a worse map.
+  it('gives every tile something to give, bar the two that cannot', () => {
+    // Named rather than counted, so a tile that gives nothing has to come here
+    // and argue for itself. Two have.
     //
-    // Named rather than counted, so the second tile that gives nothing has to
-    // come here and argue for itself.
+    // `adventure/rooms` is an ASSEMBLY. A door is `clear world` and `load map`
+    // in a handler, and both blocks are already somebody's to give
+    // (`arcade/bricks`, `place/map`); what the lesson adds is that the two
+    // together are a way out of the room, which is not a thing that can be put
+    // on a shelf. Inventing a block to have something to unlock would be a
+    // worse map.
+    //
+    // `memory/actor-state` teaches a property an ACTOR'S OWN FILE declares,
+    // and the blocks that read one are minted from a file path and a name
+    // nobody knows in advance — so nothing gates them and nothing can unlock
+    // them (`toolboxShelf.generatedElsewhere`). It used to grant the general
+    // `get`/`set ⟨property ▾⟩ of ⟨actor⟩` pair, which was the only way to reach
+    // such a property before an actor had a drawer of its own; that pair is no
+    // longer offered anywhere, and granting a block nobody is shown would be
+    // a grant in name only. What it hands over is in `offers`: the block that
+    // DECLARES one.
+    const givesNothing = new Set(['adventure/rooms', 'memory/actor-state']);
     for (const t of TILES) {
-      if (t.id === 'adventure/rooms') {
-        expect(t.unlocks).toEqual([]);
-        expect(t.offers?.length ?? 0).toBeGreaterThan(0);
+      if (givesNothing.has(t.id)) {
+        expect(t.unlocks, t.id).toEqual([]);
+        expect(t.offers?.length ?? 0, t.id).toBeGreaterThan(0);
         continue;
       }
       expect(t.unlocks.length, `${t.id} unlocks nothing`).toBeGreaterThan(0);

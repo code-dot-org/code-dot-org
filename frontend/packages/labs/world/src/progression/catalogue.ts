@@ -757,10 +757,17 @@ export const TILES: readonly Tile[] = [
     // `this actor` came with the first lesson. What THIS one adds is a property
     // declared in an actor's own file — the thing that makes a value belong to
     // an instance rather than to the world.
-    unlocks: [
-      {kind: 'block', type: 'world_get_boolean_property'},
-      {kind: 'block', type: 'world_set_boolean_property'},
-    ],
+    //
+    // IT GRANTS NO BLOCK, and that is not an omission. It used to grant the
+    // general `get`/`set ⟨property ▾⟩ of ⟨actor⟩` pair, which was once the only
+    // way to reach a property an actor's own file declares. That pair is no
+    // longer offered anywhere (`domainBlocks`, the Actor drawer): an actor has
+    // a drawer of its own now, holding its properties one per block — and
+    // those are minted from a file path and a name nobody knows in advance, so
+    // nothing gates them and nothing needs to unlock them
+    // (`toolboxShelf.generatedElsewhere`). What the lesson hands over is the
+    // block that DECLARES one, below.
+    unlocks: [],
     offers: [{kind: 'block', type: 'world_rule_property'}],
     check: {
       kind: 'outcome',

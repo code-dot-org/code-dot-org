@@ -23,14 +23,14 @@ const FILE = JSON.stringify({
         id: 'hat',
         fields: {FILTER0: 'space'},
         inputs: {ACTOR: {block: {type: 'world_this_actor', id: 'me'}}},
-        next: {block: {type: 'world_log', id: 'log', fields: {TEXT: 'oh'}}},
+        next: {block: {type: 'world_comment', id: 'log', fields: {TEXT: 'oh'}}},
       },
     ],
   },
 });
 
 /** Everything the lab and Blockly already define, for this file. */
-const KNOWN = new Set(['world_this_actor', 'world_log']);
+const KNOWN = new Set(['world_this_actor', 'world_comment']);
 
 describe('standInBlocks', () => {
   it('defines the types nothing else does, and only those', () => {
@@ -161,7 +161,7 @@ describe('standInBlocks', () => {
     Blockly.defineBlocksWithJsonArray([
       {type: 'world_this_actor', message0: 'this actor', output: null},
       {
-        type: 'world_log',
+        type: 'world_comment',
         message0: 'log %1',
         args0: [{type: 'field_input', name: 'TEXT', text: ''}],
         previousStatement: null,
