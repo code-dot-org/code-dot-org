@@ -92,8 +92,33 @@ export const valueShadowExtension: Extension = defineExtension(
       for (const {name, shadow} of SHADOWS.get(this.type) ?? []) {
         const connection = this.getInput(name)?.connection;
         // Only seed a fresh input; a saved/real block keeps whatever it holds.
-        if (connection && !connection.targetBlock()) {
+        if (!connection || connection.targetBlock()) {
+          continue;
+        }
+        // ONE SOCKET AT A TIME, and a failure costs only that socket.
+        //
+        // A shadow can be unmakeable — a block type this build does not define,
+        // a dropdown whose saved choice the project no longer offers — and
+        // `setShadowState` throws when it is. Unguarded, that throw leaves the
+        // extension, and an extension that throws takes the whole BLOCK with
+        // it: `newBlock` propagates, so the sockets already seeded are lost
+        // along with the ones not reached. A block that came out with an empty
+        // socket was the visible half of that.
+        //
+        // Since an author may now build a default out of any blocks they like
+        // (`blockDesigner.letShadow`), the set of things that can fail to be
+        // remade is no longer a closed list — so it is caught per socket
+        // rather than trusted.
+        try {
           connection.setShadowState(shadowFor(shadow, this));
+        } catch (error) {
+          // Said out loud. An empty socket where a default was meant is worth
+          // one line in the console rather than a silence somebody has to
+          // reverse-engineer from a screenshot.
+          console.warn(
+            `world: could not seed the ${name} socket of ${this.type}`,
+            error,
+          );
         }
       }
     },
