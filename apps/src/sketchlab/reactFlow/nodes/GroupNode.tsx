@@ -6,7 +6,7 @@ import {GroupNodeType} from '../types';
 import styles from './group-node.module.scss';
 
 function GroupNode(_props: NodeProps<GroupNodeType>) {
-  return <div className={styles.groupNode} aria-label="Group" />;
+  return <div className={styles.groupNode} />;
 }
 
 export default memo(GroupNode);

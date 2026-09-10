@@ -8,7 +8,7 @@ import type {
 
 import {LINE_INTERACTION_WIDTH_PX} from '../constants';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {getEdgeLabel} from '../utils/elementLabel';
+import {getEdgeLabel, getNodeLabel} from '../utils/elementLabel';
 import {getLockedLineAnchorIds, isGroupedChildNode} from '../utils/grouping';
 
 import styles from '../components/react-flow-canvas.module.scss';
@@ -113,10 +113,14 @@ export function useDisplayElements({
           deletable: !locked && !readOnly && !groupedChild && !grabMode,
           // Nodes are still connectable when locked, but not in read-only or grab mode
           connectable: !readOnly && !grabMode,
-          // Override React Flow's default "{type} node" aria-label on the
-          // wrapper div for line anchors so it reads as "Line endpoint" instead
-          // of "Line endpoint node".
-          ...(node.type === 'lineAnchor' && {ariaLabel: 'Line endpoint'}),
+          // React Flow names the focusable wrapper from node.ariaLabel and
+          // has no fallback, so without this a node is an unnamed group.
+          ariaLabel:
+            node.type === 'lineAnchor'
+              ? 'Line endpoint'
+              : locked
+              ? `${getNodeLabel(node)}, locked`
+              : getNodeLabel(node),
           className: classNames(
             isConnectSource && styles.connectSource,
             isAnchorForFocusedEdge && styles.lineAnchorOnFocusedEdge
