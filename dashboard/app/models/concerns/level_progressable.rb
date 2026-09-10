@@ -10,7 +10,7 @@ module LevelProgressable
     store :properties, accessors: %i[locale locale_supported], coder: JSON
 
     belongs_to :script, class_name: 'Unit', optional: true
-    belongs_to :level
+    belongs_to :level, optional: true
     belongs_to :unit_group, optional: true
     belongs_to :level_source, optional: true
 
