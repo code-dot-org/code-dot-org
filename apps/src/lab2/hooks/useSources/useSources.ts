@@ -1,4 +1,4 @@
-import {cloneDeep, isEqual} from 'lodash';
+import {isEqual} from 'lodash';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
@@ -21,7 +21,9 @@ import type {
   ProjectSources,
   ProjectVersion,
 } from '@cdo/apps/lab2/types';
-import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
+import getInitialSources, {
+  copySources,
+} from '@cdo/apps/lab2/utils/getInitialSources';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import configureHeader from './configureHeader';
@@ -230,11 +232,7 @@ export default function useSources<T extends ProjectSources>({
           levelProperties,
           projectAndSources?.sources as T | undefined,
           getToolboxEditSourcesRef.current?.(levelProperties)
-        ) ||
-          // Copied for the same reason getInitialSources copies level
-          // sources: this is a shared module constant, and labs edit
-          // sources in place.
-          cloneDeep(defaultSources)
+        ) || copySources(defaultSources)
       );
 
       // No project; return early.
@@ -303,11 +301,15 @@ export default function useSources<T extends ProjectSources>({
 
   const startOver = useCallback(() => {
     const {templateSources, startSources} = levelProperties;
-    const startOverSources = isToolboxMode
-      ? getToolboxEditSourcesRef.current?.(levelProperties) ?? defaultSources
-      : isStartMode
-      ? defaultSources
-      : templateSources || startSources || defaultSources;
+    // Copied like the initial load: these are frozen redux references or
+    // the shared default, and the reset sources get edited in place.
+    const startOverSources = copySources(
+      isToolboxMode
+        ? getToolboxEditSourcesRef.current?.(levelProperties) ?? defaultSources
+        : isStartMode
+        ? defaultSources
+        : templateSources || startSources || defaultSources
+    );
     projectManagerRef.current?.save(startOverSources as T, true);
     reinitializeSources(startOverSources as T | undefined);
     setHasEdited(false);

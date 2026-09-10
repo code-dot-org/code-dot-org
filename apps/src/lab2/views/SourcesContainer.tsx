@@ -30,7 +30,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectManager from '../projects/ProjectManager';
-import getInitialSources from '../utils/getInitialSources';
+import getInitialSources, {copySources} from '../utils/getInitialSources';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
@@ -99,7 +99,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
         levelProperties,
         initialSources,
         getToolboxEditSources(levelProperties)
-      ) || defaultSources
+      ) || copySources(defaultSources)
   );
 
   // When we use this value to decide whether to save sources or not,
@@ -152,7 +152,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
         levelProperties,
         initialSources,
         getToolboxEditSources(levelProperties)
-      ) || defaultSources
+      ) || copySources(defaultSources)
     );
   }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
 
@@ -162,9 +162,15 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
     if (isToolboxMode) {
       return getToolboxEditSources(levelProperties);
     }
-    return isStartMode
-      ? defaultSources
-      : ((templateSources || startSources || defaultSources) as ProjectSources);
+    // Copied like the initial load: frozen redux references or the shared
+    // default, and the reset sources get edited in place.
+    return copySources(
+      isStartMode
+        ? defaultSources
+        : ((templateSources ||
+            startSources ||
+            defaultSources) as ProjectSources)
+    );
   }, [defaultSources, levelProperties]);
 
   // In order to avoid possible stale state updates,
