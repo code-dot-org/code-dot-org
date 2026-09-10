@@ -139,6 +139,7 @@ class Level < ApplicationRecord
     additional_ai_evaluation_instructions
     product_tours
     generate_outline
+    generate_supplied_code
   )
 
   # State the AI lesson generator persisted on this level, merged into
@@ -146,7 +147,7 @@ class Level < ApplicationRecord
   # re-populate its form. Subclasses with extra generator state override
   # and merge (see Aichat).
   def generate_fields
-    {generateOutline: generate_outline}
+    {generateOutline: generate_outline, generateSuppliedCode: generate_supplied_code}
   end
 
   # Fix STI routing http://stackoverflow.com/a/9463495

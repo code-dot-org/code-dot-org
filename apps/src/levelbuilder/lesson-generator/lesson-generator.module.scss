@@ -123,3 +123,15 @@
   flex-direction: column;
   gap: 8px;
 }
+
+.suppliedCode {
+  margin: 8px 0 0;
+
+  textarea {
+    min-height: 120px;
+    font-family: monospace;
+    font-size: 12px;
+  }
+}
+
+

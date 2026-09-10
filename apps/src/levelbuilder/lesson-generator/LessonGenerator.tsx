@@ -1,7 +1,7 @@
 import React, {useCallback, useMemo, useState} from 'react';
 
 import {LevelPropertiesMap} from '@cdo/apps/lab2/types';
-import {createUuid} from '@cdo/apps/utils';
+import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 
 import {loadLessonLevelProperties} from '../curriculum-generator/api/levelProperties';
 import OutlineBlock from '../curriculum-generator/components/OutlineBlock';
@@ -9,7 +9,12 @@ import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
 import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
 import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
-import {AICHAT_PRESETS, AichatPresetId, generateAichatLevel} from './ai/aichat';
+import {
+  AICHAT_PRESETS,
+  AichatPresetId,
+  DEFAULT_AICHAT_PRESET,
+  generateAichatLevel,
+} from './ai/aichat';
 import {generateAilabLevel} from './ai/ailab';
 import {
   generateMatchLevel,
@@ -42,12 +47,22 @@ import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
 import {buildInitialState, newLevelSpec} from './helpers/buildInitialState';
 import {
+  generatorInputsChanged,
+  saveGeneratorPrompts,
+} from './helpers/generatorPrompts';
+import {levelContextFor} from './helpers/levelContext';
+import {
   formatPrecedingLevels,
   PriorEntry,
   PriorOutput,
   priorOutputFromLevelProperties,
 } from './helpers/precedingLevels';
 import {Placement, rebuildActivities} from './helpers/rebuildActivities';
+import {mergeSpecPatch} from './helpers/specPatch';
+import {
+  appendPlannedSpecs,
+  specsFromPlannedLevels,
+} from './helpers/specsFromPlan';
 import {formatTargetProject} from './helpers/targetProject';
 import {
   createOrFindLevel,
@@ -85,8 +100,6 @@ const LAB_LABELS = {
   bubbleChoice: 'Bubble Choice',
 } as const satisfies Record<LabType, string>;
 
-const DEFAULT_AICHAT_PRESET: AichatPresetId = 'explore';
-
 const LAB_OPTIONS: {value: LabType; label: string}[] = SUPPORTED_LAB_TYPES.map(
   v => ({value: v, label: LAB_LABELS[v]})
 );
@@ -112,17 +125,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     initial: initial.specs,
     getKey: s => s.key,
     newSpec: newLevelSpec,
-    // Editing the description re-derives the `generate` checkbox from
-    // whether the description still matches what we last generated for.
-    // The user can still override manually after.
+    merge: mergeSpecPatch,
+    // The user can still override the derived checkbox afterwards.
     onAfterPatch: (_prev, next, patch) => {
-      if (!('description' in patch)) return next;
-      return {
-        ...next,
-        generate:
-          next.lastGeneratedDescription === undefined ||
-          next.description.trim() !== next.lastGeneratedDescription,
-      };
+      if (!('description' in patch) && !('suppliedCode' in patch)) return next;
+      return {...next, generate: generatorInputsChanged(next)};
     },
   });
   const [isGenerating, setIsGenerating] = useState(false);
@@ -197,56 +204,14 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       const lessonCtx = {
         unitName: lesson.unitName,
         unitOutline: lesson.unitOutline,
+        draftingRules: lesson.unitDraftingRules,
         lessonName: lesson.name,
         lessonOutline: outline.trim(),
         targetProject,
       };
       const planned = await generateLessonOutline(lessonCtx);
-      const newSpecs: LevelSpec[] = planned.map(level => ({
-        key: createUuid(),
-        id: level.id,
-        labType: level.labType,
-        description: level.description,
-        generate: true,
-        // Honour the outline AI's preset pick; for non-aichat labs the
-        // field is ignored. Default to 'explore' when the AI omits it
-        // on an aichat level so the dropdown lands on something valid.
-        ...(level.labType === 'aichat'
-          ? {aichatPreset: level.aichatPreset ?? DEFAULT_AICHAT_PRESET}
-          : {}),
-        ...(level.labType === 'weblab2' && level.templateGroup
-          ? {templateGroup: level.templateGroup}
-          : {}),
-        // Nested sublevels are only honoured on bubbleChoice specs; the
-        // outline AI is prompted to emit them only there. Each sublevel
-        // gets a fresh client key so React can track it independently.
-        ...(level.labType === 'bubbleChoice' && level.sublevels
-          ? {
-              sublevels: level.sublevels.map(sub => ({
-                key: createUuid(),
-                id: sub.id,
-                labType: sub.labType,
-                description: sub.description,
-                generate: true,
-                ...(sub.labType === 'aichat'
-                  ? {
-                      aichatPreset: sub.aichatPreset ?? DEFAULT_AICHAT_PRESET,
-                    }
-                  : {}),
-              })),
-            }
-          : {}),
-      }));
-      // Drop any blank brand-new rows (the default "Add level" placeholder
-      // when nothing has been typed yet) before appending the AI plan, so
-      // a fresh page replaces the empty starter card cleanly.
-      setLevelSpecs(prev => {
-        const kept = prev.filter(s => {
-          if (s.existing || s.unsupportedType) return true;
-          return !!(s.id.trim() || s.description.trim());
-        });
-        return [...kept, ...newSpecs];
-      });
+      const newSpecs = specsFromPlannedLevels(planned);
+      setLevelSpecs(prev => appendPlannedSpecs(prev, newSpecs));
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       setOutlineError(message);
@@ -258,6 +223,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     lesson.name,
     lesson.unitName,
     lesson.unitOutline,
+    lesson.unitDraftingRules,
     setLevelSpecs,
     loadTargetProject,
   ]);
@@ -361,16 +327,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // needs each sublevel to exist by name before it fires.
     const generateSublevelContent = async (
       sub: LevelSpec,
-      subCtx: {
-        unitName?: string;
-        unitOutline?: string;
-        lessonName: string;
-        lessonOutline?: string;
-        targetProject?: string;
-        levelName: string;
-        levelDescription: string;
-        precedingLevels?: string;
-      },
+      subCtx: LevelContext,
       subLevelId: number,
       log: (line: string) => void
     ) => {
@@ -532,6 +489,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         .map(s => ({
           name: fullName(s.id.trim()),
           description: s.description.trim(),
+          suppliedCode: s.suppliedCode?.trim() || undefined,
         }));
 
       try {
@@ -541,6 +499,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         const {startSources, files} = await generateWeblab2Template({
           unitName: lesson.unitName,
           unitOutline: lesson.unitOutline,
+          authoringRules: lesson.unitAuthoringRules,
           lessonName: lesson.name,
           lessonOutline: outline.trim() || undefined,
           targetProject,
@@ -621,16 +580,16 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         // run their AI first — the Rails create path REQUIRES dsl_text
         // on POST. precedingLevels is fresh per call from the
         // running priorEntries list.
-        const levelCtx = {
+        const levelCtxBase = {
           unitName: lesson.unitName,
           unitOutline: lesson.unitOutline,
+          authoringRules: lesson.unitAuthoringRules,
           lessonName: lesson.name,
           lessonOutline: outline.trim() || undefined,
           targetProject,
-          levelName,
-          levelDescription: spec.description.trim(),
           precedingLevels: precedingLevelsText || undefined,
         };
+        const levelCtx = levelContextFor(spec, levelName, levelCtxBase);
 
         // DSL-defined labs (multi / match / bubbleChoice) must plan
         // their content before createOrFindLevel so we can pass
@@ -663,20 +622,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           for (const sub of sublevels) {
             const subName = fullName(`${spec.id.trim()}-${sub.id.trim()}`);
             const subLevel = await createOrFindLevel(sub.labType, subName);
-            const subCtx = {
-              ...levelCtx,
-              levelName: subName,
-              levelDescription: sub.description.trim(),
-            };
+            const subCtx = levelContextFor(sub, subName, levelCtxBase);
             await generateSublevelContent(sub, subCtx, subLevel.id, appendLog);
-            // Persist the sublevel prompt so reopening /generate later
-            // pre-populates the sublevel description. Non-fatal.
+            // Non-fatal: the sublevel content is already saved.
             try {
-              await updateLevelProperty(
-                subLevel.id,
-                'generate_outline',
-                sub.description.trim()
-              );
+              await saveGeneratorPrompts(subLevel.id, sub);
             } catch (err) {
               const message = err instanceof Error ? err.message : String(err);
               appendLog(
@@ -693,6 +643,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           bubbleChoicePlan = await generateBubbleChoiceLevel({
             unitName: lesson.unitName,
             unitOutline: lesson.unitOutline,
+            authoringRules: lesson.unitAuthoringRules,
             lessonName: lesson.name,
             lessonOutline: outline.trim() || undefined,
             targetProject,
@@ -1022,16 +973,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           }
         }
 
-        // Save the prompt onto the level itself so reopening /generate
-        // later pre-populates it. We do this even on skip so an edited
-        // prompt still persists. Failures here are non-fatal: the level
-        // content is already saved.
+        // Saved even on skip so an edited prompt still persists. Non-fatal:
+        // the level content is already saved.
         try {
-          await updateLevelProperty(
-            level.id,
-            'generate_outline',
-            spec.description.trim()
-          );
+          await saveGeneratorPrompts(level.id, spec);
         } catch (err) {
           const message = err instanceof Error ? err.message : String(err);
           appendLog(
