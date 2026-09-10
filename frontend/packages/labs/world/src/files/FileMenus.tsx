@@ -222,10 +222,18 @@ export const FileMenus = () => {
    * size exceeded", twice, on every rename. Closing a menu is a state update,
    * so it has not happened yet when the dialog opens in the same tick; this
    * yields to let React commit first.
+   *
+   * EVERY GRID, not only the actors'. Each of these dialogs traps focus too, so
+   * one left standing puts the shelf it just opened BEHIND it — visible,
+   * unreachable, and unclosable without dismissing the grid on top of it. That
+   * shipped for the sprites and the animations: their Import and New tiles led
+   * to a dialog nobody could touch. Whichever grid asked, all of them go.
    */
   const thenAsk = useCallback(async () => {
     setRow(undefined);
     setPicking(false);
+    setPainting(false);
+    setPlaying(false);
     close();
     await new Promise(resolve => setTimeout(resolve, 0));
   }, [close]);

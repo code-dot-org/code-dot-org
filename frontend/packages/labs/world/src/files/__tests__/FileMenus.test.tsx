@@ -397,6 +397,21 @@ describe('the file menus', () => {
     );
   });
 
+  it.each(['Sprites', 'Animations', 'Actors'])(
+    'gets the %s grid out of the way of the shelf it opens',
+    async grid => {
+      // TWO FOCUS TRAPS. The grid holds one and so does the dialog its Import
+      // tile opens, so a grid left standing puts that dialog BEHIND it —
+      // visible, unreachable, and unclosable without dismissing the grid on
+      // top of it. Every one of these leads somewhere, so every one gets out
+      // of the way (`FileMenus.thenAsk`).
+      openMenu(grid);
+      fireEvent.click(screen.getByRole('button', {name: 'Import'}));
+
+      await vi.waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
+    },
+  );
+
   it('takes a file of your own into the folder that gives it meaning', () => {
     // The tree's upload put every file at the ROOT, which for a picture is the
     // one thing that decides what it is: a PNG in `backgrounds/` is a backdrop
