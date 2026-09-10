@@ -118,19 +118,20 @@ describe('rules/solid.rule', () => {
   it('keeps every coefficient between 0 and 1', () => {
     // Bounciness above one hands back more speed than arrived — energy from
     // nowhere, every bounce. Friction and drag above one reverse what they are
-    // meant to slow. All three reads go through a query that says so once, by
-    // name, rather than the same comparison written out six times.
-    const clamp = meta.queries.find(
-      query => query.ref.exportName === 'KeptBetween0And1Query',
+    // meant to slow. Every read goes through the clamp rather than trusting
+    // whatever a learner typed into the property.
+    //
+    // THE MATH BLOCK, not a member of this rule's own. It declared one —
+    // `⟨n⟩ kept between 0 and 1` — back when clamping was something a rule had
+    // to write for itself; the general one says the same thing in the same
+    // words, so the member would only be a narrower copy of it.
+    expect(meta.queries.map(query => query.ref.exportName)).not.toContain(
+      'KeptBetween0And1Query',
     );
-
-    expect(clamp?.returns).toBe('number');
-    expect(clamp?.params.map(param => param.type)).toEqual(['number']);
     // Three coefficients on two axes, and friction is read again by the test
     // that decides whether the body is held.
     expect(
-      (source.match(/world_query_SolidBodies_KeptBetween0And1Query/g) ?? [])
-        .length,
+      (source.match(/math_constrain/g) ?? []).length,
     ).toBeGreaterThanOrEqual(6);
   });
 

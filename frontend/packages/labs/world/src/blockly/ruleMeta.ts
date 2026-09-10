@@ -21,6 +21,7 @@ import type {
 } from '../engine';
 
 import type {ParamType, EnumMeta} from './enums';
+import type {SocketState} from './extensions/blockDesigner';
 import {
   memberLocalName,
   refFromValue,
@@ -131,6 +132,8 @@ export type MemberPart =
       readonly type: ParamType;
       /** What a call site starts with — seeded into the socket's shadow. */
       readonly default?: unknown;
+      /** …or the whole block it starts with, when the author built one. */
+      readonly shadow?: SocketState;
     };
 
 /**
@@ -145,6 +148,15 @@ export interface EditorParam {
   readonly name: string;
   readonly type: ParamType;
   readonly default?: unknown;
+  /**
+   * The block a call site starts with, when the author built one.
+   *
+   * The general form of `default`: a whole shadow tree rather than a value a
+   * field could hold, which is what a `let` in an arguments row can carry
+   * (`blockDesigner.letShadow`). Passed through to `typedValueInputs` and
+   * otherwise nobody's business.
+   */
+  readonly shadow?: SocketState;
 }
 
 export interface ActionMeta {
@@ -550,6 +562,8 @@ interface RuleBlock {
       var?: string;
       /** What a call site starts with, when the author gave one. */
       default?: unknown;
+      /** …or the whole block it starts with, when the author built one. */
+      shadow?: SocketState;
     }>;
   };
   next?: {block?: RuleBlock};
@@ -713,6 +727,7 @@ export function parseRuleMeta(
             name: (part.var && variableNames.get(part.var)) || 'value',
             type: (part.type ?? 'number') as ParamType,
             ...(part.default === undefined ? {} : {default: part.default}),
+            ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
           },
         ];
       }
@@ -731,6 +746,7 @@ export function parseRuleMeta(
           name: string;
           type: ParamType;
           default?: unknown;
+          shadow?: SocketState;
         } => part.kind === 'param',
       )
       // …and what each starts with. `EditorParam.default` is what
@@ -740,6 +756,7 @@ export function parseRuleMeta(
         name: part.name,
         type: part.type,
         ...(part.default === undefined ? {} : {default: part.default}),
+        ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
       }));
     const returns = field(block, 'RETURNS');
     const common = {

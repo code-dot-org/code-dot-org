@@ -79,19 +79,19 @@ const drag = solidTrait.number('drag', 0);
 
 export const Solid = rule.traitRef('Solid');
 
-/** A 0..1 dial, clamped — these three are meaningless outside that range. */
-const kept = rule.block({
-  returns: 'number',
-  description:
-    'A number the way these properties are meant: never below 0, never above 1.',
-  say: [param('n', 'number'), 'kept between 0 and 1'],
-  body: ({n: amount}) => [
-    doc(
-      'Below zero would push the body the wrong way; above one would give it more speed than it arrived with, every single bounce.',
-    ),
-    give(keptBetween(amount.get(), n(0), n(1))),
-  ],
-});
+/**
+ * A 0..1 dial, clamped — these three are meaningless outside that range.
+ *
+ * Below zero would push the body the wrong way; above one would give it more
+ * speed than it arrived with, every single bounce.
+ *
+ * A HELPER HERE AND NOT A MEMBER. It was a `define block` this rule added to
+ * the palette, back when clamping was something a rule had to write for
+ * itself. Math has it now, in the same words, so a member would be a block
+ * that only says what the general one says — and one more thing in a drawer
+ * for a learner to tell apart from it.
+ */
+const kept = value => keptBetween(value, n(0), n(1));
 
 /** Take a fixed amount off a speed — never past a stop, never reversed. */
 const slowedBy = rule.block({
@@ -123,16 +123,13 @@ const into = rule.local('into', 'Number');
 
 /** How much a surface can hold onto a body this frame. */
 const grip = (solid, frame) =>
-  times(
-    times(kept({n: friction.of(solid.get())}), gripStrength.of()),
-    frame.get(),
-  );
+  times(times(kept(friction.of(solid.get())), gripStrength.of()), frame.get());
 
 /** The speed along the surface after drag has scaled it. */
 const slid = (which, body, solid, frame) =>
   times(
     axisOf(which, velocity.of(body.get())),
-    power(minus(n(1), kept({n: drag.of(solid.get())})), frame.get()),
+    power(minus(n(1), kept(drag.of(solid.get()))), frame.get()),
   );
 
 /** Whether the grip is strong enough to stop the body sliding at all. */
@@ -154,7 +151,7 @@ const alongSurface = (which, body, solid, frame) =>
 const bounce = (which, body, solid) =>
   negated(
     times(
-      kept({n: bounciness.of(solid.get())}),
+      kept(bounciness.of(solid.get())),
       axisOf(which, velocity.of(body.get())),
     ),
   );

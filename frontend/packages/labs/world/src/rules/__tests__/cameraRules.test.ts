@@ -332,18 +332,16 @@ describe('Camera Confined — the view stops at the edge of the map', () => {
     ]);
   });
 
-  it('adds the clamp as a block of its own, as rules/solid does', () => {
-    // Written out twice inline it is a nest of comparisons; named once it is a
-    // sentence. Its two uses are the x and y axes.
+  it('clamps with the Math block rather than a member of its own', () => {
+    // It DECLARED one — `⟨value⟩ kept between ⟨low⟩ and ⟨high⟩` — back when
+    // clamping was something a rule had to write for itself. Math has it now,
+    // in the same words, so a member here would be a second block saying what
+    // the general one says, and one more thing in a drawer to tell apart.
     const meta = confined();
 
-    expect(meta.queries.map(query => query.name)).toEqual(['kept between and']);
-    expect(meta.queries[0].returns).toBe('number');
-    expect(meta.queries[0].params.map(param => param.name)).toEqual([
-      'value',
-      'low',
-      'high',
-    ]);
+    expect(meta.queries).toEqual([]);
+    // Twice: the x axis and the y axis.
+    expect((cameraConfinedRule.match(/math_constrain/g) ?? []).length).toBe(2);
   });
 
   it('reads the bounds rather than restating them', () => {

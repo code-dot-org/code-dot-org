@@ -49,6 +49,7 @@ import {
 import {enumOptions, enumParamType, enumRefOfParamType} from '../enums';
 import {FieldBlockPreview} from '../fields/FieldBlockPreview';
 import {PARAM_FLAVOURS, paramFlavour} from '../typedVariables';
+import type {ShadowSpec} from '../valueShadow';
 
 export const BLOCK_DESIGNER_MUTATOR = 'block_designer_mutator';
 
@@ -72,8 +73,29 @@ export type BlockPart =
        * Seeded into the shadow block on the socket (`typedValueInputs`), which
        * is why it is stored as the plain value that shadow holds. Absent for
        * the types that have no sensible one — there is no default actor.
+       *
+       * What `argument` can say. A `let` says {@link shadow} instead.
        */
       default?: unknown;
+      /**
+       * …or the whole BLOCK a call site starts with.
+       *
+       * The general form of the line above, and what an argument declared by a
+       * `let` carries: whatever was in its socket (`letShadow`). `this actor`
+       * for an actor, `any ⟨Coin⟩` for a kind, an arithmetic tree if that is
+       * what the author built — a default is now anything they could make
+       * rather than anything a field could hold.
+       *
+       * THE SOCKET'S STATE, not a shadow tree, and the distinction is the
+       * whole of why: Blockly's `{block: …}` is a block a learner may drag out
+       * again, and `{shadow: …}` is a placeholder they may only type over. An
+       * author who plugs a real block into a `let` and comes back to the
+       * surface must find the block they plugged in, still theirs to move —
+       * so what was real is written back real. It is shadowed only where it
+       * becomes a DEFAULT, on the call site (`shadowed`), because there it is
+       * exactly a placeholder.
+       */
+      shadow?: SocketState;
     };
 
 /** The designer's serialized state: the signature. */
@@ -173,110 +195,148 @@ const letType = (type: string): string | undefined =>
 const letBlockFor = (type: string): string | undefined =>
   LET_ARGUMENTS.find(entry => entry.type === type)?.block;
 
-/** A literal a shadow holds, or undefined when the socket has something real in it. */
-const literalIn = (
+/** A value socket's contents, as Blockly serializes them. */
+export interface SocketState {
+  block?: ShadowSpec;
+  shadow?: ShadowSpec;
+}
+
+/**
+ * What a `let` in the arguments row says a call site should start with.
+ *
+ * Whatever is in its socket, saved as the socket holds it — a real block as a
+ * block, the `let`'s own placeholder as a shadow. Keeping the two apart is what
+ * lets the row be rebuilt into the row the author left (`seedLetShadow`); the
+ * flattening into an all-shadow default happens where the default is made,
+ * which is the call site.
+ *
+ * The identity, the position and the stack are dropped. A default is one value
+ * — a block with a `next` would be a second statement nobody asked for — and an
+ * id carried into every call site would be the same id on every one of them.
+ *
+ * `position` IS TWO SOCKETS and is built rather than copied: what it declares
+ * is a vector said as an x and a y, so what it starts with is the block that
+ * says that (`typedValueInputs`, case 'position'), with each socket inside it.
+ */
+const letShadow = (
   item: Blockly.Block,
-  input: string,
-  read: (block: Blockly.Block) => unknown,
-): unknown => {
-  const value = item.getInputTargetBlock(input);
-  // ONLY A SHADOW. A default is what a call site starts with, so it has to be
-  // a value and not a calculation: a learner who plugs `⟨score⟩ + 1` into the
-  // row has written something the caller cannot be given, and the honest
-  // answer is that the argument has no default rather than a frozen number
-  // nobody typed.
-  return value?.isShadow() ? read(value) : undefined;
+  type: string,
+): SocketState | undefined => {
+  const socketOf = (input: string): SocketState | undefined => {
+    const target = item.getInputTargetBlock(input);
+    if (!target) {
+      return undefined;
+    }
+    const saved = Blockly.serialization.blocks.save(target, {
+      addCoordinates: false,
+      addInputBlocks: true,
+      addNextBlocks: false,
+      doFullSerialization: false,
+    }) as (ShadowSpec & {id?: string}) | null;
+    if (!saved) {
+      return undefined;
+    }
+    // The id goes: carried into every call site it would be the same id on
+    // every one of them.
+    const rest = {...saved};
+    delete rest.id;
+    return target.isShadow() ? {shadow: rest} : {block: rest};
+  };
+  if (type === 'position') {
+    const x = socketOf('X');
+    const y = socketOf('Y');
+    return x && y
+      ? {shadow: {type: 'world_vector_of', inputs: {X: x, Y: y}}}
+      : undefined;
+  }
+  return socketOf('VALUE');
 };
 
 /**
- * What a call site starts with, read off a `let`'s own value socket.
+ * A socket's contents as a DEFAULT: a shadow, and everything under it too.
  *
- * Undefined where there is nothing to read: an actor has no literal to seed a
- * socket with, and a socket somebody has plugged a real block into is not a
- * default (see `literalIn`).
+ * Blockly writes a real block as `block` and a shadow as `shadow`, and a
+ * default whose sockets held real blocks would be one a caller could only half
+ * replace. Flattening the whole tree is what keeps "the caller may overwrite
+ * this" true at every depth — which is what a default is.
+ *
+ * Exported because the call site is where a default is made, and that is
+ * `domainBlocks`.
  */
-const letDefault = (item: Blockly.Block, type: string): unknown => {
-  switch (type) {
-    case 'position': {
-      // Two sockets rather than one — this is the block that says a vector as
-      // an x and a y, which is the whole of why it has a type of its own.
-      const x = literalIn(item, 'X', block =>
-        Number(block.getFieldValue('NUM')),
-      );
-      const y = literalIn(item, 'Y', block =>
-        Number(block.getFieldValue('NUM')),
-      );
-      return x === undefined || y === undefined ? undefined : {x, y};
-    }
-    case 'number':
-      return literalIn(item, 'VALUE', block =>
-        Number(block.getFieldValue('NUM')),
-      );
-    case 'string':
-      return literalIn(item, 'VALUE', block =>
-        String(block.getFieldValue('TEXT') ?? ''),
-      );
-    case 'boolean':
-      // A REAL BOOLEAN, not the word. Everything downstream tests the default
-      // for truth (`domainBlocks.typedValueInputs`), and the string "FALSE" is
-      // as true as any other non-empty string.
-      return literalIn(
-        item,
-        'VALUE',
-        block => block.getFieldValue('BOOL') === 'TRUE',
-      );
-    case 'vector':
-      return literalIn(item, 'VALUE', block => {
-        const value = block.getFieldValue('VECTOR') as {
-          x?: number;
-          y?: number;
-        } | null;
-        return value ? {x: Number(value.x), y: Number(value.y)} : undefined;
-      });
-    default:
-      return undefined;
-  }
+export const shadowed = (state: SocketState): ShadowSpec | undefined => {
+  const flatten = (saved: ShadowSpec): ShadowSpec => {
+    const {type, fields, inputs} = saved as ShadowSpec & {
+      inputs?: Record<string, SocketState>;
+    };
+    const extra = (saved as {extraState?: unknown}).extraState;
+    return {
+      type,
+      ...(fields ? {fields} : {}),
+      ...(extra === undefined ? {} : {extraState: extra}),
+      ...(inputs
+        ? {
+            inputs: Object.fromEntries(
+              Object.entries(inputs).flatMap(([name, socket]) => {
+                const child = socket.block ?? socket.shadow;
+                return child ? [[name, {shadow: flatten(child)}] as const] : [];
+              }),
+            ),
+          }
+        : {}),
+    } as ShadowSpec;
+  };
+  const held = state.block ?? state.shadow;
+  return held ? flatten(held) : undefined;
 };
 
-/** Put a part's default back into the shadow a fresh `let` arrives with. */
-const seedLetDefault = (
+/**
+ * Put a part's starting block back onto the `let` that declares it.
+ *
+ * The other half of `letShadow`, and the reason the row a learner comes back
+ * to is the row they left: a block they plugged in comes back as a BLOCK,
+ * theirs to drag out again, and a placeholder comes back as a placeholder.
+ * Restoring the first as a shadow would trap it — a shadow cannot be dragged.
+ *
+ * `position` is unpacked again: its two sockets are the x and the y inside the
+ * vector block its state is.
+ */
+const seedLetShadow = (
   item: Blockly.Block,
   type: string,
-  value: unknown,
+  start: SocketState | undefined,
 ): void => {
-  if (value === undefined) {
+  if (!start) {
     return;
   }
-  if (type === 'position') {
-    const point = value as {x?: number; y?: number};
-    for (const [input, at] of [
-      ['X', point.x],
-      ['Y', point.y],
-    ] as const) {
-      const socket = item.getInputTargetBlock(input);
-      if (socket?.isShadow()) {
-        socket.setFieldValue(String(Number(at ?? 0)), 'NUM');
-      }
+  const put = (input: string, socket: SocketState | undefined): void => {
+    const connection = socket && item.getInput(input)?.connection;
+    if (!connection) {
+      return;
     }
-    return;
-  }
-  const shadow = item.getInputTargetBlock('VALUE');
-  if (!shadow?.isShadow()) {
-    return;
-  }
-  if (type === 'number') {
-    shadow.setFieldValue(String(Number(value)), 'NUM');
-  } else if (type === 'string') {
-    shadow.setFieldValue(String(value), 'TEXT');
-  } else if (type === 'boolean') {
-    shadow.setFieldValue(value ? 'TRUE' : 'FALSE', 'BOOL');
-  } else if (type === 'vector') {
-    const point = value as {x?: number; y?: number};
-    shadow.setFieldValue(
-      {x: Number(point.x ?? 0), y: Number(point.y ?? 0)},
-      'VECTOR',
+    if (socket.shadow) {
+      connection.setShadowState(socket.shadow as never);
+      return;
+    }
+    // A real block: appended and connected, so it is a block on the workspace
+    // and can be taken off again.
+    const made = Blockly.serialization.blocks.append(
+      socket.block as never,
+      item.workspace,
     );
+    const output = made.outputConnection;
+    if (output) {
+      connection.connect(output);
+    }
+  };
+  if (type === 'position') {
+    const inside = (start.shadow ?? start.block) as
+      | (ShadowSpec & {inputs?: Record<string, SocketState>})
+      | undefined;
+    put('X', inside?.inputs?.X);
+    put('Y', inside?.inputs?.Y);
+    return;
   }
+  put('VALUE', start);
 };
 
 /**
@@ -577,7 +637,20 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
         if (part.var) {
           item.setFieldValue(part.var, LET_VAR_FIELD);
         }
-        seedLetDefault(item, part.type, part.default);
+        seedLetShadow(
+          item,
+          part.type,
+          // AN ACTOR STARTS AT `this actor` WHEN NOTHING ELSE WAS SAID, which
+          // is not the `let` block's own default and should not be: a world's
+          // body has no `actor` to refer to. Here it is right, because it is
+          // what the call site would be seeded with anyway
+          // (`typedValueInputs`, case 'actor') — so the row shows the default
+          // the caller will actually get rather than an empty socket.
+          part.shadow ??
+            (part.type === 'actor'
+              ? {shadow: {type: 'world_this_actor'}}
+              : undefined),
+        );
       } else if (item.type === SIGNATURE_CHOICE) {
         // Which enum, before the name: the choice item's dropdown is what
         // makes it this parameter rather than a differently-typed one.
@@ -630,13 +703,13 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
         const variable = id
           ? item.workspace.getVariableMap().getVariableById(id)
           : null;
-        const fallback = letDefault(item, param);
+        const start = letShadow(item, param);
         parts.push({
           kind: 'param',
           type: param,
           var: id,
           name: variable?.getName() ?? '',
-          ...(fallback === undefined ? {} : {default: fallback}),
+          ...(start === undefined ? {} : {shadow: start}),
         });
       } else if (param) {
         const fallback = item.getField(DEFAULT_FIELD)
@@ -671,7 +744,17 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
         list.map(part =>
           part.kind === 'label'
             ? ['label', part.text]
-            : ['param', part.type, part.name ?? '', part.default ?? ''],
+            : [
+                'param',
+                part.type,
+                part.name ?? '',
+                part.default ?? '',
+                // The whole starting block, because it is a whole block now: a
+                // learner who edits the number inside a default has changed
+                // the signature, and a comparison that stopped at the type
+                // would read the row and rebuild nothing.
+                JSON.stringify(part.shadow ?? ''),
+              ],
         ),
       );
     if (same(next) === same(this.parts_ ?? [])) {

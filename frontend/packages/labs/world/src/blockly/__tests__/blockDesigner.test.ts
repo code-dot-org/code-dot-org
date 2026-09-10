@@ -160,6 +160,80 @@ describe('a designed block', () => {
     ]);
   });
 
+  it('starts a call site with whatever the author built, not just a value', () => {
+    // The general form of a default. `argument` can only carry what a field
+    // holds — a number, a word, a choice — so the shapes in `typedValueInputs`
+    // chose a shadow to put it in. An argument declared by a `let` carries the
+    // whole BLOCK that was plugged into it, so a default is anything the author
+    // could make: `this actor`, `any ⟨Coin⟩`, or an arithmetic tree.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'nudge'},
+        {
+          kind: 'param',
+          type: 'number',
+          var: 'n',
+          // The SOCKET as the author left it — a block they plugged in,
+          // which stays a block on the row and is flattened into a shadow
+          // only here, where it becomes a default.
+          shadow: {
+            block: {
+              type: 'math_arithmetic',
+              fields: {OP: 'ADD'},
+              inputs: {
+                A: {block: {type: 'math_number', fields: {NUM: 2}}},
+                B: {shadow: {type: 'math_number', fields: {NUM: 3}}},
+              },
+            },
+          },
+        },
+      ],
+      'none',
+      [{id: 'n', name: 'amount', type: 'Number'}],
+    );
+    const type = 'world_do_Push_NudgeAction';
+    paletteFor(meta);
+
+    expect(shadowsFor(type)).toEqual([
+      {
+        name: 'VALUE',
+        shadow: {
+          type: 'math_arithmetic',
+          fields: {OP: 'ADD'},
+          inputs: {
+            A: {shadow: {type: 'math_number', fields: {NUM: 2}}},
+            B: {shadow: {type: 'math_number', fields: {NUM: 3}}},
+          },
+        },
+      },
+    ]);
+  });
+
+  it('still gives that socket the type check its parameter asks for', () => {
+    // The author-built shadow goes into the same socket the shapes below would
+    // have made, and a socket that accepted anything would take a number where
+    // an actor was meant.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'chase'},
+        {
+          kind: 'param',
+          type: 'actor',
+          var: 'a',
+          shadow: {shadow: {type: 'world_this_actor'}},
+        },
+      ],
+      'none',
+      [{id: 'a', name: 'who', type: 'Actor'}],
+    );
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(b => b.type === 'world_do_Push_ChaseAction') as
+      | {args0?: Array<{check?: string}>}
+      | undefined;
+
+    expect(call?.args0?.[0]).toMatchObject({check: 'Actor'});
+  });
+
   it('gives an enum parameter the dropdown itself, not a socket', () => {
     // A parameter typed by an enum (specs/ENUMS.md) is a FIELD on the block:
     // the choices are the whole of what the argument can be, so there is

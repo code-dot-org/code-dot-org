@@ -3,14 +3,12 @@ import {
   axisOf,
   defineRule,
   doc,
-  give,
   keptBetween,
   mapSize,
   minus,
   moduleFor,
   n,
   over,
-  param,
   thisCamera,
   viewSize,
 } from './dsl.mjs';
@@ -47,19 +45,6 @@ Give a camera **Confined to the Map**. It needs **Has a Camera** too.`,
 });
 rule.uses('Camera');
 
-const kept = rule.block({
-  returns: 'number',
-  description:
-    'A number pushed back inside a range: never below the low end, never above the high one.',
-  say: [param('value'), 'kept between', param('low'), 'and', param('high')],
-  body: ({value, low, high}) => [
-    doc(
-      '**Clamping**: a number pushed back inside a range. Below the low end it becomes the low end, above the high end it becomes the high end, and anywhere between it is left alone.',
-    ),
-    give(keptBetween(value.get(), low.get(), high.get())),
-  ],
-});
-
 const confinedTrait = rule.trait('Confined to the Map', 'camera');
 confinedTrait.uses(Aimed);
 
@@ -67,11 +52,11 @@ confinedTrait.uses(Aimed);
 const half = which => over(axisOf(which, viewSize()), n(2));
 
 const confined = which =>
-  kept({
-    value: goal.axis(which, thisCamera()),
-    low: half(which),
-    high: minus(axisOf(which, mapSize()), half(which)),
-  });
+  keptBetween(
+    goal.axis(which, thisCamera()),
+    half(which),
+    minus(axisOf(which, mapSize()), half(which)),
+  );
 
 confinedTrait.step('keep the view inside', 'confine', [
   doc(

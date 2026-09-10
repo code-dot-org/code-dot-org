@@ -94,6 +94,8 @@ import {
   blockDesignerMutator,
   eventDesignerMutator,
   SIGNATURE_ARGUMENT,
+  shadowed,
+  type SocketState,
 } from './extensions/blockDesigner';
 import {bodyButtonExtension} from './extensions/bodyButton';
 import {bodySurfaceExtension} from './extensions/bodyOwner';
@@ -1669,6 +1671,22 @@ interface TypedValue {
   // enum (`blockly/enums`), whose socket wears a dropdown.
   type: ParamType;
   default?: unknown;
+  /**
+   * The whole BLOCK a call site starts with, when the author gave one.
+   *
+   * `default` is a value and this is a picture: `⟨3⟩` against `⟨x of ⟨this
+   * actor⟩⟩ + ⟨3⟩`. It arrives when a `define block`'s argument was declared
+   * by a `let` with something plugged into it, and what was plugged in is
+   * saved verbatim (`blockDesigner.letShadow`) — so a default is anything the
+   * author could build rather than anything a field could hold.
+   *
+   * THE SOCKET AS THE AUTHOR LEFT IT, flattened into a shadow all the way
+   * down when this is turned into a default below — which is what makes it a
+   * default rather than a value: every block in the tree is one, so a caller
+   * who drops something on top replaces the lot and a caller who does not can
+   * still edit it in place. Wins over `default` where both are present.
+   */
+  shadow?: SocketState;
 }
 
 /** The input names a {@link TypedValue} occupies (a vector uses `x`/`y`). */
@@ -1776,6 +1794,36 @@ const typedValueCode = (
  * `input_value` args, and the default shadow to seed each (a `math_number` for
  * numbers/vector components, `logic_boolean`/`text` for the other kinds).
  */
+/**
+ * The connection check a value of this type arrives through, or none.
+ *
+ * Pulled out because the author-built shadow above has to put a value into the
+ * same socket the shapes below would have made, and a socket that accepted
+ * anything would take a number where an actor was meant.
+ */
+const checkOf = (type: ParamType): string | undefined => {
+  if (enumRefOfParamType(type) || type === 'kind') {
+    return 'String';
+  }
+  switch (type) {
+    case 'number':
+      return 'Number';
+    case 'string':
+      return 'String';
+    case 'boolean':
+      return 'Boolean';
+    case 'actor':
+      return 'Actor';
+    case 'vector':
+    case 'position':
+      return 'Vector';
+    case 'color':
+      return COLOUR_CHECK;
+    default:
+      return undefined;
+  }
+};
+
 const typedValueInputs = (
   value: TypedValue,
   slot: number,
@@ -1815,7 +1863,36 @@ const typedValueInputs = (
   // built from it — and so a stored word the set no longer offers is KEPT and
   // shown as itself rather than silently becoming the first option
   // (`liveDropdown`).
+  // WHAT THE AUTHOR BUILT WINS, whatever the type would have chosen.
+  //
+  // A default used to be a value a field could hold, so the shapes below chose
+  // a shadow to put it in. An argument declared by a `let` carries the whole
+  // block instead (`blockDesigner.letShadow`), which is the general case of the
+  // same idea: `this actor` for an actor, `any ⟨Coin⟩` for a kind, or an
+  // arithmetic tree if that is what the author plugged in.
+  //
+  // Only where there is a SOCKET to put it in. An enum parameter is a dropdown
+  // on the block — the choices are the whole of what it can be — so it falls
+  // through to the field below and the shadow is not consulted.
+  // FLATTENED HERE, because here is where it becomes a default. What the part
+  // holds is the socket as the author left it — a block they may drag out, or
+  // a placeholder they may type over (`blockDesigner.letShadow`) — and a call
+  // site wants the second all the way down (`shadowed`).
+  const built = value.shadow ? shadowed(value.shadow) : undefined;
   const choice = enumRefOfParamType(value.type);
+  if (built && !(choice && !opts.enumAsSocket)) {
+    return {
+      message: `%${slot}`,
+      args: [
+        {
+          type: 'input_value',
+          name: names.value,
+          ...(checkOf(value.type) ? {check: checkOf(value.type)} : {}),
+        },
+      ],
+      shadows: [{name: names.value, shadow: built}],
+    };
+  }
   if (choice && opts.enumAsSocket) {
     // The choices as a block that can be replaced: `rules/input` emits the key
     // it is looping over, so a dropdown has to be droppable-over here.
@@ -3420,8 +3497,20 @@ const worldLetVector = localDeclaration('vector', VectorVariable, 'Vector', {
   type: 'world_vector',
   fields: {VECTOR: {x: 0, y: 0}},
 });
-// An actor socket takes no shadow: there is no literal actor to seed one with,
-// and an empty socket reads as "nobody yet" rather than as a hole.
+/**
+ * `let actor ⟨other⟩` — no shadow, and the one flavour with none.
+ *
+ * There is no literal actor to seed a socket with, and an empty one reads as
+ * "nobody yet" rather than as a hole.
+ *
+ * `this actor` IS THE OBVIOUS CANDIDATE and is wrong here, though it is right
+ * one place over. A world's body has no `actor` binding — a step on the world
+ * is about the world — so seeding it would give every actor local in every
+ * world body a default that generates a name nothing has defined. In the
+ * ARGUMENTS row it is exactly right, because an actor parameter's call site is
+ * seeded with `this actor` already (`typedValueInputs`, case 'actor'), and
+ * that is where `buildArguments_` puts it.
+ */
 const worldLetActor = localDeclaration(
   'actor',
   ActorVariable,
