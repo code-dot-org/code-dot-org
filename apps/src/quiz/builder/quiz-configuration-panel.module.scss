@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 0 16px 16px;
+  padding: 16px;
   height: 100%;
   overflow-y: auto;
   box-sizing: border-box;
@@ -22,6 +22,64 @@
     box-sizing: border-box;
     width: 100%;
   }
+}
+
+.chooserHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chooserTitle {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-neutral-primary, #121212);
+}
+
+.chooserSubtitle {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-neutral-tertiary, #4b5258);
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.optionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid var(--border-neutral-primary, #d3d6da);
+  border-radius: var(--shape-sm, 6px);
+  background: var(--background-neutral-secondary, #f1f2f4);
+  appearance: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-neutral-tertiary, #e1e3e6);
+    border-color: var(--border-neutral-secondary, #9ea5ad);
+  }
+}
+
+.optionName {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-neutral-primary, #121212);
+}
+
+.optionDescription {
+  font-size: 12px;
+  color: var(--text-neutral-tertiary, #4b5258);
 }
 
 .textarea {

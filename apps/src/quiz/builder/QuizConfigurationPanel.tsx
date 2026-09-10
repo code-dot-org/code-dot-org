@@ -21,10 +21,26 @@ export interface QuizConfigurationData {
 }
 
 const PURPOSE_OPTIONS = [
-  {value: 'exam', text: 'Exam'},
-  {value: 'exam_simulation', text: 'Exam simulation'},
-  {value: 'practice', text: 'Practice'},
-  {value: 'check_for_understanding', text: 'Check for understanding'},
+  {
+    value: 'check_for_understanding',
+    text: 'Check for understanding',
+    chooserDescription: 'A quick signal check during a lesson.',
+  },
+  {
+    value: 'practice',
+    text: 'Practice',
+    chooserDescription: 'For building skill on the content.',
+  },
+  {
+    value: 'exam',
+    text: 'Exam',
+    chooserDescription: 'A formal assessment of learning.',
+  },
+  {
+    value: 'exam_simulation',
+    text: 'Exam simulation',
+    chooserDescription: 'Cert-style timed exam practice.',
+  },
 ];
 
 interface QuizConfigurationPanelProps {
@@ -124,118 +140,148 @@ const QuizConfigurationPanel: React.FunctionComponent<
         </Typography>
       )}
 
-      <div className={styles.section}>
-        <TextField
-          label="Quiz title (optional)"
-          name="displayName"
-          size="s"
-          className={styles.fullWidthField}
-          placeholder="(defaults to Name)"
-          value={displayName}
-          onChange={e => setDisplayName(e.target.value)}
-        />
-      </div>
-
-      <div className={styles.section}>
-        <FormFieldWrapper
-          color="black"
-          size="s"
-          label="Intro screen text (optional)"
-          className={styles.fullWidthField}
-        >
-          <textarea
-            className={styles.textarea}
-            value={customIntroText}
-            onChange={e => setCustomIntroText(e.target.value)}
+      {!purpose ? (
+        <div className={styles.section}>
+          <div className={styles.chooserHeader}>
+            <p className={styles.chooserTitle}>What is this quiz for?</p>
+            <p className={styles.chooserSubtitle}>
+              Applies typical settings (you can change these).
+            </p>
+          </div>
+          <div className={styles.optionsList}>
+            {PURPOSE_OPTIONS.map(option => (
+              <button
+                key={option.value}
+                type="button"
+                className={styles.optionCard}
+                onClick={() => setPurpose(option.value)}
+              >
+                <span className={styles.optionName}>{option.text}</span>
+                <span className={styles.optionDescription}>
+                  {option.chooserDescription}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className={styles.section}>
+          <SimpleDropdown
+            name="purpose"
+            size="s"
+            labelText="Purpose"
+            items={PURPOSE_OPTIONS}
+            selectedValue={purpose}
+            onChange={e => setPurpose(e.target.value)}
           />
-        </FormFieldWrapper>
-      </div>
+        </div>
+      )}
 
-      <div className={styles.section}>
-        <TextField
-          label="Time limit (minutes, optional)"
-          name="timeLimitMinutes"
-          inputType="number"
-          min={1}
-          step={1}
-          size="s"
-          className={styles.fullWidthField}
-          value={timeLimitMinutes}
-          onChange={e => setTimeLimitMinutes(e.target.value)}
-        />
-      </div>
+      {purpose && (
+        <>
+          <div className={styles.section}>
+            <TextField
+              label="Quiz title (optional)"
+              name="displayName"
+              size="s"
+              className={styles.fullWidthField}
+              placeholder="(defaults to Name)"
+              value={displayName}
+              onChange={e => setDisplayName(e.target.value)}
+            />
+          </div>
 
-      <div className={styles.section}>
-        <Checkbox
-          name="showCorrectness"
-          label="Show correctness"
-          size="s"
-          checked={showCorrectness}
-          onChange={e => {
-            setShowCorrectness(e.target.checked);
-            // Mirrors reveal_answer_explanation_requires_show_correctness -
-            // turning correctness off while explanation reveal is on would
-            // otherwise be silently invalid until the next save attempt.
-            if (!e.target.checked) {
-              setRevealAnswerExplanation(false);
-            }
-          }}
-        />
-      </div>
+          <div className={styles.section}>
+            <FormFieldWrapper
+              color="black"
+              size="s"
+              label="Intro screen text (optional)"
+              className={styles.fullWidthField}
+            >
+              <textarea
+                className={styles.textarea}
+                value={customIntroText}
+                onChange={e => setCustomIntroText(e.target.value)}
+              />
+            </FormFieldWrapper>
+          </div>
 
-      <div className={styles.section}>
-        <Checkbox
-          name="revealAnswerExplanation"
-          label="Reveal answer/explanations (requires Show correctness)"
-          size="s"
-          checked={revealAnswerExplanation}
-          disabled={!showCorrectness}
-          onChange={e => setRevealAnswerExplanation(e.target.checked)}
-        />
-      </div>
+          <div className={styles.section}>
+            <TextField
+              label="Time limit (minutes, optional)"
+              name="timeLimitMinutes"
+              inputType="number"
+              min={1}
+              step={1}
+              size="s"
+              className={styles.fullWidthField}
+              value={timeLimitMinutes}
+              onChange={e => setTimeLimitMinutes(e.target.value)}
+            />
+          </div>
 
-      <div className={styles.section}>
-        <Checkbox
-          name="showIntroScreen"
-          label="Show intro screen (required when a time limit is set)"
-          size="s"
-          checked={showIntroScreen}
-          onChange={e => setShowIntroScreen(e.target.checked)}
-        />
-      </div>
+          <div className={styles.section}>
+            <Checkbox
+              name="showCorrectness"
+              label="Show correctness"
+              size="s"
+              checked={showCorrectness}
+              onChange={e => {
+                setShowCorrectness(e.target.checked);
+                // Mirrors reveal_answer_explanation_requires_show_correctness -
+                // turning correctness off while explanation reveal is on would
+                // otherwise be silently invalid until the next save attempt.
+                if (!e.target.checked) {
+                  setRevealAnswerExplanation(false);
+                }
+              }}
+            />
+          </div>
 
-      <div className={styles.section}>
-        <SimpleDropdown
-          name="purpose"
-          size="s"
-          labelText="Purpose"
-          items={PURPOSE_OPTIONS}
-          selectedValue={purpose}
-          onChange={e => setPurpose(e.target.value)}
-        />
-      </div>
+          <div className={styles.section}>
+            <Checkbox
+              name="revealAnswerExplanation"
+              label="Reveal answer/explanations (requires Show correctness)"
+              size="s"
+              checked={revealAnswerExplanation}
+              disabled={!showCorrectness}
+              onChange={e => setRevealAnswerExplanation(e.target.checked)}
+            />
+          </div>
 
-      <div className={styles.section}>
-        <Checkbox
-          name="allowMultipleAttempts"
-          label="Allow multiple attempts"
-          size="s"
-          checked={allowMultipleAttempts}
-          onChange={e => setAllowMultipleAttempts(e.target.checked)}
-        />
-      </div>
+          <div className={styles.section}>
+            <Checkbox
+              name="showIntroScreen"
+              label="Show intro screen (required when a time limit is set)"
+              size="s"
+              checked={showIntroScreen}
+              onChange={e => setShowIntroScreen(e.target.checked)}
+            />
+          </div>
 
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="medium"
-        type="button"
-        loading={isSaving}
-        disabled={isSaving}
-        onClick={() => handleSave()}
-      >
-        Save
-      </MuiButton>
+          <div className={styles.section}>
+            <Checkbox
+              name="allowMultipleAttempts"
+              label="Allow multiple attempts"
+              size="s"
+              checked={allowMultipleAttempts}
+              onChange={e => setAllowMultipleAttempts(e.target.checked)}
+            />
+          </div>
+
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            type="button"
+            loading={isSaving}
+            disabled={isSaving}
+            onClick={() => handleSave()}
+          >
+            Save
+          </MuiButton>
+        </>
+      )}
     </div>
   );
 };
