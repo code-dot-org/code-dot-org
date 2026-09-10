@@ -5,8 +5,12 @@ const config: Config = {
   title: 'CodeAI Documentation',
   tagline: 'Help for users and developers of CodeAI.',
   favicon: 'img/logo.png',
-  url: 'https://docs.code.org',
+  url: 'https://curly-memory-mn8z3op.pages.github.io',
   baseUrl: '/',
+  organizationName: 'code-dot-org',
+  projectName: 'stephen-docs-prototype',
+  deploymentBranch: 'main',
+  trailingSlash: true,
 
   onBrokenLinks: 'warn',
 
