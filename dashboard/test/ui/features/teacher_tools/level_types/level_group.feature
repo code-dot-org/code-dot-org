@@ -19,11 +19,11 @@ Scenario: Submit three answers.
   And I press ".level-group-content:eq(2) .answerbutton[index=0]" using jQuery
 
   And I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
-  And element ".modal-body" contains text "You cannot edit your assessment after submitting it."
-  And element ".modal-body" contains text "You left some questions incomplete."
+  And I wait to see a dialog titled "Submit your assessment"
+  And element "#levelgroup-submit-incomplete-dialogcontent" contains text "You cannot edit your assessment after submitting it."
+  And element "#levelgroup-submit-incomplete-dialogcontent" contains text "You left some questions incomplete."
 
-  And I press ".modal #ok-button" using jQuery to load a new page
+  And I press "#levelgroup-submit-ok-button" using jQuery to load a new page
 
   # Go back to the page to see that same options are selected.
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1?noautoplay=true"
@@ -57,8 +57,8 @@ Scenario: Match levels within level group
   # Make sure the answers are saved and loaded
 
   Given I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
-  And I press ".modal #ok-button" using jQuery to load a new page
+  And I wait to see a dialog titled "Submit your assessment"
+  And I press "#levelgroup-submit-ok-button" using jQuery to load a new page
 
   When I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/33/levels/1?noautoplay=true"
   And I wait to see ".submitButton"
@@ -123,6 +123,6 @@ Scenario: Submit all answers, including match levels
   And match level 1 contains 0 empty slots
 
   Given I press ".submitButton:first" using jQuery
-  And I wait to see ".modal"
-  And element ".modal-body" contains text "You cannot edit your assessment after submitting it."
-  And element ".modal-body" does not contain text "You left some questions incomplete."
+  And I wait to see a dialog titled "Submit your assessment"
+  And element "#levelgroup-submit-complete-dialogcontent" contains text "You cannot edit your assessment after submitting it."
+  And element "#levelgroup-submit-complete-dialogcontent" does not contain text "You left some questions incomplete."

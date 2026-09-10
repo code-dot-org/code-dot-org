@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-postassessment-q5-2026'
+
+wrong 'Predicting how long a once-in-a-lifetime hurricane will last'
+wrong 'Summarizing grocery store receipts to understand customers'
+right 'Analyzing online gameplay for cheating behavior'
+wrong 'Explaining why a credit card number was stolen'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which task is best suited to anomaly detection techniques?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Analyzing Categorical Data
+MARKDOWN

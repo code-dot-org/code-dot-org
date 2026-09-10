@@ -233,17 +233,6 @@ module Cdo
       end
     end
 
-    # The demo stack is still deployed but nothing routes to it: Java Lab now
-    # requires a verified instructor, so these two helpers have no caller.
-    def javabuilder_demo_url(path = '', scheme = '')
-      DCDO.get("javabuilder_demo_websocket_url", 'wss://javabuilder-demo.code.org')
-    end
-
-    def javabuilder_demo_upload_url(path = '', scheme = '')
-      http_url = DCDO.get("javabuilder_demo_http_url", 'https://javabuilder-demo-http.code.org')
-      http_url + "/seedsources/sources.json"
-    end
-
     # Get a list of all languages for which we want to link to a localized
     # version of CurriculumBuilder. This list is distinct from the list of
     # languages officially supported by CurriculumBuilder in that there are

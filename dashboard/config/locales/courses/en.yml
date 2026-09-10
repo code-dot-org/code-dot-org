@@ -2646,6 +2646,12 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: unversioned
+        ui-test-instructor-in-training:
+          title: UI Test Instructor in Training
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: unversioned
         tessplayground:
           title: ''
           description_short: ''

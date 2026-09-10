@@ -219,7 +219,7 @@ def create_storage_id_for_user(user_id = nil, anon_user_id: nil)
   # We don't have any existing storage id we can associate with this user, so create a new one
   storage_id = user_storage_ids_table.insert(user_id:, anon_user_id:)
 
-  if Integer(user_id, exception: false).nil? && anon_user_id.nil?
+  if anon_user_id.nil? && Integer(user_id, exception: false).nil?
     CDO.log.info JSON.dump(
       namespace: 'project_storages',
       event: 'missing_anon_user_id',
