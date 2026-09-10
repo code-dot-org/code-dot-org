@@ -8,40 +8,17 @@ import {
   type PointerEvent as ReactPointerEvent,
 } from 'react';
 
+import {
+  paintSpectrum,
+  pickSpectrum,
+  SPECTRUM_HEIGHT,
+  SPECTRUM_WIDTH,
+} from '../colorSpectrum';
+
 import PixelTooltip from './PixelTooltip';
 import {TRANSPARENT, type RGBA} from './tools';
 
 import moduleStyles from './pixel-editor.module.scss';
-
-const SPECTRUM_WIDTH = 240;
-const SPECTRUM_HEIGHT = 150;
-// Gradient stops across the hue axis; enough that adjacent stops differ by
-// 30 degrees of hue and the interpolation error is invisible.
-const HUE_STOPS = 12;
-
-/**
- * Paint the full color range into one rectangle: hue left-to-right, running
- * from white at the top through the pure hue to black at the bottom.
- */
-function paintSpectrum(canvas: HTMLCanvasElement) {
-  const ctx = canvas.getContext('2d');
-  if (!ctx) {
-    return;
-  }
-  const hue = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  for (let i = 0; i <= HUE_STOPS; i++) {
-    hue.addColorStop(i / HUE_STOPS, `hsl(${(i / HUE_STOPS) * 360}, 100%, 50%)`);
-  }
-  ctx.fillStyle = hue;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  const light = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  light.addColorStop(0, 'rgba(255, 255, 255, 1)');
-  light.addColorStop(0.5, 'rgba(255, 255, 255, 0)');
-  light.addColorStop(0.5, 'rgba(0, 0, 0, 0)');
-  light.addColorStop(1, 'rgba(0, 0, 0, 1)');
-  ctx.fillStyle = light;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-}
 
 interface ColorPickerProps {
   color: RGBA;
@@ -108,21 +85,10 @@ const ColorPicker: FunctionComponent<ColorPickerProps> = ({
   const pick = useCallback(
     (e: ReactPointerEvent<HTMLCanvasElement>) => {
       const canvas = canvasRef.current;
-      const ctx = canvas?.getContext('2d');
-      if (!canvas || !ctx) {
-        return;
+      const picked = canvas && pickSpectrum(canvas, e.clientX, e.clientY);
+      if (picked) {
+        onChange([...picked, 255]);
       }
-      const rect = canvas.getBoundingClientRect();
-      const x = Math.min(
-        canvas.width - 1,
-        Math.max(0, Math.round(e.clientX - rect.left)),
-      );
-      const y = Math.min(
-        canvas.height - 1,
-        Math.max(0, Math.round(e.clientY - rect.top)),
-      );
-      const [r, g, b] = ctx.getImageData(x, y, 1, 1).data;
-      onChange([r, g, b, 255]);
     },
     [onChange],
   );

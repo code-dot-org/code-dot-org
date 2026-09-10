@@ -1,4 +1,4 @@
-// A color swatch on a block, opening the browser's own color picker.
+// A color swatch on a block, opening a color picker under it.
 //
 // `define property` needs somewhere to say what a color property starts as, and
 // the alternatives both fall short. A text box asks a learner to know that a
@@ -8,18 +8,27 @@
 // it (`#e0484a`, `#4da3ff`) — a picker that cannot reproduce the value it is
 // showing is worse than the text box it replaced.
 //
-// So this opens `<input type="color">`, which every browser answers with its own
-// full picker — a spectrum, and a box to paste a hex somebody was given. It is
-// the same choice the map editor's inspector made for a color property
-// (`mapEditor/MapStage`) and the effect editor made for a color node
-// (`effect/editor/EffectFlowNode`), for the same reason.
+// So this shows the whole color range instead: the same rectangle the image
+// editor's swatch opens (`colorSpectrum`), with a box under it for a hex
+// somebody was given. Between them there is no color that cannot be said.
 //
-// The input is a real element in the document rather than something drawn here:
-// a browser will not open its picker for an element it does not have, and one
-// that is `display: none` cannot be clicked open at all. It is parked over the
-// field at one pixel square and fully transparent, which is the usual way of it.
+// IT LIVES IN BLOCKLY'S OWN DROPDOWN, which is the reason it is drawn here at
+// all rather than handed to `<input type="color">`. A native color input opens
+// whatever window the browser feels like, wherever the browser feels like
+// putting it — in Chrome, the top-left corner of the screen, an entire monitor
+// away from the block that asked. `DropDownDiv` positions itself under the
+// field with an arrow pointing at it, the way every other field's editor in the
+// lab does, and closes when you click away.
 
 import * as Blockly from 'blockly/core';
+
+import {
+  paintSpectrum,
+  pickSpectrum,
+  SPECTRUM_HEIGHT,
+  SPECTRUM_WIDTH,
+} from '../../colorSpectrum';
+import {toHex} from '../../engine/core/color';
 
 /** White, for a property that has not said what color it starts as. */
 export const DEFAULT_COLOR = '#ffffff';
@@ -30,11 +39,13 @@ const PAD = 3;
 
 const HEX = /^#[0-9a-fA-F]{6}$/;
 
-export class FieldColorPicker extends Blockly.Field<string> {
+// `string | undefined` and not `string`, because that is the value type
+// Blockly's own field APIs are written against (`DropDownDiv.showPositionedByField`
+// takes a `Field<string | undefined>`). Nothing here ever holds `undefined`:
+// the constructor supplies a color and the validator refuses anything that is
+// not one.
+export class FieldColorPicker extends Blockly.Field<string | undefined> {
   private swatch: SVGRectElement | null = null;
-  /** The input the browser opens its picker for. Made once, per field. */
-  private picker: HTMLInputElement | null = null;
-
   constructor(value?: string) {
     super(HEX.test(String(value ?? '')) ? String(value) : DEFAULT_COLOR);
     this.SERIALIZABLE = true;
@@ -89,7 +100,15 @@ export class FieldColorPicker extends Blockly.Field<string> {
    * same reason.
    */
   private paint(): void {
-    this.swatch?.setAttribute('fill', this.getValue() ?? DEFAULT_COLOR);
+    // An inline `style`, and NOT a `fill` attribute. A presentation attribute
+    // loses to any CSS rule that matches the element, and Blockly's renderer
+    // paints a field's rects from its own stylesheet — so the swatch carried
+    // the right color in the DOM and drew the field background's white, which
+    // reads as a picker that does not work. `FieldButton` states its colours
+    // inline for the same reason.
+    if (this.swatch) {
+      this.swatch.style.fill = this.getValue() ?? DEFAULT_COLOR;
+    }
   }
 
   protected override updateSize_(): void {
@@ -107,46 +126,99 @@ export class FieldColorPicker extends Blockly.Field<string> {
     return this.getValue() ?? '';
   }
 
-  protected override doValueUpdate_(value: string): void {
+  protected override doValueUpdate_(value: string | undefined): void {
     super.doValueUpdate_(value);
     this.paint();
-    this.setTooltip(value);
+    this.setTooltip(value ?? DEFAULT_COLOR);
   }
 
   /**
-   * Hand the press to the browser's picker.
+   * Open the picker under the field.
    *
-   * Committed on `change`, which is the pick being finished, and not on
-   * `input`, which fires all the way through a drag across the spectrum: one
-   * value chosen is one step to undo.
+   * A drag across the rectangle keeps setting the value, so the block updates
+   * as the pointer moves and what is chosen is what was seen; letting go ends
+   * it. The hex box beside it commits on Enter or on losing focus, which is
+   * the only way to say a color exactly.
    */
   protected override showEditor_(): void {
-    if (!this.getSourceBlock() || !this.fieldGroup_) {
+    const block = this.getSourceBlock() as Blockly.BlockSvg | null;
+    if (!block) {
       return;
     }
-    if (!this.picker) {
-      const input = document.createElement('input');
-      input.type = 'color';
-      input.tabIndex = -1;
-      input.setAttribute('aria-hidden', 'true');
-      input.style.cssText =
-        'position:fixed;width:1px;height:1px;opacity:0;border:0;padding:0;';
-      input.addEventListener('change', () => this.setValue(input.value));
-      this.picker = input;
-    }
-    // Under the field, so a picker that anchors to its input opens beside the
-    // block rather than in the corner of the window.
-    const box = this.fieldGroup_.getBoundingClientRect();
-    this.picker.style.left = `${box.left}px`;
-    this.picker.style.top = `${box.bottom}px`;
-    this.picker.value = this.getValue() ?? DEFAULT_COLOR;
-    document.body.appendChild(this.picker);
-    this.picker.click();
+    const content = Blockly.DropDownDiv.getContentDiv();
+
+    const canvas = document.createElement('canvas');
+    canvas.width = SPECTRUM_WIDTH;
+    canvas.height = SPECTRUM_HEIGHT;
+    canvas.style.cssText = `display:block;width:${SPECTRUM_WIDTH}px;height:${SPECTRUM_HEIGHT}px;border-radius:4px;cursor:crosshair;`;
+
+    const hex = document.createElement('input');
+    hex.type = 'text';
+    hex.value = this.getValue() ?? DEFAULT_COLOR;
+    hex.spellcheck = false;
+    hex.setAttribute('aria-label', 'Color, as six hexadecimal digits');
+    hex.style.cssText =
+      'display:block;width:100%;margin-top:6px;box-sizing:border-box;' +
+      'font-family:monospace;font-size:12px;padding:3px 5px;border-radius:3px;' +
+      'border:1px solid rgba(0,0,0,.25);';
+
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'padding:6px;';
+    wrapper.appendChild(canvas);
+    wrapper.appendChild(hex);
+    content.appendChild(wrapper);
+
+    // Painted after it is in the document: a canvas with no layout yet still
+    // takes a fill, but nothing else about it is worth guessing at.
+    paintSpectrum(canvas);
+
+    const pick = (event: PointerEvent) => {
+      const picked = pickSpectrum(canvas, event.clientX, event.clientY);
+      if (!picked) {
+        return;
+      }
+      const value = toHex(picked.map(byte => byte / 255));
+      this.setValue(value);
+      hex.value = value;
+    };
+    canvas.addEventListener('pointerdown', event => {
+      canvas.setPointerCapture(event.pointerId);
+      pick(event);
+    });
+    canvas.addEventListener('pointermove', event => {
+      if (event.buttons & 1) {
+        pick(event);
+      }
+    });
+    // The pick is done when the press ends — a drag can refine it first.
+    canvas.addEventListener('pointerup', () =>
+      Blockly.DropDownDiv.hideIfOwner(this),
+    );
+
+    const commitTyped = () => {
+      const typed = hex.value.trim();
+      if (HEX.test(typed)) {
+        this.setValue(typed.toLowerCase());
+      }
+      hex.value = this.getValue() ?? DEFAULT_COLOR;
+    };
+    hex.addEventListener('change', commitTyped);
+    hex.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        commitTyped();
+        Blockly.DropDownDiv.hideIfOwner(this);
+      }
+    });
+
+    Blockly.DropDownDiv.setColour(
+      block.style.colourPrimary,
+      block.style.colourTertiary,
+    );
+    Blockly.DropDownDiv.showPositionedByField(this);
   }
 
   override dispose(): void {
-    this.picker?.remove();
-    this.picker = null;
+    Blockly.DropDownDiv.hideIfOwner(this);
     super.dispose();
   }
 }
