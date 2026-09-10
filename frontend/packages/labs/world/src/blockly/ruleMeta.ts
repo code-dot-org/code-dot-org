@@ -479,6 +479,10 @@ export const pascal = (id: string): string =>
 
 export const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   'number',
+  // A number said as a direction. Everything downstream treats it as a number
+  // — the default, the getter's output, the arithmetic — and the one thing it
+  // changes is the literal a call site starts with (`typedValueInputs`).
+  'angle',
   'boolean',
   'string',
   // Held as a string (`#rrggbb`) and asked about as its own kind: a color

@@ -41,15 +41,22 @@ export const ScaleProperty = PositionalTrait.addProperty(
   new Vector(1, 1),
   {name: 'scale'},
 );
+// An ANGLE rather than a number, which changes nothing about the value and
+// everything about how it is asked for: the socket of `set rotation of ⟨…⟩ to`
+// starts with a dial to point rather than three characters to type. Degrees,
+// 0 pointing right and 90 pointing down — the engine's one convention, shared
+// with `Vector.angle()` and `Vector.fromAngle`.
 export const RotationProperty = PositionalTrait.addProperty(
   SPATIAL.rotation,
-  'number',
+  'angle',
   0,
   {name: 'rotation'},
 );
+// Also degrees, and also a direction to point at rather than a number to guess
+// at: a shear is easier to aim than to arithmetic.
 export const SkewProperty = PositionalTrait.addProperty(
   SPATIAL.skew,
-  'number',
+  'angle',
   0,
   {name: 'vertical skew'},
 );
@@ -85,7 +92,7 @@ export const MoveAction = PositionalTrait.addAction(
 export const RotateAction = PositionalTrait.addAction(
   'rotate',
   (actor, degrees) => actor.set(RotationProperty, degrees as number),
-  {name: 'Rotate to', params: [{name: 'degrees', type: 'number', default: 0}]},
+  {name: 'Rotate to', params: [{name: 'degrees', type: 'angle', default: 0}]},
 );
 export const ScaleAction = PositionalTrait.addAction(
   'scaleTo',

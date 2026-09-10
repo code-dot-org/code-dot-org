@@ -3054,6 +3054,7 @@ describe('builder-context warnings', () => {
     ).find(c => c.name === 'Variables')?.blocks;
     expect(variables).toEqual([
       'world_let_number',
+      'world_let_angle',
       'world_let_word',
       'world_let_boolean',
       'world_let_vector',

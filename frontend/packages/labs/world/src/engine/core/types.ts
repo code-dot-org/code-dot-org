@@ -47,6 +47,20 @@ export interface AppliedEffectSpec {
  */
 export type PropertyType =
   | 'number'
+  /**
+   * A number that is a DIRECTION, in degrees — 0 points right, 90 points down.
+   *
+   * A number as far as the engine is concerned: `rotation` is set to one, read
+   * as one, tweened as one, and every piece of arithmetic accepts it. What the
+   * separate name buys is the same thing `color` buys — the two places that ask
+   * what a property IS want a different answer for an angle. A call site's
+   * socket starts with a dial you can point rather than four characters to
+   * type, and the map editor's inspector can show the same.
+   *
+   * The convention is the engine's own, so nothing converts: it is the angle
+   * `Vector.angle()` reports and `Vector.fromAngle` takes.
+   */
+  | 'angle'
   | 'boolean'
   | 'string'
   /**

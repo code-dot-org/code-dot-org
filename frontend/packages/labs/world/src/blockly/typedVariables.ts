@@ -150,12 +150,17 @@ export const paramFlavour = (type: string): TypedVariable => {
   // call site is drawn — an x and a y rather than an arrow grid
   // (`typedValueInputs`) — and what arrives is a vector either way, read with
   // the vector getter.
+  // …and an ANGLE parameter is a number parameter, for the same reason a
+  // position is a vector one: the type says the call site starts with a dial
+  // rather than a plain number, and what arrives is a number either way.
   const wanted =
     enumRefOfParamType(type) || type === 'kind'
       ? 'string'
       : type === 'position'
         ? 'vector'
-        : type;
+        : type === 'angle'
+          ? 'number'
+          : type;
   return (PARAM_FLAVOURS.find(f => f.type === wanted) ?? PARAM_FLAVOURS[0])
     .variable;
 };

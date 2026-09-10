@@ -222,8 +222,10 @@ describe('a `define block`’s own surface', () => {
     // to work through before anything can be named.
     const drawer = (strip() as ToolboxCategory[])[0];
 
-    expect(drawer.blocks?.slice(0, 4)).toEqual([
+    expect(drawer.blocks?.slice(0, 5)).toEqual([
       'world_let_number',
+      // A number said as a direction, beside the number it is one of.
+      'world_let_angle',
       'world_let_word',
       'world_let_boolean',
       'world_let_vector',

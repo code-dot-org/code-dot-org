@@ -59,6 +59,7 @@ export const BINDERS: Readonly<Record<string, Binder>> = {
   // and the only one that binds over the rows below it rather than inside
   // itself.
   world_let_number: DECLARATION,
+  world_let_angle: DECLARATION,
   world_let_word: DECLARATION,
   world_let_boolean: DECLARATION,
   world_let_vector: DECLARATION,

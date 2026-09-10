@@ -1026,6 +1026,10 @@ export function defineRule({name, ability, header, purpose}) {
     },
     number: (propName, initial, opts) =>
       rule.property({name: propName, type: 'number', value: initial, ...opts}),
+    // A number said as a DIRECTION: the same value, with a dial in the socket
+    // that sets it and on the `with default` slot that declares it.
+    angle: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'angle', value: initial, ...opts}),
     point: (propName, initial, opts) =>
       rule.property({name: propName, type: 'point', value: initial, ...opts}),
     vector: (propName, initial, opts) =>
@@ -1079,6 +1083,13 @@ export function defineRule({name, ability, header, purpose}) {
           self.property({
             name: propName,
             type: 'number',
+            value: initial,
+            ...opts,
+          }),
+        angle: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'angle',
             value: initial,
             ...opts,
           }),

@@ -134,6 +134,7 @@ import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
 import {worldContextExtension} from './extensions/worldContext';
+import fieldAnglePlugin, {fieldAngleArg} from './fields/FieldAngle';
 import {
   FieldColorPicker,
   installColorPickerField,
@@ -2038,6 +2039,19 @@ const typedValueInputs = (
         ],
       };
     }
+    case 'angle':
+      // A Number socket like any other — so a getter, a sum, or `direction of
+      // ⟨…⟩` all drop in — wearing the dial as its literal.
+      return {
+        message: `%${slot}`,
+        args: [numberInput(names.value)],
+        shadows: [
+          {
+            name: names.value,
+            shadow: {type: 'world_angle', fields: {ANGLE: Number(d ?? 0)}},
+          },
+        ],
+      };
     case 'boolean':
       return {
         message: `%${slot}`,
@@ -3379,7 +3393,7 @@ const nameField = (variable: {
  * reading it could not agree on.
  */
 const localDeclaration = (
-  kind: 'number' | 'word' | 'vector' | 'actor' | 'boolean',
+  kind: 'number' | 'angle' | 'word' | 'vector' | 'actor' | 'boolean',
   variable: {field: (name: string) => BlockArgDefinition},
   check: string | undefined,
   shadow: ShadowSpec | undefined,
@@ -3424,6 +3438,19 @@ const localDeclaration = (
 const worldLetNumber = localDeclaration('number', NumberVariable, 'Number', {
   type: 'math_number',
   fields: {NUM: 0},
+});
+/**
+ * `let angle ⟨heading⟩` — a number, declared as a direction.
+ *
+ * A NUMBER EITHER WAY, exactly as `let position` is a vector either way: the
+ * variable is a Number, the getter is the number getter, and arithmetic on it
+ * is arithmetic. What the separate declaration buys is the socket — the call
+ * site of a block with an angle argument starts with a dial to point rather
+ * than four characters to type.
+ */
+const worldLetAngle = localDeclaration('angle', NumberVariable, 'Number', {
+  type: 'world_angle',
+  fields: {ANGLE: 0},
 });
 const worldLetWord = localDeclaration('word', StringVariable, 'String', {
   type: 'text',
@@ -3497,6 +3524,7 @@ export const SIGNATURE_DRAWER = 'Block';
 
 const LET_BLOCKS: string[] = [
   'world_let_number',
+  'world_let_angle',
   'world_let_word',
   'world_let_boolean',
   'world_let_vector',
@@ -3631,6 +3659,39 @@ const worldVector = defineBlock({
       const v = (block.getFieldValue('VECTOR') ?? {x: 0, y: 0}) as VectorValue;
       return [
         `new WorldLab.Vector(${Number(v.x)}, ${Number(v.y)})`,
+        Order.ATOMIC,
+      ] as [string, number];
+    },
+  },
+});
+
+// The angle: `math_number` with the direction made visible and pointable.
+//
+// A degree is a number, and this reports one — so it plugs into every Number
+// socket and every piece of arithmetic, and a learner who wants `rotation + 5`
+// drops this into the `+`. What it adds is that the number is a DIRECTION: the
+// block shows which way it points, and clicking opens a dial to point it
+// (`fields/FieldAngle`).
+//
+// Offered as the shadow wherever the value is an angle rather than as a toolbox
+// block of its own, for the same reason the slider is: a learner meets it
+// already plugged into `⟨1⟩ in direction ⟨0⟩°`, and can drop a getter or an
+// expression on top of it like any other shadow.
+const worldAngle = defineBlock({
+  type: 'world_angle',
+  message0: '%1',
+  args0: [fieldAngleArg('ANGLE', 0)],
+  output: 'Number',
+  // The number blocks' color: it stands in for `math_number` and should not
+  // read as a different kind of thing.
+  style: 'math_blocks',
+  tooltip:
+    'An angle in degrees — 0 points right, 90 points down. Click to point it ' +
+    'on a dial, or type the number.',
+  generator: {
+    javascript(block) {
+      return [
+        String(Number(block.getFieldValue('ANGLE') ?? 0)),
         Order.ATOMIC,
       ] as [string, number];
     },
@@ -3881,13 +3942,19 @@ registerValueShadows('world_vector_of', [
 
 const worldVectorRotate = defineBlock({
   type: 'world_vector_rotate',
-  message0: 'rotate %1 by %2°',
+  // No `°` on the block: the angle carries its own unit now, on the dial that
+  // holds it (`fields/FieldAngle`), and two of them read as `90° °`.
+  message0: 'rotate %1 by %2',
   args0: [
     {type: 'input_value', name: 'VECTOR', check: 'Vector'},
     {type: 'input_value', name: 'DEGREES', check: 'Number'},
   ],
   inputsInline: true,
   output: 'Vector',
+  // Registered shadows do nothing without this — the extension is what
+  // attaches them. Both sockets came out empty until it was noticed that the
+  // block below said what they should hold and nothing read it.
+  extensions: [valueShadowExtension],
   style: 'location_blocks',
   tooltip: 'A vector turned by an angle, in degrees.',
   generator: {
@@ -3902,7 +3969,9 @@ const worldVectorRotate = defineBlock({
   },
 });
 registerValueShadows('world_vector_rotate', [
-  {name: 'DEGREES', shadow: {type: 'math_number', fields: {NUM: 90}}},
+  // A dial rather than a bare number: the value is a direction, and the block
+  // says so with a `°` on its own face.
+  {name: 'DEGREES', shadow: {type: 'world_angle', fields: {ANGLE: 90}}},
 ]);
 
 /**
@@ -3976,7 +4045,7 @@ const worldVectorDirection = defineBlock({
  */
 const worldVectorFromAngle = defineBlock({
   type: 'world_vector_from_angle',
-  message0: '%1 in direction %2°',
+  message0: '%1 in direction %2',
   args0: [
     {type: 'input_value', name: 'LENGTH', check: 'Number'},
     {type: 'input_value', name: 'DEGREES', check: 'Number'},
@@ -4001,7 +4070,7 @@ const worldVectorFromAngle = defineBlock({
 });
 registerValueShadows('world_vector_from_angle', [
   {name: 'LENGTH', shadow: {type: 'math_number', fields: {NUM: 1}}},
-  {name: 'DEGREES', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'DEGREES', shadow: {type: 'world_angle', fields: {ANGLE: 0}}},
 ]);
 
 const worldVectorComponent = defineBlock({
@@ -4020,6 +4089,7 @@ const worldVectorComponent = defineBlock({
   ],
   inputsInline: true,
   output: 'Number',
+  extensions: [valueShadowExtension],
   style: 'math_blocks',
   tooltip: 'Read one axis (x or y) of a vector as a number.',
   generator: {
@@ -6933,6 +7003,8 @@ const noGenerator = {javascript: () => ''};
 
 const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
   ['number', 'number'],
+  // A number said as a direction: the same value, edited on a dial.
+  ['angle', 'angle'],
   ['boolean', 'boolean'],
   ['string', 'string'],
   ['color', 'color'],
@@ -7108,9 +7180,17 @@ const propertyOn = (block: Block): PropertyShapeInput => {
  * control: the arrow grid for a vector (`world_vector`), an x and a y for a
  * point (two number sockets).
  */
-type DefaultShape = 'none' | 'text' | 'vector' | 'point' | 'color' | 'boolean';
+type DefaultShape =
+  | 'none'
+  | 'text'
+  | 'angle'
+  | 'vector'
+  | 'point'
+  | 'color'
+  | 'boolean';
 
 const DEFAULT_SHAPES: Readonly<Record<string, DefaultShape>> = {
+  angle: 'angle',
   vector: 'vector',
   point: 'point',
   color: 'color',
@@ -7148,6 +7228,21 @@ const VectorField = fieldVectorPlugin.field as new (
  */
 const ColorField = FieldColorPicker as unknown as new (value: string) => Field;
 
+/** The angle field's class, built by the same plugin factory as the vector's. */
+const AngleField = fieldAnglePlugin.field as new (value: number) => Field;
+
+/**
+ * Whether a field is one of these, asked so that TypeScript learns nothing.
+ *
+ * The plugin-built fields are typed as the base `Field`, so a failed
+ * `instanceof` against one narrows what is left to `null` and every test after
+ * it stops compiling. Behind a call there is nothing to narrow.
+ */
+const isFieldOf = (
+  field: Field | null,
+  kind: new (...args: never[]) => Field,
+): boolean => field !== null && field instanceof kind;
+
 /**
  * Put the right editor in the `with default` slot, carrying the value across.
  *
@@ -7168,9 +7263,6 @@ function shapeDefaultField(block: Block, type: string): void {
   const held = block.getFieldValue(DEFAULT_FIELD);
   const heldY = block.getFieldValue(DEFAULT_Y_FIELD);
   const at = block.getField(DEFAULT_FIELD);
-  // The vector's test comes LAST, and has to. Its class is typed as the base
-  // `Field` (it is built by a plugin factory), so a failed `instanceof` against
-  // it narrows what is left to `null` and every test after it stops compiling.
   const current: DefaultShape =
     block.getField(DEFAULT_Y_FIELD) !== null
       ? 'point'
@@ -7180,9 +7272,11 @@ function shapeDefaultField(block: Block, type: string): void {
           ? 'color'
           : at instanceof FieldDropdownClass
             ? 'boolean'
-            : at instanceof VectorField
-              ? 'vector'
-              : 'text';
+            : isFieldOf(at, AngleField)
+              ? 'angle'
+              : isFieldOf(at, VectorField)
+                ? 'vector'
+                : 'text';
   if (!row || current === wanted) {
     return;
   }
@@ -7222,7 +7316,9 @@ function shapeDefaultField(block: Block, type: string): void {
   // Appended, not inserted: the default is the last thing on the row, after the
   // type and the name that `define %1 %2` puts there.
   row.appendField(new FieldLabel('with default'), WITH_DEFAULT_LABEL);
-  if (wanted === 'color') {
+  if (wanted === 'angle') {
+    row.appendField(new AngleField(Number(text) || 0), DEFAULT_FIELD);
+  } else if (wanted === 'color') {
     row.appendField(new ColorField(text), DEFAULT_FIELD);
   } else if (wanted === 'boolean') {
     // A validator rather than an order: a dropdown given a value it does not
@@ -9597,6 +9693,8 @@ export const DOMAIN_BLOCKS = [
   worldVectorRotate,
   worldVectorOf,
   worldSlider,
+  worldAngle,
+  worldLetAngle,
   worldRgba,
   worldVectorLength,
   worldVectorDirection,
@@ -10176,6 +10274,11 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
     name: 'Math',
     blocks: [
       'math_number',
+      // …and a number that is a DIRECTION, for the general case the dial
+      // shadows do not cover: an angle a learner wants to keep in a variable,
+      // add to, or hand to a block whose socket is a plain number. It reports a
+      // number like any other, so it plugs in anywhere one does.
+      'world_angle',
       'math_arithmetic',
       'math_modulo',
       // Absolute value and friends — `abs` is what a distance test needs.

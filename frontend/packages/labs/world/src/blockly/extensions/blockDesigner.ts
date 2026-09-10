@@ -177,6 +177,7 @@ export const itemTypeFor = (part: BlockPart): string => {
  */
 const LET_ARGUMENTS: ReadonlyArray<{block: string; type: string}> = [
   {block: 'world_let_number', type: 'number'},
+  {block: 'world_let_angle', type: 'angle'},
   {block: 'world_let_word', type: 'string'},
   {block: 'world_let_boolean', type: 'boolean'},
   {block: 'world_let_vector', type: 'vector'},
