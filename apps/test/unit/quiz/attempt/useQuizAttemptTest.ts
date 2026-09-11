@@ -143,7 +143,7 @@ describe('useQuizAttempt', () => {
     expect(post).not.toHaveBeenCalled();
   });
 
-  it('finalizeAttempt PUTs and stores the submitted attempt', async () => {
+  it('finishAttempt PUTs and stores the submitted attempt', async () => {
     get.mockResolvedValue(jsonResponse(ATTEMPT));
     const submitted: QuizAttemptData = {
       ...ATTEMPT,
@@ -160,7 +160,7 @@ describe('useQuizAttempt', () => {
 
     let returned: QuizAttemptData | undefined;
     await act(async () => {
-      returned = await result.current.finalizeAttempt();
+      returned = await result.current.finishAttempt();
     });
 
     expect(put).toHaveBeenCalledWith(
@@ -173,12 +173,12 @@ describe('useQuizAttempt', () => {
     expect(result.current.attempt).toEqual(submitted);
   });
 
-  it('finalizeAttempt rejects without an attempt yet', async () => {
+  it('finishAttempt rejects without an attempt yet', async () => {
     const {result} = renderHook(() =>
       useQuizAttempt({levelId: 42, unitId: undefined})
     );
 
-    await expect(result.current.finalizeAttempt()).rejects.toThrow();
+    await expect(result.current.finishAttempt()).rejects.toThrow();
     expect(put).not.toHaveBeenCalled();
   });
 

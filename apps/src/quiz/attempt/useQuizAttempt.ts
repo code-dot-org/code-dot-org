@@ -23,7 +23,7 @@ interface UseQuizAttemptState {
     quizQuestionId: number,
     responseData: Record<string, unknown>
   ) => Promise<void>;
-  finalizeAttempt: () => Promise<QuizAttemptData>;
+  finishAttempt: () => Promise<QuizAttemptData>;
 }
 
 export default function useQuizAttempt({
@@ -108,7 +108,7 @@ export default function useQuizAttempt({
     [attempt]
   );
 
-  const finalizeAttempt = useCallback(async () => {
+  const finishAttempt = useCallback(async () => {
     if (!attempt) {
       throw new Error('No attempt to finalize.');
     }
@@ -135,7 +135,7 @@ export default function useQuizAttempt({
     error,
     beginAttempt,
     submitResponse,
-    finalizeAttempt,
+    finishAttempt,
   };
 }
 
