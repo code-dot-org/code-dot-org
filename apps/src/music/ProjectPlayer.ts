@@ -52,7 +52,6 @@ class ProjectPlayer {
 
   /**
    * Play the loaded song on repeat, first measure to last, until stop().
-   * Used for background music (Sprite Lab in Lab2's play-music block).
    */
   playLooping() {
     if (this.currentMetadata === null) {

@@ -16,8 +16,8 @@ interface PersonalProject {
 
 const MUSIC_PROJECT_TYPE = 'music';
 
-// The songs are the user's, not the level's, so one fetch serves every
-// level of a page session. A failed fetch clears the cache so the next
+// The songs are the user's, so one fetch serves every level of a page
+// session. A failed fetch clears the cache so the next
 // level retries. A song made mid-session shows up on the next page load —
 // the per-level fetch this replaces was no fresher within a level.
 let cachedFetch: Promise<MusicProjectOption[]> | null = null;
