@@ -6,9 +6,7 @@ import {QuizAttemptData} from './types';
 
 interface UseQuizAttemptArgs {
   levelId: number;
-  // Attempt tracking only applies inside a unit - a standalone preview has
-  // none, so the hook no-ops (see the effect and action guards below)
-  // rather than requiring every caller to conditionally invoke it.
+  // Attempt tracking only applies inside a unit.
   unitId: number | undefined;
 }
 
@@ -19,10 +17,7 @@ interface UseQuizAttemptState {
   isLoading: boolean;
   error: string | null;
   // Starts, resumes, or retakes - the server decides which based on the
-  // latest existing attempt, if any (see QuizAttemptsController#create).
-  // Only ever called explicitly (an intro screen's Begin button, or a
-  // retake action) - never automatically, so a time-limited quiz's clock
-  // doesn't start before the student has chosen to begin.
+  // latest existing attempt, if any.
   beginAttempt: () => Promise<QuizAttemptData>;
   submitResponse: (
     quizQuestionId: number,
@@ -41,9 +36,6 @@ export default function useQuizAttempt({
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Check-only, on mount - never creates an attempt as a side effect of
-  // loading the page, for the same reason beginAttempt is never called
-  // automatically (see above).
   useEffect(() => {
     if (!unitId) {
       setIsLoading(false);
