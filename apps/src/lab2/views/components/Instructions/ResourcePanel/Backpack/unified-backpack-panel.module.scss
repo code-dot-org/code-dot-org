@@ -15,7 +15,8 @@ $file-list-gap: 8px;
 
   // Collapsed, the heading ends the list and its own padding already holds it off the
   // panel edge, so the panel's bottom padding is only dead space under a full list.
-  &:has(.unsupportedSection:not([open])) {
+  // A save button, when present, is last instead and needs that padding.
+  &:has(.unsupportedSection:not([open])):not(:has(.saveButton)) {
     padding-bottom: 0;
   }
 }
