@@ -31,11 +31,13 @@ import {LabStep} from './types';
 
 const SAVE_DEBOUNCE_MS = 750;
 
-// The storage scope a lab step reads and writes.  Sandboxed steps share
-// one throwaway source per segment (so a multi-step skill practice keeps
-// its state) or get their own when unsegmented.
+// The storage scope a lab step reads and writes.  Both sandbox flavors
+// (practice, projectPractice) share one throwaway source per segment
+// (so a multi-step skill practice keeps its state) or get their own
+// when unsegmented.  The 'sandbox-' prefix is a storage key, kept
+// stable across the enum rename so saved practice files stay found.
 export function sourceScopeFor(step: LabStep): string {
-  if (step.sourceMode === 'sandbox') {
+  if (step.sourceMode === 'practice' || step.sourceMode === 'projectPractice') {
     return `sandbox-${step.segment?.id || step.id}`;
   }
   return step.labType;

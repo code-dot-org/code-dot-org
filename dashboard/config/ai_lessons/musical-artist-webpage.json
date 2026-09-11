@@ -91,7 +91,7 @@
       "title": "What is a tag?",
       "role": "skillBuilding",
       "segment": {"id": "html-tags", "title": "Skill practice: HTML tags"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "none",
       "description": "Introduce HTML tags using the small example page in the sandbox. Explain that tags come in pairs like <h1>…</h1> and <p>…</p>, and that they tell the browser what each piece of content is. Point at the specific tags visible in the example. The student just reads and continues; nothing to complete.",
       "starterFiles": {
@@ -105,7 +105,7 @@
       "title": "Edit the text in a tag",
       "role": "skillBuilding",
       "segment": {"id": "html-tags", "title": "Skill practice: HTML tags"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "tutor",
       "description": "Ask the student to change the text inside one of the existing tags — the heading or a paragraph — and watch the preview update.",
       "successCriteria": "The text inside at least one existing element differs from the starter text."
@@ -117,7 +117,7 @@
       "title": "Add your own tag",
       "role": "skillBuilding",
       "segment": {"id": "html-tags", "title": "Skill practice: HTML tags"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "tutor",
       "description": "Ask the student to add a complete new element of their own — another paragraph, a heading, anything with an opening and closing tag.",
       "successCriteria": "The page contains at least one new complete element (opening and closing tag with content) that was not in the starter code."
@@ -160,7 +160,7 @@
       "title": "What is CSS?",
       "role": "skillBuilding",
       "segment": {"id": "css-basics", "title": "Skill practice: CSS"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "none",
       "description": "Introduce CSS using the example in the sandbox: a rule has a selector, a property, and a value. Point at the h1 rule in style.css and how it changes the heading in the preview. The student just reads and continues.",
       "starterFiles": {
@@ -175,7 +175,7 @@
       "title": "Add to an existing rule",
       "role": "skillBuilding",
       "segment": {"id": "css-basics", "title": "Skill practice: CSS"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "tutor",
       "description": "Ask the student to add another property to the existing h1 rule — a different color, a font-size, anything that visibly changes the heading.",
       "successCriteria": "The h1 rule contains at least one property beyond the starter's color: purple, or the starter property's value was changed."
@@ -187,7 +187,7 @@
       "title": "Write a new rule",
       "role": "skillBuilding",
       "segment": {"id": "css-basics", "title": "Skill practice: CSS"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "tutor",
       "description": "Ask the student to write a brand new rule targeting a different element, like p or body.",
       "successCriteria": "style.css contains a new rule (selector plus at least one property) that was not in the starter code."
@@ -300,7 +300,7 @@
       "title": "Lists and text formatting",
       "role": "skillBuilding",
       "segment": {"id": "html-extra", "title": "More HTML"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "tutor",
       "description": "Teach ordered and unordered lists (<ul>, <ol>, <li>) and inline formatting (<strong>, <em>). Have the student build a small list with at least one formatted item.",
       "successCriteria": "The page contains a list with at least two items, and at least one use of strong or em."
@@ -312,7 +312,7 @@
       "title": "Heading levels",
       "role": "skillBuilding",
       "segment": {"id": "html-extra", "title": "More HTML"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "tutor",
       "description": "Teach the h1-h6 hierarchy: one main heading, subheadings for sections. Have the student structure a page with at least two heading levels. This is the last step of the HTML mini-lesson; afterwards the student returns to the what-next choice.",
       "successCriteria": "The page uses at least two different heading levels in a sensible hierarchy.",
@@ -325,7 +325,7 @@
       "title": "Fonts and text styling",
       "role": "skillBuilding",
       "segment": {"id": "css-extra", "title": "More CSS"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "tutor",
       "description": "Teach font-family, font-size, and text-align. Have the student restyle the sandbox page's text.",
       "successCriteria": "The stylesheet sets at least two of font-family, font-size, or text-align."
@@ -337,7 +337,7 @@
       "title": "Backgrounds and spacing",
       "role": "skillBuilding",
       "segment": {"id": "css-extra", "title": "More CSS"},
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "tutor",
       "description": "Teach background-color, padding, and margin. Have the student give an element a visible box: background plus some breathing room. This is the last step of the CSS mini-lesson; afterwards the student returns to the what-next choice.",
       "successCriteria": "At least one rule sets a background-color together with padding or margin.",

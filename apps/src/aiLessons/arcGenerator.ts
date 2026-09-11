@@ -84,10 +84,10 @@ const arcSchema = Output.object({
               'lab steps: what must verifiably be true of the work to pass, in at most 2 sentences. Omit for free-explore steps.'
             ),
           sourceMode: z
-            .enum(['project', 'sandbox'])
+            .enum(['practice', 'projectPractice', 'project'])
             .optional()
             .describe(
-              'lab steps: "sandbox" for isolated skill practice (the default choice), "project" to work on the student\'s own site.'
+              'lab steps: "practice" for self-contained skill drills (the default choice — the student\'s project topic stays out of the exercise); "projectPractice" for a sandbox exercise deliberately themed on the student\'s own project idea; "project" to work on the student\'s own site.'
             ),
           aiPrompting: z
             .enum(['off', 'presets', 'free'])
@@ -317,7 +317,10 @@ export function coerceArc(
       kind: 'lab',
       labType: ARC_LAB_TYPE,
       role: 'skillBuilding',
-      sourceMode: raw.sourceMode === 'project' ? 'project' : 'sandbox',
+      sourceMode:
+        raw.sourceMode === 'project' || raw.sourceMode === 'projectPractice'
+          ? raw.sourceMode
+          : 'practice',
       validation: (raw.successCriteria || '').trim() ? 'tutor' : 'none',
       successCriteria: raw.successCriteria
         ? String(raw.successCriteria)

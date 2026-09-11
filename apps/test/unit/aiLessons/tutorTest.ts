@@ -36,7 +36,7 @@ const projectStep: Step = {
 const sandboxStep: Step = {
   ...projectStep,
   id: 'practice',
-  sourceMode: 'sandbox',
+  sourceMode: 'projectPractice',
 };
 
 const lesson: LessonPlan = {
@@ -174,6 +174,42 @@ describe('generateTutorReply checklist handling', () => {
     );
   });
 
+  it('drops project-bank answers from context on practice steps', async () => {
+    const isolatedLesson: LessonPlan = {
+      ...lesson,
+      steps: [{...projectStep, sourceMode: 'practice'} as Step, sandboxStep],
+    };
+    const studentInputs = {
+      'what-to-make': {
+        questionId: 'what-to-make',
+        stepId: 'interview',
+        prompt: 'What do you want to make?',
+        answer: 'a bakery site',
+        contextKind: 'project' as const,
+        at: '2026-01-01T00:00:00Z',
+      },
+      'css-experience': {
+        questionId: 'css-experience',
+        stepId: 'interview',
+        prompt: 'How experienced are you with CSS?',
+        answer: '2 out of 10',
+        contextKind: 'ability' as const,
+        at: '2026-01-01T00:00:01Z',
+      },
+    };
+    await generateTutorReply(ctx({lesson: isolatedLesson, studentInputs}), []);
+    let system = mockGenerate.mock.calls[0][1].system;
+    expect(system).not.toContain('a bakery site');
+    expect(system).toContain('2 out of 10');
+
+    // Ordinary steps keep both banks.
+    mockGenerate.mockClear();
+    await generateTutorReply(ctx({studentInputs}), []);
+    system = mockGenerate.mock.calls[0][1].system;
+    expect(system).toContain('a bakery site');
+    expect(system).toContain('2 out of 10');
+  });
+
   it('coerces per-item verdicts, dropping malformed entries', async () => {
     mockGenerate.mockResolvedValue({
       output: {
@@ -239,7 +275,7 @@ describe('skill-hub mastery framing', () => {
     labType: 'weblab2',
     description: 'targeted practice',
     validation: 'tutor',
-    sourceMode: 'sandbox',
+    sourceMode: 'projectPractice',
     generated: true,
   };
 

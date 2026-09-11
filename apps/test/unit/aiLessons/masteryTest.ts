@@ -186,7 +186,7 @@ describe('generateRemediationSteps', () => {
       id: 'gen-debugging-2-1',
       kind: 'lab',
       labType: 'weblab2',
-      sourceMode: 'sandbox',
+      sourceMode: 'projectPractice',
       validation: 'tutor',
       aiPrompting: 'free',
       generated: true,

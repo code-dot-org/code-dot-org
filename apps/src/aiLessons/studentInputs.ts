@@ -33,6 +33,10 @@ export interface AnswerRecord {
   attempts?: number;
   // For AI build prompts: the files the build changed.
   changedFiles?: string[];
+  // Denormalized from the question (see Question.contextKind): which
+  // bank of student context this answer feeds.  Absent on build-prompt
+  // records — those are routed by step identity instead.
+  contextKind?: 'ability' | 'project';
   at: string;
 }
 

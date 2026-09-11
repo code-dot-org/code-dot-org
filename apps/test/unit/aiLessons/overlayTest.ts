@@ -48,7 +48,7 @@ const remediation: LessonOverlay = {
       labType: 'weblab2',
       description: 'targeted practice',
       validation: 'tutor',
-      sourceMode: 'sandbox',
+      sourceMode: 'projectPractice',
       generated: true,
     } as LessonPlan['steps'][number],
   ],

@@ -302,7 +302,9 @@ ${
       labType: 'weblab2',
       title: String(s.title || `More ${path.title} practice`),
       role: 'skillBuilding',
-      sourceMode: 'sandbox',
+      // Deliberately project-themed: remediation personalizes exercises
+      // around the student's own topic (see the generator's brief).
+      sourceMode: 'projectPractice',
       validation: 'tutor',
       aiPrompting: 'free',
       generated: true,

@@ -76,8 +76,15 @@ function normalizeStep(raw: unknown, index: number): Step {
 
   if (step.kind === 'lab') {
     const lab = step as Partial<LabStep>;
+    // Legacy 'sandbox' predates the practice/projectPractice split; its
+    // behavior (personalized sandbox) is what projectPractice names.
+    const sourceMode =
+      (lab.sourceMode as string) === 'sandbox'
+        ? ('projectPractice' as const)
+        : lab.sourceMode;
     return {
       ...(lab as LabStep),
+      sourceMode,
       id,
       title,
       kind: 'lab',

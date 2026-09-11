@@ -101,11 +101,19 @@ export interface LabStep extends StepBase {
   // steps); the tutor still chats but never gates.
   validation: 'tutor' | 'none';
   successCriteria?: string;
-  // 'project' (default): the lesson-wide project for this lab type, with
-  // source carry-over across steps.  'sandbox': an isolated throwaway
-  // source scoped to the segment (or this step, if no segment), used for
-  // skill practice that shouldn't dirty the student's project.
-  sourceMode?: 'project' | 'sandbox';
+  // Where this step's work lives and how much of the student's project
+  // informs it.  One axis, because a project-backed step cannot suppress
+  // project context — the files themselves ARE the context.
+  //   'project' (default): the lesson-wide project for this lab type,
+  //     with source carry-over across steps; full personalization.
+  //   'projectPractice': a throwaway sandbox scoped to the segment (or
+  //     this step) but THEMED on the student's own project — the
+  //     showcase, the first build; both context banks flow.
+  //   'practice': a self-contained sandbox exercise — the build partner
+  //     and tutor get the ability bank only, never the project topic.
+  // Legacy 'sandbox' JSONs normalize to 'projectPractice' (its old
+  // behavior).
+  sourceMode?: 'project' | 'projectPractice' | 'practice';
   // Instruction for generating this student's starting source when they
   // first arrive, personalized with their recorded answers.  Natural
   // language; the generator receives all student inputs alongside it.
@@ -206,6 +214,13 @@ export interface Question {
   // against successCriteria.
   validation?: 'key' | 'tutor';
   successCriteria?: string;
+  // Which bank of student context this answer belongs to.  'ability'
+  // (experience scales, diagnostics) flows everywhere, including
+  // isolated practice steps; 'project' (their idea, their content)
+  // stays out of isolated steps so exercises can't absorb the project
+  // theme.  Absent = today's behavior: treated as project-ish, kept
+  // out of isolated builds.  Denormalized onto the AnswerRecord.
+  contextKind?: 'ability' | 'project';
 }
 
 export interface QuestionsStep extends StepBase {
@@ -370,7 +385,7 @@ export function stepShowsChecklist(lesson: LessonPlan, step: Step): boolean {
   return (
     (lesson.checklist || []).length > 0 &&
     step.kind === 'lab' &&
-    step.sourceMode !== 'sandbox'
+    (step.sourceMode ?? 'project') === 'project'
   );
 }
 
@@ -410,5 +425,8 @@ export function hubOwning(
 // project content.
 export function isSandboxStep(lesson: LessonPlan, stepId: string): boolean {
   const step = lesson.steps.find(s => s.id === stepId);
-  return step?.kind === 'lab' && step.sourceMode === 'sandbox';
+  return (
+    step?.kind === 'lab' &&
+    (step.sourceMode === 'practice' || step.sourceMode === 'projectPractice')
+  );
 }

@@ -55,16 +55,16 @@ describe('sourceScopeFor', () => {
     expect(sourceScopeFor(labStep({labType: 'music'}))).toBe('music');
   });
 
-  it('scopes sandboxes by segment, falling back to the step id', () => {
+  it('scopes both sandbox flavors by segment, falling back to the step id', () => {
     expect(
       sourceScopeFor(
         labStep({
-          sourceMode: 'sandbox',
+          sourceMode: 'practice',
           segment: {id: 'html-tags', title: 'HTML tags'},
         })
       )
     ).toBe('sandbox-html-tags');
-    expect(sourceScopeFor(labStep({sourceMode: 'sandbox'}))).toBe(
+    expect(sourceScopeFor(labStep({sourceMode: 'projectPractice'}))).toBe(
       'sandbox-build-step'
     );
   });
@@ -157,7 +157,10 @@ describe('generateProjectFiles', () => {
     mockGenerate.mockResolvedValue({
       output: {files: [{filename: 'index.html', contents: 'x'}], summary: ''},
     });
-    const practiceStep = labStep({id: 'practice', sourceMode: 'sandbox'});
+    const practiceStep = labStep({
+      id: 'practice',
+      sourceMode: 'projectPractice',
+    });
     const projectStep = labStep({id: 'project'});
     const branchedLesson: LessonPlan = {
       ...lesson,
@@ -201,6 +204,62 @@ describe('generateProjectFiles', () => {
     });
     args = mockGenerate.mock.calls[1][1];
     expect(args.system).toContain('Nimbus');
+    // A plain sandbox step still receives the project vision — the
+    // showcase and first-build steps personalize on purpose.
+    expect(args.system).toContain('a bakery site');
+  });
+
+  it('drops the project vision entirely on isolated steps', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {files: [{filename: 'index.html', contents: 'x'}], summary: ''},
+    });
+    const isolatedStep = labStep({
+      id: 'practice',
+      sourceMode: 'practice',
+    });
+    const branchedLesson: LessonPlan = {...lesson, steps: [isolatedStep]};
+    const inputs = {
+      'what-to-make': {
+        questionId: 'what-to-make',
+        stepId: 'interview',
+        prompt: 'What do you want to make?',
+        answer: 'a bakery site',
+        contextKind: 'project' as const,
+        at: '2026-01-01T00:00:00Z',
+      },
+      'css-experience': {
+        questionId: 'css-experience',
+        stepId: 'interview',
+        prompt: 'How experienced are you with CSS?',
+        answer: '2 out of 10',
+        contextKind: 'ability' as const,
+        at: '2026-01-01T00:00:01Z',
+      },
+      'ai-prompt-practice-1': {
+        questionId: 'ai-prompt-practice-1',
+        stepId: 'practice',
+        prompt: 'AI build prompt (practice)',
+        answer: 'a page for Nimbus, a weather app startup',
+        at: '2026-01-02T00:00:00Z',
+      },
+    };
+
+    await generateProjectFiles({
+      lesson: branchedLesson,
+      step: isolatedStep,
+      prompt: 'add a footer',
+      inputs,
+    });
+    const args = mockGenerate.mock.calls[0][1];
+    // Project-bank answers (the project's topic) stay out; the step's
+    // own iteration history and the ability bank stay in, under
+    // exercise framing.
+    expect(args.system).not.toContain('a bakery site');
+    expect(args.system).toContain('Nimbus');
+    expect(args.system).toContain('2 out of 10');
+    expect(args.system).toContain('STUDENT EXPERIENCE');
+    expect(args.system).toContain('SELF-CONTAINED');
+    expect(args.system).not.toContain("project's content and vision");
   });
 
   it('throws when the model returns no files', async () => {

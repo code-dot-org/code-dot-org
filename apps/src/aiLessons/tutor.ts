@@ -183,6 +183,8 @@ function currentStepDetails(
   ${step.description}`);
   }
   if (step.kind === 'lab') {
+    // Practice steps need no "ignore their project" order here: the
+    // project bank is filtered out of STUDENT CONTEXT mechanically.
     if (step.aiPrompting === 'presets' || step.aiPrompting === 'free') {
       lines.push(
         `  On this step the student prompts an AI build partner in a separate
@@ -254,9 +256,17 @@ function formatStudentContext(
   currentStepId: string | undefined,
   inputs: StudentInputs | undefined
 ): string {
-  const records = Object.values(inputs || {}).sort((a, b) =>
-    a.at.localeCompare(b.at)
-  );
+  const current = lesson.steps.find(s => s.id === currentStepId);
+  const isolated = current?.kind === 'lab' && current.sourceMode === 'practice';
+  const records = Object.values(inputs || {})
+    // Isolated practice steps drop the project bank outright — removing
+    // the theme beats instructing the tutor to ignore it.  Ability
+    // answers and the step's own records stay.
+    .filter(
+      r =>
+        !isolated || r.stepId === currentStepId || r.contextKind !== 'project'
+    )
+    .sort((a, b) => a.at.localeCompare(b.at));
   if (records.length === 0) return '';
   const lines = records.map(r => {
     let note = '';
@@ -277,9 +287,14 @@ function formatStudentContext(
     return `  - "${r.prompt}" → ${r.answer}${note}`;
   });
   return `
-STUDENT CONTEXT (their own answers so far — use these to personalize:
+STUDENT CONTEXT (their own answers so far — ${
+    isolated
+      ? `match your support to their
+confidence and experience, and never re-ask them`
+      : `use these to personalize:
 reference their project and interests naturally, match your support to
-their confidence, and never re-ask them)
+their confidence, and never re-ask them`
+  })
 ${lines.join('\n')}
 `;
 }

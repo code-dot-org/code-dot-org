@@ -17,6 +17,7 @@
       "questions": [
         {
           "id": "html-css-experience",
+          "contextKind": "ability",
           "type": "scale",
           "prompt": "How experienced are you with HTML and CSS?",
           "scale": {
@@ -28,6 +29,7 @@
         },
         {
           "id": "js-experience",
+          "contextKind": "ability",
           "type": "scale",
           "prompt": "How about JavaScript?",
           "scale": {
@@ -39,6 +41,7 @@
         },
         {
           "id": "what-to-make",
+          "contextKind": "project",
           "type": "freeResponse",
           "prompt": "What do you want to make?",
           "placeholder": "A site for your team, your art, a cause, a business idea — anything."
@@ -51,7 +54,7 @@
       "labType": "weblab2",
       "title": "Here's what's possible",
       "role": "explore",
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "readOnly": true,
       "validation": "none",
       "description": "The AI has generated a polished, professional version of the site the student said they want to make. The workspace is read-only — this step is about looking, not editing. Point out what makes it feel professional. By the end of this lesson they'll have the skills to direct AI to build things like this.",
@@ -80,7 +83,7 @@
       "labType": "weblab2",
       "title": "Give it a try!",
       "role": "explore",
-      "sourceMode": "sandbox",
+      "sourceMode": "projectPractice",
       "validation": "none",
       "aiPrompting": "free",
       "promptPrefill": "Build me a website based on my idea.",
@@ -112,6 +115,7 @@
       "questions": [
         {
           "id": "a-footer",
+          "contextKind": "ability",
           "type": "multipleChoice",
           "validation": "key",
           "prompt": "Where do you usually find the footer on a website?",
@@ -137,6 +141,7 @@
         },
         {
           "id": "a-header",
+          "contextKind": "ability",
           "type": "multipleChoice",
           "validation": "key",
           "prompt": "What does a website header usually contain?",
@@ -162,6 +167,7 @@
         },
         {
           "id": "a-css",
+          "contextKind": "ability",
           "type": "multipleChoice",
           "validation": "key",
           "prompt": "Which language decides how a page LOOKS — colors, fonts, spacing?",
@@ -187,6 +193,7 @@
         },
         {
           "id": "a-js",
+          "contextKind": "ability",
           "type": "multipleChoice",
           "validation": "key",
           "prompt": "Which language makes a page REACT — respond to clicks and typing?",
@@ -212,6 +219,7 @@
         },
         {
           "id": "a-prompting",
+          "contextKind": "ability",
           "type": "freeResponse",
           "prompt": "Imagine asking an AI to build a page for your idea. What would you say to get exactly what you want?",
           "placeholder": "Write it like you would actually type it."
@@ -268,11 +276,15 @@
         "id": "path-prompting",
         "title": "Prompting"
       },
-      "sourceMode": "sandbox",
+      "sourceMode": "practice",
       "validation": "tutor",
       "aiPrompting": "free",
-      "description": "First prompting exercise. The student writes a layout-only prompt for a fictional brand: Nimbus, a weather app startup. Structural geometry only — sections, columns, placement — deliberately no colors or fonts. If their prompt drifts into styling, remind them: structure first.",
+      "description": "First prompting exercise, on the bare starter page for Nimbus, a fictional weather app startup (nothing to do with the student's own project). The student writes ONE layout-only prompt: which sections the page has and where they sit. Structure only — if their prompt drifts into colors or fonts, remind them: structure first.",
       "successCriteria": "The generated page contains at least three visually distinct sections (for example a header, a main content area, and a footer).",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Nimbus</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <h1>Nimbus</h1>\n    <p>Weather for people who plan ahead. Layout coming soon!</p>\n  </body>\n</html>\n",
+        "style.css": "/* Nimbus styles */\n"
+      },
       "levelProperties": {
         "initialViewMode": "preview"
       }
@@ -287,10 +299,10 @@
         "id": "path-prompting",
         "title": "Prompting"
       },
-      "sourceMode": "sandbox",
+      "sourceMode": "practice",
       "validation": "tutor",
       "aiPrompting": "free",
-      "description": "Second prompting exercise, continuing the Nimbus page from the previous step. Take something vague the student wants ('make it nicer') and rebuild it as a structural instruction using the word bank: header, hero, section, card, column, grid, navigation, footer, spacing, alignment. Each precise prompt gets fired so they see specificity pay off.",
+      "description": "Second prompting exercise, continuing the Nimbus page from the previous step. Have the student pick something vague they want ('make it nicer') and rebuild it together as a precise structural instruction — name the element and what changes. When their wording is vague, offer structural vocabulary in your coaching: header, hero, section, card, column, grid, navigation, footer, spacing, alignment. Fire the precise prompt so they see specificity pay off.",
       "successCriteria": "The student has issued at least one specific, structural prompt (naming a section or element and what should change about it), and the page reflects the change.",
       "levelProperties": {
         "initialViewMode": "preview"
@@ -302,7 +314,7 @@
       "labType": "weblab2",
       "title": "Fix it!",
       "role": "skillBuilding",
-      "sourceMode": "sandbox",
+      "sourceMode": "practice",
       "validation": "tutor",
       "aiPrompting": "free",
       "description": "A debugging exercise on a broken page. Three planted issues range in difficulty: (1) the second paragraph's closing tag is missing, so text runs together; (2) style.css misspells 'color' as 'colr', so the heading isn't blue; (3) script.js targets the id 'buton' which doesn't exist, so the button does nothing. The student can fix by hand or direct the AI — which issue they attack first and how targeted their prompts are is exactly what we want to observe.",
@@ -326,6 +338,7 @@
       "questions": [
         {
           "id": "debug-strategy",
+          "contextKind": "ability",
           "type": "freeResponse",
           "prompt": "How did you decide which bug to attack first — and what would you try first next time?"
         }
@@ -341,7 +354,7 @@
         "id": "path-js",
         "title": "JavaScript"
       },
-      "sourceMode": "sandbox",
+      "sourceMode": "practice",
       "validation": "tutor",
       "aiPrompting": "free",
       "description": "First JavaScript exercise: the sandbox has a button that changes the heading when clicked. Have the student change what the click does — different text, a different color, something of their own. Hand edits or AI prompts both count; the goal is understanding that JS connects an event to a change.",
@@ -364,7 +377,7 @@
         "id": "path-js",
         "title": "JavaScript"
       },
-      "sourceMode": "sandbox",
+      "sourceMode": "practice",
       "validation": "tutor",
       "aiPrompting": "free",
       "description": "Second JavaScript exercise, continuing the same sandbox: add a NEW interaction of the student's own — a second button, a hover effect driven by JS, a counter, anything that reacts to the user. Directing the AI to write it is fine; understanding what it wired up is the point — ask them to explain what their new code listens for and what it changes.",

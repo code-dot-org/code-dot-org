@@ -143,8 +143,17 @@ Cross-cutting fields:
   This encodes the branch-point authoring template: a shared objective,
   a core exercise carrying `branches`, one step per branch, each branch
   step's `next` pointing at the rejoin step.
-- `sourceMode: 'sandbox'` — isolates a skill-practice step's source from
-  the student's project (scoped to the segment).
+- `sourceMode: 'project' | 'projectPractice' | 'practice'` — one axis
+  for where the work lives AND how much of the student's project informs
+  it (a project-backed step can't suppress project context: the files
+  ARE the context).  'project' (default): the shared lesson project,
+  full personalization.  'projectPractice': a throwaway sandbox themed
+  on the student's project (showcase, first build).  'practice': a
+  self-contained exercise — the build partner gets only the step's own
+  prompt history plus the ability bank (never the project topic — no
+  photography-themed weather apps), and the tutor's STUDENT CONTEXT
+  drops the project bank.  Legacy `'sandbox'` normalizes to
+  'projectPractice'.
 - `starterPrompt` / `starterFiles` — generated-per-student or literal
   starting code.
 - `aiPrompting` / `presetPrompts` — whether the student can prompt the AI
@@ -154,6 +163,12 @@ Cross-cutting fields:
   prompting; personalization comes from recorded answers regardless).
 - `readOnly` — the lab mounts frozen (look, don't touch): showcase
   steps where the AI generates something aspirational to react to.
+- Question `contextKind: 'ability' | 'project'` — which bank of student
+  context the answer feeds, denormalized onto its AnswerRecord.
+  'ability' (experience scales, diagnostics, reflections) flows
+  everywhere, including isolated steps; 'project' (their idea, their
+  content) stays out of isolated steps.  Untagged answers keep today's
+  behavior: shown to the tutor, kept out of isolated builds.
 - `levelProperties` — a slice of the target lab's own LevelProperties
   schema, merged into the levelProperties EmbeddedLab synthesizes at
   mount.  Today's use: weblab2's `initialViewMode: 'split' | 'code' |
@@ -283,9 +298,11 @@ in-editor per-file diff affordances, and a build/undo resets editor UI
 state (open file, cursor) via the remount.
 
 Sources are per-user and per-**scope**: the lab type for the shared
-lesson project, or `sandbox-<segmentOrStepId>` for `sourceMode:
-'sandbox'` steps, so skill practice never dirties the student's project
-and a multi-step segment shares one throwaway workspace.
+lesson project, or `sandbox-<segmentOrStepId>` for both sandbox flavors
+(`practice`, `projectPractice`), so skill practice never dirties the
+student's project and a multi-step segment shares one throwaway
+workspace.  The `sandbox-` prefix is a storage key, kept stable across
+the enum rename.
 
 ### Project checklist
 

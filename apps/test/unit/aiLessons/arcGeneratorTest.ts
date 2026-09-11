@@ -120,7 +120,7 @@ describe('coerceArc', () => {
     expect(lab).toMatchObject({
       id: 'arc-ex',
       labType: 'weblab2',
-      sourceMode: 'sandbox',
+      sourceMode: 'practice',
       validation: 'tutor',
       aiPrompting: 'free',
       generated: true,

@@ -81,6 +81,7 @@ function answerRecord(
     questionId: question.id,
     stepId: step.id,
     prompt: question.prompt,
+    contextKind: question.contextKind,
     at: new Date().toISOString(),
     attempts: (previous?.attempts || 0) + 1,
     outcome: 'accepted',

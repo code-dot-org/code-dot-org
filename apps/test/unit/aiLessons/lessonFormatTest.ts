@@ -60,6 +60,21 @@ describe('normalizeLessonPlan', () => {
     expect((plan.steps[2] as LabStep).validation).toBe('none');
   });
 
+  it("migrates legacy sourceMode 'sandbox' to projectPractice", () => {
+    const plan = normalizeLessonPlan({
+      title: 'Legacy',
+      steps: [
+        {kind: 'lab', labType: 'weblab2', sourceMode: 'sandbox'},
+        {kind: 'lab', labType: 'weblab2', sourceMode: 'practice'},
+        {kind: 'lab', labType: 'weblab2'},
+      ],
+      authorInputs: {prompt: ''},
+    });
+    expect((plan.steps[0] as LabStep).sourceMode).toBe('projectPractice');
+    expect((plan.steps[1] as LabStep).sourceMode).toBe('practice');
+    expect((plan.steps[2] as LabStep).sourceMode).toBeUndefined();
+  });
+
   it('fills defaults on terse v2 steps', () => {
     const plan = normalizeLessonPlan({
       title: 'Terse',
