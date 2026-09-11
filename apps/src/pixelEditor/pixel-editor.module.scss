@@ -244,9 +244,7 @@ $border-subtle: chrome.$border-subtle;
   grid-column: 1 / -1;
   justify-self: stretch;
 
-  // WithTooltip inserts a wrapper between the row and the swatch button;
-  // stretch through it so the swatch fills the toolbar width. (The absolute
-  // popover is out of flow and unaffected.)
+  // The swatch is the only in-flow child; stretch it to the toolbar width.
   > * {
     flex: 1 1 auto;
     min-width: 0;

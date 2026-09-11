@@ -9,14 +9,19 @@ const ThemedTooltip: React.FunctionComponent<TooltipProps> = ({
   ...rest
 }) => {
   const {theme} = useTheme(true);
-  if (!theme) {
-    return <Tooltip {...rest} slotProps={slotProps} />;
-  }
 
   return (
     <Tooltip
       {...rest}
-      slotProps={{...slotProps, tooltip: {'data-theme': theme}}}
+      slotProps={{
+        ...slotProps,
+        tooltip: ownerState => ({
+          ...(typeof slotProps?.tooltip === 'function'
+            ? slotProps.tooltip(ownerState)
+            : slotProps?.tooltip),
+          'data-theme': theme,
+        }),
+      }}
     />
   );
 };
