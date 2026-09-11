@@ -12,13 +12,22 @@ import {Markdown} from '@code-dot-org/markdown';
 <Markdown>{markdownString}</Markdown>
 ```
 
-| Prop          | Type                         | Description                                                        |
-| ------------- | ---------------------------- | ------------------------------------------------------------------ |
-| `content`     | `string`                     | Markdown source. Used instead of `children` when both are present. |
-| `children`    | `string`                     | Markdown source as a string child.                                 |
-| `className`   | `string`                     | Added to the wrapping `<div>`.                                     |
-| `bodyVariant` | `TypographyProps['variant']` | Type scale for body text. Defaults to `body2`.                     |
-| `extensions`  | `MarkdownExtension[]`        | Behaviors to enable for this render. See below.                    |
+| Prop          | Type                  | Description                                                        |
+| ------------- | --------------------- | ------------------------------------------------------------------ |
+| `content`     | `string`              | Markdown source. Used instead of `children` when both are present. |
+| `children`    | `string`              | Markdown source as a string child.                                 |
+| `className`   | `string`              | Added to the wrapping `<div>`.                                     |
+| `bodyVariant` | `BodyTextSizeVariant` | Type scale for body text (`body1`-`body4`). Defaults to `body2`.   |
+| `inline`      | `boolean`             | Render as phrasing content: one `<span>`, no block wrapper.        |
+| `extensions`  | `MarkdownExtension[]` | Behaviors to enable for this render. See below.                    |
+
+`inline` is for markdown that sits inside a sentence or a list item, where a
+`<div>`/`<p>` would be invalid and the surrounding element already supplies the
+type scale. It maps the paragraph away and disables the block constructs
+(headings, lists, quotes, fences, rules), so a string that happens to start with
+`- ` stays text rather than becoming a `<ul>` inside a `<span>`. Everything else
+-- the link and inline mappings, sanitization, extensions, the localization
+marker -- is unchanged.
 
 Base behavior, always on: GFM (tables, strikethrough, autolinks), the
 design-system mappings (`h1`–`h4`, `strong`, `em`, `a` → `Link`, `p` →

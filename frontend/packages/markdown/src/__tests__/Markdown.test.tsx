@@ -172,6 +172,60 @@ describe('Markdown', () => {
     });
   });
 
+  describe('inline', () => {
+    const renderInline = (markdown: string) =>
+      renderToStaticMarkup(<Markdown content={markdown} inline />);
+
+    it('renders one span, with no block wrapper or paragraph', () => {
+      const html = renderInline('**Algorithm** - a list of steps');
+      expect(html).not.toContain('<div');
+      expect(html).not.toContain('<p');
+      expect(html).toMatch(/^<span[^>]*>/);
+      // Inline mappings still apply: strong is the design-system variant.
+      expect(html).toMatch(/<strong[^>]*MuiTypography-strong[^>]*>Algorithm</);
+    });
+
+    it('still maps links to the design-system component', () => {
+      const html = renderInline('see [the docs](https://example.com)');
+      expect(html).toContain('href="https://example.com"');
+      expect(html).toContain('link-m');
+    });
+
+    it('keeps the localization marker the paragraph would have carried', () => {
+      expect(renderInline('some text')).toMatch(
+        /<span[^>]*data-isolate="true"/,
+      );
+    });
+
+    it('leaves block syntax as literal text', () => {
+      // A definition that happens to start with "- " must not become a list
+      // inside an inline context.
+      for (const [markdown, literal] of [
+        ['- one\n- two', '- one'],
+        ['# not a heading', '# not a heading'],
+        ['> not a quote', '&gt; not a quote'],
+        ['---', '---'],
+      ]) {
+        const html = renderInline(markdown);
+        expect(html).toContain(literal);
+        expect(html).not.toMatch(/<(ul|ol|li|h1|blockquote|hr)\b/);
+      }
+    });
+
+    it('applies the className to the span', () => {
+      const html = renderToStaticMarkup(
+        <Markdown content="text" inline className="mine" />,
+      );
+      expect(html).toMatch(/<span[^>]*class="mine"/);
+    });
+
+    it('still wraps in a block container when not inline', () => {
+      const html = render('**Algorithm** - a list of steps');
+      expect(html).toContain('<div');
+      expect(html).toContain('<p');
+    });
+  });
+
   describe('list items', () => {
     it('wraps tight list item text in a body paragraph', () => {
       const html = render('- one\n- two');

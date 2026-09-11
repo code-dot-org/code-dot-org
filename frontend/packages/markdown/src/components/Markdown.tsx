@@ -53,9 +53,18 @@ export interface MarkdownProps {
   /** Additional class name for the wrapping container. */
   className?: string;
   /**
+   * Render as phrasing content: one `<span>`, no block wrapper and no paragraph
+   * typography, for markdown that sits inside a sentence or a list item. Block
+   * syntax (headings, lists, quotes, fences, rules) is switched off, so it stays
+   * literal text rather than producing block markup inside an inline context.
+   * The surrounding element supplies the type scale, so `bodyVariant` does not
+   * apply.
+   */
+  inline?: boolean;
+  /**
    * Type scale for body text -- paragraphs, including those inside list items,
    * and the links inside them. Defaults to `body2`. Headings and other elements
-   * keep their own variants.
+   * keep their own variants. Ignored when `inline` is set.
    */
   bodyVariant?: BodyTextSizeVariant;
   /**
@@ -196,6 +205,26 @@ const baseComponents = (
 const NO_EXTENSIONS: MarkdownExtension[] = [];
 
 /*
+ * Block constructs, switched off for an inline render. Disabling them in the
+ * tokenizer is what makes the inline contract enforceable: a definition that
+ * happens to start with "- " stays text instead of becoming a <ul> inside a
+ * <span>. Named as micromark knows them.
+ */
+// Renders a mapped element's children in its place, dropping the element.
+const PassThrough: Components['p'] = ({children}) => <>{children}</>;
+
+const BLOCK_CONSTRUCTS = [
+  'blockQuote',
+  'codeFenced',
+  'codeIndented',
+  'headingAtx',
+  'htmlFlow',
+  'list',
+  'setextHeading',
+  'thematicBreak',
+];
+
+/*
  * A sanitize pass with a fresh attacher identity. unified de-duplicates plugins
  * by reference, so calling `.use(rehypeSanitize, schema)` twice reconfigures the
  * single registration instead of adding a second pass. Wrapping mints a distinct
@@ -220,6 +249,7 @@ const buildProcessor = (
   extensions: MarkdownExtension[],
   localized: boolean,
   bodyVariant: BodyTextSizeVariant,
+  inline: boolean,
 ) => {
   const sanitizeSchema = composeSanitizeSchema(defaultSchema, extensions);
 
@@ -256,6 +286,16 @@ const buildProcessor = (
     processor.use(sanitizePass(sanitizeSchema));
   }
 
+  if (inline) {
+    // Append rather than assign: remark-gfm has already registered its own
+    // micromark extensions under this key.
+    const micromarkExtensions = processor.data('micromarkExtensions') ?? [];
+    processor.data('micromarkExtensions', [
+      ...micromarkExtensions,
+      {disable: {null: BLOCK_CONSTRUCTS}},
+    ]);
+  }
+
   return processor.use(rehypeReact, {
     Fragment,
     jsx,
@@ -266,7 +306,11 @@ const buildProcessor = (
     // destructure only the props they use, so the extra prop is inert for them.
     passNode: true,
     components: composeComponents(
-      baseComponents(localized, bodyVariant),
+      inline
+        ? // The one paragraph the parser still produces is the wrapping span
+          // itself, which carries the localization marker in its place.
+          {...baseComponents(localized, bodyVariant), p: PassThrough}
+        : baseComponents(localized, bodyVariant),
       extensions,
     ),
   });
@@ -277,8 +321,9 @@ const buildProcessor = (
  * design-system components.
  *
  * Provide the markdown as the `content` prop or as a single string child. Pass
- * `extensions` to enable additional syntax, tags, or behaviors a la carte, and
- * `bodyVariant` to size body text.
+ * `extensions` to enable additional syntax, tags, or behaviors a la carte,
+ * `bodyVariant` to size body text, and `inline` for markdown that has to render
+ * as phrasing content.
  *
  * Localization is automatic: when the core localization plugin has loaded
  * LocalizeJS, content is translated in place and re-translated on locale change
@@ -288,6 +333,7 @@ const Markdown = ({
   content,
   className,
   bodyVariant = 'body2',
+  inline = false,
   extensions = NO_EXTENSIONS,
   children,
 }: MarkdownProps) => {
@@ -302,12 +348,23 @@ const Markdown = ({
   const localized = isLocalizationActive();
 
   const processor = useMemo(
-    () => buildProcessor(extensions, localized, bodyVariant),
-    [extensions, localized, bodyVariant],
+    () => buildProcessor(extensions, localized, bodyVariant, inline),
+    [extensions, localized, bodyVariant, inline],
   );
 
   const source = preprocessMarkdown(content ?? children ?? '', extensions);
   const rendered = processor.processSync(source).result;
+
+  if (inline) {
+    return (
+      <span
+        className={className}
+        {...(localized ? LOCALIZE_NOTRANSLATE_ATTRS : LOCALIZE_PARAGRAPH_ATTRS)}
+      >
+        {rendered}
+      </span>
+    );
+  }
 
   return (
     <div className={classNames(moduleStyles.markdownContainer, className)}>
