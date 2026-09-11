@@ -233,14 +233,8 @@ FactoryBot.define do
       trait :not_first_sign_in do
         sign_in_count {2}
       end
-      trait :with_recent_captcha do
-        last_verified_captcha_at {Time.now.utc}
-      end
       factory :terms_of_service_teacher do
         with_terms_of_service
-      end
-      factory :with_recent_captcha_teacher do
-        with_recent_captcha
       end
       factory :levelbuilder do
         after(:create) do |levelbuilder|
@@ -1507,6 +1501,12 @@ FactoryBot.define do
   factory :challenge_response_asset do
     association :challenge_response
     asset_type {'whiteboard_image'}
+  end
+
+  factory :challenge_response_reaction do
+    association :challenge_response
+    association :user, factory: :student
+    emoji {'heart'}
   end
 
   factory :user_lesson_objective_reflection do

@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-24 21:04:49 UTC",
+    "serialized_at": "2026-09-04 18:00:21 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6483,20 +6483,6 @@
       }
     },
     {
-      "name": "How AI Uses Data",
-      "url": "https://docs.google.com/presentation/d/1cfi44CMWhHfUI9nRuSwR1NsnzEsIkCHIxyzMJAYNhgY/edit?usp=sharing",
-      "key": "how_ai_uses_data_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "how_ai_uses_data_2"
-      }
-    },
-    {
       "name": "How Computers Work: Hardware and Software",
       "url": "https://youtu.be/DKGZlaPlVLY?si=nAAc-e14ctDiqfN8",
       "key": "how_computers_work_hardware_and_software",
@@ -7370,12 +7356,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 9: How AI Uses Data",
         "resource.key": "how_ai_uses_data_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: How AI Uses Data",
-        "resource.key": "how_ai_uses_data_2"
       }
     }
   ],

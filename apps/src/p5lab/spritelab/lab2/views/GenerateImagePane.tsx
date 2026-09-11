@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {AnyAction} from 'redux';
 
-import {dataURIToSourceSize} from '@cdo/apps/imageUtils';
+import {dataURIToSourceSize, toImage} from '@cdo/apps/imageUtils';
 import {
   addAnimation,
   deleteAnimation,
@@ -17,6 +17,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
+import {bytesToDataURI} from '../ai/images/encoding';
 import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
@@ -24,14 +25,15 @@ import {
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
 import {ImageGenerationMetadata, ImageType} from '../ai/images/types';
+import {AnimationPoses} from '../characterAnimations';
 import {
   categoriesForType,
   galleryOrder,
   imageTypeFromCategories,
 } from '../imageGallery';
 import {
-  forgetTrimmedThumbnail,
-  getTrimmedThumbnail,
+  forgetImageThumbnail,
+  getImageThumbnail,
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
@@ -39,18 +41,13 @@ import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 
 import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
-import {alternativeFromAnimation, useImageSession} from './useImageSession';
+import {
+  alternativeFromAnimation,
+  framesFromAnimation,
+  useImageSession,
+} from './useImageSession';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
-
-function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
-  let binary = '';
-  // Chunked: spreading a megabyte-scale array overflows the argument limit.
-  for (let i = 0; i < bytes.length; i += 32768) {
-    binary += String.fromCharCode(...bytes.subarray(i, i + 32768));
-  }
-  return `data:${mediaType};base64,${btoa(binary)}`;
-}
 
 type Dispatch = ReturnType<typeof useAppDispatch>;
 
@@ -61,10 +58,114 @@ interface AnimationPatch {
   dataURI?: string;
   frameSize?: {x: number; y: number};
   sourceSize?: {x: number; y: number};
+  frameCount?: number;
+  frameDelay?: number;
+  looping?: boolean;
+  poses?: AnimationPoses;
   categories?: string[];
   pixelGridSize?: number;
+  /** Set wherever an animation's pixels are replaced — a stale true would
+   * skip a needed trim. */
+  trimmed?: boolean;
   generation?: ImageGenerationMetadata;
   recentColors?: PixelEditorSaveMeta['recentColors'];
+}
+
+/** Where a strip's standing frame sits — the base picture the set was drawn
+    from (the last frame of the stand range; see CHARACTER_STRIP_POSES). */
+function standingFrameIndex(poses?: AnimationPoses): number {
+  const stand = poses?.['stand-right'];
+  return stand ? stand.start + stand.count - 1 : 0;
+}
+
+/**
+ * The standing frame of a character strip, full size. Falls back to the
+ * whole image if the crop can't be made.
+ */
+async function cropStandingFrame(
+  dataURI: string,
+  props: {frameSize: {x: number; y: number}; poses?: AnimationPoses}
+): Promise<string> {
+  try {
+    const img = await toImage(dataURI);
+    const canvas = document.createElement('canvas');
+    canvas.width = props.frameSize.x;
+    canvas.height = props.frameSize.y;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return dataURI;
+    }
+    ctx.drawImage(img, -standingFrameIndex(props.poses) * props.frameSize.x, 0);
+    return canvas.toDataURL('image/png');
+  } catch {
+    return dataURI;
+  }
+}
+
+// The Alternatives row displays ~64px entries; full-resolution sources
+// would each hold a decoded multi-megabyte bitmap for the dialog's life.
+const ALTERNATIVE_THUMB_PX = 160;
+
+/**
+ * A small standalone thumbnail for an Alternatives entry: a strip's
+ * standing frame, or the whole picture, downscaled. Falls back to the
+ * full image if it can't be made.
+ */
+async function alternativeThumb(
+  dataURI: string,
+  frames?: GeneratedImageResult['frames']
+): Promise<string> {
+  try {
+    const img = await toImage(dataURI);
+    const cell = frames ? frames.frameSize : {x: img.width, y: img.height};
+    const scale = Math.min(1, ALTERNATIVE_THUMB_PX / Math.max(cell.x, cell.y));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(cell.x * scale));
+    canvas.height = Math.max(1, Math.round(cell.y * scale));
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return dataURI;
+    }
+    ctx.drawImage(
+      img,
+      (frames ? standingFrameIndex(frames.poses) : 0) * cell.x,
+      0,
+      cell.x,
+      cell.y,
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+    return canvas.toDataURL('image/png');
+  } catch {
+    return dataURI;
+  }
+}
+
+// A plain single-frame picture's playback fields; also what a brand-new
+// animation starts as.
+const SINGLE_FRAME_PROPS = {frameCount: 1, frameDelay: 2, looping: true};
+
+/**
+ * The patch a result's frame grid dictates: a character strip's layout, or a
+ * plain picture's single frame — which must overwrite any strip the image
+ * used to be (explicit undefined clears poses).
+ */
+function framesPatch(frames: GeneratedImageResult['frames']): AnimationPatch {
+  return frames
+    ? {
+        frameSize: frames.frameSize,
+        sourceSize: {
+          x: frames.frameSize.x * frames.frameCount,
+          y: frames.frameSize.y,
+        },
+        frameCount: frames.frameCount,
+        frameDelay: frames.frameDelay,
+        looping: frames.looping,
+        poses: frames.poses,
+      }
+    : {...SINGLE_FRAME_PROPS, poses: undefined};
 }
 
 /**
@@ -82,9 +183,7 @@ function createNamedAnimation(
     // addAnimation is an untyped JS thunk; cast for dispatch.
     addAnimation(key, {
       name,
-      frameCount: 1,
-      frameDelay: 2,
-      looping: true,
+      ...SINGLE_FRAME_PROPS,
       ...props,
     }) as unknown as AnyAction
   );
@@ -123,20 +222,10 @@ function repointAnimation(
   return current.propsByKey[key]?.sourceUrl;
 }
 
-const MAX_GALLERY_LABEL_LENGTH = 100;
-
-// Student prompts are unbounded free text; cap what the card's alt text and
-// tooltip carry.
-function truncateLabel(label: string | undefined): string | undefined {
-  return label && label.length > MAX_GALLERY_LABEL_LENGTH
-    ? `${label.slice(0, MAX_GALLERY_LABEL_LENGTH - 1).trimEnd()}…`
-    : label;
-}
-
 interface GalleryCardProps {
   animKey: string;
-  /** Alt text and hover tooltip for the thumbnail. */
-  label?: string;
+  /** The image's name; the thumbnail's alt text. */
+  name?: string;
   /** Name shown under the thumbnail; omitted in the student gallery. */
   caption?: string;
   thumb?: string;
@@ -145,21 +234,21 @@ interface GalleryCardProps {
 
 // Memoized: opening or closing the dialog re-renders the pane, and every
 // card would re-render with it. Thumbnail updates arrive as a changed prop.
-const GalleryCard = React.memo<GalleryCardProps>(
-  ({animKey, label, caption, thumb, onOpen}) => (
+// Deliberately no title attribute: the card's label is the image's name
+// alone, and the full prompt lives in the image's dialog.
+// Exported for the label tests.
+export const GalleryCard = React.memo<GalleryCardProps>(
+  ({animKey, name, caption, thumb, onOpen}) => (
     <div className={moduleStyles.imageCard}>
       <button
         type="button"
         className={moduleStyles.imageThumb}
-        title={label}
         onClick={event => onOpen(animKey, event.currentTarget)}
       >
-        {thumb && <img src={thumb} alt={label || 'image'} />}
+        {thumb && <img src={thumb} alt={name || 'image'} />}
       </button>
       {caption !== undefined && (
-        <div className={moduleStyles.imageName} title={caption}>
-          {caption}
-        </div>
+        <div className={moduleStyles.imageName}>{caption}</div>
       )}
     </div>
   )
@@ -281,7 +370,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     reset: resetSession,
     end: endSession,
     push: pushAlternative,
+    setThumb: setAlternativeThumb,
     noteAsset,
+    seedSourceUrl,
   } = useImageSession(deleteUnreferencedAsset);
   // The gallery card that opened the dialog; focus returns to it on close.
   const triggerRef = useRef<HTMLElement | null>(null);
@@ -315,13 +406,17 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       triggerRef.current = trigger;
       setDialogTarget(key);
       setPaintNewDraft(null);
-      resetSession(
-        alternativeFromAnimation(
-          getStore().getState().animationList.propsByKey[key]
-        )
+      const seed = alternativeFromAnimation(
+        getStore().getState().animationList.propsByKey[key]
       );
+      resetSession(seed);
+      if (seed) {
+        alternativeThumb(seed.thumb, seed.frames).then(thumb =>
+          setAlternativeThumb(seed.id, thumb)
+        );
+      }
     },
-    [resetSession]
+    [resetSession, setAlternativeThumb]
   );
 
   const openNewDialog = useCallback(
@@ -403,28 +498,36 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   );
 
   // Current pixels as a data URI (generation's "use previous image" sends
-  // them in a JSON request body).
+  // them in a JSON request body, so an object-URL image is read back to
+  // base64 here).
   const getTargetDataURI = useCallback(async (): Promise<string | null> => {
     if (!targetProps) {
       return null;
     }
-    if (targetProps.dataURI) {
-      return targetProps.dataURI;
-    }
-    if (!targetProps.sourceUrl) {
-      return null;
-    }
-    try {
-      const blob = await (await HttpClient.get(targetProps.sourceUrl)).blob();
-      return await new Promise<string>((resolve, reject) => {
+    const readAsDataURL = (blob: Blob) =>
+      new Promise<string>((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = () => resolve(reader.result as string);
         reader.onerror = reject;
         reader.readAsDataURL(blob);
       });
+    let dataURI = targetProps.dataURI ?? null;
+    try {
+      if (dataURI?.startsWith('blob:')) {
+        dataURI = await readAsDataURL(await (await fetch(dataURI)).blob());
+      } else if (!dataURI && targetProps.sourceUrl) {
+        dataURI = await readAsDataURL(
+          await (await HttpClient.get(targetProps.sourceUrl)).blob()
+        );
+      }
     } catch {
       return null;
     }
+    // "Start from current image" on a character set references one frame,
+    // not the five-frame strip.
+    return dataURI && targetProps.poses
+      ? cropStandingFrame(dataURI, targetProps)
+      : dataURI;
   }, [targetProps]);
 
   // Persist an accepted generation: upload, then create the animation (new
@@ -458,11 +561,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
 
       pushAlternative({
         id: createUuid(),
-        thumb: dataURI,
+        // A strip's row entry shows its standing frame, not the whole sheet.
+        thumb: await alternativeThumb(dataURI, result.frames),
         sourceUrl,
         dataURI,
         frameSize,
+        frames: result.frames,
         pixelGridSize: result.pixelGridSize,
+        trimmed: result.trimmed,
         generation: result.generation,
       });
       noteAsset(sourceUrl);
@@ -471,8 +577,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         const key = createNamedAnimation(dispatch, newName, {
           sourceUrl,
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
+          ...framesPatch(result.frames),
           categories: categoriesForType(result.generation.imageType),
           pixelGridSize: result.pixelGridSize,
+          trimmed: !!result.trimmed,
           generation: result.generation,
         });
         // A new subject, even though the session continues.
@@ -489,7 +597,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         sourceUrl,
         dataURI,
         ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
+        // A regenerated image takes the new result's frame grid: a plain
+        // sprite replacing a character set drops its poses.
+        ...framesPatch(result.frames),
         pixelGridSize: result.pixelGridSize,
+        trimmed: !!result.trimmed,
         generation: result.generation,
       });
       // The superseded asset stays until the dialog closes: it's in the
@@ -520,7 +632,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       // from its URL) can't be re-trimmed until the data arrives; drop the
       // superseded image's cached trim so thumbnails don't keep showing it.
       if (!alt.dataURI) {
-        forgetTrimmedThumbnail(
+        forgetImageThumbnail(
           getStore().getState().animationList.propsByKey[key]?.name
         );
       }
@@ -530,7 +642,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         ...(alt.frameSize
           ? {frameSize: alt.frameSize, sourceSize: alt.frameSize}
           : {}),
+        // The entry's frame grid comes back with it — or clears the frame
+        // grid of the strip the image was a moment ago.
+        ...framesPatch(alt.frames),
         pixelGridSize: alt.pixelGridSize,
+        trimmed: !!alt.trimmed,
         generation: alt.generation,
       });
       noteAsset(previousUrl);
@@ -588,7 +704,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         });
         pushAlternative({
           id: createUuid(),
-          thumb: dataURI,
+          thumb: await alternativeThumb(dataURI),
           sourceUrl,
           dataURI,
           frameSize,
@@ -614,8 +730,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       const previousUrl = repointAnimation(dispatch, key, {
         sourceUrl,
         dataURI,
-        ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
+        // An edited character strip keeps its frame grid — the editor hands
+        // back the same canvas — so only a plain picture takes the measured
+        // size (which would otherwise turn the strip into one wide frame).
+        ...(frameSize && !props.poses
+          ? {frameSize, sourceSize: frameSize}
+          : {}),
         pixelGridSize: meta.pixelGridSize,
+        // The editor hands back the full canvas, margins and all.
+        trimmed: false,
         // Hand-edited pixels are not the prompt's output anymore; drop the
         // stale prompt and seed.
         generation: undefined,
@@ -623,12 +746,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         // follows the project.
         recentColors: meta.recentColors,
       });
+      const editedFrames = framesFromAnimation(props);
       pushAlternative({
         id: createUuid(),
-        thumb: dataURI,
+        thumb: await alternativeThumb(dataURI, editedFrames),
         sourceUrl,
         dataURI,
         frameSize,
+        frames: editedFrames,
         pixelGridSize: meta.pixelGridSize,
       });
       noteAsset(sourceUrl);
@@ -690,14 +815,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           <GalleryCard
             key={key}
             animKey={key}
-            // Students see auto-named images; the prompt describes them
-            // better than the name does.
-            label={truncateLabel(
-              advanced ? props?.name : props?.generation?.prompt || props?.name
-            )}
+            name={props?.name}
             caption={advanced ? props?.name : undefined}
             thumb={
-              getTrimmedThumbnail(props?.name) ||
+              getImageThumbnail(props?.name) ||
               props?.dataURI ||
               props?.sourceUrl ||
               undefined
@@ -715,14 +836,27 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           animKey={creating ? null : dialogTarget}
           name={targetProps?.name}
           thumb={
+            // The dialog is the full-resolution view; the small gallery
+            // thumbnail only stands in until the image's data arrives.
             creating
               ? undefined
-              : getTrimmedThumbnail(targetProps?.name || '') ||
-                targetProps?.dataURI ||
+              : targetProps?.dataURI ||
+                getImageThumbnail(targetProps?.name || '') ||
                 targetProps?.sourceUrl ||
                 undefined
           }
           generation={targetProps?.generation}
+          sheet={
+            !creating && targetProps?.poses
+              ? {
+                  src: targetProps.dataURI || targetProps.sourceUrl || '',
+
+                  frameSize: targetProps.frameSize,
+
+                  poses: targetProps.poses,
+                }
+              : undefined
+          }
           onClose={closeDialog}
           onPaint={() => {
             savingPaintRef.current = false;
@@ -734,6 +868,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
+          // No seed means the session started from nothing; any image
+          // differs from that.
+          imageChanged={
+            !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
+          }
           advanced={advanced}
           adlibSet={adlibSet}
           pixelated={!!targetProps?.pixelGridSize}

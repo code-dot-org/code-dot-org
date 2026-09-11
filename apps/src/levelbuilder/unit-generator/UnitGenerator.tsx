@@ -18,6 +18,7 @@ import {
 import {ExistingUnitData, LessonSpec, UnitGenerationSummary} from './types';
 import {LessonOutlinePayload, saveLessonOutlines} from './unitApi';
 
+import moduleStyles from './unit-generator.module.scss';
 import sharedStyles from '../curriculum-generator/curriculum-generator.module.scss';
 
 interface UnitGeneratorProps {
@@ -48,6 +49,12 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
     },
   });
   const [outline, setOutline] = useState<string>(unit.generateOutline || '');
+  const [draftingRules, setDraftingRules] = useState<string>(
+    unit.generateDraftingRules || ''
+  );
+  const [authoringRules, setAuthoringRules] = useState<string>(
+    unit.generateAuthoringRules || ''
+  );
   const [isOutlining, setIsOutlining] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -150,11 +157,11 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
       // outline actually clears on the server. The empty string is the
       // signal for "no outline"; the server treats anything (including '')
       // as an explicit overwrite.
-      const result = await saveLessonOutlines(
-        unit.editUnitUrl,
-        payload,
-        outline.trim()
-      );
+      const result = await saveLessonOutlines(unit.editUnitUrl, payload, {
+        generateOutline: outline.trim(),
+        generateDraftingRules: draftingRules.trim(),
+        generateAuthoringRules: authoringRules.trim(),
+      });
       // Pair the server's freshly-saved Lesson rows back to the spec list
       // by key, so the success dialog can show paths even for newly-created
       // lessons (whose ids we didn't have before this round-trip).
@@ -175,7 +182,14 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
     } finally {
       setIsSaving(false);
     }
-  }, [validationError, lessonSpecs, unit, outline]);
+  }, [
+    validationError,
+    lessonSpecs,
+    unit,
+    outline,
+    draftingRules,
+    authoringRules,
+  ]);
 
   const dialogOpen = isSaving || summary !== null || saveError !== null;
   const totalToSave = lessonSpecs.length;
@@ -212,6 +226,44 @@ const UnitGenerator: React.FC<UnitGeneratorProps> = ({unit}) => {
         disabled={isSaving}
         error={outlineError}
       />
+
+      <details className={sharedStyles.collapsibleBlock}>
+        <summary>Course rules (optional)</summary>
+        <p>
+          Free-text rules applied to every lesson generated in this unit. Saved
+          when you click &quot;Generate Lessons&quot; below.
+        </p>
+        <div className={sharedStyles.cardField}>
+          <label htmlFor="unit-drafting-rules">Level drafting rules</label>
+          <p>
+            How the outline AI should choose and pattern levels — e.g.
+            vocabulary treatments, where to place assessments, when to offer
+            choice levels. With rules set, a lesson may run to 12 levels instead
+            of 8.
+          </p>
+          <textarea
+            id="unit-drafting-rules"
+            value={draftingRules}
+            className={moduleStyles.rulesInput}
+            onChange={e => setDraftingRules(e.target.value)}
+            disabled={isSaving || unit.multipleLessonGroups}
+          />
+        </div>
+        <div className={sharedStyles.cardField}>
+          <label htmlFor="unit-authoring-rules">Authoring rules</label>
+          <p>
+            Constraints on generated level content — e.g. allowed syntax and
+            concepts, code style, audience and grade band.
+          </p>
+          <textarea
+            id="unit-authoring-rules"
+            value={authoringRules}
+            className={moduleStyles.rulesInput}
+            onChange={e => setAuthoringRules(e.target.value)}
+            disabled={isSaving || unit.multipleLessonGroups}
+          />
+        </div>
+      </details>
 
       <div className={sharedStyles.cardList}>
         {lessonSpecs.map((spec, index) => (

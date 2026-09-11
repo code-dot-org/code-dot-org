@@ -1,6 +1,5 @@
-# Backend-only deploy target for Skaffold (no dashboard). The dashboard
-# profile in ../../skaffold.yaml swaps this path for ../skaffold to deploy
-# the full app.
+# Backend-only deploy target for Skaffold. The root docker family does not yet
+# define a dashboard image containing the frontend assets.
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:

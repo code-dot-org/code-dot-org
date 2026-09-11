@@ -1,0 +1,13 @@
+.listControls {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  padding: 0 8px 8px 0;
+  box-sizing: border-box;
+}
+
+.controlDropdown {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+}

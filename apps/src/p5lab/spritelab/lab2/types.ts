@@ -4,6 +4,7 @@ import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {ImageAdlibSet} from './ai/images/imageAdlibs';
 import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {AnimationPoses} from './characterAnimations';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
 
@@ -31,8 +32,14 @@ export interface SerializedAnimationProps {
   // Pixel-editor recently-used colors, in first-seen order; absent until the
   // image is edited there.
   recentColors?: RGBA[];
+  // The stored image is already cropped to content (set at save time), so
+  // load-time trimming skips it.
+  trimmed?: boolean;
   // Present on AI-generated images.
   generation?: ImageGenerationMetadata;
+  // Present on a character set: where each pose lives in the sheet
+  // (characterAnimations.ts).
+  poses?: AnimationPoses;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.
@@ -80,6 +87,8 @@ export interface Sources extends ProjectSources {
  */
 export interface GuideStep {
   text: string;
+  /** Offer the Continue button to the next level while on this step. */
+  showContinue?: boolean;
   after?: {
     /** At least this many block-kind cells placed in the World. */
     worldBlocks?: number;
@@ -90,6 +99,12 @@ export interface GuideStep {
      * carries every image from the levels before this one.
      */
     images?: number;
+    /** At least this many sprite-type images in the project. */
+    spriteImages?: number;
+    /** At least this many background-type images in the project. */
+    backgroundImages?: number;
+    /** At least this many block-type images in the project. */
+    blockImages?: number;
     /** This tab is active. */
     tab?: Tab;
   };

@@ -2,6 +2,6 @@
 
 args=("$@")
 if [ $# -eq 0 ]; then
-  args=(/bin/zsh)
+  args=(/bin/sh)
 fi
-kubectl exec -it deployment/cdo-dashboard -- "${args[@]}"
+kubectl exec -it deployment/cdo-active-job-worker -- "${args[@]}"

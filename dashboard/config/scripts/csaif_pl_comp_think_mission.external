@@ -22,6 +22,6 @@ markdown <<MARKDOWN
 ---
 
 <div style="border-radius:10px; overflow:hidden;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/ct_pillars_mission.html" width="100%" height="900" style="border:none;" title="Computational Thinking Mission: help Alex apply the four pillars"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/ct_pillars_mission.html" width="100%" height="950" style="border:none;" title="Computational Thinking Mission: help Alex apply the four pillars"></iframe>
 </div>
 MARKDOWN

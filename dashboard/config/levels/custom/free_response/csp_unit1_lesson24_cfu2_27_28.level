@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-03T17:17:04.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "\r\nA program is supposed to store a nickname. Two students test it: \r\n\r\n- Student A enters nothing and presses **Enter** --> `nickname = \"\"`\r\n- Student B enters a **space** and presses **Enter** --> `nickname = \" \"`\r\n\r\nAre `nickname` for Student A and Student B the same value? Explain how you know.\r\n",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "50",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-03T17:17:04.589+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson24_cfu1_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson24_cfu1_27_28\"},{\"changed_at\":\"2026-09-03 17:19:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

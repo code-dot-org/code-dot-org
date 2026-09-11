@@ -22,7 +22,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def play_song():\n    # TODO 1: Fill in the message with a song name\n    print(\"\")\n\n# TODO 2: Call your play_song function",
+          "contents": "def play_song():\n  # TODO 1: Fill in the message with a song name\n  print(\"\")\n\n# TODO 2: Call your play_song function",
           "folderId": "0",
           "active": true
         }
@@ -43,9 +43,9 @@
       "answerTypeCustomizations": {
       }
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpcdAtEUS5E5GBM\npKfsZ5RlUA9poT36s7pKaw6F72M6jLbiwiLwCllyh5RzOxjJDVCPaqgRFxUk\nL3/fHZQn6L+WkNXeeA8A4O0KyntAX/v1w+F/WgOTL/a0ZZuIfkJ5AYIyOyF0\n49ddamYLt0LsCkvAdwkCJeIRbZc7lyvNr+0JS8Go8zOvv+5wGfswBhkq+htq\nyZnB+dijWSMbaOL/ALhF31fzotOHVv78f/aTb8xtpw==\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrv95xZXzqJMxY/\nt5IFwMb8YsqE6NPJQMA0wA1NNwXCU8W5xy7DRuoX7VhcRVvyHePMB870/Ds/\ngHV9cLk0S3zNhOTMGffY7My/FB3JGiRRFVBuXt+T/t5mfXSOJEH9+layVQsE\nx6fQIuZ5HM9JfacOf3lmvMluKhIoWzXWLD0VwvjTCzwN0H/fwn81GftnLPnS\neajFfWtg7qHJG5UQT0SR\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:30:33 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 02:34:43 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:39:54 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:30:33 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-28 02:34:43 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:39:54 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 17:08:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 17:08:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

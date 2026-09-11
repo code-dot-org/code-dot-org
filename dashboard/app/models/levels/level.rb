@@ -139,7 +139,22 @@ class Level < ApplicationRecord
     additional_ai_evaluation_instructions
     product_tours
     generate_outline
+    generate_supplied_code
   )
+
+  # State the AI lesson generator persisted on this level, merged into
+  # ScriptLevel#summarize_for_lesson_edit so the /generate page can
+  # re-populate its form. Subclasses with extra generator state override
+  # and merge (see Aichat).
+  def generate_fields
+    {generateOutline: generate_outline, generateSuppliedCode: generate_supplied_code}
+  end
+
+  # Everything the levelbuilder generator stores is a generate_* property;
+  # students never see those.
+  def student_properties
+    properties.reject {|key, _| key.start_with?('generate_')}
+  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -973,7 +988,7 @@ class Level < ApplicationRecord
   # StandaloneVideo then we put its properties into levelData.
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
-    properties_camelized = properties.camelize_keys
+    properties_camelized = student_properties.camelize_keys
     properties_camelized[:name] = name
     properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video

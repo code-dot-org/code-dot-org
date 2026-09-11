@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q6-2026'
+
+wrong 'Further from the dataset\'s range'
+right 'Further from the dataset\'s mean'
+wrong 'Closer to the dataset\'s range'
+wrong 'Closer to the dataset\'s mean'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A dataset with a larger standard deviation than another dataset will, on average, have data...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Analyzing Numerical Data
+MARKDOWN

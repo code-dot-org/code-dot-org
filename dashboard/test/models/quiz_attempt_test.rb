@@ -143,4 +143,35 @@ class QuizAttemptTest < ActiveSupport::TestCase
     result = attempt.question_results.first
     assert_nil result[:correct]
   end
+
+  test "disconnected (nil) level does not raise on expires_at/expired?/response_deadline_passed?/retakeable?/question_results" do
+    quiz = create(:quiz, show_correctness: true, reveal_answer_explanation: true)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+
+    quiz.destroy!
+    attempt.reload
+
+    assert_nil attempt.level
+    assert_nil attempt.expires_at
+    refute attempt.expired?
+    refute attempt.response_deadline_passed?
+    refute attempt.retakeable?
+    result = attempt.question_results.first
+    assert_equal question.id, result[:quiz_question_id]
+    assert_equal 'b', result[:selected_choice_id]
+    assert_nil result[:correct]
+    assert_nil result[:explanation]
+    assert_nil result[:correct_choice_id]
+  end
 end

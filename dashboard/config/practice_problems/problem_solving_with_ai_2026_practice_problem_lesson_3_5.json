@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_3_5",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of these is the best way to test how much context affects an AI model's predictions?",
+  "solution": [
+    {"option": "Ask AI a single question one time and assume the answer represents all of its capabilities.", "correct": false},
+    {"option": "Give AI the exact same short prompt multiple times without changing anything.", "correct": false},
+    {"option": "Give AI a prompt with minimal information, then repeat it with progressively more detail, and compare the responses.", "correct": true},
+    {"option": "Only test AI using questions about topics you already know well.", "correct": false}
+  ],
+  "objective_keys": [
+    "053a11f0-164d-4b51-905f-364b33cb67dd"
+  ]
+}
