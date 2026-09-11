@@ -42,17 +42,16 @@ const PURPOSE_OPTIONS = [
   },
 ];
 
+interface QuizConfigurableFields {
+  showIntroScreen: boolean;
+  timeLimitMinutes: number | null;
+  allowMultipleAttempts: boolean;
+  showCorrectness: boolean;
+  revealAnswerExplanation: boolean;
+}
+
 // Applied once, only when a purpose is chosen for the first time.
-const PURPOSE_DEFAULTS: Record<
-  string,
-  {
-    showIntroScreen: boolean;
-    timeLimitMinutes: number | null;
-    allowMultipleAttempts: boolean;
-    showCorrectness: boolean;
-    revealAnswerExplanation: boolean;
-  }
-> = {
+const PURPOSE_DEFAULTS: Record<string, QuizConfigurableFields> = {
   check_for_understanding: {
     showIntroScreen: false,
     timeLimitMinutes: null,
@@ -143,14 +142,9 @@ const QuizConfigurationPanel: React.FunctionComponent<
 
   // Every field autosaves individually.
   const handleSave = async (
-    updatedConfigValues: Partial<{
-      timeLimitMinutes: number | null;
-      showCorrectness: boolean;
-      revealAnswerExplanation: boolean;
-      showIntroScreen: boolean;
-      purpose: string | null;
-      allowMultipleAttempts: boolean;
-    }> = {},
+    updatedConfigValues: Partial<QuizConfigurableFields> & {
+      purpose?: string | null;
+    } = {},
     savingFieldName: string | null = null
   ): Promise<boolean> => {
     setError(null);

@@ -27,9 +27,6 @@ const INITIAL_VALUES: QuizConfigurationData = {
   allowMultipleAttempts: true,
 };
 
-// The time-limit field's label wraps the helper-message text too, so its
-// whole label text is "Set time limitLeave unset for no time limit" - a
-// regex substring match avoids depending on that formatting.
 const TIME_LIMIT_LABEL = /Set time limit/;
 
 function jsonResponse(data: QuizConfigurationData): Response {
