@@ -24,14 +24,18 @@ export default class ActivitySection extends Component {
         definition: PropTypes.string.isRequired,
       })
     ),
+    // Opens the full-size image dialog. Without it an expandable image renders
+    // inline and non-interactive, which is what the levelbuilder preview wants
+    // -- there is no dialog mounted there to open.
+    onExpandImage: PropTypes.func,
   };
 
   // Built once per instance: Markdown rebuilds its processor whenever the
   // extension list changes identity. The lookup reads current props.
   markdownExtensions = [
-    extensions.expandableImages({
-      onExpand: () => {},
-    }),
+    extensions.expandableImages(
+      this.props.onExpandImage ? {onExpand: this.props.onExpandImage} : {}
+    ),
     extensions.lenientHeadings,
     extensions.lenientLinkDestinations,
     extensions.visualCodeBlock,

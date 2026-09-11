@@ -1,3 +1,5 @@
+const path = require('path');
+
 const {APPLICATION_ALIASES, LOCALE_ALIASES} = require('./webpack.config');
 
 process.env.TZ = 'UTC';
@@ -12,6 +14,17 @@ const jestAliases = {
   uuid: require.resolve('uuid'),
   // Pin react to use the apps version of react when used in conjunction with linked npm packages
   '^react$': require.resolve('react'),
+  // Same pinning for MUI, mirroring the webpack and rspack `resolve.alias`
+  // entries: a portal-linked package (component-library, markdown) otherwise
+  // resolves frontend/node_modules/@mui/material, a second copy with its own
+  // ThemeProvider context -- so CdoTheme would not reach anything those
+  // packages render, and tests would report unthemed behavior the browser
+  // never sees.
+  '^@mui/material$': require.resolve('@mui/material'),
+  '^@mui/material/(.*)$': path.join(
+    path.dirname(require.resolve('@mui/material/package.json')),
+    '$1'
+  ),
   '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',

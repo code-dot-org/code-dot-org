@@ -203,10 +203,14 @@ class Lesson < ApplicationRecord
     !!has_lesson_plan
   end
 
-  # Fields the lesson plan renders with the markdown component that resolves
-  # vocabulary references itself. Their `[v key]` references ship unsubstituted,
-  # against the definitions vocabulary_definitions collects.
-  CLIENT_VOCAB_FIELDS = %w(purpose).freeze
+  # Fields rendered by the markdown component that resolves vocabulary
+  # references itself. Their `[v key]` references ship unsubstituted, against
+  # the definitions field_vocabulary_definitions collects.
+  #
+  # A field belongs here only once *every* surface that renders it can resolve
+  # the syntax: `preparation` appears on the course rollup pages as well as the
+  # lesson plan, so both had to migrate before it could join.
+  CLIENT_VOCAB_FIELDS = %w(purpose preparation).freeze
 
   # Returns a version of the named property which is fully ready for
   # user-facing rendering. Currently does localization and markdown
@@ -221,16 +225,23 @@ class Lesson < ApplicationRecord
     return result
   end
 
-  # Returns the word and definition named by each vocabulary reference the
-  # client resolves itself, keyed by the reference: those in CLIENT_VOCAB_FIELDS
-  # and in the activity section descriptions (see
-  # ActivitySection#summarize_for_lesson_show). Every other field is still
-  # substituted on the way out.
-  def vocabulary_definitions
-    definitions = CLIENT_VOCAB_FIELDS.reduce({}) do |defs, field|
+  # Returns the word and definition named by each vocabulary reference in this
+  # lesson's CLIENT_VOCAB_FIELDS, keyed by the reference. Every other field is
+  # still substituted on the way out.
+  def field_vocabulary_definitions
+    CLIENT_VOCAB_FIELDS.reduce({}) do |defs, field|
       Services::MarkdownPreprocessor.collect_vocab_definitions(get_localized_property(field), defs)
     end
-    activity_sections.reduce(definitions) do |defs, section|
+  end
+
+  # The above plus the references in the activity section descriptions, which
+  # the lesson plan also resolves itself (see
+  # ActivitySection#summarize_for_lesson_show). Separate from
+  # field_vocabulary_definitions because reaching for the sections costs a query
+  # per lesson, which the rollup pages -- a whole unit or course of them at a
+  # time -- would pay for descriptions they never render.
+  def vocabulary_definitions
+    activity_sections.reduce(field_vocabulary_definitions) do |defs, section|
       Services::MarkdownPreprocessor.collect_vocab_definitions(section.localized_description, defs)
     end
   end
@@ -638,6 +649,7 @@ class Lesson < ApplicationRecord
       preparation: render_property(:preparation),
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      vocabularyDefinitions: field_vocabulary_definitions,
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
