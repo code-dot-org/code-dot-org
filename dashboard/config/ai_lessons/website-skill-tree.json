@@ -70,10 +70,12 @@
       "role": "info",
       "panels": [
         {
-          "caption": "You can make this yourself — and you don't need to write thousands of lines of code by hand to do it."
+          "caption": "You can make this yourself — and you don't need to write thousands of lines of code by hand to do it.",
+          "imageUrl": "https://images.code.org/c180098918f3f8768e01447b940ff221-Panel 1.png"
         },
         {
-          "caption": "Think of yourself as an architect directing AI as your junior developer: your job is the vision, the right questions, and assembling the pieces."
+          "caption": "Think of yourself as an architect directing AI as your junior developer: your job is the vision, the right questions, and assembling the pieces.",
+          "imageUrl": "https://images.code.org/d1295eb44803e4015289993932659ebf-Panel 2.png"
         }
       ]
     },
@@ -99,10 +101,12 @@
       "role": "info",
       "panels": [
         {
-          "caption": "Pretty good — but probably not exactly what you pictured. Getting precise takes real skills."
+          "caption": "Pretty good — but probably not exactly what you pictured. Getting precise takes real skills.",
+          "imageUrl": "https://images.code.org/9087eaeb311e3acadc4ad2d9ef9f7fe7-Panel 3.png"
         },
         {
-          "caption": "Let's take a quick check of what you already know — then you'll get your own skill map."
+          "caption": "Let's take a quick check of what you already know — then you'll get your own skill map.",
+          "imageUrl": "https://images.code.org/47779ab3126d65bb2c139c52e173d2d3-Panel 4.png"
         }
       ]
     },
