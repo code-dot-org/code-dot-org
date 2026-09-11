@@ -1442,6 +1442,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play' ? 'play' : onSceneTab ? 'preview' : 'hidden';
 
+  // Freeze the game while nobody can see it: the playspace hidden behind
+  // another tab, or the whole document hidden. (A hidden document stops
+  // drawing on its own — the browser pauses animation frames — but the
+  // wall clock kept running, so timers jumped forward on return.)
+  const [documentHidden, setDocumentHidden] = useState(
+    () => typeof document !== 'undefined' && document.hidden
+  );
+  useEffect(() => {
+    const onVisibility = () => setDocumentHidden(document.hidden);
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => document.removeEventListener('visibilitychange', onVisibility);
+  }, []);
+  useEffect(() => {
+    engineRef.current?.setDrawPaused(
+      playspaceMode === 'hidden' || documentHidden
+    );
+    // engineReady: a level that STARTS on a hidden tab (an images-only
+    // level) must pause the engine as soon as it exists.
+  }, [playspaceMode, documentHidden, engineReady]);
+
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
   const getDefaultSpriteSize = useCallback(

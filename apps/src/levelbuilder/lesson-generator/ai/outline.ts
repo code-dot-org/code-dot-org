@@ -23,15 +23,15 @@ import {
 
 import {AICHAT_PRESET_IDS, AichatPresetId} from './aichat';
 
-const supportedLabTypeEnum = z.enum(
+export const supportedLabTypeEnum = z.enum(
   SUPPORTED_LAB_TYPES as unknown as [LabType, ...LabType[]]
 );
 
-const sublevelLabTypeEnum = z.enum(
+export const sublevelLabTypeEnum = z.enum(
   BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES as unknown as [LabType, ...LabType[]]
 );
 
-const aichatPresetEnum = z.enum(
+export const aichatPresetEnum = z.enum(
   AICHAT_PRESET_IDS as unknown as [AichatPresetId, ...AichatPresetId[]]
 );
 
@@ -46,7 +46,7 @@ export function lessonLevelCap(draftingRules?: string): number {
     : LESSON_LEVEL_COUNT.max;
 }
 
-const sublevelSchema = z.object({
+export const outlineSublevelSchema = z.object({
   id: z
     .string()
     .describe(
@@ -69,7 +69,7 @@ const sublevelSchema = z.object({
     ),
 });
 
-const outlineLevelSchema = z.object({
+export const outlineLevelSchema = z.object({
   id: z
     .string()
     .describe(
@@ -97,7 +97,7 @@ const outlineLevelSchema = z.object({
       'For weblab2 levels only — short kebab-case id (e.g. "main", "puzzle") that groups multiple weblab2 cards onto a shared starter project. When 2+ weblab2 levels carry the same templateGroup, they share one generated template level; each per-level card only writes its own long_instructions and exemplar on top of the template. Use ONE group per lesson when the weblab2 levels build the same app across multiple steps; use distinct groups when the levels are independent projects. Omit for stand-alone weblab2 levels.'
     ),
   sublevels: z
-    .array(sublevelSchema)
+    .array(outlineSublevelSchema)
     .min(SUBLEVEL_COUNT.min)
     .max(SUBLEVEL_COUNT.max)
     .optional()
@@ -121,6 +121,8 @@ export interface OutlineSublevel {
   labType: LabType;
   description: string;
   aichatPreset?: AichatPresetId;
+  // Code the planning document attached to this item.
+  suppliedCode?: string;
 }
 
 export interface OutlineLevel {
@@ -129,6 +131,7 @@ export interface OutlineLevel {
   description: string;
   aichatPreset?: AichatPresetId;
   templateGroup?: string;
+  suppliedCode?: string;
   sublevels?: OutlineSublevel[];
 }
 
