@@ -12,8 +12,20 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
+
+type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
+
+// Check if the provided API is a UnifiedBackpackClientApi.
+// We check against the existence of getFileLists so we can use a
+// mocked UnifiedBackpackClientApi in tests.
+const isUnifiedApi = (
+  api: SaveToBackpackApi
+): api is UnifiedBackpackClientApi =>
+  typeof (api as UnifiedBackpackClientApi).getFileLists === 'function';
 
 export const SAVE_BLOCKED_TITLE = "This sketch can't be saved to your Backpack";
 
@@ -51,7 +63,7 @@ export const getShareFailureMessage = (shareFailure: ShareFailure) => {
 
 export const handleSaveToBackpack = async (
   reactFlow: ReactFlowInstance | null,
-  backpackApi: BackpackClientApi | undefined,
+  backpackApi: SaveToBackpackApi | undefined,
   dialogControl: DialogControlInterface,
   backpackFileList: string[],
   errorCallback: (error: string) => void
@@ -84,6 +96,21 @@ export const handleSaveToBackpack = async (
     return;
   }
 
+  const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
+
+  // The unified backpack writes to the universal backpack, so a name taken in any
+  // backpack collides. The legacy path reuses the list the panel already loaded.
+  let filenamesByAppType: FilenamesByAppType;
+  try {
+    filenamesByAppType = isUnifiedApi(backpackApi)
+      ? await backpackApi.getFileLists()
+      : {[backpackApi.appType]: backpackFileList};
+  } catch (error) {
+    errorCallback('Could not read your Backpack. Please try again.');
+    return;
+  }
+  const existingFilenames = Object.values(filenamesByAppType).flat();
+
   const validateSketchName = (
     sketchName: string
   ): {type: 'error' | 'warning'; text: string} | undefined => {
@@ -97,7 +124,7 @@ export const handleSaveToBackpack = async (
         text: 'Sketch names can only contain letters, numbers, hyphens and underscores.',
       };
     }
-    if (backpackFileList.includes(sketchName + '.png')) {
+    if (existingFilenames.includes(sketchName + '.png')) {
       return {
         type: 'warning',
         text: 'A file with this name already exists in your Backpack.',
@@ -131,19 +158,41 @@ export const handleSaveToBackpack = async (
     return;
   }
 
-  const eventName = backpackFileList.includes(newFileName)
+  const isDuplicateFileName = existingFilenames.includes(newFileName);
+  const eventName = isDuplicateFileName
     ? EVENTS.SAVE_TO_BACKPACK_REPLACE
     : EVENTS.SAVE_TO_BACKPACK_NEW;
-  backpackApi.saveBlobFile(
-    newFileName,
-    blob,
-    () => {
-      errorCallback(
-        `Error saving ${newFileName} to your Backpack. Please try again`
-      );
-    },
-    () => {
-      sendLab2AnalyticsEvent(eventName, {fileType: 'png'});
-    }
-  );
+  const saved = await new Promise<boolean>(resolve => {
+    backpackApi.saveBlobFile(
+      newFileName,
+      blob,
+      () => {
+        errorCallback(
+          `Error saving ${newFileName} to your Backpack. Please try again`
+        );
+        resolve(false);
+      },
+      () => {
+        sendLab2AnalyticsEvent(eventName, {fileType: 'png'});
+        resolve(true);
+      }
+    );
+  });
+
+  if (!unifiedApi || !saved || !isDuplicateFileName) {
+    return;
+  }
+
+  // Writes go to the universal backpack, so a name replaced in a legacy backpack is
+  // still there. Deleting it after the save keeps a failed save non-destructive.
+  try {
+    await unifiedApi.deleteFromLegacyBackpacks(newFileName, filenamesByAppType);
+  } catch (error) {
+    errorCallback(
+      "We saved your sketch, but couldn't delete your old file. You can retry the delete in the Backpack."
+    );
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Backpack duplicate delete error', error as Error);
+  }
 };

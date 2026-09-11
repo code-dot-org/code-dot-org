@@ -65,9 +65,13 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   backpackRefreshKey,
   addFileTooltipText,
   addFileHandler,
+  saveToBackpackButton,
 }) => {
   const backpackApi = Lab2Registry.getInstance().getUnifiedBackpackApi();
   const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const viewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
 
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -258,38 +262,89 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     );
   }
 
+  let content;
   if (isLoading) {
-    return (
-      <BackpackMessage
-        type="neutral"
-        iconName="spinner"
-        iconAnimation="spin"
-        title="Your Backpack is loading"
-        message="Files in your Backpack will appear here shortly."
-      />
+    content = (
+      <div className={moduleStyles.messageContainer}>
+        <BackpackMessage
+          type="neutral"
+          iconName="spinner"
+          iconAnimation="spin"
+          title="Your Backpack is loading"
+          message="Files in your Backpack will appear here shortly."
+        />
+      </div>
     );
-  }
-
-  if (loadError) {
-    return (
-      <BackpackMessage
-        type="error"
-        iconName="exclamation"
-        title="An error occurred"
-        message="Your Backpack failed to load, please try again."
-        BottomComponent={
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="small"
-            onClick={() => loadFiles(true)}
-            type="button"
-            startIcon={<FontAwesomeV6Icon iconName="refresh" />}
-          >
-            {'Retry'}
-          </MuiButton>
-        }
-      />
+  } else if (loadError) {
+    content = (
+      <div className={moduleStyles.messageContainer}>
+        <BackpackMessage
+          type="error"
+          iconName="exclamation"
+          title="An error occurred"
+          message="Your Backpack failed to load, please try again."
+          BottomComponent={
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              onClick={() => loadFiles(true)}
+              type="button"
+              startIcon={<FontAwesomeV6Icon iconName="refresh" />}
+            >
+              {'Retry'}
+            </MuiButton>
+          }
+        />
+      </div>
+    );
+  } else {
+    content = (
+      <>
+        {files.length > 0 && (
+          <BackpackListControls
+            fileNames={fileNames}
+            selectedCategoryId={selectedCategoryId}
+            onCategoryChange={setSelectedCategoryId}
+            sortOrder={sortOrder}
+            onSortOrderChange={setSortOrder}
+          />
+        )}
+        <div className={moduleStyles.fileListContainer}>
+          {files.length === 0 && (
+            <BackpackMessage
+              type="neutral"
+              iconName="backpack"
+              title="Your Backpack is empty"
+              message="Files you save to your Backpack will appear here."
+            />
+          )}
+          {supportedFiles.map(renderFileChip)}
+          {unsupportedFiles.length > 0 && (
+            <details className={moduleStyles.unsupportedSection}>
+              <summary className={moduleStyles.unsupportedSummary}>
+                <span className={moduleStyles.unsupportedToggle}>
+                  <Typography variant="body4" gutterBottom>
+                    <Typography
+                      variant="strong"
+                      className={moduleStyles.unsupportedText}
+                    >
+                      {`Not supported in this lab (${unsupportedFiles.length})`}
+                    </Typography>
+                  </Typography>
+                  <FontAwesomeV6Icon
+                    iconName="chevron-down"
+                    aria-hidden="true"
+                  />
+                </span>
+              </summary>
+              <div className={moduleStyles.unsupportedFileList}>
+                {unsupportedFiles.map(renderFileChip)}
+              </div>
+            </details>
+          )}
+        </div>
+      </>
     );
   }
 
@@ -315,46 +370,24 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           ))}
         </TransitionGroup>
       </Snackbar>
-      {files.length > 0 && (
-        <BackpackListControls
-          fileNames={fileNames}
-          selectedCategoryId={selectedCategoryId}
-          onCategoryChange={setSelectedCategoryId}
-          sortOrder={sortOrder}
-          onSortOrderChange={setSortOrder}
-        />
+      {content}
+      {saveToBackpackButton && (
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          className={moduleStyles.saveButton}
+          disabled={actionInProgress || viewingOldVersion}
+          onClick={() =>
+            saveToBackpackButton.onClick(fileNames, (error: string) =>
+              addAlert('danger', error, false)
+            )
+          }
+          type="button"
+        >
+          {saveToBackpackButton.text}
+        </MuiButton>
       )}
-      <div className={moduleStyles.fileListContainer}>
-        {files.length === 0 && (
-          <BackpackMessage
-            type="neutral"
-            iconName="backpack"
-            title="Your Backpack is empty"
-            message="Files you save to your Backpack will appear here."
-          />
-        )}
-        {supportedFiles.map(renderFileChip)}
-        {unsupportedFiles.length > 0 && (
-          <details className={moduleStyles.unsupportedSection}>
-            <summary className={moduleStyles.unsupportedSummary}>
-              <span className={moduleStyles.unsupportedToggle}>
-                <Typography variant="body4" gutterBottom>
-                  <Typography
-                    variant="strong"
-                    className={moduleStyles.unsupportedText}
-                  >
-                    {`Not supported in this lab (${unsupportedFiles.length})`}
-                  </Typography>
-                </Typography>
-                <FontAwesomeV6Icon iconName="chevron-down" aria-hidden="true" />
-              </span>
-            </summary>
-            <div className={moduleStyles.unsupportedFileList}>
-              {unsupportedFiles.map(renderFileChip)}
-            </div>
-          </details>
-        )}
-      </div>
     </div>
   );
 };
