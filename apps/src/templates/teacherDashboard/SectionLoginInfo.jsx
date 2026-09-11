@@ -1,3 +1,5 @@
+import {Markdown} from '@code-dot-org/markdown';
+import {Typography} from '@mui/material';
 import path from 'path';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -14,7 +16,6 @@ import {
   isDemoSection as isDemoSectionSelector,
   sectionCode as sectionCodeSelector,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -25,6 +26,14 @@ import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClas
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
 };
+
+const Heading = ({children}) => (
+  <Typography variant="h6" component="h2" style={styles.heading}>
+    {children}
+  </Typography>
+);
+
+Heading.propTypes = {children: PropTypes.node};
 
 /**
  * Rendered from the /login_info route in teacher dashboard.
@@ -120,15 +129,15 @@ export class LtiLogins extends React.Component {
   render() {
     return (
       <div>
-        <h2 style={styles.heading}>{i18n.loginInfoLtiSetupHeader()}</h2>
-        <SafeMarkdown
-          markdown={i18n.loginInfoLtiSetupBody({
+        <Heading>{i18n.loginInfoLtiSetupHeader()}</Heading>
+        <Markdown
+          content={i18n.loginInfoLtiSetupBody({
             providerName: this.props.sectionProviderName,
           })}
         />
-        <h2 style={styles.heading}>{i18n.loginInfoLtiUpdateHeader()}</h2>
-        <SafeMarkdown
-          markdown={i18n.loginInfoLtiUpdateBody({
+        <Heading>{i18n.loginInfoLtiUpdateHeader()}</Heading>
+        <Markdown
+          content={i18n.loginInfoLtiUpdateBody({
             providerName: this.props.sectionProviderName,
           })}
         />
@@ -166,7 +175,7 @@ class OAuthLogins extends React.Component {
       <div>
         <SignInInstructions loginType={loginType} />
         <br />
-        <h2 style={styles.heading}>{i18n.syncingYourStudents()}</h2>
+        <Heading>{i18n.syncingYourStudents()}</Heading>
         <div>
           <SafeMarkdown
             markdown={i18n.syncingYourStudentsDescription({
@@ -198,7 +207,7 @@ class EmailLogins extends React.Component {
 
     return (
       <div>
-        <h2 style={styles.heading}>{i18n.loginInfo_joinTitle()}</h2>
+        <Heading>{i18n.loginInfo_joinTitle()}</Heading>
         <p>{i18n.loginInfo_joinBody()}</p>
         <ol>
           <li>
@@ -225,7 +234,7 @@ class EmailLogins extends React.Component {
         <br />
         <SignInInstructions loginType={SectionLoginType.email} />
         <br />
-        <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
+        <Heading>{i18n.loginInfo_resetTitle()}</Heading>
         <SafeMarkdown
           markdown={i18n.loginInfo_resetPasswordBody({
             url: getManageStudentsUrl(sectionId),
@@ -313,7 +322,7 @@ class WordOrPictureLogins extends React.Component {
           {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
         </p>
         <br />
-        <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
+        <Heading>{i18n.loginInfo_resetTitle()}</Heading>
         {section.loginType === SectionLoginType.picture && (
           <SafeMarkdown
             markdown={i18n.loginInfoResetSecretPicDesc({
@@ -329,7 +338,7 @@ class WordOrPictureLogins extends React.Component {
           />
         )}
         <br />
-        <h2 style={styles.heading}>{i18n.printLoginCards_title()}</h2>
+        <Heading>{i18n.printLoginCards_title()}</Heading>
         {students.length < 1 && (
           <SafeMarkdown
             markdown={i18n.loginInfo_noStudents({url: manageStudentsUrl})}
@@ -458,7 +467,7 @@ const styles = {
     marginTop: 10,
   },
   heading: {
-    color: color.purple,
-    marginTop: 0,
+    marginTop: 32,
+    marginBottom: 12,
   },
 };

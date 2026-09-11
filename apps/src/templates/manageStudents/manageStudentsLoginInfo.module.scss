@@ -1,17 +1,45 @@
-h2.heading {
-  color: var(--text-brand-purple-primary);
-}
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 .explanation {
   clear: both;
-  padding-top: 20px;
+  padding-top: var(--spacing-p-s);
+
+  // A list marker is sized by its <ol>, not by the item's Typography
+  // paragraph, so the body size has to be spelled out here.
+  ol {
+    font-size: 1rem;
+  }
+
+  li + li {
+    margin-top: var(--spacing-p-xxs);
+  }
 }
 
-p.listAlign {
-  margin-left: 10px;
+// Typography carries no margin of its own, and its emotion class outranks a
+// bare class selector, so the tag name is part of these selectors.
+h2.heading {
+  margin-top: var(--spacing-p-m);
+  margin-bottom: var(--spacing-p-xxs);
 }
 
-.sublistAlign {
-  margin-left: 20px;
-  margin-bottom: 10px;
+.parentLetterButton {
+  margin: var(--spacing-p-xs) 0;
+}
+
+// Typography's own margin reset is a shorthand, so this needs the tag too.
+div.sublistAlign {
+  margin-left: var(--spacing-p-s);
+  margin-bottom: var(--spacing-p-xxs);
+
+  // react-csv owns this anchor, so it cannot be the design-system Link; give
+  // it the Link's own type and color instead.
+  a {
+    @include mixins.link-body-two;
+
+    color: var(--text-brand-purple-primary);
+
+    &:hover {
+      color: var(--text-brand-purple-secondary);
+    }
+  }
 }

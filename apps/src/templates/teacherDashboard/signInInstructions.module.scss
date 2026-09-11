@@ -1,0 +1,22 @@
+.instructions {
+  // A list marker is sized by its <ol>, not by the item's Typography
+  // paragraph, so the body size has to be spelled out here.
+  ol {
+    font-size: 1rem;
+  }
+
+  li + li {
+    margin-top: var(--spacing-p-xxs);
+  }
+}
+
+// Typography carries no margin of its own, and its emotion class outranks a
+// bare class selector, so the tag name is part of this selector.
+h3.heading {
+  margin-top: var(--spacing-p-m);
+  margin-bottom: var(--spacing-p-xxs);
+}
+
+.sublistAlign {
+  margin-left: var(--spacing-p-s);
+}
