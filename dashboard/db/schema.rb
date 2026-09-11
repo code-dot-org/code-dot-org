@@ -196,6 +196,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.index ["user_id"], name: "index_aidiff_threads_on_user_id"
   end
 
+  create_table "anonymous_level_geos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "anon_user_id", limit: 36, null: false
+    t.string "country"
+    t.string "state"
+    t.string "city"
+    t.string "postal_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["anon_user_id"], name: "index_anonymous_level_geos_on_anon_user_id", unique: true
+  end
+
   create_table "anonymous_level_progresses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "anon_user_id", limit: 36, null: false
     t.integer "script_id", null: false
