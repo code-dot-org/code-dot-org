@@ -24,11 +24,11 @@
 #  index_user_levels_unique  (user_id,script_id,level_id,deleted_at) UNIQUE
 #
 
-require 'cdo/activity_constants'
-
 # Summary information about a User's Activity on a Level in a Unit.
 # Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ApplicationRecord
+  include LevelProgressable
+
   export_to_analytics
 
   data_classification(
@@ -54,45 +54,10 @@ class UserLevel < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
-  store :properties, accessors: %i[locale locale_supported], coder: JSON
-
   belongs_to :user, optional: true
-  belongs_to :level, optional: true
-  belongs_to :script, class_name: 'Unit', optional: true
-  belongs_to :level_source, optional: true
-
-  before_save :assign_locale_data, if: :new_record?, unless: :locale
-  before_save :refresh_locale_supported, if: -> {locale_changed? || script_id_changed?}
 
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
-
-  # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
-  # word choice.
-  scope :attempted, -> {where.not(best_result: nil)}
-  scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
-  scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
-
-  def self.by_lesson(lesson)
-    levels = lesson.script_levels.map(&:level_ids).flatten
-    where(script: lesson.script, level: levels)
-  end
-
-  def attempted?
-    !best_result.nil?
-  end
-
-  def perfect?
-    ActivityConstants.perfect?(best_result)
-  end
-
-  def finished?
-    ActivityConstants.finished?(best_result)
-  end
-
-  def passing?
-    ActivityConstants.passing?(best_result)
-  end
 
   # Returns whether this UserLevel represents progress completed by a pairing
   # group where the user was the driver.
@@ -157,11 +122,6 @@ class UserLevel < ApplicationRecord
     latest_paired_user_level&.navigator_count
   end
 
-  def calculate_total_time_spent(additional_time)
-    existing_time_spent = time_spent ? time_spent : 0
-    additional_time && additional_time > 0 ? existing_time_spent + additional_time : existing_time_spent
-  end
-
   def submitted_or_resubmitted?
     saved_change_to_submitted?(to: true) || (submitted? && saved_change_to_level_source_id?)
   end
@@ -178,8 +138,6 @@ class UserLevel < ApplicationRecord
   end
 
   def before_unsubmit
-    self.best_result = ActivityConstants::UNSUBMITTED_RESULT
-
     # Destroy any existing, unassigned peer reviews
     if Unit.cache_find_level(level_id).try(:peer_reviewable?)
       PeerReview.where(submitter: user.id, reviewer: nil, level: level).destroy_all
@@ -209,13 +167,6 @@ class UserLevel < ApplicationRecord
   # to show as locked.
   def show_as_readonly?(lesson)
     readonly_answers? && !show_as_locked?(lesson)
-  end
-
-  # First ScriptLevel in this Unit containing this Level.
-  # Cached equivalent to `level.script_levels.where(script_id: script.id).first`.
-  def script_level
-    s = Unit.get_from_cache(script_id)
-    s.script_levels.detect {|sl| sl.level_ids.include? level_id}
   end
 
   # This is called when a teacher updates the lock or readonly status for each student.
@@ -263,19 +214,6 @@ class UserLevel < ApplicationRecord
   # @return [Hash<Integer, Integer>] user_id => passed_level_count
   def self.count_passed_levels_for_users(users)
     joins(:user).merge(users).passing.group(:user_id).count
-  end
-
-  def assign_locale_data(locale = I18n.locale)
-    self.locale = locale.to_s.presence
-    refresh_locale_supported
-  end
-
-  def resolved_unit
-    (script_id && Unit.get_from_cache(script_id)) || script
-  end
-
-  private def refresh_locale_supported
-    self.locale_supported = resolved_unit&.supported_locale?(locale)
   end
 
   # Retrieves and memoizes the latest PairedUserLevel that's associated with
