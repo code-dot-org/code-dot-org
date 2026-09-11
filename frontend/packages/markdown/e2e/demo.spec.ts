@@ -103,6 +103,49 @@ test.describe('Markdown demo shell', () => {
     });
   });
 
+  test.describe('block spacing', () => {
+    // The container's flex gap reaches only its own children, so the spacing
+    // inside a list item comes from a margin instead. Both should measure the
+    // same; computed styles need a real browser.
+    test('spaces stacked blocks inside a list item like the ones outside', async ({
+      page,
+    }) => {
+      const demo = await DemoPage.load(page);
+
+      const gap = await demo.preview
+        .locator('div')
+        .first()
+        .evaluate(el => getComputedStyle(el).rowGap);
+      const marginTop = await demo.preview
+        .getByText('is followed by a second one')
+        .evaluate(el => getComputedStyle(el).marginTop);
+
+      expect(gap).toBe('8px');
+      expect(marginTop).toBe(gap);
+    });
+
+    test('keeps the list marker on the item', async ({page}) => {
+      const demo = await DemoPage.load(page);
+
+      // A flex item would have lost it -- `display: flex` replaces
+      // `display: list-item`.
+      const display = await demo.preview
+        .getByRole('listitem')
+        .first()
+        .evaluate(el => getComputedStyle(el).display);
+      expect(display).toBe('list-item');
+    });
+
+    test('leaves a tight list item alone', async ({page}) => {
+      const demo = await DemoPage.load(page);
+
+      const marginTop = await demo.preview
+        .getByText('list item two')
+        .evaluate(el => getComputedStyle(el).marginTop);
+      expect(marginTop).toBe('0px');
+    });
+  });
+
   test('the sanitization scenario strips scripts', async ({page}) => {
     const demo = await DemoPage.load(page);
     await demo.selectScenario('Sanitization');
