@@ -6,7 +6,6 @@ import {getAppOptionsIsBuildingQuizQuestions} from '@cdo/apps/lab2/projects/util
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import useQuizAttemptView from './attempt/useQuizAttemptView';
@@ -83,13 +82,7 @@ const QuizView: React.FunctionComponent<LabProps> = props => {
       ) : (
         <div className={styles.divider} />
       )}
-      <PanelContainer
-        id="quiz-workspace"
-        className={styles.content}
-        headerContent="Workspace"
-      >
-        {workspaceContent}
-      </PanelContainer>
+      <div className={styles.content}>{workspaceContent}</div>
     </div>
   );
 };

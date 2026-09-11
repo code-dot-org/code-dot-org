@@ -1,6 +1,8 @@
 import {Button, Typography} from '@mui/material';
 import React from 'react';
 
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+
 import {QuizBuilderQuestionsState, QuizQuestion} from './types';
 
 import styles from './quiz-builder-workspace.module.scss';
@@ -46,36 +48,38 @@ const QuizBuilderWorkspace: React.FunctionComponent<
   }
 
   return (
-    <div className={styles.workspace}>
-      <header className={styles.header}>
-        <Typography variant="h5" component="h1">
-          {quizTitle || 'Untitled quiz'}
-        </Typography>
-        <Typography variant="body3">
-          {questionCountLabel(questions.length)}
-        </Typography>
-      </header>
+    <PanelContainer id="quiz-workspace" headerContent="Workspace">
+      <div className={styles.workspace}>
+        <header className={styles.header}>
+          <Typography variant="h5" component="h1">
+            {quizTitle || 'Untitled quiz'}
+          </Typography>
+          <Typography variant="body3">
+            {questionCountLabel(questions.length)}
+          </Typography>
+        </header>
 
-      {error && (
-        <Typography variant="body2" color="error" role="alert">
-          {error}
-        </Typography>
-      )}
+        {error && (
+          <Typography variant="body2" color="error" role="alert">
+            {error}
+          </Typography>
+        )}
 
-      {outline}
+        {outline}
 
-      <Button
-        className={styles.createButton}
-        variant="contained"
-        color="primary"
-        type="button"
-        loading={isCreating}
-        disabled={isLoading || isCreating}
-        onClick={() => createQuestion()}
-      >
-        + Create question
-      </Button>
-    </div>
+        <Button
+          className={styles.createButton}
+          variant="contained"
+          color="primary"
+          type="button"
+          loading={isCreating}
+          disabled={isLoading || isCreating}
+          onClick={() => createQuestion()}
+        >
+          + Create question
+        </Button>
+      </div>
+    </PanelContainer>
   );
 };
 
