@@ -5,8 +5,21 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
+
+// Either backpack client a lab can save through: its own, or the unified one behind
+// the 'unified-backpack' experiment.
+export type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
+
+// Check if the provided API is a UnifiedBackpackClientApi.
+// We check against the existence of getFileLists so we can use a
+// mocked UnifiedBackpackClientApi in tests.
+export const isUnifiedApi = (
+  api: SaveToBackpackApi
+): api is UnifiedBackpackClientApi =>
+  typeof (api as UnifiedBackpackClientApi).getFileLists === 'function';
 
 export const handleSaveSupportFile = async (
   dialogControl: DialogControlInterface,
