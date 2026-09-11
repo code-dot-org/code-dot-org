@@ -1,7 +1,15 @@
-import {fireEvent, render as renderDom, screen} from '@testing-library/react';
+import {
+  fireEvent,
+  render as renderDom,
+  screen,
+  waitFor,
+} from '@testing-library/react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {afterEach, describe, expect, it, vi} from 'vitest';
 
+import {ThemeProvider} from '@mui/material/styles';
+
+import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {localization} from '@code-dot-org/core/plugins/localization';
 
 import Markdown, {type MarkdownProps} from '../components/Markdown';
@@ -104,6 +112,18 @@ describe('Markdown', () => {
     it('applies to list item paragraphs too', () => {
       const html = renderWith('- one\n- two', 'body4');
       expect(html.match(/<p[^>]*MuiTypography-body4/g)).toHaveLength(2);
+    });
+
+    it('sizes links to match the body text', () => {
+      // The design system sizes Link by component size, not by typography
+      // variant, so a body4 paragraph needs an xs link to match.
+      const html = renderWith('a [link](https://example.com) here', 'body4');
+      expect(html).toContain('link-xs');
+      expect(html).not.toContain('link-m');
+    });
+
+    it('sizes links as medium by default', () => {
+      expect(render('a [link](https://example.com) here')).toContain('link-m');
     });
 
     it('leaves headings and inline variants alone', () => {
@@ -682,15 +702,87 @@ describe('Markdown', () => {
         ? {definition: 'Reducing file size by discarding data.'}
         : undefined;
 
-    it('resolves a known term to a definition tooltip', () => {
+    it('resolves a known term, consuming the syntax', () => {
       const spy = vi.fn(lookup);
       const html = render('Use [v lossy compression] here.', [
         vocabularyDefinition({lookup: spy}),
       ]);
       expect(spy).toHaveBeenCalledWith('lossy compression');
-      expect(html).toContain('title="Reducing file size by discarding data."');
       expect(html).toContain('lossy compression');
       expect(html).not.toContain('[v lossy compression]');
+    });
+
+    it('shows the definition in a tooltip on hover', async () => {
+      renderDom(
+        <Markdown
+          content={'Use [v lossy compression] here.'}
+          extensions={[vocabularyDefinition({lookup})]}
+        />,
+      );
+
+      fireEvent.mouseOver(screen.getByText('lossy compression'));
+
+      const tooltip = await screen.findByRole('tooltip');
+      expect(tooltip.textContent).toBe(
+        'Reducing file size by discarding data.',
+      );
+    });
+
+    it('makes the term keyboard-reachable and shows the definition on focus', async () => {
+      renderDom(
+        <Markdown
+          content={'Use [v lossy compression] here.'}
+          extensions={[vocabularyDefinition({lookup})]}
+        />,
+      );
+
+      // A tab stop, not a control: there is nothing here to activate.
+      const term = screen.getByText('lossy compression');
+      expect(term.getAttribute('tabindex')).toBe('0');
+
+      term.focus();
+      const tooltip = await screen.findByRole('tooltip');
+      expect(tooltip.textContent).toBe(
+        'Reducing file size by discarding data.',
+      );
+    });
+
+    it('ties the definition to the term with aria-describedby under the theme', async () => {
+      // CdoTheme sets describeChild, so the definition describes the term
+      // rather than renaming it. apps renders every root inside this theme.
+      renderDom(
+        <ThemeProvider theme={CdoTheme}>
+          <Markdown
+            content={'Use [v lossy compression] here.'}
+            extensions={[vocabularyDefinition({lookup})]}
+          />
+        </ThemeProvider>,
+      );
+
+      const term = screen.getByText('lossy compression');
+      term.focus();
+
+      const tooltip = await screen.findByRole('tooltip');
+      expect(term.getAttribute('aria-describedby')).toBe(tooltip.id);
+      expect(term.getAttribute('aria-label')).toBeNull();
+    });
+
+    it('dismisses the tooltip on Escape', async () => {
+      renderDom(
+        <Markdown
+          content={'Use [v lossy compression] here.'}
+          extensions={[vocabularyDefinition({lookup})]}
+        />,
+      );
+
+      const term = screen.getByText('lossy compression');
+      fireEvent.mouseOver(term);
+      await screen.findByRole('tooltip');
+
+      // SC 1.4.13: content shown on hover must be dismissible without moving
+      // the pointer.
+      fireEvent.keyDown(document.body, {key: 'Escape'});
+      await waitFor(() => expect(screen.queryByRole('tooltip')).toBeNull());
     });
 
     it('uses the provided display word when given', () => {
@@ -706,8 +798,9 @@ describe('Markdown', () => {
       const html = render('An [v unknown term] here.', [
         vocabularyDefinition({lookup}),
       ]);
+      // Plain text: no trigger, so no tab stop and nothing to describe.
       expect(html).toContain('<span>unknown term</span>');
-      expect(html).not.toContain('title=');
+      expect(html).not.toContain('tabindex');
     });
 
     it('leaves the syntax literal when not enabled', () => {
@@ -721,7 +814,7 @@ describe('Markdown', () => {
         vocabularyDefinition({lookup}),
       ]);
       expect(html).toContain('[v lossy compression]');
-      expect(html).not.toContain('title=');
+      expect(html).not.toContain('tabindex');
     });
   });
 

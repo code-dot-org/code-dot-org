@@ -18,6 +18,10 @@ import {unified} from 'unified';
 
 import {Typography, type TypographyProps} from '@mui/material';
 
+import {
+  componentSizeToBodyTextSizeMap,
+  type BodyTextSizeVariant,
+} from '@code-dot-org/component-library/common/constants';
 import Divider from '@code-dot-org/component-library/divider';
 import Link from '@code-dot-org/component-library/link';
 
@@ -49,11 +53,11 @@ export interface MarkdownProps {
   /** Additional class name for the wrapping container. */
   className?: string;
   /**
-   * Type scale for body text -- paragraphs, including those inside list items.
-   * Any variant in the design-system scale; defaults to `body2`. Headings and
-   * other elements keep their own variants.
+   * Type scale for body text -- paragraphs, including those inside list items,
+   * and the links inside them. Defaults to `body2`. Headings and other elements
+   * keep their own variants.
    */
-  bodyVariant?: TypographyProps['variant'];
+  bodyVariant?: BodyTextSizeVariant;
   /**
    * Markdown extensions to enable for this render. Each extension is a
    * self-contained bundle of plugins, allowlist additions, and component
@@ -63,6 +67,19 @@ export interface MarkdownProps {
    */
   extensions?: MarkdownExtension[];
 }
+
+/*
+ * The design system sizes Link by component size (`m` -> body2, and so on)
+ * rather than by typography variant, so body text and the links inside it are
+ * set from two different scales. Inverting the library's own map keeps them in
+ * step: a body4 paragraph gets xs links, not the 1rem default.
+ */
+const LINK_SIZE_BY_BODY_VARIANT = Object.fromEntries(
+  Object.entries(componentSizeToBodyTextSizeMap).map(([size, variant]) => [
+    variant,
+    size,
+  ]),
+) as Record<BodyTextSizeVariant, keyof typeof componentSizeToBodyTextSizeMap>;
 
 /*
  * Localization wrappers. Our i18n tooling keys off these attributes to localize
@@ -90,25 +107,22 @@ const LOCALIZE_NOTRANSLATE_ATTRS = {'data-notranslate': 'true'};
  * When that extension is not enabled, the sanitizer has already removed the
  * attribute and there is nothing to forward.
  */
-const MarkdownLink: Components['a'] = ({
-  children,
-  href,
-  className,
-  style,
-  target,
-}) => (
-  // A `target="_blank"` on the node (set by the externalLinks extension) maps to
-  // the design-system Link's openInNewTab, which also applies rel=noopener.
-  <Link
-    href={href}
-    className={className}
-    style={style}
-    openInNewTab={target === '_blank'}
-    {...LOCALIZE_LINK_ATTRS}
-  >
-    {children}
-  </Link>
-);
+const makeLink =
+  (bodyVariant: BodyTextSizeVariant): Components['a'] =>
+  ({children, href, className, style, target}) => (
+    // A `target="_blank"` on the node (set by the externalLinks extension) maps
+    // to the design-system Link's openInNewTab, which also applies rel=noopener.
+    <Link
+      href={href}
+      size={LINK_SIZE_BY_BODY_VARIANT[bodyVariant]}
+      className={className}
+      style={style}
+      openInNewTab={target === '_blank'}
+      {...LOCALIZE_LINK_ATTRS}
+    >
+      {children}
+    </Link>
+  );
 
 /*
  * MUI Typography forwards unknown props (including our `data-*` localization
@@ -118,7 +132,7 @@ const MarkdownLink: Components['a'] = ({
  * otherwise data-isolate marks it for the runtime translation path.
  */
 const makeParagraph =
-  (localized: boolean, variant: TypographyProps['variant']): Components['p'] =>
+  (localized: boolean, variant: BodyTextSizeVariant): Components['p'] =>
   ({children, className, style}) => (
     <Typography
       variant={variant}
@@ -162,7 +176,7 @@ const muiText =
 
 const baseComponents = (
   localized: boolean,
-  bodyVariant: TypographyProps['variant'],
+  bodyVariant: BodyTextSizeVariant,
 ): Partial<Components> => ({
   h1: muiText('h1', 'h1'),
   h2: muiText('h2', 'h2'),
@@ -172,7 +186,7 @@ const baseComponents = (
   h6: muiText('h6', 'h6'),
   strong: muiText('strong', 'strong'),
   em: muiText('em', 'em'),
-  a: MarkdownLink,
+  a: makeLink(bodyVariant),
   p: makeParagraph(localized, bodyVariant),
   // `---` renders as a themed design-system divider. (Divider is not yet
   // MUI-migrated, so the DSCO component is the design-system component here.)
@@ -205,7 +219,7 @@ const sanitizePass = (schema: SanitizeSchema) => () => rehypeSanitize(schema);
 const buildProcessor = (
   extensions: MarkdownExtension[],
   localized: boolean,
-  bodyVariant: TypographyProps['variant'],
+  bodyVariant: BodyTextSizeVariant,
 ) => {
   const sanitizeSchema = composeSanitizeSchema(defaultSchema, extensions);
 
