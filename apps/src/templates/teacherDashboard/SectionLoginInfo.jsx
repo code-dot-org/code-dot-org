@@ -174,7 +174,7 @@ class OAuthLogins extends React.Component {
       <div>
         <SignInInstructions loginType={loginType} />
         <br />
-        <h2 style={styles.heading}>{i18n.syncingYourStudents()}</h2>
+        <h2 className={styles.heading}>{i18n.syncingYourStudents()}</h2>
         <div>
           <SafeMarkdown
             markdown={i18n.syncingYourStudentsDescription({
