@@ -450,6 +450,31 @@ class LessonTest < ActiveSupport::TestCase
     lesson.summarize_for_lesson_show(create(:user), false)
   end
 
+  test 'lesson show summary includes definitions for the vocabulary referenced by its activity sections' do
+    course_version = create(:course_version, course_offering: create(:course_offering, key: 'test-course'), key: '1999')
+    create(
+      :vocabulary,
+      key: 'first_vocab',
+      word: "First Vocabulary",
+      definition: "The first of the vocabulary entries.",
+      course_version: course_version
+    )
+    lesson = create(:lesson, lesson_group: create(:lesson_group))
+    lesson_activity = create(:lesson_activity, lesson: lesson)
+    create(
+      :activity_section,
+      lesson_activity: lesson_activity,
+      description: "a [v first_vocab/test-course/1999] reference and an unresolvable [v missing_vocab/test-course/1999] one"
+    )
+
+    summary = lesson.reload.summarize_for_lesson_show(create(:user), false)
+
+    expected = {
+      'first_vocab/test-course/1999' => {word: "First Vocabulary", definition: "The first of the vocabulary entries."},
+    }
+    assert_equal expected, summary[:vocabularyDefinitions]
+  end
+
   test 'lesson show summary retrieves translations' do
     lesson = create(
       :lesson,

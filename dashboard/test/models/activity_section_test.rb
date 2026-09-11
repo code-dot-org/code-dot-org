@@ -49,11 +49,29 @@ class ActivitySectionTest < ActiveSupport::TestCase
     activity_section.summarize_for_lesson_edit
   end
 
-  test 'lesson show summary preprocesses markdown' do
-    activity_section = create(:activity_section)
-    Services::MarkdownPreprocessor.expects(:process!).
-      with(activity_section.description)
-    activity_section.summarize_for_lesson_show(false, create(:user))
+  test 'lesson show summary preprocesses markdown, leaving description vocabulary to the client' do
+    course_version = create(:course_version, course_offering: create(:course_offering, key: 'test-course'), key: '1999')
+    create(
+      :vocabulary,
+      key: 'first_vocab',
+      word: "First Vocabulary",
+      definition: "The first of the vocabulary entries.",
+      course_version: course_version
+    )
+    reference = "[v first_vocab/test-course/1999]"
+    activity_section = create(
+      :activity_section,
+      description: "a #{reference} reference",
+      tips: [{"type" => "teachingTip", "markdown" => "a #{reference} reference"}]
+    )
+
+    summary = activity_section.summarize_for_lesson_show(false, create(:user))
+
+    # The lesson plan resolves these itself, from Lesson#vocabulary_definitions.
+    assert_equal "a #{reference} reference", summary[:description]
+    # Tips still render through the legacy markdown component, which cannot.
+    assert_equal "a <span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span> reference",
+      summary[:tips].first["markdown"]
   end
 
   test 'seeding_key' do

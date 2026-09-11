@@ -97,6 +97,9 @@ export const lessonShape = PropTypes.shape({
   preparation: PropTypes.string.isRequired,
   resources: PropTypes.object,
   vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
+  // Definitions for the vocabulary references in the activity section text,
+  // keyed by reference. See ActivitySection.
+  vocabularyDefinitions: PropTypes.object,
   programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   assessmentOpportunities: PropTypes.string,
