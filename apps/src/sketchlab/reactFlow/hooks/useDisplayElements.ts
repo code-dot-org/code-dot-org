@@ -115,12 +115,12 @@ export function useDisplayElements({
           connectable: !readOnly && !grabMode,
           // React Flow names the focusable wrapper from node.ariaLabel and has
           // no fallback of its own.
-          ariaLabel:
-            node.type === 'lineAnchor'
-              ? 'Line endpoint'
-              : [getNodeLabel(node), locked ? 'locked' : undefined]
-                  .filter(Boolean)
-                  .join(', '),
+          ariaLabel: [
+            node.type === 'lineAnchor' ? 'Line endpoint' : getNodeLabel(node),
+            locked ? 'locked' : undefined,
+          ]
+            .filter(Boolean)
+            .join(', '),
           className: classNames(
             isConnectSource && styles.connectSource,
             isAnchorForFocusedEdge && styles.lineAnchorOnFocusedEdge

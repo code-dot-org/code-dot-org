@@ -21,8 +21,8 @@ export function getNodeLabel(node: SketchlabReactFlowNode): string {
   if (node.type === 'image') {
     return node.data.altText?.trim() || 'image';
   }
-  // lineAnchor is an internal implementation detail; callers that need a
-  // user-facing description should check for this type before calling.
+  // Falls through to the bare type. That reads correctly for a group, but
+  // 'lineAnchor' is internal, so callers naming one substitute their own text.
   return node.type;
 }
 

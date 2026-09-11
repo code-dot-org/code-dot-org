@@ -48,6 +48,15 @@ function anchorNode(id: string): SketchlabReactFlowNode {
   } as SketchlabReactFlowNode;
 }
 
+function groupNode(id: string): SketchlabReactFlowNode {
+  return {
+    id,
+    type: 'group',
+    position: {x: 0, y: 0},
+    data: {} as SketchlabReactFlowNode['data'],
+  } as SketchlabReactFlowNode;
+}
+
 function edge(
   id: string,
   source: string,
@@ -110,10 +119,15 @@ describe('getNodeLabel', () => {
       expect(getNodeLabel(textNode('n1', '  Hello world  '))).toBe(
         'Hello world'
       );
+      expect(getNodeLabel(shapeNode('n1', 'circle', '  Foo  '))).toBe(
+        'circle with label Foo'
+      );
+      expect(getNodeLabel(imageNode('n1', '  A cat  '))).toBe('A cat');
     });
   });
 
-  it('returns "lineAnchor" for anchor nodes (internal fallback)', () => {
+  it('falls through to the node type', () => {
+    expect(getNodeLabel(groupNode('g1'))).toBe('group');
     expect(getNodeLabel(anchorNode('a1'))).toBe('lineAnchor');
   });
 });
