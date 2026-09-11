@@ -7,8 +7,6 @@ import i18n from '@cdo/locale';
 
 import {hideShareDialog} from './shareDialogRedux';
 
-import moduleStyles from './share-disallowed-dialog.module.scss';
-
 class ShareDisallowedDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -21,7 +19,6 @@ class ShareDisallowedDialog extends Component {
     }
     return (
       <Dialog
-        className={moduleStyles.dialog}
         title={i18n.createAccountToShare()}
         description={i18n.createAccountToShareDescription()}
         onClose={this.props.hideShareDialog}

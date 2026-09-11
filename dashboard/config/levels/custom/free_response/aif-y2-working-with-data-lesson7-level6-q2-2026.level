@@ -9,7 +9,7 @@
     "skip_dialog": true,
     "skip_sound": true,
     "encrypted": "false",
-    "long_instructions": "How does `matplotlib` help with visualizing data?",
+    "long_instructions": "Why might a programmer use a library such as `matplotlib` instead of writing all the visualization code from scratch?",
     "stay_on_level_after_submit": "false",
     "submittable": "true",
     "allow_multiple_attempts": "false",
@@ -17,7 +17,7 @@
     "peer_reviewable": "false",
     "optional": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-07 20:25:01 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-07 20:25:01 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-10 19:12:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
