@@ -322,8 +322,6 @@ describe('Design System - Toast', () => {
     });
 
     it('reuses one live region across consecutive toasts', async () => {
-      // Ensure the live region is reused across consecutive toasts, so
-      // keyboard users don't lose focus.
       render(
         <ToastProvider>
           <Trigger message="first" />
