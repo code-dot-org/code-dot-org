@@ -337,6 +337,8 @@ class Unit < ApplicationRecord
     topic_tags
     enable_blockly_keyboard_navigation
     generate_outline
+    generate_drafting_rules
+    generate_authoring_rules
   )
 
   def self.starwars_unit
@@ -1171,10 +1173,16 @@ class Unit < ApplicationRecord
   # to operate on units with more than one user-facing lesson group, since
   # cross-group reordering is out of scope for this page.
   #
-  # `unit_generate_outline`, when supplied, is persisted on the Unit so the
-  # /generate page can restore it across reloads. nil leaves the existing
-  # value alone; '' clears it.
-  def update_lesson_outlines(raw_lessons, unit_generate_outline = nil)
+  # `prompts` holds GENERATOR_PROMPTS keys; a key left out keeps the stored
+  # value, '' clears it.
+  # Request keys of the /generate pages' unit prompts -> the property each saves.
+  GENERATOR_PROMPTS = {
+    generateOutline: :generate_outline,
+    generateDraftingRules: :generate_drafting_rules,
+    generateAuthoringRules: :generate_authoring_rules,
+  }.freeze
+
+  def update_lesson_outlines(raw_lessons, prompts = {})
     user_facing_groups = lesson_groups.select(&:user_facing)
     if user_facing_groups.length > 1
       raise 'Cannot bulk-edit lessons on a unit with multiple user-facing lesson groups.'
@@ -1236,10 +1244,12 @@ class Unit < ApplicationRecord
       target_group.lessons = new_lessons
       target_group.save!
 
-      unless unit_generate_outline.nil?
-        self.generate_outline = unit_generate_outline
-        save! if changed?
+      GENERATOR_PROMPTS.each do |param, attr|
+        next unless prompts.key?(param)
+        value = prompts[param].to_s
+        public_send("#{attr}=", value) unless value.presence == public_send(attr)
       end
+      save! if changed?
     end
 
     if Rails.application.config.levelbuilder_mode
@@ -1563,11 +1573,8 @@ class Unit < ApplicationRecord
       # page's bulk-write path. The page degrades to "edit prompts only"
       # when multiple user-facing lesson groups are present.
       multipleLessonGroups: user_facing_groups.length > 1,
-      # Persisted unit-level outline prompt — same role as the lesson's
-      # generate_outline, but at the unit scope. The page restores it on
-      # reload so the levelbuilder doesn't have to retype the unit
-      # description on every visit.
-      generateOutline: generate_outline,
+      # Persisted unit-level generator prompts, restored on reload.
+      **GENERATOR_PROMPTS.transform_values {|attr| public_send(attr)},
     }
   end
 

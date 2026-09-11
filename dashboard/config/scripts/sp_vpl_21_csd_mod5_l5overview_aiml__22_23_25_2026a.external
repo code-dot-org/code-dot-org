@@ -3,11 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 6: Classification Models 
+# Lesson 5: Classification Models 
 
-## Lesson 6 Overview
+## Lesson 5 Overview
 
-### **Question of the Day:** How do computers learn to classify data?
+**Question of the Day:** How do computers learn to classify data?
 
 **Lesson Overview:** In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing "sweetness" to "easy to eat", and then try to separate the data into groups - a fruit area, and a veggie area.
 

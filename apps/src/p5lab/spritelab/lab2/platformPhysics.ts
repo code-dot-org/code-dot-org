@@ -323,6 +323,37 @@ export function isSupported(
 }
 
 /**
+ * Whether a player rests on a wall with its toes past the wall's edge on
+ * the side it faces (`direction` 1 for right, -1 for left): the body's
+ * leading edge over the drop, nothing at foot level under it. The floor has
+ * no edge. The character animation shows a player that stops here holding
+ * back from the edge.
+ */
+export function isAtEdge(
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[],
+  view: View,
+  direction: 1 | -1,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const {halfW, feet} = feetLine(s);
+    if (feet >= view.height - CONTACT_EPSILON) {
+      return false;
+    }
+    const atFeet = wallsAtFeet(w, feet);
+    const supported = atFeet.some(
+      wall => Math.abs(s.position.x - wall.position.x) < halfW + wallHalf(wall)
+    );
+    const toe = s.position.x + direction * halfW;
+    return (
+      supported &&
+      !atFeet.some(wall => Math.abs(toe - wall.position.x) <= wallHalf(wall))
+    );
+  });
+}
+
+/**
  * Whether there is footing at foot level `offsetX` from the sprite's centre
  * — a point probe, so it sees a gap narrower than the sprite — in the
  * gravity direction. The floor (ceiling, under flipped gravity) counts.

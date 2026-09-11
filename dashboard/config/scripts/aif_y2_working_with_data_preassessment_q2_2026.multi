@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q2-2026'
+
+wrong 'Data stored in a text file'
+wrong 'Data stored in the software Tableau'
+wrong 'Data organized into separate tabs'
+right 'Data organized into rows and columns'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Tabular data refers to...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Exploring Structured Data
+MARKDOWN

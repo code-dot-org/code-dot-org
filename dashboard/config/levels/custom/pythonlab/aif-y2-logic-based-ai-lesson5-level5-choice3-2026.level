@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def print_forecast(day, temperature):\n    # TODO 1: Fill in the message with a forecast that includes the temperature\n    print(f\"\")\n\nprint_forecast(\"Monday\", 60)\nprint_forecast(\"Tuesday\", 65)\n\n# TODO 2: Add a forecast for a third day.",
+          "contents": "def print_forecast(day, temperature):\n  # TODO 1: Fill in the message with a forecast that includes the temperature\n  print(f\"\")\n\nprint_forecast(\"Monday\", 60)\nprint_forecast(\"Tuesday\", 65)\n\n# TODO 2: Add a forecast for a third day.",
           "folderId": "0",
           "active": true
         }
@@ -36,9 +36,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrf5ULeC3YVF045\nZBrLlL13AJy1b0Po+ctIxWN/vsKpd87pWYRkT06/ouH+hnq6eL626Z5Fi+UF\nzUraNmnYOtwu291ySG1fXaeO++vJxsrQo9mFY8yLTi1z0jWvwIdZPr+eCw5b\nBjyW4oh6SCEYI4kfDIK6eNvWbE8N8UjuEbmO0qIufLRwq9oAeSVr4GMEItgQ\nEl47l/MBU8grEY3pgwFavb4fGsaBoflbce1KUEOPdgTDtix7Ve+3Brqiz9r5\nMZvCn+LdJatdGWJflThmyLfMi0thgAbfaSfYicy9L+BkQeoeJgyVjXdRIHoN\nldP0SxHXUfSyPW/TEBUlLY4Q6WO6oON/jyBbd8XGy5/hJX6U0XmQ+aBw+qAn\nXnWMtDMkNchmJiQT2VLUO0z9xRugJtz4\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrpoPFMjpm6QmZq\nf1p0ih43aOIiDFjIP+kZdWDQIgY+oXRwEoI46cb0vw+klvP3tfcZ4hfMlEdt\nA8mxBr0TSIaVbkd0JgRYXprzN8XSOpoRXrAf+pceym1kh4fHCzs5xQrUGFlX\nPnnldLvFQHUZb5LqvESSQySxChZ6xK88czK0boc6DYqhWXTdE3x4vMWYeRIZ\niAsudYT+7xvwZdBdywfMs2Wa0nYQRuHe4XDE1CS9lZ+tFpPhFZ7385iAaX6v\nm6sLvy89UosX5ECOUJ7qOI03OBR6GW6j9KEc3Og6jg9qzFQ25VXC+ZJWXNjW\nIlO/lvLxDPBgccR70Nen+NiM0JJJF1+rwCbqK98siKPTtqxuSaewWQa8DhTJ\niRb1fwm/53dcxOEzZMxedgHo+K82zSPf\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:43:28 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:58:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:43:28 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:58:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:09:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:09:28 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

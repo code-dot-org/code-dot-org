@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-04T19:59:26.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "# Make: Design Your Own Generator\r\n\r\n**Your Task:** Write a program that combines at least two string variables into something new and fun. \r\n\r\nYour program must use:\r\n- At least **one concatenation** (`+`)\r\n- At least **one substring** (`[start:end]`)\r\n- *(optional)* a number and `str()` to combine it with a string\r\n\r\n**Challenge:** Use `input()` to assign your variables a value.\r\n\r\n**Do This:**\r\n1. Fill out **MY PLAN** in `generator_plan.txt` before coding.\r\n2. Write your program according to your plan.\r\n3. Test it with a classmate\r\n4. Fill out the **MY REFLECTION** in `generator_plan.txt`.\r\n\r\n::: details [**Need an idea for your program?**]\r\n\r\n- **Compliment Generator** — combine pieces of someone's name and favorite thing into a made-up compliment\r\n- **License Plate Maker** — build a \"license plate\" from pieces of a name, birth month, and lucky number\r\n- **Superhero Name Creator** — combine a color, an animal, and part of a name into a hero identity\r\n- **Anonymous Username Maker** — build a username using pieces of personal info that a friend couldn't easily trace back to you\r\n:::\r\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "example",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "generator_plan.txt",
+          "contents": "*** MY PLAN: ***\nMy variables:\n- \n- \n-\n(add more variables if needed)\n\nWhat I want my program to combine them into:\n- \n\nSubstring slice plan:\n- variable_name[__: __]\n(add more substrings if needed)\n\n\nHow I plan to use concatenation:\n- \n\n*** MY REFLECTION: ***\nIf you used AI Tutor to help, reflect below on how you used it and how you used it's output.\n- \n\nHow did testing go? Did you update any part of your program as a result? Explain\n- ",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-04 20:15:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 20:31:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 20:33:54 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 20:40:42 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 20:45:05 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 20:47:26 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 20:56:13 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 18:13:32 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

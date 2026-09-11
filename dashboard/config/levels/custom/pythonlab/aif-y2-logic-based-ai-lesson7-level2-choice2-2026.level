@@ -32,7 +32,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def simulate(infections, growth, days):\n    print(f\"Day 0: {infections} infections\")\n    infections = infections + infections * growth\n    \n    print(f\"Day 1: {infections} infections\")\n    infections = infections + infections * growth\n\n    print(f\"Day 2: {infections} infections\")\n    infections = infections + infections * growth\n\n\nsimulate(100, 1, 3)\n",
+          "contents": "def simulate(infections, growth, days):\n  print(f\"Day 0: {infections} infections\")\n  infections = infections + infections * growth\n  \n  print(f\"Day 1: {infections} infections\")\n  infections = infections + infections * growth\n\n  print(f\"Day 2: {infections} infections\")\n  infections = infections + infections * growth\n\n\nsimulate(100, 1, 3)\n",
           "folderId": "0",
           "active": true
         }
@@ -43,9 +43,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp9x98ru4VLpz4l\njPjivHpYUf+CL+vxQoR7oKWpW/CKvGbEkWdL9BEgXhBZclTV+9tidw4T6SK9\nhwhcvynOpLj7uBmJLxLPPp18UgGsA4MnKClaSJyZG4W2eslH4KNVKDv4Ajxg\nvFud6hVzVn2kRME/y7gAftZeg/VfhXTorBqSXZUiqVgMVQ61O13/ioVmIBV1\nqqOjH/xgOaa+wF1NBeNmAQU0bqq06xU5KJHkTsILOL1uHdR1MTZElWD2wq4u\ny6x2cBmkbdvWONGHw2/UpGyrMlcBkHRpuBqE28TZ/jvw8SpFhlfEUFIWiX62\nS1KV7QVdSJw4w0eqgoA+a2f13JVbJl0JeXAw8rHIKrAKFJdILQNqdCfxhWiI\nx5ugQk35rDw=\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoHiLsB/c6KDK8/\nq6dqzvDQoTQeNxgpJT+RvfNzbUitZl3k3T4967IMEHk3Hpou4Ile9zT047bu\n3HLMWcn/SBl4khrcLqlzwBN20Pp+aKZD6IyuaTvsjVt1YlhcisMx84kbJ5Ei\nPaDnAPj1R8Y1qF1v1J6DRDvO8YBFGH77BVSLRtkLZUpnI3/l7p78cd+6YtQc\nizb2nKNwg9TmkVLbJaga3Ph4ZyIKMs2VnRLwZjFPxx78ieYbHoFUPJqo2n++\nhtCe2fcVKguHfWfOjh1fX5ykBnEnx4FG1ZXkJgb0bc00c5KZxaLXiIr9n+7b\nrGTqc14iiHVqtuDh1subOU5Vi175NH+ErAz8Ai7VQ1bvH+db7ZJ0W9KyuwdF\n8EONhQ6eupY=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 15:13:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 15:14:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:12:49 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 15:13:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 15:14:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:12:49 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:14:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:14:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

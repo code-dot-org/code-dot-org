@@ -142,6 +142,69 @@ describe('UnifiedBackpackClientApi (jest)', () => {
     expect(onSuccess).toHaveBeenCalled();
   });
 
+  describe('deleteFromLegacyBackpacks', () => {
+    const weblab2ChannelId = 'weblab2_channel_id';
+
+    it('deletes the name from every backpack but the universal one', async () => {
+      setChannelResponses({
+        universal: universalChannelId,
+        javalab: javalabChannelId,
+        weblab2: weblab2ChannelId,
+      });
+
+      await unifiedBackpackClientApi.deleteFromLegacyBackpacks('shared.txt', {
+        universal: ['shared.txt'],
+        javalab: ['shared.txt'],
+        weblab2: ['shared.txt'],
+      });
+      await flushPromises();
+
+      expect(HttpClient.delete).toHaveBeenCalledTimes(2);
+      expect(HttpClient.delete).toHaveBeenCalledWith(
+        `/v3/libraries/${javalabChannelId}/shared.txt`
+      );
+      expect(HttpClient.delete).toHaveBeenCalledWith(
+        `/v3/libraries/${weblab2ChannelId}/shared.txt`
+      );
+      expect(HttpClient.delete).not.toHaveBeenCalledWith(
+        `/v3/libraries/${universalChannelId}/shared.txt`
+      );
+    });
+
+    it('deletes nothing when only the universal backpack holds the name', async () => {
+      setChannelResponses({
+        universal: universalChannelId,
+        javalab: javalabChannelId,
+      });
+
+      await unifiedBackpackClientApi.deleteFromLegacyBackpacks('only.txt', {
+        universal: ['only.txt'],
+        javalab: ['something_else.txt'],
+      });
+      await flushPromises();
+
+      expect(HttpClient.delete).not.toHaveBeenCalled();
+    });
+
+    it('rejects when a delete fails', async () => {
+      setChannelResponses({
+        universal: universalChannelId,
+        javalab: javalabChannelId,
+      });
+      // The client retries once before giving up. Scoped to this test with
+      // mockImplementationOnce, since clearAllMocks leaves implementations set.
+      (HttpClient.delete as jest.Mock)
+        .mockImplementationOnce(() => Promise.reject(new Error('delete boom')))
+        .mockImplementationOnce(() => Promise.reject(new Error('delete boom')));
+
+      await expect(
+        unifiedBackpackClientApi.deleteFromLegacyBackpacks('doomed.txt', {
+          javalab: ['doomed.txt'],
+        })
+      ).rejects.toThrow('delete boom');
+    });
+  });
+
   it('fetchFile reads from the named backpack', async () => {
     setChannelResponses({
       universal: universalChannelId,

@@ -46,7 +46,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorResponseSchemaSettings,
     tutorVideos,
     config,
-    onImageFlagged,
     onAssetUploaded,
     onAssetRemoved,
     aiTutorInitialWelcomeMessage,
@@ -175,7 +174,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         tutorVideos={tutorVideos}
         documentationUrl={documentationUrl}
         backpackProps={backpackProps}
-        onImageFlagged={onImageFlagged}
         hasInstructionsDrawer={appName === 'weblab2'}
         onAssetUploaded={onAssetUploaded}
         onAssetRemoved={onAssetRemoved}

@@ -1906,6 +1906,25 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal 'unit-level prompt', @migrated_unit.generate_outline
   end
 
+  test "update_lesson_outlines persists course rules when supplied" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    stub_file_writes(@migrated_unit.name)
+
+    put :update_lesson_outlines, params: {
+      id: @migrated_unit.name,
+      lessons: [{key: 'a', name: 'A'}],
+      generateDraftingRules: 'pair vocab with a check',
+      generateAuthoringRules: 'no CSS',
+    }, as: :json
+
+    assert_response :ok
+    @migrated_unit.reload
+    assert_equal 'pair vocab with a check', @migrated_unit.generate_drafting_rules
+    assert_equal 'no CSS', @migrated_unit.generate_authoring_rules
+    assert_equal 'pair vocab with a check', JSON.parse(response.body)['generateDraftingRules']
+  end
+
   test "update_lesson_outlines leaves unit generate_outline alone when omitted" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)

@@ -1,0 +1,22 @@
+name 'aif-y2-working-with-data-postassessment-q6-2026'
+
+wrong '13.5 seconds'
+wrong '13 seconds'
+wrong '12 seconds'
+right 'It\'s not possible to know.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+These statistics describe an athlete's 100m dash times:
+
+**Mean:** 14 seconds
+**Range:** 2 seconds
+**Standard Deviation:** 0.5 seconds
+
+What is the fastest 100m time they've run?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Analyzing Numerical Data
+MARKDOWN
