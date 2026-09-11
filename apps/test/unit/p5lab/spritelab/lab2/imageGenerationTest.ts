@@ -1,6 +1,7 @@
 import {generateText} from '@cdo/apps/aiGateway';
 import {
   generateImage,
+  pixelBlockFor,
   requestImage,
   styleClause,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
@@ -122,19 +123,23 @@ describe('generateImage', () => {
   it('asks for the pixel grid of the image type', async () => {
     // Sprites and blocks read at 64x64; a background carries a whole scene,
     // so its grid is finer.
-    expect(styleClause('pixel', 'sprite')).toContain('64x64');
-    expect(styleClause('pixel', 'block')).toContain('64x64');
-    expect(styleClause('pixel', 'background')).toContain('128x128');
-    expect(styleClause('pixel', 'background')).toContain('8x8 block');
+    expect(styleClause('pixel', pixelBlockFor('sprite'))).toContain('64x64');
+    expect(styleClause('pixel', pixelBlockFor('block'))).toContain('64x64');
+    expect(styleClause('pixel', pixelBlockFor('background'))).toContain(
+      '128x128'
+    );
+    expect(styleClause('pixel', pixelBlockFor('background'))).toContain(
+      '8x8 block'
+    );
     await generateImage('a beach', {imageType: 'background', style: 'smooth'});
     const content = mockGenerateText.mock.calls[0][0].messages[0].content;
     expect(content).not.toContain('pixel grid');
   });
 
   it('a chosen pixel grid overrides the default in the prompt', async () => {
-    expect(styleClause('pixel', 'sprite', 32)).toContain('32x32 pixel grid');
-    expect(styleClause('pixel', 'sprite', 64)).toContain('16x16 pixel grid');
-    expect(styleClause('pixel', 'sprite', 64)).toContain('64x64 block');
+    expect(styleClause('pixel', 32)).toContain('32x32 pixel grid');
+    expect(styleClause('pixel', 64)).toContain('16x16 pixel grid');
+    expect(styleClause('pixel', 64)).toContain('64x64 block');
     // End to end: the request carries the chosen grid. Post-processing needs
     // a real canvas and throws in jsdom, after the request has been sent.
     await generateImage('a cave', {

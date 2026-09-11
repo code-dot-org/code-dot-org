@@ -124,6 +124,20 @@ describe('pixelArt', () => {
     expect(detectPixelGrid(gradientRaster())).toBeNull();
   });
 
+  it('refuses a grid that does not explain the color edges', () => {
+    // Near-flat with sparse diagonal outlines: coarse resampling changes
+    // few probed points, but no lattice explains the edges — without the
+    // edge-share gate, a noise pitch wins and normalization would crush
+    // the image.
+    const raster = rasterFrom(512, 512, (x, y) =>
+      (x + y * 2) % 97 < 2 ? PALETTE[1] : PALETTE[0]
+    );
+    expect(detectPixelGrid(raster)).toBeNull();
+    const grid = assumePixelGrid(raster, FALLBACK_BLOCK);
+    expect(grid.sizeX).toBe(FALLBACK_BLOCK);
+    expect(grid.confidence).toBe(0);
+  });
+
   it('detects a fractional pitch and downsamples on it', () => {
     // 6.25px: a model's 12.5px grid after the character strip's half
     // downscale. Integer sizes accumulate the remainder as drift and never

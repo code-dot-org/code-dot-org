@@ -272,6 +272,34 @@ interface GenerateImagePaneProps {
  * The Images tab: the project's image gallery. Clicking an image (or the
  * new-image card) opens the image dialog; painting happens from there.
  */
+// Detection runs a full-raster scan (~tens of ms, more on Chromebooks) and
+// the answer never changes for the same pixels, so it is cached across
+// dialog opens. Keys are digests, not the sources themselves — a data URI
+// key would pin megabytes per entry.
+const gridDetectionCache = new Map<string, Promise<number | null>>();
+const GRID_CACHE_MAX = 32;
+function cachedGridDetection(
+  source: string,
+  frameSize?: {x: number; y: number}
+): Promise<number | null> {
+  const key = `${source.length}:${source.slice(0, 48)}:${source.slice(-48)}:${
+    frameSize?.x ?? ''
+  }x${frameSize?.y ?? ''}`;
+  const hit = gridDetectionCache.get(key);
+  if (hit) {
+    return hit;
+  }
+  const pending = detectImageGridSize(source, frameSize).catch(() => {
+    gridDetectionCache.delete(key);
+    return null;
+  });
+  if (gridDetectionCache.size >= GRID_CACHE_MAX) {
+    gridDetectionCache.delete(gridDetectionCache.keys().next().value as string);
+  }
+  gridDetectionCache.set(key, pending);
+  return pending;
+}
+
 const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   uploadImage,
   onRenameImage,
@@ -454,34 +482,39 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // The Resolution row's grid for a pixel image that never recorded one:
   // character sheets skip normalization (a strip's frames must agree), and
   // images saved before normalization existed have nothing stored — detect
-  // what the model drew from the first frame instead. Display only.
-  const [detectedGridSize, setDetectedGridSize] = useState<
-    number | undefined
-  >();
+  // what the model drew from the first frame instead. Display only. The
+  // result is keyed to its source, so a switched dialog target never wears
+  // the previous image's grid for a frame.
+  const [detectedGrid, setDetectedGrid] = useState<{
+    source: string;
+    size: number;
+  }>();
   const detectSource = targetProps?.dataURI || targetProps?.sourceUrl;
+  const frameSize = targetProps?.frameSize;
   const needsGridDetection =
     targetProps?.generation?.style === 'pixel' &&
     !targetProps.pixelGridSize &&
     !!detectSource;
   useEffect(() => {
-    setDetectedGridSize(undefined);
     if (!needsGridDetection || !detectSource) {
       return;
     }
     let cancelled = false;
-    detectImageGridSize(detectSource, targetProps?.frameSize)
+    cachedGridDetection(detectSource, frameSize)
       .then(size => {
         if (!cancelled && size && size > 1) {
-          setDetectedGridSize(size);
+          setDetectedGrid({source: detectSource, size});
         }
       })
       .catch(() => {});
     return () => {
       cancelled = true;
     };
-    // detectSource changes whenever the image's pixels do.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [needsGridDetection, detectSource]);
+  }, [needsGridDetection, detectSource, frameSize]);
+  const detectedGridSize =
+    detectedGrid && detectedGrid.source === detectSource
+      ? detectedGrid.size
+      : undefined;
 
   const handleDelete = useCallback(() => {
     if (dialogTarget && dialogTarget !== 'new') {
@@ -903,7 +936,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
           }
           advanced={advanced}
-          pixelated={!!targetProps?.pixelGridSize}
+          pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
           // A sheet's resolution is its frame: the image the pane shows.
           resolution={creating ? undefined : targetProps?.frameSize}
           pixelGridSize={targetProps?.pixelGridSize ?? detectedGridSize}

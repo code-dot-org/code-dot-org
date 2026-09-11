@@ -34,27 +34,27 @@ export function pixelBlockFor(imageType: ImageType, pixelGrid?: number) {
   return pixelGrid ? MODEL_OUTPUT_PX / pixelGrid : ASSUMED_BLOCK[imageType];
 }
 
+/** The logical grid a block size asks of the model, as recorded in
+ * generation metadata (pixelBlockFor's inverse). */
+export function logicalGridFor(blockSize: number): number {
+  return MODEL_OUTPUT_PX / blockSize;
+}
+
 // Tacked onto the prompt so the generated image matches the chosen style.
 // Kept here (not inline) so the sprite and background prompts stay in sync.
-// The pixel prompt requests the same block size normalization falls back to
-// (blockSize, defaulting to the type's ASSUMED_BLOCK), so an undetectable
-// grid still matches what was asked for.
-export function styleClause(
-  style: ImageStyle,
-  imageType: ImageType,
-  blockSize?: number
-): string {
+// Callers pass the pixelBlockFor block they also normalize against, so what
+// we ask for and what we assume can't drift apart.
+export function styleClause(style: ImageStyle, blockSize: number): string {
   if (style !== 'pixel') {
     return SMOOTH_PROMPT;
   }
-  const block = blockSize ?? ASSUMED_BLOCK[imageType];
-  const logical = MODEL_OUTPUT_PX / block;
+  const logical = logicalGridFor(blockSize);
   return (
     'Render as crisp pixel art with a small, limited color palette and ' +
     'hard-edged pixels — no anti-aliasing, gradients, or soft shading. ' +
     `Draw on a strict ${logical}x${logical} pixel grid: every logical ` +
-    `pixel is a uniform ${block}x${block} block, perfectly aligned to the ` +
-    'image edges.'
+    `pixel is a uniform ${blockSize}x${blockSize} block, perfectly ` +
+    'aligned to the image edges.'
   );
 }
 
@@ -269,7 +269,7 @@ export async function generateImage(
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  let fullPrompt = `${prompt}. ${styleClause(style, imageType, pixelBlock)}`;
+  let fullPrompt = `${prompt}. ${styleClause(style, pixelBlock)}`;
   if (imageType === 'sprite') {
     fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
   } else if (imageType === 'block') {
@@ -316,7 +316,7 @@ export async function generateImage(
     }),
     // Recorded even at the default: the point is comparing what was asked
     // for against what came back.
-    ...(style === 'pixel' && {pixelGrid: MODEL_OUTPUT_PX / pixelBlock}),
+    ...(style === 'pixel' && {pixelGrid: logicalGridFor(pixelBlock)}),
     ...(options.inputImageDataURI && {editedPrevious: true}),
   };
 

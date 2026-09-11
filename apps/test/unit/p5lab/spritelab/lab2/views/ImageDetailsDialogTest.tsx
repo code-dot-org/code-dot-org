@@ -83,7 +83,8 @@ describe('resolutionLabel', () => {
   });
 
   it('rounds a non-integral logical size', () => {
-    // 520px at 8 physical px per art pixel: the 65x65 witch-era grid.
+    // 520px at 8 physical px per art pixel: a 65x65 image stored before
+    // normalization standardized grid sizes.
     expect(resolutionLabel({x: 520, y: 520}, 8)).toBe('65 × 65 (520 × 520)');
   });
 });

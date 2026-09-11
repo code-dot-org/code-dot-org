@@ -19,6 +19,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {bytesToDataURI} from './encoding';
 import {
   GeneratedImageResult,
+  logicalGridFor,
   pixelBlockFor,
   RawImage,
   rawImageToBlob,
@@ -30,7 +31,6 @@ import {chooseKeyColor, KeyColor} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
   getCharacterSetImageModel,
-  MODEL_OUTPUT_PX,
 } from './modelHelpers';
 import {
   canvasToBlob,
@@ -98,18 +98,14 @@ export function basePrompt(
   prompt: string,
   style: ImageStyle,
   key: KeyColor,
-  pixelBlock?: number
+  pixelBlock: number
 ): string {
   return (
     `${prompt}. Show the whole character standing, facing right: its face ` +
     'and body point toward the right side of the image. Arms hanging ' +
     'relaxed at the sides, hands open and empty. Feet near the bottom of ' +
     'the image, nothing cut off. ' +
-    `${ONLY_THIS_CHARACTER} ${styleClause(
-      style,
-      'sprite',
-      pixelBlock
-    )} ${keyClause(key)}`
+    `${ONLY_THIS_CHARACTER} ${styleClause(style, pixelBlock)} ${keyClause(key)}`
   );
 }
 
@@ -124,7 +120,7 @@ export function posePrompt(
   frame: PosedFrame,
   style: ImageStyle,
   key: KeyColor,
-  pixelBlock?: number
+  pixelBlock: number
 ): string {
   return (
     `The provided image shows this character: ${prompt}. Redraw the same ` +
@@ -132,11 +128,7 @@ export function posePrompt(
     'provided image: the same design, colors, proportions, outfit and art ' +
     'style, facing right, and the character at exactly the same size and ' +
     'position in the frame. ' +
-    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(
-      style,
-      'sprite',
-      pixelBlock
-    )}`
+    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style, pixelBlock)}`
   );
 }
 
@@ -382,7 +374,7 @@ export async function generateCharacterSet(
       temperature: options.temperature,
     }),
     ...(options.style === 'pixel' && {
-      pixelGrid: MODEL_OUTPUT_PX / pixelBlock,
+      pixelGrid: logicalGridFor(pixelBlock),
     }),
   };
   const poses: AnimationPoses = CHARACTER_STRIP_POSES;

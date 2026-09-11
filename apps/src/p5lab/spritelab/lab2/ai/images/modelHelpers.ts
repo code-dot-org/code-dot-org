@@ -56,11 +56,8 @@ export function imageProviderOptions(imageSize: ImageSize) {
 // detection falls back to the same value — what we ask for and what we
 // assume can't drift apart.
 export const MODEL_OUTPUT_PX = 1024;
-// Per image type: sprites and blocks read best chunky (64x64 logical), but a
-// background carries a whole scene, so it gets a finer grid (128x128).
-// Halving again (256x256 = 4px blocks) would sit AT detection's 4px floor,
-// and the model tends to paint finer than asked — 128 is as fine as the
-// pipeline can hold.
+// Backgrounds carry a whole scene, so they get a finer grid than sprites
+// and blocks; finer still would sit at detection's 4px floor.
 export const ASSUMED_BLOCK: Record<ImageType, number> = {
   sprite: 16,
   block: 16,
@@ -78,6 +75,11 @@ export const STORED_MAX_PX: {[type in ImageType]?: number} = {
   sprite: 512,
   block: 256,
 };
+
+/** The logical grid the type's default block yields (64 or 128). */
+export function defaultPixelGrid(imageType: ImageType): number {
+  return MODEL_OUTPUT_PX / ASSUMED_BLOCK[imageType];
+}
 
 export function getTextModel() {
   return googleProvider(AiChatModelIds.GEMINI_2_5_FLASH);

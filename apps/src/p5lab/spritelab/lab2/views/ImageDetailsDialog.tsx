@@ -86,7 +86,7 @@ interface ImageDetailsDialogProps {
  * grid the 1px brush paints on, which is the resolution we treat the image
  * as — with the stored size in parentheses; the parenthetical goes away if
  * pixel art is ever stored at its logical size (which needs the engine to
- * upscale with hard edges). Exported for the dialog tests.
+ * upscale with hard edges).
  */
 export function resolutionLabel(
   resolution: {x: number; y: number},
