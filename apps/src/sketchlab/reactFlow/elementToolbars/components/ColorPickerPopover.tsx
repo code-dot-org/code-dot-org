@@ -1,9 +1,10 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip} from '@mui/material';
+import {IconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
+import Tooltip from '../../components/ThemedTooltip';
 import {ColorSwatch} from '../toolbarPalettes';
 
 import TransparentSwatchIcon from './TransparentSwatchIcon';

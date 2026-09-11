@@ -9,6 +9,7 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
 
 describe('LoginTypePicker', () => {
   const realIsEnabled = experiments.isEnabled;
@@ -71,7 +72,7 @@ describe('LoginTypePicker', () => {
 
     // eslint-disable-next-line no-restricted-properties
     const lmsCards = screen.getByTestId('lms-info-cards-container');
-    expect(lmsCards.children).toHaveLength(4);
+    expect(lmsCards.children).toHaveLength(5);
   });
 
   it('shows all cards for LTI users', () => {
@@ -91,7 +92,7 @@ describe('LoginTypePicker', () => {
 
     // eslint-disable-next-line no-restricted-properties
     const lmsCards = screen.getByTestId('lms-info-cards-container');
-    expect(lmsCards.children).toHaveLength(4);
+    expect(lmsCards.children).toHaveLength(5);
   });
 
   it('does not show the Google LMS info card for Google users', () => {
@@ -111,7 +112,7 @@ describe('LoginTypePicker', () => {
 
     // eslint-disable-next-line no-restricted-properties
     const lmsCards = screen.getByTestId('lms-info-cards-container');
-    expect(lmsCards.children).toHaveLength(3);
+    expect(lmsCards.children).toHaveLength(4);
     expect(
       within(lmsCards).queryByText(LmsLoginTypeNames.google_classroom)
     ).toBeNull();
@@ -134,7 +135,50 @@ describe('LoginTypePicker', () => {
 
     // eslint-disable-next-line no-restricted-properties
     const lmsCards = screen.getByTestId('lms-info-cards-container');
-    expect(lmsCards.children).toHaveLength(3);
+    expect(lmsCards.children).toHaveLength(4);
     expect(within(lmsCards).queryByText(LmsLoginTypeNames.clever)).toBeNull();
+  });
+
+  it('does not show the ClassLink LMS info card for ClassLink users', () => {
+    render(
+      <LoginTypePicker
+        title="title"
+        setLoginType={() => {}}
+        handleCancel={() => {}}
+        providers={[
+          SectionLoginType.picture,
+          SectionLoginType.word,
+          SectionLoginType.email,
+          SectionLoginType.classlink,
+        ]}
+      />
+    );
+
+    // eslint-disable-next-line no-restricted-properties
+    const lmsCards = screen.getByTestId('lms-info-cards-container');
+    expect(lmsCards.children).toHaveLength(4);
+    expect(
+      within(lmsCards).queryByText(LmsLoginTypeNames.classlink)
+    ).toBeNull();
+  });
+
+  it('hides the LMS section for users holding every LMS provider', () => {
+    render(
+      <LoginTypePicker
+        title="title"
+        setLoginType={() => {}}
+        handleCancel={() => {}}
+        providers={[
+          SectionLoginType.google_classroom,
+          SectionLoginType.clever,
+          SectionLoginType.classlink,
+          SectionLoginType.lti_v1,
+        ]}
+      />
+    );
+
+    expect(
+      screen.queryByRole('heading', {name: i18n.lmsIntegrations()})
+    ).toBeNull();
   });
 });

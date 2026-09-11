@@ -779,6 +779,7 @@ Dashboard::Application.routes.draw do
           get :find_students
           get :lookup_section
           post :lookup_section
+          post :set_section_picture_passwords
           post :undelete_section
         end
       end
@@ -1123,9 +1124,17 @@ Dashboard::Application.routes.draw do
         File.basename(file).to_s.gsub(/\..*$/, '')
       end).uniq
 
+    # Mutating actions kept out of the GET wildcard below: a GET would skip
+    # CSRF verification.
+    api_post_only_methods = [:import_classlink_classroom]
+    api_methods -= api_post_only_methods
+
     namespace :dashboardapi, module: :api do
       api_methods.each do |action|
         get action, action: action
+      end
+      api_post_only_methods.each do |action|
+        post action, action: action
       end
     end
     get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
@@ -1347,7 +1356,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
-    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}

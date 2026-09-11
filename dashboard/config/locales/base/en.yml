@@ -342,6 +342,7 @@ en:
       email: 'Email'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
+      classlink: 'ClassLink'
       lti_v1: 'LMS'
   follower:
     invite_sent: 'Invite sent'

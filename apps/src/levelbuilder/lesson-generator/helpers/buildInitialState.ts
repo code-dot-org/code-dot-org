@@ -4,11 +4,13 @@ import {AICHAT_PRESET_IDS} from '../ai/aichat';
 import {
   BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES,
   ExistingLessonData,
+  LabType,
   labTypeFromRailsType,
   LevelSpec,
   SerializedLevel,
   SerializedScriptLevel,
   SUPPORTED_LAB_TYPES,
+  takesSuppliedCode,
 } from '../types';
 
 // Round-trip helper: on reload we may see a persisted preset id that no
@@ -21,6 +23,24 @@ function restoreAichatPreset(
   return (AICHAT_PRESET_IDS as readonly string[]).includes(raw)
     ? raw
     : undefined;
+}
+
+function restoreGeneratorFields(
+  labType: LabType | undefined,
+  level: SerializedLevel
+): Partial<LevelSpec> {
+  if (!labType) return {};
+  return {
+    ...(labType === 'aichat'
+      ? {aichatPreset: restoreAichatPreset(level.generateAichatPreset)}
+      : {}),
+    ...(takesSuppliedCode(labType) && level.generateSuppliedCode
+      ? {
+          suppliedCode: level.generateSuppliedCode,
+          lastGeneratedSuppliedCode: level.generateSuppliedCode,
+        }
+      : {}),
+  };
 }
 
 const newLevelSpec = (): LevelSpec => ({
@@ -121,9 +141,7 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
         generate: labType !== undefined && !level.generateOutline,
         existing: {activityIndex, sectionIndex, scriptLevel},
         unsupportedType: labType === undefined ? level.type : undefined,
-        ...(labType === 'aichat'
-          ? {aichatPreset: restoreAichatPreset(level.generateAichatPreset)}
-          : {}),
+        ...restoreGeneratorFields(labType, level),
       };
       if (labType === 'bubbleChoice' && Array.isArray(level.sublevels)) {
         const parentPrefix = level.name + '-';
@@ -153,9 +171,7 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
               supportedSubLabType === undefined
                 ? sub.type ?? '(unknown)'
                 : undefined,
-            ...(supportedSubLabType === 'aichat'
-              ? {aichatPreset: restoreAichatPreset(sub.generateAichatPreset)}
-              : {}),
+            ...restoreGeneratorFields(supportedSubLabType, sub),
           };
         });
       }

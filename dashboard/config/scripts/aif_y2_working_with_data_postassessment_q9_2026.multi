@@ -1,0 +1,24 @@
+name 'aif-y2-working-with-data-postassessment-q9-2026'
+
+wrong '`plt.bar`'
+right '`plt.scatter`'
+wrong '`plt.col`'
+wrong '`plt.time`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which `matplotlib` plotting function is most appropriate for visualizing the following data?
+
+| Age | Height (Inches) |
+|---|---|
+| 14 | 60 |
+| 67 | 68 |
+| 14 | 70 |
+| 15 | 62 |
+| ... | ... |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Visualizing Data (Part 1)
+MARKDOWN

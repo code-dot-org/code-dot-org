@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-10T19:22:40.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "minimal/editorial\r\n\r\npaste in your variables and math calucations from level 2.\r\n\r\nprompt ai tutor to make adjustments to the scenes to match your plan from level 1",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "csp-unit1-lesson30-theater-template-d_27_28",
+    "display_name": "Editorial",
+    "bubble_choice_description": "Warm, paper-toned background with serif type and clean rule lines — a quiet, magazine-style recap that lets the numbers speak for themselves.",
+    "thumbnail_url": "https://images.code.org/d56034e93ce2e08a75e47705c7ed02b1-Screenshot 2026-09-10 125931.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-10T19:22:40.372+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-c1_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-c1_27_28\"},{\"changed_at\":\"2026-09-10 19:23:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 20:00:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

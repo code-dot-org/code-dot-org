@@ -8,6 +8,14 @@ jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),
 }));
 
+// The safety checks have their own suite; here they pass silently so the
+// generation mechanics stay the subject.
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety', () => ({
+  checkPromptSafety: jest.fn().mockResolvedValue(undefined),
+  checkImageSafety: jest.fn().mockResolvedValue(undefined),
+  markHandled: jest.fn(promise => promise),
+}));
+
 const mockGenerateText = generateText as jest.Mock;
 
 // A smooth-style background delivered as JPEG (no alpha) skips the canvas

@@ -19,6 +19,7 @@ import {
   START_SOURCES,
   SUPPORTED_AUDIO_EXTENSIONS,
 } from '@cdo/apps/lab2/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -26,6 +27,7 @@ import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import currentLocale from '@cdo/apps/util/currentLocale';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
@@ -87,7 +89,19 @@ export const useFileRowOptions = (
   );
   const dispatch = useAppDispatch();
 
-  const backpackApi = useBackpackAPIContext()?.primaryApi;
+  const legacyBackpackApi = useBackpackAPIContext()?.primaryApi;
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+
+  const backpackApi = useMemo(() => {
+    if (
+      experiments.isEnabledAllowingQueryString(experiments.UNIFIED_BACKPACK)
+    ) {
+      return currentUserId
+        ? Lab2Registry.getInstance().getUnifiedBackpackApi()
+        : undefined;
+    }
+    return legacyBackpackApi;
+  }, [currentUserId, legacyBackpackApi]);
 
   const {
     openConfirmDeleteFile,
@@ -195,7 +209,7 @@ export const useFileRowOptions = (
         clickHandler: () => openConfirmDeleteFile({file}),
       },
       {
-        condition: backpackApi !== null,
+        condition: !!backpackApi,
         iconName: 'backpack',
         labelText: codebridgeI18n.saveToBackpackTitle(),
         clickHandler: () =>

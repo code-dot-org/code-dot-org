@@ -146,7 +146,7 @@
         outline: 2px solid var(--borders-brand-teal-primary);
       }
 
-      &:active:not(:disabled) {
+      &:active:not([aria-disabled='true']) {
         color: var(--text-neutral-primary);
         border: none !important;
         border-bottom: 2px solid var(--borders-brand-teal-primary) !important;
@@ -157,7 +157,7 @@
         border-bottom: 2px solid var(--borders-brand-teal-primary);
       }
 
-      &:disabled {
+      &[aria-disabled='true'] {
         cursor: not-allowed;
         color: var(--text-neutral-disabled);
         border: none !important;
@@ -184,7 +184,7 @@
         outline: 2px solid var(--borders-brand-teal-primary);
       }
 
-      &:active:not(:disabled) {
+      &:active:not([aria-disabled='true']) {
         color: var(--text-neutral-inverse);
         border: none !important;
         border-bottom: 2px solid var(--borders-brand-teal-primary) !important;
@@ -195,7 +195,7 @@
         border-bottom: 2px solid var(--borders-brand-teal-primary);
       }
 
-      &:disabled {
+      &[aria-disabled='true'] {
         cursor: not-allowed;
         color: var(--neutral-gray-80);
         border: none !important;
@@ -241,7 +241,7 @@
         }
       }
 
-      &:active:not(:disabled) {
+      &:active:not([aria-disabled='true']) {
         color: var(--text-brand-teal-primary);
         background-color: var(--background-neutral-primary);
         border: 1px solid var(--borders-neutral-primary) !important;
@@ -255,7 +255,7 @@
         border-bottom-color: transparent;
       }
 
-      &:disabled {
+      &[aria-disabled='true'] {
         cursor: not-allowed;
         color: var(--text-neutral-disabled);
         background-color: var(--background-neutral-secondary);
@@ -295,7 +295,7 @@
         }
       }
 
-      &:active:not(:disabled) {
+      &:active:not([aria-disabled='true']) {
         color: var(--text-neutral-white-fixed);
         background-color: var(--background-neutral-primary-inverse);
         border: 1px solid var(--neutral-gray-80) !important;
@@ -309,7 +309,7 @@
         border-bottom-color: transparent;
       }
 
-      &:disabled {
+      &[aria-disabled='true'] {
         cursor: not-allowed;
         color: var(--neutral-gray-80);
         background-color: var(--neutral-gray-95);
@@ -337,11 +337,6 @@
     flex-shrink: 1;
     flex-basis: 0;
     min-width: 0;
-
-    // Fix issue when tooltip is added to the tab that has too long label and tab becomes wider then needed
-    > div {
-      width: 100%;
-    }
   }
 
   li button[role='tab'] {
@@ -375,7 +370,7 @@
       @include mixins.focus-styles;
     }
 
-    &:active:not(:disabled, .selectedTab) {
+    &:active:not([aria-disabled='true'], .selectedTab) {
       border-radius: 0.5rem 0.5rem 0 0;
       border: 1px solid var(--borders-neutral-strong) !important;
       border-bottom: 0 solid transparent !important;

@@ -3,12 +3,12 @@ $amber: #ffb42e;
 .container {
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   height: 100%;
   gap: 8px;
 }
 
-.header,
 .contextIntro,
 .chatPanel {
   width: 100%;
@@ -18,9 +18,10 @@ $amber: #ffb42e;
 // ── Header ────────────────────────────────────────────────────────────────────
 
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   color: #d4dae1;
   flex-shrink: 0;
 }

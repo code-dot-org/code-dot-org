@@ -34,6 +34,8 @@ export const AICHAT_PRESET_IDS = [
 
 export type AichatPresetId = (typeof AICHAT_PRESET_IDS)[number];
 
+export const DEFAULT_AICHAT_PRESET: AichatPresetId = 'explore';
+
 export const AICHAT_PRESETS: Record<AichatPresetId, AichatPreset> = {
   explore: {
     id: 'explore',

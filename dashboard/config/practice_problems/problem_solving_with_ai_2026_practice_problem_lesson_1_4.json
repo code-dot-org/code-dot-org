@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_1_4",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "A student prompts AI with \"Draw a bat in the air.\" and gets a picture of a baseball bat flying out of a batter's hand instead of the animal flying in the air. What does this reveal about how AI reads prompts?",
+  "solution": [
+    {"option": "AI understands context and chooses the correct meaning of ambiguous words.", "correct": false},
+    {"option": "AI matches individual words to common associations without fully considering context.", "correct": true},
+    {"option": "AI cannot process any prompts involving animals.", "correct": false},
+    {"option": "AI always chooses the least common meaning of a word.", "correct": false}
+  ],
+  "objective_keys": [
+    "adb9a526-708e-4e0a-bab3-bbeb39cb7fda"
+  ]
+}

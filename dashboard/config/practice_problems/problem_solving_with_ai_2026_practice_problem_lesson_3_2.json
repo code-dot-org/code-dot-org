@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_3_2",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of these best describes the relationship between training data and an AI model's abilities?",
+  "solution": [
+    {"option": "Training data has no effect on what an AI model can do.", "correct": false},
+    {"option": "Training data is the information used to teach the model to recognize patterns and generate responses.", "correct": true},
+    {"option": "Training data is only used after the AI model has already been built.", "correct": false},
+    {"option": "Training data is created by the AI model itself, not given to it.", "correct": false}
+  ],
+  "objective_keys": [
+    "5a853321-3417-4cf3-8aed-a93140f77b6b"
+  ]
+}
