@@ -453,7 +453,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create causes SignIn creation" do
     frozen_time = Date.parse('1985-10-26 01:20:00')
-    anon_user_id = SecureRandom.uuid
+    anon_user_id = Cdo::AnonUserId.generate
     DateTime.stubs(:now).returns(frozen_time)
     session[:statsig_stable_id] = anon_user_id
     user_params = set_up_partial_registration(@default_params)
