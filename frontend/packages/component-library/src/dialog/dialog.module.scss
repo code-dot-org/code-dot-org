@@ -34,6 +34,12 @@
   p {
     margin-bottom: 0;
   }
+
+  // Heading and description only; customContent keeps its own alignment.
+  > h2,
+  .dialogContent {
+    text-align: center;
+  }
 }
 
 .dialogActionsSection {

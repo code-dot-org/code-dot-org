@@ -3,12 +3,7 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require_relative '../legacy/middleware/files_api'
-require_relative '../legacy/middleware/channels_api'
-require 'shared_resources'
-require_relative '../legacy/middleware/net_sim_api'
-require_relative '../legacy/middleware/sound_library_api'
-require_relative '../legacy/middleware/animation_library_api'
+
 Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
 require 'cdo/global_edition'
@@ -103,15 +98,6 @@ module Dashboard
     config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
     config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
 
-    # Ensure legacy endpoints are loaded last so they have access to middleware-provided
-    # functionality such as I18n, GlobalEdition, Redis-backed sessions, and cookies.
-    config.middleware.use FilesApi
-    config.middleware.insert_after FilesApi, ChannelsApi
-    config.middleware.insert_after ChannelsApi, SharedResources
-    config.middleware.insert_after SharedResources, NetSimApi
-    config.middleware.insert_after NetSimApi, AnimationLibraryApi
-    config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
-
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
 
@@ -174,8 +160,6 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
-      legacy-prerequisites.css
-      legacy-styles.css
     )
 
     # Support including code from directories outside of the normal Rails directory
@@ -302,5 +286,11 @@ module Dashboard
     routes.default_url_options[:protocol] = CDO.default_scheme.chomp(':')
     routes.default_url_options[:host] = CDO.dashboard_site_host
     routes.default_url_options.delete(:port)
+
+    # Ensure legacy APIs are loaded after middleware that provides required
+    # functionality such as I18n, GlobalEdition, Redis-backed sessions, and cookies.
+    initializer 'dashboard.legacy_apis', after: :load_config_initializers do |app|
+      app.config.middleware.insert_after RedisSessionStore, Middleware::LegacyApiStack
+    end
   end
 end

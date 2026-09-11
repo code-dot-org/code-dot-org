@@ -6,7 +6,9 @@ import {useCallback, useRef, useState} from 'react';
 
 import {createUuid} from '@cdo/apps/utils';
 
+import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {ImageGenerationMetadata} from '../ai/images/types';
+import {AnimationPoses} from '../characterAnimations';
 
 // One entry in the strip: enough to make it the image again (and to carry
 // its seed into the generate view).
@@ -16,19 +18,49 @@ export interface Alternative {
   sourceUrl: string;
   dataURI?: string;
   frameSize: {x: number; y: number} | null;
+  /** The entry's frame grid when it is a character strip; absent on a
+      plain picture. Restoring the entry restores this too. */
+  frames?: GeneratedImageResult['frames'];
   pixelGridSize?: number;
+  /** The stored image is cropped to content (imageGeneration.ts). */
+  trimmed?: boolean;
   generation?: ImageGenerationMetadata;
 }
 
 // The strip shows the last few results; older ones age out.
 const MAX_ALTERNATIVES = 5;
 
+/** An animation's frame grid in result shape, or undefined for a plain
+    single-frame picture. */
+export function framesFromAnimation(props: {
+  frameSize?: {x: number; y: number};
+  frameCount?: number;
+  frameDelay?: number;
+  looping?: boolean;
+  poses?: AnimationPoses;
+}): GeneratedImageResult['frames'] {
+  return props.frameSize && props.frameCount && props.frameCount > 1
+    ? {
+        frameSize: props.frameSize,
+        frameCount: props.frameCount,
+        frameDelay: props.frameDelay ?? 2,
+        looping: props.looping ?? true,
+        poses: props.poses,
+      }
+    : undefined;
+}
+
 /** The strip entry for an animation's current state, or null without one. */
 export function alternativeFromAnimation(props?: {
   dataURI?: string;
   sourceUrl?: string;
   frameSize?: {x: number; y: number};
+  frameCount?: number;
+  frameDelay?: number;
+  looping?: boolean;
+  poses?: AnimationPoses;
   pixelGridSize?: number;
+  trimmed?: boolean;
   generation?: ImageGenerationMetadata;
 }): Alternative | null {
   const thumb = props?.dataURI || props?.sourceUrl;
@@ -41,7 +73,9 @@ export function alternativeFromAnimation(props?: {
     sourceUrl: props.sourceUrl || thumb,
     dataURI: props.dataURI,
     frameSize: props.frameSize || null,
+    frames: framesFromAnimation(props),
     pixelGridSize: props.pixelGridSize,
+    trimmed: props.trimmed,
     generation: props.generation,
   };
 }
@@ -64,6 +98,13 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
         ? [next[0], ...next.slice(2)]
         : next.slice(1);
     });
+  }, []);
+
+  // Swap one entry's thumb (e.g. a strip's standing-frame crop, made async).
+  const setThumb = useCallback((id: string, thumb: string) => {
+    setAlternatives(prev =>
+      prev.map(alt => (alt.id === id ? {...alt, thumb} : alt))
+    );
   }, []);
 
   // An asset this session made or superseded; kept until the session ends.
@@ -99,6 +140,11 @@ export function useImageSession(reclaimAsset: (url?: string) => void) {
     setAlternatives([]);
   }, [sweep]);
 
+  // What the dialog opened on, for "has this session changed the image".
+  const seedSourceUrl = alternatives.find(
+    a => a.id === seedId.current
+  )?.sourceUrl;
+
   // The callbacks are stable; depend on the pieces, not the object.
-  return {alternatives, push, noteAsset, reset, end};
+  return {alternatives, push, setThumb, noteAsset, reset, end, seedSourceUrl};
 }

@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-09-10T21:17:09.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Mia, what do you think? If I use AI to brainstorm these initial ideas... are they still my own ideas?",
+        "imageUrl": "https://images.code.org/c10b7f1c5ffdf40b2840a391c8be8ca6-Gemini_Generated_Image_pkzez7pkzez7pkze.jpeg",
+        "key": "HoAI-Playtest-DiscussionV1-392ec568-bb96-46cc-a980-4df510495b15",
+        "typing": true,
+        "layout": "text-top-center"
+      },
+      {
+        "text": "No. I don't believe they're your ideas. Since the AI generated those core concepts. It's basically plagiarism, but sophisticated.",
+        "imageUrl": "https://images.code.org/8a4f840cfb278b8587bce717228c42a3-Gemini_Generated_Image_cyqmbhcyqmbhcyqm.jpeg",
+        "key": "HoAI-Playtest-DiscussionV1-7afc4351-854f-4e6b-938e-3ac5db13f58c",
+        "typing": true,
+        "layout": "text-top-center"
+      },
+      {
+        "text": "But I provided the prompt and the direction. The choice and refinement are still entirely mine.",
+        "imageUrl": "https://images.code.org/1f83b97682ae3d6f1c2f01c309f0e7ca-Gemini_Generated_Image_u9s8v0u9s8v0u9s8.jpeg",
+        "key": "HoAI-Playtest-DiscussionV1-a66e0aa6-5dbc-4270-bd45-87fed3053ca9",
+        "typing": true,
+        "layout": "text-top-center"
+      },
+      {
+        "text": "But you didn't come up with that on your own — the AI did. Where's the line?",
+        "imageUrl": "https://images.code.org/4b2a9559f7228f96bb2ce5942a072ffd-Gemini_Generated_Image_slv083slv083slv0.jpeg",
+        "key": "HoAI-Playtest-DiscussionV1-50f8f071-7159-4edc-8bd4-2dd1ceb26198",
+        "typing": true,
+        "layout": "text-top-center"
+      },
+      {
+        "text": "[Jaylen] I still see it as human guidance. My brain is still in control.\n\n[Mia] I think it blurs the line of ownership too much. It's tough.",
+        "imageUrl": "https://images.code.org/d0a602760bcdcf53e81b32ef9f83638f-Gemini_Generated_Image_n5lxorn5lxorn5lx.jpeg",
+        "key": "HoAI-Playtest-DiscussionV1-94699fe3-9ba4-44f4-ac2c-8c2dc4fe16ed",
+        "typing": false,
+        "layout": "text-top-center"
+      },
+      {
+        "text": "#What do you think?\nDiscuss with a partner near by.",
+        "imageUrl": "",
+        "key": "HoAI-Playtest-DiscussionV1-02db6c79-c2b3-444a-8999-c8ac7f9d03a2",
+        "layout": "text-top-center"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-10 21:23:42 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-10 21:24:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-10 21:27:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

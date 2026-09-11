@@ -14,6 +14,9 @@ end
 workers CDO.dashboard_workers.is_a?(Numeric) ? CDO.dashboard_workers : :auto
 threads 1, 5
 
+# Cluster puma workers clear this in before_worker_boot`.
+CDO.preforking_parent = get(:workers) > 0
+
 directory deploy_dir('dashboard')
 
 unless CDO.rack_env?(:development)

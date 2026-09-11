@@ -8357,6 +8357,14 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: editor_settings
+    sql_type_metadata: *17
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   user_product_tours:
   - *9
   - *18
@@ -16855,7 +16863,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260903120000
+version: 20260904165528
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

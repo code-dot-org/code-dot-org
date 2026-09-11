@@ -1,0 +1,6 @@
+name 'aif-y2-working-with-data-lesson2-level1-choice1-intro-2026'
+title 'School Bus Data'
+
+markdown <<MARKDOWN
+[This spreadsheet](https://docs.google.com/spreadsheets/d/1nG0AllhbooKilRVyj0_UVDh4WwD_eUYqL2wjPTQ7BnU/edit?gid=0#gid=0) contains tabular data describing a week’s worth of information about a school’s bus system. Explore the dataset and answer the following questions:
+MARKDOWN

@@ -3,38 +3,26 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 5: Preparing for the Final Project
- 
-In this lesson, you will focus on key instructional strategies for guiding students through their final project. 
-
-You will explore effective collaboration methods, structured feedback approaches, and planning techniques to help students manage their time and workflow. 
-
-Through hands-on practice, you will learn how to support students in applying their coding knowledge to a larger, self-directed project.
-
-
-
-
-<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
-
-  <div>
-    <p>By the end of this lesson, you will:</p>
-    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Implement Pair & Group Coding Strategies
-</li> <br>
-    <li> Facilitate Structured Peer Feedback
-</li><br>
-        <li>  Introduce the Final Project Framework
-</li><br>
-<li>Develop a Teaching Plan</li>
-    </ul>
-  </div>
-  <div>
-    <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" 
-         alt="Icon of clipboard and pen" 
-         style="border-radius: 10px; width: 300px; height: auto;">
-  </div>
+<h1>Lesson 5: Preparing for the Final Project</h1>
+<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lesson 13</div>
+<p>This module offers a brief overview of the key concepts and teaching strategies in each lesson, it isn't a replacement for reviewing each lesson in full before you teach it. Take your time with the individual lesson plans for a deeper dive.</p>
+<p>This lesson prepares you to teach one curriculum lesson:</p>
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p><b>Curriculum Lesson 13:</b> Pixels of Me Project</p>
+<a href="[LESSON 13 URL]" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 13</a>
 </div>
-
-**Suggested Time:** 10 minutes
-
+<hr>
+<p><b>By the end of this lesson, you'll:</b></p>
+<p style="margin: 0 0 6px 0;">• Explore effective collaboration methods for guiding students through a final project</p>
+<p style="margin: 0 0 6px 0;">• Preview structured feedback approaches you can use during peer review and gallery walks</p>
+<p style="margin: 0;">• Look at planning techniques that help students manage their time and workflow</p>
+<p style="margin: 16px 0 0 0;"><i>Suggested time: 10 minutes</i></p>
+<hr>
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 1</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 2</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 3</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 4</div>
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Lesson 5</div>
+</div>
 MARKDOWN
