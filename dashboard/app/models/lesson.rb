@@ -203,23 +203,35 @@ class Lesson < ApplicationRecord
     !!has_lesson_plan
   end
 
+  # Fields the lesson plan renders with the markdown component that resolves
+  # vocabulary references itself. Their `[v key]` references ship unsubstituted,
+  # against the definitions vocabulary_definitions collects.
+  CLIENT_VOCAB_FIELDS = %w(purpose).freeze
+
   # Returns a version of the named property which is fully ready for
   # user-facing rendering. Currently does localization and markdown
   # preprocessing, could in the future be expanded to do more.
   def render_property(property_name)
     raise "Rendering #{property_name} which is not in MARKDOWN_FIELDS" unless MARKDOWN_FIELDS.include?(property_name.to_s)
     result = get_localized_property(property_name)
-    result = Services::MarkdownPreprocessor.process(result || '')
+    result = Services::MarkdownPreprocessor.process(
+      result || '',
+      resolve_vocab: CLIENT_VOCAB_FIELDS.exclude?(property_name.to_s)
+    )
     return result
   end
 
-  # Returns the word and definition named by each vocabulary reference in this
-  # lesson's activity section descriptions, keyed by the reference. Those are
-  # the only fields whose references reach the client unsubstituted; see
-  # ActivitySection#summarize_for_lesson_show.
+  # Returns the word and definition named by each vocabulary reference the
+  # client resolves itself, keyed by the reference: those in CLIENT_VOCAB_FIELDS
+  # and in the activity section descriptions (see
+  # ActivitySection#summarize_for_lesson_show). Every other field is still
+  # substituted on the way out.
   def vocabulary_definitions
-    activity_sections.reduce({}) do |definitions, section|
-      Services::MarkdownPreprocessor.collect_vocab_definitions(section.localized_description, definitions)
+    definitions = CLIENT_VOCAB_FIELDS.reduce({}) do |defs, field|
+      Services::MarkdownPreprocessor.collect_vocab_definitions(get_localized_property(field), defs)
+    end
+    activity_sections.reduce(definitions) do |defs, section|
+      Services::MarkdownPreprocessor.collect_vocab_definitions(section.localized_description, defs)
     end
   end
 

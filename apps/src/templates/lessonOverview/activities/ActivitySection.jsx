@@ -77,7 +77,7 @@ export default class ActivitySection extends Component {
               <Markdown
                 content={section.text}
                 extensions={this.markdownExtensions}
-                bodyVariant="body3"
+                bodyVariant="body4"
               />
             </div>
           </div>

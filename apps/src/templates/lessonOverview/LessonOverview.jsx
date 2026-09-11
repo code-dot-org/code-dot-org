@@ -42,17 +42,6 @@ const ResourceActions = {
 
 const WINDOW_PRINT = 'windowPrint';
 
-const markdownExtensions = [
-  extensions.expandableImages({
-    onExpand: () => {},
-  }),
-  extensions.lenientHeadings,
-  extensions.lenientLinkDestinations,
-  extensions.visualCodeBlock,
-  extensions.inlineStyles,
-  extensions.details,
-];
-
 class LessonOverview extends Component {
   static propTypes = {
     lesson: lessonShape.isRequired,
@@ -65,6 +54,22 @@ class LessonOverview extends Component {
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
   };
+
+  // Built once per instance: Markdown rebuilds its processor whenever the
+  // extension list changes identity. The lookup reads current props.
+  markdownExtensions = [
+    extensions.expandableImages({
+      onExpand: () => {},
+    }),
+    extensions.lenientHeadings,
+    extensions.lenientLinkDestinations,
+    extensions.visualCodeBlock,
+    extensions.vocabularyDefinition({
+      lookup: term => this.props.lesson.vocabularyDefinitions?.[term],
+    }),
+    extensions.inlineStyles,
+    extensions.details,
+  ];
 
   constructor(props) {
     super(props);
@@ -214,8 +219,8 @@ class LessonOverview extends Component {
                 </Typography>
                 <Markdown
                   content={lesson.overview}
-                  extensions={markdownExtensions}
-                  bodyVariant="body3"
+                  extensions={this.markdownExtensions}
+                  bodyVariant="body4"
                 />
               </div>
             )}
@@ -224,9 +229,10 @@ class LessonOverview extends Component {
                 <Typography variant="h4" component="h2">
                   {i18n.purpose()}
                 </Typography>
-                <EnhancedSafeMarkdown
-                  markdown={lesson.purpose}
-                  expandableImages
+                <Markdown
+                  content={lesson.purpose}
+                  extensions={this.markdownExtensions}
+                  bodyVariant="body4"
                 />
               </div>
             )}
