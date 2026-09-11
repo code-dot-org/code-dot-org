@@ -45,6 +45,10 @@
   list-style-type: none;
 }
 
+.assessmentList li:not(:last-child) p:last-child {
+  margin-bottom: var(--markdown-block-gap);
+}
+
 // -- LessonOverview --------------------------------------------------------
 
 .frontPage {
@@ -101,12 +105,16 @@
 }
 
 .copyResourceWarningArea {
-  padding: 10px 10px 0;
+  padding: 10px;
   border: 2px solid var(--borders-warning-light);
   border-radius: 4px;
   background-color: var(--background-warning-light);
   color: var(--text-neutral-secondary);
   margin-bottom: 10px;
+}
+
+.copyResourceWarningArea strong {
+  color: var(--text-neutral-secondary);
 }
 
 // -- StudentLessonOverview -------------------------------------------------
