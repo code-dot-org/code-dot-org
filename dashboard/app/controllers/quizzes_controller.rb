@@ -1,5 +1,5 @@
 # Levelbuilder-only endpoint for a Quiz level's own configuration and the
-# authoring view of its placed questions.
+# building view of its placed questions.
 class QuizzesController < ApplicationController
   include QuizQuestionSerialization
 
@@ -17,7 +17,7 @@ class QuizzesController < ApplicationController
       includes(quiz_question: {standards: [:framework, {category: :parent_category}]}).to_a
     question_ids = placements.map(&:quiz_question_id)
 
-    other_quiz_ids = QuizQuestionPlacement.where(quiz_question_id: question_ids).where.not(level_id: @level.id).
+    question_ids_attached_to_other_quizzes = QuizQuestionPlacement.where(quiz_question_id: question_ids).where.not(level_id: @level.id).
       pluck(:quiz_question_id).to_set
     published_usage = QuizQuestion.published_unit_usage(question_ids)
 
@@ -27,7 +27,7 @@ class QuizzesController < ApplicationController
         quiz_question_json(
           question,
           level: @level,
-          attached_to_other_quizzes: other_quiz_ids.include?(question.id),
+          attached_to_other_quizzes: question_ids_attached_to_other_quizzes.include?(question.id),
           used_in_published_unit: published_usage.fetch(question.id, false),
           page: placement.page
         )

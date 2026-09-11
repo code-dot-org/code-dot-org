@@ -89,6 +89,22 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_equal true, JSON.parse(response.body)['questions'].first['usedInPublishedUnit']
   end
 
+  test "show flags a question placed in another quiz, but not one placed only in this quiz" do
+    other_quiz = create(:quiz)
+    shared_question = create(:multiple_choice_question)
+    solo_question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: shared_question, page: 1, position: 1)
+    create(:quiz_question_placement, level: @quiz, quiz_question: solo_question, page: 1, position: 2)
+    create(:quiz_question_placement, level: other_quiz, quiz_question: shared_question, page: 1, position: 1)
+
+    get :show, params: {level_id: @quiz.id}
+
+    assert_response :success
+    questions = JSON.parse(response.body)['questions'].index_by {|q| q['id']}
+    assert_equal true, questions[shared_question.id]['attachedToOtherQuizzes']
+    assert_equal false, questions[solo_question.id]['attachedToOtherQuizzes']
+  end
+
   test "update redirects to sign in when not signed in" do
     sign_out @levelbuilder
     put :update, params: {level_id: @quiz.id, displayName: 'x'}
