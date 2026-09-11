@@ -49,6 +49,12 @@ export interface MarkdownProps {
   /** Additional class name for the wrapping container. */
   className?: string;
   /**
+   * Type scale for body text -- paragraphs, including those inside list items.
+   * Any variant in the design-system scale; defaults to `body2`. Headings and
+   * other elements keep their own variants.
+   */
+  bodyVariant?: TypographyProps['variant'];
+  /**
    * Markdown extensions to enable for this render. Each extension is a
    * self-contained bundle of plugins, allowlist additions, and component
    * mappings (see {@link MarkdownExtension}); only the behaviors listed here are
@@ -112,10 +118,10 @@ const MarkdownLink: Components['a'] = ({
  * otherwise data-isolate marks it for the runtime translation path.
  */
 const makeParagraph =
-  (localized: boolean): Components['p'] =>
+  (localized: boolean, variant: TypographyProps['variant']): Components['p'] =>
   ({children, className, style}) => (
     <Typography
-      variant="body2"
+      variant={variant}
       component="p"
       className={className}
       style={style}
@@ -154,7 +160,10 @@ const muiText =
     </Typography>
   );
 
-const baseComponents = (localized: boolean): Partial<Components> => ({
+const baseComponents = (
+  localized: boolean,
+  bodyVariant: TypographyProps['variant'],
+): Partial<Components> => ({
   h1: muiText('h1', 'h1'),
   h2: muiText('h2', 'h2'),
   h3: muiText('h3', 'h3'),
@@ -164,7 +173,7 @@ const baseComponents = (localized: boolean): Partial<Components> => ({
   strong: muiText('strong', 'strong'),
   em: muiText('em', 'em'),
   a: MarkdownLink,
-  p: makeParagraph(localized),
+  p: makeParagraph(localized, bodyVariant),
   // `---` renders as a themed design-system divider. (Divider is not yet
   // MUI-migrated, so the DSCO component is the design-system component here.)
   hr: ({className, style}) => <Divider className={className} style={style} />,
@@ -196,6 +205,7 @@ const sanitizePass = (schema: SanitizeSchema) => () => rehypeSanitize(schema);
 const buildProcessor = (
   extensions: MarkdownExtension[],
   localized: boolean,
+  bodyVariant: TypographyProps['variant'],
 ) => {
   const sanitizeSchema = composeSanitizeSchema(defaultSchema, extensions);
 
@@ -241,7 +251,10 @@ const buildProcessor = (
     // Blockly `<xml>` re-serialized to a workspace) need it; base components
     // destructure only the props they use, so the extra prop is inert for them.
     passNode: true,
-    components: composeComponents(baseComponents(localized), extensions),
+    components: composeComponents(
+      baseComponents(localized, bodyVariant),
+      extensions,
+    ),
   });
 };
 
@@ -250,7 +263,8 @@ const buildProcessor = (
  * design-system components.
  *
  * Provide the markdown as the `content` prop or as a single string child. Pass
- * `extensions` to enable additional syntax, tags, or behaviors a la carte.
+ * `extensions` to enable additional syntax, tags, or behaviors a la carte, and
+ * `bodyVariant` to size body text.
  *
  * Localization is automatic: when the core localization plugin has loaded
  * LocalizeJS, content is translated in place and re-translated on locale change
@@ -259,6 +273,7 @@ const buildProcessor = (
 const Markdown = ({
   content,
   className,
+  bodyVariant = 'body2',
   extensions = NO_EXTENSIONS,
   children,
 }: MarkdownProps) => {
@@ -273,8 +288,8 @@ const Markdown = ({
   const localized = isLocalizationActive();
 
   const processor = useMemo(
-    () => buildProcessor(extensions, localized),
-    [extensions, localized],
+    () => buildProcessor(extensions, localized, bodyVariant),
+    [extensions, localized, bodyVariant],
   );
 
   const source = preprocessMarkdown(content ?? children ?? '', extensions);

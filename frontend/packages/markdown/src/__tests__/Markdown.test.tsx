@@ -4,7 +4,7 @@ import {afterEach, describe, expect, it, vi} from 'vitest';
 
 import {localization} from '@code-dot-org/core/plugins/localization';
 
-import Markdown from '../components/Markdown';
+import Markdown, {type MarkdownProps} from '../components/Markdown';
 import type {MarkdownExtension} from '../extension';
 import {
   callout,
@@ -15,6 +15,7 @@ import {
   externalLinks,
   inlineStyles,
   lenientHeadings,
+  lenientLinkDestinations,
   visualCodeBlock,
   vocabularyDefinition,
 } from '../extensions';
@@ -81,6 +82,76 @@ describe('Markdown', () => {
    * paragraph is what carries the body type scale and the translation
    * isolation, so the pipeline inserts one; see rehypeListItemParagraphs.
    */
+  describe('bodyVariant', () => {
+    const renderWith = (
+      markdown: string,
+      bodyVariant: MarkdownProps['bodyVariant'],
+    ) =>
+      renderToStaticMarkup(
+        <Markdown content={markdown} bodyVariant={bodyVariant} />,
+      );
+
+    it('renders paragraphs as body2 by default', () => {
+      expect(render('a paragraph')).toContain('MuiTypography-body2');
+    });
+
+    it('renders paragraphs in the requested variant', () => {
+      const html = renderWith('a paragraph', 'body3');
+      expect(html).toContain('MuiTypography-body3');
+      expect(html).not.toContain('MuiTypography-body2');
+    });
+
+    it('applies to list item paragraphs too', () => {
+      const html = renderWith('- one\n- two', 'body4');
+      expect(html.match(/<p[^>]*MuiTypography-body4/g)).toHaveLength(2);
+    });
+
+    it('leaves headings and inline variants alone', () => {
+      const html = renderWith('# Title\n\nSome **bold** text.', 'body4');
+      expect(html).toContain('MuiTypography-h1');
+      expect(html).toContain('MuiTypography-strong');
+      expect(html).toContain('MuiTypography-body4');
+    });
+
+    it('keeps the paragraph a <p> carrying its localization marker', () => {
+      const html = renderWith('a paragraph', 'body3');
+      expect(html).toMatch(/<p[^>]*data-isolate="true"/);
+    });
+
+    it('still lets an extension override the paragraph mapping', () => {
+      const html = renderToStaticMarkup(
+        <Markdown
+          content={'a paragraph'}
+          bodyVariant="body3"
+          extensions={[
+            {
+              name: 'plainParagraphs',
+              components: {
+                p: ({children}) => <p className="mine">{children}</p>,
+              },
+            },
+          ]}
+        />,
+      );
+      expect(html).toContain('class="mine"');
+      expect(html).not.toContain('MuiTypography-body3');
+    });
+
+    it('rebuilds the processor when the variant changes', () => {
+      const {container, rerender} = renderDom(
+        <Markdown content="a paragraph" bodyVariant="body3" />,
+      );
+      expect(container.querySelector('p')?.className).toContain(
+        'MuiTypography-body3',
+      );
+
+      rerender(<Markdown content="a paragraph" bodyVariant="body4" />);
+      expect(container.querySelector('p')?.className).toContain(
+        'MuiTypography-body4',
+      );
+    });
+  });
+
   describe('list items', () => {
     it('wraps tight list item text in a body paragraph', () => {
       const html = render('- one\n- two');
@@ -700,6 +771,116 @@ describe('Markdown', () => {
       const html = render('###Build a sequence');
       expect(html).not.toContain('<h3');
       expect(html).toContain('###');
+    });
+  });
+
+  describe('lenientLinkDestinations', () => {
+    // The real curriculum shape: an images.code.org asset whose uploaded
+    // filename contains spaces. 171 of these across 80 units at last count.
+    const cupStack =
+      '![](https://images.code.org/9b0af665c700-cup stack ideas.png)';
+
+    it('renders an image whose destination contains spaces', () => {
+      const html = render(cupStack, [lenientLinkDestinations]);
+      expect(html).toContain(
+        '<img src="https://images.code.org/9b0af665c700-cup%20stack%20ideas.png"',
+      );
+    });
+
+    it('renders a link whose destination contains spaces', () => {
+      const html = render('[go](https://example.com/my page)', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('href="https://example.com/my%20page"');
+      expect(html).toContain('go');
+    });
+
+    it('encodes every space in the destination', () => {
+      const html = render('![](/a b c d.png)', [lenientLinkDestinations]);
+      expect(html).toContain('src="/a%20b%20c%20d.png"');
+    });
+
+    it('keeps the alt text, and the expandable suffix still matches', () => {
+      const html = render('![a big cat expandable](/my cat.png)', [
+        lenientLinkDestinations,
+        expandableImages(),
+      ]);
+      expect(html).toContain('src="/my%20cat.png"');
+      // The suffix was stripped, so the destination rewrite ran first.
+      expect(html).toContain('alt="a big cat"');
+    });
+
+    it('preserves a title after the spaced destination', () => {
+      const html = render('![cat](/my cat.png "a nice title")', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('src="/my%20cat.png"');
+      expect(html).toContain('title="a nice title"');
+    });
+
+    it('leaves a well-formed destination untouched', () => {
+      const html = render('![cat](/cat.png "a title")', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('src="/cat.png"');
+      expect(html).toContain('title="a title"');
+    });
+
+    it('leaves an angle-bracketed destination to the parser', () => {
+      const html = render('![cat](</my cat.png>)', [lenientLinkDestinations]);
+      expect(html).toContain('src="/my%20cat.png"');
+    });
+
+    it('leaves whitespace around the destination alone', () => {
+      // Legal CommonMark already: the destination itself has no space.
+      const html = render('[go](\thttps://example.com/a\n)', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('href="https://example.com/a"');
+    });
+
+    it('does not rewrite inside a fenced code block', () => {
+      const html = render('```\n![](/my cat.png)\n```', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('/my cat.png');
+      expect(html).not.toContain('%20');
+    });
+
+    it('does not rewrite inside an inline code span', () => {
+      const html = render('write `![](/my cat.png)` like this', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('/my cat.png');
+      expect(html).not.toContain('%20');
+    });
+
+    it('rewrites prose on the same line as a code span', () => {
+      const html = render('`code` then ![](/my cat.png)', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('src="/my%20cat.png"');
+    });
+
+    it('does not rewrite inside a code span that crosses a line', () => {
+      const html = render('`a\n![](/my cat.png)` after', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('/my cat.png');
+      expect(html).not.toContain('%20');
+    });
+
+    it('skips a destination containing parentheses rather than guessing', () => {
+      const html = render('![](/a (b) c.png)', [lenientLinkDestinations]);
+      expect(html).not.toContain('<img');
+      expect(html).not.toContain('%20');
+    });
+
+    it('leaves the spaced destination as text when not enabled', () => {
+      const html = render(cupStack);
+      expect(html).not.toContain('<img');
+      // GFM autolinks the leading run, leaving the rest as bare text.
+      expect(html).toContain('stack ideas.png');
     });
   });
 
