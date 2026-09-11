@@ -1,3 +1,4 @@
+import {Markdown} from '@code-dot-org/markdown';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -6,7 +7,6 @@ import {connect} from 'react-redux';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LtiLogins} from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -18,6 +18,13 @@ import DownloadParentLetter from './DownloadParentLetter';
 import LoginExport from './LoginExport';
 
 import styles from './manageStudentsLoginInfo.module.scss';
+
+// Every step string is a markdown list item ("1. ..."). A contiguous run is
+// joined into one source string so it renders as a single <ol>; rendering each
+// step on its own would make every step a one-item list.
+const renderSteps = steps => (
+  <Markdown content={steps.filter(Boolean).join('\n\n')} />
+);
 
 class ManageStudentsLoginInfo extends Component {
   static propTypes = {
@@ -47,24 +54,27 @@ class ManageStudentsLoginInfo extends Component {
 
     const ParentLetterAndStudentPrivacyInfo = () => (
       <>
-        <Typography variant="h2" component="h2" className={styles.heading}>
+        <Typography variant="h6" component="h2" className={styles.heading}>
           {i18n.privacyHeading()}
         </Typography>
-        <Typography variant="body3" component="p" id="uitest-privacy-text">
+        <Typography variant="body2" component="p" id="uitest-privacy-text">
           {i18n.privacyDocExplanation()}
         </Typography>
-        <DownloadParentLetter
-          sectionId={this.props.sectionId}
-          buttonMetricsCategory={ParentLetterButtonMetricsCategory.BELOW_TABLE}
-        />
-        <br />
-        <span id="uitest-privacy-link">
-          <SafeMarkdown
-            markdown={i18n.privacyLinkToPolicy({
+        <div className={styles.parentLetterButton}>
+          <DownloadParentLetter
+            sectionId={this.props.sectionId}
+            buttonMetricsCategory={
+              ParentLetterButtonMetricsCategory.BELOW_TABLE
+            }
+          />
+        </div>
+        <div id="uitest-privacy-link">
+          <Markdown
+            content={i18n.privacyLinkToPolicy({
               privacyPolicyLink: pegasus('/privacy/student-privacy'),
             })}
           />
-        </span>
+        </div>
       </>
     );
 
@@ -75,39 +85,45 @@ class ManageStudentsLoginInfo extends Component {
       return message.replace(/^\d./, `${++counter[0]}.`);
     };
 
+    const privacyLetterStep = () =>
+      providePrivacyLetter &&
+      renderStep(
+        i18n.setUpClass3({
+          parentLetterLink: teacherDashboardUrl(sectionId, '/parent_letter'),
+        })
+      );
+
     return (
       <div className={styles.explanation}>
-        <Typography variant="body3" component="p">
+        <Typography variant="body2" component="p">
           {i18n.setUpClass_childAccountPolicyNotice()}
         </Typography>
         {loginType !== SectionLoginType.lti_v1 && (
-          <Typography variant="h2" component="h2" className={styles.heading}>
+          <Typography variant="h6" component="h2" className={styles.heading}>
             {i18n.setUpClass()}
           </Typography>
         )}
         {loginType === SectionLoginType.word && (
           <div>
-            <Typography variant="body3" component="p">
+            <Typography variant="body2" component="p">
               {i18n.setUpClassWordIntro()}
             </Typography>
-            <Typography
-              variant="body3"
-              component="p"
-              className={styles.listAlign}
-            >
-              {renderStep(i18n.setUpClassWordPic1())}
-            </Typography>
-            <SafeMarkdown
-              markdown={renderStep(
+            {renderSteps([
+              renderStep(i18n.setUpClassWordPic1()),
+              renderStep(
                 i18n.setUpClassWord2({
                   printLoginCardLink: teacherDashboardUrl(
                     sectionId,
                     '/login_info'
                   ),
                 })
-              )}
-            />
-            <div className={styles.sublistAlign}>
+              ),
+            ])}
+            <Typography
+              variant="body2"
+              component="div"
+              className={styles.sublistAlign}
+            >
               <InlineMarkdown markdown={i18n.loginExportInstructions()} />{' '}
               <LoginExport
                 sectionCode={sectionCode}
@@ -115,20 +131,8 @@ class ManageStudentsLoginInfo extends Component {
                 sectionLoginType={loginType}
                 students={this.props.studentData}
               />
-            </div>
-            {providePrivacyLetter && (
-              <SafeMarkdown
-                markdown={renderStep(
-                  i18n.setUpClass3({
-                    parentLetterLink: teacherDashboardUrl(
-                      sectionId,
-                      '/parent_letter'
-                    ),
-                  })
-                )}
-              />
-            )}
-            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
+            </Typography>
+            {renderSteps([privacyLetterStep(), renderStep(i18n.setUpClass4())])}
             <SignInInstructions
               loginType={SectionLoginType.word}
               sectionCode={sectionCode}
@@ -138,27 +142,25 @@ class ManageStudentsLoginInfo extends Component {
         )}
         {loginType === SectionLoginType.picture && (
           <div>
-            <Typography variant="body3" component="p">
+            <Typography variant="body2" component="p">
               {i18n.setUpClassPicIntro()}
             </Typography>
-            <Typography
-              variant="body4"
-              component="p"
-              className={styles.listAlign}
-            >
-              {renderStep(i18n.setUpClassWordPic1())}
-            </Typography>
-            <SafeMarkdown
-              markdown={renderStep(
+            {renderSteps([
+              renderStep(i18n.setUpClassWordPic1()),
+              renderStep(
                 i18n.setUpClassPic2({
                   printLoginCardLink: teacherDashboardUrl(
                     sectionId,
                     '/login_info'
                   ),
                 })
-              )}
-            />
-            <div className={styles.sublistAlign}>
+              ),
+            ])}
+            <Typography
+              variant="body2"
+              component="div"
+              className={styles.sublistAlign}
+            >
               <InlineMarkdown
                 markdown={i18n.loginExportInstructions({
                   articleLink: 'support.code.org',
@@ -170,20 +172,8 @@ class ManageStudentsLoginInfo extends Component {
                 sectionLoginType={loginType}
                 students={this.props.studentData}
               />
-            </div>
-            {providePrivacyLetter && (
-              <SafeMarkdown
-                markdown={renderStep(
-                  i18n.setUpClass3({
-                    parentLetterLink: teacherDashboardUrl(
-                      sectionId,
-                      '/parent_letter'
-                    ),
-                  })
-                )}
-              />
-            )}
-            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
+            </Typography>
+            {renderSteps([privacyLetterStep(), renderStep(i18n.setUpClass4())])}
             <SignInInstructions
               loginType={SectionLoginType.picture}
               sectionCode={sectionCode}
@@ -193,59 +183,36 @@ class ManageStudentsLoginInfo extends Component {
         )}
         {loginType === SectionLoginType.email && (
           <div>
-            <Typography variant="body3" component="p">
+            <Typography variant="body2" component="p">
               {i18n.setUpClassEmailIntro()}
             </Typography>
-            <SafeMarkdown
-              markdown={renderStep(
+            {renderSteps([
+              renderStep(
                 i18n.setUpClassEmail1({
                   createAccountLink: `${studioUrlPrefix}/users/sign_up/account_type`,
                 })
-              )}
-            />
-            <SafeMarkdown
-              markdown={renderStep(
+              ),
+              renderStep(
                 i18n.setUpClassEmail2({
                   joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
                 })
-              )}
-            />
-            {providePrivacyLetter && (
-              <SafeMarkdown
-                markdown={renderStep(
-                  i18n.setUpClass3({
-                    parentLetterLink: teacherDashboardUrl(
-                      sectionId,
-                      '/parent_letter'
-                    ),
-                  })
-                )}
-              />
-            )}
-            <SafeMarkdown markdown={renderStep(i18n.setUpClass4())} />
+              ),
+              privacyLetterStep(),
+              renderStep(i18n.setUpClass4()),
+            ])}
             <SignInInstructions loginType={SectionLoginType.email} />
           </div>
         )}
         {loginType === SectionLoginType.google_classroom && (
           <div>
-            <Typography variant="body3" component="p">
+            <Typography variant="body2" component="p">
               {i18n.setUpClassGoogleIntro()}
             </Typography>
-            <Typography
-              variant="body3"
-              component="p"
-              className={styles.listAlign}
-            >
-              {renderStep(i18n.setUpClassGoogle1())}
-            </Typography>
-            <Typography
-              variant="body3"
-              component="p"
-              className={styles.listAlign}
-            >
-              {renderStep(i18n.setUpClassGoogle2())}
-            </Typography>
-            <Typography variant="body3" component="p">
+            {renderSteps([
+              renderStep(i18n.setUpClassGoogle1()),
+              renderStep(i18n.setUpClassGoogle2()),
+            ])}
+            <Typography variant="body2" component="p">
               {i18n.setUpClassGoogleFinished()}
             </Typography>
             <SignInInstructions loginType={SectionLoginType.google_classroom} />
@@ -253,24 +220,14 @@ class ManageStudentsLoginInfo extends Component {
         )}
         {loginType === SectionLoginType.clever && (
           <div>
-            <Typography variant="body3" component="p">
+            <Typography variant="body2" component="p">
               {i18n.setUpClassCleverIntro()}
             </Typography>
-            <Typography
-              variant="body3"
-              component="p"
-              className={styles.listAlign}
-            >
-              {renderStep(i18n.setUpClassClever1())}
-            </Typography>
-            <Typography
-              variant="body3"
-              component="p"
-              className={styles.listAlign}
-            >
-              {renderStep(i18n.setUpClassClever2())}
-            </Typography>
-            <Typography variant="body3" component="p">
+            {renderSteps([
+              renderStep(i18n.setUpClassClever1()),
+              renderStep(i18n.setUpClassClever2()),
+            ])}
+            <Typography variant="body2" component="p">
               {i18n.setUpClassCleverFinished()}
             </Typography>
             <SignInInstructions loginType={SectionLoginType.clever} />
