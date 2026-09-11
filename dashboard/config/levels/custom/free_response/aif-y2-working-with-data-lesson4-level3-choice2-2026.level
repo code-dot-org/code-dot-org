@@ -10,7 +10,7 @@
     "skip_sound": true,
     "encrypted": "false",
     "title": "Check Your Understanding",
-    "long_instructions": "Do you think the factory’s pass rate suggests something is wrong?",
+    "long_instructions": "Do you think the factory’s pass rate suggests something is wrong? Explain the evidence that supports your conclusion. How confident are you?",
     "stay_on_level_after_submit": "false",
     "submittable": "true",
     "allow_multiple_attempts": "false",
@@ -22,7 +22,7 @@
     "bubble_choice_description": "Analyze a factory's production of car parts.",
     "thumbnail_url": "https://images.code.org/2600bd6a33a3e90fb0e59ebcaf021a64-cars.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-07 17:42:44 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 17:47:29 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 17:49:10 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-07 17:42:44 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 17:47:29 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 17:49:10 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-10 18:42:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

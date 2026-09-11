@@ -3,10 +3,21 @@ import React from 'react';
 import ReorderableCard from '@cdo/apps/levelbuilder/curriculum-generator/components/ReorderableCard';
 import {createUuid} from '@cdo/apps/utils';
 
-import {AICHAT_PRESETS, AichatPresetId} from '../ai/aichat';
-import {BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES, LabType, LevelSpec} from '../types';
+import {
+  AICHAT_PRESETS,
+  AichatPresetId,
+  DEFAULT_AICHAT_PRESET,
+} from '../ai/aichat';
+import {mergeSpecPatch} from '../helpers/specPatch';
+import {
+  BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES,
+  LabType,
+  LevelSpec,
+  takesSuppliedCode,
+} from '../types';
 
 import SublevelSection from './SublevelSection';
+import SuppliedCodeField from './SuppliedCodeField';
 
 import moduleStyles from '../lesson-generator.module.scss';
 import sharedStyles from '@cdo/apps/levelbuilder/curriculum-generator/curriculum-generator.module.scss';
@@ -68,8 +79,15 @@ const LevelCard: React.FC<LevelCardProps> = ({
   };
 
   const patchSublevel = (subKey: string, patch: Partial<LevelSpec>) => {
-    updateSublevels(
-      sublevels.map(s => (s.key === subKey ? {...s, ...patch} : s))
+    const next = sublevels.map(s =>
+      s.key === subKey ? mergeSpecPatch(s, patch) : s
+    );
+    // The parent's run is what generates sublevels.
+    onChange(
+      spec.key,
+      'suppliedCode' in patch
+        ? {sublevels: next, generate: true}
+        : {sublevels: next}
     );
   };
 
@@ -166,7 +184,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
               <label htmlFor={`preset-${spec.key}`}>Preset</label>
               <select
                 id={`preset-${spec.key}`}
-                value={spec.aichatPreset ?? 'explore'}
+                value={spec.aichatPreset ?? DEFAULT_AICHAT_PRESET}
                 onChange={e =>
                   onChange(spec.key, {
                     aichatPreset: e.target.value as AichatPresetId,
@@ -217,6 +235,14 @@ const LevelCard: React.FC<LevelCardProps> = ({
                 }
                 disabled={disabled}
               />
+              {takesSuppliedCode(spec.labType) && (
+                <SuppliedCodeField
+                  id={`supplied-${spec.key}`}
+                  value={spec.suppliedCode ?? ''}
+                  disabled={disabled}
+                  onChange={suppliedCode => onChange(spec.key, {suppliedCode})}
+                />
+              )}
               {spec.labType === 'bubbleChoice' && (
                 <SublevelSection
                   sublevels={sublevels}

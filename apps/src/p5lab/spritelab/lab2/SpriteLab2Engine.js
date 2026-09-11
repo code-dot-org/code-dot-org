@@ -3,7 +3,10 @@ import * as BlocklyCore from 'blockly/core';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
-import {setRetainBlobsOnLoad} from '@cdo/apps/p5lab/redux/animationList';
+import {
+  setRetainBlobsOnLoad,
+  setStoreLoadedImagesAsObjectUrls,
+} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -117,6 +120,9 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
+    // Loaded images live as object URLs, not heap-resident base64 strings
+    // (legacy labs keep dataURIs for Piskel).
+    setStoreLoadedImagesAsObjectUrls(true);
     // This lab saves images through its own asset uploads, so loaded
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
@@ -167,6 +173,44 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Unsubscribes the watch that re-runs when images arrive after a
     // give-up (see onImageLoadGiveUp_).
     this.lateImagesUnsubscribe_ = null;
+    // True while nobody can see the playspace (see setDrawPaused).
+    this.drawPaused_ = false;
+  }
+
+  /**
+   * Freeze or resume the engine while nobody can see the playspace: the
+   * draw loop stops (frame-based timing freezes with it), and the wall
+   * clock that CoreLibrary's timers and at-time events read stops
+   * accruing.
+   * Without this the engine kept painting a hidden canvas at full rate,
+   * and a game left on another tab ran its events unseen.
+   */
+  setDrawPaused(paused) {
+    this.drawPaused_ = !!paused;
+    this.applyDrawPaused_();
+  }
+
+  // Also reasserted after a rerun: a rerun builds a fresh library (whose
+  // pause clock starts at zero) and turns the loop back on.
+  applyDrawPaused_() {
+    if (!this.p5Wrapper?.p5) {
+      return;
+    }
+    const now = new Date().getTime();
+    if (this.drawPaused_) {
+      if (this.library && !this.library.currentPauseStartTime) {
+        this.library.startPause(now);
+      }
+      this.p5Wrapper.setLoop(false);
+    } else {
+      this.library?.endPause(now);
+      this.p5Wrapper.setLoop(true);
+      // setLoop only marks the flag; a draw loop stopped mid-run restarts
+      // only from p5.loop(), safe once setup has run.
+      if (this.p5Wrapper.p5?._setupDone) {
+        this.p5Wrapper.p5.loop();
+      }
+    }
   }
 
   /**
@@ -638,6 +682,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneJumpInFlight_ = false;
     this.onP5Setup();
     this.p5Wrapper.setLoop(true);
+    this.applyDrawPaused_();
     // Stay frozen if "when run" already triggered the next jump.
     if (!this.sceneJumpInFlight_ && !this.isTickTimerRunning()) {
       this.startTickTimer();

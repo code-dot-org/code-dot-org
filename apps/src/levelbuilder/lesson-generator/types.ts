@@ -29,6 +29,20 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   bubbleChoice: 'BubbleChoice',
 };
 
+// Human names, as the lab dropdown and the import prompt show them.
+export const LAB_LABELS = {
+  panels: 'Panels',
+  weblab2: 'Web Lab 2',
+  pythonlab: 'Python Lab',
+  ailab: 'AI Lab',
+  aichat: 'AI Chat',
+  sketchlab: 'Sketch Lab',
+  multi: 'Multiple Choice',
+  match: 'Matching',
+  freeResponse: 'Free Response',
+  bubbleChoice: 'Bubble Choice',
+} as const satisfies Record<LabType, string>;
+
 // Lab types saved as parsed DSL text (dsl_text) rather than serialized
 // JSON properties; createOrFindLevel and updateLevelProperty branch on this.
 export const DSL_LAB_TYPES: readonly LabType[] = [
@@ -36,6 +50,15 @@ export const DSL_LAB_TYPES: readonly LabType[] = [
   'match',
   'bubbleChoice',
 ];
+
+// Labs whose starter files are code, so an author may supply it.
+export const CODEBRIDGE_LAB_TYPES: readonly LabType[] = [
+  'weblab2',
+  'pythonlab',
+];
+
+export const takesSuppliedCode = (labType: LabType): boolean =>
+  CODEBRIDGE_LAB_TYPES.includes(labType);
 
 // Lab types allowed as Bubble Choice sublevels: no nesting, and
 // assessments read poorly as "pick one activity to try".
@@ -190,6 +213,10 @@ export interface LevelSpec {
   // weblab2 only: specs sharing a non-empty id get one generated template
   // level ("<prefix>-template-<groupId>") via project_template_level_name.
   templateGroup?: string;
+  // CODEBRIDGE_LAB_TYPES only.
+  suppliedCode?: string;
+  // Supplied code as of the last save; `generate` re-derives against it.
+  lastGeneratedSuppliedCode?: string;
   // bubbleChoice only: sublevel cards, each a LevelSpec whose labType is
   // in BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES.
   sublevels?: LevelSpec[];
@@ -223,6 +250,8 @@ export interface ExistingLessonData {
   // Unit-scope context so lesson prompts can anchor against the unit.
   unitName?: string;
   unitOutline?: string;
+  unitDraftingRules?: string;
+  unitAuthoringRules?: string;
 }
 
 // The shape returned by Lesson#summarize_for_lesson_edit, narrowed to the
@@ -267,6 +296,8 @@ export interface SerializedLevel {
   // aichat only: preset id used at generation time; unknown ids reset to
   // the default on reload.
   generateAichatPreset?: string | null;
+  // CODEBRIDGE_LAB_TYPES only.
+  generateSuppliedCode?: string | null;
   // BubbleChoice parents only: nested sublevels in picker order.
   sublevels?: SerializedLevel[];
 }
