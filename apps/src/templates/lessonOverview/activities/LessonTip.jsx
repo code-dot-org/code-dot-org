@@ -1,9 +1,9 @@
+import {Markdown, extensions} from '@code-dot-org/markdown';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 import styles from '../lesson-plan.module.scss';
@@ -51,11 +51,30 @@ export const tipTypes = {
 class LessonTip extends Component {
   static propTypes = {
     tip: PropTypes.object,
+    // Keyed by vocabulary reference; see ActivitySection. The levelbuilder
+    // previews render a tip without one, so a term there falls back to its key.
+    vocabularyDefinitions: PropTypes.object,
   };
 
   state = {
     expanded: true,
   };
+
+  // Built once per instance: Markdown rebuilds its processor whenever the
+  // extension list changes identity. The lookup reads current props.
+  markdownExtensions = [
+    // No onExpand: a tip is rendered by the levelbuilder previews as well as
+    // the lesson plan, and neither mounts the image dialog from here.
+    extensions.expandableImages(),
+    extensions.lenientHeadings,
+    extensions.lenientLinkDestinations,
+    extensions.visualCodeBlock,
+    extensions.vocabularyDefinition({
+      lookup: term => this.props.vocabularyDefinitions?.[term],
+    }),
+    extensions.inlineStyles,
+    extensions.details,
+  ];
 
   render() {
     const {expanded} = this.state;
@@ -95,7 +114,11 @@ class LessonTip extends Component {
         </div>
         {expanded && (
           <div className={styles.box}>
-            <SafeMarkdown markdown={this.props.tip.markdown} />
+            <Markdown
+              content={this.props.tip.markdown}
+              extensions={this.markdownExtensions}
+              bodyVariant="body4"
+            />
           </div>
         )}
       </div>
