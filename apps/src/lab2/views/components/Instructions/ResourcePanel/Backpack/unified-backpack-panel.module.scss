@@ -47,8 +47,6 @@ $file-list-gap: 8px;
   padding-right: 8px;
 }
 
-// Holds a loading or error message in the space above the save button, so the
-// button keeps its place while the file list is unavailable.
 .messageContainer {
   display: flex;
   width: 100%;

@@ -5,27 +5,19 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ShareFailure, ShareFailureType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
+  isUnifiedApi,
+  SaveToBackpackApi,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/saveToBackpackHelper';
+import {
   DialogControlInterface,
   DialogType,
   extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
-import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
-
-type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
-
-// Check if the provided API is a UnifiedBackpackClientApi.
-// We check against the existence of getFileLists so we can use a
-// mocked UnifiedBackpackClientApi in tests.
-const isUnifiedApi = (
-  api: SaveToBackpackApi
-): api is UnifiedBackpackClientApi =>
-  typeof (api as UnifiedBackpackClientApi).getFileLists === 'function';
 
 export const SAVE_BLOCKED_TITLE = "This sketch can't be saved to your Backpack";
 

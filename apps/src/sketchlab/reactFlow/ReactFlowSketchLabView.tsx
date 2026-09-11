@@ -126,8 +126,6 @@ function ReactFlowSketchLabViewInner({
     [currentUserId]
   );
 
-  // Under the unified backpack, saves go to the shared universal backpack rather than
-  // Sketch Lab's own. The registry holds the one client for the page.
   const saveBackpackApi = useMemo(() => {
     if (
       experiments.isEnabledAllowingQueryString(experiments.UNIFIED_BACKPACK)
