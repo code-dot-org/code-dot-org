@@ -1,0 +1,13 @@
+{
+  "key": "bias-reteach",
+  "description": "Shows how AI mirrors the imbalances found in its training data.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/bias-reteach.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "9d332603-a481-4b83-8ae3-5577093a37e3"
+  ]
+}
