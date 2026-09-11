@@ -312,7 +312,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
         </Alert>
       )}
 
-      {!purpose ? (
+      {!purpose && (
         <div className={styles.chooserSection}>
           <div className={styles.chooserHeader}>
             <p className={styles.chooserTitle}>What is this quiz for?</p>
@@ -337,24 +337,23 @@ const QuizConfigurationPanel: React.FunctionComponent<
             ))}
           </div>
         </div>
-      ) : (
-        <div className={styles.section}>
-          <SimpleDropdown
-            name="purpose"
-            size="s"
-            labelText="Purpose"
-            items={PURPOSE_OPTIONS}
-            selectedValue={purpose}
-            disabled={savingField === 'purpose'}
-            onChange={handlePurposeChange}
-            styleAsFormField
-            className={styles.fullWidthDropdown}
-          />
-        </div>
       )}
-
       {purpose && (
         <>
+          <div className={styles.section}>
+            <SimpleDropdown
+              name="purpose"
+              size="s"
+              color="gray"
+              labelText="Purpose"
+              items={PURPOSE_OPTIONS}
+              selectedValue={purpose}
+              disabled={savingField === 'purpose'}
+              onChange={handlePurposeChange}
+              styleAsFormField
+              className={styles.fullWidthDropdown}
+            />
+          </div>
           <ConfigCard label="content">
             <div className={styles.cardRow}>
               <div className={styles.toggleRow}>
@@ -373,7 +372,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
               </p>
             </div>
           </ConfigCard>
-
           <ConfigCard label="rules">
             <div className={styles.cardRow}>
               <TextField
@@ -383,6 +381,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
                 min={1}
                 step={1}
                 size="s"
+                color="gray"
                 className={styles.fullWidthField}
                 placeholder="minutes"
                 helperMessage="Leave unset for no time limit"
@@ -410,7 +409,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
               </div>
             </div>
           </ConfigCard>
-
           <ConfigCard label="feedback">
             <div className={styles.cardRow}>
               <div className={styles.toggleRow}>
