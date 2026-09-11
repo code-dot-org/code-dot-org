@@ -60,6 +60,22 @@ export function useDisplayElements({
       };
     };
 
+    // Overrides React Flow's hardcoded aria-roledescription="node".
+    const roleDescription = (type?: string) => {
+      switch (type) {
+        case 'text':
+          return 'text';
+        case 'image':
+          return 'image';
+        case 'group':
+          return 'group';
+        case 'lineAnchor':
+          return 'line endpoint';
+        default:
+          return 'shape';
+      }
+    };
+
     const nodeMap = new Map(nodes.map(node => [node.id, node]));
 
     // Assign a 1-based index to each free-floating line (both endpoints are
@@ -113,8 +129,7 @@ export function useDisplayElements({
           deletable: !locked && !readOnly && !groupedChild && !grabMode,
           // Nodes are still connectable when locked, but not in read-only or grab mode
           connectable: !readOnly && !grabMode,
-          // React Flow names the focusable wrapper from node.ariaLabel and
-          // has no fallback, so without this a node is an unnamed group.
+          // React Flow names the wrapper from node.ariaLabel, with no fallback.
           ariaLabel:
             node.type === 'lineAnchor'
               ? 'Line endpoint'
@@ -127,6 +142,7 @@ export function useDisplayElements({
           ),
           domAttributes: {
             ...domAttributes,
+            'aria-roledescription': roleDescription(node.type),
             ...(isConnectSource && {'aria-selected': true}),
           },
         };
