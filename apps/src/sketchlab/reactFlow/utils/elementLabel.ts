@@ -15,8 +15,8 @@ export function getNodeLabel(node: SketchlabReactFlowNode): string {
       ? `${node.data.shapeType} with label ${label}`
       : node.data.shapeType;
   }
-  if (node.type === 'text' && node.data.text?.trim()) {
-    return node.data.text.trim();
+  if (node.type === 'text') {
+    return node.data.text?.trim() || 'text';
   }
   if (node.type === 'image') {
     return node.data.altText?.trim() || 'image';

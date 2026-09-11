@@ -29,7 +29,7 @@ function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
       <div className={styles.rotatable} style={rotatableStyle}>
         <img
           src={src}
-          alt={altText || 'Image without a description'}
+          alt={altText?.trim() || 'No description'}
           className={styles.image}
           draggable={false}
         />

@@ -97,6 +97,22 @@ describe('getNodeLabel', () => {
     });
   });
 
+  describe('whitespace-only content', () => {
+    it('is treated as empty, so a node is never named blank', () => {
+      expect(getNodeLabel(shapeNode('n1', 'rectangle', '   '))).toBe(
+        'rectangle'
+      );
+      expect(getNodeLabel(textNode('n1', '   '))).toBe('text');
+      expect(getNodeLabel(imageNode('n1', '   '))).toBe('image');
+    });
+
+    it('is trimmed off when there is content', () => {
+      expect(getNodeLabel(textNode('n1', '  Hello world  '))).toBe(
+        'Hello world'
+      );
+    });
+  });
+
   it('returns "lineAnchor" for anchor nodes (internal fallback)', () => {
     expect(getNodeLabel(anchorNode('a1'))).toBe('lineAnchor');
   });

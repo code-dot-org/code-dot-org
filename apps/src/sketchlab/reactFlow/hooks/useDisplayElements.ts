@@ -8,7 +8,7 @@ import type {
 
 import {LINE_INTERACTION_WIDTH_PX} from '../constants';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {getEdgeLabel} from '../utils/elementLabel';
+import {getEdgeLabel, getNodeLabel} from '../utils/elementLabel';
 import {getLockedLineAnchorIds, isGroupedChildNode} from '../utils/grouping';
 
 import styles from '../components/react-flow-canvas.module.scss';
@@ -58,33 +58,6 @@ export function useDisplayElements({
         selected: isSelected && !readOnly,
         domAttributes: {tabIndex: isTabTarget ? 0 : -1},
       };
-    };
-
-    // Overrides React Flow's hardcoded aria-roledescription="node".
-    const roleDescription = (node: SketchlabReactFlowNode) => {
-      switch (node.type) {
-        case 'shape':
-          return node.data.shapeType;
-        case 'lineAnchor':
-          return 'line endpoint';
-        default:
-          return node.type;
-      }
-    };
-
-    // Announced right after the role description, so it carries content only.
-    // Elements with no content of their own go unnamed.
-    const accessibleName = (node: SketchlabReactFlowNode) => {
-      switch (node.type) {
-        case 'shape':
-          return node.data.label?.trim() || undefined;
-        case 'text':
-          return node.data.text?.trim() || 'empty';
-        case 'image':
-          return node.data.altText?.trim() || 'no description';
-        default:
-          return undefined;
-      }
     };
 
     const nodeMap = new Map(nodes.map(node => [node.id, node]));
@@ -140,17 +113,20 @@ export function useDisplayElements({
           deletable: !locked && !readOnly && !groupedChild && !grabMode,
           // Nodes are still connectable when locked, but not in read-only or grab mode
           connectable: !readOnly && !grabMode,
-          // React Flow names the wrapper from node.ariaLabel, with no fallback.
-          ariaLabel: [accessibleName(node), locked ? 'locked' : undefined]
-            .filter(Boolean)
-            .join(', '),
+          // React Flow names the focusable wrapper from node.ariaLabel and has
+          // no fallback of its own.
+          ariaLabel:
+            node.type === 'lineAnchor'
+              ? 'Line endpoint'
+              : [getNodeLabel(node), locked ? 'locked' : undefined]
+                  .filter(Boolean)
+                  .join(', '),
           className: classNames(
             isConnectSource && styles.connectSource,
             isAnchorForFocusedEdge && styles.lineAnchorOnFocusedEdge
           ),
           domAttributes: {
             ...domAttributes,
-            'aria-roledescription': roleDescription(node),
             ...(isConnectSource && {'aria-selected': true}),
           },
         };
