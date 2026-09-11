@@ -383,6 +383,37 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
  * edge cell). For imagery that must stay square and full-frame, slight
  * sampling misalignment beats losing the grid.
  */
+/**
+ * The detected physical px per art pixel of an image — its first frame when
+ * frameSize is given — or null when no convincing grid exists. Detection
+ * only, pixels untouched: reports the grid a non-normalized image (a
+ * pixel-style character sheet, or one saved before normalization) would be
+ * treated as.
+ */
+export async function detectImageGridSize(
+  source: string,
+  frameSize?: {x: number; y: number}
+): Promise<number | null> {
+  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const el = new Image();
+    el.onload = () => resolve(el);
+    el.onerror = () => reject(new Error('image failed to load'));
+    el.src = source;
+  });
+  const width = frameSize?.x ?? img.naturalWidth;
+  const height = frameSize?.y ?? img.naturalHeight;
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d', {willReadFrequently: true});
+  if (!ctx) {
+    return null;
+  }
+  ctx.drawImage(img, 0, 0, width, height, 0, 0, width, height);
+  const grid = detectPixelGrid(rasterFromCanvas(canvas));
+  return grid ? Math.round((grid.sizeX + grid.sizeY) / 2) : null;
+}
+
 export async function normalizePixelArtBlob(
   blob: Blob,
   fallbackBlockSize: number,

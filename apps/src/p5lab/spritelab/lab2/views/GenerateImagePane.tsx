@@ -9,6 +9,7 @@ import {
   setAnimationName,
   SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
+import {detectImageGridSize} from '@cdo/apps/pixelEditor/pixelArt';
 import PixelEditorModal, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditorModal';
@@ -450,6 +451,38 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       ? images.find(i => i.key === dialogTarget)?.props
       : undefined;
 
+  // The Resolution row's grid for a pixel image that never recorded one:
+  // character sheets skip normalization (a strip's frames must agree), and
+  // images saved before normalization existed have nothing stored — detect
+  // what the model drew from the first frame instead. Display only.
+  const [detectedGridSize, setDetectedGridSize] = useState<
+    number | undefined
+  >();
+  const detectSource = targetProps?.dataURI || targetProps?.sourceUrl;
+  const needsGridDetection =
+    targetProps?.generation?.style === 'pixel' &&
+    !targetProps.pixelGridSize &&
+    !!detectSource;
+  useEffect(() => {
+    setDetectedGridSize(undefined);
+    if (!needsGridDetection || !detectSource) {
+      return;
+    }
+    let cancelled = false;
+    detectImageGridSize(detectSource, targetProps?.frameSize)
+      .then(size => {
+        if (!cancelled && size && size > 1) {
+          setDetectedGridSize(size);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+    // detectSource changes whenever the image's pixels do.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [needsGridDetection, detectSource]);
+
   const handleDelete = useCallback(() => {
     if (dialogTarget && dialogTarget !== 'new') {
       const removed =
@@ -873,7 +906,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           pixelated={!!targetProps?.pixelGridSize}
           // A sheet's resolution is its frame: the image the pane shows.
           resolution={creating ? undefined : targetProps?.frameSize}
-          pixelGridSize={targetProps?.pixelGridSize}
+          pixelGridSize={targetProps?.pixelGridSize ?? detectedGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}
