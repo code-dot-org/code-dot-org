@@ -44,17 +44,20 @@ class StudentLessonOverview extends Component {
     );
   };
 
-  // Built once per instance: Markdown rebuilds its processor whenever the
-  // extension list changes identity. The lookup reads current props.
+  /*
+   * No expandableImages: that syntax appears only in activity section
+   * descriptions, which ActivitySection renders.
+   *
+   * No vocabularyDefinition either. This page's overview is the lesson's
+   * `student_overview`, the one markdown field the server never preprocesses
+   * (see Lesson::CLIENT_VOCAB_FIELDS), so it ships no definitions to look a
+   * term up in -- and no curriculum uses the syntax there. Enabling it would
+   * turn a reference that renders as literal text today into a bare key.
+   */
   markdownExtensions = [
-    // No expandableImages: the syntax appears only in activity section
-    // descriptions, which ActivitySection renders.
     extensions.lenientHeadings,
     extensions.lenientLinkDestinations,
     extensions.visualCodeBlock,
-    extensions.vocabularyDefinition({
-      lookup: term => this.props.lesson.vocabularyDefinitions?.[term],
-    }),
     extensions.inlineStyles,
     extensions.details,
   ];
