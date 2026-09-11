@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-04 17:47:40 UTC",
+    "serialized_at": "2026-09-10 19:20:48 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -560,6 +560,18 @@
       }
     },
     {
+      "key": "4c008767-5fb3-40f1-a3e0-2f5fe4ae424d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4c008767-5fb3-40f1-a3e0-2f5fe4ae424d",
+        "lesson.key": "Lesson 4: Software and Operating Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev"
+      }
+    },
+    {
       "key": "82dba2c6-2a67-44ae-a0b8-95c6fb89ae0a",
       "position": 1,
       "properties": {
@@ -596,6 +608,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5fec846f-4e1c-4404-9255-5b5ad128ccc7",
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev"
+      }
+    },
+    {
+      "key": "01447c73-bf35-440f-a2bc-71f03de030df",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01447c73-bf35-440f-a2bc-71f03de030df",
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev"
@@ -1629,6 +1653,7 @@
       "key": "55339380-8d6a-411c-9d9a-3f7c50bd32b1",
       "position": 1,
       "properties": {
+        "progression_name": "New Progression"
       },
       "seeding_key": {
         "activity_section.key": "55339380-8d6a-411c-9d9a-3f7c50bd32b1",
@@ -1808,6 +1833,17 @@
       }
     },
     {
+      "key": "3544acb8-4968-465d-a0cb-0288e8e178e0",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "3544acb8-4968-465d-a0cb-0288e8e178e0",
+        "lesson_activity.key": "4c008767-5fb3-40f1-a3e0-2f5fe4ae424d"
+      }
+    },
+    {
       "key": "db2db4fc-ca03-4562-a03a-20e33997ca5a",
       "position": 1,
       "properties": {
@@ -1976,6 +2012,17 @@
       "seeding_key": {
         "activity_section.key": "b83c97c8-952a-4f77-8d5e-ecbc057d9806",
         "lesson_activity.key": "5fec846f-4e1c-4404-9255-5b5ad128ccc7"
+      }
+    },
+    {
+      "key": "7524970a-c433-418d-9442-4d08db04a277",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277",
+        "lesson_activity.key": "01447c73-bf35-440f-a2bc-71f03de030df"
       }
     },
     {
@@ -3973,6 +4020,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "New Progression"
       },
       "bonus": false,
       "seeding_key": {
@@ -3994,6 +4042,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "New Progression"
       },
       "bonus": false,
       "seeding_key": {
@@ -4015,6 +4064,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "New Progression"
       },
       "bonus": false,
       "seeding_key": {
@@ -4076,6 +4126,28 @@
     },
     {
       "chapter": 17,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson4-choice"
+        ],
+        "lesson.key": "Lesson 4: Software and Operating Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "3544acb8-4968-465d-a0cb-0288e8e178e0"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson4-choice"
+      ]
+    },
+    {
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4097,7 +4169,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4119,7 +4191,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4141,7 +4213,29 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson5-choice"
+        ],
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson5-choice"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4163,7 +4257,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4185,7 +4279,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4207,7 +4301,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4229,7 +4323,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4251,7 +4345,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4273,7 +4367,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4295,7 +4389,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4317,7 +4411,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4339,7 +4433,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4361,7 +4455,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4383,7 +4477,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -4405,7 +4499,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4427,7 +4521,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4449,7 +4543,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4471,7 +4565,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4493,7 +4587,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4515,7 +4609,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4537,7 +4631,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4559,7 +4653,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4581,7 +4675,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4603,7 +4697,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4625,7 +4719,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4647,7 +4741,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4669,7 +4763,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4691,7 +4785,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4713,7 +4807,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4735,7 +4829,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4757,7 +4851,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4779,7 +4873,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4801,7 +4895,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4823,7 +4917,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5040,6 +5134,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson4-choice",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson4-choice"
+        ],
+        "lesson.key": "Lesson 4: Software and Operating Systems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "3544acb8-4968-465d-a0cb-0288e8e178e0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson5-level1_v2_2026-dev",
         "script_level.level_keys": [
           "computer-systems-lesson5-level1_v2_2026-dev"
@@ -5072,6 +5178,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev",
         "activity_section.key": "8f4cab6d-7fbf-43a8-868c-06ad831c5952"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson5-choice",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson5-choice"
+        ],
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277"
       }
     },
     {

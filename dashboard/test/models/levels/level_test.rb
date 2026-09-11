@@ -1469,6 +1469,27 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil properties["showRubric"]
   end
 
+  test "summarize_for_lab2_properties omits levelbuilder generator state" do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create(:pythonlab, properties: {generate_outline: 'author prompt', generate_supplied_code: 'print("secret")', long_instructions: 'Do it.'})
+    script_level = create(:script_level, lesson: lesson, script: script, levels: [level])
+
+    properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal 'Do it.', properties["longInstructions"]
+    assert_nil properties["generateOutline"]
+    assert_nil properties["generateSuppliedCode"]
+  end
+
+  test "student_properties drops every generate_* property and generate_fields keeps them" do
+    level = create(:pythonlab, properties: {generate_outline: 'author prompt', generate_supplied_code: 'print("secret")', long_instructions: 'Do it.'})
+
+    assert_equal({'long_instructions' => 'Do it.'}, level.student_properties.slice('long_instructions', 'generate_outline', 'generate_supplied_code'))
+    assert_equal({generateOutline: 'author prompt', generateSuppliedCode: 'print("secret")'}, level.generate_fields)
+  end
+
   test "summarize_for_lab2_properties shows rubric if level matches lesson rubric level" do
     script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)

@@ -40,6 +40,14 @@ export interface UnitContext {
   // The unit's `generate_outline` — the levelbuilder's free-text
   // description of what the unit teaches as a whole.
   unitOutline?: string;
+
+  // The unit's `generate_drafting_rules`: how to choose and pattern
+  // levels (vocabulary pairs, formative-check placement, choice groups).
+  draftingRules?: string;
+
+  // The unit's `generate_authoring_rules`: constraints on generated level
+  // content (allowed syntax, code style, audience).
+  authoringRules?: string;
 }
 
 export interface LessonContext extends UnitContext {
@@ -72,6 +80,10 @@ export interface LevelContext extends LessonContext {
   // The levelbuilder's per-level description — the prompt that scopes
   // what *this specific level* should build.
   levelDescription: string;
+
+  // Code the author supplied for this level; the prompts treat it as
+  // canonical.
+  suppliedCode?: string;
 
   // Formatted text of the levels that have already been generated
   // earlier in the same run. The per-level AI uses it for continuity
@@ -114,4 +126,33 @@ export interface SlideContext extends SlidesPageContext {
   // sees its successors. Used by the per-slide AI for continuity
   // (recurring imagery, callbacks between cards).
   precedingSlides?: string;
+}
+
+// One framing for every rules block, so the prompts can't drift apart.
+function rulesLines(intro: string[], rules?: string): string[] {
+  const text = rules?.trim();
+  if (!text) return [];
+  return ['', ...intro, text];
+}
+
+export function authoringRulesLines(ctx: UnitContext): string[] {
+  return rulesLines(
+    [
+      'Course authoring rules — hard constraints on the content you',
+      'generate. Where they conflict with the general guidance above,',
+      'these rules win:',
+    ],
+    ctx.authoringRules
+  );
+}
+
+export function draftingRulesLines(ctx: UnitContext): string[] {
+  return rulesLines(
+    [
+      'Course drafting rules — course-specific rules for choosing and',
+      'patterning levels. Where they conflict with the general guidance',
+      'above, these rules win:',
+    ],
+    ctx.draftingRules
+  );
 }

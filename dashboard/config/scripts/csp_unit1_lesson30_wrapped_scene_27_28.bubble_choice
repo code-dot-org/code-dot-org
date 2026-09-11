@@ -1,0 +1,14 @@
+name 'csp-unit1-lesson30-wrapped-scene_27_28'
+display_name 'Wrapped!'
+description '####Choose **ONE** '
+
+sublevels
+level 'csp-unit1-lesson30-theater-a1_27_28'
+level 'csp-unit1-lesson30-theater-b1_27_28'
+level 'csp-unit1-lesson30-theater-c1_27_28'
+level 'csp-unit1-lesson30-theater-d1_27_28'
+
+uses_lab2
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

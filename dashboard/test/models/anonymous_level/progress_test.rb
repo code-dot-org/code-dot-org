@@ -66,7 +66,7 @@ class AnonymousLevel::ProgressTest < ActiveSupport::TestCase
       progress = build(:anonymous_level_progress, level: nil)
 
       _(progress).wont_be :valid?
-      _(progress.errors[:level]).must_include 'must exist'
+      _(progress.errors[:level_id]).must_include 'is required'
     end
 
     context 'when the anonymous user ID, script, and level already exist' do

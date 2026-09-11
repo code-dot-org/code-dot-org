@@ -10,7 +10,7 @@ module LevelProgressable
     store :properties, accessors: %i[locale locale_supported], coder: JSON
 
     belongs_to :script, class_name: 'Unit', optional: true
-    belongs_to :level
+    belongs_to :level, optional: true
     belongs_to :unit_group, optional: true
     belongs_to :level_source, optional: true
 
@@ -19,7 +19,6 @@ module LevelProgressable
     before_save :reset_best_result, if: ->(progress) {progress.submitted_changed? from: true, to: false}
 
     scope :by_lesson, ->(lesson) {where(script: lesson.script, level: lesson.script_levels.map(&:level_ids).flatten)}
-    # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in word choice.
     scope :attempted, -> {where.not(best_result: nil)}
     scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
     scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}

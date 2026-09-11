@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-10T18:58:18.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Build your own\r\n\r\npaste in your variables and math calucations from level 2.\r\n\r\nGive AI Tutor your plan from level 1 and prompt it to build out your scene/cards",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "csp-unit1-lesson30-theater-template-a_27_28",
+    "display_name": "Build Your Own",
+    "bubble_choice_description": "Start from a blank Reveal and prompt the AI Tutor to bring your plan to life — full creative control, your design from scratch.",
+    "thumbnail_url": "https://images.code.org/714643ff50de2ddc4f824844c49f746a-lightbulb.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-10T18:58:18.512+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-template-a_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-template-a_27_28\"},{\"changed_at\":\"2026-09-10 18:59:05 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:00:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 20:05:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

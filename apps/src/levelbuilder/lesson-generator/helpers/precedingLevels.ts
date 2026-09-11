@@ -9,7 +9,7 @@ import {FreeResponseGeneration} from '../ai/freeResponse';
 import {PythonlabGeneration} from '../ai/pythonlab';
 import {SketchlabGeneration} from '../ai/sketchlab';
 import {Weblab2Generation} from '../ai/weblab2';
-import {LabType} from '../types';
+import {LabType, takesSuppliedCode} from '../types';
 
 // Keep in sync with SUPPORTED_LAB_TYPES; call sites are typed against
 // LabType so a missing row is a compile error.
@@ -52,7 +52,7 @@ export function priorOutputFromLevelProperties(
     }
     return undefined;
   }
-  if (labType === 'weblab2' || labType === 'pythonlab') {
+  if (takesSuppliedCode(labType)) {
     const startSources = props.startSources as MultiFileSource | undefined;
     const longInstructions = props.longInstructions || '';
     const files = startSources?.files

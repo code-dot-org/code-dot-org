@@ -100,14 +100,12 @@ describe('Design System - Tabs', () => {
     expect(valuesMap.test2).toBe('tab1');
   });
 
-  it("renders disabled tab, doesn't change on click", async () => {
+  it('renders a disabled tab that is focusable but does not respond', async () => {
     const user = userEvent.setup();
     const spyOnChange = vi.fn();
 
-    onSelectedTabChange('test3', 'tab1');
-
     renderTabs({
-      defaultSelectedTabValue: valuesMap.test3,
+      defaultSelectedTabValue: 'tab1',
       tabs: [
         {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
         {
@@ -121,17 +119,19 @@ describe('Design System - Tabs', () => {
       name: 'test3',
     });
 
-    const tab1 = screen.getByText('tab1');
-    const tab2 = screen.getByText('tab2');
+    const tab2 = screen.getByRole('tab', {name: 'tab2'});
 
-    expect(tab1).toBeInTheDocument();
-    expect(tab2).toBeInTheDocument();
-    expect(valuesMap.test3).toBe('tab1');
+    expect(tab2).toHaveAttribute('aria-disabled', 'true');
+    expect(tab2).not.toHaveAttribute('disabled');
 
+    await user.tab();
+    await user.tab();
+    expect(tab2).toHaveFocus();
+
+    await user.keyboard('{Enter}');
     await user.click(tab2);
 
     expect(spyOnChange).not.toHaveBeenCalled();
-    expect(valuesMap.test3).toBe('tab1');
   });
 
   it('renders with tooltip and displays it on hover', async () => {

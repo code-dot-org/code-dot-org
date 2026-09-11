@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_2_7",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Before uploading a personal photo to an AI tool, what is an important ethical question to consider?",
+  "solution": [
+    {"option": "Whether the photo is in a common file format.", "correct": false},
+    {"option": "Whether the image reveals private details you don't want shared or inferred.", "correct": true},
+    {"option": "Whether the photo was taken with a professional camera.", "correct": false},
+    {"option": "Whether the photo is in color or black and white.", "correct": false}
+  ],
+  "objective_keys": [
+    "882555b1-9534-4550-882c-5ac97ae02012"
+  ]
+}

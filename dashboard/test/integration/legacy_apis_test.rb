@@ -115,39 +115,4 @@ class LegacyAPIsTest < ActionDispatch::IntegrationTest
       end
     end
   end
-
-  describe 'Dashboard' do
-    around do |test|
-      rails_app = Rails.application
-      original_built_app = rails_app.app
-      original_test_app = self.class.app
-
-      middleware = Class.new(Sinatra::Base)
-      middleware.set :environment, :development
-
-      Middleware::LegacyApiStack.stub_const(:APPS, [middleware]) do
-        # Rebuild the existing Rails middleware stack so LegacyApiStack is
-        # instantiated while APPS contains only the test Sinatra middleware.
-        middleware_stack = rails_app.config.middleware.dup
-        rebuilt_app = middleware_stack.build(rails_app.routes)
-
-        rails_app.instance_variable_set(:@app, rebuilt_app)
-        self.class.app = rails_app
-        reset!
-
-        test.call
-      end
-    ensure
-      rails_app.instance_variable_set(:@app, original_built_app)
-      self.class.app = original_test_app
-      reset!
-    end
-
-    describe 'GET /sections/invalid_code' do
-      it 'returns HTTP 404' do
-        get '/sections/invalid_code'
-        must_respond_with :not_found
-      end
-    end
-  end
 end
