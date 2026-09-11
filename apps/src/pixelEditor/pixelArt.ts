@@ -110,9 +110,9 @@ function fitOffset(
   hist: number[],
   size: number
 ): {offset: number; share: number} {
-  // Edge mass folded into quarter-pixel phase buckets, then a circular
-  // sliding window of ±EDGE_TOLERANCE: one pass over the bins instead of
-  // an offsets-times-bins scan.
+  // Edge mass folds into quarter-pixel phase buckets; a circular sliding
+  // window of ±EDGE_TOLERANCE then scores every offset in one pass over
+  // the bins (this runs per judged candidate, per axis).
   const step = 0.25;
   const buckets = Math.max(1, Math.round(size / step));
   const mass = new Array(buckets).fill(0);
@@ -324,9 +324,9 @@ function candidatePitches(hist: number[]): number[] {
       }
     }
     // True integer grids are common (crisp-upscaled storage, painted art);
-    // snap when the rounding drifts the far lattice line under the edge
-    // tolerance — an absolute snap window would be scale-blind (0.04px off
-    // over 64 blocks is 2.6px of drift).
+    // snap when the rounding keeps the far lattice line inside the edge
+    // tolerance. Drift accumulates per block: 0.04px off is 2.6px across
+    // 64 blocks, so the snap window scales with the block count.
     const snapped = Math.round(bestSize);
     if (Math.abs(bestSize - snapped) * (length / bestSize) <= EDGE_TOLERANCE) {
       pitches.push(snapped);
@@ -352,8 +352,10 @@ function candidatePitches(hist: number[]): number[] {
  * passing any such grid by comparing points to themselves. Probe pairs
  * that are fully transparent along with their center are not counted (a
  * sprite's empty margins say nothing about its grid). Subsampled: at most
- * ~64x64 cells judge any image size.
+ * PROBE_CELLS_PER_AXIS² cells judge any image size.
  */
+const PROBE_CELLS_PER_AXIS = 64;
+
 function gridMismatch(
   raster: Raster,
   grid: {sizeX: number; sizeY: number; offsetX: number; offsetY: number}
@@ -361,8 +363,8 @@ function gridMismatch(
   const {width, height, data} = raster;
   const cellsX = Math.max(1, Math.floor((width - grid.offsetX) / grid.sizeX));
   const cellsY = Math.max(1, Math.floor((height - grid.offsetY) / grid.sizeY));
-  const stepX = Math.max(1, Math.round(cellsX / 64));
-  const stepY = Math.max(1, Math.round(cellsY / 64));
+  const stepX = Math.max(1, Math.round(cellsX / PROBE_CELLS_PER_AXIS));
+  const stepY = Math.max(1, Math.round(cellsY / PROBE_CELLS_PER_AXIS));
   // Two probe distances per axis: content whose own period equals a single
   // probe distance would alias and read as uniform.
   const probeDistances = (size: number): number[] => {
