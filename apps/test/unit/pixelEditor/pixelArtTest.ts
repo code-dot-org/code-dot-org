@@ -124,6 +124,39 @@ describe('pixelArt', () => {
     expect(detectPixelGrid(gradientRaster())).toBeNull();
   });
 
+  it('detects a fractional pitch and downsamples on it', () => {
+    // 6.25px: a model's 12.5px grid after the character strip's half
+    // downscale. Integer sizes accumulate the remainder as drift and never
+    // align, so this exercises the fractional fallback.
+    const pitch = 6.25;
+    const raster = rasterFrom(256, 256, (x, y) => {
+      const lx = Math.floor(x / pitch);
+      const ly = Math.floor(y / pitch);
+      return PALETTE[(lx + ly * 2) % 3];
+    });
+    const grid = detectPixelGrid(raster);
+    expect(grid).not.toBeNull();
+    expect(grid!.sizeX).toBeCloseTo(pitch, 1);
+    expect(grid!.sizeY).toBeCloseTo(pitch, 1);
+    expect(grid!.confidence).toBeGreaterThanOrEqual(0.6);
+    const logical = downsampleToGrid(raster, grid!);
+    expect(logical.width).toBe(41); // ceil(256 / 6.25)
+    expect(logical.height).toBe(41);
+    // Cell centers land inside the source blocks, so values round-trip.
+    for (const [cx, cy] of [
+      [5, 7],
+      [20, 20],
+      [33, 12],
+    ]) {
+      const i = (cy * logical.width + cx) * 4;
+      expect([
+        logical.data[i],
+        logical.data[i + 1],
+        logical.data[i + 2],
+      ]).toEqual(PALETTE[(cx + cy * 2) % 3]);
+    }
+  });
+
   it('downsamples to the logical resolution and round-trips values', () => {
     const logical = samplePattern();
     const raster = blockyRaster(logical, 12);

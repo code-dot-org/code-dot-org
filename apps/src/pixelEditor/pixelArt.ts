@@ -11,7 +11,9 @@
 import {Raster} from './tools';
 
 export interface PixelGrid {
-  // Block size in physical pixels per axis.
+  // Block size in physical pixels per axis. May be fractional: models
+  // paint uniform grids at pitches like 12.5px, and a half downscale
+  // (character-set strips) keeps the pitch fractional.
   sizeX: number;
   sizeY: number;
   // Where the first grid line falls (0 = grid aligned to the image edge).
@@ -95,11 +97,84 @@ function edgeHistogram(raster: Raster, axis: 'x' | 'y'): number[] {
 }
 
 /** Best (size, offset) explaining an edge histogram, or null when the best
- * candidate doesn't clear the confidence bar. */
+ * candidate doesn't clear the confidence bar. Integer sizes first; when
+ * none fits, fractional pitches (the fallback is off the common path, so
+ * clean grids pay nothing for it). */
 function detectAxis(
   hist: number[]
 ): {size: number; offset: number; score: number} | null {
   const best = detectAxisLenient(hist);
+  if (best && best.score >= MIN_CONFIDENCE) {
+    return best;
+  }
+  return detectAxisFractional(hist);
+}
+
+/**
+ * Fractional-pitch scan: a model often paints a perfectly uniform grid at
+ * a non-integer pitch (12.5px at 1024 output; 6.25px after the character
+ * strip's half downscale), and against the integer scan the fractional
+ * remainder accumulates as drift until no size aligns. Candidate periods
+ * step finely enough that the drift across the axis stays under the edge
+ * tolerance; per period, the lattice phase is the circular mean of the
+ * edge angles (one pass over the edges — no offset loop), then the same
+ * lift-over-chance score and bar as the integer scan. Subharmonics are as
+ * phase-coherent as the true pitch but sit on a higher chance floor, so
+ * lift discounts them; exact ties still go to the coarser grid.
+ */
+function detectAxisFractional(
+  hist: number[]
+): {size: number; offset: number; score: number} | null {
+  const edgePositions: number[] = [];
+  const edgeWeights: number[] = [];
+  let total = 0;
+  for (let m = 0; m < hist.length; m++) {
+    if (hist[m]) {
+      edgePositions.push(m);
+      edgeWeights.push(hist[m]);
+      total += hist[m];
+    }
+  }
+  if (total === 0) {
+    return null;
+  }
+  const length = hist.length;
+  let best: {size: number; offset: number; score: number} | null = null;
+  for (
+    let size = MIN_BLOCK;
+    size <= MAX_BLOCK;
+    // Between-candidates drift across the whole axis stays under half the
+    // edge tolerance: (length / size) lattice lines, each moving by step.
+    size += Math.max(0.02, (EDGE_TOLERANCE * size * size) / (2 * length))
+  ) {
+    let sumSin = 0;
+    let sumCos = 0;
+    for (let e = 0; e < edgePositions.length; e++) {
+      const a = (2 * Math.PI * edgePositions[e]) / size;
+      sumSin += edgeWeights[e] * Math.sin(a);
+      sumCos += edgeWeights[e] * Math.cos(a);
+    }
+    const offset =
+      ((((Math.atan2(sumSin, sumCos) / (2 * Math.PI)) * size) % size) + size) %
+      size;
+    let aligned = 0;
+    for (let e = 0; e < edgePositions.length; e++) {
+      const rem = (((edgePositions[e] - offset) % size) + size) % size;
+      if (rem <= EDGE_TOLERANCE || rem >= size - EDGE_TOLERANCE) {
+        aligned += edgeWeights[e];
+      }
+    }
+    const raw = aligned / total;
+    const chance = Math.min(1, (2 * EDGE_TOLERANCE + 1) / size);
+    const score = chance >= 1 ? 0 : (raw - chance) / (1 - chance);
+    if (
+      !best ||
+      score > best.score ||
+      (score >= best.score && size > best.size)
+    ) {
+      best = {size, offset, score};
+    }
+  }
   return best && best.score >= MIN_CONFIDENCE ? best : null;
 }
 
@@ -385,10 +460,11 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
  */
 /**
  * The detected physical px per art pixel of an image — its first frame when
- * frameSize is given — or null when no convincing grid exists. Detection
- * only, pixels untouched: reports the grid a non-normalized image (a
- * pixel-style character sheet, or one saved before normalization) would be
- * treated as.
+ * frameSize is given — or null when no convincing grid exists. May be
+ * fractional (see PixelGrid.sizeX); callers dividing a stored dimension by
+ * it should round the quotient, not this. Detection only, pixels
+ * untouched: reports the grid a non-normalized image (a pixel-style
+ * character sheet, or one saved before normalization) would be treated as.
  */
 export async function detectImageGridSize(
   source: string,
@@ -411,7 +487,7 @@ export async function detectImageGridSize(
   }
   ctx.drawImage(img, 0, 0, width, height, 0, 0, width, height);
   const grid = detectPixelGrid(rasterFromCanvas(canvas));
-  return grid ? Math.round((grid.sizeX + grid.sizeY) / 2) : null;
+  return grid ? (grid.sizeX + grid.sizeY) / 2 : null;
 }
 
 export async function normalizePixelArtBlob(
@@ -435,7 +511,9 @@ export async function normalizePixelArtBlob(
     if (Math.abs(grid.sizeX - grid.sizeY) > 1) {
       return null;
     }
-    const size = Math.round((grid.sizeX + grid.sizeY) / 2);
+    // Kept fractional: rounding a 6.25px pitch to 6 walks the sampling off
+    // the lattice within a few blocks.
+    const size = (grid.sizeX + grid.sizeY) / 2;
     grid = {
       sizeX: size,
       sizeY: size,
