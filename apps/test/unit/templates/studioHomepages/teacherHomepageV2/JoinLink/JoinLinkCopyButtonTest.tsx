@@ -52,6 +52,37 @@ describe('JoinLinkCopyButton', () => {
     screen.getByRole('button', {name: 'Why?'});
   });
 
+  it('renders "not applicable" for ClassLink login type', () => {
+    render(
+      <JoinLinkCopyButton
+        {...mockProps}
+        loginType={SectionLoginType.classlink}
+      />
+    );
+
+    screen.getByText(`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`);
+    screen.getByRole('button', {name: 'Why?'});
+  });
+
+  it('names ClassLink, not Clever, in the no-section-code dialog', () => {
+    render(
+      <JoinLinkCopyButton
+        {...mockProps}
+        loginType={SectionLoginType.classlink}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button'));
+
+    screen.getByText(i18n.noSectionDialogHeader({classroom: 'ClassLink'}));
+    screen.getByText(i18n.noSectionDialogBody({classroom: 'ClassLink'}));
+    expect(
+      screen.queryByText(
+        i18n.noSectionDialogHeader({classroom: i18n.loginTypeClever()})
+      )
+    ).toBeNull();
+  });
+
   it('copies section code link to clipboard when clicked', () => {
     render(
       <JoinLinkCopyButton {...mockProps} loginType={SectionLoginType.email} />

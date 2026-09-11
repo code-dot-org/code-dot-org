@@ -8,6 +8,7 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
@@ -43,10 +44,12 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     setShouldShowDialog(true);
   };
 
-  const classroomType =
-    loginType === SectionLoginType.google_classroom
-      ? i18n.loginTypeGoogleClassroom()
-      : i18n.loginTypeClever();
+  let classroomType = i18n.loginTypeClever();
+  if (loginType === SectionLoginType.google_classroom) {
+    classroomType = i18n.loginTypeGoogleClassroom();
+  } else if (loginType === SectionLoginType.classlink) {
+    classroomType = LmsLoginTypeNames.classlink;
+  }
 
   const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
