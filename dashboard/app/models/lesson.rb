@@ -211,7 +211,9 @@ class Lesson < ApplicationRecord
   # the syntax: `preparation` appears on the course rollup pages as well as the
   # lesson plan, so both had to migrate before it could join. `student_overview`
   # is absent because it is never preprocessed at all (see
-  # summarize_for_student_lesson_plan).
+  # summarize_for_student_lesson_plan), so its references reach the client
+  # already -- with no definitions to resolve them against, which is why the
+  # student lesson plan leaves the extension off.
   CLIENT_VOCAB_FIELDS = %w(overview purpose preparation assessment_opportunities).freeze
 
   # Returns a version of the named property which is fully ready for
