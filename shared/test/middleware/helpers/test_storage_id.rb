@@ -170,9 +170,6 @@ class StorageIdTest < Minitest::Test
     statsig_stable_id = SecureRandom.uuid
     request.stubs(:statsig_stable_id).returns(statsig_stable_id)
 
-    statsig_stable_id = SecureRandom.uuid
-    request.stubs(:statsig_stable_id).returns(statsig_stable_id)
-
     # returns nil if storage id is invalid
     assert_nil storage_id_from_cookie
 
