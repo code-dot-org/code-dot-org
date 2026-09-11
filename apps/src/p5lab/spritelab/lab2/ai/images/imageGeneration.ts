@@ -64,6 +64,12 @@ export function styleClause(
 const SPRITE_PROMPT_CLAUSE =
   'Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.';
 
+// The model likes to dress a background's margins: painted frames, fake
+// transparency strips, title bars. Positive instruction first, and the
+// decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
+const BACKGROUND_PROMPT_CLAUSE =
+  'The scene itself fills the entire image, reaching all four edges. Do not frame the picture: no border and no margin, and nothing along the edges that is not part of the scene.';
+
 // Name no drawable object here ("block", "tile") — the model adds it to the
 // picture. Describe only the square-and-margin layout.
 const BLOCK_PROMPT_CLAUSE =
@@ -268,6 +274,8 @@ export async function generateImage(
     fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
   } else if (imageType === 'block') {
     fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
+  } else if (imageType === 'background') {
+    fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
   }
 
   // The prompt judge and the image model run concurrently — generation is

@@ -112,6 +112,13 @@ describe('generateImage', () => {
     expect(content).toContain('a beach');
   });
 
+  it('asks backgrounds to fill the whole image (no painted frame)', async () => {
+    await generateImage('a beach', OPTIONS);
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content).toContain('reaching all four edges');
+    expect(content).toContain('Do not frame the picture');
+  });
+
   it('asks for the pixel grid of the image type', async () => {
     // Sprites and blocks read at 64x64; a background carries a whole scene,
     // so its grid is finer.
