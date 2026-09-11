@@ -153,11 +153,12 @@ export function useDisplayElements({
           selected,
           interactionWidth: LINE_INTERACTION_WIDTH_PX,
           deletable: !locked && !readOnly && !grabMode,
-          ariaLabel: getEdgeLabel(
-            edge,
-            nodeMap,
-            floatingLineIndex.get(edge.id)
-          ),
+          ariaLabel: [
+            getEdgeLabel(edge, nodeMap, floatingLineIndex.get(edge.id)),
+            locked ? 'locked' : undefined,
+          ]
+            .filter(Boolean)
+            .join(', '),
           className: classNames(isStandaloneLine && styles.standaloneLineEdge),
           domAttributes: {
             ...domAttributes,
