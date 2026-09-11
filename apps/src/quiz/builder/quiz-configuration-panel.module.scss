@@ -43,14 +43,14 @@
 
 .chooserTitle {
   margin: 0;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: var(--font-weight-semi-bold, 600);
+  font-size: var(--font-size-body-sm, 14px);
   color: var(--text-neutral-primary, #121212);
 }
 
 .chooserSubtitle {
   margin: 0;
-  font-size: 12px;
+  font-size: var(--font-size-body-xs, 12px);
   color: var(--text-neutral-tertiary, #4b5258);
 }
 
@@ -83,13 +83,13 @@
 }
 
 .optionName {
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: var(--font-weight-semi-bold, 600);
+  font-size: var(--font-size-body-sm, 14px);
   color: var(--text-neutral-primary, #121212);
 }
 
 .optionDescription {
-  font-size: 12px;
+  font-size: var(--font-size-body-xs, 12px);
   color: var(--text-neutral-tertiary, #4b5258);
 }
 
@@ -119,7 +119,7 @@
   line-height: 32px;
   border-bottom: 1px solid var(--border-neutral-primary, #d3d6da);
   background: var(--background-neutral-secondary, #f1f2f4);
-  font-weight: 600;
+  font-weight: var(--font-weight-semi-bold, 600);
   font-size: 10px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
@@ -133,9 +133,6 @@
   box-sizing: border-box;
 }
 
-// Each field in a card is its own padded row - padding lives here, not on
-// configCardContent, so a divider can sit between rows instead of the card
-// having one uniform padding.
 .cardRow {
   display: flex;
   flex-direction: column;
@@ -163,9 +160,6 @@
   background: var(--background-neutral-secondary, #f1f2f4);
 }
 
-// Toggle's own label+switch sit bunched together with a fixed gap - it
-// has no prop to space them apart, so the label is rendered as our own
-// sibling text here instead, pinning the switch to the row's far edge.
 .toggleRow {
   display: flex;
   align-items: center;
@@ -174,13 +168,13 @@
 }
 
 .toggleLabel {
-  font-size: 14px;
+  font-size: var(--font-size-body-sm, 14px);
   color: var(--text-neutral-primary, #121212);
 }
 
 .cardHelperText {
   margin: 0;
-  font-size: 12px;
+  font-size: var(--font-size-body-xs, 12px);
   color: var(--text-neutral-tertiary, #4b5258);
 }
 
