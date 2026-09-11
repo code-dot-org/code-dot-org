@@ -119,6 +119,38 @@ describe('LessonOverview', () => {
     currentLocaleStub.restore();
   });
 
+  it('resolves purpose vocabulary against the lesson definitions', () => {
+    const lesson = {
+      ...defaultProps.lesson,
+      purpose: 'a [v digital_footprint/csd/2021] reference',
+      vocabularyDefinitions: {
+        'digital_footprint/csd/2021': {
+          word: 'digital footprint',
+          definition: 'The collected information about an individual.',
+        },
+      },
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+
+    // The server ships the reference unsubstituted; the extension resolves it.
+    const purpose = wrapper.find(Markdown).at(1);
+    expect(purpose.props().content).to.contain(
+      '[v digital_footprint/csd/2021]'
+    );
+
+    const vocabulary = purpose
+      .props()
+      .extensions.find(extension => extension.name === 'vocabularyDefinition');
+    const Vocab = vocabulary.components.vocab;
+    const rendered = shallow(<Vocab>digital_footprint/csd/2021</Vocab>);
+    expect(rendered.props().title).to.equal(
+      'The collected information about an individual.'
+    );
+    expect(rendered.text()).to.equal('digital footprint');
+  });
+
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
@@ -130,19 +162,19 @@ describe('LessonOverview', () => {
     expect(wrapper.contains('Lesson One Title'), 'Lesson Title').to.be.true;
     expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
-    // The overview has migrated to the new markdown component; the rest have not.
-    expect(wrapper.find(Markdown).at(0).props().content).to.contain(
-      'Lesson Overview'
+    // Overview and purpose have migrated to the new markdown component; the
+    // rest have not.
+    const markdowns = wrapper.find(Markdown);
+    expect(markdowns.at(0).props().content).to.contain('Lesson Overview');
+    expect(markdowns.at(1).props().content).to.contain(
+      'The purpose of the lesson is for people to learn'
     );
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
     expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
-      'The purpose of the lesson is for people to learn'
-    );
-    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain(
       'Assessment Opportunities Details'
     );
-    expect(enhancedSafeMarkdowns.at(2).props().markdown).to.contain('- One');
+    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain('- One');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 

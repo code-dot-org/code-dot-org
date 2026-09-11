@@ -439,18 +439,19 @@ class LessonTest < ActiveSupport::TestCase
     )
 
     Services::MarkdownPreprocessor.expects(:process).
-      with(lesson.overview)
+      with(lesson.overview, resolve_vocab: true)
+    # The lesson plan resolves the purpose field's vocabulary itself.
     Services::MarkdownPreprocessor.expects(:process).
-      with(lesson.purpose)
+      with(lesson.purpose, resolve_vocab: false)
     Services::MarkdownPreprocessor.expects(:process).
-      with(lesson.preparation)
+      with(lesson.preparation, resolve_vocab: true)
     Services::MarkdownPreprocessor.expects(:process).
-      with(lesson.assessment_opportunities)
+      with(lesson.assessment_opportunities, resolve_vocab: true)
 
     lesson.summarize_for_lesson_show(create(:user), false)
   end
 
-  test 'lesson show summary includes definitions for the vocabulary referenced by its activity sections' do
+  test 'lesson show summary includes definitions for the vocabulary its client-resolved fields reference' do
     course_version = create(:course_version, course_offering: create(:course_offering, key: 'test-course'), key: '1999')
     create(
       :vocabulary,
@@ -459,7 +460,18 @@ class LessonTest < ActiveSupport::TestCase
       definition: "The first of the vocabulary entries.",
       course_version: course_version
     )
-    lesson = create(:lesson, lesson_group: create(:lesson_group))
+    create(
+      :vocabulary,
+      key: 'second_vocab',
+      word: "Second Vocabulary",
+      definition: "The second of the vocabulary entries.",
+      course_version: course_version
+    )
+    lesson = create(
+      :lesson,
+      lesson_group: create(:lesson_group),
+      purpose: "a [v second_vocab/test-course/1999] reference"
+    )
     lesson_activity = create(:lesson_activity, lesson: lesson)
     create(
       :activity_section,
@@ -470,9 +482,12 @@ class LessonTest < ActiveSupport::TestCase
     summary = lesson.reload.summarize_for_lesson_show(create(:user), false)
 
     expected = {
+      'second_vocab/test-course/1999' => {word: "Second Vocabulary", definition: "The second of the vocabulary entries."},
       'first_vocab/test-course/1999' => {word: "First Vocabulary", definition: "The first of the vocabulary entries."},
     }
     assert_equal expected, summary[:vocabularyDefinitions]
+    # The purpose field ships its reference for the client to resolve.
+    assert_equal "a [v second_vocab/test-course/1999] reference", summary[:purpose]
   end
 
   test 'lesson show summary retrieves translations' do
