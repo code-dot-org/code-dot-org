@@ -123,4 +123,20 @@ describe('generateImage', () => {
     const content = mockGenerateText.mock.calls[0][0].messages[0].content;
     expect(content).not.toContain('pixel grid');
   });
+
+  it('a chosen pixel grid overrides the default in the prompt', async () => {
+    expect(styleClause('pixel', 'sprite', 32)).toContain('32x32 pixel grid');
+    expect(styleClause('pixel', 'sprite', 64)).toContain('16x16 pixel grid');
+    expect(styleClause('pixel', 'sprite', 64)).toContain('64x64 block');
+    // End to end: the request carries the chosen grid. Post-processing needs
+    // a real canvas and throws in jsdom, after the request has been sent.
+    await generateImage('a cave', {
+      imageType: 'background',
+      style: 'pixel',
+      pixelGrid: 64,
+    }).catch(() => {});
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content).toContain('64x64 pixel grid');
+    expect(content).toContain('16x16 block');
+  });
 });

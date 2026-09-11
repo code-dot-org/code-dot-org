@@ -28,16 +28,26 @@ import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
 const SMOOTH_PROMPT = 'Render as a smooth, cleanly-shaded illustration.';
 
+/** Block size (physical px per art pixel) a generation asks for: the chosen
+ * logical grid when given, else the type's default. */
+export function pixelBlockFor(imageType: ImageType, pixelGrid?: number) {
+  return pixelGrid ? MODEL_OUTPUT_PX / pixelGrid : ASSUMED_BLOCK[imageType];
+}
+
 // Tacked onto the prompt so the generated image matches the chosen style.
 // Kept here (not inline) so the sprite and background prompts stay in sync.
-// The pixel prompt requests the same block size detection falls back to
-// (ASSUMED_BLOCK, per type), so an undetectable grid still matches what was
-// asked for.
-export function styleClause(style: ImageStyle, imageType: ImageType): string {
+// The pixel prompt requests the same block size normalization falls back to
+// (blockSize, defaulting to the type's ASSUMED_BLOCK), so an undetectable
+// grid still matches what was asked for.
+export function styleClause(
+  style: ImageStyle,
+  imageType: ImageType,
+  blockSize?: number
+): string {
   if (style !== 'pixel') {
     return SMOOTH_PROMPT;
   }
-  const block = ASSUMED_BLOCK[imageType];
+  const block = blockSize ?? ASSUMED_BLOCK[imageType];
   const logical = MODEL_OUTPUT_PX / block;
   return (
     'Render as crisp pixel art with a small, limited color palette and ' +
@@ -70,18 +80,17 @@ const BLOCK_PROMPT_CLAUSE =
  */
 async function normalizeIfPixelArt(
   blob: Blob,
-  imageType: ImageType
+  imageType: ImageType,
+  fallbackBlock: number
 ): Promise<{blob: Blob; pixelGridSize?: number}> {
   const squareGrid = imageType === 'background';
   try {
     // A background must stay square and full-frame (it letterboxes over the
     // stage otherwise), so its grid is pinned square to the frame instead of
     // following a detected offset.
-    const normalized = await normalizePixelArtBlob(
-      blob,
-      ASSUMED_BLOCK[imageType],
-      {squareGrid}
-    );
+    const normalized = await normalizePixelArtBlob(blob, fallbackBlock, {
+      squareGrid,
+    });
     if (
       !normalized ||
       (squareGrid && normalized.logicalWidth !== normalized.logicalHeight)
@@ -102,7 +111,10 @@ async function normalizeIfPixelArt(
 
 /** What to generate; every omitted field falls back to a default. */
 export type GenerateImageOptions = Partial<
-  Pick<ImageGenerationMetadata, 'imageType' | 'style' | 'seed' | 'temperature'>
+  Pick<
+    ImageGenerationMetadata,
+    'imageType' | 'style' | 'seed' | 'temperature' | 'pixelGrid'
+  >
 > & {
   /**
    * Modify this image per the prompt instead of drawing from scratch. A
@@ -250,7 +262,8 @@ export async function generateImage(
   // Always choose the seed ourselves: the service doesn't report the one it
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
-  let fullPrompt = `${prompt}. ${styleClause(style, imageType)}`;
+  const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
+  let fullPrompt = `${prompt}. ${styleClause(style, imageType, pixelBlock)}`;
   if (imageType === 'sprite') {
     fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
   } else if (imageType === 'block') {
@@ -293,6 +306,9 @@ export async function generateImage(
     ...(options.temperature !== undefined && {
       temperature: options.temperature,
     }),
+    // Recorded even at the default: the point is comparing what was asked
+    // for against what came back.
+    ...(style === 'pixel' && {pixelGrid: MODEL_OUTPUT_PX / pixelBlock}),
     ...(options.inputImageDataURI && {editedPrevious: true}),
   };
 
@@ -334,7 +350,7 @@ export async function generateImage(
   }
   let pixelGridSize: number | undefined;
   if (style === 'pixel') {
-    const normalized = await normalizeIfPixelArt(blob, imageType);
+    const normalized = await normalizeIfPixelArt(blob, imageType, pixelBlock);
     blob = normalized.blob;
     pixelGridSize = normalized.pixelGridSize;
   } else {

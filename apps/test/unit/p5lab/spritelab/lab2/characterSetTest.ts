@@ -32,4 +32,19 @@ describe('SpriteLab2 characterSet', () => {
     expect(text).toContain('same size and position');
     expect(text).toContain(key.name);
   });
+
+  it('passes a chosen pixel block into both frame prompts', () => {
+    expect(basePrompt('a knight', 'pixel', key, 32)).toContain(
+      '32x32 pixel grid'
+    );
+    expect(
+      posePrompt(
+        'a knight',
+        {label: 'walking', pose: 'halfway through a walking stride'},
+        'pixel',
+        key,
+        32
+      )
+    ).toContain('32x32 pixel grid');
+  });
 });

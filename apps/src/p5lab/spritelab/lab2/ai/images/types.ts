@@ -35,6 +35,10 @@ export interface ImageGenerationMetadata {
   seed: number;
   /** Sampling wildness the user chose; absent = the service default. */
   temperature?: number;
+  /** Logical grid the pixel prompt asked for (e.g. 64 for 64x64); absent on
+      pixel images generated before this was recorded. What came back can
+      differ — the model honors the grid softly. */
+  pixelGrid?: number;
   /** True when the image was made by modifying its previous version. */
   editedPrevious?: boolean;
 }
