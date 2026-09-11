@@ -12,12 +12,13 @@ import styles from '../lesson-plan.module.scss';
 export default class Activity extends Component {
   static propTypes = {
     activity: activityShape,
-    // Passed through to each section; see ActivitySection.
+    // Both passed through to each section; see ActivitySection.
     vocabularyDefinitions: PropTypes.object,
+    onExpandImage: PropTypes.func,
   };
 
   render() {
-    const {activity, vocabularyDefinitions} = this.props;
+    const {activity, vocabularyDefinitions, onExpandImage} = this.props;
 
     return (
       <div>
@@ -46,6 +47,7 @@ export default class Activity extends Component {
               key={item.key}
               section={item}
               vocabularyDefinitions={vocabularyDefinitions}
+              onExpandImage={onExpandImage}
             />
           );
         })}

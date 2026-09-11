@@ -1,5 +1,5 @@
 import {Markdown} from '@code-dot-org/markdown';
-import {Typography} from '@mui/material';
+import {Tooltip, Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
@@ -143,8 +143,11 @@ describe('LessonOverview', () => {
     const vocabulary = purpose
       .props()
       .extensions.find(extension => extension.name === 'vocabularyDefinition');
+    // The term renders as a design-system tooltip trigger carrying the
+    // definition; the tooltip itself only mounts on hover or focus.
     const Vocab = vocabulary.components.vocab;
     const rendered = shallow(<Vocab>digital_footprint/csd/2021</Vocab>);
+    expect(rendered.type()).to.equal(Tooltip);
     expect(rendered.props().title).to.equal(
       'The collected information about an individual.'
     );
@@ -162,19 +165,17 @@ describe('LessonOverview', () => {
     expect(wrapper.contains('Lesson One Title'), 'Lesson Title').to.be.true;
     expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
-    // Overview and purpose have migrated to the new markdown component; the
-    // rest have not.
+    // Every lesson-level field now renders through the new markdown component.
     const markdowns = wrapper.find(Markdown);
     expect(markdowns.at(0).props().content).to.contain('Lesson Overview');
     expect(markdowns.at(1).props().content).to.contain(
       'The purpose of the lesson is for people to learn'
     );
-
-    const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
-    expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
+    expect(markdowns.at(2).props().content).to.contain(
       'Assessment Opportunities Details'
     );
-    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain('- One');
+    expect(markdowns.at(3).props().content).to.contain('- One');
+    expect(wrapper.find('EnhancedSafeMarkdown')).to.have.lengthOf(0);
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 

@@ -1,8 +1,8 @@
+import {Markdown, extensions} from '@code-dot-org/markdown';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import LessonStandards, {
   ExpandMode,
@@ -21,6 +21,26 @@ export default class RollupLessonEntrySection extends Component {
     objectToRollUp: PropTypes.string,
     lesson: lessonShape,
   };
+
+  /*
+   * The lesson plan's set, minus expandableImages' handler: no image dialog is
+   * mounted on these pages, so an expandable image renders inline rather than
+   * as a trigger that opens nothing.
+   *
+   * Built once per instance, since the vocabulary lookup reads props; Markdown
+   * rebuilds its processor whenever the extension list changes identity.
+   */
+  markdownExtensions = [
+    extensions.expandableImages(),
+    extensions.lenientHeadings,
+    extensions.lenientLinkDestinations,
+    extensions.visualCodeBlock,
+    extensions.vocabularyDefinition({
+      lookup: term => this.props.lesson.vocabularyDefinitions?.[term],
+    }),
+    extensions.inlineStyles,
+    extensions.details,
+  ];
 
   render() {
     let lessonHasResources =
@@ -144,9 +164,10 @@ export default class RollupLessonEntrySection extends Component {
           )}
           {this.props.objectToRollUp === 'Prep' &&
             this.props.lesson.preparation && (
-              <EnhancedSafeMarkdown
-                markdown={this.props.lesson.preparation}
-                expandableImages
+              <Markdown
+                content={this.props.lesson.preparation}
+                extensions={this.markdownExtensions}
+                bodyVariant="body4"
               />
             )}
           {this.props.objectToRollUp === 'Prep' &&

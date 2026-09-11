@@ -1,5 +1,5 @@
 import {Markdown, extensions} from '@code-dot-org/markdown';
-import {Typography} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -10,11 +10,11 @@ import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstan
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {openDialog} from '@cdo/apps/redux/instructionsDialog';
 import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
@@ -49,6 +49,7 @@ class LessonOverview extends Component {
 
     // from redux
     announcements: PropTypes.arrayOf(announcementShape),
+    showImageDialog: PropTypes.func.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
@@ -58,9 +59,8 @@ class LessonOverview extends Component {
   // Built once per instance: Markdown rebuilds its processor whenever the
   // extension list changes identity. The lookup reads current props.
   markdownExtensions = [
-    extensions.expandableImages({
-      onExpand: () => {},
-    }),
+    // No expandableImages: the syntax appears only in activity section
+    // descriptions, which ActivitySection renders.
     extensions.lenientHeadings,
     extensions.lenientLinkDestinations,
     extensions.visualCodeBlock,
@@ -209,7 +209,7 @@ class LessonOverview extends Component {
         <div className={styles.frontPage}>
           <div className={styles.left}>
             {lesson.overview && (
-              <div>
+              <Box sx={{mb: 1}}>
                 <Typography
                   variant="h4"
                   component="h2"
@@ -222,7 +222,7 @@ class LessonOverview extends Component {
                   extensions={this.markdownExtensions}
                   bodyVariant="body4"
                 />
-              </div>
+              </Box>
             )}
             {lesson.purpose && (
               <div>
@@ -241,9 +241,10 @@ class LessonOverview extends Component {
                 <Typography variant="h4" component="h2">
                   {i18n.assessmentOpportunities()}
                 </Typography>
-                <EnhancedSafeMarkdown
-                  markdown={lesson.assessmentOpportunities}
-                  expandableImages
+                <Markdown
+                  content={lesson.assessmentOpportunities}
+                  extensions={this.markdownExtensions}
+                  bodyVariant="body4"
                 />
               </div>
             )}
@@ -307,9 +308,10 @@ class LessonOverview extends Component {
                 <Typography variant="h4" component="h2">
                   {i18n.preparation()}
                 </Typography>
-                <EnhancedSafeMarkdown
-                  markdown={lesson.preparation}
-                  expandableImages
+                <Markdown
+                  content={lesson.preparation}
+                  extensions={this.markdownExtensions}
+                  bodyVariant="body4"
                 />
               </div>
             )}
@@ -403,6 +405,7 @@ class LessonOverview extends Component {
             activity={activity}
             key={activity.key}
             vocabularyDefinitions={lesson.vocabularyDefinitions}
+            onExpandImage={this.props.showImageDialog}
           />
         ))}
         <CopyrightInfo />
@@ -413,10 +416,17 @@ class LessonOverview extends Component {
 
 export const UnconnectedLessonOverview = LessonOverview;
 
-export default connect(state => ({
-  announcements: state.announcements || [],
-  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  viewAs: state.viewAs,
-  isVerifiedInstructor: state.verifiedInstructor.isVerified,
-  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
-}))(LessonOverview);
+export default connect(
+  state => ({
+    announcements: state.announcements || [],
+    isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
+    viewAs: state.viewAs,
+    isVerifiedInstructor: state.verifiedInstructor.isVerified,
+    hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
+  }),
+  dispatch => ({
+    showImageDialog(imgUrl, imgAlt) {
+      dispatch(openDialog({imgOnly: true, imgUrl, imgAlt}));
+    },
+  })
+)(LessonOverview);
