@@ -871,6 +871,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           }
           advanced={advanced}
           pixelated={!!targetProps?.pixelGridSize}
+          // A sheet's resolution is its frame: the image the pane shows.
+          resolution={creating ? undefined : targetProps?.frameSize}
+          pixelGridSize={targetProps?.pixelGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}
