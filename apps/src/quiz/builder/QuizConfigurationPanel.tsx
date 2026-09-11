@@ -105,13 +105,10 @@ const QuizConfigurationPanel: React.FunctionComponent<
   QuizConfigurationPanelProps
 > = ({quizId, initialValues, onSaved}) => {
   // Kept as a string while editing so the field can be genuinely empty
-  // (no time limit) rather than snapping to 0 - converted to a number or
-  // null on save.
+  // (no time limit) rather than snapping to 0 - converted to a number or null on save.
   const [timeLimitMinutes, setTimeLimitMinutes] = useState(
     initialValues.timeLimitMinutes?.toString() || ''
   );
-  // What the field held on focus - compared on blur so a save only fires
-  // when the value actually changed during that focus.
   const [timeLimitMinutesAtFocus, setTimeLimitMinutesAtFocus] =
     useState(timeLimitMinutes);
   const [showCorrectness, setShowCorrectness] = useState(
@@ -177,9 +174,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
     }
     const effectiveShowIntroScreen =
       updatedConfigValues.showIntroScreen ?? showIntroScreen;
-    // Mirrors show_intro_screen_required_when_time_limit - a time limit
-    // with no intro screen means a student could start the timer without
-    // ever being told there is one.
     if (parsedTimeLimitMinutes !== null && !effectiveShowIntroScreen) {
       setError('Show intro screen is required when a time limit is set.');
       return false;
@@ -212,8 +206,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
   };
 
   const handleChoosePurpose = (purposeValue: string) => {
-    // Only reachable while purpose is unset (the chooser only shows then)
-    // - assumed to only happen for a brand-new quiz level.
     const defaults = PURPOSE_DEFAULTS[purposeValue];
     setPurpose(purposeValue);
     setShowIntroScreen(defaults.showIntroScreen);
@@ -255,8 +247,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
     setTimeLimitMinutesAtFocus(timeLimitMinutes);
   };
 
-  // Saves on blur rather than per keystroke, and only when the value
-  // actually changed during this focus.
   const handleTimeLimitBlur = () => {
     if (timeLimitMinutes !== timeLimitMinutesAtFocus) {
       void handleSave(undefined, 'timeLimitMinutes');
@@ -282,9 +272,6 @@ const QuizConfigurationPanel: React.FunctionComponent<
     const checked = e.target.checked;
     const previousReveal = revealAnswerExplanation;
     setShowCorrectness(checked);
-    // Mirrors reveal_answer_explanation_requires_show_correctness - turning
-    // correctness off while explanation reveal is on would otherwise be
-    // silently invalid.
     if (!checked) {
       setRevealAnswerExplanation(false);
     }
