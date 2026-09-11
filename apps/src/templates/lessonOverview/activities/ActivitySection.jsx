@@ -93,7 +93,13 @@ export default class ActivitySection extends Component {
         )}
         <div className="activity-section-text">
           {section.tips.map((tip, index) => {
-            return <LessonTip key={`tip-${index}`} tip={tip} />;
+            return (
+              <LessonTip
+                key={`tip-${index}`}
+                tip={tip}
+                vocabularyDefinitions={this.props.vocabularyDefinitions}
+              />
+            );
           })}
         </div>
       </div>

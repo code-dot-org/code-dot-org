@@ -79,14 +79,19 @@ class ActivitySection < ApplicationRecord
   def summarize_for_lesson_show(can_view_teacher_markdown, current_user, unit_group_unit: nil)
     summary = summarize
     summary[:scriptLevels] = script_levels.map {|sl| sl.summarize_for_lesson_show(can_view_teacher_markdown, current_user, unit_group_unit: unit_group_unit)}
-    # The lesson plan resolves vocabulary references in the description itself,
-    # against Lesson#vocabulary_definitions. Tips still render through the
-    # legacy markdown component, which cannot.
+    # The lesson plan resolves vocabulary references itself, against
+    # Lesson#vocabulary_definitions; resource links are still substituted here.
     summary[:description] = Services::MarkdownPreprocessor.process(summary[:description], resolve_vocab: false)
     summary[:tips]&.each do |tip|
-      tip["markdown"] = Services::MarkdownPreprocessor.process(tip["markdown"])
+      tip["markdown"] = Services::MarkdownPreprocessor.process(tip["markdown"], resolve_vocab: false)
     end
     summary
+  end
+
+  # The markdown this section ships with its vocabulary references intact, for
+  # the client to resolve. See summarize_for_lesson_show.
+  def client_resolved_markdown
+    [localized_description, *localized_tips&.map {|tip| tip["markdown"]}]
   end
 
   def summarize_for_lesson_edit

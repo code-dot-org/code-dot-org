@@ -209,8 +209,10 @@ class Lesson < ApplicationRecord
   #
   # A field belongs here only once *every* surface that renders it can resolve
   # the syntax: `preparation` appears on the course rollup pages as well as the
-  # lesson plan, so both had to migrate before it could join.
-  CLIENT_VOCAB_FIELDS = %w(purpose preparation).freeze
+  # lesson plan, so both had to migrate before it could join. `student_overview`
+  # is absent because it is never preprocessed at all (see
+  # summarize_for_student_lesson_plan).
+  CLIENT_VOCAB_FIELDS = %w(overview purpose preparation assessment_opportunities).freeze
 
   # Returns a version of the named property which is fully ready for
   # user-facing rendering. Currently does localization and markdown
@@ -234,15 +236,16 @@ class Lesson < ApplicationRecord
     end
   end
 
-  # The above plus the references in the activity section descriptions, which
-  # the lesson plan also resolves itself (see
-  # ActivitySection#summarize_for_lesson_show). Separate from
-  # field_vocabulary_definitions because reaching for the sections costs a query
-  # per lesson, which the rollup pages -- a whole unit or course of them at a
-  # time -- would pay for descriptions they never render.
+  # The above plus the references in the activity sections, which the lesson
+  # plan also resolves itself (see ActivitySection#summarize_for_lesson_show).
+  # Separate from field_vocabulary_definitions because reaching for the sections
+  # costs a query per lesson, which the rollup pages -- a whole unit or course of
+  # them at a time -- would pay for content they never render.
   def vocabulary_definitions
     activity_sections.reduce(field_vocabulary_definitions) do |defs, section|
-      Services::MarkdownPreprocessor.collect_vocab_definitions(section.localized_description, defs)
+      section.client_resolved_markdown.reduce(defs) do |markdown_defs, markdown|
+        Services::MarkdownPreprocessor.collect_vocab_definitions(markdown, markdown_defs)
+      end
     end
   end
 
