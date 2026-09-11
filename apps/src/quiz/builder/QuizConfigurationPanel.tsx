@@ -174,17 +174,16 @@ const QuizConfigurationPanel: React.FunctionComponent<
     }
     setSavingField(savingFieldName);
     try {
+      // Only the field(s) this save actually touches are sent.
+      const body: Partial<QuizConfigurableFields> & {
+        purpose?: string | null;
+      } = {...updatedConfigValues};
+      if (savingFieldName === 'timeLimitMinutes') {
+        body.timeLimitMinutes = parsedTimeLimitMinutes;
+      }
       const response = await HttpClient.put(
         `/levels/${quizId}/quiz_configuration`,
-        JSON.stringify({
-          timeLimitMinutes: parsedTimeLimitMinutes,
-          showCorrectness,
-          revealAnswerExplanation,
-          showIntroScreen: effectiveShowIntroScreen,
-          purpose: purpose || null,
-          allowMultipleAttempts,
-          ...updatedConfigValues,
-        }),
+        JSON.stringify(body),
         true,
         {'Content-Type': 'application/json'}
       );

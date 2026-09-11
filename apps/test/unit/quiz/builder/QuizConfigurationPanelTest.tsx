@@ -101,21 +101,17 @@ describe('QuizConfigurationPanel', () => {
     );
   });
 
-  it('saves a toggle change immediately with just that field overridden', async () => {
+  it('saves a toggle change with only that field in the request body', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     const {onSaved} = renderPanel();
 
     fireEvent.click(screen.getByLabelText('Show intro screen'));
 
     await waitFor(() => expect(onSaved).toHaveBeenCalled());
-    expect(lastRequestBody()).toEqual({
-      timeLimitMinutes: null,
-      showCorrectness: true,
-      revealAnswerExplanation: false,
-      showIntroScreen: false,
-      purpose: 'practice',
-      allowMultipleAttempts: true,
-    });
+    // The endpoint is a partial update - an absent key here means the
+    // server leaves that field untouched, which is what lets two saves in
+    // flight for different fields resolve in either order safely.
+    expect(lastRequestBody()).toEqual({showIntroScreen: false});
   });
 
   it('reverts a toggle when its save is rejected by the server', async () => {
@@ -254,6 +250,39 @@ describe('QuizConfigurationPanel', () => {
     expect(toggle.checked).toBe(true);
   });
 
+  it("two saves for different fields in flight at once never carry each other's field, regardless of resolve order", async () => {
+    const resolvers: Array<(response: Response) => void> = [];
+    put.mockImplementation(
+      () =>
+        new Promise(resolve => {
+          resolvers.push(resolve);
+        })
+    );
+    renderPanel();
+
+    fireEvent.click(screen.getByLabelText('Show intro screen'));
+    fireEvent.click(screen.getByLabelText('Allow multiple attempts'));
+
+    expect(put).toHaveBeenCalledTimes(2);
+    const bodies = put.mock.calls.map(call => JSON.parse(call[1] as string));
+    // Neither request's body mentions the field the other one is saving -
+    // an absent key leaves that field untouched server-side, so resolving
+    // out of order below can't let one clobber the other.
+    expect(bodies[0]).toEqual({showIntroScreen: false});
+    expect(bodies[1]).toEqual({allowMultipleAttempts: false});
+
+    // Resolve the second (later) request before the first, to simulate a
+    // network reordering - neither save touches the other's field, so this
+    // ordering can't overwrite anything.
+    resolvers[1](jsonResponse(INITIAL_VALUES));
+    resolvers[0](jsonResponse(INITIAL_VALUES));
+    await waitFor(() =>
+      expect(
+        screen.getByLabelText('Allow multiple attempts')
+      ).not.toBeDisabled()
+    );
+  });
+
   it('turning off show correctness also clears reveal answer/explanation in the same request', async () => {
     put.mockResolvedValue(jsonResponse(INITIAL_VALUES));
     renderPanel({
@@ -352,14 +381,10 @@ describe('QuizConfigurationPanel', () => {
     });
 
     await waitFor(() => expect(put).toHaveBeenCalled());
-    // Only purpose is in the request body's overrides - the other fields
-    // reflect INITIAL_VALUES untouched, not exam's defaults.
-    expect(lastRequestBody()).toMatchObject({
-      purpose: 'exam',
-      showIntroScreen: INITIAL_VALUES.showIntroScreen,
-      allowMultipleAttempts: INITIAL_VALUES.allowMultipleAttempts,
-      showCorrectness: INITIAL_VALUES.showCorrectness,
-    });
+    // Only purpose is sent - an absent key leaves that field untouched
+    // server-side, so the other fields are never even part of this
+    // request, let alone overridden with exam's defaults.
+    expect(lastRequestBody()).toEqual({purpose: 'exam'});
     expect(
       (screen.getByLabelText('Show intro screen') as HTMLInputElement).checked
     ).toBe(INITIAL_VALUES.showIntroScreen);
