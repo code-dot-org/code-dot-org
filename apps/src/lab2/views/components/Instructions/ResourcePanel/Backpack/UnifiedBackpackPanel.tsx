@@ -228,6 +228,20 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
 
   const fileNames = useMemo(() => files.map(({fileName}) => fileName), [files]);
 
+  const handleSaveToBackpackClick = useCallback(async () => {
+    if (!saveToBackpackButton) {
+      return;
+    }
+    setActionInProgress(true);
+    try {
+      await saveToBackpackButton.onClick(fileNames, (error: string) =>
+        addAlert('danger', error, false)
+      );
+    } finally {
+      setActionInProgress(false);
+    }
+  }, [saveToBackpackButton, fileNames, addAlert]);
+
   const visibleFiles = useMemo(() => {
     const matchingFiles =
       selectedCategoryId === ALL_FILES_CATEGORY_ID
@@ -378,11 +392,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           size="small"
           className={moduleStyles.saveButton}
           disabled={actionInProgress || viewingOldVersion}
-          onClick={() =>
-            saveToBackpackButton.onClick(fileNames, (error: string) =>
-              addAlert('danger', error, false)
-            )
-          }
+          onClick={handleSaveToBackpackClick}
           type="button"
         >
           {saveToBackpackButton.text}

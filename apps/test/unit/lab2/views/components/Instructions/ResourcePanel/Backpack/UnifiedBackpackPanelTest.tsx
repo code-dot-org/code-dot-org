@@ -1,4 +1,4 @@
-import {render, screen, waitFor} from '@testing-library/react';
+import {act, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -115,6 +115,28 @@ describe('UnifiedBackpackPanel', () => {
 
     await screen.findByText('Your Backpack is empty');
     expect(saveButton()).toBeDisabled();
+  });
+
+  it('disables the save button until the save finishes', async () => {
+    const user = userEvent.setup();
+    let finishSave = () => {};
+    onClick.mockImplementation(
+      () =>
+        new Promise<void>(resolve => {
+          finishSave = resolve;
+        })
+    );
+    renderPanel();
+
+    await waitFor(() => expect(saveButton()).toBeEnabled());
+    await user.click(saveButton());
+    expect(saveButton()).toBeDisabled();
+
+    await act(async () => {
+      finishSave();
+    });
+    expect(saveButton()).toBeEnabled();
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 
   it('renders no save button when the lab supplies none', async () => {

@@ -99,6 +99,9 @@ export const handleSaveToBackpack = async (
       : {[backpackApi.appType]: backpackFileList};
   } catch (error) {
     errorCallback('Could not read your Backpack. Please try again.');
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Backpack file list fetch error', error as Error);
     return;
   }
   const existingFilenames = Object.values(filenamesByAppType).flat();
