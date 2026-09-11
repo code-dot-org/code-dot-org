@@ -15,13 +15,11 @@ import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
@@ -225,7 +223,7 @@ class LessonOverview extends Component {
               </Box>
             )}
             {lesson.purpose && (
-              <div>
+              <Box sx={{mb: 1}}>
                 <Typography variant="h4" component="h2">
                   {i18n.purpose()}
                 </Typography>
@@ -234,19 +232,20 @@ class LessonOverview extends Component {
                   extensions={this.markdownExtensions}
                   bodyVariant="body4"
                 />
-              </div>
+              </Box>
             )}
             {lesson.assessmentOpportunities && (
-              <div>
+              <Box sx={{mb: 1}}>
                 <Typography variant="h4" component="h2">
                   {i18n.assessmentOpportunities()}
                 </Typography>
                 <Markdown
                   content={lesson.assessmentOpportunities}
+                  className={styles.assessmentList}
                   extensions={this.markdownExtensions}
                   bodyVariant="body4"
                 />
-              </div>
+              </Box>
             )}
             {lesson.standards.length > 0 && (
               <div>
@@ -297,7 +296,7 @@ class LessonOverview extends Component {
                 <ul>
                   {lesson.objectives.map(objective => (
                     <li key={objective.id}>
-                      <InlineMarkdown markdown={objective.description} />
+                      <Markdown inline content={objective.description} />
                     </li>
                   ))}
                 </ul>
@@ -321,7 +320,7 @@ class LessonOverview extends Component {
                   {i18n.links()}
                 </Typography>
                 <div className={styles.copyResourceWarningArea}>
-                  <SafeMarkdown markdown={i18n.copyResourcesWarning()} />
+                  <Markdown inline content={i18n.copyResourcesWarning()} />
                 </div>
                 {lesson.resources['Teacher'] && (
                   <div>
@@ -371,8 +370,9 @@ class LessonOverview extends Component {
                 <ul>
                   {lesson.vocabularies.map(vocab => (
                     <li key={vocab.key}>
-                      <InlineMarkdown
-                        markdown={`**${vocab.word}** - ${vocab.definition}`}
+                      <Markdown
+                        inline
+                        content={`**${vocab.word}** - ${vocab.definition}`}
                       />
                     </li>
                   ))}

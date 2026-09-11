@@ -165,28 +165,40 @@ describe('LessonOverview', () => {
     expect(wrapper.contains('Lesson One Title'), 'Lesson Title').to.be.true;
     expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
-    // Every lesson-level field now renders through the new markdown component.
-    const markdowns = wrapper.find(Markdown);
-    expect(markdowns.at(0).props().content).to.contain('Lesson Overview');
-    expect(markdowns.at(1).props().content).to.contain(
-      'The purpose of the lesson is for people to learn'
-    );
-    expect(markdowns.at(2).props().content).to.contain(
-      'Assessment Opportunities Details'
-    );
-    expect(markdowns.at(3).props().content).to.contain('- One');
+    // Everything on this page renders through the new markdown component now.
+    // Matched by content rather than position, so adding a field or reordering
+    // the page does not rewrite the assertions.
+    const contents = wrapper.find(Markdown).map(m => m.props().content);
+    const rendersMarkdown = expected =>
+      contents.some(content => content.includes(expected));
+
+    expect(rendersMarkdown('Lesson Overview'), 'overview').to.be.true;
+    expect(
+      rendersMarkdown('The purpose of the lesson is for people to learn'),
+      'purpose'
+    ).to.be.true;
+    expect(
+      rendersMarkdown('Assessment Opportunities Details'),
+      'assessment opportunities'
+    ).to.be.true;
+    expect(rendersMarkdown('- One'), 'preparation').to.be.true;
+    expect(rendersMarkdown('what students will learn'), 'objective').to.be.true;
+    expect(
+      rendersMarkdown('**Algorithm** - A list of steps to finish a task.'),
+      'vocabulary'
+    ).to.be.true;
+
+    // The legacy renderers are gone from this page.
     expect(wrapper.find('EnhancedSafeMarkdown')).to.have.lengthOf(0);
+    expect(wrapper.find('InlineMarkdown')).to.have.lengthOf(0);
+    expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
 
-    const inlineMarkdowns = wrapper.find('InlineMarkdown');
-
-    // The first contains the objective
-    expect(inlineMarkdowns.at(0).props().markdown).to.contain(
-      'what students will learn'
-    );
-    // The second contains the vocabulary
-    expect(inlineMarkdowns.at(1).props().markdown).to.contain(
-      '**Algorithm** - A list of steps to finish a task.'
-    );
+    // The one-liners that sit inside a sentence or a list item render inline.
+    const inlineContents = wrapper
+      .find(Markdown)
+      .filterWhere(m => m.props().inline)
+      .map(m => m.props().content);
+    expect(inlineContents).to.have.lengthOf(3);
 
     expect(wrapper.find('LessonAgenda').length).to.equal(1);
 
