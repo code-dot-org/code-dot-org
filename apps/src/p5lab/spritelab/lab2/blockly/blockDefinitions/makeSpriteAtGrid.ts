@@ -1,6 +1,7 @@
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import {noteImageFieldValue} from '../../imageReferences';
 import {FIELD_GRID_SINGLE_TYPE} from '../gridFields';
 import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
@@ -20,8 +21,9 @@ const definition: BlockJson = {
 };
 
 const generator: GeneratorFunction = block =>
-  `makeSpriteAtGrid(${block.getFieldValue('ANIMATION_NAME')}, ` +
-  `${JSON.stringify(block.getFieldValue('GRID'))});\n`;
+  `makeSpriteAtGrid(${noteImageFieldValue(
+    block.getFieldValue('ANIMATION_NAME')
+  )}, ` + `${JSON.stringify(block.getFieldValue('GRID'))});\n`;
 
 // Plain placement on the same 8x8 grid the platform blocks use — no group, no
 // controls; just makeNewSpriteAnon at the marked cell's center.

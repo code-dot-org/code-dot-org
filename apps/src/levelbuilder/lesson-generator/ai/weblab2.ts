@@ -3,7 +3,10 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -17,6 +20,7 @@ import {
   filesToMultiFileSource,
   generateCodebridgeExemplar,
   SourceFile,
+  suppliedCodeLines,
 } from './codebridge';
 
 const weblabPlanSchema = Output.object({
@@ -81,6 +85,8 @@ export async function generateWeblab2Level(
     '     for them. Express subfolders as a `/` in the file name (e.g.',
     '     "css/style.css"). Honor any explicit file count or layout the',
     '     description specifies.',
+    ...authoringRulesLines(ctx),
+    ...suppliedCodeLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',
@@ -178,6 +184,7 @@ const weblabTemplateSchema = Output.object({
 export interface TemplateMember {
   name: string;
   description: string;
+  suppliedCode?: string;
 }
 
 // Sees every member's description; produces files that all members
@@ -195,7 +202,18 @@ export async function generateWeblab2Template(
   files: SourceFile[];
 }> {
   const memberList = ctx.members
-    .map((m, i) => `  ${i + 1}. ${m.name}: ${m.description}`)
+    .map((m, i) =>
+      [
+        `  ${i + 1}. ${m.name}: ${m.description}`,
+        ...(m.suppliedCode
+          ? [
+              '     Code the author supplied for this member; include it',
+              '     verbatim in the shared files it belongs to:',
+              m.suppliedCode,
+            ]
+          : []),
+      ].join('\n')
+    )
     .join('\n');
   const prompt = [
     'You are writing the SHARED STARTER FILES for a group of Web Lab 2',
@@ -216,6 +234,7 @@ export async function generateWeblab2Template(
     '',
     'Members in this group:',
     memberList,
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',
@@ -292,6 +311,16 @@ export async function generateWeblab2TemplateBackedLevel(
     'bare content (no `TODO:` prefix on the bullet). Name the files the',
     'student touches and the moves they make. Do NOT write polished prose;',
     'the curriculum author writes that later. No other headings.',
+    ...authoringRulesLines(ctx),
+    ...(ctx.suppliedCode
+      ? [
+          '',
+          'Code the author supplied for this level. It is already in the',
+          'shared template above; write the instructions around it rather',
+          'than asking the student to retype it:',
+          ctx.suppliedCode,
+        ]
+      : []),
     '',
     "Shared template files (already open in the student's editor):",
     templateListing,
