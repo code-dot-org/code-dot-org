@@ -213,6 +213,16 @@ class Lesson < ApplicationRecord
     return result
   end
 
+  # Returns the word and definition named by each vocabulary reference in this
+  # lesson's activity section descriptions, keyed by the reference. Those are
+  # the only fields whose references reach the client unsubstituted; see
+  # ActivitySection#summarize_for_lesson_show.
+  def vocabulary_definitions
+    activity_sections.reduce({}) do |definitions, section|
+      Services::MarkdownPreprocessor.collect_vocab_definitions(section.localized_description, definitions)
+    end
+  end
+
   # If there is a script_level, build_script_level_path will provide the correct url,
   # even if it's a lockable lesson. Otherwise, we give the url to the student resources
   # page, and the lesson plan pdf as a backup.
@@ -588,6 +598,7 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user, unit_group_unit: unit_group_unit)},
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      vocabularyDefinitions: vocabulary_definitions,
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),

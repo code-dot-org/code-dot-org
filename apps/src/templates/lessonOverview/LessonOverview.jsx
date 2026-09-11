@@ -1,3 +1,4 @@
+import {Markdown, extensions} from '@code-dot-org/markdown';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -40,6 +41,17 @@ const ResourceActions = {
 };
 
 const WINDOW_PRINT = 'windowPrint';
+
+const markdownExtensions = [
+  extensions.expandableImages({
+    onExpand: () => {},
+  }),
+  extensions.lenientHeadings,
+  extensions.lenientLinkDestinations,
+  extensions.visualCodeBlock,
+  extensions.inlineStyles,
+  extensions.details,
+];
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -200,9 +212,10 @@ class LessonOverview extends Component {
                 >
                   {i18n.overview()}
                 </Typography>
-                <EnhancedSafeMarkdown
-                  markdown={lesson.overview}
-                  expandableImages
+                <Markdown
+                  content={lesson.overview}
+                  extensions={markdownExtensions}
+                  bodyVariant="body3"
                 />
               </div>
             )}
@@ -380,7 +393,11 @@ class LessonOverview extends Component {
         </div>
         <Typography variant="h2">{i18n.teachingGuide()}</Typography>
         {this.props.activities.map(activity => (
-          <Activity activity={activity} key={activity.key} />
+          <Activity
+            activity={activity}
+            key={activity.key}
+            vocabularyDefinitions={lesson.vocabularyDefinitions}
+          />
         ))}
         <CopyrightInfo />
       </div>

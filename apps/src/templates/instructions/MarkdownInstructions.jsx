@@ -42,6 +42,7 @@ class MarkdownInstructions extends React.Component {
         className: moduleStyles.expandableImage,
       }),
       extensions.lenientHeadings,
+      extensions.lenientLinkDestinations,
       extensions.visualCodeBlock,
       extensions.inlineStyles,
       extensions.details,

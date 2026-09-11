@@ -1,3 +1,4 @@
+import {Markdown} from '@code-dot-org/markdown';
 import {Typography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
@@ -129,17 +130,19 @@ describe('LessonOverview', () => {
     expect(wrapper.contains('Lesson One Title'), 'Lesson Title').to.be.true;
     expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
-    const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
-    expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
+    // The overview has migrated to the new markdown component; the rest have not.
+    expect(wrapper.find(Markdown).at(0).props().content).to.contain(
       'Lesson Overview'
     );
-    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain(
+
+    const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
+    expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
       'The purpose of the lesson is for people to learn'
     );
-    expect(enhancedSafeMarkdowns.at(2).props().markdown).to.contain(
+    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain(
       'Assessment Opportunities Details'
     );
-    expect(enhancedSafeMarkdowns.at(3).props().markdown).to.contain('- One');
+    expect(enhancedSafeMarkdowns.at(2).props().markdown).to.contain('- One');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 

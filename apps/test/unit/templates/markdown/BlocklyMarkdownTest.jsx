@@ -28,6 +28,7 @@ import BlocklyMarkdown from '@cdo/apps/templates/markdown/BlocklyMarkdown';
 const instructionExtensions = [
   extensions.expandableImages({onExpand: () => {}}),
   extensions.lenientHeadings,
+  extensions.lenientLinkDestinations,
   extensions.visualCodeBlock,
   extensions.inlineStyles,
   extensions.details,
@@ -143,6 +144,18 @@ describe('BlocklyMarkdown', () => {
       expect(
         screen.getByRole('img', {name: 'a napkin'}).getAttribute('src')
       ).toBe('https://images.code.org/x.png');
+    });
+
+    it('renders an image whose uploaded filename contains spaces', () => {
+      // 2379 level instructions reference images.code.org assets this way; the
+      // legacy renderer encoded the spaces, CommonMark does not.
+      renderInstructions(
+        '![a napkin](https://images.code.org/abc-image 1.30.17 PM.png)'
+      );
+
+      expect(
+        screen.getByRole('img', {name: 'a napkin'}).getAttribute('src')
+      ).toBe('https://images.code.org/abc-image%201.30.17%20PM.png');
     });
 
     it('renders an "expandable" image as an expand button', () => {
