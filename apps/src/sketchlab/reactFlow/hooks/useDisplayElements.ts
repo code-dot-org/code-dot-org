@@ -8,7 +8,7 @@ import type {
 
 import {LINE_INTERACTION_WIDTH_PX} from '../constants';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {getEdgeLabel, getNodeLabel} from '../utils/elementLabel';
+import {getEdgeLabel} from '../utils/elementLabel';
 import {getLockedLineAnchorIds, isGroupedChildNode} from '../utils/grouping';
 
 import styles from '../components/react-flow-canvas.module.scss';
@@ -61,18 +61,29 @@ export function useDisplayElements({
     };
 
     // Overrides React Flow's hardcoded aria-roledescription="node".
-    const roleDescription = (type?: string) => {
-      switch (type) {
-        case 'text':
-          return 'text';
-        case 'image':
-          return 'image';
-        case 'group':
-          return 'group';
+    const roleDescription = (node: SketchlabReactFlowNode) => {
+      switch (node.type) {
+        case 'shape':
+          return node.data.shapeType;
         case 'lineAnchor':
           return 'line endpoint';
         default:
-          return 'shape';
+          return node.type;
+      }
+    };
+
+    // Announced right after the role description, so it carries content only.
+    // Elements with no content of their own go unnamed.
+    const accessibleName = (node: SketchlabReactFlowNode) => {
+      switch (node.type) {
+        case 'shape':
+          return node.data.label?.trim() || undefined;
+        case 'text':
+          return node.data.text?.trim() || 'empty';
+        case 'image':
+          return node.data.altText?.trim() || 'no description';
+        default:
+          return undefined;
       }
     };
 
@@ -130,19 +141,16 @@ export function useDisplayElements({
           // Nodes are still connectable when locked, but not in read-only or grab mode
           connectable: !readOnly && !grabMode,
           // React Flow names the wrapper from node.ariaLabel, with no fallback.
-          ariaLabel:
-            node.type === 'lineAnchor'
-              ? 'Line endpoint'
-              : locked
-              ? `${getNodeLabel(node)}, locked`
-              : getNodeLabel(node),
+          ariaLabel: [accessibleName(node), locked ? 'locked' : undefined]
+            .filter(Boolean)
+            .join(', '),
           className: classNames(
             isConnectSource && styles.connectSource,
             isAnchorForFocusedEdge && styles.lineAnchorOnFocusedEdge
           ),
           domAttributes: {
             ...domAttributes,
-            'aria-roledescription': roleDescription(node.type),
+            'aria-roledescription': roleDescription(node),
             ...(isConnectSource && {'aria-selected': true}),
           },
         };

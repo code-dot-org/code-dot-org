@@ -10,15 +10,16 @@ import {isAnchorEndpoint} from './connectionRules';
  */
 export function getNodeLabel(node: SketchlabReactFlowNode): string {
   if (node.type === 'shape') {
-    return node.data.label
-      ? `${node.data.shapeType} with label ${node.data.label}`
+    const label = node.data.label?.trim();
+    return label
+      ? `${node.data.shapeType} with label ${label}`
       : node.data.shapeType;
   }
-  if (node.type === 'text' && node.data.text) {
-    return node.data.text;
+  if (node.type === 'text' && node.data.text?.trim()) {
+    return node.data.text.trim();
   }
   if (node.type === 'image') {
-    return node.data.altText || 'image';
+    return node.data.altText?.trim() || 'image';
   }
   // lineAnchor is an internal implementation detail; callers that need a
   // user-facing description should check for this type before calling.
