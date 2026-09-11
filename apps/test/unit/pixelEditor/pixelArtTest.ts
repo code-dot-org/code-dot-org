@@ -157,6 +157,24 @@ describe('pixelArt', () => {
     }
   });
 
+  it('reports a fractional pitch, not its half-pitch subharmonic', () => {
+    // Every edge of a 10.3px lattice also lies on a 5.15px lattice, and a
+    // scan stepping too coarsely at larger sizes lands nearer the half than
+    // the truth. Real case: backgrounds painted at ~10.24px (100 logical in
+    // a 1K output) detected as 200x200.
+    const pitch = 10.3;
+    const raster = rasterFrom(512, 512, (x, y) => {
+      const lx = Math.floor(x / pitch);
+      const ly = Math.floor(y / pitch);
+      return PALETTE[(lx + ly * 2) % 3];
+    });
+    const grid = detectPixelGrid(raster);
+    expect(grid).not.toBeNull();
+    expect(grid!.sizeX).toBeCloseTo(pitch, 1);
+    expect(grid!.sizeY).toBeCloseTo(pitch, 1);
+    expect(downsampleToGrid(raster, grid!).width).toBe(50); // ceil(512 / 10.3)
+  });
+
   it('downsamples to the logical resolution and round-trips values', () => {
     const logical = samplePattern();
     const raster = blockyRaster(logical, 12);

@@ -114,13 +114,20 @@ function detectAxis(
  * Fractional-pitch scan: a model often paints a perfectly uniform grid at
  * a non-integer pitch (12.5px at 1024 output; 6.25px after the character
  * strip's half downscale), and against the integer scan the fractional
- * remainder accumulates as drift until no size aligns. Candidate periods
- * step finely enough that the drift across the axis stays under the edge
- * tolerance; per period, the lattice phase is the circular mean of the
- * edge angles (one pass over the edges — no offset loop), then the same
- * lift-over-chance score and bar as the integer scan. Subharmonics are as
- * phase-coherent as the true pitch but sit on a higher chance floor, so
- * lift discounts them; exact ties still go to the coarser grid.
+ * remainder accumulates as drift until no size aligns.
+ *
+ * Two stages. A coarse pass measures phase coherence (vector strength of
+ * the edge angles) per candidate period — one pass over the edges, no
+ * offset loop — at steps matched to coherence's own peak width (~p²/2L).
+ * Each local coherence maximum is then refined with the aligned-lift score
+ * at steps fine enough that far-lattice-line drift stays inside the edge
+ * tolerance (p/2L; alignment peaks are that much narrower than coherence
+ * peaks, which is why the coarse pass can't score directly — a true 10.2px
+ * pitch falls between coarse candidates while its exact half sits on one,
+ * and the half wins by default). A subharmonic (p/2) of the true pitch is
+ * exactly as coherent and aligns exactly the same edges, but from a higher
+ * chance floor, so once both peaks are refined, lift picks the true pitch;
+ * remaining exact ties go to the coarser grid.
  */
 function detectAxisFractional(
   hist: number[]
@@ -139,14 +146,23 @@ function detectAxisFractional(
     return null;
   }
   const length = hist.length;
-  let best: {size: number; offset: number; score: number} | null = null;
-  for (
-    let size = MIN_BLOCK;
-    size <= MAX_BLOCK;
-    // Between-candidates drift across the whole axis stays under half the
-    // edge tolerance: (length / size) lattice lines, each moving by step.
-    size += Math.max(0.02, (EDGE_TOLERANCE * size * size) / (2 * length))
-  ) {
+
+  const coherence = (size: number): number => {
+    let sumSin = 0;
+    let sumCos = 0;
+    for (let e = 0; e < edgePositions.length; e++) {
+      const a = (2 * Math.PI * edgePositions[e]) / size;
+      sumSin += edgeWeights[e] * Math.sin(a);
+      sumCos += edgeWeights[e] * Math.cos(a);
+    }
+    return Math.hypot(sumSin, sumCos) / total;
+  };
+
+  // Offset from the circular mean of the edge angles, then the integer
+  // scan's own lift-over-chance score at that offset.
+  const scoreAt = (
+    size: number
+  ): {size: number; offset: number; score: number} => {
     let sumSin = 0;
     let sumCos = 0;
     for (let e = 0; e < edgePositions.length; e++) {
@@ -167,12 +183,59 @@ function detectAxisFractional(
     const raw = aligned / total;
     const chance = Math.min(1, (2 * EDGE_TOLERANCE + 1) / size);
     const score = chance >= 1 ? 0 : (raw - chance) / (1 - chance);
+    return {size, offset, score};
+  };
+
+  // Stage 1: coherence over the whole range.
+  const sizes: number[] = [];
+  const strengths: number[] = [];
+  for (
+    let size = MIN_BLOCK;
+    size <= MAX_BLOCK;
+    size += Math.max(0.02, (size * size) / (2 * length))
+  ) {
+    sizes.push(size);
+    strengths.push(coherence(size));
+  }
+
+  // Stage 2: refine the strongest local coherence maxima (plateau edges
+  // count). A real lattice yields a handful of peaks (the pitch and its
+  // subharmonics); a gridless image yields many equal noise wiggles, so the
+  // cap bounds the work exactly where detection is going to fail anyway.
+  const MAX_BASINS = 8;
+  const maxima: number[] = [];
+  for (let i = 0; i < sizes.length; i++) {
     if (
-      !best ||
-      score > best.score ||
-      (score >= best.score && size > best.size)
+      (i > 0 && strengths[i] < strengths[i - 1]) ||
+      (i < sizes.length - 1 && strengths[i] < strengths[i + 1])
     ) {
-      best = {size, offset, score};
+      continue;
+    }
+    maxima.push(i);
+  }
+  // Subharmonics of one lattice score near-equal coherence; the coarser
+  // pitch (higher, from less phase smear) must survive the cap.
+  maxima.sort((a, b) => strengths[b] - strengths[a] || sizes[b] - sizes[a]);
+  let best: {size: number; offset: number; score: number} | null = null;
+  for (const i of maxima.slice(0, MAX_BASINS)) {
+    const halfWindow = Math.max(0.02, (sizes[i] * sizes[i]) / (2 * length));
+    const fineStep = Math.max(
+      0.002,
+      (EDGE_TOLERANCE * sizes[i]) / (2 * length)
+    );
+    for (
+      let size = Math.max(MIN_BLOCK, sizes[i] - halfWindow);
+      size <= Math.min(MAX_BLOCK, sizes[i] + halfWindow);
+      size += fineStep
+    ) {
+      const candidate = scoreAt(size);
+      if (
+        !best ||
+        candidate.score > best.score ||
+        (candidate.score >= best.score && candidate.size > best.size)
+      ) {
+        best = candidate;
+      }
     }
   }
   return best && best.score >= MIN_CONFIDENCE ? best : null;
