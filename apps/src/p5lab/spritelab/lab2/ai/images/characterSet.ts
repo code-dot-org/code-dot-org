@@ -102,7 +102,7 @@ export function basePrompt(
     'and body point toward the right side of the image. Arms hanging ' +
     'relaxed at the sides, hands open and empty. Feet near the bottom of ' +
     'the image, nothing cut off. ' +
-    `${ONLY_THIS_CHARACTER} ${styleClause(style)} ${keyClause(key)}`
+    `${ONLY_THIS_CHARACTER} ${styleClause(style, 'sprite')} ${keyClause(key)}`
   );
 }
 
@@ -124,7 +124,7 @@ export function posePrompt(
     'provided image: the same design, colors, proportions, outfit and art ' +
     'style, facing right, and the character at exactly the same size and ' +
     'position in the frame. ' +
-    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style)}`
+    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style, 'sprite')}`
   );
 }
 

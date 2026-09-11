@@ -24,27 +24,28 @@ import {
   flattenOntoGround,
   removeBackground,
 } from './removeBackground';
-import {ImageGenerationMetadata, ImageStyle} from './types';
+import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
-// The logical canvas the prompt asks for: model output size over block size.
-const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
+const SMOOTH_PROMPT = 'Render as a smooth, cleanly-shaded illustration.';
 
 // Tacked onto the prompt so the generated image matches the chosen style.
 // Kept here (not inline) so the sprite and background prompts stay in sync.
 // The pixel prompt requests the same block size detection falls back to
-// (ASSUMED_BLOCK), so an undetectable grid still matches what was asked for.
-const STYLE_PROMPT: Record<ImageStyle, string> = {
-  pixel:
+// (ASSUMED_BLOCK, per type), so an undetectable grid still matches what was
+// asked for.
+export function styleClause(style: ImageStyle, imageType: ImageType): string {
+  if (style !== 'pixel') {
+    return SMOOTH_PROMPT;
+  }
+  const block = ASSUMED_BLOCK[imageType];
+  const logical = MODEL_OUTPUT_PX / block;
+  return (
     'Render as crisp pixel art with a small, limited color palette and ' +
     'hard-edged pixels — no anti-aliasing, gradients, or soft shading. ' +
-    `Draw on a strict ${PROMPT_LOGICAL_GRID}x${PROMPT_LOGICAL_GRID} pixel ` +
-    `grid: every logical pixel is a uniform ${ASSUMED_BLOCK}x` +
-    `${ASSUMED_BLOCK} block, perfectly aligned to the image edges.`,
-  smooth: 'Render as a smooth, cleanly-shaded illustration.',
-};
-
-export function styleClause(style: ImageStyle): string {
-  return STYLE_PROMPT[style];
+    `Draw on a strict ${logical}x${logical} pixel grid: every logical ` +
+    `pixel is a uniform ${block}x${block} block, perfectly aligned to the ` +
+    'image edges.'
+  );
 }
 
 // Asks for the flat key color a costume is keyed out against afterwards
@@ -69,15 +70,18 @@ const BLOCK_PROMPT_CLAUSE =
  */
 async function normalizeIfPixelArt(
   blob: Blob,
-  {squareGrid = false} = {}
+  imageType: ImageType
 ): Promise<{blob: Blob; pixelGridSize?: number}> {
+  const squareGrid = imageType === 'background';
   try {
     // A background must stay square and full-frame (it letterboxes over the
     // stage otherwise), so its grid is pinned square to the frame instead of
     // following a detected offset.
-    const normalized = await normalizePixelArtBlob(blob, ASSUMED_BLOCK, {
-      squareGrid,
-    });
+    const normalized = await normalizePixelArtBlob(
+      blob,
+      ASSUMED_BLOCK[imageType],
+      {squareGrid}
+    );
     if (
       !normalized ||
       (squareGrid && normalized.logicalWidth !== normalized.logicalHeight)
@@ -246,7 +250,7 @@ export async function generateImage(
   // Always choose the seed ourselves: the service doesn't report the one it
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
-  let fullPrompt = `${prompt}. ${styleClause(style)}`;
+  let fullPrompt = `${prompt}. ${styleClause(style, imageType)}`;
   if (imageType === 'sprite') {
     fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
   } else if (imageType === 'block') {
@@ -330,9 +334,7 @@ export async function generateImage(
   }
   let pixelGridSize: number | undefined;
   if (style === 'pixel') {
-    const normalized = await normalizeIfPixelArt(blob, {
-      squareGrid: imageType === 'background',
-    });
+    const normalized = await normalizeIfPixelArt(blob, imageType);
     blob = normalized.blob;
     pixelGridSize = normalized.pixelGridSize;
   } else {

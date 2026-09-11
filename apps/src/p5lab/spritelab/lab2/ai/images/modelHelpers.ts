@@ -56,7 +56,16 @@ export function imageProviderOptions(imageSize: ImageSize) {
 // detection falls back to the same value — what we ask for and what we
 // assume can't drift apart.
 export const MODEL_OUTPUT_PX = 1024;
-export const ASSUMED_BLOCK = 16;
+// Per image type: sprites and blocks read best chunky (64x64 logical), but a
+// background carries a whole scene, so it gets a finer grid (128x128).
+// Halving again (256x256 = 4px blocks) would sit AT detection's 4px floor,
+// and the model tends to paint finer than asked — 128 is as fine as the
+// pipeline can hold.
+export const ASSUMED_BLOCK: Record<ImageType, number> = {
+  sprite: 16,
+  block: 16,
+  background: 8,
+};
 
 // Stored ceilings for smooth-style images: generation downscales the model's
 // 1K output once at save, and the blank paint canvas opens at the same size
