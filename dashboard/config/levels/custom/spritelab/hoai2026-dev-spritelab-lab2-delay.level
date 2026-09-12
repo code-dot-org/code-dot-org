@@ -30,7 +30,7 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Say something else, a moment later.** Drag out **at time [3] seconds** and put a **say** block inside it. Press **Play** and your character speaks right on cue."
+        "text": "**Say something else, a moment later.** Drag out **at [3] seconds** and put a **say** block inside it. Press **Play** and your character speaks right on cue."
       },
       {
         "text": "**Perfect timing!** Watch your story unfold, then continue when you're ready.",
@@ -40,7 +40,7 @@
         }
       }
     ],
-    "long_instructions": "# Say something on a delay\nDrag out **at time [3] seconds** and put a **say** block inside it. Your character will speak right on cue.",
+    "long_instructions": "# Say something on a delay\nDrag out **at [3] seconds** and put a **say** block inside it. Your character will speak right on cue.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
