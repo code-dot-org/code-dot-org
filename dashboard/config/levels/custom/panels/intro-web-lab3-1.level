@@ -1,0 +1,55 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-16T16:17:04.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "Every website you've ever visited started as an idea in someone's head.\nBefore the code. Before the colors. Before the first click.\nIt started with a vision.",
+        "imageUrl": "https://images.code.org/a6ec4e20446c3533a814af15c996a8f4-level1panel1.png",
+        "key": "intro-web-lab3-1-panel-1",
+        "layout": "text-top-left",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Being a web designer means being someone with a vision. It's about knowing what you want to build - and then figuring out how to turn that idea into something real.",
+        "imageUrl": "https://images.code.org/ef2e67875289fa3ac4d3071bac30f9a8-image-1775500568464.png",
+        "key": "intro-web-lab3-1-panel-2",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "In this lesson, your collaborator is an AI. You'll describe your vision. It'll make a first attempt. And then the real work begins: your job is to look at the result and decide \"is this what I wanted?\"",
+        "imageUrl": "https://images.code.org/a4c6e3916083cf9e68d07401b846102f-level1panel3.png",
+        "key": "intro-web-lab3-1-panel-3",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "You'll learn about code as you go - but that's not where you start. You start with a vision. Something you want to make, for someone who might need it. Just like every designer does.",
+        "imageUrl": "https://images.code.org/296f45ede7f2cf3a4fe9420626f5b2a7-level1panel4.png",
+        "key": "intro-web-lab3-1-panel-4",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "Take a minute to think of your vision and what you want to create. Ready? Let's build something.",
+        "imageUrl": "https://images.code.org/b1f8332cd8a3bf3a078eec9b52e15f45-level1panel5.png",
+        "key": "intro-web-lab3-1-panel-5",
+        "typing": true,
+        "fadeInOverPrevious": true
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"hoai-web-design-v2-1_pilot2_launch\\\" for intro-to-web-lab3\"], \"cloned_from\": \"hoai-web-design-v2-1_pilot2_launch\"}]"
+}]]></config>
+</Panels>
