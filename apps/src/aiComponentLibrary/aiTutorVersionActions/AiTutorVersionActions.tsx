@@ -1,6 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import {
+  Button as MuiButton,
+  IconButton as MuiIconButton,
+  Tooltip,
+} from '@mui/material';
 import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -234,14 +237,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             >
               Save
             </MuiButton>
-            <WithTooltip
-              tooltipProps={{
-                text: 'Reject AI Changes',
-                size: 's',
-                tooltipId: 'secondary-reject-ai-tutor-version-tooltip',
-                direction: 'onBottom',
-              }}
-            >
+            <Tooltip title="Reject AI Changes" placement="bottom">
               <MuiIconButton
                 variant="outlined"
                 color="tertiary"
@@ -252,7 +248,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
               >
                 <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
               </MuiIconButton>
-            </WithTooltip>
+            </Tooltip>
           </div>
         </div>
       )}

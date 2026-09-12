@@ -1,0 +1,52 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-11T04:31:24.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Predict & Run\r\n\r\nLook at the code in the workspace. This program takes a boba order, adds an 18% tip, and splits the total evenly among friends.\r\n\r\nFor these inputs: \r\n- 4 drinks\r\n- $5.50 per drink\r\n- $2.00 coupon\r\n- 3 friends\r\n\r\nWrite down the exact output you expect, line by line, and the final value of every variable.\r\n\r\nPress Run to check your prediction.\r\n\r\nNow run it two more times:\r\n- Enter \"four\" instead of a number when asked how many drinks. What happens?\r\n- Enter 0 when asked how many friends are splitting. What happens?\r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "The output you expect and final value for each variable",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Boba Run Splitter\n# Totals a boba order, adds a tip, and splits it among friends.\nprint(\"Boba Run Splitter\")\n\nnum_drinks = int(input(\"How many drinks? \"))\ndrink_price = float(input(\"Price per drink: \"))\ncoupon = float(input(\"Coupon amount: \"))\nnum_friends = int(input(\"How many friends are splitting? \"))\n\nsubtotal = num_drinks * drink_price - coupon\ntotal_cents = round(subtotal * 1.18 * 100)\nper_person = round(total_cents / num_friends)\nleftover_cents = total_cents % num_friends\n\nprint(\"Each person pays: $\" + str(per_person / 100))\nprint(\"Leftover cents: \" + str(leftover_cents))\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-11 04:38:11 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 04:39:52 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 04:40:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 04:41:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-09-11 04:42:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

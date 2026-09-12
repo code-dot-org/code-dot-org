@@ -7,8 +7,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
-import moduleStyles from './level-group-submit-dialog.module.scss';
-
 /**
  * Confirmation shown when a student presses Submit on a level group, i.e. an
  * assessment or an anonymous survey. OK is the primary action, Cancel is
@@ -23,7 +21,6 @@ import moduleStyles from './level-group-submit-dialog.module.scss';
 const LevelGroupSubmitDialog = ({id, title, body, onConfirm, onCancel}) => (
   <Dialog
     id={id}
-    className={moduleStyles.dialog}
     title={title}
     description={body}
     onClose={onCancel}

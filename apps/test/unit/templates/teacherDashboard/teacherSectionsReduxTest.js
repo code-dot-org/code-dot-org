@@ -1612,6 +1612,8 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
     const withClever = () =>
       store.dispatch(setRosterProvider(OAuthSectionTypes.clever));
+    const withClasslink = () =>
+      store.dispatch(setRosterProvider(OAuthSectionTypes.classlink));
 
     it('immediately clears the classroom list', () => {
       withGoogle();
@@ -1657,6 +1659,60 @@ describe('teacherSectionsRedux', () => {
       );
 
       return expect(promise).to.be.fulfilled;
+    });
+
+    // ClassLink posts rather than gets, because importing mutates a section
+    // and a GET would skip Rails CSRF verification. It goes through
+    // HttpClient (fetch), which sinon.fakeServer does not intercept, so the
+    // request is asserted on the stub rather than on server.requests.
+    it('posts to the ClassLink api with the authenticity token', () => {
+      withClasslink();
+      const postStub = sinon.stub(HttpClient, 'post').resolves({
+        json: () => Promise.resolve({id: 42}),
+      });
+
+      const promise = store.dispatch(
+        importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
+      );
+
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(postStub).to.have.been.calledOnce;
+        const [url, body, useAuthenticityToken, headers] =
+          postStub.firstCall.args;
+        expect(url).to.equal('/dashboardapi/import_classlink_classroom');
+        expect(JSON.parse(body)).to.deep.equal({
+          courseId: TEST_COURSE_ID,
+          courseName: TEST_COURSE_NAME,
+        });
+        expect(useAuthenticityToken).to.be.true;
+        expect(headers).to.deep.equal({'Content-Type': 'application/json'});
+        // No GET was issued for the import itself.
+        expect(
+          server.requests.filter(request =>
+            request.url.includes('import_classlink_classroom')
+          )
+        ).to.have.length(0);
+
+        postStub.restore();
+      });
+    });
+
+    it('completes the success flow for ClassLink', () => {
+      withClasslink();
+      const postStub = sinon.stub(HttpClient, 'post').resolves({
+        json: () => Promise.resolve({id: 42}),
+      });
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(isRosterDialogOpen(getState())).to.be.true;
+
+      const promise = store.dispatch(
+        importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
+      );
+
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(isRosterDialogOpen(getState())).to.be.false;
+        postStub.restore();
+      });
     });
 
     it('closes the dialog on success', () => {

@@ -73,7 +73,6 @@ function TextNode({
   return (
     <div
       className={styles.textNode}
-      aria-label={`Text: ${text}`}
       onDoubleClick={startEditing}
       {...hoverHandlers}
     >
@@ -94,6 +93,7 @@ function TextNode({
           tabIndex={-1}
           role="textbox"
           aria-multiline={true}
+          aria-readonly={!isEditing}
           aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
         >
           {text}

@@ -494,7 +494,6 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
       variant="text"
       color="tertiary"
       size="extraSmall"
-      tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
       onClick={onStartOver}
@@ -514,7 +513,6 @@ const renderInstructionsHeaderRight = (
       variant="text"
       color="tertiary"
       size="extraSmall"
-      tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
       onClick={onInfoClick}

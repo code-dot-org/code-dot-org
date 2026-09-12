@@ -60,7 +60,6 @@ const CopyChatHistoryButton: React.FunctionComponent = () => {
       variant="text"
       color="tertiary"
       size="extraSmall"
-      tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
       onClick={handleCopy}
