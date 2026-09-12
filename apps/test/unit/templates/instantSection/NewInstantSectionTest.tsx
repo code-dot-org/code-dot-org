@@ -31,6 +31,7 @@ describe('NewInstantSection', () => {
         code: 'ABCDEF',
         participant_type: 'student',
         login_type: 'word',
+        instant_section: true,
       }),
     } as Response);
     const store = renderComponent();
@@ -51,6 +52,9 @@ describe('NewInstantSection', () => {
       true
     );
     expect(store.getState().teacherSections.sections[123].code).toBe('ABCDEF');
+    expect(
+      store.getState().teacherSections.sections[123].isInstantSection
+    ).toBe(true);
 
     fireEvent.keyDown(document, {key: 'Escape'});
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();

@@ -531,6 +531,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -579,6 +580,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -633,6 +635,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -686,6 +689,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -731,6 +735,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil
       }
@@ -775,6 +780,14 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 'high', section.concise_summarize[:demo_type]
     assert_equal 'high', section.selected_section_summarize[:demo_type]
     assert_equal 'high', section.summarize[:demo_type]
+  end
+
+  test 'summaries identify instant sections' do
+    section = create(:section, login_type: 'word', instant_section: true)
+
+    assert_equal true, section.concise_summarize[:instant_section]
+    assert_equal true, section.selected_section_summarize[:instant_section]
+    assert_equal true, section.summarize[:instant_section]
   end
 
   test 'demo section code is cleared to nil on save' do
@@ -830,6 +843,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -866,6 +880,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1000,6 +1015,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1062,6 +1078,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1130,6 +1147,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1197,6 +1215,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }
@@ -1256,6 +1275,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_color: nil,
         avatar_emoji: nil,
         demo_type: nil,
+        instant_section: false,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         ai_chat_access_level: "disabled",
       }

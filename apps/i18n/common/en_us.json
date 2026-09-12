@@ -1627,6 +1627,7 @@
   "instantSectionName": "Your name",
   "instantSectionNameError": "Enter a name between 1 and 70 characters.",
   "instantSectionNew": "New Instant Section",
+  "instantSectionShowCode": "Show join code ({numStudents} joined so far)",
   "instantSectionTitle": "Instant Section",
   "instantSectionUnavailable": "This code does not match an open Instant Section. Check with your teacher, or sign in below to join a regular section.",
   "instructions": "Instructions",

@@ -1,5 +1,4 @@
-import Modal from '@code-dot-org/component-library/modal';
-import {Button, Typography} from '@mui/material';
+import {Button} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {setSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -7,6 +6,8 @@ import {ServerSection} from '@cdo/apps/templates/teacherDashboard/types/teacherS
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import InstantSectionCodeModal from './InstantSectionCodeModal';
 
 import styles from './instant-section.module.scss';
 
@@ -66,27 +67,9 @@ export default function NewInstantSection({
       </Button>
       {error && <p role="alert">{i18n.instantSectionCreateError()}</p>}
       {sectionCode && (
-        <Modal
-          className={styles.codeModal}
-          title={i18n.instantSectionTitle()}
-          description={i18n.instantSectionDisplayInstructions()}
-          closeLabel={i18n.closeDialog()}
+        <InstantSectionCodeModal
+          sectionCode={sectionCode}
           onClose={closeModal}
-          primaryButtonProps={{children: i18n.done(), onClick: closeModal}}
-          customContent={
-            <div className={styles.codeDisplay}>
-              <Typography component="p" className={styles.joinAddress}>
-                code.org/join
-              </Typography>
-              <Typography
-                component="p"
-                className={styles.sectionCode}
-                aria-label={sectionCode.split('').join(' ')}
-              >
-                {sectionCode}
-              </Typography>
-            </div>
-          }
         />
       )}
     </div>

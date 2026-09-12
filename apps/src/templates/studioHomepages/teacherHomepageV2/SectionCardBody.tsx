@@ -1,7 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
-import React from 'react';
+import {Button, Typography} from '@mui/material';
+import React, {useState} from 'react';
 
+import InstantSectionCodeModal from '@cdo/apps/templates/instantSection/InstantSectionCodeModal';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
@@ -20,6 +21,8 @@ interface SectionCardBodyProps {
 }
 
 const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
+  const [showJoinCode, setShowJoinCode] = useState(false);
+
   return (
     <div className={styles.sectionCardBody}>
       <div className={styles.sectionCardBodyLeft}>
@@ -38,6 +41,18 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
         )}
       </div>
       <div className={styles.sectionCardBodyRight}>
+        {section.isInstantSection && (
+          <Button
+            variant="outlined"
+            className={styles.instantSectionCodeButton}
+            startIcon={<FontAwesomeV6Icon iconName="users" />}
+            aria-haspopup="dialog"
+            disabled={!section.code}
+            onClick={() => setShowJoinCode(true)}
+          >
+            {i18n.instantSectionShowCode({numStudents: section.studentCount})}
+          </Button>
+        )}
         {section.studentCount > 0 && section.courseId ? (
           <TaskButton
             buttonText={i18n.viewProgressButton()}
@@ -46,7 +61,9 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.progress}
           />
-        ) : section.studentCount > 0 && !section.courseId ? (
+        ) : section.studentCount > 0 &&
+          !section.courseId &&
+          !section.isInstantSection ? (
           <div className={styles.studentsAddedAlert}>
             <div className={styles.taskButtonLeft}>
               <FontAwesomeV6Icon
@@ -59,14 +76,14 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
               </Typography>
             </div>
           </div>
-        ) : (
+        ) : !section.isInstantSection ? (
           <EmptyStateButton
             buttonText={i18n.addStudents()}
             icon={'users'}
             sectionId={section.id}
             path={TEACHER_NAVIGATION_PATHS.roster}
           />
-        )}
+        ) : null}
         {section.courseId && (
           <TaskButton
             buttonText={i18n.viewLessonMaterialsButton()}
@@ -77,6 +94,12 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
           />
         )}
       </div>
+      {showJoinCode && section.code && (
+        <InstantSectionCodeModal
+          sectionCode={section.code}
+          onClose={() => setShowJoinCode(false)}
+        />
+      )}
     </div>
   );
 };

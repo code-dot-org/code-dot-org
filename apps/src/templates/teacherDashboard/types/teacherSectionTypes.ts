@@ -27,6 +27,7 @@ export interface Section {
   courseVersionName?: string;
   createdAt?: string;
   demoType?: DemoType | null;
+  isInstantSection?: boolean;
   grades: string[];
   hidden: boolean;
   id: number;
@@ -125,6 +126,7 @@ export interface ServerSection {
   courseVersionName?: string | null;
   createdAt?: string;
   demo_type?: DemoType | null;
+  instant_section?: boolean;
   grades?: string[];
   hidden: boolean;
   id: number;

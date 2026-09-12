@@ -362,6 +362,11 @@
 }
 
 // Empty state button
+.instantSectionCodeButton.instantSectionCodeButton {
+  justify-content: flex-start;
+  min-height: 40px;
+}
+
 .emptyStateButton {
   display: flex;
   flex-direction: row;

@@ -585,6 +585,7 @@ describe('teacherSectionsRedux', () => {
         courseId: undefined,
         createdAt: createdAt,
         demoType: undefined,
+        isInstantSection: undefined,
         studentCount: 1,
         hidden: false,
         restrictSection: false,
@@ -951,6 +952,7 @@ describe('teacherSectionsRedux', () => {
           courseId: undefined,
           createdAt: createdAt,
           demoType: undefined,
+          isInstantSection: undefined,
           hidden: false,
           restrictSection: false,
           postMilestoneDisabled: false,
@@ -1255,6 +1257,16 @@ describe('teacherSectionsRedux', () => {
         demo_type: 'high',
       });
       assert.equal(section.demoType, 'high');
+    });
+
+    it('maps instant_section', () => {
+      [true, false].forEach(instantSection => {
+        const section = sectionFromServerSection({
+          ...serverSection,
+          instant_section: instantSection,
+        });
+        assert.strictEqual(section.isInstantSection, instantSection);
+      });
     });
   });
 

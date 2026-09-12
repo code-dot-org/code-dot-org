@@ -1,4 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -260,6 +261,48 @@ describe('SectionCardBody', () => {
 
   it('renders empty state button when no students have been added', () => {
     renderComponent(noStudentsection);
-    screen.getByText('Add students');
+    expect(
+      screen.queryByRole('button', {name: /Show join code/})
+    ).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText('Add students'));
+    screen.getByText('/sections/11/roster');
   });
+
+  it.each([
+    {studentCount: 0, courseId: null},
+    {studentCount: 2, courseId: null},
+    {studentCount: 0, courseId: 52},
+    {studentCount: 2, courseId: 52},
+  ])(
+    'reopens the Instant Section code with $studentCount students and course $courseId',
+    ({studentCount, courseId}) => {
+      renderComponent({
+        ...defaultSection,
+        isInstantSection: true,
+        loginType: 'word',
+        studentCount,
+        courseId,
+      });
+      const trigger = screen.getByRole('button', {
+        name: `Show join code (${studentCount} joined so far)`,
+      });
+      expect(screen.queryByText(/students added/)).not.toBeInTheDocument();
+      expect(screen.queryByText('Add students')).not.toBeInTheDocument();
+      trigger.focus();
+      fireEvent.click(trigger);
+
+      expect(screen.getByRole('dialog')).toBeInTheDocument();
+      expect(screen.getByText('ABCDEF')).toBeInTheDocument();
+      expect(screen.getByText('code.org/join')).toBeInTheDocument();
+      fireEvent.keyDown(document, {key: 'Escape'});
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+      expect(trigger).toHaveFocus();
+
+      fireEvent.click(trigger);
+      expect(screen.getByRole('dialog')).toBeInTheDocument();
+      fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+      expect(trigger).toHaveFocus();
+    }
+  );
 });

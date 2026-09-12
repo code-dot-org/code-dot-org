@@ -613,6 +613,7 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
+        instant_section: instant_section?,
         at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
         at_risk_age_gated_us_state: at_risk_age_gated_student&.us_state,
       }
@@ -661,6 +662,7 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
+        instant_section: instant_section?,
         assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
         ai_chat_access_level: ai_chat_access_level,
       }
@@ -753,6 +755,7 @@ class Section < ApplicationRecord
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
           demo_type: demo_type,
+          instant_section: instant_section?,
           assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
           ai_chat_access_level: ai_chat_access_level,
         }
