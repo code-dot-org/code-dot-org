@@ -8,7 +8,9 @@ class DcdoController < ApplicationController
 
   def show
     authorize! :read, :reports
-    DCDO.refresh
+    # Read straight from the datastore, not just the shared cache, so the admin
+    # page reflects what is actually persisted even on a cold cache.
+    DCDO.reload!
 
     @dcdo_hsh = DCDO.to_h
   end

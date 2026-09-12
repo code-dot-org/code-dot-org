@@ -37,4 +37,14 @@ class DynamicConfigBaseTest < Minitest::Test
     assert_equal @dynamic_config.get("nonnil key", "default value"), "nonnil value"
     @mock_datastore.verify
   end
+
+  def test_refresh_reads_the_shared_cache_reload_reads_the_datastore
+    @mock_datastore.expect(:update_local_cache, nil)
+    @dynamic_config.refresh
+
+    @mock_datastore.expect(:reload!, nil)
+    @dynamic_config.reload!
+
+    @mock_datastore.verify
+  end
 end

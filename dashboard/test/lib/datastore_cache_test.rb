@@ -139,6 +139,34 @@ class DatastoreCacheTest < ActiveSupport::TestCase
     assert_equal updated_value, second_cache.get(test_key)
   end
 
+  test 'reload! refreshes from the datastore without requiring a set' do
+    key = 'reload key'
+    initial_value = 'initial value'
+    persisted_value = 'persisted out of band'
+
+    @datastore_cache.set(key, initial_value)
+    assert_equal initial_value, @datastore_cache.get(key)
+
+    # A value persisted directly to the datastore (e.g. by another server, or
+    # before this process started) is not visible through the caches yet: neither
+    # a local-cache refresh nor waiting for expiration re-reads the datastore.
+    @data_adapter.set(key, persisted_value)
+    @datastore_cache.update_local_cache
+    assert_equal initial_value, @datastore_cache.get(key)
+    travel 60.seconds
+    assert_equal initial_value, @datastore_cache.get(key)
+
+    # reload! re-reads the datastore source of truth into the caches.
+    @datastore_cache.reload!
+    assert_equal persisted_value, @datastore_cache.get(key)
+  end
+
+  test 'reload! populates the shared cache and refreshes the local cache' do
+    @datastore_cache.expects(:populate_shared_cache).once
+    @datastore_cache.expects(:update_local_cache).once
+    @datastore_cache.reload!
+  end
+
   test "set updates datastore and local cache" do
     @data_adapter.expects(:set).once
     @datastore_cache.expects(:populate_shared_cache).once

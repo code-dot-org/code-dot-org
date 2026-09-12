@@ -6,7 +6,9 @@ class GatekeeperController < ApplicationController
 
   def show
     authorize! :read, :reports
-    Gatekeeper.refresh
+    # Read straight from the datastore, not just the shared cache, so the admin
+    # page reflects what is actually persisted even on a cold cache.
+    Gatekeeper.reload!
 
     @gk_hsh = Gatekeeper.to_hash
     if params[:feature]
