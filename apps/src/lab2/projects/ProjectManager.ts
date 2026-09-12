@@ -486,6 +486,14 @@ export default class ProjectManager {
       : undefined;
   }
 
+  /**
+   * The project's sources as this manager knows them: what is waiting to be
+   * saved, else what was last saved or loaded.
+   */
+  getCurrentSources(): ProjectSources | undefined {
+    return this.sourcesToSave || this.getLastSource();
+  }
+
   getLastChannel() {
     return this.lastChannel;
   }
