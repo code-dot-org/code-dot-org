@@ -3,10 +3,9 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
-import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import {getStore} from '@cdo/apps/redux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import askSpriteLabAi from '../ai/askSpriteLabAi';
@@ -56,6 +55,9 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   onCodeGenerated,
 }) => {
   const dispatch = useAppDispatch();
+  // Collapsed hides the instructions but keeps Continue reachable, so a
+  // student who wants the screen back is never stranded on the level.
+  const [collapsed, setCollapsed] = useState(false);
   const [prompt, setPrompt] = useState('');
   const [status, setStatus] = useState<
     'none' | 'generating' | 'generated' | 'error'
@@ -135,31 +137,27 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   // platform's instructions panel uses.
   const showTts =
     !!levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
-  const instructionsRef = useRef<HTMLDivElement | null>(null);
   const instructionsBlock = instructions && (
-    <div ref={instructionsRef} className={moduleStyles.guideInstructions}>
-      <SafeMarkdown
-        markdown={instructions}
-        // Lands on the markdown container so only its first element makes
-        // room for the button, not every line.
-        className={showTts ? moduleStyles.guideInstructionsTts : undefined}
-      />
-    </div>
+    <MainInstructionsContent
+      instructionsText={instructions}
+      markdownClassName={moduleStyles.guideInstructions}
+      showTts={showTts}
+    />
   );
 
   return (
-    <Guide position="bottom" width="normal">
+    <Guide
+      position="bottom"
+      width="normal"
+      cornerIcon={collapsed ? 'maximize' : 'minimize'}
+      onCornerIconClick={() => setCollapsed(current => !current)}
+    >
       <div
         className={moduleStyles.guideAnimator}
         style={bodyHeight === undefined ? undefined : {height: bodyHeight}}
       >
         <div ref={bodyRef} className={moduleStyles.guideBody}>
-          {showTts && instructions && (
-            <div className={moduleStyles.guideTts}>
-              <TextToSpeech contentRef={instructionsRef} />
-            </div>
-          )}
-          {guideMode === 'instructions' ? (
+          {collapsed ? null : guideMode === 'instructions' ? (
             instructionsBlock ||
             'Build a program in the Code tab, then press Run.'
           ) : (
