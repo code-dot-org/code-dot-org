@@ -46,6 +46,7 @@ export type {
   UpdatePasswordParams,
   CreatePasswordParams,
   UpdateUserTypeParams,
+  EmailOptIn,
   DeleteUserParams,
   ParentEmailOptIn,
   UpdateParentEmailParams,
