@@ -9239,12 +9239,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jquery@npm:^3.5.16":
-  version: 3.5.16
-  resolution: "@types/jquery@npm:3.5.16"
-  dependencies:
-    "@types/sizzle": "npm:*"
-  checksum: 10/0f6aaed2616284cfd304083c27fa74fc2fc519199cbfef9c4be78cee5e919929dd5406799a2dd7b9add138699524872f575d9263cc5b7fe82f69a9eba378956b
+"@types/jquery@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@types/jquery@npm:4.0.1"
+  checksum: 10/b98d863761b51f2346f870eb7022977f47afa7040594aaf9e72ed9261dab57077a5b79c034a263d17441b2c9b7a6157e73ee2380f2859b682bc49c9ff47e72d7
   languageName: node
   linkType: hard
 
@@ -9746,13 +9744,6 @@ __metadata:
   version: 8.1.2
   resolution: "@types/sinonjs__fake-timers@npm:8.1.2"
   checksum: 10/5f0ddaa4c79924f6fa82ae5f4f2894f4c1d40740690866665d06a74c7e0f220989c99a7f49561c1d9ad6b15a3a8a7cf7be9dc306a7e42fc1c9cf2c89ad80bef3
-  languageName: node
-  linkType: hard
-
-"@types/sizzle@npm:*":
-  version: 2.3.3
-  resolution: "@types/sizzle@npm:2.3.3"
-  checksum: 10/586a9fb1f6ff3e325e0f2cc1596a460615f0bc8a28f6e276ac9b509401039dd242fa8b34496d3a30c52f5b495873922d09a9e76c50c2ab2bcc70ba3fb9c4e160
   languageName: node
   linkType: hard
 
@@ -11974,7 +11965,7 @@ __metadata:
     "@types/chai": "npm:^4.3.5"
     "@types/htmlhint": "npm:^1.1.5"
     "@types/jest": "npm:^29.5.12"
-    "@types/jquery": "npm:^3.5.16"
+    "@types/jquery": "npm:^4.0.1"
     "@types/js-cookie": "npm:^3.0.6"
     "@types/mime-types": "npm:^3"
     "@types/mocha": "npm:^10.0.1"
@@ -12074,8 +12065,8 @@ __metadata:
     jest-html-reporter: "npm:^3.10.2"
     jest-scss-transform: "npm:^1.0.3"
     jest-transform-stub: "npm:^2.0.0"
-    jquery: "npm:1.12.1"
-    jquery-ui: "npm:^1.12.1"
+    jquery: "npm:4.0.0"
+    jquery-ui: "npm:^1.14.2"
     js-cookie: "npm:^2.1.2"
     js-file-download: "npm:^0.4.12"
     jshint: "npm:^2.13.6"
@@ -21227,13 +21218,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"jquery-ui@npm:^1.12.1":
-  version: 1.12.1
-  resolution: "jquery-ui@npm:1.12.1"
-  checksum: 10/256e230eb41c797d4a043376a814fe5690382ed6b85901c2cfdfe0fe793a3c5d982e4f2ff3acc4cef6f429f04b07b544d8a8726353776ec25bd8e556cf04612e
-  languageName: node
-  linkType: hard
-
 "jquery-ui@npm:^1.13.2":
   version: 1.13.3
   resolution: "jquery-ui@npm:1.13.3"
@@ -21243,10 +21227,19 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"jquery@npm:1.12.1":
-  version: 1.12.1
-  resolution: "jquery@npm:1.12.1"
-  checksum: 10/12251e6be1fc2fbf059340a9a6ed299ebda6a32327175ff55a2a6ae715e2e86133d7e06feb4982c25f9f28719ddaf962e008186eb1e9e11136c6129fb098a5c9
+"jquery-ui@npm:^1.14.2":
+  version: 1.14.2
+  resolution: "jquery-ui@npm:1.14.2"
+  dependencies:
+    jquery: "npm:>=1.12.0 <5.0.0"
+  checksum: 10/d158f91a49abc44db17b7d3b5bcc1f22928c8433235c0380f43e8ceb4f8f7c8164d656c217fa1ac4e96fc28a84a0327ee0b5f63d8214191fff91f234cf5f8320
+  languageName: node
+  linkType: hard
+
+"jquery@npm:4.0.0, jquery@npm:>=1.12.0 <5.0.0":
+  version: 4.0.0
+  resolution: "jquery@npm:4.0.0"
+  checksum: 10/722be14779518f27f50463d9aaa8d6b42782673a23f65335c4ff9e2ad124cb4d5267696dfc7bc4f40ecf04e852cbb05b1630b50daacf2821737d5d3b480fbf19
   languageName: node
   linkType: hard
 
