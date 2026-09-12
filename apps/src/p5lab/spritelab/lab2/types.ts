@@ -63,11 +63,17 @@ export interface RuntimeAnimationList {
   propsByKey: {[key: string]: RuntimeAnimationProps};
 }
 
+/** What a scene is for. Chosen when the scene is created; decides the
+    blocks it offers and how big its sprites are. */
+export type SceneType = 'story' | 'platform';
+
 // A named code workspace. The id is the source of truth (the go-to-scene
 // block stores it); scenes[0] is the default scene Play starts at.
 export interface Scene {
   id: string;
   name: string;
+  // Absent on scenes made before scenes declared a type.
+  type?: SceneType;
   // This scene's Blockly workspace serialization.
   source?: WorkspaceSerialization;
   // World-tab experiment: starter sprite/block placements, spawned ahead of
@@ -163,6 +169,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   pinnedSceneId?: string;
   // Name given to the pinned scene at creation.
   pinnedSceneName?: string;
+  /** Type given to the pinned scene at creation. */
+  pinnedSceneType?: SceneType;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

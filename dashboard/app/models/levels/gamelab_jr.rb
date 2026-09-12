@@ -53,6 +53,7 @@ class GamelabJr < Gamelab
     world_start_pattern
     pinned_scene_id
     pinned_scene_name
+    pinned_scene_type
     guide_steps
     guide_collapsible
   )

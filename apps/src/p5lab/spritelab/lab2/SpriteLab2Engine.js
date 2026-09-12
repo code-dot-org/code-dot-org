@@ -78,6 +78,8 @@ const RESTART_QUIET_MS = 1000;
 // Markers in a scene's compiled program that make it a platformer: the
 // platform composites and player setup from the toolbox, or the world
 // prelude's wall spawns.
+// Legacy fallback for scenes with no declared type: read the program for
+// blocks only a platformer has. Scenes created since carry `type`.
 const PLATFORM_SCENE_MARKERS = [
   'makePlatformPlayer(',
   'makePlatformBlocks(',
@@ -301,7 +303,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // One cell at the default playfield size. A scene with a world
       // overrides this from the prelude with its own cell size, and the
       // grid blocks size their sprites from their own bitmaps.
-      library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
+      library.defaultSpriteSize = this.isPlatformScene_()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
       // Landings carry sub-pixel float noise; the classic footing command
@@ -574,7 +576,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.referencedImages = referencedImages || null;
   }
 
-  sceneLooksLikePlatformer_() {
+  isPlatformScene_() {
+    if (this.sceneType_) {
+      return this.sceneType_ === 'platform';
+    }
     const code = this.userCode || '';
     return PLATFORM_SCENE_MARKERS.some(marker => code.includes(marker));
   }
@@ -592,7 +597,8 @@ export default class SpriteLab2Engine extends SpriteLab {
    * via execute(); after that it re-runs inside the existing p5 — recreating
    * p5 per edit flickers and races its own async preload callbacks.
    */
-  runProgram(code, referencedImages) {
+  runProgram(code, referencedImages, sceneType) {
+    this.sceneType_ = sceneType;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
     }

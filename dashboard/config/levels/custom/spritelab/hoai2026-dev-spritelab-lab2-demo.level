@@ -26,6 +26,7 @@
     ],
     "pinned_scene_id": "platform-scene",
     "pinned_scene_name": "Platformer",
+    "pinned_scene_type": "platform",
     "world_start_pattern": [
       "..........",
       "......BB..",

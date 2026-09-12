@@ -90,8 +90,9 @@ import {
   parseExternalSceneKey,
   toExternalSceneOptions,
 } from '../scenesApi';
+import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
-import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
+import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
@@ -404,7 +405,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const pinnedSceneId = isToolboxMode
     ? undefined
     : levelProperties.pinnedSceneId;
-  const {pinnedSceneName} = levelProperties;
+  const {pinnedSceneName, pinnedSceneType} = levelProperties;
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
@@ -416,6 +417,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       const pinned: Scene = {
         id: pinnedSceneId,
         name: pinnedSceneName || 'Scene',
+        type: pinnedSceneType,
         source: DEFAULT_SCENE_SOURCE,
       };
       const existing =
@@ -428,6 +430,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [
     pinnedSceneId,
     pinnedSceneName,
+    pinnedSceneType,
     updateSources,
     sourcesReinitializedCount,
   ]);
@@ -871,7 +874,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return prelude + code;
       });
       dispatch(setIsRunning(true));
-      engine.runProgram(program, referencedImages);
+      engine.runProgram(program, referencedImages, scene.type);
     },
     [dispatch, activeSceneId, getCode, worldFor]
   );
@@ -982,7 +985,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ),
       };
       dispatch(setIsRunning(true));
-      engine.runProgram(program, referencedImages);
+      engine.runProgram(program, referencedImages, scene.type);
     },
     [dispatch, compileExternalScene]
   );
@@ -1080,6 +1083,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       cancelled = true;
     };
   }, [levelProperties.id, dispatch, refreshToolbox]);
+
+  // A scene shows the blocks its type is for. Swapped in place rather than
+  // through the hook's toolboxDefinition, which rebuilds the workspace.
+  const activeSceneType = activeScene?.type;
+  useEffect(() => {
+    if (!animationsSeeded) {
+      return;
+    }
+    const toolbox = toolboxForSceneType(
+      levelProperties.toolboxDefinition,
+      activeSceneType
+    );
+    if (toolbox) {
+      refreshToolbox(toolbox);
+    }
+  }, [
+    animationsSeeded,
+    activeSceneType,
+    levelProperties.toolboxDefinition,
+    refreshToolbox,
+  ]);
 
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
@@ -1399,10 +1423,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   const handleCreateScene = useCallback(
-    (name: string) => {
+    (name: string, type: SceneType) => {
       const scene: Scene = {
         id: createUuid(),
         name,
+        type,
         source: DEFAULT_SCENE_SOURCE,
       };
       updateSources(prev => ({...prev, scenes: [...getScenes(prev), scene]}));

@@ -372,6 +372,31 @@ $tab-segment-height: $tab-item-height - 2px;
   transition: height 0.25s ease;
 }
 
+// The new-scene dialog: name above the type choice.
+.newSceneFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sceneTypeGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  legend {
+    width: auto;
+    margin-bottom: 4px;
+    padding: 0;
+    border: none;
+    font-size: 13px;
+    line-height: inherit;
+  }
+}
+
 .guideBody {
   display: flex;
   flex-direction: column;

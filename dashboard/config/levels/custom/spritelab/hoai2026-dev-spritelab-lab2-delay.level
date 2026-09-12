@@ -27,6 +27,7 @@
     ],
     "pinned_scene_id": "story-scene",
     "pinned_scene_name": "Story",
+    "pinned_scene_type": "story",
     "guide_mode": "instructions",
     "guide_steps": [
       {
