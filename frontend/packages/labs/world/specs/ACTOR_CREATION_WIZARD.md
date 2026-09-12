@@ -132,6 +132,24 @@ from here on are being added to this step as much as to that dialog.
 no work: `applied` is how a row already decides whether to say "already has
 this", and a copied or imported actor's traits are in the chain it reads.
 
+**It takes as many as the learner wants**, which is the one way this step is
+not the dialog as it stands. `EnhanceActorDialog` applies ONE and closes, which
+is right for what it is — "give this actor one more thing", asked from the
+actor's own row or from the wand on its `define actor`. Building an actor up is
+a different act: walking in and out of the shelf once per ability would make a
+Crawler three round trips.
+
+So the step applies and stays. `applied` is what makes that coherent with no
+bookkeeping — a row that has just been applied says "already has this" on the
+next render, because the trait it asks about is now in the actor's chain. The
+learner presses rows until they are done, and the step's own button says so
+rather than being an enhancement's button.
+
+**The one-shot dialog stays exactly where it is.** It is reached from the
+`define actor` block and from the actor's row, and both are about an actor that
+already exists. What is shared is the ROW — its name, its sentence, what it
+brings, its question, and whether the actor has it — not the dialog around it.
+
 Two things follow that are not true of the shelf as it stands today:
 
 - **The list needs grouping**, the way the rule shelf's did when it outgrew a
