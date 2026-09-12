@@ -5,7 +5,10 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {
+  LmsLoginTypeNames,
+  OAuthSectionTypes,
+} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
@@ -112,6 +115,8 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
     sectionCode = i18n.loginTypeClever();
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
+  } else if (rowData.loginType === OAuthSectionTypes.classlink) {
+    sectionCode = LmsLoginTypeNames.classlink;
   } else if (rowData.loginType === SectionLoginType.lti_v1) {
     sectionCode = rowData.loginTypeName;
   } else {

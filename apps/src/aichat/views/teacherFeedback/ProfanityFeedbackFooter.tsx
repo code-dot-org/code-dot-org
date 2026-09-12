@@ -1,6 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
@@ -96,17 +95,14 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
           <ThumbButton type="down" selected={thumbsDownSelected} />
         </>
       )}
-      <WithTooltip
+      <Tooltip
         key={`show-hide-tooltip-${profaneMessageVisible}`}
-        tooltipProps={{
-          tooltipId: 'show-hide-tooltip',
-          direction: 'onLeft',
-          size: 'xs',
-          text: profaneMessageVisible
+        placement="left"
+        title={
+          profaneMessageVisible
             ? 'Hide flagged message'
-            : 'Show flagged message',
-          className: moduleStyles.tooltip,
-        }}
+            : 'Show flagged message'
+        }
       >
         <MuiIconButton
           variant="text"
@@ -125,7 +121,7 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
             iconStyle={profaneMessageVisible ? 'solid' : 'regular'}
           />
         </MuiIconButton>
-      </WithTooltip>
+      </Tooltip>
     </div>
   );
 };

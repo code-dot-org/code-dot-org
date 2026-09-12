@@ -1,9 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip} from '@mui/material';
+import {IconButton} from '@mui/material';
 import React from 'react';
 
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 
+import Tooltip from '../../components/ThemedTooltip';
 import ToolbarSection from '../components/ToolbarSection';
 
 import styles from './actions-group.module.scss';

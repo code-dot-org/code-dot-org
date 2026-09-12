@@ -1,3 +1,4 @@
+import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import {
   useCallback,
@@ -8,9 +9,10 @@ import {
 } from 'react';
 
 import CloseButton from '@/closeButton';
+import {muiPlacementFor} from '@/common/helpers';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-import {TooltipProps, WithTooltip} from '@/tooltip';
+import {TooltipProps} from '@/tooltip';
 
 import moduleStyles from './tabs.module.scss';
 
@@ -176,9 +178,13 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   return (
     <li role="presentation">
       {preferredTooltip ? (
-        <WithTooltip tooltipProps={preferredTooltip}>
+        <Tooltip
+          id={preferredTooltip.tooltipId}
+          title={preferredTooltip.text}
+          placement={muiPlacementFor(preferredTooltip.direction)}
+        >
           {buttonElement}
-        </WithTooltip>
+        </Tooltip>
       ) : (
         buttonElement
       )}

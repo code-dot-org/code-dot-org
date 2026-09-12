@@ -1,6 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography, IconButton as MuiIconButton} from '@mui/material';
+import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useCallback, useRef, useState} from 'react';
 
 import moduleStyles from './details-box.module.scss';
@@ -36,14 +35,7 @@ const CopyButton: React.FunctionComponent<CopyButtonProps> = ({
           Copied!
         </Typography>
       )}
-      <WithTooltip
-        tooltipProps={{
-          tooltipId: `copy-${label}-tooltip`,
-          direction: 'onTop',
-          size: 'xs',
-          text: `Copy ${label}`,
-        }}
-      >
+      <Tooltip placement="top" title={`Copy ${label}`}>
         <MuiIconButton
           variant="text"
           color="tertiary"
@@ -54,7 +46,7 @@ const CopyButton: React.FunctionComponent<CopyButtonProps> = ({
         >
           <FontAwesomeV6Icon iconStyle="solid" iconName="copy" />
         </MuiIconButton>
-      </WithTooltip>
+      </Tooltip>
     </div>
   );
 };
