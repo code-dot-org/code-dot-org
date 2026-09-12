@@ -108,13 +108,12 @@ export class PersonalProjectsTableActionsCell extends Component {
           />
         )}
         {isEditing && (
-          <div>
+          <div className={moduleStyles.editButtons}>
             <MuiButton
               variant="contained"
               color="primary"
               size="small"
               disabled={isSaving}
-              className={moduleStyles.buttonMargin}
               id="ui-projects-rename-save"
               onClick={this.onSave}
               type="button"
