@@ -1195,18 +1195,20 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert unit_group.requires_ai_chat_tools?
   end
 
-  # Bandaid: a course whose only Web Lab 2 unit is exempt reports AVAILABLE
-  # rather than ESSENTIAL, which is what quiets the alerts stating the stronger
-  # claim. This test goes away with the exemption.
-  test 'ai_chat_tools_dependency is available, not essential, for a course whose only Web Lab 2 unit is exempt' do
-    unit = create(:script, name: 'csd2-2026')
-    lesson = create(:lesson, :with_lesson_group, script: unit)
-    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
-    unit_group = create(:unit_group, :with_unit, unit: unit)
+  Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS.each do |unit_name|
+    # Bandaid: a course whose only Web Lab 2 unit is exempt reports AVAILABLE
+    # rather than ESSENTIAL, which is what quiets the alerts stating the stronger
+    # claim. This test goes away with the exemption.
+    test "ai_chat_tools_dependency is available, not essential, for course with exempt unit #{unit_name}" do
+      unit = create(:script, name: unit_name)
+      lesson = create(:lesson, :with_lesson_group, script: unit)
+      create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+      unit_group = create(:unit_group, :with_unit, unit: unit)
 
-    refute unit_group.requires_ai_chat_tools?
-    assert unit_group.has_ai_chat_tools?
-    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], unit_group.ai_chat_tools_dependency
+      refute unit_group.requires_ai_chat_tools?
+      assert unit_group.has_ai_chat_tools?
+      assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], unit_group.ai_chat_tools_dependency
+    end
   end
 
   describe '#link' do

@@ -1996,18 +1996,20 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  # Bandaid: a section assigned an exempt unit reports AVAILABLE, which is what
-  # quiets the AI settings warning, its nav icon, and the teacher homepage alert.
-  # This test goes away with the exemption.
-  test 'assigned_ai_chat_tools_dependency is available, not essential, for an exempt unit' do
-    # The unit needs a course: Section validates that a section with a script
-    # has a course_id, and the factory takes that from the unit's course.
-    unit = create(:script, :in_single_unit_course, name: 'csd2-2026')
-    lesson = create(:lesson, :with_lesson_group, script: unit)
-    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
-    section = create(:section, teacher: @teacher, script: unit)
+  Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS.each do |unit_name|
+    # Bandaid: a section assigned an exempt unit reports AVAILABLE, which is what
+    # quiets the AI settings warning, its nav icon, and the teacher homepage alert.
+    # This test goes away with the exemption.
+    test "assigned_ai_chat_tools_dependency is available, not essential, for exempt unit #{unit_name}" do
+      # The unit needs a course: Section validates that a section with a script
+      # has a course_id, and the factory takes that from the unit's course.
+      unit = create(:script, :in_single_unit_course, name: unit_name)
+      lesson = create(:lesson, :with_lesson_group, script: unit)
+      create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+      section = create(:section, teacher: @teacher, script: unit)
 
-    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], section.assigned_ai_chat_tools_dependency
+      assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], section.assigned_ai_chat_tools_dependency
+    end
   end
 
   private def build_suggested_lesson_section
