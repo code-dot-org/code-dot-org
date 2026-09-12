@@ -832,14 +832,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       }
       return;
     }
-    const match = [...images]
-      .reverse()
-      .find(
-        ({props}) =>
-          !!props?.generation &&
-          (!lockedImageType ||
-            imageTypeFromCategories(props?.categories) === lockedImageType)
-      );
+    // images is newest-first within a type group: Sprite Lab prepends new
+    // animations and galleryOrder's sort is stable.
+    const match = images.find(
+      ({props}) =>
+        !!props?.generation &&
+        (!lockedImageType ||
+          imageTypeFromCategories(props?.categories) === lockedImageType)
+    );
     if (match) {
       setDialogTarget(match.key);
     } else if (!dialogTarget) {

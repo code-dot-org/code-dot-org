@@ -9,7 +9,7 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
@@ -205,6 +205,14 @@ const GAME_KEYS = new Set([
 const isLevelEditMode =
   !!getAppOptionsEditBlocks() || !!getAppOptionsEditingExemplar();
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+// The modes where useSources resets to non-project sources; narrower than
+// isLevelEditMode, which is true for every edit_blocks type. Editing, say,
+// required_blocks still opens the student's own project, where treating a
+// reset as authoring would wipe their images.
+const isStartOverEditMode =
+  getAppOptionsEditBlocks() === START_SOURCES ||
+  isToolboxMode ||
+  !!getAppOptionsEditingExemplar();
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
@@ -453,11 +461,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [scenes, activeSceneId, pinnedSceneId]);
 
   // Premade world: paint the level's pattern into the pinned scene's world.
-  // 'B' draws the project's newest block image, 'S' its first sprite (the
-  // platform arc's player). Each kind seeds only while the world holds none
-  // of it, into empty cells only, so student edits always win and a later
-  // level's platforms merge in around an already-placed player. Pattern rows
-  // anchor to the playfield floor (resizeWorld's convention).
+  // 'B' draws the block image the student just made, 'S' their first
+  // character (the platform arc's player). Each kind seeds only while the
+  // world holds none of it, into empty cells only, so student edits always
+  // win and a later level's platforms merge in around an already-placed
+  // player. Pattern rows anchor to the playfield floor (resizeWorld's
+  // convention). Re-runs after Start Over, which empties the world.
   const {worldStartPattern} = levelProperties;
   useEffect(() => {
     if (!worldStartPattern?.length || !pinnedSceneId || !animationsSeeded) {
@@ -466,14 +475,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     const {orderedKeys, propsByKey} = animationList;
     const typeOf = (key: string) =>
       imageTypeFromCategories(propsByKey[key]?.categories);
+    // orderedKeys is newest-first: Sprite Lab prepends new animations.
     const cellFor: {[char: string]: WorldCell} = {};
-    const blockKey = [...orderedKeys]
-      .reverse()
-      .find(k => typeOf(k) === 'block');
+    const blockKey = orderedKeys.find(k => typeOf(k) === 'block');
     if (blockKey) {
       cellFor.B = {image: propsByKey[blockKey].name, kind: 'block'};
     }
-    const spriteKey = orderedKeys.find(k => typeOf(k) === 'sprite');
+    const spriteKey = [...orderedKeys]
+      .reverse()
+      .find(k => typeOf(k) === 'sprite');
     if (spriteKey) {
       cellFor.S = {image: propsByKey[spriteKey].name, kind: 'sprite'};
     }
@@ -522,6 +532,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     animationsSeeded,
     animationList,
     updateSources,
+    sourcesReinitializedCount,
   ]);
 
   // Where Play begins with no explicit start scene: the pinned scene on a
@@ -747,14 +758,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     seededReinitCountRef.current = sourcesReinitializedCount;
-    if (isLevelEditMode) {
+    if (isStartOverEditMode) {
       seedAnimationList(currentSources.animations);
     } else {
-      patchSources({
-        animations: getSerializedAnimationList(
-          getStore().getState().animationList
-        ),
-      });
+      // Forced: Start Over has already saved the image-less template, and an
+      // unforced save can sit in the project manager's queue for 30s — a tab
+      // closed in that window loses the images for good.
+      patchSources(
+        {
+          animations: getSerializedAnimationList(
+            getStore().getState().animationList
+          ),
+        },
+        true
+      );
     }
     // The stage's scene belongs to the pre-reset sources; restart-scene
     // falls back to the first scene.
