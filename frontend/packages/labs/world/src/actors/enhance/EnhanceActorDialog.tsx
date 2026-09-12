@@ -19,18 +19,13 @@
 // lists what lands in the project, and a row that has nothing to do says so —
 // an actor that already has it, or one the enhancement refuses.
 
-import {Button, Typography} from '@mui/material';
 import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import styles from './enhanceActorDialog.module.css';
-import {
-  enhancementsFor,
-  type Enhancement,
-  type EnhanceTarget,
-} from './enhancements';
+import {EnhancementRows, refusalOf} from './EnhancementRows';
+import {type Enhancement, type EnhanceTarget} from './enhancements';
 
 export interface EnhanceActorDialogProps {
   /** The project as it stands — read, to say what is already done. */
@@ -51,21 +46,12 @@ export const EnhanceActorDialog = ({
 }: EnhanceActorDialogProps) => {
   const [chosen, setChosen] = useState<Enhancement | null>(null);
   const [answer, setAnswer] = useState<string | undefined>();
-  const offered = enhancementsFor(target);
-
-  /** Why this thing cannot take that enhancement, if it cannot. */
-  const why = (
-    enhancement: Enhancement,
-    said = enhancement === chosen ? answer : undefined,
-  ): string | undefined =>
-    enhancement.refuse?.(target) ??
-    (enhancement.applied(source, target, said)
-      ? 'Already has this.'
-      : undefined);
 
   /** Whether there is enough on the screen to act on. */
   const ready = Boolean(
-    chosen && !why(chosen) && (!chosen.asks || answer !== undefined),
+    chosen &&
+      !refusalOf(chosen, source, target, answer) &&
+      (!chosen.asks || answer !== undefined),
   );
 
   return (
@@ -87,95 +73,17 @@ export const EnhanceActorDialog = ({
       }}
       secondaryButtonProps={{children: 'Cancel', onClick: onCancel}}
       customContent={
-        <ul className={styles.list}>
-          {offered.length === 0 && (
-            // The wording every empty list in this lab uses.
-            <li>
-              <Typography component="span" variant="body4">
-                (nothing to add to this yet)
-              </Typography>
-            </li>
-          )}
-          {offered.map(enhancement => {
-            const refusal = why(enhancement);
-            return (
-              <li key={enhancement.id}>
-                <Button
-                  className={styles.enhancement}
-                  variant={
-                    chosen?.id === enhancement.id ? 'contained' : 'outlined'
-                  }
-                  color="secondary"
-                  size="small"
-                  fullWidth
-                  disabled={Boolean(refusal)}
-                  aria-pressed={chosen?.id === enhancement.id}
-                  onClick={() => {
-                    setChosen(enhancement);
-                    setAnswer(undefined);
-                  }}
-                >
-                  <Typography component="span" variant="label2" color="inherit">
-                    {enhancement.name}
-                  </Typography>
-                  <Typography component="span" variant="body4" color="inherit">
-                    {enhancement.description}
-                  </Typography>
-                  {/* What lands in the project. The same promise the import
-                      dialogs make, and it matters more here: this one writes
-                      into files the learner already has. */}
-                  <Typography component="span" variant="body4" color="inherit">
-                    Also adds: {enhancement.brings.join(', ')}
-                  </Typography>
-                  {refusal && (
-                    <Typography
-                      component="span"
-                      variant="body4"
-                      color="inherit"
-                    >
-                      {refusal}
-                    </Typography>
-                  )}
-                </Button>
-                {chosen?.id === enhancement.id && enhancement.asks && (
-                  // The enhancement's own question. Outside the Button — a
-                  // button inside a button is not a control any browser or
-                  // reader can make sense of.
-                  <div className={styles.answers}>
-                    <Typography component="span" variant="body4">
-                      {enhancement.asks.label}:
-                    </Typography>
-                    {enhancement.asks.options(source, target).length === 0 && (
-                      <Typography component="span" variant="body4">
-                        (no actors yet)
-                      </Typography>
-                    )}
-                    {enhancement.asks.options(source, target).map(choice => (
-                      <Button
-                        key={choice.value}
-                        variant={
-                          answer === choice.value ? 'contained' : 'outlined'
-                        }
-                        color="secondary"
-                        size="small"
-                        aria-pressed={answer === choice.value}
-                        onClick={() => setAnswer(choice.value)}
-                      >
-                        <Typography
-                          component="span"
-                          variant="body4"
-                          color="inherit"
-                        >
-                          {choice.name}
-                        </Typography>
-                      </Button>
-                    ))}
-                  </div>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+        <EnhancementRows
+          source={source}
+          target={target}
+          chosen={chosen}
+          answer={answer}
+          onChoose={enhancement => {
+            setChosen(enhancement);
+            setAnswer(undefined);
+          }}
+          onAnswer={setAnswer}
+        />
       }
     />
   );
