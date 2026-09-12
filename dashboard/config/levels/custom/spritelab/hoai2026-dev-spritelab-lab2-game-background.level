@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -32,17 +32,17 @@
     "image_paint_disabled": true,
     "guide_steps": [
       {
-        "text": "**Make a background.** Use AI to create the background for your story scene. Pick the words for a place and press **Generate**."
+        "text": "**Make a background for your game.** Your platformer needs scenery behind it. Pick the words for a place and press **Generate**."
       },
       {
-        "text": "**That's your background!** Make more if you like, then continue when you're ready.",
+        "text": "**That sets the mood!** Make more backgrounds if you like, then continue when you're ready.",
         "showContinue": true,
         "after": {
           "backgroundImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a background\nUse AI to create the background for your story scene. Pick the words for a place and press **Generate**."
+    "long_instructions": "# Make a background for your game\nYour platformer needs scenery behind it. Pick the words for a place and press **Generate**."
   }
 }]]></config>
 </GamelabJr>

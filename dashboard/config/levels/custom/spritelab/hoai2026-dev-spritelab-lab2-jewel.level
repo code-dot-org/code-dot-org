@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -24,25 +24,25 @@
     "visible_tabs": [
       "Images"
     ],
-    "locked_image_type": "background",
+    "locked_image_type": "sprite",
     "guide_mode": "imageGenerate",
-    "image_adlib_set": "simple",
+    "image_adlib_set": "treasure",
     "image_adlib_only": true,
     "default_image_style": "pixel",
     "image_paint_disabled": true,
     "guide_steps": [
       {
-        "text": "**Make a background.** Use AI to create the background for your story scene. Pick the words for a place and press **Generate**."
+        "text": "**Make some treasure.** Your player needs something to find. Pick the words for a treasure and press **Generate**."
       },
       {
-        "text": "**That's your background!** Make more if you like, then continue when you're ready.",
+        "text": "**Ooh, shiny!** Make more treasures if you like, then continue when you're ready.",
         "showContinue": true,
         "after": {
-          "backgroundImages": 1
+          "spriteImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a background\nUse AI to create the background for your story scene. Pick the words for a place and press **Generate**."
+    "long_instructions": "# Make some treasure\nYour player needs something to find. Pick the words for a treasure and press **Generate**."
   }
 }]]></config>
 </GamelabJr>

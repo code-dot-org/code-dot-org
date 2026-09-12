@@ -49,7 +49,8 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {countImagesByType, useGuideSteps} from '../guideSteps';
+import {countImagesByType, countWorldCells, useGuideSteps} from '../guideSteps';
+import {imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
   collectImageReferences,
@@ -94,6 +95,7 @@ import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
+  createEmptyWorld,
   DEFAULT_SCENE_GRID_SIZE,
   paintWorldCell,
   resizeWorld,
@@ -449,6 +451,63 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setActiveSceneId(scenes[0].id);
     }
   }, [scenes, activeSceneId, pinnedSceneId]);
+
+  // Premade world: paint the level's pattern into the pinned scene's world,
+  // 'B' cells drawn with the project's newest block image. Only while the
+  // world holds no placements — student work always wins — so the demo
+  // level re-seeds an emptied world but never overwrites an edited one.
+  // Pattern rows anchor to the playfield floor (resizeWorld's convention).
+  const {worldStartPattern} = levelProperties;
+  useEffect(() => {
+    if (!worldStartPattern?.length || !pinnedSceneId || !animationsSeeded) {
+      return;
+    }
+    const {orderedKeys, propsByKey} = animationList;
+    const blockImage = [...orderedKeys]
+      .reverse()
+      .map(key => propsByKey[key])
+      .find(
+        props => imageTypeFromCategories(props?.categories) === 'block'
+      )?.name;
+    if (!blockImage) {
+      return;
+    }
+    updateSources(prev => {
+      const prevScenes = prev.scenes ?? [];
+      const index = prevScenes.findIndex(s => s.id === pinnedSceneId);
+      if (index < 0) {
+        return prev;
+      }
+      const scene = prevScenes[index];
+      const {blocks, sprites} = countWorldCells(scene.world?.grid);
+      if (blocks + sprites > 0) {
+        return prev;
+      }
+      const size = sceneGridSize(scene.world);
+      const world = createEmptyWorld(size);
+      const rowShift = size - worldStartPattern.length;
+      worldStartPattern.forEach((rowText, patternRow) => {
+        const row = patternRow + rowShift;
+        if (row < 0 || row >= size) {
+          return;
+        }
+        [...rowText].slice(0, size).forEach((char, col) => {
+          if (char === 'B') {
+            world.grid[row][col] = {image: blockImage, kind: 'block'};
+          }
+        });
+      });
+      const nextScenes = [...prevScenes];
+      nextScenes[index] = {...scene, world};
+      return {...prev, scenes: nextScenes};
+    });
+  }, [
+    worldStartPattern,
+    pinnedSceneId,
+    animationsSeeded,
+    animationList,
+    updateSources,
+  ]);
 
   // Where Play begins with no explicit start scene: the pinned scene on a
   // pinned-scene level (the first scene may belong to another level sharing

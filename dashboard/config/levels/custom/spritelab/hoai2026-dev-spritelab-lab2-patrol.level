@@ -22,29 +22,21 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "visible_tabs": [
-      "Images",
       "World",
       "Code",
       "Play"
     ],
-    "locked_image_type": "sprite",
     "pinned_scene_id": "platform-scene",
     "pinned_scene_name": "Platformer",
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Make another character**, whoever or whatever you like."
-      },
-      {
-        "text": "**Give them a platform.** In the **World** tab, place them on top of some blocks. They will walk back and forth along them.",
-        "after": {
-          "spriteImages": 1
-        }
+        "text": "**Remember your second character?** Give them a platform: in the **World** tab, place them on top of some blocks. They will walk back and forth along them."
       },
       {
         "text": "**Nice!** Now switch to the **Code** tab to set them walking.",
         "after": {
-          "worldSprites": 3
+          "worldSprites": 2
         }
       },
       {
@@ -61,7 +53,7 @@
         }
       }
     ],
-    "long_instructions": "# Add someone else\nMake a second character and place it on a platform, walking back and forth. Then decide what happens when your player meets them: a friendly hello, or back to the start.",
+    "long_instructions": "# Add someone else\nPlace your second character on a platform, walking back and forth. Then decide what happens when your player meets them: a friendly hello, or back to the start.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

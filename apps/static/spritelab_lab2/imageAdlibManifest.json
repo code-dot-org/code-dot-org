@@ -457,6 +457,64 @@
         ]
       },
       "variantCount": 1
+    },
+    "sprite-treasure": {
+      "template": "A {look} {treasure}",
+      "options": {
+        "look": [
+          {
+            "id": "shiny",
+            "text": "shiny"
+          },
+          {
+            "id": "glowing",
+            "text": "glowing"
+          },
+          {
+            "id": "sparkly",
+            "text": "sparkly"
+          },
+          {
+            "id": "golden",
+            "text": "golden"
+          },
+          {
+            "id": "ancient",
+            "text": "ancient"
+          },
+          {
+            "id": "rainbow",
+            "text": "rainbow"
+          }
+        ],
+        "treasure": [
+          {
+            "id": "gem",
+            "text": "gem"
+          },
+          {
+            "id": "crystal",
+            "text": "crystal"
+          },
+          {
+            "id": "coin",
+            "text": "coin"
+          },
+          {
+            "id": "star",
+            "text": "star"
+          },
+          {
+            "id": "key",
+            "text": "key"
+          },
+          {
+            "id": "crown",
+            "text": "crown"
+          }
+        ]
+      },
+      "variantCount": 1
     }
   }
 }

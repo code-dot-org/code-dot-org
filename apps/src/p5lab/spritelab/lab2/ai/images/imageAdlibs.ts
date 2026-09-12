@@ -11,8 +11,9 @@ import manifest from '@cdo/static/spritelab_lab2/imageAdlibManifest.json';
 
 import {ImageType} from './types';
 
-/** Which combo tier a level offers; expanded is the freeplay set. */
-export type ImageAdlibSet = 'simple' | 'expanded';
+/** Which combo set a level offers; expanded is the freeplay set, treasure
+    the collectible-flavored sprite set for the treasure level. */
+export type ImageAdlibSet = 'simple' | 'expanded' | 'treasure';
 
 const adlibs = (manifest as {adlibs: AdlibsType}).adlibs;
 

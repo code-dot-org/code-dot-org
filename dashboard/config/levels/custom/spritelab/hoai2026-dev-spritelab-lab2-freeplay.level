@@ -27,6 +27,9 @@
       "World",
       "Play"
     ],
+    "image_adlib_set": "expanded",
+    "image_adlib_only": true,
+    "default_image_style": "pixel",
     "guide_mode": "instructions",
     "guide_steps": [
       {

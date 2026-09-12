@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -30,27 +30,26 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Set the scene.** Use the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far."
+        "text": "**Add your character.** Use **make new sprite** to put your character on the **left** of the scene, then snap on a **say** block so they say something. Your changes run live in the preview. When it feels right, click **Play**."
       },
       {
-        "text": "**That's your story!** Watch it play, then continue when you're ready.",
+        "text": "**They're alive!** Watch your character speak, then continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Set the scene\nUse the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far.",
+    "long_instructions": "# Add your character\nUse **make new sprite** to put your character on the left of the scene, then snap on a **say** block so they say something.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_setBackgroundImageAs"
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
+          "type": "spritelab2_makeSpriteAtPosition",
+          "fields": {
+            "POSITION": "left"
+          }
         },
         {
           "kind": "block",

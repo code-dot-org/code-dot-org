@@ -145,6 +145,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   defaultImageStyle?: ImageStyle;
   /** No paint entry points: no blank-canvas painting, no editing images. */
   imagePaintDisabled?: boolean;
+  /** Premade world for the pinned scene, one string per playfield row
+      anchored to the floor; 'B' cells become the project's newest block
+      image. Seeded only while the world holds no placements. */
+  worldStartPattern?: string[];
   // The one scene this level edits, created on first load if the project
   // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
   // before scenes existed).

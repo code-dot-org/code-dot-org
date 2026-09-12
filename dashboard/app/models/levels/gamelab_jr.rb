@@ -49,6 +49,7 @@ class GamelabJr < Gamelab
     image_adlib_only
     default_image_style
     image_paint_disabled
+    world_start_pattern
     pinned_scene_id
     pinned_scene_name
     guide_steps
