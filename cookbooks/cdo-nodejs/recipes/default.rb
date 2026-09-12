@@ -4,10 +4,11 @@
 #
 
 # Install binary nodejs from nodesource apt repo
-node.default['nodejs']['repo'] = "https://deb.nodesource.com/node_#{node['cdo-nodejs']['version']}"
-include_recipe 'nodejs'
+execute 'install_nodesource_repo' do
+  command "curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -"
+  not_if "test -f /etc/apt/sources.list.d/nodesource.list"
+end
 
-# Keep nodejs up to date
 package 'nodejs' do
   action :upgrade
 end
