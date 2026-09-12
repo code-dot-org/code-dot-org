@@ -389,6 +389,16 @@ $tab-segment-height: $tab-item-height - 2px;
   top: 0;
   inset-inline-start: 0;
   z-index: 1;
+
+  // The shared button paints a ~17x20 icon and sets no box; WCAG 2.2 target
+  // size (SC 2.5.8) wants 24x24.
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
+  }
 }
 
 .guideInstructionsTts > :first-child {
