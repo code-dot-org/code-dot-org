@@ -185,37 +185,25 @@ Two things follow that are not true of the shelf as it stands today:
 
 ## The AI picture, and what porting it costs
 
-The prompt-to-picture door is the only genuinely new one, and it is not new
-engine work: it is a route that exists, reached from a client that does not
-exist here yet.
+Its own spec, because the answer turned out to be bigger and different than
+this section said: `AI_IMAGE_GENERATION.md`. In short —
 
-**The gateway already draws.** `~/ai-gateway` serves `POST /generateImage`,
-taking `{model, prompt, images, mask, n, size, seed}` and refusing any model id
-that is not on its list of image models — an image model id is not
-interchangeable with a chat one, and silently drawing with the wrong model
-would be worse than an error (`generateImageHandler`). Its contract submodule
-pins to code-dot-org `staging`, so a contract change lands there first.
+**The service and the token already exist**, and the work is that the client
+lives in the webpack bundle (`apps/src/aiGateway`) where a standalone package
+cannot reach it. So the port is an extraction rather than a copy, and the
+design question in it is the CONTEXT: Rails authorises a token on a client
+type, a level and a channel that a webpack-global singleton supplies today.
 
-**The legacy client already carries pictures back.** `apps/src/aichat` handles
-generated image files with two safety checks before a student sees one —
-moderation and an image-safety pass — and logs `ai-chat.image_generated`
-(`api/client/generateChatResponse.ts`). Uploads are flagged on the same path
-(`redux/thunks/uploadFiles.ts`).
+**Sprite Lab is the precedent**, not the aichat client this section used to
+name. It draws by calling the gateway's text route with an image model —
+`/generateImage` exists and nothing in this repo calls it.
 
-**The world lab's tutor speaks text only.** `aiTutor/transport.ts` picks a
-transport and posts to the dashboard's `/aichat_request`; nothing in this
-package handles an attachment in either direction.
-
-So the port is the middle layer, not the ends: the part of the aichat client
-that sends a prompt, receives a file, runs it past the safety checks, and hands
-back bytes. The lab's side of it is already solved for the shape of the answer
-— an image the project holds is bytes on a URL in a folder, which is exactly
-what `importStockBackground` and an upload both write.
-
-**The safety checks are not optional and not ours to re-implement.** Whatever
-lands here must run the same moderation the legacy path runs. A picture drawn
-to order is the one thing in this lab that arrives from outside without a
-person having looked at it first.
+**And this section was wrong about safety.** It said the port must bring
+aichat's moderation with it. The lab paths do not run it: "Prompt safety is
+whatever the gateway enforces; the aichat moderation pipeline is not on this
+path" (`p5lab/.../ai/askSpriteLabAi.ts`). Whether what the gateway enforces is
+enough for a picture drawn into a learner's project is a question for whoever
+owns that path, and it is asked in the other spec rather than answered here.
 
 ## What does not exist yet
 
