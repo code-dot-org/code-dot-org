@@ -18,12 +18,18 @@ all of `apps/src/`. Subdirectories may add stricter rules.
 - Say it once, and keep it true to the code it sits on: update or delete it in
   the same change as the thing it describes.
 - "allowlist"/"blocklist", not "whitelist"/"blacklist".
+- `/** */` on exported symbols and interface/type members — IDE tooltips
+  surface those; `//` elsewhere.
 - Worked good/bad examples: `apps/src/sketchlab/reactFlow/AGENTS.md`.
 
 ## One source of truth
 
 Compute a value or condition once and reuse it; factor duplicated markup/logic
 into one helper. Don't leave two copies that can drift apart.
+
+When deleting a module, account for every responsibility it had, not just the
+one being replaced — side duties (validation, sanitization, cleanup) die
+silently otherwise.
 
 ## Reuse types, don't redeclare
 
@@ -35,6 +41,9 @@ Import the canonical type instead of a parallel shape that will drift — e.g.
 Prefer `@cdo/apps/...` (aliases `apps/src/`) over relative paths that reach
 past the parent directory. Any `../../` or deeper → use the alias; `./` and a
 single `../` are fine.
+
+Static assets (images, audio): `import`, not `require` — same bundle output,
+and imports type-check.
 
 ## Named constants over magic numbers
 
