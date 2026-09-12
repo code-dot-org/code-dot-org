@@ -78,6 +78,26 @@ More than one edit, or a companion actor, or a line aiming two things at each
 other. Anything that is only "elect this trait" belongs on the rule shelf,
 which offers exactly that in two clicks and should not be duplicated here.
 
+**And a verb the actor did not have**, which the enemy rows added and which is
+worth stating rather than leaving as an exception people notice. Two of those
+three write one `use trait` row each, so on the letter of the paragraph above
+they do not qualify. The paragraph is measuring the wrong thing.
+
+What the rule shelf hands over is a RULE — a `.rule` file in the project and a
+name in the rules list. It elects nothing on any actor. Between that and a
+patrolling guard there is still a row to drag, the right trait to find among
+ninety in a dropdown, and, before either, the knowledge that walking about is
+called "Patrol". The cost a row saves is what the learner has to already know,
+and that is not the same quantity as how many lines it writes.
+
+So the test has two halves now: more than one edit, OR a verb a level plainly
+needs that is one trait away and unfindable without knowing its name. The
+second half is the narrow one, and the guard against a shelf with ninety rows
+on it is that a verb has to be one somebody building a game would go looking
+for. Walking a beat, hurting what you touch and chasing somebody are three of
+those; `is affected by gravity` is not, because nobody arrives wanting gravity
+— they arrive wanting to jump, and that is a row already.
+
 ## Where it is asked from
 
 **On the actor's own row**, beside Rename, Clone and Delete — the menu for
@@ -373,6 +393,57 @@ handler as "already jumps" would leave an actor that could never be given a
 jump — silently, since an enhancement that believes it is applied does nothing
 at all.
 
+## The three an enemy is made of
+
+    actors/<target>.actor    use trait ⟨Patrol#Patrols Across⟩
+    actors/<target>.actor    use trait ⟨Health#Deals Damage⟩
+    actors/<target>.actor    use trait ⟨Steering#Chases⟩
+
+                             when ⟨this actor⟩ is created:
+                               set ⟨actor to chase⟩ of ⟨this actor⟩
+                                 to ⟨first actor of ⟨any ⟨Player⟩⟩⟩
+
+**Three rows and not one**, though the Crawler every platformer starts with is
+the first two applied to one actor (`fixtures/platformerSingle`). They are
+separately wanted: a spike hurts without moving, a lift patrols without
+hurting, and a chaser does neither on a beat. Bundling them would make the
+common case one click and every other case a click plus an undo.
+
+**Damage is dealt by one actor and felt by another**, and the row is about the
+dealing. A spike does not care who walks into it; a player with no health walks
+through one unharmed and correctly. So "Hurts what it touches" gives the
+hurting and leaves the feeling to the health row, rather than reaching into an
+actor nobody asked about. Its description names the TRAIT rather than that row,
+because a row's title quoted in another row's description is a coupling — and
+because two buttons carrying the same words are ambiguous to anything matching
+them by name, a screen reader included.
+
+**Chasing is the second thing to ASK.** `actor to chase` starts empty and stays
+empty until something says, so the trait alone is an enemy standing perfectly
+still with nothing anywhere to explain it. Which actor cannot be read off the
+project, and guessing it from where the sparkles were opened is the mistake the
+camera already made and taught. This is the first row to ask that question on an
+actor's behalf, and it leaves the actor itself out of the answers: told to chase
+its own kind, a hunter picks the nearest, which is usually itself.
+
+**The line goes in a `when it is created` hat.** Every frame would ask sixty
+times a second a question whose answer changes once; once in the world would
+aim the chasers that were there at the start and leave every later one standing,
+which is exactly what a spawner makes. And the value is `first actor of ⟨any
+⟨kind⟩⟩`, because the property holds one actor and a list in that socket
+compiles and chases nothing.
+
+**Asked again, it repoints.** An actor chases one thing, so saying it twice is
+a learner changing their mind rather than asking for a second hat — the reading
+the camera settled on, and the same edit in place.
+
+**The shared helpers start here.** `enhance/actorPatch` holds the four answers
+every actor enhancement needs — which file and root, who a hat is about,
+whether a trait is elected, how to rewrite one file — because these three would
+otherwise have made seven copies of the same forty lines. The four that predate
+it still carry their own; moving them is a change to working files with no
+behavior in it and belongs in its own commit.
+
 ## Testing one
 
 Two halves, and the second is the one that matters. The patch's arithmetic —
@@ -406,8 +477,9 @@ health` is
   what it says is built (above), and is the first one whose blocks used to be a
   rule.
 - **A verb it did not have** — zaps, chases, is pushable, damages on touch.
-  Collecting is built (above), which also unblocks the Coin's demo: nothing on
-  the shelf could collect one until now.
+  Collecting is built (above), and so now are chasing, damaging on touch and
+  walking a beat (above) — the three an enemy is made of. Zapping and being
+  pushable are the same shape again.
 - **A control scheme** — the keys and the traits behind them, as one act.
   Walking and jumping is built (above); climbing with the arrows is built and
   was a rule before it; a top-down scheme and a driving one are the same shape

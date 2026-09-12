@@ -9,8 +9,23 @@
 //
 // So the test for whether something belongs here: it takes MORE THAN ONE EDIT,
 // or it needs a companion actor, or it needs a line aiming two things at each
-// other. Anything that is only "elect this trait" belongs on the rule shelf,
-// which already offers exactly that.
+// other. Anything that is only "elect this trait" belongs on the rule shelf.
+//
+// …OR IT IS A VERB the actor did not have, which the enemy rows added and
+// which is the narrow half of the test. Two of those write one `use trait` row
+// each, so by the paragraph above they do not qualify — and the paragraph is
+// measuring the wrong thing. What the rule shelf hands over is a RULE: a file
+// in the project and a name in the rules list. It elects nothing on any actor.
+// Between that and a patrolling guard there is still a row to drag, the right
+// trait to find among ninety, and, before either, the knowledge that walking
+// about is called "Patrol". What a row saves is what the learner has to
+// already know, which is not the same quantity as how many lines it writes.
+//
+// The guard against a shelf with ninety rows on it is that the verb has to be
+// one somebody building a game would go looking for. Walking a beat, hurting
+// what you touch and chasing somebody are three of those; "is affected by
+// gravity" is not, because nobody arrives wanting gravity — they arrive
+// wanting to jump, and that is a row already (specs/ENHANCEMENTS.md).
 //
 // WHAT IT LEAVES BEHIND IS A PROJECT. Every edit is ordinary blocks in files
 // the learner owns (`./patch`), so an enhancement is a shortcut through work
@@ -35,9 +50,12 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {cameraFollowEnhancement} from './cameraFollow';
+import {chasesEnhancement} from './chases';
 import {climbArrowsEnhancement} from './climbArrows';
 import {collectsEnhancement} from './collects';
+import {dealsDamageEnhancement} from './dealsDamage';
 import {healthEnhancement} from './health';
+import {patrolsEnhancement} from './patrols';
 import {platformerControlsEnhancement} from './platformerControls';
 import {scoreboardEnhancement} from './scoreboard';
 import {typesOutTextEnhancement} from './typesOutText';
@@ -147,6 +165,13 @@ export const ENHANCEMENTS: readonly Enhancement[] = [
   collectsEnhancement,
   climbArrowsEnhancement,
   typesOutTextEnhancement,
+  // …then the three an ENEMY is made of, after the ones a protagonist wants.
+  // A level is built by putting something in it to be, and then something to
+  // avoid: the Crawler every platformer starts with is the first two of these
+  // applied to one actor (`fixtures/platformerSingle`).
+  patrolsEnhancement,
+  dealsDamageEnhancement,
+  chasesEnhancement,
   cameraFollowEnhancement,
   scoreboardEnhancement,
 ];
