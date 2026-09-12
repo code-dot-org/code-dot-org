@@ -1,0 +1,17 @@
+{
+  "name": "ses-notifications-lambda",
+  "version": "1.0.0",
+  "description": "Lambda function to process SES notifications and store to S3",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "@aws-sdk/client-s3": "^3.0.0",
+    "uuid": "^9.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
