@@ -35,7 +35,7 @@
         "text": "**Make a platform block.** Platformers are built from blocks. Pick a material for a square tile the player can stand on and press **Generate**."
       },
       {
-        "text": "**Nice!** Make more block styles if you like, then continue when you're ready.",
+        "text": "**Nice!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "blockImages": 1

@@ -36,16 +36,16 @@
       "..........",
       ".BB.......",
       "......BB..",
-      ".........."
+      "...S......"
     ],
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**A ready-made world.** We laid out some platforms using your block. Press **Run** and explore: run, jump, and see if you can climb all the way to the top. Your player lands on blocks and can jump again from them. Continue when you're ready.",
+        "text": "**A ready-made world.** We laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top - your player lands on blocks and can jump again from them. Continue when you're ready.",
         "showContinue": true
       }
     ],
-    "long_instructions": "# A ready-made world\nWe laid out some platforms using your block. Press **Run** and explore: run, jump, and see if you can climb all the way to the top."
+    "long_instructions": "# A ready-made world\nWe laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top."
   }
 }]]></config>
 </GamelabJr>

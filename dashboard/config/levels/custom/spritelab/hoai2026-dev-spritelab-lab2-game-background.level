@@ -36,7 +36,7 @@
         "text": "**Make a background for your game.** Your platformer needs scenery behind it. Pick the words for a place and press **Generate**."
       },
       {
-        "text": "**That sets the mood!** Make more backgrounds if you like, then continue when you're ready.",
+        "text": "**That sets the mood!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "backgroundImages": 1

@@ -452,25 +452,32 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [scenes, activeSceneId, pinnedSceneId]);
 
-  // Premade world: paint the level's pattern into the pinned scene's world,
-  // 'B' cells drawn with the project's newest block image. Only while the
-  // world holds no placements — student work always wins — so the demo
-  // level re-seeds an emptied world but never overwrites an edited one.
-  // Pattern rows anchor to the playfield floor (resizeWorld's convention).
+  // Premade world: paint the level's pattern into the pinned scene's world.
+  // 'B' cells draw the project's newest block image; 'S' cells its first
+  // sprite image (the story's hero, the platform arc's player). Each kind
+  // seeds only while the world holds no placement of that kind, and only
+  // into empty cells, so student edits always win — the player level seeds
+  // the start sprite, and the demo level later merges its platforms in
+  // around it. Pattern rows anchor to the playfield floor (resizeWorld's
+  // convention).
   const {worldStartPattern} = levelProperties;
   useEffect(() => {
     if (!worldStartPattern?.length || !pinnedSceneId || !animationsSeeded) {
       return;
     }
     const {orderedKeys, propsByKey} = animationList;
-    const blockImage = [...orderedKeys]
+    const typeOf = (key: string) =>
+      imageTypeFromCategories(propsByKey[key]?.categories);
+    const cellFor: {[char: string]: WorldCell} = {};
+    const blockKey = [...orderedKeys]
       .reverse()
-      .map(key => propsByKey[key])
-      .find(
-        props => imageTypeFromCategories(props?.categories) === 'block'
-      )?.name;
-    if (!blockImage) {
-      return;
+      .find(k => typeOf(k) === 'block');
+    if (blockKey) {
+      cellFor.B = {image: propsByKey[blockKey].name, kind: 'block'};
+    }
+    const spriteKey = orderedKeys.find(k => typeOf(k) === 'sprite');
+    if (spriteKey) {
+      cellFor.S = {image: propsByKey[spriteKey].name, kind: 'sprite'};
     }
     updateSources(prev => {
       const prevScenes = prev.scenes ?? [];
@@ -479,26 +486,36 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return prev;
       }
       const scene = prevScenes[index];
-      const {blocks, sprites} = countWorldCells(scene.world?.grid);
-      if (blocks + sprites > 0) {
-        return prev;
-      }
+      const counts = countWorldCells(scene.world?.grid);
       const size = sceneGridSize(scene.world);
-      const world = createEmptyWorld(size);
+      const grid = (
+        scene.world?.grid?.length
+          ? scene.world.grid
+          : createEmptyWorld(size).grid
+      ).map(cells => [...cells]);
       const rowShift = size - worldStartPattern.length;
+      let painted = false;
       worldStartPattern.forEach((rowText, patternRow) => {
         const row = patternRow + rowShift;
         if (row < 0 || row >= size) {
           return;
         }
         [...rowText].slice(0, size).forEach((char, col) => {
-          if (char === 'B') {
-            world.grid[row][col] = {image: blockImage, kind: 'block'};
+          const cell = cellFor[char];
+          const placed =
+            cell?.kind === 'block' ? counts.blocks : counts.sprites;
+          if (!cell || placed > 0 || grid[row][col]) {
+            return;
           }
+          grid[row][col] = cell;
+          painted = true;
         });
       });
+      if (!painted) {
+        return prev;
+      }
       const nextScenes = [...prevScenes];
-      nextScenes[index] = {...scene, world};
+      nextScenes[index] = {...scene, world: {grid}};
       return {...prev, scenes: nextScenes};
     });
   }, [

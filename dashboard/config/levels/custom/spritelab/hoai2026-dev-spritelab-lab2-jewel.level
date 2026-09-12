@@ -36,7 +36,7 @@
         "text": "**Make some treasure.** Your player needs something to find. Pick the words for a treasure and press **Generate**."
       },
       {
-        "text": "**Ooh, shiny!** Make more treasures if you like, then continue when you're ready.",
+        "text": "**Ooh, shiny!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "spriteImages": 1

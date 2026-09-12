@@ -150,8 +150,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       earlier level already made. */
   imageTargetNew?: boolean;
   /** Premade world for the pinned scene, one string per playfield row
-      anchored to the floor; 'B' cells become the project's newest block
-      image. Seeded only while the world holds no placements. */
+      anchored to the floor. 'B' cells become the project's newest block
+      image, 'S' its first sprite image. Each kind seeds only while the
+      world holds no placement of that kind, into empty cells only. */
   worldStartPattern?: string[];
   // The one scene this level edits, created on first load if the project
   // lacks it. Must not be 'scene-1' (the id synthesized for sources saved

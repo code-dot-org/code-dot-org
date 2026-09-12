@@ -36,7 +36,7 @@
         "text": "**Make another character.** Every story needs a second character - a friend, a rival, a sidekick. Pick the words and press **Generate**."
       },
       {
-        "text": "**What a pair!** Make more characters if you like, then continue when you're ready.",
+        "text": "**What a pair!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "spriteImages": 1

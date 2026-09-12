@@ -23,10 +23,23 @@
   width: 850px;
 }
 
-// Central-mode presentation: the same panel parked in the page — no modal
-// entrance animation.
+// Central-mode presentation: the panel's content parked on the lab's black
+// stage — no modal entrance, no card chrome (the component forces the dark
+// palette). Painted panel color (the alternatives ring gap) matches the
+// ground.
 .dialogHost .inlineDialog {
   animation: none;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  --dialog-panel-bg: var(--neutral-base-black);
+
+  .footer {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 
 .dialogHost .dialog :focus-visible {

@@ -35,7 +35,7 @@
         "text": "**Make a character.** Create the hero of your story. Pick the words that describe them and press **Generate**."
       },
       {
-        "text": "**There's your hero!** Make more characters if you like, then continue when you're ready.",
+        "text": "**There's your hero!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "spriteImages": 1

@@ -35,7 +35,7 @@
         "text": "**Make a background.** Use AI to create the background for your story scene. Pick the words for a place and press **Generate**."
       },
       {
-        "text": "**That's your background!** Make more if you like, then continue when you're ready.",
+        "text": "**That's your background!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "backgroundImages": 1

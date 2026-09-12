@@ -136,7 +136,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
 }) => {
   const isNew = animKey === null;
   const {theme} = useTheme();
-  const mode = theme === 'Dark' ? 'dark' : 'light';
+  // Inline (central) mode sits on the lab's black stage, so it wears the
+  // dark palette whatever the page theme.
+  const mode = inline || theme === 'Dark' ? 'dark' : 'light';
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
@@ -186,87 +188,91 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           ? 'View, edit, rename, or delete this image.'
           : 'View, edit, or delete this image.'}
       </span>
-      <div className={moduleStyles.header}>
-        {renaming ? (
-          <>
-            <TextField
-              name="imageName"
-              aria-label="Image name"
-              className={moduleStyles.headerNameField}
-              value={nameDraft}
-              aria-invalid={!!shownNameError || undefined}
-              aria-describedby={
-                shownNameError ? 'rename-image-error' : undefined
-              }
-              maxLength={IMAGE_NAME_MAX_LENGTH}
-              onChange={e => {
-                setNameDraft(sanitizeImageName(e.target.value));
-                setNameError(null);
-              }}
-              onKeyDown={e => {
-                if (e.key === 'Enter' && draftUsable) {
-                  commitRename();
-                } else if (e.key === 'Escape') {
-                  // Stop it here or the whole dialog closes.
-                  e.stopPropagation();
-                  cancelRename();
+      {/* Inline mode drops the title bar: the section's aria-label still
+          names it, and the floating guide carries the instruction. */}
+      {!inline && (
+        <div className={moduleStyles.header}>
+          {renaming ? (
+            <>
+              <TextField
+                name="imageName"
+                aria-label="Image name"
+                className={moduleStyles.headerNameField}
+                value={nameDraft}
+                aria-invalid={!!shownNameError || undefined}
+                aria-describedby={
+                  shownNameError ? 'rename-image-error' : undefined
                 }
-              }}
-            />
-            <button
-              type="button"
-              className={moduleStyles.iconButton}
-              aria-label="Save name"
-              disabled={!draftUsable}
-              onClick={commitRename}
-            >
-              <FontAwesomeV6Icon iconName="check" />
-            </button>
-            <button
-              type="button"
-              className={moduleStyles.iconButton}
-              aria-label="Cancel rename"
-              onClick={cancelRename}
-            >
-              <FontAwesomeV6Icon iconName="xmark" />
-            </button>
-            {/* Beside the field: below it would change the header's height
-                  for the moment it shows. */}
-            {shownNameError && (
-              <span
-                id="rename-image-error"
-                role="status"
-                className={moduleStyles.inlineFieldError}
-              >
-                {shownNameError}
-              </span>
-            )}
-          </>
-        ) : (
-          <>
-            {/* Tabbable so the focus trap lands on the title first (the
-                  pixel editor's pattern). */}
-            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-            <span className={moduleStyles.headerTitle} tabIndex={0}>
-              {title}
-            </span>
-            {advanced && !isNew && view === 'details' && (
+                maxLength={IMAGE_NAME_MAX_LENGTH}
+                onChange={e => {
+                  setNameDraft(sanitizeImageName(e.target.value));
+                  setNameError(null);
+                }}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' && draftUsable) {
+                    commitRename();
+                  } else if (e.key === 'Escape') {
+                    // Stop it here or the whole dialog closes.
+                    e.stopPropagation();
+                    cancelRename();
+                  }
+                }}
+              />
               <button
                 type="button"
                 className={moduleStyles.iconButton}
-                aria-label="Rename"
-                onClick={() => {
-                  setNameDraft(name || '');
-                  setNameError(null);
-                  setRenaming(true);
-                }}
+                aria-label="Save name"
+                disabled={!draftUsable}
+                onClick={commitRename}
               >
-                <FontAwesomeV6Icon iconName="pencil" />
+                <FontAwesomeV6Icon iconName="check" />
               </button>
-            )}
-          </>
-        )}
-      </div>
+              <button
+                type="button"
+                className={moduleStyles.iconButton}
+                aria-label="Cancel rename"
+                onClick={cancelRename}
+              >
+                <FontAwesomeV6Icon iconName="xmark" />
+              </button>
+              {/* Beside the field: below it would change the header's height
+                  for the moment it shows. */}
+              {shownNameError && (
+                <span
+                  id="rename-image-error"
+                  role="status"
+                  className={moduleStyles.inlineFieldError}
+                >
+                  {shownNameError}
+                </span>
+              )}
+            </>
+          ) : (
+            <>
+              {/* Tabbable so the focus trap lands on the title first (the
+                  pixel editor's pattern). */}
+              {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+              <span className={moduleStyles.headerTitle} tabIndex={0}>
+                {title}
+              </span>
+              {advanced && !isNew && view === 'details' && (
+                <button
+                  type="button"
+                  className={moduleStyles.iconButton}
+                  aria-label="Rename"
+                  onClick={() => {
+                    setNameDraft(name || '');
+                    setNameError(null);
+                    setRenaming(true);
+                  }}
+                >
+                  <FontAwesomeV6Icon iconName="pencil" />
+                </button>
+              )}
+            </>
+          )}
+        </div>
+      )}
       {view === 'generate' ? (
         <GenerateImageView
           existing={
@@ -386,19 +392,23 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               )}
             </div>
           </div>
-          <div className={moduleStyles.footer}>
-            <div className={moduleStyles.footerLeft}>
-              <DeleteImageButton onDelete={onDelete} />
-            </div>
-            <button
-              type="button"
-              className={moduleStyles.button}
-              onClick={() => setView('generate')}
-            >
-              <FontAwesomeV6Icon iconName="sparkles" />
-              Generate with AI
-            </button>
-            {!inline && (
+          {/* Central mode's summary is a resting point, not a manager:
+              the guide's Continue is the only action, so no footer — no
+              delete, no second generate (the alternatives row above still
+              offers the session's variants). */}
+          {!inline && (
+            <div className={moduleStyles.footer}>
+              <div className={moduleStyles.footerLeft}>
+                <DeleteImageButton onDelete={onDelete} />
+              </div>
+              <button
+                type="button"
+                className={moduleStyles.button}
+                onClick={() => setView('generate')}
+              >
+                <FontAwesomeV6Icon iconName="sparkles" />
+                Generate with AI
+              </button>
               <button
                 type="button"
                 className={moduleStyles.primaryButton}
@@ -406,8 +416,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               >
                 {imageChanged ? 'Accept' : 'Done'}
               </button>
-            )}
-          </div>
+            </div>
+          )}
         </>
       )}
     </>
