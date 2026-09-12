@@ -405,9 +405,8 @@ module Api::V1::Pd
 
     test 'update sends a decision email once if status changed to decision and if associated with an RP' do
       sign_in @program_manager
-      Pd::Application::TeacherApplicationMailer.expects(:accepted).
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
+      Pd::Application::TeacherApplication.any_instance.expects(:send_pd_application_email).
+        with('accepted').once
 
       post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
         status: 'accepted'
@@ -421,7 +420,7 @@ module Api::V1::Pd
 
     test 'update does not send a decision email if status changed to decision but no RP' do
       sign_in @program_manager
-      Pd::Application::TeacherApplicationMailer.expects(:accepted).never
+      Pd::Application::TeacherApplication.any_instance.expects(:send_pd_application_email).never
 
       post :update, params: {id: @csd_teacher_application.id, application: {
         status: 'accepted'
@@ -433,9 +432,8 @@ module Api::V1::Pd
       csp_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, form_data_hash: hash_csp_with_rp
 
       sign_in @program_manager
-      Pd::Application::TeacherApplicationMailer.expects(:accepted).never
+      Pd::Application::TeacherApplication.any_instance.expects(:send_pd_application_email).never
 
-      csp_teacher_application_with_partner.expects(:send_pd_application_email).never
       post :update, params: {id: csp_teacher_application_with_partner.id, application: {
         status: 'pending'
       }}
