@@ -205,7 +205,7 @@ class Lesson < ApplicationRecord
 
   # Fields rendered by the markdown component that resolves vocabulary
   # references itself. Their `[v key]` references ship unsubstituted, against
-  # the definitions field_vocabulary_definitions collects.
+  # the definitions vocabulary_definitions_in collects.
   #
   # A field belongs here only once *every* surface that renders it can resolve
   # the syntax: `preparation` appears on the course rollup pages as well as the
@@ -229,25 +229,16 @@ class Lesson < ApplicationRecord
     return result
   end
 
-  # Returns the word and definition named by each vocabulary reference in this
-  # lesson's CLIENT_VOCAB_FIELDS, keyed by the reference. Every other field is
-  # still substituted on the way out.
-  def field_vocabulary_definitions
-    CLIENT_VOCAB_FIELDS.reduce({}) do |defs, field|
-      Services::MarkdownPreprocessor.collect_vocab_definitions(get_localized_property(field), defs)
-    end
-  end
-
-  # The above plus the references in the activity sections, which the lesson
-  # plan also resolves itself (see ActivitySection#summarize_for_lesson_show).
-  # Separate from field_vocabulary_definitions because reaching for the sections
-  # costs a query per lesson, which the rollup pages -- a whole unit or course of
-  # them at a time -- would pay for content they never render.
-  def vocabulary_definitions
-    activity_sections.reduce(field_vocabulary_definitions) do |defs, section|
-      section.client_resolved_markdown.reduce(defs) do |markdown_defs, markdown|
-        Services::MarkdownPreprocessor.collect_vocab_definitions(markdown, markdown_defs)
-      end
+  # Returns the word and definition named by each vocabulary reference in the
+  # given markdown, keyed by the reference.
+  #
+  # Takes the strings rather than the field names so a caller collects from
+  # exactly what it ships, and reads each field once: rendering a field and then
+  # re-reading it to collect would localize it twice, and leaves the two able to
+  # disagree.
+  def vocabulary_definitions_in(*markdown)
+    markdown.flatten.reduce({}) do |definitions, content|
+      Services::MarkdownPreprocessor.collect_vocab_definitions(content, definitions)
     end
   end
 
@@ -611,6 +602,13 @@ class Lesson < ApplicationRecord
   end
 
   def summarize_for_lesson_show(user, can_view_teacher_markdown, unit_group_unit: nil)
+    # Rendered up front so the vocabulary collection below sees the same strings
+    # that ship. They still hold their `[v key]` references: render_property
+    # leaves those to the client for every CLIENT_VOCAB_FIELDS field.
+    # Symbols, like every other render_property caller.
+    client_vocab_markdown = CLIENT_VOCAB_FIELDS.index_with {|field| render_property(field.to_sym)}
+    activities = lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user, unit_group_unit: unit_group_unit)}
+
     {
       id: id,
       unit: script.summarize_for_lesson_show(unit_group_unit: unit_group_unit),
@@ -619,20 +617,23 @@ class Lesson < ApplicationRecord
       key: key,
       duration: total_lesson_duration,
       displayName: localized_name,
-      overview: render_property(:overview),
+      overview: client_vocab_markdown['overview'],
       announcements: announcements,
-      purpose: render_property(:purpose),
-      preparation: render_property(:preparation),
-      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user, unit_group_unit: unit_group_unit)},
+      purpose: client_vocab_markdown['purpose'],
+      preparation: client_vocab_markdown['preparation'],
+      activities: activities,
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
-      vocabularyDefinitions: vocabulary_definitions,
+      vocabularyDefinitions: vocabulary_definitions_in(
+        client_vocab_markdown.values,
+        activity_sections.map(&:client_resolved_markdown)
+      ),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_instructor: script.can_be_instructor?(user),
-      assessmentOpportunities: render_property(:assessment_opportunities),
+      assessmentOpportunities: client_vocab_markdown['assessment_opportunities'],
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedInstructor: user&.verified_instructor?,
@@ -647,14 +648,17 @@ class Lesson < ApplicationRecord
     if Policies::Courses.modularity_enabled? && unit_group_unit
       link_path = course_unit_lesson_path(unit_group_unit.unit_group, unit_group_unit.position, self)
     end
+    preparation = render_property(:preparation)
+
     {
       key: key,
       position: relative_position,
       displayName: localized_name,
-      preparation: render_property(:preparation),
+      preparation: preparation,
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
-      vocabularyDefinitions: field_vocabulary_definitions,
+      # Only this page's own markdown: it renders no activity sections.
+      vocabularyDefinitions: vocabulary_definitions_in(preparation),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
