@@ -1,3 +1,40 @@
+<%#
+  Stack:    DATA-<rack_env> — per-environment. RAILS_ENV picks both the
+            rendered config and the deployed CloudFormation stack name.
+            Typical values: production, staging, test, levelbuilder.
+  Profile:  codeorg-admin
+  Cadence:  uncommon. The Redshift cluster (`Tableau`) is long-lived and
+            holds the analytics warehouse; treat any change that could
+            replace it as production-critical.
+
+  Always, in order (substitute the target env):
+    export AWS_PROFILE=codeorg-admin
+    bundle exec rake stack:data:lint     RAILS_ENV=production
+    bundle exec rake stack:data:validate RAILS_ENV=production
+    bundle exec rake stack:data:start    RAILS_ENV=production
+    unset AWS_PROFILE
+
+  ADMIN=1 is NOT required: the IAM Roles in this stack (DMSS3Role,
+  AuroraS3Role, GlueRole) all carry `PermissionsBoundary: !ImportValue
+  IAM-DevPermissions`, so the default CloudFormationService role can
+  manage them.
+
+  Stack policy: aws/cloudformation/data-policy.yml.erb is auto-discovered
+  by lib/cdo/aws/cloud_formation.rb (sibling `<filename>-policy.<ext>`) and
+  applied during create/update. It denies Replace/Delete on the Tableau
+  Redshift cluster — a template change that would replace Tableau will
+  fail until the policy is temporarily relaxed.
+
+  Initial creation requires many parameters (RDS host/user/password,
+  Redshift admin and ETL user passwords, etc. — see the Parameters block
+  below). Provide via locals.yml using underscored names (e.g.
+  `redshift_admin_password`); CDO.* maps these to the CamelCase
+  CloudFormation parameter names. On update, parameters are reused if
+  omitted.
+
+  Rake wiring: lib/rake/stack.rake (the `rack_stacks` loop — appends
+  `-<rack_env>` to the deployed stack name).
+%>
 <%
 require 'cdo/aws/dms'
 require 'active_support/core_ext/numeric/bytes'

@@ -1,3 +1,29 @@
+<%#
+  Stack:    VPC (single account-wide stack; deployed CloudFormation stack name is "VPC")
+  Profile:  codeorg-admin
+  Cadence:  rare, manual. This stack defines the network plane every other
+            stack runs in (subnets, NAT, security groups, VPC endpoints).
+            A bad change can disconnect every running EC2/RDS/Redshift
+            resource in the account. Lint and validate before every :start.
+
+  Always, in order:
+    export AWS_PROFILE=codeorg-admin
+    bundle exec rake stack:vpc:lint     RAILS_ENV=production
+    bundle exec rake stack:vpc:validate RAILS_ENV=production
+    bundle exec rake stack:vpc:start    RAILS_ENV=production
+    unset AWS_PROFILE
+
+  ADMIN=1 is NOT required: this stack manages only EC2/VPC resources, no
+  IAM. The default CloudFormationService role can manage these.
+
+  Many resources in this stack are referenced by other stacks via
+  !ImportValue VPC-* (e.g. VPC-RedshiftSubnetGroup, VPC-DMSSecurityGroup,
+  AccessLogs-Config). Renaming or removing an exported value will fail to
+  update if any consumer stack still references it — search for the export
+  name across this directory before deleting.
+
+  Rake wiring: lib/rake/stack.rake (the `other_stacks` loop).
+%>
 <%
 require 'cdo/cloud_formation/vpc'
 self.class.include VPC
