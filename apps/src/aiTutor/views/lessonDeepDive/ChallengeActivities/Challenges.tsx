@@ -1,8 +1,7 @@
+import {Challenge} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useState} from 'react';
 
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {Challenge} from '../types';
 
 import ChallengeBox from './ChallengeBox';
 import ChallengePicker from './ChallengePicker';
