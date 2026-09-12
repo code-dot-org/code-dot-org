@@ -1,0 +1,46 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "World",
+      "Play"
+    ],
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
+    "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Put your treasure in the world.** Pick it from the palette and place it somewhere your player can reach."
+      },
+      {
+        "text": "**It's in your world.** Click **Play** to run around and find it, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "worldSprites": 2
+        }
+      }
+    ],
+    "long_instructions": "# Put your treasure in the world\nPick your treasure from the palette and place it somewhere your player can reach."
+  }
+}]]></config>
+</GamelabJr>

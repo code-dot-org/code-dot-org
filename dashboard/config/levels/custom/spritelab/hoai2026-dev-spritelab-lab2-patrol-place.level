@@ -1,0 +1,46 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "World",
+      "Play"
+    ],
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
+    "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Remember your second character?** Give them a platform: place them on top of some blocks."
+      },
+      {
+        "text": "**They're in your world.** Click **Play** to go and find them, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "worldSprites": 3
+        }
+      }
+    ],
+    "long_instructions": "# Add your second character\nGive them a platform: place them on top of some blocks."
+  }
+}]]></config>
+</GamelabJr>

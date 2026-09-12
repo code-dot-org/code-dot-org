@@ -22,7 +22,6 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "visible_tabs": [
-      "World",
       "Code",
       "Play"
     ],
@@ -31,29 +30,17 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Put your treasure in the world.** In the **World** tab, pick your treasure from the palette and place it somewhere your player can reach."
+        "text": "**Make your treasure worth finding.** Add **when [ ] touches [ ]**, picking your character and your treasure from the dropdowns, and put a **say** block inside it.  Then click **Play** and go and get it."
       },
       {
-        "text": "**Now make it worth finding.** Head to the **Code** tab - your platformer is waiting there.",
-        "after": {
-          "worldSprites": 2
-        }
-      },
-      {
-        "text": "**When they touch it, say something!** Add **when [ ] touches [ ]**, picking your character and your treasure from the dropdowns, and put a **say** block inside it. Then press **Play** and go get the treasure.",
-        "after": {
-          "tab": "Code"
-        }
-      },
-      {
-        "text": "**Treasure hunt!** Go find your treasure, then continue when you're ready.",
+        "text": "**Your treasure says something when you reach it.** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Add some treasure\nPlace your treasure in the world, and have your character say something when they touch it.",
+    "long_instructions": "# Make your treasure worth finding\nAdd **when [ ] touches [ ]**, picking your character and your treasure, and put a **say** block inside it.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

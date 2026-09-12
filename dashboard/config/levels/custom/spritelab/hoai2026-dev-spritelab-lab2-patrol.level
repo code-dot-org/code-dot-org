@@ -22,7 +22,6 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "visible_tabs": [
-      "World",
       "Code",
       "Play"
     ],
@@ -31,29 +30,17 @@
     "guide_mode": "instructions",
     "guide_steps": [
       {
-        "text": "**Remember your second character?** Give them a platform: in the **World** tab, place them on top of some blocks. They will walk back and forth along them."
+        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**.  Then add **when [ ] touches [ ]**, pick your player and your second character, and decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start.  Click **Play** and go and meet them."
       },
       {
-        "text": "**Nice!** Now switch to the **Code** tab to set them walking.",
-        "after": {
-          "worldSprites": 3
-        }
-      },
-      {
-        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**. Then add **when [ ] touches [ ]**, pick your player and your new character from the dropdowns, and decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start. Press **Play** and go and meet them.",
-        "after": {
-          "tab": "Code"
-        }
-      },
-      {
-        "text": "**Your world has company.** Go say hello, then continue when you're ready.",
+        "text": "**Your world has company.** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Add someone else\nPlace your second character on a platform, walking back and forth. Then decide what happens when your player meets them: a friendly hello, or back to the start.",
+    "long_instructions": "# Set them walking\nUse **sprite [them] begins [patrolling left and right on blocks]**, then decide what happens when your player meets them: a friendly hello, or back to the start.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
