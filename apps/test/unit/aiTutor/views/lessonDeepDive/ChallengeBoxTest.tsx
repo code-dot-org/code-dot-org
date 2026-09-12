@@ -9,6 +9,11 @@ import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/crea
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
+
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},

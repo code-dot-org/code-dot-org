@@ -1,9 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Reaction} from '@code-dot-org/lesson-deep-dive';
+import {useApiClient} from '@code-dot-org/core/api';
+import {
+  addReaction,
+  Reaction,
+  removeReaction,
+} from '@code-dot-org/lesson-deep-dive';
 import classNames from 'classnames';
 import React, {FC, useEffect, useRef, useState} from 'react';
-
-import {addReaction, removeReaction} from './reactionsApi';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -142,6 +145,8 @@ const ReactionChips: FC<ReactionChipsProps> = ({
     };
   }, [pickerOpen]);
 
+  const api = useApiClient();
+
   const toggle = (emoji: string) => {
     if (pending.has(emoji)) {
       return;
@@ -153,8 +158,8 @@ const ReactionChips: FC<ReactionChipsProps> = ({
     setPending(prev => new Set(prev).add(emoji));
 
     const request = nowReacted
-      ? addReaction(responseId, emoji)
-      : removeReaction(responseId, emoji);
+      ? addReaction(api.transport, responseId, emoji)
+      : removeReaction(api.transport, responseId, emoji);
     request
       .then(serverReactions => applyItems(serverReactions))
       .catch(() => applyItems(previous))
