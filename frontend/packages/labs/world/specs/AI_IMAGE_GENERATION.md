@@ -1,9 +1,14 @@
 # Drawing a picture to order
 
-The fifth door of the Actor Creator's picture step: a prompt, and a picture
-back (`ACTOR_CREATION_WIZARD.md`). Not built. This is what it would take, what
-already exists, and the two things worth finding out before anybody writes a
-line of it.
+How the lab would reach the real service. Not built. This is what it would
+take, what already exists, and the two things worth finding out before anybody
+writes a line of it.
+
+Two specs, and this is the further one. **`IMAGE_GENERATION.md`** is what the
+lab DOES — the flow a learner walks and the seam it stands on, which is
+buildable today against a fixture and needs nothing here. **This** is one of
+that seam's three transports: the product one, which is a port and a policy
+question. Nothing in the flow waits on it.
 
 ## What already exists, and where
 
