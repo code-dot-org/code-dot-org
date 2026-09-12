@@ -21,14 +21,14 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "pinned_scene_type": "platform",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "guide_steps": [
       {
         "text": "**Add your background to the game.** Use the **set background** block and pick the one you just made. Then press **Play** to see your world dressed up."

@@ -21,16 +21,12 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Images"
-    ],
-    "locked_image_type": "sprite",
-    "guide_mode": "imageGenerate",
-    "image_adlib_set": "treasure",
-    "image_adlib_only": true,
-    "default_image_style": "pixel",
-    "image_paint_disabled": true,
-    "image_starts_new": true,
+    "level_mode": {
+      "kind": "image",
+      "imageType": "sprite",
+      "adlibs": "treasure",
+      "startsNew": true
+    },
     "guide_steps": [
       {
         "text": "**Make some treasure.** Your player needs something to find. Pick the words for a treasure and press **Generate**."

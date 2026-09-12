@@ -21,17 +21,17 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "pinned_scene_type": "platform",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "world_start_pattern": [
       "...S......"
     ],
-    "guide_mode": "instructions",
     "guide_steps": [
       {
         "text": "**Make your character the player.** There they are, waiting in your world. Drag out **set [ ] as player** and pick them. Then click **Play** and try the arrow keys: **left** and **right** to run, **up** to jump."

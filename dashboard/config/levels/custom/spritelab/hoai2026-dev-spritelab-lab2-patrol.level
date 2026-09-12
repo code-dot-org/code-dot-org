@@ -21,14 +21,14 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "pinned_scene_type": "platform",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "guide_steps": [
       {
         "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**.  Then add **when [ ] touches [ ]**, pick your player and your second character, and decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start.  Click **Play** and go and meet them."

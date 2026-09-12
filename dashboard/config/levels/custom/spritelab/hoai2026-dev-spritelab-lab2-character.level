@@ -21,15 +21,10 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Images"
-    ],
-    "locked_image_type": "sprite",
-    "guide_mode": "imageGenerate",
-    "image_adlib_set": "simple",
-    "image_adlib_only": true,
-    "default_image_style": "pixel",
-    "image_paint_disabled": true,
+    "level_mode": {
+      "kind": "image",
+      "imageType": "sprite"
+    },
     "guide_steps": [
       {
         "text": "**Make a character.** Create the hero of your story. Pick the words that describe them and press **Generate**."

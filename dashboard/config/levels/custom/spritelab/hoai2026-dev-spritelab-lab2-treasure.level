@@ -21,14 +21,14 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "pinned_scene_type": "platform",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "guide_steps": [
       {
         "text": "**Make your treasure worth finding.** Add **when [ ] touches [ ]**, picking your character and your treasure from the dropdowns, and put a **say** block inside it.  Then click **Play** and go and get it."

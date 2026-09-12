@@ -21,12 +21,14 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Play"
-    ],
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "pinned_scene_type": "platform",
+    "level_mode": {
+      "kind": "play"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "world_start_pattern": [
       "..........",
       "......BB..",
@@ -39,7 +41,6 @@
       "......BB..",
       "...S......"
     ],
-    "guide_mode": "instructions",
     "guide_steps": [
       {
         "text": "**A ready-made world.** We laid out some platforms using your block. Run, jump, and see if you can climb all the way to the top - your player lands on blocks and can jump again from them. Continue when you're ready.",

@@ -21,14 +21,14 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "story-scene",
-    "pinned_scene_name": "Story",
-    "pinned_scene_type": "story",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
     "guide_steps": [
       {
         "text": "**Add your character.** Use **make new sprite** to put your character on the **left** of the scene, then snap on a **say** block so they say something. Your changes run live in the preview. When it feels right, click **Play**."

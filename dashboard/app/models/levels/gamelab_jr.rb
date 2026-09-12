@@ -39,23 +39,10 @@ class GamelabJr < Gamelab
     standalone_app_name
     enable_big_playspace
     uses_lab2
-    guide_mode
-    show_world_tab
-    world_grid_size
-    visible_tabs
-    locked_image_type
-    images_advanced
-    image_adlib_set
-    image_adlib_only
-    default_image_style
-    image_paint_disabled
-    image_starts_new
+    level_mode
+    pinned_scene
     world_start_pattern
-    pinned_scene_id
-    pinned_scene_name
-    pinned_scene_type
     guide_steps
-    guide_collapsible
   )
 
   def shared_blocks

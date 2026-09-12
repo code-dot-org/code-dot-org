@@ -59,6 +59,13 @@ import {
 } from '../imageReferences';
 import {onTrimsUpdated} from '../imageTrim';
 import {
+  adlibSetForMode,
+  DEFAULT_IMAGE_STYLE,
+  isFreeplayMode,
+  isImageMode,
+  tabsForMode,
+} from '../levelMode';
+import {
   migrateAnimationList,
   migrateBlockTypes,
   migrateScenes,
@@ -79,7 +86,6 @@ import spriteLab2Reducer, {
   setExternalScenes,
   setMusicProjects,
   setScenes,
-  ALL_TABS,
   Tab,
 } from '../redux/spriteLab2Redux';
 import {
@@ -134,12 +140,6 @@ registerReducers({
 
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
-
-// Authored level flags arrive as JSON and may be booleans or the strings
-// the levelbuilder checkbox helper writes; only true and 'true' mean on.
-function levelFlag(value: unknown): boolean {
-  return value === true || value === 'true';
-}
 
 // ?image-adlibs=<set> previews the adlib combos without a level change
 // (levels set imageAdlibSet).
@@ -254,34 +254,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // modes author starter images, which needs the naming controls.
   const imagesAdvanced =
     useMemo(() => queryParams('images-advanced') === 'true', []) ||
-    levelFlag(levelProperties.imagesAdvanced) ||
     isLevelEditMode;
   // A level can name its exact tab set; unknown names are dropped, and a list
   // naming none falls back to the defaults. Listing 'World' turns the world
   // tab on, as the URL flag and showWorldTab still do.
   const tabs = useMemo(() => {
     // The property is authored JSON, so its type is a claim, not a guarantee.
-    const requested = levelProperties.visibleTabs?.filter(tab =>
-      ALL_TABS.includes(tab)
-    );
-    if (requested?.length) {
-      return requested;
+    const fromMode = tabsForMode(levelProperties.levelMode);
+    if (fromMode) {
+      return fromMode;
     }
-    return worldTabParamEnabled || levelFlag(levelProperties.showWorldTab)
-      ? WORLD_TABS
-      : ENABLED_TABS;
-  }, [
-    levelProperties.visibleTabs,
-    levelProperties.showWorldTab,
-    worldTabParamEnabled,
-  ]);
+    return worldTabParamEnabled ? WORLD_TABS : ENABLED_TABS;
+  }, [levelProperties.levelMode, worldTabParamEnabled]);
   const worldTabEnabled = tabs.includes('World');
   // Playfield size for a world this level creates. An existing world keeps
   // the size its grid already holds unless it can grow into this one without
   // dropping a placement (see resizeWorld) — the project's world is shared
   // across the levels that open its channel, so the data decides.
-  const seedSceneSize =
-    levelProperties.worldGridSize || DEFAULT_SCENE_GRID_SIZE;
+  const seedSceneSize = DEFAULT_SCENE_GRID_SIZE;
   const worldFor = useCallback(
     (scene?: Scene) => resizeWorld(scene?.world, seedSceneSize),
     [seedSceneSize]
@@ -289,7 +279,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // A level naming its tabs opens on the list's first entry (display order is
   // fixed, so authored order is free to carry the start tab).
   useEffect(() => {
-    if (levelProperties.visibleTabs?.length) {
+    if (levelProperties.levelMode) {
       dispatch(setActiveTab(tabs[0]));
     }
     // Only the level identity should re-trigger the start tab.
@@ -402,10 +392,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // would leave a stray "Scene 1" in every level sharing the project.
   // A toolbox has no scenes to pin. Cleared at the one read of the
   // property, so every downstream consumer sees no pin.
-  const pinnedSceneId = isToolboxMode
-    ? undefined
-    : levelProperties.pinnedSceneId;
-  const {pinnedSceneName, pinnedSceneType} = levelProperties;
+  const pinnedScene = isToolboxMode ? undefined : levelProperties.pinnedScene;
+  const pinnedSceneId = pinnedScene?.id;
+  const pinnedSceneName = pinnedScene?.name;
+  const pinnedSceneType = pinnedScene?.type;
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
@@ -731,7 +721,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Instantiate the engine once per level. No legacy default-sprite library:
   // images come from the Images tab, so p5 preload completes immediately.
   useEffect(() => {
-    if (isToolboxMode || levelProperties.guideMode === 'imageGenerate') {
+    if (isToolboxMode || isImageMode(levelProperties.levelMode)) {
       // Toolbox editing has nothing to run: the workspace holds the toolbox
       // itself. A standalone image-generation level has no stage at all. With
       // no engine, the run machinery no-ops (and no stray canvas mounts).
@@ -1562,13 +1552,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     uploadImage,
     onRenameImage: handleRenameImage,
     onDeleteImage: handleDeleteImage,
-    lockedImageType: levelProperties.lockedImageType,
+    lockedImageType: levelProperties.levelMode?.imageType,
     advanced: imagesAdvanced,
-    adlibSet: imageAdlibSetParam || levelProperties.imageAdlibSet,
-    adlibOnly: levelProperties.imageAdlibOnly && !imageFreeTextParam,
-    defaultStyle: levelProperties.defaultImageStyle,
-    paintDisabled: levelProperties.imagePaintDisabled,
-    startsNew: levelProperties.imageStartsNew,
+    adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
+    // Free play hands back the prompt box and the paint tools; every other
+    // level takes its words from the combos.
+    adlibOnly:
+      !isFreeplayMode(levelProperties.levelMode) && !imageFreeTextParam,
+    defaultStyle: DEFAULT_IMAGE_STYLE,
+    paintDisabled: !isFreeplayMode(levelProperties.levelMode),
+    startsNew: levelProperties.levelMode?.startsNew,
   };
 
   return (
@@ -1590,19 +1583,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         hasEdited={hasEdited}
         settings={[...blocklySettings, themeSetting]}
         className={classNames(
-          !levelProperties.guideMode && moduleStyles.instructionsArea,
-          !!levelProperties.guideMode && moduleStyles.resourceSidebar
+          !levelProperties.levelMode && moduleStyles.instructionsArea,
+          !!levelProperties.levelMode && moduleStyles.resourceSidebar
         )}
-        sidebarOnly={!!levelProperties.guideMode}
+        sidebarOnly={!!levelProperties.levelMode}
       />
       <div className={moduleStyles.divider} />
-      {levelProperties.guideMode === 'imageGenerate' ? (
+      {isImageMode(levelProperties.levelMode) ? (
         // Standalone image-generation level: the image panel is the whole lab,
         // with the floating guide over it. No tabs, no stage.
         <div className={moduleStyles.standaloneGenerateArea}>
           <GenerateImagePane standalone {...imagePaneProps} />
           <GenerateSpriteLab
-            guideMode="instructions"
+            levelMode={levelProperties.levelMode}
             instructions={guide.text}
             showContinue={guide.showContinue}
             levelProperties={levelProperties}
@@ -1733,15 +1726,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             onPreviewClick={handlePreviewClick}
           />
 
-          {/* Floating guide, when the level asks for it. Plain instructions
-          follow the student across every tab; the AI-codegen variant only
-          makes sense over the Code workspace. (Image generation lives in
-          the Images tab's image dialog.) */}
-          {!!levelProperties.guideMode &&
-            (levelProperties.guideMode === 'instructions' ||
+          {/* Floating guide, when the level asks for it. Instructions follow
+          the student across every tab; the AI prompt only makes sense over
+          the Code workspace. */}
+          {!!levelProperties.levelMode &&
+            (levelProperties.levelMode.kind !== 'aiCode' ||
               activeTab === 'Code') && (
               <GenerateSpriteLab
-                guideMode={levelProperties.guideMode}
+                levelMode={levelProperties.levelMode}
                 instructions={guide.text}
                 showContinue={guide.showContinue}
                 levelProperties={levelProperties}

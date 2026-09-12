@@ -21,14 +21,14 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "story-scene",
-    "pinned_scene_name": "Story",
-    "pinned_scene_type": "story",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
     "guide_steps": [
       {
         "text": "**Add your new character on the right.** Use **make new sprite** with position **right** - they'll turn to face your hero. Then add **when clicked** with a **say** block inside, so clicking them makes them speak. Press **Play** and try it."

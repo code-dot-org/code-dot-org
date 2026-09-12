@@ -10,6 +10,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import askSpriteLabAi from '../ai/askSpriteLabAi';
 import {generateBlocklyJson} from '../blockly/generateBlocklyJson';
+import {isFreeplayMode, LevelMode} from '../levelMode';
 import {selectAvailableImageNames, selectSceneNames} from '../redux/selectors';
 import {setAiGenerateState} from '../redux/spriteLab2Redux';
 import {SpriteLab2LevelProperties} from '../types';
@@ -30,7 +31,7 @@ function getSceneIdByName(): {[lowerCaseName: string]: string} {
 }
 
 interface GenerateSpriteLabProps {
-  guideMode: 'instructions' | 'aiCodeGenerate';
+  levelMode?: LevelMode;
   instructions?: string;
   /** Offer the Continue button: the guide reached a step that marks the
       level's task complete. */
@@ -48,7 +49,7 @@ interface GenerateSpriteLabProps {
  * (Image generation lives in the Images tab's image dialog.)
  */
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
-  guideMode,
+  levelMode,
   instructions,
   showContinue,
   levelProperties,
@@ -145,7 +146,8 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     />
   );
 
-  const collapsible = !!levelProperties.guideCollapsible;
+  // Free play is the one level whose guide covers work worth seeing.
+  const collapsible = isFreeplayMode(levelMode);
 
   return (
     <Guide
@@ -162,7 +164,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
         style={bodyHeight === undefined ? undefined : {height: bodyHeight}}
       >
         <div ref={bodyRef} className={moduleStyles.guideBody}>
-          {collapsed ? null : guideMode === 'instructions' ? (
+          {collapsed ? null : levelMode?.kind !== 'aiCode' ? (
             instructionsBlock ||
             'Build a program in the Code tab, then press Run.'
           ) : (

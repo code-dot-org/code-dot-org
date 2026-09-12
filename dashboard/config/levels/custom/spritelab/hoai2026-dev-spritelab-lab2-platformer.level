@@ -21,13 +21,14 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "World",
-      "Play"
-    ],
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "pinned_scene_type": "platform",
+    "level_mode": {
+      "kind": "world"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "world_start_pattern": [
       "..........",
       "......BB..",
@@ -40,7 +41,6 @@
       "......BB..",
       "...S......"
     ],
-    "guide_mode": "instructions",
     "guide_steps": [
       {
         "text": "**Make this world yours.** Pick your block in the palette and paint platforms onto the grid - add blocks, erase blocks, build new paths and towers. Then click **Play** to try your layout."

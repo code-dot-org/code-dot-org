@@ -21,14 +21,14 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "story-scene",
-    "pinned_scene_name": "Story",
-    "pinned_scene_type": "story",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
     "guide_steps": [
       {
         "text": "**Say something else, a moment later.** Drag out **at [3] seconds** and put a **say** block inside it. Press **Play** and your character speaks right on cue."

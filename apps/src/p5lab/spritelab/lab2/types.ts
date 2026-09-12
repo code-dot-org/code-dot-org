@@ -2,13 +2,9 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
-import {ImageAdlibSet} from './ai/images/imageAdlibs';
-import {
-  ImageGenerationMetadata,
-  ImageStyle,
-  ImageType,
-} from './ai/images/types';
+import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
+import {LevelMode} from './levelMode';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
 
@@ -121,56 +117,24 @@ export interface GuideStep {
 }
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
-  guideMode?: 'instructions' | 'aiCodeGenerate' | 'imageGenerate';
-  aiCodeGenerateAdlib?: string;
-  aiCodeGenerateText?: boolean;
-  // World-tab experiment: show the tab on this level (equivalent to the
-  // world-tab=true URL parameter).
-  showWorldTab?: boolean;
-  // Cells per side of the playfield for a world this level creates. An
-  // existing world keeps the size stored in its own grid; see resizeWorld.
-  worldGridSize?: number;
-  // The tabs this level shows, in the order that names the starting tab
-  // (the first entry). Absent or empty means the default set.
-  visibleTabs?: Tab[];
-  // Staged text for the floating guide, in order; requires guideMode.
+  /** What kind of level this is; decides the tabs and the image controls. */
+  levelMode?: LevelMode;
+  /** The one scene this level edits, created on first load if the project
+      lacks it. The id is the key the go-to-scene block stores; the name is
+      what the student sees, applied only at creation. The id must not be
+      'scene-1' (the id synthesized for sources saved before scenes). */
+  pinnedScene?: {
+    id: string;
+    name: string;
+    type?: SceneType;
+  };
+  // Staged text for the floating guide, in order.
   guideSteps?: GuideStep[];
-  /** Offer the caret that collapses the guide, for levels where it covers
-      something the student needs to see. */
-  guideCollapsible?: boolean;
-  // Locks the new-image dialog's Type choice.
-  lockedImageType?: ImageType;
-  // Show the full internal image dialog — name field, Start from,
-  // temperature — instead of the student one (equivalent to the
-  // images-advanced=true URL parameter).
-  imagesAdvanced?: boolean;
-  // Offer adlib prompt combos in the student image dialog, from this tier of
-  // the manifest (equivalent to the image-adlibs=<set> URL parameter).
-  imageAdlibSet?: ImageAdlibSet;
-  /** The adlib is the only prompt input — no free-text box (the
-      image-free-text URL param restores it for internal testing). */
-  imageAdlibOnly?: boolean;
-  /** Style the generate form starts on; students can still switch. */
-  defaultImageStyle?: ImageStyle;
-  /** No paint entry points: no blank-canvas painting, no editing images. */
-  imagePaintDisabled?: boolean;
-  /** Standalone mode opens on the fresh-generation form instead of the newest
-      existing image — for levels that make another image of a type an
-      earlier level already made. */
-  imageStartsNew?: boolean;
   /** Premade world for the pinned scene, one string per playfield row
-      anchored to the floor. 'B' cells become the project's newest block
-      image, 'S' its first sprite image. Each kind seeds only while the
-      world holds no placement of that kind, into empty cells only. */
+      anchored to the floor. 'B' cells become the block image the student
+      made most recently, 'S' their first character. Each kind seeds only
+      while the world holds none of it, into empty cells only. */
   worldStartPattern?: string[];
-  // The one scene this level edits, created on first load if the project
-  // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
-  // before scenes existed).
-  pinnedSceneId?: string;
-  // Name given to the pinned scene at creation.
-  pinnedSceneName?: string;
-  /** Type given to the pinned scene at creation. */
-  pinnedSceneType?: SceneType;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }
