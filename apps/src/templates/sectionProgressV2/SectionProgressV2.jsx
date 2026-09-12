@@ -138,12 +138,18 @@ function SectionProgressV2({
         sectionId={sectionId}
       />
       <div className={styles.title}>
-        <Typography className={styles.titleStudents} variant="h6" gutterBottom>
+        <Typography
+          className={styles.titleStudents}
+          variant="label1"
+          component="h6"
+          gutterBottom
+        >
           {i18n.students()}
         </Typography>
         <Typography
           className={styles.titleUnitSelector}
-          variant="h6"
+          variant="label1"
+          component="h6"
           gutterBottom
         >
           {i18n.lessonsIn()}
