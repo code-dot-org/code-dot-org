@@ -2055,7 +2055,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.index ["storage_id"], name: "index_project_storage_geos_on_storage_id", unique: true
   end
 
-  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
     t.datetime "updated_at", precision: nil, null: false
