@@ -63,17 +63,22 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
+import {ActorCreator, type ActorDraft} from '../actors/create/ActorCreator';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
+import {importStockActor} from '../actors/importStockActor';
+import {STOCK_ACTORS, stockActorById} from '../actors/stock';
 import {AnimationPickerDialog} from '../animationEditor/AnimationPickerDialog';
 import {parseAnim} from '../animationEditor/animDocument';
 import {SpritePickerDialog} from '../animationEditor/SpritePickerDialog';
 import {BackgroundPickerDialog} from '../appearance/BackgroundPickerDialog';
 import {useProjectImages} from '../appearance/useProjectImages';
+import {actorIconImage} from '../blockly/actorIcons';
+import {actorIcon, actorThumbnail} from '../blockly/actorThumbnails';
 import {label} from '../blockly/label';
 import {authoredName} from '../blockly/projectModules';
 import {folderIn} from '../projectWrite';
 import {resolveRuleContents} from '../rules/ruleReference';
-import {filePath} from '../runtime/projectFiles';
+import {fileIdAt, filePath} from '../runtime/projectFiles';
 
 import styles from './fileMenus.module.css';
 import {
@@ -143,6 +148,14 @@ export const FileMenus = () => {
    * read (`appearance/BackgroundPickerDialog`).
    */
   const [staging, setStaging] = useState(false);
+  /**
+   * …and whether the Actor Creator is up.
+   *
+   * Not a grid: a sequence of questions, of which one is built
+   * (`actors/create/ActorCreator`). It stands where `New` stood, because that
+   * is the moment a learner has the question it asks.
+   */
+  const [creating, setCreating] = useState(false);
   const [row, setRow] = useState<RowMenu>();
   // The tolerant form: this renders inside the lab, which provides a theme,
   // and in a bare tree in tests, which does not — and a menu is not worth a
@@ -245,6 +258,7 @@ export const FileMenus = () => {
     setPainting(false);
     setPlaying(false);
     setStaging(false);
+    setCreating(false);
     close();
     await new Promise(resolve => setTimeout(resolve, 0));
   }, [close]);
@@ -380,6 +394,123 @@ export const FileMenus = () => {
       });
     },
     [ops, config, promptForName, thenAsk],
+  );
+
+  /**
+   * Make an actor from the wizard's first answer — the three doors, done.
+   *
+   * `make` and `clone` each ask for the name themselves and cannot be handed
+   * one, so this is their tails rather than a call to either: the same writes,
+   * the same reconcile, with the name already settled. Returns whether it
+   * worked, because the wizard waits to be told (`create/ActorCreator`).
+   */
+  const createActor = useCallback(
+    async (draft: ActorDraft): Promise<boolean> => {
+      await thenAsk();
+      const fileName = fileNameFor(draft.name, 'actor');
+      const language = languageForFileName(config, fileName);
+
+      if (draft.origin === 'copy') {
+        const file = draft.source ? ops.source.files[draft.source] : undefined;
+        if (!file) {
+          return false;
+        }
+        // Resolved, so a copy is a COPY — the reasoning is `clone`'s, and the
+        // name is replaced inside the file for the reason it is there: two
+        // actors called "Player" are two rows nobody can tell apart.
+        ops.newFile({
+          fileName,
+          language,
+          folderId: file.folderId,
+          contents: renamed(
+            resolveRuleContents(file.contents ?? ''),
+            draft.name,
+          ),
+        });
+        return true;
+      }
+
+      if (draft.origin === 'template') {
+        const stock = draft.source ? stockActorById(draft.source) : undefined;
+        if (!stock) {
+          return false;
+        }
+        // An import is an AGGREGATE — the rules it elects traits from, the
+        // animations it plays, the images those read — so this is one call and
+        // up to seven files (`actors/importStockActor`).
+        //
+        // AND IT NEVER OVERWRITES, which is the whole of why the two branches
+        // below are different. Asked for a template the project already holds,
+        // it writes the dependencies and hands back the file that was already
+        // there — the learner's, with the learner's edits in it. Renaming that
+        // was the first cut of this, and what it did was rename their Coin to
+        // "Gold Piece" and move every reference with it. So: whether the actor
+        // file was there BEFORE decides which act this is.
+        const had = fileIdAt(ops.source, `${ACTORS_FOLDER}/${stock.id}.actor`);
+        const imported = importStockActor(ops.source, stock);
+        const id = fileIdAt(imported.source, `${imported.path}.actor`);
+        const file = id ? imported.source.files[id] : undefined;
+        if (!file) {
+          return false;
+        }
+        let next = imported.source;
+        if (had !== undefined) {
+          // Theirs already. Copy it under the new name, which is exactly what
+          // the other door does — a template the project has IS one of mine.
+          next = createNewFile({
+            source: next,
+            fileName,
+            language,
+            folderId: file.folderId,
+            contents: renamed(
+              resolveRuleContents(file.contents ?? ''),
+              draft.name,
+            ),
+          });
+        } else if (draft.name !== stock.name) {
+          // Fresh, and called something else. Renamed after the write, since
+          // the import names the file after the library's actor: the thing's
+          // name and its stem move together, and every reference with them
+          // (`files/renameThing`).
+          const {source: withName, refusal} = renameThing(
+            next,
+            file,
+            draft.name,
+          );
+          if (!refusal) {
+            next = withName;
+          }
+        }
+        updateSources({
+          ...currentSources,
+          source: config.reconcileSource?.(next, ops.source) ?? next,
+        });
+        return true;
+      }
+
+      // …and from nothing, which is `New actor` with the prompt already
+      // answered. The folder and the file are one write, so a project with no
+      // `actors/` gets one.
+      const placed = folderIn(ops.source, ACTORS_FOLDER);
+      // Narrowed rather than asserted: `seedFor` answers either bytes or text
+      // depending on the kind, and an actor's is always text — but the type
+      // says so for `.png` too, and reading `.contents` off the other arm is
+      // exactly the mistake it is shaped to catch.
+      const seed = seedFor('actor', draft.name);
+      const made = createNewFile({
+        source: placed.source,
+        fileName,
+        language,
+        folderId: placed.folderId,
+        contents: seed && 'contents' in seed ? seed.contents : undefined,
+      });
+      updateSources({
+        ...currentSources,
+        source: config.reconcileSource?.(made, ops.source) ?? made,
+      });
+      return true;
+    },
+    [ops, config, thenAsk, updateSources, currentSources],
   );
 
   /**
@@ -560,6 +691,44 @@ export const FileMenus = () => {
           }))
         : [],
     [staging, filesIn],
+  );
+
+  /**
+   * The project's actors as things to COPY, and the library's as templates.
+   *
+   * Read only while the wizard is up, like every other grid's rows here. The
+   * picture is the one every other surface draws an actor by: its elected
+   * symbol, else the sandbox's rendering of it (`blockly/actorThumbnails`).
+   */
+  const copyable = useMemo(
+    () =>
+      creating
+        ? filesIn(ACTORS_FOLDER).map(({file, name}) => {
+            const key = (filePath(ops.source, file.id) ?? file.name).replace(
+              /\.[^./]+$/,
+              '',
+            );
+            return {
+              fileId: file.id,
+              name,
+              picture:
+                actorIconImage(actorIcon(key) ?? '') ?? actorThumbnail(key),
+            };
+          })
+        : [],
+    [creating, filesIn, ops.source],
+  );
+
+  const templates = useMemo(
+    () =>
+      creating
+        ? STOCK_ACTORS.map(actor => ({
+            id: actor.id,
+            name: actor.name,
+            description: actor.description,
+          }))
+        : [],
+    [creating],
   );
 
   /** The folder menu the animations' grid stands in for. */
@@ -747,7 +916,13 @@ export const FileMenus = () => {
             ops.activateFile(fileId);
             setPicking(false);
           }}
-          onNew={() => void make(actorsMenu, actorsMenu.makes[0])}
+          // THE WIZARD, where `New` used to prompt for a name and write an
+          // empty file. The prompt is step one's third door now
+          // (`actors/create/ActorCreator`).
+          onNew={() => {
+            setPicking(false);
+            setTimeout(() => setCreating(true), 0);
+          }}
           onImport={() => void importInto(actorsMenu)}
           // The grid closes and the menu opens off the ACTORS BUTTON, which is
           // still there — rather than off the tile, which is not. Two focus
@@ -766,6 +941,22 @@ export const FileMenus = () => {
             );
           }}
           onCancel={() => setPicking(false)}
+        />
+      )}
+      {creating && (
+        <ActorCreator
+          actors={copyable}
+          templates={templates}
+          nameProblem={value =>
+            nameProblem(
+              ops.source,
+              folderIds.get(ACTORS_FOLDER),
+              value,
+              'actor',
+            )
+          }
+          onCreate={createActor}
+          onCancel={() => setCreating(false)}
         />
       )}
       {playing && (

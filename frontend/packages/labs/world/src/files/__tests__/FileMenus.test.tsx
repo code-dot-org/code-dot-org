@@ -68,6 +68,18 @@ const SOURCE: MultiFileSource = {
       contents: referenceToStock('solid'),
       folderId: 'f1',
     },
+    f: {
+      id: 'f',
+      // A Coin the project already holds — the same stem the library's Coin
+      // imports as, which is what makes the template branch's two cases
+      // reachable from here.
+      name: 'coin.actor',
+      language: 'actor',
+      contents: JSON.stringify({
+        blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Coin'}}]},
+      }),
+      folderId: 'f2',
+    },
     e: {
       id: 'e',
       // A backdrop, which is bytes on a URL rather than text: what makes it a
@@ -329,7 +341,7 @@ describe('the file menus', () => {
     expect(screen.getByRole('dialog')).toBeTruthy();
     expect(screen.getByText('Import')).toBeTruthy();
     expect(screen.getByText('New')).toBeTruthy();
-    expect(screen.getByText('This project has no actors yet.')).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Open Coin'})).toBeTruthy();
   });
 
   it('offers both ways in for a folder the project has not got', () => {
@@ -358,14 +370,23 @@ describe('the file menus', () => {
     expect(source.folders[folderId].name).toBe('effects');
   });
 
+  /** Open the Actor Creator, which is where the actors' `New` tile goes now. */
+  const startAnActor = async (called: string) => {
+    openMenu('Actors');
+    fireEvent.click(screen.getByText('New'));
+    await screen.findByText('Create my own');
+    fireEvent.click(screen.getByText('Create my own'));
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: called}});
+    fireEvent.click(screen.getByRole('button', {name: 'Create'}));
+  };
+
   it('makes the file name out of the thing’s name', async () => {
     // One name, said once: the learner types "Health Bar" and gets
     // `healthBar.actor` — the shape every shipped file's stem has — without
-    // saying the extension or thinking about spaces.
-    promptForName.mockResolvedValueOnce('Health Bar');
-    openMenu('Actors');
+    // saying the extension or thinking about spaces. Asked by the wizard now
+    // rather than by a prompt (`actors/create/ActorCreator`).
+    await startAnActor('Health Bar');
 
-    fireEvent.click(screen.getByText('New'));
     await vi.waitFor(() =>
       expect(createNewFile).toHaveBeenCalledWith(
         expect.objectContaining({fileName: 'healthBar.actor', folderId: 'f2'}),
@@ -377,9 +398,8 @@ describe('the file menus', () => {
     // The other half, and the reason the first half is not enough: these rows
     // say what a file declares, so a file that declared nothing would be the
     // one row in the lab showing a file name.
-    openMenu('Actors');
+    await startAnActor('Chaser');
 
-    fireEvent.click(screen.getByText('New'));
     await vi.waitFor(() => expect(createNewFile).toHaveBeenCalled());
     const {contents} = createNewFile.mock.calls.at(-1)![0] as unknown as {
       contents: string;
@@ -388,6 +408,48 @@ describe('the file menus', () => {
       type: 'world_actor',
       fields: {NAME: 'Chaser'},
     });
+  });
+
+  it('copies a template the project already has, rather than renaming it', async () => {
+    // `importStockActor` never overwrites, so asked for a Coin in a project
+    // that has one it writes the dependencies and hands back THE LEARNER'S
+    // file. Renaming that renamed their Coin and moved every reference with
+    // it; the fix is to copy it, which is what the other door does anyway.
+    openMenu('Actors');
+    fireEvent.click(screen.getByText('New'));
+    await screen.findByText('Start from a template');
+    fireEvent.click(screen.getByText('Start from a template'));
+    fireEvent.click(screen.getByRole('button', {name: 'Coin'}));
+    fireEvent.change(screen.getByRole('textbox'), {
+      target: {value: 'Gold Piece'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Create'}));
+
+    await vi.waitFor(() => expect(createNewFile).toHaveBeenCalled());
+    const {fileName, source} = createNewFile.mock.calls.at(-1)![0] as {
+      fileName: string;
+      source: MultiFileSource;
+    };
+    // A NEW file, and the one that was there left alone.
+    expect(fileName).toBe('goldPiece.actor');
+    expect(source.files.f.name).toBe('coin.actor');
+    expect(source.files.f.contents).toContain('"NAME":"Coin"');
+  });
+
+  it('will not let the copy take a name that is taken', async () => {
+    // The degenerate case of the same branch: a template the project has,
+    // kept at the library's own name, would be a second `coin.actor`. The
+    // caller's rule catches it before the wizard can ask.
+    openMenu('Actors');
+    fireEvent.click(screen.getByText('New'));
+    await screen.findByText('Start from a template');
+    fireEvent.click(screen.getByText('Start from a template'));
+    fireEvent.click(screen.getByRole('button', {name: 'Coin'}));
+
+    expect(
+      screen.getByText('There is already one called coin.actor here.'),
+    ).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Create'})).toBeDisabled();
   });
 
   it('lets a picture be named, which the file-name rule refuses', async () => {

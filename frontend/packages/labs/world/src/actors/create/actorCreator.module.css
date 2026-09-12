@@ -1,0 +1,167 @@
+/* The Actor Creator's CONTENT. The dialog itself — surface, width, padding,
+   the button row — is the design system's `Dialog`. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+/* Which step this is, in words. A wizard that does not say where you are is a
+   sequence of dialogs that happen to follow each other. */
+.progress {
+  color: var(--text-neutral-secondary);
+}
+
+/* The three doors, side by side: one question, three answers, no scrolling. */
+.doors {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.door {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.75rem;
+  border: 2px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 6px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  gap: 4px;
+  text-align: left;
+}
+
+.door:hover {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+.door:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.doorChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+  background-color: var(--background-brand-secondary, #e5f5f7);
+}
+
+.doorName {
+  font-weight: 600;
+}
+
+.doorWhat {
+  color: var(--text-neutral-secondary);
+}
+
+/* What the chosen door asks next, under it: which of mine, or which of theirs.
+   The same reading the enhancement shelf gives a row that has a question
+   (`enhance/EnhanceActorDialog`). */
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 40vh;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.choice {
+  display: flex;
+  width: 88px;
+  height: 92px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  gap: 4px;
+}
+
+.choice:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.choice:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.choiceChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+/* The picture, on the dark ground a world is drawn against — so a white sprite
+   is a sprite rather than a hole. The actors' own grid says the same. */
+.picture {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #101020;
+  overflow: hidden;
+}
+
+.picture img {
+  max-width: 48px;
+  max-height: 48px;
+  image-rendering: pixelated;
+}
+
+.initial {
+  color: #e8eaed;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.choiceName {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  font: inherit;
+}
+
+.problem {
+  color: var(--text-danger, #c0392b);
+}
+
+.empty {
+  padding: 0.25rem 0;
+  color: var(--text-neutral-secondary);
+}
