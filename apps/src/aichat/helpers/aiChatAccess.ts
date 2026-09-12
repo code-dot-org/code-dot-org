@@ -51,15 +51,26 @@ export const shouldShowAiTutor = ({
  * AI Chat tools are essential and are enabled under ESSENTIAL_ONLY or ENABLED.
  * For all other apps, AI Chat tools are non-essential and require explicit
  * ENABLED access.
+ *
+ * A level may say otherwise: a Web Lab 2 level whose aiTutorDependency is
+ * AVAILABLE offers the tutor without requiring it, so it follows the
+ * non-essential rule even though weblab2 is an essential-AI-chat app. This
+ * mirrors Level.with_essential_ai_chat_tools, which decides the same question
+ * per level for the server-side access check.
  */
 export const areAiChatToolsEnabled = ({
   appName,
   aiChatAccessLevel,
+  aiTutorDependency,
 }: {
   appName: string;
   aiChatAccessLevel: AiChatAccessLevel;
+  aiTutorDependency?: AiChatToolsDependencyValue;
 }): boolean => {
-  if (APPS_WITH_ESSENTIAL_AI_CHAT.includes(appName)) {
+  const essentialForLevel =
+    APPS_WITH_ESSENTIAL_AI_CHAT.includes(appName) &&
+    aiTutorDependency !== AiChatToolsDependency.AVAILABLE;
+  if (essentialForLevel) {
     // either ESSENTIAL_ONLY or ENABLED access level permits AI Chat tools for apps that consider AI Chat essential
     return aiChatAccessLevel !== AiChatAccessLevels.DISABLED;
   }

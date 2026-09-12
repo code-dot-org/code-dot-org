@@ -78,6 +78,49 @@ describe('areAiChatToolsEnabled', () => {
     });
   });
 
+  describe("for a Web Lab 2 level whose AI Tutor is only 'available'", () => {
+    const availableLevel = {
+      appName: 'weblab2',
+      aiTutorDependency: 'available' as const,
+    };
+
+    it('returns true when access level is enabled', () => {
+      expect(
+        areAiChatToolsEnabled({...availableLevel, aiChatAccessLevel: 'enabled'})
+      ).toBe(true);
+    });
+
+    // The level does not require the tutor, so a section limited to the tools
+    // its curriculum requires does not get it here.
+    it('returns false when access level is essential_only', () => {
+      expect(
+        areAiChatToolsEnabled({
+          ...availableLevel,
+          aiChatAccessLevel: 'essential_only',
+        })
+      ).toBe(false);
+    });
+
+    it('returns false when access level is disabled', () => {
+      expect(
+        areAiChatToolsEnabled({
+          ...availableLevel,
+          aiChatAccessLevel: 'disabled',
+        })
+      ).toBe(false);
+    });
+
+    it("returns true under essential_only when the level is 'essential'", () => {
+      expect(
+        areAiChatToolsEnabled({
+          appName: 'weblab2',
+          aiTutorDependency: 'essential',
+          aiChatAccessLevel: 'essential_only',
+        })
+      ).toBe(true);
+    });
+  });
+
   describe('for non-essential apps (e.g. applab)', () => {
     it('returns true when access level is enabled', () => {
       expect(
