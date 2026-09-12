@@ -1,0 +1,191 @@
+#!/usr/bin/env ruby
+# aurora_inventory.rb
+#
+# Inventories Aurora MySQL instances and reserved instances in a given region,
+# calculates normalization factors for size-flexible RI billing, and writes
+# CSV reports suitable for sharing with an AWS Solutions Architecture team.
+#
+# Usage:
+#   bin/oneoff/aurora_inventory                        # prints all reports to stdout
+#   bin/oneoff/aurora_inventory.rb --out-dir ./reports # writes CSV files to ./reports/
+
+require 'aws-sdk-rds'
+require 'csv'
+require 'optparse'
+require 'fileutils'
+require 'time'
+
+REGION = 'us-east-1'
+ENGINE = 'aurora-mysql'
+
+# Normalization factors for db.r7i family.
+# Reference: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/ri-modifying.html
+NORMALIZATION_FACTORS = {
+  'db.r7i.large'    => 4,
+  'db.r7i.xlarge'   => 8,
+  'db.r7i.2xlarge'  => 16,
+  'db.r7i.4xlarge'  => 32,
+  'db.r7i.8xlarge'  => 64,
+  'db.r7i.12xlarge' => 96,
+  'db.r7i.16xlarge' => 128,
+  'db.r7i.24xlarge' => 192,
+  'db.r7i.48xlarge' => 384,
+}.freeze
+
+def normalization_factor(instance_class)
+  NORMALIZATION_FACTORS.fetch(instance_class) do
+    warn "WARNING: Unknown instance class '#{instance_class}' — normalization factor unavailable"
+    nil
+  end
+end
+
+# ---------------------------------------------------------------------------
+# Data collection
+# ---------------------------------------------------------------------------
+
+def fetch_aurora_instances(rds)
+  instances = rds.describe_db_instances.each_with_object([]) do |page, acc|
+    page.db_instances.each do |i|
+      next unless i.engine == ENGINE
+
+      acc << {
+        instance_id:    i.db_instance_identifier,
+        instance_class: i.db_instance_class,
+        cluster:        i.db_cluster_identifier,
+        engine_version: i.engine_version,
+        status:         i.db_instance_status,
+        az:             i.availability_zone,
+      }
+    end
+  end
+  instances.sort_by {|i| [i[:cluster].to_s, i[:instance_id].to_s]}
+end
+
+def fetch_reserved_instances(rds)
+  reservations = rds.describe_reserved_db_instances.each_with_object([]) do |page, acc|
+    page.reserved_db_instances.each do |ri|
+      next unless ri.product_description == ENGINE || ri.product_description&.start_with?('aurora-mysql')
+      next if ri.state == 'retired'
+
+      start_time = ri.start_time
+      duration_days = ri.duration / 86_400
+      end_time = start_time + ri.duration
+
+      acc << {
+        reservation_id: ri.reserved_db_instance_id,
+        instance_class: ri.db_instance_class,
+        count:          ri.db_instance_count,
+        state:          ri.state,
+        offering_type:  ri.offering_type,
+        start_time:     start_time,
+        duration_days:  duration_days,
+        end_time:       end_time,
+        days_remaining: [(end_time.to_date - Date.today).to_i, 0].max,
+      }
+    end
+  end
+  reservations.sort_by {|r| r[:reservation_id].to_s}
+end
+
+# ---------------------------------------------------------------------------
+# CSV generation
+# ---------------------------------------------------------------------------
+
+def instances_csv(instances)
+  CSV.generate do |csv|
+    csv << ['Instance ID', 'Instance Class', 'Cluster', 'Engine Version', 'Status', 'AZ', 'Norm. Factor']
+    total = 0
+    instances.each do |i|
+      nf = normalization_factor(i[:instance_class])
+      total += nf.to_i
+      csv << [i[:instance_id], i[:instance_class], i[:cluster], i[:engine_version], i[:status], i[:az], nf]
+    end
+    csv << []
+    csv << ['TOTAL', '', '', '', '', '', total]
+  end
+end
+
+def reservations_csv(reservations)
+  CSV.generate do |csv|
+    csv << ['Reservation ID', 'Instance Class', 'Count', 'State', 'Offering Type',
+            'Start Date', 'Duration (days)', 'End Date', 'Days Remaining',
+            'Norm. Factor (per instance)', 'Total Norm. Units']
+    total_units = 0
+    reservations.each do |r|
+      nf = normalization_factor(r[:instance_class])
+      units = nf ? nf * r[:count] : nil
+      total_units += units.to_i
+      csv << [
+        r[:reservation_id], r[:instance_class], r[:count], r[:state], r[:offering_type],
+        r[:start_time].strftime('%Y-%m-%d'), r[:duration_days], r[:end_time].strftime('%Y-%m-%d'),
+        r[:days_remaining], nf, units,
+      ]
+    end
+    csv << []
+    csv << ['TOTAL', '', '', '', '', '', '', '', '', '', total_units]
+  end
+end
+
+def summary_csv(instances, reservations)
+  reserved_units = reservations.
+    select {|r| r[:state] == 'active'}.
+    sum {|r| (normalization_factor(r[:instance_class]) || 0) * r[:count]}
+
+  consumed_units = instances.sum {|i| normalization_factor(i[:instance_class]).to_i}
+
+  headroom = reserved_units - consumed_units
+
+  CSV.generate do |csv|
+    csv << ['Metric', 'Normalized Units']
+    csv << ['Active reserved units', reserved_units]
+    csv << ['Current instance consumption', consumed_units]
+    csv << ['Headroom (reserved - consumed)', headroom]
+    csv << []
+    csv << ['Coverage status', headroom >= 0 ? 'FULLY COVERED' : "SHORTFALL OF #{headroom.abs} UNITS"]
+  end
+end
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{$PROGRAM_NAME} [options]"
+  opts.on('--out-dir DIR', 'Write CSV files to DIR instead of stdout') {|d| options[:out_dir] = d}
+  opts.on('--region REGION', "AWS region (default: #{REGION})") {|r| options[:region] = r}
+end.parse!
+
+region = options[:region] || REGION
+rds = Aws::RDS::Client.new(region: region)
+
+puts "Fetching Aurora MySQL inventory from #{region}..."
+instances    = fetch_aurora_instances(rds)
+reservations = fetch_reserved_instances(rds)
+
+puts "Found #{instances.size} instances across #{instances.map {|i| i[:cluster]}.uniq.size} clusters"
+puts "Found #{reservations.size} reservation(s)"
+puts
+
+reports = {
+  'aurora_instances.csv'    => instances_csv(instances),
+  'aurora_reservations.csv' => reservations_csv(reservations),
+  'aurora_ri_summary.csv'   => summary_csv(instances, reservations),
+}
+
+if options[:out_dir]
+  FileUtils.mkdir_p(options[:out_dir])
+  reports.each do |filename, content|
+    path = File.join(options[:out_dir], filename)
+    File.write(path, content)
+    puts "Wrote #{path}"
+  end
+else
+  reports.each do |filename, content|
+    puts "=" * 60
+    puts "  #{filename}"
+    puts "=" * 60
+    puts content
+    puts
+  end
+end
