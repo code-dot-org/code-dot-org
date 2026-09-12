@@ -1,0 +1,27 @@
+Surface: Dolphin_Surface**
+_______________________________________
+
+Facing Left: 	Below surface - 00 
+	     	Jump - 01-14
+
+Facing Right: 	Below surface - 15 
+		Jump - 16-29
+
+________________________________________
+
+Swim: Dolphin**
+________________________________________
+
+Facing Left: 00-07
+
+Facing Right: 18-25
+
+Facing Up: 09-16
+
+Facing Down: 27-34
+
+Turn frame:
+		Down/Left - 35
+		Up/Left - 08
+		Down/Right - 26
+		Up/Right - 17

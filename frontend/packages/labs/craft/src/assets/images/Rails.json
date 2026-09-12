@@ -1,0 +1,100 @@
+{"frames": {
+
+"Rails_BottomLeft":
+{
+	"frame": {"x":395,"y":0,"w":40,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":22,"w":40,"h":40},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_BottomRight":
+{
+	"frame": {"x":231,"y":0,"w":41,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":22,"w":41,"h":40},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_Horizontal":
+{
+	"frame": {"x":71,"y":0,"w":40,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":21,"w":40,"h":41},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_PoweredHorizontal":
+{
+	"frame": {"x":111,"y":0,"w":40,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":21,"w":40,"h":41},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_PoweredVertical":
+{
+	"frame": {"x":272,"y":0,"w":41,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":22,"w":41,"h":40},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_RedstoneTorch":
+{
+	"frame": {"x":0,"y":0,"w":30,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":0,"w":30,"h":42},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_TopLeft":
+{
+	"frame": {"x":151,"y":0,"w":40,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":21,"w":40,"h":41},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_TopRight":
+{
+	"frame": {"x":30,"y":0,"w":41,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":21,"w":41,"h":41},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_UnpoweredHorizontal":
+{
+	"frame": {"x":191,"y":0,"w":40,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":21,"w":40,"h":41},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_UnpoweredVertical":
+{
+	"frame": {"x":313,"y":0,"w":41,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":22,"w":41,"h":40},
+	"sourceSize": {"w":64,"h":64}
+},
+"Rails_Vertical":
+{
+	"frame": {"x":354,"y":0,"w":41,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":22,"w":41,"h":40},
+	"sourceSize": {"w":64,"h":64}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Rails",
+	"format": "RGBA8888",
+	"size": {"w":435,"h":42},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5005a8aa7af2fa1e700811e4092fe74f:cc381df483b4044bf93274005fb56473:6852315ac7af3f8db3d9b11d31817e35$"
+}
+}

@@ -1,0 +1,18 @@
+Swimming: Squid**
+_____________________________________________
+
+Facing Down:	Swim - 00-07
+
+Down/Left: 	Swim - 08-16
+
+Facing Left:	Swim - 17-23
+
+Up/Left:	Swim - 24-31
+
+Facing Up:	Swim - 32-39
+
+Up/Left:	Swim - 40-47
+
+Facing Right:	Swim - 48-55
+
+Down/Left:	Swim - 56-63

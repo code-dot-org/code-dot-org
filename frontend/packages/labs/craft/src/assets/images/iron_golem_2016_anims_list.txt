@@ -1,0 +1,53 @@
+Iron Golem
+
+	Facing Front: 
+		Still Frame:001
+		Look Left: 002-004 pause,reverse
+		Look Right: 006-008 pause,reverse
+		Look Down: 010-012 pause,reverse
+		Look Up: 014-016 pause,reverse
+		Idle:
+		Walk: 018-026
+		Attack: 027-030 pause,reverse
+		Take Damage: 033-037
+		Die: 038-044
+		Bump: 177-184
+              
+	Facing Back: 
+		Still Frame:045
+		Look Left: 046-048 pause,reverse
+		Look Right: 050-052 pause,reverse
+		Look Down: 054-056 pause,reverse
+		Look Up: 058-060 pause,reverse
+		Idle: 
+		Walk: 062-070
+		Attack: 071-074 pause,reverse
+		Take Damage: 077-081
+		Die: 082-088
+		Bump: 185-192
+
+	Facing Left: 
+		Still Frame:089
+		Look Left: 090-092 pause,reverse
+		Look Right: 094-096 pause,reverse
+		Look Down: 098-100 pause,reverse
+		Look Up: 102-104 pause,reverse
+		Idle: 
+		Walk: 106-114
+		Attack: 115-118 pause,reverse
+		Take Damage: 121-125
+		Die: 126-132
+		Bump: 193-200
+
+	Facing Right:
+		Still Frame:133
+		Look Left: 134-136 pause,reverse
+		Look Right: 138-140 pause,reverse
+		Look Down: 142-144 pause,reverse
+		Look Up: 146-148 pause,reverse
+		Idle: 
+		Walk: 150-158
+		Attack: 159-162 pause,reverse
+		Take Damage: 165-169
+		Die: 170-176
+		Bump: 201-208
