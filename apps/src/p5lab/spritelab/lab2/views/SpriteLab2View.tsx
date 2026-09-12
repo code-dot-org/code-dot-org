@@ -1436,14 +1436,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources]
   );
 
-  const handleCodeGenerated = useCallback(
-    (source: WorkspaceSerialization) => {
-      writeActiveSceneSource(source);
-      dispatch(setActiveTab('Code'));
-    },
-    [writeActiveSceneSource, dispatch]
-  );
-
   const handleTabChange = useCallback(
     (tab: Tab) => {
       // Entering Play from the tab button starts from the beginning.
@@ -1555,13 +1547,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     lockedImageType: levelProperties.levelMode?.imageType,
     advanced: imagesAdvanced,
     adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
-    // Free play hands back the prompt box and the paint tools; every other
+    // Freeplay hands back the prompt box and the paint tools; every other
     // level takes its words from the combos.
     adlibOnly:
       !isFreeplayMode(levelProperties.levelMode) && !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
-    startsNew: levelProperties.levelMode?.startsNew,
   };
 
   return (
@@ -1599,7 +1590,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             instructions={guide.text}
             showContinue={guide.showContinue}
             levelProperties={levelProperties}
-            onCodeGenerated={handleCodeGenerated}
           />
         </div>
       ) : (
@@ -1726,20 +1716,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             onPreviewClick={handlePreviewClick}
           />
 
-          {/* Floating guide, when the level asks for it. Instructions follow
-          the student across every tab; the AI prompt only makes sense over
-          the Code workspace. */}
-          {!!levelProperties.levelMode &&
-            (levelProperties.levelMode.kind !== 'aiCode' ||
-              activeTab === 'Code') && (
-              <GenerateSpriteLab
-                levelMode={levelProperties.levelMode}
-                instructions={guide.text}
-                showContinue={guide.showContinue}
-                levelProperties={levelProperties}
-                onCodeGenerated={handleCodeGenerated}
-              />
-            )}
+          {/* Floating guide, when the level asks for it; it follows the
+          student across every tab. */}
+          {!!levelProperties.levelMode && (
+            <GenerateSpriteLab
+              levelMode={levelProperties.levelMode}
+              instructions={guide.text}
+              showContinue={guide.showContinue}
+              levelProperties={levelProperties}
+            />
+          )}
         </TabShell>
       )}
     </div>

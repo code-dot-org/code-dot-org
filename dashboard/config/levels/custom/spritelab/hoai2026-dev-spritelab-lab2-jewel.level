@@ -24,8 +24,7 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
-      "adlibs": "treasure",
-      "startsNew": true
+      "adlibs": "treasure"
     },
     "guide_steps": [
       {

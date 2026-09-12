@@ -281,10 +281,6 @@ interface GenerateImagePaneProps {
   /** Standalone mode: the image panel IS the level — no gallery, the panel
       standalone in the page, always open on the level's image. */
   standalone?: boolean;
-  /** Standalone mode opens on the fresh-generation form instead of adopting
-      the newest existing image — for "make another one" levels, where the
-      newest image of the type is an earlier level's work. */
-  startsNew?: boolean;
 }
 
 /**
@@ -302,7 +298,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   defaultStyle,
   paintDisabled,
   standalone,
-  startsNew,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -812,47 +807,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
-  // Standalone mode: open on the newest image of the level's type, else on a
-  // fresh one, and reopen whenever a close or delete clears the target. The
-  // animation list loads after mount, so an untouched 'new' session still
-  // adopts the level's image when it arrives; a session with alternatives
-  // is the student's work and keeps its target.
+  // Standalone mode opens on a blank form, and returns to one whenever a
+  // close or delete clears the target: the level is there to make an image,
+  // and the newest one of its type belongs to whichever level made it.
   useEffect(() => {
-    if (!standalone || (dialogTarget && dialogTarget !== 'new')) {
-      return;
-    }
-    if (dialogTarget === 'new' && alternatives.length > 0) {
-      return;
-    }
-    // A make-another-one level starts on the fresh form: the newest image
-    // of its type is an earlier level's work, not this level's.
-    if (startsNew) {
-      if (!dialogTarget) {
-        setDialogTarget('new');
-      }
-      return;
-    }
-    // images is newest-first within a type group: Sprite Lab prepends new
-    // animations and galleryOrder's sort is stable.
-    const match = images.find(
-      ({props}) =>
-        !!props?.generation &&
-        (!lockedImageType ||
-          imageTypeFromCategories(props?.categories) === lockedImageType)
-    );
-    if (match) {
-      setDialogTarget(match.key);
-    } else if (!dialogTarget) {
+    if (standalone && !dialogTarget) {
       setDialogTarget('new');
     }
-  }, [
-    standalone,
-    startsNew,
-    dialogTarget,
-    images,
-    lockedImageType,
-    alternatives.length,
-  ]);
+  }, [standalone, dialogTarget]);
 
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of

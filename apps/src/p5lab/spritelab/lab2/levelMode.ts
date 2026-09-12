@@ -6,13 +6,7 @@ import {ImageAdlibSet} from './ai/images/imageAdlibs';
 import {ImageStyle, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
-export type LevelModeKind =
-  | 'code'
-  | 'aiCode'
-  | 'world'
-  | 'play'
-  | 'image'
-  | 'freeplay';
+export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
 
 export interface LevelMode {
   kind: LevelModeKind;
@@ -20,9 +14,6 @@ export interface LevelMode {
   imageType?: ImageType;
   /** Word combos to offer, when the kind's own set is not the right one. */
   adlibs?: ImageAdlibSet;
-  /** image: open on the blank form, not on the newest image of the type —
-      for a level making another image of a kind an earlier one made. */
-  startsNew?: boolean;
 }
 
 /** Every image this unit makes is pixel art; no level has asked to differ. */
@@ -32,7 +23,6 @@ export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
     level has none: its panel replaces the tab shell. */
 const TABS: Record<LevelModeKind, Tab[]> = {
   code: ['Code', 'Play'],
-  aiCode: ['Code', 'Play'],
   world: ['World', 'Play'],
   play: ['Play'],
   image: [],
@@ -54,7 +44,7 @@ export function isImageMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'image';
 }
 
-/** Free play hands everything back: the prompt box and the paint tools. */
+/** Freeplay hands everything back: the prompt box and the paint tools. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
 }
