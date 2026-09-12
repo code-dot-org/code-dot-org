@@ -94,6 +94,13 @@ import {
 import {fileStem, renamed, seedFor} from './newThing';
 import {renameThing} from './renameThing';
 
+/** A project with a new actor in it, and where that actor landed. */
+interface BuiltActor {
+  source: MultiFileSource;
+  /** Its module path — `actors/chaser`, which is what an enhancement names. */
+  path: string;
+}
+
 /** The file the row menu is about, and what it hangs off. */
 interface RowMenu {
   file: ProjectFile;
@@ -446,16 +453,15 @@ export const FileMenus = () => {
    * the same reconcile, with the name already settled. Returns whether it
    * worked, because the wizard waits to be told (`create/ActorCreator`).
    */
-  const createActor = useCallback(
-    async (draft: ActorDraft): Promise<boolean> => {
-      await thenAsk();
+  const buildActor = useCallback(
+    (draft: ActorDraft): BuiltActor | undefined => {
       const fileName = fileNameFor(draft.name, 'actor');
       const language = languageForFileName(config, fileName);
 
       if (draft.origin === 'copy') {
         const file = draft.source ? ops.source.files[draft.source] : undefined;
         if (!file) {
-          return false;
+          return undefined;
         }
         // Resolved, so a copy is a COPY — the reasoning is `clone`'s, and the
         // name is replaced inside the file for the reason it is there: two
@@ -470,14 +476,16 @@ export const FileMenus = () => {
             draft.name,
           ),
         });
-        commit(dressed(made, fileName, draft));
-        return true;
+        return {
+          source: dressed(made, fileName, draft),
+          path: `${ACTORS_FOLDER}/${stemOf(fileName)}`,
+        };
       }
 
       if (draft.origin === 'template') {
         const stock = draft.source ? stockActorById(draft.source) : undefined;
         if (!stock) {
-          return false;
+          return undefined;
         }
         // An import is an AGGREGATE — the rules it elects traits from, the
         // animations it plays, the images those read — so this is one call and
@@ -495,7 +503,7 @@ export const FileMenus = () => {
         const id = fileIdAt(imported.source, `${imported.path}.actor`);
         const file = id ? imported.source.files[id] : undefined;
         if (!file) {
-          return false;
+          return undefined;
         }
         let next = imported.source;
         if (had !== undefined) {
@@ -525,8 +533,14 @@ export const FileMenus = () => {
             next = withName;
           }
         }
-        commit(dressed(next, fileName, draft));
-        return true;
+        // WHERE IT LANDED, which is not always `actors/<the name>`: a
+        // template kept at the library's own name is the file the import
+        // wrote, and one renamed or copied is the file this made.
+        const where =
+          had !== undefined
+            ? `${ACTORS_FOLDER}/${stemOf(fileName)}`
+            : imported.path;
+        return {source: dressed(next, fileName, draft), path: where};
       }
 
       // …and from nothing, which is `New actor` with the prompt already
@@ -545,10 +559,29 @@ export const FileMenus = () => {
         folderId: placed.folderId,
         contents: seed && 'contents' in seed ? seed.contents : undefined,
       });
-      commit(dressed(made, fileName, draft));
+      return {
+        source: dressed(made, fileName, draft),
+        path: `${ACTORS_FOLDER}/${stemOf(fileName)}`,
+      };
+    },
+    [ops.source, config, dressed],
+  );
+
+  /**
+   * …and the other half: write what the wizard settled on, once.
+   *
+   * The build above touches nothing — every step of it is a pure transform
+   * over a project source, which is what lets the wizard apply enhancements to
+   * an actor that is not in the project yet and what lets Back work at all.
+   * This is the only part that writes (`create/ActorCreator`).
+   */
+  const commitActor = useCallback(
+    async (source: MultiFileSource): Promise<boolean> => {
+      await thenAsk();
+      commit(source);
       return true;
     },
-    [ops, thenAsk, commit, dressed],
+    [thenAsk, commit],
   );
 
   /**
@@ -1024,7 +1057,8 @@ export const FileMenus = () => {
               'actor',
             )
           }
-          onCreate={createActor}
+          build={buildActor}
+          onCreate={commitActor}
           onCancel={() => setCreating(false)}
         />
       )}

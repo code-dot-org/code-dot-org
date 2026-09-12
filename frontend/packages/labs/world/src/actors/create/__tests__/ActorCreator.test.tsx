@@ -25,6 +25,33 @@ const ANIMATIONS = [
   {id: 'coinSpin', name: 'Coin Spin', animation: {frames: []}},
 ];
 
+/**
+ * What the caller would make of these answers, without writing it.
+ *
+ * A project holding one actor file, which is enough for the abilities step:
+ * what those rows read is the actor's own chain (`enhance/EnhancementRows`).
+ */
+const build = vi.fn((draft: {name: string}) => ({
+  source: {
+    folders: {f1: {id: 'f1', name: 'actors', parentId: '0', open: true}},
+    files: {
+      made: {
+        id: 'made',
+        name: 'chaser.actor',
+        language: 'actor',
+        contents: JSON.stringify({
+          blocks: {
+            blocks: [{type: 'world_actor', fields: {NAME: draft.name}}],
+          },
+        }),
+        folderId: 'f1',
+      },
+    },
+    openFiles: [],
+  } as never,
+  path: 'actors/chaser',
+}));
+
 const onCreate = vi.fn(() => true);
 const onCancel = vi.fn();
 
@@ -36,6 +63,7 @@ const show = (props: Partial<React.ComponentProps<typeof ActorCreator>> = {}) =>
       sprites={SPRITES}
       images={{}}
       animations={ANIMATIONS}
+      build={build}
       onCreate={onCreate}
       onCancel={onCancel}
       {...props}
@@ -58,13 +86,19 @@ const pastOrigin = (door: string, called = 'Chaser', which?: string) => {
 
 beforeEach(() => vi.clearAllMocks());
 
+/** Walk the rest of the way and make it. */
+const toTheEnd = () => {
+  fireEvent.click(onward());
+  fireEvent.click(creator());
+};
+
 describe('the wizard shell', () => {
   it('says which step this is, and how many there are', () => {
     // A wizard that does not say where you are is a sequence of dialogs that
     // happen to follow each other.
     show();
 
-    expect(screen.getByText(/Step 1 of 2/)).toBeTruthy();
+    expect(screen.getByText(/Step 1 of 3/)).toBeTruthy();
     expect(screen.getByText(/Where does it come from/)).toBeTruthy();
   });
 
@@ -77,10 +111,10 @@ describe('the wizard shell', () => {
   it('goes on, and comes back with the answers still there', () => {
     show();
     pastOrigin('Copy one of mine', 'Chaser', 'Crawler');
-    expect(screen.getByText(/Step 2 of 2/)).toBeTruthy();
+    expect(screen.getByText(/Step 2 of 3/)).toBeTruthy();
 
     fireEvent.click(screen.getByRole('button', {name: 'Back'}));
-    expect(screen.getByText(/Step 1 of 2/)).toBeTruthy();
+    expect(screen.getByText(/Step 1 of 3/)).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Crawler'})).toHaveAttribute(
       'aria-pressed',
       'true',
@@ -118,8 +152,10 @@ describe('the three doors', () => {
     expect(onward()).not.toBeDisabled();
 
     fireEvent.click(onward());
-    fireEvent.click(creator());
-    expect(onCreate).toHaveBeenCalledWith({
+    toTheEnd();
+    // The DRAFT goes to `build`, which answers what the actor would be; what
+    // `onCreate` is handed is that answer, to write.
+    expect(build).toHaveBeenCalledWith({
       origin: 'copy',
       source: 'a2',
       // The chosen actor's own name, since an untouched field is not an
@@ -128,6 +164,7 @@ describe('the three doors', () => {
       // …and nothing about its look, which it already has.
       look: undefined,
     });
+    expect(onCreate).toHaveBeenCalled();
   });
 
   it('asks which of theirs, and names it what the library calls it', () => {
@@ -135,9 +172,9 @@ describe('the three doors', () => {
     fireEvent.click(screen.getByText('Start from a template'));
     fireEvent.click(screen.getByRole('button', {name: 'Coin'}));
     fireEvent.click(onward());
-    fireEvent.click(creator());
+    toTheEnd();
 
-    expect(onCreate).toHaveBeenCalledWith(
+    expect(build).toHaveBeenCalledWith(
       expect.objectContaining({
         origin: 'template',
         source: 'coin',
@@ -152,9 +189,9 @@ describe('the three doors', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Coin'}));
     fireEvent.change(name(), {target: {value: 'Gold Piece'}});
     fireEvent.click(onward());
-    fireEvent.click(creator());
+    toTheEnd();
 
-    expect(onCreate).toHaveBeenCalledWith(
+    expect(build).toHaveBeenCalledWith(
       expect.objectContaining({name: 'Gold Piece'}),
     );
   });
@@ -200,7 +237,7 @@ describe('the name', () => {
   it('closes when the making worked', async () => {
     show();
     pastOrigin('Create my own');
-    fireEvent.click(creator());
+    toTheEnd();
 
     await vi.waitFor(() => expect(onCancel).toHaveBeenCalled());
   });
@@ -211,7 +248,7 @@ describe('the name', () => {
     onCreate.mockReturnValueOnce(false);
     show();
     pastOrigin('Create my own');
-    fireEvent.click(creator());
+    toTheEnd();
 
     await vi.waitFor(() => expect(onCreate).toHaveBeenCalled());
     expect(onCancel).not.toHaveBeenCalled();
@@ -233,9 +270,9 @@ describe('the picture step', () => {
     show();
     pastOrigin('Create my own');
 
-    expect(creator()).not.toBeDisabled();
-    fireEvent.click(creator());
-    expect(onCreate).toHaveBeenCalledWith(
+    expect(onward()).not.toBeDisabled();
+    toTheEnd();
+    expect(build).toHaveBeenCalledWith(
       expect.objectContaining({look: undefined}),
     );
   });
@@ -244,9 +281,9 @@ describe('the picture step', () => {
     show();
     pastOrigin('Create my own');
     fireEvent.click(screen.getByRole('button', {name: 'crawler.png'}));
-    fireEvent.click(creator());
+    toTheEnd();
 
-    expect(onCreate).toHaveBeenCalledWith(
+    expect(build).toHaveBeenCalledWith(
       expect.objectContaining({look: {kind: 'sprite', value: 'crawler.png'}}),
     );
   });
@@ -257,9 +294,9 @@ describe('the picture step', () => {
     show();
     pastOrigin('Create my own');
     fireEvent.click(screen.getByRole('button', {name: 'Coin Spin'}));
-    fireEvent.click(creator());
+    toTheEnd();
 
-    expect(onCreate).toHaveBeenCalledWith(
+    expect(build).toHaveBeenCalledWith(
       expect.objectContaining({look: {kind: 'animation', value: 'coinSpin'}}),
     );
   });
@@ -284,9 +321,94 @@ describe('the picture step', () => {
     );
     // …and pressing on through says nothing about it, since there is nothing
     // for the caller to do.
-    fireEvent.click(creator());
-    expect(onCreate).toHaveBeenCalledWith(
+    toTheEnd();
+    expect(build).toHaveBeenCalledWith(
       expect.objectContaining({look: undefined}),
+    );
+  });
+});
+
+describe('the abilities step', () => {
+  /** Walk to the third step, having made an actor from nothing. */
+  const toAbilities = () => {
+    show();
+    pastOrigin('Create my own');
+    fireEvent.click(onward());
+  };
+
+  it('reads the actor being made, not the project as it stands', () => {
+    // The whole of what `build` is for: the rows ask what THIS actor has, and
+    // it is not in the learner's project yet.
+    toAbilities();
+
+    expect(build).toHaveBeenCalledWith(
+      expect.objectContaining({name: 'Chaser'}),
+    );
+    expect(screen.getByText(/Step 3 of 3/)).toBeTruthy();
+    expect(screen.getByText('Walks and jumps like a platformer')).toBeTruthy();
+  });
+
+  it('will not add until a row is chosen', () => {
+    toAbilities();
+
+    expect(screen.getByRole('button', {name: 'Add this'})).toBeDisabled();
+  });
+
+  it('adds one, stays, and says the actor has it now', () => {
+    // Applied and STAYING, which is the one way this is not the enhancement
+    // dialog: walking in and out once per ability would make a Crawler three
+    // round trips. Nothing keeps count — the row reads the actor's own chain,
+    // so the one just added says so by itself.
+    toAbilities();
+    fireEvent.click(screen.getByText('Walks a beat'));
+    fireEvent.click(screen.getByRole('button', {name: 'Add this'}));
+
+    expect(screen.getByText(/Step 3 of 3/)).toBeTruthy();
+    const row = screen.getByText('Walks a beat').closest('button')!;
+    expect(row.textContent).toContain('Already has this');
+    expect(row).toBeDisabled();
+  });
+
+  it('takes a second one after the first', () => {
+    toAbilities();
+    for (const ability of ['Walks a beat', 'Hurts what it touches']) {
+      fireEvent.click(screen.getByText(ability));
+      fireEvent.click(screen.getByRole('button', {name: 'Add this'}));
+    }
+
+    for (const ability of ['Walks a beat', 'Hurts what it touches']) {
+      expect(
+        screen.getByText(ability).closest('button')!.textContent,
+      ).toContain('Already has this');
+    }
+  });
+
+  it('hands over the actor with its abilities on it', () => {
+    toAbilities();
+    fireEvent.click(screen.getByText('Walks a beat'));
+    fireEvent.click(screen.getByRole('button', {name: 'Add this'}));
+    fireEvent.click(creator());
+
+    const written = (
+      onCreate.mock.calls.at(-1) as unknown as [
+        {files: Record<string, {contents: string}>},
+      ]
+    )[0];
+    expect(written.files.made.contents).toContain('Patrol#PatrolsAcrossTrait');
+  });
+
+  it('builds afresh when the answers behind it change', () => {
+    // Walking back to rename and forward again must not leave this step
+    // editing the actor that was.
+    toAbilities();
+    fireEvent.click(screen.getByRole('button', {name: 'Back'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Back'}));
+    fireEvent.change(name(), {target: {value: 'Stalker'}});
+    fireEvent.click(onward());
+    fireEvent.click(onward());
+
+    expect(build).toHaveBeenLastCalledWith(
+      expect.objectContaining({name: 'Stalker'}),
     );
   });
 });

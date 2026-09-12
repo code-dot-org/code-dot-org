@@ -378,7 +378,9 @@ describe('the file menus', () => {
     await screen.findByText('Create my own');
     fireEvent.click(screen.getByText('Create my own'));
     fireEvent.change(screen.getByRole('textbox'), {target: {value: called}});
-    // Past the picture step, which this project has nothing to answer with.
+    // Past the picture and the abilities steps, neither of which this test is
+    // about — the wizard's own tests cover them.
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     fireEvent.click(screen.getByRole('button', {name: 'Create'}));
   };
@@ -426,6 +428,7 @@ describe('the file menus', () => {
     fireEvent.change(screen.getByRole('textbox'), {
       target: {value: 'Gold Piece'},
     });
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     fireEvent.click(screen.getByRole('button', {name: 'Create'}));
 

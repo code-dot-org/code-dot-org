@@ -140,6 +140,11 @@ afterwards, like everything else an assistant writes here.
 
 ## Step 3 is the enhancement shelf
 
+Built. What it shares with the dialog is the ROW — a name, a sentence, what it
+brings, whether this actor can take it, and the question the one that asks one
+raises — and that is `enhance/EnhancementRows`, which both frames draw. What
+differs is the frame and what a press means.
+
 Read as a step it wants to be BROAD. From an actor's own menu a list of ninety
 verbs is a wall; at the point of "what can this thing do" it is a menu of what
 the library can offer, and the learner is there to browse it. That is the
@@ -214,9 +219,8 @@ person having looked at it first.
 
 ## What does not exist yet
 
-- **A wizard shell.** Every dialog in the lab is one-shot: it opens, asks one
-  question, and closes. There is no step container, no back, and no place to
-  keep an answer between steps.
+- ~~**A wizard shell.**~~ Built: `actors/create/ActorCreator` owns the step, the
+  answers, and the actor as it would be.
 - ~~**A way to leave, having written nothing.**~~ **Settled, and the reasoning
   that made it a problem was wrong.** It said cloning writes a file and
   importing writes seven, so the actor must exist after step 1 and an abandoned
@@ -231,7 +235,11 @@ person having looked at it first.
   enhancement to an actor that is not in the project yet.
 
 - **Trait selection outside the shelf.** There is no picker for "any trait in
-  the project" but the Blockly dropdown.
+  the project" but the Blockly dropdown. The abilities step is the shelf, so
+  what has no row is still only reachable by opening the file — which is fine
+  as an answer and is not the same as saying the shelf is everything.
+- **Grouping.** Ten rows is a list; thirty will be a wall, and the rule shelf
+  already had to learn this (`rules/stockRuleGroups`).
 
 ## What has to be decided
 
@@ -242,9 +250,14 @@ person having looked at it first.
   where it is as well as being the second door, since cloning a finished actor
   is a thing done TO one file rather than a way of starting.
 - **Is `Create my own` still one press?** It was: `New` asked for a name and
-  opened a file. Through the wizard it is a door, a name, a picture and a shelf.
-  Either the empty answer is a visible way out of every step, or the learner
-  who wanted an empty file has been made to walk past three questions.
+  opened a file. Through the wizard it is a door, a name, a picture and a shelf
+  — three Nexts, each of which may be answered with nothing. Either that is a
+  visible way out of every step, or the learner who wanted an empty file has
+  been made to walk past three questions to get it.
+- **Nothing says what has been chosen so far.** Three steps in, the wizard
+  shows the step you are on and not the actor you are making. A line of what it
+  is called, what it looks like and what it can do would answer that; whether
+  it is worth the room is not obvious at three steps and will be at five.
 - **Is it skippable?** A learner who knows what they want should be able to
   land on the file in one press. A wizard that cannot be walked out of is worse
   than the prompt it replaced.

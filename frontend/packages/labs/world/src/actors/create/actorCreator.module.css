@@ -165,3 +165,27 @@
   padding: 0.25rem 0;
   color: var(--text-neutral-secondary);
 }
+
+/* "Add this", under the abilities rows. Its own button rather than the
+   dialog's, because the dialog's says what happens to the WIZARD — on to the
+   next step, or make the actor — and this says what happens to the actor. A
+   step that took one ability and moved on would make a Crawler two visits. */
+.add {
+  padding: 0.4rem 0.9rem;
+  border: 2px solid var(--borders-brand-primary, #0093a4);
+  border-radius: 4px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.add:disabled {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+  color: var(--text-neutral-secondary);
+  cursor: default;
+}
+
+.add:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}

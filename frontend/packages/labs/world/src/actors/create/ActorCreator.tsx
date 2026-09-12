@@ -6,12 +6,15 @@
 // the frame that asks them instead — a sequence of steps, each a question with
 // a visible answer, ending in a file worth opening.
 //
-// WHAT IS HERE IS STEPS ONE AND TWO. The abilities are step three, and they
-// are content that lives inside a dialog of its own today
-// (`enhance/EnhanceActorDialog`): a dialog cannot be nested in a dialog, so it
-// has to be lifted out of its wrapper before it can stand in a step.
+// THE ABILITIES STEP APPLIES AND STAYS, which is the one way it is not the
+// enhancement dialog. That one takes a row and closes, which is right for what
+// it is — "give this actor one more thing", asked from the actor's own menu or
+// from the wand on its `define actor`. Building an actor up is a different
+// act, and walking in and out of a dialog once per ability would make a
+// Crawler three round trips. What the two share is the ROW
+// (`enhance/EnhancementRows`), not the frame around it.
 //
-// The picture step needed no such lifting in the end. What it shows is whole
+// The picture step needed no lifting at all. What it shows is whole
 // pictures and whole animations, and both already have a component that draws
 // one — `animationEditor/CellThumb` and `animationEditor/AnimationThumb` — so
 // it asks for them directly rather than borrowing a grid built to offer the
@@ -43,10 +46,13 @@ import {Typography} from '@mui/material';
 import {useMemo, useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
+import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {AnimationThumb} from '../../animationEditor/AnimationThumb';
 import type {AnimDef} from '../../animationEditor/animDocument';
 import {CellThumb} from '../../animationEditor/CellThumb';
+import {EnhancementRows, refusalOf} from '../enhance/EnhancementRows';
+import type {Enhancement, EnhanceTarget} from '../enhance/enhancements';
 
 import styles from './actorCreator.module.css';
 import type {ActorLook} from './actorLook';
@@ -117,11 +123,27 @@ export interface ActorCreatorProps {
    */
   nameProblem?: (name: string) => string | undefined;
   /**
-   * Make it. Answers whether it worked, because this cannot tell: the caller
-   * writes the files and the lab's reconcile gets the last word.
+   * The project with this actor in it, and where it landed — WITHOUT writing
+   * anything.
+   *
+   * Every step of making one is a pure transform over a project source, so the
+   * wizard can hold the answer to "what would this be?" and show the abilities
+   * step what the actor already has. Nothing reaches the learner's project
+   * until `onCreate`.
    */
-  onCreate: (draft: ActorDraft) => Promise<boolean> | boolean;
+  build: (draft: ActorDraft) => BuiltActor | undefined;
+  /**
+   * Write it. Answers whether it worked, because this cannot tell: the caller
+   * commits and the lab's reconcile gets the last word.
+   */
+  onCreate: (source: MultiFileSource) => Promise<boolean> | boolean;
   onCancel: () => void;
+}
+
+/** What `build` answers: a project with the actor in it, and its path. */
+export interface BuiltActor {
+  source: MultiFileSource;
+  path: string;
 }
 
 /** One door of step one. */
@@ -158,6 +180,7 @@ const DOORS: ReadonlyArray<{
 const STEPS = [
   {id: 'origin', title: 'Where does it come from?'},
   {id: 'look', title: 'What does it look like?'},
+  {id: 'abilities', title: 'What can it do?'},
 ] as const;
 
 /** How wide a picture tile is drawn. Tall art is fitted inside it. */
@@ -170,6 +193,7 @@ export const ActorCreator = ({
   images,
   animations,
   nameProblem,
+  build,
   onCreate,
   onCancel,
 }: ActorCreatorProps) => {
@@ -179,6 +203,16 @@ export const ActorCreator = ({
   const [name, setName] = useState('');
   const [look, setLook] = useState<ActorLook>();
   const [busy, setBusy] = useState(false);
+  /**
+   * The actor as it would be, once there is enough to say.
+   *
+   * Built on the way INTO the abilities step and edited by it, so what those
+   * rows read is the actor the learner is making rather than the project as it
+   * stands. Nothing here is written; `onCreate` is the only thing that writes.
+   */
+  const [built, setBuilt] = useState<BuiltActor>();
+  const [chosen, setChosen] = useState<Enhancement | null>(null);
+  const [answer, setAnswer] = useState<string>();
 
   /**
    * The name to write, which is the typed one or the chosen thing's.
@@ -233,27 +267,61 @@ export const ActorCreator = ({
 
   const last = at === STEPS.length - 1;
 
+  /** The actor these rows are about, named as everything else names one. */
+  const target: EnhanceTarget | undefined = built && {
+    kind: 'actor',
+    path: built.path,
+    name: chosenName,
+  };
+
+  /** Whether the chosen row can be applied as it stands. */
+  const addable = Boolean(
+    chosen &&
+      built &&
+      target &&
+      !refusalOf(chosen, built.source, target, answer) &&
+      (!chosen.asks || answer !== undefined),
+  );
+
+  /** Give the actor being built the chosen ability, and stay for another. */
+  const add = () => {
+    if (!addable || !chosen || !built || !target) {
+      return;
+    }
+    setBuilt({
+      ...built,
+      source: chosen.apply(built.source, target, answer),
+    });
+    // Cleared, so the row the learner just pressed is not still pressed while
+    // it reads "Already has this" — and so the next press is a fresh choice.
+    setChosen(null);
+    setAnswer(undefined);
+  };
+
   const go = async () => {
     if (!ready || busy) {
       return;
     }
     if (!last) {
+      // Built on the way in, and rebuilt if the answers behind it changed:
+      // walking back to rename the actor and forward again must not leave the
+      // abilities step editing the actor that was.
+      if (STEPS[at + 1].id === 'abilities') {
+        setBuilt(build({origin, source, name: chosenName, look}));
+        setChosen(null);
+        setAnswer(undefined);
+      }
       setAt(step => step + 1);
+      return;
+    }
+    if (!built) {
       return;
     }
     setBusy(true);
     // Left up on failure rather than closed: the caller's complaint is on
     // screen by then (a name already taken, a write refused), and a wizard
     // that vanished would take the answers with it.
-    // The look is left OUT when it is the one the chosen thing already had:
-    // the caller has nothing to do, and writing the row again would move it to
-    // the end of a chain it was already in.
-    const made = await onCreate({
-      origin,
-      source,
-      name: chosenName,
-      look: look ?? undefined,
-    });
+    const made = await onCreate(built.source);
     setBusy(false);
     if (made) {
       onCancel();
@@ -500,6 +568,33 @@ export const ActorCreator = ({
                   Or none — an actor that paints itself needs no picture.
                 </Typography>
               )}
+            </>
+          )}
+
+          {STEPS[at].id === 'abilities' && built && target && (
+            <>
+              <EnhancementRows
+                source={built.source}
+                target={target}
+                chosen={chosen}
+                answer={answer}
+                onChoose={enhancement => {
+                  setChosen(enhancement);
+                  setAnswer(undefined);
+                }}
+                onAnswer={setAnswer}
+              />
+              {/* ADD, and stay. The rows read the actor being built, so the
+                one just added says "Already has this" on the next render
+                with nothing keeping count (`enhance/EnhancementRows`). */}
+              <button
+                type="button"
+                className={styles.add}
+                disabled={!addable}
+                onClick={add}
+              >
+                <Typography variant="body3">Add this</Typography>
+              </button>
             </>
           )}
         </div>
