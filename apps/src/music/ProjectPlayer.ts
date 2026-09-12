@@ -47,7 +47,25 @@ class ProjectPlayer {
     }
     const {playbackEvents, lastMeasure} = this.currentMetadata;
     this.player.playSong(playbackEvents);
+    this.watchForSongEnd(lastMeasure, onEnded);
+  }
 
+  /**
+   * Play the loaded song on repeat, first measure to last, until stop().
+   */
+  playLooping() {
+    if (this.currentMetadata === null) {
+      throw new Error('No project loaded!');
+    }
+    const {playbackEvents, lastMeasure} = this.currentMetadata;
+    // Playback positions are 1-based measures; the loop end is exclusive.
+    this.player.setLoopStart(1);
+    this.player.setLoopEnd(lastMeasure + 1);
+    this.player.setLoopEnabled(true);
+    this.player.playSong(playbackEvents);
+  }
+
+  private watchForSongEnd(lastMeasure: number, onEnded?: () => void) {
     this.stopIntervalId = window.setInterval(() => {
       if (this.stopIntervalId) {
         const currentPlayheadPosition =
@@ -64,6 +82,8 @@ class ProjectPlayer {
 
   stop() {
     this.player.stopSong();
+    // A no-op for the once-through play(); ends a playLooping() loop.
+    this.player.setLoopEnabled(false);
     if (this.stopIntervalId) {
       clearInterval(this.stopIntervalId);
     }
