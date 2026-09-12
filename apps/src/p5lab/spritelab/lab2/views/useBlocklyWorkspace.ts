@@ -257,7 +257,16 @@ export default function useBlocklyWorkspace({
   // own their toolbox and ignore a passed definition.
   const refreshToolbox = useCallback(
     (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => {
-      if (definition && !isToolboxMode && !isStartMode) {
+      // Blockly cannot swap a category toolbox for a flyout on a live
+      // workspace, so a definition of the other kind is declined: the scene
+      // keeps the blocks the workspace was injected with.
+      const installed = toolboxRef.current;
+      const installedKind =
+        installed && typeof installed !== 'string' && 'kind' in installed
+          ? installed.kind
+          : undefined;
+      const kindMatches = definition?.kind === installedKind;
+      if (definition && kindMatches && !isToolboxMode && !isStartMode) {
         toolboxRef.current = filterToolboxToRegisteredBlocks(
           applyToolboxAdditions(definition)
         );

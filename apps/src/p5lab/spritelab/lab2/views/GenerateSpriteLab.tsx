@@ -150,7 +150,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   return (
     <Guide
       position="bottom"
-      width="normal"
+      width={collapsed ? 'very-narrow' : 'normal'}
       cornerIcon={
         !collapsible ? undefined : collapsed ? 'maximize' : 'minimize'
       }

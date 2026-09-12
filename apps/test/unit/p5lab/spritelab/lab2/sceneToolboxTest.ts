@@ -31,17 +31,8 @@ describe('toolboxForSceneType', () => {
     });
   });
 
-  it('keeps every block when the scene has no type, still as a flyout', () => {
-    // The kind cannot change once Blockly has the workspace, so an untyped
-    // scene gets everything rather than the authored categories.
-    expect(toolboxForSceneType(categories, undefined)).toEqual({
-      kind: 'flyoutToolbox',
-      contents: [
-        {kind: 'block', type: 'jump'},
-        {kind: 'block', type: 'say'},
-        {kind: 'block', type: 'goTo'},
-      ],
-    });
+  it('keeps the authored categories when the scene has no type', () => {
+    expect(toolboxForSceneType(categories, undefined)).toBe(categories);
   });
 
   it('leaves a toolbox that names no scene type as authored', () => {
@@ -72,7 +63,7 @@ describe('toolboxForSceneType', () => {
     expect(toolboxForSceneType(flyout, 'story')).toBe(flyout);
   });
 
-  it('gives a story scene nothing when only the other type is authored', () => {
+  it('leaves a toolbox alone when its type is not authored', () => {
     const platformOnly = {
       kind: 'categoryToolbox',
       contents: [
@@ -83,10 +74,7 @@ describe('toolboxForSceneType', () => {
         },
       ],
     };
-    expect(toolboxForSceneType(platformOnly, 'story')).toEqual({
-      kind: 'flyoutToolbox',
-      contents: [],
-    });
+    expect(toolboxForSceneType(platformOnly, 'story')).toBe(platformOnly);
   });
 
   it('handles a missing shared category', () => {

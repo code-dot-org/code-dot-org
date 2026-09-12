@@ -58,6 +58,9 @@ $gap-height: 43px;
   gap: 16px;
   container-type: inline-size;
 
+  // Collapsing a guide narrows it; animate that the way its height animates.
+  transition: width 0.25s ease;
+
   &NormalWidth {
     width: 40%;
   }
