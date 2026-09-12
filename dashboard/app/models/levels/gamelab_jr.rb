@@ -54,6 +54,7 @@ class GamelabJr < Gamelab
     pinned_scene_id
     pinned_scene_name
     guide_steps
+    guide_collapsible
   )
 
   def shared_blocks

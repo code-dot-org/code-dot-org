@@ -49,8 +49,7 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
-import {countImagesByType, countWorldCells, useGuideSteps} from '../guideSteps';
-import {imageTypeFromCategories} from '../imageGallery';
+import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {
   removeImageReferences,
   collectImageReferences,
@@ -95,7 +94,6 @@ import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
-  createEmptyWorld,
   DEFAULT_SCENE_GRID_SIZE,
   paintWorldCell,
   resizeWorld,
@@ -103,6 +101,7 @@ import {
   World,
   WorldCell,
 } from '../world';
+import {useWorldStartPattern} from '../worldStartPattern';
 
 import {isPointerClick} from './blurAfterPointerClick';
 import SceneMusicBar from './components/SceneMusicBar';
@@ -460,80 +459,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [scenes, activeSceneId, pinnedSceneId]);
 
-  // Premade world: paint the level's pattern into the pinned scene's world.
-  // 'B' draws the block image the student just made, 'S' their first
-  // character (the platform arc's player). Each kind seeds only while the
-  // world holds none of it, into empty cells only, so student edits always
-  // win and a later level's platforms merge in around an already-placed
-  // player. Pattern rows anchor to the playfield floor (resizeWorld's
-  // convention). Re-runs after Start Over, which empties the world.
-  const {worldStartPattern} = levelProperties;
-  useEffect(() => {
-    if (!worldStartPattern?.length || !pinnedSceneId || !animationsSeeded) {
-      return;
-    }
-    const {orderedKeys, propsByKey} = animationList;
-    const typeOf = (key: string) =>
-      imageTypeFromCategories(propsByKey[key]?.categories);
-    // orderedKeys is newest-first: Sprite Lab prepends new animations.
-    const cellFor: {[char: string]: WorldCell} = {};
-    const blockKey = orderedKeys.find(k => typeOf(k) === 'block');
-    if (blockKey) {
-      cellFor.B = {image: propsByKey[blockKey].name, kind: 'block'};
-    }
-    const spriteKey = [...orderedKeys]
-      .reverse()
-      .find(k => typeOf(k) === 'sprite');
-    if (spriteKey) {
-      cellFor.S = {image: propsByKey[spriteKey].name, kind: 'sprite'};
-    }
-    updateSources(prev => {
-      const prevScenes = prev.scenes ?? [];
-      const index = prevScenes.findIndex(s => s.id === pinnedSceneId);
-      if (index < 0) {
-        return prev;
-      }
-      const scene = prevScenes[index];
-      const counts = countWorldCells(scene.world?.grid);
-      const size = sceneGridSize(scene.world);
-      const grid = (
-        scene.world?.grid?.length
-          ? scene.world.grid
-          : createEmptyWorld(size).grid
-      ).map(cells => [...cells]);
-      const rowShift = size - worldStartPattern.length;
-      let painted = false;
-      worldStartPattern.forEach((rowText, patternRow) => {
-        const row = patternRow + rowShift;
-        if (row < 0 || row >= size) {
-          return;
-        }
-        [...rowText].slice(0, size).forEach((char, col) => {
-          const cell = cellFor[char];
-          const placed =
-            cell?.kind === 'block' ? counts.blocks : counts.sprites;
-          if (!cell || placed > 0 || grid[row][col]) {
-            return;
-          }
-          grid[row][col] = cell;
-          painted = true;
-        });
-      });
-      if (!painted) {
-        return prev;
-      }
-      const nextScenes = [...prevScenes];
-      nextScenes[index] = {...scene, world: {grid}};
-      return {...prev, scenes: nextScenes};
-    });
-  }, [
-    worldStartPattern,
+  // Premade world, when the level authors one (worldStartPattern.ts).
+  useWorldStartPattern({
+    pattern: levelProperties.worldStartPattern,
     pinnedSceneId,
-    animationsSeeded,
-    animationList,
+    enabled: animationsSeeded,
+    animations: animationList,
     updateSources,
-    sourcesReinitializedCount,
-  ]);
+    reinitCount: sourcesReinitializedCount,
+  });
 
   // Where Play begins with no explicit start scene: the pinned scene on a
   // pinned-scene level (the first scene may belong to another level sharing
@@ -790,7 +724,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     if (isToolboxMode || levelProperties.guideMode === 'imageGenerate') {
       // Toolbox editing has nothing to run: the workspace holds the toolbox
-      // itself. A central image-generation level has no stage at all. With
+      // itself. A standalone image-generation level has no stage at all. With
       // no engine, the run machinery no-ops (and no stray canvas mounts).
       return;
     }
@@ -1590,7 +1524,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // One prop bag for both mounts of the pane (Images tab, central mode).
+  // One prop bag for both mounts of the pane (Images tab, standalone mode).
   const imagePaneProps = {
     uploadImage,
     onRenameImage: handleRenameImage,
@@ -1630,10 +1564,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       />
       <div className={moduleStyles.divider} />
       {levelProperties.guideMode === 'imageGenerate' ? (
-        // Central image-generation level: the image panel is the whole lab,
+        // Standalone image-generation level: the image panel is the whole lab,
         // with the floating guide over it. No tabs, no stage.
-        <div className={moduleStyles.centralGenerateArea}>
-          <GenerateImagePane central {...imagePaneProps} />
+        <div className={moduleStyles.standaloneGenerateArea}>
+          <GenerateImagePane standalone {...imagePaneProps} />
           <GenerateSpriteLab
             guideMode="instructions"
             instructions={guide.text}

@@ -70,9 +70,9 @@ interface ImageDetailsDialogProps {
   /** No paint entry points: the pane is a plain preview and new images
       offer no blank canvas. */
   paintDisabled?: boolean;
-  /** Central mode: the panel sits in the page, not in a modal — no
+  /** Standalone mode: the panel sits in the page, not in a modal — no
       overlay, no Done/Cancel exits. */
-  inline?: boolean;
+  standalone?: boolean;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -125,7 +125,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   adlibOnly,
   defaultStyle,
   paintDisabled,
-  inline,
+  standalone,
   pixelated,
   getDataURI,
   isNameTaken,
@@ -186,9 +186,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           ? 'View, edit, rename, or delete this image.'
           : 'View, edit, or delete this image.'}
       </span>
-      {/* Inline mode drops the title bar: the section's aria-label still
+      {/* Standalone mode drops the title bar: the section's aria-label still
           names it, and the floating guide carries the instruction. */}
-      {!inline && (
+      {!standalone && (
         <div className={moduleStyles.header}>
           {renaming ? (
             <>
@@ -299,7 +299,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           }}
           // A brand-new image has no summary to fall back to.
           onCancel={isNew ? onClose : () => setView('details')}
-          hideCancel={inline && isNew}
+          hideCancel={standalone && isNew}
           onDelete={isNew ? undefined : onDelete}
         />
       ) : (
@@ -386,11 +386,11 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               )}
             </div>
           </div>
-          {/* Central mode's summary is a resting point, not a manager:
+          {/* Standalone mode's summary is a resting point, not a manager:
               the guide's Continue is the only action, so no footer — no
               delete, no second generate (the alternatives row above still
               offers the session's variants). */}
-          {!inline && (
+          {!standalone && (
             <div className={moduleStyles.footer}>
               <div className={moduleStyles.footerLeft}>
                 <DeleteImageButton onDelete={onDelete} />
@@ -421,10 +421,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     // data-theme drives both the chrome's own colors and the design
     // system's semantic colors inside the panel (the TextField reads them).
     <div className={moduleStyles.dialogHost} data-theme={mode}>
-      {inline ? (
+      {standalone ? (
         <section
           aria-label={title}
-          className={classNames(moduleStyles.dialog, moduleStyles.inlineDialog)}
+          className={classNames(
+            moduleStyles.dialog,
+            moduleStyles.standaloneDialog
+          )}
         >
           {panelBody}
         </section>

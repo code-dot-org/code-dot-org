@@ -146,7 +146,7 @@ interface GenerateImageViewProps {
   /** Leave without generating: back to the summary, or out of the dialog
       for a brand-new image. */
   onCancel: () => void;
-  /** Central mode, brand-new image: there is nowhere to cancel to. */
+  /** Standalone mode, brand-new image: there is nowhere to cancel to. */
   hideCancel?: boolean;
   /** Delete this image (existing images). */
   onDelete?: () => void;

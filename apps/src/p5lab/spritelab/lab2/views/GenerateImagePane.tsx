@@ -278,10 +278,10 @@ interface GenerateImagePaneProps {
   defaultStyle?: ImageStyle;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
-  /** Central mode: the image panel IS the level — no gallery, the panel
-      inline in the page, always open on the level's image. */
-  central?: boolean;
-  /** Central mode opens on the fresh-generation form instead of adopting
+  /** Standalone mode: the image panel IS the level — no gallery, the panel
+      standalone in the page, always open on the level's image. */
+  standalone?: boolean;
+  /** Standalone mode opens on the fresh-generation form instead of adopting
       the newest existing image — for "make another one" levels, where the
       newest image of the type is an earlier level's work. */
   startsNew?: boolean;
@@ -301,7 +301,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   adlibOnly,
   defaultStyle,
   paintDisabled,
-  central,
+  standalone,
   startsNew,
 }) => {
   const dispatch = useAppDispatch();
@@ -812,13 +812,13 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
-  // Central mode: open on the newest image of the level's type, else on a
+  // Standalone mode: open on the newest image of the level's type, else on a
   // fresh one, and reopen whenever a close or delete clears the target. The
   // animation list loads after mount, so an untouched 'new' session still
   // adopts the level's image when it arrives; a session with alternatives
   // is the student's work and keeps its target.
   useEffect(() => {
-    if (!central || (dialogTarget && dialogTarget !== 'new')) {
+    if (!standalone || (dialogTarget && dialogTarget !== 'new')) {
       return;
     }
     if (dialogTarget === 'new' && alternatives.length > 0) {
@@ -846,7 +846,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       setDialogTarget('new');
     }
   }, [
-    central,
+    standalone,
     startsNew,
     dialogTarget,
     images,
@@ -863,7 +863,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
-      {!central && (
+      {!standalone && (
         <div className={moduleStyles.imageGallery}>
           {/* First slot, so it never hides behind a scroll. */}
           <div className={moduleStyles.imageCard}>
@@ -944,7 +944,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           adlibOnly={adlibOnly}
           defaultStyle={defaultStyle}
           paintDisabled={paintDisabled}
-          inline={central}
+          standalone={standalone}
           pixelated={!!targetProps?.pixelGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}

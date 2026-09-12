@@ -145,11 +145,15 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     />
   );
 
+  const collapsible = !!levelProperties.guideCollapsible;
+
   return (
     <Guide
       position="bottom"
       width="normal"
-      cornerIcon={collapsed ? 'maximize' : 'minimize'}
+      cornerIcon={
+        !collapsible ? undefined : collapsed ? 'maximize' : 'minimize'
+      }
       onCornerIconClick={() => setCollapsed(current => !current)}
     >
       <div

@@ -707,10 +707,10 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-// Central image-generation levels: the image panel is the whole lab, the
+// Standalone image-generation levels: the image panel is the whole lab, the
 // floating guide over it, on the lab's own ground (black in dark mode, the
 // stage the dance generator uses).
-.centralGenerateArea {
+.standaloneGenerateArea {
   position: relative;
   display: flex;
   align-items: flex-start;

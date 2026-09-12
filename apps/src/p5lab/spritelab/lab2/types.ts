@@ -129,6 +129,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   visibleTabs?: Tab[];
   // Staged text for the floating guide, in order; requires guideMode.
   guideSteps?: GuideStep[];
+  /** Offer the caret that collapses the guide, for levels where it covers
+      something the student needs to see. */
+  guideCollapsible?: boolean;
   // Locks the new-image dialog's Type choice.
   lockedImageType?: ImageType;
   // Show the full internal image dialog — name field, Start from,
@@ -145,7 +148,7 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   defaultImageStyle?: ImageStyle;
   /** No paint entry points: no blank-canvas painting, no editing images. */
   imagePaintDisabled?: boolean;
-  /** Central mode opens on the fresh-generation form instead of the newest
+  /** Standalone mode opens on the fresh-generation form instead of the newest
       existing image — for levels that make another image of a type an
       earlier level already made. */
   imageStartsNew?: boolean;

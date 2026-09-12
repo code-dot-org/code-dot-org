@@ -23,10 +23,10 @@
   width: 850px;
 }
 
-// Central-mode presentation: the panel's content parked on the lab's own
+// Standalone presentation: the panel's content parked on the lab's own
 // ground — no modal entrance, no card chrome. The painted panel color (the
 // alternatives ring gap) has to match that ground rather than the card's.
-.dialogHost .inlineDialog {
+.dialogHost .standaloneDialog {
   animation: none;
   border: none;
   border-radius: 0;
@@ -40,8 +40,12 @@
     padding-top: 0;
   }
 
-  // Transparency reads against the stage itself here. The checkerboard is for
-  // the dialog, whose panel is opaque and would otherwise hide it.
+  // The image sits on the stage itself: no frame, and no checkerboard (that
+  // is for the dialog, whose opaque panel would otherwise hide transparency).
+  .imagePane {
+    border: none;
+  }
+
   .imagePaneChecker {
     background-color: transparent;
     background-image: none;
