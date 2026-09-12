@@ -235,13 +235,12 @@ person having looked at it first.
 
 ## What has to be decided
 
-- **Does it replace the Actors grid's two tiles?** Step 1 has swallowed both:
-  "create my own" is `New` and "start from a template" is `Import`, asked
-  together instead of as a choice made before the question was put. So the
-  grid's tiles become one — and the actor row's `Clone`, which is the second
-  door, has a reason to stay where it is as well as appearing here, since
-  cloning a finished actor is a thing done TO one file rather than a way of
-  starting.
+- ~~**Does it replace the Actors grid's two tiles?**~~ **Done.** `Import` is
+  gone and `New` opens the wizard: the two were a choice made before the
+  question was put — "from nothing" or "from the library", asked of a learner
+  who had not yet said they wanted an actor. The actor row's `Clone` stays
+  where it is as well as being the second door, since cloning a finished actor
+  is a thing done TO one file rather than a way of starting.
 - **Is `Create my own` still one press?** It was: `New` asked for a name and
   opened a file. Through the wizard it is a door, a name, a picture and a shelf.
   Either the empty answer is a visible way out of every step, or the learner

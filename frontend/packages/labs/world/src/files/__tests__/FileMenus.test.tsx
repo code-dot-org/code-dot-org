@@ -339,7 +339,8 @@ describe('the file menus', () => {
     openMenu('Actors');
 
     expect(screen.getByRole('dialog')).toBeTruthy();
-    expect(screen.getByText('Import')).toBeTruthy();
+    // ONE tile, not two: importing is the Actor Creator's third door now.
+    expect(screen.queryByText('Import')).toBeNull();
     expect(screen.getByText('New')).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Open Coin'})).toBeTruthy();
   });
@@ -515,14 +516,26 @@ describe('the file menus', () => {
     );
   });
 
-  it.each(['Sprites', 'Backgrounds', 'Animations', 'Actors'])(
+  it('hands the actors grid over to the Actor Creator, rather than stacking', async () => {
+    // The same two-focus-traps claim as the shelves below, for the one grid
+    // whose `New` leads somewhere else now: the wizard has to arrive with the
+    // grid gone, or it arrives behind it (`FileMenus.thenAsk`).
+    openMenu('Actors');
+    fireEvent.click(screen.getByText('New'));
+
+    await screen.findByText('Create my own');
+    expect(screen.queryByRole('button', {name: 'Open Coin'})).toBeNull();
+  });
+
+  it.each(['Sprites', 'Backgrounds', 'Animations'])(
     'gets the %s grid out of the way of the shelf it opens',
     async grid => {
       // TWO FOCUS TRAPS. The grid holds one and so does the dialog its Import
       // tile opens, so a grid left standing puts that dialog BEHIND it —
       // visible, unreachable, and unclosable without dismissing the grid on
       // top of it. Every one of these leads somewhere, so every one gets out
-      // of the way (`FileMenus.thenAsk`).
+      // of the way (`FileMenus.thenAsk`). The actors' grid is above, since it
+      // has no Import tile any more.
       openMenu(grid);
       fireEvent.click(screen.getByRole('button', {name: 'Import'}));
 

@@ -10,9 +10,14 @@
 // SpritePickerDialog`), with two differences that come from what an actor is.
 // The name stays under the tile, because an actor is a KIND rather than a
 // drawing and two Crates that look alike are a real thing to tell apart. And
-// the first two tiles are the two ways to get another one — Import from the
-// stock library, New from nothing — because noticing you want one more happens
-// while you are looking at the ones you have.
+// the first tile is the way to get another one, because noticing you want one
+// more happens while you are looking at the ones you have.
+//
+// ONE TILE, WHERE THERE WERE TWO. New and Import were a choice made before the
+// question was put — "from nothing" or "from the library" asked of a learner
+// who had not yet said they wanted an actor at all. They are the first two of
+// the Actor Creator's three doors now, asked together and after the wanting
+// (`actors/create/ActorCreator`); this tile opens it.
 //
 // A PICTURE IS NOT PROMISED. It is rendered by the sandbox and arrives after
 // the world has compiled (`BlocklyFileEditor`), a world's own inline `define
@@ -56,10 +61,8 @@ export interface ActorPickerDialogProps {
   readOnly?: boolean;
   /** Chosen — open this one in the editor. */
   onOpen: (fileId: string) => void;
-  /** Make one from nothing, which asks for a name first. */
+  /** Make one — the Actor Creator, which asks where it comes from. */
   onNew: () => void;
-  /** Take one from the stock library — the same picker the blocks open. */
-  onImport: () => void;
   /** Everything done TO one: rename, clone, delete, enhance. */
   onOptions?: (actor: ActorTile) => void;
   onCancel: () => void;
@@ -74,7 +77,6 @@ export const ActorPickerDialog = ({
   readOnly = false,
   onOpen,
   onNew,
-  onImport,
   onOptions,
   onCancel,
 }: ActorPickerDialogProps) => {
@@ -118,7 +120,6 @@ export const ActorPickerDialog = ({
       customContent={
         <div className={styles.body}>
           <ul className={styles.grid}>
-            {!readOnly && action('import', 'download', 'Import', onImport)}
             {!readOnly && action('new', 'plus', 'New', onNew)}
             {actors.map(actor => {
               const picture = pictureOf(actor.moduleKey);

@@ -990,7 +990,6 @@ export const FileMenus = () => {
             setPicking(false);
             setTimeout(() => setCreating(true), 0);
           }}
-          onImport={() => void importInto(actorsMenu)}
           // The grid closes and the menu opens off the ACTORS BUTTON, which is
           // still there — rather than off the tile, which is not. Two focus
           // traps in a stack is the bug `thenAsk` exists for, and the way past

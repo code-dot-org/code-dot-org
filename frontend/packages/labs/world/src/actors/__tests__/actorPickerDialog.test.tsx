@@ -18,7 +18,6 @@ const ACTORS: ActorTile[] = [
 
 const onOpen = vi.fn();
 const onNew = vi.fn();
-const onImport = vi.fn();
 const onCancel = vi.fn();
 
 const show = (props: Partial<Parameters<typeof ActorPickerDialog>[0]> = {}) =>
@@ -27,7 +26,6 @@ const show = (props: Partial<Parameters<typeof ActorPickerDialog>[0]> = {}) =>
       actors={ACTORS}
       onOpen={onOpen}
       onNew={onNew}
-      onImport={onImport}
       onCancel={onCancel}
       {...props}
     />,
@@ -58,19 +56,20 @@ describe('the actor grid', () => {
     expect(screen.getByText('Coin')).toBeTruthy();
   });
 
-  it('holds the two ways to get another one, in the grid', () => {
+  it('holds the way to get another one, in the grid', () => {
+    // ONE tile, not two. "From nothing" and "from the library" were a choice
+    // made before the learner had said they wanted an actor; they are the
+    // Actor Creator's first two doors now (`actors/create/ActorCreator`).
     show();
 
-    screen.getByText('Import').click();
-    expect(onImport).toHaveBeenCalled();
+    expect(screen.queryByText('Import')).toBeNull();
     screen.getByText('New').click();
     expect(onNew).toHaveBeenCalled();
   });
 
-  it('offers neither where nothing may be changed', () => {
+  it('offers it not at all where nothing may be changed', () => {
     show({readOnly: true});
 
-    expect(screen.queryByText('Import')).toBeNull();
     expect(screen.queryByText('New')).toBeNull();
     // …and still shows what is there, which is the point of a locked level.
     expect(screen.getByRole('button', {name: 'Open Coin'})).toBeTruthy();
