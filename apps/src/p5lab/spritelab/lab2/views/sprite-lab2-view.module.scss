@@ -380,18 +380,19 @@ $tab-segment-height: $tab-item-height - 2px;
   position: relative;
 }
 
-// Read-aloud button in the guide's corner. Floated over the text rather than
-// in the flow, so adding it doesn't reflow the guide's animated height; the
-// first line of instructions reserves its width instead.
+// Read-aloud button in the guide's leading corner — not the trailing one,
+// which the teacher panel overlays and swallows clicks through. Floated over
+// the text rather than in the flow, so adding it doesn't reflow the guide's
+// animated height; the first line of instructions reserves its width instead.
 .guideTts {
   position: absolute;
   top: 0;
-  inset-inline-end: 0;
+  inset-inline-start: 0;
   z-index: 1;
 }
 
 .guideInstructionsTts > :first-child {
-  margin-inline-end: 44px;
+  margin-inline-start: 44px;
 }
 
 .guideInstructions {
