@@ -2244,6 +2244,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@code-dot-org/shared-constants@workspace:packages/shared-constants":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/shared-constants@workspace:packages/shared-constants"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    eslint: "catalog:"
+    prettier: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/studio@workspace:apps/studio":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
