@@ -1,3 +1,5 @@
+import {Markdown} from '@code-dot-org/markdown';
+import {render, screen} from '@testing-library/react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -38,7 +40,7 @@ describe('StyledCodeBlock', () => {
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').props().markdown).toBe(
+    expect(wrapper.find(Markdown).props().content).toBe(
       '[`playSound`(#000000)](/docs/applab/playSound)'
     );
   });
@@ -54,9 +56,31 @@ describe('StyledCodeBlock', () => {
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').props().markdown).toBe(
+    expect(wrapper.find(Markdown).props().content).toBe(
       '[`playSound`](/docs/applab/playSound)'
     );
+  });
+
+  it('renders the color the visualCodeBlock extension applies', () => {
+    // The markdown alone proves nothing: without that extension enabled the
+    // `(#000000)` marker renders as literal text and the block has no color.
+    render(
+      <StyledCodeBlock
+        programmingExpression={{
+          syntax: 'playSound',
+          color: '#000000',
+          link: '/docs/applab/playSound',
+        }}
+      />
+    );
+
+    const link = screen.getByRole('link');
+    expect(link.getAttribute('href')).toBe('/docs/applab/playSound');
+
+    const code = link.querySelector('code');
+    expect(code.textContent).toBe('playSound');
+    expect(code.style.backgroundColor).toBe('rgb(0, 0, 0)');
+    expect(screen.queryByText(/#000000/)).toBeNull();
   });
 
   it('embeds block if blockName is provided', () => {
