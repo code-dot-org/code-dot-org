@@ -387,12 +387,16 @@ $tab-segment-height: $tab-item-height - 2px;
   padding: 0;
   border: none;
 
+  // The global legend style carries a fixed dark color and a full-width
+  // underline, neither of which suits a themed dialog. Sized to read as a
+  // peer of the name field's label above it.
   legend {
     width: auto;
     margin-bottom: 4px;
     padding: 0;
     border: none;
-    font-size: 13px;
+    color: var(--text-neutral-primary);
+    font-size: 14px;
     line-height: inherit;
   }
 }
