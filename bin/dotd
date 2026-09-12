@@ -59,6 +59,25 @@ rescue Octokit::Unauthorized
   exit
 end
 
+# Resolves the running user to a Slack mention tag (e.g. '<@U12345>') so that
+# DOTD topic strings actually ping the user instead of rendering as plain text.
+# Uses `git config user.email` to look up the Slack user; falls back to the
+# literal '@<fallback_name>' on any failure (no email configured, Slack API
+# error, user not found).
+# @param fallback_name [String] Display name to use in the literal fallback.
+# @return [String] Either a '<@U12345>' mention tag or a literal '@name'.
+def resolve_dotd_mention(fallback_name)
+  email = `git config user.email`.strip
+  if email.empty?
+    warn "(git config user.email not set; using literal @#{fallback_name} in Slack topic strings)"
+    return "@#{fallback_name}"
+  end
+  Slack.user_mention_tag(email)
+rescue => exception
+  warn "(Slack mention lookup for #{email} failed: #{exception.message}; using literal @#{fallback_name})"
+  "@#{fallback_name}"
+end
+
 # Prints the script intro to the console.
 def puts_script_intro(dotd_name)
   puts <<~OUTPUT
@@ -108,12 +127,13 @@ end
 # Creates a branch from the most recent green commit to the test brach and a
 # GitHub PR merging that branch to production if they do not exist. Then
 # prompts the user whether the PR should be merged (merging if so).
-# @param [String] dotd_name The name of the DOTD running this script.
-def do_dtp(dotd_name)
+# @param [String] dotd_mention Slack mention tag (or literal fallback) for the
+#   DOTD, used in topic strings.
+def do_dtp(dotd_mention)
   test_green_commit = InfraTestTopic.green_commit
   warn_if_old_commit test_green_commit
 
-  DevelopersTopic.set_dtp "pending confirmation (@#{dotd_name})"
+  DevelopersTopic.set_dtp "pending confirmation (#{dotd_mention})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
@@ -130,7 +150,7 @@ def do_dtp(dotd_name)
   )
   print_database_changes production_pr_number
   dtp_auto_merged = should_i "merge DTP (#{GitHub.url(production_pr_number)})" do
-    DevelopersTopic.set_dtp "in progress (@#{dotd_name})"
+    DevelopersTopic.set_dtp "in progress (#{dotd_mention})"
     GitHub.merge_pull_request(
       production_pr_number,
       "DTP (Test > Production: #{test_green_commit})"
@@ -142,10 +162,11 @@ end
 
 # Creates a DTL branch from the most recent green commit, creates a GitHub PR merging it to
 # levelbuilder, and prompts Slack#levelbuilder whether the PR should be merged (merging if so).
-# @param [String] dotd_name The name of the DOTD running this script.
-def do_dtl(dotd_name)
+# @param [String] dotd_mention Slack mention tag (or literal fallback) for the
+#   DOTD, used in topic strings.
+def do_dtl(dotd_mention)
   test_green_commit = InfraTestTopic.green_commit
-  DevelopersTopic.set_dtl "in progress (@#{dotd_name})"
+  DevelopersTopic.set_dtl "in progress (#{dotd_mention})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
@@ -238,7 +259,9 @@ end
 
 # Repeatedly prints a menu of DOTD tasks, accepts a choice from the user, and executes the choice.
 # @param [String] dotd_name The name of the DOTD executing this script.
-def dotd_menu(dotd_name)
+# @param [String] dotd_mention Slack mention tag (or literal fallback) for the
+#   DOTD, used in topic strings.
+def dotd_menu(dotd_name, dotd_mention)
   highline_menu = HighLine.new
   show_full_menu = false
   loop do
@@ -303,7 +326,7 @@ def dotd_menu(dotd_name)
         INFO
         @logger.info 'kills tests'
       end
-      menu.choice(:DTP) {do_dtp(dotd_name)}
+      menu.choice(:DTP) {do_dtp(dotd_mention)}
       menu.choice(:STP) do
         if run_on 'production-daemon', 'production/bin/seed-curriculum-content-from-staging-branch'
           puts 'Content from staging branch successfully seeded to production database'
@@ -318,7 +341,7 @@ def dotd_menu(dotd_name)
           @logger.info 'error attempting to commit content on levelbuilder'
         end
       end
-      menu.choice(:DTL) {do_dtl(dotd_name)}
+      menu.choice(:DTL) {do_dtl(dotd_mention)}
       menu.choice(:Q) do
         puts_script_conclusion
         exit
@@ -533,11 +556,12 @@ def main
   check_github_token
 
   dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV.fetch('USER', nil)
+  dotd_mention = resolve_dotd_mention(dotd_name)
   @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
   puts_script_intro(dotd_name)
   loop do
-    dotd_menu(dotd_name)
+    dotd_menu(dotd_name, dotd_mention)
   end
 rescue
   puts_script_conclusion
