@@ -1,0 +1,112 @@
+// code.org theme overrides for intro.js product tours.
+// Base styles ship with the library and are imported separately
+// ('intro.js/introjs.css' in RubricContainer.jsx). Only the deltas from those
+// defaults live here. Selectors mirror the library's, so this file must load
+// after the base stylesheet to win on equal specificity.
+
+@import '@code-dot-org/component-library-styles/font';
+
+// Spotlight: dim the page around the highlighted element.
+.introjs-helperLayer {
+  box-shadow: var(--neutral-black-alpha-50) 0 0 0 5000px !important;
+}
+
+// Larger tooltip arrows, repositioned to sit clear of the wider border.
+.introjs-arrow {
+  border-width: 10px;
+}
+.introjs-arrow.top,
+.introjs-arrow.top-right,
+.introjs-arrow.top-middle {
+  top: -18px;
+}
+.introjs-arrow.right {
+  right: -18px;
+}
+.introjs-arrow.right-bottom {
+  bottom: 18px;
+}
+.introjs-arrow.bottom,
+.introjs-arrow.bottom-right,
+.introjs-arrow.bottom-middle {
+  bottom: -18px;
+}
+.introjs-arrow.left,
+.introjs-arrow.left-bottom {
+  left: -18px;
+}
+
+// Wider tooltip with a code.org surface and shadow.
+.introjs-tooltip {
+  width: 400px;
+  max-width: 400px;
+  border: 1px solid var(--background-neutral-primary);
+  box-shadow: 0 3px 30px var(--background-neutral-black-fixed);
+}
+.introjs-tooltiptext {
+  padding: 0 24px;
+
+  p {
+    @include main-font-regular;
+    font-size: 0.75rem;
+  }
+}
+.introjs-tooltip-title {
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--text-neutral-primary);
+  font-size: 1rem;
+}
+.introjs-tooltip-header {
+  padding: 24px 24px 0;
+}
+.introjs-tooltipbuttons {
+  padding: 10px 24px;
+}
+
+// Buttons: code.org typography and shape.
+.introjs-button {
+  @include main-font-regular;
+  padding: 8px 16px 6px;
+  font-size: 0.75rem;
+  text-shadow: none;
+  border-radius: 4px;
+}
+.introjs-button:focus {
+  box-shadow: 0 0 0 0.2rem var(--text-neutral-tertiary);
+}
+
+// Previous: outlined purple.
+.introjs-prevbutton {
+  color: var(--text-brand-purple-primary);
+  border: 1px solid var(--borders-brand-purple-primary);
+  background-color: var(--background-neutral-primary);
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-light);
+    text-decoration: none;
+    box-shadow: none;
+  }
+}
+
+// Next: filled purple.
+.introjs-nextbutton {
+  color: var(--text-neutral-white-fixed);
+  border: none;
+  background-color: var(--background-brand-purple-primary);
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-strong);
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+  }
+}

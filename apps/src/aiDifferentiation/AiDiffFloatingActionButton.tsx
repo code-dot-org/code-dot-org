@@ -5,6 +5,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {
   setChatIsOpen,
   fetchThreadMessages,
+  openDrawerToNav,
 } from '@cdo/apps/aiTeacherDrawer/redux';
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
@@ -45,6 +46,14 @@ interface AiDiffFloatingActionButtonProps {
   canShowPulse?: boolean;
   canStartOpen?: boolean;
   canDefaultOpen?: boolean;
+  /**
+   * When set, clicking always opens the drawer straight to this nav label
+   * (see BottomNav's labels/AiDiffDrawer's activeNav switch) instead of the
+   * default toggle-open-to-whatever-was-last-active behavior. Used to
+   * repurpose this FAB as the entry point for a specific drawer screen, e.g.
+   * the rubrics-drawer experiment's Rubrics screen.
+   */
+  openToNav?: string;
 }
 
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
@@ -64,6 +73,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
    * Does not prevent auto-opening if the user has interacted with the FAB before.
    */
   canDefaultOpen = true,
+  openToNav,
 }) => {
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
@@ -285,14 +295,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
-    dispatch(setChatIsOpen(!chatIsOpen));
-    dispatch(
-      fetchThreadMessages({
-        contextType: context.type,
-        thread: 0,
-        curriculumCourses: curriculumCourses,
-      })
-    );
+    if (openToNav) {
+      dispatch(openDrawerToNav(openToNav));
+    } else {
+      dispatch(setChatIsOpen(!chatIsOpen));
+      dispatch(
+        fetchThreadMessages({
+          contextType: context.type,
+          thread: 0,
+          curriculumCourses: curriculumCourses,
+        })
+      );
+    }
     trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
     updateUnreadNotificationCount();
   };
