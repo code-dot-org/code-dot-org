@@ -23,10 +23,9 @@
   width: 850px;
 }
 
-// Central-mode presentation: the panel's content parked on the lab's black
-// stage — no modal entrance, no card chrome (the component forces the dark
-// palette). Painted panel color (the alternatives ring gap) matches the
-// ground.
+// Central-mode presentation: the panel's content parked on the lab's own
+// ground — no modal entrance, no card chrome. The painted panel color (the
+// alternatives ring gap) has to match that ground rather than the card's.
 .dialogHost .inlineDialog {
   animation: none;
   border: none;
@@ -34,7 +33,7 @@
   background: transparent;
   box-shadow: none;
 
-  --dialog-panel-bg: var(--neutral-base-black);
+  --dialog-panel-bg: var(--background-neutral-primary);
 
   .footer {
     border-top: none;

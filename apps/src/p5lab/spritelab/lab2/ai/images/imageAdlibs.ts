@@ -13,7 +13,13 @@ import {ImageType} from './types';
 
 /** Which combo set a level offers; expanded is the freeplay set, treasure
     the collectible-flavored sprite set for the treasure level. */
-export type ImageAdlibSet = 'simple' | 'expanded' | 'treasure';
+export const IMAGE_ADLIB_SETS = ['simple', 'expanded', 'treasure'] as const;
+
+export type ImageAdlibSet = (typeof IMAGE_ADLIB_SETS)[number];
+
+export function isImageAdlibSet(value: unknown): value is ImageAdlibSet {
+  return IMAGE_ADLIB_SETS.includes(value as ImageAdlibSet);
+}
 
 const adlibs = (manifest as {adlibs: AdlibsType}).adlibs;
 

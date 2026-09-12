@@ -39,7 +39,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {ImageAdlibSet} from '../ai/images/imageAdlibs';
+import {ImageAdlibSet, isImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   uploadAssetToLevel,
   uploadAssetToProject,
@@ -141,11 +141,11 @@ function levelFlag(value: unknown): boolean {
   return value === true || value === 'true';
 }
 
-// ?image-adlibs=simple|expanded previews the adlib combos without a level
-// change (levels set imageAdlibSet).
+// ?image-adlibs=<set> previews the adlib combos without a level change
+// (levels set imageAdlibSet).
 function getImageAdlibSetParam(): ImageAdlibSet | undefined {
   const value = queryParams('image-adlibs');
-  return value === 'simple' || value === 'expanded' ? value : undefined;
+  return isImageAdlibSet(value) ? value : undefined;
 }
 
 // ?image-free-text=true restores the free-text prompt box on adlib-only
@@ -453,13 +453,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [scenes, activeSceneId, pinnedSceneId]);
 
   // Premade world: paint the level's pattern into the pinned scene's world.
-  // 'B' cells draw the project's newest block image; 'S' cells its first
-  // sprite image (the story's hero, the platform arc's player). Each kind
-  // seeds only while the world holds no placement of that kind, and only
-  // into empty cells, so student edits always win — the player level seeds
-  // the start sprite, and the demo level later merges its platforms in
-  // around it. Pattern rows anchor to the playfield floor (resizeWorld's
-  // convention).
+  // 'B' draws the project's newest block image, 'S' its first sprite (the
+  // platform arc's player). Each kind seeds only while the world holds none
+  // of it, into empty cells only, so student edits always win and a later
+  // level's platforms merge in around an already-placed player. Pattern rows
+  // anchor to the playfield floor (resizeWorld's convention).
   const {worldStartPattern} = levelProperties;
   useEffect(() => {
     if (!worldStartPattern?.length || !pinnedSceneId || !animationsSeeded) {
@@ -739,13 +737,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, []);
 
   // Reseed the animation list when sources are reinitialized (e.g. start over).
+  // Start Over keeps the project's images: it resets to template sources that
+  // carry no animations, and one project's images accumulate across a unit's
+  // levels, so reseeding would discard every earlier level's work. Edit modes
+  // reset them, since authoring starter content is the point there.
   const seededReinitCountRef = useRef(0);
   useEffect(() => {
     if (sourcesReinitializedCount === seededReinitCountRef.current) {
       return;
     }
     seededReinitCountRef.current = sourcesReinitializedCount;
-    seedAnimationList(currentSources.animations);
+    if (isLevelEditMode) {
+      seedAnimationList(currentSources.animations);
+    } else {
+      patchSources({
+        animations: getSerializedAnimationList(
+          getStore().getState().animationList
+        ),
+      });
+    }
     // The stage's scene belongs to the pre-reset sources; restart-scene
     // falls back to the first scene.
     currentPlayingRef.current = null;
@@ -754,6 +764,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
     currentSources.animations,
     seedAnimationList,
+    patchSources,
     rerunWhenAnimationsLoaded,
   ]);
 

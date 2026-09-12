@@ -1,8 +1,10 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import NavigationArea from '@cdo/apps/lab2/views/components/Instructions/NavigationArea';
+import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -129,9 +131,19 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   }, [prompt, onCodeGenerated, dispatch]);
 
   const generating = status === 'generating';
+  // Read-aloud of the guide text, on the same level/script property the
+  // platform's instructions panel uses.
+  const showTts =
+    !!levelProperties.offerBrowserTts || queryParams('show-tts') === 'true';
+  const instructionsRef = useRef<HTMLDivElement | null>(null);
   const instructionsBlock = instructions && (
-    <div className={moduleStyles.guideInstructions}>
-      <SafeMarkdown markdown={instructions} />
+    <div ref={instructionsRef} className={moduleStyles.guideInstructions}>
+      <SafeMarkdown
+        markdown={instructions}
+        // Lands on the markdown container so only its first element makes
+        // room for the button, not every line.
+        className={showTts ? moduleStyles.guideInstructionsTts : undefined}
+      />
     </div>
   );
 
@@ -142,6 +154,11 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
         style={bodyHeight === undefined ? undefined : {height: bodyHeight}}
       >
         <div ref={bodyRef} className={moduleStyles.guideBody}>
+          {showTts && instructions && (
+            <div className={moduleStyles.guideTts}>
+              <TextToSpeech contentRef={instructionsRef} />
+            </div>
+          )}
           {guideMode === 'instructions' ? (
             instructionsBlock ||
             'Build a program in the Code tab, then press Run.'

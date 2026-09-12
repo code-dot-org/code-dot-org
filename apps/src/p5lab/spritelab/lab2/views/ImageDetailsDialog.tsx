@@ -136,9 +136,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
 }) => {
   const isNew = animKey === null;
   const {theme} = useTheme();
-  // Inline (central) mode sits on the lab's black stage, so it wears the
-  // dark palette whatever the page theme.
-  const mode = inline || theme === 'Dark' ? 'dark' : 'light';
+  const mode = theme === 'Dark' ? 'dark' : 'light';
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );

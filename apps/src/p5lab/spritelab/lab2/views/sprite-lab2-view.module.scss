@@ -377,6 +377,21 @@ $tab-segment-height: $tab-item-height - 2px;
   flex-direction: column;
   gap: 8px;
   font-size: 15px;
+  position: relative;
+}
+
+// Read-aloud button in the guide's corner. Floated over the text rather than
+// in the flow, so adding it doesn't reflow the guide's animated height; the
+// first line of instructions reserves its width instead.
+.guideTts {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  z-index: 1;
+}
+
+.guideInstructionsTts > :first-child {
+  margin-inline-end: 44px;
 }
 
 .guideInstructions {
@@ -697,11 +712,9 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-
 // Central image-generation levels: the image panel is the whole lab, the
-// floating guide over it.
-// Central image generation: the level IS the generate panel, on the same
-// black stage the dance generator uses.
+// floating guide over it, on the lab's own ground (black in dark mode, the
+// stage the dance generator uses).
 .centralGenerateArea {
   position: relative;
   display: flex;
@@ -711,5 +724,5 @@ $tab-segment-height: $tab-item-height - 2px;
   min-width: 0;
   padding: 24px 16px;
   overflow: auto;
-  background-color: var(--neutral-base-black);
+  background-color: var(--background-neutral-primary);
 }
