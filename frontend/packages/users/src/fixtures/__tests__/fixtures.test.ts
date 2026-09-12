@@ -139,3 +139,100 @@ describe('account fixtures', () => {
     await expect(account.signOutOtherSessions()).resolves.toBeUndefined();
   });
 });
+
+describe('educator profile fixtures', () => {
+  it('serves a teacher role, role options, and school info', async () => {
+    activate('teacher');
+    const settings = await account.getSettings();
+    expect(settings.educatorRole).toBe('classroom_teacher');
+    expect(settings.educatorRoleOptions).toHaveLength(9);
+    expect(settings.educatorRoleOptions?.[0]).toEqual({
+      value: 'classroom_teacher',
+      text: 'Classroom Teacher',
+      category: 'educator',
+    });
+    expect(settings.schoolInfo?.schoolName).toBe('Example Elementary School');
+  });
+
+  it('omits every educator-profile key for a student', async () => {
+    activate('student');
+    const settings = await account.getSettings();
+    expect('educatorRole' in settings).toBe(false);
+    expect('educatorRoleOptions' in settings).toBe(false);
+    expect('schoolInfo' in settings).toBe(false);
+  });
+
+  it('serves an educator with no role and no school', async () => {
+    activate('teacher-no-school');
+    const settings = await account.getSettings();
+    expect(settings.educatorRole).toBeNull();
+    expect(settings.schoolInfo).toBeNull();
+    expect(settings.educatorRoleOptions).toHaveLength(9);
+  });
+
+  it('reflects a saved educator role on the next read', async () => {
+    activate('teacher-no-school');
+    await account.updateProfile({educatorRole: 'librarian_media_specialist'});
+    expect((await account.getSettings()).educatorRole).toBe(
+      'librarian_media_specialist',
+    );
+  });
+});
+
+describe('school search and update fixtures', () => {
+  it('returns schools for a seeded zip', async () => {
+    activate('teacher');
+    const schools = await DashboardApiClient.schools.zipSearch({zip: '98101'});
+    expect(schools.map(school => school.name)).toContain(
+      'Example Elementary School',
+    );
+  });
+
+  it('returns an empty list for a valid zip with no schools', async () => {
+    activate('teacher');
+    expect(await DashboardApiClient.schools.zipSearch({zip: '30305'})).toEqual(
+      [],
+    );
+  });
+
+  it('resolves a sent school_id to the school name on the next read', async () => {
+    activate('teacher-no-school');
+    await account.updateSchoolInfo({
+      schoolId: '100000000002',
+      country: 'US',
+      schoolName: '',
+      schoolZip: '98101',
+    });
+    const settings = await account.getSettings();
+    expect(settings.schoolInfo?.schoolName).toBe('Example Middle School');
+    expect(settings.schoolInfo?.country).toBe('US');
+  });
+
+  it('stores a manually entered non-US school', async () => {
+    activate('teacher-no-school');
+    await account.updateSchoolInfo({
+      schoolId: 'clickToAdd',
+      country: 'CA',
+      schoolName: 'École Secondaire',
+      schoolZip: '',
+    });
+    const settings = await account.getSettings();
+    expect(settings.schoolInfo?.schoolName).toBe('École Secondaire');
+    expect(settings.schoolInfo?.country).toBe('CA');
+  });
+
+  // buildSchoolData never emits this body, so the route is hit directly: the
+  // fixture guards like the controller rather than trusting the client.
+  it('serves the captured 422 when neither school_id nor country is sent', async () => {
+    activate('teacher');
+    const response = await fetch('/api/v1/user_school_infos', {
+      method: 'PATCH',
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify({user: {school_info_attributes: {zip: '98101'}}}),
+    });
+    expect(response.status).toBe(422);
+    expect(await response.json()).toEqual({
+      error: 'school id or country is not present',
+    });
+  });
+});
