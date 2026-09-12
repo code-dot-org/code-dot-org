@@ -149,7 +149,11 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
         zip: '',
         professional_role: 'test role with space',
         grades_teaching: 'K-5, 6-8, ',
-        privacy_permission: true
+        privacy_permission: true,
+        nces_id: '123456789012',
+        ethnicity_race: [],
+        gender_identity: '',
+        primary_chapter: '',
       },
       actual_args
     )
@@ -264,6 +268,42 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit',
       params: valid_params.delete('email'), as: :json
+  end
+
+  test 'v2 flag: forwards array gradesTeaching and the new fields to CSTA' do
+    DCDO.stubs(:get).with(Services::CSTAEnrollment::CSTA_JOTFORM_V2_DCDO_KEY, false).returns(true)
+
+    actual_args = capture_csta_args_for_request(
+      valid_params.merge(
+        'csta' => true,
+        'consentCSTA' => true,
+        'gradesTeaching' => ['K to 5', '6 to 8'],
+        'ethnicityRace' => ['Asian or Asian American', 'Hispanic or Latino'],
+        'genderIdentity' => 'Non-Binary',
+        'primaryChapter' => 'CSTA Washington',
+      )
+    )
+
+    assert_equal ['K to 5', '6 to 8'], actual_args[:grades_teaching]
+    assert_equal ['Asian or Asian American', 'Hispanic or Latino'], actual_args[:ethnicity_race]
+    assert_equal 'Non-Binary', actual_args[:gender_identity]
+    assert_equal 'CSTA Washington', actual_args[:primary_chapter]
+    assert_equal '123456789012', actual_args[:nces_id]
+  end
+
+  test 'v2 flag: empty new fields fall through as empty defaults' do
+    DCDO.stubs(:get).with(Services::CSTAEnrollment::CSTA_JOTFORM_V2_DCDO_KEY, false).returns(true)
+
+    # No new fields in the request — controller should still call CSTA with
+    # safe defaults for ethnicity/gender/chapter.
+    actual_args = capture_csta_args_for_request(
+      valid_params.merge('csta' => true, 'consentCSTA' => true).
+        except('gradesTeaching')
+    )
+
+    assert_equal [], actual_args[:ethnicity_race]
+    assert_equal '', actual_args[:gender_identity]
+    assert_equal '', actual_args[:primary_chapter]
   end
 
   private def capture_csta_args_for_request(request_params)
