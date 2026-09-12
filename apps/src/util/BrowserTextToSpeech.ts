@@ -37,7 +37,12 @@ function speak(text: string) {
   const plainText = markdownToTxt(text);
   const utterance = new SpeechSynthesisUtterance(plainText);
   utterance.lang = currentLocale();
-  speechSynthesis.cancel();
+  // Only to interrupt speech already under way. Chrome can apply a cancel
+  // with nothing to cancel to the utterance queued right after it, which
+  // ends before it starts and plays nothing.
+  if (speechSynthesis.speaking || speechSynthesis.pending) {
+    speechSynthesis.cancel();
+  }
   speechSynthesis.speak(utterance);
   return utterance;
 }
