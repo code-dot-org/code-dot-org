@@ -435,10 +435,11 @@ def print_database_changes(pull_request_number)
   database_changes_output = database_changes.join("\n       ")
   puts <<-WARNING.unindent
 
-     #{red 'WARNING: THIS PR CONTAINS DATABASE CHANGES:'}
+     #{yellow 'WARNING: THIS PR CONTAINS DATABASE CHANGES:'}
 
-       #{red database_changes_output}
+       #{yellow database_changes_output}
 
+     #{yellow 'Please review the DTP PR to ensure the database changes are well-formed and are not dropping any columns from live tables.'}
   WARNING
 end
 
