@@ -11,32 +11,37 @@
 import {Raster} from './tools';
 
 export interface PixelGrid {
-  // Block size in physical pixels per axis.
+  // Block size in physical pixels per axis. May be fractional: models
+  // paint uniform grids at pitches like 12.5px, and a half downscale
+  // (character-set strips) keeps the pitch fractional.
   sizeX: number;
   sizeY: number;
   // Where the first grid line falls (0 = grid aligned to the image edge).
   offsetX: number;
   offsetY: number;
-  // Lift over chance of the edge alignment (0..1): how much better the grid
-  // explains the color edges than a random grid of the same size would.
+  // Fraction of sampled block-interior points the grid reproduces (0..1);
+  // 0 on assumePixelGrid's caller-supplied fallback.
   confidence: number;
 }
 
 const MIN_BLOCK = 4;
 const MAX_BLOCK = 64;
-// Confidence is LIFT over chance, not raw alignment: with +/-1px tolerance a
-// 4px grid matches 75% of positions by pure chance (raw alignment scores
-// near 0.75 on anything), while a real 11px grid at 0.92 raw is (0.92 -
-// 0.27) / (1 - 0.27) = 0.89 lift. Raw alignment lets degenerate small
-// blocks win on real model output; lift doesn't.
-const MIN_CONFIDENCE = 0.6;
-// Edges within this many pixels of a grid line count as aligned (diffusion
-// output smudges block borders by a pixel or so).
+// Edges within this many pixels of a grid line still count as on it, and
+// points this close to a cell border are exempt from the reconstruction
+// check (diffusion output smudges block borders by a pixel or so).
 const EDGE_TOLERANCE = 1;
 
-// Sum of per-channel differences at which two adjacent pixels count as an
-// edge. High enough to ignore compression noise, low enough for palette art.
+// Sum of per-channel differences at which two pixels count as different:
+// adjacent ones when finding edges, a sampled point against its cell
+// center when checking reconstruction. High enough to ignore compression
+// noise, low enough for palette art.
 const EDGE_THRESHOLD = 90;
+
+// A grid is believed when it reproduces all but this fraction of sampled
+// points. Measured on model output: noise-level fine detail (specks,
+// dither) mismatches a coarse grid by a few percent, while art that truly
+// uses a finer grid mismatches it by 15%+.
+const MAX_MISMATCH = 0.08;
 
 // Detection doesn't need every scanline: block edges span the whole image,
 // so sampling every 4th line keeps the histogram's shape at a quarter of the
@@ -94,56 +99,98 @@ function edgeHistogram(raster: Raster, axis: 'x' | 'y'): number[] {
   return hist;
 }
 
-/** Best (size, offset) explaining an edge histogram, or null when the best
- * candidate doesn't clear the confidence bar. */
-function detectAxis(
-  hist: number[]
-): {size: number; offset: number; score: number} | null {
-  const best = detectAxisLenient(hist);
-  return best && best.score >= MIN_CONFIDENCE ? best : null;
-}
-
-/** Best (size, offset) for a fixed edge list, ungated by confidence. */
-function bestGridForEdges(
-  edgePositions: number[],
-  edgeWeights: number[],
-  total: number
-): {size: number; offset: number; score: number} | null {
-  let best: {size: number; offset: number; score: number} | null = null;
-  for (let size = MIN_BLOCK; size <= MAX_BLOCK; size++) {
-    for (let offset = 0; offset < size; offset++) {
-      let aligned = 0;
-      for (let e = 0; e < edgePositions.length; e++) {
-        const rem = (((edgePositions[e] - offset) % size) + size) % size;
-        if (rem <= EDGE_TOLERANCE || rem >= size - EDGE_TOLERANCE) {
-          aligned += edgeWeights[e];
-        }
-      }
-      const raw = aligned / total;
-      // Lift over chance: how much better than a random grid of this size.
-      const chance = Math.min(1, (2 * EDGE_TOLERANCE + 1) / size);
-      const score = chance >= 1 ? 0 : (raw - chance) / (1 - chance);
-      // Prefer LARGER sizes among ties: a perfect 16px grid also aligns
-      // perfectly to 8px (16-multiples are 8-multiples), and the coarser
-      // grid's lift is higher anyway. Exact ties only: flat art regions let
-      // a 2x harmonic score within a whisker of the true grid, and taking
-      // the harmonic on one axis fails the squareness check.
-      if (!best || score > best.score) {
-        best = {size, offset, score};
-      } else if (score >= best.score && size > best.size) {
-        best = {size, offset, score};
-      }
+/**
+ * The offset aligning the maximum edge mass at a fixed pitch, and the share
+ * of all edge mass that offset aligns. A circular-mean phase is cheaper but
+ * averages bimodal distributions (art grid plus a painted frame's margins)
+ * into an offset matching neither mode; the scan just ignores the smaller
+ * mode. The share doubles as the "does this grid explain the edges" measure.
+ */
+function fitOffset(
+  hist: number[],
+  size: number
+): {offset: number; share: number} {
+  // Edge mass folds into quarter-pixel phase buckets; a circular sliding
+  // window of ±EDGE_TOLERANCE then scores every offset in one pass over
+  // the bins (this runs per judged candidate, per axis).
+  const step = 0.25;
+  const buckets = Math.max(1, Math.round(size / step));
+  const mass = new Array(buckets).fill(0);
+  let total = 0;
+  for (let m = 0; m < hist.length; m++) {
+    if (!hist[m]) {
+      continue;
     }
+    total += hist[m];
+    mass[Math.floor(((m % size) / size) * buckets) % buckets] += hist[m];
   }
-  return best;
+  if (!total) {
+    return {offset: 0, share: 0};
+  }
+  const at = (q: number) => mass[((q % buckets) + buckets) % buckets];
+  const halfWindow = Math.round(EDGE_TOLERANCE / step);
+  let sum = 0;
+  for (let d = -halfWindow; d <= halfWindow; d++) {
+    sum += at(d);
+  }
+  let best = 0;
+  let bestAligned = -1;
+  for (let q = 0; q < buckets; q++) {
+    if (sum > bestAligned) {
+      bestAligned = sum;
+      best = q;
+    }
+    sum -= at(q - halfWindow);
+    sum += at(q + halfWindow + 1);
+  }
+  return {offset: best * step, share: bestAligned / total};
 }
 
-/** Ungated per-axis result (size/offset/score), for lenient callers.
- * Histograms are mostly zeros; iterate just the edges through the
- * size x offset scan. */
-function detectAxisLenient(
-  hist: number[]
-): {size: number; offset: number; score: number} | null {
+/** The pitch refit by weighted least squares of edge position on lattice
+ * index, over the bins the approximate lattice claims. An aligned-mass
+ * plateau localizes a pitch only to ~2% on small images; the fit nails it
+ * (a 6.23px pitch read as 6.06 walks two blocks off across a 512 frame). */
+function fitPitch(hist: number[], size0: number, offset0: number): number {
+  const slack = EDGE_TOLERANCE + 0.5;
+  let sw = 0;
+  let sk = 0;
+  let sm = 0;
+  let skk = 0;
+  let skm = 0;
+  for (let m = 0; m < hist.length; m++) {
+    if (!hist[m]) {
+      continue;
+    }
+    const rem = (((m - offset0) % size0) + size0) % size0;
+    if (rem > slack && rem < size0 - slack) {
+      continue;
+    }
+    const k = Math.round((m - offset0) / size0);
+    const w = hist[m];
+    sw += w;
+    sk += w * k;
+    sm += w * m;
+    skk += w * k * k;
+    skm += w * k * m;
+  }
+  const denom = sw * skk - sk * sk;
+  if (denom <= 0) {
+    return size0;
+  }
+  const fitted = (sw * skm - sk * sm) / denom;
+  // A degenerate fit (few claimed bins, collinear noise) can wander; stay
+  // inside the plateau the caller found.
+  return Math.abs(fitted - size0) <= size0 * 0.05 ? fitted : size0;
+}
+
+/**
+ * Candidate pitches along one axis, coarsest first: local maxima of phase
+ * coherence, each refined by aligned mass and a least-squares fit (models
+ * paint uniform grids at fractional pitches, and alignment peaks are far
+ * narrower than coherence peaks). No selection happens here — only the
+ * caller's reconstruction check can tell which pitch the picture uses.
+ */
+function candidatePitches(hist: number[]): number[] {
   const edgePositions: number[] = [];
   const edgeWeights: number[] = [];
   let total = 0;
@@ -155,100 +202,392 @@ function detectAxisLenient(
     }
   }
   if (total === 0) {
-    return null;
+    return [];
   }
-  return bestGridForEdges(edgePositions, edgeWeights, total);
-}
+  const length = hist.length;
 
-/** Offset that aligns the most edge weight for a FIXED block size. */
-function bestOffsetForSize(hist: number[], size: number): number {
-  let bestOffset = 0;
-  let bestAligned = -1;
-  for (let offset = 0; offset < size; offset++) {
+  const edgeSums = (size: number): {sin: number; cos: number} => {
+    let sin = 0;
+    let cos = 0;
+    for (let e = 0; e < edgePositions.length; e++) {
+      const a = (2 * Math.PI * edgePositions[e]) / size;
+      sin += edgeWeights[e] * Math.sin(a);
+      cos += edgeWeights[e] * Math.cos(a);
+    }
+    return {sin, cos};
+  };
+
+  // Circular-mean phase: fine for refining a unimodal peak (fitOffset's
+  // mass scan guards the final, possibly bimodal decision). Near-zero
+  // wraps clamp to 0.
+  const phaseOf = (sums: {sin: number; cos: number}, size: number): number => {
+    if (sums.sin === 0 && sums.cos === 0) {
+      return 0;
+    }
+    const offset =
+      ((((Math.atan2(sums.sin, sums.cos) / (2 * Math.PI)) * size) % size) +
+        size) %
+      size;
+    return offset < 0.02 || offset > size - 0.02 ? 0 : offset;
+  };
+
+  const alignedMass = (size: number): number => {
+    const offset = phaseOf(edgeSums(size), size);
     let aligned = 0;
-    for (let m = 0; m < hist.length; m++) {
-      if (!hist[m]) {
-        continue;
-      }
-      const rem = (((m - offset) % size) + size) % size;
+    for (let e = 0; e < edgePositions.length; e++) {
+      const rem = (((edgePositions[e] - offset) % size) + size) % size;
       if (rem <= EDGE_TOLERANCE || rem >= size - EDGE_TOLERANCE) {
-        aligned += hist[m];
+        aligned += edgeWeights[e];
       }
     }
-    if (aligned > bestAligned) {
-      bestAligned = aligned;
-      bestOffset = offset;
+    return aligned;
+  };
+
+  // Coarse coherence scan at coherence's own peak width (~size^2 / 2L).
+  const sizes: number[] = [];
+  const strengths: number[] = [];
+  for (
+    let size = MIN_BLOCK;
+    size <= MAX_BLOCK;
+    size += Math.max(0.02, (size * size) / (2 * length))
+  ) {
+    const sums = edgeSums(size);
+    sizes.push(size);
+    strengths.push(Math.hypot(sums.sin, sums.cos) / total);
+  }
+
+  // Refine the strongest local maxima (plateau edges count); the cap bounds
+  // the work on gridless images, whose noise yields many equal wiggles.
+  // Strengths compare in 0.05-wide buckets, coarser size first within one:
+  // subharmonics of a lattice score near-equal coherence, and the true
+  // (coarser) pitch must survive the cap, not lose it to float jitter.
+  const MAX_BASINS = 8;
+  const maxima: number[] = [];
+  for (let i = 0; i < sizes.length; i++) {
+    if (
+      (i > 0 && strengths[i] < strengths[i - 1]) ||
+      (i < sizes.length - 1 && strengths[i] < strengths[i + 1])
+    ) {
+      continue;
+    }
+    maxima.push(i);
+  }
+  const bucket = (i: number) => Math.round(strengths[i] * 20);
+  maxima.sort((a, b) => bucket(b) - bucket(a) || sizes[b] - sizes[a]);
+
+  const pitches: number[] = [];
+  for (const i of maxima.slice(0, MAX_BASINS)) {
+    const halfWindow = Math.max(0.02, (sizes[i] * sizes[i]) / (2 * length));
+    const fineStep = Math.max(
+      0.002,
+      (EDGE_TOLERANCE * sizes[i]) / (2 * length)
+    );
+    // Aligned mass is flat across a plateau on small images (the tolerance
+    // covers every lattice line for a whole range of periods); the pitch is
+    // the plateau's midpoint, not its first point, which undershoots.
+    let bestMass = -1;
+    let plateauLo = sizes[i];
+    let plateauHi = sizes[i];
+    for (
+      let size = Math.max(MIN_BLOCK, sizes[i] - halfWindow);
+      size <= Math.min(MAX_BLOCK, sizes[i] + halfWindow);
+      size += fineStep
+    ) {
+      const mass = alignedMass(size);
+      if (mass > bestMass) {
+        bestMass = mass;
+        plateauLo = size;
+        plateauHi = size;
+      } else if (mass === bestMass) {
+        plateauHi = size;
+      }
+    }
+    // The plateau is wider than the least-squares fit's capture range, so
+    // seed the fit from both ends and the middle (deduped: the plateau is
+    // often a single point) and keep the self-consistent pitch.
+    const fitFrom = (seed: number): number => {
+      let p = seed;
+      for (let pass = 0; pass < 3; pass++) {
+        p = fitPitch(hist, p, phaseOf(edgeSums(p), p));
+      }
+      return p;
+    };
+    const mid = (plateauLo + plateauHi) / 2;
+    let bestSize = mid;
+    let bestFitMass = -1;
+    for (const seed of new Set([plateauLo, mid, plateauHi])) {
+      const p = fitFrom(seed);
+      const mass = alignedMass(p);
+      if (mass > bestFitMass) {
+        bestFitMass = mass;
+        bestSize = p;
+      }
+    }
+    // True integer grids are common (crisp-upscaled storage, painted art);
+    // snap when the rounding keeps the far lattice line inside the edge
+    // tolerance. Drift accumulates per block: 0.04px off is 2.6px across
+    // 64 blocks, so the snap window scales with the block count.
+    const snapped = Math.round(bestSize);
+    if (Math.abs(bestSize - snapped) * (length / bestSize) <= EDGE_TOLERANCE) {
+      pitches.push(snapped);
+    } else {
+      pitches.push(bestSize);
     }
   }
-  return bestOffset;
+
+  pitches.sort((a, b) => b - a);
+  // Only literal duplicates drop; near-duplicates are kept for the caller's
+  // judge — two basins' estimates of one pitch differ, and only
+  // reconstruction can tell which is right.
+  return pitches.filter((p, i) => i === 0 || pitches[i - 1] - p > 0.001);
 }
 
 /**
- * Best-attempt grid for an image the USER declared to be pixel art: the
- * strict detector when it succeeds; otherwise the stronger single axis's
- * block size applied to both (art pixels are square), with each axis's
- * offset fitted to that size; otherwise the caller's fallbackBlockSize
- * (typically what the generation prompt asked for). Never returns null —
- * the style choice is the classifier.
+ * Fraction of probed points the grid fails to reproduce. Cells are walked
+ * like downsampling would; in each, four interior probes (a quarter-cell
+ * out from the center on each axis) are compared against the center pixel,
+ * the one downsampling to this grid would keep. Probes sit a quarter cell
+ * from the borders, clear of border smudge — and never ON the center,
+ * which a fixed test lattice can hit for pitches sharing its stride,
+ * passing any such grid by comparing points to themselves. Probe pairs
+ * that are fully transparent along with their center are not counted (a
+ * sprite's empty margins say nothing about its grid). Subsampled: at most
+ * PROBE_CELLS_PER_AXIS² cells judge any image size.
  */
-export function assumePixelGrid(
+const PROBE_CELLS_PER_AXIS = 64;
+
+function gridMismatch(
   raster: Raster,
-  fallbackBlockSize: number
-): PixelGrid {
-  const strict = detectPixelGrid(raster);
-  if (strict) {
-    return strict;
+  grid: {sizeX: number; sizeY: number; offsetX: number; offsetY: number}
+): number {
+  const {width, height, data} = raster;
+  const cellsX = Math.max(1, Math.floor((width - grid.offsetX) / grid.sizeX));
+  const cellsY = Math.max(1, Math.floor((height - grid.offsetY) / grid.sizeY));
+  const stepX = Math.max(1, Math.round(cellsX / PROBE_CELLS_PER_AXIS));
+  const stepY = Math.max(1, Math.round(cellsY / PROBE_CELLS_PER_AXIS));
+  // Two probe distances per axis: content whose own period equals a single
+  // probe distance would alias and read as uniform.
+  const probeDistances = (size: number): number[] => {
+    // The border PIXEL blends (EDGE_TOLERANCE exempts it from edge
+    // alignment for the same reason), and the rounded center can sit half a
+    // pixel high — so the farthest probe keeps two whole pixels of
+    // clearance, leaving the blend pixel unread.
+    const maxD = Math.max(1, Math.floor(size / 2) - 2);
+    const near = Math.min(maxD, Math.max(1, Math.round(size / 4)));
+    const far = Math.min(near + 1, maxD);
+    return far > near ? [near, far] : [near];
+  };
+  const dxs = probeDistances(grid.sizeX);
+  const dys = probeDistances(grid.sizeY);
+  let tested = 0;
+  let missed = 0;
+  for (let cj = 0; cj < cellsY; cj += stepY) {
+    const cy = Math.min(
+      height - 1,
+      Math.round(grid.offsetY + (cj + 0.5) * grid.sizeY)
+    );
+    for (let ci = 0; ci < cellsX; ci += stepX) {
+      const cx = Math.min(
+        width - 1,
+        Math.round(grid.offsetX + (ci + 0.5) * grid.sizeX)
+      );
+      const c = (cy * width + cx) * 4;
+      const probes: number[][] = [];
+      for (const dx of dxs) {
+        probes.push([cx - dx, cy], [cx + dx, cy]);
+      }
+      for (const dy of dys) {
+        probes.push([cx, cy - dy], [cx, cy + dy]);
+      }
+      for (const [px, py] of probes) {
+        if (px < 0 || py < 0 || px >= width || py >= height) {
+          continue;
+        }
+        const i = (py * width + px) * 4;
+        if (data[i + 3] < 8 && data[c + 3] < 8) {
+          continue;
+        }
+        tested++;
+        const diff =
+          Math.abs(data[i] - data[c]) +
+          Math.abs(data[i + 1] - data[c + 1]) +
+          Math.abs(data[i + 2] - data[c + 2]) +
+          Math.abs(data[i + 3] - data[c + 3]);
+        if (diff > EDGE_THRESHOLD) {
+          missed++;
+        }
+      }
+    }
   }
+  return tested ? missed / tested : 1;
+}
+
+/** Shared front half of detection: histograms and the merged candidate
+ * pool, coarsest first (art pixels are square, so one pitch serves both
+ * axes; offsets stay per-axis). Near-duplicates are kept: two axes often
+ * estimate the same physical pitch differently, and only the judge can
+ * tell which estimate is right. */
+function gridCandidates(raster: Raster): {
+  histX: number[];
+  histY: number[];
+  pool: number[];
+} {
   const histX = edgeHistogram(raster, 'x');
   const histY = edgeHistogram(raster, 'y');
-  const bestX = detectAxisLenient(histX);
-  const bestY = detectAxisLenient(histY);
-  const stronger =
-    bestX && bestY
-      ? bestX.score >= bestY.score
-        ? bestX
-        : bestY
-      : bestX || bestY;
-  const size =
-    stronger && stronger.score >= MIN_CONFIDENCE
-      ? stronger.size
-      : fallbackBlockSize;
-  return {
-    sizeX: size,
-    sizeY: size,
-    offsetX: bestOffsetForSize(histX, size),
-    offsetY: bestOffsetForSize(histY, size),
-    confidence: stronger ? Math.min(stronger.score, 1) : 0,
-  };
+  const merged = [...candidatePitches(histX), ...candidatePitches(histY)];
+  merged.sort((a, b) => b - a);
+  const pool = merged.filter((p, i) => i === 0 || merged[i - 1] - p > 0.001);
+  return {histX, histY, pool};
+}
+
+// Candidates within this ratio are estimates of the same physical pitch
+// (the two axes, neighboring coherence basins); further apart they are
+// different pitches, octaves apart.
+const SAME_PITCH_RATIO = 1.15;
+
+// A believed grid must also explain the color edges: this share of an
+// axis's edge mass on the lattice. Reconstruction alone under-weights
+// sparse structured damage — a near-flat image resamples coarsely with few
+// probe misses while its curved outlines sit entirely off-lattice.
+const EDGE_EXPLAINED_MIN = 0.5;
+
+interface ClusterVerdict {
+  grid: PixelGrid;
+  mismatch: number;
+  // Share of each axis's edge mass the grid's lattice aligns.
+  shareX: number;
+  shareY: number;
+}
+
+/**
+ * One verdict per pitch cluster, coarsest first. Within a cluster the
+ * member that reconstructs best speaks for it: the judge's tolerance
+ * cannot separate a pitch from one a few percent off, so ordering by size
+ * inside a cluster would crown the sloppiest estimate. Cluster membership
+ * compares against the cluster's coarsest member — chaining neighbor
+ * ratios would let a ladder of noise candidates merge an octave.
+ */
+function clusterVerdicts(
+  raster: Raster,
+  histX: number[],
+  histY: number[],
+  pool: number[]
+): ClusterVerdict[] {
+  const verdicts: ClusterVerdict[] = [];
+  let i = 0;
+  while (i < pool.length) {
+    let j = i + 1;
+    while (j < pool.length && pool[i] / pool[j] < SAME_PITCH_RATIO) {
+      j++;
+    }
+    let best: ClusterVerdict | null = null;
+    for (let k = i; k < j; k++) {
+      const size = pool[k];
+      const x = fitOffset(histX, size);
+      const y = fitOffset(histY, size);
+      const grid = {
+        sizeX: size,
+        sizeY: size,
+        offsetX: x.offset,
+        offsetY: y.offset,
+        confidence: 0,
+      };
+      const mismatch = gridMismatch(raster, grid);
+      if (!best || mismatch < best.mismatch) {
+        best = {grid, mismatch, shareX: x.share, shareY: y.share};
+      }
+    }
+    if (best) {
+      verdicts.push({
+        ...best,
+        grid: {...best.grid, confidence: 1 - best.mismatch},
+      });
+    }
+    i = j;
+  }
+  return verdicts;
 }
 
 /**
  * Detect the logical pixel grid of a raster depicting pixel art. Returns
- * null when no convincing grid exists (smooth art, photos, tiny images).
+ * null when no candidate grid reproduces the image (smooth art, photos,
+ * tiny images).
+ *
+ * The judge is reconstruction, not edge alignment: the COARSEST cluster
+ * whose grid reproduces (nearly) every probed point wins, which is what a
+ * resolution claim means — resampling at it changes almost nothing.
+ * Judging by alignment alone falls into the octave trap (a half-pitch
+ * lattice contains every line of the true one, so any sliver of fine
+ * detail tips the choice); the edge-share gate covers reconstruction's own
+ * blind spot on both axes (see EDGE_EXPLAINED_MIN).
  */
 export function detectPixelGrid(raster: Raster): PixelGrid | null {
   if (raster.width < MIN_BLOCK * 4 || raster.height < MIN_BLOCK * 4) {
     return null;
   }
-  const bestX = detectAxis(edgeHistogram(raster, 'x'));
-  const bestY = detectAxis(edgeHistogram(raster, 'y'));
-  if (!bestX || !bestY) {
-    return null;
+  const {histX, histY, pool} = gridCandidates(raster);
+  for (const v of clusterVerdicts(raster, histX, histY, pool)) {
+    if (
+      v.mismatch <= MAX_MISMATCH &&
+      Math.min(v.shareX, v.shareY) >= EDGE_EXPLAINED_MIN
+    ) {
+      return v.grid;
+    }
   }
-  // Art pixels are square-ish; wildly different axis sizes mean we latched
-  // onto structure, not a grid.
-  if (
-    Math.max(bestX.size, bestY.size) >
-    Math.min(bestX.size, bestY.size) * 1.5
-  ) {
-    return null;
+  return null;
+}
+
+// assumePixelGrid accepts a grid the strict bar refuses: imperfect model
+// output (rows drifting a few px off-grid) still normalizes, with minor
+// smearing along the drifted rows, rather than being left un-normalized.
+// Past this much damage the "grid" isn't one, and the prompt's block size
+// is the better guess.
+const LENIENT_MISMATCH = 0.25;
+
+/**
+ * Best-attempt grid for an image the USER declared to be pixel art: the
+ * strict detector's answer when one candidate reproduces the image;
+ * otherwise the coarsest candidate that reproduces most of it (drifted
+ * output normalizes with minor smearing); otherwise the caller's
+ * fallbackBlockSize (typically what the generation prompt asked for).
+ * Coarsest-first both times — ranking by least mismatch instead would
+ * always favor finer grids, whose cell centers sit nearer every sampled
+ * point no matter what the art does. Never returns null — the style
+ * choice is the classifier.
+ */
+export function assumePixelGrid(
+  raster: Raster,
+  fallbackBlockSize: number
+): PixelGrid {
+  const {histX, histY, pool} = gridCandidates(raster);
+  const verdicts = clusterVerdicts(raster, histX, histY, pool);
+  // Strict bar across all clusters first: a coarse cluster that merely
+  // survives the lenient bar must not mask a finer grid the image truly
+  // uses (large flat regions reconstruct fine at any coarseness). The
+  // lenient pass asks one structured axis of the edge-share gate, not two:
+  // its job is salvaging output with one good axis and one drifted one.
+  for (const v of verdicts) {
+    if (
+      v.mismatch <= MAX_MISMATCH &&
+      Math.min(v.shareX, v.shareY) >= EDGE_EXPLAINED_MIN
+    ) {
+      return v.grid;
+    }
+  }
+  for (const v of verdicts) {
+    if (
+      v.mismatch <= LENIENT_MISMATCH &&
+      Math.max(v.shareX, v.shareY) >= EDGE_EXPLAINED_MIN
+    ) {
+      return v.grid;
+    }
   }
   return {
-    sizeX: bestX.size,
-    sizeY: bestY.size,
-    offsetX: bestX.offset,
-    offsetY: bestY.offset,
-    confidence: Math.min(bestX.score, bestY.score),
+    sizeX: fallbackBlockSize,
+    sizeY: fallbackBlockSize,
+    offsetX: fitOffset(histX, fallbackBlockSize).offset,
+    offsetY: fitOffset(histY, fallbackBlockSize).offset,
+    confidence: 0,
   };
 }
 
@@ -371,17 +710,53 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
 }
 
 /**
+ * The detected physical px per art pixel of an image — its first frame when
+ * frameSize is given — or null when no convincing grid exists. May be
+ * fractional (see PixelGrid.sizeX), and is harmonized with the cell count
+ * downsampling would produce, so rounding a stored dimension divided by
+ * this value gives the paint editor's actual grid. Detection only, pixels
+ * untouched: reports the grid a non-normalized image (a pixel-style
+ * character sheet, or one saved before normalization) would be treated as.
+ */
+export async function detectImageGridSize(
+  source: string,
+  frameSize?: {x: number; y: number}
+): Promise<number | null> {
+  const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+    const el = new Image();
+    // Same-origin today; without this, a CDN-served source would taint the
+    // canvas and fail silently.
+    el.crossOrigin = 'anonymous';
+    el.onload = () => resolve(el);
+    el.onerror = () => reject(new Error('image failed to load'));
+    el.src = source;
+  });
+  const width = frameSize?.x ?? img.naturalWidth;
+  const height = frameSize?.y ?? img.naturalHeight;
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d', {willReadFrequently: true});
+  if (!ctx) {
+    return null;
+  }
+  ctx.drawImage(img, 0, 0, width, height, 0, 0, width, height);
+  const grid = detectPixelGrid(rasterFromCanvas(canvas));
+  if (!grid) {
+    return null;
+  }
+  const cols = cellBounds(width, grid.sizeX, grid.offsetX).length - 1;
+  const rows = cellBounds(height, grid.sizeY, grid.offsetY).length - 1;
+  return (width / cols + height / rows) / 2;
+}
+
+/**
  * Normalize a blob the user declared to be pixel art: find its grid (best
  * attempt — the style choice is the classifier, so this never bails),
  * downsample to logical resolution, and re-upscale nearest-neighbor to a
- * crisp, uniform, edge-aligned image. Imperfect model output (e.g. rows
- * drifting off-grid) normalizes with minor smearing along the drifted rows
- * rather than being left un-normalized.
- *
- * squareGrid pins one cell size to the frame on both axes, so a square
- * input yields a square logical output (an offset grid would add a partial
- * edge cell). For imagery that must stay square and full-frame, slight
- * sampling misalignment beats losing the grid.
+ * crisp, uniform, edge-aligned image. squareGrid pins the offsets to the
+ * frame, so a square input yields a square logical output (an offset grid
+ * would add a partial edge cell).
  */
 export async function normalizePixelArtBlob(
   blob: Blob,
@@ -399,19 +774,8 @@ export async function normalizePixelArtBlob(
   const raster = rasterFromCanvas(canvas);
   let grid = assumePixelGrid(raster, fallbackBlockSize);
   if (squareGrid) {
-    // Pin only when the axes roughly agree: a size matching neither axis
-    // samples blocks out of phase, worse than not normalizing.
-    if (Math.abs(grid.sizeX - grid.sizeY) > 1) {
-      return null;
-    }
-    const size = Math.round((grid.sizeX + grid.sizeY) / 2);
-    grid = {
-      sizeX: size,
-      sizeY: size,
-      offsetX: 0,
-      offsetY: 0,
-      confidence: grid.confidence,
-    };
+    // One shared pitch per grid, so pinning is offsets only.
+    grid = {...grid, offsetX: 0, offsetY: 0};
   }
   const logical = downsampleToGrid(raster, grid);
   const crisp = upscaleNearest(

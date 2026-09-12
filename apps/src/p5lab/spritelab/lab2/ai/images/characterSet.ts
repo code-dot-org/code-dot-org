@@ -19,6 +19,8 @@ import {createUuid} from '@cdo/apps/utils';
 import {bytesToDataURI} from './encoding';
 import {
   GeneratedImageResult,
+  logicalGridFor,
+  pixelBlockFor,
   RawImage,
   rawImageToBlob,
   requestImage,
@@ -95,14 +97,15 @@ function keyClause(key: KeyColor): string {
 export function basePrompt(
   prompt: string,
   style: ImageStyle,
-  key: KeyColor
+  key: KeyColor,
+  pixelBlock: number
 ): string {
   return (
     `${prompt}. Show the whole character standing, facing right: its face ` +
     'and body point toward the right side of the image. Arms hanging ' +
     'relaxed at the sides, hands open and empty. Feet near the bottom of ' +
     'the image, nothing cut off. ' +
-    `${ONLY_THIS_CHARACTER} ${styleClause(style)} ${keyClause(key)}`
+    `${ONLY_THIS_CHARACTER} ${styleClause(style, pixelBlock)} ${keyClause(key)}`
   );
 }
 
@@ -116,7 +119,8 @@ export function posePrompt(
   prompt: string,
   frame: PosedFrame,
   style: ImageStyle,
-  key: KeyColor
+  key: KeyColor,
+  pixelBlock: number
 ): string {
   return (
     `The provided image shows this character: ${prompt}. Redraw the same ` +
@@ -124,7 +128,7 @@ export function posePrompt(
     'provided image: the same design, colors, proportions, outfit and art ' +
     'style, facing right, and the character at exactly the same size and ' +
     'position in the frame. ' +
-    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style)}`
+    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style, pixelBlock)}`
   );
 }
 
@@ -253,6 +257,8 @@ export interface CharacterSetOptions {
   style: ImageStyle;
   temperature?: number;
   seed?: number;
+  /** Logical grid to ask for (pixel style); absent = the sprite default. */
+  pixelGrid?: number;
 }
 
 export interface CharacterSetProgress {
@@ -283,6 +289,7 @@ export async function generateCharacterSet(
   // One seed for the whole set; parallel frames offset it so alike prompts
   // don't collapse into alike drawings.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
+  const pixelBlock = pixelBlockFor('sprite', options.pixelGrid);
   const total = CHARACTER_SET_PICTURE_COUNT;
   const keyFrame = (raw: RawImage) =>
     removeKeyColor(rawImageToBlob(raw), key.rgb, {
@@ -301,7 +308,7 @@ export async function generateCharacterSet(
 
   onProgress?.({done: 0, total, label: 'the character'});
   const base = await requestFrameWithRetry(
-    basePrompt(prompt, options.style, key),
+    basePrompt(prompt, options.style, key, pixelBlock),
     {
       seed,
       temperature: options.temperature,
@@ -325,7 +332,7 @@ export async function generateCharacterSet(
   const posed = await Promise.all(
     POSED_FRAMES.map(async (frame, index) => {
       const raw = await requestFrameWithRetry(
-        posePrompt(prompt, frame, options.style, key),
+        posePrompt(prompt, frame, options.style, key, pixelBlock),
         {
           seed: seed + index + 1,
           temperature: options.temperature,
@@ -365,6 +372,9 @@ export async function generateCharacterSet(
     seed,
     ...(options.temperature !== undefined && {
       temperature: options.temperature,
+    }),
+    ...(options.style === 'pixel' && {
+      pixelGrid: logicalGridFor(pixelBlock),
     }),
   };
   const poses: AnimationPoses = CHARACTER_STRIP_POSES;

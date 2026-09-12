@@ -1,7 +1,9 @@
 import {generateText} from '@cdo/apps/aiGateway';
 import {
   generateImage,
+  pixelBlockFor,
   requestImage,
+  styleClause,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
@@ -109,5 +111,44 @@ describe('generateImage', () => {
     const content = mockGenerateText.mock.calls[0][0].messages[0].content;
     expect(typeof content).toBe('string');
     expect(content).toContain('a beach');
+  });
+
+  it('asks backgrounds to fill the whole image (no painted frame)', async () => {
+    await generateImage('a beach', OPTIONS);
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content).toContain('reaching all four edges');
+    expect(content).toContain('Do not frame the picture');
+  });
+
+  it('asks for the pixel grid of the image type', async () => {
+    // Sprites and blocks read at 64x64; a background carries a whole scene,
+    // so its grid is finer.
+    expect(styleClause('pixel', pixelBlockFor('sprite'))).toContain('64x64');
+    expect(styleClause('pixel', pixelBlockFor('block'))).toContain('64x64');
+    expect(styleClause('pixel', pixelBlockFor('background'))).toContain(
+      '128x128'
+    );
+    expect(styleClause('pixel', pixelBlockFor('background'))).toContain(
+      '8x8 block'
+    );
+    await generateImage('a beach', {imageType: 'background', style: 'smooth'});
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content).not.toContain('pixel grid');
+  });
+
+  it('a chosen pixel grid overrides the default in the prompt', async () => {
+    expect(styleClause('pixel', 32)).toContain('32x32 pixel grid');
+    expect(styleClause('pixel', 64)).toContain('16x16 pixel grid');
+    expect(styleClause('pixel', 64)).toContain('64x64 block');
+    // End to end: the request carries the chosen grid. Post-processing needs
+    // a real canvas and throws in jsdom, after the request has been sent.
+    await generateImage('a cave', {
+      imageType: 'background',
+      style: 'pixel',
+      pixelGrid: 64,
+    }).catch(() => {});
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content).toContain('64x64 pixel grid');
+    expect(content).toContain('16x16 block');
   });
 });

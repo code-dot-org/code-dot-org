@@ -11,6 +11,13 @@ describe('blankPaintSpec', () => {
     expect(spec.size).toBe(64 * 8);
   });
 
+  it('gives pixel backgrounds the finer per-type grid', () => {
+    const spec = blankPaintSpec('background', 'pixel');
+    // 1024/8 logical pixels at the crisp storage scale.
+    expect(spec.pixelGridSize).toBe(5);
+    expect(spec.size).toBe(128 * 5);
+  });
+
   it('sizes smooth style at the stored ceiling for its type, with no grid', () => {
     const sprite = blankPaintSpec('sprite', 'smooth');
     expect(sprite.pixelGridSize).toBeUndefined();
@@ -32,6 +39,6 @@ describe('blankPaintImage', () => {
   it('renders the spec to a PNG data URI', () => {
     const image = blankPaintImage('background', 'pixel');
     expect(image.dataURI.startsWith('data:image/png')).toBe(true);
-    expect(image.pixelGridSize).toBe(8);
+    expect(image.pixelGridSize).toBe(5);
   });
 });
