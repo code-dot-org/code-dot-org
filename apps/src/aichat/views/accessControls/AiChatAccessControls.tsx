@@ -17,6 +17,7 @@ import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
 import {
   AI_SETTINGS_SUPPORT_LINK,
+  US_ONLY_MODELS_TEACHER_SETTINGS,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '../../constants';
 import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
@@ -56,6 +57,9 @@ const AiChatAccessControls: React.FC = () => {
   const section = useAppSelector(selectedSectionSelector);
   const teacherAiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
+  );
+  const usOnlyAichatModelsDisabled = useAppSelector(
+    state => state.currentUser.usOnlyAichatModelsDisabled
   );
   const isCurrentUserAccessDisabled =
     teacherAiChatAccessLevel === AiChatAccessLevels.DISABLED;
@@ -132,6 +136,13 @@ const AiChatAccessControls: React.FC = () => {
 
   return (
     <div className={style.container}>
+      {usOnlyAichatModelsDisabled && section.assignedInaccessibleAiModels && (
+        <Alert
+          text={US_ONLY_MODELS_TEACHER_SETTINGS}
+          type={alertTypes.warning}
+          icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
+        />
+      )}
       {isCurrentUserAccessDisabled && (
         <Alert
           text="You cannot enable AI Chat Tools. These settings will not take

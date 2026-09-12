@@ -2407,6 +2407,28 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.has_ai_chat_tools?
   end
 
+  test 'with_us_only_ai_models returns only units whose levels use US only models' do
+    us_only_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
+    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+
+    unit_with_us_only = create(:script, name: 'unit-with-us-only')
+    us_only_lesson = create(:lesson, :with_lesson_group, script: unit_with_us_only)
+    create(:script_level, script: unit_with_us_only, lesson: us_only_lesson, levels: [us_only_level])
+
+    unit_without_us_only = create(:script, name: 'unit-without-us-only')
+    openai_lesson = create(:lesson, :with_lesson_group, script: unit_without_us_only)
+    create(:script_level, script: unit_without_us_only, lesson: openai_lesson, levels: [openai_level])
+
+    result = Unit.with_us_only_ai_models
+    assert_includes result, unit_with_us_only
+    refute_includes result, unit_without_us_only
+
+    assert unit_with_us_only.uses_us_only_ai_models?
+    refute unit_without_us_only.uses_us_only_ai_models?
+    # Both still count as AI chat units; only the model differs.
+    assert unit_without_us_only.has_ai_chat_tools?
+  end
+
   describe '#title_for_display' do
     let(:numbered_units) {nil}
     let(:unit_group) {create(:unit_group, numbered_units: numbered_units)}
