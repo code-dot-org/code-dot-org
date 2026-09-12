@@ -33,8 +33,19 @@
 Rake::Task['db:migrate'].enhance do
   next unless Rails.env.development?
 
-  require 'cdo/aws/redshift/materialized_view_manager'
-  Rails.application.eager_load!
+  begin
+    require 'cdo/aws/redshift/materialized_view_manager'
+  rescue LoadError
+    warn "[devcontainer] Skipping Redshift DDL regeneration (no AWS credentials)" if ENV['AWS_EC2_METADATA_DISABLED']
+    next
+  end
+
+  begin
+    Rails.application.eager_load!
+  rescue NameError
+    warn "[devcontainer] Skipping Redshift DDL regeneration (no AWS credentials)" if ENV['AWS_EC2_METADATA_DISABLED']
+    next
+  end
 
   # Regenerate the Zero ETL materialized-view SQL ERB templates so a migration that reshapes an
   # exported table surfaces the pending view change as a committable `.sql.erb` diff. We deliberately

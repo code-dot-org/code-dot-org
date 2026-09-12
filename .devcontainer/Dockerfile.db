@@ -1,0 +1,21 @@
+# syntax=docker/dockerfile:1
+#
+# cdo-dev-db: pre-seeded MySQL 8.0 sidecar for development sandboxes.
+# Datadir baked at /opt/mysql-data (non-VOLUME path) so overlayfs CoW gives
+# each container instant, isolated copy-on-write access with no volume copy.
+#
+# The seed runs under this image's own mysqld, so server/datadir versions
+# match by construction (InnoDB refuses downgrade).
+#
+# mysql:8.0 Docker Official is multiarch (amd64 + arm64).
+# Build with: docker buildx build -f Dockerfile.db --build-context seeddata=<dir-with-mysql-data.tar> .
+
+FROM mysql:8.0
+
+# Bake the pre-seeded, cleanly-shut-down datadir at a non-VOLUME path.
+# mysql:8.0 (Docker Official) runs as uid:gid 999:999.
+ADD --chown=999:999 mysql-data.tar /opt/mysql-data/
+
+COPY --chmod=755 scripts/walshim.sh /usr/local/bin/walshim.sh
+
+ENTRYPOINT ["/usr/local/bin/walshim.sh"]

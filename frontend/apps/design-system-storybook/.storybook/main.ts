@@ -36,7 +36,18 @@ const config: StorybookConfig = {
         ...(config.resolve?.alias || {}),
         '@': resolve(__dirname, '../../../packages/component-library/src'),
         '@public': resolve(__dirname, '../src'),
+        // Force a single React copy — @storybook/addon-docs ships its own
+        // react@19 nested under node_modules, breaking hooks/context in Docs pages.
+        react: resolve(__dirname, '../../../node_modules/react'),
+        'react-dom': resolve(__dirname, '../../../node_modules/react-dom'),
       },
+    };
+
+    // Pre-bundle react so the alias is resolved before first render,
+    // avoiding a cold-start race during Vite's dep-optimization pass.
+    config.optimizeDeps = {
+      ...config.optimizeDeps,
+      include: [...(config.optimizeDeps?.include || []), 'react', 'react-dom'],
     };
 
     return config;
