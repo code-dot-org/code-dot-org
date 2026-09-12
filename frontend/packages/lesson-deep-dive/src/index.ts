@@ -48,3 +48,5 @@ export {
   listChallengeResponses,
   removeReaction,
 } from './gallery/api';
+export {default as ChallengeGallery} from './gallery/ChallengeGallery';
+export {default as ProjectDetailsCard} from './gallery/ProjectDetailsCard';
