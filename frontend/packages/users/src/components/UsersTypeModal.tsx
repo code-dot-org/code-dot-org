@@ -105,6 +105,8 @@ export default function UsersTypeModal({
         {prospectiveType ? ` to ${TYPE_LABEL[prospectiveType]}` : ''} can affect
         your sections, students, and other account data, and may not be
         reversible.
+        {isChangingToEducator &&
+          ' Once you change to an Educator account, any parent/guardian email address currently linked to your account will be removed.'}
       </DialogContentText>
       <FormError message={errors.formError} />
       {isChangingToEducator && (
