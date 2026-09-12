@@ -1,8 +1,14 @@
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {vi} from 'vitest';
 
-import Toast, {ToastAnnouncer, ToastProvider, useToast} from './../index';
+import Toast, {
+  DEFAULT_TOAST_DURATION,
+  ShowToastOptions,
+  ToastAnnouncer,
+  ToastProvider,
+  useToast,
+} from './../index';
 
 describe('Design System - Toast', () => {
   describe('controlled Toast', () => {
@@ -96,6 +102,90 @@ describe('Design System - Toast', () => {
       }
     });
 
+    it('re-announces an identical message when toastId changes', async () => {
+      // Two identical messages leave the region's text unchanged, and a screen
+      // reader says nothing about a node that did not change.
+      const {rerender} = render(<Toast open toastId={1} message="Saved!" />);
+      const liveRegion = screen.getByRole('alert');
+      await waitFor(() => expect(liveRegion).toHaveTextContent('Saved!'));
+
+      rerender(<Toast open toastId={2} message="Saved!" />);
+
+      // Cleared on the spot, refilled on the next frame - the same two-step a
+      // changing message gets.
+      expect(liveRegion.textContent).toBe('');
+      await waitFor(() => expect(liveRegion).toHaveTextContent('Saved!'));
+      expect(screen.getByRole('alert')).toBe(liveRegion);
+    });
+
+    it('restarts the timer when toastId changes for the same message', () => {
+      // Two identical messages in a row are distinguishable only by the id, so
+      // it has to reach the Snackbar's key alongside the text.
+      vi.useFakeTimers();
+      try {
+        const onClose = vi.fn();
+        const {rerender} = render(
+          <Toast
+            open
+            toastId={1}
+            message="Saved!"
+            autoHideDuration={8000}
+            onClose={onClose}
+          />,
+        );
+
+        vi.advanceTimersByTime(7000);
+        rerender(
+          <Toast
+            open
+            toastId={2}
+            message="Saved!"
+            autoHideDuration={8000}
+            onClose={onClose}
+          />,
+        );
+
+        vi.advanceTimersByTime(7999);
+        expect(onClose).not.toHaveBeenCalled();
+        vi.advanceTimersByTime(1);
+        expect(onClose).toHaveBeenCalledTimes(1);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('puts className on the Snackbar, not the Alert', () => {
+      // The Snackbar is the positioned surface, so a consumer moving the toast
+      // (e.g. below a page header) needs the class to land there.
+      const {container} = render(
+        <Toast open message="Saved!" className="belowHeader" />,
+      );
+      const snackbar = container.querySelector('.belowHeader');
+      expect(snackbar).toBeInTheDocument();
+      expect(snackbar).not.toHaveClass('elevated');
+    });
+
+    it('keeps counting down while the window is unfocused', () => {
+      // MUI pauses auto-hide on window blur by default and resumes only on
+      // refocus. That strands a toast whenever focus sits elsewhere - notably
+      // in an iframe on the same page - so the duration must hold regardless.
+      vi.useFakeTimers();
+      try {
+        const onClose = vi.fn();
+        render(<Toast open message="Saved!" onClose={onClose} />);
+
+        act(() => {
+          fireEvent.blur(window);
+        });
+        act(() => {
+          vi.advanceTimersByTime(DEFAULT_TOAST_DURATION + 1);
+        });
+        expect(onClose).toHaveBeenCalledTimes(1);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
     it('ignores a clickaway close (user must read the status)', () => {
       const onClose = vi.fn();
       render(<Toast open message="Saved!" onClose={onClose} />);
@@ -119,9 +209,15 @@ describe('Design System - Toast', () => {
   });
 
   describe('ToastProvider + useToast', () => {
-    function Trigger({message}: {message: string}) {
+    function Trigger({
+      message,
+      options,
+    }: {
+      message: string;
+      options?: ShowToastOptions;
+    }) {
       const toast = useToast();
-      return <button onClick={() => toast(message)}>fire</button>;
+      return <button onClick={() => toast(message, options)}>fire</button>;
     }
 
     it('shows and announces a message on demand', async () => {
@@ -140,6 +236,110 @@ describe('Design System - Toast', () => {
       );
       // Both the visible Alert and the live region hold the text.
       expect(screen.getAllByText('Profile updated')).toHaveLength(2);
+    });
+
+    it('forwards className from the provider to the Snackbar', () => {
+      const {container} = render(
+        <ToastProvider className="belowHeader">
+          <Trigger message="Profile updated" />
+        </ToastProvider>,
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'fire'}));
+      expect(container.querySelector('.belowHeader')).toBeInTheDocument();
+    });
+
+    it('treats an explicit null duration as "until closed"', () => {
+      vi.useFakeTimers();
+      try {
+        render(
+          <ToastProvider>
+            <Trigger message="Saving..." options={{autoHideDuration: null}} />
+          </ToastProvider>,
+        );
+        act(() => {
+          fireEvent.click(screen.getByRole('button', {name: 'fire'}));
+        });
+        act(() => {
+          vi.advanceTimersByTime(DEFAULT_TOAST_DURATION * 2);
+        });
+        expect(screen.queryAllByText('Saving...').length).toBeGreaterThan(0);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('gives a replacing toast of the same duration its own full time', () => {
+      // MUI restarts its timer only when `open` or `autoHideDuration` changes,
+      // so consecutive equal-duration toasts would otherwise share one.
+      vi.useFakeTimers();
+      try {
+        render(
+          <ToastProvider>
+            <Trigger message="first" options={{autoHideDuration: 8000}} />
+            <Trigger message="second" options={{autoHideDuration: 8000}} />
+          </ToastProvider>,
+        );
+        const [firstButton, secondButton] = screen.getAllByRole('button', {
+          name: 'fire',
+        });
+
+        act(() => {
+          fireEvent.click(firstButton);
+        });
+        act(() => {
+          vi.advanceTimersByTime(7000);
+        });
+        act(() => {
+          fireEvent.click(secondButton);
+        });
+        act(() => {
+          vi.advanceTimersByTime(1500);
+        });
+
+        // The live region mirrors `open` (it is cleared on close) and, unlike
+        // the Snackbar, does not linger in jsdom waiting for a transition.
+        expect(screen.getByRole('alert')).toHaveTextContent('second');
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('keeps its message while animating out', async () => {
+      // The Snackbar's key holds the message, so the provider has to keep that
+      // message on close - dropping it would change the key mid-exit and
+      // replace the toast with a blank one instead of letting it animate out.
+      const user = userEvent.setup();
+      render(
+        <ToastProvider>
+          <Trigger message="Saved!" />
+        </ToastProvider>,
+      );
+
+      await user.click(screen.getByRole('button', {name: 'fire'}));
+      await user.click(screen.getByRole('button', {name: 'Close alert'}));
+
+      expect(screen.queryAllByText('Saved!').length).toBeGreaterThan(0);
+    });
+
+    it('reuses one live region across consecutive toasts', async () => {
+      render(
+        <ToastProvider>
+          <Trigger message="first" />
+          <Trigger message="second" />
+        </ToastProvider>,
+      );
+      const [firstButton, secondButton] = screen.getAllByRole('button', {
+        name: 'fire',
+      });
+      const liveRegion = screen.getByRole('alert');
+
+      fireEvent.click(firstButton);
+      await waitFor(() => expect(liveRegion).toHaveTextContent('first'));
+      fireEvent.click(secondButton);
+      await waitFor(() => expect(liveRegion).toHaveTextContent('second'));
+
+      // Still the same node, and still the only one.
+      expect(screen.getByRole('alert')).toBe(liveRegion);
     });
 
     it('no-ops without a provider', () => {
