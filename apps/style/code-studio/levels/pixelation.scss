@@ -6,6 +6,7 @@
 
 #visualization {
   overflow: hidden;
+  margin-top: 6px;
 }
 
 #visualizationColumn {
@@ -98,17 +99,17 @@
   width: 100%;
 }
 
-input[type=radio] {
+input[type="radio"] {
   margin: 0 3px;
   vertical-align: baseline;
 }
 
-input[type=number] {
+input[type="number"] {
   width: 64px;
   height: 30px;
 }
 
-input[type=range] {
+input[type="range"] {
   width: 100%;
 }
 
@@ -135,8 +136,4 @@ input[type=range] {
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 14px;
-}
-
-#visualization {
-  margin-top: 6px;
 }
