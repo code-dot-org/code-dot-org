@@ -439,6 +439,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => pinnedSceneId ?? scenes[0].id
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
+  const activeSceneType = activeScene?.type;
+  // Blockly fixes the toolbox kind when the workspace is injected, so the
+  // first scene's derived toolbox settles it for this level's lifetime.
+  const injectedToolboxRef = useRef(
+    toolboxForSceneType(levelProperties.toolboxDefinition, activeSceneType)
+  );
   const activeWorld = worldFor(activeScene);
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
@@ -776,7 +782,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     refreshToolbox,
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
-    toolboxDefinition: levelProperties.toolboxDefinition,
+    // The kind is fixed at injection: a scene-typed toolbox is a flyout from
+    // the start, and later scenes swap its contents in place.
+    toolboxDefinition: injectedToolboxRef.current,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });
@@ -1084,9 +1092,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [levelProperties.id, dispatch, refreshToolbox]);
 
-  // A scene shows the blocks its type is for. Swapped in place rather than
-  // through the hook's toolboxDefinition, which rebuilds the workspace.
-  const activeSceneType = activeScene?.type;
+  // A scene shows the blocks its type is for, swapped in place: routing this
+  // through the hook's toolboxDefinition would rebuild the workspace, which
+  // empties it.
   useEffect(() => {
     if (!animationsSeeded) {
       return;

@@ -31,16 +31,48 @@ describe('toolboxForSceneType', () => {
     });
   });
 
-  it('keeps every block when the scene has no type', () => {
-    expect(toolboxForSceneType(categories, undefined)).toBe(categories);
+  it('keeps every block when the scene has no type, still as a flyout', () => {
+    // The kind cannot change once Blockly has the workspace, so an untyped
+    // scene gets everything rather than the authored categories.
+    expect(toolboxForSceneType(categories, undefined)).toEqual({
+      kind: 'flyoutToolbox',
+      contents: [
+        {kind: 'block', type: 'jump'},
+        {kind: 'block', type: 'say'},
+        {kind: 'block', type: 'goTo'},
+      ],
+    });
   });
 
-  it('leaves a toolbox with no matching category alone', () => {
+  it('leaves a toolbox that names no scene type as authored', () => {
+    const unrelated = {
+      kind: 'categoryToolbox',
+      contents: [
+        {
+          kind: 'category',
+          name: 'Sprites',
+          contents: [{kind: 'block', type: 'a'}],
+        },
+        {
+          kind: 'category',
+          name: 'Math',
+          contents: [{kind: 'block', type: 'b'}],
+        },
+      ],
+    };
+    expect(toolboxForSceneType(unrelated, 'story')).toBe(unrelated);
+    expect(toolboxForSceneType(unrelated, undefined)).toBe(unrelated);
+  });
+
+  it('leaves a flyout alone', () => {
     const flyout = {
       kind: 'flyoutToolbox',
       contents: [{kind: 'block', type: 'say'}],
     };
     expect(toolboxForSceneType(flyout, 'story')).toBe(flyout);
+  });
+
+  it('gives a story scene nothing when only the other type is authored', () => {
     const platformOnly = {
       kind: 'categoryToolbox',
       contents: [
@@ -51,7 +83,10 @@ describe('toolboxForSceneType', () => {
         },
       ],
     };
-    expect(toolboxForSceneType(platformOnly, 'story')).toBe(platformOnly);
+    expect(toolboxForSceneType(platformOnly, 'story')).toEqual({
+      kind: 'flyoutToolbox',
+      contents: [],
+    });
   });
 
   it('handles a missing shared category', () => {

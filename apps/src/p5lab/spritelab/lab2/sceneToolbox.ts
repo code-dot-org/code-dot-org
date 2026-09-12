@@ -23,23 +23,29 @@ interface AuthoredCategory {
 }
 
 /**
- * The blocks a scene of this type should see, flattened to a flyout. Returns
- * the definition unchanged when it has no categories to choose between, or
- * when the scene's type is unknown — an untyped scene keeps every block
- * rather than losing some.
+ * The blocks a scene of this type should see, flattened to a flyout.
+ *
+ * A toolbox naming no scene type is left as authored. One that names a type
+ * is ALWAYS returned as a flyout — the matching type's blocks plus the shared
+ * ones, or every block when the scene has no type — because Blockly refuses
+ * to swap a category toolbox for a flyout on a live workspace, so every scene
+ * the level can show has to produce the same kind.
  */
 export function toolboxForSceneType(
   toolbox: BlocklyCore.utils.toolbox.ToolboxInfo | undefined,
   sceneType: SceneType | undefined
 ): BlocklyCore.utils.toolbox.ToolboxInfo | undefined {
-  if (!toolbox || !sceneType || toolbox.kind !== 'categoryToolbox') {
+  if (!toolbox || toolbox.kind !== 'categoryToolbox') {
     return toolbox;
   }
-  const wanted = [CATEGORY_FOR_TYPE[sceneType], SHARED_CATEGORY];
   const categories = (toolbox.contents || []) as AuthoredCategory[];
-  if (!categories.some(entry => entry.name === CATEGORY_FOR_TYPE[sceneType])) {
+  const typeCategories: string[] = Object.values(CATEGORY_FOR_TYPE);
+  if (!categories.some(entry => typeCategories.includes(entry.name ?? ''))) {
     return toolbox;
   }
+  const wanted = sceneType
+    ? [CATEGORY_FOR_TYPE[sceneType], SHARED_CATEGORY]
+    : categories.map(entry => entry.name ?? '');
   return {
     kind: 'flyoutToolbox',
     contents: wanted.flatMap(
