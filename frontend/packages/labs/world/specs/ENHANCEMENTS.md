@@ -78,10 +78,10 @@ More than one edit, or a companion actor, or a line aiming two things at each
 other. Anything that is only "elect this trait" belongs on the rule shelf,
 which offers exactly that in two clicks and should not be duplicated here.
 
-**And a verb the actor did not have**, which the enemy rows added and which is
-worth stating rather than leaving as an exception people notice. Two of those
-three write one `use trait` row each, so on the letter of the paragraph above
-they do not qualify. The paragraph is measuring the wrong thing.
+**And a verb the actor did not have**, however few lines it takes. The enemy
+rows made this explicit: two of those three write one `use trait` apiece, and
+the paragraph above would send both away. The paragraph is measuring the wrong
+thing.
 
 What the rule shelf hands over is a RULE — a `.rule` file in the project and a
 name in the rules list. It elects nothing on any actor. Between that and a
@@ -90,13 +90,33 @@ ninety in a dropdown, and, before either, the knowledge that walking about is
 called "Patrol". The cost a row saves is what the learner has to already know,
 and that is not the same quantity as how many lines it writes.
 
-So the test has two halves now: more than one edit, OR a verb a level plainly
-needs that is one trait away and unfindable without knowing its name. The
-second half is the narrow one, and the guard against a shelf with ninety rows
-on it is that a verb has to be one somebody building a game would go looking
-for. Walking a beat, hurting what you touch and chasing somebody are three of
-those; `is affected by gravity` is not, because nobody arrives wanting gravity
-— they arrive wanting to jump, and that is a row already.
+So a row is welcome when it is one verb a learner would recognise as a want —
+the `use trait`, and the rule imported if the project has not got it. That is
+the whole of the second half of the test.
+
+What is still not a row is a trait nobody arrives asking for BY NAME, because
+something else always brings it: `Physics#Can Move` is the substrate under
+every verb that moves, elected by Arrow Keys' traits and by Patrol's without
+being mentioned, and a learner wanting movement wants walking or patrolling
+rather than the thing underneath them.
+
+**Falling is not one of those, and the first cut of this paragraph said it
+was.** It claimed nobody arrives wanting gravity — that they arrive wanting to
+jump, and jumping is a row already. That is true of a PLAYER and false of
+everything else in a side-on level. The jetpack level's Blob elects
+`Gravity#Affected by Gravity` on its own and has no jump and no keyboard; its
+Rocket takes the same trait from a `falls` flag, which is one enemy built two
+ways (`fixtures/jetpack`). "Walks a beat" supplies none of it — the Crawler
+works because it patrols at a fixed height on a floor it was placed on, never
+because anything holds it up. So an actor that should be pulled onto the floor
+and must not be handed a jump key has no row at all, and wants one.
+
+**The shelf is going to be a STEP, which is why the guard could relax.** Read
+from an actor's own menu, a list of ninety verbs is a wall. Read as the "what
+can it do" step of the Actor Creator — the wizard that will build an actor from
+a name, a picture and a set of abilities — a broad list is the point rather
+than the cost (`specs/ACTOR_CREATION_WIZARD.md`). Rows added from here on are
+being added to that list as much as to this dialog.
 
 ## Where it is asked from
 

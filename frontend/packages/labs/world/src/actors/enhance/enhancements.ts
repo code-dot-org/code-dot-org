@@ -11,21 +11,33 @@
 // or it needs a companion actor, or it needs a line aiming two things at each
 // other. Anything that is only "elect this trait" belongs on the rule shelf.
 //
-// …OR IT IS A VERB the actor did not have, which the enemy rows added and
-// which is the narrow half of the test. Two of those write one `use trait` row
-// each, so by the paragraph above they do not qualify — and the paragraph is
-// measuring the wrong thing. What the rule shelf hands over is a RULE: a file
-// in the project and a name in the rules list. It elects nothing on any actor.
-// Between that and a patrolling guard there is still a row to drag, the right
-// trait to find among ninety, and, before either, the knowledge that walking
-// about is called "Patrol". What a row saves is what the learner has to
-// already know, which is not the same quantity as how many lines it writes.
+// …OR IT IS A VERB the actor did not have, however few lines it takes. The
+// enemy rows made this explicit: two of them write one `use trait` apiece, and
+// the paragraph above would send both away. It is measuring the wrong thing.
+// What the rule shelf hands over is a RULE: a file in the project and a name
+// in the rules list. It elects nothing on any actor. Between that and a
+// patrolling guard there is still a row to drag, the right trait to find among
+// ninety, and, before either, the knowledge that walking about is called
+// "Patrol". What a row saves is what the learner has to already know, which is
+// not the same quantity as how many lines it writes.
 //
-// The guard against a shelf with ninety rows on it is that the verb has to be
-// one somebody building a game would go looking for. Walking a beat, hurting
-// what you touch and chasing somebody are three of those; "is affected by
-// gravity" is not, because nobody arrives wanting gravity — they arrive
-// wanting to jump, and that is a row already (specs/ENHANCEMENTS.md).
+// So a row is welcome when it is one verb a learner would recognise as a want
+// — the `use trait`, and the rule imported if the project has not got it. What
+// is not a row is a trait nobody asks for BY NAME because something else
+// always brings it: `Physics#Can Move` is the substrate under every verb that
+// moves, and a learner wanting movement wants walking or patrolling rather
+// than the thing underneath them.
+//
+// FALLING IS NOT ONE OF THOSE, though this comment said it was: gravity
+// arrives with `Jumps` for a player and with nothing at all for an enemy. The
+// jetpack Blob elects it alone, with no jump and no keyboard, and an actor
+// that should be pulled onto the floor and must not be handed a jump key has
+// no row yet (specs/ENHANCEMENTS.md).
+//
+// AND THIS SHELF IS GOING TO BE A STEP, which is why the guard could relax.
+// Read from an actor's own menu, ninety verbs is a wall; read as the "what can
+// it do" step of the Actor Creator, a broad list is the point
+// (specs/ACTOR_CREATION_WIZARD.md).
 //
 // WHAT IT LEAVES BEHIND IS A PROJECT. Every edit is ordinary blocks in files
 // the learner owns (`./patch`), so an enhancement is a shortcut through work
