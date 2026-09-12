@@ -4,6 +4,12 @@
  */
 
 import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
+import {
+  isWeblab1CompatibilityModeEnabled,
+  loadWeblab1ProjectAsLab2Sources,
+  mainJsonIsLab2CodebridgeShape,
+  shouldFallbackToWeblab1Files,
+} from '@cdo/apps/weblab2/weblab1Compatibility';
 
 import {SOURCE_FILE} from '../constants';
 import {SourceResponseValidator} from '../responseValidators';
@@ -22,6 +28,35 @@ export async function get(
   if (versionId) {
     url += `?version=${versionId}`;
   }
+
+  // WebLab1 compat: inspect raw main.json first. Legacy/WebLab1/App-Lab-shaped
+  // sources are not valid Codebridge MultiFileSource; avoid whack-a-mole ValidationError branches.
+  if (isWeblab1CompatibilityModeEnabled()) {
+    try {
+      const {value: json, response} = await HttpClient.fetchJson<unknown>(
+        url,
+        {},
+        undefined
+      );
+      if (mainJsonIsLab2CodebridgeShape(json)) {
+        try {
+          const value = SourceResponseValidator(
+            json as Record<string, unknown>
+          );
+          return {value, response};
+        } catch {
+          return loadWeblab1ProjectAsLab2Sources(channelId, versionId);
+        }
+      }
+      return loadWeblab1ProjectAsLab2Sources(channelId, versionId);
+    } catch (error) {
+      if (shouldFallbackToWeblab1Files(error)) {
+        return loadWeblab1ProjectAsLab2Sources(channelId, versionId);
+      }
+      throw error;
+    }
+  }
+
   return HttpClient.fetchJson<ProjectSources>(url, {}, SourceResponseValidator);
 }
 
