@@ -56,6 +56,38 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     Unit.clear_cache
   end
 
+  test 'teachers can create an instant word section without metadata' do
+    sign_in @teacher
+    assert_difference 'Section.count' do
+      post :create_instant, params: {user_id: @student.id, login_type: 'email', participant_type: 'teacher'}
+    end
+    assert_response :created
+    section = Section.find(returned_json['id'])
+    assert_equal @teacher, section.user
+    assert_equal "#{@teacher.name}'s Instant Section", section.name
+    assert section.instant_section?
+    assert_equal Section::LOGIN_TYPE_WORD, section.login_type
+    assert_equal 'student', section.participant_type
+    assert_match(/\A[A-Z]{6}\z/, section.code)
+    assert_empty section.grades || []
+    assert_nil section.course_id
+  end
+
+  test 'students cannot create instant sections' do
+    sign_in @student
+    assert_no_difference 'Section.count' do
+      post :create_instant
+    end
+    assert_response :forbidden
+  end
+
+  test 'logged out users cannot create instant sections' do
+    assert_no_difference 'Section.count' do
+      post :create_instant
+    end
+    assert_response :forbidden
+  end
+
   test 'logged out cannot list sections' do
     get :index
     assert_response :forbidden

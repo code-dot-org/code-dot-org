@@ -8,6 +8,7 @@ import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import NewInstantSection from '@cdo/apps/templates/instantSection/NewInstantSection';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -382,6 +383,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
             <CoteacherInviteNotification
               isForPl={false}
               destructiveLoad={true}
+            />
+            <NewInstantSection
+              onCreated={() => setSelectedArchiveToggle('teaching')}
             />
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (

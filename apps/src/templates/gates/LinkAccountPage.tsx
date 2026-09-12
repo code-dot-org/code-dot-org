@@ -4,6 +4,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
+import JoinInstantSection from '@cdo/apps/templates/instantSection/JoinInstantSection';
 import i18n from '@cdo/locale';
 
 import {processAccountUrlParams} from './processAccountUrlParams';
@@ -49,7 +50,9 @@ const LinkAccountPage: React.FunctionComponent = () => {
   return (
     <main>
       <div className={styles.contentContainer}>
+        {sourcePage === 'join section' && <JoinInstantSection />}
         <AccountBanner
+          headingComponent={sourcePage === 'join section' ? 'h2' : 'h1'}
           heading={i18n.accountWelcomeBannerHeaderLabel()}
           desc={SOURCE_PAGE_TEXT[sourcePageTextKey].headerDesc}
           showLogo={true}

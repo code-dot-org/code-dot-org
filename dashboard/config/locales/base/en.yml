@@ -335,6 +335,7 @@ en:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     default_name: 'Untitled Section'
+    instant_name: "%{teacher_name}'s Instant Section"
     remove: '(remove section)'
     type:
       picture: 'Picture Password'

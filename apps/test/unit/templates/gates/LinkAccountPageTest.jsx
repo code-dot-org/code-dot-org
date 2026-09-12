@@ -39,6 +39,9 @@ describe('LinkAccountPage', () => {
     screen.getByText(i18n.accountWelcomeBannerContentWorkshopEnroll());
     screen.getByText(i18n.accountNewAccountCardContentWorkshopEnroll());
     screen.getByText(i18n.accountExistingAccountCardContentWorkshopEnroll());
+    expect(
+      screen.queryByText(i18n.instantSectionJoinTitle())
+    ).not.toBeInTheDocument();
   });
 
   it('join section sourcePage shows section text', () => {
@@ -47,6 +50,7 @@ describe('LinkAccountPage', () => {
     screen.getByText(i18n.accountNeededJoinSectionWithoutCodeBannerLabel());
     screen.getByText(i18n.accountNeededJoinSectionCreateAccountCardContent());
     screen.getByText(i18n.accountNeededJoinSectionSignInCardContent());
+    screen.getByRole('heading', {name: i18n.instantSectionJoinTitle()});
   });
 
   it('buttons send user to provided urls', () => {

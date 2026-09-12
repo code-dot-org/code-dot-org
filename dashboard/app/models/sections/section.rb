@@ -197,7 +197,15 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at suggested_lesson suggested_lesson_history)
+  serialized_attrs %w(code_review_expires_at suggested_lesson suggested_lesson_history instant_section)
+
+  def instant_section?
+    instant_section == true && login_type == LOGIN_TYPE_WORD && participant_type == 'student'
+  end
+
+  def open_for_instant_join?
+    instant_section? && !deleted? && user&.teacher? && !hidden? && !restricted? && !at_capacity?
+  end
 
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
   SUGGESTED_LESSON_HISTORY_MAX_DAYS = 10

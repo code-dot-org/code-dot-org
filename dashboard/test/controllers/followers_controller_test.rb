@@ -33,6 +33,28 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
   end
 
+  test 'signed out instant join shows the account page with the join code preserved' do
+    @word_section.update!(instant_section: true)
+    get :student_user_new, params: {section_code: @word_section.code}
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin%2F#{@word_section.code}"
+  end
+
+  test 'signed in students join instant sections using their existing account' do
+    @word_section.update!(instant_section: true)
+    sign_in @student
+    get :student_user_new, params: {section_code: @word_section.code}
+    assert_response :success
+
+    assert_no_difference 'User.count' do
+      assert_difference 'Follower.count' do
+        post :student_register, params: {section_code: @word_section.code}
+      end
+    end
+    assert_redirected_to root_path
+    assert_equal @student, @controller.current_user
+    assert_includes @word_section.students, @student
+  end
+
   test "student in word section should be redirected to word login when joining section" do
     get :student_user_new, params: {section_code: @word_section.code}
     assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code

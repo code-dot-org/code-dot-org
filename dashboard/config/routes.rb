@@ -247,6 +247,7 @@ Dashboard::Application.routes.draw do
           get 'suggested_lesson'
         end
         collection do
+          post 'instant', action: 'create_instant'
           get 'membership'
           get 'valid_course_offerings'
           get 'available_participant_types'
@@ -743,6 +744,8 @@ Dashboard::Application.routes.draw do
     get '/weblab/host', to: 'weblab_host#index'
     get '/weblab/network-check', to: 'weblab_host#network_check'
 
+    get '/instant_sections/:section_code', to: 'instant_sections#show'
+    post '/instant_sections/:section_code/join', to: 'instant_sections#join'
     get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
     post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 

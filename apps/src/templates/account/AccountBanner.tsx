@@ -13,7 +13,8 @@ const AccountBanner: React.FunctionComponent<{
   desc: string;
   showLogo: boolean;
   className?: string;
-}> = ({heading, desc, showLogo, className}) => (
+  headingComponent?: 'h1' | 'h2';
+}> = ({heading, desc, showLogo, className, headingComponent = 'h1'}) => (
   <div className={styles.bannerContainer}>
     {showLogo && (
       <div className={styles.iconContainer}>
@@ -22,7 +23,7 @@ const AccountBanner: React.FunctionComponent<{
     )}
 
     <div className={classNames(className, styles.titleContainer)}>
-      <Typography variant="h1" gutterBottom>
+      <Typography component={headingComponent} variant="h1" gutterBottom>
         {heading}
       </Typography>
       <Typography className={styles.titleDesc} variant="body2" gutterBottom>

@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency, :suggested_lessons]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_instant, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency, :suggested_lessons]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -93,6 +93,22 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     render json: section.summarize
+  end
+
+  def create_instant
+    authorize! :create, Section
+    return head :forbidden unless current_user&.teacher?
+
+    section = Section.create!(
+      user: current_user,
+      name: I18n.t('section.instant_name', teacher_name: current_user.name),
+      login_type: Section::LOGIN_TYPE_WORD,
+      participant_type: 'student',
+      instant_section: true,
+      avatar_color: 0,
+      avatar_emoji: 0
+    )
+    render json: section.summarize(role: :writing), status: :created
   end
 
   # POST /api/v1/sections/demo/create/:demo_type
