@@ -70,6 +70,9 @@ interface ImageDetailsDialogProps {
   /** No paint entry points: the pane is a plain preview and new images
       offer no blank canvas. */
   paintDisabled?: boolean;
+  /** Central mode: the panel sits in the page, not in a modal — no
+      overlay, no Done/Cancel exits. */
+  inline?: boolean;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -122,6 +125,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   adlibOnly,
   defaultStyle,
   paintDisabled,
+  inline,
   pixelated,
   getDataURI,
   isNameTaken,
@@ -173,234 +177,228 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     setNameError(null);
   };
 
-  return (
-    // data-theme drives both the chrome's own colors and the design
-    // system's semantic colors inside the panel (the TextField reads them).
-    <div className={moduleStyles.dialogHost} data-theme={mode}>
-      <CustomDialog
-        aria-label={title}
-        onClose={onClose}
-        mode={mode}
-        className={moduleStyles.dialog}
-      >
-        <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
-          {view === 'generate'
-            ? 'Describe the image and generate it with AI.'
-            : advanced
-            ? 'View, edit, rename, or delete this image.'
-            : 'View, edit, or delete this image.'}
-        </span>
-        <div className={moduleStyles.header}>
-          {renaming ? (
-            <>
-              <TextField
-                name="imageName"
-                aria-label="Image name"
-                className={moduleStyles.headerNameField}
-                value={nameDraft}
-                aria-invalid={!!shownNameError || undefined}
-                aria-describedby={
-                  shownNameError ? 'rename-image-error' : undefined
+  const panelBody = (
+    <>
+      <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
+        {view === 'generate'
+          ? 'Describe the image and generate it with AI.'
+          : advanced
+          ? 'View, edit, rename, or delete this image.'
+          : 'View, edit, or delete this image.'}
+      </span>
+      <div className={moduleStyles.header}>
+        {renaming ? (
+          <>
+            <TextField
+              name="imageName"
+              aria-label="Image name"
+              className={moduleStyles.headerNameField}
+              value={nameDraft}
+              aria-invalid={!!shownNameError || undefined}
+              aria-describedby={
+                shownNameError ? 'rename-image-error' : undefined
+              }
+              maxLength={IMAGE_NAME_MAX_LENGTH}
+              onChange={e => {
+                setNameDraft(sanitizeImageName(e.target.value));
+                setNameError(null);
+              }}
+              onKeyDown={e => {
+                if (e.key === 'Enter' && draftUsable) {
+                  commitRename();
+                } else if (e.key === 'Escape') {
+                  // Stop it here or the whole dialog closes.
+                  e.stopPropagation();
+                  cancelRename();
                 }
-                maxLength={IMAGE_NAME_MAX_LENGTH}
-                onChange={e => {
-                  setNameDraft(sanitizeImageName(e.target.value));
-                  setNameError(null);
-                }}
-                onKeyDown={e => {
-                  if (e.key === 'Enter' && draftUsable) {
-                    commitRename();
-                  } else if (e.key === 'Escape') {
-                    // Stop it here or the whole dialog closes.
-                    e.stopPropagation();
-                    cancelRename();
-                  }
-                }}
-              />
-              <button
-                type="button"
-                className={moduleStyles.iconButton}
-                aria-label="Save name"
-                disabled={!draftUsable}
-                onClick={commitRename}
-              >
-                <FontAwesomeV6Icon iconName="check" />
-              </button>
-              <button
-                type="button"
-                className={moduleStyles.iconButton}
-                aria-label="Cancel rename"
-                onClick={cancelRename}
-              >
-                <FontAwesomeV6Icon iconName="xmark" />
-              </button>
-              {/* Beside the field: below it would change the header's height
+              }}
+            />
+            <button
+              type="button"
+              className={moduleStyles.iconButton}
+              aria-label="Save name"
+              disabled={!draftUsable}
+              onClick={commitRename}
+            >
+              <FontAwesomeV6Icon iconName="check" />
+            </button>
+            <button
+              type="button"
+              className={moduleStyles.iconButton}
+              aria-label="Cancel rename"
+              onClick={cancelRename}
+            >
+              <FontAwesomeV6Icon iconName="xmark" />
+            </button>
+            {/* Beside the field: below it would change the header's height
                   for the moment it shows. */}
-              {shownNameError && (
-                <span
-                  id="rename-image-error"
-                  role="status"
-                  className={moduleStyles.inlineFieldError}
-                >
-                  {shownNameError}
-                </span>
-              )}
-            </>
-          ) : (
-            <>
-              {/* Tabbable so the focus trap lands on the title first (the
-                  pixel editor's pattern). */}
-              {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-              <span className={moduleStyles.headerTitle} tabIndex={0}>
-                {title}
+            {shownNameError && (
+              <span
+                id="rename-image-error"
+                role="status"
+                className={moduleStyles.inlineFieldError}
+              >
+                {shownNameError}
               </span>
-              {advanced && !isNew && view === 'details' && (
-                <button
-                  type="button"
-                  className={moduleStyles.iconButton}
-                  aria-label="Rename"
-                  onClick={() => {
-                    setNameDraft(name || '');
-                    setNameError(null);
-                    setRenaming(true);
-                  }}
-                >
-                  <FontAwesomeV6Icon iconName="pencil" />
-                </button>
-              )}
-            </>
-          )}
-        </div>
-        {view === 'generate' ? (
-          <GenerateImageView
-            existing={
-              isNew
-                ? undefined
-                : {
-                    generation,
-                    imageType: imageType || 'sprite',
-                    getDataURI,
-                  }
-            }
-            thumb={isNew ? undefined : thumb}
-            sheet={isNew ? undefined : sheet}
-            thumbPixelated={pixelated}
-            create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
-            lockedImageType={lockedImageType}
-            advanced={advanced}
-            adlibSet={adlibSet}
-            adlibOnly={adlibOnly}
-            defaultStyle={defaultStyle}
-            onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
-            onGenerateStart={onGenerateStart}
-            onAccept={async (result, newName) => {
-              await onAcceptGenerated(result, newName);
-              setView('details');
-            }}
-            // A brand-new image has no summary to fall back to.
-            onCancel={isNew ? onClose : () => setView('details')}
-            onDelete={isNew ? undefined : onDelete}
-          />
+            )}
+          </>
         ) : (
           <>
-            <div className={moduleStyles.body}>
-              {/* A set is not painted (the editor would see one frame of
-                  many), so its pane is a preview, not the paint button. */}
-              {sheet ? (
-                <div
-                  className={classNames(
-                    moduleStyles.imagePane,
-                    moduleStyles.imagePaneChecker
-                  )}
-                >
-                  <AnimatedSheetPreview {...sheet} />
-                </div>
-              ) : paintDisabled ? (
-                <div
-                  className={classNames(
-                    moduleStyles.imagePane,
-                    moduleStyles.imagePaneChecker
-                  )}
-                >
-                  {thumb && (
-                    <img
-                      src={thumb}
-                      alt=""
-                      className={classNames(pixelated && moduleStyles.pixelArt)}
-                    />
-                  )}
-                </div>
-              ) : (
-                <ImagePaneButton
-                  thumb={thumb}
-                  pixelated={pixelated}
-                  iconName="pen"
-                  label="Edit with paint tools"
-                  onClick={onPaint}
-                />
-              )}
-              <div className={moduleStyles.detailsPane}>
-                {generation && (
-                  <dl className={moduleStyles.metadata}>
-                    <dt>Prompt</dt>
-                    {/* Italic: the one field here the user wrote themselves. */}
-                    <dd className={moduleStyles.promptValue}>
-                      {generation.prompt}
-                    </dd>
-                    <dt>Type</dt>
-                    <dd>
-                      {sheet
-                        ? 'Sprite (animated)'
-                        : IMAGE_TYPE_LABELS[generation.imageType]}
-                    </dd>
-                    <dt>Style</dt>
-                    <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
-                    {advanced && generation.temperature !== undefined && (
-                      <>
-                        <dt>Temperature</dt>
-                        <dd>{generation.temperature}</dd>
-                      </>
-                    )}
-                  </dl>
-                )}
-                {alternatives && alternatives.length > 1 && (
-                  <div className={moduleStyles.alternatives}>
-                    <div className={moduleStyles.alternativesLabel}>
-                      Alternatives
-                    </div>
-                    <div className={moduleStyles.alternativesRow}>
-                      {alternatives.map(alt => (
-                        <button
-                          key={alt.id}
-                          type="button"
-                          className={classNames(
-                            moduleStyles.alternativeThumb,
-                            alt.selected && moduleStyles.alternativeSelected
-                          )}
-                          aria-label="Use this image"
-                          aria-pressed={alt.selected}
-                          onClick={() => onSelectAlternative?.(alt.id)}
-                        >
-                          <img src={alt.thumb} alt="" />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-            <div className={moduleStyles.footer}>
-              <div className={moduleStyles.footerLeft}>
-                <DeleteImageButton onDelete={onDelete} />
-              </div>
+            {/* Tabbable so the focus trap lands on the title first (the
+                  pixel editor's pattern). */}
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+            <span className={moduleStyles.headerTitle} tabIndex={0}>
+              {title}
+            </span>
+            {advanced && !isNew && view === 'details' && (
               <button
                 type="button"
-                className={moduleStyles.button}
-                onClick={() => setView('generate')}
+                className={moduleStyles.iconButton}
+                aria-label="Rename"
+                onClick={() => {
+                  setNameDraft(name || '');
+                  setNameError(null);
+                  setRenaming(true);
+                }}
               >
-                <FontAwesomeV6Icon iconName="sparkles" />
-                Generate with AI
+                <FontAwesomeV6Icon iconName="pencil" />
               </button>
+            )}
+          </>
+        )}
+      </div>
+      {view === 'generate' ? (
+        <GenerateImageView
+          existing={
+            isNew
+              ? undefined
+              : {
+                  generation,
+                  imageType: imageType || 'sprite',
+                  getDataURI,
+                }
+          }
+          thumb={isNew ? undefined : thumb}
+          sheet={isNew ? undefined : sheet}
+          thumbPixelated={pixelated}
+          create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
+          lockedImageType={lockedImageType}
+          advanced={advanced}
+          adlibSet={adlibSet}
+          adlibOnly={adlibOnly}
+          defaultStyle={defaultStyle}
+          onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
+          onGenerateStart={onGenerateStart}
+          onAccept={async (result, newName) => {
+            await onAcceptGenerated(result, newName);
+            setView('details');
+          }}
+          // A brand-new image has no summary to fall back to.
+          onCancel={isNew ? onClose : () => setView('details')}
+          hideCancel={inline && isNew}
+          onDelete={isNew ? undefined : onDelete}
+        />
+      ) : (
+        <>
+          <div className={moduleStyles.body}>
+            {/* A set is not painted (the editor would see one frame of
+                  many), so its pane is a preview, not the paint button. */}
+            {sheet ? (
+              <div
+                className={classNames(
+                  moduleStyles.imagePane,
+                  moduleStyles.imagePaneChecker
+                )}
+              >
+                <AnimatedSheetPreview {...sheet} />
+              </div>
+            ) : paintDisabled ? (
+              <div
+                className={classNames(
+                  moduleStyles.imagePane,
+                  moduleStyles.imagePaneChecker
+                )}
+              >
+                {thumb && (
+                  <img
+                    src={thumb}
+                    alt=""
+                    className={classNames(pixelated && moduleStyles.pixelArt)}
+                  />
+                )}
+              </div>
+            ) : (
+              <ImagePaneButton
+                thumb={thumb}
+                pixelated={pixelated}
+                iconName="pen"
+                label="Edit with paint tools"
+                onClick={onPaint}
+              />
+            )}
+            <div className={moduleStyles.detailsPane}>
+              {generation && (
+                <dl className={moduleStyles.metadata}>
+                  <dt>Prompt</dt>
+                  {/* Italic: the one field here the user wrote themselves. */}
+                  <dd className={moduleStyles.promptValue}>
+                    {generation.prompt}
+                  </dd>
+                  <dt>Type</dt>
+                  <dd>
+                    {sheet
+                      ? 'Sprite (animated)'
+                      : IMAGE_TYPE_LABELS[generation.imageType]}
+                  </dd>
+                  <dt>Style</dt>
+                  <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
+                  {advanced && generation.temperature !== undefined && (
+                    <>
+                      <dt>Temperature</dt>
+                      <dd>{generation.temperature}</dd>
+                    </>
+                  )}
+                </dl>
+              )}
+              {alternatives && alternatives.length > 1 && (
+                <div className={moduleStyles.alternatives}>
+                  <div className={moduleStyles.alternativesLabel}>
+                    Alternatives
+                  </div>
+                  <div className={moduleStyles.alternativesRow}>
+                    {alternatives.map(alt => (
+                      <button
+                        key={alt.id}
+                        type="button"
+                        className={classNames(
+                          moduleStyles.alternativeThumb,
+                          alt.selected && moduleStyles.alternativeSelected
+                        )}
+                        aria-label="Use this image"
+                        aria-pressed={alt.selected}
+                        onClick={() => onSelectAlternative?.(alt.id)}
+                      >
+                        <img src={alt.thumb} alt="" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className={moduleStyles.footer}>
+            <div className={moduleStyles.footerLeft}>
+              <DeleteImageButton onDelete={onDelete} />
+            </div>
+            <button
+              type="button"
+              className={moduleStyles.button}
+              onClick={() => setView('generate')}
+            >
+              <FontAwesomeV6Icon iconName="sparkles" />
+              Generate with AI
+            </button>
+            {!inline && (
               <button
                 type="button"
                 className={moduleStyles.primaryButton}
@@ -408,10 +406,34 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               >
                 {imageChanged ? 'Accept' : 'Done'}
               </button>
-            </div>
-          </>
-        )}
-      </CustomDialog>
+            )}
+          </div>
+        </>
+      )}
+    </>
+  );
+
+  return (
+    // data-theme drives both the chrome's own colors and the design
+    // system's semantic colors inside the panel (the TextField reads them).
+    <div className={moduleStyles.dialogHost} data-theme={mode}>
+      {inline ? (
+        <section
+          aria-label={title}
+          className={classNames(moduleStyles.dialog, moduleStyles.inlineDialog)}
+        >
+          {panelBody}
+        </section>
+      ) : (
+        <CustomDialog
+          aria-label={title}
+          onClose={onClose}
+          mode={mode}
+          className={moduleStyles.dialog}
+        >
+          {panelBody}
+        </CustomDialog>
+      )}
     </div>
   );
 };

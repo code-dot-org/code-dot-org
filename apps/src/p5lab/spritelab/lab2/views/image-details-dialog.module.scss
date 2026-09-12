@@ -23,6 +23,12 @@
   width: 850px;
 }
 
+// Central-mode presentation: the same panel parked in the page — no modal
+// entrance animation.
+.dialogHost .inlineDialog {
+  animation: none;
+}
+
 .dialogHost .dialog :focus-visible {
   @include chrome.focus-ring;
 }

@@ -697,3 +697,16 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+
+// Central image-generation levels: the image panel is the whole lab, the
+// floating guide over it.
+.centralGenerateArea {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  padding: 24px 16px;
+  overflow: auto;
+}

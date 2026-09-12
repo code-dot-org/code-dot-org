@@ -684,9 +684,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Instantiate the engine once per level. No legacy default-sprite library:
   // images come from the Images tab, so p5 preload completes immediately.
   useEffect(() => {
-    if (isToolboxMode) {
+    if (isToolboxMode || levelProperties.guideMode === 'imageGenerate') {
       // Toolbox editing has nothing to run: the workspace holds the toolbox
-      // itself. With no engine, the run machinery no-ops.
+      // itself. A central image-generation level has no stage at all. With
+      // no engine, the run machinery no-ops (and no stray canvas mounts).
       return;
     }
     let cancelled = false;
@@ -1485,6 +1486,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
+  // One prop bag for both mounts of the pane (Images tab, central mode).
+  const imagePaneProps = {
+    uploadImage,
+    onRenameImage: handleRenameImage,
+    onDeleteImage: handleDeleteImage,
+    lockedImageType: levelProperties.lockedImageType,
+    advanced: imagesAdvanced,
+    adlibSet: imageAdlibSetParam || levelProperties.imageAdlibSet,
+    adlibOnly: levelProperties.imageAdlibOnly && !imageFreeTextParam,
+    defaultStyle: levelProperties.defaultImageStyle,
+    paintDisabled: levelProperties.imagePaintDisabled,
+  };
+
   return (
     <div className={moduleStyles.labRow}>
       {showStartOver && isEditable && (
@@ -1510,153 +1524,160 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         sidebarOnly={!!levelProperties.guideMode}
       />
       <div className={moduleStyles.divider} />
-      <TabShell
-        activeTab={activeTab}
-        onTabChange={handleTabChange}
-        enabledTabs={tabs}
-        visibleTabs={tabs}
-        onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
-        startOverExtra={
-          activeTab === 'Play' && nowPlaying ? (
-            <SceneMusicBar
-              title={nowPlaying.title}
-              loading={nowPlaying.loading}
-            />
-          ) : undefined
-        }
-        sceneTabsExtra={
-          // A toolbox has no scenes; "New scene…" here would put the student
-          // default onto the canvas and into the saved toolbox.
-          animationsSeeded && !isToolboxMode ? (
-            <SceneSelector
-              scenes={sceneMetadata}
-              activeSceneId={activeSceneId}
-              disabled={!onSceneTab}
-              locked={!!pinnedSceneId}
-              onSelectScene={handleSelectScene}
-              onCreateScene={handleCreateScene}
-            />
-          ) : undefined
-        }
-        playTabExtra={
-          playspaceMode === 'play' ? (
-            <>
-              {/* On a pinned-scene level the game IS the one scene, so no
+      {levelProperties.guideMode === 'imageGenerate' ? (
+        // Central image-generation level: the image panel is the whole lab,
+        // with the floating guide over it. No tabs, no stage.
+        <div className={moduleStyles.centralGenerateArea}>
+          <GenerateImagePane central {...imagePaneProps} />
+          <GenerateSpriteLab
+            guideMode="instructions"
+            instructions={guide.text}
+            showContinue={guide.showContinue}
+            levelProperties={levelProperties}
+            onCodeGenerated={handleCodeGenerated}
+          />
+        </div>
+      ) : (
+        <TabShell
+          activeTab={activeTab}
+          onTabChange={handleTabChange}
+          enabledTabs={tabs}
+          visibleTabs={tabs}
+          onClickStartOver={
+            isEditable ? () => setShowStartOver(true) : undefined
+          }
+          startOverExtra={
+            activeTab === 'Play' && nowPlaying ? (
+              <SceneMusicBar
+                title={nowPlaying.title}
+                loading={nowPlaying.loading}
+              />
+            ) : undefined
+          }
+          sceneTabsExtra={
+            // A toolbox has no scenes; "New scene…" here would put the student
+            // default onto the canvas and into the saved toolbox.
+            animationsSeeded && !isToolboxMode ? (
+              <SceneSelector
+                scenes={sceneMetadata}
+                activeSceneId={activeSceneId}
+                disabled={!onSceneTab}
+                locked={!!pinnedSceneId}
+                onSelectScene={handleSelectScene}
+                onCreateScene={handleCreateScene}
+              />
+            ) : undefined
+          }
+          playTabExtra={
+            playspaceMode === 'play' ? (
+              <>
+                {/* On a pinned-scene level the game IS the one scene, so no
                   whole-game restart. */}
-              {!pinnedSceneId && (
+                {!pinnedSceneId && (
+                  <button
+                    type="button"
+                    className={moduleStyles.startOver}
+                    onClick={event =>
+                      handleRestartClick(event, handleRestartGame)
+                    }
+                  >
+                    Restart game
+                  </button>
+                )}
                 <button
                   type="button"
                   className={moduleStyles.startOver}
                   onClick={event =>
-                    handleRestartClick(event, handleRestartGame)
+                    handleRestartClick(event, handleRestartScene)
                   }
                 >
-                  Restart game
+                  Restart scene
                 </button>
-              )}
-              <button
-                type="button"
-                className={moduleStyles.startOver}
-                onClick={event => handleRestartClick(event, handleRestartScene)}
-              >
-                Restart scene
-              </button>
-            </>
-          ) : undefined
-        }
-      >
-        {WorkspaceAlert}
-        {/* Kept mounted (clipped) so the workspace survives tab switches;
-          gated on animationsSeeded (see the seed effect). */}
-        <div
-          ref={codeWrapperRef}
-          className={moduleStyles.codeTabWrapper}
-          style={{
-            clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
-            pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
-          }}
+              </>
+            ) : undefined
+          }
         >
-          {animationsSeeded && (
-            <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
-          )}
-        </div>
-
-        {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
-          the guide's transition frames, and remounting loses gallery state. */}
-        {imagesMounted && (
+          {WorkspaceAlert}
+          {/* Kept mounted (clipped) so the workspace survives tab switches;
+          gated on animationsSeeded (see the seed effect). */}
           <div
-            ref={imagesWrapperRef}
-            className={classNames(moduleStyles.codeTabWrapper)}
-            style={{
-              clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
-              pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
-            }}
-          >
-            <div className={moduleStyles.imagesTab}>
-              <GenerateImagePane
-                uploadImage={uploadImage}
-                onRenameImage={handleRenameImage}
-                onDeleteImage={handleDeleteImage}
-                lockedImageType={levelProperties.lockedImageType}
-                advanced={imagesAdvanced}
-                adlibSet={imageAdlibSetParam || levelProperties.imageAdlibSet}
-                adlibOnly={
-                  levelProperties.imageAdlibOnly && !imageFreeTextParam
-                }
-                defaultStyle={levelProperties.defaultImageStyle}
-                paintDisabled={levelProperties.imagePaintDisabled}
-              />
-            </div>
-          </div>
-        )}
-
-        {worldTabEnabled && worldMounted && (
-          <div
-            ref={worldWrapperRef}
+            ref={codeWrapperRef}
             className={moduleStyles.codeTabWrapper}
             style={{
-              clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
-              pointerEvents: activeTab === 'World' ? 'auto' : 'none',
+              clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
+              pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
             }}
           >
-            <WorldTab
-              world={activeWorld}
-              sceneSize={activeSceneSize}
-              onPaintCell={handlePaintWorldCell}
-              selected={worldPaletteSelection}
-              onSelect={setWorldPaletteSelection}
-            />
+            {animationsSeeded && (
+              <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
+            )}
           </div>
-        )}
 
-        {/* Always mounted so the engine keeps running; animates between the
+          {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
+          the guide's transition frames, and remounting loses gallery state. */}
+          {imagesMounted && (
+            <div
+              ref={imagesWrapperRef}
+              className={classNames(moduleStyles.codeTabWrapper)}
+              style={{
+                clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
+                pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
+              }}
+            >
+              <div className={moduleStyles.imagesTab}>
+                <GenerateImagePane {...imagePaneProps} />
+              </div>
+            </div>
+          )}
+
+          {worldTabEnabled && worldMounted && (
+            <div
+              ref={worldWrapperRef}
+              className={moduleStyles.codeTabWrapper}
+              style={{
+                clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
+                pointerEvents: activeTab === 'World' ? 'auto' : 'none',
+              }}
+            >
+              <WorldTab
+                world={activeWorld}
+                sceneSize={activeSceneSize}
+                onPaintCell={handlePaintWorldCell}
+                selected={worldPaletteSelection}
+                onSelect={setWorldPaletteSelection}
+              />
+            </div>
+          )}
+
+          {/* Always mounted so the engine keeps running; animates between the
           Code tab's corner preview and the Play tab's centered view. */}
-        <Playspace
-          boxRef={playspaceRef}
-          mode={playspaceMode}
-          fadeTrigger={fadeTrigger}
-          covered={jumpCover}
-          loading={externalLoading}
-          getDefaultSpriteSize={getDefaultSpriteSize}
-          onPreviewClick={handlePreviewClick}
-        />
+          <Playspace
+            boxRef={playspaceRef}
+            mode={playspaceMode}
+            fadeTrigger={fadeTrigger}
+            covered={jumpCover}
+            loading={externalLoading}
+            getDefaultSpriteSize={getDefaultSpriteSize}
+            onPreviewClick={handlePreviewClick}
+          />
 
-        {/* Floating guide, when the level asks for it. Plain instructions
+          {/* Floating guide, when the level asks for it. Plain instructions
           follow the student across every tab; the AI-codegen variant only
           makes sense over the Code workspace. (Image generation lives in
           the Images tab's image dialog.) */}
-        {!!levelProperties.guideMode &&
-          (levelProperties.guideMode === 'instructions' ||
-            activeTab === 'Code') && (
-            <GenerateSpriteLab
-              guideMode={levelProperties.guideMode}
-              instructions={guide.text}
-              showContinue={guide.showContinue}
-              levelProperties={levelProperties}
-              onCodeGenerated={handleCodeGenerated}
-            />
-          )}
-      </TabShell>
+          {!!levelProperties.guideMode &&
+            (levelProperties.guideMode === 'instructions' ||
+              activeTab === 'Code') && (
+              <GenerateSpriteLab
+                guideMode={levelProperties.guideMode}
+                instructions={guide.text}
+                showContinue={guide.showContinue}
+                levelProperties={levelProperties}
+                onCodeGenerated={handleCodeGenerated}
+              />
+            )}
+        </TabShell>
+      )}
     </div>
   );
 };

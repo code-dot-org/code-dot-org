@@ -115,7 +115,7 @@ export interface GuideStep {
 }
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
-  guideMode?: 'instructions' | 'aiCodeGenerate';
+  guideMode?: 'instructions' | 'aiCodeGenerate' | 'imageGenerate';
   aiCodeGenerateAdlib?: string;
   aiCodeGenerateText?: boolean;
   // World-tab experiment: show the tab on this level (equivalent to the

@@ -278,6 +278,9 @@ interface GenerateImagePaneProps {
   defaultStyle?: ImageStyle;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
+  /** Central mode: the image panel IS the level — no gallery, the panel
+      inline in the page, always open on the level's image. */
+  central?: boolean;
 }
 
 /**
@@ -294,6 +297,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   adlibOnly,
   defaultStyle,
   paintDisabled,
+  central,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -803,6 +807,33 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
+  // Central mode: open on the newest image of the level's type, else on a
+  // fresh one, and reopen whenever a close or delete clears the target. The
+  // animation list loads after mount, so an untouched 'new' session still
+  // adopts the level's image when it arrives; a session with alternatives
+  // is the student's work and keeps its target.
+  useEffect(() => {
+    if (!central || (dialogTarget && dialogTarget !== 'new')) {
+      return;
+    }
+    if (dialogTarget === 'new' && alternatives.length > 0) {
+      return;
+    }
+    const match = [...images]
+      .reverse()
+      .find(
+        ({props}) =>
+          !!props?.generation &&
+          (!lockedImageType ||
+            imageTypeFromCategories(props?.categories) === lockedImageType)
+      );
+    if (match) {
+      setDialogTarget(match.key);
+    } else if (!dialogTarget) {
+      setDialogTarget('new');
+    }
+  }, [central, dialogTarget, images, lockedImageType, alternatives.length]);
+
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
   // transparency; they must stay fully opaque.
@@ -812,34 +843,36 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
-      <div className={moduleStyles.imageGallery}>
-        {/* First slot, so it never hides behind a scroll. */}
-        <div className={moduleStyles.imageCard}>
-          <button
-            type="button"
-            className={moduleStyles.newImageCard}
-            onClick={openNewDialog}
-          >
-            <span aria-hidden>+</span>
-            <span className={moduleStyles.newImageLabel}>New image</span>
-          </button>
+      {!central && (
+        <div className={moduleStyles.imageGallery}>
+          {/* First slot, so it never hides behind a scroll. */}
+          <div className={moduleStyles.imageCard}>
+            <button
+              type="button"
+              className={moduleStyles.newImageCard}
+              onClick={openNewDialog}
+            >
+              <span aria-hidden>+</span>
+              <span className={moduleStyles.newImageLabel}>New image</span>
+            </button>
+          </div>
+          {images.map(({key, props}) => (
+            <GalleryCard
+              key={key}
+              animKey={key}
+              name={props?.name}
+              caption={advanced ? props?.name : undefined}
+              thumb={
+                getImageThumbnail(props?.name) ||
+                props?.dataURI ||
+                props?.sourceUrl ||
+                undefined
+              }
+              onOpen={openDialog}
+            />
+          ))}
         </div>
-        {images.map(({key, props}) => (
-          <GalleryCard
-            key={key}
-            animKey={key}
-            name={props?.name}
-            caption={advanced ? props?.name : undefined}
-            thumb={
-              getImageThumbnail(props?.name) ||
-              props?.dataURI ||
-              props?.sourceUrl ||
-              undefined
-            }
-            onOpen={openDialog}
-          />
-        ))}
-      </div>
+      )}
 
       {dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
@@ -891,6 +924,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           adlibOnly={adlibOnly}
           defaultStyle={defaultStyle}
           paintDisabled={paintDisabled}
+          inline={central}
           pixelated={!!targetProps?.pixelGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}

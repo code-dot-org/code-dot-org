@@ -146,6 +146,8 @@ interface GenerateImageViewProps {
   /** Leave without generating: back to the summary, or out of the dialog
       for a brand-new image. */
   onCancel: () => void;
+  /** Central mode, brand-new image: there is nowhere to cancel to. */
+  hideCancel?: boolean;
   /** Delete this image (existing images). */
   onDelete?: () => void;
 }
@@ -174,6 +176,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   onGenerateStart,
   onAccept,
   onCancel,
+  hideCancel,
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
@@ -669,14 +672,16 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </button>
           </div>
         )}
-        <button
-          type="button"
-          className={moduleStyles.button}
-          disabled={generating}
-          onClick={onCancel}
-        >
-          Cancel
-        </button>
+        {!hideCancel && (
+          <button
+            type="button"
+            className={moduleStyles.button}
+            disabled={generating}
+            onClick={onCancel}
+          >
+            Cancel
+          </button>
+        )}
         <button
           type="button"
           className={moduleStyles.primaryButton}
