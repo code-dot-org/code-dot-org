@@ -11,7 +11,6 @@ export interface QuizViewContent {
 }
 
 export interface QuizLevelProperties extends LevelProperties {
-  unitId?: number;
   displayName?: string;
   customIntroText?: string;
   timeLimitMinutes?: number;
