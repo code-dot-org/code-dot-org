@@ -1,0 +1,12 @@
+/* The "Cannot Import" list mirrors the lists MultiCheckboxSelector renders,
+ * minus the checkboxes: these screens cannot be selected. */
+.list {
+  margin-left: 0;
+}
+
+.listItem {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
