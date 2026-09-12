@@ -108,8 +108,7 @@ everything else in a side-on level. The jetpack level's Blob elects
 Rocket takes the same trait from a `falls` flag, which is one enemy built two
 ways (`fixtures/jetpack`). "Walks a beat" supplies none of it — the Crawler
 works because it patrols at a fixed height on a floor it was placed on, never
-because anything holds it up. So an actor that should be pulled onto the floor
-and must not be handed a jump key has no row at all, and wants one.
+because anything holds it up. So falling is two rows of its own (below).
 
 **The shelf is going to be a STEP, which is why the guard could relax.** Read
 from an actor's own menu, a list of ninety verbs is a wall. Read as the "what
@@ -463,6 +462,44 @@ whether a trait is elected, how to rewrite one file — because these three woul
 otherwise have made seven copies of the same forty lines. The four that predate
 it still carry their own; moving them is a change to working files with no
 behavior in it and belongs in its own commit.
+
+## Falling, and something to land on
+
+    actors/<target>.actor    use trait ⟨Gravity#Affected by Gravity⟩
+
+    actors/<floor>.actor     use trait ⟨Gravity#Acts as Ground⟩
+                             use trait ⟨Solid Bodies#Solid⟩
+
+**One sentence from two ends**, which is why they were added together. An actor
+that falls with nothing underneath drops out of the world, and a floor in a
+game where nothing falls is a picture.
+
+**Falling is not the platformer row with things taken out.** That one gives a
+control scheme — keys, a jump, a hand on the thing. This gives only the pull,
+which is what an actor that must NOT be steered wants: a blob that walks the
+floor, a crate that drops when its ledge goes.
+
+**It counts an actor that jumps as already falling**, because a trait brings
+its own dependencies and `Jumps` is written against `Affected by Gravity`.
+Offering it to a platformer player would write a second line saying what the
+first already says, which is the reason the stock Player elects neither twice.
+The check knows about that one trait and does not pretend to be exhaustive: it
+is the row next to this one on the same shelf.
+
+That check also caught the shape of a bug worth naming. `applied` knew about
+`Jumps` and `apply` did not, so the shelf said "already has this" and would
+have added the line anyway to a caller that asked. **The two halves have to
+read one predicate**, or a row says one thing and does another; nothing
+reachable through the dialog hit it, because the dialog disables a row it has
+been told is applied.
+
+**Holding things up is two traits and two claims.** `Acts as Ground` is what
+gravity's landing step looks for — what makes a thing something to come to rest
+ON, and what "is on the ground?" reads. `Solid` is what stops one body passing
+through another, which is collision's business rather than falling's. A ledge
+wants both; a wall wants only the second, and a cloud platform you jump up
+through wants only the first. The Ground the library ships elects exactly this
+pair.
 
 ## Testing one
 

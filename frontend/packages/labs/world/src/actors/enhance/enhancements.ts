@@ -66,7 +66,9 @@ import {chasesEnhancement} from './chases';
 import {climbArrowsEnhancement} from './climbArrows';
 import {collectsEnhancement} from './collects';
 import {dealsDamageEnhancement} from './dealsDamage';
+import {fallsEnhancement} from './falls';
 import {healthEnhancement} from './health';
+import {holdsThingsUpEnhancement} from './holdsThingsUp';
 import {patrolsEnhancement} from './patrols';
 import {platformerControlsEnhancement} from './platformerControls';
 import {scoreboardEnhancement} from './scoreboard';
@@ -173,6 +175,11 @@ export const ENHANCEMENTS: readonly Enhancement[] = [
   // make an actor a CHARACTER rather than scenery, and everything under them
   // is something a character then does.
   platformerControlsEnhancement,
+  // …then the two that say how it sits in a side-on world at all, which are
+  // one sentence from two ends: a thing that falls needs a thing to land on,
+  // and a floor in a game where nothing falls is a picture.
+  fallsEnhancement,
+  holdsThingsUpEnhancement,
   healthEnhancement,
   collectsEnhancement,
   climbArrowsEnhancement,
