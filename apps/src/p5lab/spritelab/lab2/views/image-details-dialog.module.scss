@@ -39,6 +39,13 @@
     border-top: none;
     padding-top: 0;
   }
+
+  // Transparency reads against the stage itself here. The checkerboard is for
+  // the dialog, whose panel is opaque and would otherwise hide it.
+  .imagePaneChecker {
+    background-color: transparent;
+    background-image: none;
+  }
 }
 
 .dialogHost .dialog :focus-visible {
