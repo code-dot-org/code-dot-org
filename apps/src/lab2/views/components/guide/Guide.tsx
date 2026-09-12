@@ -11,6 +11,8 @@ interface GuideProps {
   position?: 'normal' | 'bottom';
   modal?: 'full' | 'gap';
   cornerIcon?: 'minimize' | 'maximize';
+  /** Shrink-wrap whatever is left showing, e.g. a single button. */
+  collapsed?: boolean;
   onCornerIconClick?: () => void;
 }
 
@@ -24,6 +26,7 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   position,
   modal,
   cornerIcon,
+  collapsed,
   onCornerIconClick,
 }) => {
   return (
@@ -46,7 +49,8 @@ const Guide: React.FunctionComponent<GuideProps> = ({
           position === 'bottom'
             ? styles.guideBottomPosition
             : styles.guideNormalPosition,
-          modal === 'gap' && styles.guideGap
+          modal === 'gap' && styles.guideGap,
+          collapsed && styles.guideCollapsed
         )}
       >
         {children}
