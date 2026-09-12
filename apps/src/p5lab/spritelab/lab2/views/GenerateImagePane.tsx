@@ -284,7 +284,7 @@ interface GenerateImagePaneProps {
   /** Central mode opens on the fresh-generation form instead of adopting
       the newest existing image — for "make another one" levels, where the
       newest image of the type is an earlier level's work. */
-  targetNew?: boolean;
+  startsNew?: boolean;
 }
 
 /**
@@ -302,7 +302,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   defaultStyle,
   paintDisabled,
   central,
-  targetNew,
+  startsNew,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -826,7 +826,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     }
     // A make-another-one level starts on the fresh form: the newest image
     // of its type is an earlier level's work, not this level's.
-    if (targetNew) {
+    if (startsNew) {
       if (!dialogTarget) {
         setDialogTarget('new');
       }
@@ -847,7 +847,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     }
   }, [
     central,
-    targetNew,
+    startsNew,
     dialogTarget,
     images,
     lockedImageType,

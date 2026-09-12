@@ -30,7 +30,7 @@
     "image_adlib_only": true,
     "default_image_style": "pixel",
     "image_paint_disabled": true,
-    "image_target_new": true,
+    "image_starts_new": true,
     "guide_steps": [
       {
         "text": "**Make some treasure.** Your player needs something to find. Pick the words for a treasure and press **Generate**."

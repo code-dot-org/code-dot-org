@@ -1584,7 +1584,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     adlibOnly: levelProperties.imageAdlibOnly && !imageFreeTextParam,
     defaultStyle: levelProperties.defaultImageStyle,
     paintDisabled: levelProperties.imagePaintDisabled,
-    targetNew: levelProperties.imageTargetNew,
+    startsNew: levelProperties.imageStartsNew,
   };
 
   return (

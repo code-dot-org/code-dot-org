@@ -30,7 +30,7 @@
     "image_adlib_only": true,
     "default_image_style": "pixel",
     "image_paint_disabled": true,
-    "image_target_new": true,
+    "image_starts_new": true,
     "guide_steps": [
       {
         "text": "**Make a background for your game.** Your platformer needs scenery behind it. Pick the words for a place and press **Generate**."
