@@ -96,8 +96,8 @@ module ActiveJobMetrics
   end
 
   def self.oldest_job_age_s(jobs)
-    oldest_job = jobs.order(:created_at).first
-    oldest_job ? _now_utc - oldest_job.created_at : 0
+    oldest_job = jobs.order(:run_at).first
+    oldest_job ? _now_utc - oldest_job.run_at : 0
   end
 
   def self.oldest_pending_job_age_s
