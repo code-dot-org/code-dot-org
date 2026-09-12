@@ -13,6 +13,7 @@ import {
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
 import {LabProps, VideoLevelData} from '@cdo/apps/lab2/types';
+import localization, {useLocalization} from '@cdo/apps/localization';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import standaloneVideoLocale from './locale';
@@ -26,14 +27,32 @@ const StandaloneVideo: React.FunctionComponent<LabProps> = ({
   const dispatch = useAppDispatch();
   const levelVideo = levelProperties.levelData as VideoLevelData | undefined;
 
+  useLocalization();
+
   const nextButtonPressed = () => {
     dispatch(sendSuccessReport(levelProperties.appName));
     dispatch(navigateToNextLevel());
   };
 
+  const videoSrc = levelVideo?.src;
+  const [videoBase, videoQuery] = (videoSrc || '').split('?');
+  const localizedVideoSrc = videoSrc
+    ? localization.translate(videoBase, ['video-url', 'youtube-url']) +
+      (videoQuery ? `?${videoQuery}` : '')
+    : videoSrc;
+
+  const downloadSrc = levelVideo?.download;
+  const localizedDownloadSrc = downloadSrc
+    ? localization.translate(downloadSrc, ['video-url', 'fallback-video-url'])
+    : downloadSrc;
+
   return (
     <div id="standalone-video">
-      <Video {...levelVideo}>
+      <Video
+        src={localizedVideoSrc}
+        download={localizedDownloadSrc}
+        thumbnail={levelVideo?.thumbnail}
+      >
         <MuiButton
           variant="contained"
           color="primary"
