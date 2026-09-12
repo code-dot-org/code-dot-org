@@ -94,6 +94,7 @@ const VersionHistoryRow: React.FunctionComponent<
       <div className={moduleStyles.versionContent}>
         <div className={moduleStyles.versionHeader}>
           <RadioButton
+            data-notranslate="true"
             className={moduleStyles.versionLabel}
             name={versionId}
             value={versionId}

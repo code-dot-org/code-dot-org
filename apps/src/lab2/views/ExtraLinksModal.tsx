@@ -159,7 +159,7 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       {Object.entries(levelLinkData.links).map(([listTitle, links]) => (
         // Levels can be part of level groups (sublevels) and/or can be a template level
         // so we list these here as well.
-        <div key={`${listTitle}-div`}>
+        <div data-notranslate="true" key={`${listTitle}-div`}>
           <Typography key={`${listTitle}-title`} variant="strong">
             {listTitle}
           </Typography>
@@ -498,12 +498,12 @@ const ScriptLevelPathLinks: React.FunctionComponent<
   }
   return (
     <>
-      <Typography variant="strong">
+      <Typography data-notranslate="true" variant="strong">
         This level is in {Object.entries(scriptLevelPathLinks).length} scripts:
       </Typography>
       <ul>
         {scriptLevelPathLinks.map(link => (
-          <li key={link.path}>
+          <li data-notranslate="true" key={link.path}>
             <a href={'/s/' + link.script}>{link.script}</a> as{' '}
             <a href={link.path}>{link.path}</a>
           </li>
@@ -525,13 +525,13 @@ const ParentLevelPathLinks: React.FunctionComponent<
   }
   return (
     <>
-      <Typography variant="strong">
+      <Typography data-notranslate="true" variant="strong">
         This level is in {Object.entries(parentLevelPathLinks).length} other
         levels:
       </Typography>
       <ul>
         {parentLevelPathLinks.map(link => (
-          <li key={link.path}>
+          <li data-notranslate="true" key={link.path}>
             {link.kind} in <a href={link.path}>{link.level_name}</a> (position{' '}
             {link.position})
           </li>
