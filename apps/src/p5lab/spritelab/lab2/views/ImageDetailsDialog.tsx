@@ -11,6 +11,7 @@ import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
   ImageGenerationMetadata,
+  ImageStyle,
   ImageType,
 } from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
@@ -62,6 +63,13 @@ interface ImageDetailsDialogProps {
   pixelated?: boolean;
   /** Offer this tier of adlib prompt combos (student dialog only). */
   adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: no free-text box. */
+  adlibOnly?: boolean;
+  /** Style the generate form starts on for new images. */
+  defaultStyle?: ImageStyle;
+  /** No paint entry points: the pane is a plain preview and new images
+      offer no blank canvas. */
+  paintDisabled?: boolean;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -111,6 +119,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   imageChanged,
   advanced,
   adlibSet,
+  adlibOnly,
+  defaultStyle,
+  paintDisabled,
   pixelated,
   getDataURI,
   isNameTaken,
@@ -278,7 +289,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             lockedImageType={lockedImageType}
             advanced={advanced}
             adlibSet={adlibSet}
-            onPaintManually={isNew ? onPaintNew : undefined}
+            adlibOnly={adlibOnly}
+            defaultStyle={defaultStyle}
+            onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
             onGenerateStart={onGenerateStart}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
@@ -301,6 +314,21 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   )}
                 >
                   <AnimatedSheetPreview {...sheet} />
+                </div>
+              ) : paintDisabled ? (
+                <div
+                  className={classNames(
+                    moduleStyles.imagePane,
+                    moduleStyles.imagePaneChecker
+                  )}
+                >
+                  {thumb && (
+                    <img
+                      src={thumb}
+                      alt=""
+                      className={classNames(pixelated && moduleStyles.pixelArt)}
+                    />
+                  )}
                 </div>
               ) : (
                 <ImagePaneButton

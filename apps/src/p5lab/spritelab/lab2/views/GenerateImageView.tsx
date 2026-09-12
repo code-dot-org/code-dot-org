@@ -131,6 +131,10 @@ interface GenerateImageViewProps {
   advanced?: boolean;
   /** Offer this tier of adlib prompt combos (student form only). */
   adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: hide the free-text box. */
+  adlibOnly?: boolean;
+  /** Style the form starts on for new images (default smooth). */
+  defaultStyle?: ImageStyle;
   /** A generation request is leaving; fires before the model call, so the
       caller can stamp what the eventual result belongs to. */
   onGenerateStart?: () => void;
@@ -164,6 +168,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   lockedImageType,
   advanced,
   adlibSet,
+  adlibOnly,
+  defaultStyle,
   onPaintManually,
   onGenerateStart,
   onAccept,
@@ -180,7 +186,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       'sprite'
   );
   const [style, setStyle] = useState<ImageStyle>(
-    existing?.generation?.style || create?.initial?.style || 'smooth'
+    existing?.generation?.style ||
+      create?.initial?.style ||
+      defaultStyle ||
+      'smooth'
   );
   // Calm when the set checkbox starts checked (posed frames must agree
   // with the base), as checking it by hand also sets.
@@ -452,23 +461,27 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </fieldset>
           )}
           <div className={moduleStyles.formRow}>
-            <label
-              className={classNames(
-                moduleStyles.promptLabel,
-                moduleStyles.wide
-              )}
-            >
-              <span>{adlib ? 'Or prompt' : 'Prompt'}</span>
-              <textarea
-                className={moduleStyles.promptInput}
-                value={prompt}
-                rows={5}
-                maxLength={MAX_PROMPT_LENGTH}
-                placeholder={PROMPT_PLACEHOLDERS[imageType]}
-                disabled={generating}
-                onChange={e => setPrompt(e.target.value)}
-              />
-            </label>
+            {/* Adlib-only levels have no free-text box; the combo above is
+                the whole prompt. */}
+            {!(adlibOnly && adlib) && (
+              <label
+                className={classNames(
+                  moduleStyles.promptLabel,
+                  moduleStyles.wide
+                )}
+              >
+                <span>{adlib ? 'Or prompt' : 'Prompt'}</span>
+                <textarea
+                  className={moduleStyles.promptInput}
+                  value={prompt}
+                  rows={5}
+                  maxLength={MAX_PROMPT_LENGTH}
+                  placeholder={PROMPT_PLACEHOLDERS[imageType]}
+                  disabled={generating}
+                  onChange={e => setPrompt(e.target.value)}
+                />
+              </label>
+            )}
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
                   level can lock the choice for new images too. */}

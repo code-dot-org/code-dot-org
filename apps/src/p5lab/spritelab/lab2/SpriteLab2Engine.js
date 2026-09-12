@@ -58,6 +58,13 @@ const IMAGE_LOAD_GRACE_MS = 10000;
 // let the user pick these per scene.
 const STORY_SCENE_SPRITE_SIZE = 300;
 
+// The position block's three lanes. Sized under STORY_SCENE_SPRITE_SIZE so a
+// left and a right character stand in one scene; y puts feet near the story
+// ground line.
+const STORY_LANE_X = {left: 100, center: 200, right: 300};
+const STORY_LANE_Y = 270;
+const STORY_LANE_SPRITE_SIZE = STORY_SCENE_SPRITE_SIZE * 0.7;
+
 // Extra canvas density beyond the device pixel ratio: the canvas is 400
 // logical px and the Playspace transform-scales it to ~900 CSS px on the
 // Play tab, so stock density paints ~2x2 blocks per canvas pixel.
@@ -321,6 +328,21 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
+    // Story lanes: placement by name instead of coordinates, sized so two
+    // characters share a scene; the right-lane character faces its partner
+    // (generated art faces right natively).
+    library.commands.makeSpriteAtPosition = (animation, position) => {
+      const x = STORY_LANE_X[position] ?? STORY_LANE_X.center;
+      const id = library.addSprite({
+        animation,
+        location: {x, y: STORY_LANE_Y},
+        scale: STORY_LANE_SPRITE_SIZE,
+      });
+      if (position === 'right' && id !== undefined) {
+        library.getSpriteArray({id}).forEach(sprite => sprite.mirrorX(-1));
+      }
+      return id;
+    };
     // Move existing sprites (e.g. world-placed ones) into the players
     // group; the per-frame resolver picks them up from there.
     library.commands.setPlatformPlayer = spriteArg => {

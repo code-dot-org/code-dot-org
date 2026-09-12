@@ -3,7 +3,11 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {ImageAdlibSet} from './ai/images/imageAdlibs';
-import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {
+  ImageGenerationMetadata,
+  ImageStyle,
+  ImageType,
+} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
@@ -134,6 +138,13 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // Offer adlib prompt combos in the student image dialog, from this tier of
   // the manifest (equivalent to the image-adlibs=<set> URL parameter).
   imageAdlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input — no free-text box (the
+      image-free-text URL param restores it for internal testing). */
+  imageAdlibOnly?: boolean;
+  /** Style the generate form starts on; students can still switch. */
+  defaultImageStyle?: ImageStyle;
+  /** No paint entry points: no blank-canvas painting, no editing images. */
+  imagePaintDisabled?: boolean;
   // The one scene this level edits, created on first load if the project
   // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
   // before scenes existed).

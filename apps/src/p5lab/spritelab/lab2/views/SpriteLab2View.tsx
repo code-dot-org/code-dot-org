@@ -146,6 +146,12 @@ function getImageAdlibSetParam(): ImageAdlibSet | undefined {
   return value === 'simple' || value === 'expanded' ? value : undefined;
 }
 
+// ?image-free-text=true restores the free-text prompt box on adlib-only
+// levels, for internal testing.
+function getImageFreeTextParam(): boolean {
+  return queryParams('image-free-text') === 'true';
+}
+
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
 
@@ -232,6 +238,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
   const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
+  const imageFreeTextParam = useMemo(getImageFreeTextParam, []);
   // The image dialog defaults to the student form; this shows the full
   // internal one (levels can also opt in via imagesAdvanced). Level edit
   // modes author starter images, which needs the naming controls.
@@ -1593,6 +1600,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 lockedImageType={levelProperties.lockedImageType}
                 advanced={imagesAdvanced}
                 adlibSet={imageAdlibSetParam || levelProperties.imageAdlibSet}
+                adlibOnly={
+                  levelProperties.imageAdlibOnly && !imageFreeTextParam
+                }
+                defaultStyle={levelProperties.defaultImageStyle}
+                paintDisabled={levelProperties.imagePaintDisabled}
               />
             </div>
           </div>

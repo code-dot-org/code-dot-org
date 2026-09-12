@@ -24,7 +24,11 @@ import {
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
-import {ImageGenerationMetadata, ImageType} from '../ai/images/types';
+import {
+  ImageGenerationMetadata,
+  ImageStyle,
+  ImageType,
+} from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
 import {
   categoriesForType,
@@ -268,6 +272,12 @@ interface GenerateImagePaneProps {
   advanced?: boolean;
   /** Offer this tier of adlib prompt combos in the student dialog. */
   adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: no free-text box. */
+  adlibOnly?: boolean;
+  /** Style the generate form starts on for new images. */
+  defaultStyle?: ImageStyle;
+  /** No paint entry points anywhere in the dialog. */
+  paintDisabled?: boolean;
 }
 
 /**
@@ -281,6 +291,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   lockedImageType,
   advanced,
   adlibSet,
+  adlibOnly,
+  defaultStyle,
+  paintDisabled,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -875,6 +888,9 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           }
           advanced={advanced}
           adlibSet={adlibSet}
+          adlibOnly={adlibOnly}
+          defaultStyle={defaultStyle}
+          paintDisabled={paintDisabled}
           pixelated={!!targetProps?.pixelGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}

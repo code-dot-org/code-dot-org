@@ -46,6 +46,9 @@ class GamelabJr < Gamelab
     locked_image_type
     images_advanced
     image_adlib_set
+    image_adlib_only
+    default_image_style
+    image_paint_disabled
     pinned_scene_id
     pinned_scene_name
     guide_steps
