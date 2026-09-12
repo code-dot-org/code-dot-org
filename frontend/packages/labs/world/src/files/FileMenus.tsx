@@ -72,6 +72,8 @@ import {AnimationPickerDialog} from '../animationEditor/AnimationPickerDialog';
 import {parseAnim} from '../animationEditor/animDocument';
 import {SpritePickerDialog} from '../animationEditor/SpritePickerDialog';
 import {BackgroundPickerDialog} from '../appearance/BackgroundPickerDialog';
+import {fixtureImages} from '../appearance/generate/fixtureImages';
+import type {GeneratedPicture} from '../appearance/generate/imageGenerator';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {actorIconImage} from '../blockly/actorIcons';
 import {actorIcon, actorThumbnail} from '../blockly/actorThumbnails';
@@ -831,6 +833,82 @@ export const FileMenus = () => {
     [creating, filesIn],
   );
 
+  /**
+   * Where a described picture comes from.
+   *
+   * The FIXTURE, and only the fixture, until there is something that can draw:
+   * the flow is built and tested against it, and the two transports that talk
+   * to a service are a matter of filling in the same interface
+   * (specs/IMAGE_GENERATION.md). Made once rather than per render, since the
+   * wizard holds on to it while it waits.
+   */
+  const drawing = useMemo(() => fixtureImages(), []);
+
+  /**
+   * Keep a drawn picture: write it into `sprites/`, and say what it is called.
+   *
+   * The same write an upload makes, because it is the same thing — bytes on a
+   * URL in the folder that decides what a picture IS (`tookUpload`,
+   * `appearance/importStock`). Nothing on the file says it was described
+   * rather than drawn or imported, and there is nothing to un-describe.
+   */
+  const keepPicture = useCallback(
+    async (picture: GeneratedPicture): Promise<string | undefined> => {
+      const taken = new Set(
+        Object.values(ops.source.files).map(file => file.name),
+      );
+      // `crab.png`, then `crab2.png`: a learner may keep four pictures from
+      // one prompt, and the name a transport gives is a word rather than a
+      // promise that it is unique.
+      let fileName = `${picture.name}.png`;
+      for (let at = 2; taken.has(fileName); at++) {
+        fileName = `${picture.name}${at}.png`;
+      }
+      const placed = folderIn(ops.source, SPRITES_FOLDER);
+      const made = createExternalFile({
+        source: placed.source,
+        fileName,
+        language: languageForFileName(config, fileName),
+        folderId: placed.folderId,
+        url: picture.dataUrl,
+        mimeType: picture.mediaType,
+      });
+      // …AND IT OPENS NOTHING. `createExternalFile` activates what it makes,
+      // which is what an upload from the file menus wants and not what a
+      // wizard still asking questions does: a learner who keeps a picture from
+      // each of two prompts would find two editors open behind a dialog they
+      // have not finished with, having asked for neither. The file is in the
+      // project either way; what is on the screen is the wizard's until it
+      // closes.
+      //
+      // `openFiles` AND the per-file flags, which took three goes to find:
+      // the tab bar reads the SOURCE's list of open files, so clearing the
+      // flags on the file left the tab exactly where it was
+      // (`codebridge.activateFile` writes both).
+      const quiet = {
+        ...made,
+        openFiles: ops.source.openFiles,
+        files: Object.fromEntries(
+          Object.entries(made.files).map(([id, file]) => {
+            const before = ops.source.files[id];
+            return [
+              id,
+              before
+                ? {...file, open: before.open, active: before.active}
+                : {...file, open: false, active: false},
+            ];
+          }),
+        ),
+      };
+      updateSources({
+        ...currentSources,
+        source: config.reconcileSource?.(quiet, ops.source) ?? quiet,
+      });
+      return fileName;
+    },
+    [ops.source, config, updateSources, currentSources],
+  );
+
   /** The folder menu the animations' grid stands in for. */
   const animationsMenu = FOLDER_MENUS.find(
     menu => menu.folder === ANIMATIONS_FOLDER,
@@ -1049,6 +1127,8 @@ export const FileMenus = () => {
           sprites={spriteNames}
           images={decoded}
           animations={pickableAnimations}
+          drawing={drawing}
+          onKeep={keepPicture}
           nameProblem={value =>
             nameProblem(
               ops.source,

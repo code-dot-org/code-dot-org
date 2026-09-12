@@ -97,8 +97,40 @@ const SOURCE: MultiFileSource = {
 };
 
 const createNewFile = vi.fn((args: {source: MultiFileSource}) => args.source);
+/**
+ * Honest enough to be asserted on: it ADDS the file.
+ *
+ * The real one activates what it makes, which is the behaviour the wizard has
+ * to undo — so a mock that handed the source straight back could not show
+ * whether the undoing worked, and an assertion about "the new picture" would
+ * find whichever `.png` the fixture already had.
+ */
 const createExternalFile = vi.fn(
-  (args: {source: MultiFileSource}) => args.source,
+  (args: {
+    source: MultiFileSource;
+    fileName: string;
+    language: string;
+    folderId: string;
+    url: string;
+    mimeType?: string;
+  }) => ({
+    ...args.source,
+    files: {
+      ...args.source.files,
+      made: {
+        id: 'made',
+        name: args.fileName,
+        language: args.language,
+        contents: '',
+        folderId: args.folderId,
+        url: args.url,
+        mimeType: args.mimeType,
+        open: true,
+        active: true,
+      },
+    },
+    openFiles: [...(args.source.openFiles ?? []), 'made'],
+  }),
 );
 
 vi.mock('@code-dot-org/codebridge', () => ({
@@ -113,7 +145,7 @@ vi.mock('@code-dot-org/codebridge', () => ({
     },
   }),
   createNewFile: (args: {source: MultiFileSource}) => createNewFile(args),
-  createExternalFile: (args: {source: MultiFileSource}) =>
+  createExternalFile: (args: Parameters<typeof createExternalFile>[0]) =>
     createExternalFile(args),
   getNextFileId: () => 'new',
   getFileExtension: (name: string) => name.split('.').pop(),
@@ -457,6 +489,44 @@ describe('the file menus', () => {
       screen.getByText('There is already one called coin.actor here.'),
     ).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Next'})).toBeDisabled();
+  });
+
+  it('keeps a described picture without opening it', async () => {
+    // Only the browser caught this. `createExternalFile` activates what it
+    // makes — right for an upload from the file menus, wrong for a wizard
+    // still asking questions: a learner who keeps a picture from each of two
+    // prompts would find two editors open behind a dialog they have not
+    // finished with. And the tab bar reads the SOURCE's `openFiles`, so
+    // clearing the flags on the file was not enough.
+    openMenu('Actors');
+    fireEvent.click(screen.getByText('New'));
+    await screen.findByText('Create my own');
+    fireEvent.click(screen.getByText('Create my own'));
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Crabby'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a purple crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    // Four came back, which is the point of the tray — press the first.
+    const kept = await screen.findAllByRole(
+      'button',
+      {name: /^Keep /},
+      {timeout: 4000},
+    );
+    fireEvent.click(kept[0]);
+
+    await vi.waitFor(() => expect(updateSources).toHaveBeenCalled());
+    const {source} = updateSources.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+    };
+    const made = source.files.made;
+    // In the project, and on nobody's screen.
+    expect(made.url).toMatch(/^data:image\/png;base64,/);
+    expect(made.open).toBe(false);
+    expect(made.active).toBe(false);
+    expect(source.openFiles).toEqual(SOURCE.openFiles);
   });
 
   it('lets a picture be named, which the file-name rule refuses', async () => {
