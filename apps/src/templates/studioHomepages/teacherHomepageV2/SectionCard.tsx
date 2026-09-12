@@ -68,11 +68,13 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               <FontAwesomeV6Icon iconName="grip-vertical" />
             </MuiIconButton>
           )}
-          <SectionAvatar
-            color={section.avatar_color || 0}
-            emoji={section.avatar_emoji || 0}
-            size={'s'}
-          />
+          {!section.isInstantSection && (
+            <SectionAvatar
+              color={section.avatar_color || 0}
+              emoji={section.avatar_emoji || 0}
+              size={'s'}
+            />
+          )}
           <div className={styles.sectionCardHeaderText}>
             <div className={styles.demoSectionTitleRow}>
               <Typography
@@ -81,7 +83,9 @@ export const SectionCard: React.FC<SectionCardProps> = ({
                 variant="h5"
               >
                 <span className={styles.sectionCardTitleText}>
-                  {section.name}
+                  {section.isInstantSection
+                    ? `[${i18n.instantSectionTitle()}] ${section.name}`
+                    : section.name}
                 </span>
                 {section.demoType && (
                   <DemoChip className={styles.sectionCardDemoChip} />
@@ -102,12 +106,14 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             />
           </div>
         </div>
-        <div className={styles.sectionCardHeaderRight}>
-          <SectionOptionsDropdown
-            section={section}
-            onDeleteClickCallback={onDeleteClickCallback}
-          />
-        </div>
+        {!section.isInstantSection && (
+          <div className={styles.sectionCardHeaderRight}>
+            <SectionOptionsDropdown
+              section={section}
+              onDeleteClickCallback={onDeleteClickCallback}
+            />
+          </div>
+        )}
       </div>
       {!section.hidden && <SectionCardBody section={section} />}
     </li>

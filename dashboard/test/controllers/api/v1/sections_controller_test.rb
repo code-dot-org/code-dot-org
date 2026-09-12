@@ -64,7 +64,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :created
     section = Section.find(returned_json['id'])
     assert_equal @teacher, section.user
-    assert_equal "#{@teacher.name}'s Instant Section", section.name
+    assert_equal "#{@teacher.name}'s room", section.name
     assert section.instant_section?
     assert_equal Section::LOGIN_TYPE_WORD, section.login_type
     assert_equal 'student', section.participant_type
