@@ -189,3 +189,62 @@
   outline: 2px solid var(--borders-brand-primary, #0093a4);
   outline-offset: 2px;
 }
+
+/* Describing a picture instead of choosing one, under the grid that offers the
+   ones there are. Under rather than beside: it is another way of answering the
+   same question, and the pictures a project already holds are the likelier
+   answer (specs/IMAGE_GENERATION.md). */
+.describe {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.prompt {
+  flex: 1 1 12rem;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 0.5rem;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  font: inherit;
+}
+
+.draw {
+  padding: 0.45rem 0.9rem;
+  border: 2px solid var(--borders-brand-primary, #0093a4);
+  border-radius: 4px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.draw:disabled {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+  color: var(--text-neutral-secondary);
+  cursor: default;
+}
+
+.draw:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+/* What came back, kept apart from the project's own pictures: these are not in
+   the project until one is chosen, and a grid that mixed them would be saying
+   they were. */
+.drawn {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border: 1px dashed var(--borders-neutral-primary, #d4dae1);
+  border-radius: 6px;
+}
+
+.drawnNote {
+  color: var(--text-neutral-secondary);
+}

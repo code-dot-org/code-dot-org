@@ -51,6 +51,11 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {AnimationThumb} from '../../animationEditor/AnimationThumb';
 import type {AnimDef} from '../../animationEditor/animDocument';
 import {CellThumb} from '../../animationEditor/CellThumb';
+import {
+  DRAW_COUNT,
+  type GeneratedPicture,
+  type ImageGenerator,
+} from '../../appearance/generate/imageGenerator';
 import {EnhancementRows, refusalOf} from '../enhance/EnhancementRows';
 import type {Enhancement, EnhanceTarget} from '../enhance/enhancements';
 
@@ -114,6 +119,22 @@ export interface ActorCreatorProps {
   images: Record<string, HTMLImageElement>;
   /** The project's animations, which the tiles play. */
   animations: readonly PickableAnimation[];
+  /**
+   * Somewhere pictures come from, when a learner describes one instead.
+   *
+   * Absent means the door is not offered at all rather than offered and
+   * broken: a lab with nothing behind it should look like a lab without the
+   * feature (`appearance/generate/imageGenerator`).
+   */
+  drawing?: ImageGenerator;
+  /**
+   * Keep one of the drawn pictures — write it into the project, and answer
+   * with the file name it landed under.
+   *
+   * The caller's, because writing a file is: what comes back from a generator
+   * is bytes, and what a `set sprite` row names is a file in `sprites/`.
+   */
+  onKeep?: (picture: GeneratedPicture) => Promise<string | undefined>;
   /**
    * Whether a name may be used — the caller's rule, not this dialog's.
    *
@@ -192,6 +213,8 @@ export const ActorCreator = ({
   sprites,
   images,
   animations,
+  drawing,
+  onKeep,
   nameProblem,
   build,
   onCreate,
@@ -213,6 +236,10 @@ export const ActorCreator = ({
   const [built, setBuilt] = useState<BuiltActor>();
   const [chosen, setChosen] = useState<Enhancement | null>(null);
   const [answer, setAnswer] = useState<string>();
+  /** What the learner typed, what came back, and whether it is still coming. */
+  const [prompt, setPrompt] = useState('');
+  const [drawn, setDrawn] = useState<readonly GeneratedPicture[]>([]);
+  const [drawingNow, setDrawingNow] = useState(false);
 
   /**
    * The name to write, which is the typed one or the chosen thing's.
@@ -282,6 +309,41 @@ export const ActorCreator = ({
       !refusalOf(chosen, built.source, target, answer) &&
       (!chosen.asks || answer !== undefined),
   );
+
+  /**
+   * Ask for pictures, and put what comes back where they can be compared.
+   *
+   * The words are KEPT. The commonest second action is a small edit to the
+   * prompt rather than a fresh thought, and a field that cleared itself would
+   * make the second ask cost as much as the first.
+   */
+  const draw = async () => {
+    if (!drawing || !prompt.trim() || drawingNow) {
+      return;
+    }
+    setDrawingNow(true);
+    try {
+      setDrawn(await drawing.draw({prompt: prompt.trim(), count: DRAW_COUNT}));
+    } catch {
+      // Abandoned, or the transport failed. Either way there is nothing new
+      // to show and what was already there is still worth looking at.
+      setDrawn([]);
+    } finally {
+      setDrawingNow(false);
+    }
+  };
+
+  /** Keep one: the caller writes it, and it becomes this actor's picture. */
+  const keep = async (picture: GeneratedPicture) => {
+    const file = await onKeep?.(picture);
+    if (file) {
+      setLook({kind: 'sprite', value: file});
+      // Gone from the tray once it is in the project: it is one of the
+      // pictures above now, and showing it in both places would be saying it
+      // was two things.
+      setDrawn([]);
+    }
+  };
 
   /** Give the actor being built the chosen ability, and stay for another. */
   const add = () => {
@@ -567,6 +629,64 @@ export const ActorCreator = ({
                 <Typography variant="body4" className={styles.empty}>
                   Or none — an actor that paints itself needs no picture.
                 </Typography>
+              )}
+
+              {drawing && (
+                <>
+                  {/* UNDER the grid, not beside it: describing one is another
+                      way of answering the same question, and the pictures a
+                      project already holds are the likelier answer. */}
+                  <div className={styles.describe}>
+                    <Typography variant="body4">Or describe one:</Typography>
+                    <input
+                      className={styles.prompt}
+                      value={prompt}
+                      placeholder="a purple crab"
+                      aria-label="Describe a picture"
+                      onChange={event => setPrompt(event.target.value)}
+                    />
+                    <button
+                      type="button"
+                      className={styles.draw}
+                      disabled={!prompt.trim() || drawingNow}
+                      onClick={() => void draw()}
+                    >
+                      <Typography variant="body3">
+                        {drawingNow ? 'Drawing…' : 'Draw'}
+                      </Typography>
+                    </button>
+                  </div>
+                  {drawn.length > 0 && (
+                    <div className={styles.drawn}>
+                      <Typography variant="body4" className={styles.drawnNote}>
+                        Press one to keep it, or ask again.
+                      </Typography>
+                      <ul className={styles.choices}>
+                        {drawn.map(picture => (
+                          <li key={picture.dataUrl}>
+                            <button
+                              type="button"
+                              className={styles.choice}
+                              aria-label={`Keep ${picture.name}`}
+                              title={picture.name}
+                              onClick={() => void keep(picture)}
+                            >
+                              <span className={styles.picture}>
+                                <img src={picture.dataUrl} alt="" />
+                              </span>
+                              <Typography
+                                variant="body4"
+                                className={styles.choiceName}
+                              >
+                                {picture.name}
+                              </Typography>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </>
               )}
             </>
           )}

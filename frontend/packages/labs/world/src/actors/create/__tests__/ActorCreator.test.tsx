@@ -8,6 +8,10 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
+import type {
+  GeneratedPicture,
+  ImageGenerator,
+} from '../../../appearance/generate/imageGenerator';
 import {ActorCreator} from '../ActorCreator';
 
 const ACTORS = [
@@ -52,6 +56,17 @@ const build = vi.fn((draft: {name: string}) => ({
   path: 'actors/chaser',
 }));
 
+/** A generator that answers at once, so the tests are about the flow. */
+const DRAWN: GeneratedPicture[] = [
+  {name: 'crab', dataUrl: 'data:image/png;base64,AAAA', mediaType: 'image/png'},
+  {name: 'star', dataUrl: 'data:image/png;base64,BBBB', mediaType: 'image/png'},
+];
+const draw = vi.fn(async () => DRAWN);
+const drawing: ImageGenerator = {kind: 'fixture', draw};
+const onKeep = vi.fn(
+  async (picture: GeneratedPicture) => `${picture.name}.png`,
+);
+
 const onCreate = vi.fn(() => true);
 const onCancel = vi.fn();
 
@@ -64,6 +79,8 @@ const show = (props: Partial<React.ComponentProps<typeof ActorCreator>> = {}) =>
       images={{}}
       animations={ANIMATIONS}
       build={build}
+      drawing={drawing}
+      onKeep={onKeep}
       onCreate={onCreate}
       onCancel={onCancel}
       {...props}
@@ -410,5 +427,99 @@ describe('the abilities step', () => {
     expect(build).toHaveBeenLastCalledWith(
       expect.objectContaining({name: 'Stalker'}),
     );
+  });
+});
+
+describe('describing a picture', () => {
+  const atThePictures = () => {
+    show();
+    pastOrigin('Create my own');
+  };
+
+  it('is offered under the pictures the project has', () => {
+    // Another way of answering the same question, and the likelier answer is
+    // still one of the pictures already there.
+    atThePictures();
+
+    expect(screen.getByLabelText('Describe a picture')).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Draw'})).toBeDisabled();
+  });
+
+  it('is not offered at all when nothing can draw', () => {
+    // A lab with nothing behind the door should look like a lab without the
+    // feature, rather than one whose button fails.
+    show({drawing: undefined});
+    pastOrigin('Create my own');
+
+    expect(screen.queryByLabelText('Describe a picture')).toBeNull();
+  });
+
+  it('asks with the learner’s own words', async () => {
+    atThePictures();
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: '  a purple crab  '},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [{prompt: string}];
+    expect(asked[0].prompt).toBe('a purple crab');
+  });
+
+  it('shows what came back, to be chosen between', async () => {
+    atThePictures();
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await screen.findByRole('button', {name: 'Keep crab'});
+    expect(screen.getByRole('button', {name: 'Keep star'})).toBeTruthy();
+  });
+
+  it('keeps the words, so asking again is an edit', async () => {
+    // The commonest second action is a small change to the prompt rather than
+    // a fresh thought.
+    atThePictures();
+    const field = screen.getByLabelText('Describe a picture');
+    fireEvent.change(field, {target: {value: 'a crab'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await screen.findByRole('button', {name: 'Keep crab'});
+    expect((field as HTMLInputElement).value).toBe('a crab');
+  });
+
+  it('writes the one that was pressed, and makes it the actor’s picture', async () => {
+    atThePictures();
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    fireEvent.click(await screen.findByRole('button', {name: 'Keep star'}));
+
+    await vi.waitFor(() => expect(onKeep).toHaveBeenCalledWith(DRAWN[1]));
+    // Gone from the tray: it is one of the project's pictures now, and showing
+    // it in both places would be saying it was two things.
+    await vi.waitFor(() =>
+      expect(screen.queryByRole('button', {name: 'Keep star'})).toBeNull(),
+    );
+    toTheEnd();
+    expect(build).toHaveBeenCalledWith(
+      expect.objectContaining({look: {kind: 'sprite', value: 'star.png'}}),
+    );
+  });
+
+  it('keeps nothing when the write refused', async () => {
+    onKeep.mockResolvedValueOnce(undefined as never);
+    atThePictures();
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    fireEvent.click(await screen.findByRole('button', {name: 'Keep crab'}));
+
+    await vi.waitFor(() => expect(onKeep).toHaveBeenCalled());
+    // Still there to try again, rather than silently gone.
+    expect(screen.getByRole('button', {name: 'Keep crab'})).toBeTruthy();
   });
 });
