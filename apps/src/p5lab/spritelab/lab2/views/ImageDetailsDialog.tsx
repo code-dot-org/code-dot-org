@@ -306,29 +306,25 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         <>
           <div className={moduleStyles.body}>
             {/* A set is not painted (the editor would see one frame of
-                  many), so its pane is a preview, not the paint button. */}
-            {sheet ? (
+                  many), and a paint-disabled level has nowhere to paint, so
+                  both show a plain pane instead of the paint button. */}
+            {sheet || paintDisabled ? (
               <div
                 className={classNames(
                   moduleStyles.imagePane,
                   moduleStyles.imagePaneChecker
                 )}
               >
-                <AnimatedSheetPreview {...sheet} />
-              </div>
-            ) : paintDisabled ? (
-              <div
-                className={classNames(
-                  moduleStyles.imagePane,
-                  moduleStyles.imagePaneChecker
-                )}
-              >
-                {thumb && (
-                  <img
-                    src={thumb}
-                    alt=""
-                    className={classNames(pixelated && moduleStyles.pixelArt)}
-                  />
+                {sheet ? (
+                  <AnimatedSheetPreview {...sheet} />
+                ) : (
+                  thumb && (
+                    <img
+                      src={thumb}
+                      alt=""
+                      className={classNames(pixelated && moduleStyles.pixelArt)}
+                    />
+                  )
                 )}
               </div>
             ) : (
