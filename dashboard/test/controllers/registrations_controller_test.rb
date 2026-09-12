@@ -537,6 +537,12 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'verifies lti users if they are a teacher' do
     teacher = create(:teacher, :with_lti_auth)
+    Metrics::Events.stubs(:log_event)
+    Metrics::Events.expects(:log_event).with do |args|
+      args[:user] == teacher &&
+        args[:event_name] == 'teacher_auto_verified' &&
+        args[:metadata] == {'login_provider' => AuthenticationOption::LTI_V1}
+    end.once
     Queries::Lti.expects(:get_lms_name_from_user).returns('test-lms')
     Services::PartialRegistration::UserBuilder.stubs(:call).returns(teacher)
 
@@ -562,6 +568,12 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'create verifies teacher with Clever authentication option' do
     teacher = create(:teacher)
+    Metrics::Events.stubs(:log_event)
+    Metrics::Events.expects(:log_event).with do |args|
+      args[:user] == teacher &&
+        args[:event_name] == 'teacher_auto_verified' &&
+        args[:metadata] == {'login_provider' => AuthenticationOption::CLEVER}
+    end.once
     create(
       :authentication_option,
       user: teacher,
@@ -582,6 +594,12 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'create verifies teacher with ClassLink authentication option' do
     teacher = create(:teacher)
+    Metrics::Events.stubs(:log_event)
+    Metrics::Events.expects(:log_event).with do |args|
+      args[:user] == teacher &&
+        args[:event_name] == 'teacher_auto_verified' &&
+        args[:metadata] == {'login_provider' => AuthenticationOption::CLASSLINK}
+    end.once
     create(
       :authentication_option,
       user: teacher,
@@ -602,6 +620,10 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'create does not verify teacher without Clever or ClassLink authentication option' do
     teacher = create(:teacher, :with_google_authentication_option)
+    Metrics::Events.stubs(:log_event)
+    Metrics::Events.expects(:log_event).with do |args|
+      args[:event_name] == 'teacher_auto_verified'
+    end.never
     Services::PartialRegistration::UserBuilder.stubs(:call).returns(teacher)
 
     assert_no_difference('UserPermission.count') do
