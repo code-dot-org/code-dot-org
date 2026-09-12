@@ -5,6 +5,8 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {
   draftingRulesLines,
   LessonContext,
+  targetProjectLines,
+  unitContextLines,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
@@ -187,29 +189,22 @@ export async function generateLessonOutline(
     'when the outline asks. Never open with an assessment — pair it with a',
     'concept the student has already seen.',
     ...draftingRulesLines(ctx),
-    ...(ctx.unitOutline
-      ? [
-          '',
-          `Unit context — this lesson sits inside the unit "${
-            ctx.unitName ?? ''
-          }". Keep the level sequence consistent with the unit's arc (including its intended audience/grade), but`,
-          'only plan levels for the specific lesson outline below:',
-          ctx.unitOutline,
-        ]
-      : []),
-    ...(ctx.targetProject
-      ? [
-          '',
-          'Target project — the final app the lesson is building toward.',
-          'Plan the weblab2 levels as milestones on the path from blank to',
-          'this code (introducing one or two concepts per level, in an',
-          'order that yields a runnable intermediate at each step). Pick',
-          'panels that motivate or recap the concepts the target uses. The',
-          'student never sees this code; do not paste it into any',
-          'description — just let it shape the progression.',
-          ctx.targetProject,
-        ]
-      : []),
+    ...unitContextLines(ctx, {
+      subject: 'this lesson',
+      use: [
+        "Keep the level sequence consistent with the unit's arc (including its intended audience/grade), but",
+        'only plan levels for the specific lesson outline below:',
+      ],
+    }),
+    ...targetProjectLines(ctx, [
+      'Target project — the final app the lesson is building toward.',
+      'Plan the weblab2 levels as milestones on the path from blank to',
+      'this code (introducing one or two concepts per level, in an',
+      'order that yields a runnable intermediate at each step). Pick',
+      'panels that motivate or recap the concepts the target uses. The',
+      'student never sees this code; do not paste it into any',
+      'description — just let it shape the progression.',
+    ]),
     '',
     `Outline: ${ctx.lessonOutline ?? ''}`,
   ].join('\n');
