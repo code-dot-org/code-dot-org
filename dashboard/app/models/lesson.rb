@@ -712,6 +712,7 @@ class Lesson < ApplicationRecord
       lessonNumber: relative_position,
       lessonName: name,
       levels: level_summary,
+      allowMajorCurriculumChanges: script.allow_major_curriculum_changes?,
     }
   end
 
