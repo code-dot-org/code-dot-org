@@ -145,6 +145,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   defaultImageStyle?: ImageStyle;
   /** No paint entry points: no blank-canvas painting, no editing images. */
   imagePaintDisabled?: boolean;
+  /** Central mode opens on the fresh-generation form instead of the newest
+      existing image — for levels that make another image of a type an
+      earlier level already made. */
+  imageTargetNew?: boolean;
   /** Premade world for the pinned scene, one string per playfield row
       anchored to the floor; 'B' cells become the project's newest block
       image. Seeded only while the world holds no placements. */

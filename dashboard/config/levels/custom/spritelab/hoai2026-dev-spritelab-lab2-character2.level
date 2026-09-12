@@ -30,6 +30,7 @@
     "image_adlib_only": true,
     "default_image_style": "pixel",
     "image_paint_disabled": true,
+    "image_target_new": true,
     "guide_steps": [
       {
         "text": "**Make another character.** Every story needs a second character - a friend, a rival, a sidekick. Pick the words and press **Generate**."

@@ -281,6 +281,10 @@ interface GenerateImagePaneProps {
   /** Central mode: the image panel IS the level — no gallery, the panel
       inline in the page, always open on the level's image. */
   central?: boolean;
+  /** Central mode opens on the fresh-generation form instead of adopting
+      the newest existing image — for "make another one" levels, where the
+      newest image of the type is an earlier level's work. */
+  targetNew?: boolean;
 }
 
 /**
@@ -298,6 +302,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   defaultStyle,
   paintDisabled,
   central,
+  targetNew,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -819,6 +824,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     if (dialogTarget === 'new' && alternatives.length > 0) {
       return;
     }
+    // A make-another-one level starts on the fresh form: the newest image
+    // of its type is an earlier level's work, not this level's.
+    if (targetNew) {
+      if (!dialogTarget) {
+        setDialogTarget('new');
+      }
+      return;
+    }
     const match = [...images]
       .reverse()
       .find(
@@ -832,7 +845,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     } else if (!dialogTarget) {
       setDialogTarget('new');
     }
-  }, [central, dialogTarget, images, lockedImageType, alternatives.length]);
+  }, [
+    central,
+    targetNew,
+    dialogTarget,
+    images,
+    lockedImageType,
+    alternatives.length,
+  ]);
 
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
