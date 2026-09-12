@@ -1,0 +1,157 @@
+// The layout's sticky-footer wrapper reserves 256px below the viewport even
+// with no_footer set (min-height: 100% plus a negative bottom margin and
+// spacer), which shows up as blank page under the app when scrolling. The
+// app owns the viewport and manages its own scrolling, so document scroll
+// is disabled outright. This stylesheet only loads with this page's entry.
+// html too: the viewport scrolls the html element, so hiding overflow on
+// body alone still lets the window scroll.
+:global(html),
+:global(body) {
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  // The default studio layout keeps its site header; fill the rest of the
+  // viewport and let the two columns manage their own scrolling.
+  height: calc(100vh - 50px);
+  min-height: 480px;
+  background: var(--background-neutral-primary, #fff);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-neutral-secondary, #e7e9ea);
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-neutral-secondary, #56626b);
+}
+
+.columns {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.chatColumn {
+  width: 420px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-neutral-secondary, #e7e9ea);
+
+  // The panel owns scrolling; the toolbar above it must not push it out.
+  > :last-child {
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+.chatToolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px 4px;
+  border-bottom: 1px solid var(--border-neutral-secondary, #e7e9ea);
+}
+
+.chatRail {
+  width: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+  border-right: 1px solid var(--border-neutral-secondary, #e7e9ea);
+}
+
+.unreadBadge {
+  min-width: 18px;
+  padding: 1px 5px;
+  border-radius: 9px;
+  background: var(--background-brand-primary, #0093a4);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.instructionsCard {
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid var(--border-neutral-secondary, #e7e9ea);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.stageColumn {
+  // Anchor for the pinned instructions toggle.
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  gap: 12px;
+  background: var(--background-neutral-secondary, #f3f7f8);
+}
+
+.instructionsToggle {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  background: var(--background-neutral-primary, #fff);
+}
+
+// Only the activity area scrolls; the instructions card above it is pinned
+// and always fully visible.
+.stageScroll {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.widgetCard {
+  background: #fff;
+  border: 1px solid var(--border-neutral-secondary, #e7e9ea);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.emptyStage {
+  padding: 48px;
+  text-align: center;
+  color: var(--text-neutral-secondary, #56626b);
+}
+
+.activityLog {
+  margin-top: auto;
+  font-size: 12px;
+
+  summary {
+    cursor: pointer;
+    color: var(--text-neutral-secondary, #56626b);
+  }
+
+  pre {
+    max-height: 200px;
+    overflow: auto;
+    background: #292f36;
+    color: #e7e9ea;
+    padding: 8px;
+    border-radius: 4px;
+  }
+}
