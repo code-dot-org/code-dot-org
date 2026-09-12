@@ -14,9 +14,13 @@ db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
 db_endpoint_proxy_reporting_port: 3306
 
+# The admin credential creates and grants the writer/reader users below (see the
+# `db:provision_sql_users` rake task); it stays root. The writer and reader are
+# non-root users mirroring the ones the Custom::SQLUser Lambda provisions in AWS,
+# so an inadvertent write on a reader/reporting connection fails locally too.
 db_credential_admin: {"username":"root", "password":""}
-db_credential_writer: {"username":"root", "password":""}
-db_credential_reader: {"username":"root", "password":""}
+db_credential_writer: {"username":"writer", "password":""}
+db_credential_reader: {"username":"reader", "password":""}
 db_writer: 'mysql://root@localhost/'
 
 lint: true
