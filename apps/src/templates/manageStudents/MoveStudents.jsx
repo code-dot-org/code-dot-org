@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {normalizeSectionCode} from '@cdo/apps/util/sectionCode';
 import i18n from '@cdo/locale';
 
 import {NON_LMS_LOGIN_TYPES} from '../teacherDashboard/LoginTypeConstants';
@@ -141,7 +142,7 @@ class MoveStudents extends Component {
 
   onChangeTeacherSection = event => {
     this.props.updateStudentTransfer({
-      otherTeacherSection: event.target.value,
+      otherTeacherSection: normalizeSectionCode(event.target.value),
     });
   };
 

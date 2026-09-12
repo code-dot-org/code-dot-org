@@ -44,7 +44,7 @@ describe('NewInstantSection', () => {
     expect(
       await screen.findByRole('dialog', {name: i18n.instantSectionTitle()})
     ).toBeInTheDocument();
-    expect(screen.getByText('ABCDEF')).toBeInTheDocument();
+    expect(screen.getByLabelText('A B C D E F')).toHaveTextContent('ABCDEF');
     expect(screen.getByText('code.org/join')).toBeInTheDocument();
     expect(HttpClient.post).toHaveBeenCalledWith(
       '/api/v1/sections/instant',

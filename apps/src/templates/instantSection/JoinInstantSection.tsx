@@ -3,6 +3,7 @@ import {Button, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {normalizeSectionCode} from '@cdo/apps/util/sectionCode';
 import i18n from '@cdo/locale';
 
 import styles from './instant-section.module.scss';
@@ -51,7 +52,7 @@ export default function JoinInstantSection() {
         window.location.assign(redirectUrl);
       } else {
         const {value} = await HttpClient.fetchJson<{code: string}>(
-          `/instant_sections/${encodeURIComponent(code.trim())}`
+          `/instant_sections/${encodeURIComponent(normalizeSectionCode(code))}`
         );
         setConfirmedCode(value.code);
       }
@@ -110,8 +111,9 @@ export default function JoinInstantSection() {
             label={i18n.sectionCode()}
             aria-label={i18n.sectionCode()}
             value={code}
-            onChange={event => setCode(event.target.value.toUpperCase())}
-            maxLength={SECTION_CODE_LENGTH}
+            onChange={event =>
+              setCode(normalizeSectionCode(event.target.value))
+            }
             minLength={SECTION_CODE_LENGTH}
             pattern="[A-Za-z]{6}"
             autoComplete="off"

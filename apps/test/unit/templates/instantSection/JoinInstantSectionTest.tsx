@@ -64,6 +64,21 @@ describe('JoinInstantSection', () => {
     );
   });
 
+  it('normalizes whitespace before checking an instant section code', async () => {
+    render(<JoinInstantSection />);
+    const codeInput = screen.getByRole('textbox', {
+      name: i18n.sectionCode(),
+    });
+    fireEvent.change(codeInput, {target: {value: ' abc def '}});
+
+    expect(codeInput).toHaveValue('ABCDEF');
+    fireEvent.click(screen.getByRole('button', {name: i18n.continue()}));
+    await screen.findByRole('textbox', {name: i18n.instantSectionName()});
+    expect(HttpClient.fetchJson).toHaveBeenCalledWith(
+      '/instant_sections/ABCDEF'
+    );
+  });
+
   it('keeps invalid or ordinary section codes on the code step', async () => {
     jest
       .mocked(HttpClient.fetchJson)

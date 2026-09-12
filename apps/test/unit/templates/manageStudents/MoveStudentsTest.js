@@ -68,6 +68,16 @@ describe('MoveStudents', () => {
     expect(wrapper.find('#uitest-other-teacher').exists()).toBe(true);
   });
 
+  it('normalizes another teacher section code as it is entered', () => {
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
+
+    wrapper.instance().onChangeTeacherSection({target: {value: ' abc def '}});
+
+    expect(updateStudentTransfer).toHaveBeenCalledWith({
+      otherTeacherSection: 'ABCDEF',
+    });
+  });
+
   it('calls transferStudents on submit', () => {
     const transferData = {
       ...blankStudentTransfer,

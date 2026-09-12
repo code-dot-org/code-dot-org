@@ -55,6 +55,15 @@ describe('JoinSection', () => {
     expect(wrapper.find(TextField).prop('value')).to.equal('ABCDEF');
   });
 
+  it('normalizes whitespace and letter case as the code is entered', () => {
+    const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    wrapper.find(TextField).simulate('change', {
+      target: {value: ' abC deF '},
+    });
+    expect(wrapper.state()).to.deep.equal({sectionCode: 'ABCDEF'});
+    expect(wrapper.find(TextField).prop('value')).to.equal('ABCDEF');
+  });
+
   it('button click sends join request', done => {
     server.respondWith('POST', '/api/v1/sections/ABCDEF/join', [
       200,

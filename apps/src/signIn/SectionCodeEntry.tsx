@@ -2,6 +2,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
+import {normalizeSectionCode} from '@cdo/apps/util/sectionCode';
+
 import style from './signInStyles.module.scss';
 
 export interface SectionCodeEntryProps {
@@ -23,7 +25,9 @@ const SectionCodeEntry: React.FunctionComponent<SectionCodeEntryProps> = ({
   goLabel,
   formActionUrl,
 }) => {
-  const [sectionCode, setSectionCode] = useState(defaultSectionCode || '');
+  const [sectionCode, setSectionCode] = useState(
+    normalizeSectionCode(defaultSectionCode || '')
+  );
 
   return (
     <div className={style.sectionCode}>
@@ -39,7 +43,7 @@ const SectionCodeEntry: React.FunctionComponent<SectionCodeEntryProps> = ({
           label={sectionCodeLabel}
           placeholder={sectionCodePlaceholder}
           value={sectionCode}
-          onChange={e => setSectionCode(e.target.value)}
+          onChange={e => setSectionCode(normalizeSectionCode(e.target.value))}
           required
         />
         <MuiButton

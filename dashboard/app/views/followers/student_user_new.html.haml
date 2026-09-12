@@ -19,7 +19,15 @@
     %span.inline-alert{ style: 'color: #b94a48; margin-left: 12px'}= inline_alert
 
 :javascript
+  (() => {
+    const sectionCodeInput = document.getElementById('section_code');
+    const normalizeSectionCode = () => {
+      sectionCodeInput.value = sectionCodeInput.value.replace(/\s/g, '').toUpperCase();
+    };
+    sectionCodeInput.addEventListener('input', normalizeSectionCode);
+    normalizeSectionCode();
+  })();
+
   function onCaptchaCompletion() {
     $("#join_new_section").prop("disabled", false);
   };
-

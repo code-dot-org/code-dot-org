@@ -31,7 +31,10 @@ export default function InstantSectionCodeModal({
             className={styles.sectionCode}
             aria-label={sectionCode.split('').join(' ')}
           >
-            {sectionCode}
+            <span className={styles.firstCodeGroup}>
+              {sectionCode.slice(0, 3)}
+            </span>
+            {sectionCode.slice(3)}
           </Typography>
         </div>
       }

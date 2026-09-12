@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import styleConstants from '@cdo/apps/styleConstants';
+import {normalizeSectionCode} from '@cdo/apps/util/sectionCode';
 import i18n from '@cdo/locale';
 
 import styles from './join-section.module.scss';
@@ -38,7 +39,8 @@ export default class JoinSection extends React.Component {
     this.fetchCaptchaInfo();
   }
 
-  handleChange = event => this.setState({sectionCode: event.target.value});
+  handleChange = event =>
+    this.setState({sectionCode: normalizeSectionCode(event.target.value)});
 
   handleKeyUp = event => {
     if (event.key === 'Enter') {
@@ -50,7 +52,7 @@ export default class JoinSection extends React.Component {
 
   joinSection = () => {
     const sectionCode = this.state.sectionCode;
-    const normalizedSectionCode = sectionCode.trim().toUpperCase();
+    const normalizedSectionCode = normalizeSectionCode(sectionCode);
 
     this.setState(INITIAL_STATE);
 

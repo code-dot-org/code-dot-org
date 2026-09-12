@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -35,6 +35,17 @@ describe('SectionCodeEntry', () => {
     expect(
       screen.getByRole('textbox', {name: DEFAULT_PROPS.sectionCodeLabel})
     ).toHaveValue('ABCDEF');
+  });
+
+  it('normalizes whitespace and letter case as the code is entered', () => {
+    renderEntry({defaultSectionCode: ' abc def '});
+    const input = screen.getByRole('textbox', {
+      name: DEFAULT_PROPS.sectionCodeLabel,
+    });
+    expect(input).toHaveValue('ABCDEF');
+
+    fireEvent.change(input, {target: {value: ' xyZ\tuvw '}});
+    expect(input).toHaveValue('XYZUVW');
   });
 
   it('submits via GET to the provided form action', () => {

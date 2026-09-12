@@ -302,7 +302,7 @@ describe('SectionCardBody', () => {
       fireEvent.click(trigger);
 
       expect(screen.getByRole('dialog')).toBeInTheDocument();
-      expect(screen.getByText('ABCDEF')).toBeInTheDocument();
+      expect(screen.getByLabelText('A B C D E F')).toHaveTextContent('ABCDEF');
       expect(screen.getByText('code.org/join')).toBeInTheDocument();
       fireEvent.keyDown(document, {key: 'Escape'});
       expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
