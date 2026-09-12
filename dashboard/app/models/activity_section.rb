@@ -50,10 +50,14 @@ class ActivitySection < ApplicationRecord
       name: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name),
       duration: duration,
       remarks: remarks,
-      description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description),
+      description: localized_description,
       tips: localized_tips,
       progressionName: localized_progression_name
     }
+  end
+
+  def localized_description
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description)
   end
 
   # Translates the content of tips in the adequate format.
@@ -75,11 +79,19 @@ class ActivitySection < ApplicationRecord
   def summarize_for_lesson_show(can_view_teacher_markdown, current_user, unit_group_unit: nil)
     summary = summarize
     summary[:scriptLevels] = script_levels.map {|sl| sl.summarize_for_lesson_show(can_view_teacher_markdown, current_user, unit_group_unit: unit_group_unit)}
-    Services::MarkdownPreprocessor.process!(summary[:description])
+    # The lesson plan resolves vocabulary references itself, against
+    # Lesson#vocabulary_definitions; resource links are still substituted here.
+    summary[:description] = Services::MarkdownPreprocessor.process(summary[:description], resolve_vocab: false)
     summary[:tips]&.each do |tip|
-      Services::MarkdownPreprocessor.process!(tip["markdown"])
+      tip["markdown"] = Services::MarkdownPreprocessor.process(tip["markdown"], resolve_vocab: false)
     end
     summary
+  end
+
+  # The markdown this section ships with its vocabulary references intact, for
+  # the client to resolve. See summarize_for_lesson_show.
+  def client_resolved_markdown
+    [localized_description, *localized_tips&.map {|tip| tip["markdown"]}]
   end
 
   def summarize_for_lesson_edit

@@ -1,8 +1,10 @@
+import {Markdown, extensions} from '@code-dot-org/markdown';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+const markdownExtensions = [extensions.visualCodeBlock];
 
 export const buildProgrammingExpressionMarkdown = function (
   programmingExpression
@@ -25,8 +27,9 @@ export default function StyledCodeBlock({programmingExpression}) {
     );
   } else {
     return (
-      <SafeMarkdown
-        markdown={buildProgrammingExpressionMarkdown(programmingExpression)}
+      <Markdown
+        extensions={markdownExtensions}
+        content={buildProgrammingExpressionMarkdown(programmingExpression)}
       />
     );
   }

@@ -1,3 +1,5 @@
+import {Markdown, extensions} from '@code-dot-org/markdown';
+import {Box, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -7,8 +9,6 @@ import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
@@ -44,10 +44,28 @@ class StudentLessonOverview extends Component {
     );
   };
 
+  /*
+   * No expandableImages: that syntax appears only in activity section
+   * descriptions, which ActivitySection renders.
+   *
+   * No vocabularyDefinition either. This page's overview is the lesson's
+   * `student_overview`, the one markdown field the server never preprocesses
+   * (see Lesson::CLIENT_VOCAB_FIELDS), so it ships no definitions to look a
+   * term up in -- and no curriculum uses the syntax there. Enabling it would
+   * turn a reference that renders as literal text today into a bare key.
+   */
+  markdownExtensions = [
+    extensions.lenientHeadings,
+    extensions.lenientLinkDestinations,
+    extensions.visualCodeBlock,
+    extensions.inlineStyles,
+    extensions.details,
+  ];
+
   render() {
     const {lesson, announcements, isSignedIn} = this.props;
     return (
-      <div>
+      <div className={styles.studentLessonOverview}>
         <div className="lesson-overview-header">
           <div className={styles.header}>
             <a
@@ -81,24 +99,40 @@ class StudentLessonOverview extends Component {
             viewAs={ViewType.Participant}
           />
         )}
-        <h1>{lesson.title}</h1>
+        <Typography variant="h2" component="h1" sx={{mb: 1}}>
+          {lesson.title}
+        </Typography>
         {lesson.overview && (
-          <div>
-            <h2 className={styles.titleNoTopMargin}>{i18n.overview()}</h2>
-            <EnhancedSafeMarkdown
-              markdown={lesson.overview}
-              expandableImages={true}
+          <Box sx={{mb: 1}}>
+            <Typography
+              variant="h4"
+              component="h2"
+              className={styles.titleNoTopMargin}
+            >
+              {i18n.overview()}
+            </Typography>
+            <Markdown
+              content={lesson.overview}
+              extensions={this.markdownExtensions}
+              bodyVariant="body4"
             />
-          </div>
+          </Box>
         )}
         {lesson.vocabularies.length > 0 && (
           <div>
-            <h2 className={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
+            <Typography
+              variant="h4"
+              component="h2"
+              className={styles.titleNoTopMargin}
+            >
+              {i18n.vocabulary()}
+            </Typography>
             <ul>
               {lesson.vocabularies.map(vocab => (
                 <li key={vocab.key}>
-                  <InlineMarkdown
-                    markdown={`**${vocab.word}** - ${vocab.definition}`}
+                  <Markdown
+                    inline
+                    content={`**${vocab.word}** - ${vocab.definition}`}
                   />
                 </li>
               ))}
@@ -107,7 +141,13 @@ class StudentLessonOverview extends Component {
         )}
         {lesson.programmingExpressions.length > 0 && (
           <div id="unit-test-introduced-code">
-            <h2 className={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+            <Typography
+              variant="h4"
+              component="h2"
+              className={styles.titleNoTopMargin}
+            >
+              {i18n.introducedCode()}
+            </Typography>
             <ul>
               {lesson.programmingExpressions.map(expression => (
                 <li key={expression.name}>
@@ -119,7 +159,9 @@ class StudentLessonOverview extends Component {
         )}
         {lesson.resources.length > 0 && (
           <div id="resource-section">
-            <h2>{i18n.resources()}</h2>
+            <Typography variant="h4" component="h2">
+              {i18n.resources()}
+            </Typography>
             <ResourceList
               resources={lesson.resources}
               pageType="student-lesson-plan"
@@ -127,7 +169,9 @@ class StudentLessonOverview extends Component {
           </div>
         )}
         <div id="level-section">
-          <h2>{i18n.levels()}</h2>
+          <Typography variant="h4" component="h2">
+            {i18n.levels()}
+          </Typography>
           {this.renderLevels()}
         </div>
       </div>
