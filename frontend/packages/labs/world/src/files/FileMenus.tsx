@@ -64,6 +64,7 @@ import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
 import {ActorCreator, type ActorDraft} from '../actors/create/ActorCreator';
+import {lookOf, withLook} from '../actors/create/actorLook';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {importStockActor} from '../actors/importStockActor';
 import {STOCK_ACTORS, stockActorById} from '../actors/stock';
@@ -396,6 +397,47 @@ export const FileMenus = () => {
     [ops, config, promptForName, thenAsk],
   );
 
+  /** One write, at the end, with the lab's reconcile given the last word. */
+  const commit = useCallback(
+    (source: MultiFileSource) => {
+      updateSources({
+        ...currentSources,
+        source: config.reconcileSource?.(source, ops.source) ?? source,
+      });
+    },
+    [updateSources, currentSources, config, ops.source],
+  );
+
+  /**
+   * The actor, looking like what the wizard's picture step chose.
+   *
+   * A no-op when the step chose nothing, which is its commonest answer: an
+   * actor made from nothing has no picture, and one copied from something
+   * already looks like it (`create/actorLook`).
+   */
+  const dressed = useCallback(
+    (source: MultiFileSource, fileName: string, draft: ActorDraft) => {
+      if (!draft.look) {
+        return source;
+      }
+      const id = fileIdAt(source, `${ACTORS_FOLDER}/${fileName}`);
+      const file = id ? source.files[id] : undefined;
+      return file
+        ? {
+            ...source,
+            files: {
+              ...source.files,
+              [id as string]: {
+                ...file,
+                contents: withLook(file.contents ?? '', draft.look),
+              },
+            },
+          }
+        : source;
+    },
+    [],
+  );
+
   /**
    * Make an actor from the wizard's first answer — the three doors, done.
    *
@@ -418,7 +460,8 @@ export const FileMenus = () => {
         // Resolved, so a copy is a COPY — the reasoning is `clone`'s, and the
         // name is replaced inside the file for the reason it is there: two
         // actors called "Player" are two rows nobody can tell apart.
-        ops.newFile({
+        const made = createNewFile({
+          source: ops.source,
           fileName,
           language,
           folderId: file.folderId,
@@ -427,6 +470,7 @@ export const FileMenus = () => {
             draft.name,
           ),
         });
+        commit(dressed(made, fileName, draft));
         return true;
       }
 
@@ -481,10 +525,7 @@ export const FileMenus = () => {
             next = withName;
           }
         }
-        updateSources({
-          ...currentSources,
-          source: config.reconcileSource?.(next, ops.source) ?? next,
-        });
+        commit(dressed(next, fileName, draft));
         return true;
       }
 
@@ -504,13 +545,10 @@ export const FileMenus = () => {
         folderId: placed.folderId,
         contents: seed && 'contents' in seed ? seed.contents : undefined,
       });
-      updateSources({
-        ...currentSources,
-        source: config.reconcileSource?.(made, ops.source) ?? made,
-      });
+      commit(dressed(made, fileName, draft));
       return true;
     },
-    [ops, config, thenAsk, updateSources, currentSources],
+    [ops, thenAsk, commit, dressed],
   );
 
   /**
@@ -649,7 +687,7 @@ export const FileMenus = () => {
   // Decoded while either grid is up: the pictures are what a sprite tile shows
   // and what an animation's frames are drawn from.
   const decoded = useProjectImages(
-    painting || playing ? ops.source : undefined,
+    painting || playing || creating ? ops.source : undefined,
   );
 
   /**
@@ -713,6 +751,9 @@ export const FileMenus = () => {
               name,
               picture:
                 actorIconImage(actorIcon(key) ?? '') ?? actorThumbnail(key),
+              // What it is drawn as, so the picture step opens on the answer
+              // this actor already gives (`create/actorLook`).
+              look: lookOf(file.contents ?? ''),
             };
           })
         : [],
@@ -726,9 +767,35 @@ export const FileMenus = () => {
             id: actor.id,
             name: actor.name,
             description: actor.description,
+            look: lookOf(actor.contents),
           }))
         : [],
     [creating],
+  );
+
+  /**
+   * The project's pictures and animations, as the wizard's picture step wants
+   * them.
+   *
+   * An animation is listed by its own KEY inside its `.anim` file rather than
+   * by the file: a `play animation` row stores that key, and one file may hold
+   * several (`actors/stock/workspace.playAnimation`).
+   */
+  const spriteNames = useMemo(
+    () => (creating ? filesIn(SPRITES_FOLDER).map(({file}) => file.name) : []),
+    [creating, filesIn],
+  );
+
+  const pickableAnimations = useMemo(
+    () =>
+      creating
+        ? filesIn(ANIMATIONS_FOLDER).flatMap(({file}) =>
+            Object.entries(parseAnim(file.contents ?? '').animations).map(
+              ([id, animation]) => ({id, name: label(id), animation}),
+            ),
+          )
+        : [],
+    [creating, filesIn],
   );
 
   /** The folder menu the animations' grid stands in for. */
@@ -947,6 +1014,9 @@ export const FileMenus = () => {
         <ActorCreator
           actors={copyable}
           templates={templates}
+          sprites={spriteNames}
+          images={decoded}
+          animations={pickableAnimations}
           nameProblem={value =>
             nameProblem(
               ops.source,

@@ -6,13 +6,17 @@
 // the frame that asks them instead — a sequence of steps, each a question with
 // a visible answer, ending in a file worth opening.
 //
-// WHAT IS HERE IS THE SHELL AND STEP ONE. The picture and the abilities are
-// steps two and three, and both are content that today lives inside a dialog
-// of its own (`animationEditor/SpritePickerDialog`,
-// `enhance/EnhanceActorDialog`): a dialog cannot be nested in a dialog, so
-// each has to be lifted out of its own `Dialog` wrapper before it can stand in
-// a step. That is its own change; the step machinery here is written for it
-// and is what `STEPS` is a list rather than a boolean.
+// WHAT IS HERE IS STEPS ONE AND TWO. The abilities are step three, and they
+// are content that lives inside a dialog of its own today
+// (`enhance/EnhanceActorDialog`): a dialog cannot be nested in a dialog, so it
+// has to be lifted out of its wrapper before it can stand in a step.
+//
+// The picture step needed no such lifting in the end. What it shows is whole
+// pictures and whole animations, and both already have a component that draws
+// one — `animationEditor/CellThumb` and `animationEditor/AnimationThumb` — so
+// it asks for them directly rather than borrowing a grid built to offer the
+// CELLS of a spritesheet, which is a question an actor's `set sprite` does not
+// ask (it names a file).
 //
 // STEP ONE IS THREE DOORS, and two of them fill in the steps after: a copied
 // Crawler already has a sprite and already patrols, so the picture step will
@@ -28,17 +32,24 @@
 // rows name — seven, for a Coin. And the learner's thought differs too:
 // "another one like my Crawler" is not "one of theirs, to start from".
 //
-// IT WRITES AT THE END OF STEP ONE, which is the spec's rule and is forced by
-// two of the three doors: cloning writes a file and importing writes several,
-// so there is no version of this where all three doors defer alike. The caller
-// does the writing and says whether it worked; this waits.
+// IT WRITES ONCE, AT THE END, and an earlier draft of this had it writing at
+// the end of step one on the grounds that cloning and importing write files.
+// They do not: both are pure transforms over a project source, and so is
+// `Enhancement.apply`. So the wizard collects answers and the caller performs
+// them in one go — which is what makes Back work at all, and what means a
+// wizard somebody walks out of leaves nothing behind.
 
 import {Typography} from '@mui/material';
 import {useMemo, useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
+import {AnimationThumb} from '../../animationEditor/AnimationThumb';
+import type {AnimDef} from '../../animationEditor/animDocument';
+import {CellThumb} from '../../animationEditor/CellThumb';
+
 import styles from './actorCreator.module.css';
+import type {ActorLook} from './actorLook';
 
 /** Where a new actor comes from. */
 export type OriginKind = 'new' | 'copy' | 'template';
@@ -50,6 +61,8 @@ export interface CopyableActor {
   name: string;
   /** A picture to draw it by, where the registries have one. */
   picture?: string;
+  /** What it already looks like, which the picture step opens on. */
+  look?: ActorLook;
 }
 
 /** One actor the library offers to start from. */
@@ -58,19 +71,43 @@ export interface ActorTemplate {
   id: string;
   name: string;
   description: string;
+  /** …and the same, read off the workspace the import copies. */
+  look?: ActorLook;
 }
 
-/** What step one comes to: where it comes from, what it is called. */
+/** One animation the project holds, to be shown playing. */
+export interface PickableAnimation {
+  /** The id a `play animation` row stores. */
+  id: string;
+  name: string;
+  animation?: AnimDef;
+}
+
+/** What the wizard comes to. */
 export interface ActorDraft {
   origin: OriginKind;
   /** The file to clone, for `copy`; the stock id, for `template`. */
   source?: string;
   name: string;
+  /**
+   * What it is drawn as, or nothing to leave it as it came.
+   *
+   * Nothing is a real answer rather than an unanswered question: an actor made
+   * from nothing has no picture and may want none — an interface actor paints
+   * itself — and one copied from something already looks like it.
+   */
+  look?: ActorLook;
 }
 
 export interface ActorCreatorProps {
   actors: readonly CopyableActor[];
   templates: readonly ActorTemplate[];
+  /** The project's pictures, by file name — what a `set sprite` row stores. */
+  sprites: readonly string[];
+  /** Those pictures decoded, which is what a canvas can draw. */
+  images: Record<string, HTMLImageElement>;
+  /** The project's animations, which the tiles play. */
+  animations: readonly PickableAnimation[];
   /**
    * Whether a name may be used — the caller's rule, not this dialog's.
    *
@@ -118,11 +155,20 @@ const DOORS: ReadonlyArray<{
  * say "step 1 of 3" and to move between them before there is anything to move
  * to. What is not here is content, not machinery.
  */
-const STEPS = [{id: 'origin', title: 'Where does it come from?'}] as const;
+const STEPS = [
+  {id: 'origin', title: 'Where does it come from?'},
+  {id: 'look', title: 'What does it look like?'},
+] as const;
+
+/** How wide a picture tile is drawn. Tall art is fitted inside it. */
+const TILE = 56;
 
 export const ActorCreator = ({
   actors,
   templates,
+  sprites,
+  images,
+  animations,
   nameProblem,
   onCreate,
   onCancel,
@@ -131,6 +177,7 @@ export const ActorCreator = ({
   const [origin, setOrigin] = useState<OriginKind>();
   const [source, setSource] = useState<string>();
   const [name, setName] = useState('');
+  const [look, setLook] = useState<ActorLook>();
   const [busy, setBusy] = useState(false);
 
   /**
@@ -150,10 +197,34 @@ export const ActorCreator = ({
     return '';
   }, [origin, source, actors, templates]);
 
+  /**
+   * What the thing chosen in step one already looks like.
+   *
+   * The picture step opens on it rather than on an empty grid, which is the
+   * whole reason step one comes first: a copied Crawler is already a Crawler.
+   */
+  const inherited = useMemo(() => {
+    if (origin === 'template') {
+      return templates.find(one => one.id === source)?.look;
+    }
+    if (origin === 'copy') {
+      return actors.find(one => one.fileId === source)?.look;
+    }
+    return undefined;
+  }, [origin, source, actors, templates]);
+
+  const showing = look ?? inherited;
+
   const chosenName = name.trim() || suggested;
   const problem = chosenName ? nameProblem?.(chosenName) : undefined;
 
-  /** Whether this step has been answered well enough to leave. */
+  /**
+   * Whether this step has been answered well enough to leave.
+   *
+   * The picture step is never unanswered: an actor may have no picture at all,
+   * and one that came from something already has whatever it had. So the gate
+   * is step one's, and step two's button is a way on rather than a demand.
+   */
   const ready =
     origin !== undefined &&
     (origin === 'new' || source !== undefined) &&
@@ -174,7 +245,15 @@ export const ActorCreator = ({
     // Left up on failure rather than closed: the caller's complaint is on
     // screen by then (a name already taken, a write refused), and a wizard
     // that vanished would take the answers with it.
-    const made = await onCreate({origin, source, name: chosenName});
+    // The look is left OUT when it is the one the chosen thing already had:
+    // the caller has nothing to do, and writing the row again would move it to
+    // the end of a chain it was already in.
+    const made = await onCreate({
+      origin,
+      source,
+      name: chosenName,
+      look: look ?? undefined,
+    });
     setBusy(false);
     if (made) {
       onCancel();
@@ -223,93 +302,205 @@ export const ActorCreator = ({
             {`Step ${at + 1} of ${STEPS.length} — ${STEPS[at].title}`}
           </Typography>
 
-          <ul className={styles.doors}>
-            {DOORS.map(door => (
-              <li key={door.kind} style={{display: 'contents'}}>
-                <button
-                  type="button"
-                  className={
-                    origin === door.kind
-                      ? `${styles.door} ${styles.doorChosen}`
-                      : styles.door
-                  }
-                  aria-pressed={origin === door.kind}
-                  onClick={() => {
-                    setOrigin(door.kind);
-                    // The other door's answer is not this one's. Kept, and the
-                    // wizard would offer a stock id as a file to clone.
-                    setSource(undefined);
-                  }}
-                >
-                  <Typography variant="body3" className={styles.doorName}>
-                    {door.name}
-                  </Typography>
-                  <Typography variant="body4" className={styles.doorWhat}>
-                    {door.what}
-                  </Typography>
-                </button>
-              </li>
-            ))}
-          </ul>
-
-          {origin !== undefined && origin !== 'new' && (
+          {STEPS[at].id === 'origin' && (
             <>
-              <ul className={styles.choices}>
-                {choices.map(choice => (
-                  <li key={choice.value}>
+              <ul className={styles.doors}>
+                {DOORS.map(door => (
+                  <li key={door.kind} style={{display: 'contents'}}>
                     <button
                       type="button"
                       className={
-                        source === choice.value
-                          ? `${styles.choice} ${styles.choiceChosen}`
-                          : styles.choice
+                        origin === door.kind
+                          ? `${styles.door} ${styles.doorChosen}`
+                          : styles.door
                       }
-                      aria-pressed={source === choice.value}
-                      aria-label={choice.name}
-                      title={choice.title}
-                      onClick={() => setSource(choice.value)}
+                      aria-pressed={origin === door.kind}
+                      onClick={() => {
+                        setOrigin(door.kind);
+                        // The other door's answer is not this one's. Kept, and the
+                        // wizard would offer a stock id as a file to clone.
+                        setSource(undefined);
+                      }}
                     >
-                      <span className={styles.picture}>
-                        {choice.picture ? (
-                          <img src={choice.picture} alt="" />
-                        ) : (
-                          <span className={styles.initial} aria-hidden="true">
-                            {choice.name.trim().charAt(0).toUpperCase()}
-                          </span>
-                        )}
-                      </span>
-                      <Typography variant="body4" className={styles.choiceName}>
-                        {choice.name}
+                      <Typography variant="body3" className={styles.doorName}>
+                        {door.name}
+                      </Typography>
+                      <Typography variant="body4" className={styles.doorWhat}>
+                        {door.what}
                       </Typography>
                     </button>
                   </li>
                 ))}
               </ul>
-              {choices.length === 0 && (
-                <Typography variant="body4" className={styles.empty}>
-                  {origin === 'copy'
-                    ? 'This project has no actors to copy yet.'
-                    : 'There are no templates to start from.'}
-                </Typography>
+
+              {origin !== undefined && origin !== 'new' && (
+                <>
+                  <ul className={styles.choices}>
+                    {choices.map(choice => (
+                      <li key={choice.value}>
+                        <button
+                          type="button"
+                          className={
+                            source === choice.value
+                              ? `${styles.choice} ${styles.choiceChosen}`
+                              : styles.choice
+                          }
+                          aria-pressed={source === choice.value}
+                          aria-label={choice.name}
+                          title={choice.title}
+                          onClick={() => setSource(choice.value)}
+                        >
+                          <span className={styles.picture}>
+                            {choice.picture ? (
+                              <img src={choice.picture} alt="" />
+                            ) : (
+                              <span
+                                className={styles.initial}
+                                aria-hidden="true"
+                              >
+                                {choice.name.trim().charAt(0).toUpperCase()}
+                              </span>
+                            )}
+                          </span>
+                          <Typography
+                            variant="body4"
+                            className={styles.choiceName}
+                          >
+                            {choice.name}
+                          </Typography>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                  {choices.length === 0 && (
+                    <Typography variant="body4" className={styles.empty}>
+                      {origin === 'copy'
+                        ? 'This project has no actors to copy yet.'
+                        : 'There are no templates to start from.'}
+                    </Typography>
+                  )}
+                </>
+              )}
+
+              {origin !== undefined && (
+                <label className={styles.field}>
+                  <Typography variant="body4">Called</Typography>
+                  <input
+                    className={styles.name}
+                    value={name}
+                    placeholder={suggested || 'Chaser'}
+                    onChange={event => setName(event.target.value)}
+                  />
+                  {problem && (
+                    <Typography variant="body4" className={styles.problem}>
+                      {problem}
+                    </Typography>
+                  )}
+                </label>
               )}
             </>
           )}
 
-          {origin !== undefined && (
-            <label className={styles.field}>
-              <Typography variant="body4">Called</Typography>
-              <input
-                className={styles.name}
-                value={name}
-                placeholder={suggested || 'Chaser'}
-                onChange={event => setName(event.target.value)}
-              />
-              {problem && (
-                <Typography variant="body4" className={styles.problem}>
-                  {problem}
+          {STEPS[at].id === 'look' && (
+            <>
+              <ul className={styles.choices}>
+                {/* THE PICTURES FIRST, then the animations, which is the order
+                    a project holds them in and the order a learner meets them:
+                    a still is what most actors are. */}
+                {sprites.map(sprite => {
+                  const image = images[sprite];
+                  const chosen =
+                    showing?.kind === 'sprite' && showing.value === sprite;
+                  return (
+                    <li key={`sprite:${sprite}`}>
+                      <button
+                        type="button"
+                        className={
+                          chosen
+                            ? `${styles.choice} ${styles.choiceChosen}`
+                            : styles.choice
+                        }
+                        aria-pressed={chosen}
+                        aria-label={sprite}
+                        title={sprite}
+                        onClick={() => setLook({kind: 'sprite', value: sprite})}
+                      >
+                        <span className={styles.picture}>
+                          {image && (
+                            <CellThumb
+                              image={image}
+                              cell={{
+                                x: 0,
+                                y: 0,
+                                width: image.width,
+                                height: image.height,
+                              }}
+                              scale={
+                                TILE / Math.max(image.width, image.height, 1)
+                              }
+                            />
+                          )}
+                        </span>
+                        <Typography
+                          variant="body4"
+                          className={styles.choiceName}
+                        >
+                          {sprite.replace(/\.[^.]+$/, '')}
+                        </Typography>
+                      </button>
+                    </li>
+                  );
+                })}
+                {animations.map(one => {
+                  const chosen =
+                    showing?.kind === 'animation' && showing.value === one.id;
+                  return (
+                    <li key={`animation:${one.id}`}>
+                      <button
+                        type="button"
+                        className={
+                          chosen
+                            ? `${styles.choice} ${styles.choiceChosen}`
+                            : styles.choice
+                        }
+                        aria-pressed={chosen}
+                        aria-label={one.name}
+                        title={one.name}
+                        onClick={() =>
+                          setLook({kind: 'animation', value: one.id})
+                        }
+                      >
+                        <span className={styles.picture}>
+                          {one.animation && one.animation.frames.length > 0 && (
+                            <AnimationThumb
+                              animation={one.animation}
+                              images={images}
+                            />
+                          )}
+                        </span>
+                        <Typography
+                          variant="body4"
+                          className={styles.choiceName}
+                        >
+                          {one.name}
+                        </Typography>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+              {sprites.length === 0 && animations.length === 0 && (
+                <Typography variant="body4" className={styles.empty}>
+                  This project has no pictures yet. You can give it one
+                  afterwards.
                 </Typography>
               )}
-            </label>
+              {showing === undefined && (
+                <Typography variant="body4" className={styles.empty}>
+                  Or none — an actor that paints itself needs no picture.
+                </Typography>
+              )}
+            </>
           )}
         </div>
       }

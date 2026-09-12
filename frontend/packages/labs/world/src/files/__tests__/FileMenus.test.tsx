@@ -377,6 +377,8 @@ describe('the file menus', () => {
     await screen.findByText('Create my own');
     fireEvent.click(screen.getByText('Create my own'));
     fireEvent.change(screen.getByRole('textbox'), {target: {value: called}});
+    // Past the picture step, which this project has nothing to answer with.
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     fireEvent.click(screen.getByRole('button', {name: 'Create'}));
   };
 
@@ -423,6 +425,7 @@ describe('the file menus', () => {
     fireEvent.change(screen.getByRole('textbox'), {
       target: {value: 'Gold Piece'},
     });
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
     fireEvent.click(screen.getByRole('button', {name: 'Create'}));
 
     await vi.waitFor(() => expect(createNewFile).toHaveBeenCalled());
@@ -449,7 +452,7 @@ describe('the file menus', () => {
     expect(
       screen.getByText('There is already one called coin.actor here.'),
     ).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'Create'})).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'Next'})).toBeDisabled();
   });
 
   it('lets a picture be named, which the file-name rule refuses', async () => {

@@ -91,6 +91,25 @@ learner has it.
 
 ## Step 2, and its five doors
 
+Built, except the fifth. It offers the project's pictures and its animations in
+one grid — a still is what most actors are, so those come first — and it needs
+no palette lifted out of another dialog after all: what it shows is whole
+pictures and whole animations, and `animationEditor/CellThumb` and
+`animationEditor/AnimationThumb` each already draw one. The grid built to offer
+the CELLS of a spritesheet answers a question `set sprite` does not ask, since
+that row names a file.
+
+**No picture is a real answer**, so the step is a way on rather than a demand.
+And an actor that came from something arrives with its own picture already
+chosen, which the step shows pressed: pressing straight on says nothing to the
+caller, because there is nothing to do.
+
+**Changing it replaces the row rather than adding one** (`create/actorLook`).
+Two rows both saying what an actor looks like is a file whose answers disagree
+and whose last one silently wins — and the replacement happens where the row
+already was, so an actor whose picture was at the top of its chain does not
+find it moved to the bottom for having been changed.
+
 Four of the five are built, and all four already answer "which picture" in the
 same grid idiom (`animationEditor/SpritePickerDialog`,
 `appearance/BackgroundPickerDialog` and the actors' own grid are the same
@@ -198,20 +217,18 @@ person having looked at it first.
 - **A wizard shell.** Every dialog in the lab is one-shot: it opens, asks one
   question, and closes. There is no step container, no back, and no place to
   keep an answer between steps.
-- **A way to leave, having written nothing.** An enhancement takes a project
-  and a target naming a file that is already there
-  (`enhancements.EnhanceTarget`), so step 3 cannot run against an actor that
-  has not been written yet. Two of step 1's three doors settle this by
-  accident: cloning writes a file and importing a template writes up to seven,
-  so after step 1 the actor exists and every later step is an edit. Only
-  "create my own" could have deferred it, and a wizard whose three doors behave
-  differently in that respect is worse than one that always writes early.
+- ~~**A way to leave, having written nothing.**~~ **Settled, and the reasoning
+  that made it a problem was wrong.** It said cloning writes a file and
+  importing writes seven, so the actor must exist after step 1 and an abandoned
+  wizard must leave one behind. Neither writes anything: `clone`'s edit and
+  `importStockActor` are pure transforms over a project source, and so is
+  `Enhancement.apply` — which takes a SOURCE and a path, and a draft source is
+  a source.
 
-  So the file is written at step 1 and edited as the learner goes — which means
-  **an abandoned wizard leaves a file behind**, and that is the thing to
-  answer. Backing out of a template import is already a live question without
-  this wizard (nothing undoes those seven files today), so it is a gap being
-  inherited rather than opened.
+  So the wizard collects answers and the caller performs them in one commit.
+  Back works between every step, nothing is left behind by a wizard somebody
+  walks out of, and step 3 needs no change to seven files to apply an
+  enhancement to an actor that is not in the project yet.
 
 - **Trait selection outside the shelf.** There is no picker for "any trait in
   the project" but the Blockly dropdown.
@@ -221,7 +238,7 @@ person having looked at it first.
 - **Does it replace the Actors grid's two tiles?** Step 1 has swallowed both:
   "create my own" is `New` and "start from a template" is `Import`, asked
   together instead of as a choice made before the question was put. So the
-  grid's tiles become one — and the actor row's `Clone`, which is the third
+  grid's tiles become one — and the actor row's `Clone`, which is the second
   door, has a reason to stay where it is as well as appearing here, since
   cloning a finished actor is a thing done TO one file rather than a way of
   starting.
