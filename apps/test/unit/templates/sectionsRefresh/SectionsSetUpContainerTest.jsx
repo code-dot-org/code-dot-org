@@ -74,6 +74,63 @@ describe('SectionsSetUpContainer', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('requires grades before converting an Instant Section', () => {
+    renderContainer({
+      sectionToBeEdited: {
+        id: 123,
+        name: 'Instant Section',
+        participantType: 'student',
+        loginType: 'word',
+        grades: [],
+      },
+      convertInstantSection: true,
+    });
+    fetchSpy.mockClear();
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('keeps the conversion form open after a failed save and allows retry', async () => {
+    const navigateSpy = jest
+      .spyOn(windowUtils, 'navigateToHref')
+      .mockImplementation(() => {});
+    renderContainer({
+      sectionToBeEdited: {
+        id: 123,
+        name: 'Period 1',
+        participantType: 'student',
+        loginType: 'word',
+        grades: ['3'],
+      },
+      convertInstantSection: true,
+      defaultRedirectUrl: '/teacher_dashboard/home',
+    });
+    fetchSpy.mockClear();
+    fetchSpy.mockResolvedValueOnce({ok: false});
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+    expect(await screen.findByRole('alert')).toHaveTextContent(
+      i18n.sectionSaveError()
+    );
+    expect(navigateSpy).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', {name: i18n.save()}));
+    await waitFor(() =>
+      expect(navigateSpy).toHaveBeenCalledWith(
+        window.location.origin + '/teacher_dashboard/home'
+      )
+    );
+    expect(fetchSpy).toHaveBeenLastCalledWith(
+      '/api/v1/sections/123',
+      expect.objectContaining({method: 'PATCH'})
+    );
+    expect(JSON.parse(fetchSpy.mock.calls[1][1].body)).toEqual(
+      expect.objectContaining({
+        convert_instant_section: true,
+        name: 'Period 1',
+        grades: ['3'],
+      })
+    );
+  });
+
   it('renders curriculum quick assign', () => {
     renderContainer();
     screen.getByText(i18n.decideLater());

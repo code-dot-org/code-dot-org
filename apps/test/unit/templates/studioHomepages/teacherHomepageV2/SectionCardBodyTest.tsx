@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -14,14 +14,21 @@ import {Store} from 'redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import SectionCardBody from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCardBody';
+import teacherSections, {
+  setSections,
+  selectSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import DashboardSectionSettings from '@cdo/apps/templates/teacherNavigation/DashboardSectionSettings';
 import {
   TEACHER_NAVIGATION_SECTIONS_URL,
   SPECIFIC_SECTION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import * as windowUtils from '@cdo/apps/utils';
 
 const LocationElement = () => {
   const location = useLocation();
@@ -150,7 +157,8 @@ describe('SectionCardBody', () => {
 
   function renderComponent(
     section = defaultSection,
-    initialRoute = '/teacher_dashboard/home'
+    initialRoute = '/teacher_dashboard/home',
+    useSettingsPage = false
   ) {
     return render(
       <Provider store={store}>
@@ -205,9 +213,11 @@ describe('SectionCardBody', () => {
                     <Route
                       path={TEACHER_NAVIGATION_PATHS.settings}
                       element={
-                        <div>
+                        useSettingsPage ? (
+                          <DashboardSectionSettings redirectUrl="/teacher_dashboard/sections/11/progress" />
+                        ) : (
                           <LocationElement />
-                        </div>
+                        )
                       }
                     />
                   </Route>
@@ -305,4 +315,72 @@ describe('SectionCardBody', () => {
       expect(trigger).toHaveFocus();
     }
   );
+
+  it('opens the existing section settings page and returns home after conversion', async () => {
+    registerReducers({teacherSections});
+    const instantSection = {
+      ...noCourseSection,
+      isInstantSection: true,
+      loginType: 'word' as const,
+      participantType: 'student',
+      courseOfferingId: null,
+      courseVersionId: null,
+    };
+    const serverSection = {
+      ...serverSectionFromSection(instantSection),
+      instant_section: true,
+    };
+    store.dispatch(setSections([serverSection], false));
+    store.dispatch(selectSection(11));
+    const navigateSpy = jest
+      .spyOn(windowUtils, 'navigateToHref')
+      .mockImplementation(() => {});
+    const fetchSpy = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: async () => ({}),
+    } as Response);
+    renderComponent(instantSection, '/teacher_dashboard/home', true);
+    const link = screen.getByRole('link', {name: 'Convert to regular section'});
+    expect(link).toHaveAttribute(
+      'href',
+      '/teacher_dashboard/sections/11/settings?convertInstantSection=true'
+    );
+    fireEvent.click(link);
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    const nameField = await screen.findByRole('textbox', {name: /Class name/i});
+    expect(nameField).toHaveValue('Period 1');
+    fireEvent.change(nameField, {target: {value: 'Period 2'}});
+    fetchSpy.mockClear();
+    fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+    expect(fetchSpy).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('checkbox', {name: '3'}));
+    fetchSpy.mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        ...serverSection,
+        instant_section: false,
+        name: 'Period 2',
+        grades: ['3'],
+      }),
+    } as Response);
+    fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+    await waitFor(() =>
+      expect(navigateSpy).toHaveBeenCalledWith(
+        window.location.origin + '/teacher_dashboard/home'
+      )
+    );
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).toHaveBeenCalledWith(
+      '/api/v1/sections/11',
+      expect.objectContaining({method: 'PATCH'})
+    );
+    expect(JSON.parse(fetchSpy.mock.calls[0][1]?.body as string)).toEqual(
+      expect.objectContaining({
+        id: 11,
+        name: 'Period 2',
+        grades: ['3'],
+        convert_instant_section: true,
+      })
+    );
+  });
 });

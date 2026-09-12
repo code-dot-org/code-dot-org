@@ -235,6 +235,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     section = Section.find(params[:id])
     authorize! :manage, section
 
+    converting_instant_section = ActiveModel::Type::Boolean.new.cast(params[:convert_instant_section])
+    if converting_instant_section && !(section.instant_section? && params[:name].present? &&
+        params[:grades].is_a?(Array) && Section.valid_grades?(params[:grades]))
+      return head :bad_request
+    end
+
     # Demo sections are pinned to their preset login_type: codes are assigned
     # only at creation (assign_code skips demo sections), so switching a demo
     # section to a code-based login type would leave it permanently without a
@@ -273,7 +279,13 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:avatar_emoji] = params[:avatar_emoji].nil? ? 0 : params[:avatar_emoji]
     fields[:ai_chat_access_level] = ai_chat_access_level unless ai_chat_access_level.nil?
 
-    section.update!(fields)
+    if converting_instant_section
+      section.with_lock do
+        section.update!(fields.merge(instant_section: false))
+      end
+    else
+      section.update!(fields)
+    end
     if @unit
       section.students.each do |student|
         next unless can?(:manage, student) # Don't modify students the teacher can't manage (like demo students)
@@ -284,7 +296,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     # Add all coteachers specified in params
     params[:instructor_emails]&.each {|instructor_email| section.invite_instructor(instructor_email, current_user)}
 
-    render json: section.summarize
+    render json: section.summarize(role: converting_instant_section ? :writing : :reading)
   end
 
   # DELETE /api/v1/sections/<id>

@@ -1,7 +1,8 @@
 import Modal from '@code-dot-org/component-library/modal';
+import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React from 'react';
-import {useBlocker, useParams} from 'react-router-dom';
+import {useBlocker, useParams, useSearchParams} from 'react-router-dom';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -9,6 +10,11 @@ import i18n from '@cdo/locale';
 import LoadingSectionsSetUpContainer from '../sectionsRefresh/LoadingSectionsSetUpContainer';
 import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
+
+import {
+  TEACHER_NAVIGATION_BASE_URL,
+  TEACHER_NAVIGATION_PATHS,
+} from './TeacherNavigationPaths';
 
 interface DashboardSectionSettingsProps {
   redirectUrl: string;
@@ -23,6 +29,13 @@ const DashboardSectionSettings: React.FunctionComponent<
   DashboardSectionSettingsProps
 > = ({redirectUrl}) => {
   const selectedSection = useAppSelector(selectedSectionSelector);
+  const [searchParams] = useSearchParams();
+  const convertInstantSection =
+    searchParams.get('convertInstantSection') === 'true' &&
+    !!selectedSection?.isInstantSection;
+  const saveRedirectUrl = convertInstantSection
+    ? `${TEACHER_NAVIGATION_BASE_URL}/${TEACHER_NAVIGATION_PATHS.home}`
+    : redirectUrl;
   const [isEditInProgress, setIsEditInProgress] = React.useState(false);
   const {isLoadingSectionData, needsReload} = useAppSelector(
     state => state.teacherSections
@@ -32,8 +45,8 @@ const DashboardSectionSettings: React.FunctionComponent<
     () =>
       isLoadingSectionData ||
       needsReload ||
-      _.toNumber(urlSectionId) !== selectedSection.id,
-    [isLoadingSectionData, needsReload, urlSectionId, selectedSection.id]
+      _.toNumber(urlSectionId) !== selectedSection?.id,
+    [isLoadingSectionData, needsReload, urlSectionId, selectedSection?.id]
   );
 
   const blocker = useBlocker(
@@ -54,13 +67,19 @@ const DashboardSectionSettings: React.FunctionComponent<
 
   return (
     <div>
+      {convertInstantSection && (
+        <Typography variant="body2" component="p" gutterBottom>
+          {i18n.instantSectionConvertDescription()}
+        </Typography>
+      )}
       {isLoading ? (
-        <LoadingSectionsSetUpContainer defaultRedirectUrl={redirectUrl} />
+        <LoadingSectionsSetUpContainer defaultRedirectUrl={saveRedirectUrl} />
       ) : (
         <SectionsSetUpContainer
           isUsersFirstSection={false}
           sectionToBeEdited={selectedSection}
-          defaultRedirectUrl={redirectUrl}
+          defaultRedirectUrl={saveRedirectUrl}
+          convertInstantSection={convertInstantSection}
           setIsEditInProgress={setIsEditInProgress}
         />
       )}

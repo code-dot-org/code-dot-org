@@ -97,6 +97,17 @@ end
 class RedisSessionStore < ActionDispatch::Session::RedisStore
   prepend UnnecessarySessionWritePrevention
   prepend DeletedSessionPreservation
+
+  def prepare_session(request)
+    previous_session = request.get_header(Rack::RACK_SESSION)
+    return super unless previous_session.is_a?(Hash)
+
+    # Rails 7 merges an upstream Rack hash before installing the session needed to load it.
+    request.delete_header(Rack::RACK_SESSION)
+    super.tap do |session|
+      session.update(previous_session) unless previous_session.empty?
+    end
+  end
 end
 
 Dashboard::Application.config.session_store RedisSessionStore,

@@ -125,6 +125,7 @@ export default function SectionsSetUpContainer({
   defaultRedirectUrl,
   setIsEditInProgress = value => {},
   isLoading = false,
+  convertInstantSection = false,
 }) {
   const [sections, updateSection, batchUpdateSection] =
     useSections(sectionToBeEdited);
@@ -141,6 +142,8 @@ export default function SectionsSetUpContainer({
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
+  const [saveError, setSaveError] = useState(false);
+  const formRef = useRef(null);
   const [coteachersToAdd, setCoteachersToAdd] = useState([]);
 
   const isNewSection = !sectionToBeEdited;
@@ -215,7 +218,8 @@ export default function SectionsSetUpContainer({
   };
 
   const saveSection = (section, createAnotherSection, coteachersToAdd) => {
-    setIsEditInProgress(false);
+    if (isSaveInProgress) return;
+    setSaveError(false);
 
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
@@ -231,13 +235,15 @@ export default function SectionsSetUpContainer({
       : section.participantType;
     const redirectUrl = queryParams('redirectToPage');
 
-    const form = document.querySelector(`#${FORM_ID}`);
+    const form = formRef.current;
     // If we find a missing field in the form, report which one and reset save status
     if (!form.checkValidity()) {
       form.reportValidity();
       setIsSaveInProgress(false);
       return;
     }
+    setIsEditInProgress(false);
+    setIsSaveInProgress(true);
 
     // Checking that the csrf-token exists since it is disabled on test
     const csrfToken = document.querySelector('meta[name="csrf-token"]')
@@ -262,6 +268,7 @@ export default function SectionsSetUpContainer({
       grades: computedGrades,
       instructor_emails: coteachersToAdd,
       ...section,
+      ...(convertInstantSection && {convert_instant_section: true}),
     };
 
     fetch(dataUrl, {
@@ -273,6 +280,7 @@ export default function SectionsSetUpContainer({
       body: JSON.stringify(section_data),
     })
       .then(response => {
+        if (!response.ok) throw new Error('Section save failed');
         return response.json();
       })
       .then(data => {
@@ -298,6 +306,7 @@ export default function SectionsSetUpContainer({
         navigateToHref(url);
       })
       .catch(err => {
+        setSaveError(true);
         setIsSaveInProgress(false);
         setIsEditInProgress(true);
         console.error(err);
@@ -427,7 +436,7 @@ export default function SectionsSetUpContainer({
   };
 
   return (
-    <form id={FORM_ID}>
+    <form id={FORM_ID} ref={formRef} onSubmit={event => event.preventDefault()}>
       {isNewSection && (
         <>
           <Typography
@@ -501,6 +510,7 @@ export default function SectionsSetUpContainer({
               moduleStyles.containerWithMarginTop
             )}
           >
+            {saveError && <p role="alert">{i18n.sectionSaveError()}</p>}
             {isNewSection && ( // Only show 'save and add another' button when creating a new section
               <MuiButton
                 className={moduleStyles.buttonLeft}
@@ -520,7 +530,6 @@ export default function SectionsSetUpContainer({
               color="primary"
               disabled={isSaveInProgress}
               onClick={() => {
-                setIsSaveInProgress(true);
                 saveSection(sections[0], false, coteachersToAdd);
               }}
               type="button"
@@ -545,4 +554,5 @@ SectionsSetUpContainer.propTypes = {
   defaultRedirectUrl: PropTypes.string.isRequired,
   setIsEditInProgress: PropTypes.func,
   isLoading: PropTypes.bool,
+  convertInstantSection: PropTypes.bool,
 };

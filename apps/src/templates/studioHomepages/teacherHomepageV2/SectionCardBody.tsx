@@ -1,13 +1,16 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
 import React, {useState} from 'react';
+import {NavLink} from 'react-router-dom';
 
 import InstantSectionCodeModal from '@cdo/apps/templates/instantSection/InstantSectionCodeModal';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import {
+  TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_SECTIONS_URL,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
-
-import {TEACHER_NAVIGATION_PATHS} from '../../teacherNavigation/TeacherNavigationPaths';
 
 import {CourseContentDropdown} from './CourseContentDropdown';
 import {EmptyStateButton} from './EmptyStateButton';
@@ -26,7 +29,17 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
   return (
     <div className={styles.sectionCardBody}>
       <div className={styles.sectionCardBodyLeft}>
-        {section.courseId ? (
+        {section.isInstantSection ? (
+          <Button
+            variant="outlined"
+            className={styles.instantSectionCodeButton}
+            startIcon={<FontAwesomeV6Icon iconName="pen-to-square" />}
+            component={NavLink}
+            to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}?convertInstantSection=true`}
+          >
+            {i18n.instantSectionConvert()}
+          </Button>
+        ) : section.courseId ? (
           <CourseContentDropdown section={section} />
         ) : (
           <EmptyStateButton

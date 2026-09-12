@@ -141,6 +141,7 @@ describe('TeacherNavigationBar', () => {
       aiDiffChat: aiDiffChatReducer,
     });
     store.dispatch(setSections(serverSections, true, [12, 13, 14, 11]));
+    store.dispatch(selectSection(null));
     store.dispatch(
       setInitialData({
         id: 1,
@@ -192,6 +193,7 @@ describe('TeacherNavigationBar', () => {
                       </div>
                     }
                   />
+                  <Route path={'settings'} element={<LocationElement />} />
                   <Route
                     path={'roster'}
                     element={
@@ -252,6 +254,29 @@ describe('TeacherNavigationBar', () => {
     screen.getByText('Period 3');
     expect(screen.queryByText('hidden')).toBeNull();
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
+  });
+
+  test('hides navigation during conversion while still loading the section', () => {
+    renderDefault(
+      11,
+      '/teacher_dashboard/sections/11/settings?convertInstantSection=true'
+    );
+
+    expect(screen.queryByRole('navigation')).toBeNull();
+    expect(screen.queryByRole('combobox')).toBeNull();
+    screen.getByText('/sections/11/settings path');
+    expect(loadSelectedSectionSpy).toHaveBeenCalledWith('11');
+  });
+
+  test.each([
+    'settings',
+    'settings?convertInstantSection=false',
+    'roster?convertInstantSection=true',
+  ])('keeps navigation visible on %s', route => {
+    renderDefault(11, `/teacher_dashboard/sections/11/${route}`);
+
+    screen.getByRole('navigation');
+    screen.getByRole('combobox');
   });
 
   test('renders demo marker in section dropdown options', async () => {

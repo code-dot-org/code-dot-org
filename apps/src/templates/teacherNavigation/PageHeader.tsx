@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {AgeGatedStudentsBanner} from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
@@ -62,14 +63,24 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
   const showAgeGatedStudentsBanner = ageGatedStudents?.length > 0;
 
   const location = useLocation();
-  const pathName = React.useMemo(
-    () =>
+  const pathName = React.useMemo(() => {
+    if (
+      matchPath(
+        LABELED_TEACHER_NAVIGATION_PATHS.settings.absoluteUrl,
+        location.pathname
+      ) &&
+      new URLSearchParams(location.search).get('convertInstantSection') ===
+        'true'
+    ) {
+      return i18n.instantSectionConvert();
+    }
+    return (
       _.find(
         LABELED_TEACHER_NAVIGATION_PATHS,
         path => matchPath(path.absoluteUrl, location.pathname) !== null
-      )?.label || 'unknown path',
-    [location]
-  );
+      )?.label || 'unknown path'
+    );
+  }, [location]);
 
   const sectionNameText = selectedSection ? selectedSection.name : '';
 

@@ -19,6 +19,45 @@ class RedisSessionStoreTest < ActiveSupport::TestCase
     redis_session_store.write_session(request, session_id, session_data)
   end
 
+  describe '#prepare_session' do
+    before do
+      request.delete_header(Rack::RACK_SESSION)
+    end
+
+    it 'preserves the stored session when upstream middleware reads the Rack session' do
+      Rack::Request.new(request.env).session
+
+      prepared_session = redis_session_store.prepare_session(request)
+
+      _(prepared_session).must_be_instance_of ActionDispatch::Request::Session
+      _(prepared_session['fake_session_data']).must_equal 'default'
+      _(prepared_session.id.public_id).must_equal session_id.public_id
+      _(prepared_session.changed?).must_equal false
+    end
+
+    it 'merges upstream writes into the stored session' do
+      Rack::Request.new(request.env).session[:upstream_value] = 'pending'
+
+      prepared_session = redis_session_store.prepare_session(request)
+
+      _(prepared_session['fake_session_data']).must_equal 'default'
+      _(prepared_session['upstream_value']).must_equal 'pending'
+      _(prepared_session.id.public_id).must_equal session_id.public_id
+      _(prepared_session.changed?).must_equal true
+    end
+
+    it 'initializes a new session after an upstream Rack session read' do
+      request.cookies.delete('_session_id')
+      Rack::Request.new(request.env).session
+
+      prepared_session = redis_session_store.prepare_session(request)
+      prepared_session[:new_value] = 'saved'
+
+      _(prepared_session['new_value']).must_equal 'saved'
+      _(prepared_session.id).must_be_instance_of Rack::Session::SessionId
+    end
+  end
+
   describe '#delete_session' do
     subject(:delete_session) {redis_session_store.delete_session(request, session_id, session.options)}
 

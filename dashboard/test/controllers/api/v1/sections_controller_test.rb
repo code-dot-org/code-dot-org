@@ -81,6 +81,63 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'update: converts an instant section in place and preserves student credentials' do
+    sign_in @teacher
+    section = create(:section, user: @teacher, login_type: 'word', instant_section: true, grades: nil)
+    student = create(:student, :sponsored)
+    section.add_student(student)
+    code = section.code
+    secrets = [student.secret_words, student.secret_picture_id]
+    ApplicationController.helpers.stubs(:image_url).with(student.secret_picture.path).returns('/secret-picture.png')
+
+    assert_no_difference ['Section.count', 'User.count', 'Follower.count'] do
+      patch :update, params: {id: section.id, convert_instant_section: true, name: 'Period 1', grades: ['3']}
+    end
+
+    assert_response :success
+    section.reload
+    refute section.instant_section?
+    refute section.open_for_instant_join?
+    assert_equal 'Period 1', section.name
+    assert_equal ['3'], section.grades
+    assert_equal code, section.code
+    assert_equal 'word', section.login_type
+    assert_equal [student.id], section.students.pluck(:id)
+    assert_equal secrets, [student.reload.secret_words, student.secret_picture_id]
+    assert_equal student, User.authenticate_with_section_and_secret_words(section: section, params: {user_id: student.id, secret_words: student.secret_words})
+    assert_equal section.id, returned_json['id']
+    assert_equal false, returned_json['instant_section']
+  end
+
+  [{name: 'Period 1'}, {name: 'Period 1', grades: []}, {name: 'Period 1', grades: ['invalid']}, {name: ' ', grades: ['3']}].each do |details|
+    test "update: conversion requires complete metadata #{details}" do
+      sign_in @teacher
+      section = create(:section, user: @teacher, login_type: 'word', instant_section: true, grades: nil)
+      original_name = section.name
+      patch :update, params: details.merge(id: section.id, convert_instant_section: true)
+      assert_response :bad_request
+      assert section.reload.instant_section?
+      assert_equal original_name, section.name
+      assert_nil section.grades
+    end
+  end
+
+  test 'update: ordinary edits do not convert an instant section' do
+    sign_in @teacher
+    section = create(:section, user: @teacher, login_type: 'word', instant_section: true)
+    patch :update, params: {id: section.id, name: 'Renamed', grades: ['3']}
+    assert_response :success
+    assert section.reload.instant_section?
+  end
+
+  test 'update: conversion requires section management permission' do
+    sign_in @student
+    section = create(:section, user: @teacher, login_type: 'word', instant_section: true)
+    patch :update, params: {id: section.id, convert_instant_section: true, name: 'Period 1', grades: ['3']}
+    assert_response :forbidden
+    assert section.reload.instant_section?
+  end
+
   test 'logged out users cannot create instant sections' do
     assert_no_difference 'Section.count' do
       post :create_instant

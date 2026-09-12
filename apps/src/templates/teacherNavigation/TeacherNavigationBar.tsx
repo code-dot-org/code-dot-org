@@ -295,6 +295,13 @@ const TeacherNavigationBar: React.FC<{
     };
   };
 
+  if (
+    currentPathName === TEACHER_NAVIGATION_PATH_NAMES.settings &&
+    new URLSearchParams(location.search).get('convertInstantSection') === 'true'
+  ) {
+    return null;
+  }
+
   return (
     <nav className={styles.sidebarContainer} id="ui-test-teacher-sidebar">
       <div className={styles.sidebarContent}>
