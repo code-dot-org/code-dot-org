@@ -178,6 +178,8 @@ export const scenarios: Scenario[] = [
           'A paragraph with **bold**, *italic*, `inline code`, and a ' +
           '[link to code.org](https://code.org).\n\n' +
           '- list item one\n- list item two\n\n' +
+          '- a loose item, whose first paragraph\n\n' +
+          '  is followed by a second one\n\n' +
           '| Feature | Supported |\n| ------- | --------- |\n' +
           '| Tables  | yes       |\n| Links   | yes       |\n'
         }

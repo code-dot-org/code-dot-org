@@ -2,6 +2,8 @@ import type {ElementContent, Nodes, Root} from 'hast';
 import type {Components} from 'hast-util-to-jsx-runtime';
 import type {ReactNode} from 'react';
 
+import {Tooltip} from '@mui/material';
+
 import type {MarkdownExtension} from '../../extension';
 
 import moduleStyles from './vocabularyDefinition.module.css';
@@ -98,14 +100,28 @@ const makeVocab = (lookup: VocabularyLookup) => {
       return <span>{term}</span>;
     }
 
-    // The definition shows in a native title tooltip. Vocab terms are inline
-    // (mid-sentence), so this must be a phrasing element; the design-system
-    // tooltip wraps its trigger in a block <div>, which is invalid inside the
-    // <p> a term lives in. The native title is also what the legacy feature used.
+    /*
+     * MUI's tooltip clones its child rather than wrapping it, so the trigger
+     * stays a <span> -- phrasing content, which is what a term sitting
+     * mid-sentence inside a <p> has to be. (The DSCO WithTooltip wraps its
+     * trigger in a block <div>, which is why this used the native `title`
+     * before.) CdoTheme styles every MUI tooltip, so this matches the design
+     * system without importing a wrapper.
+     *
+     * `tabIndex` makes the trigger keyboard-reachable: MUI opens the tooltip on
+     * :focus-visible, and the native `title` it replaces could be reached only
+     * with a pointer. The term is a tab stop but not a control -- there is
+     * nothing to activate, and the theme's `describeChild` ties the definition
+     * to it with aria-describedby rather than naming it. A reader who skips
+     * past it still gets every definition from the vocabulary list the lesson
+     * plan renders separately.
+     */
     return (
-      <span className={moduleStyles.vocab} title={entry.definition}>
-        {entry.word ?? term}
-      </span>
+      <Tooltip title={entry.definition}>
+        <span className={moduleStyles.vocab} tabIndex={0}>
+          {entry.word ?? term}
+        </span>
+      </Tooltip>
     );
   };
   Vocab.displayName = 'VocabularyDefinition';
@@ -114,8 +130,8 @@ const makeVocab = (lookup: VocabularyLookup) => {
 
 /**
  * Resolves the `[v term]` syntax against an injected lookup, rendering each
- * known term with its definition in a hover tooltip and falling back to the
- * bare term otherwise.
+ * known term with its definition in a design-system tooltip (on hover, and on
+ * focus for keyboard users) and falling back to the bare term otherwise.
  *
  * The lookup is synchronous (rendering is): point it at already-fetched data.
  * This replaces the legacy flow where Dashboard resolved `[v key]` server-side

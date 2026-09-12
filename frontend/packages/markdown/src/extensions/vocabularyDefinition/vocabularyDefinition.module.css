@@ -2,3 +2,10 @@
   border-bottom: 1px dotted currentcolor;
   cursor: help;
 }
+
+/* The trigger is a bare <span>, so it inherits no themed focus ring; these are
+   the values of component-library-styles' `focus-styles` mixin. */
+.vocab:focus-visible {
+  outline: var(--borders-brand-teal-primary) solid 2px;
+  outline-offset: 0.125rem;
+}

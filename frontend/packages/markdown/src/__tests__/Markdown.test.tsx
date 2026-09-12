@@ -1,10 +1,18 @@
-import {fireEvent, render as renderDom, screen} from '@testing-library/react';
+import {
+  fireEvent,
+  render as renderDom,
+  screen,
+  waitFor,
+} from '@testing-library/react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {afterEach, describe, expect, it, vi} from 'vitest';
 
+import {ThemeProvider} from '@mui/material/styles';
+
+import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {localization} from '@code-dot-org/core/plugins/localization';
 
-import Markdown from '../components/Markdown';
+import Markdown, {type MarkdownProps} from '../components/Markdown';
 import type {MarkdownExtension} from '../extension';
 import {
   callout,
@@ -15,6 +23,7 @@ import {
   externalLinks,
   inlineStyles,
   lenientHeadings,
+  lenientLinkDestinations,
   visualCodeBlock,
   vocabularyDefinition,
 } from '../extensions';
@@ -81,6 +90,142 @@ describe('Markdown', () => {
    * paragraph is what carries the body type scale and the translation
    * isolation, so the pipeline inserts one; see rehypeListItemParagraphs.
    */
+  describe('bodyVariant', () => {
+    const renderWith = (
+      markdown: string,
+      bodyVariant: MarkdownProps['bodyVariant'],
+    ) =>
+      renderToStaticMarkup(
+        <Markdown content={markdown} bodyVariant={bodyVariant} />,
+      );
+
+    it('renders paragraphs as body2 by default', () => {
+      expect(render('a paragraph')).toContain('MuiTypography-body2');
+    });
+
+    it('renders paragraphs in the requested variant', () => {
+      const html = renderWith('a paragraph', 'body3');
+      expect(html).toContain('MuiTypography-body3');
+      expect(html).not.toContain('MuiTypography-body2');
+    });
+
+    it('applies to list item paragraphs too', () => {
+      const html = renderWith('- one\n- two', 'body4');
+      expect(html.match(/<p[^>]*MuiTypography-body4/g)).toHaveLength(2);
+    });
+
+    it('sizes links to match the body text', () => {
+      // The design system sizes Link by component size, not by typography
+      // variant, so a body4 paragraph needs an xs link to match.
+      const html = renderWith('a [link](https://example.com) here', 'body4');
+      expect(html).toContain('link-xs');
+      expect(html).not.toContain('link-m');
+    });
+
+    it('sizes links as medium by default', () => {
+      expect(render('a [link](https://example.com) here')).toContain('link-m');
+    });
+
+    it('leaves headings and inline variants alone', () => {
+      const html = renderWith('# Title\n\nSome **bold** text.', 'body4');
+      expect(html).toContain('MuiTypography-h1');
+      expect(html).toContain('MuiTypography-strong');
+      expect(html).toContain('MuiTypography-body4');
+    });
+
+    it('keeps the paragraph a <p> carrying its localization marker', () => {
+      const html = renderWith('a paragraph', 'body3');
+      expect(html).toMatch(/<p[^>]*data-isolate="true"/);
+    });
+
+    it('still lets an extension override the paragraph mapping', () => {
+      const html = renderToStaticMarkup(
+        <Markdown
+          content={'a paragraph'}
+          bodyVariant="body3"
+          extensions={[
+            {
+              name: 'plainParagraphs',
+              components: {
+                p: ({children}) => <p className="mine">{children}</p>,
+              },
+            },
+          ]}
+        />,
+      );
+      expect(html).toContain('class="mine"');
+      expect(html).not.toContain('MuiTypography-body3');
+    });
+
+    it('rebuilds the processor when the variant changes', () => {
+      const {container, rerender} = renderDom(
+        <Markdown content="a paragraph" bodyVariant="body3" />,
+      );
+      expect(container.querySelector('p')?.className).toContain(
+        'MuiTypography-body3',
+      );
+
+      rerender(<Markdown content="a paragraph" bodyVariant="body4" />);
+      expect(container.querySelector('p')?.className).toContain(
+        'MuiTypography-body4',
+      );
+    });
+  });
+
+  describe('inline', () => {
+    const renderInline = (markdown: string) =>
+      renderToStaticMarkup(<Markdown content={markdown} inline />);
+
+    it('renders one span, with no block wrapper or paragraph', () => {
+      const html = renderInline('**Algorithm** - a list of steps');
+      expect(html).not.toContain('<div');
+      expect(html).not.toContain('<p');
+      expect(html).toMatch(/^<span[^>]*>/);
+      // Inline mappings still apply: strong is the design-system variant.
+      expect(html).toMatch(/<strong[^>]*MuiTypography-strong[^>]*>Algorithm</);
+    });
+
+    it('still maps links to the design-system component', () => {
+      const html = renderInline('see [the docs](https://example.com)');
+      expect(html).toContain('href="https://example.com"');
+      expect(html).toContain('link-m');
+    });
+
+    it('keeps the localization marker the paragraph would have carried', () => {
+      expect(renderInline('some text')).toMatch(
+        /<span[^>]*data-isolate="true"/,
+      );
+    });
+
+    it('leaves block syntax as literal text', () => {
+      // A definition that happens to start with "- " must not become a list
+      // inside an inline context.
+      for (const [markdown, literal] of [
+        ['- one\n- two', '- one'],
+        ['# not a heading', '# not a heading'],
+        ['> not a quote', '&gt; not a quote'],
+        ['---', '---'],
+      ]) {
+        const html = renderInline(markdown);
+        expect(html).toContain(literal);
+        expect(html).not.toMatch(/<(ul|ol|li|h1|blockquote|hr)\b/);
+      }
+    });
+
+    it('applies the className to the span', () => {
+      const html = renderToStaticMarkup(
+        <Markdown content="text" inline className="mine" />,
+      );
+      expect(html).toMatch(/<span[^>]*class="mine"/);
+    });
+
+    it('still wraps in a block container when not inline', () => {
+      const html = render('**Algorithm** - a list of steps');
+      expect(html).toContain('<div');
+      expect(html).toContain('<p');
+    });
+  });
+
   describe('list items', () => {
     it('wraps tight list item text in a body paragraph', () => {
       const html = render('- one\n- two');
@@ -611,15 +756,87 @@ describe('Markdown', () => {
         ? {definition: 'Reducing file size by discarding data.'}
         : undefined;
 
-    it('resolves a known term to a definition tooltip', () => {
+    it('resolves a known term, consuming the syntax', () => {
       const spy = vi.fn(lookup);
       const html = render('Use [v lossy compression] here.', [
         vocabularyDefinition({lookup: spy}),
       ]);
       expect(spy).toHaveBeenCalledWith('lossy compression');
-      expect(html).toContain('title="Reducing file size by discarding data."');
       expect(html).toContain('lossy compression');
       expect(html).not.toContain('[v lossy compression]');
+    });
+
+    it('shows the definition in a tooltip on hover', async () => {
+      renderDom(
+        <Markdown
+          content={'Use [v lossy compression] here.'}
+          extensions={[vocabularyDefinition({lookup})]}
+        />,
+      );
+
+      fireEvent.mouseOver(screen.getByText('lossy compression'));
+
+      const tooltip = await screen.findByRole('tooltip');
+      expect(tooltip.textContent).toBe(
+        'Reducing file size by discarding data.',
+      );
+    });
+
+    it('makes the term keyboard-reachable and shows the definition on focus', async () => {
+      renderDom(
+        <Markdown
+          content={'Use [v lossy compression] here.'}
+          extensions={[vocabularyDefinition({lookup})]}
+        />,
+      );
+
+      // A tab stop, not a control: there is nothing here to activate.
+      const term = screen.getByText('lossy compression');
+      expect(term.getAttribute('tabindex')).toBe('0');
+
+      term.focus();
+      const tooltip = await screen.findByRole('tooltip');
+      expect(tooltip.textContent).toBe(
+        'Reducing file size by discarding data.',
+      );
+    });
+
+    it('ties the definition to the term with aria-describedby under the theme', async () => {
+      // CdoTheme sets describeChild, so the definition describes the term
+      // rather than renaming it. apps renders every root inside this theme.
+      renderDom(
+        <ThemeProvider theme={CdoTheme}>
+          <Markdown
+            content={'Use [v lossy compression] here.'}
+            extensions={[vocabularyDefinition({lookup})]}
+          />
+        </ThemeProvider>,
+      );
+
+      const term = screen.getByText('lossy compression');
+      term.focus();
+
+      const tooltip = await screen.findByRole('tooltip');
+      expect(term.getAttribute('aria-describedby')).toBe(tooltip.id);
+      expect(term.getAttribute('aria-label')).toBeNull();
+    });
+
+    it('dismisses the tooltip on Escape', async () => {
+      renderDom(
+        <Markdown
+          content={'Use [v lossy compression] here.'}
+          extensions={[vocabularyDefinition({lookup})]}
+        />,
+      );
+
+      const term = screen.getByText('lossy compression');
+      fireEvent.mouseOver(term);
+      await screen.findByRole('tooltip');
+
+      // SC 1.4.13: content shown on hover must be dismissible without moving
+      // the pointer.
+      fireEvent.keyDown(document.body, {key: 'Escape'});
+      await waitFor(() => expect(screen.queryByRole('tooltip')).toBeNull());
     });
 
     it('uses the provided display word when given', () => {
@@ -635,8 +852,9 @@ describe('Markdown', () => {
       const html = render('An [v unknown term] here.', [
         vocabularyDefinition({lookup}),
       ]);
+      // Plain text: no trigger, so no tab stop and nothing to describe.
       expect(html).toContain('<span>unknown term</span>');
-      expect(html).not.toContain('title=');
+      expect(html).not.toContain('tabindex');
     });
 
     it('leaves the syntax literal when not enabled', () => {
@@ -650,7 +868,7 @@ describe('Markdown', () => {
         vocabularyDefinition({lookup}),
       ]);
       expect(html).toContain('[v lossy compression]');
-      expect(html).not.toContain('title=');
+      expect(html).not.toContain('tabindex');
     });
   });
 
@@ -700,6 +918,116 @@ describe('Markdown', () => {
       const html = render('###Build a sequence');
       expect(html).not.toContain('<h3');
       expect(html).toContain('###');
+    });
+  });
+
+  describe('lenientLinkDestinations', () => {
+    // The real curriculum shape: an images.code.org asset whose uploaded
+    // filename contains spaces. 171 of these across 80 units at last count.
+    const cupStack =
+      '![](https://images.code.org/9b0af665c700-cup stack ideas.png)';
+
+    it('renders an image whose destination contains spaces', () => {
+      const html = render(cupStack, [lenientLinkDestinations]);
+      expect(html).toContain(
+        '<img src="https://images.code.org/9b0af665c700-cup%20stack%20ideas.png"',
+      );
+    });
+
+    it('renders a link whose destination contains spaces', () => {
+      const html = render('[go](https://example.com/my page)', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('href="https://example.com/my%20page"');
+      expect(html).toContain('go');
+    });
+
+    it('encodes every space in the destination', () => {
+      const html = render('![](/a b c d.png)', [lenientLinkDestinations]);
+      expect(html).toContain('src="/a%20b%20c%20d.png"');
+    });
+
+    it('keeps the alt text, and the expandable suffix still matches', () => {
+      const html = render('![a big cat expandable](/my cat.png)', [
+        lenientLinkDestinations,
+        expandableImages(),
+      ]);
+      expect(html).toContain('src="/my%20cat.png"');
+      // The suffix was stripped, so the destination rewrite ran first.
+      expect(html).toContain('alt="a big cat"');
+    });
+
+    it('preserves a title after the spaced destination', () => {
+      const html = render('![cat](/my cat.png "a nice title")', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('src="/my%20cat.png"');
+      expect(html).toContain('title="a nice title"');
+    });
+
+    it('leaves a well-formed destination untouched', () => {
+      const html = render('![cat](/cat.png "a title")', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('src="/cat.png"');
+      expect(html).toContain('title="a title"');
+    });
+
+    it('leaves an angle-bracketed destination to the parser', () => {
+      const html = render('![cat](</my cat.png>)', [lenientLinkDestinations]);
+      expect(html).toContain('src="/my%20cat.png"');
+    });
+
+    it('leaves whitespace around the destination alone', () => {
+      // Legal CommonMark already: the destination itself has no space.
+      const html = render('[go](\thttps://example.com/a\n)', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('href="https://example.com/a"');
+    });
+
+    it('does not rewrite inside a fenced code block', () => {
+      const html = render('```\n![](/my cat.png)\n```', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('/my cat.png');
+      expect(html).not.toContain('%20');
+    });
+
+    it('does not rewrite inside an inline code span', () => {
+      const html = render('write `![](/my cat.png)` like this', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('/my cat.png');
+      expect(html).not.toContain('%20');
+    });
+
+    it('rewrites prose on the same line as a code span', () => {
+      const html = render('`code` then ![](/my cat.png)', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('src="/my%20cat.png"');
+    });
+
+    it('does not rewrite inside a code span that crosses a line', () => {
+      const html = render('`a\n![](/my cat.png)` after', [
+        lenientLinkDestinations,
+      ]);
+      expect(html).toContain('/my cat.png');
+      expect(html).not.toContain('%20');
+    });
+
+    it('skips a destination containing parentheses rather than guessing', () => {
+      const html = render('![](/a (b) c.png)', [lenientLinkDestinations]);
+      expect(html).not.toContain('<img');
+      expect(html).not.toContain('%20');
+    });
+
+    it('leaves the spaced destination as text when not enabled', () => {
+      const html = render(cupStack);
+      expect(html).not.toContain('<img');
+      // GFM autolinks the leading run, leaving the rest as bare text.
+      expect(html).toContain('stack ideas.png');
     });
   });
 
