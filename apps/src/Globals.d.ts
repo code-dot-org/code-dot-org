@@ -22,11 +22,6 @@ declare const IN_STORYBOOK: boolean;
 declare const PISKEL_DEVELOPMENT_MODE: string;
 declare const DEBUG_MINIFIED: number;
 
-// Declaring stylelint as any for now. We are using this to lint CSS in Web Lab 2,
-// which is currently experimental.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-declare const stylelint: any;
-
 // Imported markdown files are treated as raw strings
 declare module '*.md' {
   const content: string;
