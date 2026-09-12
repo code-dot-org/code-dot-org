@@ -27,14 +27,67 @@ not have"; nothing answers "make me an actor".
 A sequence of steps, each a question with a visible answer, ending in a file
 that is worth opening. The questions are the ones a learner asks themselves:
 
-    1. What is it called?       a name, which is what every dropdown will say
-    2. What does it look like?  a picture, an animation, or neither
-    3. What can it do?          the enhancement shelf, read as a list of verbs
-    4. Here it is.              the file, opened, with the blocks to change
+    1. Where does it come from?  from nothing, from one of mine, from theirs
+    2. What does it look like?   a picture, an animation, or neither
+    3. What can it do?           the enhancement shelf, read as a list of verbs
+    4. Here it is.               the file, opened, with the blocks to change
 
-Nothing in that list is new work in the sense of new mechanism. Steps 2 and 3
-are dialogs that exist and are used elsewhere; the wizard is the frame that
-puts them in an order and carries one project between them.
+Nothing in that list is new work in the sense of new mechanism. Every step is a
+dialog that exists and is used elsewhere; the wizard is the frame that puts
+them in an order and carries one project between them.
+
+**The later steps are questions, not a form to fill in.** A learner who starts
+from something arrives at step 2 with a picture already chosen and at step 3
+with half the verbs already ticked, and both steps say so rather than asking
+again. That is the point of step 1 being first.
+
+## Step 1, and the three doors
+
+    Create my own        the bare seed: define actor named ⟨…⟩
+    Copy one of mine     one of the project's own actors, cloned
+    Start from a template  one of the library's, imported
+
+**Two of the three fill in the rest of the wizard**, which is what makes the
+order matter. A copied Crawler already has a sprite and already patrols, so
+step 2 opens on its picture and step 3 shows "Walks a beat" and "Hurts what it
+touches" as things it has. The learner's job from there is changing its mind,
+not answering from nothing.
+
+**None of that is new machinery, and that is the argument for the shape.**
+`Enhancement.applied` already reads an actor's own chain to decide whether a
+row is a thing it has (`ENHANCEMENTS.md`), so a copied actor's abilities come
+back ticked with nothing added. Step 2's answer is the source's own
+`set sprite` or `play animation` row. The wizard shows what is there; it does
+not have to remember what it did.
+
+**Copying and templating are separate doors although both start from
+something**, because the two differ in every way but the sentence:
+
+- **Copy one of mine** is `clone` (`files/FileMenus`), which resolves
+  references so the copy is a COPY — cloning a reference would write a file
+  pointing at the original's rule rather than owning one — and which asks for a
+  name, because two actors both called "Player" is the state the clone exists
+  to avoid.
+- **Start from a template** is `importStockActor`, which is an aggregate: an
+  actor's rows are references, and every one must name something the project
+  supplies, so a Coin asks for one rule and one animation and writes seven
+  files. A row naming something the project lacks does not announce itself — a
+  missing trait fails at compile time with nothing on screen, and a missing
+  animation resolves to whatever else is in the dropdown.
+
+They also differ in what the learner is thinking: "another one like my Crawler"
+is a different thought from "one of theirs, to start from".
+
+**The name belongs to this step**, because each door already answers it
+differently and none of them can be asked the same way. Making one from nothing
+has no name until the learner types it; a clone has one to vary; a template
+arrives called what the library calls it, which is a name worth keeping and
+worth being able to change on the spot.
+
+**The doors are not new either.** The Actors grid already offers New and Import
+as tiles (`actors/ActorPickerDialog`) and the actor's own row already offers
+Clone. Step 1 is those three made into one question, asked at the moment the
+learner has it.
 
 ## Step 2, and its five doors
 
@@ -56,6 +109,12 @@ An animation instead of a still is the same question one level up
 actor paints itself and must not carry a sprite over the top
 (`specs/UI_ACTORS.md`).
 
+**Arriving with an answer already given is the common case**, not the
+exception: two of step 1's three doors hand this step a picture. So its default
+state is a chosen tile and a way past, rather than an empty grid and a
+requirement — and a learner who wanted the Crawler's look and only its look is
+finished here without touching anything.
+
 Whatever is chosen, the step writes one row — `set sprite ⟨file⟩` or
 `play animation ⟨id⟩` — which is a row the learner can see and change
 afterwards, like everything else an assistant writes here.
@@ -68,6 +127,10 @@ the library can offer, and the learner is there to browse it. That is the
 reason the shelf's charter admits a row that writes one `use trait` and imports
 its rule (`ENHANCEMENTS.md` §What earns the name), and it is why rows added
 from here on are being added to this step as much as to that dialog.
+
+**It also arrives partly answered**, for the same reason step 2 does, and with
+no work: `applied` is how a row already decides whether to say "already has
+this", and a copied or imported actor's traits are in the chain it reads.
 
 Two things follow that are not true of the shelf as it stands today:
 
@@ -117,24 +180,37 @@ person having looked at it first.
 - **A wizard shell.** Every dialog in the lab is one-shot: it opens, asks one
   question, and closes. There is no step container, no back, and no place to
   keep an answer between steps.
-- **A way to defer the file.** An enhancement takes a project and a target
-  naming a file that is already there (`enhancements.EnhanceTarget`), so step 3
-  cannot run against an actor that has not been written yet. Either the wizard
-  writes the file at step 1 and edits it as it goes — which means an abandoned
-  wizard leaves a file behind — or enhancements learn to apply to a workspace
-  in hand. The first is smaller and is probably right; the second is cleaner
-  and is a change to seven files.
+- **A way to leave, having written nothing.** An enhancement takes a project
+  and a target naming a file that is already there
+  (`enhancements.EnhanceTarget`), so step 3 cannot run against an actor that
+  has not been written yet. Two of step 1's three doors settle this by
+  accident: cloning writes a file and importing a template writes up to seven,
+  so after step 1 the actor exists and every later step is an edit. Only
+  "create my own" could have deferred it, and a wizard whose three doors behave
+  differently in that respect is worse than one that always writes early.
+
+  So the file is written at step 1 and edited as the learner goes — which means
+  **an abandoned wizard leaves a file behind**, and that is the thing to
+  answer. Backing out of a template import is already a live question without
+  this wizard (nothing undoes those seven files today), so it is a gap being
+  inherited rather than opened.
+
 - **Trait selection outside the shelf.** There is no picker for "any trait in
   the project" but the Blockly dropdown.
 
 ## What has to be decided
 
-- **Does it replace `New actor`, or sit beside it?** Replacing it makes the
-  wizard the way, and costs the learner who wants an empty file. Beside it is
-  two doors to one place, which this lab has been trimming rather than adding.
-- **Where is it entered from?** The Actors grid's `New` tile is the obvious
-  place, since that is where "I want another actor" is already expressed
-  (`actors/ActorPickerDialog`).
+- **Does it replace the Actors grid's two tiles?** Step 1 has swallowed both:
+  "create my own" is `New` and "start from a template" is `Import`, asked
+  together instead of as a choice made before the question was put. So the
+  grid's tiles become one — and the actor row's `Clone`, which is the third
+  door, has a reason to stay where it is as well as appearing here, since
+  cloning a finished actor is a thing done TO one file rather than a way of
+  starting.
+- **Is `Create my own` still one press?** It was: `New` asked for a name and
+  opened a file. Through the wizard it is a door, a name, a picture and a shelf.
+  Either the empty answer is a visible way out of every step, or the learner
+  who wanted an empty file has been made to walk past three questions.
 - **Is it skippable?** A learner who knows what they want should be able to
   land on the file in one press. A wizard that cannot be walked out of is worse
   than the prompt it replaced.
