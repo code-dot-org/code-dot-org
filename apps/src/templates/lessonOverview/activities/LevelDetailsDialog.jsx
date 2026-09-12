@@ -76,7 +76,7 @@ class LevelDetailsDialog extends Component {
         <div className={styles.scrollContainer}>
           <Markdown
             extensions={this.markdownExtensions}
-            markdown={level.markdown}
+            content={level.markdown}
           />
           {level.videoOptions && (
             <div
