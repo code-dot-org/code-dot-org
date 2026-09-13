@@ -33,6 +33,29 @@
 /** The size of one tile, in pixels — the grid the map editor and the maps use. */
 export const TILE_SIZE = 32;
 
+/**
+ * How much to shrink a picture so its longest side is one tile.
+ *
+ * WHAT MAKES `scale` MEAN THE SAME THING EVERYWHERE. Before this, an actor was
+ * drawn at its picture's own pixels, so `scale = 2` meant "twice as big as this
+ * file happens to be" — a fact about a file the learner may not have made, and
+ * a number that meant something different for every picture. A described
+ * picture is 256 or 1024 square and was drawn eight tiles across; every sprite
+ * the library ships is 32, so nothing ever noticed (specs/ACTOR_SIZE.md).
+ *
+ * The LONGEST side, so the aspect ratio survives: a 256 by 128 picture fits a
+ * tile across and half a tile down, which is the shape it is.
+ *
+ * Answers 1 for a picture nobody has measured, which is the only honest answer
+ * — and 1 for anything already a tile or smaller, so the whole shipped library
+ * is untouched by this and a hand-drawn 16-pixel sprite is not blown up to
+ * fill a tile it was never meant to.
+ */
+export function fitToTile(width: number, height: number): number {
+  const longest = Math.max(width, height);
+  return longest > TILE_SIZE ? TILE_SIZE / longest : 1;
+}
+
 /** The world in tiles, each way. */
 export const VIEWPORT_TILES = 10;
 

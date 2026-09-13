@@ -16,6 +16,7 @@ import {type AnimationDef, frameDelay} from '../core/animationTypes';
 import {APPEARANCE} from '../core/spatialKeys';
 import type {Property} from '../core/types';
 import {Vector} from '../core/Vector';
+import {fitToTile} from '../core/viewport';
 import type {World} from '../core/World';
 
 import {IntrinsicSizeProperty, PositionalTrait, SpatialRule} from './spatial';
@@ -156,6 +157,13 @@ export const FrameChangedEvent = rule.addEvent('frameChanged', {
 /**
  * Set the actor's `IntrinsicSizeProperty` from the picture it is drawing.
  *
+ * FITTED TO A TILE ON THE WAY IN, which is the whole of how that change is
+ * made (specs/ACTOR_SIZE.md). The property holds world units rather than the
+ * picture's own pixels, so every reader of it — the collision box, "Stays in
+ * the Map", `outsideMapAt` — is right without being touched, and cannot drift
+ * from what is drawn. The drawing side applies the same factor to the texture
+ * (`World.renderSnapshot`).
+ *
  * Two answers, and neither needs an animation. A cell says its own size, so a
  * spritesheet frame is measured for free. A whole image does not, so the world
  * is asked — the project measures every image it holds and states them all
@@ -170,15 +178,17 @@ export const FrameChangedEvent = rule.addEvent('frameChanged', {
 function publishPictureSize(world: World, actor: Actor): void {
   const cell = actor.get(SpriteCellSizeProperty);
   if (cell.x > 0 && cell.y > 0) {
-    actor.set(IntrinsicSizeProperty, new Vector(cell.x, cell.y));
+    const fit = fitToTile(cell.x, cell.y);
+    actor.set(IntrinsicSizeProperty, new Vector(cell.x * fit, cell.y * fit));
     return;
   }
   const sprite = actor.get(SpriteProperty);
   const measured = sprite ? world.imageSize(sprite) : undefined;
   if (measured) {
+    const fit = fitToTile(measured.width, measured.height);
     actor.set(
       IntrinsicSizeProperty,
-      new Vector(measured.width, measured.height),
+      new Vector(measured.width * fit, measured.height * fit),
     );
   }
 }
@@ -200,7 +210,11 @@ function publishIntrinsicSize(actor: Actor, def: AnimationDef): void {
     }
   }
   if (width > 0 && height > 0) {
-    actor.set(IntrinsicSizeProperty, new Vector(width, height));
+    // The LARGEST cell decides the fit, so a smaller frame draws smaller
+    // rather than every frame swelling to fill a tile — which is the same
+    // reason the largest cell is what the box is measured from.
+    const fit = fitToTile(width, height);
+    actor.set(IntrinsicSizeProperty, new Vector(width * fit, height * fit));
   }
 }
 

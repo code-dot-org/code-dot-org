@@ -117,7 +117,22 @@ describe('the Animation rule', () => {
     });
     expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
     world.tick(0.01);
-    expect(actor.get(IntrinsicSizeProperty).equals({x: 64, y: 16})).toBe(true);
+    // IN WORLD UNITS, not the picture's pixels: 64 is two tiles, so the paddle
+    // is fitted to one and keeps its shape — a tile across and a quarter of a
+    // tile down. That is what makes `scale` mean the same thing whatever file
+    // an actor is drawn from (specs/ACTOR_SIZE.md).
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 8})).toBe(true);
+  });
+
+  it('leaves a picture that already fits exactly as it is', () => {
+    // The whole shipped library is 32 by 32, so the fit is 1 and nothing a
+    // learner made out of stock parts can tell this was done.
+    const {world, actor} = paintedWorld({
+      'paddle.png': {width: 32, height: 32},
+    });
+    world.tick(0.01);
+
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 32})).toBe(true);
   });
 
   it('leaves the intrinsic size unknown for a picture nobody measured', () => {

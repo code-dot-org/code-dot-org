@@ -49,7 +49,12 @@ import type {
   WorldQuery,
 } from './types';
 import {Vector, type VectorLike} from './Vector';
-import {TILE_SIZE, VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
+import {
+  TILE_SIZE,
+  VIEWPORT_HEIGHT,
+  VIEWPORT_WIDTH,
+  fitToTile,
+} from './viewport';
 
 /**
  * The part of an `ActorBuilder` that placing one needs.
@@ -1824,6 +1829,27 @@ export class World {
     );
   }
 
+  /**
+   * How much an animation's frames are shrunk, by its largest cell.
+   *
+   * THE LARGEST, not each frame's own: fitted one by one, a two-pixel frame
+   * would draw as big as a hundred-pixel one and the actor would pulse. It is
+   * the same quantity `publishIntrinsicSize` measures the box from, which is
+   * what keeps the drawn size and the box the same number
+   * (specs/ACTOR_SIZE.md).
+   */
+  private animationFit(def: AnimationDef): number {
+    let width = 0;
+    let height = 0;
+    for (const frame of def.frames) {
+      if (frame.position) {
+        width = Math.max(width, frame.position.width);
+        height = Math.max(height, frame.position.height);
+      }
+    }
+    return width > 0 && height > 0 ? fitToTile(width, height) : 1;
+  }
+
   /** The definition of a known animation, or undefined. */
   /** How big an image is, if the project measured it. */
   imageSize(name: string): {width: number; height: number} | undefined {
@@ -2472,7 +2498,11 @@ export class World {
             sprite: f.sprite,
             cell: f.position,
             offset: f.offset ?? {x: 0, y: 0},
-            scale: f.scale ?? 1,
+            // FITTED, by the same factor the size was published with: the
+            // largest cell across the whole animation, so a smaller frame
+            // draws smaller instead of every frame swelling to a tile
+            // (`rules/animation.publishIntrinsicSize`, specs/ACTOR_SIZE.md).
+            scale: (f.scale ?? 1) * this.animationFit(def),
           };
         }
       }
@@ -2492,7 +2522,18 @@ export class World {
                 height: size.y,
               }
             : undefined;
-        return {sprite, cell, offset: {x: 0, y: 0}, scale: 1};
+        // The cell's own size when it draws one, the whole picture's
+        // otherwise — the two sources `publishPictureSize` measures, so the
+        // drawn size and the collision box are the same number twice.
+        const measured = cell
+          ? {width: cell.width, height: cell.height}
+          : this.imageSize(sprite);
+        return {
+          sprite,
+          cell,
+          offset: {x: 0, y: 0},
+          scale: measured ? fitToTile(measured.width, measured.height) : 1,
+        };
       }
       return undefined;
     };
