@@ -93,6 +93,25 @@ export interface DescribePictureProps {
 /** How tall one copy is drawn in the repeated preview, in rem. */
 const TILED = 6.5;
 
+/**
+ * How wide one copy is against its height: the picture's own, where it said.
+ *
+ * NOT THE GAME'S ANSWER, deliberately. What the actor will occupy is the tile
+ * box it was asked for, and the `set scale` row stretches the picture into it
+ * (`actors/create/actorLook.withScale`). This preview is for judging the
+ * DRAWING — whether it is the right picture and whether it joins — and a
+ * picture judged through a stretch is a picture judged as something else.
+ */
+const aspectOf = (
+  picture: GeneratedPicture | undefined,
+  shape: TileScale | undefined,
+): number => {
+  if (picture?.width && picture?.height) {
+    return picture.width / picture.height;
+  }
+  return shape?.x && shape?.y ? shape.x / shape.y : 1;
+};
+
 export const DescribePicture = ({
   drawing,
   kind,
@@ -366,9 +385,18 @@ export const DescribePicture = ({
                   : ways === 'up'
                     ? 'repeat-y'
                     : 'repeat',
-              // …and at the shape it was drawn in, since a three-wide platform
-              // shown square is a squashed platform.
-              backgroundSize: `${(TILED * (scale?.x ?? 1)) / (scale?.y ?? 1)}rem ${TILED}rem`,
+              // …AT THE PICTURE'S OWN PROPORTIONS, which this used to guess
+              // at from the shape that was asked for. The guess was made
+              // before anything measured what came back, and it was wrong
+              // whenever the provider's nearest offered shape differed from
+              // the one asked for — 2:3 shown as 1:2 is a squashed picture,
+              // and it was reported as one. The transports say what they drew
+              // now (`generate/imageGenerator.GeneratedPicture`), so there is
+              // nothing left to guess.
+              //
+              // The shape remains the fallback for a transport that does not
+              // say, and a square for one that says nothing either way.
+              backgroundSize: `${TILED * aspectOf(drawn, scale)}rem ${TILED}rem`,
             }}
           />
         ) : drawn ? (

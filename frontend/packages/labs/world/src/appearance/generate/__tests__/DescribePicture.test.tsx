@@ -293,6 +293,33 @@ describe('what the preview shows', () => {
     expect(screen.getByText(/where the copies meet/)).toBeTruthy();
   });
 
+  it('shows each copy at the picture’s own proportions', async () => {
+    // REPORTED AS A SQUISH. This used to size a copy by the SHAPE that was
+    // asked for, which was a guess made before anything measured what came
+    // back — and wrong whenever the provider's nearest offered shape differed,
+    // which is most of the time. A 2:3 picture shown as 1:2 is a picture being
+    // judged as something else.
+    draw.mockResolvedValueOnce([{...DRAWN[0], width: 1024, height: 1536}]);
+    show({...surface, scale: {x: 1, y: 2}, onScale: vi.fn()});
+    fireEvent.click(screen.getByRole('button', {name: 'Side to side'}));
+    fireEvent.change(field(), {target: {value: 'a totem'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    const shown = await screen.findByRole('img', {name: /shown repeated/});
+    // 1024/1536 of 6.5rem, not 1/2 of it.
+    expect(shown.style.backgroundSize).toBe(`${6.5 * (1024 / 1536)}rem 6.5rem`);
+  });
+
+  it('falls back to the shape where the transport measured nothing', async () => {
+    show({...surface, scale: {x: 3, y: 1}, onScale: vi.fn()});
+    fireEvent.click(screen.getByRole('button', {name: 'Side to side'}));
+    fireEvent.change(field(), {target: {value: 'a wall'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    const shown = await screen.findByRole('img', {name: /shown repeated/});
+    expect(shown.style.backgroundSize).toBe(`${6.5 * 3}rem 6.5rem`);
+  });
+
   it('repeats it the way it was asked to', async () => {
     // A picture meant to lie in a row would show a seam it was never going to
     // be asked for, stacked up.
