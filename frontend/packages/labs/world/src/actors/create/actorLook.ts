@@ -21,6 +21,7 @@ import {down, rootsOf, type BlockJson} from '../enhance/patch';
 
 const SPRITE_ROW = 'world_set_sprite';
 const ANIMATION_ROW = 'world_play_animation';
+const SCALE_ROW = 'world_set_Space_ScaleProperty';
 
 /** What an actor is drawn as. */
 export type ActorLook =
@@ -88,6 +89,57 @@ export function withLook(contents: string, look: ActorLook): string {
   }
   // Nothing to replace: on the end of the chain, which is where every other
   // row an assistant writes goes (`enhance/patch` says why).
+  let last = root;
+  for (const at of down(root)) {
+    last = at;
+  }
+  last.next = {block: row};
+  return JSON.stringify(workspace, null, 2);
+}
+
+/**
+ * Make the actor fill this many tiles, as a row in its own file.
+ *
+ * ONE TILE WRITES NOTHING. Every actor is one tile by default — that is what
+ * fitting a picture to a tile made the unit (specs/ACTOR_SIZE.md) — so a row
+ * saying "scale 1 by 1" is a row saying nothing, and a file that opens with
+ * one explains something nobody did.
+ *
+ * Appended, and only once: the learner may change the shape and come back, and
+ * two rows setting the scale is a file whose second answer silently wins. The
+ * reasoning is `withLook`'s, one property along.
+ */
+export function withScale(
+  contents: string,
+  shape: {x: number; y: number},
+): string {
+  if (shape.x === 1 && shape.y === 1) {
+    return contents;
+  }
+  const workspace = JSON.parse(contents || '{}') as {
+    blocks?: {blocks?: BlockJson[]};
+  };
+  const root = (workspace.blocks?.blocks ?? []).find(
+    one => one.type === 'world_actor',
+  );
+  if (!root) {
+    return contents;
+  }
+  const row: BlockJson = {
+    type: SCALE_ROW,
+    inputs: {
+      ACTOR: {block: {type: 'world_this_actor'}},
+      X: {block: {type: 'math_number', fields: {NUM: shape.x}}},
+      Y: {block: {type: 'math_number', fields: {NUM: shape.y}}},
+    },
+  };
+  for (const at of down(root)) {
+    const next = at.next?.block;
+    if (next?.type === SCALE_ROW) {
+      at.next = {block: {...row, ...(next.next ? {next: next.next} : {})}};
+      return JSON.stringify(workspace, null, 2);
+    }
+  }
   let last = root;
   for (const at of down(root)) {
     last = at;

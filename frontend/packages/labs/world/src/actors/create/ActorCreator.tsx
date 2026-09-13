@@ -41,6 +41,13 @@
 // `Enhancement.apply`. So the wizard collects answers and the caller performs
 // them in one go — which is what makes Back work at all, and what means a
 // wizard somebody walks out of leaves nothing behind.
+//
+// A DRAWN PICTURE IS THE ONE EXCEPTION, and it has to be: what a generator
+// answers with is bytes, and what a `set sprite` row names is a file. So the
+// picture is written when the learner presses on from the step that made it,
+// and the actor still lands in one go afterwards. Walking out after that
+// leaves the picture in the project — which is the right leftover, being a
+// thing the learner asked for and can see.
 
 import {Typography} from '@mui/material';
 import {useMemo, useState} from 'react';
@@ -56,6 +63,7 @@ import type {
   GeneratedPicture,
   ImageGenerator,
 } from '../../appearance/generate/imageGenerator';
+import type {TileScale} from '../../appearance/generate/ScaleGrid';
 import {EnhancementRows, refusalOf} from '../enhance/EnhancementRows';
 import type {Enhancement, EnhanceTarget} from '../enhance/enhancements';
 
@@ -100,6 +108,14 @@ export interface ActorDraft {
   /** The file to clone, for `copy`; the stock id, for `template`. */
   source?: string;
   name: string;
+  /**
+   * How many tiles it fills, which becomes a `set scale` row in its file.
+   *
+   * One tile is every actor's default and writes nothing: a row saying "scale
+   * 1 by 1" is a row saying nothing, and a file that opens with one is a file
+   * that explains a thing nobody did (`generate/ScaleGrid`).
+   */
+  shape?: {x: number; y: number};
   /**
    * What it is drawn as, or nothing to leave it as it came.
    *
@@ -225,6 +241,34 @@ export const ActorCreator = ({
   const [source, setSource] = useState<string>();
   const [name, setName] = useState('');
   const [look, setLook] = useState<ActorLook>();
+  /**
+   * Whether the picture step has been given over to describing one.
+   *
+   * A VIEW, not a row: a prompt, a shape and a picture big enough to judge do
+   * not fit under the grid, and the picture is the point
+   * (`generate/DescribePicture`). The grid is a press away either direction,
+   * because the pictures a project already has are still the likelier answer.
+   */
+  const [describing, setDescribing] = useState(false);
+  /**
+   * How many tiles the actor fills, which is a fact about the ACTOR and not
+   * about the picture — so it survives leaving the panel, and is written into
+   * the file whatever the picture ends up being.
+   */
+  const [shape, setShape] = useState<TileScale>({x: 1, y: 1});
+  /**
+   * A picture that has been drawn and not yet written, which `Next` writes.
+   *
+   * THE DRAWING IS THE ANSWER once it is on screen. Choosing a picture from
+   * the grid takes one press, so a drawn one asking for a second press — under
+   * a button a learner has to notice, next to the one they were going to press
+   * anyway — is a picture that gets left behind. It was: made, looked at, and
+   * not on the actor.
+   *
+   * Held here rather than in the panel because the way on is here: the panel
+   * says what is drawn (`generate/DescribePicture.onDrew`) and this keeps it.
+   */
+  const [pending, setPending] = useState<GeneratedPicture>();
   const [busy, setBusy] = useState(false);
   /**
    * The actor as it would be, once there is enough to say.
@@ -325,12 +369,34 @@ export const ActorCreator = ({
     if (!ready || busy) {
       return;
     }
+
+    // Kept on the way past, and the answer carried on in a LOCAL: `setLook`
+    // is not read until the next render, and the build below is this one.
+    let keeping = look;
+    if (pending) {
+      setBusy(true);
+      const file = await onKeep?.(pending);
+      setBusy(false);
+      if (!file) {
+        // The write refused and has said so. Stay in the panel with the
+        // picture still up, rather than walk on without it — which is the
+        // exact surprise this is here to prevent.
+        return;
+      }
+      keeping = {kind: 'sprite', value: file};
+      setLook(keeping);
+      setPending(undefined);
+      setDescribing(false);
+    }
+
     if (!last) {
       // Built on the way in, and rebuilt if the answers behind it changed:
       // walking back to rename the actor and forward again must not leave the
       // abilities step editing the actor that was.
       if (STEPS[at + 1].id === 'abilities') {
-        setBuilt(build({origin, source, name: chosenName, look}));
+        setBuilt(
+          build({origin, source, name: chosenName, look: keeping, shape}),
+        );
         setChosen(null);
         setAnswer(undefined);
       }
@@ -379,7 +445,13 @@ export const ActorCreator = ({
       onClose={onCancel}
       closeLabel="Close"
       primaryButtonProps={{
-        children: busy ? 'Making…' : last ? 'Create' : 'Next',
+        children: busy
+          ? last
+            ? 'Making…'
+            : 'Keeping the picture…'
+          : last
+            ? 'Create'
+            : 'Next',
         disabled: !ready || busy,
         onClick: () => void go(),
       }}
@@ -492,7 +564,34 @@ export const ActorCreator = ({
             </>
           )}
 
-          {STEPS[at].id === 'look' && (
+          {STEPS[at].id === 'look' && describing && (
+            <DescribePicture
+              drawing={drawing}
+              kind="actor"
+              scale={shape}
+              onScale={setShape}
+              onDrew={setPending}
+              onBack={() => {
+                // Choosing from the grid instead is a rejection of the drawn
+                // one, so it goes: `Next` must not keep a picture the learner
+                // has just walked away from.
+                setPending(undefined);
+                setDescribing(false);
+              }}
+              onKeep={onKeep ?? (async () => undefined)}
+              // What a described picture MEANS here: this actor's look. The
+              // shelf that draws backdrops does something else with the file
+              // it gets, which is why the component does neither — and coming
+              // back to the grid shows it chosen among the project's own.
+              onKept={file => {
+                setLook({kind: 'sprite', value: file});
+                setPending(undefined);
+                setDescribing(false);
+              }}
+            />
+          )}
+
+          {STEPS[at].id === 'look' && !describing && (
             <>
               <ul className={styles.choices}>
                 {/* THE PICTURES FIRST, then the animations, which is the order
@@ -591,16 +690,21 @@ export const ActorCreator = ({
                   Or none — an actor that paints itself needs no picture.
                 </Typography>
               )}
-
-              <DescribePicture
-                drawing={drawing}
-                kind="actor"
-                onKeep={onKeep ?? (async () => undefined)}
-                // What a described picture MEANS here: this actor's look. The
-                // shelf that draws backdrops does something else with the file
-                // it gets, which is why the component does neither.
-                onKept={file => setLook({kind: 'sprite', value: file})}
-              />
+              {drawing && (
+                // The way into the panel. A press rather than a field, because
+                // describing one takes the whole view: a prompt, a shape and a
+                // picture big enough to judge do not fit under this grid
+                // (`generate/DescribePicture`).
+                <button
+                  type="button"
+                  className={styles.describe}
+                  onClick={() => setDescribing(true)}
+                >
+                  <Typography variant="body3">
+                    Or describe one to be drawn…
+                  </Typography>
+                </button>
+              )}
             </>
           )}
 

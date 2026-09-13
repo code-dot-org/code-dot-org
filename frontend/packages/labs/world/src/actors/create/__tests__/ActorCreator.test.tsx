@@ -180,6 +180,8 @@ describe('the three doors', () => {
       name: 'Crawler',
       // …and nothing about its look, which it already has.
       look: undefined,
+      // One tile, which every actor is and which writes no row.
+      shape: {x: 1, y: 1},
     });
     expect(onCreate).toHaveBeenCalled();
   });
@@ -431,18 +433,40 @@ describe('the abilities step', () => {
 });
 
 describe('describing a picture', () => {
+  /** Step two, with the drawing panel open. */
   const atThePictures = () => {
     show();
     pastOrigin('Create my own');
+    fireEvent.click(screen.getByText(/Or describe one to be drawn/));
   };
 
-  it('is offered under the pictures the project has', () => {
+  it('is a door under the pictures the project has', () => {
     // Another way of answering the same question, and the likelier answer is
-    // still one of the pictures already there.
-    atThePictures();
+    // still one of the pictures already there — so it is a press away rather
+    // than in the way.
+    show();
+    pastOrigin('Create my own');
+    expect(screen.queryByLabelText('Describe a picture')).toBeNull();
 
+    fireEvent.click(screen.getByText(/Or describe one to be drawn/));
     expect(screen.getByLabelText('Describe a picture')).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Draw'})).toBeDisabled();
+  });
+
+  it('takes the whole view, and gives it back', () => {
+    // A prompt, a shape and a picture big enough to judge do not fit under the
+    // grid; the grid is a press away in both directions.
+    atThePictures();
+    expect(screen.queryByRole('button', {name: 'coin.png'})).toBeNull();
+
+    fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
+    expect(screen.getByRole('button', {name: 'coin.png'})).toBeTruthy();
+  });
+
+  it('asks how many tiles it fills', () => {
+    atThePictures();
+
+    expect(screen.getByLabelText('How many tiles it fills')).toBeTruthy();
   });
 
   it('is not offered at all when nothing can draw', () => {
@@ -451,7 +475,7 @@ describe('describing a picture', () => {
     show({drawing: undefined});
     pastOrigin('Create my own');
 
-    expect(screen.queryByLabelText('Describe a picture')).toBeNull();
+    expect(screen.queryByText(/Or describe one to be drawn/)).toBeNull();
   });
 
   it('asks with the learner’s own words', async () => {
@@ -466,15 +490,15 @@ describe('describing a picture', () => {
     expect(asked[0].prompt).toBe('a purple crab');
   });
 
-  it('shows what came back, to be chosen between', async () => {
+  it('shows what came back, big enough to judge', async () => {
     atThePictures();
     fireEvent.change(screen.getByLabelText('Describe a picture'), {
       target: {value: 'a crab'},
     });
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
-    await screen.findByRole('button', {name: 'Keep crab'});
-    expect(screen.getByRole('button', {name: 'Keep star'})).toBeTruthy();
+    expect(await screen.findByRole('img')).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Keep this one'})).toBeTruthy();
   });
 
   it('keeps the words, so asking again is an edit', async () => {
@@ -485,8 +509,8 @@ describe('describing a picture', () => {
     fireEvent.change(field, {target: {value: 'a crab'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
-    await screen.findByRole('button', {name: 'Keep crab'});
-    expect((field as HTMLInputElement).value).toBe('a crab');
+    await screen.findByRole('button', {name: 'Keep this one'});
+    expect((field as HTMLTextAreaElement).value).toBe('a crab');
   });
 
   it('writes the one that was pressed, and makes it the actor’s picture', async () => {
@@ -495,17 +519,17 @@ describe('describing a picture', () => {
       target: {value: 'a crab'},
     });
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
-    fireEvent.click(await screen.findByRole('button', {name: 'Keep star'}));
+    fireEvent.click(await screen.findByRole('button', {name: 'Keep this one'}));
 
-    await vi.waitFor(() => expect(onKeep).toHaveBeenCalledWith(DRAWN[1]));
-    // Gone from the tray: it is one of the project's pictures now, and showing
-    // it in both places would be saying it was two things.
+    await vi.waitFor(() => expect(onKeep).toHaveBeenCalledWith(DRAWN[0]));
+    // …and the panel gives the view back, with the kept picture chosen among
+    // the project's own — it is one of those now.
     await vi.waitFor(() =>
-      expect(screen.queryByRole('button', {name: 'Keep star'})).toBeNull(),
+      expect(screen.getByRole('button', {name: 'coin.png'})).toBeTruthy(),
     );
     toTheEnd();
     expect(build).toHaveBeenCalledWith(
-      expect.objectContaining({look: {kind: 'sprite', value: 'star.png'}}),
+      expect.objectContaining({look: {kind: 'sprite', value: 'crab.png'}}),
     );
   });
 
@@ -540,7 +564,7 @@ describe('describing a picture', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
-    await screen.findByRole('button', {name: 'Keep crab'});
+    await screen.findByRole('button', {name: 'Keep this one'});
     expect(screen.queryByText('Busy.')).toBeNull();
   });
 
@@ -551,10 +575,79 @@ describe('describing a picture', () => {
       target: {value: 'a crab'},
     });
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
-    fireEvent.click(await screen.findByRole('button', {name: 'Keep crab'}));
+    fireEvent.click(await screen.findByRole('button', {name: 'Keep this one'}));
 
     await vi.waitFor(() => expect(onKeep).toHaveBeenCalled());
     // Still there to try again, rather than silently gone.
-    expect(screen.getByRole('button', {name: 'Keep crab'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Keep this one'})).toBeTruthy();
+  });
+
+  it('keeps what is drawn when the learner presses on', async () => {
+    // THE REPORTED SURPRISE: a picture made, looked at, and not on the actor,
+    // because the press that kept it sat beside the press a learner was going
+    // to make anyway. Choosing one from the grid costs one press; so does
+    // this, and `Next` is what says "that one".
+    atThePictures();
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    await screen.findByRole('img');
+
+    fireEvent.click(onward());
+
+    await vi.waitFor(() => expect(onKeep).toHaveBeenCalledWith(DRAWN[0]));
+    await vi.waitFor(() =>
+      expect(build).toHaveBeenCalledWith(
+        expect.objectContaining({look: {kind: 'sprite', value: 'crab.png'}}),
+      ),
+    );
+  });
+
+  it('stays put when the write refused, rather than walking on without it', async () => {
+    onKeep.mockResolvedValueOnce(undefined as never);
+    atThePictures();
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    await screen.findByRole('img');
+
+    fireEvent.click(onward());
+
+    await vi.waitFor(() => expect(onKeep).toHaveBeenCalled());
+    // Walking on would be the same surprise wearing a different hat: an actor
+    // built without the picture the learner had just been looking at.
+    expect(build).not.toHaveBeenCalled();
+    expect(screen.getByLabelText('Describe a picture')).toBeTruthy();
+  });
+
+  it('does not keep one the learner walked away from', async () => {
+    // Going back to the grid is a rejection of the drawn one, so pressing on
+    // from there must write nothing.
+    atThePictures();
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    await screen.findByRole('img');
+
+    fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
+    fireEvent.click(onward());
+
+    expect(onKeep).not.toHaveBeenCalled();
+  });
+
+  it('writes the shape it was given into the actor', async () => {
+    // A fact about the ACTOR rather than the picture, so it survives leaving
+    // the panel and is written whatever the picture ends up being.
+    atThePictures();
+    fireEvent.click(screen.getByRole('button', {name: '2 across, 3 up'}));
+    fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
+    toTheEnd();
+
+    expect(build).toHaveBeenCalledWith(
+      expect.objectContaining({shape: {x: 2, y: 3}}),
+    );
   });
 });

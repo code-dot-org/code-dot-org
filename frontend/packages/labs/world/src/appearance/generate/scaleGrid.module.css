@@ -1,0 +1,49 @@
+/* Choosing how many tiles an actor fills, by drawing the rectangle it fills.
+   Four by four, counted from the bottom left — the corner a thing stands in
+   (specs/ACTOR_SIZE.md). */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--squares), 1.35rem);
+  grid-auto-rows: 1.35rem;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+}
+
+.square:hover {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+.square:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 1px;
+}
+
+/* The rectangle the actor fills. One colour, not a gradient: the point is the
+   SHAPE, and anything shaded reads as a measurement rather than a choice. */
+.filled {
+  border-color: var(--borders-brand-primary, #0093a4);
+  background-color: var(--borders-brand-primary, #0093a4);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.said {
+  color: var(--text-neutral-secondary);
+}

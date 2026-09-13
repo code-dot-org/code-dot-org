@@ -1,23 +1,40 @@
-/* Describing a picture, wherever the question is being asked. Shared by the
-   Actor Creator's picture step and the backdrop shelf, which want the same
-   thing in the same words (specs/IMAGE_GENERATION.md). */
+/* Describing a picture: a view of its own rather than a row under a grid.
+   Shared by the Actor Creator's picture step and the backdrop shelf
+   (specs/IMAGE_GENERATION.md). */
 
-.describe {
+.panel {
   display: flex;
   width: 100%;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* One labelled thing per line — the shape, the words, the picture — so the
+   panel has room for the next question without being redesigned. */
+.field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .prompt {
-  flex: 1 1 12rem;
+  width: 100%;
   box-sizing: border-box;
-  min-width: 0;
+  min-height: 4.5rem;
   padding: 0.5rem;
   border: 1px solid var(--borders-neutral-primary, #d4dae1);
   border-radius: 4px;
   font: inherit;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
 }
 
 .draw {
@@ -35,65 +52,57 @@
   cursor: default;
 }
 
-.draw:focus-visible {
+.draw:focus-visible,
+.back:focus-visible,
+.keep:focus-visible {
   outline: 2px solid var(--borders-brand-primary, #0093a4);
   outline-offset: 2px;
 }
 
-/* What came back, kept apart from the project's own pictures: it is not in the
-   project until it is pressed, and a grid that mixed them would be saying it
-   was. */
-.drawn {
+/* The way back to the pictures the project already has, which is the likelier
+   answer and must not become hard to reach for having been left. */
+.back {
+  padding: 0.45rem 0;
+  border: none;
+  background: none;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* WHAT CAME BACK, big. A picture chosen at thumbnail size is a picture nobody
+   looked at, and the whole reason to wait half a minute for one is to see it. */
+.preview {
   display: flex;
   width: 100%;
-  flex-direction: column;
-  gap: 6px;
+  min-height: 10rem;
+  align-items: center;
+  justify-content: center;
   padding: 8px;
   border: 1px dashed var(--borders-neutral-primary, #d4dae1);
   border-radius: 6px;
+  background-color: #101020;
 }
 
-.note {
+.preview img {
+  max-width: 100%;
+  max-height: 14rem;
+}
+
+.waiting,
+.nothing {
   color: var(--text-neutral-secondary);
+}
+
+.keep {
+  padding: 0.45rem 0.9rem;
+  border: 2px solid var(--borders-brand-primary, #0093a4);
+  border-radius: 4px;
+  background-color: var(--borders-brand-primary, #0093a4);
+  color: #fff;
+  cursor: pointer;
 }
 
 .problem {
   color: var(--text-danger, #c0392b);
-}
-
-.tray {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.picture {
-  display: flex;
-  width: 96px;
-  height: 96px;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  background-color: #101020;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.picture:hover {
-  border-color: var(--borders-brand-primary, #0093a4);
-}
-
-.picture:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
-}
-
-.picture img {
-  max-width: 100%;
-  max-height: 100%;
 }

@@ -74,9 +74,26 @@ describe('describing a picture', () => {
     fireEvent.change(field(), {target: {value: 'a crab'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
-    await screen.findByRole('button', {name: 'Keep crab'});
-    expect((field() as HTMLInputElement).value).toBe('a crab');
+    await screen.findByRole('button', {name: 'Keep this one'});
+    expect((field() as HTMLTextAreaElement).value).toBe('a crab');
     expect(screen.getByRole('button', {name: 'Draw again'})).toBeTruthy();
+  });
+
+  it('shows what came back, big enough to judge', async () => {
+    // The reason to wait half a minute for a picture is to see it; one shown
+    // at thumbnail size is one nobody looked at.
+    show();
+    fireEvent.change(field(), {target: {value: 'a crab'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    const picture = await screen.findByRole('img');
+    expect(picture.getAttribute('src')).toBe(DRAWN[0].dataUrl);
+  });
+
+  it('says it is working, and what the panel is for before it is', () => {
+    show();
+
+    expect(screen.getByText(/What comes back will show here/)).toBeTruthy();
   });
 
   it('says when it failed, rather than showing nothing', async () => {
@@ -93,16 +110,16 @@ describe('describing a picture', () => {
     expect(screen.getByRole('button', {name: 'Draw'})).not.toBeDisabled();
   });
 
-  it('hands a pressed picture to the caller, and tells it what landed', async () => {
+  it('hands the kept picture to the caller, and tells it what landed', async () => {
     show();
     fireEvent.change(field(), {target: {value: 'a crab'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
-    fireEvent.click(await screen.findByRole('button', {name: 'Keep crab'}));
+    fireEvent.click(await screen.findByRole('button', {name: 'Keep this one'}));
 
     await vi.waitFor(() => expect(onKeep).toHaveBeenCalledWith(DRAWN[0]));
     await vi.waitFor(() => expect(onKept).toHaveBeenCalledWith('crab.png'));
-    // Gone from the tray: it is one of the project's pictures now.
-    expect(screen.queryByRole('button', {name: 'Keep crab'})).toBeNull();
+    // Gone from the panel: it is one of the project's pictures now.
+    expect(screen.queryByRole('button', {name: 'Keep this one'})).toBeNull();
   });
 
   it('leaves it to try again when the write refused', async () => {
@@ -110,10 +127,72 @@ describe('describing a picture', () => {
     show();
     fireEvent.change(field(), {target: {value: 'a crab'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
-    fireEvent.click(await screen.findByRole('button', {name: 'Keep crab'}));
+    fireEvent.click(await screen.findByRole('button', {name: 'Keep this one'}));
 
     await vi.waitFor(() => expect(onKeep).toHaveBeenCalled());
     expect(onKept).not.toHaveBeenCalled();
-    expect(screen.getByRole('button', {name: 'Keep crab'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Keep this one'})).toBeTruthy();
+  });
+
+  it('says what is drawn and unkept, for a caller with its own way on', async () => {
+    // The wizard's `Next` is how a learner keeps one there, so the step above
+    // has to be able to see what is on screen
+    // (`actors/create/ActorCreator`). Cleared again once it has landed, so
+    // nothing writes it twice.
+    const onDrew = vi.fn();
+    show({onDrew});
+    fireEvent.change(field(), {target: {value: 'a crab'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(onDrew).toHaveBeenCalledWith(DRAWN[0]));
+
+    fireEvent.click(screen.getByRole('button', {name: 'Keep this one'}));
+    await vi.waitFor(() => expect(onDrew).toHaveBeenLastCalledWith(undefined));
+  });
+
+  it('says so when a failed ask left nothing drawn', async () => {
+    draw.mockRejectedValueOnce(new Error('Busy.') as never);
+    const onDrew = vi.fn();
+    show({onDrew});
+    fireEvent.change(field(), {target: {value: 'a crab'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await screen.findByText('Busy.');
+    expect(onDrew).toHaveBeenCalledWith(undefined);
+  });
+});
+
+describe('the shape it asks for', () => {
+  it('offers the grid only where a shape means something', () => {
+    // A backdrop is stretched over the viewport and has no tiles to fill, so
+    // the backdrop shelf gets the same panel without a question that would
+    // mean nothing there.
+    show();
+    expect(screen.queryByLabelText('How many tiles it fills')).toBeNull();
+
+    show({scale: {x: 1, y: 1}, onScale: vi.fn()});
+    expect(screen.getByLabelText('How many tiles it fills')).toBeTruthy();
+  });
+
+  it('tells the generator the shape that was drawn', async () => {
+    // Asked for in the shape it will be drawn in, a picture arrives right;
+    // drawn square and stretched over two tiles it is a stretched picture.
+    show({scale: {x: 2, y: 1}, onScale: vi.fn()});
+    fireEvent.change(field(), {target: {value: 'a log'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [{shape?: object}];
+    expect(asked[0].shape).toEqual({x: 2, y: 1});
+  });
+
+  it('offers the way back to the pictures there are', () => {
+    // Leaving the grid is a press and coming back is a press: the project's
+    // own pictures are still the likelier answer.
+    const onBack = vi.fn();
+    show({onBack});
+
+    fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
+    expect(onBack).toHaveBeenCalled();
   });
 });

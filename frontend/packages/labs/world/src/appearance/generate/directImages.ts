@@ -80,17 +80,17 @@ export const stemFor = (prompt: string): string => {
 /** Draw through the dev server's own origin. */
 export const directImages = (): ImageGenerator => ({
   kind: 'direct',
-  async draw({prompt, count, kind = 'actor', signal}) {
+  async draw({prompt, count, kind = 'actor', shape, signal}) {
     // The words are the learner's; what is ASKED is those words plus what the
     // picture is for — a transparent background for an actor, a seamless fill
     // for a tile (`generate/imagePrompts`). The node half is told the whole
     // thing and knows nothing about actors.
-    const style = styleFor(kind);
+    const style = styleFor(kind, shape);
     const answer = await fetch(DRAW_ROUTE, {
       method: 'POST',
       headers: {'content-type': 'application/json'},
       body: JSON.stringify({
-        prompt: promptFor(kind, prompt),
+        prompt: promptFor(kind, prompt, shape),
         count,
         size: style.size,
         transparent: style.transparent,

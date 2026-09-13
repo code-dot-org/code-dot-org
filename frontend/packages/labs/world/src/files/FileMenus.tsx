@@ -66,7 +66,7 @@ import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
 import {ActorCreator, type ActorDraft} from '../actors/create/ActorCreator';
-import {lookOf, withLook} from '../actors/create/actorLook';
+import {lookOf, withLook, withScale} from '../actors/create/actorLook';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {importStockActor} from '../actors/importStockActor';
 import {STOCK_ACTORS, stockActorById} from '../actors/stock';
@@ -413,6 +413,24 @@ export const FileMenus = () => {
     [ops, config, promptForName, thenAsk],
   );
 
+  /**
+   * The project as it stands, readable BETWEEN renders.
+   *
+   * `ops.source` is a value some render was handed, which is fine for
+   * everything here that writes once per press. The wizard does not: keeping a
+   * drawn picture and building the actor that names it are two writes in one
+   * tick, and the second has to see the first. Reading the render's copy it
+   * could not — so the commit wrote the pre-keep project back over the
+   * picture, and what a learner got was a `set sprite` row naming a file that
+   * was no longer there.
+   *
+   * Written by every render and by the keep itself. After `updateSources` the
+   * store already holds the new source, so the two cannot disagree and no
+   * later render can put a stale one back.
+   */
+  const live = useRef(ops.source);
+  live.current = ops.source;
+
   /** One write, at the end, with the lab's reconcile given the last word. */
   const commit = useCallback(
     (source: MultiFileSource) => {
@@ -433,23 +451,29 @@ export const FileMenus = () => {
    */
   const dressed = useCallback(
     (source: MultiFileSource, fileName: string, draft: ActorDraft) => {
-      if (!draft.look) {
+      const shaped =
+        draft.shape && (draft.shape.x !== 1 || draft.shape.y !== 1);
+      if (!draft.look && !shaped) {
         return source;
       }
       const id = fileIdAt(source, `${ACTORS_FOLDER}/${fileName}`);
       const file = id ? source.files[id] : undefined;
-      return file
-        ? {
-            ...source,
-            files: {
-              ...source.files,
-              [id as string]: {
-                ...file,
-                contents: withLook(file.contents ?? '', draft.look),
-              },
-            },
-          }
-        : source;
+      if (!file) {
+        return source;
+      }
+      let contents = file.contents ?? '';
+      if (draft.look) {
+        contents = withLook(contents, draft.look);
+      }
+      if (draft.shape) {
+        // How many tiles it fills, as a row of its own. One tile writes
+        // nothing, which is every actor that never touched the widget.
+        contents = withScale(contents, draft.shape);
+      }
+      return {
+        ...source,
+        files: {...source.files, [id as string]: {...file, contents}},
+      };
     },
     [],
   );
@@ -464,11 +488,15 @@ export const FileMenus = () => {
    */
   const buildActor = useCallback(
     (draft: ActorDraft): BuiltActor | undefined => {
+      // The project as it is NOW, not as the render that handed this over
+      // saw it: a picture kept on the way into this call is part of what
+      // the actor is built on top of.
+      const from = live.current;
       const fileName = fileNameFor(draft.name, 'actor');
       const language = languageForFileName(config, fileName);
 
       if (draft.origin === 'copy') {
-        const file = draft.source ? ops.source.files[draft.source] : undefined;
+        const file = draft.source ? from.files[draft.source] : undefined;
         if (!file) {
           return undefined;
         }
@@ -476,7 +504,7 @@ export const FileMenus = () => {
         // name is replaced inside the file for the reason it is there: two
         // actors called "Player" are two rows nobody can tell apart.
         const made = createNewFile({
-          source: ops.source,
+          source: from,
           fileName,
           language,
           folderId: file.folderId,
@@ -507,8 +535,8 @@ export const FileMenus = () => {
         // was the first cut of this, and what it did was rename their Coin to
         // "Gold Piece" and move every reference with it. So: whether the actor
         // file was there BEFORE decides which act this is.
-        const had = fileIdAt(ops.source, `${ACTORS_FOLDER}/${stock.id}.actor`);
-        const imported = importStockActor(ops.source, stock);
+        const had = fileIdAt(from, `${ACTORS_FOLDER}/${stock.id}.actor`);
+        const imported = importStockActor(from, stock);
         const id = fileIdAt(imported.source, `${imported.path}.actor`);
         const file = id ? imported.source.files[id] : undefined;
         if (!file) {
@@ -555,7 +583,7 @@ export const FileMenus = () => {
       // …and from nothing, which is `New actor` with the prompt already
       // answered. The folder and the file are one write, so a project with no
       // `actors/` gets one.
-      const placed = folderIn(ops.source, ACTORS_FOLDER);
+      const placed = folderIn(from, ACTORS_FOLDER);
       // Narrowed rather than asserted: `seedFor` answers either bytes or text
       // depending on the kind, and an actor's is always text — but the type
       // says so for `.png` too, and reading `.contents` off the other arm is
@@ -573,7 +601,7 @@ export const FileMenus = () => {
         path: `${ACTORS_FOLDER}/${stemOf(fileName)}`,
       };
     },
-    [ops.source, config, dressed],
+    [config, dressed],
   );
 
   /**
@@ -893,6 +921,9 @@ export const FileMenus = () => {
       if (!channelId) {
         return undefined;
       }
+      // As it is NOW: two keeps in a row must not land on one name, and
+      // an actor built after this one is built on what this wrote.
+      const from = live.current;
       // IN THIS FOLDER, not in the project. A `star.png` among the backdrops
       // does not stop one among the sprites — they are different files in
       // different folders, and that is what makes one a backdrop and the other
@@ -901,7 +932,7 @@ export const FileMenus = () => {
       // learner could see. The same question `nameProblem` asks.
       const folderId = folderIds.get(folder);
       const taken = new Set(
-        Object.values(ops.source.files)
+        Object.values(from.files)
           .filter(file => file.folderId === folderId)
           .map(file => file.name),
       );
@@ -935,7 +966,7 @@ export const FileMenus = () => {
       // THE FOLDER IS WHAT THE PICTURE IS. The same bytes are a sprite in
       // `sprites/` and a backdrop in `backgrounds/`, which is the whole of the
       // difference (`appearance/backgroundsFolder`).
-      const placed = folderIn(ops.source, folder);
+      const placed = folderIn(from, folder);
       const made = createExternalFile({
         source: placed.source,
         fileName,
@@ -950,10 +981,10 @@ export const FileMenus = () => {
       // find (`codebridge.activateFile` writes all three).
       const quiet = {
         ...made,
-        openFiles: ops.source.openFiles,
+        openFiles: from.openFiles,
         files: Object.fromEntries(
           Object.entries(made.files).map(([id, file]) => {
-            const before = ops.source.files[id];
+            const before = from.files[id];
             return [
               id,
               before
@@ -963,13 +994,14 @@ export const FileMenus = () => {
           }),
         ),
       };
-      updateSources({
-        ...currentSources,
-        source: config.reconcileSource?.(quiet, ops.source) ?? quiet,
-      });
+      const next = config.reconcileSource?.(quiet, from) ?? quiet;
+      // Said here as well as dispatched, because a caller may read it back
+      // before React has rendered — the wizard does, one line later.
+      live.current = next;
+      updateSources({...currentSources, source: next});
       return fileName;
     },
-    [ops.source, config, channelId, folderIds, updateSources, currentSources],
+    [config, channelId, folderIds, updateSources, currentSources],
   );
 
   /** The folder menu the animations' grid stands in for. */

@@ -535,16 +535,19 @@ describe('the file menus', () => {
     fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Crabby'}});
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
 
+    // The drawing panel is a door under the pictures now, not a row in them.
+    fireEvent.click(screen.getByText(/Or describe one to be drawn/));
     fireEvent.change(screen.getByLabelText('Describe a picture'), {
       target: {value: 'a purple crab'},
     });
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
-    const kept = await screen.findAllByRole(
-      'button',
-      {name: /^Keep /},
-      {timeout: 4000},
+    fireEvent.click(
+      await screen.findByRole(
+        'button',
+        {name: 'Keep this one'},
+        {timeout: 4000},
+      ),
     );
-    fireEvent.click(kept[0]);
 
     await vi.waitFor(() => expect(uploadAsset).toHaveBeenCalled());
     const sent = uploadAsset.mock.calls.at(-1)![0];
@@ -563,6 +566,40 @@ describe('the file menus', () => {
     expect(made.open).toBe(false);
     expect(made.active).toBe(false);
     expect(source.openFiles).toEqual(SOURCE.openFiles);
+  });
+
+  it('carries the picture into the actor, when pressing on is what kept it', async () => {
+    // THE SECOND HALF OF ONE TICK. `Next` keeps the drawn picture and then
+    // builds the actor that names it, and the build reads the project — so it
+    // has to read the project the keep just wrote. Built on the render's copy
+    // instead, the commit put the pre-keep project back, and the actor came
+    // out with a `set sprite` row naming a file that was no longer there.
+    openMenu('Actors');
+    fireEvent.click(screen.getByText('New'));
+    await screen.findByText('Create my own');
+    fireEvent.click(screen.getByText('Create my own'));
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Crabby'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+
+    fireEvent.click(screen.getByText(/Or describe one to be drawn/));
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a purple crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    await screen.findByRole('button', {name: 'Keep this one'}, {timeout: 4000});
+
+    // …and NOT pressing it. This is the press a learner makes anyway.
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    fireEvent.click(await screen.findByRole('button', {name: 'Create'}));
+
+    await vi.waitFor(() => expect(uploadAsset).toHaveBeenCalled());
+    // BOTH writes, and the second is the one that matters: waiting for "a
+    // write" passes on the keep's own, which of course has the picture in it.
+    await vi.waitFor(() => expect(updateSources.mock.calls.length).toBe(2));
+    const {source} = updateSources.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+    };
+    expect(source.files.made?.url).toBe('/v3/assets/channel-1/stored.png');
   });
 
   it('lets a picture be named, which the file-name rule refuses', async () => {

@@ -189,3 +189,25 @@
   outline: 2px solid var(--borders-brand-primary, #0093a4);
   outline-offset: 2px;
 }
+
+/* The way into the drawing panel, under the pictures a project already has —
+   which are the likelier answer, so this is a door rather than a field. */
+.describe {
+  align-self: flex-start;
+  padding: 0.45rem 0.9rem;
+  border: 2px dashed var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.describe:hover {
+  border-style: solid;
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+.describe:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}

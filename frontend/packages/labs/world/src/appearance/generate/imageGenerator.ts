@@ -55,6 +55,15 @@ export interface DrawRequest {
    * had the answer to.
    */
   kind?: ImageKind;
+  /**
+   * How many tiles the actor will fill, when it is not one.
+   *
+   * A picture drawn square and then stretched over two tiles is a stretched
+   * picture. Asked for in the shape it will be drawn in, it arrives right — so
+   * the shape the learner drew is a fact the provider is told, not one applied
+   * afterwards (`generate/ScaleGrid`, specs/ACTOR_SIZE.md).
+   */
+  shape?: {x: number; y: number};
   /** How many to offer. A transport may answer with fewer. */
   count?: number;
   /**

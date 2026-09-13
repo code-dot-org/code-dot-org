@@ -89,9 +89,59 @@ const STYLES: Record<ImageKind, DrawingStyle> = {
   background: {transparent: false, size: '1536x1024', maxSide: 640},
 };
 
-/** What to ask the provider for, given what the learner said. */
-export const promptFor = (kind: ImageKind, words: string): string =>
-  `${words.trim()}. ${CLAUSES[kind]} ${HOUSE_STYLE}`;
+/**
+ * The sizes a provider will actually draw, nearest-first by how wide they are.
+ *
+ * A provider takes a handful of sizes rather than any number, so a shape is
+ * ASKED FOR by picking the offered size closest to it rather than by naming
+ * one. Landscape, square and portrait is the whole of what is on offer, which
+ * is enough: what matters is that a two-across actor is drawn wide, not that
+ * it is drawn exactly two-by-one.
+ */
+const OFFERED = [
+  {ratio: 1536 / 1024, size: '1536x1024'},
+  {ratio: 1, size: '1024x1024'},
+  {ratio: 1024 / 1536, size: '1024x1536'},
+];
 
-/** …and how to ask for it. */
-export const styleFor = (kind: ImageKind): DrawingStyle => STYLES[kind];
+/** The offered size whose shape is nearest the one asked for. */
+const sizeFor = (shape: {x: number; y: number} | undefined): string => {
+  if (!shape || shape.y <= 0) {
+    return '1024x1024';
+  }
+  const wanted = shape.x / shape.y;
+  return OFFERED.reduce((best, one) =>
+    Math.abs(Math.log(one.ratio / wanted)) <
+    Math.abs(Math.log(best.ratio / wanted))
+      ? one
+      : best,
+  ).size;
+};
+
+/** What to ask the provider for, given what the learner said. */
+export const promptFor = (
+  kind: ImageKind,
+  words: string,
+  shape?: {x: number; y: number},
+): string => {
+  const proportion =
+    shape && (shape.x !== 1 || shape.y !== 1)
+      ? ` Compose it to fill a frame ${shape.x} wide by ${shape.y} tall, so the subject is that shape and not a square one.`
+      : '';
+  return `${words.trim()}. ${CLAUSES[kind]}${proportion} ${HOUSE_STYLE}`;
+};
+
+/**
+ * …and how to ask for it.
+ *
+ * The SHAPE overrides the kind's own size where one is given: an actor two
+ * tiles across wants a wide picture, and drawing it square and stretching it
+ * afterwards is a stretched picture.
+ */
+export const styleFor = (
+  kind: ImageKind,
+  shape?: {x: number; y: number},
+): DrawingStyle => ({
+  ...STYLES[kind],
+  ...(shape && kind !== 'background' ? {size: sizeFor(shape)} : {}),
+});
