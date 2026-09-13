@@ -240,6 +240,8 @@ export const ActorCreator = ({
   const [prompt, setPrompt] = useState('');
   const [drawn, setDrawn] = useState<readonly GeneratedPicture[]>([]);
   const [drawingNow, setDrawingNow] = useState(false);
+  /** Why the last ask came back with nothing, when it did. */
+  const [drawFailed, setDrawFailed] = useState<string>();
 
   /**
    * The name to write, which is the typed one or the chosen thing's.
@@ -322,12 +324,30 @@ export const ActorCreator = ({
       return;
     }
     setDrawingNow(true);
+    setDrawFailed(undefined);
     try {
-      setDrawn(await drawing.draw({prompt: prompt.trim(), count: DRAW_COUNT}));
-    } catch {
-      // Abandoned, or the transport failed. Either way there is nothing new
-      // to show and what was already there is still worth looking at.
+      // AN ACTOR, said rather than defaulted. What the picture is for decides
+      // how the words are asked — a transparent background and no scenery, for
+      // this one — and the call site is the only place that knows
+      // (`appearance/generate/imagePrompts`).
+      setDrawn(
+        await drawing.draw({
+          prompt: prompt.trim(),
+          kind: 'actor',
+          count: DRAW_COUNT,
+        }),
+      );
+    } catch (error) {
+      // SAID, rather than an empty tray. The fixture cannot fail, so this was
+      // dead code until something could: a service that refuses a key or is
+      // busy leaves a learner pressing a button that appears to do nothing,
+      // and "nothing happened" is the one answer a door must never give.
       setDrawn([]);
+      setDrawFailed(
+        error instanceof Error && error.message
+          ? error.message
+          : 'That did not work. Try again.',
+      );
     } finally {
       setDrawingNow(false);
     }
@@ -656,6 +676,11 @@ export const ActorCreator = ({
                       </Typography>
                     </button>
                   </div>
+                  {drawFailed !== undefined && (
+                    <Typography variant="body4" className={styles.problem}>
+                      {drawFailed}
+                    </Typography>
+                  )}
                   {drawn.length > 0 && (
                     <div className={styles.drawn}>
                       <Typography variant="body4" className={styles.drawnNote}>

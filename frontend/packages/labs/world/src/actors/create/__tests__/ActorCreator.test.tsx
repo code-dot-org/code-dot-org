@@ -509,6 +509,41 @@ describe('describing a picture', () => {
     );
   });
 
+  it('says so when the drawing failed, rather than showing nothing', async () => {
+    // The fixture cannot fail, so this was dead until the dev proxy could: a
+    // service that refuses a key leaves a learner pressing a button that
+    // appears to do nothing, and "nothing happened" is the one answer a door
+    // must never give.
+    draw.mockRejectedValueOnce(
+      new Error('The drawing service refused the key.') as never,
+    );
+    atThePictures();
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    expect(
+      await screen.findByText('The drawing service refused the key.'),
+    ).toBeTruthy();
+    // …and the button comes back, so asking again is one press.
+    expect(screen.getByRole('button', {name: 'Draw'})).not.toBeDisabled();
+  });
+
+  it('clears the complaint when the next ask works', async () => {
+    draw.mockRejectedValueOnce(new Error('Busy.') as never);
+    atThePictures();
+    const field = screen.getByLabelText('Describe a picture');
+    fireEvent.change(field, {target: {value: 'a crab'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    await screen.findByText('Busy.');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await screen.findByRole('button', {name: 'Keep crab'});
+    expect(screen.queryByText('Busy.')).toBeNull();
+  });
+
   it('keeps nothing when the write refused', async () => {
     onKeep.mockResolvedValueOnce(undefined as never);
     atThePictures();

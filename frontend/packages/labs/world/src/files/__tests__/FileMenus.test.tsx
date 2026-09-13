@@ -6,7 +6,7 @@
 // and that `New` names the extension so a learner does not have to.
 
 import {fireEvent, render, screen} from '@testing-library/react';
-import {beforeEach, describe, expect, it, vi} from 'vitest';
+import {beforeEach, describe, expect, it, vi, type Mock} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -17,7 +17,9 @@ const newExternalFile = vi.fn();
 const activateFile = vi.fn();
 const deleteFile = vi.fn();
 const promptForName = vi.fn(async () => 'Chaser');
-const upload = vi.fn(async () => undefined);
+/** Typed so a test can read back the file and the folder it was handed. */
+const upload: Mock<(file: File, folderId?: string) => Promise<undefined>> =
+  vi.fn(async () => undefined);
 const confirm = vi.fn(async () => true);
 const alert = vi.fn(async () => {});
 
@@ -105,6 +107,20 @@ const createNewFile = vi.fn((args: {source: MultiFileSource}) => args.source);
  * whether the undoing worked, and an assertion about "the new picture" would
  * find whichever `.png` the fixture already had.
  */
+/** The assets backend, which answers with the URL the project will carry. */
+const uploadAsset: Mock<
+  (params: {
+    channelId: string;
+    filename: string;
+    data: Blob;
+  }) => Promise<{url: string}>
+> = vi.fn(async () => ({url: '/v3/assets/channel-1/stored.png'}));
+
+vi.mock('@code-dot-org/core/api', async importActual => ({
+  ...(await importActual<object>()),
+  DashboardApiClient: {assets: {upload: uploadAsset}},
+}));
+
 const createExternalFile = vi.fn(
   (args: {
     source: MultiFileSource;
@@ -181,9 +197,23 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
   }),
 }));
 
+// The drawing door asks what can draw before it offers itself, and in jsdom
+// nothing answers `/__images/status` — so without this there is no door to
+// drive. The fixture is what a harness with no key would have chosen anyway
+// (`appearance/generate/chooseImageGenerator`).
+vi.mock('../../appearance/generate/chooseImageGenerator', async () => {
+  const {fixtureImages} = await import(
+    '../../appearance/generate/fixtureImages'
+  );
+  return {chooseImageGenerator: async () => ({generator: fixtureImages()})};
+});
+
 vi.mock('@code-dot-org/lab/redux', () => ({
   labActions: {isReadOnlyWorkspace: () => false},
-  useAppSelector: (select: (state: unknown) => unknown) => select({}),
+  // A channel, because an uploaded asset is scoped to one and the drawing
+  // door will not keep a picture without it.
+  useAppSelector: (select: (state: unknown) => unknown) =>
+    select({lab: {channel: {id: 'channel-1'}}}),
 }));
 
 const {FileMenus} = await import('../FileMenus');
@@ -491,13 +521,13 @@ describe('the file menus', () => {
     expect(screen.getByRole('button', {name: 'Next'})).toBeDisabled();
   });
 
-  it('keeps a described picture without opening it', async () => {
-    // Only the browser caught this. `createExternalFile` activates what it
-    // makes — right for an upload from the file menus, wrong for a wizard
-    // still asking questions: a learner who keeps a picture from each of two
-    // prompts would find two editors open behind a dialog they have not
-    // finished with. And the tab bar reads the SOURCE's `openFiles`, so
-    // clearing the flags on the file was not enough.
+  it('keeps a described picture as an upload, and opens nothing', async () => {
+    // TWO CLAIMS, and each was a bug first. The bytes go to the assets
+    // backend and the project keeps the URL — inlining them as a data URL,
+    // the way an imported backdrop is written, put a megabyte and a half into
+    // one `sessionStorage` blob and exhausted it. And the file is written
+    // quietly: `createExternalFile` activates what it makes, which would open
+    // an editor behind a dialog the learner has not finished with.
     openMenu('Actors');
     fireEvent.click(screen.getByText('New'));
     await screen.findByText('Create my own');
@@ -509,7 +539,6 @@ describe('the file menus', () => {
       target: {value: 'a purple crab'},
     });
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
-    // Four came back, which is the point of the tray — press the first.
     const kept = await screen.findAllByRole(
       'button',
       {name: /^Keep /},
@@ -517,13 +546,20 @@ describe('the file menus', () => {
     );
     fireEvent.click(kept[0]);
 
+    await vi.waitFor(() => expect(uploadAsset).toHaveBeenCalled());
+    const sent = uploadAsset.mock.calls.at(-1)![0];
+    expect(sent.channelId).toBe('channel-1');
+    expect(sent.filename).toMatch(/\.png$/);
+
     await vi.waitFor(() => expect(updateSources).toHaveBeenCalled());
     const {source} = updateSources.mock.calls.at(-1)![0] as {
       source: MultiFileSource;
     };
     const made = source.files.made;
+    // The URL the backend answered with, and no bytes anywhere.
+    expect(made.url).toBe('/v3/assets/channel-1/stored.png');
+    expect(made.url).not.toMatch(/^data:/);
     // In the project, and on nobody's screen.
-    expect(made.url).toMatch(/^data:image\/png;base64,/);
     expect(made.open).toBe(false);
     expect(made.active).toBe(false);
     expect(source.openFiles).toEqual(SOURCE.openFiles);

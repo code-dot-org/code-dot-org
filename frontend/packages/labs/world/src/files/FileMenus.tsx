@@ -38,6 +38,7 @@ import {
 import {
   createRef,
   useCallback,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -57,6 +58,7 @@ import {
 } from '@code-dot-org/codebridge';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {DashboardApiClient} from '@code-dot-org/core/api';
 import type {ProjectFile, MultiFileSource} from '@code-dot-org/core/api';
 import {IconButtonWithTooltip} from '@code-dot-org/lab/components';
 import {useSources} from '@code-dot-org/lab/contexts';
@@ -72,8 +74,11 @@ import {AnimationPickerDialog} from '../animationEditor/AnimationPickerDialog';
 import {parseAnim} from '../animationEditor/animDocument';
 import {SpritePickerDialog} from '../animationEditor/SpritePickerDialog';
 import {BackgroundPickerDialog} from '../appearance/BackgroundPickerDialog';
-import {fixtureImages} from '../appearance/generate/fixtureImages';
-import type {GeneratedPicture} from '../appearance/generate/imageGenerator';
+import {chooseImageGenerator} from '../appearance/generate/chooseImageGenerator';
+import type {
+  GeneratedPicture,
+  ImageGenerator,
+} from '../appearance/generate/imageGenerator';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {actorIconImage} from '../blockly/actorIcons';
 import {actorIcon, actorThumbnail} from '../blockly/actorThumbnails';
@@ -129,6 +134,8 @@ export const FileMenus = () => {
   const config = useCodebridgeConfig();
   const {promptForName, confirm, alert} = usePrompts();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
+  /** What scopes an uploaded asset to this project. */
+  const channelId = useAppSelector(state => state.lab.channel?.id);
   const [open, setOpen] = useState<{menu: FolderMenu; anchor: HTMLElement}>();
   /**
    * Whether the actor grid is up.
@@ -834,57 +841,98 @@ export const FileMenus = () => {
   );
 
   /**
-   * Where a described picture comes from.
+   * Where a described picture comes from, if anywhere.
    *
-   * The FIXTURE, and only the fixture, until there is something that can draw:
-   * the flow is built and tested against it, and the two transports that talk
-   * to a service are a matter of filling in the same interface
-   * (specs/IMAGE_GENERATION.md). Made once rather than per render, since the
-   * wizard holds on to it while it waits.
+   * ASKED ONCE, AND BEFORE THE DOOR IS OFFERED. Which of the transports this
+   * is — a dev proxy really drawing, the fixture, or nothing at all — depends
+   * on what is answering on this origin, and a door that offered to draw and
+   * then failed would read as a broken lab
+   * (`appearance/generate/chooseImageGenerator`).
+   *
+   * Undefined until the question comes back, which is a few milliseconds in
+   * the harness and for ever anywhere else. The wizard simply does not offer
+   * the door while it is undefined, which is the same thing it does when the
+   * answer is that nothing can draw.
    */
-  const drawing = useMemo(() => fixtureImages(), []);
+  const [drawing, setDrawing] = useState<ImageGenerator>();
+  useEffect(() => {
+    let gone = false;
+    void chooseImageGenerator().then(chosen => {
+      if (!gone) {
+        setDrawing(chosen.generator);
+      }
+    });
+    return () => {
+      gone = true;
+    };
+  }, []);
 
   /**
-   * Keep a drawn picture: write it into `sprites/`, and say what it is called.
+   * Keep a drawn picture: upload the bytes, and say what it is called.
    *
-   * The same write an upload makes, because it is the same thing — bytes on a
-   * URL in the folder that decides what a picture IS (`tookUpload`,
-   * `appearance/importStock`). Nothing on the file says it was described
-   * rather than drawn or imported, and there is nothing to un-describe.
+   * THE BYTES GO TO THE ASSETS BACKEND and the project keeps only the URL it
+   * answers with, which is what an upload does and what a picture in a project
+   * is (`codebridge/useFileUpload`, `core/api/assets`). The first cut of this
+   * inlined a data URL the way an imported stock backdrop does — fine for a
+   * 400-pixel backdrop, and not for what a model draws: the harness keeps a
+   * project in one `sessionStorage` blob and two pictures exhausted it.
+   *
+   * NOT THROUGH `useFileUpload`, though it is the same road, and the
+   * difference is one thing that hook does at the end: it activates the file
+   * it makes. That is right for an upload from the file menus and wrong for a
+   * wizard still asking questions — a learner who keeps a picture from each of
+   * two prompts would find two editors open behind a dialog they have not
+   * finished with, having asked for neither. So the upload is called directly
+   * and the file written here, quietly.
    */
   const keepPicture = useCallback(
     async (picture: GeneratedPicture): Promise<string | undefined> => {
+      if (!channelId) {
+        return undefined;
+      }
       const taken = new Set(
         Object.values(ops.source.files).map(file => file.name),
       );
-      // `crab.png`, then `crab2.png`: a learner may keep four pictures from
-      // one prompt, and the name a transport gives is a word rather than a
-      // promise that it is unique.
+      // `crab.png`, then `crab2.png`: a learner may keep a picture from each
+      // of several prompts, and the name a transport gives is a word rather
+      // than a promise that it is unique.
       let fileName = `${picture.name}.png`;
       for (let at = 2; taken.has(fileName); at++) {
         fileName = `${picture.name}${at}.png`;
       }
+
+      let url: string;
+      try {
+        const bytes = await (await fetch(picture.dataUrl)).blob();
+        // A name of its own in the asset store, so two projects keeping a
+        // `crab.png` cannot land on each other — the same shape the uploader
+        // uses, for the same reason.
+        const stored = await DashboardApiClient.assets.upload({
+          channelId,
+          filename: `${crypto.randomUUID()}.png`,
+          data: bytes,
+        });
+        url = stored.url;
+      } catch (error) {
+        // The wizard leaves the picture in the tray to try again; the console
+        // gets the reason, as the uploader's own failure path does.
+        console.error('Keeping the drawn picture failed', error);
+        return undefined;
+      }
+
       const placed = folderIn(ops.source, SPRITES_FOLDER);
       const made = createExternalFile({
         source: placed.source,
         fileName,
         language: languageForFileName(config, fileName),
         folderId: placed.folderId,
-        url: picture.dataUrl,
+        url,
         mimeType: picture.mediaType,
       });
       // …AND IT OPENS NOTHING. `createExternalFile` activates what it makes,
-      // which is what an upload from the file menus wants and not what a
-      // wizard still asking questions does: a learner who keeps a picture from
-      // each of two prompts would find two editors open behind a dialog they
-      // have not finished with, having asked for neither. The file is in the
-      // project either way; what is on the screen is the wizard's until it
-      // closes.
-      //
-      // `openFiles` AND the per-file flags, which took three goes to find:
-      // the tab bar reads the SOURCE's list of open files, so clearing the
-      // flags on the file left the tab exactly where it was
-      // (`codebridge.activateFile` writes both).
+      // and the tab bar reads the SOURCE's `openFiles` list — so both that and
+      // the file's own two flags have to be put back, which took three goes to
+      // find (`codebridge.activateFile` writes all three).
       const quiet = {
         ...made,
         openFiles: ops.source.openFiles,
@@ -906,7 +954,7 @@ export const FileMenus = () => {
       });
       return fileName;
     },
-    [ops.source, config, updateSources, currentSources],
+    [ops.source, config, channelId, updateSources, currentSources],
   );
 
   /** The folder menu the animations' grid stands in for. */
