@@ -1,36 +1,19 @@
 import {http, HttpResponse} from 'msw';
 
-import {readResource, writeResource, clearResource} from './scenarioStore';
+import {clearAsset, readAsset, writeAsset} from './assetStore';
 
-// In-memory asset store for the standalone demo (no real assets backend). An
-// uploaded file is base64-encoded into the scenario store keyed by its path, and
-// served back on GET — enough for the editor's `<img>` and, later, World Lab's
-// forwarding of the bytes into the preview sandbox.
+// Asset store for the standalone demo (no real assets backend). An uploaded
+// file is kept as a Blob and served back on GET — enough for the editor's
+// `<img>` and for World Lab's forwarding of the bytes into the preview
+// sandbox.
+//
+// IN INDEXEDDB rather than beside the other mock state, which is a size
+// question and nothing else (`assetStore`): the scenario store is
+// `sessionStorage`, whose whole budget for an origin is about five megabytes,
+// and a picture a model drew is a megabyte and a half on its own.
 
 const key = (channelId: string, filename: string) =>
   `asset:${channelId}:${filename}`;
-
-interface StoredAsset {
-  base64: string;
-  contentType: string;
-}
-
-function toBase64(bytes: Uint8Array): string {
-  let binary = '';
-  for (const b of bytes) {
-    binary += String.fromCharCode(b);
-  }
-  return btoa(binary);
-}
-
-function fromBase64(base64: string): Uint8Array {
-  const binary = atob(base64);
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i++) {
-    bytes[i] = binary.charCodeAt(i);
-  }
-  return bytes;
-}
 
 export const assetsHandlers = [
   // PUT /v3/assets/:channelId/:filename — store the uploaded file.
@@ -44,38 +27,38 @@ export const assetsHandlers = [
     if (!(file instanceof Blob)) {
       return new HttpResponse('missing file', {status: 400});
     }
-    const bytes = new Uint8Array(await file.arrayBuffer());
-    writeResource<StoredAsset>(key(channelId, filename), {
-      base64: toBase64(bytes),
+    await writeAsset(key(channelId, filename), {
+      // The Blob itself, not base64 of it: a browser stores one natively, and
+      // the encoding was costing a third of the size for nothing.
+      blob: file,
       contentType: file.type || 'application/octet-stream',
     });
     return HttpResponse.json({filename}, {status: 200});
   }),
 
   // GET /v3/assets/:channelId/:filename — serve a stored asset's bytes.
-  http.get('*/v3/assets/:channelId/:filename', ({params}) => {
+  http.get('*/v3/assets/:channelId/:filename', async ({params}) => {
     const {channelId, filename} = params as {
       channelId: string;
       filename: string;
     };
-    const stored = readResource<StoredAsset>(key(channelId, filename));
+    const stored = await readAsset(key(channelId, filename));
     if (!stored) {
       return new HttpResponse('not found', {status: 404});
     }
-    const bytes = fromBase64(stored.base64);
-    return new HttpResponse(bytes, {
+    return new HttpResponse(stored.blob, {
       status: 200,
       headers: {'Content-Type': stored.contentType},
     });
   }),
 
   // DELETE /v3/assets/:channelId/:filename.
-  http.delete('*/v3/assets/:channelId/:filename', ({params}) => {
+  http.delete('*/v3/assets/:channelId/:filename', async ({params}) => {
     const {channelId, filename} = params as {
       channelId: string;
       filename: string;
     };
-    clearResource(key(channelId, filename));
+    await clearAsset(key(channelId, filename));
     return new HttpResponse(null, {status: 204});
   }),
 ];
