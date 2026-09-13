@@ -23,6 +23,35 @@
   width: 850px;
 }
 
+// Standalone presentation: the panel's content parked on the lab's own
+// ground — no modal entrance, no card chrome. The painted panel color (the
+// alternatives ring gap) has to match that ground rather than the card's.
+.dialogHost .standaloneDialog {
+  animation: none;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  --dialog-panel-bg: var(--background-neutral-primary);
+
+  .footer {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  // The image sits on the stage itself: no frame, and no checkerboard (that
+  // is for the dialog, whose opaque panel would otherwise hide transparency).
+  .imagePane {
+    border: none;
+  }
+
+  .imagePaneChecker {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
 .dialogHost .dialog :focus-visible {
   @include chrome.focus-ring;
 }
@@ -252,6 +281,21 @@
 }
 
 // --- Generate view ---
+
+// Hosts the transplanted guide Adlib (it brings its own dark panel and
+// glowing border); the native fieldset disable dims it while typed text
+// has precedence.
+.adlibGroup {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: opacity 0.15s ease;
+
+  &[disabled] {
+    opacity: 0.45;
+  }
+}
 
 .formRow {
   display: flex;

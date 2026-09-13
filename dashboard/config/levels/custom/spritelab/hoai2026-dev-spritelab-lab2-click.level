@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -31,33 +31,43 @@
     },
     "guide_steps": [
       {
-        "text": "**Set the scene.** Use the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far."
+        "text": "**Add your new character on the right.** Use **make new sprite** with position **right** - they'll turn to face your hero. Then add **when clicked** with a **say** block inside, so clicking them makes them speak. Press **Play** and try it."
       },
       {
-        "text": "**That's your story!** Watch it play, then continue when you're ready.",
+        "text": "**It's interactive!** Click your new character to hear from them, then continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Set the scene\nUse the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far.",
+    "long_instructions": "# Click to talk\nAdd your new character on the **right** of the scene. Then add **when clicked** with a **say** block inside, so clicking them makes them speak.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_setBackgroundImageAs"
+          "type": "spritelab2_makeSpriteAtPosition",
+          "fields": {
+            "POSITION": "right"
+          }
         },
         {
           "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
+          "type": "gamelab_spriteClicked",
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
         },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "Hello!"
+            "SPEECH": "You clicked me!"
           },
           "inputs": {
             "SPRITE": {

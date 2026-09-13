@@ -2,8 +2,9 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
-import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
+import {LevelMode} from './levelMode';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
 
@@ -58,11 +59,17 @@ export interface RuntimeAnimationList {
   propsByKey: {[key: string]: RuntimeAnimationProps};
 }
 
+/** What a scene is for. Chosen when the scene is created; decides the
+    blocks it offers and how big its sprites are. */
+export type SceneType = 'story' | 'platform';
+
 // A named code workspace. The id is the source of truth (the go-to-scene
 // block stores it); scenes[0] is the default scene Play starts at.
 export interface Scene {
   id: string;
   name: string;
+  // Absent on scenes made before scenes declared a type.
+  type?: SceneType;
   // This scene's Blockly workspace serialization.
   source?: WorkspaceSerialization;
   // World-tab experiment: starter sprite/block placements, spawned ahead of
@@ -110,32 +117,24 @@ export interface GuideStep {
 }
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
-  guideMode?: 'instructions' | 'aiCodeGenerate';
-  aiCodeGenerateAdlib?: string;
-  aiCodeGenerateText?: boolean;
-  // World-tab experiment: show the tab on this level (equivalent to the
-  // world-tab=true URL parameter).
-  showWorldTab?: boolean;
-  // Cells per side of the playfield for a world this level creates. An
-  // existing world keeps the size stored in its own grid; see resizeWorld.
-  worldGridSize?: number;
-  // The tabs this level shows, in the order that names the starting tab
-  // (the first entry). Absent or empty means the default set.
-  visibleTabs?: Tab[];
-  // Staged text for the floating guide, in order; requires guideMode.
+  /** What kind of level this is; decides the tabs and the image controls. */
+  levelMode?: LevelMode;
+  /** The one scene this level edits, created on first load if the project
+      lacks it. The id is the key the go-to-scene block stores; the name is
+      what the student sees, applied only at creation. The id must not be
+      'scene-1' (the id synthesized for sources saved before scenes). */
+  pinnedScene?: {
+    id: string;
+    name: string;
+    type?: SceneType;
+  };
+  // Staged text for the floating guide, in order.
   guideSteps?: GuideStep[];
-  // Locks the new-image dialog's Type choice.
-  lockedImageType?: ImageType;
-  // Show the full internal image dialog — name field, Start from,
-  // temperature — instead of the student one (equivalent to the
-  // images-advanced=true URL parameter).
-  imagesAdvanced?: boolean;
-  // The one scene this level edits, created on first load if the project
-  // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
-  // before scenes existed).
-  pinnedSceneId?: string;
-  // Name given to the pinned scene at creation.
-  pinnedSceneName?: string;
+  /** Premade world for the pinned scene, one string per playfield row
+      anchored to the floor. 'B' cells become the block image the student
+      made most recently, 'S' their first character. Each kind seeds only
+      while the world holds none of it, into empty cells only. */
+  worldStartPattern?: string[];
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

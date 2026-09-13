@@ -25,14 +25,14 @@ const generator: GeneratorFunction = block =>
     block.getFieldValue('ANIMATION_NAME')
   )}, ` + `${JSON.stringify(block.getFieldValue('GRID'))});\n`;
 
-// A player sprite at the marked grid cell, plus arrow movement and a space
-// jump. Assumes the zGameDev helper library (per-tick gravity, player/wall
-// collisions, cell-sized sprites). Keyed to the 'players' group, not the
-// costume, so a label that fails to round-trip can't orphan the player from
-// its physics. Movement reads the sprite's own speed so "set speed" still
-// applies; the jump goes through platformJump, which checks footing and
-// jumps against gravity whichever way it points. At zero gravity there is
-// no jump and the up and down arrows steer instead.
+// A player sprite at the marked grid cell, plus arrow movement and a jump
+// on space or up. Assumes the zGameDev helper library (per-tick gravity,
+// player/wall collisions, cell-sized sprites). Keyed to the 'players'
+// group, not the costume, so a label that fails to round-trip can't orphan
+// the player from its physics. Movement reads the sprite's own speed so
+// "set speed" still applies; the jump goes through platformJump, which
+// checks footing and jumps against gravity whichever way it points. At
+// zero gravity there is no jump and the up and down arrows steer instead.
 // Clears a two-tile step with a little margin (apex ~2.4 tiles at the
 // default gravity).
 const JUMP_SPEED = 13;
@@ -55,6 +55,11 @@ const helperCode = [
   "  keyPressed('while', 'up', function () {",
   '    if (platformGravity() === 0) {',
   "      moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'North');",
+  '    }',
+  '  });',
+  "  keyPressed('when', 'up', function () {",
+  '    if (platformGravity() !== 0) {',
+  `      platformJump(${JUMP_SPEED});`,
   '    }',
   '  });',
   "  keyPressed('while', 'down', function () {",

@@ -18,12 +18,17 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from '../ai/images/encoding';
+import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
-import {ImageGenerationMetadata, ImageType} from '../ai/images/types';
+import {
+  ImageGenerationMetadata,
+  ImageStyle,
+  ImageType,
+} from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
 import {
   categoriesForType,
@@ -265,6 +270,17 @@ interface GenerateImagePaneProps {
   /** Show the full internal dialog and gallery names; the default is the
       student version (auto-named images, fewer generation controls). */
   advanced?: boolean;
+  /** Offer this tier of adlib prompt combos in the student dialog. */
+  adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: no free-text box. */
+  adlibOnly?: boolean;
+  /** Style the generate form starts on for new images. */
+  defaultStyle?: ImageStyle;
+  /** No paint entry points anywhere in the dialog. */
+  paintDisabled?: boolean;
+  /** The image panel is the level: no gallery, no modal, always open on a
+      blank generate form. */
+  standalone?: boolean;
 }
 
 /**
@@ -277,6 +293,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onDeleteImage,
   lockedImageType,
   advanced,
+  adlibSet,
+  adlibOnly,
+  defaultStyle,
+  paintDisabled,
+  standalone,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -786,6 +807,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
+  // Standalone mode opens on a blank form, and returns to one whenever a
+  // close or delete clears the target: the level is there to make an image,
+  // and the newest one of its type belongs to whichever level made it.
+  useEffect(() => {
+    if (standalone && !dialogTarget) {
+      setDialogTarget('new');
+    }
+  }, [standalone, dialogTarget]);
+
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
   // transparency; they must stay fully opaque.
@@ -795,34 +825,36 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
-      <div className={moduleStyles.imageGallery}>
-        {/* First slot, so it never hides behind a scroll. */}
-        <div className={moduleStyles.imageCard}>
-          <button
-            type="button"
-            className={moduleStyles.newImageCard}
-            onClick={openNewDialog}
-          >
-            <span aria-hidden>+</span>
-            <span className={moduleStyles.newImageLabel}>New image</span>
-          </button>
+      {!standalone && (
+        <div className={moduleStyles.imageGallery}>
+          {/* First slot, so it never hides behind a scroll. */}
+          <div className={moduleStyles.imageCard}>
+            <button
+              type="button"
+              className={moduleStyles.newImageCard}
+              onClick={openNewDialog}
+            >
+              <span aria-hidden>+</span>
+              <span className={moduleStyles.newImageLabel}>New image</span>
+            </button>
+          </div>
+          {images.map(({key, props}) => (
+            <GalleryCard
+              key={key}
+              animKey={key}
+              name={props?.name}
+              caption={advanced ? props?.name : undefined}
+              thumb={
+                getImageThumbnail(props?.name) ||
+                props?.dataURI ||
+                props?.sourceUrl ||
+                undefined
+              }
+              onOpen={openDialog}
+            />
+          ))}
         </div>
-        {images.map(({key, props}) => (
-          <GalleryCard
-            key={key}
-            animKey={key}
-            name={props?.name}
-            caption={advanced ? props?.name : undefined}
-            thumb={
-              getImageThumbnail(props?.name) ||
-              props?.dataURI ||
-              props?.sourceUrl ||
-              undefined
-            }
-            onOpen={openDialog}
-          />
-        ))}
-      </div>
+      )}
 
       {dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
@@ -870,6 +902,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
           }
           advanced={advanced}
+          adlibSet={adlibSet}
+          adlibOnly={adlibOnly}
+          defaultStyle={defaultStyle}
+          paintDisabled={paintDisabled}
+          standalone={standalone}
           pixelated={!!targetProps?.pixelGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}

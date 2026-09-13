@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -31,33 +31,39 @@
     },
     "guide_steps": [
       {
-        "text": "**Set the scene.** Use the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far."
+        "text": "**Say something else, a moment later.** Drag out **at [3] seconds** and put a **say** block inside it. Press **Play** and your character speaks right on cue."
       },
       {
-        "text": "**That's your story!** Watch it play, then continue when you're ready.",
+        "text": "**Perfect timing!** Watch your story unfold, then continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Set the scene\nUse the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far.",
+    "long_instructions": "# Say something on a delay\nDrag out **at [3] seconds** and put a **say** block inside it. Your character will speak right on cue.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_setBackgroundImageAs"
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_makeSpriteAtPosition"
+          "type": "gamelab_atTime",
+          "inputs": {
+            "N": {
+              "shadow": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 3
+                }
+              }
+            }
+          }
         },
         {
           "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "Hello!"
+            "SPEECH": "And another thing..."
           },
           "inputs": {
             "SPRITE": {

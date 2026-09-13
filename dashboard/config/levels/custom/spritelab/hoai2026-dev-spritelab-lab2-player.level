@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -22,7 +22,7 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
-      "kind": "world"
+      "kind": "code"
     },
     "pinned_scene": {
       "id": "platform-scene",
@@ -43,17 +43,26 @@
     ],
     "guide_steps": [
       {
-        "text": "**Make this world yours.** Pick your block in the palette and paint platforms onto the grid - add blocks, erase blocks, build new paths and towers. Then click **Play** to try your layout."
+        "text": "**Make your character the player.** There they are, waiting in your world. Drag out **set [ ] as player** and pick them. Then click **Play** and try the arrow keys: **left** and **right** to run, **up** to jump."
       },
       {
-        "text": "**You built a platformer!** Run and jump through what you made, then continue when you're ready.",
+        "text": "**You're in control!** Run and jump around, then continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Make this world yours\nPaint platforms onto the grid in the World tab - add blocks, erase blocks, build new paths and towers. Then press **Play** to try your layout."
+    "long_instructions": "# Make your character the player\nUse **set [ ] as player** and pick your character. Then press **Play** and use the arrow keys: left and right to run, up to jump.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer"
+        }
+      ]
+    }
   }
 }]]></config>
 </GamelabJr>

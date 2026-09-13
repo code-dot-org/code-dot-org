@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -22,38 +22,35 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
-      "kind": "world"
+      "kind": "code"
     },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",
       "type": "platform"
     },
-    "world_start_pattern": [
-      "..........",
-      "..........",
-      "BB......BB",
-      "..........",
-      "....BB....",
-      "..........",
-      ".BB....BB.",
-      "....S.....",
-      "...BBBB...",
-      ".........."
-    ],
     "guide_steps": [
       {
-        "text": "**Make this world yours.** Pick your block in the palette and paint platforms onto the grid - add blocks, erase blocks, build new paths and towers. Then click **Play** to try your layout."
+        "text": "**Add your background to the game.** Use the **set background** block and pick the one you just made. Then press **Play** to see your world dressed up."
       },
       {
-        "text": "**You built a platformer!** Run and jump through what you made, then continue when you're ready.",
+        "text": "**Now that's a game!** Take it for a spin, then continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Make this world yours\nPaint platforms onto the grid in the World tab - add blocks, erase blocks, build new paths and towers. Then press **Play** to try your layout."
+    "long_instructions": "# Add your background to the game\nUse the **set background** block and pick the one you just made. Then press **Play** to see your world dressed up.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        }
+      ]
+    }
   }
 }]]></config>
 </GamelabJr>

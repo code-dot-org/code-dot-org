@@ -272,13 +272,6 @@ $tab-segment-height: $tab-item-height - 2px;
   color: var(--text-neutral-primary);
 }
 
-.generateError {
-  // Legible on the guide's dark panel; the old dark red vanished into it.
-  color: #ff9d9d;
-  font-size: 13px;
-  font-weight: 600;
-}
-
 // Sidebar-only resource panel (guide-based instructions): no instruction
 // tabs render inside the nav, so its top border would read as a stray line.
 .resourceSidebar {
@@ -299,11 +292,6 @@ $tab-segment-height: $tab-item-height - 2px;
   // bottom padding lets the last row scroll clear of the Guide overlay.
   gap: 28px 14px;
   padding: 28px 16px 220px;
-}
-
-.galleryEmpty {
-  color: var(--text-neutral-secondary);
-  font-size: 13px;
 }
 
 .imageCard {
@@ -372,11 +360,50 @@ $tab-segment-height: $tab-item-height - 2px;
   transition: height 0.25s ease;
 }
 
+// The new-scene dialog: name above the type choice.
+.newSceneFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sceneTypeGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  // The global legend style carries a fixed dark color and a full-width
+  // underline, neither of which suits a themed dialog. Sized to read as a
+  // peer of the name field's label above it.
+  legend {
+    width: auto;
+    margin-bottom: 4px;
+    padding: 0;
+    border: none;
+    color: var(--text-neutral-primary);
+    font-size: 14px;
+    line-height: inherit;
+  }
+}
+
 .guideBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-size: 15px;
+
+  // The shared read-aloud button paints a ~17x20 icon and sets no box; WCAG
+  // 2.2 target size (SC 2.5.8) wants 24x24.
+  button[aria-pressed] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
+  }
 }
 
 .guideInstructions {
@@ -429,115 +456,11 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-.guideDivider {
-  width: 100%;
-  margin: 2px 0;
-  border: none;
-  border-top: 1px solid rgb(255 255 255 / 20%);
-}
-
 // The Continue button once the level's task is done.
 .guideContinue {
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
-}
-
-// Shared metrics for the guide's form controls. All controls in the guide
-// read as one family: same height, radius, and type size. The zeroed margin
-// and shadow undo dashboard's global element styles (button {margin: 5px},
-// input {margin-bottom: 10px} + inset shadow), which otherwise knock rows
-// out of alignment.
-@mixin guide-control {
-  box-sizing: border-box;
-  height: 36px;
-  margin: 0;
-  border: 1px solid rgb(255 255 255 / 25%);
-  border-radius: 6px;
-  box-shadow: none;
-  // Explicit colors: nothing styles bare form elements globally, so these
-  // would inherit the guide's white text onto their own light control
-  // background. The guide panel is dark in both themes.
-  background: #fff;
-  color: #333;
-  font-size: 14px;
-}
-
-.guideRow {
-  display: flex;
-  gap: 8px;
-
-  input,
-  button {
-    @include guide-control;
-  }
-
-  input {
-    flex: 1 1 auto;
-    min-width: 0;
-    padding: 0 10px;
-  }
-
-  button {
-    flex: 0 0 auto;
-    appearance: none;
-    padding: 0 16px;
-    background-color: rgb(255 255 255 / 92%);
-    color: #1b2029;
-    font-weight: 600;
-    cursor: pointer;
-
-    &:hover:not(:disabled) {
-      background-color: #fff;
-    }
-
-    &:disabled {
-      opacity: 0.6;
-      cursor: default;
-    }
-  }
-}
-
-// Vertical gap matching the rows' horizontal gaps.
-.guideForm {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-// Labeled field stacks: label above its control.
-.guideFields {
-  display: flex;
-  gap: 8px;
-
-  label {
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: column;
-    gap: 3px;
-    margin: 0;
-    color: rgb(255 255 255 / 70%);
-    font-size: 12px;
-  }
-
-  input,
-  select {
-    @include guide-control;
-
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  select {
-    // Native selects ignore height on some platforms without an explicit
-    // appearance reset; padding keeps the arrow clear of the text.
-    padding: 0 6px;
-  }
-
-  label.guideFieldGrow {
-    flex: 1 1 auto;
-    min-width: 0;
-  }
 }
 
 // The persistent playspace overlay: spans the tab content area; lets clicks
@@ -697,3 +620,17 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// Standalone image-generation levels: the image panel is the whole lab, the
+// floating guide over it, on the lab's own ground (black in dark mode, the
+// stage the dance generator uses).
+.standaloneGenerateArea {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  padding: 24px 16px;
+  overflow: auto;
+  background-color: var(--background-neutral-primary);
+}

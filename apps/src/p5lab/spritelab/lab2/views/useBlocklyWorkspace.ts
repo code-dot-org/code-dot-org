@@ -45,7 +45,7 @@ interface UseBlocklyWorkspaceResult {
   /** Serialize the workspace blocks into a toolbox definition; null before inject. */
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
-  refreshToolbox: () => void;
+  refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
   /** Load code into the workspace. */
   loadCode: (source: WorkspaceSerialization) => void;
   /**
@@ -252,11 +252,31 @@ export default function useBlocklyWorkspace({
     []
   );
 
-  const refreshToolbox = useCallback(() => {
-    if (workspaceRef.current?.rendered && toolboxRef.current) {
-      workspaceRef.current.updateToolbox(toolboxRef.current);
-    }
-  }, []);
+  // A definition swaps the toolbox in place; without one the current
+  // toolbox is re-applied (to pick up options that load late). Edit modes
+  // own their toolbox and ignore a passed definition.
+  const refreshToolbox = useCallback(
+    (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => {
+      // Blockly cannot swap a category toolbox for a flyout on a live
+      // workspace, so a definition of the other kind is declined: the scene
+      // keeps the blocks the workspace was injected with.
+      const installed = toolboxRef.current;
+      const installedKind =
+        installed && typeof installed !== 'string' && 'kind' in installed
+          ? installed.kind
+          : undefined;
+      const kindMatches = definition?.kind === installedKind;
+      if (definition && kindMatches && !isToolboxMode && !isStartMode) {
+        toolboxRef.current = filterToolboxToRegisteredBlocks(
+          applyToolboxAdditions(definition)
+        );
+      }
+      if (workspaceRef.current?.rendered && toolboxRef.current) {
+        workspaceRef.current.updateToolbox(toolboxRef.current);
+      }
+    },
+    []
+  );
 
   return {
     getCode,
