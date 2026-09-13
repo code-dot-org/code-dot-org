@@ -886,12 +886,24 @@ export const FileMenus = () => {
    * and the file written here, quietly.
    */
   const keepPicture = useCallback(
-    async (picture: GeneratedPicture): Promise<string | undefined> => {
+    async (
+      picture: GeneratedPicture,
+      folder: string,
+    ): Promise<string | undefined> => {
       if (!channelId) {
         return undefined;
       }
+      // IN THIS FOLDER, not in the project. A `star.png` among the backdrops
+      // does not stop one among the sprites — they are different files in
+      // different folders, and that is what makes one a backdrop and the other
+      // a sprite. Asked of the whole project, keeping a drawn backdrop called
+      // `star.png` made the next drawn SPRITE `star2.png` for no reason a
+      // learner could see. The same question `nameProblem` asks.
+      const folderId = folderIds.get(folder);
       const taken = new Set(
-        Object.values(ops.source.files).map(file => file.name),
+        Object.values(ops.source.files)
+          .filter(file => file.folderId === folderId)
+          .map(file => file.name),
       );
       // `crab.png`, then `crab2.png`: a learner may keep a picture from each
       // of several prompts, and the name a transport gives is a word rather
@@ -920,7 +932,10 @@ export const FileMenus = () => {
         return undefined;
       }
 
-      const placed = folderIn(ops.source, SPRITES_FOLDER);
+      // THE FOLDER IS WHAT THE PICTURE IS. The same bytes are a sprite in
+      // `sprites/` and a backdrop in `backgrounds/`, which is the whole of the
+      // difference (`appearance/backgroundsFolder`).
+      const placed = folderIn(ops.source, folder);
       const made = createExternalFile({
         source: placed.source,
         fileName,
@@ -954,7 +969,7 @@ export const FileMenus = () => {
       });
       return fileName;
     },
-    [ops.source, config, channelId, updateSources, currentSources],
+    [ops.source, config, channelId, folderIds, updateSources, currentSources],
   );
 
   /** The folder menu the animations' grid stands in for. */
@@ -1176,7 +1191,7 @@ export const FileMenus = () => {
           images={decoded}
           animations={pickableAnimations}
           drawing={drawing}
-          onKeep={keepPicture}
+          onKeep={picture => keepPicture(picture, SPRITES_FOLDER)}
           nameProblem={value =>
             nameProblem(
               ops.source,
@@ -1221,6 +1236,12 @@ export const FileMenus = () => {
             isReadOnly || !uploading.enabled
               ? undefined
               : () => void uploadInto(backgroundsMenu)
+          }
+          drawing={isReadOnly ? undefined : drawing}
+          onKeep={
+            isReadOnly
+              ? undefined
+              : picture => keepPicture(picture, BACKGROUNDS_FOLDER)
           }
           onCancel={() => setStaging(false)}
         />

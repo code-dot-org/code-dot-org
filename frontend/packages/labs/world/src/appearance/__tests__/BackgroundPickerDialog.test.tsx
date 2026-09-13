@@ -41,6 +41,27 @@ const show = (
 
 beforeEach(() => vi.clearAllMocks());
 
+describe('describing a backdrop', () => {
+  it('is offered under the ones the project has', () => {
+    // The fourth way in, and the only one that is not a tile: it takes a
+    // sentence rather than a press (`generate/DescribePicture`).
+    show({
+      drawing: {kind: 'fixture', draw: async () => []},
+      onKeep: async () => 'cave.png',
+    });
+
+    expect(screen.getByLabelText('Describe a picture')).toBeTruthy();
+  });
+
+  it('is not offered where nothing can draw, or nothing may be written', () => {
+    show();
+    expect(screen.queryByLabelText('Describe a picture')).toBeNull();
+
+    show({onKeep: async () => 'cave.png'});
+    expect(screen.queryByLabelText('Describe a picture')).toBeNull();
+  });
+});
+
 describe('the backdrop shelf', () => {
   it('gives every backdrop a tile that opens it', () => {
     show();

@@ -24,6 +24,8 @@ import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import styles from './backgroundPickerDialog.module.css';
+import {DescribePicture} from './generate/DescribePicture';
+import type {GeneratedPicture, ImageGenerator} from './generate/imageGenerator';
 
 /** One backdrop the project holds. */
 export interface BackgroundTile {
@@ -51,6 +53,16 @@ export interface BackgroundPickerDialogProps {
   onNew?: () => void;
   /** Take one off this machine. Absent leaves the tile out. */
   onUpload?: () => void;
+  /**
+   * Where a described backdrop comes from, if anywhere.
+   *
+   * The fourth way in, and the only one that is not a tile: it takes a
+   * sentence rather than a press, so it goes under the shelf rather than in it
+   * (`generate/DescribePicture`).
+   */
+  drawing?: ImageGenerator;
+  /** Keep a drawn one — write it, and answer with its file name. */
+  onKeep?: (picture: GeneratedPicture) => Promise<string | undefined>;
   onCancel: () => void;
 }
 
@@ -60,6 +72,8 @@ export const BackgroundPickerDialog = ({
   onImport,
   onNew,
   onUpload,
+  drawing,
+  onKeep,
   onCancel,
 }: BackgroundPickerDialogProps) => {
   const action = (
@@ -130,6 +144,17 @@ export const BackgroundPickerDialog = ({
             <Typography variant="body3" className={styles.empty}>
               This project has no backgrounds yet.
             </Typography>
+          )}
+          {onKeep && (
+            <DescribePicture
+              drawing={drawing}
+              kind="background"
+              placeholder="a cave with glowing crystals"
+              onKeep={onKeep}
+              // Nothing more to do: a kept backdrop is one of the project's
+              // backdrops, and the shelf above is the list of those. Choosing
+              // it is the press it already has.
+            />
           )}
         </div>
       }
