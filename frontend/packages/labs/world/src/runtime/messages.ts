@@ -316,12 +316,18 @@ export interface ThumbnailsReadyMessage {
    * out 32 by 4: the right shape at the wrong scale, a quarter of the width it
    * will have beside a 32-pixel player.
    *
-   * ONLY THE KINDS THAT SAY. A sprite-backed actor's size is its image's, and
-   * the image is not measured here — a frame names a sprite and carries no
-   * dimensions (`animationTypes.FrameState`). Those keep the nominal tile,
-   * which is exactly right for the 32-pixel sprites everything ships with and
-   * wrong for any other, and is a measurement to add rather than a shape to
-   * guess.
+   * EVERY KIND THAT HAS A SIZE, which is now the sprite-backed ones too. It
+   * used to be only the kinds that declared a picture: a frame names a sprite
+   * and carries no dimensions, so those kept the nominal tile — exactly right
+   * for the 32-pixel sprites everything ships with and wrong for any other.
+   *
+   * Both kinds land in one property now (`World.sizeOf`): a drawing's declared
+   * canvas, and a sprite's picture fitted to a tile (specs/ACTOR_SIZE.md). So
+   * this asks how big the actor is rather than what sort of actor it is.
+   *
+   * Still absent for a kind nobody can measure — no appearance, or a picture
+   * the project never stated a size for — and the editors fall back to the
+   * nominal tile there, as they always did.
    */
   sizes: Record<string, {width: number; height: number}>;
   /** One per requested placement key, for the editors that draw placements. */

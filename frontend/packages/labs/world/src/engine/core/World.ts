@@ -1838,7 +1838,7 @@ export class World {
    * what keeps the drawn size and the box the same number
    * (specs/ACTOR_SIZE.md).
    */
-  private animationFit(def: AnimationDef): number {
+  private publishAnimationSize(actor: Actor, def: AnimationDef): number {
     let width = 0;
     let height = 0;
     for (const frame of def.frames) {
@@ -1847,7 +1847,55 @@ export class World {
         height = Math.max(height, frame.position.height);
       }
     }
-    return width > 0 && height > 0 ? fitToTile(width, height) : 1;
+    if (width <= 0 || height <= 0) {
+      return 1;
+    }
+    const fit = fitToTile(width, height);
+    this.publishSize(actor, width * fit, height * fit);
+    return fit;
+  }
+
+  /**
+   * Say how big an actor is, if it has changed.
+   *
+   * WRITTEN FROM THE SNAPSHOT, which the drawing branch below has always done
+   * and which the sprite branches do now. The Animation rule publishes the
+   * same number on every tick, and that is the path the game runs on; this is
+   * for the reader that never ticks — the sandbox's introspection pass builds
+   * a world, reads it once and throws it away, and a map editor told nothing
+   * draws every kind at one nominal tile (`sandbox/worldPreviewWorkerManager`).
+   *
+   * Only when it moved, so an ordinary actor's is set once and never again.
+   */
+  private publishSize(actor: Actor, width: number, height: number): void {
+    const property = this.intrinsicSizeProperty();
+    if (!property) {
+      return;
+    }
+    const known = actor.get(property);
+    if (known?.x !== width || known?.y !== height) {
+      actor.set(property, new Vector(width, height));
+    }
+  }
+
+  /**
+   * How big this actor is in world units, if anything has said.
+   *
+   * The one question "how big is it" has one answer, and it is this property:
+   * a drawing's declared canvas and a sprite's picture fitted to a tile both
+   * land in it, so a caller asks the size rather than asking what kind of
+   * actor it is looking at (specs/ACTOR_SIZE.md).
+   *
+   * Undefined for an actor nobody has measured — no appearance, or a picture
+   * the project never stated a size for. A caller that must draw something
+   * anyway falls back to a tile, which is what it always did.
+   */
+  sizeOf(actor: Actor): {width: number; height: number} | undefined {
+    const property = this.intrinsicSizeProperty();
+    const size = property ? actor.get(property) : undefined;
+    return size && size.x > 0 && size.y > 0
+      ? {width: size.x, height: size.y}
+      : undefined;
   }
 
   /** The definition of a known animation, or undefined. */
@@ -2502,7 +2550,7 @@ export class World {
             // largest cell across the whole animation, so a smaller frame
             // draws smaller instead of every frame swelling to a tile
             // (`rules/animation.publishIntrinsicSize`, specs/ACTOR_SIZE.md).
-            scale: (f.scale ?? 1) * this.animationFit(def),
+            scale: (f.scale ?? 1) * this.publishAnimationSize(actor, def),
           };
         }
       }
@@ -2528,12 +2576,12 @@ export class World {
         const measured = cell
           ? {width: cell.width, height: cell.height}
           : this.imageSize(sprite);
-        return {
-          sprite,
-          cell,
-          offset: {x: 0, y: 0},
-          scale: measured ? fitToTile(measured.width, measured.height) : 1,
-        };
+        if (!measured) {
+          return {sprite, cell, offset: {x: 0, y: 0}, scale: 1};
+        }
+        const fit = fitToTile(measured.width, measured.height);
+        this.publishSize(actor, measured.width * fit, measured.height * fit);
+        return {sprite, cell, offset: {x: 0, y: 0}, scale: fit};
       }
       return undefined;
     };

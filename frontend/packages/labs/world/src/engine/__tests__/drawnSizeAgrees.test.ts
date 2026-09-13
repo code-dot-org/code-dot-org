@@ -97,3 +97,65 @@ describe('the drawn size and the box', () => {
     expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 32})).toBe(true);
   });
 });
+
+describe('what the editors are told', () => {
+  it('answers how big an actor is, in the units a map is drawn in', () => {
+    // `World.sizeOf` is the one question the map editor asks of every kind,
+    // and the reason it can: a drawing's declared canvas and a sprite's
+    // picture fitted to a tile both land in the same property, so the editor
+    // asks the size rather than what sort of actor it is looking at.
+    const {world, actor} = drawing(64, 16);
+
+    expect(world.sizeOf(actor)).toEqual({
+      width: TILE_SIZE,
+      height: TILE_SIZE / 4,
+    });
+  });
+
+  it('says nothing for an actor nobody measured', () => {
+    // No appearance, or a picture the project never stated a size for. The
+    // editors fall back to the nominal tile there, as they always did.
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      AnimationRule,
+    ]);
+    const world = builder.getWorld();
+    const bare = builder.addActor(
+      new ActorBuilder({id: 'b', name: 'B'})
+        .useTraits([AppearanceTrait])
+        .set(PositionProperty, new Vector(0, 0)),
+    );
+    world.tick(0.01);
+
+    expect(world.sizeOf(bare)).toBeUndefined();
+  });
+
+  it('has an answer from a world that was never played', () => {
+    // WHAT THE THUMBNAIL PASS RELIES ON. It builds a throwaway world, reads it
+    // once and discards it — it never ticks — and a reader told nothing draws
+    // every kind at one nominal tile, which is exactly what the map editor
+    // used to do (`sandbox/worldPreviewWorkerManager`).
+    //
+    // The first cut made the pass tick by zero seconds to make the Animation
+    // rule's step run. That also ran every other rule's step, and the coins in
+    // the map editor came out as green rectangles: a world built to be looked
+    // at is not a world that has been played, and playing it for a moment is
+    // not free. So the snapshot publishes the size itself.
+    const builder = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([AnimationRule])
+      .useImageSizes({'picture.png': {width: 256, height: 64}});
+    const world = builder.getWorld();
+    const actor = builder.addActor(
+      new ActorBuilder({id: 'a', name: 'A'})
+        .useTraits([AppearanceTrait])
+        .set(PositionProperty, new Vector(0, 0))
+        .set(SpriteProperty, 'picture.png'),
+    );
+
+    expect(world.sizeOf(actor)).toBeUndefined();
+    world.renderSnapshot();
+    expect(world.sizeOf(actor)).toEqual({
+      width: TILE_SIZE,
+      height: TILE_SIZE / 4,
+    });
+  });
+});

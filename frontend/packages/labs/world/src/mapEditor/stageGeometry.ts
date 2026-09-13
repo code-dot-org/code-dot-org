@@ -159,11 +159,14 @@ export type KindSizes =
  * beside a 32-pixel player, rather than fitted into the same square as
  * everything else.
  *
- * The nominal tile for a kind that does not say. A sprite's size is its
- * image's and the image is not measured in the sandbox, so those still
- * normalise — right for the 32-pixel sprites everything ships with, wrong for
- * any other, and a measurement to add rather than a shape to guess
- * (`ThumbnailsReadyMessage.sizes`).
+ * EVERY KIND SAYS NOW, sprite-backed ones included: a picture is fitted to a
+ * tile and published like a drawing's canvas is, so the map draws a 64-by-16
+ * paddle as a tile by a quarter of one rather than as a square
+ * (`ThumbnailsReadyMessage.sizes`, specs/ACTOR_SIZE.md).
+ *
+ * The nominal tile remains for a kind that still does not — one with no
+ * appearance at all, or a picture the project never measured — which is the
+ * same guess the engine makes in the same case.
  */
 export const drawnSize = (
   sizes: KindSizes,

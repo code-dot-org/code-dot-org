@@ -384,6 +384,14 @@ export async function start(): Promise<void> {
           applyOverrides(actor, request.properties);
           placedFor.set(actor, request.key);
         }
+        // NOT TICKED, and it is worth saying why since the obvious fix is to.
+        // An actor's size is published by the Animation rule's step, and a
+        // step only runs on a tick — so the first cut of this ticked by zero
+        // seconds to make the measuring happen. It also ran every OTHER rule's
+        // step, and the map editor's coins came out as green rectangles: a
+        // world built for introspection is not a world that has been played,
+        // and playing it for a moment is not free. `renderSnapshot` publishes
+        // the size itself now, which is what it already did for drawings.
         for (const state of world.renderSnapshot()) {
           const placementKey = placedFor.get(state.actor);
           if (placementKey) {
@@ -393,11 +401,15 @@ export async function start(): Promise<void> {
           const type = typeOf.get(state.actor);
           if (type) {
             thumbnails[type] = await pictureOf(state);
-            if (state.drawing) {
-              sizes[type] = {
-                width: state.drawing.width,
-                height: state.drawing.height,
-              };
+            // EVERY KIND THAT HAS A SIZE, not only the ones that draw their
+            // own picture. A drawing declares its canvas and `renderSnapshot`
+            // publishes it; a sprite-backed actor's is its picture fitted to a
+            // tile, published by the Animation rule (specs/ACTOR_SIZE.md).
+            // Both land in the same property, so this asks the property rather
+            // than asking which kind of actor it is.
+            const size = world.sizeOf(state.actor);
+            if (size) {
+              sizes[type] = size;
             }
           }
         }
