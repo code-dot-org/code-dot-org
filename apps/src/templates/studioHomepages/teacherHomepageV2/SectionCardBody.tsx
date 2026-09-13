@@ -1,14 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Typography} from '@mui/material';
 import React, {useState} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import InstantSectionCodeModal from '@cdo/apps/templates/instantSection/InstantSectionCodeModal';
+import InstantSectionCourseAssignModal from '@cdo/apps/templates/instantSection/InstantSectionCourseAssignModal';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
-import {
-  TEACHER_NAVIGATION_PATHS,
-  TEACHER_NAVIGATION_SECTIONS_URL,
-} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -25,22 +22,32 @@ interface SectionCardBodyProps {
 
 const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
   const [showJoinCode, setShowJoinCode] = useState(false);
+  const [showCourseRecommendations, setShowCourseRecommendations] =
+    useState(false);
 
   return (
     <div className={styles.sectionCardBody}>
       <div className={styles.sectionCardBodyLeft}>
-        {section.isInstantSection ? (
+        {section.courseId && section.isInstantSection ? (
+          <TaskButton
+            buttonText={`${i18n.course()}: ${section.courseDisplayName}`}
+            icon="desktop"
+            sectionId={section.id}
+            sectionName={section.name}
+            path={`courses/${section.courseVersionName}`}
+          />
+        ) : section.courseId ? (
+          <CourseContentDropdown section={section} />
+        ) : section.isInstantSection ? (
           <Button
             variant="outlined"
             className={styles.instantSectionCodeButton}
-            startIcon={<FontAwesomeV6Icon iconName="pen-to-square" />}
-            component={NavLink}
-            to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}?convertInstantSection=true`}
+            startIcon={<FontAwesomeV6Icon iconName="book-open-cover" />}
+            aria-haspopup="dialog"
+            onClick={() => setShowCourseRecommendations(true)}
           >
-            {i18n.instantSectionConvert()}
+            {i18n.assignACourseButton()}
           </Button>
-        ) : section.courseId ? (
-          <CourseContentDropdown section={section} />
         ) : (
           <EmptyStateButton
             buttonText={i18n.assignACourseButton()}
@@ -97,7 +104,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             path={TEACHER_NAVIGATION_PATHS.roster}
           />
         ) : null}
-        {section.courseId && (
+        {section.courseId && !section.isInstantSection && (
           <TaskButton
             buttonText={i18n.viewLessonMaterialsButton()}
             icon={'folder-open'}
@@ -111,6 +118,12 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
         <InstantSectionCodeModal
           sectionCode={section.code}
           onClose={() => setShowJoinCode(false)}
+        />
+      )}
+      {showCourseRecommendations && (
+        <InstantSectionCourseAssignModal
+          section={section}
+          onClose={() => setShowCourseRecommendations(false)}
         />
       )}
     </div>

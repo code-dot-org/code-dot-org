@@ -443,6 +443,20 @@ class CourseOffering < ApplicationRecord
     }
   end
 
+  def summarize_for_instant_section_catalog(user, locale_code = 'en-us')
+    course_version = latest_published_version(locale_code)
+    course_version = nil unless course_version&.course_assignable?(user)
+    course_version ||= course_versions.select {|version| version.course_assignable?(user)}.
+      max_by {|version| version.content_root.version_year.to_i}
+    return unless course_version
+
+    summarize_for_catalog(locale_code, user).merge(
+      course_version_id: course_version.id,
+      course_id: course_version.content_root_id,
+      course_version_path: course_version.content_root.link,
+    )
+  end
+
   def self.students_course_offerings_for_catalog
     assignable_published_for_students_course_offerings.map(&:summarize_for_catalog)
   end

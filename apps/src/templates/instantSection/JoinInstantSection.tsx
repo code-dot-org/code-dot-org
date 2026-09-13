@@ -2,6 +2,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import {Button, Typography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {AUTHENTICITY_TOKEN_HEADER} from '@cdo/apps/util/AuthenticityTokenStore';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {normalizeSectionCode} from '@cdo/apps/util/sectionCode';
 import i18n from '@cdo/locale';
@@ -16,6 +17,7 @@ export default function JoinInstantSection() {
   const initialCode = returnTo?.match(/^\/join\/([a-z]{6})$/i)?.[1] || '';
   const [code, setCode] = useState(initialCode.toUpperCase());
   const [confirmedCode, setConfirmedCode] = useState<string>();
+  const [authenticityToken, setAuthenticityToken] = useState<string>();
   const [name, setName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -45,15 +47,23 @@ export default function JoinInstantSection() {
         const response = await HttpClient.post(
           `/instant_sections/${confirmedCode}/join`,
           JSON.stringify({name: name.trim()}),
-          true,
-          {'Content-Type': 'application/json'}
+          false,
+          {
+            'Content-Type': 'application/json',
+            [AUTHENTICITY_TOKEN_HEADER]: authenticityToken || '',
+          }
         );
         const {redirect_url: redirectUrl} = await response.json();
         window.location.assign(redirectUrl);
       } else {
-        const {value} = await HttpClient.fetchJson<{code: string}>(
+        const {value, response} = await HttpClient.fetchJson<{code: string}>(
           `/instant_sections/${encodeURIComponent(normalizeSectionCode(code))}`
         );
+        const token = response.headers.get('csrf-token');
+        if (!token) {
+          throw new Error('Instant Section lookup did not return a CSRF token');
+        }
+        setAuthenticityToken(token);
         setConfirmedCode(value.code);
       }
     } catch (err) {
@@ -142,6 +152,7 @@ export default function JoinInstantSection() {
             disabled={isSubmitting}
             onClick={() => {
               setConfirmedCode(undefined);
+              setAuthenticityToken(undefined);
               setError('');
             }}
           >

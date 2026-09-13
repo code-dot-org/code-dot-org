@@ -429,6 +429,29 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_includes(filtered_course_offerings, all_co)
   end
 
+  test 'instant section catalog summary uses an assignable version when no published version resolves' do
+    teacher = create(:levelbuilder)
+    content_root = stub(id: 123, link: '/courses/ai-course', version_year: '2026')
+    course_version = stub(
+      id: 456,
+      content_root_id: 123,
+      content_root: content_root,
+      course_assignable?: true,
+    )
+    course_offering = build(:course_offering)
+    course_offering.stubs(:latest_published_version).with('en-us').returns(nil)
+    course_offering.stubs(:course_versions).returns([course_version])
+    course_offering.stubs(:summarize_for_catalog).with('en-us', teacher).returns(
+      {key: 'ai-course', course_id: nil, course_version_id: nil, course_version_path: nil}
+    )
+
+    summary = course_offering.summarize_for_instant_section_catalog(teacher)
+
+    assert_equal 123, summary[:course_id]
+    assert_equal 456, summary[:course_version_id]
+    assert_equal '/courses/ai-course', summary[:course_version_path]
+  end
+
   test 'self_paced_course_offerings_for_catalog filters only for assignable published self-paced teacher course offerings' do
     # Course offering that doesn't satisfy any of the conditions
     none_course = create(

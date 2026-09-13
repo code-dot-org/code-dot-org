@@ -12,6 +12,7 @@ class InstantSectionsControllerTest < ActionController::TestCase
     end
     assert_response :success
     assert_equal({'code' => @section.code}, JSON.parse(response.body))
+    assert response.headers['csrf-token'].present?
   end
 
   test 'join creates and signs in a sponsored student with reusable secrets' do
@@ -41,6 +42,16 @@ class InstantSectionsControllerTest < ActionController::TestCase
     assert_response :created
     refute_equal existing, @controller.current_user
     assert_equal 2, @section.students.count
+  end
+
+  test 'join redirects to the assigned course' do
+    course = create(:single_unit_course)
+    @section.update!(course_id: course.id)
+
+    post :join, params: {section_code: @section.code, name: 'Alex'}
+
+    assert_response :created
+    assert_equal "/courses/#{course.name}", JSON.parse(response.body)['redirect_url']
   end
 
   test 'joining honors section sharing restrictions' do

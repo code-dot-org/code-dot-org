@@ -31,6 +31,34 @@ $container-width: 309px;
   height: 28em;
 }
 
+.condensedCard {
+  height: 15.5em;
+}
+
+.selectableCard {
+  position: relative;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+
+  &:hover,
+  &:focus-visible {
+    outline-color: var(--borders-brand-teal-primary);
+  }
+}
+
+.selectedCard {
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    border: 3px solid var(--borders-brand-teal-primary);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+}
+
 .curriculumInfoContainer {
   display: flex;
   flex-flow: column;

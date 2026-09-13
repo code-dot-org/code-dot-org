@@ -1,7 +1,7 @@
 class CourseOfferingsController < ApplicationController
-  load_and_authorize_resource except: [:quick_assign_course_offerings, :self_paced_pl_course_offerings_for_workshops]
+  load_and_authorize_resource except: [:instant_section_course_offerings, :quick_assign_course_offerings, :self_paced_pl_course_offerings_for_workshops]
 
-  before_action :require_levelbuilder_mode, except: [:quick_assign_course_offerings, :self_paced_pl_course_offerings_for_workshops]
+  before_action :require_levelbuilder_mode, except: [:instant_section_course_offerings, :quick_assign_course_offerings, :self_paced_pl_course_offerings_for_workshops]
   before_action :authenticate_user!
 
   def edit
@@ -33,6 +33,17 @@ class CourseOfferingsController < ApplicationController
 
     offerings = QuickAssignHelper.course_offerings(current_user, I18n.locale.to_s, participant_type)
     render :ok, json: offerings.to_json
+  end
+
+  def instant_section_course_offerings
+    return head :forbidden unless current_user&.teacher?
+
+    offerings = CourseOffering.assignable_published_for_students_course_offerings.filter_map do |offering|
+      next unless offering.hoai? && offering.can_be_assigned?(current_user)
+
+      offering.summarize_for_instant_section_catalog(current_user, I18n.locale.to_s)
+    end
+    render :ok, json: offerings.sort_by {|offering| offering[:display_name]}
   end
 
   def self_paced_pl_course_offerings_for_workshops

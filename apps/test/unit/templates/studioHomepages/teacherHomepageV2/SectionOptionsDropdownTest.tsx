@@ -387,4 +387,20 @@ describe('SectionOptionsDropdown', () => {
       {}
     );
   });
+
+  it('only displays conversion for an Instant Section', () => {
+    renderComponent({...SECTIONS[0], isInstantSection: true});
+
+    const convertLink = screen.getByRole('link', {
+      name: i18n.instantSectionConvert(),
+    });
+    expect(convertLink).toHaveAttribute(
+      'href',
+      '/teacher_dashboard/sections/11/settings?convertInstantSection=true'
+    );
+    expect(screen.queryByText(i18n.sectionSettings())).toBeNull();
+    expect(screen.queryByText(i18n.roster())).toBeNull();
+    expect(screen.queryByText(i18n.archive())).toBeNull();
+    expect(screen.queryByText(i18n.delete())).toBeNull();
+  });
 });

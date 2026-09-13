@@ -1120,7 +1120,7 @@ export const assignToSection = (
   courseId: number,
   courseOfferingId: number,
   courseVersionId: number,
-  unitId: number,
+  unitId: number | null,
   pageType: string
 ): SectionThunkAction => {
   return (dispatch, getState) => {

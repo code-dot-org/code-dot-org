@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import JoinInstantSection from '@cdo/apps/templates/instantSection/JoinInstantSection';
+import {AUTHENTICITY_TOKEN_HEADER} from '@cdo/apps/util/AuthenticityTokenStore';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -21,9 +22,12 @@ describe('JoinInstantSection', () => {
       configurable: true,
       value: {...originalLocation, search: '', assign: navigate},
     });
-    jest
-      .mocked(HttpClient.fetchJson)
-      .mockResolvedValue({value: {code: 'ABCDEF'}, response: {} as Response});
+    jest.mocked(HttpClient.fetchJson).mockResolvedValue({
+      value: {code: 'ABCDEF'},
+      response: new Response(undefined, {
+        headers: {'csrf-token': 'fresh-csrf-token'},
+      }),
+    });
   });
 
   afterEach(() => {
@@ -59,8 +63,11 @@ describe('JoinInstantSection', () => {
     expect(HttpClient.post).toHaveBeenCalledWith(
       '/instant_sections/ABCDEF/join',
       JSON.stringify({name: 'Alex'}),
-      true,
-      {'Content-Type': 'application/json'}
+      false,
+      {
+        'Content-Type': 'application/json',
+        [AUTHENTICITY_TOKEN_HEADER]: 'fresh-csrf-token',
+      }
     );
   });
 

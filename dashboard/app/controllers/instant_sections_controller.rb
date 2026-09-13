@@ -9,6 +9,7 @@ class InstantSectionsController < ApplicationController
   def show
     return head :not_found unless @section.open_for_instant_join?
 
+    headers['csrf-token'] = form_authenticity_token
     render json: {code: @section.code}
   end
 
@@ -28,7 +29,7 @@ class InstantSectionsController < ApplicationController
     return head :not_found unless student
 
     sign_in(:user, student)
-    render json: {redirect_url: root_path}, status: :created
+    render json: {redirect_url: post_join_redirect_path}, status: :created
   rescue ActiveRecord::RecordInvalid
     head :unprocessable_entity
   end
@@ -48,5 +49,16 @@ class InstantSectionsController < ApplicationController
     code = params[:section_code].to_s.strip.upcase
     @section = Section.find_by(code: code) if Section.valid_code?(code)
     head :not_found unless @section&.instant_section?
+  end
+
+  private def post_join_redirect_path
+    if @section.script
+      unit_group_unit = Queries::Courses.unit_group_unit(@section.script, @section.unit_group)
+      course_unit_path(@section.unit_group, unit_group_unit.position)
+    elsif @section.unit_group
+      course_path(@section.unit_group)
+    else
+      root_path
+    end
   end
 end

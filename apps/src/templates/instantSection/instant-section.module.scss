@@ -10,6 +10,38 @@
   max-height: calc(100dvh - 32px);
 }
 
+.courseModal.courseModal {
+  box-sizing: border-box;
+  width: min(1080px, calc(100vw - 64px));
+  max-width: 100%;
+  max-height: calc(100dvh - 32px);
+
+  > div:nth-of-type(2) {
+    align-self: stretch;
+    width: 100%;
+  }
+}
+
+.courseGrid {
+  display: grid;
+  box-sizing: border-box;
+  align-self: stretch;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 309px));
+  justify-content: center;
+  gap: 24px;
+  max-height: calc(100dvh - 240px);
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.courseLoading {
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+  padding-top: 64px;
+}
+
 .codeDisplay {
   width: 100%;
   text-align: center;

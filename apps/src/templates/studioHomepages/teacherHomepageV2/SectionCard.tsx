@@ -106,14 +106,12 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             />
           </div>
         </div>
-        {!section.isInstantSection && (
-          <div className={styles.sectionCardHeaderRight}>
-            <SectionOptionsDropdown
-              section={section}
-              onDeleteClickCallback={onDeleteClickCallback}
-            />
-          </div>
-        )}
+        <div className={styles.sectionCardHeaderRight}>
+          <SectionOptionsDropdown
+            section={section}
+            onDeleteClickCallback={onDeleteClickCallback}
+          />
+        </div>
       </div>
       {!section.hidden && <SectionCardBody section={section} />}
     </li>

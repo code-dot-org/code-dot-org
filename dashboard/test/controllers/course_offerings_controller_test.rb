@@ -76,4 +76,43 @@ class CourseOfferingsControllerTest < ActionController::TestCase
     assert_equal false, course_offering.is_featured
     assert_equal ["CS Fundamentals", "CS Principles", "CS Discoveries"], course_offering.facilitator_course_permissions
   end
+
+  test 'instant section course offerings rejects students' do
+    sign_in create(:student)
+
+    get :instant_section_course_offerings
+
+    assert_response :forbidden
+  end
+
+  test 'instant section course offerings returns assignable HOAI courses for teachers' do
+    teacher = create(:teacher)
+    sign_in teacher
+
+    first_course = mock
+    first_course.expects(:hoai?).returns(true)
+    first_course.expects(:can_be_assigned?).with(teacher).returns(true)
+    first_course.expects(:summarize_for_instant_section_catalog).with(teacher, I18n.locale.to_s).returns({key: 'first', display_name: 'A course'})
+
+    second_course = mock
+    second_course.expects(:hoai?).returns(true)
+    second_course.expects(:can_be_assigned?).with(teacher).returns(true)
+    second_course.expects(:summarize_for_instant_section_catalog).with(teacher, I18n.locale.to_s).returns({key: 'second', display_name: 'B course'})
+
+    unavailable_course = mock
+    unavailable_course.expects(:hoai?).returns(true)
+    unavailable_course.expects(:can_be_assigned?).with(teacher).returns(false)
+
+    other_initiative = mock
+    other_initiative.expects(:hoai?).returns(false)
+
+    CourseOffering.expects(:assignable_published_for_students_course_offerings).returns(
+      [second_course, unavailable_course, other_initiative, first_course]
+    )
+
+    get :instant_section_course_offerings
+
+    assert_response :success
+    assert_equal ['first', 'second'], response.parsed_body.pluck('key')
+  end
 end

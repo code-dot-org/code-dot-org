@@ -40,7 +40,7 @@ import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 import style from './curriculum_catalog_card.module.scss';
 
-const CurriculumCatalogCard = ({
+export const CurriculumCatalogCard = ({
   courseKey,
   courseDisplayName,
   duration,
@@ -67,6 +67,10 @@ const CurriculumCatalogCard = ({
   recommendedSimilarCurriculum,
   recommendedStretchCurriculum,
   aiChatToolsDependency,
+  hideCurriculumMetadata,
+  hideActions,
+  isSelected,
+  onSelect,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -117,6 +121,10 @@ const CurriculumCatalogCard = ({
     recommendedSimilarCurriculum={recommendedSimilarCurriculum}
     recommendedStretchCurriculum={recommendedStretchCurriculum}
     aiChatToolsDependency={aiChatToolsDependency}
+    hideCurriculumMetadata={hideCurriculumMetadata}
+    hideActions={hideActions}
+    isSelected={isSelected}
+    onSelect={onSelect}
     {...props}
   />
 );
@@ -161,6 +169,10 @@ CurriculumCatalogCard.propTypes = {
   recommendedStretchCurriculum: PropTypes.object,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
+  hideCurriculumMetadata: PropTypes.bool,
+  hideActions: PropTypes.bool,
+  isSelected: PropTypes.bool,
+  onSelect: PropTypes.func,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -200,6 +212,10 @@ const CustomizableCurriculumCatalogCard = ({
   recommendedStretchCurriculum,
   wide,
   aiChatToolsDependency,
+  hideCurriculumMetadata,
+  hideActions,
+  isSelected,
+  onSelect,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -230,6 +246,13 @@ const CustomizableCurriculumCatalogCard = ({
         card_type: cardType,
       }
     );
+  };
+
+  const handleCardKeyDown = event => {
+    if (onSelect && (event.key === 'Enter' || event.key === ' ')) {
+      event.preventDefault();
+      onSelect();
+    }
   };
 
   const renderAssignDialog = () => {
@@ -276,7 +299,9 @@ const CustomizableCurriculumCatalogCard = ({
     if (isWide) {
       return (
         <div className={style.wideCardContent}>
-          <CardLabels subjectsAndTopics={subjectsAndTopics} />
+          {!hideCurriculumMetadata && (
+            <CardLabels subjectsAndTopics={subjectsAndTopics} />
+          )}
           <Typography variant="h4" gutterBottom>
             {courseDisplayName}
           </Typography>
@@ -287,40 +312,48 @@ const CustomizableCurriculumCatalogCard = ({
           >
             {description}
           </Typography>
-          <div className={style.wideCardAspects}>
-            <div className={style.iconWithDescription}>
-              <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
-              <p>{gradeRange}</p>
+          {!hideCurriculumMetadata && (
+            <div className={style.wideCardAspects}>
+              <div className={style.iconWithDescription}>
+                <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
+                <p>{gradeRange}</p>
+              </div>
+              <div className={style.iconWithDescription}>
+                <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
+                <p>{duration}</p>
+              </div>
             </div>
-            <div className={style.iconWithDescription}>
-              <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
-              <p>{duration}</p>
-            </div>
-          </div>
+          )}
         </div>
       );
     } else {
       return (
         <div>
-          <div className={style.labelsAndTranslatabilityContainer}>
-            <CardLabels subjectsAndTopics={subjectsAndTopics} />
-            {!isEnglish && isTranslated && (
-              <FontAwesomeV6Icon
-                iconName="language"
-                iconStyle="solid"
-                title={translationIconTitle}
-              />
-            )}
-          </div>
+          {!hideCurriculumMetadata && (
+            <div className={style.labelsAndTranslatabilityContainer}>
+              <CardLabels subjectsAndTopics={subjectsAndTopics} />
+              {!isEnglish && isTranslated && (
+                <FontAwesomeV6Icon
+                  iconName="language"
+                  iconStyle="solid"
+                  title={translationIconTitle}
+                />
+              )}
+            </div>
+          )}
           <h4>{courseDisplayName}</h4>
-          <div className={style.iconWithDescription}>
-            <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
-            <p>{gradeRange}</p>
-          </div>
-          <div className={style.iconWithDescription}>
-            <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
-            <p>{duration}</p>
-          </div>
+          {!hideCurriculumMetadata && (
+            <>
+              <div className={style.iconWithDescription}>
+                <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
+                <p>{gradeRange}</p>
+              </div>
+              <div className={style.iconWithDescription}>
+                <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
+                <p>{duration}</p>
+              </div>
+            </>
+          )}
         </div>
       );
     }
@@ -339,84 +372,95 @@ const CustomizableCurriculumCatalogCard = ({
             isEnglish
               ? style.curriculumCatalogCardContainer_english
               : style.curriculumCatalogCardContainer_notEnglish,
-            isWide ? style.wideCard : ''
+            isWide ? style.wideCard : '',
+            hideCurriculumMetadata ? style.condensedCard : '',
+            onSelect ? style.selectableCard : '',
+            isSelected ? style.selectedCard : ''
           )}
+          role={onSelect ? 'button' : undefined}
+          tabIndex={onSelect ? 0 : undefined}
+          aria-label={onSelect ? courseDisplayName : undefined}
+          aria-pressed={onSelect ? Boolean(isSelected) : undefined}
+          onClick={onSelect}
+          onKeyDown={handleCardKeyDown}
         >
           <img src={imageSrc} alt={imageAltText} />
           <div className={style.curriculumInfoContainer}>
             {getCurriculumInfo()}
-            <div
-              className={classNames(
-                style.buttonsContainer,
-                isEnglish
-                  ? style.buttonsContainer_english
-                  : style.buttonsContainer_notEnglish
-              )}
-            >
-              {onQuickViewClick && (
-                <MuiButton
-                  onClick={onQuickViewClick}
-                  variant="outlined"
-                  color="secondary"
-                  size="medium"
-                  className={classNames(
-                    style.quickViewButton,
-                    isEnglish && style.buttonFlex
-                  )}
-                  aria-label={quickViewButtonDescription}
-                  type="button"
-                >
-                  {i18n.quickView()}
-                </MuiButton>
-              )}
-              {isTeacherOrSignedOut && (
-                <>
+            {!hideActions && (
+              <div
+                className={classNames(
+                  style.buttonsContainer,
+                  isEnglish
+                    ? style.buttonsContainer_english
+                    : style.buttonsContainer_notEnglish
+                )}
+              >
+                {onQuickViewClick && (
                   <MuiButton
+                    onClick={onQuickViewClick}
                     variant="outlined"
                     color="secondary"
                     size="medium"
                     className={classNames(
-                      style.teacherAndSignedOutLearnMoreButton,
+                      style.quickViewButton,
                       isEnglish && style.buttonFlex
                     )}
-                    aria-label={i18n.learnMoreDescription({
-                      course_name: courseDisplayName,
-                    })}
-                    href={pathToCourse}
+                    aria-label={quickViewButtonDescription}
+                    type="button"
                   >
-                    {i18n.learnMore()}
+                    {i18n.quickView()}
                   </MuiButton>
+                )}
+                {isTeacherOrSignedOut && (
+                  <>
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="medium"
+                      className={classNames(
+                        style.teacherAndSignedOutLearnMoreButton,
+                        isEnglish && style.buttonFlex
+                      )}
+                      aria-label={i18n.learnMoreDescription({
+                        course_name: courseDisplayName,
+                      })}
+                      href={pathToCourse}
+                    >
+                      {i18n.learnMore()}
+                    </MuiButton>
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
+                      className={classNames(isEnglish && style.buttonFlex)}
+                      onClick={() => handleClickAssign('top-card')}
+                      aria-label={assignButtonDescription}
+                      type="button"
+                    >
+                      {assignButtonText}
+                    </MuiButton>
+                  </>
+                )}
+                {!isTeacherOrSignedOut && (
                   <MuiButton
                     variant="contained"
                     color="primary"
                     size="medium"
-                    className={classNames(isEnglish && style.buttonFlex)}
-                    onClick={() => handleClickAssign('top-card')}
-                    aria-label={assignButtonDescription}
-                    type="button"
+                    className={classNames(
+                      style.studentLearnMoreButton,
+                      isEnglish && style.buttonFlex
+                    )}
+                    aria-label={i18n.tryCourseNow({
+                      course_name: courseDisplayName,
+                    })}
+                    href={pathToCourse}
                   >
-                    {assignButtonText}
+                    {i18n.tryNow()}
                   </MuiButton>
-                </>
-              )}
-              {!isTeacherOrSignedOut && (
-                <MuiButton
-                  variant="contained"
-                  color="primary"
-                  size="medium"
-                  className={classNames(
-                    style.studentLearnMoreButton,
-                    isEnglish && style.buttonFlex
-                  )}
-                  aria-label={i18n.tryCourseNow({
-                    course_name: courseDisplayName,
-                  })}
-                  href={pathToCourse}
-                >
-                  {i18n.tryNow()}
-                </MuiButton>
-              )}
-            </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
         {isAssignDialogOpen &&
@@ -498,6 +542,10 @@ CustomizableCurriculumCatalogCard.propTypes = {
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
   wide: PropTypes.bool,
+  hideCurriculumMetadata: PropTypes.bool,
+  hideActions: PropTypes.bool,
+  isSelected: PropTypes.bool,
+  onSelect: PropTypes.func,
 };
 
 export default connect(

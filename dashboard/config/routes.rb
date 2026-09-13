@@ -501,6 +501,7 @@ Dashboard::Application.routes.draw do
 
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
+        get 'instant_section_course_offerings'
         get 'quick_assign_course_offerings'
       end
     end

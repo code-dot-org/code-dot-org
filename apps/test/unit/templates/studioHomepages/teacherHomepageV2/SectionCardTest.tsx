@@ -134,8 +134,11 @@ describe('SectionCard', () => {
     );
   });
 
-  it('renders section options dropdown', () => {
-    renderComponent();
+  it('renders section options dropdown for an Instant Section', () => {
+    renderComponent('/teacher_dashboard/home', {
+      ...section,
+      isInstantSection: true,
+    });
     screen.getByLabelText('Section options dropdown');
   });
 

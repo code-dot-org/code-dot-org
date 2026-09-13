@@ -74,6 +74,20 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   }, [section.id]);
 
   const dropdownOptions = useMemo(() => {
+    if (section.isInstantSection) {
+      return [
+        <LinkOption
+          key={'convertInstantSection'}
+          value={TEACHER_NAVIGATION_PATHS.settings}
+          label={i18n.instantSectionConvert()}
+          iconName={'pen-to-square'}
+          url={`${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}?convertInstantSection=true`}
+          eventName={EVENTS.SECTION_CARD_SETTINGS_CLICKED}
+          eventOptions={{}}
+        />,
+      ];
+    }
+
     const options = [
       <LinkOption
         key={'sectionSettings'}

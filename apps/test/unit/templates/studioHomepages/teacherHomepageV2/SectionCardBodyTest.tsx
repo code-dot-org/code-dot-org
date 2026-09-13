@@ -18,17 +18,15 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import SectionCardBody from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCardBody';
 import teacherSections, {
   setSections,
-  selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
-import DashboardSectionSettings from '@cdo/apps/templates/teacherNavigation/DashboardSectionSettings';
 import {
   TEACHER_NAVIGATION_SECTIONS_URL,
   SPECIFIC_SECTION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
-import * as windowUtils from '@cdo/apps/utils';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const LocationElement = () => {
   const location = useLocation();
@@ -145,6 +143,7 @@ describe('SectionCardBody', () => {
   };
 
   const store: Store = getStore();
+  registerReducers({teacherSections});
   let sendEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
@@ -157,8 +156,7 @@ describe('SectionCardBody', () => {
 
   function renderComponent(
     section = defaultSection,
-    initialRoute = '/teacher_dashboard/home',
-    useSettingsPage = false
+    initialRoute = '/teacher_dashboard/home'
   ) {
     return render(
       <Provider store={store}>
@@ -212,13 +210,7 @@ describe('SectionCardBody', () => {
                     />
                     <Route
                       path={TEACHER_NAVIGATION_PATHS.settings}
-                      element={
-                        useSettingsPage ? (
-                          <DashboardSectionSettings redirectUrl="/teacher_dashboard/sections/11/progress" />
-                        ) : (
-                          <LocationElement />
-                        )
-                      }
+                      element={<LocationElement />}
                     />
                   </Route>
                 </Route>
@@ -257,6 +249,18 @@ describe('SectionCardBody', () => {
       EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
       {}
     );
+  });
+
+  it('renders an assigned Instant Section course in one button', () => {
+    renderComponent({...defaultSection, isInstantSection: true});
+
+    expect(
+      screen.getByRole('link', {
+        name: `Course: ${defaultSection.courseDisplayName}`,
+      })
+    ).toBeInTheDocument();
+    expect(screen.queryByText('Go to course')).not.toBeInTheDocument();
+    expect(screen.queryByText('View lesson materials')).not.toBeInTheDocument();
   });
 
   it('renders empty state button when no course is assigned', () => {
@@ -316,8 +320,7 @@ describe('SectionCardBody', () => {
     }
   );
 
-  it('opens the existing section settings page and returns home after conversion', async () => {
-    registerReducers({teacherSections});
+  it('opens the recommended course modal for an Instant Section', async () => {
     const instantSection = {
       ...noCourseSection,
       isInstantSection: true,
@@ -326,61 +329,90 @@ describe('SectionCardBody', () => {
       courseOfferingId: null,
       courseVersionId: null,
     };
+    const fetchSpy = jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
+      value: [
+        {
+          key: 'oceans',
+          display_name: 'AI for Oceans',
+          display_name_with_latest_year: 'AI for Oceans',
+          grade_levels: '3,4,5',
+          duration: 'hour',
+          image: null,
+          course_version_path: '/courses/oceans',
+          course_version_id: 2,
+          course_id: 3,
+          course_offering_id: 4,
+          is_translated: true,
+          ai_chat_tools_dependency: 'none',
+        },
+      ],
+      response: new Response(),
+    });
     const serverSection = {
       ...serverSectionFromSection(instantSection),
       instant_section: true,
     };
     store.dispatch(setSections([serverSection], false));
-    store.dispatch(selectSection(11));
-    const navigateSpy = jest
-      .spyOn(windowUtils, 'navigateToHref')
-      .mockImplementation(() => {});
-    const fetchSpy = jest.spyOn(window, 'fetch').mockResolvedValue({
-      ok: true,
-      json: async () => ({}),
-    } as Response);
-    renderComponent(instantSection, '/teacher_dashboard/home', true);
-    const link = screen.getByRole('link', {name: 'Convert to regular section'});
-    expect(link).toHaveAttribute(
-      'href',
-      '/teacher_dashboard/sections/11/settings?convertInstantSection=true'
-    );
-    fireEvent.click(link);
-    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
-    const nameField = await screen.findByRole('textbox', {name: /Class name/i});
-    expect(nameField).toHaveValue('Period 1');
-    fireEvent.change(nameField, {target: {value: 'Period 2'}});
-    fetchSpy.mockClear();
-    fireEvent.click(screen.getByRole('button', {name: 'Save'}));
-    expect(fetchSpy).not.toHaveBeenCalled();
-    fireEvent.click(screen.getByRole('checkbox', {name: '3'}));
-    fetchSpy.mockResolvedValue({
-      ok: true,
-      json: async () => ({
+    const ajaxSpy = jest.spyOn($, 'ajax').mockImplementation(() => {
+      const deferred = $.Deferred();
+      deferred.resolve({
         ...serverSection,
-        instant_section: false,
-        name: 'Period 2',
-        grades: ['3'],
-      }),
-    } as Response);
-    fireEvent.click(screen.getByRole('button', {name: 'Save'}));
-    await waitFor(() =>
-      expect(navigateSpy).toHaveBeenCalledWith(
-        window.location.origin + '/teacher_dashboard/home'
-      )
-    );
-    expect(fetchSpy).toHaveBeenCalledTimes(1);
-    expect(fetchSpy).toHaveBeenCalledWith(
-      '/api/v1/sections/11',
-      expect.objectContaining({method: 'PATCH'})
-    );
-    expect(JSON.parse(fetchSpy.mock.calls[0][1]?.body as string)).toEqual(
-      expect.objectContaining({
-        id: 11,
-        name: 'Period 2',
-        grades: ['3'],
-        convert_instant_section: true,
+        course_id: 3,
+        course_offering_id: 4,
+        course_version_id: 2,
+        course_display_name: 'AI for Oceans',
+      });
+      return deferred.promise() as unknown as JQuery.jqXHR;
+    });
+
+    renderComponent(instantSection);
+    fireEvent.click(screen.getByRole('button', {name: 'Assign a course'}));
+
+    expect(
+      await screen.findByRole('heading', {
+        name: 'Recommended for your Instant Section',
       })
+    ).toBeInTheDocument();
+    expect(await screen.findByText('AI for Oceans')).toBeInTheDocument();
+    expect(fetchSpy).toHaveBeenCalledWith(
+      '/course_offerings/instant_section_course_offerings'
+    );
+    expect(screen.queryByRole('button', {name: /Quick View/})).toBeNull();
+    expect(screen.queryByText(/Grades:/)).toBeNull();
+
+    const assignButton = screen.getByRole('button', {name: 'Assign'});
+    expect(assignButton).toBeDisabled();
+    const courseTile = screen.getByRole('button', {name: 'AI for Oceans'});
+    expect(courseTile).toHaveAttribute('aria-pressed', 'false');
+    fireEvent.click(courseTile);
+    expect(courseTile).toHaveAttribute('aria-pressed', 'true');
+    expect(assignButton).toBeEnabled();
+    fireEvent.click(assignButton);
+    await waitFor(() => expect(ajaxSpy).toHaveBeenCalledTimes(1));
+    expect(ajaxSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        url: '/dashboardapi/sections/11',
+        method: 'PATCH',
+      })
+    );
+    const request = ajaxSpy.mock.calls[0]?.[0];
+    if (!request) {
+      throw new Error('Expected a section update request');
+    }
+    expect(JSON.parse(request.data as string)).toEqual(
+      expect.objectContaining({
+        course_id: 3,
+        course_offering_id: 4,
+        course_version_id: 2,
+        unit_id: null,
+      })
+    );
+    await waitFor(() =>
+      expect(
+        screen.queryByRole('heading', {
+          name: 'Recommended for your Instant Section',
+        })
+      ).not.toBeInTheDocument()
     );
   });
 });

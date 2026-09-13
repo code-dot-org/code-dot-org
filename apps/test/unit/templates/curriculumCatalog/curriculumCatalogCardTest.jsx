@@ -279,6 +279,47 @@ describe('CurriculumCatalogCard', () => {
     );
   });
 
+  it('can hide curriculum metadata and Quick View', () => {
+    const {container} = renderCurriculumCard({
+      ...defaultProps,
+      subjects,
+      topics,
+      hideCurriculumMetadata: true,
+      hideActions: true,
+      onQuickViewClick: undefined,
+    });
+
+    expect(
+      screen.queryByText(translatedLabels[subjects[0]])
+    ).not.toBeInTheDocument();
+    expect(screen.queryByText(/Grades:/)).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', {name: /Quick View/})).toBeNull();
+    expect(screen.queryByRole('button', {name: /Assign/})).toBeNull();
+    // eslint-disable-next-line no-restricted-properties
+    expect(container.querySelectorAll('i[class*=clock]')).toHaveLength(0);
+  });
+
+  it('can make the card selectable by mouse and keyboard', () => {
+    const onSelect = jest.fn();
+    renderCurriculumCard({
+      ...defaultProps,
+      hideActions: true,
+      hideCurriculumMetadata: true,
+      isSelected: true,
+      onSelect,
+    });
+
+    const card = screen.getByRole('button', {
+      name: defaultProps.courseDisplayName,
+    });
+    expect(card).toHaveAttribute('aria-pressed', 'true');
+    fireEvent.click(card);
+    fireEvent.keyDown(card, {key: 'Enter'});
+    fireEvent.keyDown(card, {key: ' '});
+
+    expect(onSelect).toHaveBeenCalledTimes(3);
+  });
+
   it('renders Assign button with descriptive label', () => {
     renderCurriculumCard({
       ...defaultProps,
