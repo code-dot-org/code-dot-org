@@ -26,6 +26,8 @@
 // of this knows or cares that a picture was described rather than drawn or
 // imported, and there is nothing on the file that says so.
 
+import type {ImageKind} from './imagePrompts';
+
 /** One picture that came back. */
 export interface GeneratedPicture {
   /**
@@ -44,6 +46,15 @@ export interface GeneratedPicture {
 export interface DrawRequest {
   /** The learner's own words, whole and untouched. */
   prompt: string;
+  /**
+   * What the picture is FOR, which decides how the words are asked
+   * (`generate/imagePrompts`).
+   *
+   * The call site's, never the learner's: the Actor Creator knows it is asking
+   * for an actor, and a door that asked would be asking a question it already
+   * had the answer to.
+   */
+  kind?: ImageKind;
   /** How many to offer. A transport may answer with fewer. */
   count?: number;
   /**
@@ -69,8 +80,16 @@ export interface ImageGenerator {
   draw(request: DrawRequest): Promise<GeneratedPicture[]>;
 }
 
-/** How many to ask for when nobody says. */
-export const DRAW_COUNT = 4;
+/**
+ * How many to ask for when nobody says.
+ *
+ * ONE. Four was the fixture's habit and it does not survive contact with a
+ * real service: each is a provider call and a wait, and the learner's next act
+ * is almost never "pick the best of four" but "that is close, but greener" —
+ * which is an edit to the words, not a choice between pictures. So one, and
+ * drawing again is a press.
+ */
+export const DRAW_COUNT = 1;
 
 /** Thrown by a transport whose request was abandoned. */
 export class DrawAbandoned extends Error {
