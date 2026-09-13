@@ -754,11 +754,29 @@ export const FileMenus = () => {
     () => (painting ? filesIn(SPRITES_FOLDER) : []),
     [painting, filesIn],
   );
-  // Decoded while either grid is up: the pictures are what a sprite tile shows
-  // and what an animation's frames are drawn from.
-  const decoded = useProjectImages(
-    painting || playing || creating ? ops.source : undefined,
-  );
+  /**
+   * The project's pictures, decoded — what a sprite tile shows and what an
+   * animation's frames are drawn from.
+   *
+   * ASKED FOR ALWAYS, where this used to ask only while a grid was up. The
+   * saving was imaginary: a decode is remembered per picture
+   * (`appearance/useProjectImages`), the runtime and the Blockly editor both
+   * decode the whole project unconditionally anyway, and this hook shares
+   * neither of their maps.
+   *
+   * What the condition bought instead was a WINDOW. A picture kept inside the
+   * Actor Creator was requested while the wizard was up and arrived after it
+   * closed — by which time this had been handed `undefined`, and the decode
+   * landed in a torn-down effect. It was never requested again, `requested`
+   * having already recorded it, so the sprites shelf could not show that
+   * picture for the rest of the session while the `set sprite` picker, whose
+   * own hook was never switched off, showed it perfectly. That was reported
+   * exactly so.
+   *
+   * The dropped result is fixed where it belongs (a decode outlives the effect
+   * that asked for it), and this is the window it needed to fall through.
+   */
+  const decoded = useProjectImages(ops.source);
 
   /**
    * The animation files, each with the FIRST animation it holds.
