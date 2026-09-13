@@ -155,3 +155,20 @@
 .kindWhat {
   color: var(--text-neutral-secondary);
 }
+
+/* A surface that has to repeat, repeated. One copy says nothing about whether
+   it joins; several say it at a glance. Fixed in pixels rather than a fraction
+   of the box, so the seams stay the same size whatever the dialog is. */
+.tiled {
+  width: 100%;
+  min-height: 13rem;
+  align-self: stretch;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 6.5rem 6.5rem;
+  image-rendering: auto;
+}
+
+.repeated {
+  color: var(--text-neutral-secondary);
+}

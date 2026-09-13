@@ -248,7 +248,19 @@ export const DescribePicture = ({
       )}
 
       <div className={styles.preview}>
-        {drawn ? (
+        {drawn && kind === 'tileable' ? (
+          // SHOWN REPEATED, because one copy cannot be judged. A seam is
+          // invisible in a single picture and obvious in nine, and the whole
+          // promise of this kind is that there is no seam — so the preview
+          // shows the promise rather than the picture, and `Draw again`
+          // becomes a decision instead of a guess.
+          <div
+            className={styles.tiled}
+            role="img"
+            aria-label={`Drawn for “${prompt}”, shown repeated`}
+            style={{backgroundImage: `url(${drawn.dataUrl})`}}
+          />
+        ) : drawn ? (
           // The words are the description, so the alt is them: a reader who
           // cannot see it is told what was asked for, which is the only thing
           // anybody here knows about it.
@@ -264,6 +276,12 @@ export const DescribePicture = ({
           </Typography>
         )}
       </div>
+
+      {drawn && kind === 'tileable' && (
+        <Typography variant="body4" className={styles.repeated}>
+          Shown repeated, so you can see where the copies meet.
+        </Typography>
+      )}
     </div>
   );
 };

@@ -72,6 +72,10 @@ import type {
   GeneratedPicture,
   ImageGenerator,
 } from '../../appearance/generate/imageGenerator';
+import {
+  takesAShape,
+  type ImageKind,
+} from '../../appearance/generate/imagePrompts';
 import type {TileScale} from '../../appearance/generate/ScaleGrid';
 import {EnhancementRows, refusalOf} from '../enhance/EnhancementRows';
 import type {Enhancement, EnhanceTarget} from '../enhance/enhancements';
@@ -232,6 +236,15 @@ const STEPS = [
 /** How wide a picture tile is drawn. Tall art is fitted inside it. */
 const TILE = 56;
 
+/**
+ * What an actor's picture can be asked to be.
+ *
+ * No backdrop among them: a backdrop is a backdrop because it lives in
+ * `backgrounds/`, and one drawn here would land in `sprites/`
+ * (`appearance/backgroundsFolder`).
+ */
+const DRAWABLE: readonly ImageKind[] = ['centered', 'filled', 'tileable'];
+
 export const ActorCreator = ({
   actors,
   templates,
@@ -265,6 +278,17 @@ export const ActorCreator = ({
    * the file whatever the picture ends up being.
    */
   const [shape, setShape] = useState<TileScale>({x: 1, y: 1});
+  /**
+   * How the drawn picture should meet its frame.
+   *
+   * ASKED HERE TOO, and not only on the sprites shelf. An actor is as often a
+   * piece of terrain as a character — the platformer's ground is an actor —
+   * and the door cannot tell which from the fact that it is the Actor
+   * Creator's. Hard-coding `centered` here told a model "draw only the
+   * subject, centred … no ground" over the top of a learner asking for ground
+   * (`generate/imagePrompts`).
+   */
+  const [kind, setKind] = useState<ImageKind>('centered');
   /**
    * A picture that has been drawn and not yet written, which `Next` writes.
    *
@@ -651,9 +675,23 @@ export const ActorCreator = ({
           {STEPS[at].id === 'look' && describing && (
             <DescribePicture
               drawing={drawing}
-              kind="actor"
-              scale={shape}
-              onScale={setShape}
+              kind={kind}
+              kinds={DRAWABLE}
+              onKind={next => {
+                setKind(next);
+                // A surface that repeats is one square, and more of it is made
+                // by placing more of it — so the size question goes, and the
+                // answer with it rather than sitting there unseen and getting
+                // written anyway.
+                if (!takesAShape(next)) {
+                  setShape({x: 1, y: 1});
+                }
+              }}
+              placeholder={
+                kind === 'centered' ? 'a purple crab' : 'mossy stone bricks'
+              }
+              scale={takesAShape(kind) ? shape : undefined}
+              onScale={takesAShape(kind) ? setShape : undefined}
               onDrew={setPending}
               onBack={() => {
                 // Choosing from the grid instead is a rejection of the drawn

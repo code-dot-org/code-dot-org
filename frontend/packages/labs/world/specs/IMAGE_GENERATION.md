@@ -120,9 +120,28 @@ to the prompt, not a fresh thought.
   parameter — so the ask is for real transparency, with no colour to pick and
   nothing to eat off the subject.
 
-  The kind comes from the call site, which knows what it opened the door for —
-  except on the sprites shelf, where a thing and a surface land in the same
-  folder and only the learner knows which. That one question is asked.
+  A KIND IS A COMPOSITION, not a use, and naming them after the three doors was
+  a bug rather than a shorthand. Asked for "a tileable ground surface … ice
+  that the player is expected to slip upon", the Actor Creator's door wrapped
+  those words in the clause for an `actor` — "draw only the subject, centred …
+  no ground" — and the model did as it was told. The lab had only ever asked
+  itself which door this was.
+
+  So the kinds say how a picture meets its frame: `centered` (the subject
+  alone, space round it), `filled` (edge to edge, running off all four sides),
+  `tileable` (filled, and joining itself), `background` (a wide scene for the
+  viewport). A use picks one, and only the backdrop shelf can pick without
+  asking — a backdrop is a backdrop because of the folder it lands in.
+  Everywhere a sprite is drawn the same folder holds all three, so the question
+  is the learner's.
+
+  Three things follow from the naming. The framing is said BEFORE the learner's
+  words, since a model handed three drawable nouns has decided before the
+  corrections arrive. The tileable clause refuses the objects by name — no
+  tile, no block, no slab — because "a tileable ground tile" is how anybody
+  would ask and a model handed the word draws one. And a tileable picture is
+  shown REPEATED: a seam is invisible in one copy and obvious in nine, so the
+  preview shows the promise rather than the picture.
 
 ## Where to start
 

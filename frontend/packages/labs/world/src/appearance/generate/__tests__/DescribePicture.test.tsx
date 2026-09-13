@@ -26,7 +26,7 @@ const show = (
   render(
     <DescribePicture
       drawing={drawing}
-      kind="actor"
+      kind="centered"
       onKeep={onKeep}
       onKept={onKept}
       {...props}
@@ -169,15 +169,15 @@ describe('what it is asking for', () => {
     show();
     expect(screen.queryByLabelText('What it is')).toBeNull();
 
-    show({kinds: ['actor'], onKind: vi.fn()});
+    show({kinds: ['centered'], onKind: vi.fn()});
     expect(screen.queryByLabelText('What it is')).toBeNull();
 
-    show({kinds: ['actor', 'tile'], onKind: vi.fn()});
+    show({kinds: ['centered', 'tileable'], onKind: vi.fn()});
     expect(screen.getByLabelText('What it is')).toBeTruthy();
   });
 
   it('says what the difference is, rather than naming the two prompts', async () => {
-    show({kinds: ['actor', 'tile'], onKind: vi.fn()});
+    show({kinds: ['centered', 'tileable'], onKind: vi.fn()});
 
     expect(screen.getByRole('button', {name: /A thing/})).toBeTruthy();
     expect(
@@ -187,26 +187,58 @@ describe('what it is asking for', () => {
 
   it('shows which one is chosen, and hands back the other', () => {
     const onKind = vi.fn();
-    show({kind: 'actor', kinds: ['actor', 'tile'], onKind});
+    show({kind: 'centered', kinds: ['centered', 'tileable'], onKind});
 
     expect(screen.getByRole('button', {name: /A thing/})).toHaveAttribute(
       'aria-pressed',
       'true',
     );
-    fireEvent.click(screen.getByRole('button', {name: /A surface/}));
-    expect(onKind).toHaveBeenCalledWith('tile');
+    fireEvent.click(
+      screen.getByRole('button', {name: /A surface that repeats/}),
+    );
+    expect(onKind).toHaveBeenCalledWith('tileable');
   });
 
   it('asks the generator for the kind it was given', async () => {
     // The whole point of the question: a surface is a different ask, not a
     // differently labelled one.
-    show({kind: 'tile', kinds: ['actor', 'tile'], onKind: vi.fn()});
+    show({kind: 'tileable', kinds: ['centered', 'tileable'], onKind: vi.fn()});
     fireEvent.change(field(), {target: {value: 'stone bricks'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
     await vi.waitFor(() => expect(draw).toHaveBeenCalled());
     const asked = draw.mock.calls.at(-1) as unknown as [{kind?: string}];
-    expect(asked[0].kind).toBe('tile');
+    expect(asked[0].kind).toBe('tileable');
+  });
+});
+
+describe('a surface that repeats', () => {
+  const repeating = {
+    kind: 'tileable' as const,
+    kinds: ['centered', 'tileable'] as const,
+    onKind: vi.fn(),
+  };
+
+  it('shows it repeated, because one copy cannot be judged', async () => {
+    // A seam is invisible in a single picture and obvious in nine, and the
+    // whole promise of this kind is that there is no seam.
+    show(repeating);
+    fireEvent.change(field(), {target: {value: 'stone bricks'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    const shown = await screen.findByRole('img', {name: /shown repeated/});
+    expect(shown.style.backgroundImage).toContain(DRAWN[0].dataUrl);
+    expect(screen.getByText(/where the copies meet/)).toBeTruthy();
+  });
+
+  it('shows one copy of anything else', async () => {
+    show({kind: 'centered'});
+    fireEvent.change(field(), {target: {value: 'a crab'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    const shown = await screen.findByRole('img');
+    expect(shown.tagName).toBe('IMG');
+    expect(screen.queryByText(/where the copies meet/)).toBeNull();
   });
 });
 

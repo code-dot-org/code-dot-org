@@ -723,6 +723,46 @@ describe('describing a picture', () => {
     expect(onKeep).not.toHaveBeenCalled();
   });
 
+  it('asks what sort of picture it is, which the door cannot tell', async () => {
+    // THE REPORTED BUG. The door hard-coded a centred subject, so a learner
+    // asking for tileable ground got "draw only the subject, centred … no
+    // ground" wrapped round their words. An actor is as often terrain as it is
+    // a character — the platformer's ground is an actor.
+    atThePictures();
+    expect(screen.getByLabelText('What it is')).toBeTruthy();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /A surface that repeats/}),
+    );
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'slippery ice'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [{kind?: string}];
+    expect(asked[0].kind).toBe('tileable');
+  });
+
+  it('drops the size question where a size means nothing', async () => {
+    // A surface that repeats is one square, and more of it is made by placing
+    // more of it. The answer goes with the question rather than sitting there
+    // unseen and getting written anyway.
+    atThePictures();
+    fireEvent.click(screen.getByRole('button', {name: '2 across, 3 up'}));
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /A surface that repeats/}),
+    );
+    expect(screen.queryByLabelText('How many tiles it fills')).toBeNull();
+
+    fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
+    toTheEnd();
+    expect(build).toHaveBeenCalledWith(
+      expect.objectContaining({shape: {x: 1, y: 1}}),
+    );
+  });
+
   it('writes the shape it was given into the actor', async () => {
     // A fact about the ACTOR rather than the picture, so it survives leaving
     // the panel and is written whatever the picture ends up being.
