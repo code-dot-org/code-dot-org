@@ -1307,6 +1307,12 @@ export const FileMenus = () => {
               ? undefined
               : () => void uploadInto(spritesMenu)
           }
+          drawing={isReadOnly ? undefined : drawing}
+          onKeep={
+            isReadOnly
+              ? undefined
+              : picture => keepPicture(picture, SPRITES_FOLDER)
+          }
           onCancel={() => setPainting(false)}
         />
       )}
