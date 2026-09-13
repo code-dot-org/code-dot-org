@@ -201,6 +201,34 @@ describe('describing a picture', () => {
     expect(screen.queryByLabelText('How many tiles it fills')).toBeNull();
   });
 
+  it('asks what it is, which this folder cannot tell from the door', async () => {
+    // `player.png` and `ground.png` are both sprites. A stone wall asked for
+    // as a thing comes back as a picture OF a wall, sitting on nothing.
+    open(canDraw());
+    fireEvent.click(screen.getByRole('button', {name: 'Describe'}));
+
+    expect(screen.getByLabelText('What it is')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: /A surface/}));
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'mossy stone bricks'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: /^Draw$/}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [{kind?: string}];
+    expect(asked[0].kind).toBe('tile');
+  });
+
+  it('starts on a thing, which most sprites are', () => {
+    open(canDraw());
+    fireEvent.click(screen.getByRole('button', {name: 'Describe'}));
+
+    expect(screen.getByRole('button', {name: /A thing/})).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+  });
+
   it('keeps what is drawn when Done closes the shelf', async () => {
     // The shelf reading of this dialog, which is the file menus'. Choosing a
     // picture off it costs one press, so a drawn one must not want a second.

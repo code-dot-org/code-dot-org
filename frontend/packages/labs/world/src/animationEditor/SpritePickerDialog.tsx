@@ -28,6 +28,15 @@
 // draw and the caller can write what comes back, so a lab with neither looks
 // like a lab without the feature.
 //
+// AND IT IS THE ONE DOOR THAT HAS TO ASK WHAT IT IS DRAWING. Every other place
+// a picture is described knows from where it was opened — the backdrop shelf
+// wants a backdrop — but this folder holds both kinds of sprite. The
+// platformer's `player.png` is a thing with an outline and its `ground.png` is
+// a surface that has to join up where copies meet, and a stone wall asked for
+// as a thing comes back as a picture OF a wall, sitting on nothing. Nothing
+// here can tell which was meant, so the panel asks
+// (`appearance/generate/imagePrompts`).
+//
 // THE CONFIRM KEEPS IT, whichever question this is answering. Choosing a
 // picture off the palette costs one press, so a drawn one wanting a second —
 // under a button beside the one you were going to press anyway — is a picture
@@ -45,6 +54,7 @@ import type {
   GeneratedPicture,
   ImageGenerator,
 } from '../appearance/generate/imageGenerator';
+import type {ImageKind} from '../appearance/generate/imagePrompts';
 import type {SheetFile} from '../appearance/sheetFile';
 
 import {CellThumb} from './CellThumb';
@@ -112,6 +122,15 @@ export interface SpritePickerDialogProps {
 
 /** How wide a tile is drawn, in pixels. Tall art is fitted inside it. */
 const TILE = 56;
+
+/**
+ * What this folder can be asked for, in the order the question is put.
+ *
+ * No backdrop among them: a backdrop is a backdrop because it is in
+ * `backgrounds/`, and one drawn here would land in `sprites/` and be a sprite
+ * (`appearance/backgroundsFolder`).
+ */
+const DRAWABLE: readonly ImageKind[] = ['actor', 'tile'];
 
 export const SpritePickerDialog = ({
   title = 'Choose a picture',
@@ -188,6 +207,13 @@ export const SpritePickerDialog = ({
   const [describing, setDescribing] = useState(false);
   /** A picture drawn and not yet written, which the confirm writes. */
   const [pending, setPending] = useState<GeneratedPicture>();
+  /**
+   * Which of the two this folder holds is being asked for.
+   *
+   * A thing by default, because most sprites are one and every project starts
+   * with more of them than surfaces.
+   */
+  const [kind, setKind] = useState<ImageKind>('actor');
   const [busy, setBusy] = useState(false);
 
   /**
@@ -300,7 +326,12 @@ export const SpritePickerDialog = ({
           {describing && onKeep ? (
             <DescribePicture
               drawing={drawing}
-              kind="actor"
+              kind={kind}
+              kinds={DRAWABLE}
+              onKind={setKind}
+              placeholder={
+                kind === 'tile' ? 'mossy stone bricks' : 'a purple crab'
+              }
               onDrew={setPending}
               onBack={() => {
                 // Back to the palette is a rejection of the drawn one, so the

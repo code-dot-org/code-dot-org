@@ -27,14 +27,26 @@ import {
   type GeneratedPicture,
   type ImageGenerator,
 } from './imageGenerator';
-import type {ImageKind} from './imagePrompts';
+import {SAID, type ImageKind} from './imagePrompts';
 import {ScaleGrid, type TileScale} from './ScaleGrid';
 
 export interface DescribePictureProps {
   /** Where pictures come from, or nothing — in which case this is nothing. */
   drawing?: ImageGenerator;
-  /** What the picture is for, which is the call site's to know. */
+  /** What the picture is for — the answer, whoever it came from. */
   kind: ImageKind;
+  /**
+   * The kinds on offer, where the call site cannot tell which this is.
+   *
+   * A BACKDROP IS KNOWN BY ITS FOLDER and so is never asked about. A thing and
+   * a surface are not: `player.png` and `ground.png` are both sprites, in the
+   * same folder, and only the learner knows which is being drawn
+   * (`generate/imagePrompts`). Absent, or a single kind, leaves the question
+   * out — which is how the other two doors get this panel without a question
+   * they already have the answer to.
+   */
+  kinds?: readonly ImageKind[];
+  onKind?: (kind: ImageKind) => void;
   /** What the field suggests, which is the only per-place wording. */
   placeholder?: string;
   /**
@@ -75,6 +87,8 @@ export interface DescribePictureProps {
 export const DescribePicture = ({
   drawing,
   kind,
+  kinds,
+  onKind,
   placeholder = 'a purple crab',
   scale,
   onScale,
@@ -149,6 +163,35 @@ export const DescribePicture = ({
 
   return (
     <div className={styles.panel}>
+      {onKind && kinds && kinds.length > 1 && (
+        <div className={styles.field}>
+          <Typography variant="body4">What is it?</Typography>
+          <ul className={styles.kinds} aria-label="What it is">
+            {kinds.map(one => (
+              <li key={one} style={{display: 'contents'}}>
+                <button
+                  type="button"
+                  className={
+                    one === kind
+                      ? `${styles.kind} ${styles.kindChosen}`
+                      : styles.kind
+                  }
+                  aria-pressed={one === kind}
+                  onClick={() => onKind(one)}
+                >
+                  <Typography variant="body3" className={styles.kindName}>
+                    {SAID[one].name}
+                  </Typography>
+                  <Typography variant="body4" className={styles.kindWhat}>
+                    {SAID[one].what}
+                  </Typography>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {onScale && scale && (
         <div className={styles.field}>
           <Typography variant="body4">How big is it?</Typography>

@@ -106,3 +106,52 @@
 .problem {
   color: var(--text-danger, #c0392b);
 }
+
+/* WHAT IT IS, where the call site cannot tell. Side by side rather than a
+   dropdown: there are two of them and the difference is worth reading, which a
+   collapsed list hides behind a press. */
+.kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kind {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 12rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.kind:hover {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+.kind:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 1px;
+}
+
+.kindChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+  box-shadow: inset 0 0 0 1px var(--borders-brand-primary, #0093a4);
+}
+
+.kindName {
+  color: var(--text-neutral-primary);
+}
+
+.kindWhat {
+  color: var(--text-neutral-secondary);
+}

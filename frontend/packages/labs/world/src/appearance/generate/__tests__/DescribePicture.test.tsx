@@ -162,6 +162,54 @@ describe('describing a picture', () => {
   });
 });
 
+describe('what it is asking for', () => {
+  it('asks only where the call site cannot tell', () => {
+    // A backdrop is known by its folder; a thing and a surface land in the
+    // same one (`generate/imagePrompts`).
+    show();
+    expect(screen.queryByLabelText('What it is')).toBeNull();
+
+    show({kinds: ['actor'], onKind: vi.fn()});
+    expect(screen.queryByLabelText('What it is')).toBeNull();
+
+    show({kinds: ['actor', 'tile'], onKind: vi.fn()});
+    expect(screen.getByLabelText('What it is')).toBeTruthy();
+  });
+
+  it('says what the difference is, rather than naming the two prompts', async () => {
+    show({kinds: ['actor', 'tile'], onKind: vi.fn()});
+
+    expect(screen.getByRole('button', {name: /A thing/})).toBeTruthy();
+    expect(
+      screen.getByRole('button', {name: /joins up where copies meet/}),
+    ).toBeTruthy();
+  });
+
+  it('shows which one is chosen, and hands back the other', () => {
+    const onKind = vi.fn();
+    show({kind: 'actor', kinds: ['actor', 'tile'], onKind});
+
+    expect(screen.getByRole('button', {name: /A thing/})).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+    fireEvent.click(screen.getByRole('button', {name: /A surface/}));
+    expect(onKind).toHaveBeenCalledWith('tile');
+  });
+
+  it('asks the generator for the kind it was given', async () => {
+    // The whole point of the question: a surface is a different ask, not a
+    // differently labelled one.
+    show({kind: 'tile', kinds: ['actor', 'tile'], onKind: vi.fn()});
+    fireEvent.change(field(), {target: {value: 'stone bricks'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [{kind?: string}];
+    expect(asked[0].kind).toBe('tile');
+  });
+});
+
 describe('the shape it asks for', () => {
   it('offers the grid only where a shape means something', () => {
     // A backdrop is stretched over the viewport and has no tiles to fill, so

@@ -11,6 +11,14 @@
 // asked "is this a sprite or a background?" would be asking a question it
 // already knows the answer to.
 //
+// …EXCEPT WHERE IT DOES NOT KNOW, which the sprites shelf found. A backdrop is
+// a backdrop because of the folder it lands in, and the shelf that opened the
+// door is the folder. A thing and a surface land in the SAME folder: the
+// platformer's `player.png` and its `ground.png` are both sprites, and which
+// one is being asked for is not written anywhere the call site can read. So
+// that one question is the learner's, and `SAID` is how it is put to them —
+// still not "which prompt template", but "what is it".
+//
 // BORROWED FROM SPRITE LAB, which has been shaping prompts for this exact job
 // for longer (`p5lab/spritelab/lab2/ai/images/imageGeneration`). Its three
 // kinds are the same three, and the wording of the tileable clause is close to
@@ -78,6 +86,29 @@ const CLAUSES: Record<ImageKind, string> = {
     'Draw a wide scene filling the whole frame, with the interesting part ' +
     'toward the middle and nothing that matters near the edges, since the ' +
     'game crops it to the window. No characters, no text, and no interface.',
+};
+
+/**
+ * What each kind is, in words a learner can choose by.
+ *
+ * NOT THE CLAUSE, and not a word from it. The clause above is written at a
+ * model — "fill the entire square frame edge to edge with the material itself"
+ * — and a learner picking between two pictures wants the difference, which is
+ * whether the thing has an outline or goes on forever.
+ */
+export const SAID: Record<ImageKind, {name: string; what: string}> = {
+  actor: {
+    name: 'A thing',
+    what: 'Drawn on its own, with nothing behind it.',
+  },
+  tile: {
+    name: 'A surface',
+    what: 'Fills a whole tile, and joins up where copies meet.',
+  },
+  background: {
+    name: 'A place',
+    what: 'A wide scene, behind everything else.',
+  },
 };
 
 const STYLES: Record<ImageKind, DrawingStyle> = {
