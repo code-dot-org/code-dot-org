@@ -1,6 +1,5 @@
 // What kind of level this is, and everything that follows from it: the
-// surfaces a student sees, and the image controls they get. One authored
-// property instead of the eight that used to travel together.
+// surfaces a student sees, and the image controls they get.
 
 import {ImageAdlibSet} from './ai/images/imageAdlibs';
 import {ImageStyle, ImageType} from './ai/images/types';

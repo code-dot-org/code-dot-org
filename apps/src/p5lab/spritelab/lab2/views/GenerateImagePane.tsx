@@ -278,8 +278,8 @@ interface GenerateImagePaneProps {
   defaultStyle?: ImageStyle;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
-  /** Standalone mode: the image panel IS the level — no gallery, the panel
-      standalone in the page, always open on the level's image. */
+  /** The image panel is the level: no gallery, no modal, always open on a
+      blank generate form. */
   standalone?: boolean;
 }
 
