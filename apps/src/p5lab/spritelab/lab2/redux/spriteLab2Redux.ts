@@ -4,15 +4,6 @@ import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 export const ALL_TABS = ['Images', 'World', 'Code', 'Play'] as const;
 export type Tab = (typeof ALL_TABS)[number];
 
-// AI code-generation lifecycle, modeled on Music's GenerateCode state machine.
-export type AiGenerateState =
-  | 'none'
-  | 'generating'
-  | 'generated'
-  | 'listened'
-  | 'editing'
-  | 'edited';
-
 // Redux mirror of the scenes (full data lives in project sources), so the
 // scene selector and the go-to-scene dropdown can read it reactively.
 export interface SceneMetadata {
@@ -41,7 +32,6 @@ export interface MusicProjectOption {
 export interface SpriteLab2State {
   activeTab: Tab;
   hasRun: boolean;
-  aiGenerateState: AiGenerateState;
   scenes: SceneMetadata[];
   externalScenes: ExternalSceneOption[];
   musicProjects: MusicProjectOption[];
@@ -50,7 +40,6 @@ export interface SpriteLab2State {
 const initialState: SpriteLab2State = {
   activeTab: 'Code',
   hasRun: false,
-  aiGenerateState: 'none',
   scenes: [],
   externalScenes: [],
   musicProjects: [],
@@ -65,9 +54,6 @@ const spriteLab2Slice = createSlice({
     },
     setHasRun: (state, action: PayloadAction<boolean>) => {
       state.hasRun = action.payload;
-    },
-    setAiGenerateState: (state, action: PayloadAction<AiGenerateState>) => {
-      state.aiGenerateState = action.payload;
     },
     setScenes: (state, action: PayloadAction<SceneMetadata[]>) => {
       state.scenes = action.payload;
@@ -88,7 +74,6 @@ const spriteLab2Slice = createSlice({
 export const {
   setActiveTab,
   setHasRun,
-  setAiGenerateState,
   setScenes,
   setExternalScenes,
   setMusicProjects,

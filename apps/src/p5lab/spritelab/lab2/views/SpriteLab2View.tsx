@@ -242,7 +242,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
-  // World-tab experiment flag (levels can also opt in via showWorldTab).
+  // World-tab experiment flag, for a level whose mode does not name the tab.
   const worldTabParamEnabled = useMemo(
     () => queryParams('world-tab') === 'true',
     []
@@ -250,21 +250,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const imageAdlibSetParam = useMemo(getImageAdlibSetParam, []);
   const imageFreeTextParam = useMemo(getImageFreeTextParam, []);
   // The image dialog defaults to the student form; this shows the full
-  // internal one (levels can also opt in via imagesAdvanced). Level edit
-  // modes author starter images, which needs the naming controls.
+  // internal one. Level edit modes author starter images, which needs the
+  // naming controls.
   const imagesAdvanced =
     useMemo(() => queryParams('images-advanced') === 'true', []) ||
     isLevelEditMode;
-  // A level can name its exact tab set; unknown names are dropped, and a list
-  // naming none falls back to the defaults. Listing 'World' turns the world
-  // tab on, as the URL flag and showWorldTab still do.
+  // The mode decides the tab set, and an image level's is empty: its panel
+  // replaces the shell. A level with no mode, or one whose authored kind is
+  // not a kind we know, falls back to the lab defaults.
   const tabs = useMemo(() => {
-    // The property is authored JSON, so its type is a claim, not a guarantee.
-    const fromMode = tabsForMode(levelProperties.levelMode);
-    if (fromMode) {
-      return fromMode;
-    }
-    return worldTabParamEnabled ? WORLD_TABS : ENABLED_TABS;
+    return (
+      tabsForMode(levelProperties.levelMode) ??
+      (worldTabParamEnabled ? WORLD_TABS : ENABLED_TABS)
+    );
   }, [levelProperties.levelMode, worldTabParamEnabled]);
   const worldTabEnabled = tabs.includes('World');
   // Playfield size for a world this level creates. An existing world keeps
@@ -276,19 +274,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     (scene?: Scene) => resizeWorld(scene?.world, seedSceneSize),
     [seedSceneSize]
   );
-  // A level naming its tabs opens on the list's first entry (display order is
-  // fixed, so authored order is free to carry the start tab).
+  // A level's mode opens it on the first tab the mode names (display order is
+  // fixed, so that order is free to carry the start tab).
   useEffect(() => {
-    if (levelProperties.levelMode) {
+    if (levelProperties.levelMode && tabs.length) {
       dispatch(setActiveTab(tabs[0]));
     }
     // Only the level identity should re-trigger the start tab.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [levelProperties.id, dispatch]);
   // The slice's initial tab is 'Code'; a level hiding Code (an images-only
-  // level, say) needs the selection steered onto a tab that exists.
+  // level, say) needs the selection steered onto a tab that exists. A mode
+  // with no tabs at all renders no shell, so leave the selection alone.
   useEffect(() => {
-    if (!tabs.includes(activeTab)) {
+    if (tabs.length && !tabs.includes(activeTab)) {
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
@@ -815,8 +814,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The active scene's world, by ref: run callbacks read it at call time,
   // so world edits don't churn their identities.
   const activeWorldRef = useRef<World | undefined>(undefined);
+  const activeSceneTypeRef = useRef<SceneType | undefined>(undefined);
   useEffect(() => {
     activeWorldRef.current = worldFor(activeScene);
+    activeSceneTypeRef.current = activeScene?.type;
   }, [activeScene, worldFor]);
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
@@ -829,7 +830,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     const {result: program, referencedImages} = collectImageReferences(
       () => compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
     );
-    engine.runProgram(program, referencedImages);
+    engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
   }, [dispatch, getCode]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.

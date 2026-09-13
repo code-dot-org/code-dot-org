@@ -58,9 +58,6 @@ $gap-height: 43px;
   gap: 16px;
   container-type: inline-size;
 
-  // Collapsing a guide narrows it; animate that the way its height animates.
-  transition: width 0.25s ease;
-
   &NormalWidth {
     width: 40%;
   }
@@ -70,8 +67,12 @@ $gap-height: 43px;
     min-width: 160px;
   }
 
+  &NarrowWidth {
+    width: 20%;
+  }
+
   // Collapsed: no content but the controls left showing, so the panel is
-  // only as big as they are. Declared after the widths so it wins.
+  // only as big as they are. Declared after every width so it wins.
   &Collapsed {
     // inline-size containment sizes the box without looking at its contents,
     // which makes an intrinsic width collapse to the padding; a collapsed
@@ -81,10 +82,6 @@ $gap-height: 43px;
     min-width: 0;
     padding: 28px 12px 12px;
     gap: 8px;
-  }
-
-  &NarrowWidth {
-    width: 20%;
   }
 
   &NormalPosition {
