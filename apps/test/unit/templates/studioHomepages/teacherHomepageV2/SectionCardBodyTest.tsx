@@ -260,6 +260,7 @@ describe('SectionCardBody', () => {
       })
     ).toBeInTheDocument();
     expect(screen.queryByText('Go to course')).not.toBeInTheDocument();
+    expect(screen.queryByText('View progress')).not.toBeInTheDocument();
     expect(screen.queryByText('View lesson materials')).not.toBeInTheDocument();
   });
 

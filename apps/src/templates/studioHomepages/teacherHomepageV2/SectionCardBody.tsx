@@ -56,9 +56,11 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             path={'/catalog'}
           />
         )}
-        {section.unitId && experiments.isEnabled('suggested-lesson') && (
-          <SuggestedLessonLink sectionId={section.id} />
-        )}
+        {!section.isInstantSection &&
+          section.unitId &&
+          experiments.isEnabled('suggested-lesson') && (
+            <SuggestedLessonLink sectionId={section.id} />
+          )}
       </div>
       <div className={styles.sectionCardBodyRight}>
         {section.isInstantSection && (
@@ -73,7 +75,9 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             {i18n.instantSectionShowCode({numStudents: section.studentCount})}
           </Button>
         )}
-        {section.studentCount > 0 && section.courseId ? (
+        {section.studentCount > 0 &&
+        section.courseId &&
+        !section.isInstantSection ? (
           <TaskButton
             buttonText={i18n.viewProgressButton()}
             icon={'chart-line'}
