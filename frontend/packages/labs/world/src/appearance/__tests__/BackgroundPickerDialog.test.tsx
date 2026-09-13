@@ -5,13 +5,14 @@
 // ways to get another are in the grid where the eye already is, and that the
 // name is there for a screen reader even though no tile shows one.
 
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import {
   BackgroundPickerDialog,
   type BackgroundTile,
 } from '../BackgroundPickerDialog';
+import type {GeneratedPicture} from '../generate/imageGenerator';
 
 const BACKGROUNDS: BackgroundTile[] = [
   {fileId: 'b1', name: 'Cave', url: 'data:image/png;base64,cave'},
@@ -23,6 +24,26 @@ const onImport = vi.fn();
 const onNew = vi.fn();
 const onUpload = vi.fn();
 const onCancel = vi.fn();
+
+/** A generator that answers at once, so the tests are about the flow. */
+const DRAWN: GeneratedPicture[] = [
+  {name: 'cave', dataUrl: 'data:image/png;base64,AAAA', mediaType: 'image/png'},
+];
+const draw = vi.fn(async () => DRAWN);
+const onKeep = vi.fn(async () => 'cave.png');
+
+/** The shelf with the fourth way in behind its tile. */
+const canDraw = () => ({drawing: {kind: 'fixture' as const, draw}, onKeep});
+
+/** Open the panel, ask for a picture, and wait for one. */
+const drawOne = async () => {
+  fireEvent.click(screen.getByRole('button', {name: 'Describe'}));
+  fireEvent.change(screen.getByLabelText('Describe a picture'), {
+    target: {value: 'a cave'},
+  });
+  fireEvent.click(screen.getByRole('button', {name: /^Draw$/}));
+  await screen.findByRole('button', {name: 'Keep this one'});
+};
 
 const show = (
   props: Partial<React.ComponentProps<typeof BackgroundPickerDialog>> = {},
@@ -42,23 +63,86 @@ const show = (
 beforeEach(() => vi.clearAllMocks());
 
 describe('describing a backdrop', () => {
-  it('is offered under the ones the project has', () => {
-    // The fourth way in, and the only one that is not a tile: it takes a
-    // sentence rather than a press (`generate/DescribePicture`).
-    show({
-      drawing: {kind: 'fixture', draw: async () => []},
-      onKeep: async () => 'cave.png',
-    });
+  it('is a tile like the other three, and takes the whole view', () => {
+    // It used to be a strip under the shelf, because a sentence does not fit
+    // in a tile. The sentence lives in a view of its own now, so getting there
+    // is a press like the rest (`generate/DescribePicture`).
+    show(canDraw());
+    expect(screen.queryByLabelText('Describe a picture')).toBeNull();
 
+    fireEvent.click(screen.getByRole('button', {name: 'Describe'}));
     expect(screen.getByLabelText('Describe a picture')).toBeTruthy();
+    // …and the shelf is out of the way while it is up.
+    expect(screen.queryByRole('button', {name: 'Open Cave'})).toBeNull();
+  });
+
+  it('gives the shelf back', () => {
+    show(canDraw());
+    fireEvent.click(screen.getByRole('button', {name: 'Describe'}));
+
+    fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
+    expect(screen.getByRole('button', {name: 'Open Cave'})).toBeTruthy();
+  });
+
+  it('asks for no shape, which would mean nothing here', () => {
+    // A backdrop is stretched over the viewport and has no tiles to fill.
+    show(canDraw());
+    fireEvent.click(screen.getByRole('button', {name: 'Describe'}));
+
+    expect(screen.queryByLabelText('How many tiles it fills')).toBeNull();
   });
 
   it('is not offered where nothing can draw, or nothing may be written', () => {
     show();
-    expect(screen.queryByLabelText('Describe a picture')).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Describe'})).toBeNull();
 
-    show({onKeep: async () => 'cave.png'});
-    expect(screen.queryByLabelText('Describe a picture')).toBeNull();
+    show({onKeep});
+    expect(screen.queryByRole('button', {name: 'Describe'})).toBeNull();
+  });
+
+  it('keeps what is drawn when the learner presses Done', async () => {
+    // The same trap the Actor Creator had: choosing one off the shelf costs
+    // one press, so a drawn one wanting a second — beside the button you were
+    // going to press anyway — is one that gets left behind.
+    show(canDraw());
+    await drawOne();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+
+    await vi.waitFor(() => expect(onKeep).toHaveBeenCalledWith(DRAWN[0]));
+    await vi.waitFor(() => expect(onCancel).toHaveBeenCalled());
+  });
+
+  it('stays up when the write refused, rather than closing over it', async () => {
+    onKeep.mockResolvedValueOnce(undefined as never);
+    show(canDraw());
+    await drawOne();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+
+    await vi.waitFor(() => expect(onKeep).toHaveBeenCalled());
+    expect(onCancel).not.toHaveBeenCalled();
+    expect(screen.getByLabelText('Describe a picture')).toBeTruthy();
+  });
+
+  it('does not keep one the learner walked away from', async () => {
+    show(canDraw());
+    await drawOne();
+
+    fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
+    fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+
+    expect(onKeep).not.toHaveBeenCalled();
+    expect(onCancel).toHaveBeenCalled();
+  });
+
+  it('closes without writing when nothing was drawn', async () => {
+    show(canDraw());
+
+    fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+
+    expect(onKeep).not.toHaveBeenCalled();
+    await vi.waitFor(() => expect(onCancel).toHaveBeenCalled());
   });
 });
 
@@ -92,7 +176,7 @@ describe('the backdrop shelf', () => {
     expect(blank.querySelector('img')).toBeNull();
   });
 
-  it('holds the three ways to get another one, in the grid', () => {
+  it('holds the ways to get another one, in the grid', () => {
     show();
 
     screen.getByRole('button', {name: 'Import'}).click();

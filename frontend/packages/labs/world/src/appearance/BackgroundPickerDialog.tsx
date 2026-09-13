@@ -17,8 +17,22 @@
 // No names on the tiles, for the same reason that shelf has none: the eye does
 // the choosing, and a screen reader and a tooltip carry the name for the
 // question a picture cannot answer ("which one was that?").
+//
+// AND DESCRIBING ONE IS A TILE LIKE THE REST, which it was not: it used to sit
+// under the shelf as a strip, on the grounds that it takes a sentence rather
+// than a press. That reasoning was about where the SENTENCE goes, and the
+// answer turned out to be "a view of its own" — a prompt and a picture big
+// enough to judge do not fit under a grid (`generate/DescribePicture`). Once
+// the sentence has somewhere to live, getting there is a press like the other
+// three, and the shelf has one vocabulary instead of two.
+//
+// `Done` KEEPS WHAT IS DRAWN, the way the Actor Creator's `Next` does, and for
+// the same reason: choosing a backdrop off the shelf costs one press, so a
+// drawn one that wanted a second — under a button beside the one you were
+// going to press anyway — is a backdrop that gets left behind.
 
 import {Typography} from '@mui/material';
+import {useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -56,9 +70,10 @@ export interface BackgroundPickerDialogProps {
   /**
    * Where a described backdrop comes from, if anywhere.
    *
-   * The fourth way in, and the only one that is not a tile: it takes a
-   * sentence rather than a press, so it goes under the shelf rather than in it
-   * (`generate/DescribePicture`).
+   * The fourth way in, and a tile like the other three. Absent means the tile
+   * is not offered at all rather than offered and broken: a lab with nothing
+   * behind it should look like a lab without the feature
+   * (`generate/imageGenerator`).
    */
   drawing?: ImageGenerator;
   /** Keep a drawn one — write it, and answer with its file name. */
@@ -76,6 +91,35 @@ export const BackgroundPickerDialog = ({
   onKeep,
   onCancel,
 }: BackgroundPickerDialogProps) => {
+  /** Whether the shelf has been given over to describing one. */
+  const [describing, setDescribing] = useState(false);
+  /** A backdrop drawn and not yet written, which `Done` writes. */
+  const [pending, setPending] = useState<GeneratedPicture>();
+  const [busy, setBusy] = useState(false);
+
+  /**
+   * Done: keep what is on screen, and close.
+   *
+   * A write that refuses leaves the dialog up with the picture still in it —
+   * the panel has said why by then, and closing would take the picture with
+   * it.
+   */
+  const done = async () => {
+    if (busy) {
+      return;
+    }
+    if (pending) {
+      setBusy(true);
+      const file = await onKeep?.(pending);
+      setBusy(false);
+      if (!file) {
+        return;
+      }
+      setPending(undefined);
+    }
+    onCancel();
+  };
+
   const action = (
     key: string,
     icon: string,
@@ -105,56 +149,82 @@ export const BackgroundPickerDialog = ({
       description="Open one to draw on, or bring in another."
       onClose={onCancel}
       closeLabel="Close"
-      primaryButtonProps={{children: 'Done', onClick: onCancel}}
+      primaryButtonProps={{
+        children: busy ? 'Keeping the picture…' : 'Done',
+        disabled: busy,
+        onClick: () => void done(),
+      }}
       customContent={
         <div className={styles.body}>
-          <ul className={styles.shelf}>
-            {action('import', 'download', 'Import', onImport)}
-            {onNew && action('new', 'plus', 'New', onNew)}
-            {onUpload && action('upload', 'upload', 'Upload', onUpload)}
-            {backgrounds.map(one => (
-              <li key={one.fileId}>
-                <button
-                  type="button"
-                  className={styles.tile}
-                  aria-label={`Open ${one.name}`}
-                  title={one.name}
-                  onClick={() => onOpen(one.fileId)}
-                >
-                  {one.url ? (
-                    <img
-                      className={styles.thumb}
-                      src={one.url}
-                      alt=""
-                      loading="lazy"
-                      draggable={false}
-                    />
-                  ) : (
-                    <FontAwesomeV6Icon
-                      iconName="mountain-sun"
-                      iconStyle="solid"
-                      className={styles.blank}
-                    />
-                  )}
-                </button>
-              </li>
-            ))}
-          </ul>
-          {backgrounds.length === 0 && (
-            <Typography variant="body3" className={styles.empty}>
-              This project has no backgrounds yet.
-            </Typography>
-          )}
-          {onKeep && (
+          {describing && onKeep ? (
             <DescribePicture
               drawing={drawing}
               kind="background"
               placeholder="a cave with glowing crystals"
+              // No shape asked for: a backdrop is stretched over the viewport
+              // and has no tiles to fill, so the widget the Actor Creator gets
+              // would be a question meaning nothing here
+              // (`generate/DescribePicture`).
+              onDrew={setPending}
+              onBack={() => {
+                // Going back to the shelf is a rejection of the drawn one, so
+                // `Done` must not then keep it.
+                setPending(undefined);
+                setDescribing(false);
+              }}
               onKeep={onKeep}
-              // Nothing more to do: a kept backdrop is one of the project's
-              // backdrops, and the shelf above is the list of those. Choosing
-              // it is the press it already has.
+              // …and the shelf it comes back to is the list it just joined,
+              // which is the whole confirmation it needs.
+              onKept={() => {
+                setPending(undefined);
+                setDescribing(false);
+              }}
             />
+          ) : (
+            <>
+              <ul className={styles.shelf}>
+                {action('import', 'download', 'Import', onImport)}
+                {onNew && action('new', 'plus', 'New', onNew)}
+                {onUpload && action('upload', 'upload', 'Upload', onUpload)}
+                {drawing &&
+                  onKeep &&
+                  action('draw', 'wand-magic-sparkles', 'Describe', () =>
+                    setDescribing(true),
+                  )}
+                {backgrounds.map(one => (
+                  <li key={one.fileId}>
+                    <button
+                      type="button"
+                      className={styles.tile}
+                      aria-label={`Open ${one.name}`}
+                      title={one.name}
+                      onClick={() => onOpen(one.fileId)}
+                    >
+                      {one.url ? (
+                        <img
+                          className={styles.thumb}
+                          src={one.url}
+                          alt=""
+                          loading="lazy"
+                          draggable={false}
+                        />
+                      ) : (
+                        <FontAwesomeV6Icon
+                          iconName="mountain-sun"
+                          iconStyle="solid"
+                          className={styles.blank}
+                        />
+                      )}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              {backgrounds.length === 0 && (
+                <Typography variant="body3" className={styles.empty}>
+                  This project has no backgrounds yet.
+                </Typography>
+              )}
+            </>
           )}
         </div>
       }
