@@ -114,23 +114,32 @@ export const directImages = (): ImageGenerator => ({
     const stem = stemFor(prompt);
     return Promise.all(
       reply.pictures.map(async (picture, at): Promise<GeneratedPicture> => {
-        // TRIMMED FIRST, where the surface has to join. A transparent margin
-        // at an edge a copy is going to meet is a gap between the copies, and
-        // asking for it not to be there is a request the provider is free to
-        // ignore — which it did (`generate/shrinkPicture.trimToEdges`).
+        // TRIMMED FIRST, on every edge. A transparent margin at an edge a
+        // copy is going to meet is a gap between the copies, and asking for it
+        // not to be there is a request the provider is free to ignore — which
+        // it did (`generate/shrinkPicture.trimToEdges`).
+        //
+        // AND ON THE FREE EDGES TOO, which the first cut of this left alone on
+        // the grounds that only a joining edge has to reach. That was reasoning
+        // about seams and forgetting what an empty margin IS to the rest of the
+        // lab: every question about how big an actor is reads its picture, so a
+        // ground tile drawn in the middle of its frame gets a collision box
+        // with the empty space in it, sits away from where it was placed, and
+        // stands a margin above the floor. Reported exactly so. A row where
+        // nothing is drawn is not part of the picture on any axis.
+        //
+        // Not a backdrop: that one is opaque, fills its frame by its own
+        // clause, and is stretched over the viewport rather than placed.
         //
         // Before the shrink rather than after, so the shrink's budget is spent
         // on the picture rather than on the margin round it.
-        const joins = kind === 'surface' && surface ? surface.ways : 'none';
+        const sprite = kind !== 'background';
         const trimmed = await trimToEdges(
           {
             dataUrl: `data:${picture.mediaType};base64,${picture.base64}`,
             mediaType: picture.mediaType,
           },
-          {
-            across: joins === 'across' || joins === 'both',
-            up: joins === 'up' || joins === 'both',
-          },
+          {across: sprite, up: sprite},
         );
         // …then SHRUNK ON THE WAY IN. A provider draws at a thousand pixels
         // and up, and a project carries its pictures with it — so the size is

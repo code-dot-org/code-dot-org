@@ -107,7 +107,7 @@ export async function shrinkToFit(
 }
 
 /**
- * Cut the fully transparent margin off the edges a surface has to JOIN.
+ * Cut the fully transparent margin off a picture's edges.
  *
  * WORDS ALONE DO NOT GET THIS. A learner asked for a mossy platform tiling
  * side to side, said "do not leave any gaps to the left or right" and "it
@@ -125,6 +125,15 @@ export async function shrinkToFit(
  * IT CANNOT FIX A SEAM, only a gap. Two capped ends butted together are still
  * two capped ends; what stops them being capped is the prompt. This stops them
  * being a finger apart.
+ *
+ * THE FREE EDGES MATTER TOO, which an earlier draft of this left alone on the
+ * grounds that only a joining edge has to reach. That was reasoning about
+ * seams and forgetting what an empty margin IS to the rest of the lab: every
+ * question about how big an actor is reads its picture (`rules/spatial`,
+ * `collision size of`), so a ground tile drawn in the middle of its frame gets
+ * a collision box with the empty space in it, and stands a margin above the
+ * floor it was placed on. A row where nothing is drawn is not part of the
+ * picture on any axis.
  *
  * Untouched when there is nothing to cut, when the browser cannot draw, or
  * when anything at all goes wrong — the same trade {@link shrinkToFit} makes,

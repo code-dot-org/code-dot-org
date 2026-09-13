@@ -63,12 +63,40 @@ describe('promptFor', () => {
     expect(promptFor('thing', 'a coin', {x: 1, y: 1})).not.toContain('a frame');
   });
 
-  it('asks a surface for its shape too', () => {
+  it('asks a surface that joins nothing for its shape too', () => {
     // A three-wide platform IS the picture: `set scale` stretches a sprite
     // rather than repeating it.
     const asked = promptFor('surface', 'ice', {x: 3, y: 2});
 
     expect(asked).toContain('a frame 3 wide by 2 tall');
+  });
+
+  it('asks a JOINING surface for no frame at all', () => {
+    // THE SENTENCE THAT MADE A TILEABLE 1x2 IMPOSSIBLE. A provider draws at
+    // one of three shapes, so 1:2 is asked for on a 2:3 canvas — and "compose
+    // it to fill a frame 1 wide by 2 tall" there means "leave a transparent
+    // margin down each side", which is what the bleed clause has just
+    // forbidden. Said last, where the emphasis is, it won: the platform came
+    // back inside a margin and a row of them stood apart.
+    const asked = promptFor(
+      'surface',
+      'a mossy platform',
+      {x: 1, y: 2},
+      {
+        ways: 'across',
+        through: true,
+      },
+    );
+
+    expect(asked).not.toContain('a frame');
+    expect(asked).toContain('BLEED OFF the left and right edges');
+  });
+
+  it('says nothing about a silhouette to a thing that has no outline', () => {
+    // Asking for a clear silhouette of something that must run off the edges
+    // of the picture is asking for the outline it must not have.
+    expect(promptFor('surface', 'ice')).not.toContain('silhouette');
+    expect(promptFor('thing', 'a crab')).toContain('silhouette');
   });
 });
 

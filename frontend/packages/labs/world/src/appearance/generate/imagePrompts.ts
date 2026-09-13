@@ -137,6 +137,18 @@ const HOUSE_STYLE =
   'is shrunk to a few dozen pixels.';
 
 /**
+ * …and the same for a surface, which has no silhouette to be clear about.
+ *
+ * A SILHOUETTE IS AN OUTLINE, and asking for one of a thing that is supposed
+ * to run off the edges of the picture is asking for the outline it must not
+ * have. One word, pulling the same way as everything else that was wrong here.
+ */
+const HOUSE_STYLE_SURFACE =
+  'Draw it as a clean, simple, brightly lit illustration for a 2-D game, ' +
+  'with bold shapes that still read when the picture is shrunk to a few ' +
+  'dozen pixels.';
+
+/**
  * How a surface is seen, whatever else it is.
  *
  * EVERY CLAUSE HERE NAMES A FAILURE that was watched for. A vignette and a
@@ -270,7 +282,9 @@ const JOINS: Record<TileWays, string> = {
 /** Said wherever it joins at all: a repeat nobody notices is the point. */
 const UNNOTICED =
   ' No feature may stand out enough to be noticed repeating. Where it joins, ' +
-  'the material must run right off that edge.';
+  'the material must run right off that edge. Think of the picture as one ' +
+  'length cut from a long unbroken run of the material: whatever leaves one ' +
+  'joining edge arrives at the other.';
 
 /** The whole of what a surface is asked to be. */
 const surfaceClause = ({ways, through}: SurfaceAsk): string => {
@@ -455,11 +469,23 @@ export const promptFor = (
   shape?: {x: number; y: number},
   surface: SurfaceAsk = PLAIN,
 ): string => {
+  // NOT WHERE IT JOINS, which is the sentence that made a tileable 1x2
+  // impossible to ask for. A provider draws at one of three shapes, so a 1:2
+  // tile is asked for on a 2:3 canvas — and "compose it to fill a frame 1 wide
+  // by 2 tall" then means "leave a transparent margin down each side", which
+  // is exactly what the bleed clause has just forbidden. Said last, where the
+  // emphasis is, it won.
+  //
+  // A joining surface needs no proportion sentence at all: the canvas IS the
+  // tile, edge to edge, and the shape it ends up drawn at comes from the
+  // `set scale` row instead (`actors/create/actorLook.withScale`).
+  const joining = kind === 'surface' && surface.ways !== 'none';
   const proportion =
-    takesAShape(kind) && shape && (shape.x !== 1 || shape.y !== 1)
+    takesAShape(kind) && !joining && shape && (shape.x !== 1 || shape.y !== 1)
       ? ` Compose it to fill a frame ${shape.x} wide by ${shape.y} tall, so the subject is that shape and not a square one.`
       : '';
-  return `${leadFor(kind, surface)}${words.trim()}. ${CLAUSES[kind](surface)}${proportion} ${HOUSE_STYLE}`;
+  const house = kind === 'surface' ? HOUSE_STYLE_SURFACE : HOUSE_STYLE;
+  return `${leadFor(kind, surface)}${words.trim()}. ${CLAUSES[kind](surface)}${proportion} ${house}`;
 };
 
 /**
