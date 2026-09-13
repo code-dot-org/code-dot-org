@@ -86,11 +86,16 @@ is drawn inside that. Nothing to decide and nothing to write.
 
 ## What it breaks
 
-**A project with a non-32 sprite and a hand-set scale.** It is drawn at pixels
-× scale today and would be drawn at a tile × scale afterwards. Nothing in the
-library has one, and a learner's project might. There is no migration that can
-tell "I set 2 because the picture was small" apart from "I set 2 because I
-wanted it big" — so this is a thing to say out loud rather than fix.
+**Nothing, as it turns out.** The case to worry about was a project with a
+non-32 sprite and a hand-set scale: drawn at pixels × scale before and at a
+tile × scale after, with no migration able to tell "I set 2 because the picture
+was small" from "I set 2 because I wanted it big". There are no projects in the
+world yet, so there is nobody to tell apart — and this is the cheapest moment
+this change will ever have.
+
+It is worth knowing that the window closes. Once a learner's project exists
+with a picture that is not a tile, changing what `scale` means to it is a
+migration nobody can write.
 
 **A picture nobody measured** has no fit to compute (`World.imageSize` answers
 undefined). It keeps today's behaviour, which is the only honest answer.
