@@ -9,6 +9,7 @@ import {libInjectCss} from 'vite-plugin-lib-inject-css';
 import {tutorKeyProxy} from '@code-dot-org/aitutor/dev';
 
 import {bundleEngine} from './scripts/bundleEngine.mjs';
+import {imageKeyProxy} from './src/appearance/generate/dev/imageProxy';
 
 /**
  * Rename emitted CSS-module assets from `*.module.css` to plain `*.css` (and
@@ -94,6 +95,13 @@ export default defineConfig(({command, mode}) => {
       // the isDemo branch on purpose — that one is the BUILT demo, and this
       // plugin is `apply: 'serve'`, so it is already inert in every build.
       tutorKeyProxy(),
+      // …and the same arrangement for drawing a picture to order: with
+      // OPENAI_API_KEY set it serves `/__images/draw` from this dev server's
+      // node process. `apply: 'serve'` for the same reason, and its status
+      // route answers either way — a dev server with no key is a different
+      // situation from no dev server, and the wizard tells them apart
+      // (specs/IMAGE_GENERATION.md).
+      imageKeyProxy(),
       // Re-bundle the engine when `src/engine` changes.
       //
       // The sandbox does not import `src/engine`; it loads
