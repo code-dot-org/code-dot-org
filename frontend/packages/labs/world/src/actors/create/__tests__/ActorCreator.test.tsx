@@ -744,23 +744,27 @@ describe('describing a picture', () => {
     expect(asked[0].kind).toBe('tileable');
   });
 
-  it('drops the size question where a size means nothing', async () => {
-    // A surface that repeats is one square, and more of it is made by placing
-    // more of it. The answer goes with the question rather than sitting there
-    // unseen and getting written anyway.
+  it('keeps the size question for a surface that repeats', async () => {
+    // A platform three tiles wide and two high, joining side to side, is one
+    // actor whose picture is the whole platform — and `set scale` stretches a
+    // sprite rather than repeating it, so the shape has to reach the provider.
     atThePictures();
-    fireEvent.click(screen.getByRole('button', {name: '2 across, 3 up'}));
-
     fireEvent.click(
       screen.getByRole('button', {name: /A surface that repeats/}),
     );
-    expect(screen.queryByLabelText('How many tiles it fills')).toBeNull();
+    expect(screen.getByLabelText('How many tiles it fills')).toBeTruthy();
 
-    fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
-    toTheEnd();
-    expect(build).toHaveBeenCalledWith(
-      expect.objectContaining({shape: {x: 1, y: 1}}),
-    );
+    fireEvent.click(screen.getByRole('button', {name: '3 across, 2 up'}));
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'earth with grass on top'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [
+      {shape?: object; kind?: string},
+    ];
+    expect(asked[0]).toMatchObject({kind: 'tileable', shape: {x: 3, y: 2}});
   });
 
   it('writes the shape it was given into the actor', async () => {

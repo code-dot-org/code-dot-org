@@ -10,7 +10,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {promptFor, styleFor, takesAShape} from '../imagePrompts';
+import {promptFor, styleFor} from '../imagePrompts';
 
 describe('promptFor', () => {
   it('asks a centred subject for space round it', () => {
@@ -60,10 +60,47 @@ describe('promptFor', () => {
     );
   });
 
-  it('says nothing about shape for a surface that repeats', () => {
-    // The repeat unit is one square: more of the surface is made by placing
-    // more of it, not by drawing a wider picture.
-    expect(promptFor('tileable', 'ice', {x: 3, y: 1})).not.toContain('a frame');
+  it('asks a repeating surface for its shape too', () => {
+    // A three-wide platform IS the picture: `set scale` stretches a sprite
+    // rather than repeating it, so drawing it square and scaling it is a
+    // squashed platform.
+    expect(promptFor('tileable', 'ice', {x: 3, y: 2})).toContain(
+      'a frame 3 wide by 2 tall',
+    );
+  });
+});
+
+describe('which way it repeats', () => {
+  it('asks for all four edges by default', () => {
+    expect(promptFor('tileable', 'grass')).toContain('All four edges');
+  });
+
+  it('frees the edges it is not asked about, and says so', () => {
+    // HALF THE VALUE OF ASKING. Told only that the sides must match, a model
+    // makes the whole thing uniform to be safe; told the top need not, it puts
+    // grass on it — which is the picture a platformer wanted and the one "every
+    // direction" forbids.
+    const across = promptFor('tileable', 'earth', undefined, 'across');
+
+    expect(across).toContain('left and right edges must match');
+    expect(across).toContain('top and bottom edges need NOT match');
+    expect(across).toContain('surface of its own along the top');
+  });
+
+  it('turns it the other way for a column', () => {
+    const up = promptFor('tileable', 'a stone wall', undefined, 'up');
+
+    expect(up).toContain('top and bottom edges must match');
+    expect(up).toContain('left and right edges need');
+  });
+
+  it('says nothing about edges for anything that is not repeating', () => {
+    expect(promptFor('filled', 'ice', undefined, 'across')).not.toContain(
+      'must match',
+    );
+    expect(promptFor('centered', 'a crab', undefined, 'across')).not.toContain(
+      'must match',
+    );
   });
 });
 
@@ -80,11 +117,11 @@ describe('styleFor', () => {
     expect(styleFor('centered', {x: 1, y: 3}).size).toBe('1024x1536');
   });
 
-  it('keeps a repeating surface square whatever it is asked', () => {
-    // A seam only means anything if the picture IS the tile.
-    expect(styleFor('tileable', {x: 3, y: 1}).size).toBe('1024x1024');
-    expect(takesAShape('tileable')).toBe(false);
-    expect(takesAShape('background')).toBe(false);
-    expect(takesAShape('filled')).toBe(true);
+  it('draws a repeating surface in the shape it will be placed at', () => {
+    expect(styleFor('tileable', {x: 3, y: 2}).size).toBe('1536x1024');
+  });
+
+  it('leaves a backdrop alone, having no tiles to fill', () => {
+    expect(styleFor('background', {x: 1, y: 3}).size).toBe('1536x1024');
   });
 });

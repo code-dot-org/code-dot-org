@@ -52,6 +52,18 @@
 /** How a picture meets its frame, which is what decides how to ask for it. */
 export type ImageKind = 'centered' | 'filled' | 'tileable' | 'background';
 
+/**
+ * Which edges of a repeating surface have to meet.
+ *
+ * ASKING FOR ALL FOUR IS ASKING FOR MORE THAN MOST TERRAIN CAN GIVE. A
+ * platformer's ground has a top — grass over earth, snow over rock — and a
+ * picture whose top edge matches its bottom edge cannot have one. It is still
+ * the right picture: laid in a row it joins perfectly, and it was never going
+ * to be stacked. So which way it repeats is a question, and answering it lets
+ * the clause say what the surface may keep as well as what it must match.
+ */
+export type TileWays = 'both' | 'across' | 'up';
+
 /** What a kind needs from the provider, beyond the words. */
 export interface DrawingStyle {
   /** Transparent where the lab needs to see what is behind. */
@@ -113,16 +125,40 @@ const CLAUSES: Record<ImageKind, string> = {
   // is how anybody would ask — so the clause has to refuse it by name rather
   // than merely avoid it.
   tileable:
-    `${TO_THE_EDGE} Make it repeat: copies laid side by side must join with ` +
-    'no visible seam, and no feature may stand out enough to be noticed ' +
-    'repeating. Draw no tile, no block, no slab, no panel and no single ' +
-    'object with edges of its own — the material is the whole picture.',
+    `${TO_THE_EDGE} No feature may stand out enough to be noticed repeating. ` +
+    'Draw no tile, no block, no slab, no panel and no single object with ' +
+    'edges of its own — the material is the whole picture.',
   // A backdrop is cropped to whatever shape the window is, so the middle is
   // the only part anybody is promised to see.
   background:
     'Draw a wide scene filling the whole frame, with the interesting part ' +
     'toward the middle and nothing that matters near the edges, since the ' +
     'game crops it to the window. No characters, no text, and no interface.',
+};
+
+/**
+ * Which edges must match, said to the model.
+ *
+ * EACH ONE ALSO SAYS WHAT IS FREE, which is half the value of asking. A model
+ * told only "the left and right edges must match" will still make the whole
+ * thing uniform to be safe; told that the top and bottom need not, it will put
+ * grass on top — which is the picture that was wanted and the one "repeats in
+ * every direction" forbids.
+ */
+const JOINS: Record<TileWays, string> = {
+  both:
+    ' All four edges must match exactly, so that copies join with no visible ' +
+    'seam in any direction, the way ground seen from above does.',
+  across:
+    ' Its left and right edges must match exactly, so that copies placed side ' +
+    'by side join with no visible seam. The top and bottom edges need NOT ' +
+    'match and should not be made to: this is seen from the side, so it may ' +
+    'have a surface of its own along the top and a different material below.',
+  up:
+    ' Its top and bottom edges must match exactly, so that copies stacked one ' +
+    'above another join with no visible seam. The left and right edges need ' +
+    'NOT match and should not be made to: it may have a face of its own down ' +
+    'one side.',
 };
 
 /**
@@ -145,23 +181,19 @@ const LEADS: Record<ImageKind, string> = {
 };
 
 /**
- * Whether a shape may change what is asked for.
+ * Whether a shape may change what is asked for — everything but a backdrop,
+ * which is stretched over the viewport and has no tiles to fill.
  *
- * NOT FOR A TILEABLE ONE, which is the one that looks arbitrary. A seam only
- * means anything if the picture IS the tile: the repeat unit is one square,
- * and more of the surface is made by placing more of it rather than by drawing
- * a wider picture. Nor for a backdrop, which is stretched over the viewport
- * and has no tiles to fill.
+ * A REPEATING SURFACE TAKES ONE TOO, and an earlier draft of this said it
+ * could not, on the grounds that the repeat unit is one square. That is true
+ * of a texture and false of a platform: three tiles wide and two high, tiling
+ * side to side, is one actor whose picture is the whole platform. `set scale`
+ * STRETCHES a sprite rather than repeating it, so drawing that platform square
+ * and scaling it to 3×2 is a squashed picture — the shape has to reach the
+ * provider. What repeats is then the platform, joining itself at the left and
+ * right edges, which is what the ways above are for.
  */
-const TAKES_A_SHAPE: Record<ImageKind, boolean> = {
-  centered: true,
-  filled: true,
-  tileable: false,
-  background: false,
-};
-
-/** Whether asking for this kind in a shape other than square means anything. */
-export const takesAShape = (kind: ImageKind): boolean => TAKES_A_SHAPE[kind];
+const takesAShape = (kind: ImageKind): boolean => kind !== 'background';
 
 /**
  * What each kind is, in words a learner can choose by.
@@ -187,6 +219,19 @@ export const SAID: Record<ImageKind, {name: string; what: string}> = {
   background: {
     name: 'A place',
     what: 'A wide scene, behind everything else.',
+  },
+};
+
+/** …and the same for which way it repeats, in words a learner chooses by. */
+export const WAYS_SAID: Record<TileWays, {name: string; what: string}> = {
+  both: {name: 'Every way', what: 'Like ground seen from above.'},
+  across: {
+    name: 'Side to side',
+    what: 'A row joins up. It can have its own top.',
+  },
+  up: {
+    name: 'Up and down',
+    what: 'A column joins up. It can have its own side.',
   },
 };
 
@@ -236,12 +281,14 @@ export const promptFor = (
   kind: ImageKind,
   words: string,
   shape?: {x: number; y: number},
+  ways: TileWays = 'both',
 ): string => {
   const proportion =
-    TAKES_A_SHAPE[kind] && shape && (shape.x !== 1 || shape.y !== 1)
+    takesAShape(kind) && shape && (shape.x !== 1 || shape.y !== 1)
       ? ` Compose it to fill a frame ${shape.x} wide by ${shape.y} tall, so the subject is that shape and not a square one.`
       : '';
-  return `${LEADS[kind]}${words.trim()}. ${CLAUSES[kind]}${proportion} ${HOUSE_STYLE}`;
+  const joins = kind === 'tileable' ? JOINS[ways] : '';
+  return `${LEADS[kind]}${words.trim()}. ${CLAUSES[kind]}${joins}${proportion} ${HOUSE_STYLE}`;
 };
 
 /**
@@ -256,5 +303,5 @@ export const styleFor = (
   shape?: {x: number; y: number},
 ): DrawingStyle => ({
   ...STYLES[kind],
-  ...(shape && TAKES_A_SHAPE[kind] ? {size: sizeFor(shape)} : {}),
+  ...(shape && takesAShape(kind) ? {size: sizeFor(shape)} : {}),
 });

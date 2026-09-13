@@ -164,11 +164,50 @@
   min-height: 13rem;
   align-self: stretch;
   background-position: center;
-  background-repeat: repeat;
-  background-size: 6.5rem 6.5rem;
   image-rendering: auto;
 }
 
 .repeated {
+  color: var(--text-neutral-secondary);
+}
+
+/* Which way it repeats: a compact row, because it is a refinement of the kind
+   above rather than a question of its own rank. One line of explanation under
+   it, for whichever is chosen — three lines at once would out-weigh the
+   question. */
+.ways {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.way {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.way:hover {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+.way:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 1px;
+}
+
+.wayChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+  background-color: var(--borders-brand-primary, #0093a4);
+  color: #fff;
+}
+
+.wayWhat {
   color: var(--text-neutral-secondary);
 }

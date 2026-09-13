@@ -27,7 +27,7 @@ import {
   type GeneratedPicture,
   type ImageGenerator,
 } from './imageGenerator';
-import {SAID, type ImageKind} from './imagePrompts';
+import {SAID, WAYS_SAID, type ImageKind, type TileWays} from './imagePrompts';
 import {ScaleGrid, type TileScale} from './ScaleGrid';
 
 export interface DescribePictureProps {
@@ -84,6 +84,9 @@ export interface DescribePictureProps {
   onKept?: (fileName: string) => void;
 }
 
+/** How tall one copy is drawn in the repeated preview, in rem. */
+const TILED = 6.5;
+
 export const DescribePicture = ({
   drawing,
   kind,
@@ -99,6 +102,15 @@ export const DescribePicture = ({
 }: DescribePictureProps) => {
   const [prompt, setPrompt] = useState('');
   const [drawn, setDrawn] = useState<GeneratedPicture>();
+  /**
+   * Which edges a repeating surface has to meet.
+   *
+   * THE PANEL'S OWN, unlike the kind and the size. Those are facts about what
+   * is being made and the call site keeps them — the size becomes a `set scale`
+   * row on the actor. This one is only ever part of the ask, so nothing above
+   * needs telling and nothing survives leaving the panel.
+   */
+  const [ways, setWays] = useState<TileWays>('both');
   const [drawingNow, setDrawingNow] = useState(false);
   const [failed, setFailed] = useState<string>();
 
@@ -125,6 +137,7 @@ export const DescribePicture = ({
         kind,
         count: DRAW_COUNT,
         shape: scale,
+        ways: kind === 'tileable' ? ways : undefined,
       });
       setDrawn(pictures[0]);
       onDrew?.(pictures[0]);
@@ -189,6 +202,35 @@ export const DescribePicture = ({
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {kind === 'tileable' && (
+        <div className={styles.field}>
+          <Typography variant="body4">Which way does it repeat?</Typography>
+          <ul className={styles.ways} aria-label="Which way it repeats">
+            {(['both', 'across', 'up'] as const).map(one => (
+              <li key={one} style={{display: 'contents'}}>
+                <button
+                  type="button"
+                  className={
+                    one === ways
+                      ? `${styles.way} ${styles.wayChosen}`
+                      : styles.way
+                  }
+                  aria-pressed={one === ways}
+                  onClick={() => setWays(one)}
+                >
+                  <Typography variant="body3" color="inherit">
+                    {WAYS_SAID[one].name}
+                  </Typography>
+                </button>
+              </li>
+            ))}
+          </ul>
+          <Typography variant="body4" className={styles.wayWhat}>
+            {WAYS_SAID[ways].what}
+          </Typography>
         </div>
       )}
 
@@ -258,7 +300,22 @@ export const DescribePicture = ({
             className={styles.tiled}
             role="img"
             aria-label={`Drawn for “${prompt}”, shown repeated`}
-            style={{backgroundImage: `url(${drawn.dataUrl})`}}
+            style={{
+              backgroundImage: `url(${drawn.dataUrl})`,
+              // REPEATED THE WAY IT WAS ASKED TO BE, so the preview shows the
+              // promise that was made rather than one nobody made: a picture
+              // meant to lie in a row, stacked up, would show a seam it was
+              // never going to be asked for.
+              backgroundRepeat:
+                ways === 'across'
+                  ? 'repeat-x'
+                  : ways === 'up'
+                    ? 'repeat-y'
+                    : 'repeat',
+              // …and at the shape it was drawn in, since a three-wide platform
+              // shown square is a squashed platform.
+              backgroundSize: `${(TILED * (scale?.x ?? 1)) / (scale?.y ?? 1)}rem ${TILED}rem`,
+            }}
           />
         ) : drawn ? (
           // The words are the description, so the alt is them: a reader who

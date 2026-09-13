@@ -143,6 +143,23 @@ to the prompt, not a fresh thought.
   shown REPEATED: a seam is invisible in one copy and obvious in nine, so the
   preview shows the promise rather than the picture.
 
+  **Which edges have to meet is a fourth question**, because asking for all
+  four is asking for more than most terrain can give. A platformer's ground has
+  a top — grass over earth, snow over rock — and a picture whose top edge
+  matches its bottom cannot have one. Each answer says what is FREE as well as
+  what must match, which is half the value of asking: told only that the sides
+  must match, a model makes the whole thing uniform to be safe; told the top
+  need not, it puts the grass on. The preview repeats the way it was asked to,
+  so a picture meant to lie in a row is never shown a seam it was never going
+  to be asked for.
+
+  **And a repeating surface takes a shape like anything else.** An earlier
+  draft said it could not, the repeat unit being one square. That is true of a
+  texture and false of a platform: three tiles wide and two high, joining side
+  to side, is one actor whose picture is the whole platform. `set scale`
+  stretches a sprite rather than repeating it, so the shape has to reach the
+  provider or the platform arrives squashed.
+
 ## Where to start
 
 _Done, in that order._ The fixture transport and the seam first, then the whole

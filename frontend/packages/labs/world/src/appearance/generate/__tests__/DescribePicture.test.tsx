@@ -231,6 +231,37 @@ describe('a surface that repeats', () => {
     expect(screen.getByText(/where the copies meet/)).toBeTruthy();
   });
 
+  it('asks which way it repeats, and tells the generator', async () => {
+    show(repeating);
+    expect(screen.getByLabelText('Which way it repeats')).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Side to side'}));
+    fireEvent.change(field(), {target: {value: 'earth with grass on top'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [{ways?: string}];
+    expect(asked[0].ways).toBe('across');
+  });
+
+  it('repeats the preview the way it was asked to', async () => {
+    // A picture meant to lie in a row would show a seam it was never going to
+    // be asked for, stacked up.
+    show(repeating);
+    fireEvent.click(screen.getByRole('button', {name: 'Side to side'}));
+    fireEvent.change(field(), {target: {value: 'earth'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    const shown = await screen.findByRole('img', {name: /shown repeated/});
+    expect(shown.style.backgroundRepeat).toBe('repeat-x');
+  });
+
+  it('asks for nothing of the sort where nothing repeats', () => {
+    show({kind: 'filled', kinds: ['centered', 'filled'], onKind: vi.fn()});
+
+    expect(screen.queryByLabelText('Which way it repeats')).toBeNull();
+  });
+
   it('shows one copy of anything else', async () => {
     show({kind: 'centered'});
     fireEvent.change(field(), {target: {value: 'a crab'}});

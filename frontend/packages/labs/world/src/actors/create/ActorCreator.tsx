@@ -72,10 +72,7 @@ import type {
   GeneratedPicture,
   ImageGenerator,
 } from '../../appearance/generate/imageGenerator';
-import {
-  takesAShape,
-  type ImageKind,
-} from '../../appearance/generate/imagePrompts';
+import type {ImageKind} from '../../appearance/generate/imagePrompts';
 import type {TileScale} from '../../appearance/generate/ScaleGrid';
 import {EnhancementRows, refusalOf} from '../enhance/EnhancementRows';
 import type {Enhancement, EnhanceTarget} from '../enhance/enhancements';
@@ -677,21 +674,18 @@ export const ActorCreator = ({
               drawing={drawing}
               kind={kind}
               kinds={DRAWABLE}
-              onKind={next => {
-                setKind(next);
-                // A surface that repeats is one square, and more of it is made
-                // by placing more of it — so the size question goes, and the
-                // answer with it rather than sitting there unseen and getting
-                // written anyway.
-                if (!takesAShape(next)) {
-                  setShape({x: 1, y: 1});
-                }
-              }}
+              onKind={setKind}
               placeholder={
                 kind === 'centered' ? 'a purple crab' : 'mossy stone bricks'
               }
-              scale={takesAShape(kind) ? shape : undefined}
-              onScale={takesAShape(kind) ? setShape : undefined}
+              // ASKED OF EVERY KIND, a repeating surface included: three
+              // tiles wide and two high, joining side to side, is a platform
+              // whose picture is the whole platform. `set scale` stretches a
+              // sprite rather than repeating it, so the shape has to reach
+              // the provider or the platform arrives squashed
+              // (`generate/imagePrompts`).
+              scale={shape}
+              onScale={setShape}
               onDrew={setPending}
               onBack={() => {
                 // Choosing from the grid instead is a rejection of the drawn

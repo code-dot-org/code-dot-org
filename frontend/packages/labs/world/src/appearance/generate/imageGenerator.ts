@@ -26,7 +26,7 @@
 // of this knows or cares that a picture was described rather than drawn or
 // imported, and there is nothing on the file that says so.
 
-import type {ImageKind} from './imagePrompts';
+import type {ImageKind, TileWays} from './imagePrompts';
 
 /** One picture that came back. */
 export interface GeneratedPicture {
@@ -55,6 +55,8 @@ export interface DrawRequest {
    * had the answer to.
    */
   kind?: ImageKind;
+  /** Which edges a repeating surface has to meet. Meaningless for the rest. */
+  ways?: TileWays;
   /**
    * How many tiles the actor will fill, when it is not one.
    *

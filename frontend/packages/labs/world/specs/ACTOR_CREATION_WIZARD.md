@@ -165,16 +165,18 @@ shape rather than square and stretched, and into a `set scale` row on the
 actor. One tile writes nothing, being what every actor already is.
 
 The size is a fact about the ACTOR and not about the picture, so it survives
-leaving the panel and is written whatever the picture ends up being — except
-where a size means nothing. A surface that repeats is one square, and more of
-it is made by placing more of it, so choosing that kind takes the question away
-and the answer with it (`specs/IMAGE_GENERATION.md`).
+leaving the panel and is written whatever the picture ends up being. It is
+asked of a repeating surface too: three tiles wide and two high, joining side
+to side, is one actor whose picture is the whole platform, and `set scale`
+stretches a sprite rather than repeating it.
 
 **And the door asks what sort of picture it is**, which it used to assume. An
 actor is as often terrain as it is a character — the platformer's ground is an
 actor — so "a thing", "a surface" and "a surface that repeats" are the
 learner's to choose between, and nothing about being the Actor Creator's door
-says which was meant.
+says which was meant. A repeating one is asked which way, since a ground with
+grass on top joins side to side and cannot join top to bottom
+(`specs/IMAGE_GENERATION.md`).
 
 ## Step 3 is the enhancement shelf
 
