@@ -51,10 +51,10 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {AnimationThumb} from '../../animationEditor/AnimationThumb';
 import type {AnimDef} from '../../animationEditor/animDocument';
 import {CellThumb} from '../../animationEditor/CellThumb';
-import {
-  DRAW_COUNT,
-  type GeneratedPicture,
-  type ImageGenerator,
+import {DescribePicture} from '../../appearance/generate/DescribePicture';
+import type {
+  GeneratedPicture,
+  ImageGenerator,
 } from '../../appearance/generate/imageGenerator';
 import {EnhancementRows, refusalOf} from '../enhance/EnhancementRows';
 import type {Enhancement, EnhanceTarget} from '../enhance/enhancements';
@@ -236,12 +236,6 @@ export const ActorCreator = ({
   const [built, setBuilt] = useState<BuiltActor>();
   const [chosen, setChosen] = useState<Enhancement | null>(null);
   const [answer, setAnswer] = useState<string>();
-  /** What the learner typed, what came back, and whether it is still coming. */
-  const [prompt, setPrompt] = useState('');
-  const [drawn, setDrawn] = useState<readonly GeneratedPicture[]>([]);
-  const [drawingNow, setDrawingNow] = useState(false);
-  /** Why the last ask came back with nothing, when it did. */
-  const [drawFailed, setDrawFailed] = useState<string>();
 
   /**
    * The name to write, which is the typed one or the chosen thing's.
@@ -311,59 +305,6 @@ export const ActorCreator = ({
       !refusalOf(chosen, built.source, target, answer) &&
       (!chosen.asks || answer !== undefined),
   );
-
-  /**
-   * Ask for pictures, and put what comes back where they can be compared.
-   *
-   * The words are KEPT. The commonest second action is a small edit to the
-   * prompt rather than a fresh thought, and a field that cleared itself would
-   * make the second ask cost as much as the first.
-   */
-  const draw = async () => {
-    if (!drawing || !prompt.trim() || drawingNow) {
-      return;
-    }
-    setDrawingNow(true);
-    setDrawFailed(undefined);
-    try {
-      // AN ACTOR, said rather than defaulted. What the picture is for decides
-      // how the words are asked — a transparent background and no scenery, for
-      // this one — and the call site is the only place that knows
-      // (`appearance/generate/imagePrompts`).
-      setDrawn(
-        await drawing.draw({
-          prompt: prompt.trim(),
-          kind: 'actor',
-          count: DRAW_COUNT,
-        }),
-      );
-    } catch (error) {
-      // SAID, rather than an empty tray. The fixture cannot fail, so this was
-      // dead code until something could: a service that refuses a key or is
-      // busy leaves a learner pressing a button that appears to do nothing,
-      // and "nothing happened" is the one answer a door must never give.
-      setDrawn([]);
-      setDrawFailed(
-        error instanceof Error && error.message
-          ? error.message
-          : 'That did not work. Try again.',
-      );
-    } finally {
-      setDrawingNow(false);
-    }
-  };
-
-  /** Keep one: the caller writes it, and it becomes this actor's picture. */
-  const keep = async (picture: GeneratedPicture) => {
-    const file = await onKeep?.(picture);
-    if (file) {
-      setLook({kind: 'sprite', value: file});
-      // Gone from the tray once it is in the project: it is one of the
-      // pictures above now, and showing it in both places would be saying it
-      // was two things.
-      setDrawn([]);
-    }
-  };
 
   /** Give the actor being built the chosen ability, and stay for another. */
   const add = () => {
@@ -651,68 +592,15 @@ export const ActorCreator = ({
                 </Typography>
               )}
 
-              {drawing && (
-                <>
-                  {/* UNDER the grid, not beside it: describing one is another
-                      way of answering the same question, and the pictures a
-                      project already holds are the likelier answer. */}
-                  <div className={styles.describe}>
-                    <Typography variant="body4">Or describe one:</Typography>
-                    <input
-                      className={styles.prompt}
-                      value={prompt}
-                      placeholder="a purple crab"
-                      aria-label="Describe a picture"
-                      onChange={event => setPrompt(event.target.value)}
-                    />
-                    <button
-                      type="button"
-                      className={styles.draw}
-                      disabled={!prompt.trim() || drawingNow}
-                      onClick={() => void draw()}
-                    >
-                      <Typography variant="body3">
-                        {drawingNow ? 'Drawing…' : 'Draw'}
-                      </Typography>
-                    </button>
-                  </div>
-                  {drawFailed !== undefined && (
-                    <Typography variant="body4" className={styles.problem}>
-                      {drawFailed}
-                    </Typography>
-                  )}
-                  {drawn.length > 0 && (
-                    <div className={styles.drawn}>
-                      <Typography variant="body4" className={styles.drawnNote}>
-                        Press one to keep it, or ask again.
-                      </Typography>
-                      <ul className={styles.choices}>
-                        {drawn.map(picture => (
-                          <li key={picture.dataUrl}>
-                            <button
-                              type="button"
-                              className={styles.choice}
-                              aria-label={`Keep ${picture.name}`}
-                              title={picture.name}
-                              onClick={() => void keep(picture)}
-                            >
-                              <span className={styles.picture}>
-                                <img src={picture.dataUrl} alt="" />
-                              </span>
-                              <Typography
-                                variant="body4"
-                                className={styles.choiceName}
-                              >
-                                {picture.name}
-                              </Typography>
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </>
-              )}
+              <DescribePicture
+                drawing={drawing}
+                kind="actor"
+                onKeep={onKeep ?? (async () => undefined)}
+                // What a described picture MEANS here: this actor's look. The
+                // shelf that draws backdrops does something else with the file
+                // it gets, which is why the component does neither.
+                onKept={file => setLook({kind: 'sprite', value: file})}
+              />
             </>
           )}
 

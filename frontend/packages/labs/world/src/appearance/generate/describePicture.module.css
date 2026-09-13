@@ -1,0 +1,99 @@
+/* Describing a picture, wherever the question is being asked. Shared by the
+   Actor Creator's picture step and the backdrop shelf, which want the same
+   thing in the same words (specs/IMAGE_GENERATION.md). */
+
+.describe {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.prompt {
+  flex: 1 1 12rem;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 0.5rem;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  font: inherit;
+}
+
+.draw {
+  padding: 0.45rem 0.9rem;
+  border: 2px solid var(--borders-brand-primary, #0093a4);
+  border-radius: 4px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.draw:disabled {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+  color: var(--text-neutral-secondary);
+  cursor: default;
+}
+
+.draw:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+/* What came back, kept apart from the project's own pictures: it is not in the
+   project until it is pressed, and a grid that mixed them would be saying it
+   was. */
+.drawn {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border: 1px dashed var(--borders-neutral-primary, #d4dae1);
+  border-radius: 6px;
+}
+
+.note {
+  color: var(--text-neutral-secondary);
+}
+
+.problem {
+  color: var(--text-danger, #c0392b);
+}
+
+.tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.picture {
+  display: flex;
+  width: 96px;
+  height: 96px;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background-color: #101020;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.picture:hover {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+.picture:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.picture img {
+  max-width: 100%;
+  max-height: 100%;
+}
