@@ -27,7 +27,13 @@ import {
   type GeneratedPicture,
   type ImageGenerator,
 } from './imageGenerator';
-import {SAID, WAYS_SAID, type ImageKind, type TileWays} from './imagePrompts';
+import {
+  SAID,
+  THROUGH_SAID,
+  WAYS_SAID,
+  type ImageKind,
+  type TileWays,
+} from './imagePrompts';
 import {ScaleGrid, type TileScale} from './ScaleGrid';
 
 export interface DescribePictureProps {
@@ -103,14 +109,19 @@ export const DescribePicture = ({
   const [prompt, setPrompt] = useState('');
   const [drawn, setDrawn] = useState<GeneratedPicture>();
   /**
-   * Which edges a repeating surface has to meet.
+   * Which edges a surface has to meet, and whether part of it is see-through.
    *
    * THE PANEL'S OWN, unlike the kind and the size. Those are facts about what
    * is being made and the call site keeps them — the size becomes a `set scale`
-   * row on the actor. This one is only ever part of the ask, so nothing above
+   * row on the actor. These are only ever part of the ask, so nothing above
    * needs telling and nothing survives leaving the panel.
+   *
+   * Both start at the weaker promise. A surface that need not join is easier
+   * art than one that must — asking for a seam nobody wanted costs the picture
+   * its distinctive features — and solid is what most surfaces are.
    */
-  const [ways, setWays] = useState<TileWays>('both');
+  const [ways, setWays] = useState<TileWays>('none');
+  const [through, setThrough] = useState(false);
   const [drawingNow, setDrawingNow] = useState(false);
   const [failed, setFailed] = useState<string>();
 
@@ -137,7 +148,7 @@ export const DescribePicture = ({
         kind,
         count: DRAW_COUNT,
         shape: scale,
-        ways: kind === 'tileable' ? ways : undefined,
+        surface: kind === 'surface' ? {ways, through} : undefined,
       });
       setDrawn(pictures[0]);
       onDrew?.(pictures[0]);
@@ -174,6 +185,9 @@ export const DescribePicture = ({
     }
   };
 
+  /** Whether this picture is expected to have transparency in it. */
+  const seeThrough = kind === 'thing' || (kind === 'surface' && through);
+
   return (
     <div className={styles.panel}>
       {onKind && kinds && kinds.length > 1 && (
@@ -205,33 +219,65 @@ export const DescribePicture = ({
         </div>
       )}
 
-      {kind === 'tileable' && (
-        <div className={styles.field}>
-          <Typography variant="body4">Which way does it repeat?</Typography>
-          <ul className={styles.ways} aria-label="Which way it repeats">
-            {(['both', 'across', 'up'] as const).map(one => (
-              <li key={one} style={{display: 'contents'}}>
-                <button
-                  type="button"
-                  className={
-                    one === ways
-                      ? `${styles.way} ${styles.wayChosen}`
-                      : styles.way
-                  }
-                  aria-pressed={one === ways}
-                  onClick={() => setWays(one)}
-                >
-                  <Typography variant="body3" color="inherit">
-                    {WAYS_SAID[one].name}
-                  </Typography>
-                </button>
-              </li>
-            ))}
-          </ul>
-          <Typography variant="body4" className={styles.wayWhat}>
-            {WAYS_SAID[ways].what}
-          </Typography>
-        </div>
+      {kind === 'surface' && (
+        <>
+          <div className={styles.field}>
+            <Typography variant="body4">Does it join up?</Typography>
+            <ul className={styles.ways} aria-label="Which way it joins up">
+              {(['none', 'across', 'up', 'both'] as const).map(one => (
+                <li key={one} style={{display: 'contents'}}>
+                  <button
+                    type="button"
+                    className={
+                      one === ways
+                        ? `${styles.way} ${styles.wayChosen}`
+                        : styles.way
+                    }
+                    aria-pressed={one === ways}
+                    onClick={() => setWays(one)}
+                  >
+                    <Typography variant="body3" color="inherit">
+                      {WAYS_SAID[one].name}
+                    </Typography>
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <Typography variant="body4" className={styles.wayWhat}>
+              {WAYS_SAID[ways].what}
+            </Typography>
+          </div>
+
+          <div className={styles.field}>
+            <Typography variant="body4">Is any of it see-through?</Typography>
+            <ul className={styles.ways} aria-label="How much of it is drawn">
+              {([false, true] as const).map(one => {
+                const said = THROUGH_SAID[one ? 'through' : 'solid'];
+                return (
+                  <li key={said.name} style={{display: 'contents'}}>
+                    <button
+                      type="button"
+                      className={
+                        one === through
+                          ? `${styles.way} ${styles.wayChosen}`
+                          : styles.way
+                      }
+                      aria-pressed={one === through}
+                      onClick={() => setThrough(one)}
+                    >
+                      <Typography variant="body3" color="inherit">
+                        {said.name}
+                      </Typography>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+            <Typography variant="body4" className={styles.wayWhat}>
+              {THROUGH_SAID[through ? 'through' : 'solid'].what}
+            </Typography>
+          </div>
+        </>
       )}
 
       {onScale && scale && (
@@ -289,8 +335,16 @@ export const DescribePicture = ({
         </Typography>
       )}
 
-      <div className={styles.preview}>
-        {drawn && kind === 'tileable' ? (
+      <div
+        className={
+          // A CHECKERBOARD WHERE THERE IS TRANSPARENCY TO SEE. On the flat
+          // dark ground a see-through picture reads as a hole rather than as
+          // a picture with a hole in it, which is the one thing the learner
+          // asked for and the one thing they could not check.
+          seeThrough ? `${styles.preview} ${styles.through}` : styles.preview
+        }
+      >
+        {drawn && kind === 'surface' && ways !== 'none' ? (
           // SHOWN REPEATED, because one copy cannot be judged. A seam is
           // invisible in a single picture and obvious in nine, and the whole
           // promise of this kind is that there is no seam — so the preview
@@ -334,7 +388,7 @@ export const DescribePicture = ({
         )}
       </div>
 
-      {drawn && kind === 'tileable' && (
+      {drawn && kind === 'surface' && ways !== 'none' && (
         <Typography variant="body4" className={styles.repeated}>
           Shown repeated, so you can see where the copies meet.
         </Typography>

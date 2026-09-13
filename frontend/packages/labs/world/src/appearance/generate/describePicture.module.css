@@ -211,3 +211,30 @@
 .wayWhat {
   color: var(--text-neutral-secondary);
 }
+
+/* The ground behind a picture that is meant to have holes in it.
+   A flat dark panel makes a see-through picture read as a hole rather than as
+   a picture with a hole in it — which is the one thing the learner asked for
+   and the one thing they could not check. Every image editor draws this same
+   chequer for the same reason. */
+.through {
+  background-color: #f3f4f6;
+  background-image: linear-gradient(
+      45deg,
+      #cfd4db 25%,
+      transparent 25%,
+      transparent 75%,
+      #cfd4db 75%
+    ),
+    linear-gradient(
+      45deg,
+      #cfd4db 25%,
+      transparent 25%,
+      transparent 75%,
+      #cfd4db 75%
+    );
+  background-position:
+    0 0,
+    8px 8px;
+  background-size: 16px 16px;
+}

@@ -26,7 +26,7 @@ const show = (
   render(
     <DescribePicture
       drawing={drawing}
-      kind="centered"
+      kind="thing"
       onKeep={onKeep}
       onKept={onKept}
       {...props}
@@ -169,60 +169,122 @@ describe('what it is asking for', () => {
     show();
     expect(screen.queryByLabelText('What it is')).toBeNull();
 
-    show({kinds: ['centered'], onKind: vi.fn()});
+    show({kinds: ['thing'], onKind: vi.fn()});
     expect(screen.queryByLabelText('What it is')).toBeNull();
 
-    show({kinds: ['centered', 'tileable'], onKind: vi.fn()});
+    show({kinds: ['thing', 'surface'], onKind: vi.fn()});
     expect(screen.getByLabelText('What it is')).toBeTruthy();
   });
 
-  it('says what the difference is, rather than naming the two prompts', async () => {
-    show({kinds: ['centered', 'tileable'], onKind: vi.fn()});
+  it('says what the difference is, rather than naming the two prompts', () => {
+    show({kinds: ['thing', 'surface'], onKind: vi.fn()});
 
-    expect(screen.getByRole('button', {name: /A thing/})).toBeTruthy();
     expect(
-      screen.getByRole('button', {name: /joins up where copies meet/}),
+      screen.getByRole('button', {
+        name: /drawn on its own with nothing behind/i,
+      }),
+    ).toBeTruthy();
+    expect(
+      screen.getByRole('button', {name: /ground, a wall, a platform/i}),
     ).toBeTruthy();
   });
 
   it('shows which one is chosen, and hands back the other', () => {
     const onKind = vi.fn();
-    show({kind: 'centered', kinds: ['centered', 'tileable'], onKind});
+    show({kind: 'thing', kinds: ['thing', 'surface'], onKind});
 
     expect(screen.getByRole('button', {name: /A thing/})).toHaveAttribute(
       'aria-pressed',
       'true',
     );
-    fireEvent.click(
-      screen.getByRole('button', {name: /A surface that repeats/}),
-    );
-    expect(onKind).toHaveBeenCalledWith('tileable');
+    fireEvent.click(screen.getByRole('button', {name: /A surface/}));
+    expect(onKind).toHaveBeenCalledWith('surface');
   });
 
   it('asks the generator for the kind it was given', async () => {
     // The whole point of the question: a surface is a different ask, not a
     // differently labelled one.
-    show({kind: 'tileable', kinds: ['centered', 'tileable'], onKind: vi.fn()});
+    show({kind: 'surface', kinds: ['thing', 'surface'], onKind: vi.fn()});
     fireEvent.change(field(), {target: {value: 'stone bricks'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
     await vi.waitFor(() => expect(draw).toHaveBeenCalled());
     const asked = draw.mock.calls.at(-1) as unknown as [{kind?: string}];
-    expect(asked[0].kind).toBe('tileable');
+    expect(asked[0].kind).toBe('surface');
   });
 });
 
-describe('a surface that repeats', () => {
-  const repeating = {
-    kind: 'tileable' as const,
-    kinds: ['centered', 'tileable'] as const,
+describe('the two questions a surface answers', () => {
+  const surface = {
+    kind: 'surface' as const,
+    kinds: ['thing', 'surface'] as const,
     onKind: vi.fn(),
   };
 
-  it('shows it repeated, because one copy cannot be judged', async () => {
-    // A seam is invisible in a single picture and obvious in nine, and the
-    // whole promise of this kind is that there is no seam.
-    show(repeating);
+  it('asks them of a surface and of nothing else', () => {
+    // A thing is see-through around itself by definition and joins nothing, so
+    // asking would be asking something with one answer.
+    show({kind: 'thing', kinds: ['thing', 'surface'], onKind: vi.fn()});
+    expect(screen.queryByLabelText('Which way it joins up')).toBeNull();
+    expect(screen.queryByLabelText('How much of it is drawn')).toBeNull();
+
+    show(surface);
+    expect(screen.getByLabelText('Which way it joins up')).toBeTruthy();
+    expect(screen.getByLabelText('How much of it is drawn')).toBeTruthy();
+  });
+
+  it('starts at the weaker promise of each', async () => {
+    // A surface that need not join is easier art than one that must, and solid
+    // is what most surfaces are.
+    show(surface);
+    fireEvent.change(field(), {target: {value: 'stone'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [
+      {surface?: {ways: string; through: boolean}},
+    ];
+    expect(asked[0].surface).toEqual({ways: 'none', through: false});
+  });
+
+  it('carries both answers to the generator', async () => {
+    // THE COMBINATION THE OLD KINDS COULD NOT SPELL: material, joining side to
+    // side, and see-through underneath — a mossy platform with vines.
+    show(surface);
+    fireEvent.click(screen.getByRole('button', {name: 'Side to side'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Partly see-through'}));
+    fireEvent.change(field(), {target: {value: 'a mossy platform'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [
+      {surface?: {ways: string; through: boolean}},
+    ];
+    expect(asked[0].surface).toEqual({ways: 'across', through: true});
+  });
+
+  it('says nothing about a surface when it is drawing a thing', async () => {
+    show({kind: 'thing'});
+    fireEvent.change(field(), {target: {value: 'a crab'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+
+    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
+    const asked = draw.mock.calls.at(-1) as unknown as [{surface?: object}];
+    expect(asked[0].surface).toBeUndefined();
+  });
+});
+
+describe('what the preview shows', () => {
+  const surface = {
+    kind: 'surface' as const,
+    kinds: ['thing', 'surface'] as const,
+    onKind: vi.fn(),
+  };
+
+  it('repeats it where it joins, because one copy cannot be judged', async () => {
+    // A seam is invisible in a single picture and obvious in nine.
+    show(surface);
+    fireEvent.click(screen.getByRole('button', {name: 'Every way'}));
     fireEvent.change(field(), {target: {value: 'stone bricks'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
@@ -231,23 +293,10 @@ describe('a surface that repeats', () => {
     expect(screen.getByText(/where the copies meet/)).toBeTruthy();
   });
 
-  it('asks which way it repeats, and tells the generator', async () => {
-    show(repeating);
-    expect(screen.getByLabelText('Which way it repeats')).toBeTruthy();
-
-    fireEvent.click(screen.getByRole('button', {name: 'Side to side'}));
-    fireEvent.change(field(), {target: {value: 'earth with grass on top'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
-
-    await vi.waitFor(() => expect(draw).toHaveBeenCalled());
-    const asked = draw.mock.calls.at(-1) as unknown as [{ways?: string}];
-    expect(asked[0].ways).toBe('across');
-  });
-
-  it('repeats the preview the way it was asked to', async () => {
+  it('repeats it the way it was asked to', async () => {
     // A picture meant to lie in a row would show a seam it was never going to
     // be asked for, stacked up.
-    show(repeating);
+    show(surface);
     fireEvent.click(screen.getByRole('button', {name: 'Side to side'}));
     fireEvent.change(field(), {target: {value: 'earth'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
@@ -256,20 +305,32 @@ describe('a surface that repeats', () => {
     expect(shown.style.backgroundRepeat).toBe('repeat-x');
   });
 
-  it('asks for nothing of the sort where nothing repeats', () => {
-    show({kind: 'filled', kinds: ['centered', 'filled'], onKind: vi.fn()});
-
-    expect(screen.queryByLabelText('Which way it repeats')).toBeNull();
-  });
-
-  it('shows one copy of anything else', async () => {
-    show({kind: 'centered'});
-    fireEvent.change(field(), {target: {value: 'a crab'}});
+  it('shows one copy of a surface that joins nothing', async () => {
+    show(surface);
+    fireEvent.change(field(), {target: {value: 'a wall face'}});
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
     const shown = await screen.findByRole('img');
     expect(shown.tagName).toBe('IMG');
     expect(screen.queryByText(/where the copies meet/)).toBeNull();
+  });
+
+  it('puts a chequer behind anything with transparency in it', () => {
+    // On a flat dark ground a see-through picture reads as a hole rather than
+    // as a picture with a hole in it — which is the one thing the learner
+    // asked for and the one thing they could not check.
+    const chequered = (where: HTMLElement) =>
+      where.querySelector('[class*="through"]') !== null;
+
+    const thing = show({kind: 'thing'});
+    expect(chequered(thing.container)).toBe(true);
+    thing.unmount();
+
+    const solid = show(surface);
+    expect(chequered(solid.container)).toBe(false);
+
+    fireEvent.click(screen.getByRole('button', {name: 'Partly see-through'}));
+    expect(chequered(solid.container)).toBe(true);
   });
 });
 

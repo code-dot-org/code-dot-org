@@ -731,17 +731,22 @@ describe('describing a picture', () => {
     atThePictures();
     expect(screen.getByLabelText('What it is')).toBeTruthy();
 
-    fireEvent.click(
-      screen.getByRole('button', {name: /A surface that repeats/}),
-    );
+    fireEvent.click(screen.getByRole('button', {name: /A surface/}));
+    fireEvent.click(screen.getByRole('button', {name: 'Side to side'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Partly see-through'}));
     fireEvent.change(screen.getByLabelText('Describe a picture'), {
-      target: {value: 'slippery ice'},
+      target: {value: 'a mossy platform with vines under it'},
     });
     fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
 
     await vi.waitFor(() => expect(draw).toHaveBeenCalled());
-    const asked = draw.mock.calls.at(-1) as unknown as [{kind?: string}];
-    expect(asked[0].kind).toBe('tileable');
+    const asked = draw.mock.calls.at(-1) as unknown as [
+      {kind?: string; surface?: object},
+    ];
+    expect(asked[0]).toMatchObject({
+      kind: 'surface',
+      surface: {ways: 'across', through: true},
+    });
   });
 
   it('keeps the size question for a surface that repeats', async () => {
@@ -749,9 +754,7 @@ describe('describing a picture', () => {
     // actor whose picture is the whole platform — and `set scale` stretches a
     // sprite rather than repeating it, so the shape has to reach the provider.
     atThePictures();
-    fireEvent.click(
-      screen.getByRole('button', {name: /A surface that repeats/}),
-    );
+    fireEvent.click(screen.getByRole('button', {name: /A surface/}));
     expect(screen.getByLabelText('How many tiles it fills')).toBeTruthy();
 
     fireEvent.click(screen.getByRole('button', {name: '3 across, 2 up'}));
@@ -764,7 +767,7 @@ describe('describing a picture', () => {
     const asked = draw.mock.calls.at(-1) as unknown as [
       {shape?: object; kind?: string},
     ];
-    expect(asked[0]).toMatchObject({kind: 'tileable', shape: {x: 3, y: 2}});
+    expect(asked[0]).toMatchObject({kind: 'surface', shape: {x: 3, y: 2}});
   });
 
   it('writes the shape it was given into the actor', async () => {

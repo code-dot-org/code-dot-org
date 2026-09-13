@@ -240,7 +240,7 @@ const TILE = 56;
  * `backgrounds/`, and one drawn here would land in `sprites/`
  * (`appearance/backgroundsFolder`).
  */
-const DRAWABLE: readonly ImageKind[] = ['centered', 'filled', 'tileable'];
+const DRAWABLE: readonly ImageKind[] = ['thing', 'surface'];
 
 export const ActorCreator = ({
   actors,
@@ -285,7 +285,7 @@ export const ActorCreator = ({
    * subject, centred … no ground" over the top of a learner asking for ground
    * (`generate/imagePrompts`).
    */
-  const [kind, setKind] = useState<ImageKind>('centered');
+  const [kind, setKind] = useState<ImageKind>('thing');
   /**
    * A picture that has been drawn and not yet written, which `Next` writes.
    *
@@ -676,7 +676,7 @@ export const ActorCreator = ({
               kinds={DRAWABLE}
               onKind={setKind}
               placeholder={
-                kind === 'centered' ? 'a purple crab' : 'mossy stone bricks'
+                kind === 'thing' ? 'a purple crab' : 'mossy stone bricks'
               }
               // ASKED OF EVERY KIND, a repeating surface included: three
               // tiles wide and two high, joining side to side, is a platform

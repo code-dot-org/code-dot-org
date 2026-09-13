@@ -130,7 +130,7 @@ const TILE = 56;
  * `backgrounds/`, and one drawn here would land in `sprites/` and be a sprite
  * (`appearance/backgroundsFolder`).
  */
-const DRAWABLE: readonly ImageKind[] = ['centered', 'filled', 'tileable'];
+const DRAWABLE: readonly ImageKind[] = ['thing', 'surface'];
 
 export const SpritePickerDialog = ({
   title = 'Choose a picture',
@@ -213,7 +213,7 @@ export const SpritePickerDialog = ({
    * A thing by default, because most sprites are one and every project starts
    * with more of them than surfaces.
    */
-  const [kind, setKind] = useState<ImageKind>('centered');
+  const [kind, setKind] = useState<ImageKind>('thing');
   const [busy, setBusy] = useState(false);
 
   /**
@@ -330,7 +330,7 @@ export const SpritePickerDialog = ({
               kinds={DRAWABLE}
               onKind={setKind}
               placeholder={
-                kind === 'centered' ? 'a purple crab' : 'mossy stone bricks'
+                kind === 'thing' ? 'a purple crab' : 'mossy stone bricks'
               }
               onDrew={setPending}
               onBack={() => {

@@ -127,13 +127,28 @@ to the prompt, not a fresh thought.
   no ground" — and the model did as it was told. The lab had only ever asked
   itself which door this was.
 
-  So the kinds say how a picture meets its frame: `centered` (the subject
-  alone, space round it), `filled` (edge to edge, running off all four sides),
-  `tileable` (filled, and joining itself), `background` (a wide scene for the
-  viewport). A use picks one, and only the backdrop shelf can pick without
-  asking — a backdrop is a backdrop because of the folder it lands in.
-  Everywhere a sprite is drawn the same folder holds all three, so the question
-  is the learner's.
+  So the kinds say how a picture meets its frame — and they are TWO questions
+  rather than a list, which took a second report to see. Somebody wanting a
+  mossy platform with vines dangling under it fell between `centered`, `filled`
+  and `tileable`: material rather than an object, joining side to side, and
+  see-through below the stone. There was no name for it, so they wrote one by
+  hand, ending — after four sentences of argument with our own clause — with
+  "Ignore any further instruction to fill the space". A learner talking the lab
+  out of its own prompt is the lab asking the wrong question.
+
+  One question was being asked about three independent properties: thing or
+  material, which edges join, and whether any of it is see-through. `centered`
+  bundled thing + see-through + no join; `filled` and `tileable` both bundled
+  material + solid; nothing spelled material + see-through. Pulled apart, every
+  combination can be asked for — a crab, grass from above, an ice ground with a
+  top of its own, and the platform with vines.
+
+  So: `thing` or `surface` always, then, of a surface only, which edges it
+  joins and whether part of it is see-through. A thing is asked neither, having
+  one answer to each. A use picks the answers, and only the backdrop shelf can
+  pick without asking — a backdrop is a backdrop because of the folder it lands
+  in. Everywhere a sprite is drawn the same folder holds every kind, so the
+  questions are the learner's.
 
   Three things follow from the naming. The framing is said BEFORE the learner's
   words, since a model handed three drawable nouns has decided before the
@@ -143,7 +158,7 @@ to the prompt, not a fresh thought.
   shown REPEATED: a seam is invisible in one copy and obvious in nine, so the
   preview shows the promise rather than the picture.
 
-  **Which edges have to meet is a fourth question**, because asking for all
+  **Which edges have to meet is its own question**, because asking for all
   four is asking for more than most terrain can give. A platformer's ground has
   a top — grass over earth, snow over rock — and a picture whose top edge
   matches its bottom cannot have one. Each answer says what is FREE as well as
@@ -152,6 +167,18 @@ to the prompt, not a fresh thought.
   need not, it puts the grass on. The preview repeats the way it was asked to,
   so a picture meant to lie in a row is never shown a seam it was never going
   to be asked for.
+
+  **And see-through is its own question too**, because "fill the entire frame
+  edge to edge" and "leave the rest transparent" are the same sentence
+  contradicting itself. A surface asked to be see-through is told instead to
+  draw the material only where it is and leave the rest clear — with "no
+  background colour of any kind" said out loud, since a model asked merely not
+  to fill the frame puts sky behind the vines — while any edge that must join
+  still has the material running off it. The provider is told as well as the
+  model: real transparency is the one thing the words alone cannot get. And the
+  preview stands on a chequer wherever transparency is expected, because on a
+  flat dark ground a see-through picture reads as a hole rather than as a
+  picture with a hole in it.
 
   **And a repeating surface takes a shape like anything else.** An earlier
   draft said it could not, the repeat unit being one square. That is true of a

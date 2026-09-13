@@ -208,17 +208,21 @@ describe('describing a picture', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Describe'}));
 
     expect(screen.getByLabelText('What it is')).toBeTruthy();
-    fireEvent.click(
-      screen.getByRole('button', {name: /A surface that repeats/}),
-    );
+    fireEvent.click(screen.getByRole('button', {name: /A surface/}));
+    fireEvent.click(screen.getByRole('button', {name: 'Every way'}));
     fireEvent.change(screen.getByLabelText('Describe a picture'), {
       target: {value: 'mossy stone bricks'},
     });
     fireEvent.click(screen.getByRole('button', {name: /^Draw$/}));
 
     await vi.waitFor(() => expect(draw).toHaveBeenCalled());
-    const asked = draw.mock.calls.at(-1) as unknown as [{kind?: string}];
-    expect(asked[0].kind).toBe('tileable');
+    const asked = draw.mock.calls.at(-1) as unknown as [
+      {kind?: string; surface?: object},
+    ];
+    expect(asked[0]).toMatchObject({
+      kind: 'surface',
+      surface: {ways: 'both', through: false},
+    });
   });
 
   it('starts on a thing, which most sprites are', () => {

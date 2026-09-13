@@ -172,11 +172,12 @@ stretches a sprite rather than repeating it.
 
 **And the door asks what sort of picture it is**, which it used to assume. An
 actor is as often terrain as it is a character — the platformer's ground is an
-actor — so "a thing", "a surface" and "a surface that repeats" are the
-learner's to choose between, and nothing about being the Actor Creator's door
-says which was meant. A repeating one is asked which way, since a ground with
-grass on top joins side to side and cannot join top to bottom
-(`specs/IMAGE_GENERATION.md`).
+actor — so "a thing" or "a surface" is the learner's to choose, and nothing
+about being the Actor Creator's door says which was meant. A surface is then
+asked two more: which edges it joins, since a ground with grass on top joins
+side to side and cannot join top to bottom, and whether part of it is
+see-through, since a platform with vines hanging under it is material across
+the top and nothing below (`specs/IMAGE_GENERATION.md`).
 
 ## Step 3 is the enhancement shelf
 
