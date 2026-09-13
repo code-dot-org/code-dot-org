@@ -127,10 +127,21 @@ ratio, which a non-square sprite still needs sent.
 
 **A default scale on the kind.** `scale = [1, 2]` for something twice as tall
 as it is wide is a real want, and once `scale` means the same thing everywhere
-it is finally a number worth defaulting. It would also give the drawing door
-something to ask for — a 1:2 picture rather than a square one — so the picture
-arrives the shape the actor wanted. Needs a home in the actor file and a story
-for what the map editor draws.
+it is finally a number worth defaulting. Needs a home in the actor file and a
+story for what the map editor draws.
+
+_The half of this that was about drawing is done._ The Actor Creator's drawing
+door asks the size before it asks for the picture — a four-by-four grid filled
+from the bottom-left corner, columns across and rows up — and the answer goes
+both ways: the prompt says what frame to compose for and the request asks for
+the nearest shape the provider offers, so a 1:2 actor is drawn tall rather than
+drawn square and stretched; and a `set scale` row lands on the actor, one tile
+writing nothing since that is what every actor already is
+(`appearance/generate/ScaleGrid`, `actors/create/actorLook.withScale`).
+
+What is left is the DEFAULT: a learner who picks a picture from the grid rather
+than describing one is still asked nothing, and an actor kind that knows it is
+twice as tall as it is wide still cannot say so.
 
 **Backgrounds are not in any of this.** A backdrop is stretched over the
 viewport and already takes whatever shape it is; nothing about fitting a tile

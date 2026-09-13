@@ -112,14 +112,22 @@ to the prompt, not a fresh thought.
 - **What safety the product path runs.** The dev proxy runs none, and says so.
   What the gateway enforces, and whether it is enough for a picture drawn into
   a learner's project, is asked in the other spec and answered in neither.
-- **The prompt.** Sprite Lab shapes its prompts hard — a style clause, a flat
-  key colour to cut out, a pixel-grid instruction — and then cleans up the
-  result (`p5lab/.../ai/images/imageGeneration`). Whether this door wants any of
-  that is a question for when there are real pictures to look at, and it belongs
-  behind the seam either way.
+- ~~**The prompt.**~~ _Decided, once there were real pictures to look at._
+  `appearance/generate/imagePrompts` shapes one per kind, and the kinds are
+  Sprite Lab's three because the job is the same job. What is NOT borrowed is
+  its key colour: it floods a flat colour to transparency because its models
+  would not draw transparency, and `gpt-image-1` takes a `background`
+  parameter — so the ask is for real transparency, with no colour to pick and
+  nothing to eat off the subject.
+
+  The kind comes from the call site, which knows what it opened the door for —
+  except on the sprites shelf, where a thing and a surface land in the same
+  folder and only the learner knows which. That one question is asked.
 
 ## Where to start
 
-The fixture transport and the seam, and the whole flow built on them. That is
-the part with the design in it, it needs nothing from anybody, and it is what
-makes the other two transports a matter of filling in one interface.
+_Done, in that order._ The fixture transport and the seam first, then the whole
+flow on them, then the dev proxy: three doors (the Actor Creator's picture
+step, the backdrop shelf, the sprites shelf) and one panel behind all three.
+The gateway transport is still unwritten and still blocks nothing, which was
+the point of starting here.

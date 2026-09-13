@@ -110,18 +110,34 @@ and whose last one silently wins — and the replacement happens where the row
 already was, so an actor whose picture was at the top of its chain does not
 find it moved to the bottom for having been changed.
 
-Four of the five are built, and all four already answer "which picture" in the
-same grid idiom (`animationEditor/SpritePickerDialog`,
+All five are built, and the first four answer "which picture" in the same grid
+idiom (`animationEditor/SpritePickerDialog`,
 `appearance/BackgroundPickerDialog` and the actors' own grid are the same
 reading of three folders):
 
-| Door                   | What it is                                      | Where it lives                              |
-| ---------------------- | ----------------------------------------------- | ------------------------------------------- |
-| One the project has    | the pictures under `sprites/`                   | `SpritePickerDialog`                        |
-| One off the shelf      | the stock library, by sight                     | `appearance/ImportAppearanceDialog`         |
-| A blank one to draw    | a seeded PNG opened in the editor               | `files/newThing`, `imageEditor/PixelEditor` |
-| One off the machine    | an upload into the folder that gives it meaning | `files/FileMenus.uploadInto`                |
-| **One drawn to order** | **a prompt, and a picture back**                | **not built — see below**                   |
+| Door                | What it is                                      | Where it lives                              |
+| ------------------- | ----------------------------------------------- | ------------------------------------------- |
+| One the project has | the pictures under `sprites/`                   | `SpritePickerDialog`                        |
+| One off the shelf   | the stock library, by sight                     | `appearance/ImportAppearanceDialog`         |
+| A blank one to draw | a seeded PNG opened in the editor               | `files/newThing`, `imageEditor/PixelEditor` |
+| One off the machine | an upload into the folder that gives it meaning | `files/FileMenus.uploadInto`                |
+| One drawn to order  | a prompt, and a picture back                    | `appearance/generate/DescribePicture`       |
+
+**The fifth is not a tile, because it is not a grid answer.** It takes the
+whole step: a prompt, a size, and a picture big enough to judge do not fit
+under the pictures the project already has, and the picture is the point — one
+chosen at thumbnail size is one nobody looked at. So the grid carries a door to
+it and the panel carries the way back, the grid still being the likelier
+answer. The same panel is behind the backdrop shelf and the sprites shelf,
+which is where its other two kinds are asked for
+(`appearance/generate/imagePrompts`).
+
+**Pressing on keeps what is drawn.** Choosing a picture from the grid costs one
+press, so a drawn one that wanted a second — under a button beside the one a
+learner was going to press anyway — was a picture that got left behind: made,
+looked at, and not on the actor. It was reported that way. `Next` is what says
+"that one", and a write that refuses keeps the panel up rather than walking on
+without it.
 
 An animation instead of a still is the same question one level up
 (`AnimationPickerDialog`), and "neither" is a legitimate answer: an interface
@@ -137,6 +153,19 @@ finished here without touching anything.
 Whatever is chosen, the step writes one row — `set sprite ⟨file⟩` or
 `play animation ⟨id⟩` — which is a row the learner can see and change
 afterwards, like everything else an assistant writes here.
+
+**And the drawing door writes a second one, because it has to ask a second
+question.** A picture that is drawn to order has no size of its own to inherit;
+after the fit every actor is at most one tile, so a totem pole and a coin come
+out the same height unless somebody says otherwise (`specs/ACTOR_SIZE.md`). The
+panel asks with a four-by-four grid filled from the bottom-left corner —
+columns across, rows up, so the rectangle drawn is the rectangle got — and the
+answer goes two ways at once: into the prompt, so the picture arrives that
+shape rather than square and stretched, and into a `set scale` row on the
+actor. One tile writes nothing, being what every actor already is.
+
+The size is a fact about the ACTOR and not about the picture, so it survives
+leaving the panel and is written whatever the picture ends up being.
 
 ## Step 3 is the enhancement shelf
 
@@ -184,6 +213,12 @@ Two things follow that are not true of the shelf as it stands today:
   that what it lists is all there is.
 
 ## The AI picture, and what porting it costs
+
+_Built, against a seam rather than against the gateway._ The door, the panel
+and the prompts are in (`specs/IMAGE_GENERATION.md`); what is behind them is
+whichever transport the lab can reach — a fixture with no key, the dev server's
+own key proxy, or the gateway once it is ported. The port below is therefore
+the last of the three and blocks nothing.
 
 Its own spec, because the answer turned out to be bigger and different than
 this section said: `AI_IMAGE_GENERATION.md`. In short —
