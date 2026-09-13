@@ -35,6 +35,15 @@
 // rows name — seven, for a Coin. And the learner's thought differs too:
 // "another one like my Crawler" is not "one of theirs, to start from".
 //
+// AND IT CAN BE LEFT AT ANY STEP WITH THE ACTOR MADE, which is the one thing
+// the wizard took away. `New actor` asked for a name and opened a file: one
+// press for a learner who knew exactly what they wanted and wanted nothing
+// else. Through three steps that became three Nexts, each answerable with
+// nothing — a learner walked past two questions to get what used to be the
+// first answer. So every step before the last carries `Create it now`, which
+// makes the actor out of the answers given and asks nothing further. The steps
+// after it are offers, and an offer you cannot decline is a demand.
+//
 // IT WRITES ONCE, AT THE END, and an earlier draft of this had it writing at
 // the end of step one on the grounds that cloning and importing write files.
 // They do not: both are pure transforms over a project source, and so is
@@ -365,6 +374,32 @@ export const ActorCreator = ({
     setAnswer(undefined);
   };
 
+  /**
+   * Write the drawn picture and answer the look that names it, or nothing when
+   * the write refused — which is a reason to stay put with the picture still
+   * on screen rather than walk on without it.
+   *
+   * CALLED ONLY WHERE THERE IS ONE, by both callers, and that is not tidiness:
+   * an async function runs to its first EVALUATED `await`, so a press with
+   * nothing drawn still acts in the tick it always acted in. A press that
+   * quietly moved to the next tick would be a different button.
+   */
+  const keepPending = async (
+    picture: GeneratedPicture,
+  ): Promise<ActorLook | undefined> => {
+    setBusy(true);
+    const file = await onKeep?.(picture);
+    setBusy(false);
+    if (!file) {
+      return undefined;
+    }
+    const kept: ActorLook = {kind: 'sprite', value: file};
+    setLook(kept);
+    setPending(undefined);
+    setDescribing(false);
+    return kept;
+  };
+
   const go = async () => {
     if (!ready || busy) {
       return;
@@ -374,19 +409,11 @@ export const ActorCreator = ({
     // is not read until the next render, and the build below is this one.
     let keeping = look;
     if (pending) {
-      setBusy(true);
-      const file = await onKeep?.(pending);
-      setBusy(false);
-      if (!file) {
-        // The write refused and has said so. Stay in the panel with the
-        // picture still up, rather than walk on without it — which is the
-        // exact surprise this is here to prevent.
+      const kept = await keepPending(pending);
+      if (!kept) {
         return;
       }
-      keeping = {kind: 'sprite', value: file};
-      setLook(keeping);
-      setPending(undefined);
-      setDescribing(false);
+      keeping = kept;
     }
 
     if (!last) {
@@ -413,6 +440,45 @@ export const ActorCreator = ({
     const made = await onCreate(built.source);
     setBusy(false);
     if (made) {
+      onCancel();
+    }
+  };
+
+  /**
+   * Make it now, out of what has been answered, and ask nothing further.
+   *
+   * IT REBUILDS, which is the contract `go` already has: walking back and
+   * forward rebuilds the actor too, so an enhancement added and then walked
+   * away from does not survive either way. Offered only before the last step,
+   * where the primary button already says `Create` and `built` is the thing
+   * the abilities step has been editing.
+   */
+  const makeNow = async () => {
+    if (!ready || busy || last) {
+      return;
+    }
+    let keeping = look;
+    if (pending) {
+      const kept = await keepPending(pending);
+      if (!kept) {
+        return;
+      }
+      keeping = kept;
+    }
+    const made = build({
+      origin,
+      source,
+      name: chosenName,
+      look: keeping,
+      shape,
+    });
+    if (!made) {
+      return;
+    }
+    setBusy(true);
+    const done = await onCreate(made.source);
+    setBusy(false);
+    if (done) {
       onCancel();
     }
   };
@@ -461,9 +527,27 @@ export const ActorCreator = ({
       }}
       customContent={
         <div className={styles.body}>
-          <Typography variant="body4" className={styles.progress}>
-            {`Step ${at + 1} of ${STEPS.length} — ${STEPS[at].title}`}
-          </Typography>
+          <div className={styles.heading}>
+            <Typography variant="body4" className={styles.progress}>
+              {`Step ${at + 1} of ${STEPS.length} — ${STEPS[at].title}`}
+            </Typography>
+            {!last && (
+              // The way out. Quiet, because the steps after this one are worth
+              // walking through — and visible, because a learner who knows
+              // what they want should not have to answer two more questions
+              // with nothing to get there.
+              <button
+                type="button"
+                className={styles.now}
+                disabled={!ready || busy}
+                onClick={() => void makeNow()}
+              >
+                <Typography variant="body4" color="inherit">
+                  Create it now
+                </Typography>
+              </button>
+            )}
+          </div>
 
           {STEPS[at].id === 'origin' && (
             <>

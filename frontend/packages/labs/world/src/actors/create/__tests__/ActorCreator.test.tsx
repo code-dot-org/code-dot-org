@@ -432,6 +432,91 @@ describe('the abilities step', () => {
   });
 });
 
+describe('the way out', () => {
+  const out = () => screen.getByRole('button', {name: 'Create it now'});
+
+  it('is on every step but the last, where the button already says it', () => {
+    // `New actor` was one press for a learner who knew what they wanted. Three
+    // Nexts answerable with nothing is two questions walked past.
+    show();
+    pastOrigin('Create my own');
+    expect(out()).toBeTruthy();
+
+    fireEvent.click(onward());
+    expect(screen.queryByRole('button', {name: 'Create it now'})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Create'})).toBeTruthy();
+  });
+
+  it('waits for the wizard to have enough to make one', () => {
+    show();
+    expect(out()).toBeDisabled();
+
+    fireEvent.click(screen.getByText('Create my own'));
+    fireEvent.change(name(), {target: {value: 'Chaser'}});
+    expect(out()).not.toBeDisabled();
+  });
+
+  it('makes the actor out of the answers given so far', async () => {
+    show();
+    fireEvent.click(screen.getByText('Create my own'));
+    fireEvent.change(name(), {target: {value: 'Chaser'}});
+
+    fireEvent.click(out());
+
+    expect(build).toHaveBeenCalledWith(
+      expect.objectContaining({origin: 'new', name: 'Chaser', look: undefined}),
+    );
+    await vi.waitFor(() => expect(onCreate).toHaveBeenCalled());
+    await vi.waitFor(() => expect(onCancel).toHaveBeenCalled());
+  });
+
+  it('takes the picture step’s answer with it', () => {
+    show();
+    pastOrigin('Create my own');
+    fireEvent.click(screen.getByRole('button', {name: 'coin.png'}));
+
+    fireEvent.click(out());
+
+    expect(build).toHaveBeenCalledWith(
+      expect.objectContaining({look: {kind: 'sprite', value: 'coin.png'}}),
+    );
+  });
+
+  it('keeps a drawn picture on the way out', async () => {
+    show();
+    pastOrigin('Create my own');
+    fireEvent.click(screen.getByText(/Or describe one to be drawn/));
+    fireEvent.change(screen.getByLabelText('Describe a picture'), {
+      target: {value: 'a crab'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Draw'}));
+    await screen.findByRole('img');
+
+    fireEvent.click(out());
+
+    await vi.waitFor(() => expect(onKeep).toHaveBeenCalledWith(DRAWN[0]));
+    await vi.waitFor(() =>
+      expect(build).toHaveBeenCalledWith(
+        expect.objectContaining({look: {kind: 'sprite', value: 'crab.png'}}),
+      ),
+    );
+  });
+
+  it('stays put when the actor could not be made', async () => {
+    // The caller's complaint is on screen by then, and a wizard that vanished
+    // would take the answers with it — the same reasoning `Create` has.
+    onCreate.mockReturnValueOnce(false as never);
+    show();
+    fireEvent.click(screen.getByText('Create my own'));
+    fireEvent.change(name(), {target: {value: 'Chaser'}});
+
+    fireEvent.click(out());
+
+    await vi.waitFor(() => expect(onCreate).toHaveBeenCalled());
+    expect(onCancel).not.toHaveBeenCalled();
+  });
+});
+
 describe('describing a picture', () => {
   /** Step two, with the drawing panel open. */
   const atThePictures = () => {

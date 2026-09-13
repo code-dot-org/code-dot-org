@@ -211,3 +211,34 @@
   outline: 2px solid var(--borders-brand-primary, #0093a4);
   outline-offset: 2px;
 }
+
+/* The step, and the way out of it. */
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Quiet, because the steps after this one are worth walking through — and
+   visible, because an offer you cannot decline is a demand. */
+.now {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.now:disabled {
+  cursor: default;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.now:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
