@@ -40,6 +40,17 @@ export interface GeneratedPicture {
   /** The bytes, as the project stores them. */
   dataUrl: string;
   mediaType: string;
+  /**
+   * How big it measures, where the transport knows.
+   *
+   * WHAT THE SCALE IS COMPUTED FROM. A drawn actor asked to fill two tiles of
+   * height gets a `set scale` row, and (x, y) is the right pair only for a
+   * SQUARE picture: `intrinsic size` is the picture fitted to one tile, so a
+   * 2:3 picture scaled by (1, 2) is drawn two-thirds of a tile wide and leaves
+   * a gap on a grid (`actors/create/actorLook.withScale`).
+   */
+  width?: number;
+  height?: number;
 }
 
 /** What was asked for. */

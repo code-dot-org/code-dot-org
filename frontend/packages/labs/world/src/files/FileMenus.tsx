@@ -467,8 +467,11 @@ export const FileMenus = () => {
       }
       if (draft.shape) {
         // How many tiles it fills, as a row of its own. One tile writes
-        // nothing, which is every actor that never touched the widget.
-        contents = withScale(contents, draft.shape);
+        // nothing, which is every actor that never touched the widget — and
+        // what the picture MEASURES decides the numbers, since scaling by
+        // (x, y) lands on that box only for a square one
+        // (`create/actorLook.withScale`).
+        contents = withScale(contents, draft.shape, draft.drawn);
       }
       return {
         ...source,

@@ -32,6 +32,22 @@
 export interface Shrinkable {
   dataUrl: string;
   mediaType: string;
+  /**
+   * How big it measures, once anything here has had to decode it.
+   *
+   * REPORTED BECAUSE THE SIZE DECIDES THE SCALE. An actor asked to fill two
+   * tiles of height is written a `set scale` row, and the right numbers depend
+   * on the picture's proportions — `intrinsic size` is the picture fitted to a
+   * tile, so scaling it by (x, y) lands on the asked-for box only when the
+   * picture is square (`actors/create/actorLook.withScale`). Everything here
+   * decodes anyway; saying what it saw costs nothing and saves a second
+   * decode.
+   *
+   * Absent where nothing decoded it — a browser that cannot draw, a picture
+   * small enough to pass straight through untouched.
+   */
+  width?: number;
+  height?: number;
 }
 
 /**
@@ -57,8 +73,13 @@ export async function shrinkToFit(
   try {
     const image = await loaded(picture.dataUrl);
     const longest = Math.max(image.width, image.height);
-    if (!longest || longest <= maxSide) {
+    if (!longest) {
       return picture;
+    }
+    if (longest <= maxSide) {
+      // Nothing to do but say what it measures, which nobody else will now
+      // decode it to find out.
+      return {...picture, width: image.width, height: image.height};
     }
     const scale = maxSide / longest;
     canvas.width = Math.max(1, Math.round(image.width * scale));
@@ -73,12 +94,148 @@ export async function shrinkToFit(
     // pictures are `.png` everywhere else.
     const smaller = canvas.toDataURL('image/png');
     return smaller.startsWith('data:image/png')
-      ? {dataUrl: smaller, mediaType: 'image/png'}
+      ? {
+          dataUrl: smaller,
+          mediaType: 'image/png',
+          width: canvas.width,
+          height: canvas.height,
+        }
       : picture;
   } catch {
     return picture;
   }
 }
+
+/**
+ * Cut the fully transparent margin off the edges a surface has to JOIN.
+ *
+ * WORDS ALONE DO NOT GET THIS. A learner asked for a mossy platform tiling
+ * side to side, said "do not leave any gaps to the left or right" and "it
+ * should go to the left and right edges" in their own prompt, and got a
+ * platform with a transparent margin on both sides — so copies laid in a row
+ * stood apart with a gap between them. The clause was rewritten for that
+ * (`generate/imagePrompts`), and a clause is still a request.
+ *
+ * This is not. Whatever came back, the columns at the left and right that are
+ * entirely transparent are not part of the picture: nothing is drawn there, so
+ * removing them changes nothing anybody can see and makes the material reach
+ * the edge by construction. The same for rows, top and bottom, where it joins
+ * that way.
+ *
+ * IT CANNOT FIX A SEAM, only a gap. Two capped ends butted together are still
+ * two capped ends; what stops them being capped is the prompt. This stops them
+ * being a finger apart.
+ *
+ * Untouched when there is nothing to cut, when the browser cannot draw, or
+ * when anything at all goes wrong — the same trade {@link shrinkToFit} makes,
+ * for the same reason: losing a drawing a learner waited half a minute for
+ * would be worse than a margin.
+ */
+export async function trimToEdges(
+  picture: Shrinkable,
+  edges: {across: boolean; up: boolean},
+): Promise<Shrinkable> {
+  if (!edges.across && !edges.up) {
+    return picture;
+  }
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    return picture;
+  }
+  try {
+    const image = await loaded(picture.dataUrl);
+    const {width, height} = image;
+    if (!width || !height) {
+      return picture;
+    }
+    canvas.width = width;
+    canvas.height = height;
+    ctx.drawImage(image, 0, 0);
+    // `getImageData` throws on a canvas tainted by a cross-origin picture.
+    // Every picture here is a data URL from the generator, so it should not —
+    // and the catch below means it costs a margin rather than the drawing.
+    const {data} = ctx.getImageData(0, 0, width, height);
+    const alphaAt = (x: number, y: number) => data[(y * width + x) * 4 + 3];
+    /** Empty enough to cut: a soft edge is not a drawing. */
+    const clear = (a: number) => a < FAINT;
+
+    let left = 0;
+    let right = width - 1;
+    if (edges.across) {
+      const columnClear = (x: number) => {
+        for (let y = 0; y < height; y++) {
+          if (!clear(alphaAt(x, y))) {
+            return false;
+          }
+        }
+        return true;
+      };
+      while (left < right && columnClear(left)) left++;
+      while (right > left && columnClear(right)) right--;
+    }
+
+    let top = 0;
+    let bottom = height - 1;
+    if (edges.up) {
+      const rowClear = (y: number) => {
+        for (let x = 0; x < width; x++) {
+          if (!clear(alphaAt(x, y))) {
+            return false;
+          }
+        }
+        return true;
+      };
+      while (top < bottom && rowClear(top)) top++;
+      while (bottom > top && rowClear(bottom)) bottom--;
+    }
+
+    const cut = {width: right - left + 1, height: bottom - top + 1};
+    if (cut.width === width && cut.height === height) {
+      return {...picture, width, height};
+    }
+    // Nothing drawn at all — an entirely transparent picture is a failure to
+    // hand back whole rather than to crop to one pixel. Asked only of an axis
+    // that was SCANNED: a picture one pixel tall is a legitimate strip, and
+    // judging it by a measurement nothing took is how the first cut of this
+    // threw away a picture it had trimmed correctly.
+    if ((edges.across && cut.width < 2) || (edges.up && cut.height < 2)) {
+      return picture;
+    }
+    const out = document.createElement('canvas');
+    const outCtx = out.getContext('2d');
+    if (!outCtx) {
+      return picture;
+    }
+    out.width = cut.width;
+    out.height = cut.height;
+    outCtx.drawImage(
+      image,
+      left,
+      top,
+      cut.width,
+      cut.height,
+      0,
+      0,
+      cut.width,
+      cut.height,
+    );
+    const trimmed = out.toDataURL('image/png');
+    return trimmed.startsWith('data:image/png')
+      ? {
+          dataUrl: trimmed,
+          mediaType: 'image/png',
+          width: cut.width,
+          height: cut.height,
+        }
+      : picture;
+  } catch {
+    return picture;
+  }
+}
+
+/** Alpha below which a pixel counts as nothing drawn, out of 255. */
+const FAINT = 8;
 
 /** How long to wait for a picture to decode before giving up on shrinking it. */
 const DECODE_LIMIT = 10_000;

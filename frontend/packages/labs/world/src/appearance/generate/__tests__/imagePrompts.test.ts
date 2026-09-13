@@ -110,18 +110,61 @@ describe('which edges it joins', () => {
 });
 
 describe('how much of the square it is', () => {
-  it('tells a see-through surface NOT to fill the frame', () => {
+  it('still makes a see-through surface bleed off the edges it joins', () => {
+    // THE SECOND REPORT. "It need NOT fill the frame" is true of the axis that
+    // is free and FALSE of the axis that joins, and said flatly it licensed
+    // exactly what came back: a platform drawn as an object, capped at both
+    // ends, sitting in a transparent margin. The learner had written "do not
+    // leave any gaps to the left or right" into the box themselves and been
+    // overruled by our own clause.
+    const asked = promptFor('surface', 'a mossy platform', undefined, {
+      ways: 'across',
+      through: true,
+    });
+
+    expect(asked).toContain('BLEED OFF the left and right edges');
+    expect(asked).toContain('no transparent margin at either side');
+    expect(asked).not.toContain('need NOT fill the frame');
+    // …and the free axis is still free, which is the whole point of asking.
+    expect(asked).toContain('Above it and below it');
+    expect(asked).toContain('fully transparent');
+  });
+
+  it('says a joining surface has no ends, because it came back with two', () => {
+    // "The material is the whole picture" is FALSE of a see-through one — half
+    // of it is deliberately nothing — and a sentence a model can see is false
+    // is one it discounts, taking the useful half with it. What was missing
+    // was the reason a platform should not be capped.
+    const asked = promptFor('surface', 'a mossy platform', undefined, {
+      ways: 'across',
+      through: true,
+    });
+
+    expect(asked).toContain('no ends of its own');
+    expect(asked).toContain('continues past the edges of the picture');
+    expect(asked).not.toContain('The material is the whole picture');
+  });
+
+  it('names a strip rather than a sprite where it joins', () => {
+    // "A flat game sprite" names the very thing that must not be drawn: one
+    // object with a silhouette.
+    const asked = promptFor('surface', 'a mossy platform', undefined, {
+      ways: 'across',
+      through: true,
+    });
+
+    expect(asked).toMatch(/^A seamless horizontally-repeating strip/);
+    expect(asked).not.toContain('game sprite');
+  });
+
+  it('tells a see-through surface that joins nothing NOT to fill the frame', () => {
     // THE SENTENCE A LEARNER HAD TO WRITE BY HAND, after arguing with ours:
-    // "Ignore any further instruction to fill the space".
-    const asked = promptFor(
-      'surface',
-      'a mossy platform with vines',
-      undefined,
-      {
-        ways: 'across',
-        through: true,
-      },
-    );
+    // "Ignore any further instruction to fill the space". Right where nothing
+    // joins, and only there.
+    const asked = promptFor('surface', 'a rock face', undefined, {
+      ways: 'none',
+      through: true,
+    });
 
     expect(asked).toContain('need NOT fill the frame');
     expect(asked).not.toContain('Fill the entire frame edge to edge');
@@ -139,12 +182,13 @@ describe('how much of the square it is', () => {
   });
 
   it('still makes the joining edges reach, transparency or not', () => {
-    const asked = promptFor('surface', 'a platform', undefined, {
-      ways: 'across',
-      through: true,
-    });
-
-    expect(asked).toContain('the material must run right off that edge');
+    for (const through of [false, true]) {
+      const asked = promptFor('surface', 'a platform', undefined, {
+        ways: 'across',
+        through,
+      });
+      expect(asked).toContain('the material must run right off that edge');
+    }
   });
 });
 

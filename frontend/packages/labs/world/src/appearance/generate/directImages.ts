@@ -22,7 +22,7 @@ import {
   type ImageGenerator,
 } from './imageGenerator';
 import {promptFor, styleFor} from './imagePrompts';
-import {shrinkToFit} from './shrinkPicture';
+import {shrinkToFit, trimToEdges} from './shrinkPicture';
 
 /** Thrown when the proxy answered, and the answer was that it could not. */
 export class DrawRefused extends Error {
@@ -114,15 +114,30 @@ export const directImages = (): ImageGenerator => ({
     const stem = stemFor(prompt);
     return Promise.all(
       reply.pictures.map(async (picture, at): Promise<GeneratedPicture> => {
-        // SHRUNK ON THE WAY IN. A provider draws at a thousand pixels and up,
-        // and a project carries its pictures with it — so the size is a share
-        // of a budget rather than a matter of taste
-        // (`generate/shrinkPicture`).
-        const {dataUrl, mediaType} = await shrinkToFit(
+        // TRIMMED FIRST, where the surface has to join. A transparent margin
+        // at an edge a copy is going to meet is a gap between the copies, and
+        // asking for it not to be there is a request the provider is free to
+        // ignore — which it did (`generate/shrinkPicture.trimToEdges`).
+        //
+        // Before the shrink rather than after, so the shrink's budget is spent
+        // on the picture rather than on the margin round it.
+        const joins = kind === 'surface' && surface ? surface.ways : 'none';
+        const trimmed = await trimToEdges(
           {
             dataUrl: `data:${picture.mediaType};base64,${picture.base64}`,
             mediaType: picture.mediaType,
           },
+          {
+            across: joins === 'across' || joins === 'both',
+            up: joins === 'up' || joins === 'both',
+          },
+        );
+        // …then SHRUNK ON THE WAY IN. A provider draws at a thousand pixels
+        // and up, and a project carries its pictures with it — so the size is
+        // a share of a budget rather than a matter of taste
+        // (`generate/shrinkPicture`).
+        const {dataUrl, mediaType, width, height} = await shrinkToFit(
+          trimmed,
           style.maxSide,
         );
         return {
@@ -132,6 +147,8 @@ export const directImages = (): ImageGenerator => ({
           name: at === 0 ? stem : `${stem}${at + 1}`,
           dataUrl,
           mediaType,
+          width,
+          height,
         };
       }),
     );

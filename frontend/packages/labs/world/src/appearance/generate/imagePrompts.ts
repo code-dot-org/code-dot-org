@@ -156,9 +156,32 @@ const SEEN_FLAT =
  * how anybody would ask — so the clause refuses it by name rather than merely
  * avoiding it.
  */
-const NOT_AN_OBJECT =
-  'The material is the whole picture: draw no tile, no block, no slab, no ' +
-  'panel and no single object with edges of its own.';
+const NOT_AN_OBJECT = {
+  /** Solid, joining nothing: the picture and the material are the same thing. */
+  whole:
+    'The material is the whole picture: draw no tile, no block, no slab, no ' +
+    'panel and no single object with edges of its own.',
+  /**
+   * See-through, joining nothing. "The material is the whole picture" is
+   * FALSE here — half the picture is deliberately nothing — and a sentence a
+   * model can see is false is a sentence it discounts, taking the useful half
+   * with it.
+   */
+  only:
+    'This is material rather than an object sitting on a background: draw no ' +
+    'tile, no block, no slab and no panel.',
+  /**
+   * Joining, either way, and the sentence the mossy platform needed. It came
+   * back capped at both ends because nothing had said a thing that repeats has
+   * no ends — only that it should not be "an object with edges of its own",
+   * which a platform with two tidy ends does not look like to a model.
+   */
+  endless:
+    'This is a length of material rather than an object: draw no tile, no ' +
+    'block, no slab and no panel, and give it no ends of its own. It simply ' +
+    'continues past the edges of the picture, as though cut from something ' +
+    'longer.',
+};
 
 /**
  * How much of the frame it occupies, which is the see-through question.
@@ -177,6 +200,45 @@ const FILLS = {
     'It need NOT fill the frame. Draw the material only where it actually is ' +
     'and leave everywhere else fully transparent — no background colour of ' +
     'any kind, no sky, no backdrop — so that the game shows through it.',
+};
+
+/**
+ * …and the same for a see-through surface that has to JOIN.
+ *
+ * BECAUSE THE TWO ABOVE CONTRADICT EACH OTHER THERE, which is how the first
+ * cut of this failed. "It need NOT fill the frame" is true of the axis that is
+ * free and false of the axis that joins, and said flatly it licenses exactly
+ * what came back: a platform drawn as an object, capped at both ends, sitting
+ * in a transparent margin. Asked for side-to-side tiling, the copies left gaps
+ * and the joins were two rounded ends meeting.
+ *
+ * So the freedom is granted per axis. The joining edges BLEED — the word
+ * illustrators use, and the one a model answers to — and the free axis is the
+ * only place "leave it transparent" applies.
+ */
+const BLEEDS: Record<'across' | 'up' | 'both', string> = {
+  across:
+    'The artwork must BLEED OFF the left and right edges: the surface runs ' +
+    'from the very left edge of the picture to the very right edge with no ' +
+    'transparent margin at either side, and is CUT OFF by those edges rather ' +
+    'than fitted inside them. Do not centre it in the frame. Above it and ' +
+    'below it, leave everything that is not the surface fully transparent — ' +
+    'no background colour of any kind, no sky, no backdrop — so that the game ' +
+    'shows through.',
+  up:
+    'The artwork must BLEED OFF the top and bottom edges: the surface runs ' +
+    'from the very top of the picture to the very bottom with no transparent ' +
+    'margin at either end, and is CUT OFF by those edges rather than fitted ' +
+    'inside them. Do not centre it in the frame. To its left and to its ' +
+    'right, leave everything that is not the surface fully transparent — no ' +
+    'background colour of any kind, no sky, no backdrop — so that the game ' +
+    'shows through.',
+  both:
+    'The artwork must BLEED OFF all four edges, cut off by them rather than ' +
+    'fitted inside them, with no transparent margin anywhere around it. Only ' +
+    'the gaps WITHIN the surface itself are transparent, and those are fully ' +
+    'transparent — no background colour of any kind, no sky, no backdrop — so ' +
+    'that the game shows through them.',
 };
 
 /**
@@ -211,9 +273,23 @@ const UNNOTICED =
   'the material must run right off that edge.';
 
 /** The whole of what a surface is asked to be. */
-const surfaceClause = ({ways, through}: SurfaceAsk): string =>
-  `${through ? FILLS.through : FILLS.solid} ${SEEN_FLAT} ${NOT_AN_OBJECT}` +
-  `${JOINS[ways]}${ways === 'none' ? '' : UNNOTICED}`;
+const surfaceClause = ({ways, through}: SurfaceAsk): string => {
+  const fill = !through
+    ? FILLS.solid
+    : ways === 'none'
+      ? FILLS.through
+      : BLEEDS[ways];
+  const material =
+    ways !== 'none'
+      ? NOT_AN_OBJECT.endless
+      : through
+        ? NOT_AN_OBJECT.only
+        : NOT_AN_OBJECT.whole;
+  return (
+    `${fill} ${SEEN_FLAT} ${material}` +
+    `${JOINS[ways]}${ways === 'none' ? '' : UNNOTICED}`
+  );
+};
 
 const CLAUSES: Record<ImageKind, (surface: SurfaceAsk) => string> = {
   // The subject and nothing else. "No shadow" is there because a drop shadow
@@ -249,6 +325,18 @@ const leadFor = (kind: ImageKind, surface: SurfaceAsk): string => {
     return '';
   }
   if (surface.through) {
+    // NOT "a game sprite" where it joins, which is what this said and which
+    // names the very thing that must not be drawn: a sprite is one object with
+    // a silhouette, and what was wanted is a strip with no ends.
+    if (surface.ways === 'across') {
+      return 'A seamless horizontally-repeating strip, cut off by the left and right edges, seen straight on, with a transparent background, of: ';
+    }
+    if (surface.ways === 'up') {
+      return 'A seamless vertically-repeating strip, cut off by the top and bottom edges, seen straight on, with a transparent background, of: ';
+    }
+    if (surface.ways === 'both') {
+      return 'A seamless repeating texture with transparent gaps in it, seen straight on, of: ';
+    }
     return 'A flat game sprite on a transparent background, seen straight on, of: ';
   }
   return surface.ways === 'none'

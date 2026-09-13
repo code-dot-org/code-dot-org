@@ -8,7 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {lookOf, withLook} from '../actorLook';
+import {lookOf, withLook, withScale} from '../actorLook';
 
 /** A `define actor` with the given rows chained under it. */
 const actorWith = (...rows: Array<Record<string, unknown>>) =>
@@ -137,5 +137,102 @@ describe('changing a look', () => {
     const empty = JSON.stringify({blocks: {blocks: []}});
 
     expect(withLook(empty, {kind: 'sprite', value: 'coin.png'})).toBe(empty);
+  });
+});
+
+/** The numbers the `set scale` row ended up carrying. */
+const scaleIn = (contents: string): {x: number; y: number} | undefined => {
+  const blocks = (JSON.parse(contents) as {blocks: {blocks: unknown[]}}).blocks
+    .blocks;
+  for (
+    let at = blocks[0] as
+      | {
+          type: string;
+          inputs?: Record<string, {block?: {fields?: {NUM?: number}}}>;
+          next?: {block: unknown};
+        }
+      | undefined;
+    at;
+    at = at.next?.block as never
+  ) {
+    if (at.type === 'world_set_Space_ScaleProperty') {
+      return {
+        x: at.inputs?.X?.block?.fields?.NUM as number,
+        y: at.inputs?.Y?.block?.fields?.NUM as number,
+      };
+    }
+  }
+  return undefined;
+};
+
+describe('how many tiles it fills', () => {
+  it('writes nothing for the one tile every actor already is', () => {
+    const same = actorWith(sprite('coin.png'));
+
+    expect(withScale(same, {x: 1, y: 1})).toBe(same);
+  });
+
+  it('writes the shape itself for a square picture', () => {
+    const out = withScale(
+      actorWith(sprite('coin.png')),
+      {x: 1, y: 2},
+      {
+        width: 512,
+        height: 512,
+      },
+    );
+
+    expect(scaleIn(out)).toEqual({x: 1, y: 2});
+  });
+
+  it('corrects for a picture that is not square', () => {
+    // THE REPORTED GAPS. A provider offers 2:3 as its nearest shape to 1:2, so
+    // an actor asked for one tile across and two up was drawn from a 1024 by
+    // 1536 picture: fitted to a tile that is 21 by 32, and scaling by (1, 2)
+    // drew it 21 wide. A row of them on a 32-pixel grid stood ten pixels
+    // apart, with no trimming involved.
+    const out = withScale(
+      actorWith(sprite('totem.png')),
+      {x: 1, y: 2},
+      {
+        width: 1024,
+        height: 1536,
+      },
+    );
+
+    // 1 x 1536/1024 across, 2 x 1536/1536 up — which draws it 32 by 64.
+    expect(scaleIn(out)).toEqual({x: 1.5, y: 2});
+  });
+
+  it('corrects a wide picture the other way', () => {
+    const out = withScale(
+      actorWith(sprite('bar.png')),
+      {x: 3, y: 2},
+      {
+        width: 1536,
+        height: 1024,
+      },
+    );
+
+    expect(scaleIn(out)).toEqual({x: 3, y: 3});
+  });
+
+  it('keeps the old arithmetic where nothing measured the picture', () => {
+    // A picture chosen from the project's own grid is art the learner picked
+    // rather than art composed to this shape.
+    const out = withScale(actorWith(sprite('coin.png')), {x: 2, y: 3});
+
+    expect(scaleIn(out)).toEqual({x: 2, y: 3});
+  });
+
+  it('replaces a row rather than adding a second', () => {
+    // Two rows setting the scale is a file whose second answer silently wins.
+    const once = withScale(actorWith(sprite('coin.png')), {x: 2, y: 2});
+    const twice = withScale(once, {x: 1, y: 3});
+
+    expect(rowsIn(twice).filter(one => one.endsWith('ScaleProperty'))).toEqual([
+      'world_set_Space_ScaleProperty',
+    ]);
+    expect(scaleIn(twice)).toEqual({x: 1, y: 3});
   });
 });

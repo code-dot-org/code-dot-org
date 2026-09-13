@@ -59,12 +59,15 @@ const SPROUT =
   'WjAA3kbcn7T0s86oBRB4w6YNQBFDlARkYDjslVM+qAoe2A0Vww6oBRB4w6YNQB' +
   'dHHAKBhxAAB5maWM3zBsGwAAAABJRU5ErkJggg==';
 
+/** What every one of them measures, which is stated because it is known. */
+const FIXTURE_SIZE = {width: 32, height: 32};
+
 /** The four of them, in the order they were drawn. */
 const PICTURES: readonly GeneratedPicture[] = [
-  {name: 'crab', dataUrl: CRAB, mediaType: 'image/png'},
-  {name: 'star', dataUrl: STAR, mediaType: 'image/png'},
-  {name: 'gem', dataUrl: GEM, mediaType: 'image/png'},
-  {name: 'sprout', dataUrl: SPROUT, mediaType: 'image/png'},
+  {name: 'crab', dataUrl: CRAB, mediaType: 'image/png', ...FIXTURE_SIZE},
+  {name: 'star', dataUrl: STAR, mediaType: 'image/png', ...FIXTURE_SIZE},
+  {name: 'gem', dataUrl: GEM, mediaType: 'image/png', ...FIXTURE_SIZE},
+  {name: 'sprout', dataUrl: SPROUT, mediaType: 'image/png', ...FIXTURE_SIZE},
 ];
 
 /** A small stable hash of a string, for ordering and nothing else. */

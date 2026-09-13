@@ -127,6 +127,16 @@ export interface ActorDraft {
    */
   shape?: {x: number; y: number};
   /**
+   * How big the DRAWN picture measures, where one was drawn.
+   *
+   * The `set scale` row is computed from it: scaling by (x, y) lands on the
+   * asked-for box only when the picture is square, and a provider's nearest
+   * offered shape rarely is (`create/actorLook.withScale`). Absent for a
+   * picture chosen from the project's own grid, which keeps the old
+   * arithmetic.
+   */
+  drawn?: {width?: number; height?: number};
+  /**
    * What it is drawn as, or nothing to leave it as it came.
    *
    * Nothing is a real answer rather than an unanswered question: an actor made
@@ -299,6 +309,8 @@ export const ActorCreator = ({
    * says what is drawn (`generate/DescribePicture.onDrew`) and this keeps it.
    */
   const [pending, setPending] = useState<GeneratedPicture>();
+  /** What the kept picture measures, for the scale — see {@link ActorDraft}. */
+  const [drawn, setDrawn] = useState<{width?: number; height?: number}>();
   const [busy, setBusy] = useState(false);
   /**
    * The actor as it would be, once there is enough to say.
@@ -416,6 +428,10 @@ export const ActorCreator = ({
     }
     const kept: ActorLook = {kind: 'sprite', value: file};
     setLook(kept);
+    // …and what it measures, which is what the scale is worked out from. Kept
+    // beside the look rather than looked up later: the file has only just been
+    // written, and nothing has decoded it yet.
+    setDrawn({width: picture.width, height: picture.height});
     setPending(undefined);
     setDescribing(false);
     return kept;
@@ -443,7 +459,14 @@ export const ActorCreator = ({
       // abilities step editing the actor that was.
       if (STEPS[at + 1].id === 'abilities') {
         setBuilt(
-          build({origin, source, name: chosenName, look: keeping, shape}),
+          build({
+            origin,
+            source,
+            name: chosenName,
+            look: keeping,
+            shape,
+            drawn,
+          }),
         );
         setChosen(null);
         setAnswer(undefined);
@@ -492,6 +515,7 @@ export const ActorCreator = ({
       name: chosenName,
       look: keeping,
       shape,
+      drawn,
     });
     if (!made) {
       return;
@@ -729,7 +753,12 @@ export const ActorCreator = ({
                         aria-pressed={chosen}
                         aria-label={sprite}
                         title={sprite}
-                        onClick={() => setLook({kind: 'sprite', value: sprite})}
+                        onClick={() => {
+                          setLook({kind: 'sprite', value: sprite});
+                          // Chosen rather than drawn: nothing measured it,
+                          // and the old arithmetic is what it keeps.
+                          setDrawn(undefined);
+                        }}
                       >
                         <span className={styles.picture}>
                           {image && (
