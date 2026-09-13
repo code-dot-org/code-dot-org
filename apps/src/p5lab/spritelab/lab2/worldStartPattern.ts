@@ -1,5 +1,4 @@
-// The premade world a level can hand a student: `world_start_pattern`, one
-// string per playfield row, painted into the level's pinned scene.
+// The premade world a level can hand a student, painted into its pinned scene.
 
 import {useEffect} from 'react';
 
@@ -9,8 +8,8 @@ import {RuntimeAnimationList, Scene, Sources} from './types';
 import {createEmptyWorld, sceneGridSize, World, WorldCell} from './world';
 
 /**
- * Which image each pattern character draws. 'B' takes the block the student
- * made most recently, 'S' their first character — orderedKeys is newest-first,
+ * Which image each pattern character draws: 'B' the block the student made
+ * most recently, 'S' their first character. orderedKeys is newest-first,
  * because Sprite Lab prepends new animations.
  */
 export function patternCells(animations: RuntimeAnimationList): {
@@ -36,9 +35,8 @@ export function patternCells(animations: RuntimeAnimationList): {
 /**
  * The scene's world with the pattern painted in, or null when it would change
  * nothing. Each kind seeds only while the world holds none of it, and only
- * into empty cells, so student edits always win and a later level's platforms
- * merge in around an already-placed player. Rows anchor to the playfield
- * floor, resizeWorld's convention.
+ * into empty cells, so a student's own placements always win. Rows anchor to
+ * the playfield floor, resizeWorld's convention.
  */
 export function paintPattern(
   world: World | undefined,

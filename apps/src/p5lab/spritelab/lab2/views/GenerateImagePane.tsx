@@ -111,9 +111,8 @@ async function cropStandingFrame(
 const ALTERNATIVE_THUMB_PX = 160;
 
 /**
- * A small standalone thumbnail for an Alternatives entry: a strip's
- * standing frame, or the whole picture, downscaled. Falls back to the
- * full image if it can't be made.
+ * A small thumbnail for an Alternatives entry: a strip's standing frame, or
+ * the whole picture, downscaled. Falls back to the full image.
  */
 async function alternativeThumb(
   dataURI: string,
@@ -280,7 +279,7 @@ interface GenerateImagePaneProps {
   paintDisabled?: boolean;
   /** The image panel is the level: no gallery, no modal, always open on a
       blank generate form. */
-  standalone?: boolean;
+  imageLevel?: boolean;
 }
 
 /**
@@ -297,7 +296,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   adlibOnly,
   defaultStyle,
   paintDisabled,
-  standalone,
+  imageLevel,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -807,14 +806,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
-  // Standalone mode opens on a blank form, and returns to one whenever a
+  // An image level opens on a blank form, and returns to one whenever a
   // close or delete clears the target: the level is there to make an image,
   // and the newest one of its type belongs to whichever level made it.
   useEffect(() => {
-    if (standalone && !dialogTarget) {
+    if (imageLevel && !dialogTarget) {
       setDialogTarget('new');
     }
-  }, [standalone, dialogTarget]);
+  }, [imageLevel, dialogTarget]);
 
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
@@ -825,7 +824,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
-      {!standalone && (
+      {!imageLevel && (
         <div className={moduleStyles.imageGallery}>
           {/* First slot, so it never hides behind a scroll. */}
           <div className={moduleStyles.imageCard}>
@@ -906,7 +905,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           adlibOnly={adlibOnly}
           defaultStyle={defaultStyle}
           paintDisabled={paintDisabled}
-          standalone={standalone}
+          imageLevel={imageLevel}
           pixelated={!!targetProps?.pixelGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}

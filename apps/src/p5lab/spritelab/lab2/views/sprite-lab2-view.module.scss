@@ -620,10 +620,9 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-// Standalone image-generation levels: the image panel is the whole lab, the
-// floating guide over it, on the lab's own ground (black in dark mode, the
-// stage the dance generator uses).
-.standaloneGenerateArea {
+// The lab's own ground, which the dance generator also sits on: black in
+// dark mode, so the panel and the floating guide read as the level itself.
+.imageLevelArea {
   position: relative;
   display: flex;
   align-items: flex-start;

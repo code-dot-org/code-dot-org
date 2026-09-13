@@ -1,5 +1,5 @@
 import * as BlocklyCore from 'blockly/core';
-import {useCallback, useEffect, useRef} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
@@ -38,6 +38,11 @@ interface UseBlocklyWorkspaceOptions {
 }
 
 interface UseBlocklyWorkspaceResult {
+  /**
+   * Increments on every injection. A new workspace starts empty, so whoever
+   * owns its contents must reload them when this changes.
+   */
+  workspaceVersion: number;
   /** Compile the workspace to JavaScript for the runtime; null before inject. */
   getCode: () => string | null;
   /** Returns the serialization the workspace holds; null before inject. */
@@ -83,6 +88,7 @@ export default function useBlocklyWorkspace({
     () => {}
   );
   const onIntermediateChangeRef = useRef<(() => void) | undefined>(undefined);
+  const [workspaceVersion, setWorkspaceVersion] = useState(0);
 
   // Inject the workspace once enabled; re-injects when the level data changes.
   useEffect(() => {
@@ -179,6 +185,7 @@ export default function useBlocklyWorkspace({
     };
 
     workspaceRef.current.addChangeListener(onChange);
+    setWorkspaceVersion(version => version + 1);
 
     return () => {
       workspaceRef.current?.dispose();
@@ -279,6 +286,7 @@ export default function useBlocklyWorkspace({
   );
 
   return {
+    workspaceVersion,
     getCode,
     getCurrentBlocks,
     getToolboxDefinition,

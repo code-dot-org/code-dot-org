@@ -30,8 +30,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   showContinue,
   levelProperties,
 }) => {
-  // Collapsed hides the instructions but keeps Continue reachable, so a
-  // student who wants the screen back is never stranded on the level.
+  // Collapsed hides the instructions but keeps Continue reachable.
   const [collapsed, setCollapsed] = useState(false);
 
   // Animate the Guide's height: the outer wrapper gets an explicit height
@@ -60,7 +59,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     />
   );
 
-  // Freeplay is the one level whose guide covers work worth seeing.
+  // Freeplay's guide sits over a full lab; the guided levels need theirs open.
   const collapsible = isFreeplayMode(levelMode);
 
   return (

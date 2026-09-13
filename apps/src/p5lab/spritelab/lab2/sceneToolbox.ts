@@ -1,6 +1,4 @@
-// Scenes declare what they are, and a level that authors one category per
-// scene type shows only the matching blocks — as a flyout, so a student
-// never meets a category they are meant to ignore.
+// Filters a level's authored toolbox down to one scene type's blocks.
 
 import * as BlocklyCore from 'blockly/core';
 
@@ -15,17 +13,16 @@ const CATEGORY_FOR_TYPE: Record<SceneType, string> = {
 /** Offered in every scene: jumping between scenes belongs to neither type. */
 const SHARED_CATEGORY = 'Link';
 
-// The authored shape of a toolbox category; Blockly's own CategoryInfo is a
-// union that does not carry these directly.
+// Blockly's own CategoryInfo is a union that does not carry these directly.
 interface AuthoredCategory {
   name?: string;
   contents?: BlocklyCore.utils.toolbox.ToolboxItemInfo[];
 }
 
 /**
- * The blocks a scene of this type should see, flattened to a flyout: the
- * type's own category plus the shared one. An untyped scene keeps the
- * authored categories, as does a toolbox that names no scene type.
+ * The type's own category plus the shared one, flattened to a flyout so a
+ * student never meets a category they are meant to ignore. An untyped scene
+ * keeps the authored categories, as does a toolbox naming no scene type.
  */
 export function toolboxForSceneType(
   toolbox: BlocklyCore.utils.toolbox.ToolboxInfo | undefined,

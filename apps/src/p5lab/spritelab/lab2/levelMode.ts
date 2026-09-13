@@ -9,13 +9,13 @@ export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
 
 export interface LevelMode {
   kind: LevelModeKind;
-  /** image: the one kind of image the level makes. */
+  /** The one kind of image an image level makes. */
   imageType?: ImageType;
-  /** Word combos to offer, when the kind's own set is not the right one. */
+  /** Word combos to offer, in place of the set the kind implies. */
   adlibs?: ImageAdlibSet;
 }
 
-/** Every image this unit makes is pixel art; no level has asked to differ. */
+/** The style every generate form starts on; students can still switch. */
 export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 
 /** The tabs a kind shows, the first being where the level opens. An image
@@ -43,7 +43,7 @@ export function isImageMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'image';
 }
 
-/** Freeplay hands everything back: the prompt box and the paint tools. */
+/** The only mode offering the prompt box and the paint tools. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
 }

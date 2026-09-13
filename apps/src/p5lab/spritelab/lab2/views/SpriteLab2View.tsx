@@ -141,8 +141,7 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
-// ?image-adlibs=<set> previews the adlib combos without a level change
-// (levels set imageAdlibSet).
+// ?image-adlibs=<set> previews the adlib combos without a level change.
 function getImageAdlibSetParam(): ImageAdlibSet | undefined {
   const value = queryParams('image-adlibs');
   return isImageAdlibSet(value) ? value : undefined;
@@ -205,10 +204,9 @@ const GAME_KEYS = new Set([
 const isLevelEditMode =
   !!getAppOptionsEditBlocks() || !!getAppOptionsEditingExemplar();
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-// The modes where useSources resets to non-project sources; narrower than
-// isLevelEditMode, which is true for every edit_blocks type. Editing, say,
-// required_blocks still opens the student's own project, where treating a
-// reset as authoring would wipe their images.
+// The edit modes that open non-project sources. Narrower than isLevelEditMode
+// deliberately: the other edit_blocks types open the student's own project,
+// where treating a reset as authoring would wipe their images.
 const isStartOverEditMode =
   getAppOptionsEditBlocks() === START_SOURCES ||
   isToolboxMode ||
@@ -429,11 +427,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const activeSceneType = activeScene?.type;
-  // Blockly fixes the toolbox kind when the workspace is injected, so the
-  // first scene's derived toolbox settles it for this level's lifetime.
-  const injectedToolboxRef = useRef(
-    toolboxForSceneType(levelProperties.toolboxDefinition, activeSceneType)
+  const sceneToolbox = useMemo(
+    () =>
+      toolboxForSceneType(levelProperties.toolboxDefinition, activeSceneType),
+    [levelProperties.toolboxDefinition, activeSceneType]
   );
+  // Blockly fixes a workspace's toolbox kind at injection, so reaching a
+  // toolbox of the other kind takes a new workspace. Same-kind changes swap
+  // in place instead, below.
+  const [injectedToolbox, setInjectedToolbox] = useState(sceneToolbox);
+  useEffect(() => {
+    setInjectedToolbox(previous =>
+      previous?.kind === sceneToolbox?.kind ? previous : sceneToolbox
+    );
+  }, [sceneToolbox]);
   const activeWorld = worldFor(activeScene);
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
@@ -457,7 +464,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [scenes, activeSceneId, pinnedSceneId]);
 
-  // Premade world, when the level authors one (worldStartPattern.ts).
+  // Premade world, when the level authors one.
   useWorldStartPattern({
     pattern: levelProperties.worldStartPattern,
     pinnedSceneId,
@@ -680,10 +687,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, []);
 
   // Reseed the animation list when sources are reinitialized (e.g. start over).
-  // Start Over keeps the project's images: it resets to template sources that
-  // carry no animations, and one project's images accumulate across a unit's
-  // levels, so reseeding would discard every earlier level's work. Edit modes
-  // reset them, since authoring starter content is the point there.
+  // Start Over keeps the project's images: template sources carry none, and
+  // one project accumulates images across a unit's levels. Edit modes do
+  // reset them, authoring starter content being the point there.
   const seededReinitCountRef = useRef(0);
   useEffect(() => {
     if (sourcesReinitializedCount === seededReinitCountRef.current) {
@@ -693,9 +699,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (isStartOverEditMode) {
       seedAnimationList(currentSources.animations);
     } else {
-      // Forced: Start Over has already saved the image-less template, and an
-      // unforced save can sit in the project manager's queue for 30s — a tab
-      // closed in that window loses the images for good.
+      // Forced: an unforced save can sit in the project manager's queue for
+      // 30s, and the image-less template is already saved.
       patchSources(
         {
           animations: getSerializedAnimationList(
@@ -721,9 +726,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // images come from the Images tab, so p5 preload completes immediately.
   useEffect(() => {
     if (isToolboxMode || isImageMode(levelProperties.levelMode)) {
-      // Toolbox editing has nothing to run: the workspace holds the toolbox
-      // itself. A standalone image-generation level has no stage at all. With
-      // no engine, the run machinery no-ops (and no stray canvas mounts).
+      // Neither has a stage: toolbox editing puts the toolbox in the
+      // workspace, and an image level is the image panel. With no engine the
+      // run machinery no-ops, and no stray canvas mounts.
       return;
     }
     let cancelled = false;
@@ -763,6 +768,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [animationList, patchSources]);
 
   const {
+    workspaceVersion,
     getCode,
     getCurrentBlocks,
     getToolboxDefinition,
@@ -771,9 +777,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     refreshToolbox,
   } = useBlocklyWorkspace({
     enabled: animationsSeeded,
-    // The kind is fixed at injection: a scene-typed toolbox is a flyout from
-    // the start, and later scenes swap its contents in place.
-    toolboxDefinition: injectedToolboxRef.current,
+    toolboxDefinition: injectedToolbox,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
   });
@@ -1083,26 +1087,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [levelProperties.id, dispatch, refreshToolbox]);
 
-  // A scene shows the blocks its type is for, swapped in place: routing this
-  // through the hook's toolboxDefinition would rebuild the workspace, which
-  // empties it.
+  // A scene shows the blocks its type is for. refreshToolbox declines a
+  // definition of the other kind; that case re-injects instead.
   useEffect(() => {
-    if (!animationsSeeded) {
-      return;
+    if (animationsSeeded && sceneToolbox) {
+      refreshToolbox(sceneToolbox);
     }
-    const toolbox = toolboxForSceneType(
-      levelProperties.toolboxDefinition,
-      activeSceneType
-    );
-    if (toolbox) {
-      refreshToolbox(toolbox);
-    }
-  }, [
-    animationsSeeded,
-    activeSceneType,
-    levelProperties.toolboxDefinition,
-    refreshToolbox,
-  ]);
+  }, [animationsSeeded, sceneToolbox, workspaceVersion, refreshToolbox]);
 
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
@@ -1381,15 +1372,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // is the document, and the scene machinery below — which would seed the
   // student default program — never touches it. In program mode the
   // workspace follows the active scene and re-runs the preview.
-  // Sources generation the toolbox was last loaded from.
-  const toolboxLoadedForRef = useRef(-1);
+  // Sources generation and workspace the toolbox was last loaded into.
+  const toolboxLoadedForRef = useRef('');
   useEffect(() => {
     if (!animationsSeeded) {
       return;
     }
     if (isToolboxMode) {
-      if (toolboxLoadedForRef.current !== sourcesReinitializedCount) {
-        toolboxLoadedForRef.current = sourcesReinitializedCount;
+      const loadedFor = `${sourcesReinitializedCount}:${workspaceVersion}`;
+      if (toolboxLoadedForRef.current !== loadedFor) {
+        toolboxLoadedForRef.current = loadedFor;
         // Toolbox edit sources always carry the object form (the
         // container builds them from the toolbox definition).
         loadCode((currentSources.source ?? {}) as WorkspaceSerialization);
@@ -1410,6 +1402,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     loadCode,
     runLocalScene,
     sourcesReinitializedCount,
+    // A re-injected workspace is empty, whatever caused it.
+    workspaceVersion,
   ]);
 
   const handleSelectScene = useCallback(
@@ -1540,7 +1534,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // One prop bag for both mounts of the pane (Images tab, standalone mode).
+  // One prop bag for both mounts of the pane (Images tab, image level).
   const imagePaneProps = {
     uploadImage,
     onRenameImage: handleRenameImage,
@@ -1582,10 +1576,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       />
       <div className={moduleStyles.divider} />
       {isImageMode(levelProperties.levelMode) ? (
-        // Standalone image-generation level: the image panel is the whole lab,
-        // with the floating guide over it. No tabs, no stage.
-        <div className={moduleStyles.standaloneGenerateArea}>
-          <GenerateImagePane standalone {...imagePaneProps} />
+        // The image panel is the whole lab, with the floating guide over it.
+        <div className={moduleStyles.imageLevelArea}>
+          <GenerateImagePane imageLevel {...imagePaneProps} />
           <GenerateSpriteLab
             levelMode={levelProperties.levelMode}
             instructions={guide.text}

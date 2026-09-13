@@ -23,10 +23,9 @@
   width: 850px;
 }
 
-// Standalone presentation: the panel's content parked on the lab's own
-// ground — no modal entrance, no card chrome. The painted panel color (the
-// alternatives ring gap) has to match that ground rather than the card's.
-.dialogHost .standaloneDialog {
+// No modal entrance and no card chrome. The painted panel color (the
+// alternatives ring gap) must match the lab's ground, not the card's.
+.dialogHost .imageLevelPanel {
   animation: none;
   border: none;
   border-radius: 0;
