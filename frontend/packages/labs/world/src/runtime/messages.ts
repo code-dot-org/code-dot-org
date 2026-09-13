@@ -330,6 +330,14 @@ export interface ThumbnailsReadyMessage {
    * nominal tile there, as they always did.
    */
   sizes: Record<string, {width: number; height: number}>;
+  /**
+   * What each kind was told to scale itself by, for the kinds that say.
+   *
+   * SEPARATE FROM `sizes` because a reader multiplies them, and only it knows
+   * whether the placement it is drawing overrides the scale. Absent for a kind
+   * that never sets one, where a scale of one is right.
+   */
+  scales: Record<string, {x: number; y: number}>;
   /** One per requested placement key, for the editors that draw placements. */
   placements: Record<string, string>;
 }

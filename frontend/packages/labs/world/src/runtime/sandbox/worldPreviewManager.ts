@@ -25,6 +25,8 @@ export interface ActorInfo {
   schemas: Record<string, ActorSchema>;
   /** How big each kind is, for the kinds that declare a picture. */
   sizes: Record<string, {width: number; height: number}>;
+  /** What each kind scales itself by, for the kinds that say. */
+  scales: Record<string, {x: number; y: number}>;
   /** One per requested placement key — see `PlacementRequest`. */
   placements: Record<string, string>;
 }
@@ -87,6 +89,7 @@ export class WorldPreviewManager {
           thumbnails: data.thumbnails,
           schemas: data.schemas,
           sizes: data.sizes ?? {},
+          scales: data.scales ?? {},
           placements: data.placements ?? {},
         });
         this.pending.delete(data.id);

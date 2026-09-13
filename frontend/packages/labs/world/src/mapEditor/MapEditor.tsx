@@ -82,6 +82,14 @@ export const MapEditor = ({
   const [sizes, setSizes] = useState<
     Record<string, {width: number; height: number}>
   >({});
+  /**
+   * …and what each scales itself by, which is the other half of how big it is
+   * drawn and the half a placement usually does not carry
+   * (`stageGeometry.KindScales`).
+   */
+  const [scales, setScales] = useState<Record<string, {x: number; y: number}>>(
+    {},
+  );
   // The picker template to PLACE; null is the stage's select mode.
   const [selected, setSelected] = useState<string | null>(null);
 
@@ -107,6 +115,7 @@ export const MapEditor = ({
         setThumbnails(prev => ({...prev, ...info.thumbnails}));
         setSchemas(prev => ({...prev, ...info.schemas}));
         setSizes(prev => ({...prev, ...info.sizes}));
+        setScales(prev => ({...prev, ...info.scales}));
       }
     });
     return () => {
@@ -256,6 +265,7 @@ export const MapEditor = ({
         thumbnails={thumbnails}
         schemas={schemas}
         sizes={sizes}
+        scales={scales}
         isReadOnly={isReadOnly}
         visible={visible}
       />

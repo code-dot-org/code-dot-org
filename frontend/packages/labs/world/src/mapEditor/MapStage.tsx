@@ -107,6 +107,15 @@ export interface MapStageProps {
    * `ThumbnailsReadyMessage.sizes`.
    */
   sizes?: Record<string, {width: number; height: number}>;
+  /**
+   * What each kind scales itself by, for the kinds that say.
+   *
+   * The default a placement's own `positional.scale` falls back to: a
+   * placement stores only what it OVERRIDES, so an actor whose file says `set
+   * scale of this to x 1 y 2` has nothing here and was drawn as though it had
+   * never been scaled (`ThumbnailsReadyMessage.scales`).
+   */
+  scales?: Record<string, {x: number; y: number}>;
   isReadOnly: boolean;
   /**
    * The window this map will be seen through, in pixels — see the guide below.
@@ -136,6 +145,7 @@ export const MapStage = ({
   thumbnails,
   schemas,
   sizes,
+  scales,
   isReadOnly,
   visible = STANDARD_WINDOW,
 }: MapStageProps) => {
@@ -297,7 +307,7 @@ export const MapStage = ({
   // transform (`stageGeometry.hitTest`). Reads the ref rather than the state
   // so a gesture mid-drag sees the position it just wrote.
   const hitUnder = (world: Vec): Placement | undefined =>
-    hitTest(mapRef.current.actors, world, sizes);
+    hitTest(mapRef.current.actors, world, sizes, scales);
 
   // Live-patch a placed actor's `owner.prop` override (local only — a drag or
   // field edit commits once on release / blur).
@@ -1183,7 +1193,7 @@ export const MapStage = ({
       if (!positionOf(actor)) {
         continue;
       }
-      const t = transformOf(actor);
+      const t = transformOf(actor, scales?.[actor.type]);
       drawSprite(actor.type, t, 1, placementKey(actor.type, actor.properties));
       transformById.set(actor.id, t);
       if (actor.id === selectedId) {
@@ -1247,6 +1257,7 @@ export const MapStage = ({
     selectedId,
     hoveredId,
     sizes,
+    scales,
     // The links are read through the schema, so a schema arriving from the
     // sandbox after the first paint has to repaint.
     selectedActor,

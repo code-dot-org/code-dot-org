@@ -166,10 +166,23 @@ export const propValue = (
 export const positionOf = (actor: Placement): Vec | undefined =>
   asVec(propValue(actor, 'positional', 'position'));
 
-/** Resolve an actor's transform, filling the engine's defaults. */
-export const transformOf = (actor: Placement): Transform => ({
+/**
+ * Resolve an actor's transform, filling the defaults.
+ *
+ * THE KIND'S SCALE IS A DEFAULT, not one. A placement stores only what it
+ * OVERRIDES, so an actor whose file says `set scale of this to x 1 y 2` has
+ * nothing under `positional.scale` here — and filling in one, which is what
+ * this did, drew every such actor as though it had never been scaled. It is
+ * the engine's default for an actor that sets none, not for one that sets its
+ * own (`engine/core/World.scaleOf`).
+ *
+ * An override still wins outright, because that is what it does in the game:
+ * setting the property replaces the value rather than multiplying it.
+ */
+export const transformOf = (actor: Placement, kindScale?: Vec): Transform => ({
   pos: asVec(propValue(actor, 'positional', 'position')) ?? {x: 0, y: 0},
-  scale: asVec(propValue(actor, 'positional', 'scale')) ?? {x: 1, y: 1},
+  scale: asVec(propValue(actor, 'positional', 'scale')) ??
+    kindScale ?? {x: 1, y: 1},
   rotation: asNum(propValue(actor, 'positional', 'rotation')) ?? 0,
   skew: asNum(propValue(actor, 'positional', 'skew')) ?? 0,
 });

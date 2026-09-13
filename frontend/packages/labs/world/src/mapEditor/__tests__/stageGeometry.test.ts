@@ -218,6 +218,34 @@ describe('hitTest', () => {
     ).toBeUndefined();
   });
 
+  it('reaches as far as the kind scales itself, not as far as one tile', () => {
+    // THE REPORTED BUG, measured. An actor whose file says `set scale of this
+    // to x 1 y 2` stores nothing under `positional.scale` — a placement holds
+    // only what it overrides — so the editor filled in a scale of one and drew
+    // a two-tile actor as a square.
+    const sizes = {'actors/totem': {width: 32, height: 32}};
+    const scales = {'actors/totem': {x: 1, y: 2}};
+    const actors = [at('totem', 100, 100, {}, 'actors/totem')];
+
+    // A point one tile below the middle is outside a square and inside a
+    // two-tile actor.
+    expect(hitTest(actors, {x: 100, y: 128}, sizes)).toBeUndefined();
+    expect(hitTest(actors, {x: 100, y: 128}, sizes, scales)?.id).toBe('totem');
+  });
+
+  it('lets a placement override the kind, the way setting a property does', () => {
+    // Setting a property REPLACES its value in the game rather than
+    // multiplying it, so an override is the answer and not a factor over the
+    // kind's own.
+    const sizes = {'actors/totem': {width: 32, height: 32}};
+    const scales = {'actors/totem': {x: 1, y: 2}};
+    const actors = [
+      at('totem', 100, 100, {scale: {x: 1, y: 1}}, 'actors/totem'),
+    ];
+
+    expect(hitTest(actors, {x: 100, y: 128}, sizes, scales)).toBeUndefined();
+  });
+
   it('follows a skewed sprite rather than the box it would sit in unskewed', () => {
     // THE ONE THAT MOTIVATED THE INVERSION. Sheared 45° down to the right,
     // the sprite's top-right corner is drawn well below where an unskewed

@@ -334,6 +334,9 @@ export async function start(): Promise<void> {
     // What a kind's picture is, for the kinds that declare one. See
     // `ThumbnailsReadyMessage.sizes` for why a sprite-backed one is absent.
     const sizes: Record<string, {width: number; height: number}> = {};
+    // …and what it was told to scale itself by, which is the other half of how
+    // big it is drawn and which only the reader can combine (`messages`).
+    const scales: Record<string, {x: number; y: number}> = {};
     const placements: Record<string, string> = {};
     try {
       const mod: ThumbnailManifest = await import(/* @vite-ignore */ moduleUrl);
@@ -411,6 +414,10 @@ export async function start(): Promise<void> {
             if (size) {
               sizes[type] = size;
             }
+            const scale = world.scaleOf(state.actor);
+            if (scale && (scale.x !== 1 || scale.y !== 1)) {
+              scales[type] = scale;
+            }
           }
         }
       }
@@ -429,6 +436,7 @@ export async function start(): Promise<void> {
       thumbnails,
       schemas,
       sizes,
+      scales,
       placements,
     });
   }

@@ -951,11 +951,18 @@ export class World {
    * would make the core depend on a rule it is supposed to merely run.
    */
   private intrinsicSizeProperty(): Property<Vector> | undefined {
+    return this.positionalProperty(SPATIAL.intrinsicSize);
+  }
+
+  /** …and `scale`, which is the other half of how big a thing is drawn. */
+  private scaleProperty(): Property<Vector> | undefined {
+    return this.positionalProperty(SPATIAL.scale);
+  }
+
+  private positionalProperty(id: string): Property<Vector> | undefined {
     const spatial = this.membership.items().find(r => r.id === SPATIAL.rule);
     const positional: Trait | undefined = spatial?.traits[SPATIAL.trait];
-    return positional?.properties[SPATIAL.intrinsicSize] as
-      | Property<Vector>
-      | undefined;
+    return positional?.properties[id] as Property<Vector> | undefined;
   }
 
   private place(actor: Actor, layer: string = DEFAULT_LAYER_ID): Actor {
@@ -1879,12 +1886,20 @@ export class World {
   }
 
   /**
-   * How big this actor is in world units, if anything has said.
+   * How big this actor is in world units, BEFORE its scale, if anything has
+   * said.
    *
    * The one question "how big is it" has one answer, and it is this property:
    * a drawing's declared canvas and a sprite's picture fitted to a tile both
    * land in it, so a caller asks the size rather than asking what kind of
    * actor it is looking at (specs/ACTOR_SIZE.md).
+   *
+   * UNSCALED ON PURPOSE, and it was briefly not: a reader draws this box
+   * through the actor's own transform, and that transform already carries the
+   * scale. Folding the scale in here doubled it the moment a placement
+   * overrode `scale` — the editor drawing kind × placement where the game
+   * draws placement alone. The scale is a separate question with a separate
+   * answer ({@link scaleOf}).
    *
    * Undefined for an actor nobody has measured — no appearance, or a picture
    * the project never stated a size for. A caller that must draw something
@@ -1893,9 +1908,30 @@ export class World {
   sizeOf(actor: Actor): {width: number; height: number} | undefined {
     const property = this.intrinsicSizeProperty();
     const size = property ? actor.get(property) : undefined;
-    return size && size.x > 0 && size.y > 0
-      ? {width: size.x, height: size.y}
-      : undefined;
+    if (!size || size.x <= 0 || size.y <= 0) {
+      return undefined;
+    }
+    return {width: size.x, height: size.y};
+  }
+
+  /**
+   * What this actor's kind was told to scale itself by.
+   *
+   * THE OTHER HALF OF HOW BIG IT IS, and the half an editor could not read. A
+   * `set scale of this to x 1 y 2` row runs when the actor is defined, so it
+   * is true of a world that was never played — but nothing outside the engine
+   * asked, and the map editor filled in a scale of one for every kind. A
+   * two-tile actor was drawn as a square there: right in the game, square in
+   * the editor, with nothing on screen to say which was lying.
+   *
+   * Left signed, unlike `rules/spatial.halfExtent`: a scale of -1 is a facing
+   * and a reader drawing through a transform wants the flip, where one
+   * measuring an extent wants the magnitude.
+   */
+  scaleOf(actor: Actor): {x: number; y: number} | undefined {
+    const property = this.scaleProperty();
+    const scale = property ? actor.get(property) : undefined;
+    return scale ? {x: scale.x, y: scale.y} : undefined;
   }
 
   /** The definition of a known animation, or undefined. */

@@ -152,6 +152,15 @@ export type KindSizes =
   | undefined;
 
 /**
+ * What each kind scales itself by, for the kinds that say.
+ *
+ * The DEFAULT a placement falls back to, not a multiplier over it: setting a
+ * property replaces its value in the game, so an override wins outright
+ * (`mapModel.transformOf`).
+ */
+export type KindScales = Record<string, Vec> | undefined;
+
+/**
  * How big a kind is drawn, in world pixels.
  *
  * A drawing DECLARES its canvas and that canvas is the actor's size, so the
@@ -208,13 +217,14 @@ export function hitTest(
   actors: readonly Placement[],
   world: Vec,
   sizes: KindSizes,
+  scales: KindScales = undefined,
 ): Placement | undefined {
   for (let i = actors.length - 1; i >= 0; i--) {
     const actor = actors[i];
     if (!positionOf(actor)) {
       continue;
     }
-    const local = toLocalFrame(world, transformOf(actor));
+    const local = toLocalFrame(world, transformOf(actor, scales?.[actor.type]));
     const box = drawnSize(sizes, actor.type);
     const hw = Math.max(box.width, MIN_HIT_SIZE) / 2;
     const hh = Math.max(box.height, MIN_HIT_SIZE) / 2;

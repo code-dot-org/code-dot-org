@@ -24,7 +24,11 @@ import {
   AppearanceTrait,
   SpriteProperty,
 } from '../rules/animation';
-import {IntrinsicSizeProperty, PositionProperty} from '../rules/spatial';
+import {
+  IntrinsicSizeProperty,
+  PositionProperty,
+  ScaleProperty,
+} from '../rules/spatial';
 
 /** One actor drawing one picture of the given size, after a tick. */
 const drawing = (width: number, height: number) => {
@@ -112,6 +116,40 @@ describe('what the editors are told', () => {
     });
   });
 
+  it('leaves the scale out of it, so a reader cannot count it twice', () => {
+    // THE SIZE IS THE BOX BEFORE THE TRANSFORM. Every reader draws this
+    // through the actor's own transform, and that already carries the scale —
+    // folding it in here doubled it the moment a placement overrode `scale`.
+    const {world, actor} = drawing(32, 32);
+    actor.set(ScaleProperty, new Vector(1, 2));
+
+    expect(world.sizeOf(actor)).toEqual({
+      width: TILE_SIZE,
+      height: TILE_SIZE,
+    });
+  });
+
+  it('says what the kind scales itself by, which nothing could ask before', () => {
+    // THE REPORTED BUG. `set scale of this to x 1 y 2` is true of the actor
+    // from the moment it is defined, and the map editor filled in a scale of
+    // one for every kind because it had no way to ask. A two-tile actor came
+    // out square there: right in the game, square in the editor, with nothing
+    // on screen to say which was lying.
+    const {world, actor} = drawing(32, 32);
+    actor.set(ScaleProperty, new Vector(1, 2));
+
+    expect(world.scaleOf(actor)).toEqual({x: 1, y: 2});
+  });
+
+  it('keeps a flip signed, which a reader drawing through a transform wants', () => {
+    // `rules/spatial.halfExtent` takes the magnitude because it is measuring
+    // an extent; a canvas asked to scale by -1 is being asked for the flip.
+    const {world, actor} = drawing(32, 32);
+    actor.set(ScaleProperty, new Vector(-2, 1));
+
+    expect(world.scaleOf(actor)).toEqual({x: -2, y: 1});
+  });
+
   it('says nothing for an actor nobody measured', () => {
     // No appearance, or a picture the project never stated a size for. The
     // editors fall back to the nominal tile there, as they always did.
@@ -157,5 +195,30 @@ describe('what the editors are told', () => {
       width: TILE_SIZE,
       height: TILE_SIZE / 4,
     });
+  });
+
+  it('knows the scale of a world that was never played either', () => {
+    // THE PATH THE MAP EDITOR IS ON. `set scale` is a row in the actor's own
+    // definition, so it has run by the time the actor exists — the same as the
+    // `set sprite` row whose picture the thumbnails already show. Nothing here
+    // has to be played, which is the only reason the editor can ask at all.
+    const builder = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([AnimationRule])
+      .useImageSizes({'picture.png': {width: 32, height: 32}});
+    const world = builder.getWorld();
+    const actor = builder.addActor(
+      new ActorBuilder({id: 'a', name: 'A'})
+        .useTraits([AppearanceTrait])
+        .set(PositionProperty, new Vector(0, 0))
+        .set(SpriteProperty, 'picture.png')
+        .set(ScaleProperty, new Vector(1, 2)),
+    );
+
+    world.renderSnapshot();
+    expect(world.sizeOf(actor)).toEqual({
+      width: TILE_SIZE,
+      height: TILE_SIZE,
+    });
+    expect(world.scaleOf(actor)).toEqual({x: 1, y: 2});
   });
 });
