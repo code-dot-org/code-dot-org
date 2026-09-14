@@ -29,6 +29,7 @@ import {
   renderBubbleChoiceDsl,
 } from './ai/bubbleChoice';
 import {generateFreeResponseLevel} from './ai/freeResponse';
+import {ImportedPlan} from './ai/importPlan';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {
@@ -42,6 +43,7 @@ import {
   generateWeblab2Template,
   generateWeblab2TemplateBackedLevel,
 } from './ai/weblab2';
+import ImportPlanningDoc from './components/ImportPlanningDoc';
 import LevelCard from './components/LevelCard';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
@@ -59,10 +61,7 @@ import {
 } from './helpers/precedingLevels';
 import {Placement, rebuildActivities} from './helpers/rebuildActivities';
 import {mergeSpecPatch} from './helpers/specPatch';
-import {
-  appendPlannedSpecs,
-  specsFromPlannedLevels,
-} from './helpers/specsFromPlan';
+import {appendPlannedLevels} from './helpers/specsFromPlan';
 import {formatTargetProject} from './helpers/targetProject';
 import {
   createOrFindLevel,
@@ -76,6 +75,7 @@ import {
 import {
   ExistingLessonData,
   GenerationSummary,
+  LAB_LABELS,
   LabType,
   LevelSpec,
   ProgressUpdate,
@@ -87,19 +87,6 @@ import sharedStyles from '../curriculum-generator/curriculum-generator.module.sc
 
 // Per-card Lab dropdown labels. `satisfies` makes a missing LabType
 // entry a compile error.
-const LAB_LABELS = {
-  panels: 'Panels',
-  weblab2: 'Web Lab 2',
-  pythonlab: 'Python Lab',
-  ailab: 'AI Lab',
-  aichat: 'AI Chat',
-  sketchlab: 'Sketch Lab',
-  multi: 'Multiple Choice',
-  match: 'Matching',
-  freeResponse: 'Free Response',
-  bubbleChoice: 'Bubble Choice',
-} as const satisfies Record<LabType, string>;
-
 const LAB_OPTIONS: {value: LabType; label: string}[] = SUPPORTED_LAB_TYPES.map(
   v => ({value: v, label: LAB_LABELS[v]})
 );
@@ -139,6 +126,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [topLevelError, setTopLevelError] = useState<string | null>(null);
   const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
   const [isOutlining, setIsOutlining] = useState(false);
+  const [isImporting, setIsImporting] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
   // Optional Weblab2 channel id. When set, the lesson is generated as
   // progressing toward the app stored at that channel; the source files
@@ -149,7 +137,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   );
 
   useAichatContext({lessonId: lesson.id});
-  useBeforeUnloadWhile(isGenerating);
+  useBeforeUnloadWhile(isGenerating || isImporting);
 
   // Fetch + format the target project's source for the current channel
   // id. Returns the formatted "=== path ===\n..." string suitable for a
@@ -210,8 +198,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         targetProject,
       };
       const planned = await generateLessonOutline(lessonCtx);
-      const newSpecs = specsFromPlannedLevels(planned);
-      setLevelSpecs(prev => appendPlannedSpecs(prev, newSpecs));
+      setLevelSpecs(prev => appendPlannedLevels(prev, planned));
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
       setOutlineError(message);
@@ -227,6 +214,19 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setLevelSpecs,
     loadTargetProject,
   ]);
+
+  const handleImported = useCallback(
+    (imported: ImportedPlan): string | undefined => {
+      setLevelSpecs(prev => appendPlannedLevels(prev, imported.levels));
+      if (!imported.lessonOutline) return undefined;
+      if (!outline.trim()) {
+        setOutline(imported.lessonOutline);
+        return undefined;
+      }
+      return "The outline box already had text, so the document's lesson prose was left out.";
+    },
+    [outline, setLevelSpecs]
+  );
 
   const validationError = useMemo(() => {
     if (!prefix.trim()) return 'Set a level name prefix before generating.';
@@ -1143,7 +1143,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         onChange={setOutline}
         onGenerate={handleGenerateOutline}
         isOutlining={isOutlining}
-        disabled={isGenerating}
+        disabled={isGenerating || isImporting}
         error={outlineError}
         extra={
           <div className={moduleStyles.outlineProjectRow}>
@@ -1165,6 +1165,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             />
           </div>
         }
+      />
+
+      <ImportPlanningDoc
+        lessonName={lesson.name}
+        disabled={isGenerating || isOutlining}
+        onBusyChange={setIsImporting}
+        onImported={handleImported}
       />
 
       <div className={moduleStyles.fieldRow}>
@@ -1221,7 +1228,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           type="button"
           className={sharedStyles.primaryButton}
           onClick={handleGenerate}
-          disabled={isGenerating || !!validationError}
+          disabled={isGenerating || isImporting || !!validationError}
           title={validationError || ''}
         >
           {isGenerating ? 'Generating…' : 'Generate Lesson with AI'}
