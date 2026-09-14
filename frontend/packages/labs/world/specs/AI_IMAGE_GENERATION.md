@@ -57,7 +57,7 @@ which exists in `frontend/`, and this lab is a standalone package.
 
 So the port is an EXTRACTION: a `frontend/packages/ai-gateway`, with
 `apps/src/aiGateway` re-exporting from it so there is one implementation rather
-than two that drift. That is the move `AnimationThumb` and `EnhancementRows`
+than two that drift. That is the move `AnimationThumb` and the enhancement shelf's rows
 just made inside this lab, two orders of magnitude up — and it runs against the
 usual direction of travel in this repo, where `frontend/` packages are consumed
 BY `apps/` rather than carved out of it.

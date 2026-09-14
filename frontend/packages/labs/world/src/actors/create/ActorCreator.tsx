@@ -6,13 +6,13 @@
 // the frame that asks them instead — a sequence of steps, each a question with
 // a visible answer, ending in a file worth opening.
 //
-// THE ABILITIES STEP APPLIES AND STAYS, which is the one way it is not the
-// enhancement dialog. That one takes a row and closes, which is right for what
-// it is — "give this actor one more thing", asked from the actor's own menu or
-// from the wand on its `define actor`. Building an actor up is a different
-// act, and walking in and out of a dialog once per ability would make a
-// Crawler three round trips. What the two share is the ROW
-// (`enhance/EnhancementRows`), not the frame around it.
+// THE ABILITIES STEP IS THE ENHANCE DIALOG'S LIST, and the dialog is this
+// step in a frame of its own. It once took one row and closed, on the reading
+// that "give this actor one more thing", asked from the actor's own menu or
+// the wand on its `define actor`, is a different act from building one up;
+// at thirty rows it was the same question drawn twice. What the two share is
+// the checklist and the fold that applies it (`enhance/EnhancementChecklist`,
+// `enhanceWith`); what differs is the title and the button.
 //
 // The picture step needed no lifting at all. What it shows is whole
 // pictures and whole animations, and both already have a component that draws

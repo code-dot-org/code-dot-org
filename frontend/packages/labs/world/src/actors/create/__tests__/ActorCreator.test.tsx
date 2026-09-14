@@ -34,7 +34,7 @@ const ANIMATIONS = [
  * What the caller would make of these answers, without writing it.
  *
  * A project holding one actor file, which is enough for the abilities step:
- * what those rows read is the actor's own chain (`enhance/EnhancementRows`).
+ * what those rows read is the actor's own chain (`enhance/EnhancementChecklist`).
  */
 const build = vi.fn((draft: {name: string}) => ({
   source: {
