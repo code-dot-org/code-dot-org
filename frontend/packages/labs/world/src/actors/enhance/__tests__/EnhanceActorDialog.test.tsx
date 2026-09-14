@@ -94,13 +94,18 @@ describe('EnhanceActorDialog', () => {
     expect(tick.closest('li')?.textContent).toContain('already');
   });
 
-  it('refuses the one it makes no sense for', () => {
+  it('leaves out the one it makes no sense for', () => {
     open({
       target: {kind: 'actor', path: 'actors/healthBar', name: 'Health Bar'},
     });
 
-    expect(row(...HEALTH)).toBeDisabled();
-    expect(screen.getByText(/own health/)).toBeTruthy();
+    // A Health Bar cannot be given a health bar, and the list is about what
+    // this actor CAN do — so the row is not there, rather than there and
+    // locked with a reason about some other actor.
+    row(/Health, scoring and speech/, /Collects things/);
+    expect(screen.queryByRole('checkbox', {name: /Health, and a bar/})).toBe(
+      null,
+    );
   });
 
   it('applies nothing until the press, then everything ticked at once', () => {

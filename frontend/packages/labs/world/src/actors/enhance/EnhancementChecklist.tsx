@@ -26,6 +26,15 @@
 // column, not a row greyed out for reasons of its own. The reason is said
 // beside it; the tick is not a claim that this step did it.
 //
+// A ROW THE ACTOR CANNOT TAKE IS NOT THERE. A Health Bar cannot be given a
+// health bar, and an actor with no words cannot type them out; the first cut
+// showed such a row locked, with the reason beside it, and that was a list
+// carrying entries about some other actor. What this list answers is "what can
+// THIS one do", and a thing it cannot do is not an answer. The reason a row
+// gives (`Enhancement.refuse`) is still worth writing, for whoever reads the
+// row's source and for the test that pins which rows step aside on which
+// targets — it is not shown to a learner.
+//
 // AND THE DESCRIPTION IS BEHIND A PRESS. Twelve rows of name, sentence and
 // "also adds" is a wall, which was the complaint; twelve names is a list you
 // can scan. The sentence is still there for the row you are wondering about.
@@ -141,7 +150,22 @@ export const EnhancementChecklist = ({
 }: EnhancementChecklistProps) => {
   /** Which rows have been opened to read about. Shut is the resting state. */
   const [open, setOpen] = useState<readonly string[]>([]);
-  const groups = groupsFor(target);
+  /**
+   * The shelf with the rows this actor cannot take left out — not offered in
+   * this project, or refused for this actor — and any heading that is empty
+   * once they are gone. Everything below reads this, so the count on a heading
+   * and the fold's arithmetic see the same rows a learner does.
+   */
+  const groups = groupsFor(target)
+    .map(group => ({
+      ...group,
+      members: group.members.filter(
+        one =>
+          (one.offered?.(source, target) ?? true) &&
+          !one.refuse?.(source, target),
+      ),
+    }))
+    .filter(group => group.members.length > 0);
   /**
    * Which GROUPS are folded away.
    *
@@ -233,110 +257,101 @@ export const EnhancementChecklist = ({
               className={styles.list}
               hidden={folded}
             >
-              {group.members
-                .filter(one => one.offered?.(source, target) ?? true)
-                .map(enhancement => {
-                  const already = alreadyHas(enhancement, source, target);
-                  const refusal = enhancement.refuse?.(source, target);
-                  const locked = already || Boolean(refusal);
-                  const ticked = already || picked.includes(enhancement.id);
-                  const showing = open.includes(enhancement.id);
-                  const panel = `${enhancement.id}-about`;
-                  return (
-                    <li key={enhancement.id} className={styles.row}>
-                      <div className={styles.line}>
-                        <Checkbox
-                          name={enhancement.id}
-                          label={enhancement.name}
-                          checked={ticked}
-                          disabled={locked}
-                          size="s"
-                          className={styles.tick}
-                          onChange={event =>
-                            onPick(enhancement.id, event.target.checked)
-                          }
+              {group.members.map(enhancement => {
+                const already = alreadyHas(enhancement, source, target);
+                const ticked = already || picked.includes(enhancement.id);
+                const showing = open.includes(enhancement.id);
+                const panel = `${enhancement.id}-about`;
+                return (
+                  <li key={enhancement.id} className={styles.row}>
+                    <div className={styles.line}>
+                      <Checkbox
+                        name={enhancement.id}
+                        label={enhancement.name}
+                        checked={ticked}
+                        disabled={already}
+                        size="s"
+                        className={styles.tick}
+                        onChange={event =>
+                          onPick(enhancement.id, event.target.checked)
+                        }
+                      />
+                      {already && (
+                        <Typography variant="body4" className={styles.note}>
+                          already
+                        </Typography>
+                      )}
+                      <MuiButton
+                        size="small"
+                        color="secondary"
+                        className={styles.chevron}
+                        aria-expanded={showing}
+                        aria-controls={panel}
+                        aria-label={`What ${enhancement.name} does`}
+                        onClick={() =>
+                          setOpen(was =>
+                            showing
+                              ? was.filter(id => id !== enhancement.id)
+                              : [...was, enhancement.id],
+                          )
+                        }
+                      >
+                        <FontAwesomeV6Icon
+                          iconName={showing ? 'chevron-up' : 'chevron-down'}
+                          iconStyle="solid"
                         />
-                        {already && (
-                          <Typography variant="body4" className={styles.note}>
-                            already
-                          </Typography>
-                        )}
-                        {refusal && (
-                          <Typography variant="body4" className={styles.note}>
-                            {refusal}
-                          </Typography>
-                        )}
-                        <MuiButton
-                          size="small"
-                          color="secondary"
-                          className={styles.chevron}
-                          aria-expanded={showing}
-                          aria-controls={panel}
-                          aria-label={`What ${enhancement.name} does`}
-                          onClick={() =>
-                            setOpen(was =>
-                              showing
-                                ? was.filter(id => id !== enhancement.id)
-                                : [...was, enhancement.id],
-                            )
-                          }
-                        >
-                          <FontAwesomeV6Icon
-                            iconName={showing ? 'chevron-up' : 'chevron-down'}
-                            iconStyle="solid"
-                          />
-                        </MuiButton>
-                      </div>
+                      </MuiButton>
+                    </div>
 
-                      {showing && (
-                        <div id={panel} className={styles.about}>
-                          <Typography variant="body4">
-                            {enhancement.description}
-                          </Typography>
-                          {/* What lands in the project. The same promise the import
+                    {showing && (
+                      <div id={panel} className={styles.about}>
+                        <Typography variant="body4">
+                          {enhancement.description}
+                        </Typography>
+                        {/* What lands in the project. The same promise the import
                     dialogs make, and it matters more here: this one writes
                     into files the learner already has. */}
-                          <Typography variant="body4" className={styles.note}>
-                            Also adds: {enhancement.brings.join(', ')}
-                          </Typography>
-                        </div>
-                      )}
+                        <Typography variant="body4" className={styles.note}>
+                          Also adds: {enhancement.brings.join(', ')}
+                        </Typography>
+                      </div>
+                    )}
 
-                      {ticked && !already && enhancement.asks && (
-                        <div className={styles.answers}>
-                          {enhancement.asks.options(source, target).length ===
-                          0 ? (
-                            <Typography variant="body4">
-                              (no actors yet)
-                            </Typography>
-                          ) : (
-                            // A DROPDOWN RATHER THAN A ROW OF BUTTONS, because
-                            // what it lists is the project's actors and a
-                            // project may hold thirty. The answer is defaulted
-                            // the moment the row is ticked, so this is a thing
-                            // to CHANGE rather than a question standing between
-                            // the learner and the ability.
-                            <SimpleDropdown
-                              name={`${enhancement.id}-answer`}
-                              size="s"
-                              labelText={enhancement.asks.label}
-                              selectedValue={answers[enhancement.id] ?? ''}
-                              onChange={event =>
-                                onAnswer(enhancement.id, event.target.value)
-                              }
-                              items={enhancement.asks
-                                .options(source, target)
-                                .map(choice => ({
-                                  value: choice.value,
-                                  text: choice.name,
-                                }))}
-                            />
-                          )}
-                        </div>
-                      )}
-                    </li>
-                  );
-                })}
+                    {ticked && !already && enhancement.asks && (
+                      <div className={styles.answers}>
+                        {enhancement.asks.options(source, target).length ===
+                        0 ? (
+                          <Typography variant="body4">
+                            (no actors yet)
+                          </Typography>
+                        ) : (
+                          // A DROPDOWN RATHER THAN A ROW OF BUTTONS, because
+                          // what it lists is the project's actors and a
+                          // project may hold thirty. The answer is defaulted
+                          // the moment the row is ticked, so this is a thing
+                          // to CHANGE rather than a question standing between
+                          // the learner and the ability.
+                          <SimpleDropdown
+                            name={`${enhancement.id}-answer`}
+                            size="s"
+                            labelText={enhancement.asks.label}
+                            selectedValue={answers[enhancement.id] ?? ''}
+                            onChange={event =>
+                              onAnswer(enhancement.id, event.target.value)
+                            }
+                            items={enhancement.asks
+                              .options(source, target)
+                              .map(choice => ({
+                                value: choice.value,
+                                text: choice.name,
+                              }))}
+                          />
+                        )}
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </section>
         );

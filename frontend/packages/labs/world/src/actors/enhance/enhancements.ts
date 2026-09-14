@@ -122,14 +122,16 @@ export interface Enhancement {
    * Whether this actor can take it, and why not when it cannot.
    *
    * A Health Bar cannot be given a health bar — it would ride above itself and
-   * show its own empty health — and saying so on the row is better than
-   * leaving a learner to find out.
+   * show its own empty health. A row that answers is LEFT OUT of the list
+   * (`EnhancementChecklist`): what a learner is asking is what this actor can
+   * do, and a locked row with a reason beside it is an entry about some other
+   * actor. The reason is for whoever reads this file, and for the test that
+   * pins which rows step aside on which targets (`__tests__/paletteGuard`).
    *
    * GIVEN THE PROJECT, because the reason may be a fact about the actor's own
    * file rather than about what kind of thing it is: a floor takes ONE of the
    * three surfaces, so what stops it taking a second is the first
-   * (`enhance/surfaces`). The refusal is what gets shown, so it has to be able
-   * to say which.
+   * (`enhance/surfaces`).
    */
   refuse?(source: MultiFileSource, target: EnhanceTarget): string | undefined;
   /**
