@@ -7,7 +7,6 @@ REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
 FRONTEND_DIR = "#{REPO_DIR}/frontend".freeze
 PYTHON_DIR = "#{REPO_DIR}/python".freeze
-SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}".freeze
 
 def filter_eslint_apps(modified_files)
   full_apps_dir = File.expand_path(APPS_DIR)
@@ -51,10 +50,6 @@ end
 
 def filter_haml(modified_files)
   modified_files.select {|f| f.end_with?(".haml")}
-end
-
-def filter_scss(modified_files)
-  modified_files.select {|f| File.fnmatch(SCSS_GLOB, f)}
 end
 
 def run(cmd, working_dir)
@@ -121,7 +116,6 @@ def do_linting(base = nil, current = nil)
 
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
-    Object.method(:run_scss_dashboard) => filter_scss(modified_files),
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
     Object.method(:run_lint_frontend) => filter_frontend(modified_files),
     Object.method(:run_stylelint_apps) => filter_scss_apps(modified_files),
