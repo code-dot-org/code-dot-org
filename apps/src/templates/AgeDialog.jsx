@@ -23,6 +23,12 @@ const SONG_FILTER_SESSION_KEY = 'song_filter_on';
 
 const ageItems = ages.map(age => ({value: age, text: age}));
 
+// videos.js tags the video dialog with this. LegacyDialog appends it to <body>
+// on open and removes it on close, so its presence tracks the dialog.
+const VIDEO_MODAL_SELECTOR = '.video-modal';
+
+const videoDialogIsOpen = () => !!document.querySelector(VIDEO_MODAL_SELECTOR);
+
 export const ageDialogSelectedOver13 = () => {
   return sessionStorage.getItem(AGE_DIALOG_SESSION_KEY) === 'true';
 };
@@ -35,6 +41,11 @@ class AgeDialog extends Component {
   state = {
     open: true,
     age: '',
+    // A video dialog is a Bootstrap modal at z-index 1050, above the design
+    // system's 1040, so it covers us. Our focus trap would then hold the
+    // keyboard in a dialog the user cannot see, and the video's close button
+    // would be unreachable.
+    waitingForVideo: videoDialogIsOpen(),
   };
 
   static propTypes = {
@@ -61,7 +72,24 @@ class AgeDialog extends Component {
       this.props.storage.setItem(SONG_FILTER_SESSION_KEY, true);
       this.setState({open: false});
     }
+
+    // The video dialog is usually opened after we mount, so watch for it
+    // rather than checking only once.
+    this.videoObserver = new MutationObserver(this.syncWaitingForVideo);
+    this.videoObserver.observe(document.body, {childList: true});
+    this.syncWaitingForVideo();
   }
+
+  componentWillUnmount() {
+    this.videoObserver?.disconnect();
+  }
+
+  syncWaitingForVideo = () => {
+    const waiting = videoDialogIsOpen();
+    if (waiting !== this.state.waitingForVideo) {
+      this.setState({waitingForVideo: waiting});
+    }
+  };
 
   onChangeAge = event => {
     this.setState({age: event.target.value});
@@ -69,7 +97,6 @@ class AgeDialog extends Component {
 
   onClickAgeOk = () => {
     const value = this.state.age;
-    // Ignore click if nothing selected
     if (!value) {
       return;
     }
@@ -101,7 +128,8 @@ class AgeDialog extends Component {
     if (
       signedIn ||
       storage.getItem(AGE_DIALOG_SESSION_KEY) ||
-      !this.state.open
+      !this.state.open ||
+      this.state.waitingForVideo
     ) {
       return null;
     }
@@ -127,6 +155,7 @@ class AgeDialog extends Component {
           id: 'uitest-submit-age',
           children: i18n.ok(),
           onClick: this.onClickAgeOk,
+          disabled: !this.state.age,
         }}
       />
     );
