@@ -1,6 +1,21 @@
 /* The abilities step, read as a list rather than as twelve posters.
    (specs/ACTOR_CREATION_WIZARD.md) */
 
+/* One block per heading, with enough air between them to be read as blocks. */
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heading {
+  margin: 0 0 2px;
+  color: var(--text-neutral-secondary);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .list {
   display: flex;
   flex-direction: column;

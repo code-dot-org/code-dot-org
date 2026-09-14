@@ -471,6 +471,27 @@ describe('the abilities step', () => {
     expect(hurts).not.toBeDisabled();
   });
 
+  it('sorts them under headings, so one run can be told from the next', () => {
+    // Ten rows read as a list; thirty will be a wall again, and the rule shelf
+    // had to learn that already (`rules/stockRuleGroups`). The order was the
+    // grouping all along — it was three comments nobody could see.
+    toAbilities();
+
+    for (const heading of [
+      'Moving about',
+      'Gravity and ground',
+      'Health, scoring and speech',
+      'Being an enemy',
+    ]) {
+      expect(screen.getByRole('heading', {name: heading})).toBeTruthy();
+    }
+    // …and not a heading with nothing under it: these are an actor's rows, so
+    // the world's group is not drawn at all.
+    expect(
+      screen.queryByRole('heading', {name: 'What the screen shows'}),
+    ).toBeNull();
+  });
+
   it('keeps the description behind a press', () => {
     // Twelve rows of name, sentence and "also adds" is a wall; twelve names
     // is a list you can scan.

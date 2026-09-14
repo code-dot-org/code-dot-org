@@ -230,6 +230,24 @@ chain, so nothing keeps count.
 description and what it brings are there for the row you are wondering about
 (`enhance/EnhancementChecklist`).
 
+**The rows sit under headings**, which the order had been carrying in comments
+nobody could see: the controls that make an actor a character, the two that say
+how it sits in a side-on world, the three an enemy is made of. Written down,
+they are Moving about / Gravity and ground / Health, scoring and speech / Being
+an enemy, and — for a world — What the screen shows, with an empty heading left
+out rather than drawn.
+
+ASSIGNED, WHERE THE RULE SHELF'S GROUPS ARE DERIVED, and the difference is the
+question. `rules/stockRuleGroups` reads each rule's region off the progression
+because somebody browsing forty-three rules is asking what kind of game they
+are making, and the curriculum answers that already. Nobody here is asking it:
+they have an actor and want to know what it can do. There is no existing answer
+to read, and an enhancement brings several rules which need not share a region.
+
+A heading rather than a fold, at ten rows: what a fold buys is room, and room
+was not what was short — what was short was a way to tell one run of rows from
+the next. Thirty rows will want the fold as well.
+
 **The one-shot dialog stays exactly where it is.** It is reached from the
 `define actor` block and from the actor's row, and both are about an actor that
 already exists. What is shared is the ROW — its name, its sentence, what it
@@ -293,8 +311,9 @@ owns that path, and it is asked in the other spec rather than answered here.
   the project" but the Blockly dropdown. The abilities step is the shelf, so
   what has no row is still only reachable by opening the file — which is fine
   as an answer and is not the same as saying the shelf is everything.
-- **Grouping.** Ten rows is a list; thirty will be a wall, and the rule shelf
-  already had to learn this (`rules/stockRuleGroups`).
+- ~~**Grouping.**~~ Done, as headings — see the step above. What is still open
+  is FOLDING them, which is the same problem one size larger: thirty rows under
+  five headings is five walls.
 
 ## What has to be decided
 

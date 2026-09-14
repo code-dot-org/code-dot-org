@@ -167,33 +167,65 @@ export interface EnhanceTarget {
   name: string;
 }
 
-export const ENHANCEMENTS: readonly Enhancement[] = [
-  // An actor's, then a world's, in the order a game is built up in: what the
-  // actor can do, then what the screen says about it.
-  //
-  // The controls come first among the actor's, because they are the ones that
-  // make an actor a CHARACTER rather than scenery, and everything under them
-  // is something a character then does.
-  platformerControlsEnhancement,
-  // …then the two that say how it sits in a side-on world at all, which are
-  // one sentence from two ends: a thing that falls needs a thing to land on,
-  // and a floor in a game where nothing falls is a picture.
-  fallsEnhancement,
-  holdsThingsUpEnhancement,
-  healthEnhancement,
-  collectsEnhancement,
-  climbArrowsEnhancement,
-  typesOutTextEnhancement,
-  // …then the three an ENEMY is made of, after the ones a protagonist wants.
-  // A level is built by putting something in it to be, and then something to
-  // avoid: the Crawler every platformer starts with is the first two of these
-  // applied to one actor (`fixtures/platformerSingle`).
-  patrolsEnhancement,
-  dealsDamageEnhancement,
-  chasesEnhancement,
-  cameraFollowEnhancement,
-  scoreboardEnhancement,
+/** One heading of the shelf, and what is under it. */
+export interface EnhancementGroup {
+  /** What the heading says. */
+  name: string;
+  members: readonly Enhancement[];
+}
+
+/**
+ * The shelf, in groups, in the order a game is built up in.
+ *
+ * ASSIGNED, WHERE THE RULE SHELF'S ARE DERIVED, and the difference is the
+ * question being asked. `rules/stockRuleGroups` reads each rule's region off
+ * the progression because somebody browsing forty-three rules is asking "what
+ * kind of game am I making", and the curriculum already answers that. Nobody
+ * reaching this list is asking that: they have an actor and are asking what it
+ * can DO. There is no existing answer to read, an enhancement brings several
+ * rules and they need not share a region, so these are written down.
+ *
+ * THE ORDER WAS ALREADY THE GROUPING. The flat list this replaces carried
+ * three comments explaining why one run of rows sat next to another — the
+ * controls that make an actor a character, the two that say how it sits in a
+ * side-on world, the three an enemy is made of. Those comments were headings
+ * nobody could see.
+ */
+export const GROUPS: readonly EnhancementGroup[] = [
+  {
+    // First, because they are what make an actor a CHARACTER rather than
+    // scenery, and everything under them is something a character then does.
+    name: 'Moving about',
+    members: [platformerControlsEnhancement, climbArrowsEnhancement],
+  },
+  {
+    // One sentence from two ends: a thing that falls needs a thing to land on,
+    // and a floor in a game where nothing falls is a picture.
+    name: 'Gravity and ground',
+    members: [fallsEnhancement, holdsThingsUpEnhancement],
+  },
+  {
+    name: 'Health, scoring and speech',
+    members: [healthEnhancement, collectsEnhancement, typesOutTextEnhancement],
+  },
+  {
+    // After the ones a protagonist wants. A level is built by putting
+    // something in it to be, and then something to avoid: the Crawler every
+    // platformer starts with is the first two of these applied to one actor
+    // (`fixtures/platformerSingle`).
+    name: 'Being an enemy',
+    members: [patrolsEnhancement, dealsDamageEnhancement, chasesEnhancement],
+  },
+  {
+    // …and last, what the screen says about all of it. Both are the world's.
+    name: 'What the screen shows',
+    members: [cameraFollowEnhancement, scoreboardEnhancement],
+  },
 ];
+
+export const ENHANCEMENTS: readonly Enhancement[] = GROUPS.flatMap(
+  group => group.members,
+);
 
 /** One by id, for a caller that knows which it wants. */
 export const enhancementById = (id: string): Enhancement | undefined =>
@@ -204,3 +236,15 @@ export const enhancementsFor = (
   target: EnhanceTarget,
 ): readonly Enhancement[] =>
   ENHANCEMENTS.filter(one => one.subject === target.kind);
+
+/**
+ * …and the same in groups, with the empty headings left out.
+ *
+ * A world's shelf holds two rows and an actor's holds ten, so a heading with
+ * nothing under it is what filtering by subject would otherwise leave behind.
+ */
+export const groupsFor = (target: EnhanceTarget): readonly EnhancementGroup[] =>
+  GROUPS.map(group => ({
+    ...group,
+    members: group.members.filter(one => one.subject === target.kind),
+  })).filter(group => group.members.length > 0);
