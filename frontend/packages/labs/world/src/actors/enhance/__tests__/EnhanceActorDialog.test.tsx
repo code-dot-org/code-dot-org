@@ -146,6 +146,43 @@ describe('EnhanceActorDialog', () => {
     expect(player).toContain('Patrol#PatrolsAcrossTrait');
   });
 
+  it('offers the other end of a pair once its partner is ticked', () => {
+    const onEnhance = vi.fn();
+    const source = importStockActor(
+      withPlayer(),
+      stockActorById('coin')!,
+    ).source;
+    open({source, onEnhance});
+
+    // Nothing carries yet, so nothing is offered a ride.
+    const carries = row(/Gravity and ground/, /Carries what stands on it/);
+    const rides = () =>
+      screen.queryByRole('checkbox', {name: /Rides moving platforms/});
+    expect(rides()).toBe(null);
+
+    // Ticking the platform's end is what puts a carrier in the project — in
+    // the draft, which is what the gate reads — so the passenger's end
+    // appears without closing and reopening.
+    fireEvent.click(carries);
+    expect(rides()).not.toBe(null);
+    fireEvent.click(rides()!);
+
+    // …and unticking the carrier takes the ride back with it, rather than
+    // keeping a tick off screen and applying it unseen at the press.
+    fireEvent.click(carries);
+    expect(rides()).toBe(null);
+    fireEvent.click(row(...ENEMY));
+    fireEvent.click(screen.getByRole('button', {name: 'Enhance'}));
+
+    const player = at(
+      onEnhance.mock.calls[0][0] as Source,
+      'actors/player.actor',
+    );
+    expect(player).not.toContain('Carrying#CarriesTrait');
+    expect(player).not.toContain('Carrying#RidesTrait');
+    expect(player).toContain('Patrol#PatrolsAcrossTrait');
+  });
+
   it('answers a row’s question on the tick, so the press is not held up', () => {
     const onEnhance = vi.fn();
     const source = importStockActor(

@@ -35,12 +35,28 @@
 // row's source and for the test that pins which rows step aside on which
 // targets — it is not shown to a learner.
 //
+// THE GATES READ THE DRAFT, NOT THE PROJECT. The other end of a pair is not
+// offered until its partner is in the project (`Enhancement.offered`), and
+// the partner may be a tick higher up this same list. Asked of the project
+// as it stands, "rides" stayed hidden until the dialog was closed and opened
+// again, in both frames. So what is offered, what is refused and what a
+// question's answers are is asked of the source with the ticks folded in
+// (`enhanceWith`) — while "already has this" is asked of the project alone,
+// or a tick would lock itself the moment it was made.
+//
+// AND A TICK THAT LOSES ITS GROUND IS TAKEN BACK. Untick "carries" and the
+// "rides" ticked under it is about nothing; a tick kept off screen would be
+// applied unseen at the press, which is the one thing this list must never
+// do. So every change settles the picks: in the order they were made, each
+// is kept only if its row is still on offer once the ones before it have
+// been applied (`settle`).
+//
 // AND THE DESCRIPTION IS BEHIND A PRESS. Twelve rows of name, sentence and
 // "also adds" is a wall, which was the complaint; twelve names is a list you
 // can scan. The sentence is still there for the row you are wondering about.
 
 import {Button as MuiButton, Typography} from '@mui/material';
-import {useState} from 'react';
+import {useMemo, useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
@@ -50,6 +66,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import styles from './enhancementChecklist.module.css';
 import {
   enhancementsFor,
+  enhanceWith,
   groupsFor,
   type Enhancement,
   type EnhanceTarget,
@@ -80,6 +97,44 @@ const TIDY = 12;
 /** Nothing ticked yet, which is how both frames start. */
 export const NO_PICKS: Picks = {picked: [], answers: {}};
 
+/** Whether a row is on the shelf for this target, as the project stands. */
+const onOffer = (
+  one: Enhancement,
+  source: MultiFileSource,
+  target: EnhanceTarget,
+): boolean =>
+  (one.offered?.(source, target) ?? true) && !one.refuse?.(source, target);
+
+/**
+ * The picks with any that have lost their ground taken back.
+ *
+ * Walked in the order they were ticked, which is the order they are applied
+ * in: each is kept only if its row is still offered and not refused once the
+ * ones before it have been applied. A pick whose row the shelf does not know
+ * is kept, the way `enhanceWith` lets it through unapplied — it is not this
+ * function's to judge.
+ */
+const settle = (
+  picks: Picks,
+  source: MultiFileSource,
+  target: EnhanceTarget,
+): Picks => {
+  const offered = enhancementsFor(target);
+  let draft = source;
+  const picked: string[] = [];
+  for (const id of picks.picked) {
+    const one = offered.find(each => each.id === id);
+    if (one && !onOffer(one, draft, target)) {
+      continue;
+    }
+    picked.push(id);
+    if (one) {
+      draft = one.apply(draft, target, picks.answers[id]);
+    }
+  }
+  return picked.length === picks.picked.length ? picks : {...picks, picked};
+};
+
 /**
  * The picks with one row ticked or unticked.
  *
@@ -97,13 +152,19 @@ export const withPick = (
   target: EnhanceTarget,
 ): Picks => {
   if (!on) {
-    return {...picks, picked: picks.picked.filter(each => each !== id)};
+    return settle(
+      {...picks, picked: picks.picked.filter(each => each !== id)},
+      source,
+      target,
+    );
   }
   const picked = picks.picked.includes(id)
     ? picks.picked
     : [...picks.picked, id];
   const asks = enhancementsFor(target).find(one => one.id === id)?.asks;
-  const first = asks?.options(source, target)[0];
+  // Asked of the draft, since the choices may include something a tick above
+  // this one made — the scoreboard row writes an actor of its own.
+  const first = asks?.options(enhanceWith(source, target, picks), target)[0];
   const answers =
     first && picks.answers[id] === undefined
       ? {...picks.answers, [id]: first.value}
@@ -151,18 +212,28 @@ export const EnhancementChecklist = ({
   /** Which rows have been opened to read about. Shut is the resting state. */
   const [open, setOpen] = useState<readonly string[]>([]);
   /**
-   * The shelf with the rows this actor cannot take left out — not offered in
-   * this project, or refused for this actor — and any heading that is empty
-   * once they are gone. Everything below reads this, so the count on a heading
+   * The project with the ticks folded in, which is what the gates read.
+   *
+   * Recomputed only when a tick or an answer changes: every row's `offered`
+   * and `refuse` is asked of it on each render, and the fold parses every
+   * file it touches.
+   */
+  const draft = useMemo(
+    () => enhanceWith(source, target, {picked, answers}),
+    [source, target, picked, answers],
+  );
+  /**
+   * The shelf with the rows this actor cannot take left out — not offered
+   * once the ticks are in, or refused — and any heading that is empty once
+   * they are gone. A ticked row stays whatever the draft says, or it could
+   * not be unticked. Everything below reads this, so the count on a heading
    * and the fold's arithmetic see the same rows a learner does.
    */
   const groups = groupsFor(target)
     .map(group => ({
       ...group,
       members: group.members.filter(
-        one =>
-          (one.offered?.(source, target) ?? true) &&
-          !one.refuse?.(source, target),
+        one => picked.includes(one.id) || onOffer(one, draft, target),
       ),
     }))
     .filter(group => group.members.length > 0);
@@ -319,7 +390,7 @@ export const EnhancementChecklist = ({
 
                     {ticked && !already && enhancement.asks && (
                       <div className={styles.answers}>
-                        {enhancement.asks.options(source, target).length ===
+                        {enhancement.asks.options(draft, target).length ===
                         0 ? (
                           <Typography variant="body4">
                             (no actors yet)
@@ -340,7 +411,7 @@ export const EnhancementChecklist = ({
                               onAnswer(enhancement.id, event.target.value)
                             }
                             items={enhancement.asks
-                              .options(source, target)
+                              .options(draft, target)
                               .map(choice => ({
                                 value: choice.value,
                                 text: choice.name,
