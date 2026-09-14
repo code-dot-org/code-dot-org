@@ -15,11 +15,41 @@
 }
 
 .heading {
-  margin: 0 0 2px;
+  margin: 0;
+}
+
+/* The heading IS the press, so it fills the row and keeps the heading's own
+   look — a `Button` would otherwise centre it and give it a button's padding. */
+.fold {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 4px 0;
   color: var(--text-neutral-secondary);
   font-weight: 600;
+  gap: 0.5rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+}
+
+.foldMark {
+  width: 0.75rem;
+  flex: 0 0 auto;
+}
+
+/* How many are under it, pushed to the end: a shut group is worth looking at
+   when it says how much it is hiding. */
+.count {
+  margin-left: auto;
+  opacity: 0.75;
+}
+
+/* `display: flex` beats the `[hidden]` attribute, whose `display: none` comes
+   from the user-agent sheet — so a folded group went on showing its rows while
+   telling every reader it was shut. jsdom applies no stylesheet, so the tests
+   saw the attribute and agreed with themselves; only the browser disagreed. */
+.list[hidden] {
+  display: none;
 }
 
 .list {

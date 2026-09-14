@@ -483,13 +483,55 @@ describe('the abilities step', () => {
       'Health, scoring and speech',
       'Being an enemy',
     ]) {
-      expect(screen.getByRole('heading', {name: heading})).toBeTruthy();
+      expect(
+        screen.getByRole('heading', {name: new RegExp(heading)}),
+      ).toBeTruthy();
     }
     // …and not a heading with nothing under it: these are an actor's rows, so
     // the world's group is not drawn at all.
     expect(
-      screen.queryByRole('heading', {name: 'What the screen shows'}),
+      screen.queryByRole('heading', {name: /What the screen shows/}),
     ).toBeNull();
+  });
+
+  it('says how many are under each heading', () => {
+    // Which is what makes a shut group worth looking at rather than a word
+    // with nothing behind it.
+    toAbilities();
+
+    expect(screen.getByRole('button', {name: /Being an enemy 3/})).toBeTruthy();
+  });
+
+  it('folds a group away, and back', () => {
+    toAbilities();
+    const heading = () =>
+      screen.getByRole('button', {name: /Gravity and ground/});
+    const row = () => screen.queryByRole('checkbox', {name: 'Holds things up'});
+
+    expect(heading()).toHaveAttribute('aria-expanded', 'true');
+    expect(row()).toBeTruthy();
+
+    fireEvent.click(heading());
+    expect(heading()).toHaveAttribute('aria-expanded', 'false');
+    // Out of the accessibility tree, not merely out of sight: a folded row is
+    // not a control anything should be able to reach.
+    expect(row()).toBeNull();
+
+    fireEvent.click(heading());
+    expect(row()).toBeTruthy();
+  });
+
+  it('starts open while the whole list can be seen at once', () => {
+    // A fold buys ROOM, and room is not short at ten rows: four headings over
+    // ten reads as a list. At thirty it is five walls, and then the headings
+    // are what the list is read by.
+    toAbilities();
+
+    for (const group of ['Moving about', 'Being an enemy']) {
+      expect(
+        screen.getByRole('button', {name: new RegExp(group)}),
+      ).toHaveAttribute('aria-expanded', 'true');
+    }
   });
 
   it('keeps the description behind a press', () => {
