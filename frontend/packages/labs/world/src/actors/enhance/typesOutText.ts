@@ -96,7 +96,7 @@ export const typesOutTextEnhancement: Enhancement = {
   description:
     'Gives this actor a line it says a few letters at a time. “Say” starts one, “show all of it” skips to the end for a reader who has read ahead, and “finishes revealing” is the cue to move on. What draws the words is the actor’s own business — a Label, a Button and a Speech Box already draw their text.',
   brings: ['Shows Text', 'Keeps Time'],
-  refuse(target: EnhanceTarget) {
+  refuse(_source: MultiFileSource, target: EnhanceTarget) {
     // AN ACTOR A WORLD DEFINES FOR ITSELF CANNOT TAKE IT. Its body generates
     // into a block scope, and `define block` and `define event` both emit an
     // `export const`, which is not legal there — so the palette does not offer

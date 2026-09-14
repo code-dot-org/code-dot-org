@@ -74,6 +74,12 @@ import {patrolsEnhancement} from './patrols';
 import {platformerControlsEnhancement} from './platformerControls';
 import {ridesEnhancement} from './rides';
 import {scoreboardEnhancement} from './scoreboard';
+import {
+  conveysEnhancement,
+  slipperyEnhancement,
+  slowsEnhancement,
+  walksOnSurfacesEnhancement,
+} from './surfaces';
 import {topDownControlsEnhancement} from './topDownControls';
 import {typesOutTextEnhancement} from './typesOutText';
 
@@ -105,8 +111,14 @@ export interface Enhancement {
    * A Health Bar cannot be given a health bar — it would ride above itself and
    * show its own empty health — and saying so on the row is better than
    * leaving a learner to find out.
+   *
+   * GIVEN THE PROJECT, because the reason may be a fact about the actor's own
+   * file rather than about what kind of thing it is: a floor takes ONE of the
+   * three surfaces, so what stops it taking a second is the first
+   * (`enhance/surfaces`). The refusal is what gets shown, so it has to be able
+   * to say which.
    */
-  refuse?(target: EnhanceTarget): string | undefined;
+  refuse?(source: MultiFileSource, target: EnhanceTarget): string | undefined;
   /**
    * What else it needs before it can be done, if anything.
    *
@@ -235,6 +247,14 @@ export const GROUPS: readonly EnhancementGroup[] = [
       // which is offered only when there is something to ride.
       carriesEnhancement,
       ridesEnhancement,
+      // …and what a floor is LIKE, which is the same two-ended shape again:
+      // the floor takes one of the three, and whoever walks on it has to
+      // notice. A floor made slippery in a game where nothing stands on
+      // surfaces is a floor that behaves exactly as it did.
+      slipperyEnhancement,
+      conveysEnhancement,
+      slowsEnhancement,
+      walksOnSurfacesEnhancement,
     ],
   },
   {

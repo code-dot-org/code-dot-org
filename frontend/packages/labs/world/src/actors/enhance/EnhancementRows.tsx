@@ -55,7 +55,7 @@ export const refusalOf = (
   target: EnhanceTarget,
   answer?: string,
 ): string | undefined =>
-  enhancement.refuse?.(target) ??
+  enhancement.refuse?.(source, target) ??
   (enhancement.applied(source, target, answer)
     ? 'Already has this.'
     : undefined);

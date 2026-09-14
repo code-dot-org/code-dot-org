@@ -103,14 +103,15 @@ describe('the health enhancement, as edits', () => {
   });
 
   it('refuses to give a Health Bar a health bar', () => {
+    const source = withPlayer();
     expect(
-      healthEnhancement.refuse?.({
+      healthEnhancement.refuse?.(source, {
         kind: 'actor',
         path: 'actors/healthBar',
         name: 'Health Bar',
       }),
     ).toContain('own health');
-    expect(healthEnhancement.refuse?.(PLAYER)).toBeUndefined();
+    expect(healthEnhancement.refuse?.(source, PLAYER)).toBeUndefined();
   });
 });
 

@@ -105,18 +105,19 @@ describe('the types-out-text enhancement, as edits', () => {
   });
 
   it('refuses an actor a world defines for itself', () => {
+    const source = WORLD_SCENARIOS.empty.source;
     // Its body generates into a block scope, where the `export const` that a
     // `define block` and a `define event` each emit is not legal — so the
     // rows would be written and generate nothing at all (`blockly/fileKind`).
     expect(
-      typesOut.refuse!({
+      typesOut.refuse!(source, {
         kind: 'actor',
         path: 'worlds/main',
         block: 'someActorDef',
         name: 'Sign',
       }),
     ).toMatch(/file of its own/);
-    expect(typesOut.refuse!(LABEL)).toBeUndefined();
+    expect(typesOut.refuse!(source, LABEL)).toBeUndefined();
   });
 });
 

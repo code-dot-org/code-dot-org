@@ -294,7 +294,7 @@ export const healthEnhancement: Enhancement = {
   description:
     'Gives the actor health it can lose, and a Health Bar that rides over its head showing how much is left. Every one of these actors gets its own, brought along when it appears and taken away when it goes.',
   brings: ['Has Health', 'Attached', 'a Health Bar it carries with it'],
-  refuse(target: EnhanceTarget) {
+  refuse(_source: MultiFileSource, target: EnhanceTarget) {
     // A bar about itself would ride above its own head and draw its own empty
     // health, which is a picture of nothing rather than an error.
     return target.path === BAR_PATH
