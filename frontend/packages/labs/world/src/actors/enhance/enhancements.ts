@@ -85,6 +85,7 @@ import {
   slowsEnhancement,
   walksOnSurfacesEnhancement,
 } from './surfaces';
+import {isASwitchEnhancement, isASwitchedWallEnhancement} from './switches';
 import {
   isATeleportPadEnhancement,
   takenByAnyPadEnhancement,
@@ -316,6 +317,10 @@ export const GROUPS: readonly EnhancementGroup[] = [
       isATeleportPadEnhancement,
       usesTeleportPadsEnhancement,
       takenByAnyPadEnhancement,
+      // …and the other way of changing a room, which is the same trick with
+      // the room instead of the traveller: matched by colour, nothing to ask.
+      isASwitchEnhancement,
+      isASwitchedWallEnhancement,
     ],
   },
   {
