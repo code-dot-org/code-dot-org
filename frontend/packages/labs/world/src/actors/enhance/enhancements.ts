@@ -85,6 +85,11 @@ import {
   slowsEnhancement,
   walksOnSurfacesEnhancement,
 } from './surfaces';
+import {
+  isATeleportPadEnhancement,
+  takenByAnyPadEnhancement,
+  usesTeleportPadsEnhancement,
+} from './teleport';
 import {topDownControlsEnhancement} from './topDownControls';
 import {typesOutTextEnhancement} from './typesOutText';
 import {wrapsAcrossEnhancement, wrapsDownEnhancement} from './wraps';
@@ -304,7 +309,14 @@ export const GROUPS: readonly EnhancementGroup[] = [
     // Things that arrive and leave. One row so far; the spawner and the
     // teleport pads belong here when they are built.
     name: 'Coming and going',
-    members: [expiresEnhancement],
+    members: [
+      expiresEnhancement,
+      // A way across a room that is not a way through it. The pad first,
+      // since the two rows under it are nonsense without one.
+      isATeleportPadEnhancement,
+      usesTeleportPadsEnhancement,
+      takenByAnyPadEnhancement,
+    ],
   },
   {
     // …and last, what the screen says about all of it. Both are the world's.
