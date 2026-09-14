@@ -73,6 +73,7 @@ import {fallsEnhancement} from './falls';
 import {healthEnhancement} from './health';
 import {holdsThingsUpEnhancement} from './holdsThingsUp';
 import {flapsEnhancement, prowlsEnhancement} from './hunts';
+import {canBeCarriedEnhancement, carriesThingsEnhancement} from './inventory';
 import {jetpackEnhancement} from './jetpack';
 import {patrolsEnhancement} from './patrols';
 import {platformerControlsEnhancement} from './platformerControls';
@@ -273,7 +274,15 @@ export const GROUPS: readonly EnhancementGroup[] = [
   },
   {
     name: 'Health, scoring and speech',
-    members: [healthEnhancement, collectsEnhancement, typesOutTextEnhancement],
+    members: [
+      healthEnhancement,
+      collectsEnhancement,
+      // …and the other half of picking things up: a bag holds what a running
+      // total cannot give back.
+      carriesThingsEnhancement,
+      canBeCarriedEnhancement,
+      typesOutTextEnhancement,
+    ],
   },
   {
     // After the ones a protagonist wants. A level is built by putting

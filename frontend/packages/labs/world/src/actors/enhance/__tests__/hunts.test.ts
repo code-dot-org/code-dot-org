@@ -15,7 +15,11 @@ import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
-import {flapsEnhancement, prowlsEnhancement} from '../hunts';
+import {
+  findsAWayEnhancement,
+  flapsEnhancement,
+  prowlsEnhancement,
+} from '../hunts';
 
 const COIN = {kind: 'actor' as const, path: 'actors/coin', name: 'Coin'};
 
@@ -62,8 +66,41 @@ describe('the two new hunters', () => {
     expect(actor).toContain('world_set_Prowling_ActorToHuntProperty');
   });
 
+  it('hands a list property the list, and a single one the first of it', () => {
+    // THE ONE WAY PATH DIFFERS. `going to` holds a list, so the socket takes
+    // `any ⟨kind⟩` whole; the other three hold one actor, and handed the list
+    // they take a value of the wrong shape — which compiles, and stands still.
+    const pathing = at(
+      findsAWayEnhancement.apply(project(), COIN, 'actors/player'),
+      'actors/coin.actor',
+    )!;
+    const chasing = at(
+      prowlsEnhancement.apply(project(), COIN, 'actors/player'),
+      'actors/coin.actor',
+    )!;
+
+    expect(pathing).toContain('world_actor_kind');
+    expect(pathing).not.toContain('world_first_actor');
+    expect(chasing).toContain('world_first_actor');
+  });
+
+  it('reads back who a list-holding row was aimed at', () => {
+    // The two shapes are read as well as written, so `applied` has to know
+    // both — otherwise the row never reads as done and repoints for ever.
+    const once = findsAWayEnhancement.apply(project(), COIN, 'actors/player');
+
+    expect(findsAWayEnhancement.applied(once, COIN, 'actors/player')).toBe(
+      true,
+    );
+    expect(findsAWayEnhancement.applied(once, COIN, 'actors/coin')).toBe(false);
+  });
+
   it('offers every actor but the hunter itself', () => {
-    for (const row of [flapsEnhancement, prowlsEnhancement]) {
+    for (const row of [
+      flapsEnhancement,
+      prowlsEnhancement,
+      findsAWayEnhancement,
+    ]) {
       const offered = row
         .asks!.options(project(), COIN)
         .map(choice => choice.value);

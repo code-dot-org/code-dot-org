@@ -56,12 +56,36 @@ export interface HuntSpec {
   traits: readonly string[];
   /** The `set …` block that names the quarry. */
   property: string;
+  /**
+   * Whether the property holds ONE actor or a list of them.
+   *
+   * Steering, Flapping and Prowling each hold one, so the value is `first
+   * actor of ⟨any ⟨kind⟩⟩` — handed the list itself the socket takes a value
+   * of the wrong shape, still compiles, and the hunter stands still. Path
+   * holds a list, so for that one the list IS the value and wrapping it would
+   * be the same mistake the other way round.
+   */
+  holds?: 'one' | 'many';
 }
 
-/** `first actor of ⟨any ⟨kind⟩⟩` — the property holds one, not a list. */
+/** `first actor of ⟨any ⟨kind⟩⟩` — for a property that holds one. */
 const firstOf = (actor: string) => ({
   block: {type: 'world_first_actor', inputs: {SOURCE: kindOf(actor)}},
 });
+
+/** What goes in the socket, which depends on what the property holds. */
+const valueFor = (spec: HuntSpec, actor: string) =>
+  spec.holds === 'many' ? kindOf(actor) : firstOf(actor);
+
+/** …and reading it back, whichever of the two shapes is there. */
+const actorIn = (value: BlockJson | undefined): string | undefined => {
+  if (value?.type === 'world_first_actor') {
+    const from = (value.inputs?.SOURCE as {block?: BlockJson} | undefined)
+      ?.block;
+    return from?.fields?.ACTOR as string | undefined;
+  }
+  return value?.fields?.ACTOR as string | undefined;
+};
 
 export const huntRow = (spec: HuntSpec): Enhancement => {
   /** The hat this adds: when it appears, it learns what it is after. */
@@ -71,7 +95,7 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
     next: {
       block: {
         type: spec.property,
-        inputs: {ACTOR: me(), VALUE: firstOf(actor)},
+        inputs: {ACTOR: me(), VALUE: valueFor(spec, actor)},
       },
     },
   });
@@ -102,11 +126,9 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
         if (row.type !== spec.property) {
           continue;
         }
-        const value = (row.inputs?.VALUE as {block?: BlockJson} | undefined)
-          ?.block;
-        const from = (value?.inputs?.SOURCE as {block?: BlockJson} | undefined)
-          ?.block;
-        return from?.fields?.ACTOR as string | undefined;
+        return actorIn(
+          (row.inputs?.VALUE as {block?: BlockJson} | undefined)?.block,
+        );
       }
     }
     return undefined;
@@ -125,7 +147,7 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
       }
       for (const row of down(root)) {
         if (row.type === spec.property) {
-          row.inputs = {...row.inputs, VALUE: firstOf(actor)};
+          row.inputs = {...row.inputs, VALUE: valueFor(spec, actor)};
         }
       }
     }
@@ -213,4 +235,28 @@ export const prowlsEnhancement = huntRow({
     'Prowling#ProwlsTrait',
   ],
   property: 'world_set_Prowling_ActorToHuntProperty',
+});
+
+/**
+ * "Finds a way around walls" — the chaser that can read a room.
+ *
+ * Steering walks INTO things: it works out a direction and goes, so a wall
+ * between it and you is a wall it presses against. This one looks ahead and
+ * steps round (`rules/stock/path`).
+ *
+ * ITS PROPERTY HOLDS A LIST, which is the only way it differs from the other
+ * three. `going to` is somewhere to head for rather than somebody to catch, so
+ * the socket takes `any ⟨kind⟩` whole rather than the first of it.
+ */
+export const findsAWayEnhancement = huntRow({
+  id: 'finds-a-way',
+  name: 'Finds a way around walls',
+  description:
+    'Sets this actor heading for another one and working out how to get there: it looks ahead, steps round what is in the way, and thinks again every so often rather than every frame. Slower to decide than “Chases somebody” and far better in a room with walls in it — that one walks straight at what it is after and stops when something is in the way. How far it looks and how often it thinks are blocks in its file.',
+  brings: ['Finds a Way', 'a line saying where'],
+  label: 'Going to',
+  rules: ['Path'],
+  traits: ['Path#FindsAWayTrait'],
+  property: 'world_set_Path_GoingToProperty',
+  holds: 'many',
 });
