@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-10 19:20:48 UTC",
+    "serialized_at": "2026-09-11 16:53:57 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -179,9 +179,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**How can we keep our computer systems running and performing well?**\n\nIn this lesson, students interact with an app while troubleshooting real-world system issues such as crashes, errors, and performance slowdowns. The simulation randomly introduces system scenarios that require students to test and evaluate different actions to resolve the issue before resuming gameplay, reinforcing critical thinking and problem-solving skills. Then, students work in pairs to analyze real-world computer system performance scenarios and evaluate potential actions to optimize the system.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n\n\n**How can we keep our computer systems running and performing well?**\n\nIn this lesson, students interact with an app while troubleshooting real-world system issues such as crashes, errors, and performance slowdowns. The simulation randomly introduces system scenarios that require students to test and evaluate different actions to resolve the issue before resuming gameplay, reinforcing critical thinking and problem-solving skills. Then, students work in pairs to analyze real-world computer system performance scenarios and evaluate potential actions to optimize the system.",
         "preparation": "- Print copies of the Optimization activity guide (one for each student)\n- Print copies of the Troubleshooting and Optimizing Software Unit Guide (one for each student)",
-        "student_overview": "**How can we keep our computer systems running and performing well?**\n\nIn this lesson, you play with an app and sometimes, your system will encounter issues like crashes, errors, or slow performance, and it’s up to you to figure out how to fix the problem by testing different actions so the game can continue. Next, you work with a partner, explore options in a simulation, and use a chatbot to help make informed decisions to optimize the system."
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n\n\n**How can we keep our computer systems running and performing well?**\n\nIn this lesson, you play with an app and sometimes, your system will encounter issues like crashes, errors, or slow performance, and it’s up to you to figure out how to fix the problem by testing different actions so the game can continue. Next, you work with a partner, explore options in a simulation, and use a chatbot to help make informed decisions to optimize the system."
       },
       "seeding_key": {
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
@@ -4245,7 +4245,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson6-level2_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson6-choice"
         ],
         "lesson.key": "Lesson 6: Build a Computer System",
         "lesson_group.key": "lessonGroup-3",
@@ -4253,7 +4253,7 @@
         "activity_section.key": "5b425d74-03af-420b-842d-9da3ff5b9461"
       },
       "level_keys": [
-        "computer-systems-lesson6-level2_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson6-choice"
       ]
     },
     {
@@ -5194,9 +5194,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson6-level2_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson6-choice",
         "script_level.level_keys": [
-          "computer-systems-lesson6-level2_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson6-choice"
         ],
         "lesson.key": "Lesson 6: Build a Computer System",
         "lesson_group.key": "lessonGroup-3",
