@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-10 19:11:33 UTC",
+    "serialized_at": "2026-09-13 16:15:12 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -83,7 +83,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make use of data?**\n\nIn this lesson, students play *Candidate*—a game that guides them, first-hand, through the process of data analysis. As they compete to run for student government on the most popular policy, students learn to ask strategic questions, collect simple data, and analyze it to make wise choices.",
-        "preparation": "- Read the *Candidate* Supplemental Teacher Guide.\n- Print one copy of the *Candidate* Persona Card sheets for every 32 students, then cut the cards apart and shuffle them. It’s okay if you have more cards than students—but every student should have one card.\n- Print one double-sided copy of the *Candidate* Activity Guide for each student.",
+        "preparation": "- Read the *Candidate* Supplemental Teacher Guide.\n- Print one copy of the *Candidate* Persona Card sheets for every 32 students, then cut the cards apart and shuffle them. It’s okay if you have more cards than students—but every student should have one card.\n- Print one double-sided copy of the *Candidate* Activity Guide for each student.\n- Print copies of the Working WIth Data Unit Guide (one for each student).",
         "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make use of data?**\n\nIn this lesson, you'll play *Candidate*—a game that guides you, first-hand, through the process of data analysis. As you compete to run for student government on the most popular policy, you'll learn to ask strategic questions, collect simple data, and analyze it to make wise choices.",
         "unplugged": true
       },
@@ -245,9 +245,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**Where does data come from?**\n\nIn this lesson, students investigate a research question by deciding how to measure the variables it describes and collecting data that can answer it. Students first evaluate several sampling strategies, considering who each one includes and excludes, and then design survey questions of their own.",
+        "overview": "**How do our data collection choices affect the data we get?**\n\nIn this lesson, students investigate a research question by deciding how to measure the variables it describes and collecting data that can answer it. Students first evaluate several sampling strategies, considering who each one includes and excludes, and then design survey questions of their own.",
         "preparation": "- Print copies of the Sampling Strategies Activity Guide (one for each pair of students). ",
-        "student_overview": "**Where does data come from?**\n\nIn this lesson, you'll investigate a research question by deciding how to measure the variables it describes and collecting data that can answer it. You'll evaluate several sampling strategies, considering who each one includes and excludes, and then design survey questions of your own."
+        "student_overview": "**How do our data collection choices affect the data we get?**\n\nIn this lesson, you'll investigate a research question by deciding how to measure the variables it describes and collecting data that can answer it. You'll evaluate several sampling strategies, considering who each one includes and excludes, and then design survey questions of your own."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -5650,6 +5650,19 @@
       }
     },
     {
+      "name": "[KEY] Working With Data Unit Guide",
+      "url": "https://docs.google.com/document/d/10srCMrl5JQKpMLeL3BismUW2jsTeuLAhQDJGKTvE2KQ/edit?usp=sharing",
+      "key": "_key_working_with_data_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_working_with_data_unit_guide"
+      }
+    },
+    {
       "name": "American Time Use Survey",
       "url": "https://drive.google.com/file/d/1joH9GwitVgBl57G4RKOa_Cy0oIJWQEvn/view?usp=sharing",
       "key": "american_time_use_survey",
@@ -6058,9 +6071,28 @@
       "seeding_key": {
         "resource.key": "working_with_data_files"
       }
+    },
+    {
+      "name": "Working With Data Unit Guide",
+      "url": "https://docs.google.com/document/d/1Ln3vMtm657eKFNr11YFJ40wHauKtJObj3RRPyO-k2sQ/edit?usp=sharing",
+      "key": "working_with_data_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "working_with_data_unit_guide"
+      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_working_with_data_unit_guide"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -6089,6 +6121,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "what_is_data_analysis_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "working_with_data_unit_guide"
       }
     },
     {

@@ -22,6 +22,8 @@ markdown <<MARKDOWN
 
 ---
 
+<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AIF1&Version_Year=2026&Unit=unit6b&Level=les5lev4&Activity_Type=activity" width="480" height="56" style="border:none;overflow:hidden;"></iframe>
+
 <h2>Abstraction</h2>
 
 <p>Notice that calling <code>addPoints</code> in the demo didn't require rereading what's inside it, the name alone was enough to know what would happen.</p>

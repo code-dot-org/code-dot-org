@@ -184,10 +184,7 @@ const AiChatAccessControls: React.FC = () => {
                     }
                     disabled={isCurrentUserAccessDisabled}
                   />
-                  <InfoTooltipIcon
-                    id="section-essential-ai-checkbox-info"
-                    tooltipText="If the course you have assigned requires AI tools, this option will give students access to only the AI tools needed to complete the course."
-                  />
+                  <InfoTooltipIcon tooltipText="If the course you have assigned requires AI tools, this option will give students access to only the AI tools needed to complete the course." />
                 </div>
               )}
               <Toggle

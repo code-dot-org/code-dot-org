@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
 import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
@@ -23,12 +24,14 @@ import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButt
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 
+import moduleStyles from './sectionLoginInfo.module.scss';
+
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
 };
 
 const Heading = ({children}) => (
-  <Typography variant="h6" component="h2" style={styles.heading}>
+  <Typography variant="h6" component="h2" className={moduleStyles.heading}>
     {children}
   </Typography>
 );
@@ -97,9 +100,11 @@ class SectionLoginInfo extends React.Component {
               'cannot join a demo section.'}
           </p>
         )}
-        {[SectionLoginType.google_classroom, SectionLoginType.clever].includes(
-          section.loginType
-        ) && (
+        {[
+          SectionLoginType.google_classroom,
+          SectionLoginType.clever,
+          SectionLoginType.classlink,
+        ].includes(section.loginType) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
         {section.loginType === SectionLoginType.lti_v1 && (
@@ -144,6 +149,7 @@ export class LtiLogins extends React.Component {
         <SignInInstructions
           loginType={SectionLoginType.lti_v1}
           sectionProviderName={this.props.sectionProviderName}
+          headingLevel="h3"
         />
       </div>
     );
@@ -156,12 +162,15 @@ class OAuthLogins extends React.Component {
     loginType: PropTypes.oneOf([
       SectionLoginType.google_classroom,
       SectionLoginType.clever,
+      SectionLoginType.classlink,
     ]).isRequired,
   };
 
   render() {
     const {sectionId, loginType} = this.props;
     let loginTypeLabel = '';
+    // ClassLink has no sync screenshot yet (capture one from a local
+    // ClassLink section's Manage Students tab); the image is optional.
     let syncSectionImgSrc = '';
     if (loginType === SectionLoginType.google_classroom) {
       loginTypeLabel = i18n.loginTypeGoogleClassroom();
@@ -169,12 +178,13 @@ class OAuthLogins extends React.Component {
     } else if (loginType === SectionLoginType.clever) {
       loginTypeLabel = i18n.loginTypeClever();
       syncSectionImgSrc = syncClever;
+    } else if (loginType === SectionLoginType.classlink) {
+      loginTypeLabel = LmsLoginTypeNames.classlink;
     }
 
     return (
       <div>
         <SignInInstructions loginType={loginType} />
-        <br />
         <Heading>{i18n.syncingYourStudents()}</Heading>
         <div>
           <SafeMarkdown
@@ -184,11 +194,13 @@ class OAuthLogins extends React.Component {
             })}
           />
           <br />
-          <img
-            src={syncSectionImgSrc}
-            style={{maxWidth: '50%'}}
-            alt={i18n.syncingYourStudents()}
-          />
+          {syncSectionImgSrc && (
+            <img
+              src={syncSectionImgSrc}
+              style={{maxWidth: '50%'}}
+              alt={i18n.syncingYourStudents()}
+            />
+          )}
         </div>
       </div>
     );
@@ -232,8 +244,10 @@ class EmailLogins extends React.Component {
           <li>{i18n.loginInfo_joinStep4()}</li>
         </ol>
         <br />
-        <SignInInstructions loginType={SectionLoginType.email} />
-        <br />
+        <SignInInstructions
+          loginType={SectionLoginType.email}
+          headingLevel="h3"
+        />
         <Heading>{i18n.loginInfo_resetTitle()}</Heading>
         <SafeMarkdown
           markdown={i18n.loginInfo_resetPasswordBody({
@@ -321,7 +335,6 @@ class WordOrPictureLogins extends React.Component {
         <p>
           {i18n.loginInfoWordPicMoreBelow({wordOrPicture: section.loginType})}
         </p>
-        <br />
         <Heading>{i18n.loginInfo_resetTitle()}</Heading>
         {section.loginType === SectionLoginType.picture && (
           <SafeMarkdown
@@ -337,7 +350,6 @@ class WordOrPictureLogins extends React.Component {
             })}
           />
         )}
-        <br />
         <Heading>{i18n.printLoginCards_title()}</Heading>
         {students.length < 1 && (
           <SafeMarkdown
@@ -465,9 +477,5 @@ const styles = {
   img: {
     width: 150,
     marginTop: 10,
-  },
-  heading: {
-    marginTop: 32,
-    marginBottom: 12,
   },
 };

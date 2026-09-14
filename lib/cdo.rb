@@ -86,7 +86,6 @@ module Cdo
     def canonical_hostname(domain)
       # Allow hostname overrides
       return override_dashboard if override_dashboard && domain == 'studio.code.org'
-      return override_pegasus if override_pegasus && domain == 'code.org'
 
       return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?(name)
       return domain if rack_env?(:production)

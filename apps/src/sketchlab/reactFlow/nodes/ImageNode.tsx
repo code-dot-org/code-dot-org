@@ -12,7 +12,7 @@ import RotatedNodeResizer from './RotatedNodeResizer';
 import styles from './image-node.module.scss';
 
 function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
-  const {src, altText} = data;
+  const {src} = data;
   const {showHandles, hoverHandlers} = useConnectionHandleVisibility(
     selected,
     isConnectable
@@ -27,12 +27,8 @@ function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
   return (
     <div className={styles.imageNode} {...hoverHandlers}>
       <div className={styles.rotatable} style={rotatableStyle}>
-        <img
-          src={src}
-          alt={altText || 'Image node'}
-          className={styles.image}
-          draggable={false}
-        />
+        {/* The node wrapper carries the name; alt here would repeat it. */}
+        <img src={src} alt="" className={styles.image} draggable={false} />
 
         <RotatedNodeResizer
           isVisible={selected && !data.locked}

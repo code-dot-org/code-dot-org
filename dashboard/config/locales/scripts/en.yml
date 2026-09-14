@@ -30303,6 +30303,8 @@ en:
               name: 'Lesson 29: Random Values - Day 2'
             lesson-13:
               name: 'Lesson 30: Project - Wrapped'
+            lesson-14:
+              name: 'Lesson 12: Generative AI and LLMs'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs

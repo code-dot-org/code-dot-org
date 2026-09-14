@@ -134,7 +134,6 @@ cat <<JSON > $FIRST_BOOT
 <% if rack_env?(:adhoc) -%>
     "image_optim": false,
     "override_dashboard": "<%=studio_subdomain%>",
-    "override_pegasus": "$PEGASUS_DOMAIN_NAME",
 <% end -%>
     "stack_name": "$STACK"
   },

@@ -8,23 +8,12 @@ import MarkdownSteps from '@cdo/apps/templates/teacherDashboard/MarkdownSteps';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import cleverCodeOrgLogo from '../../../static/teacherDashboard/cleverCodeOrgLogo.svg';
+
 import styles from './signInInstructions.module.scss';
 
-const Heading = ({children}) => (
-  <Typography variant="label1" component="h3" className={styles.heading}>
-    {children}
-  </Typography>
-);
-
-Heading.propTypes = {children: PropTypes.node};
-
-const Intro = ({children}) => (
-  <Typography variant="body2" component="p">
-    {children}
-  </Typography>
-);
-
-Intro.propTypes = {children: PropTypes.node};
+// A standalone section heading reads at 20px, a subheading under one at 16px.
+const HEADING_VARIANT = {h2: 'h6', h3: 'label1'};
 
 export default class SignInInstructions extends React.Component {
   static propTypes = {
@@ -32,7 +21,25 @@ export default class SignInInstructions extends React.Component {
     sectionCode: PropTypes.string,
     studioUrlPrefix: PropTypes.string,
     sectionProviderName: PropTypes.string,
+    // h2 where this block opens a page, h3 where it sits under one.
+    headingLevel: PropTypes.oneOf(['h2', 'h3']),
   };
+
+  static defaultProps = {headingLevel: 'h2'};
+
+  heading(text) {
+    const {headingLevel} = this.props;
+    return (
+      <Typography
+        variant={HEADING_VARIANT[headingLevel]}
+        component={headingLevel}
+        className={styles.heading}
+      >
+        {text}
+      </Typography>
+    );
+  }
+
   render() {
     const {loginType, sectionCode, studioUrlPrefix} = this.props;
     const wordPicStep1 = i18n.signingInWordPic1({
@@ -40,12 +47,18 @@ export default class SignInInstructions extends React.Component {
       sectionCode: sectionCode,
       codeOrgLink: pegasus('/'),
     });
+    const intro = text => (
+      <Typography variant="body2" component="p">
+        {text}
+      </Typography>
+    );
+
     return (
       <div className={styles.instructions}>
         {loginType === SectionLoginType.word && (
-          <div>
-            <Heading>{i18n.signingInWord()}</Heading>
-            <Intro>{i18n.signingInWordIntro()}</Intro>
+          <>
+            {this.heading(i18n.signingInWord())}
+            {intro(i18n.signingInWordIntro())}
             <MarkdownSteps
               steps={[
                 wordPicStep1,
@@ -53,12 +66,12 @@ export default class SignInInstructions extends React.Component {
                 i18n.signingInWord3(),
               ]}
             />
-          </div>
+          </>
         )}
         {loginType === SectionLoginType.picture && (
-          <div>
-            <Heading>{i18n.signingInPic()}</Heading>
-            <Intro>{i18n.signingInPicIntro()}</Intro>
+          <>
+            {this.heading(i18n.signingInPic())}
+            {intro(i18n.signingInPicIntro())}
             <MarkdownSteps
               steps={[
                 wordPicStep1,
@@ -66,24 +79,24 @@ export default class SignInInstructions extends React.Component {
                 i18n.signingInPic3(),
               ]}
             />
-          </div>
+          </>
         )}
         {loginType === SectionLoginType.email && (
-          <div>
-            <Heading>{i18n.signingInEmail()}</Heading>
-            <Intro>{i18n.signingInEmailIntro()}</Intro>
+          <>
+            {this.heading(i18n.signingInEmail())}
+            {intro(i18n.signingInEmailIntro())}
             <MarkdownSteps
               steps={[
                 i18n.signingInEmailGoogle1({codeOrgLink: pegasus('/')}),
                 i18n.signingInEmail2(),
               ]}
             />
-          </div>
+          </>
         )}
         {loginType === SectionLoginType.google_classroom && (
-          <div>
-            <Heading>{i18n.signingInGoogle()}</Heading>
-            <Intro>{i18n.signingInGoogleIntro()}</Intro>
+          <>
+            {this.heading(i18n.signingInGoogle())}
+            {intro(i18n.signingInGoogleIntro())}
             <MarkdownSteps
               steps={[
                 i18n.signingInEmailGoogle1({codeOrgLink: pegasus('/')}),
@@ -91,40 +104,53 @@ export default class SignInInstructions extends React.Component {
                 i18n.signingInGoogle3(),
               ]}
             />
-          </div>
+          </>
         )}
         {loginType === SectionLoginType.clever && (
-          <div>
-            <Heading>{i18n.signingInClever()}</Heading>
-            <Intro>{i18n.signingInCleverIntro()}</Intro>
+          <>
+            {this.heading(i18n.signingInClever())}
+            {intro(i18n.signingInCleverIntro())}
             <MarkdownSteps steps={[i18n.signingInClever1()]} />
             <div className={styles.sublistAlign}>
               <Markdown content={i18n.signingInClever1a()} />
-              <Typography variant="body2" component="p">
-                {i18n.signingInClever1b()}
-              </Typography>
+              {intro(i18n.signingInClever1b())}
             </div>
             <MarkdownSteps steps={[i18n.signingInClever2()]} />
             <img
-              className={styles.sublistAlign}
-              src="/shared/images/clever_code_org_logo.png"
-              alt=""
+              className={styles.appIcon}
+              src={cleverCodeOrgLogo}
+              alt={i18n.codeLogoClever()}
             />
-          </div>
+          </>
+        )}
+        {loginType === SectionLoginType.classlink && (
+          <>
+            {this.heading('Signing in with ClassLink')}
+            <MarkdownSteps
+              steps={[
+                "1. Go to studio.code.org and click the 'Sign In' button",
+                "2. Choose 'Continue with ClassLink'",
+                '3. Sign-in via the ClassLink sign-in dialog',
+              ]}
+            />
+            {intro(
+              'Alternatively, students can sign into CodeAI by launching from ClassLink'
+            )}
+          </>
         )}
         {loginType === SectionLoginType.lti_v1 && (
-          <div>
-            <Heading>
-              {i18n.signingInLtiLoginHeader({
+          <>
+            {this.heading(
+              i18n.signingInLtiLoginHeader({
                 providerName: this.props.sectionProviderName,
-              })}
-            </Heading>
+              })
+            )}
             <Markdown
               content={i18n.signingInLtiLoginBody({
                 providerName: this.props.sectionProviderName,
               })}
             />
-          </div>
+          </>
         )}
       </div>
     );

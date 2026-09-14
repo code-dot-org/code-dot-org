@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-13T01:51:40.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# 1. Explain what your calculator does to the user\n\n\n# 2. Get input from the user. \n\n\n# 3. Calculate the result. Use input variables in the formula.\n\n\n# 4. Print the result with units and guidance\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr+j9gxv17dyo14\na42252fHLddFalYKq8zHVFnFORTmrf3WyNDz1Gix8GuTvG/Dr+rVwocVdb4Z\nbPkLAWVRKRihXooU8rE3yC8LcSH1PcjSzu8Eis0rYw+QLFjcA90L1aRqk0xT\n9mhKyaQgcJIMCFacES7xFNrgNI8Mk2jIGj+kOlkm1mtvO60b0wPyxQcDV+wo\nmEvceiUyVqcAP0cdDm95i9FvRzKPpLZ1VDe+Ualb6Rg/o+zEIAJUH5cgO5OW\nx6zIuIv6REdm06LMxv5lYikUnRWR1lqQldmpKgoJr2jMfm6rIM9Lq18z0io5\nIHt+oZrvJoNkYY8y/IyBuau8/7gPEr+7ZXwrK8ANFUu73ewHnlbyW5kjJQTs\nBhIbjapVK8jlcbhigxD14/qEnSfdfu5N54rHNp5RPppm6a6Idd6cHFigwTS7\nMzaRRquw0qtdrGnpBtR9nQj7PuIQeRzQtb984y+bF6IGnAq1SU+mk+V2Fteh\nOHEmrNrmeUy/DQMU9mu93ErizEuGGt3BmpfswbjLz1xYJgaTe+OAUQeXR/hW\n1UZ0iOxJYwJWrxA1vWzROxAISqge22oF3O+IVFu2mcBxMC6vkWHsasHpWI0l\nhaPp70uF1ds2xvI2cIWBPF73mznZ5/hegJ7C2GPp2+TqbrqAh1sLXGTfsEVt\nI0bBP8LFi5+vzMvHcsGBwisp1oFKgMJlQ++aq3ImzPRYcbhSDRxYXiD7qS6I\nwtcawUto357uDytek+4hT3DJRGP7MoYZMDH1ilJYhi9gVYnQ9GikkGpoKP0i\n4SaGgOKvVhdG8DO+AvE9BN3vodAhCxVzb7H2wRvEwKtJu0u5M3kawdaDCLj4\nkg+76aBYqXjEOwKDGEqWmaWNiFVyYH7pKlj9df0VFoy7C51rkovulpA0vQAi\nIARxXjfjxM4pQ6NxGSY1WdoaKkcAkOnDUTpsrrv5cYscTLxPPZrHFRxkU9RH\noewbRaCBNKSSUVkydyUA02oAz1BzT1QYtiBZa/hSc5tehAkdwVwiGT16o7Zt\n2lPN4vE/zVdSkKS3dYYPDeuZPNRKSjtGnoEIOwsGeOUc9fyHpSXVVOcjZdsc\n2JJ+BeXtgkzzgSEM//O4wNoLj+9j+7/obtoQiahLZ4QsufDFSjiFdiOy80un\n7iY/Ulj5GwoMExtANLfIXSV5VcJPANK/PeUsX6U7Oh536JyNiT349cmEdEOc\ntQsrkh/r83OyTkzSaVsOH7SD36N7OAQixkWKgy1OQlCH0r/H4p5Iat0LeZQJ\nNXShic4FTdAsxSbP+uHmL6CE5hoiNYSyGoDsiQ/Fw5zwZXSpgVC+/qXGgtWF\nTxZtiWfM4cdhu3yd0RMWtHqeggKtpIYQ1/ZJTOKkMbUMzRg/6rCq+8JC3Tu6\nJ8SBVu2BqcsCdgQMV+YBtro1dQ7SqlVkAR2wsJOWkI4jPIggLz+kPiqVVXyZ\nDjvKJNkTHV7l9WvY7w/1FCDN8FKcu70v1FYxPWFU\n",
+    "encrypted": "false",
+    "long_instructions": "## Custom Calculator\r\n\r\nUse your plan to program a custom calculator that:\r\n\r\n* asks the user for input\r\n* converts inputs to the correct data type using `str()`, `int()`, or `float()`\r\n* uses a formula with arithmetic operators \r\n* prints a clear result with units and user guidance\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-13 02:03:52 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:04:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:05:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:10:09 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>
