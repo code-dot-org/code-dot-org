@@ -58,6 +58,15 @@ Parameters:
   LogsBucket:
     Type: String
 Resources:
+  # Default parameter groups are immutable, so require_ssl has to live on a custom group.
+  TableauParameterGroup:
+    Type: AWS::Redshift::ClusterParameterGroup
+    Properties:
+      Description: Require SSL for connections to the Tableau Redshift cluster.
+      ParameterGroupFamily: redshift-1.0
+      Parameters:
+        - ParameterName: require_ssl
+          ParameterValue: 'true'
   Tableau:
     Type: AWS::Redshift::Cluster
     Metadata:
@@ -66,7 +75,7 @@ Resources:
     Properties:
       AllowVersionUpgrade: true
       AutomatedSnapshotRetentionPeriod: 5
-      ClusterParameterGroupName: default.redshift-1.0
+      ClusterParameterGroupName: !Ref TableauParameterGroup
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
       ClusterType: single-node
       ClusterVersion: 1.0
