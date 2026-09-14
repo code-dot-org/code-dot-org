@@ -72,6 +72,7 @@ import {expiresEnhancement} from './expires';
 import {fallsEnhancement} from './falls';
 import {healthEnhancement} from './health';
 import {holdsThingsUpEnhancement} from './holdsThingsUp';
+import {flapsEnhancement, prowlsEnhancement} from './hunts';
 import {jetpackEnhancement} from './jetpack';
 import {patrolsEnhancement} from './patrols';
 import {platformerControlsEnhancement} from './platformerControls';
@@ -280,7 +281,15 @@ export const GROUPS: readonly EnhancementGroup[] = [
     // platformer starts with is the first two of these applied to one actor
     // (`fixtures/platformerSingle`).
     name: 'Being an enemy',
-    members: [patrolsEnhancement, dealsDamageEnhancement, chasesEnhancement],
+    members: [
+      patrolsEnhancement,
+      dealsDamageEnhancement,
+      chasesEnhancement,
+      // …and the two that chase differently: one that gives up and goes back
+      // to its beat, and one that ignores the ground entirely.
+      prowlsEnhancement,
+      flapsEnhancement,
+    ],
   },
   {
     // Things that arrive and leave. One row so far; the spawner and the

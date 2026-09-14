@@ -12,6 +12,10 @@
 // already made and taught (`enhance/cameraFollow`). This is the second user of
 // that question, and the first that asks it on an ACTOR's behalf.
 //
+// THE SHAPE IS SHARED NOW. Flapping and Prowling ask the same question and
+// write the same line, so the hat, the repointing and the reading of it all
+// live in `enhance/hunts`; what is left here is what makes this row this row.
+//
 // WHAT IT WRITES:
 //
 //   actors/<target>.actor    define actor named ⟨…⟩
@@ -37,140 +41,16 @@
 // hat — the same reading, and the same edit in place, that the camera makes of
 // being aimed twice.
 
-import type {MultiFileSource} from '@code-dot-org/core/api';
+import {huntRow} from './hunts';
 
-import {fileIdAt} from '../../runtime/projectFiles';
-
-import {actorChoices} from './actorChoices';
-import {
-  edit,
-  electTraits,
-  fileOf,
-  importRules,
-  kindOf,
-  me,
-  subjectOf,
-  wears,
-} from './actorPatch';
-import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, down, rootsOf, type BlockJson} from './patch';
-
-const CHASES = 'Steering#ChasesTrait';
-const CREATED_HAT = 'world_on_Space_CreatedEvent';
-const SET_QUARRY = 'world_set_Steering_ActorToChaseProperty';
-
-/** `first actor of ⟨any ⟨kind⟩⟩` — the property holds one, not a list. */
-const firstOf = (actor: string) => ({
-  block: {type: 'world_first_actor', inputs: {SOURCE: kindOf(actor)}},
-});
-
-/** The hat this adds: when it appears, it learns what it is after. */
-const handler = (target: EnhanceTarget, actor: string): BlockJson => ({
-  type: CREATED_HAT,
-  inputs: {ACTOR: subjectOf(target)},
-  next: {
-    block: {
-      type: SET_QUARRY,
-      inputs: {ACTOR: me(), VALUE: firstOf(actor)},
-    },
-  },
-});
-
-/** Whether a block is the hat this wrote, about this actor. */
-const isOurs = (target: EnhanceTarget) => (block: BlockJson) => {
-  if (block.type !== CREATED_HAT) {
-    return false;
-  }
-  const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)?.block
-    ?.fields?.ACTOR;
-  const mine = target.block
-    ? named === `local:${target.block}`
-    : named === undefined;
-  return mine && [...down(block)].some(row => row.type === SET_QUARRY);
-};
-
-/** Who that hat currently points at, if the file holds one. */
-const aimedAt = (
-  contents: string,
-  target: EnhanceTarget,
-): string | undefined => {
-  for (const root of rootsOf(contents)) {
-    if (!isOurs(target)(root)) {
-      continue;
-    }
-    for (const row of down(root)) {
-      if (row.type !== SET_QUARRY) {
-        continue;
-      }
-      const value = (row.inputs?.VALUE as {block?: BlockJson} | undefined)
-        ?.block;
-      const source = (value?.inputs?.SOURCE as {block?: BlockJson} | undefined)
-        ?.block;
-      return source?.fields?.ACTOR as string | undefined;
-    }
-  }
-  return undefined;
-};
-
-/** Aim the hat this wrote somewhere else, in place. */
-const repoint = (
-  contents: string,
-  target: EnhanceTarget,
-  actor: string,
-): string => {
-  const workspace = JSON.parse(contents) as {blocks?: {blocks?: BlockJson[]}};
-  for (const root of workspace.blocks?.blocks ?? []) {
-    if (!isOurs(target)(root)) {
-      continue;
-    }
-    for (const row of down(root)) {
-      if (row.type === SET_QUARRY) {
-        row.inputs = {...row.inputs, VALUE: firstOf(actor)};
-      }
-    }
-  }
-  return JSON.stringify(workspace, null, 2);
-};
-
-export const chasesEnhancement: Enhancement = {
+export const chasesEnhancement = huntRow({
   id: 'chases',
-  subject: 'actor',
   name: 'Chases somebody',
   description:
     'Sets this actor after another one, steering towards it every frame and stopping when it is close enough. How fast it goes and how near it gets are blocks in its file. In a room with walls to go round, Path is the smarter cousin — this one walks straight at what it is after.',
   brings: ['Chases', 'a line saying who'],
-  asks: {
-    label: 'Chasing',
-    options: actorChoices,
-  },
-  applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(source, path);
-    const contents = id ? source.files[id].contents : '';
-    return (
-      wears(contents, CHASES, root) &&
-      answer !== undefined &&
-      aimedAt(contents, target) === answer
-    );
-  },
-  apply(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
-    if (answer === undefined) {
-      return source;
-    }
-    const current = importRules(source, ['Steering']);
-    const {path, root} = fileOf(target);
-    const id = fileIdAt(current, path);
-    if (id === undefined) {
-      return current;
-    }
-    return edit(current, id, contents => {
-      const next = electTraits(contents, root, [CHASES]);
-      return aimedAt(next, target) === undefined
-        ? // Beside the definition rather than under it: a hat takes no
-          // previous connection, and `DisableOrphansPlugin` grays out a
-          // top-level block that has one along with everything below it.
-          addRoot(next, handler(target, answer))
-        : repoint(next, target, answer);
-    });
-  },
-};
+  label: 'Chasing',
+  rules: ['Steering'],
+  traits: ['Steering#ChasesTrait'],
+  property: 'world_set_Steering_ActorToChaseProperty',
+});

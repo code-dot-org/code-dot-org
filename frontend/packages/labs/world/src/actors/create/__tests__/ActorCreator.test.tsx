@@ -12,6 +12,7 @@ import type {
   GeneratedPicture,
   ImageGenerator,
 } from '../../../appearance/generate/imageGenerator';
+import {groupsFor} from '../../enhance/enhancements';
 import {ActorCreator} from '../ActorCreator';
 
 const ACTORS = [
@@ -516,9 +517,24 @@ describe('the abilities step', () => {
   it('says how many are under each heading', () => {
     // Which is what makes a shut group worth looking at rather than a word
     // with nothing behind it.
+    //
+    // ASKED OF THE SHELF rather than of a number written here: this said
+    // "Being an enemy 3" until two more enemies were added, and a test that
+    // must be edited every time a row lands is one that will be edited
+    // without being read.
     toAbilities();
 
-    expect(screen.getByRole('button', {name: /Being an enemy 3/})).toBeTruthy();
+    const enemies = groupsFor({
+      kind: 'actor',
+      path: 'actors/chaser',
+      name: 'Chaser',
+    }).find(group => group.name === 'Being an enemy')!;
+
+    expect(
+      screen.getByRole('button', {
+        name: new RegExp(`Being an enemy ${enemies.members.length}`),
+      }),
+    ).toBeTruthy();
   });
 
   it('opens a group, and folds it away again', () => {
