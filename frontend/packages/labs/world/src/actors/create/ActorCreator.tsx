@@ -78,8 +78,15 @@ import type {TileScale} from '../../appearance/generate/ScaleGrid';
 import {
   allAnswered,
   EnhancementChecklist,
+  NO_PICKS,
+  withAnswer,
+  withPick,
 } from '../enhance/EnhancementChecklist';
-import {enhancementsFor, type EnhanceTarget} from '../enhance/enhancements';
+import {
+  enhancementsFor,
+  enhanceWith,
+  type EnhanceTarget,
+} from '../enhance/enhancements';
 
 import styles from './actorCreator.module.css';
 import type {ActorLook} from './actorLook';
@@ -334,8 +341,7 @@ export const ActorCreator = ({
    * were going to make anyway is a press that gets forgotten
    * (`enhance/EnhancementChecklist`).
    */
-  const [picked, setPicked] = useState<readonly string[]>([]);
-  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [picks, setPicks] = useState(NO_PICKS);
 
   /**
    * The name to write, which is the typed one or the chosen thing's.
@@ -405,21 +411,11 @@ export const ActorCreator = ({
    * a pure transform over a source, so a tick and an untick cost nothing but
    * this fold (specs/ENHANCEMENTS.md).
    */
-  const enhanced = (): MultiFileSource | undefined => {
-    if (!built || !target) {
-      return built?.source;
-    }
-    const offered = enhancementsFor(target);
-    return picked.reduce((source, id) => {
-      const one = offered.find(each => each.id === id);
-      return one ? one.apply(source, target, answers[id]) : source;
-    }, built.source);
-  };
+  const enhanced = (): MultiFileSource | undefined =>
+    built && target ? enhanceWith(built.source, target, picks) : built?.source;
 
   /** Whether everything ticked has the answer it needs — see `allAnswered`. */
-  const answered = target
-    ? allAnswered(picked, answers, enhancementsFor(target))
-    : true;
+  const answered = target ? allAnswered(picks, enhancementsFor(target)) : true;
 
   /**
    * Write the drawn picture and answer the look that names it, or nothing when
@@ -485,8 +481,7 @@ export const ActorCreator = ({
         // The ticks were about the actor that WAS. Walking back to rename it
         // and forward again rebuilds it, and an ability ticked against the old
         // one is an answer to a question no longer on screen.
-        setPicked([]);
-        setAnswers({});
+        setPicks(NO_PICKS);
       }
       setAt(step => step + 1);
       return;
@@ -888,30 +883,13 @@ export const ActorCreator = ({
             <EnhancementChecklist
               source={built.source}
               target={target}
-              picked={picked}
-              onPick={(id, on) => {
-                setPicked(was =>
-                  on ? [...was, id] : was.filter(each => each !== id),
-                );
-                // TICKING ANSWERS THE QUESTION TOO, where there is one. The
-                // row's dropdown is then a thing to CHANGE rather than a gate
-                // between the learner and the ability, and the first option is
-                // the likeliest by the order the row offers them.
-                if (on && built && target) {
-                  const asks = enhancementsFor(target).find(
-                    one => one.id === id,
-                  )?.asks;
-                  const first = asks?.options(built.source, target)[0];
-                  if (first) {
-                    setAnswers(was =>
-                      was[id] === undefined ? {...was, [id]: first.value} : was,
-                    );
-                  }
-                }
-              }}
-              answers={answers}
+              picked={picks.picked}
+              onPick={(id, on) =>
+                setPicks(was => withPick(was, id, on, built.source, target))
+              }
+              answers={picks.answers}
               onAnswer={(id, value) =>
-                setAnswers(was => ({...was, [id]: value}))
+                setPicks(was => withAnswer(was, id, value))
               }
             />
           )}

@@ -35,7 +35,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {setActorImportHandler} from '../actors/actorImport';
 import {setActorEnhanceHandler} from '../actors/enhance/actorEnhance';
 import {EnhanceActorDialog} from '../actors/enhance/EnhanceActorDialog';
-import type {Enhancement, EnhanceTarget} from '../actors/enhance/enhancements';
+import type {EnhanceTarget} from '../actors/enhance/enhancements';
 import {ImportActorDialog} from '../actors/ImportActorDialog';
 import {importStockActor} from '../actors/importStockActor';
 import type {StockActor} from '../actors/stock';
@@ -243,17 +243,10 @@ export const LibraryImports = () => {
         <EnhanceActorDialog
           source={sourcesRef.current.source}
           target={shelf.enhancing}
-          onEnhance={(enhancement: Enhancement, answer?: string) =>
+          onEnhance={(enhanced: MultiFileSource) =>
             // The actor's path back, so a caller waiting on this knows what
             // changed; nothing asks yet, and the seam hands back a string.
-            changed(
-              enhancement.apply(
-                sourcesRef.current.source,
-                shelf.enhancing,
-                answer,
-              ),
-              shelf.enhancing.path,
-            )
+            changed(enhanced, shelf.enhancing.path)
           }
           onCancel={cancel}
         />

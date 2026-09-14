@@ -77,9 +77,11 @@ describe('the import shelves', () => {
       path: 'actors/player',
       name: 'Platformer Player',
     });
+    // The shelf folds its groups at this length; open the one the row is in.
     fireEvent.click(
-      await screen.findByRole('button', {name: /Health, and a bar/}),
+      await screen.findByRole('button', {name: /Health, scoring and speech/}),
     );
+    fireEvent.click(screen.getByRole('checkbox', {name: /Health, and a bar/}));
     fireEvent.click(screen.getByRole('button', {name: 'Enhance'}));
 
     await expect(asked).resolves.toBe('actors/player');

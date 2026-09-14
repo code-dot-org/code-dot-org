@@ -344,6 +344,40 @@ export const ENHANCEMENTS: readonly Enhancement[] = GROUPS.flatMap(
 export const enhancementById = (id: string): Enhancement | undefined =>
   ENHANCEMENTS.find(one => one.id === id);
 
+/**
+ * What a checklist has collected: the rows ticked, in the order they were
+ * ticked, and the answers to the questions some of them ask, by row id.
+ *
+ * Nothing is applied while these are held. `apply` is a pure transform over a
+ * source, so a tick and an untick cost nothing but the fold in `enhanceWith`
+ * when a button is finally pressed (specs/ENHANCEMENTS.md).
+ */
+export interface Picks {
+  picked: readonly string[];
+  answers: Readonly<Record<string, string>>;
+}
+
+/**
+ * The thing with every picked row given to it.
+ *
+ * ONE FOLD FOR BOTH SURFACES. The Actor Creator applies this at `Create` and
+ * the enhance dialog at `Enhance`, and they must agree on the order (the one
+ * the rows were ticked in, which is the only order there is) and on what an
+ * unknown id does (nothing). Two copies of a six-line loop would be two
+ * chances to disagree about a row that arrives after somebody else's edits.
+ */
+export const enhanceWith = (
+  source: MultiFileSource,
+  target: EnhanceTarget,
+  {picked, answers}: Picks,
+): MultiFileSource => {
+  const offered = enhancementsFor(target);
+  return picked.reduce((current, id) => {
+    const one = offered.find(each => each.id === id);
+    return one ? one.apply(current, target, answers[id]) : current;
+  }, source);
+};
+
 /** The ones on offer for a thing of this kind. */
 export const enhancementsFor = (
   target: EnhanceTarget,

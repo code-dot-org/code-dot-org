@@ -140,6 +140,16 @@ It is not built on a read-only workspace, and that is where it parts company
 with the open button and the mortarboard beside it: those two READ — a version being
 previewed can still be looked into — and this one writes.
 
+**And what opens is the Actor Creator's third step**, with a title and an
+`Enhance` button instead of `Create` (`enhance/EnhancementChecklist`,
+`specs/ACTOR_CREATION_WIZARD.md`). The dialog once drew its own list and
+applied one row, on the reading that "one more thing" is a different act from
+building an actor up. At thirty-odd rows that was the same question drawn
+twice, and the frame with the prose inline was the one that read as a wall.
+Ticks are held and folded over the source on the press, the same fold the
+wizard makes (`enhanceWith`), so both surfaces agree on the order rows land
+in and neither is a copy of the other.
+
 ## Two kinds of actor, two shapes of patch
 
 Most actors have a file of their own. An actor a WORLD defines for itself does

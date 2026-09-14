@@ -1,16 +1,24 @@
-// The shelf as a CHECKLIST, which is what the Actor Creator's third step is.
+// The shelf as a CHECKLIST: the Actor Creator's third step, and the enhance
+// dialog that opens from an actor's own row or the wand on its block.
 //
-// It was the same rows as the enhancement dialog, pressed one at a time, with
-// an `Add this` button under them — and that was two mistakes wearing one
-// coat. The first is the one the drawing panel had: a press that is not the
+// It was rows pressed one at a time, with an `Add this` button under them —
+// and that was two mistakes wearing one coat. The first is the one the drawing panel had: a press that is not the
 // press you were going to make anyway is a press that gets forgotten, and this
 // one had to be made once PER ability. The second is that a button reading
 // "Add this" beside a list of twelve says nothing about the fact that you may
 // have as many as you like.
 //
-// So the rows are checkboxes and nothing is applied until `Create`. Checking
-// one is the whole act, the list can be read as a list, and what an actor will
-// be able to do is visible all at once rather than remembered.
+// So the rows are checkboxes and nothing is applied until `Create` — or
+// `Enhance`, which is the same press on the other frame. Checking one is the
+// whole act, the list can be read as a list, and what an actor will be able to
+// do is visible all at once rather than remembered.
+//
+// THE DIALOG USED TO BE ITS OWN LIST, choosing one row and closing, on the
+// argument that "give this one more thing" is a different act from building
+// one up. At four rows that was a distinction; at thirty it was the same
+// question drawn twice, and the frame that drew it as buttons with the prose
+// inline was the one reported as a wall. A learner who wants one thing ticks
+// one box.
 //
 // WHAT IT ALREADY HAS IS CHECKED AND LOCKED. Two of step one's three doors
 // hand this step an actor that can already do things — a copied Crawler
@@ -31,7 +39,13 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import styles from './enhancementChecklist.module.css';
-import {groupsFor, type Enhancement, type EnhanceTarget} from './enhancements';
+import {
+  enhancementsFor,
+  groupsFor,
+  type Enhancement,
+  type EnhanceTarget,
+  type Picks,
+} from './enhancements';
 
 export interface EnhancementChecklistProps {
   /** The actor as it stands, which is what "already has this" is asked of. */
@@ -54,6 +68,46 @@ export interface EnhancementChecklistProps {
  */
 const TIDY = 12;
 
+/** Nothing ticked yet, which is how both frames start. */
+export const NO_PICKS: Picks = {picked: [], answers: {}};
+
+/**
+ * The picks with one row ticked or unticked.
+ *
+ * TICKING ANSWERS THE QUESTION TOO, where there is one. The row's dropdown is
+ * then a thing to CHANGE rather than a gate between the learner and the
+ * ability, and the first option is the likeliest by the order the row offers
+ * them. An answer already given is kept: unticking and re-ticking is not a
+ * change of mind about who.
+ */
+export const withPick = (
+  picks: Picks,
+  id: string,
+  on: boolean,
+  source: MultiFileSource,
+  target: EnhanceTarget,
+): Picks => {
+  if (!on) {
+    return {...picks, picked: picks.picked.filter(each => each !== id)};
+  }
+  const picked = picks.picked.includes(id)
+    ? picks.picked
+    : [...picks.picked, id];
+  const asks = enhancementsFor(target).find(one => one.id === id)?.asks;
+  const first = asks?.options(source, target)[0];
+  const answers =
+    first && picks.answers[id] === undefined
+      ? {...picks.answers, [id]: first.value}
+      : picks.answers;
+  return {picked, answers};
+};
+
+/** The picks with one row's question answered. */
+export const withAnswer = (picks: Picks, id: string, value: string): Picks => ({
+  ...picks,
+  answers: {...picks.answers, [id]: value},
+});
+
 /** Whether this actor already has it — ticked, and not by this step. */
 export const alreadyHas = (
   enhancement: Enhancement,
@@ -69,8 +123,7 @@ export const alreadyHas = (
  * rebuilt to stop.
  */
 export const allAnswered = (
-  picked: readonly string[],
-  answers: Readonly<Record<string, string>>,
+  {picked, answers}: Picks,
   offered: readonly Enhancement[],
 ): boolean =>
   picked.every(id => {

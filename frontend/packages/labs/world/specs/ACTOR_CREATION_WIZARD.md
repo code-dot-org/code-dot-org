@@ -181,11 +181,12 @@ the top and nothing below (`specs/IMAGE_GENERATION.md`).
 
 ## Step 3 is the enhancement shelf, read as a checklist
 
-Built. What it shares with the dialog is the QUESTION — a name, a sentence,
-what it brings, whether this actor can take it, and the question the one that
-asks one raises — and each frame draws it its own way, because what a press
-means differs: `enhance/EnhancementRows` for the dialog's choose-one,
-`enhance/EnhancementChecklist` for this step's tick-many.
+Built. It is the same list the enhance dialog shows —
+`enhance/EnhancementChecklist`, ticked and folded over the source on the
+button, `enhanceWith` — in a different frame. The dialog used to draw its own
+rows and choose one, on the argument below; that argument held at four rows
+and not at thirty, so the dialog became this step with a title and an
+`Enhance` button (`enhance/EnhanceActorDialog`).
 
 Read as a step it wants to be BROAD. From an actor's own menu a list of ninety
 verbs is a wall; at the point of "what can this thing do" it is a menu of what
@@ -198,12 +199,13 @@ from here on are being added to this step as much as to that dialog.
 no work: `applied` is how a row already decides whether to say "already has
 this", and a copied or imported actor's traits are in the chain it reads.
 
-**It takes as many as the learner wants**, which is the one way this step is
-not the dialog. `EnhanceActorDialog` applies ONE and closes, which is right for
-what it is — "give this actor one more thing", asked from the actor's own row
-or from the wand on its `define actor`. Building an actor up is a different
-act: walking in and out of the shelf once per ability would make a Crawler
-three round trips.
+**It takes as many as the learner wants.** This was once the one way the step
+was not the dialog: `EnhanceActorDialog` applied ONE and closed, on the
+reading that "give this actor one more thing", asked from the actor's own row
+or from the wand on its `define actor`, is a different act from building one
+up. Walking in and out of the shelf once per ability would make a Crawler
+three round trips, and that is as true of an actor that exists as of one being
+made — a learner who wants one thing ticks one box.
 
 **So it is a CHECKLIST, and it was not.** The first cut drew the dialog's rows
 with an `Add this` button under them, applying one per press, and that was two
