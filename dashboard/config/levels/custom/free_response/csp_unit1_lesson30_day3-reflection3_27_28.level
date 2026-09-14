@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-12T01:54:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "## Does it do what you set out to do?\r\n\r\n> Look back at who you said this was for in your plan. If they saw your finished Wrapped right now, would it do what you promised them? What's one thing you'd change with more time?",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "50",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-12T01:54:29.329+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson30_day3-reflection2_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson30_day3-reflection2_27_28\"},{\"changed_at\":\"2026-09-12 01:55:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
