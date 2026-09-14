@@ -111,6 +111,9 @@ module SetupTest
     # HTTP requests.
     SetupTest.reset_dashboard_test_tables
 
+    # Enable stubbing.
+    Mocha::Mockery.setup
+
     random = Random.new(0)
     # 4 test wrappers:
     # VCR (record/replay HTTP interactions)
@@ -177,6 +180,9 @@ module SetupTest
     end
     # rubocop:enable CustomCops/PegasusDbUsage
     # rubocop:enable CustomCops/DashboardDbUsage
+
+    # Conclude stubbing.
+    Mocha::Mockery.teardown
 
     # Cached S3-client objects contain AWS credentials,
     # so reset them to ensure that they are not reused across tests.
