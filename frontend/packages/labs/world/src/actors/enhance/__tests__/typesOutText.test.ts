@@ -119,6 +119,37 @@ describe('the types-out-text enhancement, as edits', () => {
     ).toMatch(/file of its own/);
     expect(typesOut.refuse!(source, LABEL)).toBeUndefined();
   });
+
+  it('refuses an actor with no words', () => {
+    // `text` is the Label's own property, reached by acting like one. A Coin
+    // has none, and the rows would name a setter for a property it has not
+    // got — a file naming a block nothing defines.
+    const source = importStockActor(
+      importStockActor(
+        importStockActor(WORLD_SCENARIOS.empty.source, stockActorById('coin')!)
+          .source,
+        stockActorById('speechBox')!,
+      ).source,
+      stockActorById('label')!,
+    ).source;
+
+    expect(
+      typesOut.refuse!(source, {
+        kind: 'actor',
+        path: 'actors/coin',
+        name: 'Coin',
+      }),
+    ).toMatch(/no words/);
+    // …where the Speech Box acts like a Label, and so has them.
+    expect(
+      typesOut.refuse!(source, {
+        kind: 'actor',
+        path: 'actors/speechBox',
+        name: 'Speech Box',
+      }),
+    ).toBeUndefined();
+    expect(typesOut.refuse!(source, LABEL)).toBeUndefined();
+  });
 });
 
 describe('the types-out-text enhancement, played', () => {

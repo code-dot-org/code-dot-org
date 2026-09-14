@@ -20,51 +20,12 @@
 import * as Blockly from 'blockly';
 import {describe, expect, it} from 'vitest';
 
+import {typesIn} from '../../__tests__/support/blockTypes';
 import {DEFAULT_PROJECT, starterFile} from '../../constants';
 import {resolveRuleContents} from '../../rules/ruleReference';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
-
-/** A saved block, as much of one as this needs to walk it. */
-interface SavedBlock {
-  type?: string;
-  inputs?: Record<string, {block?: SavedBlock; shadow?: SavedBlock}>;
-  next?: {block?: SavedBlock; shadow?: SavedBlock};
-}
-
-/**
- * Every block type a workspace names.
- *
- * Walks the block tree specifically rather than every `type` key in the JSON:
- * a parameter's type is `type` too (`enum:Engine#Key`, `vector`), and so is a
- * variable's, and neither is a block.
- */
-function typesIn(contents: string): string[] {
-  let parsed: {blocks?: {blocks?: SavedBlock[]}};
-  try {
-    parsed = JSON.parse(contents);
-  } catch {
-    return [];
-  }
-  const found: string[] = [];
-  const visit = (block: SavedBlock | undefined): void => {
-    if (!block) {
-      return;
-    }
-    if (block.type) {
-      found.push(block.type);
-    }
-    for (const input of Object.values(block.inputs ?? {})) {
-      visit(input.block);
-      visit(input.shadow);
-    }
-    visit(block.next?.block);
-    visit(block.next?.shadow);
-  };
-  (parsed.blocks?.blocks ?? []).forEach(visit);
-  return found;
-}
 
 const files = projectFiles(DEFAULT_PROJECT.source);
 

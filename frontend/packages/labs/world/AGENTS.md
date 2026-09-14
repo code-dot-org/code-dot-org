@@ -263,6 +263,17 @@ nothing was done. `apply` with no answer returns the source untouched.
 does it again. Every edit checks for its own row first; `electTraits` already
 does, which is most of it.
 
+**A block type is a string nothing checks — except one test.**
+`enhance/__tests__/paletteGuard` applies every row on the shelf to a Coin, a
+Label, a world and an actor a world defines, and looks up every block type
+the result names in the palette the generator would build for it. A retired
+or respelled type fails there by row and file. Its first run caught the
+typewriter writing `set text` for a Coin, a property only a Label has, which
+is why that row now refuses an actor with no words. It also pins which rows
+step aside on each target, so a new `refuse` or `offered` shows up there and
+wants its reason written beside it. What it cannot see is a socket renamed
+under a type that still exists; the played test is for that.
+
 **A named block needs a declared variable.** `add actor … as ⟨shot⟩` and
 `say ⟨words⟩` both point at a variable in the workspace's own list, and written
 without the declaration Blockly loads a block naming a variable it has never

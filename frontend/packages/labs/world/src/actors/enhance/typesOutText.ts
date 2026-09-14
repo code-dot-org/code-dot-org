@@ -4,7 +4,7 @@
 // Speech Box elected (`actors/typewriter` tells that half). What makes it an
 // enhancement is the test this shelf sets: more than one edit, or a companion
 // actor, or a line aiming two things at each other. This is six declarations,
-// two elected traits and a handler, none of which works without the rest —
+// an elected trait and a handler, none of which works without the rest —
 // and none of which is "elect this trait", which belongs on the rule shelf.
 //
 // WHAT IT WRITES, all of it in the actor:
@@ -26,13 +26,17 @@
 // own member's block type carries its declaring file, which is what keeps a
 // Label's `say` apart from a Sign's (`ruleRegistry.memberLocalName`).
 //
-// IT DOES NOT DRAW THE WORDS, and that is the division `Shows Text` already
+// IT DOES NOT DRAW THE WORDS, and that is the division the Label already
 // makes: this decides how much of the line is showing and the actor decides
 // what showing looks like. A Label, a Button and a Speech Box all draw `text`
-// already, so any of them types itself out with nothing else done. An actor
-// that draws no text gets a line nobody can see — which is the same thing that
-// happens to an actor given `Shows Text` by hand, and the reason `brings` says
-// the trait arrives.
+// already, so any of them types itself out with nothing else done.
+//
+// AND IT REFUSES AN ACTOR WITH NO WORDS. `text` is the Label's own property
+// (`stock/label`, `LABEL_PROPERTIES`), so the setter this writes is named
+// after the Label's file and reaches an actor only through `acts like
+// ⟨Label⟩`. Given to a Coin it would write `set text` for a property the Coin
+// has not got, in a file that names a block nothing defines — which the
+// palette guard found on the first day it ran (`__tests__/paletteGuard`).
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -44,11 +48,28 @@ import {typewriterFor, TYPEWRITER_TRAITS} from '../typewriter';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, append, holds, type BlockJson} from './patch';
 
-/** The rules the two traits come from, in the order they are elected in. */
+/** The rule the trait comes from. */
 const RULES = ['Time'];
 
 /** The `define actor` this patch lands under — a file's only one. */
 const ROOT = {type: 'world_actor'};
+
+/** The file whose `text` the typewriter reveals. */
+const LABEL = 'actors/label';
+
+/**
+ * Whether this actor has words: it is the Label, or acts like it.
+ *
+ * `acts like` is where a Button and a Speech Box get their `text` from, and
+ * an actor that neither is nor acts like a Label has no `text` to reveal.
+ */
+const hasWords = (contents: string, path: string): boolean =>
+  path === LABEL ||
+  holds(
+    contents,
+    ROOT,
+    block => block.type === 'world_acts_like' && block.fields?.ACTOR === LABEL,
+  );
 
 /** Whether a `use trait` for `trait` is already in the actor's chain. */
 const hasTrait = (contents: string, trait: string): boolean =>
@@ -95,17 +116,26 @@ export const typesOutTextEnhancement: Enhancement = {
   name: 'Types out what it says',
   description:
     'Gives this actor a line it says a few letters at a time. “Say” starts one, “show all of it” skips to the end for a reader who has read ahead, and “finishes revealing” is the cue to move on. What draws the words is the actor’s own business — a Label, a Button and a Speech Box already draw their text.',
-  brings: ['Shows Text', 'Keeps Time'],
-  refuse(_source: MultiFileSource, target: EnhanceTarget) {
+  brings: ['Keeps Time'],
+  refuse(source: MultiFileSource, target: EnhanceTarget) {
     // AN ACTOR A WORLD DEFINES FOR ITSELF CANNOT TAKE IT. Its body generates
     // into a block scope, and `define block` and `define event` both emit an
     // `export const`, which is not legal there — so the palette does not offer
     // either inside a world's own `define actor` and the generator refuses one
     // pasted in (`blockly/fileKind`, `domainBlocks.definesActorFile`). Writing
     // the rows anyway would leave a file that silently generates nothing.
-    return target.block
-      ? 'This actor is defined inside its world, which cannot hold a “define block”. Give it a file of its own first.'
-      : undefined;
+    if (target.block) {
+      return 'This actor is defined inside its world, which cannot hold a “define block”. Give it a file of its own first.';
+    }
+    // AND ONE WITH NOTHING TO SAY. The words are the Label's `text`, and this
+    // reveals them a letter at a time; an actor that neither is a Label nor
+    // acts like one has no `text`, and the rows would name a setter for a
+    // property it has not got.
+    const id = fileIdAt(source, `${target.path}.actor`);
+    if (id && !hasWords(source.files[id].contents, target.path)) {
+      return 'This actor has no words to type out. A Label, a Button or a Speech Box has, and so does anything that acts like a Label.';
+    }
+    return undefined;
   },
   applied(source: MultiFileSource, target: EnhanceTarget) {
     const id = fileIdAt(source, `${target.path}.actor`);
