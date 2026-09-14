@@ -217,11 +217,7 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       {selectedStudent && (
-        <Typography
-          variant="h4"
-          className={styles.studentNameHeader}
-          gutterBottom
-        >
+        <Typography variant="h4" gutterBottom>
           {selectedStudent ? getFullName(selectedStudent) : 'Unknown student'}
         </Typography>
       )}

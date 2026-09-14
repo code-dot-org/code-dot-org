@@ -2,17 +2,25 @@ jest.mock('@code-dot-org/core/plugins/observability', () => ({
   startSpan: jest.fn((_options: unknown, callback: () => unknown) =>
     callback()
   ),
+  metrics: {count: jest.fn(), distribution: jest.fn(), gauge: jest.fn()},
+  logger: {error: jest.fn(), warn: jest.fn(), info: jest.fn()},
 }));
 
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
-import {TOKEN_MAX_AGE_MS} from '@cdo/apps/aiGateway/turnstile/constants';
+import {
+  CHALLENGE_TIMEOUT_MS,
+  TOKEN_MAX_AGE_MS,
+} from '@cdo/apps/aiGateway/turnstile/constants';
+import {
+  parseTurnstileEnforcementMode,
+  type TurnstileEnforcementMode,
+} from '@cdo/apps/aiGateway/turnstile/enforcementMode';
 import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {
-  fetchTurnstileTokenIfEnabled,
+  fetchTurnstileToken,
   turnstileHeaders,
 } from '@cdo/apps/aiGateway/turnstile/util';
-import experiments from '@cdo/apps/util/experiments';
 
 const startSpanMock = Observability.startSpan as jest.Mock;
 
@@ -32,38 +40,72 @@ describe('turnstileHeaders', () => {
   });
 });
 
-describe('fetchTurnstileTokenIfEnabled', () => {
-  it('resolves null without calling getInstance when experiment is off', async () => {
-    jest
-      .spyOn(experiments, 'isEnabledAllowingQueryString')
-      .mockReturnValue(false);
+describe('parseTurnstileEnforcementMode', () => {
+  it.each(['disabled', 'monitor', 'enforce'])('accepts %s', enforcementMode => {
+    expect(parseTurnstileEnforcementMode(enforcementMode)).toBe(
+      enforcementMode
+    );
+  });
+
+  // The mode crosses a JSON boundary from a server that may predate the field,
+  // and DCDO behind it stores arbitrary JSON. Everything unrecognized has to
+  // land on 'disabled' rather than switching enforcement on or leaving the
+  // browser acting on a mode the worker does not share.
+  it.each([undefined, null, false, true, 'enfroce', 1, {mode: 'enforce'}])(
+    'falls back to disabled for %p',
+    value => {
+      expect(parseTurnstileEnforcementMode(value)).toBe('disabled');
+    }
+  );
+});
+
+describe('fetchTurnstileToken', () => {
+  const stubManager = (getTurnstileToken: jest.Mock) => {
+    document.body.innerHTML = '';
+    return jest.spyOn(TurnstileManager, 'getInstance').mockReturnValue({
+      getTurnstileToken,
+    } as unknown as TurnstileManager);
+  };
+
+  it('resolves null without instantiating the manager when disabled', async () => {
     const getInstanceSpy = jest.spyOn(TurnstileManager, 'getInstance');
 
-    const result = await fetchTurnstileTokenIfEnabled();
+    const result = await fetchTurnstileToken('disabled');
 
     expect(result).toBeNull();
+    // The constructor appends a container to document.body, so a page that
+    // never enforces must not reach it at all.
     expect(getInstanceSpy).not.toHaveBeenCalled();
   });
 
-  it('calls getInstance when experiment is on', async () => {
-    jest
-      .spyOn(experiments, 'isEnabledAllowingQueryString')
-      .mockReturnValue(true);
+  const enforcingModes: TurnstileEnforcementMode[] = ['monitor', 'enforce'];
 
-    // Provide a minimal DOM environment so the constructor can run.
-    document.body.innerHTML = '';
-    const mockToken = 'test-token';
-    const getTurnstileTokenMock = jest.fn().mockResolvedValue(mockToken);
-    const getInstanceSpy = jest
-      .spyOn(TurnstileManager, 'getInstance')
-      .mockReturnValue({
-        getTurnstileToken: getTurnstileTokenMock,
-      } as unknown as TurnstileManager);
+  it.each(enforcingModes)('returns the token in %s', async enforcementMode => {
+    const getInstanceSpy = stubManager(
+      jest.fn().mockResolvedValue('test-token')
+    );
 
-    const result = await fetchTurnstileTokenIfEnabled();
+    const result = await fetchTurnstileToken(enforcementMode);
 
     expect(getInstanceSpy).toHaveBeenCalled();
-    expect(result).toBe(mockToken);
+    expect(result).toBe('test-token');
+  });
+
+  it('resolves null when the challenge fails in monitor', async () => {
+    stubManager(jest.fn().mockRejectedValue(new Error('challenge failed')));
+
+    // Fails open: the worker tolerates a missing token in monitor, so failing
+    // the request here would inflict the breakage monitor exists to measure.
+    await expect(fetchTurnstileToken('monitor')).resolves.toBeNull();
+  });
+
+  it('rejects when the challenge fails in enforce', async () => {
+    const failure = new Error('challenge failed');
+    stubManager(jest.fn().mockRejectedValue(failure));
+
+    // Fails closed: the worker would reject the request anyway, so surfacing
+    // the real error beats a bare 401.
+    await expect(fetchTurnstileToken('enforce')).rejects.toBe(failure);
   });
 });
 
@@ -72,10 +114,14 @@ type TurnstileManagerPrivates = {
   nextTokenPromise: Promise<string> | null;
   nextTokenResolvedAt: number | null;
   startTokenAcquisition: () => {
-    mode: 'pre-fetch' | 'on-demand';
+    acquisitionMode: 'pre-fetch' | 'on-demand';
     token: Promise<string>;
   };
-  runSerializedChallenge: () => Promise<string>;
+  nextTokenOutcomeMode: {acquisitionMode: 'pre-fetch' | 'on-demand'} | null;
+  runSerializedChallenge: (outcomeMode: {
+    acquisitionMode: 'pre-fetch' | 'on-demand';
+  }) => Promise<string>;
+  runChallenge: () => Promise<string>;
 };
 
 describe('TurnstileManager stale pre-fetch', () => {
@@ -100,10 +146,10 @@ describe('TurnstileManager stale pre-fetch', () => {
     m.nextTokenPromise = Promise.resolve('stale-token');
     m.nextTokenResolvedAt = Date.now() - TOKEN_MAX_AGE_MS - 1000;
 
-    const {mode, token} = m.startTokenAcquisition();
+    const {acquisitionMode, token} = m.startTokenAcquisition();
 
     expect(await token).toBe(freshToken);
-    expect(mode).toBe('on-demand');
+    expect(acquisitionMode).toBe('on-demand');
     // call #1: fresh challenge replacing stale token; call #2: schedulePrefetch after delivery
     expect(freshChallenge).toHaveBeenCalledTimes(2);
   });
@@ -119,13 +165,88 @@ describe('TurnstileManager stale pre-fetch', () => {
     m.nextTokenPromise = Promise.resolve(validToken);
     m.nextTokenResolvedAt = Date.now() - 60_000; // 1 minute old — well within limit
 
-    const {mode, token} = m.startTokenAcquisition();
+    const {acquisitionMode, token} = m.startTokenAcquisition();
 
     expect(await token).toBe(validToken);
-    expect(mode).toBe('pre-fetch');
+    expect(acquisitionMode).toBe('pre-fetch');
     // runSerializedChallenge called once for the scheduled pre-fetch, not to
     // replace the valid token.
     expect(freshChallenge).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('TurnstileManager challenge acquisition mode', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('labels a challenge started for a waiting caller as on-demand', () => {
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    const challenge = jest.fn().mockResolvedValue('token');
+    jest.spyOn(m, 'runSerializedChallenge').mockImplementation(challenge);
+
+    m.startTokenAcquisition();
+
+    expect(challenge).toHaveBeenCalledWith({acquisitionMode: 'on-demand'});
+  });
+
+  it('labels the speculative follow-up challenge as pre-fetch', async () => {
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    const challenge = jest.fn().mockResolvedValue('token');
+    jest.spyOn(m, 'runSerializedChallenge').mockImplementation(challenge);
+
+    const {token} = m.startTokenAcquisition();
+    await token;
+
+    expect(challenge).toHaveBeenNthCalledWith(1, {
+      acquisitionMode: 'on-demand',
+    });
+    expect(challenge).toHaveBeenNthCalledWith(2, {
+      acquisitionMode: 'pre-fetch',
+    });
+  });
+
+  it('promotes a still-running pre-fetch to on-demand when a caller adopts it', () => {
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    jest
+      .spyOn(m, 'runSerializedChallenge')
+      .mockResolvedValue('replacement-token');
+
+    const outcomeMode: {acquisitionMode: 'pre-fetch' | 'on-demand'} = {
+      acquisitionMode: 'pre-fetch',
+    };
+    m.nextTokenPromise = new Promise(() => {}); // never settles
+    m.nextTokenResolvedAt = null;
+    m.nextTokenOutcomeMode = outcomeMode;
+
+    m.startTokenAcquisition();
+
+    expect(outcomeMode.acquisitionMode).toBe('on-demand');
+  });
+
+  it('leaves an already-resolved pre-fetch labelled pre-fetch', () => {
+    const m =
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates;
+    jest.spyOn(m, 'runSerializedChallenge').mockResolvedValue('ignored');
+
+    const outcomeMode: {acquisitionMode: 'pre-fetch' | 'on-demand'} = {
+      acquisitionMode: 'pre-fetch',
+    };
+    m.nextTokenPromise = Promise.resolve('prefetched-token');
+    m.nextTokenResolvedAt = Date.now();
+    m.nextTokenOutcomeMode = outcomeMode;
+
+    m.startTokenAcquisition();
+
+    expect(outcomeMode.acquisitionMode).toBe('pre-fetch');
   });
 });
 
@@ -140,7 +261,7 @@ describe('TurnstileManager token acquisition span', () => {
   ) => {
     const manager = TurnstileManager.getInstance();
     prepare(manager as unknown as TurnstileManagerPrivates);
-    return manager.getTurnstileToken();
+    return manager.getTurnstileToken('enforce');
   };
 
   it('wraps an on-demand challenge in an ai-gateway.turnstile span', async () => {
@@ -153,7 +274,11 @@ describe('TurnstileManager token acquisition span', () => {
       {
         name: 'ai-gateway.turnstile',
         op: 'ai.turnstile',
-        attributes: {'turnstile.mode': 'on-demand', feature: 'ai-gateway'},
+        attributes: {
+          'turnstile.acquisition_mode': 'on-demand',
+          'turnstile.enforcement_mode': 'enforce',
+          feature: 'ai-gateway',
+        },
       },
       expect.any(Function)
     );
@@ -169,7 +294,11 @@ describe('TurnstileManager token acquisition span', () => {
     expect(token).toBe('prefetched-token');
     expect(startSpanMock).toHaveBeenCalledWith(
       expect.objectContaining({
-        attributes: {'turnstile.mode': 'pre-fetch', feature: 'ai-gateway'},
+        attributes: {
+          'turnstile.acquisition_mode': 'pre-fetch',
+          'turnstile.enforcement_mode': 'enforce',
+          feature: 'ai-gateway',
+        },
       }),
       expect.any(Function)
     );
@@ -210,5 +339,92 @@ describe('TurnstileManager.getInstance', () => {
     TurnstileManager.getInstance();
     TurnstileManager.getInstance();
     expect(document.querySelectorAll('#turnstile-container').length).toBe(1);
+  });
+});
+
+// Options handed to turnstile.render(), captured so the tests can drive the
+// callbacks the way Cloudflare would.
+type RenderOptions = {
+  sitekey: string;
+  callback: (token: string) => void;
+  'error-callback': (errorCode: string) => void;
+  'unsupported-callback': () => void;
+};
+
+describe('TurnstileManager challenge failure callbacks', () => {
+  let renderOptions: RenderOptions;
+  let removeMock: jest.Mock;
+
+  beforeEach(() => {
+    document.body.innerHTML = '';
+    jest.useFakeTimers();
+    removeMock = jest.fn();
+    (window as unknown as {turnstile: unknown}).turnstile = {
+      render: jest.fn((_container: HTMLElement, options: RenderOptions) => {
+        renderOptions = options;
+        return 'widget-1';
+      }),
+      remove: removeMock,
+      reset: jest.fn(),
+    };
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  const startChallenge = () =>
+    (
+      TurnstileManager.getInstance() as unknown as TurnstileManagerPrivates
+    ).runChallenge();
+
+  // Turnstile retries on its own (retry defaults to auto, retry-interval 8s),
+  // so settling on the first error would abandon a challenge that recovers.
+  it('does not settle on error-callback, letting an automatic retry win', async () => {
+    const challenge = startChallenge();
+
+    renderOptions['error-callback']('300030');
+    renderOptions.callback('token-after-retry');
+
+    await expect(challenge).resolves.toBe('token-after-retry');
+  });
+
+  it('reports challenge_failed when the deadline passes after an error', async () => {
+    const challenge = startChallenge();
+    const assertion = expect(challenge).rejects.toMatchObject({
+      reason: 'challenge_failed',
+    });
+
+    renderOptions['error-callback']('300030');
+    jest.advanceTimersByTime(CHALLENGE_TIMEOUT_MS);
+
+    await assertion;
+  });
+
+  // Distinguishing this from challenge_failed is the point: nothing responded
+  // at all means the widget is broken, not that Cloudflare turned us down.
+  it('reports timeout when nothing responded at all', async () => {
+    const challenge = startChallenge();
+    const assertion = expect(challenge).rejects.toMatchObject({
+      reason: 'timeout',
+    });
+
+    jest.advanceTimersByTime(CHALLENGE_TIMEOUT_MS);
+
+    await assertion;
+  });
+
+  // Retrying cannot make an unsupported browser supported, so this one is
+  // terminal -- and it must not wait out the full deadline to say so.
+  it('rejects immediately as unsupported without waiting for the deadline', async () => {
+    const challenge = startChallenge();
+    const assertion = expect(challenge).rejects.toMatchObject({
+      reason: 'unsupported',
+    });
+
+    renderOptions['unsupported-callback']();
+
+    expect(removeMock).toHaveBeenCalledWith('widget-1');
+    await assertion;
   });
 });

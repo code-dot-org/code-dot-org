@@ -85,7 +85,7 @@
         {
           "type": "rating",
           "name": "confident_to_teach",
-          "title": "How confident did you feel in your ablity to effectively teach the concepts in {unit_name}?",
+          "title": "How confident did you feel in your ability to effectively teach the concepts in {unit_name}?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not Confident At All",

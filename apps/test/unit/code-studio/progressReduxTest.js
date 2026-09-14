@@ -34,6 +34,8 @@ import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
+const BUBBLE_CHOICE_LEVEL_ID = '103';
+
 // This is some sample lesson data taken from a course. I truncated to the first two
 // lessons, and also truncated the second lesson to the first 3 levels
 const lessonData = [
@@ -89,7 +91,7 @@ const lessonData = [
         path: '/courses/course3/units/1/lessons/1/levels/2',
       },
       {
-        id: '103',
+        id: BUBBLE_CHOICE_LEVEL_ID,
         ids: ['322'],
         activeId: '322',
         position: 3,
@@ -1136,6 +1138,86 @@ describe('progressReduxTest', () => {
   });
 
   describe('getNextLevel', () => {
+    // A bubble choice level that can be appended after the existing bubble
+    // choice level (id 103). Its sublevels share positions 1 and 2 with
+    // sublevels 10301/10302, which is what 'next_sublevel' matches on.
+    const nextBubbleChoiceLevel = {
+      id: '104',
+      ids: ['324'],
+      activeId: '324',
+      position: 4,
+      kind: LevelKind.puzzle,
+      icon: null,
+      title: 3,
+      url: 'http://localhost-studio.code.org:3000/courses/course3/units/1/lessons/1/levels/4',
+      is_concept_level: false,
+      bonus: false,
+      display_as_unplugged: false,
+      app: 'maze',
+      uses_lab2: false,
+      is_validated: false,
+      path: '/courses/course3/units/1/lessons/1/levels/4',
+      sublevels: [
+        {
+          id: '10401',
+          position: 1,
+          icon: null,
+          url: 'http://localhost-studio.code.org:3000/courses/course3/units/1/lessons/1/levels/4/sublevel/1',
+          path: 's/course3/lessons/1/levels/4/sublevel/1',
+          uses_lab2: false,
+          type: 'maze',
+          letter: 'a',
+          navigation_type: 'next_sublevel',
+        },
+        {
+          id: '10402',
+          position: 2,
+          icon: null,
+          url: 'http://localhost-studio.code.org:3000/courses/course3/units/1/lessons/1/levels/4/sublevel/2',
+          path: 's/course3/lessons/1/levels/4/sublevel/2',
+          uses_lab2: false,
+          type: 'maze',
+          letter: 'b',
+          navigation_type: 'next_sublevel',
+        },
+      ],
+    };
+
+    // Lesson 1's levels with every sublevel of the bubble choice level set
+    // to the given navigation type.
+    const withSublevelNavigation = navigationType =>
+      lessonData[0].levels.map(level =>
+        level.id === BUBBLE_CHOICE_LEVEL_ID
+          ? {
+              ...level,
+              sublevels: level.sublevels.map(sublevel => ({
+                ...sublevel,
+                navigation_type: navigationType,
+              })),
+            }
+          : level
+      );
+
+    // Build a state on the given level in lesson 1, optionally replacing
+    // lesson 1's levels.
+    const buildState = (currentLevelId, lessonOneLevels) => {
+      const lessons = lessonOneLevels
+        ? lessonData.map((lesson, i) =>
+            i === 0 ? {...lesson, levels: lessonOneLevels} : lesson
+          )
+        : lessonData;
+      return {
+        progress: {
+          ...reducer(
+            undefined,
+            initProgress({...initialUnitOverviewProgress, lessons})
+          ),
+          currentLevelId,
+          currentLessonId: lessonData[0].id,
+        },
+      };
+    };
+
     it('returns undefined when not on a level', () => {
       const initializedState = reducer(
         undefined,
@@ -1245,6 +1327,63 @@ describe('progressReduxTest', () => {
       };
 
       assert.equal(getNextLevel(state).id, finalLevel.activeId);
+    });
+
+    it('returns undefined when on the last level of the lesson', () => {
+      const state = buildState(lessonData[0].levels[2].activeId);
+
+      assert.equal(getNextLevel(state), undefined);
+    });
+
+    it('returns undefined for a sublevel with the "next_level" navigation when the parent is the last level', () => {
+      // Sublevel 10301 has the 'next_level' navigation type, and its parent
+      // (id 103) is the last level of lesson 1.
+      const state = buildState(lessonData[0].levels[2].sublevels[0].id);
+
+      assert.equal(getNextLevel(state), undefined);
+    });
+
+    it('returns the matching sublevel of the next level for a sublevel with the "next_sublevel" navigation', () => {
+      // Current level is sublevel 10302 (position 2); the next level's
+      // sublevel at position 2 is 10402.
+      const state = buildState(lessonData[0].levels[2].sublevels[1].id, [
+        ...withSublevelNavigation('next_sublevel'),
+        nextBubbleChoiceLevel,
+      ]);
+
+      assert.equal(getNextLevel(state).id, '10402');
+    });
+
+    it('falls back to the next level when the "next_sublevel" navigation finds no matching sublevel', () => {
+      // The next level only has a sublevel at position 1, so sublevel 10302
+      // (position 2) has no counterpart to jump to.
+      const state = buildState(lessonData[0].levels[2].sublevels[1].id, [
+        ...withSublevelNavigation('next_sublevel'),
+        {
+          ...nextBubbleChoiceLevel,
+          sublevels: nextBubbleChoiceLevel.sublevels.slice(0, 1),
+        },
+      ]);
+
+      assert.equal(getNextLevel(state).id, nextBubbleChoiceLevel.activeId);
+    });
+
+    it('falls back to the next level when the "next_sublevel" navigation is followed by a level without sublevels', () => {
+      const state = buildState(lessonData[0].levels[2].sublevels[1].id, [
+        ...withSublevelNavigation('next_sublevel'),
+        {...nextBubbleChoiceLevel, sublevels: []},
+      ]);
+
+      assert.equal(getNextLevel(state).id, nextBubbleChoiceLevel.activeId);
+    });
+
+    it('returns undefined for a sublevel with the "next_sublevel" navigation when the parent is the last level', () => {
+      const state = buildState(
+        lessonData[0].levels[2].sublevels[1].id,
+        withSublevelNavigation('next_sublevel')
+      );
+
+      assert.equal(getNextLevel(state), undefined);
     });
   });
 

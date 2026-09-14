@@ -3,46 +3,69 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Creating and Using Functions in Python
+<h1>Creating and Using Functions in Python</h1>
+<p>Now that we know why functions are useful, let's look at how to make one in Python.</p>
+<p>There are a few key steps:</p>
 
-Now that we know why functions are useful, let’s look at how to make one in Python.
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
 
-There are a few key steps:
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #E4E2F8; padding: 20px; border-radius: 10px; width: 60px; height: 60px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+      <span style="font-size: 22px; font-weight: bold; color: #1F1976;">1</span>
+    </div>
+    <div style="flex: 1; background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 12px 18px; border-radius: 10px;">
+      <h3 style="color: #1F1976; font-weight: bold; margin: 0 0 6px 0;">Give your function a name</h3>
+      <p>A function needs a name so you can refer to it later. Pick something that describes what the function does, like <code style="font-size:14px;">greet&#95;user</code> or <code style="font-size:14px;">calculate&#95;total</code>. Remember to use <code style="font-size:14px;">snake&#95;case</code>!</p>
+    </div>
+  </div>
 
-### 🧩 **1. Give your function a name**
-A function needs a name so you can refer to it later. Pick something that describes what the function does, like `greet_user` or `calculate_total`.
-*Remember to use snake_case!*
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #E4E2F8; padding: 20px; border-radius: 10px; width: 60px; height: 60px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+      <span style="font-size: 22px; font-weight: bold; color: #1F1976;">2</span>
+    </div>
+    <div style="flex: 1; background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 12px 18px; border-radius: 10px;">
+      <h3 style="color: #1F1976; font-weight: bold; margin: 0 0 6px 0;">Use the def keyword to define the function</h3>
+      <p style="margin-bottom: 14px;">In Python, every function starts with the word <b>def</b> (short for define), followed by the function's name and parentheses <code style="font-size:14px;">()</code> and a colon <code style="font-size:14px;">:</code>.</p>
+      <div style="max-width:400px; padding:16px 20px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#1C1F2A; color:#FFFFFF; border-radius:10px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.7;">
+        <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">greet</span>():
+      </div>
+    </div>
+  </div>
 
----
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #E4E2F8; padding: 20px; border-radius: 10px; width: 60px; height: 60px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+      <span style="font-size: 22px; font-weight: bold; color: #1F1976;">3</span>
+    </div>
+    <div style="flex: 1; background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 12px 18px; border-radius: 10px;">
+      <h3 style="color: #1F1976; font-weight: bold; margin: 0 0 6px 0;">Write the code you want to run (inside the function)</h3>
+      <p style="margin-bottom: 14px;">The code inside the function is indented, usually 4 spaces or a tab. This tells Python what belongs to the function.</p>
+      <div style="max-width:400px; padding:16px 20px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#1C1F2A; color:#FFFFFF; border-radius:10px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.7;">
+        <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">greet</span>():<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Hello, World!"</span>)
+      </div>
+      <div style="background-color: #D5EFFF; color: #06338D; border-radius: 8px; padding: 10px 14px; margin-top: 12px;">
+        <p>➡️ <i>Indentation matters in Python! If the lines aren't indented, Python won't know they're part of the function.</i></p>
+      </div>
+    </div>
+  </div>
 
+  <div style="display: flex; align-items: center; gap: 25px;">
+    <div style="background: #E4E2F8; padding: 20px; border-radius: 10px; width: 60px; height: 60px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+      <span style="font-size: 22px; font-weight: bold; color: #1F1976;">4</span>
+    </div>
+    <div style="flex: 1; background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 12px 18px; border-radius: 10px;">
+      <h3 style="color: #1F1976; font-weight: bold; margin: 0 0 6px 0;">Call the function to make it run</h3>
+      <p style="margin-bottom: 14px;">Just defining a function doesn't run it. You have to call it by typing its name with parentheses:</p>
+      <div style="max-width:400px; padding:16px 20px; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#1C1F2A; color:#FFFFFF; border-radius:10px; font-family:'Courier New',Courier,monospace; font-size:16px; line-height:1.7;">
+        <span style="color:#6FCAFF;">def</span> <span style="color:#F07FB0;">greet</span>():<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6FCAFF;">print</span>(<span style="color:#F07FB0;">"Hello, World!"</span>)<br>
+        <br>
+       <span style="color:#F07FB0;">greet</span>()
+      </div>
+    </div>
+  </div>
 
+</div>
 
-### 🔧 **2. Use the def keyword to define the function**
-In Python, every function starts with the word **def** (short for define), followed by the function’s name and parentheses `()` and a colon `:`.
-
-<img src="https://images.code.org/d1d4d3a51160578261fa58167815c8c4-image-1745423539641.png" alt="Python code defining a function reading def greet" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
-
-<div style="clear:both;"></div>
-
----
-
-### 🧱 **3. Write the code you want to run (inside the function)**
-The code inside the function is indented—usually 4 spaces or a tab. This tells Python what belongs to the function.
-
-<img src="https://images.code.org/f79184f8c12b563c740ec65b67acd854-image-1745423616328.png" alt="Python code defining a function reading def greet with an indented print statement saying hello world" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
-
-<div style="clear:both;"></div>
-
-➡️ *Indentation matters in Python! If the lines aren't indented, Python won’t know they’re part of the function.*
-
----
-
-### ▶️ **4. Call the function to make it run**
-Just defining a function doesn’t run it. You have to call it by typing its name with parentheses:
-
-<img src="https://images.code.org/17f108b4e01f652c36a3c379d85c948f-image-1745424413545.png" alt="Python code defining a function reading def greet with an indented print statement saying hello world and then the function greet being called" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
-
-<div style="clear:both;"></div>
-
-## Let's practice!
+<h2>Let's practice!</h2>
 MARKDOWN

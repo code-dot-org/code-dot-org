@@ -1,0 +1,13 @@
+name 'aif-y2-machine-learning-fundamentals-lesson13-level2-2026'
+display_name 'Collecting Data'
+description "To build a classifier, you’ll need data. Collect a dataset for your image classifier, with at least 6 images from each category. You can choose to either build your own dataset or use an existing dataset."
+
+sublevels
+level 'aif-y2-machine-learning-fundamentals-lesson13-level2-choice1-2026'
+level 'aif-y2-machine-learning-fundamentals-lesson13-level2-choice2-2026'
+
+uses_lab2
+
+markdown <<MARKDOWN
+
+MARKDOWN

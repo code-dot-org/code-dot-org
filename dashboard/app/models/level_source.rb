@@ -50,28 +50,10 @@ class LevelSource < ApplicationRecord
     self.md5 = Digest::MD5.hexdigest(data)
   end
 
-  def self.cache_key(level_id, md5)
-    "#{level_id}-#{md5}"
-  end
-
-  def self.find_or_create_for(level:, data:, md5: nil)
-    md5 ||= Digest::MD5.hexdigest(data)
-    LevelSource.where(level:, md5:).first_or_create do |ls|
-      ls.data = data
-    end
-  end
-
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
-    level_source_cache_key = cache_key(level.id, md5)
-
-    if DCDO.get('level_source_cache_disabled', false)
-      Rails.cache.delete(level_source_cache_key)
-      find_or_create_for(level:, data:, md5:)
-    else
-      Rails.cache.fetch(level_source_cache_key) do
-        find_or_create_for(level:, data:, md5:)
-      end
+    LevelSource.where(level:, md5:).first_or_create do |level_source|
+      level_source.data = data
     end
   end
 

@@ -61,6 +61,15 @@ jobs:
       - name: Build with ${{ matrix.engine }}
         run: ${{ matrix.engine }} build -t cdo-base:smoke docker/base/
 
+      # The FROM tag tracks .ruby-version (which cone checkout brings as a
+      # root file). The equivalent guard in docker/gems runs only on deps
+      # changes, so a dependabot ruby bump here must not go green drifted.
+      - name: Assert the interpreter matches .ruby-version
+        run: |
+          set -euxo pipefail
+          test "$(cat .ruby-version)" = \
+            "$(${{ matrix.engine }} run --rm cdo-base:smoke ruby -e 'print RUBY_VERSION')"
+
       - name: Smoke test
         run: ./docker/base/smoke-test.sh cdo-base:smoke ${{ matrix.engine }}
 

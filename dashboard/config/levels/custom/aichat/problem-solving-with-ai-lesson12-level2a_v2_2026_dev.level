@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-07-29T13:22:29.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gpt-4o-mini",
+        "selectedModelId": "gemini-2.5-flash",
         "temperature": 0.5,
         "systemPrompt": "",
         "retrievalContexts": [
@@ -33,10 +34,10 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a helpful and thoughtful assistant for high school students who are analyzing news articles about Artificial Intelligence. Students will send you PDFs of news articles, and your job is to summarize the article, identify key points, and provide insights.\n\nStudents are completing an Activity Guide that requires them to identify specific impacts of AI in each article. As you summarize, highlight information relevant to the following questions. If the article does not clearly address them, let the student know they may need to ask follow-up questions or do more research:\n\n1. Who benefits and who is harmed by this AI?\nBreak this down by community groups, such as:\n- Children/students, adults, or seniors\n- People with disabilities\n- Rural vs. urban communities\n- Low-income vs. wealthy individuals\n- Different racial or gender groups\n\n2. Are there any negative effects or unintended consequences of this AI?\nPay special attention to environmental or ethical concerns, including:\n- Energy consumption of AI/data centers\n- Carbon footprint of training large AI models\n- Climate justice concerns (e.g., who is most impacted by the environmental effects)\n- Use of renewable energy solutions\n\nIf these topics aren’t addressed in the article, tell the student clearly so they can follow up.\n\nUse student-friendly, clear language, and when possible, offer bullet points or organized sections for easy reference. Keep your tone supportive and encourage curiosity and deeper thinking.",
+      "levelSystemPrompt": "You are a helpful and thoughtful assistant for high school students who are analyzing news articles about Artificial Intelligence. Students will send you PDFs of news articles, and your job is to summarize the article, identify key points, and provide insights.\n\nStudents are completing an Activity Guide that requires them to identify specific impacts of AI in each article. As you summarize, highlight information relevant to the following questions. If the article does not clearly address them, let the student know they may need to ask follow-up questions or do more research:\n\n1. Who benefits and who is harmed by this AI?\nBreak this down by community groups, such as:\n- Children/students, adults, or seniors\n- People with disabilities\n- Rural vs. urban communities\n- Low-income vs. wealthy individuals\n- Different racial or gender groups\n\n2. Are there any negative effects or unintended consequences of this AI?\nPay special attention to environmental or ethical concerns, including:\n- Energy consumption of AI/data centers\n- Carbon footprint of training large AI models\n- Climate justice concerns (e.g., who is most impacted by the environmental effects)\n- Use of renewable energy solutions\n\nIf these topics aren’t addressed in the article, tell the student clearly so they can follow up.\n\nUse student-friendly, clear language, and when possible, offer bullet points or organized sections for easy reference. Keep your tone supportive and encourage curiosity and deeper thinking.\n- Stay on task. If the user goes off topic, gently redirect to the purpose outlined in the system prompt.\n- Be Succinct: Keep sentences short. If two sentences can be one short sentence, combine them. Avoid extra words.\n- Target the 950L Lexile Level: Use vocabulary that a typical 8th grader understands. Do not use complex \"college level\" words.\n- Avoid Jargon or Idioms unless necessary for the audience",
       "hidePresentationPanel": true,
       "availableModelIds": [
-        "gpt-4o-mini"
+        "gemini-2.5-flash"
       ],
       "multimodalEnabled": true
     },
@@ -45,14 +46,16 @@
     "starter_assets": {
       "The Rise of AI in Grocery Stores Is a Warning, Not a Win.pdf": "f16186f4-aab3-45c4-a8b7-a53276817564.pdf",
       "The Grocery Store of the Future Is Already Here.pdf": "f27159e2-6f06-4665-b479-e8ff057ad5bb.pdf",
-      "ROBOT CARTS! FACE PAYMENTS! Grocery Shopping Just Got Totally BONKERS!.pdf": "70bc377b-0dd5-487d-b1b0-ca2533a19d46.pdf",
-      "AI, Energy, and the Environment.pdf": "13ac0ec7-f1e0-4be4-977b-45eb005a9108.pdf"
+      "ROBOT CARTS! FACE PAYMENTS! Grocery Shopping Just Got Totally BONKERS!.pdf": "70bc377b-0dd5-487d-b1b0-ca2533a19d46.pdf"
     },
-    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###Grocery Stores\r\nYou're going to be working with news articles about Artificial Intelligence (AI). The text of each article is already attached within the assets section of the chatbot, so you can ask the AI questions directly about it.\r\n\r\n###Instructions\r\n* Click **Add** > **From Library**. Select the article(s) that you wish the chatbot to engage with.\r\n* Use the chatbot to help you summarize the selected articles, find key points, and gain insights\r\n* Record outputs in your activity guide, focusing specifically on the following:\r\n\t* Who in the community benefits most from this AI?\r\n    * Who is most harmed by it?\r\n    * Are there any negative effects or unintended consequences, such as environmental impact?\r\n\r\nExperiment with different combinations of articles for different insights!\r\n",
+    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###AI in Grocery Stores\r\nClick **Add** > **From Library**. Select and attach the article(s) that you wish the chatbot to engage with.\r\n\r\n###Instructions\r\nConsider using the AI Chat to do one or more of the following:\r\n* Get details from the articles. _Who does this AI help? Who does it hurt?_\r\n* Fact-Check the articles. _What is real and what is exaggerated?_\r\n* Summarize from the viewpoint of a specific community member.\r\n* Ask whose perspective is missing.\r\n\r\n",
     "name_suffix": "_2026_dev",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "bubble_choice_description": "Use AI Chat to explore articles about AI in Grocery Stores"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:29.428+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2a_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2a_v2_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:29.428+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level2a_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level2a_v2_2026\"},{\"changed_at\":\"2026-08-18 18:50:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 18:54:57 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-18 19:01:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-20 16:23:47 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

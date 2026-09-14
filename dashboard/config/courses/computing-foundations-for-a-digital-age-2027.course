@@ -11,7 +11,7 @@
   "original_script_names": [
 
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -22,6 +22,19 @@
     "version_year": "2027"
   },
   "resources": [
+    {
+      "name": "2026 AIF Changelog",
+      "url": "https://docs.google.com/document/d/1GC4PUju6DxqHYEJi4U-ENBdqKp-eafPbHPEFjNBNE6g/",
+      "key": "2026_aif_changelog",
+      "properties": {
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "2026_aif_changelog"
+      }
+    },
     {
       "name": "AI Chat FAQ",
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",

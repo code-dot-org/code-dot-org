@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def print_forecast(temperature):\n    # TODO 1: Fill in the message with a forecast that includes the temperature\n    print(f\"\")\n\nprint(\"Forecast for Dallas:\")\nprint_forecast(70)\n\nprint(\"Forecast for Philadelphia:\")\nprint_forecast(60)\n\n# TODO 2: Print a forecast for one more city",
+          "contents": "def print_forecast(temperature):\n  # TODO 1: Fill in the message with a forecast that includes the temperature\n  print(f\"\")\n\nprint(\"Forecast for Dallas:\")\nprint_forecast(70)\n\nprint(\"Forecast for Philadelphia:\")\nprint_forecast(60)\n\n# TODO 2: Print a forecast for one more city",
           "folderId": "0",
           "active": true
         }
@@ -35,9 +35,10 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr72ydBZS6CQBrV\n8Hutfw6fiC3cqY7IHYTvHVAKO7gEEMPMR+pGauOj1BsKGTuJbcpTkE0HvnNG\nRiSPuYLQsrkR11QzAHBw5adM+Yg04J86uhEKReUMep0ffepKAJujV3d/v0OY\nuyOy9QNSeJlSaI9SQ/CvcrovWZNNdDga/XMQok6HphbWTZYcXfp0+3CYUtKv\nrzZHg6l6nIK69Fq5xYNEXrgFDEhOWCFxDutXtyK5ZoPXeBESE+eGtNzhofMW\nuQYFjsVWwG71surEFdEpt7CxCJCvgkK1jFZyhWElv0tt1b2oh5a7cAbkbvZH\nM7PlqBGHYtfHqhSuUi8wi0Wv8kmYaDGeY5SYbKiee93BEuRyVFc4XqCVHzvU\nSXsfV0HQH1Q/EGVdsoD7yFddpQtfwhNSRzEDP32bIGY8Jwqxezw19KD91ZD2\nPeRK32ywWsiYyp2qr3YDkY3tH8YsdhYWjz4q\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:40:14 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:40:14 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:58:05 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:08:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:08:13 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

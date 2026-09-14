@@ -21,6 +21,7 @@ const FILE_TYPE_ICON_MAP = {
   png: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
   jpeg: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
   webp: {iconName: 'image', iconStyle: 'solid' as const, isBrand: false},
+  wav: {iconName: 'file-music', iconStyle: 'solid' as const, isBrand: false},
 } as const;
 
 export function shouldShowFile(file?: ProjectFile) {
@@ -47,7 +48,7 @@ export function getFileIconNameAndStyle(file: ProjectFile): {
 } {
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   if (!isStartMode) {
-    const fileType = file.name.split('.').pop();
+    const fileType = file.name.split('.').pop()?.toLowerCase();
     const iconConfig =
       FILE_TYPE_ICON_MAP[fileType as keyof typeof FILE_TYPE_ICON_MAP];
     if (iconConfig) {

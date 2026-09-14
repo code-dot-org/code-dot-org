@@ -41,7 +41,13 @@ class GamelabJr < Gamelab
     uses_lab2
     guide_mode
     show_world_tab
-    show_large_world
+    world_grid_size
+    visible_tabs
+    locked_image_type
+    images_advanced
+    pinned_scene_id
+    pinned_scene_name
+    guide_steps
   )
 
   def shared_blocks

@@ -48,6 +48,10 @@
   @include mixins.focus-styles($outline-offset: -2px);
 }
 
+.hiddenPreviewWrapper {
+  display: none;
+}
+
 .previewIframe {
   border: none;
   box-sizing: border-box;

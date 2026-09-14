@@ -11,7 +11,7 @@
     "bubble_choice_description": "Build a decision tree to go shopping.",
     "thumbnail_url": "https://images.code.org/15db47e2166f771d4cb87e554fa1af2c-shopping.jpg",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -32,7 +32,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def decide(want_it, can_afford_it):\n    if want_it:\n        return \"Buy it\"\n    else:\n        return \"Skip it\"\n\n\ndef main():\n    want_it = True\n    can_afford_it = False\n    decision = decide(want_it, can_afford_it)\n    print(f\"You should: {decision}\")\n\n\nmain()\n",
+          "contents": "def decide(want_it, can_afford_it):\n  if want_it:\n    return \"Buy it\"\n  else:\n    return \"Skip it\"\n\n\ndef main():\n  want_it = True\n  can_afford_it = False\n  decision = decide(want_it, can_afford_it)\n  print(f\"You should: {decision}\")\n\n\nmain()\n",
           "folderId": "0",
           "active": true
         }
@@ -42,9 +42,10 @@
       "openFiles": [
         "0"
       ]
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrvCbYzT/Rsuqj3\nlhSTzD9Pu1uYkokUuFntKLRtGshOOkfjFxR1rzwINsExHoWjibB6jBDaJfFz\nF70sSV1aJ8qhQDLGwAu1saLfIKO6C8LG7AmOVR4bwLob78xAwg0ZgvJb0kFn\nYKCgW2jmVIpMndDr1x56LN5OnR/qimyEtGHP1fgM/zOitTjRjn2PR96BINVs\nkjmha6kkdUZwXf3Qmx+vqulK1gGFJo7w8tJUCpaHHWIJOv0y9DwOExYujyqw\nIqW6ySiL6F3NVzi5khfMHJE97RVEINQsxceyZFXyDYahiwaM6ZYlL18WpuhL\nqFQx+fsQckF9GNyfk/888gYIz0OdCovhn2U66JVrRXkhfnnmFm9y5DLF3z5J\ntXEbqogJtolQpTb6EqTXgN9GyxRdecye1/MdH4WYNuT5+ZEstI17694XsrKZ\n/FRmqlulBlI9CExg9cEHmglkgUVP9nr7ZKDZobAhvsdsSBJ1nTGCYGyxlSSY\n98b/nq+96MisGJXU4nu5khd4/y3ocO2Fuu0dVkt/VQzUbZ+IUG7bFJazPNmV\njvwU0BhDX97euNFU4p2u86ucCgUL9iJYq6Sneh+I8BaXS4pW4QFmkeARC73h\nL9BbmA==\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 20:58:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:58:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:58:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:58:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:27:50 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:44:55 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:20:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:20:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

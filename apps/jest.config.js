@@ -124,7 +124,13 @@ const config = {
   moduleNameMapper: jestAliases,
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  // modulePathIgnorePatterns: [],
+  // Builds place a second pyodide package under build/package/js — the
+  // @pyodide/webpack-plugin copy patterns ship the npm dist, package.json
+  // included — and jest's haste map then either errors on the duplicate
+  // or resolves the copy instead of node_modules.  Only pyodide is
+  // hidden: setupJest.js requires locale files from build/ by path, so
+  // build/ cannot be ignored wholesale.
+  modulePathIgnorePatterns: ['<rootDir>/build/.*/pyodide/'],
 
   // Activates notifications for test results
   // notify: false,

@@ -170,10 +170,27 @@ namespace :ci do
     #   worker IP (see connect.rb).
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
 
-    # Runs here, before Cucumber, so its result doesn't depend on whether
-    # Cucumber goes on to pass or fail.
+    # Playwright runs before cucumber. The ensure block raises any playwright
+    # failure later, after Cucumber also runs. The drone logs then show both results,
+    # regardless of whether the playwright suite passed or failed.
+
     ENV['TARGET_URL'] = 'http://localhost-studio.code.org:3000'
-    Rake::Task['test:playwright_ui'].invoke
+    playwright_browsers = playwright_browsers_to_run
+    playwright_failure =
+      if playwright_browsers.empty?
+        # An empty --project list runs every project, including the visual ones.
+        ChatClient.log 'Playwright functional tests skipped: no browsers selected.'
+        nil
+      else
+        ENV['PLAYWRIGHT_BROWSERS'] = playwright_browsers.join(' ')
+        begin
+          Rake::Task['test:playwright_ui'].invoke
+          nil
+        rescue StandardError => exception
+          exception
+        end
+      end
+    Rake::Task['test:playwright_eyes'].invoke
 
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
@@ -220,12 +237,16 @@ namespace :ci do
     close_sauce_connect if needs_sauce_connect
     RakeUtils.system_stream_output 'sleep 10'
   ensure
-    # Both results together, Cucumber's output having scrolled Playwright's
-    # verdict away by now. $! names Cucumber's failure when that is what failed.
-    if PLAYWRIGHT_ROLLUP[:line]
+    # Cucumber's output hides the Playwright result. $! holds Cucumber's error.
+    playwright_lines = PLAYWRIGHT_ROLLUP.values_at(:functional, :eyes).compact
+    unless playwright_lines.empty?
       cucumber = $! ? "❌ Cucumber: #{$!.message}." : '✅ Cucumber: passed.'
-      ChatClient.log ['UI suites:', PLAYWRIGHT_ROLLUP[:line], cucumber].join("\n")
+      ChatClient.log ['UI suites:', *playwright_lines, cucumber].join("\n")
     end
+
+    # After the log reads $!, and only if nothing else failed. A raise here
+    # replaces the current error.
+    raise playwright_failure if playwright_failure && $!.nil?
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
@@ -283,6 +304,17 @@ def device_farm_browsers_to_run
   browsers = []
   browsers << 'Chrome' unless CI::Utils.tagged?(SKIP_CHROME_TAG)
   browsers << 'Firefox' if CI::Utils.tagged?(TEST_FIREFOX_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers
+end
+
+# @return [Array<String>] Playwright projects for this run, from the same tags as
+#   the browsers above. There is no iPad or iPhone project. Its webkit is
+#   Safari's engine, not Safari.
+def playwright_browsers_to_run
+  browsers = []
+  browsers << 'chromium' unless CI::Utils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'firefox' if CI::Utils.tagged?(TEST_FIREFOX_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
+  browsers << 'webkit' if CI::Utils.tagged?(TEST_SAFARI_TAG) || CI::Utils.tagged?(TEST_ALL_BROWSERS_TAG)
   browsers
 end
 

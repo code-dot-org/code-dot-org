@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q4-2026'
+
+wrong "Storing a user’s name"
+wrong "Storing a user’s email address"
+right "Storing a user’s age"
+wrong "Storing a user’s password"
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+For which piece of data would an `int` variable be a good choice?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Hello, AI
+MARKDOWN

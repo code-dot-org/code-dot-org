@@ -1,11 +1,12 @@
 import {
-  getAppOptionsViewingExemplar,
   getAppOptionsEditingExemplar,
   getIsStartMode,
 } from '@cdo/apps/lab2/projects/utils';
+import {isPermanentlyReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import useProductTour, {
   UseProductTourProps,
 } from '@cdo/apps/sharedComponents/productTour/useProductTour';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import useHideTourOnTourChange from './useHideTourOnTourChange';
 
@@ -15,9 +16,9 @@ const useLab2ProductTour = ({
   ...useProductTourProps
 }: UseProductTourProps) => {
   const isStartMode = getIsStartMode();
-  const viewingExemplar = !!getAppOptionsViewingExemplar();
   const editingExemplar = !!getAppOptionsEditingExemplar();
-  const hideTour = isStartMode || viewingExemplar || editingExemplar;
+  const isPermanentlyReadOnly = useAppSelector(isPermanentlyReadOnlyWorkspace);
+  const hideTour = isStartMode || editingExemplar || isPermanentlyReadOnly;
   const {tour} = useProductTour({
     tourAvailable: tourAvailable && !hideTour,
     ...useProductTourProps,

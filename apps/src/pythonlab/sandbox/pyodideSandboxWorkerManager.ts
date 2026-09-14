@@ -13,7 +13,7 @@ import {
 // Manages the actual pyodide web worker -- creating it, restarting it, and relaying
 // its messages -- on behalf of pyodideSandboxManager.ts, which only manages the
 // sandbox iframe itself and never touches the worker directly. Runs inside a hidden
-// iframe served from a dedicated codeprojects.org subdomain, isolated from
+// iframe served from a dedicated sandboxed-preview subdomain, isolated from
 // studio.code.org's cookies/session. See apps/src/pythonlab/README.md for the full
 // architecture and the postMessage contract in ./constants.ts.
 
@@ -21,7 +21,7 @@ const setUpPyodideWorker = () => {
   // The web worker is versioned to ensure the correct version is loaded.
   // Update the version if you update the web worker.
   const worker = new Worker(
-    /* webpackChunkName: "pyodide-web-worker-1.0.0" */ new URL(
+    /* webpackChunkName: "pyodide-web-worker-1.1.0" */ new URL(
       '../pyodideWebWorker.ts',
       // @ts-expect-error because TypeScript does not like this syntax.
       import.meta.url
@@ -46,9 +46,15 @@ window.addEventListener('message', event => {
 
   switch (event.data?.type) {
     case ToPyodideSandboxMessage.RUN: {
-      const {python, id, source, validationFile} =
+      const {python, id, source, validationFile, externalFiles} =
         event.data as PyodideSandboxRunMessage;
-      pyodideWorker.postMessage({python, id, source, validationFile});
+      pyodideWorker.postMessage({
+        python,
+        id,
+        source,
+        validationFile,
+        externalFiles,
+      });
       break;
     }
     case ToPyodideSandboxMessage.SENDING_INPUT: {

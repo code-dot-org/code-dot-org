@@ -67,21 +67,36 @@ class HttpCache
     '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
   ]
 
-  # A map from script name to script level URL pattern.
-  CACHED_UNITS_MAP = %w(
+  # Units whose script levels may be publicly cached.
+  CACHED_UNITS = %w(
     aquatic
     dance-ai-2023
     oceans
     mc
     music-jam-2024
     mix-move-ai-2025
-  ).map do |script_name|
-    # Assume all cached units are in single unit courses.
-    [script_name, "/courses/#{script_name}/units/1/lessons/*"]
-  end.to_h.freeze
+  ).freeze
 
-  def self.cached_scripts
-    CACHED_UNITS_MAP.keys
+  # Cached units in the UI-test curriculum partition (dashboard/test/ui/config),
+  # which exist so that UI tests can exercise cached-unit behavior without
+  # depending on production curriculum.
+  CACHED_UI_TEST_UNITS = %w(
+    ui-test-oceans
+  ).freeze
+
+  # The cached units in effect for `env`. The UI-test partition is seeded only in
+  # development and test, so outside those environments CACHED_UI_TEST_UNITS has
+  # no effect: neither on CloudFront cache behavior, nor on
+  # ScriptConfig.hoc_scripts.
+  def self.cached_units(env = rack_env)
+    return CACHED_UNITS unless [:development, :test].include?(env.to_sym)
+    CACHED_UNITS + CACHED_UI_TEST_UNITS
+  end
+
+  # The URL pattern covering each cached unit's script levels. Assume all cached
+  # units are in single unit courses.
+  def self.cached_unit_level_paths(env)
+    cached_units(env).map {|unit_name| "/courses/#{unit_name}/units/1/lessons/*"}
   end
 
   ALLOWED_WEB_REQUEST_HEADERS = %w(
@@ -274,15 +289,15 @@ class HttpCache
           },
           # Some script levels in cacheable scripts are project-backed and
           # should not be cached in CloudFront. Use CloudFront Behavior
-          # precedence rules to not cache these paths, but all paths in
-          # CACHED_UNITS_MAP that don't match this path will be cached.
+          # precedence rules to not cache these paths, but all cached-unit paths
+          # that don't match this path will be cached.
           {
             path: UNCACHED_UNIT_LEVEL_PATHS,
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
           },
           {
-            path: CACHED_UNITS_MAP.values,
+            path: cached_unit_level_paths(env),
             headers: ALLOWLISTED_HEADERS,
             cookies: default_cookies
           },
@@ -348,6 +363,6 @@ class HttpCache
 
   # Return true if the levels for the given script name can be publicly cached by proxies.
   def self.allows_public_caching_for_script(script_name)
-    CACHED_UNITS_MAP.include?(script_name)
+    cached_units.include?(script_name)
   end
 end

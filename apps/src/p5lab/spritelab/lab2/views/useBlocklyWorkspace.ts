@@ -4,29 +4,35 @@ import {useCallback, useEffect, useRef} from 'react';
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {validateBlockCategories} from '@cdo/apps/blockly/utils';
+import {
+  filterToolboxToRegisteredBlocks,
+  workspaceToToolboxDefinition,
+} from '@cdo/apps/blockly/utils/toolbox';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlocks';
 import {
   getUserTheme,
   setThemeAndRenderBlocks,
 } from '@cdo/apps/blockly/utils/workspace/themes';
+import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
-import {
-  ensureInjectedCategories,
-  ensurePredefinedBehaviors,
-  ensureSceneBlocks,
-  filterToolboxToRegisteredBlocks,
-  installSharedBlocks,
-  setupSpriteLab2BlocklyEnvironment,
-} from '../blockly/setup';
+import {installSharedBlocks} from '../blockly/setup';
+import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
+import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
+
+// In toolbox edit mode the roles swap: the toolbox offers every available block
+// (so any of them can be added to the level's toolbox), and the workspace holds
+// the level's toolbox definition itself, laid out as category blocks to edit and save.
+const editBlocksMode = getAppOptionsEditBlocks();
+const isToolboxMode = editBlocksMode === TOOLBOX_BLOCKS;
+const isStartMode = editBlocksMode === START_SOURCES;
 
 interface UseBlocklyWorkspaceOptions {
   enabled: boolean;
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
-  // XML string toolbox format. TODO: switch new levels over to JSON.
-  toolboxXml?: string;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
 }
@@ -36,6 +42,10 @@ interface UseBlocklyWorkspaceResult {
   getCode: () => string | null;
   /** Returns the serialization the workspace holds; null before inject. */
   getCurrentBlocks: () => WorkspaceSerialization | null;
+  /** Serialize the workspace blocks into a toolbox definition; null before inject. */
+  getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
+  /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
+  refreshToolbox: () => void;
   /** Load code into the workspace. */
   loadCode: (source: WorkspaceSerialization) => void;
   /**
@@ -56,11 +66,13 @@ interface UseBlocklyWorkspaceResult {
 export default function useBlocklyWorkspace({
   enabled,
   toolboxDefinition,
-  toolboxXml,
   sharedBlocks,
   theme,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
+  const toolboxRef = useRef<
+    BlocklyCore.utils.toolbox.ToolboxDefinition | undefined
+  >(undefined);
   // Store initial theme as a ref to prevent theme changes from re-injecting the workspace.
   const themeRef = useRef(theme);
   themeRef.current = theme;
@@ -77,30 +89,22 @@ export default function useBlocklyWorkspace({
     if (!enabled) {
       return;
     }
-    setupSpriteLab2BlocklyEnvironment();
-    installSharedBlocks(sharedBlocks || []);
+    const blocksByCategory = installSharedBlocks(sharedBlocks || []);
 
     const blocklyDiv = document.getElementById(BLOCKLY_DIV_ID);
     if (!blocklyDiv) {
       return;
     }
 
-    // Prefer a JSON toolboxDefinition; otherwise the classic XML string.
-    let toolbox:
-      | BlocklyCore.utils.toolbox.ToolboxDefinition
-      | string
-      | undefined =
-      toolboxDefinition && toolboxDefinition.contents?.length !== 0
-        ? toolboxDefinition
-        : undefined;
-    if (!toolbox && toolboxXml) {
-      // Add the full behavior set, scene blocks, and injected categories,
-      // then drop unregistered block references so opening a category never
-      // throws.
+    // Levelbuilder edit modes get the complete toolbox; otherwise the
+    // level's authored definition gets the lab additions, filtered to
+    // registered blocks.
+    let toolbox: BlocklyCore.utils.toolbox.ToolboxDefinition | undefined;
+    if (isToolboxMode || isStartMode) {
+      toolbox = getCompleteToolboxDefinition(blocksByCategory, isToolboxMode);
+    } else if (toolboxDefinition && toolboxDefinition.contents?.length !== 0) {
       toolbox = filterToolboxToRegisteredBlocks(
-        ensureInjectedCategories(
-          ensureSceneBlocks(ensurePredefinedBehaviors(toolboxXml))
-        )
+        applyToolboxAdditions(toolboxDefinition)
       );
     }
 
@@ -118,6 +122,7 @@ export default function useBlocklyWorkspace({
       );
     };
 
+    toolboxRef.current = toolbox;
     workspaceRef.current = Blockly.inject(blocklyDiv, {
       toolbox,
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
@@ -139,6 +144,12 @@ export default function useBlocklyWorkspace({
           pendingLoadsRef.current--;
         }
         return;
+      }
+      // Toolbox editing: flag blocks that won't serialize into a category.
+      if (isToolboxMode && e.type === BlocklyCore.Events.BLOCK_MOVE) {
+        if (workspaceRef.current?.rendered) {
+          validateBlockCategories(workspaceRef.current);
+        }
       }
       // Emit intermediate change if detected.
       if (e.type === BlocklyCore.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
@@ -174,7 +185,7 @@ export default function useBlocklyWorkspace({
       workspaceRef.current = null;
       currentBlocksRef.current = null;
     };
-  }, [enabled, sharedBlocks, toolboxDefinition, toolboxXml]);
+  }, [enabled, sharedBlocks, toolboxDefinition]);
 
   // Update workspace theme on display-theme change. Resolve through
   // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
@@ -218,6 +229,14 @@ export default function useBlocklyWorkspace({
 
   const getCurrentBlocks = useCallback(() => currentBlocksRef.current, []);
 
+  const getToolboxDefinition = useCallback(
+    () =>
+      workspaceRef.current
+        ? workspaceToToolboxDefinition(workspaceRef.current)
+        : null,
+    []
+  );
+
   const subscribeToChanges = useCallback(
     (
       onWorkspaceChange: (source: WorkspaceSerialization) => void,
@@ -233,5 +252,18 @@ export default function useBlocklyWorkspace({
     []
   );
 
-  return {getCode, getCurrentBlocks, loadCode, subscribeToChanges};
+  const refreshToolbox = useCallback(() => {
+    if (workspaceRef.current?.rendered && toolboxRef.current) {
+      workspaceRef.current.updateToolbox(toolboxRef.current);
+    }
+  }, []);
+
+  return {
+    getCode,
+    getCurrentBlocks,
+    getToolboxDefinition,
+    loadCode,
+    refreshToolbox,
+    subscribeToChanges,
+  };
 }

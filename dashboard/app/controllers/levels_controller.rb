@@ -12,7 +12,7 @@ class LevelsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
-  before_action :set_level, only: [:show, :edit, :update, :destroy]
+  before_action :set_level, only: [:show, :edit, :update, :destroy, :build_quiz_questions]
 
   LEVELS_PER_PAGE = 30
 
@@ -51,6 +51,7 @@ class LevelsController < ApplicationController
     Poetry,
     PublicKeyCryptography,
     Pythonlab,
+    Quiz,
     Sketchlab,
     StandaloneVideo,
     StarWarsGrid,
@@ -269,6 +270,19 @@ class LevelsController < ApplicationController
 
     @is_start_mode = type == 'start_blocks'
 
+    show
+    render :show
+  end
+
+  # GET /levels/:id/build_quiz_questions
+  #
+  # Renders the lab2 show page, but with is_building_quiz_questions threaded
+  # through app_options (see LevelsHelper#lab2_options) so the
+  # question-building UI is shown instead of the quiz-taking UI.
+  def build_quiz_questions
+    return head :not_found unless @level.is_a?(Quiz)
+
+    level_view_options(@level.id, is_building_quiz_questions: true)
     show
     render :show
   end
@@ -594,6 +608,10 @@ class LevelsController < ApplicationController
           if @level.is_a?(Blockly)
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
+        end
+
+        if @level.is_a?(Quiz)
+          links[@level.name] << {text: 'Build quiz questions', url: build_quiz_questions_level_path(@level)}
         end
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}

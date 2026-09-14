@@ -52,6 +52,45 @@ describe('SectionPodcastCard', () => {
     jest.restoreAllMocks();
   });
 
+  describe('onSectionClick', () => {
+    it('renders sectionRow as a button when onSectionClick is provided', () => {
+      const onClick = jest.fn();
+      render(
+        <SectionPodcastCard
+          {...DEFAULT_PROPS}
+          lesson={LESSON_WITH_PODCAST}
+          onSectionClick={onClick}
+        />
+      );
+      expect(
+        screen.getByRole('button', {name: /period 3/i})
+      ).toBeInTheDocument();
+    });
+
+    it('calls onSectionClick when section row button is clicked', () => {
+      const onClick = jest.fn();
+      render(
+        <SectionPodcastCard
+          {...DEFAULT_PROPS}
+          lesson={LESSON_WITH_PODCAST}
+          onSectionClick={onClick}
+        />
+      );
+      fireEvent.click(screen.getByRole('button', {name: /period 3/i}));
+      expect(onClick).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not render sectionRow as a button when onSectionClick is absent', () => {
+      render(
+        <SectionPodcastCard {...DEFAULT_PROPS} lesson={LESSON_WITH_PODCAST} />
+      );
+      // only the play button should exist, not a section-row button
+      expect(
+        screen.queryByRole('button', {name: /period 3/i})
+      ).not.toBeInTheDocument();
+    });
+  });
+
   describe('section row', () => {
     it('always renders the section name', () => {
       render(<SectionPodcastCard {...DEFAULT_PROPS} lesson={null} />);

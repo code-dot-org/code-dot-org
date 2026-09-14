@@ -52,7 +52,6 @@ module.exports = {
   globals: {
     $: 'readonly',
     ace: 'readonly',
-    addToHome: 'readonly',
     Applab: 'readonly',
     appOptions: 'readonly',
     Blockly: 'readonly',

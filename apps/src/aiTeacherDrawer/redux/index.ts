@@ -15,4 +15,6 @@ export {
   setArtifactType,
   setPendingArtifactMessage,
   clearPendingArtifactMessage,
+  openDrawerToNav,
+  clearRequestedNav,
 } from './slice';

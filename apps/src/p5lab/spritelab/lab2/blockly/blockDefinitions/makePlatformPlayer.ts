@@ -1,6 +1,7 @@
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import {noteImageFieldValue} from '../../imageReferences';
 import {FIELD_GRID_SINGLE_TYPE} from '../gridFields';
 import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
@@ -20,19 +21,53 @@ const definition: BlockJson = {
 };
 
 const generator: GeneratorFunction = block =>
-  `makePlatformPlayer(${block.getFieldValue('ANIMATION_NAME')}, ` +
-  `${JSON.stringify(block.getFieldValue('GRID'))});\n`;
+  `makePlatformPlayer(${noteImageFieldValue(
+    block.getFieldValue('ANIMATION_NAME')
+  )}, ` + `${JSON.stringify(block.getFieldValue('GRID'))});\n`;
 
 // A player sprite at the marked grid cell, plus arrow movement and a space
 // jump. Assumes the zGameDev helper library (per-tick gravity, player/wall
 // collisions, cell-sized sprites). Keyed to the 'players' group, not the
 // costume, so a label that fails to round-trip can't orphan the player from
 // its physics. Movement reads the sprite's own speed so "set speed" still
-// applies; setProp velocityY negates, so jumpSpeed is upward.
+// applies; the jump goes through platformJump, which checks footing and
+// jumps against gravity whichever way it points. At zero gravity there is
+// no jump and the up and down arrows steer instead.
+// Clears a two-tile step with a little margin (apex ~2.4 tiles at the
+// default gravity).
+const JUMP_SPEED = 13;
+
 const helperCode = [
+  // Shared by every block that produces a platform player; guarded so
+  // several such blocks in one program don't stack duplicate handlers.
+  'var platformControlsWired = false;',
+  'function wirePlatformControls() {',
+  '  if (platformControlsWired) {',
+  '    return;',
+  '  }',
+  '  platformControlsWired = true;',
+  "  keyPressed('while', 'left', function () {",
+  "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'West');",
+  '  });',
+  "  keyPressed('while', 'right', function () {",
+  "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'East');",
+  '  });',
+  "  keyPressed('while', 'up', function () {",
+  '    if (platformGravity() === 0) {',
+  "      moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'North');",
+  '    }',
+  '  });',
+  "  keyPressed('while', 'down', function () {",
+  '    if (platformGravity() === 0) {',
+  "      moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'South');",
+  '    }',
+  '  });',
+  "  keyPressed('when', 'space', function () {",
+  `    platformJump(${JUMP_SPEED});`,
+  '  });',
+  '}',
   'function makePlatformPlayer(animation, layout) {',
   '  var cell = 400 / layout.length;',
-  '  var jumpSpeed = 10;',
   '  for (var row = 0; row < layout.length; row++) {',
   '    for (var col = 0; col < layout[row].length; col++) {',
   '      if (layout[row][col]) {',
@@ -43,17 +78,7 @@ const helperCode = [
   '      }',
   '    }',
   '  }',
-  "  keyPressed('while', 'left', function () {",
-  "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'West');",
-  '  });',
-  "  keyPressed('while', 'right', function () {",
-  "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'East');",
-  '  });',
-  "  keyPressed('when', 'space', function () {",
-  "    if (isDirectlyAbove({group: 'players'}, {group: 'walls'})) {",
-  "      setProp({group: 'players'}, 'velocityY', jumpSpeed);",
-  '    }',
-  '  });',
+  '  wirePlatformControls();',
   '}',
 ].join('\n');
 

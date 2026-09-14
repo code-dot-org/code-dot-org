@@ -1,6 +1,8 @@
 class PyodideSandboxController < ApplicationController
   # Runs student Python (via pyodide) in a hidden iframe on a dedicated
-  # codeprojects.org subdomain, isolated from studio.code.org's cookies/session.
+  # sandboxed-preview subdomain (see the preview host constraints in routes.rb
+  # and docs/weblab-preview-domain-migration.md), isolated from
+  # studio.code.org's cookies/session.
   # Public, static content for now.
   def show
     set_content_security_policy

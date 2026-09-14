@@ -1,3 +1,5 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -13,7 +15,12 @@ const LABS_WITH_IMAGE_MODERATION = [
   'game_design',
   'sketchlab',
   'applab',
+  'weblab',
+  'javalab',
+  'pythonlab',
 ];
+
+const MODERATION_SPAN_OP = 'image.moderate';
 
 export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
 export type SeverityThresholds = Partial<Record<CategoryName, number>>;
@@ -65,17 +72,23 @@ interface AnalyticsData {
   uploaderType?:
     | 'Lab2FileUploader'
     | 'AnimationPicker'
+    | 'AssetManager'
     | 'SketchLab'
     | 'ImageURLInput'
     | 'n/a';
   moderateEvent?: string;
   flaggedEvent?: string;
   assetUrl?: string;
+  feature?: 'ai-gateway' | 'image-moderation';
 }
 
 interface ModerationConfig {
   request: () => Promise<Response>;
   formatAssetUrl: (assetUrl?: string) => string | undefined;
+  span: {
+    name: string;
+    attributes: Record<string, string | number | boolean>;
+  };
 }
 
 const buildDimensions = (uploaderType: string, appName: string) => [
@@ -102,6 +115,7 @@ const runModeration = async (
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
+    feature = 'image-moderation',
   }: AnalyticsData,
   overrideSeverityThresholds: SeverityThresholds | undefined,
   moderationConfig: ModerationConfig
@@ -110,36 +124,58 @@ const runModeration = async (
   MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', dimensions);
   sendModerationEvent(uploaderType, appName, moderateEvent);
 
-  try {
-    const response = await moderationConfig.request();
-    const json = await response.json();
-    if (json === null) {
+  const checkImage = async (): Promise<'safe' | 'flagged' | 'error'> => {
+    try {
+      const response = await moderationConfig.request();
+      const json = await response.json();
+      if (json === null) {
+        return 'error';
+      }
+
+      MetricsReporter.incrementCounter(
+        'ModerateCustomImage.Success',
+        dimensions
+      );
+
+      if (
+        getImageModerationVerdict(json, overrideSeverityThresholds) === 'safe'
+      ) {
+        return 'safe';
+      }
+
+      MetricsReporter.incrementCounter(
+        'ModerateCustomImage.Flagged',
+        dimensions
+      );
+      analyticsReporter.sendEvent(flaggedEvent, {
+        UploaderType: uploaderType,
+        appName,
+        levelPath: window.location.pathname,
+        moderationService: 'AI Content Safety',
+        moderationResult: JSON.stringify(json),
+        assetUrl: moderationConfig.formatAssetUrl(assetUrl),
+      });
+      return 'flagged';
+    } catch (error) {
+      MetricsReporter.logError('Error with image moderation: ' + error);
+      MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
       return 'error';
     }
+  };
 
-    MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
-
-    if (
-      getImageModerationVerdict(json, overrideSeverityThresholds) === 'safe'
-    ) {
-      return 'safe';
-    }
-
-    MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
-    analyticsReporter.sendEvent(flaggedEvent, {
-      UploaderType: uploaderType,
-      appName,
-      levelPath: window.location.pathname,
-      moderationService: 'AI Content Safety',
-      moderationResult: JSON.stringify(json),
-      assetUrl: moderationConfig.formatAssetUrl(assetUrl),
-    });
-    return 'flagged';
-  } catch (error) {
-    MetricsReporter.logError('Error with image moderation: ' + error);
-    MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
-    return 'error';
-  }
+  return Observability.startSpan(
+    {
+      name: moderationConfig.span.name,
+      op: MODERATION_SPAN_OP,
+      attributes: {
+        feature,
+        'image.app_name': appName,
+        'image.uploader_type': uploaderType,
+        ...moderationConfig.span.attributes,
+      },
+    },
+    checkImage
+  );
 };
 
 export const moderateImage = async (
@@ -150,6 +186,7 @@ export const moderateImage = async (
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
+    feature,
   }: AnalyticsData,
   overrideSeverityThresholds?: SeverityThresholds
 ): Promise<'safe' | 'flagged' | 'error'> => {
@@ -162,7 +199,7 @@ export const moderateImage = async (
   }
   return runModeration(
     appName,
-    {uploaderType, moderateEvent, flaggedEvent, assetUrl},
+    {uploaderType, moderateEvent, flaggedEvent, assetUrl, feature},
     overrideSeverityThresholds,
     {
       request: () =>
@@ -171,6 +208,14 @@ export const moderateImage = async (
         }),
       formatAssetUrl: url =>
         url ? `${window.location.origin}${url}` : undefined,
+      span: {
+        name: `${MODERATION_SPAN_OP}.moderateImage`,
+        attributes: {
+          'image.source': 'file',
+          'image.type': imageType,
+          'image.size_bytes': file.size,
+        },
+      },
     }
   );
 };
@@ -183,6 +228,7 @@ export const moderateImageUrl = async (
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
+    feature,
   }: AnalyticsData,
   overrideSeverityThresholds?: SeverityThresholds
 ): Promise<'safe' | 'flagged' | 'error'> => {
@@ -191,7 +237,7 @@ export const moderateImageUrl = async (
   }
   return runModeration(
     appName,
-    {uploaderType, moderateEvent, flaggedEvent, assetUrl},
+    {uploaderType, moderateEvent, flaggedEvent, assetUrl, feature},
     overrideSeverityThresholds,
     {
       request: () =>
@@ -202,6 +248,10 @@ export const moderateImageUrl = async (
           {'Content-Type': 'application/json; charset=UTF-8'}
         ),
       formatAssetUrl: url => url || undefined,
+      span: {
+        name: `${MODERATION_SPAN_OP}.moderateImageUrl`,
+        attributes: {'image.source': 'url'},
+      },
     }
   );
 };

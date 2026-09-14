@@ -147,6 +147,11 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :not_found, name: 'student cannot view tutor in a non-AI course'
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :not_found, name: 'teacher cannot view tutor in a non-AI course'
 
+  # the tutor gallery follows the same access rules as tutor
+  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: nil, response: :redirect, name: 'signed out user is redirected to sign in for tutor gallery'
+  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor gallery in an AIF/AID course'
+  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :not_found, name: 'student cannot view tutor gallery in a non-AI course'
+
   # limit access to lesson plans in pilots
   test_user_gets_response_for :show, response: :not_found, user: nil,
                               params: -> {{course_course_name: @pilot_course.name, unit_position: 1, position: @pilot_script.lessons[0].relative_position}},

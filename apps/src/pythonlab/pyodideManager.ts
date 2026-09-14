@@ -1,17 +1,16 @@
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import experiments from '@cdo/apps/util/experiments';
 
+import {isPyodideSandboxEnabled} from './pyodideSandboxEnabled';
+import {loadExternalFileContents} from './pythonHelpers/externalFileContents';
 import {PyodideMessage} from './types';
 
 // Decides once, at load time, whether Python Lab runs the pyodide worker directly on
 // studio.code.org (today's default) or isolated in a hidden iframe on a separate
-// codeprojects.org subdomain (see apps/src/pythonlab/README.md). Loaded dynamically so
+// sandboxed-preview domain (see apps/src/pythonlab/README.md). Loaded dynamically so
 // only the selected implementation's module-scope startup work -- creating a real
 // Worker, or creating the sandbox iframe -- ever runs; statically importing both would
-// run both unconditionally regardless of the experiment.
-const usePyodideSandbox = experiments.isEnabledAllowingQueryString(
-  experiments.PYTHONLAB_SEPARATE_DOMAIN
-);
+// run both unconditionally regardless of the flag.
+const usePyodideSandbox = isPyodideSandboxEnabled();
 // TS wants an explicit extension on dynamic imports under our node16
 // moduleResolution, but these are .ts files, not .js -- webpack resolves the
 // extensionless specifier directly, so we suppress the checker here instead.
@@ -27,12 +26,16 @@ export async function asyncRun(
   validationFile?: ProjectFile,
   shouldOutputToNeighborhood?: boolean
 ): Promise<PyodideMessage> {
-  const manager = await managerPromise;
+  const [manager, externalFiles] = await Promise.all([
+    managerPromise,
+    loadExternalFileContents(source),
+  ]);
   return manager.asyncRun(
     script,
     source,
     validationFile,
-    shouldOutputToNeighborhood
+    shouldOutputToNeighborhood,
+    externalFiles
   );
 }
 

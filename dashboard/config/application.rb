@@ -3,12 +3,7 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require_relative '../legacy/middleware/files_api'
-require_relative '../legacy/middleware/channels_api'
-require 'shared_resources'
-require_relative '../legacy/middleware/net_sim_api'
-require_relative '../legacy/middleware/sound_library_api'
-require_relative '../legacy/middleware/animation_library_api'
+
 Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
 require 'bootstrap-sass'
@@ -17,6 +12,8 @@ require 'cdo/hash'
 require 'cdo/i18n'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
+require 'cdo/rack/request'
+require 'cdo/rack/response'
 
 # load and configure pycall before numpy and any other python-related gems
 # can be automatically loaded just below.
@@ -25,6 +22,11 @@ require 'cdo/pycall'
 # Early in the Rails boot process, set the environment variable VITE_RUBY_ROOT so that
 # vite_ruby knows where to find the frontend code.
 ENV["VITE_RUBY_ROOT"] = vite_dir
+
+# Read the manifest from the directory we serve, dashboard/public/frontend-studio.
+# The local dist directory is stale on any machine that downloaded the package
+# instead of building it, and its tags then name assets that are not there.
+ENV["VITE_RUBY_PUBLIC_DIR"] = dashboard_dir('public') unless rack_env?(:development)
 
 # Our CI process runs a custom build step before assets:precompile, so we skip
 # Vite Ruby's automatic extension and install hooks to avoid redundant/conflicting builds.
@@ -47,6 +49,13 @@ module Dashboard
         resource '/dashboardapi/*', headers: :any, methods: [:get]
       end
     end
+
+    # Hotfix: recover users left with two `_learn_session` cookies after the
+    # brief `domain: nil` deploy. Runs outermost so its HTTP_COOKIE rewrite is
+    # seen by every downstream cookie reader. Remove once duplicate cookies have
+    # aged out (~40 days; dashboard_session_ttl_days).
+    require 'cdo/rack/session_cookie_scope_migration'
+    config.middleware.insert_before 0, Rack::SessionCookieScopeMigration
 
     if CDO.use_cookie_dcdo
       # Enables the setting of DCDO via cookies for testing purposes.
@@ -89,13 +98,6 @@ module Dashboard
 
     config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
     config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
-    config.middleware.insert_after Middleware::I18n, FilesApi
-
-    config.middleware.insert_after FilesApi, ChannelsApi
-    config.middleware.insert_after ChannelsApi, SharedResources
-    config.middleware.insert_after SharedResources, NetSimApi
-    config.middleware.insert_after NetSimApi, AnimationLibraryApi
-    config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
@@ -159,6 +161,9 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
+      legacy-prerequisites.css
+      legacy-styles.css
+      brand-fonts.css
     )
 
     # Support including code from directories outside of the normal Rails directory
@@ -208,10 +213,31 @@ module Dashboard
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
-    # Rails.cache is a fast memory store, cleared every time the application reloads.
-    config.cache_store = :memory_store, {
-      size: 256.megabytes # max size of entire store
-    }
+    # In Rails 7.0, ActiveRecord objects may skip some initialization steps
+    # when they are loaded from the cache; this can break SerializedProperties,
+    # among other things. As a temporary mitigation to avoid this issue until
+    # we are updated to 7.1, we explicitly initialize all relevant objects as
+    # they are loaded.
+    #
+    # See https://github.com/rails/rails/issues/47704 and
+    # https://github.com/rails/rails/pull/47747 for more context.
+    module Rails70InitInternalsCoder
+      # TODO infra: remove this custom Coder as part of the update to Rails 7.1
+      throw "remove Rails-7.0-specific mitigation" if Rails::VERSION::MAJOR != 7 || Rails::VERSION::MINOR != 0
+      include ActiveSupport::Cache::Coders::Rails70Coder
+      extend self
+
+      def load(payload)
+        super.tap do |entry|
+          entry.try(:value).try(:init_internals)
+        end
+      end
+    end
+
+    # Rails.cache is a local file system store shared by all Puma worker
+    # processes on a given web application server, which persists for the
+    # lifetime of the server.
+    config.cache_store = :file_store, Rails.root.join('tmp', 'cache'), {coder: Rails70InitInternalsCoder}
 
     # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
     config.assets.cache_limit = 1.gigabyte
@@ -223,8 +249,9 @@ module Dashboard
     # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
     config.enable_dependency_loading = true
 
-    # Webpack handles js compression for us, so don't compress by default.
-    # config.assets.js_compressor = :uglifier
+    # Webpack minifies the apps bundles, and the legacy application.js is
+    # assembled from pre-minified sources (see application.js.erb), so no
+    # js_compressor is configured here.
     # config.assets.css_compressor = :sass
 
     # Version of your assets, change this if you want to expire all your assets.
@@ -263,5 +290,11 @@ module Dashboard
     routes.default_url_options[:protocol] = CDO.default_scheme.chomp(':')
     routes.default_url_options[:host] = CDO.dashboard_site_host
     routes.default_url_options.delete(:port)
+
+    # Ensure legacy APIs are loaded after middleware that provides required
+    # functionality such as I18n, GlobalEdition, Redis-backed sessions, and cookies.
+    initializer 'dashboard.legacy_apis', after: :load_config_initializers do |app|
+      app.config.middleware.insert_after RedisSessionStore, Middleware::LegacyApiStack
+    end
   end
 end

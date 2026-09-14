@@ -243,7 +243,6 @@ class User < ApplicationRecord
     section_attempts
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
-    last_verified_captcha_at
     gender_student_input
     gender_teacher_input
     gender_third_party_input
@@ -1139,9 +1138,9 @@ class User < ApplicationRecord
         over_21?
       end
     else # downgrading to student
-      # Teachers with sections cannot downgrade because our validations require sections
-      # to be taught by teachers.
-      sections_instructed.empty?
+      # Downgrade destroys sections owned by the teacher. Disallow downgrading
+      # unless the teacher only has demo sections.
+      sections_instructed.where(demo_type: nil).empty?
     end
   end
 
@@ -1553,11 +1552,21 @@ class User < ApplicationRecord
 
     user_storage_id = storage_id_for_user_id(user_id)
 
-    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
-    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
-    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
+    paranoid_destroy_all_with_retry(UserScript.where(user_id: user_id, script_id: script_id))
+    paranoid_destroy_all_with_retry(UserLevel.where(user_id: user_id, script_id: script_id))
+    paranoid_destroy_all_with_retry(ChannelToken.where(storage_id: user_storage_id, script_id: script_id)) unless user_storage_id.nil?
     TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
     CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
+  end
+
+  # If two records collide on a unique index that includes deleted_at
+  # force the second one to a distinct deleted_at so it still gets deleted.
+  def self.paranoid_destroy_all_with_retry(relation)
+    relation.find_each do |record|
+      record.destroy
+    rescue ActiveRecord::RecordNotUnique
+      record.update_column(:deleted_at, Time.current + rand(1..99).seconds)
+    end
   end
 
   def self.find_or_create_facilitator(params, invited_by_user)
@@ -1756,13 +1765,6 @@ class User < ApplicationRecord
         new_csf_level_perfected = true
       end
 
-      # Update user_level with the new attempt.
-      # We increment the attempt count unless they've already perfected the level.
-      user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
-      user_level.best_result = new_result if user_level.best_result.nil? ||
-        new_result > user_level.best_result
-
-      user_level.submitted = submitted
       # We only lock levels of type LevelGroup
       # When the student submits an assessment, lock the level so they no
       # longer have access for the remainder of the autolock period
@@ -1770,20 +1772,16 @@ class User < ApplicationRecord
       if submitted && is_level_group
         user_level.locked = true
       end
-      if level_source_id && !is_navigator
-        user_level.level_source_id = level_source_id
-      end
 
-      total_time_spent = user_level.calculate_total_time_spent(time_spent)
-      user_level.time_spent = total_time_spent if total_time_spent
-
-      user_level.assign_locale_data(locale) if locale
-
-      if unit_group && user_level.new_record?
-        user_level.unit_group_id = unit_group.id
-      end
-
-      user_level.atomic_save!
+      user_level.update_progress!(
+        unit_group_id: unit_group&.id,
+        level_source_id:,
+        new_result:,
+        submitted:,
+        is_navigator:,
+        time_spent:,
+        locale:,
+      )
     end
 
     if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)
@@ -1929,8 +1927,25 @@ class User < ApplicationRecord
   # @param [String] type A credential type / provider type.  In the future this
   #   should always be one of the valid credential types from AuthenticationOption
   # @param [String] id A user id associated with the particular provider.
+  # @param [Boolean] exact_match When true, a stored id must match the given id
+  #   byte-for-byte; otherwise the lookup compares under the column collation
+  #   (utf8mb3_unicode_ci), which ignores case. Defaults by provider type via
+  #   AuthenticationOption::CASE_SENSITIVE_CREDENTIAL_TYPES, so callers only
+  #   pass it to override the type's policy.
   # @returns [User|nil]
-  def self.find_by_credential(type:, id:)
+  def self.find_by_credential(type:, id:, exact_match: AuthenticationOption::CASE_SENSITIVE_CREDENTIAL_TYPES.include?(type.to_s))
+    if exact_match
+      option = AuthenticationOption.find_by_exact_credential(
+        credential_type: type,
+        authentication_id: id
+      )
+      return option.user if option
+      # The legacy users.uid column has the same collation; apply the same
+      # byte-exact confirm rather than skipping the fallback — non-migrated
+      # users still live there.
+      return User.where(provider: type, uid: id).detect {|user| user.uid == id.to_s}
+    end
+
     authentication_option = AuthenticationOption.find_by(
       credential_type: type,
       authentication_id: id

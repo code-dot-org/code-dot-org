@@ -34,15 +34,17 @@ export function getRunButtonSx(setupBlockColor?: string | null): SxProps {
       backgroundColor: 'var(--background-neutral-octonary)',
       color: 'var(--text-neutral-white-fixed)',
     },
+    // MUI marks a pending button disabled too, so these must follow the
+    // disabled rules to win the specificity tie.
     '&.MuiButton-loading': {
-      backgroundColor: 'var(--background-neutral-white-fixed)',
-      color: 'var(--text-neutral-white-fixed)',
+      backgroundColor,
+      color: RUN_BUTTON_FOREGROUND,
     },
     '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
       color: 'transparent',
     },
     '&.MuiButton-loading i': {
-      color: 'var(--text-neutral-primary)',
+      color: RUN_BUTTON_FOREGROUND,
     },
   };
 }

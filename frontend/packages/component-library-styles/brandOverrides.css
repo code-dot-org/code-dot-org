@@ -7,16 +7,24 @@
  *   brandCodeAiNext.css                canonical CADS tokens scoped to
  *                                      [data-brand='codeai-next'] (generated —
  *                                      see scripts/generateBrandCodeAiNext.mjs)
- *   brandCodeAiNextAliases.css         legacy token names mapped onto CADS values,
- *                                      so unmigrated code renders under codeai-next
- *   brandCodeAiAudit.css               all-pink values for [data-brand='codeai-audit']
- *                                      (DSCO-coverage auditing)
+ *   brandCodeAiAudit.css               the same CADS tokens with every primitive
+ *                                      swapped for a pink, scoped to
+ *                                      [data-brand='codeai-audit'] (generated —
+ *                                      see scripts/generateBrandCodeAiAudit.mjs)
+ *   brandLegacyAliases.css             legacy token names mapped onto CADS values
+ *                                      under both CADS brands, so unmigrated code
+ *                                      is rebranded (and, under codeai-audit, pink)
  *
- * At brand cutover (default-brand -> codeai-next) this whole layer stays
- * as-is; at cleanup, the canonical files move to :root and everything
- * here except the audit brand is deleted.
+ * Order does not affect the result: custom properties substitute their
+ * var() chains after the cascade, and no two of these files declare the
+ * same token name in the same scope.
+ *
+ * Cleanup, once call sites use CADS token names: delete colors.css,
+ * primitiveColors.css, brandLegacyShim.css and brandLegacyAliases.css,
+ * and promote the canonical CADS files to :root. The audit brand needs
+ * no changes at that point — it is already CADS-only.
  */
 @import './brandLegacyShim.css';
 @import './brandCodeAiNext.css';
-@import './brandCodeAiNextAliases.css';
 @import './brandCodeAiAudit.css';
+@import './brandLegacyAliases.css';

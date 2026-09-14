@@ -1,6 +1,6 @@
 name 'problem-solving-with-ai-lesson6-examine-data-choice'
-display_name 'Reviewing Profiles'
-description 'Pick one of the levels below. Review the six profiles and select two people.'
+display_name 'Examining Data'
+description 'Choose the same scenario that you selected in the previous level and explore the data that is presented in the scenario.'
 
 sublevels
 level 'problem-solving-with-ai-lesson6-examine-data-a'

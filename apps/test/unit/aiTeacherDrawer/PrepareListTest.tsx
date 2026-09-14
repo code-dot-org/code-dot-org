@@ -9,6 +9,15 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 jest.mock('@cdo/apps/util/HttpClient');
 
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  useAppDispatch: () => jest.fn(),
+  useAppSelector: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/aiTeacherDrawer/redux', () => ({
+  fetchThreadMessages: jest.fn(args => ({type: 'fetchThreadMessages', args})),
+}));
+
 jest.mock('@cdo/apps/templates/teacherDashboard/teacherSectionsRedux', () => ({
   asyncLoadSectionData: () => () => Promise.resolve(),
 }));
@@ -21,12 +30,15 @@ jest.mock(
   })
 );
 
-jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  useAppDispatch: () => jest.fn(),
-  useAppSelector: jest.fn(),
-}));
+function todayISO(): string {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
 
-const SECTION_STATE_EMPTY = {sectionIds: [], sections: {}};
+const SECTION_STATE_EMPTY = {sectionOrder: [], sections: {}};
 
 function makeSectionsState(
   sections: {
@@ -36,10 +48,22 @@ function makeSectionsState(
     participantType?: string;
     avatar_color?: number;
     avatar_emoji?: number;
+    courseId?: number | null;
+    unitId?: number | null;
+    studentCount?: number;
   }[]
 ) {
   return {
-    sectionIds: sections.map(s => s.id),
+    // sectionOrder mirrors getFilteredSectionOrderIds, which is already
+    // filtered to visible student sections - PrepareList trusts that and
+    // doesn't re-filter, so hidden/non-student sections must be excluded
+    // here rather than relying on the component to drop them.
+    sectionOrder: sections
+      .filter(
+        s =>
+          !(s.hidden ?? false) && (s.participantType ?? 'student') === 'student'
+      )
+      .map(s => s.id),
     sections: Object.fromEntries(
       sections.map(s => [
         s.id,
@@ -50,10 +74,23 @@ function makeSectionsState(
           participantType: s.participantType ?? 'student',
           avatar_color: s.avatar_color ?? 0,
           avatar_emoji: s.avatar_emoji ?? 0,
+          // Sections default to fully set up (course + unit assigned, has
+          // students) so existing lesson-suggestion tests don't have to
+          // think about the empty-state gating - tests that specifically
+          // exercise an empty state override these.
+          courseId: s.courseId === undefined ? 1 : s.courseId,
+          unitId: s.unitId === undefined ? 1 : s.unitId,
+          studentCount: s.studentCount ?? 1,
         },
       ])
     ),
   };
+}
+
+// Matches the /api/v1/sections/suggested_lessons response shape: today's
+// server date alongside the per-section lesson data.
+function makeSuggestedLessonsResponse(sections: Record<number, unknown>) {
+  return {value: {today: todayISO(), sections}};
 }
 
 function makeLessonData(overrides = {}) {
@@ -77,7 +114,9 @@ async function renderAndSettle(ui: React.ReactElement) {
 describe('PrepareList', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({value: {}});
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+      makeSuggestedLessonsResponse({})
+    );
     (useAppSelector as jest.Mock).mockReturnValue(SECTION_STATE_EMPTY);
   });
 
@@ -135,15 +174,15 @@ describe('PrepareList', () => {
         {id: 2, name: 'Period 2: Game Design'},
       ])
     );
-    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
-      value: {
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+      makeSuggestedLessonsResponse({
         1: makeLessonData({
           lesson_id: 10,
           podcast_url: '/ai_lesson_summary_podcasts/show?lesson_id=10',
         }),
         2: makeLessonData({lesson_id: 20, podcast_url: null}),
-      },
-    });
+      })
+    );
 
     await renderAndSettle(<PrepareList />);
     expect(document.querySelectorAll('audio')).toHaveLength(1);
@@ -156,12 +195,12 @@ describe('PrepareList', () => {
         {id: 2, name: 'Period 2: Game Design'},
       ])
     );
-    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
-      value: {
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+      makeSuggestedLessonsResponse({
         1: makeLessonData({lesson_id: 10, podcast_url: null}),
         2: makeLessonData({lesson_id: 20, podcast_url: null}),
-      },
-    });
+      })
+    );
 
     await renderAndSettle(<PrepareList />);
     expect(document.querySelectorAll('audio')).toHaveLength(0);
@@ -171,11 +210,11 @@ describe('PrepareList', () => {
     (useAppSelector as jest.Mock).mockReturnValue(
       makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
     );
-    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
-      value: {
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+      makeSuggestedLessonsResponse({
         1: makeLessonData({name: 'Lesson 5: Functions'}),
-      },
-    });
+      })
+    );
 
     await renderAndSettle(<PrepareList />);
     expect(screen.getByText('Lesson 5: Functions')).toBeInTheDocument();
@@ -185,9 +224,11 @@ describe('PrepareList', () => {
     (useAppSelector as jest.Mock).mockReturnValue(
       makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
     );
-    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
-      value: {1: {completed_unit: true, history: [], coming_up: null}},
-    });
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+      makeSuggestedLessonsResponse({
+        1: {completed_unit: true, history: [], coming_up: null},
+      })
+    );
 
     await renderAndSettle(<PrepareList />);
     expect(screen.getByText(/finishing this unit/i)).toBeInTheDocument();
@@ -197,8 +238,8 @@ describe('PrepareList', () => {
     (useAppSelector as jest.Mock).mockReturnValue(
       makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
     );
-    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
-      value: {
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+      makeSuggestedLessonsResponse({
         1: makeLessonData({
           coming_up: {
             lesson_id: 20,
@@ -207,8 +248,8 @@ describe('PrepareList', () => {
             podcast_url: null,
           },
         }),
-      },
-    });
+      })
+    );
 
     await renderAndSettle(<PrepareList />);
     expect(screen.getByRole('option', {name: 'Coming up'})).toBeInTheDocument();
@@ -219,8 +260,8 @@ describe('PrepareList', () => {
     (useAppSelector as jest.Mock).mockReturnValue(
       makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
     );
-    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
-      value: {
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+      makeSuggestedLessonsResponse({
         1: makeLessonData({
           name: 'Lesson 1: Intro',
           coming_up: {
@@ -230,8 +271,8 @@ describe('PrepareList', () => {
             podcast_url: null,
           },
         }),
-      },
-    });
+      })
+    );
 
     await renderAndSettle(<PrepareList />);
     await user.selectOptions(
@@ -248,8 +289,8 @@ describe('PrepareList', () => {
     (useAppSelector as jest.Mock).mockReturnValue(
       makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
     );
-    (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
-      value: {
+    (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+      makeSuggestedLessonsResponse({
         1: makeLessonData({
           history: [
             {
@@ -261,10 +302,121 @@ describe('PrepareList', () => {
             },
           ],
         }),
-      },
-    });
+      })
+    );
 
     await renderAndSettle(<PrepareList />);
     expect(screen.getByRole('option', {name: /July 15/})).toBeInTheDocument();
+  });
+
+  describe('section card navigation', () => {
+    function setupSectionWithLesson() {
+      (useAppSelector as jest.Mock).mockReturnValue(
+        makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
+      );
+      (HttpClient.fetchJson as jest.Mock).mockImplementation((url: string) => {
+        if (url.includes('ai_lesson_summaries')) {
+          return Promise.resolve({
+            response: {ok: true},
+            value: {
+              lesson_summary: JSON.stringify({
+                learning_objective: 'Students learn variables.',
+                lesson_beats: ['Beat one'],
+                tips: ['Tip one'],
+                misconceptions: ['Misc one'],
+              }),
+            },
+          });
+        }
+        return Promise.resolve(
+          makeSuggestedLessonsResponse({
+            1: makeLessonData({lesson_id: 10, name: 'Lesson 5: Loops'}),
+          })
+        );
+      });
+    }
+
+    it('navigates to lesson summary screen when section card is clicked', async () => {
+      setupSectionWithLesson();
+      const user = userEvent.setup();
+      await renderAndSettle(<PrepareList />);
+
+      await waitFor(() =>
+        expect(
+          screen.getByRole('button', {name: /Period 1/i})
+        ).toBeInTheDocument()
+      );
+      await user.click(screen.getByRole('button', {name: /Period 1/i}));
+
+      await waitFor(() =>
+        expect(screen.getByRole('button', {name: /back/i})).toBeInTheDocument()
+      );
+      expect(screen.queryByText('Prepare')).not.toBeInTheDocument();
+    });
+
+    it('returns to list when back button is clicked on detail screen', async () => {
+      setupSectionWithLesson();
+      const user = userEvent.setup();
+      await renderAndSettle(<PrepareList />);
+
+      await waitFor(() =>
+        expect(
+          screen.getByRole('button', {name: /Period 1/i})
+        ).toBeInTheDocument()
+      );
+      await user.click(screen.getByRole('button', {name: /Period 1/i}));
+      await waitFor(() =>
+        expect(screen.getByRole('button', {name: /back/i})).toBeInTheDocument()
+      );
+
+      await user.click(screen.getByRole('button', {name: /back/i}));
+      await waitFor(() =>
+        expect(screen.getByText('Prepare')).toBeInTheDocument()
+      );
+    });
+
+    it('shows the retired-course empty state when a fully-assigned section has no lesson data', async () => {
+      (useAppSelector as jest.Mock).mockReturnValue(
+        makeSectionsState([{id: 1, name: 'Period 1: Intro to CS'}])
+      );
+      // API returns null for this section (no lesson for today) even though
+      // it has a course, a unit, and students - the only remaining
+      // explanation getEmptyStateType can offer is that the unit's been
+      // retired.
+      (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+        makeSuggestedLessonsResponse({1: null})
+      );
+      const user = userEvent.setup();
+      await renderAndSettle(<PrepareList />);
+
+      const button = await screen.findByRole('button', {name: /Period 1/i});
+      await user.click(button);
+
+      await waitFor(() =>
+        expect(
+          screen.getByText("The assigned course isn't available anymore")
+        ).toBeInTheDocument()
+      );
+    });
+
+    it('shows the no-course empty state when the section has no course assigned', async () => {
+      (useAppSelector as jest.Mock).mockReturnValue(
+        makeSectionsState([
+          {id: 1, name: 'Period 1: Intro to CS', courseId: null, unitId: null},
+        ])
+      );
+      (HttpClient.fetchJson as jest.Mock).mockResolvedValue(
+        makeSuggestedLessonsResponse({1: null})
+      );
+      const user = userEvent.setup();
+      await renderAndSettle(<PrepareList />);
+
+      const button = await screen.findByRole('button', {name: /Period 1/i});
+      await user.click(button);
+
+      await waitFor(() =>
+        expect(screen.getByText('No course assigned')).toBeInTheDocument()
+      );
+    });
   });
 });

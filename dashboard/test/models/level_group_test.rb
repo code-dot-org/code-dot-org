@@ -87,6 +87,23 @@ MARKDOWN
     assert_equal pages[2].page_number, 3
   end
 
+  # A level_group with no pages (or that failed to seed due to missing
+  # properties_encryption_key) has no levels_and_texts_per_page property at all.
+  # Lesson#summarize -> ScriptLevel.summarize_extra_puzzle_pages ->
+  # LevelGroup#pages must read it as a group with no pages rather than raising.
+  test 'an unseeded level group reports no pages instead of raising' do
+    level_group = create(:level_group)
+    assert_nil level_group.properties['levels_and_texts_per_page']
+
+    assert_empty level_group.pages
+    assert_empty level_group.levels
+    assert_empty level_group.levels_and_texts
+
+    # summarize_extra_puzzle_pages only needs the level id from the summary; it
+    # reads the rest of the hash once there is a second page to describe.
+    assert_empty ScriptLevel.summarize_extra_puzzle_pages({ids: [level_group.id]})
+  end
+
   # Test that a level_group can't be created if it has duplicate levels.
   test 'level group fail on duplicate levels' do
     # DSL for the level_group, with a duplicate level.

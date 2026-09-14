@@ -1,0 +1,33 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-08T01:07:06.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson12 + template",
+    "long_instructions": "Prepare to share your visualization in a gallery walk.\r\n\r\n**☑️ Do This:**\r\n- Add finishing touches to your visualization.\r\n- In `summary.txt`, write a paragraph to describe the story your data tells.\r\n- Run your program to display your visualization. Then, open `summary.txt`. Both your visualization and your summary should be visible.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\nIuPemTu+b+mE7nXQ0F87c6pDJXDJjaU=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-08 01:07:31 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:09:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:09:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:10:25 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:11:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:16:58 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

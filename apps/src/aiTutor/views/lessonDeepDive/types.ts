@@ -1,6 +1,20 @@
+import {type VocabularyItem} from '@code-dot-org/lesson-deep-dive';
+
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import {ResponseValidator} from '../../../util/HttpClient';
+
+export const ExplanationTypes = {
+  AUDIO: 'audio',
+  TEXT: 'text',
+};
+
+export const EvaluationStatus = {
+  PENDING: 'pending',
+  ERROR: 'error',
+  NONE: 'none',
+  SUCCESS: 'success',
+};
 
 export type AssessmentQuestionResult = {
   level_id: number;
@@ -37,7 +51,7 @@ export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
-  vocabulary: {id: string; word: string; definition: string}[];
+  vocabulary: VocabularyItem[];
   objectives: {id: string; description: string}[];
   assessmentAnalysis: AssessmentQuestionResult[];
   jsonVideos: JsonVideoData[];
@@ -114,14 +128,42 @@ type ServerChallengeResponseAsset = {
   download_url?: string;
 };
 
+// An emoji reaction tally on a response: the emoji name (mapped to a glyph
+// in the gallery), how many viewers left it, and whether the signed-in
+// viewer is one of them.
+export type Reaction = {
+  emoji: string;
+  count: number;
+  reacted: boolean;
+};
+
+// Normalizes the server's reaction array. A missing or malformed list is
+// treated as no reactions rather than throwing.
+export const parseReactions = (raw: unknown): Reaction[] => {
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+  return (raw as Record<string, unknown>[])
+    .filter(r => typeof r.emoji === 'string')
+    .map(r => ({
+      emoji: r.emoji as string,
+      count: typeof r.count === 'number' ? r.count : 0,
+      reacted: r.reacted === true,
+    }));
+};
+
 // The student-facing shape of a response. student_feedback carries the
-// constructive AI feedback (null until evaluation completes) and
-// evaluation_status its lifecycle; the scored evaluation_result is
-// teacher-only, so the server omits it here.
+// constructive AI feedback (null until evaluation completes) and is private
+// to the author: the server omits it on rows belonging to section peers.
+// The scored evaluation_result is teacher-only, so it never appears here.
+// user_name / unit_id / lesson_position label the work in the gallery.
 export type ChallengeResponse = {
   id: number;
   challenge_id: number;
   user_id: number;
+  user_name: string;
+  unit_id: number | null;
+  lesson_position: number | null;
   student_text: string | null;
   transcript: string | null;
   student_feedback: string | null;
@@ -129,19 +171,24 @@ export type ChallengeResponse = {
   is_final: boolean;
   created_at: string;
   assets: ChallengeResponseAsset[];
+  reactions: Reaction[];
 };
 
 type ServerChallengeResponse = {
   id: number;
   challenge_id: number;
   user_id: number;
+  user_name?: string;
+  unit_id?: number | null;
+  lesson_position?: number | null;
   student_text: string | null;
   transcript: string | null;
-  student_feedback: string | null;
+  student_feedback?: string | null;
   evaluation_status: string | null;
   is_final: boolean;
   created_at: string;
   assets: ServerChallengeResponseAsset[];
+  reactions?: unknown;
 };
 
 export const challengeResponseValidator: ResponseValidator<
@@ -155,6 +202,9 @@ export const challengeResponseValidator: ResponseValidator<
     id: r.id,
     challenge_id: r.challenge_id,
     user_id: r.user_id,
+    user_name: r.user_name ?? '',
+    unit_id: r.unit_id ?? null,
+    lesson_position: r.lesson_position ?? null,
     student_text: r.student_text ?? null,
     transcript: r.transcript ?? null,
     student_feedback: r.student_feedback ?? null,
@@ -166,7 +216,19 @@ export const challengeResponseValidator: ResponseValidator<
       asset_type: a.asset_type as ChallengeResponseAsset['asset_type'],
       download_url: a.download_url ?? null,
     })),
+    reactions: parseReactions(r.reactions),
   };
+};
+
+export const challengeResponseListValidator: ResponseValidator<
+  ChallengeResponse[]
+> = bodyJson => {
+  if (!Array.isArray(bodyJson)) {
+    throw new Error('Expected an array of challenge responses');
+  }
+  return (bodyJson as Record<string, unknown>[]).map(
+    challengeResponseValidator
+  );
 };
 
 export type Challenge = {
@@ -175,6 +237,9 @@ export type Challenge = {
   question: string;
   default_modality: 'whiteboard' | 'video' | null;
   whiteboard_starter_image_alt_text: string | null;
+  // Same-origin path to the whiteboard starter image, or null when there is
+  // none. Present only when whiteboard_starter_image_alt_text is set.
+  whiteboard_starter_image_url: string | null;
 };
 
 type ServerChallenge = {
@@ -183,6 +248,7 @@ type ServerChallenge = {
   question: string;
   default_modality: 'whiteboard' | 'video' | null;
   whiteboard_starter_image_alt_text: string | null;
+  whiteboard_starter_image_url: string | null;
   created_at: string;
   updated_at: string;
 };
@@ -207,6 +273,7 @@ export const challengeValidator: ResponseValidator<Challenge[]> = bodyJson => {
     default_modality: c.default_modality ?? null,
     whiteboard_starter_image_alt_text:
       c.whiteboard_starter_image_alt_text ?? null,
+    whiteboard_starter_image_url: c.whiteboard_starter_image_url ?? null,
   }));
 };
 

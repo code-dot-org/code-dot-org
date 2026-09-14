@@ -16,14 +16,13 @@ Contents on top of cdo-base:
 It runs as the non-root `cdo` user with `BUNDLE_PATH=/usr/local/bundle`
 writable.
 
-Derived from the `build` stage of `k8s/docker/code-dot-org.dockerfile` on
-`feat/docker-thin`, with the same package set, rewritten for the dual-engine
-rules below.
+This is the canonical build toolchain for local containers and deployed image
+publishing. The dual-engine rules below keep Docker and Podman builds equal.
 
 ## Why it is its own image
 
 It sits below the gem layer because it produces it — an image cannot be
-built `FROM` an image containing its own output. cdo-gems compiles its
+built `FROM` an image containing its own output. cdo-deps compiles its
 bundle here and copies the result onto cdo-base, so the shipped image
 carries no toolchain.
 
@@ -34,13 +33,12 @@ the warm gem cache, and the builder has to sit below it.
 ## Not published
 
 Unlike cdo-base, this image is not pushed to a registry. It is materialized
-during a build and discarded, so downstream Dockerfiles take it as a build
-argument the way `k8s/docker/code-dot-org.dockerfile` already takes
-`CODE_DOT_ORG_CORE`:
+during a build and discarded, so cdo-deps takes it as the `BUILD_IMAGE` build
+argument:
 
 ```sh
 docker build -t cdo-build:local docker/build/
-docker build --build-arg CDO_BUILD=cdo-build:local ...
+docker build -f docker/deps/Dockerfile --build-arg BUILD_IMAGE=cdo-build:local ...
 ```
 
 The cost of not publishing is that a runner with no layer cache reinstalls
@@ -118,9 +116,9 @@ mount a BuildKit gem cache under it without root owning the parents. The ABI
 component is asked of the interpreter in the image
 (`RbConfig::CONFIG["ruby_version"]`) rather than transcribed from
 `.ruby-version`, so a Ruby bump needs no edit here. The one place in the family
-that cannot derive it is cdo-gems' cache-mount target, where a guard line makes
+that cannot derive it is cdo-deps' cache-mount target, where a guard line makes
 a mismatch a loud failure; see
-[docker/gems/README.md](../gems/README.md#build).
+[docker/deps/README.md](../deps/README.md#build).
 
 ## Base image pinning
 
@@ -173,19 +171,13 @@ copied into a runtime image, so runtime `.so` lookup is cdo-base's contract.
 
 ## CI
 
-This image has no workflow of its own. `.github/workflows/cdo-gems-image.yml`
+This image has no workflow of its own. `.github/workflows/cdo-deps-image.yml`
 is the gate for this directory: its trigger paths include `docker/build/**`,
 and every job in it builds cdo-build and runs this smoke test before building
 the gem layer, on both docker and podman. A separate workflow would build the
 same image twice per PR to assert the same contract.
 
-The consequence of not being published is that there is no publish leg to
-gate, and no arm64 leg: the gems workflow is amd64 only (see
-[docker/gems/README.md](../gems/README.md)), so arm64 cdo-build is unproven in
-CI even though the Dockerfile is arch-neutral. Build it locally if that
-matters.
-
-The gems workflow doubles as this image's canary. It is chained off
+The deps workflow doubles as this image's canary. It is chained off
 `cdo-base-image` by `workflow_run`, so every successful base publish — including
 the weekly cron rebuild — rebuilds and smoke-tests this toolchain against the
 fresh base, and a base change that breaks it surfaces without waiting for a

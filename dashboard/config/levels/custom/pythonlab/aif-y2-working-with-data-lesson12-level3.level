@@ -1,0 +1,33 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-08T01:05:46.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson12 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Visualize your data. Customize your plot’s titles, labels, limits, and colors to help it tell the story of your data.\r\n\r\n💻 Coding Tip\r\n\r\nRefer to the `matplotlib` documentation in your Project Planning Guide and in the `matplotlib` Documentation Activity Guide. \r\n\r\nEnsure you call `plt.show` to show your plot.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-08 01:06:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 01:06:44 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

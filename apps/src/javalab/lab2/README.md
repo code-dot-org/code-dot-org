@@ -175,7 +175,6 @@ still on the TODO list. Differences from legacy use:
   is not lost in a migration.
 
 ## To Dos
-- **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
 - **Teacher feedback** populate teacher feedback in resource panel.
 - **Decommissioning the legacy bundle**. `apps/src/javalab/` stays

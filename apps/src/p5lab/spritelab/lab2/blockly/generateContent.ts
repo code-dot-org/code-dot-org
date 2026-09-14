@@ -2,8 +2,8 @@
 // Lab's GenerateCodeContent. The model must emit ONLY pseudocode in the
 // vocabulary that generateBlocklyJson understands — and only from ONE of the
 // two profiles below, which mirror the Platform and Story toolbox categories
-// (setup.ts INJECTED_CATEGORIES). Keep the profiles in sync as the categories
-// evolve.
+// (toolbox/toolboxAdditions.ts INJECTED_CATEGORIES). Keep the profiles in
+// sync as the categories evolve.
 
 export const DEFAULT_CONTEXT = `You generate pseudocode for a Sprite Lab program. Output ONLY pseudocode — no prose, no backticks, no explanation.
 

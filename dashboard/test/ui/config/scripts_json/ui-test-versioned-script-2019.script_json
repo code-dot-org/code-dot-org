@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-01 21:30:59 UTC",
+    "serialized_at": "2026-08-11 17:50:03 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -83,11 +83,14 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test courseB_video_Unspotted"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseB_video_Unspotted"
+          "UI Test courseB_video_Unspotted"
         ],
         "lesson.key": "Lesson",
         "lesson_group.key": "lg_1",
@@ -95,16 +98,16 @@
         "activity_section.key": "19040849-5799-4bee-ad15-75a640abb43d"
       },
       "level_keys": [
-        "courseB_video_Unspotted"
+        "UI Test courseB_video_Unspotted"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "courseB_video_Unspotted",
+        "level.key": "UI Test courseB_video_Unspotted",
         "script_level.level_keys": [
-          "courseB_video_Unspotted"
+          "UI Test courseB_video_Unspotted"
         ],
         "lesson.key": "Lesson",
         "lesson_group.key": "lg_1",
@@ -141,6 +144,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

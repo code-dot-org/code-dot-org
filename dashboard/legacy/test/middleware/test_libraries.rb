@@ -95,6 +95,54 @@ class LibrariesTest < FilesApiTestBase
     )
   end
 
+  def test_list_multiple_channels
+    filename = 'library.json'
+    other_channel_id = create_channel
+    other_api = FilesApiTestHelper.new(current_session, 'libraries', other_channel_id)
+    delete_all_library_versions(filename)
+    delete_all_library_versions(filename, other_channel_id)
+
+    upload(filename, '{"library":"library"}')
+    other_body = '{"library":"other"}'
+    other_api.put_object(filename, other_body, {'CONTENT_TYPE' => 'application/json'})
+    assert successful?
+
+    files_by_channel = @api.list_library_objects_for_channels([@channel_id, other_channel_id])
+    assert successful?
+    assert_equal [@channel_id, other_channel_id].sort, files_by_channel.keys.sort
+    assert_fileinfo_equal(
+      {'filename' => filename, 'category' => 'application', 'size' => other_body.length},
+      files_by_channel[other_channel_id][0]
+    )
+    assert_equal([filename], files_by_channel[@channel_id].map {|file| file['filename']})
+
+    soft_delete(filename)
+    other_api.delete_object(filename)
+    assert successful?
+    delete_channel(other_channel_id)
+  end
+
+  def test_list_multiple_channels_with_unreadable_channel
+    files_by_channel = @api.list_library_objects_for_channels([@channel_id, 'not-a-channel-id'])
+    assert successful?
+    assert_equal [], files_by_channel[@channel_id]
+    assert_nil files_by_channel['not-a-channel-id']
+  end
+
+  def test_list_multiple_channels_is_libraries_only
+    get "/v3/sources?channels=#{@channel_id}"
+    assert_equal 404, last_response.status
+  end
+
+  def test_list_multiple_channels_rejects_empty_and_oversized_requests
+    @api.list_library_objects_for_channels([])
+    assert_equal 400, last_response.status
+
+    too_many = Array.new(FilesApi::MAX_LIST_CHANNELS + 1) {|index| "channel-#{index}"}
+    @api.list_library_objects_for_channels(too_many)
+    assert_equal 400, last_response.status
+  end
+
   def test_404_on_malformed_version_id
     filename = 'library.json'
     file_data = '{"library":"library"}'
@@ -148,7 +196,8 @@ class LibrariesTest < FilesApiTestBase
     assert successful?
   end
 
-  private def delete_all_library_versions(filename)
-    delete_all_versions(CDO.libraries_s3_bucket, "libraries_test/1/1/#{filename}")
+  private def delete_all_library_versions(filename, channel_id = @channel_id)
+    storage_id, project_id = get_storage_id_and_project_id(channel_id)
+    delete_all_versions(CDO.libraries_s3_bucket, "libraries_test/#{storage_id}/#{project_id}/#{filename}")
   end
 end

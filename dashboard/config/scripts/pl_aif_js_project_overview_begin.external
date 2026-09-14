@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 <p>Foundations of Programming with AI ends with a cumulative <strong>Reactive Logic Project</strong>. </p>
 
-<p>Over five days, students design and build an interactive app that responds to user input with different outcomes, badges, or messages. They plan with a flowchart, build, test, peer-review using TAG (Tell / Ask / Give), and finalize.<br><br> Every Phase 1 concept comes together here: event-driven design, variables, functions, and conditionals, including combined conditions.</p>
+<p>Over five days, students design and build an interactive app that responds to user input with different outcomes, badges, or messages. They plan with a flowchart, build, test, peer-review using TAG (Tell / Ask / Give), and finalize.<br><br> Every unit concept comes together here: event-driven design, variables, functions, and conditionals, including combined conditions.</p>
 
 ---
 
@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 <p><em>Click the ingredients and see what happens.</em></p>
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-  <iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/trail-mix-badge-builder-v2.html" width="100%" height="620" style="border:none;" title="Trail Mix Badge Builder sample project"></iframe>
+  <iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/trail-mix-badge-builder-v2.html" width="100%" height="700" style="border:none;" title="Trail Mix Badge Builder sample project"></iframe>
 </div>
 
 <div style="clear:both;"></div>

@@ -5,6 +5,7 @@ import type {Alias} from 'vite';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 const repoRoot = path.resolve(__dirname, '../../..');
 const stubs = path.resolve(__dirname, 'src/dev/stubs');
@@ -39,13 +40,38 @@ const devHostAliases: Alias[] = [
   },
 ];
 
+// Dashboard route prefixes the feature calls. A prefix also matches its
+// sub-routes.
+//
+// The proxy exists because apps' HttpClient sends root-relative URLs. When
+// the feature moves to @code-dot-org/core's API client (baseUrl + CORS),
+// delete this list, the proxy, and allowedHosts.
+const dashboardProxyPrefixes = [
+  '/practice_problems',
+  '/user_practice_problem_attempts',
+  '/challenges',
+  '/challenge_responses',
+  '/challenge_response_assets',
+  '/user_lesson_reflections',
+  '/user_lesson_objective_reflections',
+  '/ai_student_podcasts',
+  '/aichat_request',
+  '/ai_gateway',
+  '/get_token',
+];
+
+const dashboardTarget = 'http://localhost-studio.code.org:3000';
+
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
+    // Set on both outputs but only meaningful for CJS, where a default import
+    // of an externalized compiled-ESM dep would otherwise resolve to its
+    // namespace object rather than the component. Remove once the CJS output
+    // goes away -- i.e. once `apps` resolves the ESM condition.
+    interop: 'auto',
     exports: 'auto',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
-    preserveModules: true,
-    preserveModulesRoot: 'src',
   };
 }
 
@@ -60,6 +86,7 @@ export default defineConfig(({command}) => ({
       insertTypesEntry: false,
       exclude: ['**/__tests__/**', '**/*.test.tsx', 'src/dev/**'],
     }),
+    libInjectCss(),
     externalizeDeps(),
   ],
   resolve: {
@@ -88,13 +115,33 @@ export default defineConfig(({command}) => ({
   server: {
     // The dev shell imports source from apps/, outside this package's root.
     fs: {allow: [repoRoot]},
+    ...(command === 'serve'
+      ? {
+          // Browse on Rails' own hostname so the session cookie rides along;
+          // cookies ignore the port but not the host.
+          allowedHosts: ['localhost-studio.code.org'],
+          // That hostname is public DNS for 127.0.0.1; Vite's default bind
+          // can land on ::1 only.
+          host: '127.0.0.1',
+          // In msw mode the service worker answers first, so the proxy is
+          // safe to leave always on.
+          //
+          // No changeOrigin: Rails checks Origin against Host, and a
+          // rewritten Host makes every write a 422.
+          proxy: Object.fromEntries(
+            dashboardProxyPrefixes.map(prefix => [
+              prefix,
+              {target: dashboardTarget},
+            ]),
+          ),
+        }
+      : {}),
   },
   // public/ holds the MSW service worker, which only the dev shell needs.
   // Keeping it out of build mode leaves the published dist/ untouched.
   publicDir: command === 'serve' ? 'public' : false,
   build: {
     sourcemap: true,
-    cssCodeSplit: true,
     lib: {
       entry: ['src/index.ts'],
       name: 'lesson-deep-dive',

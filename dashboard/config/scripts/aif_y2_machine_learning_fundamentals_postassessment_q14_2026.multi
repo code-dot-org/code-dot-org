@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q14-2026'
+
+wrong 'The model produces more accurate predictions than the other'
+right 'The model is more complex than the other'
+wrong 'The model does not privilege one person or group over another'
+wrong 'The model is used in a way that avoids causing harm to people'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+When comparing two models, which of the following is NOT a reason to prefer one model over another model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Evaluating the Impact of Models
+MARKDOWN

@@ -1,0 +1,20 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q3-2026'
+
+right 'The program is missing an import statement'
+wrong 'The program has an extra parenthesis'
+wrong 'The program is missing a variable'
+wrong 'The program calls a function with the wrong arguments'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Below is an entire program. It is meant to print a random number from 1 to 10, but it has a bug. What is the bug?
+
+```
+print(random.randint(1, 10))
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Handling Uncertainty
+MARKDOWN

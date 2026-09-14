@@ -1,16 +1,16 @@
 # Acceptable RGB values for the DSCO semantic tokens that paint progress
-# bubbles, as they resolve under the codeai-next brand (the default-brand
-# fallback — see lib/cdo/brand.rb). Tokens resolve differently in the Light vs
+# bubbles, as they resolve under the codeai-next brand (the default — see
+# lib/cdo/brand.rb). Tokens resolve differently in the Light vs
 # Dark theme — Lab2 wraps its content in `<div data-theme="Dark">` so any bubble
 # shown inside a Lab2 page paints with the Dark-theme values — so each status
 # lists Light first, then Dark where the two differ.
 #
-# These are literals, so they only hold for the current default brand: setting
-# default-brand back to codeai moves every one of them.
+# These are literals, so they only hold for the current default brand: a
+# future default swap moves every one of them.
 #
 # Sources (frontend/packages/component-library-styles):
 #   brandCodeAiNext.css        canonical CADS tokens, [data-brand='codeai-next']
-#   brandCodeAiNextAliases.css legacy token names mapped onto CADS values
+#   brandLegacyAliases.css     legacy token names mapped onto CADS values
 def color_strings(key)
   {
     # --background-success-primary (sentiment-success-70 in both themes), which

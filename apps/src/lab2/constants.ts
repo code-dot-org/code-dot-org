@@ -1,5 +1,3 @@
-import {extensions as mimeToExtensions} from 'mime-types';
-
 import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {AppName, ProjectType} from './types';
@@ -64,6 +62,17 @@ export enum FontSize {
 
 export const INITIAL_VERSION_ID = 'initial-version';
 
+export const IMAGE_MIME_TO_EXTENSIONS: Record<string, readonly string[]> = {
+  'image/gif': ['gif'],
+  'image/jpeg': ['jpeg', 'jpg'],
+  'image/png': ['png'],
+  'image/webp': ['webp'],
+};
+
 export const SUPPORTED_IMAGE_EXTENSIONS = SafeAndSupportedImageTypes.flatMap(
-  mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
+  mime => IMAGE_MIME_TO_EXTENSIONS[mime] ?? []
 );
+
+// Audio formats a project file can be played back as. Kept narrow on purpose;
+// wav is widely supported across browsers.
+export const SUPPORTED_AUDIO_EXTENSIONS = ['wav'];

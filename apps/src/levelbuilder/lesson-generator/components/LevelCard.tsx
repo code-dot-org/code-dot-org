@@ -1,10 +1,26 @@
 import React from 'react';
 
-import ReorderableCard from '../../curriculum-generator/components/ReorderableCard';
-import {LabType, LevelSpec} from '../types';
+import ReorderableCard from '@cdo/apps/levelbuilder/curriculum-generator/components/ReorderableCard';
+import {createUuid} from '@cdo/apps/utils';
 
-import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
+import {
+  AICHAT_PRESETS,
+  AichatPresetId,
+  DEFAULT_AICHAT_PRESET,
+} from '../ai/aichat';
+import {mergeSpecPatch} from '../helpers/specPatch';
+import {
+  BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES,
+  LabType,
+  LevelSpec,
+  takesSuppliedCode,
+} from '../types';
+
+import SublevelSection from './SublevelSection';
+import SuppliedCodeField from './SuppliedCodeField';
+
 import moduleStyles from '../lesson-generator.module.scss';
+import sharedStyles from '@cdo/apps/levelbuilder/curriculum-generator/curriculum-generator.module.scss';
 
 interface LevelCardProps {
   spec: LevelSpec;
@@ -17,6 +33,10 @@ interface LevelCardProps {
   onRemove: (key: string) => void;
   onMove: (key: string, direction: 'up' | 'down') => void;
 }
+
+const SUBLEVEL_LAB_TYPE_SET = new Set<LabType>(
+  BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES
+);
 
 const LevelCard: React.FC<LevelCardProps> = ({
   spec,
@@ -34,6 +54,57 @@ const LevelCard: React.FC<LevelCardProps> = ({
     unsupported && spec.existing
       ? spec.existing.scriptLevel.levels?.[0]?.name || previewName
       : previewName;
+
+  const sublevelLabOptions = labOptions.filter(o =>
+    SUBLEVEL_LAB_TYPE_SET.has(o.value)
+  );
+
+  const sublevels = spec.sublevels ?? [];
+
+  const updateSublevels = (next: LevelSpec[]) => {
+    onChange(spec.key, {sublevels: next});
+  };
+
+  const addSublevel = () => {
+    updateSublevels([
+      ...sublevels,
+      {
+        key: createUuid(),
+        id: '',
+        labType: BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES[0],
+        description: '',
+        generate: true,
+      },
+    ]);
+  };
+
+  const patchSublevel = (subKey: string, patch: Partial<LevelSpec>) => {
+    const next = sublevels.map(s =>
+      s.key === subKey ? mergeSpecPatch(s, patch) : s
+    );
+    // The parent's run is what generates sublevels.
+    onChange(
+      spec.key,
+      'suppliedCode' in patch
+        ? {sublevels: next, generate: true}
+        : {sublevels: next}
+    );
+  };
+
+  const removeSublevel = (subKey: string) => {
+    updateSublevels(sublevels.filter(s => s.key !== subKey));
+  };
+
+  const moveSublevel = (subKey: string, direction: 'up' | 'down') => {
+    const i = sublevels.findIndex(s => s.key === subKey);
+    if (i < 0) return;
+    const target = direction === 'up' ? i - 1 : i + 1;
+    if (target < 0 || target >= sublevels.length) return;
+    const next = sublevels.slice();
+    [next[i], next[target]] = [next[target], next[i]];
+    updateSublevels(next);
+  };
+
   return (
     <ReorderableCard
       title={
@@ -92,6 +163,43 @@ const LevelCard: React.FC<LevelCardProps> = ({
               </select>
             )}
           </div>
+          {!unsupported && spec.labType === 'weblab2' && (
+            <div className={sharedStyles.cardField}>
+              <label htmlFor={`template-${spec.key}`}>Template group</label>
+              <input
+                id={`template-${spec.key}`}
+                value={spec.templateGroup ?? ''}
+                onChange={e =>
+                  onChange(spec.key, {
+                    templateGroup: e.target.value,
+                  })
+                }
+                placeholder="e.g. main (optional)"
+                disabled={disabled}
+              />
+            </div>
+          )}
+          {!unsupported && spec.labType === 'aichat' && (
+            <div className={sharedStyles.cardField}>
+              <label htmlFor={`preset-${spec.key}`}>Preset</label>
+              <select
+                id={`preset-${spec.key}`}
+                value={spec.aichatPreset ?? DEFAULT_AICHAT_PRESET}
+                onChange={e =>
+                  onChange(spec.key, {
+                    aichatPreset: e.target.value as AichatPresetId,
+                  })
+                }
+                disabled={disabled}
+              >
+                {Object.values(AICHAT_PRESETS).map(preset => (
+                  <option key={preset.id} value={preset.id}>
+                    {preset.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           {!unsupported && (
             <label className={moduleStyles.skipLabel}>
               <input
@@ -120,9 +228,33 @@ const LevelCard: React.FC<LevelCardProps> = ({
                 onChange={e =>
                   onChange(spec.key, {description: e.target.value})
                 }
-                placeholder="What this level should teach or do."
+                placeholder={
+                  spec.labType === 'bubbleChoice'
+                    ? 'What choice is the student making, and what unifies these options?'
+                    : 'What this level should teach or do.'
+                }
                 disabled={disabled}
               />
+              {takesSuppliedCode(spec.labType) && (
+                <SuppliedCodeField
+                  id={`supplied-${spec.key}`}
+                  value={spec.suppliedCode ?? ''}
+                  disabled={disabled}
+                  onChange={suppliedCode => onChange(spec.key, {suppliedCode})}
+                />
+              )}
+              {spec.labType === 'bubbleChoice' && (
+                <SublevelSection
+                  sublevels={sublevels}
+                  labOptions={sublevelLabOptions}
+                  parentPreviewName={previewName}
+                  disabled={disabled}
+                  onAdd={addSublevel}
+                  onPatch={patchSublevel}
+                  onRemove={removeSublevel}
+                  onMove={moveSublevel}
+                />
+              )}
             </>
           )}
         </div>

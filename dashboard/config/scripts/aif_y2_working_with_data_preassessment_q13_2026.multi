@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q13-2026'
+
+right 'Collect data from some, but not all, members of a population.'
+wrong 'Collect data from all members of a population.'
+wrong 'Test a hypothesis on a small portion of a population.'
+wrong 'Test a hypothesis on all members of a population.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+To sample is to...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Collecting Data
+MARKDOWN

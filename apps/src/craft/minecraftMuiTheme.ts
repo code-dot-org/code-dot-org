@@ -138,7 +138,16 @@ const MINECRAFT_OUTLINED = {
   // after styleOverrides.root; a plain `border:none` here ties its single
   // class and loses on source order. The `&&` doubles our class so we
   // out-specify it, in every state the variant restates the border.
-  '&&': {border: 'none'},
+  '&&': {
+    border: 'none',
+    textShadow: '1px 2px rgba(33, 33, 33, 0.4)',
+  },
+  '&& .MuiButton-icon': {
+    textShadow: 'none',
+  },
+  '&&.MuiButton-sizeExtraSmall': {
+    textShadow: 'none',
+  },
   '&&:hover, &&:active': {border: 'none'},
   '&&.Mui-disabled, &&[aria-disabled="true"]': {border: 'none'},
   '&:active, a&:active': {
@@ -146,6 +155,7 @@ const MINECRAFT_OUTLINED = {
   },
   '&.Mui-disabled, &[aria-disabled="true"]': {
     ...toBackground([...bevel('0.33', '0.33'), DARKEN]),
+    textShadow: 'none',
   },
 } as const;
 

@@ -22,8 +22,11 @@ Given(/^I create a temp migrated unit with lessons$/) do
   @temp_lesson_without_lesson_plan_id = data['lesson_without_lesson_plan_id']
 end
 
+# "ui-test-" prefixed so the unit sits on the test side of the curriculum data
+# partition, as TestController#create_migrated_script does; see
+# dashboard/test/ui/config/README.md.
 Given(/^I enter a temp unit name$/) do
-  @temp_script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
+  @temp_script_name = "ui-test-temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
   puts "temp unit name: #{@temp_script_name}"
   steps %{
     And element "input[name='script[name]']" is visible
@@ -203,8 +206,10 @@ Given(/^I create a temp course$/) do
   @temp_course_name = data['course_name']
 end
 
+# The family name becomes the course name, with the version year appended for a
+# versioned course, so it carries the partition prefix too.
 Given(/^I enter a temp family name$/) do
-  @temp_family_name = "temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
+  @temp_family_name = "ui-test-temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
   puts "temp family name: #{@temp_family_name}"
   steps %{
     And element ".familyNameInput" is visible

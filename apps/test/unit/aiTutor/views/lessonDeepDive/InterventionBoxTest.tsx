@@ -11,7 +11,7 @@ import experiments from '@cdo/apps/util/experiments';
 // chat, redux) that are irrelevant to the navigation behavior under test, so
 // each is replaced with a lightweight marker whose text we can assert on.
 jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeBox',
+  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/Challenges',
   () => () => <div>challenge content</div>
 );
 jest.mock(
@@ -26,10 +26,10 @@ jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/PodcastsBox',
   () => () => <div>podcasts content</div>
 );
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/VocabularyFlashcards',
-  () => () => <div>flashcards content</div>
-);
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  VocabularyFlashcards: () => <div>flashcards content</div>,
+}));
 
 const mockUserId = 7;
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
@@ -101,7 +101,7 @@ describe('InterventionBox', () => {
     expect(screen.getByRole('button', {name: 'Challenge'})).toBeInTheDocument();
   });
 
-  it('renders ChallengeBox and reports the click when the Challenge menu card is selected', () => {
+  it('renders Challenges and reports the click when the Challenge menu card is selected', () => {
     renderInterventionBox();
 
     fireEvent.click(screen.getByRole('button', {name: 'Take on a challenge'}));
@@ -118,7 +118,7 @@ describe('InterventionBox', () => {
     );
   });
 
-  it('renders ChallengeBox when navigating to Challenge from the bottom nav', () => {
+  it('renders Challenges when navigating to Challenge from the bottom nav', () => {
     renderInterventionBox();
 
     fireEvent.click(screen.getByRole('button', {name: 'Challenge'}));

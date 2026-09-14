@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q4-2026'
+
+wrong 'Numerical data'
+wrong 'Continuous data'
+right 'Categorical data'
+wrong 'Pairwise data'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A researcher surveys children and records each student's favorite color. What kind of data is this?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Describing Data
+MARKDOWN

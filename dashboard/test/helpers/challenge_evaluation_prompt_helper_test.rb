@@ -12,14 +12,13 @@ class ChallengeEvaluationPromptHelperTest < ActiveSupport::TestCase
   ).freeze
 
   describe '.system_prompt' do
-    it 'includes the challenge question and every rubric criterion and level' do
+    it 'includes the challenge question and every rubric level' do
       prompt = ChallengeEvaluationPromptHelper.system_prompt(challenge)
 
       _(prompt).must_include challenge.question
-      _(prompt).must_include 'accuracy: The answer is mathematically correct'
-      _(prompt).must_include 'explanation: The reasoning is clearly explained'
-      _(prompt).must_include 'meets: Answer is correct'
-      _(prompt).must_include 'developing: Reasoning is incomplete'
+      _(prompt).must_include 'Level 0: No answer is present'
+      _(prompt).must_include 'Level 2: Answer is correct'
+      _(prompt).must_include 'Level 3: Answer is correct and the reasoning is clearly explained'
     end
 
     it 'instructs the model to write score-free feedback for the student' do
@@ -72,22 +71,23 @@ class ChallengeEvaluationPromptHelperTest < ActiveSupport::TestCase
   end
 
   describe '.response_format' do
-    it 'bakes the rubric criterion keys into the schema as an enum' do
+    it 'bakes the rubric levels into the schema as an integer enum' do
       format = ChallengeEvaluationPromptHelper.response_format(challenge)
 
       _(format[:type]).must_equal 'json_schema'
-      key_schema = format.dig(:json_schema, :schema, :properties, :evaluations, :items, :properties, :key)
-      _(key_schema[:enum]).must_equal %w[accuracy explanation]
+      level_schema = format.dig(:json_schema, :schema, :properties, :level)
+      _(level_schema[:type]).must_equal 'integer'
+      _(level_schema[:enum]).must_equal [0, 1, 2, 3]
     end
 
-    it 'requires a student_feedback field' do
+    it 'requires the evaluation and student_feedback fields' do
       schema = ChallengeEvaluationPromptHelper.response_format(challenge).dig(:json_schema, :schema)
 
       _(schema[:properties]).must_include :student_feedback
-      _(schema[:required]).must_include 'student_feedback'
+      _(schema[:required]).must_equal %w[level reasoning evidence student_feedback]
     end
 
-    it 'raises when the challenge has no rubric criteria' do
+    it 'raises when the challenge has no rubric levels' do
       challenge.update!(rubric: nil)
 
       _ {ChallengeEvaluationPromptHelper.response_format(challenge)}.must_raise ArgumentError

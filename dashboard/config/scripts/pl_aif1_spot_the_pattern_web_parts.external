@@ -7,9 +7,13 @@ markdown <<MARKDOWN
 
 Web design didn't always look like it does now. Travel through time and consider how user interfaces have evolved through the years. 
 
+---
+
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/evolution-of-web-design-v2.html" width="100%" height="1000" style="border:none;" title="The Evolution of Web Design: a click-through history"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/evolution-of-web-design-v2.html" width="100%" height="1200" style="border:none;" title="The Evolution of Web Design: a click-through history"></iframe>
 </div>
 
+---
 
+<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AIF1&Version_Year=2026&Unit=unit6b&Level=les2lev3&Activity_Type=activity" width="480" height="56" style="border:none;overflow:hidden;"></iframe>
 MARKDOWN

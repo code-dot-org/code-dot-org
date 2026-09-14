@@ -21,10 +21,14 @@ jest.mock(
 jest.mock('@cdo/apps/code-studio/components/ShareDialog', () => () => null);
 jest.mock('@cdo/apps/lab2/views/dialogs/ShareDialog', () => ({
   __esModule: true,
-  default: (props: {shareFailure?: {type: string} | null}) => (
+  default: (props: {
+    shareFailure?: {type: string} | null;
+    isAbusive?: boolean;
+  }) => (
     <div>
       share dialog:{' '}
       {props.shareFailure ? props.shareFailure.type : 'no failure'}
+      {props.isAbusive ? ' abusive' : ''}
     </div>
   ),
 }));
@@ -43,7 +47,8 @@ const mockedUseAppDispatch = useAppDispatch as jest.Mock;
 function setState(
   projectType: string,
   isOpen = true,
-  shareFailure: ShareFailure | null = null
+  shareFailure: ShareFailure | null = null,
+  isBlockedAbuse = false
 ) {
   mockedUseSelector.mockImplementation(selector =>
     selector({shareDialog: {isOpen}})
@@ -54,6 +59,7 @@ function setState(
         levelProperties: {isProjectLevel: true},
         channel: {id: 'abc123', projectType},
         shareFailure,
+        isBlockedAbuse,
       },
       currentUser: {
         signInState: 'Unknown',
@@ -95,5 +101,15 @@ describe('Lab2ShareDialogWrapper', () => {
     render(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
 
     expect(screen.queryByText(/share dialog/)).not.toBeInTheDocument();
+  });
+
+  it('passes isAbusive when the project is blocked for abuse', () => {
+    setState('sketchlab', true, null, true);
+
+    render(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
+
+    expect(
+      screen.getByText('share dialog: no failure abusive')
+    ).toBeInTheDocument();
   });
 });

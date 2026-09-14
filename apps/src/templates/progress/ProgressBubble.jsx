@@ -128,7 +128,7 @@ export default class ProgressBubble extends React.Component {
               : styles.assessmentDot
             : levelProgressStyle(level.status)
         }
-        classNames={getBubbleClassNames(this.isClickable())}
+        classNames={getBubbleClassNames(this.isClickable(), level.status)}
       >
         {content}
         {this.renderBubbleBadge(bubbleShape, bubbleSize)}

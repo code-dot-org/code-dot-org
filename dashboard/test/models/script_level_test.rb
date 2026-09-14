@@ -757,7 +757,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent)
   end
 
-  # Bubble Choice sublevels redirect to their parent level.
+  # Bubble Choice sublevels redirect to their parent level when
+  # navigation_type is unset or 'parent'.
   test 'next_level_or_redirect_path_for_user for BubbleChoice sublevels' do
     student = create(:student)
     student.stubs(:has_pilot_experiment?).returns true
@@ -766,8 +767,52 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     bubble_choice_parent = false
-    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1/lessons/1/levels/1",
+    parent_path = "/courses/#{script_level.script.original_unit_group.name}/units/1/lessons/1/levels/1"
+    assert_equal parent_path,
                  script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent, unit_group_unit: script_level.script.original_unit_group_unit)
+
+    bubble_choice_level.update!(navigation_type: 'parent')
+    assert_equal parent_path,
+                 script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # Bubble Choice sublevels with next_level or next_sublevel navigation skip
+  # the parent redirect and go to the next level mid-lesson.
+  test 'next_level_or_redirect_path_for_user for BubbleChoice sublevels with next navigation - mid lesson' do
+    student = create(:student)
+    student.stubs(:has_pilot_experiment?).returns true
+    script = create(:script, :in_single_unit_course, name: 'script1')
+    script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson_group = create(:lesson_group, script: script)
+    sublevel = create(:level, name: 'choice1')
+    bubble_choice_level = create(:bubble_choice_level, sublevels: [sublevel])
+    levels = [bubble_choice_level, create(:level)]
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      lesson = create(:lesson, script: script, absolute_position: pos, lesson_group: lesson_group)
+      create(:script_level, script: script, lesson: lesson, position: pos, chapter: pos, levels: [level])
+    end
+
+    script_levels[0].stubs(:end_of_lesson?).returns false
+    %w(next_level next_sublevel).each do |navigation_type|
+      bubble_choice_level.update!(navigation_type: navigation_type)
+      assert_equal script_levels[1].path,
+                   script_levels[0].next_level_or_redirect_path_for_user(student, bubble_choice_parent: false)
+    end
+  end
+
+  # Bubble Choice sublevels with next_sublevel navigation at the end of a
+  # lesson get the lesson-end redirect, not the parent page.
+  test 'next_level_or_redirect_path_for_user for BubbleChoice sublevels with next_sublevel navigation - end of lesson' do
+    student = create(:student)
+    student.stubs(:has_pilot_experiment?).returns true
+    sublevel = create(:level, name: 'choice1')
+    bubble_choice_level = create(:bubble_choice_level, sublevels: [sublevel])
+    bubble_choice_level.update!(navigation_type: 'next_sublevel')
+    script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1?completedLessonNumber=1",
+                 script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: false, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
   # For script where show_unit_overview_between_lessons? == true

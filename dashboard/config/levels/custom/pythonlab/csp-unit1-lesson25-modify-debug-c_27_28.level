@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-09T20:38:35.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "city = \"Austin\"\nstate = \"Texas\"\nlocation = city + state\nprint(\"I live in \" + location)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "long_instructions": "### Modify: Debug\r\n\r\nThis code should print \"I live in Austin, Texas\" but something is missing. \r\n\r\nFind the bug and fix it.",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp0Zrj0AiMzq+83\nwl9MnsDcVS+BTgKRj1/16y/KpSh4NqwMC3JqcBdQw6WYOzv+v8TDISvzJ+o9\ntQleqEds2bXpasruVlKtG22xhBcJaV4l9UiIiA6SOSKlYjX2QXTQdMOU6QrD\nWvFupmj+jNmdpizENiMBWPs12ire7CfK4yz9oJApSwdbPW0gKDc3Hs1/HJTR\nKc596HoRQ9v59FBwUbiZVL9YlslCI7Bm3bfM24ZmBClAfVOF+Hjv0Wj/JSbc\neWZvkoHhOuJMOOvIJ7f7CTsPehMzNqT5Epi0Ir00UeukUVfuGvb84C0PgQhY\nleNuzfdMJ8ek55VHw8XZu2tTkXR+ET2J9KIGrcZqIwKDTT1R1eu8ZTLz++xi\n5pY7rEVrY8s=\n",
+    "display_name": "The MIssing Space",
+    "bubble_choice_description": "Fix a location message that's missing something between the words.",
+    "thumbnail_url": "https://images.code.org/2d7051378103bce98f580c2bb9f79b64-pin.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-09T20:38:35.595+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson25-modify-debug-b_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson25-modify-debug-b_27_28\"},{\"changed_at\":\"2026-09-09 20:38:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:38:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:39:08 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 20:49:30 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:08:08 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:08:17 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:12:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 21:12:45 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

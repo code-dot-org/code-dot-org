@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Web Lab",
-    "long_instructions": "# Lesson 1 Web Lab\r\n",
+    "long_instructions": "# Finalize your Website\r\n\r\n1. Attach the image that you created into AI Tutor and prompt it to put it at the top of the website.\r\n2. Ask AI Tutor to assist with styling your website to match the look and feel of the image that you selected.\r\n3. Add any finishing touches that you want.\r\n",
     "bubble_choice_description": "  To add: description",
     "thumbnail_url": "https://images.code.org/eb213aa74c07f62893b9bfdbe907af04-web-lab-icon.png",
     "offer_browser_tts": "false",
@@ -46,8 +46,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "project_template_level_name": "problem-solving-with-ai-lesson1-weblab-template"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-06 20:36:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-06 20:36:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 13:08:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 13:58:36 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 14:33:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

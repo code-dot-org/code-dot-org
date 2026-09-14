@@ -1,0 +1,23 @@
+name 'aif-y2-working-with-data-preassessment-q8-2026'
+
+wrong 'How many orders are there?'
+right 'What\'s the most expensive drink to make?'
+wrong 'What\'s the most popular drink?'
+wrong 'What\'s the average price of a drink?'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which question **can't** be answered by the given data?
+
+| Order ID | Size | Drink | Price |
+|---|---|---|---|
+| 1 | Medium | Matcha Latte | $6.00 |
+| 2 | Large | Milk Tea | $4.00 |
+| 3 | Small | Tropical Fruit Boba | $4.50 |
+| 4 | Large | Tropical Fruit Boba | $5.50 |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Analyze a Dataset Project
+MARKDOWN

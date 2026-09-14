@@ -120,6 +120,10 @@ semantic categories `strictly-necessary`, `performance`, `functional`,
 `targeting`. With no CMP present (or before the plugin is registered), the
 store reports `strictly-necessary` only and `subscribe` never fires.
 
+Whether the CMP has _finished_ reporting is a separate signal,
+`whenConsentSettled`, for consumers that must not act before consent is
+known.
+
 See [`src/plugins/consent/README.md`](src/plugins/consent/README.md) for full
 usage details.
 

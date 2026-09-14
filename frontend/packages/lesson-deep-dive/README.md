@@ -9,9 +9,24 @@ in.
 
 ## Dev shell
 
+The shell has two modes. The default mode talks to a local Rails dashboard
+through the Vite proxy. `VITE_API_MODE=msw` serves fixtures and needs no
+backend.
+
 ```bash
-yarn dev            # http://localhost:5173/
+yarn dev                        # dashboard mode; needs Rails, see below
+VITE_API_MODE=msw yarn dev      # mocked mode; http://localhost:5173/
 ```
+
+Dashboard mode has three prerequisites:
+
+1. Start Rails: run `bin/dashboard-server` from the repo root.
+2. Browse the shell at `http://localhost-studio.code.org:5173`, not
+   `localhost`. That hostname is public DNS for 127.0.0.1, and cookies ignore
+   the port but not the hostname, so the Rails session cookie rides the
+   proxied requests.
+3. Sign in as a student at `http://localhost-studio.code.org:3000` first. The
+   shell has no sign-in flow of its own; it borrows that session.
 
 In Studio the flow is gated behind the `lesson-tutor` and
 `lesson-tutor-challenge` experiments. The shell turns both on by default —
@@ -59,20 +74,37 @@ Two things the config has to get right or nothing renders:
 
 `src/dev/nodeShims.ts` restates the Node globals webpack's `ProvidePlugin`
 gives apps' bundles; `@code-dot-org/redactable-markdown` needs `process`.
-`index.html` carries the `csrf_meta_tags` the Rails layout emits, because
-`AuthenticityTokenStore` reads that tag and otherwise falls back to
-`GET /get_token`; without it every write the feature makes fails before it is
-sent.
+
+`index.html` has no `csrf-token` meta tag, so both modes take
+`AuthenticityTokenStore`'s `GET /get_token` fallback: a fixture in msw mode,
+the proxied Rails in dashboard mode. An invented token in a tag would be worse
+than none — the store caches the first token it reads, and Rails answers it
+with a 422.
 
 `src/dev/cdo-ambient.d.ts` declares the `@cdo/*` modules the shell imports, so
 `yarn typecheck` never crawls apps' type graph.
 
 ### Backend
 
-`src/dev/mocks.ts` registers the dashboard endpoints the feature calls with
+In dashboard mode, `vite.config.ts` proxies the route prefixes the feature
+calls (`dashboardProxyPrefixes`) to `localhost-studio.code.org:3000`. No
+`changeOrigin`: Rails checks `Origin` against `Host`, and a rewritten `Host`
+makes every write a 422.
+
+The endpoints are user-scoped, and some require the AI-Tutor experiments for
+the signed-in student. Read the controller's authorization before you debug a 403.
+
+In msw mode, `src/dev/mocks.ts` registers the same endpoints with
 `@code-dot-org/core`'s MSW registry, so the real `HttpClient` calls run
-unmodified. `src/dev/fixtures.ts` holds a `lessonDeepDiveData` payload
-harvested from a local Rails dashboard rather than an invented one.
+unmodified in either mode. The podcast loop is the most heavily faked surface:
+the mocks return a one-second silent WAV in place of synthesized audio. Plain
+`localhost:5173` works here; no cookies are involved.
+
+The page payload is a fixture in both modes. Studio embeds
+`lessonDeepDiveData` server-side in the HTML
+(`script[data-lessondeepdivedata]`, from `LessonsController#tutor`), and no
+JSON endpoint exists to proxy. `src/dev/fixtures.ts` holds a payload harvested
+from a local Rails dashboard rather than an invented one.
 
 The wire shape differs from `LessonDeepDiveData` in
 `apps/src/aiTutor/views/lessonDeepDive/types.ts`: Rails never sends

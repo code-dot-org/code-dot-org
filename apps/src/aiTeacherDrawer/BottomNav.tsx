@@ -15,6 +15,7 @@ interface BottomNavProps {
   onNavChange: (label: string) => void;
   unreadNotificationCount?: number;
   showLearn?: boolean;
+  showTeacherPanel?: boolean;
 }
 
 const BottomNav: React.FC<BottomNavProps> = ({
@@ -22,11 +23,15 @@ const BottomNav: React.FC<BottomNavProps> = ({
   onNavChange,
   unreadNotificationCount = 0,
   showLearn = false,
+  showTeacherPanel = false,
 }) => {
   const navItems: NavItem[] = [
     // {label: 'Home', iconName: 'house'},
     {label: 'Chats', iconName: 'comment'},
     ...(showLearn ? [{label: 'Prepare', iconName: 'file-lines'}] : []),
+    ...(showTeacherPanel
+      ? [{label: 'Teacher Panel', iconName: 'chalkboard'}]
+      : []),
     {label: 'Alerts', iconName: 'bell'},
   ];
 

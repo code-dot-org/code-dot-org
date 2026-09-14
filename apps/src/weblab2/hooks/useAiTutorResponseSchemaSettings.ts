@@ -62,7 +62,19 @@ export const useAiTutorResponseSchemaSettings = (
         sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
           answerType,
         });
-        dispatch(setViewingAiTutorVersion(true));
+        const aiTutorVersionFiles: ProjectFile[] = [];
+        const mergedSourceVersion = getMergedAiTutorCodeWithSource(
+          formattedResponse.code,
+          source as MultiFileSource,
+          aiTutorVersionFiles
+        ) as MultiFileSource;
+
+        // If no AI-updated files, return explanation without entering the
+        // read-only "viewing AI tutor version" accept/reject flow.
+        if (aiTutorVersionFiles.length === 0) {
+          return formattedResponse.explanation;
+        }
+
         // When viewing AI Tutor version, store current sources as projectSourceBeforeAiTutorVersion.
         // Workspace will be read-only until user clicks "accept" or "reject".
 
@@ -72,16 +84,7 @@ export const useAiTutorResponseSchemaSettings = (
         // - force save an AI version for AI tutor version with commit message 'AI***SAVE' + required user description.
         // - workspace is now editable.
         // - sources are updated with the newer updated AI files, but AI flags removed.
-        const aiTutorVersionFiles: ProjectFile[] = [];
-        const mergedSourceVersion = getMergedAiTutorCodeWithSource(
-          formattedResponse.code,
-          source as MultiFileSource,
-          aiTutorVersionFiles
-        ) as MultiFileSource;
-        // If no AI-updated files, return explanation.
-        if (aiTutorVersionFiles.length === 0) {
-          return formattedResponse.explanation;
-        }
+        dispatch(setViewingAiTutorVersion(true));
         dispatch(setAiTutorVersionFiles(aiTutorVersionFiles));
         dispatch(setProjectSourceBeforeAiTutorVersion(source));
         dispatch(setSource(mergedSourceVersion));

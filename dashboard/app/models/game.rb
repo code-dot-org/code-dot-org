@@ -64,6 +64,7 @@ class Game < ApplicationRecord
   PANELS = 'panels'.freeze
   WEBLAB2 = 'weblab2'.freeze
   SKETCHLAB = 'sketchlab'.freeze
+  QUIZ = 'quiz'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -213,6 +214,10 @@ class Game < ApplicationRecord
     @@game_bubble_choice ||= find_by_name("BubbleChoice")
   end
 
+  def self.quiz
+    @@game_quiz ||= find_by_name("Quiz")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -260,7 +265,7 @@ class Game < ApplicationRecord
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB, AICHAT, PYTHONLAB, WEBLAB2, SKETCHLAB].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB, AICHAT, PYTHONLAB, WEBLAB2, SKETCHLAB, QUIZ].include? app
   end
 
   def no_footer?
@@ -371,6 +376,7 @@ class Game < ApplicationRecord
     Panels:panels
     Weblab2:weblab2
     Sketchlab:sketchlab
+    Quiz:quiz
   )
 
   def self.setup

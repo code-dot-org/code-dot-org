@@ -1,0 +1,8 @@
+// Take the row's leftover flex so the child can ellipsis.
+.anchor {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-self: stretch;
+  overflow: hidden;
+}

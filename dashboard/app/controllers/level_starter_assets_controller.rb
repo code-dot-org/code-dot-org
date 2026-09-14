@@ -38,14 +38,16 @@ class LevelStarterAssetsController < ApplicationController
   def file_by_uuid
     uuid_name = "#{params[:uuid]}.#{params[:format]}"
 
-    preview_host = CDO.preview_codeprojects_hostname
-    # Allow any subdomain of codeprojects preview (with optional port) to fetch level starter assets.
-    if preview_host.present?
-      preview_regex = %r{\Ahttps?://[^/]+\.#{Regexp.escape(preview_host)}(:\d+)?\z}
-      # If the request's origin matches the preview host, set CORS header to allow it.
-      if request.origin&.match?(preview_regex)
-        response.headers['Access-Control-Allow-Origin'] = request.origin
-      end
+    # Allow any subdomain of either sandboxed-preview host (with optional port)
+    # to fetch level starter assets.
+    preview_host_pattern = [
+      CDO.preview_codeaiprojects_hostname,
+      CDO.preview_codeprojects_hostname,
+    ].map {|host| Regexp.escape(host)}.join('|')
+    preview_regex = %r{\Ahttps?://[^/]+\.(?:#{preview_host_pattern})(:\d+)?\z}
+    # If the request's origin matches a preview host, set CORS header to allow it.
+    if request.origin&.match?(preview_regex)
+      response.headers['Access-Control-Allow-Origin'] = request.origin
     end
 
     get_file_and_send(uuid_name)

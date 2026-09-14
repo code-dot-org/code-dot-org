@@ -1,3 +1,5 @@
+@use 'sass:math';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/variables';
 @import 'color';
 
 .modalHeader {
@@ -47,12 +49,25 @@ input, span {
     margin-top: 0.75rem;
   }
 
-  .roleSelect {
-    max-width: 13.75rem;
-  }
-
   textarea {
     width: 50%;
+  }
+}
+
+.optionFieldGroup {
+  margin-inline-start: math.div($grid-gutter-width, 2);
+
+  :global(.control-label) {
+    font-weight: 600;
+    margin-top: 0.75rem;
+  }
+
+  :global(.checkbox) {
+    padding-left: 0;
+  }
+
+  .roleSelect {
+    max-width: 13.75rem;
   }
 }
 

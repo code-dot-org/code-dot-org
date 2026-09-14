@@ -1,1 +1,4 @@
-export type {LevelPropertiesMap} from '@code-dot-org/core/api';
+export type {
+  LevelPropertiesBase,
+  LevelPropertiesMap,
+} from '@code-dot-org/core/api';

@@ -42,6 +42,27 @@ describe('imageUrlModeration', () => {
       expect(mockModerateImageUrl).not.toHaveBeenCalled();
     });
 
+    it('treats images.code.org URLs as safe without calling Azure', async () => {
+      const result = await moderateApplabImageUrl(
+        'http://images.code.org/curriculum.png'
+      );
+      expect(result).toEqual({
+        status: 'safe',
+        normalizedUrl: 'https://images.code.org/curriculum.png',
+      });
+      expect(mockModerateImageUrl).not.toHaveBeenCalled();
+    });
+
+    it.each([
+      'https://images.code.org.evil.com/curriculum.png',
+      // Unescaped `.` in the host regex would also match images-code-org.
+      'https://images-code-org/curriculum.png',
+    ])('does not skip lookalike host %s', async url => {
+      const result = await moderateApplabImageUrl(url);
+      expect(result).toEqual({status: 'safe', normalizedUrl: url});
+      expect(mockModerateImageUrl).toHaveBeenCalledTimes(1);
+    });
+
     it('normalizes http to https and moderates once', async () => {
       const result = await moderateApplabImageUrl(
         'http://example.com/image.png'

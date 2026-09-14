@@ -7,6 +7,7 @@ import React from 'react';
 import {
   FLAGGED_IMAGE_URL_MESSAGE,
   IMAGE_MODERATION_ERROR_MESSAGE,
+  IMAGE_URL_INPUT_INVALID_MESSAGE,
 } from '@cdo/apps/applab/constants';
 import {
   isAbsoluteImageUrl,
@@ -66,7 +67,7 @@ export default class ImageURLInput extends React.Component {
   getErrorText = () => {
     const {errorType} = this.state;
     if (errorType === 'invalid-url') {
-      return i18n.imageURLInputInvalid();
+      return IMAGE_URL_INPUT_INVALID_MESSAGE;
     }
     if (errorType === 'flagged') {
       return FLAGGED_IMAGE_URL_MESSAGE;

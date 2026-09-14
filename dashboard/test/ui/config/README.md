@@ -56,6 +56,12 @@ level tasks (`custom_levels_ui_tests`, `child_dsls_ui_tests`,
 `parent_dsls_ui_tests`) run after the production level tasks, so a
 not-yet-migrated `ui-test-` unit can still resolve production levels.
 
+## Cached units
+
+A unit whose level pages should be publicly cacheable needs an entry in
+`CACHED_UI_TEST_UNITS` in `lib/cdo/http_cache.rb`, alongside the production
+`CACHED_UNITS`.
+
 ## Adding content
 
 Developers author this content, working locally with `levelbuilder_mode`

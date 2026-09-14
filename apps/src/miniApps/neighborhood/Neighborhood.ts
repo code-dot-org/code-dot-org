@@ -7,9 +7,18 @@ import MiniApp from '@cdo/apps/miniApps/MiniApp';
 
 import {ConsoleSignalType, NeighborhoodSignalType} from './constants';
 import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
+import NeighborhoodRunNarrator from './runNarrator';
 import {ConsoleSignal, NeighborhoodSignal} from './types';
 
 const Direction = tiles.Direction;
+
+// The cursor reads the grid from window.Maze. Set only this property: on a
+// maze page window.Maze is the app object maze/api.js needs.
+function publishController(controller: unknown): void {
+  const global = window as unknown as {Maze?: {controller?: unknown}};
+  global.Maze = global.Maze ?? {};
+  global.Maze.controller = controller;
+}
 
 const PAUSE_BETWEEN_SIGNALS = 200;
 const ANIMATED_STEP_SPEED = 500;
@@ -33,12 +42,17 @@ export default class Neighborhood extends MiniApp {
   private isProcessingSignals: boolean;
   private resolveOnDone?: () => void;
   private donePromise: Promise<void> | null = null;
+  private narrator: NeighborhoodRunNarrator | null = null;
+  private narratedRun = false;
 
   constructor(
     onOutputMessage: (message: string) => void,
     onNewlineMessage: () => void,
     setIsRunning: (isRunning: boolean) => void,
-    onPartialOutputMessage: (message: string) => void
+    onPartialOutputMessage: (message: string) => void,
+    // Opts into screen reader narration. Java Lab's console moves focus on
+    // every log line, so it does not.
+    getConsoleLines?: () => string[]
   ) {
     super();
     this.controller = null;
@@ -50,6 +64,13 @@ export default class Neighborhood extends MiniApp {
     this.speedTracker = NeighborhoodSpeedTracker.getInstance();
     this.onPartialOutputMessage = onPartialOutputMessage;
     this.isProcessingSignals = false;
+    if (getConsoleLines) {
+      // Read lazily: the controller does not exist until afterInject.
+      this.narrator = new NeighborhoodRunNarrator(
+        () => this.controller,
+        getConsoleLines
+      );
+    }
   }
 
   afterInject(
@@ -67,6 +88,8 @@ export default class Neighborhood extends MiniApp {
       }
     ) => void
   ) {
+    // A stale controller would let the cursor read the previous level's grid.
+    publishController(null);
     if (!level.serializedMaze) {
       return;
     }
@@ -89,8 +112,11 @@ export default class Neighborhood extends MiniApp {
     this.controller.subtype.initWallMap();
     this.controller.initWithSvg(svg);
 
+    publishController(this.controller);
+
     this.signals = [];
     this.nextSignalIndex = 0;
+    this.narrator?.reset();
 
     // Expose an interface for testing.
     // Only used in legacy labs.
@@ -122,6 +148,10 @@ export default class Neighborhood extends MiniApp {
       if (signal.value === NeighborhoodSignalType.DONE) {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
+        // The summary goes first, ahead of the run button's label change.
+        if (this.narratedRun) {
+          this.narrator?.endRun();
+        }
         this.setIsRunning(false);
         this.onNewlineMessage();
         if (this.resolveOnDone) {
@@ -157,6 +187,7 @@ export default class Neighborhood extends MiniApp {
   }
 
   mazeCommand(signal: NeighborhoodSignal, timeForSignal: number) {
+    this.narrator?.onSignal(signal);
     switch (signal.value) {
       case NeighborhoodSignalType.MOVE: {
         const {direction, id} = signal.detail!;
@@ -229,7 +260,12 @@ export default class Neighborhood extends MiniApp {
     this.setProcessSignals();
   }
 
-  onRun() {
+  // narrate is false for validation and tests: the painter gets no signals.
+  onRun(narrate = true) {
+    this.narratedRun = narrate;
+    if (narrate) {
+      this.narrator?.startRun();
+    }
     this.setProcessSignals();
   }
 
@@ -244,12 +280,18 @@ export default class Neighborhood extends MiniApp {
     // this will clear all remaining processSignals() commands
     timeoutList.clearTimeouts();
     this.resetSignalQueue();
+    // A run starts the log over.
+    this.narrator?.reset();
     this.controller.reset(false, false);
   }
 
   onStop() {
     timeoutList.clearTimeouts();
     this.resetSignalQueue();
+    // The log keeps what the painter did before being stopped.
+    if (this.narratedRun) {
+      this.narrator?.stopRun();
+    }
   }
 
   onClose() {

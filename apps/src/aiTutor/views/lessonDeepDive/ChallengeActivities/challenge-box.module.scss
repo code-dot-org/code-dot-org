@@ -1,23 +1,91 @@
-.challengeLayout {
-  display: flex;
-  gap: 16px;
-  align-items: stretch;
+.hidden {
+  display: none;
 }
 
-// Left quarter: activity instructions from the Challenge model.
-.sidebar {
+// Row: the full-height sidebar on the left, the whiteboard column (with its
+// own top bar) on the right.
+.challengeArea {
+  display: flex;
+  flex-direction: row;
   flex: 1;
   min-width: 0;
+}
+
+// Right column: the top action bar stacked over the active challenge pane.
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  min-width: 0;
+  min-height: 0;
+}
+
+// Top action bar: black strip with a bottom rule, spanning the whiteboard
+// column only (not the sidebar).
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--background-neutral-true-base);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+// "Submit for feedback": a flat white pill with dark text; muted gray when
+// disabled. Overrides the MUI contained-button palette to match the Figma.
+.submitButton {
+  background-color: var(--background-neutral-white-fixed) !important;
+  color: var(--text-neutral-black-fixed) !important;
+  box-shadow: none !important;
+
+  &:hover {
+    background-color: var(--neutral-gray-10) !important;
+    box-shadow: none !important;
+  }
+
+  &:disabled {
+    background-color: var(--background-disabled-neutral) !important;
+    color: var(--text-disabled-neutral-inverse) !important;
+  }
+}
+
+// Left column: full-height activity instructions from the Challenge model.
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  background-color: var(--background-neutral-primary);
+  border-right: 1px solid var(--borders-neutral-primary);
+}
+
+.sidebarContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
   padding: 16px;
-  background-color: rgb(255 255 255 / 4%);
-  border-radius: 8px;
+  height: stretch;
+}
+
+.sidebarTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--background-neutral-true-base);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.sidebarLabel {
+  margin: 2px 0 !important;
 }
 
 .sidebarHeading {
-  margin: 0 0 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-neutral-primary);
+  margin: 0 0 4px !important;
+  color: var(--text-info-primary-fixed) !important;
 }
 
 .instructionsText {
@@ -27,34 +95,257 @@
   color: var(--text-neutral-primary);
 }
 
-// Right three quarters: the active challenge pane with the
-// modality toggle underneath it.
-.activityColumn {
-  flex: 3;
-  min-width: 0;
+.explanationContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 6px;
 }
 
-.challengeToggle {
+.explanationButton :global(.MuiButton-icon) {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.explanationButton {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px !important;
+  flex-basis: 0;
+  flex-grow: 1;
+
+  &.Selected {
+    // border-color: var(--borders-brand-purple-strong);
+    background-color: var(--background-selected-primary) !important;
+    color: var(--text-selected-primary) !important;
+  }
+}
+
+.whiteboardButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.textArea {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-neutral-primary);
+}
+
+.rightSidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  background-color: var(--background-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  gap: 20px;
+}
+
+// The active challenge pane with the modality toggle underneath it. Fills
+// the whiteboard column below the top bar.
+.activityColumn {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: var(--background-neutral-primary);
+}
+
+.activityColumnTwo {
+  flex: 3;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: var(--background-neutral-primary);
+}
+
+.activityRow {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: var(--background-neutral-primary);
+}
+
+// WhiteboardChallenge wraps its content in the component-library ThemeProvider,
+// which renders an unstyled <div data-theme> between this column and the
+// canvas. It must carry the flex chain through so the whiteboard can grow to
+// fill the height rather than collapsing.
+.activityColumnTwo > [data-theme] {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+// Bottom modality toggle: icon-over-label choices, the active one framed
+// in a purple pill.
+.bottomPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+  padding: 8px;
+
+  :only-child {
+    margin: 0 auto;
+}
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 2px;
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: transparent;
+  color: var(--text-neutral-tertiary);
+  cursor: pointer;
+
+  &.choiceSelected {
+    border-color: var(--brand-purple-20);
+    background-color: color-mix(in srgb, var(--brand-purple-5) 15%, transparent);
+  }
+}
+
+.choiceIcon {
+  font-size: 25px;
+}
+
+.choiceLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.waitingDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+// Fills the deep-dive content region so the flex chain below resolves to a
+// definite height (letting the whiteboard grow instead of collapsing).
+.topContainer {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  height: 100%;
+  min-height: 0;
+}
+
+.feedbackLabel {
+  color: var(--text-brand-purple-primary-fixed) !important;
+}
+
+.feedbackContainer {
+  display: flex;
+  flex-direction: column;
   gap: 8px;
-  margin-top: 16px;
+}
 
-  button {
-    padding: 6px 16px;
-    background-color: transparent;
-    border: 1px solid #9657c7;
-    border-radius: 8px;
-    color: #9657c7;
-    font-size: 0.875rem;
-    font-weight: 600;
-    cursor: pointer;
+.feedbackWidget {
+  overflow: hidden;
+  border-radius: var(--shape-md);
+}
 
-    &.active {
-      background-color: #9657c7;
-      color: #fff;
-    }
+.feedbackHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background-color: var(--background-info-strong);
+}
+
+.feedbackAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--background-neutral-white-fixed);
+  border-radius: var(--shape-round);
+
+  img {
+    width: 30px;
+    height: 20px;
+  }
+}
+
+.feedbackHeaderContent{
+ display: flex;
+ flex-direction: column;
+}
+
+.feedbackText {
+  padding: 16px;
+  background-color: var(--background-neutral-secondary);
+  font-size: 12px;
+  line-height: 18px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.challengePickerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  min-height: 0;
+  width: stretch;
+}
+
+.challengeCarousel {
+  display:flex;
+  flex-direction: row;
+  min-height: 300px;
+  gap: 20px;
+}
+
+.challengePickerText {
+  display: flex;
+  width: 600px;
+}
+
+.challengePickerButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.challengeTypeButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-basis: 0;
+  flex-grow: 1;
+
+  &.Selected {
+    border-color: var(--borders-brand-purple-strong) !important;
   }
 }

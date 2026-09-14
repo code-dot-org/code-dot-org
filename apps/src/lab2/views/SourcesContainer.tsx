@@ -20,6 +20,7 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
   BlocklyLevelProperties,
   LabProps,
+  LevelProperties,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 import StartOverDialog, {
@@ -33,6 +34,12 @@ import getInitialSources from '../utils/getInitialSources';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+
+const getToolboxEditSources = (levelProperties: LevelProperties) => ({
+  source: toolboxToWorkspaceBlocks(
+    (levelProperties as BlocklyLevelProperties).toolboxDefinition
+  ),
+});
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
@@ -87,7 +94,12 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   onMeaningfulSourceChange,
 }) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
-    () => getInitialSources(levelProperties, initialSources) || defaultSources
+    () =>
+      getInitialSources(
+        levelProperties,
+        initialSources,
+        getToolboxEditSources(levelProperties)
+      ) || defaultSources
   );
 
   // When we use this value to decide whether to save sources or not,
@@ -136,7 +148,11 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
 
   useEffect(() => {
     reinitializeSources(
-      getInitialSources(levelProperties, initialSources) || defaultSources
+      getInitialSources(
+        levelProperties,
+        initialSources,
+        getToolboxEditSources(levelProperties)
+      ) || defaultSources
     );
   }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
 
@@ -144,11 +160,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   const startOverSources: ProjectSources = useMemo(() => {
     const {templateSources, startSources} = levelProperties;
     if (isToolboxMode) {
-      return {
-        source: toolboxToWorkspaceBlocks(
-          (levelProperties as BlocklyLevelProperties).toolboxDefinition
-        ),
-      };
+      return getToolboxEditSources(levelProperties);
     }
     return isStartMode
       ? defaultSources

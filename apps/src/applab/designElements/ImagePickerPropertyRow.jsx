@@ -11,10 +11,12 @@ import {
   isAbsoluteImageUrl,
   moderateApplabImageUrl,
 } from '@cdo/apps/applab/imageUrlModeration';
+import {isBlockedDataUrl} from '@cdo/apps/applab/imageUrlUtils';
 import commonMsg from '@cdo/locale';
 
 import {getStore} from '../../redux';
 import {
+  DATA_URL_NOT_ALLOWED_MESSAGE,
   FLAGGED_IMAGE_URL_MESSAGE,
   IMAGE_MODERATION_ERROR_MESSAGE,
 } from '../constants';
@@ -100,6 +102,13 @@ export default class ImagePickerPropertyRow extends React.Component {
   };
 
   changeImageInternal = async (filename, timestamp) => {
+    if (!timestamp && isBlockedDataUrl(filename)) {
+      if (this.isMounted_) {
+        this.setState({errorMessage: DATA_URL_NOT_ALLOWED_MESSAGE});
+      }
+      return;
+    }
+
     // Moderate only manual absolute URL entry; picker callbacks include a
     // timestamp and URL-picker flows have already moderated absolute URLs.
     if (!timestamp && isAbsoluteImageUrl(filename)) {

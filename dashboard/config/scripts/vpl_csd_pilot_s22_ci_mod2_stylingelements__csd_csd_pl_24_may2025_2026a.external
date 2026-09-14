@@ -1,0 +1,68 @@
+name 'VPL-CSD-PILOT-S22-CI-mod2-StylingElements_-csd_CSD-PL-24_may2025_2026a'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Styling Elements With CSS
+
+CSS properties impact the visual look of a web page and give students more precise control over the layout of their pages. As students expand their knowledge of style properties, many may have questions about how they can do even more with CSS. Curious students can explore more properties at <a href="https://www.w3schools.com/cssref/" target="blank" rel="noopener noreferrer">W3 Schools</a>.
+
+## Body Styling
+
+The `<body>` element is a special element that wraps all of the visible content on a web page. Because everything that you see is inside this tag, any rule-set that you create for the body element will apply to every element on a page, unless the element itself has a rule that contradicts it. This is useful for establishing a baseline style for everything on your page.
+
+### **Example**
+
+This rule-set would make all text in your web page blue and centered.
+
+```
+body {
+    text-align: center;
+    color: blue;
+}
+```
+
+## Layout Properties
+
+There are many properties that help set the styles of web pages.
+
+<div style="width:100%; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.1); border:1px solid #E4E2F8; overflow:hidden; margin:20px 0; display:grid; grid-template-columns:1.2fr 2fr 1fr;">
+
+  <div style="background-color:#4C42CF; color:#ffffff; padding:12px 16px;">Property</div>
+  <div style="background-color:#4C42CF; color:#ffffff; padding:12px 16px;">Description</div>
+  <div style="background-color:#4C42CF; color:#ffffff; padding:12px 16px;">W3 Schools Link</div>
+
+  <div style="background-color:#ffffff; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">background-color</div>
+  <div style="background-color:#ffffff; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">Sets the background color of the element</div>
+  <div style="background-color:#ffffff; padding:12px 16px; border-bottom:1px solid #E4E2F8;"><a href="https://www.w3schools.com/css/css_background.asp" target="_blank" rel="noopener noreferrer" style="color:#0099F3;">W3 Schools</a></div>
+
+  <div style="background-color:#E4E2F8; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">border-color</div>
+  <div style="background-color:#E4E2F8; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">Sets the color of the border</div>
+  <div style="background-color:#E4E2F8; padding:12px 16px; border-bottom:1px solid #E4E2F8;"><a href="https://www.w3schools.com/css/css_border.asp" target="_blank" rel="noopener noreferrer" style="color:#0099F3;">W3 Schools</a></div>
+
+  <div style="background-color:#ffffff; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">border-width</div>
+  <div style="background-color:#ffffff; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">Changes the border width of an element</div>
+  <div style="background-color:#ffffff; padding:12px 16px; border-bottom:1px solid #E4E2F8;"><a href="https://www.w3schools.com/css/css_border.asp" target="_blank" rel="noopener noreferrer" style="color:#0099F3;">W3 Schools</a></div>
+
+  <div style="background-color:#E4E2F8; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">border-style</div>
+  <div style="background-color:#E4E2F8; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">Changes the style of border</div>
+  <div style="background-color:#E4E2F8; padding:12px 16px; border-bottom:1px solid #E4E2F8;"><a href="https://www.w3schools.com/css/css_border.asp" target="_blank" rel="noopener noreferrer" style="color:#0099F3;">W3 Schools</a></div>
+
+  <div style="background-color:#ffffff; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">width</div>
+  <div style="background-color:#ffffff; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">Sets the width of an element</div>
+  <div style="background-color:#ffffff; padding:12px 16px; border-bottom:1px solid #E4E2F8;"><a href="https://www.w3schools.com/css/css_dimension.asp" target="_blank" rel="noopener noreferrer" style="color:#0099F3;">W3 Schools</a></div>
+
+  <div style="background-color:#E4E2F8; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">height</div>
+  <div style="background-color:#E4E2F8; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">Sets the height of an element</div>
+  <div style="background-color:#E4E2F8; padding:12px 16px; border-bottom:1px solid #E4E2F8;"><a href="https://www.w3schools.com/css/css_dimension.asp" target="_blank" rel="noopener noreferrer" style="color:#0099F3;">W3 Schools</a></div>
+
+  <div style="background-color:#ffffff; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">float</div>
+  <div style="background-color:#ffffff; color:#1F1976; padding:12px 16px; border-bottom:1px solid #E4E2F8;">Floats an element to one side of the page</div>
+  <div style="background-color:#ffffff; padding:12px 16px; border-bottom:1px solid #E4E2F8;"><a href="https://www.w3schools.com/css/css_float.asp" target="_blank" rel="noopener noreferrer" style="color:#0099F3;">W3 Schools</a></div>
+
+  <div style="background-color:#E4E2F8; color:#1F1976; padding:12px 16px;">margin</div>
+  <div style="background-color:#E4E2F8; color:#1F1976; padding:12px 16px;">Generates space around an element</div>
+  <div style="background-color:#E4E2F8; padding:12px 16px;"><a href="https://www.w3schools.com/css/css_margin.asp" target="_blank" rel="noopener noreferrer" style="color:#0099F3;">W3 Schools</a></div>
+
+</div>
+MARKDOWN

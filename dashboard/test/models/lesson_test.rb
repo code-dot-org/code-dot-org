@@ -175,6 +175,33 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal "/courses/#{script.original_unit_group.name}/units/1", lesson2.next_level_path_for_lesson_extras(@student, unit_group_unit: script.original_unit_group_unit)
   end
 
+  test "next_level_for_lesson_extras skips lessons with no levels" do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson1 = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson1)
+    # lesson2 and lesson3 have a lesson plan but no levels of their own.
+    lesson2 = create(:lesson, script: script, lesson_group: lesson_group)
+    lesson3 = create(:lesson, script: script, lesson_group: lesson_group)
+    lesson4 = create(:lesson, script: script, lesson_group: lesson_group)
+    lesson4_script_level = create(:script_level, script: script, lesson: lesson4)
+
+    assert_equal lesson4_script_level, lesson2.next_level_for_lesson_extras(@student)
+    assert_equal lesson4_script_level, lesson3.next_level_for_lesson_extras(@student)
+  end
+
+  test "next_level_for_lesson_extras returns nil when no later lesson has levels" do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson1 = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson1)
+    lesson2 = create(:lesson, script: script, lesson_group: lesson_group)
+    lesson3 = create(:lesson, script: script, lesson_group: lesson_group)
+
+    assert_nil lesson2.next_level_for_lesson_extras(@student)
+    assert_nil lesson3.next_level_for_lesson_extras(@student)
+  end
+
   test "next_level_path_for_lesson_extras show unit overview" do
     script = create(:script, :in_single_unit_course)
     script.stubs(:show_unit_overview_between_lessons?).returns true

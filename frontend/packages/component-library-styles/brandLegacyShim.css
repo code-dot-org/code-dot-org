@@ -22,9 +22,13 @@
  * acceptable for a pre-cutover shim (dark mode ships with the CADS
  * schema, not the legacy one).
  *
- * Under [data-brand='codeai-next'] every one of these names is
- * re-declared at higher specificity by brandCodeAiNext.css, so this file
- * is inert there. Delete this file at brand cutover cleanup.
+ * Under both CADS brands every one of these names is re-declared at
+ * higher specificity by the brand's own token file — brandCodeAiNext.css
+ * for codeai-next, brandCodeAiAudit.css for codeai-audit — so this file
+ * is inert there. That is what keeps the audit brand honest: were any
+ * CADS name to fall through to this shim, it would render its real
+ * legacy color under an audit that claims every token is pink.
+ * Delete this file at brand cutover cleanup.
  *
  * The [data-theme] selectors exist because custom properties substitute
  * their var() chains on the declaring element and inherit as resolved
@@ -190,7 +194,7 @@
      unresolved var() under this brand). Same-step mapping into the
      nearest legacy family; legacy's extra "100" step (which CADS dropped)
      absorbs CADS's "95" step, mirroring the reverse mapping in
-     brandCodeAiNextAliases.css. brand-orange has no legacy brand
+     brandLegacyAliases.css. brand-orange has no legacy brand
      counterpart, so it maps to legacy's accent-orange; brand-pink maps to
      accent-strawberry, same as the pink/strawberry semantic mapping
      above. */

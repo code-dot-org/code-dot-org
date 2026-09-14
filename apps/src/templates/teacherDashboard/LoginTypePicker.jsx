@@ -20,6 +20,7 @@ import CardContainer from './CardContainer';
 import LmsInformationalCard from './LmsInformationalCard';
 import {
   canvasLogo,
+  classlinkLogo,
   cleverLogo,
   googleClassroomLogo,
   schoologyLogo,
@@ -84,11 +85,14 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
+    const withClasslink =
+      providers && providers.includes(OAuthSectionTypes.classlink);
     const withAllLmsProviders =
       providers &&
       [
         OAuthSectionTypes.google_classroom,
         OAuthSectionTypes.clever,
+        OAuthSectionTypes.classlink,
         SectionLoginType.lti_v1,
       ].every(provider => providers.includes(provider));
     const currentUser = getStore().getState().currentUser;
@@ -153,6 +157,7 @@ class LoginTypePicker extends Component {
             <MicrosoftClassroomCard onClick={this.openImportDialog} />
           )}
           {withClever && <CleverCard onClick={this.openImportDialog} />}
+          {withClasslink && <ClasslinkCard onClick={this.openImportDialog} />}
           <PictureLoginCard onClick={this.onLoginTypeSelect} />
           <WordLoginCard onClick={this.onLoginTypeSelect} />
           <EmailLoginCard onClick={this.onLoginTypeSelect} />
@@ -179,6 +184,13 @@ class LoginTypePicker extends Component {
                   lmsName={LmsLoginTypeNames.google_classroom}
                   lmsLogo={googleClassroomLogo}
                   lmsInformationalUrl={LmsLoginInstructionUrls.google_classroom}
+                />
+              )}
+              {!withClasslink && (
+                <LmsInformationalCard
+                  lmsName={LmsLoginTypeNames.classlink}
+                  lmsLogo={classlinkLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.classlink}
                 />
               )}
               <LmsInformationalCard
@@ -280,3 +292,13 @@ const CleverCard = props => (
 );
 
 CleverCard.propTypes = PictureLoginCard.propTypes;
+
+const ClasslinkCard = props => (
+  <LoginTypeCard
+    title={LmsLoginTypeNames.classlink}
+    description="Import a roster from ClassLink to create student accounts."
+    onClick={() => props.onClick(OAuthSectionTypes.classlink)}
+  />
+);
+
+ClasslinkCard.propTypes = PictureLoginCard.propTypes;

@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T23:22:27.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Rap vs. R&B",
+    "project_template_level_name": "aif-y2-working-with-data-lesson8-choice1-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Read the documentation given to you.\r\n- Improve your plot’s honesty. Set accurate limits for your plot.\r\n- Be prepared to summarize what your visualization shows.\r\n",
+    "bubble_choice_description": "Rap and R&B are two genres that have influenced each other for decades. What still sets them apart?",
+    "thumbnail_url": "https://images.code.org/f3f1aae3fe45681d8bc0f8e853546471-rap.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqOux6kCIb/Oo4Q\nmuffbamIP6sw0rf++BqYsRfjLaB3jS6UbpDBEOs/19mmv134OtX0fpYM2Goe\ndOgA0U2na11LpX9u79CEHyLuRdUYZJOuR31cCW96KGC8fA9XH1Kyr6Oe+QZM\no63JX0KngET6bXSaMpXIPcoTpT/2Db6OQXE3kU9B3shTdT/+jJfBjI2G3Ps+\nqll1C1Df9UYj8wDEMDAwGHPujTejvKfMyW3LCw+TH5CD1YylZa9rf/y6rXgl\nxx28vJ0PaguN1vWBsrATgvFvYgtLkvczL4PjoHWzO+FKXZXW6/gSjTPyWEbC\nBAnC58J4BfgK6lUvb1NXI4dHX+20LeYBFd1JAykZXT4WJHJDan8ZPAr9fvk7\nBbRfXES2nIwKYtV4dUwf3tjsay49qVwdJN7hKbppeeNdFQAo7immCEdRW3Ah\ndNEsovvEcF+koKJL6cBDRC8o4E3xUhDwGA6O4q8KohRedPt9ssTOug6JWpz3\nMd6KxaVRRCidHeMmPmkZuxY8rI+gzLS/AXXzyzY9IaRI8TYKPXN+eRUz8kgG\njZDeErTM4D4uGkM928bTFHascPlCG9NTGKKSRet8ub8Dprs2LMWGQu7eVO83\n0ruDqBTAzOtixxkVHMSaLNzfTblZhrQS71p4ykXO9YjuOvMMataiJpS61YN4\nEFXKW0JJOAc9pjWazc2PY729/3RermcnJz9VbexRSMiiXS8PAjhLJEZ1XNJR\nXbXqWAvPbKALLIvWCohsbSyknRW6A1C9Pr85i7/Gsy7ySYcBDMG9FzvCCAZQ\nQaGjUYYs82xqbiElQda2ZXFBrQtgKOxV5glAMIPStIXkFtRhLIN3eO0ywlZK\nUOKkzJVixhA4L/as6T6NG74qNecuAMnpj9Fn2lR7vCDfhVTtPQ1KD7Q3KAl1\nmMPKKr6BBtiIjK2DKozROb+iRnCKEuQh/K8vRf2eYieVAwIoMrs7VRup/nCW\n3vjtXIa0arykgBq1A9OkH5+Tm1OoFt8n/xOQ3vP1yhwyoYFDkCZ7OHzzV5eK\nhk+of4M0SpzKGMAMZmzIJNkk2bJOA4SKYaEFYc3hd0kreuithMzbddNdsknl\nFXB/7iBpgkrQHlK9ovaFpesAGEoNp08OlobiHmxbxMlQqdtreZ6kZ7gAGJ4c\nEQ816la5SUyzrnflfiQMuKjSn6wYhUEqpN8dNxETQs9spOqhlARnfo96pY9V\n+F9v0SgCS+gafQEw0ky5y0xBZS1wbkJowdV5TPf4R34AaEY/PtwANznYUHEg\ntBDXAYk=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 23:23:29 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:24:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

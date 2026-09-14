@@ -3,6 +3,8 @@ import React, {useEffect, useState} from 'react';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {CodeWidgetLevelInfo} from './types';
+
 import CodeWidget from './';
 
 interface ExemplarCodeWidgetProps {
@@ -13,8 +15,8 @@ interface ExemplarCodeWidgetProps {
 
 interface ExemplarCodeData {
   id: number;
-  name: string;
   exemplarSources?: MultiFileSource;
+  instructions?: string;
 }
 
 const getExemplarCodeData = (lessonId: number) => {
@@ -70,6 +72,10 @@ const ExemplarCodeWidget = ({
     return null;
   }
 
+  const levelInfo: CodeWidgetLevelInfo | undefined = exemplarCode?.instructions
+    ? {instructions: exemplarCode.instructions}
+    : undefined;
+
   return (
     <CodeWidget
       codeData={exemplarCode?.exemplarSources}
@@ -77,6 +83,8 @@ const ExemplarCodeWidget = ({
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       loading={isLoading}
+      levelInfo={levelInfo}
+      emptyMessage="No exemplar code available"
     />
   );
 };

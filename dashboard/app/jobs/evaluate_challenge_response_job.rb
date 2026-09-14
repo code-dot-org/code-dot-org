@@ -7,7 +7,7 @@ require 'cdo/share_filtering'
 # The student's text and transcript are run through the PII and profanity
 # filters first; a hit records a violation status and nothing is sent to the
 # LLM. On success the parsed evaluation is stored in evaluation_result
-# (scored per rubric criterion, teacher-only) and its constructive,
+# (the scored rubric level, teacher-only) and its constructive,
 # score-free feedback is copied to student_feedback for the student. Neither
 # is displayed at submit time — teacher view and student gallery are future
 # work — so nothing here notifies the client.

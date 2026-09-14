@@ -7,4 +7,13 @@ describe('Divider Component', () => {
     render(<Divider />);
     expect(screen.getByRole('separator')).toBeInTheDocument();
   });
+
+  // DividerProps extends HTMLAttributes, so the remaining attributes reach the
+  // <hr> rather than being dropped.
+  it('forwards other HTML attributes to the hr', () => {
+    render(<Divider id="rule" style={{clear: 'both'}} />);
+    const divider = screen.getByRole('separator');
+    expect(divider).toHaveAttribute('id', 'rule');
+    expect(divider).toHaveStyle({clear: 'both'});
+  });
 });

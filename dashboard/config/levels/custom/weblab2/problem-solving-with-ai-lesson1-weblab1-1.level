@@ -1,0 +1,54 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-08-12T13:08:57.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Web Lab",
+    "long_instructions": "# Create your Website with AI\r\n\r\n\r\n1. Start by describing the website that you selected in the previous level into AI Tutor to create a first draft.\r\n_**Note**: AI Tutor can be found by clicking the robot icon on the right side._\r\n\r\n2. Accept or reject the changes to the website that AI Tutor makes. Add a decription when accepting.\r\n\r\n2. Select three of the details from your Activity Guide and input them one at a time. Accept or reject the changes.\r\n\r\n3. Have fun! Work with AI Tutor to add other design elements.\r\n",
+    "bubble_choice_description": "  To add: description",
+    "thumbnail_url": "https://images.code.org/eb213aa74c07f62893b9bfdbe907af04-web-lab-icon.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "require_edit_to_continue": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "buildCSS",
+        "buildHTML",
+        "buildJavaScript",
+        "buildJSON",
+        "debug",
+        "documentation",
+        "example",
+        "explainCode",
+        "hint",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "problem-solving-with-ai-lesson1-weblab-template"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-12T13:08:57.206+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson1-weblab2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson1-weblab2\"},{\"changed_at\":\"2026-08-12 13:57:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 14:28:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-12 16:50:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,5 @@
+.field
+  - if @level.new_record?
+    %p{style: 'font-size: 18px'} Save this level before building its questions.
+  - else
+    = link_to 'Build Quiz Questions', build_quiz_questions_level_path(@level), style: 'font-size: 18px'

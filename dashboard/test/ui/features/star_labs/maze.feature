@@ -5,7 +5,7 @@ Background:
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/5?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
-  And element ".csf-top-instructions p" has text "Use the if block to help me decide when to turn. "
+  And element ".csf-top-instructions p" has text "Use the if block to help me decide when to turn."
 
 @no_mobile
 Scenario: Submit an invalid solution

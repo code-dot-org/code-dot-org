@@ -38,7 +38,7 @@
         "retrievalContexts": "editable",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "- Be Succinct: Keep sentences short. If two sentences can be one short sentence, combine them. Avoid extra words.\n- Target the 950L Lexile Level: Use vocabulary that a typical 8th grader understands. Do not use complex \"college level\" words.\n- Avoid Jargon or Idioms unless necessary for the audience",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gemini-2.5-flash"
@@ -46,6 +46,6 @@
       "multimodalEnabled": true
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-06T16:04:00.512+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-1\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-1\"},{\"changed_at\":\"2026-08-06 18:12:43 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-06T16:04:00.512+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-1\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-1\"},{\"changed_at\":\"2026-08-06 18:12:43 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-20 16:31:26 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

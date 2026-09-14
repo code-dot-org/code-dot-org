@@ -19,16 +19,25 @@ class World(object):
       cls._instance = super(World, cls).__new__(cls)
       cls._instance.grid = None
       cls._instance.context_type = NeighborhoodContextType.RUN
+      # Counts changes to the grid and the context type. Anything caching state
+      # derived from the world compares this to tell one program run from the
+      # next; see painter._get_default_painter. It only ever increases, so a
+      # context type that changes and changes back still reads as a new run.
+      cls._instance.generation = 0
     return cls._instance
-  
+
   def set_grid_from_file(self, filename: str | None = None):
     self.grid = grid_factory.create_grid_from_file(filename)
+    self.generation += 1
 
   def set_grid_from_string(self, description: str):
     self.grid = grid_factory.create_grid_from_string(description)
+    self.generation += 1
 
   def remove_grid(self):
     self.grid = None
+    self.generation += 1
 
   def set_context_type(self, context_type: NeighborhoodContextType):
     self.context_type = context_type
+    self.generation += 1

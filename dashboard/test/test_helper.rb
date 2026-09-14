@@ -61,7 +61,6 @@ I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
 
 # Normalize URLs
 Mocha::Mockery.setup # enable stubbing
-CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 Dashboard::Application.routes.default_url_options = {protocol: 'https', host: CDO.dashboard_hostname, port: nil}
 Dashboard::Application.config.action_mailer.default_url_options = Dashboard::Application.routes.default_url_options

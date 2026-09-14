@@ -54,7 +54,6 @@ import javalab, {
   setValidationPassed,
   setHasRunOrTestedCode,
   setIsJavabuilderConnecting,
-  setIsCaptchaDialogOpen,
 } from './redux/javalabRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
 import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
@@ -182,6 +181,8 @@ Javalab.prototype.init = function (config) {
     container.className = container.className + ' pin_bottom';
     this.studioApp_.initTimeSpent();
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
+    // studioApp.init() normally does this; we skip init so call it here.
+    this.studioApp_.alertIfAbusiveProject();
 
     initializeSubmitHelper({
       studioApp: this.studioApp_,
@@ -211,7 +212,6 @@ Javalab.prototype.init = function (config) {
     isResponsive: true,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    recaptchaSiteKey: config.level.recaptchaSiteKey,
   });
 
   registerReducers({javalab, javalabConsole, javalabView});
@@ -382,6 +382,10 @@ Javalab.prototype.onRun = function () {
 Javalab.prototype.onTest = function () {
   const validation = this.level.validation;
   const validated = !!validation && Object.keys(validation).length !== 0;
+
+  // Clear any leftover mini app signal queue state (e.g. Neighborhood's
+  // processSignals index) from a prior Run.
+  this.miniApp?.reset?.();
   logUserLevelInteraction({
     levelId: this.levelIdForAnalytics,
     scriptId: this.scriptIdForAnalytics,
@@ -426,8 +430,7 @@ Javalab.prototype.executeJavabuilder = function (executionType) {
     this.csrf_token,
     () => this.onValidationPassed(this.studioApp_),
     () => this.onValidationFailed(this.studioApp_),
-    () => getStore().dispatch(setIsJavabuilderConnecting(false)),
-    () => getStore().dispatch(setIsCaptchaDialogOpen(true))
+    () => getStore().dispatch(setIsJavabuilderConnecting(false))
   );
 
   let connectToJavabuilder;

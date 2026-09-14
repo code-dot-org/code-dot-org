@@ -33,7 +33,7 @@ module Services
       def self.load_data(path, description)
         JSON.parse(File.read(path)).freeze
       rescue Errno::ENOENT, JSON::ParserError => exception
-        Honeybadger.notify(
+        Observability::Errors.report(
           exception,
           error_message: "Error loading #{description} JSON: #{exception.message}"
         )

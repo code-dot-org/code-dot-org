@@ -1,11 +1,23 @@
 // World tab (experiment): paint starter placements onto the scene grid.
 
+@use '../../../../pixelEditor/dialogChrome' as chrome;
+
 .worldTab {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   height: 100%;
   padding: 16px;
   overflow: auto;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
+}
+
+// The vertical room left for the grid, measured so the editor shrinks to
+// fit short windows (down to a floor; past that the tab scrolls).
+.worldGridArea {
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .worldPalette {
@@ -57,15 +69,24 @@
 }
 
 .worldGrid {
-  display: grid;
   width: fit-content;
   border: 1px solid var(--borders-neutral-primary);
   // Drag painting: keep touch drags painting instead of scrolling.
   touch-action: none;
 }
 
+// Real row elements (not display: contents), so the grid semantics reach
+// assistive technology intact.
+.worldRow {
+  display: flex;
+}
+
 .worldCell {
   box-sizing: border-box;
+  flex: none;
+  // Sized once on the grid container; cells shrink with the visible extent.
+  width: var(--world-cell);
+  height: var(--world-cell);
   margin: 0;
   padding: 1px;
   border: 1px solid var(--borders-neutral-quaternary, var(--borders-neutral-primary));
@@ -90,17 +111,16 @@
   }
 }
 
-// Beyond the scene's top-left corner (world=large): authorable, not yet run.
-.worldCellOutside {
-  background: var(--background-neutral-secondary);
-
-  img {
-    opacity: 0.55;
-  }
+// The roving tab stops need a ring that reads inside the tight grid.
+.worldCell:focus-visible,
+.worldPaletteItem:focus-visible {
+  z-index: 1;
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: -2px;
 }
 
-.worldHint {
-  margin-top: 10px;
-  color: var(--text-neutral-secondary);
-  font-size: 13px;
+// Visually hidden, read by screen readers (keyboard help and the action
+// narration live region).
+.srOnly {
+  @include chrome.sr-only;
 }

@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-preassessment-q8-2026'
+
+wrong '2'
+wrong '-2'
+right '4'
+wrong '-4'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A machine learning model predicts an output of 4, but the actual correct output is 8. What is the absolute error of this prediction?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Testing Regression Models
+MARKDOWN

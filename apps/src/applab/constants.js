@@ -225,3 +225,9 @@ export const FLAGGED_IMAGE_URL_MESSAGE =
 
 export const IMAGE_MODERATION_ERROR_MESSAGE =
   "We couldn't check this image link right now. Try a different image link or upload an image file instead.";
+
+export const DATA_URL_NOT_ALLOWED_MESSAGE =
+  'Data URLs are not allowed in App Lab. Use an image asset or an https image URL instead.';
+
+export const IMAGE_URL_INPUT_INVALID_MESSAGE =
+  'Please provide a valid https image URL.';

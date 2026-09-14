@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {VocabularyFlashcards} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useState} from 'react';
 
 import {
@@ -11,12 +12,11 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import ChallengeBox from '../ChallengeActivities/ChallengeBox';
+import Challenges from '../ChallengeActivities/Challenges';
 
 import Chat from './Chat';
 import PodcastsBox from './PodcastsBox';
 import VideosBox from './VideosBox';
-import VocabularyFlashcards from './VocabularyFlashcards';
 
 import styles from './intervention-box.module.scss';
 
@@ -178,7 +178,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             reflectionData={reflectionData}
           />
         )}
-        {selected === 'challenge' && <ChallengeBox lessonId={lessonId} />}
+        {selected === 'challenge' && <Challenges lessonId={lessonId} />}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
         {selected === 'podcasts' && (
           <PodcastsBox

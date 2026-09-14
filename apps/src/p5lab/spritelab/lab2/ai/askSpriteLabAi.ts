@@ -3,7 +3,7 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {buildPrompt} from '../blockly/generateContent';
 import {AvailableImageNames} from '../redux/selectors';
 
-import {getTextModel} from './items/modelHelpers';
+import {getTextModel} from './images/modelHelpers';
 
 /**
  * Ask the AI to turn a natural-language request into Sprite Lab pseudocode

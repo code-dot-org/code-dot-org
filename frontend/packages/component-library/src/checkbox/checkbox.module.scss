@@ -33,7 +33,13 @@
       box-sizing: content-box;
 
       &::before {
-        display: inline-block;
+        // line-height would centre the glyph on the line box, not the box.
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // Outer box, border included; not left to the host page's reset.
+        box-sizing: border-box;
         content: ' ';
         text-align: center;
         border: 2px solid var(--borders-neutral-solid);
@@ -147,20 +153,20 @@
   }
 }
 
-// Sizes
+// Sizes. margin-top centres the box on the label's first line.
 .label-l {
   gap: 8px;
   input[type='checkbox'] {
     & + i {
-      width: 24px;
-      height: 24px;
-      margin-top: 2px;
+      width: 22px;
+      height: 22px;
+      margin-top: calc((var(--font-size-body-lg) * 1.4 - 22px) / 2);
 
       &::before {
         font-size: 14px;
-        width: 24px;
-        height: 24px;
-        line-height: 24px;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
       }
     }
   }
@@ -180,7 +186,7 @@
     & + i {
       width: 20px;
       height: 20px;
-      margin-top: 1px;
+      margin-top: calc((var(--font-size-body-md) * 1.48 - 20px) / 2);
       &::before {
         font-size: 12px;
         width: 20px;
@@ -205,7 +211,7 @@
     & + i {
       width: 18px;
       height: 18px;
-      margin-top: 1px;
+      margin-top: calc((var(--font-size-body-sm) * 1.54 - 18px) / 2);
 
       &::before {
         font-size: 10px;
@@ -231,7 +237,7 @@
     & + i {
       width: 16px;
       height: 16px;
-      margin-top: 2px;
+      margin-top: calc((var(--font-size-body-xs) * 1.64 - 16px) / 2);
 
       &::before {
         font-size: 10px;

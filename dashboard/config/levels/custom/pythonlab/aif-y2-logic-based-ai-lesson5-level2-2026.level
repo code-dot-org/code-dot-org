@@ -27,7 +27,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def log_workout(steps):\n    print(\"Workout complete!\")\n    print(f\"You walked {steps} steps.\")\n\nlog_workout(2000)\nlog_workout(3000)",
+          "contents": "def log_workout(steps):\n  print(\"Workout complete!\")\n  print(f\"You walked {steps} steps.\")\n\nlog_workout(2000)\nlog_workout(3000)",
           "folderId": "0",
           "active": true
         }
@@ -40,6 +40,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:29:08 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:29:08 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 17:08:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

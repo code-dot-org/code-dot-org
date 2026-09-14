@@ -8,7 +8,7 @@
     "encrypted": "false",
     "long_instructions": "**Now, people’s preferences have changed. You also have a new program to explore.** \r\n\r\nSome people are wearing sweaters: they prefer a colder temperature. Others are wearing t-shirts: they prefer a warmer temperature.\r\n\r\n**☑️ Do This:**\r\n- Explore how the program behaves. Run it at least ten times.\r\n- Continue to the next level. You'll answer a question about this experiment.\r\n",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "true",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -29,7 +29,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "from helpers import run\n\n\ndef turn(up, current, down):\n    if up > current:\n        print(\"UP\")\n    elif down > current:\n        print(\"DOWN\")\n    else:\n        print(\"STAY\")\n\n\nrun(turn)\n",
+          "contents": "from helpers import run\n\n\ndef turn(up, current, down):\n  if up > current:\n    print(\"UP\")\n  elif down > current:\n    print(\"DOWN\")\n  else:\n    print(\"STAY\")\n\n\nrun(turn)\n",
           "folderId": "0",
           "active": true
         },
@@ -51,6 +51,6 @@
     "display_name": "Competing Preferences"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-27 16:34:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:48:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 17:59:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:13:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:14:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:14:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-29 19:47:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-27 16:34:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:48:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 17:59:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:13:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:14:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:14:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-29 19:47:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:37:23 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:13:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

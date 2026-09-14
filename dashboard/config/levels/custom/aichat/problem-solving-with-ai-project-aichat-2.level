@@ -38,7 +38,7 @@
         "retrievalContexts": "editable",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "- Stay on task. \n- Be Succinct: Keep sentences short. If two sentences can be one short sentence, combine them. Avoid extra words.\n- Target the 950L Lexile Level: Use vocabulary that a typical 8th grader understands. Do not use complex \"college level\" words.\n- Avoid Jargon or Idioms unless necessary for the audience",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gemini-2.5-flash"
@@ -50,6 +50,6 @@
     "bubble_choice_description": "Review, revise, and utilize your chatbot as needed in order to support your product launch social media posting.",
     "thumbnail_url": "https://images.code.org/4a7583c8a1c2f801c8acc74d0ddf2488-ai-chat-lab-icon (1).png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-06T18:21:26.734+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-aichat-1\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-aichat-1\"},{\"changed_at\":\"2026-08-06 18:48:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 19:26:56 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-06T18:21:26.734+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-aichat-1\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-aichat-1\"},{\"changed_at\":\"2026-08-06 18:48:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-06 19:26:56 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-20 16:30:49 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

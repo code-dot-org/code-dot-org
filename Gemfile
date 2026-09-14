@@ -73,9 +73,6 @@ gem 'google-apis-analytics_v3'
 gem 'google-apis-classroom_v1'
 gem 'google-apis-youtube_v3'
 
-# CSRF protection for Sinatra.
-gem 'rack_csrf'
-
 # Allow profiling in all environments (including production). It will only be enabled when
 # CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
 gem 'bootsnap', '>= 1.14.0', require: false
@@ -96,7 +93,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-  gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
 
@@ -137,15 +133,14 @@ group :development, :test do
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
 
-  # For pegasus PDF generation / merging testing.
+  # For parallel test runs.
   gem 'parallel_tests'
-  gem 'pdf-reader', require: false
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
 gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
 
-# For pegasus PDF generation.
+# Follow http -> https redirects in open-uri (see lib/cdo/tempfile.rb).
 gem 'open_uri_redirections', require: false
 
 # Optimizes copy-on-write memory usage with GC before web-application fork.
@@ -172,9 +167,6 @@ gem 'sass-rails', '~> 6.0.0'
 # while we try to get some bugs fixed upstream.
 # See https://github.com/sass/sassc-rails/pull/153 for context.
 gem 'sassc-rails', github: 'code-dot-org/sassc-rails', ref: 'frozen-array-fix'
-
-# Use Uglifier as compressor for JavaScript assets.
-gem 'uglifier', '>= 1.3.0'
 
 # Use jquery as the JavaScript library.
 gem 'jquery-rails'
@@ -230,16 +222,6 @@ gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 gem 'naturally' # for sorting string naturally
 
 gem 'retryable' # retry code blocks when they throw exceptions
-
-# Used by `uglifier` to minify JS assets in the Asset Pipeline.
-gem 'execjs'
-
-# JavaScript runtime used by ExecJS.
-# TODO: Either resume installing in all environments once Ubuntu and Mac OS
-# support the same version of mini_racer, or remove this dependency entirely
-# once node is installed in production. For more details, see
-# https://codedotorg.atlassian.net/browse/INF-708
-gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt', '~> 2.7.0'
 
@@ -371,7 +353,7 @@ install_if require_pg do
   gem 'pg', '~> 1.3.0', require: false
 end
 
-gem 'activerecord-import', '~> 1.3.0'
+gem 'activerecord-import', '~> 1.7.0'
 gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'

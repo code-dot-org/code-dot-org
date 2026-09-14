@@ -27,6 +27,7 @@ import ChangeEventHandler from './ChangeEventHandler';
 import ChartApi from './ChartApi';
 import {
   ICON_PREFIX_REGEX,
+  DATA_URL_NOT_ALLOWED_MESSAGE,
   FLAGGED_IMAGE_URL_MESSAGE,
   IMAGE_MODERATION_ERROR_MESSAGE,
 } from './constants';
@@ -34,7 +35,7 @@ import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import EventSandboxer from './EventSandboxer';
 import {moderateApplabImageUrl} from './imageUrlModeration';
-import {resolveAppLabImagePath} from './imageUrlUtils';
+import {resolveAppLabImagePath, isBlockedDataUrl} from './imageUrlUtils';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import sanitizeHtml from './sanitizeHtml';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -93,6 +94,22 @@ function moderateAbsoluteImageUrl(
       }
     }
   );
+}
+
+function rejectDataUrl(
+  imageUrl,
+  commandName,
+  onUnsafe,
+  warningHandler = () => {}
+) {
+  if (!isBlockedDataUrl(imageUrl)) {
+    return false;
+  }
+  warningHandler(`${commandName}(): ${DATA_URL_NOT_ALLOWED_MESSAGE}`);
+  if (onUnsafe) {
+    onUnsafe();
+  }
+  return true;
 }
 
 function apiValidateActiveCanvas(opts, funcName) {
@@ -258,6 +275,10 @@ applabCommands.image = function (opts) {
     newImage.src = assetPrefix.renderIconToString(opts.src, newImage);
     newImage.width = newImage.height = 200;
     newImage.setAttribute('data-canonical-image-url', opts.src);
+  } else if (
+    rejectDataUrl(opts.src, 'image', undefined, captureAsyncWarningHandler())
+  ) {
+    // Warning already emitted by rejectDataUrl.
   } else if (assetPrefix.ABSOLUTE_REGEXP.test(opts.src)) {
     const warningHandler = captureAsyncWarningHandler();
     moderateAbsoluteImageUrl(
@@ -892,6 +913,17 @@ applabCommands.drawImageURL = function (opts) {
     };
   };
 
+  if (
+    rejectDataUrl(
+      opts.url,
+      'drawImageURL',
+      () => callback(false),
+      captureAsyncWarningHandler()
+    )
+  ) {
+    return;
+  }
+
   if (assetPrefix.ABSOLUTE_REGEXP.test(opts.url)) {
     const warningHandler = captureAsyncWarningHandler();
     moderateAbsoluteImageUrl(
@@ -1279,6 +1311,15 @@ applabCommands.setImageURL = function (opts) {
     if (ICON_PREFIX_REGEX.test(opts.src)) {
       element.src = assetPrefix.renderIconToString(opts.src, element);
       element.setAttribute('data-canonical-image-url', opts.src);
+    } else if (
+      rejectDataUrl(
+        opts.src,
+        'setImageURL',
+        undefined,
+        captureAsyncWarningHandler()
+      )
+    ) {
+      return true;
     } else if (assetPrefix.ABSOLUTE_REGEXP.test(opts.src)) {
       const warningHandler = captureAsyncWarningHandler();
       moderateAbsoluteImageUrl(
@@ -1494,6 +1535,14 @@ applabCommands.setProperty = function (opts) {
   }
 
   var imageProperties = ['image', 'picture', 'screen-image'];
+  if (
+    imageProperties.includes(info.internalName) &&
+    typeof value === 'string' &&
+    rejectDataUrl(value, 'setProperty', undefined, captureAsyncWarningHandler())
+  ) {
+    return;
+  }
+
   if (
     imageProperties.includes(info.internalName) &&
     typeof value === 'string' &&

@@ -1,0 +1,76 @@
+@property --stat-count {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes count-up {
+  from {
+    --stat-count: 0;
+  }
+
+  to {
+    --stat-count: var(--target-count);
+  }
+}
+
+%big-number-base {
+  font-family: var(--font-family-main);
+  font-size: clamp(5rem, 18vw, 7.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #000;
+  flex-shrink: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.metricRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Plain big number — rendered value comes from React children (e.g. TimeSpentBox). */
+.bigNumber {
+  @extend %big-number-base;
+}
+
+/* CSS-counter big number — value animates via @property; render via ::after. */
+.bigNumberAnimated {
+  @extend %big-number-base;
+  counter-reset: stat-count var(--stat-count);
+  animation: count-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  &::after {
+    content: counter(stat-count);
+  }
+}
+
+.caption {
+  font-family: var(--font-family-main);
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+  font-weight: 500;
+  color: rgb(0 0 0 / 0.65);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.headline {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.8rem, 6vw, 2.375rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.headlineRight {
+  text-align: right;
+}

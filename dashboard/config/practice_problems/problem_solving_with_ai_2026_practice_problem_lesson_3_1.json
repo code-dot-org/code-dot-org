@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_3_1",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What best describes a large language model (LLM)?",
+  "solution": [
+    {"option": "A specialized AI that can only solve math problems.", "correct": false},
+    {"option": "A general-purpose AI trained on an enormous amount of text and other data.", "correct": true},
+    {"option": "A tool that only recognizes images, not text.", "correct": false},
+    {"option": "A neural network that has no training data at all.", "correct": false}
+  ],
+  "objective_keys": [
+    "5a853321-3417-4cf3-8aed-a93140f77b6b"
+  ]
+}

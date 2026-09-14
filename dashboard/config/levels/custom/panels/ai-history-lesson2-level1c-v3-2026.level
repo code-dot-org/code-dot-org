@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-11T07:31:01.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Marvin Minsky\n\n### AI Pioneer & Theorist\n\n*Image attribution: [Marvin Minsky](https://commons.wikimedia.org/wiki/File:Marvin_Minsky.jpg) by Steamtalks, via Wikimedia Commons. CC BY-SA 2.0.*\n",
+        "imageUrl": "https://images.code.org/cdea43ec73bd6b74d0b7107d049363f0-minsky.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### What He Contributed\n\nMinsky was a mathematician and cognitive scientist who cofounded the MIT Artificial Intelligence Laboratory with John McCarthy in 1959. He worked on early neural networks, robotics, and theories about how both machines and humans represent knowledge.<sup>1</sup>\n\n*Image attribution: [MA-3 Robotic Manipulator Arm](https://commons.wikimedia.org/wiki/File:MA-3_Robotic_Manipulator_Arm-IMG_6022.JPG) by Rama, via Wikimedia Commons. CC BY-SA 3.0 France.*\n",
+        "imageUrl": "https://images.code.org/29d7120ab6da59f296861ddbe4ed67d9-minsky_arm.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Connection to AI History\n\nMinsky’s work spans the early symbolic AI era. His ideas about knowledge representation — including “frames,” a structured way of organizing information — shaped how early AI systems were designed to understand and reason about the world.<sup>1, 2</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n",
+        "imageUrl": "https://images.code.org/5ea0ed58db96b0e36cdcb57b92ff7eb7-minsky_arm_lab.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Why It Matters\n\nBy connecting AI to questions about how minds work, Minsky helped establish cognitive science alongside computer science as a companion field. The MIT AI Lab he cofounded became one of the most important centers of AI research in the world for decades.<sup>1</sup>\n\n*Image attribution: [Photo](https://unsplash.com/photos/blue-industrial-robot-arm-in-factory-sz1CHL7Pky0) by [Homa Appliances](https://unsplash.com/@homaappliances) on Unsplash.*\n\n**Sources**\n\n1. [Computer History Museum — Marvin Minsky](https://computerhistory.org/profile/marvin-minsky)\n2. [Britannica — Marvin Minsky](https://www.britannica.com/biography/Marvin-Minsky)\n",
+        "imageUrl": "https://images.code.org/e02e29decffb89ae354185545f3fdedb-robotics_lab.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2026-dev",
+    "display_name": "Marvin Minsky",
+    "bubble_choice_description": "Choose Marvin Minsky to explore how his work on knowledge representation, neural networks, and the MIT AI Lab helped shape early AI and cognitive science.",
+    "use_links": "false",
+    "thumbnail_url": "https://images.code.org/cdea43ec73bd6b74d0b7107d049363f0-minsky.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-11T07:31:01.576+00:00\",\"changed\":[\"cloned from \\\"ai-history-lesson2-level1b-v3-2026\\\"\"],\"cloned_from\":\"ai-history-lesson2-level1b-v3-2026\"},{\"changed_at\":\"2026-08-11 07:34:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-11 08:02:27 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Panels>

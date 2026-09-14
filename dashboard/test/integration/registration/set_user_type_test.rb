@@ -340,6 +340,42 @@ module RegistrationsControllerTests
       refute EmailPreference.find_by_email(test_email)
     end
 
+    test "converting teacher with a non-demo section to student fails" do
+      teacher = create(:teacher)
+      section = create(:section, user: teacher)
+      sign_in teacher
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'student',
+          email: '',
+          hashed_email: teacher.hashed_email
+        }
+      }
+      assert_response :bad_request
+
+      assert User.find(teacher.id).teacher?
+      assert Section.exists?(section.id)
+    end
+
+    test "converting teacher with only a demo section to student succeeds" do
+      teacher = create(:teacher)
+      demo_section = create(:section, user: teacher, demo_type: 'high')
+      sign_in teacher
+
+      patch '/users/user_type', as: :json, params: {
+        user: {
+          user_type: 'student',
+          email: '',
+          hashed_email: teacher.hashed_email
+        }
+      }
+      assert_response :success
+
+      assert User.find(teacher.id).student?
+      refute Section.exists?(demo_section.id)
+    end
+
     test "converting teacher to student ignores email opt-in" do
       test_email = 'example@email.com'
       teacher = create(:teacher, email: test_email)

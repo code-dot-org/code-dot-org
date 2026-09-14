@@ -53,6 +53,7 @@ const aif_prefixes = [
   '/courses/oceans',
   '/courses/how-ai-works-2023',
   '/courses/problem-solving-with-ai-2025',
+  '/courses/artificial-intelligence-foundations-india-2025',
 ];
 
 const dashboard_prefixes = [

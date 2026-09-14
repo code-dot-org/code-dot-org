@@ -9,7 +9,7 @@ Feature: Text To Speech
 @no_mobile
 Scenario: Check that TTS player is displayed
   Given I am a student
-  And I am on "http://studio.code.org/courses/allthettsthings/units/1/lessons/1/levels/1"
+  And I am on "http://studio.code.org/courses/ui-test-tts/units/1/lessons/1/levels/1"
   And I wait for the lab page to fully load
 
   Then I wait until element ".inline-audio" is visible
@@ -51,7 +51,7 @@ Scenario: Listen to TTS Audio in CSF
 @chrome
 Scenario: Listen to TTS Audio in CSF contained level
   Given I am a student
-  And I am on "http://studio.code.org/courses/allthettsthings/units/1/lessons/1/levels/1"
+  And I am on "http://studio.code.org/courses/ui-test-tts/units/1/lessons/1/levels/1"
   And I wait for the lab page to fully load
 
   # note: we expect audio for csf instructions
@@ -63,7 +63,7 @@ Scenario: Listen to TTS Audio in CSF contained level
 @chrome
 Scenario: Listen to TTS Audio in CSD
   Given I am a student
-  And I am on "http://studio.code.org/courses/allthettsthings/units/1/lessons/1/levels/2"
+  And I am on "http://studio.code.org/courses/ui-test-tts/units/1/lessons/1/levels/2"
   And I wait for the lab page to fully load
 
   # note: we expect audio for csd instructions
@@ -75,7 +75,7 @@ Scenario: Listen to TTS Audio in CSD
 @chrome
 Scenario: Listen to TTS Audio in CSP and CSP contained level
   Given I am a student
-  And I am on "http://studio.code.org/courses/allthettsthings/units/1/lessons/1/levels/4"
+  And I am on "http://studio.code.org/courses/ui-test-tts/units/1/lessons/1/levels/4"
   And I wait for the lab page to fully load
 
   # note: we expect audio for csp instructions
@@ -84,7 +84,7 @@ Scenario: Listen to TTS Audio in CSP and CSP contained level
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element
 
-  And I am on "http://studio.code.org/courses/allthettsthings/units/1/lessons/1/levels/3"
+  And I am on "http://studio.code.org/courses/ui-test-tts/units/1/lessons/1/levels/3"
   And I wait for the lab page to fully load
 
   # note: we expect audio for csp instructions

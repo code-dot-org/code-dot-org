@@ -5,6 +5,7 @@ import React from 'react';
 import {
   FLAGGED_IMAGE_URL_MESSAGE,
   IMAGE_MODERATION_ERROR_MESSAGE,
+  IMAGE_URL_INPUT_INVALID_MESSAGE,
 } from '@cdo/apps/applab/constants';
 import {clearImageUrlModerationCache} from '@cdo/apps/applab/imageUrlModeration';
 import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
@@ -64,7 +65,7 @@ describe('ImageURLInput', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText('Please provide a valid URL.')
+        screen.getByText(IMAGE_URL_INPUT_INVALID_MESSAGE)
       ).toBeInTheDocument()
     );
     expect(mockModerateImageUrl).not.toHaveBeenCalled();

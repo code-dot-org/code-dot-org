@@ -54,10 +54,18 @@ brandLegacyShim.css          CADS token names, mapped to legacy values
 brandCodeAiNext.css          CADS primitives + semantic tokens, scoped to
                              [data-brand='codeai-next'] (generated from
                              primitiveColors_codeAi.css + colors_codeAi.css)
-brandCodeAiNextAliases.css   Legacy token names, mapped to CADS values
-                             (so unmigrated code renders under codeai-next)
-brandCodeAiAudit.css         All-pink tokens for [data-brand='codeai-audit']
+brandCodeAiAudit.css         The same CADS tokens with every primitive
+                             replaced by a pink of the same ramp position,
+                             scoped to [data-brand='codeai-audit'] (generated
+                             from the same two canonical files)
+brandLegacyAliases.css       Legacy token names, mapped to CADS values under
+                             both CADS brands (so unmigrated code renders
+                             under codeai-next, and pink under codeai-audit)
 ```
+
+Only `brandLegacyShim.css` and `brandLegacyAliases.css` know that legacy
+token names exist; both are deleted once call sites use CADS names. The
+audit brand survives that deletion unchanged.
 
 ### Selectors
 

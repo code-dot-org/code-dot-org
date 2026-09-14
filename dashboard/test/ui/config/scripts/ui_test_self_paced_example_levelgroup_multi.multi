@@ -1,0 +1,10 @@
+name 'UI Test self-paced-example-levelgroup-multi'
+title 'Check for understanding'
+description ''
+question 'Which of these is a level type?'
+right 'Multi'
+wrong 'Trapezoid'
+
+teacher_markdown <<MARKDOWN
+Teacher only markdown for level group multi yay!
+MARKDOWN

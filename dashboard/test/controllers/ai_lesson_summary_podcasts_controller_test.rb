@@ -71,11 +71,29 @@ class AiLessonSummaryPodcastsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
-  test 'generate_podcasts_by_unit returns forbidden for non-AIF units' do
+  test 'generate_podcasts_by_unit enqueues job when DCDO flag is enabled and unit is AID' do
     sign_in @teacher
 
-    # Change unit to non-AIF
-    @unit.curriculum_umbrella = 'foundations_of_cs'
+    aid_unit = create(:script, :with_lessons)
+    aid_unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.AID
+    aid_unit.save!
+
+    DCDO.stubs(:get).with('ai-lesson-summary-podcasts', false).returns(true)
+
+    assert_enqueued_with(job: AiLessonSummaryPodcastsJob) do
+      post :generate_podcasts_by_unit, params: {
+        unit_id: aid_unit.id
+      }
+    end
+
+    assert_response :success
+  end
+
+  test 'generate_podcasts_by_unit returns forbidden for non-AIF/AID units' do
+    sign_in @teacher
+
+    # Change unit to one outside AIF and AID
+    @unit.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD
     @unit.save!
 
     # Enable access

@@ -35,4 +35,16 @@ class CdoPlaywrightReportTest < Minitest::Test
     assert_equal "https://#{BUCKET}.s3.amazonaws.com/#{INDEX_KEY}", url
     assert_equal({'index.html' => 'text/html', 'data/trace.zip' => 'application/zip'}, uploaded)
   end
+
+  # One directory would lose the first suite's report.
+  def test_each_suite_gets_its_own_directory
+    AWS::S3::LogUploader.expects(:new).with(BUCKET, "#{PREFIX}/playwright-eyes", make_public: true).returns(stub(upload_log: nil))
+
+    Dir.mktmpdir {|dir| Cdo::PlaywrightReport.upload(dir, name: 'playwright-eyes')}
+
+    # The key, not the URL public_url builds from it: that URL follows the local
+    # S3 configuration, and aws_s3_emulated gives it a different host.
+    AWS::S3.expects(:public_url).with(BUCKET, "#{PREFIX}/playwright-eyes/index.html")
+    Cdo::PlaywrightReport.index_url(name: 'playwright-eyes')
+  end
 end

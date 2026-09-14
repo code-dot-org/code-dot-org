@@ -214,7 +214,7 @@ module ActiveJobMetrics
     ActiveJobMetrics.report_overall_queue_metrics
     ActiveJobMetrics.report_metrics(self, dimensions: common_dimensions)
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+    Observability::Errors.report(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
   protected def report_wait_time
@@ -240,7 +240,7 @@ module ActiveJobMetrics
       ]
     )
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+    Observability::Errors.report(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
   protected def report_performance
@@ -265,6 +265,6 @@ module ActiveJobMetrics
       ]
     )
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+    Observability::Errors.report(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 end

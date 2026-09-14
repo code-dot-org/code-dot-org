@@ -1,3 +1,7 @@
-// Re-export the shared React + jsdom base. Swap to `mergeConfig(base, {...})`
-// when this package needs `setupFiles`, `resolve.alias`, or CSS-module options.
-export {default} from '@code-dot-org/lint-config/vitest/react.mjs';
+import {mergeConfig} from 'vitest/config';
+
+import base from '@code-dot-org/lint-config/vitest/react.mjs';
+
+export default mergeConfig(base, {
+  test: {setupFiles: ['./src/__tests__/setup.ts']},
+});

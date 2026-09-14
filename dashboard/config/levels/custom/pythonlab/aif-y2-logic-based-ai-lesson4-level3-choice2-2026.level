@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-07-27T23:47:09.000Z",
   "level_num": "custom",
@@ -11,7 +12,7 @@
     "bubble_choice_description": "Build a chatbot that checks the notifications on your phone.",
     "thumbnail_url": "https://images.code.org/2e834445517b9687845698f40d13d171-notification.png",
     "offer_browser_tts": "false",
-    "submittable": "false",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
@@ -35,9 +36,16 @@
       "openFiles": [
         "0"
       ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrLpCNJ/1kaZo4K\n0t+VwtYQRN+rf0007a2dkil/9/tG4Vnqtim9MJbc0Nxxk/6lnBLEJ5MdS128\n1JzrPDIF/x6f/MaRhGm2oOtz0/ejANQkHgKWmWquEF/Nn7VY8be7FjDZ9Crj\nc7+ADY5P+aXRvqZlXuz4ekaUis2akMZSgxxEuaR0PHr5qXl3bEZ6eWSWuGUJ\n4a6Vq4ZYByTo6VIThd623XIFu8meiqsr1y4aN4quhDueRkeN1IxV9yNRWjhf\nCprF27gZJjgX4iAspmdOlxod\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-27 23:47:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-27 23:47:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:31:16 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:38:07 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

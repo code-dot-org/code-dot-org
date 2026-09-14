@@ -8,35 +8,8 @@
 #
 # Runs each check via `<engine> run --rm` and exits nonzero on any failure.
 
-set -u
-
-IMAGE="${1:?usage: smoke-test.sh <image-ref> <engine>}"
-ENGINE="${2:?usage: smoke-test.sh <image-ref> <engine>}"
-
-fails=0
-
-# run <description> <expected-substring> -- <cmd...>
-#   asserts the command exits 0 AND its combined output contains the substring.
-run() {
-  desc="$1"
-  expect="$2"
-  shift 2
-  [ "$1" = "--" ] && shift
-
-  out="$("$ENGINE" run --rm "$IMAGE" "$@" 2>&1)"
-  rc=$?
-  if [ "$rc" -ne 0 ]; then
-    printf 'FAIL  %-40s (exit %d)\n%s\n' "$desc" "$rc" "$out"
-    fails=$((fails + 1))
-    return
-  fi
-  if [ -n "$expect" ] && ! printf '%s' "$out" | grep -qF "$expect"; then
-    printf 'FAIL  %-40s (missing %q)\n%s\n' "$desc" "$expect" "$out"
-    fails=$((fails + 1))
-    return
-  fi
-  printf 'ok    %s\n' "$desc"
-}
+# shellcheck disable=SC1091
+. "$(dirname "$0")/../smoke-harness.sh"
 
 # 1. Ruby is the pinned version.
 run "ruby 3.2.11" "3.2.11" -- ruby --version
@@ -78,9 +51,4 @@ run "zoneinfo UTC present" "" -- test -e /usr/share/zoneinfo/UTC
 # 8. locale runs under LANG=C.UTF-8.
 run "locale under C.UTF-8" "" -- locale
 
-echo "----"
-if [ "$fails" -ne 0 ]; then
-  echo "$fails check(s) failed on $ENGINE"
-  exit 1
-fi
-echo "all checks passed on $ENGINE"
+report

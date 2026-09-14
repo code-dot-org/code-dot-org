@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q13-2026'
+
+right 'A new feature might reveal a pattern that helps tell apart labels'
+wrong 'A new feature decreases the distance between an input and its neighbors'
+wrong 'A new feature means the model will have to check fewer neighbors'
+wrong 'A new feature means the existing data will no longer be biased'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Why can adding a feature to a classification model help it make better predictions?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Sensing the World
+MARKDOWN

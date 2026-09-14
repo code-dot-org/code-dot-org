@@ -1379,9 +1379,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'workshop config_validation' do
-    # Build Your Own is the only course with a WORKSHOP_COURSE_CONFIGS entry;
-    # CSP/CSD/CSA are archived and skip config_validation.
-    workshop = build(:byo_workshop, grades: nil, name: nil, description: nil)
+    workshop = build(:pd_workshop, grades: nil, name: nil, description: nil)
 
     refute workshop.valid?
     assert_includes workshop.errors.full_messages, 'Please select at least one grade level'

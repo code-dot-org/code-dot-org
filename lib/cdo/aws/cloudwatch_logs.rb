@@ -1,6 +1,7 @@
 require 'aws-sdk-cloudwatchlogs'
 require 'honeybadger/ruby'
 require 'cdo/buffer'
+require 'observability/errors'
 
 module Cdo
   # Singleton interface for asynchronously sending log events to CloudWatch in batches
@@ -46,9 +47,9 @@ module Cdo
           log_stream_name: @log_stream_name,
           log_events: events
         )
-        Honeybadger.notify("Log events rejected #{resp.rejected_log_events_info.to_json}") if resp.rejected_log_events_info
+        Observability::Errors.report("Log events rejected #{resp.rejected_log_events_info.to_json}") if resp.rejected_log_events_info
       rescue => exception
-        Honeybadger.notify(exception)
+        Observability::Errors.report(exception)
         puts "Error sending logs to group/stream #{@log_group_name}/#{@log_stream_name}: #{exception.full_message}" if rack_env?(:development)
       end
 

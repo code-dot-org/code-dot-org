@@ -50,8 +50,9 @@ const CHECKER_COLORS = {
   dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
 };
 
-// Dark navy ink.
-const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
+// A bright azure, at the darkest shade that clears 3:1 against white while
+// holding 3:1 on the dark checker and 6.9:1 on a black background fill.
+const DEFAULT_COLOR: RGBA = [0, 155, 233, 255];
 
 // Summed per-channel difference a pixel may have from the clicked color and
 // still flood-fill: AI-generated "solid" regions carry small variations that
@@ -88,6 +89,16 @@ const brushDotPx = (size: number) => 3 + size * 1.6;
 // Keyboard painting: Shift+arrow moves the cursor this many art pixels.
 const KB_SHIFT_STEP = 10;
 
+// A #rrggbb color as the RGBA the editor's tools work in.
+function hexToRGBA(hex: string): RGBA {
+  return [
+    parseInt(hex.slice(1, 3), 16),
+    parseInt(hex.slice(3, 5), 16),
+    parseInt(hex.slice(5, 7), 16),
+    255,
+  ];
+}
+
 export interface PixelEditorSaveMeta {
   pixelGridSize?: number;
   // Recently used colors after this session, in first-seen order; the caller
@@ -107,6 +118,10 @@ interface PixelEditorModalProps {
   knownPixelGrid?: number;
   // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
   initialRecentColors?: RGBA[];
+  // Ground color for an image that must stay fully opaque (e.g. a stage
+  // background): drawn under the artwork instead of the transparency
+  // checker, and Save flattens onto it, so the editor shows what it saves.
+  opaqueGround?: string;
   // Fires when the editor first renders content (the image loaded or
   // failed). Until then the modal renders nothing; a caller swapping
   // another dialog for this one can wait for it to avoid a scrim gap.
@@ -129,6 +144,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   imageUrl,
   knownPixelGrid,
   initialRecentColors,
+  opaqueGround,
   onReady,
   onSave,
   onCancel,
@@ -307,24 +323,30 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       return;
     }
     ctx.imageSmoothingEnabled = false;
-    const checker = CHECKER_COLORS[themeModeRef.current];
-    ctx.fillStyle = checker.base;
-    ctx.fillRect(0, 0, display.width, display.height);
-    const scale = scaleRef.current;
-    const cell = pixelModeRef.current
-      ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
-      : CHECKER_CELL_PX;
-    ctx.fillStyle = checker.tint;
-    for (let y = 0; y * cell < display.height; y++) {
-      for (let x = y % 2; x * cell < display.width; x += 2) {
-        ctx.fillRect(x * cell, y * cell, cell, cell);
+    if (opaqueGround) {
+      // Opaque images sit on their ground color, not the checker.
+      ctx.fillStyle = opaqueGround;
+      ctx.fillRect(0, 0, display.width, display.height);
+    } else {
+      const checker = CHECKER_COLORS[themeModeRef.current];
+      ctx.fillStyle = checker.base;
+      ctx.fillRect(0, 0, display.width, display.height);
+      const scale = scaleRef.current;
+      const cell = pixelModeRef.current
+        ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
+        : CHECKER_CELL_PX;
+      ctx.fillStyle = checker.tint;
+      for (let y = 0; y * cell < display.height; y++) {
+        for (let x = y % 2; x * cell < display.width; x += 2) {
+          ctx.fillRect(x * cell, y * cell, cell, cell);
+        }
       }
     }
     ctx.drawImage(backing, 0, 0, display.width, display.height);
     if (previewRef.current) {
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
-  }, []);
+  }, [opaqueGround]);
 
   // The checkerboard is baked into the canvas; redraw it if the page theme
   // flips while the editor is open.
@@ -702,14 +724,25 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   // Read the backing pixel under the pointer into the active color. The
   // spectrum picker has no alpha axis, so partial alpha snaps to opaque;
   // fully transparent picks the transparent color.
-  const pickColorAt = useCallback((p: {x: number; y: number}) => {
-    const ctx = backingRef.current?.getContext('2d');
-    if (!ctx) {
-      return;
-    }
-    const [r, g, b, a] = ctx.getImageData(p.x, p.y, 1, 1).data;
-    setColor(a === 0 ? TRANSPARENT : [r, g, b, 255]);
-  }, []);
+  const pickColorAt = useCallback(
+    (p: {x: number; y: number}) => {
+      const ctx = backingRef.current?.getContext('2d');
+      if (!ctx) {
+        return;
+      }
+      const [r, g, b, a] = ctx.getImageData(p.x, p.y, 1, 1).data;
+      // Over an opaque ground a transparent pixel displays as the ground
+      // color, so that's what the eyedropper picks.
+      setColor(
+        a === 0
+          ? opaqueGround
+            ? hexToRGBA(opaqueGround)
+            : TRANSPARENT
+          : [r, g, b, 255]
+      );
+    },
+    [opaqueGround]
+  );
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -1200,6 +1233,23 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     if (!backing) {
       return;
     }
+    // What the display showed: the artwork over its opaque ground, if any.
+    const finish = (source: HTMLCanvasElement, meta: PixelEditorSaveMeta) => {
+      if (opaqueGround) {
+        const out = document.createElement('canvas');
+        out.width = source.width;
+        out.height = source.height;
+        const ctx = out.getContext('2d');
+        if (ctx) {
+          ctx.fillStyle = opaqueGround;
+          ctx.fillRect(0, 0, out.width, out.height);
+          ctx.drawImage(source, 0, 0);
+          onSave(out.toDataURL('image/png'), meta);
+          return;
+        }
+      }
+      onSave(source.toDataURL('image/png'), meta);
+    };
     if (pixelMode) {
       // Store crisp: nearest-neighbor upscale of the logical pixels, so the
       // runtime renders sharply without engine smoothing changes.
@@ -1222,15 +1272,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0,
             0
           );
-        onSave(out.toDataURL('image/png'), {
-          pixelGridSize: crispScale,
-          recentColors,
-        });
+        finish(out, {pixelGridSize: crispScale, recentColors});
         return;
       }
     }
-    onSave(backing.toDataURL('image/png'), {recentColors});
-  }, [onSave, pixelMode, recentColors]);
+    finish(backing, {recentColors});
+  }, [onSave, pixelMode, recentColors, opaqueGround]);
 
   // historyVersion re-renders this component whenever the stacks change; the
   // stacks themselves live in refs.

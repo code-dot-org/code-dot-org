@@ -63,7 +63,6 @@ interface AccessTokenResponse {
 
 // Body of an error response from Javabuilder's access-token endpoints.
 interface JavabuilderErrorResponse {
-  captcha_required?: boolean;
   type?: string;
   value?: string;
   detail?: MessageDetail;
@@ -92,7 +91,6 @@ export default class JavabuilderConnection {
   private onValidationPassed: () => void;
   private onValidationFailed: () => void;
   private onConnectDone: () => void;
-  private setIsCaptchaDialogOpen: (open: boolean) => void;
 
   private seenUnsupportedNeighborhoodMessage: boolean;
   private seenUnsupportedTheaterMessage: boolean;
@@ -121,7 +119,6 @@ export default class JavabuilderConnection {
     onValidationPassed: () => void,
     onValidationFailed: () => void,
     onConnectDone: () => void,
-    setIsCaptchaDialogOpen: (open: boolean) => void,
     // Optional. Callers (e.g. Lab2-based labs) that don't initialize the
     // legacy `project` singleton can pass the channel id explicitly. Legacy
     // callers omit it and fall back to project.getCurrentId().
@@ -148,7 +145,6 @@ export default class JavabuilderConnection {
     this.onValidationPassed = onValidationPassed;
     this.onValidationFailed = onValidationFailed;
     this.onConnectDone = onConnectDone;
-    this.setIsCaptchaDialogOpen = setIsCaptchaDialogOpen;
 
     this.seenUnsupportedNeighborhoodMessage = false;
     this.seenUnsupportedTheaterMessage = false;
@@ -345,13 +341,7 @@ export default class JavabuilderConnection {
       }
       const ajaxError = error as AjaxError;
       if (ajaxError.status === 403) {
-        if (ajaxError.responseJSON?.captcha_required === true) {
-          this.setIsCaptchaDialogOpen(true);
-          this.onOutputMessage(javalabMsg.verificationRequiredMessage());
-          this.onNewlineMessage();
-        } else {
-          this.displayUnauthorizedMessage(ajaxError);
-        }
+        this.displayUnauthorizedMessage(ajaxError);
       } else {
         this.onOutputMessage(
           `${STATUS_MESSAGE_PREFIX} ${javalabMsg.errorJavabuilderConnectionGeneral()}`

@@ -154,7 +154,6 @@ export async function handleRunClick(
       resolve();
     };
 
-    // TODO: Captcha handling.
     activeConnection = new JavabuilderConnection(
       writeToConsole,
       miniApp,
@@ -171,7 +170,6 @@ export async function handleRunClick(
       /* onValidationPassed */ () => {},
       /* onValidationFailed */ () => {},
       /* onConnectDone */ () => {},
-      /* setIsCaptchaDialogOpen */ () => {},
       channelId,
       /* onValidationResult */ onValidationResult
     );

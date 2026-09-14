@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2026-08-12T20:00:24.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "link_title": "End of Lesson Survey ",
+    "url": "https://form.jotform.com/262170765959167",
+    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End of Lesson Survey](https://form.jotform.com/262164695629166).",
+    "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCodeAI takes your privacy seriously. Your responses will be kept **anonymous**."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-12T20:00:24.539+00:00\",\"changed\":[\"cloned from \\\"aif-y2-logic-based-ai-lesson5-survey-2026\\\"\"],\"cloned_from\":\"aif-y2-logic-based-ai-lesson5-survey-2026\"},{\"changed_at\":\"2026-08-12 20:00:27 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-20 17:59:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</ExternalLink>

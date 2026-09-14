@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Divider, IconButton, Paper, Tooltip} from '@mui/material';
+import {Divider, IconButton, Paper} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
@@ -10,6 +10,8 @@ import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
 import {ModeratedImageUploader} from '../hooks/useModeratedImageUpload';
 import {AddNodeRequest, CanvasTool, ShapeType} from '../types';
 
+import Tooltip from './ThemedTooltip';
+
 import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
@@ -18,6 +20,10 @@ interface ToolbarProps {
   onImageUploadError: () => void;
   uploadsDisabled?: boolean;
   openUploadsDisabledModal?: () => void;
+  // When false, the "Add image" tool is omitted entirely. Used where no image
+  // upload path is available (e.g. the Tutor+ deep dive, which has no lab2
+  // project channel to store or moderate uploads against).
+  allowImageUpload?: boolean;
   canvasTool: CanvasTool;
   onSetCanvasTool: (tool: CanvasTool) => void;
 }
@@ -28,6 +34,7 @@ export default function Toolbar({
   onImageUploadError,
   uploadsDisabled = false,
   openUploadsDisabledModal,
+  allowImageUpload = true,
   canvasTool,
   onSetCanvasTool,
 }: ToolbarProps) {
@@ -214,19 +221,23 @@ export default function Toolbar({
         </IconButton>
       </Tooltip>
 
-      <Tooltip title="Add image" placement="right">
-        <IconButton
-          aria-label="Add image"
-          id={`${uid}-image`}
-          onClick={onAddImageClick}
-          size="small"
-          color="tertiary"
-          variant="outlined"
-        >
-          <FontAwesomeV6Icon iconName="image" />
-        </IconButton>
-      </Tooltip>
-      <FileInput />
+      {allowImageUpload && (
+        <>
+          <Tooltip title="Add image" placement="right">
+            <IconButton
+              aria-label="Add image"
+              id={`${uid}-image`}
+              onClick={onAddImageClick}
+              size="small"
+              color="tertiary"
+              variant="outlined"
+            >
+              <FontAwesomeV6Icon iconName="image" />
+            </IconButton>
+          </Tooltip>
+          <FileInput />
+        </>
+      )}
     </Paper>
   );
 }

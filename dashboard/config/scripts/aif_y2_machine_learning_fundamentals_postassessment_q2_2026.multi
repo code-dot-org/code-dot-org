@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q2-2026'
+
+wrong '0.25'
+right '0.5'
+wrong '0.75'
+wrong '1.0'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+When rolling a six-sided die, what is the probability that it lands on an odd number?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Handling Uncertainty
+MARKDOWN

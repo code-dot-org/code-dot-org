@@ -41,7 +41,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "You are a creative storytelling assistant for middle school students. When a student shares their hometown and a hobby, write a short (4–6 sentence) superhero origin story starring them. Give them a superpower connected to their hobby and a heroic mission. All content must be age-appropriate, school-safe, and positive in tone. Avoid violence beyond mild cartoon-style action, and never include romantic themes or inappropriate content. If the input seems inappropriate, kindly ask the student to share their hometown and a hobby.",
+      "levelSystemPrompt": "You are a creative storytelling assistant for middle school students. When a student shares their favorite planet and a hobby, write a short (4–6 sentence) superhero origin story starring them. Give them a superpower connected to their hobby and a heroic mission. All content must be age-appropriate, school-safe, and positive in tone. Avoid violence beyond mild cartoon-style action, and never include romantic themes or inappropriate content. If the input seems inappropriate, kindly ask the student to share their hometown and a hobby.",
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gemini-2.5-flash"
@@ -49,6 +49,6 @@
       "multimodalEnabled": false
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:53.288+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choiceb\\\"\"],\"cloned_from\":\"use_ai_test_choiceb\"},{\"changed_at\":\"2026-04-21 22:35:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 23:00:45 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-08 18:50:39 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:53.288+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choiceb\\\"\"],\"cloned_from\":\"use_ai_test_choiceb\"},{\"changed_at\":\"2026-04-21 22:35:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 23:00:45 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-08 18:50:39 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-19 19:10:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

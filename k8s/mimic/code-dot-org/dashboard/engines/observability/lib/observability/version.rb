@@ -1,1 +1,0 @@
-../../../../../../../../dashboard/engines/observability/lib/observability/version.rb
