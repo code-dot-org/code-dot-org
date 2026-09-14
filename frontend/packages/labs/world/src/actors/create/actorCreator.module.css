@@ -28,40 +28,26 @@
 
 .door {
   display: flex;
-  flex: 1 1 0;
+  height: 100%;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0.75rem;
-  border: 2px solid var(--borders-neutral-primary, #d4dae1);
-  border-radius: 6px;
-  background: none;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
   gap: 4px;
+  padding: 0.7rem 0.8rem;
   text-align: left;
-}
-
-.door:hover {
-  border-color: var(--borders-brand-primary, #0093a4);
-}
-
-.door:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
-}
-
-.doorChosen {
-  border-color: var(--borders-brand-primary, #0093a4);
-  background-color: var(--background-brand-secondary, #e5f5f7);
+  text-transform: none;
 }
 
 .doorName {
   font-weight: 600;
 }
 
+/* NO COLOUR OF ITS OWN. The design system's Button decides what colour its
+   text is — dark on a plain card, light on the chosen one — and a rule here
+   saying "secondary grey" won that argument and left the chosen door reading
+   dark-grey on dark-grey. Dimming is done with opacity, which composes with
+   whatever the button chose. */
 .doorWhat {
-  color: var(--text-neutral-secondary);
+  opacity: 0.8;
 }
 
 /* What the chosen door asks next, under it: which of mine, or which of theirs.
@@ -81,31 +67,12 @@
 
 .choice {
   display: flex;
-  width: 88px;
-  height: 92px;
+  min-width: 4.5rem;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 4px;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  background: none;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
   gap: 4px;
-}
-
-.choice:hover {
-  border-color: var(--borders-neutral-primary, #d4dae1);
-}
-
-.choice:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
-}
-
-.choiceChosen {
-  border-color: var(--borders-brand-primary, #0093a4);
+  padding: 0.4rem;
+  text-transform: none;
 }
 
 /* The picture, on the dark ground a world is drawn against — so a white sprite
@@ -148,19 +115,6 @@
   gap: 4px;
 }
 
-.name {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.5rem;
-  border: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-radius: 4px;
-  font: inherit;
-}
-
-.problem {
-  color: var(--text-danger, #c0392b);
-}
-
 .empty {
   padding: 0.25rem 0;
   color: var(--text-neutral-secondary);
@@ -170,46 +124,12 @@
    dialog's, because the dialog's says what happens to the WIZARD — on to the
    next step, or make the actor — and this says what happens to the actor. A
    step that took one ability and moved on would make a Crawler two visits. */
-.add {
-  padding: 0.4rem 0.9rem;
-  border: 2px solid var(--borders-brand-primary, #0093a4);
-  border-radius: 4px;
-  background: none;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-}
-
-.add:disabled {
-  border-color: var(--borders-neutral-primary, #d4dae1);
-  color: var(--text-neutral-secondary);
-  cursor: default;
-}
-
-.add:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
-}
 
 /* The way into the drawing panel, under the pictures a project already has —
    which are the likelier answer, so this is a door rather than a field. */
 .describe {
   align-self: flex-start;
-  padding: 0.45rem 0.9rem;
-  border: 2px dashed var(--borders-neutral-primary, #d4dae1);
-  border-radius: 4px;
-  background: none;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-}
-
-.describe:hover {
-  border-style: solid;
-  border-color: var(--borders-brand-primary, #0093a4);
-}
-
-.describe:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
+  text-transform: none;
 }
 
 /* The step, and the way out of it. */
@@ -225,20 +145,5 @@
    visible, because an offer you cannot decline is a demand. */
 .now {
   padding: 0;
-  border: none;
-  background: none;
-  color: var(--text-neutral-secondary);
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.now:disabled {
-  cursor: default;
-  opacity: 0.5;
-  text-decoration: none;
-}
-
-.now:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
+  text-transform: none;
 }

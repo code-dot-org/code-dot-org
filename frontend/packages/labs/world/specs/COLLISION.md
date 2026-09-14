@@ -231,3 +231,39 @@ mechanisms — `bounciness` scaling and reflecting the normal component,
    Last writer wins, silently. A DIFFERENT physics model (mass, impulses,
    rotation) is the other path, and it replaces Solid Bodies rather than sitting
    beside it, which is exactly what splitting detection out made possible.
+
+## The box a drawn picture deserves, which is not the one it gets
+
+_Noted, not built._ `collision size of` prefers what an actor SET over what its
+picture measures, and falls back to 32 by 32 when neither says
+(`scripts/rules/collisions.mjs`). That fallback was right when every sprite was
+a 32-pixel square drawn edge to edge. It is wrong for art that is mostly
+nothing.
+
+A drawn picture can now be asked to be partly see-through — a mossy platform
+with vines hanging under it is stone across the top and empty below
+(`specs/IMAGE_GENERATION.md`). Its box is the whole picture, so a player bumps
+the vines as though they were the stone, and stands two tiles up where the
+floor looks one tile up.
+
+Trimming the empty edges off a generated picture took the worst of it away: the
+box is the drawn content now rather than the content plus its margin
+(`appearance/generate/shrinkPicture.trimToEdges`). What is left is the shape
+INSIDE that content, which a rectangle cannot say and trimming cannot reach.
+
+Three ways it could go, none chosen:
+
+- **Measure the opaque part per row.** The alpha channel already says where the
+  material is; the widest run of solid rows is a better rectangle than the
+  bounding box, and for a platform-with-vines it is the stone. Cheap, needs no
+  new vocabulary, and is still one rectangle.
+- **Ask the learner.** A box drawn over the picture in the image editor, stored
+  on the actor, which `collision size of` already prefers over everything. The
+  most honest and the most work.
+- **Say what the kind is.** A surface that joins side to side is a floor, and a
+  floor's box is its top. That is inference from the drawing questions rather
+  than a new question, which is the cheapest of the three and the easiest to be
+  wrong about.
+
+What decides it is whether the wrong box is noticed while playing or only while
+building. Nothing has measured that yet.

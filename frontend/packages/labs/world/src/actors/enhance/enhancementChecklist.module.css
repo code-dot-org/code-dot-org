@@ -1,0 +1,51 @@
+/* The abilities step, read as a list rather than as twelve posters.
+   (specs/ACTOR_CREATION_WIZARD.md) */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+  list-style: none;
+}
+
+.row {
+  border-bottom: 1px solid var(--borders-neutral-secondary, #eef1f4);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+/* Name on the left, why-it-is-locked beside it, the disclosure on the right. */
+.line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.tick {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.note {
+  flex: 0 0 auto;
+  color: var(--text-neutral-secondary);
+}
+
+.about {
+  flex: 0 0 auto;
+  padding: 0 0 6px 2rem;
+  color: var(--text-neutral-secondary);
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 0 0 6px 2rem;
+}

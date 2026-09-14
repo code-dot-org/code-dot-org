@@ -367,45 +367,27 @@ describe('the abilities step', () => {
     expect(screen.getByText('Walks and jumps like a platformer')).toBeTruthy();
   });
 
-  it('will not add until a row is chosen', () => {
+  it('is a list to tick rather than a row to press and confirm', () => {
+    // IT WAS TWO MISTAKES WEARING ONE COAT. An `Add this` button under the
+    // rows is a press that is not the press a learner was going to make
+    // anyway — the trap the drawing panel had — and it was needed once PER
+    // ability, which nothing on screen said.
     toAbilities();
 
-    expect(screen.getByRole('button', {name: 'Add this'})).toBeDisabled();
+    expect(screen.queryByRole('button', {name: 'Add this'})).toBeNull();
+    expect(
+      screen.getByRole('checkbox', {name: 'Walks a beat'}),
+    ).not.toBeChecked();
   });
 
-  it('adds one, stays, and says the actor has it now', () => {
-    // Applied and STAYING, which is the one way this is not the enhancement
-    // dialog: walking in and out once per ability would make a Crawler three
-    // round trips. Nothing keeps count — the row reads the actor's own chain,
-    // so the one just added says so by itself.
-    toAbilities();
-    fireEvent.click(screen.getByText('Walks a beat'));
-    fireEvent.click(screen.getByRole('button', {name: 'Add this'}));
-
-    expect(screen.getByText(/Step 3 of 3/)).toBeTruthy();
-    const row = screen.getByText('Walks a beat').closest('button')!;
-    expect(row.textContent).toContain('Already has this');
-    expect(row).toBeDisabled();
-  });
-
-  it('takes a second one after the first', () => {
+  it('takes as many as you like, and applies them all at Create', () => {
     toAbilities();
     for (const ability of ['Walks a beat', 'Hurts what it touches']) {
-      fireEvent.click(screen.getByText(ability));
-      fireEvent.click(screen.getByRole('button', {name: 'Add this'}));
+      fireEvent.click(screen.getByRole('checkbox', {name: ability}));
     }
+    // Nothing has been applied yet: the actor is still the one step two made.
+    expect(onCreate).not.toHaveBeenCalled();
 
-    for (const ability of ['Walks a beat', 'Hurts what it touches']) {
-      expect(
-        screen.getByText(ability).closest('button')!.textContent,
-      ).toContain('Already has this');
-    }
-  });
-
-  it('hands over the actor with its abilities on it', () => {
-    toAbilities();
-    fireEvent.click(screen.getByText('Walks a beat'));
-    fireEvent.click(screen.getByRole('button', {name: 'Add this'}));
     fireEvent.click(creator());
 
     const written = (
@@ -414,6 +396,91 @@ describe('the abilities step', () => {
       ]
     )[0];
     expect(written.files.made.contents).toContain('Patrol#PatrolsAcrossTrait');
+    expect(written.files.made.contents).toContain('Damage');
+  });
+
+  it('lets one be taken back off again', () => {
+    // Which the old step could not do at all: applied was applied.
+    toAbilities();
+    const tick = () => screen.getByRole('checkbox', {name: 'Walks a beat'});
+    fireEvent.click(tick());
+    expect(tick()).toBeChecked();
+
+    fireEvent.click(tick());
+    expect(tick()).not.toBeChecked();
+
+    fireEvent.click(creator());
+    const written = (
+      onCreate.mock.calls.at(-1) as unknown as [
+        {files: Record<string, {contents: string}>},
+      ]
+    )[0];
+    expect(written.files.made.contents).not.toContain(
+      'Patrol#PatrolsAcrossTrait',
+    );
+  });
+
+  it('ticks and locks what the actor already has', () => {
+    // TWO OF STEP ONE'S THREE DOORS hand this step an actor that can already
+    // do things — a copied Crawler patrols — and the honest way to show that
+    // is the same tick in the same column, not a row greyed out for reasons of
+    // its own. The tick is not a claim that this step did it.
+    const patrolling = vi.fn(() => ({
+      source: {
+        folders: {f1: {id: 'f1', name: 'actors', parentId: '0', open: true}},
+        files: {
+          made: {
+            id: 'made',
+            name: 'chaser.actor',
+            language: 'actor',
+            contents: JSON.stringify({
+              blocks: {
+                blocks: [
+                  {
+                    type: 'world_actor',
+                    fields: {NAME: 'Chaser'},
+                    next: {
+                      block: {
+                        type: 'world_use_trait',
+                        fields: {TRAIT: 'Patrol#PatrolsAcrossTrait'},
+                      },
+                    },
+                  },
+                ],
+              },
+            }),
+            folderId: 'f1',
+          },
+        },
+        openFiles: [],
+      } as never,
+      path: 'actors/chaser',
+    }));
+    show({build: patrolling});
+    pastOrigin('Create my own');
+    fireEvent.click(onward());
+
+    const walks = screen.getByRole('checkbox', {name: 'Walks a beat'});
+    expect(walks).toBeChecked();
+    expect(walks).toBeDisabled();
+    // …and the one it has not got is neither.
+    const hurts = screen.getByRole('checkbox', {
+      name: 'Hurts what it touches',
+    });
+    expect(hurts).not.toBeChecked();
+    expect(hurts).not.toBeDisabled();
+  });
+
+  it('keeps the description behind a press', () => {
+    // Twelve rows of name, sentence and "also adds" is a wall; twelve names
+    // is a list you can scan.
+    toAbilities();
+    expect(screen.queryByText(/pacing left and right/)).toBeNull();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: 'What Walks a beat does'}),
+    );
+    expect(screen.getByText(/pacing left and right/)).toBeTruthy();
   });
 
   it('builds afresh when the answers behind it change', () => {

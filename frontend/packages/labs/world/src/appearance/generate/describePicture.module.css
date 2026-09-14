@@ -38,35 +38,14 @@
 }
 
 .draw {
-  padding: 0.45rem 0.9rem;
-  border: 2px solid var(--borders-brand-primary, #0093a4);
-  border-radius: 4px;
-  background: none;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-}
-
-.draw:disabled {
-  border-color: var(--borders-neutral-primary, #d4dae1);
-  color: var(--text-neutral-secondary);
-  cursor: default;
-}
-
-.draw:focus-visible,
-.back:focus-visible,
-.keep:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
+  text-transform: none;
 }
 
 /* The way back to the pictures the project already has, which is the likelier
    answer and must not become hard to reach for having been left. */
 .back {
-  padding: 0.45rem 0;
-  border: none;
-  background: none;
-  color: var(--text-neutral-secondary);
-  cursor: pointer;
+  padding: 0;
+  text-transform: none;
   text-decoration: underline;
 }
 
@@ -95,12 +74,7 @@
 }
 
 .keep {
-  padding: 0.45rem 0.9rem;
-  border: 2px solid var(--borders-brand-primary, #0093a4);
-  border-radius: 4px;
-  background-color: var(--borders-brand-primary, #0093a4);
-  color: #fff;
-  cursor: pointer;
+  text-transform: none;
 }
 
 .problem {
@@ -122,38 +96,24 @@
 .kind {
   display: flex;
   min-width: 0;
+  height: 100%;
   flex: 1 1 12rem;
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
   padding: 0.5rem 0.7rem;
-  border: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-radius: 4px;
-  background: none;
-  cursor: pointer;
   text-align: left;
-}
-
-.kind:hover {
-  border-color: var(--borders-brand-primary, #0093a4);
-}
-
-.kind:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 1px;
-}
-
-.kindChosen {
-  border-color: var(--borders-brand-primary, #0093a4);
-  box-shadow: inset 0 0 0 1px var(--borders-brand-primary, #0093a4);
+  text-transform: none;
 }
 
 .kindName {
-  color: var(--text-neutral-primary);
+  font-weight: 600;
 }
 
+/* Dimmed with opacity rather than a colour, so the chosen card — which the
+   design system paints light-on-dark — does not end up grey on grey. */
 .kindWhat {
-  color: var(--text-neutral-secondary);
+  opacity: 0.8;
 }
 
 /* A surface that has to repeat, repeated. One copy says nothing about whether
@@ -175,39 +135,6 @@
    above rather than a question of its own rank. One line of explanation under
    it, for whichever is chosen — three lines at once would out-weigh the
    question. */
-.ways {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.way {
-  padding: 0.3rem 0.7rem;
-  border: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-radius: 4px;
-  background: none;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-}
-
-.way:hover {
-  border-color: var(--borders-brand-primary, #0093a4);
-}
-
-.way:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 1px;
-}
-
-.wayChosen {
-  border-color: var(--borders-brand-primary, #0093a4);
-  background-color: var(--borders-brand-primary, #0093a4);
-  color: #fff;
-}
-
 .wayWhat {
   color: var(--text-neutral-secondary);
 }

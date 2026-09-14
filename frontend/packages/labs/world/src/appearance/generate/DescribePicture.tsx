@@ -18,8 +18,10 @@
 // is almost never "pick the best of four" but "that is close, but greener",
 // which is an edit to the words (`generate/imageGenerator.DRAW_COUNT`).
 
-import {Typography} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import {useState} from 'react';
+
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 
 import styles from './describePicture.module.css';
 import {
@@ -215,23 +217,30 @@ export const DescribePicture = ({
           <ul className={styles.kinds} aria-label="What it is">
             {kinds.map(one => (
               <li key={one} style={{display: 'contents'}}>
-                <button
-                  type="button"
-                  className={
-                    one === kind
-                      ? `${styles.kind} ${styles.kindChosen}`
-                      : styles.kind
-                  }
+                <MuiButton
+                  variant={one === kind ? 'contained' : 'outlined'}
+                  color="secondary"
+                  className={styles.kind}
                   aria-pressed={one === kind}
                   onClick={() => onKind(one)}
                 >
-                  <Typography variant="body3" className={styles.kindName}>
+                  <Typography
+                    component="span"
+                    variant="body3"
+                    color="inherit"
+                    className={styles.kindName}
+                  >
                     {SAID[one].name}
                   </Typography>
-                  <Typography variant="body4" className={styles.kindWhat}>
+                  <Typography
+                    component="span"
+                    variant="body4"
+                    color="inherit"
+                    className={styles.kindWhat}
+                  >
                     {SAID[one].what}
                   </Typography>
-                </button>
+                </MuiButton>
               </li>
             ))}
           </ul>
@@ -240,58 +249,37 @@ export const DescribePicture = ({
 
       {kind === 'surface' && (
         <>
-          <div className={styles.field}>
+          <div className={styles.field} aria-label="Which way it joins up">
             <Typography variant="body4">Does it join up?</Typography>
-            <ul className={styles.ways} aria-label="Which way it joins up">
-              {(['none', 'across', 'up', 'both'] as const).map(one => (
-                <li key={one} style={{display: 'contents'}}>
-                  <button
-                    type="button"
-                    className={
-                      one === ways
-                        ? `${styles.way} ${styles.wayChosen}`
-                        : styles.way
-                    }
-                    aria-pressed={one === ways}
-                    onClick={() => setWays(one)}
-                  >
-                    <Typography variant="body3" color="inherit">
-                      {WAYS_SAID[one].name}
-                    </Typography>
-                  </button>
-                </li>
-              ))}
-            </ul>
+            {/* The design system's segmented control, which is what a small
+                set of mutually exclusive answers is. It carries the pressed
+                state and the keyboard behaviour that four hand-rolled buttons
+                had to be given one at a time. */}
+            <SegmentedButtons
+              size="s"
+              selectedButtonValue={ways}
+              onChange={value => setWays(value as TileWays)}
+              buttons={(['none', 'across', 'up', 'both'] as const).map(one => ({
+                value: one,
+                label: WAYS_SAID[one].name,
+              }))}
+            />
             <Typography variant="body4" className={styles.wayWhat}>
               {WAYS_SAID[ways].what}
             </Typography>
           </div>
 
-          <div className={styles.field}>
+          <div className={styles.field} aria-label="How much of it is drawn">
             <Typography variant="body4">Is any of it see-through?</Typography>
-            <ul className={styles.ways} aria-label="How much of it is drawn">
-              {([false, true] as const).map(one => {
-                const said = THROUGH_SAID[one ? 'through' : 'solid'];
-                return (
-                  <li key={said.name} style={{display: 'contents'}}>
-                    <button
-                      type="button"
-                      className={
-                        one === through
-                          ? `${styles.way} ${styles.wayChosen}`
-                          : styles.way
-                      }
-                      aria-pressed={one === through}
-                      onClick={() => setThrough(one)}
-                    >
-                      <Typography variant="body3" color="inherit">
-                        {said.name}
-                      </Typography>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
+            <SegmentedButtons
+              size="s"
+              selectedButtonValue={through ? 'through' : 'solid'}
+              onChange={value => setThrough(value === 'through')}
+              buttons={(['solid', 'through'] as const).map(one => ({
+                value: one,
+                label: THROUGH_SAID[one].name,
+              }))}
+            />
             <Typography variant="body4" className={styles.wayWhat}>
               {THROUGH_SAID[through ? 'through' : 'solid'].what}
             </Typography>
@@ -318,33 +306,41 @@ export const DescribePicture = ({
       </label>
 
       <div className={styles.actions}>
-        <button
-          type="button"
+        <MuiButton
+          variant="outlined"
+          color="secondary"
           className={styles.draw}
           disabled={!prompt.trim() || drawingNow}
           onClick={() => void draw()}
         >
-          <Typography variant="body3">
+          <Typography component="span" variant="body3" color="inherit">
             {drawingNow ? 'Drawing…' : drawn ? 'Draw again' : 'Draw'}
           </Typography>
-        </button>
+        </MuiButton>
         {drawn && (
-          <button
-            type="button"
+          <MuiButton
+            variant="contained"
+            color="secondary"
             className={styles.keep}
             onClick={() => void keep()}
           >
-            <Typography variant="body3" color="inherit">
+            <Typography component="span" variant="body3" color="inherit">
               Keep this one
             </Typography>
-          </button>
+          </MuiButton>
         )}
         {onBack && (
-          <button type="button" className={styles.back} onClick={onBack}>
-            <Typography variant="body4" color="inherit">
+          <MuiButton
+            variant="text"
+            color="secondary"
+            size="small"
+            className={styles.back}
+            onClick={onBack}
+          >
+            <Typography component="span" variant="body4" color="inherit">
               Choose a picture instead
             </Typography>
-          </button>
+          </MuiButton>
         )}
       </div>
 

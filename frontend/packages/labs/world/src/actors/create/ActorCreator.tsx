@@ -58,10 +58,11 @@
 // leaves the picture in the project — which is the right leftover, being a
 // thing the learner asked for and can see.
 
-import {Typography} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import {useMemo, useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
+import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {AnimationThumb} from '../../animationEditor/AnimationThumb';
@@ -74,8 +75,11 @@ import type {
 } from '../../appearance/generate/imageGenerator';
 import type {ImageKind} from '../../appearance/generate/imagePrompts';
 import type {TileScale} from '../../appearance/generate/ScaleGrid';
-import {EnhancementRows, refusalOf} from '../enhance/EnhancementRows';
-import type {Enhancement, EnhanceTarget} from '../enhance/enhancements';
+import {
+  allAnswered,
+  EnhancementChecklist,
+} from '../enhance/EnhancementChecklist';
+import {enhancementsFor, type EnhanceTarget} from '../enhance/enhancements';
 
 import styles from './actorCreator.module.css';
 import type {ActorLook} from './actorLook';
@@ -320,8 +324,18 @@ export const ActorCreator = ({
    * stands. Nothing here is written; `onCreate` is the only thing that writes.
    */
   const [built, setBuilt] = useState<BuiltActor>();
-  const [chosen, setChosen] = useState<Enhancement | null>(null);
-  const [answer, setAnswer] = useState<string>();
+  /**
+   * The abilities ticked, in the order they were ticked, and the answers to
+   * the questions some of them ask.
+   *
+   * NOTHING IS APPLIED UNTIL `Create`. The step used to apply one per press of
+   * an `Add this` button, which is the same trap the drawing panel had and
+   * worse for being needed once PER ability: a press that is not the press you
+   * were going to make anyway is a press that gets forgotten
+   * (`enhance/EnhancementChecklist`).
+   */
+  const [picked, setPicked] = useState<readonly string[]>([]);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
 
   /**
    * The name to write, which is the typed one or the chosen thing's.
@@ -383,29 +397,29 @@ export const ActorCreator = ({
     name: chosenName,
   };
 
-  /** Whether the chosen row can be applied as it stands. */
-  const addable = Boolean(
-    chosen &&
-      built &&
-      target &&
-      !refusalOf(chosen, built.source, target, answer) &&
-      (!chosen.asks || answer !== undefined),
-  );
-
-  /** Give the actor being built the chosen ability, and stay for another. */
-  const add = () => {
-    if (!addable || !chosen || !built || !target) {
-      return;
+  /**
+   * The actor with every ticked ability given to it.
+   *
+   * Applied in the order they were ticked, which is the only order there is,
+   * and worked out at the last moment rather than kept: `Enhancement.apply` is
+   * a pure transform over a source, so a tick and an untick cost nothing but
+   * this fold (specs/ENHANCEMENTS.md).
+   */
+  const enhanced = (): MultiFileSource | undefined => {
+    if (!built || !target) {
+      return built?.source;
     }
-    setBuilt({
-      ...built,
-      source: chosen.apply(built.source, target, answer),
-    });
-    // Cleared, so the row the learner just pressed is not still pressed while
-    // it reads "Already has this" — and so the next press is a fresh choice.
-    setChosen(null);
-    setAnswer(undefined);
+    const offered = enhancementsFor(target);
+    return picked.reduce((source, id) => {
+      const one = offered.find(each => each.id === id);
+      return one ? one.apply(source, target, answers[id]) : source;
+    }, built.source);
   };
+
+  /** Whether everything ticked has the answer it needs — see `allAnswered`. */
+  const answered = target
+    ? allAnswered(picked, answers, enhancementsFor(target))
+    : true;
 
   /**
    * Write the drawn picture and answer the look that names it, or nothing when
@@ -468,22 +482,28 @@ export const ActorCreator = ({
             drawn,
           }),
         );
-        setChosen(null);
-        setAnswer(undefined);
+        // The ticks were about the actor that WAS. Walking back to rename it
+        // and forward again rebuilds it, and an ability ticked against the old
+        // one is an answer to a question no longer on screen.
+        setPicked([]);
+        setAnswers({});
       }
       setAt(step => step + 1);
       return;
     }
-    if (!built) {
+    // …with every ticked ability given to it, which is the only moment
+    // anything is applied.
+    const made = enhanced();
+    if (!made) {
       return;
     }
     setBusy(true);
     // Left up on failure rather than closed: the caller's complaint is on
     // screen by then (a name already taken, a write refused), and a wizard
     // that vanished would take the answers with it.
-    const made = await onCreate(built.source);
+    const done = await onCreate(made);
     setBusy(false);
-    if (made) {
+    if (done) {
       onCancel();
     }
   };
@@ -563,7 +583,7 @@ export const ActorCreator = ({
           : last
             ? 'Create'
             : 'Next',
-        disabled: !ready || busy,
+        disabled: !ready || busy || (last && !answered),
         onClick: () => void go(),
       }}
       secondaryButtonProps={{
@@ -581,16 +601,18 @@ export const ActorCreator = ({
               // walking through — and visible, because a learner who knows
               // what they want should not have to answer two more questions
               // with nothing to get there.
-              <button
-                type="button"
+              <MuiButton
+                variant="text"
+                color="secondary"
+                size="small"
                 className={styles.now}
                 disabled={!ready || busy}
                 onClick={() => void makeNow()}
               >
-                <Typography variant="body4" color="inherit">
+                <Typography component="span" variant="body4" color="inherit">
                   Create it now
                 </Typography>
-              </button>
+              </MuiButton>
             )}
           </div>
 
@@ -599,13 +621,11 @@ export const ActorCreator = ({
               <ul className={styles.doors}>
                 {DOORS.map(door => (
                   <li key={door.kind} style={{display: 'contents'}}>
-                    <button
-                      type="button"
-                      className={
-                        origin === door.kind
-                          ? `${styles.door} ${styles.doorChosen}`
-                          : styles.door
-                      }
+                    <MuiButton
+                      variant={origin === door.kind ? 'contained' : 'outlined'}
+                      color="secondary"
+                      fullWidth
+                      className={styles.door}
                       aria-pressed={origin === door.kind}
                       onClick={() => {
                         setOrigin(door.kind);
@@ -614,13 +634,23 @@ export const ActorCreator = ({
                         setSource(undefined);
                       }}
                     >
-                      <Typography variant="body3" className={styles.doorName}>
+                      <Typography
+                        component="span"
+                        variant="body3"
+                        color="inherit"
+                        className={styles.doorName}
+                      >
                         {door.name}
                       </Typography>
-                      <Typography variant="body4" className={styles.doorWhat}>
+                      <Typography
+                        component="span"
+                        variant="body4"
+                        color="inherit"
+                        className={styles.doorWhat}
+                      >
                         {door.what}
                       </Typography>
-                    </button>
+                    </MuiButton>
                   </li>
                 ))}
               </ul>
@@ -630,13 +660,12 @@ export const ActorCreator = ({
                   <ul className={styles.choices}>
                     {choices.map(choice => (
                       <li key={choice.value}>
-                        <button
-                          type="button"
-                          className={
-                            source === choice.value
-                              ? `${styles.choice} ${styles.choiceChosen}`
-                              : styles.choice
+                        <MuiButton
+                          variant={
+                            source === choice.value ? 'contained' : 'outlined'
                           }
+                          color="secondary"
+                          className={styles.choice}
                           aria-pressed={source === choice.value}
                           aria-label={choice.name}
                           title={choice.title}
@@ -655,12 +684,14 @@ export const ActorCreator = ({
                             )}
                           </span>
                           <Typography
+                            component="span"
                             variant="body4"
+                            color="inherit"
                             className={styles.choiceName}
                           >
                             {choice.name}
                           </Typography>
-                        </button>
+                        </MuiButton>
                       </li>
                     ))}
                   </ul>
@@ -675,20 +706,18 @@ export const ActorCreator = ({
               )}
 
               {origin !== undefined && (
-                <label className={styles.field}>
-                  <Typography variant="body4">Called</Typography>
-                  <input
-                    className={styles.name}
-                    value={name}
-                    placeholder={suggested || 'Chaser'}
-                    onChange={event => setName(event.target.value)}
-                  />
-                  {problem && (
-                    <Typography variant="body4" className={styles.problem}>
-                      {problem}
-                    </Typography>
-                  )}
-                </label>
+                // The design system's field, which carries its own label,
+                // its own complaint and its own error styling — all three of
+                // which this had hand-rolled beside a bare `input`.
+                <TextField
+                  name="actorName"
+                  label="Called"
+                  value={name}
+                  placeholder={suggested || 'Chaser'}
+                  errorMessage={problem}
+                  className={styles.field}
+                  onChange={event => setName(event.target.value)}
+                />
               )}
             </>
           )}
@@ -743,13 +772,10 @@ export const ActorCreator = ({
                     showing?.kind === 'sprite' && showing.value === sprite;
                   return (
                     <li key={`sprite:${sprite}`}>
-                      <button
-                        type="button"
-                        className={
-                          chosen
-                            ? `${styles.choice} ${styles.choiceChosen}`
-                            : styles.choice
-                        }
+                      <MuiButton
+                        variant={chosen ? 'contained' : 'outlined'}
+                        color="secondary"
+                        className={styles.choice}
                         aria-pressed={chosen}
                         aria-label={sprite}
                         title={sprite}
@@ -777,12 +803,14 @@ export const ActorCreator = ({
                           )}
                         </span>
                         <Typography
+                          component="span"
                           variant="body4"
+                          color="inherit"
                           className={styles.choiceName}
                         >
                           {sprite.replace(/\.[^.]+$/, '')}
                         </Typography>
-                      </button>
+                      </MuiButton>
                     </li>
                   );
                 })}
@@ -791,13 +819,10 @@ export const ActorCreator = ({
                     showing?.kind === 'animation' && showing.value === one.id;
                   return (
                     <li key={`animation:${one.id}`}>
-                      <button
-                        type="button"
-                        className={
-                          chosen
-                            ? `${styles.choice} ${styles.choiceChosen}`
-                            : styles.choice
-                        }
+                      <MuiButton
+                        variant={chosen ? 'contained' : 'outlined'}
+                        color="secondary"
+                        className={styles.choice}
                         aria-pressed={chosen}
                         aria-label={one.name}
                         title={one.name}
@@ -814,12 +839,14 @@ export const ActorCreator = ({
                           )}
                         </span>
                         <Typography
+                          component="span"
                           variant="body4"
+                          color="inherit"
                           className={styles.choiceName}
                         >
                           {one.name}
                         </Typography>
-                      </button>
+                      </MuiButton>
                     </li>
                   );
                 })}
@@ -840,44 +867,38 @@ export const ActorCreator = ({
                 // describing one takes the whole view: a prompt, a shape and a
                 // picture big enough to judge do not fit under this grid
                 // (`generate/DescribePicture`).
-                <button
-                  type="button"
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
                   className={styles.describe}
                   onClick={() => setDescribing(true)}
                 >
-                  <Typography variant="body3">
+                  <Typography component="span" variant="body3" color="inherit">
                     Or describe one to be drawn…
                   </Typography>
-                </button>
+                </MuiButton>
               )}
             </>
           )}
 
+          {/* NO BUTTON UNDER IT. Ticking is the whole act, and `Create` is
+              what applies them — which is the press a learner was going to
+              make anyway (`enhance/EnhancementChecklist`). */}
           {STEPS[at].id === 'abilities' && built && target && (
-            <>
-              <EnhancementRows
-                source={built.source}
-                target={target}
-                chosen={chosen}
-                answer={answer}
-                onChoose={enhancement => {
-                  setChosen(enhancement);
-                  setAnswer(undefined);
-                }}
-                onAnswer={setAnswer}
-              />
-              {/* ADD, and stay. The rows read the actor being built, so the
-                one just added says "Already has this" on the next render
-                with nothing keeping count (`enhance/EnhancementRows`). */}
-              <button
-                type="button"
-                className={styles.add}
-                disabled={!addable}
-                onClick={add}
-              >
-                <Typography variant="body3">Add this</Typography>
-              </button>
-            </>
+            <EnhancementChecklist
+              source={built.source}
+              target={target}
+              picked={picked}
+              onPick={(id, on) =>
+                setPicked(was =>
+                  on ? [...was, id] : was.filter(each => each !== id),
+                )
+              }
+              answers={answers}
+              onAnswer={(id, value) =>
+                setAnswers(was => ({...was, [id]: value}))
+              }
+            />
           )}
         </div>
       }

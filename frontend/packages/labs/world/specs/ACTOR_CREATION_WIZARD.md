@@ -179,12 +179,13 @@ side to side and cannot join top to bottom, and whether part of it is
 see-through, since a platform with vines hanging under it is material across
 the top and nothing below (`specs/IMAGE_GENERATION.md`).
 
-## Step 3 is the enhancement shelf
+## Step 3 is the enhancement shelf, read as a checklist
 
-Built. What it shares with the dialog is the ROW — a name, a sentence, what it
-brings, whether this actor can take it, and the question the one that asks one
-raises — and that is `enhance/EnhancementRows`, which both frames draw. What
-differs is the frame and what a press means.
+Built. What it shares with the dialog is the QUESTION — a name, a sentence,
+what it brings, whether this actor can take it, and the question the one that
+asks one raises — and each frame draws it its own way, because what a press
+means differs: `enhance/EnhancementRows` for the dialog's choose-one,
+`enhance/EnhancementChecklist` for this step's tick-many.
 
 Read as a step it wants to be BROAD. From an actor's own menu a list of ninety
 verbs is a wall; at the point of "what can this thing do" it is a menu of what
@@ -198,17 +199,36 @@ no work: `applied` is how a row already decides whether to say "already has
 this", and a copied or imported actor's traits are in the chain it reads.
 
 **It takes as many as the learner wants**, which is the one way this step is
-not the dialog as it stands. `EnhanceActorDialog` applies ONE and closes, which
-is right for what it is — "give this actor one more thing", asked from the
-actor's own row or from the wand on its `define actor`. Building an actor up is
-a different act: walking in and out of the shelf once per ability would make a
-Crawler three round trips.
+not the dialog. `EnhanceActorDialog` applies ONE and closes, which is right for
+what it is — "give this actor one more thing", asked from the actor's own row
+or from the wand on its `define actor`. Building an actor up is a different
+act: walking in and out of the shelf once per ability would make a Crawler
+three round trips.
 
-So the step applies and stays. `applied` is what makes that coherent with no
-bookkeeping — a row that has just been applied says "already has this" on the
-next render, because the trait it asks about is now in the actor's chain. The
-learner presses rows until they are done, and the step's own button says so
-rather than being an enhancement's button.
+**So it is a CHECKLIST, and it was not.** The first cut drew the dialog's rows
+with an `Add this` button under them, applying one per press, and that was two
+mistakes wearing one coat. The first is the one the drawing panel had: a press
+that is not the press a learner was going to make anyway is a press that gets
+forgotten — and this one had to be made once PER ability, which nothing on
+screen said. The second is that twelve rows of name, sentence and "also adds"
+is a wall rather than a list; it was reported as hard to find anything in.
+
+Ticking is the whole act now. Nothing is applied until `Create`, which is the
+press the learner was making regardless, and `Enhancement.apply` being a pure
+transform over a source means the queue costs nothing to hold and nothing to
+undo — a row can be un-ticked, which the applying version could not offer at
+all.
+
+**What the actor already has is ticked and locked**, with the reason beside it.
+Two of step one's three doors hand this step an actor that can already do
+things, and the honest way to show that is the same tick in the same column
+rather than a row greyed out for reasons of its own. The tick is not a claim
+that this step did it; `applied` is what answers, reading the actor's own
+chain, so nothing keeps count.
+
+**And the sentence is behind a press.** A name is enough to scan a list by; the
+description and what it brings are there for the row you are wondering about
+(`enhance/EnhancementChecklist`).
 
 **The one-shot dialog stays exactly where it is.** It is reached from the
 `define actor` block and from the actor's row, and both are about an actor that
