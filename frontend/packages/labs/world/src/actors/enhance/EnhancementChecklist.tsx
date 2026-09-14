@@ -134,7 +134,7 @@ export const EnhancementChecklist = ({
                     <MuiButton
                       size="small"
                       color="secondary"
-                      className={styles.about}
+                      className={styles.chevron}
                       aria-expanded={showing}
                       aria-controls={panel}
                       aria-label={`What ${enhancement.name} does`}

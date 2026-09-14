@@ -2,8 +2,14 @@
    (specs/ACTOR_CREATION_WIZARD.md) */
 
 /* One block per heading, with enough air between them to be read as blocks. */
+
+/* The full width of the step, which is the full width of the dialog: the
+   wizard settles that once for all three (`create/actorCreator.module.css`),
+   so a row opening wraps its sentence inside a width that is already decided
+   rather than asking for a wider dialog. */
 .groups {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 10px;
 }
@@ -41,9 +47,13 @@
   padding: 2px 0;
 }
 
+/* The square and its name, with room between them. The design system's own
+   gap is six pixels, which is right for a checkbox in a form and tight for one
+   whose label is the whole row. */
 .tick {
   flex: 1 1 auto;
   min-width: 0;
+  gap: 0.6rem;
 }
 
 .note {
@@ -51,8 +61,19 @@
   color: var(--text-neutral-secondary);
 }
 
-.about {
+/* SQUARE, which it was not: this shared a class with the panel below and so
+   wore the panel's padding, and a `Button` carries a 64-pixel minimum width of
+   its own besides. A chevron is one glyph and wants a box the size of one. */
+.chevron {
+  width: 1.75rem;
+  min-width: 1.75rem;
+  height: 1.75rem;
   flex: 0 0 auto;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.about {
   padding: 0 0 6px 2rem;
   color: var(--text-neutral-secondary);
 }
