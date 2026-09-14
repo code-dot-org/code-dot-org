@@ -67,9 +67,12 @@ import {chasesEnhancement} from './chases';
 import {climbArrowsEnhancement} from './climbArrows';
 import {collectsEnhancement} from './collects';
 import {dealsDamageEnhancement} from './dealsDamage';
+import {drivesEnhancement} from './drives';
+import {expiresEnhancement} from './expires';
 import {fallsEnhancement} from './falls';
 import {healthEnhancement} from './health';
 import {holdsThingsUpEnhancement} from './holdsThingsUp';
+import {jetpackEnhancement} from './jetpack';
 import {patrolsEnhancement} from './patrols';
 import {platformerControlsEnhancement} from './platformerControls';
 import {ridesEnhancement} from './rides';
@@ -82,6 +85,7 @@ import {
 } from './surfaces';
 import {topDownControlsEnhancement} from './topDownControls';
 import {typesOutTextEnhancement} from './typesOutText';
+import {wrapsAcrossEnhancement, wrapsDownEnhancement} from './wraps';
 
 /** What one enhancement is. */
 export interface Enhancement {
@@ -231,7 +235,16 @@ export const GROUPS: readonly EnhancementGroup[] = [
       // Two rows rather than a question under one: which kind of game this is
       // gets answered by picking, not by a sub-question.
       topDownControlsEnhancement,
+      // …and a third, which is neither: right TURNS rather than moves. Which
+      // of the three a learner wants is answered by what kind of game they are
+      // making, so they are three rows rather than one with a question.
+      drivesEnhancement,
       climbArrowsEnhancement,
+      jetpackEnhancement,
+      // …and what happens at the edge of the map, which is a fact about how a
+      // thing travels rather than about how it is steered.
+      wrapsAcrossEnhancement,
+      wrapsDownEnhancement,
     ],
   },
   {
@@ -268,6 +281,12 @@ export const GROUPS: readonly EnhancementGroup[] = [
     // (`fixtures/platformerSingle`).
     name: 'Being an enemy',
     members: [patrolsEnhancement, dealsDamageEnhancement, chasesEnhancement],
+  },
+  {
+    // Things that arrive and leave. One row so far; the spawner and the
+    // teleport pads belong here when they are built.
+    name: 'Coming and going',
+    members: [expiresEnhancement],
   },
   {
     // …and last, what the screen says about all of it. Both are the world's.
