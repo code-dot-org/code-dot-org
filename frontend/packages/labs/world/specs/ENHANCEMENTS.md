@@ -501,6 +501,16 @@ wants both; a wall wants only the second, and a cloud platform you jump up
 through wants only the first. The Ground the library ships elects exactly this
 pair.
 
+## How to write one
+
+This document is the design: what an enhancement is, which ideas earn a row,
+and why each of the built ones is shaped as it is. The PROCEDURE — the helpers
+to build a patch out of, the five shapes a row comes in, how to find the block
+types, what to shelve it under, and the mistakes that were made writing the
+ones that exist — is "Adding an enhancement" in
+[AGENTS.md](../AGENTS.md#adding-an-enhancement), beside the procedures for
+adding a rule and a stock actor.
+
 ## Testing one
 
 Two halves, and the second is the one that matters. The patch's arithmetic —

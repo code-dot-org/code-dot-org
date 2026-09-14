@@ -1,9 +1,10 @@
 # @code-dot-org/world-lab
 
-What this file adds to [README.md](./README.md) (what the lab is) and
-[specs/RULES.md](./specs/RULES.md) (what a rule is, as a design) is the two
-procedures that are easy to get wrong: adding a stock rule, and adding a
-scenario that plays one. Both were learned by doing them wrong first.
+What this file adds to [README.md](./README.md) (what the lab is) and the
+specs beside it (what each thing is, as a design) is the procedures that are
+easy to get wrong: adding a stock rule, a stock actor, an enhancement, and a
+scenario that plays one. Every one of them was learned by doing it wrong
+first.
 
 ## Adding a stock rule
 
@@ -120,6 +121,164 @@ deleting the dependency from the shelf entry and re-running it. Both halves of
 **Also: a generator only reaches the modules a world names.** A project that
 merely contains `coin.actor` never compiles the file, so a test needs a world
 with `add actor` in it.
+
+## Adding an enhancement
+
+An enhancement is a row on the "what can it do" step of the Actor Creator and
+on an actor's sparkles: one verb a learner would ask for by name, applied to an
+actor a project already has. [specs/ENHANCEMENTS.md](./specs/ENHANCEMENTS.md)
+says what one IS and which ideas earn a row; this is how to write one.
+
+The whole of it is a pure function. `apply(source, target, answer?)` takes a
+project and returns a project, `applied(...)` answers whether it has already
+been done, and nothing else is allowed to reach outside those arguments. The
+wizard folds every ticked row over one source in the order they were ticked, so
+a row must also tolerate arriving after somebody else's edits.
+
+Six steps.
+
+1. **Read the rule first, and look for the wiring done by hand.** The header
+   comment on `src/rules/stock/<name>.ts` says what the mechanic is and — for
+   the ones that are deliberately half a mechanic — what it leaves to the
+   project. Zapping owns how often a thing may fire and nothing about what it
+   fires, so a shooting row is mostly the handler the rule refuses to write.
+   Then grep `src/fixtures/` for the trait: a fixture that already wires it by
+   hand is the patch you are about to write, tested by a scenario. `shoots`
+   is `meteorsSingle`'s ship, offered rather than copied.
+
+2. **Dump the palette.** Every block type and socket name you are about to
+   write is generated, none of them is guessable, and a wrong one fails as
+   quietly as it fails loudly — see [Dump the palette before you write a
+   block](#dump-the-palette-before-you-write-a-block), which is the same
+   twenty-line probe a fixture needs. Two spellings that catch everyone: a
+   trait reference keeps the rule's spaces (`Screen Wrap#WrapsAcrossTrait`) and
+   a block type drops them (`world_set_SolidBodies_BouncinessProperty`).
+
+3. **Write `src/actors/enhance/<name>.ts`.** The `Enhancement` interface in
+   `enhancements.ts` documents every field; the part not written down there is
+   that you should reach for `./actorPatch` and `./patch` for all of it and
+   never take a knife to the JSON yourself:
+
+   | want                                        | use                               |
+   | ------------------------------------------- | --------------------------------- |
+   | which file holds this actor, and which root | `fileOf(target)`                  |
+   | the rules it needs, in the project          | `importRules(source, [names])`    |
+   | `use trait` rows, only the missing ones     | `electTraits(contents, root, …)`  |
+   | whether it is already worn                  | `wears(contents, trait, root)`    |
+   | who a hat is about                          | `subjectOf(target)`               |
+   | `this actor` / `any ⟨kind⟩` in a socket     | `me()` / `kindOf(actor)`          |
+   | rewrite one file, leave the rest alone      | `edit(source, id, contents => …)` |
+   | a hat, beside the definition                | `addRoot(contents, block)`        |
+   | a variable a block names                    | `withVariable(contents, v)`       |
+
+   Using them is also how a row works on an actor a WORLD defines for itself,
+   which has no file of its own: `fileOf` and `subjectOf` know about both kinds
+   of target and the body of a patch is the same either way.
+
+4. **Take one of the shapes.** Five, and the one you want is usually obvious
+   once the rule is read:
+
+   - **One trait, nothing to ask** — `wraps`, `expires`, `switches`. Import the
+     rule, elect the trait, done.
+   - **A trait and the handlers that make it do anything** — `jetpack`,
+     `platformerControls`. Flight is held down, so it is two key handlers and
+     not a trait; a row that elects the trait and stops writes blocks and
+     changes nothing.
+   - **One that has to be told who** — `asks: {label, options: actorChoices}`,
+     and the answer arrives as `apply`'s third argument. `hunts` is the shape:
+     a hat written on `when this actor is created`, and asked again it
+     REPOINTS the hat rather than writing a second one.
+   - **A pair, from both ends** — a floor is `Slippery` and somebody
+     `Stands on Surfaces`; a platform `Carries` and a passenger `Rides`. The
+     end that names the other writes into both files; the bare end takes
+     `offered` so it is not shown in a project where it would do nothing.
+     Gate it only when the row really is nonsense alone: either end of a
+     switch is a sensible place to start, so neither is gated.
+   - **A family** — three rows that differ in a trait and a sentence are a
+     factory (`huntRow`, `floorRow`, the local `switchRow`), because what a
+     reader needs is those two things side by side.
+
+5. **Shelve it.** Add it to a group in `GROUPS` in `enhancements.ts`, with a
+   comment saying why it sits where it does. Groups are assigned rather than
+   derived, and the list is read by a learner asking what their actor can do,
+   so the heading is the one they would look under — not the one the
+   implementation suggests.
+
+6. **Test it to the bar, which is two halves.** The patch's arithmetic is
+   ordinary unit work: the blocks it wrote, the rule it imported, that the
+   second application is a no-op, that it refuses what it should. Then PLAY it,
+   because whether the blocks it wrote are the right blocks is a question only
+   compiling and running answers. The jetpack row looked finished twice over
+   and did nothing either time; a played test is what said so, both times.
+
+   The harness is `compileProject` from `src/__tests__/support`, a room built
+   out of `add actor` blocks, and a loop that ticks:
+
+   ```ts
+   const play = (world: World, seconds: number, keys: string[] = []) => {
+     for (let frame = 0; frame < Math.round(seconds * 60); frame++) {
+       world.setInput(keys.map(keyName));
+       world.tick(1 / 60);
+     }
+   };
+   ```
+
+   Copy `place` / `roomOf` / `play` from the test next door — ten tests carry
+   an identical copy, and lifting them into `__tests__/support/` is a tidy
+   nobody has done yet. Two things about the room are worth keeping: the drop
+   comes first (a player placed a few pixels above a tile falls straight through it, so it
+   is `ground` at 160,300, `player` at 160,100 and a second and a half of play
+   before anything is asked), and a second room is the control. "The belt
+   carried it further than stone did" is a claim; "it ended up at x 214" is a
+   number that depends on when you looked.
+
+   Then, before proposing it: the new file under vitest, then
+
+   ```
+   yarn turbo run typecheck --filter=@code-dot-org/world-lab   # from frontend/
+   ./tools/hooks/pre-commit                                    # from the repo root
+   npx vitest run                                              # from this package
+   ```
+
+### What a row gets wrong
+
+Every one of these was found by writing one.
+
+**The trait alone does nothing.** Jetpack said this twice: first because flight
+is two handlers rather than a trait, and then because a key handler never
+reaches an actor that has not got `Input#TakesKeyboardInputTrait` — the blocks
+were written, looked right, and were never called. Any row that answers a key
+elects the keyboard too.
+
+**A hat is a root, not a row.** Append it with `addRoot`, beside the
+definition. A top-level block with a previous connection is grayed out by
+`DisableOrphansPlugin`, along with everything under it.
+
+**`applied` is asked before the answer exists.** The checklist ticks and locks
+a row that reports itself already applied, so an asking row must return false
+when `answer` is undefined — otherwise it is shown as done in a project where
+nothing was done. `apply` with no answer returns the source untouched.
+
+**Idempotence is asked, never assumed.** A learner who cannot see what changed
+does it again. Every edit checks for its own row first; `electTraits` already
+does, which is most of it.
+
+**A named block needs a declared variable.** `add actor … as ⟨shot⟩` and
+`say ⟨words⟩` both point at a variable in the workspace's own list, and written
+without the declaration Blockly loads a block naming a variable it has never
+heard of. `withVariable` is the fix and the typewriter is the scar.
+
+**A property that holds ONE actor is not a list.** `first actor of ⟨any ⟨X⟩⟩`
+where the socket takes one, the list itself where it takes many. Handed the
+wrong shape it still compiles, and the hunter stands still.
+
+**Both ends, when there are two.** A floor made slippery in a game where
+nothing stands on surfaces behaves exactly as it did. The row that names
+another actor writes into that actor's file as well.
+
+**`refuse` is given the project** for the same reason: what stops a floor
+taking a second surface is the first one, which is a fact about its file rather
+than about what kind of thing it is.
 
 ## Adding a scenario
 
