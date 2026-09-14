@@ -889,11 +889,26 @@ export const ActorCreator = ({
               source={built.source}
               target={target}
               picked={picked}
-              onPick={(id, on) =>
+              onPick={(id, on) => {
                 setPicked(was =>
                   on ? [...was, id] : was.filter(each => each !== id),
-                )
-              }
+                );
+                // TICKING ANSWERS THE QUESTION TOO, where there is one. The
+                // row's dropdown is then a thing to CHANGE rather than a gate
+                // between the learner and the ability, and the first option is
+                // the likeliest by the order the row offers them.
+                if (on && built && target) {
+                  const asks = enhancementsFor(target).find(
+                    one => one.id === id,
+                  )?.asks;
+                  const first = asks?.options(built.source, target)[0];
+                  if (first) {
+                    setAnswers(was =>
+                      was[id] === undefined ? {...was, [id]: first.value} : was,
+                    );
+                  }
+                }
+              }}
               answers={answers}
               onAnswer={(id, value) =>
                 setAnswers(was => ({...was, [id]: value}))

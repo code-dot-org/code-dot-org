@@ -355,6 +355,21 @@ describe('the abilities step', () => {
     fireEvent.click(onward());
   };
 
+  /**
+   * Open a group, which the shelf now starts with shut.
+   *
+   * Thirteen rows is past what the dialog holds without scrolling, so the
+   * groups fold themselves — the rule the checklist's own tests pin at fifteen
+   * with a stand-in shelf (`enhance/__tests__/EnhancementChecklist`). A test
+   * that wants a row has to open its heading, exactly as a learner does.
+   */
+  const openGroup = (name: string) => {
+    const heading = screen.getByRole('button', {name: new RegExp(name)});
+    if (heading.getAttribute('aria-expanded') === 'false') {
+      fireEvent.click(heading);
+    }
+  };
+
   it('reads the actor being made, not the project as it stands', () => {
     // The whole of what `build` is for: the rows ask what THIS actor has, and
     // it is not in the learner's project yet.
@@ -374,6 +389,7 @@ describe('the abilities step', () => {
     // ability, which nothing on screen said.
     toAbilities();
 
+    openGroup('Being an enemy');
     expect(screen.queryByRole('button', {name: 'Add this'})).toBeNull();
     expect(
       screen.getByRole('checkbox', {name: 'Walks a beat'}),
@@ -382,6 +398,7 @@ describe('the abilities step', () => {
 
   it('takes as many as you like, and applies them all at Create', () => {
     toAbilities();
+    openGroup('Being an enemy');
     for (const ability of ['Walks a beat', 'Hurts what it touches']) {
       fireEvent.click(screen.getByRole('checkbox', {name: ability}));
     }
@@ -402,6 +419,7 @@ describe('the abilities step', () => {
   it('lets one be taken back off again', () => {
     // Which the old step could not do at all: applied was applied.
     toAbilities();
+    openGroup('Being an enemy');
     const tick = () => screen.getByRole('checkbox', {name: 'Walks a beat'});
     fireEvent.click(tick());
     expect(tick()).toBeChecked();
@@ -460,6 +478,7 @@ describe('the abilities step', () => {
     pastOrigin('Create my own');
     fireEvent.click(onward());
 
+    openGroup('Being an enemy');
     const walks = screen.getByRole('checkbox', {name: 'Walks a beat'});
     expect(walks).toBeChecked();
     expect(walks).toBeDisabled();
@@ -502,35 +521,36 @@ describe('the abilities step', () => {
     expect(screen.getByRole('button', {name: /Being an enemy 3/})).toBeTruthy();
   });
 
-  it('folds a group away, and back', () => {
+  it('opens a group, and folds it away again', () => {
     toAbilities();
     const heading = () =>
       screen.getByRole('button', {name: /Gravity and ground/});
     const row = () => screen.queryByRole('checkbox', {name: 'Holds things up'});
 
+    // Out of the accessibility tree while shut, not merely out of sight: a
+    // folded row is not a control anything should be able to reach.
+    expect(heading()).toHaveAttribute('aria-expanded', 'false');
+    expect(row()).toBeNull();
+
+    fireEvent.click(heading());
     expect(heading()).toHaveAttribute('aria-expanded', 'true');
     expect(row()).toBeTruthy();
 
     fireEvent.click(heading());
-    expect(heading()).toHaveAttribute('aria-expanded', 'false');
-    // Out of the accessibility tree, not merely out of sight: a folded row is
-    // not a control anything should be able to reach.
     expect(row()).toBeNull();
-
-    fireEvent.click(heading());
-    expect(row()).toBeTruthy();
   });
 
-  it('starts open while the whole list can be seen at once', () => {
-    // A fold buys ROOM, and room is not short at ten rows: four headings over
-    // ten reads as a list. At thirty it is five walls, and then the headings
-    // are what the list is read by.
+  it('starts folded, the shelf being past what fits at once', () => {
+    // Thirteen rows over five headings. The rule itself — open while the whole
+    // list can be seen, shut above that — is pinned at both sizes with a
+    // stand-in shelf (`enhance/__tests__/EnhancementChecklist`); this is the
+    // real one, which crossed the line when the shelf grew.
     toAbilities();
 
     for (const group of ['Moving about', 'Being an enemy']) {
       expect(
         screen.getByRole('button', {name: new RegExp(group)}),
-      ).toHaveAttribute('aria-expanded', 'true');
+      ).toHaveAttribute('aria-expanded', 'false');
     }
   });
 
@@ -538,6 +558,7 @@ describe('the abilities step', () => {
     // Twelve rows of name, sentence and "also adds" is a wall; twelve names
     // is a list you can scan.
     toAbilities();
+    openGroup('Being an enemy');
     expect(screen.queryByText(/pacing left and right/)).toBeNull();
 
     fireEvent.click(

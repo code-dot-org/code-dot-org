@@ -39,9 +39,9 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {authoredName} from '../../blockly/projectModules';
-import {fileIdAt, filePath} from '../../runtime/projectFiles';
+import {fileIdAt} from '../../runtime/projectFiles';
 
+import {actorChoices} from './actorChoices';
 import {
   edit,
   electTraits,
@@ -52,52 +52,12 @@ import {
   subjectOf,
   wears,
 } from './actorPatch';
-import type {Enhancement, EnhanceChoice, EnhanceTarget} from './enhancements';
+import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, down, rootsOf, type BlockJson} from './patch';
 
 const CHASES = 'Steering#ChasesTrait';
 const CREATED_HAT = 'world_on_Space_CreatedEvent';
 const SET_QUARRY = 'world_set_Steering_ActorToChaseProperty';
-
-/**
- * The actors this one can be pointed at, as the field names them.
- *
- * ITSELF LEFT OUT, which is the one answer that is never meant: an actor told
- * to chase its own kind picks the nearest of them, which on the commonest
- * setup is the actor itself, and a hunter standing on its own spot is a bug
- * that looks like the trait not working.
- *
- * A world's own `define actor` blocks are offered only to an actor that world
- * defines, because `local:` ids are the world's and a `.actor` file cannot
- * name one (`blockly/localActors`).
- */
-const actorsFor = (
-  source: MultiFileSource,
-  target: EnhanceTarget,
-): EnhanceChoice[] => {
-  const local = target.block
-    ? rootsOf(
-        source.files[fileIdAt(source, `${target.path}.world`) ?? '']
-          ?.contents ?? '',
-      )
-        .filter(root => root.type === 'world_actor' && root.id)
-        .map(root => ({
-          value: `local:${String(root.id)}`,
-          name: String(root.fields?.NAME ?? root.id),
-        }))
-    : [];
-  const files = Object.keys(source.files)
-    .map(id => ({id, path: filePath(source, id) ?? ''}))
-    .filter(one => one.path.endsWith('.actor'))
-    .map(one => ({
-      value: one.path.replace(/\.actor$/, ''),
-      name:
-        authoredName(source.files[one.id].contents ?? '') ??
-        (one.path.split('/').pop() ?? '').replace(/\.actor$/, ''),
-    }));
-  const self = target.block ? `local:${target.block}` : target.path;
-  return [...local, ...files].filter(choice => choice.value !== self);
-};
 
 /** `first actor of ⟨any ⟨kind⟩⟩` — the property holds one, not a list. */
 const firstOf = (actor: string) => ({
@@ -181,7 +141,7 @@ export const chasesEnhancement: Enhancement = {
   brings: ['Chases', 'a line saying who'],
   asks: {
     label: 'Chasing',
-    options: actorsFor,
+    options: actorChoices,
   },
   applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
     const {path, root} = fileOf(target);

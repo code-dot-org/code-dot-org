@@ -26,8 +26,8 @@ import {Button as MuiButton, Typography} from '@mui/material';
 import {useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import styles from './enhancementChecklist.module.css';
@@ -180,101 +180,110 @@ export const EnhancementChecklist = ({
               className={styles.list}
               hidden={folded}
             >
-              {group.members.map(enhancement => {
-                const already = alreadyHas(enhancement, source, target);
-                const refusal = enhancement.refuse?.(target);
-                const locked = already || Boolean(refusal);
-                const ticked = already || picked.includes(enhancement.id);
-                const showing = open.includes(enhancement.id);
-                const panel = `${enhancement.id}-about`;
-                return (
-                  <li key={enhancement.id} className={styles.row}>
-                    <div className={styles.line}>
-                      <Checkbox
-                        name={enhancement.id}
-                        label={enhancement.name}
-                        checked={ticked}
-                        disabled={locked}
-                        size="s"
-                        className={styles.tick}
-                        onChange={event =>
-                          onPick(enhancement.id, event.target.checked)
-                        }
-                      />
-                      {already && (
-                        <Typography variant="body4" className={styles.note}>
-                          already
-                        </Typography>
-                      )}
-                      {refusal && (
-                        <Typography variant="body4" className={styles.note}>
-                          {refusal}
-                        </Typography>
-                      )}
-                      <MuiButton
-                        size="small"
-                        color="secondary"
-                        className={styles.chevron}
-                        aria-expanded={showing}
-                        aria-controls={panel}
-                        aria-label={`What ${enhancement.name} does`}
-                        onClick={() =>
-                          setOpen(was =>
-                            showing
-                              ? was.filter(id => id !== enhancement.id)
-                              : [...was, enhancement.id],
-                          )
-                        }
-                      >
-                        <FontAwesomeV6Icon
-                          iconName={showing ? 'chevron-up' : 'chevron-down'}
-                          iconStyle="solid"
+              {group.members
+                .filter(one => one.offered?.(source, target) ?? true)
+                .map(enhancement => {
+                  const already = alreadyHas(enhancement, source, target);
+                  const refusal = enhancement.refuse?.(target);
+                  const locked = already || Boolean(refusal);
+                  const ticked = already || picked.includes(enhancement.id);
+                  const showing = open.includes(enhancement.id);
+                  const panel = `${enhancement.id}-about`;
+                  return (
+                    <li key={enhancement.id} className={styles.row}>
+                      <div className={styles.line}>
+                        <Checkbox
+                          name={enhancement.id}
+                          label={enhancement.name}
+                          checked={ticked}
+                          disabled={locked}
+                          size="s"
+                          className={styles.tick}
+                          onChange={event =>
+                            onPick(enhancement.id, event.target.checked)
+                          }
                         />
-                      </MuiButton>
-                    </div>
+                        {already && (
+                          <Typography variant="body4" className={styles.note}>
+                            already
+                          </Typography>
+                        )}
+                        {refusal && (
+                          <Typography variant="body4" className={styles.note}>
+                            {refusal}
+                          </Typography>
+                        )}
+                        <MuiButton
+                          size="small"
+                          color="secondary"
+                          className={styles.chevron}
+                          aria-expanded={showing}
+                          aria-controls={panel}
+                          aria-label={`What ${enhancement.name} does`}
+                          onClick={() =>
+                            setOpen(was =>
+                              showing
+                                ? was.filter(id => id !== enhancement.id)
+                                : [...was, enhancement.id],
+                            )
+                          }
+                        >
+                          <FontAwesomeV6Icon
+                            iconName={showing ? 'chevron-up' : 'chevron-down'}
+                            iconStyle="solid"
+                          />
+                        </MuiButton>
+                      </div>
 
-                    {showing && (
-                      <div id={panel} className={styles.about}>
-                        <Typography variant="body4">
-                          {enhancement.description}
-                        </Typography>
-                        {/* What lands in the project. The same promise the import
+                      {showing && (
+                        <div id={panel} className={styles.about}>
+                          <Typography variant="body4">
+                            {enhancement.description}
+                          </Typography>
+                          {/* What lands in the project. The same promise the import
                     dialogs make, and it matters more here: this one writes
                     into files the learner already has. */}
-                        <Typography variant="body4" className={styles.note}>
-                          Also adds: {enhancement.brings.join(', ')}
-                        </Typography>
-                      </div>
-                    )}
-
-                    {ticked && !already && enhancement.asks && (
-                      <div className={styles.answers}>
-                        <Typography variant="body4">
-                          {enhancement.asks.label}:
-                        </Typography>
-                        {enhancement.asks.options(source, target).length ===
-                        0 ? (
-                          <Typography variant="body4">
-                            (no actors yet)
+                          <Typography variant="body4" className={styles.note}>
+                            Also adds: {enhancement.brings.join(', ')}
                           </Typography>
-                        ) : (
-                          <SegmentedButtons
-                            size="xs"
-                            selectedButtonValue={answers[enhancement.id] ?? ''}
-                            onChange={value => onAnswer(enhancement.id, value)}
-                            buttons={enhancement.asks
-                              .options(source, target)
-                              .map(choice => ({
-                                value: choice.value,
-                                label: choice.name,
-                              }))}
-                          />
-                        )}
-                      </div>
-                    )}
-                  </li>
-                );
-              })}
+                        </div>
+                      )}
+
+                      {ticked && !already && enhancement.asks && (
+                        <div className={styles.answers}>
+                          {enhancement.asks.options(source, target).length ===
+                          0 ? (
+                            <Typography variant="body4">
+                              (no actors yet)
+                            </Typography>
+                          ) : (
+                            // A DROPDOWN RATHER THAN A ROW OF BUTTONS, because
+                            // what it lists is the project's actors and a
+                            // project may hold thirty. The answer is defaulted
+                            // the moment the row is ticked, so this is a thing
+                            // to CHANGE rather than a question standing between
+                            // the learner and the ability.
+                            <SimpleDropdown
+                              name={`${enhancement.id}-answer`}
+                              size="s"
+                              labelText={enhancement.asks.label}
+                              selectedValue={answers[enhancement.id] ?? ''}
+                              onChange={event =>
+                                onAnswer(enhancement.id, event.target.value)
+                              }
+                              items={enhancement.asks
+                                .options(source, target)
+                                .map(choice => ({
+                                  value: choice.value,
+                                  text: choice.name,
+                                }))}
+                            />
+                          )}
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
             </ul>
           </section>
         );

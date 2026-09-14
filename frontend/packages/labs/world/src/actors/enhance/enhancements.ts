@@ -62,6 +62,7 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {cameraFollowEnhancement} from './cameraFollow';
+import {carriesEnhancement} from './carries';
 import {chasesEnhancement} from './chases';
 import {climbArrowsEnhancement} from './climbArrows';
 import {collectsEnhancement} from './collects';
@@ -71,7 +72,9 @@ import {healthEnhancement} from './health';
 import {holdsThingsUpEnhancement} from './holdsThingsUp';
 import {patrolsEnhancement} from './patrols';
 import {platformerControlsEnhancement} from './platformerControls';
+import {ridesEnhancement} from './rides';
 import {scoreboardEnhancement} from './scoreboard';
+import {topDownControlsEnhancement} from './topDownControls';
 import {typesOutTextEnhancement} from './typesOutText';
 
 /** What one enhancement is. */
@@ -111,6 +114,20 @@ export interface Enhancement {
    * off the world it is being added to. The shelf asks, under the row.
    */
   asks?: EnhanceQuestion;
+  /**
+   * Whether this row is worth showing at all, given what the project holds.
+   *
+   * THE OTHER END OF A PAIR, which is the only thing that needs it. Some
+   * abilities take two actors: a platform `Carries` and its passenger `Rides`,
+   * a floor is `Slippery` and a walker `Stands on Surfaces`. Either end can be
+   * the one being made, so each gets a row — but the passenger's row is
+   * nonsense in a project with nothing that carries, and a shelf that offered
+   * it would be offering an ability that does nothing and says nothing about
+   * why.
+   *
+   * Absent means always, which is every row that stands on its own.
+   */
+  offered?(source: MultiFileSource, target: EnhanceTarget): boolean;
   /** Whether the target already has it, which makes enhancing a no-op. */
   applied(
     source: MultiFileSource,
@@ -196,13 +213,29 @@ export const GROUPS: readonly EnhancementGroup[] = [
     // First, because they are what make an actor a CHARACTER rather than
     // scenery, and everything under them is something a character then does.
     name: 'Moving about',
-    members: [platformerControlsEnhancement, climbArrowsEnhancement],
+    members: [
+      platformerControlsEnhancement,
+      // …and the same rule read the other way, for a game seen from above.
+      // Two rows rather than a question under one: which kind of game this is
+      // gets answered by picking, not by a sub-question.
+      topDownControlsEnhancement,
+      climbArrowsEnhancement,
+    ],
   },
   {
     // One sentence from two ends: a thing that falls needs a thing to land on,
     // and a floor in a game where nothing falls is a picture.
     name: 'Gravity and ground',
-    members: [fallsEnhancement, holdsThingsUpEnhancement],
+    members: [
+      fallsEnhancement,
+      holdsThingsUpEnhancement,
+      // …and the same ability from both ends. Either can be the one being
+      // made: a learner building the lift names who rides it, and one building
+      // the player in a project that already has a lift takes the other row —
+      // which is offered only when there is something to ride.
+      carriesEnhancement,
+      ridesEnhancement,
+    ],
   },
   {
     name: 'Health, scoring and speech',
