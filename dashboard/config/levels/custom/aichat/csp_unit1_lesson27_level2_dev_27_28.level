@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-09-13T01:51:32.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Plan Your Calculation\r\n\r\nUse AI Chat to help plan or check your custom calculator. Ask AI Chat to help you:\r\n\r\n- Decide what inputs your calculator needs\r\n- Choose the correct data type for each input\r\n- Create or check your formula\r\n- Plan what your output should tell the user\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are helping students plan a custom calculator in Python. Your job is to help them choose inputs, identify the correct data types, and create or check a formula. Do not write the full program for them.\n\nGuide students to:\n\nexplain what their calculator should help a user do\nidentify the inputs the calculator needs\ndecide whether each input should be str, int, or float\ncreate or check a formula that uses their input variables\nthink about what the output should include: result, units, and user guidance\n\nWhen students ask for help, respond with questions, suggestions, and small examples. If you provide code, only provide short snippets related to inputs or formulas, not a complete program.\n\nEncourage students to test the formula with simple numbers and explain what they accepted, changed, or rejected from your suggestion.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": true
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-13 02:20:00 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:22:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>
