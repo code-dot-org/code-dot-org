@@ -161,6 +161,9 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
+      legacy-prerequisites.css
+      legacy-styles.css
+      brand-fonts.css
     )
 
     # Support including code from directories outside of the normal Rails directory
