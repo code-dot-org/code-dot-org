@@ -26,6 +26,10 @@ Feature: GDPR Dialog - data transfer agreement
     And I am on "http://studio.code.org/home"
     Then element ".ui-test-gdpr-dialog" is not visible
 
+  # TODO: Consider restoring this scenario after we decide how to handle
+  # environment-specific links to /privacy. See Slack thread:
+  # https://codeai.slack.com/archives/C0T0PNTM3/p1789149938342369
+  @skip
   Scenario: GDPR Dialog privacy link works from dashboard
     Given I am in Europe
     And I am a teacher

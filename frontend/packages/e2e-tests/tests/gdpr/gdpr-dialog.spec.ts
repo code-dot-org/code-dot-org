@@ -103,7 +103,10 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
    * "GDPR Dialog privacy link works from dashboard"
    * @no_mobile
    */
-  test('GDPR Dialog privacy link works from dashboard', async ({page}) => {
+  // TODO: Consider restoring this assertion after we decide how to handle
+  // environment-specific links to /privacy. See Slack thread:
+  // https://codeai.slack.com/archives/C0T0PNTM3/p1789149938342369
+  test.skip('GDPR Dialog privacy link works from dashboard', async ({page}) => {
     const home = new HomePage(page);
     const gdpr = home.gdprDialog;
 
