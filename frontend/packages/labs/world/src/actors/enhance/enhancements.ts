@@ -79,6 +79,7 @@ import {patrolsEnhancement} from './patrols';
 import {platformerControlsEnhancement} from './platformerControls';
 import {ridesEnhancement} from './rides';
 import {scoreboardEnhancement} from './scoreboard';
+import {shootsEnhancement} from './shoots';
 import {
   conveysEnhancement,
   slipperyEnhancement,
@@ -304,6 +305,11 @@ export const GROUPS: readonly EnhancementGroup[] = [
       // to its beat, and one that ignores the ground entirely.
       prowlsEnhancement,
       flapsEnhancement,
+      // …and the one row here a hero takes as often as a monster. It is
+      // shelved with the fighting because that is what it is for, and because
+      // the alternative is a learner hunting for "how do I shoot" under
+      // headings about arriving and moving.
+      shootsEnhancement,
     ],
   },
   {
