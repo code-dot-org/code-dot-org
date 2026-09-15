@@ -22,7 +22,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def ask(question):\n    while True:\n        answer = input(f\"{question} (yes, no): \")\n        if answer.lower() == \"yes\":\n            return True\n        elif answer.lower() == \"no\":\n            return False\n        else:\n            print(\"Try again!\")\n\n\ndef main():\n    if ask(\"Are you at a traffic light?\"):\n        if ask(\"Is the traffic light red?\"):\n            print(\"Stop!\")\n        else:\n            print(\"Go!\")\n    else:\n        print(\"Go!\")\n\n\nmain()",
+          "contents": "def ask(question):\n  while True:\n    answer = input(f\"{question} (yes, no): \")\n    if answer.lower() == \"yes\":\n      return True\n    elif answer.lower() == \"no\":\n      return False\n    else:\n      print(\"Try again!\")\n\n\ndef main():\n  if ask(\"Are you at a traffic light?\"):\n    if ask(\"Is the traffic light red?\"):\n      print(\"Stop!\")\n    else:\n      print(\"Go!\")\n  else:\n    print(\"Go!\")\n\n\nmain()",
           "folderId": "0",
           "active": true
         }
@@ -33,9 +33,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrHcApxkW2gh233\nERw4OAaI1JP3t93mXiDj4jFX0/yoamPFzomamxFi9pEqjy6SUTSBT5tpfCOe\nO27+aglKltQJNX75I6U/2eSyH1fnWPZZ3e34iDy1tun9f1k0FYN9AxMDomS+\nTvwRWqQI1gQmbbBwG9KThwCD8JIg3xkkqLujK+75p8OwONRvXjUU90zUxBxz\nwR8wFXt/twKkcvboOj1XWICJ/uGgfsweKH6+1ObqYGlFozAi2wVUsOseSkAs\nR6DWlg/yGUavDC6hPRZlrwC1UnhaDxOn2rdaIggXV6CnJFVkKbJQCOXaENLz\neowtGLX0DhiFc1ykocDhP/HhBBKCXEN13MdPIwKmBbfVdLkbsbSrjcwnf/hp\nOcbxVXdtcTpQUNOs+VAil2fJFWNT3SF6p1a5XZG+FUPOONqqLrdNCZzaaC/y\nvjat3DRTPHMjAjGvhRFbX0M5EFGXouGz2DmZVgkG1czKniAiU0PkaBnPP7Hq\nl4RjQ1Ria22RcuLQOZFC1DZBDHBm2EO3U6kGhte3fTqsf8czromKkI8eEd77\nHgrkL2zzEaEUJuuAtKLV7eIIiU1j3Ym2caB7zUAcOiv8mXDBZRgs7b6SmcGG\n8Qhd+me+AAWQQ+nVElNAd99SF3SjZQbrif56pae3EnRz7SE/uRzQkYTQzbwU\nAgY1FUGnGK6ntxPn4kH55AVI1FbzI7HBCnXLKRYoM00h1W2SRDp9DF4zW0ow\nf4qIFrCnCFspYDU33AuFyuWcPW7aOaJQ22ji0h/3qK9HJ9sATadIFLJU3KWp\nNLfoPT7HSHdwrgDeoIx9RHspaCvkNruoLSIa9xzcjDkEyc71Rm4X8iRE86iF\nFMJME0lQzAnlJmdsL5BnqQ==\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpkewW4e5JrzhNy\nBpW7yAcvGZr6tHD9h7S0JTI1JBl1Ajas8L2vUXuvRSOOYMT5cNJFzMrsITEN\nDyGzaw1wo94l2nf26ah7wWjTsCxwI1vK4QJHpoduAn8Zat2lw9Nb2wdjru4T\nixXLXKBEG2xh60Yjbt6hbvkavi1XikktyiPXui2yxR0SacMTQQHUPGZazpWU\n761sxaJlMegQJzYDdTE+GO41MG8QFJBAhnifaImEepib1f1n2g4qrHIBkl/4\ndY0qc5XYg6XfRDuv63wslD4seLzocmy8KtqzbpOnSzlYAu6FSWxhLYm5OVw5\nLPKqyapUauz3IYoudHvy/gDkpc6nb/2XCSpAC80A8yyY+dh/qY7OPfVpS5u+\np3oaD22csy/1Pm0LpLgeFSoV10Lz3fg67DZP78vlA2HEkZHm6XivYv5mMKyA\nJEVuhbYvHhtuFFl/aeZDWpzxD0QfHRrDoYA+FMH/PsjxwmTO/DcJ58SQc1KQ\nooK977Vr/SJhj1YeR9zTIxmWMOTgU+2ooMjP9o19D0dl417E4pC6R1YSAbmp\nnGAs34eciNtOleBdDn5iXdn+SlQ/+pREbg8oSTboJXYwxk5PHkTtYoW3FMr8\nB1/MVBkvKVuY4a26TJmsBtvjra22Wl/9v/1sarZO1vZGRXmKN0Z0IkMr+OvU\nMRBjKtLGnlYB5J2ouBMpv5rizWfeHyWnVDHyMyw26gtkhJEJW9JFXJaouKGZ\nqEqP9V6ls5PWHLLmJ/hTQn3HrL4YFu67e4o=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 03:15:59 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:28:49 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 03:15:59 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:28:49 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:21:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:21:20 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

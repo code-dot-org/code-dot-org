@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-postassessment-q12-2026'
+
+wrong 'Mothers who work during the day.'
+wrong 'Mothers involved in the school.'
+wrong 'Fathers involved in the school who have internet.'
+right 'Mothers involved in the school who have internet.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A researcher studies parent-child care-giving relationships. They email a survey to the "Moms of Chippewa Elementary" group. Which **best** describes the sample the researcher will actually collect?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Collecting Data
+MARKDOWN

@@ -12,16 +12,28 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
+
+type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  backpackApi: BackpackClientApi;
+  backpackApi: SaveToBackpackApi;
   file: ProjectFile;
   sendLab2AnalyticsEvent: (
     eventName: string,
     payload?: Record<string, string>
   ) => void;
 };
+
+// Check if the provided API is a UnifiedBackpackClientApi.
+// We check against the existence of getFileLists so we can use a
+// mocked UnifiedBackpackClientApi in tests.
+const isUnifiedApi = (
+  api: SaveToBackpackApi
+): api is UnifiedBackpackClientApi =>
+  typeof (api as UnifiedBackpackClientApi).getFileLists === 'function';
 
 export const openSaveToBackpackPrompt = async ({
   dialogControl,
@@ -42,82 +54,112 @@ export const openSaveToBackpackPrompt = async ({
         .getMetricsReporter()
         .logError(errorMessage, error);
     };
-  backpackApi.getFileList(
+
+  const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
+
+  let filenamesByAppType: FilenamesByAppType;
+  try {
+    filenamesByAppType = isUnifiedApi(backpackApi)
+      ? await backpackApi.getFileLists()
+      : {[backpackApi.appType]: await backpackApi.getFileList()};
+  } catch (error) {
     handleError(
-      codebridgeI18n.importFromBackpackTitle(),
+      codebridgeI18n.saveToBackpackTitle(),
       `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`,
       'Backpack file list fetch error'
-    ),
-    async (filenames: string[]) => {
-      // Check if filename is a duplicate of a saved file in backpack.
-      const isDuplicateFileName = filenames.includes(file.name);
+    )(error as Error);
+    return;
+  }
 
-      const fileNameCopy = uniqueFileName(file.name, filenames);
+  const existingFilenames = Object.values(filenamesByAppType).flat();
+  const isDuplicateFileName = existingFilenames.includes(file.name);
+  const newFileName = uniqueFileName(file.name, existingFilenames);
 
-      const dialog = isDuplicateFileName
-        ? {
-            type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpackTitle(),
-            message: codebridgeI18n.saveToBackpackDuplicateMessage({
-              newFileName: fileNameCopy,
-            }),
-            confirmText: codebridgeI18n.replace(),
-            neutralText: codebridgeI18n.renameFile(),
-          }
-        : {
-            type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpackTitle(),
-            message: codebridgeI18n.saveToBackpackMessage({
-              fileName: file.name,
-            }),
-            confirmText: codebridgeI18n.saveToBackpackTitle(),
-          };
-      const results = await dialogControl?.showDialog(
-        dialog as TypedDialogProps
-      );
-
-      if (results.type === 'cancel') {
-        return;
+  const dialog = isDuplicateFileName
+    ? {
+        type: DialogType.GenericConfirmation,
+        title: codebridgeI18n.saveToBackpackTitle(),
+        message: codebridgeI18n.saveToBackpackDuplicateMessage({
+          newFileName: newFileName,
+        }),
+        confirmText: codebridgeI18n.replace(),
+        neutralText: codebridgeI18n.renameFile(),
       }
+    : {
+        type: DialogType.GenericConfirmation,
+        title: codebridgeI18n.saveToBackpackTitle(),
+        message: codebridgeI18n.saveToBackpackMessage({
+          fileName: file.name,
+        }),
+        confirmText: codebridgeI18n.saveToBackpackTitle(),
+      };
+  const results = await dialogControl?.showDialog(dialog as TypedDialogProps);
 
-      const selectedFileName =
-        results.type === 'confirm' ? file.name : fileNameCopy;
+  if (results.type === 'cancel') {
+    return;
+  }
 
-      let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
-      if (isDuplicateFileName) {
-        successMetric =
-          selectedFileName === file.name
-            ? EVENTS.SAVE_TO_BACKPACK_REPLACE
-            : EVENTS.SAVE_TO_BACKPACK_RENAME;
-      }
-      const successCallback = () =>
-        sendLab2AnalyticsEvent(successMetric, {
-          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
-        });
+  // Confirm means the user is replacing the existing file; neutral means they are using
+  // the suggested rename.
+  const selectedFileName = results.type === 'confirm' ? file.name : newFileName;
 
-      const errorCallback = handleError(
-        codebridgeI18n.saveToBackpackTitle(),
-        codebridgeI18n.saveToBackpackError({selectedFileName}) +
-          ' ' +
-          codebridgeI18n.closeWindowTryAgain(),
-        'Save to backpack error'
-      );
+  let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
+  if (isDuplicateFileName) {
+    successMetric =
+      selectedFileName === file.name
+        ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+        : EVENTS.SAVE_TO_BACKPACK_RENAME;
+  }
 
-      if (file.url) {
-        backpackApi.saveCodebridgeFileFromUrl(
-          selectedFileName,
-          file.url,
-          errorCallback,
-          successCallback
-        );
-      } else {
-        backpackApi.saveCodebridgeFile(
-          selectedFileName,
-          file.contents,
-          errorCallback,
-          successCallback
-        );
-      }
-    }
+  const successCallback = () =>
+    sendLab2AnalyticsEvent(successMetric, {
+      fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+    });
+
+  const errorCallback = handleError(
+    codebridgeI18n.saveToBackpackTitle(),
+    codebridgeI18n.saveToBackpackError({selectedFileName}) +
+      ' ' +
+      codebridgeI18n.closeWindowTryAgain(),
+    'Save to backpack error'
   );
+
+  const saved = await new Promise<boolean>(resolve => {
+    const onSuccess = () => {
+      successCallback();
+      resolve(true);
+    };
+    const onError = (error?: Error) => {
+      errorCallback(error);
+      resolve(false);
+    };
+    if (file.url) {
+      backpackApi.saveFileFromUrl(
+        selectedFileName,
+        file.url,
+        onError,
+        onSuccess
+      );
+    } else {
+      backpackApi.saveFile(selectedFileName, file.contents, onError, onSuccess);
+    }
+  });
+
+  const replacedLegacyCopy =
+    saved && isDuplicateFileName && selectedFileName === file.name;
+  if (!unifiedApi || !replacedLegacyCopy) {
+    return;
+  }
+
+  // Writes go to the universal backpack, so a name replaced in a legacy backpack is
+  // still there. Deleting it after the save keeps a failed save non-destructive.
+  try {
+    await unifiedApi.deleteFromLegacyBackpacks(file.name, filenamesByAppType);
+  } catch (error) {
+    handleError(
+      codebridgeI18n.saveToBackpackTitle(),
+      "We saved your new file, but couldn't delete your old one. You can retry the delete in the Backpack.",
+      'Backpack duplicate delete error'
+    )(error as Error);
+  }
 };

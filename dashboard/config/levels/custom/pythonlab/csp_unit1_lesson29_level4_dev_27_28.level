@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-02T21:27:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Effects Designer\r\n\r\nMake the scene use multiple random effects each time it runs.\r\n\r\n1. Review the code and ask AI Tutor how the different commands work.\r\n2. Choose at least two values to randomize, such as color, position, or sound.\r\n3. Use `randint()` to store each random value in a variable.\r\n4. Update the Theater commands to use your variables.\r\n5. Run the program several times and observe what changes.\r\n\r\n---\r\n**Range Reminders**\r\n* Color values: 0 to 255\r\n* Position values: 0 to 400\r\n* Music notes: 48 to 84",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from theater import *\nfrom random import randint\n\n# Firework values\nred = 255\ngreen = 0\nblue = 255\n\nx = 200\ny = 115\nsize = 35\n\nnote = 72\n\n# Night sky\nset_fill_color(\"black\")\ndraw_rectangle(0, 0, 400, 400)\n\n# Moon glow\nset_fill_color(\"indigo\")\ndraw_ellipse(285, 35, 85, 85)\n\nset_fill_color(\"ivory\")\ndraw_ellipse(305, 50, 50, 50)\n\n# Background stars\nset_fill_color(\"white\")\ndraw_ellipse(35, 45, 4, 4)\ndraw_ellipse(95, 100, 3, 3)\ndraw_ellipse(165, 55, 4, 4)\ndraw_ellipse(250, 85, 3, 3)\ndraw_ellipse(365, 130, 4, 4)\n\n# Main firework\nset_stroke_color(Color(red, green, blue))\nset_stroke_width(3)\ndraw_line(x, y - size, x, y + size)\ndraw_line(x - size, y, x + size, y)\ndraw_line(x - 25, y - 25, x + 25, y + 25)\ndraw_line(x + 25, y - 25, x - 25, y + 25)\n\nset_fill_color(Color(red, green, blue))\ndraw_ellipse(x - 6, y - 6, 12, 12)\n\n# Smaller fireworks\nset_stroke_color(\"aqua\")\nset_stroke_width(2)\ndraw_line(95, 130, 95, 170)\ndraw_line(75, 150, 115, 150)\ndraw_line(82, 137, 108, 163)\ndraw_line(108, 137, 82, 163)\n\nset_stroke_color(\"gold\")\ndraw_line(310, 155, 310, 195)\ndraw_line(290, 175, 330, 175)\ndraw_line(297, 162, 323, 188)\ndraw_line(323, 162, 297, 188)\n\n# Skyline\nset_fill_color(\"gray\")\ndraw_rectangle(0, 300, 55, 100)\ndraw_rectangle(55, 270, 55, 130)\ndraw_rectangle(110, 315, 45, 85)\ndraw_rectangle(155, 250, 70, 150)\ndraw_rectangle(225, 285, 45, 115)\ndraw_rectangle(270, 235, 75, 165)\ndraw_rectangle(345, 305, 55, 95)\n\n# Rooftop details\nset_fill_color(\"silver\")\ndraw_rectangle(65, 260, 35, 10)\ndraw_rectangle(170, 240, 40, 10)\ndraw_rectangle(285, 225, 45, 10)\n\n# Windows\nset_fill_color(\"gold\")\ndraw_rectangle(20, 320, 8, 12)\ndraw_rectangle(75, 295, 8, 12)\ndraw_rectangle(130, 340, 8, 12)\ndraw_rectangle(180, 275, 8, 12)\ndraw_rectangle(205, 315, 8, 12)\ndraw_rectangle(240, 310, 8, 12)\ndraw_rectangle(295, 260, 8, 12)\ndraw_rectangle(325, 310, 8, 12)\ndraw_rectangle(365, 330, 8, 12)\n\n\n# Firework sounds\nplay_note_and_pause(72, 0.4)\nplay_note_and_pause(76, 0.4)\nplay_note_and_pause(79, 0.4)\nplay_note_and_pause(84, 0.7)\nplay()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "display_name": "Effects Designer",
+    "bubble_choice_description": "Make the scene use multiple random effects each time it runs.",
+    "thumbnail_url": "https://images.code.org/43990e9d223fc0021e0e675efc32ccc2-4290d377-4889-4feb-9473-f7e776cefab8.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:27:10.059+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson29_level1_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson29_level1_dev_27_28\"},{\"changed_at\":\"2026-09-02 21:31:03 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\",\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 21:37:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 21:41:00 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 21:47:44 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 21:51:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 21:58:57 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\",\"additional_ai_evaluation_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:01:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:13:03 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-02 22:39:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-03 15:53:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

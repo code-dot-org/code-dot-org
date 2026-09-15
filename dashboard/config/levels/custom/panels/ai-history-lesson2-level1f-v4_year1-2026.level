@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-02T06:02:40.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Joy Buolamwini\n\n### Algorithmic Justice\n\n*Image attribution: [Joy Buolamwini at Wikimania 2018](https://commons.wikimedia.org/wiki/File:Joy_Buolamwini_-_Wikimania_2018_01.jpg) by Niccolò Caranti, via Wikimedia Commons. CC BY-SA 4.0.*\n",
+        "imageUrl": "https://images.code.org/6054adc57d9e5f6441d0ed29291f9828-buolamwini2.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What She Contributed\n\nBuolamwini is a computer scientist and founder of the Algorithmic Justice League. While a student at MIT, she discovered that commercial facial analysis software performed significantly worse on darker-skinned and women’s faces. Her Gender Shades research documented these disparities in AI systems from major technology companies.<sup>1</sup>\n\n*Image attribution: [Demonstration of facial recognition software](https://commons.wikimedia.org/wiki/File:Demonstration_of_facial_recognition_software.jpg) by Pete Woodhead, via Wikimedia Commons.*\n",
+        "imageUrl": "https://images.code.org/372a18b368d78587104f79813d126c20-facial_recognition.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "### Connection to AI History\n\nBuolamwini’s work belongs to the emerging field of AI ethics and accountability. It showed that AI systems can reflect and amplify bias from the data they are trained on — and that testing on non-representative samples can hide serious failures.<sup>2</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n",
+        "imageUrl": "https://images.code.org/972d215c26334bcd7d901a0a17749ed1-facial_recognition_bias.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "### Why It Matters\n\nBy documenting that commercial AI systems performed unevenly across different groups, Buolamwini helped push algorithmic fairness into public and policy debate. Her advocacy contributed to legislative efforts around facial recognition regulation and pressure on companies to improve their testing practices.<sup>1</sup>\n\n*Image attribution: [Photo](https://unsplash.com/photos/a-man-with-blue-eyes-and-a-black-background-GkwnyqRMD70) by [A Chosen Soul](https://unsplash.com/@a_chosensoul) on Unsplash.*\n\n**Sources**\n\n1. [TED — How I’m fighting bias in algorithms](https://www.ted.com/talks/joy_buolamwini_how_i_m_fighting_bias_in_algorithms)\n2. [MIT News — Study finds gender and skin-type bias in AI systems](https://news.mit.edu/2018/study-finds-gender-skin-type-bias-artificial-intelligence-systems-0212)\n",
+        "imageUrl": "https://images.code.org/eac8377fabf99702b49dab5086306228-facial_recognition_fairness2.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_year1-2026",
+    "display_name": "Joy Buolamwini",
+    "bubble_choice_description": "Choose Joy Buolamwini to explore how her research exposed bias in facial analysis systems and pushed algorithmic fairness into public and policy debate.",
+    "use_links": "false",
+    "thumbnail_url": "https://images.code.org/d4cce25a36fda7cd58a2664c75cb2f33-buolamwini.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T06:02:40.588+00:00\",\"changed\":[\"cloned from \\\"ai-history-lesson2-level1f-v4-2026\\\"\"],\"cloned_from\":\"ai-history-lesson2-level1f-v4-2026\"}]"
+}]]></config>
+</Panels>

@@ -38,7 +38,7 @@ scoreDisplay.textContent = score;
   </div>
 </div>
 
-<p>The keyword itself is a signal, not just the name. <code>score</code> uses <code>let</code> because it's expected to go up as the game is played. <code>gameTitle</code> uses <code>const</code> because it's set once and never needs to change while the page is open. This isn't just a naming convention: if code tries to reassign a value declared with <code>const</code>, JavaScript throws an error and stops. <code>const</code> isn't a suggestion, it's the language enforcing a promise that the value won't change.</p>
+<p>The keyword itself is a signal. <code style="font-size: 13px;">score</code> uses <code style="font-size: 13px;">let</code> because it's expected to change as the game is played.</p><p> <code style="font-size: 13px;">gameTitle</code> uses <code style="font-size: 13px;">const</code> because it's set once and stays fixed.</p><p> This isn't just convention: reassigning a <code style="font-size: 13px;">const</code> value throws an error and stops the code from running.</p>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
 <p><strong>💡 Teacher tip:</strong> a helpful test for students deciding between the two: if the value should ever update while the app runs, use let. If it should stay fixed for the life of the page, use const. When AI generates code, this choice is already made for them, but recognizing it helps them read and trust what AI produced.</p>

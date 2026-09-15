@@ -1,11 +1,19 @@
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {
+  collectImageReferences,
   IMAGE_NAME_MAX_LENGTH,
+  nextImageName,
+  noteImageFieldValue,
+  noteImageReference,
   removeImageReferences,
   renameImageReferences,
   sanitizeImageName,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
 import {Sources} from '@cdo/apps/p5lab/spritelab/lab2/types';
+import {
+  compileWorldPrelude,
+  createEmptyWorld,
+} from '@cdo/apps/p5lab/spritelab/lab2/world';
 
 interface TestBlock {
   type?: string;
@@ -133,6 +141,18 @@ describe('sanitizeImageName', () => {
     expect(sanitizeImageName('x'.repeat(99))).toHaveLength(
       IMAGE_NAME_MAX_LENGTH
     );
+  });
+});
+
+describe('nextImageName', () => {
+  it('numbers from 1 by the type label', () => {
+    expect(nextImageName('sprite', () => false)).toBe('Sprite 1');
+    expect(nextImageName('background', () => false)).toBe('Background 1');
+  });
+
+  it('skips taken numbers, including gaps left by deletions', () => {
+    const taken = new Set(['Sprite 1', 'Sprite 3']);
+    expect(nextImageName('sprite', name => taken.has(name))).toBe('Sprite 2');
   });
 });
 
@@ -277,5 +297,52 @@ describe('SpriteLab2 removeImageReferences', () => {
     ).toEqual({
       ANIMATION_NAME: '<field name="ANIMATION_NAME">"cats &lt; dogs"</field>',
     });
+  });
+});
+
+describe('collectImageReferences', () => {
+  it('collects names noted during the compile, and only then', () => {
+    noteImageReference('before'); // no collector active: dropped
+    const {result, referencedImages} = collectImageReferences(() => {
+      noteImageReference('wizard');
+      noteImageFieldValue('"stone"');
+      return 'code';
+    });
+    noteImageReference('after'); // dropped again
+    expect(result).toBe('code');
+    expect([...referencedImages].sort()).toEqual(['stone', 'wizard']);
+  });
+
+  it('ignores field values that are not string literals', () => {
+    const {referencedImages} = collectImageReferences(() => {
+      noteImageFieldValue(null);
+      noteImageFieldValue('null'); // the empty-gallery option
+      noteImageFieldValue('someVariable');
+      expect(noteImageFieldValue('"cat"')).toBe('"cat"');
+    });
+    expect([...referencedImages]).toEqual(['cat']);
+  });
+
+  it('restores the outer collector after a nested compile', () => {
+    const outer = collectImageReferences(() => {
+      noteImageReference('outer');
+      const inner = collectImageReferences(() => {
+        noteImageReference('inner');
+      });
+      expect([...inner.referencedImages]).toEqual(['inner']);
+      noteImageReference('outer2');
+    });
+    expect([...outer.referencedImages].sort()).toEqual(['outer', 'outer2']);
+  });
+
+  it('compiling the world prelude registers its images', () => {
+    const world = createEmptyWorld();
+    world.grid[0][0] = {image: 'stone', kind: 'block'};
+    world.grid[1][2] = {image: 'wizard', kind: 'sprite'};
+    const {result, referencedImages} = collectImageReferences(() =>
+      compileWorldPrelude(world)
+    );
+    expect(result).toContain('"stone"');
+    expect([...referencedImages].sort()).toEqual(['stone', 'wizard']);
   });
 });

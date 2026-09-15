@@ -56,10 +56,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   readonly congratsMessage: Locator;
 
   /**
-   * The maze/game visualization surface (#visualization, see
-   * apps/src/maze/Visualization.jsx). Sprite art (e.g. idle-animation frames)
-   * can render mid-transition when the screenshot is taken, so visual checks
-   * that don't care about the exact playfield frame should mask this.
+   * All SVGs inside the game visualization. Different labs use different ids
+   * (#svgMaze, #svgStudio + #visualizationOverlay), and the maze SVG
+   * overflows #visualization by ~1.5px (400x400 viewBox in a 300px box
+   * with overflow:visible), so masking the parent misses the edge.
    */
   readonly visualization: Locator;
 
@@ -95,7 +95,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       '.uitest-topInstructions-inline-feedback',
     );
     this.congratsMessage = page.locator('.congrats');
-    this.visualization = page.locator('#visualization');
+    this.visualization = page.locator('#visualization svg');
     this.continueButton = page.locator('#continue-button');
     this.embeddedInstructionBlocks = page.locator(
       '.readonly-block-space-container',
@@ -180,10 +180,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     // instead: same dismissal (closeOverlay), no coordinate guessing.
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
-      const dialogOk = this.page.getByRole('button', {
-        name: 'OK',
-        exact: true,
-      });
+      // Not by name: i18n.dialogOK() localizes it, so 'OK' misses on ar-sa.
+      // The <hr> is in the same overlayVisible-gated block as the button.
+      const dialogOk = this.instructionsPanel.locator('hr + button');
       // Retry the dismissal until the overlay actually hides. On firefox the
       // first click can land before the dialog's onClick (closeOverlay) is
       // bound and silently no-op, leaving the overlay up; re-clicking once the
@@ -197,11 +196,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
         await expect(overlay).toBeHidden({timeout: 2_000});
       }).toPass({timeout: LAB_LOAD_TIMEOUT_MS});
     }
-    // Let the header animation finish.
-    await expect(this.page.locator('#header_middle_content')).toHaveCSS(
-      'opacity',
-      '1',
-    );
+    await this.header.waitForFadeIn();
   }
 
   /**

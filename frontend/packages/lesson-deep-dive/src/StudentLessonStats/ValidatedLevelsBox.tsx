@@ -1,42 +1,62 @@
 import {type CSSProperties, type FC} from 'react';
 
-import styles from './validated-levels-box.module.scss';
+import RecapStoryCard from '../RecapStoryCard';
+
+import styles from './stat-card.module.scss';
 
 interface ValidatedLevelsBoxProps {
+  gradient: string;
+  headline: string;
+  headlineAlign?: 'left' | 'right';
   lessonName: string;
   validatedLevelsTotalCount: number;
   validatedLevelsCorrectCount: number;
   validatedLevelsIncorrectCount: number;
+  autoAdvanceDurationMs: number;
+  currentSlide: number;
+  totalSlides: number;
+  onNext?: () => void;
 }
 
 const ValidatedLevelsBox: FC<ValidatedLevelsBoxProps> = ({
+  gradient,
+  headline,
+  headlineAlign = 'left',
+  lessonName,
   validatedLevelsTotalCount,
   validatedLevelsCorrectCount,
-  validatedLevelsIncorrectCount,
-}) => {
-  const attemptsToday =
-    validatedLevelsCorrectCount + validatedLevelsIncorrectCount;
-
-  return (
-    <div className={styles.container}>
-      <p className={styles.label}>Progress</p>
+  autoAdvanceDurationMs,
+  currentSlide,
+  totalSlides,
+  onNext,
+}) => (
+  <RecapStoryCard
+    gradient={gradient}
+    lessonLabel={`${lessonName} Recap`}
+    autoAdvanceDurationMs={autoAdvanceDurationMs}
+    currentSlide={currentSlide}
+    totalSlides={totalSlides}
+    onSkip={onNext}
+  >
+    <div className={styles.body}>
       <div
-        className={styles.statBlock}
+        className={styles.metricRow}
         style={{'--target-count': validatedLevelsCorrectCount} as CSSProperties}
       >
-        <div className={styles.fractionRow}>
-          <div className={styles.bigNumber} />
-          <span className={styles.denominator}>
-            /{validatedLevelsTotalCount}
-          </span>
-        </div>
-        <p className={styles.statHeading}>correct validations</p>
-        <p className={styles.statSubtitle}>
-          in {attemptsToday} attempt{attemptsToday !== 1 ? 's' : ''} made today
+        <div className={styles.bigNumberAnimated} />
+        <p className={styles.caption}>
+          of {validatedLevelsTotalCount} validated
+          <br />
+          levels passed
         </p>
       </div>
+      <h2
+        className={`${styles.headline} ${headlineAlign === 'right' ? styles.headlineRight : ''}`}
+      >
+        {headline}
+      </h2>
     </div>
-  );
-};
+  </RecapStoryCard>
+);
 
 export default ValidatedLevelsBox;

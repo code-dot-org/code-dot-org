@@ -4,7 +4,11 @@
 
 import {crispScaleFor} from '@cdo/apps/pixelEditor/pixelArt';
 
-import {ASSUMED_BLOCK, MODEL_OUTPUT_PX} from './ai/images/modelHelpers';
+import {
+  ASSUMED_BLOCK,
+  MODEL_OUTPUT_PX,
+  STORED_MAX_PX,
+} from './ai/images/modelHelpers';
 import {ImageStyle, ImageType} from './ai/images/types';
 
 // Pixel style draws on the same logical grid the pixel prompt asks for.
@@ -31,7 +35,13 @@ export function blankPaintSpec(
   const pixelGridSize =
     style === 'pixel' ? crispScaleFor(PIXEL_LOGICAL, PIXEL_LOGICAL) : undefined;
   return {
-    size: pixelGridSize ? PIXEL_LOGICAL * pixelGridSize : MODEL_OUTPUT_PX,
+    // Smooth blanks open at the stored ceiling for their type, so paint
+    // output lands at the stored sizes with nothing ever cropped or
+    // downscaled behind the painter's back (a 1px brush stroke must survive
+    // a save/reopen round trip).
+    size: pixelGridSize
+      ? PIXEL_LOGICAL * pixelGridSize
+      : STORED_MAX_PX[imageType] ?? MODEL_OUTPUT_PX,
     pixelGridSize,
     fill: imageType === 'background' ? 'black' : 'transparent',
   };

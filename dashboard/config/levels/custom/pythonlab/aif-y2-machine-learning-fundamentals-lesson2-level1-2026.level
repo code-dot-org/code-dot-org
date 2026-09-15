@@ -22,7 +22,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "# TODO 1: Import the random module\n\ndef get_random_slices():\n    # TODO 2: Replace this line by returning a random number from 1 to 3\n    return\n\n# TODO 3: Call the get_random_slices function and print the result",
+          "contents": "# TODO 1: Import the random module\n\ndef get_random_slices():\n  # TODO 2: Replace this line by returning a random number from 1 to 3\n  return\n\n# TODO 3: Call the get_random_slices function and print the result",
           "folderId": "0",
           "active": true
         }
@@ -33,9 +33,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMoEAgat0c4JcUhc\n7cDFNN2OT+iusVNVwNgh7hKnPYrh0/fXm/N2fc+aBtITtPGL+v/Tn5bY81LX\ns+p8g9ozcVLdoOds4leb5ulK4vVxFMWPZDaVo6PRkS/CNyVcbbih39drVGC5\nabytlwz0xB1XpWaUyCkEgxs4eHPgWDcez2JgTHy5TlVbxr35i3On+PJvk6e6\n+tdegGsZvDlABDKuq006VuqSww8SdzyG8KCZ4+xiFDvISZhrwlbRCQhDdrM/\n4I19BZFlSuI/dCNOrMlGjAut\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqwD4+LByuCKkYF\nQn+Gvi+j73JhDJ5g876cfMU4KJAWXJEs6ac2NOL8ZR9dKAbPDzTOrMOdGDad\n4N9SnXtyG/JMxb0MSK5ZXQf4KVA5xHXScVVeZ0/l8vsFLkYZCHbRuqXQrDVq\nRnpHHofaCRaHmfeDUMIP2MhQhY4Hsij2WGSoGpQHjCoy5pjJHNDDYxP1u3kA\njXVMOXgTy2fyF1sCkdboKzlQGF7rpck6Hm4w4io4flqG5C6RzKhOJOqXK48D\nCPzRQIyAFck/w8iNTrfa4bNC\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-21 17:50:54 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 17:51:28 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-21 17:50:54 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 17:51:28 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:13:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:13:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

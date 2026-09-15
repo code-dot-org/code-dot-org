@@ -41,6 +41,7 @@ const detail: ChallengeResponseDetail = {
       download_url: 'https://s3.example/board.png',
     },
   ],
+  reactions: [],
   viewer_role: 'owner',
   question: 'Draw a network.',
   evaluated_at: '2026-08-11T15:30:00Z',

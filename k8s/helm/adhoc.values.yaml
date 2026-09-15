@@ -1,5 +1,4 @@
-# NOTE: values.yaml defaults to backend-only. Stack dashboard.values.yaml
-# alongside this file if you want the dashboard frontend in an adhoc deploy.
+# Backend-only adhoc settings for the cdo-rails API/worker image.
 RAILS_ENV: adhoc
 dashboard_workers: 5
 healthChecks:

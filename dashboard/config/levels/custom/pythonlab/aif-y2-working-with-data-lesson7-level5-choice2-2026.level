@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T20:14:43.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "☑️ Do This:\r\n- Visualize how the average number of minutes Americans spend socializing each day has changed over time.\r\n  - Note that data wasn’t collected in 2020.\r\n- Be prepared to summarize, in one sentence, what your visualization shows.\r\n\r\n| Year | Average Minutes Socializing |\r\n|---|---|\r\n| 2015 | 41 |\r\n| 2016 | 39 |\r\n| 2017 | 39 |\r\n| 2018 | 38 |\r\n| 2019 | 38 |\r\n| 2021 | 34 |\r\n| 2022 | 34 |\r\n| 2023 | 34 |\r\n| 2024 | 35 |\r\n| 2025 | 35 |",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import matplotlib.pyplot as plt\n\n# TODO: Visualize your data\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMq/gUWe0xupnHSE\nSASMJDAhGR0dwPzzdqPRXBnMGVdiz9D11P4EN7DoTlChEKvgPPq+ODDgro+6\nMMvvHyruN76vTJI/csXhC7GHCCCcqFRMQEuzMIfSkXFclBHU0Eev4NOdoJIR\n25A8OjAJWhNbLXbeInR+2a/O4kyy87IOlWf/d7N9LSNEjuJWHpLz7tPcoO6T\nQM+TvKUHtxyIkEzf2sB1p/bs4+TetEEihRrYRwFGqeJfp0DQW3kTaCr6iShh\n0yXDIm+/Ff2iCciaCg3SvR/FIQ0aFkYEnwAxuaY6glADJbS3NZ66TA7FdLWO\nTkn5d+d29G5rJJPcEkZzdbyfQNfw8yH8JV9nlFsdEoDTIR84kRI63ruuQfVU\nzRTAfwlH+rM=\n",
+    "display_name": "Social Time",
+    "bubble_choice_description": "Visualize how the average number of minutes Americans spend socializing each day has changed over time.",
+    "thumbnail_url": "https://images.code.org/9bc5e802bb4c53aaf66e6cae7d81f244-socializing.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 20:17:19 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:17:59 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:18:08 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:23:20 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

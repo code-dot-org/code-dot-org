@@ -1,0 +1,70 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T23:54:49.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\n# Read logbooks\nrows = []\n\nfile = open(\"logbook_1.csv\")\nfor row in csv.DictReader(file):\n    rows.append(row)\nfile.close()\n\nfile = open(\"logbook_2.csv\")\nfor row in csv.DictReader(file):\n    rows.append(row)\nfile.close()\n\n# TODO 1: Read logbook_3.csv and add its rows to the list.\n\n# Initialize site counts\ntemple_artifacts = 0\nriver_gate_artifacts = 0\ncauseway_artifacts = 0\n\n# Count artifacts\nfor row in rows:\n    # TODO 2: Skip rows with lost data\n\n    # TODO 3: Finish repairing the site names\n    site = row[\"site\"]\n    if site == \"Sun Temple\" or site == \"sun temple\":\n        site = \"Temple of the Sun\"\n\n    # Add artifacts to site counts\n    artifacts = int(row[\"artifacts_found\"])\n    if site == \"Temple of the Sun\":\n        temple_artifacts += artifacts\n    elif site == \"River Gate\":\n        river_gate_artifacts += artifacts\n    elif site == \"Broken Causeway\":\n        causeway_artifacts += artifacts\n\n# Print number of artifacts found at each location\nprint(f\"Temple of the Sun: {temple_artifacts}\")\nprint(f\"River Gate: {river_gate_artifacts}\")\nprint(f\"Broken Causeway: {causeway_artifacts}\")",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "logbook_1.csv",
+          "contents": "day,site,artifacts_found,temperature\n1,River Gate,28,75\n2,Temple of the Sun,9,78\n3,Broken Causeway,4,72\n5,River Gate,6,77\n7,Temple of the Sun,8,79\n9,Broken Causeway,2,71\n13,Broken Causeway,1,73",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "logbook_2.csv",
+          "contents": "day,site,artifacts_found,temperature\n3,Sun Temple,10,26\n4,River Gate,8,24\n5,Causeway,15,21\n8,Sun Temple,9,27\n10,Causeway,3,22\n11,River Gate,0,25\n14,Causeway,2,23",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "logbook_3.csv",
+          "contents": "day,site,artifacts_found,temperature\n6,sun temple,11,28\n7,river gate,5,25\n8,sun temple,12,27\n9,broken causeway,,20\n11,sun temple,,26\n14,river gate,,24\n15,broken causeway,24,22",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 23:54:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:55:49 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

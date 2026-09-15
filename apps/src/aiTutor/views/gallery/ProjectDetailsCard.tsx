@@ -2,6 +2,8 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC} from 'react';
 
+import {Reaction} from '../lessonDeepDive/types';
+
 import {assetWithUrl} from './assetUtils';
 import ReactionChips from './ReactionChips';
 import {ChallengeResponseDetail} from './types';
@@ -10,9 +12,9 @@ import styles from './project-view.module.scss';
 
 interface ProjectDetailsCardProps {
   detail: ChallengeResponseDetail;
-  // The position of the project's unit within the course, for the
-  // "Unit N, Lesson M" label. Null when the unit is unknown.
   unitPosition: number | null;
+  // Forwards this project's reaction changes up toward the gallery.
+  onReactionsChange?: (reactions: Reaction[]) => void;
 }
 
 interface DetailTag {
@@ -43,6 +45,7 @@ const detailTags = (detail: ChallengeResponseDetail): DetailTag[] => {
 const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
   detail,
   unitPosition,
+  onReactionsChange,
 }) => (
   <div className={styles.detailsWrapper}>
     <div className={styles.detailsCard}>
@@ -83,7 +86,11 @@ const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
           Project Prompt: {detail.question}
         </Typography>
       )}
-      <ReactionChips reactions={[]} />
+      <ReactionChips
+        responseId={detail.id}
+        reactions={detail.reactions}
+        onReactionsChange={onReactionsChange}
+      />
     </div>
   </div>
 );

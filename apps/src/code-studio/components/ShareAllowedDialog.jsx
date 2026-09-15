@@ -12,6 +12,7 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
+import CopiedTooltip from '@cdo/apps/sharedComponents/CopiedTooltip';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -92,7 +93,7 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
-    hasBeenCopied: false,
+    copiedAt: null,
     isLoadingAccountAndProjectAge: false,
     showSharingDisallowedDialog: false,
   };
@@ -115,7 +116,7 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('SHARING_DIALOG_OPEN', this.props.appType);
-      this.setState({hasBeenCopied: false});
+      this.setState({copiedAt: null});
 
       if (this.sharingDisallowedWhileSignedIn()) {
         this.setState({showSharingDisallowedDialog: true});
@@ -162,10 +163,14 @@ class ShareAllowedDialog extends React.Component {
 
   // Copy to clipboard.
   copy = () => {
-    copyToClipboard(this.props.shareUrl, () =>
-      this.setState({hasBeenCopied: true})
+    copyToClipboard(
+      this.props.shareUrl,
+      () => this.setState({copiedAt: Date.now()}),
+      () => console.error('Error copying share link to clipboard')
     );
   };
+
+  clearCopied = () => this.setState({copiedAt: null});
 
   // inRestrictedShareMode overrides canShareSocial
   isSocialShareAllowed = () =>
@@ -302,23 +307,32 @@ class ShareAllowedDialog extends React.Component {
                       />
                     </div>
                     <div className={moduleStyles.actionsColumn}>
-                      <MuiButton
-                        variant="contained"
-                        color="primary"
-                        size="medium"
-                        loadingPosition="start"
-                        id="sharing-dialog-copy-button"
-                        onClick={wrapShareClick(
-                          this.copy,
-                          'SHARING_LINK_COPY',
-                          this.props.appType
-                        )}
-                        type="button"
-                        value={shareUrl}
-                        startIcon={<FontAwesomeV6Icon iconName="copy" />}
+                      <CopiedTooltip
+                        copiedAt={this.state.copiedAt}
+                        onHide={this.clearCopied}
                       >
-                        {i18n.copyLinkToProject()}
-                      </MuiButton>
+                        <MuiButton
+                          variant="contained"
+                          color="primary"
+                          size="medium"
+                          loadingPosition="start"
+                          id="sharing-dialog-copy-button"
+                          onClick={wrapShareClick(
+                            this.copy,
+                            'SHARING_LINK_COPY',
+                            this.props.appType
+                          )}
+                          type="button"
+                          value={shareUrl}
+                          startIcon={
+                            <FontAwesomeV6Icon
+                              iconName={this.state.copiedAt ? 'check' : 'copy'}
+                            />
+                          }
+                        >
+                          {i18n.copyLinkToProject()}
+                        </MuiButton>
+                      </CopiedTooltip>
                       <MuiButton
                         variant="outlined"
                         color="secondary"

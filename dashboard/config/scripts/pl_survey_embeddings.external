@@ -13,20 +13,16 @@ markdown <<MARKDOWN
 
 ## Pulse Check
 
-<br>
 
-<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AI101&Version_Year=2026&Unit=unit5&Level=level5&Activity_Type=activity" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
 
 <br><br>
 
-<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AI101&Version_Year=2026&Level=level7&Activity_Type=video" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
 
-
-
-
-<br>
-
-<iframe src="https://codeai-staff-apps.github.io/widgets/video-feedback/" width="100%" height="auto" ></iframe>
+<iframe src="https://micahkennedy.github.io/pulse_check/" width="480" height="56" style="border:none;overflow:hidden;"></iframe>
 
 <br><br>
+
+<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AI101&Version_Year=2026&Level=level7&Activity_Type=video" width="480" height="56" style="border:none;overflow:hidden;"></iframe>
+
+
 MARKDOWN

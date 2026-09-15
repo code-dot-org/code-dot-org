@@ -1,0 +1,69 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2026-09-03T01:45:46.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "visible_tabs": [
+      "World",
+      "Code",
+      "Play"
+    ],
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
+    "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Build your world.** Pick your block image and paint platforms onto the grid - place at least 7 blocks. Then pick your character and place them where they should start."
+      },
+      {
+        "text": "**Nice!** Now switch to the **Code** tab to bring your platformer to life.",
+        "after": {
+          "worldBlocks": 7,
+          "worldSprites": 1
+        }
+      },
+      {
+        "text": "**Bring it to life.** Set a background and establish your player, then click **Play** to try it.",
+        "after": {
+          "tab": "Code"
+        }
+      }
+    ],
+    "long_instructions": "# Build your platformer\nPlace platform blocks on the grid in the World tab and add a player. Press **Run**, then use the arrow keys to run and jump.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_setBackgroundImageAs"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setAsPlatformPlayer"
+        }
+      ]
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-03T01:45:46.270+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-platformer\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-platformer\"}]"
+}]]></config>
+  <blocks/>
+</GamelabJr>

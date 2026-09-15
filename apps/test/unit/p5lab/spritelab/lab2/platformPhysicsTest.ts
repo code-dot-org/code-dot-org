@@ -1,6 +1,7 @@
 import {
   hasSupportAhead,
   hasSupportAt,
+  isAtEdge,
   isSupported,
   resolvePlatformPhysics,
   PhysicsBox,
@@ -338,6 +339,25 @@ describe('platformPhysics with custom gravity', () => {
     expect(isSupported(underBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(true);
     const nearBlock = makeSprite(75, 360);
     expect(isSupported(nearBlock, walls, VIEW, -PLATFORM_GRAVITY)).toBe(false);
+  });
+
+  it('isAtEdge sees toes past the footing on the side faced', () => {
+    // Block 50..100 at row 6; a 20px body at x=95 spans 85..105.
+    const walls = [wallAt(1, 6)];
+    const toesOver = makeSprite(95, 275);
+    expect(isAtEdge(toesOver, walls, VIEW, 1)).toBe(true);
+    expect(isAtEdge(toesOver, walls, VIEW, -1)).toBe(false);
+    // Toes exactly on the edge are on the block.
+    expect(isAtEdge(makeSprite(90, 275), walls, VIEW, 1)).toBe(false);
+    // A neighbouring block carries the toes; the floor has no edge; in the
+    // air there is no footing to be at the edge of.
+    expect(isAtEdge(toesOver, [...walls, wallAt(2, 6)], VIEW, 1)).toBe(false);
+    expect(isAtEdge(makeSprite(395, 375), walls, VIEW, 1)).toBe(false);
+    expect(isAtEdge(makeSprite(95, 200), walls, VIEW, 1)).toBe(false);
+    // Under flipped gravity, against the block's underside.
+    const underEdge = makeSprite(95, 375);
+    expect(isAtEdge(underEdge, walls, VIEW, 1, -PLATFORM_GRAVITY)).toBe(true);
+    expect(isAtEdge(underEdge, walls, VIEW, -1, -PLATFORM_GRAVITY)).toBe(false);
   });
 
   it('hasSupportAhead looks under the body edge on the side faced', () => {

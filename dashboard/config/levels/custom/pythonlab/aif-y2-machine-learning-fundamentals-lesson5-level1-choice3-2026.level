@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-08-21T20:38:34.000Z",
   "level_num": "custom",
@@ -26,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def predict_flour(cookies):\n    # TODO 1: Return the predicted amount of flour for the number of cookies\n    return\n\ncookies = 12\nflour = predict_flour(cookies)\n\n# TODO 2: Print a message letting the user know how many cookies and how much flour",
+          "contents": "def predict_flour(cookies):\n  # TODO 1: Return the predicted amount of flour for the number of cookies\n  return\n\ncookies = 12\nflour = predict_flour(cookies)\n\n# TODO 2: Print a message letting the user know how many cookies and how much flour",
           "folderId": "0",
           "active": true
         }
@@ -37,7 +36,7 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo9WWA4pmkVPbNE\nnqI6qjg/lOMNAcanKZ3hh380tNwMUiPtcUXN4totSLsEOPqP2XUqFpmWTixA\nAqJBG8zyCIOgH7ayOggfoZ1AhPINZpENVxD/DUzxCD5H4t5BIFKZJQ8vNs1Z\nykvZIM9qWq5nL9NDFpuOO1l5CvIYupsZ7MqBhn4jSCThGbsFKSJTJoN4KfKB\noc5MLNYmVe7Ycb+utgj8XF1GxdMA148KzcvSvdQg6rpcAWYCSGOkGeNjlAae\n74k7CuoemGqdsTWwxcqpz2cvzb+TOStVUAczrLr0jTgeeUTgKHjGYK3ebNov\nKlx5NFXtIXsUH00hOjDmPg0wDyUQq5myjduSLg9XbqDxyMahJOeKVzWbIlvI\nBTzm0XkGQ0I=\n",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMo2FovOJAwFYJpT\nMk8AAOAhuBzpXhpUSNJjRfuW1Fc+bi1LoWKLz64XG76ht8KJmW40CGxIR7ko\nPpvHd8wMdC/O7gkY88vuaLgdrpCY1LuQJAy5eZC1iMMVQM4yDV7QCk87ptMr\nnOifnI8PsA2+zEVGN2PNeCZiwTyBDZLj6DEURXgurUVXWKG1Up8qGn7iBMSe\nBAQmYXu6GtrIyQkOUA+5kn6myk285BfFQk+LCNTO2k5h082P+i13LS/nsjaK\naSS7Atr/P1ATmwegcZQVUTjqxOaGkd8/begOGhSh3pGZ3SOR7Qt5mGJHfpxs\nv7vdcCyRJFP3ks8Du+WZODhsOd+yS0o9wAi/LeerZmlLeWZr7w==\n",
     "ai_tutor_prompt_settings": {
       "answerTypes": [
 
@@ -46,6 +45,7 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-21 20:38:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:38:52 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:10:27 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 20:38:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:38:52 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:10:27 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:14:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:15:05 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

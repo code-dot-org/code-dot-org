@@ -1,0 +1,13 @@
+name 'aif-y2-working-with-data-lesson2-level1-choice1-2026'
+title 'School Bus Data'
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'aif-y2-working-with-data-lesson2-level1-choice1-intro-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice1-q1-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice1-q2-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice1-q3-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice1-q4-2026'
+level 'aif-y2-working-with-data-lesson2-level1-choice1-q5-2026'

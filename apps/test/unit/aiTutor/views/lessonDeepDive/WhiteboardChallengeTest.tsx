@@ -1,6 +1,6 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React, {FC, useState} from 'react';
+import React, {FC, useRef, useState} from 'react';
 
 import WhiteboardChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/WhiteboardChallenge';
 import {ExplanationTypes} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
@@ -158,23 +158,40 @@ const Harness: FC<{
   const [hasRecording, setHasRecording] = useState(false);
   const [, setEvaluationStatus] = useState('');
   const [, setChallengeResponseId] = useState(0);
+  // Submit now lives in ChallengeBox's top bar; the harness stands in for it,
+  // holding the submit ref and reflecting submittability on a "Submit" button.
+  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const resetRef = useRef<(() => void) | null>(null);
+  const [canSubmit, setCanSubmit] = useState(false);
   return (
-    <WhiteboardChallenge
-      challengeId={challengeId}
-      starterImageUrl={starterImageUrl}
-      starterImageAltText={starterImageAltText}
-      submitted={submitted}
-      submitCallback={submitCallback}
-      isRecording={isRecording}
-      setIsRecording={setIsRecording}
-      hasRecording={hasRecording}
-      setHasRecording={setHasRecording}
-      explanationType={explanationType}
-      lessonId={1}
-      textExplanation={textExplanation}
-      setEvaluationStatus={setEvaluationStatus}
-      setChallengeResponseId={setChallengeResponseId}
-    />
+    <>
+      <WhiteboardChallenge
+        challengeId={challengeId}
+        starterImageUrl={starterImageUrl}
+        starterImageAltText={starterImageAltText}
+        submitted={submitted}
+        submitCallback={submitCallback}
+        isRecording={isRecording}
+        setIsRecording={setIsRecording}
+        hasRecording={hasRecording}
+        setHasRecording={setHasRecording}
+        explanationType={explanationType}
+        lessonId={1}
+        textExplanation={textExplanation}
+        setEvaluationStatus={setEvaluationStatus}
+        setChallengeResponseId={setChallengeResponseId}
+        onSubmittableChange={setCanSubmit}
+        submitRef={submitRef}
+        resetRef={resetRef}
+      />
+      <button
+        type="button"
+        disabled={!canSubmit}
+        onClick={() => submitRef.current?.()}
+      >
+        Submit
+      </button>
+    </>
   );
 };
 
@@ -209,7 +226,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={jest.fn()}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 
@@ -218,6 +236,39 @@ describe('WhiteboardChallenge', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
     expect(submitButton).toBeEnabled();
+  });
+
+  it('disables submit until an explanation modality has been chosen', () => {
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={jest.fn()}
+        explanationType={null}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    // A drawing alone isn't enough; ChallengeBox hasn't set an explanation
+    // modality (audio or text) yet.
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+  });
+
+  it('disables submit in audio mode until there is a recording', () => {
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={jest.fn()}
+        explanationType={ExplanationTypes.AUDIO}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+
+    recordAudio();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
   it('hides the image upload tool from the canvas', () => {
@@ -287,7 +338,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={null}
         submitted={false}
         submitCallback={jest.fn()}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 
@@ -306,7 +358,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={submitCallback}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation=""
       />
     );
 
@@ -322,7 +375,7 @@ describe('WhiteboardChallenge', () => {
         is_final: true,
         assets: [{asset_type: 'whiteboard_image'}],
         transcript: null,
-        student_text: null,
+        student_text: '',
       }),
       true,
       {'Content-Type': 'application/json'}
@@ -350,7 +403,8 @@ describe('WhiteboardChallenge', () => {
         challengeId={5}
         submitted={false}
         submitCallback={submitCallback}
-        explanationType={null}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
       />
     );
 

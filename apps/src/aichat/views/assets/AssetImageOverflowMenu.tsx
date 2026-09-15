@@ -126,7 +126,7 @@ const AssetImageOverflowMenu: React.FC<AssetImageOverflowMenuProps> = ({
         const files = await backpackApi.getFileList();
         const baseName = `${dateTimeName()}.${ext}`;
         const targetName = uniqueFileName(baseName, files, '-');
-        await backpackApi.saveCodebridgeFileFromUrl(targetName, url);
+        await backpackApi.saveFileFromUrl(targetName, url);
       } catch {
         showBackpackError();
       }

@@ -364,7 +364,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
       AuthenticationOption::Classlink.version_for('2222|5678_T5678-0005')
   end
 
-  test 'Classlink.version_for returns nil for a legacy UserId' do
+  test 'Classlink.version_for returns nil for a v1 UserId' do
     assert_nil AuthenticationOption::Classlink.version_for('59777133')
     assert_nil AuthenticationOption::Classlink.version_for(59_777_133)
   end

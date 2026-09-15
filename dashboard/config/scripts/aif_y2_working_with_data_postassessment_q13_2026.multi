@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-postassessment-q13-2026'
+
+right 'It excludes groups that are relevant to the analysis of the data'
+wrong 'It excludes groups that aren\'t relevant to the analysis of the data'
+wrong 'It includes groups that are relevant to the analysis of the data'
+wrong 'It includes groups that aren\'t relevant to the analysis of the data'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A sampling process is biased when...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Collecting Data
+MARKDOWN

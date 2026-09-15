@@ -8,7 +8,8 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/be59c99d32b20fa2098483c9963e3114-image-1741196021063.png" alt="house with a garden and a tree" width="125px" style="border-radius:10px; float:left; margin: 0 20px 0px 0px;">
 
 Imagine you are the local community center organizer.
-You have received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden. 
+You have received a set of data cards representing different types of neighborhood information: house numbers, resident names, street names, home prices, and whether a house has a garden.
+<br><br>
 **Your task?** Sort these cards and notice patterns in the data.
 
 <div style="clear:both;"></div>
@@ -86,12 +87,27 @@ A computer organizes these into different types because it processes them differ
 
 In Python, we store data in variables. But depending on the type of data, we choose different variable types:
 
-<img src="https://images.code.org/3f2339ba75b14b98c82b78281c4fda38-image-1741196296906.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;">
+<div role="region" aria-label="Python variable examples showing integers, strings, booleans, and floats" style="width:100%; box-sizing:border-box; overflow-x:auto; white-space:nowrap; background-color:#000000; color:#FFFFFF; border-radius:10px; padding:18px 22px; box-shadow:0 3px 8px rgba(0,0,0,0.18); font-family:'Fira Code','Courier New',Courier,monospace; font-size:16px; line-height:1.7;">
+
+  <span style="color:#FFFFFF;">house_number</span> = <span style="color:#F07FB0;">102</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># Integer (int)</span><br>
+
+  <span style="color:#FFFFFF;">street_name</span> = <span style="color:#7CDB87;">"Maple Street"</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># String (str)</span><br>
+
+  <span style="color:#FFFFFF;">resident_name</span> = <span style="color:#7CDB87;">"Sam"</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># String (str)</span><br>
+
+  <span style="color:#FFFFFF;">has_garden</span> = <span style="color:#6FCAFF;">True</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># Boolean (bool)</span><br>
+
+  <span style="color:#FFFFFF;">home_price</span> = <span style="color:#F07FB0;">250000.50</span>&nbsp;&nbsp;&nbsp;<span style="color:#ACA8EA;"># Float (float)</span>
+
+</div>
+<br>
 
 Different variable types allow Python to handle data properly. Integers can be used for math, strings store text, booleans hold True/False values, and floats handle decimal numbers.
 
 <br>
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+
+<br>
+<p style="font-size: 16px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ This activity is from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
 
