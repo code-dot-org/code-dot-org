@@ -9,6 +9,7 @@ import {
   signOut,
 } from '../shared/auth';
 import {setCountryOverride} from '../shared/geolocation';
+import {pegasusHost} from '../shared/hosts';
 
 test.describe('GDPR Dialog - data transfer agreement', () => {
   /**
@@ -124,12 +125,15 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     // .ui-test-gdpr-dialog locator as all other tests.
     await expect(gdpr.dialog).toBeVisible();
 
-    // The Cucumber step asserts the raw href equals "http://code.org/privacy" or
-    // its replace_hostname equivalent. The rendered value is protocol-relative
-    // (//code.org/privacy), which browsers resolve to https; both forms satisfy
-    // the intent — match either.
+    // Dashboard renders this href from the server's own CDO.code_org_url, so the
+    // host is the pegasus deployment paired with whatever host the test targets.
+    // The value is protocol-relative (//<host>/privacy); resolving it against the
+    // page yields a comparable absolute URL either way.
     const href = await gdpr.privacyLink.getAttribute('href');
-    expect(href).toMatch(/^(https?:)?\/\/code\.org\/privacy$/);
+    expect(href).not.toBeNull();
+    const privacyUrl = new URL(href as string, page.url());
+    expect(privacyUrl.host).toBe(pegasusHost(page.url()));
+    expect(privacyUrl.pathname).toBe('/privacy');
   });
 
   /**
