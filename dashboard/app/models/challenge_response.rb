@@ -24,6 +24,7 @@ class ChallengeResponse < ApplicationRecord
   belongs_to :challenge
   belongs_to :user
   has_many :challenge_response_assets, dependent: :destroy
+  has_many :challenge_response_reactions, dependent: :destroy
 
   # Lifecycle of the AI evaluation of this response. NULL means no evaluation
   # has been requested.
@@ -54,7 +55,9 @@ class ChallengeResponse < ApplicationRecord
   #   evaluation. Scores are teacher-only.
   # @param include_feedback [Boolean] when false, omits student_feedback,
   #   which is private to the response's author and their teachers.
-  def summarize(assets_for_upload: false, include_evaluation: false, include_feedback: true)
+  # @param viewer [User, nil] the signed-in user the summary is for. Decides
+  #   which reaction chips show as already reacted; nil marks none as reacted.
+  def summarize(assets_for_upload: false, include_evaluation: false, include_feedback: true, viewer: nil)
     lesson = challenge.lesson
     summary = {
       id: id,
@@ -69,6 +72,7 @@ class ChallengeResponse < ApplicationRecord
       is_final: is_final,
       created_at: created_at,
       assets: challenge_response_assets.map {|asset| asset.summarize(upload: assets_for_upload)},
+      reactions: reaction_summary(viewer),
     }
     summary[:student_feedback] = student_feedback if include_feedback
     if include_evaluation
@@ -76,5 +80,24 @@ class ChallengeResponse < ApplicationRecord
       summary[:evaluated_at] = evaluated_at
     end
     summary
+  end
+
+  # Emoji reaction tallies for the gallery chips: one entry per emoji that
+  # has at least one reaction, each {emoji, count, reacted}, where `reacted`
+  # is whether `viewer` is among the reactors. Ordered by the fixed emoji
+  # vocabulary so chips keep a stable left-to-right order across responses.
+  # Reads the loaded association (group in Ruby, not SQL) so a preloaded
+  # gallery listing does not fan out into a query per response.
+  def reaction_summary(viewer)
+    by_emoji = challenge_response_reactions.group_by(&:emoji)
+    ChallengeResponseReaction::EMOJIS.filter_map do |emoji|
+      reactions = by_emoji[emoji]
+      next unless reactions
+      {
+        emoji: emoji,
+        count: reactions.size,
+        reacted: viewer.present? && reactions.any? {|reaction| reaction.user_id == viewer.id},
+      }
+    end
   end
 end

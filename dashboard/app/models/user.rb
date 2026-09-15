@@ -243,7 +243,6 @@ class User < ApplicationRecord
     section_attempts
     section_attempts_last_reset
     share_teacher_email_regional_partner_opt_in
-    last_verified_captcha_at
     gender_student_input
     gender_teacher_input
     gender_third_party_input
@@ -1766,13 +1765,6 @@ class User < ApplicationRecord
         new_csf_level_perfected = true
       end
 
-      # Update user_level with the new attempt.
-      # We increment the attempt count unless they've already perfected the level.
-      user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
-      user_level.best_result = new_result if user_level.best_result.nil? ||
-        new_result > user_level.best_result
-
-      user_level.submitted = submitted
       # We only lock levels of type LevelGroup
       # When the student submits an assessment, lock the level so they no
       # longer have access for the remainder of the autolock period
@@ -1780,20 +1772,16 @@ class User < ApplicationRecord
       if submitted && is_level_group
         user_level.locked = true
       end
-      if level_source_id && !is_navigator
-        user_level.level_source_id = level_source_id
-      end
 
-      total_time_spent = user_level.calculate_total_time_spent(time_spent)
-      user_level.time_spent = total_time_spent if total_time_spent
-
-      user_level.assign_locale_data(locale) if locale
-
-      if unit_group && user_level.new_record?
-        user_level.unit_group_id = unit_group.id
-      end
-
-      user_level.atomic_save!
+      user_level.update_progress!(
+        unit_group_id: unit_group&.id,
+        level_source_id:,
+        new_result:,
+        submitted:,
+        is_navigator:,
+        time_spent:,
+        locale:,
+      )
     end
 
     if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)

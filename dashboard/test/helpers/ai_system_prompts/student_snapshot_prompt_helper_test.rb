@@ -16,7 +16,7 @@ class StudentSnapshotPromptHelperTest < ActiveSupport::TestCase
 
     # get_code_level_info reaches out to a real S3 client for student source code;
     # stub it so these tests exercise prompt compilation, not AWS credential resolution.
-    ApplicationController.helpers.stubs(:get_student_code).returns('{}')
+    ApplicationController.helpers.stubs(:get_student_code).returns({student_code: nil})
   end
 
   # ---------------------------------------------------------------------------
@@ -96,5 +96,46 @@ class StudentSnapshotPromptHelperTest < ActiveSupport::TestCase
     refute_includes result[:content], "{{lesson_name}}"
     assert_nil result[:prompt_name]
     assert_nil result[:prompt_version]
+  end
+
+  # ---------------------------------------------------------------------------
+  # allowlist_source_files
+  # ---------------------------------------------------------------------------
+
+  test 'allowlist_source_files returns nil for non-Hash input' do
+    assert_nil AiSystemPrompts::StudentSnapshotPromptHelper.allowlist_source_files(nil)
+    assert_nil AiSystemPrompts::StudentSnapshotPromptHelper.allowlist_source_files('not a hash')
+  end
+
+  test 'allowlist_source_files keeps files with allowed extensions, case-insensitively' do
+    source = {'main.js' => 'console.log(1);', 'styles.CSS' => 'body {}'}
+
+    result = AiSystemPrompts::StudentSnapshotPromptHelper.allowlist_source_files(source)
+
+    assert_equal source, result
+  end
+
+  test 'allowlist_source_files drops files with disallowed extensions' do
+    source = {'main.js' => 'console.log(1);', 'photo.png' => 'binary-ish contents'}
+
+    result = AiSystemPrompts::StudentSnapshotPromptHelper.allowlist_source_files(source)
+
+    assert_equal({'main.js' => 'console.log(1);'}, result)
+  end
+
+  test 'allowlist_source_files returns nil when no files survive the allowlist' do
+    source = {'photo.png' => 'binary-ish contents', 'icon.svg' => '<svg/>'}
+
+    result = AiSystemPrompts::StudentSnapshotPromptHelper.allowlist_source_files(source)
+
+    assert_nil result
+  end
+
+  test 'allowlist_source_files drops entries with non-string filenames' do
+    source = {1 => 'console.log(1);', 'main.js' => 'console.log(2);'}
+
+    result = AiSystemPrompts::StudentSnapshotPromptHelper.allowlist_source_files(source)
+
+    assert_equal({'main.js' => 'console.log(2);'}, result)
   end
 end

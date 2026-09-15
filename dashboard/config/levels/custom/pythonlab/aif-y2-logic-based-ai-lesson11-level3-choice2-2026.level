@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T20:59:01.000Z",
   "level_num": "custom",
@@ -33,7 +32,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def decide(wants_people_around, wants_warm_weather):\n    if wants_people_around:\n        return \"A city\"\n    else:\n        return \"Somewhere far away\"\n\n\ndef main():\n    wants_people_around = True\n    wants_warm_weather = False\n    decision = decide(wants_people_around, wants_warm_weather)\n    print(f\"You should look for: {decision}\")\n\n\nmain()\n",
+          "contents": "def decide(wants_people_around, wants_warm_weather):\n  if wants_people_around:\n    return \"A city\"\n  else:\n    return \"Somewhere far away\"\n\n\ndef main():\n  wants_people_around = True\n  wants_warm_weather = False\n  decision = decide(wants_people_around, wants_warm_weather)\n  print(f\"You should look for: {decision}\")\n\n\nmain()\n",
           "folderId": "0",
           "active": true
         }
@@ -44,8 +43,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrLHzfX1/9Rwr31\nJK0PqRzMEOvAGc4UU2uJGoo8h3ZOWDTWYZgRyd6pEOrQ35jtPlarGT7pzvvr\nFB7gwgCax3kWXG76I0nJq7WiMCoEGGe7DPi8awCj3fx4FZaMgKg7tovWveaf\nhrRTVKGOwelUxEBoL6uSr+fjiTXHKPNddTVBX50BHKbAYAfMrX6o9mkb+3r1\nuEM0FfZ5cZTjeTmXS67eol+9AgIChYklLOD6+iYB0WwndQEu7PzKG4hthCk7\nwd1zRPr5rt1wVTmu3aEv5uG7E0urTXnFuuPSYkbApyl3WQrKCtUGi4c6lj2p\nf79afZWhIpYRtvyeCgH0OD74Ld7GVJRrkRRqXmada7Jr2VlYOpVlFaGtDswV\nbJdiUmxuySffKZ0Lo+ldTtEYyhimrfvrHK3uAbHERZ8m8nDFCjcU9C4/c6HH\ni2ay8N5X4kzEAWEfES9+wmaMY9DeBc20iVOPAL+TsLWeUxP+YJb1sRf/4JIc\n7k4riKrmyuiDy8glESUhgB7JgO4v2i+9AigB2XWJoMAXs2InvPgOYEXUq66z\nwDM4GnDrg0iVJQ7ehiXfUrqc9IHpJ0/uAcqzKExufegODZ7cqg5nkpQMMrwS\n3UNUcLT0NqBCwTP/QWzxjP9B8YxVGTJCaoeDhvokhqx9tNd3zq7ebimu73u1\nblXU5n3v4ndyDEe5fP+OYxvfFf5U1NXEr5MLQ+JJRMp5K//12VOI5LmHYVLd\nCd649bGB4XCGqGUZvKaTeQAlstFT/lHQfdfS5sM4npDTRxi1WuzPwEcg/2h0\nWHFNwOoMk8yW5rRm2HAIGnOCpSLy5nNJvhufi7M=\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpHU7NHJK3uWjC9\ncqFlbkmJhX9z/nYJ//oYGvNhlB21GOxYGME/z2JPSctJwdks7KHwkpQBj0Ha\nw341aNzTRuHfhfsBFfyE6bUKgLpBZXDOFKI4eNxQ1uRPvu0QkReF0dfvCnBJ\nB3r6Fsere2gHpIQ4aIhMHGfHWeULULzKzGRmOOMNVznm53ObSL3jq1RM1wxw\n5pbNMQYiKNGKYpWjvMIko1wtoT0s2zs49JY0o240TK5C1SaTkp8205f9nn/m\nDzAtdgu2tKCUMNIV4mhsL/U4i3FtKVrh5v4Uc/ZZyfp6Pi5OwOsH5cBXiSBq\nenVq6kENQBye1Dfj1FFJ6tipy20dtywX5e+A1+6TQklOgrlsHdPX+eSTzQR4\nEvE/ZnMH4gC3mUzV2vTGKkqLGAPX29bOjZAiKChodSYJCDEFJKY5Iyzgi+mk\nf+AaujBdzVA5XLn+FAHJbTpnSgxJXyjOZbT7fD5i3+QdW+TRbh03oP4yE4Th\nAce2S+zE5Bun4oH6yThIwFcvfvvvSwGaQYUQ6FBFxVGG+bcHK9Q4lUmSPssW\nZcyxTmtLLOb+09XDZ6nu34+5FVsokeTK3JpCpwpPVmROUvjzV3Tr3CooDu2Y\nXAKvIvikjo35BIXaAZdbyYcxxGrReMI7JA77m0TkXGqYjlu1SRLX4meJOQr8\nx91Io65ysaxw8xeCr/vjwsTetKECR2tPEO9PA2x24sEZniFYvTwhyeEg6R+L\n34/Toqx+8lTIHT11dpZJ4yDy8FM2vS2FDvo=\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 21:00:26 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 21:00:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:28:05 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:44:58 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 21:00:26 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 21:00:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:28:05 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 16:44:58 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:20:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:20:56 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

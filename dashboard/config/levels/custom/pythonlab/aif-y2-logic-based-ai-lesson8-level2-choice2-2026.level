@@ -32,7 +32,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def simulate(customers, growth, target):\n    months = 0\n    print(f\"Month {months}: {customers} customers\")\n\n    customers += customers * growth\n    months += 1\n    print(f\"Month {months}: {customers} customers\")\n\n    customers += customers * growth\n    months += 1\n    print(f\"Month {months}: {customers} customers\")\n\n\nsimulate(50, 1, 1000000)\n",
+          "contents": "def simulate(customers, growth, target):\n  months = 0\n  print(f\"Month {months}: {customers} customers\")\n\n  customers += customers * growth\n  months += 1\n  print(f\"Month {months}: {customers} customers\")\n\n  customers += customers * growth\n  months += 1\n  print(f\"Month {months}: {customers} customers\")\n\n\nsimulate(50, 1, 1000000)\n",
           "folderId": "0",
           "active": true
         }
@@ -43,9 +43,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMq2+clJTrPZTfo7\n+Vdzl8Vdp9hSUT4FxCMGh0B6kr5vMY8JtQJ4WwHxsz5apNw1XlGvVz/8y4W3\n0AE91FS7ajo5UPlJAOq5X0kubGH57pxDm0tlAGDNZblhDZoQYrrU8Vi4NVpS\nWN0kcl8881vk8+vMNt+5pkAAmJQFrnKl78H4yWQuucYY2uYQLn0NBHib4l8o\nw190u+1mv8p/gY70uCxHIxqCF1wtT294hGptVDHtuQKztJKPkHGyeViZLoMl\nT5hzw194I1SxtYLadiJft3M/M0LQXD2lbi1HsD0T6U7vD4snVOfiy0ZcDtz+\n8gYsVclll3Gq1fkvP+edIe8+rHVuZjbRFNS5F2TncXitClITkTmv9O234P0n\nkOOO7Acry6l5VCrt+3vcdfEXME4Z5WoceRNVQytd9VP4pa+zAfv1Mk05KSVE\nhFRYs0IHhtgG7lXbYCr03FX1YTPJZtOSWD7Plp2GTDO9wmWwLRR5o0ldgPAb\nHTI/1F5RCUkLfxRN2Zk=\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrN+BmSqWYUsu0G\nyOMoR06JjVCrX5fr8rPrW5sbCGpV5580y4V/RUA+KJbbjFlsqla63u/40JGy\n1UqHE52Hj7i1CS9l/Usn3PGqoAgY6v5tlThkX9ZC2uTyS9TlW4n8mlbZpt5p\n81BYbqJ9DYBa7gNV7FL0TQ51OqjN+i//1hBbR4Jqt1a/gSa81WPB3j+sU0/N\nG8SRJjSka4S+2EPPo5MIQkbZrG+mTw+Mt0OglyUm9M7x+Swr3/oUJNEg0k22\nxL/QZSl+WfRhPW9Nc5ihkAv6qE9lP8mKQ45qI6/FOXDIP/C2sIc0kBDrQk38\nriqTUcSpu+y9Fpy/nkImELae6B7Qa+j5ik8yUf60HF6xcwALmnqL3oV+omZO\nCCI8M1h2JHHkDx29T9NEIwoUGIu48cSDiNOdx3TWPWI5s2HapwQhZT++UxNe\nC3v/0AzAB6wNlP7zEKsFOyG1BCWk5qRlhB4z3tqgInh4w711NCuOrFzawQ==\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 16:46:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:48:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:01:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:14:09 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 16:46:38 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:48:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:01:35 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-23 15:14:09 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:16:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:16:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

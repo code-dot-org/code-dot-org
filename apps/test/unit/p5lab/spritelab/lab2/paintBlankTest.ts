@@ -11,10 +11,13 @@ describe('blankPaintSpec', () => {
     expect(spec.size).toBe(64 * 8);
   });
 
-  it('sizes smooth style at the model output size, with no grid', () => {
-    const spec = blankPaintSpec('sprite', 'smooth');
-    expect(spec.pixelGridSize).toBeUndefined();
-    expect(spec.size).toBe(1024);
+  it('sizes smooth style at the stored ceiling for its type, with no grid', () => {
+    const sprite = blankPaintSpec('sprite', 'smooth');
+    expect(sprite.pixelGridSize).toBeUndefined();
+    expect(sprite.size).toBe(512);
+    expect(blankPaintSpec('block', 'smooth').size).toBe(256);
+    // No ceiling for backgrounds: they keep the model output size.
+    expect(blankPaintSpec('background', 'smooth').size).toBe(1024);
   });
 
   it('fills backgrounds black and everything else transparent', () => {

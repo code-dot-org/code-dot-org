@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-09-08T00:01:00.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "A club at your school collected survey responses from students. In the “school” column, the same school appears as “Lincoln High”, “lincoln hs”, and “LHS”. Some rows have no answer at all in the “grade” column.\r\n\r\nWhich strategies from today would you use to prepare this data, and what would your rules be? Be specific: say what happens to the rows you cannot use, and which spelling becomes the standard.",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-08 00:01:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-08 00:03:11 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -17,8 +17,10 @@
     "widget_view_allow_show_code": "false",
     "predict_settings": {
       "isPredictLevel": false
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY4vndgYYYCRVRFZ\n0dPlxpvOC1nT9KMZf+oZ2Fj7TV6FTCD/GRKFPwt5fCWUbnoobIZSzLhPfaQH\n/mydM+tvRNg5mBM56PDo5hBg7nZWS3FAWIfC7vPLf6o89xn1BYjWtTYZmDJ/\n4zQEgSufk/0wknBz3vekSSqkonsfRxAWxMDrVsOlMZblA5dAHLW2RqAFKGoI\n4ihM4y7Wxg823t6xjXps9a/1XoMdR0IYv4ULyhhztKcXFxKuzg4usU+57XYv\nnk83x//fQa+Ety5b+OjQqE7Qquw1W6NwVB1b0ZSTIEXxCbIgu4e2llkUDl7v\nfB1eJtvvPbK2tWeT6zsF5wC5OrhxZe+2rEIdJYyMnLC4utgPJ0oHDKOUr8RF\nj4kmyjFWcu5DKvZAla7tGxEoGAbe9fdPDXvHxqIAMmi8dtF0EKBsgdwCVih1\n8YvSo8TX7joyoGQ/kfAJI0E5inOivoBc5wsTC9pwd/BHjGhIEYJcDiLKGjrQ\nQ3ox3Sz+BNQ0/+7r79NVtxTGYYm0UTJ7EjrQsGMiKOr5cdfVketLuCHTG3Dq\no2NpWOS7cgvkpG3G7L0VmYwGrDvUdr/qiequP8X2EWxWBQkc4SWWQ5PTtEFO\nUyrEcLCCjc+LzLnWL5dz2l+BF8FIpLSjyIUkUk16MkPWuRsW1ZKzl2V+u+iQ\nGyzqCfd9UMFXjUOHp8i2JK8gcQNMprFuQ62PrP3SAynLLZZS0851FpGJk9WS\nqokaZi3ieu56Fiy913gmX68GBAkoVfLaG9wsbWYmx42bBUBXh5H94LSXZopl\niXu/3p2rO0ZtY5eqomKl/37+816fATww2JGWAe4HnTvI8LCz3nsKPoTY3F4m\nIQL7UWqtJZMxciernvJKjRsiRCkVFLPah3FAYjdVYK2iazkYItQnT/NSDuov\nr/DAHNAHpmm25xWji7bQtg8w4e1xcmhhP7f1eVpbK9yb9Crut/q9t3CnavUY\nChAFBKmYIdKtf+J5fwCXYHzU15m966yMeaqliHcRwxm+fjYq0BPIIklU6Fe5\nw4JdxQtjUABOA01A16T3f3cpjffv7o7SLD+JHEnZPyZ5OZEVZvbyv1MILAAu\nzpTh1HrQFYvBGlHYyTNwXbOjaX7v60lx+LarIhU6hXoGUc8VY5ysX5MhxJ6j\naeDeB5zOyACYKdbyhcG5kcdhOdBg7Xg2xGIGjp3v9BMyEyk0a0c5NvDq3Mzn\n3KLmhe61eIHZcdERQBmpIK0UENBMk/LrMqY+3KaWM51loJQLACsU/OA2ZWJ8\nN+8KNqTi6djDrCVULdScn6/mU9aXPFreA88wLm0DFUU/RipKmBYuxkiYzPZh\n/yeLvB4vWRO92/hEy/5i6SkXw/lcLWbEC7/jGJK+t9t6BP7tgGJ+SRKIya1X\nWPzlQedGIiEQbkqMjzn4XkbGo1lg/sPzIK1Wy/uMD9XdquqXpkbP5yKJ0Jlx\nOwdvJ97OnfHFg51w7fsIwF5D5KbVZ2Ty/Qip/IR6fX1EMZ880lw6hKyQLRNV\nahTomT+qlkMvbuWNYsIEy2sTgURn6J8i9iZS/SNwM7DoUMFR6ixTZgwmwI5l\ngVzQPJgNiEryQZUuGTd36I1bAhtjwK/L944QqyCei/e8/goLIKPZd/qIbI5I\nWi12Xht9i6l6Oc7Rs+qwCSoZ2/gL3mBo1uaZKY5uUWTmFUoCFj24wWzuNH1Y\nN1rpmMEJsDcmxXn3GANMopmJtJVQsLSmVPY=\n"
   },
-  "published": true
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 20:22:10 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

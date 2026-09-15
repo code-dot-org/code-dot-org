@@ -36,10 +36,6 @@ Both versions do exactly the same thing. The clean version just uses **names tha
 <p><strong>💡 Teacher tip:</strong> if students give a vague answer like "messy code is bad," push them to name a specific consequence, a bug, a slowdown, a moment AI misunderstood something.</p>
 </div>
 
----
 
-<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/naming-and-abstraction.html" width="100%" height="360" style="border:none;" title="Naming and Abstraction: increaseVolume vs. doSomething"></iframe>
-</div>
 
 MARKDOWN

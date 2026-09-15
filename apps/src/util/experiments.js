@@ -85,6 +85,8 @@ experiments.NEW_PREVIEW_DOMAIN = 'new-preview-domain';
 experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 // Render the Teacher Panel inside the TA drawer on level pages.
 experiments.TA_TEACHER_PANEL = 'ta-teacher-panel';
+// Replace the Backpack tab's contents with the unified backpack panel.
+experiments.UNIFIED_BACKPACK = 'unified-backpack';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

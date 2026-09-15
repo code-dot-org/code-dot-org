@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {
+  LmsLoginTypeNames,
+  OAuthSectionTypes,
+} from '@cdo/apps/accounts/constants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 import locale from '@cdo/locale';
 
 import color from '../../util/color';
@@ -87,6 +91,12 @@ const NoClassroomsFound = ({rosterProvider}) => {
           <a href="https://clever.com/">{locale.addRemoveCleverClassrooms()}</a>
         </div>
       );
+    case OAuthSectionTypes.classlink:
+      return (
+        <div>
+          <p>{locale.noClassroomsFound()}</p>
+        </div>
+      );
   }
 };
 NoClassroomsFound.propTypes = {
@@ -134,6 +144,21 @@ const LoadError = ({rosterProvider, loginType, loadError}) => {
       return (
         <p>
           {locale.errorLoadingRosteredSections({type: loginType})}{' '}
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {locale.errorLoadingRosteredSectionsSupport()}
+          </a>
+        </p>
+      );
+    case OAuthSectionTypes.classlink:
+      // Fall back to generic copy when the server returns no ClassLink error message.
+      return (
+        <p>
+          {(loadError && loadError.message) ||
+            "We're having trouble getting roster information from ClassLink. Please try again later."}{' '}
           <a
             href={ROSTERED_SECTIONS_SUPPORT_URL}
             target="_blank"
@@ -197,44 +222,53 @@ class RosterDialog extends React.Component {
   };
 
   // Creates the section and redirects to the edit page
-  handleRedirect = () => {
+  handleRedirect = async () => {
     const classrooms = this.props.classrooms;
     const courseName =
       classrooms &&
       classrooms.find(classroom => {
         return classroom.id === this.state.selectedId;
       }).name;
-
-    const importSectionUrl =
-      this.props.rosterProvider === OAuthSectionTypes.google_classroom
-        ? '/dashboardapi/import_google_classroom'
-        : '/dashboardapi/import_clever_classroom';
     const courseId = this.state.selectedId;
 
-    return new Promise((resolve, reject) => {
-      $.getJSON(importSectionUrl, {
-        courseId,
-        courseName,
-      })
-        .done(resolve)
-        .fail(jqxhr => {
-          this.props.handleImportFailure(jqxhr);
-          reject(
-            new Error(`
-            url: ${importSectionUrl}
-            status: ${jqxhr.status}
-            statusText: ${jqxhr.statusText}
-            responseText: ${jqxhr.responseText}
-          `)
-          );
-        });
-    }).then(newSection => {
+    try {
+      let response;
+      if (this.props.rosterProvider === OAuthSectionTypes.classlink) {
+        // The ClassLink import route is POST-only: importing mutates a
+        // section, and a GET request would skip Rails CSRF verification.
+        response = await HttpClient.post(
+          '/dashboardapi/import_classlink_classroom',
+          JSON.stringify({courseId, courseName}),
+          true,
+          {'Content-Type': 'application/json'}
+        );
+      } else {
+        const importSectionUrl =
+          this.props.rosterProvider === OAuthSectionTypes.google_classroom
+            ? '/dashboardapi/import_google_classroom'
+            : '/dashboardapi/import_clever_classroom';
+        const query = new URLSearchParams({courseId, courseName});
+        response = await HttpClient.get(`${importSectionUrl}?${query}`);
+      }
+      const newSection = await response.json();
       // Recorded after the import so the event can carry the new section's id.
       this.recordSectionSetupExitEvent(COMPLETED_EVENT, {
         sectionId: newSection.id,
       });
       this.redirectToEditSectionPage(newSection.id);
-    });
+    } catch (error) {
+      let status = 0;
+      let message = '';
+      if (isNetworkError(error)) {
+        status = error.response.status;
+        message = await error.response
+          .json()
+          .then(body => body.error || '')
+          .catch(() => '');
+      }
+      this.props.handleImportFailure({status, message});
+      throw error;
+    }
   };
 
   cancel = () => {
@@ -267,6 +301,10 @@ class RosterDialog extends React.Component {
       case OAuthSectionTypes.clever:
         title = locale.selectCleverSection();
         loginType = locale.loginTypeClever();
+        break;
+      case OAuthSectionTypes.classlink:
+        title = 'Select a ClassLink section';
+        loginType = LmsLoginTypeNames.classlink;
         break;
     }
 

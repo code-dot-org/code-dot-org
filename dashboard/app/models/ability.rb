@@ -159,6 +159,11 @@ class Ability
         in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
       end
 
+      # A user can view their own quiz attempts, or their student's.
+      can :view_quiz_attempts, User do |other_user|
+        other_user.id == user.id || other_user.student_of?(user)
+      end
+
       can :create, CodeReviewComment do |code_review_comment|
         code_review_comment.code_review.open? && can?(:code_review, code_review_comment.code_review.owner)
       end

@@ -1,0 +1,24 @@
+name 'aif-y2-working-with-data-preassessment-q11-2026'
+
+wrong 'Most residents against new apartment building.'
+wrong 'Most residents in favor of new apartment building.'
+wrong 'Middle-aged residents unsure about new apartment building.'
+right 'Young residents in favor of new apartment building, older residents against.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A newspaper surveyed all of a town's residents about a proposed new apartment building.
+
+| Age | In Favor | Against |
+|---|---|---|
+| 18–34 | 200 | 10 |
+| 35–64 | 400 | 400 |
+| 65+ | 100 | 1000 |
+
+Which headline best describes the pattern in the data?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Telling Stories with Data
+MARKDOWN

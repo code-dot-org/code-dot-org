@@ -77,6 +77,8 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
   // Fetch lesson feedback from backend, and if not found, try generating ai feedback
   React.useEffect(() => {
+    let isOldRequest = false;
+
     async function getAiLessonFeedback(
       lessonId: number,
       unitId: number,
@@ -122,16 +124,20 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
     async function fetchLessonFeedback() {
       if (!lessonId || !studentId || !unitId || !sectionId) {
+        if (!isOldRequest) {
+          setFeedbackText('');
+          setResourceData([DEFAULT_RESOURCE]);
+          setExistingFeedbackData(null);
+          setSavedOrSubmittedTimestamp(null);
+        }
+        return;
+      }
+      if (!isOldRequest) {
         setFeedbackText('');
         setResourceData([DEFAULT_RESOURCE]);
         setExistingFeedbackData(null);
         setSavedOrSubmittedTimestamp(null);
-        return;
       }
-      setFeedbackText('');
-      setResourceData([DEFAULT_RESOURCE]);
-      setExistingFeedbackData(null);
-      setSavedOrSubmittedTimestamp(null);
 
       try {
         const response = await fetch(
@@ -146,6 +152,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
             studentId,
             sectionId
           );
+          if (isOldRequest) return;
           if (aiData && aiData.hasWork === false) {
             // Student has no work, set default message but allow feedback creation
             // Keep existingFeedbackData as null so we create new record
@@ -172,6 +179,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           }
         } else {
           const data = await response.json();
+          if (isOldRequest) return;
           if (data.saved_feedback) {
             setFeedbackText(data.saved_feedback);
             analyticsReporter.sendEvent(
@@ -188,19 +196,23 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           }
         }
       } catch (error) {
+        if (isOldRequest) return;
         console.error('Error fetching feedback:', error);
         setResourceData([DEFAULT_RESOURCE]);
         // Ensure state is cleared on error so we don't use stale feedback data
         setExistingFeedbackData(null);
         setSavedOrSubmittedTimestamp(null);
       } finally {
-        setIsLoading(false);
+        if (!isOldRequest) setIsLoading(false);
       }
     }
     if (lessonId && studentId && unitId && sectionId) {
       setIsLoading(true);
       fetchLessonFeedback();
     }
+    return () => {
+      isOldRequest = true;
+    };
   }, [lessonId, sectionId, studentId, unitId]);
 
   // Helper function to handle API requests

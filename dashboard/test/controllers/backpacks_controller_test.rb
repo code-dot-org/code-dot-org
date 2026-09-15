@@ -65,7 +65,7 @@ class BackpacksControllerTest < ActionController::TestCase
     assert_equal(
       {
         'javalab' => javalab_backpack.channel,
-        BackpacksController::UNIVERSAL_APP_TYPE => universal_backpack.channel,
+        SharedConstants::UNIVERSAL_APP_TYPE => universal_backpack.channel,
       },
       JSON.parse(response.body)['channels']
     )

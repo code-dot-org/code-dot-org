@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T19:43:14.000Z",
   "level_num": "custom",
@@ -37,7 +36,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def is_match(fragment, prediction):\n    return True\n\n\ndef main():\n    fragment = input(\"Fragment: \")\n    prediction = input(\"Prediction: \")\n    if is_match(fragment, prediction):\n        print(\"Could be!\")\n    else:\n        print(\"Probably not.\")\n\n\nmain()\n",
+          "contents": "def is_match(fragment, prediction):\n  return True\n\n\ndef main():\n  fragment = input(\"Fragment: \")\n  prediction = input(\"Prediction: \")\n  if is_match(fragment, prediction):\n    print(\"Could be!\")\n  else:\n    print(\"Probably not.\")\n\n\nmain()\n",
           "folderId": "0",
           "active": true
         }
@@ -49,6 +48,7 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 19:45:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 19:46:40 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 19:46:47 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-10 14:48:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-10 14:50:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 19:45:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 19:46:40 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 19:46:47 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-10 14:48:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-10 14:50:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:18:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

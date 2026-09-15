@@ -1,0 +1,56 @@
+#!/bin/sh
+
+# Initialize the schema-only local Kubernetes database. This image does not
+# contain migration history, so it can load a new database or accept the exact
+# checked-in schema, but it cannot update any other database state.
+
+set -eu
+
+# The image contains no curriculum seed inputs. More importantly, the preload
+# queries curriculum tables before a new database has a schema.
+export SKIP_SCRIPT_PRELOAD=1
+
+bundle exec rake db:create
+
+database_state="$(
+  bundle exec rails runner '
+    schema = File.read(Rails.root.join("db/schema.rb"))
+    expected_version = schema[/define\(version:\s*([\d_]+)\)/, 1]
+    abort "Could not read the version from db/schema.rb" unless expected_version
+
+    expected_tables = schema.scan(/^\s*create_table "([^"]+)"/).flatten.sort
+    connection = ActiveRecord::Base.connection
+    actual_tables = (connection.tables - %w[ar_internal_metadata schema_migrations]).sort
+    current_version = ActiveRecord::Migrator.current_version
+
+    state = if actual_tables.empty?
+              "empty"
+            elsif actual_tables == expected_tables && current_version == expected_version.delete("_").to_i
+              "current"
+            else
+              "mismatch"
+            end
+
+    puts "SETUP_DB_MINIMAL_STATE=#{state}"
+  '
+)"
+
+case "$database_state" in
+  *SETUP_DB_MINIMAL_STATE=empty)
+    bundle exec rake db:schema:load
+    ;;
+  *SETUP_DB_MINIMAL_STATE=current)
+    echo "setup-db-minimal: database already matches db/schema.rb"
+    ;;
+  *SETUP_DB_MINIMAL_STATE=mismatch)
+    echo "setup-db-minimal: database does not match db/schema.rb" >&2
+    echo "Reset the local MySQL volume as described in k8s/README.md." >&2
+    exit 1
+    ;;
+  *)
+    echo "setup-db-minimal: could not determine database state" >&2
+    exit 1
+    ;;
+esac
+
+echo "setup-db-minimal COMPLETE"

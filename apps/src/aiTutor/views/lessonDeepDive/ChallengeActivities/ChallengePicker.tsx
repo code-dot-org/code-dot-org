@@ -13,8 +13,8 @@ import styles from './challenge-box.module.scss';
 interface ChallengePickerProps {
   lessonId: number;
   challengeSetCallback: (
-    pickedChallenge: Challenge,
-    pickedChallengeType: string
+    pickedChallenge: Challenge | null,
+    pickedChallengeType: string | null
   ) => void;
 }
 

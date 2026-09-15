@@ -1,0 +1,11 @@
+name 'HoAI26-Choice-Background-Code'
+display_name 'Code'
+description "Code the background."
+uses_lab2
+
+sublevels
+level 'HoAI26-Playtest1-Platform-SimpleCode2'
+level 'HoAI26-Playtest1-Story-SimpleCode2'
+
+
+navigation_type 'next_sublevel'

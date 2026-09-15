@@ -26,6 +26,18 @@
       "Play"
     ],
     "guide_mode": "instructions",
+    "guide_steps": [
+      {
+        "text": "**Link your scenes.** Use the new **go to scene** block to jump from one scene to another - for example, when your character is clicked. Press **Play** to try the jump."
+      },
+      {
+        "text": "**Your scenes are connected!** Try jumping between them, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
+      }
+    ],
     "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",

@@ -9,9 +9,8 @@
 #   adhoc boot needs live in the shared locals ConfigMap (locals.yml.yaml)
 #   so the setup-db-minimal job inherits them too.
 #
-# Local-dev relaxations (allowPrivilegeEscalation, optional external
-# secrets) live in ../../overlays/backend, mirroring how
-# ../../overlays/development relaxes the dashboard deployment.
+# Local backend relaxations (allowPrivilegeEscalation and optional external
+# secrets) live in ../../overlays/backend.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -30,7 +29,7 @@ spec:
     spec:
       containers:
         - name: active-job-worker
-          image: code-dot-org:latest
+          image: cdo-rails:latest
           imagePullPolicy: IfNotPresent
           command:
             - sh

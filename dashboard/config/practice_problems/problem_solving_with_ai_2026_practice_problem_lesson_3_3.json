@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_3_3",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "In the \"opened their ___\" example, AI predicted \"presents\" as most likely (40%) and \"clouds\" as extremely unlikely (0.000001%). What does this reveal about how training data influences AI's predictions?",
+  "solution": [
+    {"option": "AI predicts words at random, with no connection to training data.", "correct": false},
+    {"option": "AI assigns higher probabilities to words that appeared more often in similar contexts within its training data.", "correct": true},
+    {"option": "AI always chooses the least common word to be creative.", "correct": false},
+    {"option": "Training data has no impact on which words AI predicts.", "correct": false}
+  ],
+  "objective_keys": [
+    "9d332603-a481-4b83-8ae3-5577093a37e3"
+  ]
+}

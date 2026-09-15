@@ -8,7 +8,10 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import {UnconnectedOwnedSectionsTable as OwnedSectionsTable} from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
+import {
+  UnconnectedOwnedSectionsTable as OwnedSectionsTable,
+  loginInfoFormatter,
+} from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -241,6 +244,20 @@ describe('OwnedSectionsTable', () => {
         `/teacher_dashboard/sections/${sectionRowData[0].id}/login_info`
       )
     ).toBeTruthy();
+  });
+
+  it('loginInfoFormatter shows the provider name, not the raw code, for ClassLink sections', () => {
+    // The raw code is CL-<TenantId>|<classSourcedId> — an internal compound
+    // that must never render as a section's "login info".
+    const rowData = {
+      id: 9,
+      loginType: 'classlink',
+      code: 'CL-2222|33333',
+    };
+    render(loginInfoFormatter(rowData.loginType, {rowData}));
+
+    expect(screen.getByText('ClassLink')).toBeTruthy();
+    expect(screen.queryByText('CL-2222|33333')).toBeNull();
   });
 
   it('courseLinkFormatter provides links to teacher dashboard course page if new teacher dashboard experiment is enabled', () => {

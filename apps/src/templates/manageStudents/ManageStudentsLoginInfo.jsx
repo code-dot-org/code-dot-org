@@ -276,6 +276,37 @@ class ManageStudentsLoginInfo extends Component {
             <SignInInstructions loginType={SectionLoginType.clever} />
           </div>
         )}
+        {loginType === SectionLoginType.classlink && (
+          <div>
+            <Typography variant="body3" component="p">
+              To get your class set up with ClassLink, do the following:
+            </Typography>
+            <Typography
+              variant="body3"
+              component="p"
+              className={styles.listAlign}
+            >
+              {renderStep(
+                '1. Make sure your class is set up the way you want it to be in ClassLink.'
+              )}
+            </Typography>
+            <Typography
+              variant="body3"
+              component="p"
+              className={styles.listAlign}
+            >
+              {renderStep(
+                "2. Click the 'sync students from ClassLink' button above to copy your ClassLink students to CodeAI."
+              )}
+            </Typography>
+            <Typography variant="body3" component="p">
+              You're finished! If you need to add or remove students later, do
+              that in ClassLink first, and then sync your classroom again with
+              CodeAI.
+            </Typography>
+            <SignInInstructions loginType={SectionLoginType.classlink} />
+          </div>
+        )}
         {loginType === SectionLoginType.lti_v1 && (
           <LtiLogins sectionProviderName={this.props.sectionProviderName} />
         )}

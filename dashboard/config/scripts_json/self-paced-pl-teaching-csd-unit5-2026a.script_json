@@ -1,0 +1,1599 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-csd-unit5-2026a",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-09-03 23:35:42 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Data and Society",
+      "name": "Introduction to Data and Society",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to CodeAI's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to CodeAI's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    },
+    {
+      "key": "Explore Data at a Small Scale",
+      "name": "Explore Data at a Small Scale",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    },
+    {
+      "key": "Explore Data at a Large Scale",
+      "name": "Explore Data at a Large Scale",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Apply the Problem Solving Process to solve data problems.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Apply the Problem Solving Process to solve data problems.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    },
+    {
+      "key": "Unit Wrap Up",
+      "name": "Unit Wrap Up",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Explore end-of-chapter projects.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Explore end-of-chapter projects.\n\n**Suggested time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "fc1e3915-2c5a-4e07-8a77-a8ba94e91b14",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc1e3915-2c5a-4e07-8a77-a8ba94e91b14",
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    },
+    {
+      "key": "ccf21d49-9038-41ce-9f7f-7ec01e2cd3d2",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ccf21d49-9038-41ce-9f7f-7ec01e2cd3d2",
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    },
+    {
+      "key": "0c93f260-fe1e-4d36-9adb-4beab9016d5a",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0c93f260-fe1e-4d36-9adb-4beab9016d5a",
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    },
+    {
+      "key": "486867f7-60e7-470c-bcef-73bdd89fbb9f",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "486867f7-60e7-470c-bcef-73bdd89fbb9f",
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Professional learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875",
+        "lesson_activity.key": "fc1e3915-2c5a-4e07-8a77-a8ba94e91b14"
+      }
+    },
+    {
+      "key": "82513f2d-33d5-4be5-bea6-c478d5450842",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "82513f2d-33d5-4be5-bea6-c478d5450842",
+        "lesson_activity.key": "fc1e3915-2c5a-4e07-8a77-a8ba94e91b14"
+      }
+    },
+    {
+      "key": "e2ed0934-abbb-4a93-b188-ccb8c59a49ec",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore the First Week of Curriculum"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2ed0934-abbb-4a93-b188-ccb8c59a49ec",
+        "lesson_activity.key": "fc1e3915-2c5a-4e07-8a77-a8ba94e91b14"
+      }
+    },
+    {
+      "key": "6900db70-7b8d-47ad-a3af-928863ed1d8d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6900db70-7b8d-47ad-a3af-928863ed1d8d",
+        "lesson_activity.key": "ccf21d49-9038-41ce-9f7f-7ec01e2cd3d2"
+      }
+    },
+    {
+      "key": "79ecc6a5-9849-414f-a126-ea7b24e8548c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Representing Letters"
+      },
+      "seeding_key": {
+        "activity_section.key": "79ecc6a5-9849-414f-a126-ea7b24e8548c",
+        "lesson_activity.key": "ccf21d49-9038-41ce-9f7f-7ec01e2cd3d2"
+      }
+    },
+    {
+      "key": "f3db39aa-798f-469f-a88a-d12379260d78",
+      "position": 3,
+      "properties": {
+        "progression_name": "Representing Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3db39aa-798f-469f-a88a-d12379260d78",
+        "lesson_activity.key": "ccf21d49-9038-41ce-9f7f-7ec01e2cd3d2"
+      }
+    },
+    {
+      "key": "60584308-7be9-4cd4-a3c4-ae24aedb154e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Representing Numbers"
+      },
+      "seeding_key": {
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e",
+        "lesson_activity.key": "ccf21d49-9038-41ce-9f7f-7ec01e2cd3d2"
+      }
+    },
+    {
+      "key": "011d1905-b289-438d-97ab-c1d52d86421a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Data Privacy"
+      },
+      "seeding_key": {
+        "activity_section.key": "011d1905-b289-438d-97ab-c1d52d86421a",
+        "lesson_activity.key": "ccf21d49-9038-41ce-9f7f-7ec01e2cd3d2"
+      }
+    },
+    {
+      "key": "c664ba3c-17b9-4cf4-80fd-d62081f36d92",
+      "position": 6,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "c664ba3c-17b9-4cf4-80fd-d62081f36d92",
+        "lesson_activity.key": "ccf21d49-9038-41ce-9f7f-7ec01e2cd3d2"
+      }
+    },
+    {
+      "key": "213faa14-50d7-4d09-b71c-7b9d7b54318d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "213faa14-50d7-4d09-b71c-7b9d7b54318d",
+        "lesson_activity.key": "0c93f260-fe1e-4d36-9adb-4beab9016d5a"
+      }
+    },
+    {
+      "key": "4afcdab1-156f-47d0-bb35-193834093f64",
+      "position": 2,
+      "properties": {
+        "progression_name": "Solve Data Problems"
+      },
+      "seeding_key": {
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64",
+        "lesson_activity.key": "0c93f260-fe1e-4d36-9adb-4beab9016d5a"
+      }
+    },
+    {
+      "key": "c8e8af34-5e75-4aee-8dd5-9cc430dfbda5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8e8af34-5e75-4aee-8dd5-9cc430dfbda5",
+        "lesson_activity.key": "0c93f260-fe1e-4d36-9adb-4beab9016d5a"
+      }
+    },
+    {
+      "key": "7412bdf0-6c1a-4d00-a252-958d78b13e30",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7412bdf0-6c1a-4d00-a252-958d78b13e30",
+        "lesson_activity.key": "486867f7-60e7-470c-bcef-73bdd89fbb9f"
+      }
+    },
+    {
+      "key": "96146716-c855-4e9e-b842-1702c8bda4b3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "96146716-c855-4e9e-b842-1702c8bda4b3",
+        "lesson_activity.key": "486867f7-60e7-470c-bcef-73bdd89fbb9f"
+      }
+    },
+    {
+      "key": "1b7af7e6-7a55-47b0-9821-0c018d72185d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b7af7e6-7a55-47b0-9821-0c018d72185d",
+        "lesson_activity.key": "486867f7-60e7-470c-bcef-73bdd89fbb9f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit5_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit5_25_2026a"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U5SelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875"
+      },
+      "level_keys": [
+        "CSD-U5SelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026a"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026a"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "82513f2d-33d5-4be5-bea6-c478d5450842"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U5_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "82513f2d-33d5-4be5-bea6-c478d5450842"
+      },
+      "level_keys": [
+        "VPL-CI-LessonTypes-U5_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "82513f2d-33d5-4be5-bea6-c478d5450842"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the First Week of Curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "e2ed0934-abbb-4a93-b188-ccb8c59a49ec"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "6900db70-7b8d-47ad-a3af-928863ed1d8d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Representing Letters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "79ecc6a5-9849-414f-a126-ea7b24e8548c"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Representing Letters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "79ecc6a5-9849-414f-a126-ea7b24e8548c"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Representing Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "f3db39aa-798f-469f-a88a-d12379260d78"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Representing Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "f3db39aa-798f-469f-a88a-d12379260d78"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_25_2026a"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_25_2026a"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_25_2026a"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_25_2026a"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "011d1905-b289-438d-97ab-c1d52d86421a"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_CSD_PL_23_2_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "011d1905-b289-438d-97ab-c1d52d86421a"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_CSD_PL_23_2_2026a"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U4-DecryptionPractice_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "011d1905-b289-438d-97ab-c1d52d86421a"
+      },
+      "level_keys": [
+        "VPL-CSD-U4-DecryptionPractice_25_2026a"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "c664ba3c-17b9-4cf4-80fd-d62081f36d92"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson2WrapUp_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "c664ba3c-17b9-4cf4-80fd-d62081f36d92"
+      },
+      "level_keys": [
+        "VPL-CSD_U5SelfPaced_Lesson2WrapUp_25_2026a"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-overview_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "213faa14-50d7-4d09-b71c-7b9d7b54318d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod5-lesson3-overview_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Solve Data Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-PSPwithData_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod5-lesson3-PSPwithData_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Solve Data Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 Pizza_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 Pizza_25_2026a"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Solve Data Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U5-PizzaPartyProblem_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      },
+      "level_keys": [
+        "VPL-CSD-U5-PizzaPartyProblem_25_2026a"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Solve Data Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-InterpretingData_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod5-InterpretingData_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Solve Data Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-DataDecisions_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod5-lesson3-DataDecisions_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Solve Data Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 Netflix Data Video_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 Netflix Data Video_25_2026a"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 test clean multi_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "c8e8af34-5e75-4aee-8dd5-9cc430dfbda5"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 test clean multi_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson3WrapUp_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "c8e8af34-5e75-4aee-8dd5-9cc430dfbda5"
+      },
+      "level_keys": [
+        "VPL-CSD_U5SelfPaced_Lesson3WrapUp_25_2026a"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U5L5_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "7412bdf0-6c1a-4d00-a252-958d78b13e30"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U5L5_CSD_PL_23_25_2026a"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_CSD_PL_23_2_2026a"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "96146716-c855-4e9e-b842-1702c8bda4b3"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_CSD_PL_23_2_2026a"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Projects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U5L5C2_CSD_PL_23_2_2026a"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "96146716-c855-4e9e-b842-1702c8bda4b3"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U5L5C2_CSD_PL_23_2_2026a"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "1b7af7e6-7a55-47b0-9821-0c018d72185d"
+      },
+      "level_keys": [
+        "-VPL-CSD-PILOT-summer22-navigation_CSD_PL_23_25_2026a"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit5_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit5_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U5SelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026a",
+        "script_level.level_keys": [
+          "CSD-U5SelfPaced-Lesson1Cert_CSD-PL-24_may2025_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "03fea41e-e9a6-4f76-bf7d-2c2dc93de875"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "82513f2d-33d5-4be5-bea6-c478d5450842"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CI-LessonTypes-U5_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U5_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "82513f2d-33d5-4be5-bea6-c478d5450842"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "82513f2d-33d5-4be5-bea6-c478d5450842"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "e2ed0934-abbb-4a93-b188-ccb8c59a49ec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "6900db70-7b8d-47ad-a3af-928863ed1d8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "79ecc6a5-9849-414f-a126-ea7b24e8548c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "79ecc6a5-9849-414f-a126-ea7b24e8548c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "f3db39aa-798f-469f-a88a-d12379260d78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "f3db39aa-798f-469f-a88a-d12379260d78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "60584308-7be9-4cd4-a3c4-ae24aedb154e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "011d1905-b289-438d-97ab-c1d52d86421a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_CSD_PL_23_2_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_CSD_PL_23_2_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "011d1905-b289-438d-97ab-c1d52d86421a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U4-DecryptionPractice_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-U4-DecryptionPractice_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "011d1905-b289-438d-97ab-c1d52d86421a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "c664ba3c-17b9-4cf4-80fd-d62081f36d92"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_U5SelfPaced_Lesson2WrapUp_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson2WrapUp_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "c664ba3c-17b9-4cf4-80fd-d62081f36d92"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod5-lesson3-overview_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-overview_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "213faa14-50d7-4d09-b71c-7b9d7b54318d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod5-lesson3-PSPwithData_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-PSPwithData_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 Pizza_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 Pizza_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U5-PizzaPartyProblem_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-U5-PizzaPartyProblem_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod5-InterpretingData_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-InterpretingData_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod5-lesson3-DataDecisions_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson3-DataDecisions_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 Netflix Data Video_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 Netflix Data Video_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "4afcdab1-156f-47d0-bb35-193834093f64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 test clean multi_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 test clean multi_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "c8e8af34-5e75-4aee-8dd5-9cc430dfbda5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_U5SelfPaced_Lesson3WrapUp_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson3WrapUp_25_2026a"
+        ],
+        "lesson.key": "Explore Data at a Large Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "c8e8af34-5e75-4aee-8dd5-9cc430dfbda5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U5L5_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U5L5_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "7412bdf0-6c1a-4d00-a252-958d78b13e30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_CSD_PL_23_2_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_CSD_PL_23_2_2026a"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "96146716-c855-4e9e-b842-1702c8bda4b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U5L5C2_CSD_PL_23_2_2026a",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U5L5C2_CSD_PL_23_2_2026a"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "96146716-c855-4e9e-b842-1702c8bda4b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "-VPL-CSD-PILOT-summer22-navigation_CSD_PL_23_25_2026a",
+        "script_level.level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_CSD_PL_23_25_2026a"
+        ],
+        "lesson.key": "Unit Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit5-2026a",
+        "activity_section.key": "1b7af7e6-7a55-47b0-9821-0c018d72185d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

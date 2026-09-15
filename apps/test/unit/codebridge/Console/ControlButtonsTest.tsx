@@ -117,6 +117,34 @@ describe('ControlButtons', () => {
     expect(getRunButton()).toBeEnabled();
   });
 
+  // Rendering Run and Stop as separate elements unmounted whichever had focus,
+  // dropping it to <body>, which a screen reader reads as the page title.
+  it('keeps focus on the same button when it becomes stop', async () => {
+    let finishProgram = () => {};
+    mockOnRun = jest.fn(
+      () => new Promise<void>(resolve => (finishProgram = resolve))
+    );
+    store.dispatch(setLoadedCodeEnvironment(true));
+    renderControlButtons();
+    const button = getRunButton();
+    button.focus();
+
+    await act(async () => {
+      button.click();
+    });
+
+    expect(hasStopButton()).toBe(true);
+    expect(screen.getByRole('button', {name: /stop/i})).toBe(button);
+    expect(button).toHaveFocus();
+
+    await act(async () => {
+      finishProgram();
+    });
+
+    expect(getRunButton()).toBe(button);
+    expect(button).toHaveFocus();
+  });
+
   it('keeps the run button on stop until the theater finishes playing', async () => {
     let finishPlayback = () => {};
     const playbackDone = new Promise<void>(resolve => {

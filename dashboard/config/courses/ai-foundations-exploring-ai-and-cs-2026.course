@@ -66,6 +66,19 @@
       }
     },
     {
+      "name": "AI Foundations & the AI Ready Skills Certification",
+      "url": "https://docs.google.com/document/d/1Pl6f3WpcbSDmJCLMOiCDHMaszkdb5qnjISfanb7lZyA/edit?usp=sharing",
+      "key": "ai_foundations_the_ai_ready_skills_certification",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "ai_foundations_the_ai_ready_skills_certification"
+      }
+    },
+    {
       "name": "AIF and CSD: What's the Difference?",
       "url": "\thttps://docs.google.com/document/d/1QyiVt5G6riTcO82XkcM3uJF4cvyvCuDzCYDNnvXHOiQ/edit?usp=sharing",
       "key": "aif_and_csd_what_s_the_difference_",

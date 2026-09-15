@@ -34,7 +34,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def simulate(views, growth, target):\n    days = 0\n    print(f\"Day {days}: {views} views\")\n\n    views += views * growth\n    days += 1\n    print(f\"Day {days}: {views} views\")\n\n    views += views * growth\n    days += 1\n    print(f\"Day {days}: {views} views\")\n\n\nsimulate(10, 10, 1000)\n",
+          "contents": "def simulate(views, growth, target):\n  days = 0\n  print(f\"Day {days}: {views} views\")\n\n  views += views * growth\n  days += 1\n  print(f\"Day {days}: {views} views\")\n\n  views += views * growth\n  days += 1\n  print(f\"Day {days}: {views} views\")\n\n\nsimulate(10, 10, 1000)\n",
           "folderId": "0",
           "active": true
         }
@@ -47,6 +47,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28 16:06:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:13:15 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28 16:06:10 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:13:15 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:15:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
