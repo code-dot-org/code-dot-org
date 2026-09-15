@@ -75,6 +75,286 @@
   font-size: 14px;
 }
 
+// ---- Author / list page ----
+
+%page-base {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-primary);
+  min-height: 100vh;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.authorPage {
+  @extend %page-base;
+}
+
+.authorHeader {
+  margin-bottom: 24px;
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+  }
+}
+
+.formSection {
+  background: var(--background-neutral-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid var(--borders-neutral-light);
+
+  h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-neutral-tertiary);
+    margin: 24px 0 8px;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  min-width: 0;
+
+  > span {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-neutral-secondary);
+  }
+
+  textarea,
+  input,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+textarea,
+input[type='text'] {
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  max-width: 100%;
+
+  &:focus {
+    outline: none;
+    border-color: var(--borders-brand-teal-primary);
+  }
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.checkpointList {
+  list-style: decimal inside;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkpointInput {
+  // The card opts into the design system's Dark theme via
+  // data-theme="Dark" on its wrapper, so all the semantic tokens below
+  // resolve to their dark-mode values automatically.  No need to reach
+  // for `*-inverse` / `*-octonary` slots by hand.
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  padding: 24px 28px;
+  border-radius: 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  box-shadow: 0 12px 32px -16px rgb(0 0 0 / 35%);
+  list-style-position: outside;
+  min-width: 0;
+  // Animate a small fade + slide-in when the parent carousel switches
+  // cards, so paging through checkpoints/slides feels horizontal rather
+  // than a hard swap.
+  animation: ai-lessons-carousel-slide 180ms ease-out;
+
+  > .field:last-child {
+    margin-bottom: 0;
+  }
+
+  // Field labels: small uppercase tag with an icon on the left.
+  .field > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-neutral-tertiary);
+  }
+
+  // Inputs and textareas inside the card resolve through the same
+  // dark-mode tokens, so they read coherently against the dark frame
+  // without us having to pick separate colours.
+  textarea,
+  input[type='text'] {
+    background: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+    border-color: var(--borders-neutral-primary);
+  }
+
+  // Title input is the marquee field on the card — give it some heft.
+  .titleField input[type='text'] {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 18px;
+  }
+
+  // Make the spacing under the title a bit looser than the rest.
+  .titleField {
+    margin-bottom: 22px;
+  }
+}
+
+.checkpointBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  text-transform: uppercase;
+}
+
+.sectionIcon {
+  font-size: 14px;
+  width: 14px;
+  text-align: center;
+}
+
+.sectionIconSuccess {
+  color: var(--text-success-primary);
+}
+
+// Trailing info-icon next to a section label.  Wrapped in <WithTooltip>;
+// keep it visually subtle so the label still reads first.
+.sectionInfo {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  font-size: 12px;
+  color: var(--text-neutral-tertiary);
+  cursor: help;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    color: var(--text-neutral-primary);
+  }
+}
+
+@keyframes ai-lessons-carousel-slide {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// One-at-a-time pager for the checkpoint cards and (within a panels
+// checkpoint) the slide cards.  The card itself is rendered inside; the
+// carouselNav row provides the prev/next + position indicator.
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.carouselNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--borders-neutral-light);
+}
+
+.carouselPosition {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-neutral-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.checkpointRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  strong {
+    flex: 0 0 auto;
+    color: var(--text-neutral-tertiary);
+  }
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.previewSection {
+  background: var(--background-neutral-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--borders-neutral-light);
+}
+
+.previewSummary {
+  h3 {
+    margin: 0 0 8px;
+  }
+  ol {
+    padding-left: 24px;
+    li {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.codeBlock {
+  background: var(--background-neutral-octonary);
+  color: var(--text-neutral-white-fixed);
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  overflow: auto;
+  max-height: 360px;
+}
+
 // ---- Student page ----
 
 .studentPage {
