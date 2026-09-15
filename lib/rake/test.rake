@@ -677,7 +677,7 @@ def run_playwright_suite(suite, env: {})
   summary = playwright_results_summary(File.join(e2e_dir, "test-results#{suffix}", 'results.json'))
 
   pass_fail_line = playwright_pass_fail_summary(summary, duration)
-  qualifier = suite == :eyes ? ' (warning only)' : ''
+  qualifier = suite == :eyes ? ' (non-blocking)' : ''
 
   rollup = "#{passed ? '✅' : '❌'} #{label}#{qualifier}: #{pass_fail_line}"
   rollup += %( <a href="#{report_url}">HTML report</a>.) if report_url
