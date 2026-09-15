@@ -131,6 +131,19 @@ def test_a_handler_can_count_its_own_presses(monkeypatch):
   ]
 
 
+def test_an_empty_answer_ends_start(monkeypatch):
+  # Stop answers a waiting program with an empty id rather than terminating the
+  # interpreter, so start() has to return on it like any other "no event".
+  install_fake_bridge(monkeypatch, events=["go", ""])
+  presses = []
+
+  kiosk.add_button("go", "Press me", 5, 25)
+  kiosk.on_click("go", lambda: presses.append(1))
+  kiosk.start()
+
+  assert presses == [1]
+
+
 def test_a_press_with_no_handler_is_ignored(monkeypatch):
   install_fake_bridge(monkeypatch, events=["go"])
 

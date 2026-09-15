@@ -30,3 +30,12 @@ def test_wait_for_event_returns_what_the_host_sent(monkeypatch):
   monkeypatch.setitem(sys.modules, "_kiosk_bridge", fake_bridge)
 
   assert bridge.wait_for_event() == "go"
+
+
+def test_an_empty_answer_reports_no_event(monkeypatch):
+  # How Stop ends a program it caught waiting, without restarting Pyodide.
+  fake_bridge = types.ModuleType("_kiosk_bridge")
+  fake_bridge.waitForEvent = lambda: ""
+  monkeypatch.setitem(sys.modules, "_kiosk_bridge", fake_bridge)
+
+  assert bridge.wait_for_event() is None

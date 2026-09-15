@@ -6,6 +6,7 @@ import {
   getSystemError,
   getSystemMessage,
 } from '@codebridge/Console/MessageHelpers';
+import {MiniApps} from '@codebridge/constants';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
@@ -165,6 +166,8 @@ const handlePyodideMessage = (data: PyodideMessage) => {
       writeConsoleMessage(message);
       break;
     case 'run_complete': {
+      // A program asked to end has ended, so there is nothing left to terminate.
+      clearParkedStopTimer();
       // Write a blank line to the console if we are not on a neighborhood level (which handles
       // this for us).
       if (!outputToNeighborhood) {
@@ -319,6 +322,9 @@ const asyncRun = (() => {
 
     // Make sure the sandbox iframe has loaded and is ready to receive messages.
     await pyodideSandboxReadyPromise;
+    // A run starting is the previous one being over, however it ended. Leaving
+    // the timer armed would let it terminate this run instead.
+    clearParkedStopTimer();
     // Reset error state
     getStore().dispatch(setHasError(false));
     outputToNeighborhood = !!shouldOutputToNeighborhood;
@@ -350,6 +356,41 @@ const asyncRun = (() => {
   };
 })();
 
+// Answering a parked kiosk request with an empty id asks the program to end.
+// No element id is ever empty -- the kiosk package refuses one -- so a program
+// cannot mistake this for a press.
+const KIOSK_STOP_EVENT = '';
+
+// How long to let a program that was asked to end finish before terminating it
+// anyway. A press handler that loops forever never reaches the next wait, so
+// the request we answered is the last thing it does that we can see.
+const PARKED_STOP_TIMEOUT_MS = 2000;
+
+let parkedStopTimer: number | null = null;
+
+const clearParkedStopTimer = () => {
+  if (parkedStopTimer !== null) {
+    window.clearTimeout(parkedStopTimer);
+    parkedStopTimer = null;
+  }
+};
+
+const isKioskLevel = () =>
+  getStore().getState().lab2Project.projectSources?.labConfig?.miniApp?.name ===
+  MiniApps.Kiosk;
+
+const restartWebWorker = () => {
+  clearParkedStopTimer();
+  callbacks = {};
+  pyodideSandboxIframe.contentWindow?.postMessage(
+    {type: ToPyodideSandboxMessage.RESTART_WEB_WORKER},
+    sandboxOrigin()
+  );
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .incrementCounter('PythonLab.PyodideRestarted');
+};
+
 const restartPyodideIfProgramIsRunning = () => {
   // Only report stopping if the user was shown a running program. That outlasts
   // the run itself for some programs -- the neighborhood keeps animating after
@@ -364,18 +405,26 @@ const restartPyodideIfProgramIsRunning = () => {
     consoleManager?.writeConsoleMessage('');
   }
 
-  // Only restart if there are pending callbacks, as that means the sandbox is currently
-  // running a program.
-  if (Object.keys(callbacks).length > 0) {
-    callbacks = {};
-    pyodideSandboxIframe.contentWindow?.postMessage(
-      {type: ToPyodideSandboxMessage.RESTART_WEB_WORKER},
-      sandboxOrigin()
-    );
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('PythonLab.PyodideRestarted');
+  // Pending callbacks are what tell us the sandbox is currently running a program.
+  if (Object.keys(callbacks).length === 0) {
+    return;
   }
+
+  // A kiosk program waiting for a press is parked on a request we are holding
+  // open, not busy on the CPU, so answering it lets the program end on its own
+  // and leaves the interpreter loaded. Restarting instead would reload pyodide
+  // and its packages before the next run -- and Stop is how every kiosk program
+  // ends, not an exceptional way out of one.
+  if (isKioskLevel() && lastInputId !== '') {
+    sendInput(KIOSK_STOP_EVENT);
+    parkedStopTimer = window.setTimeout(
+      restartWebWorker,
+      PARKED_STOP_TIMEOUT_MS
+    );
+    return;
+  }
+
+  restartWebWorker();
 };
 
 const sendInput = (value: string): void => {

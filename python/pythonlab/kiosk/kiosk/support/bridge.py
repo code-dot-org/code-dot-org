@@ -19,11 +19,15 @@ def publish(scene_json):
 def wait_for_event():
   """Block until someone presses a button, and return that button's id.
 
-  Returns None where there is no page to press anything, which is what lets
-  start() return instead of looping forever under pytest.
+  Returns None when no press is coming, which is what lets start() stop
+  looping. That happens two ways: the host answers with an empty id to end a
+  program that Stop caught waiting, and outside Pyodide there is no page to
+  press anything at all.
   """
   try:
     import _kiosk_bridge
   except ImportError:
     return None
-  return _kiosk_bridge.waitForEvent()
+  # An element id is never empty -- add_button and add_label refuse one -- so an
+  # empty answer can only be the host asking the program to end.
+  return _kiosk_bridge.waitForEvent() or None

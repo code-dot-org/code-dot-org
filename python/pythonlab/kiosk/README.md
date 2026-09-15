@@ -59,8 +59,14 @@ reason to.
 
 `start()` publishes the screen and then blocks. Each time a button is pressed
 it runs that button's handler and publishes whatever the handler changed. It
-does not return on its own: the student ends the program with the Stop button,
-which restarts the Pyodide worker.
+does not return on its own: the student ends the program with the Stop button.
+
+Stop does not terminate the interpreter. A program waiting for a press is
+parked on a request the host is holding open, so Stop answers that request with
+an empty id, `wait_for_event()` reports no event, and `start()` returns like any
+other function. The interpreter stays loaded, which is what keeps the next Run
+from reloading Pyodide and its packages. A handler that loops forever never
+reaches the next wait, and the host falls back to terminating the worker.
 
 An exception raised inside a handler propagates out of `start()` and ends the
 program, the same as an exception anywhere else.
@@ -74,8 +80,9 @@ Under Pyodide's `jsglobals: {}` nothing else reaches the browser.
   web worker registers. The host posts the scene to the page, which draws it.
 - `wait_for_event()` calls `_kiosk_bridge.waitForEvent`, which blocks on a
   synchronous request that a service worker answers when someone presses a
-  button. The answer is that button's id. This is the same round trip that
-  makes `input()` work; see `apps/src/pythonlab/inputServiceWorker.js`.
+  button. The answer is that button's id, or an empty id when Stop is asking the
+  program to end. This is the same round trip that makes `input()` work; see
+  `apps/src/pythonlab/inputServiceWorker.js`.
 
 In any other interpreter the module is absent: publishing does nothing and
 `wait_for_event()` returns `None`, which is what lets `start()` return and the
