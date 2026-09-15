@@ -147,19 +147,29 @@ export class BlockImageField extends CdoFieldAnimationDropdown {
 
 /**
  * Refresh every costume dropdown's thumbnail, so blocks rendered before an
- * image was trimmed pick up the trim.
+ * image was trimmed pick up the trim. The flyout's blocks too: a flyout-only
+ * toolbox builds them at injection, before any image has loaded, so a
+ * character set's field otherwise keeps showing the whole sheet.
  */
 export function refreshAnimationDropdownThumbnails(): void {
-  const workspace = Blockly.getMainWorkspace?.();
+  const workspace: BlocklyCore.WorkspaceSvg | undefined =
+    Blockly.getMainWorkspace?.();
   if (!workspace) {
     return;
   }
-  workspace.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
-    block.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        if (field instanceof CdoFieldAnimationDropdown) {
-          field.refreshSelectedOption();
-        }
+  const flyouts = [workspace.getFlyout(), workspace.getToolbox()?.getFlyout()];
+  const workspaces = [
+    workspace,
+    ...flyouts.map(flyout => flyout?.getWorkspace()),
+  ];
+  workspaces.forEach(ws => {
+    ws?.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
+      block.inputList.forEach(input => {
+        input.fieldRow.forEach(field => {
+          if (field instanceof CdoFieldAnimationDropdown) {
+            field.refreshSelectedOption();
+          }
+        });
       });
     });
   });

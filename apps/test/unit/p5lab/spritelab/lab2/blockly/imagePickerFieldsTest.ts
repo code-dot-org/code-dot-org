@@ -11,6 +11,7 @@ jest.mock('@cdo/apps/p5lab/redux/animationList', () => ({
 import {
   BlockImageField,
   CostumeField,
+  refreshAnimationDropdownThumbnails,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields';
 
 // Newest-first, as Sprite Lab keeps it: 'hero' was made first, 'rival'
@@ -43,5 +44,33 @@ describe('image picker fields', () => {
 
   it('defaults a fresh block field to the newest block', () => {
     expect(BlockImageField.fromJson({}).getValue()).toBe('"brick"');
+  });
+
+  // A flyout-only toolbox builds its blocks at injection, before images
+  // load, so the refresh must reach the flyout's workspace as well.
+  it('refreshes fields in the main workspace and both flyouts', () => {
+    const fields = [
+      CostumeField.fromJson({}),
+      CostumeField.fromJson({}),
+      CostumeField.fromJson({}),
+    ];
+    const spies = fields.map(field =>
+      jest.spyOn(field, 'refreshSelectedOption').mockImplementation(() => {})
+    );
+    const workspaceOf = (field: unknown) => ({
+      getAllBlocks: () => [{inputList: [{fieldRow: [field]}]}],
+    });
+    const flyoutOf = (field: unknown) => ({
+      getWorkspace: () => workspaceOf(field),
+    });
+    (globalThis as {Blockly?: unknown}).Blockly = {
+      getMainWorkspace: () => ({
+        ...workspaceOf(fields[0]),
+        getFlyout: () => flyoutOf(fields[1]),
+        getToolbox: () => ({getFlyout: () => flyoutOf(fields[2])}),
+      }),
+    };
+    refreshAnimationDropdownThumbnails();
+    spies.forEach(spy => expect(spy).toHaveBeenCalledTimes(1));
   });
 });
