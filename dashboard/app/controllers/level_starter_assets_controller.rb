@@ -27,6 +27,8 @@ class LevelStarterAssetsController < ApplicationController
     return head :not_found if starter_assets.nil_or_empty?
 
     uuid_name = starter_assets[friendly_name]
+    return head :not_found if uuid_name.blank?
+
     get_file_and_send(uuid_name)
   end
 
