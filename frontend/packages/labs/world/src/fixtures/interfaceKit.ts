@@ -22,6 +22,20 @@
 // BUILT BY IMPORTING rather than by listing files. Every one of these actors
 // brings rules, and one brings another actor; hand-listing them is a list to
 // forget, and `importStockActor` already walks both (`actors/importStockActor`).
+//
+// ON A PHONE-SHAPED SCREEN. An interface is the one kind of world whose
+// shape is not a level's, and a form on a square window looks like a game
+// with a form in it. The world says `set size of view` (specs/VIEWPORT.md)
+// and the pane takes that shape — which is also the one place in the library
+// a world declares a view that is not the default, so the map editor, the
+// backdrop and the driver all get exercised on a window that is not square.
+//
+// The width is kept at the standard ten tiles and only the height grows,
+// because that is what the actors were sized to: a Speech Box is 280 wide
+// and everything is centred on 160. Eighteen tall is sixteen by nine within
+// a tile (320 by 576, against 320 by 569), and the map is said to be the
+// same, so the level is exactly one screen and nothing reads a map that is
+// shorter than its window.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -71,6 +85,15 @@ const add = (path: string, rows: object[]) => ({
   },
 });
 
+/** The screen, in tiles: the standard width, and a phone's height. */
+export const PORTRAIT = {columns: 10, rows: 18};
+
+/** `set size of ⟨map|view⟩ to x ⟨columns⟩ y ⟨rows⟩ tiles`. */
+const sized = (what: 'map' | 'view') => ({
+  type: `world_set_${what}_size`,
+  inputs: {X: number(PORTRAIT.columns), Y: number(PORTRAIT.rows)},
+});
+
 /** Chain top-level rows under the world block. */
 const chain = (rows: object[]) =>
   rows.reduceRight((next, row) => ({...row, next: {block: next}}));
@@ -86,6 +109,10 @@ const MAIN_WORLD = JSON.stringify(
           fields: {NAME: 'Interface'},
           next: {
             block: chain([
+              // The screen's shape, first, so the rows below are placed
+              // on the window they are seen through.
+              sized('view'),
+              sized('map'),
               // A title, which is a Label doing the one thing a Label does.
               add('actors/label', [
                 placeAt(160, 30),
@@ -107,7 +134,9 @@ const MAIN_WORLD = JSON.stringify(
                 },
               ]),
               // …and the box that says the answer, a letter at a time.
-              add('actors/speechBox', [placeAt(160, 250)]),
+              // At the foot of the screen, where a phone keeps its replies;
+              // the form stays at the top, where the test's clicks land.
+              add('actors/speechBox', [placeAt(160, 500)]),
             ]),
           },
         },

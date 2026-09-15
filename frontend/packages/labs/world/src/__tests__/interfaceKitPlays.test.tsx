@@ -10,8 +10,10 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {PORTRAIT} from '../fixtures/interfaceKit';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
+import {TILE_SIZE} from '../runtime/viewport';
 
 import {compileProject} from './support/compileProject';
 
@@ -53,6 +55,20 @@ describe('the interface kit', () => {
     // The field ships EMPTY, where a Label ships with words: a field whose
     // first keystroke has to delete something is a field with a bug in it.
     expect(kit.says('actors/textInput')).toBe('');
+  });
+
+  it('is seen through a phone-shaped window, on a map of the same size', async () => {
+    // The one world in the library whose view is not the default: a form on
+    // a square screen looks like a game with a form in it. The map is said
+    // to match, so nothing reads a level shorter than its window.
+    const {world} = await open();
+    const view = world.viewSize();
+    expect(view.y).toBeGreaterThan(view.x);
+    expect({x: view.x, y: view.y}).toEqual({
+      x: PORTRAIT.columns * TILE_SIZE,
+      y: PORTRAIT.rows * TILE_SIZE,
+    });
+    expect(world.mapBounds()).toEqual(view);
   });
 
   it('takes the typing once the field is clicked, and moves the bar', async () => {
