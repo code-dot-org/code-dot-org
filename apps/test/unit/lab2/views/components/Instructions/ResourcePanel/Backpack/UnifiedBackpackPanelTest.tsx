@@ -15,6 +15,11 @@ import {
 
 const SAVE_BUTTON_TEXT = 'Save Sketch to Backpack';
 
+const mockShowToast = jest.fn();
+jest.mock('@code-dot-org/component-library/toast', () => ({
+  useToast: () => mockShowToast,
+}));
+
 const mockBackpackApi = {
   getFileLists: jest.fn(),
   addEventListener: jest.fn().mockReturnValue('listener-id'),
@@ -76,6 +81,7 @@ describe('UnifiedBackpackPanel', () => {
 
   beforeEach(() => {
     onClick = jest.fn();
+    mockShowToast.mockReset();
     mockBackpackApi.getFileLists.mockReset();
     mockBackpackApi.getFileLists.mockResolvedValue({});
     stubRedux();
@@ -100,6 +106,29 @@ describe('UnifiedBackpackPanel', () => {
       ['tree.png', 'house.png'],
       expect.any(Function)
     );
+  });
+
+  it('toasts what the save reports back', async () => {
+    const user = userEvent.setup();
+    renderPanel();
+
+    await waitFor(() => expect(saveButton()).toBeEnabled());
+    await user.click(saveButton());
+
+    const notify = onClick.mock.calls[0][1];
+    notify('info', 'Saving sketch.png to your Backpack...');
+    notify('success', 'sketch.png saved to your Backpack.');
+
+    expect(mockShowToast.mock.calls).toEqual([
+      [
+        'Saving sketch.png to your Backpack...',
+        {type: 'info', autoHideDuration: null},
+      ],
+      [
+        'sketch.png saved to your Backpack.',
+        {type: 'success', autoHideDuration: 4000},
+      ],
+    ]);
   });
 
   it('keeps the save button when the file list fails to load', async () => {

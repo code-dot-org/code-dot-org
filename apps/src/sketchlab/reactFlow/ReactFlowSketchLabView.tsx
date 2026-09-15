@@ -29,6 +29,7 @@ import {WorkspaceHeader} from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
@@ -221,13 +222,13 @@ function ReactFlowSketchLabViewInner({
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
       saveToBackpackButton: {
-        onClick: (fileList: string[], errorCallback: (error: string) => void) =>
+        onClick: (fileList: string[], notify: BackpackNotify) =>
           handleSaveToBackpack(
             reactFlow,
             saveBackpackApi,
             dialogControl,
             fileList,
-            errorCallback
+            notify
           ),
         text: 'Save Sketch to Backpack',
       },

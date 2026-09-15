@@ -13,12 +13,12 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import BackpackFileChip from './BackpackFileChip';
+import BackpackFileChip, {
+  SHOW_RECENTLY_ADDED_DURATION_MS,
+} from './BackpackFileChip';
 import BackpackMessage from './BackpackMessage';
 
 import moduleStyles from './backpack-panel.module.scss';
-
-const SHOW_RECENTLY_ADDED_DURATION_MS = 3000;
 
 interface BackpackPanelProps extends BackpackProps {
   openPanelCallback: () => void;
@@ -422,8 +422,10 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           className={moduleStyles.saveButton}
           disabled={actionInProgress || viewingOldVersion}
           onClick={() =>
-            saveToBackpackButton.onClick(fileList || [], (error: string) =>
-              addAlert('danger', error, false)
+            saveToBackpackButton.onClick(fileList || [], (type, message) =>
+              // Only a success clears itself; progress and errors stay until the
+              // next alert replaces them.
+              addAlert(type, message, type === 'success')
             )
           }
           type="button"
