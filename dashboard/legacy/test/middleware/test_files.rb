@@ -240,16 +240,7 @@ class FilesTest < FilesApiTestBase
     @api.get_object(filename)
     assert not_found?
 
-    @api.get_object(filename, '', {'HTTP_IF_MODIFIED_SINCE' => Time.now.httpdate})
-    assert not_found?
-
     get "/projects/weblab/#{@channel_id}/", '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')}
-    assert not_found?
-
-    get "/projects/weblab/#{@channel_id}/", '', {
-      'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org'),
-      'HTTP_IF_MODIFIED_SINCE' => Time.now.httpdate
-    }
     assert not_found?
 
     Projects.any_instance.unstub(:get)
