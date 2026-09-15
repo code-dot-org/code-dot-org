@@ -12,6 +12,14 @@ import './nodeShims';
 import {StrictMode} from 'react';
 import {z} from 'zod';
 
+import {
+  ApiClientProvider,
+  createApiClient,
+  createKyTransport,
+  refreshCsrfToken,
+  resolveCsrfToken,
+} from '@code-dot-org/core/api';
+
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
@@ -57,6 +65,17 @@ async function boot(): Promise<void> {
     await startMockWorker();
   }
 
+  const apiClient = createApiClient(
+    createKyTransport({
+      baseUrl: window.location.origin,
+      credentials: 'same-origin',
+      getCsrfToken: resolveCsrfToken,
+      kyOptions: {timeout: false},
+    }),
+  );
+  // gallery.html has no csrf-token meta tag; prime it the way HttpClient did.
+  await refreshCsrfToken(apiClient.transport);
+
   const container = document.getElementById('tutor-gallery-container')!;
   let tutorGalleryData: TutorGalleryData;
   try {
@@ -70,9 +89,11 @@ async function boot(): Promise<void> {
 
   createReactRoot(
     <StrictMode>
-      <DevPageChrome>
-        <ChallengeGallery tutorGalleryData={tutorGalleryData} />
-      </DevPageChrome>
+      <ApiClientProvider client={apiClient}>
+        <DevPageChrome>
+          <ChallengeGallery tutorGalleryData={tutorGalleryData} />
+        </DevPageChrome>
+      </ApiClientProvider>
     </StrictMode>,
     container,
   );
