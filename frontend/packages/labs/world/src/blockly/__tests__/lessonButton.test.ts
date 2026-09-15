@@ -56,10 +56,8 @@ describe('what a block was taught by', () => {
     expect(unlockNamedBy(block({RULE: 'Space'}))).toBeUndefined();
   });
 
-  it('names nothing for an actor the world defines itself', () => {
-    // `local:<block id>` is a kind declared inside a world — a real value this
-    // field holds, and not a file at all.
-    expect(unlockNamedBy(block({ACTOR: 'local:abc123'}))).toBeUndefined();
+  it('names nothing when nothing is chosen', () => {
+    expect(unlockNamedBy(block({ACTOR: ''}))).toBeUndefined();
   });
 
   it('names nothing for a block that names nothing', () => {

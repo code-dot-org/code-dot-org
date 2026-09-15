@@ -3,7 +3,6 @@ import {afterEach, describe, expect, it} from 'vitest';
 import {Blockly} from '@code-dot-org/blockly';
 
 import {addActorThumbnails, setActorThumbnails} from '../actorThumbnails';
-import {localActorValue} from '../localActors';
 import {
   actorFieldOptions,
   actorOptions,
@@ -21,26 +20,6 @@ afterEach(() => {
   setProjectActors([]);
   setActorThumbnails({});
 });
-
-/** A field whose workspace holds one `define actor` named `name`. */
-const fieldInWorldWith = (blockId: string, name: string) => {
-  const blocks = [
-    {
-      id: blockId,
-      type: 'world_actor',
-      getFieldValue: (f: string) => (f === 'NAME' ? name : undefined),
-    },
-    {id: 'w', type: 'world_world', getFieldValue: () => undefined},
-  ];
-  return {
-    getSourceBlock: () => ({
-      workspace: {
-        getTopBlocks: () => blocks,
-        getBlockById: (id: string) => blocks.find(b => b.id === id) ?? null,
-      },
-    }),
-  } as never;
-};
 
 const PIXEL = 'data:image/png;base64,AAAA';
 
@@ -121,30 +100,30 @@ describe('a live dropdown', () => {
   });
 
   it('names the value it holds once something explains it', () => {
-    // The reported bug: a `create ⟨actor⟩ in map` naming an actor defined
-    // further down the same world drew the FIRST actor's name. The value was
-    // right — the game ran with the right actor, and the menu opened on the
-    // right row — and only the label was wrong, because Blockly resolves it
-    // once, against the list as it was, and leaves it alone when it misses.
+    // The reported bug: a `create ⟨actor⟩ in map` naming an actor the list
+    // had not yet heard of drew the FIRST actor's name. The value was right —
+    // the game ran with the right actor, and the menu opened on the right row
+    // — and only the label was wrong, because Blockly resolves it once,
+    // against the list as it was, and leaves it alone when it misses.
     listed = [['Player', 'actors/player']];
     const dropdown = field();
     dropdown.setValue('actors/player');
     expect(dropdown.getText()).toBe('Player');
 
-    // Loaded before the `define actor` it names…
-    dropdown.setValue('local:blockId');
+    // Loaded before the actor file it names is listed…
+    dropdown.setValue('actors/blob');
     expect(dropdown.getText()).toBe('Player');
 
-    // …and read again once that block exists.
+    // …and read again once it is.
     listed = [
-      ['Blob', 'local:blockId'],
+      ['Blob', 'actors/blob'],
       ['Player', 'actors/player'],
     ];
     expect(dropdown.getText()).toBe('Blob');
   });
 
   it('keeps the name it had for a value nothing explains', () => {
-    // A value naming something genuinely gone. Showing the raw `local:…` or an
+    // A value naming something genuinely gone. Showing the raw value or an
     // empty chip would be worse than a stale name: the block still says what it
     // was set to, and the menu is where the truth is.
     listed = [['Player', 'actors/player']];
@@ -158,33 +137,10 @@ describe('a live dropdown', () => {
 });
 
 describe('actorFieldOptions', () => {
-  it('draws a world’s own actor with its picture', () => {
-    // The thumbnail registry is keyed by the TYPE a placed actor carries, and
-    // the dropdown stores `local:<block id>` — two different strings on
-    // purpose, since the value has to survive a rename and the type has to
-    // match what the running world stamps. Looking one up by the other found
-    // nothing at all, so a single-world project got a list of names beside a
-    // project's list of pictures.
-    addActorThumbnails({Coin: PIXEL});
-    const [option] = actorFieldOptions(fieldInWorldWith('a1', 'Coin'));
-
-    expect(option).toEqual([
-      {src: PIXEL, width: 24, height: 24, alt: 'Coin'},
-      localActorValue('a1'),
-    ]);
-  });
-
-  it('falls back to the name while no picture has arrived', () => {
-    // Thumbnails are rendered by the sandbox and turn up after the editor has
-    // drawn, so "no picture yet" is the ordinary first state and not an error.
-    const [option] = actorFieldOptions(fieldInWorldWith('a1', 'Coin'));
-    expect(option).toEqual(['Coin', localActorValue('a1')]);
-  });
-
   it('still keys a module actor by its path', () => {
     setProjectActors([['Player', 'actors/player']]);
     addActorThumbnails({'actors/player': PIXEL});
-    const [option] = actorFieldOptions(undefined);
+    const [option] = actorFieldOptions();
 
     expect(option).toEqual([
       {src: PIXEL, width: 24, height: 24, alt: 'Player'},

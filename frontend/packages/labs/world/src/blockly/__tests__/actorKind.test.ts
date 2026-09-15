@@ -11,7 +11,6 @@ import {describe, expect, it} from 'vitest';
 import {actorInputExtension, actorSubjectExtension} from '../actorInput';
 import {assembleWorldModule} from '../assembleActorModule';
 import {DOMAIN_BLOCKS} from '../domainBlocks';
-import {localActorValue, localActorVar} from '../localActors';
 
 /** A stand-in workspace: the top blocks, and lookup by id. */
 const workspace = (
@@ -30,10 +29,7 @@ const workspace = (
 };
 
 const WORLD = () =>
-  workspace([
-    {id: 'w1', type: 'world_world', name: 'Platform World'},
-    {id: 'a1', type: 'world_actor', name: 'Coin'},
-  ]);
+  workspace([{id: 'w1', type: 'world_world', name: 'Platform World'}]);
 
 /**
  * Generate the block, as plugged into `parentType`.
@@ -73,13 +69,6 @@ const emitSubject = (
 describe('any <kind>, in a handler’s subject socket', () => {
   // The TEMPLATE, so that registering a handler on it reaches the coins placed
   // later as well — the half of "every actor of this kind" a list cannot honour.
-  it('is the world’s own actor, by the variable that holds its template', () => {
-    const {code, imports} = emitSubject({ACTOR: localActorValue('a1')});
-
-    expect(code).toBe(localActorVar('Coin', 'a1'));
-    expect(imports).toEqual([]);
-  });
-
   it('is a module actor, imported like anything else that names one', () => {
     const {code, imports} = emitSubject({ACTOR: 'actors/coin'});
 
@@ -98,32 +87,12 @@ describe('any <kind>, anywhere else', () => {
     expect(imports).toEqual([]);
   });
 
-  it('asks for a world’s own actor by the type it was placed under', () => {
-    // A world's own actor is stamped with the id derived from its NAME, which
-    // is what `add actor` and `create … in map` register it as — not the block
-    // id the dropdown stores (blockly/localActors).
-    const {code} = emitValue({ACTOR: localActorValue('a1')});
-
-    expect(code).toBe('world.actors.ofType("Coin")');
-  });
-
   it('names no actors at all when it names nothing', () => {
-    // Nothing chosen, or a `define actor` deleted out from under it. It used to
-    // fall back to the block's own subject here, which was defensible while
-    // this block was mostly a hat's subject — and became a trap the moment it
-    // was a list's default source: `for each actor ⟨each⟩ in ⟨any ⟨…⟩⟩` would
-    // run its body exactly once, on `actor`, and look like a loop while doing
-    // it. No actors is the bargain every other unfinished dropdown makes.
     expect(emitValue({ACTOR: ''}).code).toBe('[]');
-    expect(emitValue({ACTOR: localActorValue('gone')}).code).toBe('[]');
   });
 
   it('still falls back to the subject on a hat', () => {
-    // Where the fallback was right and stays right: `when ⟨any …⟩ …` with no
-    // kind chosen is a handler on the actor the file is about, which is what a
-    // `.actor` file's hats mean anyway.
     expect(emitSubject({ACTOR: ''}).code).toBe('actor');
-    expect(emitSubject({ACTOR: localActorValue('gone')}).code).toBe('actor');
   });
 });
 
@@ -135,16 +104,13 @@ describe('assembleWorldModule', () => {
     // and never fire.
     const code = assembleWorldModule([
       {type: 'world_world', code: 'const world = mk();\nworld.loadMap(m);\n'},
-      {type: 'world_on_startsFalling', code: 'actor_Coin_a1.on(E, h);\n'},
-      {type: 'world_actor', code: 'const actor_Coin_a1 = mkActor();\n'},
+      {type: 'world_on_startsFalling', code: 'ActorsCoin.on(E, h);\n'},
     ]);
 
     expect(code).toBe(
-      'const localActors = {};\n' +
-        'const actor_Coin_a1 = mkActor();\n' +
-        'actor_Coin_a1.on(E, h);\n' +
+      'ActorsCoin.on(E, h);\n' +
         'const world = mk();\nworld.loadMap(m);\n' +
-        'export default world;\nexport {localActors};\n',
+        'export default world;\n',
     );
   });
 });

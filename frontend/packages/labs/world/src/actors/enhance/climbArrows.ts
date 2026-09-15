@@ -68,13 +68,10 @@ const CLIMBS = 'Climbing#ClimbsTrait';
 const KEYBOARD = 'Input#TakesKeyboardInputTrait';
 
 /** Which file holds this actor, and which of its roots defines it. */
-const fileOf = (target: EnhanceTarget) =>
-  target.block
-    ? {
-        path: `${target.path}.world`,
-        root: {type: 'world_actor', id: target.block},
-      }
-    : {path: `${target.path}.actor`, root: {type: 'world_actor'}};
+const fileOf = (target: EnhanceTarget) => ({
+  path: `${target.path}.actor`,
+  root: {type: 'world_actor'},
+});
 
 /** Whether a `use trait` for `trait` is already in this actor's chain. */
 const wears = (
@@ -103,15 +100,7 @@ const climbing = (action: string): BlockJson => ({
 });
 
 /** Who the hat is about: this actor's file, or one kind among a world's. */
-const subjectOf = (target: EnhanceTarget) =>
-  target.block
-    ? {
-        block: {
-          type: 'world_actor_kind',
-          fields: {ACTOR: `local:${target.block}`},
-        },
-      }
-    : undefined;
+const subjectOf = () => undefined;
 
 /**
  * One handler: a key, an edge, and the climbing block it calls.
@@ -125,12 +114,12 @@ const subjectOf = (target: EnhanceTarget) =>
  * whose file it is in, and named for a world, where it is not.
  */
 const handler = (
-  target: EnhanceTarget,
+  _target: EnhanceTarget,
   edge: 'Presses' | 'Releases',
   key: string,
   action: string,
 ): BlockJson => {
-  const subject = subjectOf(target);
+  const subject = subjectOf();
   return {
     type: `world_on_Input_${edge}Event`,
     fields: {FILTER0: key},
@@ -169,7 +158,7 @@ export const climbArrowsHandlers = (
  * "somebody presses up" is not the question — "does THIS kind" is.
  */
 const startsAClimb =
-  (target: EnhanceTarget) =>
+  () =>
   (block: BlockJson): boolean => {
     if (
       block.type !== 'world_on_Input_PressesEvent' ||
@@ -179,13 +168,10 @@ const startsAClimb =
     }
     const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
       ?.block?.fields?.ACTOR;
-    return target.block
-      ? named === `local:${target.block}`
-      : named === undefined;
+    return named === undefined;
   };
 
-const reads = (contents: string, target: EnhanceTarget): boolean =>
-  hasRoot(contents, startsAClimb(target));
+const reads = (contents: string): boolean => hasRoot(contents, startsAClimb());
 
 /** Rewrite one file's contents, leaving the rest of the project alone. */
 const edit = (
@@ -214,7 +200,7 @@ export const climbArrowsEnhancement: Enhancement = {
     return (
       wears(contents, CLIMBS, root) &&
       wears(contents, KEYBOARD, root) &&
-      reads(contents, target)
+      reads(contents)
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
@@ -240,7 +226,7 @@ export const climbArrowsEnhancement: Enhancement = {
           ]);
         }
       }
-      if (!reads(next, target)) {
+      if (!reads(next)) {
         // Beside the definition rather than under it: a hat takes no previous
         // connection, and `DisableOrphansPlugin` grays out a top-level block
         // that has one along with everything below it.

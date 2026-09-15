@@ -32,10 +32,10 @@ export const RIDES = 'Carrying#RidesTrait';
 /** Whether the actor at `path` wears `trait` — the passenger's half. */
 const rider = (
   source: MultiFileSource,
-  target: EnhanceTarget,
+  _target: EnhanceTarget,
   answer: string,
 ): boolean => {
-  const passenger = targetOf(answer, target);
+  const passenger = targetOf(answer);
   const {path, root} = fileOf(passenger);
   const id = fileIdAt(source, path);
   return wears(id ? source.files[id].contents : '', RIDES, root);
@@ -74,7 +74,7 @@ export const carriesEnhancement: Enhancement = {
       );
     }
 
-    const passenger = fileOf(targetOf(answer, target));
+    const passenger = fileOf(targetOf(answer));
     const passengerId = fileIdAt(current, passenger.path);
     if (passengerId !== undefined) {
       current = edit(current, passengerId, contents =>

@@ -162,16 +162,6 @@ import {
   layerPlan,
 } from './layers';
 import {lessonFlyoutButton} from './lessonFlyoutButton';
-import {
-  actorIdFromName,
-  definesRule,
-  definesWorld,
-  definingActorRoot,
-  localActorBlockId,
-  localActorFor,
-  localActorVar,
-  workspaceOfBlock,
-} from './localActors';
 import {localizeText} from './localizeBlocks';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {instanceId, type MapPlacement} from './mapPlacements';
@@ -199,11 +189,7 @@ import {
   soundOptionsExtension,
   spriteOptions,
 } from './moduleOptions';
-import {
-  ownPropertyCodeName,
-  ownPropertyDeclarationFor,
-  type OwnMeta,
-} from './ownProperties';
+import {type OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
 import {
@@ -274,6 +260,7 @@ import {
   type ShadowSpec,
 } from './valueShadow';
 import {isRedeclaration} from './variableScope';
+import {definesRule, workspaceOfBlock} from './workspaceRoots';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
@@ -326,22 +313,7 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
   if (modulePath) {
     const selfModule = (generator as {__ruleModule?: string} | undefined)
       ?.__ruleModule;
-    // …and an actor a WORLD defines carries `worlds/main#thatBlock`, which is
-    // the same module with the declaring block on the end (`ownProperties`).
-    // Compared whole it never matches, so the world imported a property it
-    // declares itself, from a path nothing resolves.
-    const [owning, definingBlock] = modulePath.split('#');
-    // …and when there IS a block on the end, the name is the hoisted one the
-    // definition emitted: a world-defined actor's property is a `const` at the
-    // world module's top level, named apart from every other local actor's
-    // (`ownPropertyCodeName`). Its block TYPE still carries the plain name,
-    // which is the one a reader sees.
-    if (definingBlock && ref.own) {
-      return ownPropertyCodeName(ref.exportName, {
-        actorName: ref.ruleName ?? '',
-        blockId: definingBlock,
-      });
-    }
+    const owning = modulePath;
     // IMPORTED UNDER THE NAME ITS BLOCK TYPE CARRIES, not under its own.
     //
     // An export name says what a member is called and nothing about who
@@ -477,75 +449,11 @@ const memberKey = memberLocalName;
  * points at a file where "actorsplayer" is a mangle.
  */
 /**
- * Every `define property` chained under a `define actor`, as declarations.
- *
- * Read off the BLOCKS, because this runs while generating and there is no
- * metadata pass reaching into a block scope. `ownPropertyDeclarationFor` is
- * shared with the assembler so the two agree on the name a `get` block will
- * reach for.
- */
-/**
- * Whether a block that speaks of `actor` has one to speak of.
- *
- * In an `.actor` file the module has `const actor = …` at the top and the
- * answer is always yes. In a WORLD, `actor` is bound only inside the block a
- * `define actor` opens — so a `define drawing` or an `each frame` chained
- * under `define world` instead would emit a call on a name that is not there,
- * and the module would throw as it loaded, taking the whole project with it.
- *
- * Both generators ask, and write nothing when the answer is no. Silence is not
- * a good outcome, but it is the one the lab gives a misplaced block everywhere
- * else — a hat in the wrong file, a `use trait` outside an actor — and it is a
- * great deal better than a project that will not start.
- */
-const hasActorInScope = (block: Block): boolean => {
-  if (!definesWorld(block.workspace)) {
-    return true;
-  }
-  for (let at: Block | null = block; at; at = at.getParent?.() ?? null) {
-    if (at.type === 'world_actor') {
-      return true;
-    }
-  }
-  return false;
-};
-
-/**
  * A point's second axis, which is the one type whose default takes two fields.
  * Named here because it is read where a declaration is generated and written
  * where `define property` is built, a few thousand lines apart.
  */
 const DEFAULT_Y_FIELD = 'DEFAULT_Y';
-
-/**
- * The `const`s for everything a world-defined actor declares.
- *
- * `on` is the actor's own variable, because these are emitted at the world
- * MODULE's top level rather than inside the block its body generates into —
- * see `world_actor` below for why.
- */
-const ownDeclarationsIn = (
-  block: Block,
-  on: {variable: string; actorName: string},
-): string => {
-  let out = '';
-  for (let at = block.getNextBlock?.(); at; at = at.getNextBlock?.()) {
-    if (at.type !== 'world_rule_property') {
-      continue;
-    }
-    out += ownPropertyDeclarationFor(
-      {
-        name: at.getFieldValue('NAME') ?? '',
-        type: at.getFieldValue('TYPE') ?? '',
-        default: at.getFieldValue('DEFAULT'),
-        defaultY: at.getFieldValue(DEFAULT_Y_FIELD),
-        access: at.getFieldValue('ACCESS') ?? '',
-      },
-      {...on, blockId: block.id},
-    );
-  }
-  return out;
-};
 
 /**
  * A module path as a block-type segment: `actors/player` → `ActorsPlayer`.
@@ -630,8 +538,7 @@ const worldActor = defineBlock({
   // not nested in a `do` input.
   nextStatement: true,
   // …and a wand: the shelf of things this actor could be given
-  // (extensions/enhanceButton), whether it has a file of its own or is one a
-  // world defines.
+  // (extensions/enhanceButton).
   extensions: [enhanceButtonExtension],
   style: 'setup_blocks',
   tooltip: 'Define an actor: its traits, properties, and event handlers.',
@@ -651,38 +558,6 @@ const worldActor = defineBlock({
       const built = `new WorldLab.ActorBuilder({id: ${str(
         id_from_name(name),
       )}, name: ${str(name)}})`;
-      // In a `.world` file this actor is the world's own: no export, no module,
-      // and a name of its own so several can coexist (blockly/localActors). Its
-      // body still speaks of `actor`, so the chain runs in a block scope where
-      // that is what the builder is called — the same shape `add actor` uses.
-      if (definesWorld(block.workspace)) {
-        const variable = localActorVar(name, block.id);
-        return (
-          `const ${variable} = ${built};\n` +
-          // Its own properties, declared BESIDE the actor rather than inside
-          // the block its body opens. They were inside it, which is where its
-          // own drawing reads them from — and nowhere else in the file could:
-          // `set ⟨id⟩ of ⟨this actor⟩` in the world's own body, or in a
-          // handler, is a block the palette offers and the module threw on as
-          // it loaded, `ReferenceError: IdProperty is not defined`. That is
-          // what made `memory/actor-state` the one lesson with two files
-          // (specs/PROGRESSION.md).
-          //
-          // At the module's top level the name is unique per declaring actor
-          // (`ownPropertyName`), so two local actors may both declare
-          // `subject`; the body still sees it, because a block scope can read
-          // what encloses it.
-          `${ownDeclarationsIn(block, {variable, actorName: name})}` +
-          `{\nconst actor = ${variable};\n` +
-          `${nextChainCode(block, generator)}}\n` +
-          // Registered under the type a placed one carries, so the module can
-          // hand its own templates out (`export {localActors}`) — which is how
-          // the map editor introspects an actor that is not a module
-          // (MAPS.md §5). Two actors of the same name share a key, as they
-          // already share what `is a` can tell about them.
-          `localActors[${str(actorIdFromName(name))}] = ${variable};\n`
-        );
-      }
       // The `export default actor;` and the floating event handlers are appended
       // by the generator's assembly step (BlocklyGenerator), not here — events
       // are their own top-level blocks, so this block only builds the actor.
@@ -795,21 +670,6 @@ const worldActsLike = defineBlock({
       // Nothing chosen. The silence every other unfinished dropdown keeps.
       if (!actor) {
         return '';
-      }
-      // A CO-LOCATED ACTOR, which is a `const` in this same module rather than
-      // a file to import. Its declaration has to come first, which is the
-      // assembler's business: `assembleWorldModule` orders a world's own
-      // actors so a parent is bound before a child reads it.
-      const localId = localActorBlockId(actor);
-      if (localId) {
-        const local = localActorFor(block, actor);
-        // A definition since deleted, or this actor naming itself — which is
-        // not a shadowing but a `const` reading itself as it is declared. The
-        // dropdown offers neither; a saved file may hold either.
-        if (!local || localId === definingActorRoot(block)?.id) {
-          return '';
-        }
-        return `actor.actsLike(${local.variable});\n`;
       }
       // ITSELF, which the dropdown does not offer and a saved file may hold —
       // an actor renamed into the place of the one it acted like, say. The
@@ -1246,20 +1106,13 @@ const defineEventBlock = (event: EventMeta) => {
       // Pictures where the project has them, names where it does not — and
       // `(any)` is always a word, since "no filter" has nothing to draw.
       //
-      // THE FIELD IS PASSED, and it is the whole of whether this dropdown has
-      // anything in it. A world's own `define actor` kinds are found through
-      // the field's workspace (`localActorOptions`); without it the list is the
-      // project's `.actor` FILES alone — so in a world that defines its actors
-      // inline, which is every lesson and the starter, the filter offered
-      // nothing but `(any)` and the placeholder beside it.
-      //
-      // …and the placeholder goes. `orNone` adds a row to an empty list to say
+      // The placeholder goes. `orNone` adds a row to an empty list to say
       // there is nothing to choose, and its value is the empty string — which
       // is what `(any)` already means here. Two entries doing one job, one of
       // them reading as a kind of actor that a game might have.
-      const options = (own?: FieldDropdown): DropdownOptions => [
+      const options = (): DropdownOptions => [
         ANY_CHOICE,
-        ...actorFieldOptions(own).filter(([, value]) => value !== ''),
+        ...actorFieldOptions().filter(([, value]) => value !== ''),
       ];
       args0.push({type: 'field_dropdown', name: field, options: options()});
       extensions.push(
@@ -1321,12 +1174,11 @@ const defineEventBlock = (event: EventMeta) => {
           .join('');
         // A kind filter tests what the carried actor IS, where an enum filter
         // tests what the carried value equals — the same guard shape over the
-        // same `.type` that `is a` compares (blockly/localActors stamps a
-        // world's own actors with their id rather than a module path).
+        // same `.type` that `is a` compares: the module path the world stamps
+        // on each placed actor.
         const kindGuards = kinds
           .map(field => block.getFieldValue(field))
           .filter(chosen => chosen)
-          .map(chosen => localActorFor(block, chosen)?.type ?? chosen)
           .map(type => `  if (eventValue?.type !== ${str(type)}) return;\n`)
           .join('');
         const body = guards + kindGuards + nextChainCode(block, generator);
@@ -1809,14 +1661,9 @@ const typedValueCode = (
       return read(names.value) || '[]';
     case 'kind':
       // A FIELD, like an enum's, so it is read rather than pulled through a
-      // socket — and resolved the way `is a` and `how many ⟨Coin⟩ in` resolve
-      // one: a world's own `define actor` is stamped with its id, a project
-      // template with its module path. What the rule is handed is that string,
-      // which is what `kind of ⟨actor⟩` answers with.
-      return str(
-        localActorFor(block, block.getFieldValue(names.value) ?? '')?.type ??
-          String(block.getFieldValue(names.value) ?? d ?? ''),
-      );
+      // socket — and it holds the module path the world stamps on each placed
+      // actor, which is what `kind of ⟨actor⟩` answers with.
+      return str(String(block.getFieldValue(names.value) ?? d ?? ''));
     case 'number':
       return read(names.value) || String(Number(d ?? 0));
     default:
@@ -4209,14 +4056,13 @@ const worldActorKind = defineBlock({
   generator: {
     javascript(block, generator) {
       const actor = block.getFieldValue('ACTOR');
-      const local = localActorFor(block, actor);
       // Two compilations of one idea (specs/ACTOR_LISTS.md). Plugged into a
       // handler's subject socket this is the TEMPLATE, so registering on it
       // reaches the coins placed later as well; anywhere else it is the coins
       // there are, which is what a statement acts on and a value reads.
       const parent = block.outputConnection?.targetConnection?.getSourceBlock();
       const isSubject = Boolean(parent?.type.startsWith('world_on_'));
-      // A definition since deleted, or nothing chosen at all.
+      // Nothing chosen at all.
       //
       // On a HAT the answer is the hat's own subject: `when ⟨any …⟩ is
       // clicked` with the kind missing is a handler registered on the actor
@@ -4228,21 +4074,16 @@ const worldActorKind = defineBlock({
       // the subject — a loop that looks like a loop and is not. Emitting none
       // is the bargain every other unfinished dropdown here makes
       // (`world_actors_with_trait`, `use trait`): nothing happens, visibly.
-      if (!actor || (localActorBlockId(actor) && !local)) {
+      if (!actor) {
         return [isSubject ? 'actor' : '[]', Order.ATOMIC] as [string, number];
       }
       if (!isSubject) {
-        // The world stamps each placed actor with its type: a module path for a
-        // project actor, the id `add actor` gave a world's own. Either way it
-        // is a string, so nothing has to be imported to ask for them.
-        const type = local?.type ?? actor;
-        return [`world.actors.ofType(${str(type)})`, Order.MEMBER] as [
+        // The world stamps each placed actor with its type, the module path,
+        // so nothing has to be imported to ask for them.
+        return [`world.actors.ofType(${str(actor)})`, Order.MEMBER] as [
           string,
           number,
         ];
-      }
-      if (local) {
-        return [local.variable, Order.ATOMIC] as [string, number];
       }
       addImport(
         generator,
@@ -4824,9 +4665,9 @@ const worldCountOfKind = defineBlock({
     javascript(block, generator) {
       const list = actorTarget(block, generator, Order.NONE, 'LIST');
       const chosen = block.getFieldValue('TYPE');
-      // The same resolution `world_is_a` does: a world's own `define actor` is
-      // stamped with its id, a project template with its module path.
-      const modulePath = localActorFor(block, chosen)?.type ?? chosen;
+      // The same resolution `world_is_a` does: the module path the world
+      // stamps on each placed actor.
+      const modulePath = chosen;
       return [
         `WorldLab.all(${list.code}).filter(each => each.type === ${str(
           modulePath,
@@ -5290,18 +5131,9 @@ const worldNearPlaceOfKind = defineBlock({
       const distance =
         generator.valueToCode(block, 'DISTANCE', Order.NONE) || '0';
       const place = generator.valueToCode(block, 'PLACE', Order.NONE) || '0';
-      // Nothing chosen at all is `(any)`, and asking the resolver about it
-      // would be asking whether the empty string names a local actor.
       const actor = block.getFieldValue('ACTOR');
-      const local = actor ? localActorFor(block, actor) : undefined;
-      // A definition since deleted names nothing, and finds nothing — the
-      // bargain every unfinished dropdown here makes.
-      if (actor && localActorBlockId(actor) && !local) {
-        return ['[]', Order.ATOMIC] as [string, number];
-      }
       // Nothing chosen is `(any)`: every kind, which is what the word says.
-      const type = actor ? (local?.type ?? actor) : undefined;
-      const only = type ? `, {type: ${str(type)}}` : '';
+      const only = actor ? `, {type: ${str(actor)}}` : '';
       return [
         `world.actorsNear(${place}, ${distance}${only})`,
         Order.FUNCTION_CALL,
@@ -5696,9 +5528,7 @@ const worldIsA = defineBlock({
       // stamps as each placed actor's `type` — so an actor's kind is its `.type`.
       const target = actorTarget(block, generator, Order.MEMBER);
       const chosen = block.getFieldValue('TYPE');
-      // A world's own actor is stamped with its id, not a module path — the
-      // same string `add actor` gave it (blockly/localActors).
-      const modulePath = localActorFor(block, chosen)?.type ?? chosen;
+      const modulePath = chosen;
       // `?.` because a value may hold NO actors, which every other value
       // socket in the language treats as the ordinary outcome — `first actor
       // in ⟨an empty list⟩` answers with none rather than failing. This block
@@ -5778,22 +5608,13 @@ const worldAddActor = defineBlock({
   generator: {
     javascript(block, generator) {
       const actor = block.getFieldValue('ACTOR');
-      const local = localActorFor(block, actor);
-      // A world's own actor is a `const` in this same module — nothing to
-      // import, and its `type` is its id rather than a module path. A value
-      // naming a definition that has since been deleted emits nothing.
-      if (localActorBlockId(actor) && !local) {
-        return '';
-      }
-      if (!local) {
-        addImport(
-          generator,
-          `mod:${actor}`,
-          `import ${importVar(actor)} from ${str(actor)};`,
-        );
-      }
-      const template = local ? local.variable : importVar(actor);
-      const type = local ? local.type : actor;
+      addImport(
+        generator,
+        `mod:${actor}`,
+        `import ${importVar(actor)} from ${str(actor)};`,
+      );
+      const template = importVar(actor);
+      const type = actor;
       const body = generator.statementToCode(block, 'DO');
       // Block scope: each add's `actor` binding is independent, so several adds
       // in one world don't collide, and the DO body's `actor.set(...)` blocks
@@ -6064,25 +5885,17 @@ const worldCreateInMap = defineBlock({
       const actor = block.getFieldValue('ACTOR');
       const placements =
         (block.getFieldValue('PLACEMENTS') as MapPlacement[] | null) ?? [];
-      // Nothing arranged yet is nothing to place — and a `define actor` that
-      // has since been deleted leaves a block naming nothing (localActors).
-      const local = localActorFor(block, actor);
-      if (
-        !actor ||
-        !placements.length ||
-        (localActorBlockId(actor) && !local)
-      ) {
+      // Nothing arranged yet is nothing to place.
+      if (!actor || !placements.length) {
         return '';
       }
-      const template = local ? local.variable : importVar(actor);
-      const type = local ? local.type : actor;
-      if (!local) {
-        addImport(
-          generator,
-          `mod:${actor}`,
-          `import ${importVar(actor)} from ${str(actor)};`,
-        );
-      }
+      const template = importVar(actor);
+      const type = actor;
+      addImport(
+        generator,
+        `mod:${actor}`,
+        `import ${importVar(actor)} from ${str(actor)};`,
+      );
       // Through `loadMap`, which already resolves each entry's overrides
       // against the world's property registry and stamps the actor's type.
       const actors = placements
@@ -7927,14 +7740,12 @@ const worldRuleBlock = defineBlock({
 });
 
 /**
- * Whether this block is being written in an `.actor` FILE.
+ * Whether this block is chained under a `define actor`.
  *
- * Two questions in one, and both matter. Is the top of its chain a `define
- * actor` — a `define block` chained under anything else belongs to whoever
- * owns that root. And is this file a WORLD — a world's own `define actor` is a
- * `world_actor` root too, and its body generates into a block scope where the
- * `export const` this emits is not legal. The palette does not offer the block
- * there (`ROOT_HOMES`), and this is what makes a pasted one harmless.
+ * The top of the chain, and not merely "has one above it": a `define block`
+ * chained under anything else belongs to whoever owns that root. Only an
+ * `.actor` file holds a `define actor` (`ROOT_HOMES`), so this is also
+ * whether the block is being written in one.
  */
 const definesActorFile = (
   block: Pick<Block, 'workspace'> & {
@@ -7950,7 +7761,7 @@ const definesActorFile = (
   ) {
     // walk to the top of the chain
   }
-  return at.type === 'world_actor' && !definesWorld(block.workspace);
+  return at.type === 'world_actor';
 };
 
 // `return` ends a query body with the value it reports. A body block (generated
@@ -8109,18 +7920,11 @@ const worldTraitStep = defineBlock({
       // `defineStep` is the behavior half of `defineProperty`: work a KIND of
       // actor does every frame without a rule to do it in (ActorBuilder).
       //
-      // WHICH `define actor` still matters, and that is the two tests. An
-      // `.actor` file's is the module being written, so the step goes straight
-      // on `actor`. A world's is a block scope with its own `actor` bound
-      // inside it, and a step written outside every such scope has no `actor`
-      // to be about — `hasActorInScope` is what keeps that from compiling to a
-      // reference to nothing.
-      //
-      // NOT "does it have a parent", which is what this asked until `each
-      // frame` became a row in an `.actor` too. That question had the right
-      // answer in two files out of three by coincidence.
-      const inWorldActor = definesWorld(block.workspace);
-      if (inWorldActor ? !hasActorInScope(block) : !definesActorFile(block)) {
+      // Under a `define actor`, or it is about nobody: the module being
+      // written is the actor's, so the step goes straight on `actor`. NOT
+      // "does it have a parent", which is what this asked until `each frame`
+      // became a row in an `.actor` too.
+      if (!definesActorFile(block)) {
         return '';
       }
       const name = block.getFieldValue('NAME') || 'do something';
@@ -8193,13 +7997,10 @@ const paintArg = (name: string) => ({
  * top-level block with one as an orphan and disables it, along with everything
  * chained after it.
  *
- * Chained inside a world's own `define actor` it is one of that actor's rows,
- * so it has a previous and a next like `use trait` beside it. That is what
- * lets a world-defined actor draw itself — and it needed no new field to say
- * WHICH actor, because a local actor's body already generates inside a block
- * where `actor` is that builder (`world_actor`'s generator). The drawing is
- * inside the actor it belongs to, which is the only place it could mean
- * anything.
+ * Chained under `define actor` it is one of that actor's rows, so it has a
+ * previous and a next like `use trait` beside it, and needs no field to say
+ * WHICH actor: the chain's `actor` is that builder. The drawing is inside the
+ * actor it belongs to, which is the only place it could mean anything.
  *
  * It used to be root-only, and the note here said a drawing "needs only the
  * root shape". That was true of the `.actor` file it was written for and made
@@ -8256,8 +8057,7 @@ const worldDefineDrawing = defineBlock({
       // `define actor`; one chained under `define world`, or left unattached
       // at the top of a file, would emit a call on an `actor` that is not
       // bound and the module would throw as it loaded.
-      const inWorldActor = definesWorld(block.workspace);
-      if (inWorldActor ? !hasActorInScope(block) : !definesActorFile(block)) {
+      if (!definesActorFile(block)) {
         return '';
       }
       // A CLOSURE EACH, because the size may ask the actor. `this actor`

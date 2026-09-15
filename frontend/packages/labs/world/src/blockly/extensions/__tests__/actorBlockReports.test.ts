@@ -32,14 +32,4 @@ describe('an actor’s own block that says it reports a value', () => {
   it('is not, in a rule, which is where that form belongs', () => {
     expect(reportsWhereItCannot(blockIn('number', 'world_rule'))).toBe(false);
   });
-
-  it('is not, in a world, which is not offered the block at all', () => {
-    // A world's own `define actor` is a `world_actor` root too, so the root's
-    // type alone would answer yes here. What settles it is the file.
-    expect(
-      reportsWhereItCannot(
-        blockIn('number', 'world_actor', ['world_world', 'world_actor']),
-      ),
-    ).toBe(false);
-  });
 });

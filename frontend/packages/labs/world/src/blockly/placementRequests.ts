@@ -33,10 +33,6 @@ function* walk(block: Block | undefined): Generator<Block> {
 
 /**
  * The placements every `create actor in map` in the project holds.
- *
- * A local actor's ACTOR field stores `local:<block id>`, which is not the type
- * a placed one carries — but it is the key the grid draws by too, so the two
- * agree without either of them resolving it.
  */
 export function projectPlacements(
   files: Record<string, string>,

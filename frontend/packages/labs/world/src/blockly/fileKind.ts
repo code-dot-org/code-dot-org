@@ -28,9 +28,8 @@ export const fileKindOf = (path?: string): FileKind | undefined => {
  * A root here is not merely useless in the wrong file — it changes what the
  * file IS, so it is both kept out of the palette and refused by the generator.
  *
- * `world_actor` belongs to two of them: a world may define actors of its own,
- * each a `const` its body then places with `add actor` (`localActors`, and see
- * `assembleWorldModule`). A `.rule` is the one that cannot.
+ * `world_actor` belongs to an `.actor` file alone. A world once held its own,
+ * as roots beside `define world`; every actor is a file now.
  *
  * `world_rule` names only `rule`, and the rest of a rule's definition blocks
  * are not listed at all: the palette drops that whole category outside a
@@ -42,7 +41,7 @@ export const fileKindOf = (path?: string): FileKind | undefined => {
  * roots nor file-bound.
  */
 export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
-  ['world_actor', new Set<FileKind>(['actor', 'world'])],
+  ['world_actor', new Set<FileKind>(['actor'])],
   ['world_world', new Set<FileKind>(['world'])],
   ['world_rule', new Set<FileKind>(['rule'])],
   ['world_rule_trait', new Set<FileKind>(['rule'])],
@@ -66,19 +65,14 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_rule_enum_option', new Set<FileKind>(['rule'])],
   ['world_rule_step_tick', new Set<FileKind>(['rule'])],
   ['world_rule_step_in', new Set<FileKind>(['rule'])],
-  // `each frame` reads three ways, and all three are the same sentence about
+  // `each frame` reads two ways, and both are the same sentence about
   // whoever owns it: chained under a `define trait` it is one of that trait's
   // members; chained under an `.actor` file's `define actor` it is work that
-  // kind of actor does; and chained inside a world's own `define actor` it is
-  // that same work for a kind the world defines rather than a file.
+  // kind of actor does.
   //
-  // The third was missing, and it read as a health bar that never moved: a
-  // world-defined actor could do no per-frame work at all, so an actor that
-  // had to look at something each frame had to be a file.
-  //
-  // IT MUST BE INSIDE A `define actor` in either of the last two, and its
-  // generator writes nothing when it is not (`worldTraitStep`). In a world
-  // that is what keeps a step from emitting a call on an `actor` that is not
+  // IT MUST BE INSIDE A `define actor` in the second, and its generator
+  // writes nothing when it is not (`worldTraitStep`). That is what keeps a
+  // step from emitting a call on an `actor` that is not
   // bound, which would stop the whole project compiling; in an `.actor` file
   // it is what makes an unattached step say so — grayed by
   // `DisableOrphansPlugin` rather than quietly compiled from nowhere.

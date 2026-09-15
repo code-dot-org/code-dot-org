@@ -72,10 +72,9 @@ export const words = (text: string) => ({
  * LABEL's now, and everything that shows words either acts like a Label or
  * declares its own (specs/UI_ACTORS.md).
  *
- * A world-local actor is the one that has to declare its own: `acts like`
- * names an actor FILE, and a single-world project has none. Its properties are
- * keyed by the world plus the block that defines it, which is what the `own`
- * argument carries (`blockly/ownProperties`).
+ * An actor that declares its own — a project with no Label to act like —
+ * keys them by its own file, which is what the `own` argument carries
+ * (`blockly/ownProperties`).
  */
 export const LABEL_OWNER = 'ActorsLabel';
 

@@ -4,7 +4,7 @@
 // one that reads the project registry AND knows which field it is on. Both
 // halves matter: the second is how an option list can depend on where the block
 // sits — the actors a WORLD defines for itself are found by asking the field
-// for its workspace (blockly/localActors), and `use rule` leaves out the rule
+// for its workspace (blockly/moduleOptions), and `use rule` leaves out the rule
 // whose own file it is in (blockly/editingRule).
 //
 // Name a field the block does not have and the extension returns quietly. The

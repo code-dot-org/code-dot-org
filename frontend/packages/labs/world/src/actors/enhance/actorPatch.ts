@@ -14,10 +14,10 @@
 // should use these, and the old copies should come across the next time one of
 // those files is opened for another reason.
 //
-// TWO KINDS OF ACTOR, throughout. Most have a file of their own; one a WORLD
-// defines for itself is a `define actor` block among the world's roots, so it
-// is addressed by the world plus the block and its hats name their subject as
-// `any ⟨kind⟩` rather than leaving it implied (`enhancements.EnhanceTarget`).
+// `fileOf` AND `subjectOf` ARE ONE-LINERS NOW, and stay: there were two kinds
+// of actor, and a patch asked these two questions rather than knowing the
+// answer. Every actor is a file, and a row that still asks is a row that will
+// not have to be opened if the answer changes again.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -44,13 +44,10 @@ export const kindOf = (actor: string) => ({
 /** Which file holds this actor, and which of its roots defines it. */
 export const fileOf = (
   target: EnhanceTarget,
-): {path: string; root: ActorRoot} =>
-  target.block
-    ? {
-        path: `${target.path}.world`,
-        root: {type: 'world_actor', id: target.block},
-      }
-    : {path: `${target.path}.actor`, root: {type: 'world_actor'}};
+): {path: string; root: ActorRoot} => ({
+  path: `${target.path}.actor`,
+  root: {type: 'world_actor'},
+});
 
 /**
  * Who a hat this adds is about.
@@ -60,8 +57,7 @@ export const fileOf = (
  * every actor's hats, so it has to say which kind — otherwise the coin patrols
  * too.
  */
-export const subjectOf = (target: EnhanceTarget) =>
-  target.block ? kindOf(`local:${target.block}`) : me();
+export const subjectOf = () => me();
 
 /** Whether a `use trait` for `trait` is already in this actor's chain. */
 export const wears = (

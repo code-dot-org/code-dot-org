@@ -17,7 +17,6 @@ import type {Blockly} from '@code-dot-org/blockly';
 
 import {TILE_SIZE} from '../../runtime/viewport';
 import {actorThumbnail, placementThumbnail} from '../actorThumbnails';
-import {localActorFor} from '../localActors';
 import {
   cellOf,
   placementAt,
@@ -46,13 +45,8 @@ interface Occupant {
 }
 
 /** The actor type a `create actor in map` block places, as a placed one carries it. */
-const typeOf = (block: Blockly.Block): string | undefined => {
-  const value = block.getFieldValue('ACTOR');
-  if (!value) {
-    return undefined;
-  }
-  return localActorFor(block, value)?.type ?? value;
-};
+const typeOf = (block: Blockly.Block): string | undefined =>
+  block.getFieldValue('ACTOR') || undefined;
 
 const key = (cell: Cell) => `${cell.column},${cell.row}`;
 

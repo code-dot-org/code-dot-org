@@ -47,15 +47,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {fileIdAt} from '../../runtime/projectFiles';
 
 import {actorChoices, targetOf} from './actorChoices';
-import {
-  edit,
-  electTraits,
-  fileOf,
-  importRules,
-  me,
-  subjectOf,
-  wears,
-} from './actorPatch';
+import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, down, rootsOf, withVariable, type BlockJson} from './patch';
 
@@ -96,17 +88,15 @@ const mine = (component: 'x' | 'y') => ({
 });
 
 /** `when ⟨me⟩ presses ⟨space⟩ → make ⟨me⟩ zap`. */
-const asking = (target: EnhanceTarget): BlockJson => ({
+const asking = (): BlockJson => ({
   type: PRESSES,
   fields: {FILTER0: FIRE_KEY},
-  ...(target.block ? {inputs: {ACTOR: subjectOf(target)}} : {}),
   next: {block: {type: MAKE_ZAP, inputs: {VALUE: me()}}},
 });
 
 /** `when ⟨me⟩ zaps → add actor ⟨answer⟩ as ⟨shot⟩, place it and send it`. */
-const sending = (target: EnhanceTarget, answer: string): BlockJson => ({
+const sending = (_target: EnhanceTarget, answer: string): BlockJson => ({
   type: ZAPPED,
-  ...(target.block ? {inputs: {ACTOR: subjectOf(target)}} : {}),
   next: {
     block: {
       type: ADD,
@@ -153,7 +143,7 @@ const sending = (target: EnhanceTarget, answer: string): BlockJson => ({
 
 /** Whether a root is one of the two hats this row writes, about this actor. */
 const isOurs =
-  (target: EnhanceTarget, hat: string, holds: string) =>
+  (_target: EnhanceTarget, hat: string, holds: string) =>
   (block: BlockJson): boolean => {
     if (block.type !== hat) {
       return false;
@@ -163,10 +153,9 @@ const isOurs =
     }
     const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
       ?.block?.fields?.ACTOR;
-    const mineToo = target.block
-      ? named === `local:${target.block}`
-      : named === undefined;
-    return mineToo && [...down(block)].some(row => row.type === holds);
+    return (
+      named === undefined && [...down(block)].some(row => row.type === holds)
+    );
   };
 
 /** What the zap handler currently sends, if the file holds one. */
@@ -252,7 +241,7 @@ export const shootsEnhancement: Enhancement = {
           // Beside the definition rather than under it: a hat takes no
           // previous connection, and `DisableOrphansPlugin` grays out a
           // top-level block that has one along with everything below it.
-          next = addRoot(next, asking(target));
+          next = addRoot(next, asking());
         }
         return sends(next, target) === undefined
           ? addRoot(next, sending(target, answer))
@@ -260,7 +249,7 @@ export const shootsEnhancement: Enhancement = {
       });
     }
 
-    const sent = fileOf(targetOf(answer, target));
+    const sent = fileOf(targetOf(answer));
     const sentId = fileIdAt(current, sent.path);
     if (sentId !== undefined) {
       current = edit(current, sentId, contents =>

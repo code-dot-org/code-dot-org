@@ -8,11 +8,13 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {Blockly} from '@code-dot-org/blockly';
+
 import {collisionsRule} from '../../rules/stock/collisions';
 import {inputRule} from '../../rules/stock/input';
 import {actorAbout, kindFilterField, registerKindFilter} from '../actorAbout';
 import {buildDomainPalette} from '../domainBlocks';
-import {localActorValue} from '../localActors';
+import {setEditingActor} from '../editingRule';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 
@@ -47,15 +49,29 @@ const asBlock = (stub: Stub): never =>
     workspace: stub.workspace,
   }) as never;
 
-/** A workspace holding one world-defined actor, by block id. */
-const worldWith = (id: string, name: string) => {
+/**
+ * A workspace editing the actor file `module`, whose one root is named `name`.
+ *
+ * What `this actor` beside or under that root is about: the file, which the
+ * workspace was told about when it opened, and the name on the definition.
+ */
+const actorFileWith = (module: string, name: string) => {
+  const workspace = new Blockly.Workspace();
+  setEditingActor(workspace, module);
+  const definition = {
+    type: 'world_actor',
+    id: 'def1',
+    getFieldValue: (field: string) => (field === 'NAME' ? name : undefined),
+  };
+  (workspace as unknown as {getTopBlocks: () => unknown[]}).getTopBlocks =
+    () => [definition];
+  return {workspace, definition: {...definition, workspace} as Stub};
+};
+
+/** A workspace holding a world, which is what makes a hat's subject a kind. */
+const aWorld = () => {
   const blocks = [
     {id: 'w1', type: 'world_world', getFieldValue: () => 'My World'},
-    {
-      id,
-      type: 'world_actor',
-      getFieldValue: (field: string) => (field === 'NAME' ? name : undefined),
-    },
   ];
   return {
     getTopBlocks: () => blocks,
@@ -66,32 +82,31 @@ const worldWith = (id: string, name: string) => {
 
 describe('what `this actor` is about', () => {
   it('is the kind a hat names as its subject', () => {
-    const workspace = worldWith('crate1', 'Crate');
+    const workspace = aWorld();
     const hat = {
       type: 'world_on_Collisions_StartsTouchingEvent',
       workspace,
       inputs: {
         ACTOR: {
           type: 'world_actor_kind',
-          fields: {ACTOR: localActorValue('crate1')},
+          fields: {ACTOR: 'actors/crate'},
           workspace,
         },
       },
     };
 
     expect(actorAbout(asBlock({parent: hat, workspace}), 'this')).toEqual({
-      type: 'Crate',
-      name: 'Crate',
+      type: 'actors/crate',
+      name: 'crate',
     });
   });
 
   it('is the actor whose definition it sits in', () => {
-    const workspace = worldWith('crate1', 'Crate');
-    const definition = {type: 'world_actor', id: 'crate1', workspace};
+    const {workspace, definition} = actorFileWith('actors/crate', 'Crate');
 
     expect(
       actorAbout(asBlock({parent: definition, workspace}), 'this'),
-    ).toEqual({type: 'Crate', name: 'Crate'});
+    ).toEqual({type: 'actors/crate', name: 'Crate'});
   });
 
   it('is the kind an `add actor` body places', () => {
@@ -99,20 +114,20 @@ describe('what `this actor` is about', () => {
     // lines are `add actor ⟨Coin⟩ do: set position of ⟨this actor⟩ …`, and
     // that block was showing the bare word while the identical one under
     // `define actor` showed a picture.
-    const workspace = worldWith('coin1', 'Coin');
+    const workspace = aWorld();
     const body: Stub = {type: 'world_set_position', id: 'body1', workspace};
     const add = {
       type: 'world_add_actor',
       id: 'add1',
-      fields: {ACTOR: localActorValue('coin1')},
+      fields: {ACTOR: 'actors/coin'},
       inputs: {DO: body},
       workspace,
     };
     body.parent = add;
 
     expect(actorAbout(asBlock(body), 'this')).toEqual({
-      type: 'Coin',
-      name: 'Coin',
+      type: 'actors/coin',
+      name: 'coin',
     });
   });
 
@@ -120,11 +135,11 @@ describe('what `this actor` is about', () => {
     // Two `add actor`s in a row: the second is a `getParent` child of the
     // first and is in nobody's scope. Its own body is its own kind, which is
     // the case above; what it is not is a Coin.
-    const workspace = worldWith('coin1', 'Coin');
+    const workspace = aWorld();
     const first = {
       type: 'world_add_actor',
       id: 'add1',
-      fields: {ACTOR: localActorValue('coin1')},
+      fields: {ACTOR: 'actors/coin'},
       inputs: {DO: {type: 'world_set_position', id: 'body1', workspace}},
       workspace,
     };
@@ -136,12 +151,12 @@ describe('what `this actor` is about', () => {
   it('is nobody in the body of an `add actor` that took a name', () => {
     // `as ⟨placed⟩` exists so a body can still say `this actor` and mean the
     // actor whose file it is — a picture of the Bullet there would be a lie.
-    const workspace = worldWith('bullet1', 'Bullet');
+    const workspace = aWorld();
     const body: Stub = {type: 'world_set_position', id: 'body1', workspace};
     const add = {
       type: 'world_add_actor',
       id: 'add1',
-      fields: {ACTOR: localActorValue('bullet1'), NAMED: 'named'},
+      fields: {ACTOR: 'actors/bullet', NAMED: 'named'},
       inputs: {DO: body},
       workspace,
     };
@@ -170,14 +185,13 @@ describe('what `this actor` is about', () => {
     // out of ancestors and answer "nobody" for having found nothing, which is
     // the right answer for the wrong reason and would go on passing with this
     // rule deleted.
-    const workspace = worldWith('pad1', 'Pad');
-    const definition = {type: 'world_actor', id: 'pad1', workspace};
+    const {workspace, definition} = actorFileWith('actors/pad', 'Pad');
     const tween = {type: 'world_define_tween', parent: definition, workspace};
 
     // The control: the same chain without the tween in it IS the pad.
     expect(
       actorAbout(asBlock({parent: definition, workspace}), 'this'),
-    ).toEqual({type: 'Pad', name: 'Pad'});
+    ).toEqual({type: 'actors/pad', name: 'Pad'});
     expect(
       actorAbout(asBlock({parent: tween, workspace}), 'this'),
     ).toBeUndefined();
@@ -187,7 +201,7 @@ describe('what `this actor` is about', () => {
     // `play tween here` rebinds the actor around its destinations exactly as a
     // named tween's definition does, and says so in its generator — so the two
     // blocks cannot disagree about what `this actor` means inside them.
-    const workspace = worldWith('pad1', 'Pad');
+    const workspace = aWorld();
     const definition = {type: 'world_actor', id: 'pad1', workspace};
     const here = {
       type: 'world_play_tween_here',
@@ -207,16 +221,16 @@ describe('what `this actor` is about', () => {
 
 describe('what `event actor` is about', () => {
   it('is the kind the hat is filtered to', () => {
-    const workspace = worldWith('mark1', 'Mark');
+    const workspace = aWorld();
     const hat = {
       type: 'world_on_Collisions_StartsTouchingEvent',
       workspace,
-      fields: {FILTER0: localActorValue('mark1')},
+      fields: {FILTER0: 'actors/mark'},
     };
 
     expect(actorAbout(asBlock({parent: hat, workspace}), 'event')).toEqual({
-      type: 'Mark',
-      name: 'Mark',
+      type: 'actors/mark',
+      name: 'mark',
     });
   });
 
@@ -234,12 +248,12 @@ describe('what `event actor` is about', () => {
   it("is still the hat's, inside an `add actor` body under it", () => {
     // `add actor` binds a subject, not an event: what the hat heard is the
     // same block-for-block wherever in the handler you stand.
-    const workspace = worldWith('mark1', 'Mark');
+    const workspace = aWorld();
     const hat = {
       type: 'world_on_Collisions_StartsTouchingEvent',
       id: 'hat1',
       workspace,
-      fields: {FILTER0: localActorValue('mark1')},
+      fields: {FILTER0: 'actors/mark'},
     };
     const body: Stub = {type: 'world_print', id: 'body1', workspace};
     const add = {
@@ -253,8 +267,8 @@ describe('what `event actor` is about', () => {
     body.parent = add;
 
     expect(actorAbout(asBlock(body), 'event')).toEqual({
-      type: 'Mark',
-      name: 'Mark',
+      type: 'actors/mark',
+      name: 'mark',
     });
   });
 

@@ -417,7 +417,7 @@ class ActorCollection {
 
   /**
    * Every actor of a kind — the module a template was registered under
-   * (`actors/coin`), or a world-local template's id.
+   * (`actors/coin`).
    *
    * What `any ⟨Coin⟩` means everywhere except a handler's subject socket: the
    * coins there are, right now. (In that one socket it means the TEMPLATE, so

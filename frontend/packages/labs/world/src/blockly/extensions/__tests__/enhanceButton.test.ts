@@ -14,20 +14,16 @@ import {enhanceTarget, type EnhanceContext} from '../enhanceButton';
 const inFile: EnhanceContext = {
   actorModule: 'actors/player',
   fileModule: 'actors/player',
-  world: false,
-  blockId: 'defBlock',
   defines: 'actor',
   name: 'Platformer Player',
   flyout: false,
   readOnly: false,
 };
 
-/** …and one among a world's own roots, which has no file of its own. */
+/** …and a `define actor` pasted into a world, which is about nobody. */
 const inWorld: EnhanceContext = {
   actorModule: undefined,
   fileModule: 'worlds/main',
-  world: true,
-  blockId: 'platformerBallDef',
   defines: 'actor',
   name: 'Ball',
   flyout: false,
@@ -37,7 +33,6 @@ const inWorld: EnhanceContext = {
 /** …and the `define world` block itself, which is a thing to enhance too. */
 const theWorld: EnhanceContext = {
   ...inWorld,
-  blockId: 'worldDef',
   defines: 'world',
   name: 'Platform World',
 };
@@ -61,23 +56,16 @@ describe('the wand on define actor', () => {
     });
   });
 
-  it('points at the world AND the block, for an actor it defines', () => {
-    // No file to name it by, so it is named the way everything else names one:
-    // the world it is written in, and the block that defines it
-    // (`blockly/localActors`).
-    expect(enhanceTarget(inWorld)).toEqual({
-      kind: 'actor',
-      path: 'worlds/main',
-      block: 'platformerBallDef',
-      name: 'Ball',
-    });
+  it('is not offered on a define actor outside an actor file', () => {
+    // Every actor is a file; a `define actor` anywhere else defines nothing.
+    expect(enhanceTarget(inWorld)).toBeUndefined();
   });
 
   it('is not offered where the file is neither', () => {
     // A `.rule` has no actor for this to be about, and a workspace the editor
     // has not told anything is one it cannot write into.
     expect(
-      enhanceTarget({...inWorld, world: false, fileModule: 'rules/gravity'}),
+      enhanceTarget({...inWorld, fileModule: 'rules/gravity'}),
     ).toBeUndefined();
     expect(enhanceTarget({...inWorld, fileModule: undefined})).toBeUndefined();
   });

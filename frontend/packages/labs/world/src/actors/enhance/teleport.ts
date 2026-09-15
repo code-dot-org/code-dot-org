@@ -21,15 +21,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {fileIdAt} from '../../runtime/projectFiles';
 
-import {
-  edit,
-  electTraits,
-  fileOf,
-  importRules,
-  me,
-  subjectOf,
-  wears,
-} from './actorPatch';
+import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, append, down, hasRoot, type BlockJson} from './patch';
 
@@ -75,10 +67,9 @@ export const isATeleportPadEnhancement: Enhancement = {
 };
 
 /** `when ⟨me⟩ presses ⟨down arrow⟩ → use the pad ⟨me⟩`. */
-const useHandler = (target: EnhanceTarget): BlockJson => ({
+const useHandler = (): BlockJson => ({
   type: PRESSES,
   fields: {FILTER0: PAD_KEY},
-  ...(target.block ? {inputs: {ACTOR: subjectOf(target)}} : {}),
   next: {block: {type: USE_PAD, inputs: {ACTOR: me()}}},
 });
 
@@ -91,17 +82,16 @@ const useHandler = (target: EnhanceTarget): BlockJson => ({
  * leave an actor that can never be given the row, in silence.
  */
 const usesOnKey =
-  (target: EnhanceTarget) =>
+  () =>
   (block: BlockJson): boolean => {
     if (block.type !== PRESSES || block.fields?.FILTER0 !== PAD_KEY) {
       return false;
     }
     const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
       ?.block?.fields?.ACTOR;
-    const mine = target.block
-      ? named === `local:${target.block}`
-      : named === undefined;
-    return mine && [...down(block)].some(row => row.type === USE_PAD);
+    return (
+      named === undefined && [...down(block)].some(row => row.type === USE_PAD)
+    );
   };
 
 export const usesTeleportPadsEnhancement: Enhancement = {
@@ -117,7 +107,7 @@ export const usesTeleportPadsEnhancement: Enhancement = {
     return (
       wears(contents, TRAVELS, root) &&
       wears(contents, KEYBOARD, root) &&
-      hasRoot(contents, usesOnKey(target))
+      hasRoot(contents, usesOnKey())
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
@@ -128,12 +118,12 @@ export const usesTeleportPadsEnhancement: Enhancement = {
       ? current
       : edit(current, id, contents => {
           const next = electTraits(contents, root, [TRAVELS, KEYBOARD]);
-          return hasRoot(next, usesOnKey(target))
+          return hasRoot(next, usesOnKey())
             ? next
             : // Beside the definition rather than under it: a hat takes no
               // previous connection, and `DisableOrphansPlugin` grays out a
               // top-level block that has one along with everything below it.
-              addRoot(next, useHandler(target));
+              addRoot(next, useHandler());
         });
   },
 };

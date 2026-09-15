@@ -53,7 +53,7 @@ export const carriesThingsEnhancement: Enhancement = {
     if (answer === undefined) {
       return true;
     }
-    const thing = contentsOf(source, targetOf(answer, target));
+    const thing = contentsOf(source, targetOf(answer));
     return wears(thing.contents, CARRIED, thing.root);
   },
   apply(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
@@ -70,7 +70,7 @@ export const carriesThingsEnhancement: Enhancement = {
       );
     }
 
-    const thing = fileOf(targetOf(answer, target));
+    const thing = fileOf(targetOf(answer));
     const thingId = fileIdAt(current, thing.path);
     if (thingId !== undefined) {
       current = edit(current, thingId, contents =>

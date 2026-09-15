@@ -31,15 +31,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {fileIdAt} from '../../runtime/projectFiles';
 
-import {
-  edit,
-  electTraits,
-  fileOf,
-  importRules,
-  me,
-  subjectOf,
-  wears,
-} from './actorPatch';
+import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, down, hasRoot, type BlockJson} from './patch';
 
@@ -64,13 +56,12 @@ const STOP = 'world_do_Jetpack_StopFlyingAction';
 
 /** `when ⟨me⟩ presses/releases ⟨space⟩ → start/stop ⟨me⟩ flying`. */
 const handler = (
-  target: EnhanceTarget,
+  _target: EnhanceTarget,
   hat: string,
   action: string,
 ): BlockJson => ({
   type: hat,
   fields: {FILTER0: FLY_KEY},
-  ...(target.block ? {inputs: {ACTOR: subjectOf(target)}} : {}),
   next: {block: {type: action, inputs: {VALUE: me()}}},
 });
 
@@ -83,17 +74,16 @@ const handler = (
  * be given a jetpack, silently.
  */
 const answers =
-  (target: EnhanceTarget, hat: string, action: string) =>
+  (_target: EnhanceTarget, hat: string, action: string) =>
   (block: BlockJson): boolean => {
     if (block.type !== hat || block.fields?.FILTER0 !== FLY_KEY) {
       return false;
     }
     const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
       ?.block?.fields?.ACTOR;
-    const mine = target.block
-      ? named === `local:${target.block}`
-      : named === undefined;
-    return mine && [...down(block)].some(row => row.type === action);
+    return (
+      named === undefined && [...down(block)].some(row => row.type === action)
+    );
   };
 
 /** The two handlers flight is made of, as hat-and-action pairs. */

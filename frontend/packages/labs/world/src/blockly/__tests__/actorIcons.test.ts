@@ -63,17 +63,6 @@ describe('electing an icon', () => {
     ).toEqual({'actors/label': 'text'});
   });
 
-  it('covers a world’s own actors too, by the key THEY are drawn with', () => {
-    // One walk over `define actor` roots reaches both homes. A world's own are
-    // looked up by an id derived from the name (`localActors.actorIdFromName`),
-    // which is what `pictured` has in hand for them.
-    expect(
-      projectActorIcons({
-        'worlds/main.world': actorFile('Score Board', [showAs('panel')]),
-      }),
-    ).toEqual({Score_Board: 'panel'});
-  });
-
   it('says nothing for an actor that elected nothing', () => {
     expect(projectActorIcons({'actors/coin.actor': actorFile('Coin')})).toEqual(
       {},

@@ -83,13 +83,10 @@ const PRESSES = 'world_on_Input_PressesEvent';
 const MAKE_JUMP = 'world_do_Jumping_MakeJumpAction';
 
 /** Which file holds this actor, and which of its roots defines it. */
-const fileOf = (target: EnhanceTarget) =>
-  target.block
-    ? {
-        path: `${target.path}.world`,
-        root: {type: 'world_actor', id: target.block},
-      }
-    : {path: `${target.path}.actor`, root: {type: 'world_actor'}};
+const fileOf = (target: EnhanceTarget) => ({
+  path: `${target.path}.actor`,
+  root: {type: 'world_actor'},
+});
 
 /** Whether a `use trait` for `trait` is already in this actor's chain. */
 const wears = (
@@ -104,15 +101,7 @@ const wears = (
   );
 
 /** Who the hat is about: this actor's file, or one kind among a world's. */
-const subjectOf = (target: EnhanceTarget) =>
-  target.block
-    ? {
-        block: {
-          type: 'world_actor_kind',
-          fields: {ACTOR: `local:${target.block}`},
-        },
-      }
-    : undefined;
+const subjectOf = () => undefined;
 
 /**
  * `when ⟨me⟩ presses ⟨space⟩ → make ⟨me⟩ jump`.
@@ -128,10 +117,8 @@ const subjectOf = (target: EnhanceTarget) =>
  * and the enhancement assemble the same platformer, and nothing but a test
  * makes them keep agreeing.
  */
-export const platformerJumpHandler = (
-  target: EnhanceTarget = {kind: 'actor', path: '', name: ''},
-): BlockJson => {
-  const subject = subjectOf(target);
+export const platformerJumpHandler = (): BlockJson => {
+  const subject = subjectOf();
   return {
     type: PRESSES,
     fields: {FILTER0: JUMP_KEY},
@@ -160,21 +147,20 @@ export const platformerJumpHandler = (
  * "somebody presses space" is not the question — "does THIS kind" is.
  */
 const jumpsOnKey =
-  (target: EnhanceTarget) =>
+  () =>
   (block: BlockJson): boolean => {
     if (block.type !== PRESSES || block.fields?.FILTER0 !== JUMP_KEY) {
       return false;
     }
     const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
       ?.block?.fields?.ACTOR;
-    const mine = target.block
-      ? named === `local:${target.block}`
-      : named === undefined;
-    return mine && [...down(block)].some(row => row.type === MAKE_JUMP);
+    return (
+      named === undefined &&
+      [...down(block)].some(row => row.type === MAKE_JUMP)
+    );
   };
 
-const jumps = (contents: string, target: EnhanceTarget): boolean =>
-  hasRoot(contents, jumpsOnKey(target));
+const jumps = (contents: string): boolean => hasRoot(contents, jumpsOnKey());
 
 /** Rewrite one file's contents, leaving the rest of the project alone. */
 const edit = (
@@ -209,8 +195,7 @@ export const platformerControlsEnhancement: Enhancement = {
     const id = fileIdAt(source, path);
     const contents = id ? source.files[id].contents : '';
     return (
-      TRAITS.every(trait => wears(contents, trait, root)) &&
-      jumps(contents, target)
+      TRAITS.every(trait => wears(contents, trait, root)) && jumps(contents)
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
@@ -236,11 +221,11 @@ export const platformerControlsEnhancement: Enhancement = {
           ]);
         }
       }
-      if (!jumps(next, target)) {
+      if (!jumps(next)) {
         // Beside the definition rather than under it: a hat takes no previous
         // connection, and `DisableOrphansPlugin` grays out a top-level block
         // that has one along with everything below it.
-        next = addRoot(next, platformerJumpHandler(target));
+        next = addRoot(next, platformerJumpHandler());
       }
       return next;
     });

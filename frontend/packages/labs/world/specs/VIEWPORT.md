@@ -572,8 +572,8 @@ the reconciler has to track.
 A layer is referenced BY BLOCK ID, not by its name. Layers are world-local, and
 the project has both patterns to choose from: rules are named by string, and
 that cost `renameRule` and `renameMemberReferences` to carry a rename through
-every reference; a world's own actors are referenced by the id of the block that
-defines them (`localActors`, `local:<blockId>`) and cost nothing. A layer's name
+every reference; tweens are referenced by the id of the block that defines
+them (`blockly/tweens`) and cost nothing. A layer's name
 is a label, and renaming it should not be able to break anything.
 
 Layers and Cameras are STRUCTURAL. `WorldSnapshot` restarts a running game on a

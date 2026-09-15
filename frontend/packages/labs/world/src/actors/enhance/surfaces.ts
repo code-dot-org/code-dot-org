@@ -51,10 +51,10 @@ const contentsOf = (source: MultiFileSource, target: EnhanceTarget) => {
 /** Whether the walker named by `answer` notices floors at all. */
 const notices = (
   source: MultiFileSource,
-  target: EnhanceTarget,
+  _target: EnhanceTarget,
   answer: string,
 ): boolean => {
-  const {contents, root} = contentsOf(source, targetOf(answer, target));
+  const {contents, root} = contentsOf(source, targetOf(answer));
   return wears(contents, STANDS, root);
 };
 
@@ -110,7 +110,7 @@ const floorRow = (
         );
       }
 
-      const walker = fileOf(targetOf(answer, target));
+      const walker = fileOf(targetOf(answer));
       const walkerId = fileIdAt(current, walker.path);
       if (walkerId !== undefined) {
         current = edit(current, walkerId, contents =>

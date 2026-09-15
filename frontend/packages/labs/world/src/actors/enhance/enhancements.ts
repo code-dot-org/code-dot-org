@@ -189,13 +189,8 @@ export interface EnhanceChoice {
 }
 
 /**
- * The actor an enhancement is being given to.
- *
- * TWO KINDS OF ADDRESS, because there are two kinds of actor. Most have a file
- * of their own and are named by its module path. An actor a WORLD defines for
- * itself has no file — it is a `define actor` block among the world's own
- * roots — so it is named by the world plus the block, which is how everything
- * else in the lab names one (`blockly/localActors`).
+ * The actor an enhancement is being given to, or the world, named by the
+ * module path of its file.
  */
 export interface EnhanceTarget {
   /** Which kind of thing this is, and so which enhancements are on offer. */
@@ -205,8 +200,6 @@ export interface EnhanceTarget {
    * a file, `worlds/main` for a world or for an actor that world defines.
    */
   path: string;
-  /** The `define actor` block, for a world's own actor; absent for a file. */
-  block?: string;
   /** What it calls itself, for the words on the dialog. */
   name: string;
 }

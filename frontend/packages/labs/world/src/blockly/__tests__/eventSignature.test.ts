@@ -11,15 +11,18 @@
 //
 //   when any Player ⟨space⟩ is pressed / …
 
-import {describe, expect, it} from 'vitest';
+import {afterEach, describe, expect, it} from 'vitest';
 
 import {Blockly} from '@code-dot-org/blockly';
 
 import {inputRule} from '../../rules/stock/input';
 import {buildDomainPalette} from '../domainBlocks';
+import {setProjectActors} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {shadowsFor} from '../valueShadow';
+
+afterEach(() => setProjectActors([]));
 
 /**
  * Build the palette for a rule, and register it.
@@ -348,29 +351,22 @@ describe('an event that carries an ACTOR', () => {
       {kind: 'param', name: 'other', type: 'actor'},
     ],
   };
-  /** A workspace holding a world with two actors defined inside it. */
+  /** A workspace holding a world; the kinds come from the project's files. */
   const fieldInAWorld = () => {
     const blocks = [
       {id: 'w1', type: 'world_world', getFieldValue: () => 'My World'},
-      {
-        id: 'a1',
-        type: 'world_actor',
-        getFieldValue: (name: string) => (name === 'NAME' ? 'Key' : undefined),
-      },
-      {
-        id: 'a2',
-        type: 'world_actor',
-        getFieldValue: (name: string) => (name === 'NAME' ? 'Door' : undefined),
-      },
     ];
-    const workspace = {
+    return {
       getTopBlocks: () => blocks,
       getBlockById: (id: string) => blocks.find(block => block.id === id),
     };
-    return workspace;
   };
 
-  it('offers the kinds the world defines, and only `(any)` beside them', () => {
+  it('offers the kinds the project holds, and only `(any)` beside them', () => {
+    setProjectActors([
+      ['Key', 'actors/key'],
+      ['Door', 'actors/door'],
+    ]);
     // Through the EXTENSION, which is where the live list lives: the
     // definition carries a snapshot taken before any project existed, and what
     // a learner sees is what the field answers with once it is on a block.
@@ -383,7 +379,7 @@ describe('an event that carries an ACTOR', () => {
       workspace: fieldInAWorld(),
     };
     // Stubbed rather than `setSourceBlock`, which wants a real block: what the
-    // live list asks the field for is where it is (`localActors.workspaceOf`).
+    // live list asks the field for is where it is (`moduleOptions.liveDropdown`).
     (field as unknown as {getSourceBlock: () => unknown}).getSourceBlock = () =>
       block;
     // The extension is what a block gets on creation, and it is what binds the

@@ -13,42 +13,23 @@ import {describe, expect, it} from 'vitest';
 import {thumbnailManifest} from '../thumbnailManifest';
 
 describe('thumbnailManifest', () => {
-  it('imports the world for its own actors, alongside the modules', () => {
+  it('imports the world and every actor module', () => {
     const code = thumbnailManifest(
       ['actors/coin', 'actors/player'],
       'worlds/main',
     );
 
-    expect(code).toContain('import W, {localActors} from "worlds/main";');
+    expect(code).toContain('import W from "worlds/main";');
     expect(code).toContain('import M0 from "actors/coin";');
     expect(code).toContain('import M1 from "actors/player";');
     expect(code).toContain('{type: "actors/coin", builder: M0}');
     expect(code).toContain('{type: "actors/player", builder: M1}');
   });
 
-  it('spreads the world’s own actors in, keyed by their type', () => {
-    // The key is what a placed one carries, which is what `schemas[type]` is
-    // looked up by — the same string `add actor` stamps.
-    const code = thumbnailManifest([], 'worlds/main');
-
-    expect(code).toContain(
-      'Object.entries(localActors ?? {}).map(([type, builder]) => ({type, builder}))',
-    );
-  });
-
   it('is valid with no actor modules at all', () => {
-    // A world whose only actors are its own. The list must not begin with a
-    // stray comma, which is the way a template like this usually breaks.
-    //
-    // This case passed for months while single-world projects had no
-    // thumbnails at all, because `getActorInfo` returned early on an empty
-    // actor-path list and never built the manifest. A unit test proving the
-    // callee handles a case says nothing about whether the caller reaches it —
-    // see the guard in runtime/WorldRuntimeContext.
     const code = thumbnailManifest([], 'worlds/main');
 
-    expect(code).not.toContain('[, ');
-    expect(code).toContain('actors: [...Object.entries');
+    expect(code).toContain('actors: []');
   });
 
   it('parses as a module', () => {

@@ -295,8 +295,10 @@ describe('a gated first lesson', () => {
   });
 
   it('is not so small the lesson cannot be done', () => {
+    // The lesson places a second Hero, so `add actor` has to be there; the
+    // Hero's own file offers `define actor`, which is the other half.
     const offered = offeredAt('origin/first-world');
-    expect(offered.has('world_actor')).toBe(true);
+    expect(offered.has('world_add_actor')).toBe(true);
     expect(offered.has('world_world')).toBe(true);
   });
 });

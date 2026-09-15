@@ -19,12 +19,9 @@
 // actor appears in it as a value. The shelf shows what suits whichever was
 // clicked (`actors/enhance/enhancements`).
 //
-// IT KNOWS WHICH ACTOR EITHER WAY. An actor with a file of its own is named by
-// that file, which the workspace was told when it opened; an actor a WORLD
-// defines for itself has no file, and is named by the world plus this block —
-// the same address `add actor` and `any ⟨kind⟩` use for one
-// (`blockly/localActors`). The enhancement takes both
-// (specs/ENHANCEMENTS.md), so the button is built for both.
+// IT KNOWS WHICH ACTOR. An actor is named by its file, which the workspace
+// was told when it opened (`editingRule`); a `define actor` in a workspace
+// that is not editing an actor file is about nobody, and gets no button.
 //
 // What it is NOT built on is a workspace that is neither — a `.rule`, a
 // flyout preview — where there is no actor for it to be about.
@@ -42,7 +39,6 @@ import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 import {requestActorEnhance} from '../../actors/enhance/actorEnhance';
 import type {EnhanceTarget} from '../../actors/enhance/enhancements';
 import {editingActorModule, editingFileModule} from '../editingRule';
-import {definesWorld} from '../localActors';
 
 import {glyphIcon} from './glyphIcon';
 import {addOnChange} from './onChange';
@@ -74,12 +70,8 @@ const SPARKLES_FREE = '';
 export interface EnhanceContext {
   /** The `.actor` this workspace is editing, if it is editing one. */
   actorModule?: string;
-  /** The file it is editing, whatever kind — the world, for a world's actor. */
+  /** The file it is editing, whatever kind. */
   fileModule?: string;
-  /** Whether that file defines a world, which is what makes this block local. */
-  world: boolean;
-  /** This `define actor` block's own id, which names a world-local actor. */
-  blockId: string;
   /** Which definition this block IS — the button rides on both. */
   defines: 'actor' | 'world';
   /** What the block calls the actor, which is what the dialog's title says. */
@@ -114,14 +106,6 @@ export function enhanceTarget(
   if (context.actorModule) {
     return {kind: 'actor', path: context.actorModule, name: context.name};
   }
-  if (context.world && context.fileModule) {
-    return {
-      kind: 'actor',
-      path: context.fileModule,
-      block: context.blockId,
-      name: context.name,
-    };
-  }
   return undefined;
 }
 
@@ -131,8 +115,6 @@ function contextOf(block: Block): EnhanceContext {
   return {
     actorModule: editingActorModule(block),
     fileModule: editingFileModule(block),
-    world: definesWorld(workspace),
-    blockId: block.id,
     defines: block.type === 'world_world' ? 'world' : 'actor',
     // Read at click time as well as here: the field is editable, and the name
     // on screen is the one the learner means.

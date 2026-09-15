@@ -44,8 +44,7 @@ whose fact it is, and so whose file it lands in.
 So an enhancement declares its subject, each wand offers what suits it, and one
 that has to name something else ASKS: the shelf puts the question under the row
 that raised it, with the choices read from the project. The camera asks which
-actor to follow, and offers both kinds — the world's own `define actor` blocks
-and the project's `.actor` files.
+actor to follow, and offers the project's `.actor` files.
 
 ## What an enhancement is
 
@@ -150,38 +149,24 @@ Ticks are held and folded over the source on the press, the same fold the
 wizard makes (`enhanceWith`), so both surfaces agree on the order rows land
 in and neither is a copy of the other.
 
-## Two kinds of actor, two shapes of patch
+## One kind of actor, one shape of patch
 
-Most actors have a file of their own. An actor a WORLD defines for itself does
-not: it is a `define actor` block among the world's own roots, named everywhere
-else by the world plus that block (`blockly/localActors`), and the starter said
-entirely in `main.world` is made of them.
+There were two. An actor a WORLD defined for itself — a `define actor` among
+the world's own roots, named everywhere else by the world plus that block —
+was the second address, and every patch carried a branch for it: a different
+file, a chain found by block id, a hat whose subject was `any ⟨Ground⟩` rather
+than `this actor`, a property block type keyed by the world AND the block. The
+body of a patch was the same either way, which is what made the branch cheap
+enough to keep for as long as it was kept.
 
-A target is therefore a file path AND, for a world's own actor, a block id. The
-patch is the same patch; four things differ, and nothing else does:
+It was retired because that branch was not the shelf's alone. Everything in
+the lab that names an actor names it by module path, and every one of those
+grew the same second address; what a world-defined actor still could not do
+— declare a block or an event, be placed from a map — was the next instalment
+of the same bill. Every actor is a file now, and a target is a file path.
 
-|                           | an actor with a file           | one a world defines              |
-| ------------------------- | ------------------------------ | -------------------------------- |
-| the file                  | `actors/<name>.actor`          | `worlds/<world>.world`           |
-| the chain                 | the file's only `define actor` | the one the block id names       |
-| the hat's subject         | `this actor`                   | `any ⟨Ground⟩`                   |
-| the property's block type | keyed by the file              | keyed by the world AND the block |
-
-**The BODY is unchanged**, which is what makes this cheap: `this actor` inside
-a hat is the actor the event fired for either way, so the three rows that place
-the bar, point it and remember it read the same in both.
-
-**The bar stays a file in both.** `add actor ⟨Health Bar⟩` reads the same in a
-world as in an actor, and a world that defines its own actors has no more claim
-to define its own bar than to define its own Coin.
-
-**A known interaction, since the single-world starter is where it shows up:**
-that project defines an actor of its OWN called "Health Bar", so enhancing
-anything in it leaves two actors of that name — the local one and the imported
-file — and the editor's thumbnails say so. That is what importing the stock
-Health Bar into that project does by any route, `Import…` included; it is a
-collision between a world's own actor and an imported file, and it wants
-solving there rather than here.
+What the branch taught outlives it: a patch is written against `this actor`,
+and who a hat is about is `subjectOf`'s to answer, not the row's.
 
 ## The first one: health, and a bar above it
 
@@ -369,15 +354,6 @@ Label IS — so the patch adds the clock and leaves the words alone.
 makes: this decides how much of the line is showing and the actor decides what
 showing looks like. A Label, a Button and a Speech Box all draw `text` already,
 so any of them types itself out with nothing else done.
-
-**And it refuses an actor a world defines for itself.** That body generates
-into a block scope, where the `export const` a `define block` and a
-`define event` each emit is not legal — so the palette offers neither inside a
-world's own `define actor` (`blockly/fileKind`). Writing the rows anyway would
-leave a file that silently generates nothing, which is the one outcome an
-enhancement must never produce. Lifting that limit means hoisting an own
-action's declaration out of the block scope the way a property's already is
-(`ownProperties.ownPropertyDeclarationFor`), and it is not done.
 
 ## The assembly: walking and jumping
 

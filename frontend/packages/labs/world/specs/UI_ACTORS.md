@@ -271,38 +271,24 @@ standing in for a base class the language could not express.
 
 Two things had to be answered as it went, and both had answers already:
 
-- **Two projects have no file to act like.** A world-local actor CAN act like
-  one — `acts like` emits a call, not the `export const` that gets `define
-block` refused inside a world, and a block scope takes a call quite happily
-  (`__tests__/actsLike`). What the Label in the drawing lesson lacks is a Label to act
-  like: it is the only text in its project. So it declares the four properties
-  itself and draws from them, the way a bar with no Progress Bar to act like
-  declares `PROGRESS_BAR_PROPERTIES`. The same shape wants the same name: a
-  `LABEL_PROPERTIES` beside it.
+- **One project has no file to act like.** What the Label in the drawing
+  lesson lacks is a Label to act like: it is the only text in its project. So
+  it declares the four properties itself and draws from them, the way a bar
+  with no Progress Bar to act like declares `PROGRESS_BAR_PROPERTIES`. The
+  same shape wants the same name: a `LABEL_PROPERTIES` beside it.
 
-  **A local actor may also act like a CO-LOCATED one**, which is what a
-  single-world project needs: its Scoreboard and its Health Bar are both
-  Labels, and without this there is no way for them to say so — each declares
-  the four properties, and the duplication this page keeps removing comes
-  straight back in the one project that cannot import.
-
-  The row emits a call on the other actor's `const` rather than an import, so
-  the ORDER of the definitions becomes load-bearing: a child written above its
-  parent on the canvas would read a name in its temporal dead zone.
-  `assembleWorldModule` sorts a world's own actors by their `acts like` edges
-  — parents first, stable for everything with no parent, and a cycle left in
-  its original order so the module throws naming the actor rather than the
-  generator never returning. Where a block sits on a canvas is not something a
-  learner should have to think about, which is the same reason local actors
-  are hoisted above the world block at all.
+  (An actor a world defined for itself could act like a file, and like another
+  of the world's own, which took ordering the definitions by their `acts like`
+  edges. That model is retired; every actor is a file, and `acts like` is an
+  import.)
 
 - **`text needs a drawing` lost its subject.** `blockly/extensions/
 textNeedsDrawing` warned on a `use trait ⟨Shows Text⟩` row in an actor that
   paints nothing — words nobody will see. There is no such row any more: the
   common path is `acts like ⟨Label⟩`, which BRINGS a drawing, so that way the
   mistake is unmakeable. It is still makeable by declaring the four properties
-  and painting nothing, which is what a world-local actor does — so what went
-  is a guard on a row that no longer exists, and the narrower case has none.
+  and painting nothing — so what went is a guard on a row that no longer
+  exists, and the narrower case has none.
 
 One thing was NOT foreseen, and it is the one worth remembering. An actor may
 SET its own property in its own definition chain — the Label declares `text`
@@ -913,7 +899,6 @@ They answer it now, from where the block SITS (`blockly/actorAbout`):
 | --------------------------------------------- | ------------- |
 | anywhere in an `.actor` file                  | that actor    |
 | in a world hat whose subject is `any ⟨Crate⟩` | a Crate       |
-| in a world's own `define actor`               | that actor    |
 | in the body of `add actor ⟨Coin⟩`             | a Coin        |
 | `event actor` under a hat filtered on ⟨Mark⟩  | a Mark        |
 | a rule's trait step, or the toolbox           | the word      |
@@ -941,14 +926,11 @@ the block is IN the body rather than chained after it, and the `add` did not
 take a name, because `as ⟨placed⟩` exists precisely so that a body can go on
 saying `this actor` and meaning the actor whose file it is.
 
-**Two traps, both paid for once.** A world's own `define actor` and an `.actor`
-file's root are the same block, and telling them apart is what decides whether
-the kind is the block's stamped id or the file's module path — asked the wrong
-way round in an actor file, the answer is a name no thumbnail is filed under.
-And a block is created before it is connected, while a SHADOW is created and
-never announced, so the first ask of "what am I about" can come before there is
-anything to answer with: the editor refreshes them after a load, beside the
-dropdown redraw it already did for thumbnails arriving late.
+**One trap, paid for once.** A block is created before it is connected, while
+a SHADOW is created and never announced, so the first ask of "what am I about"
+can come before there is anything to answer with: the editor refreshes them
+after a load, beside the dropdown redraw it already did for thumbnails
+arriving late.
 
 ## What this does not solve
 

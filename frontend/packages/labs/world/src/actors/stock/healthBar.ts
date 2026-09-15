@@ -68,11 +68,10 @@ export const HEALTH_BAR_SUBJECT = {
  *
  * PARAMETERISED TWICE, because an own property's block type carries the path
  * of the file that declared it (`blockly/ownProperties`). `subject` is this
- * bar's own — `ActorsHealthBar_…` for the imported file, `WorldsMain…_…` for a
- * world that defines the bar itself. `fraction` is
- * the PROGRESS BAR's, which this actor acts like, so its default is that
- * file's; a world-defined bar that cannot act like a file declares its own and
- * passes it here.
+ * bar's own — `ActorsHealthBar_…` for this file, another file's for a bar
+ * that declares it itself. `fraction` is the PROGRESS BAR's, which this actor
+ * acts like, so its default is that file's; a bar that declares its own passes
+ * it here.
  *
  * IN `react`, after everything has moved and been hurt, so the bar shows what
  * just happened rather than what was true at the top of the frame. The same

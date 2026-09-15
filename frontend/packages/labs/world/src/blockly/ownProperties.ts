@@ -37,7 +37,6 @@
 import type {PropertyType} from '../engine/core/types';
 
 import type {ParamType} from './enums';
-import {localActorVar} from './localActors';
 import {
   designedName,
   propertyDefault,
@@ -190,75 +189,6 @@ export function parseWorldOwnMeta(
   return declarationsIn(modulePath, contents, 'world_world', 'world', 'World');
 }
 
-/**
- * Every ACTOR a world defines for itself, and what each declares.
- *
- * A world's own `define actor` roots are actors like any other, so `define
- * property` inside one is that actor's — the same declaration in a fifth home.
- * They were not read at all until this, which is not a boundary anybody drew:
- * the walk simply looked for ONE root of one type per file, and `world_world`
- * was the one it looked for. A world-defined actor could therefore have a
- * picture and no memory, and a scoreboard that carried a number had to be a
- * file.
- *
- * THE MODULE PATH CARRIES THE DEFINING BLOCK, `worlds/main#someActorDef`, and
- * that is the whole of what made this hard. A block type is minted from the
- * path (`pathSlug` in domainBlocks), so two local actors in one world both
- * declaring `subject` would mint one block type for two different properties —
- * and which one a `get` block read would depend on which meta was registered
- * last. The `#` is not a path anything resolves; nothing imports these, and
- * their scope is the block their actor's body generates into.
- */
-export function parseWorldActorOwnMetas(
-  modulePath: string,
-  contents: string,
-): OwnMeta[] {
-  let roots: ActorBlock[];
-  try {
-    const parsed = JSON.parse(contents) as {
-      blocks?: {blocks?: (ActorBlock & {id?: string})[]};
-    };
-    roots = (parsed.blocks?.blocks ?? []).filter(
-      b => b?.type === 'world_actor',
-    );
-  } catch {
-    return []; // mid-edit / not JSON
-  }
-  return roots.flatMap(root => {
-    const id = (root as {id?: string}).id;
-    const meta = declarationsFrom(
-      id ? `${modulePath}#${id}` : modulePath,
-      root,
-      'actor',
-      'Actor',
-    );
-    return meta ? [meta] : [];
-  });
-}
-
-/**
- * What generated code calls a property a WORLD-DEFINED actor declares.
- *
- * TWO NAMES, because they answer two questions. The `exportName` is what the
- * property is CALLED, and a block type is minted from it (`memberKey`) — which
- * is a name people read: `standInBlocks` splits that segment back into words to
- * put on a dead block's face, so `Worlds Main Bar Def Subject Property` is a
- * sentence and the generator's identifier would not be. This is the other
- * question: what the generator WRITES. It needs a name of its own because the
- * declaration is hoisted to the world module's top level (`domainBlocks`,
- * `world_actor`), and two local actors both declaring `subject` would otherwise
- * be one const declared twice, which is a project that does not compile.
- *
- * Both sides call this: the `const` the definition emits, and the reference a
- * `get`/`set` block generates (`refCode`). They have to agree, and there is one
- * place where they do.
- */
-export const ownPropertyCodeName = (
-  exportName: string,
-  worldLocal: {actorName: string; blockId: string},
-): string =>
-  `${localActorVar(worldLocal.actorName, worldLocal.blockId)}_${exportName}`;
-
 /** The walk both share: a root's chain, and every declaration in it. */
 function declarationsIn(
   modulePath: string,
@@ -305,11 +235,9 @@ function declarationsIn(
  * @param variables the workspace's variable map, id → name. A designed block's
  *   parameters are variables, and their ids are what the mutator saved; without
  *   this every parameter would be called by its id.
- * @param actorFile whether this root is an `.actor` FILE's `define actor`,
- *   which is the whole of where a `define block` or a `define event` may be
- *   written today: a world's own `define actor` generates into a block scope,
- *   where the `export const` either declaration emits is not legal, and a
- *   `.world` is not offered the blocks at all (`ROOT_HOMES`).
+ * @param actorFile whether this root is an `.actor` file's `define actor`,
+ *   which is the only root a `define block` or a `define event` may be
+ *   written under: a `.world` is not offered the blocks at all (`ROOT_HOMES`).
  */
 function declarationsFrom(
   modulePath: string,
@@ -332,14 +260,8 @@ function declarationsFrom(
   for (const block of chain(root)) {
     if (block.type === 'world_acts_like') {
       const named = field(block, 'ACTOR');
-      // A CO-LOCATED actor is named by the block that defines it, and its meta
-      // is keyed `<world>#<block>` — which is how `parseWorldActorOwnMetas`
-      // files one, and so what the palette's walk up the chain looks for.
-      const resolved = named.startsWith('local:')
-        ? `${modulePath.replace(/#.*$/, '')}#${named.slice('local:'.length)}`
-        : named;
-      if (resolved && resolved !== modulePath) {
-        actsLike = resolved;
+      if (named && named !== modulePath) {
+        actsLike = named;
       }
       continue;
     }
@@ -620,67 +542,5 @@ function declarationLine(
     `${exported ? 'export ' : ''}const ${exportName} = ${receiver}.defineProperty(` +
     `${JSON.stringify(id)}, ${JSON.stringify(declared.type)}, ` +
     `${JSON.stringify(declared.value)}, ${JSON.stringify(opts)});\n`
-  );
-}
-
-/**
- * A declaration emitted from the BLOCK rather than from parsed metadata.
- *
- * The one case that needs it: an actor a world defines for itself. Everywhere
- * else the declaration is written by the module assembler from an `OwnMeta`,
- * at the top of a module where the whole file can see it. A world-local
- * actor's body generates inside a block of its own — `{ const actor = …; … }`
- * — so the declaration has to be emitted THERE, by the block that opens it,
- * or nothing in the body can see the property.
- *
- * It shares `declarationLine` with the assembler rather than formatting its
- * own, because the two must agree on the name a `get` block will reach for.
- *
- * NOT EXPORTED, unlike a file-level actor's. `export` is only legal at a
- * module's top level and this lands inside the block a `define actor` opens,
- * so exporting it is a syntax error — and there would be nothing to export to
- * anyway, since the name is block-scoped. What that costs is that a handler
- * elsewhere in the world cannot `set ⟨…⟩ of ⟨any ⟨Bar⟩⟩` for a world-defined
- * actor's own property; the MAP still can, because `loadMap` resolves against
- * the actor's live properties rather than by name (`Actor.ownProperties`).
- */
-export function ownPropertyDeclarationFor(
-  fields: {
-    name: string;
-    type: string;
-    /** The `DEFAULT` field, whatever it holds — see {@link propertyDefault}. */
-    default: unknown;
-    /** A point's second axis; nothing at all for every other type. */
-    defaultY?: unknown;
-    access: string;
-  },
-  /**
-   * The actor being defined: what to call `defineProperty` on, and what to
-   * name the const after. Both because the declaration is HOISTED out of the
-   * block the body generates into — see the note above.
-   */
-  on: {variable: string; actorName: string; blockId: string},
-): string {
-  const declared = fields.name;
-  if (!declared) {
-    return ''; // an unnamed declaration declares nothing
-  }
-  const type = (
-    PROPERTY_TYPES.has(fields.type) ? fields.type : 'number'
-  ) as PropertyType;
-  return declarationLine(
-    on.variable,
-    ownPropertyCodeName(`${pascal(declared)}Property`, {
-      actorName: on.actorName,
-      blockId: on.blockId,
-    }),
-    slug(declared),
-    false,
-    {
-      type,
-      value: propertyDefault(type, fields.default, fields.defaultY),
-      name: declared,
-      readonly: fields.access === 'readonly',
-    },
   );
 }

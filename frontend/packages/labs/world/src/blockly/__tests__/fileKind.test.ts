@@ -11,7 +11,6 @@ import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette} from '../domainBlocks';
 import {fileKindOf, moduleShape, ROOT_HOMES, type FileKind} from '../fileKind';
-import {projectOwnMetas} from '../projectModules';
 
 const KINDS: FileKind[] = ['actor', 'world', 'rule'];
 
@@ -50,11 +49,11 @@ describe('fileKindOf', () => {
 });
 
 describe('which definition roots a file may hold', () => {
-  it('offers `define actor` to an actor AND a world', () => {
-    // A world defines actors of its own — `localActors`, each a `const` the
-    // world's body then places with `add actor`.
+  it('offers `define actor` to an actor file alone', () => {
+    // Every actor is a file. A world once held its own; nothing offers one
+    // there now, and the generator refuses one pasted in.
     expect(offeredTypes('actor')).toContain('world_actor');
-    expect(offeredTypes('world')).toContain('world_actor');
+    expect(offeredTypes('world')).not.toContain('world_actor');
     expect(offeredTypes('rule')).not.toContain('world_actor');
   });
 
@@ -236,92 +235,5 @@ describe('ROOT_HOMES', () => {
     for (const [type, homes] of ROOT_HOMES) {
       expect(homes.size, type).toBeGreaterThan(0);
     }
-  });
-});
-
-describe('an actor a world defines for itself', () => {
-  // The three things that used to make a world-defined actor second class: it
-  // could not draw, it could not do per-frame work, and it could not remember
-  // anything. All three were the same shape — a block legal only in the file
-  // an actor usually lives in — and the single-world platformer showed all
-  // three as one symptom: a health bar drawn as a plain box that never moved.
-
-  /** A world with one local actor, holding `rows` in its body. */
-  const worldWith = (rows: object[]) =>
-    JSON.stringify({
-      blocks: {
-        blocks: [
-          {type: 'world_world', fields: {NAME: 'W'}},
-          {
-            type: 'world_actor',
-            id: 'barDef',
-            fields: {NAME: 'Bar'},
-            next: {block: rows[0]},
-          },
-        ],
-      },
-    });
-
-  it('may keep a property, keyed by the block that defines it', () => {
-    // The key is what made this hard rather than the idea. A block type is
-    // minted from the module path, so two local actors in one world both
-    // declaring `subject` would mint ONE type for two properties, and which
-    // one a `get` read would depend on registration order.
-    const metas = projectOwnMetas({
-      'worlds/main.world': worldWith([
-        {
-          type: 'world_rule_property',
-          fields: {TYPE: 'actor', ACCESS: 'writable', NAME: 'subject'},
-        },
-      ]),
-    });
-    const mine = metas.find(meta => meta.modulePath.includes('#'));
-
-    expect(mine?.modulePath).toBe('worlds/main#barDef');
-    // The NAME is the plain one: a block type is minted from it, and that type
-    // is read back into words for a dead block's face. What the generator
-    // WRITES is a hoisted const named apart per actor
-    // (`ownPropertyCodeName`), which is a different question.
-    expect(mine?.properties[0].ref.exportName).toBe('SubjectProperty');
-    expect(mine?.properties[0].scope).toBe('actor');
-  });
-
-  it('keeps the world’s own properties apart from its actors’', () => {
-    // A world may declare its own as well, and those are world-scoped. Both
-    // come out of one file and must not be confused for each other.
-    const metas = projectOwnMetas({
-      'worlds/main.world': JSON.stringify({
-        blocks: {
-          blocks: [
-            {
-              type: 'world_world',
-              fields: {NAME: 'W'},
-              next: {
-                block: {
-                  type: 'world_rule_property',
-                  fields: {TYPE: 'number', NAME: 'score'},
-                },
-              },
-            },
-            {
-              type: 'world_actor',
-              id: 'barDef',
-              fields: {NAME: 'Bar'},
-              next: {
-                block: {
-                  type: 'world_rule_property',
-                  fields: {TYPE: 'number', NAME: 'fraction'},
-                },
-              },
-            },
-          ],
-        },
-      }),
-    });
-
-    expect(metas.map(meta => meta.properties[0].scope).sort()).toEqual([
-      'actor',
-      'world',
-    ]);
   });
 });

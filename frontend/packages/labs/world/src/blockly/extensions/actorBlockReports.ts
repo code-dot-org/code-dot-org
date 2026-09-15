@@ -18,8 +18,6 @@ import * as Blockly from 'blockly/core';
 
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {definesWorld} from '../localActors';
-
 import {addOnChange} from './onChange';
 
 export const ACTOR_BLOCK_REPORTS_EXTENSION = 'world_actor_block_reports';
@@ -31,16 +29,14 @@ const DEFINE_ACTOR = 'world_actor';
  *
  * The top of the chain, and not merely "has a `define actor` above it": a
  * `define block` under a rule's trait has a `define rule` above it and belongs
- * to the rule. A world is excluded because a `define block` is not offered
- * there at all (`ROOT_HOMES`) — the check is what makes a pasted one quiet
- * rather than wrong.
+ * to the rule.
  */
 function declaredByAnActor(block: Block): boolean {
   let at: Block = block;
   for (let up = at.getParent(); up; at = up, up = at.getParent()) {
     // walk to the top of the chain
   }
-  return at.type === DEFINE_ACTOR && !definesWorld(block.workspace);
+  return at.type === DEFINE_ACTOR;
 }
 
 /** Whether this block promises something an actor cannot deliver yet. */

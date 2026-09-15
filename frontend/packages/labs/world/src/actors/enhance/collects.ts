@@ -42,24 +42,13 @@ const COLLECTS_HAT = 'world_on_Collection_CollectsEvent';
 const WORTH = 10;
 
 /** Which file holds this actor, and which of its roots defines it. */
-const fileOf = (target: EnhanceTarget) =>
-  target.block
-    ? {
-        path: `${target.path}.world`,
-        root: {type: 'world_actor', id: target.block},
-      }
-    : {path: `${target.path}.actor`, root: {type: 'world_actor'}};
+const fileOf = (target: EnhanceTarget) => ({
+  path: `${target.path}.actor`,
+  root: {type: 'world_actor'},
+});
 
 /** Who the hat is about: this actor's file, or one kind among a world's. */
-const subjectOf = (target: EnhanceTarget) =>
-  target.block
-    ? {
-        block: {
-          type: 'world_actor_kind',
-          fields: {ACTOR: `local:${target.block}`},
-        },
-      }
-    : {block: {type: 'world_this_actor'}};
+const subjectOf = () => ({block: {type: 'world_this_actor'}});
 
 /** Whether a `use trait` for `trait` is already in this actor's chain. */
 const hasTrait = (
@@ -74,9 +63,9 @@ const hasTrait = (
   );
 
 /** `when ⟨this actor⟩ collects ⟨any⟩: add ten to the score`. */
-const handler = (target: EnhanceTarget): BlockJson => ({
+const handler = (): BlockJson => ({
   type: COLLECTS_HAT,
-  inputs: {ACTOR: subjectOf(target)},
+  inputs: {ACTOR: subjectOf()},
   next: {
     block: {
       type: 'world_do_Scoring_AddToTheScoreAction',
@@ -141,7 +130,7 @@ export const collectsEnhancement: Enhancement = {
         ]);
       }
       if (!scores(next)) {
-        next = addRoot(next, handler(target));
+        next = addRoot(next, handler());
       }
       return next;
     });

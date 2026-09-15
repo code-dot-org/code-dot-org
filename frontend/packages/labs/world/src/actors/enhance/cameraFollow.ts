@@ -42,7 +42,7 @@ import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt, filePath} from '../../runtime/projectFiles';
 
 import type {Enhancement, EnhanceChoice, EnhanceTarget} from './enhancements';
-import {append, down, rootsOf, rowsUnder, type BlockJson} from './patch';
+import {append, down, rowsUnder, type BlockJson} from './patch';
 
 /** The rule that aims a camera, which brings the one that moves the view. */
 const FOLLOWS = 'Camera Follow#FollowsTrait';
@@ -62,26 +62,12 @@ const kindOf = (actor: string) => ({
 });
 
 /**
- * The actors this world can name, as the field names them.
- *
- * Both kinds, because a world may hold both: its own `define actor` blocks,
- * which are `local:<block>`, and the project's `.actor` files, which are their
- * module paths (`blockly/localActors`). Read from the files as they stand,
- * since the answer is a choice about the project rather than about this
+ * The actors this world can name, as the field names them: the project's
+ * `.actor` files, by module path. Read from the files as they stand, since
+ * the answer is a choice about the project rather than about this
  * enhancement.
  */
-const actorsFor = (
-  source: MultiFileSource,
-  target: EnhanceTarget,
-): EnhanceChoice[] => {
-  const worldId = fileIdAt(source, `${target.path}.world`);
-  const own = worldId ? rootsOf(source.files[worldId].contents) : [];
-  const local = own
-    .filter(root => root.type === 'world_actor' && root.id)
-    .map(root => ({
-      value: `local:${root.id}`,
-      name: String(root.fields?.NAME ?? root.id),
-    }));
+const actorsFor = (source: MultiFileSource): EnhanceChoice[] => {
   const files = Object.keys(source.files)
     .map(id => ({id, path: filePath(source, id) ?? ''}))
     .filter(one => one.path.endsWith('.actor'))
@@ -91,7 +77,7 @@ const actorsFor = (
         authoredName(source.files[one.id].contents ?? '') ??
         (one.path.split('/').pop() ?? '').replace(/\.actor$/, ''),
     }));
-  return [...local, ...files];
+  return files;
 };
 
 /**
@@ -193,7 +179,7 @@ export const cameraFollowEnhancement: Enhancement = {
   brings: ['Follows an Actor', 'Has a Camera', 'a camera to look through'],
   asks: {
     label: 'Following',
-    options: (source, target) => actorsFor(source, target),
+    options: source => actorsFor(source),
   },
   applied(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
     const id = fileIdAt(source, `${target.path}.world`);

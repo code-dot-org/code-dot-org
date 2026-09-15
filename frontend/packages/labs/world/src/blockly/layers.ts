@@ -11,10 +11,9 @@
 // `within layer` is the reopener, for the one case containment cannot reach:
 // adding to a layer declared somewhere else. Innermost wins when they nest.
 //
-// Layers are referred to by the id of the block that DEFINES them, like a
-// world's own actors (`localActors`) and unlike rules, whose names are their
-// references and which needed `renameRule` + `renameMemberReferences` to carry
-// a rename through. A layer's name is a label; renaming it breaks nothing.
+// Layers are referred to by the id of the block that DEFINES them, like
+// tweens and unlike rules, whose names are their references and which needed
+// `renameRule` + `renameMemberReferences` to carry a rename through. A layer's name is a label; renaming it breaks nothing.
 
 import type {Blockly} from '@code-dot-org/blockly';
 

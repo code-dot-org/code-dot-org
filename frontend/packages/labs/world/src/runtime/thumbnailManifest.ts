@@ -16,19 +16,14 @@ export function thumbnailManifest(
   // one; the module hands them over instead, keyed by the type a placed one
   // carries (`assembleWorldModule`, MAPS.md §5). Without this the map editor
   // would draw an actor it can say nothing about.
-  const imports = [`import W, {localActors} from ${quote(worldPath)};`];
+  const imports = [`import W from ${quote(worldPath)};`];
   const entries: string[] = [];
   actorPaths.forEach((path, index) => {
     imports.push(`import M${index} from ${quote(path)};`);
     entries.push(`{type: ${quote(path)}, builder: M${index}}`);
   });
-  const own =
-    `Object.entries(localActors ?? {})` +
-    `.map(([type, builder]) => ({type, builder}))`;
   return (
     `${imports.join('\n')}\n` +
-    `export default {world: W, actors: [${
-      entries.length ? `${entries.join(', ')}, ` : ''
-    }...${own}]};\n`
+    `export default {world: W, actors: [${entries.join(', ')}]};\n`
   );
 }

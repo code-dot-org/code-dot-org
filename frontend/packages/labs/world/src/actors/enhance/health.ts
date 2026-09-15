@@ -54,20 +54,6 @@
 // what would have happened anyway is a line to keep in step with a default
 // that may change for a reason.
 //
-// AND THE SAME THING FOR AN ACTOR A WORLD DEFINES FOR ITSELF, which has no file
-// of its own (specs/ENHANCEMENTS.md). Every line above still lands, in the
-// world's own file, and only four things differ:
-//
-//   the file       `worlds/main.world` rather than `actors/<target>.actor`
-//   the chain      the `define actor` block named, not the file's only one
-//   the hat        `when ⟨any ⟨Ground⟩⟩ is created`, since a world's hat names
-//                  a KIND where an actor file's names `this actor` — and the
-//                  BODY is unchanged, because `this actor` inside a hat is the
-//                  actor the event fired for either way
-//   the property   its block type carries `worlds/main#<block>` rather than
-//                  the actor's path, which is how a world's own declarations
-//                  are keyed (`blockly/ownProperties`)
-//
 // The bar stays a FILE in both: `add actor ⟨Health Bar⟩` reads the same in a
 // world as in an actor, and a world that defines its own actors has no more
 // claim to define its own bar than to define its own Coin.
@@ -114,13 +100,10 @@ const ATTACHED = 'Attachment#AttachedTrait';
 const me = () => ({block: {type: 'world_this_actor'}});
 
 /** Which file holds this actor, and which of its roots defines it. */
-const fileOf = (target: EnhanceTarget) =>
-  target.block
-    ? {
-        path: `${target.path}.world`,
-        root: {type: 'world_actor', id: target.block},
-      }
-    : {path: `${target.path}.actor`, root: {type: 'world_actor'}};
+const fileOf = (target: EnhanceTarget) => ({
+  path: `${target.path}.actor`,
+  root: {type: 'world_actor'},
+});
 
 /**
  * What an own property this actor declares is keyed by.
@@ -129,23 +112,14 @@ const fileOf = (target: EnhanceTarget) =>
  * the world AND the block, because a world may define several and they each
  * declare their own (`blockly/ownProperties`).
  */
-const ownerOf = (target: EnhanceTarget): string =>
-  target.block ? `${target.path}#${target.block}` : target.path;
+const ownerOf = (target: EnhanceTarget): string => target.path;
 
 /** Who the hat is about: this actor's file, or one kind among a world's. */
-const subjectOf = (target: EnhanceTarget) =>
-  target.block
-    ? {
-        block: {
-          type: 'world_actor_kind',
-          fields: {ACTOR: `local:${target.block}`},
-        },
-      }
-    : me();
+const subjectOf = () => me();
 
 /** The variable the handler's `add actor … as ⟨…⟩` binds. */
 const barVariable = (target: EnhanceTarget) => {
-  const stem = target.block ?? target.path.split('/').pop() ?? 'actor';
+  const stem = target.path.split('/').pop() ?? 'actor';
   return {id: `enhanceHealthBar_${stem}`, name: `${stem}Bar`, type: 'Actor'};
 };
 
@@ -208,7 +182,7 @@ const handler = (target: EnhanceTarget): BlockJson => {
   const bar = named(variable);
   return {
     type: CREATED_HAT,
-    inputs: {ACTOR: subjectOf(target)},
+    inputs: {ACTOR: subjectOf()},
     next: {
       block: {
         type: 'world_add_actor',
@@ -251,7 +225,7 @@ const handler = (target: EnhanceTarget): BlockJson => {
 /** The other hat: when it goes, its bar goes with it. */
 const remover = (target: EnhanceTarget): BlockJson => ({
   type: REMOVED_HAT,
-  inputs: {ACTOR: subjectOf(target)},
+  inputs: {ACTOR: subjectOf()},
   next: {
     block: {
       type: 'world_remove_actor',

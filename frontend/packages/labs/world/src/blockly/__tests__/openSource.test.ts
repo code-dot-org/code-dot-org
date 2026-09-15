@@ -182,10 +182,10 @@ describe('an actor a block names', () => {
     expect(moduleNamedBy(block({TYPE: 'actors/crate'}))).toBe('actors/crate');
   });
 
-  it('is nothing for an actor defined inside the world', () => {
-    // `local:<block id>` names a `define actor` in this very workspace. There
-    // is no file, and an eye offering to open one would be a lie.
-    expect(moduleNamedBy(block({ACTOR: 'local:abc123'}))).toBeUndefined();
+  it('is nothing for a value that is not a path', () => {
+    // Nothing chosen names no file, and an eye offering to open one would be
+    // a lie.
+    expect(moduleNamedBy(block({ACTOR: ''}))).toBeUndefined();
   });
 
   it('is nothing for a TYPE that is a kind of VALUE', () => {

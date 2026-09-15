@@ -31,8 +31,8 @@ import type {Block, WorkspaceSvg} from 'blockly';
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {addOnChange, isStructuralChange} from './extensions/onChange';
-import {definesWorld} from './localActors';
 import {subjectOfTraitValue} from './traitOptions';
+import {definesWorld} from './workspaceRoots';
 
 export const ACTOR_INPUT_EXTENSION = 'world_actor_input';
 export const ACTOR_SUBJECT_EXTENSION = 'world_actor_subject_input';

@@ -68,9 +68,11 @@ const fuelOf = (world: World, name: string) => {
   return (pilot(world) as {get(p: unknown): number}).get(module[name]);
 };
 
+// A whole project compiled before EACH of these, and under the full suite's
+// load that has run past vitest's ten-second hook limit. A minute is room.
 beforeEach(async () => {
   project = await compileProject(projectFiles(WORLD_SCENARIOS.jetpack.source));
-});
+}, 60_000);
 
 describe('the jetpack level', () => {
   it('stands the Pilot on the floor, with half a tank', () => {

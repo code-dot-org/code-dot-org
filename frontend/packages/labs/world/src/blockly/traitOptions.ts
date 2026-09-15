@@ -186,8 +186,8 @@ function traitSiteFor(field?: {getSourceBlock(): unknown}): {
  *
  * Read from the workspace's own blocks rather than from the parsed registry so
  * a trait appears the moment it is named — a registry refreshes on a parse, and
- * waiting for one is the same delay by a different route (`localActorsIn` and
- * `layersIn` do this for the same reason).
+ * waiting for one is the same delay by a different route (`layersIn` does
+ * this for the same reason).
  */
 function ownTraitOptions(
   field: {getSourceBlock(): unknown} | undefined,

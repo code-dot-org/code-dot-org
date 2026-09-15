@@ -226,9 +226,10 @@ is dropped on load: a project that says `spends a ⟨Key⟩` generating
 actor-carrying event's HAT has filtered by kind since it got a signature — the
 dropdown is `(any)` plus the project's kinds — but its option list was built by
 a closure that ignored the field it was handed. A world's own `define actor`
-kinds are found THROUGH the field (its workspace), so in a world that defines
-its actors inline — which is every progression lesson and the starter — the
-filter offered `(any)`, the empty-list placeholder beside it, and nothing else.
+kinds — a world could define actors of its own then — were found THROUGH the
+field (its workspace), so in a world that defined its actors inline, which was
+every progression lesson and the starter, the filter offered `(any)`, the
+empty-list placeholder beside it, and nothing else.
 Two entries carrying the same empty value, one of them reading like an actor a
 game might have.
 

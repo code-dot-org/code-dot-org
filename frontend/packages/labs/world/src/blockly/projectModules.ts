@@ -15,7 +15,6 @@ import {FOUNDATION_RULE_NAMES} from './foundation';
 import {label} from './label';
 import {
   parseActorOwnMeta,
-  parseWorldActorOwnMetas,
   parseWorldOwnMeta,
   type OwnMeta,
 } from './ownProperties';
@@ -317,10 +316,6 @@ export function projectOwnMetas(files: Record<string, string>): OwnMeta[] {
       if (meta) {
         metas.push(meta);
       }
-      // …and every actor the world defines for ITSELF, each keyed by the
-      // block that defines it. A world-defined actor is an actor, and one
-      // that keeps a number of its own had to be a file until this.
-      metas.push(...parseWorldActorOwnMetas(world, contents));
     }
   }
   return metas;

@@ -478,14 +478,8 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     placements: readonly PlacementRequest[] = [],
   ): Promise<ActorInfo> => {
     const pair = managers.current;
-    // No guard on `actorPaths` being empty, which this used to have and which
-    // silently cost every single-world project its thumbnails. An empty list
-    // once meant "no actors to introspect"; since a world may define actors of
-    // its own, it means "no actor MODULES" — and a project whose actors all
-    // live in `main.world` has none of those and every one of its actors here.
-    // The manifest already reads them off the world's `localActors` export; it
-    // was never asked.
-    //
+    // No guard on `actorPaths` being empty, which this used to have: a project
+    // with no actor files has nothing to introspect and the manifest says so.
     // What is left to skip on is a world to introspect, which is the one thing
     // the manifest cannot do without.
     if (!pair || !worldPath) {

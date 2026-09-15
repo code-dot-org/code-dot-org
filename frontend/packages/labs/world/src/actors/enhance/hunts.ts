@@ -89,9 +89,9 @@ const actorIn = (value: BlockJson | undefined): string | undefined => {
 
 export const huntRow = (spec: HuntSpec): Enhancement => {
   /** The hat this adds: when it appears, it learns what it is after. */
-  const handler = (target: EnhanceTarget, actor: string): BlockJson => ({
+  const handler = (_target: EnhanceTarget, actor: string): BlockJson => ({
     type: CREATED_HAT,
-    inputs: {ACTOR: subjectOf(target)},
+    inputs: {ACTOR: subjectOf()},
     next: {
       block: {
         type: spec.property,
@@ -101,25 +101,22 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
   });
 
   /** Whether a block is the hat this wrote, about this actor. */
-  const isOurs = (target: EnhanceTarget) => (block: BlockJson) => {
+  const isOurs = () => (block: BlockJson) => {
     if (block.type !== CREATED_HAT) {
       return false;
     }
     const named = (block.inputs?.ACTOR as {block?: BlockJson} | undefined)
       ?.block?.fields?.ACTOR;
-    const mine = target.block
-      ? named === `local:${target.block}`
-      : named === undefined;
-    return mine && [...down(block)].some(row => row.type === spec.property);
+    return (
+      named === undefined &&
+      [...down(block)].some(row => row.type === spec.property)
+    );
   };
 
   /** Who that hat currently points at, if the file holds one. */
-  const aimedAt = (
-    contents: string,
-    target: EnhanceTarget,
-  ): string | undefined => {
+  const aimedAt = (contents: string): string | undefined => {
     for (const root of rootsOf(contents)) {
-      if (!isOurs(target)(root)) {
+      if (!isOurs()(root)) {
         continue;
       }
       for (const row of down(root)) {
@@ -137,12 +134,12 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
   /** Aim the hat this wrote somewhere else, in place. */
   const repoint = (
     contents: string,
-    target: EnhanceTarget,
+    _target: EnhanceTarget,
     actor: string,
   ): string => {
     const workspace = JSON.parse(contents) as {blocks?: {blocks?: BlockJson[]}};
     for (const root of workspace.blocks?.blocks ?? []) {
-      if (!isOurs(target)(root)) {
+      if (!isOurs()(root)) {
         continue;
       }
       for (const row of down(root)) {
@@ -168,7 +165,7 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
       return (
         spec.traits.every(trait => wears(contents, trait, root)) &&
         answer !== undefined &&
-        aimedAt(contents, target) === answer
+        aimedAt(contents) === answer
       );
     },
     apply(source: MultiFileSource, target: EnhanceTarget, answer?: string) {
@@ -183,7 +180,7 @@ export const huntRow = (spec: HuntSpec): Enhancement => {
       }
       return edit(current, id, contents => {
         const next = electTraits(contents, root, spec.traits);
-        return aimedAt(next, target) === undefined
+        return aimedAt(next) === undefined
           ? // Beside the definition rather than under it: a hat takes no
             // previous connection, and `DisableOrphansPlugin` grays out a
             // top-level block that has one along with everything below it.

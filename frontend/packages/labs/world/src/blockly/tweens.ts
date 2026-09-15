@@ -1,11 +1,8 @@
 // Tweens a file defines, and how a block names one.
 //
-// A tween is DEFINED where it is used and referenced by id, which is the
-// pattern `define actor` → `add actor ⟨Coin⟩` already sets and `localActors`
-// already explains. A tween for the Player is found in `player.actor`, beside
-// the blocks that play it; a tween several files share would live in a file of
-// its own, which is the same axis an actor sits on (a file, or local to one
-// world) and is not built yet.
+// A tween is DEFINED where it is used and referenced by id. A tween for the
+// Player is found in `player.actor`, beside the blocks that play it; a tween
+// several files share would live in a file of its own, and is not built yet.
 //
 // THE VALUE IS THE DEFINING BLOCK'S ID, not the name, for the reason an actor's
 // is: a dropdown value outlives the thing it names, so renaming a tween keeps
@@ -71,7 +68,7 @@ export const tweenOptions = (
  * The variable a defined tween becomes in generated code.
  *
  * Named after the tween so the module reads, with the id as a suffix only
- * because two may share a name — `localActorVar`'s reasoning, and its shape.
+ * because two may share a name.
  */
 export const tweenVar = (name: string, blockId: string): string => {
   const stem =

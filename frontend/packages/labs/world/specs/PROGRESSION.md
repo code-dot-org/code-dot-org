@@ -561,7 +561,10 @@ point of the exercise. Here is what it asks for and the lab has not got.
    writing `memory/score`, which now counts clicks in a handler for this
    reason and not for a teaching one.
 9. <a id="own-property-scope"></a>**A world-defined actor's own property, from
-   the world.** FIXED (`ownPropertyCodeName`,
+   the world.** RETIRED with the world-defined actor: every actor is a file, and
+   an actor's own property is reached the way any file's export is. What
+   follows is the record of the fix before that, and of the diagnosis before
+   the fix. FIXED (`ownPropertyCodeName`,
    `src/__tests__/worldActorOwnProperty`). The declaration is hoisted out of the
    block a `define actor` opens to the world module's top level, under a name of
    its own per declaring actor, so the whole file can reach it and two local

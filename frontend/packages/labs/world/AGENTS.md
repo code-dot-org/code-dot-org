@@ -171,10 +171,6 @@ Six steps.
    | a hat, beside the definition                | `addRoot(contents, block)`        |
    | a variable a block names                    | `withVariable(contents, v)`       |
 
-   Using them is also how a row works on an actor a WORLD defines for itself,
-   which has no file of its own: `fileOf` and `subjectOf` know about both kinds
-   of target and the body of a patch is the same either way.
-
 4. **Take one of the shapes.** Five, and the one you want is usually obvious
    once the rule is read:
 
@@ -385,9 +381,9 @@ dials: halving gravity doubles the height unless the impulse comes down by root
 two with it. Reasoning about these in pixels-per-frame produced a value six
 times wrong and a bird that flew off the top of the level.
 
-**Layout is free.** A world's own `define actor` blocks and their handlers are
-hoisted above the world block whatever order they sit in, so put `define world`
-at the top left and stop thinking about it.
+**Layout is free.** A world's hats are hoisted above the world block whatever
+order they sit in, so put `define world` at the top left and stop thinking
+about it.
 
 ## Editing a sibling package while the dev server runs
 

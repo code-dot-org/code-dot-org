@@ -11,11 +11,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {DOMAIN_BLOCKS} from '../domainBlocks';
-import {localActorValue, localActorVar} from '../localActors';
 import {
   cellCentre,
   cellOf,
-  instanceId,
   placementAt,
   toggleCell,
   type MapPlacement,
@@ -117,21 +115,6 @@ describe('clicking a cell', () => {
 });
 
 describe('create actor in map', () => {
-  it('places a world own actor, with no import', () => {
-    const {code, imports} = emit({
-      ACTOR: localActorValue('a1'),
-      PLACEMENTS: COIN,
-    });
-
-    expect(code).toContain(
-      `world.define("Coin", ${localActorVar('Coin', 'a1')});`,
-    );
-    expect(code).toContain('world.loadMap({actors: [');
-    expect(code).toContain(`"id":"${instanceId('mk1', 'p1')}"`);
-    expect(code).toContain('"position":{"x":48,"y":80}');
-    expect(imports).toEqual([]);
-  });
-
   it('places a module actor, imported like `add actor` imports one', () => {
     const {code, imports} = emit({ACTOR: 'actors/coin', PLACEMENTS: COIN});
 
@@ -163,11 +146,5 @@ describe('create actor in map', () => {
     // A field Blockly has not filled in yet reads as absent, not as empty.
     expect(emit({ACTOR: 'actors/coin'}).code).toBe('');
     expect(emit({ACTOR: '', PLACEMENTS: COIN}).code).toBe('');
-  });
-
-  it('emits nothing for a definition that has been deleted', () => {
-    expect(emit({ACTOR: localActorValue('gone'), PLACEMENTS: COIN}).code).toBe(
-      '',
-    );
   });
 });

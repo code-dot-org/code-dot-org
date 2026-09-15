@@ -19,13 +19,6 @@ import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {editingActorModule} from './editingRule';
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
-import {
-  actorIdFromName,
-  definingActorRoot,
-  localActorBlockId,
-  localActorOptions,
-  localActorParentId,
-} from './localActors';
 import {localizeLabel, localizeText} from './localizeBlocks';
 import {projectImage} from './projectImages';
 
@@ -101,42 +94,11 @@ export function actorParentOptions(
     }
     return false;
   };
-  // …AND THE ACTORS BESIDE IT, for a world that defines its own. A local one
-  // is a `const` in the same module rather than a file to import, which the
-  // generator emits and the assembler orders (`assembleWorldModule`); the
-  // rules here are the same two, asked of block ids instead of paths. Empty
-  // for an `.actor` file, which defines exactly one actor and it is itself.
-  const mine = definingActorRoot(block)?.id;
-  const parentOf = (blockId: string): string | undefined =>
-    localActorParentId(block?.workspace?.getBlockById(blockId) ?? undefined);
-  const localReaches = (blockId: string): boolean => {
-    const seen = new Set<string>();
-    for (let at: string | undefined = blockId; at; at = parentOf(at)) {
-      if (at === mine) {
-        return true;
-      }
-      if (seen.has(at)) {
-        return false;
-      }
-      seen.add(at);
-    }
-    return false;
-  };
-  const locals = localActorOptions(field).filter(([, value]) => {
-    const blockId = localActorBlockId(value);
-    return blockId !== undefined && blockId !== mine && !localReaches(blockId);
-  });
-  const offered = [
-    ...locals,
-    ...projectActors.filter(([, value]) => value !== self && !reaches(value)),
-  ];
+  const offered = projectActors.filter(
+    ([, value]) => value !== self && !reaches(value),
+  );
   return orNone(offered, '(no other actors)').map(([label, value]) =>
-    // A world's own are looked up by the TYPE a placed one carries, not by the
-    // `local:<block id>` the dropdown stores — the same distinction
-    // `actorFieldOptions` draws just above.
-    localActorBlockId(value)
-      ? pictured(label, value, actorIdFromName(label))
-      : pictured(label, value),
+    pictured(label, value),
   );
 }
 
@@ -414,8 +376,7 @@ function reselect(field: Blockly.FieldDropdown): void {
  *
  *   - the MENU comes from `menuGenerator_`, which a dynamic dropdown calls with
  *     no arguments. Passing the field is how a list can depend on where the
- *     block is: the actors a world defines for itself are reached through the
- *     field's own workspace (blockly/localActors).
+ *     block is — which file it is in, for one.
  *   - the LABEL is `selectedOption`, which `doValueUpdate_` resolves against
  *     `getOptions(true)` — the CACHED list — and, on a miss, leaves exactly as
  *     it was. For a live list that cache is a lie: it is generated when the
@@ -560,34 +521,11 @@ export function liveDropdown(
   });
 }
 
-/**
- * What an ACTOR dropdown offers: the actor templates the project holds, and the
- * ones the world being edited defines for itself (blockly/localActors).
- *
- * A world's own come first — they are the ones that file is about — and a
- * `.actor` file defines none, so the list is the project's there.
- */
-export function actorFieldOptions(
-  field?: Blockly.FieldDropdown,
-): DropdownOptions {
-  const local = localActorOptions(field);
-  if (!local.length) {
-    return orNone(projectActors, '(no actors yet)').map(([label, value]) =>
-      pictured(label, value),
-    );
-  }
-  return [
-    // A world's own are looked up by the TYPE a placed one carries, not by the
-    // `local:<block id>` the dropdown stores. The two differ — the value has to
-    // survive renaming the actor, the type has to be the same string the
-    // running world stamps on an instance — and looking one up by the other
-    // quietly found nothing, which is a dropdown of names beside a project's
-    // dropdown of pictures.
-    ...local.map(([label, value]) =>
-      pictured(label, value, actorIdFromName(label)),
-    ),
-    ...projectActors.map(([label, value]) => pictured(label, value)),
-  ];
+/** What an ACTOR dropdown offers: the actor templates the project holds. */
+export function actorFieldOptions(): DropdownOptions {
+  return orNone(projectActors, '(no actors yet)').map(([label, value]) =>
+    pictured(label, value),
+  );
 }
 
 /**
@@ -662,10 +600,8 @@ export const actorParentOptionsExtension = liveDropdown(
  * import validator on it can reject one. A dropdown offering the row without
  * that validator would store the sentinel as if it named an actor.
  */
-export function actorImportFieldOptions(
-  field?: Blockly.FieldDropdown,
-): DropdownOptions {
-  return [...actorFieldOptions(field), ['(import…)', IMPORT_ACTOR_VALUE]];
+export function actorImportFieldOptions(): DropdownOptions {
+  return [...actorFieldOptions(), ['(import…)', IMPORT_ACTOR_VALUE]];
 }
 
 export const actorImportOptionsExtension = liveDropdown(

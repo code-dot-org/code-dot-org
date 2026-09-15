@@ -53,10 +53,9 @@ export function* down(block: BlockJson | undefined): Generator<BlockJson> {
 /**
  * Which root a patch is about.
  *
- * A `.actor` file has one `define actor` and there is nothing to choose. A
- * `.world` file has one per actor it defines for itself, so an enhancement
- * given one of THOSE has to say which — by the block's id, which is what names
- * a world-local actor everywhere else (`blockly/localActors`).
+ * A `.actor` file has one `define actor` and there is nothing to choose; the
+ * id is for a root that has to be told apart from others of its type, which
+ * is how the camera the world enhancement made is found again.
  */
 export interface RootPick {
   type: string;

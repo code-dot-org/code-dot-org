@@ -1,11 +1,9 @@
-// Placing an actor a world built for itself.
+// Placing a builder nothing registered.
 //
-// The engine end of `define actor` inside a `.world` file (BACKGROUNDS-style
-// blocks aside, see blockly/localActors): the generated module builds an
-// `ActorBuilder` as a plain `const` in the world's own module and hands it
-// straight to `addActor`. No `define`, no module, no export — so what has to be
-// true is that a builder nothing registered is as placeable as one a `.actor`
-// file exported, and that the placed actor carries the type it was given.
+// `add actor` hands the builder it imported straight to `addActor`, with no
+// `world.define` first — so what has to be true is that a builder nothing
+// registered is as placeable as one that was, and that the placed actor
+// carries the type it was given.
 
 import {describe, expect, it} from 'vitest';
 

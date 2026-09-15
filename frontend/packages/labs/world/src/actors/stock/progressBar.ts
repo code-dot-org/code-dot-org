@@ -67,10 +67,10 @@ export const PROGRESS_BAR_PROPERTIES = [
  * `⟨name⟩ of this actor`, for one of the three above.
  *
  * `own` is the declaring file as a block-type segment — `ActorsProgressBar`
- * for this file, `WorldsMain<block>` for a bar a world defines for itself. An
- * own member's block type carries the file that declared it
- * (`ruleRegistry.memberLocalName`), so the two tellings cannot share the
- * literal blocks and do share the shape.
+ * for this file, another file's for a bar that declares these itself. An own
+ * member's block type carries the file that declared it
+ * (`ruleRegistry.memberLocalName`), so two tellings cannot share the literal
+ * blocks and do share the shape.
  */
 const progressOf = (own: string, exportName: string) => ({
   block: {type: `world_get_${own}_${exportName}`, inputs: {ACTOR: me()}},

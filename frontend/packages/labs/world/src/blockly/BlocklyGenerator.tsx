@@ -19,7 +19,6 @@ import {assembleActorModule, assembleWorldModule} from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {moduleShape} from './fileKind';
-import {localActorParentId} from './localActors';
 import {
   ownPropertyDeclarations,
   parseWorldOwnMeta,
@@ -305,13 +304,6 @@ export const BlocklyGenerator = forwardRef<
         const generated = workspace.getTopBlocks(true).map(block => ({
           type: block.type,
           id: block.id,
-          // Which co-located actor this one acts like, if it is an actor and
-          // it does. The assembler orders a world's own actors by it, because
-          // each is a `const` and a child READS its parent's
-          // (`assembleWorldModule`).
-          ...(localActorParentId(block)
-            ? {actsLike: localActorParentId(block)}
-            : {}),
           code: asString(
             generator.blockToCode(block, rootTypesRef.current.has(block.type)),
           ),

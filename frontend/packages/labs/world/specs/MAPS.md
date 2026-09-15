@@ -5,12 +5,10 @@ per-instance values set by blocks chained under it; `load map` places everything
 a `.map` file describes, which is where an arrangement of twenty coins belongs
 because twenty `add actor` stacks is not an arrangement, it is a wall of blocks.
 
-Neither reaches an actor a world defines for itself (BACKGROUNDS-adjacent work;
-see `blockly/localActors`). `add actor` does — one at a time. A `.map` cannot:
-its entries name a type, a type is a module path, and a world-local actor has no
-module. That is not an oversight to patch. A file that could name the private
-actor of one world would be a file that means nothing anywhere else, and the
-whole point of the file form is that it is shared.
+A `.map` is a file of its own, and the whole point of the file form is that it
+is shared: an arrangement several worlds load. An arrangement that belongs to
+ONE world — this level's floor, this room's walls — has no reason to be a file
+beside it, and twenty `add actor` stacks is not the answer either.
 
 So: **`create actor in map`** — a block in the world's body that places many
 actors of one type, with a field that opens the map editor scoped to that type.
@@ -47,7 +45,7 @@ arrangement is in the `.world` file with nothing of ours in that path.
   "type": "world_create_in_map",
   "id": "mk1",
   "fields": {
-    "ACTOR": "local:localActorBlock",
+    "ACTOR": "actors/coin",
     "PLACEMENTS": [
       {
         "id": "p1",
@@ -261,59 +259,19 @@ the dropdown's "(none)" row is for, and a missed click should not be
 destructive — and selecting another actor disarms too, since the armed property
 belonged to the one that was selected when the button was pressed.
 
-## 5. What blocks this: a world-local actor has no schema
+## 5. What once blocked this: a world-local actor had no schema
 
 The inspector is driven by `schemas[type]`, which the sandbox builds by
 introspecting real actor instances — and it builds them from the **thumbnail
-manifest**, which imports actor modules by path:
+manifest**, which imports actor modules by path. When a world could define
+actors of its own, those were not modules and could not be imported, so the
+popup would have drawn a canvas and an empty inspector for exactly the actors
+this block was built to serve. The fix was a `localActors` export on every
+world module, which the manifest spread in beside the imported ones.
 
-```js
-// runtime/thumbnailManifest.ts
-import W from 'worlds/main';
-import M0 from 'actors/coin';
-export default {world: W, actors: [{type: 'actors/coin', builder: M0}]};
-```
-
-An actor defined inside the world is not a module and cannot be imported. So for
-exactly the actors this block exists to serve, the popup would draw a canvas and
-an empty inspector — placements you can move but not configure.
-
-**The fix, and it is step one.** The world's module already gets imported by the
-manifest, so let it carry its own templates out:
-
-```js
-const localActors = {};                       // assembler, when any are defined
-const actor_Coin_mk1 = new WorldLab.ActorBuilder({id: "Coin", name: "Coin"});
-{ const actor = actor_Coin_mk1; /* traits, values */ }
-localActors["Coin"] = actor_Coin_mk1;         // the define block
-const world = new WorldLab.WorldBuilder(…);
-export default world;
-export {localActors};                         // assembler
-```
-
-`assembleWorldModule` already orders definitions before the world and already
-knows which top-level blocks are `world_actor`, so both added lines are its to
-emit. The manifest then reads `W`'s companion export and describes those
-builders the same way it describes an imported one.
-
-**Done — this part is implemented.** Every world declares and exports
-`localActors`, defined actors or not: an export that is only sometimes there is
-one its importers must ask about first, and empty is a perfectly good answer.
-The `define actor` block registers itself under the type a placement carries
-(`localActors["Coin"] = actor_Coin_ab1`), and `thumbnailManifest` spreads them in
-beside the imported modules. Two actors of one name share a key, as they already
-share what `is a` can tell about them.
-
-Checked in the browser, because the manifest is compiled rather than bundled and
-a broken one would only show there: a world with a `define actor` in it restarts
-and runs, and opening `level1.map` still compiles the manifest, draws its four
-thumbnails and lists Player / Ground / Coin / Ball. The other half — a local
-actor's schema actually reaching the inspector — has no way to show until the
-popup exists (§4), and is pinned by tests until then.
-
-This is worth doing whether or not the block ships: an actor you cannot inspect
-is an actor the map editor cannot help you place, and that is true of `add
-actor` too.
+That model is retired: every actor is a file (`specs/ENHANCEMENTS.md`, the
+closing note), the manifest imports every actor module, and the export is
+gone. What this section was for is done by there being nothing to do.
 
 ## 6. What happens to `.map` files
 
@@ -424,8 +382,8 @@ Start Over, and a level switch (Lab2 does not reload the page between levels).
 
 ## 9. Order of work
 
-1. **The manifest gap** (§5): `localActors` export, manifest reads it, schemas
-   arrive for world-local actors. Useful on its own — `add actor` benefits too.
+1. **The manifest gap** (§5). Done, and since retired with the world-defined
+   actor: every actor is a module the manifest imports.
 2. **Extract** the map editor's canvas + inspector from `MapEditor.tsx`, with
    the file editor as its first caller and no behavior change. (Done — §4.)
 3. **The block**: `world_create_in_map`, its map field, its generator.

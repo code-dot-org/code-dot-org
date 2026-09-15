@@ -34,7 +34,6 @@ import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {editingActorModule} from './editingRule';
 import {NAME_FIELD, NAMED} from './extensions/addActorName';
 import {addOnChange, isStructuralChange} from './extensions/onChange';
-import {localActorFor, localActorValue} from './localActors';
 import {DEFINE_TWEEN, PLAY_TWEEN_HERE} from './tweens';
 
 /** How big the picture is drawn on a block, square. */
@@ -102,39 +101,17 @@ const fileActor = (block: Surroundings): ActorAbout | undefined => {
   return {type: module, name: root?.getFieldValue?.('NAME') || 'actor'};
 };
 
-/**
- * Whether this workspace is a WORLD.
- *
- * Which decides what a `define actor` root in it means: a world's own inline
- * actor, named by the block it is defined in, or the whole subject of an
- * `.actor` file, named by the file. Both are `world_actor` roots and
- * `localActorFor` answers for either — so asked in an actor file it says the
- * actor is called `Player`, which is a name no thumbnail is filed under.
- */
-const definesWorld = (block: Surroundings): boolean =>
-  (block.workspace?.getTopBlocks?.(false) ?? []).some(
-    top => top.type === 'world_world',
-  );
-
-/** A dropdown value (`local:…` or a module path) as a kind. */
+/** A dropdown value — a module path — as a kind. */
 const kindOfValue = (
-  block: Surroundings,
   value: string | null | undefined,
-): ActorAbout | undefined => {
-  if (!value) {
-    return undefined;
-  }
-  const own = localActorFor(block as never, value);
-  return own
-    ? {type: own.type, name: own.name}
-    : {type: value, name: value.split('/').pop() ?? value};
-};
+): ActorAbout | undefined =>
+  value ? {type: value, name: value.split('/').pop() ?? value} : undefined;
 
 /** The kind a hat is about: its subject socket's `any ⟨Kind⟩`. */
 const subjectOf = (hat: Surroundings): ActorAbout | undefined => {
   const kind = hat.getInputTargetBlock?.('ACTOR');
   return kind?.type === 'world_actor_kind'
-    ? kindOfValue(hat, kind.getFieldValue?.('ACTOR'))
+    ? kindOfValue(kind.getFieldValue?.('ACTOR'))
     : undefined;
 };
 
@@ -174,7 +151,7 @@ export function actorAbout(
         at.getInputTargetBlock?.('DO')?.id === child.id &&
         at.getFieldValue?.(NAME_FIELD) !== NAMED
       ) {
-        return kindOfValue(at, at.getFieldValue?.('ACTOR'));
+        return kindOfValue(at.getFieldValue?.('ACTOR'));
       }
       continue;
     }
@@ -186,18 +163,15 @@ export function actorAbout(
         return subjectOf(at) ?? fileActor(block);
       }
       const field = kindFilterField(type);
-      return field ? kindOfValue(at, at.getFieldValue?.(field)) : undefined;
+      return field ? kindOfValue(at.getFieldValue?.(field)) : undefined;
     }
     if (type === 'world_actor') {
-      // A world's own `define actor`, or an `.actor` file's root. The first is
-      // named by the block it is defined in; the second is the file, which the
-      // workspace was told about when it opened (`editingRule`).
+      // An `.actor` file's root: the file, which the workspace was told about
+      // when it opened (`editingRule`).
       if (which === 'event') {
         return undefined; // an actor file's handlers carry their own filter
       }
-      return definesWorld(block)
-        ? kindOfValue(at, localActorValue(at.id ?? ''))
-        : fileActor(block);
+      return fileActor(block);
     }
     // A rule says nothing about who elects it, and never can: `this actor` in a
     // trait step is whatever holds the trait, in this project and the next.

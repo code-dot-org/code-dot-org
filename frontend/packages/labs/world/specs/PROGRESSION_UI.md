@@ -646,13 +646,10 @@ trait` opens the rule behind the trait; the rule count on `define world`
 sprite` the way there is on `use trait`, so with no list there is no way in.
    The lesson's subject is the sidebar, so the lesson has one.
 
-   `memory/actor-state` is the other, and it is forced rather than chosen. A
-   property declared in a world's own `define actor` is a `const` in that
-   definition's block scope, so the actor's drawing can read it and the world's
-   body cannot — which is precisely what a lesson about per-instance state has
-   to do. The engine gap is written down as
-   [own-property scope](PROGRESSION.md#own-property-scope); if it is ever
-   closed, that lesson can be one file like the rest.
+   `memory/actor-state` was the other, forced rather than chosen: a property
+   declared in a world's own `define actor` could not be read from the world's
+   body, so the Lamp had to be a file. Every actor is a file now, open as a
+   tab, and that lesson is like the rest.
 
    The six Making lessons need no argument: a Making lesson is spent inside a
    `.rule`, and a rule is a file.

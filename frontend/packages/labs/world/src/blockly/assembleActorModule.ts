@@ -17,14 +17,6 @@ export interface GeneratedBlock {
   code: string;
   /** The top-level block's own id, for the two blocks that refer to each other. */
   id?: string;
-  /**
-   * The co-located `define actor` this one ACTS LIKE, by block id.
-   *
-   * Read off the workspace rather than out of the code (`BlocklyGenerator`),
-   * because what the assembler needs is the EDGE and the code has only the
-   * variable it resolved to.
-   */
-  actsLike?: string;
 }
 
 /**
@@ -71,61 +63,11 @@ export function assembleActorModule(
 }
 
 /**
- * A world's own actors, ordered so a parent is declared before a child.
- *
- * Each is a `const`, and `acts like ⟨a co-located actor⟩` READS that const as
- * the child is being described — so a child written above its parent on the
- * canvas would reach a name in its temporal dead zone and the module would
- * throw as it loaded. Where a block sits on a canvas is not something a
- * learner should have to think about, which is the same reason local actors
- * are hoisted above the world block at all.
- *
- * A depth-first walk, parents first, and STABLE: an actor with no parent keeps
- * its place relative to the others, so a world nobody has used this in is
- * emitted exactly as it was.
- *
- * A CYCLE KEEPS ITS ORIGINAL ORDER rather than looping. The dropdown will not
- * offer one and the palette's walk guards against one, but a pasted or renamed
- * file may still hold one — and a module that throws naming the actor is a far
- * better answer than a generator that never returns.
- */
-function inParentOrder(actors: GeneratedBlock[]): GeneratedBlock[] {
-  const byId = new Map(
-    actors.flatMap(actor => (actor.id ? [[actor.id, actor] as const] : [])),
-  );
-  const ordered: GeneratedBlock[] = [];
-  const placed = new Set<GeneratedBlock>();
-  const visiting = new Set<GeneratedBlock>();
-  const place = (actor: GeneratedBlock): void => {
-    if (placed.has(actor) || visiting.has(actor)) {
-      return;
-    }
-    visiting.add(actor);
-    const parent = actor.actsLike ? byId.get(actor.actsLike) : undefined;
-    if (parent) {
-      place(parent);
-    }
-    visiting.delete(actor);
-    placed.add(actor);
-    ordered.push(actor);
-  };
-  actors.forEach(place);
-  return ordered;
-}
-
-/**
  * Assemble a `.world` file's module. The `world_world` block is the root — it
  * builds `const world = …` and generates its `use rule` / `use animations` /
  * `load map` children inline — so it is the only top-level block; any stray
  * others are appended before the default export. Imports are hoisted by
  * `finish()`.
- *
- * With one exception, and it is the same one the actor module has: a world may
- * define actors of its own (`blockly/localActors`), each a `const` the world's
- * body then places with `add actor`. Those must be declared BEFORE the world
- * block, or placing one reads a variable in its temporal dead zone — and where
- * a definition sits on the canvas is not something a learner should have to
- * think about.
  */
 export function assembleWorldModule(
   blocks: GeneratedBlock[],
@@ -140,9 +82,6 @@ export function assembleWorldModule(
   worldEventTypes: ReadonlySet<string> = new Set(),
 ): string {
   const world = blocks.find(block => block.type === 'world_world');
-  const actors = inParentOrder(
-    blocks.filter(block => block.type === 'world_actor'),
-  );
   // Tween definitions, hoisted for exactly the reason local actors are: they
   // are `const`s the world's own body reads — `add actor … do play tween …` —
   // and `rest` is emitted AFTER the world block, so left there the name is in
@@ -166,27 +105,14 @@ export function assembleWorldModule(
   const onWorld = handlers.filter(block => worldEventTypes.has(block.type));
   const rest = blocks.filter(
     block =>
-      block !== world &&
-      !actors.includes(block) &&
-      !tweens.includes(block) &&
-      !handlers.includes(block),
+      block !== world && !tweens.includes(block) && !handlers.includes(block),
   );
   const actorsCode = tweens
     .map(block => block.code)
-    .concat(actors.map(block => block.code))
     .concat(onActors.map(block => block.code))
     .join('');
   const worldCode =
     (world ? world.code : '') + onWorld.map(block => block.code).join('');
   const restCode = rest.map(block => block.code).join('');
-  // `localActors` is declared and exported by every world, defined actors or
-  // not: a module that only sometimes has an export is a module its importers
-  // have to ask about first, and the thumbnail manifest imports it by name
-  // (MAPS.md §5). Empty is a perfectly good answer.
-  return (
-    `const localActors = {};\n` +
-    `${actorsCode}${worldCode}${restCode}` +
-    `export default world;\n` +
-    `export {localActors};\n`
-  );
+  return `${actorsCode}${worldCode}${restCode}export default world;\n`;
 }

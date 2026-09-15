@@ -118,16 +118,7 @@ export const typesOutTextEnhancement: Enhancement = {
     'Gives this actor a line it says a few letters at a time. “Say” starts one, “show all of it” skips to the end for a reader who has read ahead, and “finishes revealing” is the cue to move on. What draws the words is the actor’s own business — a Label, a Button and a Speech Box already draw their text.',
   brings: ['Keeps Time'],
   refuse(source: MultiFileSource, target: EnhanceTarget) {
-    // AN ACTOR A WORLD DEFINES FOR ITSELF CANNOT TAKE IT. Its body generates
-    // into a block scope, and `define block` and `define event` both emit an
-    // `export const`, which is not legal there — so the palette does not offer
-    // either inside a world's own `define actor` and the generator refuses one
-    // pasted in (`blockly/fileKind`, `domainBlocks.definesActorFile`). Writing
-    // the rows anyway would leave a file that silently generates nothing.
-    if (target.block) {
-      return 'This actor is defined inside its world, which cannot hold a “define block”. Give it a file of its own first.';
-    }
-    // AND ONE WITH NOTHING TO SAY. The words are the Label's `text`, and this
+    // AN ACTOR WITH NOTHING TO SAY. The words are the Label's `text`, and this
     // reveals them a letter at a time; an actor that neither is a Label nor
     // acts like one has no `text`, and the rows would name a setter for a
     // property it has not got.
