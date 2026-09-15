@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "minimal/editorial\r\n\r\npaste in your variables and math calucations from level 2.\r\n\r\nprompt ai tutor to make adjustments to the scenes to match your plan from level 1",
+    "long_instructions": "# Editorial\r\n\r\n1. Paste your variables, math, and output code from Level 2 in the workspace.\r\n2. Delete the sample data once your own variables are in place and run it — this template is already built, so it should work right away with your data.\r\n3. Want it to match your Level 1 plan more closely? Prompt the AI Tutor to adjust colors, text, or layout.\r\n4. Test it with your real data — long names or subjects might run past the edge of a card. If something looks off, prompt the AI Tutor to fix it.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -35,6 +35,6 @@
     "bubble_choice_description": "Warm, paper-toned background with serif type and clean rule lines — a quiet, magazine-style recap that lets the numbers speak for themselves.",
     "thumbnail_url": "https://images.code.org/d56034e93ce2e08a75e47705c7ed02b1-Screenshot 2026-09-10 125931.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-10T19:22:40.372+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-c1_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-c1_27_28\"},{\"changed_at\":\"2026-09-10 19:23:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 20:00:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-10T19:22:40.372+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-c1_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-c1_27_28\"},{\"changed_at\":\"2026-09-10 19:23:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 20:00:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-12 02:09:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

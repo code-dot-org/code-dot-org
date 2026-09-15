@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Bold\r\n\r\npaste in your variables and math calucations from level 2.\r\n\r\nprompt ai tutor to make adjustments to the scenes to match your plan from level 1",
+    "long_instructions": "# Neon Pop\r\n\r\n1. Paste your variables, math, and output code from Level 2 in the workspace.\r\n2. Delete the sample data once your own variables are in place and run it — this template is already built, so it should work right away with your data.\r\n3. Want it to match your Level 1 plan more closely? Prompt the AI Tutor to adjust colors, text, or layout.\r\n4. Test it with your real data — long names or subjects might run past the edge of a card. If something looks off, prompt the AI Tutor to fix it.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -35,6 +35,6 @@
     "bubble_choice_description": "Bold color blocks, sticker-style tilted text, and a neon-on-black palette — loud, poster energy for a recap that pops.",
     "thumbnail_url": "https://images.code.org/5f3cd9e023019e1e7eb488fa858eb9af-Screenshot 2026-09-10 125535.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-10T19:11:25.545+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-a1_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-a1_27_28\"},{\"changed_at\":\"2026-09-10 19:12:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:57:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-10T19:11:25.545+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-a1_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-a1_27_28\"},{\"changed_at\":\"2026-09-10 19:12:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:57:15 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-12 02:07:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

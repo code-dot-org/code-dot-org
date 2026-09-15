@@ -48,6 +48,15 @@ function anchorNode(id: string): SketchlabReactFlowNode {
   } as SketchlabReactFlowNode;
 }
 
+function groupNode(id: string): SketchlabReactFlowNode {
+  return {
+    id,
+    type: 'group',
+    position: {x: 0, y: 0},
+    data: {} as SketchlabReactFlowNode['data'],
+  } as SketchlabReactFlowNode;
+}
+
 function edge(
   id: string,
   source: string,
@@ -97,7 +106,28 @@ describe('getNodeLabel', () => {
     });
   });
 
-  it('returns "lineAnchor" for anchor nodes (internal fallback)', () => {
+  describe('whitespace-only content', () => {
+    it('is treated as empty, so a node is never named blank', () => {
+      expect(getNodeLabel(shapeNode('n1', 'rectangle', '   '))).toBe(
+        'rectangle'
+      );
+      expect(getNodeLabel(textNode('n1', '   '))).toBe('text');
+      expect(getNodeLabel(imageNode('n1', '   '))).toBe('image');
+    });
+
+    it('is trimmed off when there is content', () => {
+      expect(getNodeLabel(textNode('n1', '  Hello world  '))).toBe(
+        'Hello world'
+      );
+      expect(getNodeLabel(shapeNode('n1', 'circle', '  Foo  '))).toBe(
+        'circle with label Foo'
+      );
+      expect(getNodeLabel(imageNode('n1', '  A cat  '))).toBe('A cat');
+    });
+  });
+
+  it('falls through to the node type', () => {
+    expect(getNodeLabel(groupNode('g1'))).toBe('group');
     expect(getNodeLabel(anchorNode('a1'))).toBe('lineAnchor');
   });
 });

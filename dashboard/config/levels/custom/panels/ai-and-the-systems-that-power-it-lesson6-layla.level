@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-09-11T16:16:12.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Pharmacist",
+    "bubble_choice_description": "Layla runs the system the whole neighborhood pharmacy depends on",
+    "thumbnail_url": "https://images.code.org/57a6eb7ee112d2ab312baad1ee4155b1-layla.jpg",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**Career**: Pharmacist at a neighborhood pharmacy\n\n**Purpose**: Running the counter computer that the whole pharmacy depends on. It checks each prescription against a drug interaction database, tracks what is in stock, prints labels, and talks to the barcode scanner. If that computer stops, the pharmacy stops.",
+        "imageUrl": "https://images.code.org/cdc1d23f04d648e365ce730651090144-layla-pane-1.jpg",
+        "key": "undefined-42e502a3-e175-46f1-b693-dc6455a6cdd6"
+      },
+      {
+        "text": "**Budget**: $1,100\n\nCovers the entire system, including the operating system and peripherals.",
+        "imageUrl": "https://images.code.org/207e3744ab2ce92efe8cd4390911edbd-layla-pane-2.jpg",
+        "key": "undefined-ff576ae3-1788-4ada-b264-7238ac25cc64"
+      },
+      {
+        "text": "**Important Info**: The computer sits on the counter near customers and runs more than ten hours a day. Patient records stored on it have to stay private.\n\n**Preferences**:\n\n* Two monitors, so she can see a prescription and a patient record at the same time\n* A quiet build, because she needs to hear customers at the counter\n* Dependable parts with good warranties, and an operating system that supports encryption and automatic security updates",
+        "imageUrl": "https://images.code.org/e3e2e7b37e21c7d00faa5364ec909d02-layla-pane-3.jpg",
+        "key": "undefined-035ce7ea-43d7-45a0-8f29-87a9fa949a04",
+        "layout": "text-top-left"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-11T16:16:12.983+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson6-denise\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson6-denise\"},{\"changed_at\":\"2026-09-11 16:17:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 16:35:51 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
