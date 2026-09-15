@@ -1,0 +1,98 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+require 'json'
+require 'open3'
+require 'tmpdir'
+require 'yaml'
+
+K8S_ROOT = File.expand_path('..', __dir__).freeze
+EXPECTED_FLAGS = {
+  'both' => [],
+  'high' => ['--max-priority', '9'],
+  'low' => ['--min-priority', '10'],
+}.freeze
+
+def check(condition, message)
+  abort message unless condition
+end
+
+def helm(values = {})
+  args = values.flat_map {|key, value| ['--set-json', "activeJobWorker.#{key}=#{JSON.generate(value)}"]}
+  Open3.capture3('helm', 'template', 'cdo', File.join(K8S_ROOT, 'helm'), '--set', 'RAILS_ENV=adhoc', *args)
+end
+
+def worker_container(manifest)
+  worker = YAML.load_stream(manifest).find do |doc|
+    doc && doc['kind'] == 'Deployment' &&
+      doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'active-job-worker'
+  end
+  worker&.dig('spec', 'template', 'spec', 'containers')&.find {|container| container['name'] == 'active-job-worker'}
+end
+
+def render_worker(values = {})
+  manifest, stderr, status = helm(values)
+  check(status.success?, stderr)
+  container = worker_container(manifest)
+  check(container, 'missing worker Deployment')
+  container
+end
+
+def check_rejected(values, message)
+  _, stderr, status = helm(values)
+  check(!status.success? && stderr.include?(message), "expected rejection of #{values.inspect}: #{stderr}")
+end
+
+def kustomize_worker(mode, dir)
+  FileUtils.cp(File.join(K8S_ROOT, 'kustomize/components/backend/active-job-worker-deployment.yaml'), File.join(dir, 'worker.yaml'))
+  config = {
+    'apiVersion' => 'kustomize.config.k8s.io/v1beta1',
+    'kind' => 'Kustomization',
+    'namePrefix' => 'test-',
+    'resources' => ['worker.yaml'],
+  }
+  unless mode == 'both'
+    component = "active-job-worker-#{mode}"
+    FileUtils.cp_r(File.join(K8S_ROOT, 'kustomize/components', component), dir)
+    config['components'] = [component]
+  end
+  File.write(File.join(dir, 'kustomization.yaml'), YAML.dump(config))
+  command = ENV.fetch('PATH').split(File::PATH_SEPARATOR).any? {|path| File.executable?(File.join(path, 'kustomize'))} ? ['kustomize', 'build'] : ['kubectl', 'kustomize']
+  manifest, stderr, status = Open3.capture3(*command, dir)
+  check(status.success?, stderr)
+  worker_container(manifest)
+end
+
+EXPECTED_FLAGS.each do |mode, flags|
+  worker = render_worker('priorityMode' => mode)
+  Dir.mktmpdir('worker-priorities-') do |dir|
+    FileUtils.mkdir_p(File.join(dir, 'dashboard'))
+    File.write(File.join(dir, 'bundle'), "#!/bin/sh\nprintf '%s\\n' \"$@\"\n")
+    FileUtils.chmod(0o755, File.join(dir, 'bundle'))
+    stdout, stderr, status = Open3.capture3(
+      {'PATH' => "#{dir}#{File::PATH_SEPARATOR}#{ENV.fetch('PATH')}"},
+      *worker.fetch('command'), *worker.fetch('args'), chdir: dir
+    )
+    check(status.success?, stderr)
+    check(stdout.lines.map(&:chomp) == ['exec', 'bin/delayed_job', *flags, 'run'], "incorrect #{mode} worker invocation: #{stdout}")
+    kustomize = kustomize_worker(mode, dir)
+    check(kustomize && kustomize.slice('command', 'args') == worker.slice('command', 'args'), "Kustomize command differs for #{mode}")
+  end
+end
+
+check(render_worker == render_worker('priorityMode' => 'both'), 'default mode differs from both')
+['urgent', '', nil, false, 0, [], {}].each do |mode|
+  check_rejected({'priorityMode' => mode}, 'activeJobWorker.priorityMode must be one of: both, high, low')
+end
+check_rejected({'enabled' => false, 'priorityMode' => 'urgent'}, 'activeJobWorker.priorityMode must be one of: both, high, low')
+
+custom = {'command' => ['echo'], 'args' => ['custom worker']}
+check(render_worker(custom).slice('command', 'args') == custom, 'both mode lost custom command')
+%w(high low).each do |mode|
+  custom.each do |key, value|
+    check_rejected({'priorityMode' => mode, key => value}, 'require priorityMode: both')
+  end
+end
+manifest, stderr, status = helm('enabled' => false)
+check(status.success? && worker_container(manifest).nil?, "disabled worker rendered: #{stderr}")
+puts 'Worker priority modes, command execution, validation, and Kustomize parity passed.'

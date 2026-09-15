@@ -1,4 +1,16 @@
-{{- if .Values.activeJobWorker.enabled -}}
+{{- $worker := .Values.activeJobWorker -}}
+{{- $priorityFlags := dict "both" "" "high" " --max-priority 9" "low" " --min-priority 10" -}}
+{{- if not (kindIs "string" $worker.priorityMode) -}}
+{{- fail "activeJobWorker.priorityMode must be one of: both, high, low" -}}
+{{- end -}}
+{{- if not (hasKey $priorityFlags $worker.priorityMode) -}}
+{{- fail "activeJobWorker.priorityMode must be one of: both, high, low" -}}
+{{- end -}}
+{{- if and (ne $worker.priorityMode "both") (or (not (deepEqual $worker.command (list "sh" "-c"))) (not (empty $worker.args))) -}}
+{{- fail "custom activeJobWorker.command or args require priorityMode: both; remove the overrides to use priority filtering" -}}
+{{- end -}}
+{{- $args := $worker.args | default (list (printf "cd dashboard && exec bundle exec bin/delayed_job%s run" (get $priorityFlags $worker.priorityMode))) -}}
+{{- if $worker.enabled -}}
 # See _dashboard.yaml for shared Deployment details.
 #
 # The worker pins RAILS_ENV, extraEnv, resources, and local-dev mounts from
@@ -16,7 +28,7 @@
     "selectorLabels" (include "cdo.selectorLabels" (merge (dict "component" "active-job-worker") .))
     "replicas" .Values.activeJobWorker.replicas
     "command" .Values.activeJobWorker.command
-    "args" .Values.activeJobWorker.args
+    "args" $args
     "RAILS_ENV" .Values.activeJobWorker.RAILS_ENV
     "extraEnv" .Values.activeJobWorker.extraEnv
     "resources" .Values.activeJobWorker.resources
