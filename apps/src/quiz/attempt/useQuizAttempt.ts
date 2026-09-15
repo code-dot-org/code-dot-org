@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
@@ -34,11 +34,20 @@ export default function useQuizAttempt({
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Quiz views stay mounted across same-lab navigation, so a late
+  // beginAttempt/finishAttempt response can land after level/unit have changed.
+  // Guard againt that by keying on the pair.
+  const currentAttemptKeyRef = useRef(`${levelId}:${unitId}`);
+
   useEffect(() => {
+    currentAttemptKeyRef.current = `${levelId}:${unitId}`;
+    setAttempt(undefined);
+    setError(null);
     if (!unitId) {
       setIsLoading(false);
       return;
     }
+    setIsLoading(true);
     let cancelled = false;
     HttpClient.get(`/quiz_attempts?levelId=${levelId}&unitId=${unitId}`)
       .then(response => response.json())
@@ -48,8 +57,9 @@ export default function useQuizAttempt({
         }
       })
       .catch(async fetchError => {
+        const message = await networkErrorMessage(fetchError);
         if (!cancelled) {
-          setError(await networkErrorMessage(fetchError));
+          setError(message);
         }
       })
       .finally(() => {
@@ -66,6 +76,7 @@ export default function useQuizAttempt({
     if (!unitId) {
       throw new Error('No unit - attempt tracking does not apply here.');
     }
+    const requestKey = `${levelId}:${unitId}`;
     setError(null);
     try {
       const response = await HttpClient.post(
@@ -75,10 +86,15 @@ export default function useQuizAttempt({
         {'Content-Type': 'application/json'}
       );
       const data: QuizAttemptData = await response.json();
-      setAttempt(data);
+      // Ignore this result if the level or unit changed while the POST was pending.
+      if (currentAttemptKeyRef.current === requestKey) {
+        setAttempt(data);
+      }
       return data;
     } catch (postError) {
-      setError(await networkErrorMessage(postError));
+      if (currentAttemptKeyRef.current === requestKey) {
+        setError(await networkErrorMessage(postError));
+      }
       throw postError;
     }
   }, [levelId, unitId]);
@@ -110,6 +126,7 @@ export default function useQuizAttempt({
     if (!attempt) {
       throw new Error('No attempt to finalize.');
     }
+    const requestKey = `${levelId}:${unitId}`;
     setError(null);
     try {
       const response = await HttpClient.put(
@@ -119,13 +136,18 @@ export default function useQuizAttempt({
         {'Content-Type': 'application/json'}
       );
       const data: QuizAttemptData = await response.json();
-      setAttempt(data);
+      // Same race as beginAttempt - see currentAttemptKeyRef above.
+      if (currentAttemptKeyRef.current === requestKey) {
+        setAttempt(data);
+      }
       return data;
     } catch (putError) {
-      setError(await networkErrorMessage(putError));
+      if (currentAttemptKeyRef.current === requestKey) {
+        setError(await networkErrorMessage(putError));
+      }
       throw putError;
     }
-  }, [attempt]);
+  }, [attempt, levelId, unitId]);
 
   return {
     attempt,

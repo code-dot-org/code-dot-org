@@ -2,8 +2,8 @@ export interface QuizQuestionResult {
   quizQuestionId: number;
   selectedChoiceId: string | null;
   correct: boolean | null;
-  explanation?: string;
-  correctChoiceId?: string;
+  explanation: string | null;
+  correctChoiceId: string | null;
 }
 
 export interface QuizAttemptData {
