@@ -1,18 +1,19 @@
 import {OutlineLevel} from '@cdo/apps/levelbuilder/lesson-generator/ai/outline';
 import {
+  appendPlannedLevels,
   appendPlannedSpecs,
   specsFromPlannedLevels,
 } from '@cdo/apps/levelbuilder/lesson-generator/helpers/specsFromPlan';
 import {LevelSpec} from '@cdo/apps/levelbuilder/lesson-generator/types';
 
-describe('specsFromPlannedLevels', () => {
-  const planned = (overrides: Partial<OutlineLevel>): OutlineLevel => ({
-    id: 'intro',
-    labType: 'panels',
-    description: 'A short intro.',
-    ...overrides,
-  });
+const planned = (overrides: Partial<OutlineLevel>): OutlineLevel => ({
+  id: 'intro',
+  labType: 'panels',
+  description: 'A short intro.',
+  ...overrides,
+});
 
+describe('specsFromPlannedLevels', () => {
   it('maps planned levels to fresh generate-on cards with unique keys', () => {
     const specs = specsFromPlannedLevels([
       planned({id: 'one'}),
@@ -40,6 +41,36 @@ describe('specsFromPlannedLevels', () => {
     ]);
     expect(web.templateGroup).toBe('shop');
     expect(other.templateGroup).toBeUndefined();
+  });
+
+  it('keeps suppliedCode only on codebridge cards and sublevels', () => {
+    const [py, other, choice] = specsFromPlannedLevels([
+      planned({labType: 'pythonlab', suppliedCode: 'print(1)'}),
+      planned({labType: 'panels', suppliedCode: 'x'}),
+      planned({
+        labType: 'bubbleChoice',
+        sublevels: [
+          {
+            id: 'a',
+            labType: 'pythonlab',
+            description: 'Quiz.',
+            suppliedCode: 'score = 0',
+          },
+          {
+            id: 'b',
+            labType: 'panels',
+            description: 'Intro.',
+            suppliedCode: 'x',
+          },
+        ],
+      }),
+    ]);
+    expect(py.suppliedCode).toBe('print(1)');
+    expect(other.suppliedCode).toBeUndefined();
+    expect(choice.sublevels!.map(s => s.suppliedCode)).toEqual([
+      'score = 0',
+      undefined,
+    ]);
   });
 
   it('maps bubbleChoice sublevels with their own keys and presets', () => {
@@ -79,13 +110,23 @@ describe('appendPlannedSpecs', () => {
       row({key: 'existing', existing: {} as LevelSpec['existing']}),
       row({key: 'unsupported', unsupportedType: 'Odd'}),
     ];
-    const planned = [row({key: 'new', id: 'n', description: 'New.'})];
-    expect(appendPlannedSpecs(prev, planned).map(s => s.key)).toEqual([
+    const kept = appendPlannedSpecs(prev, [
+      row({key: 'new', id: 'n', description: 'New.'}),
+    ]);
+    expect(kept.map(s => s.key)).toEqual([
       'typed',
       'coded',
       'existing',
       'unsupported',
       'new',
     ]);
+  });
+
+  it('appendPlannedLevels builds the cards and appends them', () => {
+    const result = appendPlannedLevels(
+      [row({key: 'blank'})],
+      [planned({id: 'one'})]
+    );
+    expect(result.map(s => s.id)).toEqual(['one']);
   });
 });

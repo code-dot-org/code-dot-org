@@ -1661,6 +1661,21 @@ FactoryBot.define do
     level {create(:applab)}
   end
 
+  factory :anonymous_level_progress, class: 'AnonymousLevel::Progress' do
+    association :script
+    association :level, factory: :applab
+
+    anon_user_id {Cdo::AnonUserId.generate}
+  end
+
+  factory :anonymous_level_geo, class: 'AnonymousLevel::Geo' do
+    anon_user_id {Cdo::AnonUserId.generate}
+    country {Faker::Address.unique.country}
+    state {Faker::Address.unique.state}
+    city {Faker::Address.unique.city}
+    postal_code {Faker::Address.unique.postcode}
+  end
+
   factory :user_script do
     user {create(:student)}
     script {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit}

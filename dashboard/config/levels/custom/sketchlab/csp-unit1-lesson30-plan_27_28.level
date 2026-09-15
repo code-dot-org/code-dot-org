@@ -1,0 +1,1047 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-09-11T19:51:21.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "long_instructions": "#Plan It Out\r\n\r\nPlan your Wrapped program before you write any code. \r\n\r\nWork through Steps 1–4, left to right. \r\n\r\n**Save to your Backpack** when you're done — you'll use this plan in upcoming levels.\r\n\r\n::: details [**Need an idea?**]\r\n\r\nA few ideas to get you started:\r\n\r\n- A hobby or activity — practice time, personal bests, how far you've come\r\n- A habit you're tracking — workouts, reading, screen time, saving money\r\n- Something you follow — a team's season, a show you binged, a game you play\r\n- A responsibility — chores done, hours worked, money earned\r\n- Something silly — naps taken, snacks eaten, times you said a certain word\r\n\r\nPick whatever you actually care about — the topic is yours to invent.\r\n:::\r\n\r\n<br> \r\n\r\n::: details [**Need help with the math?**]\r\n\r\nA few common calculation patterns:\r\n\r\n- Average = total ÷ how many (e.g. total points ÷ games played)\r\n- Percent = part ÷ whole × 100 (e.g. wins ÷ total games × 100)\r\n- Change over time = newest number − starting number (e.g. latest score − first score)\r\n- Rate = amount ÷ time or unit (e.g. pages ÷ days = pages per day)\r\n\r\nYou don't have to use these exactly — just a starting point if you're stuck on what \"meaningful\" math looks like for your topic.\r\n:::",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "34c7e4ad-21bd-4304-be90-2cfea8d4baae",
+            "type": "text",
+            "data": {
+              "text": "1. Topic",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": -101.36270559500468,
+              "y": -6.633752685317347
+            },
+            "width": 162.38556175034424,
+            "height": 40,
+            "measured": {
+              "width": 162,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "f69b07a2-1b9e-4112-a52c-a6a7ab192136",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/csp-unit1-lesson30-plan_27_28/uuid/8663c896-cb1d-43aa-b782-b64103ee7190.png",
+              "altText": "idea"
+            },
+            "position": {
+              "x": -59.79230687129302,
+              "y": -84.67953471836897
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false,
+            "zIndex": 1
+          },
+          {
+            "id": "95b12c5c-049e-4bb9-921c-0c274c294ccd",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "backgroundColor": "#8080ff",
+              "strokeColor": "#8080ff"
+            },
+            "position": {
+              "x": -68.50717508115355,
+              "y": -98.89782632222465
+            },
+            "width": 95.92442792071272,
+            "height": 91.31692903949349,
+            "measured": {
+              "width": 96,
+              "height": 91
+            },
+            "zIndex": -1,
+            "dragging": false
+          },
+          {
+            "id": "82f2ac24-068a-441a-a1ba-5b534e826e8c",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#dfdfff"
+            },
+            "position": {
+              "x": -200.7236260066009,
+              "y": 99.03791909213336
+            },
+            "width": 377.56323163139643,
+            "height": 449.68463389757665,
+            "measured": {
+              "width": 378,
+              "height": 450
+            },
+            "dragging": false
+          },
+          {
+            "id": "8373cf8d-395b-4f58-93d4-8c9b33d8773d",
+            "type": "text",
+            "data": {
+              "text": "My Topic",
+              "strokeColor": "transparent",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -177.4245910328958,
+              "y": 103.70714800646752
+            },
+            "width": 96.85581366718878,
+            "height": 43.12594981845598,
+            "measured": {
+              "width": 97,
+              "height": 43
+            },
+            "dragging": false
+          },
+          {
+            "id": "61121770-f4a3-4a29-b9b0-a3463d36484d",
+            "type": "text",
+            "data": {
+              "text": "Who is it for, and why? ",
+              "strokeColor": "transparent",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -178.0740963490606,
+              "y": 244.9940009625603
+            },
+            "width": 186.8831684387216,
+            "height": 43.12594981845598,
+            "measured": {
+              "width": 187,
+              "height": 43
+            },
+            "dragging": false
+          },
+          {
+            "id": "b04e7e6e-d32d-453a-bf1d-e671fe2450a4",
+            "type": "text",
+            "data": {
+              "text": "What numbers does it produce? ",
+              "strokeColor": "transparent",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": -176.8237164216782,
+              "y": 396.28997217583066
+            },
+            "width": 268.15786371857763,
+            "height": 43.12594981845598,
+            "measured": {
+              "width": 268,
+              "height": 43
+            },
+            "dragging": false
+          },
+          {
+            "id": "60e2c6eb-9cee-460d-a1a4-fa01b94ed8eb",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Type here ... ",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": -173.07257663953104,
+              "y": 138.7117071350563
+            },
+            "width": 306.91964146743203,
+            "height": 94.99240145235194,
+            "measured": {
+              "width": 307,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "3e473b82-360a-45b1-938d-305b37ac5e4a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Type here ... ",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": -169.3214368573838,
+              "y": 280.0046389292675
+            },
+            "width": 306.91964146743203,
+            "height": 94.99240145235194,
+            "measured": {
+              "width": 307,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "29139df9-7062-4bd1-87d8-cf272ffed279",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Type here ... ",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": -169.3214368573838,
+              "y": 428.79985028777315
+            },
+            "width": 306.91964146743203,
+            "height": 94.99240145235194,
+            "measured": {
+              "width": 307,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "3452ae4b-1241-47bf-8425-856974707f96",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "backgroundColor": "#0080c0",
+              "strokeColor": "#8080ff"
+            },
+            "position": {
+              "x": 532.9186318374202,
+              "y": 174.47469842687772
+            },
+            "width": 97.13373423215509,
+            "height": 89.0552359102708,
+            "measured": {
+              "width": 97,
+              "height": 89
+            },
+            "zIndex": -1,
+            "dragging": false
+          },
+          {
+            "id": "5e1cd0c0-c00e-47a3-8783-8dec98149c5e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/csp-unit1-lesson30-plan_27_28/uuid/66d1c84b-72a2-4d70-919b-c57405db20d4.png",
+              "altText": "close",
+              "locked": false
+            },
+            "position": {
+              "x": 541.3040381444213,
+              "y": 189.01164337799727
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "6744c796-b874-4ada-8a5b-e3ae637ded91",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#d2f0ff"
+            },
+            "position": {
+              "x": 418.0313200653181,
+              "y": 375.4703876816455
+            },
+            "width": 349.1310383581621,
+            "height": 409.6310149742403,
+            "measured": {
+              "width": 349,
+              "height": 410
+            },
+            "dragging": false
+          },
+          {
+            "id": "d1894708-854b-47e4-b002-ace0168bb9c5",
+            "type": "text",
+            "data": {
+              "text": "2. 'Variables",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "rotation": 0
+            },
+            "position": {
+              "x": 482.60619399541474,
+              "y": 266.71416780388813
+            },
+            "width": 201.51745784968207,
+            "height": 40.93171181188899,
+            "measured": {
+              "width": 202,
+              "height": 41
+            },
+            "dragging": false
+          },
+          {
+            "id": "60d75e3b-3dc6-4410-b2e0-b7e9bd176595",
+            "type": "text",
+            "data": {
+              "text": "Variable Tray",
+              "strokeColor": "transparent",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 422.32691827076894,
+              "y": 378.144536165981
+            },
+            "width": 142.05571066566398,
+            "height": 40,
+            "measured": {
+              "width": 142,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "490986b9-432a-4e3f-b182-548c8287f455",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "name (string)",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": 430.28010501501205,
+              "y": 415.8969564468663
+            },
+            "width": 298.90030490318645,
+            "height": 60,
+            "measured": {
+              "width": 299,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "220b907e-2265-4aae-8254-9a77b4dcfea0",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "subject (string)",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": 431.00913561176174,
+              "y": 487.341954928327
+            },
+            "width": 298.90030490318645,
+            "height": 60,
+            "measured": {
+              "width": 299,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "9327ff95-37f5-4a74-91a0-8b587b23c883",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "raw input (int/float)",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": 433.92525799876,
+              "y": 555.8708310227894
+            },
+            "width": 298.90030490318645,
+            "height": 60,
+            "measured": {
+              "width": 299,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "d669035f-01eb-4b36-9d09-2f809c2a5351",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "raw input (int/float)",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": 433.9252579987601,
+              "y": 625.857768310751
+            },
+            "width": 298.90030490318645,
+            "height": 60,
+            "measured": {
+              "width": 299,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "43a73aaf-230d-45a2-94da-511b91d66390",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "raw input (int/float)",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left",
+              "fontFamily": "draw"
+            },
+            "position": {
+              "x": 435.38331919225925,
+              "y": 695.8447055987124
+            },
+            "width": 298.90030490318645,
+            "height": 60,
+            "measured": {
+              "width": 299,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "c89a3bfc-e3bc-4bd5-90f7-b265ab637c0e",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "backgroundColor": "#32cd8b",
+              "strokeColor": "#8080ff"
+            },
+            "position": {
+              "x": 1102.2229756542474,
+              "y": -171.19040274519043
+            },
+            "width": 97.13373423215509,
+            "height": 89.0552359102708,
+            "measured": {
+              "width": 97,
+              "height": 89
+            },
+            "zIndex": -1,
+            "dragging": false
+          },
+          {
+            "id": "97801463-11fb-47aa-bddb-d9af66fc8c96",
+            "type": "text",
+            "data": {
+              "text": "3. Math",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "rotation": 0
+            },
+            "position": {
+              "x": 1048.2747114947772,
+              "y": -76.41642516774257
+            },
+            "width": 201.51745784968207,
+            "height": 40.93171181188899,
+            "measured": {
+              "width": 202,
+              "height": 41
+            },
+            "dragging": false
+          },
+          {
+            "id": "598daac1-8f08-4a61-84ab-75dc597a467a",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#daf8e7"
+            },
+            "position": {
+              "x": 980.7304527474471,
+              "y": 32.20061291753692
+            },
+            "width": 349.1310383581621,
+            "height": 449.68463389757665,
+            "measured": {
+              "width": 349,
+              "height": 450
+            },
+            "dragging": false
+          },
+          {
+            "id": "293aedc5-572b-4fd0-9a64-409f2ec3e2e6",
+            "type": "text",
+            "data": {
+              "text": "Calculation 1",
+              "strokeColor": "transparent",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 986.5626975214441,
+              "y": 36.57479649803455
+            },
+            "width": 142.05571066566398,
+            "height": 40,
+            "measured": {
+              "width": 142,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "059c99a1-3d50-4bff-bd4b-09685c4c9616",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "value_1 = ",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 998.2271870694376,
+              "y": 71.56826514201529
+            },
+            "width": 295.98418251618796,
+            "height": 120.50953953021673,
+            "measured": {
+              "width": 296,
+              "height": 121
+            },
+            "dragging": false
+          },
+          {
+            "id": "7b485fd7-a672-446d-ac0c-881888bcc4d2",
+            "type": "text",
+            "data": {
+              "text": "Calculation 2",
+              "strokeColor": "transparent",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1001.1433094564363,
+              "y": 223.20662926593187
+            },
+            "width": 142.05571066566398,
+            "height": 40,
+            "measured": {
+              "width": 142,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "b1362d07-72c5-4b7f-a9c2-acd4ab12afee",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "value_2 = ",
+              "backgroundColor": "#ffffff",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1004.0594318434346,
+              "y": 266.94846507090784
+            },
+            "width": 295.98418251618796,
+            "height": 120.50953953021673,
+            "measured": {
+              "width": 296,
+              "height": 121
+            },
+            "dragging": false
+          },
+          {
+            "id": "c45803da-21e8-490e-83b6-22b322ffd241",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/csp-unit1-lesson30-plan_27_28/uuid/616e76da-f314-4bed-ad44-d0645e77604a.png",
+              "altText": "balance-sheet"
+            },
+            "position": {
+              "x": 1110.242312218493,
+              "y": -156.8292818767314
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "32669044-ee66-4735-a8ef-8f38355ecdd2",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "fontColor": "var(--sketchlab-stroke-blue)",
+              "backgroundColor": "#ff8000",
+              "strokeColor": "#8080ff"
+            },
+            "position": {
+              "x": 1806.1894050310382,
+              "y": 192.1420726243695
+            },
+            "width": 97.13373423215509,
+            "height": 89.0552359102708,
+            "measured": {
+              "width": 97,
+              "height": 89
+            },
+            "zIndex": -1,
+            "dragging": false
+          },
+          {
+            "id": "f2579df2-a8bb-41ea-9d3d-421956ca71c3",
+            "type": "text",
+            "data": {
+              "text": "4. Scene Cards",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "rotation": 0
+            },
+            "position": {
+              "x": 1729.9575490451118,
+              "y": 284.82527566275417
+            },
+            "width": 248.90444663840609,
+            "height": 40.93171181188899,
+            "measured": {
+              "width": 249,
+              "height": 41
+            },
+            "dragging": false
+          },
+          {
+            "id": "87fc4537-4db6-4327-a35e-551a1e5e09bf",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffdebd"
+            },
+            "position": {
+              "x": 1513.9495419434847,
+              "y": 405.76103253516965
+            },
+            "width": 732.4226002395907,
+            "height": 685.8905472444467,
+            "measured": {
+              "width": 732,
+              "height": 686
+            },
+            "dragging": false
+          },
+          {
+            "id": "5286aec4-a3e1-4048-8d29-7b12996e5fa3",
+            "type": "text",
+            "data": {
+              "text": "Card Storyboard\nAdd text and shapes to design each scene card. Add other descriptions to each card such as colors.",
+              "strokeColor": "transparent",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1525.2976748186961,
+              "y": 415.651104216882
+            },
+            "width": 695.3378760277062,
+            "height": 69.5994574061998,
+            "measured": {
+              "width": 695,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "a3c671ec-3968-47d9-8f4d-3a46444ebb3f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/csp-unit1-lesson30-plan_27_28/uuid/3b0f3131-2b1e-4fc0-b893-68e34efc1639.png",
+              "altText": "movie"
+            },
+            "position": {
+              "x": 1813.8036727318538,
+              "y": 207.12432969338803
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "3e889a3e-e983-4201-bb93-66686a67e5d5",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": 1550.0702043500692,
+              "y": 509.38628094967646
+            },
+            "width": 321.18547428141846,
+            "height": 261.6872314247951,
+            "measured": {
+              "width": 321,
+              "height": 262
+            },
+            "dragging": false
+          },
+          {
+            "id": "0a4484a1-ea0b-4c8c-8f44-ce9a07f3dfd5",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": 1892.4850992982883,
+              "y": 509.5916695226987
+            },
+            "width": 321.18547428141846,
+            "height": 261.6872314247951,
+            "measured": {
+              "width": 321,
+              "height": 262
+            },
+            "dragging": false
+          },
+          {
+            "id": "62668966-3ef1-47a5-ba58-4aa2d7bfb2ed",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": 1550.6075625228327,
+              "y": 814.5631236682189
+            },
+            "width": 321.18547428141846,
+            "height": 261.6872314247951,
+            "measured": {
+              "width": 321,
+              "height": 262
+            },
+            "dragging": false
+          },
+          {
+            "id": "943d00b7-0918-405b-b3c2-085bd111a16b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#ffffff"
+            },
+            "position": {
+              "x": 1893.7766367994004,
+              "y": 814.2402392929407
+            },
+            "width": 321.18547428141846,
+            "height": 261.6872314247951,
+            "measured": {
+              "width": 321,
+              "height": 262
+            },
+            "dragging": false
+          },
+          {
+            "id": "001c0016-59b4-40a5-aea6-68f182979d8b",
+            "type": "text",
+            "data": {
+              "text": "Cover",
+              "strokeColor": "transparent",
+              "textAlign": "center"
+            },
+            "position": {
+              "x": 1626.2331411400855,
+              "y": 478.87757548136733
+            },
+            "width": 142.05571066566398,
+            "height": 40,
+            "measured": {
+              "width": 142,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "114c46b3-865c-4d1a-bd8a-3870bf1b119e",
+            "type": "text",
+            "data": {
+              "text": "Scene Card 2",
+              "strokeColor": "transparent",
+              "textAlign": "center"
+            },
+            "position": {
+              "x": 1635.3406664958388,
+              "y": 786.2565562380576
+            },
+            "width": 142.05571066566398,
+            "height": 40,
+            "measured": {
+              "width": 142,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "7dcd7ced-b3e2-4765-b1c3-477f7e6fe377",
+            "type": "text",
+            "data": {
+              "text": "Scene Card 1",
+              "strokeColor": "transparent",
+              "textAlign": "center"
+            },
+            "position": {
+              "x": 1976.8728673366059,
+              "y": 480.01601615083655
+            },
+            "width": 142.05571066566398,
+            "height": 40,
+            "measured": {
+              "width": 142,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "ae50dda6-b8ea-4a42-9793-6379b99224d6",
+            "type": "text",
+            "data": {
+              "text": "Summary Scene Card",
+              "strokeColor": "transparent",
+              "textAlign": "center"
+            },
+            "position": {
+              "x": 1956.9501556208943,
+              "y": 785.1181155685881
+            },
+            "width": 187.02411710969835,
+            "height": 40,
+            "measured": {
+              "width": 187,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "2750ee45-877e-4a7f-bbab-d39c71313e74",
+            "type": "text",
+            "data": {
+              "text": "Pick a topic with numbers behind it. \nAnswer question below.",
+              "strokeColor": "transparent",
+              "textAlign": "center",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": -204.69253725481354,
+              "y": 40.76091135808339
+            },
+            "width": 381.71400530844863,
+            "height": 43.12594981845598,
+            "measured": {
+              "width": 382,
+              "height": 43
+            },
+            "dragging": false
+          },
+          {
+            "id": "73f18f87-a5f7-4c01-a944-bdceb6f9212d",
+            "type": "text",
+            "data": {
+              "text": "Name each variable you'll collect from the user. \nAdd more boxes if your topic needs them.",
+              "strokeColor": "transparent",
+              "textAlign": "center",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 338.40384463250234,
+              "y": 316.7952290685747
+            },
+            "width": 503.7383897095921,
+            "height": 43.12594981845598,
+            "measured": {
+              "width": 504,
+              "height": 43
+            },
+            "dragging": false
+          },
+          {
+            "id": "6ac5d9a8-743f-4a4a-b62c-2c09cd122ce8",
+            "type": "text",
+            "data": {
+              "text": "For each calculation, write the formula and give it a label.",
+              "strokeColor": "transparent",
+              "textAlign": "center",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 913.5002488934474,
+              "y": -22.16139426793509
+            },
+            "width": 503.7383897095921,
+            "height": 43.12594981845598,
+            "measured": {
+              "width": 504,
+              "height": 43
+            },
+            "dragging": false
+          },
+          {
+            "id": "d4e777ac-1c03-4683-8e70-0c777d949d93",
+            "type": "text",
+            "data": {
+              "text": "Add the variables and calculations each card will use. Sketch the card, then add text, shapes, and color.",
+              "strokeColor": "transparent",
+              "textAlign": "center",
+              "fontFamily": "sans",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 1576.725375221885,
+              "y": 332.61320482427845
+            },
+            "width": 590.737256365963,
+            "height": 43.12594981845598,
+            "measured": {
+              "width": 591,
+              "height": 43
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "1aada4ff-ec59-476e-ab33-13f1d49a9ae7",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "source": "f69b07a2-1b9e-4112-a52c-a6a7ab192136",
+            "sourceHandle": "right-source",
+            "target": "3452ae4b-1241-47bf-8425-856974707f96",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            }
+          },
+          {
+            "id": "d94fa52b-d11f-4aba-970a-f6908a76fe8b",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "source": "5e1cd0c0-c00e-47a3-8783-8dec98149c5e",
+            "sourceHandle": "right-source",
+            "target": "c89a3bfc-e3bc-4bd5-90f7-b265ab637c0e",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            }
+          },
+          {
+            "id": "1ac84ccb-5fa6-42d3-9deb-df43707cf929",
+            "source": "c89a3bfc-e3bc-4bd5-90f7-b265ab637c0e",
+            "target": "32669044-ee66-4735-a8ef-8f38355ecdd2",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3,
+              "strokeDasharray": "8 4"
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
+          },
+          {
+            "id": "5f992cea-ecb0-40c6-b37e-c29c0cd27dbb",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "source": "7dcd7ced-b3e2-4765-b1c3-477f7e6fe377",
+            "sourceHandle": "bottom-source",
+            "target": "114c46b3-865c-4d1a-bd8a-3870bf1b119e",
+            "targetHandle": "right-target",
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            }
+          }
+        ],
+        "viewport": {
+          "x": -93.12229702931995,
+          "y": -14.250646141541665,
+          "zoom": 0.7739625240689182
+        }
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-11 19:51:56 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 21:17:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 21:22:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 21:23:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 22:10:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 22:11:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 22:12:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 22:19:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 22:26:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

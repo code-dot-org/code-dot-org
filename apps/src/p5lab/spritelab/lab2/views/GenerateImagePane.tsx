@@ -9,6 +9,7 @@ import {
   setAnimationName,
   SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
+import {detectImageGridSize} from '@cdo/apps/pixelEditor/pixelArt';
 import PixelEditorModal, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditorModal';
@@ -31,8 +32,8 @@ import {
   imageTypeFromCategories,
 } from '../imageGallery';
 import {
-  forgetTrimmedThumbnail,
-  getTrimmedThumbnail,
+  forgetImageThumbnail,
+  getImageThumbnail,
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
@@ -63,6 +64,9 @@ interface AnimationPatch {
   poses?: AnimationPoses;
   categories?: string[];
   pixelGridSize?: number;
+  /** Set wherever an animation's pixels are replaced — a stale true would
+   * skip a needed trim. */
+  trimmed?: boolean;
   generation?: ImageGenerationMetadata;
   recentColors?: PixelEditorSaveMeta['recentColors'];
 }
@@ -268,6 +272,34 @@ interface GenerateImagePaneProps {
  * The Images tab: the project's image gallery. Clicking an image (or the
  * new-image card) opens the image dialog; painting happens from there.
  */
+// Detection runs a full-raster scan (~tens of ms, more on Chromebooks) and
+// the answer never changes for the same pixels, so it is cached across
+// dialog opens. Keys are digests, not the sources themselves — a data URI
+// key would pin megabytes per entry.
+const gridDetectionCache = new Map<string, Promise<number | null>>();
+const GRID_CACHE_MAX = 32;
+function cachedGridDetection(
+  source: string,
+  frameSize?: {x: number; y: number}
+): Promise<number | null> {
+  const key = `${source.length}:${source.slice(0, 48)}:${source.slice(-48)}:${
+    frameSize?.x ?? ''
+  }x${frameSize?.y ?? ''}`;
+  const hit = gridDetectionCache.get(key);
+  if (hit) {
+    return hit;
+  }
+  const pending = detectImageGridSize(source, frameSize).catch(() => {
+    gridDetectionCache.delete(key);
+    return null;
+  });
+  if (gridDetectionCache.size >= GRID_CACHE_MAX) {
+    gridDetectionCache.delete(gridDetectionCache.keys().next().value as string);
+  }
+  gridDetectionCache.set(key, pending);
+  return pending;
+}
+
 const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   uploadImage,
   onRenameImage,
@@ -447,6 +479,43 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       ? images.find(i => i.key === dialogTarget)?.props
       : undefined;
 
+  // The Resolution row's grid for a pixel image that never recorded one:
+  // character sheets skip normalization (a strip's frames must agree), and
+  // images saved before normalization existed have nothing stored — detect
+  // what the model drew from the first frame instead. Display only. The
+  // result is keyed to its source, so a switched dialog target never wears
+  // the previous image's grid for a frame.
+  const [detectedGrid, setDetectedGrid] = useState<{
+    source: string;
+    size: number;
+  }>();
+  const detectSource = targetProps?.dataURI || targetProps?.sourceUrl;
+  const frameSize = targetProps?.frameSize;
+  const needsGridDetection =
+    targetProps?.generation?.style === 'pixel' &&
+    !targetProps.pixelGridSize &&
+    !!detectSource;
+  useEffect(() => {
+    if (!needsGridDetection || !detectSource) {
+      return;
+    }
+    let cancelled = false;
+    cachedGridDetection(detectSource, frameSize)
+      .then(size => {
+        if (!cancelled && size && size > 1) {
+          setDetectedGrid({source: detectSource, size});
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [needsGridDetection, detectSource, frameSize]);
+  const detectedGridSize =
+    detectedGrid && detectedGrid.source === detectSource
+      ? detectedGrid.size
+      : undefined;
+
   const handleDelete = useCallback(() => {
     if (dialogTarget && dialogTarget !== 'new') {
       const removed =
@@ -491,24 +560,30 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   );
 
   // Current pixels as a data URI (generation's "use previous image" sends
-  // them in a JSON request body).
+  // them in a JSON request body, so an object-URL image is read back to
+  // base64 here).
   const getTargetDataURI = useCallback(async (): Promise<string | null> => {
     if (!targetProps) {
       return null;
     }
+    const readAsDataURL = (blob: Blob) =>
+      new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
     let dataURI = targetProps.dataURI ?? null;
-    if (!dataURI && targetProps.sourceUrl) {
-      try {
-        const blob = await (await HttpClient.get(targetProps.sourceUrl)).blob();
-        dataURI = await new Promise<string>((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve(reader.result as string);
-          reader.onerror = reject;
-          reader.readAsDataURL(blob);
-        });
-      } catch {
-        return null;
+    try {
+      if (dataURI?.startsWith('blob:')) {
+        dataURI = await readAsDataURL(await (await fetch(dataURI)).blob());
+      } else if (!dataURI && targetProps.sourceUrl) {
+        dataURI = await readAsDataURL(
+          await (await HttpClient.get(targetProps.sourceUrl)).blob()
+        );
       }
+    } catch {
+      return null;
     }
     // "Start from current image" on a character set references one frame,
     // not the five-frame strip.
@@ -555,6 +630,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         frameSize,
         frames: result.frames,
         pixelGridSize: result.pixelGridSize,
+        trimmed: result.trimmed,
         generation: result.generation,
       });
       noteAsset(sourceUrl);
@@ -566,6 +642,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           ...framesPatch(result.frames),
           categories: categoriesForType(result.generation.imageType),
           pixelGridSize: result.pixelGridSize,
+          trimmed: !!result.trimmed,
           generation: result.generation,
         });
         // A new subject, even though the session continues.
@@ -586,6 +663,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         // sprite replacing a character set drops its poses.
         ...framesPatch(result.frames),
         pixelGridSize: result.pixelGridSize,
+        trimmed: !!result.trimmed,
         generation: result.generation,
       });
       // The superseded asset stays until the dialog closes: it's in the
@@ -616,7 +694,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       // from its URL) can't be re-trimmed until the data arrives; drop the
       // superseded image's cached trim so thumbnails don't keep showing it.
       if (!alt.dataURI) {
-        forgetTrimmedThumbnail(
+        forgetImageThumbnail(
           getStore().getState().animationList.propsByKey[key]?.name
         );
       }
@@ -630,6 +708,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
         // grid of the strip the image was a moment ago.
         ...framesPatch(alt.frames),
         pixelGridSize: alt.pixelGridSize,
+        trimmed: !!alt.trimmed,
         generation: alt.generation,
       });
       noteAsset(previousUrl);
@@ -720,6 +799,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           ? {frameSize, sourceSize: frameSize}
           : {}),
         pixelGridSize: meta.pixelGridSize,
+        // The editor hands back the full canvas, margins and all.
+        trimmed: false,
         // Hand-edited pixels are not the prompt's output anymore; drop the
         // stale prompt and seed.
         generation: undefined,
@@ -799,7 +880,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             name={props?.name}
             caption={advanced ? props?.name : undefined}
             thumb={
-              getTrimmedThumbnail(props?.name) ||
+              getImageThumbnail(props?.name) ||
               props?.dataURI ||
               props?.sourceUrl ||
               undefined
@@ -817,10 +898,12 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           animKey={creating ? null : dialogTarget}
           name={targetProps?.name}
           thumb={
+            // The dialog is the full-resolution view; the small gallery
+            // thumbnail only stands in until the image's data arrives.
             creating
               ? undefined
-              : getTrimmedThumbnail(targetProps?.name || '') ||
-                targetProps?.dataURI ||
+              : targetProps?.dataURI ||
+                getImageThumbnail(targetProps?.name || '') ||
                 targetProps?.sourceUrl ||
                 undefined
           }
@@ -853,7 +936,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
           }
           advanced={advanced}
-          pixelated={!!targetProps?.pixelGridSize}
+          pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
+          // A sheet's resolution is its frame: the image the pane shows.
+          resolution={creating ? undefined : targetProps?.frameSize}
+          pixelGridSize={targetProps?.pixelGridSize ?? detectedGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}

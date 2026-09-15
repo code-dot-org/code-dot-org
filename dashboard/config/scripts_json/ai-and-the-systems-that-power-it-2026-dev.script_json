@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-09 20:34:13 UTC",
+    "serialized_at": "2026-09-11 16:53:57 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -179,9 +179,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**How can we keep our computer systems running and performing well?**\n\nIn this lesson, students interact with an app while troubleshooting real-world system issues such as crashes, errors, and performance slowdowns. The simulation randomly introduces system scenarios that require students to test and evaluate different actions to resolve the issue before resuming gameplay, reinforcing critical thinking and problem-solving skills. Then, students work in pairs to analyze real-world computer system performance scenarios and evaluate potential actions to optimize the system.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n\n\n**How can we keep our computer systems running and performing well?**\n\nIn this lesson, students interact with an app while troubleshooting real-world system issues such as crashes, errors, and performance slowdowns. The simulation randomly introduces system scenarios that require students to test and evaluate different actions to resolve the issue before resuming gameplay, reinforcing critical thinking and problem-solving skills. Then, students work in pairs to analyze real-world computer system performance scenarios and evaluate potential actions to optimize the system.",
         "preparation": "- Print copies of the Optimization activity guide (one for each student)\n- Print copies of the Troubleshooting and Optimizing Software Unit Guide (one for each student)",
-        "student_overview": "**How can we keep our computer systems running and performing well?**\n\nIn this lesson, you play with an app and sometimes, your system will encounter issues like crashes, errors, or slow performance, and it’s up to you to figure out how to fix the problem by testing different actions so the game can continue. Next, you work with a partner, explore options in a simulation, and use a chatbot to help make informed decisions to optimize the system."
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n\n\n**How can we keep our computer systems running and performing well?**\n\nIn this lesson, you play with an app and sometimes, your system will encounter issues like crashes, errors, or slow performance, and it’s up to you to figure out how to fix the problem by testing different actions so the game can continue. Next, you work with a partner, explore options in a simulation, and use a chatbot to help make informed decisions to optimize the system."
       },
       "seeding_key": {
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
@@ -608,6 +608,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5fec846f-4e1c-4404-9255-5b5ad128ccc7",
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev"
+      }
+    },
+    {
+      "key": "01447c73-bf35-440f-a2bc-71f03de030df",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01447c73-bf35-440f-a2bc-71f03de030df",
         "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-the-systems-that-power-it-2026-dev"
@@ -2000,6 +2012,17 @@
       "seeding_key": {
         "activity_section.key": "b83c97c8-952a-4f77-8d5e-ecbc057d9806",
         "lesson_activity.key": "5fec846f-4e1c-4404-9255-5b5ad128ccc7"
+      }
+    },
+    {
+      "key": "7524970a-c433-418d-9442-4d08db04a277",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277",
+        "lesson_activity.key": "01447c73-bf35-440f-a2bc-71f03de030df"
       }
     },
     {
@@ -4191,6 +4214,28 @@
     },
     {
       "chapter": 21,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson5-choice"
+        ],
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277"
+      },
+      "level_keys": [
+        "ai-and-the-systems-that-power-it-lesson5-choice"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4200,7 +4245,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson6-level2_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson6-choice"
         ],
         "lesson.key": "Lesson 6: Build a Computer System",
         "lesson_group.key": "lessonGroup-3",
@@ -4208,11 +4253,11 @@
         "activity_section.key": "5b425d74-03af-420b-842d-9da3ff5b9461"
       },
       "level_keys": [
-        "computer-systems-lesson6-level2_v2_2026-dev"
+        "ai-and-the-systems-that-power-it-lesson6-choice"
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4234,7 +4279,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4256,7 +4301,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4278,7 +4323,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4300,7 +4345,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4322,7 +4367,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4344,7 +4389,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4366,7 +4411,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4388,7 +4433,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4410,7 +4455,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4432,7 +4477,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -4454,7 +4499,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4476,7 +4521,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4498,7 +4543,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4520,7 +4565,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4542,7 +4587,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4564,7 +4609,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4586,7 +4631,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4608,7 +4653,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4630,7 +4675,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4652,7 +4697,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4674,7 +4719,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4696,7 +4741,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4718,7 +4763,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4740,7 +4785,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4762,7 +4807,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4784,7 +4829,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4806,7 +4851,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4828,7 +4873,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4850,7 +4895,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4872,7 +4917,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5137,9 +5182,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson6-level2_v2_2026-dev",
+        "level.key": "ai-and-the-systems-that-power-it-lesson5-choice",
         "script_level.level_keys": [
-          "computer-systems-lesson6-level2_v2_2026-dev"
+          "ai-and-the-systems-that-power-it-lesson5-choice"
+        ],
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-the-systems-that-power-it-2026-dev",
+        "activity_section.key": "7524970a-c433-418d-9442-4d08db04a277"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-the-systems-that-power-it-lesson6-choice",
+        "script_level.level_keys": [
+          "ai-and-the-systems-that-power-it-lesson6-choice"
         ],
         "lesson.key": "Lesson 6: Build a Computer System",
         "lesson_group.key": "lessonGroup-3",
