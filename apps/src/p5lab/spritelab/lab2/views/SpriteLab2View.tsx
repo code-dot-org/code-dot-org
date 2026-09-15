@@ -91,6 +91,7 @@ import {
 } from '../scenesApi';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SpriteLab2LevelProperties, Scene, Sources} from '../types';
+import useGameAudio from '../useGameAudio';
 import {
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
@@ -1462,6 +1463,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // level) must pause the engine as soon as it exists.
   }, [playspaceMode, documentHidden, engineReady]);
 
+  const audioSettings = useGameAudio(
+    engineRef,
+    engineReady && playspaceMode === 'play'
+  );
+
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
   const getDefaultSpriteSize = useCallback(
@@ -1486,7 +1492,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         isRunning={isRunning}
         hasRun={hasRun}
         hasEdited={hasEdited}
-        settings={[...blocklySettings, themeSetting]}
+        settings={[...blocklySettings, themeSetting, ...audioSettings]}
         className={classNames(
           !levelProperties.guideMode && moduleStyles.instructionsArea,
           !!levelProperties.guideMode && moduleStyles.resourceSidebar
