@@ -116,8 +116,9 @@ global.PISKEL_DEVELOPMENT_MODE = 'false';
 jest.mock('@cdo/apps/metrics/firehose', () => ({
   putRecord: jest.fn(),
 }));
-// Mock out toImage as it produces a live image relying on browser callbacks to properly instantiate
-// imageUtils is tested in the integration test suite instead of jest.
+// Mock out toImage as it produces a live image relying on browser callbacks to properly instantiate.
+// imageUtils' conversions are otherwise covered by the integration suite;
+// jest tests of the real functions use jest.requireActual.
 jest.mock('@cdo/apps/imageUtils', () => ({
   ...jest.requireActual('@cdo/apps/imageUtils'),
   toImage: jest.fn(),
