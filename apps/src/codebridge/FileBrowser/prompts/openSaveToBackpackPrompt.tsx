@@ -6,16 +6,16 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {
+  isUnifiedApi,
+  SaveToBackpackApi,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/saveToBackpackHelper';
+import {
   DialogType,
   DialogControlInterface,
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
-import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
-
-type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
@@ -26,14 +26,6 @@ type OpenSaveToBackpackPromptArgsType = {
     payload?: Record<string, string>
   ) => void;
 };
-
-// Check if the provided API is a UnifiedBackpackClientApi.
-// We check against the existence of getFileLists so we can use a
-// mocked UnifiedBackpackClientApi in tests.
-const isUnifiedApi = (
-  api: SaveToBackpackApi
-): api is UnifiedBackpackClientApi =>
-  typeof (api as UnifiedBackpackClientApi).getFileLists === 'function';
 
 export const openSaveToBackpackPrompt = async ({
   dialogControl,

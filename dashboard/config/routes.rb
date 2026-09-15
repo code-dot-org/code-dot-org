@@ -470,7 +470,7 @@ Dashboard::Application.routes.draw do
         post 'remove_skill'
       end
 
-      resource :quiz_configuration, only: [:update], controller: 'quizzes'
+      resource :quiz_configuration, only: [:show, :update], controller: 'quizzes'
       resources :quiz_question_placements, only: [:create, :destroy] do
         member do
           post 'attach'

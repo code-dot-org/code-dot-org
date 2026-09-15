@@ -66,6 +66,11 @@ interface ImageDetailsDialogProps extends GenerateImageViewOptions {
   /** An image level: the panel sits in the page, not in a modal — no
       overlay, no Done/Cancel exits. */
   imageLevel?: boolean;
+  /** Stored pixel size of the image (one frame of a sheet). */
+  resolution?: {x: number; y: number};
+  /** Pixel art's physical px per art pixel; sets the resolution row's
+      logical size (the 1px brush grid). */
+  pixelGridSize?: number;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
@@ -79,6 +84,26 @@ interface ImageDetailsDialogProps extends GenerateImageViewOptions {
   alternatives?: AlternativeImage[];
   /** Make this alternative the image. */
   onSelectAlternative?: (id: string) => void;
+}
+
+/**
+ * The Resolution row's text. Pixel art leads with its logical size — the
+ * grid the 1px brush paints on, which is the resolution we treat the image
+ * as — with the stored size in parentheses; the parenthetical goes away if
+ * pixel art is ever stored at its logical size (which needs the engine to
+ * upscale with hard edges).
+ */
+export function resolutionLabel(
+  resolution: {x: number; y: number},
+  pixelGridSize?: number
+): string {
+  const stored = `${resolution.x} × ${resolution.y}`;
+  if (!pixelGridSize || pixelGridSize <= 1) {
+    return stored;
+  }
+  const logicalX = Math.round(resolution.x / pixelGridSize);
+  const logicalY = Math.round(resolution.y / pixelGridSize);
+  return `${logicalX} × ${logicalY} (${stored})`;
 }
 
 /** One choice in the Alternatives strip. */
@@ -118,6 +143,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   paintDisabled,
   imageLevel,
   pixelated,
+  resolution,
+  pixelGridSize,
   getDataURI,
   isNameTaken,
   onGenerateStart,
@@ -328,22 +355,33 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               />
             )}
             <div className={moduleStyles.detailsPane}>
-              {generation && (
+              {(generation || resolution) && (
                 <dl className={moduleStyles.metadata}>
-                  <dt>Prompt</dt>
-                  {/* Italic: the one field here the user wrote themselves. */}
-                  <dd className={moduleStyles.promptValue}>
-                    {generation.prompt}
-                  </dd>
-                  <dt>Type</dt>
-                  <dd>
-                    {sheet
-                      ? 'Sprite (animated)'
-                      : IMAGE_TYPE_LABELS[generation.imageType]}
-                  </dd>
-                  <dt>Style</dt>
-                  <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
-                  {advanced && generation.temperature !== undefined && (
+                  {generation && (
+                    <>
+                      <dt>Prompt</dt>
+                      {/* Italic: the one field here the user wrote
+                          themselves. */}
+                      <dd className={moduleStyles.promptValue}>
+                        {generation.prompt}
+                      </dd>
+                      <dt>Type</dt>
+                      <dd>
+                        {sheet
+                          ? 'Sprite (animated)'
+                          : IMAGE_TYPE_LABELS[generation.imageType]}
+                      </dd>
+                      <dt>Style</dt>
+                      <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
+                    </>
+                  )}
+                  {resolution && (
+                    <>
+                      <dt>Resolution</dt>
+                      <dd>{resolutionLabel(resolution, pixelGridSize)}</dd>
+                    </>
+                  )}
+                  {advanced && generation?.temperature !== undefined && (
                     <>
                       <dt>Temperature</dt>
                       <dd>{generation.temperature}</dd>
