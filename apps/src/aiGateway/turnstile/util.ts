@@ -101,16 +101,8 @@ export function turnstileUserMessage(error: unknown): string | undefined {
         'Safari, or Edge.'
       );
 
-    // Unreachable from the DevTools probe, which throws TurnstileDevToolsError
-    // and is answered by the caller's own branch. Present for a challenge error
-    // that ever carries the reason, and because every reason needs a message.
-    case 'devtools_breakpoints':
-      return (
-        'A security check cannot run while browser developer tools are open ' +
-        'with breakpoints active. Close developer tools and reload the page.'
-      );
-
     case 'challenge_failed':
+    case 'devtools_breakpoints':
     case 'render_threw':
     case 'render_failed':
     case 'remove_failed':

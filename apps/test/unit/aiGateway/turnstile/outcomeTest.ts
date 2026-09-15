@@ -228,14 +228,6 @@ describe('turnstileUserMessage', () => {
     }
   );
 
-  it('points at developer tools for devtools_breakpoints', () => {
-    const message = turnstileUserMessage(
-      new TurnstileChallengeError('devtools_breakpoints', 'nope')
-    );
-
-    expect(message).toMatch(/developer tools/i);
-  });
-
   it('names the browser as the problem when unsupported', () => {
     const message = turnstileUserMessage(
       new TurnstileChallengeError('unsupported', 'nope')
@@ -246,6 +238,7 @@ describe('turnstileUserMessage', () => {
 
   it.each<TurnstileFailureReason>([
     'challenge_failed',
+    'devtools_breakpoints',
     'render_threw',
     'render_failed',
     'remove_failed',
