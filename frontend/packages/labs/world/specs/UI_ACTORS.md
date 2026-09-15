@@ -166,12 +166,16 @@ a rule pulls its dependencies.
 | Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                           |
 | Speech Box   | a Label that lets its line out a letter at a time | DONE                                       |
 | Text Input   | one line you can type in                          | BUILT, on the shelf (`story/form`)         |
-| Text Area    | several lines you can type in                     | the actor, plus a caret                    |
-| Dropdown     | a list of words, one of them chosen               | a list property and a menu to draw         |
-| Panel        | a background behind a group                       | grouping, which is layout                  |
+| Text Area    | several lines you can type in                     | PROPOSED, last — see "The rest"            |
+| Dropdown     | a list of words, one of them chosen               | PROPOSED — a list property, a menu to draw |
+| Panel        | a background behind a group                       | PROPOSED, first — see "The rest"           |
+| Toggle       | a Button that is on or off                        | PROPOSED                                   |
+| Slider       | a Progress Bar the pointer drags                  | PROPOSED                                   |
 
-Five of the nine are built, and the three that arrived after this document was
-first written are the ones that changed what the rest should be.
+Six of the eleven are built, and the three that arrived after this document was
+first written are the ones that changed what the rest should be. The two new
+rows, and the order the unbuilt five should go in, are argued at the end
+("The rest of the toolkit").
 
 **"Meter" became "Progress Bar"**, which is what everybody calls one. Its
 number and the two colors it is drawn in were a rule of its own
@@ -670,6 +674,13 @@ becomes resizable, every HUD in every project silently mislays itself, and that
 is the day anchoring stops being optional. Naming the trigger now is cheaper
 than discovering it then.
 
+The window is a WORLD'S now rather than the lab's — `set size of view`
+(VIEWPORT.md) — and the Interface Kit is the first to say so, ten tiles wide
+by eighteen tall, the shape of a phone. That does not pull the trigger: a
+world's view is fixed for that world, so its positions still hold. What would
+pull it is one interface shared between two worlds of different shapes, which
+is exactly what a stock interface MAP is (below, "The rest of the toolkit").
+
 **Text over a picture is two commands.** An earlier draft made it a Phaser
 Container, because the driver keeps one GameObject per actor and a button is a
 picture with a word on it. In a drawing routine it is `draw image` then `draw
@@ -934,8 +945,117 @@ arriving late.
 
 ## What this does not solve
 
-The score still has nowhere to live. A Label can be told what to say, and the
-thing that works out what it should say is a count that outlives the actor
-raising the event — which is world-scoped state, and remains the next gap. This
-document makes that gap the ONLY one between `Got one!` and a game that keeps
-score; before it there were two.
+The score had nowhere to live when this was written. A Label can be told what
+to say, and the thing that works out what it should say is a count that
+outlives the actor raising the event — which is world-scoped state, and was the
+next gap. It is built (specs/WORLD_STATE.md), so nothing now stands between
+`Got one!` and a game that keeps score except somebody writing the two rows;
+that is the "score readout" entry below, and the reason it is a recipe rather
+than an actor.
+
+## The rest of the toolkit — PROPOSED
+
+Nothing in this section is built. It is what a survey of the six actors on the
+shelf, the three rows the table still owes, and what the engine now offers came
+to, written down so the order is a decision rather than whichever one is asked
+for first.
+
+### What is already there to build on
+
+The reason most of this is cheap. Drawing has a rectangle, a circle, a line,
+text, a paragraph and an image, a size that is a property and a color that is
+a type. An actor declares its own properties, events and actions, and `acts
+like` hands a drawing down. Focus is a rule with Tab, Enter and a read-only
+`focused`; the Mouse rule raises a press, a release and a click and answers
+`mouse position` and `mouse button ⟨left⟩ is down`; typed characters arrive in
+a queue. Lists exist as a drawer, without `item ⟨n⟩ of` and without a
+list-typed property on an actor (specs/LISTS.md). A world keeps state of its
+own, and `define choices` names a closed set of words (specs/ENUMS.md).
+
+Two of those are the gaps the harder rows fall into, and they are named below
+where they bite.
+
+### The rows, in the order to build them
+
+1. **Panel.** A box behind a group: a fill, an outline, a width and a height,
+   and no words. It is nearly a Label with `text` left empty, and it should
+   ACT LIKE one so that a dialog's background and its title are the same shape
+   of thing. What the table deferred as "grouping, which is layout" has an
+   answer that is not a layout engine: the Attachment rule. A Label, a Button
+   and a bar each elected `Attached` to the Panel move when the Panel moves,
+   which is all "belongs together" has to mean for a dialog that slides in.
+   Cheapest row in the list, and first because the maps below want it.
+
+2. **Toggle.** A Button carrying a boolean `on` that flips when clicked and
+   draws its state — a box with a mark in it, or a switch — with `turned on`
+   and `turned off` as its own events, so a project can react rather than poll.
+   Every piece exists: a boolean property, the Button's click, a rectangle and
+   a line. Sound on and off, and pause, are the first uses. It is not the
+   Switches rule's `Is a Switch`, which is a thing in a LEVEL that a player
+   stands on; this is a control on the screen, and it is a kind of Button.
+
+3. **Slider.** Acts like a Progress Bar and elects `Can Be Clicked`: while
+   `mouse button ⟨left⟩ is down` and the press began on it, `fraction` is the
+   pointer's x across its width. There is no drag event and none is needed —
+   the two blocks that exist make it one row each frame — and a `changed`
+   event as the Text Input has lets a volume screen hear it. Volume and
+   difficulty. A Slider is the first control whose value is a number rather
+   than words or a truth, which is the one thing a Progress Bar could not yet
+   be asked for.
+
+4. **A score readout, as a recipe rather than an actor.** With world state
+   built, a score on the screen is a Label and one handler that writes the
+   count into `text`. That is an enhancement row (specs/ENHANCEMENTS.md) or a
+   lesson tile, and adding a "Score" kind would be a Label with a longer name.
+
+5. **Dropdown.** A list of words with one of them chosen, which needs two
+   things the engine has not got and one it has. The first is a LIST-TYPED
+   PROPERTY on an actor — the Lists drawer has values but an actor cannot yet
+   keep a list as its own — and the second is a menu that draws BIGGER THAN
+   THE CLOSED CONTROL: the canvas is exactly the actor's size, so an open menu
+   is the actor changing its own height while it is open, which a size that
+   is a property allows and nothing has tried. The third, choosing a row, is
+   `mouse position` minus the actor's position divided by the row height,
+   which is arithmetic. Medium to large, and a row of Toggles or a set of
+   Buttons answers most of the questions a Dropdown does, which is why it is
+   fifth.
+
+6. **Text Area.** Several lines to type in. `draw paragraph` makes the drawing
+   free, so what is left is the caret: an index that has to become a line and
+   a column over WRAPPED text, click-to-caret in two dimensions where the Text
+   Input measures in one, and the words sliding to keep the caret in the box
+   vertically as well. Real work for a control a game rarely wants. Last.
+
+### The second axis: stock interface MAPS
+
+INTERFACE.md already says what a menu is: a map, loaded on top of the level or
+into a world of its own. A title screen, a pause menu, a dialog box and a HUD
+are each three or four of the actors above, arranged — and arranging them is
+what the map editor does. Shipping THOSE, as stock content the way rules and
+actors are, would flesh out a toolkit faster than more single actors, because
+a learner reaching for "a pause menu" is not reaching for a Panel.
+
+It is also the case that forces the two questions this document has deferred:
+
+- **Grouping.** A dialog map moved as one thing is the Panel-plus-Attached
+  answer above, tried on something real.
+- **Anchoring.** A HUD map shared between a square world and the portrait one
+  is the first interface that lands on two windows of different shapes, and a
+  score at (304, 16) is in the corner of one and in the middle of the other.
+  That is the trigger named under "Decisions", pulled by a real case rather
+  than an imagined one, and it should be answered then: probably an anchor
+  property on the interface layer's placements, not on the actors.
+
+The import for a map does not exist and is the one piece of machinery in this
+section: `ImportRuleDialog` has a shape, `importStockActor` walks
+dependencies, and a stock map is a `.map` file plus the actors it places,
+which is the same walk one level further out.
+
+### What a phone-shaped kit does not yet answer
+
+The Interface Kit runs at a phone's shape, and nothing in the lab has met a
+FINGER. Phaser reports a tap as a pointer press, so a Button works; what a
+touch screen has no answer for is hover, a right button, Tab, and Escape as
+"drop the focus". None of the rows above adds a dependency on those, and that
+is deliberate — but before any of this is claimed for mobile, the driver's
+touch path wants a test that taps, the way the play test clicks.
