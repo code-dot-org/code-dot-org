@@ -4432,11 +4432,15 @@ class UserTest < ActiveSupport::TestCase
     end
 
     it 'raises if user_ids is empty' do
-      assert_raises { User.delete_progress_for_units(user_ids: [], unit_ids: [script.id]) }
+      assert_raises do
+        User.delete_progress_for_units(user_ids: [], unit_ids: [script.id])
+      end
     end
 
     it 'raises if unit_ids is empty' do
-      assert_raises { User.delete_progress_for_units(user_ids: [student.id], unit_ids: []) }
+      assert_raises do
+        User.delete_progress_for_units(user_ids: [student.id], unit_ids: [])
+      end
     end
   end
 
