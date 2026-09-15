@@ -93,12 +93,20 @@ function animationDropdown(
   kind: AnimationKind,
   Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown
 ): CdoFieldAnimationDropdown {
-  return new Ctor(
+  const field = new Ctor(
     () => animationOptions(kind),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
     MAKE_IMAGE_BUTTONS
   );
+  // A fresh field takes the first option, the newest image. A fresh costume
+  // field takes the student's first character instead: the list is
+  // newest-first, so the last option. A saved block's value replaces this.
+  if (kind === 'costume') {
+    const options = field.getOptions(false);
+    field.setValue(options[options.length - 1][1]);
+  }
+  return field;
 }
 
 // The classic costumePicker/backgroundPicker input types, with lab2's empty
