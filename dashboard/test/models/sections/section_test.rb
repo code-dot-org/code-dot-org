@@ -831,6 +831,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -867,6 +868,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1001,6 +1003,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1063,6 +1066,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1131,6 +1135,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1198,6 +1203,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -1257,6 +1263,7 @@ class SectionTest < ActiveSupport::TestCase
         avatar_emoji: nil,
         demo_type: nil,
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
+        assigned_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -2008,6 +2015,38 @@ class SectionTest < ActiveSupport::TestCase
     section = create(:section, teacher: @teacher, script: unit)
 
     assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], section.assigned_ai_chat_tools_dependency
+  end
+
+  test 'assigned_inaccessible_ai_models? is only true when the instructor has US only models disabled and the course uses them' do
+    us_only_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}}})
+    openai_level = create(:aichat, properties: {'aichat_settings' => {'initialCustomizations' => {'selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}}})
+
+    us_only_unit = create(:script, :in_single_unit_course, name: 'section-us-only-unit')
+    us_only_lesson = create(:lesson, :with_lesson_group, script: us_only_unit)
+    create(:script_level, script: us_only_unit, lesson: us_only_lesson, levels: [us_only_level])
+
+    openai_unit = create(:script, :in_single_unit_course, name: 'section-openai-unit')
+    openai_lesson = create(:lesson, :with_lesson_group, script: openai_unit)
+    create(:script_level, script: openai_unit, lesson: openai_lesson, levels: [openai_level])
+
+    us_only_section = create(:section, teacher: @teacher, script: us_only_unit)
+    openai_section = create(:section, teacher: @teacher, script: openai_unit)
+    no_course_section = create(:section, teacher: @teacher)
+
+    # The instructor can use US only models, so nothing is inaccessible and we
+    # never scan the curriculum.
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    Unit.any_instance.expects(:uses_us_only_ai_models?).never
+    refute us_only_section.assigned_inaccessible_ai_models?
+    refute openai_section.assigned_inaccessible_ai_models?
+
+    # The instructor has US only models disabled, so it depends on the curriculum.
+    User.any_instance.unstub(:us_only_aichat_models_disabled?)
+    Unit.any_instance.unstub(:uses_us_only_ai_models?)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(true)
+    assert us_only_section.assigned_inaccessible_ai_models?
+    refute openai_section.assigned_inaccessible_ai_models?
+    refute no_course_section.assigned_inaccessible_ai_models?
   end
 
   private def build_suggested_lesson_section
