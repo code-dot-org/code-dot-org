@@ -79,8 +79,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     name: 'Platform',
     types: [
       'gamelab_setBackgroundImageAs',
-      PLAY_MUSIC_BLOCK_TYPE,
       PLAY_SOUND_BLOCK_TYPE,
+      PLAY_MUSIC_BLOCK_TYPE,
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
       'spritelab2_setAsPlatformPlayer',
@@ -101,8 +101,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     name: 'Story',
     types: [
       'gamelab_setBackgroundImageAs',
-      PLAY_MUSIC_BLOCK_TYPE,
       PLAY_SOUND_BLOCK_TYPE,
+      PLAY_MUSIC_BLOCK_TYPE,
       'gamelab_makeNewSpriteAnon',
       'gamelab_setProp',
       'gamelab_spriteSay',
