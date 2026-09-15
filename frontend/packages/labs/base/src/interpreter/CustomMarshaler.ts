@@ -1,0 +1,156 @@
+import Interpreter from '@code-dot-org/js-interpreter';
+import type {InterpreterObject} from '@code-dot-org/js-interpreter';
+
+export interface MarshalObject {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  instance?: any;
+  requiredMethod?: string;
+  methodOpts?: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  };
+  ensureIdenticalMarshalInstances?: boolean;
+}
+
+/**
+ * Custom Marshaler
+ */
+class CustomMarshaler {
+  globalProperties: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  };
+  blockedProperties: string[];
+  objectList: MarshalObject[];
+  marshaledMap: Map<object, InterpreterObject>;
+
+  constructor({
+    globalProperties,
+    blockedProperties,
+    objectList,
+  }: {
+    globalProperties?: object;
+    blockedProperties?: string[];
+    objectList?: MarshalObject[];
+  }) {
+    this.globalProperties = globalProperties || {};
+    this.blockedProperties = blockedProperties || [];
+    this.objectList = objectList || [];
+    this.marshaledMap = new Map<object, InterpreterObject>();
+  }
+
+  // Get the objectListData if this is on our list of "custom marshal" objects -
+  // or if it a property on one of those objects (other than a function)
+  getObjectListData(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeVar: any,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeParentObj: any,
+  ): MarshalObject | null {
+    for (let i = 0; i < this.objectList.length; i++) {
+      const marshalObj = this.objectList[i];
+      if (
+        (nativeVar instanceof marshalObj.instance &&
+          (typeof marshalObj.requiredMethod === 'undefined' ||
+            nativeVar[marshalObj.requiredMethod] !== undefined)) ||
+        (typeof nativeVar !== 'function' &&
+          nativeParentObj instanceof marshalObj.instance)
+      ) {
+        return marshalObj;
+      }
+    }
+    return null;
+  }
+
+  // If we have objectListData, return true
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  shouldCustomMarshalObject(nativeVar: any, nativeParentObj: any) {
+    return !!this.getObjectListData(nativeVar, nativeParentObj);
+  }
+
+  /**
+   * When marshaling methods on "custom marshal" objects, we may need to augment
+   * the marshaling options. This returns those options.
+   */
+
+  getCustomMarshalMethodOptions(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeParentObj: any,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeVar: any,
+  ): {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  } {
+    for (let i = 0; i < this.objectList.length; i++) {
+      const marshalObj = this.objectList[i];
+      if (
+        nativeParentObj instanceof marshalObj.instance ||
+        nativeVar === marshalObj.instance
+      ) {
+        if (
+          typeof marshalObj.requiredMethod === 'undefined' ||
+          nativeParentObj[marshalObj.requiredMethod] !== undefined
+        ) {
+          return marshalObj.methodOpts || {};
+        } else {
+          return {};
+        }
+      }
+    }
+    return {};
+  }
+
+  /**
+   * Create a new "custom marshal" interpreter object that corresponds to a native
+   * object.
+   * @param {Interpreter} interpreter Interpreter instance
+   * @param {Object} nativeObj Object to wrap
+   * @param {Object} nativeParentObj Parent of object to wrap
+   * @return {!Object} New interpreter object.
+   */
+
+  createCustomMarshalObject(
+    interpreter: Interpreter,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeObj: any,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeParentObj: any,
+  ) {
+    let obj = this.marshaledMap.get(nativeObj as object);
+    if (obj) {
+      return obj;
+    }
+    obj = interpreter.createObject();
+    obj.data = nativeObj;
+    obj.isCustomMarshal = true;
+    obj.type = typeof nativeObj;
+    obj.toBoolean = function () {
+      return Boolean(this.data);
+    };
+    obj.toNumber = function () {
+      return Number(this.data);
+    };
+    obj.toString = function () {
+      return String(this.data);
+    };
+    obj.valueOf = function () {
+      return this.data;
+    };
+    if (typeof nativeObj === 'object') {
+      const objectListData: MarshalObject =
+        this.getObjectListData(nativeObj, nativeParentObj) || {};
+      if (objectListData.ensureIdenticalMarshalInstances) {
+        //
+        // this.marshaledMap will retain the association between this nativeObj
+        // and the corresponding "obj" we created here, such that future calls
+        // to this function will return the exact same custom marshal object.
+        //
+        this.marshaledMap.set(nativeObj as object, obj);
+      }
+    }
+    return obj;
+  }
+}
+
+export default CustomMarshaler;

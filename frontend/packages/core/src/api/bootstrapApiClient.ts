@@ -3,7 +3,6 @@ import {resolveCsrfToken} from './csrfToken';
 import {createKyTransport} from './transports/kyTransport';
 import {createReplayTransport} from './transports/replayTransport';
 import {CodeStudioConfig} from '@/config';
-import {getDashboardApiUrl} from '@/dashboard';
 
 // `msw` is a separate mode for the consumer's boot wiring: when active, the
 // consumer starts an MSW worker (see `@code-dot-org/core/api/mocks`) and the
@@ -20,7 +19,10 @@ export function bootstrapApiClient(): ApiClient {
   const mode = getApiMode();
 
   const http = createKyTransport({
-    baseUrl: getDashboardApiUrl(CodeStudioConfig.environment),
+    // What SiteConfig resolved, rather than resolving it again: the environment
+    // decides, unless the page names an API origin of its own (SiteConfig's
+    // `dashboardApiUrl`).
+    baseUrl: CodeStudioConfig.dashboardApiUrl,
     credentials: 'same-origin',
     getCsrfToken: resolveCsrfToken,
   });
