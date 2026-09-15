@@ -1,18 +1,13 @@
 ## Background and Intent
 <!--
-  Background, motivation, and context for this update. What was the impetus behind this change? How was the decision made to move forward? What is the intended outcome of this update?
+  Background, motivation, and context for this update. Include links to any design documents, specs, tickets, or other external sources that give context for the change. What was the impetus behind this change? How was the decision made to move forward? What is the intended outcome of this update?
 -->
 
-## Change Log
+## Overview of Changes
 <!--
   Summary of what was changed or updated.
   Include screenshots, videos, or before/after comparisons for UI changes.
 -->
-
-## Links
-<!-- Jira tickets, design docs, Slack threads, related PRs, etc. -->
-
-- Jira:
 
 ## Testing story
 <!-- How was this tested? Manual steps, adhoc links, automated tests, or why testing isn't needed. -->
