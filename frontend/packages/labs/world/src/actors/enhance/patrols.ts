@@ -16,7 +16,7 @@
 // it is worth a row whether the verb costs one line or four.
 //
 // ACROSS, because that is the enemy a side-on level wants and the one the
-// stock Crawler is (`fixtures/platformerSingle`). Down is a lift rather than a
+// stock Crawler is (the starter, `constants`). Down is a lift rather than a
 // guard — a different thing rather than the other half of this one — so the
 // description points at it instead of the row electing both and making every
 // patroller walk a rectangle.

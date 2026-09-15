@@ -5,7 +5,7 @@
 // touches, and going after somebody. They are separate rows because they are
 // separately wanted — a spike hurts without moving, a lift patrols without
 // hurting — and the Crawler every platformer starts with is the first two
-// applied to one actor (`fixtures/platformerSingle`).
+// applied to one actor (the starter, `constants`).
 //
 // What reading cannot tell is whether the blocks they write actually make a
 // thing behave, so the second half builds a room and plays it.

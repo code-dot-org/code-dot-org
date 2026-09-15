@@ -4,7 +4,7 @@
 // anything else, and that gap is why this exists. The Crawler every platformer
 // starts with has no gravity — it patrols across at whatever height it was
 // placed, and the floor it appears to walk on is a coincidence of placement
-// (`fixtures/platformerSingle`). That is right for a Crawler and wrong the
+// (the starter, `constants`). That is right for a Crawler and wrong the
 // moment somebody wants the jetpack level's Blob, which elects
 // `Affected by Gravity` on its own, has no jump and no keyboard, and is simply
 // pulled onto the floor (`fixtures/jetpack`). The same level's Rocket takes

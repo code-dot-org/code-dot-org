@@ -12,7 +12,7 @@
 // collision rather than about falling. A ledge wants both; a wall wants only
 // the second, and a cloud platform you can jump up through wants only the
 // first. The Ground the library ships elects exactly this pair
-// (`fixtures/platformerSingle`, `actors/stock/ground`).
+// (`actors/stock/ground`).
 //
 // Gravity brings Solid Bodies along on its own, so the second import is a
 // no-op in every project that has the first. It is named anyway, because this

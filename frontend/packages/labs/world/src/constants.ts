@@ -209,11 +209,8 @@ const WALL_ROWS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 /**
  * What the starter level places, in the order the map lists it.
  *
- * Exported because the level is told twice — as a `.map` file here, and as
- * `create ⟨kind⟩ in map` arrangements in the single-world telling
- * (fixtures/platformerSingle), which groups these by type. Two hand-written
- * copies of a board is two boards, and the pair is only worth having if the
- * board in it is the same one.
+ * Exported so a test can hold the shipped `.map` to this list, which is
+ * where the board is written down.
  */
 export const LEVEL1_ACTORS = [
   place('actors/player', 'Player', tileCenter(2), tileCenter(4)),
@@ -878,12 +875,7 @@ function starterAnimation(id: string): Record<string, StarterFile> {
 /**
  * The starter, written out.
  *
- * Exported because it is now told twice: once as it stands, and once with the
- * actors and the map moved into `main.world` (fixtures/platformerSingle). The
- * second one is the first one minus five files, so it takes this rather than
- * restating the rules, the pictures and the animations — a copy of that list
- * would be a copy that could go stale, and the whole point of the pair is that
- * only the TELLING differs.
+ * Exported for the tests that read the starter by name rather than by id.
  */
 export const STARTER_SPEC: ProjectSpec = {
   folders: [

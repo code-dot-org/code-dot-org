@@ -297,7 +297,7 @@ export const GROUPS: readonly EnhancementGroup[] = [
     // After the ones a protagonist wants. A level is built by putting
     // something in it to be, and then something to avoid: the Crawler every
     // platformer starts with is the first two of these applied to one actor
-    // (`fixtures/platformerSingle`).
+    // (the starter, `constants`).
     name: 'Being an enemy',
     members: [
       patrolsEnhancement,

@@ -97,34 +97,9 @@ describe('the camera-follow enhancement, as edits', () => {
     expect(cameraFollowEnhancement.applied(twice, WORLD, PLAYER)).toBe(false);
   });
 
-  it('offers the actors this world can name — its own, and the files', () => {
-    // Both kinds, because a world may hold both: `define actor` blocks are
-    // `local:<block>`, files are their module paths.
-    const single = WORLD_SCENARIOS['platformer-single'].source;
-    const choices = cameraFollowEnhancement.asks!.options(single, {
-      kind: 'world',
-      path: 'worlds/main',
-      name: 'Platform World',
-    });
-
-    expect(choices.map(one => one.name)).toContain('Ball');
-    expect(choices.find(one => one.name === 'Ball')?.value).toBe(
-      'local:platformerBallDef',
-    );
-
+  it('offers the actors the project holds', () => {
     const files = cameraFollowEnhancement.asks!.options(withActors(), WORLD);
     expect(files.map(one => one.value)).toContain('actors/player');
-  });
-
-  it('takes a world-defined actor as its answer', () => {
-    const single = WORLD_SCENARIOS['platformer-single'].source;
-    const after = cameraFollowEnhancement.apply(
-      single,
-      {kind: 'world', path: 'worlds/main', name: 'Platform World'},
-      'local:platformerBallDef',
-    );
-
-    expect(followedIn(world(after))).toBe('local:platformerBallDef');
   });
 });
 

@@ -221,10 +221,11 @@ because whose health it shows is nobody else's idea.
 What is duplicated is nothing, in the end. A Health Bar and the jetpack's Fuel
 Bar both say `acts like ⟨Progress Bar⟩` and inherit the picture, the fraction
 and the colors — which is what finally made the rule redundant rather than
-merely small. The one telling that cannot is a bar a WORLD defines for itself:
-`acts like` names an actor file, and a single-world project has none, so
-`fixtures/platformerSingle` declares the three properties and draws the shared
-picture out of them (`progressBarDrawing`).
+merely small. The one telling that could not was a bar a WORLD defined for
+itself: `acts like` names an actor file, and the single-world fixtures had
+none, so that telling declared the three properties and drew the shared
+picture out of them (`progressBarDrawing`). Those fixtures are gone; every
+actor is a file.
 
 ## What changed underneath, and what it makes possible
 
@@ -273,12 +274,10 @@ Two things had to be answered as it went, and both had answers already:
 - **Two projects have no file to act like.** A world-local actor CAN act like
   one — `acts like` emits a call, not the `export const` that gets `define
 block` refused inside a world, and a block scope takes a call quite happily
-  (`__tests__/actsLike`). What the Scoreboard in the single-world starter and
-  the Label in the drawing lesson lack is the FILE: both projects are defined
-  as having no actor files at all, and `fixtures.test` pins it. So they declare
-  the four properties themselves and draw from them, which is what
-  `fixtures/platformerSingle`'s Health Bar does since `Progress` went
-  (`PROGRESS_BAR_PROPERTIES`). The same shape wants the same name: a
+  (`__tests__/actsLike`). What the Label in the drawing lesson lacks is a Label to act
+  like: it is the only text in its project. So it declares the four properties
+  itself and draws from them, the way a bar with no Progress Bar to act like
+  declares `PROGRESS_BAR_PROPERTIES`. The same shape wants the same name: a
   `LABEL_PROPERTIES` beside it.
 
   **A local actor may also act like a CO-LOCATED one**, which is what a

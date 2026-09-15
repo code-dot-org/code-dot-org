@@ -49,9 +49,9 @@ import {actorFile, actsLike, me, showAs} from './workspace';
 /**
  * The `define property` this bar keeps: the actor it is about.
  *
- * Exported with the drawing below, because a world may define this actor for
- * ITSELF rather than importing the file (fixtures/platformerSingle) and the
- * two must declare the same property or they are two different bars.
+ * Exported with the drawing below, because a project may declare this actor
+ * itself rather than importing the file, and the two must declare the same
+ * property or they are two different bars.
  */
 export const HEALTH_BAR_SUBJECT = {
   type: 'world_rule_property',
@@ -69,7 +69,7 @@ export const HEALTH_BAR_SUBJECT = {
  * PARAMETERISED TWICE, because an own property's block type carries the path
  * of the file that declared it (`blockly/ownProperties`). `subject` is this
  * bar's own — `ActorsHealthBar_…` for the imported file, `WorldsMain…_…` for a
- * world that defines the bar itself (fixtures/platformerSingle). `fraction` is
+ * world that defines the bar itself. `fraction` is
  * the PROGRESS BAR's, which this actor acts like, so its default is that
  * file's; a world-defined bar that cannot act like a file declares its own and
  * passes it here.

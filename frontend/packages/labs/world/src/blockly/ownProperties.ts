@@ -199,7 +199,7 @@ export function parseWorldOwnMeta(
  * the walk simply looked for ONE root of one type per file, and `world_world`
  * was the one it looked for. A world-defined actor could therefore have a
  * picture and no memory, and a scoreboard that carried a number had to be a
- * file (fixtures/platformerSingle).
+ * file.
  *
  * THE MODULE PATH CARRIES THE DEFINING BLOCK, `worlds/main#someActorDef`, and
  * that is the whole of what made this hard. A block type is minted from the

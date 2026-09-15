@@ -101,10 +101,8 @@ const pipe = (column: number, gapTop: number) => {
 /**
  * Everything the level places, in the order the map lists it.
  *
- * Exported because the level is told twice, as `./platformerSingle` tells the
- * starter's twice: as this `.map` file, and as `create ⟨kind⟩ in map`
- * arrangements grouped by kind. A second hand-written board would be a second
- * board, and the pair is only worth having if the board in it is the same one.
+ * Exported because the jetpack level places the same board, and a second
+ * hand-written copy would be a second board.
  */
 export const FLAPPY_ACTORS = [
   place('actors/bird', 'Bird', 2, 5),
@@ -424,9 +422,6 @@ const FLAPPY_WORLD = JSON.stringify({
 /**
  * The rules and pictures, which are the same in both tellings.
  *
- * Neither is an actor and neither is the map, so neither moves into the
- * world when the actors do — `./flappySingle` takes this list whole. A copy
- * would be a copy that could go stale.
  *
  * THE RULES HERE ARE THE RULES IN PLAY: holding one is what puts it in play
  * (blockly/projectModules), so this list is what the world used to say in four

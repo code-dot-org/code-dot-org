@@ -26,7 +26,6 @@ import {beforeAll, describe, expect, it} from 'vitest';
 
 import {DEFAULT_PROJECT} from '../constants';
 import {PositionProperty, type World} from '../engine';
-import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
 import {TILE_SIZE} from '../runtime/viewport';
 
@@ -287,104 +286,5 @@ describe('the project a learner opens', () => {
 
     expect(before).toBeGreaterThan(1);
     expect(coins()).toBeLessThan(before);
-  });
-});
-
-describe('the same project, said in one file', () => {
-  // `platformer-single` is the starter with its actors and its map moved into
-  // `main.world` — a teaching artefact whose whole claim is that it is the
-  // SAME game told differently. Nothing checked that claim by running it, and
-  // it had already stopped being true: the starter's jump became one block and
-  // the fixture kept the four-block version for a whole commit.
-  //
-  // So this plays it and asks for the same answers. Not the same blocks —
-  // the point of the pair is that the blocks differ — but the same game.
-  it('plays the same as the starter it was made from', async () => {
-    const {world} = await compileProject(
-      projectFiles(WORLD_SCENARIOS['platformer-single'].source),
-    );
-    // ASKED OF THE ACTOR, not of a module. This telling's Scoreboard is the
-    // WORLD's own, so its `text` is a `const` inside the block that defines it
-    // and no module exports it — the same reason the bar below is read this
-    // way. `ownProperties` is what the map editor's inspector reads, too.
-    const board = () => {
-      const one = actor(world, 'Scoreboard')!;
-      const text = one.ownProperties().find(property => property.id === 'text');
-      return one.get(text as never) as unknown as string;
-    };
-
-    expect(board()).toBe('SCORE 0');
-
-    play(world, 0.5);
-    play(world, 2, ['right arrow']);
-
-    // The two coins on the floor, exactly as in the starter's own telling.
-    expect(board()).toBe('SCORE 20');
-  });
-
-  it('draws its bar, which is the one actor here that keeps state', async () => {
-    // The health bar is the only actor in either telling that keeps a property
-    // of its own, and a world-defined one keeps it under the block that
-    // defines it rather than under a file — a different name for the same
-    // idea. If the two tellings had drifted there, the drawing would not
-    // resolve at all and there would be no picture.
-    //
-    // WHAT IT DOES NOT DO here is follow anybody. A placement pointing at
-    // another is resolved within one `loadMap`, and an arrangement is one call
-    // per KIND — so the bar's call does not contain the player. It draws
-    // empty, which is this telling's third cost and is written up in its
-    // header.
-    const {world} = await compileProject(
-      projectFiles(WORLD_SCENARIOS['platformer-single'].source),
-    );
-    play(world, 0.5);
-
-    const bar = world
-      .renderSnapshot()
-      .find(state =>
-        (state.actor as unknown as {id: string}).id.endsWith('HealthBar'),
-      );
-
-    expect(bar?.drawing).toBeDefined();
-  });
-
-  it('jumps as high, which is the mechanic most easily left behind', async () => {
-    // The drift that happened. A jump written the old way still compiles, is
-    // still a jump, and clears a different height — so "it has five handlers"
-    // passed while the two tellings had stopped agreeing.
-    const {world} = await compileProject(
-      projectFiles(WORLD_SCENARIOS['platformer-single'].source),
-    );
-    play(world, 0.8);
-    const floorLevel = where(world, 'Player').y;
-
-    let peak = floorLevel;
-    for (let frame = 0; frame < 60; frame++) {
-      world.setInput(['space']);
-      world.tick(1 / 60);
-      peak = Math.min(peak, where(world, 'Player').y);
-    }
-
-    expect(floorLevel - peak).toBeGreaterThan(3 * TILE_SIZE);
-  });
-
-  it('draws its scoreboard, now that a world may describe a picture', async () => {
-    // The point of giving `define drawing` a second shape. A world-defined
-    // actor with words and no picture is painted as a plain box, and this
-    // scenario shipped exactly that — a green rectangle where a score goes.
-    //
-    // The drawing is a ROW inside `define actor` here rather than a root
-    // beside the world, which is also how it says whose picture it is: a local
-    // actor's body generates inside a block where `actor` is that builder.
-    const {world} = await compileProject(
-      projectFiles(WORLD_SCENARIOS['platformer-single'].source),
-    );
-    const drawn = world
-      .renderSnapshot()
-      .find(state =>
-        (state.actor as unknown as {id: string}).id.endsWith('Scoreboard'),
-      );
-
-    expect(drawn?.drawing).toBeDefined();
   });
 });

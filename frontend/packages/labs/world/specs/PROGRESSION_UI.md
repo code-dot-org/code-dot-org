@@ -620,15 +620,15 @@ anything depends on it.
    That table is what turns "the gate hid something" from a bug report into a
    failing test.
 
-9. **One file.** A lesson says everything it has to say in `main.world`, and
-   the file browser is off while it does (`lessons/index`, `ONE_FILE`). The
-   actors a lesson asks the learner to change are defined IN the world — a
-   `define actor` root beside the `define world`, which is a shape the engine
-   already had and `fixtures/platformerSingle` already proved at full size.
+9. **Tabs, not a sidebar.** A lesson is its world and the actors that world
+   places, each a file of its own and open as a tab beside `main.world`; the
+   file browser is off while it is (`lessons/index`, `ONE_FILE`). The actors
+   were once defined IN the world, as `define actor` roots beside the
+   `define world`, so that a lesson was one file. Every actor is a file now.
 
-   The reason is the one the single-world scenarios give: a sidebar listing
-   eleven files argues with a lesson that is about one of them, and the first
-   thing it invites is the click that leaves it. The files are still there and
+   The reason for the missing sidebar is unchanged: a list of eleven files
+   argues with a lesson that is about two of them, and the first thing it
+   invites is the click that leaves them. The files are still there and
    still compiled — a lesson holds the rules and pictures it needs — and what
    is gone is the list.
 

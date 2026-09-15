@@ -47,8 +47,8 @@ const HEIGHT = 8;
  * What a bar is made of: how far along it is, and the two colors it is drawn
  * in.
  *
- * EXPORTED as rows, because a world may define a bar of its OWN rather than
- * import this file (fixtures/platformerSingle) and the two tellings must
+ * EXPORTED as rows, because a project may declare a bar of its OWN rather than
+ * import this file, and the two tellings must
  * declare the same three properties or they are two different bars — the same
  * bargain `HEALTH_BAR_SUBJECT` strikes one file over.
  *
@@ -81,7 +81,7 @@ const progressOf = (own: string, exportName: string) => ({
  *
  * EXPORTED for the ONE telling that cannot inherit it: a bar a world defines
  * for itself has no file to act like this one from, so it declares the three
- * properties and draws this picture out of them (fixtures/platformerSingle).
+ * properties and draws this picture out of them.
  * Every other bar in the lab is this actor or acts like it, and gets the
  * picture with everything else.
  */

@@ -18,7 +18,6 @@ import {
   DEFAULT_SCENARIO_TAG,
   isFixtureTag,
   isScenarioTag,
-  type WorldScenarioTag,
 } from '../index';
 
 describe('the scenario catalogue', () => {
@@ -96,106 +95,6 @@ describe('the scenario catalogue', () => {
       expect(
         Object.values(files).some(file => file.name.endsWith('.world')),
       ).toBe(true);
-    }
-  });
-
-  it('says the single-world platformer without leaving main.world', () => {
-    const files = Object.values(
-      WORLD_SCENARIOS['platformer-single'].source.files,
-    );
-    const worlds = files.filter(file => file.name.endsWith('.world'));
-
-    expect(worlds).toHaveLength(1);
-    expect(files.some(file => file.name.endsWith('.actor'))).toBe(false);
-    expect(files.some(file => file.name.endsWith('.map'))).toBe(false);
-
-    const main = worlds[0].contents;
-    expect(main).toContain('world_create_in_map');
-    expect(main).not.toContain('world_load_map');
-    // All five of the player's handlers, which is what makes this pair the
-    // fullest of the three: a jump, two things it says about falling, and the
-    // count. A hat left behind in the move would be a game that runs and is
-    // quietly missing a mechanic.
-    for (const hat of [
-      'world_on_Input_PressesEvent',
-      'world_on_Gravity_StartsFallingEvent',
-      'world_on_Gravity_StopsFallingEvent',
-      'world_on_Collection_CollectsEvent',
-    ]) {
-      expect(main).toContain(hat);
-    }
-  });
-
-  it('is the starter minus the files that moved into the world', () => {
-    // Written as a subtraction (STARTER_SPEC), so what is checked is that the
-    // subtraction took the right ones and nothing else: a rule or a picture
-    // dropped here would be a `use rule` pointing at nothing, and the dropdown
-    // resolves that to another rule rather than saying so.
-    const named = (tag: 'simple' | 'platformer-single') =>
-      new Set(
-        Object.values(WORLD_SCENARIOS[tag].source.files).map(file => file.name),
-      );
-    const starter = named('simple');
-    const single = named('platformer-single');
-
-    const missing = [...starter].filter(name => !single.has(name));
-    expect(new Set(missing)).toEqual(
-      new Set([
-        'player.actor',
-        'ground.actor',
-        'coin.actor',
-        'ball.actor',
-        'crawler.actor',
-        'healthBar.actor',
-        // …and the Label the starter's Scoreboard acts like, dropped for the
-        // same reason as the Progress Bar: this scenario's own Scoreboard is
-        // the world's, and declares the four text properties itself.
-        'label.actor',
-        // …and the bar the Health Bar acts like, which is dropped rather than
-        // moved: this scenario's Health Bar is the world's OWN, and a world
-        // may say `acts like` but only against an actor FILE — which is the
-        // one thing a single-world project is for not having. So the local bar
-        // spells out the trait and the picture, and the Progress Bar has
-        // nothing to be here for (`fixtures/platformerSingle`).
-        'progressBar.actor',
-        'scoreboard.actor',
-        'level1.map',
-      ]),
-    );
-    expect([...single].filter(name => !starter.has(name))).toEqual([]);
-  });
-
-  it('places the same board as the map it was made from', () => {
-    // The two boards are one board (`LEVEL1_ACTORS`), grouped by kind on this
-    // side because an arrangement belongs to the kind it places. Checked by
-    // position rather than by count: a board with the right number of tiles in
-    // the wrong places is the failure worth catching.
-    const map = JSON.parse(
-      Object.values(WORLD_SCENARIOS.simple.source.files).find(
-        file => file.name === 'level1.map',
-      )!.contents,
-    ) as {actors: Array<{id: string; properties: object}>};
-
-    const main = Object.values(
-      WORLD_SCENARIOS['platformer-single'].source.files,
-    ).find(file => file.name === 'main.world')!.contents;
-
-    // Every arrangement entry across the four `create in map` blocks, as
-    // `<id> <serialized overrides>` — which is the whole of what a placement
-    // says, and comparable with what the map file says.
-    const said = (entry: {id: string; properties: object}) =>
-      `${entry.id} ${JSON.stringify(entry.properties)}`;
-    const placed = new Set(
-      [...main.matchAll(/"PLACEMENTS":(\[.*?\}\])(?=,"|\})/g)].flatMap(match =>
-        (JSON.parse(match[1]) as Array<{id: string; properties: object}>).map(
-          said,
-        ),
-      ),
-    );
-
-    expect(placed.size).toBe(map.actors.length);
-    for (const actor of map.actors) {
-      expect(placed).toContain(said(actor));
     }
   });
 
@@ -334,82 +233,6 @@ describe('the scenario catalogue', () => {
     }
   });
 
-  it('says the single-world breakout without leaving main.world', () => {
-    // The whole claim of that scenario. An actor file or a map file sneaking
-    // back in would make the pair stop being a diff about one thing.
-    const files = Object.values(
-      WORLD_SCENARIOS['breakout-single'].source.files,
-    );
-    const worlds = files.filter(file => file.name.endsWith('.world'));
-
-    expect(worlds).toHaveLength(1);
-    expect(files.some(file => file.name.endsWith('.actor'))).toBe(false);
-    expect(files.some(file => file.name.endsWith('.map'))).toBe(false);
-
-    const main = worlds[0].contents;
-    expect(main).toContain('world_actor');
-    expect(main).toContain('world_create_in_map');
-    expect(main).not.toContain('world_load_map');
-  });
-
-  it('points every local reference at an actor that is defined', () => {
-    // A world-local actor is named by its DEFINING BLOCK'S id, so a mistyped
-    // one is not an error — `create in map` generates nothing at all, and the
-    // board comes up missing a third of itself with the console silent.
-    const main = Object.values(
-      WORLD_SCENARIOS['breakout-single'].source.files,
-    ).find(file => file.name === 'main.world')!.contents;
-    const workspace = JSON.parse(main) as {
-      blocks: {blocks: Array<{type: string; id?: string}>};
-    };
-
-    const defined = new Set(
-      workspace.blocks.blocks
-        .filter(block => block.type === 'world_actor')
-        .map(block => block.id),
-    );
-    expect(defined.size).toBe(4);
-
-    for (const [, id] of main.matchAll(/"local:([^"]+)"/g)) {
-      expect(defined).toContain(id);
-    }
-  });
-
-  it('opens on the world block, not on an actor', () => {
-    // Where a reader starts. The emitted module still puts the actor `const`s
-    // first — the assembler hoists them (assembleActorModule), which is what
-    // frees the canvas to be laid out for reading rather than for the compiler.
-    const main = Object.values(
-      WORLD_SCENARIOS['breakout-single'].source.files,
-    ).find(file => file.name === 'main.world')!.contents;
-    const workspace = JSON.parse(main) as {
-      blocks: {blocks: Array<{type: string; x: number; y: number}>};
-    };
-    const world = workspace.blocks.blocks.find(
-      block => block.type === 'world_world',
-    )!;
-
-    for (const block of workspace.blocks.blocks) {
-      if (block === world) {
-        continue;
-      }
-      expect(block.y).toBeGreaterThanOrEqual(world.y);
-    }
-    expect(world.x).toBe(20);
-  });
-
-  it('is the same game as the other breakout', () => {
-    // The two differ in how the game is SAID, not in what it is made of. Rules
-    // or pictures drifting apart would make the diff between them noise.
-    const named = (tag: 'breakout' | 'breakout-single') =>
-      Object.values(WORLD_SCENARIOS[tag].source.files)
-        .map(file => file.name)
-        .filter(name => name.endsWith('.rule') || name.endsWith('.png'))
-        .sort();
-
-    expect(named('breakout-single')).toEqual(named('breakout'));
-  });
-
   it('gives meteors the rules that make it a different game', () => {
     // The point of a third scenario: it is the one that exercises Arrow Drive,
     // Screen Wrap, Shooting and Expiry, none of which breakout uses. A rule it
@@ -462,54 +285,6 @@ describe('the scenario catalogue', () => {
 
     expect(ball).toContain('Expiry#ExpiresTrait');
     expect(ball).toContain('world_set_Expiry_LifetimeProperty');
-  });
-
-  it('says the single-world meteors without leaving main.world', () => {
-    const files = Object.values(WORLD_SCENARIOS['meteors-single'].source.files);
-    const worlds = files.filter(file => file.name.endsWith('.world'));
-
-    expect(worlds).toHaveLength(1);
-    expect(files.some(file => file.name.endsWith('.actor'))).toBe(false);
-
-    const main = worlds[0].contents;
-    // Including the handler that SPAWNS, which is what makes this pair worth
-    // having on top of the breakout one: a hat on `any ⟨Ship⟩` that adds a
-    // world-local actor and names it, because inside `add actor` the words
-    // `this actor` mean the new one.
-    expect(main).toContain('world_on_Zapping_ZapsEvent');
-    expect(main).toContain('"NAMED":"named"');
-    expect(main).toContain('world_create_in_map');
-  });
-
-  it('writes each rock a heading, since an arrangement cannot roll one', () => {
-    // The honest cost of the shape, and the one real difference between the two
-    // tellings. `create in map` is DATA — positions and per-instance property
-    // overrides — so a heading is written down; the file version places each
-    // rock with `add actor` and a body, which is somewhere code can run, and
-    // rolls one instead.
-    const main = Object.values(
-      WORLD_SCENARIOS['meteors-single'].source.files,
-    ).find(file => file.name === 'main.world')!.contents;
-    const rolled = Object.values(WORLD_SCENARIOS.meteors.source.files).find(
-      file => file.name === 'main.world',
-    )!.contents;
-
-    // The trait and property ids Physics declares, which is how an override
-    // names what it is overriding.
-    expect(main).toContain('Can_Move');
-    expect(main).toContain('velocity');
-    expect(main).not.toContain('math_random_int');
-    expect(rolled).toContain('math_random_int');
-  });
-
-  it('is the same game as the other meteors', () => {
-    const named = (tag: 'meteors' | 'meteors-single') =>
-      Object.values(WORLD_SCENARIOS[tag].source.files)
-        .map(file => file.name)
-        .filter(name => name.endsWith('.rule') || name.endsWith('.png'))
-        .sort();
-
-    expect(named('meteors-single')).toEqual(named('meteors'));
   });
 
   it('gives flappy a map bigger than the screen, and a camera to see it', () => {
@@ -586,94 +361,11 @@ describe('the scenario catalogue', () => {
     expect(bird).toContain('world_set_Gravity_GravityScaleProperty');
   });
 
-  it('says the single-world flappy without leaving main.world', () => {
-    const files = Object.values(WORLD_SCENARIOS['flappy-single'].source.files);
-    const worlds = files.filter(file => file.name.endsWith('.world'));
-
-    expect(worlds).toHaveLength(1);
-    expect(files.some(file => file.name.endsWith('.actor'))).toBe(false);
-    expect(files.some(file => file.name.endsWith('.map'))).toBe(false);
-
-    const main = worlds[0].contents;
-    expect(main).toContain('world_create_in_map');
-    expect(main).not.toContain('world_load_map');
-    // The camera is handed a WORLD-LOCAL bird here, which is the one block
-    // that reads the same as the file telling and means something narrower.
-    expect(main).toContain('world_set_CameraFollow_ActorToFollowProperty');
-    expect(main).toContain('"ACTOR":"local:flappyBirdDef"');
-  });
-
-  it('places flappy’s bird before the camera that follows it', () => {
-    // The trap this telling makes sharper: `any ⟨Bird⟩` is READ when the
-    // camera is wired, and an empty list is not an error. Wire it first and
-    // the game runs, the bird flies, and the view never moves — with nothing
-    // in the console to say why.
-    const main = Object.values(
-      WORLD_SCENARIOS['flappy-single'].source.files,
-    ).find(file => file.name === 'main.world')!.contents;
-
-    expect(main.indexOf('"id":"placeBird"')).toBeGreaterThan(-1);
-    expect(main.indexOf('"id":"placeBird"')).toBeLessThan(
-      main.indexOf('world_define_camera'),
-    );
-    // …and looking through it comes last of the three.
-    expect(main.indexOf('world_define_camera')).toBeLessThan(
-      main.indexOf('world_use_camera'),
-    );
-  });
-
-  it('is the same game as the other flappy', () => {
-    // The two differ in how the game is SAID, not in what it is made of.
-    const named = (tag: 'flappy' | 'flappy-single') =>
-      Object.values(WORLD_SCENARIOS[tag].source.files)
-        .map(file => file.name)
-        .filter(name => name.endsWith('.rule') || name.endsWith('.png'))
-        .sort();
-
-    expect(named('flappy-single')).toEqual(named('flappy'));
-
-    // …including the board, which is one board (FLAPPY_ACTORS) told twice.
-    const map = JSON.parse(
-      Object.values(WORLD_SCENARIOS.flappy.source.files).find(
-        file => file.name === 'flappy.map',
-      )!.contents,
-    ) as {actors: Array<{id: string; properties: object}>};
-
-    const main = Object.values(
-      WORLD_SCENARIOS['flappy-single'].source.files,
-    ).find(file => file.name === 'main.world')!.contents;
-    const said = (entry: {id: string; properties: object}) =>
-      `${entry.id} ${JSON.stringify(entry.properties)}`;
-    const placed = new Set(
-      [...main.matchAll(/"PLACEMENTS":(\[.*?\}\])(?=,"|\})/g)].flatMap(match =>
-        (JSON.parse(match[1]) as Array<{id: string; properties: object}>).map(
-          said,
-        ),
-      ),
-    );
-
-    expect(placed.size).toBe(map.actors.length);
-    for (const actor of map.actors) {
-      expect(placed).toContain(said(actor));
-    }
-  });
-
-  it('leaves the file list out of the scenarios with one file', () => {
-    // A sidebar listing eleven files argues with a scenario whose whole claim
-    // is that the game is said in `main.world` — and the first thing it
-    // invites is the click that leaves it. Paired with the assertion that the
-    // others keep it, because "hide the browser" applied to the starter would
-    // be a project whose actors cannot be opened at all.
-    const hides = (tag: WorldScenarioTag) =>
-      WORLD_SCENARIOS[tag].levelData?.showFileBrowser === false;
-
-    const single = WORLD_SCENARIO_TAGS.filter(tag => tag.endsWith('-single'));
-    expect(single.length).toBe(4);
-    for (const tag of single) {
-      expect(hides(tag)).toBe(true);
-    }
-    for (const tag of WORLD_SCENARIO_TAGS.filter(t => !t.endsWith('-single'))) {
-      expect(hides(tag)).toBe(false);
+  it('shows the file list in every scenario', () => {
+    // The single-world tellings hid it, and they are gone: every actor is a
+    // file, and a scenario is a project to look around in.
+    for (const tag of WORLD_SCENARIO_TAGS) {
+      expect(WORLD_SCENARIOS[tag].levelData?.showFileBrowser).not.toBe(false);
     }
   });
 

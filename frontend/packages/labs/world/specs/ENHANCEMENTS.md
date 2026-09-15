@@ -433,7 +433,7 @@ at all.
                                  to ⟨first actor of ⟨any ⟨Player⟩⟩⟩
 
 **Three rows and not one**, though the Crawler every platformer starts with is
-the first two applied to one actor (`fixtures/platformerSingle`). They are
+the first two applied to one actor (the starter, `constants`). They are
 separately wanted: a spike hurts without moving, a lift patrols without
 hurting, and a chaser does neither on a beat. Bundling them would make the
 common case one click and every other case a click plus an undo.

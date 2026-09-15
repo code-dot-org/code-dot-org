@@ -28,15 +28,11 @@ import {buildProject, DEFAULT_PROJECT, type ProjectSpec} from '../constants';
 import type {WorldLevelData} from '../levelData';
 
 import {BREAKOUT_SPEC} from './breakout';
-import {BREAKOUT_SINGLE_SPEC} from './breakoutSingle';
 import {FLAPPY_SPEC} from './flappy';
-import {FLAPPY_SINGLE_SPEC} from './flappySingle';
 import {interfaceKit} from './interfaceKit';
 import {JETPACK_SPEC} from './jetpack';
 import {METEORS_SPEC} from './meteors';
-import {METEORS_SINGLE_SPEC} from './meteorsSingle';
 import {NOVEL} from './novel';
-import {PLATFORMER_SINGLE_SPEC} from './platformerSingle';
 import {SOKOBAN} from './sokoban';
 import {TAPPER_PROJECT} from './tapper';
 
@@ -52,13 +48,9 @@ export const WORLD_SCENARIO_TAGS = [
   // that since before the catalogue existed; renaming it would break the links
   // people already have for the sake of a tidier list.
   'simple',
-  'platformer-single',
   'breakout',
-  'breakout-single',
   'meteors',
-  'meteors-single',
   'flappy',
-  'flappy-single',
   'jetpack',
   'tapper',
   'sokoban',
@@ -90,19 +82,6 @@ export interface WorldScenario {
    */
   levelData?: WorldLevelData;
 }
-
-/**
- * What a single-world scenario says: there is one file, so there is no file
- * browser.
- *
- * The claim those scenarios make is that the game is said entirely in
- * `main.world`, and a sidebar listing eleven other files argues with it — the
- * first thing it invites is the click that leaves the one file the scenario is
- * about. The files are still THERE and still compiled; what is gone is the
- * list. A rule is still reachable from the block that names it, which is the
- * way in that belongs to the lesson rather than beside it.
- */
-const ONE_FILE: WorldLevelData = {showFileBrowser: false};
 
 /**
  * An empty project: the folders and one world that does nothing.
@@ -168,28 +147,6 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- Try changing the player’s start position, gravity, or move speed — or ' +
       'make the ball collectible too, which is one row in `ball.actor`',
   },
-  'platformer-single': {
-    name: 'Platformer (single world)',
-    description:
-      'The starter with nothing outside main.world: the four actors are ' +
-      'defined in it, the board is `create in map`, and the player’s five ' +
-      'handlers are hats.',
-    source: buildProject(PLATFORMER_SINGLE_SPEC).source,
-    levelData: ONE_FILE,
-    instructions:
-      '## The starter, in one file\n\nThe same game as **Platformer**, said ' +
-      'entirely in `main.world`.\n\n' +
-      '- The four actors are `define actor` blocks in the world — no files, ' +
-      'no imports, and nothing else can reach them\n' +
-      '- The board is `create ⟨kind⟩ in map`, one block per kind: click the ' +
-      'arrangement to edit it\n' +
-      '- The player’s handlers are hats on `any ⟨Player⟩`, so they belong to ' +
-      'every player there will be — add a second one to the arrangement and ' +
-      'it jumps too\n' +
-      '- The rules, the animations and the pictures are still files — they ' +
-      'were never actors, so there was nothing to move. There is no file ' +
-      'list here, so open a rule from the ⟨open⟩ button on the block that names it',
-  },
   breakout: {
     name: 'Breakout',
     description:
@@ -204,22 +161,6 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- The room is open at the bottom: `when ⟨Ball⟩ leaves the map` is how ' +
       'it notices\n' +
       '- Try a bouncier ball, a wider paddle, or a third row of bricks',
-  },
-  'breakout-single': {
-    name: 'Breakout (single world)',
-    description:
-      'The same game with nothing outside main.world: the actors are defined ' +
-      'in it and the board is `create in map`. What a file buys, as a diff.',
-    source: buildProject(BREAKOUT_SINGLE_SPEC).source,
-    levelData: ONE_FILE,
-    instructions:
-      '## Breakout, in one file\n\nThe same game as **Breakout**, said ' +
-      'entirely in `main.world`.\n\n' +
-      '- The four actors are `define actor` blocks in the world — no files, ' +
-      'no imports, and nothing else can reach them\n' +
-      '- The board is `create ⟨kind⟩ in map`: click the arrangement to edit it\n' +
-      '- The ball\u2019s handlers are hats here, on `any ⟨Ball⟩`\n' +
-      '- Compare it with **Breakout** to see what moving a thing into a file buys',
   },
   meteors: {
     name: 'Meteors',
@@ -236,23 +177,6 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '`ship.actor`\n' +
       '- Everything wraps at the edges, which is what makes a small map a ' +
       'whole world',
-  },
-  'meteors-single': {
-    name: 'Meteors (single world)',
-    description:
-      'The same game with nothing outside main.world — including the handler ' +
-      'that spawns an energy ball, which is what breakout has no equivalent of.',
-    source: buildProject(METEORS_SINGLE_SPEC).source,
-    levelData: ONE_FILE,
-    instructions:
-      '## Meteors, in one file\n\nThe same game as **Meteors**, said ' +
-      'entirely in `main.world`.\n\n' +
-      '- The three actors are `define actor` blocks in the world\n' +
-      '- The rocks are `create ⟨Meteor⟩ in map`, and each one\u2019s heading ' +
-      'is written into the arrangement rather than rolled\n' +
-      '- The ship\u2019s handlers are hats on `any ⟨Ship⟩` — including the ' +
-      'one that spawns an energy ball\n' +
-      '- Compare it with **Meteors** to see what moving a thing into a file buys',
   },
   flappy: {
     name: 'Flappy',
@@ -274,24 +198,6 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'you fly on — there is no restart yet\n' +
       '- Try a wider gap, a heavier bird (`amount of gravity`), or a look ' +
       'offset on the camera so it shows more of what is coming',
-  },
-  'flappy-single': {
-    name: 'Flappy (single world)',
-    description:
-      'The same game with nothing outside main.world — including the camera, ' +
-      'which here is handed a bird no other file could name.',
-    source: buildProject(FLAPPY_SINGLE_SPEC).source,
-    levelData: ONE_FILE,
-    instructions:
-      '## Flappy, in one file\n\nThe same game as **Flappy**, said entirely ' +
-      'in `main.world`.\n\n' +
-      '- The three actors are `define actor` blocks in the world, and the ' +
-      'board is `create ⟨kind⟩ in map`, one block per kind\n' +
-      '- The camera is the interesting one: `set actor to follow` is handed a ' +
-      'WORLD-LOCAL bird, which nothing outside this file can name\n' +
-      '- It is wired **after** the bird is placed. Before it, `any ⟨Bird⟩` is ' +
-      'an empty list and the view never moves — and nothing says so\n' +
-      '- Compare it with **Flappy** to see what moving a thing into a file buys',
   },
   jetpack: {
     name: 'Jetpack',

@@ -144,7 +144,7 @@ Six steps.
    fires, so a shooting row is mostly the handler the rule refuses to write.
    Then grep `src/fixtures/` for the trait: a fixture that already wires it by
    hand is the patch you are about to write, tested by a scenario. `shoots`
-   is `meteorsSingle`'s ship, offered rather than copied.
+   is `meteors`'s ship, offered rather than copied.
 
 2. **Dump the palette.** Every block type and socket name you are about to
    write is generated, none of them is guessable, and a wrong one fails as

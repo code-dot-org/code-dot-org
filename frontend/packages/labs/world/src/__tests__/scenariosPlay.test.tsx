@@ -124,27 +124,24 @@ describe.each(WORLD_SCENARIO_TAGS)('the %s scenario', tag => {
  * kind and a reference across two of them names nothing), and only one of them
  * worked.
  */
-describe.each(['simple', 'platformer-single'] as const)(
-  'the %s platformer',
-  tag => {
-    it('points its health bar at somebody', async () => {
-      const {world} = await built(tag);
-      const bars = [...world.actors].filter(actor =>
-        actor.ownProperties().some(property => property.id === 'subject'),
-      );
+describe.each(['simple'] as const)('the %s platformer', tag => {
+  it('points its health bar at somebody', async () => {
+    const {world} = await built(tag);
+    const bars = [...world.actors].filter(actor =>
+      actor.ownProperties().some(property => property.id === 'subject'),
+    );
 
-      expect(bars.length, `${tag}: no health bar`).toBe(1);
-      for (const bar of bars) {
-        const subject = bar
-          .ownProperties()
-          .find(property => property.id === 'subject')!;
-        // A LIST, and empty when the bar is pointed at nobody — which is why
-        // this asks how long it is. `toBeTruthy` passed on the broken telling:
-        // an actor-typed slot holds an actor COLLECTION, and an empty array is
-        // an object.
-        const about = bar.get(subject) as unknown as {length: number};
-        expect(about.length, `${tag}: the bar is about nobody`).toBe(1);
-      }
-    });
-  },
-);
+    expect(bars.length, `${tag}: no health bar`).toBe(1);
+    for (const bar of bars) {
+      const subject = bar
+        .ownProperties()
+        .find(property => property.id === 'subject')!;
+      // A LIST, and empty when the bar is pointed at nobody — which is why
+      // this asks how long it is. `toBeTruthy` passed on the broken telling:
+      // an actor-typed slot holds an actor COLLECTION, and an empty array is
+      // an object.
+      const about = bar.get(subject) as unknown as {length: number};
+      expect(about.length, `${tag}: the bar is about nobody`).toBe(1);
+    }
+  });
+});

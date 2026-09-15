@@ -220,28 +220,6 @@ describe('the enhancement shelf', () => {
     });
   });
 
-  describe('on an actor a world defines for itself', () => {
-    // No file of its own: a `define actor` block among the world's roots. The
-    // single-world starter's Coin is the bland one, for the reason above.
-    const base = WORLD_SCENARIOS['platformer-single'].source;
-    const COIN = {
-      kind: 'actor' as const,
-      path: 'worlds/main',
-      block: 'platformerCoinDef',
-      name: 'Coin',
-    };
-
-    it('names only blocks that exist', () => {
-      const {missing, wroteNothing, skipped} = checkShelf(base, COIN);
-      expect(missing).toEqual([]);
-      expect(wroteNothing).toEqual([]);
-      // One row has a reason to step aside here and no more: typing out text
-      // refuses a world's own actor, because its declarations do not hoist
-      // out of a block scope (specs/ENHANCEMENTS.md).
-      expect(skipped).toEqual(['typesOutText']);
-    });
-  });
-
   describe('on a world', () => {
     const base = withActors('coin', 'player', 'ground');
     const WORLD = {
