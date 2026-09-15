@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
@@ -15,7 +14,6 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import RubricContent from './RubricContent';
 import {TAB_NAMES} from './rubricHelpers';
@@ -47,7 +45,6 @@ function RubricContainer({
   onLevelForEvaluation,
   reportingData,
   open,
-  closeRubric,
   sectionId,
   loadAllTeacherEvaluationData,
   loadAiEvalStatusForAll,
@@ -194,14 +191,6 @@ function RubricContainer({
     getTourStatus();
   }, [getTourStatus]);
 
-  const tourRestartHandler = () => {
-    tourRestarted.current = true;
-    updateTourStatus(true);
-    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_RESTARTED, {
-      ...(reportingData || {}),
-    });
-  };
-
   const onTourStart = stepIndex => {
     tourStep.current = stepIndex;
     if (tourRestarted.current) {
@@ -261,23 +250,6 @@ function RubricContainer({
     }
   };
 
-  const headerLeft = React.useMemo(
-    () =>
-      teacherHasEnabledAi ? (
-        <>
-          <img
-            src={aiBotOutlineIcon}
-            className={style.aiBotOutlineIcon}
-            alt={i18n.rubricAiHeaderText()}
-          />
-          <Typography variant="label2">{i18n.rubricAiHeaderText()}</Typography>
-        </>
-      ) : (
-        <Typography variant="label2">{i18n.rubric()}</Typography>
-      ),
-    [teacherHasEnabledAi]
-  );
-
   return (
     // Dragging (and the session-storage-persisted x/y offset it reads on
     // mount) is a floating-panel concept that doesn't apply once this
@@ -318,39 +290,6 @@ function RubricContainer({
             showStepNumbers: true,
           }}
         />
-        <div
-          className={classnames(style.rubricHeaderRedesign, 'ai-rubric-handle')}
-          // eslint-disable-next-line react/forbid-dom-props
-          data-testid="ai-rubric-handle-test-id"
-        >
-          <div className={style.rubricHeaderLeftSide}>{headerLeft}</div>
-          <div className={style.rubricHeaderRightSide}>
-            {canProvideFeedback && teacherHasEnabledAi && (
-              <MuiIconButton
-                id="ui-restart-product-tour"
-                aria-label="restart product tour"
-                type="button"
-                variant="text"
-                color="white"
-                onClick={tourRestartHandler}
-                className={classnames(style.buttonStyle, style.closeButton)}
-              >
-                <FontAwesomeV6Icon iconName="circle-question" />
-              </MuiIconButton>
-            )}
-            <MuiIconButton
-              type="button"
-              variant="text"
-              color="white"
-              aria-label={i18n.closeDialog()}
-              onClick={closeRubric}
-              className={classnames(style.buttonStyle, style.closeButton)}
-            >
-              <FontAwesomeV6Icon iconName="xmark" />
-            </MuiIconButton>
-          </div>
-        </div>
-
         <div id="tour-fab-bg" className={style.fabBackground}>
           <RubricTabButtons
             tabSelectCallback={tabSelectCallback}
@@ -424,7 +363,6 @@ RubricContainer.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
   onLevelForEvaluation: PropTypes.bool,
-  closeRubric: PropTypes.func,
   open: PropTypes.bool,
   sectionId: PropTypes.number,
   reloadOnStudentChange: PropTypes.bool,
