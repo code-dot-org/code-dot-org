@@ -13,7 +13,7 @@ import type {FieldConfig} from 'blockly/core';
 import {
   BlockImageField,
   CostumeField,
-  FIRST_CHARACTER_OPTION,
+  OLDEST_SPRITE_OPTION,
   refreshAnimationDropdownThumbnails,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields';
 
@@ -45,8 +45,8 @@ describe('image picker fields', () => {
     expect(CostumeField.fromJson({}).getValue()).toBe('"rival"');
   });
 
-  it('starts on the first character when the block asks for it', () => {
-    const config = {[FIRST_CHARACTER_OPTION]: true} as FieldConfig;
+  it('starts on the oldest sprite when the block asks for it', () => {
+    const config = {[OLDEST_SPRITE_OPTION]: true} as FieldConfig;
     const field = CostumeField.fromJson(config);
     expect(field.getValue()).toBe('"hero"');
   });

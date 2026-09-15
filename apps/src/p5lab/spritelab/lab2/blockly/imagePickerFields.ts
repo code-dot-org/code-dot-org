@@ -89,21 +89,21 @@ function animationOptions(kind: AnimationKind): [string, string][] {
   return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
-/** Costume field option: a fresh field starts on the student's first
-    character instead of the newest image. The player blocks set it: the
-    hero is the first character a student makes. */
-export const FIRST_CHARACTER_OPTION = 'firstCharacter';
+/** Costume field option: a fresh field starts on the oldest sprite in the
+    project instead of the newest image. The player blocks set it: the hero
+    is the first sprite a student makes. */
+export const OLDEST_SPRITE_OPTION = 'oldestSprite';
 
 /** A block definition's costume field argument. */
-export function costumeFieldArg(name: string, {firstCharacter = false} = {}) {
+export function costumeFieldArg(name: string, {oldestSprite = false} = {}) {
   const arg = {type: FIELD_COSTUME_TYPE, name};
-  return firstCharacter ? {...arg, [FIRST_CHARACTER_OPTION]: true} : arg;
+  return oldestSprite ? {...arg, [OLDEST_SPRITE_OPTION]: true} : arg;
 }
 
 function animationDropdown(
   kind: AnimationKind,
   Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown,
-  firstCharacter = false
+  oldestSprite = false
 ): CdoFieldAnimationDropdown {
   const field = new Ctor(
     () => animationOptions(kind),
@@ -112,9 +112,9 @@ function animationDropdown(
     MAKE_IMAGE_BUTTONS
   );
   // A fresh field takes the first option, the newest image. The list is
-  // newest-first, so the first character is the last option. A saved
-  // block's value replaces this.
-  if (firstCharacter) {
+  // newest-first, so the oldest sprite is the last option. A saved block's
+  // value replaces this.
+  if (oldestSprite) {
     const options = field.getOptions(false);
     field.setValue(options[options.length - 1][1]);
   }
@@ -150,7 +150,7 @@ export class CostumeField extends CdoFieldAnimationDropdown {
     return animationDropdown(
       'costume',
       CostumeField,
-      !!(options as Record<string, unknown>)[FIRST_CHARACTER_OPTION]
+      !!(options as Record<string, unknown>)[OLDEST_SPRITE_OPTION]
     );
   }
 }

@@ -25,7 +25,7 @@ const twoOfEach = animations([
   ['k4', 'newBlock', ['blocks']],
   ['k3', 'oldBlock', ['blocks']],
   ['k2', 'secondCharacter', []],
-  ['k1', 'firstCharacter', []],
+  ['k1', 'oldestSprite', []],
 ]);
 
 function worldWith(placements: [row: number, col: number, cell: WorldCell][]) {
@@ -48,7 +48,7 @@ describe('patternCells', () => {
   it('takes the newest block and the first character', () => {
     expect(patternCells(twoOfEach)).toEqual({
       B: {image: 'newBlock', kind: 'block'},
-      S: {image: 'firstCharacter', kind: 'sprite'},
+      S: {image: 'oldestSprite', kind: 'sprite'},
     });
   });
 
@@ -72,7 +72,7 @@ describe('paintPattern', () => {
   it('anchors a short pattern to the playfield floor', () => {
     const painted = paintPattern(createEmptyWorld(10), ['S.', 'BB'], cells);
     expect(occupied(painted as World)).toEqual([
-      '8,0:firstCharacter',
+      '8,0:oldestSprite',
       '9,0:newBlock',
       '9,1:newBlock',
     ]);
@@ -80,14 +80,14 @@ describe('paintPattern', () => {
 
   it('seeds a world that does not exist yet', () => {
     expect(occupied(paintPattern(undefined, ['S'], cells) as World)).toEqual([
-      '9,0:firstCharacter',
+      '9,0:oldestSprite',
     ]);
   });
 
   it('leaves a kind alone once the world holds any of it', () => {
     const placed = worldWith([[0, 0, {image: 'ownBlock', kind: 'block'}]]);
     const painted = paintPattern(placed, ['SB'], cells) as World;
-    expect(occupied(painted)).toEqual(['0,0:ownBlock', '9,0:firstCharacter']);
+    expect(occupied(painted)).toEqual(['0,0:ownBlock', '9,0:oldestSprite']);
   });
 
   it('never overwrites an occupied cell', () => {

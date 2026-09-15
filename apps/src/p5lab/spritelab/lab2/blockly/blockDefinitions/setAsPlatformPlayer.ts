@@ -12,7 +12,7 @@ import {costumeFieldArg} from '../imagePickerFields';
 const definition: BlockJson = {
   type: 'spritelab2_setAsPlatformPlayer',
   message0: 'set %1 as player',
-  args0: [costumeFieldArg('ANIMATION_NAME', {firstCharacter: true})],
+  args0: [costumeFieldArg('ANIMATION_NAME', {oldestSprite: true})],
   previousStatement: null,
   nextStatement: null,
   style: BlockStyles.SPRITE,
