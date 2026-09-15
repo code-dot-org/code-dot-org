@@ -7,6 +7,7 @@
  * Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
  */
 
+import {AdaptiveEntryPoint} from '@cdo/apps/adaptive/entrypoint';
 import {AIChatEntryPoint} from '@cdo/apps/aichatLab/entrypoint';
 import {AilabEntryPoint} from '@cdo/apps/ailab/lab2/entrypoint';
 import {BubbleChoiceEntryPoint} from '@cdo/apps/bubbleChoice/entrypoint';
@@ -23,6 +24,7 @@ import {StandaloneVideoEntryPoint} from '@cdo/apps/standaloneVideo/entrypoint';
 import {Weblab2EntryPoint} from '@cdo/apps/weblab2/entrypoint';
 
 export const lab2EntryPoints = {
+  adaptive: AdaptiveEntryPoint,
   aichat: AIChatEntryPoint,
   ailab: AilabEntryPoint,
   bubble_choice: BubbleChoiceEntryPoint,
