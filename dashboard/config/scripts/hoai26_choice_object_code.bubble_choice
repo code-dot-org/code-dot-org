@@ -5,7 +5,7 @@ uses_lab2
 
 sublevels
 level 'HoAI26-Playtest1-ObjectSprite'
-level 'HoAI26-Playtest1-Story-ObjectSprite'
+level 'HoAI26-Playtest1-Story-SimpleCode3'
 
 
 navigation_type 'next_sublevel'

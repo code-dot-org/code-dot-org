@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_1_1",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "In \"The dog barked at the ___,\" why is AI more likely to complete the sentence with \"squirrel\" than \"my aunt Lucy\"?",
+  "solution": [
+    {"option": "AI knows what dogs usually bark at in real life.", "correct": false},
+    {"option": "\"Squirrel\" appears near \"barked at\" more often in the text AI has seen.", "correct": true},
+    {"option": "AI was programmed with a list of correct answers.", "correct": false},
+    {"option": "\"Squirrel\" is a shorter word, so it's easier to generate.", "correct": false}
+  ],
+  "objective_keys": [
+    "37720a96-51be-4114-8c86-cb55f0d9b70a"
+  ]
+}

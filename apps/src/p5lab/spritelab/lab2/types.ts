@@ -31,6 +31,9 @@ export interface SerializedAnimationProps {
   // Pixel-editor recently-used colors, in first-seen order; absent until the
   // image is edited there.
   recentColors?: RGBA[];
+  // The stored image is already cropped to content (set at save time), so
+  // load-time trimming skips it.
+  trimmed?: boolean;
   // Present on AI-generated images.
   generation?: ImageGenerationMetadata;
   // Present on a character set: where each pose lives in the sheet

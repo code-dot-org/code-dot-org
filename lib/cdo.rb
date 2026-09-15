@@ -12,6 +12,7 @@ module Cdo
     include Singleton
 
     attr_accessor :execution_context
+    attr_writer :preforking_parent
 
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
@@ -35,6 +36,7 @@ module Cdo
 
     def initialize
       @execution_context = nil # Default context; may be overridden in puma.rb, active_job_backend.rb, bin/cronjob, etc.
+      @preforking_parent = false # Set by a process that preloads the app and then forks workers.
       super
       root = File.expand_path('..', __dir__)
       load_configuration(
@@ -330,6 +332,11 @@ module Cdo
     # timeouts are shorter when executing within a web application server.
     def running_web_application?
       execution_context == :web_application
+    end
+
+    # Whether this process preloads the application and will then fork worker processes, as puma does under preload_app!.
+    def preforking_parent?
+      !!@preforking_parent
     end
 
     # Whether we are executing within a web application server on the

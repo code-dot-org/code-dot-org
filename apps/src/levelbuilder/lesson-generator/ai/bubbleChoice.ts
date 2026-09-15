@@ -2,7 +2,10 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {LessonContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LessonContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getImageModel,
   getTextModel,
@@ -121,6 +124,7 @@ export async function generateBubbleChoiceLevel(
     '',
     'Sublevel members (in order):',
     memberListing,
+    ...authoringRulesLines(ctx),
     ...(ctx.unitOutline
       ? [
           '',

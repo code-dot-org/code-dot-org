@@ -1,6 +1,6 @@
 name 'HoAI26-Choice-How-AI-TrainingData-Panel'
 display_name 'Learn'
-description "Learn how AI makes images"
+description "Learn about AI images"
 uses_lab2
 
 sublevels

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-09 00:04:28 UTC",
+    "serialized_at": "2026-09-09 23:20:47 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -208,28 +208,6 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI26-Choice-Background"
-        ],
-        "lesson.key": "HoAI26 Playtest 1",
-        "lesson_group.key": "",
-        "script.name": "hoai-playtest-1",
-        "activity_section.key": "c0b94bb7-c63f-4908-9e05-b78d8bbf22e3"
-      },
-      "level_keys": [
-        "HoAI26-Choice-Background"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Progression "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
           "HoAI26-Choice-Background-Code"
         ],
         "lesson.key": "HoAI26 Playtest 1",
@@ -242,31 +220,9 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "progression": "Choice Progression "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HoAI26-Choice-How-AI-TrainingData-Panel"
-        ],
-        "lesson.key": "HoAI26 Playtest 1",
-        "lesson_group.key": "",
-        "script.name": "hoai-playtest-1",
-        "activity_section.key": "c0b94bb7-c63f-4908-9e05-b78d8bbf22e3"
-      },
-      "level_keys": [
-        "HoAI26-Choice-How-AI-TrainingData-Panel"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "progression": "Choice Progression "
@@ -283,6 +239,50 @@
       },
       "level_keys": [
         "HoAI26-Choice-Object-Code"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice Progression "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-Event-Code"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "c0b94bb7-c63f-4908-9e05-b78d8bbf22e3"
+      },
+      "level_keys": [
+        "HoAI26-Choice-Event-Code"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice Progression "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HoAI26-Choice-How-AI-TrainingData-Panel"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "c0b94bb7-c63f-4908-9e05-b78d8bbf22e3"
+      },
+      "level_keys": [
+        "HoAI26-Choice-How-AI-TrainingData-Panel"
       ]
     },
     {
@@ -371,18 +371,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI26-Choice-Background",
-        "script_level.level_keys": [
-          "HoAI26-Choice-Background"
-        ],
-        "lesson.key": "HoAI26 Playtest 1",
-        "lesson_group.key": "",
-        "script.name": "hoai-playtest-1",
-        "activity_section.key": "c0b94bb7-c63f-4908-9e05-b78d8bbf22e3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "HoAI26-Choice-Background-Code",
         "script_level.level_keys": [
           "HoAI26-Choice-Background-Code"
@@ -395,9 +383,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI26-Choice-How-AI-TrainingData-Panel",
+        "level.key": "HoAI26-Choice-Object-Code",
         "script_level.level_keys": [
-          "HoAI26-Choice-How-AI-TrainingData-Panel"
+          "HoAI26-Choice-Object-Code"
         ],
         "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "",
@@ -407,9 +395,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI26-Choice-Object-Code",
+        "level.key": "HoAI26-Choice-Event-Code",
         "script_level.level_keys": [
-          "HoAI26-Choice-Object-Code"
+          "HoAI26-Choice-Event-Code"
+        ],
+        "lesson.key": "HoAI26 Playtest 1",
+        "lesson_group.key": "",
+        "script.name": "hoai-playtest-1",
+        "activity_section.key": "c0b94bb7-c63f-4908-9e05-b78d8bbf22e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HoAI26-Choice-How-AI-TrainingData-Panel",
+        "script_level.level_keys": [
+          "HoAI26-Choice-How-AI-TrainingData-Panel"
         ],
         "lesson.key": "HoAI26 Playtest 1",
         "lesson_group.key": "",

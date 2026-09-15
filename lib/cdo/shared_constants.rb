@@ -21,6 +21,8 @@ module SharedConstants
   GLOBAL_EDITION_DEFAULT_REGION = Cdo::GlobalEdition::DEFAULT_REGION
   GLOBAL_EDITION_EXCLUDED_PATHS = Cdo::GlobalEdition::EXCLUDED_PATHS.to_a
 
+  STATSIG_STABLE_ID_KEY = 'statsig_stable_id'
+
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
     {
@@ -71,6 +73,7 @@ module SharedConstants
       email: 'email',
       google_classroom: 'google_classroom',
       clever: 'clever',
+      classlink: 'classlink',
       lti_v1: 'lti_v1',
     }
   )

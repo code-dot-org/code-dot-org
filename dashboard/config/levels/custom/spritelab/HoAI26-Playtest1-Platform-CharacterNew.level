@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-09-02T21:54:37.000Z",
   "level_num": "custom",
@@ -47,12 +48,22 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
-    "display_name": "Create a Game!",
-    "bubble_choice_description": "To get started, use your imagination and AI to create a player for your game",
-    "preload_asset_list": null
+    "display_name": "Create a player",
+    "bubble_choice_description": "##Get started creating a game!",
+    "guide_steps": [
+      {
+        "text": "# Create the player for your game\n\n1. Press **New Image**\n\n- To use AI, write a prompt that describes your character, then press **Generate**.\n- You can always make adjustments and draw your own!",
+        "showContinue": true
+      }
+    ],
+    "pinned_scene_id": "platform-scene",
+    "pinned_scene_name": "Platformer",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:54:37.897+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-character\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-character\"},{\"changed_at\":\"2026-09-02 22:11:54 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:23:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:37:36 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:56:51 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 19:55:23 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:37:33 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:38:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:54:37.897+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-spritelab-lab2-character\\\"\"],\"cloned_from\":\"hoai2026-dev-spritelab-lab2-character\"},{\"changed_at\":\"2026-09-02 22:11:54 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-02 22:23:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:37:36 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-03 01:56:51 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-04 19:55:23 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:37:33 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-08 16:38:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 19:10:38 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 19:26:32 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:56:41 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:57:48 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 20:59:13 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:32:20 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-09 21:32:23 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

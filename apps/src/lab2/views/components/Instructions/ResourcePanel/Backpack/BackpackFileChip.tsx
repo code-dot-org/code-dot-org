@@ -3,7 +3,6 @@ import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {ShowToast} from '@code-dot-org/component-library/toast';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Typography, IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useMemo} from 'react';
 
@@ -289,27 +288,22 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
             size="s"
           />
         ) : (
-          <WithTooltip
-            tooltipProps={{
-              text: addButtonTooltipText,
-              tooltipId: `${fileName}-add-button-tooltip${idSuffix}`,
-              direction: 'onTop',
-              size: 'xs',
-            }}
-          >
-            <div>
+          <Tooltip title={addButtonTooltipText} placement="top">
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
+            <div tabIndex={addButtonDisabled ? 0 : undefined}>
               <MuiIconButton
                 variant="outlined"
                 color="tertiary"
                 size="extraSmall"
                 onClick={handleAdd}
                 type="button"
+                aria-label={addButtonTooltipText}
                 disabled={addButtonDisabled}
               >
                 <FontAwesomeV6Icon iconName="plus" />
               </MuiIconButton>
             </div>
-          </WithTooltip>
+          </Tooltip>
         )}
         <ActionDropdown
           name={`backpack-options-${fileName}${idSuffix}`}

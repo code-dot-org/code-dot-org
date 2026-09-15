@@ -337,11 +337,6 @@
     flex-shrink: 1;
     flex-basis: 0;
     min-width: 0;
-
-    // Fix issue when tooltip is added to the tab that has too long label and tab becomes wider then needed
-    > div {
-      width: 100%;
-    }
   }
 
   li button[role='tab'] {

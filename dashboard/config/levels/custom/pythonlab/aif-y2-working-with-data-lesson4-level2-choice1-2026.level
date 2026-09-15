@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-09-07T16:25:56.000Z",
   "level_num": "custom",
   "user_id": 23870,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Is someone trying to steal your money?**\r\n\r\nPayment methods are rarely declined. One sign of fraud—such as a stolen credit card—is a lot of declined transactions. Use Python to analyze someone’s payment history for fraud.\r\n\r\n☑️ Do This:\r\n- Count the number of \"Approved\" and \"Declined\" purchases in the \"status\" column of `data.csv`.\r\n- Interpret the data: Is this payment method being used fraudulently? Be ready to share your thoughts on the next level.\r\n",
+    "long_instructions": "**Is someone trying to steal your money?**\r\n\r\nPayment methods are rarely declined: only about 5–10% of card transactions get declined.\r\n\r\nOne sign of fraud—such as a stolen credit card—is a lot of declined transactions. Use Python to analyze someone’s payment history for fraud.\r\n\r\n☑️ Do This:\r\n- Count the number of \"Approved\" and \"Declined\" purchases in the \"status\" column of `data.csv`.\r\n- Interpret the data: Is this payment method being used fraudulently? Be ready to share your thoughts on the next level.\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -53,7 +54,6 @@
     "thumbnail_url": "https://images.code.org/b55f2df366cfd78edacc490967ab7fb3-credit-cards.png",
     "bubble_choice_description": "Analyze transaction data for fraud."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-09-07 16:27:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:28:27 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:34:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:34:54 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:38:58 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:24 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:25 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:47:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-07 16:27:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:28:27 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:34:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:34:54 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:38:58 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:24 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:46:25 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 16:47:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-10 18:35:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
 }]]></config>
 </Pythonlab>
