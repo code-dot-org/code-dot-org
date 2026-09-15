@@ -8,9 +8,12 @@ jest.mock('@cdo/apps/p5lab/redux/animationList', () => ({
   animationSourceUrl: (key: string) => `url:${key}`,
 }));
 
+import type {FieldConfig} from 'blockly/core';
+
 import {
   BlockImageField,
   CostumeField,
+  FIRST_CHARACTER_OPTION,
   refreshAnimationDropdownThumbnails,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields';
 
@@ -38,8 +41,14 @@ describe('image picker fields', () => {
     ]);
   });
 
-  it('defaults a fresh costume field to the first character made', () => {
-    expect(CostumeField.fromJson({}).getValue()).toBe('"hero"');
+  it('defaults a fresh costume field to the newest sprite', () => {
+    expect(CostumeField.fromJson({}).getValue()).toBe('"rival"');
+  });
+
+  it('starts on the first character when the block asks for it', () => {
+    const config = {[FIRST_CHARACTER_OPTION]: true} as FieldConfig;
+    const field = CostumeField.fromJson(config);
+    expect(field.getValue()).toBe('"hero"');
   });
 
   it('defaults a fresh block field to the newest block', () => {

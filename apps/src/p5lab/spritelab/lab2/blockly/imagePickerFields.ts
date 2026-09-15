@@ -89,9 +89,21 @@ function animationOptions(kind: AnimationKind): [string, string][] {
   return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
+/** Costume field option: a fresh field starts on the student's first
+    character instead of the newest image. The player blocks set it: the
+    hero is the first character a student makes. */
+export const FIRST_CHARACTER_OPTION = 'firstCharacter';
+
+/** A block definition's costume field argument. */
+export function costumeFieldArg(name: string, {firstCharacter = false} = {}) {
+  const arg = {type: FIELD_COSTUME_TYPE, name};
+  return firstCharacter ? {...arg, [FIRST_CHARACTER_OPTION]: true} : arg;
+}
+
 function animationDropdown(
   kind: AnimationKind,
-  Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown
+  Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown,
+  firstCharacter = false
 ): CdoFieldAnimationDropdown {
   const field = new Ctor(
     () => animationOptions(kind),
@@ -99,10 +111,10 @@ function animationDropdown(
     THUMBNAIL_SIZE[kind],
     MAKE_IMAGE_BUTTONS
   );
-  // A fresh field takes the first option, the newest image. A fresh costume
-  // field takes the student's first character instead: the list is
-  // newest-first, so the last option. A saved block's value replaces this.
-  if (kind === 'costume') {
+  // A fresh field takes the first option, the newest image. The list is
+  // newest-first, so the first character is the last option. A saved
+  // block's value replaces this.
+  if (firstCharacter) {
     const options = field.getOptions(false);
     field.setValue(options[options.length - 1][1]);
   }
@@ -134,8 +146,12 @@ export function animationPicker(kind: AnimationKind) {
 // Registered field types (see setup.ts) so JSON block definitions get the
 // same dropdowns.
 export class CostumeField extends CdoFieldAnimationDropdown {
-  static fromJson(_options: BlocklyCore.FieldConfig) {
-    return animationDropdown('costume', CostumeField);
+  static fromJson(options: BlocklyCore.FieldConfig) {
+    return animationDropdown(
+      'costume',
+      CostumeField,
+      !!(options as Record<string, unknown>)[FIRST_CHARACTER_OPTION]
+    );
   }
 }
 
