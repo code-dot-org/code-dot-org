@@ -149,12 +149,35 @@ class AdminUsersController < ApplicationController
     set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
-      @user_scripts = UserScript.
-        where(user_id: @target_user.id).
-        order(updated_at: :desc).
-        limit(100).
-        offset(script_offset)
+      if @target_user.teacher?
+        @sections = @target_user.sections_instructed.includes(:students).order(:name)
+        all_student_ids = @sections.flat_map {|s| s.students.map(&:id)}.uniq
+        script_ids = UserScript.where(user_id: all_student_ids).distinct.pluck(:script_id)
+        @all_scripts = Unit.where(id: script_ids).order(:name)
+      else
+        @user_scripts = UserScript.
+          where(user_id: @target_user.id).
+          order(updated_at: :desc).
+          limit(100).
+          offset(script_offset)
+      end
     end
+  end
+
+  # POST /admin/bulk_delete_progress
+  # Stub: accepts student_ids[] and unit_ids[], to be wired to the in-progress
+  # progress deletion API once it lands.
+  def bulk_delete_progress
+    student_ids = Array(params[:student_ids]).map(&:to_i).select(&:positive?)
+    unit_ids = Array(params[:unit_ids]).map(&:to_i).select(&:positive?)
+
+    if student_ids.empty? || unit_ids.empty?
+      redirect_to user_progress_form_path, alert: 'Select at least one student and one unit.'
+      return
+    end
+
+    log_admin_action('bulk_delete_progress', nil, {student_ids: student_ids, unit_ids: unit_ids})
+    redirect_to user_progress_form_path, notice: "Queued progress reset for #{student_ids.length} #{'student'.pluralize(student_ids.length)} across #{unit_ids.length} #{'unit'.pluralize(unit_ids.length)}. (Deletion API pending.)"
   end
 
   # GET /admin/user_projects

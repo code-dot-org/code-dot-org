@@ -1,6 +1,8 @@
 %h1 User Progress
 
-%p This page allows an admin to view recent progress for a user and delete progress for all levels in a script. All times in UTC.
+%p
+  This page allows an admin to reset progress for one or more students across one or more units.
+  Search by student or teacher. Teacher accounts show sections and students for selection.
 
 :ruby
   def format_time(datetime)
@@ -12,7 +14,7 @@
   %button.btn{type: 'submit'}
     %i.fa-solid.fa-magnifying-glass
 
--if @target_user
+- if @target_user
   %h2 User information
   %table.table.table-hover.table-condensed
     %thead
@@ -31,28 +33,135 @@
         %td= format_time(@target_user.current_sign_in_at)
         %td= format_time(@target_user.created_at)
 
-  %h2 Scripts with most recent progress (sorted by updated_at, up to 100 shown)
-  %p Data represents rows from the user_scripts table
-  %table.table.table-hover.table-condensed
-    %thead
-      %th Id
-      %th Unit id
-      %th Unit name
-      %th Started at
-      %th Completed at
-      %th Assigned at
-      %th Last progress at
-      %th
-    %tbody
-      - @user_scripts.each do |user_script|
-        %tr
-          %td= user_script.id
-          %td= user_script.script_id
-          %td= user_script.script.name
-          %td= format_time(user_script.started_at)
-          %td= format_time(user_script.completed_at)
-          %td= format_time(user_script.assigned_at)
-          %td= format_time(user_script.last_progress_at)
-          %td= link_to 'Delete...', delete_progress_form_path(user_id: @target_user.id, script_id: user_script.script_id)
+  = form_tag url_for(action: 'bulk_delete_progress'), method: 'post', id: 'bulk-progress-form' do
+
+    - if @target_user.teacher?
+
+      %h2 Select Students
+      %p
+        Check students whose progress should be reset. Checking a section header selects all students in that section.
+
+      - if @sections.empty?
+        %p.text-muted This teacher has no sections.
+      - else
+        - @sections.each do |section|
+          .panel.panel-default{style: 'margin-bottom: 8px'}
+            .panel-heading{style: 'padding: 6px 10px'}
+              %label{style: 'margin: 0; font-weight: normal; cursor: pointer'}
+                = check_box_tag "section_select_#{section.id}", '1', false,
+                    class: 'section-select-all',
+                    data: {section_id: section.id},
+                    style: 'margin-right: 6px'
+                %strong= section.name
+                %span.text-muted &nbsp;(#{section.students.length} students)
+                %small
+                  &mdash;
+                  %a.toggle-section-link{href: '#', data: {section_id: section.id}}
+                    Show students
+            .section-students{id: "section-students-#{section.id}", style: 'display:none; padding: 6px 10px'}
+              - if section.students.empty?
+                %span.text-muted No students in this section.
+              - else
+                - section.students.each do |student|
+                  %label.checkbox{style: 'display: block; font-weight: normal; margin: 2px 0'}
+                    = check_box_tag 'student_ids[]', student.id, false,
+                        class: "student-checkbox section-students-#{section.id}"
+                    = "#{student.name}"
+                    %span.text-muted &nbsp;(ID: #{student.id})
+
+      %h2 Select Units
+      %p Select units to reset. All selected units will be reset for all selected students.
+
+      - if @all_scripts.empty?
+        %p.text-muted No units found for students in this teacher's sections.
+      - else
+        %table.table.table-hover.table-condensed
+          %thead
+            %th
+            %th Unit id
+            %th Unit name
+            %th Title
+          %tbody
+            - @all_scripts.each do |script|
+              %tr
+                %td= check_box_tag 'unit_ids[]', script.id, false
+                %td= script.id
+                %td= script.name
+                %td= script.localized_title
+
+    - else
+
+      = hidden_field_tag 'student_ids[]', @target_user.id
+
+      %h2 Scripts with most recent progress
+      %p
+        Data represents rows from the user_scripts table (sorted by updated_at, up to 100 shown).
+        Check units to include in the reset.
+      %table.table.table-hover.table-condensed
+        %thead
+          %th
+          %th Id
+          %th Unit id
+          %th Unit name
+          %th Started at
+          %th Completed at
+          %th Assigned at
+          %th Last progress at
+        %tbody
+          - @user_scripts.each do |user_script|
+            %tr
+              %td= check_box_tag 'unit_ids[]', user_script.script_id, false
+              %td= user_script.id
+              %td= user_script.script_id
+              %td= user_script.script.name
+              %td= format_time(user_script.started_at)
+              %td= format_time(user_script.completed_at)
+              %td= format_time(user_script.assigned_at)
+              %td= format_time(user_script.last_progress_at)
+
+    %p
+      %button.btn.btn-danger{
+        type: 'submit',
+        onclick: "return confirm('Reset progress for all selected students in all selected units? This cannot be undone.')"
+      }
+        Reset Selected Progress
+
+  :javascript
+    (function () {
+      // Toggle section student list visibility.
+      document.querySelectorAll('.toggle-section-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          var sectionId = this.dataset.sectionId;
+          var panel = document.getElementById('section-students-' + sectionId);
+          var hidden = panel.style.display === 'none';
+          panel.style.display = hidden ? '' : 'none';
+          this.textContent = hidden ? 'Hide students' : 'Show students';
+        });
+      });
+
+      // Section "select all" toggles every student checkbox in that section.
+      document.querySelectorAll('.section-select-all').forEach(function (cb) {
+        cb.addEventListener('change', function () {
+          var sectionId = this.dataset.sectionId;
+          document.querySelectorAll('.section-students-' + sectionId).forEach(function (studentCb) {
+            studentCb.checked = cb.checked;
+          });
+        });
+      });
+
+      // Uncheck section header if any individual student is unchecked.
+      document.querySelectorAll('.student-checkbox').forEach(function (studentCb) {
+        studentCb.addEventListener('change', function () {
+          var classes = Array.from(this.classList);
+          var sectionClass = classes.find(function (c) { return c.startsWith('section-students-'); });
+          if (!sectionClass) return;
+          var sectionId = sectionClass.replace('section-students-', '');
+          var allChecked = Array.from(document.querySelectorAll('.' + sectionClass)).every(function (c) { return c.checked; });
+          var sectionCb = document.querySelector('.section-select-all[data-section-id="' + sectionId + '"]');
+          if (sectionCb) sectionCb.checked = allChecked;
+        });
+      });
+    })();
 
 = render partial: 'home/admin'
