@@ -1,10 +1,9 @@
-// The enemy's gun — as edits, and then as a room with somebody in it to hit.
+// The enemy's gun — as edits, and then as a room where it fires unbidden.
 //
-// The row writes the same two blocks the player's does, answered the other
-// way: an `each frame` that asks to zap and a handler that aims. What reading
-// cannot tell is whether a shot actually leaves, and leaves toward the
-// target, so the second half places a shooter and a player and watches the
-// distance close.
+// The row writes the player's sending and its own asking: an `each frame`
+// that asks to zap and lets the recharge answer. What reading cannot tell is
+// whether a shot actually leaves, and keeps leaving at the rate, so the
+// second half places a shooter and watches.
 
 import {describe, expect, it} from 'vitest';
 
@@ -34,70 +33,57 @@ const at = (source: Source, path: string) => {
   return id ? source.files[id].contents : undefined;
 };
 
-const project = () => withActors('coin', 'player', 'ground');
-/** The Coin, turned into a turret aimed at the Player. */
-const armed = () => shootsAt.apply(project(), COIN, 'actors/player');
+/** A room's worth of actors, with the library's Shot to send. */
+const project = () => withActors('coin', 'player', 'ground', 'shot');
+/** The Coin, turned into a turret that sends Shots. */
+const armed = () => shootsAt.apply(project(), COIN, 'actors/shot');
 
-describe('the shoots-at row, as edits', () => {
-  it('writes the firing and the aiming, and brings the rule and the Shot', () => {
+describe('the shoots-whenever row, as edits', () => {
+  it('writes the firing and the sending, and the rules under both', () => {
     const after = armed();
     const coin = at(after, 'actors/coin.actor')!;
 
     expect(coin).toContain('Zapping#ZapsTrait');
+    expect(coin).not.toContain('Input#TakesKeyboardInputTrait');
     expect(coin).toContain('world_set_Zapping_RechargeTimeProperty');
+    expect(coin).toContain('world_trait_step');
     expect(coin).toContain('world_do_Zapping_MakeZapAction');
     expect(coin).toContain('world_on_Zapping_ZapsEvent');
-    expect(coin).toContain('world_for_each');
-    expect(coin).toContain('"ACTOR": "actors/player"');
     expect(coin).toContain('"ACTOR": "actors/shot"');
     expect(at(after, 'rules/zaps.rule')).toBeTruthy();
-    expect(at(after, 'actors/shot.actor')).toBeTruthy();
+    expect(at(after, 'rules/expires.rule')).toBeTruthy();
   });
 
-  it('names the aim and the shot, and declares both names', () => {
+  it('names the shot, and declares the name', () => {
     const coin = JSON.parse(at(armed(), 'actors/coin.actor')!) as {
       variables?: Array<{id: string}>;
     };
-    const declared = (coin.variables ?? []).map(one => one.id);
-    expect(declared).toContain('shootsAt_aim');
-    expect(declared).toContain('shootsAt_shot');
+    expect((coin.variables ?? []).map(one => one.id)).toContain('zapping_shot');
   });
 
   it('does nothing the second time', () => {
     const once = armed();
-    expect(shootsAt.applied(once, COIN, 'actors/player')).toBe(true);
+    expect(shootsAt.applied(once, COIN, 'actors/shot')).toBe(true);
     expect(
-      at(shootsAt.apply(once, COIN, 'actors/player'), 'actors/coin.actor'),
+      at(shootsAt.apply(once, COIN, 'actors/shot'), 'actors/coin.actor'),
     ).toBe(at(once, 'actors/coin.actor'));
   });
 
-  it('re-aims when asked again, rather than adding a second gun', () => {
+  it('sends something else when asked again, rather than adding a gun', () => {
     const again = shootsAt.apply(armed(), COIN, 'actors/ground');
     const coin = at(again, 'actors/coin.actor')!;
 
     expect(coin.match(/world_on_Zapping_ZapsEvent/g)).toHaveLength(1);
+    expect(coin.match(/world_trait_step/g)).toHaveLength(1);
     expect(coin).toContain('"ACTOR": "actors/ground"');
-    expect(coin).not.toContain('"ACTOR": "actors/player"');
-    expect(shootsAt.applied(again, COIN, 'actors/player')).toBe(false);
+    expect(shootsAt.applied(again, COIN, 'actors/shot')).toBe(false);
     expect(shootsAt.applied(again, COIN, 'actors/ground')).toBe(true);
   });
 
-  it('is not applied while nobody has said whom', () => {
+  it('is not applied while nobody has said what to send', () => {
     expect(shootsAt.applied(armed(), COIN)).toBe(false);
     const unasked = project();
     expect(shootsAt.apply(unasked, COIN)).toBe(unasked);
-  });
-
-  it('refuses the Shot itself', () => {
-    const source = withActors('shot');
-    expect(
-      shootsAt.refuse!(source, {
-        kind: 'actor',
-        path: 'actors/shot',
-        name: 'Shot',
-      }),
-    ).toMatch(/does not shoot/);
-    expect(shootsAt.refuse!(source, COIN)).toBeUndefined();
   });
 });
 
@@ -154,9 +140,6 @@ const roomOf = (
   };
 };
 
-/** How far a shot may have travelled in the first frames before it is read. */
-const SPEED_SLACK = 40;
-
 const play = (world: World, seconds: number, keys: string[] = []) => {
   for (let frame = 0; frame < Math.round(seconds * 60); frame++) {
     world.setInput(keys.map(keyName));
@@ -164,9 +147,10 @@ const play = (world: World, seconds: number, keys: string[] = []) => {
   }
 };
 
-describe('the shoots-at row, played', () => {
-  // The shooter floats at the left — a Coin has no gravity — and the player
-  // stands on a floor to the right, so a shot has somewhere to go.
+describe('the shoots-whenever row, played', () => {
+  // The shooter floats — a Coin has no gravity — with a floor and a player
+  // in the room for company, and shoots straight up, which is the way an
+  // actor that never turns is facing.
   const room = async (source: Source) =>
     (
       await compileProject(
@@ -174,7 +158,7 @@ describe('the shoots-at row, played', () => {
           roomOf(source, [
             ['actors/ground', 240, 300],
             ['actors/player', 240, 100],
-            ['actors/coin', 40, 150],
+            ['actors/coin', 40, 250],
           ]),
         ),
       )
@@ -182,28 +166,24 @@ describe('the shoots-at row, played', () => {
 
   const shots = (world: World) =>
     [...world.actors].filter(actor => actor.type === 'actors/shot');
-  const one = (world: World, type: string) =>
-    [...world.actors].find(actor => actor.type === type)!;
-  const distance = (world: World, shot: ReturnType<typeof one>) => {
-    const a = shot.get(PositionProperty);
-    const b = one(world, 'actors/player').get(PositionProperty);
-    return Math.hypot(a.x - b.x, a.y - b.y);
-  };
+  const coin = (world: World) =>
+    [...world.actors].find(actor => actor.type === 'actors/coin')!;
 
-  it('fires a shot at the player without being told to, and it closes in', async () => {
+  it('fires without being told to, and the shot leaves', async () => {
     const world = await room(armed());
     play(world, 0.1);
 
     const [shot] = shots(world);
     expect(shot).toBeDefined();
-    const coin = one(world, 'actors/coin');
     expect(
-      Math.abs(shot.get(PositionProperty).x - coin.get(PositionProperty).x),
-    ).toBeLessThan(SPEED_SLACK);
+      Math.abs(
+        shot.get(PositionProperty).x - coin(world).get(PositionProperty).x,
+      ),
+    ).toBeLessThan(1);
 
-    const before = distance(world, shot);
+    const from = shot.get(PositionProperty).y;
     play(world, 0.3);
-    expect(distance(world, shot)).toBeLessThan(before - 20);
+    expect(shot.get(PositionProperty).y).toBeLessThan(from);
   });
 
   it('fires again once it has recharged, and not before', async () => {
@@ -213,22 +193,6 @@ describe('the shoots-at row, played', () => {
 
     play(world, 1.2);
     expect(shots(world)).toHaveLength(2);
-  });
-
-  it('fires at nobody when there is nobody', async () => {
-    const world = (
-      await compileProject(
-        projectFiles(
-          roomOf(armed(), [
-            ['actors/ground', 240, 300],
-            ['actors/coin', 40, 150],
-          ]),
-        ),
-      )
-    ).world;
-    play(world, 0.5);
-
-    expect(shots(world)).toHaveLength(0);
   });
 
   it('does nothing at all without the row', async () => {

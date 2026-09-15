@@ -308,8 +308,9 @@ export const GROUPS: readonly EnhancementGroup[] = [
       // to its beat, and one that ignores the ground entirely.
       prowlsEnhancement,
       flapsEnhancement,
-      // …and the gun that is an enemy's rather than the player's: no key, a
-      // rate, and an aim. It asks whom, and sends the library's Shot.
+      // …and the gun that is an enemy's rather than the player's: no key,
+      // a rate. It asks what to send, as the player's does; turning toward
+      // somebody is a verb of its own, for a rule that does not exist yet.
       shootsAtEnhancement,
     ],
   },

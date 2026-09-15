@@ -449,48 +449,41 @@ otherwise have made seven copies of the same forty lines. The four that predate
 it still carry their own; moving them is a change to working files with no
 behavior in it and belongs in its own commit.
 
-## The enemy's gun: shooting at somebody
+## The enemy's gun: shooting whenever it can
 
     actors/<target>.actor    use trait ⟨Zapping#Zaps⟩
                              set recharge time of ⟨this actor⟩ to ⟨1.5⟩
                              each frame: make ⟨this actor⟩ zap
 
-                             when ⟨this actor⟩ zaps:
-                               for each actor ⟨aim⟩ in ⟨any ⟨target⟩⟩:
-                                 add actor ⟨Shot⟩ as ⟨shot⟩ do:
-                                   set position of ⟨shot⟩ to mine
-                                   set velocity of ⟨shot⟩ to ⟨4⟩ in direction
-                                     ⟨direction of ⟨where ⟨aim⟩ is⟩ − ⟨where I am⟩⟩
+                             when ⟨this actor⟩ zaps:   (the player's, shared)
+                               add actor ⟨the shot⟩ as ⟨shot⟩ do:
+                                 set position of ⟨shot⟩ to mine
+                                 set velocity of ⟨shot⟩ to ⟨0, -6⟩ turned by
+                                   my rotation
 
-    actors/shot.actor        (new) the stock Shot
-
-**The same two blocks as the player's gun, answered the other way.** Zapping
-asks for an asking and a sending (`rules/stock/zaps`). The player's row asks
-on a key and sends the way it faces; an enemy has no key and no facing worth
-trusting, so it asks every frame and lets the recharge say no, and it aims.
+**The player's gun with the key swapped for a rate.** Zapping asks for an
+asking and a sending (`rules/stock/zaps`). The player's row asks on a key; an
+enemy has no key, so this one asks every frame and lets the recharge say no.
 The rate an enemy fires at is therefore Zapping's own `recharge time`, set to
 a number in the actor's file — a timer would say the same thing in a second
-rule.
+rule. The sending is the player's, exported from that row rather than copied,
+so the two guns cannot fire differently.
 
-**A loop rather than `first actor of`.** There is usually one player and
-there may be none, and a shot aimed at nobody is a vector of nothing. Looping
-over `any ⟨target⟩` sends one shot per target and none when there is nobody,
-with no test for either case. Two players get shot at twice, which is what a
-turret would do.
+**It asks what to send, and nothing else.** The first cut asked whom to aim
+at instead, sent a stock Shot without asking, and aimed every shot with a
+loop over the target kind. That was two questions folded into one row by
+answering one of them in the library, and the shelf's rule is one question
+per row. Aiming is a different verb: a rule that turns an actor toward
+something is a row of its own, not built, and an enemy given both fires at
+whatever it was turned toward. Two rows a learner composes, which is what the
+shelf is for.
 
-**It sends the stock Shot and asks only whom.** The shelf asks one question
-per row, and of the two this row could ask — what to send, whom to aim at —
-what to send is the one with a good default. So the library has a Shot
-(`actors/stock/shot`): a small square that moves, collides, hurts and expires,
-brought the way the health row brings its bar and repaintable once it is in
-the project. Whom is the answer, and asked again it re-aims rather than adding
-a second hat, which is the hunt rows' reading.
-
-**It hurts, where the player's shot does not.** The player's row elects on
-whatever it is told to send only what a shot needs to fly and to be hit; what
-a hit means is the game's to say. An enemy's shot that did nothing would be a
-decoy, so the Shot deals damage — dealt by one actor and felt by another,
-which a player with no health walks through unharmed.
+**The library holds a Shot** (`actors/stock/shot`), a small square that
+moves, collides, hurts and expires, so a project that has no bullet yet has
+something to answer the question with. Once imported it is the learner's to
+repaint. It hurts where the player's chosen shot need not, because an enemy's
+shot that did nothing would be a decoy; damage is felt only by an actor with
+health.
 
 ## Falling, and something to land on
 
@@ -575,9 +568,9 @@ health` is
 - **A verb it did not have** — zaps, chases, is pushable, damages on touch.
   Collecting is built (above), and so now are chasing, damaging on touch and
   walking a beat (above) — the three an enemy is made of. Being pushable is
-  the same shape again. Shooting at somebody is built (above): the hunt shape
-  with the shot handler the control-scheme row already writes, fired on a
-  rate rather than a key.
+  the same shape again. Shooting whenever it can is built (above): the
+  control-scheme row's sending, fired on a rate rather than a key. Turning
+  toward somebody is not, and is the row that would make it aim.
 - **A control scheme** — the keys and the traits behind them, as one act.
   Walking and jumping is built (above); climbing with the arrows is built and
   was a rule before it; a top-down scheme and a driving one are the same shape

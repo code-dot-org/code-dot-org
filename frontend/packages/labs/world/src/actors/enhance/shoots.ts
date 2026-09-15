@@ -37,6 +37,11 @@
 // facing from what an actor happens to wear would be a rule this row does not
 // have; showing the arithmetic is one it does not need.
 //
+// THE SENDING HALF IS SHARED. An enemy's gun (`enhance/shootsAt`) asks to zap
+// on a rate rather than on a key and sends exactly this: the same hat, the
+// same shot, the same direction. The pieces it reuses are exported from here
+// rather than copied, so the two guns cannot fire differently.
+//
 // AND THE SHOT IS GIVEN WHAT A SHOT NEEDS: something to move with, something
 // to hit with, and an end. The last is not tidiness — a game that fires six a
 // second and removes none gets slower the longer it is played, which is a bug
@@ -51,12 +56,12 @@ import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, down, rootsOf, withVariable, type BlockJson} from './patch';
 
-const ZAPS = 'Zapping#ZapsTrait';
+export const ZAPS = 'Zapping#ZapsTrait';
 const KEYBOARD = 'Input#TakesKeyboardInputTrait';
 const SHOOTER_TRAITS = [ZAPS, KEYBOARD];
 
 /** What the shot must be able to do to be a shot at all. */
-const SHOT_TRAITS = [
+export const SHOT_TRAITS = [
   'Physics#CanMoveTrait',
   'Collisions#CanCollideTrait',
   'Expiry#ExpiresTrait',
@@ -64,15 +69,15 @@ const SHOT_TRAITS = [
 
 const FIRE_KEY = 'space';
 const PRESSES = 'world_on_Input_PressesEvent';
-const ZAPPED = 'world_on_Zapping_ZapsEvent';
-const MAKE_ZAP = 'world_do_Zapping_MakeZapAction';
-const ADD = 'world_add_actor';
+export const ZAPPED = 'world_on_Zapping_ZapsEvent';
+export const MAKE_ZAP = 'world_do_Zapping_MakeZapAction';
+export const ADD = 'world_add_actor';
 
 /** How fast a shot leaves, before it is turned to face the way the shooter is. */
 const SPEED = 6;
 
 /** The name the handler gives the shot it just placed. */
-const SHOT_VAR = {id: 'zapping_shot', name: 'shot', type: 'Actor'};
+export const SHOT_VAR = {id: 'zapping_shot', name: 'shot', type: 'Actor'};
 
 const shot = () => ({
   block: {type: 'variables_get_Actor', fields: {VAR: SHOT_VAR}},
@@ -95,7 +100,7 @@ const asking = (): BlockJson => ({
 });
 
 /** `when ⟨me⟩ zaps → add actor ⟨answer⟩ as ⟨shot⟩, place it and send it`. */
-const sending = (_target: EnhanceTarget, answer: string): BlockJson => ({
+export const sending = (_target: EnhanceTarget, answer: string): BlockJson => ({
   type: ZAPPED,
   next: {
     block: {
@@ -142,7 +147,7 @@ const sending = (_target: EnhanceTarget, answer: string): BlockJson => ({
 });
 
 /** Whether a root is one of the two hats this row writes, about this actor. */
-const isOurs =
+export const isOurs =
   (_target: EnhanceTarget, hat: string, holds: string) =>
   (block: BlockJson): boolean => {
     if (block.type !== hat) {
@@ -159,7 +164,10 @@ const isOurs =
   };
 
 /** What the zap handler currently sends, if the file holds one. */
-const sends = (contents: string, target: EnhanceTarget): string | undefined => {
+export const sends = (
+  contents: string,
+  target: EnhanceTarget,
+): string | undefined => {
   for (const root of rootsOf(contents)) {
     if (!isOurs(target, ZAPPED, ADD)(root)) {
       continue;
@@ -174,7 +182,7 @@ const sends = (contents: string, target: EnhanceTarget): string | undefined => {
 };
 
 /** Send something else instead, in place — asked again is a change of mind. */
-const resend = (
+export const resend = (
   contents: string,
   target: EnhanceTarget,
   answer: string,

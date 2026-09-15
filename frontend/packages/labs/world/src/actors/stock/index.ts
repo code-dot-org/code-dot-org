@@ -184,7 +184,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'shot',
     name: 'Shot',
     description:
-      'A small bright square that flies, hits, hurts, and disappears a few seconds later. What an enemy that shoots at somebody sends \u2014 repaint it, or give it a picture of your own.',
+      'A small bright square that flies, hits, hurts, and disappears a few seconds later. Something for a shooter to send \u2014 repaint it, or give it a picture of your own.',
     // The four things a shot is made of, one rule each: it moves, it can be
     // hit, it hurts what it hits, and it goes away. `Deals Damage` brings
     // `Can Collide` on its own account; naming both is what the file says.
