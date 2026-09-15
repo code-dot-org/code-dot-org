@@ -3,6 +3,7 @@ import * as Observability from '@code-dot-org/core/plugins/observability';
 import {type TurnstileEnforcementMode} from './enforcementMode';
 import {
   isTurnstileChallengeError,
+  isTurnstileDevToolsError,
   type TokenAcquisitionMode,
   type TurnstileFailureReason,
 } from './types';
@@ -13,8 +14,12 @@ const DURATION_METRIC = 'ai-gateway.turnstile.duration_ms';
 
 export const classifyTurnstileFailure = (
   error: unknown
-): TurnstileFailureReason =>
-  isTurnstileChallengeError(error) ? error.reason : 'unknown';
+): TurnstileFailureReason => {
+  if (isTurnstileChallengeError(error)) {
+    return error.reason;
+  }
+  return isTurnstileDevToolsError(error) ? 'devtools_breakpoints' : 'unknown';
+};
 
 interface TurnstileOutcome {
   /** Whether a caller was waiting on this challenge. */
@@ -60,9 +65,10 @@ export function recordTurnstileOutcome({
     // Under `monitor` a failed challenge is tolerated by design -- the request
     // proceeds without a token and the worker accepts it. Logging that at
     // error level would fill the error stream during exactly the phase we are
-    // deliberately measuring.
+    // deliberately measuring. A DevTools skip stays at warn under every mode:
+    // only staff ever see it, and it reports a local choice, not an incident.
     const log =
-      enforcementMode === 'monitor'
+      enforcementMode === 'monitor' || reason === 'devtools_breakpoints'
         ? Observability.logger.warn
         : Observability.logger.error;
 

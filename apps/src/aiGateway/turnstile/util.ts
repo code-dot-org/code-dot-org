@@ -50,13 +50,6 @@ export function turnstileHeaders(token: string | null): Record<string, string> {
   return token ? {'X-Turnstile-Token': token} : {};
 }
 
-// instanceof cannot be used across webpack chunk boundaries — the dynamic
-// import of getClientApi() produces a separate copy of the class object,
-// so instanceof always returns false for errors thrown inside that chunk.
-export function isTurnstileDevToolsError(error: Error): boolean {
-  return error.name === 'TurnstileDevToolsError';
-}
-
 // Errors are sampled far below 1.0 — metrics and logs are authoritative.
 export function turnstileErrorTags(
   error: unknown
@@ -106,6 +99,15 @@ export function turnstileUserMessage(error: unknown): string | undefined {
       return (
         "This feature isn't available in your browser. Try Chrome, Firefox, " +
         'Safari, or Edge.'
+      );
+
+    // Unreachable from the DevTools probe, which throws TurnstileDevToolsError
+    // and is answered by the caller's own branch. Present for a challenge error
+    // that ever carries the reason, and because every reason needs a message.
+    case 'devtools_breakpoints':
+      return (
+        'A security check cannot run while browser developer tools are open ' +
+        'with breakpoints active. Close developer tools and reload the page.'
       );
 
     case 'challenge_failed':
