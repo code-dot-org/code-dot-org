@@ -50,7 +50,7 @@ import {
   WorldPreviewManager,
   type ActorInfo,
 } from './sandbox/worldPreviewManager';
-import {thumbnailManifest} from './thumbnailManifest';
+import {manifestFiles, thumbnailManifest} from './thumbnailManifest';
 import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
 
 /**
@@ -522,8 +522,13 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       };
     }
     const entry = '__thumbnails__.js';
+    // With the maps stubbed, so a map edit is a cache hit rather than a
+    // compile (`manifestFiles`).
     const moduleUrl = await pair.compile.compile(
-      {...files, [entry]: thumbnailManifest(actorPaths, worldPath)},
+      {
+        ...manifestFiles(files),
+        [entry]: thumbnailManifest(actorPaths, worldPath),
+      },
       entry,
     );
     return pair.preview.thumbnails(moduleUrl, placements);

@@ -10,7 +10,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {thumbnailManifest} from '../thumbnailManifest';
+import {manifestFiles, thumbnailManifest} from '../thumbnailManifest';
 
 describe('thumbnailManifest', () => {
   it('imports the world and every actor module', () => {
@@ -43,5 +43,33 @@ describe('thumbnailManifest', () => {
       .replace(/^export default /gm, 'const theDefault = ')
       .replace(/^export \{[^}]*\};$/gm, '');
     expect(() => new Function(body)).not.toThrow();
+  });
+});
+
+describe('manifestFiles', () => {
+  it('replaces every map with an empty one and leaves the rest alone', () => {
+    // The compile is content-addressed: with the maps stubbed, a map edit
+    // leaves the manifest's bundle where it was and costs no esbuild.
+    const files = {
+      'worlds/main.world': '{"blocks":{}}',
+      'actors/label.actor': '{"blocks":{}}',
+      'maps/interface.map': '{"type":"map","actors":[{"type":"actors/label"}]}',
+    };
+    const stubbed = manifestFiles(files);
+    expect(Object.keys(stubbed).sort()).toEqual(Object.keys(files).sort());
+    expect(stubbed['worlds/main.world']).toBe(files['worlds/main.world']);
+    expect(stubbed['actors/label.actor']).toBe(files['actors/label.actor']);
+    expect(JSON.parse(stubbed['maps/interface.map'])).toEqual({
+      type: 'map',
+      actors: [],
+    });
+  });
+
+  it('gives two projects that differ only in a map the same files', () => {
+    const before = manifestFiles({'maps/a.map': '{"type":"map","actors":[]}'});
+    const after = manifestFiles({
+      'maps/a.map': '{"type":"map","actors":[{"type":"actors/coin"}]}',
+    });
+    expect(after).toEqual(before);
   });
 });

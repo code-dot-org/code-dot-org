@@ -38,6 +38,9 @@ import {
 } from './mapModel';
 import {MapStage} from './MapStage';
 
+/** How long after the last keystroke a placement's picture is asked for. */
+const PICTURE_DEBOUNCE_MS = 150;
+
 export const MapEditor = ({
   initialContents,
   isReadOnly,
@@ -111,6 +114,15 @@ export const MapEditor = ({
     actorIconImage(icons[path] ?? '') ?? thumbnails[path];
   // The picker template to PLACE; null is the stage's select mode.
   const [selected, setSelected] = useState<string | null>(null);
+  /**
+   * The document as it is being edited — a field half-typed — which the stage
+   * reports before committing it (`MapStage.onDocPreview`). Pictures are
+   * asked for against THIS, so the placement under edit is painted while the
+   * typing goes on rather than once the field is left; the committed `map` is
+   * still what is written back.
+   */
+  const [liveMap, setLiveMap] = useState<MapDoc | null>(null);
+  useEffect(() => setLiveMap(null), [map]);
 
   // `getActorInfo` is a fresh closure each render; hold it in a ref so the fetch
   // effect doesn't re-run every render.
@@ -147,9 +159,10 @@ export const MapEditor = ({
   // things, and drawing them all from the kind is three identical smudges
   // (specs/UI_ACTORS.md). Keyed by content, so a placement that changed nothing
   // is not re-rendered and two that match are rendered once.
+  const pictured = liveMap ?? map;
   const placements = useMemo(
     () =>
-      map.actors.flatMap(actor => {
+      pictured.actors.flatMap(actor => {
         // No key means the kind's own picture is the answer — nothing
         // overridden, or nothing but where it stands.
         const key = placementKey(actor.type, actor.properties);
@@ -157,7 +170,7 @@ export const MapEditor = ({
           ? [{key, type: actor.type, properties: actor.properties ?? {}}]
           : [];
       }),
-    [map],
+    [pictured],
   );
   // The effect depends on WHICH pictures are wanted, not on the array — the
   // array is fresh every time the document is touched, and a dragged actor
@@ -176,15 +189,22 @@ export const MapEditor = ({
     if (placements.every(request => thumbnails[request.key])) {
       return;
     }
+    // A breath after the last keystroke, so typing a word asks for one
+    // picture rather than one per letter. The compile behind the request is
+    // a cache hit for a map edit (`thumbnailManifest.manifestFiles`), so
+    // what is being rationed is the sandbox's paint and the round trip.
     let alive = true;
-    void infoFn.current(paths, worldPath, placements).then(info => {
-      if (alive) {
-        setThumbnails(prev => ({...prev, ...info.placements}));
-        setPlacementSizes(prev => ({...prev, ...info.placementSizes}));
-      }
-    });
+    const timer = window.setTimeout(() => {
+      void infoFn.current(paths, worldPath, placements).then(info => {
+        if (alive) {
+          setThumbnails(prev => ({...prev, ...info.placements}));
+          setPlacementSizes(prev => ({...prev, ...info.placementSizes}));
+        }
+      });
+    }, PICTURE_DEBOUNCE_MS);
     return () => {
       alive = false;
+      window.clearTimeout(timer);
     };
     // `wanted` stands in for `placements`, which is a fresh array every time
     // the document is touched — and a dragged actor touches it on every frame
@@ -284,6 +304,7 @@ export const MapEditor = ({
       <MapStage
         doc={map}
         onDocChange={commit}
+        onDocPreview={setLiveMap}
         placing={selected}
         thumbnails={thumbnails}
         schemas={schemas}

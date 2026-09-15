@@ -27,3 +27,29 @@ export function thumbnailManifest(
     `export default {world: W, actors: [${entries.join(', ')}]};\n`
   );
 }
+
+/** A map with nothing in it, as a module the manifest's world can import. */
+const EMPTY_MAP = JSON.stringify({type: 'map', actors: []});
+
+/**
+ * The project's files as the manifest compile should see them: every `.map`
+ * replaced by an empty one.
+ *
+ * The compile is content-addressed, so a bundle built from the same files is
+ * a cache hit and costs no esbuild at all. The manifest imports the world and
+ * the actors, and the world imports its maps — so an edit to a map changed
+ * the bundle, and every keystroke in the map editor's inspector paid for a
+ * whole compile to draw one placement. Nothing the sandbox draws from the
+ * manifest reads a map: the kinds come from the actor modules and the
+ * placements from the request. So the maps are stubbed, the import still
+ * resolves, and a map edit leaves the bundle where it was.
+ */
+export function manifestFiles(
+  files: Record<string, string>,
+): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const [path, contents] of Object.entries(files)) {
+    out[path] = path.endsWith('.map') ? EMPTY_MAP : contents;
+  }
+  return out;
+}

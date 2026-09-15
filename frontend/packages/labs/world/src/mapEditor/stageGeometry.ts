@@ -192,6 +192,44 @@ export const drawnSize = (
 ): {width: number; height: number} =>
   own ?? sizes?.[type] ?? {width: DRAW_SIZE, height: DRAW_SIZE};
 
+/** What a placement was last drawn as: its picture, and the size it had. */
+export interface Remembered<I> {
+  image: I;
+  size?: {width: number; height: number};
+}
+
+/**
+ * The picture to draw for a placement, while its own may be on the way.
+ *
+ * A placement's picture is keyed by its CONTENT, so the first keystroke in the
+ * inspector gives it a key nothing has painted yet — and drawing the kind's
+ * picture in the meantime made every edit flash to the default and snap back
+ * a second later. So the stage remembers, per placement id, the last picture
+ * it drew for that placement and keeps drawing it until the new one arrives.
+ *
+ * `own` is the picture for the placement's current key, if it has arrived:
+ * remembered and returned. Without one, the memory answers. A placement with
+ * NO key — nothing overridden, or nothing but where it stands — is its kind's
+ * picture and forgets what it had, so clearing a Label's words shows the
+ * kind's words rather than the last ones typed.
+ */
+export function rememberedPicture<I>(
+  memory: Map<string, Remembered<I>>,
+  id: string,
+  key: string | undefined,
+  own: Remembered<I> | undefined,
+): Remembered<I> | undefined {
+  if (!key) {
+    memory.delete(id);
+    return undefined;
+  }
+  if (own) {
+    memory.set(id, own);
+    return own;
+  }
+  return memory.get(id);
+}
+
 /** Sizes of particular placements, by `placementKey` — see `drawnSize`. */
 export type PlacementSizes =
   | Record<string, {width: number; height: number}>

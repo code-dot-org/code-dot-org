@@ -651,6 +651,27 @@ this document made that turned out to be about the game and not the editor:
   order now, reading the icons out of the files rather than the registry the
   Blockly editor fills, since a map may be the first tab opened.
 
+**And a fourth, once those were fixed: the right picture arrived a rebuild
+late.** A placement's picture is keyed by its content, so the first keystroke
+in the inspector gave it a key nothing had painted, and the stage drew the
+kind's picture until the sandbox answered — which it did only after a whole
+compile, because the manifest it draws from imports the world, the world
+imports its maps, and the compile is content-addressed. Two changes:
+
+- The stage remembers the last picture it drew for each placement and keeps
+  drawing it until the new one arrives (`stageGeometry.rememberedPicture`).
+- The manifest compile sees every `.map` as an empty one
+  (`thumbnailManifest.manifestFiles`). Nothing the sandbox draws from the
+  manifest reads a map, so a map edit is now a cache hit and a picture costs
+  the round trip and the paint. Which is cheap enough to ask for while
+  typing: the stage reports the document under edit and the editor asks a
+  breath after the last keystroke.
+
+What is not built is a picture that needs no sandbox at all — the actor drawn
+from its file, in the editor's own window, which `actors/preview` already does
+for the import dialog and could do here for a placement. That is the next
+step if a round trip while typing is not live enough.
+
 What remains true is the coarse thing: positions snap to tile centres unless
 Alt frees them, and a form is not laid out on a 32-pixel grid.
 

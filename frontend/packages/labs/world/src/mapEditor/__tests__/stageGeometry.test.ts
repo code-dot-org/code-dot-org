@@ -15,6 +15,8 @@ import {
   fitView,
   hitTest,
   placementSize,
+  rememberedPicture,
+  type Remembered,
   MAX_SCALE,
   MIN_HIT_SIZE,
   MIN_SCALE,
@@ -382,5 +384,62 @@ describe('nextSelection', () => {
 
   it('is nothing for an empty map', () => {
     expect(nextSelection([], null, 1)).toBeUndefined();
+  });
+});
+
+describe('rememberedPicture', () => {
+  // Pictures stand in for images here; the memory never looks inside one.
+  const memory = () => new Map<string, Remembered<string>>();
+  const picture = (image: string, width = 96): Remembered<string> => ({
+    image,
+    size: {width, height: 24},
+  });
+
+  it('draws the placement’s own picture, and keeps it', () => {
+    const seen = memory();
+    expect(rememberedPicture(seen, 'a', 'k1', picture('one'))).toEqual(
+      picture('one'),
+    );
+    expect(seen.get('a')).toEqual(picture('one'));
+  });
+
+  it('keeps drawing the last picture while a new key has none', () => {
+    // THE FLASH. The first keystroke gives the placement a key nothing has
+    // painted yet; drawing the kind's picture meanwhile made every edit
+    // revert to the default and snap back a second later.
+    const seen = memory();
+    rememberedPicture(seen, 'a', 'k1', picture('one'));
+    expect(rememberedPicture(seen, 'a', 'k2', undefined)).toEqual(
+      picture('one'),
+    );
+  });
+
+  it('takes the new picture the moment it arrives', () => {
+    const seen = memory();
+    rememberedPicture(seen, 'a', 'k1', picture('one'));
+    rememberedPicture(seen, 'a', 'k2', undefined);
+    expect(rememberedPicture(seen, 'a', 'k2', picture('two', 200))).toEqual(
+      picture('two', 200),
+    );
+    expect(seen.get('a')).toEqual(picture('two', 200));
+  });
+
+  it('is the kind’s picture, and forgets, for a placement with no key', () => {
+    // Clearing a Label's words leaves it overriding nothing, and it should
+    // show the kind's words rather than the last ones typed.
+    const seen = memory();
+    rememberedPicture(seen, 'a', 'k1', picture('one'));
+    expect(rememberedPicture(seen, 'a', undefined, undefined)).toBeUndefined();
+    expect(seen.has('a')).toBe(false);
+  });
+
+  it('has nothing for a placement it has never drawn', () => {
+    expect(rememberedPicture(memory(), 'a', 'k1', undefined)).toBeUndefined();
+  });
+
+  it('remembers per placement, not per kind', () => {
+    const seen = memory();
+    rememberedPicture(seen, 'a', 'k1', picture('one'));
+    expect(rememberedPicture(seen, 'b', 'k2', undefined)).toBeUndefined();
   });
 });

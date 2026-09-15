@@ -65,6 +65,8 @@ import {
   snapToTile,
   steppedBy,
   zoomToward,
+  rememberedPicture,
+  type Remembered,
 } from './stageGeometry';
 
 const OUTSIDE_BG = '#0b0b12'; // the space beyond the map
@@ -94,6 +96,12 @@ export interface MapStageProps {
   doc: MapDoc;
   /** Write back — every commit, so the caller decides what persisting means. */
   onDocChange: (next: MapDoc) => void;
+  /**
+   * The document as it is being edited, before it is committed — a field
+   * half-typed. So a picture of the placement under edit can be asked for
+   * while the typing goes on, rather than only once the field is left.
+   */
+  onDocPreview?: (next: MapDoc) => void;
   /** The actor type a click places; null is select mode. */
   placing: string | null;
   /** Sandbox-rendered thumbnails by type — what an actor is drawn as. */
@@ -147,6 +155,7 @@ export interface MapStageProps {
 export const MapStage = ({
   doc,
   onDocChange,
+  onDocPreview,
   placing,
   thumbnails,
   schemas,
@@ -165,6 +174,9 @@ export const MapStage = ({
   // draws. Read from the document, so resizing the map moves the border.
   const extent = extentOf(map);
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
+  // The last picture drawn for each placement, by id, for the frames between
+  // an edit and the sandbox's answer to it (`stageGeometry.rememberedPicture`).
+  const remembered = useRef(new Map<string, Remembered<HTMLImageElement>>());
   // The template to PLACE is the caller's (`placing`); when it is null we are in
   // select mode, where `selectedId` is the placed instance under edit.
   const selected = placing;
@@ -333,6 +345,7 @@ export const MapStage = ({
     };
     mapRef.current = next;
     setMap(next);
+    onDocPreview?.(next);
   };
 
   const deleteActor = (id: string) => {
@@ -1095,6 +1108,23 @@ export const MapStage = ({
     // The skew is a vertical shear about the center (y' = y + tan(skew)·x),
     // inserted after the translate so it matches the Phaser driver's
     // T(pos)·shear·R·S ordering.
+    /**
+     * What a placement is drawn as right now: its own picture once painted,
+     * the last one drawn for it while that is pending, or nothing — in which
+     * case the kind's picture is the answer.
+     */
+    const pictureOf = (
+      placement?: string,
+      id?: string,
+    ): Remembered<HTMLImageElement> | undefined => {
+      const own =
+        placement && images[placement]
+          ? {image: images[placement], size: placementSizes?.[placement]}
+          : undefined;
+      return id
+        ? rememberedPicture(remembered.current, id, placement, own)
+        : own;
+    };
     const drawSprite = (
       type: string,
       t: Transform,
@@ -1102,6 +1132,9 @@ export const MapStage = ({
       /** This placement's own picture, where it has one — three Labels on one
        *  map say three different things (specs/UI_ACTORS.md). */
       placement?: string,
+      /** Which placement, so the last picture drawn for it can stand in
+       *  while a fresh one is being painted. */
+      id?: string,
     ) => {
       ctx.save();
       ctx.globalAlpha = alpha;
@@ -1111,11 +1144,11 @@ export const MapStage = ({
       }
       ctx.rotate(t.rotation * DEG2RAD);
       ctx.scale(t.scale.x, t.scale.y);
-      const image = (placement && images[placement]) ?? images[type];
-      const box = sizeOf(type, placement);
+      const shown = pictureOf(placement, id);
+      const image = shown?.image ?? images[type];
       // Whether anything measured this: the placement itself, or its kind.
-      const measured =
-        (placement && placementSizes?.[placement]) ?? sizes?.[type];
+      const measured = shown?.size ?? sizes?.[type];
+      const box = measured ?? sizeOf(type);
       if (image) {
         // At the DECLARED size when there is one — the placement's own where
         // it was made a size, else its kind's — so a 64-by-8 bar is two tiles
@@ -1148,6 +1181,7 @@ export const MapStage = ({
       color: string,
       type: string,
       placement?: string,
+      id?: string,
     ) => {
       ctx.save();
       ctx.translate(t.pos.x, t.pos.y);
@@ -1157,7 +1191,9 @@ export const MapStage = ({
       ctx.rotate(t.rotation * DEG2RAD);
       // The size it is drawn at, so an outline hugs what is drawn rather than
       // the square everything used to be — and the same box the hit test uses.
-      const box = sizeOf(type, placement);
+      const box =
+        (id ? remembered.current.get(id)?.size : undefined) ??
+        sizeOf(type, placement);
       const hw = (box.width * Math.abs(t.scale.x)) / 2 + 3 / view.scale;
       const hh = (box.height * Math.abs(t.scale.y)) / 2 + 3 / view.scale;
       ctx.strokeStyle = color;
@@ -1215,7 +1251,7 @@ export const MapStage = ({
       }
       const t = transformOf(actor, scales?.[actor.type]);
       const key = placementKey(actor.type, actor.properties);
-      drawSprite(actor.type, t, 1, key);
+      drawSprite(actor.type, t, 1, key, actor.id);
       transformById.set(actor.id, t);
       keyById.set(actor.id, key);
       if (actor.id === selectedId) {
@@ -1240,6 +1276,7 @@ export const MapStage = ({
         picking ? REFERENCE : HOVER,
         hoveredType,
         hoveredKey,
+        hoveredId ?? undefined,
       );
     }
     // What the selected actor POINTS AT, before its own outline so that an
@@ -1259,12 +1296,19 @@ export const MapStage = ({
           REFERENCE,
           map.actors.find(one => one.id === link.targetId)?.type ?? '',
           keyById.get(link.targetId),
+          link.targetId,
         );
         strokeLink(selectedTransform.pos, target.pos, link.name);
       }
     }
     if (selectedTransform) {
-      strokeActorBox(selectedTransform, SELECT, selectedType, selectedKey);
+      strokeActorBox(
+        selectedTransform,
+        SELECT,
+        selectedType,
+        selectedKey,
+        selectedId ?? undefined,
+      );
     }
     if (selected && hover) {
       drawSprite(
