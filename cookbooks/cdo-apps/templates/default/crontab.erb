@@ -128,7 +128,8 @@
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
 
     # ActiveJob management tasks
-    cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
+    metrics_schedule = node.chef_environment == 'production' ? '*/1 * * * *' : '*/5 * * * *'
+    cronjob at:metrics_schedule, do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
     cronjob at:'30 * * * *', do:deploy_dir('bin', 'cron', 'archive_failed_jobs')
 
     # Refresh the Tutorials cache every hour (runs at the start of each hour, UTC)
