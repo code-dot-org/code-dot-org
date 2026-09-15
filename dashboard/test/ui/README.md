@@ -28,9 +28,9 @@ The UI tests run as part of our deployment during the Deploy To Test (DTT) via `
 | Safari + iPad + iPhone UI | SauceLabs | `macOS Safari`, `iPad Safari`, `iPhone Safari` (`browsers_device_farm.json`) |
 | Eyes | SauceLabs | `Windows Chrome` (Applitools visual diff, `@eyes`) |
 | Playwright | test machine | `chromium`, `firefox`, `webkit` (functional) |
-| Playwright Eyes | test machine | `chromium` (Applitools visual diff, `@visual`, warning only) |
+| Playwright Eyes | test machine | `chromium` (visual diffs) |
 
-Each Cucumber suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3. The Playwright suites upload their HTML reports to S3 and link them, and the Applitools batch, from Slack; see [frontend/packages/e2e-tests](../../../frontend/packages/e2e-tests/README.md).
+Each Cucumber suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3. Playwright reports are also uploaded to the test machine and to S3.
 
 ## Concurrency limits
 

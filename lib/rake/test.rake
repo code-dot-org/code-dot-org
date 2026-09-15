@@ -627,7 +627,7 @@ def dtt_playwright_eyes_env
     'VISUAL_PROVIDER' => 'applitools',
     'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key,
     'APPLITOOLS_BATCH_ID' => RakeUtils.git_revision,
-    'APPLITOOLS_BATCH_NAME' => 'DTT Playwright Eyes Tests',
+    'APPLITOOLS_BATCH_NAME' => 'DTT Playwright Visual Diff Tests',
     'APPLITOOLS_BRANCH' => GitUtils.current_branch,
   }
 end
@@ -657,7 +657,7 @@ def run_playwright_suite(suite, env: {})
   batch_url = applitools_batch_url(env.fetch('APPLITOOLS_BATCH_ID') {ENV.fetch('APPLITOOLS_BATCH_ID', nil)}) if suite == :eyes
   start_message = "Starting <b>dashboard</b> #{label} e2e tests against #{target_url}."
   start_message += %( The <a href="#{pending_report}">HTML report</a> publishes here when the run finishes.) if pending_report
-  start_message += %( Images land in <a href="#{batch_url}">this Applitools batch</a>.) if batch_url
+  start_message += %( Visual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url
   ChatClient.log start_message
 
   # system_with_chat_logging would hide the output. This method must not raise.
@@ -681,14 +681,14 @@ def run_playwright_suite(suite, env: {})
 
   rollup = "#{passed ? '✅' : '❌'} #{label}#{qualifier}: #{pass_fail_line}"
   rollup += %( <a href="#{report_url}">HTML report</a>.) if report_url
-  rollup += %( <a href="#{batch_url}">Applitools batch</a>.) if batch_url
+  rollup += %( <a href="#{batch_url}">Visual diffs</a>.) if batch_url
   PLAYWRIGHT_ROLLUP[suite] = rollup
 
   status = passed ? '<b>✅ PASSED</b>' : "<b>❌ FAILED</b>#{qualifier}"
   report = "#{label} e2e tests for <b>dashboard</b>: #{status}\n"
   report += pass_fail_line
   report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
-  report += %(\nReview diffs in <a href="#{batch_url}">the Applitools batch</a>.) if batch_url && !passed
+  report += %(\nVisual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url && !passed
   ChatClient.log report, color: (passed ? 'green' : 'red')
 
   passed
