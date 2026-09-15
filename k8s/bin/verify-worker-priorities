@@ -13,15 +13,18 @@ EXPECTED_FLAGS = {
   'low' => ['--min-priority', '10'],
 }.freeze
 
+# Stop verification at the first failed assertion.
 def check(condition, message)
   abort message unless condition
 end
 
+# Render worker overrides while retaining diagnostics for expected failures.
 def helm(values = {})
   args = values.flat_map {|key, value| ['--set-json', "activeJobWorker.#{key}=#{JSON.generate(value)}"]}
   Open3.capture3('helm', 'template', 'cdo', File.join(K8S_ROOT, 'helm'), '--set', 'RAILS_ENV=adhoc', *args)
 end
 
+# Locate the worker container in either renderer's multi-resource output.
 def worker_container(manifest)
   worker = YAML.load_stream(manifest).find do |doc|
     doc && doc['kind'] == 'Deployment' &&
@@ -30,6 +33,7 @@ def worker_container(manifest)
   worker&.dig('spec', 'template', 'spec', 'containers')&.find {|container| container['name'] == 'active-job-worker'}
 end
 
+# Require a successful Helm render with a worker container for positive cases.
 def render_worker(values = {})
   manifest, stderr, status = helm(values)
   check(status.success?, stderr)
@@ -38,11 +42,13 @@ def render_worker(values = {})
   container
 end
 
+# Verify invalid settings fail for the expected reason.
 def check_rejected(values, message)
   _, stderr, status = helm(values)
   check(!status.success? && stderr.include?(message), "expected rejection of #{values.inspect}: #{stderr}")
 end
 
+# Render an isolated priority overlay for comparison with the Helm worker.
 def kustomize_worker(mode, dir)
   FileUtils.cp(File.join(K8S_ROOT, 'kustomize/components/backend/active-job-worker-deployment.yaml'), File.join(dir, 'worker.yaml'))
   config = {
