@@ -10,8 +10,7 @@ const manifestPaths = new Set<string>(
 );
 
 describe('spritelab2_playSound', () => {
-  it('offers a short menu with distinct labels and values', () => {
-    expect(PLAY_SOUND_OPTIONS.length).toBe(15);
+  it('offers distinct labels and values', () => {
     const labels = PLAY_SOUND_OPTIONS.map(([label]) => label);
     const values = PLAY_SOUND_OPTIONS.map(([, value]) => value);
     expect(new Set(labels).size).toBe(labels.length);

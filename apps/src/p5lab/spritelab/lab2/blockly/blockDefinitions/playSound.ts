@@ -3,10 +3,7 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 export const PLAY_SOUND_BLOCK_TYPE = 'spritelab2_playSound';
 
-// A short list with broad appeal, drawn from the legacy sound library. The
-// legacy block offers all 1,582 sounds through a picker dialog; this one
-// trades that range for a menu a student can scan. Values are the same
-// sound:// URLs the legacy playSound command resolves.
+// Values are the sound:// URLs the playSound command resolves.
 export const PLAY_SOUND_OPTIONS: [string, string][] = [
   ['pop', 'sound://category_pop/bubble_pop_cluster_airy_1.mp3'],
   ['boing', 'sound://category_digital/boing_2.mp3'],
