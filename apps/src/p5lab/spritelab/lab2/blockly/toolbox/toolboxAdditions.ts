@@ -14,6 +14,7 @@ import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
+import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 
@@ -79,6 +80,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     types: [
       'gamelab_setBackgroundImageAs',
       PLAY_MUSIC_BLOCK_TYPE,
+      PLAY_SOUND_BLOCK_TYPE,
       'spritelab2_makePlatformBlocks',
       'spritelab2_makePlatformPlayer',
       'spritelab2_setAsPlatformPlayer',
@@ -100,6 +102,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     types: [
       'gamelab_setBackgroundImageAs',
       PLAY_MUSIC_BLOCK_TYPE,
+      PLAY_SOUND_BLOCK_TYPE,
       'gamelab_makeNewSpriteAnon',
       'gamelab_setProp',
       'gamelab_spriteSay',
