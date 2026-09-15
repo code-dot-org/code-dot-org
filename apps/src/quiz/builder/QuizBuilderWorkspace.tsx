@@ -27,15 +27,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     updateQuestion,
     removeQuestion,
   } = useQuizBuilderQuestions(levelId);
-  // Opens the just-created question straight into editing, since a create
-  // only ever seeds placeholder-but-valid content (see
-  // NEW_QUESTION_DEFAULTS in useQuizBuilderQuestions).
-  const [justCreatedId, setJustCreatedId] = useState<number | null>(null);
+  // Only one card is expanded at a time - opening one collapses whichever
+  // was open before it. A create opens the just-created question straight
+  // into editing.
+  const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const handleCreate = async () => {
     const id = await createQuestion();
     if (id !== undefined) {
-      setJustCreatedId(id);
+      setExpandedId(id);
     }
   };
 
@@ -53,7 +53,11 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           <li key={question.id}>
             <QuizQuestionCard
               question={question}
-              startExpanded={question.id === justCreatedId}
+              isExpanded={question.id === expandedId}
+              onExpandedChange={expanded =>
+                setExpandedId(expanded ? question.id : null)
+              }
+              error={question.id === expandedId ? error : null}
               onUpdate={updateQuestion}
               onRemove={removeQuestion}
             />
@@ -75,7 +79,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           </Typography>
         </header>
 
-        {error && (
+        {/* Once a card is expanded, its own footer shows this error instead - see error prop below. */}
+        {error && expandedId === null && (
           <Typography variant="body2" color="error" role="alert">
             {error}
           </Typography>
