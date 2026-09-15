@@ -1,28 +1,29 @@
 # Acceptable RGB values for the DSCO semantic tokens that paint progress
-# bubbles. The cdo brand theme resolves some tokens differently in the Light
-# vs Dark theme — Lab2 wraps its content in `<div data-theme="Dark">` so any
-# bubble shown inside a Lab2 page paints with the Dark-theme values. Legacy
-# SCSS was theme-agnostic, so the matcher just compared one hex; with DSCO
-# tokens it has to accept either resolution.
+# bubbles, as they resolve under the codeai-next brand (the default — see
+# lib/cdo/brand.rb). Tokens resolve differently in the Light vs
+# Dark theme — Lab2 wraps its content in `<div data-theme="Dark">` so any bubble
+# shown inside a Lab2 page paints with the Dark-theme values — so each status
+# lists Light first, then Dark where the two differ.
+#
+# These are literals, so they only hold for the current default brand: a
+# future default swap moves every one of them.
 #
 # Sources (frontend/packages/component-library-styles):
-#   primitiveColors.css                — raw hex values
-#   colors.css `:root`                 — Light cdo mapping
-#   colors.css `[data-theme='Dark']`   — Dark cdo mapping
+#   brandCodeAiNext.css        canonical CADS tokens, [data-brand='codeai-next']
+#   brandLegacyAliases.css     legacy token names mapped onto CADS values
 def color_strings(key)
   {
-    # --background-success-primary (success-50 in both themes) /
-    # --borders-success-primary (success-50 Light, success-40 Dark)
-    perfect: ['rgb(62, 163, 62)', 'rgb(102, 195, 101)'],
-    # --background-success-extra-light (success-10 Light, success-90 Dark)
-    passed: ['rgb(226, 246, 226)', 'rgb(31, 72, 32)'],
+    # --background-success-primary (sentiment-success-70 in both themes), which
+    # paints both the fill and the border of every success status —
+    # progressStyles.js draws those borders in the fill color, so there is no
+    # separate --borders-success-primary resolution to accept here.
+    perfect: ['rgb(37, 136, 48)'],
+    # --background-success-extra-light
+    passed: ['rgb(216, 255, 220)', 'rgb(0, 63, 37)'],
     # --background-neutral-primary (white Light, neutral-base-black Dark)
-    not_tried: ['rgb(255, 255, 255)', 'rgb(41, 47, 54)'],
-    # --borders-neutral-primary (gray-20 Light, gray-80 Dark)
-    lighter_gray: ['rgb(212, 218, 225)', 'rgb(105, 120, 138)'],
-    # --background-brand-purple-primary (purple-50 both themes) /
-    # --borders-brand-purple-primary (purple-50 Light, purple-40 Dark)
-    assessment: ['rgb(150, 87, 199)', 'rgb(168, 108, 216)']
+    not_tried: ['rgb(255, 255, 255)', 'rgb(18, 18, 18)'],
+    # --borders-neutral-primary
+    lighter_gray: ['rgb(211, 214, 218)', 'rgb(75, 82, 88)']
   }[key.to_sym]
 end
 
@@ -42,12 +43,20 @@ def verify_progress(selector, test_result)
   when 'not_tried'
     background_colors = color_strings('not_tried')
     border_colors = color_strings('lighter_gray')
+  # Assessment levels are no longer color-coded (they used to paint purple);
+  # they are denoted by a star instead, and take the same status colors as
+  # any other level.
   when 'perfect_assessment'
-    background_colors = color_strings('assessment')
-    border_colors = color_strings('assessment')
+    background_colors = color_strings('perfect')
+    border_colors = color_strings('perfect')
   when 'attempted_assessment'
     background_colors = color_strings('not_tried')
-    border_colors = color_strings('assessment')
+    border_colors = color_strings('perfect')
+  when 'attempted_assessment_dot'
+    # Small (dot) assessment bubbles drop status coloring until completed,
+    # so a started-but-not-completed one keeps the not_tried gray outline.
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('lighter_gray')
   end
 
   steps %{

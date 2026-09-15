@@ -131,10 +131,10 @@ describe('StudentRubricWidget', () => {
     expect(mockFetchJson).not.toHaveBeenCalled();
   });
 
-  it('renders error state when API call fails', async () => {
+  it('hides the widget when the API call fails', async () => {
     mockFetchJson.mockRejectedValue(new Error('Network error'));
 
-    render(
+    const {container} = render(
       <Provider store={mockStore}>
         <StudentRubricWidget
           lessonId={1}
@@ -144,18 +144,21 @@ describe('StudentRubricWidget', () => {
       </Provider>
     );
 
+    // Once the fetch settles with no rubric, the widget renders nothing at all.
     await waitFor(() => {
-      screen.getByText("This lesson doesn't have a rubric.");
+      expect(document.getElementById('uitest-spinner')).not.toBeInTheDocument();
     });
+    expect(screen.queryByText('Rubric')).not.toBeInTheDocument();
+    expect(container).toBeEmptyDOMElement();
   });
 
-  it('renders error state when no rubric data is found', async () => {
+  it('hides the widget when no rubric data is found', async () => {
     mockFetchJson.mockResolvedValue({
       value: {} as {rubricId: number; rubric: Rubric; levelId: number},
       response: new Response(),
     });
 
-    render(
+    const {container} = render(
       <Provider store={mockStore}>
         <StudentRubricWidget
           lessonId={1}
@@ -166,11 +169,13 @@ describe('StudentRubricWidget', () => {
     );
 
     await waitFor(() => {
-      screen.getByText("This lesson doesn't have a rubric.");
+      expect(document.getElementById('uitest-spinner')).not.toBeInTheDocument();
     });
+    expect(screen.queryByText('Rubric')).not.toBeInTheDocument();
+    expect(container).toBeEmptyDOMElement();
   });
 
-  it('renders "No rubric data available" when rubric has no learning goals', async () => {
+  it('hides the widget when the rubric has no learning goals', async () => {
     mockFetchJson.mockResolvedValue({
       value: {
         rubricId: 1,
@@ -183,7 +188,7 @@ describe('StudentRubricWidget', () => {
       response: new Response(),
     });
 
-    render(
+    const {container} = render(
       <Provider store={mockStore}>
         <StudentRubricWidget
           lessonId={1}
@@ -194,8 +199,10 @@ describe('StudentRubricWidget', () => {
     );
 
     await waitFor(() => {
-      screen.getByText("This lesson doesn't have a rubric.");
+      expect(document.getElementById('uitest-spinner')).not.toBeInTheDocument();
     });
+    expect(screen.queryByText('Rubric')).not.toBeInTheDocument();
+    expect(container).toBeEmptyDOMElement();
   });
 
   it('renders LearningGoals component when rubric data is loaded successfully', async () => {

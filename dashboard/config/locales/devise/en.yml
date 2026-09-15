@@ -19,7 +19,7 @@ en:
       unconfirmed: "You have to confirm your account before continuing."
     mailer:
       confirmation_instructions:
-        subject: "Code.org confirmation instructions"
+        subject: "CodeAI confirmation instructions"
       unlock_instructions:
         subject: "Unlock Instructions"
     omniauth_callbacks:

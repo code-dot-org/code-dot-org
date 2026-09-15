@@ -79,7 +79,7 @@ export default class CdoFieldParameter extends BlocklyCore.FieldVariable {
 
     // Find the parameter variable
     const variableName = this.getText();
-    const variable = workspace.getVariable(variableName);
+    const variable = workspace.getVariableMap().getVariable(variableName);
 
     if (variable) {
       // Find the index of the procedure parameter to delete
@@ -120,9 +120,9 @@ export default class CdoFieldParameter extends BlocklyCore.FieldVariable {
     const {definitionBlock, workspace} = this.findDefinitionBlockAndWorkspace();
 
     const variableName = this.getText();
-    const variable = workspace.getVariable(variableName);
+    const variable = workspace.getVariableMap().getVariable(variableName);
     if (variable) {
-      workspace.renameVariableById(variable.getId(), newName);
+      workspace.getVariableMap().renameVariable(variable, newName);
 
       const procedureModel = (
         definitionBlock as ProcedureBlock
@@ -180,7 +180,7 @@ export default class CdoFieldParameter extends BlocklyCore.FieldVariable {
 
     if (!definitionBlock) {
       const variableName = this.getText();
-      const variable = workspace.getVariable(variableName);
+      const variable = workspace.getVariableMap().getVariable(variableName);
 
       if (variable) {
         // Find the first block in the workspace that matches the expected type

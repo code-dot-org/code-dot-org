@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q1-2026'
+
+wrong 'Solve problems that a person could not solve'
+wrong 'Answer questions by following correct logical rules'
+right 'Answer questions in a way that sounds like a person answered them'
+wrong 'Solve problems more quickly than people would be able to solve them'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What would a computer need to do to pass the Turing test?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: What is Intelligence?
+MARKDOWN

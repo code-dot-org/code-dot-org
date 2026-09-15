@@ -1,0 +1,196 @@
+require 'test_helper'
+
+class SpriteLab2ControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+
+  FAKE_IP = '127.0.0.1'.freeze
+
+  setup do
+    @script = create(:script, :in_single_unit_course)
+    # A script that is not part of a unit group, the /s/allthethings shape.
+    @loose_script = create(:script)
+    @level = create(:spritelab, uses_lab2: 'true')
+
+    @teacher = create(:teacher)
+    @student = create(:student)
+    create(:follower, student_user: @student, user: @teacher)
+    @student_storage_id = create_storage_id_for_user(@student.id)
+
+    # Don't actually talk to S3 when running SourceBucket.new.
+    AWS::S3.stubs :create_client
+  end
+
+  test "finds a section-mate's project created inside a unit" do
+    stub_scenes channel_for(@student_storage_id, @script.id)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    scenes = JSON.parse(response.body)['scenes']
+    assert_equal 1, scenes.length
+    assert_equal 'story-scene', scenes.first['sceneId']
+    assert_equal 'Story', scenes.first['sceneName']
+    assert_equal @student.name, scenes.first['ownerName']
+  end
+
+  test 'refuses a request with no script id' do
+    stub_scenes channel_for(@student_storage_id, @script.id)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id}
+
+    assert_response :bad_request
+  end
+
+  test 'does not serve a project made through a different script' do
+    stub_scenes channel_for(@student_storage_id, @loose_script.id)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_empty JSON.parse(response.body)['scenes']
+  end
+
+  test 'serves only the channel for the script being played' do
+    wanted = channel_for(@student_storage_id, @script.id)
+    other = channel_for(@student_storage_id, @loose_script.id)
+    stub_scenes wanted, scene_id: 'wanted-scene'
+    stub_scenes other, scene_id: 'other-scene'
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    scenes = JSON.parse(response.body)['scenes']
+    assert_equal(['wanted-scene'], scenes.map {|scene| scene['sceneId']})
+  end
+
+  # Channels predating the script_id column, and projects made at
+  # /levels/[id], carry a null script id.
+  test 'does not serve a channel with no script' do
+    stub_scenes channel_for(@student_storage_id, nil)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_empty JSON.parse(response.body)['scenes']
+  end
+
+  test 'refuses a level from another lab' do
+    other_level = create(:applab)
+    stub_scenes channel_for(@student_storage_id, @script.id, level: other_level)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: other_level.id, script_id: @script.id}
+
+    assert_response :bad_request
+  end
+
+  test 'external_scenes serves the channel for this level and script' do
+    channel = channel_for(@student_storage_id, @script.id)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_equal 1, JSON.parse(response.body)['scenes'].length
+  end
+
+  test 'external_scenes refuses a channel from another script' do
+    channel = channel_for(@student_storage_id, @loose_script.id)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
+
+    assert_response :forbidden
+  end
+
+  test 'external_scenes refuses a request with no script id' do
+    channel = channel_for(@student_storage_id, @script.id)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id}
+
+    assert_response :bad_request
+  end
+
+  test 'external_scenes refuses a channel from another level' do
+    other_level = create(:spritelab, uses_lab2: 'true')
+    channel = channel_for(@student_storage_id, @script.id, level: other_level)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
+
+    assert_response :forbidden
+  end
+
+  test 'external_scenes refuses a channel owned by a non-section-mate' do
+    stranger = create(:student)
+    channel = channel_for(create_storage_id_for_user(stranger.id), @script.id)
+    stub_scenes channel
+
+    sign_in @teacher
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
+
+    assert_response :forbidden
+  end
+
+  test "does not list the caller's own project" do
+    stub_scenes channel_for(@student_storage_id, @script.id)
+
+    sign_in @student
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_empty JSON.parse(response.body)['scenes']
+  end
+
+  # Only the listing skips your own project; a block already pointing at your
+  # own channel still runs.
+  test "external_scenes serves the caller's own channel" do
+    channel = channel_for(@student_storage_id, @script.id)
+    stub_scenes channel
+
+    sign_in @student
+    get :external_scenes, params: {channel: channel, level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_equal 1, JSON.parse(response.body)['scenes'].length
+  end
+
+  test 'excludes someone who shares no section' do
+    stranger = create(:student)
+    stub_scenes channel_for(create_storage_id_for_user(stranger.id), @script.id)
+
+    sign_in @teacher
+    get :section_scenes, params: {level_id: @level.id, script_id: @script.id}
+
+    assert_response :success
+    assert_empty JSON.parse(response.body)['scenes']
+  end
+
+  private def channel_for(storage_id, script_id, level: nil)
+    ChannelToken.find_or_create_channel_token(
+      level || @level, FAKE_IP, storage_id, script_id
+    ).channel
+  end
+
+  private def stub_scenes(channel, scene_id: 'story-scene')
+    body = {scenes: [{id: scene_id, name: 'Story'}]}.to_json
+    SourceBucket.any_instance.stubs(:get).with(channel, 'main.json').returns(
+      {
+        status: 'FOUND',
+        body: StringIO.new(body),
+        version_id: 'fake-version-id',
+        last_modified: DateTime.now,
+      }
+    )
+  end
+end

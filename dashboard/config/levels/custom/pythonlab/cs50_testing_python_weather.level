@@ -17,7 +17,12 @@
     "widget_view": "false",
     "widget_view_allow_show_code": "false",
     "predict_settings": {
-      "isPredictLevel": false
+      "isPredictLevel": true,
+      "solution": "test solution markdown",
+      "questionType": "freeResponse",
+      "placeholderText": "test placeholder text",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
     },
     "display_name": "Visualizing Weather",
     "teacher_markdown": "Example instructions that will only be shown to authorized to teachers.",
@@ -46,8 +51,15 @@
         "0",
         "1"
       ]
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-26 18:05:09 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-26 18:16:06 +0000\",\"changed\":[\"long_instructions\",\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-26 18:20:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-26 19:09:25 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-04-06 19:56:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-04-10 15:57:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-26 18:05:09 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-26 18:16:06 +0000\",\"changed\":[\"long_instructions\",\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-26 18:20:20 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-26 19:09:25 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-04-06 19:56:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-04-10 15:57:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-04 03:32:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

@@ -4,7 +4,6 @@
 
 import authoredHints from './authoredHints';
 import blockly from './blockly';
-import feedback from './feedback';
 import instructions from './instructions';
 import instructionsDialog from './instructionsDialog';
 import layout from './layout';
@@ -21,7 +20,6 @@ module.exports = {
   instructions,
   instructionsDialog,
   watchedExpressions,
-  feedback,
   studioAppActivity,
   blockly,
 };

@@ -1,0 +1,74 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-30T16:38:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Visualize HBCU Enrollment Data\r\n\r\nUse the imported datasets to create two data visualizations about HBCU enrollment.\r\n\r\n### Line Chart\r\n\r\nUse `line_chart_data` from `HBCU_enrollment.csv` to create a line chart that:\r\n\r\n- Uses `Year` for the x-axis and `Total Enrollment` for the y-axis\r\n- Includes a meaningful title and axis labels\r\n- Displays when the program runs\r\n\r\n### Bar Chart\r\n\r\nUse `bar_chart_data` from `HBCU_bar.csv` to create a bar chart that:\r\n\r\n- Uses `Kind` for the x-axis and `Enrolled` for the y-axis\r\n- Includes a meaningful title and axis labels\r\n- Displays readable x-axis labels\r\n- Displays when the program runs\r\n\r\nRun the program and check that both charts display the correct data clearly.\r\n\r\n::: details [Not sure where to start?]\r\n\r\nUse AI Tutor to:\r\n\r\n- View examples using different data\r\n- Learn how a Matplotlib function works\r\n- Understand an error message\r\n\r\nThen use what you learn to write your own code.\r\n\r\n:::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\n\n# Import the datasets\nline_chart_data = pd.read_csv('HBCU_enrollment.csv')\nbar_chart_data = pd.read_csv('HBCU_bar.csv')\n\n# Import matplotlib.pyplot\n\n\n# Create a line chart\n\n\n# Create a bar chart",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "HBCU_enrollment.csv",
+          "contents": "id,Year,Total Enrollment,Males,Females,4-year,2-year,Total - Public,4-year - Public,2-year - Public,Total - Private,4-year - Private,2-year - Private\n1,1976.0,222613.0,104669.0,117944.0,206676.0,15937.0,156836.0,143528.0,13308.0,65777.0,63148.0,2629.0\n2,1980.0,233557.0,106387.0,127170.0,218009.0,15548.0,168217.0,155085.0,13132.0,65340.0,62924.0,2416.0\n3,1982.0,228371.0,104897.0,123474.0,212017.0,16354.0,165871.0,151472.0,14399.0,62500.0,60545.0,1955.0\n4,1984.0,227519.0,102823.0,124696.0,212844.0,14675.0,164116.0,151289.0,12827.0,63403.0,61555.0,1848.0\n5,1986.0,223275.0,97523.0,125752.0,207231.0,16044.0,162048.0,147631.0,14417.0,61227.0,59600.0,1627.0\n6,1988.0,239755.0,100561.0,139194.0,223250.0,16505.0,173672.0,158606.0,15066.0,66083.0,64644.0,1439.0\n7,1990.0,257152.0,105157.0,151995.0,240497.0,16655.0,187046.0,171969.0,15077.0,70106.0,68528.0,1578.0\n8,1991.0,269335.0,110442.0,158893.0,252093.0,17242.0,197847.0,182204.0,15643.0,71488.0,69889.0,1599.0\n9,1992.0,279541.0,114622.0,164919.0,261089.0,18452.0,204966.0,188143.0,16823.0,74575.0,72946.0,1629.0\n10,1993.0,282856.0,116397.0,166459.0,262430.0,20426.0,208197.0,189032.0,19165.0,74659.0,73398.0,1261.0\n11,1994.0,280071.0,114006.0,166065.0,259997.0,20074.0,206520.0,187735.0,18785.0,73551.0,72262.0,1289.0\n12,1995.0,278725.0,112637.0,166088.0,259409.0,19316.0,204726.0,186278.0,18448.0,73999.0,73131.0,868.0\n13,1996.0,273018.0,109498.0,163520.0,253654.0,19364.0,200569.0,182063.0,18506.0,72449.0,71591.0,858.0\n14,1997.0,269167.0,106865.0,162302.0,248860.0,20307.0,194674.0,175297.0,19377.0,74493.0,73563.0,930.0\n15,1998.0,273472.0,108752.0,164720.0,248931.0,24541.0,198603.0,174776.0,23827.0,74869.0,74155.0,714.0\n16,1999.0,274321.0,108301.0,166020.0,249156.0,25165.0,199826.0,175364.0,24462.0,74495.0,73792.0,703.0\n17,2000.0,275680.0,108164.0,167516.0,250710.0,24970.0,199725.0,175404.0,24321.0,75955.0,75306.0,649.0\n18,2001.0,289985.0,112874.0,177111.0,260547.0,29438.0,210083.0,181346.0,28737.0,79902.0,79201.0,701.0\n19,2002.0,299041.0,115466.0,183575.0,269020.0,30021.0,218433.0,189183.0,29250.0,80608.0,79837.0,771.0\n20,2003.0,306727.0,117795.0,188932.0,274326.0,32401.0,228096.0,196077.0,32019.0,78631.0,78249.0,382.0\n21,2004.0,308939.0,118129.0,190810.0,276136.0,32803.0,231179.0,198810.0,32369.0,77760.0,77326.0,434.0\n22,2005.0,311768.0,120023.0,191745.0,272666.0,39102.0,235875.0,197200.0,38675.0,75893.0,75466.0,427.0\n23,2006.0,308774.0,118865.0,189909.0,272770.0,36004.0,234505.0,198676.0,35829.0,74269.0,74094.0,175.0\n24,2007.0,306515.0,118640.0,187875.0,270915.0,35600.0,233807.0,198300.0,35507.0,72708.0,72615.0,93.0\n25,2008.0,313491.0,121873.0,191618.0,274568.0,38923.0,235824.0,197025.0,38799.0,77667.0,77543.0,124.0\n26,2009.0,322860.0,125728.0,197132.0,280133.0,42727.0,246595.0,204016.0,42579.0,76265.0,76117.0,148.0\n27,2010.0,326614.0,127437.0,199177.0,283099.0,43515.0,249146.0,205774.0,43372.0,77468.0,77325.0,143.0\n28,2011.0,323648.0,126160.0,197488.0,281150.0,42498.0,246685.0,204363.0,42322.0,76963.0,76787.0,176.0\n29,2012.0,312438.0,121719.0,190719.0,273033.0,39405.0,237782.0,198568.0,39214.0,74656.0,74465.0,191.0\n30,2013.0,303191.0,119299.0,183892.0,264454.0,38737.0,230325.0,191918.0,38407.0,72866.0,72536.0,330.0\n31,2014.0,294316.0,115837.0,178479.0,256936.0,37380.0,222876.0,185899.0,36977.0,71440.0,71037.0,403.0\n32,2015.0,293388.0,115825.0,177563.0,256379.0,37009.0,221360.0,184587.0,36773.0,72028.0,71792.0,236.0\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "HBCU_bar.csv",
+          "contents": ",Kind,Enrolled\n0,4-year - Public,184587.0\n1,2-year - Public,36773.0\n2,4-year - Private,71792.0\n3,2-year - Private,236.0",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "display_name": "HBCUs",
+    "teacher_markdown": "Remind students of the purpose of each library: pandas for data manipulation and matplotlib for plotting graphs.\r\n",
+    "bubble_choice_description": "Practice importing the necessary libraries and creating charts with HBCU enrollment datasets.",
+    "thumbnail_url": "https://images.code.org/222ff9d242402f7245524dd4bed7c19a-education.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "example",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\nhrsIN5syAYG3Y8lXQ1Ov2Dv0YmTbndjAx9T4vA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-30T16:38:05.834+00:00\",\"changed\":[\"cloned from \\\"datasciencewithpython-lesson5-level5a-v1-2026\\\"\"],\"cloned_from\":\"datasciencewithpython-lesson5-level5a-v1-2026\"},{\"changed_at\":\"2026-07-30 16:39:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 16:40:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 16:40:40 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 16:40:40 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 18:20:24 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

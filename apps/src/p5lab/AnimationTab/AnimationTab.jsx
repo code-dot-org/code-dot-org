@@ -143,6 +143,7 @@ const styles = {
     position: 'relative',
   },
   piskelEl: {
+    boxSizing: 'content-box',
     position: 'absolute',
     width: '100%',
     height: '100%',
@@ -150,6 +151,7 @@ const styles = {
   },
   emptyPiskelEl: {
     backgroundColor: 'var(--background-neutral-tertiary)',
+    boxSizing: 'content-box',
     position: 'absolute',
     width: '100%',
     height: '100%',

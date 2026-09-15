@@ -6,9 +6,10 @@ import type {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
+import {LINE_INTERACTION_WIDTH_PX} from '../constants';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {getEdgeLabel} from '../utils/elementLabel';
-import {isGroupedChildNode} from '../utils/grouping';
+import {getEdgeLabel, getNodeLabel} from '../utils/elementLabel';
+import {getLockedLineAnchorIds, isGroupedChildNode} from '../utils/grouping';
 
 import styles from '../components/react-flow-canvas.module.scss';
 
@@ -26,7 +27,7 @@ interface UseDisplayElementsOptions {
     event: React.MouseEvent,
     edge: SketchlabReactFlowEdge
   ) => void;
-  multiSelectedNodeIds: Set<string>;
+  multiSelectedNodeIds: ReadonlySet<string>;
 }
 
 export function useDisplayElements({
@@ -43,20 +44,7 @@ export function useDisplayElements({
   multiSelectedNodeIds,
 }: UseDisplayElementsOptions) {
   return useMemo(() => {
-    // Anchor endpoints of a locked edge inherit the lock so the user can't
-    // drag them around. Real-node endpoints have their own lock state.
-    const lockedLineAnchorIds = new Set<string>();
-    edges.forEach(edge => {
-      if (edge.data?.locked !== true) return;
-      const sourceNode = nodes.find(node => node.id === edge.source);
-      const targetNode = nodes.find(node => node.id === edge.target);
-      if (sourceNode?.type === 'lineAnchor') {
-        lockedLineAnchorIds.add(edge.source);
-      }
-      if (targetNode?.type === 'lineAnchor') {
-        lockedLineAnchorIds.add(edge.target);
-      }
-    });
+    const lockedLineAnchorIds = getLockedLineAnchorIds(nodes, edges);
 
     const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
       const isTabTarget =
@@ -125,10 +113,14 @@ export function useDisplayElements({
           deletable: !locked && !readOnly && !groupedChild && !grabMode,
           // Nodes are still connectable when locked, but not in read-only or grab mode
           connectable: !readOnly && !grabMode,
-          // Override React Flow's default "{type} node" aria-label on the
-          // wrapper div for line anchors so it reads as "Line endpoint" instead
-          // of "Line endpoint node".
-          ...(node.type === 'lineAnchor' && {ariaLabel: 'Line endpoint'}),
+          // React Flow names the focusable wrapper from node.ariaLabel and has
+          // no fallback of its own.
+          ariaLabel: [
+            node.type === 'lineAnchor' ? 'Line endpoint' : getNodeLabel(node),
+            locked ? 'locked' : undefined,
+          ]
+            .filter(Boolean)
+            .join(', '),
           className: classNames(
             isConnectSource && styles.connectSource,
             isAnchorForFocusedEdge && styles.lineAnchorOnFocusedEdge
@@ -159,16 +151,15 @@ export function useDisplayElements({
         return {
           ...edge,
           selected,
+          interactionWidth: LINE_INTERACTION_WIDTH_PX,
           deletable: !locked && !readOnly && !grabMode,
-          ariaLabel: getEdgeLabel(
-            edge,
-            nodeMap,
-            floatingLineIndex.get(edge.id)
-          ),
-          className: classNames(
-            styles.lineEdge,
-            isStandaloneLine && styles.standaloneLineEdge
-          ),
+          ariaLabel: [
+            getEdgeLabel(edge, nodeMap, floatingLineIndex.get(edge.id)),
+            locked ? 'locked' : undefined,
+          ]
+            .filter(Boolean)
+            .join(', '),
+          className: classNames(isStandaloneLine && styles.standaloneLineEdge),
           domAttributes: {
             ...domAttributes,
             ...(!readOnly && !locked

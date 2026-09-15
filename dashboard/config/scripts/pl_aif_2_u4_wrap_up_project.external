@@ -24,41 +24,31 @@ Throughout the unit, students practiced the same techniques they will apply in t
 
 Across the lessons, students progressively develop the skills they need to succeed:
  
-
 <div style="max-width:760px; margin:24px auto;">
 
-  <div style="width:520px; margin-left:175px; background:#f3f0ff; border:2px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
-    <strong>1.</strong> Write logic to <strong>filter and summarize data</strong>
-  </div>
-
-  <div style="width:520px; margin-left:140px; background:#f2fcf7; border:2px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
-    <strong>2.</strong> Use <strong>loops and array methods</strong> to display data
-  </div>
-
-  <div style="width:520px; margin-left:105px; background:#f7f8fa; border:2px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
-    <strong>3.</strong> Design <strong>clear labels, categories, and fallback values</strong>
-  </div>
-
-  <div style="width:520px; margin-left:70px; background:#f3f0ff; border:2px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
+  <div style="width:520px; margin-left:174px; background:#d5efff; border:0px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
     <strong>4.</strong> Make filtering <strong>transparent</strong> so users understand what they’re seeing
   </div>
 
-  <div style="width:520px; margin-left:35px; background:#f2fcf7; border:2px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
-    <strong>5.</strong> Consider who or what might be <strong>surfaced or hidden</strong> by design choices
+  <div style="width:520px; margin-left:116px; background:#f7f8fa; border:0px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
+    <strong>3.</strong> Design <strong>clear labels, categories, and fallback values</strong>
   </div>
 
-  <div style="width:520px; margin-left:0; background:#f7f8fa; border:2px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:24px; font-size:18px;">
-    <strong>6.</strong> Use AI as a <strong>scaffold</strong> while documenting decisions and refinements
+  <div style="width:520px; margin-left:58px; background:#ccf1d0; border:0px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:14px; font-size:18px;">
+    <strong>2.</strong> Use <strong>loops and array methods</strong> to display data
   </div>
 
-  
+  <div style="width:520px; margin-left:0px; background:#e4e2f8; border:0px solid #6b7280; border-radius:10px; padding:18px 22px; margin-bottom:24px; font-size:18px;">
+    <strong>1.</strong> Write logic to <strong>filter and summarize data</strong>
+  </div>
+
 </div>
 
 Each concept appears first in isolation, then comes together in the final dashboard.
  
 ---
 
-<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+<p style="font-size: 12pt; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ <strong>Optional: </strong>Open the <a href='https://studio.code.org/courses/ai-foundations-designing-and-building-with-ai-2026/units/4/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Project Lesson Plan</a> to review more details about the project when you're done with this module.
 </p>
 

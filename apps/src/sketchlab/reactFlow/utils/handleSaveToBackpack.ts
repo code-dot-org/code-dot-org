@@ -1,5 +1,8 @@
 import {type ReactFlowInstance} from '@xyflow/react';
 
+import {waitForShareFailureRefresh} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ShareFailure, ShareFailureType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   DialogControlInterface,
@@ -7,9 +10,44 @@ import {
   extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {getStore} from '@cdo/apps/redux';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
+
+export const SAVE_BLOCKED_TITLE = "This sketch can't be saved to your Backpack";
+
+const CONTACT_SUPPORT =
+  'If you think this is a mistake, contact support@code.org.';
+
+export const ABUSE_BLOCKED_MESSAGE =
+  'This sketch was flagged for content that violates our Terms of Service, ' +
+  'so it cannot be saved to your Backpack. If an image you added was ' +
+  'flagged, remove it from your sketch and try again. ' +
+  CONTACT_SUPPORT;
+
+const SHARE_FAILURE_REASONS: Record<ShareFailureType, string> = {
+  profanity: 'it may contain profanity',
+  email: 'it appears to contain an email address',
+  phone: 'it appears to contain a phone number',
+  address: 'it appears to contain a street address',
+};
+
+const SHARE_FAILURE_FALLBACK_REASON = 'it contains flagged content';
+
+export const getShareFailureMessage = (shareFailure: ShareFailure) => {
+  const reason =
+    SHARE_FAILURE_REASONS[shareFailure.type] ?? SHARE_FAILURE_FALLBACK_REASON;
+  const flaggedText = shareFailure.content
+    ? `Flagged text: "${shareFailure.content}". `
+    : '';
+  return (
+    `This sketch can't be saved to your Backpack because ${reason}. ` +
+    flaggedText +
+    'Remove the flagged text from your sketch and try again. ' +
+    CONTACT_SUPPORT
+  );
+};
 
 export const handleSaveToBackpack = async (
   reactFlow: ReactFlowInstance | null,
@@ -19,6 +57,30 @@ export const handleSaveToBackpack = async (
   errorCallback: (error: string) => void
 ) => {
   if (!reactFlow || !backpackApi) {
+    return;
+  }
+
+  // Flush save so we can read the latest moderation state.
+  try {
+    await Lab2Registry.getInstance().getProjectManager()?.flushSave();
+    await waitForShareFailureRefresh();
+  } catch (error) {
+    errorCallback('Could not save your sketch. Please try again.');
+    return;
+  }
+
+  const {isBlockedAbuse, shareFailure} = getStore().getState().lab;
+  const blockedMessage = isBlockedAbuse
+    ? ABUSE_BLOCKED_MESSAGE
+    : shareFailure
+    ? getShareFailureMessage(shareFailure)
+    : undefined;
+  if (blockedMessage) {
+    await dialogControl.showDialog({
+      type: DialogType.GenericAlert,
+      title: SAVE_BLOCKED_TITLE,
+      message: blockedMessage,
+    });
     return;
   }
 

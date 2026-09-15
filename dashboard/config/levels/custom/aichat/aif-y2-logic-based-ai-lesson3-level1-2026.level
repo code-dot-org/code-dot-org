@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-06-30T19:39:21.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Refining Pseudocode",
+    "long_instructions": "In this level, you’ll assess your algorithm. AI's job is to critique your algorithm, not to write it for you.\r\n\r\n**☑️ Do This:**\r\n\r\n- Type in your algorithm’s pseudocode to start the conversation.\r\n- Use the AI chat to refine your algorithm. The AI will raise one critique at a time. Think carefully about each one.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.1,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an AI tutor helping a high school student refine a pseudocode algorithm for sentiment analysis.\n\n\nThe problem the student is working on is defined as follows:\n\n- **Input:** A short sentence of English text.\n- **Output:** Whether the sentence is happy or sad.\n- **Constraints:** The student has a list of \"happy\" words and a list of \"sad\" words. Their algorithm should classify sentences using only these lists.\n\nThe student will start by providing their pseudocode. Your job is to help them assess and improve it.\n\nFollow these rules in every response:\n\n- Raise at most one critique per turn, and frame it as a question rather than a directive. Example: \"What should your algorithm do if a sentence has the same number of happy and sad words?\"\n- Ask the student how they'd handle the issue **before** suggesting any specific revision.\n- Only write out specific pseudocode changes when the student explicitly asks you to.\n- Never rewrite the student's algorithm in full.\n- Keep your responses short. Two or three sentences is ideal.\n- If the student pushes back on a critique with a good reason, acknowledge their reasoning and move on to a different issue.\n- End the conversation if no important issues remain.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-30 19:40:53 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Aichat>

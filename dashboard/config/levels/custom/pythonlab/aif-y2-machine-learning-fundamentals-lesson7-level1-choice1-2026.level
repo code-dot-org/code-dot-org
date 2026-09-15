@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-08-21T21:15:21.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Vocabulary Size",
+    "long_instructions": "You’re a linguistics researcher exploring a dataset used to predict people’s vocabulary size based on their age.\r\n\r\n**☑️ Do This:**\r\n\r\nThe code currently prints each value in the `ages` list. Write another `for` loop to print each value in the `vocabularies` list.",
+    "bubble_choice_description": "Work with a dataset used to predict vocabulary size based on their age.",
+    "thumbnail_url": "https://images.code.org/c53c1a2fbd7688fefe5d1c5f4144b917-dictionary.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "ages = [5, 15, 25, 35, 45, 55, 65, 75]\nvocabularies = [7000, 8000, 15000, 18000, 22000, 27000, 28000, 35000]\n\nprint(\"Here are the ages in the dataset:\")\nfor age in ages:\n  print(age)\n\n# TODO: Print each value in the vocabularies list",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqDZuq0EpE/fI5l\nBjn2xePG4Wc3dlc5cx5bRH+jEvUqbTh+PmNoUY+DYohIesgk51uhCW6fYakv\naIuziGZl2tYPOhtEuVRr6z9hMwCeF78lGSoMIafTyYXd9Eu5FGtZSGQo4OxH\noinPCP9OB6PGietR0XP97GhDBBxJtmY5uE+CK2XHgihxmXLsQkbsBmTDwbm1\ne1Nr84TLa+/eI68yiz8rGowmDsdhyQYK61J38LLF+ufivYi6DOtS3wMGbFhN\n0/ScOV5IATYr1pbteiu933pxqssBi0uzeTY8zvVN3kIhz6e58q4hMGDMQ4d9\nCQYvhqvzp57Wxs5bq0kr02d0UHRdtOwBkywUK68l6HlNahS2h0zZuRFfKy7x\nrWU54xN9Nnxwu7woPFcGCwYz+bbZQkxzLVGr3nFyE2QRubpm4Ip2QXiWQ67r\n+XehUMpcCVkOWjxumr8sIvCIrerzrl9MtSJ/AIb7R7wPviJKNvzg0TyfDZuD\nb9f2Y0UuVd6yUjs+qjrSsuNHWKiFi+zGZr+BE9Pc\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-21 21:15:35 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:15:43 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:23:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

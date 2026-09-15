@@ -1,5 +1,6 @@
 @no_mobile
 @single_session
+@playwright
 Feature: Documentation Landing Page
 
   Scenario: Documentation landing page displays

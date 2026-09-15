@@ -22,6 +22,7 @@ import '@xterm/xterm/css/xterm.css';
 import ConsoleManager from './ConsoleManager';
 import {darkTheme, lightTheme} from './consoleThemes';
 import ControlButtons from './ControlButtons';
+import {getSystemError} from './MessageHelpers';
 
 import moduleStyles from './console.module.scss';
 
@@ -41,9 +42,17 @@ const Console: React.FunctionComponent = () => {
   const fontSizeKey = useAppSelector(
     state => state.lab2View.consoleFontSizeKey
   );
+  const codeEnvironmentError = useAppSelector(
+    state => state.lab2System.codeEnvironmentError
+  );
   const {signInState} = useAppSelector(state => state.currentUser);
   const dispatch = useAppDispatch();
   const {theme} = useTheme();
+
+  // Re-runs when the console is re-created, which rebuilds its live region.
+  useEffect(() => {
+    consoleManager?.setPoliteScreenReaderAnnouncements();
+  }, [consoleManager]);
 
   const clearOutput = useCallback((sendAnalytics: boolean) => {
     CodebridgeRegistry.getInstance().getConsoleManager()?.clearTerminalLines();
@@ -51,6 +60,14 @@ const Console: React.FunctionComponent = () => {
       sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_CLEAR_CONSOLE);
     }
   }, []);
+
+  useEffect(() => {
+    consoleManager?.setCodeEnvironmentError(
+      codeEnvironmentError
+        ? getSystemError(codeEnvironmentError, appName)
+        : null
+    );
+  }, [consoleManager, codeEnvironmentError, appName]);
 
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
@@ -71,14 +88,13 @@ const Console: React.FunctionComponent = () => {
     (data: string) => {
       const consoleManager =
         CodebridgeRegistry.getInstance().getConsoleManager();
-      const terminal = consoleManager?.getTerminal();
-      if (!terminal || !consoleManager) {
+      if (!consoleManager) {
         return;
       }
       const charCode = data.charCodeAt(0);
       if (charCode === 13) {
         // new line
-        terminal.writeln('');
+        consoleManager.echoNewline();
         // send input
         if (sendConsoleInput) {
           sendConsoleInput(consoleManager.getInputBuffer());
@@ -88,12 +104,9 @@ const Console: React.FunctionComponent = () => {
       } else if (charCode < 32) {
         // control characters, do nothing
       } else if (charCode === 127) {
-        // backspace
-        terminal.write('\b \b');
-        consoleManager.backspaceInputBuffer();
+        consoleManager.echoBackspace();
       } else {
-        terminal.write(data);
-        consoleManager.appendToInputBuffer(data);
+        consoleManager.echoInput(data);
       }
     },
     [sendConsoleInput]
@@ -151,10 +164,9 @@ const Console: React.FunctionComponent = () => {
     // this pr goes in: https://github.com/xtermjs/xterm.js/pull/5253
     // After that, we may just be able to call open() on the existing terminal instance
     // and move it to the new container.
-    if (existingTerminalLines.length > 0) {
-      const lines = existingTerminalLines.join('\n');
-      newConsoleManager.writeConsoleMessage(lines);
-    }
+    // A run in progress keeps the console quiet across the swap.
+    newConsoleManager.setNarrating(!!existingConsoleManager?.isNarrating());
+    newConsoleManager.replayTerminalLines(existingTerminalLines);
 
     // Prevent keyboard trap.
     terminal.attachCustomKeyEventHandler(ignoreEscapeAndTab);

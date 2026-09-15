@@ -24,6 +24,9 @@ export interface FormFieldWrapperProps
   helperIcon?: FontAwesomeV6IconProps;
   /** FormFieldWrapper error message */
   errorMessage?: string;
+  /** id for the rendered error message, so a control can reference it via
+   * `aria-describedby`. */
+  errorMessageId?: string;
 }
 
 /**
@@ -46,6 +49,7 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
   helperMessage,
   helperIcon,
   errorMessage,
+  errorMessageId,
   color = 'black',
   size = 'm',
   ...HTMLAttributes
@@ -80,7 +84,7 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
         )}
       >
         <FontAwesomeV6Icon iconName="circle-exclamation" />
-        <span>{errorMessage}</span>
+        <span id={errorMessageId}>{errorMessage}</span>
       </div>
     )}
   </label>

@@ -1,3 +1,4 @@
+import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -40,8 +41,14 @@ class AddTableListRow extends React.Component {
     return (
       <tr className={dataStyles.row}>
         <td className={dataStyles.cell}>
-          <input
-            className={classNames('uitest-add-table-input', dataStyles.input)}
+          <TextField
+            name="newTableName"
+            className={classNames(
+              'uitest-add-table-input',
+              dataStyles.dataField
+            )}
+            color="gray"
+            size="s"
             placeholder={msg.dataTableNamePlaceholder()}
             value={this.state.newTableName}
             onChange={this.handleInputChange}

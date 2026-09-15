@@ -33,7 +33,13 @@
       box-sizing: content-box;
 
       &::before {
-        display: inline-block;
+        // line-height would centre the glyph on the line box, not the box.
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // Outer box, border included; not left to the host page's reset.
+        box-sizing: border-box;
         content: ' ';
         text-align: center;
         border: 2px solid var(--borders-neutral-solid);
@@ -147,20 +153,20 @@
   }
 }
 
-// Sizes
+// Sizes. margin-top centres the box on the label's first line.
 .label-l {
   gap: 8px;
   input[type='checkbox'] {
     & + i {
-      width: 24px;
-      height: 24px;
-      margin-top: 2px;
+      width: 22px;
+      height: 22px;
+      margin-top: calc((var(--font-size-body-lg) * 1.4 - 22px) / 2);
 
       &::before {
         font-size: 14px;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
       }
     }
   }
@@ -180,12 +186,12 @@
     & + i {
       width: 20px;
       height: 20px;
-      margin-top: 1px;
+      margin-top: calc((var(--font-size-body-md) * 1.48 - 20px) / 2);
       &::before {
         font-size: 12px;
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
       }
     }
   }
@@ -205,13 +211,13 @@
     & + i {
       width: 18px;
       height: 18px;
-      margin-top: 1px;
+      margin-top: calc((var(--font-size-body-sm) * 1.54 - 18px) / 2);
 
       &::before {
         font-size: 10px;
-        width: 14px;
-        height: 14px;
-        line-height: 14px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
       }
     }
   }
@@ -231,13 +237,13 @@
     & + i {
       width: 16px;
       height: 16px;
-      margin-top: 2px;
+      margin-top: calc((var(--font-size-body-xs) * 1.64 - 16px) / 2);
 
       &::before {
         font-size: 10px;
-        width: 12px;
-        height: 12px;
-        line-height: 12px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
       }
     }
   }
@@ -248,5 +254,46 @@
   .checkboxLabel-thin {
     @include typography.body-four;
     margin-bottom: 0;
+  }
+}
+
+// CodeAI (CADS) brand overrides — see themes/README.md ("Component-level
+// brand overrides"); tags/tags.module.scss is the reference example.
+// Only the checked/indeterminate fills diverge from what the token
+// bridge gives: CADS uses the dedicated mode-inverted selected tokens
+// (brand box + seafoam check in light, seafoam box + navy check in
+// dark) where the bridge maps the legacy teal onto the brand ramp, and
+// hover/pressed go to Figma's selected/strong, which the export carries
+// as --background-selected-strong. The box border always matches the
+// fill. Everything else — unselected hover/pressed (brand-light inner,
+// indigo pressed border), the focus ring, and the disabled grays —
+// resolves correctly through the bridge, and the legacy disabled rules
+// outrank these overrides, so disabled needs no re-assert.
+// CheckboxDropdown menus render this component for their items; the
+// dropdown menu's own brand block layers row-context glyph inversions
+// on top at higher specificity.
+// The hover/pressed override also covers the legacy hover/pressed
+// rules, which tie with the checked override below and would otherwise
+// lose to it on source order.
+[data-brand='codeai-next'] {
+  .label {
+    input[type='checkbox'] {
+      &:checked + i::before,
+      &:indeterminate + i::before {
+        color: var(--text-selected-primary);
+        background: var(--background-selected-primary);
+        border-color: var(--border-selected-primary);
+      }
+    }
+
+    &:hover input[type='checkbox'],
+    &:active input[type='checkbox'] {
+      &:checked + i::before,
+      &:indeterminate + i::before {
+        color: var(--text-selected-primary);
+        background: var(--background-selected-strong);
+        border-color: var(--border-selected-strong);
+      }
+    }
   }
 }

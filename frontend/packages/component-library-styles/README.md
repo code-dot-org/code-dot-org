@@ -18,6 +18,7 @@ typography styles, and more to ensure visual consistency and a unified design la
   - [Font Awesome](#font-awesome)
   - [Typography](#typography)
   - [Variables](#variables)
+  - [Shape and Spacing](#shape-and-spacing)
   - [Mixins](#mixins)
 - [Best Practices](#best-practices)
 - [Theming](#theming)
@@ -57,13 +58,14 @@ To use it in your project:
   typography;
 ```
 
-For CSS variables (colors and fonts), import them globally in your application root:
+For CSS variables (colors, fonts, shape, and spacing), import them globally in your application root:
 
 ```javascript
 // In your main application entry point (e.g., __root.tsx or App.tsx)
 import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 ```
 
 ## Development
@@ -259,7 +261,7 @@ Then use the CSS variables in your SCSS or CSS files:
 ### Fonts
 
 The `font.scss` file provides SCSS mixins for fonts, while `fontVariables.css` defines CSS variables for font families and weights used throughout the Code.org design system.
-We use a combination of **Figtree** and **Noto Sans** fonts to maintain a consistent look and feel across the platform.
+We use a combination of **Geist** and **Noto Sans** fonts to maintain a consistent look and feel across the platform.
 
 **Important:** `fontVariables.css` should be imported globally in your application root to make font CSS variables available throughout your application.
 
@@ -315,20 +317,19 @@ Or in JSX/TSX inline styles:
 
 Font families and weights are available as CSS variables (defined in `fontVariables.css`):
 
-| CSS Variable                                   | Description                              | Value                                                            |
-| ---------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------- |
-| `--font-family-main`                           | Combined main font (Figtree + Noto Sans) | `'Figtree', 'Noto Sans', 'Noto Sans Math', ..., sans-serif`      |
-| `--font-family-barlow-semi-condensed-semibold` | Barlow Semi Condensed Semibold font      | `'Barlow Semi Condensed Semibold', 'Noto Sans', ..., sans-serif` |
-| `--font-family-barlow-semi-condensed-medium`   | Barlow Semi Condensed Medium font        | `'Barlow Semi Condensed Medium', 'Noto Sans', ..., sans-serif`   |
-| `--font-weight-thin`                           | Thin font weight                         | `100`                                                            |
-| `--font-weight-extra-light`                    | Extra light font weight                  | `200`                                                            |
-| `--font-weight-light`                          | Light font weight                        | `300`                                                            |
-| `--font-weight-regular`                        | Regular font weight                      | `400`                                                            |
-| `--font-weight-medium`                         | Medium font weight                       | `500`                                                            |
-| `--font-weight-semi-bold`                      | Semi-bold font weight                    | `600`                                                            |
-| `--font-weight-bold`                           | Bold font weight                         | `700`                                                            |
-| `--font-weight-extra-bold`                     | Extra bold font weight                   | `800`                                                            |
-| `--font-weight-black`                          | Black font weight                        | `900`                                                            |
+| CSS Variable                | Description                            | Value                                                     |
+| --------------------------- | -------------------------------------- | --------------------------------------------------------- |
+| `--font-family-main`        | Combined main font (Geist + Noto Sans) | `'Geist', 'Noto Sans', 'Noto Sans Math', ..., sans-serif` |
+| `--font-family-heading`     | Space Grotesk font                     | `'Space Grotesk', 'Noto Sans', ..., sans-serif`           |
+| `--font-weight-thin`        | Thin font weight                       | `100`                                                     |
+| `--font-weight-extra-light` | Extra light font weight                | `200`                                                     |
+| `--font-weight-light`       | Light font weight                      | `300`                                                     |
+| `--font-weight-regular`     | Regular font weight                    | `400`                                                     |
+| `--font-weight-medium`      | Medium font weight                     | `500`                                                     |
+| `--font-weight-semi-bold`   | Semi-bold font weight                  | `600`                                                     |
+| `--font-weight-bold`        | Bold font weight                       | `700`                                                     |
+| `--font-weight-extra-bold`  | Extra bold font weight                 | `800`                                                     |
+| `--font-weight-black`       | Black font weight                      | `900`                                                     |
 
 ---
 
@@ -376,7 +377,7 @@ You can override or extend font styles by combining mixins and custom properties
 - ✅ Import `fontVariables.css` globally in your application root to make font CSS variables available.
 - ✅ Use `main-font` mixins (from `font.scss`) or CSS variables (from `fontVariables.css`) instead of direct font-family definitions.
 - ✅ Use the provided CSS variables or mixins for font weights instead of hard-coded values.
-- ✅ Figtree should be the primary font; Noto Sans is used for fallback and internationalization.
+- ✅ Geist should be the primary font; Noto Sans is used for fallback and internationalization.
 - ✅ CSS variables can be used in inline styles (JSX/TSX) when needed, but prefer SCSS mixins when possible.
 
 ---
@@ -612,6 +613,26 @@ With time there'll be more variables added to this file, so make sure to check i
 - New variables should be added to `variables.scss`.
 - Follow the existing naming conventions.
 - Consider the impact on light/dark mode or theming.
+
+---
+
+### Shape and Spacing
+
+The `shapeAndSpacingVariables.css` file defines the CADS shape
+(border-radius) and spacing (padding) ramps as CSS custom properties at
+`:root`. Import it globally in your application root (see
+[Installation](#installation)). They are brand- and mode-invariant, so
+they need no `[data-brand]`/`[data-theme]` scoping and no migration at
+brand cutover.
+
+| Variable                               | Value                  |
+| -------------------------------------- | ---------------------- |
+| `--shape-sm` … `--shape-xl`            | `0.375rem` … `0.75rem` |
+| `--shape-round`                        | `62.4375rem` (pill)    |
+| `--spacing-p-xxs` … `--spacing-p-xxxl` | `0.5rem` … `4rem`      |
+
+Reference them with a fallback (e.g. `var(--shape-sm, 0.375rem)`) so
+surfaces that don't load the token entry points still render correctly.
 
 ---
 

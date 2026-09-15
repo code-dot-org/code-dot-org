@@ -6,7 +6,10 @@ class CodeprojectsPreviewController < ApplicationController
     render 'show', layout: false
   end
 
-  skip_forgery_protection only: :weblab2_project_service_worker
+  # not_found is a catch-all for every path and method on the preview hosts
+  # (including POSTs, which would otherwise fail CSRF verification instead of
+  # rendering the 404 page).
+  skip_forgery_protection only: [:weblab2_project_service_worker, :not_found]
   def weblab2_project_service_worker
     send_file "#{apps_dir}/src/weblab2/htmlPreview/weblab2_project_service_worker.js", type: 'application/javascript'
   end
@@ -23,7 +26,12 @@ class CodeprojectsPreviewController < ApplicationController
   # differently (and don't need to account for multiple ports in development, since we know what port we are using).
   def set_content_security_policy
     code_studio_url = CDO.dashboard_site_host
-    preview_url = "*.#{CDO.preview_codeprojects_hostname}"
+    # Both sandboxed-preview domains; see docs/weblab-preview-domain-migration.md.
+    preview_urls = [
+      CDO.preview_codeaiprojects_hostname,
+      CDO.preview_codeprojects_hostname,
+    ].map {|host| "*.#{host}"}
+    preview_url = preview_urls.join(' ')
     # Chrome will block connecting to an http url from an https page, even with upgrade-insecure-requests.
     # Therefore we explicitly set the prefix to 'http', which will also allow https.
     prefix = 'http://'
@@ -37,11 +45,11 @@ class CodeprojectsPreviewController < ApplicationController
       port_9000_url = code_studio_url.split(":").first + ":9000"
       code_studio_url += " #{port_9000_url}"
 
-      # Explicitly allow WebSocket connections to preview.localhost.codeprojects.org:9000, which is used by the webpack dev server
+      # Explicitly allow WebSocket connections to the preview hosts on port 9000, which is used by the webpack dev server
       # both on ports 9000 and 3000.
-      allowed_connect_src += " ws://#{preview_url}:9000/ws"
-      # preview_url does not have a port by default.
-      preview_url = "#{preview_url}:3000 #{preview_url}:9000"
+      allowed_connect_src += preview_urls.map {|url| " ws://#{url}:9000/ws"}.join
+      # preview_urls do not have a port by default.
+      preview_url = preview_urls.map {|url| "#{url}:3000 #{url}:9000"}.join(' ')
     end
 
     # Security Control: Set base resource loading policy ("default" is a fallback for unspecified resource types)

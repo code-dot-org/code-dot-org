@@ -51,7 +51,7 @@ const getNewVariableButtonWithCallback = (
       confirmButtonLabel: commonI18n.create(),
       defaultText: '',
       callback: newName => {
-        workspace.createVariable(newName);
+        workspace.getVariableMap().createVariable(newName);
       },
     });
   });
@@ -70,7 +70,7 @@ const getNewVariableButtonWithCallback = (
  * @returns {Array<Object>} An array of JSON block objects for a flyout.
  */
 export function flyoutCategoryBlocks(workspace: BlocklyCore.WorkspaceSvg) {
-  const variableModelList = workspace.getVariablesOfType('');
+  const variableModelList = workspace.getVariableMap().getVariablesOfType('');
 
   const blockList = [];
   if (variableModelList.length > 0) {

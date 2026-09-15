@@ -124,8 +124,7 @@ export default class MusicBlocklyWorkspace {
     toolboxAllowList: ToolboxData | undefined,
     isRtl: boolean,
     blockMode: ValueOf<typeof BlockMode>,
-    toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo,
-    enableKeyboardNavigation?: boolean
+    toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo
   ) {
     const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
@@ -186,7 +185,6 @@ export default class MusicBlocklyWorkspace {
       analyticsData: {
         appType: EVENTS.BLOCKLY_APP_TYPE_MUSIC,
       },
-      enableKeyboardNavigation,
       showBlockHelp: true,
     } as BlocklyCore.BlocklyOptions);
 

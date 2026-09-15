@@ -14,8 +14,8 @@
             "id": "gWHxmVqBNVoUbgiJH7M2i",
             "type": "shape",
             "position": {
-              "x": 1384.130677649186,
-              "y": -705.2080833206171
+              "x": -151.77653049046273,
+              "y": -507.281896704683
             },
             "style": {
               "width": 717.0919092770104,
@@ -39,8 +39,8 @@
             "id": "_SzttQlzYyZ3kLTSVTf98",
             "type": "text",
             "position": {
-              "x": 1398.203975988035,
-              "y": -642.3073114326457
+              "x": -137.70323215161386,
+              "y": -444.38112481671163
             },
             "data": {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
@@ -49,8 +49,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 591,
-              "height": 74
+              "width": 605,
+              "height": 75
             },
             "dragging": false
           },
@@ -58,8 +58,8 @@
             "id": "OMamfhMP9ehCid-7n5rfl",
             "type": "text",
             "position": {
-              "x": 1474.9867381835973,
-              "y": -693.9583965562656
+              "x": -60.920469956051534,
+              "y": -496.0322099403315
             },
             "data": {
               "text": "Try to avoid ",
@@ -68,8 +68,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 138,
-              "height": 46
+              "width": 139,
+              "height": 47
             },
             "dragging": false
           },
@@ -77,8 +77,8 @@
             "id": "MKTurBCVQ5SU6x8AZe-bX",
             "type": "shape",
             "position": {
-              "x": 1413.2897286788098,
-              "y": -689.5082368650085
+              "x": -122.61747946083904,
+              "y": -491.58205024907437
             },
             "style": {
               "width": 35.00558644707339,
@@ -139,8 +139,8 @@
               "textAlign": "left"
             },
             "measured": {
-              "width": 591,
-              "height": 74
+              "width": 605,
+              "height": 75
             },
             "dragging": false
           },
@@ -159,7 +159,7 @@
             },
             "measured": {
               "width": 166,
-              "height": 46
+              "height": 47
             },
             "dragging": false
           },
@@ -252,8 +252,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 206,
-              "height": 46
+              "width": 208,
+              "height": 47
             },
             "dragging": false
           },
@@ -272,8 +272,8 @@
               "textAlign": "left"
             },
             "measured": {
-              "width": 591,
-              "height": 74
+              "width": 605,
+              "height": 75
             },
             "dragging": false
           },
@@ -281,8 +281,8 @@
             "id": "T5DtQBP2AYfkAgTIG7HOl",
             "type": "shape",
             "position": {
-              "x": 2147.845849505721,
-              "y": -704.0437267938909
+              "x": 619.8556888307098,
+              "y": -506.11754017795676
             },
             "style": {
               "width": 717.0919092770104,
@@ -305,8 +305,8 @@
             "id": "AH4XGjr4bB3cq--OFePWi",
             "type": "shape",
             "position": {
-              "x": 2175.1776789309674,
-              "y": -696.9385243488013
+              "x": 647.1875182559561,
+              "y": -499.01233773286714
             },
             "style": {
               "width": 36.83420837414011,
@@ -339,8 +339,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 57,
-              "height": 46
+              "width": 58,
+              "height": 47
             },
             "dragging": false
           },
@@ -348,8 +348,8 @@
             "id": "XJukrx7mn1kmMg289Wf3O",
             "type": "text",
             "position": {
-              "x": 2214.433464741891,
-              "y": -692.928484043945
+              "x": 686.4433040668796,
+              "y": -495.0022974280109
             },
             "data": {
               "text": "Attention needed",
@@ -358,8 +358,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 191,
-              "height": 46
+              "width": 189,
+              "height": 47
             },
             "dragging": false
           },
@@ -367,8 +367,8 @@
             "id": "hsCf7vNiZYkHom7t8TdlZ",
             "type": "text",
             "position": {
-              "x": 2163.017161806573,
-              "y": -641.6372250563634
+              "x": 635.0270011315615,
+              "y": -443.71103844042926
             },
             "data": {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \nSed facilisis odio ac dui feugiat, ut molestie ipsum sodales.",
@@ -378,8 +378,8 @@
               "textAlign": "left"
             },
             "measured": {
-              "width": 591,
-              "height": 74
+              "width": 605,
+              "height": 75
             },
             "dragging": false
           },
@@ -387,19 +387,19 @@
             "id": "QPDtJM4vUN9TwIFhHt2cI",
             "type": "text",
             "position": {
-              "x": -164.3897769587727,
-              "y": -913.6271515947884
+              "x": -123.03663617887946,
+              "y": -918.2219450147766
             },
             "data": {
               "text": "Templates & Shapes Library",
               "fontColor": "var(--sketchlab-stroke-default)",
-              "fontSize": "extra-large",
+              "fontSize": 45,
               "showHandles": false,
               "locked": true
             },
             "measured": {
-              "width": 398,
-              "height": 56
+              "width": 585,
+              "height": 77
             },
             "dragging": false
           },
@@ -419,8 +419,8 @@
               "locked": true
             },
             "measured": {
-              "width": 545,
-              "height": 103
+              "width": 551,
+              "height": 104
             },
             "dragging": false
           },
@@ -439,13 +439,10 @@
               "locked": true
             },
             "measured": {
-              "width": 769,
-              "height": 111
+              "width": 757,
+              "height": 112
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "GaVSWIG7E3xabfcqcc0Ir",
@@ -463,13 +460,10 @@
               "locked": true
             },
             "measured": {
-              "width": 797,
-              "height": 160
+              "width": 817,
+              "height": 161
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "P8q9DfRAM3z6v7NjbG5XS",
@@ -534,7 +528,7 @@
             },
             "data": {
               "shapeType": "rectangle",
-              "label": "This audience \ncould use AI to...\n\n--->    ",
+              "label": "My audience would want \nAI to help them…\n\n--->    ",
               "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "var(--sketchlab-stroke-blue)",
               "fontColor": "var(--sketchlab-stroke-blue)",
@@ -554,15 +548,15 @@
               "y": -585.5307785728862
             },
             "data": {
-              "text": "Your theme:",
+              "text": "Your Theme:",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "extra-large",
               "showHandles": false,
               "locked": true
             },
             "measured": {
-              "width": 185,
-              "height": 56
+              "width": 187,
+              "height": 57
             },
             "dragging": false
           },
@@ -581,8 +575,8 @@
               "locked": true
             },
             "measured": {
-              "width": 227,
-              "height": 56
+              "width": 222,
+              "height": 57
             },
             "dragging": false
           },
@@ -594,15 +588,15 @@
               "y": -589.382441473281
             },
             "data": {
-              "text": "The Purpose:",
+              "text": "AI Uses:",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "extra-large",
               "showHandles": false,
               "locked": true
             },
             "measured": {
-              "width": 197,
-              "height": 56
+              "width": 130,
+              "height": 57
             },
             "dragging": false
           },
@@ -610,8 +604,8 @@
             "id": "4G7sfxvy5LcjRFYHtZKbZ",
             "type": "text",
             "position": {
-              "x": -1869.688396124327,
-              "y": -207.97298173429337
+              "x": -1844.1465990537324,
+              "y": -220.9833108649781
             },
             "data": {
               "text": "Add examples of AI Generated content below",
@@ -620,8 +614,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 477,
-              "height": 46
+              "width": 471,
+              "height": 47
             },
             "dragging": false
           },
@@ -629,8 +623,8 @@
             "id": "cvtvTCM-vKGF0reTLiXad",
             "type": "text",
             "position": {
-              "x": -1017.8278982122744,
-              "y": -215.5668574591682
+              "x": -992.2861011416798,
+              "y": -228.57718658985297
             },
             "data": {
               "text": "Add AI Usage Tips and Guidance below",
@@ -639,8 +633,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 412,
-              "height": 46
+              "width": 409,
+              "height": 47
             },
             "dragging": false
           },
@@ -689,9 +683,6 @@
               "height": 197
             },
             "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false,
             "width": 815,
             "height": 197,
             "resizing": false
@@ -711,8 +702,8 @@
               "locked": true
             },
             "measured": {
-              "width": 154,
-              "height": 189
+              "width": 158,
+              "height": 190
             },
             "dragging": false
           },
@@ -731,8 +722,8 @@
               "locked": true
             },
             "measured": {
-              "width": 96,
-              "height": 74
+              "width": 95,
+              "height": 75
             },
             "dragging": false
           },
@@ -744,20 +735,17 @@
               "y": -1147.9081401317583
             },
             "data": {
-              "text": "Define your theme, \naudience, & purpose",
+              "text": "Define your theme, \naudience, and AI uses",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
-              "locked": true
+              "locked": false
             },
             "measured": {
-              "width": 222,
-              "height": 74
+              "width": 235,
+              "height": 75
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "Grrrc0ul_ruhTQe5cvjaL",
@@ -774,13 +762,10 @@
               "locked": true
             },
             "measured": {
-              "width": 252,
-              "height": 74
+              "width": 248,
+              "height": 75
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "90wGVEBt_sdSwsNFTNpMU",
@@ -797,36 +782,30 @@
               "locked": true
             },
             "measured": {
-              "width": 189,
-              "height": 74
+              "width": 187,
+              "height": 75
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "AFjZtOjW7LlUULGJQGYxn",
             "type": "text",
             "position": {
-              "x": -78.26394814773877,
-              "y": -1186.6400778838718
+              "x": -95.76394814773877,
+              "y": -1185.6400778838718
             },
             "data": {
-              "text": "Write a tip for \nwriting good prompts",
+              "text": "Review feedback from AI \nand make revisions",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
-              "locked": true
+              "locked": false
             },
             "measured": {
-              "width": 238,
-              "height": 74
+              "width": 275,
+              "height": 75
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "rLdz_nT-R9urroyfqY86d",
@@ -843,13 +822,10 @@
               "locked": true
             },
             "measured": {
-              "width": 164,
-              "height": 74
+              "width": 160,
+              "height": 75
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "JkEEoeXeGnrX0ZHotnudM",
@@ -866,8 +842,8 @@
               "locked": true
             },
             "measured": {
-              "width": 171,
-              "height": 74
+              "width": 169,
+              "height": 75
             },
             "dragging": false
           },
@@ -1049,8 +1025,8 @@
               "locked": true
             },
             "measured": {
-              "width": 104,
-              "height": 46
+              "width": 109,
+              "height": 47
             },
             "dragging": false
           },
@@ -1069,13 +1045,10 @@
               "locked": true
             },
             "measured": {
-              "width": 141,
-              "height": 46
+              "width": 147,
+              "height": 47
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "0f8Jm3FAJnesBdW8dRm13",
@@ -1092,8 +1065,8 @@
               "locked": true
             },
             "measured": {
-              "width": 104,
-              "height": 46
+              "width": 109,
+              "height": 47
             },
             "dragging": false
           },
@@ -1112,13 +1085,10 @@
               "locked": true
             },
             "measured": {
-              "width": 105,
-              "height": 46
+              "width": 109,
+              "height": 47
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "_Q1-uaNGEciAIjM_e8WJ5",
@@ -1135,13 +1105,10 @@
               "locked": true
             },
             "measured": {
-              "width": 104,
-              "height": 46
+              "width": 108,
+              "height": 47
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "_w3C5yomub5nG6bItSfGn",
@@ -1151,15 +1118,15 @@
               "y": -1106.2515437152806
             },
             "data": {
-              "text": "Lesson 7",
+              "text": "Lesson 8",
               "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false,
               "locked": true
             },
             "measured": {
-              "width": 103,
-              "height": 46
+              "width": 108,
+              "height": 47
             },
             "dragging": false
           },
@@ -1178,8 +1145,8 @@
               "locked": true
             },
             "measured": {
-              "width": 104,
-              "height": 46
+              "width": 108,
+              "height": 47
             },
             "dragging": false
           },
@@ -1319,8 +1286,8 @@
             "id": "e25b4421-7112-4f0d-9116-b25e04418912",
             "type": "lineAnchor",
             "position": {
-              "x": -1206.2653140410612,
-              "y": -20.337914457660737
+              "x": -1180.7235169704666,
+              "y": -33.34824358834548
             },
             "style": {
               "width": 10,
@@ -1332,7 +1299,8 @@
             "measured": {
               "width": 10,
               "height": 10
-            }
+            },
+            "dragging": false
           },
           {
             "id": "09f910a2-ad43-4d32-96ad-9a043807d1b3",
@@ -1358,8 +1326,8 @@
             "id": "15921376-4efd-42bc-9e56-775ea134728b",
             "type": "lineAnchor",
             "position": {
-              "x": -262.7668699717701,
-              "y": 411.98576874972537
+              "x": -271.8611693708325,
+              "y": 1970.3969921394457
             },
             "data": {
               "lineAnchorRole": "target"
@@ -1383,8 +1351,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -154.76653705402578,
-              "y": -500.25608075056766
+              "x": -131.01539466011369,
+              "y": -212.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1403,8 +1371,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 61.233462945974225,
-              "y": -516.2560807505677
+              "x": 84.98460533988631,
+              "y": -228.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1423,8 +1391,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 315.2334629459742,
-              "y": -520.2560807505677
+              "x": 338.9846053398863,
+              "y": -232.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1443,8 +1411,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 575.2334629459742,
-              "y": -524.2560807505677
+              "x": 598.9846053398863,
+              "y": -236.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1463,8 +1431,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -158.76653705402578,
-              "y": -332.25608075056766
+              "x": -135.01539466011369,
+              "y": -44.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1483,8 +1451,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 13.233462945974225,
-              "y": -332.25608075056766
+              "x": 36.98460533988632,
+              "y": -44.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1503,8 +1471,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 213.23346294597422,
-              "y": -334.25608075056766
+              "x": 236.9846053398863,
+              "y": -46.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1523,8 +1491,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 393.2334629459742,
-              "y": -336.25608075056766
+              "x": 416.9846053398863,
+              "y": -48.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1543,8 +1511,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 575.2334629459742,
-              "y": -334.25608075056766
+              "x": 598.9846053398863,
+              "y": -46.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1563,8 +1531,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 753.2334629459742,
-              "y": -332.25608075056766
+              "x": 776.9846053398863,
+              "y": -44.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1583,8 +1551,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 945.2334629459742,
-              "y": -332.25608075056766
+              "x": 968.9846053398863,
+              "y": -44.60335620207675
             },
             "width": 160,
             "height": 120,
@@ -1603,8 +1571,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -166.55517230793203,
-              "y": -186.20029461775516
+              "x": -142.80402991401994,
+              "y": 101.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1623,8 +1591,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 25.444827692067975,
-              "y": -188.20029461775516
+              "x": 49.19597008598007,
+              "y": 99.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1643,8 +1611,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 211.44482769206797,
-              "y": -196.20029461775516
+              "x": 235.19597008598004,
+              "y": 91.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1663,8 +1631,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 411.444827692068,
-              "y": -190.20029461775516
+              "x": 435.19597008598004,
+              "y": 97.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1683,8 +1651,8 @@
               "showHandles": false
             },
             "position": {
-              "x": -164.55517230793203,
-              "y": -50.20029461775516
+              "x": -140.80402991401994,
+              "y": 237.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1703,8 +1671,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 27.444827692067975,
-              "y": -50.20029461775516
+              "x": 51.19597008598007,
+              "y": 237.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1723,8 +1691,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 221.44482769206797,
-              "y": -50.20029461775516
+              "x": 245.19597008598004,
+              "y": 237.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1743,8 +1711,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 417.444827692068,
-              "y": -54.20029461775516
+              "x": 441.19597008598004,
+              "y": 233.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1763,8 +1731,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 611.444827692068,
-              "y": -54.20029461775516
+              "x": 635.1959700859801,
+              "y": 233.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1783,8 +1751,8 @@
               "showHandles": false
             },
             "position": {
-              "x": 805.444827692068,
-              "y": -56.20029461775516
+              "x": 829.1959700859801,
+              "y": 231.45242993073575
             },
             "width": 160,
             "height": 120,
@@ -1805,8 +1773,8 @@
               "backgroundColor": "var(--sketchlab-bg-gray)"
             },
             "position": {
-              "x": -136.62459377310188,
-              "y": 198.70962292830114
+              "x": 852.0331668183196,
+              "y": -274.0759635312452
             },
             "width": 166,
             "height": 182,
@@ -1847,8 +1815,8 @@
             "id": "91496a5e-7199-4a7f-a93d-a76ffa0687e2",
             "type": "lineAnchor",
             "position": {
-              "x": -1215.6659426391843,
-              "y": -202.10832244331536
+              "x": -1190.1241455685897,
+              "y": -215.11865157400013
             },
             "data": {
               "lineAnchorRole": "source"
@@ -1860,7 +1828,8 @@
             "measured": {
               "width": 10,
               "height": 10
-            }
+            },
+            "dragging": false
           }
         ],
         "edges": [
@@ -1909,9 +1878,9 @@
           }
         ],
         "viewport": {
-          "x": 856.4145479274825,
-          "y": 587.6413593551114,
-          "zoom": 0.3798314828570336
+          "x": 991.0326609869562,
+          "y": 817.5210125547317,
+          "zoom": 0.4999999999999999
         }
       }
     },
@@ -1921,6 +1890,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-20T18:48:40.715+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\"},{\"changed_at\":\"2026-04-20 18:48:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 01:11:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 01:12:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 17:04:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:50:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:54:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:58:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:02:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:11:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:12:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:20:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:27:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:36:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:39:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:40:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:41:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 16:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:07:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:10:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:12:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:20:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:28:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:53:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:58:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-07 15:07:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:07:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:12:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:11:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-20 22:04:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:09:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:12:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:12:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-20T18:48:40.715+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson4-project-template_2026-test_2026-p_2026\"},{\"changed_at\":\"2026-04-20 18:48:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-24 01:11:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-24 01:12:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-28 17:04:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:50:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:54:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 14:58:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:02:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:11:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:12:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:20:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:27:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:36:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:39:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:40:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 15:41:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 16:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:07:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:10:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:12:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:20:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:28:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:53:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:54:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-29 17:58:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:23:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-07 15:07:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:07:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 15:12:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:11:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-20 22:04:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:09:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:12:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 22:12:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-31 18:23:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:26:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:26:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:27:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:28:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:30:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:38:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:39:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:39:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:41:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-31 19:42:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

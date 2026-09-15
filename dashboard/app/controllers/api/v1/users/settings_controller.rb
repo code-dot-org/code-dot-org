@@ -8,6 +8,8 @@ class Api::V1::Users::SettingsController < Api::V1::JSONApiController
 
   # Singular resource keyed on current_user only, so no cross-user (IDOR) read.
   def show
-    render json: ::User::SettingsSerializer.new(current_user).as_json
+    # request.country_code (geo), not the user's stored country, so a US student
+    # with a nil stored country_code still gets the US-state field.
+    render json: ::User::SettingsSerializer.new(current_user, country_code: request.country_code).as_json
   end
 end

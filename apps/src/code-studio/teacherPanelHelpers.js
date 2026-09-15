@@ -1,6 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import TeacherPanelHandle from '@cdo/apps/aiTeacherDrawer/TeacherPanelHandle';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
@@ -32,6 +33,23 @@ export function renderTeacherPanel(
     {
       legacyReactDomRender: true,
     }
+  );
+  document.body.appendChild(div);
+}
+
+/**
+ * Render the teacher panel handle (blue arrow tab) that opens the TA drawer
+ * to the Teacher Panel tab. Used in place of renderTeacherPanel when the
+ * ta-teacher-panel experiment is active.
+ */
+export function renderTeacherPanelHandle(store) {
+  const div = document.createElement('div');
+  createReactRoot(
+    <Provider store={store}>
+      <TeacherPanelHandle />
+    </Provider>,
+    div,
+    {legacyReactDomRender: true}
   );
   document.body.appendChild(div);
 }

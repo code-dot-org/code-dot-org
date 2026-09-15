@@ -2,6 +2,7 @@ import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState'
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getOuterOrigin} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 
 import {
   IframeMessageType,
@@ -49,15 +50,7 @@ const InnerHTMLPreview = () => {
   const [docLoadedTick, setDocLoadedTick] = useState(0);
   const inspectorControllerRef = useRef<InspectorController | null>(null);
 
-  const parentOrigin = useMemo(() => {
-    const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
-    const match = location.hostname.match(regex);
-    const environment = match && match[1] ? `${match[1]}-` : '';
-    const port =
-      'localhost-' === environment && location.port ? `:${location.port}` : '';
-    const cdn = environment.includes('adhoc') ? 'cdn-' : '';
-    return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
-  }, []);
+  const parentOrigin = useMemo(getOuterOrigin, []);
 
   const {serviceWorkerRegistration, serviceWorkerUnavailable} =
     useProjectServiceWorker(

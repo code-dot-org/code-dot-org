@@ -1,9 +1,9 @@
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {
   setPersonalProjects,
@@ -11,7 +11,6 @@ import {
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import LibraryIdCopier from './LibraryIdCopier';
@@ -75,11 +74,13 @@ export class ShareTeacherLibraries extends React.Component {
   displaySharedSections = () => {
     const {sharedSections} = this.state;
     if (sharedSections.length === 0) {
-      return <p>{i18n.libraryNotShared()}</p>;
+      return <Typography variant="body2">{i18n.libraryNotShared()}</Typography>;
     } else {
       return (
         <div>
-          <p>{i18n.librarySharedSections()}</p>
+          <Typography variant="body2">
+            {i18n.librarySharedSections()}
+          </Typography>
           <ul>
             {sharedSections.map(section => {
               return <li key={section.id}>{section.name}</li>;
@@ -122,7 +123,7 @@ export class ShareTeacherLibraries extends React.Component {
     const libraries = personalProjectsList
       .filter(project => project.libraryName)
       .map(project => {
-        return {name: project.name, id: project.channel};
+        return {name: project.libraryName, id: project.channel};
       });
 
     const rowData = sections.map(section => ({
@@ -133,10 +134,12 @@ export class ShareTeacherLibraries extends React.Component {
     }));
 
     return (
-      <div style={styles.container}>
+      <div>
         {loadingFinished ? (
           <div>
-            <p>{i18n.shareTeacherLibraryDescription()}</p>
+            <Typography variant="body2">
+              {i18n.shareTeacherLibraryDescription()}
+            </Typography>
             <SortedTableSelect
               rowData={rowData}
               onRowChecked={id => this.onSectionSelected(id)}
@@ -147,30 +150,39 @@ export class ShareTeacherLibraries extends React.Component {
               tableDescriptionText={i18n.selectAssignedLibrarySections()}
             >
               {selectedLibraryId ? (
-                <div>
-                  <LibraryIdCopier channelId={selectedLibraryId} />
-                  <p style={styles.libraryCopierLabel}>
+                <div style={{marginTop: 16}}>
+                  <LibraryIdCopier channelId={selectedLibraryId} compact />
+                  <Typography
+                    variant="body2"
+                    gutterBottom
+                    sx={{marginTop: '12px'}}
+                  >
                     {i18n.shareLibraryAccess()}
-                  </p>
+                  </Typography>
                   <div>{this.displaySharedSections()}</div>
                 </div>
               ) : (
-                <p>{i18n.selectLibraryForOptions()}</p>
+                <Typography variant="body3">
+                  {i18n.selectLibraryForOptions()}
+                </Typography>
               )}
             </SortedTableSelect>
             <div style={styles.footer}>
-              <Button
-                __useDeprecatedTag
+              <MuiButton
+                variant="outlined"
+                color="secondary"
                 onClick={onCancel}
-                color={Button.ButtonColor.gray}
-                text={i18n.closeDialog()}
-              />
-              <Button
-                __useDeprecatedTag
+              >
+                {i18n.closeDialog()}
+              </MuiButton>
+              <MuiButton
+                variant="contained"
+                color="primary"
                 disabled={!selectedLibraryId}
                 onClick={this.assignLibrary}
-                text={i18n.shareLibraryButton()}
-              />
+              >
+                {i18n.shareLibraryButton()}
+              </MuiButton>
             </div>
           </div>
         ) : (
@@ -182,22 +194,12 @@ export class ShareTeacherLibraries extends React.Component {
 }
 
 const styles = {
-  container: {
-    fontSize: 13,
-    lineHeight: '18px',
-    color: color.dark_charcoal,
-  },
   footer: {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between',
     margin: 2,
     paddingTop: 10,
-  },
-  libraryCopierLabel: {
-    color: color.purple,
-    marginBottom: 10,
-    fontStyle: 'italic',
   },
 };
 

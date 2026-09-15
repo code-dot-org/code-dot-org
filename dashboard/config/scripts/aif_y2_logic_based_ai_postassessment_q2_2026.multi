@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q2-2026'
+
+wrong 'AI is capable of solving problems in many different fields'
+wrong 'People in a variety of different jobs all use AI'
+wrong 'AI can generate images and video in addition to generating text'
+right 'Research in different fields contributed to advances in AI'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+In what sense is AI the result of interdisciplinary work?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: AI’s Past, Present, and Future
+MARKDOWN

@@ -1,3 +1,4 @@
+# Backend-only adhoc settings for the cdo-rails API/worker image.
 RAILS_ENV: adhoc
 dashboard_workers: 5
 healthChecks:

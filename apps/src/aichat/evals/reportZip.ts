@@ -44,6 +44,8 @@ export function reportRecordToResult(
       (record.stoppedAtGate as EvalResult['stoppedAtGate']) ?? null,
     finishReason: record.finishReason as string | undefined,
     moderationStatus: record.moderationStatus as EvalResult['moderationStatus'],
+    outputImageSafetyStatus:
+      record.outputImageSafetyStatus as EvalResult['outputImageSafetyStatus'],
     moderationCategories:
       record.moderationCategories as EvalResult['moderationCategories'],
     detail: record.detail as string | undefined,

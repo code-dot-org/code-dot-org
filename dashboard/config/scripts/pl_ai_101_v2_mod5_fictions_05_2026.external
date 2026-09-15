@@ -17,112 +17,102 @@ In each example, a teacher or student uses AI to support a task. Your job is to 
 
 <div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
 
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
-<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario 1
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA">
+
+<div style="font-size:18px; font-weight:600; margin-bottom:8px;">
+Confident Answers
 </div>
-<div style="font-size:16px; color:#555; margin-bottom:10px;">
-A 5th-grade teacher is preparing a quick mini-lesson on ecosystems and wants to include an engaging fact about the Amazon rainforest. They use AI to generate a quick explanation and get the following response.<br><br>
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:12px;">
+A 5th-grade teacher is preparing a quick mini-lesson on ecosystems and wants to include an engaging fact about the Amazon rainforest. They use AI to generate a quick explanation and receive the following response.
 </div>
-<div style="background:#F7F8FA; border-left:5px solid #000000; border-radius:14px; padding:14px; margin-bottom:4px;">
-<div style="font-size:16px">
-The Amazon rainforest produces 50% of the world’s oxygen, making it the “lungs of the Earth.”
+
+<div style="background:#F7F8FA; border-left:5px solid #000; border-radius:10px; padding:14px;">
+<div style="font-size:15px; line-height:1.45;">
+The Amazon rainforest produces 50% of the world's oxygen, making it the "lungs of the Earth."
 </div>
 </div>
+
 </summary>
 
-<div style="padding:18px; font-size:18px; line-height:1.5;">
-<p style="font-size:16px;">This response includes a widely repeated but misleading statistic that oversimplifies how oxygen cycles work. It sounds authoritative and complete, but presents an inaccurate claim without context or verification.</p>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+
+<p style="margin:0; font-size:15px; line-height:1.5; color:#555;">
+This response includes a widely repeated but misleading statistic that oversimplifies how oxygen cycles work. It sounds authoritative and complete, but presents an inaccurate claim without context or verification.
+</p>
+
 </div>
+
 </details>
 
-<br>
+</div>
 
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
-<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario 2
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
+
+<div style="font-size:18px; font-weight:600; margin-bottom:8px;">
+Oversimplifcation
 </div>
-<div style="font-size:16px; color:#555; margin-bottom:10px;">
-A 6th-grade math teacher is planning a lesson on ratios and wants to better support a wide range of learners in their classroom. They ask AI for ideas on how to differentiate the assignment.<br><br>
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:12px;">
+A 6th-grade math teacher is planning a lesson on ratios and wants to better support a wide range of learners in their classroom. They ask AI for ideas on how to differentiate the assignment.
 </div>
-<div style="background:#F7F8FA; border-left:5px solid #000000; border-radius:14px; padding:14px; margin-bottom:4px;">
-<div style="font-size:16px">A good way to differentiate this lesson is to give struggling students an easier version of the assignment and advanced students a harder version. This ensures all students are working at the right level.
+
+<div style="background:#F7F8FA; border-left:5px solid #000; border-radius:10px; padding:14px;">
+<div style="font-size:15px; line-height:1.45;">
+A good way to differentiate this lesson is to give struggling students an easier version of the assignment and advanced students a harder version. This ensures all students are working at the right level.
 </div>
 </div>
+
 </summary>
 
-<div style="padding:18px; font-size:16px; line-height:1.5;">
-<p style="font-size:16px;">
-This response oversimplifies differentiation by reducing it to “easier vs. harder” tasks, which does not reflect best instructional practice. It presents a partial and potentially misleading strategy as if it were complete and effective.</p>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+
+<p style="margin:0; font-size:15px; line-height:1.5; color:#555;">
+This response oversimplifies differentiation by reducing it to "easier versus harder" tasks, which does not reflect best instructional practice. It presents a partial strategy as if it were complete, leaving out important approaches such as scaffolding, student choice, flexible grouping, and varied supports.
+</p>
+
 </div>
+
 </details>
 
-<br>
+</div>
 
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
-<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario 3
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
+
+<div style="font-size:18px; font-weight:600; margin-bottom:8px;">
+Missing Context
 </div>
-<div style="font-size:16px; color:#555; margin-bottom:10px;">
-An 8th-grade science student is researching climate change for a class project. They use AI to help summarize key causes and possible solutions.<br><br>
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:12px;">
+A 9th-grade social studies teacher is grading short-answer responses about a historical event and uses AI to help generate feedback for students. One student submits an answer that shows partial understanding but includes some confusion.
 </div>
-<div style="background:#F7F8FA; border-left:5px solid #000000; border-radius:14px; padding:14px; margin-bottom:4px;">
-<div style="font-size:16px">Climate change is mainly caused by pollution from factories, so reducing industrial emissions is the most important solution.
+
+<div style="background:#F7F8FA; border-left:5px solid #000; border-radius:10px; padding:14px;">
+<div style="font-size:15px; line-height:1.45;">
+This response is incorrect because it does not match the expected answer. The student should review the material and try again.
 </div>
 </div>
+
 </summary>
 
-<div style="padding:18px; font-size:16px; line-height:1.5;">
-<p style="font-size:16px;">
-This response overgeneralizes a complex issue by focusing on a single cause and solution, leaving out important contributing factors. It presents an incomplete explanation in a confident tone, which can mislead learners.</p>
-</div>
-</details>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
 
-<br>
+<p style="margin:0; font-size:15px; line-height:1.5; color:#555;">
+This response ignores the student's partial understanding and provides feedback that is generic rather than instructional. By treating the answer as simply right or wrong, it misses an opportunity to identify misconceptions and guide the student's next steps.
+</p>
 
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
-<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario 4
 </div>
-<div style="font-size:16px; color:#555; margin-bottom:10px;">
-A 9th-grade social studies teacher is grading short-answer responses about a historical event and uses AI to help generate feedback for students. One student submits an answer that shows partial understanding but includes some confusion.<br><br>
-</div>
-<div style="background:#F7F8FA; border-left:5px solid #000000; border-radius:14px; padding:14px; margin-bottom:4px;">
-<div style="font-size:16px">This response is incorrect because it does not match the expected answer. The student should review the material and try again.
-</div>
-</div>
-</summary>
 
-<div style="padding:18px; font-size:16px; line-height:1.5;">
-<p style="font-size:16px;">
-This response assumes a single correct answer and ignores the student’s partial understanding or reasoning. It provides incomplete and unhelpful feedback while presenting itself as sufficient.</p>
-</div>
-</details>
-
-<br>
-
-<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden;">
-<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; list-style:none;">
-<div style="font-size:18px; font-weight:600; margin-bottom:6px;">
-Scenario 5
-</div>
-<div style="font-size:16px; color:#555; margin-bottom:10px;">
-A 10th-grade English teacher is supporting a student who is revising an essay. The student uses AI to get feedback on how to improve their writing.<br><br>
-</div>
-<div style="background:#F7F8FA; border-left:5px solid #000000; border-radius:14px; padding:14px; margin-bottom:4px;">
-<div style="font-size:16px">To improve this essay, you should replace simple words with more advanced vocabulary and make your sentences longer. For example, instead of saying “The character is sad,” you could write “The character is experiencing profound melancholy.” This will make your writing more sophisticated.
-</div>
-</div>
-</summary>
-
-<div style="padding:18px; font-size:16px; line-height:1.5;">
-<p style="font-size:16px;">
-This response promotes a narrow and misleading view of good writing by equating complexity with quality. It ignores important elements like clarity, voice, and purpose while presenting its advice as universally correct.</p>
-</div>
 </details>
 
 </div>

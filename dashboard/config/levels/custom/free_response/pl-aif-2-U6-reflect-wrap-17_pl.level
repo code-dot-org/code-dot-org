@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-07-10T19:04:36.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "The Culmination of Designing and Building with AI",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "Throughout this professional learning module, you have explored the essential components and strategies needed to facilitate this project.\r\n\r\n## Workflow\r\n\r\nHow to guide students through:\r\n\r\n* Milestones to define evidence of learning  \r\n* Benchmarks to pause, review progress, and rotate the Project Leader role  \r\n\r\n## Tools\r\n\r\nHow to use:\r\n\r\n* The **Kanban Project Planning Board** to make daily work visible  \r\n* The **Capstone.md File** to capture the *how* and *why* behind decisions  \r\n\r\n## Grading Strategies\r\n\r\nHow to evaluate **holistic student growth** by:\r\n\r\n* Looking across multiple artifacts  \r\n* Valuing reasoning and clarity over feature count\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid var(--background-brand-purple-primary-fixed); display: inline-block;\">\r\n    ➡️ Explore the full  <a href='https://studio.code.org/courses/artificial-intelligence-foundations-semester2-2025/units/6/lessons/1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a> here.\r\n</p>\r\n\r\n---\r\n\r\n## Reflection\r\n\r\n\r\n>In an era where AI tools can easily generate code or suggest features, this capstone requires us to assess student judgment rather than just their final product.\r\n>\r\n> Knowing that a polished app without clear reasoning may score lower than a simpler app with strong explanations and intentional scope, how will you shift your classroom culture so that students value clear reasoning, intentional trade-offs, and process over simply racing to finish the project?\r\n\r\n\r\n\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18982,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-07-10T19:04:36.169+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U6-reflect-wrap-17\\\"\"],\"cloned_from\":\"pl-aif-2-U6-reflect-wrap-17\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

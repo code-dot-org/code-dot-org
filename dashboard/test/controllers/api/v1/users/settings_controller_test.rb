@@ -48,6 +48,8 @@ class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
         _(body).must_include 'can_delete_own_account'
         _(body).must_include 'authentication_options'
         _(body).must_include 'dependent_students_count'
+        _(body).must_include 'gender'
+        _([true, false]).must_include body['is_usa']
       end
 
       it 'sets Cache-Control no-store' do
@@ -69,6 +71,14 @@ class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
         _(body['user_type']).must_equal 'student'
         _(body['age']).must_equal user.age
         _(body['us_state']).must_equal 'WA'
+      end
+
+      it 'round-trips the student gender input' do
+        user.update!(gender_student_input: 'Example gender')
+
+        get_settings
+
+        _(body['gender']).must_equal 'Example gender'
       end
     end
 

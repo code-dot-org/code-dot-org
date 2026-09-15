@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 17:26:25 UTC",
+    "serialized_at": "2026-07-10 21:26:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6817,10 +6817,11 @@
     },
     {
       "name": "Designing Secure Systems",
-      "url": "https://docs.google.com/presentation/d/1G2R8-LwkTCjdWFDNNzJzs72oaMSv_O46HfNPUHE8PYs/view",
+      "url": "https://docs.google.com/presentation/d/1U7Gap63attAW_8PPuzk30xCSatwGLtU0wPvCcG0ROn4/edit?usp=sharing",
       "key": "designing_secure_systems",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {

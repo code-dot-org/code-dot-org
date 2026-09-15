@@ -88,6 +88,26 @@ window.Element.prototype.getClientRects = function () {
 
 global.$ = global.jQuery = $;
 global.IN_UNIT_TEST = true;
+
+// Blockly 13 uses constructed CSSStyleSheet APIs not yet implemented in jsdom 20.
+// Polyfill them so blockly_compressed.js can load without crashing.
+if (typeof CSSStyleSheet !== 'undefined' && !CSSStyleSheet.prototype.replace) {
+  CSSStyleSheet.prototype.replace = function () {
+    return Promise.resolve(this);
+  };
+  CSSStyleSheet.prototype.replaceSync = function () {};
+}
+if (!('adoptedStyleSheets' in document)) {
+  Object.defineProperty(document, 'adoptedStyleSheets', {
+    configurable: true,
+    get() {
+      return this._adoptedStyleSheets ?? [];
+    },
+    set(sheets) {
+      this._adoptedStyleSheets = sheets;
+    },
+  });
+}
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.TransformStream = TransformStream;

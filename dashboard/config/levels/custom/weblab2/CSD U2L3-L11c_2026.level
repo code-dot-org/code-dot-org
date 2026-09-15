@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Special Character \"&\"",
-    "long_instructions": "# Extra Code: Special Character \"&\"\r\n\r\nThe ampersand character (**&**) can cause errors in your HTML code because it is actually used for other special characters like less than symbols (**<** is encoded as `&lt;`), and double quotation marks (**\"** is encoded as`&quot;`). \r\n\r\nTo use the **&** character in a paragraph correctly, you need the special code `&amp;`.\r\n*Yes, you need an ampersand to encode an ampersand!*\r\n<br>In this activity, you'll make up a list some of your favorite things and practice using ampersands. \r\n\r\n# Do This\r\n1) Read the HTML and look for where the `&amp;` code is used correctly.\r\n* Replace the ampersand that is causing pink code with the special code for the symbol.\r\n* Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol!\r\n",
+    "long_instructions": "# Extra Code: Special Character \"&\"\r\n\r\nThe ampersand character (**&**) can cause errors in your HTML code because it is actually used for other special characters like less than symbols (**<** is encoded as `&lt;`), and double quotation marks (**\"** is encoded as`&quot;`). \r\n\r\nTo use the **&** character in a paragraph correctly, you need the special code `&amp;`.\r\n*Yes, you need an ampersand to encode an ampersand!*\r\n<br>In this activity, you'll make up a list some of your favorite things and practice using ampersands. \r\n\r\n# Do This\r\n1) Read the HTML and look for where the `&amp;` code is used correctly.\r\n* Replace the ampersand that is causing an HTML error with the special code for the symbol.\r\n* Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol!\r\n",
     "bubble_choice_description": "Learn the code for the special character \"&\" and practice using it. ",
     "thumbnail_url": "https://images.code.org/7e4aa1111c203fac07279162a8a9432c-c.jpg",
     "submittable": "false",
@@ -35,7 +35,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    \n    <!-- 2) Replace the ampersand that is causing pink code with the special code for the symbol -->\n    <h2>This &amp; That</h2>\n    <p>Favorite store: H&amp;M</p>\n    <p>Favorite TV Show: Locke & Key</p>\n    \n    <!-- 3) Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol! -->\n    <p>Favorite candy: </p>\n    <p>Favorite food combination:</p>\n    <p>School colors: </p>\n    <p>Favorite movie:</p>\n    <p></p>\n  </body>\n</html>",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n    \n    <!-- 2) Replace the ampersand that is causing an HTML error with the special code for the symbol -->\n    <h2>This &amp; That</h2>\n    <p>Favorite store: H&amp;M</p>\n    <p>Favorite TV Show: Locke & Key</p>\n    \n    <!-- 3) Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol! -->\n    <p>Favorite candy: </p>\n    <p>Favorite food combination:</p>\n    <p>School colors: </p>\n    <p>Favorite movie:</p>\n    <p></p>\n  </body>\n</html>",
           "active": true,
           "folderId": "0"
         }

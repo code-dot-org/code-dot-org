@@ -33,16 +33,11 @@ export const SongTitlesToArtistTwitterHandle = {
   dancemonkey_tonesandi: 'tonesandimusic',
   dernieredanse_indila: 'Indila',
   dontstartnow_dualipa: 'DUALIPA',
-  euphoria_loreen: 'LOREEN_TALHAOUI',
-  ilkadimisenat_kenandogulu: 'kenandogulu',
   jerusalema_masterkg: 'MasterKGsa',
-  odetocode_brendandominicpaolini: 'CodeWeekEU',
   rainonme_ladygagaftarianagrande: 'ladygaga',
   savagelove_jasonderulo: 'jasonderulo',
-  sayso_dojacat: 'DojaCat',
   // 2021 Songs
   aire_jessejoy: 'jesseyjoy',
-  despedidaycierre_vanesamartin: 'vanesamartin_',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
   synthesize: 'codeorg',
@@ -62,7 +57,6 @@ export const SongTitlesToArtistTwitterHandle = {
   janti_muratboz: 'MuratBoz',
   gee_girlsgen: 'GirlsGeneration',
   growingpains_alessiacara: 'AlessiaCara',
-  stay_thekidlaroi: 'TheKidLaroi',
   // 2022 Songs
   '2beloved_lizzo': 'Lizzo',
   asitwas_harrystyles: 'Harry_Styles',

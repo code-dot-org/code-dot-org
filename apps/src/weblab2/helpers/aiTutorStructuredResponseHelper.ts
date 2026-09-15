@@ -113,7 +113,7 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-type AiTutorAcceptRejectResponse = {
+export type AiTutorAcceptRejectResponse = {
   explanation?: string;
   videoUrl?: string;
   code: AiTutorModelCodeFile[];

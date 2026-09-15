@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-08-25T21:14:14.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## John McCarthy\n\n### Named and Founded the Field\n\n*Image attribution: [John McCarthy at Stanford](https://commons.wikimedia.org/wiki/File:John_McCarthy_Stanford.jpg) by Flickr user null0, via Wikimedia Commons. CC BY-SA 2.0.*\n",
+        "imageUrl": "https://images.code.org/a8c9c520c56638607df0f8903b66898a-mccarthy.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "### What He Contributed\n\nMcCarthy was a computer scientist who helped establish AI as a formal discipline. In 1955, he coined the term “artificial intelligence” and helped organize the 1956 Dartmouth Conference — the workshop widely treated as the founding moment of AI as a field.<sup>2</sup> He also created LISP, a programming language designed for symbolic AI research.<sup>1</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n",
+        "imageUrl": "https://images.code.org/81928f09ebf67602cd215dcc65ad82b5-researchers.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "### Connection to AI History\n\nMcCarthy’s contributions sit at the very beginning of AI as a recognized discipline. By naming the field and convening its first major research gathering, he turned a collection of ideas into an organized scientific effort with a shared identity and agenda.<sup>1</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n",
+        "imageUrl": "https://images.code.org/d75de4f0a8131d4f0dd81567a032dd07-early_lab.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Why It Matters\n\nWithout a name and a community, AI might have developed more slowly or in a fragmented way. McCarthy’s role in naming, organizing, and building tools for the field helped researchers collaborate and build on each other's work from the very start.<sup>1</sup>\n\n*Image attribution: [Photo](https://unsplash.com/photos/a-computer-chip-with-the-letter-a-on-top-of-it-eGGFZ5X2LnA) by [Igor Omilaev](https://unsplash.com/@omilaev) on Unsplash.*\n\n**Sources**\n\n1. [Computer History Museum — John McCarthy](https://computerhistory.org/profile/john-mccarthy)\n2. [Dartmouth Alumni Magazine — The Birth of Artificial Intelligence](https://dartmouthalumnimagazine.com/articles/birth-artificial-intelligence)\n\n",
+        "imageUrl": "https://images.code.org/c8b5db23f3dce50c2b7f475d24867858-ai_code.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "name_suffix": "_aif-7-2026",
+    "display_name": "John McCarthy",
+    "bubble_choice_description": "Choose John McCarthy to explore how he named artificial intelligence, helped organize the field’s founding conference, and created tools for early AI research.",
+    "use_links": "false",
+    "thumbnail_url": "https://images.code.org/a8c9c520c56638607df0f8903b66898a-mccarthy.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:14:14.650+00:00\",\"changed\":[\"cloned from \\\"ai-history-lesson2-level1b-v3-2026\\\"\"],\"cloned_from\":\"ai-history-lesson2-level1b-v3-2026\"}]"
+}]]></config>
+</Panels>

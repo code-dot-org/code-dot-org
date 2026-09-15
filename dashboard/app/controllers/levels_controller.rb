@@ -12,7 +12,7 @@ class LevelsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
-  before_action :set_level, only: [:show, :edit, :update, :destroy]
+  before_action :set_level, only: [:show, :edit, :update, :destroy, :build_quiz_questions]
 
   LEVELS_PER_PAGE = 30
 
@@ -51,6 +51,7 @@ class LevelsController < ApplicationController
     Poetry,
     PublicKeyCryptography,
     Pythonlab,
+    Quiz,
     Sketchlab,
     StandaloneVideo,
     StarWarsGrid,
@@ -162,7 +163,11 @@ class LevelsController < ApplicationController
     # TODO: TEACH-1864 pass in unit_group_unit
     properties = {}
     additional_parameters = {}
-    additional_parameters[:widget2_start_sources] = params[:widget2] if params[:widget2].present?
+    # This action is open to signed out users and the parameter names a directory to
+    # read, so honor it only for a user who could edit a widget2.
+    if params[:widget2].present? && can?(:manage, :widget2)
+      additional_parameters[:widget2_start_sources] = params[:widget2]
+    end
     properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user, **additional_parameters)
     if @level.is_a?(BubbleChoice)
       @level.sublevels.each do |sublevel|
@@ -265,6 +270,19 @@ class LevelsController < ApplicationController
 
     @is_start_mode = type == 'start_blocks'
 
+    show
+    render :show
+  end
+
+  # GET /levels/:id/build_quiz_questions
+  #
+  # Renders the lab2 show page, but with is_building_quiz_questions threaded
+  # through app_options (see LevelsHelper#lab2_options) so the
+  # question-building UI is shown instead of the quiz-taking UI.
+  def build_quiz_questions
+    return head :not_found unless @level.is_a?(Quiz)
+
+    level_view_options(@level.id, is_building_quiz_questions: true)
     show
     render :show
   end
@@ -583,13 +601,17 @@ class LevelsController < ApplicationController
       if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
 
-        if [Javalab, Music, Pythonlab, Weblab2, Dancelab, Sketchlab].include?(@level.class)
+        if @level.channel_backed?
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
           links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
 
-          if [Music, Dancelab].include?(@level.class)
+          if @level.is_a?(Blockly)
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
+        end
+
+        if @level.is_a?(Quiz)
+          links[@level.name] << {text: 'Build quiz questions', url: build_quiz_questions_level_path(@level)}
         end
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}

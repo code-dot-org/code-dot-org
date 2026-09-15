@@ -155,26 +155,6 @@ $text-shadow-gray: #5a5a5a;
   -ms-touch-action: none;
 }
 
-.arrow {
-  @include no-interact;
-  display: inline !important;
-  padding: 0 !important;
-  margin-top: 5px !important;
-  touch-action: none;
-  -ms-touch-action: none;
-}
-
-@mixin arrow-icon($assetUrl) {
-  @include no-interact;
-  background: url($assetUrl) no-repeat !important;
-  background-position: center !important;
-  // TODO: for offset on click, background-position: calc(50% - 50px) 50%;
-  width: 40px !important;
-  height: 40px !important;
-
-  @include pixelated;
-}
-
 #soft-buttons.soft-buttons-compact {
   margin-left: 0;
   button {
@@ -189,36 +169,6 @@ $text-shadow-gray: #5a5a5a;
       margin: 0;
     }
   }
-}
-
-.left-btn {
-  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
-  @include flip-horizontal(1);
-  background-size: 16px 32px !important;
-}
-.right-btn {
-  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
-  background-size: 16px 32px !important;
-}
-.down-btn {
-  @include arrow-icon("#{$root}Sliced_Parts/MC_Down_Arrow_Icon.png");
-  background-size: 28px 20px !important;
-}
-.up-btn {
-  @include arrow-icon("#{$root}Sliced_Parts/MC_Up_Arrow_Icon.png");
-  background-size: 28px 20px !important;
-}
-.scroll-up-btn {
-  @include arrow-icon("#{$root}CDO_MC_ScrollUp.png");
-  background-size: 21px 15px !important;
-  width: 30px !important;
-  height: 30px !important;
-}
-.scroll-down-btn {
-  @include arrow-icon("#{$root}CDO_MC_ScrollDown.png");
-  background-size: 21px 15px !important;
-  width: 30px !important;
-  height: 30px !important;
 }
 
 body {
@@ -361,8 +311,8 @@ body {
   }
 }
 
-a.video_link {
-  color: $lighter_cyan;
+.reference_area a.video_link {
+  color: var(--text-neutral-black-fixed);
 }
 
 #visualizationColumn.pin_bottom {
@@ -542,113 +492,6 @@ $height-to-width: math.div(434, 477);
   .download-button {
     border-style: solid !important;
     border-width: 4px 5px 6px 5px !important;
-
-    @include pixelated;
-    @include gray-button;
-    @include mc-text-shadow;
-    @include main-font-semi-bold;
-
-    font-family: var(--font-family-main) !important;
-    color: $button-text-white !important;
-    font-size: 26px;
-    line-height: 26px;
-
-    display: inline-block;
-    padding: 5px;
-  }
-}
-
-#craft-popup-player-selection {
-  @include craft-popup;
-  @include popup-width-height(540px, 516px);
-
-  @media screen and (max-height: 630px) {
-    @include popup-width-height(540px, 400px);
-  }
-
-  // TODO: Overriding .x-close visibility can be removed once all Minecraft dialogs
-  // use <CraftDialog/> instead of EJS templates.
-  .x-close {
-    visibility: visible;
-  }
-
-  #select-character-text {
-    line-height: 50px;
-    font-size: 22px;
-    color: $lightest_gray;
-  }
-
-  .minecraft-character {
-    float: left;
-    width: 150px;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-
-    @media screen and (max-height: 630px) {
-      padding-left: 25px;
-      padding-right: 25px;
-    }
-    margin-top: 8px;
-  }
-
-  .character-portrait {
-    margin: 0 auto 10px auto;
-    background-size: 100% auto;
-    background-position-x: 0; // 50% for smaller screens
-    background-position-y: 0;
-    background-repeat: no-repeat;
-  }
-
-  #steve-portrait {
-    $width: 144px;
-    $height: 268px;
-    background-image: url("#{$root}Sliced_Parts/Steve_Character_Select.png");
-    .minecraft-events & {
-      background-image: url("#{$root}Events/Steve_Character_Select.png");
-    }
-    width: $width;
-    height: $height;
-    margin-top: 13px; // matches bottom with Alex
-
-    @media screen and (max-height: 630px) {
-      width: $width * 0.5;
-      height: $height * 0.5;
-      margin-top: 0;
-    }
-  }
-
-  #alex-portrait {
-    $width: 136px;
-    $height: 271px;
-    background-image: url("#{$root}Sliced_Parts/Alex_Character_Select.png");
-    .minecraft-events & {
-      background-image: url("#{$root}Events/Alex_Character_Select.png");
-    }
-    width: $width;
-    height: $height;
-
-    @media screen and (max-height: 630px) {
-      width: $width * 0.5;
-      height: $height * 0.5;
-    }
-  }
-
-  #choose-character-container {
-    // center content (IE8+)
-    display: table;
-    margin: 0 auto;
-
-    cursor: pointer;
-
-    @media screen and (max-height: 630px) {
-      margin-top: -18px;
-    }
-  }
-
-  .choose-character-button {
-    border-style: solid !important;
-    border-width: 4px 5px 6px !important;
 
     @include pixelated;
     @include gray-button;
@@ -940,321 +783,15 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-// Use the .no-mc class on a button to prevent it from picking up minecraft
-// styles. This is useful in react which does not support !important.
-.dash_modal button:not(.no-mc),
-.minecraft button:not(.no-mc) {
-  border-style: solid !important;
-  border-width: 4px 5px 6px !important;
-
-  @include pixelated;
-  @include gray-button;
-
-  $run-width: 16px;
-  $reset-width: 40px;
-  $run-left-margin: 6px;
-
-  &.mc-share-button {
-    @include orange-button;
-
-    & > div {
-      margin: 0;
-    }
-
-    padding-top: 10px;
-    padding-bottom: 11px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  &#runButton {
-    min-width: 139px;
-
-    padding-top: 6px;
-    padding-bottom: 4px;
-
-    @include orange-button;
-
-    & > div {
-      margin-top: 4px;
-      margin-left: 2px;
-      margin-right: 18px;
-    }
-
-    .run26 {
-      @include scale-x-browser(2);
-      width: 6px;
-      height: 34px;
-      margin: 16px -3px -18px 23px;
-      padding-right: 13px;
-      background:
-        url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png")
-        no-repeat 0 0;
-
-      @include pixelated;
-    }
-  }
-
-  &#toggleButton {
-    min-width: 110px;
-
-    padding-top: 6px;
-    padding-bottom: 4px;
-
-    & > div {
-      margin-top: 4px;
-      margin-left: 2px;
-      margin-right: 18px;
-    }
-
-    .toggle26 {
-      &.more-btn {
-        background: url("#{$root}CDO_MC_More.png") no-repeat;
-      }
-      &.less-btn {
-        background: url("#{$root}CDO_MC_Less.png") no-repeat;
-      }
-      background-position: center !important;
-      background-size: 18px 20px !important;
-      width: 18px;
-      height: 25px;
-      margin-right: 5px;
-
-      @include pixelated;
-    }
-  }
-
-  &#resetButton {
-    min-width: 139px;
-
-    &.hideText {
-      min-width: 0;
-      width: 62px;
-      height: 62px;
-      img {
-        margin-left: 0;
-        margin-top: -5px;
-      }
-    }
-
-    & > div {
-      font-size: 24px;
-      color: white !important;
-      text-shadow: 2px 2px $text-shadow-gray !important;
-      margin-left: 8px;
-      padding-right: 0;
-      margin-right: 2px;
-      margin-top: 4px;
-    }
-    padding-top: 6px;
-    padding-bottom: 4px;
-    border-style: solid !important;
-    border-width: 3px 3px 5px 5px !important;
-
-    @include pixelated;
-    -moz-border-image:
-      url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3
-      5 5 stretch !important;
-    -webkit-border-image:
-      url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png")
-      3 3 5 5 stretch !important;
-    -o-border-image:
-      url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3 5
-      5 stretch !important;
-    border-image:
-      url("#{$root}Sliced_Parts/Reset_Button_Up_Slice.png") 3 3 5 5
-      fill stretch !important;
-
-    .reset26 {
-      background:
-        url("#{$root}Sliced_Parts/MC_Reset_Arrow_Icon.png") no-repeat
-        0 0;
-      width: $reset-width;
-      height: 36px;
-      margin-right: 3px;
-      margin-top: -2px;
-      margin-left: -6px;
-      margin-bottom: -3px;
-
-      @include pixelated;
-    }
-
-    &:hover {
-      @include box-shadow(none);
-    }
-
-    &:active {
-      outline: none;
-      border-style: solid !important;
-      border-width: 5px 4px 3px 3px !important;
-
-      @include pixelated;
-      -moz-border-image:
-        url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png")
-        5 4 3 3 stretch !important;
-      -webkit-border-image:
-        url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png")
-        5 4 3 3 stretch !important;
-      -o-border-image:
-        url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png") 5
-        4 3 3 stretch !important;
-      border-image:
-        url("#{$root}Sliced_Parts/Reset_Button_Down_Slice.png") 5 4
-        3 3 fill stretch !important;
-    }
-  }
-
-  @include mc-text-shadow;
-  @include main-font-semi-bold;
-
-  font-family: var(--font-family-main) !important;
-  color: $button-text-white !important;
-  font-size: 26px;
-
-  &#ok-button {
-    background-color: inherit;
-    border: inherit;
-  }
-}
-
 #prompt-icon {
   width: 100%;
 }
 
-.minecraft .dash_modal {
-  top: 80px;
-  margin-left: -340px;
-
-  background-color: $dark_charcoal;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-
-  border-style: solid;
-  border-width: 18px 21px 22px 19px;
-
-  @include pixelated;
-  -moz-border-image:
-    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
-    stretch;
-  -webkit-border-image:
-    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
-    stretch;
-  -o-border-image:
-    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19
-    stretch;
-  border-image:
-    url("#{$root}Sliced_Parts/Pop_Up_Slice.png") 18 21 22 19 fill
-    stretch;
-
-  .modal-image {
-    margin-left: -21px;
-    html[dir="rtl"] & {
-      margin-left: 0;
-      margin-right: -32px;
-    }
-
-    margin-top: -115px;
-    width: auto;
-  }
-
-  .x-close {
-    @include mc-x-close-button;
-  }
-
-  .modal-content .lines-of-code-message,
-  .show-code summary {
-    color: $lighter_gray;
-  }
-
-  .show-code summary:hover {
-    color: $dark_charcoal;
-  }
-
-  #show-code,
-  #feedbackButtons,
-  #puzzleRatingButtons,
-  #sharing {
-    margin-left: -100px;
-    html[dir="rtl"] & {
-      margin-right: -100px;
-      margin-left: 0;
-    }
-
-    .generated-code-container {
-      margin-left: 0;
-    }
-  }
-
-  @media screen and (max-height: 630px) {
-    .win-feedback #sharing .feedback-image {
-      margin-left: 80px;
-      width: 90px;
-      height: 90px;
-    }
-  }
-
-  #sharing {
-    color: $lightest_gray;
-
-    button {
-      font-size: 20px;
-      height: 40px;
-      padding: 5px;
-    }
-    .social-buttons a:hover {
-      background: none !important;
-      fill: white !important;
-    }
-  }
-
-  #puzzleRatingButtons a:hover.puzzle-rating-btn {
-    background: none !important;
-    fill: white !important;
-  }
-
-  p {
-    line-height: 27px !important;
-    font-size: 24px !important;
-    color: $lightest_gray !important;
-  }
-
-  span.thumbnail-warning {
-    color: $lightest_gray;
-  }
-
-  p.congrats {
-    margin-left: 69px;
-  }
-  .failure-feedback p.congrats {
-    margin-left: 0;
-  }
-
-  // Video notes
-  #notes .note p {
-    color: $dark_charcoal;
-  }
-
-  // "Show Code" explanation
-  .generated-code-container .generatedCodeMessage p {
-    color: $lightest_gray;
-
-    a {
-      color: $lighter_purple;
-    }
-  }
-
-  .dialog-title {
-    @include mc-text-shadow;
-    color: $header-text-yellow;
-  }
-
-  #feedbackButtons:after {
-    display: none;
-  }
-}
-
 // callout styling
+
+.qtip {
+  max-width: 340px;
+}
 
 .qtip-content {
   color: white;
@@ -1435,7 +972,7 @@ $height-to-width: math.div(434, 477);
     #score-inner {
       @include scoreboard-background;
       top: -411px;
-      height: 17px;
+      height: 25px;
       float: left;
       position: relative;
       left: -50%;

@@ -6,7 +6,6 @@ import {Provider} from 'react-redux';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import Match from '@cdo/apps/code-studio/levels/match';
-import {LegacySingleLevelGroupDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import {getStore} from '@cdo/apps/redux';
 import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
@@ -194,11 +193,10 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
         : i18n.submittableComplete();
     }
 
+    // Shown by _dialog.js when the Submit button is pressed.
     let confirmationDialog = null;
     if (!isActivityGuideLevel) {
-      confirmationDialog = (
-        <LegacySingleLevelGroupDialog id={id} title={title} body={body} />
-      );
+      confirmationDialog = {id, title, body};
     }
 
     return {

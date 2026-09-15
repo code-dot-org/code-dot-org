@@ -1,4 +1,26 @@
-import {scrollIntoViewIfNeeded} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {Tour} from 'shepherd.js';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  recordOnboardingTourAbandonment,
+  scrollIntoViewIfNeeded,
+} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {tryGetSessionStorage} from '@cdo/apps/utils';
+
+jest.mock('@cdo/apps/utils', () => ({
+  ...jest.requireActual('@cdo/apps/utils'),
+  tryGetSessionStorage: jest.fn(),
+}));
+
+const mockTryGetSessionStorage = tryGetSessionStorage as jest.MockedFunction<
+  typeof tryGetSessionStorage
+>;
+
+const makeTour = (currentStepId?: string): Tour =>
+  ({
+    currentStep: currentStepId ? {id: currentStepId} : undefined,
+  } as unknown as Tour);
 
 const makeElement = (rect: Partial<DOMRect>): HTMLElement => {
   const el = document.createElement('div');
@@ -65,5 +87,78 @@ describe('scrollIntoViewIfNeeded', () => {
     const el = makeElement({top: 800, bottom: 1000});
     scrollIntoViewIfNeeded(el);
     expect(el.scrollIntoView).toHaveBeenCalledWith({block: 'center'});
+  });
+
+  // Shepherd passes undefined for a centered step that has no attachTo target.
+  it('does nothing when the element is undefined', () => {
+    expect(() => scrollIntoViewIfNeeded(undefined)).not.toThrow();
+  });
+});
+
+describe('recordOnboardingTourAbandonment', () => {
+  let sendEventSpy: jest.SpyInstance;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(jest.fn());
+  });
+
+  it('sends the abandoned event with the current step id when nothing is pending', () => {
+    mockTryGetSessionStorage.mockReturnValue('');
+
+    recordOnboardingTourAbandonment(
+      makeTour('step-1'),
+      'session-key',
+      'my_tour'
+    );
+
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.ONBOARDING_TOUR_ABANDONED,
+      {tour_name: 'my_tour', step_id: 'step-1'}
+    );
+  });
+
+  it('sends the abandoned event when the pending step matches the current step', () => {
+    mockTryGetSessionStorage.mockReturnValue('step-1');
+
+    recordOnboardingTourAbandonment(
+      makeTour('step-1'),
+      'session-key',
+      'my_tour'
+    );
+
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.ONBOARDING_TOUR_ABANDONED,
+      {tour_name: 'my_tour', step_id: 'step-1'}
+    );
+  });
+
+  it('does not send an event when a different step is pending (a hand-off to the next page)', () => {
+    mockTryGetSessionStorage.mockReturnValue('next-page-step');
+
+    recordOnboardingTourAbandonment(
+      makeTour('step-1'),
+      'session-key',
+      'my_tour'
+    );
+
+    expect(sendEventSpy).not.toHaveBeenCalled();
+  });
+
+  it('sends the event with an undefined step id when the tour has no current step', () => {
+    mockTryGetSessionStorage.mockReturnValue('');
+
+    recordOnboardingTourAbandonment(
+      makeTour(undefined),
+      'session-key',
+      'my_tour'
+    );
+
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.ONBOARDING_TOUR_ABANDONED,
+      {tour_name: 'my_tour', step_id: undefined}
+    );
   });
 });

@@ -20,10 +20,7 @@ import {captureThumbnailFromSvgPythonlabNeighborhood} from '@cdo/apps/util/thumb
 import {getValidationFromSource, RunType} from '../codebridge';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
-import {
-  asyncRun,
-  restartPyodideIfProgramIsRunning,
-} from './pyodideWorkerManager';
+import {asyncRun, restartPyodideIfProgramIsRunning} from './pyodideManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 const appName = 'pythonlab';
@@ -47,6 +44,9 @@ export async function handleRunClick(
     handleRunEndedUnexpectedly(consoleManager, pythonlabI18n.noCode());
     return;
   }
+  // Set before the run's first write, and left set past the end of the run:
+  // restoring announcements there would talk over the closing summary.
+  consoleManager?.setNarrating(isNeighborhoodLevel() && !runTests);
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
@@ -66,6 +66,9 @@ export async function handleRunClick(
     if (isNeighborhoodLevel()) {
       setProjectThumbnail();
     }
+    if (isTheaterLevel()) {
+      resetTheaterIfNoOutput();
+    }
   }
 }
 
@@ -78,7 +81,13 @@ export async function runPythonCode(
     const isNeighborhoodRun = isNeighborhoodLevel();
     if (isNeighborhoodRun) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+      // Validation sends the painter no signals, so there is nothing to narrate.
+      CodebridgeRegistry.getInstance()
+        .getNeighborhood()
+        ?.onRun(!validationFile);
+    }
+    if (isTheaterLevel()) {
+      CodebridgeRegistry.getInstance().getTheater()?.reset();
     }
     // We only send all output to the neighborhood if this is a neighborhood level and
     // we are not running validation, as validation does not render to the neighborhood.
@@ -100,6 +109,9 @@ export async function runPythonCode(
 export function stopPythonCode() {
   if (isNeighborhoodLevel()) {
     CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  }
+  if (isTheaterLevel()) {
+    CodebridgeRegistry.getInstance().getTheater()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
@@ -155,27 +167,50 @@ export async function runAllTests(
   }
 }
 
+// A run that ended without producing any media -- most often because it threw --
+// would otherwise leave the previous run's stage standing. Safe to check at this
+// point because the sandbox delivers theater media before it reports the run
+// complete.
+function resetTheaterIfNoOutput() {
+  const theater = CodebridgeRegistry.getInstance().getTheater();
+  if (!theater?.hasOutput()) {
+    theater?.reset();
+  }
+}
+
+function getMiniApp() {
+  return getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
+    ?.name;
+}
+
 function isNeighborhoodLevel() {
-  return (
-    getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
-      ?.name === MiniApps.Neighborhood
-  );
+  return getMiniApp() === MiniApps.Neighborhood;
+}
+
+function isTheaterLevel() {
+  return getMiniApp() === MiniApps.Theater;
 }
 
 function handleRunEndedUnexpectedly(
   consoleManager: ConsoleManager | null,
   message: string
 ) {
+  // Nothing ran, so the console speaks for itself.
+  consoleManager?.setNarrating(false);
   consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
   if (isNeighborhoodLevel()) {
     // We reset, run, and close the neighborhood to ensure that the neighborhood
     // properly resets the run button back to run (from stop), and to reset the
     // neighborhood to its original state.
     CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    // Nothing ran, so there is nothing to narrate.
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun(false);
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
+    if (isTheaterLevel()) {
+      CodebridgeRegistry.getInstance().getTheater()?.reset();
+    }
   }
 }
 

@@ -1,7 +1,10 @@
 import {Editor} from '@codebridge/Editor/Editor';
-import {render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 
+import '@testing-library/jest-dom';
+
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
 let mockAiTutorDisabled = false;
@@ -18,6 +21,7 @@ let mockState: {
             active: boolean;
             contents: string;
             folderId: string;
+            url?: string;
           };
         };
         folders: Record<string, never>;
@@ -125,5 +129,58 @@ describe('Editor AI tutor affordance', () => {
 
     const props = (CodeEditor as jest.Mock).mock.calls[0][0];
     expect(props.editorConfigExtensions).toHaveLength(0);
+  });
+});
+
+describe('Editor non-editable file views', () => {
+  beforeEach(() => {
+    mockAiTutorDisabled = false;
+    mockEnableUserAddedSelectionContext = true;
+  });
+
+  const setActiveFile = (name: string, url?: string) => {
+    mockState = {
+      lab2Project: {
+        projectSources: {
+          source: {
+            files: {
+              '1': {
+                id: '1',
+                name,
+                active: true,
+                contents: '',
+                folderId: '0',
+                url,
+              },
+            },
+            folders: {},
+            openFiles: ['1'],
+          },
+        },
+        viewingAiTutorVersion: false,
+        projectSourceBeforeAiTutorVersion: undefined,
+      },
+    };
+  };
+
+  it('shows an audio player for a wav file with a url', () => {
+    setActiveFile('bark.wav', 'https://example.com/bark.wav');
+
+    render(<Editor langMapping={{}} editableFileTypes={['html']} />);
+
+    expect(
+      screen.getByRole('button', {name: 'Play bark.wav'})
+    ).toBeInTheDocument();
+  });
+
+  it('shows the cannot-edit message for a wav file with no url', () => {
+    setActiveFile('bark.wav');
+
+    render(<Editor langMapping={{}} editableFileTypes={['html']} />);
+
+    expect(screen.queryByRole('button', {name: 'Play bark.wav'})).toBeNull();
+    expect(
+      screen.getByText(codebridgeI18n.cannotEditFile({language: 'wav'}))
+    ).toBeInTheDocument();
   });
 });

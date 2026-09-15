@@ -3,61 +3,104 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Analyzing the Algorithm
-
-<img src="https://images.code.org/8c57754f154962c0619e3596f0f849e8-image-1741713107783.png" alt="algorithm icon" style="border-radius:10px; float: left; ; height: 125px; margin: 0px 20px 0px 10px; ">
-
-Now that we've explored how algorithms impact our daily lives and the ethical concerns they raise, it's time to put that knowledge into practice.
-
-In this <a href='https://docs.google.com/document/d/1zCe5nxpYzzU7C9rF-D9rqVfpgwgSzOcjShuh2UpeWuw/edit?usp=sharing' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>activity</a>, you'll examine a flawed music recommendation algorithm and consider ways to make it more fair and inclusive. 
-
+<h1>Analyzing the Algorithm</h1>
+<img src="https://images.code.org/8c57754f154962c0619e3596f0f849e8-image-1741713107783.png" alt="Icon representing an algorithm with a settings gear" style="border-radius:10px; float: left; height: 125px; margin: 0px 20px 10px 0px;">
+<p>Now that we've explored how algorithms impact our daily lives and the ethical concerns they raise, it's time to put that knowledge into practice.</p>
+<p>In this <a href="https://docs.google.com/document/d/1zCe5nxpYzzU7C9rF-D9rqVfpgwgSzOcjShuh2UpeWuw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">activity</a>, you'll examine a flawed music recommendation algorithm and consider ways to make it more fair and inclusive.</p>
 <div style="clear:both;"></div>
 
-## Activity: Fixing a Biased Music Algorithm
+<h2>Activity: Fixing a Biased Music Algorithm</h2>
 
-<img src="https://images.code.org/5561f8507048debeb216c77e26493818-image-1741712973124.png" alt="algorithm icon" style="border-radius:10px; float: right; ; height: 300px; margin: 10px 20px 10px 10px; ">
+<h3><b>Step 1: Review the Algorithm</b></h3>
 
-### **Step 1: Review the Algorithm**
+<div style="float:right; width:420px; margin: 4px 0 16px 24px;">
+  <p style="text-align:center; font-weight:bold; color:#4C42CF; margin-bottom: 6px;">Song Recommendation Flow</p>
+  <div style="width:420px; height:390px; overflow:hidden;">
+    <div role="group" aria-label="Song recommendation flowchart. The user selects a song. The program stores the song's genre and recommends another song from that genre. The program asks if the user liked the song. If yes, it recommends another song from the same genre. If no, it recommends a random song from the same genre. Both paths loop back to the decision." style="position:relative; width:700px; height:650px; transform: scale(0.6); transform-origin: top left; background-color:#FFFFFF; border:1px solid #E4E2F8; border-radius:12px; font-family:Arial, Helvetica, sans-serif;">
 
-Take a look at the flowchart in front of you. This represents a music recommendation algorithm that suggests songs to a user based on their first song choice.
+   <div aria-hidden="true" style="position:absolute; left:348px; top:70px; width:4px; height:25px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:341px; top:81px; color:#34BD43; font-size:18px; z-index:1;">▼</div>
 
-**Ask yourself:**
-- How does the algorithm make decisions?
-- What patterns do you notice in how songs are recommended?
+   <div aria-hidden="true" style="position:absolute; left:348px; top:150px; width:4px; height:30px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:341px; top:166px; color:#34BD43; font-size:18px; z-index:1;">▼</div>
 
-### **Step 2: Identify the Problem**
+   <div aria-hidden="true" style="position:absolute; left:348px; top:240px; width:4px; height:35px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:341px; top:259px; color:#34BD43; font-size:18px; z-index:1;">▼</div>
+    <div aria-hidden="true" style="position:absolute; left:185px; top:333px; width:85px; height:4px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:183px; top:333px; width:4px; height:97px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:176px; top:415px; color:#34BD43; font-size:18px; z-index:1;">▼</div>
+    <div aria-hidden="true" style="position:absolute; left:430px; top:333px; width:87px; height:4px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:513px; top:333px; width:4px; height:97px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:506px; top:415px; color:#34BD43; font-size:18px; z-index:1;">▼</div>
 
-Think critically about the limitations of this algorithm.
-**Consider:**
+   <div aria-hidden="true" style="position:absolute; left:183px; top:510px; width:4px; height:36px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:513px; top:510px; width:4px; height:36px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:183px; top:542px; width:334px; height:4px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:348px; top:542px; width:4px; height:28px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:341px; top:556px; color:#34BD43; font-size:18px; z-index:1;">▼</div>
+    <div aria-hidden="true" style="position:absolute; left:450px; top:597px; width:220px; height:4px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:666px; top:333px; width:4px; height:268px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:430px; top:333px; width:240px; height:4px; background-color:#34BD43; z-index:1;"></div>
+      <div aria-hidden="true" style="position:absolute; left:428px; top:325px; color:#34BD43; font-size:18px; z-index:1;">◀</div>
 
-- Does this recommendation system encourage variety, or does it keep users within a narrow selection of songs?
-- How might this impact users who want to discover new music?
-- Are there any unintended biases in how it selects songs?
+  <div style="position:absolute; left:260px; top:20px; width:180px; height:50px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#E4E2F8; color:#000000; border:4px solid #4C42CF; border-radius:28px; font-size:16px; font-weight:bold; z-index:2;">
+        User selects<br>a song
+      </div>
+    <div style="position:absolute; left:265px; top:95px; width:170px; height:55px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#000000; border:4px solid #0099F3; border-radius:5px; font-size:16px; font-weight:bold; z-index:2;">
+        Store the song's genre
+      </div>
+    <div style="position:absolute; left:240px; top:180px; width:220px; height:60px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#000000; border:4px solid #0099F3; border-radius:5px; font-size:16px; font-weight:bold; line-height:1.3; z-index:2;">
+        Recommend a song from<br>the same genre
+      </div>
 
+  <div style="position:absolute; left:290px; top:275px; width:120px; height:120px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; background-color:#FFE3CE; border:4px solid #F46B00; transform:rotate(45deg); z-index:2;">
+        <div style="width:105px; color:#000000; text-align:center; font-size:16px; font-weight:bold; line-height:1.2; transform:rotate(-45deg);">
+          Did the user<br>like the song?
+        </div>
+      </div>
+    <span style="position:absolute; left:220px; top:302px; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:14px; padding:2px 9px; font-size:15px; font-weight:bold; z-index:3;">Yes</span>
+      <span style="position:absolute; left:455px; top:302px; background-color:#CCF1D0; color:#000000; border:2px solid #34BD43; border-radius:14px; padding:2px 9px; font-size:15px; font-weight:bold; z-index:3;">No</span>
+    <div style="position:absolute; left:55px; top:430px; width:260px; height:80px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#000000; border:4px solid #0099F3; border-radius:5px; padding:10px; font-size:16px; font-weight:bold; line-height:1.3; z-index:2;">
+        Recommend another song<br>from the same genre
+      </div>
+    <div style="position:absolute; left:385px; top:430px; width:260px; height:80px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#000000; border:4px solid #0099F3; border-radius:5px; padding:10px; font-size:16px; font-weight:bold; line-height:1.3; z-index:2;">
+        Recommend a random song<br>from the same genre
+      </div>
+    <div style="position:absolute; left:250px; top:570px; width:200px; height:55px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; text-align:center; background-color:#D5EFFF; color:#000000; border:4px solid #0099F3; border-radius:5px; padding:8px; font-size:16px; font-weight:bold; z-index:2;">
+        Loop back to the decision
+      </div>
 
-### **Step 3: Propose Improvements**
-Now, redesign the algorithm!
-
-- What changes could you make to ensure a more diverse set of recommendations?
-- How could user preferences or feedback be incorporated?
-- How might your improvements create a better experience for a wider range of users?
-
-<div style="clear:both;"></div>
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <h2>Reflection</h2>
-  	<ul style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 20px;">         
-       <li>Can you think of any real-world examples where biased algorithms affect what people see, buy, or experience?</li><br>
-    <li>How can we help students recognize and question biased algorithms in their own lives?.</li><br>
-    <li>What ethical challenges do we face when trying to make algorithm-based decisions fair?</li><br>
-    
-</ul>
+   </div>
+  </div>
 </div>
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 10. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/10' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
+<p>Take a look at the flowchart to the right. This represents a music recommendation algorithm that suggests songs to a user based on their first song choice.</p>
+
+<p><b>Ask yourself:</b></p>
+<p style="margin: 0 0 6px 0;">• How does the algorithm make decisions?</p>
+<p style="margin: 0;">• What patterns do you notice in how songs are recommended?</p>
 
 
+<h3><b>Step 2: Identify the Problem</b></h3>
+<p>Think critically about the limitations of this algorithm. <b>Consider:</b></p>
+<p style="margin: 0 0 6px 0;">• Does this recommendation system encourage variety, or does it keep users within a narrow selection of songs?</p>
+<p style="margin: 0 0 6px 0;">• How might this impact users who want to discover new music?</p>
+<p style="margin: 0;">• Are there any unintended biases in how it selects songs?</p>
 
+<h3><b>Step 3: Propose Improvements</b></h3>
+<p>Now, redesign the algorithm!</p>
+<p style="margin: 0 0 6px 0;">• What changes could you make to ensure a more diverse set of recommendations?</p>
+<p style="margin: 0 0 6px 0;">• How could user preferences or feedback be incorporated?</p>
+<p style="margin: 0;">• How might your improvements create a better experience for a wider range of users?</p>
+
+<h2>Reflection</h2>
+<div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; border-radius: 10px; padding: 15px 20px; width: 90%; margin: 16px auto;">
+<p style="margin: 0 0 6px 0;">• Can you think of any real-world examples where biased algorithms affect what people see, buy, or experience?</p>
+<p style="margin: 0 0 6px 0;">• How can we help students recognize and question biased algorithms in their own lives?</p>
+<p style="margin: 0;">• What ethical challenges do we face when trying to make algorithm-based decisions fair?</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+<p>➡️ This activity is from Lesson 10. You can find more details in the full <a href="https://studio.code.org/s/aif2-2025/lessons/10" target="_blank" rel="noopener noreferrer" style="font-weight:bold;">lesson plan</a>.</p>
+</div>
 MARKDOWN

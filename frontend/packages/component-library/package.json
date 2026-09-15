@@ -215,6 +215,14 @@
       "import": "./dist/fontAwesomeV6Icon/index.mjs",
       "require": "./dist/fontAwesomeV6Icon/index.js"
     },
+    "./form": {
+      "types": {
+        "import": "./dist/form/index.d.ts",
+        "require": "./dist/form/index.d.ts"
+      },
+      "import": "./dist/form/index.mjs",
+      "require": "./dist/form/index.js"
+    },
     "./formFieldWrapper": {
       "types": {
         "import": "./dist/formFieldWrapper/index.d.ts",
@@ -361,6 +369,14 @@
       "import": "./dist/textField/index.mjs",
       "require": "./dist/textField/index.js"
     },
+    "./toast": {
+      "types": {
+        "import": "./dist/toast/index.d.ts",
+        "require": "./dist/toast/index.d.ts"
+      },
+      "import": "./dist/toast/index.mjs",
+      "require": "./dist/toast/index.js"
+    },
     "./toggle": {
       "types": {
         "import": "./dist/toggle/index.d.ts",
@@ -453,7 +469,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jscodeshift": "^0.15.2",
     "jsdom": "catalog:",
-    "postcss": "^8.5.10",
+    "postcss": "^8.5.23",
     "postcss-modules": "^6.0.1",
     "react": "catalog:",
     "react-dom": "catalog:",
@@ -469,7 +485,7 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vite-plugin-lib-inject-css": "catalog:",
     "vitest": "catalog:"
   },
   "peerDependencies": {

@@ -35,7 +35,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1> Visit Tucson! </h1>\n    \n    <p> This is a Tucson Appreciation page for everyone to know how great Tucson is! Here are 3 places to visit while in Tucson:</p>\n\n    \n    <img class=\"alignleft\" src=\"university.jpg\" />\n    \n    <img class=\"alignright\" src=\"mission.jpg\" />\n    \n    <ol>\n      <li>the University of Arizona</li>\n      <li>the San Xavier Mission</li>\n      <li>the Biosphere</li>\n    </ol>\n    \n    <p>Tucson is also home to beautiful mountains and sunsets!</p>\n    <p id=\"learnmore\">\n      <a href=\"https://www.visittucson.org/\">Click here to learn more about Tucson!</a>\n    </p>\n    \n    <img class=\"footerimg\" src=\"sunset.jpg\" />\n    \n    <hr />\n    \n    <p class=\"disclaimer\">All images from Pixabay and are provided with a Pixabay license</p>\n    \n  </body>\n</html>",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    \n    <h1> Visit Tucson! </h1>\n    \n    <p> This is a Tucson Appreciation page for everyone to know how great Tucson is! Here are 3 places to visit while in Tucson:</p>\n\n    \n    <img class=\"alignleft\" src=\"university.jpg\" />\n    \n    <img class=\"alignright\" src=\"mission.jpg\" />\n    \n    <ol>\n      <li>the University of Arizona</li>\n      <li>the San Xavier Mission</li>\n      <li>the Biosphere</li>\n    </ol>\n    \n    <p>Tucson is also home to beautiful mountains and sunsets!</p>\n    \n    <img class=\"footerimg\" src=\"sunset.jpg\" />\n    \n    <hr />\n    \n    <p class=\"disclaimer\">All images from Pixabay and are provided with a Pixabay license</p>\n    \n  </body>\n</html>",
           "active": true,
           "folderId": "0"
         },
@@ -80,10 +80,7 @@
       },
       "openFiles": [
         "1",
-        "10",
-        "11",
-        "12",
-        "13"
+        "10"
       ]
     },
     "bubble_choice_description": "A website about visiting Tuscon, Arizona. ",
@@ -103,6 +100,6 @@
     "name_suffix": "_2025-v2"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:45:56.260+00:00\",\"changed\":[\"cloned from \\\"CSD U2L1-L1e-2025\\\"\"],\"cloned_from\":\"CSD U2L1-L1e-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:45:56.260+00:00\",\"changed\":[\"cloned from \\\"CSD U2L1-L1e-2025\\\"\"],\"cloned_from\":\"CSD U2L1-L1e-2025\"},{\"changed_at\":\"2026-07-23 17:22:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-23 17:22:03 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-23 17:22:24 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -5,6 +5,7 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import localization from '@cdo/apps/localization';
 import * as makerCommands from '@cdo/apps/maker/commands';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';
 
@@ -24,10 +25,17 @@ import * as utils from '../utils';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
 import ChartApi from './ChartApi';
-import {ICON_PREFIX_REGEX} from './constants';
+import {
+  ICON_PREFIX_REGEX,
+  DATA_URL_NOT_ALLOWED_MESSAGE,
+  FLAGGED_IMAGE_URL_MESSAGE,
+  IMAGE_MODERATION_ERROR_MESSAGE,
+} from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import EventSandboxer from './EventSandboxer';
+import {moderateApplabImageUrl} from './imageUrlModeration';
+import {resolveAppLabImagePath, isBlockedDataUrl} from './imageUrlUtils';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import sanitizeHtml from './sanitizeHtml';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -52,6 +60,57 @@ var toBeCached = {};
  * @type {EventSandboxer}
  */
 var eventSandboxer = new EventSandboxer();
+
+function moderationWarningForStatus(status) {
+  return status === 'flagged'
+    ? FLAGGED_IMAGE_URL_MESSAGE
+    : IMAGE_MODERATION_ERROR_MESSAGE;
+}
+
+function captureAsyncWarningHandler() {
+  try {
+    return getAsyncOutputWarning();
+  } catch (exception) {
+    return () => {};
+  }
+}
+
+function moderateAbsoluteImageUrl(
+  imageUrl,
+  commandName,
+  onSafe,
+  onUnsafe,
+  warningHandler = () => {}
+) {
+  moderateApplabImageUrl(imageUrl, {allowTestOverride: true}).then(
+    ({status, normalizedUrl}) => {
+      if (status === 'safe') {
+        onSafe(normalizedUrl);
+        return;
+      }
+      warningHandler(`${commandName}(): ${moderationWarningForStatus(status)}`);
+      if (onUnsafe) {
+        onUnsafe();
+      }
+    }
+  );
+}
+
+function rejectDataUrl(
+  imageUrl,
+  commandName,
+  onUnsafe,
+  warningHandler = () => {}
+) {
+  if (!isBlockedDataUrl(imageUrl)) {
+    return false;
+  }
+  warningHandler(`${commandName}(): ${DATA_URL_NOT_ALLOWED_MESSAGE}`);
+  if (onUnsafe) {
+    onUnsafe();
+  }
+  return true;
+}
 
 function apiValidateActiveCanvas(opts, funcName) {
   var validatedActiveCanvasKey = 'validated_active_canvas';
@@ -215,10 +274,27 @@ applabCommands.image = function (opts) {
   if (ICON_PREFIX_REGEX.test(opts.src)) {
     newImage.src = assetPrefix.renderIconToString(opts.src, newImage);
     newImage.width = newImage.height = 200;
+    newImage.setAttribute('data-canonical-image-url', opts.src);
+  } else if (
+    rejectDataUrl(opts.src, 'image', undefined, captureAsyncWarningHandler())
+  ) {
+    // Warning already emitted by rejectDataUrl.
+  } else if (assetPrefix.ABSOLUTE_REGEXP.test(opts.src)) {
+    const warningHandler = captureAsyncWarningHandler();
+    moderateAbsoluteImageUrl(
+      opts.src,
+      'image',
+      normalizedSrc => {
+        newImage.src = resolveAppLabImagePath(normalizedSrc);
+        newImage.setAttribute('data-canonical-image-url', normalizedSrc);
+      },
+      undefined,
+      warningHandler
+    );
   } else {
-    newImage.src = assetPrefix.fixPath(opts.src);
+    newImage.src = resolveAppLabImagePath(opts.src);
+    newImage.setAttribute('data-canonical-image-url', opts.src);
   }
-  newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
   newImage.style.position = 'relative';
   elementUtils.setDefaultBorderStyles(newImage, {forceDefaults: true});
@@ -791,50 +867,77 @@ applabCommands.drawImageURL = function (opts) {
     }
   };
 
-  var image = new Image();
-  image.src = assetPrefix.fixPath(opts.url);
-  image.onload = function () {
-    var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
-    if (!ctx) {
-      return;
-    }
-    var x = utils.valueOr(opts.x, 0);
-    var y = utils.valueOr(opts.y, 0);
-
-    // if given a width/height use that
-    var renderWidth = utils.valueOr(opts.width, image.width);
-    var renderHeight = utils.valueOr(opts.height, image.height);
-
-    // if undefined, extra width/height from image and potentially resize to
-    // fit
-    if (opts.width === undefined || opts.height === undefined) {
-      var aspectRatio = image.width / image.height;
-      if (aspectRatio > 1) {
-        renderWidth = Math.min(Applab.activeCanvas.width, image.width);
-        renderHeight = renderWidth / aspectRatio;
-      } else {
-        renderHeight = Math.min(Applab.activeCanvas.height, image.height);
-        renderWidth = renderHeight * aspectRatio;
+  var drawLoadedImage = function (url) {
+    var image = new Image();
+    image.src = resolveAppLabImagePath(url);
+    image.onload = function () {
+      var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
+      if (!ctx) {
+        return;
       }
-    }
+      var x = utils.valueOr(opts.x, 0);
+      var y = utils.valueOr(opts.y, 0);
 
-    ctx.save();
-    ctx.setTransform(
-      renderWidth / image.width,
-      0,
-      0,
-      renderHeight / image.height,
-      x,
-      y
+      // if given a width/height use that
+      var renderWidth = utils.valueOr(opts.width, image.width);
+      var renderHeight = utils.valueOr(opts.height, image.height);
+
+      // if undefined, extract width/height from image and potentially resize to fit.
+      if (opts.width === undefined || opts.height === undefined) {
+        var aspectRatio = image.width / image.height;
+        if (aspectRatio > 1) {
+          renderWidth = Math.min(Applab.activeCanvas.width, image.width);
+          renderHeight = renderWidth / aspectRatio;
+        } else {
+          renderHeight = Math.min(Applab.activeCanvas.height, image.height);
+          renderWidth = renderHeight * aspectRatio;
+        }
+      }
+
+      ctx.save();
+      ctx.setTransform(
+        renderWidth / image.width,
+        0,
+        0,
+        renderHeight / image.height,
+        x,
+        y
+      );
+      ctx.drawImage(image, 0, 0);
+      ctx.restore();
+
+      callback(true);
+    };
+    image.onerror = function () {
+      callback(false);
+    };
+  };
+
+  if (
+    rejectDataUrl(
+      opts.url,
+      'drawImageURL',
+      () => callback(false),
+      captureAsyncWarningHandler()
+    )
+  ) {
+    return;
+  }
+
+  if (assetPrefix.ABSOLUTE_REGEXP.test(opts.url)) {
+    const warningHandler = captureAsyncWarningHandler();
+    moderateAbsoluteImageUrl(
+      opts.url,
+      'drawImageURL',
+      normalizedUrl => {
+        drawLoadedImage(normalizedUrl);
+      },
+      () => callback(false),
+      warningHandler
     );
-    ctx.drawImage(image, 0, 0);
-    ctx.restore();
-
-    callback(true);
-  };
-  image.onerror = function () {
-    callback(false);
-  };
+    return;
+  }
+  drawLoadedImage(opts.url);
 };
 
 applabCommands.getImageData = function (opts) {
@@ -1207,10 +1310,38 @@ applabCommands.setImageURL = function (opts) {
   if (divApplab.contains(element) && element.tagName === 'IMG') {
     if (ICON_PREFIX_REGEX.test(opts.src)) {
       element.src = assetPrefix.renderIconToString(opts.src, element);
+      element.setAttribute('data-canonical-image-url', opts.src);
+    } else if (
+      rejectDataUrl(
+        opts.src,
+        'setImageURL',
+        undefined,
+        captureAsyncWarningHandler()
+      )
+    ) {
+      return true;
+    } else if (assetPrefix.ABSOLUTE_REGEXP.test(opts.src)) {
+      const warningHandler = captureAsyncWarningHandler();
+      moderateAbsoluteImageUrl(
+        opts.src,
+        'setImageURL',
+        normalizedSrc => {
+          element.src = resolveAppLabImagePath(normalizedSrc);
+          element.setAttribute('data-canonical-image-url', normalizedSrc);
+          if (!toBeCached[element.src]) {
+            var moderatedImage = new Image();
+            moderatedImage.src = element.src;
+            toBeCached[element.src] = true;
+          }
+        },
+        undefined,
+        warningHandler
+      );
+      return true;
     } else {
-      element.src = assetPrefix.fixPath(opts.src);
+      element.src = resolveAppLabImagePath(opts.src);
+      element.setAttribute('data-canonical-image-url', opts.src);
     }
-    element.setAttribute('data-canonical-image-url', opts.src);
 
     if (!toBeCached[element.src]) {
       var img = new Image();
@@ -1400,6 +1531,33 @@ applabCommands.setProperty = function (opts) {
     info.type
   );
   if (!valid) {
+    return;
+  }
+
+  var imageProperties = ['image', 'picture', 'screen-image'];
+  if (
+    imageProperties.includes(info.internalName) &&
+    typeof value === 'string' &&
+    rejectDataUrl(value, 'setProperty', undefined, captureAsyncWarningHandler())
+  ) {
+    return;
+  }
+
+  if (
+    imageProperties.includes(info.internalName) &&
+    typeof value === 'string' &&
+    assetPrefix.ABSOLUTE_REGEXP.test(value)
+  ) {
+    const warningHandler = captureAsyncWarningHandler();
+    moderateAbsoluteImageUrl(
+      value,
+      'setProperty',
+      normalizedValue => {
+        Applab.updateProperty(element, info.internalName, normalizedValue);
+      },
+      undefined,
+      warningHandler
+    );
     return;
   }
 
@@ -1887,21 +2045,85 @@ var handleSetKeyValueSyncError = function (opts, message) {
   outputWarning(message);
 };
 
+// Resolve a possibly-localized identifier back to its canonical English form
+// by matching against the forward translation of each known name. Returns the
+// value unchanged when it is already canonical or matches nothing — so the
+// English path and genuinely-missing names both pass through untouched.
+//
+// Injective within `candidates`: each real name is translated forward (the
+// same map localizeSource used to rewrite the starter source at load) and
+// compared, rather than inverting a global translation table, so there is no
+// cross-talk with unrelated strings.
+function resolveLocalizedName(candidates, value) {
+  if (candidates.includes(value)) {
+    return value; // already canonical — no lookup, no ambiguity
+  }
+  const match = candidates.find(name => localization.translate(name) === value);
+  return match ?? value;
+}
+
+// Promise wrapper over the callback-style storage.getColumn.
+function fetchColumn(table, column) {
+  return new Promise((resolve, reject) =>
+    Applab.storage.getColumn(table, column, resolve, reject)
+  );
+}
+
 applabCommands.getColumn = function (opts) {
   apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
   apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
   try {
     rateLimit();
-    Applab.storage.getColumn(
-      opts.table,
-      opts.column,
-      handleGetColumn.bind(this, opts),
-      handleGetColumnError.bind(this, opts)
-    );
+    // async; storage/network errors surface through handleGetColumnError.
+    runGetColumn.call(this, opts);
   } catch (e) {
     outputError(e.message);
   }
 };
+
+// Look the column up as given. On a not-found result — null (table missing) or
+// an all-undefined array (column missing) — map the offending identifier from a
+// localized form back to English and retry exactly once for that field. The
+// common path (English / startBlocks-excluded literals) resolves on the first
+// fetch and never enters the fallback branches.
+//
+// Termination: resolveLocalizedName is idempotent (a canonical name is
+// returned unchanged), and a retry fires only when it actually changes a name,
+// so each of table/column can change at most once. Worst case is three fetches
+// — original, one table-resolve, one column-resolve — before falling through
+// to handleGetColumn.
+async function runGetColumn(opts) {
+  let columnValues;
+  try {
+    columnValues = await fetchColumn(opts.table, opts.column);
+  } catch (message) {
+    return handleGetColumnError.call(this, opts, message);
+  }
+
+  const tableMissing = columnValues === null;
+  const columnMissing =
+    !tableMissing && columnValues.every(element => element === undefined);
+
+  if (tableMissing) {
+    const tables = await Applab.storage.getTableNames();
+    const resolved = resolveLocalizedName(tables, opts.table);
+    if (resolved !== opts.table) {
+      opts.table = resolved; // retry with the English table name
+      return runGetColumn.call(this, opts);
+    }
+  } else if (columnMissing) {
+    const columns = await Applab.storage.getColumnsForTable(opts.table);
+    const resolved = resolveLocalizedName(columns, opts.column);
+    if (resolved !== opts.column) {
+      opts.column = resolved; // retry with the English column name
+      return runGetColumn.call(this, opts);
+    }
+  }
+
+  // Success, or resolution changed nothing — hand off to the existing
+  // success/error reporting unchanged.
+  handleGetColumn.call(this, opts, columnValues);
+}
 
 var handleGetColumn = function (opts, columnValues) {
   let columnName = opts.column;

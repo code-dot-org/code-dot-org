@@ -1,3 +1,4 @@
+import TextField from '@code-dot-org/component-library/textField';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -22,7 +23,7 @@ describe('AddTableListRow', () => {
 
       const wrapper = createAddTableListRow();
 
-      let input = wrapper.find('input').at(0);
+      let input = wrapper.find(TextField).at(0);
       expect(input.prop('placeholder')).toContain('i18n-holder');
     });
 

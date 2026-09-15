@@ -54,7 +54,7 @@ class TestController < ApplicationController
 
   def enroll_in_plc_course
     return unless (user = current_user)
-    unit_group = UnitGroup.find_by(name: 'All The PLC Things')
+    unit_group = UnitGroup.find_by(name: 'UI Test PLC Things')
     enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: unit_group.plc_course)
     enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
     head :ok
@@ -186,9 +186,14 @@ class TestController < ApplicationController
   end
 
   # Create a script containing a single lesson group, lesson and script level that has the is_migrated setting
+  #
+  # The name carries the curriculum data partition's "ui-test-" prefix, which is
+  # what lets the unit hold "UI Test " levels: those are the only levels a test
+  # environment seeds once the partition is complete, and ScriptLevel refuses to
+  # put one in any other unit. See dashboard/test/ui/config/README.md.
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
+      script_name = "ui-test-temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
       Unit.create!(name: script_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     end
     script.is_migrated = true
@@ -230,14 +235,17 @@ class TestController < ApplicationController
       position: 1,
       activity_section_position: 1
     )
-    level = Level.find_by_name('Applab test')
+    level = Level.find_by_name!('UI Test Applab test')
     script_level.levels.push(level)
     render json: {script_name: script.name, lesson_id: lesson.id, lesson_without_lesson_plan_id: lesson_without_lesson_plan.id}
   end
 
+  # "ui-test-" prefixed for the same reason as create_migrated_script: a temp
+  # course exists to hold a temp unit, and a unit on the test side of the
+  # partition belongs to a course on the test side.
   def create_course
     course = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      course_name = "temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
+      course_name = "ui-test-temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
       UnitGroup.create!(name: course_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     end
     course.save!

@@ -9,6 +9,7 @@ dependencies = [
   'pycdo',
   'neighborhood',
   'pythonlab_setup',
+  'theater',
   'unittest_runner',
   ## Do not add dependencies here, add them to a pyproject.toml in a /python sub-dir ##
 ]
@@ -17,6 +18,9 @@ dependencies = [
 dev = [
   'coverage >=7',
   'ipython >=8',
+  # theater's tests render real gifs. Pyodide supplies pillow at runtime, so
+  # theater does not depend on it, but CI runs pytest from this environment.
+  'pillow >=10',
   'pytest >=8',
   'pytest-mock >=3',
   'ruff >=0.8',
@@ -26,6 +30,7 @@ dev = [
 pycdo = { workspace = true }
 neighborhood = { workspace = true }
 pythonlab_setup = { workspace = true }
+theater = { workspace = true }
 unittest_runner = { workspace = true }
 
 [tool.uv.workspace]
@@ -34,6 +39,7 @@ members = [
   'python/pythonlab/pythonlab_setup',
   'python/pythonlab/unittest_runner',
   'python/pythonlab/neighborhood',
+  'python/pythonlab/theater',
 ]
 
 [tool.ruff]

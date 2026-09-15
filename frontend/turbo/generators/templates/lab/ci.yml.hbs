@@ -1,0 +1,92 @@
+# Common workflow for execution of continuous integration for the {{name}} lab.
+# Two jobs: build (turbo build + lint + typecheck + unit test) and e2e
+# (Playwright functional project + Applitools Eyes visual projects in one run).
+#
+# GitHub Actions expression delimiters are backslash-escaped in this template
+# so Plop's Handlebars engine emits them literally rather than treating them
+# as template variables.
+name: {{pascalCase name}}-CI
+
+on:
+  workflow_call:
+    inputs:
+      playwright-image-tag:
+        required: true
+        type: string
+        description: 'mcr.microsoft.com/playwright image tag, e.g. v1.59.1-noble. Version must match the catalog pin in frontend/.yarnrc.yml; variant must match the runner Ubuntu release.'
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Install LFS
+        # Required for matching turbo hashes with e2e (LFS-tracked assets).
+        run: sudo apt-get update && sudo apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build, Lint, Typecheck, Test
+        run: yarn turbo run release:dryrun --filter=@code-dot-org/{{name}}-lab
+        working-directory: ./frontend
+
+  e2e:
+    # Sequence after build so the turbo cache is warm.
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:$\{{ inputs.playwright-image-tag }}
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn turbo run build --filter=@code-dot-org/{{name}}-lab
+        working-directory: ./frontend
+
+      - name: E2E tests
+        # One Playwright run covers the functional project (chromium, @visual
+        # excluded) and the visual-* projects (@visual via Applitools).
+        # VISUAL_PROVIDER=applitools both registers the visual-* projects and
+        # routes visualCheck() to Eyes; without it the visual projects do not
+        # register and the run is functional-only. Writing a visualCheck() is
+        # the only opt-in. HOME=/root is Playwright's Firefox-in-container fix.
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          HOME: /root
+          VISUAL_PROVIDER: applitools
+          APPLITOOLS_API_KEY: $\{{ secrets.APPLITOOLS_API_KEY }}
+          APPLITOOLS_BATCH_ID: $\{{ github.event.pull_request.head.sha || github.sha }}
+          APPLITOOLS_BRANCH: $\{{ github.head_ref }}
+        run: yarn workspace @code-dot-org/{{name}}-lab test:ui:ci
+        working-directory: ./frontend
+
+      - name: Upload Playwright Report
+        # Upload on flakes too (passing-on-retry leaves the job green).
+        if: $\{{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            frontend/packages/labs/{{name}}/playwright-report/
+            frontend/packages/labs/{{name}}/test-results/
+          retention-days: 7

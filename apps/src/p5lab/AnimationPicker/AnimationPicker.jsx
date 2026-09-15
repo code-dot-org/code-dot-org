@@ -1,3 +1,5 @@
+import Dialog from '@code-dot-org/component-library/dialog';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -8,7 +10,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
-import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
@@ -27,6 +28,8 @@ import {
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import styles from './styles';
+
+import style from './animation-picker-body.module.scss';
 
 var msg = require('@cdo/locale');
 // Some operating systems round their file sizes, so max size is 101KB even
@@ -154,7 +157,11 @@ class AnimationPicker extends React.Component {
         <h1>{msg.animationPicker_error({message: this.props.uploadError})}</h1>
       );
     } else if (this.props.uploadInProgress) {
-      return <h1 style={styles.title}>{msg.animationPicker_uploading()}</h1>;
+      return (
+        <Typography variant="h4" component="h1" className={style.title}>
+          {msg.animationPicker_uploading()}
+        </Typography>
+      );
     }
 
     const contextName = this.contextSpecificName();
@@ -179,31 +186,23 @@ class AnimationPicker extends React.Component {
           uploadsEnabled={this.props.uploadsEnabled}
           projectType={this.props.projectType}
         />
-        <StylizedBaseDialog
-          title={msg.animationPicker_leaveSelectionTitle()}
-          isOpen={this.state.exitingDialog}
-          backdropStyle={{
-            top: -15,
-            right: -15,
-            bottom: -15,
-            left: -15,
-          }}
-          hideCloseButton={true}
-          handleClose={() => {
-            this.setState({exitingDialog: false});
-          }}
-          cancellationButtonText={msg.animationPicker_discardSelection()}
-          handleCancellation={() => {
-            this.props.onClose();
-            this.setState({exitingDialog: false});
-          }}
-          confirmationButtonText={msg.animationPicker_returnToLibrary()}
-          handleConfirmation={() => {
-            this.setState({exitingDialog: false});
-          }}
-          style={styles.dialog}
-          body={<p>{msg.animationPicker_leaveSelectionText({contextName})}</p>}
-        />
+        {this.state.exitingDialog && (
+          <Dialog
+            title={msg.animationPicker_leaveSelectionTitle()}
+            description={msg.animationPicker_leaveSelectionText({contextName})}
+            primaryButtonProps={{
+              children: msg.animationPicker_returnToLibrary(),
+              onClick: () => this.setState({exitingDialog: false}),
+            }}
+            secondaryButtonProps={{
+              children: msg.animationPicker_discardSelection(),
+              onClick: () => {
+                this.props.onClose();
+                this.setState({exitingDialog: false});
+              },
+            }}
+          />
+        )}
       </div>
     );
   }
@@ -308,6 +307,7 @@ class AnimationPicker extends React.Component {
         }
         fullWidth={true}
         style={styles.dialog}
+        bodyClassName={style.pickerDialog}
       >
         <HiddenUploader
           key={this.state.uploadUrl}

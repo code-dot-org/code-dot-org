@@ -111,7 +111,7 @@ export const SchoolInformation: React.FC<SchoolInformationProps> = ({
 
   return (
     <>
-      <hr />
+      <hr className={commonStyles.sectionDivider} />
       <Typography
         className={commonStyles.sectionHeader}
         component="h2"

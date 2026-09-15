@@ -205,12 +205,11 @@ class BubbleChoice < DSLDefined
         level_path(level.id)
 
       if user_id
-        level_for_sublevel_progress = BubbleChoice.level_for_progress_for_sublevel(level)
-        user_level = UserLevel.find_by(
-          level: level_for_sublevel_progress,
+        user_level = UserLevel.where(
+          level: level.levels_for_progress,
           script: script_level.try(:script),
           user_id: user_id
-          )
+        ).order(updated_at: :desc).first
         level_info[:perfect] = user_level&.perfect?
         level_info[:status] = activity_css_class(user_level)
 
@@ -260,7 +259,7 @@ class BubbleChoice < DSLDefined
 
     return keep_working_level_id if keep_working_level_id
 
-    user_levels.max_by(&:best_result)&.level_id
+    user_level_with_best_result(user_levels)&.level_id
   end
 
   def project_type
@@ -313,23 +312,24 @@ class BubbleChoice < DSLDefined
     # if our existing sublevels already match the given names, do nothing
     return if sublevels.map(&:name) == sublevel_names
 
-    # otherwise, update sublevels to match
-    levels_child_levels.sublevel.destroy_all
-    Level.where(name: sublevel_names).find_each do |new_sublevel|
-      ParentLevelsChildLevel.create!(
-        child_level: new_sublevel,
-        kind: ParentLevelsChildLevel::SUBLEVEL,
-        parent_level: self,
-        position: sublevel_names.index(new_sublevel.name)
-      )
+    # otherwise, update sublevels to match.
+    #
+    # Use a transaction so that the database is not modified if any child level
+    # validations fail. requires_new is necessary to ensure that the database is
+    # restored to its original state when running inside of another transaction.
+    transaction(requires_new: true) do
+      levels_child_levels.sublevel.destroy_all
+      Level.where(name: sublevel_names).find_each do |new_sublevel|
+        ParentLevelsChildLevel.create!(
+          child_level: new_sublevel,
+          kind: ParentLevelsChildLevel::SUBLEVEL,
+          parent_level: self,
+          position: sublevel_names.index(new_sublevel.name)
+        )
+      end
     end
 
     reload
-  end
-
-  # Some BubbleChoice sublevels also have a contained level
-  def self.level_for_progress_for_sublevel(sublevel)
-    sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
   end
 
   # Returns the sublevel for a user that has the highest best_result.
@@ -337,9 +337,13 @@ class BubbleChoice < DSLDefined
   # @param [Unit]
   # @return [Level]
   private def best_result_sublevel(user, script)
-    sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}
-    ul = user.user_levels.where(level: sublevels_for_progress, script: script).max_by(&:best_result)
+    sublevels_for_progress = sublevels.flat_map(&:levels_for_progress)
+    ul = user_level_with_best_result(user.user_levels.where(level: sublevels_for_progress, script: script))
     ul&.level
+  end
+
+  private def user_level_with_best_result(user_levels)
+    user_levels.max_by {|ul| ul.best_result || -Float::INFINITY}
   end
 
   private def keep_working_sublevel(user, script)

@@ -365,7 +365,7 @@ const styles = {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
-    animation: 'header_fadein 0.4s',
+    animation: 'header-fadein 0.4s',
   },
   finishedLink: {
     width: '100%',

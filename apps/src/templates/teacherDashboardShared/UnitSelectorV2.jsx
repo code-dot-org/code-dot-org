@@ -36,6 +36,7 @@ function UnitSelectorV2({
   isLabelVisible = false,
   labelText = i18n.selectUnit(),
   v1Styles = false,
+  onUserUnitChange,
 }) {
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
@@ -61,8 +62,9 @@ function UnitSelectorV2({
         oldUnitId: unitId,
         unitId: newUnitId,
       });
+      onUserUnitChange?.(newUnitId);
     },
-    [unitId, setUnit, sectionId]
+    [unitId, setUnit, sectionId, onUserUnitChange]
   );
 
   const itemGroups = coursesWithProgress
@@ -83,14 +85,32 @@ function UnitSelectorV2({
       }),
     }));
 
-  const loadingDropdown = () => (
-    <div
-      className={classNames(
-        skeletonizeContent.skeletonizeContent,
-        v1Styles ? styles.v1SkeletonDropdown : styles.skeleton
-      )}
-    />
-  );
+  const loadingDropdown = () => {
+    const skeleton = (
+      <div
+        className={classNames(
+          skeletonizeContent.skeletonizeContent,
+          v1Styles ? styles.v1SkeletonDropdown : styles.skeleton
+        )}
+      />
+    );
+
+    if (!isLabelVisible) {
+      return skeleton;
+    }
+
+    // Keep the label on screen while the course list loads. SimpleDropdown
+    // renders it only once there is a <select> to label, so without this the
+    // label disappears for the length of the fetch and everything below it
+    // jumps down when the dropdown finally arrives. loadingLabel mirrors what
+    // .dropdownLabel resolves to at size="s", so the two are the same height.
+    return (
+      <div>
+        <span className={styles.loadingLabel}>{labelText}</span>
+        {skeleton}
+      </div>
+    );
+  };
 
   if (isLoadingCourses || isLoadingSectionData) {
     return loadingDropdown();
@@ -132,6 +152,7 @@ UnitSelectorV2.propTypes = {
   isLabelVisible: PropTypes.bool,
   labelText: PropTypes.string,
   v1Styles: PropTypes.bool,
+  onUserUnitChange: PropTypes.func,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;

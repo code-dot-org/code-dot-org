@@ -1,14 +1,17 @@
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
 .listItem {
   padding: 8px;
   margin: 2px;
-  color: $dark_charcoal;
+  color: var(--text-neutral-primary);
   text-align: left;
   display: flex;
-  border-bottom: 1px solid $lightest_gray;
+  border-bottom: 1px solid var(--borders-neutral-primary);
   line-height: 1.5;
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .overflowEllipsis {
@@ -24,10 +27,10 @@
   @include main-font-semi-bold;
   font-size: 16px;
   cursor: pointer;
-  color: $link_color;
+  color: var(--text-brand-purple-primary);
 
   &:hover {
-    color: $link_color;
+    color: var(--text-brand-purple-primary);
     text-decoration: underline;
   }
 }
@@ -45,67 +48,6 @@
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
-}
-
-.actionBtn {
-  padding: 8px;
-  font-size: 18px;
-  background-color: $white;
-  border: 1px solid transparent;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: none;
-  }
-}
-
-.iconPadding {
-  padding: 0 2px;
-}
-
-.updateIcon {
-  padding: 0 1px;
-}
-
-.addBtn {
-  color: $link_color;
-  border-color: $link_color;
-
-  &:hover {
-    color: $white;
-    background-color: $link_color;
-  }
-}
-
-.updateBtn {
-  color: $orange;
-  border-color: $orange;
-
-  &:hover {
-    color: $white;
-    background-color: $orange;
-  }
-}
-
-.updateText {
-  @include main-font-semi-bold;
-  padding-left: 5px;
-  font-size: 16px;
-}
-
-.removeBtn {
-  color: $dark_red;
-  border-color: $dark_red;
-
-  &:hover {
-    color: $white;
-    background-color: $dark_red;
-  }
-
-  &:disabled {
-    color: $light_gray;
-    border-color: $light_gray;
-    background-color: $lightest_gray;
-    cursor: default;
-  }
+  align-items: center;
+  gap: 8px;
 }

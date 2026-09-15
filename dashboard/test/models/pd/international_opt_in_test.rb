@@ -51,4 +51,12 @@ class Pd::InternationalOptInTest < ActiveSupport::TestCase
 )
     assert valid_date.valid?
   end
+
+  test 'country options include all supported countries' do
+    country_options = Pd::InternationalOptIn.options[:schoolCountry]
+
+    assert_equal 248, country_options.size
+    assert_includes country_options, {answerText: 'Afghanistan', answerValue: 'Afghanistan'}
+    assert_includes country_options, {answerText: 'Türkiye', answerValue: 'Türkiye'}
+  end
 end

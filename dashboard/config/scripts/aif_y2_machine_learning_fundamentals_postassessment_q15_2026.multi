@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q15-2026'
+
+wrong 'Biased data can make some kinds of predictions more accurate than others'
+wrong 'Machine learning algorithms are often written in less popular programming languages'
+right 'Machine learning models can learn complex patterns that are hard for people to understand'
+wrong 'Machine learning models require time and energy and can be expensive to train'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Why are machine learning models sometimes not easily interpretable?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Building Models Ethically
+MARKDOWN

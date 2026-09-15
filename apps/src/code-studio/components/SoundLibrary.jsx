@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -6,7 +7,6 @@ import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import i18n from '@cdo/locale';
 
 import Sounds from '../../Sounds';
-import * as color from '../../util/color';
 
 import SoundCategory from './SoundCategory';
 import SoundList from './SoundList';
@@ -113,7 +113,7 @@ export default class SoundLibrary extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.root}>
         <div style={styles.breadcrumbs}>
           <span onClick={this.clearCategories} style={styles.allCategoriesText}>
             All categories
@@ -144,14 +144,14 @@ export default class SoundLibrary extends React.Component {
               selectedSound={this.state.selectedSound}
               soundsRegistry={this.sounds}
             />
-            <button
-              type="button"
-              className={'primary'}
+            <MuiButton
+              variant="contained"
+              color="primary"
               onClick={this.onClickChoose}
-              style={styles.button}
+              sx={{float: 'right', margin: '20px 0px'}}
             >
               Choose
-            </button>
+            </MuiButton>
           </div>
         )}
       </div>
@@ -160,9 +160,11 @@ export default class SoundLibrary extends React.Component {
 }
 
 const styles = {
-  button: {
-    float: 'right',
-    margin: '20px 0px',
+  // Contains the floated breadcrumbs/searchBarContainer/categoryArea below,
+  // so this component's rendered height (and its ancestors', up through
+  // .modal-content) isn't collapsed to zero.
+  root: {
+    display: 'flow-root',
   },
   categoryArea: {
     float: 'left',
@@ -172,7 +174,7 @@ const styles = {
   },
   allCategoriesText: {
     fontSize: 16,
-    color: color.purple,
+    color: 'var(--text-brand-purple-primary)',
     ...fontConstants['main-font-semi-bold'],
     paddingRight: 5,
     cursor: 'pointer',
@@ -183,6 +185,7 @@ const styles = {
   },
   categoryText: {
     fontSize: 14,
+    color: 'var(--text-neutral-primary)',
   },
   searchBarContainer: {
     width: '300px',

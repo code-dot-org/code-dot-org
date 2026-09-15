@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T14:16:51.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "School Bus Data",
+    "long_instructions": "You’d like to convert the school bus data from [the spreadsheet](https://docs.google.com/spreadsheets/d/1nG0AllhbooKilRVyj0_UVDh4WwD_eUYqL2wjPTQ7BnU/edit?usp=sharing) to a CSV file so that Python programs can more easily work with the data.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Populate `bus.csv` with data from at least three rows from the spreadsheet. Remember to also include a header row with column names!\r\n2. Press “Run” to see a visual representation of the CSV file and verify that it looks like what you expect.",
+    "bubble_choice_description": "Create a CSV file for a school bus system.",
+    "thumbnail_url": "https://images.code.org/65422a296ca0115cf61e6307bcaabdf0-bus.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nFILENAME = \"bus.csv\"\n\n\ndef read_rows(filename):\n    with open(filename) as f:\n        return [row for row in csv.reader(f)]\n\n\ndef column_widths(rows):\n    widths = []\n    for row in rows:\n        for i, cell in enumerate(row):\n            if i == len(widths):\n                widths.append(0)\n            widths[i] = max(widths[i], len(cell))\n    return widths\n\n\ndef separator(widths):\n    return \"+\" + \"+\".join(\"-\" * (w + 2) for w in widths) + \"+\"\n\n\ndef format_row(row, widths):\n    cells = []\n    for i, w in enumerate(widths):\n        cell = row[i] if i < len(row) else \"\"\n        cells.append(\" \" + cell.ljust(w) + \" \")\n    return \"|\" + \"|\".join(cells) + \"|\"\n\n\ndef main():\n    rows = read_rows(FILENAME)\n    if len(rows) == 0:\n        print(f\"{FILENAME} is empty. Add your data and try again.\")\n        return\n\n    widths = column_widths(rows)\n    line = separator(widths)\n\n    print(line)\n    print(format_row(rows[0], widths))\n    print(line)\n    for row in rows[1:]:\n        print(format_row(row, widths))\n    print(line)\n\n\nmain()",
+          "folderId": "0",
+          "active": true,
+          "type": "support"
+        },
+        "1": {
+          "id": "1",
+          "name": "bus.csv",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nbO+ZHi3WIJsK+nSZfzkuW1uCEQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 14:17:20 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 14:19:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 14:19:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

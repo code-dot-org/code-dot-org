@@ -24,10 +24,7 @@ export default class TooltipWithIcon extends Component {
       <ReactTooltip id={tooltipId} role="tooltip" wrapper="span" effect="solid">
         <div style={styles.tooltip}>
           {includeAssessmentIcon && (
-            <FontAwesome
-              icon="check-circle"
-              style={styles.tooltipAssessmentIcon}
-            />
+            <FontAwesome icon="star" style={styles.tooltipAssessmentIcon} />
           )}
           <FontAwesome icon={icon} style={styles.tooltipIcon} />
           {text}

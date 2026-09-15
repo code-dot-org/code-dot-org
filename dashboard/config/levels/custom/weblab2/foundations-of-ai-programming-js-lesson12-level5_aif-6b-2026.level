@@ -1,0 +1,44 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-08-25T21:13:04.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "foundations-of-ai-programming-js-lesson12-template-v1_aif-6b-2026",
+    "long_instructions": "## Build Your First Interaction\r\n\r\nStart building your app!\r\n\r\n1. Import your wireframe and flowchart from your Backpack. Use these to guide your build.  \r\n\r\n2. Use AI Tutor to help you create your app's structure (HTML/CSS) and connect your JavaScript.  \r\n\r\n3. Implement your first working interaction based on your plan.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildJavaScript",
+        "documentation",
+        "buildCSS"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_aif-6b-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:13:04.700+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson12-level5_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson12-level5_2026\"}]"
+}]]></config>
+</Weblab2>

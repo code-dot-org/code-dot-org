@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-25 18:19:47 UTC",
+    "serialized_at": "2026-07-07 21:16:41 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5497,24 +5497,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp1-2023/resources",
-      "key": "all_resources",
+      "url": "/courses/csp-2025/units/1/resources",
+      "key": "all_resources_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_11"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp1-2023/standards",
-      "key": "all_standards",
+      "url": "/courses/csp-2025/units/1/standards",
+      "key": "all_standards_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards"
+        "resource.key": "all_standards_11"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csp-2025/units/1/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
       }
     },
     {
@@ -5907,6 +5918,7 @@
       "key": "lossy_compression",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6494,13 +6506,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_11",
         "script.name": "csp1-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_standards_11",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
         "script.name": "csp1-2025"
       }
     },
@@ -7434,6 +7452,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

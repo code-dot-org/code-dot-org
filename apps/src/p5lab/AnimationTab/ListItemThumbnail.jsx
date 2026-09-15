@@ -11,7 +11,7 @@ const staticStyles = {
   root: {
     position: 'relative',
     imageRendering: 'pixelated',
-    backgroundColor: 'white',
+    backgroundColor: 'var(--background-neutral-white-fixed)',
     borderRadius: 10,
     marginLeft: 4,
     marginRight: 4,

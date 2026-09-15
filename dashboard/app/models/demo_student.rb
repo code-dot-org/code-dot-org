@@ -14,10 +14,9 @@
 #  index_demo_students_on_user_id_and_demo_type  (user_id,demo_type) UNIQUE
 #
 class DemoStudent < ApplicationRecord
-  # Raised when something tries to hard-delete or purge a user that is a demo
-  # student. Soft-delete (paranoia) is allowed and the demo_students row is
-  # preserved so `Policies::DemoSections.demo_student?` keeps returning true
-  # for permission checks against archived users.
+  # Raised when something tries to destroy this row or hard-delete/purge the
+  # linked user. The row grants the user's demo protections, so `archive!` it
+  # instead of destroying it.
   class ProtectedRecord < StandardError; end
 
   # OAuth and SSO credentials cannot be cleared for demo students.
@@ -28,13 +27,22 @@ class DemoStudent < ApplicationRecord
   ].freeze
 
   belongs_to :user
-  validates :demo_type, inclusion: {in: ->(_) {Policies::DemoSections::DEMO_TYPES.map(&:to_s)}}
+  validates :demo_type, inclusion: {in: ->(_) {Policies::DemoSections::VALID_DEMO_TYPES.map(&:to_s)}}
   validates :user_id, uniqueness: {scope: :demo_type}
   validate :user_must_be_student
   validate :user_in_allowed_section_types, on: :create
 
   after_create :strip_user_login_credentials!
   after_commit :reset_policy_cache
+  before_destroy :prevent_destroy
+
+  def archive!
+    update!(demo_type: Policies::DemoSections::ARCHIVED_DEMO_TYPE.to_s)
+  end
+
+  def archived?
+    demo_type == Policies::DemoSections::ARCHIVED_DEMO_TYPE.to_s
+  end
 
   private def user_must_be_student
     return unless user
@@ -59,6 +67,11 @@ class DemoStudent < ApplicationRecord
 
   private def reset_policy_cache
     Policies::DemoSections.reset_cache!
+  end
+
+  private def prevent_destroy
+    raise ProtectedRecord,
+      "Cannot destroy demo student record (user_id=#{user_id}); archive! it instead."
   end
 
   # Runs inside the create transaction (via after_create), so a credential

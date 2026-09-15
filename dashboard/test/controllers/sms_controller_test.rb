@@ -10,10 +10,11 @@ class SmsControllerTest < ActionController::TestCase
 
   test "send to phone with level_source succeeds when twilio succeeds" do
     level_source = create(:level_source)
+    brand_name = Cdo::Brand.legal_name(@request)
     expected_twilio_options = {
       messaging_service_sid: 'fake_messaging_service_sid',
       to: 'xxxxxx',
-      body: "Check this out on Code Studio: http://test.host/c/#{level_source.id}?sms=true (reply STOP to stop receiving this)"
+      body: "Check this out on #{brand_name}: http://test.host/c/#{level_source.id}?sms=true (reply STOP to stop receiving this)"
     }
 
     twilio_messages_mock = stub(:messages)
@@ -31,10 +32,11 @@ class SmsControllerTest < ActionController::TestCase
   test "send to phone with project succeeds when twilio succeeds" do
     channel_id = "xxproject_channelxx"
     project_share_url = "http://test.host/projects/applab/#{channel_id}"
+    brand_name = Cdo::Brand.legal_name(@request)
     expected_twilio_options = {
       messaging_service_sid: 'fake_messaging_service_sid',
       to: 'xxxxxx',
-      body: "Check this out on Code Studio: #{project_share_url}?sms=true (reply STOP to stop receiving this)"
+      body: "Check this out on #{brand_name}: #{project_share_url}?sms=true (reply STOP to stop receiving this)"
     }
 
     twilio_messages_mock = stub(:messages)

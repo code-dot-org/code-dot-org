@@ -88,6 +88,10 @@ class Level < ApplicationRecord
   validates :level_num, uniqueness: {case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}}
 
   validate :validate_game, on: [:create, :update]
+  validate :name_change_stays_within_ui_test_partition, on: :update
+  validate :ui_test_levels_are_immutable_on_levelbuilder
+  # prepend: the abort must come before remove_empty_script_levels destroys rows
+  before_destroy :ui_test_levels_are_immutable_on_levelbuilder, prepend: true
 
   after_save {Services::LevelFiles.write_custom_level_file(self)}
   after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
@@ -135,7 +139,22 @@ class Level < ApplicationRecord
     additional_ai_evaluation_instructions
     product_tours
     generate_outline
+    generate_supplied_code
   )
+
+  # State the AI lesson generator persisted on this level, merged into
+  # ScriptLevel#summarize_for_lesson_edit so the /generate page can
+  # re-populate its form. Subclasses with extra generator state override
+  # and merge (see Aichat).
+  def generate_fields
+    {generateOutline: generate_outline, generateSuppliedCode: generate_supplied_code}
+  end
+
+  # Everything the levelbuilder generator stores is a generate_* property;
+  # students never see those.
+  def student_properties
+    properties.reject {|key, _| key.start_with?('generate_')}
+  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -229,6 +248,20 @@ class Level < ApplicationRecord
   # All custom levels will have a 'custom' level_num, except for DSLDefined levels.
   def custom?
     level_num == 'custom' || is_a?(DSLDefined)
+  end
+
+  UI_TEST_NAME_PREFIX = 'ui test '.freeze
+
+  # Levels named "UI Test ..." exist only for UI tests and are stored apart
+  # from production levels; see dashboard/test/ui/config/README.md. Match on
+  # the level name, never the filename: the DSL file for "UI Test Foo" is
+  # ui_test_foo.<type>.
+  def self.ui_test_name?(name)
+    name.to_s.downcase.start_with?(UI_TEST_NAME_PREFIX)
+  end
+
+  def ui_test?
+    Level.ui_test_name?(name)
   end
 
   def should_localize?
@@ -366,6 +399,7 @@ class Level < ApplicationRecord
     'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
     'Pythonlab', # no ideal solution
+    'Quiz', # no ideal solution
     'ScriptCompletion', # unknown
     'Sketchlab', # no ideal solution
     'StandaloneVideo', # no user submitted content
@@ -453,6 +487,31 @@ class Level < ApplicationRecord
       "and the following characters: !\"&'()+,-.:=?_|"
       errors.add(:name, msg)
     end
+  end
+
+  # Renaming across the "UI Test " boundary moves the level's definition file
+  # between the two trees, changing which environments seed it. Refuse while a
+  # script references the level, or while it is attached to another level as a
+  # parent or child (contained level, project template, LevelGroup/BubbleChoice
+  # sublevel), since parent and child must stay on the same side. See
+  # dashboard/test/ui/config/README.md.
+  def name_change_stays_within_ui_test_partition
+    return unless name_changed?
+    return if Level.ui_test_name?(name) == Level.ui_test_name?(name_was)
+    return unless script_levels.exists? || parent_levels.exists? || child_levels.exists?
+    errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script or another level")
+  end
+
+  # UI test levels are engineering-owned test content: developers author them
+  # locally, and their definition files live under dashboard/test/ui/config, a
+  # tree the daily content push from the levelbuilder environment must never
+  # modify. Refuse to save or destroy them there; the throw halts a destroy
+  # and is harmless during validation. See dashboard/test/ui/config/README.md.
+  def ui_test_levels_are_immutable_on_levelbuilder
+    return unless rack_env?(:levelbuilder)
+    return unless ui_test? || Level.ui_test_name?(name_was)
+    errors.add(:base, "UI test levels cannot be changed on levelbuilder; they are maintained in the repo under dashboard/test/ui/config")
+    throw :abort
   end
 
   # Uses specific knowledge of how the key method is implemented in hopes of
@@ -880,9 +939,16 @@ class Level < ApplicationRecord
   end
 
   def get_level_for_progress(student = nil, script = nil)
+    return self if predict_level?
     # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
     # We only display our first contained level, display progress for that level.
     contained_levels.first || self
+  end
+
+  # The levels that may hold this level's progress, in priority order.
+  def levels_for_progress
+    return [self, contained_levels.first] if predict_level? && !contained_levels.empty?
+    [contained_levels.first || self]
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
@@ -922,7 +988,7 @@ class Level < ApplicationRecord
   # StandaloneVideo then we put its properties into levelData.
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
-    properties_camelized = properties.camelize_keys
+    properties_camelized = student_properties.camelize_keys
     properties_camelized[:name] = name
     properties_camelized[:id] = id
     properties_camelized[:levelData] = video if video

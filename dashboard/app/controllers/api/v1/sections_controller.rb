@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency, :suggested_lessons]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -108,7 +108,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
 
     if unit.nil? || unit_group.nil?
-      Honeybadger.notify("Demo section creation failed due to misconfigured unit or course", context: {unit_name: config[:unit_name], resolved_unit_id: unit&.name, unit_group_name: config[:unit_group_name], resolved_unit_group_id: unit_group&.name})
+      Observability::Errors.report("Demo section creation failed due to misconfigured unit or course", context: {unit_name: config[:unit_name], resolved_unit_id: unit&.name, unit_group_name: config[:unit_group_name], resolved_unit_group_id: unit_group&.name})
     end
 
     section = ActiveRecord::Base.transaction do
@@ -133,7 +133,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       section
     end
 
-    render json: section.summarize
+    # The demo students were just written to the primary; read summarize's counts back from the
+    # primary too, since the read replica may not have caught up with this request's write yet.
+    render json: section.summarize(role: :writing)
   rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
     if exception.is_a?(ActiveRecord::RecordNotUnique) || (exception.respond_to?(:record) && exception.record.errors.of_kind?(:demo_type, :taken))
       render json: {error: "demo section of type #{params[:demo_type]} already exists"}, status: :conflict
@@ -182,7 +184,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
 
     if unit.nil? || unit_group.nil?
-      Honeybadger.notify(
+      Observability::Errors.report(
         "Demo section staleness reset failed due to misconfigured unit or course",
         context: {section_id: section.id, demo_type: section.demo_type, unit_name: config[:unit_name], unit_group_name: config[:unit_group_name]}
       )
@@ -201,7 +203,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     if roster_failures.any?
-      Honeybadger.notify(
+      Observability::Errors.report(
         "Demo section reset rolled back: roster could not be reconciled",
         context: {section_id: section.id, demo_type: section.demo_type, failed_student_ids: roster_failures}
       )
@@ -461,10 +463,72 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     if data && (lesson = Lesson.find_by(id: data['lesson_id']))
       data = data.merge(
         'name' => lesson.localized_title,
-        'url' => script_lesson_path(lesson.script, lesson)
+        'url' => script_lesson_path(lesson.script, lesson),
+        'podcast_url' => "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}"
       )
     end
     render json: data
+  end
+
+  # GET /api/v1/sections/suggested_lessons
+  # Returns suggested lesson data for every active student section belonging to
+  # the current user, keyed by section id.
+  def suggested_lessons
+    return head :forbidden unless current_user
+
+    active_sections = current_user.sections_instructed.where(hidden: false, participant_type: 'student')
+
+    # Collect section object, current lesson, and history for every section.
+    section_data = active_sections.map do |section|
+      if section.suggested_lesson_stale? && section.script.present?
+        section.compute_suggested_lesson
+        section.reload
+      end
+      [section, section.suggested_lesson, section.suggested_lesson_history || []]
+    end
+
+    # Batch load all lessons referenced by current, history, and coming_up entries.
+    all_lesson_ids = section_data.flat_map do |_, current, history|
+      [
+        current&.dig('lesson_id'),
+        current&.dig('coming_up', 'lesson_id'),
+        *history.map {|e| e['lesson_id']}
+      ]
+    end.uniq.compact
+
+    lessons_by_id = Lesson.where(id: all_lesson_ids).index_by(&:id)
+
+    bucket = AWS::S3.user_content_bucket
+    podcast_exists = all_lesson_ids.each_with_object({}) do |lesson_id, memo|
+      key = "podcasts/lesson_#{lesson_id}_podcast.mp3"
+      memo[lesson_id] = AWS::S3.exists_in_bucket(bucket, key)
+    end
+
+    enrich = lambda do |entry|
+      return entry unless (lesson = lessons_by_id[entry['lesson_id']])
+      podcast_url = podcast_exists[lesson.id] ? "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}" : nil
+      entry.merge(
+        'name' => lesson.localized_title,
+        'url' => script_lesson_path(lesson.script, lesson),
+        'podcast_url' => podcast_url
+      )
+    end
+
+    today = Time.zone.today.iso8601
+    result = section_data.each_with_object({}) do |(section, data, history), hash|
+      next hash[section.id] = nil unless data
+      enriched = enrich.call(data)
+      enriched_history = history.map {|e| enrich.call(e)}
+      raw_coming_up = data['coming_up']
+      coming_up = raw_coming_up ? enrich.call(raw_coming_up) : nil
+      hash[section.id] = enriched.merge('history' => enriched_history, 'coming_up' => coming_up)
+    end
+
+    # history dates are stamped in server time (config.time_zone, UTC), which
+    # can be a different calendar date than the browser's local "today" -
+    # returning our own idea of today lets the frontend match history entries
+    # against the same clock that wrote them, instead of guessing locally.
+    render json: {today: today, sections: result}
   end
 
   private def find_follower
@@ -514,7 +578,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         section.remove_student(student, follower, notify: false)
       rescue ActiveRecord::ActiveRecordError => exception
         failures << student_id
-        Honeybadger.notify(exception, context: {section_id: section.id, student_id: student_id})
+        Observability::Errors.report(exception, context: {section_id: section.id, student_id: student_id})
       end
     end
 
@@ -529,7 +593,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
       unless Policies::DemoSections.demo_student?(student_id)
         failures << student_id
-        Honeybadger.notify(
+        Observability::Errors.report(
           "Refused to add non-demo student to demo section",
           context: {section_id: section.id, student_id: student_id}
         )
@@ -541,13 +605,13 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         next if [Section::ADD_STUDENT_SUCCESS, Section::ADD_STUDENT_EXISTS].include?(result)
 
         failures << student_id
-        Honeybadger.notify(
+        Observability::Errors.report(
           "Failed to add demo student to section",
           context: {section_id: section.id, student_id: student_id, result: result}
         )
       rescue ActiveRecord::ActiveRecordError => exception
         failures << student_id
-        Honeybadger.notify(exception, context: {section_id: section.id, student_id: student_id})
+        Observability::Errors.report(exception, context: {section_id: section.id, student_id: student_id})
       end
     end
     failures

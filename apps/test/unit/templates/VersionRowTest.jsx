@@ -78,7 +78,7 @@ describe('VersionRow', () => {
     expect(viewButton).to.have.length(1);
     expect(viewButton.prop('id')).to.equal(VIEW_BUTTON_ID);
     expect(viewButton.prop('type')).to.equal('button');
-    expect(viewButton.prop('color')).to.equal('secondary');
+    expect(viewButton.prop('color')).to.equal('primary');
     expect(viewButton.prop('size')).to.equal('small');
     expect(viewButton.prop('variant')).to.equal('contained');
     expect(viewButton.prop('disabled')).to.be.true;
@@ -109,7 +109,7 @@ describe('VersionRow', () => {
 
     expect(latestVersionMessage).to.have.length(1);
     expect(latestVersionMessage.prop('component')).to.equal('span');
-    expect(latestVersionMessage.prop('variant')).to.equal('body2');
+    expect(latestVersionMessage.prop('variant')).to.equal('body3');
     expect(viewButton.prop('disabled')).to.be.true;
     expect(viewButton.prop('aria-describedby')).to.equal(VERSION_LABEL_ID);
   });

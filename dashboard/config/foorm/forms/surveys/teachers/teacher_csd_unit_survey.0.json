@@ -1,5 +1,5 @@
 {
-  "title": "Code.org CSD Teacher End-of-Unit Survey",
+  "title": "CodeAI CSD Teacher End-of-Unit Survey",
   "logoPosition": "right",
   "pages": [
     {
@@ -879,7 +879,7 @@
             {
               "type": "radiogroup",
               "name": "permission_adapt_followup",
-              "title": "I would like the Code.org team to follow up with me for more detail about the adaptations I made to this unit.",
+              "title": "I would like the CodeAI team to follow up with me for more detail about the adaptations I made to this unit.",
               "choices": [
                 {
                   "value": "yes",

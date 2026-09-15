@@ -187,7 +187,7 @@ class Pd::Workshop < ApplicationRecord
     permitted_courses = permissions_arrays.compact.flatten.uniq
     facilitators.each do |facilitator|
       facilitator_courses = facilitator.courses_as_facilitator.pluck(:course)
-      if (facilitator_courses & permitted_courses).empty?
+      unless facilitator_courses.intersect?(permitted_courses)
         errors.add(:base, "Facilitator #{facilitator.name} does not have permission to facilitate the selected workshop topics.")
       end
     end

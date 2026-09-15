@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-30T20:36:13.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Final Reflection",
+    "long_instructions": ">**Reflect on your final app and your process across the capstone.**\r\n> 1. How did your app change from your original idea to the final version? What were the most important turning points?\r\n> 2. How did you use AI tools throughout this project? Give one specific example of something you accepted, revised, or rejected from AI — and explain why.\r\n> 3. What decisions had the biggest impact on your app? How do those decisions support usability, clarity, and trust for your audience?\r\n> 4. If you had more time, what would you improve or explore next? What did this project teach you about designing real systems?\r\n\r\n",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "placeholder": "Enter answer here",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-30T20:36:13.678+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-level7-2026\\\"\"],\"cloned_from\":\"capstone-project-lesson1-level7-2026\"},{\"changed_at\":\"2026-06-30 20:37:29 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:55:38 +0000\",\"changed\":[\"height\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

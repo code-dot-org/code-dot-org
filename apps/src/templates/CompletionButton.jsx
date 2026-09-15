@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -25,7 +26,7 @@ class CompletionButton extends Component {
     let divClass = 'share-cell-none';
 
     if (this.props.isProjectLevel) {
-      return <div />;
+      return;
     }
 
     if (this.props.isSubmittable || this.props.isSubmitted) {
@@ -44,15 +45,18 @@ class CompletionButton extends Component {
 
     return (
       <ProtectedStatefulDiv id="share-cell" className={divClass}>
-        <button
-          type="button"
+        <MuiButton
           id={id}
+          variant="contained"
+          color="primary"
+          size="medium"
           className="share"
-          style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
+          style={
+            this.props.playspacePhoneFrame ? styles.phoneFrameButton : undefined
+          }
         >
-          <img src="/blockly/media/1x1.gif" alt="" />
           {contents}
-        </button>
+        </MuiButton>
       </ProtectedStatefulDiv>
     );
   }

@@ -109,7 +109,7 @@ export default class ProgressLegend extends Component {
       <td key={_.uniqueId()}>{this.getLevelDetails('video', i18n.video())}</td>,
       <td key={_.uniqueId()}>
         {this.getLevelDetails('desktop', i18n.online())}
-        {this.getLevelDetails('check-circle', i18n.progressLegendAssessment())}
+        {this.getLevelDetails('star', i18n.progressLegendAssessment())}
       </td>,
     ];
     const column3 = [

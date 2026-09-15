@@ -1,7 +1,7 @@
 import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useCallback} from 'react';
 
-import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
+import {fetchThreadMessages} from '@cdo/apps/aiTeacherDrawer/redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {Context} from './types';

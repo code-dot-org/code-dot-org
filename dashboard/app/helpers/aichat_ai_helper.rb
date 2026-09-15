@@ -244,7 +244,7 @@ module AichatAiHelper
     request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
 
     if DCDO.get('aichat_verbose_honeybadger_reporting', false)
-      Honeybadger.notify(
+      Observability::Errors.report(
         "#{source} failed with unexpected error: #{exception.message}",
         context: {
           request: request.to_json,

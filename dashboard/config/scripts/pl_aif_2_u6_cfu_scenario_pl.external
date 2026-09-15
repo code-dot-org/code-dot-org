@@ -1,0 +1,36 @@
+name 'pl-aif-2-U6-CFU-scenario_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice Grading the Project
+
+This is a chance to practice grading before you're scoring real student work. Score **Red Planet Ready** on the previous level against each criterion below, then check your calls against how the project was intentionally built. 
+
+If your scores land close but not exact, that's normal — two thoughtful graders won't always match perfectly, and the goal here is building confidence in your read of the rubric, not hitting an exact number.
+
+
+
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/capstone_rubric.html" width="100%" height="900" style="border:none;"></iframe>
+
+
+
+<details style="background:#E4E2F8; border-radius:10px; padding:2px 18px; margin-bottom:14px; font-family:Geist, sans-serif;">
+  <summary style="cursor:pointer; font-family:'Space Grotesk', sans-serif; font-weight:600; color:#1F1976; padding:14px 0; list-style:none;">
+    ▸ See how this project was intentionally built
+  </summary>
+  <div style="padding:2px 0 18px; font-size:14.5px; line-height:1.6; color:#211c3d;">
+    <p style="margin:0 0 10px;"><strong>This sample was built to land at Convincing (3/4) across all five criteria — 15 / 20 total.</strong> A quick note on why:</p>
+    <ul style="margin:0 0 14px; padding-left:20px;">
+      <li style="margin-bottom:8px;"><strong>Project Planning:</strong> clear audience and problem, but the scope tradeoffs are only briefly explained, not deeply justified.</li>
+      <li style="margin-bottom:8px;"><strong>Functionality:</strong> app works reliably for its main use case, but the code has some duplication between features rather than fully modular structure.</li>
+      <li style="margin-bottom:8px;"><strong>User-Centered Design:</strong> real usability fixes documented in testing, but mobile was never tested — a known, stated gap.</li>
+      <li style="margin-bottom:8px;"><strong>Responsible AI:</strong> two specific, reasoned AI uses are documented, but the ethical reflection stays fairly surface-level.</li>
+      <li style="margin-bottom:0;"><strong>Collaboration:</strong> clear Benchmark reflections and Project Leader rotation, but feedback was only gathered from one source.</li>
+    </ul>
+    <p style="margin:0; font-size:13.5px; color:#4a457a; font-style:italic;">
+      Treat this as a reference point, not an answer key. Rubrics leave room for professional judgment — if your score differs and you can point to evidence in the project for it, trust your read.
+    </p>
+  </div>
+</details>
+MARKDOWN

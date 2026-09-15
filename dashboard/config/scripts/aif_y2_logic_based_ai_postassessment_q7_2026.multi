@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q7-2026'
+
+wrong 'Yes, because hill climbing only takes steps that improve the outcome and never makes the outcome worse'
+wrong 'Yes, because hill climbing will eventually explore all possible outcomes and pick the best one'
+right 'No, because hill climbing can get stuck and not have any nearby better solutions'
+wrong 'No, because hill climbing can sometimes incorrectly think that a better outcome is actually worse'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Does using a hill climbing algorithm always find the best possible answer to a problem?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Optimization
+MARKDOWN

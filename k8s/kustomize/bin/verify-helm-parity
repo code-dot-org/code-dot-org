@@ -1,10 +1,7 @@
 #!/usr/bin/env ruby
 
-# WARNING: VIBE CODED TRASH TEST FILE: NO HUMAN SHOULD EVER TRY TO READ THIS
-#
 # This file only has to survive while we decide between helm and kustomize.
-# Then its job is done and you can delete it. If we've already decided
-# frikkin delete it!!!! You'll also have to remove it from k8s-validate.yml
+# Delete it, and its k8s-validate.yml call, after that decision.
 
 # Verify that kustomize renders are still close enough to the Helm chart.
 #
@@ -57,7 +54,7 @@ module DashboardKustomize
     redis_url
   ).freeze
   IGNORE_LABELS = ['helm.sh/chart', 'app.kubernetes.io/managed-by'].freeze
-  SKAFFOLD_ROOT_USER_OVERLAYS = %w(setup-db setup-s3 setup-db-setup-s3).freeze
+  SKAFFOLD_ROOT_USER_OVERLAYS = %w(setup-db-minimal setup-s3).freeze
   MYSQL_SECRET_ENV_ORDER = %w(_mysql_root_password db_writer db_reader reporting_db_writer reporting_db_reader db_credential_admin db_credential_writer db_credential_reader).freeze
   REDIS_SECRET_ENV_ORDER = ['_redis_password', 'redis_url', 'netsim_redis_groups'].freeze
   MINIO_SECRET_ENV_ORDER = ['_minio_root_password', '_minio_root_user', 'aws_s3_access_key_id', 'aws_s3_secret_access_key'].freeze
@@ -81,26 +78,36 @@ module DashboardKustomize
   end.freeze
 
   OVERLAYS = {
+    'backend' => {
+      release_name: 'cdo',
+      services: {mysql: true, redis: true, minio: true},
+      helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
+      helm_set: [],
+      dashboard: false
+    },
     'development' => {
       release_name: 'cdo',
       services: {mysql: true, redis: true, minio: true},
       helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
       helm_set: []
     },
-    'setup-db' => {
+    'setup-db-minimal' => {
       release_name: 'cdo',
       services: {mysql: true, redis: true, minio: true},
       helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
       helm_set: [
         ['--set', 'dashboardJob.enabled=true'],
-        ['--set', 'dashboardJob.name=setup-db'],
-        ['--set-json', 'dashboardJob.command=["zsh","-c"]'],
-        ['--set-json', %{dashboardJob.args=["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]}]
+        ['--set', 'dashboardJob.name=setup-db-minimal'],
+        ['--set-json', 'dashboardJob.command=["sh","-c"]'],
+        ['--set-json', %{dashboardJob.args=["cd dashboard && bin/setup-db-minimal"]}],
+        ['--set', 'RAILS_ENV=adhoc'],
+        ['--set-string', 'extraEnv.AWS_EC2_METADATA_DISABLED=true']
       ],
       kustomize_paths: [
-        File.join(ROOT, 'overlays', 'skaffold'),
-        File.join(ROOT, 'overlays', 'setup-db')
-      ]
+        File.join(ROOT, 'overlays', 'skaffold-backend'),
+        File.join(ROOT, 'overlays', 'setup-db-minimal')
+      ],
+      dashboard: false
     },
     'setup-s3' => {
       release_name: 'cdo',
@@ -110,26 +117,10 @@ module DashboardKustomize
         ['--set', 'services.minio.runSetupS3Job=true']
       ],
       kustomize_paths: [
-        File.join(ROOT, 'overlays', 'skaffold'),
+        File.join(ROOT, 'overlays', 'skaffold-backend'),
         File.join(ROOT, 'overlays', 'setup-s3')
-      ]
-    },
-    'setup-db-setup-s3' => {
-      release_name: 'cdo',
-      services: {mysql: true, redis: true, minio: true},
-      helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
-      helm_set: [
-        ['--set', 'dashboardJob.enabled=true'],
-        ['--set', 'dashboardJob.name=setup-db'],
-        ['--set-json', 'dashboardJob.command=["zsh","-c"]'],
-        ['--set-json', %{dashboardJob.args=["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]}],
-        ['--set', 'services.minio.runSetupS3Job=true']
       ],
-      kustomize_paths: [
-        File.join(ROOT, 'overlays', 'skaffold'),
-        File.join(ROOT, 'overlays', 'setup-db'),
-        File.join(ROOT, 'overlays', 'setup-s3')
-      ]
+      dashboard: false
     },
     'mount-dot-aws' => {
       release_name: 'cdo',
@@ -203,6 +194,7 @@ module DashboardKustomize
 
   module_function def helm_command_from_config(config, secret_values = {})
     cmd = ['helm', 'template', config[:release_name], CHART_PATH, '-f', HELM_VALUES]
+    cmd.push('--set', 'dashboard.enabled=true') unless config[:dashboard] == false
     config[:helm_values].each do |path|
       cmd.push('-f', path)
     end
@@ -382,6 +374,7 @@ module DashboardKustomize
       copy = deep_copy(doc)
       normalize_local_secret_value_drift!(copy)
       normalize_skaffold_root_user_drift!(overlay, copy)
+      normalize_worker_root_user_drift!(copy)
       normalize_accepted_image_drift!(copy)
       deep_sort(copy)
     end
@@ -445,11 +438,15 @@ module DashboardKustomize
     end
 
     if skaffold_root_user_drift?(overlay, helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: skaffold overlays run dashboard as root for sync support'
+      warnings << 'accepted drift: Skaffold workloads run as root for sync support'
     end
 
     if accepted_image_drift?(helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: image values differ as long as both still point at code-dot-org'
+      warnings << 'accepted drift: image values differ while deployments move from code-dot-org to cdo-rails'
+    end
+
+    if worker_root_user_drift?(helm_docs, kustomize_docs)
+      warnings << 'accepted drift: active-job-worker user differs until k8s-gitops configures the worker per environment'
     end
 
     warnings
@@ -494,10 +491,12 @@ module DashboardKustomize
       kustomize_image = doc_image(manifest)
       next false unless helm_image.is_a?(String) && kustomize_image.is_a?(String)
 
-      helm_image != kustomize_image &&
-        helm_image.include?('code-dot-org') &&
-        kustomize_image.include?('code-dot-org')
+      helm_image != kustomize_image && known_application_image?(helm_image) && known_application_image?(kustomize_image)
     end
+  end
+
+  module_function def known_application_image?(image)
+    image.include?('code-dot-org') || image.include?('cdo-rails')
   end
 
   module_function def matching_manifest_pair?(helm_docs, kustomize_docs, &block)
@@ -531,10 +530,43 @@ module DashboardKustomize
     doc.dig('spec', 'template', 'spec')&.delete('securityContext') if security_context.empty?
   end
 
-  module_function def normalize_accepted_image_drift!(doc)
-    return unless doc_image(doc).to_s.include?('code-dot-org')
+  # The active-job-worker Deployment is a static manifest in kustomize base
+  # (uid 1000), while the Helm worker inherits the chart-wide user values,
+  # which some gitops deployment values set to root. Accepted drift until
+  # k8s-gitops configures the worker per environment (root patch alongside
+  # its cdo-dashboard one).
+  module_function def worker_doc?(doc)
+    doc['kind'] == 'Deployment' &&
+      doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'active-job-worker'
+  end
 
-    doc.dig('spec', 'template', 'spec', 'containers')&.first&.[]=('image', 'code-dot-org:<accepted-drift>')
+  module_function def normalize_worker_root_user_drift!(doc)
+    return unless worker_doc?(doc)
+
+    security_context = doc.dig('spec', 'template', 'spec', 'securityContext')
+    return unless security_context.is_a?(Hash)
+
+    %w(runAsUser runAsGroup fsGroup).each {|key| security_context.delete(key)}
+    doc.dig('spec', 'template', 'spec')&.delete('securityContext') if security_context.empty?
+  end
+
+  module_function def worker_root_user_drift?(helm_docs, kustomize_docs)
+    matching_manifest_pair?(helm_docs, kustomize_docs) do |helm_manifest, manifest|
+      next false unless worker_doc?(manifest)
+
+      helm_security = helm_manifest.dig('spec', 'template', 'spec', 'securityContext')
+      kustomize_security = manifest.dig('spec', 'template', 'spec', 'securityContext')
+      next false unless helm_security.is_a?(Hash) && kustomize_security.is_a?(Hash)
+
+      helm_security.slice('runAsUser', 'runAsGroup', 'fsGroup') !=
+        kustomize_security.slice('runAsUser', 'runAsGroup', 'fsGroup')
+    end
+  end
+
+  module_function def normalize_accepted_image_drift!(doc)
+    return unless known_application_image?(doc_image(doc).to_s)
+
+    doc.dig('spec', 'template', 'spec', 'containers')&.first&.[]=('image', 'application:<accepted-drift>')
   end
 
   module_function def doc_image(doc)

@@ -9,8 +9,6 @@ When an app shows information on the screen, it usually **doesn’t use every pi
 
 Often, the app gets a *big* response (like JSON from an API) and then **picks only the fields it needs** to display.
 
----
-
 ## Scenario: The App Gets “Too Much” Data
 
 Imagine you’re building a simple classroom weather app for teachers.
@@ -22,7 +20,7 @@ The app should display a small card with:
 
 But the API returns *way more* than that.
 
-> #### Your job: scan the UI card and the raw JSON below and notice how much data from the API that the app actually used.
+> Scan the UI card and the raw JSON below and notice how much data from the API that the app actually used.
 
 <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px; align-items:stretch;">
 
@@ -86,45 +84,41 @@ But the API returns *way more* than that.
 
 </div>
 
-<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;">
-  <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Key idea:</strong> Apps pick out only the pieces of JSON they need to display in the UI — the rest may be “nice to have” or “extra.”</p>
-</div>
-
----
-
-## Reflect: What would you pull from the JSON?
+## Reflect: 
 
 Take a moment to compare the UI card and the JSON.
-👉 If you were building this app, which **three pieces of information** would you want from this JSON?
-👉 What looks **useful** vs **extra** for *this specific* UI card?
+
+- If you were building this app, which **three pieces of information** would you want from this JSON?
+
+- What looks **useful** vs **extra** for *this specific* UI card?
 
 <details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;">
-<summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking (click to reveal)</summary>
+<summary style="font-size:12pt; font-weight:bold;">🔎 Check your thinking </summary>
 
-<div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;">
+<div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:12pt; line-height:145%;">
 
-<p style="margin-top:0; font-size:14pt;">
+<p style="margin-top:0; font-size:12pt;">
 Your answers might include ideas like these:
 </p>
 
 <ul>
-  <li style="font-size:14pt;">
+  <li style="font-size:12pt;">
     <strong>Match the UI card first.</strong><br>
     The card shows a location name, a condition, and one number. So you’d likely grab:
     <ul>
-      <li style="font-size:14pt;"><code style="font-size:12pt;">location.city</code></li>
-      <li style="font-size:14pt;"><code style="font-size:12pt;">location.state</code></li>
-      <li style="font-size:14pt;"><code style="font-size:12pt;">current.condition</code></li>
-      <li style="font-size:14pt;"><code style="font-size:12pt;">current.temperature</code></li>
+      <li style="font-size:12pt;"><code style="font-size:12pt;">location.city</code></li>
+      <li style="font-size:12pt;"><code style="font-size:12pt;">location.state</code></li>
+      <li style="font-size:12pt;"><code style="font-size:12pt;">current.condition</code></li>
+      <li style="font-size:12pt;"><code style="font-size:12pt;">current.temperature</code></li>
     </ul>
   </li>
 
-  <li style="margin-top:10px; font-size:14pt;">
+  <li style="margin-top:10px; font-size:12pt;">
     <strong>Useful vs extra depends on the screen.</strong><br>
     Things like <code style="font-size:12pt;">humidity</code> or <code style="font-size:12pt;">wind_speed</code> might be useful in a different version of the app, but they are not shown on this card.
   </li>
 
-  <li style="margin-top:10px; font-size:14pt;">
+  <li style="margin-top:10px; font-size:12pt;">
     <strong>Extra fields aren’t “bad.”</strong><br>
     They’re just not needed <em>right now</em> for the UI being displayed.
   </li>
@@ -138,9 +132,7 @@ Your answers might include ideas like these:
 </details>
 
 
----
 
-## Next
 
-Next, we’ll practice reading the “shape” of JSON so we can grab exactly what our app needs.
+
 MARKDOWN

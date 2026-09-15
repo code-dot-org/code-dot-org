@@ -15,11 +15,7 @@ In the *Tap for More* project, students design an interactive explore-style app 
 
 ## Sample project
 
-<img src="https://images.code.org/b6518963d37d9630807dcd0085aa5036-image-1770400989649.png" alt="sample explore-style app with grid of cards and detail view" width="750px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;"><br>
-
-<p style= "font-size: 14pt;">
- <a href="https://erikdillaman.github.io/U5_Project_Prototype_One/" target="_blank" rel="noopener noreferrer">Explore a sample student project</a>
-</p>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/museum-explorer-app.html" width="100%" height="900" style="border:none;"></iframe>
 
 ---
 
@@ -27,16 +23,16 @@ In the *Tap for More* project, students design an interactive explore-style app 
 
 The project extends over multiple class periods following introductory lessons on `async/await`, error handling, and working with JSON data from APIs.
 
----
+
 
 ## What success looks like
 
-> #### **By the end, students will:**
-> - #### Fetch and display live data from an external API
-> - #### Build an explore-style interface with a “Tap for More” detail view
-> - #### Communicate system status using loading indicators, empty states, and error messages
-> - #### Design defensively to keep apps usable when data is delayed, incomplete, or unavailable
-> - #### Reflect on the reliability, ownership, and risks of relying on external data sources
+>  **By the end, students will:**
+> - Fetch and display live data from an external API
+> - Build an explore-style interface with a “Tap for More” detail view
+> - Communicate system status using loading indicators, empty states, and error messages
+> - Design defensively to keep apps usable when data is delayed, incomplete, or unavailable
+> - Reflect on the reliability, ownership, and risks of relying on external data sources
 
 ---
 

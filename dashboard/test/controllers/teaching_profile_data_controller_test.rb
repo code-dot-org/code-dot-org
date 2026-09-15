@@ -82,9 +82,10 @@ class TeachingProfileDataControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'shows non-existence for user without teaching profile data via GET' do
-    get '/teaching_profile_data', as: :json
+    get '/teaching_profile_data'
 
     assert_response :success
+    assert_equal 'application/json', response.media_type
     response_data = JSON.parse(response.body)
     assert_equal false, response_data['exists']
     assert_nil response_data['data']
@@ -106,11 +107,12 @@ class TeachingProfileDataControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
-  test 'requires authentication for show' do
+  test 'returns unauthorized without storing a redirect for unauthenticated show' do
     sign_out @user
 
     get '/teaching_profile_data'
 
-    assert_response :redirect
+    assert_response :unauthorized
+    assert_nil session[:user_return_to]
   end
 end

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -17,9 +18,19 @@ class ProjectRemix extends React.Component {
     lightStyle: PropTypes.bool,
     refreshProjectName: PropTypes.func.isRequired,
     inRestrictedShareMode: PropTypes.bool,
+    isBlockedAbuse: PropTypes.bool,
+    exceedsAbuseThreshold: PropTypes.bool,
   };
 
+  remixBlocked = () =>
+    this.props.inRestrictedShareMode ||
+    this.props.isBlockedAbuse ||
+    this.props.exceedsAbuseThreshold;
+
   remixProject = () => {
+    if (this.remixBlocked()) {
+      return;
+    }
     if (Lab2Registry.hasEnabledProjects()) {
       this.remixLab2Project();
     } else {
@@ -63,18 +74,23 @@ class ProjectRemix extends React.Component {
   };
 
   render() {
-    const {lightStyle, inRestrictedShareMode} = this.props;
+    const {lightStyle} = this.props;
     let className = 'project_remix header_button no-mc';
     if (lightStyle) {
       className += ' header_button_light';
     }
-    return !inRestrictedShareMode ? (
+    return !this.remixBlocked() ? (
       <button
         type="button"
         className={classNames(styles.buttonSpacing, className)}
         onClick={this.remixProject}
+        aria-label={i18n.remix()}
       >
-        {i18n.remix()}
+        <span className={styles.buttonText}>{i18n.remix()}</span>
+        <FontAwesomeV6Icon
+          iconName="arrows-rotate"
+          className={styles.buttonIcon}
+        />
       </button>
     ) : null;
   }
@@ -85,6 +101,10 @@ export default connect(
   state => ({
     isSignedIn: state.pageConstants && state.pageConstants.isSignedIn,
     inRestrictedShareMode: state.project && state.project.inRestrictedShareMode,
+    isBlockedAbuse: !!(state.lab && state.lab.isBlockedAbuse),
+    exceedsAbuseThreshold: !!(
+      state.project && state.project.exceedsAbuseThreshold
+    ),
   }),
   {refreshProjectName}
 )(ProjectRemix);

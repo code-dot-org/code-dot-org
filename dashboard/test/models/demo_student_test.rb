@@ -177,16 +177,27 @@ class DemoStudentTest < ActiveSupport::TestCase
     assert_includes Policies::DemoSections.all_demo_student_ids, student.id
   end
 
-  test 'after_commit hook clears Policies::DemoSections cache on destroy' do
+  # Destroy is forbidden: the row grants the user's demo protections, so it is
+  # archived (soft-flipped to the archived demo_type) rather than destroyed.
+
+  test 'destroy is prevented; the record persists' do
     student = create(:student, :in_email_section)
     record = DemoStudent.create!(user: student, demo_type: 'high')
-    record.run_callbacks(:commit) # ensure post-create cache is fresh
-    Policies::DemoSections.all_demo_student_ids # warm cache (includes student)
 
-    record.destroy!
-    record.run_callbacks(:commit)
+    assert_raises(DemoStudent::ProtectedRecord) {record.destroy!}
+    assert DemoStudent.exists?(record.id)
+  end
 
-    refute_includes Policies::DemoSections.all_demo_student_ids, student.id
+  test 'archive! flips demo_type to archived and keeps the user protected' do
+    student = create(:student, :in_email_section)
+    record = DemoStudent.create!(user: student, demo_type: 'high')
+
+    record.archive!
+
+    assert record.reload.archived?
+    assert_equal Policies::DemoSections::ARCHIVED_DEMO_TYPE.to_s, record.demo_type
+    Policies::DemoSections.reset_cache!
+    assert Policies::DemoSections.demo_student?(student.id)
   end
 
   # Demo students are protected from hard-delete (via FK) and purge (via the

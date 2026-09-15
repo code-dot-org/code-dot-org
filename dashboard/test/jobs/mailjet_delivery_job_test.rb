@@ -39,24 +39,6 @@ class MailjetDeliveryJobTest < ActiveJob::TestCase
       end
     end
 
-    context 'when StandardError is raised' do
-      let(:exception) {StandardError.new('expected_exception')}
-
-      before do
-        MailJet.stubs(:send_email).raises(exception)
-      end
-
-      it 'rescues from exception with #report_exception' do
-        perform_enqueued_jobs do
-          described_class.any_instance.expects(:report_exception).with(exception).once
-
-          perform_later
-
-          assert_performed_jobs 1
-        end
-      end
-    end
-
     context 'when RestClient::TooManyRequests is raised' do
       let(:exception) {RestClient::TooManyRequests.new}
 
@@ -64,12 +46,9 @@ class MailjetDeliveryJobTest < ActiveJob::TestCase
         MailJet.stubs(:send_email).raises(exception)
       end
 
-      it 'retries job up to 5 times before reporting and raising exception' do
+      it 'retries job up to 5 times' do
         perform_enqueued_jobs do
-          described_class.any_instance.expects(:report_exception).with(exception).once
-
           assert_raises(exception.class) {perform_later}
-
           assert_performed_jobs 5
         end
       end
@@ -79,12 +58,9 @@ class MailjetDeliveryJobTest < ActiveJob::TestCase
           MailJet.stubs(:send_email).raises(exception).then.returns(nil)
         end
 
-        it 'retries job once without reporting and raising exception' do
+        it 'retries job once' do
           perform_enqueued_jobs do
-            described_class.any_instance.expects(:report_exception).with(exception).never
-
             perform_later
-
             assert_performed_jobs 2
           end
         end

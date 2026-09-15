@@ -311,19 +311,6 @@ class Backpack extends Component {
       !backpackLoadError &&
       backpackFilenames.length === 0;
 
-    const backpackIcon = (
-      <i style={{marginRight: 8, fontSize: 13}}>
-        {/* TODO: [Phase 2] This is legacy style of backpack image.
-         Once we move to new styles, make sure to use backpack_neutraldark.png instead to match colors
-         More info here: https://github.com/code-dot-org/code-dot-org/pull/50895 */}
-        <img
-          src="/blockly/media/javalab/backpack.png"
-          alt="backpack icon"
-          className={moduleStyles.backpackIcon}
-        />
-      </i>
-    );
-
     // Use PaneButton as primary Backpack button
     // to align with other buttons in the JavalabEditor header,
     // which all use PaneButton.
@@ -331,7 +318,7 @@ class Backpack extends Component {
       <CloseOnEscape handleClose={this.handleClickOutside}>
         <PaneButton
           id="javalab-editor-backpack"
-          icon={backpackIcon}
+          iconProps={{iconName: 'backpack', iconStyle: 'solid'}}
           onClick={this.toggleDropdown}
           headerHasFocus
           isLegacyStyles

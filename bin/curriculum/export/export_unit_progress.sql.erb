@@ -241,5 +241,5 @@ $$)
 to 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/progress/<%=unit_name%>_'
 FORMAT JSON
 EXTENSION 'jsonl'
-iam_role 'arn:aws:iam::475661607190:role/redshift-s3';
+iam_role 'arn:aws:iam::<%=AWS::EC2.account_id%>:role/redshift-s3';
 ;

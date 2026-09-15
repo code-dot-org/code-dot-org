@@ -10,6 +10,7 @@ module Cdo
       smaps_pss_kb: 'WorkerPssKb',           # Proportional Set Size — true RAM cost after CoW accounting
       smaps_private_dirty_kb: 'WorkerPrivateDirtyKb', # Pages dirtied by this worker alone (CoW erosion indicator)
       smaps_shared_clean_kb: 'WorkerSharedCleanKb',   # Still-shared CoW pages; declines as GC dirties them
+      smaps_shared_dirty_kb: 'WorkerSharedDirtyKb',   # Fork-shared heap pages — the headline measure of surviving CoW sharing (dirty in parent, so here not Shared_Clean)
       proc_vm_rss_kb: 'WorkerRssKb'          # VmRSS — cross-reference for PSS (includes shared pages at full weight)
     }.freeze
 

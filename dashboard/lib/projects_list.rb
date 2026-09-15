@@ -280,6 +280,9 @@ module ProjectsList
         publishedAt: project[:published_at],
         frozen: project_value['frozen'],
       }
+      # Lab2 saves a lab's few project-level settings (Music Lab's sound pack,
+      # for one) on the channel as well as in the sources.
+      row_data[:labConfig] = project_value['labConfig'] if project_value['labConfig']
 
       if with_library
         row_data[:libraryName] = project_value['libraryName']

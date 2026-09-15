@@ -95,12 +95,14 @@ export default class FieldTune extends BlocklyCore.Field {
   }
 
   getText() {
-    const {notes, instrument} = this.getValue();
-    if (notes.length === 0) {
+    const {events, instrument} = this.getValue();
+    if (events.length === 0) {
       return 'select notes';
     }
 
-    return `${instrument} (${this.getTruncatedNotes(notes)})`;
+    return `${instrument} (${this.getTruncatedNotes(
+      events.map((e: InstrumentTickEvent) => e.note)
+    )})`;
   }
 
   protected render_() {

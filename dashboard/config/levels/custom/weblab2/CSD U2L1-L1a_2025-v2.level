@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:45:55.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "long_instructions": "Use your Web Design for Users activity guide in order to determine which user this website might be a match for. ",
     "teacher_markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher.\r\n",
-    "thumbnail_url": "https://images.code.org/301502f3280461ed7b9f16bf5ed11bb8-image-1677189841902.png",
+    "thumbnail_url": "https://images.code.org/b009aab53ec41f7c9216da05ddb8ddf2-Screenshot 2026-07-23 154438.png",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "disable_edit_run_for_submission": "false",
@@ -34,7 +35,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <!-- Import the webpage's stylesheet -->\n    <link rel=\"stylesheet\" href=\"style.css\" />\n\n  </head>\n  <body>\n\n    <h1 class=\"title\">\n      Photo Gallery!\n    </h1>\n\n    <img class=\"galleryImg\" src=\"field.jpg\" />\n    <img class=\"galleryImg\" src=\"forest.jpg\" />\n    <img class=\"galleryImg\" src=\"mountain.jpg\" />\n    <img class=\"galleryImg\" src=\"path.jpg\" />\n    <img class=\"galleryImg\" src=\"road.jpg\" />\n    <img class=\"galleryImg\" src=\"sunset.jpg\" />\n    <img class=\"galleryImg\" src=\"morning.png\" />\n    <img class=\"galleryImg\" src=\"night.png\" />\n    \n    <p>\n      All images from Pixabay provided under a Pixabay license\n    </p>\n\n\n\n  </body>\n</html>\n",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <!-- Import the webpage's stylesheet -->\n    <link rel=\"stylesheet\" href=\"style.css\" />\n\n  </head>\n  <body>\n\n    <h1 class=\"title\">\n      Photo Gallery!\n    </h1>\n\n    <img class=\"galleryImg\" src=\"field.jpg\" />\n    <img class=\"galleryImg\" src=\"forest.jpg\" />\n    <img class=\"galleryImg\" src=\"mountain.jpg\" />\n    <img class=\"galleryImg\" src=\"path.jpg\" />\n    <img class=\"galleryImg\" src=\"road.jpg\" />\n    <img class=\"galleryImg\" src=\"sunset.jpg\" />\n    <img class=\"galleryImg\" src=\"morning.jpg\" />\n    <img class=\"galleryImg\" src=\"night.jpg\" />\n    \n    <p>\n      All images from Pixabay provided under a Pixabay license\n    </p>\n\n\n\n  </body>\n</html>\n",
           "active": false,
           "folderId": "0"
         },
@@ -42,102 +43,86 @@
           "id": "10",
           "name": "style.css",
           "language": "css",
-          "contents": ".galleryImg {\n  float: left;\n  width: 25%;\n}\n\n.title {\n  font-family: Helvetica;\n  color: blue;\n  text-align: center;\n  font-size: 50px;\n  text-decoration: underline;\n}\n\nbody {\n  background: orange;\n}\n\np {\n  clear:both;\n  color: #252525;\n  font-family: Consolas;\n  font-size: 10px;\n  text-align: center;\n}",
+          "contents": ".galleryImg {\n  float: left;\n  width: 25%;\n}\n\n.title {\n  font-family: Helvetica;\n  color: crimson;\n  text-align: center;\n  font-size: 50px;\n  text-decoration: overline;\n}\n\nbody {\n  background: orange;\n}\n\np {\n  clear:both;\n  color: #252525;\n  font-family: Consolas;\n  font-size: 10px;\n  text-align: center;\n}",
           "folderId": "0",
-          "active": false
-        },
-        "11": {
-          "id": "11",
-          "name": "sunset.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/50c6990a-d001-42dd-8e7e-398eb0c05257.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "12": {
-          "id": "12",
-          "name": "road.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/09983683-7eb8-4557-a97d-e7739c9b50d9.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "13": {
-          "id": "13",
-          "name": "field.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/2ced109c-b92e-425f-9a2f-b03bdc2b62c5.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "14": {
-          "id": "14",
-          "name": "morning.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/a6f152cc-03f3-47db-8ccf-e5ab073a11ae.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "15": {
-          "id": "15",
-          "name": "mountain.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/d8684988-ef59-4083-bfea-8eff5b4cc8c3.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "16": {
-          "id": "16",
-          "name": "forest.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/0a53bb6f-0d64-404c-86e1-678af3ebfe93.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "17": {
-          "id": "17",
-          "name": "path.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/af41e959-39a6-43ef-8b37-f9a5ed8a5e6b.jpg",
-          "type": "starter",
-          "active": false
-        },
-        "18": {
-          "id": "18",
-          "name": "night.jpg",
-          "language": "jpg",
-          "contents": "",
-          "folderId": "0",
-          "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/7640c3ff-efe9-4b23-8da1-eecdd11fbc12.jpg",
-          "type": "starter",
           "active": true
+        },
+        "19": {
+          "id": "19",
+          "name": "field.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a_2025-v2/uuid/b2b32e19-91ad-473f-b7de-a2dd3e012da4.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "20": {
+          "id": "20",
+          "name": "forest.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a_2025-v2/uuid/bfa7b135-2b72-436f-aefc-5b550a2f7b52.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "21": {
+          "id": "21",
+          "name": "morning.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a_2025-v2/uuid/33392784-3aa7-4fd4-81ee-008c19312ba8.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "22": {
+          "id": "22",
+          "name": "mountain.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a_2025-v2/uuid/6e0ff4f8-9bdc-4032-8d52-41bdfae8be27.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "23": {
+          "id": "23",
+          "name": "night.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a_2025-v2/uuid/fe1d6e2d-ba28-438f-8130-c3abb6792475.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "24": {
+          "id": "24",
+          "name": "path.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a_2025-v2/uuid/eb1f56a3-9683-4bf4-ab44-0df2b09e4248.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "25": {
+          "id": "25",
+          "name": "road.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a_2025-v2/uuid/bed5722f-5460-436f-963a-7f69eb8ed2bb.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "26": {
+          "id": "26",
+          "name": "sunset.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/CSD%20U2L1-L1a_2025-v2/uuid/5524acec-b018-41ac-bd83-d8c356aa3ccc.jpg",
+          "type": "starter",
+          "active": false
         }
       },
       "openFiles": [
         "1",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18"
+        "10"
       ]
     },
     "display_name": "Template A",
@@ -155,9 +140,10 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:45:55.438+00:00\",\"changed\":[\"cloned from \\\"CSD U2L1-L1a-2025\\\"\"],\"cloned_from\":\"CSD U2L1-L1a-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:45:55.438+00:00\",\"changed\":[\"cloned from \\\"CSD U2L1-L1a-2025\\\"\"],\"cloned_from\":\"CSD U2L1-L1a-2025\"},{\"changed_at\":\"2026-07-23 17:02:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-23 17:02:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-23 22:44:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-23 22:44:53 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-23 22:45:11 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

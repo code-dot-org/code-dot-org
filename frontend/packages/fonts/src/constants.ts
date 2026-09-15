@@ -1,5 +1,5 @@
 export const FONT_FAMILY_NAMES = [
-  'Figtree', // Primary Font
+  'Geist', // Primary Font
   'Noto Sans', // Fallback
   'Barlow Semi Condensed Semibold', // For headings, low priority
   'Barlow Semi Condensed Medium', // For headings, low priority

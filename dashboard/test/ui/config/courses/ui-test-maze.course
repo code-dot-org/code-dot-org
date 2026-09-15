@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-maze",
+  "script_names": [
+    "ui-test-maze"
+  ],
+  "original_script_names": [
+    "ui-test-maze"
+  ],
+  "published_state": "preview",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-maze",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

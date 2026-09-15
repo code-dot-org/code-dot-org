@@ -13,9 +13,3 @@ source docker/ci/scripts/prepare_ci_env.sh
 bundle exec rake build
 bundle exec rake ci:seed_ui_test
 bundle exec rake ci:run_ui_tests
-
-# Puma is still live from ci:run_ui_tests; run the Playwright e2e suite against
-# it via the shared rake task (which also uploads the report and logs the link).
-# The task warns on failure; `|| true` keeps it non-blocking here.
-TARGET_URL=http://localhost-studio.code.org:3000 \
-  bundle exec rake test:playwright_ui || true

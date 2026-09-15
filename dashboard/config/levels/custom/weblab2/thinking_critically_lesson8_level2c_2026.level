@@ -16,7 +16,7 @@
     "hide_share_and_remix": "false",
     "widget_view": "true",
     "initial_view_mode": "split",
-    "require_edit_to_continue": "true",
+    "require_edit_to_continue": "false",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -73,6 +73,6 @@
     },
     "thumbnail_url": "https://images.code.org/7ec14f4e73db6c07c872e2c951dac8ec-three.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-28T16:11:07.249+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2b_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2b_2026\"},{\"changed_at\":\"2026-04-28 16:12:21 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:12:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-28T16:11:07.249+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson8_level2b_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson8_level2b_2026\"},{\"changed_at\":\"2026-04-28 16:12:21 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:12:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-28 16:57:17 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-08 21:56:14 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

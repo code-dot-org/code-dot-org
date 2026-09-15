@@ -181,20 +181,23 @@ class ScriptLevelsController < ApplicationController
     # TODO: If this adds too much to the load time in prod, move it to an API.
     if current_user&.teacher?
       @responses = []
-      # We use this for the level summary entry point, so on contained levels
-      # what we actually care about are responses to the contained level.
-
-      levels =
-        if @level.is_a?(LevelGroup)
-          @level.levels
-        else
-          [@level.contained_levels.any? ? @level.contained_levels.first : @level]
-        end
+      # The levels whose responses the summary view shows.
+      response_levels = @level.is_a?(LevelGroup) ? @level.levels : @level.levels_for_progress
 
       # TODO: Change/remove this check as we add support for more level types.
-      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0]&.predict_level? || levels[0].is_a?(LevelGroup)
-        @responses = levels.map do |sublevel|
-          UserLevel.where(level: sublevel, user: @section&.students)
+      first_level = response_levels.first
+      if first_level.is_a?(FreeResponse) || first_level.is_a?(Multi) || first_level&.predict_level? || first_level.is_a?(LevelGroup)
+        if @level.is_a?(LevelGroup)
+          # A level group can't contain a migrated predict level, so we just return the responses for each level.
+          @responses = response_levels.map do |sublevel|
+            UserLevel.where(level: sublevel, user: @section&.students)
+          end
+        else
+          # We have one level, and it could be a migrated predict level, which may have progress
+          # on both the level and its contained level; keep each student's most recent attempt.
+          user_levels = UserLevel.where(level: response_levels, user: @section&.students)
+          user_levels = user_levels.group_by(&:user_id).map {|_, uls| uls.max_by(&:updated_at)} if response_levels.many?
+          @responses = [user_levels]
         end
       end
     end
@@ -603,24 +606,14 @@ class ScriptLevelsController < ApplicationController
 
     readonly_view_options if @level.channel_backed? && params[:version].present?
 
-    if DCDO.get('script_level_fallback_responses_cache_disabled', false)
-      @@fallback_responses = {} if defined?(@@fallback_responses) && @@fallback_responses.present?
-      @fallback_response = present_level_fallback_response
-    else
-      @@fallback_responses ||= {}
-      @fallback_response = @@fallback_responses[@script_level.id] ||= present_level_fallback_response
-    end
+    @fallback_response = {
+      success: milestone_response(script_level: @script_level, level: @level, solved?: true, unit_group: @unit_group),
+      failure: milestone_response(script_level: @script_level, level: @level, solved?: false),
+    }
 
     @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: @unit_group_unit)
 
     render 'levels/show', formats: [:html]
-  end
-
-  private def present_level_fallback_response
-    {
-      success: milestone_response(script_level: @script_level, level: @level, solved?: true, unit_group: @unit_group),
-      failure: milestone_response(script_level: @script_level, level: @level, solved?: false),
-    }
   end
 
   # Don't try to generate the CSRF token for forms on this page because it's cached.

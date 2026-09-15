@@ -1,0 +1,26 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-08-06T18:33:16.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "video_key": "oceans_training_data",
+    "display_name": "Video: Training Data",
+    "video_rounded_corners": true,
+    "video_full_width": true,
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19648,
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true",
+    "encrypted": "false",
+    "instructions_important": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-08-06T18:33:16.210+00:00\",\"changed\":[\"cloned from \\\"Oceans_Video_Training_Data_2025\\\"\"],\"cloned_from\":\"Oceans_Video_Training_Data_2025\"},{\"changed_at\":\"2026-08-06 18:33:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

@@ -1,0 +1,23 @@
+name 'pl-aif-2-U5-promise-chain-interactive'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Promise Chain Sort 
+
+Here's the promise chain from the last level. Use it as a reference while you put the steps in order below.
+
+
+<div style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size:13pt; background:#0b1020; color:#e5e7eb; padding:16px; border-radius:10px; overflow:auto; max-width:900px; margin:0 0 16px 0; line-height:1.8;">
+button click<br>
+&nbsp;&nbsp;→ fetch(url)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.then(response =&gt; response.json())<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.then(data =&gt; /* use the data */)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.catch(error =&gt; /* handle problems */)
+</div>
+
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/promise-chain-sort.html"
+        style="width:100%; max-width:900px; height:520px; border:1px solid #d8d5f5; border-radius:12px; display:block;"
+        title="Trace the Promise Chain - Drag and Sort Activity">
+</iframe>
+MARKDOWN

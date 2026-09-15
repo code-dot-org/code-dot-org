@@ -1,11 +1,8 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import commonMsg from '@cdo/locale';
-
-import commonStyles from '../../commonStyles';
-
-import style from './duplicate-element-button.module.scss';
 
 /**
  * A duplicate button that helps replicate elements
@@ -19,16 +16,14 @@ class DuplicateElementButton extends React.Component {
 
   render() {
     return (
-      <div>
-        <button
-          type="button"
-          className={style.duplicateButton}
-          style={commonStyles.button}
-          onClick={this.handleDuplicate}
-        >
-          {commonMsg.duplicate()}
-        </button>
-      </div>
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
+        onClick={this.handleDuplicate}
+      >
+        {commonMsg.duplicate()}
+      </MuiButton>
     );
   }
 }

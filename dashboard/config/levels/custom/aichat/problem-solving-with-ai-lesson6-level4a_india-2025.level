@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-06-26T19:33:08.000Z",
   "level_num": "custom",
@@ -46,13 +47,12 @@
     "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
     "name_suffix": "_india-2025",
     "starter_assets": {
-      "Patient_Profiles.pdf": "9a212f38-cc0e-4903-8d85-94b258016fd7.pdf"
+      "Patient_Profiles.pdf": "3c3bb528-f979-4d49-bac9-75f149dfa115.pdf"
     },
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:08.780+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4a_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4a_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:08.780+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4a_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4a_2025\"},{\"changed_at\":\"2026-08-07 01:54:21 +0000\",\"changed\":[],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

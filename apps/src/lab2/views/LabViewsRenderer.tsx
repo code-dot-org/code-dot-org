@@ -16,6 +16,7 @@ import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
+import KeyboardShortcutsDialog from '../keyboardShortcuts/KeyboardShortcutsDialog';
 
 import NoExemplarPage from './components/NoExemplarPage';
 import ExtraLinks from './ExtraLinks';
@@ -52,6 +53,9 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const projectSharingDisabled = useAppSelector(
     state => !!state.lab.projectSharingDisabled
   );
+  const hasPrivacyProfanityViolation = useAppSelector(
+    state => !!state.lab.shareFailure
+  );
   const isTeacherOfProjectOwner = useAppSelector(
     state => !!state.lab.isTeacherOfProjectOwner
   );
@@ -75,6 +79,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     pageAction,
     isBlockedAbuse,
     projectSharingDisabled,
+    hasPrivacyProfanityViolation,
     isOwner,
     isTeacherOfProjectOwner,
     isProjectValidator
@@ -114,6 +119,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
           {!queryHideExtraLinks && showExtraLinksButton && (
             <ExtraLinks levelId={levelProperties.id} />
           )}
+          <KeyboardShortcutsDialog appName={currentAppName} />
         </div>
       </ExtraLinksButtonContext.Provider>
     </ProgressContainer>

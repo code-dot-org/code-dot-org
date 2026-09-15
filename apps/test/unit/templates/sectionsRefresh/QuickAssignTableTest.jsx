@@ -81,6 +81,25 @@ describe('QuickAssignTable', () => {
     expect(radio).toBeChecked();
   });
 
+  it('flags the assigned course when unavailable in the current language', () => {
+    setUpRtl({
+      sectionCourse: {displayName: 'Computer Science A', courseOfferingId: 73},
+      selectedCourseUnavailable: true,
+    });
+    expect(
+      screen.getByText('Unavailable for the current language')
+    ).toBeInTheDocument();
+  });
+
+  it('does not flag the assigned course when available in the current language', () => {
+    setUpRtl({
+      sectionCourse: {displayName: 'Computer Science A', courseOfferingId: 73},
+    });
+    expect(
+      screen.queryByText('Unavailable for the current language')
+    ).not.toBeInTheDocument();
+  });
+
   it('shows TA icon when course offering has TA enabled', () => {
     setUpRtl();
     const taIcon = screen.getByAltText('AI Teaching Assistant available');

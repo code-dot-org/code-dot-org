@@ -1,12 +1,14 @@
+import {Button, Typography} from '@mui/material';
 import React from 'react';
 
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import SublevelCard from './SublevelCard';
+
+import styles from './BubbleChoice.module.scss';
 
 export default class BubbleChoice extends React.Component {
   static propTypes = {level: levelType};
@@ -21,24 +23,24 @@ export default class BubbleChoice extends React.Component {
     const finishButtonUrl = level.redirect_url || level.script_url;
 
     return (
-      <div>
+      <div className={styles.buttons}>
         {backButtonUrl && (
-          <button
-            type="button"
+          <Button
+            variant="outlined"
+            color="secondary"
             onClick={() => this.goToUrl(backButtonUrl)}
-            style={styles.btn}
           >
             {i18n.back()}
-          </button>
+          </Button>
         )}
         {finishButtonUrl && (
-          <button
-            type="button"
+          <Button
+            variant="contained"
+            color="primary"
             onClick={() => this.goToUrl(finishButtonUrl)}
-            style={{...styles.btn, ...styles.btnOrange}}
           >
             {i18n.finish()}
-          </button>
+          </Button>
         )}
       </div>
     );
@@ -49,11 +51,19 @@ export default class BubbleChoice extends React.Component {
 
     return (
       <div>
-        <h1>{level.display_name}</h1>
+        <Typography variant="h1" className={styles.displayNameHeader}>
+          {level.display_name}
+        </Typography>
         <SafeMarkdown markdown={level.description} />
         {this.renderButtons()}
-        <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
-        <div style={styles.cards}>
+        <Typography
+          variant="h3"
+          component="h2"
+          className={styles.chooseActivityHeader}
+        >
+          {i18n.chooseActivity()}
+        </Typography>
+        <div className={styles.cards}>
           {level.sublevels.map(sublevel => (
             <SublevelCard
               isLessonExtra={false}
@@ -67,23 +77,3 @@ export default class BubbleChoice extends React.Component {
     );
   }
 }
-
-const styles = {
-  h2: {
-    color: color.charcoal,
-    padding: '10px 0',
-  },
-  btn: {
-    color: color.white,
-    backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray,
-  },
-  btnOrange: {
-    backgroundColor: color.orange,
-    borderColor: color.orange,
-  },
-  cards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-};

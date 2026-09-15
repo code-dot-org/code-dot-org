@@ -3,42 +3,108 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Utilizing the Project Guide 
+# Utilizing the Capstone Project Handout & Digital Levels 
 
-## What It Is: 
-**The Project Guide is not a task list or a timeline.** Instead, it is a living document that captures student thinking, reasoning, and decisions as the project evolves over five specific milestones.
+The Capstone Project Handout acts as a roadmap and checklist for the project, helping students track their milestone deliverables and daily progress.
 
-> #### While the final app shows what was built, the Project Guide explains the how and why.
+However, the actual thinking, reasoning, and decision-making are captured digitally as the project evolves across different "levels" on the computer platform
+.
+While the Handout tracks where they are in the project, the final app shows what was built.
 
-<img src="https://images.code.org/3c574ded53b8358baff9d862f7c5df4a-image-1776697705188.png" alt="milestone one project guide" width="550px" style="border-radius:10px; float:right; margin: 0 0 40px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
-
-##What It Covers: 
-The guide is divided into sections that mirror the project's milestones: 
-- Intent & Scope (Day 1)
-- System Explanation (Day 2)
-- Testing & Behavior (Day 3+)
-- Feedback & Iteration (Day 8)
-- Final Reflection
-
-<div style="clear:both;"></div>
-
-## Keeping the Flow:
-
-This document is designed for iteration. Students should not just fill it out once and forget it; they are explicitly instructed to revisit and add on to earlier sections whenever their ideas, scope, or system designs change based on testing or feedback
-
-This ongoing documentation proves that their understanding is evolving.
+Most importantly, the students' digital `capstone.md` file and their Benchmark Reflections explain the how and why.
 
 ---
 
-## Using the Project Guide to Manage:
+<div style="display:flex; gap:32px; align-items:flex-start; flex-wrap:wrap; font-family:'Geist', Arial, Helvetica, sans-serif;">
+
+  <!-- Left Column -->
+<div style="flex:1 1 250px; min-width:250px;">
+    <h3>What It Covers</h3>
+
+  <p>
+      The digital levels mirror the project's milestones and provide designated spaces for students to track their progress:
+    </p>
+
+   <ul>
+      <li><strong>Intent &amp; Scope</strong> (Day 1): Level 1</li>
+      <li><strong>System Explanation</strong> (Day 2): Level 2</li>
+      <li><strong>Testing &amp; Behavior</strong> (Day 3+): Level 4</li>
+      <li><strong>Feedback &amp; Iteration</strong> (Day 8): Level 6</li>
+      <li><strong>Final Reflection</strong>: Levels 8, 9, and 10 </li>
+     <li><i>Note: Scheduled Benchmark Reflections occur on Levels 3, 5, and 7</i></li>
+    </ul>
+  </div>
+
+  <!-- Right Column -->
+  <div style="flex:2.3 1 500px; min-width:320px;">
+
+  <div style="background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,.08); padding:24px; font-family:'Geist', Arial, Helvetica, sans-serif; color:#222; line-height:1.5;">
+
+   <h2 style="margin:0 0 10px 0; color:#4C42CF; font-size:30px; font-weight:700;">
+        Milestones &amp; Deliverables
+      </h2>
+
+  <p style="margin:0 0 24px 0; font-size:12pt;">
+        Use this checklist to track your progress across the capstone. You may work across milestones on the same day. Return to earlier milestones anytime your idea, scope, or system design changes.
+      </p>
+
+  <h3 style="margin:0 0 10px 0; color:#2191CC; font-size:22px; font-weight:700;">
+        Milestone 1: Intent &amp; Scope
+      </h3>
+
+  <p style="margin:0 0 18px 0; font-size:12pt;">
+        <strong>Goal:</strong> We can clearly explain who this is for, what problem it solves, and what this version will include.
+      </p>
+
+  <fieldset style="border:none; padding:0; margin:0 0 20px 0;">
+        <legend style="position:absolute; left:-9999px;">
+          Milestone 1 checklist
+        </legend>
+
+  <div style="margin-bottom:12px;">
+          <input type="checkbox" id="item1" style="margin-right:10px; transform:scale(1.15);">
+          <label for="item1" style="font-size:12pt;">
+            We can describe our app's audience and the problem it addresses
+          </label>
+        </div>
+
+  <div style="margin-bottom:12px;">
+          <input type="checkbox" id="item2" style="margin-right:10px; transform:scale(1.15);">
+          <label for="item2" style="font-size:12pt;">
+            We can explain what our first version will include and what we intentionally left out
+          </label>
+        </div>
+
+  <div style="margin-bottom:12px;">
+          <input type="checkbox" id="item3" style="margin-right:10px; transform:scale(1.15);">
+          <label for="item3" style="font-size:12pt;">
+            We can explain the tradeoffs we made to keep our scope realistic
+          </label>
+        </div>
+
+  </fieldset>
+
+  <p style="margin:0; font-size:12pt;">
+        <strong>Levels to use:</strong> Level 1 - Milestone 1 choices
+      </p>
+
+  </div>
+
+  </div>
+
+</div>
+
+---
+
+## Using the Project Guide to Manage
 
 <!-- Pacing & Redirection -->
 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
   <img src="https://images.code.org/a6383b704bd9c70435c6eb9c54f81352-image-1776699709862.png" alt="compass icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
   <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <h3 style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;"><b>Pacing &amp; Redirection</b></h3>
-    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;">If students are rushing to write code on Day 2, redirect them to the System Explanation section of the guide.</p>
-    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 0;">Require them to clearly explain the flow of one user interaction (user action → app decision → user sees) before they are allowed to build.</p>
+    <p style="font-size: 12pt; margin-top: 0; margin-bottom: 10px;">If students are rushing to write code on Day 2, redirect them to <b>Level 2</b> to work on their System Explanation.</p>
+    <p style="font-size: 12pt; margin-top: 0; margin-bottom: 0;">Require them to clearly explain the flow of one user interaction (user action → app decision → user sees) before they are allowed to build.</p>
   </div>
 </div>
 
@@ -47,7 +113,7 @@ This ongoing documentation proves that their understanding is evolving.
   <img src="https://images.code.org/f8904ce9bbd20f037eb7b5b6f701cc15-image-1776699786662.png" alt="clipboard icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
   <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <h3 style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;"><b>Evidence for Grading</b></h3>
-    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 0;">The guide is your primary artifact for grading the Project Planning &amp; Intentional Design and Responsible AI &amp; Ethical Reflection categories on the rubric.</p>
+    <p style="font-size: 12pt; margin-top: 0; margin-bottom: 0;">The <code>capstone.md</code> file and the Benchmark Reflections on Levels 3, 5, and 7 are your primary artifacts for grading. You will use these digital records to assess the Project Planning & Intentional Design and Responsible AI & Ethical Reflection categories on the rubric.</p>
   </div>
 </div>
 
@@ -56,8 +122,9 @@ This ongoing documentation proves that their understanding is evolving.
   <img src="https://images.code.org/e03c589871538d69ec74607fa153fb6a-image-1776699823913.png" alt="magnifying glass icon" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
   <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <h3 style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;"><b>Justifying Decisions</b></h3>
-    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 10px;">Remind students that their reflections in the guide are evidence of their learning, not just busywork.</p>
-    <p style="font-size: 14pt; margin-top: 0; margin-bottom: 0;">Use the guide to push teams to justify why they changed a feature, rather than just listing what they changed.</p>
+    <p style="font-size: 12pt; margin-top: 0; margin-bottom: 10px;">Remind students that their written reflections and chat logs on these levels are concrete evidence of their learning, not just busywork. Use their <code>capstone.md</code> logs to push teams to justify why they changed a feature based on a test or piece of feedback, rather than just listing what they changed
+</p>
+   
   </div>
 </div>
 

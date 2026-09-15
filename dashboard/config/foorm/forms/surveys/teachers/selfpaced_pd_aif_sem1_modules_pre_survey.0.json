@@ -22,7 +22,7 @@
         {
           "type": "html",
           "name": "intro",
-          "html": "<h1>Teaching {module} Self-paced Online Professional Learning</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Teaching {module} - Pre-Module Survey</h2>"
+          "html": "<h1>Teaching {module} Self-paced Online Professional Learning</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>CodeAI relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by CodeAI for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Teaching {module} - Pre-Module Survey</h2>"
         },
         {
           "type": "html",
@@ -43,7 +43,7 @@
           "choices": [
             {
               "value": "better_understand_module",
-              "text": "Better understand Code.org's {module} curriculum"
+              "text": "Better understand CodeAI's {module} curriculum"
             },
             {
               "value": "learn_cs_teaching_strategies",
@@ -64,7 +64,7 @@
           "choices": [
             {
               "value": "better_understand_module",
-              "text": "Better understand Code.org's {module} curriculum"
+              "text": "Better understand CodeAI's {module} curriculum"
             },
             {
               "value": "learn_content_module",

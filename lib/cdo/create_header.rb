@@ -60,6 +60,9 @@ class CreateHeader
     weblab2: {
       image: "logo_weblab2.png"
     },
+    sketchlab: {
+      image: 'sketch-lab-icon.png'
+    }
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise
@@ -78,7 +81,7 @@ class CreateHeader
   def self.get_create_dropdown_contents(options)
     entries = options[:limit_project_types] == "true" ?
       %w(spritelab minecraft_designer music artist dance) :
-      %w(music_dance_ai spritelab applab gamelab weblab2 music pythonlab artist dance)
+      %w(music_dance_ai spritelab applab gamelab sketchlab weblab2 music pythonlab dance)
 
     if options[:project_type] &&
         !entries.include?(options[:project_type]) &&

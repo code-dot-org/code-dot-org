@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-10T19:03:06.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "bold cards",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "mini_app": "theater",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "mini_app_variant": "functional",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# ---------- SAMPLE DATA (for testing only — replace with your variables and calculations) ----------\nname = \"NAME\"\nsubject = \"SUBJECT\"\nlabel_1 = \"LABEL 1\"\nvalue_1 = \"VALUE 1\"\nlabel_2 = \"LABEL 2\"\nvalue_2 = \"VALUE 2\"\nclosing_line = \"CLOSING LINE\"\n\n# ---------- THE REVEAL ----------\nfrom theater import Scene, play_scenes, Font, FontStyle\n\nscene = Scene()\nscene.remove_stroke_color()\n\nLIME = \"#C6FF00\"\nPINK = \"#FF2E9F\"\nCYAN = \"#00E5FF\"\n\n# ----- CARD 1: COVER -----\nscene.clear(\"#0A0A0A\")\n\nscene.set_fill_color(LIME)\nscene.draw_regular_polygon(40, 40, 4, 10)\nscene.set_fill_color(PINK)\nscene.draw_regular_polygon(370, 60, 4, 14)\nscene.set_fill_color(CYAN)\nscene.draw_regular_polygon(360, 350, 4, 9)\nscene.set_fill_color(LIME)\nscene.draw_regular_polygon(30, 320, 4, 12)\n\nscene.set_text_style(Font.SANS, FontStyle.BOLD)\nscene.set_text_color(PINK)\nscene.set_text_height(16)\nscene.draw_text(\"your \" + subject + \" era\", 40, 100)\n\nscene.set_text_color(\"white\")\nscene.set_text_height(50)\nscene.draw_text(subject, 30, 175, rotation=-4)\n\nscene.set_fill_color(LIME)\nscene.draw_rectangle(40, 210, 200, 34)\nscene.set_text_color(\"#0A0A0A\")\nscene.set_text_height(20)\nscene.draw_text(\"WRAPPED · \" + name, 50, 233)\n\nscene.play_note(72, 0.1)\nscene.pause(0.12)\nscene.play_note(76, 0.1)\nscene.pause(0.12)\nscene.play_note(79, 0.1)\nscene.pause(0.12)\nscene.play_note(84, 0.35)\nscene.pause(1.0)\n\n# ----- CARD 2: STAT 1 -----\nscene.clear(\"#0A0A0A\")\nscene.set_fill_color(PINK)\nscene.draw_regular_polygon(200, 190, 4, 130)\nscene.set_text_style(Font.SANS, FontStyle.BOLD)\nscene.set_text_color(\"#0A0A0A\")\nscene.set_text_height(18)\nscene.draw_text(label_1, 130, 160)\nscene.set_text_height(56)\nscene.draw_text(str(value_1), 120, 220, rotation=-3)\n\nscene.set_fill_color(CYAN)\nscene.draw_regular_polygon(365, 30, 4, 10)\nscene.set_fill_color(LIME)\nscene.draw_regular_polygon(25, 370, 4, 10)\n\nscene.play_note(64, 0.15)\nscene.pause(0.15)\nscene.play_note(71, 0.4)\nscene.pause(1.3)\n\n# ----- CARD 3: STAT 2 -----\nscene.clear(\"#0A0A0A\")\nscene.set_fill_color(CYAN)\nscene.draw_regular_polygon(200, 190, 4, 130)\nscene.set_text_style(Font.SANS, FontStyle.BOLD)\nscene.set_text_color(\"#0A0A0A\")\nscene.set_text_height(18)\nscene.draw_text(label_2, 130, 160)\nscene.set_text_height(56)\nscene.draw_text(str(value_2), 120, 220, rotation=3)\n\nscene.set_fill_color(PINK)\nscene.draw_regular_polygon(370, 370, 4, 10)\nscene.set_fill_color(LIME)\nscene.draw_regular_polygon(30, 30, 4, 10)\n\nscene.play_note(67, 0.15)\nscene.pause(0.15)\nscene.play_note(74, 0.4)\nscene.pause(1.3)\n\n# ----- CARD 4: SHARE CARD -----\nscene.clear(\"#0A0A0A\")\nscene.set_fill_color(LIME)\nscene.draw_regular_polygon(370, 40, 4, 12)\nscene.set_fill_color(PINK)\nscene.draw_regular_polygon(30, 370, 4, 12)\n\nscene.set_text_style(Font.SANS, FontStyle.BOLD)\nscene.set_text_color(\"white\")\nscene.set_text_height(24)\nscene.draw_text(name + \"'s \" + subject, 40, 60, rotation=-2)\nscene.set_text_color(LIME)\nscene.draw_text(\"WRAPPED\", 40, 92, rotation=-2)\n\nscene.set_fill_color(PINK)\nscene.draw_rectangle(40, 115, 320, 3)\n\nscene.set_text_style(Font.SANS, FontStyle.NORMAL)\nscene.set_text_color(\"white\")\nscene.set_text_height(17)\nscene.draw_text(label_1 + \": \" + str(value_1), 40, 150)\nscene.draw_text(label_2 + \": \" + str(value_2), 40, 180)\n\nscene.set_fill_color(CYAN)\nscene.draw_rectangle(40, 205, 320, 3)\n\nscene.set_text_style(Font.SANS, FontStyle.ITALIC)\nscene.set_text_color(CYAN)\nscene.set_text_height(16)\nscene.draw_text(closing_line, 40, 240)\n\nscene.play_note(72, 0.1)\nscene.pause(0.1)\nscene.play_note(76, 0.1)\nscene.pause(0.1)\nscene.play_note(79, 0.1)\nscene.pause(0.1)\nscene.play_note(84, 0.5)\n\nplay_scenes(scene)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-10T19:03:06.583+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-template-a_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-template-a_27_28\"},{\"changed_at\":\"2026-09-10 19:03:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:10:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:13:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:36:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:47:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:47:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

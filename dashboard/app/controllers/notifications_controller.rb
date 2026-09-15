@@ -3,7 +3,7 @@ class NotificationsController < ApplicationController
 
   # TODO: Our contentful setup only supports `en-US` for now.
   # We should use `I18n.locale` if we switch to more locale support.
-  # Decision thread: https://codedotorg.slack.com/archives/C08AMQ869QX/p1758749785732599
+  # Decision thread: https://codeai.slack.com/archives/C08AMQ869QX/p1758749785732599
   # contentful docs: https://www.contentful.com/developers/docs/tutorials/general/setting-locales/
   LOCALE = I18n.default_locale
 

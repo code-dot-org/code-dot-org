@@ -1,7 +1,6 @@
 import {StepOptions, Tour} from 'shepherd.js';
 
-import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
-import experiments from '@cdo/apps/util/experiments';
+import {createReactFlowSketchLabTourSteps} from '@cdo/apps/lab2/productTours/reactFlowSketchLabTourSteps';
 
 import {AppName, LevelProperties} from '../types';
 
@@ -12,7 +11,7 @@ import {createWebLab2IntroTourSteps} from './weblab2IntroTourSteps';
 export enum ProductTour {
   ResourcePanelOnboarding = 'resource_panel_onboarding',
   ResourcePanelValidation = 'resource_panel_validation',
-  SketchlabIntro = 'sketchlab_intro',
+  SketchlabIntroReactFlow = 'sketchlab_intro_react_flow',
   Weblab2Intro = 'weblab2_intro',
 }
 
@@ -56,12 +55,12 @@ export const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> =
       shouldShowOnLevel: levelProperties =>
         (levelProperties.validations?.length ?? 0) > 0,
     },
-    [ProductTour.SketchlabIntro]: {
-      name: ProductTour.SketchlabIntro,
+    [ProductTour.SketchlabIntroReactFlow]: {
+      name: ProductTour.SketchlabIntroReactFlow,
       displayName: 'Intro to Sketch Lab',
-      metricName: 'Sketch Lab Onboarding V2',
+      metricName: 'Sketch Lab React Flow Onboarding',
       triggeredByLevel: false,
-      getSteps: createSketchlabTourSteps,
+      getSteps: createReactFlowSketchLabTourSteps,
     },
     [ProductTour.Weblab2Intro]: {
       name: ProductTour.Weblab2Intro,
@@ -105,15 +104,6 @@ export function isTourAvailableOnLevel(
   if (!isAvailableForLab) {
     return false;
   }
-  // The Sketch Lab tour(s) are only currently available for excalidraw-based
-  // Sketch lab.
-  // TODO: remove excalidraw tour https://codedotorg.atlassian.net/browse/AFL-641
-  if (
-    levelProperties.appName === 'sketchlab' &&
-    !experiments.isEnabledAllowingQueryString(experiments.EXCALIDRAW)
-  ) {
-    return false;
-  }
   const config = ProductTourConfigurations[tour];
   if (config.shouldShowOnLevel && !config.shouldShowOnLevel(levelProperties)) {
     return false;
@@ -130,6 +120,6 @@ export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
     ProductTourConfigurations[ProductTour.ResourcePanelOnboarding],
     ProductTourConfigurations[ProductTour.ResourcePanelValidation],
   ],
-  sketchlab: [ProductTourConfigurations[ProductTour.SketchlabIntro]],
+  sketchlab: [ProductTourConfigurations[ProductTour.SketchlabIntroReactFlow]],
   weblab2: [ProductTourConfigurations[ProductTour.Weblab2Intro]],
 };

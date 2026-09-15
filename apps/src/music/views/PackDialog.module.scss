@@ -1,5 +1,3 @@
-@import 'color.scss';
-
 // A translucent overlay that covers the entire container.
 %full-container-overlay {
   background-color: rgba(0 0 0 / 0.5);
@@ -36,9 +34,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--neutral-gray-95);
-    color: var(--neutral-gray-5);
-    border: solid 1px var(--neutral-gray-60);
+    background-color: var(--background-neutral-secondary);
+    color: var(--text-neutral-secondary);
+    border: solid 1px var(--borders-neutral-strong);
     top: -15px;
 
     &FullWidth {
@@ -46,8 +44,12 @@
     }
 
     .heading {
-      color: var(--neutral-gray-5);
+      color: var(--text-neutral-secondary);
       margin: 0;
+    }
+
+    .bodyText {
+      color: var(--text-neutral-secondary);
     }
 
     .body {
@@ -95,8 +97,8 @@
       height: 100%;
       overflow-y: auto;
       flex: 1;
-      background-color: var(--neutral-base-black);
-      border: solid var(--neutral-base-black) 2px;
+      background-color: var(--background-neutral-primary);
+      border: solid var(--background-neutral-primary) 2px;
       box-sizing: border-box;
       border-radius: 5px;
 
@@ -111,12 +113,17 @@
           align-items: center;
 
           &Alternate {
-            background-color: #363E48;
+            background-color: var(--background-neutral-secondary);
           }
 
           &Selected {
-            background-color: $light_primary_500;
+            background-color: var(--background-brand-teal-primary);
             border-radius: 5px;
+
+            .packName,
+            .packArtist {
+              color: var(--text-neutral-white-fixed);
+            }
           }
 
           &:hover {
@@ -159,6 +166,7 @@
           }
 
           &Name {
+            color: var(--text-neutral-secondary);
             flex: 1;
             font-size: 16px;
             white-space: nowrap;
@@ -167,6 +175,7 @@
           }
 
           &Artist {
+            color: var(--text-neutral-secondary);
             flex: 1;
             font-size: 16px;
             white-space: nowrap;
@@ -182,4 +191,3 @@
     }
   }
 }
-

@@ -1,4 +1,5 @@
 require 'aws-sdk-devicefarm'
+require 'cdo/aws/ec2'
 
 # Manages AWS Device Farm sessions for both desktop and mobile browser testing.
 #
@@ -13,7 +14,8 @@ require 'aws-sdk-devicefarm'
 # Prerequisites:
 #   1. Desktop: create a Desktop Browser Testing (TestGrid) project:
 #        aws devicefarm create-test-grid-project --name cdo-ui-tests --region us-west-2
-#      Set device_farm_desktop_project_arn in AWS Secrets Manager or locals.yml.
+#      Set device_farm_desktop_project_id in config/*.yml.erb. The full ARN is
+#      assembled at runtime from the id, the region, and the executing account.
 #   2. Mobile: create a standard Device Farm project via the AWS console.
 #      Set device_farm_mobile_project_arn in AWS Secrets Manager or locals.yml.
 #   3. Ensure AWS credentials are available (instance profile, env vars, etc.).
@@ -78,11 +80,8 @@ module AWS
 
     # AWS console URL for a desktop TestGrid session's Selenium logs.
     def self.desktop_session_url(selenium_session_id)
-      arn = CDO.device_farm_desktop_project_arn
-      return nil if arn.blank?
-      project_uuid = arn.split(':')[6]
       "https://#{REGION}.console.aws.amazon.com/devicefarm/home" \
-        "#/browser/projects/#{project_uuid}/runsselenium/logs/#{selenium_session_id}"
+        "#/browser/projects/#{CDO.device_farm_desktop_project_id}/runsselenium/logs/#{selenium_session_id}"
     end
 
     # ---- Mobile (Remote Access Session) -------------------------------------
@@ -187,17 +186,33 @@ module AWS
             "(availabilities: #{by_tier.keys.sort})"
     end
 
-    # Returns the appropriate project ARN and raises if blank.
+    # Returns the appropriate project ARN and raises if it cannot be built.
+    #
+    # The desktop ARN is assembled from the (non-secret) project id in config
+    # plus the region and the runtime account id. This keeps the account id --
+    # which differs between the prod account used by DTT/development and the
+    # codeorg-dev account used by CI -- out of source control. The mobile ARN
+    # is still read whole from config.
     def self.project_arn_for(mobile: false)
       if mobile
-        raise 'Please define CDO.device_farm_mobile_project_arn AWS Secrets Manager or locals.yml' \
+        raise 'Please define CDO.device_farm_mobile_project_arn in AWS Secrets Manager or locals.yml' \
           if CDO.device_farm_mobile_project_arn.blank?
         CDO.device_farm_mobile_project_arn
       else
-        raise 'Please define CDO.device_farm_desktop_project_arn AWS Secrets Manager or locals.yml' \
-          if CDO.device_farm_desktop_project_arn.blank?
-        CDO.device_farm_desktop_project_arn
+        raise 'Please define CDO.device_farm_desktop_project_id in config/*.yml.erb' \
+          if CDO.device_farm_desktop_project_id.blank?
+        "arn:aws:devicefarm:#{REGION}:#{account_id}:testgrid-project:#{CDO.device_farm_desktop_project_id}"
       end
+    end
+
+    # AWS account id of the compute resource we're executing in, used to build
+    # Device Farm ARNs without exposing the account id. Prefer EC2 instance
+    # metadata (DTT runs on chef-managed test instances, CI on drone workers),
+    # falling back to STS for off-instance callers such as a developer laptop
+    # with assumed-role credentials. Raises if neither source yields an account.
+    def self.account_id
+      @account_id ||= AWS::EC2.account_id ||
+        ::Aws::STS::Client.new(region: REGION).get_caller_identity.account
     end
 
     # Polls until the remote access session is RUNNING and returns its
@@ -283,6 +298,6 @@ module AWS
     end
 
     private_class_method :lookup_devices, :pick_best_device, :project_arn_for,
-      :wait_for_mobile_session_endpoint, :client
+      :account_id, :wait_for_mobile_session_endpoint, :client
   end
 end

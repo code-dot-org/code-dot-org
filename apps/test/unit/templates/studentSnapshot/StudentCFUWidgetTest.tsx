@@ -118,11 +118,68 @@ describe('StudentCFUWidget', () => {
     expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
   });
 
-  it('shows empty state when there is no CFU data', async () => {
+  it('keeps showing the loading state (never flashes hidden) when lessonId is supplied after mount', () => {
+    // Never resolves, so we can inspect the mid-flight render synchronously.
+    HttpClient.fetchJson.mockImplementation(() => new Promise(() => {}));
+
+    const {rerender} = render(
+      <StudentCFUWidget gridWidth={2} gridHeight={2} lessonId={null} />
+    );
+    expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
+    expect(HttpClient.fetchJson).not.toHaveBeenCalled();
+
+    rerender(
+      <StudentCFUWidget
+        gridWidth={2}
+        gridHeight={2}
+        lessonId={1}
+        studentId={1}
+      />
+    );
+
+    expect(document.getElementById('uitest-spinner')).toBeInTheDocument();
+    expect(HttpClient.fetchJson).toHaveBeenCalledWith(
+      '/student_snapshots/cfu_levels/1'
+    );
+  });
+
+  it('renders nothing when there is no CFU data', async () => {
     HttpClient.fetchJson.mockImplementation((url: string) => {
       if (url.startsWith('/student_snapshots/cfu_levels/')) {
         return Promise.resolve({
           value: {cfu_levels: []},
+          response: new Response(),
+        });
+      }
+      if (url.startsWith('/student_snapshots/cfu_responses/')) {
+        return Promise.resolve({
+          value: {cfu_responses: []},
+          response: new Response(),
+        });
+      }
+      return Promise.resolve({value: {}, response: new Response()});
+    });
+
+    const {container} = render(
+      <StudentCFUWidget
+        lessonId={1}
+        studentId={1}
+        gridWidth={2}
+        gridHeight={2}
+      />
+    );
+
+    await waitFor(() => {
+      expect(document.getElementById('uitest-spinner')).not.toBeInTheDocument();
+    });
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('still shows CFU levels when the lesson has them but the student has not submitted any responses yet', async () => {
+    HttpClient.fetchJson.mockImplementation((url: string) => {
+      if (url.startsWith('/student_snapshots/cfu_levels/')) {
+        return Promise.resolve({
+          value: {cfu_levels: SAMPLE_CFU_LEVELS},
           response: new Response(),
         });
       }
@@ -145,9 +202,9 @@ describe('StudentCFUWidget', () => {
     );
 
     await waitFor(() => {
-      screen.getByText(
-        'This lesson doesn\'t have any "Check for Understanding" questions.'
-      );
+      expect(screen.getByText('Level Details')).toBeInTheDocument();
+      expect(screen.getByText('Multiple Choice')).toBeInTheDocument();
+      expect(screen.getByText('Matching')).toBeInTheDocument();
     });
   });
 

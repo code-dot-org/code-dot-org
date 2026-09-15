@@ -16,8 +16,8 @@ class AiLessonSummaryPodcastsController < ApplicationController
     unit = Unit.find_by(id: podcast_params[:unit_id])
     return head :not_found unless unit
 
-    # AI Podcasts are currently only available in AIF sections
-    return head :forbidden unless unit.foundations_of_cs?
+    # AI Podcasts are currently only available in AIF and AID sections
+    return head :forbidden unless unit.foundations_of_cs? || unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.AID)
 
     lesson_ids = unit.lessons.select(&:has_lesson_plan).map(&:id)
     request = {

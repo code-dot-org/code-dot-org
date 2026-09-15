@@ -10,5 +10,5 @@ Rake::TestTask.new.tap {|x| x.warning = false}
 
 namespace :test do
   desc 'Reset test dependencies: Drop, re-create and re-seed the database'
-  timed_task_with_logging reset_dependencies: ['db:recreate', 'seed:reset']
+  timed_task_with_logging reset_dependencies: ['db:recreate']
 end

@@ -1,0 +1,65 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-24T04:03:30.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Logical Operators\r\n\r\nUse AND (`&`) and OR (`|`) to combine multiple filtering conditions. Use parentheses to show which conditions should be evaluated together.\r\n\r\n::: details [✅ Step 1]\r\nExamine the code and predict the value of `total_years_active`. Run the program and compare the output with your prediction.\r\n:::\r\n\r\n::: details [✅ Step 2]\r\nModify the filter so superheroes must meet both of these requirements:\r\n\r\n- Their `Alias` ends with `\"a\"` **or** their `City` ends with `\"s\"`.\r\n- Their `PowerLevel` is greater than or equal to `70`.\r\n\r\nRun the program and observe how the total changes.\r\n:::\r\n\r\n::: details [✅ Step 3]\r\nFurther modify the filter so superheroes must meet both of these requirements:\r\n\r\n- Their `Alias` ends with `\"a\"` **or** their `City` ends with `\"s\"`.\r\n- Their `PowerLevel` is greater than or equal to `70` **or** less than or equal to `63`.\r\n\r\nUse parentheses to group each pair of OR conditions.\r\n:::\r\n\r\n::: details [✅ Step 4]\r\nRun the program and compare the results. How did adding the second PowerLevel range affect `total_years_active`?\r\n:::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\n\ndf = pd.read_csv('new_superhero_roster.csv')\n\ntotal_years_active = df[(df['Alias'].str.endswith('a')) | (df['City'].str.endswith('s'))]['YearsActive'].sum()\nprint(\"total_years_active:\\n\", total_years_active)\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "new_superhero_roster.csv",
+          "language": "csv",
+          "contents": "HeroName,Alias,City,PowerLevel,Affiliation,ArchNemesis,YearsActive\nShadowBlade,The Shadow,New York,96,,Dark Specter,33\nThunderFist,Thunder,Los Angeles,77,Justice League,Red Skull,33\nSilverWing,Silver,Gotham,55,X-Men,Green Goblin,23\nNightWatcher,Watcher,Metropolis,60,Fantastic Four,Thanos,\nFlameBurst,Flame,Central City,93,,Doctor Doom,18\nAquaStrike,Aqua,Star City,83,Teen Titans,Loki,25\nVoltGuardian,Volt,Coast City,87,Defenders,Mystique,\nTerraRider,Terra,Bloodhaven,82,Inhumans,Ultron,\nSpectraFlash,Spectra,Atlantis,72,S.H.I.E.L.D.,Magneto,\nSolarFlare,Solar,Asgard,92,Saber Squad,Darkseid,54\nLunaShade,Luna,Midgard,64,Legion of Super-Heroes,Brainiac,\nIronClad,Iron,Krypton,68,Sentinels of Magic,Dark Specter,44\nFrostBite,Frost,Smallville,99,,Reverse-Flash,17\nWindWalker,Wind,New Genesis,65,Watchmen,Black Adam,\nMysticMage,Mystic,Apokolips,77,,Deathstroke,19\nStarSlinger,Star,Themyscira,65,Alpha Flight,Taskmaster,61\nCosmicKnight,Cosmic,Atlantis,86,Young Avengers,Kingpin,48\nBlazeRunner,Blaze,Wakanda,86,Runaways,Venom,\nCrystalCrest,Crystal,Latveria,77,,Red Skull,67\nNovaSpark,Nova,Genosha,100,Eternals,Killmonger,8\nEclipseHunter,Eclipse,Attilan,56,,Mystique,69\nPhantomEcho,Phantom,Avalon,72,Champions,Apocalypse,61\nShadowMender,Mender,Nanda Parbat,100,A-Force,Sabretooth,\nStormBringer,Storm,Kun Lun,51,Excalibur,Juggernaut,7\nVenomSting,Venom,Xandar,87,,Sandman,\nFirebrand,Fire,Titan,75,X-Factor,Mystique,67\nGlacierGuard,Glacier,Knowhere,71,Thunderbolts,Mysterio,8\nThunderClap,Clap,Sakaar,76,Heroes for Hire,Dark Specter,28\nStarlight,Starlight,Hala,75,New Warriors,Mysterio,\nMoonDancer,Moon,Oa,98,Secret Warriors,Mr. Freeze,72\nTempest,Tempest,Mars,63,,Harley Quinn,51\nAurora,Aurora,Latveria,95,Sentinels of Magic,Poison Ivy,41\nCyclone,Cyclone,Themyscira,51,,Bane,4\nNebula,Nebula,Krypton,64,Watchmen,Dark Specter,43\nInferno,Inferno,Smallville,60,Dark Avengers,Catwoman,43\nBlizzard,Blizzard,Midgard,95,Alpha Flight,Deadshot,10\nTorrent,Torrent,New Genesis,74,Young Avengers,Clayface,\nComet,Comet,Apokolips,80,Runaways,Solomon Grundy,34\nHurricane,Hurricane,Star City,95,Great Lakes Avengers,Man-Bat,16\nSolaris,Solaris,Coast City,85,Eternals,Black Mask,3\nIceBlade,Ice,Bloodhaven,69,Squadron Supreme,Firefly,\nSpecter,Specter,Atlantis,72,Champions,Hush,20\nVortex,Vortex,Wakanda,76,A-Force,Killer Croc,2\nBlaze,Blaze,Latveria,69,Excalibur,Mad Hatter,53\nSeraph,Seraph,Genosha,52,X-Force,Talia al Ghul,27\nShadow,Shadow,Attilan,74,X-Factor,KGBeast,\nTempest,Tempest,Avalon,83,,Anarky,10\nPhantom,Phantom,Nanda Parbat,57,Heroes for Hire,Ventriloquist,13\nShadowBlade,The Shadow,New York,94,New Warriors,Red Skull,\nThunderFist,Thunder,Los Angeles,88,,Mysterio,20\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "**Student Takeaways:**\r\n- Students learn how to apply multiple logical operators (such as &, |, and >=) in pandas to create complex filters for more precise data analysis.\r\n\r\n\r\n**Possible Misconceptions and/or Difficulties:**\r\n- Students might struggle with the correct use of parentheses to group conditions properly when using multiple logical operators.\r\n- There might be confusion between the logical operators (e.g., | for OR and & for AND) and their effects on the filtering process, leading to unexpected results.\r\n\r\n\r\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\nOysk9I1wdjrzm1D+LXRS2ZGDagNUcqJrVCRB\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-24T04:03:30.614+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L10-L5_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L10-L5_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-08-24 04:03:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 04:04:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-24 04:04:34 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

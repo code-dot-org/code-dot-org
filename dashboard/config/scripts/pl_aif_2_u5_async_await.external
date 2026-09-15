@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<div style="font-size:14pt; line-height:1.4;">
+<div style="font-size:12pt; line-height:1.4;">
 
 # Promise chain vs. async/await
   
@@ -13,19 +13,7 @@ In this level, you’ll compare two versions of the *same* logic: one written wi
 
 Your job is to explain what looks different and why the behavior stays the same.
  
-
-<div style="background:#f7f8fa; border-radius:10px; padding:14px; margin:12px 0; box-sizing:border-box;">
-    <p style="margin:0; font-size:14pt;">
-      💡 <strong>Key idea:</strong> <code style="font-size:12pt;">async</code>/<code style="font-size:12pt;">await</code> does not replace Promises — it’s a cleaner way to write
-      Promise logic so it reads like step-by-step code.
-    </p>
-  </div>
-
-
-
-<hr style="margin:12px 0;" />
-
-## Let's Compare
+## Comparing the Two
 
 <div style="font-size:14pt; line-height:1.4;">
 
@@ -55,12 +43,12 @@ Your job is to explain what looks different and why the behavior stays the same.
  </div>
 
 <!-- HOW TO READ -->
-<div style="font-size:14pt;">
+<div style="font-size:12pt;">
  <strong>How to read it:</strong>
   <ul style="margin-top:8px;">
-        <li style="font-size:14pt;"><code style="font-size:12pt;">fetch(url)</code> starts a request and returns a <strong>Promise</strong>.</li>
-        <li style="font-size:14pt;">The first <code style="font-size:12pt;">.then()</code> runs after the response is ready and returns <code>response.json()</code>.</li>
-        <li style="font-size:14pt;">The second <code style="font-size:12pt;">.then()</code> runs after the JSON is ready and gives you <code style="font-size:12pt;">data</code>.</li>
+        <li style="font-size:12pt;"><code style="font-size:12pt;">fetch(url)</code> starts a request and returns a <strong>Promise</strong>.</li>
+        <li style="font-size:12pt;">The first <code style="font-size:12pt;">.then()</code> runs after the response is ready and returns <code>response.json()</code>.</li>
+        <li style="font-size:12pt;">The second <code style="font-size:12pt;">.then()</code> runs after the JSON is ready and gives you <code style="font-size:12pt;">data</code>.</li>
       </ul>
     </div>
 
@@ -94,12 +82,12 @@ Your job is to explain what looks different and why the behavior stays the same.
 </div>
 
 <!-- HOW TO READ -->
-<div style="font-size:14pt;">
+<div style="font-size:12pt;">
 <strong>How to read it:</strong>
 <ul style="margin-top:8px;">
-        <li style="font-size:14pt;"><code style="font-size:12pt;">await fetch(url)</code> pauses <em>this async function</em> until the Promise resolves.</li>
-        <li style="font-size:14pt;"><code style="font-size:12pt;">await response.json()</code> pauses again because JSON parsing also returns a Promise.</li>
-        <li style="font-size:14pt;">Then the next line runs, using <code style="font-size:12pt;">data</code> like normal step-by-step code.</li>
+        <li style="font-size:12pt;"><code style="font-size:12pt;">await fetch(url)</code> pauses <em>this async function</em> until the Promise resolves.</li>
+        <li style="font-size:12pt;"><code style="font-size:12pt;">await response.json()</code> pauses again because JSON parsing also returns a Promise.</li>
+        <li style="font-size:12pt;">Then the next line runs, using <code style="font-size:12pt;">data</code> like normal step-by-step code.</li>
       </ul>
     </div>
 
@@ -111,61 +99,61 @@ Your job is to explain what looks different and why the behavior stays the same.
 
   </div>
 
-  <hr style="margin:12px 0;" />
-
-## What’s different (and what stays the same)?
+### **What’s different (and what stays the same)?**
 
 <ul style="margin:0 0 12px 20px; padding:0;">
-    <li style="margin:0 0 6px 0; font-size:14pt;">
+    <li style="margin:0 0 6px 0; font-size:12pt;">
       <strong>Different structure:</strong> The Promise chain uses nested callback functions inside <code style="font-size:12pt;">.then(...)</code>.
       The <code style="font-size:12pt;">async</code>/<code>await</code> version removes most nesting and reads top-to-bottom.
     </li>
-    <li style="margin:0 0 6px 0;font-size:14pt;">
+    <li style="margin:0 0 6px 0;font-size:12pt;">
       <strong>Same timing:</strong> Both versions still rely on Promises and still run asynchronously. Nothing “became synchronous.”
     </li>
-    <li style="margin:0 0 6px 0; font-size:14pt;">
+    <li style="margin:0 0 6px 0; font-size:12pt;">
       <strong>Same steps:</strong> (1) request data, (2) wait for the response, (3) convert to JSON, (4) use the data.
     </li>
   </ul>
 
-  <div style="background:#B2dee3; border-radius:10px; padding:14px; margin:12px 0; box-sizing:border-box;">
-    <p style="margin:0; font-size:14pt;">
-      ⭐ <strong>Teacher Tip:</strong> There are <strong>two</strong> waits in both versions.
+  <div style="background:#e4e2f8; border-radius:10px; padding:14px; margin:12px 0; box-sizing:border-box;">
+    <p style="margin:0; font-size:12pt;">
+     💡 <strong>Teacher Tip:</strong> There are <strong>two</strong> waits in both versions.
       <code style="font-size:12pt;">fetch(url)</code> returns a Promise, and <code style="font-size:12pt;">response.json()</code> also returns a Promise.
       That’s why you see either <strong>two <code style="font-size:12pt;">.then()</code></strong> calls or <strong>two <code style="font-size:12pt;">await</code></strong> lines.
     </p>
   </div>
 
+---
+
 ## Quick Check
 
 <ol style="margin:0 0 0 20px; padding:0;">
-<li style="margin:0 0 8px 0; font-size:14pt;">
+<li style="margin:0 0 8px 0; font-size:12pt;">
       What replaced <code style="font-size:12pt;">.then()</code> in Version B?
     </li>
-    <li style="margin:0 0 8px 0; font-size:14pt;">
+    <li style="margin:0 0 8px 0; font-size:12pt;">
       Why are there still two <code style="font-size:12pt;">await</code> lines?
     </li>
-    <li style="margin:0 0 8px 0; font-size:14pt;">
+    <li style="margin:0 0 8px 0; font-size:12pt;">
       Does Version B change what the program does, or only how it’s written? Explain.
     </li>
   </ol>
 
   <details style="background-color:#ececec; padding:10px; margin-top:12px; border:1px solid transparent; border-radius:8px;">
-    <summary style="font-size:14pt; font-weight:bold;">💡 Check your thinking (click to reveal)</summary>
+    <summary style="font-size:12pt; font-weight:bold;">🔎 Check your thinking </summary>
 <div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:14pt; line-height:1.4;">
 
 <ul style="margin:0 0 0 20px; padding:0;">
-<li style="margin:0 0 8px 0; font-size:14pt;">
+<li style="margin:0 0 8px 0; font-size:12pt;">
           <strong>What replaced <code style="font-size:12pt;">.then()</code>?</strong><br />
           Each <code style="font-size:12pt;">await</code> is doing the same job as a <code>.then()</code>: “wait for this Promise to finish, then continue.”
         </li>
-        <li style="margin:0 0 8px 0; font-size:14pt;">
+        <li style="margin:0 0 8px 0; font-size:12pt;">
           <strong>Why two awaits?</strong><br />
           Because there are two Promises: one from <code>fetch(url)</code> (wait for the response) and one from <code style="font-size:12pt;">response.json()</code> (wait for the data).
         </li>
-        <li style="margin:0 0 8px 0; font-size:14pt;">
+        <li style="margin:0 0 8px 0; font-size:12pt;">
           <strong>Did the behavior change?</strong><br />
-          No — both versions do the same steps in the same order and still run asynchronously. The difference is readability.
+          No. Both versions do the same steps in the same order and still run asynchronously. The difference is readability.
         </li>
       </ul>
  </div>
@@ -174,8 +162,6 @@ Your job is to explain what looks different and why the behavior stays the same.
 </div>
 
 
-
----
 
 
 ## Next 

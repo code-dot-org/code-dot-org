@@ -1,0 +1,2297 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - AIF",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-07-29 14:55:11 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Teaching Foundations of AI Programming, Part 1",
+      "name": "Teaching Foundations of AI Programming, Part 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev"
+      }
+    },
+    {
+      "key": "Teaching Foundations of AI Programming, Part 2",
+      "name": "Teaching Foundations of AI Programming, Part 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "9128f755-0504-4166-8cd5-e872f2fa598f",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9128f755-0504-4166-8cd5-e872f2fa598f",
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev"
+      }
+    },
+    {
+      "key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b",
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "cc19471d-9374-4aca-8bd9-338dba11840b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc19471d-9374-4aca-8bd9-338dba11840b",
+        "lesson_activity.key": "9128f755-0504-4166-8cd5-e872f2fa598f"
+      }
+    },
+    {
+      "key": "010f67ce-a93c-47ba-b914-2acf038cc9ca",
+      "position": 2,
+      "properties": {
+        "name": "What is Computational Thinking?",
+        "progression_name": "Computational Thinking"
+      },
+      "seeding_key": {
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca",
+        "lesson_activity.key": "9128f755-0504-4166-8cd5-e872f2fa598f"
+      }
+    },
+    {
+      "key": "a7048a05-3fd1-4736-8e92-7a933f427756",
+      "position": 3,
+      "properties": {
+        "progression_name": "Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756",
+        "lesson_activity.key": "9128f755-0504-4166-8cd5-e872f2fa598f"
+      }
+    },
+    {
+      "key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88",
+      "position": 4,
+      "properties": {
+        "progression_name": "Objects and The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88",
+        "lesson_activity.key": "9128f755-0504-4166-8cd5-e872f2fa598f"
+      }
+    },
+    {
+      "key": "0311181f-7d6b-4de2-bbb7-041ec8627b71",
+      "position": 5,
+      "properties": {
+        "progression_name": "Introducing Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71",
+        "lesson_activity.key": "9128f755-0504-4166-8cd5-e872f2fa598f"
+      }
+    },
+    {
+      "key": "93444646-95c5-436b-9797-6f682892b074",
+      "position": 6,
+      "properties": {
+        "progression_name": "Working with Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074",
+        "lesson_activity.key": "9128f755-0504-4166-8cd5-e872f2fa598f"
+      }
+    },
+    {
+      "key": "bd28b146-1a83-48f6-beca-73ed37acf7eb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd28b146-1a83-48f6-beca-73ed37acf7eb",
+        "lesson_activity.key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b"
+      }
+    },
+    {
+      "key": "9cc91896-5c43-489c-93d6-6c7bae6a7087",
+      "position": 2,
+      "properties": {
+        "progression_name": "While Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087",
+        "lesson_activity.key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b"
+      }
+    },
+    {
+      "key": "66e37aab-055b-42cf-9bd9-687da8b5a011",
+      "position": 3,
+      "properties": {
+        "progression_name": "Conditionals "
+      },
+      "seeding_key": {
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011",
+        "lesson_activity.key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b"
+      }
+    },
+    {
+      "key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Two-way and Nested Selection"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e",
+        "lesson_activity.key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b"
+      }
+    },
+    {
+      "key": "c862ac33-00aa-45bb-a628-3e59f71ee166",
+      "position": 5,
+      "properties": {
+        "progression_name": "Ethical Algorithmic Decision Making"
+      },
+      "seeding_key": {
+        "activity_section.key": "c862ac33-00aa-45bb-a628-3e59f71ee166",
+        "lesson_activity.key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b"
+      }
+    },
+    {
+      "key": "d697292f-5826-46b4-92f9-1d3788e5112d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Preparing for the Final Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "d697292f-5826-46b4-92f9-1d3788e5112d",
+        "lesson_activity.key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b"
+      }
+    },
+    {
+      "key": "1ea5b8d1-39db-4c94-aebb-58bd05390cb9",
+      "position": 7,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ea5b8d1-39db-4c94-aebb-58bd05390cb9",
+        "lesson_activity.key": "3e7f9a13-65ec-455d-9694-7e7bf4f12b7b"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_00-new_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "cc19471d-9374-4aca-8bd9-338dba11840b"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_00-new_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_02-new_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "cc19471d-9374-4aca-8bd9-338dba11840b"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_02-new_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_AI_tutor_overview_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "cc19471d-9374-4aca-8bd9-338dba11840b"
+      },
+      "level_keys": [
+        "csaif_pl_AI_tutor_overview_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_overview_L2_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_overview_L2_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-DS-comp_think_panel_L3_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      },
+      "level_keys": [
+        "csaif-pl-DS-comp_think_panel_L3_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_module_comp_think_L4_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      },
+      "level_keys": [
+        "csaif_pl_module_comp_think_L4_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L5_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      },
+      "level_keys": [
+        "csaif_pl_comp_think_L5_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Computational Thinking"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-comp_thinking_L8_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      },
+      "level_keys": [
+        "csaif-pl-comp_thinking_L8_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-pythonLab_tour-L1-5_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      },
+      "level_keys": [
+        "csaif-PL-pythonLab_tour-L1-5_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-print-L3-2-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      },
+      "level_keys": [
+        "aif-pl-print-L3-2-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-Pl-print-comment-L4-2-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      },
+      "level_keys": [
+        "aif-Pl-print-comment-L4-2-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_Python-Variables-L3-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      },
+      "level_keys": [
+        "csaif-pl_Python-Variables-L3-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-variable-L7-2-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      },
+      "level_keys": [
+        "aif-pl-variable-L7-2-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-math_expressions-L10-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      },
+      "level_keys": [
+        "aif-pl-math_expressions-L10-2-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-choice-math-L11-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      },
+      "level_keys": [
+        "aif-pl-choice-math-L11-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_neighborhood_L9_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      },
+      "level_keys": [
+        "csaif-pl_neighborhood_L9_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-neighborhood-tour_L10_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      },
+      "level_keys": [
+        "csaif-PL-neighborhood-tour_L10_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_objects_L11_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      },
+      "level_keys": [
+        "csaif_pl_objects_L11_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_the-painter_L12_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      },
+      "level_keys": [
+        "csaif_pl_the-painter_L12_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-object-predict-L16-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      },
+      "level_keys": [
+        "aif-pl-object-predict-L16-2-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-objects-create-L17-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      },
+      "level_keys": [
+        "aif-pl-objects-create-L17-2-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_umpire-L18-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      },
+      "level_keys": [
+        "aif_pl_umpire-L18-2-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_function-intro-L20_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      },
+      "level_keys": [
+        "aif_pl_function-intro-L20_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_function-intro2-L21_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      },
+      "level_keys": [
+        "aif_pl_function-intro2-L21_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-1-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-1-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-2-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-4-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-4-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Working with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-custommodule-L27-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      },
+      "level_keys": [
+        "aif-pl-custommodule-L27-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Working with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-function-trn-rght-L17-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      },
+      "level_keys": [
+        "csaif-pl-function-trn-rght-L17-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Working with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_custompy-L17-2_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      },
+      "level_keys": [
+        "csaif_pl_custompy-L17-2_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Working with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_backpack-L18_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      },
+      "level_keys": [
+        "csaif_pl_backpack-L18_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Working with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-functions-mult-choice-L21-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      },
+      "level_keys": [
+        "csaif-pl-functions-mult-choice-L21-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Working with Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_checkreview-functions-22-2_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      },
+      "level_keys": [
+        "csaif_pl_checkreview-functions-22-2_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_debugging_L22_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "bd28b146-1a83-48f6-beca-73ed37acf7eb"
+      },
+      "level_keys": [
+        "csaif_pl_debugging_L22_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-debug-L23-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "bd28b146-1a83-48f6-beca-73ed37acf7eb"
+      },
+      "level_keys": [
+        "csaif-PL-debug-L23-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_python-basics-forem_L26_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "bd28b146-1a83-48f6-beca-73ed37acf7eb"
+      },
+      "level_keys": [
+        "csaif-pl-_python-basics-forem_L26_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_loops_L2-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087"
+      },
+      "level_keys": [
+        "csaif-pl_loops_L2-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-while1-L3-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087"
+      },
+      "level_keys": [
+        "aif-pl-while1-L3-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-while2-L4-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087"
+      },
+      "level_keys": [
+        "aif-pl-while2-L4-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-whileloops3-L5-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087"
+      },
+      "level_keys": [
+        "aif-pl-whileloops3-L5-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-predict-conditional-L5-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      },
+      "level_keys": [
+        "csaif-pl-predict-conditional-L5-2-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_conditionals-L6_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      },
+      "level_keys": [
+        "csaif_pl_conditionals-L6_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl_methos-conditional-L7-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      },
+      "level_keys": [
+        "csaif-pl_methos-conditional-L7-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_if-while-L9_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      },
+      "level_keys": [
+        "csaif_pl_if-while-L9_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-conditional1-L10-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      },
+      "level_keys": [
+        "aif-pl-conditional1-L10-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-conditionals2-L11-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      },
+      "level_keys": [
+        "aif-pl-conditionals2-L11-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_algorithm_review-L11-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      },
+      "level_keys": [
+        "csaif_pl_algorithm_review-L11-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_flowChart_L12_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      },
+      "level_keys": [
+        "csaif_pl_flowChart_L12_Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-PL-predict-nested-L13-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      },
+      "level_keys": [
+        "csaif-PL-predict-nested-L13-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_else-compare-L14-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      },
+      "level_keys": [
+        "csaif_pl_else-compare-L14-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 18,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-two-waySelection-L16-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      },
+      "level_keys": [
+        "aif-pl-two-waySelection-L16-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 19,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Two-way and Nested Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-assessment-L16-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      },
+      "level_keys": [
+        "csaif-pl-assessment-L16-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_real-life-alg_forum_L17_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "c862ac33-00aa-45bb-a628-3e59f71ee166"
+      },
+      "level_keys": [
+        "csaif-pl-_real-life-alg_forum_L17_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 21,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Algorithmic Decision Making"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ethical-algorithmic-decision-L18-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "c862ac33-00aa-45bb-a628-3e59f71ee166"
+      },
+      "level_keys": [
+        "csaif_pl_ethical-algorithmic-decision-L18-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 22,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Final Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "d697292f-5826-46b4-92f9-1d3788e5112d"
+      },
+      "level_keys": [
+        "csaif_pl_project-description-L2-python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 23,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Final Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "d697292f-5826-46b4-92f9-1d3788e5112d"
+      },
+      "level_keys": [
+        "csaif_pl_3-day-project-L3-Python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 24,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing for the Final Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_collaboration-L4_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "d697292f-5826-46b4-92f9-1d3788e5112d"
+      },
+      "level_keys": [
+        "csaif_pl_collaboration-L4_python_-rev_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 25,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_wrap-up_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "1ea5b8d1-39db-4c94-aebb-58bd05390cb9"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_wrap-up_v2_2026-dev"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 26,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-L6-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "1ea5b8d1-39db-4c94-aebb-58bd05390cb9"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-L6-python_-rev_v2_2026-dev"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_00-new_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_00-new_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "cc19471d-9374-4aca-8bd9-338dba11840b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_02-new_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_02-new_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "cc19471d-9374-4aca-8bd9-338dba11840b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_AI_tutor_overview_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_AI_tutor_overview_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "cc19471d-9374-4aca-8bd9-338dba11840b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_overview_L2_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_overview_L2_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-DS-comp_think_panel_L3_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-DS-comp_think_panel_L3_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_module_comp_think_L4_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_module_comp_think_L4_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_comp_think_L5_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_comp_think_L5_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-comp_thinking_L8_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-comp_thinking_L8_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "010f67ce-a93c-47ba-b914-2acf038cc9ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-pythonLab_tour-L1-5_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-PL-pythonLab_tour-L1-5_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-print-L3-2-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-print-L3-2-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-Pl-print-comment-L4-2-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-Pl-print-comment-L4-2-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_Python-Variables-L3-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl_Python-Variables-L3-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-variable-L7-2-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-variable-L7-2-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-math_expressions-L10-2-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-math_expressions-L10-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-choice-math-L11-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-choice-math-L11-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "a7048a05-3fd1-4736-8e92-7a933f427756"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_neighborhood_L9_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl_neighborhood_L9_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-neighborhood-tour_L10_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-PL-neighborhood-tour_L10_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_objects_L11_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_objects_L11_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_the-painter_L12_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_the-painter_L12_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-object-predict-L16-2-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-object-predict-L16-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-objects-create-L17-2-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-objects-create-L17-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_umpire-L18-2-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif_pl_umpire-L18-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "b26896d2-67f9-4bc9-a8d1-e062085d2f88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_function-intro-L20_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif_pl_function-intro-L20_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_function-intro2-L21_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif_pl_function-intro2-L21_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-1-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-1-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-2-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-4-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-4-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "0311181f-7d6b-4de2-bbb7-041ec8627b71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-custommodule-L27-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-custommodule-L27-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-function-trn-rght-L17-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-function-trn-rght-L17-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_custompy-L17-2_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_custompy-L17-2_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_backpack-L18_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_backpack-L18_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-functions-mult-choice-L21-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-functions-mult-choice-L21-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_checkreview-functions-22-2_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_checkreview-functions-22-2_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "93444646-95c5-436b-9797-6f682892b074"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_debugging_L22_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_debugging_L22_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "bd28b146-1a83-48f6-beca-73ed37acf7eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-debug-L23-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-PL-debug-L23-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "bd28b146-1a83-48f6-beca-73ed37acf7eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_python-basics-forem_L26_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-_python-basics-forem_L26_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "bd28b146-1a83-48f6-beca-73ed37acf7eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_loops_L2-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl_loops_L2-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-while1-L3-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-while1-L3-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-while2-L4-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-while2-L4-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-whileloops3-L5-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-whileloops3-L5-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "9cc91896-5c43-489c-93d6-6c7bae6a7087"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-predict-conditional-L5-2-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-predict-conditional-L5-2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_conditionals-L6_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_conditionals-L6_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl_methos-conditional-L7-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl_methos-conditional-L7-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_if-while-L9_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_if-while-L9_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-conditional1-L10-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-conditional1-L10-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-conditionals2-L11-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-conditionals2-L11-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "66e37aab-055b-42cf-9bd9-687da8b5a011"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_algorithm_review-L11-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_algorithm_review-L11-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_flowChart_L12_Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_flowChart_L12_Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-PL-predict-nested-L13-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-PL-predict-nested-L13-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_else-compare-L14-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_else-compare-L14-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-two-waySelection-L16-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "aif-pl-two-waySelection-L16-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-assessment-L16-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-assessment-L16-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "5c5ca798-8603-4d1b-b29d-9b9c7ba97e1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_real-life-alg_forum_L17_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-_real-life-alg_forum_L17_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "c862ac33-00aa-45bb-a628-3e59f71ee166"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ethical-algorithmic-decision-L18-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ethical-algorithmic-decision-L18-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "c862ac33-00aa-45bb-a628-3e59f71ee166"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_project-description-L2-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "d697292f-5826-46b4-92f9-1d3788e5112d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_3-day-project-L3-Python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-Python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "d697292f-5826-46b4-92f9-1d3788e5112d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_collaboration-L4_python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_collaboration-L4_python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "d697292f-5826-46b4-92f9-1d3788e5112d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_wrap-up_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_wrap-up_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "1ea5b8d1-39db-4c94-aebb-58bd05390cb9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-L6-python_-rev_v2_2026-dev",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-L6-python_-rev_v2_2026-dev"
+        ],
+        "lesson.key": "Teaching Foundations of AI Programming, Part 2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+        "activity_section.key": "1ea5b8d1-39db-4c94-aebb-58bd05390cb9"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

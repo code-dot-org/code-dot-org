@@ -1,0 +1,10 @@
+name 'problem-solving-with-ai-lesson6-examine-data-choice'
+display_name 'Examining Data'
+description 'Choose the same scenario that you selected in the previous level and explore the data that is presented in the scenario.'
+
+sublevels
+level 'problem-solving-with-ai-lesson6-examine-data-a'
+level 'problem-solving-with-ai-lesson6-examine-data-b-1'
+level 'problem-solving-with-ai-lesson6-examine-data-c-1'
+
+uses_lab2

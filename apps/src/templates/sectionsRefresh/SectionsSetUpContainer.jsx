@@ -4,8 +4,8 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useState, useCallback, useRef} from 'react';
-import {Provider} from 'react-redux';
+import React, {useState, useCallback, useRef, useEffect} from 'react';
+import {Provider, useSelector} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -47,13 +47,15 @@ const NEW = 'New';
 //   - updateSection: function to update the section at the given index
 //   - batchUpdateSection: function to update multiple section properties at once
 const useSections = section => {
-  // added "default properties" for any new section
+  const isNewStudentSection =
+    !section && queryParams('participantType') === 'student';
+
+  const gradesTeaching = useSelector(
+    state => state.currentUser?.gradesTeaching || []
+  );
+
   const [sections, setSections] = useState(() => {
     if (section) return [section];
-    const isStudentSection = queryParams('participantType') === 'student';
-    const gradesTeaching =
-      isStudentSection &&
-      (getStore().getState()?.currentUser?.gradesTeaching || []);
     return [
       {
         pairingAllowed: true,
@@ -61,14 +63,34 @@ const useSections = section => {
         ttsAutoplayEnabled: false,
         lessonExtras: true,
         course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
-        avatar_color: _.random(0, COLORS.length - 1), // Pick a random avatar color from the 20 options
-        avatar_emoji: _.random(0, EMOJIS.length - 1), // Pick a random avatar emoji from the 21 options
-        ...(isStudentSection && {grades: gradesTeaching}),
+        avatar_color: _.random(0, COLORS.length - 1),
+        avatar_emoji: _.random(0, EMOJIS.length - 1),
+        ...(isNewStudentSection &&
+          gradesTeaching.length > 0 && {grades: gradesTeaching}),
       },
     ];
   });
 
+  // If gradesTeaching wasn't populated at mount time (async fetch not yet
+  // complete), apply it once data arrives — unless the user already touched
+  // the grades field.
+  const gradesApplied = useRef(gradesTeaching.length > 0);
+  useEffect(() => {
+    if (
+      isNewStudentSection &&
+      !gradesApplied.current &&
+      gradesTeaching.length > 0
+    ) {
+      gradesApplied.current = true;
+      setSections(prev => [{...prev[0], grades: gradesTeaching}]);
+    }
+  }, [gradesTeaching, isNewStudentSection]);
+
   const updateSection = (sectionIdx, keyToUpdate, val) => {
+    if (keyToUpdate === 'grades') {
+      // User explicitly set grades; don't override with gradesTeaching.
+      gradesApplied.current = true;
+    }
     const newSections = sections.map((section, idx) => {
       if (idx === sectionIdx) {
         return {
@@ -136,7 +158,9 @@ export default function SectionsSetUpContainer({
     [advancedSettingsOpen]
   );
 
-  const recordSectionSetupEvent = section => {
+  // createdSectionId comes from the API response: for a new section, the
+  // local form state has no id until the server assigns one.
+  const recordSectionSetupEvent = (section, createdSectionId) => {
     const initialSection = initialSectionRef.current;
     /*
     We do not currently store version year on the section, and the version dropdown
@@ -145,6 +169,7 @@ export default function SectionsSetUpContainer({
     */
     if (isNewSection) {
       analyticsReporter.sendEvent(EVENTS.SECTION_SETUP_COMPLETED, {
+        sectionId: createdSectionId ?? null,
         sectionUnitId: section.course?.unitId,
         sectionCurriculumLocalizedName: section.course?.displayName,
         sectionCurriculum: section.course?.courseOfferingId, //this is course Offering id
@@ -251,7 +276,7 @@ export default function SectionsSetUpContainer({
         return response.json();
       })
       .then(data => {
-        recordSectionSetupEvent(section);
+        recordSectionSetupEvent(section, data.id);
         coteachersToAdd.forEach(() => {
           analyticsReporter.sendEvent(
             EVENTS.COTEACHER_INVITE_SENT,

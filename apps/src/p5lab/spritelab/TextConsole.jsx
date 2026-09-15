@@ -39,7 +39,7 @@ export const styles = {
   text: {
     fontSize: 15,
     padding: 4,
-    background: 'rgba(255, 255, 255, 0.8)',
+    background: 'var(--neutral-white-alpha-80)',
     borderRadius: 3,
     margin: '0px 3px 3px 3px',
     lineHeight: '1.4em',

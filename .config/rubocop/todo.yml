@@ -201,11 +201,6 @@ Security/MarshalLoad:
 Style/ArgumentsForwarding:
   Enabled: false
 
-# Offense count: 9
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/ArrayIntersect:
-  Enabled: false
-
 # Offense count: 166
 Style/ClassVars:
   Enabled: false
@@ -351,16 +346,6 @@ Style/RedundantDoubleSplatHashBraces:
 # Offense count: 15
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantParentheses:
-  Enabled: false
-
-# Offense count: 16
-# This cop supports safe autocorrection (--autocorrect).
-Style/RedundantRegexpArgument:
-  Enabled: false
-
-# Offense count: 26
-# This cop supports safe autocorrection (--autocorrect).
-Style/RedundantRegexpEscape:
   Enabled: false
 
 # Offense count: 5

@@ -39,6 +39,9 @@ export interface TabsProps {
   tabPanelsContainerId?: string;
   /** hide the Tab Panels container */
   hidePanels?: boolean;
+  /** Scroll the tab strip horizontally instead of wrapping, with an edge fade
+   * on whichever side is hiding tabs */
+  scrollable?: boolean;
 }
 
 /**
@@ -65,6 +68,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabPanelsContainerId,
   tabPanelsContainerClassName,
   hidePanels,
+  scrollable = false,
   type = 'primary',
   mode = 'light',
   size = 'm',
@@ -112,6 +116,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
           moduleStyles[`tabs-${size}`],
           moduleStyles[`tabs-${type}`],
           moduleStyles[`tabs-${mode}`],
+          scrollable && moduleStyles.scroller,
           tabsContainerClassName,
         )}
         id={tabsContainerId}

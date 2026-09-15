@@ -22,7 +22,7 @@ Instead of rewriting the same code each time, we can use a function.
 This code works. But look closely.
 
 In both button actions, we:
-- Change the value of `total`
+- Change the value of `score`
 - Update the display
 
 The same steps appear more than once. If we wanted to change how the total is shown, we would need to update it in multiple places.
@@ -36,7 +36,7 @@ The same steps appear more than once. If we wanted to change how the total is sh
 
 ## After: Using a Function
 
-We moved the repeated steps into a function called `updateTotal()`.
+We moved the repeated steps into a function called `addPoints()`.
 
 Now each button simply calls the function.
 
@@ -63,7 +63,7 @@ If you wanted to change how the total is displayed, where would you make the cha
 
   <div style="margin-top:12px; font-size:14pt; background-color:#f7f8fa; padding:12px; border-radius:6px;">
     <p style ="font-size: 14pt;" ><strong>Answer:</strong><br>
-    Inside the <code style="font-size:12pt;">updateTotal()</code> function, because that is where the display logic is defined. 
+    Inside the <code style="font-size:12pt;">addPoints()</code> function, because that is where the display logic is defined. 
     Since all buttons call this function, we only need to update the code in one place.</p>
   </div>
 

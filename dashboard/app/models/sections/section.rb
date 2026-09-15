@@ -197,17 +197,18 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at suggested_lesson)
+  serialized_attrs %w(code_review_expires_at suggested_lesson suggested_lesson_history)
 
-  SUGGESTED_LESSON_TTL = 1.hour
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
+  SUGGESTED_LESSON_HISTORY_MAX_DAYS = 10
 
   def suggested_lesson_stale?
     data = suggested_lesson
     return true if data.nil?
+    return true if suggested_lesson_history.nil?
     timestamp = data['timestamp']
     return true if timestamp.blank?
-    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
+    Time.parse(timestamp.to_s).to_date < Time.zone.today
   rescue ArgumentError
     true
   end
@@ -225,13 +226,21 @@ class Section < ApplicationRecord
 
     last_completed_lesson = nil
     finished_unit = true
-    unit.lessons.each do |lesson|
+    # A lesson with no lesson plan has nothing for a teacher to prep, so it's
+    # never something this feature can suggest - drop it from the sequence
+    # entirely rather than let it turn up as next_lesson/coming_up.
+    numbered_lessons = unit.lessons.select {|lesson| lesson.numbered_lesson? && lesson.has_lesson_plan}
+    checked_last_lesson = false
+    threshold = [section_students.size / 2.0, 3].min
+
+    numbered_lessons.reverse_each do |lesson|
       required_sls = lesson.script_levels.reject(&:bonus)
       next if required_sls.empty?
 
-      completed_count = section_students.count do |student|
+      completed_count = 0
+      section_students.each do |student|
         passing_ids = passing_level_ids_by_student[student.id] || Set.new
-        required_sls.all? do |sl|
+        next unless required_sls.all? do |sl|
           level = sl.oldest_active_level
           if level.is_a?(BubbleChoice)
             level.sublevels.any? {|sub| passing_ids.include?(sub.id)}
@@ -239,30 +248,53 @@ class Section < ApplicationRecord
             passing_ids.include?(level.id)
           end
         end
+        completed_count += 1
+        break if completed_count >= threshold
       end
 
-      if completed_count >= section_students.size / 2.0
+      met = completed_count >= threshold
+      finished_unit = met unless checked_last_lesson
+      checked_last_lesson = true
+
+      if met
         last_completed_lesson = lesson
-        finished_unit = true
-      else
-        finished_unit = false
+        break
       end
     end
 
-    lessons = unit.lessons.to_a
+    lessons = numbered_lessons
     next_lesson = if last_completed_lesson
                     lessons[lessons.index(last_completed_lesson) + 1]
                   else
                     lessons.first
                   end
 
-    update!(
-      suggested_lesson: if finished_unit
-                          {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
-                        else
-                          {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
-                        end
-    )
+    new_value = if finished_unit
+                  {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
+                else
+                  {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
+                end
+
+    coming_up = if finished_unit
+                  # derived from new_value, not a separate literal, so this can never
+                  # disagree with what suggested_lesson itself says for today.
+                  new_value.except('timestamp')
+                else
+                  idx = numbered_lessons.index(next_lesson)
+                  next_next = numbered_lessons[idx + 1]
+                  next_next ? {'lesson_id' => next_next.id} : {'completed_unit' => true}
+                end
+
+    today = Time.zone.today.iso8601
+    cutoff = (Time.zone.today - SUGGESTED_LESSON_HISTORY_MAX_DAYS).iso8601
+    history = (suggested_lesson_history || []).
+      reject {|entry| entry['date'] == today || entry['date'] < cutoff}
+    # coming_up is only ever read for the current day (see suggested_lessons
+    # in SectionsController), so it's stored on suggested_lesson itself
+    # rather than duplicated into every history entry.
+    history << new_value.merge('date' => today)
+
+    update!(suggested_lesson: new_value.merge('coming_up' => coming_up), suggested_lesson_history: history)
   end
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
@@ -272,12 +304,14 @@ class Section < ApplicationRecord
     LOGIN_TYPE_WORD = 'word'.freeze,
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
     LOGIN_TYPE_CLEVER = 'clever'.freeze,
+    LOGIN_TYPE_CLASSLINK = 'classlink'.freeze,
     LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
   ]
 
   LOGIN_TYPES_OAUTH = [
     LOGIN_TYPE_GOOGLE_CLASSROOM,
-    LOGIN_TYPE_CLEVER
+    LOGIN_TYPE_CLEVER,
+    LOGIN_TYPE_CLASSLINK
   ]
 
   TYPES = [
@@ -391,7 +425,7 @@ class Section < ApplicationRecord
     return unless unit_group
     MailJet.create_contact_and_add_to_course_list(teacher, unit_group.name)
   rescue => exception
-    Honeybadger.notify(exception)
+    Observability::Errors.report(exception)
   end
 
   # return a version of self.students in which all students' names are
@@ -630,8 +664,12 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the student homepage.
   # This provides all information in `selected_section_summarize` and `concise_summarize` as well as additional fields.
-  def summarize(include_students: true)
-    ActiveRecord::Base.connected_to(role: :reading) do
+  #
+  # role: defaults to :reading (replica), but callers that just wrote data this same request
+  # (e.g. right after Section#add_student) should pass :writing to read their own write back
+  # from the primary, since the replica may not have caught up yet.
+  def summarize(include_students: true, role: :reading)
+    ActiveRecord::Base.connected_to(role: role) do
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
       course_version_name =

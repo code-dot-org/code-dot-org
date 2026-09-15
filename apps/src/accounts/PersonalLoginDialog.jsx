@@ -1,19 +1,13 @@
+import Modal from '@code-dot-org/component-library/modal';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {
-  Header,
-  ConfirmCancelFooter,
-} from '../sharedComponents/SystemDialog/SystemDialog';
-
-const GUTTER = 20;
+import styles from './personal-login-dialog.module.scss';
 
 export class PersonalLoginDialog extends React.Component {
   static propTypes = {
@@ -33,78 +27,64 @@ export class PersonalLoginDialog extends React.Component {
       hideInstructions,
     } = this.props;
 
+    if (!isOpen) {
+      return null;
+    }
+
     return (
-      <BaseDialog
-        useUpdatedStyles
-        fixedWidth={550}
-        isOpen={isOpen}
-        handleClose={onCancel}
-      >
-        <div style={styles.container}>
-          <Header text={i18n.deleteAccountDialog_header()} />
-          <p>
-            <strong style={styles.dangerText}>
-              {i18n.personalLoginDialog_body1({
-                numStudents: dependentStudentsCount,
-              })}
-              {i18n.personalLoginDialog_body2({
-                numStudents: dependentStudentsCount,
-              })}
-            </strong>
-          </p>
-          {!hideInstructions && (
-            <>
-              <p>
-                {i18n.personalLoginDialog_body3()}
-                <strong>{i18n.personalLoginDialog_body4()}</strong>
-                {i18n.personalLoginDialog_body5()}
-              </p>
-              <Button
-                __useDeprecatedTag
-                text={i18n.removeStudentSendHomeInstructions()}
-                target="_blank"
-                href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-                color={Button.ButtonColor.blue}
-                size={Button.ButtonSize.large}
-                style={styles.button}
-              />
-              <p>{i18n.personalLoginDialog_body6()}</p>
-            </>
-          )}
-          <ConfirmCancelFooter
-            confirmText={i18n.personalLoginDialog_button()}
-            onConfirm={onConfirm}
-            onCancel={onCancel}
-          />
-        </div>
-      </BaseDialog>
+      <Modal
+        title={i18n.deleteAccountDialog_header()}
+        onClose={onCancel}
+        closeLabel={i18n.closeDialog()}
+        customContent={
+          <div className={styles.container}>
+            <MuiTypography variant="body2" component="p">
+              <strong className={styles.dangerText}>
+                {i18n.personalLoginDialog_body1({
+                  numStudents: dependentStudentsCount,
+                })}
+                {i18n.personalLoginDialog_body2({
+                  numStudents: dependentStudentsCount,
+                })}
+              </strong>
+            </MuiTypography>
+            {!hideInstructions && (
+              <>
+                <MuiTypography variant="body2" component="p">
+                  {i18n.personalLoginDialog_body3()}
+                  <strong>{i18n.personalLoginDialog_body4()}</strong>
+                  {i18n.personalLoginDialog_body5()}
+                </MuiTypography>
+                <MuiButton
+                  href={ADD_A_PERSONAL_LOGIN_HELP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  className={styles.button}
+                >
+                  {i18n.removeStudentSendHomeInstructions()}
+                </MuiButton>
+                <MuiTypography variant="body2" component="p">
+                  {i18n.personalLoginDialog_body6()}
+                </MuiTypography>
+              </>
+            )}
+          </div>
+        }
+        primaryButtonProps={{
+          children: i18n.personalLoginDialog_button(),
+          onClick: onConfirm,
+        }}
+        secondaryButtonProps={{
+          children: i18n.cancel(),
+          onClick: onCancel,
+        }}
+      />
     );
   }
 }
-
-const styles = {
-  container: {
-    margin: GUTTER,
-    color: color.charcoal,
-  },
-  dangerText: {
-    color: color.red,
-  },
-  studentBox: {
-    padding: GUTTER / 2,
-    marginBottom: GUTTER / 2,
-    backgroundColor: color.background_gray,
-    border: `1px solid ${color.lighter_gray}`,
-    borderRadius: 4,
-    height: 50,
-    overflowY: 'scroll',
-  },
-  button: {
-    display: 'block',
-    textAlign: 'center',
-    marginBottom: '1em',
-  },
-};
 
 const RegionalPersonalLoginDialog = props => (
   <GlobalEditionWrapper

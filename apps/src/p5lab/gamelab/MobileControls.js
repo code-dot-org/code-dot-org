@@ -87,8 +87,7 @@ export default class MobileControls {
     const {dpadVisible, dpadFourWay, spaceButtonVisible, mobileOnly} = config;
     const mobileControlsOk = dom.isMobile() && isShareView ? true : !mobileOnly;
 
-    const dpadDisplayStyle =
-      dpadVisible && mobileControlsOk ? 'inline' : 'none';
+    const dpadDisplayStyle = dpadVisible && mobileControlsOk ? '' : 'none';
     document.getElementById('studio-dpad-rim').style.display = dpadDisplayStyle;
     document.getElementById('studio-dpad-cone').style.display =
       dpadDisplayStyle;
@@ -96,7 +95,7 @@ export default class MobileControls {
       dpadDisplayStyle;
 
     const spaceButtonDisplayStyle =
-      spaceButtonVisible && mobileControlsOk ? 'inline' : 'none';
+      spaceButtonVisible && mobileControlsOk ? '' : 'none';
     document.getElementById('studio-space-button').style.display =
       spaceButtonDisplayStyle;
 
@@ -247,7 +246,7 @@ export default class MobileControls {
   reset() {
     const {softButtonIds} = this.opts;
     softButtonIds.forEach(
-      buttonId => (document.getElementById(buttonId).style.display = 'inline')
+      buttonId => (document.getElementById(buttonId).style.display = '')
     );
     if (softButtonIds.length) {
       $('#soft-buttons').addClass('soft-buttons-' + softButtonIds.length);

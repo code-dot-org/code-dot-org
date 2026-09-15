@@ -22,7 +22,10 @@ describe('SoundListEntry', () => {
     let sounds = wrapper.instance().sounds;
     jest.spyOn(sounds, 'stopAllAudio').mockClear().mockImplementation();
     await act(async () => {
-      wrapper.find('.primary').simulate('click');
+      wrapper
+        .find('button')
+        .filterWhere(n => n.text() === 'Choose')
+        .simulate('click');
     });
     expect(sounds.stopAllAudio).toHaveBeenCalledTimes(1);
     sounds.stopAllAudio.mockRestore();

@@ -24,7 +24,18 @@ module User::AiAccessible
 
   def ai_chat_access_level
     return AI_CHAT_ACCESS_LEVELS[:ENABLED] if teacher_can_access_aichat? || levelbuilder?
-    return section_enabled_access_level
+    section_enabled_access_level
+  end
+
+  # Whether some AI models are unavailable to this user because of where they are.
+  def us_only_aichat_models_disabled?
+    return false if levelbuilder?
+    international_ai_chat_user?
+  end
+
+  def can_use_aichat_model?(model_id)
+    return true unless AI_CHAT_US_ONLY_MODEL_IDS.include?(model_id)
+    !us_only_aichat_models_disabled?
   end
 
   # has essential or higher access to AI chat tools
@@ -64,5 +75,28 @@ module User::AiAccessible
 
   private def in_section_with_ai_chat_access_essential_only?
     sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]}
+  end
+
+  # A teacher is international when they (the teacher) are non-US. A student is
+  # international when they have teachers and all of them are non-US.
+  private def international_ai_chat_user?
+    return @international_ai_chat_user if defined?(@international_ai_chat_user)
+    @international_ai_chat_user =
+      if DCDO.get("allow_international_usage_all_models", false)
+        false
+      elsif teacher?
+        non_us_teacher?(self)
+      else
+        student_teachers = teachers
+        student_teachers.any? && student_teachers.all? {|teacher| non_us_teacher?(teacher)}
+      end
+  end
+
+  # We use school_info and user_geos (set once at first sign-in) rather than per request
+  # geolocation so the value stays stable and can be fixed by the teacher if it is wrong.
+  private def non_us_teacher?(teacher)
+    return !teacher.school_info.usa? if teacher.school_info&.country.present?
+    geo_country = teacher.user_geos.first&.country
+    geo_country.present? && geo_country != 'United States'
   end
 end

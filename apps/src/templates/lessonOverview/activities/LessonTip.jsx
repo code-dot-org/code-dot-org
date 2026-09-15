@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import styles from './lesson-tip.module.scss';
+import styles from '../lesson-plan.module.scss';
 
 export const tipTypes = {
   teachingTip: {

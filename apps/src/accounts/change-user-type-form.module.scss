@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.optIn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.optInDescription {
+  margin: 0;
+}

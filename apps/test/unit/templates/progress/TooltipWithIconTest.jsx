@@ -11,19 +11,15 @@ const DEFAULT_PROPS = {
 };
 
 describe('TooltipWithIcon', () => {
-  it('includes the check-circle icon if level is an assessment', () => {
+  it('includes the star icon if level is an assessment', () => {
     const wrapper = shallow(
       <TooltipWithIcon {...DEFAULT_PROPS} includeAssessmentIcon={true} />
     );
-    expect(wrapper.find('FontAwesome').first().props().icon).toBe(
-      'check-circle'
-    );
+    expect(wrapper.find('FontAwesome').first().props().icon).toBe('star');
   });
 
-  it('does not include the check-circle icon if level is not an assessment', () => {
+  it('does not include the star icon if level is not an assessment', () => {
     const wrapper = shallow(<TooltipWithIcon {...DEFAULT_PROPS} />);
-    expect(wrapper.find('FontAwesome').first().props().icon).not.toBe(
-      'check-circle'
-    );
+    expect(wrapper.find('FontAwesome').first().props().icon).not.toBe('star');
   });
 });

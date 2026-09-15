@@ -1,0 +1,9 @@
+name 'ai-and-the-systems-that-power-it-lesson4-choice'
+display_name 'Software Scavenger Hunt'
+description 'Complete the software scavenger hunt activity using either your own computer or the computer simulation'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson4-scavenger-hunt'
+level 'ai-and-the-systems-that-power-it-lesson4-computer-sim'
+
+uses_lab2

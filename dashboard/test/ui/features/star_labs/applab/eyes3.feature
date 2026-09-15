@@ -30,11 +30,11 @@ Scenario: Data Browser
   Then I see no difference for "data table with one row of data"
 
   When I click selector "#dataTable button:contains(Clear table)"
-  And I wait until element "#dataTable .modal-body" is visible
+  And I wait until element "[role='alertdialog']" is visible
   Then I see no difference for "clear table confirmation dialog"
 
-  When element ".modal-body button:contains(Cancel)" is visible
-  And I click selector ".modal-body button:contains(Cancel)"
+  When element "[role='alertdialog'] button:contains(Cancel)" is visible
+  And I click selector "[role='alertdialog'] button:contains(Cancel)"
   And I press "uitest-tableDebugLink"
   Then I see no difference for "data table debug view"
 

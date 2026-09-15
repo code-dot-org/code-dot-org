@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '../util/color';
-
 import DesignProperties from './designProperties';
 import DesignToolbox from './DesignToolbox';
 
@@ -34,11 +32,11 @@ export default class DesignModeBox extends React.Component {
         width: '100%',
         top: 30,
         bottom: 0,
-        backgroundColor: color.white,
+        backgroundColor: 'var(--background-neutral-primary)',
         boxSizing: 'border-box',
-        borderLeft: '1px solid gray',
-        borderRight: '1px solid gray',
-        borderBottom: '1px solid gray',
+        borderLeft: '1px solid var(--borders-neutral-strong)',
+        borderRight: '1px solid var(--borders-neutral-strong)',
+        borderBottom: '1px solid var(--borders-neutral-strong)',
       },
       designProperties: {
         position: 'absolute',

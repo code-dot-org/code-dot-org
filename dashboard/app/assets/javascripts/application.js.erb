@@ -11,20 +11,35 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 
-// Gem assets
-//= require jquery
-//= require jquery_ujs
-//= require jquery-ui
-// (Former location of video.js; reference while converting to code-studio.js)
-//= require bootstrap
+// Important: Use minified versions of dependencies. No minifier is in use today.
+// Load order is deliberate and grouped by where each file comes from.
 
-// Vendor assets
-//= require add2home
+// Pre-minified, gem-supplied asset. `bundle update` can affect the size of
+// these, which could trigger the size cap in
+// test/lib/application_js_bundle_test.rb without touching this file.
+//= require jquery.min
+
+// Pre-minified, vendored asset in vendor/assets/javascripts. Updated manually.
+// jquery-ui.min is the official 1.12.1 full build from
+// https://code.jquery.com/ui/1.12.1/jquery-ui.min.js.
+//= require jquery-ui.min
+
+// Pre-minified, gem-supplied asset. Must load after jquery-ui.min: bootstrap
+// overwrites $.fn.button and $.fn.tooltip with its own implementations.
+//= require bootstrap.min
+
+// Pre-minified, vendored assets in vendor/assets/javascripts. Updated manually.
 //= require jquery.mask.min
-//= require jquery.placeholder
 //= require jquery.qtip.min
+//= require jquery.ui.touch-punch.min
+
+// Small unminified glue, ~50KB raw in total. This list is frozen: changes are
+// limited to security updates of what is already here. New frontend code
+// belongs in apps/ or frontend/, not in this bundle.
+// jquery_ujs is gem-supplied, and the rest are vendored.
+//= require jquery_ujs
+//= require jquery.placeholder
 //= require jquery.simulate
-//= require jquery.ui.touch-punch
 //= require jquery.overlaps
 
 // window.dashboard is used to communicate between dashboard/apps in a variety

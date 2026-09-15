@@ -12,6 +12,7 @@ module Cdo
     include Singleton
 
     attr_accessor :execution_context
+    attr_writer :preforking_parent
 
     # Match CDO_*, plus RACK_ENV and RAILS_ENV.
     ENV_PREFIX = /^(CDO|(RACK|RAILS)(?=_ENV))_/
@@ -35,6 +36,7 @@ module Cdo
 
     def initialize
       @execution_context = nil # Default context; may be overridden in puma.rb, active_job_backend.rb, bin/cronjob, etc.
+      @preforking_parent = false # Set by a process that preloads the app and then forks workers.
       super
       root = File.expand_path('..', __dir__)
       load_configuration(
@@ -74,10 +76,6 @@ module Cdo
       CDO_SHARED_CACHE
     end
 
-    def cache
-      CDO_CACHE
-    end
-
     def i18n_backend
       @i18n_backend ||=
         # Because loading i18n files is super-slow, lazy load them in development.
@@ -110,12 +108,35 @@ module Cdo
       canonical_hostname('hourofcode.com')
     end
 
+    # Legacy Web Lab (project_type: weblab) shares raw student HTML as a
+    # top-level document on the bare codeprojects.org apex. Kept on this domain.
     def codeprojects_hostname
       return 'codeprojects.org' if rack_env?(:production)
       return "localhost.codeprojects.org" if rack_env?(:development) || ci_webserver?
       return "#{stack_name}.codeprojects.org"
     end
 
+    # Web Lab 2 (project_type: weblab2) and Python Lab's pyodide sandbox render
+    # student code inside sandboxed iframes on a dedicated domain, so the
+    # sandboxed-preview architecture does not share reputation with legacy
+    # codeprojects.org content. See docs/weblab-preview-domain-migration.md.
+    def codeaiprojects_hostname
+      return 'codeaiprojects.org' if rack_env?(:production)
+      return "localhost.codeaiprojects.org" if rack_env?(:development) || ci_webserver?
+      return "#{stack_name}.codeaiprojects.org"
+    end
+
+    # Wildcard preview origin: <project>.preview.<codeaiprojects_hostname>.
+    def preview_codeaiprojects_hostname
+      "preview.#{codeaiprojects_hostname}"
+    end
+
+    # The pre-migration sandboxed-preview origin, and the default until the
+    # 'sandboxed-preview-domain' DCDO flag moves clients to codeaiprojects.org
+    # (no deploy needed, either direction). Remove once the migration is
+    # complete, together with the preview DNS record, certificate SAN and
+    # CloudFront alias in
+    # aws/cloudformation/components/codeprojects_resources.yml.erb.
     def preview_codeprojects_hostname
       "preview.#{codeprojects_hostname}"
     end
@@ -212,15 +233,6 @@ module Cdo
         http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"
       end
-    end
-
-    def javabuilder_demo_url(path = '', scheme = '')
-      DCDO.get("javabuilder_demo_websocket_url", 'wss://javabuilder-demo.code.org')
-    end
-
-    def javabuilder_demo_upload_url(path = '', scheme = '')
-      http_url = DCDO.get("javabuilder_demo_http_url", 'https://javabuilder-demo-http.code.org')
-      http_url + "/seedsources/sources.json"
     end
 
     # Get a list of all languages for which we want to link to a localized
@@ -320,6 +332,11 @@ module Cdo
     # timeouts are shorter when executing within a web application server.
     def running_web_application?
       execution_context == :web_application
+    end
+
+    # Whether this process preloads the application and will then fork worker processes, as puma does under preload_app!.
+    def preforking_parent?
+      !!@preforking_parent
     end
 
     # Whether we are executing within a web application server on the

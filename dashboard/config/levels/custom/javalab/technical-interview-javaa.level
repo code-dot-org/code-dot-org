@@ -1,0 +1,33 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2026-07-16T19:33:22.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "Main.java": {
+        "text": "public class Main {\n\n\n  \n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Java",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "uses_lab2": "false",
+    "csa_view_mode": "console",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "thumbnail_url": "https://images.code.org/335174a84cc7b4f0815096ef24a66495-ChatGPT Image Jul 16, 2026, 04_40_00 PM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-16 20:01:11 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-16 20:35:12 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-16 20:40:13 +0000\",\"changed\":[\"encrypted_examples\",\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -58,6 +58,9 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading) || !levelPropertiesMap;
   const isPageError: boolean = useSelector(hasPageError);
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const hasPrivacyProfanityViolation = useAppSelector(
+    state => !!state.lab.shareFailure
+  );
   const projectSharingDisabled = useAppSelector(
     state => state.lab.projectSharingDisabled
   );
@@ -147,6 +150,8 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
 
   const blockedType = isBlockedAbuse
     ? 'projectAbuse'
+    : hasPrivacyProfanityViolation
+    ? 'privacyProfanity'
     : projectSharingDisabled
     ? 'projectSharingDisabled'
     : undefined;

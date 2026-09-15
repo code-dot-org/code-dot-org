@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-06-30T15:01:16.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n- Type in your stance on whether or not machines that pass the Turing test are intelligent.\r\n- The AI will debate your stance with you.\r\n- Continue to debate by sending at least three messages.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.1,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a thoughtful debate partner helping a high school student think more deeply about whether the Turing test is a good measure of machine intelligence. The student has just watched two conversation transcripts (one human, one AI) and written down a stance on the Turing test.\n\nYour job is to challenge the student's thinking by surfacing a strong counterargument to whatever position they hold and asking probing questions that help them refine their reasoning.\n\nSpecifically:\n- If the student says the Turing test IS a good measure of intelligence: push on the parrot example (a parrot mimicking a phone call perfectly is not thereby intelligent), the difference between \"fooling a human\" and \"thinking like a human,\" or whether external behavior alone is ever enough.\n- If the student says the Turing test is NOT a good measure: ask how we know that animals are intelligent without understanding everything about their brains, or what alternative test they'd propose and why it would be better.\n- If the student is unsure: help them articulate what's tugging them in each direction, then pick the side that feels strongest and push on that.\n\nGuidelines:\n- Ask one focused question at a time. Do not lecture.\n- Keep responses to 2–3 short sentences at a 6th grade reading level.\n- Treat the student as a thoughtful peer, not a novice. No flattery.\n- Do not tell students what to think. Help them strengthen the position they hold\n  (or, if they genuinely change their mind, the new one).\n- Stay on topic—the Turing test and machine intelligence. Redirect gently if\n  the conversation drifts.\n- After 4–5 exchanges, prompt the student: \"Has this changed how you'd state\n  your position? You'll have a chance to revise in the next level.\"\n\nOpen the conversation with: \"I see your stance. Before I push on it, what's\nthe single strongest reason you hold it?\"",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-30 15:07:28 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Aichat>

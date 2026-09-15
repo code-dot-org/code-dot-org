@@ -1,3 +1,5 @@
+import Link from '@code-dot-org/component-library/link';
+import {Typography as MuiTypography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -39,7 +41,11 @@ export const TeacherWarning = props => (
 );
 
 export const StudentWarning = () => {
-  return <div>{i18n.deleteAccount_studentWarning()}</div>;
+  return (
+    <MuiTypography variant="body2">
+      {i18n.deleteAccount_studentWarning()}
+    </MuiTypography>
+  );
 };
 
 export const getCheckboxes = (dependedUponForLogin, hasStudents) => {
@@ -65,13 +71,9 @@ const CHECKBOX_MAP = {
       <span>
         <strong>{i18n.deleteAccountDialog_checkbox1_1()}</strong>
         {i18n.deleteAccountDialog_checkbox1_2()}
-        <a
-          href={RELEASE_OR_DELETE_RECORDS_EXPLANATION}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} openInNewTab>
           {i18n.learnMore()}
-        </a>
+        </Link>
       </span>
     ),
   },
@@ -80,13 +82,9 @@ const CHECKBOX_MAP = {
     label: (
       <span>
         {i18n.deleteAccountDialog_checkbox2_1()}
-        <a
-          href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={ADD_A_PERSONAL_LOGIN_HELP_URL} openInNewTab>
           {i18n.deleteAccountDialog_checkbox2_2()}
-        </a>
+        </Link>
         {i18n.deleteAccountDialog_checkbox2_3()}
       </span>
     ),

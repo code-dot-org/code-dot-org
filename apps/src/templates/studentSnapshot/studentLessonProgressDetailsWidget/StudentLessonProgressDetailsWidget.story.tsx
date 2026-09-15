@@ -230,6 +230,15 @@ const initialState = {
 
 const mockStore = createStore((state = initialState) => state);
 
+const loadingInitialState = {
+  ...initialState,
+  sectionProgress: {
+    ...initialState.sectionProgress,
+    isLoadingProgress: true,
+  },
+};
+const mockLoadingStore = createStore((state = loadingInitialState) => state);
+
 const meta: Meta<typeof StudentLessonProgressDetailsWidget> = {
   component: StudentLessonProgressDetailsWidget,
   parameters: {
@@ -285,5 +294,28 @@ export const WithFullProgressFullValidation: Story = {
     selectedUnitId: 1,
     selectedLessonId: 13,
     selectedStudentId: 1,
+  },
+};
+
+export const LoadingBeforeSelection: Story = {
+  decorators: [
+    Story => (
+      <Provider store={mockLoadingStore}>
+        <Story />
+      </Provider>
+    ),
+  ],
+  args: {
+    selectedUnitId: 1,
+    selectedLessonId: null,
+    selectedStudentId: null,
+  },
+};
+
+export const HiddenWhenNothingSelected: Story = {
+  args: {
+    selectedUnitId: 1,
+    selectedLessonId: null,
+    selectedStudentId: null,
   },
 };

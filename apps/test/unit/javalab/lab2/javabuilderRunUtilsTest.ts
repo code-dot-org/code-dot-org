@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/javalab/lab2/javabuilderRunUtils';
 import {splitForLevelbuilderSave} from '@cdo/apps/javalab/lab2/sourceConverter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
@@ -53,7 +54,7 @@ describe('javabuilderRunUtils', () => {
       (args[SET_IS_RUNNING_ARG] as () => void)();
       return {
         connectJavabuilder: jest.fn(),
-        connectJavabuilderWithOverrides: jest.fn(),
+        connectJavabuilderWithOverrideSources: jest.fn(),
         closeConnection: jest.fn(),
       } as unknown as JavabuilderConnection;
     });
@@ -134,7 +135,7 @@ describe('javabuilderRunUtils', () => {
       (args[SET_IS_RUNNING_ARG] as () => void)();
       return {
         connectJavabuilder: jest.fn(),
-        connectJavabuilderWithOverrides: jest.fn(),
+        connectJavabuilderWithOverrideSources: jest.fn(),
         closeConnection: jest.fn(),
       } as unknown as JavabuilderConnection;
     });
@@ -240,12 +241,12 @@ describe('javabuilderRunUtils', () => {
     (isReadOnlyWorkspace as unknown as jest.Mock).mockReturnValueOnce(true);
     mockGetAuthenticityToken.mockResolvedValue('token');
 
-    const connectJavabuilderWithOverrides = jest.fn();
+    const connectJavabuilderWithOverrideSources = jest.fn();
     mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
       (args[SET_IS_RUNNING_ARG] as () => void)();
       return {
         connectJavabuilder: jest.fn(),
-        connectJavabuilderWithOverrides,
+        connectJavabuilderWithOverrideSources,
         closeConnection: jest.fn(),
       } as unknown as JavabuilderConnection;
     });
@@ -259,9 +260,50 @@ describe('javabuilderRunUtils', () => {
       /* needsInitialSourcesSave */ false
     );
 
+    expect(connectJavabuilderWithOverrideSources).toHaveBeenCalledWith(
+      startSources
+    );
+  });
+
+  it('sends override validation through the levelbuilder-only endpoint when running tests in start mode', async () => {
+    const startSources = {
+      'Main.java': {text: 'class Main {}', isVisible: true},
+    };
+    const validation = {
+      'MainTest.java': {text: 'class MainTest {}', isVisible: false},
+    };
+    (splitForLevelbuilderSave as jest.Mock).mockReturnValue({
+      startSources,
+      validation,
+    });
+    (getIsStartMode as jest.Mock).mockReturnValue(true);
+    mockGetAuthenticityToken.mockResolvedValue('token');
+
+    const connectJavabuilderWithOverrideSources = jest.fn();
+    const connectJavabuilderWithOverrides = jest.fn();
+    mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
+      (args[SET_IS_RUNNING_ARG] as () => void)();
+      return {
+        connectJavabuilder: jest.fn(),
+        connectJavabuilderWithOverrideSources,
+        connectJavabuilderWithOverrides,
+        closeConnection: jest.fn(),
+      } as unknown as JavabuilderConnection;
+    });
+
+    await handleRunClick(
+      /* runTests */ true,
+      /* dispatch */ jest.fn(),
+      /* levelId */ 1,
+      /* csaViewMode */ 'console',
+      /* progressManager */ null,
+      /* needsInitialSourcesSave */ false
+    );
+
     expect(connectJavabuilderWithOverrides).toHaveBeenCalledWith(
       startSources,
-      /* overrideValidation */ undefined
+      validation
     );
+    expect(connectJavabuilderWithOverrideSources).not.toHaveBeenCalled();
   });
 });

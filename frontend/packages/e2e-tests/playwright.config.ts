@@ -1,9 +1,19 @@
 import {defineConfig, devices} from '@playwright/test';
 
+import {visualProjects} from '@code-dot-org/playwright-support/visual';
+
 // Set by each automated lane's entry point (GitHub Actions workflow, rake task); unset = local.
 const provider = process.env.PLAYWRIGHT_PROVIDER; // 'github-actions' | 'drone' | 'dtt' | undefined
 const isAutomated = !!provider;
 const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
+
+// @visual tests run only under the visual-* projects (see visualProjects below).
+// @no_ci tests need backends Drone's freshly-built instance lacks (e.g. Javabuilder,
+// LLM APIs), so skip them there too. Mirrors the Cucumber --ci skip.
+const functionalGrepInvert: RegExp[] = [/@visual/];
+if (provider === 'drone') {
+  functionalGrepInvert.push(/@no_ci/);
+}
 
 /**
  * Playwright config for the e2e-tests suite.
@@ -11,7 +21,8 @@ const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
  * Target host defaults to https://test-studio.code.org (always-on test env); set
  * TARGET_URL to point at another deployment — e.g. a PR's adhoc — so a PR run
  * exercises that PR's code rather than the static test env. No webServer block.
- * Default run lane is Chromium; Firefox and WebKit are opt-in via `--project=...`.
+ * Chromium, Firefox and WebKit all run unless `--project=...` narrows the set;
+ * the visual-* lanes exist only when VISUAL_PROVIDER is set.
  * Sharding is CLI-only: pass `--shard=$i/$n`.
  *
  * @see https://playwright.dev/docs/test-configuration
@@ -22,9 +33,6 @@ export default defineConfig({
   forbidOnly: isAutomated,
   // retry in automated lanes so a flake can't pass one lane and fail another.
   retries: isAutomated ? 2 : 0,
-  // @no_ci tests need backends Drone's freshly-built instance lacks (e.g. Javabuilder,
-  // LLM APIs), so skip them there. Mirrors the Cucumber --ci skip.
-  grepInvert: provider === 'drone' ? /@no_ci/ : undefined,
   // 100% only on GitHub Actions (dedicated runner, external server); Drone/DTT share CPU.
   workers: provider === 'github-actions' ? '100%' : undefined,
   reporter: isAutomated
@@ -43,8 +51,26 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   projects: [
-    {name: 'chromium', use: {...devices['Desktop Chrome']}},
-    {name: 'firefox', use: {...devices['Desktop Firefox']}},
-    {name: 'webkit', use: {...devices['Desktop Safari']}},
+    {
+      name: 'chromium',
+      use: {...devices['Desktop Chrome']},
+      grepInvert: functionalGrepInvert,
+    },
+    {
+      name: 'firefox',
+      use: {...devices['Desktop Firefox']},
+      grepInvert: functionalGrepInvert,
+    },
+    {
+      name: 'webkit',
+      use: {...devices['Desktop Safari']},
+      grepInvert: functionalGrepInvert,
+    },
+    // Applitools/native-screenshot lane for @visual tests; [] unless VISUAL_PROVIDER is set.
+    // The @no_ci skip applies to this lane too — visualProjects() only sets
+    // grep, so Drone must exclude deployed-env-only visual tests itself.
+    ...visualProjects().map(project =>
+      provider === 'drone' ? {...project, grepInvert: /@no_ci/} : project,
+    ),
   ],
 });

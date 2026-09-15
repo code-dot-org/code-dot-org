@@ -98,7 +98,6 @@
       cronjob at:'0 5 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
       cronjob at:'0 13 * * *', do:deploy_dir('bin', 'cron', 'eir_teachers_to_gdrive')
       cronjob at:'0 7 * * 6', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
-      cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
       cronjob at:'31 16 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
       cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
@@ -120,6 +119,9 @@
 
       # Send Warning Emails to Inactive Teacher Accounts before Deletion
       cronjob at: "0,30 0-11 * * *", do: "#{deploy_dir('bin', 'cron', 'perform_job')} User::InactiveTeacherDeletionWarningJob '{\"limit\": 1000}'"
+
+      # Backfills geolocation data for anonymous project storages in batches of 100k every 5 minutes from 02:00 to 11:55 UTC.
+      cronjob at: '*/5 2-11 * * *', do: "#{deploy_dir('bin', 'cron', 'perform_job')} ProjectStorage::AnonymousGeoBackfillingJob '{\"limit\": 100000}'"
     end
 
     # 'daemons' in all environments.
@@ -138,7 +140,7 @@
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'geocode_hoc_activity')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'form_geos')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'user_geos')
-      cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
+      cronjob at:'0 23 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
       cronjob at:'0 4 * * 0', do:deploy_dir('bin', 'cron', 'update_project_count')
     end
   end

@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q4-2026'
+
+wrong "A list of students' favorite music genres"
+right 'The number of hours each student studies and their exam score'
+wrong 'The names of artists and the number of sales of their most popular song'
+wrong 'The number of students born in each month of the year'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following datasets would be the best fit for a scatter plot?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Describing Data
+MARKDOWN

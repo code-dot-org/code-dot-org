@@ -711,11 +711,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
-  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "ridiculous chapter number throws NotFound instead of RangeError" do
+    create_hourofcode_unit_and_levels
+    hoc_course_name = Unit.get_from_cache(Unit::HOC_NAME).original_unit_group.name
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
+        course_course_name: hoc_course_name,
         unit_position: '1',
         lesson_position: '99999999999999999999999999',
         id: '1'
@@ -724,7 +725,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
+        course_course_name: hoc_course_name,
         unit_position: '1',
         lesson_position: '1',
         id: '99999999999999999999999999'
@@ -864,13 +865,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
-  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "chapter based routing" do
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/reset"},
       {controller: "script_levels", action: "reset", script_id: Unit::HOC_NAME}
     )
 
+    create_hourofcode_unit_and_levels
     hoc_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::HOC_NAME).id, chapter: 1)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/1"},
@@ -878,6 +879,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     )
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
+    create(:script, :with_levels, levels_count: 5, name: Unit::FLAPPY_NAME)
     flappy_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::FLAPPY_NAME).id, chapter: 5)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/flappy/5"},
@@ -885,6 +887,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     )
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
+    # special case for jigsaw routing: /jigsaw/3 is recognized as chapter
+    # routing, but build_script_level_path emits the canonical /s/ path.
+    jigsaw_unit = create(:script, name: Unit::JIGSAW_NAME)
+    jigsaw_lesson = create(:lesson, script: jigsaw_unit, relative_position: '1', absolute_position: 1)
+    3.times {|i| create(:script_level, script: jigsaw_unit, lesson: jigsaw_lesson, chapter: i + 1)}
     jigsaw_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::JIGSAW_NAME).id, chapter: 3)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/jigsaw/3"},
@@ -991,6 +998,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for hoc" do
+    create_hourofcode_unit_and_levels
     get :show, params: {
       course_course_name: Unit::HOC_NAME,
       unit_position: 1,
@@ -1015,6 +1023,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for special scripts" do
+    flappy_unit = create(:script, :with_levels, name: Unit::FLAPPY_NAME)
+    create(:hoc_course, unit: flappy_unit, name: Unit::FLAPPY_NAME, family_name: Unit::FLAPPY_NAME, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {
       course_course_name: Unit::FLAPPY_NAME,
       unit_position: 1,
@@ -1088,11 +1098,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "reset redirects admins to root" do
+    create_hourofcode_unit_and_levels
     sign_in create(:admin)
     get :reset, params: {script_id: Unit::HOC_NAME}
     assert_redirected_to root_path
+  end
+
+  test "reset for hoc when not logged in clears client state and redirects back through /hoc/1" do
+    create_hourofcode_unit_and_levels
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
+
+    get :reset, params: {script_id: Unit::HOC_NAME}
+    assert_response 200
+    assert_template 'levels/reset_and_redirect'
+    # The redirect target must flow through the hoc chapter dispatch in
+    # build_script_level_path, not the /s/ form.
+    assert_equal '/hoc/1', assigns(:redirect_path)
+
+    assert client_state.level_progress_is_empty_for_test
+    refute session['warden.user.user.key']
+  end
+
+  test "reset for hoc when logged in redirects to /hoc/1" do
+    create_hourofcode_unit_and_levels
+    sign_in(create(:user))
+    get :reset, params: {script_id: Unit::HOC_NAME}
+    assert_redirected_to '/hoc/1'
   end
 
   test "show with the reset param should reset session when not logged in" do
@@ -1207,31 +1240,39 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
-    assert_equal 'Laurel Lesson 2 #1 | custom-script-laurel - Code.org [test]',
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_equal "Laurel Lesson 2 #1 | custom-script-laurel - #{brand_name} [test]",
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
   test 'end of HoC for a user is HOC endpoint' do
+    create_hourofcode_unit_and_levels
     stubs(:current_user).returns(@student)
     assert_equal('https://test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
+    create_hourofcode_unit_and_levels
     stubs(:current_user).returns(nil)
     assert_equal('https://test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
+    frozen_unit = create(:script, name: Unit::FROZEN_NAME)
+    create(:hoc_course, unit: frozen_unit, name: Unit::FROZEN_NAME, family_name: Unit::FROZEN_NAME)
     stubs(:current_user).returns(nil)
     assert_equal('https://test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
+    starwars_unit = create(:script, name: Unit::STARWARS_NAME)
+    create(:hoc_course, unit: starwars_unit, name: Unit::STARWARS_NAME, family_name: Unit::STARWARS_NAME)
     stubs(:current_user).returns(nil)
     assert_equal('https://test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do
+    create_hourofcode_unit_and_levels
     sign_in create(:admin)
     get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_redirected_to root_path
@@ -1296,6 +1337,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should 404 for invalid chapter for flappy" do
+    create(:script, :with_levels, name: Unit::FLAPPY_NAME)
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {script_id: 'flappy', chapter: 40000}
     end
@@ -2207,6 +2249,32 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "lesson_extras renders for a lesson with no levels" do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    # A lesson with a lesson plan but no levels of its own. The extras page
+    # still shows the bonus levels accumulated from earlier lessons, and points
+    # at the next lesson that does have levels.
+    lesson1 = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson1, bonus: true)
+    create(:lesson, script: script, lesson_group: lesson_group)
+    lesson3 = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson3)
+
+    get :lesson_extras, params: {
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 2
+    }
+
+    assert_response :success
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    assert_equal 3, extras_data['nextLessonNumber']
+    assert_equal 1, extras_data['bonusLevels'][0]['lessonNumber']
+  end
+
   test "lesson extras shows progress for current user if no section and user id" do
     sign_in @student
     script = create(:script, :in_single_unit_course)
@@ -2656,5 +2724,111 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_includes @response.body, "data-allow-embeds='true'"
+  end
+
+  test 'summary view collects predict responses from the level and its legacy contained level' do
+    contained = create(:level, type: 'Multi', name: 'summary predict contained')
+    level = create(:level, type: 'Javalab', name: 'summary predict level', properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    # One student answered before migration (on the contained level), one
+    # after (on the level itself), and one both; for the last only the newer
+    # response should be included.
+    legacy_student = create(:follower, section: @section).student_user
+    both_student = create(:follower, section: @section).student_user
+
+    legacy_source = create(:level_source, level: contained, data: 'legacy answer')
+    new_source = create(:level_source, level: level, data: 'new answer')
+
+    create(:user_level, user: legacy_student, level: contained, script: unit, level_source: legacy_source)
+    create(:user_level, user: @student, level: level, script: unit, level_source: new_source)
+    create(:user_level, user: both_student, level: contained, script: unit, level_source: legacy_source).
+      update_column(:updated_at, 1.day.ago)
+    create(:user_level, user: both_student, level: level, script: unit, level_source: new_source)
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position,
+      view: 'summary'
+    }
+    assert_response :success
+
+    responses = assigns(:responses)
+    assert_equal 1, responses.length
+    by_user = responses.first.index_by(&:user_id)
+    assert_equal 3, by_user.length
+    assert_equal 'legacy answer', by_user[legacy_student.id].level_source.data
+    assert_equal 'new answer', by_user[@student.id].level_source.data
+    assert_equal 'new answer', by_user[both_student.id].level_source.data
+  end
+
+  # Teacher-only content gating. Two consumers of a level's teacher_markdown
+  # defer to Policies::InlineAnswer.visible_for_script_level?: LevelsHelper
+  # sets appOptions['teacherMarkdown'] at the top level of the options hash,
+  # and levels/_teacher_markdown.html.haml wraps the text in
+  # #markdown.teacher.hide-as-student. External levels emit both, so one page
+  # exercises both.
+  TEACHER_ONLY_MARKDOWN = 'the answer is 42'.freeze
+
+  def get_show_external_level_with_teacher_markdown(user)
+    unit = create(:script, :in_single_unit_course, instructor_audience: 'teacher', participant_audience: 'student')
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    level = create(:external, teacher_markdown: TEACHER_ONLY_MARKDOWN)
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    sign_in user
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position
+    }
+    assert_response :success
+  end
+
+  # levels/show.html.haml embeds the options hash as a single line of JSON.
+  def embedded_app_options
+    json = @response.body[/var appOptions = (.*);$/, 1]
+    refute_nil json, 'expected the rendered page to embed appOptions'
+    JSON.parse(json)
+  end
+
+  test 'renders teacher-only markdown for an instructor of the unit' do
+    # visible_for_script_level? short-circuits to true under levelbuilder_mode,
+    # which would make this pass without consulting the user at all.
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    get_show_external_level_with_teacher_markdown create(:authorized_teacher)
+
+    assert_select '#markdown.teacher.hide-as-student', 1
+    assert_equal TEACHER_ONLY_MARKDOWN, embedded_app_options['teacherMarkdown']
+  end
+
+  test 'does not render teacher-only markdown for a teacher who cannot instruct the unit' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    # An unauthorized teacher account clears the current_user&.teacher? check
+    # in the partial, so only the InlineAnswer policy keeps the markdown off
+    # the page.
+    get_show_external_level_with_teacher_markdown create(:teacher)
+
+    assert_select '#markdown.teacher.hide-as-student', 0
+    assert_nil embedded_app_options['teacherMarkdown']
+  end
+
+  test 'does not render teacher-only markdown for a student' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    get_show_external_level_with_teacher_markdown create(:student)
+
+    assert_select '#markdown.teacher.hide-as-student', 0
+    assert_nil embedded_app_options['teacherMarkdown']
   end
 end

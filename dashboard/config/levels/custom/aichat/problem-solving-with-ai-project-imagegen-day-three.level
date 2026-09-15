@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-08-06T19:22:45.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Image Generation\r\n\r\n###Art Director\r\n\r\nYou own the look. You will create the main image for the post, and a logo if time allows. Your image should match what the spec sheet says the product actually is.\r\n\r\n**To Do**:\r\n- Create an image prompt to generate the main image for your post.\r\n- Check it against the spec sheet: number of parts, colors, and appearance must match. \r\n- Save your image to your Backpack and import it into Sketch Lab for use in your product launch social media post.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.8,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": false
+    },
+    "display_name": "Image Generation",
+    "project_template_level_name": "problem-solving-with-ai-project-aichat-template",
+    "bubble_choice_description": "Create image assets to assist with the creation of your product launch social media post.",
+    "thumbnail_url": "https://images.code.org/330bf392da63b5239bd62c7fd9b12510-image-generation-icon.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-06T19:22:45.824+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-aichat-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-aichat-2\"},{\"changed_at\":\"2026-08-06 19:25:34 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

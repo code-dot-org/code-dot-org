@@ -1,11 +1,7 @@
-@import "color.scss";
-
-$min-table-width: 600px;
-
 .container {
   flex-direction: column;
   height: 99%;
-  min-width: $min-table-width;
+  min-width: 616px;
   max-width: 99%;
   padding-left: 8px;
   padding-right: 8px;
@@ -28,9 +24,9 @@ $min-table-width: 600px;
 }
 
 .debugData {
-  background-color: $lightest_gray;
+  background-color: var(--background-neutral-tertiary);
   border-radius: 10px;
-  border: 1px solid $light_gray;
+  border: 1px solid var(--borders-neutral-strong);
   flex-grow: 1;
   font-family: monospace;
   overflow: scroll;

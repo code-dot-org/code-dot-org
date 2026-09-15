@@ -8,11 +8,8 @@
 
 = render_parental_permission_banner(current_user, request)
 
-= link_to :back do
-  %i.fa-solid.fa-chevron-left
-  %span= t('crud.back')
-
-%h1.text-black= @page_title
+-# Mount point for the React AccountEditHeader (back link + page title).
+#account-edit-header{data: {title: @page_title, back_label: t('crud.back')}}
 
 - unless current_user.migrated?
   -# Mount point for React MigrateToMultiAuth component.
@@ -46,22 +43,23 @@
     = f.hidden_field :password_confirmation
 
 - if current_user.student?
-  %div#add-parent-email
-    %hr
-    %h2= t('user.for_parents_and_guardians')
-    %p= t('user.link_a_parent_email')
-    %p
-      %b= "#{t('user.parent_guardian_email_label')}:"
-      %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
-      (
-      %a#add-parent-email-link{href: '#', role: 'button'}
-        = t('user.update_email')
-      - if current_user.parent_email&.present?
-        = t('or')
-        %a#remove-parent-email-link{href: '', role: 'button'}
-          = t('user.remove_parent_email_label')
-      )
-    %p= t('user.only_one_parent_email_supported_warning')
+  -# Mount point for the React ForParentsAndGuardians component. The
+  -# AddParentEmailController / RemoveParentEmailController attach to the
+  -# Update/Remove links it renders (by id), so it is mounted before they're
+  -# constructed in edit.js.
+  #add-parent-email{
+    data: {
+      heading: t('user.for_parents_and_guardians'),
+      intro: t('user.link_a_parent_email'),
+      email_label: t('user.parent_guardian_email_label'),
+      current_email: current_user.parent_email.presence || t('user.none'),
+      update_label: t('user.update_email'),
+      has_parent_email: current_user.parent_email.present?.to_s,
+      or_label: t('or'),
+      remove_label: t('user.remove_parent_email_label'),
+      note: t('user.only_one_parent_email_supported_warning'),
+    }
+  }
 
 - if current_user.teacher? && Policies::Lti.lti?(current_user)
   %div#lti-sync-settings{
@@ -93,57 +91,38 @@
   %div#turn-off-ai-diff
 
 - if current_user.can_create_personal_login?
-  %hr
-  %h2= t('user.create_personal_login')
-
-  %p#edit_user_create_personal_account_description
-    - unless @personal_account_linking_enabled
-      - if current_user.us_state.nil?
-        = t('user.create_personal_login_state_required')
-      - else
-        = t('user.create_personal_login_parental_permission_required')
-    - else
-      = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
-      = t('user.create_personal_login_link_account') if current_user.migrated?
-  .div{style: 'position: relative'}
-    = form_for(current_user, as: :user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
-      = form.hidden_field :hashed_email
-      %h3= t('user.enter_new_login_info')
-      - if no_email
-        = hidden_field_tag :noEmail, true
-        .field
-          = form.label t('user.create_personal_login_under_13_username'), class: "label-bold"
-          = form.text_field :username, maxlength: 255, disabled: !@personal_account_linking_enabled
-      - else
-        .field
-          = form.label :personal_email, class: "label-bold" do
-            %span
-              = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: :inline).html_safe
-          = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
-      .field
-        = form.label :password, maxlength: 255, class: "label-bold"
-        = form.password_field :password, autocomplete: 'off', maxlength: 255, disabled: !@personal_account_linking_enabled
-      .field
-        = form.label :password_confirmation, class: "label-bold"
-        = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
-      - if @personal_account_linking_enabled
-        - if current_user.secret_word_account?
-          %h3= t('user.confirm_secret_words')
-          .field
-            = form.label :secret_words, class: "label-bold"
-            = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255, disabled: !@personal_account_linking_enabled
-        - if no_email
-          %h3= t('user.enter_parent_email')
-          .field
-            = form.label t('user.create_personal_login_under_13_parent_email'), class: "label-bold"
-            = form.text_field :parent_email, maxlength: 255, disabled: !@personal_account_linking_enabled
-        = t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos'), markdown: true).html_safe
-        - unless no_email
-          = t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
-        %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
-    - if !@personal_account_linking_enabled
-      %div{style: 'position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: row; align-items: center; justify-content: center; pointer-events: none'}
-        %img{src: asset_path('auth/lock.svg'), style: 'width: 3rem; height: 3rem'}
+  -# Mount point for the React CreatePersonalLogin component. It renders a native
+  -# form that POSTs to /users/upgrade; the email hashing and under-13 plaintext
+  -# clearing now live in the component's onSubmit (see CreatePersonalLogin.tsx).
+  -# Copy, markdown, and URLs are resolved here so localization stays Rails-side.
+  - if !@personal_account_linking_enabled
+    - create_personal_login_description = current_user.us_state.nil? ? t('user.create_personal_login_state_required') : t('user.create_personal_login_parental_permission_required')
+  - else
+    - create_personal_login_description = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+    - create_personal_login_description = "#{create_personal_login_description} #{t('user.create_personal_login_link_account')}" if current_user.migrated?
+  #create-personal-login{
+    data: {
+      linking_enabled: @personal_account_linking_enabled.to_s,
+      no_email: no_email.to_s,
+      secret_word_account: current_user.secret_word_account?.to_s,
+      hashed_email: current_user.hashed_email,
+      heading: t('user.create_personal_login'),
+      description: create_personal_login_description,
+      enter_new_login_info: t('user.enter_new_login_info'),
+      username_label: t('user.create_personal_login_under_13_username'),
+      email_label_markdown: t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true')),
+      password_label: User.human_attribute_name(:password),
+      password_confirmation_label: User.human_attribute_name(:password_confirmation),
+      confirm_secret_words_heading: t('user.confirm_secret_words'),
+      secret_words_label: User.human_attribute_name(:secret_words),
+      enter_parent_email_heading: t('user.enter_parent_email'),
+      parent_email_label: t('user.create_personal_login_under_13_parent_email'),
+      terms_markdown: t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos')),
+      email_note_markdown: t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy')),
+      submit_label: t('crud.submit'),
+      lock_icon_src: asset_path('auth/lock.svg'),
+    },
+  }
 
 -# Separately-submittable form section allowing the user to edit their own
 -# account type.  We keep this separate because it's sometimes a multi-step
@@ -159,30 +138,22 @@
     ) do |f|
     = f.hidden_field :email
     = f.hidden_field :email_preference_opt_in
-    %hr.account-page-section-break
-    %h2= t('signup_form.user_type_label')
-    .field
-      = f.label t('signup_form.user_type'), class: "label-bold"
-      = f.select :user_type, user_type_options
-    .farSide
-      %span#change-user-type-status
-      %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
+    = f.hidden_field :user_type
+  -# Mount point for the React ChangeUserTypeSection (heading + account-type
+  -# dropdown + confirm button). It submits via the hidden form above.
+  #change-user-type{data: {heading: t('signup_form.user_type_label'), dropdown_label: t('signup_form.user_type'), button_label: t('signup_form.user_type_button')}}
 
-%div#expire-other-sessions
-  %hr
-  %h2= t('user.expire_other_sessions')
-  %p= t('user.expire_other_sessions_description')
-  = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |expire_other_form|
-    .farSide
-      = expire_other_form.submit t('user.expire_other_sessions_button'), class: 'btn btn-warning'
+-# Mount point for the React ExpireOtherSessions component.
+#expire-other-sessions{data: {expire_path: expire_other_path, heading: t('user.expire_other_sessions'), description: t('user.expire_other_sessions_description'), button_label: t('user.expire_other_sessions_button')}}
 
-- if current_user.can_delete_own_account?
-  -# Mount point for React DeleteAccount component.
-  %div#delete-account
-- else
-  %hr.danger.account-page-section-break
-  %h2.danger= t('user.delete')
-  %p= t('user.delete_text_teacher_managed_note')
+-# Mount point for React DeleteAccount component. Renders either the delete UI
+-# or, for teacher-managed accounts, a notice that deletion isn't permitted.
+#delete-account{
+  data: {
+    can_delete: current_user.can_delete_own_account?.to_s,
+    managed_note: t('user.delete_text_teacher_managed_note'),
+  }
+}
 
 -# Hidden form used to asynchronously submit an email change to Rails with the
 -# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.

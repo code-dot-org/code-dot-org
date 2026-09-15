@@ -1,0 +1,10 @@
+import {createVisualTest} from '@code-dot-org/playwright-support/visual';
+
+/** {{pascalCase name}} `test`/`expect` with the shared visualCheck fixture. */
+export const {test, expect} = createVisualTest({
+  appName: 'Code.org {{pascalCase name}} Lab',
+});
+export type {
+  VisualCheck,
+  VisualCheckOptions,
+} from '@code-dot-org/playwright-support/visual';

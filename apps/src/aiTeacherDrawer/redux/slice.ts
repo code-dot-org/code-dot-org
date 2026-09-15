@@ -25,6 +25,7 @@ const initialState: AiDiffChatState = {
   artifact: undefined,
   artifactType: undefined,
   pendingArtifactMessage: undefined,
+  requestedNav: null,
 };
 
 const aiDiffChatSlice = createSlice({
@@ -73,6 +74,13 @@ const aiDiffChatSlice = createSlice({
     clearPendingArtifactMessage: state => {
       state.pendingArtifactMessage = undefined;
     },
+    openDrawerToNav: (state, action: PayloadAction<string>) => {
+      state.chatIsOpen = true;
+      state.requestedNav = action.payload;
+    },
+    clearRequestedNav: state => {
+      state.requestedNav = null;
+    },
   },
 });
 
@@ -95,4 +103,6 @@ export const {
   setArtifactType,
   setPendingArtifactMessage,
   clearPendingArtifactMessage,
+  openDrawerToNav,
+  clearRequestedNav,
 } = aiDiffChatSlice.actions;

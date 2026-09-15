@@ -16,28 +16,30 @@ describe('FlashHandler', () => {
     expect(container.firstChild).toBeNull();
   });
 
-  it('renders the first flash message with mapped alert type for notice', () => {
+  it('announces the first flash message via the live region', async () => {
     render(<FlashHandler flash={[['notice', 'All good']]} />);
-
-    const alert = screen.getByRole('alert');
-    expect(alert).toBeInTheDocument();
-    expect(alert).toHaveAttribute(
-      'class',
-      expect.stringContaining('alert-success')
+    // The message is announced from the toast's persistent live region (default
+    // assertive → role="alert"); the text lands a frame after mount.
+    await waitFor(() =>
+      expect(screen.getByRole('alert')).toHaveTextContent('All good')
     );
-    expect(screen.getByText('All good')).toBeInTheDocument();
   });
 
-  it('renders the first flash message with mapped alert type for alert', () => {
-    render(<FlashHandler flash={[['alert', 'Something went wrong']]} />);
+  it('renders a notice as a success alert', () => {
+    render(<FlashHandler flash={[['notice', 'All good']]} />);
+    // The visible Alert (as opposed to the live region) is styled by type.
+    const styled = screen
+      .getAllByText('All good')
+      .some(node => node.closest('[class*="alert-success"]'));
+    expect(styled).toBe(true);
+  });
 
-    const alert = screen.getByRole('alert');
-    expect(alert).toBeInTheDocument();
-    expect(alert).toHaveAttribute(
-      'class',
-      expect.stringContaining('alert-danger')
-    );
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+  it('renders an alert as a danger alert', () => {
+    render(<FlashHandler flash={[['alert', 'Something went wrong']]} />);
+    const styled = screen
+      .getAllByText('Something went wrong')
+      .some(node => node.closest('[class*="alert-danger"]'));
+    expect(styled).toBe(true);
   });
 
   it('uses the first message when multiple messages are provided', () => {
@@ -50,22 +52,36 @@ describe('FlashHandler', () => {
       />
     );
 
-    expect(screen.getByText('Alert message 1')).toBeInTheDocument();
+    expect(screen.getAllByText('Alert message 1').length).toBeGreaterThan(0);
     expect(screen.queryByText('Alert message 2')).not.toBeInTheDocument();
     expect(screen.queryByText('Notice message 1')).not.toBeInTheDocument();
     expect(screen.queryByText('Notice message 2')).not.toBeInTheDocument();
   });
 
-  it('closes the snackbar when the close button is clicked', async () => {
+  it('dismisses the toast when the close button is clicked', async () => {
     const user = userEvent.setup();
     render(<FlashHandler flash={[['alert', 'Dismiss me']]} />);
 
-    expect(screen.getByRole('alert')).toBeInTheDocument();
+    expect(screen.getAllByText('Dismiss me').length).toBeGreaterThan(0);
 
     await user.click(screen.getByRole('button', {name: 'Close alert'}));
 
     await waitFor(() => {
-      expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+      expect(screen.queryByText('Dismiss me')).not.toBeInTheDocument();
     });
+  });
+
+  it('reopens for a new flash after the previous one was dismissed', async () => {
+    const user = userEvent.setup();
+    const {rerender} = render(<FlashHandler flash={[['notice', 'First']]} />);
+
+    await user.click(screen.getByRole('button', {name: 'Close alert'}));
+    await waitFor(() => {
+      expect(screen.queryByText('First')).not.toBeInTheDocument();
+    });
+
+    // A new flash on the still-mounted instance must show, not stay dismissed.
+    rerender(<FlashHandler flash={[['notice', 'Second']]} />);
+    expect(screen.getAllByText('Second').length).toBeGreaterThan(0);
   });
 });

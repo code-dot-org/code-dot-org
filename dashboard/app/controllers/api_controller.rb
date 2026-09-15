@@ -45,7 +45,7 @@ class ApiController < ApplicationController
       }
       render json: response
     rescue RestClient::Exception => exception
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
         context: {
@@ -56,7 +56,7 @@ class ApiController < ApplicationController
       )
       render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
     rescue JSON::JSONError => exception
-      Honeybadger.notify(
+      Observability::Errors.report(
         exception,
         error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
         context: {
@@ -147,6 +147,70 @@ class ApiController < ApplicationController
     end
   end
 
+  # Lists the One Roster classes the requesting teacher may import. Inherently
+  # scoped: the teacher's SourcedId (from their own v2 auth option, never from
+  # params) is the path segment queried.
+  def classlink_classrooms
+    return head :forbidden unless current_user
+
+    tenant_id, teacher_sourced_id = classlink_v2_identity
+    return classlink_no_v2_error unless tenant_id
+
+    application = Clients::ClasslinkOneRoster.application_for_tenant(tenant_id)
+    return classlink_district_not_enabled_error unless application
+
+    classes = Clients::ClasslinkOneRoster.teacher_classes(
+      application[:oneroster_application_id],
+      application[:bearer],
+      teacher_sourced_id
+    )
+    json = classes.map {|course| {id: course['sourcedId'], name: course['title']}}
+    render json: {courses: json}
+  rescue Clients::ClasslinkOneRoster::DistrictAuthorizationError
+    classlink_district_not_enabled_error
+  rescue Clients::ClasslinkOneRoster::Error, RestClient::Exception, JSON::ParserError => exception
+    classlink_request_failed(exception)
+  end
+
+  # Imports or re-syncs a ClassLink class as a section. Unlike Clever and
+  # Google Classroom, ClassLink's partner credential can read any class in the
+  # requester's district, so authorization is enforced entirely here: the
+  # requester's identity comes from their own ClassLink credential, never from
+  # params, and they must either already be an instructor of the local section
+  # or appear in the class's OneRoster teacher list.
+  def import_classlink_classroom
+    return head :forbidden unless current_user
+
+    tenant_id, teacher_sourced_id = classlink_v2_identity
+    return classlink_no_v2_error unless tenant_id
+
+    course_id = params[:courseId].to_s
+    course_name = params[:courseName].to_s
+
+    application = Clients::ClasslinkOneRoster.application_for_tenant(tenant_id)
+    return classlink_district_not_enabled_error unless application
+
+    section = ClasslinkSection.find_by(code: ClasslinkSection.code_for(tenant_id, course_id))
+    return head :forbidden unless section_instructor?(section) ||
+      classlink_teacher_for_course?(application, teacher_sourced_id, course_id)
+
+    students = Clients::ClasslinkOneRoster.class_students(
+      application[:oneroster_application_id],
+      application[:bearer],
+      course_id
+    )
+
+    # An empty roster is applied like any other: ClassLink is the source of
+    # truth, and a sync to zero is recoverable — removal soft-deletes the
+    # Follower, so a later correct sync restores membership.
+    section = ClasslinkSection.from_service(course_id, tenant_id, current_user.id, students, course_name)
+    render json: section.summarize
+  rescue Clients::ClasslinkOneRoster::DistrictAuthorizationError
+    classlink_district_not_enabled_error
+  rescue Clients::ClasslinkOneRoster::Error, RestClient::Exception, JSON::ParserError => exception
+    classlink_request_failed(exception)
+  end
+
   def user_menu
     prevent_caching
     show_pairing_dialog = !!session.delete(:show_pairing_dialog)
@@ -156,6 +220,7 @@ class ApiController < ApplicationController
     @user_header_options[:session_pairings] = pairing_user_ids
     @user_header_options[:loc_prefix] = 'nav.user.'
     @user_header_options[:show_create_menu] = params[:showCreateMenu]
+    @user_header_options[:marketing_nav] = Cdo::Brand.codeai_next?(request)
   end
 
   def update_lockable_state
@@ -215,7 +280,8 @@ class ApiController < ApplicationController
         section_id: section.id,
         section_name: section.name,
         ai_chat_access_level: section.ai_chat_access_level,
-        lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
+        # A nil script has no lockable lessons.
+        lessons: (script&.lessons || []).each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
         end
@@ -257,6 +323,8 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
+    return head :bad_request unless script
+
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
     page = [params[:page].to_i, 1].max
@@ -295,6 +363,8 @@ class ApiController < ApplicationController
     prevent_caching
     section = load_section
     script = load_script(section)
+
+    return head :bad_request unless script
 
     if params[:level_id]
       script_level = script.script_levels.find do |sl|
@@ -560,6 +630,7 @@ class ApiController < ApplicationController
   def section_text_responses
     section = load_section
     script = load_script(section)
+    return render(json: []) unless script
     # TODO: TEACH-2042 default to original unit group unit if the unit is not part of the assigned course
     # If unit_group_unit is nil, it returns the /s/ url instead of the correct /courses/ url
     unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group.id == section.course_id}
@@ -577,7 +648,7 @@ class ApiController < ApplicationController
           student: student_hash,
           lesson: level_hash[:script_level].lesson.localized_title,
           puzzle: level_hash[:script_level].position,
-          question: last_attempt.level.properties['title'],
+          question: last_attempt.level.properties['long_instructions'] || last_attempt.level.properties['title'],
           response: response,
           url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id, unit_group_unit: unit_group_unit)
         }
@@ -678,6 +749,43 @@ class ApiController < ApplicationController
     false
   end
 
+  # Rostering identity is derived only from the requester's own v2
+  # ClassLink auth option, never from params. Because class sourcedIds are
+  # unique per district, deriving the tenant here also confines every lookup
+  # to the requester's own district.
+  # @return [Array(String, String)] [tenant_id, sourced_id]
+  # @return [nil] when the user holds no v2 ClassLink auth option
+  private def classlink_v2_identity
+    auth_id = current_user.uid_for_provider(
+      AuthenticationOption::CLASSLINK,
+      AuthenticationOption::Classlink::VERSION[:v2]
+    )
+    return nil unless auth_id
+    AuthenticationOption::Classlink.parse(auth_id)
+  end
+
+  private def classlink_teacher_for_course?(application, teacher_sourced_id, class_sourced_id)
+    teachers = Clients::ClasslinkOneRoster.class_teachers(
+      application[:oneroster_application_id],
+      application[:bearer],
+      class_sourced_id
+    )
+    teachers.any? {|teacher| teacher['sourcedId'].to_s == teacher_sourced_id}
+  end
+
+  private def classlink_no_v2_error
+    render status: :forbidden, json: {error: 'Please sign in again from ClassLink to proceed with roster sync.'}
+  end
+
+  private def classlink_district_not_enabled_error
+    render status: :forbidden, json: {error: "Your district hasn't enabled roster sync for CodeAI."}
+  end
+
+  private def classlink_request_failed(exception)
+    Observability::Errors.report(exception, error_message: 'ClassLink rostering request failed')
+    render status: :bad_gateway, json: {error: "We're having trouble getting roster information from ClassLink. Please try again later."}
+  end
+
   private def clever_teacher_for_course?(course_id)
     clever_uid = current_user.uid_for_provider(AuthenticationOption::CLEVER).to_s
     return false if clever_uid.empty?
@@ -726,8 +834,6 @@ class ApiController < ApplicationController
   private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
-    script = Unit.get_from_cache(script_id) if script_id
-    script ||= Unit.hoc_2014_unit
-    script
+    Unit.get_from_cache(script_id) if script_id
   end
 end

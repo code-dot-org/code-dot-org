@@ -2,6 +2,7 @@
  * @overview Component containing UI controls for modifying the table, including
  * import, export, adding a new column, and deleting the entire table.
  */
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -29,7 +30,9 @@ class TableControls extends React.Component {
     return (
       <div className={style.container}>
         <div className={style.tableNameWrapper}>
-          <span className={style.tableName}>{this.props.tableName}</span>
+          <Typography variant="h6" component="span" sx={{m: 0}}>
+            {this.props.tableName}
+          </Typography>
         </div>{' '}
         <div className={style.buttonWrapper}>
           <VisualizerModal key={this.props.tableName} />

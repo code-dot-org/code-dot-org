@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T18:40:53.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’d like to compare the food delivery times between both apps. The code currently prints the minimum, maximum, and range for each app.\r\n\r\n**☑️ Do This:**\r\n- Compute the mean for App 1 using `statistics.mean`, then print the result.\r\n- Compute the standard deviation for App 1 using `statistics.stdev`, then print the result.\r\n- Compute the mean for App 2 using `statistics.mean`, then print the result.\r\n- Compute the standard deviation for App 2 using `statistics.stdev`, then print the result.\r\n\r\n**💻 Coding Tip**\r\n\r\nYou can use `round` to round your results to a certain number of decimal points. For example, the following code rounds `value` to two decimal points.\r\n\r\n```\r\nvalue = round(value, 2)\r\n```\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\nimport statistics\n\nfile_1 = open(\"app_1.csv\")\nreader_1 = csv.DictReader(file_1)\napp_1_times = []\nfor row in reader_1:\n    time = float(row[\"delivery_time\"])\n    app_1_times.append(time)\nfile_1.close()\n\nfile_2 = open(\"app_2.csv\")\nreader_2 = csv.DictReader(file_2)\napp_2_times = []\nfor row in reader_2:\n    time = float(row[\"delivery_time\"])\n    app_2_times.append(time)\nfile_2.close()\n\napp_1_min = min(app_1_times)\napp_1_max = max(app_1_times)\napp_1_range = round(app_1_max - app_1_min, 2)\n\nprint(f\"App 1 min: {app_1_min}\")\nprint(f\"App 1 max: {app_1_max}\")\nprint(f\"App 1 range: {app_1_range}\")\n\n# TODO 1: Compute and print the mean value for App 1\n# TODO 2: Compute and print the standard deviation for App 1\n\napp_2_min = min(app_2_times)\napp_2_max = max(app_2_times)\napp_2_range = round(app_2_max - app_2_min, 2)\n\nprint(f\"App 2 min: {app_2_min}\")\nprint(f\"App 2 max: {app_2_max}\")\nprint(f\"App 2 range: {app_2_range}\")\n\n# TODO 3: Compute and print the mean value for App 2\n# TODO 4: Compute and print the standard deviation for App 2",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "app_1.csv",
+          "contents": "order,delivery_time\n1,12.4\n2,58.3\n3,18.7\n4,62.1\n5,15.2\n6,52.6\n7,22.9\n8,10.8\n9,60.4\n10,17.5\n11,55.1\n12,14.3\n13,49.8\n14,20.6\n15,13.7",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "app_2.csv",
+          "contents": "order,delivery_time\n1,39.4\n2,40.8\n3,39.1\n4,41.2\n5,40.5\n6,38.9\n7,40.2\n8,39.7\n9,40.9\n10,38.6\n11,41.1\n12,39.3\n13,40.6\n14,39.8\n15,40.4",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "display_name": "Delivery Apps",
+    "bubble_choice_description": "Compare how quickly two delivery apps deliver food.",
+    "thumbnail_url": "https://images.code.org/9f39ea8e24eac2cc2ec7c116848b97bb-delivery.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 18:50:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:50:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:50:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:50:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:53:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 18:56:33 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

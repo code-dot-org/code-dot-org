@@ -5,108 +5,104 @@
 #
 # IF YOU MODIFY THIS FILE, also fix its sibling k8s/kustomize/skaffold.yaml in the same
 # way until we decide between Helm and Kustomize.
+#
+# The config builds and deploys the backend stack: the ActiveJob worker and
+# cluster-local services, with no dashboard frontend or frontend asset build.
+# It uses the same root docker image family as the deployed clusters:
+#
+#   cdo-base -> cdo-build -> cdo-deps -> cdo-rails
 
 apiVersion: skaffold/v4beta13
 kind: Config
 build:
+  hooks:
+    before:
+      - command: ["./docker/rails/ensure-locales.sh"]
+  local:
+    useBuildkit: true
   artifacts:
-  - image: code-dot-org
+  - image: cdo-rails
     sync:
       infer:
-        # rerun watching
-        # /app/src/lib, /app/src/shared/middleware, /app/src/dashboard/legacy, /app/src/pegasus for **/*.{rb,ru,yml} (ignoring **/migrations/*.rb,test/**/*.rb)\
         - '**/*.rb'
         - '**/*.ru'
         - '**/*.yml'
         - '**/*.js'
         - '**/*.jsx'
         - '**/*.json'
-    custom:
-      buildCommand: |
-        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
-          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
-          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
-          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
-          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
-      dependencies:
-        dockerfile:
-          path: k8s/docker/code-dot-org.dockerfile
+    docker:
+      dockerfile: docker/rails/Dockerfile
     requires:
-    - image: code-dot-org-core
-      alias: CODE_DOT_ORG_CORE
-    - image: code-dot-org-db-seed
-      alias: CODE_DOT_ORG_DB_SEED
-    - image: code-dot-org-pegasus
-      alias: CODE_DOT_ORG_PEGASUS
-    - image: code-dot-org-static
-      alias: CODE_DOT_ORG_STATIC
-  - image: code-dot-org-core
-    custom:
-      # skaffold sync only works when the user is root 😤:
-      # https://github.com/GoogleContainerTools/skaffold/issues/2479
-      # If we find a solution, we can drop this override:
-      buildCommand: |
-        k8s/bin/docker-buildx -f k8s/docker/code-dot-org-core.dockerfile \
-          --build-arg USERNAME=root \
-          --build-arg UID=0 \
-          --build-arg GID=0
-      dependencies:
-        dockerfile:
-          path: k8s/docker/code-dot-org-core.dockerfile
-  - image: code-dot-org-pegasus
-    custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-pegasus.dockerfile
-      dependencies:
-        dockerfile:
-          path: k8s/docker/code-dot-org-pegasus.dockerfile
-  - image: code-dot-org-static
-    custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-static.dockerfile
-      dependencies:
-        dockerfile:
-          path: k8s/docker/code-dot-org-static.dockerfile
-  - image: code-dot-org-db-seed
-    custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile
-      dependencies:
-        dockerfile:
-          path: k8s/docker/code-dot-org-db-seed.dockerfile
+      - image: cdo-deps
+        alias: DEPS_IMAGE
+  - image: cdo-deps
+    docker:
+      dockerfile: docker/deps/Dockerfile
+    requires:
+      - image: cdo-build
+        alias: BUILD_IMAGE
+      - image: cdo-base
+        alias: BASE_IMAGE
+  - image: cdo-build
+    context: docker/build
+    docker:
+      dockerfile: Dockerfile
+    requires:
+      - image: cdo-base
+        alias: BASE_IMAGE
+  - image: cdo-base
+    context: docker/base
+    docker:
+      dockerfile: Dockerfile
 
 deploy:
   helm:
+    hooks:
+      before:
+        # Jobs have immutable pod templates. Delete prior one-shot setup Jobs
+        # before Helm applies a new image tag or command.
+        - host:
+            command:
+              - kubectl
+              - delete
+              - job
+              - cdo-dashboard-job-setup-db-minimal
+              - cdo-minio-setup-s3-job
+              - --ignore-not-found
     releases:
       - name: cdo
         chartPath: ./k8s/helm
         setValueTemplates:
-          image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org}}"
-          # skaffold sync only works when the user is root 😤:
+          image: "{{.IMAGE_FULLY_QUALIFIED_cdo_rails}}"
+          # Skaffold sync only works when the process is root:
           # https://github.com/GoogleContainerTools/skaffold/issues/2479
-          # If we find a solution, we can drop this override:
-          user.username: root
+          # If we find a solution, we can drop these overrides.
           user.uid: "0"
           user.gid: "0"
-          user.home: /home/root
         valuesFiles:
           # This list will be extended by skaffold profiles e.g.: k8s/helm/development.values.yaml
           - k8s/helm/values.yaml
 
 profiles:
-
 - name: development
   activation:
     - command: dev
     - command: debug
     - kubeContext: docker-desktop
   patches:
+    # Rails takes long enough to boot that the startup probe can fail transiently.
+    # Let Kubernetes enforce the probe threshold instead of failing on its first event.
+    - op: add
+      path: /deploy/tolerateFailuresUntilDeadline
+      value: true
     - op: add
       path: /deploy/helm/releases/0/valuesFiles/-
       value: k8s/helm/development.values.yaml
-    # In development mode we auto-generate passwords for the cluster-local MySQL/Redis/MinIO
-    # 
-    # Please note that to change these passwords you BOTH have to delete/edit cdo-local-secrets.env
-    # AND you have to delete the persistent volume associated with that service, because
-    # changing the password in helm after first create typically does not modify the
-    # password in the service's root volume.
+    # In development mode we auto-generate passwords for cluster-local MySQL,
+    # Redis, and MinIO. The Helm chart retains an existing MySQL password because
+    # the MySQL volume also survives Skaffold cleanup. To rotate that password,
+    # delete cdo-local-secrets.env, the cdo-local-secrets Secret, and the MySQL
+    # persistent volume together.
     - op: add
       path: /deploy/helm/releases/0/setValueTemplates/services.mysql.password
       value: '{{ cmd "./k8s/bin/cdo-local-secrets" "MYSQL_ROOT_PASSWORD" }}'
@@ -116,129 +112,33 @@ profiles:
     - op: add
       path: /deploy/helm/releases/0/setValueTemplates/services.minio.password
       value: '{{ cmd "./k8s/bin/cdo-local-secrets" "MINIO_ROOT_PASSWORD" }}'
-    # These have to be patches vs in values.yml because they inject local env vars:
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.hostPaths.home
-      value: '{{ cmd "sh" "-c" "echo $HOME" }}'
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.hostPaths.skaffoldStorage
-      value: '{{ cmd "sh" "-c" "echo $PWD/skaffoldStorage" }}'
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.AWS_PROFILE
-      value: '{{ cmd "sh" "-c" "echo $AWS_PROFILE" }}'
-
-# Mount local machine credential directories into the dashboard container so it can
-# use your local AWS and gcloud credentials. To use: `skaffold dev -p local-dev`
-- name: local-dev
-  patches:
-    - op: add
-      path: /deploy/helm/releases/0/setValues
-      value:
-        localDev:
-          mounts:
-            mountDotAWS: true
-            mountDotConfigGcloud: true
-
-# Populates Dashboard DB (rake dashboard:setup_db)
-# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
-- name: setup-db
+# Creates a fresh Dashboard DB from schema.rb, without curriculum seed data.
+# Run: skaffold dev --trigger=manual -p setup-db-minimal
+- name: setup-db-minimal
   patches:
       - op: add
         path: /deploy/helm/releases/0/setValueTemplates/dashboardJob
         value:
           enabled: true
-          name: setup-db
-          args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
+          name: setup-db-minimal
+          args: ["cd dashboard && bin/setup-db-minimal"]
+      - op: add
+        path: /deploy/helm/releases/0/setValueTemplates/RAILS_ENV
+        value: adhoc
+      - op: add
+        path: /deploy/helm/releases/0/setValueTemplates/extraEnv
+        value:
+          AWS_EC2_METADATA_DISABLED: "true"
 
 # Create standard cdo-v3-* S3 buckets in minio.
-# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
+# Run: skaffold dev --trigger=manual -p setup-db-minimal -p setup-s3
 - name: setup-s3
   patches:
       - op: add
         path: /deploy/helm/releases/0/setValueTemplates/services.minio.runSetupS3Job
         value: true
 
-# Mimic allows us to run a light-weight stubbed version of our huge repo. Its great for
-# fast iterative development of our k8s docker files and helm charts.
-#
-# To use:
-# 1. First-time: skaffold dev -p mimic --cache-artifacts=false
-# 2. Run: skaffold dev -p mimic
-#
-# For details, see: ./k8s/mimic/README.md
-- name: mimic
-  patches:
-    # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
-    # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
-    # have been replaced by copies of the real files, because docker doesn't follow
-    # symlinks outside its root build context.
-    - op: add
-      path: /build/hooks
-      value:
-        before:
-          - command: ["k8s/mimic/bin/update-cdo-no-symlinks.sh"]
-    # Artifact 0 (code-dot-org)
-    - op: add
-      path: /build/artifacts/0/context
-      value: k8s/mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/0/image
-      value: mimic
-    # Artifact 1 (code-dot-org-core)
-    - op: add
-      path: /build/artifacts/1/context
-      value: k8s/mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/1/image
-      value: mimic-core
-    # Artifact 2 (code-dot-org-pegasus)
-    - op: add
-      path: /build/artifacts/2/context
-      value: k8s/mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/2/image
-      value: mimic-pegasus
-    # Artifact 3 (code-dot-org-static)
-    - op: add
-      path: /build/artifacts/3/context
-      value: k8s/mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/3/image
-      value: mimic-static
-    # Artifact 4 (code-dot-org-db-seed)
-    - op: add
-      path: /build/artifacts/4/context
-      value: k8s/mimic/cdo-no-symlinks
-    - op: replace
-      path: /build/artifacts/4/image
-      value: mimic-db-seed
-    # Update required images in artifact 0
-    - op: replace
-      path: /build/artifacts/0/requires/0/image
-      value: mimic-core
-    - op: replace
-      path: /build/artifacts/0/requires/1/image
-      value: mimic-db-seed
-    - op: replace
-      path: /build/artifacts/0/requires/2/image
-      value: mimic-pegasus
-    - op: replace
-      path: /build/artifacts/0/requires/3/image
-      value: mimic-static
-    # Update the docker image passed to helm
-    - op: replace
-      path: /deploy/helm/releases/0/setValueTemplates/image
-      value: "{{.IMAGE_FULLY_QUALIFIED_mimic}}"
-
 portForward:
-- resourceType: Service
-  resourceName: cdo-dashboard
-  port: http
-  localPort: 13000
-- resourceType: Service
-  resourceName: cdo-dashboard
-  port: http-hmr
-  localPort: 19000
 - resourceType: Service
   resourceName: cdo-mysql
   port: mysql

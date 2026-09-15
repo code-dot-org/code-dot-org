@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -34,8 +35,10 @@ export default class ProjectShare extends React.Component {
           'no-mc'
         )}
         onClick={this.shareProject}
+        aria-label={i18n.share()}
       >
-        {i18n.share()}
+        <span className={styles.buttonText}>{i18n.share()}</span>
+        <FontAwesomeV6Icon iconName="share" className={styles.buttonIcon} />
       </button>
     );
   }

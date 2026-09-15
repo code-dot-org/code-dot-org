@@ -1,4 +1,5 @@
 @no_mobile
+@playwright
 Feature: Header navigation bar
   Scenario: Student in English should see 4 header links
     Given I create a student named "Sally Student" and go home

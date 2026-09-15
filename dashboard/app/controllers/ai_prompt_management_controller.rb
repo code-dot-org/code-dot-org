@@ -5,7 +5,7 @@ class AiPromptManagementController < ApplicationController
 
   def get_prompt
     prompt_name = prompt_params[:name]
-    response = LangfuseHelper.fetch_prompt(prompt_name)
+    response = LangfuseHelper.fetch_tutor_prompt(prompt_name)
     return render(status: response[:status], json: response[:json])
   end
 

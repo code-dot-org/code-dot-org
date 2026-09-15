@@ -1,0 +1,57 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-07-29T20:25:24.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Which chunk of code brings the player to the sky level? (A, B or C)\n\n",
+        "imageUrl": "https://images.code.org/ac1590b85fb71c9ecae4ee4fbd3502dc-gamecode.png",
+        "key": "AboutTheCode-e114623d-5e3d-4432-baa6-10cddcbcefc2",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Which chunk of code shows how to win the game? Explain why you think so. ",
+        "imageUrl": "https://images.code.org/ac1590b85fb71c9ecae4ee4fbd3502dc-gamecode.png",
+        "key": "AboutTheCode-4e11f8d1-eb77-4a59-8db4-bda4880c0380",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Who is the main character of this game? Explain how you know.",
+        "imageUrl": "https://images.code.org/ac1590b85fb71c9ecae4ee4fbd3502dc-gamecode.png",
+        "key": "AboutTheCode-7c51f162-f290-4793-aa3b-ac8a8fb2e486",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "How does the game work? \n\nHow does the player play the game? \n",
+        "imageUrl": "https://images.code.org/ac1590b85fb71c9ecae4ee4fbd3502dc-gamecode.png",
+        "key": "AboutTheCode-fface194-2406-4170-add6-b6ed426c5adb",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "How challenging is this code to understand? \n\nCould someone in 3rd grade read this code and understand it if they haven’t tried the game yet? ",
+        "imageUrl": "https://images.code.org/ac1590b85fb71c9ecae4ee4fbd3502dc-gamecode.png",
+        "key": "AboutTheCode-4b2c67cc-a137-46c5-8c6e-bbe3d56f24b5",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "What do you wonder about this game? ",
+        "imageUrl": "https://images.code.org/ac1590b85fb71c9ecae4ee4fbd3502dc-gamecode.png",
+        "key": "AboutTheCode-b901e092-7449-4e38-a221-47ebca30126b",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29 20:28:16 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-29 20:28:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-29 20:29:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,6 +1,6 @@
 import {createStore} from 'redux';
 
-import { ColumnTypes } from '../../src/constants';
+import {ColumnTypes} from '../../src/constants';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
 import rootReducer, {
   setImportedData,

@@ -2,11 +2,11 @@ name 'pl-ai-101-V2-mod1-literacy-04c_2026'
 title 'title'
 description 'description here'
 display_name 'High School'
-bubble_choice_description 'Explore AI Literacy Skills with High School Examples'
+bubble_choice_description 'Explore Digital Fluency Skills with High School Examples'
 thumbnail_url 'https://images.code.org/c8d5c049bf30a12688cf16cf08dc2f6c-Screenshot 2026-02-13 at 1.22.42 PM.png'
 
 markdown <<MARKDOWN
-# AI Literacy Skills, High School
+# Digital Fluency Skills, High School
 
 <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 

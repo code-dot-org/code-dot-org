@@ -52,10 +52,13 @@ Feature: Unit overview page
     # verify name format in detail view
     And element "span:contains(Lesson 2: Maze)" is visible
 
-    And I am on "http://studio.code.org/courses/mc/units/1"
-    And I wait until element "td:contains(Minecraft)" is visible
-    # verify script name overrides lesson name when there is only one lesson
-    And element "td:contains(1. Minecraft Hour of Code)" is visible
+    And I am on "http://studio.code.org/courses/ui-test-maze/units/1"
+    And I wait until element "td:contains(Maze Puzzles)" is visible
+    # verify a unit whose only lesson is lesson 1 still numbers that lesson in
+    # summary view. This is the lesson's own name, not Lesson#localized_title's
+    # "one lesson, so use the unit name" override: the unit overview never
+    # renders localized_title.
+    And element "td:contains(1. Maze Puzzles)" is visible
 
   Scenario: Unit overview end-of-lesson
     Given I create a student named "Jean"
@@ -74,26 +77,26 @@ Feature: Unit overview page
   Scenario: Unit overview new lesson plan
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/ui-test-lesson-plans/units/1?no_redirect=true"
     And I click selector "#uitest-lesson-plan" once I see it
     When I switch tabs
-    And I wait until current URL contains "/courses/allthelessonplans/units/1/lessons/1"
+    And I wait until current URL contains "/courses/ui-test-lesson-plans/units/1/lessons/1"
 
   Scenario: Unit overview student resources as teacher
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/ui-test-lesson-plans/units/1?no_redirect=true"
     And I click selector "#uitest-student-resources" once I see it
     When I switch tabs
-    And I wait until current URL contains "courses/allthelessonplans/units/1/lessons/1/student"
+    And I wait until current URL contains "courses/ui-test-lesson-plans/units/1/lessons/1/student"
 
   Scenario: Unit overview student resources as student
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Blake"
-    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/ui-test-lesson-plans/units/1?no_redirect=true"
     And I click selector ".ui-test-lesson-resources" once I see it
     When I switch tabs
-    And I wait until current URL contains "courses/allthelessonplans/units/1/lessons/1/student"
+    And I wait until current URL contains "courses/ui-test-lesson-plans/units/1/lessons/1/student"
 
   Scenario: Unit overview for unit in single-unit course
     Given I create an authorized teacher-associated student named "Blake"

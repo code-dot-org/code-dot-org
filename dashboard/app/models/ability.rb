@@ -23,6 +23,7 @@ class Ability
       ReferenceGuide, # see override below
       Rubric,
       :reports,
+      :widget2, # levelbuilder only, see override below
       User,
       UserPermission,
       Follower,
@@ -65,6 +66,9 @@ class Ability
       AidiffArtifact,
       PracticeProblem,
       UserPracticeProblemAttempt,
+      Challenge,
+      ChallengeResponse,
+      ChallengeResponseAsset,
     ]
     cannot :index, Level
 
@@ -153,6 +157,11 @@ class Ability
 
         in_shared_section_with_code_review = user.shared_sections_with(other_user).any?(&:code_review_enabled?)
         in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
+      end
+
+      # A user can view their own quiz attempts, or their student's.
+      can :view_quiz_attempts, User do |other_user|
+        other_user.id == user.id || other_user.student_of?(user)
       end
 
       can :create, CodeReviewComment do |code_review_comment|
@@ -335,6 +344,29 @@ class Ability
       can :create, UserPracticeProblemAttempt
       can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
       can [:index, :show], PracticeProblem
+      can [:index, :show, :starter_image], Challenge
+
+      # Students create and read their own challenge responses; teachers read
+      # their students' responses; section peers read each other's final
+      # submissions. Asset access mirrors response access.
+      can :create, ChallengeResponse
+      can :read, ChallengeResponse do |challenge_response|
+        challenge_response.user_id == user.id ||
+          user.students.exists?(id: challenge_response.user_id) ||
+          (challenge_response.is_final &&
+            Follower.exists?(section_id: user.sections_as_student.select(:id), student_user_id: challenge_response.user_id))
+      end
+      # Only the response's owner triggers AI evaluation of it.
+      can :evaluate, ChallengeResponse, user_id: user.id
+      can :read, ChallengeResponseAsset do |asset|
+        response = asset.challenge_response
+        response.user_id == user.id ||
+          user.students.exists?(id: response.user_id) ||
+          (response.is_final &&
+            Follower.exists?(section_id: user.sections_as_student.select(:id), student_user_id: response.user_id))
+      end
+      # Only the response's owner uploads asset bytes.
+      can :upload, ChallengeResponseAsset, challenge_response: {user_id: user.id}
 
       can :show, Rubric
     end
@@ -386,7 +418,7 @@ class Ability
       end
     end
 
-    can [:read, :show_by_id, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor], Lesson do |lesson, context_unit_group|
+    can [:read, :show_by_id, :student_lesson_plan, :level_properties, :level_properties_by_id, :tutor, :tutor_gallery], Lesson do |lesson, context_unit_group|
       script = lesson.script
       unit_group = context_unit_group || script.original_unit_group
       can?(:read, script, unit_group)
@@ -464,6 +496,7 @@ class Ability
         Game,
         Level,
         Lesson,
+        QuizQuestion,
         ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,
@@ -501,6 +534,8 @@ class Ability
       can [:upload, :upload_by_uuid, :destroy], :level_starter_asset
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
+
+      can :manage, :widget2
 
       can [:validate_form, :validate_library_question], :pd_foorm
     end
@@ -552,25 +587,20 @@ class Ability
       end
 
       # These checks control access to Javabuilder.
-      # All teachers can generate a Javabuilder session token to run Java code,
-      # although only verified teachers can generate tokens will be valid for "main" javabuilder.
-      # Unverified teachers are given limited access to a separate "demo" javabuilder stack.
-      # Students who are also assigned to a CSA section with a verified instructor can run Java code in "main" javabuilder.
+      # Only verified instructors, and students assigned to a CSA section with a
+      # verified instructor, can generate a Javabuilder session token to run Java code.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
-      # Levelbuilders can access and update Java Lab validation code (using the
-      # access_token_with_override_validation endpoint).
+      # Levelbuilders can run unsaved Java Lab validation code, either against a
+      # channel's saved sources (access_token_with_override_validation) or
+      # alongside override sources (access_token_with_override_sources_and_validation).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
-        user.teacher? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
-      end
-
-      can :access_token_with_override_validation, :javabuilder_session do
-        user.levelbuilder?
-      end
-
-      can :use_unrestricted_javabuilder, :javabuilder_session do
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+      end
+
+      can [:access_token_with_override_validation, :access_token_with_override_sources_and_validation], :javabuilder_session do
+        user.levelbuilder?
       end
 
       can :find_toxicity, :aichat do

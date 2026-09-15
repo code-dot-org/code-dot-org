@@ -96,6 +96,12 @@ class SourceBucket < BucketHelper
     src_object = s3.get_object(bucket: @bucket, key: src)
     src_body = src_object.body.read
 
+    # Some labs (e.g. weblab2) reference uploaded assets in main.json by
+    # absolute /v3/assets/<channel-id>/ URLs. Those assets have already been
+    # copied to the destination channel (see ProjectsController#remix_project),
+    # so retarget the references at the copies.
+    src_body = src_body.gsub("/v3/assets/#{src_channel}/", "/v3/assets/#{dest_channel}/")
+
     # Only update version ids for main.json files
     unless animation_list.empty?
       src_body = ProjectSourceJson.new(src_body)

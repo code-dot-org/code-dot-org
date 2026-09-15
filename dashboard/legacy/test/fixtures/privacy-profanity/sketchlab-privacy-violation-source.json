@@ -1,0 +1,1 @@
+{"source":{"nodes":[{"id":"shape1","type":"shape","position":{"x":0,"y":0},"data":{"shapeType":"rectangle","label":"just a label"}},{"id":"text1","type":"text","position":{"x":10,"y":10},"data":{"text":"call me at 800-555-1234"}}],"edges":[],"viewport":{"x":0,"y":0,"zoom":1}}}

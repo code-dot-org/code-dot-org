@@ -68,9 +68,9 @@ class OmniAuthSection < Section
     oauth_students = students.filter_map do |student|
       user = User.from_omniauth(student, {'user_type' => User::TYPE_STUDENT, 'roster_synced' => true})
       unless user&.persisted?
-        Observability::Errors.capture_message(
+        Observability::Errors.report(
           'OmniAuthSection: skipping student who failed to persist during roster sync',
-          extra: {
+          context: {
             student_provider: student.provider,
             errors: user&.errors&.full_messages,
           }

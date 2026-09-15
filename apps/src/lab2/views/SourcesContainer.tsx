@@ -20,6 +20,7 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
   BlocklyLevelProperties,
   LabProps,
+  LevelProperties,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 import StartOverDialog, {
@@ -33,6 +34,12 @@ import getInitialSources from '../utils/getInitialSources';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+
+const getToolboxEditSources = (levelProperties: LevelProperties) => ({
+  source: toolboxToWorkspaceBlocks(
+    (levelProperties as BlocklyLevelProperties).toolboxDefinition
+  ),
+});
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
@@ -70,6 +77,8 @@ interface SourcesContainerProps extends LabProps {
     prevSources: ProjectSources,
     newSources: ProjectSources
   ) => boolean;
+  /** Called whenever checkSourcesChangedForProgressReport returns true. */
+  onMeaningfulSourceChange?: () => void;
 }
 
 /**
@@ -82,9 +91,15 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   children,
   projectManager,
   checkSourcesChangedForProgressReport,
+  onMeaningfulSourceChange,
 }) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
-    () => getInitialSources(levelProperties, initialSources) || defaultSources
+    () =>
+      getInitialSources(
+        levelProperties,
+        initialSources,
+        getToolboxEditSources(levelProperties)
+      ) || defaultSources
   );
 
   // When we use this value to decide whether to save sources or not,
@@ -112,6 +127,9 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
 
   const dispatch = useAppDispatch();
 
+  const onMeaningfulSourceChangeRef = useRef(onMeaningfulSourceChange);
+  onMeaningfulSourceChangeRef.current = onMeaningfulSourceChange;
+
   const reinitializeSources = useCallback(
     (sources: ProjectSources, save: boolean = false) => {
       setCurrentSources(sources);
@@ -130,7 +148,11 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
 
   useEffect(() => {
     reinitializeSources(
-      getInitialSources(levelProperties, initialSources) || defaultSources
+      getInitialSources(
+        levelProperties,
+        initialSources,
+        getToolboxEditSources(levelProperties)
+      ) || defaultSources
     );
   }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
 
@@ -138,11 +160,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   const startOverSources: ProjectSources = useMemo(() => {
     const {templateSources, startSources} = levelProperties;
     if (isToolboxMode) {
-      return {
-        source: toolboxToWorkspaceBlocks(
-          (levelProperties as BlocklyLevelProperties).toolboxDefinition
-        ),
-      };
+      return getToolboxEditSources(levelProperties);
     }
     return isStartMode
       ? defaultSources
@@ -177,13 +195,13 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
             projectManager || Lab2Registry.getInstance().getProjectManager()
           )?.save(newSources, forceSave);
 
-          // Check not started state here to avoid an unnecessary
-          // computation on the source change.
-          if (
-            currentLevelStatusRef.current === LevelStatus.not_tried &&
-            checkSourcesChangedForProgressReport?.(prev, newSources)
-          ) {
-            dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+          // If sources have changed in a way that is meaningful for progress reporting,
+          // optionally notify callers and send a 'started' report if the level is not yet tried.
+          if (checkSourcesChangedForProgressReport?.(prev, newSources)) {
+            onMeaningfulSourceChangeRef.current?.();
+            if (currentLevelStatusRef.current === LevelStatus.not_tried) {
+              dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+            }
           }
         }
 

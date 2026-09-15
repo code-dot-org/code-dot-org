@@ -1,3 +1,4 @@
+import {Button} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -13,7 +14,7 @@ describe('PublishSuccessDisplay', () => {
       />
     );
 
-    expect(wrapper.find('Button')).toHaveLength(1);
+    expect(wrapper.find(Button)).toHaveLength(1);
   });
 
   it('does not display a button when onShareTeacherLibrary is passed', () => {
@@ -21,6 +22,6 @@ describe('PublishSuccessDisplay', () => {
       <PublishSuccessDisplay libraryName="name" channelId="123" />
     );
 
-    expect(wrapper.find('Button')).toHaveLength(0);
+    expect(wrapper.find(Button)).toHaveLength(0);
   });
 });

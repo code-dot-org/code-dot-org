@@ -1,0 +1,46 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T21:55:49.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import matplotlib.pyplot as plt\n\n# Everyday dishes\neveryday_ingredients = [4, 6, 3, 9, 7, 5, 5, 11, 8, 8, 3, 10]\neveryday_cost_per_serving = [0.90, 0.75, 1.40, 2.30, 1.10, 1.20, 1.60, 2.10, 1.80, 1.05, 0.85, 1.95]\n\n# Celebratory dishes\ncelebratory_ingredients = [16, 24, 14, 7, 15, 8, 13, 11, 18, 12, 12, 17]\ncelebratory_cost_per_serving = [3.40, 5.20, 4.10, 5.80, 4.60, 4.90, 4.30, 6.20, 7.40, 3.90, 2.70, 5.50]\n\nplt.scatter(everyday_ingredients, everyday_cost_per_serving)\nplt.scatter(celebratory_ingredients, celebratory_cost_per_serving)\n\nplt.show()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 21:56:36 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 21:56:40 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

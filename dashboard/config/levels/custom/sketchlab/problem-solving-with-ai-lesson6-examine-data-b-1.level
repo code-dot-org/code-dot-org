@@ -1,0 +1,1050 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-08-04T15:53:16.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##College Applications\r\n\r\nCounselor Marcus Webb has 6 applications on his desk, but only 2 spots left in this year's incoming class. \r\n\r\nUse your best judgement and rank the order of the applicants. Drag the numbers in the box to the left and place them at the top of the chart to indicate the order.\r\n\r\nFor your top student applicant, write a justification as to why you chose them.\r\n\r\n\r\n",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "0dabe058-bd4e-4a55-9248-3bee57d8ccda",
+            "type": "text",
+            "data": {
+              "text": "Jasmine",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 378.3433798022695,
+              "y": 149.19130576973834
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "5a7c230d-0e3d-4d2f-9c76-8b9d1854e5ec",
+            "type": "text",
+            "data": {
+              "text": "Hi, my name is Jasmine. I've been passionate about environmental science since middle school, and I love working on sustainability projects in my community. I'm a strong student with a 4.1 GPA, and I've taken AP Biology, AP Environmental Science, and AP Statistics. My SAT score is 1420. I'm applying to this college because of its strong environmental studies program and the research opportunities available for undergraduates. Outside of school, I run a community garden and volunteer for a local conservation group.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 377.8119209774421,
+              "y": 270.5459916798301
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "94e37290-4301-4e10-90d7-3423fdf94fd2",
+            "type": "text",
+            "data": {
+              "text": "College Application Information",
+              "strokeColor": "transparent",
+              "fontFamily": "cursive",
+              "fontSize": 70,
+              "locked": false
+            },
+            "position": {
+              "x": 418.1846883613848,
+              "y": -351.0517969377243
+            },
+            "width": 960.9999999999995,
+            "height": 83.65053748988726,
+            "measured": {
+              "width": 961,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "c65de785-a3ea-4a81-9836-55206db7fe60",
+            "type": "text",
+            "data": {
+              "text": "Ryan",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 1021.3922533186158,
+              "y": 140.47248067467442
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "8018b2f2-5ba5-4a32-8c3f-2a2f26ca4282",
+            "type": "text",
+            "data": {
+              "text": "Alex",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 1673.988406431271,
+              "y": 139.75033691080668
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "7c78d12c-a0b6-4630-98e4-aa96223419fa",
+            "type": "text",
+            "data": {
+              "text": "Maria",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 2341.3469122737915,
+              "y": 136.62544863189504
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "ddeca4ef-c6a1-4207-a509-498d17000da4",
+            "type": "text",
+            "data": {
+              "text": "Jordan",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 3034.6676962065508,
+              "y": 134.0525149175867
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "0748808a-97e0-4db3-be08-4310575043e7",
+            "type": "text",
+            "data": {
+              "text": "Kevin",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 3682.8798943424677,
+              "y": 128.0354365086927
+            },
+            "width": 158.68049208922707,
+            "height": 40,
+            "measured": {
+              "width": 159,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "fb69acac-c8a6-45de-8a32-4065ba720119",
+            "type": "text",
+            "data": {
+              "text": "Examine the resources and images that each student submitted with their college application\n\nUse your best judgement and rank the order of the applicants. Drag the numbers in the box to the right and place them at the top of the chart to indicate the order.\n\nFor your top student applicant, write a justification as to why you chose them.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1418.2873968486897,
+              "y": -267.5703117774749
+            },
+            "width": 613.5944109084196,
+            "height": 72.65932818943324,
+            "measured": {
+              "width": 614,
+              "height": 73
+            },
+            "dragging": false
+          },
+          {
+            "id": "fb80cb7c-cc0b-4a91-869c-7764487ad441",
+            "type": "text",
+            "data": {
+              "text": "Directions:",
+              "strokeColor": "transparent",
+              "fontFamily": "cursive",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 1419.340514251828,
+              "y": -393.55058641557264
+            },
+            "width": 170.61476144703693,
+            "height": 83.65053748988726,
+            "measured": {
+              "width": 171,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "4daecd89-4992-4615-b6f1-29142aaf1606",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "#ccf1d0",
+              "locked": false
+            },
+            "position": {
+              "x": 344.33661627922993,
+              "y": 93.94813203743456
+            },
+            "width": 3890.972257030364,
+            "height": 829.8955833881666,
+            "measured": {
+              "width": 3891,
+              "height": 830
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "bc9a883a-9326-401e-a02e-3820876a832b",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "#ccf1d0",
+              "locked": true
+            },
+            "position": {
+              "x": 2151.570057344976,
+              "y": -360.93641654139066
+            },
+            "width": 927.330501138018,
+            "height": 193.5166947198102,
+            "measured": {
+              "width": 927,
+              "height": 194
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "0134ba2f-2e89-45e6-9d12-15d9ef6225e6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/fb0bd0cd-7c53-43bb-a9eb-dcfad07f9687.png",
+              "altText": "circle-1"
+            },
+            "position": {
+              "x": 2173.9044874397973,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "14977f8e-b8b5-49c9-91d8-3d0c1f469f60",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/a2036130-c465-40d5-ac65-4b1a70a987c5.png",
+              "altText": "circle-2"
+            },
+            "position": {
+              "x": 2320.937876879418,
+              "y": -318.62591191264266
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "da48c459-6b42-4613-91a3-dda0fa82fd2f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/ca9d3352-778b-4806-b983-0de87ddb114b.png",
+              "altText": "circle-3"
+            },
+            "position": {
+              "x": 2458.7816794790606,
+              "y": -318.6259119126428
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a1e00cf2-1212-4e70-940e-de3500cb9310",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/733bb432-e02a-4a76-a78e-c6de842b1a2a.png",
+              "altText": "circle-4"
+            },
+            "position": {
+              "x": 2605.815068918682,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "81c363ea-3e98-4312-8bd0-d6e66cc40d69",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/ab928f5b-9771-48ca-bc3a-431f95c3433f.png",
+              "altText": "circle-5"
+            },
+            "position": {
+              "x": 2748.2536649383137,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "5e2f2b50-906d-412c-9f82-236d388b6551",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-a/uuid/d0f79c64-7839-48a8-9430-2d526ee4e43f.png",
+              "altText": "circle-6"
+            },
+            "position": {
+              "x": 2890.692260957946,
+              "y": -320.92330862263674
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "30407164-7fab-4a0c-b788-ed10356424bd",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "backgroundColor": "#ccf1d0",
+              "locked": true
+            },
+            "position": {
+              "x": 3202.9599808226735,
+              "y": -358.6390198313966
+            },
+            "width": 927.330501138018,
+            "height": 381.90322493932365,
+            "measured": {
+              "width": 927,
+              "height": 382
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "87e535ee-2abd-4069-aee4-772051aa3d8e",
+            "type": "text",
+            "data": {
+              "text": "For your top student applicant, write a justification as to why you chose them.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "fontSize": "large",
+              "locked": true
+            },
+            "position": {
+              "x": 3212.065564752033,
+              "y": -338.38789344905894
+            },
+            "width": 560.453259116216,
+            "height": 47.70550563296126,
+            "measured": {
+              "width": 560,
+              "height": 48
+            },
+            "dragging": false
+          },
+          {
+            "id": "154783b1-72ad-4848-a224-32f2b63bc508",
+            "type": "text",
+            "data": {
+              "text": "Write your response here...",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3221.3253823635923,
+              "y": -262.34897177709615
+            },
+            "width": 897.0000000000005,
+            "height": 263,
+            "measured": {
+              "width": 897,
+              "height": 263
+            },
+            "dragging": false
+          },
+          {
+            "id": "cd5d015a-7a06-42fb-8204-4a30fadd08d0",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/8b8d9b89-aec2-4429-9b6d-6b460029ff57.png",
+              "altText": "1"
+            },
+            "position": {
+              "x": 326.09596550724865,
+              "y": 395.7151859702242
+            },
+            "width": 309.3307861496145,
+            "height": 255.5464058896501,
+            "measured": {
+              "width": 309,
+              "height": 256
+            },
+            "dragging": false
+          },
+          {
+            "id": "933c5519-67b7-42b6-958b-767a144a5b9b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/1e25b85e-24d0-4ebe-ab7b-d854a0259c47.png",
+              "altText": "2"
+            },
+            "position": {
+              "x": 1025.0175817954753,
+              "y": 415.12039255023603
+            },
+            "width": 219.73231445984584,
+            "height": 241.76202562968564,
+            "measured": {
+              "width": 220,
+              "height": 242
+            },
+            "dragging": false
+          },
+          {
+            "id": "617a5a2b-0513-4daf-a47d-5e19eb528a75",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/f1976964-4194-4e89-be4c-0227d48a6819.png",
+              "altText": "3"
+            },
+            "position": {
+              "x": 1628.9875856140397,
+              "y": 400.55531030008774
+            },
+            "width": 244.57243878970917,
+            "height": 249.19694337953752,
+            "measured": {
+              "width": 245,
+              "height": 249
+            },
+            "dragging": false
+          },
+          {
+            "id": "b92fd693-5039-4331-a9be-d91ad15488b5",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/4c1f107a-7aa7-4b28-a02c-8f70359f7da2.png",
+              "altText": "4"
+            },
+            "position": {
+              "x": 2321.314408482278,
+              "y": 405.3286557507105
+            },
+            "width": 252,
+            "height": 241.9999999999999,
+            "measured": {
+              "width": 252,
+              "height": 242
+            },
+            "dragging": false
+          },
+          {
+            "id": "aa3f6a97-2f27-4d52-baea-1d6511812146",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/17d18f9e-69e9-4147-bfa4-04bdf653fecd.png",
+              "altText": "5"
+            },
+            "position": {
+              "x": 3042.7254197481993,
+              "y": 390.1053523709337
+            },
+            "width": 272,
+            "height": 281.9999999999999,
+            "measured": {
+              "width": 272,
+              "height": 282
+            },
+            "dragging": false
+          },
+          {
+            "id": "786e854d-4a96-4784-9886-a24391d2e379",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/a5342533-31ba-43e6-931b-2585d9cce1ed.png",
+              "altText": "6"
+            },
+            "position": {
+              "x": 3689.172026507753,
+              "y": 384.551959130487
+            },
+            "width": 216,
+            "height": 227.99999999999994,
+            "measured": {
+              "width": 216,
+              "height": 228
+            },
+            "dragging": false
+          },
+          {
+            "id": "81f0f00f-79dd-4c7f-b709-ae97cbe89443",
+            "type": "text",
+            "data": {
+              "text": "Hey, I'm Ryan. I've been playing the trumpet since I was eight, and music has always been a big part of my life. I'm in my school's marching band and jazz ensemble, and I also compose my own music. My GPA is 3.3, and I've taken AP Music Theory and Honors English. I got a 1250 on the SAT. I want to attend this college because of its strong music program and the chance to collaborate with other passionate musicians. I also love working with younger students, and I hope to help teach music in some capacity while I'm in college.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1013.3686875117588,
+              "y": 268.5459916798301
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "81aec42c-f4f9-4a89-ac2f-b3c36269278c",
+            "type": "text",
+            "data": {
+              "text": "Hi, I'm Alex. I'm a robotics enthusiast who loves coding and problem-solving. I've competed in FIRST Robotics for the past three years, and I spend a lot of my free time tinkering with Arduino projects. I have a 3.8 GPA, and I've taken AP Computer Science, AP Physics, and AP Calculus. My ACT score is 32. I'm excited about this college's engineering program and its hands-on approach to learning. I'm also looking forward to joining the robotics club and working on innovative tech projects with other students.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1670.9254540460756,
+              "y": 262.5459916798301
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "e298d40a-bf25-4a8b-917c-958e4333cd7d",
+            "type": "text",
+            "data": {
+              "text": "Hi, my name is Maria. I'm a dedicated athlete and a team captain on my school's soccer team. Sports have taught me leadership, discipline, and resilience, and I hope to continue playing in college. I have a 3.5 GPA and have taken Honors Chemistry, AP U.S. History, and AP Psychology. My SAT score is 1310. I'm applying to this college because it has a great balance of strong academics and competitive athletics. I also love that the campus fosters a close-knit community, which is something I value in a college experience.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2338.482220580392,
+              "y": 252.54599167983008
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "d71821cd-d996-4dd0-b83a-aabd51fa1fce",
+            "type": "text",
+            "data": {
+              "text": "Hey, I'm Jordan. I've always been drawn to storytelling, whether through writing, film, or photography. I run my school's literary magazine and have had my short stories published in a few student-run journals. I have a 3.9 GPA, and I've taken AP Literature, AP U.S. Government, and AP Art. My ACT score is 29. This college's creative writing program really excites me, and I'm eager to take workshops with experienced writers. I also want to explore documentary filmmaking and see how I can merge my love for writing and visual storytelling.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3034.0389871147086,
+              "y": 254.54599167983014
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "dab88bb8-615a-46bd-9c7f-5a416c117702",
+            "type": "text",
+            "data": {
+              "text": "Hi, I'm Kevin. I love working with my hands and figuring out how things work, which is why I'm drawn to mechanics and automotive technology. I've spent the past two summers working at an auto shop, and I plan to get my certification as a mechanic. My GPA is 2.9, and I've taken a mix of standard and technical education courses. I didn't take the SAT, but I've completed a welding certification program at my high school. I'm interested in this college because of its strong vocational programs and hands-on training opportunities. I'm excited to turn my passion into a career.",
+              "strokeColor": "transparent",
+              "fontFamily": "draw",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3681.5957536490255,
+              "y": 248.54599167983008
+            },
+            "width": 523.5567665343167,
+            "height": 40,
+            "measured": {
+              "width": 524,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "b2ce4112-ec93-4bc8-ae99-8b8df046d528",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/dc66cacc-05a8-4dd1-9f5a-eeb749e355dc.jpg",
+              "altText": "j1",
+              "rotation": 10
+            },
+            "position": {
+              "x": 635.1817435283622,
+              "y": 624.2769100161847
+            },
+            "width": 244,
+            "height": 204,
+            "measured": {
+              "width": 244,
+              "height": 204
+            },
+            "dragging": false
+          },
+          {
+            "id": "7b059dd7-9e7f-4f46-b447-f485a6f08bf1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/76470b1e-9066-4206-9c75-bbdf82dd67f3.jpg",
+              "altText": "j2"
+            },
+            "position": {
+              "x": 373.18174352836235,
+              "y": 670.2769100161846
+            },
+            "width": 231.9999999999999,
+            "height": 188,
+            "measured": {
+              "width": 232,
+              "height": 188
+            },
+            "dragging": false
+          },
+          {
+            "id": "676bf300-f897-4b16-9650-dfe9ceb6923a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/e9174907-a45e-4287-9485-734ce4c69b7c.jpg",
+              "altText": "j3",
+              "rotation": 349
+            },
+            "position": {
+              "x": 615.1817435283621,
+              "y": 410.2769100161847
+            },
+            "width": 242,
+            "height": 170,
+            "measured": {
+              "width": 242,
+              "height": 170
+            },
+            "dragging": false
+          },
+          {
+            "id": "cf9bb5d8-389b-429d-a7d2-1bce1c87712c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/bf168944-5eea-49fe-97bd-76fba36b0b8e.jpg",
+              "altText": "a2",
+              "rotation": 5
+            },
+            "position": {
+              "x": 1903.1249858848769,
+              "y": 618.9228565109117
+            },
+            "width": 231.38514619028228,
+            "height": 172.23303379776746,
+            "measured": {
+              "width": 231,
+              "height": 172
+            },
+            "dragging": false
+          },
+          {
+            "id": "35924099-9581-4587-903f-dc3d5fd118a9",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/b40fca82-3884-41d5-80aa-6967406d0aab.jpg",
+              "altText": "a1"
+            },
+            "position": {
+              "x": 1635.4421619823738,
+              "y": 649.9016049076382
+            },
+            "width": 234.86734844346665,
+            "height": 175.71523605095194,
+            "measured": {
+              "width": 235,
+              "height": 176
+            },
+            "dragging": false
+          },
+          {
+            "id": "5ded1f8e-56e9-480b-b872-4d1dc90d4b52",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/5ce5d8b1-5460-4faa-a853-726594cec7c5.jpg",
+              "altText": "a3"
+            },
+            "position": {
+              "x": 1883.6332210381197,
+              "y": 402.3604752393727
+            },
+            "width": 227.9029439370977,
+            "height": 163.5275281648062,
+            "measured": {
+              "width": 228,
+              "height": 164
+            },
+            "dragging": false
+          },
+          {
+            "id": "86675346-92d1-4add-aafe-a679fc48d0e0",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/1f8db593-d3cb-4cd0-ad11-55d3b2454a4d.jpg",
+              "altText": "r1"
+            },
+            "position": {
+              "x": 1293.2236859973368,
+              "y": 634.8094097794022
+            },
+            "width": 226.16184281050528,
+            "height": 153.08092140525275,
+            "measured": {
+              "width": 226,
+              "height": 153
+            },
+            "dragging": false
+          },
+          {
+            "id": "54c691cf-6d57-4506-966a-7574890dcf0e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/579cb94d-79dc-445d-913f-3fa154744a0d.jpg",
+              "altText": "r2",
+              "rotation": 354
+            },
+            "position": {
+              "x": 1022.568718359601,
+              "y": 684.1101981547006
+            },
+            "width": 227.6637217070661,
+            "height": 148.94004784226766,
+            "measured": {
+              "width": 228,
+              "height": 149
+            },
+            "dragging": false
+          },
+          {
+            "id": "9c64c685-8d87-48a9-972c-2cf348cc2582",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/731f743d-4095-4f3e-afe9-3d41ffc3c54b.jpg",
+              "altText": "r3",
+              "rotation": 5
+            },
+            "position": {
+              "x": 1266.0627216642552,
+              "y": 436.1355816836237
+            },
+            "width": 238.111673334051,
+            "height": 156.3381396959389,
+            "measured": {
+              "width": 238,
+              "height": 156
+            },
+            "dragging": false
+          },
+          {
+            "id": "f0e31d5b-aee7-40ba-84e9-98446cebd851",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/cd51865c-7aa6-48e2-982b-7913a21ccddc.jpg",
+              "altText": "m1",
+              "rotation": 356
+            },
+            "position": {
+              "x": 2333.3991145233963,
+              "y": 673.8357783282994
+            },
+            "width": 234.86734844346665,
+            "height": 156.56312365843723,
+            "measured": {
+              "width": 235,
+              "height": 157
+            },
+            "dragging": false
+          },
+          {
+            "id": "28e83d08-0beb-4d0f-8243-3749714a831f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/f7a7662a-a25d-4121-a080-67e07bca31a6.jpg",
+              "altText": "m2",
+              "rotation": 5
+            },
+            "position": {
+              "x": 2613.993706963375,
+              "y": 625.6978838193161
+            },
+            "width": 251.72373759213588,
+            "height": 169.2660585999762,
+            "measured": {
+              "width": 252,
+              "height": 169
+            },
+            "dragging": false
+          },
+          {
+            "id": "98efa5be-ea20-4286-b5c6-bfc491c7096c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/ba558f36-fb5c-441b-ba7e-6e9a3a7788cd.jpg",
+              "altText": "m3"
+            },
+            "position": {
+              "x": 2598.046485765418,
+              "y": 435.30492398516145
+            },
+            "width": 241.83175294983585,
+            "height": 151.33982027866045,
+            "measured": {
+              "width": 242,
+              "height": 151
+            },
+            "dragging": false
+          },
+          {
+            "id": "0574f7b0-d0e3-47a7-9604-17df75091901",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/7c6419f8-ac00-4db5-b483-136684539220.jpg",
+              "altText": "o1",
+              "rotation": 8
+            },
+            "position": {
+              "x": 3035.062868540071,
+              "y": 647.7192614294161
+            },
+            "width": 247.0550563296124,
+            "height": 172.23303379776746,
+            "measured": {
+              "width": 247,
+              "height": 172
+            },
+            "dragging": false
+          },
+          {
+            "id": "b52c3ca4-2896-4462-8fdb-965b249715f4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/de04ef10-4e54-46bc-be91-faa77732d505.jpg",
+              "altText": "o2"
+            },
+            "position": {
+              "x": 3318.8623521746085,
+              "y": 590.2629242518715
+            },
+            "width": 252.27835970938895,
+            "height": 182.6796405573209,
+            "measured": {
+              "width": 252,
+              "height": 183
+            },
+            "dragging": false
+          },
+          {
+            "id": "c74060af-31c0-41e9-a34f-e274370170ff",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/d979916b-bc8d-48f9-8a6a-88c3f4edc350.jpg",
+              "altText": "o3",
+              "rotation": 354
+            },
+            "position": {
+              "x": 3322.3445544277934,
+              "y": 390.0362946937629
+            },
+            "width": 236.60844957005884,
+            "height": 172.23303379776746,
+            "measured": {
+              "width": 237,
+              "height": 172
+            },
+            "dragging": false
+          },
+          {
+            "id": "a795f599-5067-48ba-ae08-59fa576132dd",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/b58ce413-cc60-4c0c-a6f4-97470018aa2a.jpg",
+              "altText": "k1"
+            },
+            "position": {
+              "x": 3679.2702853792043,
+              "y": 628.5671490369011
+            },
+            "width": 241.83175294983585,
+            "height": 168.75083154458298,
+            "measured": {
+              "width": 242,
+              "height": 169
+            },
+            "dragging": false
+          },
+          {
+            "id": "44f4ac91-1541-4fce-bbe7-090c86643b6c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/ed98b1f2-c70c-4c71-be57-545fec1ca563.jpg",
+              "altText": "k2",
+              "rotation": 5
+            },
+            "position": {
+              "x": 3943.792411321096,
+              "y": 630.9218634264805
+            },
+            "width": 243.8233446766851,
+            "height": 130.96048136017126,
+            "measured": {
+              "width": 244,
+              "height": 131
+            },
+            "dragging": false
+          },
+          {
+            "id": "3bd319cb-66a6-4a1f-8f2c-ba596abc02cb",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/fd4cf80f-bfde-45f2-89bb-2ccbc1161297.jpg",
+              "altText": "k3",
+              "rotation": 354
+            },
+            "position": {
+              "x": 3940.5140180873655,
+              "y": 416.98132533999586
+            },
+            "width": 236.88659741305926,
+            "height": 161.870500670108,
+            "measured": {
+              "width": 237,
+              "height": 162
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": -127.82914981147553,
+          "y": 365.67115930311036,
+          "zoom": 0.757858283255199
+        }
+      }
+    },
+    "display_name": "College Admissions",
+    "bubble_choice_description": "Examine the students' college applications to learn more about them.",
+    "thumbnail_url": "https://images.code.org/b6a2cc5379520dc09ca7442208269c2a-slide-one.jpg",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-04T15:53:16.216+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-examine-data-a\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-examine-data-a\"},{\"changed_at\":\"2026-08-04 15:54:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:20:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:33:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:35:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:42:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:48:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:50:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:51:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:54:55 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:58:23 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

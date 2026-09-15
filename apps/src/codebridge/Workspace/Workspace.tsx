@@ -31,6 +31,10 @@ import HeaderButtons from './HeaderButtons';
 
 import moduleStyles from './workspace.module.scss';
 
+// The console carries the full reason the environment failed to set up.
+const CODE_ENVIRONMENT_ERROR_MESSAGE =
+  'We could not set up your environment. See the console for details.';
+
 interface WorkspaceProps {
   className?: string;
   style?: React.CSSProperties;
@@ -58,6 +62,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   );
   const projectTooLarge = useAppSelector(
     state => state.lab2Project.projectTooLarge
+  );
+  const codeEnvironmentError = useAppSelector(
+    state => state.lab2System.codeEnvironmentError
   );
   const showFileBrowser = useAppSelector(
     state => state.codebridgeWorkspace.showFileBrowser
@@ -150,6 +157,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
 
             {projectTooLarge && (
               <Alert text={codebridgeI18n.projectTooLarge()} type={'danger'} />
+            )}
+            {codeEnvironmentError && (
+              <Alert text={CODE_ENVIRONMENT_ERROR_MESSAGE} type={'danger'} />
             )}
             {isWidgetView && (
               <Alert

@@ -4,7 +4,7 @@ class CalloutsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @callout = Callout.first
+    @callout = create(:callout)
 
     @user = create(:admin)
     sign_in(@user)

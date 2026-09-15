@@ -21,7 +21,8 @@ export function renderRows(
   courseData,
   sectionCourse,
   updateCourse,
-  setSelectedCourseOffering
+  setSelectedCourseOffering,
+  selectedCourseUnavailable
 ) {
   const headers = Object.keys(courseData);
   return headers.map(header => (
@@ -34,7 +35,8 @@ export function renderRows(
           courseData[header],
           sectionCourse,
           updateCourse,
-          setSelectedCourseOffering
+          setSelectedCourseOffering,
+          selectedCourseUnavailable
         )}
       </td>
     </tr>
@@ -49,37 +51,48 @@ function renderOfferings(
   courseData,
   sectionCourse,
   updateCourse,
-  setSelectedCourseOffering
+  setSelectedCourseOffering,
+  selectedCourseUnavailable
 ) {
   const courseValues = Object.values(courseData);
 
-  return courseValues.map(course => (
-    <div
-      className={classnames(
-        moduleStyles.flexDisplay,
-        moduleStyles.courseOption
-      )}
-      key={course.display_name}
-    >
-      <RadioButton
-        name={course.display_name}
-        label={course.display_name}
-        value={course.display_name}
-        checked={sectionCourse?.courseOfferingId === course.id}
-        onChange={() => {
-          updateSectionCourse(updateCourse, course);
-          setSelectedCourseOffering(course);
-        }}
-      />
-      {course.ai_teaching_assistant_available && (
-        <img
-          src={taImage}
-          className={moduleStyles.taImage}
-          alt="AI Teaching Assistant available"
-        />
-      )}
-    </div>
-  ));
+  return courseValues.map(course => {
+    const isSelected = sectionCourse?.courseOfferingId === course.id;
+    return (
+      <div
+        className={classnames(
+          moduleStyles.flexDisplay,
+          moduleStyles.courseOption
+        )}
+        key={course.display_name}
+      >
+        <div>
+          <RadioButton
+            name={course.display_name}
+            label={course.display_name}
+            value={course.display_name}
+            checked={isSelected}
+            onChange={() => {
+              updateSectionCourse(updateCourse, course);
+              setSelectedCourseOffering(course);
+            }}
+          />
+          {isSelected && selectedCourseUnavailable && (
+            <span className={moduleStyles.unavailableLanguageTag}>
+              Unavailable for the current language
+            </span>
+          )}
+        </div>
+        {course.ai_teaching_assistant_available && (
+          <img
+            src={taImage}
+            className={moduleStyles.taImage}
+            alt="AI Teaching Assistant available"
+          />
+        )}
+      </div>
+    );
+  });
 }
 
 function updateSectionCourse(updateCourse, course) {

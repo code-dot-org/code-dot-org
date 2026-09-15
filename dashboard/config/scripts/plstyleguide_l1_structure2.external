@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 Some professional learning pages may include multiple chunks of information. Making these chunks visually distinct will allow our users to scan the page effectively.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
 	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">A good visual hierarchy saves us work by preprocessing the page for us, organizing and prioritizing its contents in a way that we can grasp almost instantly.</p>
 	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">But when a page doesn't have a clear visual hierarchy - if everything looks equally important, for instance - we're reduced to the much slower process of scanning the page for revealing words and phrases and then try to form our own sense of what's important and how things are organized. It's a lot more work.</p>

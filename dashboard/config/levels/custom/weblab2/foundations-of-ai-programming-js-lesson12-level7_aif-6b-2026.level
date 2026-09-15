@@ -1,0 +1,44 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-08-25T21:13:05.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "foundations-of-ai-programming-js-lesson12-template-v1_aif-6b-2026",
+    "long_instructions": "## Complete Your App Logic\r\n\r\nContinue building your app and make sure everything works correctly. Use AI Tutor to help you debug, refine, and improve your code.  \r\n\r\nUse this checklist to guide your work:\r\n- All planned conditions and outcomes are implemented  \r\n- At least one combined condition is working  \r\n- User inputs update the app correctly  \r\n- Variables track and update state as expected  \r\n- Code is organized using functions and event listeners  \r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildJavaScript",
+        "documentation",
+        "buildCSS"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "name_suffix": "_aif-6b-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:13:05.242+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson12-level7_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson12-level7_2026\"}]"
+}]]></config>
+</Weblab2>

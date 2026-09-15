@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T20:11:10.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n- Visualize how many people prefer three more genres.\r\n  - 7 people prefer Latin music.\r\n  - 6 people prefer EDM.\r\n  - 3 people prefer Afrobeats.\r\n- If you finish early, experiment by adding data of your own.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import matplotlib.pyplot as plt\n\ngenres = [\"Hip-hop\", \"Pop\", \"K-pop\"]\npeople = [11, 9, 2]\n\nplt.bar(genres, people)\nplt.show()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrUDKIyKM0JePOc\njv6IOFdWfxuSdiHbqFWuubt+omDXW0iQwt0N4UuIigEGYMF9BhV87tBP1foa\nac/BAZ5FFnw/pXJRcl3+WMDNKAS6lstH24VAxzP2SYuzZ2+/3AQ87w7vhvO4\nQOWSFH1CSXES7bQA7+nXfLHnipaPJTL+0ZpBQZyH8K7UJpzJla8bVQ6yyyUO\nHLTV2PNxxz+zDewsvvH3PvYm/NwUonkxnLSbF0UUwt165LxdjepVISDn/Sn9\nufEKIwiEgSzOY3e1tLawnJH+qkBPR1vyQG0Rb7apRdWw2zG1aXujIlzvBKj5\n5ymBjBjTzP3WhQnUXtK0aTYZaLgrtFclDXdSI9xXNFhAYp3nYg==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 20:12:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:13:21 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:13:26 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 20:13:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

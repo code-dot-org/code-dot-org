@@ -1216,20 +1216,18 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "get search options" do
+    unit = create(:script)
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
       "All types", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
       "Craft", "CurriculumReference", "Dancelab", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
-      "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "Sketchlab", "StandaloneVideo",
+      "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "Quiz", "Sketchlab", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab", "Weblab2"
     ]
-    scripts = [
-      "All scripts", "20-hour", "algebra", "artist", "flappy",
-      "frozen", "hourofcode", "jigsaw", "playlab", "starwars"
-    ]
+    scripts = ["All scripts", unit.name]
     assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
   end
@@ -1291,6 +1289,45 @@ class LevelTest < ActiveSupport::TestCase
 
     level_for_progress = level.get_level_for_progress(student, script_level.script)
     assert_equal contained_level_1, level_for_progress
+  end
+
+  test "get_level_for_progress returns the level itself for a predict level even when it has contained levels" do
+    student = create(:student)
+
+    contained_level = create(:multi, name: 'predict contained level')
+
+    level = create(:level, name: 'predict level with contained', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained_level.name]
+    level.save!
+    script_level = create(:script_level, levels: [level])
+
+    level_for_progress = level.get_level_for_progress(student, script_level.script)
+    assert_equal level, level_for_progress
+  end
+
+  test "levels_for_progress returns just the level for a plain level" do
+    level = create(:level, name: 'plain level for progress')
+    assert_equal [level], level.levels_for_progress
+  end
+
+  test "levels_for_progress returns the contained level for a non-predict contained level" do
+    contained_level = create(:multi, name: 'non-predict contained')
+    level = create(:level, name: 'level with non-predict contained')
+    level.contained_level_names = [contained_level.name]
+    level.save!
+
+    assert_equal [contained_level], level.levels_for_progress
+  end
+
+  test "levels_for_progress returns the level then its contained level for a migrated predict level" do
+    contained_level = create(:multi, name: 'migrated predict contained')
+    level = create(:level, name: 'migrated predict level', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained_level.name]
+    level.save!
+
+    # The level itself is preferred (new progress); the contained level is the
+    # fallback for progress recorded before migration.
+    assert_equal [level, contained_level], level.levels_for_progress
   end
 
   test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
@@ -1430,6 +1467,27 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal true, properties["offerBrowserTts"]
     assert_match Regexp.new("^/s/bogus-script-[0-9]+"), properties["finishUrl"]
     assert_nil properties["showRubric"]
+  end
+
+  test "summarize_for_lab2_properties omits levelbuilder generator state" do
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create(:pythonlab, properties: {generate_outline: 'author prompt', generate_supplied_code: 'print("secret")', long_instructions: 'Do it.'})
+    script_level = create(:script_level, lesson: lesson, script: script, levels: [level])
+
+    properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal 'Do it.', properties["longInstructions"]
+    assert_nil properties["generateOutline"]
+    assert_nil properties["generateSuppliedCode"]
+  end
+
+  test "student_properties drops every generate_* property and generate_fields keeps them" do
+    level = create(:pythonlab, properties: {generate_outline: 'author prompt', generate_supplied_code: 'print("secret")', long_instructions: 'Do it.'})
+
+    assert_equal({'long_instructions' => 'Do it.'}, level.student_properties.slice('long_instructions', 'generate_outline', 'generate_supplied_code'))
+    assert_equal({generateOutline: 'author prompt', generateSuppliedCode: 'print("secret")'}, level.generate_fields)
   end
 
   test "summarize_for_lab2_properties shows rubric if level matches lesson rubric level" do
@@ -1647,5 +1705,76 @@ class LevelTest < ActiveSupport::TestCase
         end
       end
     end
+  end
+
+  test 'ui_test_name? detects the "UI Test " prefix' do
+    assert Level.ui_test_name?('UI Test Some Level')
+    assert Level.ui_test_name?('ui test lowercase')
+    refute Level.ui_test_name?('Some Level')
+    refute Level.ui_test_name?('My UI Test Level')
+    refute Level.ui_test_name?('UI Testless')
+    refute Level.ui_test_name?(nil)
+
+    assert create(:level, name: 'UI Test predicate probe').ui_test?
+    refute create(:level, name: 'Regular predicate probe').ui_test?
+  end
+
+  test 'cannot rename a level across the UI Test boundary while used by a script' do
+    level = create(:level, name: 'LevelTest boundary rename')
+    create(:script_level, levels: [level])
+
+    level.name = 'UI Test LevelTest boundary rename'
+    refute level.valid?
+    assert_includes level.errors.full_messages.first, 'UI Test'
+
+    # renames within the same partition are unaffected
+    level.reload.name = 'LevelTest boundary rename 2'
+    assert level.valid?
+  end
+
+  test 'can rename a level across the UI Test boundary when not used by a script' do
+    level = create(:level, name: 'LevelTest free rename')
+    level.name = 'UI Test LevelTest free rename'
+    assert level.valid?
+  end
+
+  test 'UI test levels cannot be created, edited, or destroyed on levelbuilder' do
+    ui_test_level = create(:level, name: 'UI Test LevelTest levelbuilder guard')
+    prod_level = create(:level, name: 'LevelTest levelbuilder guard')
+
+    CDO.stubs(:rack_env).returns(:levelbuilder)
+
+    refute build(:level, name: 'UI Test LevelTest levelbuilder create').valid?
+
+    ui_test_level.notes = 'edited'
+    refute ui_test_level.valid?
+    assert_includes ui_test_level.errors.full_messages.first, 'levelbuilder'
+
+    # renaming a UI Test level to a production name is still an edit
+    ui_test_level.reload.name = 'LevelTest levelbuilder rename'
+    refute ui_test_level.valid?
+
+    refute ui_test_level.reload.destroy
+    refute ui_test_level.destroyed?
+
+    # production levels are unaffected
+    prod_level.notes = 'edited'
+    assert prod_level.valid?
+    assert prod_level.destroy
+  end
+
+  test 'cannot rename a level across the UI Test boundary while attached to another level' do
+    child = create(:level, name: 'LevelTest attached child')
+    parent = create(:level, name: 'LevelTest attached parent', child_levels: [child])
+
+    # a child with no script_levels of its own is still pinned by its parent
+    child.name = 'UI Test LevelTest attached child'
+    refute child.valid?
+    assert_includes child.errors[:name].first, 'UI Test'
+
+    # and a parent is pinned by its children
+    parent.name = 'UI Test LevelTest attached parent'
+    refute parent.valid?
+    assert_includes parent.errors[:name].first, 'UI Test'
   end
 end

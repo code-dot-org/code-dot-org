@@ -1,0 +1,820 @@
+{
+  "script": {
+    "name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - AIF",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-07-29 14:53:08 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to AI Foundations, Semester 1",
+      "name": "Introduction to AI Foundations, Semester 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "681b76df-ea4a-4301-844b-c71c93470642",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "681b76df-ea4a-4301-844b-c71c93470642",
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "85b4c10c-4d5b-41a9-a65d-51b78b0d94ef",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to AI Foundations"
+      },
+      "seeding_key": {
+        "activity_section.key": "85b4c10c-4d5b-41a9-a65d-51b78b0d94ef",
+        "lesson_activity.key": "681b76df-ea4a-4301-844b-c71c93470642"
+      }
+    },
+    {
+      "key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Curriculum Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8",
+        "lesson_activity.key": "681b76df-ea4a-4301-844b-c71c93470642"
+      }
+    },
+    {
+      "key": "7a397715-c2d8-4d31-bd39-bfda974fabac",
+      "position": 3,
+      "properties": {
+        "progression_name": "Learning Foundations"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac",
+        "lesson_activity.key": "681b76df-ea4a-4301-844b-c71c93470642"
+      }
+    },
+    {
+      "key": "786a2084-db2b-4e24-bac1-ecde83d73393",
+      "position": 4,
+      "properties": {
+        "progression_name": "AI Chat Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393",
+        "lesson_activity.key": "681b76df-ea4a-4301-844b-c71c93470642"
+      }
+    },
+    {
+      "key": "0b4952c5-f71f-455d-aec9-ed819c388923",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b4952c5-f71f-455d-aec9-ed819c388923",
+        "lesson_activity.key": "681b76df-ea4a-4301-844b-c71c93470642"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_welcome_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "85b4c10c-4d5b-41a9-a65d-51b78b0d94ef"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_welcome_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ai_foundations_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "85b4c10c-4d5b-41a9-a65d-51b78b0d94ef"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_ai_foundations_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to AI Foundations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ai_units_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "85b4c10c-4d5b-41a9-a65d-51b78b0d94ef"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_ai_units_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_course_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_course_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_lesson_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_lesson_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_lessonP2_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_lessonP2_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-DS_dataTalk_-rev_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8"
+      },
+      "level_keys": [
+        "sp-pl-DS_dataTalk_-rev_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Foundations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_learning_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_learning_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Foundations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_litB_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_litB_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Foundations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_08b_-rev_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      },
+      "level_keys": [
+        "csaif_pl_ai_into_08b_-rev_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Foundations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_lit_framework_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_lit_framework_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Learning Foundations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_careers_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_careers_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_chat_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_chat_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_chat_practice_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_chat_practice_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_chat_practices_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_chat_practices_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ethical_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_ethical_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ethical_practice_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_ethical_practice_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_support_new_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "0b4952c5-f71f-455d-aec9-ed819c388923"
+      },
+      "level_keys": [
+        "csaif_pl_support_new_-launch_2026-dev"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_closing_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "0b4952c5-f71f-455d-aec9-ed819c388923"
+      },
+      "level_keys": [
+        "csaif_pl_ai_rev_closing_-launch_2026-dev"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_welcome_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_welcome_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "85b4c10c-4d5b-41a9-a65d-51b78b0d94ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_ai_foundations_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ai_foundations_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "85b4c10c-4d5b-41a9-a65d-51b78b0d94ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_ai_units_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ai_units_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "85b4c10c-4d5b-41a9-a65d-51b78b0d94ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_course_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_course_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_lesson_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_lesson_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_lessonP2_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_lessonP2_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_dataTalk_-rev_-launch_2026-dev",
+        "script_level.level_keys": [
+          "sp-pl-DS_dataTalk_-rev_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "bae1d7ac-e880-4c7b-a9b9-785183d78fe8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_learning_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_learning_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_litB_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_litB_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_into_08b_-rev_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_into_08b_-rev_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_lit_framework_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_lit_framework_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_careers_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_careers_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "7a397715-c2d8-4d31-bd39-bfda974fabac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_chat_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_chat_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_chat_practice_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_chat_practice_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_chat_practices_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_chat_practices_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_ethical_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ethical_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_ethical_practice_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_ethical_practice_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "786a2084-db2b-4e24-bac1-ecde83d73393"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_support_new_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_support_new_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "0b4952c5-f71f-455d-aec9-ed819c388923"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_rev_closing_-launch_2026-dev",
+        "script_level.level_keys": [
+          "csaif_pl_ai_rev_closing_-launch_2026-dev"
+        ],
+        "lesson.key": "Introduction to AI Foundations, Semester 1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+        "activity_section.key": "0b4952c5-f71f-455d-aec9-ed819c388923"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

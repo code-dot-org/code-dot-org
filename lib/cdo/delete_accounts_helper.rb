@@ -446,13 +446,8 @@ class DeleteAccountsHelper
     @log.puts "Deleting ContactRollups records for email #{email}"
     return unless email
 
-    # Contact rollups data are in 4 tables: ContactRollupsRaw, ContactRollupsProcessed,
-    # ContactRollupsPardotMemory, and ContactRollupsFinal.
-    # During daily contact rollups runs, ContactRollupsRaw and ContactRollupsProcessed
-    # are dropped, records marked for deletion in ContactRollupsPardotMemory are
-    # also purged. In addition, records in Pardot server are also deleted.
-    # Thus, only need to delete ContactRollupsFinal record here.
-    ContactRollupsFinal.find_by_email(email)&.destroy
+    # ContactRollupsRaw and ContactRollupsProcessed are replaced by the daily
+    # contact rollups run. Mark the persistent Pardot record for deletion.
     set_pardot_deletion_via_contact_rollups(email)
   end
 

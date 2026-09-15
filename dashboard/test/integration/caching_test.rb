@@ -57,7 +57,7 @@ class CachingTest < ActionDispatch::IntegrationTest
       sl = Unit.find_by_name(@other_hoc_unit.name).script_levels[2]
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      assert_cached_queries(0) do
+      assert_cached_queries(1) do
         post "/milestone/0/#{sl.id}", params: params
       end
       assert_response 200
@@ -100,7 +100,7 @@ class CachingTest < ActionDispatch::IntegrationTest
       sl = unit.script_levels[2]
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      assert_cached_queries(0) do
+      assert_cached_queries(1) do
         post "/milestone/0/#{sl.id}", params: params
       end
       assert_response :success

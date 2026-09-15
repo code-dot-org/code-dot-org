@@ -10,10 +10,9 @@ export function unlocalizeVariables(workspace: ExtendedWorkspaceSvg) {
   // Go through the original variables and return them to their source language.
   for (const variable of workspace.getVariableMap().getAllVariables()) {
     if (Blockly.SourceVariables[variable.getId()]) {
-      workspace.renameVariableById(
-        variable.getId(),
-        Blockly.SourceVariables[variable.getId()]
-      );
+      workspace
+        .getVariableMap()
+        .renameVariable(variable, Blockly.SourceVariables[variable.getId()]);
     }
   }
 }
@@ -139,7 +138,7 @@ export function localizeVariables(workspace: ExtendedWorkspaceSvg) {
         newName = oldName;
       }
 
-      workspace.renameVariableById(variable.getId(), newName);
+      workspace.getVariableMap().renameVariable(variable, newName);
       if (workspace.globalVariables?.[globalVariableIndex]) {
         workspace.globalVariables[globalVariableIndex] = newName;
       }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -196,6 +196,33 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["user_id"], name: "index_aidiff_threads_on_user_id"
   end
 
+  create_table "anonymous_level_geos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "anon_user_id", limit: 36, null: false
+    t.string "country"
+    t.string "state"
+    t.string "city"
+    t.string "postal_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["anon_user_id"], name: "index_anonymous_level_geos_on_anon_user_id", unique: true
+  end
+
+  create_table "anonymous_level_progresses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "anon_user_id", limit: 36, null: false
+    t.integer "script_id", null: false
+    t.integer "level_id", null: false
+    t.integer "unit_group_id"
+    t.bigint "level_source_id", unsigned: true
+    t.integer "attempts", default: 0, null: false
+    t.integer "best_result"
+    t.boolean "submitted"
+    t.integer "time_spent"
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["anon_user_id", "script_id", "level_id"], name: "index_anonymous_level_progresses_on_unique_anon_script_level", unique: true
+  end
+
   create_table "assessment_activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
@@ -376,6 +403,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["challenge_response_id"], name: "index_challenge_response_assets_on_challenge_response_id"
   end
 
+  create_table "challenge_response_reactions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "challenge_response_id", null: false
+    t.integer "user_id", null: false
+    t.string "emoji", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["challenge_response_id", "user_id", "emoji"], name: "index_challenge_response_reactions_on_response_user_emoji", unique: true
+    t.index ["challenge_response_id"], name: "index_challenge_response_reactions_on_challenge_response_id"
+    t.index ["user_id"], name: "index_challenge_response_reactions_on_user_id"
+  end
+
   create_table "challenge_responses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "challenge_id", null: false
     t.integer "user_id", null: false
@@ -387,6 +425,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.datetime "evaluated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "evaluation_status"
     t.index ["challenge_id", "user_id", "created_at"], name: "index_challenge_responses_on_challenge_user_created"
     t.index ["user_id"], name: "index_challenge_responses_on_user_id"
   end
@@ -398,6 +437,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.text "whiteboard_starter_image_alt_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.json "rubric"
     t.index ["lesson_id"], name: "index_challenges_on_lesson_id"
   end
 
@@ -489,14 +529,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["level_id"], name: "index_concepts_levels_on_level_id"
   end
 
-  create_table "contact_rollups_final", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "email", null: false
-    t.json "data", null: false
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.index ["email"], name: "index_contact_rollups_final_on_email", unique: true
-  end
-
   create_table "contact_rollups_pardot_memory", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "email", null: false
     t.integer "pardot_id"
@@ -578,7 +610,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
-  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "course_offerings_pd_workshops", primary_key: ["pd_workshop_id", "course_offering_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "pd_workshop_id", null: false
     t.bigint "course_offering_id", null: false
     t.datetime "created_at", null: false
@@ -1200,11 +1232,10 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["type"], name: "index_levels_on_type"
   end
 
-  create_table "levels_script_levels", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "levels_script_levels", primary_key: ["script_level_id", "level_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "level_id", null: false
     t.integer "script_level_id", null: false
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id"
-    t.index ["script_level_id", "level_id"], name: "index_levels_script_levels_on_script_level_id_and_level_id", unique: true
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
   end
 
@@ -2065,6 +2096,74 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true
   end
 
+  create_table "quiz_attempts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id", null: false
+    t.integer "unit_id", null: false
+    t.integer "attempt_number", null: false
+    t.datetime "started_at", null: false
+    t.datetime "submitted_at"
+    t.integer "score"
+    t.integer "max_score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id"], name: "index_quiz_attempts_on_level_id"
+    t.index ["unit_id"], name: "index_quiz_attempts_on_unit_id"
+    t.index ["user_id", "level_id", "unit_id", "attempt_number"], name: "index_quiz_attempts_on_user_level_unit_attempt", unique: true
+    t.index ["user_id"], name: "index_quiz_attempts_on_user_id"
+  end
+
+  create_table "quiz_question_placements", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "level_id", null: false
+    t.bigint "quiz_question_id", null: false
+    t.integer "page", default: 1, null: false
+    t.integer "position", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id", "quiz_question_id"], name: "index_quiz_question_placements_on_level_and_question", unique: true
+    t.index ["level_id"], name: "index_quiz_question_placements_on_level_id"
+    t.index ["quiz_question_id"], name: "index_quiz_question_placements_on_quiz_question_id"
+  end
+
+  create_table "quiz_question_responses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "quiz_attempt_id", null: false
+    t.bigint "quiz_question_id", null: false
+    t.json "response_data", null: false
+    t.integer "max_score"
+    t.integer "score"
+    t.string "grading_status", null: false
+    t.integer "time_spent_seconds"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quiz_attempt_id", "quiz_question_id"], name: "index_quiz_question_responses_on_attempt_and_question", unique: true
+    t.index ["quiz_attempt_id"], name: "index_quiz_question_responses_on_quiz_attempt_id"
+    t.index ["quiz_question_id"], name: "index_quiz_question_responses_on_quiz_question_id"
+  end
+
+  create_table "quiz_question_standards", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "quiz_question_id", null: false
+    t.integer "standard_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quiz_question_id", "standard_id"], name: "index_quiz_question_standards_on_quiz_question_and_standard", unique: true
+    t.index ["quiz_question_id"], name: "index_quiz_question_standards_on_quiz_question_id"
+    t.index ["standard_id"], name: "index_quiz_question_standards_on_standard_id"
+  end
+
+  create_table "quiz_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "type", null: false
+    t.string "key", limit: 36, null: false
+    t.bigint "fork_parent_id"
+    t.string "name", null: false
+    t.json "content", null: false
+    t.text "explanation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_quiz_questions_on_created_at"
+    t.index ["key"], name: "index_quiz_questions_on_key"
+    t.index ["name"], name: "index_quiz_questions_on_name", type: :fulltext
+  end
+
   create_table "reference_guides", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.bigint "course_version_id", null: false
@@ -2221,8 +2320,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id"
   end
 
-  create_table "schools", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "id", limit: 12, null: false, comment: "NCES public school ID"
+  create_table "schools", id: { type: :string, limit: 12, comment: "NCES public school ID" }, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "school_district_id"
     t.string "name", null: false
     t.string "city", null: false
@@ -2240,11 +2338,25 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.string "last_known_school_year_open", limit: 9
     t.string "county_id"
     t.string "county_name"
-    t.index ["id"], name: "index_schools_on_id", unique: true
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
     t.index ["zip"], name: "index_schools_on_zip"
+  end
+
+  create_table "scrapbook_entries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "script_id"
+    t.integer "level_id"
+    t.string "channel_id"
+    t.string "before_asset_url"
+    t.string "after_asset_url"
+    t.text "entry_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "channel_id"], name: "index_scrapbook_entries_on_user_id_and_channel_id", unique: true
+    t.index ["user_id", "script_id", "level_id"], name: "index_scrapbook_entries_on_user_id_and_script_id_and_level_id", unique: true
+    t.index ["user_id"], name: "index_scrapbook_entries_on_user_id"
   end
 
   create_table "script_levels", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2417,6 +2529,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.integer "user_id", null: false
     t.datetime "sign_in_at", precision: nil, null: false
     t.integer "sign_in_count", null: false
+    t.string "anon_user_id", limit: 36
     t.index ["sign_in_at"], name: "index_sign_ins_on_sign_in_at"
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
@@ -2770,6 +2883,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.json "editor_font_size"
     t.json "console_font_size"
     t.json "theme"
+    t.json "editor_settings"
     t.index ["user_id"], name: "index_user_preferences_on_user_id"
   end
 
@@ -2843,6 +2957,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
 
   create_table "user_project_storage_ids", id: :integer, charset: "utf8mb3", force: :cascade do |t|
     t.integer "user_id"
+    t.string "anon_user_id", limit: 36
     t.index ["user_id"], name: "user_id", unique: true
     t.index ["user_id"], name: "user_storage_ids_user_id_index"
   end
@@ -2971,6 +3086,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "challenge_response_assets", "challenge_responses"
+  add_foreign_key "challenge_response_reactions", "challenge_responses"
+  add_foreign_key "challenge_response_reactions", "users"
   add_foreign_key "challenge_responses", "challenges"
   add_foreign_key "challenge_responses", "users"
   add_foreign_key "challenges", "stages", column: "lesson_id"
@@ -3018,6 +3135,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "scrapbook_entries", "users"
   add_foreign_key "scripts", "unit_groups", column: "original_unit_group_id"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"

@@ -4,9 +4,17 @@ import React from 'react';
 
 import SendToPhone from '@cdo/apps/code-studio/components/SendToPhone';
 import WireframeButtons from '@cdo/apps/code-studio/components/WireframeButtons';
-import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+
+// Each button is identified by its icon, which is unique per button. The buttons
+// are MUI Buttons, so "Make my own" and "View code" render as anchors (they take
+// an href) while "Send to phone" renders as a button (it takes an onClick).
+function findIcon(wrapper, iconName) {
+  return wrapper
+    .find(FontAwesomeV6Icon)
+    .filterWhere(n => n.prop('iconName') === iconName);
+}
 
 describe('WireframeButtons', () => {
   let wrapper;
@@ -38,10 +46,8 @@ describe('WireframeButtons', () => {
       );
       expect(wrapper.find(SendToPhone)).to.be.empty;
 
-      wrapper
-        .find(FontAwesomeV6Icon)
-        .filterWhere(n => n.prop('iconName') === 'mobile-screen-button')
-        .closest('a')
+      findIcon(wrapper, 'mobile-screen-button')
+        .closest('button')
         .simulate('click');
       expect(wrapper.find(SendToPhone)).not.to.be.empty;
     });
@@ -57,37 +63,18 @@ describe('WireframeButtons', () => {
         />
       );
 
+      const makeMyOwnUrl = () =>
+        findIcon(wrapper, 'pen-to-square').closest('a').prop('href');
+
       wrapper.setProps({isLegacyShare: true});
-      expect(wrapper).to.containMatchingElement(
-        <span>
-          <a className="WireframeButtons_button" href="/s/artist">
-            <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />{' '}
-            {i18n.makeMyOwn()}
-          </a>
-        </span>
-      );
+      expect(makeMyOwnUrl()).to.equal('/s/artist');
 
       wrapper.setProps({isLegacyShare: false});
-      expect(wrapper).to.containMatchingElement(
-        <span>
-          <a className="WireframeButtons_button" href="/p/artist">
-            <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />{' '}
-            {i18n.makeMyOwn()}
-          </a>
-        </span>
-      );
+      expect(makeMyOwnUrl()).to.equal('/p/artist');
     });
   });
 
   describe('View Code button', () => {
-    const VIEW_CODE_BUTTON_TEMPLATE = (
-      <span>
-        <a className="WireframeButtons_button">
-          <FontAwesomeV6Icon iconName="code" /> {i18n.viewCode()}
-        </a>
-      </span>
-    );
-
     function mountForAppType(appType) {
       return mount(
         <WireframeButtons
@@ -101,16 +88,14 @@ describe('WireframeButtons', () => {
     ['applab', 'gamelab', 'makerlab'].forEach(appType => {
       it(`appears for ${appType}`, () => {
         wrapper = mountForAppType(appType);
-        expect(wrapper).to.containMatchingElement(VIEW_CODE_BUTTON_TEMPLATE);
+        expect(findIcon(wrapper, 'code')).not.to.be.empty;
       });
     });
 
     ['artist', 'playlab', 'weblab'].forEach(appType => {
       it(`does not appear for ${appType}`, () => {
         wrapper = mountForAppType(appType);
-        expect(wrapper).not.to.containMatchingElement(
-          VIEW_CODE_BUTTON_TEMPLATE
-        );
+        expect(findIcon(wrapper, 'code')).to.be.empty;
       });
     });
   });

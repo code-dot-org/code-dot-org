@@ -42,6 +42,6 @@ $$)
 TO 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/evals/<%=unit_name%>_teacher_evals_'
 FORMAT JSON
 EXTENSION 'jsonl'
-IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3'
+IAM_ROLE 'arn:aws:iam::<%=AWS::EC2.account_id%>:role/redshift-s3'
 PARALLEL OFF
 ;

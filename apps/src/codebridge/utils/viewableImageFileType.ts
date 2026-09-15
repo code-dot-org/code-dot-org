@@ -1,4 +1,4 @@
-import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
+import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 
 /**
  * Determines if a given file extension is a viewable image format.
@@ -9,7 +9,7 @@ import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
  */
 export const viewableImageFileType = (
   extension: string,
-  viewableImageFileTypesArray = WEBLAB2_IMAGE_FILE_TYPES
+  viewableImageFileTypesArray = SUPPORTED_IMAGE_EXTENSIONS
 ) => {
   const viewableImageFileTypes = new Set(viewableImageFileTypesArray);
   return viewableImageFileTypes.has(extension);

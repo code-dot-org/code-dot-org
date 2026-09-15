@@ -1,5 +1,6 @@
 require_relative '../../../deployment'
 require 'aws-sdk-rds'
+require 'set'
 
 module Cdo
   class RDS
@@ -147,6 +148,80 @@ module Cdo
         "#{db_cluster_id} deletion to complete.  Current cluster status - #{cluster_state}"
         )
       end
+    end
+
+    # Zero ETL integration data-filter management. These wrap the RDS API for reading/modifying an
+    # integration's Maxwell table filter; the *desired* filter for a database is computed elsewhere
+    # from the schema (see `AnalyticsExportable.zero_etl_data_filter`) and passed in here.
+
+    # Reads the integration's current data_filter (RDS `describe_integrations`), reconciles the rules
+    # for `db_name` against `desired_data_filter`, and — unless `dry_run` — writes the reconciled
+    # filter back (RDS `modify_integration`). Rules for other databases are left untouched.
+    #
+    # @param integration_arn [String] ARN of the Zero ETL integration.
+    # @param desired_data_filter [String] the full desired data_filter for `db_name` (Maxwell syntax).
+    # @param db_name [String] the database whose rules this reconciles, e.g. "dashboard_production".
+    # @param dry_run [Boolean] when true, computes the diff without applying it.
+    # @param rds_client [Aws::RDS::Client] injectable for testing.
+    # @return [Hash] reconciliation result from `reconcile_zero_etl_filters`.
+    def self.update_zero_etl_integration!(integration_arn:, desired_data_filter:, db_name:, dry_run: false, rds_client: nil)
+      rds_client ||= ::Aws::RDS::Client.new
+
+      resp = rds_client.describe_integrations(integration_identifier: integration_arn)
+      integration = resp.integrations.first
+      raise ArgumentError, "Integration not found: #{integration_arn}" unless integration
+
+      result = reconcile_zero_etl_filters(integration.data_filter, desired_data_filter, db_name: db_name)
+
+      unless dry_run || (result[:to_add].empty? && result[:to_remove].empty?)
+        rds_client.modify_integration(
+          integration_identifier: integration_arn,
+          data_filter: result[:reconciled_filter]
+        )
+      end
+
+      result
+    end
+
+    # Computes the diff between an integration's current data_filter and the desired filter for one
+    # database. Only rules referencing `db_name` are reconciled; rules for other databases (e.g. a
+    # hand-maintained `include: pegasus_test.*`) are preserved in place, untouched.
+    #
+    # @param current_data_filter [String] the integration's current data_filter.
+    # @param desired_data_filter [String] the desired data_filter for `db_name`.
+    # @param db_name [String]
+    # @return [Hash] :to_add, :to_remove, :unchanged (all sorted), :reconciled_filter
+    def self.reconcile_zero_etl_filters(current_data_filter, desired_data_filter, db_name:)
+      current_rules = parse_data_filter(current_data_filter)
+      desired_db_rules = parse_data_filter(desired_data_filter).select {|rule| rule_for_database?(rule, db_name)}
+
+      other_rules = current_rules.reject {|rule| rule_for_database?(rule, db_name)}
+      current_db_rules = current_rules.select {|rule| rule_for_database?(rule, db_name)}
+
+      current_set = Set.new(current_db_rules)
+      desired_set = Set.new(desired_db_rules)
+
+      # Preserve the desired filter's rule order for this database: Maxwell filter precedence is
+      # order-sensitive, so a broad `include: db.*` must stay ahead of the `exclude:`s that narrow it.
+      reconciled = other_rules + desired_db_rules
+
+      {
+        to_add: (desired_set - current_set).sort,
+        to_remove: (current_set - desired_set).sort,
+        unchanged: (current_set & desired_set).sort,
+        reconciled_filter: reconciled.join(", ")
+      }
+    end
+
+    # Splits a Maxwell data_filter string into individual rule strings.
+    def self.parse_data_filter(data_filter)
+      return [] if data_filter.nil? || data_filter.strip.empty?
+      data_filter.split(/,\s*/)
+    end
+
+    # Returns true if a Maxwell filter rule references the given database.
+    def self.rule_for_database?(rule, db_name)
+      rule.match?(/\b#{Regexp.escape(db_name)}\./)
     end
 
     # You can't copy a default parameter group, so we provide a helper method

@@ -22,4 +22,9 @@ Dashboard::Application.initialize!
 # without significant downtime.
 # Google_sheets_ tables are created from pegasus and since they have dynamic column definition
 # from a CSV file, they are excluded from active record
-ActiveRecord::SchemaDumper.ignore_tables = ['overflow_activities', /^_/, /^google_sheets_.*/]
+# dummy_forms is created by dashboard/test/models/concerns/pd/form_test.rb to
+# back a throwaway model. It has no migration and exists only in test databases,
+# but it is a permanent table (see that file for why), so it outlives the test
+# run. Ignoring it keeps `RAILS_ENV=test rake db:migrate` from adding the table
+# to db/schema.rb on the machine of anyone who has run that test.
+ActiveRecord::SchemaDumper.ignore_tables = ['overflow_activities', /^_/, /^google_sheets_.*/, 'dummy_forms']

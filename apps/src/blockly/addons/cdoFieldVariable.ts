@@ -34,9 +34,9 @@ export default class CdoFieldVariable extends BlocklyCore.FieldVariable {
             confirmButtonLabel: commonI18n.rename(),
             defaultText: oldVar,
             callback: newName =>
-              this.sourceBlock_?.workspace.renameVariableById(
+              this.sourceBlock_?.workspace.getVariableMap().renameVariable(
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                ((this as any).variable as BlocklyCore.VariableModel).getId(),
+                (this as any).variable as BlocklyCore.VariableModel,
                 newName
               ),
           });
@@ -48,8 +48,9 @@ export default class CdoFieldVariable extends BlocklyCore.FieldVariable {
             confirmButtonLabel: commonI18n.create(),
             defaultText: '',
             callback: newName => {
-              const newVar =
-                this.sourceBlock_?.workspace.createVariable(newName);
+              const newVar = this.sourceBlock_?.workspace
+                .getVariableMap()
+                .createVariable(newName);
               if (newVar) {
                 this.setValue(newVar.getId());
               }

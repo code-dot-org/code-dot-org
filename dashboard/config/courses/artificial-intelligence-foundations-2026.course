@@ -16,7 +16,7 @@
     "aif6-v2-2025",
     "aif5-v3"
   ],
-  "published_state": "stable",
+  "published_state": "sunsetting",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

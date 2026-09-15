@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q6-2026'
+
+wrong 'The line will make correct predictions for all inputs'
+wrong 'The output of the line will always be a positive number'
+right 'Increasing the input will also increase the output'
+wrong 'The line will predict a positive number when the input is 0'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What could you say about a linear regression line with a positive slope?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Building Regression Models
+MARKDOWN

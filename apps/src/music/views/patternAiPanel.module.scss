@@ -1,8 +1,9 @@
-@import "color.scss";
+@import 'color.scss';
 
 // Move the arrow left and right.
 @keyframes left-right {
-  0%, 100% {
+  0%,
+  100% {
     left: 10px;
   }
   50% {
@@ -20,7 +21,8 @@
 }
 
 @keyframes delay-fade-in {
-  0%, 80% {
+  0%,
+  80% {
     opacity: 0;
   }
   100% {
@@ -186,11 +188,13 @@
 .button {
   background-color: var(--background-brand-aqua-primary) !important;
 
-  &:hover, &:disabled {
+  &:hover,
+  &[data-generating='true'] {
     background-color: var(--background-brand-aqua-strong) !important;
   }
 
-  &:disabled {
+  // Stand-in for :disabled — see the button in PatternAiPanel.tsx.
+  &[data-generating='true'] {
     border: 1px solid rgba(0 0 0 / 0);
     cursor: default;
   }
@@ -227,7 +231,7 @@
   transition: 0.1s ease-in-out;
   width: 100px;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05, 1.05);
     transition: 0.1s ease-in-out;
   }
@@ -242,7 +246,7 @@
   transition: 0.1s ease-in-out;
   animation: 0.5s fade-in;
 
-  &:hover{
+  &:hover {
     transform: scale(1.4, 1.4);
     transition: 0.1s ease-in-out;
   }
@@ -312,12 +316,14 @@
     right: 214px;
   }
 
-  &GenerateNoTemperature, &GenerateAgainNoTemperature {
+  &GenerateNoTemperature,
+  &GenerateAgainNoTemperature {
     top: 195px;
     right: 216px;
   }
 
-  &Generate, &GenerateAgain {
+  &Generate,
+  &GenerateAgain {
     top: 205px;
     right: 216px;
   }
@@ -346,12 +352,14 @@
     top: 177px;
   }
 
-  &GenerateNoTemperature, &GenerateAgainNoTemperature {
+  &GenerateNoTemperature,
+  &GenerateAgainNoTemperature {
     right: 189px;
     top: 210px;
   }
 
-  &Generate, &GenerateAgain {
+  &Generate,
+  &GenerateAgain {
     right: 189px;
     top: 221px;
   }

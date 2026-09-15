@@ -201,7 +201,7 @@ describe('ManageLinkedAccounts', () => {
         isGoogleClassroomStudent={true}
       />
     );
-    const googleConnectButton = wrapper.find('BootstrapButton').at(0);
+    const googleConnectButton = wrapper.find('button[type="submit"]').at(0);
     expect(googleConnectButton).to.have.attr('disabled');
   });
 
@@ -214,7 +214,7 @@ describe('ManageLinkedAccounts', () => {
         isCleverStudent={true}
       />
     );
-    const cleverConnectButton = wrapper.find('BootstrapButton').at(2);
+    const cleverConnectButton = wrapper.find('button[type="submit"]').at(2);
     expect(cleverConnectButton).to.have.attr('disabled');
   });
 
@@ -227,7 +227,7 @@ describe('ManageLinkedAccounts', () => {
         authenticationOptions={authOptions}
       />
     );
-    const facebookConnectButton = wrapper.find('BootstrapButton').at(4);
+    const facebookConnectButton = wrapper.find('button[type="submit"]').at(4);
     expect(facebookConnectButton).to.have.attr('disabled');
   });
 
@@ -240,7 +240,7 @@ describe('ManageLinkedAccounts', () => {
         authenticationOptions={authOptions}
       />
     );
-    const facebookConnectButton = wrapper.find('BootstrapButton').at(3);
+    const facebookConnectButton = wrapper.find('button[type="submit"]').at(3);
     expect(facebookConnectButton).to.not.have.attr('disabled');
   });
 
@@ -257,7 +257,7 @@ describe('ManageLinkedAccounts', () => {
         userHasPassword={false}
       />
     );
-    const googleConnectButton = wrapper.find('BootstrapButton').at(0);
+    const googleConnectButton = wrapper.find('button[type="submit"]').at(0);
     expect(googleConnectButton).to.have.attr('disabled');
   });
 
@@ -271,7 +271,7 @@ describe('ManageLinkedAccounts', () => {
           authenticationOptions={authOptions}
         />
       );
-      const ltiConnectButton = wrapper.find('BootstrapButton').at(5);
+      const ltiConnectButton = wrapper.find('button[type="submit"]').at(5);
       expect(ltiConnectButton).to.have.attr('disabled');
     });
 
@@ -286,7 +286,7 @@ describe('ManageLinkedAccounts', () => {
           authenticationOptions={authOptions}
         />
       );
-      const ltiConnectButton = wrapper.find('BootstrapButton').at(4);
+      const ltiConnectButton = wrapper.find('button[type="submit"]').at(4);
       expect(ltiConnectButton).to.not.have.attr('disabled');
     });
   });
@@ -303,21 +303,25 @@ describe('ManageLinkedAccounts', () => {
       const googleForm = wrapper.find(
         'form[action="/users/auth/google_oauth2?action=connect"]'
       );
-      const googleConnectButton = googleForm.find('BootstrapButton').at(0);
+      const googleConnectButton = googleForm
+        .find('button[type="submit"]')
+        .at(0);
       expect(googleConnectButton).to.have.attr('disabled');
       expect(googleConnectButton).to.be.disabled();
 
       const msftForm = wrapper.find(
         'form[action="/users/auth/microsoft_v2_auth?action=connect"]'
       );
-      const msftConnectButton = msftForm.find('BootstrapButton').at(0);
+      const msftConnectButton = msftForm.find('button[type="submit"]').at(0);
       expect(msftConnectButton).to.have.attr('disabled');
       expect(msftConnectButton).to.be.disabled();
 
       const facebookForm = wrapper.find(
         'form[action="/users/auth/facebook?action=connect"]'
       );
-      const facebookConnectButton = facebookForm.find('BootstrapButton').at(0);
+      const facebookConnectButton = facebookForm
+        .find('button[type="submit"]')
+        .at(0);
       expect(facebookConnectButton).to.have.attr('disabled');
       expect(facebookConnectButton).to.be.disabled();
     });
@@ -332,7 +336,9 @@ describe('ManageLinkedAccounts', () => {
       const cleverForm = wrapper.find(
         'form[action="/users/auth/clever?action=connect"]'
       );
-      const cleverConnectButton = cleverForm.find('BootstrapButton').at(0);
+      const cleverConnectButton = cleverForm
+        .find('button[type="submit"]')
+        .at(0);
       expect(cleverConnectButton).to.not.have.attr('disabled');
       expect(cleverConnectButton).to.not.be.disabled();
     });

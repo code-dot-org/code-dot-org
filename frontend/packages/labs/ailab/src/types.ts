@@ -157,8 +157,13 @@ export interface ModelDataToSave {
   kValue: number | null;
 }
 
+export type SaveTrainedModel = (
+  dataToSave: ModelDataToSave,
+  callback: (response: SaveResponse) => void,
+) => void;
+
 export interface NavButton {
-  panel: string;
+  panel: Panel;
   text: string | undefined;
   enabled?: boolean;
 }
@@ -167,3 +172,30 @@ export interface PrevNextButtons {
   prev?: NavButton;
   next?: NavButton;
 }
+
+export const CONTENT_PANELS = [
+  'selectDataset',
+  'dataDisplayLabel',
+  'dataDisplayFeatures',
+  'trainModel',
+  'generateResults',
+  'results',
+  'saveModel',
+  'modelSummary',
+] as const;
+
+type ContentPanel = (typeof CONTENT_PANELS)[number];
+
+// Valid panels are content panels + Continue/Finish targets.
+export type Panel = ContentPanel | 'continue' | 'finish';
+
+export const INSTRUCTIONS_KEYS = [
+  ...CONTENT_PANELS,
+  'uploadedDataset',
+  'selectedDataset',
+  'selectedFeatureNumerical',
+  'selectedFeatureCategorical',
+  'resultsDetails',
+] as const;
+
+export type InstructionsKey = (typeof INSTRUCTIONS_KEYS)[number];

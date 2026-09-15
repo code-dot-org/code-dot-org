@@ -19,9 +19,12 @@ export interface ExistingUnitData {
   // read-only banner.
   multipleLessonGroups: boolean;
   editUnitUrl: string;
-  // Persisted unit-level outline prompt. The page restores it on reload
-  // so the levelbuilder doesn't have to retype it.
+  // Persisted unit-level generator prompts, restored on reload.
   generateOutline?: string | null;
+  // Course-scoped rules for the lesson outline AI (level selection and
+  // patterning) and for per-level content generation, respectively.
+  generateDraftingRules?: string | null;
+  generateAuthoringRules?: string | null;
 }
 
 // One row in the editable card list. Pre-existing lessons round-trip via

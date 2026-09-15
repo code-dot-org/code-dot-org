@@ -34,6 +34,8 @@ const WIRE_SETTINGS = {
   can_delete_own_account: true,
   age: '21+',
   us_state: null,
+  gender: null,
+  is_usa: true,
   parent_email: null,
   dependent_students_count: 0,
   age_options: [{value: '4', text: '4'}],
@@ -59,6 +61,8 @@ describe('createUsersApi.getSettings', () => {
     expect(settings.usStateOptions).toEqual([
       {value: 'WA', text: 'Washington'},
     ]);
+    expect(settings.isUsa).toBe(true);
+    expect(settings.gender).toBeNull();
   });
 
   it('rejects when the body fails schema validation', async () => {
@@ -78,6 +82,59 @@ describe('createUsersApi mutations target the right routes', () => {
         body: {user: {given_name: 'Grace', us_state: 'WA'}},
       }),
     );
+  });
+
+  it('updateProfile maps gender to gender_student_input', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateProfile({gender: 'Example gender'});
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/dashboardapi/users',
+        body: {user: {gender_student_input: 'Example gender'}},
+      }),
+    );
+  });
+
+  it('updateProfile sends educator_role when the role changes', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateProfile({educatorRole: 'classroom_teacher'});
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/dashboardapi/users',
+        body: {user: {educator_role: 'classroom_teacher'}},
+      }),
+    );
+  });
+
+  it('updateSchoolInfo PATCHes /api/v1/user_school_infos with the built school data', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateSchoolInfo({
+      schoolId: '12345678',
+      country: 'US',
+      schoolName: 'Example High School',
+      schoolZip: '98101',
+    });
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/api/v1/user_school_infos',
+        headers: {Accept: 'application/json'},
+        body: {user: {school_info_attributes: {school_id: '12345678'}}},
+      }),
+    );
+  });
+
+  it('updateSchoolInfo sends no request when the form builds no school data', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateSchoolInfo({
+      schoolId: '',
+      country: 'selectCountry',
+      schoolName: '',
+      schoolZip: '',
+    });
+    expect(request).not.toHaveBeenCalled();
   });
 
   it('updateEmail PATCHes /users/email', async () => {

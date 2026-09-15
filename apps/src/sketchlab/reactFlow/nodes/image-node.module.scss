@@ -1,3 +1,5 @@
+@use './node-mixins.scss' as mixins;
+
 .imageNode {
   position: relative;
   width: 100%;
@@ -9,6 +11,10 @@
   position: absolute;
   inset: 0;
   transform-origin: center;
+}
+
+:global(.react-flow__node-image:focus-visible) .rotatable {
+  @include mixins.node-focus-ring;
 }
 
 .image {

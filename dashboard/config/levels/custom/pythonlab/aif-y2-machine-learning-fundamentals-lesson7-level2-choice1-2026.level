@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-21T21:27:58.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Vocabulary Size",
+    "long_instructions": "You’re a linguistics researcher exploring a dataset used to predict people’s vocabulary size based on their age. You want to make sure that your dataset is representative of people of different ages.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Print the ages of all the children in the dataset (people with an age less than 18).\r\n2. Print the ages of all the adults in the dataset (people with an age at least 18 but less than 65).\r\n3. Print the ages of all the seniors in the dataset (people with an age at least 65).\r\n4. Decide whether you think the dataset is representative or not. You’ll answer questions about this dataset in the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nYou can use an `if` statement inside of a `for` loop to decide whether a piece of code should run for a particular item in the list.\r\n\r\nTo check for multiple conditions in an if statement, use `and` or `or`.\r\n\r\n```python\r\nif condition1 and condition2:\r\n  # This code will only run if both condition1 and condition2 are true\r\n```",
+    "bubble_choice_description": "Work with a dataset used to predict vocabulary size based on their age.",
+    "thumbnail_url": "https://images.code.org/5b742075e7c0f4714fda2f28e3a12cd4-dictionary.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "ages = [22, 78, 73, 25, 38, 47, 29, 52, 56, 28]\n\nprint(\"Here are the children in the dataset:\")\n# TODO 1: Print all ages in the dataset that are less than 18\n\nprint(\"Here are the adults in the dataset:\")\n# TODO 2: Print all ages in the dataset that are at least 18 but less than 65\n\nprint(\"Here are the seniors in the dataset:\")\n# TODO 3: Print all ages in the dataset that are at least 65",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqj2GyVwJ/wiENP\nocQ+LH/EY2vsFgd2S7mnCVrjsytH43qyop9j+cTktbRwqne7+UxyzJ197FE3\nbrqV+0qDDo0gOj15cHNBp8EDronlLAGI8Yo0S+0BnKLMNzapntOM+8dz3WYy\nPfLE8bWVmD+BpIaDq6tfo5PoIYGIhK2lUnQ9T4+w8V02mj5X817UbUlD/Oxo\nNMTrhLeTIUNyfMli+mfJKkdds9/T8CFOzRUbLvZ3EFpmmaC2ezyPOXu1WDmP\naeck5E6KYxQ9bPiuCU5ABgk0U5rKV+Xlss4ttT0PRnsqGukXLpnpwUdDn8s8\n7MpnlLjRgYSZfXig8GKZnzGtskyoK+GlMDGfug1g+b30jaue8QB8v9MATK+/\n1RdVwWako+5XJ06mfCezHy+BzTZpD2dpmxZ3OaMhSUOTa435f0oYnRLVGZC6\n8nz5Jk8+37EGrZUfGtJzdR8tAtZa8tizrZOhGRsApRTFdzNwOh8hqF1ebQvT\nbpenSUbzt+ftX0t4kwRgBR2DTxRxF8ohdjnkKhk/fc/xsFLx47XHdXTOgSeb\nILvcCqcGJH9tV8IwjiQPWD8hvKlcxJGUJvXl11I+uhMi\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-21 21:28:06 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 21:28:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

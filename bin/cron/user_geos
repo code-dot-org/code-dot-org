@@ -8,16 +8,14 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'cdo/db'
 require 'cdo/geocoder'
-require 'retryable'
 
 def main
   time_now = DateTime.now
   to_geolocate = DASHBOARD_DB[:user_geos].where(indexed_at: nil).limit(1000)
 
   to_geolocate.each do |user_geo|
-    location = Retryable.retryable(on: [Redis::CannotConnectError], tries: 2) do
-      Geocoder.search(user_geo[:ip_address]).first
-    end
+    location = Geocoder.find(user_geo[:ip_address])
+
     DASHBOARD_DB[:user_geos].where(id: user_geo[:id]).update(
       updated_at: time_now,
       indexed_at: time_now,

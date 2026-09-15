@@ -84,33 +84,6 @@ class TransfersController < ApplicationController
       return
     end
 
-    new_section = Section.find_by_code(params[:new_section_code])
-
-    if new_section.will_be_over_capacity?(params[:student_ids].size)
-
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'section capacity restriction',
-          event: "Section owner attempted to #{params[:stay_enrolled_in_current_section] ? 'copy' : 'move'} #{params[:student_ids].size > 1 ? 'multiple students' : 'a student'} to a full section",
-          data_json: {
-            section_id: new_section.id,
-            section_code: new_section.code,
-            date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
-            joiner_id: params[:student_ids],
-            section_teacher_id: new_section.user_id
-          }.to_json
-        }
-      )
-
-      render json: {
-        result: 'full',
-        verb: params[:stay_enrolled_in_current_section] ? 'copy' : 'move',
-        sectionCapacity: new_section.capacity
-      }, status: :forbidden
-      return
-    end
-
     authorize! :manage, current_section
 
     students = User.where(id: student_ids).all
@@ -154,8 +127,12 @@ class TransfersController < ApplicationController
       end
 
       if new_section.user == current_user
-        follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)
-        follower_same_user_teacher.update!(section_id: new_section.id)
+        if stay_enrolled_in_current_section
+          student.followeds.create!(user: new_section.user, section: new_section)
+        else
+          follower = student.followeds.find_by_section_id(current_section.id)
+          follower.update!(section_id: new_section.id)
+        end
       else
         unless student.followeds.exists?(section_id: new_section.id)
           student.followeds.create!(user: new_section.user, section: new_section)

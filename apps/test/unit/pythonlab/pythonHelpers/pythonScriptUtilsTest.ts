@@ -6,6 +6,7 @@ import {
   getCleanupCode,
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
+  ON_DEMAND_PACKAGE_URLS,
   resetGlobals,
   writeSource,
 } from '@cdo/apps/pythonlab/pythonHelpers/pythonScriptUtils';
@@ -100,11 +101,11 @@ describe('pythonScriptUtils', () => {
     // Records writeFile/mkdir calls against an in-memory model of Pyodide's FS.
     // readdir always throws so createFolderIfNotExists takes the mkdir branch.
     function makeWriteFs() {
-      const writtenFiles: Record<string, string> = {};
+      const writtenFiles: Record<string, string | Uint8Array> = {};
       const madeDirs: string[] = [];
       const pyodide = {
         FS: {
-          writeFile: (path: string, contents: string) => {
+          writeFile: (path: string, contents: string | Uint8Array) => {
             writtenFiles[path] = contents;
           },
           readdir: () => {
@@ -149,6 +150,72 @@ describe('pythonScriptUtils', () => {
       expect(writtenFiles['main.py']).toBe('a');
       expect(writtenFiles['pkg/util.py']).toBe('b');
       expect(madeDirs).toContain('pkg');
+    });
+
+    it('writes a url-backed file from its fetched bytes', () => {
+      // An uploaded image's bytes live in S3, so the source holds no contents
+      // for it. Writing those empty contents left theater's Image() unable to
+      // read the file the student had uploaded.
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '1': {id: '1', name: 'main.py', contents: 'a', folderId: '0'},
+          '2': {
+            id: '2',
+            name: 'dog.jpeg',
+            contents: '',
+            folderId: '0',
+            url: '/v3/assets/channel-id/uuid.jpeg',
+          },
+        },
+      };
+      const {pyodide, writtenFiles} = makeWriteFs();
+
+      writeSource(source, '0', '', pyodide, {'2': new Uint8Array([1, 2, 3])});
+
+      expect(writtenFiles['dog.jpeg']).toEqual(new Uint8Array([1, 2, 3]));
+    });
+
+    it('leaves out a url-backed file with no fetched bytes', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '1': {
+            id: '1',
+            name: 'dog.jpeg',
+            contents: '',
+            folderId: '0',
+            url: '/v3/assets/channel-id/uuid.jpeg',
+          },
+        },
+      };
+      const {pyodide, writtenFiles} = makeWriteFs();
+
+      writeSource(source, '0', '', pyodide, {});
+
+      expect(writtenFiles).toEqual({});
+    });
+
+    it('passes fetched bytes down to nested folders', () => {
+      const source: MultiFileSource = {
+        folders: {
+          '1': {id: '1', name: 'images', parentId: '0'},
+        },
+        files: {
+          '1': {
+            id: '1',
+            name: 'dog.jpeg',
+            contents: '',
+            folderId: '1',
+            url: '/v3/assets/channel-id/uuid.jpeg',
+          },
+        },
+      };
+      const {pyodide, writtenFiles} = makeWriteFs();
+
+      writeSource(source, '0', '', pyodide, {'1': new Uint8Array([7])});
+
+      expect(writtenFiles['images/dog.jpeg']).toEqual(new Uint8Array([7]));
     });
   });
 
@@ -216,6 +283,38 @@ describe('pythonScriptUtils', () => {
       expect(unlinked).toContain('/Files/main.py');
       // Original source is cloned, not mutated.
       expect(source.files['1'].contents).toBe('old');
+    });
+
+    it('keeps a url-backed file out of the source but still unlinks it', () => {
+      // Reading an image back as text would replace the file's url with
+      // garbage and save that into the student's project.
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '1': {
+            id: '1',
+            name: 'dog.jpeg',
+            contents: '',
+            folderId: '0',
+            url: '/v3/assets/channel-id/uuid.jpeg',
+          },
+        },
+      };
+      const {pyodide, unlinked} = makeReadFs(
+        {'dog.jpeg': fileNode(1, 'dog.jpeg')},
+        {'/Files/dog.jpeg': 'binary garbage'}
+      );
+
+      const result = getUpdatedSourceAndDeleteFiles(
+        source,
+        'run-id',
+        pyodide,
+        noop
+      );
+
+      expect(result.files['1'].contents).toBe('');
+      expect(result.files['1'].url).toBe('/v3/assets/channel-id/uuid.jpeg');
+      expect(unlinked).toContain('/Files/dog.jpeg');
     });
 
     it('adds files that appeared in the working directory', () => {
@@ -354,28 +453,103 @@ describe('pythonScriptUtils', () => {
   });
 
   describe('importPackagesFromFiles', () => {
-    it('loads packages only from python files', async () => {
-      const source: MultiFileSource = {
-        folders: {},
-        files: {
-          '1': {
-            id: '1',
-            name: 'main.py',
-            contents: 'import numpy',
-            folderId: '0',
-          },
-          '2': {id: '2', name: 'data.csv', contents: 'x,y', folderId: '0'},
-        },
-      };
+    // Stands in for pyodide.pyimport('pyodide.code.find_imports'), which returns
+    // a Python list: hence the toJs/destroy shape. Test code maps file contents
+    // to the modules the real helper would report.
+    function fakePyodide(importsByContents: Record<string, string[]>) {
       const loadPackagesFromImports = jest.fn().mockResolvedValue(undefined);
+      const loadPackage = jest.fn().mockResolvedValue(undefined);
+      const destroy = jest.fn();
+      const findImports = Object.assign(
+        (contents: string) => ({
+          toJs: () => importsByContents[contents] || [],
+          destroy,
+        }),
+        {destroy}
+      );
       const pyodide = {
         loadPackagesFromImports,
+        loadPackage,
+        pyimport: jest.fn().mockReturnValue(findImports),
       } as unknown as PyodideInterface;
+      return {pyodide, loadPackagesFromImports, loadPackage, destroy};
+    }
+
+    function sourceWithFiles(contentsByName: Record<string, string>) {
+      const files = Object.entries(contentsByName).map(
+        ([name, contents], index) => [
+          `${index + 1}`,
+          {id: `${index + 1}`, name, contents, folderId: '0'},
+        ]
+      );
+      return {folders: {}, files: Object.fromEntries(files)} as MultiFileSource;
+    }
+
+    it('loads packages only from python files', async () => {
+      const source = sourceWithFiles({
+        'main.py': 'import numpy',
+        'data.csv': 'x,y',
+      });
+      const {pyodide, loadPackagesFromImports} = fakePyodide({
+        'import numpy': ['numpy'],
+      });
 
       await importPackagesFromFiles(source, pyodide);
 
       expect(loadPackagesFromImports).toHaveBeenCalledTimes(1);
       expect(loadPackagesFromImports).toHaveBeenCalledWith('import numpy');
+    });
+
+    it('fetches an on-demand wheel for a program that imports it', async () => {
+      const source = sourceWithFiles({'main.py': 'import theater'});
+      const {pyodide, loadPackage} = fakePyodide({
+        'import theater': ['theater'],
+      });
+
+      await importPackagesFromFiles(source, pyodide);
+
+      expect(loadPackage).toHaveBeenCalledWith([
+        ON_DEMAND_PACKAGE_URLS.theater,
+      ]);
+    });
+
+    it('leaves an on-demand wheel unfetched for a program without it', async () => {
+      const source = sourceWithFiles({'main.py': 'import numpy'});
+      const {pyodide, loadPackage} = fakePyodide({
+        'import numpy': ['numpy'],
+      });
+
+      await importPackagesFromFiles(source, pyodide);
+
+      expect(loadPackage).not.toHaveBeenCalled();
+    });
+
+    it('fetches an on-demand wheel once for a project that imports it twice', async () => {
+      const source = sourceWithFiles({
+        'main.py': 'import theater',
+        'helper.py': 'from theater import Scene',
+      });
+      const {pyodide, loadPackage} = fakePyodide({
+        'import theater': ['theater'],
+        'from theater import Scene': ['theater'],
+      });
+
+      await importPackagesFromFiles(source, pyodide);
+
+      expect(loadPackage).toHaveBeenCalledTimes(1);
+      expect(loadPackage).toHaveBeenCalledWith([
+        ON_DEMAND_PACKAGE_URLS.theater,
+      ]);
+    });
+
+    it('releases the python proxies it reads imports through', async () => {
+      const source = sourceWithFiles({'main.py': 'import theater'});
+      const {pyodide, destroy} = fakePyodide({'import theater': ['theater']});
+
+      await importPackagesFromFiles(source, pyodide);
+
+      // The import list and the helper itself, or each run leaks a PyProxy.
+      expect(destroy).toHaveBeenCalledTimes(2);
     });
   });
 

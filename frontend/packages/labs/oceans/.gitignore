@@ -9,6 +9,6 @@
 /test-results
 /playwright-report
 
-# Ephemeral visual-test baselines written by scripts/prove-visual.ts.
+# Ephemeral visual-test baselines written by prove-visual.
 # Always regenerated; never committed.
-/e2e/tmp
+/.visual-baselines

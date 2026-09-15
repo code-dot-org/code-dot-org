@@ -181,7 +181,7 @@ export default function LockoutLinkedAccounts(props) {
   return (
     <div style={styles.container} className="lockout-linked-accounts">
       <hr />
-      <h2>{i18n.lockoutManageLinkedAccountsHeader()}</h2>
+      <h2 className="text-black">{i18n.lockoutManageLinkedAccountsHeader()}</h2>
       <form
         id="lockout-linked-accounts-form"
         onSubmit={submitPermissionRequest}
@@ -289,6 +289,7 @@ export default function LockoutLinkedAccounts(props) {
                     ? i18n.sessionLockoutUpdateSubmit()
                     : i18n.sessionLockoutSubmit()
                 }
+                color={Button.ButtonColor.brandSecondaryDefault}
                 disabled={disabled}
                 onClick={() => {}}
               />

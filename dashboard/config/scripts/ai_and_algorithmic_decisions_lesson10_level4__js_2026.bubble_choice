@@ -1,0 +1,11 @@
+name 'ai-and-algorithmic-decisions-lesson10-level4_-js-2026'
+display_name 'Fix a Broken Feature'
+description 'Choose one of the following scenarios to investigate and fix.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson10-level4a_-js-2026'
+level 'ai-and-algorithmic-decisions-lesson10-level4b_-js-2026'
+level 'ai-and-algorithmic-decisions-lesson10-level4c_-js-2026'
+
+uses_lab2
+navigation_type 'next_level'

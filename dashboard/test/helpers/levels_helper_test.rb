@@ -745,6 +745,20 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/3/levels/1/page/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit, puzzle_page: '1')
   end
 
+  test 'build_script_level_path uses hoc chapter routing for hourofcode unit' do
+    create_hourofcode_unit_and_levels
+    unit = Unit.get_from_cache(Unit::HOC_NAME)
+    unit_group_unit = unit.original_unit_group_unit
+    script_level = ScriptLevel.find_by(script_id: unit.id, chapter: 1)
+
+    # Modular course path (the reset redirect and in-course links pass unit_group_unit).
+    assert_equal '/hoc/1', build_script_level_path(script_level, unit_group_unit: unit_group_unit)
+    # Deprecated /s/ path (no unit_group_unit, e.g. header progress bubbles).
+    assert_equal '/hoc/1', build_script_level_path(script_level)
+    # Extra params must survive the chapter dispatch as a query string.
+    assert_equal '/hoc/1?noautoplay=true', build_script_level_path(script_level, noautoplay: true)
+  end
+
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
     unit = create(:script, :in_single_unit_course, :with_levels, name: 'test-bonus-level-links')
     unit.script_levels.last.update(bonus: true)

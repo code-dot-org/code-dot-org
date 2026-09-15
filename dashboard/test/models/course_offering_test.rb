@@ -1170,6 +1170,14 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal expected, CourseOffering.file_path('regular-offering', custom_root)
   end
 
+  test 'ai_initiative? is true only for AIF and AID marketing initiatives' do
+    assert create(:course_offering, marketing_initiative: 'AIF').ai_initiative?
+    assert create(:course_offering, marketing_initiative: 'AID').ai_initiative?
+    refute create(:course_offering, marketing_initiative: 'CSD').ai_initiative?
+    refute create(:course_offering, marketing_initiative: 'HOC').ai_initiative?
+    refute create(:course_offering, marketing_initiative: nil).ai_initiative?
+  end
+
   def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)
     create(:course_offering) do |offering|
       create_list(:course_version, num_versions, content_root_trait, course_offering: offering)

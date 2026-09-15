@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-19 16:27:11 UTC",
+    "serialized_at": "2026-07-30 01:52:49 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1879,6 +1879,17 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/courses/coding-with-music-2025/units/1/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
       "name": "Anchor Chart - Organizing Music",
       "url": "https://drive.google.com/file/d/1RDFizyrovrwzPzZEjapEur2H3mUzfqs4/view?usp=sharing",
       "key": "anchor_chart_-_organizing_music",
@@ -1916,11 +1927,12 @@
     },
     {
       "name": "Coding with Music Slides",
-      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
+      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/template/preview",
       "key": "coding_with_music_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/download",
+        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2046,7 +2058,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "coding-with-music"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -2360,6 +2377,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

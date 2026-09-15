@@ -1,9 +1,12 @@
 import Drawer from '@mui/material/Drawer';
-import React, {useCallback, useEffect, useState} from 'react';
-import FocusLock from 'react-focus-lock';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
-import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
+import {
+  clearRequestedNav,
+  fetchThreadMessages,
+} from '@cdo/apps/aiTeacherDrawer/redux';
+import experiments from '@cdo/apps/util/experiments';
 
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
@@ -14,6 +17,8 @@ import BottomNav from './BottomNav';
 import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import HomeScreen from './HomeScreen';
 import NotificationList from './notifications/NotificationList';
+import PrepareList from './PrepareList';
+import TeacherPanelScreen from './TeacherPanelScreen';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 
@@ -39,6 +44,22 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   // Welcome experience shut off in preparation for spring 2026 redesign.
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
   const [activeNav, setActiveNav] = useState('Chats');
+  const showLearn = experiments.isEnabled('sidebar-prepare');
+  const showTeacherPanel = useMemo(() => {
+    if (!experiments.isEnabled('ta-teacher-panel')) return false;
+    const el = document.querySelector<HTMLScriptElement>(
+      'script[data-teacherpanel]'
+    );
+    if (!el?.dataset.teacherpanel) return false;
+    try {
+      const data = JSON.parse(el.dataset.teacherpanel) as {
+        is_instructor?: boolean;
+      };
+      return data.is_instructor === true;
+    } catch {
+      return false;
+    }
+  }, []);
   const [showChatList, setShowChatList] = useState(false);
   const {personalizationData} = useTeachingProfileData();
   const dispatch = useAppDispatch();
@@ -52,6 +73,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   );
 
   const chatIsOpen = useAppSelector(state => state.aiDiffChat.chatIsOpen);
+  const requestedNav = useAppSelector(state => state.aiDiffChat.requestedNav);
+
+  useEffect(() => {
+    if (requestedNav) {
+      setActiveNav(requestedNav);
+      dispatch(clearRequestedNav());
+    }
+  }, [requestedNav, dispatch]);
 
   const isWelcomeView =
     !hasCompletedAiDifferentiationWelcome && showWelcomeExperience;
@@ -113,6 +142,17 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       );
     } else if (activeNav === 'Alerts') {
       content = <NotificationList aiPromptClick={onAlertPromptClick} />;
+    } else if (activeNav === 'Prepare') {
+      content = (
+        <PrepareList
+          onNavigateToChats={() => {
+            setActiveNav('Chats');
+            setShowChatList(false);
+          }}
+        />
+      );
+    } else if (activeNav === 'Teacher Panel') {
+      content = <TeacherPanelScreen />;
     } else {
       content = (
         <AiDiffWorkSpace
@@ -137,12 +177,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         sx: {width: drawerWidth, top: 50, height: 'calc(100% - 50px)'},
       }}
     >
-      <FocusLock
-        disabled={!chatIsOpen}
-        lockProps={{
-          style: {display: 'flex', flexDirection: 'column', height: '100%'},
-        }}
-      >
+      <div style={{display: 'flex', flexDirection: 'column', height: '100%'}}>
         <AiDiffHeader
           closeTutor={closeTutor}
           closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
@@ -155,8 +190,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             setShowChatList(label === 'Chats');
           }}
           unreadNotificationCount={unreadNotificationCount}
+          showLearn={showLearn}
+          showTeacherPanel={showTeacherPanel}
         />
-      </FocusLock>
+      </div>
     </Drawer>
   );
 };

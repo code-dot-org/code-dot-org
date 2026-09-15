@@ -1,0 +1,41 @@
+%style
+  :plain
+    .unit-listing {margin: 20px; font-family: sans-serif;}
+    .unit-listing ul {list-style: none; margin: 0; padding-left: 24px;}
+    .unit-listing > ul {padding-left: 0;}
+    .unit-listing .lesson-group {margin-top: 16px; font-weight: bold; font-size: 1.1em;}
+    .unit-listing .lesson {margin-top: 8px; font-weight: bold;}
+    .unit-listing .level {font-weight: normal;}
+    .unit-listing .empty {color: #767676; font-style: italic;}
+    .unit-listing .level-type {color: #767676; font-size: 0.85em;}
+
+.unit-listing
+  %h1= @script.title_for_display(unit_group_unit: @unit_group_unit)
+  %p
+    Levelbuilder overview of every lesson and level in this unit. Each level
+    links to its own page.
+  %ul
+    - @lesson_groups.each do |lesson_group|
+      %li.lesson-group
+        = lesson_group.localized_display_name
+        %ul
+          - if lesson_group.lessons.empty?
+            %li.empty (no lessons)
+          - lesson_group.lessons.each do |lesson|
+            %li.lesson
+              - if lesson.numbered_lesson?
+                = "Lesson #{lesson.relative_position}: #{lesson.localized_name}"
+              - else
+                = lesson.localized_name
+              %ul
+                - if lesson.script_levels.empty?
+                  %li.empty (no levels)
+                - lesson.script_levels.each do |script_level|
+                  - level = script_level.level
+                  %li.level
+                    = "#{script_level.position}."
+                    - if level
+                      = link_to level.name, build_script_level_path(script_level, unit_group_unit: @unit_group_unit)
+                      %span.level-type= "(#{level.type})"
+                    - else
+                      %span.empty (no level)

@@ -1,12 +1,12 @@
-import classNames from 'classnames';
+import {
+  Box,
+  Button as MuiButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import commonMsg from '@cdo/locale';
-
-import commonStyles from '../../commonStyles';
-
-import style from './delete-element-button.module.scss';
 
 /**
  * A delete button that will also ask for confirmation when shouldConfirm is
@@ -37,37 +37,58 @@ class DeleteElementButton extends React.Component {
   render() {
     if (this.state.confirming) {
       return (
-        <div className={classNames(style.right, style.confirming)}>
-          {commonMsg.deleteConfirm()}
-          <button
-            type="button"
-            className={style.red}
-            style={commonStyles.button}
+        <Box
+          sx={{
+            alignItems: 'center',
+            display: 'flex',
+            flexDirection: 'row',
+            gap: 1,
+          }}
+        >
+          <MuiTypography variant="body4">
+            {commonMsg.deleteConfirm()}
+          </MuiTypography>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
+            sx={{
+              background: 'var(--background-error-primary)',
+              '&:hover': {
+                background: 'var(--background-error-strong)',
+              },
+            }}
             onClick={this.finishDelete}
           >
             {commonMsg.yes()}
-          </button>
-          <button
-            type="button"
-            style={commonStyles.button}
+          </MuiButton>
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={this.abortDelete}
           >
             {commonMsg.no()}
-          </button>
-        </div>
+          </MuiButton>
+        </Box>
       );
     }
     return (
-      <div>
-        <button
-          type="button"
-          style={commonStyles.button}
-          className={classNames(style.red, style.right)}
-          onClick={this.handleDeleteInternal}
-        >
-          {commonMsg.delete()}
-        </button>
-      </div>
+      <MuiButton
+        type="button"
+        variant="contained"
+        color="primary"
+        size="small"
+        sx={{
+          background: 'var(--background-error-primary)',
+          '&:hover': {
+            background: 'var(--background-error-strong)',
+          },
+        }}
+        onClick={this.handleDeleteInternal}
+      >
+        {commonMsg.delete()}
+      </MuiButton>
     );
   }
 }

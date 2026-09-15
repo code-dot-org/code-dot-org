@@ -19,7 +19,6 @@ import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/Teach
 import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -285,18 +284,16 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.unitOverview}
               element={<TeacherUnitOverview />}
             />
-            {experiments.isEnabled('student-snapshot') && (
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
-                element={
-                  <ElementOrEmptyPage
-                    showNoStudents={studentCount === 0}
-                    showNoCurriculumAssigned={!anyStudentHasProgress}
-                    element={<StudentSnapshot />}
-                  />
-                }
-              />
-            )}
+            <Route
+              path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
+              element={
+                <ElementOrEmptyPage
+                  showNoStudents={studentCount === 0}
+                  showNoCurriculumAssigned={!anyStudentHasProgress}
+                  element={<StudentSnapshot />}
+                />
+              }
+            />
             <Route
               path={TEACHER_NAVIGATION_PATHS.settings}
               element={

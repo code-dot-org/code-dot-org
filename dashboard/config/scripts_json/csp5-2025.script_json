@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 19:57:07 UTC",
+    "serialized_at": "2026-07-07 21:22:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3322,35 +3322,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp5-2023/resources",
-      "key": "all_resources_4",
+      "url": "/courses/csp-2025/units/5/resources",
+      "key": "all_resources_15",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_4"
+        "resource.key": "all_resources_15"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp5-2023/standards",
-      "key": "all_standards_4",
+      "url": "/courses/csp-2025/units/5/standards",
+      "key": "all_standards_15",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_4"
+        "resource.key": "all_standards_15"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csp5-2023/vocab",
-      "key": "all_vocabulary",
+      "url": "/courses/csp-2025/units/5/vocab",
+      "key": "all_vocabulary_6",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_6"
       }
     },
     {
@@ -4010,19 +4010,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_4",
+        "resource.key": "all_resources_15",
         "script.name": "csp5-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_4",
+        "resource.key": "all_standards_15",
         "script.name": "csp5-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_vocabulary_6",
         "script.name": "csp5-2025"
       }
     },

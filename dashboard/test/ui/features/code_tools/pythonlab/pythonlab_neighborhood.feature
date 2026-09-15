@@ -1,6 +1,4 @@
 @no_mobile
-# Our minimum version of Safari does not support web workers
-@no_safari
 @eyes
 Feature: Python Lab Neighborhood eyes
 

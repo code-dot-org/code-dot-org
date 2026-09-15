@@ -1,5 +1,7 @@
 import type {Page} from '@playwright/test';
 
+import {cookieDomain} from './cookies';
+
 /** Cookie name used by Rack::CookieDCDO middleware. */
 const DCDO_COOKIE_NAME = 'DCDO';
 
@@ -11,19 +13,6 @@ export type DcdoJsonValue =
   | null
   | DcdoJsonValue[]
   | {[key: string]: DcdoJsonValue};
-
-/**
- * Derive the registrable domain (last two labels) from a hostname so the DCDO
- * cookie is shared across subdomains — e.g. "test-studio.code.org" and
- * "studio.code.org" both scope to ".code.org". Does not handle multi-label
- * public suffixes (ccTLDs like ".co.uk"), which the target hosts don't use.
- */
-export function cookieDomain(hostname: string): string {
-  const parts = hostname.split('.');
-  // Take the last two labels as the registrable domain.
-  const registrable = parts.slice(-2).join('.');
-  return `.${registrable}`;
-}
 
 /** Parse the DCDO cookie into a key→value map; {} if absent, empty, or invalid. */
 function parseDcdoCookie(

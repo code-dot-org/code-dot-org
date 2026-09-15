@@ -98,11 +98,12 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal "[\"https://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
   end
 
-  test "should get text_responses for section with default script" do
+  test "should get no text_responses for section with no assigned script" do
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    # we fall back to hoc_2014_unit, which has no text_response levels
+    # @section has no assigned unit and the request names no script, so there
+    # is no script to collect responses from
     assert_equal '[]', @response.body
   end
 
@@ -235,6 +236,45 @@ class ApiControllerTest < ActionController::TestCase
       }
     ]
     assert_equal expected_response, JSON.parse(@response.body)
+  end
+
+  test "text_responses question prefers long_instructions over title" do
+    script = create(:script, :in_single_unit_course, name: 'long-instructions-script')
+    lesson_group = create(:lesson_group, script: script)
+    lesson1 = create(:lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group)
+
+    # long_instructions present alongside title: long_instructions wins.
+    level1 = create(:free_response)
+    level1.properties['title'] = 'Ignored Title'
+    level1.properties['long_instructions'] = '## The real question'
+    level1.save!
+    create(:script_level, script: script, levels: [level1], lesson: lesson1)
+
+    # no long_instructions: falls back to title.
+    level2 = create(:free_response)
+    level2.properties['title'] = 'Only a title'
+    level2.save!
+    create(:script_level, script: script, levels: [level2], lesson: lesson2)
+
+    level_source1 = create(:level_source, level: level1, data: 'answer 1')
+    create(:activity, user: @student_1, level: level1, level_source: level_source1)
+    create(:user_level, user: @student_1, level: level1, script: script, attempts: 1, level_source: level_source1)
+
+    level_source2 = create(:level_source, level: level2, data: 'answer 2')
+    create(:activity, user: @student_1, level: level2, level_source: level_source2)
+    create(:user_level, user: @student_1, level: level2, script: script, attempts: 1, level_source: level_source2)
+
+    get :section_text_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+    assert_response :success
+
+    questions = JSON.parse(@response.body).map {|row| row['question']}
+    assert_includes questions, '## The real question'
+    assert_includes questions, 'Only a title'
+    refute_includes questions, 'Ignored Title'
   end
 
   test "should get no text_responses results for section with script without text response" do
@@ -1160,40 +1200,9 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'section_level_progress response should not be cached by the browser' do
-    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
+    get :section_level_progress, params: {section_id: @section.id, script_id: @script.id, page: 1, per: 2}
     assert_response :success
     assert_match "no-store", response.headers["Cache-Control"]
-  end
-
-  test "should get paginated section level progress" do
-    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['student_progress'].keys.length
-    assert_equal 4, data['pagination']['total_pages']
-
-    get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['student_progress'].keys.length
-
-    get :section_level_progress, params: {section_id: @section.id, page: 3, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['student_progress'].keys.length
-
-    # fourth page has only one student (of 7 total)
-    get :section_level_progress, params: {section_id: @section.id, page: 4, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 1, data['student_progress'].keys.length
-
-    # if we request 1 per page, page 8 should still work (because page 7 gave
-    # us a full page of data), but page 9 should fail
-    get :section_level_progress, params: {section_id: @section.id, page: 8, per: 1}
-    assert_response :success
-    get :section_level_progress, params: {section_id: @section.id, page: 9, per: 1}
-    assert_response 416
   end
 
   test "section with duplicated students loads all data when per is equal to the number of unique students" do
@@ -1214,23 +1223,22 @@ class ApiControllerTest < ActionController::TestCase
     create(:follower, section: duplicated_section, student_user: duplicated_students[2])
 
     sign_in duplicated_section_owner
-    get :section_level_progress, params: {section_id: duplicated_section.id, page: 1, per: 7}
+    get :section_level_progress, params: {section_id: duplicated_section.id, script_id: @script.id, page: 1, per: 7}
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 7, data['student_progress'].keys.length
   end
 
   test "should get section level progress with specific script" do
-    script = Unit.find_by_name('algebra')
     get :section_level_progress, params: {
       section_id: @section.id,
-      script_id: script.id
+      script_id: @script.id
     }
     assert_response :success
   end
 
   test "should get paginated section level progress with specific script" do
-    script = Unit.find_by_name('algebra')
+    script = @script
 
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     assert_response :success
@@ -1251,6 +1259,13 @@ class ApiControllerTest < ActionController::TestCase
     data = JSON.parse(@response.body)
     assert_equal 1, data['student_progress'].keys.length
     assert_equal 1, data['student_last_updates'].keys.length
+
+    # if we request 1 per page, page 8 should still work (because page 7 gave
+    # us a full page of data), but page 9 should fail
+    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 8, per: 1}
+    assert_response :success
+    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 9, per: 1}
+    assert_response 416
   end
 
   test "teacher_panel_progress returns progress when called with script and level" do
@@ -1828,6 +1843,301 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  # --- ClassLink rostering ---
+  #
+  # ClassLink uses a central partner credential with no per-user scoping, so
+  # unlike Clever/Google these endpoints enforce the whole authorization
+  # matrix themselves (design invariants I1-I3). The One Roster client is
+  # stubbed at its class-method seam; its HTTP behavior is covered in
+  # test/lib/clients/classlink_one_roster_test.rb.
+
+  CLASSLINK_TENANT = '2222'.freeze
+  CLASSLINK_TEACHER_SOURCED_ID = '11111'.freeze
+  CLASSLINK_APPLICATION = {bearer: 'district-bearer', oneroster_application_id: '%2FgVa0ed75Gs%43'}.freeze
+
+  def create_classlink_v2_teacher(tenant: CLASSLINK_TENANT, sourced_id: CLASSLINK_TEACHER_SOURCED_ID)
+    teacher = create(:teacher, :with_classlink_authentication_option)
+    create(
+      :authentication_option,
+      user: teacher,
+      credential_type: AuthenticationOption::CLASSLINK,
+      authentication_id: "#{tenant}|#{sourced_id}",
+      version: AuthenticationOption::Classlink::VERSION[:v2]
+    )
+    teacher.reload
+  end
+
+  test 'classlink_classrooms is Forbidden when not signed in' do
+    sign_out :user
+    get :classlink_classrooms
+    assert_response :forbidden
+  end
+
+  test 'classlink_classrooms rejects a requester without a v2 auth option' do
+    # v1-only holder: unmigrated, or in a district without OneRoster.
+    teacher = create(:teacher, :with_classlink_authentication_option)
+    sign_in teacher
+    Clients::ClasslinkOneRoster.expects(:application_for_tenant).never
+
+    get :classlink_classrooms
+
+    assert_response :forbidden
+    assert_equal 'Please sign in again from ClassLink to proceed with roster sync.', JSON.parse(response.body)['error']
+  end
+
+  test 'classlink_classrooms rejects a requester with no ClassLink credential at all' do
+    # The email-invited co-teacher case: the UI gate hides the entry point,
+    # but the endpoint must not rely on it.
+    sign_in create(:teacher)
+
+    get :classlink_classrooms
+
+    assert_response :forbidden
+    assert_equal 'Please sign in again from ClassLink to proceed with roster sync.', JSON.parse(response.body)['error']
+  end
+
+  test 'classlink_classrooms reports district not enabled when no application matches' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).with(CLASSLINK_TENANT).returns(nil)
+
+    get :classlink_classrooms
+
+    assert_response :forbidden
+    assert_equal "Your district hasn't enabled roster sync for CodeAI.", JSON.parse(response.body)['error']
+  end
+
+  test 'classlink_classrooms returns the teacher classes keyed by sourcedId and title' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).with(CLASSLINK_TENANT).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:teacher_classes).
+      with(CLASSLINK_APPLICATION[:oneroster_application_id], CLASSLINK_APPLICATION[:bearer], CLASSLINK_TEACHER_SOURCED_ID).
+      returns([{'sourcedId' => '33333', 'title' => 'Sci5 (Sci5)'}])
+
+    get :classlink_classrooms
+
+    assert_response :ok
+    assert_equal [{'id' => '33333', 'name' => 'Sci5 (Sci5)'}], JSON.parse(response.body)['courses']
+  end
+
+  test 'classlink_classrooms surfaces the district message on a non-expiry 401' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.stubs(:teacher_classes).
+      raises(Clients::ClasslinkOneRoster::DistrictAuthorizationError)
+
+    get :classlink_classrooms
+
+    assert_response :forbidden
+    assert_equal "Your district hasn't enabled roster sync for CodeAI.", JSON.parse(response.body)['error']
+  end
+
+  test 'classlink_classrooms falls back to the generic message on an unexpected failure' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.stubs(:teacher_classes).
+      raises(Clients::ClasslinkOneRoster::MalformedResponseError)
+
+    get :classlink_classrooms
+
+    assert_response :bad_gateway
+    assert_equal "We're having trouble getting roster information from ClassLink. Please try again later.", JSON.parse(response.body)['error']
+  end
+
+  test 'import_classlink_classroom is Forbidden when not signed in' do
+    sign_out :user
+    post :import_classlink_classroom
+    assert_response :forbidden
+  end
+
+  test 'import_classlink_classroom rejects a requester without a v2 auth option' do
+    teacher = create(:teacher, :with_classlink_authentication_option)
+    sign_in teacher
+    Clients::ClasslinkOneRoster.expects(:application_for_tenant).never
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :forbidden
+    assert_equal 'Please sign in again from ClassLink to proceed with roster sync.', JSON.parse(response.body)['error']
+  end
+
+  test 'import_classlink_classroom refuses first import of a class the requester does not teach' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      with(CLASSLINK_APPLICATION[:oneroster_application_id], CLASSLINK_APPLICATION[:bearer], '33333').
+      returns([{'sourcedId' => 'someone-else', 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).never
+    ClasslinkSection.expects(:from_service).never
+
+    assert_no_difference 'Section.count' do
+      post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+    end
+
+    assert_response :forbidden
+  end
+
+  test 'import_classlink_classroom allows first import when the requester teaches the class' do
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    students = [{'sourcedId' => '12345', 'givenName' => 'Ethan', 'familyName' => 'Doe', 'role' => 'student'}]
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: 1})
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).
+      with(CLASSLINK_APPLICATION[:oneroster_application_id], CLASSLINK_APPLICATION[:bearer], '33333').
+      returns(students)
+    ClasslinkSection.expects(:from_service).
+      with('33333', CLASSLINK_TENANT, teacher.id, students, 'Sci5').
+      returns(imported_section)
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :ok
+  end
+
+  test 'import_classlink_classroom syncs without teacher verification when requester is an instructor' do
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    students = [{'sourcedId' => '12345', 'givenName' => 'Ethan', 'familyName' => 'Doe', 'role' => 'student'}]
+    section = create(
+      :section,
+      user: teacher,
+      login_type: Section::LOGIN_TYPE_CLASSLINK,
+      code: ClasslinkSection.code_for(CLASSLINK_TENANT, '33333')
+    )
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: section.id})
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).never
+    Clients::ClasslinkOneRoster.expects(:class_students).returns(students)
+    ClasslinkSection.expects(:from_service).returns(imported_section)
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :ok
+  end
+
+  test 'import_classlink_classroom adds a verified co-teacher on an existing section' do
+    section_owner = create(:teacher)
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    section = create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_CLASSLINK,
+      code: ClasslinkSection.code_for(CLASSLINK_TENANT, '33333')
+    )
+
+    # Only the HTTP client is stubbed: the instructor row is created inside
+    # ClasslinkSection.from_service, so the model must actually run for this
+    # test to catch a co-teacher regression.
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).
+      returns([{'sourcedId' => '12345', 'givenName' => 'E', 'familyName' => 'D', 'role' => 'student'}])
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :ok
+    section.reload
+    assert section.instructors.exists?(id: teacher.id), 'verified co-teacher was not added as a section instructor'
+    assert_equal section_owner.id, section.user_id
+    assert_equal 1, section.students.size
+  end
+
+  test 'import_classlink_classroom refuses an unverified non-instructor sync and leaves the section unchanged' do
+    section_owner = create(:teacher)
+    attacker = create_classlink_v2_teacher(sourced_id: 'attacker-id')
+    sign_in attacker
+    section = create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_CLASSLINK,
+      code: ClasslinkSection.code_for(CLASSLINK_TENANT, '33333')
+    )
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).never
+    ClasslinkSection.expects(:from_service).never
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :forbidden
+    assert_empty section.reload.students
+  end
+
+  test 'import_classlink_classroom ignores forged tenant, application, and SourcedId params' do
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    students = [{'sourcedId' => '12345', 'givenName' => 'E', 'familyName' => 'D', 'role' => 'student'}]
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: 1})
+
+    # Identity must be server-derived: the client is only ever asked about the
+    # requester's own tenant, whatever the params claim.
+    Clients::ClasslinkOneRoster.expects(:application_for_tenant).with(CLASSLINK_TENANT).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).returns(students)
+    ClasslinkSection.expects(:from_service).
+      with('33333', CLASSLINK_TENANT, teacher.id, students, 'Sci5').
+      returns(imported_section)
+
+    post :import_classlink_classroom, params: {
+      courseId: '33333',
+      courseName: 'Sci5',
+      tenantId: '9999',
+      sourcedId: 'forged-teacher',
+      onerosterApplicationId: 'forged-app',
+    }
+
+    assert_response :ok
+  end
+
+  test 'import_classlink_classroom errors on a courseId not resolvable in the requester tenant' do
+    sign_in create_classlink_v2_teacher
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    # A foreign courseId is queried only within the requester's own
+    # application, where the proxy does not know it.
+    Clients::ClasslinkOneRoster.stubs(:class_teachers).raises(RestClient::NotFound)
+    ClasslinkSection.expects(:from_service).never
+
+    assert_no_difference 'Section.count' do
+      post :import_classlink_classroom, params: {courseId: 'other-district-class', courseName: 'Foreign'}
+    end
+
+    assert_response :bad_gateway
+    assert_equal "We're having trouble getting roster information from ClassLink. Please try again later.", JSON.parse(response.body)['error']
+  end
+
+  test 'import_classlink_classroom applies an empty roster like any other' do
+    # ClassLink is the source of truth: a sync to zero unenrolls everyone and
+    # is recoverable by a later correct sync, so it is not refused.
+    teacher = create_classlink_v2_teacher
+    sign_in teacher
+    imported_section = mock('ClasslinkSection')
+    imported_section.stubs(:summarize).returns({section_id: 1})
+
+    Clients::ClasslinkOneRoster.stubs(:application_for_tenant).returns(CLASSLINK_APPLICATION)
+    Clients::ClasslinkOneRoster.expects(:class_teachers).
+      returns([{'sourcedId' => CLASSLINK_TEACHER_SOURCED_ID, 'role' => 'teacher'}])
+    Clients::ClasslinkOneRoster.expects(:class_students).returns([])
+    ClasslinkSection.expects(:from_service).
+      with('33333', CLASSLINK_TENANT, teacher.id, [], 'Sci5').
+      returns(imported_section)
+
+    post :import_classlink_classroom, params: {courseId: '33333', courseName: 'Sci5'}
+
+    assert_response :ok
+  end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.
@@ -2267,5 +2577,47 @@ class ApiControllerTest < ActionController::TestCase
     level_source = create(:level_source)
     create(:user_level, level: level, user: student, script: script, level_source: level_source)
     # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
+  end
+end
+
+# ApiController#load_script resolves the script_id param, then the section's
+# assigned unit; when neither is present it returns nil, and the section
+# endpoints render an empty state or reject the request.
+class ApiControllerNoDefaultScriptTest < ActionController::TestCase
+  tests ApiController
+  include Devise::Test::ControllerHelpers
+
+  setup do
+    @teacher = create(:teacher)
+    # A section with no assigned script or course, so Section#default_script is
+    # nil and load_script returns nil.
+    @section = create(:section, user: @teacher, login_type: 'word')
+    @student = create(:student)
+    create(:follower, section: @section, student_user: @student)
+    sign_in @teacher
+  end
+
+  test 'lockable_state returns an empty lesson set for a section with no script' do
+    get :lockable_state
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal [@section.id.to_s], data.keys
+    assert_equal({}, data[@section.id.to_s]['lessons'])
+  end
+
+  test 'section_level_progress returns bad_request for a section with no script' do
+    get :section_level_progress, params: {section_id: @section.id}
+    assert_response :bad_request
+  end
+
+  test 'teacher_panel_progress returns bad_request for a section with no script' do
+    get :teacher_panel_progress, params: {section_id: @section.id}
+    assert_response :bad_request
+  end
+
+  test 'section_text_responses returns no responses for a section with no script' do
+    get :section_text_responses, params: {section_id: @section.id}
+    assert_response :success
+    assert_equal '[]', @response.body
   end
 end

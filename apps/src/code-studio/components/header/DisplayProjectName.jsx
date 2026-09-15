@@ -2,6 +2,7 @@
  * Displays the current project name and a button to begin editing it.
  * This should only be shown when the project name is not being edited.
  */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -37,8 +38,10 @@ export default class DisplayProjectName extends React.Component {
             'no-mc'
           )}
           onClick={this.props.beginEdit}
+          aria-label={i18n.rename()}
         >
-          {i18n.rename()}
+          <span className={styles.buttonText}>{i18n.rename()}</span>
+          <FontAwesomeV6Icon iconName="pencil" className={styles.buttonIcon} />
         </button>
       </div>
     );

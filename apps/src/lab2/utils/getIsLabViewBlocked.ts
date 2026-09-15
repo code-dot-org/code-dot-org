@@ -2,17 +2,26 @@ export const getIsLabViewBlocked = (
   pageAction: string,
   isBlockedAbuse: boolean,
   projectSharingDisabled: boolean,
+  hasPrivacyProfanityViolation: boolean,
   isOwner: boolean,
   isTeacherOfProjectOwner: boolean,
   isProjectValidator: boolean
 ): boolean => {
-  if (!isBlockedAbuse && !projectSharingDisabled) {
+  if (
+    !isBlockedAbuse &&
+    !projectSharingDisabled &&
+    !hasPrivacyProfanityViolation
+  ) {
     return false;
   }
   // If a project is blocked and in share view,
   // only render the lab view if owner or owner's teacher AND project sharing is disabled.
+  // A privacy/profanity violation blocks the lab view for everyone, overriding
+  // the owner exemption for disabled sharing.
   if (pageAction === 'share') {
-    return projectSharingDisabled && (isOwner || isTeacherOfProjectOwner)
+    return projectSharingDisabled &&
+      !hasPrivacyProfanityViolation &&
+      (isOwner || isTeacherOfProjectOwner)
       ? false
       : true;
   }

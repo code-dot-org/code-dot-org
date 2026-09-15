@@ -68,9 +68,8 @@ describe('CodeWritten', () => {
               fontSize: 14,
               lineHeight: '20px',
               fontWeight: 'normal',
-              outline: 'none',
               padding: 5,
-              fontColor: 'black',
+              color: 'black',
               marginLeft: 40,
               display: 'list-item',
             }}

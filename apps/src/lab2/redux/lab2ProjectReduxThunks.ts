@@ -328,7 +328,7 @@ function saveProjectIfEditable(
   }
 }
 
-const unflagProjectChannel = async (
+export const unflagProjectChannel = async (
   channelId: string,
   dispatch: AppDispatch
 ) => {

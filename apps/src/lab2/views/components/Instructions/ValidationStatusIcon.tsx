@@ -6,6 +6,8 @@ import moduleStyles from './validation-status-icon.module.scss';
 interface ValidationIconProps {
   status: 'passed' | 'failed' | 'pending' | 'caution' | 'error';
   className?: string;
+  /** Leave unset where nearby text already says the result. */
+  label?: string;
 }
 
 // Component that extracts out the logic for rendering a validation status icon.
@@ -14,6 +16,7 @@ interface ValidationIconProps {
 const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
   status,
   className,
+  label,
 }) => {
   const classes = useMemo(() => {
     const isDuotone = status !== 'pending';
@@ -34,7 +37,15 @@ const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
     }
   }, [status]);
 
-  return <i className={classNames(classes, className, moduleStyles.icon)} />;
+  // Unlabelled, the icon is color only, so hide it.
+  return (
+    <i
+      className={classNames(classes, className, moduleStyles.icon)}
+      role={label ? 'img' : undefined}
+      aria-label={label}
+      aria-hidden={label ? undefined : true}
+    />
+  );
 };
 
 export default ValidationStatusIcon;

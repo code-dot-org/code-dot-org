@@ -1,0 +1,44 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T02:43:24.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Forecast the Weather",
+    "long_instructions": "You’re building a program that shows users weather forecasts across multiple days.\r\n\r\n**Do This**\r\n\r\n1. Update the definition of `print_forecast` to print a forecast message that includes the `temperature` parameter and the `day` parameter.\r\n2. The program currently prints the forecast for two days. Add your own forecast for a third day! You can pick what day and what temperature you want to predict.",
+    "bubble_choice_description": "Build a program that shows users a weather forecast.",
+    "thumbnail_url": "https://images.code.org/7681d056ac8b9e1fd7c956014b965b62-weather.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def print_forecast(day, temperature):\n  # TODO 1: Fill in the message with a forecast that includes the temperature\n  print(f\"\")\n\nprint_forecast(\"Monday\", 60)\nprint_forecast(\"Tuesday\", 65)\n\n# TODO 2: Add a forecast for a third day.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrpoPFMjpm6QmZq\nf1p0ih43aOIiDFjIP+kZdWDQIgY+oXRwEoI46cb0vw+klvP3tfcZ4hfMlEdt\nA8mxBr0TSIaVbkd0JgRYXprzN8XSOpoRXrAf+pceym1kh4fHCzs5xQrUGFlX\nPnnldLvFQHUZb5LqvESSQySxChZ6xK88czK0boc6DYqhWXTdE3x4vMWYeRIZ\niAsudYT+7xvwZdBdywfMs2Wa0nYQRuHe4XDE1CS9lZ+tFpPhFZ7385iAaX6v\nm6sLvy89UosX5ECOUJ7qOI03OBR6GW6j9KEc3Og6jg9qzFQ25VXC+ZJWXNjW\nIlO/lvLxDPBgccR70Nen+NiM0JJJF1+rwCbqK98siKPTtqxuSaewWQa8DhTJ\niRb1fwm/53dcxOEzZMxedgHo+K82zSPf\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:43:28 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:58:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:09:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:09:28 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

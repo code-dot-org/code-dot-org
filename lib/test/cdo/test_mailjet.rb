@@ -6,6 +6,12 @@ class MailJetTest < Minitest::Test
     MailJet.stubs(:enabled?).returns(true)
   end
 
+  def test_email_sender_names_do_not_use_old_brand
+    MailJet::EMAILS.each_value do |email_config|
+      refute_includes email_config[:from_name], 'Code.org'
+    end
+  end
+
   def test_create_contact
     email = 'fake.email@test.xx'
     name = 'Fake Name'

@@ -21,7 +21,7 @@ Feature: App Lab Data Tab
 
   Scenario: Data Tables Tab
     # Create a new table
-    And I press keys "My new table" for element ".uitest-add-table-input:first-of-type"
+    And I press keys "My new table" for element ".uitest-add-table-input input"
     And I click selector ".uitest-add-table-btn:first-of-type"
     Then I wait until element "#dataTable span:first-of-type" contains text "My new table"
 

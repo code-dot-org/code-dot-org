@@ -114,8 +114,8 @@ const ExpandableImagesScenario = () => {
 /*
  * Localization runs against the core localization plugin, which is inactive
  * unless LocalizeJS is loaded. This patches the singleton to simulate a loaded
- * translator that uppercases text, so you can see translation happen — the
- * Blockly XML is hidden from the translator and restored, and code is preserved.
+ * translator that uppercases text, so you can see translation happen — inline
+ * code is renamed for translation and restored.
  * Patching is in an effect (and a 'change' event re-renders), restored on
  * unmount. (@testing-library's render flushes effects, so the visual screenshot
  * captures the translated result deterministically.)

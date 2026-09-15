@@ -28,14 +28,14 @@ We’ll start with a simple list, use `.map()` to transform it, and then connect
 
 
 
-  <div style="font-size: 14px;">
+  <div style="font-size: 12px;">
     <strong>
-      <p style = "font-size:14pt;"></p>Look at the code and output below. What happens when <code>.map()</code> is used?</p>
+      <p style = "font-size:12pt;"></p>Look at the code and output below. What happens when <code>.map()</code> is used?</p>
     </strong>
 
-<ul style="margin-top: 14px;">
-      <li style = "font-size: 14pt;"><i>What happens to each item in the list?</i></li>
-      <li style = "font-size: 14pt;"><i>What does the final output look like compared to the original array?</i></li>
+<ul style="margin-top: 12px;">
+      <li style = "font-size: 12pt;"><i>What happens to each item in the list?</i></li>
+      <li style = "font-size: 12pt;"><i>What does the final output look like compared to the original array?</i></li>
     </ul>
   </div>
 </div>

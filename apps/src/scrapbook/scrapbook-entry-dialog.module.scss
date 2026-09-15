@@ -1,0 +1,103 @@
+@import '@code-dot-org/component-library-styles/colors';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+  width: 100%;
+  align-self: stretch;
+}
+
+.screenshots {
+  display: flex;
+  // Indent by the stem-row label column (80px min-width + 12px gap) so the
+  // images line up with the textareas below rather than starting at the
+  // dialog's left edge.
+  padding-inline-start: 92px;
+  gap: 10px;
+}
+
+.screenshotSlot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.screenshotLabel {
+  // Type scale comes from the MUI Typography overline3 variant; this only
+  // tints it to secondary.
+  color: var(--text-neutral-secondary);
+}
+
+.screenshotImg {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.stems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stemRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.stemLabel {
+  // Type scale comes from the MUI Typography body3 variant; this handles
+  // layout (label column) and the italic secondary treatment.
+  min-width: 80px;
+  padding-top: 10px;
+  font-style: italic;
+  color: var(--text-neutral-secondary);
+}
+
+.stemField {
+  flex: 1;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  resize: vertical;
+  box-shadow: none;
+
+  &:focus {
+    outline: 2px solid var(--borders-brand-primary);
+    outline-offset: -1px;
+  }
+
+  &:disabled {
+    background-color: var(--background-neutral-secondary);
+    color: var(--text-neutral-secondary);
+  }
+}
+
+.error {
+  // Type scale comes from the MUI Typography body4 variant; this only tints
+  // it to the error color.
+  color: var(--text-error);
+}
+
+.experimentChipRow {
+  // Anchored to top-left of the dialog itself (the dialog has position:relative
+  // so absolute positioning here lands on its top-left padded area). This puts
+  // the chip on the same vertical line as the centered "Add to Scrapbook"
+  // heading rather than below it in the customContent flow.
+  position: absolute;
+  inset-block-start: 2.25rem;
+  inset-inline-start: 3.5rem;
+}

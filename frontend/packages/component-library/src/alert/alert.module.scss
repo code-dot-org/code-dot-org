@@ -1,7 +1,7 @@
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
 
-$alert-span-vertical-top-spacing: 2px;
+$alert-span-vertical-top-spacing: 0;
 
 .alert {
   display: flex;

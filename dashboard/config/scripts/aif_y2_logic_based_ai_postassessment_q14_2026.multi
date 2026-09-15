@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q14-2026'
+
+wrong 'By picking different decisions until the user identifies the best one'
+wrong 'By looping through each decision and comparing them to identify the best choice'
+wrong 'By answering questions posed by the user to eliminate bad decisions until only one is left'
+right 'By using the answers to a series of questions to lead to a final decision'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+How could a computer use a decision tree to make intelligent decisions?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Decision Trees
+MARKDOWN

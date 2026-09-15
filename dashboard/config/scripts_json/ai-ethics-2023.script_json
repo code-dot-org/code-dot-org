@@ -50,7 +50,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-25 04:49:49 UTC",
+    "serialized_at": "2026-08-03 21:09:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1812,6 +1812,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/courses/ai-ethics-2023/units/1/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-ethics-2023/units/1/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/ai-ethics-2023/units/1/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Character Card (Spread Over Individual Docs)",
       "url": "https://drive.google.com/drive/folders/1IFYT6VWTQQ2-rMZ_AqExzOQNsmONdhih?usp=drive_link",
       "key": "character_card_individual_docs_",
@@ -2060,7 +2093,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "ai-ethics-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "ai-ethics-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "ai-ethics-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

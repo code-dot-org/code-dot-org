@@ -44,7 +44,7 @@ module LegacyVarnishHelpers
       # Escape some valid special characters
       path.gsub!(/[.+$"]/) {|s| '\\' + s}
       # Replace * wildcards with .* regex fragment
-      path.gsub!(/\*/, '.*')
+      path.gsub!("*", '.*')
       "^#{path}#{END_URL_REGEX}"
     end
   end

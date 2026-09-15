@@ -22,6 +22,7 @@ export {
   type LabFixture,
   type LabFixtures,
 } from './registry';
+export {fixtureFactory} from './factory';
 export {getMockHandlers} from './handlers';
 export {startMockWorker, getMockWorker} from './worker';
 export {

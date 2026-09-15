@@ -795,7 +795,7 @@ Artist.prototype.reset = function (ignore) {
 Artist.prototype.runButtonClick = function () {
   this.shouldAnimate_ = !this.instant_;
   this.studioApp_.toggleRunReset('reset');
-  document.getElementById('spinner').style.visibility = 'visible';
+  document.getElementById('spinner').style.display = 'inline-block';
   this.studioApp_.attempts++;
   this.execute(this.executionInfo);
 };
@@ -1023,7 +1023,7 @@ Artist.prototype.executeTuple_ = function () {
 Artist.prototype.finishExecution_ = function () {
   this.studioApp_.stopLoopingAudio('start');
 
-  document.getElementById('spinner').style.visibility = 'hidden';
+  document.getElementById('spinner').style.display = 'none';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }

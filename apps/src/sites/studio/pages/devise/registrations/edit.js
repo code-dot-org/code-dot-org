@@ -2,11 +2,16 @@ import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import AccountEditHeader from '@cdo/apps/accounts/AccountEditHeader';
 import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
 import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
+import ChangeUserTypeSection from '@cdo/apps/accounts/ChangeUserTypeSection';
+import CreatePersonalLogin from '@cdo/apps/accounts/CreatePersonalLogin';
 import DeleteAccount from '@cdo/apps/accounts/DeleteAccount';
+import ExpireOtherSessions from '@cdo/apps/accounts/ExpireOtherSessions';
+import ForParentsAndGuardians from '@cdo/apps/accounts/ForParentsAndGuardians';
 import LtiRosterSyncSettings from '@cdo/apps/accounts/LtiRosterSyncSettings';
 import ManageLinkedAccountsController from '@cdo/apps/accounts/ManageLinkedAccountsController';
 import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
@@ -38,9 +43,26 @@ const {
   dependentStudentsCount,
   personalAccountLinkingEnabled,
   lmsName,
+  userTypeOptions,
 } = scriptData;
 
 $(document).ready(() => {
+  const accountEditHeaderMountPoint = document.getElementById(
+    'account-edit-header'
+  );
+  if (accountEditHeaderMountPoint) {
+    createReactRoot(
+      <AccountEditHeader
+        title={accountEditHeaderMountPoint.dataset.title}
+        backLabel={accountEditHeaderMountPoint.dataset.backLabel}
+      />,
+      accountEditHeaderMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
+
   const migrateMultiAuthMountPoint =
     document.getElementById('migrate-multi-auth');
   if (migrateMultiAuthMountPoint) {
@@ -81,6 +103,30 @@ $(document).ready(() => {
     );
   }
 
+  // Render the React "For Parents and Guardians" section before constructing the
+  // parent-email controllers below, which attach to the Update/Remove links it
+  // renders (by id).
+  const forParentsMountPoint = document.getElementById('add-parent-email');
+  if (forParentsMountPoint) {
+    createReactRoot(
+      <ForParentsAndGuardians
+        heading={forParentsMountPoint.dataset.heading}
+        intro={forParentsMountPoint.dataset.intro}
+        emailLabel={forParentsMountPoint.dataset.emailLabel}
+        currentEmail={forParentsMountPoint.dataset.currentEmail}
+        updateLabel={forParentsMountPoint.dataset.updateLabel}
+        hasParentEmail={forParentsMountPoint.dataset.hasParentEmail === 'true'}
+        orLabel={forParentsMountPoint.dataset.orLabel}
+        removeLabel={forParentsMountPoint.dataset.removeLabel}
+        note={forParentsMountPoint.dataset.note}
+      />,
+      forParentsMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
+
   const updateDisplayedParentEmail = parentEmail => {
     const displayedParentEmail = $('#displayed-parent-email');
     displayedParentEmail.text(parentEmail);
@@ -103,7 +149,30 @@ $(document).ready(() => {
     link: $('#remove-parent-email-link'),
   });
 
-  new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
+  const changeUserTypeController = new ChangeUserTypeController(
+    $('#change-user-type-modal-form'),
+    userType
+  );
+  const changeUserTypeMountPoint = document.getElementById('change-user-type');
+  if (changeUserTypeMountPoint) {
+    createReactRoot(
+      <ChangeUserTypeSection
+        initialUserType={userType}
+        userTypeOptions={(userTypeOptions || []).map(([text, value]) => ({
+          text,
+          value,
+        }))}
+        heading={changeUserTypeMountPoint.dataset.heading}
+        dropdownLabel={changeUserTypeMountPoint.dataset.dropdownLabel}
+        buttonLabel={changeUserTypeMountPoint.dataset.buttonLabel}
+        onConfirm={changeUserTypeController.handleConfirm}
+      />,
+      changeUserTypeMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
 
   const addPasswordMountPoint = document.getElementById('add-password-fields');
   if (addPasswordMountPoint) {
@@ -213,8 +282,63 @@ $(document).ready(() => {
         dependentStudentsCount={dependentStudentsCount}
         hasStudents={dependentStudentsCount > 0}
         isAdmin={isAdmin}
+        canDelete={deleteAccountMountPoint.dataset.canDelete === 'true'}
+        managedNote={deleteAccountMountPoint.dataset.managedNote}
       />,
       deleteAccountMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
+
+  const expireOtherSessionsMountPoint = document.getElementById(
+    'expire-other-sessions'
+  );
+  if (expireOtherSessionsMountPoint) {
+    createReactRoot(
+      <ExpireOtherSessions
+        expirePath={expireOtherSessionsMountPoint.dataset.expirePath}
+        heading={expireOtherSessionsMountPoint.dataset.heading}
+        description={expireOtherSessionsMountPoint.dataset.description}
+        buttonLabel={expireOtherSessionsMountPoint.dataset.buttonLabel}
+      />,
+      expireOtherSessionsMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
+
+  const createPersonalLoginMountPoint = document.getElementById(
+    'create-personal-login'
+  );
+  if (createPersonalLoginMountPoint) {
+    const data = createPersonalLoginMountPoint.dataset;
+    createReactRoot(
+      <CreatePersonalLogin
+        linkingEnabled={data.linkingEnabled === 'true'}
+        noEmail={data.noEmail === 'true'}
+        secretWordAccount={data.secretWordAccount === 'true'}
+        userAge={userAge}
+        hashedEmail={data.hashedEmail}
+        heading={data.heading}
+        description={data.description}
+        enterNewLoginInfo={data.enterNewLoginInfo}
+        usernameLabel={data.usernameLabel}
+        emailLabelMarkdown={data.emailLabelMarkdown}
+        passwordLabel={data.passwordLabel}
+        passwordConfirmationLabel={data.passwordConfirmationLabel}
+        confirmSecretWordsHeading={data.confirmSecretWordsHeading}
+        secretWordsLabel={data.secretWordsLabel}
+        enterParentEmailHeading={data.enterParentEmailHeading}
+        parentEmailLabel={data.parentEmailLabel}
+        termsMarkdown={data.termsMarkdown}
+        emailNoteMarkdown={data.emailNoteMarkdown}
+        submitLabel={data.submitLabel}
+        lockIconSrc={data.lockIconSrc}
+      />,
+      createPersonalLoginMountPoint,
       {
         legacyReactDomRender: true,
       }
@@ -224,18 +348,4 @@ $(document).ready(() => {
   analyticsReporter.sendEvent(EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED, {
     'user type': userType,
   });
-
-  initializeCreatePersonalAccountControls();
 });
-
-function initializeCreatePersonalAccountControls() {
-  $('#edit_user_create_personal_account').on('submit', function (e) {
-    if ($('#create_personal_user_email').length) {
-      window.dashboard.hashEmail({
-        email_selector: '#create_personal_user_email',
-        hashed_email_selector: '#create_personal_user_hashed_email',
-        age_selector: '#user_age',
-      });
-    }
-  });
-}
