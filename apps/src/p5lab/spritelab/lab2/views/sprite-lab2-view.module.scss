@@ -1,4 +1,5 @@
 @use './imageTile' as tile;
+@use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '../quiet-button.scss' as buttons;
 
 .labRow {
@@ -697,3 +698,8 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// Visually hidden, read by screen readers (the playspace narration live
+// region).
+.srOnly {
+  @include chrome.sr-only;
+}

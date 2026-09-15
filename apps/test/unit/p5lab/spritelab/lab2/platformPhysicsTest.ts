@@ -1,4 +1,6 @@
 import {
+  distanceToEdgeAhead,
+  distanceToWallAhead,
   hasSupportAhead,
   hasSupportAt,
   isAtEdge,
@@ -455,5 +457,87 @@ describe('platformPhysics with trimmed-art dimensions', () => {
     const xs = new Set<number>();
     run(player, walls, 40, 0, s => xs.add(s.position.x));
     expect([...xs]).toEqual([175]);
+  });
+});
+
+// Body halfW 10, imgHalfW 12.5; standing on row 5 puts the feet at y=250.
+describe('platformPhysics hazard distances', () => {
+  // Standing on the row-5 platform, at the grid's own scale.
+  const standing = (x: number) => makeSprite(x, 225);
+
+  it('measures the gap to the wall face ahead', () => {
+    // Wall at column 3 presents its left face at x=150; the body's leading
+    // edge is at 110.
+    expect(
+      distanceToWallAhead(standing(100), 1, [wallAt(3, 4)], VIEW)
+    ).toBeCloseTo(40);
+  });
+
+  it('measures leftward the same way', () => {
+    // Column 1's right face is at x=100; the trailing edge is at 190.
+    expect(
+      distanceToWallAhead(standing(200), -1, [wallAt(1, 4)], VIEW)
+    ).toBeCloseTo(90);
+  });
+
+  it('reads zero when already against the wall', () => {
+    expect(
+      distanceToWallAhead(standing(140), 1, [wallAt(3, 4)], VIEW)
+    ).toBeCloseTo(0);
+  });
+
+  it('ignores a wall the body would pass under', () => {
+    // Row 0 is four rows above the feet: no overlap, so not an obstacle.
+    // What is left is the view's own right edge, measured on the image box.
+    expect(
+      distanceToWallAhead(standing(100), 1, [wallAt(3, 0)], VIEW)
+    ).toBeCloseTo(287.5);
+  });
+
+  it('treats the view edge as the obstacle in open ground', () => {
+    expect(distanceToWallAhead(standing(100), 1, [], VIEW)).toBeCloseTo(287.5);
+    expect(distanceToWallAhead(standing(100), -1, [], VIEW)).toBeCloseTo(87.5);
+  });
+
+  it('measures the gap to the lip of the platform underfoot', () => {
+    // Columns 2 and 3 pave x=100..200; the leading edge is at 130.
+    const platform = [wallAt(2, 5), wallAt(3, 5)];
+    expect(distanceToEdgeAhead(standing(120), 1, platform, VIEW)).toBeCloseTo(
+      70
+    );
+  });
+
+  it('reads zero at the lip', () => {
+    const platform = [wallAt(2, 5), wallAt(3, 5)];
+    expect(distanceToEdgeAhead(standing(190), 1, platform, VIEW)).toBeCloseTo(
+      0
+    );
+  });
+
+  it('measures to the near lip going the other way', () => {
+    const platform = [wallAt(2, 5), wallAt(3, 5)];
+    expect(distanceToEdgeAhead(standing(180), -1, platform, VIEW)).toBeCloseTo(
+      70
+    );
+  });
+
+  it('stops the run at a hole rather than paving over it', () => {
+    // Column 3 is missing, so the platform underfoot ends at x=150.
+    const gapped = [wallAt(2, 5), wallAt(4, 5)];
+    expect(distanceToEdgeAhead(standing(120), 1, gapped, VIEW)).toBeCloseTo(20);
+  });
+
+  it('finds no edge on the view floor', () => {
+    // Feet on the floor line: it runs the whole width, so there is no lip.
+    expect(distanceToEdgeAhead(makeSprite(100, 375), 1, [], VIEW)).toBe(
+      Infinity
+    );
+  });
+
+  it('finds no edge while off its footing', () => {
+    // Mid-air over the hole between columns 2 and 4.
+    expect(
+      distanceToEdgeAhead(makeSprite(175, 180), 1, [wallAt(2, 5)], VIEW)
+    ).toBe(Infinity);
   });
 });

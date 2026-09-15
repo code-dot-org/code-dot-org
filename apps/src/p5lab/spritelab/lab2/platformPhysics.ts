@@ -405,6 +405,93 @@ function feetLine(sprite: PhysicsSprite): {halfW: number; feet: number} {
 }
 
 /**
+ * Pixels from the player's leading edge (`direction` 1 right, -1 left) to
+ * the nearest wall that would stop it; 0 when already against one. Follows
+ * the resolver's own rule, so it measures the wall actually hit.
+ */
+export function distanceToWallAhead(
+  sprite: PhysicsSprite,
+  direction: 1 | -1,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): number {
+  const {imgHalfW, halfW, halfH, drop} = playerBody(sprite);
+  const bodyY = sprite.position.y + drop;
+  const lead = sprite.position.x + direction * halfW;
+  let nearest = Infinity;
+  walls.forEach(wall => {
+    const half = wallHalf(wall);
+    // Too little overlap to block: the resolver lets the body past.
+    if (halfH + half - Math.abs(bodyY - wall.position.y) < MIN_SOLID_OVERLAP) {
+      return;
+    }
+    const face =
+      direction > 0 ? wall.position.x - half : wall.position.x + half;
+    const gap = (face - lead) * direction;
+    if (gap >= 0) {
+      nearest = Math.min(nearest, gap);
+    }
+  });
+  // The screen edges stop the player too, measured on the art, as the
+  // resolver measures them.
+  const imgLead = sprite.position.x + direction * imgHalfW;
+  const side = direction > 0 ? view.width - imgLead : imgLead;
+  return Math.max(0, Math.min(nearest, side));
+}
+
+/**
+ * Pixels from the player's leading edge to the end of the ground underfoot;
+ * 0 at the edge, Infinity when there is none to reach (the screen floor, or
+ * already falling).
+ */
+export function distanceToEdgeAhead(
+  sprite: PhysicsSprite,
+  direction: 1 | -1,
+  walls: PhysicsBox[],
+  view: View,
+  gravity: number = PLATFORM_GRAVITY
+): number {
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const {halfW, feet} = feetLine(s);
+    // The screen floor runs the whole width: no edge to walk off.
+    if (feet >= view.height - CONTACT_EPSILON) {
+      return Infinity;
+    }
+    const spans = wallsAtFeet(w, feet)
+      .map(wall => {
+        const half = wallHalf(wall);
+        return {min: wall.position.x - half, max: wall.position.x + half};
+      })
+      .sort((a, b) => a.min - b.min);
+    // Further off than half the player's width isn't underfoot at all.
+    let index = spans.findIndex(
+      span =>
+        s.position.x >= span.min - halfW && s.position.x <= span.max + halfW
+    );
+    if (index < 0) {
+      return Infinity;
+    }
+    // A row of touching blocks is one platform, so walk to its far end.
+    // They are sorted, so touching is a property of the pair either way.
+    const abuts = (i: number) =>
+      i + 1 < spans.length &&
+      spans[i + 1].min <= spans[i].max + CONTACT_EPSILON;
+    if (direction > 0) {
+      while (abuts(index)) {
+        index++;
+      }
+    } else {
+      while (index > 0 && abuts(index - 1)) {
+        index--;
+      }
+    }
+    const lip = direction > 0 ? spans[index].max : spans[index].min;
+    return Math.max(0, (lip - (s.position.x + direction * halfW)) * direction);
+  });
+}
+
+/**
  * Whether there is footing under the body's leading edge in `direction`
  * (1 right, -1 left): false with the toes over a drop.
  */

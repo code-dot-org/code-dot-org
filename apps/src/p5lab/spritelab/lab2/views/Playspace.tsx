@@ -16,6 +16,9 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
+// Read when focus reaches the game. The play-by-play is all sound.
+const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
+
 // The engine's p5 canvas is a fixed 400x400 (p5lab APP_WIDTH/HEIGHT); we scale
 // it with a CSS transform to fit either the corner preview or the centered
 // play area.
@@ -256,6 +259,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
+        aria-describedby={mode === 'play' ? CONTROLS_HELP_ID : undefined}
         tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
@@ -344,6 +348,16 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           </div>
         )}
       </div>
+      {/* Outside the box: role="application" hides what is inside it from
+          screen readers, so anything to be read must sit beside it. */}
+      {mode === 'play' && (
+        <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
+          Arrow keys move left and right. Space jumps. The game answers in
+          sound: footsteps while you walk, and a tone that follows your height —
+          a jump slides it up and back, and where it ends tells you how far you
+          fell.
+        </p>
+      )}
     </div>
   );
 };

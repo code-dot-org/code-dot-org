@@ -38,6 +38,8 @@ import {
 } from './imageTrim';
 import {
   CONTACT_EPSILON,
+  distanceToEdgeAhead,
+  distanceToWallAhead,
   hasSupportAhead,
   isAtEdge,
   isSupported,
@@ -45,6 +47,7 @@ import {
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
 } from './platformPhysics';
+import {initialPlayerEventState, playerEvents} from './playerEvents';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
@@ -145,6 +148,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayMusic = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
+    // Set by the view (useGameAudio).
+    this.onPlayerFrame = null;
+    this.onPlayerSound = null;
+    this.observedX_ = 0;
+    this.observedY_ = 0;
+    this.observedFacing_ = 'right';
+    this.playerEvents_ = initialPlayerEventState();
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -305,6 +315,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     // set-gravity block says otherwise. Negative flips the world: players
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
+    // A fresh run is a fresh player, not a stride across the map.
+    this.observedX_ = 0;
+    this.observedY_ = 0;
+    this.observedFacing_ = 'right';
+    this.playerEvents_ = initialPlayerEventState();
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
     };
@@ -974,6 +989,51 @@ export default class SpriteLab2Engine extends SpriteLab {
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
+    }
+    // The one point holding both what was asked for and what was allowed.
+    this.observePlayer_(players, walls, view);
+  }
+
+  // First player only: the controls drive the whole group as one.
+  observePlayer_(players, walls, view) {
+    if ((!this.onPlayerFrame && !this.onPlayerSound) || !players.length) {
+      return;
+    }
+    const {sprite, x: requestedX, y: requestedY} = players[0];
+    const gravity = this.platformGravity_;
+    // Weightless is steering: no footing to lose, no edge to fall from.
+    const weightless = gravity === 0;
+    const grounded = weightless || isSupported(sprite, walls, view, gravity);
+    const previousX = this.observedX_;
+    const previousY = this.observedY_;
+    this.observedX_ = sprite.position.x;
+    this.observedY_ = sprite.position.y;
+    const moved = sprite.position.x - previousX;
+    // Positive is away from the ground, whichever way gravity points.
+    const up = weightless ? 0 : -Math.sign(gravity);
+    // Kept while standing still, so a warning doesn't drop when you pause.
+    this.observedFacing_ = nextFacing(this.observedFacing_, moved);
+    const direction = this.observedFacing_ === 'left' ? -1 : 1;
+    if (this.onPlayerSound) {
+      playerEvents(this.playerEvents_, {
+        moved,
+        requested: requestedX - previousX,
+        movedUp: (sprite.position.y - previousY) * up,
+        requestedUp: (requestedY - previousY) * up,
+        grounded,
+      }).forEach(event => this.onPlayerSound(event));
+    }
+    if (this.onPlayerFrame) {
+      this.onPlayerFrame({
+        wall: distanceToWallAhead(sprite, direction, walls, view, gravity),
+        // Mid-jump, the drop ahead is what you are aiming over.
+        edge:
+          grounded && !weightless
+            ? distanceToEdgeAhead(sprite, direction, walls, view, gravity)
+            : Infinity,
+        above: (view.height - sprite.position.y) / view.height,
+        airborne: !grounded,
+      });
     }
   }
 
