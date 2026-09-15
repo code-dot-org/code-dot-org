@@ -15,6 +15,7 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
@@ -58,7 +59,7 @@ export const handleSaveToBackpack = async (
   backpackApi: SaveToBackpackApi | undefined,
   dialogControl: DialogControlInterface,
   backpackFileList: string[],
-  errorCallback: (error: string) => void
+  notify: BackpackNotify
 ) => {
   if (!reactFlow || !backpackApi) {
     return;
@@ -69,7 +70,7 @@ export const handleSaveToBackpack = async (
     await Lab2Registry.getInstance().getProjectManager()?.flushSave();
     await waitForShareFailureRefresh();
   } catch (error) {
-    errorCallback('Could not save your sketch. Please try again.');
+    notify('danger', 'Could not save your sketch. Please try again.');
     return;
   }
 
@@ -98,7 +99,7 @@ export const handleSaveToBackpack = async (
       ? await backpackApi.getFileLists()
       : {[backpackApi.appType]: backpackFileList};
   } catch (error) {
-    errorCallback('Could not read your Backpack. Please try again.');
+    notify('danger', 'Could not read your Backpack. Please try again.');
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Backpack file list fetch error', error as Error);
@@ -141,13 +142,20 @@ export const handleSaveToBackpack = async (
   }
 
   const newFileName = extractUserInput(dialogResults) + '.png';
+  // The snapshot is drawn before the upload starts, and both can take a moment,
+  // so the in-progress toast covers the pair. Whatever comes next replaces it.
+  if (unifiedApi) {
+    notify('info', `Saving ${newFileName} to your Backpack...`);
+  }
+
   const {blob, error} = await createSketchSnapshotBlob(reactFlow);
   if (error) {
-    errorCallback(error);
+    notify('danger', error);
     return;
   }
   if (!blob) {
-    errorCallback(
+    notify(
+      'danger',
       `Error saving ${newFileName} to your Backpack. Please try again`
     );
     return;
@@ -162,12 +170,16 @@ export const handleSaveToBackpack = async (
       newFileName,
       blob,
       () => {
-        errorCallback(
+        notify(
+          'danger',
           `Error saving ${newFileName} to your Backpack. Please try again`
         );
         resolve(false);
       },
       () => {
+        if (unifiedApi) {
+          notify('success', `${newFileName} saved to your Backpack.`);
+        }
         sendLab2AnalyticsEvent(eventName, {fileType: 'png'});
         resolve(true);
       }
@@ -183,7 +195,8 @@ export const handleSaveToBackpack = async (
   try {
     await unifiedApi.deleteFromLegacyBackpacks(newFileName, filenamesByAppType);
   } catch (error) {
-    errorCallback(
+    notify(
+      'danger',
       "We saved your sketch, but couldn't delete your old file. You can retry the delete in the Backpack."
     );
     Lab2Registry.getInstance()

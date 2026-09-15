@@ -422,8 +422,10 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           className={moduleStyles.saveButton}
           disabled={actionInProgress || viewingOldVersion}
           onClick={() =>
-            saveToBackpackButton.onClick(fileList || [], (error: string) =>
-              addAlert('danger', error, false)
+            saveToBackpackButton.onClick(fileList || [], (type, message) =>
+              // Only a success clears itself; progress and errors stay until the
+              // next alert replaces them.
+              addAlert(type, message, type === 'success')
             )
           }
           type="button"

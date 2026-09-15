@@ -237,8 +237,8 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
     setActionInProgress(true);
     try {
-      await saveToBackpackButton.onClick(fileNames, (error: string) =>
-        showToast(error, toastOptionsFor('danger'))
+      await saveToBackpackButton.onClick(fileNames, (type, message) =>
+        showToast(message, toastOptionsFor(type))
       );
     } finally {
       setActionInProgress(false);

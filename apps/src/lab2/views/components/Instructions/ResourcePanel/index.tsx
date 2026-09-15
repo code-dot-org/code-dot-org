@@ -45,6 +45,7 @@ import {useRubric} from '@cdo/apps/lab2/views/components/rubrics/RubricWrapper';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import experiments from '@cdo/apps/util/experiments';
@@ -110,10 +111,7 @@ export interface BackpackProps {
   findIdForFileName: (fileName: string) => string | undefined;
   saveToBackpackButton?: {
     text: string;
-    onClick: (
-      fileList: string[],
-      errorCallback: (error: string) => void
-    ) => Promise<void>;
+    onClick: (fileList: string[], notify: BackpackNotify) => Promise<void>;
   };
   supportedFileTypes: string[];
   /** Custom tooltip text to display for the Add File button. */
