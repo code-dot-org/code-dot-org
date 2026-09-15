@@ -15,12 +15,24 @@ The current patches are:
 
 We run `setup_pythonlab()`, a method this package exposes, before each student run, which only applies
 the matplotlib patch for now. We also run `teardown_pythonlab()` after each run, which flushes stdout, changes
-directory to the home folder, and drops the state our packages hold across runs: the neighborhood's grid and
-theater's default scene. Pyodide keeps one interpreter for the lifetime of the tab, and the module cache is only
+directory to the home folder, and drops the state our packages hold across runs: the neighborhood's grid,
+theater's default scene, and the kiosk's default screen. Pyodide keeps one interpreter for the lifetime of the tab, and the module cache is only
 purged of the student's own files, so without that reset the next run would resume the previous run's world and
 replay its drawing. `reset_theater()` looks `theater` up in `sys.modules` rather than importing it: the wheel is
 loaded only for a program that imports `theater`, so an import in teardown would raise
 `ModuleNotFoundError` on every other run.
+
+### kiosk
+This package gives student code a screen of buttons and labels, and a loop that runs a Python
+function when a button is pressed. It is the only interactive mini app: `kiosk/support/bridge.py`
+publishes the screen through `_kiosk_bridge.publish` (a JS module the Pyodide web worker registers,
+like theater's) and blocks on `_kiosk_bridge.waitForEvent`, a synchronous request the input service
+worker answers with the id of whatever was pressed — the same round trip that carries `input()`.
+`kiosk.start()` does not return on its own; the student ends the program with Stop. Like theater's
+default scene, the default screen is state held across runs, so `teardown_pythonlab()` drops it via
+`reset_kiosk()`. The wheel is fetched only for a program that imports `kiosk`
+(see `ON_DEMAND_PACKAGE_URLS`), which is why that reset looks the module up in `sys.modules` rather
+than importing it.
 
 ### unittest_runner
 This tests adds some customization to the output of unit tests, and has a function to either run validation tests

@@ -5,6 +5,7 @@ requires-python = ">=3.12, <3.14"
 [manifest]
 members = [
     "code-dot-org",
+    "kiosk",
     "neighborhood",
     "pycdo",
     "pythonlab-setup",
@@ -125,6 +126,7 @@ name = "code-dot-org"
 version = "1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "kiosk" },
     { name = "neighborhood" },
     { name = "pycdo" },
     { name = "pythonlab-setup" },
@@ -144,6 +146,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "kiosk", editable = "python/pythonlab/kiosk" },
     { name = "neighborhood", editable = "python/pythonlab/neighborhood" },
     { name = "pycdo", editable = "python/pycdo" },
     { name = "pythonlab-setup", editable = "python/pythonlab/pythonlab_setup" },
@@ -440,6 +443,21 @@ sdist = { url = "https://files.pythonhosted.org/packages/00/2a/e867e8531cf3e36b4
 wheels = [
     { url = "https://files.pythonhosted.org/packages/31/b4/b9b800c45527aadd64d5b442f9b932b00648617eb5d63d2c7a6587b7cafc/jmespath-1.0.1-py3-none-any.whl", hash = "sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980", size = 20256, upload-time = "2022-06-17T18:00:10.251Z" },
 ]
+
+[[package]]
+name = "kiosk"
+version = "0.1.0"
+source = { editable = "python/pythonlab/kiosk" }
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=8" }]
 
 [[package]]
 name = "kiwisolver"
@@ -846,7 +864,7 @@ wheels = [
 
 [[package]]
 name = "pythonlab-setup"
-version = "0.4.0"
+version = "0.5.0"
 source = { editable = "python/pythonlab/pythonlab_setup" }
 dependencies = [
     { name = "matplotlib" },
@@ -856,6 +874,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "kiosk" },
     { name = "pytest" },
     { name = "theater" },
 ]
@@ -869,6 +888,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "kiosk", editable = "python/pythonlab/kiosk" },
     { name = "pytest", specifier = ">=8" },
     { name = "theater", editable = "python/pythonlab/theater" },
 ]

@@ -89,6 +89,9 @@ export async function runPythonCode(
     if (isTheaterLevel()) {
       CodebridgeRegistry.getInstance().getTheater()?.reset();
     }
+    if (isKioskLevel()) {
+      CodebridgeRegistry.getInstance().getKiosk()?.reset();
+    }
     // We only send all output to the neighborhood if this is a neighborhood level and
     // we are not running validation, as validation does not render to the neighborhood.
     const outputToNeighborhood = isNeighborhoodRun && !validationFile;
@@ -112,6 +115,9 @@ export function stopPythonCode() {
   }
   if (isTheaterLevel()) {
     CodebridgeRegistry.getInstance().getTheater()?.onStop();
+  }
+  if (isKioskLevel()) {
+    CodebridgeRegistry.getInstance().getKiosk()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
@@ -191,6 +197,10 @@ function isTheaterLevel() {
   return getMiniApp() === MiniApps.Theater;
 }
 
+function isKioskLevel() {
+  return getMiniApp() === MiniApps.Kiosk;
+}
+
 function handleRunEndedUnexpectedly(
   consoleManager: ConsoleManager | null,
   message: string
@@ -210,6 +220,9 @@ function handleRunEndedUnexpectedly(
     consoleManager?.writeConsoleMessage('');
     if (isTheaterLevel()) {
       CodebridgeRegistry.getInstance().getTheater()?.reset();
+    }
+    if (isKioskLevel()) {
+      CodebridgeRegistry.getInstance().getKiosk()?.reset();
     }
   }
 }

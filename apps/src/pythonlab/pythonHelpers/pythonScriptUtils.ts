@@ -211,6 +211,7 @@ function updateAndDeleteSourceWithContents(
 // samples and fonts, which is too much to charge every Python Lab page for.
 export const ON_DEMAND_PACKAGE_URLS: Record<string, string> = {
   theater: `/blockly/js/pyodide/${version}/theater-0.8.0-py3-none-any.whl`,
+  kiosk: `/blockly/js/pyodide/${version}/kiosk-0.1.0-py3-none-any.whl`,
 };
 
 export async function importPackagesFromFiles(

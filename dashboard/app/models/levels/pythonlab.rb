@@ -59,12 +59,13 @@ class Pythonlab < Level
   end
 
   def self.mini_apps
-    [['None', nil], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']]
+    [['None', nil], ['Neighborhood', 'neighborhood'], ['Theater', 'theater'], ['Kiosk', 'kiosk']]
   end
 
   DEFAULT_MINI_APP_VARIANTS = {
     'neighborhood' => 'object_oriented',
     'theater' => 'functional',
+    'kiosk' => 'functional',
   }.freeze
 
   def self.mini_app_variants

@@ -1,0 +1,17 @@
+.kioskContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--background-neutral-secondary);
+}
+
+.element {
+  position: absolute;
+  left: var(--kiosk-x);
+  top: var(--kiosk-y);
+}
+
+.label {
+  color: var(--text-neutral-primary);
+}

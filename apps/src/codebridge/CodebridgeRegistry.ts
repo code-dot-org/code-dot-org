@@ -1,5 +1,6 @@
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
 
+import Kiosk from '@cdo/apps/miniApps/kiosk/Kiosk';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 
@@ -10,6 +11,7 @@ export default class CodebridgeRegistry {
   private neighborhood: Neighborhood | null;
   private neighborhoodThumbnailScale: number | undefined;
   private theater: Theater | null;
+  private kiosk: Kiosk | null;
 
   private static _instance: CodebridgeRegistry;
   constructor() {
@@ -17,6 +19,7 @@ export default class CodebridgeRegistry {
     this.neighborhood = null;
     this.neighborhoodThumbnailScale = undefined;
     this.theater = null;
+    this.kiosk = null;
   }
 
   public static getInstance(): CodebridgeRegistry {
@@ -60,5 +63,13 @@ export default class CodebridgeRegistry {
 
   public getTheater() {
     return this.theater;
+  }
+
+  public setKiosk(kiosk: Kiosk | null) {
+    this.kiosk = kiosk;
+  }
+
+  public getKiosk() {
+    return this.kiosk;
   }
 }

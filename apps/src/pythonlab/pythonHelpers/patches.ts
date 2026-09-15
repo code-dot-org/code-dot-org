@@ -73,6 +73,38 @@ export const theaterBridgeModule = {
   },
 };
 
+let kioskEventId = 0;
+
+// The kiosk package's link to the page, in both directions: it publishes the
+// screen to draw, and blocks until someone presses a button on it.
+export const kioskBridgeModule = {
+  publish: (sceneJson: string) => {
+    postMessage({
+      type: 'kiosk_scene',
+      message: sceneJson,
+      id: 'none', // id is not used here, so none is safe
+    });
+  },
+  // Blocks the interpreter the same way input() does, on a synchronous request
+  // the input service worker parks until the page answers it. What comes back
+  // is the id of the element that was pressed. The id below only has to match
+  // between this request and the reply the page sends; the service worker
+  // echoes it back untouched.
+  waitForEvent: () => {
+    const request = new XMLHttpRequest();
+    request.open(
+      'GET',
+      `${SERVICE_WORKER_PATH}?id=kiosk-${++kioskEventId}&prompt=`,
+      false
+    );
+    request.send(null);
+    if (request.status !== 200) {
+      throw new Error(MessageTag.INPUT_FAILED);
+    }
+    return request.responseText;
+  },
+};
+
 // Copy a Python bytes object out of WASM memory into a standalone Uint8Array.
 // postMessage cannot clone the proxy itself, and the buffer it hands us is a view
 // into the interpreter's heap, so the copy has to happen before release.

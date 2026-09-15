@@ -10,6 +10,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import KioskPreview from './KioskPreview';
 import NeighborhoodPreview from './NeighborhoodPreview';
 import TheaterPreview from './TheaterPreview';
 
@@ -67,6 +68,12 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
         miniAppTitle: 'Theater',
       };
     }
+    if (miniApp === MiniApps.Kiosk) {
+      return {
+        miniAppComponent: <KioskPreview />,
+        miniAppTitle: 'Kiosk',
+      };
+    }
     return {miniAppComponent: null, miniAppTitle: codebridgeI18n.preview()};
   }, [handleScaling, miniApp, isTheaterOutputVisible]);
 
@@ -82,6 +89,9 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     }
     if (miniApp === MiniApps.Theater) {
       CodebridgeRegistry.getInstance().getTheater()?.reset();
+    }
+    if (miniApp === MiniApps.Kiosk) {
+      CodebridgeRegistry.getInstance().getKiosk()?.reset();
     }
   };
 

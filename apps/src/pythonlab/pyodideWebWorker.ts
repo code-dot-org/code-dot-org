@@ -5,6 +5,7 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 import {HOME_FOLDER} from './pythonHelpers/constants';
 import {
+  kioskBridgeModule,
   patchInputCode,
   pythonlabInputModule,
   SETUP_CODE,
@@ -54,6 +55,21 @@ async function loadPyodideAndPackages() {
   });
   Object.freeze(theaterBridgeModule.publish);
   pyodide.registerJsModule('_theater_bridge', theaterBridgeModule);
+
+  Object.freeze(kioskBridgeModule);
+  Object.defineProperty(kioskBridgeModule.publish, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
+  Object.freeze(kioskBridgeModule.publish);
+  Object.defineProperty(kioskBridgeModule.waitForEvent, 'constructor', {
+    writable: false,
+    configurable: false,
+    enumerable: false,
+  });
+  Object.freeze(kioskBridgeModule.waitForEvent);
+  pyodide.registerJsModule('_kiosk_bridge', kioskBridgeModule);
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
   // matplotlib, which pythonlab_setup depends on, and numpy,
@@ -217,7 +233,7 @@ async function loadPackages() {
       // here on purpose: it is fetched per run for a program that imports it,
       // see ON_DEMAND_PACKAGE_URLS.
       `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/pythonlab_setup-0.4.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.5.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/neighborhood-0.6.0-py3-none-any.whl`,
     ],
     {

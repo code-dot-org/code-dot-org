@@ -22,9 +22,11 @@ def test_one_failing_reset_does_not_skip_the_other():
     mock.patch('pythonlab_setup.teardown_pythonlab.reset_neighborhood',
                side_effect=RuntimeError('shadowed')),
     mock.patch('pythonlab_setup.teardown_pythonlab.reset_theater') as reset_theater,
+    mock.patch('pythonlab_setup.teardown_pythonlab.reset_kiosk') as reset_kiosk,
     mock.patch('pythonlab_setup.teardown_pythonlab.flush_sysout'),
     mock.patch('pythonlab_setup.teardown_pythonlab.go_home'),
   ):
     teardown_pythonlab('/home/pyodide')
 
   reset_theater.assert_called_once_with()
+  reset_kiosk.assert_called_once_with()

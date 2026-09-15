@@ -24,6 +24,7 @@ import {getPreviewDomain} from '@cdo/apps/util/sandboxedPreviewDomain';
 import {createUuid} from '@cdo/apps/utils';
 
 import type {ExternalFileContents} from './pythonHelpers/externalFileContents';
+import {handleKioskScene} from './pythonHelpers/kioskScene';
 import {
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
@@ -226,6 +227,12 @@ const handlePyodideMessage = (data: PyodideMessage) => {
       // Only show theater output if this is not a validation run.
       if (gif && !isValidationRun) {
         handleTheaterMedia(gif, wav, gifDurationMs);
+      }
+      break;
+    case 'kiosk_scene':
+      // Validation does not draw the kiosk, the same as the theater above.
+      if (!isValidationRun) {
+        handleKioskScene(message);
       }
       break;
     default:

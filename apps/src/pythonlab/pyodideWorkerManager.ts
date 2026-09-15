@@ -22,6 +22,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
 import type {ExternalFileContents} from './pythonHelpers/externalFileContents';
+import {handleKioskScene} from './pythonHelpers/kioskScene';
 import {
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
@@ -37,6 +38,7 @@ let setupPromise: Promise<void> | undefined;
 let outputToNeighborhood = false;
 let directLogsToDevConsole = false;
 let loadedMessageHandlers = false;
+let isValidationRun = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -199,6 +201,12 @@ const setUpPyodideWorker = () => {
       case 'loaded_packages':
         directLogsToDevConsole = false;
         break;
+      case 'kiosk_scene':
+        // Validation runs the program without drawing it.
+        if (!isValidationRun) {
+          handleKioskScene(message);
+        }
+        break;
       default:
         console.warn(
           `Unknown message type ${type} with message ${message} from pyodideWorker.`
@@ -295,6 +303,7 @@ const asyncRun = (() => {
     // Reset error state
     getStore().dispatch(setHasError(false));
     outputToNeighborhood = !!shouldOutputToNeighborhood;
+    isValidationRun = !!validationFile;
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
     const messageHandlers = getMessageHandlers(

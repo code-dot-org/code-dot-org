@@ -1,6 +1,7 @@
 import os
 import sys
 from contextlib import suppress
+from .reset_kiosk import reset_kiosk
 from .reset_neighborhood import reset_neighborhood
 from .reset_theater import reset_theater
 
@@ -14,6 +15,8 @@ def teardown_pythonlab(home_folder):
     reset_neighborhood()
   with suppress(Exception):
     reset_theater()
+  with suppress(Exception):
+    reset_kiosk()
   flush_sysout()
   go_home(home_folder)
 

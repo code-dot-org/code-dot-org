@@ -7,6 +7,7 @@ dependencies = [
   # Register local python packages from /python in 3 places: this list, 
   # in [tool.uv.sources] and in [tool.uv.workspace]
   'pycdo',
+  'kiosk',
   'neighborhood',
   'pythonlab_setup',
   'theater',
@@ -28,6 +29,7 @@ dev = [
 
 [tool.uv.sources]
 pycdo = { workspace = true }
+kiosk = { workspace = true }
 neighborhood = { workspace = true }
 pythonlab_setup = { workspace = true }
 theater = { workspace = true }
@@ -40,6 +42,7 @@ members = [
   'python/pythonlab/unittest_runner',
   'python/pythonlab/neighborhood',
   'python/pythonlab/theater',
+  'python/pythonlab/kiosk',
 ]
 
 [tool.ruff]

@@ -35,7 +35,8 @@ export type MessageType =
   | 'load_failed'
   | 'loading_packages'
   | 'loaded_packages'
-  | 'theater_media';
+  | 'theater_media'
+  | 'kiosk_scene';
 
 export interface PythonValidationResult {
   name: string;
