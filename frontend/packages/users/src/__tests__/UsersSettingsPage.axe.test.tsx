@@ -106,6 +106,16 @@ describe('UsersSettingsPage — accessibility', () => {
     expect(await auditBody()).toHaveNoViolations();
   });
 
+  it('has no axe violations with the account-type alertdialog open (upgrade)', async () => {
+    renderPage('student-can-switch');
+    await screen.findByRole('tablist');
+    fireEvent.change(screen.getByRole('combobox', {name: /account type/i}), {
+      target: {value: 'teacher'},
+    });
+    await screen.findByRole('alertdialog', {name: /change account type/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
   it('has no axe violations with the delete-account alertdialog open', async () => {
     renderPage('teacher');
     await screen.findByRole('tablist');
