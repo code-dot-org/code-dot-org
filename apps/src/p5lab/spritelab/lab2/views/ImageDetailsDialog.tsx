@@ -18,14 +18,14 @@ import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView, {
-  GenerateImageViewOptions,
+  ImageFormOptions,
   NewImageDraft,
 } from './GenerateImageView';
 import ImagePaneButton from './ImagePaneButton';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
-interface ImageDetailsDialogProps extends GenerateImageViewOptions {
+interface ImageDetailsDialogProps extends ImageFormOptions {
   // null = the "new image" state: it opens straight into the generate view
   // and nothing is created until a generation succeeds.
   animKey: string | null;

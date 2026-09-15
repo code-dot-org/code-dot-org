@@ -102,7 +102,7 @@ export interface NewImageDraft {
 
 /** Level and session choices the image dialog forwards to the generate
     view unchanged. */
-export interface GenerateImageViewOptions {
+export interface ImageFormOptions {
   /** Level-imposed type for new images; the Type choice is locked to it. */
   lockedImageType?: ImageType;
   /** Offer this tier of adlib prompt combos (student form only). */
@@ -116,7 +116,7 @@ export interface GenerateImageViewOptions {
   onGenerateStart?: () => void;
 }
 
-interface GenerateImageViewProps extends GenerateImageViewOptions {
+interface GenerateImageViewProps extends ImageFormOptions {
   /** Set for an existing image; absent when generating a brand-new one. */
   existing?: {
     generation?: ImageGenerationMetadata;
