@@ -16,10 +16,8 @@ interface UseQuizAttemptState {
   attempt: QuizAttemptData | null | undefined;
   isLoading: boolean;
   error: string | null;
-  // Starts, resumes, or retakes - the server decides which based on the
-  // latest existing attempt, if any.
   beginAttempt: () => Promise<QuizAttemptData>;
-  submitResponse: (
+  submitQuestionResponse: (
     quizQuestionId: number,
     responseData: Record<string, unknown>
   ) => Promise<void>;
@@ -85,7 +83,7 @@ export default function useQuizAttempt({
     }
   }, [levelId, unitId]);
 
-  const submitResponse = useCallback(
+  const submitQuestionResponse = useCallback(
     async (quizQuestionId: number, responseData: Record<string, unknown>) => {
       if (!attempt) {
         return;
@@ -134,7 +132,7 @@ export default function useQuizAttempt({
     isLoading,
     error,
     beginAttempt,
-    submitResponse,
+    submitQuestionResponse,
     finishAttempt,
   };
 }

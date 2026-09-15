@@ -107,7 +107,7 @@ describe('useQuizAttempt', () => {
     expect(post).not.toHaveBeenCalled();
   });
 
-  it('submitResponse posts the response once there is an attempt', async () => {
+  it('submitQuestionResponse posts the response once there is an attempt', async () => {
     get.mockResolvedValue(jsonResponse(ATTEMPT));
     post.mockResolvedValue(jsonResponse({id: 1, gradingStatus: 'auto_graded'}));
     const {result, waitForNextUpdate} = renderHook(() =>
@@ -116,7 +116,7 @@ describe('useQuizAttempt', () => {
     await waitForNextUpdate();
 
     await act(async () => {
-      await result.current.submitResponse(99, {selectedChoiceId: 'a'});
+      await result.current.submitQuestionResponse(99, {selectedChoiceId: 'a'});
     });
 
     expect(post).toHaveBeenCalledWith(
@@ -131,13 +131,13 @@ describe('useQuizAttempt', () => {
     );
   });
 
-  it('submitResponse does nothing without an attempt yet', async () => {
+  it('submitQuestionResponse does nothing without an attempt yet', async () => {
     const {result} = renderHook(() =>
       useQuizAttempt({levelId: 42, unitId: undefined})
     );
 
     await act(async () => {
-      await result.current.submitResponse(99, {selectedChoiceId: 'a'});
+      await result.current.submitQuestionResponse(99, {selectedChoiceId: 'a'});
     });
 
     expect(post).not.toHaveBeenCalled();
