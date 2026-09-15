@@ -549,7 +549,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       course_id = course_version.content_root_id
       @course = UnitGroup.get_from_cache(course_id)
       return head :bad_request unless @course
-      return head :forbidden unless @course.course_assignable?(current_user)
+      return head :forbidden unless @course.course_assignable?(current_user) || @course.id == Section.find_by_id(params[:id])&.course_id
       @unit = if @course.single_unit_course?
                 @course.units_for_user(current_user).first
               else
