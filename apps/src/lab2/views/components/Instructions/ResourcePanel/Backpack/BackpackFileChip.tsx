@@ -28,17 +28,13 @@ import {
 
 import moduleStyles from './backpack-file-chip.module.scss';
 
-/** How long the row shows its 'Added' confirmation. */
-export const SHOW_RECENTLY_ADDED_DURATION_MS = 3000;
+export const SHOW_RECENTLY_ADDED_DURATION_MS = 4000;
 
 interface BackpackFileChipProps extends BackpackProps {
   fileName: string;
   backpackApi: BackpackClientApi;
   addAlert: (type: 'success' | 'danger', message: string) => void;
-  /**
-   * Unified panel only. Delete has no addAlert equivalent for its in-progress
-   * and success states, and the legacy panel reports neither.
-   */
+  // Unified panel only
   showToast?: ShowToast;
   isRecentlyAdded?: boolean;
   disableActions: boolean;
@@ -186,7 +182,6 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
       icon: {iconName: 'trash', iconStyle: 'solid'},
     });
     if (results.type === 'confirm') {
-      // No in-progress toast: the row's buttons disable while the delete runs.
       backpackApi.deleteFiles(
         [fileName],
         error => {

@@ -65,7 +65,6 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [loadError, setLoadError] = useState<boolean>(false);
-  // Keyed like the chips, by `${appType}/${fileName}`.
   const [recentlyAddedKeys, setRecentlyAddedKeys] = useState<Set<string>>(
     new Set()
   );
@@ -153,9 +152,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }, SHOW_RECENTLY_ADDED_DURATION_MS);
   }, []);
 
-  // The notifier the shared add-to-project code expects. Every success reaching
-  // it is an add-to-project, so the row the user clicked also confirms in place.
-  const makeAddAlert = useCallback(
+  const makeAddToBackpackAlert = useCallback(
     (fileKey: string) => (type: BackpackAlertType, message: string) => {
       if (type === 'success') {
         markRecentlyAdded(fileKey);
@@ -195,7 +192,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           key={fileKey}
           fileName={fileName}
           backpackApi={client}
-          addAlert={makeAddAlert(fileKey)}
+          addAlert={makeAddToBackpackAlert(fileKey)}
           showToast={showToast}
           isRecentlyAdded={recentlyAddedKeys.has(fileKey)}
           validateFileName={validateFileName}
@@ -215,7 +212,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     [
       backpackApi,
       duplicateFileNames,
-      makeAddAlert,
+      makeAddToBackpackAlert,
       showToast,
       recentlyAddedKeys,
       validateFileName,

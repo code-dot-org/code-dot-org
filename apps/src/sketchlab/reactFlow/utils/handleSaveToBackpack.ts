@@ -142,8 +142,6 @@ export const handleSaveToBackpack = async (
   }
 
   const newFileName = extractUserInput(dialogResults) + '.png';
-  // The snapshot is drawn before the upload starts, and both can take a moment,
-  // so the in-progress toast covers the pair. Whatever comes next replaces it.
   if (unifiedApi) {
     notify('info', `Saving ${newFileName} to your Backpack...`);
   }

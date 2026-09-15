@@ -176,8 +176,6 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
           isShareView && moduleStyles.labContainerShareView
         )}
       >
-        {/* Anchors toasts to this container rather than the viewport, so they
-            sit just below the page header without hard-coding its height. */}
         <ToastProvider className={moduleStyles.labToast}>
           {levelPropertiesMap && (
             // Don't display children (including lab views) until we have loaded level properties.

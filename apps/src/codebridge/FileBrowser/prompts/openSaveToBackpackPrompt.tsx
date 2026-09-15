@@ -39,8 +39,7 @@ export const openSaveToBackpackPrompt = async ({
 }: OpenSaveToBackpackPromptArgsType) => {
   const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
 
-  // The unified backpack reports failures as toasts, because a save started
-  // from the file browser resolves somewhere the user may not be looking. The
+  // The unified backpack reports failures as toasts. The
   // legacy backpack keeps its modal, whose copy tells the user to close it.
   const handleError =
     (toastMessage: string, dialogMessage: string, errorMessage: string) =>
@@ -66,8 +65,6 @@ export const openSaveToBackpackPrompt = async ({
       : {[backpackApi.appType]: await backpackApi.getFileList()};
   } catch (error) {
     handleError(
-      // The save never started, so this reads as a failed save rather than
-      // naming the file list the user never asked about.
       `Couldn't save ${file.name} to your Backpack. Please try again.`,
       `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`,
       'Backpack file list fetch error'
@@ -175,7 +172,7 @@ export const openSaveToBackpackPrompt = async ({
   } catch (error) {
     handleError(
       `Saved ${selectedFileName}, but couldn't remove the old copy. You can delete it from your Backpack.`,
-      "We saved your new file, but couldn't delete your old one. You can retry the delete in the Backpack.",
+      '', // unused for unified api
       'Backpack duplicate delete error'
     )(error as Error);
   }
