@@ -34,12 +34,32 @@ export interface QuizBuilderQuestion extends QuizQuestion {
   page: number | null;
 }
 
+// The fields a per-question editor can change. Matches
+// QuizQuestionSerialization#quiz_question_params on the Ruby side, minus
+// the read-only/administrative ones (id, type, standards, page, editMode).
+export interface QuizQuestionEditableFields {
+  questionName: string;
+  stem: string;
+  choices: QuizQuestionChoice[];
+  correctChoiceId: string | null;
+  explanation: string | null;
+}
+
 // What useQuizBuilderQuestions exposes.
 export interface QuizBuilderQuestionsState {
   questions: QuizBuilderQuestion[];
   isLoading: boolean;
   isCreating: boolean;
   error: string | null;
-  createQuestion: () => Promise<void>;
+  // Resolves with the created question's id on success, undefined on
+  // failure (with `error` set).
+  createQuestion: () => Promise<number | undefined>;
+  // Resolves false (and sets `error`) on failure, leaving `questions`
+  // untouched so a caller can keep showing the user's unsaved edits.
+  updateQuestion: (
+    id: number,
+    payload: QuizQuestionEditableFields
+  ) => Promise<boolean>;
+  removeQuestion: (id: number) => Promise<boolean>;
   load: () => Promise<void>;
 }

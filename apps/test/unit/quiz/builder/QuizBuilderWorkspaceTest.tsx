@@ -35,6 +35,8 @@ const BASE_STATE: QuizBuilderQuestionsState = {
   isCreating: false,
   error: null,
   createQuestion: jest.fn(),
+  updateQuestion: jest.fn(),
+  removeQuestion: jest.fn(),
   load: jest.fn(),
 };
 
@@ -76,7 +78,7 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('0 questions')).toBeInTheDocument();
   });
 
-  it('lists each placed question with its type, name, and stem', () => {
+  it('lists each placed question with its name and stem', () => {
     renderWorkspace({
       questions: [
         question(),
@@ -89,7 +91,6 @@ describe('QuizBuilderWorkspace', () => {
     });
 
     expect(screen.getByText('2 questions')).toBeInTheDocument();
-    expect(screen.getAllByText('Multiple choice')).toHaveLength(2);
     expect(
       screen.getByText('JavaScript variable fundamentals')
     ).toBeInTheDocument();
@@ -97,6 +98,26 @@ describe('QuizBuilderWorkspace', () => {
       screen.getByText('What is a variable in JavaScript?')
     ).toBeInTheDocument();
     expect(screen.getByText('MVC frameworks')).toBeInTheDocument();
+  });
+
+  it('opens a newly created question directly into editing', async () => {
+    // Mirrors what the real hook does: a create appends a new question to
+    // `questions` and resolves with its id. The mocked hook's return value
+    // has to change too, since QuizQuestionCard's startExpanded only takes
+    // effect for a card that mounts fresh (a genuinely new list item), not
+    // one that was already on screen.
+    const createQuestion = jest.fn().mockImplementation(async () => {
+      mockUseQuizBuilderQuestions.mockReturnValue({
+        ...BASE_STATE,
+        questions: [question(), question({id: 2})],
+        createQuestion,
+      });
+      return 2;
+    });
+    renderWorkspace({questions: [question()], createQuestion});
+
+    fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
+    await screen.findByRole('tab', {name: 'Question'});
   });
 
   it('calls createQuestion when the create button is clicked', () => {

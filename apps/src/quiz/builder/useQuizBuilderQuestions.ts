@@ -3,7 +3,11 @@ import {useCallback, useEffect, useState} from 'react';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {networkErrorMessage} from './networkError';
-import {QuizBuilderQuestion, QuizBuilderQuestionsState} from './types';
+import {
+  QuizBuilderQuestion,
+  QuizBuilderQuestionsState,
+  QuizQuestionEditableFields,
+} from './types';
 
 // A newly created question needs placeholder-but-valid content:
 // MultipleChoiceQuestion rejects a blank stem, fewer than two choices, or
@@ -63,12 +67,72 @@ export default function useQuizBuilderQuestions(
       );
       const created: QuizBuilderQuestion = await response.json();
       setQuestions(prev => [...prev, created]);
+      return created.id;
     } catch (e) {
       setError(await networkErrorMessage(e));
+      return undefined;
     } finally {
       setIsCreating(false);
     }
   }, [levelId]);
 
-  return {questions, isLoading, isCreating, error, createQuestion, load};
+  // On success, replaces the edited question in place. Its id may differ
+  // from the one saved - QuizQuestionsController#update forks a question
+  // that's used in a published unit rather than editing it in place, so
+  // the response is the new source of truth for this row, not just a
+  // confirmation of what was sent.
+  const updateQuestion = useCallback(
+    async (id: number, payload: QuizQuestionEditableFields) => {
+      setError(null);
+      try {
+        const response = await HttpClient.put(
+          `/quiz_questions/${id}?quizLevelId=${levelId}`,
+          JSON.stringify(payload),
+          true,
+          {'Content-Type': 'application/json'}
+        );
+        const updated: QuizBuilderQuestion = await response.json();
+        setQuestions(prev =>
+          prev.map(question => (question.id === id ? updated : question))
+        );
+        return true;
+      } catch (e) {
+        setError(await networkErrorMessage(e));
+        return false;
+      }
+    },
+    [levelId]
+  );
+
+  // Detaches the question from this quiz. The endpoint itself decides
+  // whether to also hard-delete the underlying question - it stays in the
+  // bank (and on any other quiz) if something else still references it.
+  const removeQuestion = useCallback(
+    async (id: number) => {
+      setError(null);
+      try {
+        await HttpClient.delete(
+          `/levels/${levelId}/quiz_question_placements/${id}`,
+          true
+        );
+        setQuestions(prev => prev.filter(question => question.id !== id));
+        return true;
+      } catch (e) {
+        setError(await networkErrorMessage(e));
+        return false;
+      }
+    },
+    [levelId]
+  );
+
+  return {
+    questions,
+    isLoading,
+    isCreating,
+    error,
+    createQuestion,
+    updateQuestion,
+    removeQuestion,
+    load,
+  };
 }
