@@ -92,6 +92,10 @@
   @extend %page-base;
 }
 
+.listPage {
+  @extend %page-base;
+}
+
 .authorHeader {
   margin-bottom: 24px;
 
@@ -353,6 +357,85 @@ textarea {
   font-size: 12px;
   overflow: auto;
   max-height: 360px;
+}
+
+// ---- List page ----
+
+.lessonList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lessonRow {
+  background: var(--background-neutral-primary);
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--borders-neutral-primary);
+
+  a {
+    color: var(--text-brand-teal-primary);
+    text-decoration: none;
+  }
+}
+
+.lessonRowActions {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-neutral-tertiary);
+
+  a {
+    color: var(--text-brand-teal-primary);
+  }
+}
+
+// ---- Teacher progress page ----
+
+.studentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.studentLessons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.studentLessonRow {
+  background: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-light);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.studentLessonHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+
+  a {
+    color: var(--text-brand-teal-primary);
+    text-decoration: none;
+  }
+}
+
+.studentSummary {
+  margin: 6px 0 0;
+  color: var(--text-neutral-primary);
+  line-height: 1.45;
 }
 
 // ---- Student page ----

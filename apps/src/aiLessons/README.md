@@ -268,6 +268,10 @@ Beyond answers, the system records HOW students work:
   `dashboard/tmp/ai_lessons/progress/<lessonId>/<userId>.json` and
   refreshes a 2-3 sentence LLM-generated teacher summary
   (`studentProgress.ts`).
+- `/ai_lessons/progress` is a read-only roll-up grouped by student.
+  Each student card lists the lessons they've touched, their position
+  in each, and the latest summary. Sorted most-recently-active first.
+
 ### Routes (Rails)
 
 Every in-app page path serves the same SPA shell (`AiLessonsController#app`).
@@ -341,6 +345,10 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
   or rate limiting.
 - **Image GET endpoint skips auth.** Random hex filename acts as a
   capability token. Fine for demo; production would need signed URLs.
+- **No section/class filtering on the teacher view.** It shows every
+  student we have progress for, period. Filtering by section/class
+  would require wiring into the existing `Section`/`Follower` model
+  and probably a per-lesson teacher assignment.
 - **No CSRF on the image GET / sources GET / progress GET.** Reads are
   all unauthenticated within the user's session; writes use Rails CSRF
   via `HttpClient.put(..., true, ...)`.
@@ -380,6 +388,10 @@ keyed by the lesson id, so reset-progress works on them too.
 The whole surface ships as a single SPA bundle: webpack entry
 `ai_lessons/app` paired with the Rails view `app.html.haml`.  Every
 page path mentioned above hits `AiLessonsController#app`, which just
+renders that template.  Once the bundle loads, `RouterProvider` in
+`router.tsx` watches `window.location` + `popstate`, and
+`AiLessonsApp` swaps the rendered page component accordingly.
+
 `app.html.haml` includes the shared `_lab_head_deps.html.haml` partial
 which loads the locale bundles + `blockly.js` that the embedded lab
 views depend on at module-evaluation time.
