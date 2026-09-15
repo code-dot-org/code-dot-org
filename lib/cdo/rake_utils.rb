@@ -75,14 +75,15 @@ module RakeUtils
   end
 
   # Alternate version of RakeUtils.system which always streams $stdout to the
-  # shell during execution.
-  def self.system_stream_output(*args, &block)
+  # shell during execution. `env` reaches the child without appearing in the
+  # logged command, so it is where a secret goes.
+  def self.system_stream_output(*args, env: {}, &block)
     command = command_(*args)
     CDO.log.info command
     if block
-      IO.popen(command, &block)
+      IO.popen(env, command, &block)
     else
-      Kernel.system(command)
+      Kernel.system(env, command)
     end
     unless $?.success?
       error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")

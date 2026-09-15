@@ -131,13 +131,15 @@ namespace :test do
   end
 
   # Never stops a build. A person approves each new image in Applitools.
-  # Only Drone calls this. The DTT daemon has no Applitools key.
+  # Drone exports the Applitools variables (.drone.yml). The DTT daemon has the
+  # key Cucumber's Eyes suite uses (eyes_steps.rb) and derives the rest.
   timed_task_with_logging :playwright_eyes do
-    unless ENV['VISUAL_PROVIDER'].present?
-      ChatClient.log 'Playwright Eyes e2e tests: skipped, VISUAL_PROVIDER is unset.'
+    env = dtt_playwright_eyes_env
+    if env.empty? && ENV['VISUAL_PROVIDER'].blank?
+      ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
       next
     end
-    run_playwright_suite(:eyes)
+    run_playwright_suite(:eyes, env: env)
   end
 
   # Dispatch the dtt.yml Playwright run on GitHub Actions (ref: test), moving e2e
@@ -169,7 +171,7 @@ namespace :test do
 
     # map returns each suite's exception in order, so the rollup needs no state
     # shared across the threads.
-    exceptions = Parallel.map(UI_SUITES.keys, in_threads: 4) do |target|
+    exceptions = Parallel.map(UI_SUITES.keys, in_threads: UI_SUITES.size) do |target|
       Rake::Task["test:#{target}"].invoke
       nil
     rescue StandardError => exception
@@ -607,13 +609,36 @@ UI_SUITES = {
   saucelabs_ui: 'Safari + iPad + iPhone UI',
   devicefarm_desktop_ui: 'Chrome + Firefox UI',
   playwright_ui: PLAYWRIGHT_SUITES.fetch(:functional),
+  playwright_eyes: PLAYWRIGHT_SUITES.fetch(:eyes),
 }.freeze
+
+# Which run_playwright_suite rollup stands in for a UI_SUITES entry.
+PLAYWRIGHT_UI_SUITES = {playwright_ui: :functional, playwright_eyes: :eyes}.freeze
 
 # An exception cannot carry the test counts and the report link.
 PLAYWRIGHT_ROLLUP = {}
 
+# Empty without the key, which stays out of the logged command line (see
+# RakeUtils.system_stream_output). The batch id is the commit, as on Drone and
+# GitHub Actions, so every Playwright Eyes run of one commit lands in one batch.
+def dtt_playwright_eyes_env
+  return {} unless CDO.test_system? && CDO.applitools_eyes_api_key
+  {
+    'VISUAL_PROVIDER' => 'applitools',
+    'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key,
+    'APPLITOOLS_BATCH_ID' => RakeUtils.git_revision,
+    'APPLITOOLS_BATCH_NAME' => 'DTT Playwright Eyes Tests',
+    'APPLITOOLS_BRANCH' => GitUtils.current_branch,
+  }
+end
+
+def applitools_batch_url(batch_id)
+  return nil if batch_id.blank?
+  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{batch_id}&hideBatchList=true"
+end
+
 # Never raises. The caller decides if a failure stops the build.
-def run_playwright_suite(suite)
+def run_playwright_suite(suite, env: {})
   label = PLAYWRIGHT_SUITES.fetch(suite)
   # Both suites run in one directory. Equal names would lose the first report.
   suffix = suite == :eyes ? '-eyes' : ''
@@ -629,8 +654,10 @@ def run_playwright_suite(suite)
 
   # The key does not change, so this link works when the run ends.
   pending_report = Cdo::PlaywrightReport.index_url(name: "playwright#{suffix}")
+  batch_url = applitools_batch_url(env.fetch('APPLITOOLS_BATCH_ID') {ENV.fetch('APPLITOOLS_BATCH_ID', nil)}) if suite == :eyes
   start_message = "Starting <b>dashboard</b> #{label} e2e tests against #{target_url}."
   start_message += %( The <a href="#{pending_report}">HTML report</a> publishes here when the run finishes.) if pending_report
+  start_message += %( Images land in <a href="#{batch_url}">this Applitools batch</a>.) if batch_url
   ChatClient.log start_message
 
   # system_with_chat_logging would hide the output. This method must not raise.
@@ -639,7 +666,7 @@ def run_playwright_suite(suite)
     begin
       env_prefix = ["TARGET_URL=#{target_url}"]
       env_prefix << "PLAYWRIGHT_PROVIDER=#{provider}" if provider
-      RakeUtils.system_stream_output(*env_prefix, script, suite.to_s)
+      RakeUtils.system_stream_output(*env_prefix, script, suite.to_s, env: env)
       true
     rescue StandardError
       false
@@ -654,12 +681,14 @@ def run_playwright_suite(suite)
 
   rollup = "#{passed ? '✅' : '❌'} #{label}#{qualifier}: #{pass_fail_line}"
   rollup += %( <a href="#{report_url}">HTML report</a>.) if report_url
+  rollup += %( <a href="#{batch_url}">Applitools batch</a>.) if batch_url
   PLAYWRIGHT_ROLLUP[suite] = rollup
 
   status = passed ? '<b>✅ PASSED</b>' : "<b>❌ FAILED</b>#{qualifier}"
   report = "#{label} e2e tests for <b>dashboard</b>: #{status}\n"
   report += pass_fail_line
   report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
+  report += %(\nReview diffs in <a href="#{batch_url}">the Applitools batch</a>.) if batch_url && !passed
   ChatClient.log report, color: (passed ? 'green' : 'red')
 
   passed
@@ -669,7 +698,8 @@ end
 # room, so this is the only place the whole deploy window can be read at once.
 def ui_all_rollup(failures)
   lines = UI_SUITES.map do |target, label|
-    next PLAYWRIGHT_ROLLUP[:functional] if target == :playwright_ui && PLAYWRIGHT_ROLLUP[:functional]
+    rollup = PLAYWRIGHT_ROLLUP[PLAYWRIGHT_UI_SUITES[target]]
+    next rollup if rollup
     failures[target] ? "❌ #{label}: #{failures[target].message}." : "✅ #{label}: passed."
   end
   ['Deploy-time UI suites:', *lines].join("\n")
