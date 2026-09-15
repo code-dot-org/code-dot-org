@@ -20,7 +20,8 @@ const ON_OFF = [
 
 interface AudioEngine {
   onPlayerSound: ((event: PlayerSoundEvent) => void) | null;
-  onPlayerFrame: ((frame: ProximityDistances & PlayerHeight) => void) | null;
+  onPlayerHeight: ((height: PlayerHeight) => void) | null;
+  onPlayerProximity: ((distances: ProximityDistances) => void) | null;
 }
 
 /** A remembered on/off entry for the settings panel. */
@@ -89,13 +90,13 @@ export default function useGameAudio(
         sounds.play(event);
       }
     };
-    engine.onPlayerFrame = frame => {
-      proximity?.update(frame);
-      height?.update(frame);
-    };
+    // Null when nothing listens, so the engine can skip the work.
+    engine.onPlayerHeight = height ? height.update : null;
+    engine.onPlayerProximity = proximity ? proximity.update : null;
     return () => {
       engine.onPlayerSound = null;
-      engine.onPlayerFrame = null;
+      engine.onPlayerHeight = null;
+      engine.onPlayerProximity = null;
       proximity?.stop();
       height?.stop();
       sounds.stop();

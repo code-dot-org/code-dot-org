@@ -473,6 +473,25 @@ describe('platformPhysics hazard distances', () => {
     ).toBeCloseTo(40);
   });
 
+  it('mirrors the world when gravity is flipped', () => {
+    // The body hangs below the player one way up and above it the other,
+    // so this wall 40px overhead is in reach from a ceiling and out of
+    // reach from a floor, where only the screen edge is left to hit.
+    const wall = {
+      position: {x: 175, y: 185},
+      width: 50,
+      height: 50,
+      scale: 1,
+    };
+    const player = standing(100);
+    expect(
+      distanceToWallAhead(player, 1, [wall], VIEW, -PLATFORM_GRAVITY)
+    ).toBeCloseTo(40);
+    expect(
+      distanceToWallAhead(player, 1, [wall], VIEW, PLATFORM_GRAVITY)
+    ).toBeCloseTo(287.5);
+  });
+
   it('measures leftward the same way', () => {
     // Column 1's right face is at x=100; the trailing edge is at 190.
     expect(

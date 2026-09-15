@@ -149,10 +149,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
     // Set by the view (useGameAudio).
-    this.onPlayerFrame = null;
+    this.onPlayerHeight = null;
+    this.onPlayerProximity = null;
     this.onPlayerSound = null;
-    this.observedX_ = 0;
-    this.observedY_ = 0;
+    this.observedX_ = null;
+    this.observedY_ = null;
     this.observedFacing_ = 'right';
     this.playerEvents_ = initialPlayerEventState();
     // Jump lifecycle for the view's cover/fade: start fires with the block,
@@ -316,8 +317,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     // A fresh run is a fresh player, not a stride across the map.
-    this.observedX_ = 0;
-    this.observedY_ = 0;
+    this.observedX_ = null;
+    this.observedY_ = null;
     this.observedFacing_ = 'right';
     this.playerEvents_ = initialPlayerEventState();
     library.commands.setPlatformGravity = value => {
@@ -996,7 +997,12 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   // First player only: the controls drive the whole group as one.
   observePlayer_(players, walls, view) {
-    if ((!this.onPlayerFrame && !this.onPlayerSound) || !players.length) {
+    if (
+      (!this.onPlayerHeight &&
+        !this.onPlayerProximity &&
+        !this.onPlayerSound) ||
+      !players.length
+    ) {
       return;
     }
     const {sprite, x: requestedX, y: requestedY} = players[0];
@@ -1004,8 +1010,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Weightless is steering: no footing to lose, no edge to fall from.
     const weightless = gravity === 0;
     const grounded = weightless || isSupported(sprite, walls, view, gravity);
-    const previousX = this.observedX_;
-    const previousY = this.observedY_;
+    // A run's first frame has nothing to measure against.
+    const first = this.observedX_ === null;
+    const previousX = first ? sprite.position.x : this.observedX_;
+    const previousY = first ? sprite.position.y : this.observedY_;
     this.observedX_ = sprite.position.x;
     this.observedY_ = sprite.position.y;
     const moved = sprite.position.x - previousX;
@@ -1017,22 +1025,27 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.onPlayerSound) {
       playerEvents(this.playerEvents_, {
         moved,
-        requested: requestedX - previousX,
+        requested: first ? 0 : requestedX - previousX,
         movedUp: (sprite.position.y - previousY) * up,
-        requestedUp: (requestedY - previousY) * up,
+        requestedUp: first ? 0 : (requestedY - previousY) * up,
         grounded,
       }).forEach(event => this.onPlayerSound(event));
     }
-    if (this.onPlayerFrame) {
-      this.onPlayerFrame({
+    if (this.onPlayerHeight) {
+      this.onPlayerHeight({
+        above: (view.height - sprite.position.y) / view.height,
+        airborne: !grounded,
+      });
+    }
+    // Only when something listens: this is the frame's costliest work.
+    if (this.onPlayerProximity) {
+      this.onPlayerProximity({
         wall: distanceToWallAhead(sprite, direction, walls, view, gravity),
         // Mid-jump, the drop ahead is what you are aiming over.
         edge:
           grounded && !weightless
             ? distanceToEdgeAhead(sprite, direction, walls, view, gravity)
             : Infinity,
-        above: (view.height - sprite.position.y) / view.height,
-        airborne: !grounded,
       });
     }
   }

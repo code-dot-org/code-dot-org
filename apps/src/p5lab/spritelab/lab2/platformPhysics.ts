@@ -416,28 +416,33 @@ export function distanceToWallAhead(
   view: View,
   gravity: number = PLATFORM_GRAVITY
 ): number {
-  const {imgHalfW, halfW, halfH, drop} = playerBody(sprite);
-  const bodyY = sprite.position.y + drop;
-  const lead = sprite.position.x + direction * halfW;
-  let nearest = Infinity;
-  walls.forEach(wall => {
-    const half = wallHalf(wall);
-    // Too little overlap to block: the resolver lets the body past.
-    if (halfH + half - Math.abs(bodyY - wall.position.y) < MIN_SOLID_OVERLAP) {
-      return;
-    }
-    const face =
-      direction > 0 ? wall.position.x - half : wall.position.x + half;
-    const gap = (face - lead) * direction;
-    if (gap >= 0) {
-      nearest = Math.min(nearest, gap);
-    }
+  return inDownwardTerms(sprite, walls, view, gravity, (s, w) => {
+    const {imgHalfW, halfW, halfH, drop} = playerBody(s);
+    const bodyY = s.position.y + drop;
+    const lead = s.position.x + direction * halfW;
+    let nearest = Infinity;
+    w.forEach(wall => {
+      const half = wallHalf(wall);
+      // Too little overlap to block: the resolver lets the body past.
+      if (
+        halfH + half - Math.abs(bodyY - wall.position.y) <
+        MIN_SOLID_OVERLAP
+      ) {
+        return;
+      }
+      const face =
+        direction > 0 ? wall.position.x - half : wall.position.x + half;
+      const gap = (face - lead) * direction;
+      if (gap >= 0) {
+        nearest = Math.min(nearest, gap);
+      }
+    });
+    // The screen edges stop the player too, measured on the art, as the
+    // resolver measures them.
+    const imgLead = s.position.x + direction * imgHalfW;
+    const side = direction > 0 ? view.width - imgLead : imgLead;
+    return Math.max(0, Math.min(nearest, side));
   });
-  // The screen edges stop the player too, measured on the art, as the
-  // resolver measures them.
-  const imgLead = sprite.position.x + direction * imgHalfW;
-  const side = direction > 0 ? view.width - imgLead : imgLead;
-  return Math.max(0, Math.min(nearest, side));
 }
 
 /**

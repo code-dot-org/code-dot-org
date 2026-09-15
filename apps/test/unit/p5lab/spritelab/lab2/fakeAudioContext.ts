@@ -34,6 +34,7 @@ export function fakeAudioContext() {
       context.state = 'running';
       return Promise.resolve();
     },
+    close: () => Promise.resolve(),
     createOscillator() {
       const voice: FakeVoice = {
         type: '',
@@ -98,4 +99,13 @@ export function fakeAudioContext() {
   const asAudioContext = () => context as unknown as AudioContext;
 
   return {context, voices, asAudioContext};
+}
+
+/** The same fake, behind `new AudioContext()`, for code that builds its own. */
+export function installFakeAudioContext() {
+  const fake = fakeAudioContext();
+  (window as unknown as {AudioContext: unknown}).AudioContext = function () {
+    return fake.context;
+  };
+  return fake;
 }
