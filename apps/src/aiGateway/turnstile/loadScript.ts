@@ -5,11 +5,11 @@ let scriptLoadPromise: Promise<void> | null = null;
 
 export function loadTurnstileScript(): Promise<void> {
   if (scriptLoadPromise) {
-    console.log(`${LOG} Script already loaded (cached)`);
+    console.log(`${LOG} Reusing in-flight or completed script load`);
     return scriptLoadPromise;
   }
 
-  scriptLoadPromise = new Promise((resolve, reject) => {
+  const pending = new Promise<void>((resolve, reject) => {
     if (window.turnstile) {
       console.log(
         `${LOG} Turnstile already present on window (externally loaded)`
@@ -28,15 +28,26 @@ export function loadTurnstileScript(): Promise<void> {
       resolve();
     };
     script.onerror = event => {
-      const err = new TurnstileChallengeError(
-        'script_load_failed',
-        'Failed to load Turnstile script'
-      );
       console.error(`${LOG} Script load failed:`, event);
-      reject(err);
+      script.remove();
+      reject(
+        new TurnstileChallengeError(
+          'script_load_failed',
+          'Failed to load Turnstile script'
+        )
+      );
     };
     document.head.appendChild(script);
   });
 
-  return scriptLoadPromise;
+  // Caching a rejection would make one failed load permanent: every later caller
+  // replays it in microseconds and no retry ever reaches the network again.
+  pending.catch(() => {
+    if (scriptLoadPromise === pending) {
+      scriptLoadPromise = null;
+    }
+  });
+
+  scriptLoadPromise = pending;
+  return pending;
 }
