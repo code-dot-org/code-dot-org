@@ -6,6 +6,7 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {
   authoringRulesLines,
   LevelContext,
+  sectionLines,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
@@ -107,18 +108,23 @@ export function filesToMultiFileSource(
 
 // The canonical-code contract, in one place.
 export function suppliedCodeLines(ctx: LevelContext): string[] {
-  const code = ctx.suppliedCode?.trim();
-  if (!code) return [];
-  return [
-    '',
-    'Supplied code — the curriculum author provided this code for the',
-    'level. Treat it as canonical: reproduce it verbatim in the starter',
-    'files (choose file names for unlabeled snippets), add only what is',
-    'needed to make the project runnable, and write the instruction stub',
-    'around it.',
-    code,
-  ];
+  return sectionLines(
+    [
+      'Supplied code — the curriculum author provided this code for the',
+      'level. Treat it as canonical: reproduce it verbatim in the starter',
+      'files (choose file names for unlabeled snippets), add only what is',
+      'needed to make the project runnable, and write the instruction stub',
+      'around it.',
+    ],
+    ctx.suppliedCode?.trim()
+  );
 }
+
+export const PRECEDING_LEVELS_FOR_CODE = [
+  'Preceding levels in this lesson, in order. Use them for continuity',
+  '— building on the same code, reusing characters or examples — but',
+  'do NOT restate them; only build the level described last:',
+];
 
 const exemplarSchema = Output.object({
   schema: z.object({files: codebridgeFilesSchema}),

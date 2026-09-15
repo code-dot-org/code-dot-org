@@ -128,31 +128,88 @@ export interface SlideContext extends SlidesPageContext {
   precedingSlides?: string;
 }
 
-// One framing for every rules block, so the prompts can't drift apart.
-function rulesLines(intro: string[], rules?: string): string[] {
-  const text = rules?.trim();
-  if (!text) return [];
-  return ['', ...intro, text];
+// Every prompt section shares this frame, so they read alike and can't drift.
+export function sectionLines(intro: string[], body?: string): string[] {
+  return body ? ['', ...intro, body] : [];
+}
+
+const UNIT_CONTEXT_FOR_LEVEL: UseClause = [
+  'Use it for broad continuity (audience/grade, recurring themes, tone, arc)',
+  'but build only the specific level described below:',
+];
+
+// The first line finishes the heading sentence; any others follow it.
+type UseClause = [string, ...string[]];
+
+export function unitContextLines(
+  ctx: UnitContext,
+  {
+    subject = 'this level',
+    use = UNIT_CONTEXT_FOR_LEVEL,
+  }: {subject?: string; use?: UseClause} = {}
+): string[] {
+  return sectionLines(
+    [
+      `Unit context — ${subject} sits inside the unit "${
+        ctx.unitName ?? ''
+      }". ${use[0]}`,
+      ...use.slice(1),
+    ],
+    ctx.unitOutline
+  );
+}
+
+export const LESSON_CONTEXT_FOR_LEVEL = [
+  'Lesson context (this level is one piece of a larger lesson — keep',
+  'continuity with prior steps, but only build the specific level',
+  'described below):',
+];
+export const LESSON_CONTEXT_FOR_ASSESSMENT = [
+  'Lesson context (keep continuity, but only build this assessment):',
+];
+export const LESSON_CONTEXT_OUTLINE = [
+  'Lesson context — the lesson outline the curriculum author wrote:',
+];
+
+export function lessonContextLines(
+  ctx: LessonContext,
+  intro: string[]
+): string[] {
+  return sectionLines(intro, ctx.lessonOutline);
+}
+
+export function targetProjectLines(
+  ctx: LessonContext,
+  intro: string[]
+): string[] {
+  return sectionLines(intro, ctx.targetProject);
+}
+
+export function precedingLevelsLines(
+  ctx: Pick<LevelContext, 'precedingLevels'>,
+  intro: string[]
+): string[] {
+  return sectionLines(intro, ctx.precedingLevels);
 }
 
 export function authoringRulesLines(ctx: UnitContext): string[] {
-  return rulesLines(
+  return sectionLines(
     [
       'Course authoring rules — hard constraints on the content you',
       'generate. Where they conflict with the general guidance above,',
       'these rules win:',
     ],
-    ctx.authoringRules
+    ctx.authoringRules?.trim()
   );
 }
 
 export function draftingRulesLines(ctx: UnitContext): string[] {
-  return rulesLines(
+  return sectionLines(
     [
       'Course drafting rules — course-specific rules for choosing and',
       'patterning levels. Where they conflict with the general guidance',
       'above, these rules win:',
     ],
-    ctx.draftingRules
+    ctx.draftingRules?.trim()
   );
 }

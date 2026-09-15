@@ -5,7 +5,12 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 
-import {SlideContext} from '../../curriculum-generator/ai/context';
+import {
+  lessonContextLines,
+  sectionLines,
+  SlideContext,
+  unitContextLines,
+} from '../../curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -68,51 +73,40 @@ export async function generateSlide(ctx: SlideContext): Promise<Panel> {
     'Panels-app panel: one 16:9 illustration with a markdown text',
     'overlay. The slide should set context, motivation, or framing —',
     'never walk through a solution.',
-    '',
-    ...(ctx.unitOutline
-      ? [
-          `Unit context — this lesson sits inside the unit "${
-            ctx.unitName ?? ''
-          }". Use it for broad framing (audience, arc, recurring themes):`,
-          ctx.unitOutline,
-          '',
-        ]
-      : []),
-    ...(ctx.lessonOutline
-      ? [
-          'Lesson outline (the levelbuilder typed this for the lesson as',
-          'a whole; match its tone and the concepts it names):',
-          ctx.lessonOutline,
-          '',
-        ]
-      : []),
-    ...(ctx.slidesOutline
-      ? [
-          'Slides outline (the levelbuilder typed this when planning the',
-          'whole slide deck — match the audience, depth, vocabulary, and',
-          'tone it implies; do not soften technical content if the',
-          'outline asks for it):',
-          ctx.slidesOutline,
-          '',
-        ]
-      : []),
+    ...unitContextLines(ctx, {
+      subject: 'this lesson',
+      use: ['Use it for broad framing (audience, arc, recurring themes):'],
+    }),
+    ...lessonContextLines(ctx, [
+      'Lesson outline (the levelbuilder typed this for the lesson as',
+      'a whole; match its tone and the concepts it names):',
+    ]),
+    ...sectionLines(
+      [
+        'Slides outline (the levelbuilder typed this when planning the',
+        'whole slide deck — match the audience, depth, vocabulary, and',
+        'tone it implies; do not soften technical content if the',
+        'outline asks for it):',
+      ],
+      ctx.slidesOutline
+    ),
     ...(!hasAnyOutline
       ? [
+          '',
           'No outline was provided. Default to a tone appropriate for the',
           'description below; do not assume any specific grade level.',
-          '',
         ]
       : []),
-    ...(ctx.precedingSlides
-      ? [
-          'Preceding slides in this deck, in order. Use them for continuity',
-          '— consistent imagery, callbacks, building on prior framing — but',
-          'do NOT regenerate or summarize them; only build the slide',
-          'described last:',
-          ctx.precedingSlides,
-          '',
-        ]
-      : []),
+    ...sectionLines(
+      [
+        'Preceding slides in this deck, in order. Use them for continuity',
+        '— consistent imagery, callbacks, building on prior framing — but',
+        'do NOT regenerate or summarize them; only build the slide',
+        'described last:',
+      ],
+      ctx.precedingSlides
+    ),
+    '',
     'For the supplied slide description, return:',
     '  - text: markdown to overlay. Match the audience and depth from',
     '    the outline above. If the description names specific syntax,',

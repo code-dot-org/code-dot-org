@@ -4,7 +4,11 @@ import z from 'zod/v3';
 import {generateText} from '@cdo/apps/aiGateway';
 import {
   authoringRulesLines,
+  lessonContextLines,
   LevelContext,
+  precedingLevelsLines,
+  targetProjectLines,
+  unitContextLines,
 } from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getImageModel,
@@ -75,6 +79,12 @@ interface PanelPlan {
 // failed image doesn't waste the whole panel set. Panels are narrative,
 // so the target project (when set) mostly informs what to introduce or
 // motivate; the actual code appears only in adjacent weblab2 levels.
+const LESSON_CONTEXT_FOR_PANELS = [
+  'Lesson context (this level is one piece of a larger lesson — keep',
+  'tone, characters, and continuity consistent with this outline,',
+  'but only produce content for the specific level description below):',
+];
+
 async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
   const prompt = [
     'You are helping a curriculum author build a "Panels" level: a short,',
@@ -87,47 +97,22 @@ async function planPanels(ctx: LevelContext): Promise<PanelPlan[]> {
     'overlay text (1-3 sentences, markdown allowed) and an image prompt for',
     'a single 16:9 illustration with no embedded text.',
     ...authoringRulesLines(ctx),
-    ...(ctx.unitOutline
-      ? [
-          '',
-          `Unit context — this level sits inside the unit "${
-            ctx.unitName ?? ''
-          }". Use it for broad continuity (audience/grade, recurring themes, tone, arc)`,
-          'but build only the specific level described below:',
-          ctx.unitOutline,
-        ]
-      : []),
-    ...(ctx.lessonOutline
-      ? [
-          '',
-          'Lesson context (this level is one piece of a larger lesson — keep',
-          'tone, characters, and continuity consistent with this outline,',
-          'but only produce content for the specific level description below):',
-          ctx.lessonOutline,
-        ]
-      : []),
-    ...(ctx.precedingLevels
-      ? [
-          '',
-          'Preceding levels in this lesson, in order. Use them for continuity',
-          '— recurring characters, callbacks, building on earlier setups —',
-          'but do NOT regenerate or summarize them; only build the level',
-          'described last:',
-          ctx.precedingLevels,
-        ]
-      : []),
-    ...(ctx.targetProject
-      ? [
-          '',
-          'Target project — the final app the lesson builds toward.',
-          'Adjacent Web Lab 2 levels work toward this code, so these panels',
-          'should motivate, foreshadow, or recap concepts that show up in',
-          'it. The student never sees the code itself; use it as background',
-          'so your story lands on relevant ideas. Do not paste code into',
-          'panel text.',
-          ctx.targetProject,
-        ]
-      : []),
+    ...unitContextLines(ctx),
+    ...lessonContextLines(ctx, LESSON_CONTEXT_FOR_PANELS),
+    ...precedingLevelsLines(ctx, [
+      'Preceding levels in this lesson, in order. Use them for continuity',
+      '— recurring characters, callbacks, building on earlier setups —',
+      'but do NOT regenerate or summarize them; only build the level',
+      'described last:',
+    ]),
+    ...targetProjectLines(ctx, [
+      'Target project — the final app the lesson builds toward.',
+      'Adjacent Web Lab 2 levels work toward this code, so these panels',
+      'should motivate, foreshadow, or recap concepts that show up in',
+      'it. The student never sees the code itself; use it as background',
+      'so your story lands on relevant ideas. Do not paste code into',
+      'panel text.',
+    ]),
     '',
     `Description: ${ctx.levelDescription}`,
   ].join('\n');
