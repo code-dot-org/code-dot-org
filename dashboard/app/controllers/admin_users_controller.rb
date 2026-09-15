@@ -177,6 +177,7 @@ class AdminUsersController < ApplicationController
     end
 
     log_admin_action('bulk_delete_progress', nil, {student_ids: student_ids, unit_ids: unit_ids})
+    User.delete_progress_for_units(user_ids: student_ids, unit_ids: unit_ids)
     redirect_to user_progress_form_path, notice: "Queued progress reset for #{student_ids.length} #{'student'.pluralize(student_ids.length)} across #{unit_ids.length} #{'unit'.pluralize(unit_ids.length)}. (Deletion API pending.)"
   end
 
