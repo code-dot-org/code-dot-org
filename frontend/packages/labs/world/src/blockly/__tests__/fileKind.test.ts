@@ -51,7 +51,8 @@ describe('fileKindOf', () => {
 describe('which definition roots a file may hold', () => {
   it('offers `define actor` to an actor file alone', () => {
     // Every actor is a file. A world once held its own; nothing offers one
-    // there now, and the generator refuses one pasted in.
+    // there now. One that reaches a world anyway — from a file edited by hand,
+    // since a paste cannot cross tabs — compiles to a builder nothing places.
     expect(offeredTypes('actor')).toContain('world_actor');
     expect(offeredTypes('world')).not.toContain('world_actor');
     expect(offeredTypes('rule')).not.toContain('world_actor');
