@@ -98,6 +98,8 @@ class UnconnectedMusicView extends React.Component {
     initialSources: PropTypes.object,
     channel: PropTypes.object,
     projectManager: PropTypes.object,
+    hideResourcePanel: PropTypes.bool,
+    onRun: PropTypes.func,
     // populated by Redux
     currentLevelId: PropTypes.string,
     userId: PropTypes.number,
@@ -747,6 +749,7 @@ class UnconnectedMusicView extends React.Component {
     if (play) {
       this.playSong();
       this.analyticsReporter.onButtonClicked('play');
+      this.props.onRun?.();
     } else {
       this.stopSong();
     }
@@ -1027,6 +1030,7 @@ class UnconnectedMusicView extends React.Component {
           overrideProjectManager={this.props.projectManager}
           startSources={{source: JSON.stringify(this.getStartSources())}}
           viewingOldVersion={this.props.viewingOldVersion}
+          hideResourcePanel={this.props.hideResourcePanel}
         />
         <Callouts />
       </AnalyticsContext.Provider>

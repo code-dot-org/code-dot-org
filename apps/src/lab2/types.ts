@@ -20,6 +20,7 @@ import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
@@ -533,7 +534,7 @@ export interface ParentLevelPathLink {
   position: string;
 }
 
-export interface LabProps<
+export interface StandardLabProps<
   T extends LevelProperties = LevelProperties,
   U extends ProjectSources = ProjectSources
 > {
@@ -541,6 +542,37 @@ export interface LabProps<
   initialSources?: U;
   channel?: Channel;
 }
+
+// Optional props for surfaces that mount Lab2 views outside the standard
+// Level/Lesson pipeline (e.g. the AI Lessons hackathon prototype,
+// MusicDanceAi's bubble-choice multi-lab tab switcher). Lab code reads
+// these but should not depend on them; don't add new fields without
+// discussion — the goal is to keep production lab code free of
+// host-specific branches.
+export interface ExtraLabProps {
+  // Suppress the ResourcePanel sidebar entirely. The host is taking
+  // over the instructions/help affordance and the panel's
+  // settings/version-history tabs would just confuse the student.
+  hideResourcePanel?: boolean;
+  // Override the project manager that the lab view saves/loads through,
+  // instead of falling back to the Lab2Registry singleton. Allows a host
+  // to mount multiple lab views on one page (each scoped to its own
+  // project) without thrashing the singleton. Currently honored by
+  // Music; other labs still go through the singleton.
+  projectManager?: ProjectManager;
+  // Fire-and-forget signal the lab view emits when the student kicks
+  // off a run/play of their code. The host can use it to react (e.g.
+  // the AI Lessons tutor auto-evaluates the work on each Play). Lab
+  // views are responsible for calling this at the right moment;
+  // currently honored by Music (on Play). Weblab2 has no explicit Run
+  // action so this is a no-op there.
+  onRun?: () => void;
+}
+
+export type LabProps<
+  T extends LevelProperties = LevelProperties,
+  U extends ProjectSources = ProjectSources
+> = StandardLabProps<T, U> & ExtraLabProps;
 
 export type ShareDialogId = 'hoc2024' | 'hoai2025';
 

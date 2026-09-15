@@ -92,7 +92,7 @@ const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
-> = ({levelProperties, initialSources}) => {
+> = ({levelProperties, initialSources, hideResourcePanel}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   useWeblab2IntroTour(levelProperties);
 
@@ -205,6 +205,7 @@ const Weblab2View: React.FC<
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}
+          hideResourcePanel={hideResourcePanel}
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}
