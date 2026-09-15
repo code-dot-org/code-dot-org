@@ -498,7 +498,7 @@ describe('the abilities step', () => {
     toAbilities();
 
     for (const heading of [
-      'Moving about',
+      'Being the player',
       'Gravity and ground',
       'Health, scoring and speech',
       'Being an enemy',
@@ -563,7 +563,7 @@ describe('the abilities step', () => {
     // real one, which crossed the line when the shelf grew.
     toAbilities();
 
-    for (const group of ['Moving about', 'Being an enemy']) {
+    for (const group of ['Being the player', 'Being an enemy']) {
       expect(
         screen.getByRole('button', {name: new RegExp(group)}),
       ).toHaveAttribute('aria-expanded', 'false');

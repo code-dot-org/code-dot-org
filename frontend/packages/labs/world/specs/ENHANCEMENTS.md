@@ -531,13 +531,16 @@ health` is
   rule.
 - **A verb it did not have** — zaps, chases, is pushable, damages on touch.
   Collecting is built (above), and so now are chasing, damaging on touch and
-  walking a beat (above) — the three an enemy is made of. Zapping and being
-  pushable are the same shape again.
+  walking a beat (above) — the three an enemy is made of. Being pushable is
+  the same shape again. Zapping is not, quite: an enemy that shoots at
+  somebody fires on a rate and asks whom, which is the hunt shape with the
+  shot handler the control-scheme row already writes, and it is not built.
 - **A control scheme** — the keys and the traits behind them, as one act.
   Walking and jumping is built (above); climbing with the arrows is built and
   was a rule before it; a top-down scheme and a driving one are the same shape
-  with a different pair of traits. The interesting question each one asks is
-  _which keys_, which is why the answer is left as blocks in the actor's file.
+  with a different pair of traits; shooting on the space bar is one too, and
+  is shelved with them. The interesting question each one asks is _which
+  keys_, which is why the answer is left as blocks in the actor's file.
 - **A relationship with the world** — stays in bounds; is a checkpoint. No
   picture at all, pure wiring. The camera is the one of these that is built
   (below).

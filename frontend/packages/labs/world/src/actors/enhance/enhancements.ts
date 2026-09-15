@@ -232,7 +232,9 @@ export const GROUPS: readonly EnhancementGroup[] = [
   {
     // First, because they are what make an actor a CHARACTER rather than
     // scenery, and everything under them is something a character then does.
-    name: 'Moving about',
+    // Named for the actor rather than for the moving, because not everything
+    // on a key is a way of moving: shooting is a control too.
+    name: 'Being the player',
     members: [
       platformerControlsEnhancement,
       // …and the same rule read the other way, for a game seen from above.
@@ -245,6 +247,11 @@ export const GROUPS: readonly EnhancementGroup[] = [
       drivesEnhancement,
       climbArrowsEnhancement,
       jetpackEnhancement,
+      // …and the one control that is not a way of moving. It was shelved with
+      // the enemies for what a shot is FOR, but a key handler is the player's
+      // whatever it does; an enemy that shoots at somebody would be a row of
+      // its own, asked on a rate rather than a key (specs/ENHANCEMENTS.md).
+      shootsEnhancement,
       // …and what happens at the edge of the map, which is a fact about how a
       // thing travels rather than about how it is steered.
       wrapsAcrossEnhancement,
@@ -300,11 +307,6 @@ export const GROUPS: readonly EnhancementGroup[] = [
       // to its beat, and one that ignores the ground entirely.
       prowlsEnhancement,
       flapsEnhancement,
-      // …and the one row here a hero takes as often as a monster. It is
-      // shelved with the fighting because that is what it is for, and because
-      // the alternative is a learner hunting for "how do I shoot" under
-      // headings about arriving and moving.
-      shootsEnhancement,
     ],
   },
   {

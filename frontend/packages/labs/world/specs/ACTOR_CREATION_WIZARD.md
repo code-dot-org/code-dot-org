@@ -235,9 +235,12 @@ description and what it brings are there for the row you are wondering about
 **The rows sit under headings**, which the order had been carrying in comments
 nobody could see: the controls that make an actor a character, the two that say
 how it sits in a side-on world, the three an enemy is made of. Written down,
-they are Moving about / Gravity and ground / Health, scoring and speech / Being
-an enemy, and — for a world — What the screen shows, with an empty heading left
-out rather than drawn.
+they are Being the player / Gravity and ground / Health, scoring and speech /
+Being an enemy, and — for a world — What the screen shows, with an empty
+heading left out rather than drawn. The first is named for the actor rather
+than for moving, because shooting on a key is a control too and is shelved
+there; an enemy that shoots at somebody, on a rate rather than a key, would be
+a row of its own under Being an enemy.
 
 ASSIGNED, WHERE THE RULE SHELF'S GROUPS ARE DERIVED, and the difference is the
 question. `rules/stockRuleGroups` reads each rule's region off the progression
