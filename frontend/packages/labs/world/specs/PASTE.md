@@ -66,15 +66,17 @@ Three pieces, in the order they are worth doing.
 ### 1. A paste shortcut of the lab's own
 
 Replace Blockly's `paste` shortcut with one that pastes into the workspace on
-screen. Blockly keeps a main workspace — set when one is injected and when one
-takes focus (`common.setMainWorkspace`, read by `Blockly.getMainWorkspace()`)
-— and with one editor mounted at a time that is exactly the destination we
-mean.
+screen. The shortcut registry hands a shortcut the workspace the keys were
+pressed on, and that is the destination: a flyout's target if the keys came
+over a flyout, else the workspace itself. Blockly's main workspace — set when
+one is injected and when one takes focus (`common.setMainWorkspace`) — is the
+fallback when none was handed over, which with one editor mounted at a time
+is the same workspace.
 
-    precondition:  there is copied data; the main workspace exists, is
-                   rendered, is not read-only and is not mid-drag; no
-                   ephemeral focus (a field editor, a dropdown) has the keys
-    callback:      clipboard.paste(data, mainWorkspace, where)
+    precondition:  there is copied data; the target exists, is rendered, is
+                   not read-only and is not mid-drag; no ephemeral focus (a
+                   field editor, a dropdown) has the keys
+    callback:      clipboard.paste(data, target, where)
 
 `where` is the pointer, for a paste from a context menu; else the copied
 location if it lies within the destination's view, which it will for a paste
@@ -82,11 +84,12 @@ back into the same file; else the middle of the view. That is Blockly's own
 rule with the workspace swapped, and it is worth keeping because the same
 shortcut serves the same-file paste too.
 
-Registered once, at module load, beside the other things the editor
-registers on Blockly's global registries (`ShortcutRegistry.registry`,
-unregister `paste` then register ours). The copy and cut shortcuts are
-untouched: they record the right data, and a cut is a copy followed by a
-delete, so cut-then-paste across tabs works the moment paste does.
+Registered on every inject, by a plugin in the editor's list, and
+idempotently — unregister Blockly's `paste` by name, register ours — so it
+survives anything that puts Blockly's defaults back
+(`blockly/pasteShortcut`). The copy and cut shortcuts are untouched: they
+record the right data, and a cut is a copy followed by a delete, so
+cut-then-paste across tabs works the moment paste does.
 
 **What this does not do:** keep the other tab's workspace alive. Codebridge
 could mount every open file's editor and hide all but one, which would also
@@ -106,25 +109,36 @@ that is a root in the right sense but cannot mean anything here — and the
 reading is the same: it is an orphan, even though it is a top block, because
 nothing in this file can hold it.
 
-On block creation (which a paste raises, and so does a load), ask:
+Whenever a block is created, moved or changed — a paste raises the first,
+so does a load, and the other two are how a fix is noticed — ask of the ROOT
+the block belongs to:
 
 - **Is it a definition with a home elsewhere?** `ROOT_HOMES` says which kinds
   of file may hold `define actor`, `define world`, `define rule` and the rest.
   A `define actor` in a world is disabled with "This belongs in an actor
-  file", and copying it into the actor's tab is what the words invite.
+  file, not a world", and copying it into the actor's tab is what the words
+  invite.
 - **Is it offered to this kind of file at all?** The palette is built per file
   kind (`buildDomainPalette(…, {fileKind})`) and its toolbox is the set of
-  what may be placed. A row that is in no drawer here — a trait step in a
-  world, `use rule` in a world — is disabled with "Not something a world
-  does". The generator already writes nothing for these; the difference is
-  that the learner is told.
+  what may be placed. A root that is in no drawer here — the world's own hat,
+  `when ⟨left⟩ is pressed`, in an actor file — is disabled with "An actor file
+  cannot hold this". The generator would have written it against a `world`
+  an actor module never binds; the learner is told instead.
 - **Is it a hat about `this actor` in a world?** An actor file's hat is about
   the actor whose file it is, and its subject socket says `this actor`. Pasted
   into a world that reads as a hat about nobody: the subject compiles to
   `actor`, which a world module never binds, and the module throws as it
-  loads. Disabled with "Say which kind this is about" — and the fix is the
-  socket, not the tab, since a world hat about `any ⟨Hero⟩` is a fine thing to
-  paste.
+  loads. Disabled with "A world's hat is about a kind: put “any ⟨kind⟩” in the
+  socket" — and the fix is the socket, not the tab, since a world hat about
+  `any ⟨Hero⟩` is a fine thing to paste. Plugging a kind in moves a block,
+  and the move is what asks the hat again and enables it.
+
+ROOTS, and what hangs under them. A root here is a block with neither a
+previous nor an output connection — a definition or a hat. A row under one is
+that root's business and is disabled and enabled with it; an unattached row
+has a previous connection and is the orphan plugin's, which is what a pasted
+`use rule` or trait step in a world is. The two plugins never disagree about
+one block because they never look at the same one.
 
 The defining roots are the one case where being disabled is not yet enough.
 The generator refuses a `define actor` in a world by reading the workspace's
@@ -155,18 +169,25 @@ question a test should answer once, so the answers do not drift.
 
 ## Tests
 
-- **The shortcut**, with two workspaces: copy in the first, dispose it, paste
-  in the second, and the block is in the second. Then the same without
-  disposing, to show the same-file paste still lands where it was copied from.
-  Blockly's shortcut registry can be driven without a browser; the wrapper's
-  keyboard-navigation browser test is the model if a real keypress is wanted.
+- **The shortcut**, headless: the target is the workspace the keys came on,
+  a flyout's target over a flyout, and nothing on a workspace that is not
+  rendered; the precondition needs copied data and refuses read-only and
+  mid-drag; the location is the copied place when in view and the middle of
+  the view otherwise; the callback hands Blockly's `paste` that workspace and
+  does nothing with nothing copied; registering replaces Blockly's under its
+  own name and may be done twice. `paste` itself wants a rendered workspace,
+  so it is watched rather than run, and the keypress is checked in a browser.
 - **Variables travel.** `add actor … as ⟨shot⟩` copied from a file that
   declares `shot` and pasted into one that does not: the destination declares
   it, with the name and type, and the block's field resolves. Once with
   Blockly's own variable field and once with the lab's typed one.
-- **Ids.** A `define tween` and its `play tween` pasted together keep the
-  reference; pasted into a file that already holds that id, the tween gets a
-  fresh one and the reference follows it or is reported.
+- **Ids.** A block pasted into a file with no block by its id keeps it;
+  into a file that already holds it, gets a fresh one. That is Blockly's, and
+  pinned so an upgrade that changed it would say so. What is NOT built is
+  the consequence for a pair: a `define tween` renumbered on paste leaves the
+  `play tween` beside it naming the old id, and it plays nothing, silently.
+  A fourth question for the plugin — a `play tween` whose tween is not in
+  the file — is the answer, and it is not written.
 - **The orphan reasons.** For each of the three questions in piece 2, a
   workspace of the wrong kind, a created block, and the reason on it; and for
   the defining root, a project that still compiles with the block disabled.
