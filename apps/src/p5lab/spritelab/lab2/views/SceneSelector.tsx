@@ -25,6 +25,9 @@ interface SceneSelectorProps {
   disabled?: boolean;
   // Locked to the current scene: disallows changing or creating scenes.
   locked?: boolean;
+  // Offer the option that creates a scene. A guided level lets the student
+  // move between the scenes it gave them, but not invent more.
+  allowCreate?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string, type: SceneType) => void;
 }
@@ -40,6 +43,7 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   activeSceneId,
   disabled,
   locked,
+  allowCreate = true,
   onSelectScene,
   onCreateScene,
 }) => {
@@ -98,7 +102,7 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
             {scene.name}
           </option>
         ))}
-        <option value={NEW_SCENE_VALUE}>＋ New scene…</option>
+        {allowCreate && <option value={NEW_SCENE_VALUE}>＋ New scene…</option>}
       </select>
       {naming && (
         <Dialog

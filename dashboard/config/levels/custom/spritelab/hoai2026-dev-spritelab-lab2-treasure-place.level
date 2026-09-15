@@ -22,7 +22,8 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
-      "kind": "world"
+      "kind": "world",
+      "imageType": "sprite"
     },
     "pinned_scene": {
       "id": "platform-scene",

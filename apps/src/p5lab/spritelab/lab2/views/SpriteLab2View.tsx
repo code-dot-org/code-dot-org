@@ -50,6 +50,7 @@ import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
 import {countImagesByType, useGuideSteps} from '../guideSteps';
+import {imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
   collectImageReferences,
@@ -427,6 +428,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const activeSceneType = activeScene?.type;
+  // A world is a platformer's floor plan, so a story scene has nothing to
+  // place in one. Scenes made before scene types keep the tab.
+  const enabledTabs = useMemo(
+    () =>
+      activeSceneType === 'story' ? tabs.filter(tab => tab !== 'World') : tabs,
+    [tabs, activeSceneType]
+  );
+  useEffect(() => {
+    if (activeTab === 'World' && !enabledTabs.includes('World')) {
+      dispatch(
+        setActiveTab(enabledTabs.includes('Code') ? 'Code' : enabledTabs[0])
+      );
+    }
+  }, [activeTab, enabledTabs, dispatch]);
   const sceneToolbox = useMemo(
     () =>
       toolboxForSceneType(levelProperties.toolboxDefinition, activeSceneType),
@@ -502,6 +517,30 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [worldPaletteSelection, setWorldPaletteSelection] = useState<
     WorldCell | 'erase' | null
   >(null);
+
+  // A guided level opens the palette on the image it is about — the newest
+  // of the kind its mode names — so the student can paint without hunting
+  // for it. Only until they choose for themselves.
+  const focusImageType = levelProperties.levelMode?.imageType;
+  useEffect(() => {
+    if (
+      worldPaletteSelection ||
+      !focusImageType ||
+      focusImageType === 'background'
+    ) {
+      return;
+    }
+    // orderedKeys is newest-first: Sprite Lab prepends new animations.
+    const newest = animationList.orderedKeys.find(
+      key =>
+        imageTypeFromCategories(animationList.propsByKey[key]?.categories) ===
+        focusImageType
+    );
+    const name = newest && animationList.propsByKey[newest]?.name;
+    if (name) {
+      setWorldPaletteSelection({image: name, kind: focusImageType});
+    }
+  }, [worldPaletteSelection, focusImageType, animationList]);
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
@@ -1576,7 +1615,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <TabShell
           activeTab={activeTab}
           onTabChange={handleTabChange}
-          enabledTabs={tabs}
+          enabledTabs={enabledTabs}
           visibleTabs={tabs}
           onClickStartOver={
             isEditable ? () => setShowStartOver(true) : undefined
@@ -1598,6 +1637,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 activeSceneId={activeSceneId}
                 disabled={!onSceneTab}
                 locked={!!pinnedSceneId}
+                // A guided level hands the student its scenes; only freeplay
+                // invents more. Levels with no mode keep the old behaviour.
+                allowCreate={
+                  !levelProperties.levelMode ||
+                  isFreeplayMode(levelProperties.levelMode)
+                }
                 onSelectScene={handleSelectScene}
                 onCreateScene={handleCreateScene}
               />

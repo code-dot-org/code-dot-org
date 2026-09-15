@@ -63,7 +63,7 @@
           "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "And another thing..."
+            "SPEECH": "Click my friend!"
           },
           "inputs": {
             "SPRITE": {

@@ -9,7 +9,8 @@ export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
 
 export interface LevelMode {
   kind: LevelModeKind;
-  /** The one kind of image an image level makes. */
+  /** The kind of image the level is about: the one an image level makes,
+      and the one a world level opens its palette on. */
   imageType?: ImageType;
   /** Word combos to offer, in place of the set the kind implies. */
   adlibs?: ImageAdlibSet;
