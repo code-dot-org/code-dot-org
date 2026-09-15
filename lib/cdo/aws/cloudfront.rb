@@ -1,6 +1,8 @@
 require_relative '../../../deployment'
 require 'digest'
+require 'net/http'
 require 'securerandom'
+require 'uri'
 require 'cdo/http_cache'
 require 'cdo/legacy_varnish_helpers'
 require 'active_support/core_ext/object/try'
@@ -10,6 +12,16 @@ module AWS
   class CloudFront
     ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH).freeze
     CACHED_METHODS = %w(HEAD GET OPTIONS).freeze
+
+    # Dev-only signing workaround. When a local box has no real CloudFront keys,
+    # a locals.yml may set `cloudfront_key_pair_id: localoverride` to borrow
+    # signed cookies from an upstream (production) that does have keys. See also
+    # RestrictedProxyController, which proxies /restricted/* to that upstream.
+    LOCAL_OVERRIDE_KEY_PAIR_ID = 'localoverride'.freeze
+    # Upstream to borrow signing from; overridable via locals.yml.
+    DEV_SIGNING_UPSTREAM_DEFAULT = 'https://studio.code.org'.freeze
+    # Refresh borrowed cookies well within their ~4h upstream lifetime.
+    UPSTREAM_COOKIE_TTL_SECONDS = 3 * 60 * 60
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
     CLIENT_ERROR_CODES = [400, 403, 404, 405, 414].freeze
     SERVER_ERROR_CODES = [500, 501, 502, 503, 504].freeze
@@ -322,6 +334,11 @@ module AWS
     #   these cookies will expire.
     # @return [Hash<String>] Cookie key/value pairs.
     def self.signed_cookies(resource, expiration_date)
+      # Dev override: with no real keys, borrow cookies signed by the upstream.
+      # `resource`/`expiration_date` are ignored — the upstream signs its own
+      # policy, and restricted assets are proxied to that same upstream.
+      return upstream_signed_cookies if dev_signing_override?
+
       raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
       raise 'missing CDO.cloudfront_private_key' unless CDO.cloudfront_private_key
 
@@ -354,6 +371,53 @@ module AWS
         policy: policy
       )
     end
+
+    # Cookie header string ("CloudFront-...=...; ...") for a request proxied to
+    # the signing upstream. Used by RestrictedProxyController; only meaningful
+    # under the dev signing override.
+    def self.upstream_signed_cookie_header
+      upstream_signed_cookies.map {|name, value| "#{name}=#{value}"}.join('; ')
+    end
+
+    # True when we should borrow signed cookies from an upstream rather than
+    # sign locally: development, with the `localoverride` key-pair sentinel.
+    def self.dev_signing_override?
+      CDO.rack_env?(:development) &&
+        CDO.cloudfront_key_pair_id == LOCAL_OVERRIDE_KEY_PAIR_ID
+    end
+
+    def self.dev_signing_upstream
+      (CDO[:restricted_proxy_upstream].presence || DEV_SIGNING_UPSTREAM_DEFAULT).chomp('/')
+    end
+
+    # Fetches (and caches for their lifetime) CloudFront cookies from the
+    # upstream's /dashboardapi/sign_cookies. Returns {cookie_name => value}.
+    def self.upstream_signed_cookies
+      now = Time.now.to_i
+      if @upstream_cookies.nil? ||
+          @upstream_cookies_fetched_at.nil? ||
+          now - @upstream_cookies_fetched_at >= UPSTREAM_COOKIE_TTL_SECONDS
+        @upstream_cookies = fetch_upstream_signed_cookies
+        @upstream_cookies_fetched_at = now
+      end
+      @upstream_cookies
+    end
+
+    def self.fetch_upstream_signed_cookies
+      uri = URI.parse("#{dev_signing_upstream}/dashboardapi/sign_cookies")
+      response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
+        http.request(Net::HTTP::Get.new(uri))
+      end
+      unless response.is_a?(Net::HTTPSuccess)
+        raise "upstream sign_cookies returned #{response.code}"
+      end
+
+      (response.get_fields('set-cookie') || []).each_with_object({}) do |set_cookie, cookies|
+        name, value = set_cookie.split(';', 2).first.to_s.split('=', 2)
+        cookies[name] = value if name&.start_with?('CloudFront-')
+      end
+    end
+    private_class_method :dev_signing_upstream, :upstream_signed_cookies, :fetch_upstream_signed_cookies
 
     # Don't include the Host and CloudFront-Forwarded-Proto headers in the cache key for
     # S3 origins or the NextJS-based marketing origin. For the marketing site switchover, we
