@@ -14,12 +14,12 @@
   padding-top: 24px;
 }
 
-/* Teal active label, dark inactive; the tripled class beats DSCO's :disabled selector. */
+/* Teal active label, dark inactive; the tripled class beats DSCO's disabled selector. */
 .tabs.tabs.tabs button[role='tab'] {
   color: var(--text-neutral-primary);
 }
 
-.tabs.tabs.tabs button[role='tab']:disabled {
+.tabs.tabs.tabs button[role='tab'][aria-disabled='true'] {
   color: var(--text-neutral-primary);
 }
 

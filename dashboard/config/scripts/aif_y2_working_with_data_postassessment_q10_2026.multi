@@ -1,0 +1,27 @@
+name 'aif-y2-working-with-data-postassessment-q10-2026'
+
+wrong '`plt.xlim((0, 100))`'
+wrong '`plt.xlim((48, 52))`'
+wrong '`plt.ylim((48, 52))`'
+right '`plt.ylim((0, 100))`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which addition best conveys the plot's intended message?
+
+```python
+import matplotlib.pyplot as plt
+
+categories = ["Approve", "Disapprove"]
+values = [51, 49]
+
+plt.bar(categories, values)
+plt.title("Voters Split on New Policy")
+plt.show()
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Visualizing Data (Part 2)
+MARKDOWN

@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T14:57:42.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Music",
+    "long_instructions": "For a media studies project, you’ve been asked to find out if songs are getting longer or shorter over time. You have a file with the average length of a hit song (in seconds) from each decade since 1940.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Import the `csv` module.\r\n2. Call the `open` function to open the `music.csv` file.\r\n3. Read the file with `csv.DictReader`.\r\n4. Loop through the data. The `decade` value is already printed for you. Add a line to print the `length` value too. Compare your printed output to the CSV file. Do the numbers match?\r\n5. Close the file.\r\n",
+    "bubble_choice_description": "Read a dataset about music throughout history.",
+    "thumbnail_url": "https://images.code.org/f9a90460488fe06650922d4270e5bff6-music.png",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO 1: Import the csv module\n\n# TODO 2: Open music.csv\n\n# TODO 3: Read the file with csv.DictReader\n\nfor row in reader:\n  decade = row[\"decade\"] \n  print(f\"Song from {decade}\")\n  # TODO 4: Print the length value too \n\n#TODO 5: Close the file",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "music.csv",
+          "contents": "decade,length\n1940,161\n1950,156\n1960,179\n1970,235\n1980,248\n1990,254\n2000,250\n2010,266\n2020,198",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY44A0BX4nvaeEwR\nEp3X30vILyEH1vOJIOjwf2jc30CUJHTbOEGWtGIuN4sU0uuekhGQ5RcZwZ+j\nxgwaBFi+Fnw6ZPWlqdK9pFIur1d1YhUeweU1Si1v/FotKYCFBGiEsiEAjHx9\nXBijbAmr/3fNs8B+IN39WBwtTE4uaNW2fBThohDfcnB0kxPtxw1nPVIu0ew0\nXKPt8nycFDNEdj3inxBmrwgmQXBVi9+w3tjgi5f4JBEAafaQ8s4tVYtNKYkP\n48qwjGDsCHEm74Z/Tj+q9+9fCKKqB9yNP5pks6vKLVKu6NKvcgAvFHogckx+\nHoVUQCsvE++xSOJ8kVZqwov44TymdoeUsV2wvUMk8o8lGkVYFfAQusVwXgmu\nrob8wWjvgzCJRbq0bOgRIl4uq6ZE5jcCs1X60uAxXKl6iF51TjWvKEA/l2H7\nrOkaSNpcXDzb4s0u/FwKQnrvmhxyAiaRYRQrUlfWfC6gacGyHu9KLUojWx7C\n17dWxNGUtCSWkgmg3oX1yuq42w18iIQlrX0X+GqEZZgCxDVGCwdJwe6sCNBH\n3zQNfTvDS6wrttrz1fiVJ452piTsh5c8pUwsUdBj53pI2dadQq+q2diEutot\nFjeP+EybmB5hNXUtJUfVq9SFxNLOcCbIVm1o2sEo2XminIHj7Ro2L3uCIgkH\ne6uLmYwh8cctVpVhbfxFyampLg53VM0=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 14:57:56 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 14:58:48 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 14:59:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:00:52 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:08:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

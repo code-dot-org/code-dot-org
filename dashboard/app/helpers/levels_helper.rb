@@ -558,7 +558,7 @@ module LevelsHelper
     level_options = app_options[:level] ||= Hash.new
 
     level_options[:lastAttempt] = @last_attempt
-    level_options.merge! @level.properties.camelize_keys
+    level_options.merge! @level.student_properties.camelize_keys
 
     unless current_user && (current_user.teachers.any? ||
         (@level.try(:peer_reviewable?) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))

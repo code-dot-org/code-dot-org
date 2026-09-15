@@ -31,6 +31,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
+    return link_accounts user if should_link_accounts?
     if user
       sign_in_classlink user
     else

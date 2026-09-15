@@ -25,7 +25,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def predict_cost(miles):\n    return 4 + 2 * miles\n\n# TODO 1: Prompt the user for a number of miles, save the result in a variable\n\n# TODO 2: Calculate a predicted cost to travel their number of miles\n\n# TODO 3: Print a message letting the user know the distance and predicted cost",
+          "contents": "def predict_cost(miles):\n  return 4 + 2 * miles\n\n# TODO 1: Prompt the user for a number of miles, save the result in a variable\n\n# TODO 2: Calculate a predicted cost to travel their number of miles\n\n# TODO 3: Print a message letting the user know the distance and predicted cost",
           "folderId": "0",
           "active": true
         }
@@ -36,9 +36,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp+tl5ZleePaUf1\nzL0NZ4SIXMXQ7Kp+flYAdsC0iQf+TJ37a/YEZ16K0nauLg0IrmWa7N0RVz2i\nL/gqXxTg27ofchAPLDprAMVOaZ5iIOF7siLDV3GUYg3vm1uB+cWSxBhbD5g6\nRMrVbRta+UbjzljCtz2zRXTNV+3a2+dXFQkBEaWCbJrg3fgHa6HY6SLLo8W0\nQJ4J5agN/NggMMrdI/k6p1tv9yboJjA1K53uYeQSs8Hl3HS42kKd7NmR5+Zd\n8/C+75TETDy1vMOSURCTr3NFiIRybW7daCZ2cPFQ0kPAqpqIB3xhORVOyQns\n8llQIJUkEhVCpas1/9EMi5pbzP3DcdpAW/48p7so66+HURiQM+161PJ+Tn2I\nXO2dWHa60C/ZEMBPPdsjKOJaX/ZKpbKk\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpTnAkJbBcWv4ke\nhZip0YubeuqAzTPqOJn1f5L03SLOhza+MsH0C19iGYxEO5TvEF30TIuVpxpQ\nsOaV4CNo0Mlo/9e1R6dTRL8PJQZEy3RE28nDTPtBhuLhONVgz1XyeUnOEPD7\nMYf3NwVTZu1RrTu9HkuzN3hzb/2WUWjhLJuSJ7qtS1c1wO9tQLRhnhEF00LD\n9qWhJA5O7GsC8HHxKt6QDK54HtAZfSW+1SSVekXuMIJLyMdLAeagMm5sRfu3\nbkbd9h9Cp8xYjogpDWgm8gc2WYsjh6OgPboZmxYU0vjGAcW5pH4MpBj4w+Pa\n6SNA2TkXc/cq8zy3Ks7sT7hyTVVEKWUeiesiXKBiuswAOeK1q3PazFczLgNq\n6Z6wDfixDznP/xvbIX23AV4mSepq+Tu/\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-21 20:50:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:50:13 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-21 20:50:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 20:50:13 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:15:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:15:48 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

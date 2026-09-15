@@ -21,6 +21,8 @@ module SharedConstants
   GLOBAL_EDITION_DEFAULT_REGION = Cdo::GlobalEdition::DEFAULT_REGION
   GLOBAL_EDITION_EXCLUDED_PATHS = Cdo::GlobalEdition::EXCLUDED_PATHS.to_a
 
+  STATSIG_STABLE_ID_KEY = 'statsig_stable_id'
+
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
     {
@@ -71,6 +73,7 @@ module SharedConstants
       email: 'email',
       google_classroom: 'google_classroom',
       clever: 'clever',
+      classlink: 'classlink',
       lti_v1: 'lti_v1',
     }
   )
@@ -866,6 +869,7 @@ module SharedConstants
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
+    GEMINI_3_1_FLASH_IMAGE: "gemini-3.1-flash-image",
   }
 
   # Models served via the Google Gemini API. This is about routing — which
@@ -877,6 +881,7 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
+    AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
   ].freeze
 
   # Models only available to users in the US

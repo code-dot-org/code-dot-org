@@ -8,6 +8,7 @@ import {
   BackpackEventListener,
   ErrorCallback,
   FileMetadata,
+  FilenamesByAppType,
 } from './types';
 
 const UNIVERSAL_CHANNEL_URL = '/backpacks/channel';
@@ -77,7 +78,7 @@ export default class UnifiedBackpackClientApi {
   // List the filenames in every backpack the user has, indexed by app type. An app
   // type whose backpack could not be read is left out of the result.
   // Unlike the callback-based methods, this reports a failure by rejecting.
-  async getFileLists(): Promise<{[appType: string]: string[]}> {
+  async getFileLists(): Promise<FilenamesByAppType> {
     if (!this.channelId) {
       await this.fetchChannels();
     }
@@ -91,7 +92,7 @@ export default class UnifiedBackpackClientApi {
       listFilesUrl(appTypes.map(appType => this.channelIdsByAppType[appType]))
     );
 
-    const filenamesByAppType: {[appType: string]: string[]} = {};
+    const filenamesByAppType: FilenamesByAppType = {};
     appTypes.forEach(appType => {
       const files = response.value[this.channelIdsByAppType[appType]];
       if (files) {
@@ -184,6 +185,58 @@ export default class UnifiedBackpackClientApi {
   ) {
     const client = await this.clientForAppType(appType, onError);
     client?.deleteFiles(filenames, onError, onSuccess);
+  }
+
+  /**
+   * Delete every copy of a name held by a backpack other than the universal one.
+   * Unlike the callback-based methods, this reports a failure by rejecting.
+   * @param filename name to clear from the legacy backpacks
+   * @param filenamesByAppType file lists to search, as returned by getFileLists
+   */
+  async deleteFromLegacyBackpacks(
+    filename: string,
+    filenamesByAppType: FilenamesByAppType
+  ): Promise<void> {
+    if (!this.channelId) {
+      await this.fetchChannels();
+    }
+
+    const legacyAppTypes = Object.entries(filenamesByAppType)
+      .filter(
+        ([appType, filenames]) =>
+          appType !== UniversalAppType && filenames.includes(filename)
+      )
+      .map(([appType]) => appType);
+
+    // Each backpack has its own client, so these cannot contend with each other.
+    const deletions = await Promise.allSettled(
+      legacyAppTypes.map(
+        appType =>
+          new Promise<void>((resolve, reject) =>
+            this.deleteFiles(
+              appType,
+              [filename],
+              // A delete already in progress reports failure with no error.
+              error =>
+                reject(
+                  error ??
+                    new Error(`Could not delete ${filename} from ${appType}`)
+                ),
+              resolve
+            )
+          )
+      )
+    );
+    const failed = deletions.find(result => result.status === 'rejected');
+    if (failed) {
+      throw (failed as PromiseRejectedResult).reason;
+    }
+  }
+
+  // Client for one of the user's backpacks. Like getFileFetchUrl, this does not fetch
+  // channels first, so it is only useful once they are loaded.
+  getClientForAppType(appType: string) {
+    return this.clientsByAppType[appType];
   }
 
   addEventListener(listener: BackpackEventListener) {

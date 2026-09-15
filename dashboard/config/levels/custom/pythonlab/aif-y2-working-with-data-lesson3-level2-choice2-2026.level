@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-09-07T15:19:52.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Astronomy",
+    "long_instructions": "You’re working with the same data and code as earlier, except this snippet seems to not be working. Follow the instructions and fix the errors. \r\n\r\n**☑️ Do This:**\r\n\r\n- Run the buggy code below and read the error message.\r\n- Update the Python code to address the error.\r\n- Run the code again, you should see a *different* error. Read it carefully.\r\n- Open the CSV file and look for what the error might be. Pay particular attention to the first line.\r\n- Fix the CSV file, then run your code again to confirm it works.\r\n\r\n**💻 Coding Tip**\r\n\r\nIf you need help debugging the error, try asking your AI tutor a question like: “What does this error mean?”",
+    "bubble_choice_description": "Debug issues with a dataset of planets in the solar system.",
+    "thumbnail_url": "https://images.code.org/1e78a22d55c0846f28992290b1489140-planet.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfile = open(\"planets.csv\")\nreader = csv.DictReader(file)\n\nfor row in reader:\n  distance = row[\"distance\"] \n  print(f\"Planet is {distance} million km from the sun.\")\n  days = row[\"days\"] \n  print(f\"Planet orbit is {days} days.\")\n\nfile.close()",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "planets.csv",
+          "contents": "distancedays\n57,88\n108,225\n149,365\n228,687\n778,4333\n1432,10759\n2867,30687\n4515,60190",
+          "folderId": "1",
+          "active": false
+        }
+      },
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "data",
+          "parentId": "0",
+          "open": true
+        }
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY4mOOW+5TBaOcWw\nhm0+e7KHdwCUBhFyLgqxh/EYJDzjev/YePk7ym/d5byfnuSz7UKT9DVgDn3t\nCQB/zY5Mxdx5F+BfQH+Z+yXZC6eqTjkmlimG5CsqIlt56BcOk/dM4jxCI3sk\nbIpvSZUt9ESlBQMOl3W4VfHEEq+RmxWd75wtyOzpjStiafpRFFABVEFxfu/v\nVdVIPmmKtNfCdupubzNb7ny8ez0937vVJ2Q8j3B+fZWc2LFO5XyIeRsxSBUl\nCwmlH7eMZLDb/9CEGORTinfF0I6CU7J+60o2UFTCjTZk6v3Si93QfK304zMF\nQqSqTisgFpZqd5It1JkDc526BKNup1Z3i01USTCuUv7S+x+5LmqQCvNEQ4E1\nGF+ZwwdAns3j1Mg7U3KD5h4rAPWt1FAHkDBIc4bNaNhwqzWSDOBpMoQ1hCjk\n06zOTMoUmmh6lZqmL3bOp2ogL7UQMn1XTEXje1LnofkyiPlZgui6FDogBHCH\nUrvaid55A4LPk8V68gqlUIQl07MXyHqJn07BGNI/hFQRtCQ6irtYBZ5MZ9Y8\nwavpUrMDTlLTw83n02thZOd2jrAvO7arQoAg9RaZwIK1rR8hUC4yNRs2ltnp\nebtDo1orFNI0zyH7+yk0YhTAZdKGdhSEo66vgQvg2p8FDbkBcCbiJr1emUE2\n0aH745wGseaz7CwWtYJMwUBpus1mG8TQPqMLgQlIjUptPCabHFzQejm0mQMt\nimaRDVFtr5vLij7eB17FGbqEuXPCqMNeEUA=\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "debug",
+        "hint",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-07 15:23:35 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:23:54 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 15:24:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

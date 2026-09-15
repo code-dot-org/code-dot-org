@@ -138,4 +138,16 @@ const processMode = (mode: Mode | undefined): void => {
 };
 
 // Export a few types.
-export type {SaveResponse, ModelDataToSave, InstructionsKey} from './types';
+export type {
+  InstructionsKey,
+  Mode,
+  ModelDataToSave,
+  SaveResponse,
+} from './types';
+export {INSTRUCTIONS_KEYS} from './types';
+export type {Dataset} from './datasetManifest';
+export {
+  getAvailableDatasets,
+  getDatasets,
+  getRawDatasets,
+} from './datasetManifest';

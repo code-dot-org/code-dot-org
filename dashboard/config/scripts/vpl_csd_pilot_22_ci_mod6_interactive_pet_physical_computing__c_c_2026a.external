@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Mini-Project: Interactive Pet
 
-In Lesson 14 of the Creating Apps for Devices unit, students will create an interactive pet using the LED screen and sensors on the micro:bit and physical materials. Students explore how the micro:bit can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical materials itself.
+In Lesson 13 of the Creating Apps for Devices unit, students will create an interactive pet using the LED screen and sensors on the micro:bit and physical materials. Students explore how the micro:bit can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical materials itself.
 <br>
 
 <img src="https://images.code.org/e7b56c813944c75e484c7384b28b9fbf-image-1682004982845.jpg" style="float:left; width: 25%; margin-left: 15%; margin-right: 10%; margin-bottom: 30px; border-radius:10px;" />
@@ -28,7 +28,7 @@ When students are building physical prototypes, they will access to materials to
 
 
 ## Mini-Project Resources
-* <a href="https://studio.code.org/s/csd6b-2025/lessons/14" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* <a href="https://studio.code.org/courses/csd-2026/units/8/lessons/14" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
 * <a href="https://docs.google.com/document/d/1X0NCzO8s-6kxCgGT5wC8GXkGJrVeaW7F4_zyImbjq9s/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
 * <a href="https://docs.google.com/document/d/1gHFFmcxnroXEHFyWYXR3sXzqoe7QMNL5kDkrZbgwsfE/edit#" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 

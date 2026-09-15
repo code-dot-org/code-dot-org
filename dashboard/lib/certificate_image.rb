@@ -168,25 +168,28 @@ class CertificateImage
           name: {
             font_size: 62,
             x_offset: 0,
-            y_offset: -248,
+            y_offset: -198,
             height: 70,
             width: CERT_NAME_AREA_WIDTH,
+            color: 'rgb(31, 25, 118)',
           },
           two_titles: {
             unit_group_height: 85,
-            unit_group_font_size: 62,
+            unit_group_font_size: 52,
             unit_group_x_offset: 0,
-            unit_group_y_offset: -57,
+            unit_group_y_offset: -17,
             unit_height: 71,
-            unit_font_size: 57,
+            unit_font_size: 47,
             unit_x_offset: 0,
-            unit_y_offset: 36,
+            unit_y_offset: 53,
+            color: 'rgb(31, 25, 118)',
           },
           one_title: {
             font_size: 62,
             x_offset: 0,
             y_offset: 0,
             height: 171,
+            color: 'rgb(31, 25, 118)',
           },
           course_title_width: 1400,
           donor_text_y_offset: 611,
@@ -224,7 +227,8 @@ class CertificateImage
       cert_text_constants = text_constants[template_file.to_sym]
 
       name_constants = cert_text_constants[:name]
-      apply_text(image, name, name_constants[:font_size], 'Helvetica bold', 'rgb(118,101,160)', name_constants[:x_offset], name_constants[:y_offset], name_constants[:width], name_constants[:height])
+      name_color = name_constants[:color] || 'rgb(118,101,160)'
+      apply_text(image, name, name_constants[:font_size], 'Helvetica bold', name_color, name_constants[:x_offset], name_constants[:y_offset], name_constants[:width], name_constants[:height])
 
       # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
       # When we have a unit group, we only display the localized title of unit_or_unit_group.
@@ -233,13 +237,14 @@ class CertificateImage
         unit_group = unit.get_original_unit_group
 
         course_titles_constants = cert_text_constants[:two_titles]
+        course_title_color = course_titles_constants[:color] || 'rgb(29,173,186)'
 
         apply_text(
           image,
           unit_group.localized_title,
           course_titles_constants[:unit_group_font_size],
           'Helvetica bold',
-          'rgb(29,173,186)',
+          course_title_color,
           course_titles_constants[:unit_group_x_offset],
           course_titles_constants[:unit_group_y_offset],
           cert_text_constants[:course_title_width],
@@ -251,7 +256,7 @@ class CertificateImage
           unit.localized_title,
           course_titles_constants[:unit_font_size],
           'Helvetica bold',
-          'rgb(29,173,186)',
+          course_title_color,
           course_titles_constants[:unit_x_offset],
           course_titles_constants[:unit_y_offset],
           cert_text_constants[:course_title_width],
@@ -259,12 +264,13 @@ class CertificateImage
         )
       else
         course_titles_constants = cert_text_constants[:one_title]
+        course_title_color = course_titles_constants[:color] || 'rgb(29,173,186)'
         apply_text(
           image,
           course_title,
           course_titles_constants[:font_size],
           'Helvetica bold',
-          'rgb(29,173,186)',
+          course_title_color,
           course_titles_constants[:x_offset],
           course_titles_constants[:y_offset],
           cert_text_constants[:course_title_width],
@@ -278,7 +284,7 @@ class CertificateImage
         # Round up to half an hour if less than 30 minutes.
         total_hours_to_half_hour = 0.5 if total_hours_to_half_hour == 0
         hours_string = format('%<duration>g', duration: total_hours_to_half_hour)
-        apply_text(image, hours_string, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
+        apply_text(image, hours_string, 30, 'Times bold', 'rgb(31, 25, 118)', -228, 125, 80, 30)
       end
     end
 

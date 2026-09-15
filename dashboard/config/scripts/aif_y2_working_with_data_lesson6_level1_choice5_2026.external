@@ -1,0 +1,15 @@
+name 'aif-y2-working-with-data-lesson6-level1-choice5-2026'
+title 'Sustainability Office'
+display_name 'Sustainability Office'
+bubble_choice_description "Help a sustainability office learn from its neighborhood's air quality data."
+thumbnail_url 'https://images.code.org/9be5b20048f2343f7b4c4b4181b750e1-sustainability.png'
+
+markdown <<MARKDOWN
+You are helping a sustainability office learn from its neighborhood's air quality data.
+
+**☑️ Do This:**
+- Open [this spreadsheet](https://drive.google.com/file/d/1PwiAoyUxXgNit2Xe7xy0Gov2W__JvSk8/view?usp=sharing) containing data for the sustainability office.
+- Look at a few different rows of data in the dataset, exploring each row’s values.
+- In **Step 2** of your Project Planning Guide, write down at least three questions that could be answered by the dataset. Choose questions for which the answers might be useful to the sustainability office!
+
+MARKDOWN

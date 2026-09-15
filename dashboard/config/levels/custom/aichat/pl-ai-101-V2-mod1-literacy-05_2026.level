@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-05-20T21:15:37.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nThis AI chat bot will provide ideas of how to integrate AI literacy skills into your school context.\r\n\r\nStart the chat by sharing your role in education.\r\n\r\nFor example, you can say:\r\n>- I'm a middle school science teacher.\r\n>- I'm an administrator.\r\n>- I teach high school chemistry.\r\n>- I'm a parent of a elementary school student.\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful.*",
+    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nThis AI chat bot will provide ideas of how to integrate Digital Fluency skills into your school context.\r\n\r\nStart the chat by sharing your role in education.\r\n\r\nFor example, you can say:\r\n>- I'm a middle school science teacher.\r\n>- I'm an administrator.\r\n>- I teach high school chemistry.\r\n>- I'm a parent of a elementary school student.\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful.*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -48,7 +49,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-20T21:15:37.411+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-literacy-05\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-literacy-05\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:15:37.411+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-literacy-05\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-literacy-05\"},{\"changed_at\":\"2026-09-04 18:54:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

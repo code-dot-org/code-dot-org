@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-postassessment-q3-2026'
+
+right '{ "age": "15", "name": "Harold" }'
+wrong '{ "15": "age", "Harold": "name" }'
+wrong '["15", "Harold"]'
+wrong '[15, "Harold"]'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of these formats would you expect when reading rows of a CSV with `csv.DictReader`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Working with Data Files
+MARKDOWN

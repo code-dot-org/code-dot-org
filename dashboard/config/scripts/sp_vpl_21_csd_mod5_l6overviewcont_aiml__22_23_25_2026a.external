@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 7: Introduction to AI Lab 
+# Lesson 6: Introduction to AI Lab 
 
 After students train their machine learning model to predict shapes based on features, they will move on to training machine learning a model to make food recommendations for a customer. As they did in the first model, they will be selecting features (food options) to predict a label (like or dislike). 
 
@@ -16,7 +16,7 @@ You have been hired by a pizza restaurant to help figure out what customers like
 Now that students are familiar with AI Lab, the pizza dataset emphasizes the decision making process involved with training machine learning models. Students should be using cross-tab visualizations to make decisions about which features are useful for making recommendations, noticing when features have strong relationships and when features appear “random”. 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">📊 Looking at Categorical Data</summary>
+<summary style="font-size: 16px; font-weight: bold;">📊 Looking at Categorical Data</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:120px;">
     <p>
 
@@ -33,7 +33,7 @@ When you click on a column with categorical data, you can view more information 
 </p></div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">📋 Reading Cross-Tab Charts</summary>
+<summary style="font-size: 16px; font-weight: bold;">📋 Reading Cross-Tab Charts</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 30px;">
     <p>
 

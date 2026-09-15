@@ -5,10 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching Creating Apps for Devices
 
-Welcome! This professional learning experience is designed help you prepare to teach Code.org's Creating Apps for Devices unit. 
+Welcome! This professional learning experience is designed help you prepare to teach CodeAI's Creating Apps for Devices unit. 
 
 <img src="https://images.code.org/3b3e70c43d22260c1cd76d409a94f0b3-image-1654802658623.png" alt="Image of a Circuit Playground" style="border-radius:0px; float: right; padding-right: 20px; height: 250px; clear: both; margin: 0 0px 20px 0;">
 
+## Take the Pre-Survey
+
+CodeAI values and is responsive to feedback. Please fill out this short pre-survey to  tell us about who you are and how we can best support you.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_csd_creating_apps_circuit_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+<br><br>
 
 ### **You will:**
 

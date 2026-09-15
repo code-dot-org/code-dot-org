@@ -5,17 +5,11 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   getInstance: () => ({
     getMetricsReporter: () => ({logError: jest.fn()}),
-    getAppName: () => 'pythonlab',
   }),
 }));
 
 jest.mock('@cdo/apps/lab2/utils', () => ({
   sendLab2AnalyticsEvent: jest.fn(),
-}));
-
-const mockModerateImage = jest.fn();
-jest.mock('@cdo/apps/util/moderateImage', () => ({
-  moderateImage: (...args: unknown[]) => mockModerateImage(...args),
 }));
 
 jest.mock('@cdo/apps/utils', () => ({
@@ -57,13 +51,11 @@ describe('fetchAndSaveFile', () => {
     createNewFile = jest.fn();
     saveFile = jest.fn();
     addAlert = jest.fn();
-    mockModerateImage.mockResolvedValue('ok');
     put = jest.spyOn(HttpClient, 'put').mockResolvedValue({} as Response);
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
-    mockModerateImage.mockReset();
   });
 
   it('uploads audio as a channel asset and saves the file with a url', async () => {
@@ -79,31 +71,6 @@ describe('fetchAndSaveFile', () => {
       `/v3/assets/${CHANNEL_ID}/test-uuid.wav`
     );
     expect(addAlert).toHaveBeenCalledWith('success', expect.any(String));
-  });
-
-  it('does not moderate audio from a secondary backpack', async () => {
-    await fetchAndSaveFile({
-      successMetric: 'test-metric',
-      backpackApi: {
-        fetchFileResponse: async () =>
-          responseWith('audio/x-wav', 'RIFF...') as Response,
-      } as unknown as BackpackClientApi,
-      channelId: CHANNEL_ID,
-      addAlert,
-      saveFile,
-      createNewFile,
-      findIdForFileName: () => 'file-id',
-      selectedFileName: 'beep.wav',
-      newFileName: 'beep.wav',
-      isSecondaryBackpack: true,
-    });
-
-    expect(mockModerateImage).not.toHaveBeenCalled();
-    expect(createNewFile).toHaveBeenCalledWith(
-      'beep.wav',
-      '',
-      `/v3/assets/${CHANNEL_ID}/test-uuid.wav`
-    );
   });
 
   it('uploads images as a channel asset', async () => {

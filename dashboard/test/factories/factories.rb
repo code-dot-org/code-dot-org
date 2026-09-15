@@ -233,14 +233,8 @@ FactoryBot.define do
       trait :not_first_sign_in do
         sign_in_count {2}
       end
-      trait :with_recent_captcha do
-        last_verified_captcha_at {Time.now.utc}
-      end
       factory :terms_of_service_teacher do
         with_terms_of_service
-      end
-      factory :with_recent_captcha_teacher do
-        with_recent_captcha
       end
       factory :levelbuilder do
         after(:create) do |levelbuilder|
@@ -1509,6 +1503,12 @@ FactoryBot.define do
     asset_type {'whiteboard_image'}
   end
 
+  factory :challenge_response_reaction do
+    association :challenge_response
+    association :user, factory: :student
+    emoji {'heart'}
+  end
+
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective
@@ -1659,6 +1659,21 @@ FactoryBot.define do
   factory :user_level do
     user {create(:student)}
     level {create(:applab)}
+  end
+
+  factory :anonymous_level_progress, class: 'AnonymousLevel::Progress' do
+    association :script
+    association :level, factory: :applab
+
+    anon_user_id {Cdo::AnonUserId.generate}
+  end
+
+  factory :anonymous_level_geo, class: 'AnonymousLevel::Geo' do
+    anon_user_id {Cdo::AnonUserId.generate}
+    country {Faker::Address.unique.country}
+    state {Faker::Address.unique.state}
+    city {Faker::Address.unique.city}
+    postal_code {Faker::Address.unique.postcode}
   end
 
   factory :user_script do

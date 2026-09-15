@@ -1,0 +1,26 @@
+name 'aif-y2-working-with-data-postassessment-q15-2026'
+
+wrong 'The more close friends someone has, the more time they spend socializing.'
+wrong 'The more close friends someone has, the less time they spend socializing.'
+wrong 'There is a strong relationship between the two variables.'
+right 'There isn\'t a strong relationship between the two variables.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A survey asked people about how many close friends they have and how much time they spend socializing. Which best describes the relationship the data shows between these two variables?
+
+| Close Friends | Daily Hours Socializing |
+|---|---|
+| 2 | 1 |
+| 5 | 1 |
+| 5 | 2 |
+| 3 | 3 | 
+| 1 | 3 |
+| 4 | 3 |
+| 2 | 4 |
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Data Research Project
+MARKDOWN

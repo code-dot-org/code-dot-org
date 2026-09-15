@@ -314,19 +314,6 @@ export function createUsersApi(transport: Transport) {
     },
 
     /**
-     * POST /dashboardapi/v1/users/me/verify_captcha
-     */
-    async verifyCaptcha(params: {recaptchaResponse: string}) {
-      const {recaptchaResponse} = params;
-
-      return transport.request<unknown>({
-        method: 'POST',
-        url: '/dashboardapi/v1/users/me/verify_captcha',
-        body: {'g-recaptcha-response': recaptchaResponse},
-      });
-    },
-
-    /**
      * GET /api/v1/users/has_dismissed_personalization_alert
      */
     async getHasDismissedPersonalizationAlert() {

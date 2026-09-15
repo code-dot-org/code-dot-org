@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-02 22:50:07 UTC",
+    "serialized_at": "2026-09-04 00:11:30 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -415,28 +415,6 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-Devices-22-pre-survey-microbit_25_2026a"
-        ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-microbit-2026a",
-        "activity_section.key": "593af2d0-9096-4a86-b5c2-2292f47d4bf6"
-      },
-      "level_keys": [
-        "VPL-Devices-22-pre-survey-microbit_25_2026a"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Introduction to Professional Learning"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
           "VPL-CSD-PL Overview-self-paced-unit6b_CSD-PL-24_may2025_2026a"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
@@ -449,9 +427,9 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Introduction to Professional Learning"
@@ -471,9 +449,9 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Introduction to Professional Learning"
@@ -493,8 +471,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -515,8 +493,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -537,8 +515,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -559,8 +537,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -581,8 +559,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -603,8 +581,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -625,8 +603,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -647,8 +625,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -669,7 +647,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -691,7 +669,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -713,7 +691,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -735,7 +713,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -757,7 +735,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -779,7 +757,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -801,7 +779,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -823,7 +801,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -845,7 +823,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -867,7 +845,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -889,7 +867,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -911,7 +889,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -933,7 +911,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -955,7 +933,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -977,7 +955,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -999,7 +977,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1021,7 +999,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1043,7 +1021,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1065,7 +1043,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1087,7 +1065,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1109,7 +1087,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1131,7 +1109,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -1153,7 +1131,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1175,7 +1153,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1197,7 +1175,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1219,7 +1197,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1241,7 +1219,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1263,7 +1241,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1285,7 +1263,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1307,7 +1285,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -1329,7 +1307,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -1351,7 +1329,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -1373,7 +1351,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -1395,7 +1373,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 11,
       "activity_section_position": 7,
       "assessment": false,
@@ -1417,7 +1395,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 12,
       "activity_section_position": 8,
       "assessment": false,
@@ -1439,7 +1417,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1461,7 +1439,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -1483,7 +1461,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -1505,7 +1483,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1527,7 +1505,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -1549,31 +1527,9 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 18,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-Devices-22-post-survey_CSD-PL-24_25_2026a"
-        ],
-        "lesson.key": "Teaching Creating Apps with Devices ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-microbit-2026a",
-        "activity_section.key": "ba470f27-8580-41ef-9eab-4aeb05ffbeba"
-      },
-      "level_keys": [
-        "VPL-Devices-22-post-survey_CSD-PL-24_25_2026a"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 19,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Wrap Up"
@@ -1599,18 +1555,6 @@
         "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_-ci_ci_2026a",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_-ci_ci_2026a"
-        ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-microbit-2026a",
-        "activity_section.key": "593af2d0-9096-4a86-b5c2-2292f47d4bf6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-Devices-22-pre-survey-microbit_25_2026a",
-        "script_level.level_keys": [
-          "VPL-Devices-22-pre-survey-microbit_25_2026a"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
         "lesson_group.key": "",
@@ -2228,18 +2172,6 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-microbit-2026a",
         "activity_section.key": "38be8224-1318-42f1-9f1a-c94e29ce916b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-Devices-22-post-survey_CSD-PL-24_25_2026a",
-        "script_level.level_keys": [
-          "VPL-Devices-22-post-survey_CSD-PL-24_25_2026a"
-        ],
-        "lesson.key": "Teaching Creating Apps with Devices ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-microbit-2026a",
-        "activity_section.key": "ba470f27-8580-41ef-9eab-4aeb05ffbeba"
       }
     },
     {

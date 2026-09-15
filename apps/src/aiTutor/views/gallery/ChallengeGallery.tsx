@@ -4,6 +4,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   ChallengeResponse,
+  Reaction,
   challengeResponseListValidator,
 } from '../lessonDeepDive/types';
 
@@ -29,7 +30,7 @@ const projectIdFromLocation = () => {
   return isNaN(id) ? null : id;
 };
 
-// The Tutor+ project gallery: submitted challenge work, browsable by class
+// Tutor+ project gallery: submitted challenge work, browsable by class
 // section and unit, split into video and whiteboard project grids. Shows
 // the selected section's work, or the signed-in user's own submissions in
 // the "My projects" view. Clicking a project opens its project page in
@@ -128,6 +129,18 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
     };
   }, [sectionId]);
 
+  // Folds a response's new reaction tallies into the listing held from the
+  // initial fetch, so a reaction made on the project page shows on that
+  // project's card when the viewer returns to the grid.
+  const updateResponseReactions = (id: number, reactions: Reaction[]) =>
+    setResponses(prev =>
+      prev
+        ? prev.map(response =>
+            response.id === id ? {...response, reactions} : response
+          )
+        : prev
+    );
+
   const unitPositionFor = (responseUnitId: number | null) =>
     units.find(unit => unit.id === responseUnitId)?.position ?? null;
 
@@ -209,6 +222,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
           galleryResponses={responses}
           onBack={() => navigateToProject(null)}
           onOpenProject={navigateToProject}
+          onReactionsChange={updateResponseReactions}
         />
       </div>
     );

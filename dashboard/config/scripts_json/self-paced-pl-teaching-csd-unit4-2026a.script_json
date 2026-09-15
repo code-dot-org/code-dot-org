@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-02 22:47:05 UTC",
+    "serialized_at": "2026-09-03 23:18:31 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -44,8 +44,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to code.org's Design Process unit.\n* Preview the first week of the Design Process unit content.\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Design Process unit.\n* Preview the first week of the Design Process unit content.\n\n**Suggested time:** 15 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to CodeAI's Design Process unit.\n* Preview the first week of the Design Process unit content.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to CodeAI's Design Process unit.\n* Preview the first week of the Design Process unit content.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to The Design Process",

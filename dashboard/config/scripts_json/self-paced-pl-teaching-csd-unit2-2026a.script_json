@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-02 22:44:04 UTC",
+    "serialized_at": "2026-09-03 21:03:57 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -45,8 +45,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to Code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to CodeAI's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to CodeAI's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Web Development",

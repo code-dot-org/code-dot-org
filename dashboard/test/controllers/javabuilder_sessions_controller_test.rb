@@ -170,15 +170,6 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     refute_includes(@response.body, 'captcha_required')
   end
 
-  test 'unverified teacher who recently passed a captcha still cannot get access token' do
-    teacher = create(:with_recent_captcha_teacher)
-    sign_in(teacher)
-
-    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
-
-    assert_response :forbidden
-  end
-
   test 'student of authorized teacher without csa section cannot get access token' do
     teacher = create(:authorized_teacher)
     section = create(:section, user: teacher, login_type: 'word')

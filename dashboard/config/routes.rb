@@ -90,6 +90,7 @@ Dashboard::Application.routes.draw do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
       get '/theme', to: 'user_preferences#theme'
+      get '/editor_settings', to: 'user_preferences#editor_settings'
     end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
@@ -368,6 +369,9 @@ Dashboard::Application.routes.draw do
 
     get 'projects/:channel_id/extra_links', to: 'projects#extra_links'
 
+    # Internal playtest review of AI-generated images (project validators only).
+    get 'spritelab_lab2_images_review', to: 'spritelab_lab2_images_review#index'
+
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -466,7 +470,7 @@ Dashboard::Application.routes.draw do
         post 'remove_skill'
       end
 
-      resource :quiz_configuration, only: [:update], controller: 'quizzes'
+      resource :quiz_configuration, only: [:show, :update], controller: 'quizzes'
       resources :quiz_question_placements, only: [:create, :destroy] do
         member do
           post 'attach'
@@ -775,6 +779,7 @@ Dashboard::Application.routes.draw do
           get :find_students
           get :lookup_section
           post :lookup_section
+          post :set_section_picture_passwords
           post :undelete_section
         end
       end
@@ -820,6 +825,10 @@ Dashboard::Application.routes.draw do
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
         get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
+        get :cap_actions, action: 'cap_actions_form', as: 'cap_actions_form'
+        post :update_cap_state
+        post :grant_cap_permission
+        post :force_cap_permission
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
@@ -1115,9 +1124,17 @@ Dashboard::Application.routes.draw do
         File.basename(file).to_s.gsub(/\..*$/, '')
       end).uniq
 
+    # Mutating actions kept out of the GET wildcard below: a GET would skip
+    # CSRF verification.
+    api_post_only_methods = [:import_classlink_classroom]
+    api_methods -= api_post_only_methods
+
     namespace :dashboardapi, module: :api do
       api_methods.each do |action|
         get action, action: action
+      end
+      api_post_only_methods.each do |action|
+        post action, action: action
       end
     end
     get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
@@ -1339,7 +1356,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
-    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
@@ -1528,6 +1544,11 @@ Dashboard::Application.routes.draw do
       member do
         post :evaluate
       end
+      # The signed-in viewer's emoji reactions on this response. The emoji
+      # name (e.g. "heart") is the member id, so removing a reaction is a
+      # plain DELETE .../reactions/:emoji with no reaction row id exposed.
+      resources :reactions, only: [:create, :destroy], param: :emoji,
+        controller: 'challenge_response_reactions'
     end
     resources :challenge_response_assets, only: [:show] do
       member do
