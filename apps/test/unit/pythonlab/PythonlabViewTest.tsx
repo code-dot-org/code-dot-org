@@ -1,9 +1,11 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import {Codebridge} from '@codebridge/Codebridge';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import lab from '@cdo/apps/lab2/lab2Redux';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -25,6 +27,10 @@ jest.mock('@codebridge/Codebridge', () => {
   };
 });
 
+jest.mock('@cdo/apps/aichat/helpers/aiChatAccess', () => ({
+  shouldShowAiTutor: jest.fn(),
+}));
+
 jest.mock('@cdo/apps/pythonlab/pyodideManager', () => {
   return {
     restartPyodideIfProgramIsRunning: jest.fn(),
@@ -37,6 +43,9 @@ const defaultLevelProperties: LevelProperties = {
   name: '',
   appName: 'pythonlab',
 };
+
+const mockCodebridge = Codebridge as unknown as jest.Mock;
+const mockShouldShowAiTutor = shouldShowAiTutor as jest.Mock;
 
 describe('PythonLabView', () => {
   let store: Store;
@@ -52,6 +61,8 @@ describe('PythonLabView', () => {
     });
 
     store = getStore();
+    mockCodebridge.mockClear();
+    mockShouldShowAiTutor.mockReturnValue(false);
   });
 
   afterEach(() => {
@@ -95,5 +106,23 @@ describe('PythonLabView', () => {
     renderDefault(defaultLevelProperties, undefined);
 
     expect(screen.queryByRole('button', {name: 'Console only'})).toBeNull();
+  });
+
+  it('enables user-added selection context when AI Tutor is visible', () => {
+    mockShouldShowAiTutor.mockReturnValue(true);
+
+    renderDefault(defaultLevelProperties, undefined);
+
+    const props = mockCodebridge.mock.calls[0][0];
+    expect(props.enableUserAddedSelectionContext).toBe(true);
+  });
+
+  it('disables user-added selection context when AI Tutor is hidden', () => {
+    mockShouldShowAiTutor.mockReturnValue(false);
+
+    renderDefault(defaultLevelProperties, undefined);
+
+    const props = mockCodebridge.mock.calls[0][0];
+    expect(props.enableUserAddedSelectionContext).toBe(false);
   });
 });

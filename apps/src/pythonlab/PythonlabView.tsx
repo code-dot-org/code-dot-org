@@ -281,7 +281,7 @@ const PythonlabView: React.FunctionComponent<
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           tutorVideos={pythonLabVideoFiles}
-          enableUserAddedSelectionContext={true}
+          enableUserAddedSelectionContext={isAiTutorVisible}
         />
       )}
       {showProjectPickerModal && (
