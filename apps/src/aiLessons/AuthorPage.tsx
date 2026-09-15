@@ -1,0 +1,872 @@
+// Authoring UI for an AI-generated lesson plan.
+//
+// The author writes a single free-text prompt ("create a 5-checkpoint
+// lesson on loops using Music Lab and Web Lab 2", etc.).  Pressing
+// Generate calls the AI Gateway with a structured-output schema and
+// fills in the entire LessonPlan in one shot — title, introduction,
+// checkpoint list, lab type assignments, instructions, success
+// criteria, and panel captions.  Everything in the generated plan is
+// then editable inline before saving.
+
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import React, {useEffect, useState} from 'react';
+
+import {createLesson, loadLesson, updateLesson} from './api';
+import {generateLessonFromPrompt} from './lessonGenerator';
+import {generatePanelImage} from './panelImageGenerator';
+import {Link} from './router';
+import {LessonPlan, PanelSlide, Step} from './types';
+
+import styles from './aiLessons.module.scss';
+
+const LAB_ITEMS = [
+  {value: 'weblab2', text: 'Web Lab 2'},
+  {value: 'music', text: 'Music Lab'},
+  {value: 'panels', text: 'Panels (instructional slides)'},
+];
+
+interface AuthorPageProps {
+  mode: 'new' | 'edit';
+  // Present only in edit mode.  We fetch the lesson JSON ourselves on
+  // mount so the Rails action stays as a static SPA shell.
+  lessonId?: string;
+}
+
+// Section header rendered above each editable field on a checkpoint
+// card: an icon, a small uppercase label, and a trailing info icon
+// wrapped in a tooltip that explains what the field is for.
+const SectionLabel: React.FC<{
+  iconName: string;
+  iconClassName?: string;
+  label: string;
+  tooltipId: string;
+  tooltipText: string;
+}> = ({iconName, iconClassName, label, tooltipId, tooltipText}) => (
+  <>
+    <FontAwesomeV6Icon
+      iconName={iconName}
+      iconStyle="solid"
+      className={`${styles.sectionIcon}${
+        iconClassName ? ` ${iconClassName}` : ''
+      }`}
+    />
+    {label}
+    <WithTooltip
+      tooltipProps={{
+        text: tooltipText,
+        tooltipId,
+        size: 's',
+        direction: 'onTop',
+      }}
+    >
+      <span className={styles.sectionInfo} aria-describedby={tooltipId}>
+        <FontAwesomeV6Icon iconName="circle-info" iconStyle="regular" />
+      </span>
+    </WithTooltip>
+  </>
+);
+
+function newStep(): Step {
+  return {
+    id: `step-${Date.now()}-${Math.random().toString(36).slice(2, 5)}`,
+    title: 'New step',
+    kind: 'panels',
+    panels: [{caption: ''}],
+  };
+}
+
+// The editor's surface dropdown maps onto step kind + labType.  Editing
+// support for questions steps (and branching, segments, checklists) is
+// deferred — those show a read-only notice and are edited as JSON.
+function changeStepSurface(step: Step, value: string): Step {
+  const base = {id: step.id, title: step.title, role: step.role};
+  if (value === 'panels') {
+    return {
+      ...base,
+      kind: 'panels',
+      panels:
+        step.kind === 'panels' && step.panels.length > 0
+          ? step.panels
+          : [{caption: ''}],
+    };
+  }
+  const labType = value === 'music' ? ('music' as const) : ('weblab2' as const);
+  if (step.kind === 'lab') {
+    return {...step, labType};
+  }
+  return {
+    ...base,
+    kind: 'lab',
+    labType,
+    description: '',
+    validation: 'none',
+  };
+}
+
+const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
+  mode,
+  lessonId,
+}) => {
+  const [prompt, setPrompt] = useState<string>('');
+  const [plan, setPlan] = useState<LessonPlan | undefined>(undefined);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | undefined>();
+  const [savedId, setSavedId] = useState<string | undefined>(lessonId);
+  // In edit mode we fetch the existing lesson on mount; new mode starts blank.
+  const [loadingExisting, setLoadingExisting] = useState<boolean>(
+    mode === 'edit'
+  );
+  // Per-slide image-generation state, keyed by `${checkpointIndex}-${panelIndex}`.
+  const [generatingImageKey, setGeneratingImageKey] = useState<
+    string | undefined
+  >();
+  // Human-readable description of what the page is currently working on.
+  const [busyMessage, setBusyMessage] = useState<string | undefined>();
+  // Carousel state: the checkpoint card the author is currently viewing,
+  // and within each panels-typed checkpoint, which slide is showing.
+  // Slide index is keyed by checkpoint id so navigating between
+  // checkpoints remembers where each one left off.
+  const [currentCheckpointIndex, setCurrentCheckpointIndex] =
+    useState<number>(0);
+  const [panelIndexByCheckpoint, setPanelIndexByCheckpoint] = useState<
+    Record<string, number>
+  >({});
+
+  // On mount in edit mode: pull the existing lesson JSON so the editor
+  // can seed itself.
+  useEffect(() => {
+    if (mode !== 'edit' || !lessonId) return;
+    let cancelled = false;
+    loadLesson(lessonId)
+      .then(lesson => {
+        if (cancelled) return;
+        setPlan(lesson);
+        setPrompt(lesson.authorInputs?.prompt || '');
+        setLoadingExisting(false);
+      })
+      .catch(e => {
+        if (cancelled) return;
+        setError(`Could not load lesson: ${(e as Error).message}`);
+        setLoadingExisting(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [mode, lessonId]);
+
+  // Auto-generate images for every panel slide in the freshly-generated plan,
+  // in parallel.  Failures are caught per-slide so a single bad caption
+  // doesn't sink the rest; affected slides just stay imageless and the
+  // author can retry them manually.
+  const populatePanelImages = async (
+    id: string,
+    seed: LessonPlan
+  ): Promise<LessonPlan> => {
+    const targets: {cpIndex: number; panelIndex: number; caption: string}[] =
+      [];
+    seed.steps.forEach((cp, cpIndex) => {
+      if (cp.kind !== 'panels') return;
+      (cp.panels || []).forEach((panel, panelIndex) => {
+        if (panel.caption.trim() && !panel.imageUrl) {
+          targets.push({cpIndex, panelIndex, caption: panel.caption});
+        }
+      });
+    });
+
+    if (targets.length === 0) return seed;
+
+    const total = targets.length;
+    let completed = 0;
+    setBusyMessage(`Generating slide images (0 of ${total})…`);
+
+    const results = await Promise.all(
+      targets.map(async target => {
+        try {
+          const url = await generatePanelImage(id, target.caption);
+          completed++;
+          setBusyMessage(`Generating slide images (${completed} of ${total})…`);
+          return {...target, url};
+        } catch {
+          completed++;
+          setBusyMessage(`Generating slide images (${completed} of ${total})…`);
+          return {...target, url: undefined as string | undefined};
+        }
+      })
+    );
+
+    // Apply all results into the plan in one pass.
+    const steps = seed.steps.map(cp =>
+      cp.kind === 'panels' ? {...cp, panels: [...cp.panels]} : cp
+    );
+    for (const result of results) {
+      if (!result.url) continue;
+      const cp = steps[result.cpIndex];
+      if (cp.kind !== 'panels') continue;
+      cp.panels[result.panelIndex] = {
+        ...cp.panels[result.panelIndex],
+        imageUrl: result.url,
+      };
+    }
+    return {...seed, steps};
+  };
+
+  const handleGenerate = async () => {
+    setBusy(true);
+    setError(undefined);
+    setBusyMessage('Generating lesson plan…');
+    try {
+      if (!prompt.trim()) {
+        throw new Error('Please describe the lesson you want to create.');
+      }
+      const generated = await generateLessonFromPrompt(prompt);
+      setPlan(generated);
+      // Reset the carousel back to the first checkpoint on a fresh
+      // generation; otherwise we might point past the end if the new
+      // plan is shorter than the previous one.
+      setCurrentCheckpointIndex(0);
+      setPanelIndexByCheckpoint({});
+
+      // Persist immediately so image uploads have a lessonId to scope to;
+      // re-use the existing savedId if the author is regenerating.
+      setBusyMessage('Saving draft…');
+      let id = savedId;
+      const draftToSave: LessonPlan = {
+        ...generated,
+        authorInputs: {prompt: prompt.trim()},
+      };
+      if (id) {
+        await updateLesson(id, draftToSave);
+      } else {
+        id = await createLesson(draftToSave);
+        setSavedId(id);
+      }
+
+      const withImages = await populatePanelImages(id, generated);
+      setPlan(withImages);
+      if (withImages !== generated) {
+        setBusyMessage('Saving images…');
+        await updateLesson(id, {
+          ...withImages,
+          authorInputs: {prompt: prompt.trim()},
+        });
+      }
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+      setBusyMessage(undefined);
+    }
+  };
+
+  const handleSave = async () => {
+    if (!plan) return;
+    setBusy(true);
+    setError(undefined);
+    try {
+      const planToSave: LessonPlan = {
+        ...plan,
+        authorInputs: {prompt: prompt.trim()},
+      };
+      if (savedId) {
+        await updateLesson(savedId, planToSave);
+      } else {
+        const id = await createLesson(planToSave);
+        setSavedId(id);
+      }
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  // ---- helpers for editing the plan in place ----
+
+  const updatePlan = (patch: Partial<LessonPlan>) =>
+    setPlan(p => (p ? {...p, ...patch} : p));
+
+  // Patches are only ever applied to a step of the matching kind (the
+  // editor renders kind-specific fields), so the spread-and-cast is safe.
+  const updateStep = (i: number, patch: {[key: string]: unknown}) =>
+    setPlan(p =>
+      p
+        ? {
+            ...p,
+            steps: p.steps.map((c, idx) =>
+              idx === i ? ({...c, ...patch} as Step) : c
+            ),
+          }
+        : p
+    );
+
+  const removeStep = (i: number) =>
+    setPlan(p => {
+      if (!p) return p;
+      const next = p.steps.filter((_, idx) => idx !== i);
+      // Clamp the carousel index so we don't end up pointing past the
+      // end after a delete.
+      setCurrentCheckpointIndex(c => Math.min(c, Math.max(0, next.length - 1)));
+      return {...p, steps: next};
+    });
+
+  const addStep = () =>
+    setPlan(p => {
+      if (!p) return p;
+      const next = [...p.steps, newStep()];
+      // Jump to the new step so the author can start editing it.
+      setCurrentCheckpointIndex(next.length - 1);
+      return {...p, steps: next};
+    });
+
+  const withPanels = (
+    p: LessonPlan,
+    cpIndex: number,
+    panels: PanelSlide[]
+  ): LessonPlan => ({
+    ...p,
+    steps: p.steps.map((c, idx) =>
+      idx === cpIndex && c.kind === 'panels' ? {...c, panels} : c
+    ),
+  });
+
+  const panelsOf = (step: Step): PanelSlide[] =>
+    step.kind === 'panels' ? step.panels : [];
+
+  const updatePanel = (
+    cpIndex: number,
+    panelIndex: number,
+    patch: Partial<PanelSlide>
+  ) =>
+    setPlan(p => {
+      if (!p) return p;
+      const panels = [...panelsOf(p.steps[cpIndex])];
+      panels[panelIndex] = {...panels[panelIndex], ...patch};
+      return withPanels(p, cpIndex, panels);
+    });
+
+  const addPanel = (cpIndex: number) =>
+    setPlan(p => {
+      if (!p) return p;
+      const cp = p.steps[cpIndex];
+      const panels: PanelSlide[] = [...panelsOf(cp), {caption: ''}];
+      // Jump to the freshly added slide so the author starts editing it.
+      setPanelIndexByCheckpoint(prev => ({
+        ...prev,
+        [cp.id]: panels.length - 1,
+      }));
+      return withPanels(p, cpIndex, panels);
+    });
+
+  const removePanel = (cpIndex: number, panelIndex: number) =>
+    setPlan(p => {
+      if (!p) return p;
+      const cp = p.steps[cpIndex];
+      const panels = panelsOf(cp).filter((_, i) => i !== panelIndex);
+      // Clamp the per-step slide index so we don't end up past the
+      // end of the slide list after a delete.
+      setPanelIndexByCheckpoint(prev => ({
+        ...prev,
+        [cp.id]: Math.min(prev[cp.id] ?? 0, Math.max(0, panels.length - 1)),
+      }));
+      return withPanels(p, cpIndex, panels);
+    });
+
+  const goToCheckpoint = (i: number) => {
+    if (!plan) return;
+    const clamped = Math.max(0, Math.min(i, plan.steps.length - 1));
+    setCurrentCheckpointIndex(clamped);
+  };
+
+  const goToPanel = (checkpointId: string, panelCount: number, i: number) => {
+    const clamped = Math.max(0, Math.min(i, panelCount - 1));
+    setPanelIndexByCheckpoint(prev => ({...prev, [checkpointId]: clamped}));
+  };
+
+  const handleGenerateImage = async (
+    cpIndex: number,
+    panelIndex: number,
+    caption: string
+  ) => {
+    if (!savedId) {
+      setError(
+        'Save the lesson first so generated images can be stored alongside it.'
+      );
+      return;
+    }
+    const key = `${cpIndex}-${panelIndex}`;
+    setGeneratingImageKey(key);
+    setError(undefined);
+    try {
+      const url = await generatePanelImage(savedId, caption);
+      updatePanel(cpIndex, panelIndex, {imageUrl: url});
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setGeneratingImageKey(prev => (prev === key ? undefined : prev));
+    }
+  };
+
+  const renderSlideEditor = (
+    cpIndex: number,
+    panelIndex: number,
+    panel: PanelSlide
+  ) => {
+    const key = `${cpIndex}-${panelIndex}`;
+    const isGenerating = generatingImageKey === key;
+    return (
+      <div key={panelIndex} className={styles.checkpointInput}>
+        <div className={styles.checkpointRow}>
+          {/* Slide N / Total label is shown by the surrounding carousel
+              nav, so the per-slide header only needs the remove control. */}
+          <span className={styles.muted}>Slide {panelIndex + 1}</span>
+          <button
+            type="button"
+            className={styles.linkButton}
+            onClick={() => removePanel(cpIndex, panelIndex)}
+            disabled={(plan ? panelsOf(plan.steps[cpIndex]) : []).length <= 1}
+            aria-label={`Remove slide ${panelIndex + 1}`}
+          >
+            Remove
+          </button>
+        </div>
+        <label className={styles.field}>
+          <span>Caption</span>
+          <textarea
+            value={panel.caption}
+            onChange={e =>
+              updatePanel(cpIndex, panelIndex, {caption: e.target.value})
+            }
+            rows={2}
+          />
+        </label>
+        <label className={styles.field}>
+          <span>Image URL</span>
+          <input
+            type="text"
+            value={panel.imageUrl || ''}
+            onChange={e =>
+              updatePanel(cpIndex, panelIndex, {imageUrl: e.target.value})
+            }
+            placeholder="Generate one below, or paste a URL."
+          />
+        </label>
+        {panel.imageUrl ? (
+          <img
+            src={panel.imageUrl}
+            alt=""
+            style={{
+              maxWidth: 240,
+              borderRadius: 4,
+              border: '1px solid rgba(0,0,0,0.1)',
+              marginBottom: 8,
+            }}
+          />
+        ) : null}
+        <button
+          type="button"
+          className={styles.secondaryButton}
+          onClick={() =>
+            handleGenerateImage(cpIndex, panelIndex, panel.caption)
+          }
+          disabled={
+            isGenerating ||
+            !!generatingImageKey ||
+            !panel.caption.trim() ||
+            !savedId
+          }
+          title={
+            !savedId
+              ? 'Save the lesson first to generate images'
+              : !panel.caption.trim()
+              ? 'Write a caption first'
+              : 'Generate an illustration with Gemini'
+          }
+        >
+          {isGenerating
+            ? 'Generating image…'
+            : panel.imageUrl
+            ? 'Regenerate image'
+            : 'Generate image'}
+        </button>
+      </div>
+    );
+  };
+
+  if (loadingExisting) {
+    return (
+      <div className={styles.authorPage}>
+        <p className={styles.muted}>Loading lesson…</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.authorPage}>
+      <header className={styles.authorHeader}>
+        <h1>{mode === 'edit' ? 'Edit AI Lesson' : 'Author a new AI Lesson'}</h1>
+        <p className={styles.muted}>
+          Describe the lesson you want in one paragraph. The AI fills in
+          everything — checkpoints, lab types, instructions, success criteria,
+          and slide captions — and you can tweak any of it before saving.
+        </p>
+      </header>
+
+      <section className={styles.formSection}>
+        <label className={styles.field}>
+          <span>Lesson prompt</span>
+          <textarea
+            value={prompt}
+            onChange={e => setPrompt(e.target.value)}
+            rows={5}
+            placeholder="e.g. Create a 5–6 checkpoint lesson for middle schoolers that teaches loops and conditionals. Start with a panels intro, then build a looping song in Music Lab, then have students use a conditional in Web Lab 2 to change a page's style. End with a recap panel."
+          />
+        </label>
+
+        <div className={styles.actions}>
+          <button
+            type="button"
+            className={styles.primaryButton}
+            onClick={handleGenerate}
+            disabled={busy}
+          >
+            {busy
+              ? busyMessage || 'Working…'
+              : plan
+              ? 'Regenerate from prompt'
+              : 'Generate lesson plan'}
+          </button>
+        </div>
+        {busy && busyMessage && (
+          <div className={styles.muted} style={{fontSize: 13, marginTop: 8}}>
+            {busyMessage}
+          </div>
+        )}
+        {error && <div className={styles.error}>{error}</div>}
+      </section>
+
+      {plan && (
+        <section className={styles.previewSection}>
+          <h2>Lesson</h2>
+
+          <label className={styles.field}>
+            <span>Title</span>
+            <input
+              type="text"
+              value={plan.title}
+              onChange={e => updatePlan({title: e.target.value})}
+            />
+          </label>
+
+          <label className={styles.field}>
+            <span>Objective</span>
+            <textarea
+              value={plan.objective}
+              onChange={e => updatePlan({objective: e.target.value})}
+              rows={2}
+            />
+          </label>
+
+          <h2>Steps</h2>
+          {plan.steps.length === 0 ? (
+            <p className={styles.muted}>
+              No steps yet — add one to get started.
+            </p>
+          ) : (
+            (() => {
+              const i = Math.max(
+                0,
+                Math.min(currentCheckpointIndex, plan.steps.length - 1)
+              );
+              const cp = plan.steps[i];
+              const slideIndex = Math.max(
+                0,
+                Math.min(
+                  panelIndexByCheckpoint[cp.id] ?? 0,
+                  Math.max(panelsOf(cp).length, 1) - 1
+                )
+              );
+              return (
+                <div key={cp.id} className={styles.carousel}>
+                  <div className={styles.carouselNav}>
+                    <button
+                      type="button"
+                      className={styles.linkButton}
+                      onClick={() => goToCheckpoint(i - 1)}
+                      disabled={i === 0}
+                      aria-label="Previous step"
+                    >
+                      ← Previous
+                    </button>
+                    <span className={styles.carouselPosition}>
+                      Step {i + 1} of {plan.steps.length}
+                    </span>
+                    <button
+                      type="button"
+                      className={styles.linkButton}
+                      onClick={() => goToCheckpoint(i + 1)}
+                      disabled={i >= plan.steps.length - 1}
+                      aria-label="Next step"
+                    >
+                      Next →
+                    </button>
+                  </div>
+                  <div className={styles.checkpointInput}>
+                    <div className={styles.checkpointRow}>
+                      <span className={styles.checkpointBadge}>
+                        Step #{i + 1}
+                      </span>
+                      {cp.kind === 'questions' ? (
+                        <span className={styles.muted}>Questions step</span>
+                      ) : (
+                        <SimpleDropdown
+                          name={`step-${i}-lab-type`}
+                          labelText="Step surface"
+                          isLabelVisible={false}
+                          size="s"
+                          color="black"
+                          items={LAB_ITEMS}
+                          selectedValue={
+                            cp.kind === 'lab' ? cp.labType : 'panels'
+                          }
+                          onChange={e =>
+                            setPlan(p =>
+                              p
+                                ? {
+                                    ...p,
+                                    steps: p.steps.map((s, idx) =>
+                                      idx === i
+                                        ? changeStepSurface(s, e.target.value)
+                                        : s
+                                    ),
+                                  }
+                                : p
+                            )
+                          }
+                        />
+                      )}
+                      <button
+                        type="button"
+                        className={styles.linkButton}
+                        onClick={() => removeStep(i)}
+                        aria-label={`Remove step ${i + 1}`}
+                      >
+                        Remove
+                      </button>
+                    </div>
+
+                    {/* jsx-a11y can't trace label↔control through the
+                        SectionLabel abstraction even though htmlFor+id
+                        actually bind them.  Suppress the rule rather than
+                        flatten the JSX. */}
+                    {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+                    <label
+                      className={`${styles.field} ${styles.titleField}`}
+                      htmlFor={`cp-${cp.id}-title`}
+                    >
+                      <span>
+                        <SectionLabel
+                          iconName="tag"
+                          label="Title"
+                          tooltipId={`tip-title-${cp.id}`}
+                          tooltipText="Short student-facing heading shown in the AI Tutor sidebar and the checkpoint badge. Keep it punchy — 3–7 words."
+                        />
+                      </span>
+                      <input
+                        id={`cp-${cp.id}-title`}
+                        type="text"
+                        value={cp.title}
+                        onChange={e => updateStep(i, {title: e.target.value})}
+                      />
+                    </label>
+
+                    {/* Description + success criteria only apply to lab
+                        steps where the AI Tutor coaches and grades the
+                        student.  Panels steps advance via Continue, so
+                        these are hidden — the slide captions themselves
+                        are the content. */}
+                    {cp.kind === 'lab' && (
+                      <>
+                        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+                        <label
+                          className={styles.field}
+                          htmlFor={`cp-${cp.id}-desc`}
+                        >
+                          <span>
+                            <SectionLabel
+                              iconName="message-lines"
+                              label="Description"
+                              tooltipId={`tip-desc-${cp.id}`}
+                              tooltipText="What the student should do, plus any context the AI Tutor needs. The tutor paraphrases this — it is never shown verbatim."
+                            />
+                          </span>
+                          <textarea
+                            id={`cp-${cp.id}-desc`}
+                            value={cp.description}
+                            onChange={e =>
+                              updateStep(i, {description: e.target.value})
+                            }
+                            rows={4}
+                          />
+                        </label>
+
+                        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+                        <label
+                          className={styles.field}
+                          htmlFor={`cp-${cp.id}-success`}
+                        >
+                          <span>
+                            <SectionLabel
+                              iconName="circle-check"
+                              iconClassName={styles.sectionIconSuccess}
+                              label="Success criteria"
+                              tooltipId={`tip-success-${cp.id}`}
+                              tooltipText="Observable thing the AI Tutor verifies before advancing the student. Be specific about what their work must contain."
+                            />
+                          </span>
+                          <textarea
+                            id={`cp-${cp.id}-success`}
+                            value={cp.successCriteria || ''}
+                            onChange={e =>
+                              // Non-empty criteria imply a tutor gate;
+                              // clearing them makes the step Continue-only.
+                              updateStep(i, {
+                                successCriteria: e.target.value,
+                                validation: e.target.value.trim()
+                                  ? 'tutor'
+                                  : 'none',
+                              })
+                            }
+                            rows={2}
+                          />
+                        </label>
+                      </>
+                    )}
+
+                    {cp.kind === 'panels' && (
+                      <div className={styles.field}>
+                        <span>
+                          <FontAwesomeV6Icon
+                            iconName="images"
+                            iconStyle="solid"
+                            className={styles.sectionIcon}
+                          />
+                          Slide captions
+                        </span>
+                        {cp.panels.length === 0 ? (
+                          <p className={styles.muted}>
+                            No slides yet — add one to get started.
+                          </p>
+                        ) : (
+                          <div className={styles.carousel}>
+                            <div className={styles.carouselNav}>
+                              <button
+                                type="button"
+                                className={styles.linkButton}
+                                onClick={() =>
+                                  goToPanel(
+                                    cp.id,
+                                    cp.panels.length,
+                                    slideIndex - 1
+                                  )
+                                }
+                                disabled={slideIndex === 0}
+                                aria-label="Previous slide"
+                              >
+                                ← Previous
+                              </button>
+                              <span className={styles.carouselPosition}>
+                                Slide {slideIndex + 1} of {cp.panels.length}
+                              </span>
+                              <button
+                                type="button"
+                                className={styles.linkButton}
+                                onClick={() =>
+                                  goToPanel(
+                                    cp.id,
+                                    cp.panels.length,
+                                    slideIndex + 1
+                                  )
+                                }
+                                disabled={slideIndex >= cp.panels.length - 1}
+                                aria-label="Next slide"
+                              >
+                                Next →
+                              </button>
+                            </div>
+                            {renderSlideEditor(
+                              i,
+                              slideIndex,
+                              cp.panels[slideIndex]
+                            )}
+                          </div>
+                        )}
+                        <button
+                          type="button"
+                          className={styles.secondaryButton}
+                          onClick={() => addPanel(i)}
+                        >
+                          + Add slide
+                        </button>
+                      </div>
+                    )}
+
+                    {cp.kind === 'questions' && (
+                      <div className={styles.field}>
+                        <span>Questions</span>
+                        <ul>
+                          {cp.questions.map(q => (
+                            <li key={q.id} className={styles.muted}>
+                              {q.prompt} ({q.type}
+                              {q.validation ? `, ${q.validation}` : ''})
+                            </li>
+                          ))}
+                        </ul>
+                        <p className={styles.muted}>
+                          Editing questions steps isn't supported here yet —
+                          edit the lesson JSON directly.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })()
+          )}
+          <button
+            type="button"
+            className={styles.secondaryButton}
+            onClick={addStep}
+          >
+            + Add step
+          </button>
+
+          <div className={styles.actions}>
+            <button
+              type="button"
+              className={styles.primaryButton}
+              onClick={handleSave}
+              disabled={busy}
+            >
+              {busy ? 'Saving…' : savedId ? 'Save changes' : 'Save lesson'}
+            </button>
+            {savedId && (
+              <Link
+                className={styles.secondaryButton}
+                href={`/ai_lessons/${savedId}`}
+              >
+                Open student view →
+              </Link>
+            )}
+            <Link className={styles.linkButton} href="/ai_lessons">
+              Back to list
+            </Link>
+          </div>
+        </section>
+      )}
+    </div>
+  );
+};
+
+export default AuthorPage;
