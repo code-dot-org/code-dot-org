@@ -9,8 +9,6 @@ import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/U
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-// Either backpack client a lab can save through: its own, or the unified one behind
-// the 'unified-backpack' experiment.
 export type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
 
 // Check if the provided API is a UnifiedBackpackClientApi.

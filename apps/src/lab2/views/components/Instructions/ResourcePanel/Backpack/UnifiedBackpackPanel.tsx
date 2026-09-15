@@ -276,9 +276,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     );
   }
 
-  let content;
+  let panelContent;
   if (isLoading) {
-    content = (
+    panelContent = (
       <div className={moduleStyles.messageContainer}>
         <BackpackMessage
           type="neutral"
@@ -290,7 +290,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       </div>
     );
   } else if (loadError) {
-    content = (
+    panelContent = (
       <div className={moduleStyles.messageContainer}>
         <BackpackMessage
           type="error"
@@ -313,7 +313,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       </div>
     );
   } else {
-    content = (
+    panelContent = (
       <>
         {files.length > 0 && (
           <BackpackListControls
@@ -384,7 +384,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
           ))}
         </TransitionGroup>
       </Snackbar>
-      {content}
+      {panelContent}
       {saveToBackpackButton && (
         <MuiButton
           variant="outlined"
