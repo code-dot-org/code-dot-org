@@ -231,6 +231,30 @@ Beyond answers, the system records HOW students work:
   panel illustrations are generated in parallel via the Gemini image
   model (`panelImageGenerator.ts`) and uploaded to
   `dashboard/tmp/ai_lessons/images/<id>/`.
+### Student player (`/ai_lessons/:id`)
+
+- Persistent AI Tutor chat on the left, the real Lab2 React view
+  embedded on the right (no iframes). `EmbeddedLab.tsx` mounts the lab
+  views directly with synthesised `levelProperties` and an injected
+  custom `ProjectManager` so saves persist.
+- One-checkpoint-at-a-time. Auto-resumes one past the last completed
+  checkpoint on reopen.
+- Source carry-over: all non-sandbox lab steps in a lesson that target
+  the same lab type share a single project. Editing weblab2 in step 2
+  and then returning in step 5 picks up exactly where you left off.
+  Sources are per-user, at
+  `dashboard/tmp/ai_lessons/sources/<lessonId>/<userId>/<scope>.json`.
+- Music's Blockly workspace JSON (not the executed playback events) is
+  what the tutor sees when evaluating, so success criteria like "use a
+  Repeat block" actually work.
+- "Check my work" button + auto-check on lab Run/Play. The tutor
+  receives the live source snapshot and returns `stay` (with feedback)
+  or `advance` (which navigates to the next checkpoint).
+- Demo nav arrows in the tutor sidebar (Back / Skip to next) bypass
+  tutor approval for presentations.
+- Tutor turns are structured via `Output.object` + zod; the model
+  cannot emit free-form prose that confuses the navigation logic.
+
 ### Progress + teacher view
 
 - Every Run and every checkpoint completion appends to a per-(lesson,
@@ -287,6 +311,9 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
   ResourcePanel column when it's true. Worth reviewing whether the
   abstraction belongs in lab2 itself or whether there's a cleaner
   extension point.
+- **Big files.** `AuthorPage.tsx`, `StudentPage.tsx`, and `EmbeddedLab.tsx`
+  are all north of 400 LOC. Break out smaller components: the carousel,
+  the lab-mount setup hook, the panels carousel, the chat composer.
 - **Fix weblab2 resizing.** The Web Lab 2 view doesn't always re-measure
   its inner panels when its container changes size — switching
   checkpoints or resizing the window can leave the editor or preview
