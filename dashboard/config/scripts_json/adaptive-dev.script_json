@@ -2,10 +2,8 @@
   "script": {
     "name": "adaptive-dev",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "content_area": "other",
-      "curriculum_umbrella": "Other",
       "is_migrated": true
     },
     "new_name": null,
@@ -17,7 +15,8 @@
     "participant_audience": null,
     "seeding_key": {
       "script.name": "adaptive-dev"
-    }
+    },
+    "hide_within_course": false
   },
   "lesson_groups": [
     {
