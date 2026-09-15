@@ -27,9 +27,11 @@ end
 
 def with_rack_env(temporary_env)
   require 'mocha/api'
+  Mocha::Mockery.setup
   CDO.stubs(rack_env: temporary_env)
   yield
   CDO.unstub(:rack_env)
+  Mocha::Mockery.teardown
 end
 
 def deploy_dir(*dirs)
