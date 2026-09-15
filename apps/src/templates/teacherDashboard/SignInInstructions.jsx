@@ -20,7 +20,7 @@ export default class SignInInstructions extends React.Component {
       <div>
         {loginType === SectionLoginType.word && (
           <div>
-            <h2 style={styles.heading}>{i18n.signingInWord()}</h2>
+            <h2 className={styles.heading}>{i18n.signingInWord()}</h2>
             <p>{i18n.signingInWordIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInWordPic1({
@@ -35,7 +35,7 @@ export default class SignInInstructions extends React.Component {
         )}
         {loginType === SectionLoginType.picture && (
           <div>
-            <h2 style={styles.heading}>{i18n.signingInPic()}</h2>
+            <h2 className={styles.heading}>{i18n.signingInPic()}</h2>
             <p>{i18n.signingInPicIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInWordPic1({
@@ -50,7 +50,7 @@ export default class SignInInstructions extends React.Component {
         )}
         {loginType === SectionLoginType.email && (
           <div>
-            <h2 style={styles.heading}>{i18n.signingInEmail()}</h2>
+            <h2 className={styles.heading}>{i18n.signingInEmail()}</h2>
             <p>{i18n.signingInEmailIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInEmailGoogle1({
@@ -62,7 +62,7 @@ export default class SignInInstructions extends React.Component {
         )}
         {loginType === SectionLoginType.google_classroom && (
           <div>
-            <h2 style={styles.heading}>{i18n.signingInGoogle()}</h2>
+            <h2 className={styles.heading}>{i18n.signingInGoogle()}</h2>
             <p>{i18n.signingInGoogleIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInEmailGoogle1({
@@ -75,7 +75,7 @@ export default class SignInInstructions extends React.Component {
         )}
         {loginType === SectionLoginType.clever && (
           <div>
-            <h2 style={styles.heading}>{i18n.signingInClever()}</h2>
+            <h2 className={styles.heading}>{i18n.signingInClever()}</h2>
             <p>{i18n.signingInCleverIntro()}</p>
             <p style={styles.listAlign}>{i18n.signingInClever1()}</p>
             <div style={styles.sublistAlign}>
@@ -90,9 +90,25 @@ export default class SignInInstructions extends React.Component {
             />
           </div>
         )}
+        {loginType === SectionLoginType.classlink && (
+          <div>
+            <h2 className={styles.heading}>Signing in with ClassLink</h2>
+            <p style={styles.listAlign}>
+              1. Go to studio.code.org and click the 'Sign In' button
+            </p>
+            <p style={styles.listAlign}>2. Choose 'Continue with ClassLink'</p>
+            <p style={styles.listAlign}>
+              3. Sign-in via the ClassLink sign-in dialog
+            </p>
+            <p>
+              Alternatively, students can sign into CodeAI by launching from
+              ClassLink
+            </p>
+          </div>
+        )}
         {loginType === SectionLoginType.lti_v1 && (
           <div>
-            <h2 style={styles.heading}>
+            <h2 className={styles.heading}>
               {i18n.signingInLtiLoginHeader({
                 providerName: this.props.sectionProviderName,
               })}

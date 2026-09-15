@@ -34,8 +34,8 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <!-- Import the webpage's stylesheet -->\n    <link rel=\"stylesheet\" href=\"style.css\" />\n\n  </head>\n  <body>\n\n    <h1 class=\"title\">\n      Photo Gallery!\n    </h1>\n\n    <img class=\"galleryImg\" src=\"field.jpg\" />\n    <img class=\"galleryImg\" src=\"forest.jpg\" />\n    <img class=\"galleryImg\" src=\"mountain.jpg\" />\n    <img class=\"galleryImg\" src=\"path.jpg\" />\n    <img class=\"galleryImg\" src=\"road.jpg\" />\n    <img class=\"galleryImg\" src=\"sunset.jpg\" />\n    <img class=\"galleryImg\" src=\"morning.png\" />\n    <img class=\"galleryImg\" src=\"night.png\" />\n    \n    <p>\n      All images from Pixabay provided under a Pixabay license\n    </p>\n\n\n\n  </body>\n</html>\n",
-          "active": false,
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <!-- Import the webpage's stylesheet -->\n    <link rel=\"stylesheet\" href=\"style.css\" />\n\n  </head>\n  <body>\n\n    <h1 class=\"title\">\n      Photo Gallery!\n    </h1>\n\n    <img class=\"galleryImg\" src=\"field.jpg\" />\n    <img class=\"galleryImg\" src=\"forest.jpg\" />\n    <img class=\"galleryImg\" src=\"mountain.jpg\" />\n    <img class=\"galleryImg\" src=\"path.jpg\" />\n    <img class=\"galleryImg\" src=\"road.jpg\" />\n    <img class=\"galleryImg\" src=\"sunset.jpg\" />\n    <img class=\"galleryImg\" src=\"morning.jpg\" />\n    <img class=\"galleryImg\" src=\"night.jpg\" />\n    \n    <p>\n      All images from Pixabay provided under a Pixabay license\n    </p>\n\n\n\n  </body>\n</html>\n",
+          "active": true,
           "folderId": "0"
         },
         "10": {
@@ -124,7 +124,7 @@
           "folderId": "0",
           "url": "/level_starter_assets/CSD%20U2L1-L1a-2025/uuid/7640c3ff-efe9-4b23-8da1-eecdd11fbc12.jpg",
           "type": "starter",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
@@ -158,6 +158,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:49:27.073+00:00\",\"changed\":[\"cloned from \\\"CSD U2L1-L1a-2025\\\"\"],\"cloned_from\":\"CSD U2L1-L1a-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:49:27.073+00:00\",\"changed\":[\"cloned from \\\"CSD U2L1-L1a-2025\\\"\"],\"cloned_from\":\"CSD U2L1-L1a-2025\"},{\"changed_at\":\"2026-09-11 21:36:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-11 21:36:18 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-11 21:36:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-11 21:36:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-11 21:36:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-11 21:36:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-11 21:36:48 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>
