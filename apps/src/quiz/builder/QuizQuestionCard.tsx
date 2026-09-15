@@ -111,6 +111,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
           <Tabs
             name={`question-${question.id}-tabs`}
             defaultSelectedTabValue="question"
+            tabsContainerClassName={styles.tabsRow}
             tabPanelsContainerClassName={styles.tabPanels}
             tabs={[
               {
@@ -121,13 +122,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
               {
                 value: 'answers',
                 text: 'Answers',
-                tabContent: (
-                  <AnswersTab
-                    questionId={question.id}
-                    draft={draft}
-                    onChange={setDraft}
-                  />
-                ),
+                tabContent: <AnswersTab draft={draft} onChange={setDraft} />,
               },
               {
                 value: 'usage',
@@ -167,6 +162,9 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
                 type="button"
                 loading={isSaving}
                 onClick={handleSave}
+                startIcon={
+                  <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+                }
               >
                 Save
               </Button>

@@ -1,8 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
-import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import {IconButton, Button} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionEditableFields} from '../types';
@@ -12,7 +12,6 @@ import nextChoiceId from './nextChoiceId';
 import styles from '../quiz-question-card.module.scss';
 
 interface AnswersTabProps {
-  questionId: number;
   draft: QuizQuestionEditableFields;
   onChange: (draft: QuizQuestionEditableFields) => void;
 }
@@ -24,7 +23,6 @@ const MIN_CHOICES = 2;
 // explanation. Only ever single-correct (radio, not checkbox) - the
 // backend has no way to store more than one correctChoiceId yet.
 const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
-  questionId,
   draft,
   onChange,
 }) => {
@@ -54,37 +52,46 @@ const AnswersTab: React.FunctionComponent<AnswersTabProps> = ({
   return (
     <div className={styles.tabContent}>
       <div className={styles.optionsList}>
-        {draft.choices.map(choice => (
-          <div key={choice.id} className={styles.optionRow}>
-            <TextField
-              name={`choice-${choice.id}`}
-              aria-label="Choice text"
-              size="m"
-              className={styles.optionText}
-              value={choice.text}
-              onChange={e => updateChoiceText(choice.id, e.target.value)}
-            />
-            <RadioButton
-              name={`correct-choice-${questionId}`}
-              value={choice.id}
-              ariaLabel="Mark as correct answer"
-              checked={draft.correctChoiceId === choice.id}
-              onChange={() => onChange({...draft, correctChoiceId: choice.id})}
-            />
-            <IconButton
-              aria-label="Delete choice"
-              size="small"
-              color="error"
-              type="button"
-              disabled={draft.choices.length <= MIN_CHOICES}
-              onClick={() => removeChoice(choice.id)}
-            >
-              <FontAwesomeV6Icon iconName="trash" />
-            </IconButton>
-          </div>
-        ))}
+        {draft.choices.map(choice => {
+          const isCorrect = draft.correctChoiceId === choice.id;
+          return (
+            <div key={choice.id} className={styles.optionRow}>
+              <TextField
+                name={`choice-${choice.id}`}
+                aria-label="Choice text"
+                size="m"
+                className={styles.optionText}
+                value={choice.text}
+                onChange={e => updateChoiceText(choice.id, e.target.value)}
+              />
+              <IconButton
+                aria-label="Mark as correct answer"
+                aria-pressed={isCorrect}
+                size="small"
+                className={classNames(styles.correctToggle, {
+                  [styles.correctToggleSelected]: isCorrect,
+                })}
+                type="button"
+                onClick={() => onChange({...draft, correctChoiceId: choice.id})}
+              >
+                <FontAwesomeV6Icon iconName="check" />
+              </IconButton>
+              <IconButton
+                aria-label="Delete choice"
+                size="small"
+                color="error"
+                type="button"
+                disabled={draft.choices.length <= MIN_CHOICES}
+                onClick={() => removeChoice(choice.id)}
+              >
+                <FontAwesomeV6Icon iconName="trash" />
+              </IconButton>
+            </div>
+          );
+        })}
       </div>
       <Button
+        className={styles.addOption}
         variant="outlined"
         color="secondary"
         size="small"
