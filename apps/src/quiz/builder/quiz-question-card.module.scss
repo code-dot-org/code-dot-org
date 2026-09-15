@@ -1,0 +1,93 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-neutral-primary, #d3d6da);
+  border-radius: var(--shape-sm, 6px);
+  background: var(--background-neutral-secondary, #f1f2f4);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: var(--background-neutral-primary, #fff);
+  border-bottom: 1px solid var(--border-neutral-primary, #d3d6da);
+}
+
+.headerPreview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.typeIcon {
+  color: var(--text-neutral-quaternary, #596069);
+}
+
+.stemPreview {
+  flex: 1 0 0;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-neutral-tertiary, #4b5258);
+}
+
+.tabPanels {
+  background: var(--background-neutral-primary, #fff);
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 10px 10px;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.optionText {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-neutral-secondary, #9ea5ad);
+  border-radius: var(--shape-sm, 6px);
+  font: inherit;
+  resize: vertical;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 10px;
+  background: var(--background-neutral-primary, #fff);
+  border-top: 1px solid var(--border-neutral-primary, #d3d6da);
+}
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
