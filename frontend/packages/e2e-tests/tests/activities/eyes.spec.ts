@@ -246,7 +246,6 @@ test.describe('Looking at a few things with Applitools Eyes', () => {
     // waitForReady() covers the source's manual waits, including x-close.
     await starWars.gotoLevel({lesson: 24, level: 9, lang: 'ar-sa'});
     await starWars.waitForLessonHeaderRendered();
-    await starWars.header.waitForSettled();
 
     await waitForVisualStability(page);
     await visualCheck('star-wars-rtl-blocks', {
