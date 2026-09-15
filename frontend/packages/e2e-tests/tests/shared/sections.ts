@@ -46,3 +46,33 @@ export async function joinSection(
   await page.getByRole('button', {name: 'Join', exact: true}).click();
   await page.waitForURL(url => url.pathname === '/home');
 }
+
+/**
+ * Assign the currently signed-in student to a course/unit via
+ * /api/test/assign_course_and_unit_as_student, mirroring steps.rb's "I am
+ * assigned to course ... unit ..." step. When no teacherEmail is given, the
+ * endpoint creates a brand-new teacher and section of its own to hold the
+ * assignment — it is not the student's existing section's teacher.
+ */
+export async function assignCourseAndUnitAsStudent(
+  page: Page,
+  {
+    courseName,
+    unitPosition,
+    teacherEmail,
+  }: {courseName: string; unitPosition: number; teacherEmail?: string},
+): Promise<void> {
+  const {ok, status} = await requestWithCsrf(
+    page,
+    'POST',
+    '/api/test/assign_course_and_unit_as_student',
+    {
+      course_name: courseName,
+      unit_position: unitPosition,
+      teacher_email: teacherEmail,
+    },
+  );
+  if (!ok) {
+    throw new Error(`assign_course_and_unit_as_student failed: ${status}`);
+  }
+}
