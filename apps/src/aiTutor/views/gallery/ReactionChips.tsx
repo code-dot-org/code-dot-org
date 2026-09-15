@@ -1,9 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Reaction} from '@code-dot-org/lesson-deep-dive';
 import classNames from 'classnames';
 import React, {FC, useEffect, useRef, useState} from 'react';
 
 import {addReaction, removeReaction} from './reactionsApi';
-import {Reaction} from './types';
 
 import styles from './challenge-gallery.module.scss';
 

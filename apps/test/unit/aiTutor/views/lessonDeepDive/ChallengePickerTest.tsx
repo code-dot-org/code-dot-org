@@ -1,3 +1,4 @@
+import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
 import {
   fireEvent,
   render,
@@ -9,10 +10,6 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengePicker from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengePicker';
-import {
-  Challenge,
-  challengeValidator,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 

@@ -1,12 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
 import {IconButton, Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {Challenge, challengeValidator} from '../types';
 
 import styles from './challenge-box.module.scss';
 
