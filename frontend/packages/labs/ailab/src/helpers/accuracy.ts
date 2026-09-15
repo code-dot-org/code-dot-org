@@ -148,7 +148,6 @@ function regressionTolerance(state: RootState): number {
   return (range * REGRESSION_ERROR_TOLERANCE) / 100;
 }
 
-/* The grading rule for the label column this level uses. */
 export function getGradeOptions(state: RootState): AccuracyGradeOptions {
   return isRegression(state) ? {tolerance: regressionTolerance(state)} : {};
 }
