@@ -315,13 +315,8 @@ module.exports = class Maze {
       resetButton.style.minWidth = runButton.offsetWidth + 'px';
     }
 
-    // toggleRunReset is about to hide the Run button with display:none. If a
-    // keyboard/screen-reader user activated it, the focused button vanishing
-    // collapses focus to <body>, and VoiceOver re-announces the page title —
-    // which also flushes our run announcements. Park focus on the live region
-    // instead, so focus stays put and VoiceOver's cursor sits right where the
-    // step announcements land. The region has no accessible name, so this is
-    // quiet; the per-step announcements narrate what happens.
+    // Run button is about to be hidden; move focus to the live region first so
+    // VoiceOver doesn't re-announce the page title and flush run announcements.
     var runButtonHadFocus = document.activeElement === runButton;
     studioApp().toggleRunReset('reset');
     if (runButtonHadFocus) {

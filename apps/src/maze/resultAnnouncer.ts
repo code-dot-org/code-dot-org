@@ -20,13 +20,13 @@ const SR_ONLY: Partial<CSSStyleDeclaration> = {
 };
 
 interface ResultInfo {
-  result: number; // ResultType
-  testResults: number; // TestResults
+  result: number;
+  testResults: number;
   message?: string;
 }
 
 // Focus parks here, not on the live regions: VoiceOver suffixes a focused live
-// region's updates with its role ("group"). aria-label names the focus landing.
+// region's updates with its role ("group").
 function getHost(): HTMLElement {
   let host = document.getElementById(HOST_ID);
   if (!host) {
@@ -42,7 +42,7 @@ function getHost(): HTMLElement {
 }
 
 // Bare aria-live (no role/aria-atomic) is the only shape VoiceOver+Chrome
-// announces reliably; matches the sketchlab announcer.
+// announces reliably;
 function getRegion(id: string, assertive: boolean): HTMLElement {
   let region = document.getElementById(id);
   if (!region) {
@@ -54,8 +54,6 @@ function getRegion(id: string, assertive: boolean): HTMLElement {
   return region;
 }
 
-// Create up front: AT ignores a live region created in the same tick as its
-// first text.
 export function setupResultAnnouncer(): void {
   getHost();
   getRegion(RESULT_REGION_ID, true);
@@ -70,8 +68,6 @@ export function teardownResultAnnouncer(): void {
   document.getElementById(HOST_ID)?.remove();
 }
 
-// Alternating zero-width space keeps identical consecutive text a distinct
-// change; clear-then-set instead goes silent on VoiceOver+Chrome.
 let announceCounter = 0;
 function announce(region: HTMLElement, text: string): void {
   announceCounter += 1;
@@ -85,7 +81,6 @@ export function describeResult({
   message,
 }: ResultInfo): string {
   if (result === ResultType.SUCCESS) {
-    // testResults < ALL_PASS on a success means passed-but-not-optimal.
     const imperfect = testResults < TestResults.ALL_PASS;
     const base = 'Success. Character reached the goal.';
     return imperfect && message ? `${base} ${message}` : base;
