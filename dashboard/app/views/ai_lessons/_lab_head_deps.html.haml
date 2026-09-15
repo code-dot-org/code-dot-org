@@ -1,0 +1,11 @@
+-# Shared lab2 head dependencies for every AI Lessons page.  These are
+-# required because labCapabilities.ts (and, on the show page, EmbeddedLab
+-# itself) imports music/* and other lab2 modules whose locales are read
+-# at module-evaluation time via `window.locales[...]`.
+-#
+-# Source of truth for which app locales exist: webpack builds one
+-# `js/{locale}/<app>_locale.js` per directory under `apps/i18n/`.  There is
+-# no `panels_locale.js`; panels uses `lab2_locale` strings.
+- %w[music weblab2 codebridge pythonlab lab2].each do |lab_app|
+  %script{src: webpack_asset_path("js/#{js_locale}/#{lab_app}_locale.js")}
+%script{src: webpack_asset_path('js/blockly.js')}
