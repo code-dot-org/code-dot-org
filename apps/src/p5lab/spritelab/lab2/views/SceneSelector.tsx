@@ -25,8 +25,6 @@ interface SceneSelectorProps {
   disabled?: boolean;
   // Locked to the current scene: disallows changing or creating scenes.
   locked?: boolean;
-  // Offer the option that creates a scene. A guided level lets the student
-  // move between the scenes it gave them, but not invent more.
   allowCreate?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string, type: SceneType) => void;

@@ -68,22 +68,20 @@ export function paintPattern(
   return painted ? {grid} : null;
 }
 
-/** Seeds the pattern once the images it draws with exist, and again after a
-    Start Over, which empties the world. */
+/** Seeds the pattern whenever the image list changes. A trigger keyed on
+    Start Over itself would fire with the pre-reset list. */
 export function useWorldStartPattern({
   pattern,
   pinnedSceneId,
   enabled,
   animations,
   updateSources,
-  reinitCount,
 }: {
   pattern: string[] | undefined;
   pinnedSceneId: string | undefined;
   enabled: boolean;
   animations: RuntimeAnimationList;
   updateSources: (updater: (prev: Sources) => Sources) => void;
-  reinitCount: number;
 }): void {
   useEffect(() => {
     if (!pattern?.length || !pinnedSceneId || !enabled) {
@@ -104,5 +102,5 @@ export function useWorldStartPattern({
       next[index] = {...scenes[index], world};
       return {...prev, scenes: next};
     });
-  }, [pattern, pinnedSceneId, enabled, animations, updateSources, reinitCount]);
+  }, [pattern, pinnedSceneId, enabled, animations, updateSources]);
 }

@@ -206,9 +206,7 @@ const isLevelEditMode =
   !!getAppOptionsEditBlocks() || !!getAppOptionsEditingExemplar();
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
-// Start Over empties the project, images included, so the dialog says so
-// rather than naming only the blocks. One project carries a whole unit's
-// images, and this is the only way a student can clear them.
+// The shared dialog's own copy names only the blocks.
 const START_OVER_MESSAGE =
   "This will remove the blocks you've added and delete all of the images " +
   "you've made. You can't undo this.";
@@ -429,7 +427,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const activeSceneType = activeScene?.type;
   // A world is a platformer's floor plan, so a story scene has nothing to
-  // place in one. Scenes made before scene types keep the tab.
+  // place in one. An untyped scene keeps the tab.
   const enabledTabs = useMemo(
     () =>
       activeSceneType === 'story' ? tabs.filter(tab => tab !== 'World') : tabs,
@@ -486,7 +484,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: animationsSeeded,
     animations: animationList,
     updateSources,
-    reinitCount: sourcesReinitializedCount,
   });
 
   // Where Play begins with no explicit start scene: the pinned scene on a
@@ -518,16 +515,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     WorldCell | 'erase' | null
   >(null);
 
-  // A guided level opens the palette on the image it is about — the newest
-  // of the kind its mode names — so the student can paint without hunting
-  // for it. Only until they choose for themselves.
+  // Preselect the newest image of the level's imageType. Backgrounds are
+  // excluded, a world cell being a sprite or a block; a selection whose image
+  // is gone counts as none.
   const focusImageType = levelProperties.levelMode?.imageType;
   useEffect(() => {
-    if (
-      worldPaletteSelection ||
-      !focusImageType ||
-      focusImageType === 'background'
-    ) {
+    if (!focusImageType || focusImageType === 'background') {
+      return;
+    }
+    const names = new Set(
+      animationList.orderedKeys.map(key => animationList.propsByKey[key]?.name)
+    );
+    const live =
+      worldPaletteSelection === 'erase' ||
+      (worldPaletteSelection && names.has(worldPaletteSelection.image));
+    if (live) {
       return;
     }
     // orderedKeys is newest-first: Sprite Lab prepends new animations.
@@ -537,9 +539,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         focusImageType
     );
     const name = newest && animationList.propsByKey[newest]?.name;
-    if (name) {
-      setWorldPaletteSelection({image: name, kind: focusImageType});
-    }
+    setWorldPaletteSelection(name ? {image: name, kind: focusImageType} : null);
   }, [worldPaletteSelection, focusImageType, animationList]);
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
@@ -725,9 +725,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     cancelRerunWatchRef.current = cancel;
   }, []);
 
-  // Reseed the animation list when sources are reinitialized (e.g. start over).
-  // The sources reset to the level's template, which carries no animations,
-  // so the images go with the blocks.
+  // Reseed the animation list on reinitialization. The template carries no
+  // animations, so Start Over drops the images.
   const seededReinitCountRef = useRef(0);
   useEffect(() => {
     if (sourcesReinitializedCount === seededReinitCountRef.current) {
@@ -1637,8 +1636,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 activeSceneId={activeSceneId}
                 disabled={!onSceneTab}
                 locked={!!pinnedSceneId}
-                // A guided level hands the student its scenes; only freeplay
-                // invents more. Levels with no mode keep the old behaviour.
+                // Only freeplay adds scenes; a level with no mode is unconstrained.
                 allowCreate={
                   !levelProperties.levelMode ||
                   isFreeplayMode(levelProperties.levelMode)
