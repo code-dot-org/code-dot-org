@@ -80,6 +80,7 @@ import {platformerControlsEnhancement} from './platformerControls';
 import {ridesEnhancement} from './rides';
 import {scoreboardEnhancement} from './scoreboard';
 import {shootsEnhancement} from './shoots';
+import {shootsAtEnhancement} from './shootsAt';
 import {
   conveysEnhancement,
   slipperyEnhancement,
@@ -307,6 +308,9 @@ export const GROUPS: readonly EnhancementGroup[] = [
       // to its beat, and one that ignores the ground entirely.
       prowlsEnhancement,
       flapsEnhancement,
+      // …and the gun that is an enemy's rather than the player's: no key, a
+      // rate, and an aim. It asks whom, and sends the library's Shot.
+      shootsAtEnhancement,
     ],
   },
   {

@@ -19,6 +19,7 @@ import {labelActor} from './label';
 import {PLAYER_ANIMATION, playerActor} from './player';
 import {PORTRAIT_SPRITE, portraitActor} from './portrait';
 import {progressBarActor} from './progressBar';
+import {shotActor} from './shot';
 import {speechBoxActor} from './speechBox';
 import {textInputActor} from './textInput';
 
@@ -178,6 +179,17 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: ['Collection'],
     animations: [COIN_ANIMATION],
     contents: coinActor,
+  },
+  {
+    id: 'shot',
+    name: 'Shot',
+    description:
+      'A small bright square that flies, hits, hurts, and disappears a few seconds later. What an enemy that shoots at somebody sends \u2014 repaint it, or give it a picture of your own.',
+    // The four things a shot is made of, one rule each: it moves, it can be
+    // hit, it hurts what it hits, and it goes away. `Deals Damage` brings
+    // `Can Collide` on its own account; naming both is what the file says.
+    requires: ['Physics', 'Collisions', 'Expiry', 'Health'],
+    contents: shotActor,
   },
   {
     id: 'player',
