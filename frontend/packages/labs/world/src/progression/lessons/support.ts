@@ -26,6 +26,8 @@ import {buildProject, type ProjectSpec} from '../../constants';
 import {importStockRule} from '../../rules/importStockRule';
 import {stockRule} from '../../rules/stock';
 
+import type {LessonWorld} from './worlds';
+
 /** The eight folders every World project has. */
 export const LESSON_FOLDERS = [
   'rules',
@@ -39,9 +41,18 @@ export const LESSON_FOLDERS = [
 ] as const;
 
 export interface LessonSpec {
-  /** The `.world` file, as a Blockly workspace. */
-  world: string;
-  /** Actor files, by stem: `hero` becomes `actors/hero.actor`. */
+  /**
+   * The `.world` file, as a Blockly workspace — or that and the actor files
+   * beside it, which is what `worldFile` hands over.
+   */
+  world: string | LessonWorld;
+  /**
+   * Actor files, by stem: `hero` becomes `actors/hero.actor`.
+   *
+   * Beside the ones the world spec listed, for an actor written out by hand
+   * (`actors/stock/workspace.actorFile`). A stem given both ways is one file,
+   * and this one wins.
+   */
   actors?: Record<string, string>;
   /**
    * Rule files a lesson WRITES, by stem: `wind` becomes `rules/wind.rule`.
@@ -72,27 +83,44 @@ export interface LessonSpec {
 /**
  * A lesson's project.
  *
- * `main.world` is the open file and the active tab, because a lesson is about
- * the world unless it says otherwise, and the tab a learner lands on is the
- * first thing the lesson says to them.
+ * `main.world` is the active tab, because a lesson is about the world unless
+ * it says otherwise, and the tab a learner lands on is the first thing the
+ * lesson says to them. The actors the world spec listed are open as tabs
+ * beside it: the file browser is off in most lessons (`lessons/index`,
+ * `ONE_FILE`), and a tab is how a learner asked to change the Hero reaches
+ * the Hero without a sidebar to find it in.
  */
 export const lessonSource = (spec: LessonSpec): MultiFileSource => {
+  const world = typeof spec.world === 'string' ? spec.world : spec.world.world;
+  const listed = typeof spec.world === 'string' ? {} : spec.world.actors;
   const files: ProjectSpec['files'] = {
     main: {
       name: 'main.world',
       language: 'world',
-      contents: spec.world,
+      contents: world,
       folderId: 'worlds',
       active: true,
       open: true,
     },
   };
+  for (const [stem, contents] of Object.entries(listed)) {
+    files[stem] = {
+      name: `${stem}.actor`,
+      language: 'actor',
+      contents,
+      folderId: 'actors',
+      open: true,
+    };
+  }
   for (const [stem, contents] of Object.entries(spec.actors ?? {})) {
     files[stem] = {
       name: `${stem}.actor`,
       language: 'actor',
       contents,
       folderId: 'actors',
+      // A tab too: an actor a lesson wrote out by hand is one it means the
+      // learner to open, or it would have imported a stock one.
+      open: true,
     };
   }
   for (const [stem, contents] of Object.entries(spec.maps ?? {})) {
@@ -115,7 +143,7 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
   let source = buildProject({
     folders: [...LESSON_FOLDERS],
     files,
-    open: ['main'],
+    open: ['main', ...Object.keys(listed), ...Object.keys(spec.actors ?? {})],
   }).source;
 
   // Order is deliberate: an actor may bring a rule, and a rule may already be

@@ -1202,8 +1202,8 @@ export const TILES: readonly Tile[] = [
         const holds = (what: string, who: string) =>
           declared.some(layer => layer.includes(what) && layer.includes(who));
         return (
-          holds('world_layer_fixed', 'local:score') &&
-          holds('world_layer_parallax', 'local:hill')
+          holds('world_layer_fixed', 'actors/score') &&
+          holds('world_layer_parallax', 'actors/hill')
         );
       },
       // The world is still a world: the shape half is what this lesson can be
@@ -3384,10 +3384,11 @@ export const TILES: readonly Tile[] = [
             contents.includes('world_rule_trait') &&
             contents.includes('world_trait_step'),
         );
-        // The world is where both `define actor`s live, so a copy left in
-        // either of them is a `world_trait_step` still sitting in this file.
-        const copies = (files['worlds/main.world'] ?? '').includes(
-          'world_trait_step',
+        // Each `define actor` is a file of its own, so a copy left in either
+        // of them is a `world_trait_step` still sitting in an actor file.
+        const copies = Object.entries(files).some(
+          ([path, contents]) =>
+            path.endsWith('.actor') && contents.includes('world_trait_step'),
         );
         return shared && !copies;
       },

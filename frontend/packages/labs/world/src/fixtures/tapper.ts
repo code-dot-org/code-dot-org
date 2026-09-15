@@ -48,21 +48,11 @@ import {referenceToStock} from '../rules/ruleReference';
 
 import {me, number} from './meteors';
 
-// A world-local actor is named by its DEFINING BLOCK'S id (blockly/localActors).
-const COIN = 'tapperCoinDef';
-const SCOREBOARD = 'tapperScoreDef';
+// Every actor is a file, and an ACTOR dropdown names one by its module path.
+const COIN = 'actors/coin';
+const SCOREBOARD = 'actors/scoreboard';
 
-const local = (blockId: string) => `local:${blockId}`;
-
-/**
- * The Label the score is written on.
- *
- * A FILE, so `any ⟨Label⟩` names it by its module path — where `kind()` above
- * is for a world's OWN actors and stores `local:<block id>`. Handing one the
- * other's value is a dropdown value that matches no option, which Blockly drops
- * silently: the socket empties, `actorTarget` falls back to `actor`, and the
- * score was written onto the coin that had just been clicked.
- */
+/** The Label the score is written on, named the same way. */
 const LABEL = {
   block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/label'}},
 };
@@ -101,8 +91,8 @@ const scoreText = (who: object) => ({
 });
 
 /** `any ⟨kind⟩` — a hat's subject, and so the TEMPLATE rather than an instance. */
-const kind = (blockId: string) => ({
-  block: {type: 'world_actor_kind', fields: {ACTOR: local(blockId)}},
+const kind = (path: string) => ({
+  block: {type: 'world_actor_kind', fields: {ACTOR: path}},
 });
 
 /** One axis of `mouse position`, which is what `set position` takes. */
@@ -114,14 +104,21 @@ const mouseAxis = (component: 'x' | 'y') => ({
   },
 });
 
-const defineActor = (id: string, name: string, x: number, rows: object[]) => ({
-  type: 'world_actor',
-  id,
-  x,
-  y: 420,
-  fields: {NAME: name},
-  next: {block: stack(rows)},
-});
+/** An actor file: one `define actor` and its rows. */
+const actorFile = (name: string, rows: object[]) =>
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: name},
+          next: {block: stack(rows)},
+        },
+      ],
+    },
+  });
 
 /**
  * The furniture: Labels that say the same thing for the whole game.
@@ -228,7 +225,7 @@ const COIN_GRID = countTo(
   ROW_VAR,
   countTo(COLUMN_VAR, {
     type: 'world_add_actor',
-    fields: {ACTOR: local(COIN)},
+    fields: {ACTOR: COIN},
     inputs: {
       DO: {
         block: stack([
@@ -273,18 +270,34 @@ const COIN_GRID = countTo(
   }),
 );
 
+// A coin: something to click, and the whole of what that takes. `Can Be
+// Clicked` is the ONLY row here that is about the mouse — no collision shape,
+// nothing to collect it, nothing to clean up afterwards, because the rule
+// works out what the pointer was over from where the coin is and how big it
+// is drawn.
+const COIN_ACTOR = actorFile('Coin', [
+  useTrait('Mouse#CanBeClickedTrait'),
+  useTrait('Spin#SpinTrait'),
+  {type: 'world_set_sprite', fields: {SPRITE: 'coin.png'}},
+]);
+
+// Somebody to hear the clicks. It elects `Takes Mouse Input`, which is what
+// makes the rule tell it — the world hears every click either way, and an
+// actor hears the ones it asked for (rules/mouse).
+const SCOREBOARD_ACTOR = actorFile('Scoreboard', [
+  useTrait('Mouse#TakesMouseInputTrait'),
+  // ONE CELL of the switch sheet: `switch.png` is a strip of three, and an
+  // actor drawing the whole strip is three switches side by side rather than
+  // a thing (blockly/spriteCells).
+  {type: 'world_set_sprite', fields: {SPRITE: 'switch.png#0'}},
+]);
+
 /**
- * The crosshair, in a file of its own — and it has to be a file.
+ * The crosshair, and the `each frame` that is the whole reason it exists.
  *
- * `each frame` compiles to `actor.defineStep(…)`, which needs the `const actor`
- * an ACTOR module opens with. A world-local `define actor` is a differently
- * named const in the world's module, so the block is not offered there
- * (blockly/fileKind) — which is why this one thing lives outside `main.world`
- * while the rest of the game is in it.
- *
- * It is also the whole reason the feature exists. Before `each frame`, "keep
- * doing this" meant writing a `.rule` — a rule with one trait, elected by one
- * actor, shared with nobody — for a crosshair that follows the pointer.
+ * Before `each frame`, "keep doing this" meant writing a `.rule` — a rule with
+ * one trait, elected by one actor, shared with nobody — for a crosshair that
+ * follows the pointer.
  */
 const CROSSHAIR_ACTOR = JSON.stringify({
   blocks: {
@@ -461,7 +474,7 @@ const MAIN_WORLD = JSON.stringify({
                     COIN_GRID,
                     {
                       type: 'world_add_actor',
-                      fields: {ACTOR: local(SCOREBOARD)},
+                      fields: {ACTOR: SCOREBOARD},
                     },
                     {
                       type: 'world_add_actor',
@@ -537,26 +550,6 @@ const MAIN_WORLD = JSON.stringify({
           ]),
         },
       },
-      // A coin: something to click, and the whole of what that takes. `Can Be
-      // Clicked` is the ONLY row here that is about the mouse — no collision
-      // shape, nothing to collect it, nothing to clean up afterwards, because
-      // the rule works out what the pointer was over from where the coin is
-      // and how big it is drawn.
-      defineActor(COIN, 'Coin', 20, [
-        useTrait('Mouse#CanBeClickedTrait'),
-        useTrait('Spin#SpinTrait'),
-        {type: 'world_set_sprite', fields: {SPRITE: 'coin.png'}},
-      ]),
-      // Somebody to hear the clicks. It elects `Takes Mouse Input`, which is
-      // what makes the rule tell it — the world hears every click either way,
-      // and an actor hears the ones it asked for (rules/mouse).
-      defineActor(SCOREBOARD, 'Scoreboard', 660, [
-        useTrait('Mouse#TakesMouseInputTrait'),
-        // ONE CELL of the switch sheet: `switch.png` is a strip of three, and
-        // an actor drawing the whole strip is three switches side by side
-        // rather than a thing (blockly/spriteCells).
-        {type: 'world_set_sprite', fields: {SPRITE: 'switch.png#0'}},
-      ]),
       // THE WORLD'S TELLING. Raised once, about nobody — so a handler that
       // wants to know where it landed has to ask, and `mouse position` is the
       // asking. Every press prints a point, including the ones that hit
@@ -640,6 +633,18 @@ export const TAPPER_SPEC: ProjectSpec = {
       language: 'rule',
       contents: SPIN_RULE,
       folderId: 'rules',
+    },
+    coin: {
+      name: 'coin.actor',
+      language: 'actor',
+      contents: COIN_ACTOR,
+      folderId: 'actors',
+    },
+    scoreboard: {
+      name: 'scoreboard.actor',
+      language: 'actor',
+      contents: SCOREBOARD_ACTOR,
+      folderId: 'actors',
     },
     crosshair: {
       name: 'crosshair.actor',

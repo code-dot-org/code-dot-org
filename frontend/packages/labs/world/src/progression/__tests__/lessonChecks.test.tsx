@@ -33,7 +33,7 @@ import {playCheck} from '../../runtime/playCheck';
 import {projectFiles} from '../../runtime/projectFiles';
 import {tile} from '../index';
 import {LESSONS} from '../lessons';
-import {anyKind, local} from '../lessons/worlds';
+import {actorPath, anyKind} from '../lessons/worlds';
 import type {TileId} from '../types';
 
 /**
@@ -61,12 +61,24 @@ const check = async (id: TileId, source: MultiFileSource) => {
  *
  * By NAME rather than by id: a project's file ids are numbers assigned in
  * order, and a test that named one would be a test about `buildProject`.
+ *
+ * `main.world` IS THE WORLD AND ITS ACTORS TOGETHER. Every actor is a file
+ * of its own, and a lesson shows them as tabs beside the world; an edit the
+ * instructions describe as "add this to the Hero" is an edit to `hero.actor`.
+ * These tests were written when the Hero was a root in the world, and they
+ * still say so: asked for `main.world`, this hands the change one workspace
+ * holding the world's roots and every actor file's, and files each root back
+ * where it came from. A root the change adds goes to the world — unless it is
+ * a `define actor`, which becomes a file, named the way `worldFile` names one.
  */
 const editing = (
   source: MultiFileSource,
   name: string,
   change: (contents: string) => string,
 ): MultiFileSource => {
+  if (name === 'main.world') {
+    return editingWorld(source, change);
+  }
   const entry = Object.entries(source.files).find(
     ([, file]) => file.name === name,
   );
@@ -87,6 +99,85 @@ const editing = (
       [id]: {...file, contents: change(resolveRuleContents(file.contents))},
     },
   };
+};
+
+/** Where a merged root came from, stamped on it for the way back. */
+const FROM = '__from';
+
+const editingWorld = (
+  source: MultiFileSource,
+  change: (contents: string) => string,
+): MultiFileSource => {
+  const byName = (name: string) =>
+    Object.entries(source.files).find(([, file]) => file.name === name);
+  const world = byName('main.world');
+  if (!world) {
+    throw new Error('no file called main.world');
+  }
+  const actors = Object.entries(source.files).filter(([, file]) =>
+    file.name.endsWith('.actor'),
+  );
+
+  type Parsed = {blocks: {blocks: Row[]}; [key: string]: unknown};
+  const parse = (contents: string) => JSON.parse(contents) as Parsed;
+  const merged = parse(world[1].contents);
+  // Each actor file as it was, so what is not roots — the variables a
+  // designed block's parameters are — goes back with its roots.
+  const parsedActors = new Map<string, Parsed>();
+  for (const [id, file] of actors) {
+    const parsed = parse(file.contents);
+    parsedActors.set(id, parsed);
+    for (const root of parsed.blocks.blocks) {
+      merged.blocks.blocks.push({...root, [FROM]: id} as Row);
+    }
+  }
+
+  // Pretty-printed, as the lesson wrote it: some edits are string edits on
+  // the JSON as a learner would see it (`"x": 60`).
+  const changed = parse(change(JSON.stringify(merged, null, 2)));
+  const files = {...source.files};
+  const roots = new Map<string, Row[]>();
+  const worldRoots: Row[] = [];
+  for (const root of changed.blocks.blocks) {
+    const from = (root as Record<string, unknown>)[FROM];
+    if (typeof from === 'string') {
+      delete (root as Record<string, unknown>)[FROM];
+      roots.set(from, [...(roots.get(from) ?? []), root]);
+    } else if (root.type === 'world_actor') {
+      const name = String(root.fields?.NAME ?? 'Actor');
+      const stem = name[0].toLowerCase() + name.slice(1).replaceAll(' ', '');
+      const id = String(
+        Math.max(0, ...Object.keys(files).map(Number).filter(Number.isFinite)) +
+          1,
+      );
+      const folderId = Object.values(source.folders).find(
+        folder => folder.name === 'actors',
+      )?.id;
+      files[id] = {
+        id,
+        name: `${stem}.actor`,
+        language: 'actor',
+        contents: JSON.stringify({blocks: {blocks: [root]}}),
+        folderId: folderId ?? '0',
+      };
+    } else {
+      worldRoots.push(root);
+    }
+  }
+  files[world[0]] = {
+    ...world[1],
+    contents: JSON.stringify({...changed, blocks: {blocks: worldRoots}}),
+  };
+  for (const [id, file] of actors) {
+    files[id] = {
+      ...file,
+      contents: JSON.stringify({
+        ...parsedActors.get(id),
+        blocks: {blocks: roots.get(id) ?? []},
+      }),
+    };
+  }
+  return {...source, files};
 };
 
 /**
@@ -110,12 +201,10 @@ const inSocket = (row: Row | undefined, name: string): Row | undefined =>
   row?.inputs?.[name]?.block ?? row?.inputs?.[name]?.shadow;
 
 /**
- * The `define actor ⟨Name⟩` a world defines for itself.
+ * The `define actor ⟨Name⟩` among the merged roots `editing` hands over.
  *
- * Early lessons are ONE FILE (`lessons/index`, `ONE_FILE`), so an edit the
- * instructions describe as "add this to the Hero" is an edit to a root inside
- * `main.world` — found by the name the learner reads, since a world may define
- * several and three of these lessons do.
+ * Found by the name the learner reads, since a lesson has several actors and
+ * each is its own file (see `editing` on how they arrive in one workspace).
  */
 const actorIn = (workspace: {blocks: {blocks: Row[]}}, name: string): Row => {
   const actor = workspace.blocks.blocks.find(
@@ -251,7 +340,7 @@ describe('the first world lesson’s check', () => {
       }
       if (row) {
         row.next = {
-          block: {type: 'world_add_actor', fields: {ACTOR: local('hero')}},
+          block: {type: 'world_add_actor', fields: {ACTOR: actorPath('hero')}},
         };
       }
       return JSON.stringify(workspace);
@@ -814,7 +903,10 @@ describe('the tween lesson’s check', () => {
           fields: {CURVE: 'linear'},
           inputs: {
             ACTOR: {
-              block: {type: 'world_actor_kind', fields: {ACTOR: local('door')}},
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: actorPath('door')},
+              },
             },
             SECONDS: {shadow: {type: 'math_number', fields: {NUM: 1}}},
             DO: {
@@ -1025,7 +1117,7 @@ describe('the kinds lesson’s check', () => {
           IF0: {
             block: {
               type: 'world_is_a',
-              fields: {TYPE: local(kind)},
+              fields: {TYPE: actorPath(kind)},
               inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
             },
           },
@@ -1064,7 +1156,7 @@ describe('the kinds lesson’s check', () => {
             IF0: {
               block: {
                 type: 'world_is_a',
-                fields: {TYPE: local('coin')},
+                fields: {TYPE: actorPath('coin')},
                 inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
               },
             },
@@ -1523,7 +1615,7 @@ describe('the drawing lesson’s check', () => {
             A: {shadow: {type: 'math_number', fields: {NUM: 96}}},
             B: {
               block: {
-                type: 'world_get_WorldsMainBar_FractionProperty',
+                type: 'world_get_ActorsBar_FractionProperty',
                 inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
               },
             },
@@ -1798,7 +1890,10 @@ describe('the camera lesson’s check', () => {
           inputs: {
             ACTOR: {block: {type: 'world_this_camera'}},
             VALUE: {
-              block: {type: 'world_actor_kind', fields: {ACTOR: local('hero')}},
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: actorPath('hero')},
+              },
             },
           },
         },
@@ -1944,13 +2039,13 @@ describe('the layers lesson’s check', () => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       const rows = rowsOf(workspace);
       const named = (actor: string) =>
-        rows.filter(row => row.fields?.ACTOR === local(actor));
+        rows.filter(row => row.fields?.ACTOR === actorPath(actor));
       // The rows that move into a layer come OUT of the world's own chain, the
       // way dragging them in would take them out.
       const kept = rows.filter(
         row =>
-          row.fields?.ACTOR !== local('score') &&
-          row.fields?.ACTOR !== local('hill'),
+          row.fields?.ACTOR !== actorPath('score') &&
+          row.fields?.ACTOR !== actorPath('hill'),
       );
       const inside = (rowsIn: Row[], settings: Row[], name: string): Row => ({
         type: 'world_define_layer',
@@ -2168,8 +2263,8 @@ describe('the ladder lesson’s check', () => {
    * the trait and nothing else can climb and is never told to, which is step 7
    * of the lesson and is not a pass.
    *
-   * ROOTS OF THE WORLD, not rows under the Hero: a hat takes no previous
-   * connection, and one written in a world names the kind it is about.
+   * ROOTS, not rows under the Hero: a hat takes no previous connection, so
+   * it stands beside the definition in the Hero's own file.
    */
   const climbing = (
     heroTraits: readonly string[],
@@ -2186,12 +2281,23 @@ describe('the ladder lesson’s check', () => {
       }
       if (arrows) {
         workspace.blocks.blocks.push(
-          ...(climbArrowsHandlers({
-            kind: 'actor',
-            path: 'worlds/main',
-            name: 'Hero',
-            block: 'hero',
-          }) as Row[]),
+          // The hats are the Hero's, so they go in its file: stamped the way
+          // `editing` stamps the Hero's own root, which is where it files them.
+          ...(
+            climbArrowsHandlers({
+              kind: 'actor',
+              path: 'actors/hero',
+              name: 'Hero',
+            }) as Row[]
+          ).map(
+            hat =>
+              ({
+                ...hat,
+                [FROM]: (actorIn(workspace, 'Hero') as Record<string, unknown>)[
+                  FROM
+                ],
+              }) as Row,
+          ),
         );
       }
       for (const trait of ladderTraits) {
@@ -2331,7 +2437,7 @@ describe('the jump lesson’s check', () => {
       };
       if (allowed !== undefined) {
         const placement = rowsOf(workspace).find(
-          row => row.fields?.ACTOR === local('hero'),
+          row => row.fields?.ACTOR === actorPath('hero'),
         )!;
         let last = inSocket(placement, 'DO')!;
         while (last.next?.block) {
@@ -2462,7 +2568,10 @@ describe('the level lesson’s check', () => {
         fields: {FILTER0: ''},
         inputs: {
           ACTOR: {
-            block: {type: 'world_actor_kind', fields: {ACTOR: local('hero')}},
+            block: {
+              type: 'world_actor_kind',
+              fields: {ACTOR: actorPath('hero')},
+            },
           },
         },
         next: {
@@ -2473,7 +2582,7 @@ describe('the level lesson’s check', () => {
                   IF0: {
                     block: {
                       type: 'world_is_a',
-                      fields: {TYPE: local('flag')},
+                      fields: {TYPE: actorPath('flag')},
                       inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
                     },
                   },
@@ -2599,7 +2708,10 @@ describe('the zapping lesson’s check', () => {
         y: 20,
         inputs: {
           ACTOR: {
-            block: {type: 'world_actor_kind', fields: {ACTOR: local('ship')}},
+            block: {
+              type: 'world_actor_kind',
+              fields: {ACTOR: actorPath('ship')},
+            },
           },
         },
         next: {block: spawn},
@@ -2659,7 +2771,7 @@ describe('the bricks lesson’s check', () => {
                     A: {
                       block: {
                         type: 'world_count_of_kind',
-                        fields: {TYPE: local('brick')},
+                        fields: {TYPE: actorPath('brick')},
                         inputs: {LIST: {block: {type: 'world_all_actors'}}},
                       },
                     },
@@ -3241,7 +3353,7 @@ describe('the steering lesson’s check', () => {
   const lesson = LESSONS['simulation/steering'];
 
   const kindOf = (id: string) => ({
-    block: {type: 'world_actor_kind', fields: {ACTOR: local(id)}},
+    block: {type: 'world_actor_kind', fields: {ACTOR: actorPath(id)}},
   });
 
   /** Both traits elected and pointed at the Player — or a hand-aimed walk. */
@@ -3469,7 +3581,7 @@ describe('the grid lesson’s check', () => {
             ACTOR: {
               block: {
                 type: 'world_actor_kind',
-                fields: {ACTOR: local('player')},
+                fields: {ACTOR: actorPath('player')},
               },
             },
           },
@@ -3562,7 +3674,7 @@ describe('the people lesson’s check', () => {
                 VALUE: {
                   block: {
                     type: 'world_actor_kind',
-                    fields: {ACTOR: local('villager')},
+                    fields: {ACTOR: actorPath('villager')},
                   },
                 },
               },
@@ -3604,7 +3716,7 @@ describe('the errand lesson’s check', () => {
       const me = () => ({block: {type: 'world_this_actor'}});
       const held: Row = {
         type: 'world_count_of_kind',
-        fields: {TYPE: local('token')},
+        fields: {TYPE: actorPath('token')},
         inputs: {
           LIST: {
             block: {
@@ -3622,7 +3734,7 @@ describe('the errand lesson’s check', () => {
           ACTOR: {
             block: {
               type: 'world_actor_kind',
-              fields: {ACTOR: local('hero')},
+              fields: {ACTOR: actorPath('hero')},
             },
           },
         },
@@ -3920,7 +4032,7 @@ describe('the big-world lesson’s check', () => {
                             VALUE: {
                               block: {
                                 type: 'world_actor_kind',
-                                fields: {ACTOR: local('walker')},
+                                fields: {ACTOR: actorPath('walker')},
                               },
                             },
                           },
@@ -4190,12 +4302,12 @@ describe('the goal lesson’s check', () => {
           // The KIND, on the hat. It is the same guard the learner would
           // otherwise write with `if ⟨event actor⟩ is a ⟨Mark⟩`, and it is
           // three blocks shorter.
-          fields: {FILTER0: local('mark')},
+          fields: {FILTER0: actorPath('mark')},
           inputs: {
             ACTOR: {
               block: {
                 type: 'world_actor_kind',
-                fields: {ACTOR: local('crate')},
+                fields: {ACTOR: actorPath('crate')},
               },
             },
           },
@@ -4419,7 +4531,7 @@ describe('the neighborhood lesson’s check', () => {
             SOURCE: {
               block: {
                 type: 'world_actor_kind',
-                fields: {ACTOR: local('dot')},
+                fields: {ACTOR: actorPath('dot')},
               },
             },
             DISTANCE: {shadow: {type: 'math_number', fields: {NUM: reach}}},
@@ -4647,7 +4759,7 @@ describe('the key lesson’s check', () => {
   const eventActor = () => ({block: {type: 'world_event_actor'}});
   const thisActor = () => ({block: {type: 'world_this_actor'}});
   /** The kind, as its dropdown holds it: a world's own actor by its id. */
-  const KEY = local('key');
+  const KEY = actorPath('key');
 
   /** The lesson done, with a knob for the key that is never spent. */
   const carrying = (options: {spend: boolean}) =>
@@ -4680,7 +4792,7 @@ describe('the key lesson’s check', () => {
           y: 220,
           // The door listens for a Player, on the hat: a Crate rolling into it
           // is not somebody arriving with a key.
-          fields: {FILTER0: local('player')},
+          fields: {FILTER0: actorPath('player')},
           inputs: {ACTOR: anyKind('door')},
           next: {
             block: {

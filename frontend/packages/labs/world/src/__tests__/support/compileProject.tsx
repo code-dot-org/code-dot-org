@@ -134,8 +134,15 @@ export async function compileProject(
     }
   }
 
+  // Every module's exports object exists before any module runs, so a
+  // cycle — an actor file reading the world's own state, in a world that
+  // places that actor — resolves through the live bindings `evaluate` gives
+  // named imports rather than through an object that is not there yet.
+  for (const path of Object.keys(code)) {
+    modules[path] = {};
+  }
   for (const path of inDependencyOrder(code)) {
-    modules[path] = evaluate(code[path], modules);
+    evaluate(code[path], modules, modules[path]);
   }
 
   const built = Object.entries(modules).find(([path]) =>

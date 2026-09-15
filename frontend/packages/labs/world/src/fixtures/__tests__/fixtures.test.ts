@@ -258,8 +258,11 @@ describe('the scenario catalogue', () => {
     expect(main).toContain('world_on_Mouse_IsPressedEvent');
     expect(main).toContain('world_on_Mouse_IsClickedWithEvent');
     expect(main).toContain('world_on_Mouse_PressesMouseButtonEvent');
-    expect(main).toContain('Mouse#CanBeClickedTrait');
-    expect(main).toContain('Mouse#TakesMouseInputTrait');
+    // …and the two traits, each in the file of the actor that elects it.
+    const actor = (name: string) =>
+      files.find(file => file.name === name)!.contents;
+    expect(actor('coin.actor')).toContain('Mouse#CanBeClickedTrait');
+    expect(actor('scoreboard.actor')).toContain('Mouse#TakesMouseInputTrait');
     // …and the count, which is the world's own state (specs/WORLD_STATE.md).
     // The scenario logged `Got one!` for as long as there was nowhere to put a
     // number that outlives the coin raising the event.
@@ -282,8 +285,8 @@ describe('the scenario catalogue', () => {
       file.contents.includes('Spin#SpinTrait'),
     );
     expect(carriers.map(file => file.name).sort()).toEqual([
+      'coin.actor',
       'crosshair.actor',
-      'main.world',
     ]);
     // Each coin's own copy of the behavior's state, set from the loop's
     // counters — where it used to be written into nine map placements, which is

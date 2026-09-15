@@ -234,13 +234,14 @@ describe('what a lesson starts out doing', () => {
   });
 });
 
-// ── One file, until a lesson is about two ───────────────────────────────────
+// ── Tabs, not a sidebar ────────────────────────────────────────────────────
 //
-// The claim `ONE_FILE` makes (lessons/index): an early lesson says everything
-// in `main.world`, and the sidebar that lists the rest of the project is off
-// while it does. What the tests below hold it to is the pair of ways that can
-// rot — a lesson that hides the browser and then tells the learner to open a
-// file, and a lesson that quietly stops hiding it.
+// The claim `ONE_FILE` makes (lessons/index): a lesson is about its world and
+// the actors that world places, those are open as tabs, and the sidebar that
+// lists the rest of the project is off unless a lesson is about a file. What
+// the tests below hold it to is the pair of ways that can rot — a lesson that
+// hides the browser and then tells the learner to open a file, and an actor
+// the learner is meant to change that is not on a tab.
 
 /** A path a learner would have to use the file browser to reach. */
 const PATHS = /`(actors|rules|sprites|worlds|backgrounds|maps|effects)\//;
@@ -252,25 +253,37 @@ describe('a lesson with no file browser', () => {
 
   it('is what a lesson is unless it says otherwise', () => {
     // Every lesson but the ones whose subject IS a file.
-    expect(oneFile).toHaveLength(ids.length - 9);
+    expect(oneFile).toHaveLength(ids.length - 8);
   });
 
   it.each(oneFile)('%s does not send the learner to a file', id => {
     expect(LESSONS[id].instructions).not.toMatch(PATHS);
   });
 
-  it.each(oneFile)('%s keeps no actor of its own in a file', id => {
+  it.each(oneFile)('%s opens every actor of its own as a tab', id => {
     // Not "has no other files": a lesson holds the rules and pictures it needs
     // and nobody has to open those. What it may not do is put an actor the
     // learner is meant to CHANGE somewhere they cannot see — so an `.actor`
-    // file in a one-file lesson has to be one of the library's, untouched.
+    // file that is not one of the library's, untouched, is open beside the
+    // world.
     const stock = new Set(STOCK_ACTORS.map(actor => actor.contents));
-    for (const [path, contents] of Object.entries(
-      projectFiles(LESSONS[id].source),
-    )) {
-      if (path.endsWith('.actor')) {
-        expect(stock.has(contents), `${id} holds ${path}`).toBe(true);
+    const source = LESSONS[id].source;
+    const open = new Set(source.openFiles);
+    for (const [fileId, file] of Object.entries(source.files)) {
+      if (file.name.endsWith('.actor') && !stock.has(file.contents)) {
+        expect(open.has(fileId), `${id}: ${file.name} is not a tab`).toBe(true);
       }
+    }
+  });
+});
+
+describe('every lesson', () => {
+  it('defines no actor inside its world', () => {
+    // An actor is a file. A `define actor` among a world's own roots was the
+    // old way of keeping a lesson to one file, and nothing reads it now.
+    for (const id of ids) {
+      const world = projectFiles(LESSONS[id].source)['worlds/main.world'];
+      expect(world, id).not.toContain('"type": "world_actor"');
     }
   });
 });
@@ -289,13 +302,9 @@ describe('a lesson that shows the file browser', () => {
       'making/read',
       'making/rule',
       'making/trait',
-      'memory/actor-state',
     ]);
     // Each says so where the learner reads it, rather than a sidebar simply
     // appearing one day.
-    expect(LESSONS['memory/actor-state'].instructions).toContain(
-      'first lesson with a second file',
-    );
     expect(LESSONS['look/sprite'].instructions).toContain(
       'first lesson with a file browser',
     );

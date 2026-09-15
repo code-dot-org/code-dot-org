@@ -18,9 +18,8 @@ export const placeAt = (x: number, y: number) => ({
 /**
  * `add actor ⟨Hero⟩ do ⟨…⟩`.
  *
- * The actor is named the way its dropdown names it: `local:<block id>` for one
- * the world defines for itself, and `actors/<stem>` for one that is a file.
- * Early lessons are all the first kind — see `defineActor`.
+ * The actor is named the way its dropdown names it: the module path of its
+ * file, `actors/<stem>` — see `actorPath`.
  */
 export const addActor = (actor: string, body: object[]) => ({
   type: 'world_add_actor',
@@ -28,8 +27,15 @@ export const addActor = (actor: string, body: object[]) => ({
   ...(body.length ? {inputs: {DO: {block: chain(body)}}} : {}),
 });
 
-/** `local:<block id>` — how an ACTOR dropdown names a world's own actor. */
-export const local = (id: string): string => `local:${id}`;
+/**
+ * `actors/<stem>` — how an ACTOR dropdown names an actor, which is by its file.
+ *
+ * The stem is the `id` the lesson gave its `ActorSpec`, which `worldFile`
+ * writes out as `actors/<id>.actor`. It used to be `local:<block id>`, naming
+ * a `define actor` the world held among its own roots; every actor is a file
+ * now (specs/ENHANCEMENTS.md, the closing note), and the id is the file.
+ */
+export const actorPath = (id: string): string => `actors/${id}`;
 
 /**
  * `any ⟨Kind⟩` — a hat's subject, and so the TEMPLATE rather than an instance.
@@ -40,10 +46,10 @@ export const local = (id: string): string => `local:${id}`;
  * means the actor the event fired for.
  */
 export const anyKind = (id: string) => ({
-  block: {type: 'world_actor_kind', fields: {ACTOR: local(id)}},
+  block: {type: 'world_actor_kind', fields: {ACTOR: actorPath(id)}},
 });
 
-/** A drawing spec as the ROW a world-defined actor holds. */
+/** A drawing spec as the ROW an actor's chain holds. */
 const drawingBlock = (drawing: {
   width: number;
   height: number;
@@ -98,15 +104,15 @@ const GAP = 60;
 const below = (y: number, rows: number): number =>
   y + rows * PIXELS_PER_ROW + GAP;
 
-/** An actor a world defines for itself. */
+/** An actor a lesson's world places: a file of its own, beside the world. */
 export interface ActorSpec {
   /**
-   * The defining block's id.
+   * The file's stem: `hero` is `actors/hero.actor`.
    *
-   * Not decoration: a placement names the actor by it (`local`), a hat's
+   * Not decoration: a placement names the actor by it (`actorPath`), a hat's
    * subject resolves through it (`anyKind`), and a property declared in the
-   * actor mints its blocks from it — `world_get_WorldsMain<Id>_…`, where the
-   * id is capitalised (`blockly/ownProperties`, on why the block carries it).
+   * actor mints its blocks from it — `world_get_Actors<Id>_…`, where the id
+   * is capitalised (`ruleRegistry.pathSlug`).
    */
   id: string;
   /** Its NAME, which is the kind — what `is a ⟨Hero⟩` reads. */
@@ -115,24 +121,44 @@ export interface ActorSpec {
   rows: object[];
   /** The picture it paints, for an actor with no sprite. */
   drawing?: {width: number; height: number; commands: object[]};
+  /**
+   * Event handlers of the actor's own, each a ROOT beside its definition.
+   *
+   * A hat about `this actor` belongs in the actor's file, where `this actor`
+   * is the kind being defined; written in the world it would be about
+   * nobody. A hat about `any ⟨Kind⟩` is the world's and goes in `handlers`
+   * on the world spec instead.
+   */
+  handlers?: object[];
 }
 
 /**
- * `define actor ⟨Hero⟩`, as a world's own root.
+ * `define actor ⟨Hero⟩`, as the root of the actor's own file.
  *
- * The same definition an `.actor` file holds, in the world that uses it —
- * which is what lets an early lesson be ONE FILE. A drawing is a ROW here
- * rather than a root beside it, because the root it would be beside is the
- * world (see `fixtures/platformerSingle`, which is this shape at full size).
+ * A drawing is a ROW in the chain, which is where an actor file keeps one
+ * (`actors/stock/workspace.drawingRow`).
  */
-export const defineActor = ({id, name, rows, drawing}: ActorSpec) => ({
+const defineActor = ({name, rows, drawing}: ActorSpec) => ({
   type: 'world_actor',
-  id,
+  x: 20,
+  y: 20,
   fields: {NAME: name},
   next: {
     block: chain([...rows, ...(drawing ? [drawingBlock(drawing)] : [])]),
   },
 });
+
+/** An `.actor` file holding one definition, and its own hats beside it. */
+export const actorFileOf = (spec: ActorSpec): string => {
+  const root = defineActor(spec);
+  let y = below(20, rowsTall(root));
+  const beside = (spec.handlers ?? []).map(hat => {
+    const at = {...hat, x: 20, y};
+    y = below(y, rowsTall(hat));
+    return at;
+  });
+  return JSON.stringify({blocks: {blocks: [root, ...beside]}}, null, 2);
+};
 
 /**
  * `define ⟨type⟩ property ⟨name⟩ with default ⟨…⟩`.
@@ -171,13 +197,14 @@ export interface WorldSpec {
   /** What is placed in it, in order. */
   rows: object[];
   /**
-   * The actors this world defines for itself, each a root beside it.
+   * The actors this world places, each written out as a file of its own.
    *
-   * A lesson says everything in one file for as long as it can: a sidebar of
-   * eleven files argues with a lesson that is about one of them, and the first
-   * thing it invites is the click that leaves it. So an actor a lesson asks
-   * the learner to CHANGE is defined here, where they can see it, and the file
-   * browser stays off until a lesson is about files (`making/read`).
+   * They used to be roots beside the world, so that a lesson was one file: a
+   * sidebar of eleven files argues with a lesson that is about one of them.
+   * The sidebar still stays off until a lesson is about files (`making/read`);
+   * what changed is that an actor is a file everywhere in the lab now, and a
+   * lesson reaches it the way a learner does — as a tab beside the world,
+   * which `lessonSource` opens for every actor listed here.
    */
   actors?: ActorSpec[];
   /**
@@ -197,13 +224,21 @@ export interface WorldSpec {
 }
 
 /** A `.world` file. */
+/** What `worldFile` hands a lesson: the world, and the actor files beside it. */
+export interface LessonWorld {
+  /** `main.world`, as a Blockly workspace. */
+  world: string;
+  /** Actor files by stem, in the order the world spec listed them. */
+  actors: Record<string, string>;
+}
+
 export const worldFile = ({
   name,
   tiles,
   rows,
   actors,
   handlers,
-}: WorldSpec): string => {
+}: WorldSpec): LessonWorld => {
   const inside = [
     ...(tiles
       ? [
@@ -231,12 +266,15 @@ export const worldFile = ({
   // height (`rowsTall`), because a lesson's world can be two rows or twelve,
   // and a fixed ladder writes the actors across the world in the second case.
   let y = below(20, rowsTall(world));
-  const beside = [...(actors ?? []).map(defineActor), ...(handlers ?? [])].map(
-    root => {
-      const at = {...root, x: 20, y};
-      y = below(y, rowsTall(root));
-      return at;
-    },
-  );
-  return JSON.stringify({blocks: {blocks: [world, ...beside]}}, null, 2);
+  const beside = (handlers ?? []).map(root => {
+    const at = {...root, x: 20, y};
+    y = below(y, rowsTall(root));
+    return at;
+  });
+  return {
+    world: JSON.stringify({blocks: {blocks: [world, ...beside]}}, null, 2),
+    actors: Object.fromEntries(
+      (actors ?? []).map(spec => [spec.id, actorFileOf(spec)]),
+    ),
+  };
 };

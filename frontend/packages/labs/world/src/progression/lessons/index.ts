@@ -44,7 +44,7 @@ import {
   addActor,
   anyKind,
   declareProperty,
-  local,
+  actorPath,
   placeAt,
   worldFile,
 } from './worlds';
@@ -61,7 +61,7 @@ const firstWorld: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
       actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
     }),
     sprites: ['player'],
@@ -71,17 +71,20 @@ const firstWorld: WorldScenario = {
 
 Press **Run**. There is a world, and there is one thing in it.
 
-Two blocks say all of it. **define world** is the world, and what is listed
-under it is what gets put in it. **define actor ⟨Hero⟩** says what a Hero *is* —
-here, one picture and nothing else.
+Two files say all of it, and they are the two tabs above the blocks.
+**define world**, in \`main.world\`, is the world, and what is listed under it
+is what gets put in it. **define actor ⟨Hero⟩**, in \`hero.actor\`, says what a
+Hero *is* — here, one picture and nothing else.
 
 Read them in that order and you have read the whole project.
 
 ### What you do
 
-1. Add a **second** \`define actor\`, and give it a name of its own.
-2. Give it a picture with **set sprite**.
-3. **add actor** it to the world, somewhere the Hero is not.
+1. **add actor** a second Hero to the world, somewhere the first is not.
+2. Run it. Two Heroes, from one \`define actor\`: the file says what a Hero is,
+   and the world says how many there are and where.
+3. Open the \`hero.actor\` tab and change its picture with **set sprite**. Run
+   it again — both change, because both are Heroes.
 `.trim(),
 };
 
@@ -93,7 +96,7 @@ const arrows: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
       actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
     }),
     sprites: ['player'],
@@ -110,7 +113,8 @@ says how many rules are in play; click it to see them.)
 
 ### What you do
 
-1. Add **use trait ⟨Moves Across⟩** under \`define actor ⟨Hero⟩\`.
+1. In the \`hero.actor\` tab, add **use trait ⟨Moves Across⟩** under
+   \`define actor ⟨Hero⟩\`.
 2. Run it. Left and right work; up and down do not.
 3. Add **Moves Down** as well, and now it walks in every direction — which is
    what a top-down game wants and a platformer does not.
@@ -126,7 +130,7 @@ const speed: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('hero'), [placeAt(40, 160)])],
+      rows: [addActor(actorPath('hero'), [placeAt(40, 160)])],
       actors: [
         {
           id: 'hero',
@@ -187,7 +191,8 @@ const speed: WorldScenario = {
 
 The Hero crosses the screen, and it does it the way everybody writes first:
 **every frame, put it two pixels further right**. Read the \`each frame\` under
-\`define actor ⟨Hero⟩\`, which is the whole of how it does it.
+\`define actor ⟨Hero⟩\`, in the \`hero.actor\` tab, which is the whole of how
+it does it.
 
 That works, and it is not how things move. It ties the speed to the frame rate,
 it cannot be pushed, and nothing else can affect it.
@@ -214,8 +219,8 @@ const gravity: WorldScenario = {
         // Directly above the ground, and that is not decoration: at x 160 and
         // 192 the two 32-pixel sprites overlap by nothing at all, and the Hero
         // falls past the corner of the floor. The lesson's check found it.
-        addActor(local('hero'), [placeAt(160, 40)]),
-        addActor(local('ground'), [placeAt(160, 272)]),
+        addActor(actorPath('hero'), [placeAt(160, 40)]),
+        addActor(actorPath('ground'), [placeAt(160, 272)]),
       ],
       actors: [
         {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
@@ -257,7 +262,7 @@ const sprite: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
       actors: [
         {
           id: 'hero',
@@ -275,13 +280,13 @@ const sprite: WorldScenario = {
   instructions: `
 ## A picture is a file
 
-The Hero is a gray box because that is what \`define actor ⟨Hero⟩\` says to
-draw. Nothing in this lab is built in: a picture is a **file** the project
-holds, and until it holds one there is nothing to draw but shapes.
+The Hero is a gray box because that is what \`hero.actor\` says to draw.
+Nothing in this lab is built in: a picture is a **file** the project holds,
+and until it holds one there is nothing to draw but shapes.
 
 This is the first lesson with a file browser down the left, and that is the
-lesson: the pictures are files like everything else, so they are in the list
-like everything else.
+lesson: the pictures are files like everything else — like the Hero, whose
+tab you have been opening — so they are in the list like everything else.
 
 ### What you do
 
@@ -300,12 +305,11 @@ like everything else.
 /**
  * `set fraction of ⟨this actor⟩ to ⟨n⟩` — the Bar's own number.
  *
- * The world's own `Bar` declares it with `define property`, so the block
- * carries the world and the block that defines the actor
- * (`blockly/ownProperties`) rather than a rule's name.
+ * The Bar declares it with `define property` in its own file, so the block
+ * carries that file (`ruleRegistry.pathSlug`) rather than a rule's name.
  */
 const setFraction = (value: number) => ({
-  type: 'world_set_WorldsMainBar_FractionProperty',
+  type: 'world_set_ActorsBar_FractionProperty',
   inputs: {ACTOR: me(), VALUE: num(value)},
 });
 
@@ -323,8 +327,8 @@ const drawing: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('bar'), [placeAt(160, 110), setFraction(1)]),
-        addActor(local('bar'), [placeAt(160, 210), setFraction(0.35)]),
+        addActor(actorPath('bar'), [placeAt(160, 110), setFraction(1)]),
+        addActor(actorPath('bar'), [placeAt(160, 210), setFraction(0.35)]),
       ],
       actors: [
         {
@@ -366,7 +370,7 @@ actor's own.
 ### What you do
 
 1. Find the second **draw rectangle** — the green one — under
-   \`define actor ⟨Bar⟩\`.
+   \`define actor ⟨Bar⟩\`, in the \`bar.actor\` tab.
 2. Put **96 × ⟨fraction of ⟨this actor⟩⟩** in its **size** where the 96 is.
 3. Run it. One Bar is full and one is a third full, from one drawing.
 4. Change the track color, or add an outline. It is your picture.
@@ -387,7 +391,7 @@ const background: WorldScenario = {
           type: 'world_set_background_color',
           inputs: {COLOR: swatch('#7ec8e3')},
         },
-        addActor(local('hero'), [placeAt(160, 200)]),
+        addActor(actorPath('hero'), [placeAt(160, 200)]),
       ],
       actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
     }),
@@ -423,7 +427,7 @@ const animation: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
       actors: [
         {
           id: 'hero',
@@ -450,8 +454,9 @@ image is a strip of frames; the animation says which part is which frame.
 
 ### What you do
 
-1. Add **play animation ⟨…⟩ on ⟨this actor⟩** under \`define actor ⟨Hero⟩\`, and
-   use the \`(import…)\` row on its dropdown to bring a walk cycle in.
+1. In \`hero.actor\`, add **play animation ⟨…⟩ on ⟨this actor⟩** under
+   \`define actor ⟨Hero⟩\`, and use the \`(import…)\` row on its dropdown to
+   bring a walk cycle in.
 2. Run it. The legs move.
 3. Open the animation and look at the frames — the image is one picture with
    the walk laid out across it, and the file is where each frame's rectangle
@@ -474,8 +479,8 @@ const effect: WorldScenario = {
           type: 'world_set_background_color',
           inputs: {COLOR: swatch('#1b2530')},
         },
-        addActor(local('hero'), [placeAt(120, 160)]),
-        addActor(local('coin'), [placeAt(220, 160)]),
+        addActor(actorPath('hero'), [placeAt(120, 160)]),
+        addActor(actorPath('coin'), [placeAt(220, 160)]),
       ],
       actors: [
         {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
@@ -496,8 +501,9 @@ the entire view.
 
 ### What you do
 
-1. Add **add effect ⟨…⟩ to ⟨this actor⟩** in \`define actor ⟨Coin⟩\`, and use the
-   \`(import…)\` row to bring one in from the library.
+1. In \`coin.actor\`, add **add effect ⟨…⟩ to ⟨this actor⟩** under
+   \`define actor ⟨Coin⟩\`, and use the \`(import…)\` row to bring one in from
+   the library.
 2. Run it. The Coin is painted through the recipe and the Hero is not — one
    effect, on one actor.
 3. Now add **add effect ⟨…⟩ to the world**. Everything goes through it, the
@@ -516,9 +522,9 @@ const position: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('marker'), [placeAt(160, 160)]),
-        addActor(local('marker'), [placeAt(160, 160)]),
-        addActor(local('marker'), [placeAt(160, 160)]),
+        addActor(actorPath('marker'), [placeAt(160, 160)]),
+        addActor(actorPath('marker'), [placeAt(160, 160)]),
+        addActor(actorPath('marker'), [placeAt(160, 160)]),
       ],
       // A POST, which is what a marker is. Drawn as a coin, three of them in a
       // heap read as treasure to collect rather than as places, and the whole
@@ -555,7 +561,7 @@ const press: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('hero'), [placeAt(160, 160)])],
+      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
       actors: [
         {
           id: 'hero',
@@ -602,7 +608,7 @@ const mouse: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('target'), [placeAt(160, 160)])],
+      rows: [addActor(actorPath('target'), [placeAt(160, 160)])],
       actors: [{id: 'target', name: 'Target', rows: [setSprite('coin.png')]}],
     }),
     sprites: ['coin'],
@@ -651,7 +657,7 @@ const twoHands: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('ship'), [placeAt(160, 160)])],
+      rows: [addActor(actorPath('ship'), [placeAt(160, 160)])],
       actors: [
         {
           id: 'ship',
@@ -734,7 +740,7 @@ const force: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('ball'), [placeAt(64, 160)])],
+      rows: [addActor(actorPath('ball'), [placeAt(64, 160)])],
       actors: [
         {
           id: 'ball',
@@ -780,7 +786,9 @@ const units: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('ball'), [placeAt(16, 160), setVelocity(60, 0)])],
+      rows: [
+        addActor(actorPath('ball'), [placeAt(16, 160), setVelocity(60, 0)]),
+      ],
       actors: [{id: 'ball', name: 'Ball', rows: BALL}],
     }),
     sprites: ['ball'],
@@ -814,7 +822,9 @@ const drag: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('ball'), [placeAt(24, 160), setVelocity(2.5, 0)])],
+      rows: [
+        addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(2.5, 0)]),
+      ],
       // The wrap is what makes the first line of the instructions true. A
       // speed is in units a second and a unit is a hundred pixels
       // (`motion/units`), so 2.5 crosses this 320-pixel world in a second and
@@ -865,8 +875,8 @@ const tween: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('door'), [placeAt(64, 160)]),
-        addActor(local('post'), [placeAt(256, 160)]),
+        addActor(actorPath('door'), [placeAt(64, 160)]),
+        addActor(actorPath('post'), [placeAt(256, 160)]),
       ],
       actors: [
         {id: 'door', name: 'Door', rows: [setSprite('door.png')]},
@@ -917,7 +927,9 @@ const conditional: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('ball'), [placeAt(24, 160), setVelocity(1.6, 0)])],
+      rows: [
+        addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
+      ],
       actors: [{id: 'ball', name: 'Ball', rows: BALL}],
     }),
     sprites: ['ball'],
@@ -953,8 +965,8 @@ const collision: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
-        addActor(local('wall'), [placeAt(272, 160)]),
+        addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
+        addActor(actorPath('wall'), [placeAt(272, 160)]),
       ],
       actors: [
         {
@@ -1003,8 +1015,8 @@ const andOr: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('ball'), [placeAt(24, 64), setVelocity(1.6, 0)]),
-        addActor(local('ball'), [placeAt(24, 240), setVelocity(1.6, 0)]),
+        addActor(actorPath('ball'), [placeAt(24, 64), setVelocity(1.6, 0)]),
+        addActor(actorPath('ball'), [placeAt(24, 240), setVelocity(1.6, 0)]),
       ],
       actors: [
         {
@@ -1072,7 +1084,8 @@ The world is 320 pixels down, so halfway down is 160.
 
 ### What you do
 
-1. Find the **if**, in the \`each frame\` under \`define actor ⟨Ball⟩\`.
+1. Find the **if**, in the \`each frame\` under \`define actor ⟨Ball⟩\` in the
+   \`ball.actor\` tab.
 2. Wrap its question in an **and**, and add a second question: is
    **⟨get position y of this actor⟩** greater than **160**?
 3. Run it. The low Ball stops in the middle; the high one carries on and leaves.
@@ -1083,7 +1096,7 @@ The world is 320 pixels down, so halfway down is 160.
 
 // ── logic/kinds ──────────────────────────────────────────────────────────────
 
-/** `when ⟨this actor⟩ starts touching ⟨any⟩`, as a root beside a `define actor`. */
+/** `when ⟨any Kind⟩ starts touching ⟨any⟩`, as a root of the world. */
 const onTouching = (actor: string, body: object) => ({
   type: 'world_on_Collisions_StartsTouchingEvent',
   fields: {FILTER0: ''},
@@ -1099,9 +1112,9 @@ const kinds: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
-        addActor(local('coin'), [placeAt(120, 160)]),
-        addActor(local('spike'), [placeAt(230, 160)]),
+        addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(1.6, 0)]),
+        addActor(actorPath('coin'), [placeAt(120, 160)]),
+        addActor(actorPath('spike'), [placeAt(230, 160)]),
       ],
       actors: [
         {
@@ -1178,10 +1191,10 @@ const map: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('hero'), [placeAt(48, 240)]),
+        addActor(actorPath('hero'), [placeAt(48, 240)]),
         // Three tiles, painted by hand and stopping short: the floor the Hero
         // is standing on runs out, and the lesson is the rest of it.
-        createInMap(local('ground'), [
+        createInMap(actorPath('ground'), [
           placed('floor0', 16, 304),
           placed('floor1', 48, 304),
           placed('floor2', 80, 304),
@@ -1211,8 +1224,8 @@ arrangement says where they are.
 1. Click the grid on the **create ⟨Ground⟩ in map** block. The map editor opens.
 2. Paint a floor along the bottom of the room, and walls up both sides.
 3. Run it. Every tile you painted is a Ground, and there is still one block.
-4. Paint some more, and run it again. You never touched \`define actor ⟨Ground⟩\`
-   — what a Ground is and where the Grounds are are two different questions.
+4. Paint some more, and run it again. You never opened \`ground.actor\` —
+   what a Ground is and where the Grounds are are two different questions.
 `.trim(),
 };
 
@@ -1236,8 +1249,8 @@ const camera: WorldScenario = {
       // one-screen world is a camera that cannot move.
       tiles: [30, 10],
       rows: [
-        createInMap(local('ground'), floorAcross(30)),
-        addActor(local('hero'), [placeAt(48, 272), setVelocity(6, 0)]),
+        createInMap(actorPath('ground'), floorAcross(30)),
+        addActor(actorPath('hero'), [placeAt(48, 272), setVelocity(6, 0)]),
       ],
       actors: [
         {
@@ -1311,8 +1324,8 @@ const cameraFeel: WorldScenario = {
       name: 'My World',
       tiles: [30, 10],
       rows: [
-        createInMap(local('ground'), floorAcross(30)),
-        addActor(local('hero'), [placeAt(160, 272)]),
+        createInMap(actorPath('ground'), floorAcross(30)),
+        addActor(actorPath('hero'), [placeAt(160, 272)]),
         chaseCamera('hero'),
         {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
       ],
@@ -1367,11 +1380,11 @@ Two traits change how it FEELS, and neither changes where it ends up.
 // ── place/layers ─────────────────────────────────────────────────────────────
 
 /**
- * Who owns the Score's four text properties: this world, plus the block that
- * defines it. A world's own actor cannot act like the Label FILE — this
- * project has none — so it declares them itself (`actors/stock/label`).
+ * Who owns the Score's four text properties: the Score's own file. It could
+ * act like the Label instead, but this project has no Label, so it declares
+ * them itself (`actors/stock/label`).
  */
-const SCORE_OWNER = 'WorldsMainScore';
+const SCORE_OWNER = 'ActorsScore';
 
 const layers: WorldScenario = {
   name: 'What is in front',
@@ -1382,18 +1395,18 @@ const layers: WorldScenario = {
       name: 'My World',
       tiles: [30, 10],
       rows: [
-        createInMap(local('ground'), floorAcross(30)),
+        createInMap(actorPath('ground'), floorAcross(30)),
         // Three hills, far apart, so the eye can see whether they keep up —
         // and standing ON the floor rather than above it: the tiles are centered
         // at 304 and are 32 tall, so 272 puts a hill's foot on the grass.
-        addActor(local('hill'), [placeAt(80, 272)]),
-        addActor(local('hill'), [placeAt(400, 272)]),
-        addActor(local('hill'), [placeAt(720, 272)]),
-        addActor(local('score'), [
+        addActor(actorPath('hill'), [placeAt(80, 272)]),
+        addActor(actorPath('hill'), [placeAt(400, 272)]),
+        addActor(actorPath('hill'), [placeAt(720, 272)]),
+        addActor(actorPath('score'), [
           placeAt(60, 30),
           setText('TextProperty', words('SCORE 0'), SCORE_OWNER),
         ]),
-        addActor(local('hero'), [placeAt(160, 272)]),
+        addActor(actorPath('hero'), [placeAt(160, 272)]),
         chaseCamera('hero'),
         {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
       ],
@@ -1465,8 +1478,8 @@ const jump: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), floorAcross(10)),
-        addActor(local('hero'), [placeAt(160, 272)]),
+        createInMap(actorPath('ground'), floorAcross(10)),
+        addActor(actorPath('hero'), [placeAt(160, 272)]),
       ],
       actors: [
         {
@@ -1543,7 +1556,7 @@ const jetpack: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), [
+        createInMap(actorPath('ground'), [
           ...floorAcross(10),
           // Six tiles up, which no jump in the lab reaches: the default
           // clears 139 pixels and this is 192 above the floor.
@@ -1551,7 +1564,7 @@ const jetpack: WorldScenario = {
             placed(`ledge${column}`, column * 32 + 16, 112),
           ),
         ]),
-        addActor(local('hero'), [placeAt(48, 272)]),
+        addActor(actorPath('hero'), [placeAt(48, 272)]),
       ],
       actors: [
         {
@@ -1633,12 +1646,12 @@ const ladders: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), floorAcross(10)),
+        createInMap(actorPath('ground'), floorAcross(10)),
         // The ledge is a ONE-WAY platform — `Acts as Ground` and not Solid,
         // which the lesson before this one built. It matters here for the
         // second half: you cannot climb down through something solid.
         createInMap(
-          local('ledge'),
+          actorPath('ledge'),
           [4, 5, 6, 7, 8, 9].map(column =>
             placed(`ledge${column}`, column * 32 + 16, 144),
           ),
@@ -1646,12 +1659,12 @@ const ladders: WorldScenario = {
         // …and the ladder, standing on the floor and reaching a rung above
         // the ledge, so that letting go at the top drops you on to it.
         createInMap(
-          local('ladder'),
+          actorPath('ladder'),
           [272, 240, 208, 176, 144, 112].map((y, index) =>
             placed(`rung${index}`, 144, y),
           ),
         ),
-        addActor(local('hero'), [placeAt(144, 272)]),
+        addActor(actorPath('hero'), [placeAt(144, 272)]),
       ],
       actors: [
         {
@@ -1756,7 +1769,7 @@ const surfaces: WorldScenario = {
       rows: [
         // The run the Hero walks: ordinary floor, then one stretch of each,
         // in the order the lesson asks about them.
-        createInMap(local('ground'), [
+        createInMap(actorPath('ground'), [
           ...[0, 1].map(column =>
             placed(`floor${column}`, column * 32 + 16, 304),
           ),
@@ -1765,24 +1778,24 @@ const surfaces: WorldScenario = {
           ),
         ]),
         createInMap(
-          local('belt'),
+          actorPath('belt'),
           [2, 3, 4].map(column =>
             placed(`belt${column}`, column * 32 + 16, 304),
           ),
         ),
         createInMap(
-          local('sludge'),
+          actorPath('sludge'),
           [5, 6].map(column =>
             placed(`sludge${column}`, column * 32 + 16, 304),
           ),
         ),
         createInMap(
-          local('ice'),
+          actorPath('ice'),
           [7, 8, 9, 10].map(column =>
             placed(`ice${column}`, column * 32 + 16, 304),
           ),
         ),
-        addActor(local('hero'), [placeAt(16, 272)]),
+        addActor(actorPath('hero'), [placeAt(16, 272)]),
       ],
       actors: [
         {
@@ -1887,7 +1900,7 @@ const pads: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), [
+        createInMap(actorPath('ground'), [
           ...floorAcross(10),
           // The wall, floor to ceiling. There is no way round it, which is
           // what makes the pads the only answer rather than the quick one.
@@ -1895,9 +1908,9 @@ const pads: WorldScenario = {
             placed(`wall${y}`, 160, y),
           ),
         ]),
-        addActor(local('here'), [placeAt(64, 288)]),
-        addActor(local('there'), [placeAt(272, 288)]),
-        addActor(local('hero'), [placeAt(48, 272)]),
+        addActor(actorPath('here'), [placeAt(64, 288)]),
+        addActor(actorPath('there'), [placeAt(272, 288)]),
+        addActor(actorPath('hero'), [placeAt(48, 272)]),
       ],
       actors: [
         {
@@ -2096,13 +2109,13 @@ const walls: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), floorAcross(10)),
+        createInMap(actorPath('ground'), floorAcross(10)),
         createInMap(
-          local('wall'),
+          actorPath('wall'),
           [176, 208, 240, 272].map(y => placed(`bar${y}`, 208, y)),
         ),
-        addActor(local('plate'), [placeAt(80, 288)]),
-        addActor(local('hero'), [placeAt(32, 272)]),
+        addActor(actorPath('plate'), [placeAt(80, 288)]),
+        addActor(actorPath('hero'), [placeAt(32, 272)]),
       ],
       actors: [
         {
@@ -2201,13 +2214,13 @@ const digging: WorldScenario = {
         // through — and a second one below to land on, so that falling is
         // arriving somewhere rather than leaving the world.
         createInMap(
-          local('soil'),
+          actorPath('soil'),
           [2, 3, 4, 5, 6, 7].map(column =>
             placed(`soil${column}`, column * 32 + 16, 272),
           ),
         ),
-        createInMap(local('ground'), floorAcross(10)),
-        addActor(local('hero'), [placeAt(112, 240)]),
+        createInMap(actorPath('ground'), floorAcross(10)),
+        addActor(actorPath('hero'), [placeAt(112, 240)]),
       ],
       actors: [
         {
@@ -2343,7 +2356,7 @@ const enemies: WorldScenario = {
       // clock and turning on a wall visibly differ.
       tiles: [14, 10],
       rows: [
-        createInMap(local('ground'), [
+        createInMap(actorPath('ground'), [
           ...floorAcross(14),
           // Walls at both ends, reaching DOWN TO THE FLOOR — a wall that
           // stops above the thing meant to hit it is a wall it rolls under,
@@ -2353,8 +2366,8 @@ const enemies: WorldScenario = {
             placed(`right${y}`, 432, y),
           ]),
         ]),
-        addActor(local('ball'), [placeAt(160, 272)]),
-        addActor(local('hero'), [placeAt(64, 272)]),
+        addActor(actorPath('ball'), [placeAt(160, 272)]),
+        addActor(actorPath('hero'), [placeAt(64, 272)]),
       ],
       actors: [
         {
@@ -2443,7 +2456,7 @@ const hunter: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), [
+        createInMap(actorPath('ground'), [
           ...floorAcross(10),
           // The upper floor, with the hole at the FAR END from where the
           // Robot and the Hero stand. That is the whole geometry of the
@@ -2461,24 +2474,14 @@ const hunter: WorldScenario = {
           ]),
         ]),
         createInMap(
-          local('ladder'),
+          actorPath('ladder'),
           [144, 176, 208, 240, 272].map((y, index) =>
             placed(`rung${index}`, 48, y),
           ),
         ),
-        addActor(local('robot'), [placeAt(256, 240)]),
-        addActor(local('hero'), [placeAt(256, 112)]),
+        addActor(actorPath('robot'), [placeAt(256, 240)]),
+        addActor(actorPath('hero'), [placeAt(256, 112)]),
       ],
-      // The keys that steer the climb — four moments, not a poll. The same
-      // blocks the sparkles write (`actors/enhance/climbArrows`): the rule
-      // owns climbing, the actor owns the controls. HATS, so they are roots of
-      // the world beside the definitions rather than rows inside one.
-      handlers: climbArrowsHandlers({
-        kind: 'actor',
-        path: 'worlds/main',
-        name: 'Hero',
-        block: 'hero',
-      }),
       actors: [
         {
           id: 'hero',
@@ -2490,6 +2493,15 @@ const hunter: WorldScenario = {
             useTrait('Climbing#ClimbsTrait'),
             setSprite('player.png'),
           ],
+          // The keys that steer the climb — four moments, not a poll. The
+          // same blocks the sparkles write (`actors/enhance/climbArrows`):
+          // the rule owns climbing, the actor owns the controls. HATS, so
+          // they are roots beside the definition rather than rows inside it.
+          handlers: climbArrowsHandlers({
+            kind: 'actor',
+            path: 'actors/hero',
+            name: 'Hero',
+          }),
         },
         {
           id: 'ground',
@@ -2627,7 +2639,7 @@ const flier: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), [
+        createInMap(actorPath('ground'), [
           ...floorAcross(10),
           // A ledge to stand on, high and to one side, so that the thing
           // below has somewhere to climb TO and something to be blocked by.
@@ -2635,8 +2647,8 @@ const flier: WorldScenario = {
             placed(`ledge${column}`, column * 32 + 16, 144),
           ),
         ]),
-        addActor(local('bat'), [placeAt(80, 240)]),
-        addActor(local('hero'), [placeAt(240, 112)]),
+        addActor(actorPath('bat'), [placeAt(80, 240)]),
+        addActor(actorPath('hero'), [placeAt(240, 112)]),
       ],
       actors: [
         {
@@ -2748,11 +2760,11 @@ const pickups: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), floorAcross(10)),
-        addActor(local('coin'), [placeAt(100, 272)]),
-        addActor(local('coin'), [placeAt(180, 272)]),
-        addActor(local('coin'), [placeAt(260, 272)]),
-        addActor(local('hero'), [placeAt(30, 272), setVelocity(3, 0)]),
+        createInMap(actorPath('ground'), floorAcross(10)),
+        addActor(actorPath('coin'), [placeAt(100, 272)]),
+        addActor(actorPath('coin'), [placeAt(180, 272)]),
+        addActor(actorPath('coin'), [placeAt(260, 272)]),
+        addActor(actorPath('hero'), [placeAt(30, 272), setVelocity(3, 0)]),
       ],
       actors: [
         {
@@ -2811,9 +2823,9 @@ const hazards: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), floorAcross(10)),
-        addActor(local('spike'), [placeAt(200, 272)]),
-        addActor(local('hero'), [placeAt(60, 272)]),
+        createInMap(actorPath('ground'), floorAcross(10)),
+        addActor(actorPath('spike'), [placeAt(200, 272)]),
+        addActor(actorPath('hero'), [placeAt(60, 272)]),
       ],
       actors: [
         {
@@ -2882,12 +2894,12 @@ const level: WorldScenario = {
       tiles: [20, 10],
       rows: [
         declareProperty('boolean', 'won', 'false'),
-        createInMap(local('ground'), floorAcross(20)),
-        addActor(local('coin'), [placeAt(150, 272)]),
-        addActor(local('coin'), [placeAt(250, 272)]),
-        addActor(local('spike'), [placeAt(360, 272)]),
-        addActor(local('flag'), [placeAt(560, 272)]),
-        addActor(local('hero'), [
+        createInMap(actorPath('ground'), floorAcross(20)),
+        addActor(actorPath('coin'), [placeAt(150, 272)]),
+        addActor(actorPath('coin'), [placeAt(250, 272)]),
+        addActor(actorPath('spike'), [placeAt(360, 272)]),
+        addActor(actorPath('flag'), [placeAt(560, 272)]),
+        addActor(actorPath('hero'), [
           placeAt(40, 272),
           {
             type: 'world_set_ArrowKeys_AcrossSpeedProperty',
@@ -3013,8 +3025,8 @@ const bounce: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('wall'), wallsRound()),
-        addActor(local('ball'), [placeAt(160, 160), setVelocity(4, 3)]),
+        createInMap(actorPath('wall'), wallsRound()),
+        addActor(actorPath('ball'), [placeAt(160, 160), setVelocity(4, 3)]),
       ],
       actors: [
         {
@@ -3082,7 +3094,7 @@ const paddle: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('paddle'), [placeAt(160, 280)])],
+      rows: [addActor(actorPath('paddle'), [placeAt(160, 280)])],
       actors: [
         {
           id: 'paddle',
@@ -3153,7 +3165,7 @@ number if the Paddle ever changes size. Or you could say what you actually mean.
 
 /** `add actor ⟨Energy Ball⟩ do ⟨put it above the Ship and send it up⟩`. */
 const sendOne = () =>
-  addActor(local('ball'), [
+  addActor(actorPath('ball'), [
     placeAt(160, 240),
     {
       type: 'world_set_Physics_VelocityProperty',
@@ -3170,7 +3182,7 @@ const zap: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('ship'), [placeAt(160, 280)])],
+      rows: [addActor(actorPath('ship'), [placeAt(160, 280)])],
       actors: [
         {
           id: 'ship',
@@ -3228,10 +3240,10 @@ const bricks: WorldScenario = {
       name: 'My World',
       rows: [
         declareProperty('boolean', 'cleared', 'false'),
-        addActor(local('brick'), [placeAt(120, 160)]),
-        addActor(local('brick'), [placeAt(200, 160)]),
-        addActor(local('brick'), [placeAt(280, 160)]),
-        addActor(local('ball'), [placeAt(30, 160), setVelocity(4, 0)]),
+        addActor(actorPath('brick'), [placeAt(120, 160)]),
+        addActor(actorPath('brick'), [placeAt(200, 160)]),
+        addActor(actorPath('brick'), [placeAt(280, 160)]),
+        addActor(actorPath('ball'), [placeAt(30, 160), setVelocity(4, 0)]),
       ],
       actors: [
         {
@@ -3309,7 +3321,9 @@ const waves: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('spawner'), [placeAt(160, 20), setPeriod(num(1))])],
+      rows: [
+        addActor(actorPath('spawner'), [placeAt(160, 20), setPeriod(num(1))]),
+      ],
       actors: [
         {
           id: 'spawner',
@@ -3332,7 +3346,7 @@ const waves: WorldScenario = {
           type: 'world_on_Time_TimerFiresEvent',
           inputs: {ACTOR: anyKind('spawner')},
           next: {
-            block: addActor(local('rock'), [
+            block: addActor(actorPath('rock'), [
               placeAt(160, 40),
               {
                 type: 'world_set_Physics_VelocityProperty',
@@ -3912,7 +3926,7 @@ const crowd: WorldScenario = {
     world: worldFile({
       name: 'My World',
       // One to look at before anybody clicks. The rest arrive by the handful.
-      rows: [addActor(local('wanderer'), [placeAt(160, 160), wander()])],
+      rows: [addActor(actorPath('wanderer'), [placeAt(160, 160), wander()])],
       actors: [
         {
           id: 'wanderer',
@@ -3930,7 +3944,7 @@ const crowd: WorldScenario = {
           type: 'world_on_Mouse_IsPressedEvent',
           fields: {FILTER0: 'left'},
           next: {
-            block: addActor(local('wanderer'), [
+            block: addActor(actorPath('wanderer'), [
               {
                 type: 'world_set_position',
                 inputs: {
@@ -3991,9 +4005,9 @@ const steering: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('player'), [placeAt(160, 160)]),
-        addActor(local('chaser'), [placeAt(40, 40)]),
-        addActor(local('fleer'), [placeAt(280, 280)]),
+        addActor(actorPath('player'), [placeAt(160, 160)]),
+        addActor(actorPath('chaser'), [placeAt(40, 40)]),
+        addActor(actorPath('fleer'), [placeAt(280, 280)]),
       ],
       actors: [
         {
@@ -4125,8 +4139,8 @@ const ruleProperty: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('leaf'), [placeAt(40, 100)]),
-        addActor(local('leaf'), [placeAt(40, 220)]),
+        addActor(actorPath('leaf'), [placeAt(40, 100)]),
+        addActor(actorPath('leaf'), [placeAt(40, 220)]),
       ],
       actors: [
         {
@@ -4182,8 +4196,8 @@ const grid: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('wall'), wallsRound()),
-        addActor(local('player'), [placeAt(144, 144)]),
+        createInMap(actorPath('wall'), wallsRound()),
+        addActor(actorPath('player'), [placeAt(144, 144)]),
       ],
       actors: [
         {
@@ -4248,9 +4262,9 @@ const push: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('wall'), wallsRound()),
-        addActor(local('crate'), [placeAt(144, 144)]),
-        addActor(local('player'), [placeAt(240, 144)]),
+        createInMap(actorPath('wall'), wallsRound()),
+        addActor(actorPath('crate'), [placeAt(144, 144)]),
+        addActor(actorPath('player'), [placeAt(240, 144)]),
       ],
       actors: [
         {
@@ -4316,7 +4330,7 @@ const people: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('villager'), [placeAt(80, 160)]),
+        addActor(actorPath('villager'), [placeAt(80, 160)]),
         addActor('actors/label', [
           placeAt(80, 136),
           setText('TextProperty', words('Mara')),
@@ -4377,11 +4391,11 @@ const errand: WorldScenario = {
             inputs: {ACTOR: me(), VALUE: num(0)},
           },
         ]),
-        addActor(local('token'), [placeAt(80, 200)]),
-        addActor(local('token'), [placeAt(140, 200)]),
-        addActor(local('token'), [placeAt(200, 200)]),
-        addActor(local('token'), [placeAt(260, 200)]),
-        addActor(local('hero'), [placeAt(30, 200)]),
+        addActor(actorPath('token'), [placeAt(80, 200)]),
+        addActor(actorPath('token'), [placeAt(140, 200)]),
+        addActor(actorPath('token'), [placeAt(200, 200)]),
+        addActor(actorPath('token'), [placeAt(260, 200)]),
+        addActor(actorPath('hero'), [placeAt(30, 200)]),
       ],
       actors: [
         {
@@ -4452,7 +4466,7 @@ const changeRule: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('guard'), [placeAt(160, 160)])],
+      rows: [addActor(actorPath('guard'), [placeAt(160, 160)])],
       actors: [
         {
           id: 'guard',
@@ -4558,8 +4572,8 @@ const ownTrait: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('leaf'), [placeAt(60, 100)]),
-        addActor(local('stone'), [placeAt(60, 220)]),
+        addActor(actorPath('leaf'), [placeAt(60, 100)]),
+        addActor(actorPath('stone'), [placeAt(60, 220)]),
       ],
       // Both wraps on both of them, so the weather is something a learner can
       // watch rather than something that has already happened. The drift is
@@ -4611,7 +4625,7 @@ other.
 1. In \`rules/weather.rule\`, add a second **define trait**, called **Sinks**.
 2. Give it \`use trait ⟨Positional⟩\` and an **each frame** that adds to the
    position's **y** rather than its **x**.
-3. In \`main.world\`, give the Stone **Sinks** instead of **Blown**.
+3. In \`stone.actor\`, give the Stone **Sinks** instead of **Blown**.
 4. Run it. One rule, two abilities, two kinds of thing — and neither trait
    mentions the other or the actors that took it.
 `.trim(),
@@ -4683,8 +4697,8 @@ const ownRule: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('fish'), [placeAt(100, 160)]),
-        addActor(local('bird'), [placeAt(220, 160)]),
+        addActor(actorPath('fish'), [placeAt(100, 160)]),
+        addActor(actorPath('bird'), [placeAt(220, 160)]),
       ],
       actors: [
         {
@@ -4704,9 +4718,10 @@ const ownRule: WorldScenario = {
   instructions: `
 ## Shared, without a copy
 
-A Fish and a Bird, both bobbing, and the bob is written twice — once in each
-\`define actor\`. Change your mind about how it should feel and you have two
-places to change, and a third the day something else bobs.
+A Fish and a Bird, both bobbing, and the bob is written twice — once in
+\`fish.actor\` and once in \`bird.actor\`. Change your mind about how it should
+feel and you have two files to change, and a third the day something else
+bobs.
 
 What both of them want is one copy, somewhere either can reach. That is what a
 **rule** is for: it offers a **trait**, and any actor that elects the trait does
@@ -4744,8 +4759,8 @@ const bigWorld: WorldScenario = {
           type: 'world_set_background_color',
           inputs: {COLOR: swatch('#101822')},
         },
-        createInMap(local('ground'), floorAcross(30)),
-        addActor(local('walker'), [placeAt(60, 272)]),
+        createInMap(actorPath('ground'), floorAcross(30)),
+        addActor(actorPath('walker'), [placeAt(60, 272)]),
       ],
       actors: [
         {
@@ -4800,8 +4815,8 @@ const readRule: WorldScenario = {
       name: 'My World',
       rows: [
         declareProperty('number', 'how hard it pulls', '0'),
-        createInMap(local('ground'), floorAcross(10)),
-        addActor(local('hero'), [placeAt(160, 40)]),
+        createInMap(actorPath('ground'), floorAcross(10)),
+        addActor(actorPath('hero'), [placeAt(160, 40)]),
       ],
       actors: [
         {
@@ -4947,8 +4962,8 @@ const ownBlock: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('cork'), [placeAt(100, 160)]),
-        addActor(local('buoy'), [placeAt(220, 160)]),
+        addActor(actorPath('cork'), [placeAt(100, 160)]),
+        addActor(actorPath('buoy'), [placeAt(220, 160)]),
       ],
       actors: [
         {
@@ -5003,9 +5018,9 @@ const movingGround: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('ground'), floorAcross(10)),
-        addActor(local('platform'), [placeAt(120, 200)]),
-        addActor(local('hero'), [placeAt(120, 168)]),
+        createInMap(actorPath('ground'), floorAcross(10)),
+        addActor(actorPath('platform'), [placeAt(120, 200)]),
+        addActor(actorPath('hero'), [placeAt(120, 168)]),
       ],
       actors: [
         {
@@ -5085,15 +5100,15 @@ const goal: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('wall'), wallsRound()),
+        createInMap(actorPath('wall'), wallsRound()),
         // Two tiles apart, not one: boxes are a tile square, so marks in
         // touching tiles are both touched by one crate — and a count that
         // reached two from one crate would win the puzzle on its own.
-        addActor(local('mark'), [placeAt(240, 144)]),
-        addActor(local('mark'), [placeAt(240, 208)]),
-        addActor(local('crate'), [placeAt(144, 144)]),
-        addActor(local('crate'), [placeAt(144, 208)]),
-        addActor(local('player'), [placeAt(80, 144)]),
+        addActor(actorPath('mark'), [placeAt(240, 144)]),
+        addActor(actorPath('mark'), [placeAt(240, 208)]),
+        addActor(actorPath('crate'), [placeAt(144, 144)]),
+        addActor(actorPath('crate'), [placeAt(144, 208)]),
+        addActor(actorPath('player'), [placeAt(80, 144)]),
         {
           type: 'world_set_Scoring_TargetScoreProperty',
           inputs: {VALUE: num(2)},
@@ -5281,10 +5296,10 @@ const keys: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('key'), [placeAt(40, 160)]),
-        addActor(local('player'), [placeAt(120, 160)]),
-        addActor(local('door'), [placeAt(216, 160)]),
-        addActor(local('door'), [placeAt(288, 160)]),
+        addActor(actorPath('key'), [placeAt(40, 160)]),
+        addActor(actorPath('player'), [placeAt(120, 160)]),
+        addActor(actorPath('door'), [placeAt(216, 160)]),
+        addActor(actorPath('door'), [placeAt(288, 160)]),
       ],
       actors: [
         {
@@ -5430,7 +5445,7 @@ const held = (name: string) => ({
 const flock = () =>
   Array.from({length: 12}, (_unused, index) => {
     const angle = (index * 30 * Math.PI) / 180;
-    return addActor(local('boid'), [
+    return addActor(actorPath('boid'), [
       placeAt(60 + (index % 4) * 70, 60 + Math.floor(index / 4) * 90),
       setVelocity(
         Number((0.6 * Math.cos(angle)).toFixed(3)),
@@ -5697,8 +5712,8 @@ const neighbors: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('dot'), dotGrid()),
-        addActor(local('walker'), [placeAt(10, 160), setVelocity(1, 0)]),
+        createInMap(actorPath('dot'), dotGrid()),
+        addActor(actorPath('walker'), [placeAt(10, 160), setVelocity(1, 0)]),
       ],
       actors: [
         {
@@ -5771,9 +5786,9 @@ const turns: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('wall'), wallsRound()),
-        addActor(local('enemy'), [placeAt(48, 240)]),
-        addActor(local('player'), [placeAt(80, 144)]),
+        createInMap(actorPath('wall'), wallsRound()),
+        addActor(actorPath('enemy'), [placeAt(48, 240)]),
+        addActor(actorPath('player'), [placeAt(80, 144)]),
       ],
       actors: [
         {
@@ -5862,13 +5877,13 @@ const undo: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(local('wall'), wallsRound()),
+        createInMap(actorPath('wall'), wallsRound()),
         // One row, and that is the whole puzzle: a crate is pushed and never
         // pulled, so a player on the left of it can only ever send it further
         // right. Past the Mark there is no way back except this lesson.
-        addActor(local('mark'), [placeAt(240, 176)]),
-        addActor(local('crate'), [placeAt(144, 176)]),
-        addActor(local('player'), [placeAt(80, 176)]),
+        addActor(actorPath('mark'), [placeAt(240, 176)]),
+        addActor(actorPath('crate'), [placeAt(144, 176)]),
+        addActor(actorPath('player'), [placeAt(80, 176)]),
       ],
       actors: [
         {
@@ -5944,7 +5959,9 @@ const edges: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(local('ball'), [placeAt(160, 160), setVelocity(3, 3)])],
+      rows: [
+        addActor(actorPath('ball'), [placeAt(160, 160), setVelocity(3, 3)]),
+      ],
       actors: [{id: 'ball', name: 'Ball', rows: BALL}],
     }),
     sprites: ['ball'],
@@ -5983,9 +6000,9 @@ const variable: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('post'), [placeAt(60, 160)]),
-        addActor(local('post'), [placeAt(160, 160)]),
-        addActor(local('post'), [placeAt(260, 160)]),
+        addActor(actorPath('post'), [placeAt(60, 160)]),
+        addActor(actorPath('post'), [placeAt(160, 160)]),
+        addActor(actorPath('post'), [placeAt(260, 160)]),
       ],
       actors: [{id: 'post', name: 'Post', rows: [setSprite('post.png')]}],
     }),
@@ -6020,12 +6037,12 @@ const many: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(local('coin'), [placeAt(60, 80)]),
-        addActor(local('coin'), [placeAt(160, 80)]),
-        addActor(local('coin'), [placeAt(260, 80)]),
-        addActor(local('coin'), [placeAt(60, 240)]),
-        addActor(local('coin'), [placeAt(160, 240)]),
-        addActor(local('coin'), [placeAt(260, 240)]),
+        addActor(actorPath('coin'), [placeAt(60, 80)]),
+        addActor(actorPath('coin'), [placeAt(160, 80)]),
+        addActor(actorPath('coin'), [placeAt(260, 80)]),
+        addActor(actorPath('coin'), [placeAt(60, 240)]),
+        addActor(actorPath('coin'), [placeAt(160, 240)]),
+        addActor(actorPath('coin'), [placeAt(260, 240)]),
       ],
       actors: [{id: 'coin', name: 'Coin', rows: [setSprite('box.png')]}],
     }),
@@ -6111,12 +6128,9 @@ const lampName = (number: object) => ({
 const worldsId = () => ({block: {type: 'world_get_WorldsMain_IdProperty'}});
 
 const actorState: WorldScenario = {
-  // THE FIRST LESSON WITH TWO FILES, and it is not a preference. A property a
-  // world's own `define actor` declares is a `const` inside that definition's
-  // block scope (`domainBlocks`, `world_actor`), so the actor's drawing can
-  // read it and the world's body cannot — which is the one thing this lesson
-  // has to do. The Lamp is a file here for the same reason the lesson exists.
-  levelData: {showFileBrowser: true},
+  // The Lamp is written out by hand rather than through the world spec's
+  // `actors`, because it acts like the Label and declares nothing of its own
+  // until the learner adds the property — which is the lesson.
   name: 'State an actor carries',
   description: 'Two Lamps that cannot tell each other apart.',
   source: lessonSource({
@@ -6158,16 +6172,14 @@ An actor's is the opposite on purpose: declared in the **actor's own file**,
 every Lamp gets its own copy, and that is what makes two of a kind two things
 rather than one thing drawn twice.
 
-So this is also the first lesson with a second file. Every one before it said
-everything it had to say in \`main.world\`. A world can describe an actor that
-remembers something — the same \`define property\` works there — but what it
-remembers belongs to the KIND rather than to this world's copy of it, and a
-kind written in a file of its own is one another world can use.
+The same \`define property\` block works in both places. Declared under
+\`define world\`, what it remembers is this world's; declared under
+\`define actor\`, it belongs to the KIND, and every copy the world places
+carries one of its own.
 
 ### What you do
 
-1. Open \`actors/lamp.actor\` — the file browser is on the left, and this is the
-   first lesson that has needed it. Under \`define actor\`, add
+1. Open the \`lamp.actor\` tab. Under \`define actor\`, add
    **define number id with default 1**.
 2. In \`main.world\`, in each \`add actor\` body, **set id of ⟨this actor⟩** —
    1 for the first, 2 for the second — before the text is set.
@@ -6261,7 +6273,7 @@ const scoreLesson: WorldScenario = {
       name: 'My World',
       rows: [
         declareProperty('number', 'counted', '0'),
-        addActor(local('target'), [placeAt(160, 160)]),
+        addActor(actorPath('target'), [placeAt(160, 160)]),
       ],
       actors: [{id: 'target', name: 'Target', rows: [setSprite('coin.png')]}],
       handlers: [
@@ -6318,13 +6330,13 @@ already in it.
 };
 
 /**
- * A lesson is ONE FILE unless it says otherwise.
+ * A lesson has NO FILE BROWSER unless it says otherwise.
  *
- * Every lesson written so far says everything it has to say in `main.world`:
- * the actors it asks the learner to change are defined there
- * (`worlds/defineActor`), and the rules and pictures it holds are files nobody
- * has to open. A sidebar listing eleven of them argues with that, and the first
- * thing it invites is the click that leaves the one file the lesson is about.
+ * The world and the actors it places are the files a lesson is about, and
+ * they are open as tabs (`support.lessonSource`). The rules and pictures it
+ * holds are files nobody has to open, and a sidebar listing eleven of them
+ * argues with a lesson about two: the first thing it invites is the click
+ * that leaves them.
  *
  * The files are still THERE and still compiled — what is gone is the list. The
  * ways in that belong to a lesson are still on the blocks: the open button beside `use

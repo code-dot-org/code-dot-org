@@ -95,6 +95,11 @@ export type RuleModule = Record<string, unknown>;
 export function evaluate(
   js: string,
   modules: Record<string, RuleModule>,
+  /**
+   * The object to export into, when the caller registered it beforehand so
+   * that a module evaluated earlier in a cycle can reach it (`compileProject`).
+   */
+  exports: RuleModule = {},
 ): RuleModule {
   const exported = [...js.matchAll(/^export const (\w+)/gm)].map(m => m[1]);
   const body = js
@@ -117,8 +122,15 @@ export function evaluate(
     .replace(
       /^import \{([^}]*)\} from ['"]([^'"]*)['"];$/gm,
       (_, names: string, from: string) =>
-        `const {${names.replace(/\b(\w+) as (\w+)\b/g, '$1: $2')}} = ` +
-        `__modules["${from}"];`,
+        names
+          .split(',')
+          .map(name => name.trim())
+          .filter(Boolean)
+          .map(name => {
+            const [theirs, ours = theirs] = name.split(/\s+as\s+/);
+            return `__bind(${JSON.stringify(ours)}, ${JSON.stringify(from)}, ${JSON.stringify(theirs)});`;
+          })
+          .join('\n'),
     )
     .replace(
       /^import (\w+) from ['"]([^'"]*)['"];$/gm,
@@ -139,12 +151,29 @@ export function evaluate(
   const collect = exported
     .map(name => `__exports.${name} = ${name};`)
     .join('\n');
+  // LIVE BINDINGS for what a module imports from another, which is what the
+  // real bundle gives them. An actor file that reads the world's own state
+  // imports `worlds/main`, and the world imports every actor it places: a
+  // cycle, and the actor is evaluated first. Destructured at that moment the
+  // import is `undefined` for good; read through a getter when a handler runs
+  // it is whatever the world exported. So each named import becomes a getter
+  // on a scope object, and the body runs inside `with` over it — the one
+  // construct that resolves an identifier late. `new Function` is sloppy
+  // mode, which `with` needs.
+  const imports: Record<string, unknown> = {};
+  const bind = (ours: string, from: string, theirs: string) =>
+    Object.defineProperty(imports, ours, {
+      get: () => modules[from]?.[theirs],
+      configurable: true,
+    });
   return new Function(
     'WorldLab',
     '__modules',
     '__exports',
-    `${body}\n${collect}\nreturn __exports;`,
-  )(WorldLab, modules, {}) as RuleModule;
+    '__imports',
+    '__bind',
+    `with (__imports) {\n${body}\n${collect}\n}\nreturn __exports;`,
+  )(WorldLab, modules, exports, imports, bind) as RuleModule;
 }
 
 /**
