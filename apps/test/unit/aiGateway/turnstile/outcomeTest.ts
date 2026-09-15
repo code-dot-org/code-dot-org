@@ -46,6 +46,14 @@ describe('classifyTurnstileFailure', () => {
     );
     expect(classifyTurnstileFailure('not an error')).toBe('unknown');
   });
+
+  // The skip is not a TurnstileChallengeError, so without this it classified as
+  // 'unknown' and hid inside the count of challenges that genuinely failed.
+  it('names the DevTools skip rather than folding it into unknown', () => {
+    expect(classifyTurnstileFailure(new TurnstileDevToolsError())).toBe(
+      'devtools_breakpoints'
+    );
+  });
 });
 
 describe('recordTurnstileOutcome', () => {
@@ -144,6 +152,29 @@ describe('recordTurnstileOutcome', () => {
     expect(loggerErrorMock).not.toHaveBeenCalled();
   });
 
+  // Only staff ever see this, and it reports a local choice rather than an
+  // incident, so it must stay out of the error stream once enforce is on.
+  it('keeps a DevTools skip at warn even under enforce', () => {
+    recordTurnstileOutcome({
+      acquisitionMode: 'on-demand',
+      enforcementMode: 'enforce',
+      durationMs: 5,
+      error: new TurnstileDevToolsError(),
+    });
+
+    expect(countMock).toHaveBeenCalledWith('ai-gateway.turnstile', 1, {
+      acquisition_mode: 'on-demand',
+      enforcement_mode: 'enforce',
+      result: 'error',
+      reason: 'devtools_breakpoints',
+    });
+    expect(loggerWarnMock).toHaveBeenCalledWith(
+      'turnstile challenge failed',
+      expect.objectContaining({reason: 'devtools_breakpoints'})
+    );
+    expect(loggerErrorMock).not.toHaveBeenCalled();
+  });
+
   it('records the duration for failures so timeouts are visible in p95', () => {
     recordTurnstileOutcome({
       acquisitionMode: 'on-demand',
@@ -207,6 +238,7 @@ describe('turnstileUserMessage', () => {
 
   it.each<TurnstileFailureReason>([
     'challenge_failed',
+    'devtools_breakpoints',
     'render_threw',
     'render_failed',
     'remove_failed',
