@@ -78,7 +78,7 @@ const Tag: FunctionComponent<TagProps> = props => {
     (children: ReactElement) =>
       tooltipContent && tooltipId ? (
         <Tooltip id={tooltipId} title={tooltipContent} placement="top">
-          <span className={moduleStyles.tooltipAnchor}>{children}</span>
+          <div className={moduleStyles.tooltipAnchor}>{children}</div>
         </Tooltip>
       ) : (
         children
