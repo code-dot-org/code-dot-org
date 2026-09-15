@@ -1,4 +1,4 @@
-import {isOnDefaultPack, MusicPackConfig} from '@cdo/apps/music/utils/pack';
+import {isOnDefaultPack, SavedMusicLabConfig} from '@cdo/apps/music/utils/pack';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {PLAY_MUSIC_BLOCK_TYPE} from './blockly/blockDefinitions/playMusic';
@@ -11,19 +11,34 @@ interface PersonalProject {
   name?: string;
   type?: string;
   updatedAt?: string;
-  labConfig?: MusicPackConfig;
+  labConfig?: SavedMusicLabConfig;
 }
 
 const MUSIC_PROJECT_TYPE = 'music';
 
+// The songs are the user's, so one fetch serves every level of a page
+// session. A failed fetch clears the cache so the next
+// level retries. A song made mid-session shows up on the next page load —
+// the per-level fetch this replaces was no fresher within a level.
+let cachedFetch: Promise<MusicProjectOption[]> | null = null;
+
 /** The user's Music Lab songs kept on the default sound pack, newest first. */
-export async function fetchMusicProjects(): Promise<MusicProjectOption[]> {
-  const {value} = await HttpClient.fetchJson<PersonalProject[]>(
-    '/api/v1/projects/personal'
-  );
-  return musicProjectOptions(value);
+export function fetchMusicProjects(): Promise<MusicProjectOption[]> {
+  if (!cachedFetch) {
+    cachedFetch = HttpClient.fetchJson<PersonalProject[]>(
+      '/api/v1/projects/personal'
+    ).then(
+      ({value}) => musicProjectOptions(value),
+      e => {
+        cachedFetch = null;
+        throw e;
+      }
+    );
+  }
+  return cachedFetch;
 }
 
+// Exported for tests.
 export function musicProjectOptions(
   projects: PersonalProject[],
   today = new Date()
