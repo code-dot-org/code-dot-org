@@ -6,8 +6,10 @@
 - if user_signed_in?
   - dimensions[age_dim] = current_user.age.to_s
   - dimensions[gender_dim] = current_user.gender
-  - dimensions[user_type_dim] = current_user.user_type
   - dimensions[has_teacher] = current_user.teachers.any? ? '1' : '0'
+-# age/gender/has_teacher have no cached-page fallback; user_type does (analytics_user_type).
+- user_type = analytics_user_type
+- dimensions[user_type_dim] = user_type if user_type.present?
 
 / GA4 measurement ID for code.org
 - google_measurement = {id: "G-L9HT5MZ3HD"}
