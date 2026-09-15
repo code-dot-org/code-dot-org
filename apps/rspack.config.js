@@ -768,6 +768,10 @@ function createRspackConfig({
           lazyCompilation: {
             imports: !process.env.RSPACK_NO_LAZY,
             entries: !!process.env.RSPACK_LAZY_ENTRIES,
+            // Without this the compile stub calls its own page's
+            // origin, so a page served straight from Rails asks Rails
+            // for the compile endpoint and every dynamic import 404s.
+            serverUrl: `http://localhost-studio.code.org:${DEV_SERVER_PORT}`,
           },
         }
       : {}),
@@ -786,6 +790,9 @@ function createRspackConfig({
             'localhost.codeprojects.org',
           ],
           client: {overlay: false},
+          // Lazy-compilation stubs on a Rails-served :3000 page call
+          // this server cross-origin (see serverUrl above).
+          headers: {'Access-Control-Allow-Origin': '*'},
           port: DEV_SERVER_PORT,
           proxy: [
             {
