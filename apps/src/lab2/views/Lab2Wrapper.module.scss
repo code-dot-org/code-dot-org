@@ -51,13 +51,15 @@
     z-index: 80;
   }
 
-  // Toasts anchor to this container, not the viewport, so they clear the page
-  // header without knowing its height (and sit at the top in share view, where
-  // the container starts at 0). Two class selectors to outrank MUI's own
-  // top-center placement, whose stylesheet order we don't control.
+  // Position the toast container at the top of the lab container.
   > .labToast {
     position: absolute;
     top: 8px;
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
   }
 
   .blockedProjectUIContainerProjectValidator {
