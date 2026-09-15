@@ -27,6 +27,7 @@ import {
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
 import {ImageSafetyError} from '../ai/images/imageSafety';
+import {defaultPixelGrid} from '../ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
@@ -78,6 +79,10 @@ const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
   background: 'e.g. a misty forest at sunrise',
   block: 'e.g. a mossy stone brick',
 };
+
+// The advanced form's pixel Resolution choices, as divisors of the type's
+// default grid (64/32/16 for a sprite, 128/64/32 for a background).
+const PIXEL_SCALES = [1, 2, 4];
 
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
@@ -164,15 +169,24 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
   const [name, setName] = useState(create?.initial?.name || '');
-  const [imageType, setImageType] = useState<ImageType>(
+  const initialImageType =
     existing?.imageType ||
-      lockedImageType ||
-      create?.initial?.imageType ||
-      'sprite'
-  );
+    lockedImageType ||
+    create?.initial?.imageType ||
+    'sprite';
+  const [imageType, setImageType] = useState<ImageType>(initialImageType);
   const [style, setStyle] = useState<ImageStyle>(
     existing?.generation?.style || create?.initial?.style || 'smooth'
   );
+  // Advanced-only pixel resolution choice, held as a divisor of the type's
+  // default grid so it keeps meaning across a Type switch. Seeded from the
+  // recorded grid: a seed replay must ask for the grid it recorded, or the
+  // same seed draws a different image.
+  const [pixelScale, setPixelScale] = useState(() => {
+    const recorded = existing?.generation?.pixelGrid;
+    const scale = recorded && defaultPixelGrid(initialImageType) / recorded;
+    return scale && PIXEL_SCALES.includes(scale) ? scale : 1;
+  });
   // Calm when the set checkbox starts checked (posed frames must agree
   // with the base), as checking it by hand also sets.
   const [temperatureLevel, setTemperatureLevel] = useState(
@@ -244,6 +258,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         style,
         temperature: levelToTemperature(temperatureLevel),
       };
+      if (style === 'pixel') {
+        options.pixelGrid = defaultPixelGrid(imageType) / pixelScale;
+      }
       if (source === 'seed' && canUseSeed) {
         options.seed = existing?.generation?.seed;
       }
@@ -257,7 +274,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       if (makingSet) {
         const result = await generateCharacterSet(
           prompt.trim(),
-          {style, temperature: options.temperature},
+          {
+            style,
+            temperature: options.temperature,
+            pixelGrid: options.pixelGrid,
+          },
           p => {
             if (epoch === progressEpochRef.current) {
               setProgress(p);
@@ -294,6 +315,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     prompt,
     imageType,
     style,
+    pixelScale,
     temperatureLevel,
     source,
     existing,
@@ -449,6 +471,32 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                   />
                 ))}
               </fieldset>
+              {/* Internal knob: ask the model for a coarser grid than the
+                  type's default, to survey what it returns at lower asks. */}
+              {advanced && style === 'pixel' && (
+                <fieldset
+                  className={moduleStyles.radioGroup}
+                  disabled={generating}
+                >
+                  <legend>Resolution</legend>
+                  {PIXEL_SCALES.map(scale => {
+                    const grid = defaultPixelGrid(imageType) / scale;
+                    return (
+                      <RadioButton
+                        key={scale}
+                        name="generation-pixel-grid"
+                        value={String(scale)}
+                        label={`${grid} × ${grid}${
+                          scale === 1 ? ' (default)' : ''
+                        }`}
+                        size="s"
+                        checked={pixelScale === scale}
+                        onChange={() => setPixelScale(scale)}
+                      />
+                    );
+                  })}
+                </fieldset>
+              )}
             </div>
           </div>
 
