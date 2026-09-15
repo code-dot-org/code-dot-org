@@ -309,6 +309,10 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     source: interfaceKit(buildProject(EMPTY_SPEC).source),
     instructions:
       '## The interface kit\n\nType your name and press the button.\n\n' +
+      '- The screen is a MAP. Open `maps/interface.map` and the title, the ' +
+      'field, the button, the bar and the box are placements on a ' +
+      'phone-shaped canvas; the words on the title and the button are ' +
+      'property overrides on their placements, in the inspector\n' +
       '- Click the FIELD before you type. Any click lets every field go and ' +
       'the one clicked on takes over, which is how two of them on a screen ' +
       'stay apart — and it is the Mouse rule doing it, not the field\n' +

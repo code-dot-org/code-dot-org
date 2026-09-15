@@ -23,6 +23,15 @@
 // brings rules, and one brings another actor; hand-listing them is a list to
 // forget, and `importStockActor` already walks both (`actors/importStockActor`).
 //
+// THE SCREEN IS A MAP. The five actors were `add actor` rows under the world,
+// each placing itself with `set position`, and the world now says `load map`
+// and `maps/interface.map` holds where each one is and what it says. That is
+// the claim specs/UI_ACTORS.md makes about the map editor — that arranging a
+// HUD is arranging actors, on the same canvas, with the same inspector — and
+// this fixture is where the claim gets tried: open the map and the words on
+// the title, the button's caption and the bar's empty start are each a
+// property override on a placement, editable where the placement is.
+//
 // ON A PHONE-SHAPED SCREEN. An interface is the one kind of world whose
 // shape is not a level's, and a form on a square window looks like a game
 // with a form in it. The world says `set size of view` (specs/VIEWPORT.md)
@@ -41,29 +50,32 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
+import {TILE_SIZE} from '../runtime/viewport';
 
 /** `any ⟨kind⟩` — how a world names the actor a handler is about. */
 const kind = (path: string) => ({
   block: {type: 'world_actor_kind', fields: {ACTOR: path}},
 });
-const me = () => ({block: {type: 'world_this_actor'}});
 const number = (value: number) => ({
   block: {type: 'math_number', fields: {NUM: value}},
 });
-const words = (text: string) => ({
-  block: {type: 'text', fields: {TEXT: text}},
-});
 
-/** `set position of ⟨this actor⟩ to ⟨x, y⟩`. */
-const placeAt = (x: number, y: number) => ({
-  type: 'world_set_position',
-  inputs: {ACTOR: me(), X: number(x), Y: number(y)},
-});
-
-/** `set ⟨what⟩ of ⟨this actor⟩ to ⟨value⟩`, for one of the Label's four. */
-const setText = (exportName: string, value: object) => ({
-  type: `world_set_ActorsLabel_${exportName}`,
-  inputs: {ACTOR: me(), VALUE: value},
+/**
+ * One placement on the map: a kind, a name, its centre in pixels, and the
+ * properties it overrides — keyed the way the engine keys them, by the
+ * declaring kind's id and then the property's (`World.loadMap`). A Button's
+ * `text` is the LABEL's, because that is where `acts like` found it.
+ */
+const place = (
+  type: string,
+  id: string,
+  x: number,
+  y: number,
+  overrides: Record<string, Record<string, unknown>> = {},
+) => ({
+  type,
+  id,
+  properties: {positional: {position: {x, y}}, ...overrides},
 });
 
 /** `⟨text⟩ of ⟨any ⟨Text Input⟩⟩` — what has been typed into the field. */
@@ -74,19 +86,37 @@ const typedIn = () => ({
   },
 });
 
-/** `add actor ⟨path⟩ do ⟨rows⟩`. */
-const add = (path: string, rows: object[]) => ({
-  type: 'world_add_actor',
-  fields: {ACTOR: path},
-  inputs: {
-    DO: {
-      block: rows.reduceRight((next, row) => ({...row, next: {block: next}})),
-    },
-  },
-});
-
 /** The screen, in tiles: the standard width, and a phone's height. */
 export const PORTRAIT = {columns: 10, rows: 18};
+
+/** The screen, as the map editor sees it: five placements, top to bottom. */
+const INTERFACE_MAP = JSON.stringify(
+  {
+    type: 'map',
+    size: {width: PORTRAIT.columns, height: PORTRAIT.rows},
+    tile: {width: TILE_SIZE, height: TILE_SIZE},
+    actors: [
+      // A title, which is a Label doing the one thing a Label does.
+      place('actors/label', 'Title', 160, 30, {
+        Label: {text: 'WHAT IS YOUR NAME?'},
+      }),
+      // The field. Click it and type.
+      place('actors/textInput', 'Name', 160, 80),
+      // A button that answers the field.
+      place('actors/button', 'Hello', 160, 130, {Label: {text: 'SAY HELLO'}}),
+      // How full the field is, as a bar — empty until something is typed.
+      place('actors/progressBar', 'Bar', 160, 168, {
+        Progress_Bar: {fraction: 0},
+      }),
+      // …and the box that says the answer, a letter at a time. At the foot
+      // of the screen, where a phone keeps its replies; the form stays at
+      // the top, where the test's clicks land.
+      place('actors/speechBox', 'Reply', 160, 500),
+    ],
+  },
+  null,
+  2,
+);
 
 /** `set size of ⟨map|view⟩ to x ⟨columns⟩ y ⟨rows⟩ tiles`. */
 const sized = (what: 'map' | 'view') => ({
@@ -109,34 +139,13 @@ const MAIN_WORLD = JSON.stringify(
           fields: {NAME: 'Interface'},
           next: {
             block: chain([
-              // The screen's shape, first, so the rows below are placed
-              // on the window they are seen through.
+              // The screen's shape, first, so the map is placed on the
+              // window it is seen through. The map file says the same size;
+              // the world saying it too is what a world with no map would
+              // say, and it costs one row.
               sized('view'),
               sized('map'),
-              // A title, which is a Label doing the one thing a Label does.
-              add('actors/label', [
-                placeAt(160, 30),
-                setText('TextProperty', words('WHAT IS YOUR NAME?')),
-              ]),
-              // The field. Click it and type.
-              add('actors/textInput', [placeAt(160, 80)]),
-              // A button that answers the field.
-              add('actors/button', [
-                placeAt(160, 130),
-                setText('TextProperty', words('SAY HELLO')),
-              ]),
-              // How full the field is, as a bar.
-              add('actors/progressBar', [
-                placeAt(160, 168),
-                {
-                  type: 'world_set_ActorsProgressBar_FractionProperty',
-                  inputs: {ACTOR: me(), VALUE: number(0)},
-                },
-              ]),
-              // …and the box that says the answer, a letter at a time.
-              // At the foot of the screen, where a phone keeps its replies;
-              // the form stays at the top, where the test's clicks land.
-              add('actors/speechBox', [placeAt(160, 500)]),
+              {type: 'world_load_map', fields: {MAP: 'maps/interface'}},
             ]),
           },
         },
@@ -221,10 +230,23 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
   const main = Object.values(source.files).find(
     file => file.name === 'main.world',
   );
+  const maps = Object.values(source.folders).find(
+    folder => folder.name === 'maps' && folder.parentId === '0',
+  );
   return main
     ? {
         ...source,
-        files: {...source.files, [main.id]: {...main, contents: MAIN_WORLD}},
+        files: {
+          ...source.files,
+          [main.id]: {...main, contents: MAIN_WORLD},
+          interfaceMap: {
+            id: 'interfaceMap',
+            name: 'interface.map',
+            language: 'map',
+            contents: INTERFACE_MAP,
+            folderId: maps?.id ?? '0',
+          },
+        },
       }
     : source;
 };
