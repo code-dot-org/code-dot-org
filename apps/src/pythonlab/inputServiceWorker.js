@@ -34,6 +34,11 @@ addEventListener('message', event => {
     }
 
     const resolver = resolverArray.shift(); // Take the first promise in the array
+    // This map outlives the page that filled it, so an id with nothing left
+    // waiting on it is dropped rather than kept as an empty array forever.
+    if (resolverArray.length === 0) {
+      resolvers.delete(event.data.id);
+    }
     resolver(new Response(event.data.value, {status: 200}));
   }
 });

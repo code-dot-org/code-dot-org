@@ -73,6 +73,14 @@ export const theaterBridgeModule = {
   },
 };
 
+// The service worker keys parked requests by id, and that map outlives any one
+// run: it belongs to the service worker, which survives reloads and worker
+// restarts. A plain counter restarts at 1 with each new worker and so collides
+// with ids a previous run left behind -- and since the worker answers the
+// oldest request holding an id, the collision hands a press to a dead request
+// and parks the live one forever. The random prefix, minted once per worker,
+// is what keeps ids unique across runs.
+const kioskEventPrefix = `kiosk-${Math.random().toString(36).slice(2, 10)}`;
 let kioskEventId = 0;
 
 // The kiosk package's link to the page, in both directions: it publishes the
@@ -92,11 +100,8 @@ export const kioskBridgeModule = {
   // echoes it back untouched.
   waitForEvent: () => {
     const request = new XMLHttpRequest();
-    request.open(
-      'GET',
-      `${SERVICE_WORKER_PATH}?id=kiosk-${++kioskEventId}&prompt=`,
-      false
-    );
+    const eventId = `${kioskEventPrefix}-${++kioskEventId}`;
+    request.open('GET', `${SERVICE_WORKER_PATH}?id=${eventId}&prompt=`, false);
     request.send(null);
     if (request.status !== 200) {
       throw new Error(MessageTag.INPUT_FAILED);
