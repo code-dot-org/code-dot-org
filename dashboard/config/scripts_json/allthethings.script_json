@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-02 20:18:32 UTC",
+    "serialized_at": "2026-09-15 21:41:27 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -952,6 +952,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-62",
+      "name": "Quiz",
+      "absolute_position": 62,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 59,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-62",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1732,6 +1747,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "34827a8c-b3e6-443b-8b48-ebc1b4edd68e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "34827a8c-b3e6-443b-8b48-ebc1b4edd68e",
+        "lesson.key": "lesson-62",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2343,6 +2370,16 @@
       "seeding_key": {
         "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33",
         "lesson_activity.key": "bfcb92a8-3b82-4295-a42f-5b5e1e14432b"
+      }
+    },
+    {
+      "key": "cd9ce499-9d29-4e05-a0da-683a036e7b99",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cd9ce499-9d29-4e05-a0da-683a036e7b99",
+        "lesson_activity.key": "34827a8c-b3e6-443b-8b48-ebc1b4edd68e"
       }
     }
   ],
@@ -8499,6 +8536,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Quiz Lab2 Showcase"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -9088,6 +9128,27 @@
       },
       "level_keys": [
         "Choice Progression Ending"
+      ]
+    },
+    {
+      "chapter": 279,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Quiz 1"
+        ],
+        "lesson.key": "lesson-62",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "cd9ce499-9d29-4e05-a0da-683a036e7b99"
+      },
+      "level_keys": [
+        "Allthethings Quiz 1"
       ]
     }
   ],
@@ -12552,6 +12613,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "7d3e596e-80eb-4835-91c9-27bbb5213c33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Quiz 1",
+        "script_level.level_keys": [
+          "Allthethings Quiz 1"
+        ],
+        "lesson.key": "lesson-62",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "cd9ce499-9d29-4e05-a0da-683a036e7b99"
       }
     }
   ],
