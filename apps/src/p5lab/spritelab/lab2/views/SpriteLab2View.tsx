@@ -9,7 +9,7 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
@@ -204,13 +204,13 @@ const GAME_KEYS = new Set([
 const isLevelEditMode =
   !!getAppOptionsEditBlocks() || !!getAppOptionsEditingExemplar();
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-// The edit modes that open non-project sources. Narrower than isLevelEditMode
-// deliberately: the other edit_blocks types open the student's own project,
-// where treating a reset as authoring would wipe their images.
-const isStartOverEditMode =
-  getAppOptionsEditBlocks() === START_SOURCES ||
-  isToolboxMode ||
-  !!getAppOptionsEditingExemplar();
+
+// Start Over empties the project, images included, so the dialog says so
+// rather than naming only the blocks. One project carries a whole unit's
+// images, and this is the only way a student can clear them.
+const START_OVER_MESSAGE =
+  "This will remove the blocks you've added and delete all of the images " +
+  "you've made. You can't undo this.";
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
@@ -687,29 +687,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, []);
 
   // Reseed the animation list when sources are reinitialized (e.g. start over).
-  // Start Over keeps the project's images: template sources carry none, and
-  // one project accumulates images across a unit's levels. Edit modes do
-  // reset them, authoring starter content being the point there.
+  // The sources reset to the level's template, which carries no animations,
+  // so the images go with the blocks.
   const seededReinitCountRef = useRef(0);
   useEffect(() => {
     if (sourcesReinitializedCount === seededReinitCountRef.current) {
       return;
     }
     seededReinitCountRef.current = sourcesReinitializedCount;
-    if (isStartOverEditMode) {
-      seedAnimationList(currentSources.animations);
-    } else {
-      // Forced: an unforced save can sit in the project manager's queue for
-      // 30s, and the image-less template is already saved.
-      patchSources(
-        {
-          animations: getSerializedAnimationList(
-            getStore().getState().animationList
-          ),
-        },
-        true
-      );
-    }
+    seedAnimationList(currentSources.animations);
     // The stage's scene belongs to the pre-reset sources; restart-scene
     // falls back to the first scene.
     currentPlayingRef.current = null;
@@ -718,7 +704,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
     currentSources.animations,
     seedAnimationList,
-    patchSources,
     rerunWhenAnimationsLoaded,
   ]);
 
@@ -1559,7 +1544,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             setShowStartOver(false);
           }}
           onCancel={() => setShowStartOver(false)}
-          type="blocks"
+          type="custom"
+          message={START_OVER_MESSAGE}
         />
       )}
       <ResourcePanel
