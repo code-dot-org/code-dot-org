@@ -1,12 +1,12 @@
+import classNames from 'classnames';
+import {FC, useEffect, useRef, useState} from 'react';
+
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useApiClient} from '@code-dot-org/core/api';
-import {
-  addReaction,
-  Reaction,
-  removeReaction,
-} from '@code-dot-org/lesson-deep-dive';
-import classNames from 'classnames';
-import React, {FC, useEffect, useRef, useState} from 'react';
+
+import {type Reaction} from '../types';
+
+import {addReaction, removeReaction} from './api';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -55,7 +55,7 @@ const orderIndex = (emoji: string) => {
 const applyToggle = (
   reactions: Reaction[],
   emoji: string,
-  reacted: boolean
+  reacted: boolean,
 ): Reaction[] => {
   const existing = reactions.find(r => r.emoji === emoji);
   const delta = reacted ? 1 : -1;
@@ -119,7 +119,6 @@ const ReactionChips: FC<ReactionChipsProps> = ({
   // response are preserved.
   useEffect(() => {
     setItems(reactions);
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- reseed on id, not on every new array identity
   }, [responseId]);
 
   // Close the picker on an outside click or Escape.
@@ -168,7 +167,7 @@ const ReactionChips: FC<ReactionChipsProps> = ({
           const next = new Set(prev);
           next.delete(emoji);
           return next;
-        })
+        }),
       );
   };
 
@@ -194,7 +193,7 @@ const ReactionChips: FC<ReactionChipsProps> = ({
             aria-label={chipLabel(reaction)}
             className={classNames(
               styles.chip,
-              reaction.reacted && styles.chipSelected
+              reaction.reacted && styles.chipSelected,
             )}
           >
             <span aria-hidden="true">{glyphFor(reaction.emoji)}</span>
@@ -250,7 +249,7 @@ const ReactionChips: FC<ReactionChipsProps> = ({
           className={classNames(
             styles.chip,
             styles.chipInteractive,
-            reaction.reacted && styles.chipSelected
+            reaction.reacted && styles.chipSelected,
           )}
           aria-pressed={reaction.reacted}
           aria-label={chipLabel(reaction)}

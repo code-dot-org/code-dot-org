@@ -1,11 +1,10 @@
-import {ChallengeResponseDetail} from '@code-dot-org/lesson-deep-dive';
 import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {vi} from 'vitest';
 
-import ProjectDetailsCard from '@cdo/apps/aiTutor/views/gallery/ProjectDetailsCard';
+import ProjectDetailsCard from '../ProjectDetailsCard';
+import {type ChallengeResponseDetail} from '../types';
 
-jest.mock('@code-dot-org/core/api', () => {
+vi.mock('@code-dot-org/core/api', () => {
   const client = {transport: {}};
   return {useApiClient: () => client};
 });
@@ -53,18 +52,18 @@ describe('ProjectDetailsCard', () => {
           ],
         }}
         unitPosition={1}
-      />
+      />,
     );
 
     expect(screen.getByText('Unit 1, Lesson 3')).toBeInTheDocument();
     expect(
       ['Whiteboard', 'Audio', 'Text'].map(
-        label => screen.getByText(label).textContent
-      )
+        label => screen.getByText(label).textContent,
+      ),
     ).toEqual(['Whiteboard', 'Audio', 'Text']);
     expect(screen.getByText('Grace Hopper')).toBeInTheDocument();
     expect(
-      screen.getByText('Project Prompt: Draw a network.')
+      screen.getByText('Project Prompt: Draw a network.'),
     ).toBeInTheDocument();
   });
 
@@ -82,7 +81,7 @@ describe('ProjectDetailsCard', () => {
           ],
         }}
         unitPosition={1}
-      />
+      />,
     );
 
     expect(screen.getByText('Video Story')).toBeInTheDocument();
