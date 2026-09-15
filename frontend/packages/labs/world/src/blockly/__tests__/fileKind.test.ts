@@ -51,8 +51,7 @@ describe('fileKindOf', () => {
 describe('which definition roots a file may hold', () => {
   it('offers `define actor` to an actor file alone', () => {
     // Every actor is a file. A world once held its own; nothing offers one
-    // there now. One that reaches a world anyway — from a file edited by hand,
-    // since a paste cannot cross tabs — compiles to a builder nothing places.
+    // there now, and one that reaches a world anyway is refused (below).
     expect(offeredTypes('actor')).toContain('world_actor');
     expect(offeredTypes('world')).not.toContain('world_actor');
     expect(offeredTypes('rule')).not.toContain('world_actor');
@@ -163,9 +162,11 @@ describe('which definition roots a file may hold', () => {
 
 describe('what a file compiles to', () => {
   it('is decided by the extension, not by the blocks', () => {
-    // The whole point: a `define world` block does not make the file a world.
+    // The whole point: the blocks do not make the file what it is, its name
+    // does — and a root that disagrees with the name is refused (below),
+    // never allowed to redirect it.
     expect(moduleShape('player.actor', ['world_actor'])).toBe('actor');
-    expect(moduleShape('one.world', ['world_actor'])).toBe('world');
+    expect(moduleShape('one.world', ['world_world'])).toBe('world');
     expect(moduleShape('rules/g.rule', ['world_rule'])).toBe('rule');
   });
 
@@ -192,6 +193,16 @@ describe('what a file compiles to', () => {
       /can only be in a \.rule file, and this is a \.actor/,
     );
     expect(() => moduleShape('one.world', ['world_rule'])).toThrow();
+  });
+
+  it('refuses a `define actor` outside an actor file', () => {
+    // As invalid in a world as a `define rule` is, and refused the same way:
+    // a world once held its own actors, and does not now.
+    expect(() => moduleShape('one.world', ['world_actor'])).toThrow(
+      /can only be in a \.actor file, and this is a \.world/,
+    );
+    expect(() => moduleShape('rules/g.rule', ['world_actor'])).toThrow();
+    expect(() => moduleShape('player.actor', ['world_actor'])).not.toThrow();
   });
 
   it('names the file in the error, since a project has many', () => {

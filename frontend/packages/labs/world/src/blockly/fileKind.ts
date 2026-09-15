@@ -93,11 +93,19 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
 ]);
 
 /**
- * How a root out of place READS, for the error. Only the two that shape the
- * module have one, because only those are worth stopping the project over.
+ * The roots that DEFINE what a file is, and how each reads in the error.
+ *
+ * One in the wrong kind of file is refused rather than compiled: a `define
+ * rule` in a world is not a world with something extra in it, it is a file
+ * that cannot be what its name says. `define actor` joined the list when
+ * every actor became a file — until then a world could hold one, and before
+ * that "actor" was the shape a file fell back to, so it never had a wrong
+ * home to be refused in. The rest of the definition blocks are inert out of
+ * place and stay that way (`ROOT_HOMES`).
  */
-const SHAPING_ROOTS: ReadonlyMap<string, string> = new Map([
+const DEFINING_ROOTS: ReadonlyMap<string, string> = new Map([
   ['world_world', 'define world'],
+  ['world_actor', 'define actor'],
   ['world_rule', 'define rule'],
 ]);
 
@@ -115,15 +123,15 @@ export type ModuleShape = FileKind;
  * actor, which is nowhere near the mistake, and reads as the world being
  * broken rather than one block being in the wrong file.
  *
- * So the file's extension decides, and a shaping root that disagrees with it is
- * an error rather than a redirection. A `.world` still assembles as a world
+ * So the file's extension decides, and a defining root that disagrees with it
+ * is an error rather than a redirection. A `.world` still assembles as a world
  * with no root yet — a half-built one is missing it, and compiling that as an
  * actor reports the wrong problem.
  *
  * With no path there is nothing better to go on than the blocks, so the old
  * sniffing stands in and nothing is refused.
  *
- * @throws if a shaping root is in a file whose kind is not its home.
+ * @throws if a defining root is in a file whose kind is not its home.
  */
 export function moduleShape(
   path: string | undefined,
@@ -137,7 +145,7 @@ export function moduleShape(
     return topBlockTypes.includes('world_world') ? 'world' : 'actor';
   }
   for (const type of topBlockTypes) {
-    const says = SHAPING_ROOTS.get(type);
+    const says = DEFINING_ROOTS.get(type);
     if (says && !ROOT_HOMES.get(type)?.has(kind)) {
       const home = [...(ROOT_HOMES.get(type) ?? [])][0];
       throw new Error(
