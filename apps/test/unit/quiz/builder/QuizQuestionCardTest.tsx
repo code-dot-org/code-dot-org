@@ -1,6 +1,6 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import React from 'react';
+import React, {useState} from 'react';
 
 import QuizQuestionCard from '@cdo/apps/quiz/builder/QuizQuestionCard';
 import {QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
@@ -22,19 +22,28 @@ const QUESTION: QuizBuilderQuestion = {
   page: 1,
 };
 
+// QuizQuestionCard doesn't own its expanded state (QuizBuilderWorkspace does,
+// so only one card in the outline can be expanded at a time) - this wrapper
+// stands in for that parent.
 function renderCard(
   props: Partial<React.ComponentProps<typeof QuizQuestionCard>> = {}
 ) {
   const onUpdate = jest.fn().mockResolvedValue(true);
   const onRemove = jest.fn().mockResolvedValue(true);
-  const utils = render(
-    <QuizQuestionCard
-      question={QUESTION}
-      onUpdate={onUpdate}
-      onRemove={onRemove}
-      {...props}
-    />
-  );
+  const Wrapper = () => {
+    const [isExpanded, setIsExpanded] = useState(props.isExpanded ?? false);
+    return (
+      <QuizQuestionCard
+        question={QUESTION}
+        isExpanded={isExpanded}
+        onExpandedChange={setIsExpanded}
+        onUpdate={onUpdate}
+        onRemove={onRemove}
+        {...props}
+      />
+    );
+  };
+  const utils = render(<Wrapper />);
   return {...utils, onUpdate, onRemove};
 }
 
@@ -58,14 +67,14 @@ describe('QuizQuestionCard', () => {
     );
   });
 
-  it('starts expanded when startExpanded is set', () => {
-    renderCard({startExpanded: true});
+  it('starts expanded when isExpanded is set', () => {
+    renderCard({isExpanded: true});
 
     expect(screen.getByRole('tab', {name: 'Question'})).toBeInTheDocument();
   });
 
   it('saves the edited draft and collapses on success', async () => {
-    const {onUpdate} = renderCard({startExpanded: true});
+    const {onUpdate} = renderCard({isExpanded: true});
 
     fireEvent.change(screen.getByLabelText('Internal name'), {
       target: {value: 'Renamed question'},
@@ -81,7 +90,7 @@ describe('QuizQuestionCard', () => {
   });
 
   it('discards edits back to the saved question', () => {
-    renderCard({startExpanded: true});
+    renderCard({isExpanded: true});
 
     const nameField = screen.getByLabelText('Internal name');
     fireEvent.change(nameField, {target: {value: 'Something else'}});
@@ -91,7 +100,7 @@ describe('QuizQuestionCard', () => {
   });
 
   it('confirms before removing the question from the quiz', async () => {
-    const {onRemove} = renderCard({startExpanded: true});
+    const {onRemove} = renderCard({isExpanded: true});
 
     fireEvent.click(screen.getByRole('button', {name: 'Remove from quiz'}));
     expect(onRemove).not.toHaveBeenCalled();

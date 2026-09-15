@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs from '@code-dot-org/component-library/tabs';
@@ -13,7 +14,11 @@ import styles from './quiz-question-card.module.scss';
 
 interface QuizQuestionCardProps {
   question: QuizBuilderQuestion;
-  startExpanded?: boolean;
+  isExpanded: boolean;
+  onExpandedChange: (expanded: boolean) => void;
+  // The outline's last save/remove error, shown here only while this card
+  // is the expanded one - see QuizBuilderWorkspace.
+  error?: string | null;
   onUpdate: (
     id: number,
     payload: QuizQuestionEditableFields
@@ -36,11 +41,12 @@ function toDraft(question: QuizBuilderQuestion): QuizQuestionEditableFields {
 // state, saved or discarded independently of the rest of the outline.
 const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   question,
-  startExpanded = false,
+  isExpanded,
+  onExpandedChange,
+  error,
   onUpdate,
   onRemove,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(startExpanded);
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
@@ -58,7 +64,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
     const succeeded = await onUpdate(question.id, draft);
     setIsSaving(false);
     if (succeeded) {
-      setIsExpanded(false);
+      onExpandedChange(false);
     }
   };
 
@@ -98,7 +104,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
           variant="outlined"
           color="secondary"
           type="button"
-          onClick={() => setIsExpanded(prev => !prev)}
+          onClick={() => onExpandedChange(!isExpanded)}
         >
           <FontAwesomeV6Icon
             iconName={isExpanded ? 'chevron-up' : 'chevron-down'}
@@ -133,6 +139,15 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
             onChange={() => {}}
           />
 
+          {error && (
+            <Alert
+              type="danger"
+              size="xs"
+              text={error}
+              className={styles.saveError}
+            />
+          )}
+
           <div className={styles.footer}>
             <Button
               variant="outlined"
@@ -146,8 +161,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
             </Button>
             <div className={styles.footerActions}>
               <Button
-                variant="text"
-                color="tertiary"
+                variant="outlined"
+                color="secondary"
                 size="extraSmall"
                 type="button"
                 disabled={isSaving}

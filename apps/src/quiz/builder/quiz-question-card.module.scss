@@ -110,6 +110,11 @@
   resize: vertical;
 }
 
+.saveError {
+  padding: 8px 10px 10px;
+  background: var(--background-neutral-primary);
+}
+
 .footer {
   display: flex;
   align-items: center;
