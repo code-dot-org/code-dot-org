@@ -150,7 +150,7 @@ module AiDiffBedrockHelper
       end
     end
 
-    if lesson_number.nil? && unit_num.nil? && course_names.nil? && !section_contexts.empty?
+    if lesson_number.nil? && unit_num.nil? && course_names.nil?
       or_all_filters.push({equals: {key: "scope", value: "general"}})
       section_contexts&.each do |section_context|
         or_all_filters.push({in: {key: "course", value: section_context[:course_names]}})
