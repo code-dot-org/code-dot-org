@@ -28,12 +28,11 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {importStockRule} from '../../rules/importStockRule';
-import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt} from '../../runtime/projectFiles';
 
+import {edit, electTraits, fileOf, importRules, me, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, append, hasRoot, holds, type BlockJson} from './patch';
+import {addRoot, hasRoot, type BlockJson} from './patch';
 
 const COLLECTS = 'Collection#CollectsTrait';
 /** `when ⟨…⟩ collects ⟨any⟩` — the event the Collection rule raises. */
@@ -41,31 +40,10 @@ const COLLECTS_HAT = 'world_on_Collection_CollectsEvent';
 /** What one thing is worth, which is what the starter says a coin is worth. */
 const WORTH = 10;
 
-/** Which file holds this actor, and which of its roots defines it. */
-const fileOf = (target: EnhanceTarget) => ({
-  path: `${target.path}.actor`,
-  root: {type: 'world_actor'},
-});
-
-/** Who the hat is about: this actor's file, or one kind among a world's. */
-const subjectOf = () => ({block: {type: 'world_this_actor'}});
-
-/** Whether a `use trait` for `trait` is already in this actor's chain. */
-const hasTrait = (
-  contents: string,
-  trait: string,
-  root: {type: string; id?: string},
-): boolean =>
-  holds(
-    contents,
-    root,
-    block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
-  );
-
 /** `when ⟨this actor⟩ collects ⟨any⟩: add ten to the score`. */
 const handler = (): BlockJson => ({
   type: COLLECTS_HAT,
-  inputs: {ACTOR: subjectOf()},
+  inputs: {ACTOR: me()},
   next: {
     block: {
       type: 'world_do_Scoring_AddToTheScoreAction',
@@ -80,19 +58,6 @@ const handler = (): BlockJson => ({
 const scores = (contents: string): boolean =>
   hasRoot(contents, block => block.type === COLLECTS_HAT);
 
-/** Rewrite one file's contents, leaving the rest of the project alone. */
-const edit = (
-  source: MultiFileSource,
-  id: string,
-  change: (contents: string) => string,
-): MultiFileSource => ({
-  ...source,
-  files: {
-    ...source.files,
-    [id]: {...source.files[id], contents: change(source.files[id].contents)},
-  },
-});
-
 export const collectsEnhancement: Enhancement = {
   id: 'collects',
   // The ACTOR's: the trait and the handler both land in its own file, and what
@@ -106,16 +71,10 @@ export const collectsEnhancement: Enhancement = {
     const {path, root} = fileOf(target);
     const id = fileIdAt(source, path);
     const contents = id ? source.files[id].contents : '';
-    return hasTrait(contents, COLLECTS, root) && scores(contents);
+    return wears(contents, COLLECTS, root) && scores(contents);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
-    let current = source;
-    for (const name of ['Collection', 'Scoring']) {
-      const rule = STOCK_RULES.find(one => one.name === name);
-      if (rule) {
-        current = importStockRule(current, rule).source;
-      }
-    }
+    const current = importRules(source, ['Collection', 'Scoring']);
 
     const {path, root} = fileOf(target);
     const id = fileIdAt(current, path);
@@ -123,12 +82,7 @@ export const collectsEnhancement: Enhancement = {
       return current;
     }
     return edit(current, id, contents => {
-      let next = contents;
-      if (!hasTrait(next, COLLECTS, root)) {
-        next = append(next, root, [
-          {type: 'world_use_trait', fields: {TRAIT: COLLECTS}},
-        ]);
-      }
+      let next = electTraits(contents, root, [COLLECTS]);
       if (!scores(next)) {
         next = addRoot(next, handler());
       }

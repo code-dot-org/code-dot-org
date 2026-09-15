@@ -445,9 +445,9 @@ the camera settled on, and the same edit in place.
 **The shared helpers start here.** `enhance/actorPatch` holds the four answers
 every actor enhancement needs — which file and root, who a hat is about,
 whether a trait is elected, how to rewrite one file — because these three would
-otherwise have made seven copies of the same forty lines. The four that predate
-it still carry their own; moving them is a change to working files with no
-behavior in it and belongs in its own commit.
+otherwise have made seven copies of the same forty lines. The four that predated
+it carried their own until every actor became a file, which left each copy a
+one-liner; they read the shared ones now.
 
 ## The enemy's gun: shooting whenever it can
 

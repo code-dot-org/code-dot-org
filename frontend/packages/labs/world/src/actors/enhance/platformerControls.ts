@@ -56,12 +56,11 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {importStockRule} from '../../rules/importStockRule';
-import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt} from '../../runtime/projectFiles';
 
+import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, append, down, hasRoot, holds, type BlockJson} from './patch';
+import {addRoot, down, hasRoot, type BlockJson} from './patch';
 
 /** Jumping, which brings being pulled down with it. */
 const JUMPS = 'Jumping#JumpsTrait';
@@ -82,27 +81,6 @@ const JUMP_KEY = 'space';
 const PRESSES = 'world_on_Input_PressesEvent';
 const MAKE_JUMP = 'world_do_Jumping_MakeJumpAction';
 
-/** Which file holds this actor, and which of its roots defines it. */
-const fileOf = (target: EnhanceTarget) => ({
-  path: `${target.path}.actor`,
-  root: {type: 'world_actor'},
-});
-
-/** Whether a `use trait` for `trait` is already in this actor's chain. */
-const wears = (
-  contents: string,
-  trait: string,
-  root: {type: string; id?: string},
-): boolean =>
-  holds(
-    contents,
-    root,
-    block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
-  );
-
-/** Who the hat is about: this actor's file, or one kind among a world's. */
-const subjectOf = () => undefined;
-
 /**
  * `when ⟨me⟩ presses ⟨space⟩ → make ⟨me⟩ jump`.
  *
@@ -117,20 +95,16 @@ const subjectOf = () => undefined;
  * and the enhancement assemble the same platformer, and nothing but a test
  * makes them keep agreeing.
  */
-export const platformerJumpHandler = (): BlockJson => {
-  const subject = subjectOf();
-  return {
-    type: PRESSES,
-    fields: {FILTER0: JUMP_KEY},
-    ...(subject ? {inputs: {ACTOR: subject}} : {}),
-    next: {
-      block: {
-        type: MAKE_JUMP,
-        inputs: {VALUE: {block: {type: 'world_this_actor'}}},
-      },
+export const platformerJumpHandler = (): BlockJson => ({
+  type: PRESSES,
+  fields: {FILTER0: JUMP_KEY},
+  next: {
+    block: {
+      type: MAKE_JUMP,
+      inputs: {VALUE: {block: {type: 'world_this_actor'}}},
     },
-  };
-};
+  },
+});
 
 /**
  * Whether this actor already jumps on the jump key.
@@ -162,19 +136,6 @@ const jumpsOnKey =
 
 const jumps = (contents: string): boolean => hasRoot(contents, jumpsOnKey());
 
-/** Rewrite one file's contents, leaving the rest of the project alone. */
-const edit = (
-  source: MultiFileSource,
-  id: string,
-  change: (contents: string) => string,
-): MultiFileSource => ({
-  ...source,
-  files: {
-    ...source.files,
-    [id]: {...source.files[id], contents: change(source.files[id].contents)},
-  },
-});
-
 export const platformerControlsEnhancement: Enhancement = {
   id: 'platformer-controls',
   // The ACTOR's: every trait and the binding land in its own chain or in a hat
@@ -199,13 +160,7 @@ export const platformerControlsEnhancement: Enhancement = {
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
-    let current = source;
-    for (const name of RULES) {
-      const rule = STOCK_RULES.find(one => one.name === name);
-      if (rule) {
-        current = importStockRule(current, rule).source;
-      }
-    }
+    const current = importRules(source, RULES);
 
     const {path, root} = fileOf(target);
     const id = fileIdAt(current, path);
@@ -213,14 +168,7 @@ export const platformerControlsEnhancement: Enhancement = {
       return current;
     }
     return edit(current, id, contents => {
-      let next = contents;
-      for (const trait of TRAITS) {
-        if (!wears(next, trait, root)) {
-          next = append(next, root, [
-            {type: 'world_use_trait', fields: {TRAIT: trait}},
-          ]);
-        }
-      }
+      let next = electTraits(contents, root, TRAITS);
       if (!jumps(next)) {
         // Beside the definition rather than under it: a hat takes no previous
         // connection, and `DisableOrphansPlugin` grays out a top-level block

@@ -45,12 +45,11 @@ import {getNextFileId} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {folderIn} from '../../projectWrite';
-import {importStockRule} from '../../rules/importStockRule';
-import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
+import {edit, importRules, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {addRoot, append, rowsUnder, type BlockJson} from './patch';
 
@@ -83,9 +82,6 @@ const setText = (who: object, value: object): BlockJson => ({
   type: 'world_set_ActorsLabel_TextProperty',
   inputs: {ACTOR: who, VALUE: value},
 });
-
-/** `this actor`, as a socket's contents. */
-const me = () => ({block: {type: 'world_this_actor'}});
 
 /** The hat that keeps the number true. */
 const watcher = (): BlockJson => ({
@@ -223,19 +219,6 @@ const writeBoard = (source: MultiFileSource): MultiFileSource => {
   };
 };
 
-/** Rewrite one file's contents, leaving the rest of the project alone. */
-const edit = (
-  source: MultiFileSource,
-  id: string,
-  change: (contents: string) => string,
-): MultiFileSource => ({
-  ...source,
-  files: {
-    ...source.files,
-    [id]: {...source.files[id], contents: change(source.files[id].contents)},
-  },
-});
-
 export const scoreboardEnhancement: Enhancement = {
   id: 'scoreboard',
   // The WORLD's: what is on the screen while this world is played, and where
@@ -251,13 +234,7 @@ export const scoreboardEnhancement: Enhancement = {
     return Boolean(id && placed(source.files[id].contents));
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
-    let current = source;
-    for (const name of ['Scoring']) {
-      const rule = STOCK_RULES.find(one => one.name === name);
-      if (rule) {
-        current = importStockRule(current, rule).source;
-      }
-    }
+    let current = importRules(source, ['Scoring']);
     // …and the Label the board ACTS LIKE. `acts like` names a module path, and
     // a path naming a file the project does not hold inherits nothing at all —
     // no words, no box, no picture.

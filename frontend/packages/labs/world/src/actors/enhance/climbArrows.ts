@@ -57,33 +57,14 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {importStockRule} from '../../rules/importStockRule';
-import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt} from '../../runtime/projectFiles';
 
+import {edit, electTraits, fileOf, importRules, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, append, hasRoot, holds, type BlockJson} from './patch';
+import {addRoot, hasRoot, type BlockJson} from './patch';
 
 const CLIMBS = 'Climbing#ClimbsTrait';
 const KEYBOARD = 'Input#TakesKeyboardInputTrait';
-
-/** Which file holds this actor, and which of its roots defines it. */
-const fileOf = (target: EnhanceTarget) => ({
-  path: `${target.path}.actor`,
-  root: {type: 'world_actor'},
-});
-
-/** Whether a `use trait` for `trait` is already in this actor's chain. */
-const wears = (
-  contents: string,
-  trait: string,
-  root: {type: string; id?: string},
-): boolean =>
-  holds(
-    contents,
-    root,
-    block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
-  );
 
 /**
  * `start ⟨me⟩ climbing up` and its two siblings, which take the actor.
@@ -98,9 +79,6 @@ const climbing = (action: string): BlockJson => ({
   type: `world_do_Climbing_${action}Action`,
   inputs: {VALUE: {block: {type: 'world_this_actor'}}},
 });
-
-/** Who the hat is about: this actor's file, or one kind among a world's. */
-const subjectOf = () => undefined;
 
 /**
  * One handler: a key, an edge, and the climbing block it calls.
@@ -118,15 +96,11 @@ const handler = (
   edge: 'Presses' | 'Releases',
   key: string,
   action: string,
-): BlockJson => {
-  const subject = subjectOf();
-  return {
-    type: `world_on_Input_${edge}Event`,
-    fields: {FILTER0: key},
-    ...(subject ? {inputs: {ACTOR: subject}} : {}),
-    next: {block: climbing(action)},
-  };
-};
+): BlockJson => ({
+  type: `world_on_Input_${edge}Event`,
+  fields: {FILTER0: key},
+  next: {block: climbing(action)},
+});
 
 /**
  * The four of them, in the order a reader meets them: up, then down, each
@@ -173,19 +147,6 @@ const startsAClimb =
 
 const reads = (contents: string): boolean => hasRoot(contents, startsAClimb());
 
-/** Rewrite one file's contents, leaving the rest of the project alone. */
-const edit = (
-  source: MultiFileSource,
-  id: string,
-  change: (contents: string) => string,
-): MultiFileSource => ({
-  ...source,
-  files: {
-    ...source.files,
-    [id]: {...source.files[id], contents: change(source.files[id].contents)},
-  },
-});
-
 export const climbArrowsEnhancement: Enhancement = {
   id: 'climbs-with-arrows',
   subject: 'actor',
@@ -204,13 +165,7 @@ export const climbArrowsEnhancement: Enhancement = {
     );
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
-    let current = source;
-    for (const name of ['Climbing', 'Input']) {
-      const rule = STOCK_RULES.find(one => one.name === name);
-      if (rule) {
-        current = importStockRule(current, rule).source;
-      }
-    }
+    const current = importRules(source, ['Climbing', 'Input']);
 
     const {path, root} = fileOf(target);
     const id = fileIdAt(current, path);
@@ -218,14 +173,7 @@ export const climbArrowsEnhancement: Enhancement = {
       return current;
     }
     return edit(current, id, contents => {
-      let next = contents;
-      for (const trait of [CLIMBS, KEYBOARD]) {
-        if (!wears(next, trait, root)) {
-          next = append(next, root, [
-            {type: 'world_use_trait', fields: {TRAIT: trait}},
-          ]);
-        }
-      }
+      let next = electTraits(contents, root, [CLIMBS, KEYBOARD]);
       if (!reads(next)) {
         // Beside the definition rather than under it: a hat takes no previous
         // connection, and `DisableOrphansPlugin` grays out a top-level block

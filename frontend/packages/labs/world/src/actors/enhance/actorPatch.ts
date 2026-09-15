@@ -7,12 +7,8 @@
 // `platformerControls` each answer them separately, in about forty lines
 // apiece, and the enemy rows would have made seven copies of the same forty.
 //
-// NEW CODE LIVES HERE; the four that predate it still carry their own. That is
-// a half-migration on purpose rather than by neglect — moving them is a change
-// to four working files with no behavior in it, and it belongs in its own
-// commit rather than smuggled into this one. Anything added from here on
-// should use these, and the old copies should come across the next time one of
-// those files is opened for another reason.
+// EVERY ROW READS THESE. The four that predated this file carried their own
+// copies for a while, moved across in a commit with no behavior in it.
 //
 // `fileOf` AND `subjectOf` ARE ONE-LINERS NOW, and stay: there were two kinds
 // of actor, and a patch asked these two questions rather than knowing the

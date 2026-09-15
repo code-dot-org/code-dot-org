@@ -61,12 +61,19 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {pathSlug} from '../../blockly/domainBlocks';
-import {importStockRule} from '../../rules/importStockRule';
-import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
+import {
+  edit,
+  electTraits,
+  fileOf,
+  importRules,
+  me,
+  subjectOf,
+  wears,
+} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {
   addRoot,
@@ -96,26 +103,8 @@ const BAR_PROPERTY = 'health bar';
 const BAR_PROPERTY_EXPORT = 'HealthBarProperty';
 const ATTACHED = 'Attachment#AttachedTrait';
 
-/** `this actor` — inside a hat, the actor the event fired for. */
-const me = () => ({block: {type: 'world_this_actor'}});
-
-/** Which file holds this actor, and which of its roots defines it. */
-const fileOf = (target: EnhanceTarget) => ({
-  path: `${target.path}.actor`,
-  root: {type: 'world_actor'},
-});
-
-/**
- * What an own property this actor declares is keyed by.
- *
- * An actor with a file is keyed by the file; one a world defines is keyed by
- * the world AND the block, because a world may define several and they each
- * declare their own (`blockly/ownProperties`).
- */
+/** What an own property this actor declares is keyed by: its file. */
 const ownerOf = (target: EnhanceTarget): string => target.path;
-
-/** Who the hat is about: this actor's file, or one kind among a world's. */
-const subjectOf = () => me();
 
 /** The variable the handler's `add actor … as ⟨…⟩` binds. */
 const barVariable = (target: EnhanceTarget) => {
@@ -127,23 +116,6 @@ const barVariable = (target: EnhanceTarget) => {
 const named = (variable: object) => ({
   block: {type: 'variables_get_Actor', fields: {VAR: variable}},
 });
-
-const useTrait = (trait: string): BlockJson => ({
-  type: 'world_use_trait',
-  fields: {TRAIT: trait},
-});
-
-/** Whether a `use trait` for `trait` is already in this actor's chain. */
-const hasTrait = (
-  contents: string,
-  trait: string,
-  root: {type: string; id?: string} = {type: 'world_actor'},
-): boolean =>
-  holds(
-    contents,
-    root,
-    block => block.type === 'world_use_trait' && block.fields?.TRAIT === trait,
-  );
 
 /** `define property ⟨health bar⟩` — where the actor remembers what it placed. */
 const declareBar = (): BlockJson => ({
@@ -246,19 +218,6 @@ const brings = (contents: string, target: EnhanceTarget): boolean => {
   });
 };
 
-/** Rewrite one file's contents, leaving the rest of the project alone. */
-const edit = (
-  source: MultiFileSource,
-  id: string,
-  change: (contents: string) => string,
-): MultiFileSource => ({
-  ...source,
-  files: {
-    ...source.files,
-    [id]: {...source.files[id], contents: change(source.files[id].contents)},
-  },
-});
-
 export const healthEnhancement: Enhancement = {
   id: 'health',
   // The ACTOR's: every line it writes lands in the actor's own chain or in a
@@ -279,26 +238,20 @@ export const healthEnhancement: Enhancement = {
     const {path, root} = fileOf(target);
     const id = fileIdAt(source, path);
     const contents = id ? source.files[id].contents : '';
-    return hasTrait(contents, HAS_HEALTH, root) && brings(contents, target);
+    return wears(contents, HAS_HEALTH, root) && brings(contents, target);
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     let current = source;
     // The bar brings Health with it; Attachment is what makes it ride along,
     // and nothing else here would have imported it.
     current = importStockActor(current, stockActorById('healthBar')!).source;
-    const attachment = STOCK_RULES.find(rule => rule.name === 'Attachment');
-    if (attachment) {
-      current = importStockRule(current, attachment).source;
-    }
+    current = importRules(current, ['Attachment']);
 
     const {path, root} = fileOf(target);
     const targetId = fileIdAt(current, path);
     if (targetId) {
       current = edit(current, targetId, contents => {
-        let next = contents;
-        if (!hasTrait(next, HAS_HEALTH, root)) {
-          next = append(next, root, [useTrait(HAS_HEALTH)]);
-        }
+        let next = electTraits(contents, root, [HAS_HEALTH]);
         if (!declaresBar(next, root)) {
           next = append(next, root, [declareBar()]);
         }
@@ -312,9 +265,9 @@ export const healthEnhancement: Enhancement = {
     }
 
     const barId = fileIdAt(current, `${BAR_PATH}.actor`);
-    if (barId && !hasTrait(current.files[barId].contents, ATTACHED)) {
+    if (barId) {
       current = edit(current, barId, contents =>
-        append(contents, {type: 'world_actor'}, [useTrait(ATTACHED)]),
+        electTraits(contents, {type: 'world_actor'}, [ATTACHED]),
       );
     }
     return current;

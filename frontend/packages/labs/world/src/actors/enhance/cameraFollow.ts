@@ -37,10 +37,9 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {authoredName} from '../../blockly/projectModules';
-import {importStockRule} from '../../rules/importStockRule';
-import {STOCK_RULES} from '../../rules/stock';
 import {fileIdAt, filePath} from '../../runtime/projectFiles';
 
+import {edit, importRules, kindOf} from './actorPatch';
 import type {Enhancement, EnhanceChoice, EnhanceTarget} from './enhancements';
 import {append, down, rowsUnder, type BlockJson} from './patch';
 
@@ -55,11 +54,6 @@ const FOLLOWS = 'Camera Follow#FollowsTrait';
  */
 const CAMERA_ID = 'enhanceFollowCamera';
 const CAMERA_NAME = 'Follow Camera';
-
-/** `any ⟨kind⟩` — the actor to follow, named as everything else names one. */
-const kindOf = (actor: string) => ({
-  block: {type: 'world_actor_kind', fields: {ACTOR: actor}},
-});
 
 /**
  * The actors this world can name, as the field names them: the project's
@@ -155,19 +149,6 @@ const aimedAt = (block: BlockJson | undefined): string | undefined => {
   return undefined;
 };
 
-/** Rewrite one file's contents, leaving the rest of the project alone. */
-const edit = (
-  source: MultiFileSource,
-  id: string,
-  change: (contents: string) => string,
-): MultiFileSource => ({
-  ...source,
-  files: {
-    ...source.files,
-    [id]: {...source.files[id], contents: change(source.files[id].contents)},
-  },
-});
-
 export const cameraFollowEnhancement: Enhancement = {
   id: 'cameraFollow',
   // The WORLD's: a camera is defined in a world, looked through by a world,
@@ -195,13 +176,9 @@ export const cameraFollowEnhancement: Enhancement = {
     if (!answer) {
       return source; // nothing to aim at, so nothing to do
     }
-    let current = source;
-    const follow = STOCK_RULES.find(rule => rule.name === 'Camera Follow');
-    if (follow) {
-      // Which brings "Has a Camera" with it: this rule aims a camera and the
-      // other one is what actually moves the view.
-      current = importStockRule(current, follow).source;
-    }
+    // Which brings "Has a Camera" with it: this rule aims a camera and the
+    // other one is what actually moves the view.
+    const current = importRules(source, ['Camera Follow']);
 
     const id = fileIdAt(current, `${target.path}.world`);
     if (!id) {
