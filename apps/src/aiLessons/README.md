@@ -52,6 +52,61 @@ schema or seed scars.
    success criteria, panel slide captions, and panel illustrations.
    The author can edit any of it inline before saving.
 
+## Lesson format v2: steps
+
+A lesson is an ordered list of typed **steps** (`types.ts`), replacing the
+v1 model where every entry was a lab checkpoint.  Old v1 JSONs still load
+— `normalizeLessonPlan()` in `lessonFormat.ts` migrates `checkpoints` to
+steps at read time.
+
+Step kinds:
+
+- **lab** — the student works in Web Lab 2 or Music Lab.  `validation:
+  'tutor'` gates advancement on the AI Tutor's judgment against
+  `successCriteria`; `validation: 'none'` shows a Continue button
+  (explore / free-play steps — the tutor chats but never gates).
+- **panels** — the instructional slide carousel; Continue advances.
+- **questions** — free-response / multiple-choice / scale prompts,
+  one at a time.  Every answer is recorded as student input.
+
+Cross-cutting fields:
+
+- `role` + `segment` — advisory labels ("skill practice: HTML tags",
+  "project checkpoint") for grouping; never drive behavior.
+- `next` / `option.goTo` — branching pointers: the array is the default
+  order, `goTo` jumps, `next` rejoins (or `'end'` finishes).
+- `branches` — automatic performance branching on any step: a list of
+  `{when, goTo}` conditions the resolver evaluates when the step
+  completes.  Conditions: `score` (count of first-attempt-correct
+  answers on a graded questions step) or `aiJudge` (an LLM passes or
+  fails the student's recorded inputs for a step against prose
+  criteria).  First match wins; no match falls through to
+  `next`/array order — so the fallthrough path is the default branch.
+  This encodes the branch-point authoring template: a shared objective,
+  a core exercise carrying `branches`, one step per branch, each branch
+  step's `next` pointing at the rejoin step.
+- `sourceMode: 'sandbox'` — isolates a skill-practice step's source from
+  the student's project (scoped to the segment).
+- `starterPrompt` / `starterFiles` — generated-per-student or literal
+  starting code.
+- `aiPrompting` / `presetPrompts` — whether the student can prompt the AI
+  build partner to write code into this step's source.
+- `promptPrefill` — seeds the build partner's free-form prompt box with
+  a working prompt the student can fire or tweak (their first taste of
+  prompting; personalization comes from recorded answers regardless).
+- `readOnly` — the lab mounts frozen (look, don't touch): showcase
+  steps where the AI generates something aspirational to react to.
+- Lesson-level `checklist` — project rubric the tutor reports against.
+
+## Current functionality
+
+### Authoring (`/ai_lessons/new`, `/ai_lessons/:id/edit`)
+
+- Lab capability context is injected into the generator prompt so the
+  model can only reference blocks/APIs that the real labs actually
+  support. See `labCapabilities.ts` — music block list is derived from
+  the live `toolboxBlocks` + SIMPLE2 mode map; Web Lab 2 CSP allowlists
+  come from `sharedConstants.ts`.
 ### Routes (Rails)
 
 Every in-app page path serves the same SPA shell (`AiLessonsController#app`).
@@ -98,6 +153,9 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
 - **No CSRF on the image GET / sources GET / progress GET.** Reads are
   all unauthenticated within the user's session; writes use Rails CSRF
   via `HttpClient.put(..., true, ...)`.
+- **Old lessons may have a stale shape.** v1 (checkpoints) JSONs are
+  migrated to steps on every load but never rewritten on disk; they
+  round-trip through the editor as v2 the next time they're saved.
 ## How to run
 
 With dashboard + apps running (see the repo's main `SETUP.md`), open
