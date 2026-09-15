@@ -4,7 +4,9 @@ import Toggle from '@code-dot-org/component-library/toggle';
 import {Alert} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
-import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {networkErrorMessage} from './networkError';
 
 import styles from './quiz-configuration-panel.module.scss';
 
@@ -191,7 +193,7 @@ const QuizConfigurationPanel: React.FunctionComponent<
       onSaved(saved);
       return true;
     } catch (error) {
-      setError(await saveErrorMessage(error));
+      setError(await networkErrorMessage(error));
       return false;
     } finally {
       setSavingField(null);
@@ -442,19 +444,5 @@ const QuizConfigurationPanel: React.FunctionComponent<
     </div>
   );
 };
-
-async function saveErrorMessage(error: unknown): Promise<string> {
-  if (isNetworkError(error)) {
-    try {
-      const data = await error.response.json();
-      if (typeof data.error === 'string' && data.error) {
-        return data.error;
-      }
-    } catch {
-      // Response body was not JSON.
-    }
-  }
-  return 'Something went wrong.';
-}
 
 export default QuizConfigurationPanel;
