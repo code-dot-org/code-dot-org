@@ -1,0 +1,25 @@
+Surface: Salmon_Surface**
+______________________________________
+
+Facing Right:
+	Below surface - 00
+	Jump - 01-12
+
+Facing Left:
+	Below surface - 13
+	Jump - 14-25
+______________________________________
+
+Swim: Salmon**
+______________________________________
+
+	Facing Left: 00-06
+	Facing Up: 08-14
+	Facing Right: 16-22
+	Facing Down: 24-30
+
+	Turn frame:
+			Down/Left: 31
+			Down/Right: 23
+			Up/Left: 07
+			Up/Right: 15

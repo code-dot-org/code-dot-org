@@ -1,0 +1,60 @@
+Cow
+	Facing Down:
+		Still Frame:	001
+		Look Left:	003-005 pause, reverse	
+		Look Right:	012-014 pause, reverse
+		Look Down:	018-019 pause, reverse
+		Look Up:	063-065 pause, reverse
+		Eat:		018-027 reverse
+		Idle 1:		036-042 reverse
+		Idle 2:         051-054
+		Walk:		069-080
+		Attack:		081-091
+		Take Damage:	092-104
+		Die:		105-110
+		Bump:		444-451
+
+	Facing Right:
+		Still Frame:	111
+		Look Left:	114-116 pause, reverse	
+		Look Right:	113-115 pause, reverse
+		Look Down:	129-130 pause, reverse
+		Look Up:	174-176 pause, reverse
+		Eat:		129-138 reverse
+		Idle 1:		147-153 reverse
+		Idle 2:         165-171 reverse first, then forward
+		Walk:		180-191
+		Attack:		192-202
+		Take Damage:	203-215
+		Die:		216-221
+		Bump:		452-459
+
+	Facing Up:
+		Still Frame:	222
+		Look Left:	225-227 pause, reverse	
+		Look Right:	224-226 pause, reverse
+		Look Down:	240-241 pause, reverse
+		Look Up:	285-287 pause, reverse
+		Eat:		240-249 reverse
+		Idle 1:		258-264 reverse
+		Idle 2:         276-282 reverse first, then forward
+		Walk:		291-302
+		Attack:		303-313
+		Take Damage:	314-326
+		Die:		327-332
+		Bump:		460-467
+
+	Facing Left:
+		Still Frame:	333
+		Look Left:	336-338 pause, reverse	
+		Look Right:	335-337 pause, reverse
+		Look Down:	351-352 pause, reverse
+		Look Up:	396-398 pause, reverse
+		Eat:		351-360 reverse
+		Idle 1:		369-375 reverse
+		Idle 2:         387-393 reverse first, then forward
+		Walk:		402-413
+		Attack:		414-424
+		Take Damage:	425-437
+		Die:		438-443
+		Bump:		468-475
