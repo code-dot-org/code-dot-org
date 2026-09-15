@@ -98,6 +98,43 @@ describe('useQuizAttempt', () => {
     expect(result.current.attempt).toEqual(ATTEMPT);
   });
 
+  it('ignores a beginAttempt response that resolves after the level changed', async () => {
+    let resolvePost: (response: Response) => void;
+    get.mockResolvedValue(jsonResponse(null));
+    post.mockReturnValue(
+      new Promise(resolve => {
+        resolvePost = resolve;
+      })
+    );
+    const {result, rerender, waitForNextUpdate} = renderHook(
+      props => useQuizAttempt(props),
+      {initialProps: {levelId: 1, unitId: 7}}
+    );
+    await waitForNextUpdate();
+
+    // Fires the POST for level 1, but leaves it unresolved.
+    let beginAttemptPromise: Promise<QuizAttemptData>;
+    act(() => {
+      beginAttemptPromise = result.current.beginAttempt();
+    });
+
+    // The lab navigates to a different level before that POST resolves.
+    const OTHER_LEVEL_ATTEMPT: QuizAttemptData = {...ATTEMPT, id: 2};
+    get.mockResolvedValue(jsonResponse(OTHER_LEVEL_ATTEMPT));
+    rerender({levelId: 2, unitId: 7});
+    await waitForNextUpdate();
+    expect(result.current.attempt).toEqual(OTHER_LEVEL_ATTEMPT);
+
+    // The stale level-1 response finally lands - it must not overwrite
+    // level 2's attempt.
+    await act(async () => {
+      resolvePost(jsonResponse(ATTEMPT));
+      await beginAttemptPromise;
+    });
+
+    expect(result.current.attempt).toEqual(OTHER_LEVEL_ATTEMPT);
+  });
+
   it('beginAttempt rejects without starting a request when there is no unit', async () => {
     const {result} = renderHook(() =>
       useQuizAttempt({levelId: 42, unitId: undefined})
