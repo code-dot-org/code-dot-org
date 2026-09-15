@@ -1,6 +1,6 @@
 ## Context
 
-Dashboard runs Active Job through `delayed_job`. Production has 140 workers. All workers currently share the same queue set, so queue priority affects only which job an idle worker reserves next. It does not stop a slow job from occupying every worker, and it does not preempt a running job when higher-priority work arrives.
+Dashboard runs Active Job through `delayed_job`. The worker total comes from `active_job_backend_n_workers_to_start`; production currently overrides it to 100 in `locals.yml`. All workers currently share the same queue set, so queue priority affects only which job an idle worker reserves next. It does not stop a slow job from occupying every worker, and it does not preempt a running job when higher-priority work arrives.
 
 The present queues mix latency policy with implementation detail. `mailers` and `mailjet` name delivery mechanisms. `default` contains user-facing and non-user-facing work. `low_priority` contains both deferrable work and lesson summaries that should start promptly but can run for one or two minutes.
 
@@ -14,6 +14,7 @@ The existing worker manager gives workers stable numeric process names and resta
 - Express three latency policies with three canonical queues, not one queue per job type.
 - Let realtime jobs burst into every worker pool when capacity is available.
 - Keep batch jobs from consuming capacity reserved for realtime or asap work.
+- Derive pool sizes from the configured worker total so a scale change does not require new absolute allocations.
 - Preserve metric names and worker process naming.
 - Deploy without losing or stranding jobs stored under legacy queue names.
 
@@ -51,19 +52,21 @@ During migration, configuration maps the legacy names by policy:
 
 These are compatibility mappings, not permanent public queue names. Producers move to canonical names after consumers accept both sets.
 
-### 2. Use nested worker pools
+### 2. Use percentage-based nested worker pools
 
-Production initially divides 140 workers as follows:
+Production initially divides the configured worker total as follows:
 
-| Pool | Workers | Queues consumed | Idle polling interval |
+| Pool | Target share | Queues consumed | Idle polling interval |
 |---|---:|---|---:|
-| Realtime reserve | 14 | `realtime` | 1 second |
-| ASAP reserve | 14 | `realtime`, `asap` | 1 second |
-| General | 112 | `realtime`, `asap`, `batch` | 5 seconds |
+| Realtime reserve | 10% | `realtime` | 1 second |
+| ASAP reserve | 10% | `realtime`, `asap` | 1 second |
+| General | 80% | `realtime`, `asap`, `batch` | 5 seconds |
 
-This reserves 10% of the fleet exclusively for realtime and another 10% for realtime/asap. Realtime can use all 140 workers. ASAP can use 126. Batch is capped at 112. When only batch work exists, 28 workers may remain idle; this is the cost of protecting latency without adding hosts.
+`ActiveJobBackend` derives whole-worker allocations from `active_job_backend_n_workers_to_start`. For totals of three or more, each nonzero reserve rounds up so it does not fall below its target share; the general pool receives the remainder. The percentages must total 100, and the derived allocation must leave at least one general worker. With the current production total of 100, this yields 10 realtime-reserved workers, 10 asap-reserved workers, and 80 general workers. A production scale change recomputes those counts without changing pool configuration.
 
-Non-production environments use the same proportions where practical. Staging starts at 1/1/2 and levelbuilder at 1/1/3. Environments with fewer than three workers either allocate at least one realtime worker and one general worker or increase their worker count to represent all pools. Allocation code validates that every configured pool has the workers its environment promises.
+Realtime work can use 100% of the fleet, asap work can use about 90%, and batch work can use about 80%. When only batch work exists, about 20% of production-sized capacity may remain idle; this is the cost of protecting latency without adding hosts.
+
+Non-production environments use the same percentages with whole-worker rounding. For example, totals of four and five derive allocations of 1/1/2 and 1/1/3. A two-worker environment uses one realtime-reserved worker and one general worker; the general worker provides asap coverage. Environments with fewer than two workers must increase their worker count. Allocation code validates the percentages, derived counts, and service-class coverage.
 
 The pool definitions are interleaved across numeric worker indexes. A rolling restart batch must not contain every realtime-reserved worker or every asap-reserved worker. Process names remain `delayed_job.N` so monitoring and operations do not acquire a second identity scheme.
 
@@ -85,7 +88,7 @@ Mailer transport does not determine service class. Password resets and other tra
 
 `ActiveJobBackend` builds a worker specification for each numeric worker index. A specification contains its queue allowlist and polling interval. The manager passes these values to `Delayed::Worker` when it starts the process.
 
-No worker relies on an unfiltered queue list in a configured environment. Startup fails on an unknown queue, duplicate or missing worker index, a negative allocation, an allocation whose sum differs from the configured worker count, or a service class with no eligible worker.
+No worker relies on an unfiltered queue list in a configured environment. Startup fails on percentages that are negative or do not total 100, an unknown queue, a duplicate or missing worker index, a derived allocation that does not cover the configured worker count, or a service class with no eligible worker.
 
 ### 5. Shorten polling only for latency-sensitive reserves
 
@@ -119,8 +122,8 @@ Rollback during phases 1 or 2 restores old producers while dual-read consumers r
 
 ## Risks / Trade-offs
 
-- **Reserved capacity can sit idle.** Up to 20% of workers do no work when only batch jobs exist. This is intentional and should be revisited with production utilization data.
-- **More frequent polling adds database load.** Only 28 reserved workers use the one-second interval. Database query rate is monitored during rollout.
+- **Reserved capacity can sit idle.** About 20% of a production-sized fleet does no work when only batch jobs exist. This is intentional and should be revisited with production utilization data.
+- **More frequent polling adds database load.** The two reserve pools, nominally 20% of the fleet, use the one-second interval. Database query rate is monitored during rollout.
 - **Realtime can starve lower classes.** Nested pools give realtime first access to every pool. Queue age alarms must reveal sustained overload; more job types enter realtime only after review.
 - **Running jobs are not preempted.** If all eligible workers are already executing work, a new job waits for one to finish. The realtime-only reserve limits this case but cannot eliminate it.
 - **Transport-level mail routing can hide policy.** Shared mail delivery jobs require call-site classification so a bulk send does not enter realtime by accident.
@@ -140,5 +143,5 @@ Rollback restores producer assignments first. Dual-read workers remain safe for 
 
 ## Open Questions
 
-- Is 14 realtime-only, 14 realtime/asap, and 112 general the right steady-state production split after the first observation period, or should the asap reserve be adjusted while retaining the 10% realtime floor?
+- Are 10% realtime-only, 10% realtime/asap, and the remainder general the right steady-state production shares after the first observation period, or should the asap reserve change while retaining the 10% realtime floor?
 - Which mail call sites, beyond password reset, have a measured user-blocking requirement and should explicitly select realtime?

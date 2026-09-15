@@ -27,9 +27,9 @@ The system needs a small number of explicit service classes and worker pools tha
 ## Impact
 
 - `lib/cdo/active_job_backend.rb` — construct service-class worker pools while retaining stable worker process names and rolling restarts.
-- `config.yml.erb` and environment configuration — declare service-class priorities, worker allocations, queue aliases, and polling intervals.
+- `config.yml.erb` and environment configuration — declare service-class priorities, worker allocation percentages, queue aliases, and polling intervals.
 - `dashboard/config/application.rb` and `dashboard/config/initializers/delayed_job_config.rb` — register canonical queues and validate their configuration.
 - Active Job classes under `dashboard/app/jobs/` — assign each job to a service class.
 - `dashboard/app/jobs/concerns/active_job_metrics.rb` — correct pending/workable definitions without renaming metrics.
-- Worker-manager, job, and metrics tests — cover allocation, routing, priority, polling, scale changes, and scheduled jobs.
+- Worker-manager, job, and metrics tests — cover percentage allocation, rounding, routing, priority, polling, scale changes, and scheduled jobs.
 - Production deployment — use a consumer-first queue migration and annotate the `PendingJobCount` semantic correction in CloudWatch.

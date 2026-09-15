@@ -20,7 +20,7 @@ The system SHALL expose `realtime`, `asap`, and `batch` as the canonical Active 
 - **THEN** it is stored on the `batch` queue
 
 ### Requirement: Realtime work has dedicated capacity
-Production SHALL reserve at least 10% of configured Active Job workers exclusively for realtime work. An idle realtime-reserved worker SHALL discover a workable realtime job within its configured polling interval, excluding persistence and database reservation time.
+Production SHALL reserve at least 10% of configured Active Job workers exclusively for realtime work. The system SHALL derive the reserve from the configured total worker count rather than store an absolute production worker count. An idle realtime-reserved worker SHALL discover a workable realtime job within its configured polling interval, excluding persistence and database reservation time.
 
 #### Scenario: Batch saturates general workers
 - **WHEN** every general worker is running a batch job and a realtime-reserved worker is idle
@@ -60,15 +60,23 @@ The system SHALL assign lower numeric priority to realtime than asap, and lower 
 - **THEN** the running batch job continues and another eligible worker must reserve the realtime job
 
 ### Requirement: Worker allocation is explicit and valid
-Every configured worker SHALL have an explicit pool, queue allowlist, and polling interval. Startup SHALL fail if allocations do not cover the configured worker count, refer to an unknown queue, assign a worker index more than once, or leave a canonical service class with no eligible worker.
+Worker pool configuration SHALL use percentages that total 100. Startup SHALL derive whole-worker allocations from the configured Active Job worker count, assign every worker an explicit pool, queue allowlist, and polling interval, and give the general pool any workers left after reserve rounding. Startup SHALL fail if percentages are negative or do not total 100, derived allocations do not cover the configured worker count, a pool refers to an unknown queue, a worker index is assigned more than once, or a canonical service class has no eligible worker.
 
-#### Scenario: Pool allocations do not sum to worker count
-- **WHEN** the configured pool allocations differ from the configured Active Job worker count
-- **THEN** worker startup fails with an error that identifies both totals
+#### Scenario: Pool percentages do not total 100
+- **WHEN** the configured pool percentages do not total 100
+- **THEN** worker startup fails with an error that identifies the configured total
+
+#### Scenario: Worker count changes
+- **WHEN** the configured Active Job worker count changes
+- **THEN** startup derives new pool allocations from the configured percentages and does not reuse absolute counts from the previous worker total
 
 #### Scenario: Valid small environment starts
 - **WHEN** an environment assigns at least one realtime worker and one general worker and every canonical queue has an eligible worker
 - **THEN** workers start with their configured filters and polling intervals
+
+#### Scenario: Two-worker environment uses the minimum valid allocation
+- **WHEN** an environment configures two Active Job workers
+- **THEN** startup assigns one realtime-reserved worker and one general worker, with no separate asap reserve
 
 ### Requirement: Rolling restarts retain latency-sensitive capacity
 Worker specifications SHALL be distributed across numeric process indexes so a normal rolling restart batch does not stop every realtime-reserved worker or every asap-reserved worker at once. Existing `delayed_job.N` process names SHALL remain stable.

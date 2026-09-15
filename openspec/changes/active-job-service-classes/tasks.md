@@ -1,8 +1,8 @@
 ## 1. Queue configuration
 
 - [ ] 1.1 Add canonical `realtime`, `asap`, and `batch` queues with priorities -10, 0, and 10.
-- [ ] 1.2 Add environment-specific realtime, asap, and general worker allocations and polling intervals.
-- [ ] 1.3 Validate queue names, priorities, pool totals, worker indexes, and service-class coverage at startup.
+- [ ] 1.2 Derive realtime, asap, and general worker allocations from configured percentages and each environment's existing worker total; add pool-specific polling intervals.
+- [ ] 1.3 Validate queue names, priorities, pool percentages, derived worker totals, worker indexes, and service-class coverage at startup.
 - [ ] 1.4 Retain legacy queue aliases and dual-read filters for the migration period.
 
 ## 2. Worker pools
@@ -10,7 +10,7 @@
 - [ ] 2.1 Introduce a worker specification containing a queue allowlist and polling interval for each numeric process index.
 - [ ] 2.2 Start each `Delayed::Worker` with the worker specification while preserving `delayed_job.N` process names.
 - [ ] 2.3 Interleave worker specifications so each rolling restart batch retains realtime and asap capacity.
-- [ ] 2.4 Add worker-manager tests for production and small-environment allocation, filters, polling intervals, scale changes, invalid configuration, and restart batches.
+- [ ] 2.4 Add worker-manager tests for percentage allocation, whole-worker rounding, production and small-environment totals, filters, polling intervals, scale changes, invalid configuration, and restart batches.
 
 ## 3. Job routing
 
