@@ -34,12 +34,15 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
-  jsonSchemaResponseCallback?: (response: unknown) => string;
   currentLevelId?: string | null;
   sendDisabled?: boolean;
   onMessageSent?: () => void;
 
   lessonId?: number;
+
+  // Forwarded to submitChatContents, which invokes it once for a schema lab's
+  // response after that response has been logged.
+  onSchemaResponse?: (response: unknown) => void;
 
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
@@ -62,7 +65,6 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
-  jsonSchemaResponseCallback,
   currentLevelId,
   lessonId,
   levelName,
@@ -73,6 +75,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatDisabled,
   sendDisabled = false,
   onMessageSent,
+  onSchemaResponse,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const isWaitingForChatResponse = useAppSelector(
@@ -128,8 +131,8 @@ const UserChatMessageEditor: React.FunctionComponent<
               Object.values(userAddedSelectionContext).length > 0
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
-            jsonSchemaResponseCallback,
             lessonId,
+            onSchemaResponse,
           })
         );
         onMessageSent?.();
@@ -145,9 +148,9 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       userAddedSelectionContext,
-      jsonSchemaResponseCallback,
       lessonId,
       onMessageSent,
+      onSchemaResponse,
     ]
   );
 
