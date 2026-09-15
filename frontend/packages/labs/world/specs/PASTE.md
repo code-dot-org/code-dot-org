@@ -173,13 +173,28 @@ question a test should answer once, so the answers do not drift.
 - **The palette guard already covers piece 3's block types**, since every
   block a paste can carry is one the palette minted.
 
-## Order of work
+## What is built
 
-1. The shortcut (piece 1). Small, and it is the feature.
-2. The generator skipping disabled top blocks. One filter, needed before 3.
-3. The orphan plugin's second shape (piece 2), with its three reasons.
-4. The tests above, the variable one first because it is the one that could
-   say no to the whole design.
+All three pieces, in the order above (`blockly/pasteShortcut`,
+`blockly/misplacedBlocks`, and the filter in `BlocklyGenerator`), with the
+tests listed. Two things the building found:
+
+- **The lab's scoped variable field dropped the full-serialization flag.** Its
+  `saveState` override called the base class's with no argument, so a copy
+  carried the variable's id and not its name, and a paste into another file
+  declared the variable there under a name Blockly invented: `shot` arrived
+  as `i`. The flag goes through now, and the variable test is the one that
+  caught it — which is why it was listed first.
+- **The plugin reviews a ROOT and what hangs under it.** A row under a
+  definition is that definition's business, and an unattached row is the
+  orphan plugin's; what this one asks about is a root with no previous
+  connection, which is a definition or a hat. That kept the two plugins from
+  disagreeing about the same block.
+
+What the tests do not cover is the keypress itself — that Cmd+V in the
+browser reaches the shortcut with the workspace on screen — which is
+Blockly's plumbing and wants the wrapper's browser harness. The shortcut's
+own precondition, target and placement are covered without one.
 
 A context-menu "Paste" on the workspace is not in the list. Blockly's
 workspace menu has none, the keyboard is how every other editor pastes, and a

@@ -209,7 +209,13 @@ export const BlocklyGenerator = forwardRef<
         // `export const`, not an import of the module into itself.
         // Every top block: the rule root, and each `define trait` root beside
         // it (a trait's members chain below it, not inside the rule).
-        const topBlocks = workspace.getTopBlocks(true);
+        // Disabled roots are not there: an orphan, or a definition the
+        // misplaced-block plugin greyed out because this kind of file cannot
+        // hold it (`misplacedBlocks`). Both generate nothing, and a greyed
+        // `define actor` in a world must not stop the world compiling either.
+        const topBlocks = workspace
+          .getTopBlocks(true)
+          .filter(block => block.isEnabled());
         // What this file compiles to, decided by its NAME — a file's kind is a
         // property of the file, and no block may change it. Throws if one that
         // would is present (`fileKind`).
@@ -301,7 +307,7 @@ export const BlocklyGenerator = forwardRef<
           ? worldOwnPropertyDeclarations(ownWorld)
           : '';
 
-        const generated = workspace.getTopBlocks(true).map(block => ({
+        const generated = topBlocks.map(block => ({
           type: block.type,
           id: block.id,
           code: asString(

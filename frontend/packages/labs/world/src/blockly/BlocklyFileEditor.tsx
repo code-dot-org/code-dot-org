@@ -74,12 +74,18 @@ import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
 import {registerLessonButtons} from './lessonFlyoutButton';
 import {localizeBlocks, localizeText, localizeToolbox} from './localizeBlocks';
+import {
+  MisplacedBlocksPlugin,
+  setFileContext,
+  typesOffered,
+} from './misplacedBlocks';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {
   OPENABLE_EXTENSIONS,
   setModuleOpener,
   setModuleOpeningOffered,
 } from './openModule';
+import {PasteAcrossTabsPlugin} from './pasteShortcut';
 import {projectPlacements} from './placementRequests';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {setProjectImages} from './projectImages';
@@ -120,6 +126,12 @@ const plugins = [
   ToolboxTrashcanPlugin,
   ScrollOptionsPlugin,
   DisableOrphansPlugin,
+  // …and the orphan's second shape: a root this kind of file cannot hold,
+  // grey with a reason rather than compiled to nothing (`misplacedBlocks`).
+  MisplacedBlocksPlugin,
+  // A paste lands in the tab on screen, not the tab it was copied in
+  // (specs/PASTE.md).
+  PasteAcrossTabsPlugin,
   TriangleInputPlugin('Actor'),
   RectangleInputPlugin('Vector'),
   // The category list, drawn like the lab's other navigation (toolboxStyle).
@@ -1306,6 +1318,12 @@ export const BlocklyFileEditor = ({
         workspaceRef.current,
         filePath(currentSources.source, fileId)?.replace(/\.[^./]+$/, ''),
       );
+      // …and what kind of file, and what it offers, which is what says a
+      // block pasted here from another tab cannot be here (`misplacedBlocks`).
+      setFileContext(
+        workspaceRef.current,
+        fileKind ? {kind: fileKind, offered: typesOffered(toolbox)} : undefined,
+      );
       // …and now that the workspace knows which file it is, the blocks that
       // draw the actor they are about can say so. HERE rather than only on
       // creation, because a block is created before it is connected and a
@@ -1313,7 +1331,14 @@ export const BlocklyFileEditor = ({
       // of "what am I about" can come before there is anything to answer with.
       refreshActorPictures(workspaceRef.current);
     }
-  }, [ownRuleModule, ownActorModule, currentSources.source, fileId]);
+  }, [
+    ownRuleModule,
+    ownActorModule,
+    currentSources.source,
+    fileId,
+    fileKind,
+    toolbox,
+  ]);
 
   // Reload after a rename, once `blocks` carries the renamed member types —
   // BlocklyProvider registers them in its own effect, which runs before this one

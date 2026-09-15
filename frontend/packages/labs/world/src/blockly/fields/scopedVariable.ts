@@ -60,9 +60,15 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
    * whole chain: validation and the id-to-variable lookup are still the base
    * class's, and taking those over as well is what broke every rule that reads
    * a parameter.
+   *
+   * THE FLAG GOES THROUGH. A copy asks for full serialization — the name and
+   * the type beside the id — so that a paste into another file can declare
+   * the variable there (specs/PASTE.md). Dropped on the way to the base
+   * class, the pasted block named a variable the destination then invented a
+   * name for, and `shot` arrived as `i`.
    */
-  override saveState(): unknown {
-    return this.getValue() ? super.saveState() : NO_VARIABLE;
+  override saveState(doFullSerialization?: boolean): unknown {
+    return this.getValue() ? super.saveState(doFullSerialization) : NO_VARIABLE;
   }
 
   override loadState(state: unknown): void {
