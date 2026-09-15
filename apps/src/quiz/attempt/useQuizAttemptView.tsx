@@ -25,6 +25,22 @@ export default function useQuizAttemptView({
       unitId,
     });
 
+  const handleBeginAttempt = async () => {
+    try {
+      await beginAttempt();
+    } catch {
+      // Already recorded as a user-facing error in useQuizAttempt.
+    }
+  };
+
+  const handleFinishAttempt = async () => {
+    try {
+      await finishAttempt();
+    } catch {
+      // Already recorded as a user-facing error in useQuizAttempt.
+    }
+  };
+
   return {
     resourcePanelProps: {},
     workspaceContent: (
@@ -37,13 +53,19 @@ export default function useQuizAttemptView({
         )}
         {isLoading ? (
           <Typography variant="body2">Loading…</Typography>
+        ) : !unitId ? (
+          // Reachable via /levels/:id, which levelbuilder uses to preview a
+          // level outside any unit.
+          <Typography variant="body2">
+            Attempts are not tracked outside of a unit.
+          </Typography>
         ) : !attempt ? (
           <MuiButton
             variant="contained"
             color="primary"
             size="medium"
             type="button"
-            onClick={() => void beginAttempt()}
+            onClick={handleBeginAttempt}
           >
             Begin Quiz
           </MuiButton>
@@ -58,7 +80,7 @@ export default function useQuizAttemptView({
                 color="primary"
                 size="medium"
                 type="button"
-                onClick={() => void beginAttempt()}
+                onClick={handleBeginAttempt}
               >
                 Retake Quiz
               </MuiButton>
@@ -72,7 +94,7 @@ export default function useQuizAttemptView({
               color="primary"
               size="medium"
               type="button"
-              onClick={() => void finishAttempt()}
+              onClick={handleFinishAttempt}
             >
               Submit Quiz
             </MuiButton>

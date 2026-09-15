@@ -104,6 +104,7 @@ export default function useQuizAttempt({
       if (!attempt) {
         return;
       }
+      setError(null);
       try {
         await HttpClient.post(
           '/quiz_question_responses',
