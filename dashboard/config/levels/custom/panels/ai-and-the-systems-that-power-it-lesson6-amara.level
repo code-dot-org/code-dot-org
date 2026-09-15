@@ -1,0 +1,36 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-09-11T16:09:42.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Large-Animal Veterinarian",
+    "bubble_choice_description": "Amara travels to farms to track the health of entire herds",
+    "thumbnail_url": "https://images.code.org/a7bcf0674c174889902cedf21e0e9dcf-amara.jpg",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**Job**: Large-animal veterinarian who travels to farms and herding families\n\n**Purpose**: Tracking the health of hundreds of animals across dozens of farms. Sensor collars record each animal's temperature, movement, and location, and Amara needs a clinic computer that reads that data, flags animals that may be getting sick, and stores years of records.",
+        "imageUrl": "https://images.code.org/c1d51c107ba41ae4883213cd586788d2-amara-pane-1.jpg",
+        "key": "undefined-42e502a3-e175-46f1-b693-dc6455a6cdd6"
+      },
+      {
+        "text": "**Budget**: $900\n\nCovers the entire system, including the operating system and peripherals",
+        "imageUrl": "https://images.code.org/0600f566250eb6816897c67e3f2d5951-amara-pane-2.jpg",
+        "key": "undefined-ff576ae3-1788-4ada-b264-7238ac25cc64"
+      },
+      {
+        "text": "**Important Info**: Power in Amara's area goes out several times a week, and the clinic gets dusty. The computer has to keep working through both.\n\n**Preferences**:\n\n* Low power use, so a battery backup can keep it running during an outage\n* Solid state storage only, since there are no moving parts to damage\n* A case with dust filters she can remove and clean herself",
+        "imageUrl": "https://images.code.org/d10799242b4f21c7563269f78c1ae62d-amara-pane-3.jpg",
+        "key": "undefined-035ce7ea-43d7-45a0-8f29-87a9fa949a04",
+        "layout": "text-top-left"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-11 16:10:05 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-11 16:33:53 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

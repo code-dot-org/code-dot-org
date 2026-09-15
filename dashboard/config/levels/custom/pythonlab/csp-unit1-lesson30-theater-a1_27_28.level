@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Build your own\r\n\r\npaste in your variables and math calucations from level 2.\r\n\r\nGive AI Tutor your plan from level 1 and prompt it to build out your scene/cards",
+    "long_instructions": "# Build Your Own\r\n\r\n1. Paste your variables, math, and output code from Level 2 into workspace.\r\n2. Give AI Tutor your plan saved in your Backpack. Prompt it to build your Wrapped scene cards. Make sure you describe your cards, your colors, and what each one should show.\r\n3. Test it with your real variables. If something is off, such as text running over, wrong values, a card that doesn't match your plan, prompt the AI Tutor again to fix it.",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -32,9 +32,9 @@
     },
     "project_template_level_name": "csp-unit1-lesson30-theater-template-a_27_28",
     "display_name": "Build Your Own",
-    "bubble_choice_description": "Start from a blank Reveal and prompt the AI Tutor to bring your plan to life — full creative control, your design from scratch.",
+    "bubble_choice_description": "Start from a blank Wrapped scene and prompt the AI Tutor to bring your plan to life — full creative control, your design from scratch.",
     "thumbnail_url": "https://images.code.org/714643ff50de2ddc4f824844c49f746a-lightbulb.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-10T18:58:18.512+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-template-a_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-template-a_27_28\"},{\"changed_at\":\"2026-09-10 18:59:05 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:00:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 20:05:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-10T18:58:18.512+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson30-theater-template-a_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson30-theater-template-a_27_28\"},{\"changed_at\":\"2026-09-10 18:59:05 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 19:00:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-10 20:05:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-12 02:03:45 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
