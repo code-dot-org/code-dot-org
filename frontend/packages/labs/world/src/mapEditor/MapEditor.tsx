@@ -15,6 +15,8 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {projectActorIcons} from '../blockly/actorIconMeta';
+import {actorIconImage} from '../blockly/actorIcons';
 import {placementKey} from '../blockly/mapPlacements';
 import {
   projectActorOptions,
@@ -90,6 +92,23 @@ export const MapEditor = ({
   const [scales, setScales] = useState<Record<string, {x: number; y: number}>>(
     {},
   );
+  /**
+   * …and how big particular placements are, for the ones drawn on their own
+   * — a Label made wider than its kind (`ThumbnailsReadyMessage.placementSizes`).
+   */
+  const [placementSizes, setPlacementSizes] = useState<
+    Record<string, {width: number; height: number}>
+  >({});
+  /**
+   * Which symbol each kind elected, read out of the files. Read here rather
+   * than from the registry the Blockly editor fills (`setActorIcons`), since
+   * a map may be the first tab opened and the registry is empty until a
+   * Blockly file has been.
+   */
+  const icons = useMemo(() => projectActorIcons(files), [files]);
+  /** What the palette draws for a kind: its elected symbol, else its picture. */
+  const pictureOf = (path: string): string | undefined =>
+    actorIconImage(icons[path] ?? '') ?? thumbnails[path];
   // The picker template to PLACE; null is the stage's select mode.
   const [selected, setSelected] = useState<string | null>(null);
 
@@ -161,6 +180,7 @@ export const MapEditor = ({
     void infoFn.current(paths, worldPath, placements).then(info => {
       if (alive) {
         setThumbnails(prev => ({...prev, ...info.placements}));
+        setPlacementSizes(prev => ({...prev, ...info.placementSizes}));
       }
     });
     return () => {
@@ -247,12 +267,15 @@ export const MapEditor = ({
                 is the lab's default backdrop used as a dark neutral, which
                 reads for most drawings and cannot read for all of them — a
                 black-lettered Label needs a light ground and will not get one.
-                That is what the elected icon is for (specs/UI_ACTORS.md). */}
+                That is what the elected icon is for (specs/UI_ACTORS.md) —
+                and a kind that elected one wears it here, as it does in every
+                other picker, because a picker's question is WHICH KIND and an
+                interface actor's picture is its content, not its kind. */}
             <span
               className={styles.thumb}
               style={{background: DEFAULT_BACKDROP_COLOR}}
             >
-              {thumbnails[path] && <img src={thumbnails[path]} alt="" />}
+              {pictureOf(path) && <img src={pictureOf(path)} alt="" />}
             </span>
             <span className={styles.name}>{name}</span>
           </button>
@@ -265,6 +288,7 @@ export const MapEditor = ({
         thumbnails={thumbnails}
         schemas={schemas}
         sizes={sizes}
+        placementSizes={placementSizes}
         scales={scales}
         isReadOnly={isReadOnly}
         visible={visible}

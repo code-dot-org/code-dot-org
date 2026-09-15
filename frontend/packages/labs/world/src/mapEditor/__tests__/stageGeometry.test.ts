@@ -8,11 +8,13 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {placementKey} from '../../blockly/mapPlacements';
 import type {Placement, Transform, View} from '../mapModel';
 import {
   drawnSize,
   fitView,
   hitTest,
+  placementSize,
   MAX_SCALE,
   MIN_HIT_SIZE,
   MIN_SCALE,
@@ -142,6 +144,47 @@ describe('drawnSize', () => {
       height: 32,
     });
   });
+
+  it('is the placement’s own size when it was made one', () => {
+    // A Label made 200 wide in the inspector is a 200-wide Label in the game,
+    // and was drawn at the kind's 96 here — which is what made the inspector's
+    // width field look inert.
+    const sizes = {'actors/label': {width: 96, height: 24}};
+    expect(drawnSize(sizes, 'actors/label', {width: 200, height: 24})).toEqual({
+      width: 200,
+      height: 24,
+    });
+    expect(
+      drawnSize(undefined, 'actors/label', {width: 200, height: 24}),
+    ).toEqual({width: 200, height: 24});
+  });
+});
+
+describe('placementSize', () => {
+  const sizes = {'actors/label': {width: 96, height: 24}};
+
+  it('is the kind’s size for a placement that overrides nothing', () => {
+    const plain = at('a', 100, 100, {}, 'actors/label');
+    expect(placementSize(plain, sizes)).toEqual({width: 96, height: 24});
+    expect(placementSize(plain, sizes, {})).toEqual({width: 96, height: 24});
+  });
+
+  it('is its own size for a placement that has one, by its key', () => {
+    const wide: Placement = {
+      type: 'actors/label',
+      id: 'w',
+      properties: {
+        positional: {position: {x: 100, y: 100}},
+        Label: {width: 200},
+      },
+    };
+    const key = placementKey(wide.type, wide.properties)!;
+    expect(
+      placementSize(wide, sizes, {[key]: {width: 200, height: 24}}),
+    ).toEqual({width: 200, height: 24});
+    // …and the kind's until the sandbox has answered for it.
+    expect(placementSize(wide, sizes, {})).toEqual({width: 96, height: 24});
+  });
 });
 
 describe('toLocalFrame', () => {
@@ -267,6 +310,26 @@ describe('hitTest', () => {
   it('cannot hit an actor with no position', () => {
     const ghost: Placement = {type: 'actors/coin', id: 'g', properties: {}};
     expect(hitTest([ghost], {x: 0, y: 0}, undefined)).toBeUndefined();
+  });
+
+  it('reaches as far as the placement was made, not as far as its kind', () => {
+    // The same box the placement is drawn in: a Label made 200 wide is
+    // clickable across all 200, and the kind's 96 would miss its ends.
+    const sizes = {'actors/label': {width: 96, height: 24}};
+    const wide: Placement = {
+      type: 'actors/label',
+      id: 'w',
+      properties: {
+        positional: {position: {x: 100, y: 100}},
+        Label: {width: 200},
+      },
+    };
+    const key = placementKey(wide.type, wide.properties)!;
+    const own = {[key]: {width: 200, height: 24}};
+    expect(hitTest([wide], {x: 190, y: 100}, sizes)).toBeUndefined();
+    expect(hitTest([wide], {x: 190, y: 100}, sizes, undefined, own)?.id).toBe(
+      'w',
+    );
   });
 });
 

@@ -108,6 +108,12 @@ export interface MapStageProps {
    */
   sizes?: Record<string, {width: number; height: number}>;
   /**
+   * How big particular PLACEMENTS are, by `placementKey`, for the ones that
+   * override anything — since what they override may be their width and
+   * height (`ThumbnailsReadyMessage.placementSizes`).
+   */
+  placementSizes?: Record<string, {width: number; height: number}>;
+  /**
    * What each kind scales itself by, for the kinds that say.
    *
    * The default a placement's own `positional.scale` falls back to: a
@@ -145,6 +151,7 @@ export const MapStage = ({
   thumbnails,
   schemas,
   sizes,
+  placementSizes,
   scales,
   isReadOnly,
   visible = STANDARD_WINDOW,
@@ -301,13 +308,14 @@ export const MapStage = ({
 
   // How big a kind is drawn — the size the outline hugs and the hit test
   // reaches for (`stageGeometry.drawnSize`).
-  const sizeOf = (type: string) => drawnSize(sizes, type);
+  const sizeOf = (type: string, placement?: string) =>
+    drawnSize(sizes, type, placement ? placementSizes?.[placement] : undefined);
 
   // The topmost placed actor under a world point, through each one's own
   // transform (`stageGeometry.hitTest`). Reads the ref rather than the state
   // so a gesture mid-drag sees the position it just wrote.
   const hitUnder = (world: Vec): Placement | undefined =>
-    hitTest(mapRef.current.actors, world, sizes, scales);
+    hitTest(mapRef.current.actors, world, sizes, scales, placementSizes);
 
   // Live-patch a placed actor's `owner.prop` override (local only — a drag or
   // field edit commits once on release / blur).
@@ -1104,19 +1112,23 @@ export const MapStage = ({
       ctx.rotate(t.rotation * DEG2RAD);
       ctx.scale(t.scale.x, t.scale.y);
       const image = (placement && images[placement]) ?? images[type];
-      const box = sizeOf(type);
+      const box = sizeOf(type, placement);
+      // Whether anything measured this: the placement itself, or its kind.
+      const measured =
+        (placement && placementSizes?.[placement]) ?? sizes?.[type];
       if (image) {
-        // At the kind's DECLARED size when it has one, so a 64-by-8 bar is two
-        // tiles wide beside a 32-pixel player rather than fitted into the same
+        // At the DECLARED size when there is one — the placement's own where
+        // it was made a size, else its kind's — so a 64-by-8 bar is two tiles
+        // wide beside a 32-pixel player rather than fitted into the same
         // square as everything else. A kind that declares none falls back to
         // the nominal tile, at the thumbnail's own aspect — a sprite's
         // thumbnail is square, so nothing changes for one, and a drawn actor
         // without a size would still not be squashed (`drawingThumbnail`).
         const longest = Math.max(image.width, image.height) || 1;
-        const width = sizes?.[type]
+        const width = measured
           ? box.width
           : (image.width / longest) * DRAW_SIZE;
-        const height = sizes?.[type]
+        const height = measured
           ? box.height
           : (image.height / longest) * DRAW_SIZE;
         ctx.drawImage(image, -width / 2, -height / 2, width, height);
@@ -1131,16 +1143,21 @@ export const MapStage = ({
     // sprite uses (translate → skew → rotate), so it tracks the visible shape.
     // Scale is folded into the box size, not the context, so the stroke stays a
     // constant 2 screen px at any zoom.
-    const strokeActorBox = (t: Transform, color: string, type: string) => {
+    const strokeActorBox = (
+      t: Transform,
+      color: string,
+      type: string,
+      placement?: string,
+    ) => {
       ctx.save();
       ctx.translate(t.pos.x, t.pos.y);
       if (t.skew) {
         ctx.transform(1, Math.tan(t.skew * DEG2RAD), 0, 1, 0, 0);
       }
       ctx.rotate(t.rotation * DEG2RAD);
-      // The kind's own size, so an outline hugs what is drawn rather than the
-      // square everything used to be — and the same box the hit test uses.
-      const box = sizeOf(type);
+      // The size it is drawn at, so an outline hugs what is drawn rather than
+      // the square everything used to be — and the same box the hit test uses.
+      const box = sizeOf(type, placement);
       const hw = (box.width * Math.abs(t.scale.x)) / 2 + 3 / view.scale;
       const hh = (box.height * Math.abs(t.scale.y)) / 2 + 3 / view.scale;
       ctx.strokeStyle = color;
@@ -1186,23 +1203,30 @@ export const MapStage = ({
     };
     let selectedTransform: Transform | null = null;
     let selectedType = '';
+    let selectedKey: string | undefined;
     let hoveredTransform: Transform | null = null;
     let hoveredType = '';
+    let hoveredKey: string | undefined;
     const transformById = new Map<string, Transform>();
+    const keyById = new Map<string, string | undefined>();
     for (const actor of map.actors) {
       if (!positionOf(actor)) {
         continue;
       }
       const t = transformOf(actor, scales?.[actor.type]);
-      drawSprite(actor.type, t, 1, placementKey(actor.type, actor.properties));
+      const key = placementKey(actor.type, actor.properties);
+      drawSprite(actor.type, t, 1, key);
       transformById.set(actor.id, t);
+      keyById.set(actor.id, key);
       if (actor.id === selectedId) {
         selectedTransform = t;
         selectedType = actor.type;
+        selectedKey = key;
       }
       if (actor.id === hoveredId) {
         hoveredTransform = t;
         hoveredType = actor.type;
+        hoveredKey = key;
       }
     }
     // Hover highlight (a lighter outline), drawn under the selection outline and
@@ -1215,6 +1239,7 @@ export const MapStage = ({
         hoveredTransform,
         picking ? REFERENCE : HOVER,
         hoveredType,
+        hoveredKey,
       );
     }
     // What the selected actor POINTS AT, before its own outline so that an
@@ -1233,12 +1258,13 @@ export const MapStage = ({
           target,
           REFERENCE,
           map.actors.find(one => one.id === link.targetId)?.type ?? '',
+          keyById.get(link.targetId),
         );
         strokeLink(selectedTransform.pos, target.pos, link.name);
       }
     }
     if (selectedTransform) {
-      strokeActorBox(selectedTransform, SELECT, selectedType);
+      strokeActorBox(selectedTransform, SELECT, selectedType, selectedKey);
     }
     if (selected && hover) {
       drawSprite(

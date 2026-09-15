@@ -29,6 +29,8 @@ export interface ActorInfo {
   scales: Record<string, {x: number; y: number}>;
   /** One per requested placement key — see `PlacementRequest`. */
   placements: Record<string, string>;
+  /** How big each requested placement is, by the same key. */
+  placementSizes: Record<string, {width: number; height: number}>;
 }
 
 export interface PreviewManagerOptions {
@@ -91,6 +93,7 @@ export class WorldPreviewManager {
           sizes: data.sizes ?? {},
           scales: data.scales ?? {},
           placements: data.placements ?? {},
+          placementSizes: data.placementSizes ?? {},
         });
         this.pending.delete(data.id);
         break;

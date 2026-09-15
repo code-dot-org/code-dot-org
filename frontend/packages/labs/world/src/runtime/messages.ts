@@ -340,6 +340,14 @@ export interface ThumbnailsReadyMessage {
   scales: Record<string, {x: number; y: number}>;
   /** One per requested placement key, for the editors that draw placements. */
   placements: Record<string, string>;
+  /**
+   * How big each requested placement is, by the same key — `sizes` for a
+   * placement rather than a kind. A placement earns a key by overriding
+   * something, and `width` and `height` are among what it may override, so
+   * the kind's size is wrong for exactly the placements listed here. Absent
+   * for one nobody could measure, as `sizes` is.
+   */
+  placementSizes: Record<string, {width: number; height: number}>;
 }
 
 /** The samples a check produced, for the lab to judge. */

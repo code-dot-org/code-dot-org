@@ -33,6 +33,7 @@ import {
   type ReloadMode,
   type ToPreview,
 } from '../messages';
+import {applyPlacementOverrides} from '../placementOverrides';
 import {playCheck} from '../playCheck';
 
 // Properties the engine models but the editor defers: applied by the engine yet
@@ -294,36 +295,6 @@ export async function start(): Promise<void> {
       ? drawingThumbnail(state.drawing, assetBase, lastAssets, THUMBNAIL_SIZE)
       : frameThumbnail(state.frame, assetBase, lastAssets, THUMBNAIL_SIZE);
 
-  /**
-   * Put a placement's overrides onto the actor drawn for it.
-   *
-   * By the same `${ownerId}.${propId}` path a `.map` names them by, resolved
-   * against the actor's OWN traits rather than against the world's rules —
-   * which is the same lookup `WorldBuilder.loadMap` does, narrowed to the one
-   * actor that is about to be drawn. A path the actor has no slot for is
-   * skipped: a placement saved against a rule the project has since dropped is
-   * a picture to draw anyway, not an error to raise.
-   */
-  function applyOverrides(
-    actor: Actor,
-    properties: Record<string, Record<string, unknown>>,
-  ): void {
-    const slots = new Map<string, Property>();
-    for (const trait of actor.traits()) {
-      for (const property of Object.values(trait.properties)) {
-        slots.set(`${property.ownerId}.${property.id}`, property);
-      }
-    }
-    for (const [ownerId, values] of Object.entries(properties)) {
-      for (const [propId, value] of Object.entries(values)) {
-        const property = slots.get(`${ownerId}.${propId}`);
-        if (property) {
-          actor.set(property, value as never);
-        }
-      }
-    }
-  }
-
   async function sendThumbnails(
     id: string,
     moduleUrl: string,
@@ -338,6 +309,11 @@ export async function start(): Promise<void> {
     // big it is drawn and which only the reader can combine (`messages`).
     const scales: Record<string, {x: number; y: number}> = {};
     const placements: Record<string, string> = {};
+    // …and how big each requested placement is, since the overrides that
+    // earned it a picture of its own may be its `width` and `height`
+    // (specs/UI_ACTORS.md, "A size is a property"). The kind's size is wrong
+    // for exactly the placements that have a key.
+    const placementSizes: Record<string, {width: number; height: number}> = {};
     try {
       const mod: ThumbnailManifest = await import(/* @vite-ignore */ moduleUrl);
       const manifest = mod.default;
@@ -384,7 +360,7 @@ export async function start(): Promise<void> {
           const actor = builder.instantiate(`place:${request.key}`);
           world.useActorKind(actor.type, builder);
           world.addActor(actor);
-          applyOverrides(actor, request.properties);
+          applyPlacementOverrides(actor, request.properties);
           placedFor.set(actor, request.key);
         }
         // NOT TICKED, and it is worth saying why since the obvious fix is to.
@@ -399,6 +375,10 @@ export async function start(): Promise<void> {
           const placementKey = placedFor.get(state.actor);
           if (placementKey) {
             placements[placementKey] = await pictureOf(state);
+            const size = world.sizeOf(state.actor);
+            if (size) {
+              placementSizes[placementKey] = size;
+            }
             continue;
           }
           const type = typeOf.get(state.actor);
@@ -438,6 +418,7 @@ export async function start(): Promise<void> {
       sizes,
       scales,
       placements,
+      placementSizes,
     });
   }
 

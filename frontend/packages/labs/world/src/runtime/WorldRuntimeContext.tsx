@@ -489,6 +489,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
         sizes: {},
         scales: {},
         placements: {},
+        placementSizes: {},
       };
     }
     // Thumbnails are decoration, and generation can now refuse a file outright
@@ -517,6 +518,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
         sizes: {},
         scales: {},
         placements: {},
+        placementSizes: {},
       };
     }
     const entry = '__thumbnails__.js';

@@ -13,6 +13,8 @@
 // that is a number. A test asks the same questions of the same functions,
 // which is what makes the answers the stage draws worth trusting.
 
+import {placementKey} from '../blockly/mapPlacements';
+
 import {
   positionOf,
   transformOf,
@@ -180,8 +182,30 @@ export type KindScales = Record<string, Vec> | undefined;
 export const drawnSize = (
   sizes: KindSizes,
   type: string,
+  /**
+   * This placement's own size, where it has one — a Label made wider than
+   * its kind is drawn, outlined and hit at the width it was made
+   * (`ThumbnailsReadyMessage.placementSizes`). Wins over the kind's outright,
+   * as an override does in the game.
+   */
+  own?: {width: number; height: number},
 ): {width: number; height: number} =>
-  sizes?.[type] ?? {width: DRAW_SIZE, height: DRAW_SIZE};
+  own ?? sizes?.[type] ?? {width: DRAW_SIZE, height: DRAW_SIZE};
+
+/** Sizes of particular placements, by `placementKey` — see `drawnSize`. */
+export type PlacementSizes =
+  | Record<string, {width: number; height: number}>
+  | undefined;
+
+/** The size a placement is drawn at: its own if it has one, else its kind's. */
+export const placementSize = (
+  actor: Placement,
+  sizes: KindSizes,
+  placementSizes: PlacementSizes = undefined,
+): {width: number; height: number} => {
+  const key = placementKey(actor.type, actor.properties);
+  return drawnSize(sizes, actor.type, key ? placementSizes?.[key] : undefined);
+};
 
 /**
  * A world point in an actor's own frame — where it would be if the actor were
@@ -218,6 +242,7 @@ export function hitTest(
   world: Vec,
   sizes: KindSizes,
   scales: KindScales = undefined,
+  placementSizes: PlacementSizes = undefined,
 ): Placement | undefined {
   for (let i = actors.length - 1; i >= 0; i--) {
     const actor = actors[i];
@@ -225,7 +250,7 @@ export function hitTest(
       continue;
     }
     const local = toLocalFrame(world, transformOf(actor, scales?.[actor.type]));
-    const box = drawnSize(sizes, actor.type);
+    const box = placementSize(actor, sizes, placementSizes);
     const hw = Math.max(box.width, MIN_HIT_SIZE) / 2;
     const hh = Math.max(box.height, MIN_HIT_SIZE) / 2;
     if (Math.abs(local.x) <= hw && Math.abs(local.y) <= hh) {

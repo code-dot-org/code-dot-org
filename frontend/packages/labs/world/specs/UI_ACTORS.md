@@ -629,6 +629,31 @@ and which is deliberately not being answered yet. Until it is, a dialog is a
 Panel placed behind a handful of interface actors, and moving it does not move
 them.
 
+**Tried, on the Interface Kit, and three things were wrong** — each a claim
+this document made that turned out to be about the game and not the editor:
+
+- **A placement was drawn as its kind.** The sandbox draws a placement by
+  instantiating its kind and setting its overrides, and looked each one up in
+  the actor's TRAITS. A Label's `text` belongs to no trait, so every Label on
+  a map drew the kind's default words; the game had the same hole and had
+  already closed it (`World.loadMap`). One lookup, shared now
+  (`runtime/placementOverrides`).
+- **A placement was drawn, outlined and hit at its kind's size.** The sandbox
+  published a size per kind and nothing per placement, so a Label made 200
+  wide in the inspector was a 200-wide Label in the game and a 96-wide one on
+  the canvas — which made the width field look inert. A placement that earns
+  a picture of its own earns its size with it
+  (`ThumbnailsReadyMessage.placementSizes`), and the stage asks for the
+  placement's before the kind's.
+- **The palette drew the thumbnail.** Every other picker asks for the
+  elected symbol first and the picture second; this one asked for the
+  picture alone, and a Label's picture is its content. It asks in the same
+  order now, reading the icons out of the files rather than the registry the
+  Blockly editor fills, since a map may be the first tab opened.
+
+What remains true is the coarse thing: positions snap to tile centres unless
+Alt frees them, and a form is not laid out on a 32-pixel grid.
+
 ## The interface layer, restated rather than re-derived
 
 ```
