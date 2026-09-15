@@ -115,14 +115,13 @@ describe('define drawing', () => {
   });
 
   it('lives where an actor is described, and nowhere else', () => {
-    // A drawing belongs to a KIND of actor, and both places one can be
-    // described are here: its own file, and a world that defines it locally.
+    // A drawing belongs to a KIND of actor, and a kind is an actor file.
     //
     // Not a rule or a behavior: those are shared mechanics, and how a
-    // particular actor looks is the one thing that is not shared.
+    // particular actor looks is the one thing that is not shared. Not a world
+    // any more either: the actors a world once described for itself are files.
     expect([...(ROOT_HOMES.get('world_define_drawing') ?? [])]).toEqual([
       'actor',
-      'world',
     ]);
   });
 });

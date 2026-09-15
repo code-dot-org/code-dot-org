@@ -77,16 +77,19 @@ describe('which definition roots a file may hold', () => {
   });
 
   it('offers `each frame` wherever there is an owner to name', () => {
-    // Three readings, all the same sentence about whoever owns it: a trait's
-    // member in a `.rule`, a kind's own work in an `.actor`, and that same
-    // work inside a world's own `define actor`.
-    //
-    // The third was missing, and it read as a health bar that never moved —
-    // an actor a world defines could do no per-frame work, so an actor that
-    // had to look at something each frame had to be a file.
+    // Two readings, both the same sentence about whoever owns it: a trait's
+    // member in a `.rule`, and a kind's own work in an `.actor`. A world
+    // once had a third, for the actors it defined itself, and has nothing
+    // for a step to be about now.
     expect(offeredTypes('actor')).toContain('world_trait_step');
     expect(offeredTypes('rule')).toContain('world_trait_step');
-    expect(offeredTypes('world')).toContain('world_trait_step');
+    expect(offeredTypes('world')).not.toContain('world_trait_step');
+  });
+
+  it('offers `define drawing` to an actor file alone', () => {
+    expect(offeredTypes('actor')).toContain('world_define_drawing');
+    expect(offeredTypes('world')).not.toContain('world_define_drawing');
+    expect(offeredTypes('rule')).not.toContain('world_define_drawing');
   });
 
   it('gives `each frame` one shape, in every kind of file', () => {

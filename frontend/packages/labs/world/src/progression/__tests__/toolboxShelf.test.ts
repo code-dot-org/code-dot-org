@@ -248,28 +248,37 @@ const before = (id: TileId): TileId[] => {
   return done;
 };
 
-/** The toolbox a learner sees while doing a lesson, having done its run-up. */
+/**
+ * The toolbox a learner sees while doing a lesson, having done its run-up.
+ *
+ * Across BOTH kinds of tab the lesson opens: the world, and the actors it
+ * places, each a file of its own. An instruction that says "under define
+ * actor ⟨Hero⟩" sends the learner to the Hero's tab, whose toolbox is an
+ * actor file's — `each frame` is offered there and not in the world's.
+ */
 const offeredAt = (id: TileId): Set<string> => {
   const files = projectFiles(LESSONS[id]!.source);
-  const {toolbox} = buildDomainPalette(projectRuleMetas(files), {
-    fileKind: 'world',
-  });
   // The run-up done, and this lesson open — which is what lends a learner the
   // block their own instructions send them to find (`shelfKeys`).
   const keys = shelfKeys(new Set(before(id)), id);
   const granted = new Set(GRANTED_BY.keys());
-  const shown = shelvedToolbox(toolbox, {
-    holds: unlock => heldBy(keys, granted, unlock),
-  }) as {blocks?: unknown[]}[];
-  return new Set(
-    shown.flatMap(category =>
-      (category.blocks ?? [])
-        .map(item =>
-          typeof item === 'string' ? item : (item as {type?: string}).type,
-        )
-        .filter((type): type is string => typeof type === 'string'),
-    ),
-  );
+  const offered = new Set<string>();
+  for (const fileKind of ['world', 'actor'] as const) {
+    const {toolbox} = buildDomainPalette(projectRuleMetas(files), {fileKind});
+    const shown = shelvedToolbox(toolbox, {
+      holds: unlock => heldBy(keys, granted, unlock),
+    }) as {blocks?: unknown[]}[];
+    for (const category of shown) {
+      for (const item of category.blocks ?? []) {
+        const type =
+          typeof item === 'string' ? item : (item as {type?: string}).type;
+        if (typeof type === 'string') {
+          offered.add(type);
+        }
+      }
+    }
+  }
+  return offered;
 };
 
 const written = Object.keys(LESSONS) as TileId[];

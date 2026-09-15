@@ -71,21 +71,19 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // kind of actor does.
   //
   // IT MUST BE INSIDE A `define actor` in the second, and its generator
-  // writes nothing when it is not (`worldTraitStep`). That is what keeps a
-  // step from emitting a call on an `actor` that is not
-  // bound, which would stop the whole project compiling; in an `.actor` file
-  // it is what makes an unattached step say so — grayed by
-  // `DisableOrphansPlugin` rather than quietly compiled from nowhere.
-  ['world_trait_step', new Set<FileKind>(['actor', 'rule', 'world'])],
+  // writes nothing when it is not (`worldTraitStep`); an unattached step is
+  // grayed by `DisableOrphansPlugin` rather than quietly compiled from
+  // nowhere. Not a world: it was offered there for the actors a world once
+  // defined for itself, and a world holds no `define actor` now.
+  ['world_trait_step', new Set<FileKind>(['actor', 'rule'])],
   // A drawing belongs to a KIND of actor, and a kind is what an `.actor` file
   // is. Not a rule: a rule is a shared mechanic, and how a particular actor
-  // looks is the one thing that is not shared — an actor that
-  // wants somebody else's picture already has `set sprite` (specs/DRAWING.md).
-  // A world may describe its OWN actors' pictures too, chained inside the
-  // `define actor` that owns them. A ROW under that definition in both homes
-  // now, so this entry says which files may hold one rather than which give it
-  // a root's shape (`domainBlocks.worldDefineDrawing`).
-  ['world_define_drawing', new Set<FileKind>(['actor', 'world'])],
+  // looks is the one thing that is not shared — an actor that wants somebody
+  // else's picture already has `set sprite` (specs/DRAWING.md). Not a world
+  // either, since the actors a world once described for itself are files.
+  // A ROW under `define actor`, so this entry says which files may hold one
+  // rather than which give it a root's shape (`domainBlocks.worldDefineDrawing`).
+  ['world_define_drawing', new Set<FileKind>(['actor'])],
   // A tween is defined where it is used — an actor's in its own file, a
   // world's in the world — and referenced by the defining block's id. A file
   // of shared ones is the same axis an actor sits on and is not built yet.

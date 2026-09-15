@@ -2002,6 +2002,9 @@ export const TILES: readonly Tile[] = [
     unlocks: [
       {kind: 'rule', id: 'zaps'},
       {kind: 'rule', id: 'expires'},
+      // …and something to send: the library's bullet, for a shooter that has
+      // none of its own yet.
+      {kind: 'actor', id: 'shot'},
     ],
     check: {
       kind: 'outcome',
