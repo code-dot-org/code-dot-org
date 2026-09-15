@@ -105,6 +105,32 @@ def test_a_handler_can_change_a_label(monkeypatch):
   assert greeting["text"] == "You pressed it!"
 
 
+def test_a_handler_can_count_its_own_presses(monkeypatch):
+  # The shape the README leads with: a handler carrying state from one press to
+  # the next, rather than setting the same text every time.
+  published = install_fake_bridge(monkeypatch, events=["go", "go", "go"])
+  presses = 0
+
+  def count_press():
+    nonlocal presses
+    presses += 1
+    kiosk.set_text("counter", f"Presses: {presses}")
+
+  kiosk.add_label("counter", "Presses: 0", 5, 10)
+  kiosk.add_button("go", "Press me", 5, 25)
+  kiosk.on_click("go", count_press)
+  kiosk.start()
+
+  counts = [scene["elements"][0]["text"] for scene in published]
+  assert counts == [
+    "Presses: 0",  # the label, before the button was added
+    "Presses: 0",  # the button joining it
+    "Presses: 1",
+    "Presses: 2",
+    "Presses: 3",
+  ]
+
+
 def test_a_press_with_no_handler_is_ignored(monkeypatch):
   install_fake_bridge(monkeypatch, events=["go"])
 

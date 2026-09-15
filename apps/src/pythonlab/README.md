@@ -41,6 +41,12 @@ isolation goal Web Lab 2 already solves for student HTML/JS (see
 `pyodideWebWorker.ts` itself is unaware of any of this -- it only talks
 to whatever page creates it
 
+`pyodideWorkerManager.ts` is the pre-sandbox path and is on its way out, so
+newer message types are not added to it. The theater and kiosk mini apps are
+handled only by `pyodideSandboxManager.ts`, which means their output reaches
+the page only when the sandbox is on -- see "How to run locally" below for
+turning it on in development.
+
 ## When the sandbox domain is blocked
 
 The sandbox domain is separate from `code.org`, so a firewall or browser

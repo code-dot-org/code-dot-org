@@ -8,13 +8,17 @@ keeps running: what the student sees can send something back.
 ```python
 import kiosk
 
-kiosk.add_label("greeting", "Hello", 5, 10)
+presses = 0
+
+kiosk.add_label("counter", "Presses: 0", 5, 10)
 kiosk.add_button("go", "Press me", 5, 25)
 
-def on_go():
-    kiosk.set_text("greeting", "You pressed it!")
+def count_press():
+    global presses
+    presses += 1
+    kiosk.set_text("counter", f"Presses: {presses}")
 
-kiosk.on_click("go", on_go)
+kiosk.on_click("go", count_press)
 kiosk.start()
 ```
 
