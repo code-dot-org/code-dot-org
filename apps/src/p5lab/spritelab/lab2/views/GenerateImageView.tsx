@@ -95,7 +95,23 @@ export interface NewImageDraft {
   style: ImageStyle;
 }
 
-interface GenerateImageViewProps {
+/** Level and session choices the image dialog forwards to the generate
+    view unchanged. */
+export interface GenerateImageViewOptions {
+  /** Level-imposed type for new images; the Type choice is locked to it. */
+  lockedImageType?: ImageType;
+  /** Offer this tier of adlib prompt combos (student form only). */
+  adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: hide the free-text box. */
+  adlibOnly?: boolean;
+  /** Style the form starts on for new images (default smooth). */
+  defaultStyle?: ImageStyle;
+  /** A generation request is leaving; fires before the model call, so the
+      caller can stamp what the eventual result belongs to. */
+  onGenerateStart?: () => void;
+}
+
+interface GenerateImageViewProps extends GenerateImageViewOptions {
   /** Set for an existing image; absent when generating a brand-new one. */
   existing?: {
     generation?: ImageGenerationMetadata;
@@ -123,21 +139,10 @@ interface GenerateImageViewProps {
   };
   /** Open the paint editor on a blank canvas instead of generating. */
   onPaintManually?: (draft: NewImageDraft) => void;
-  /** Level-imposed type for new images; the Type choice is locked to it. */
-  lockedImageType?: ImageType;
   /** Show the full internal form. The default student form has no name
       field (new images name themselves), no Start from, no temperature,
       and Paint manually moves from the footer into the blank image area. */
   advanced?: boolean;
-  /** Offer this tier of adlib prompt combos (student form only). */
-  adlibSet?: ImageAdlibSet;
-  /** The adlib is the only prompt input: hide the free-text box. */
-  adlibOnly?: boolean;
-  /** Style the form starts on for new images (default smooth). */
-  defaultStyle?: ImageStyle;
-  /** A generation request is leaving; fires before the model call, so the
-      caller can stamp what the eventual result belongs to. */
-  onGenerateStart?: () => void;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
