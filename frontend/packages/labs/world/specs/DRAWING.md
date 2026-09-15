@@ -268,6 +268,16 @@ nothing for an actor without one. A drawn actor has a routine to run, so the
 palette entry is the picture rather than a blank — which is the missing piece
 UI_ACTORS.md listed and could not solve for a Label.
 
+**A picture without the engine.** A routine may read and may not set, and its
+vocabulary is closed, so a file's `define drawing` can be READ rather than
+run: resolve each property against the declared default, the file's own `set`
+rows and whatever a placement overrides, and hand the commands to the same
+painter (`actors/preview/drawingReader`). The import dialog previews a stock
+actor that way before it is in any project, and the map editor paints a
+placement that way on the keystroke, with no compile between the edit and
+the picture (`mapEditor/localPictures`). The reader says when it met a block
+it does not know, and whoever has a sandbox prefers the sandbox for those.
+
 ## What it takes
 
 1. **`DrawCommand`** — a discriminated union in `engine/core`, and

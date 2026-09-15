@@ -667,10 +667,17 @@ imports its maps, and the compile is content-addressed. Two changes:
   typing: the stage reports the document under edit and the editor asks a
   breath after the last keystroke.
 
-What is not built is a picture that needs no sandbox at all — the actor drawn
-from its file, in the editor's own window, which `actors/preview` already does
-for the import dialog and could do here for a placement. That is the next
-step if a round trip while typing is not live enough.
+**And the picture that needs no sandbox at all — built.** The reader the
+import dialog used for a stock actor's preview was widened to any project
+actor and to a placement's overrides (`actors/preview/drawingReader`), and
+the map editor paints with it in its own window, on the keystroke
+(`mapEditor/localPictures`). It works because a `define drawing` cannot SET
+anything: it reads properties and emits shapes, so reading the rows against
+the placement's values is running it. The reader says whether it met a block
+it did not know — the Text Input's caret reads the time — and the sandbox is
+asked only for those, and for kinds that wear a picture. The inspector also
+stops offering `sprite` and `animation` for a kind that draws itself, since a
+drawing makes them inert.
 
 What remains true is the coarse thing: positions snap to tile centres unless
 Alt frees them, and a form is not laid out on a 32-pixel grid.

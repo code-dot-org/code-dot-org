@@ -69,6 +69,9 @@ import {
   type Remembered,
 } from './stageGeometry';
 
+/** What the stage can blit: a decoded thumbnail, or a canvas painted here. */
+type Picture = HTMLImageElement | HTMLCanvasElement;
+
 const OUTSIDE_BG = '#0b0b12'; // the space beyond the map
 const MAP_BG = '#151521'; // the map region itself
 const GRID = 'rgba(255, 255, 255, 0.07)';
@@ -106,6 +109,12 @@ export interface MapStageProps {
   placing: string | null;
   /** Sandbox-rendered thumbnails by type — what an actor is drawn as. */
   thumbnails: Record<string, string>;
+  /**
+   * Pictures painted in this window from the actor files, by placement key
+   * or kind (`localPictures`). Preferred over a thumbnail for the same key:
+   * the caller passes only the ones that should win.
+   */
+  pictures?: Record<string, HTMLCanvasElement>;
   /** Editable property schemas by type — what the inspector offers. */
   schemas: Record<string, ActorSchema>;
   /**
@@ -158,6 +167,7 @@ export const MapStage = ({
   onDocPreview,
   placing,
   thumbnails,
+  pictures,
   schemas,
   sizes,
   placementSizes,
@@ -176,7 +186,7 @@ export const MapStage = ({
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
   // The last picture drawn for each placement, by id, for the frames between
   // an edit and the sandbox's answer to it (`stageGeometry.rememberedPicture`).
-  const remembered = useRef(new Map<string, Remembered<HTMLImageElement>>());
+  const remembered = useRef(new Map<string, Remembered<Picture>>());
   // The template to PLACE is the caller's (`placing`); when it is null we are in
   // select mode, where `selectedId` is the placed instance under edit.
   const selected = placing;
@@ -1116,10 +1126,13 @@ export const MapStage = ({
     const pictureOf = (
       placement?: string,
       id?: string,
-    ): Remembered<HTMLImageElement> | undefined => {
+    ): Remembered<Picture> | undefined => {
+      const painted = placement
+        ? (pictures?.[placement] ?? images[placement])
+        : undefined;
       const own =
-        placement && images[placement]
-          ? {image: images[placement], size: placementSizes?.[placement]}
+        placement && painted
+          ? {image: painted, size: placementSizes?.[placement]}
           : undefined;
       return id
         ? rememberedPicture(remembered.current, id, placement, own)
@@ -1145,7 +1158,7 @@ export const MapStage = ({
       ctx.rotate(t.rotation * DEG2RAD);
       ctx.scale(t.scale.x, t.scale.y);
       const shown = pictureOf(placement, id);
-      const image = shown?.image ?? images[type];
+      const image = shown?.image ?? pictures?.[type] ?? images[type];
       // Whether anything measured this: the placement itself, or its kind.
       const measured = shown?.size ?? sizes?.[type];
       const box = measured ?? sizeOf(type);

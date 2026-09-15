@@ -9,12 +9,13 @@
 // The canvas and the inspector live in `MapStage`, which the `create actor in
 // map` popup also uses (MAPS.md §4). What this adds is the palette and the file.
 
-import {useEffect, useMemo, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
 import {actorIconImage} from '../blockly/actorIcons';
 import {placementKey} from '../blockly/mapPlacements';
@@ -24,10 +25,17 @@ import {
 } from '../blockly/projectModules';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import {agreedViewSize} from '../runtime/declaredSizes';
+import {browserTextMetrics} from '../runtime/driver/textMetrics';
 import type {ActorSchema} from '../runtime/messages';
 import {projectFiles} from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
+import {
+  drawsItself,
+  localPictures,
+  withoutWornPicture,
+  type LocalPicture,
+} from './localPictures';
 import styles from './mapEditor.module.css';
 import {
   clampTiles,
@@ -160,17 +168,55 @@ export const MapEditor = ({
   // (specs/UI_ACTORS.md). Keyed by content, so a placement that changed nothing
   // is not re-rendered and two that match are rendered once.
   const pictured = liveMap ?? map;
+
+  // PICTURES READ FROM THE FILES, before the sandbox is asked for anything.
+  // A `define drawing` cannot set anything, so a placement's picture can be
+  // had by reading the rows against the placement's own values and painting
+  // them here, on this keystroke (`localPictures`). The sandbox is asked only
+  // for what the reading could not finish — a drawing that reads the time or
+  // a rule's live state — and for kinds that wear a picture instead.
+  const measure = useMemo(() => browserTextMetrics(), []);
+  const images = useProjectImages(currentSources.source);
+  const imageFor = useCallback(
+    (sprite: string) => {
+      // A `draw image` names a picture as the engine does — bare, or with a
+      // cell after a `#` — and the project's decoded images go by file name.
+      const name = sprite.replace(/#.*$/, '');
+      return images[name] ?? images[`${name}.png`];
+    },
+    [images],
+  );
+  // The reading depends on the files, the images and the measure and nothing
+  // else, so within one set of them a key names one picture for good.
+  const readings = useMemo(
+    () => new Map<string, LocalPicture | null>(),
+    [files, images, measure],
+  );
+  const local = useMemo(
+    () =>
+      localPictures(
+        files,
+        pictured,
+        actorOptions.map(([, path]) => path),
+        measure,
+        imageFor,
+        readings,
+      ),
+    [files, pictured, actorOptions, measure, imageFor, readings],
+  );
+
   const placements = useMemo(
     () =>
       pictured.actors.flatMap(actor => {
         // No key means the kind's own picture is the answer — nothing
-        // overridden, or nothing but where it stands.
+        // overridden, or nothing but where it stands. A key the reading
+        // finished needs nothing from the sandbox either.
         const key = placementKey(actor.type, actor.properties);
-        return key
+        return key && !local.complete.has(key)
           ? [{key, type: actor.type, properties: actor.properties ?? {}}]
           : [];
       }),
-    [pictured],
+    [pictured, local],
   );
   // The effect depends on WHICH pictures are wanted, not on the array — the
   // array is fresh every time the document is touched, and a dragged actor
@@ -210,6 +256,34 @@ export const MapEditor = ({
     // the document is touched — and a dragged actor touches it on every frame
     // of the drag. What the fetch depends on is WHICH pictures are missing.
   }, [wanted, worldPath, hasCompiled, thumbnails, actorOptions, placements]);
+
+  /**
+   * What the stage draws with: the reading where it finished or where the
+   * sandbox has not answered, the sandbox's picture otherwise — and each
+   * picture's size beside it, from the same source.
+   */
+  const shown = useMemo(() => {
+    const pictures: Record<string, HTMLCanvasElement> = {};
+    const kindSizes = {...local.sizes, ...sizes};
+    const ownSizes = {...local.sizes, ...placementSizes};
+    for (const [key, canvas] of Object.entries(local.pictures)) {
+      if (local.complete.has(key) || !thumbnails[key]) {
+        pictures[key] = canvas;
+        if (key in local.sizes) {
+          kindSizes[key] = local.sizes[key];
+          ownSizes[key] = local.sizes[key];
+        }
+      }
+    }
+    return {pictures, sizes: kindSizes, placementSizes: ownSizes};
+  }, [local, sizes, placementSizes, thumbnails]);
+
+  // A kind that draws itself has no use for `set sprite` or `set animation`,
+  // and the inspector does not offer them (`withoutWornPicture`).
+  const shownSchemas = useMemo(
+    () => withoutWornPicture(schemas, type => drawsItself(files, type)),
+    [schemas, files],
+  );
 
   const commit = (next: MapDoc) => {
     setMap(next);
@@ -307,9 +381,10 @@ export const MapEditor = ({
         onDocPreview={setLiveMap}
         placing={selected}
         thumbnails={thumbnails}
-        schemas={schemas}
-        sizes={sizes}
-        placementSizes={placementSizes}
+        pictures={shown.pictures}
+        schemas={shownSchemas}
+        sizes={shown.sizes}
+        placementSizes={shown.placementSizes}
         scales={scales}
         isReadOnly={isReadOnly}
         visible={visible}
