@@ -57,7 +57,7 @@ export default function useQuizAttemptView({
           // Reachable via /levels/:id, which levelbuilder uses to preview a
           // level outside any unit.
           <Typography variant="body2">
-            Attempts are not tracked outside of a unit.
+            Quiz attempts are not allowed on a standalone level.
           </Typography>
         ) : !attempt ? (
           <MuiButton
