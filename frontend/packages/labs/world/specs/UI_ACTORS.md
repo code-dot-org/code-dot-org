@@ -1034,10 +1034,12 @@ where they bite.
    and no words. It is nearly a Label with `text` left empty, and it should
    ACT LIKE one so that a dialog's background and its title are the same shape
    of thing. What the table deferred as "grouping, which is layout" has an
-   answer that is not a layout engine: the Attachment rule. A Label, a Button
-   and a bar each elected `Attached` to the Panel move when the Panel moves,
-   which is all "belongs together" has to mean for a dialog that slides in.
-   Cheapest row in the list, and first because the maps below want it.
+   answer that is not a layout engine: PARENTING (specs/PARENTING.md). A
+   Label, a Button and a bar whose parent is the Panel move and turn when the
+   Panel does, and the map editor drags them as a group, which is all
+   "belongs together" has to mean for a dialog that slides in. Cheapest row
+   in the list once parenting exists, and first because the maps below want
+   it.
 
 2. **Toggle.** A Button carrying a boolean `on` that flips when clicked and
    draws its state — a box with a mark in it, or a switch — with `turned on`
@@ -1090,8 +1092,8 @@ a learner reaching for "a pause menu" is not reaching for a Panel.
 
 It is also the case that forces the two questions this document has deferred:
 
-- **Grouping.** A dialog map moved as one thing is the Panel-plus-Attached
-  answer above, tried on something real.
+- **Grouping.** A dialog map moved as one thing is a Panel and its children
+  (specs/PARENTING.md), tried on something real.
 - **Anchoring.** A HUD map shared between a square world and the portrait one
   is the first interface that lands on two windows of different shapes, and a
   score at (304, 16) is in the corner of one and in the middle of the other.

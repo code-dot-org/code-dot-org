@@ -232,6 +232,11 @@ the Attachment rule's default, chosen there for this. A line saying what would
 have happened anyway is a line to keep in step with a default that may change
 for a reason.
 
+PROPOSED TO CHANGE: specs/PARENTING.md retires the Attachment rule for a
+`parent` every actor has. The bar is then placed 24 above its target by one
+row and given the target as its parent; the `when removed` handler goes,
+since a parent's removal removes its children.
+
 ## The second one: the camera follows it
 
 A level bigger than the screen is the commonest thing a learner builds and the
