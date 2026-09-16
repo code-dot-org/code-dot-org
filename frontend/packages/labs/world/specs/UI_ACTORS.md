@@ -1097,7 +1097,36 @@ button ⟨left⟩ is down`, letting go when it comes up. There is no drag
    worse; and nothing scrolls — long lines and long paragraphs are clipped.
    Both are the next things to add.
 
-### The second axis: stock interface MAPS
+### The second axis: stock interface MAPS — the first one is built
+
+The pause menu is on the shelf (`maps/stock`, `maps/importStockMap`): a
+`.map` placing a Pause Menu panel and its Resume and Quit buttons, imported
+whole with the three actors, from the `load map` dropdown's `(import…)` row
+or the Maps folder's menu. Breakout uses it — P pauses and loads it, and
+what follows is below. What building it found:
+
+- **A menu needs the game to STOP, and that is the engine's.** `pause the
+game` runs the `sense` phase and nothing else, so keys and clicks still
+  become events and every handler still runs, while nothing moves, falls,
+  collides or animates until `resume the game` (`World.pause`). A menu is
+  buttons, and buttons are events; the interface actors that do work each
+  frame — a slider following the pointer — stop with the rest, which a
+  pause menu does not mind.
+- **The menu speaks, the world decides.** The Pause Menu is a Panel with two
+  own events, `resumed` and `quit`; its buttons are kinds of their own whose
+  one handler raises the event on `parent of this actor`. So a project
+  answers the MENU — `when ⟨any Pause Menu⟩ resumed` — rather than every
+  Button in the game, and the buttons can be moved anywhere on the map
+  without rewiring. What "quit" means is the project's: breakout clears the
+  world and loads its level again.
+- **Removing the panel removes the menu**, buttons and all
+  (specs/PARENTING.md), which is the whole of what "take the menu away" costs.
+- **A map has no layer of its own.** `load map` in a handler puts the menu on
+  the layer the block is in, which for a handler is the default one; a game
+  with a camera wants it on a fixed layer, and a `load map … into layer`
+  form is the next thing this asks for. Anchoring is still deferred: the map
+  places the menu at the standard window's middle, and a project with
+  another view moves it in the map editor.
 
 INTERFACE.md already says what a menu is: a map, loaded on top of the level or
 into a world of its own. A title screen, a pause menu, a dialog box and a HUD

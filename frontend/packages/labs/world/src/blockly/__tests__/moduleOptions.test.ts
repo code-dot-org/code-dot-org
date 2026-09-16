@@ -61,9 +61,9 @@ describe('an empty dropdown', () => {
       ['sprites', spriteOptions() as Array<[unknown, string]>],
       ['backgrounds', backgroundOptions() as Array<[unknown, string]>],
       ['animations', animationFileOptions()],
-      ['maps', mapOptions()],
-      // …and the one that already said so, which is where the wording came
-      // from. Its import row is listed after the fallback, never instead of it.
+      // …and the two with a shelf, which is where the wording came from.
+      // Their import row is listed after the fallback, never instead of it.
+      ['maps', mapOptions().slice(0, 1)],
       ['sounds', soundImportOptions().slice(0, 1)],
     ];
 

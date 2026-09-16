@@ -12,6 +12,7 @@ import {localization} from '@code-dot-org/core/plugins/localization';
 import {IMPORT_ACTOR_VALUE} from '../actors/actorImport';
 import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
+import {IMPORT_MAP_VALUE} from '../maps/mapImport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
 import {actorIconImage} from './actorIcons';
@@ -298,10 +299,15 @@ export function effectFileImportOptions(): Array<[string, string]> {
 /** Current MAP dropdown options (the project's map files). */
 export function mapOptions(): Array<[string, string]> {
   const paths = Object.keys(projectMaps);
-  return orNone(
-    paths.map(path => [label(path.split('/').pop() ?? path), path]),
-    '(no maps yet)',
-  );
+  // …and the shelf's, which is a menu or a title screen arranged already
+  // (`maps/stock`). The row is answered by `mapImportField`.
+  return [
+    ...orNone(
+      paths.map(path => [label(path.split('/').pop() ?? path), path]),
+      '(no maps yet)',
+    ),
+    ['(import…)', IMPORT_MAP_VALUE],
+  ];
 }
 
 /**

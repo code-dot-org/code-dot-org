@@ -27,6 +27,7 @@ import {requestAppearanceImport} from '../appearance/appearanceImport';
 import {BACKGROUNDS_FOLDER} from '../appearance/backgroundsFolder';
 import {requestEffectImport} from '../blockly/effectImport';
 import {requestRuleImport} from '../blockly/ruleImport';
+import {requestMapImport} from '../maps/mapImport';
 import {requestSoundImport} from '../sound/soundImport';
 
 /**
@@ -180,5 +181,6 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     label: 'Maps',
     icon: 'map',
     makes: [{label: 'New map', extension: 'map', placeholder: 'Level 2'}],
+    shelf: requestMapImport,
   },
 ];

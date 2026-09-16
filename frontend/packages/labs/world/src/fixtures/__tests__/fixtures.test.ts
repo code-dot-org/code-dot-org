@@ -118,6 +118,16 @@ describe('the scenario catalogue', () => {
     }
     // All four in blocks: every actor in this project can be opened and read
     // in the editor, which is most of what a demo project is for.
+    // …and the pause menu it loads on P: the map and the three actors it
+    // places, imported as a project would import them.
+    for (const file of [
+      'pauseMenu.map',
+      'pauseMenu.actor',
+      'resumeButton.actor',
+      'quitButton.actor',
+    ]) {
+      expect(named(file)).toBe(true);
+    }
     for (const actor of [
       'paddle.actor',
       'ball.actor',

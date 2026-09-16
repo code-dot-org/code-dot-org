@@ -61,6 +61,10 @@ import {setRuleImportHandler} from '../blockly/ruleImport';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
+import {ImportMapDialog} from '../maps/ImportMapDialog';
+import {importStockMap} from '../maps/importStockMap';
+import {setMapImportHandler} from '../maps/mapImport';
+import type {StockMap} from '../maps/stock';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
 import type {StockRule} from '../rules/stock';
@@ -77,6 +81,7 @@ type Shelf =
   | 'effect'
   | 'rule'
   | 'actor'
+  | 'map'
   | AppearanceKind
   | 'sound'
   // …and the one that is not a shelf: enhancing carries the actor it is being
@@ -122,6 +127,7 @@ export const LibraryImports = () => {
     setEffectImportHandler(() => open('effect'));
     setRuleImportHandler(() => open('rule'));
     setActorImportHandler(() => open('actor'));
+    setMapImportHandler(() => open('map'));
     setActorEnhanceHandler((target: EnhanceTarget) =>
       open({enhancing: target}),
     );
@@ -132,6 +138,7 @@ export const LibraryImports = () => {
       setEffectImportHandler(null);
       setRuleImportHandler(null);
       setActorImportHandler(null);
+      setMapImportHandler(null);
       setActorEnhanceHandler(null);
       setSoundImportHandler(null);
       setAppearanceImportHandler(null);
@@ -259,6 +266,19 @@ export const LibraryImports = () => {
             const {source, path} = importStockActor(
               sourcesRef.current.source,
               actor,
+            );
+            took(source, path);
+          }}
+          onCancel={cancel}
+        />
+      )}
+      {shelf === 'map' && (
+        <ImportMapDialog
+          onImport={(map: StockMap) => {
+            // The MAP's path, which is what a `load map` dropdown stores.
+            const {source, path} = importStockMap(
+              sourcesRef.current.source,
+              map,
             );
             took(source, path);
           }}

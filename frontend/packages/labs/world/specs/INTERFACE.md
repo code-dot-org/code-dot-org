@@ -320,9 +320,9 @@ A World can then load a Map of these to define the interface of the
 game at that moment. A "Main Menu" is a Map you load into a world of
 its own; a pop-up dialog is a Map you load on top of the level.
 
-This is something we can design later since user interface elements
-are likely going to be DOM elements and will be interesting to
-incorporate.
+They are actors, not DOM elements (specs/UI_ACTORS.md), and the first such
+map is on the shelf: the pause menu (`maps/stock`), imported with the actors
+it places and loaded from a handler with `pause the game` beside it.
 
 ## Map
 

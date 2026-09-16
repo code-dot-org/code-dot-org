@@ -164,7 +164,9 @@ describe('every stock actor', () => {
       const mine = slug(`Actors ${actor.id}`);
       const owners = [
         ...actor.contents.matchAll(
-          /"type": "world_(?:get|set|do|query)_([A-Za-z0-9]+)_/g,
+          // …and `emit`: raising another kind's event names that kind, and
+          // the file will not generate without it (`menuButtons`).
+          /"type": "world_(?:get|set|do|query|emit)_([A-Za-z0-9]+)_/g,
         ),
       ]
         .map(match => match[1])

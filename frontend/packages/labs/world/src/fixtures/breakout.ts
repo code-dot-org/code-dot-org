@@ -134,6 +134,77 @@ export const setNumber = (type: string, value: number) => ({
  *   reader opening `main.world` should not have to scroll sideways to find the
  *   only other thing in it.
  */
+/**
+ * THE PAUSE MENU, wired the way any game wires one (specs/UI_ACTORS.md, "The
+ * second axis"): P stops the game and loads the stock menu; the menu says
+ * `resumed` or `quit` when a button is pressed, and the world decides what
+ * each means — here, carry on, or start the level over. The menu is the
+ * project's `maps/pauseMenu.map`, imported with the three actors it places
+ * (`maps/importStockMap`), and a project may open it in the map editor and
+ * move things.
+ */
+export const pauseHandlers = (level: string) => {
+  // The hat's subject — the menu that spoke — is `this actor` in a world's
+  // handler; `event actor` is what an event CARRIES, and these carry nothing.
+  const menu = () => ({block: {type: 'world_this_actor'}});
+  const anyMenu = () => ({
+    block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/pauseMenu'}},
+  });
+  return [
+    {
+      type: 'world_on_Input_IsPressedEvent',
+      fields: {FILTER0: 'p'},
+      x: 20,
+      y: 420,
+      next: {
+        block: {
+          type: 'controls_if',
+          inputs: {
+            IF0: {
+              block: {
+                type: 'logic_negate',
+                inputs: {BOOL: {block: {type: 'world_game_is_paused'}}},
+              },
+            },
+            DO0: {
+              block: stack([
+                {type: 'world_pause_game'},
+                {type: 'world_load_map', fields: {MAP: 'maps/pauseMenu'}},
+              ]),
+            },
+          },
+        },
+      },
+    },
+    {
+      type: 'world_on_ActorsPauseMenu_ResumedEvent',
+      x: 20,
+      y: 560,
+      inputs: {ACTOR: anyMenu()},
+      next: {
+        block: stack([
+          {type: 'world_resume_game'},
+          // The panel goes, and its buttons with it (specs/PARENTING.md).
+          {type: 'world_remove_actor', inputs: {ACTOR: menu()}},
+        ]),
+      },
+    },
+    {
+      type: 'world_on_ActorsPauseMenu_QuitEvent',
+      x: 20,
+      y: 660,
+      inputs: {ACTOR: anyMenu()},
+      next: {
+        block: stack([
+          {type: 'world_resume_game'},
+          {type: 'world_clear_world'},
+          {type: 'world_load_map', fields: {MAP: level}},
+        ]),
+      },
+    },
+  ];
+};
+
 export const serveHandler = (ball: string, where = {x: 20, y: 240}) => ({
   type: 'world_on_Input_IsPressedEvent',
   fields: {FILTER0: 'space'},
@@ -393,6 +464,7 @@ const BREAKOUT_WORLD = JSON.stringify({
         },
       },
       serveHandler('actors/ball'),
+      ...pauseHandlers('maps/breakout'),
     ],
   },
 });

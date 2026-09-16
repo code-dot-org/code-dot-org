@@ -26,6 +26,8 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {buildProject, DEFAULT_PROJECT, type ProjectSpec} from '../constants';
 import type {WorldLevelData} from '../levelData';
+import {importStockMap} from '../maps/importStockMap';
+import {stockMapById} from '../maps/stock';
 
 import {BREAKOUT_SPEC} from './breakout';
 import {FLAPPY_SPEC} from './flappy';
@@ -152,7 +154,11 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
     description:
       'A paddle, a bouncing ball, and two rows of bricks to clear. Every ' +
       'mechanic in it is a stock rule.',
-    source: buildProject(BREAKOUT_SPEC).source,
+    // …with the stock pause menu, imported the way a project imports one.
+    source: importStockMap(
+      buildProject(BREAKOUT_SPEC).source,
+      stockMapById('pauseMenu')!,
+    ).source,
     instructions:
       '## Breakout\n\nClear the bricks without losing the ball.\n\n' +
       '- Click the preview, then use the left and right arrow keys\n' +
@@ -160,6 +166,9 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'Console counts what it has taken\n' +
       '- The room is open at the bottom: `when ⟨Ball⟩ leaves the map` is how ' +
       'it notices\n' +
+      '- Press P to pause: the stock Pause Menu map loads over the game, ' +
+      'which stops moving and keeps listening. Resume takes it away; Quit ' +
+      'starts the level over. Open `maps/pauseMenu.map` to move it\n' +
       '- Try a bouncier ball, a wider paddle, or a third row of bricks',
   },
   meteors: {
