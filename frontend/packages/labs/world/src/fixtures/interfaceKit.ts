@@ -107,7 +107,7 @@ const INTERFACE_MAP = JSON.stringify(
       // they always did: the panel is at (160, 100) and the field 20 above
       // its middle is at (160, 80).
       place('actors/panel', 'Dialog', 160, 100, {
-        Label: {width: 300, height: 176},
+        Label: {width: 300, height: 216},
       }),
       // A title, which is a Label doing the one thing a Label does.
       place('actors/label', 'Title', 0, -70, {
@@ -127,6 +127,13 @@ const INTERFACE_MAP = JSON.stringify(
       place('actors/progressBar', 'Bar', 0, 68, {
         positional: {parent: 'Dialog'},
         Progress_Bar: {fraction: 0},
+      }),
+      // A switch, which is a Button that stays answered. Nothing listens to
+      // it here; what it demonstrates is a control on a panel that keeps a
+      // state and says when it changes.
+      place('actors/toggle', 'Sound', 0, 96, {
+        positional: {parent: 'Dialog'},
+        Label: {text: 'SOUND', width: 120},
       }),
       // …and the box that says the answer, a letter at a time. At the foot
       // of the screen, where a phone keeps its replies, and nobody's child.
@@ -247,6 +254,7 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
     'progressBar',
     'speechBox',
     'panel',
+    'toggle',
   ]) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }

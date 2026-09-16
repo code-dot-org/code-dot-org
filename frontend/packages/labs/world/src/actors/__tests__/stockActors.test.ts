@@ -91,6 +91,8 @@ describe('every stock actor', () => {
       subject: [],
       // Whose health this bar is about — nobody else's idea.
       healthBar: ['subject'],
+      // Whether the switch is on: the Toggle's, and what its two events say.
+      toggle: ['on'],
       // …and what a bar IS: how far along it is, and the two colors it is
       // drawn in. These were `Progress`, a rule with three properties and no
       // behavior; the bars that are not this one act like it and get them
@@ -176,13 +178,23 @@ describe('every stock actor', () => {
       const named = [...new Set([...elected, ...read])].sort();
 
       expect(named, actor.id).toEqual([...actor.requires].map(slug).sort());
-      // …and every actor whose declarations this one reads is one the import
-      // brings. It reads them because it ACTS LIKE that actor, and a bar whose
-      // parent never arrived inherits nothing at all.
+      // …and every actor whose declarations this one reads, or that it ACTS
+      // LIKE, is one the import brings: a bar whose parent never arrived
+      // inherits nothing at all. A Toggle acts like a Button and reads the
+      // Label's box through it, so it names both.
+      const actsLike = [
+        ...actor.contents.matchAll(
+          /"type": "world_acts_like"[\s\S]*?"ACTOR": "actors\/([A-Za-z0-9]+)"/g,
+        ),
+      ].map(match => slug(`Actors ${match[1]}`));
       expect(
-        [...new Set(owners.filter(fromActor))]
-          .map(name => name.toLowerCase())
-          .sort(),
+        [
+          ...new Set(
+            [...owners.filter(fromActor), ...actsLike].map(name =>
+              name.toLowerCase(),
+            ),
+          ),
+        ].sort(),
         actor.id,
       ).toEqual(
         [...(actor.actors ?? [])]

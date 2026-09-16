@@ -2496,6 +2496,8 @@ export const TILES: readonly Tile[] = [
       // (specs/PARENTING.md).
       {kind: 'actor', id: 'button'},
       {kind: 'actor', id: 'panel'},
+      // …and an answer that stays answered: a Button that is on or off.
+      {kind: 'actor', id: 'toggle'},
     ],
     offers: [
       {kind: 'block', type: 'controls_if'},

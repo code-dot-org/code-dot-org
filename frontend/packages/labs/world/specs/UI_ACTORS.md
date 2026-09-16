@@ -169,7 +169,7 @@ a rule pulls its dependencies.
 | Text Area    | several lines you can type in                     | PROPOSED, last — see "The rest"             |
 | Dropdown     | a list of words, one of them chosen               | PROPOSED — a list property, a menu to draw  |
 | Panel        | a background behind a group                       | BUILT — a Label with no words, and children |
-| Toggle       | a Button that is on or off                        | PROPOSED                                    |
+| Toggle       | a Button that is on or off                        | BUILT — `on`, `turned on`, `turned off`     |
 | Slider       | a Progress Bar the pointer drags                  | PROPOSED                                    |
 
 Six of the eleven are built, and the three that arrived after this document was
@@ -1047,14 +1047,14 @@ where they bite.
    a group. Unlocked with the Button, since a question is a Panel with a
    line and two Buttons on it.
 
-2. **Toggle.** A Button carrying a boolean `on` that flips when clicked and
-   draws its state — a box with a mark in it, or a switch — with `turned on`
-   and `turned off` as its own events, so a project can react rather than poll.
-   Every piece exists: a boolean property, the Button's click, a rectangle and
-   a line. Sound on and off, and pause, are the first uses. It is not the
-   Switches rule's `Is a Switch`, which is a thing in a LEVEL that a player
-   stands on; this is a control on the screen, and it is a kind of Button.
-
+2. **Toggle — BUILT** (`actors/stock/toggle`). It acts like a Button, so
+   the click, the focus and Enter come across with the Button's own
+   handlers, and adds a boolean `on` that the click flips and two events,
+   `turned on` and `turned off`, so a project reacts rather than polls. Its
+   face is a caption and a switch whose track colours and whose knob slides
+   with `on`, all read off the actor by the drawing. It is not the Switches
+   rule's `Is a Switch`, which is a thing in a LEVEL that a player stands on;
+   this is a control on the screen. The Interface Kit's dialog carries one.
 3. **Slider.** Acts like a Progress Bar and elects `Can Be Clicked`: while
    `mouse button ⟨left⟩ is down` and the press began on it, `fraction` is the
    pointer's x across its width. There is no drag event and none is needed —

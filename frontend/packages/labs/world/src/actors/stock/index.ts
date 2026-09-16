@@ -23,6 +23,7 @@ import {progressBarActor} from './progressBar';
 import {shotActor} from './shot';
 import {speechBoxActor} from './speechBox';
 import {textInputActor} from './textInput';
+import {toggleActor} from './toggle';
 
 /** One entry in the library. */
 export interface StockActor {
@@ -135,6 +136,20 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     // they are laid into come from.
     actors: ['label'],
     contents: buttonActor,
+  },
+  {
+    id: 'toggle',
+    name: 'Toggle',
+    description:
+      'A button that is on or off. Click it, or press Enter on it, and it flips — and says “turned on” or “turned off”, so one handler does whatever the switch is for.',
+    // Tab Navigation for the focus its ring reads. Mouse, whose click it
+    // hears, and Input, whose Enter the Button answers, arrive with the Button
+    // it acts like — a hat names a rule's event, and what the file READS is
+    // what it has to be sure of (`stockActors.test`).
+    requires: ['Tab Navigation'],
+    // The Button it acts like, and the Label whose box it reads through it.
+    actors: ['button', 'label'],
+    contents: toggleActor,
   },
   {
     id: 'textInput',

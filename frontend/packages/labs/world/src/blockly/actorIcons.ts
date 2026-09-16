@@ -22,6 +22,7 @@ import font from '@fortawesome/fontawesome-free/svgs/solid/font.svg?raw';
 import handPointer from '@fortawesome/fontawesome-free/svgs/solid/hand-pointer.svg?raw';
 import heartPulse from '@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg?raw';
 import iCursor from '@fortawesome/fontawesome-free/svgs/solid/i-cursor.svg?raw';
+import toggleOn from '@fortawesome/fontawesome-free/svgs/solid/toggle-on.svg?raw';
 import windowMaximize from '@fortawesome/fontawesome-free/svgs/solid/window-maximize.svg?raw';
 
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
@@ -68,6 +69,7 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   // whole reason these exist.
   speech: tile(comment),
   button: tile(handPointer),
+  toggle: tile(toggleOn),
   bar: tile(barsProgress),
   // A Health Bar is not a Progress Bar wearing the same face. One is filled by
   // whatever the project decides; the other reads a subject's health and is
