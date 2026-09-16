@@ -30,4 +30,16 @@ class SignIn < ApplicationRecord
   )
 
   belongs_to :user, optional: true
+
+  # authentication_options are soft-deleted when a user disconnects a provider, but a sign-in that happened before that
+  # is still a fact about the past.
+  belongs_to :authentication_option, -> {with_deleted}, optional: true
+
+  EVENT_TYPES = [
+    CREDENTIAL = 'credential'.freeze,             # A password, OAuth, or LTI credential was presented in this sign in request.
+    SECTION_CODE = 'section_code'.freeze,         # Student signed in with Section Code and secret word or picture.
+    REMEMBERED = 'remembered'.freeze,             # A remember-me cookie, not a credential the user presented.
+    REGISTRATION = 'registration'.freeze,         # The sign-in Devise performs immediately after creating the account.
+    REAUTHENTICATION = 'reauthentication'.freeze, # Re-signed in an already-authenticated user without any credential
+  ].freeze
 end
