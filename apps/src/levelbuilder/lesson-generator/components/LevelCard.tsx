@@ -50,6 +50,9 @@ const LevelCard: React.FC<LevelCardProps> = ({
   onMove,
 }) => {
   const unsupported = !!spec.unsupportedType;
+  const existingHint = spec.existing
+    ? 'Existing levels keep their name and lab type.'
+    : undefined;
 
   const sublevelLabOptions = labOptions.filter(o =>
     SUBLEVEL_LAB_TYPE_SET.has(o.value)
@@ -132,6 +135,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
               onChange={e => onChange(spec.key, {id: e.target.value})}
               placeholder="e.g. intro-1"
               disabled={disabled || unsupported || !!spec.existing}
+              title={existingHint}
             />
           </div>
           <div className={sharedStyles.cardField}>
@@ -149,7 +153,8 @@ const LevelCard: React.FC<LevelCardProps> = ({
                 onChange={e =>
                   onChange(spec.key, {labType: e.target.value as LabType})
                 }
-                disabled={disabled}
+                disabled={disabled || !!spec.existing}
+                title={existingHint}
               >
                 {labOptions.map(opt => (
                   <option key={opt.value} value={opt.value}>

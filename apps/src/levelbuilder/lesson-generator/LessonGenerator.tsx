@@ -48,7 +48,11 @@ import ImportPlanningDoc from './components/ImportPlanningDoc';
 import LevelCard from './components/LevelCard';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
-import {buildInitialState, newLevelSpec} from './helpers/buildInitialState';
+import {
+  buildInitialState,
+  existingRefsByLevelName,
+  newLevelSpec,
+} from './helpers/buildInitialState';
 import {
   generatorInputsChanged,
   saveGeneratorPrompts,
@@ -77,11 +81,13 @@ import {
 import {
   DSL_LAB_TYPES,
   ExistingLessonData,
+  ExistingLevelRef,
   GenerationSummary,
   LAB_LABELS,
   LabType,
   LevelSpec,
   ProgressUpdate,
+  SerializedActivity,
   SUPPORTED_LAB_TYPES,
 } from './types';
 
@@ -128,6 +134,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   const [summary, setSummary] = useState<GenerationSummary | null>(null);
   const [topLevelError, setTopLevelError] = useState<string | null>(null);
   const [outline, setOutline] = useState<string>(lesson.generateOutline || '');
+  // The lesson tree as last saved; the prop is only the page-load snapshot.
+  const [activities, setActivities] = useState<SerializedActivity[]>(
+    lesson.activities || []
+  );
   const [isOutlining, setIsOutlining] = useState(false);
   const [isImporting, setIsImporting] = useState(false);
   const [outlineError, setOutlineError] = useState<string | null>(null);
@@ -1049,6 +1059,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       }
     }
 
+    let savedRefs: Map<string, ExistingLevelRef> | undefined;
     if (placements.length > 0) {
       try {
         setProgress({
@@ -1058,19 +1069,18 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           phase: 'attaching',
         });
         appendLog(`Saving lesson with ${placements.length} level(s)…`);
-        const newActivities = rebuildActivities(
-          lesson.activities || [],
-          placements
-        );
+        const newActivities = rebuildActivities(activities, placements);
         // Persist the outline + target-project channel id so reopening
         // /generate restores them. Sending '' for either clears the
         // previously-saved value.
-        await saveLessonActivities(
+        const saved = await saveLessonActivities(
           lesson.id,
           newActivities,
           outline.trim(),
           projectChannelId.trim()
         );
+        setActivities(saved);
+        savedRefs = existingRefsByLevelName(saved);
         appendLog('Lesson updated.');
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -1095,7 +1105,14 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         specs.map(s => {
           const desc = succeededDescriptions.get(s.key);
           if (desc === undefined) return s;
-          return {...s, lastGeneratedDescription: desc, generate: false};
+          const existing =
+            s.existing ?? savedRefs?.get(levelNameFor(s, prefix));
+          return {
+            ...s,
+            lastGeneratedDescription: desc,
+            generate: false,
+            ...(existing ? {existing} : {}),
+          };
         })
       );
     }
@@ -1111,6 +1128,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setProgress(null);
   }, [
     prefix,
+    activities,
     validationError,
     lesson,
     levelSpecs,

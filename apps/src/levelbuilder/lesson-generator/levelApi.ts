@@ -203,7 +203,7 @@ export async function saveLessonActivities(
   activities: SerializedActivity[],
   generateOutline?: string,
   generateProjectChannelId?: string
-): Promise<void> {
+): Promise<SerializedActivity[]> {
   const body: Record<string, string> = {
     activities: JSON.stringify(activities),
   };
@@ -216,10 +216,17 @@ export async function saveLessonActivities(
     // it stick.
     body.generate_project_channel_id = generateProjectChannelId;
   }
-  await HttpClient.put(`/lessons/${lessonId}`, JSON.stringify(body), true, {
-    'Content-Type': 'application/json;charset=UTF-8',
-    Accept: 'application/json',
-  });
+  const response = await HttpClient.put(
+    `/lessons/${lessonId}`,
+    JSON.stringify(body),
+    true,
+    {
+      'Content-Type': 'application/json;charset=UTF-8',
+      Accept: 'application/json',
+    }
+  );
+  const saved = (await response.json()) as {activities?: SerializedActivity[]};
+  return saved.activities ?? [];
 }
 
 // Re-export the lab2 sources `get` helper under a clearer name. The

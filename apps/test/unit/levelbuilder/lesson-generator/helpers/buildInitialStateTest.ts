@@ -1,4 +1,7 @@
-import {buildInitialState} from '@cdo/apps/levelbuilder/lesson-generator/helpers/buildInitialState';
+import {
+  buildInitialState,
+  existingRefsByLevelName,
+} from '@cdo/apps/levelbuilder/lesson-generator/helpers/buildInitialState';
 import {
   ExistingLessonData,
   SerializedLevel,
@@ -160,5 +163,20 @@ describe('buildInitialState', () => {
     expect(subs[0].unsupportedType).toBeUndefined();
     expect(subs[1].unsupportedType).toBe('Multi');
     expect(subs[1].generate).toBe(false);
+  });
+});
+
+describe('existingRefsByLevelName', () => {
+  it('keys each level by name with its activity and section indices', () => {
+    const lesson = lessonWith([
+      {id: '1', name: 'l-one', type: 'Panels'},
+      {id: '2', name: 'l-two', type: 'Weblab2'},
+    ]);
+    const refs = existingRefsByLevelName(lesson.activities!);
+    expect([...refs.keys()]).toEqual(['l-one', 'l-two']);
+    const two = refs.get('l-two')!;
+    expect(two.activityIndex).toBe(0);
+    expect(two.sectionIndex).toBe(0);
+    expect(two.scriptLevel.levels[0].id).toBe('2');
   });
 });
