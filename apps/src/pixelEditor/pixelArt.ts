@@ -675,7 +675,12 @@ export const NATIVE_PIXEL_GRID = 1;
 const CRISP_TARGET_PX = 640;
 const MAX_CRISP_SCALE = 8;
 
-/** The integer factor logical pixel art is upscaled by for display. */
+/**
+ * The integer factor logical pixel art is upscaled by for display. The
+ * engine sizes a sprite relative to the image it is handed, so this factor
+ * sets the on-screen size of every native pixel asset in every saved
+ * project; changing it resizes them all.
+ */
 export function crispScaleFor(logicalW: number, logicalH: number): number {
   return Math.max(
     1,
