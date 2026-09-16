@@ -3,11 +3,13 @@ import React from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
-import {QuizBuilderQuestionsState, QuizQuestion} from './types';
+import {QuizQuestion} from './types';
+import useQuizBuilderQuestions from './useQuizBuilderQuestions';
 
 import styles from './quiz-builder-workspace.module.scss';
 
-interface QuizBuilderWorkspaceProps extends QuizBuilderQuestionsState {
+interface QuizBuilderWorkspaceProps {
+  levelId: number;
   quizTitle: string;
 }
 
@@ -15,7 +17,10 @@ interface QuizBuilderWorkspaceProps extends QuizBuilderQuestionsState {
 // Rows are read-only for now - opening one to edit is a later step.
 const QuizBuilderWorkspace: React.FunctionComponent<
   QuizBuilderWorkspaceProps
-> = ({quizTitle, questions, isLoading, isCreating, error, createQuestion}) => {
+> = ({levelId, quizTitle}) => {
+  const {questions, isLoading, isCreating, error, createQuestion} =
+    useQuizBuilderQuestions(levelId);
+
   let outline: React.ReactNode;
   if (isLoading) {
     outline = <Typography variant="body2">Loading questions…</Typography>;

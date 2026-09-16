@@ -113,11 +113,7 @@ Dashboard::Application.routes.draw do
 
     resources :user_level_interactions, only: [:create]
 
-    resources :skills, only: [:create, :index, :update, :destroy] do
-      collection do
-        get 'section/:section_id/unit/:unit_name', to: 'skills#section_skills'
-      end
-    end
+    resources :skills, only: [:create, :index, :update, :destroy]
 
     patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -832,6 +828,7 @@ Dashboard::Application.routes.draw do
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        post :mass_progress_reset
         get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
@@ -1492,7 +1489,6 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
-    post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'

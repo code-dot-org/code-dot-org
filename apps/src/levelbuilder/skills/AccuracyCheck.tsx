@@ -1,4 +1,3 @@
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
@@ -6,10 +5,7 @@ import React, {useState} from 'react';
 
 import './skills.css';
 
-import {
-  evaluationFromOpenAI,
-  SkillBasedAIResponse,
-} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {evaluationFromOpenAI} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {
   AiEvaluationTypes,
   StudentWorkEvaluationStatus,
@@ -21,16 +17,9 @@ type AIEvaluation = {
   aiEvaluation: string;
   aiReasoning: string;
   evaluationCriteria: string;
-  skillEvaluations?: [SkillBasedAIResponse];
 };
 
-type EvaluatedExample = ExampleAnswer &
-  AIEvaluation & {
-    [key in `${string}-${
-      | 'evaluationCriteria'
-      | 'aiEvaluation'
-      | 'aiReasoning'}`]?: string;
-  };
+type EvaluatedExample = ExampleAnswer & AIEvaluation;
 
 type ExampleAnswer = {
   studentWork: string;
@@ -39,8 +28,7 @@ type ExampleAnswer = {
 
 const AccuracyCheck: React.FC<{
   levelId: number;
-  hasSkills: boolean;
-}> = ({levelId, hasSkills}) => {
+}> = ({levelId}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [studentAnswers, setStudentAnswers] = useState<ExampleAnswer[]>([]);
   const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
@@ -51,7 +39,6 @@ const AccuracyCheck: React.FC<{
   const datasetName = csvFile
     ? `${csvFile.name}-ai-evaluations.csv`
     : 'ai-evaluations.csv';
-  const [evaluateSkills, setEvaluateSkills] = useState<boolean>(false);
 
   function renderStudentWorkEvaluationStatusCodes() {
     return (
@@ -103,8 +90,7 @@ const AccuracyCheck: React.FC<{
     const aiResponse = await evaluationFromOpenAI(
       example.studentWork,
       levelId,
-      AiEvaluationTypes.SINGLE_STUDENT,
-      evaluateSkills
+      AiEvaluationTypes.SINGLE_STUDENT
     );
     const parsedResponse = JSON.parse(aiResponse?.content || '{}');
     const evaluation: EvaluatedExample = {
@@ -114,16 +100,6 @@ const AccuracyCheck: React.FC<{
       evaluationCriteria: parsedResponse?.evaluationCriteria,
       humanEvaluation: example.humanEvaluation,
     };
-    if (parsedResponse?.skillEvaluations) {
-      for (let i = 0; i < parsedResponse.skillEvaluations.length; i++) {
-        const skillEvaluation = parsedResponse.skillEvaluations[i];
-        const skillKey = skillEvaluation.skillKey;
-        evaluation[`${skillKey}-evaluationCriteria`] =
-          skillEvaluation.evaluationCriteria;
-        evaluation[`${skillKey}-aiEvaluation`] = skillEvaluation.aiEvaluation;
-        evaluation[`${skillKey}-aiReasoning`] = skillEvaluation.aiReasoning;
-      }
-    }
     setAiEvaluatedAnswers(prevSamples => [...prevSamples, evaluation]);
   };
 
@@ -194,9 +170,9 @@ const AccuracyCheck: React.FC<{
         />
       </p>
       <p>
-        If you find discrepancies, you can iterate by: editing evaluation
-        criteria for a mis-evaluated skill or adjusting the level's
-        instructions. For more tips & tricks see this{' '}
+        If you find discrepancies, you can iterate by adjusting the level's
+        instructions or the additional AI evaluation instructions below. For
+        more tips & tricks see this{' '}
         <Link
           text="resource"
           href="https://docs.google.com/document/d/143_guZFrAxY0fywoTvstJvD2V2_0E_0tvrvIJfLbru4/edit?tab=t.0"
@@ -231,19 +207,6 @@ const AccuracyCheck: React.FC<{
           {'Upload Examples of Student Answers'}
         </MuiButton>
       </div>
-      <br />
-      {hasSkills && (
-        <Checkbox
-          label={
-            'Evaluate skills (if not checked, you will get an overall evaluation based on completeness of the level instructions)'
-          }
-          name={'evaluateSkills'}
-          checked={evaluateSkills}
-          size="s"
-          onChange={e => setEvaluateSkills(e.target.checked)}
-        />
-      )}
-      <br />
       <br />
       <div>
         <MuiButton

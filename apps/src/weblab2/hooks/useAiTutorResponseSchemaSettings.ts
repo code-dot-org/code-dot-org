@@ -29,12 +29,7 @@ const parseAnswer = (response: unknown) =>
 
 /**
  * Whether a response is eligible for the accept/reject flow, where the model's
- * code is loaded into the project for the student to keep or discard. Anything
- * else -- prose, unsupported file types, the widget view -- is presented as code
- * to copy by hand.
- *
- * Display and effect must agree on this, or the transcript would explain an
- * accept/reject that never started (or vice versa), so both call this.
+ * code is loaded into the project for the student to keep or discard.
  */
 const usesAcceptRejectFlow = (
   formatted: ReturnType<typeof formatAcceptRejectResponse>,

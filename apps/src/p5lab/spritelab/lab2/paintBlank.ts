@@ -11,8 +11,11 @@ import {
 } from './ai/images/modelHelpers';
 import {ImageStyle, ImageType} from './ai/images/types';
 
-// Pixel style draws on the same logical grid the pixel prompt asks for.
-const PIXEL_LOGICAL = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
+// Pixel style draws on the same logical grid the pixel prompt asks for,
+// which varies by image type (backgrounds get a finer grid).
+function pixelLogical(imageType: ImageType): number {
+  return MODEL_OUTPUT_PX / ASSUMED_BLOCK[imageType];
+}
 
 // The stage's ground color, which backgrounds must cover fully: blank
 // background canvases start on it, generated backgrounds are flattened onto
@@ -32,15 +35,16 @@ export function blankPaintSpec(
   imageType: ImageType,
   style: ImageStyle
 ): BlankPaintSpec {
+  const logical = pixelLogical(imageType);
   const pixelGridSize =
-    style === 'pixel' ? crispScaleFor(PIXEL_LOGICAL, PIXEL_LOGICAL) : undefined;
+    style === 'pixel' ? crispScaleFor(logical, logical) : undefined;
   return {
     // Smooth blanks open at the stored ceiling for their type, so paint
     // output lands at the stored sizes with nothing ever cropped or
     // downscaled behind the painter's back (a 1px brush stroke must survive
     // a save/reopen round trip).
     size: pixelGridSize
-      ? PIXEL_LOGICAL * pixelGridSize
+      ? logical * pixelGridSize
       : STORED_MAX_PX[imageType] ?? MODEL_OUTPUT_PX,
     pixelGridSize,
     fill: imageType === 'background' ? 'black' : 'transparent',

@@ -89,8 +89,9 @@ export const submitChatContents = createAsyncThunk(
       formatSchemaResponseForDisplay,
     } = newUserMessageInput;
 
-    // The model gets what the reader was shown, so a prior turn's code payload
-    // does not re-enter the context it was already merged into or rejected from.
+    // The history we send is prose the reader is shown which avoids poisoning
+    // the history with code in the actual JSON object message that was rejected
+    // or later changed.
     const modelHistory = () =>
       buildMessagesForModelHistory(
         applySchemaDisplayTransform(
@@ -270,13 +271,9 @@ export const submitChatContents = createAsyncThunk(
 );
 
 /**
- * Hands a freshly arrived structured response to the lab, which may load the
- * model's code into the project or switch the workspace into a review state.
- *
- * Runs after the event is logged and cannot change it: the lab acts on the
- * response, it does not get to decide what history records. A throwing lab must
- * not take the send with it -- the response is already saved and displayed by
- * this point.
+ * Hands a freshly arrived structured response to the lab after the event is already
+ * logged and cannot be changed: the lab acts on the response, it does not get to
+ * decide what history records.
  */
 function notifySchemaResponse(
   message: CompletedChatMessage,
