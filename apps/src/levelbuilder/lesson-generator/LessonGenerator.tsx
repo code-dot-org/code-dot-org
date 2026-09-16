@@ -74,6 +74,7 @@ import {
   updateStartSources,
 } from './levelApi';
 import {
+  DSL_LAB_TYPES,
   ExistingLessonData,
   GenerationSummary,
   LAB_LABELS,
@@ -592,9 +593,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         };
         const levelCtx = levelContextFor(spec, levelName, levelCtxBase);
 
-        // DSL-defined labs (multi / match / bubbleChoice) must plan
-        // their content before createOrFindLevel so we can pass
-        // dsl_text on POST; other labs go the create-then-save path.
+        // DSL-defined labs plan before createOrFindLevel so dsl_text can
+        // go on the POST; other labs create first, then save content.
         let multiResult: MultiGeneration | undefined;
         let matchResult: MatchGeneration | undefined;
         let externalResult: ExternalGeneration | undefined;
@@ -707,14 +707,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         }
 
         if (shouldGenerate) {
-          // Multi/Match ran the planning stage above (before create);
-          // the others run it here. Either way the stage label lines up
-          // with where the AI work actually happens.
-          if (
-            spec.labType !== 'multi' &&
-            spec.labType !== 'match' &&
-            spec.labType !== 'external'
-          ) {
+          if (!DSL_LAB_TYPES.includes(spec.labType)) {
             setStage('planning');
             appendLog(`Planning content for "${levelName}"…`);
           }
@@ -924,8 +917,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             }
             generatedOutput = {match: matchResult};
           } else if (spec.labType === 'external' && externalResult) {
-            // The whole page rode in on the DSL (create POST or reused-
-            // level PATCH); nothing further to save.
+            // The page itself is the DSL; nothing left to save.
             generatedOutput = {external: externalResult};
           } else if (spec.labType === 'freeResponse') {
             const result = await generateFreeResponseLevel(levelCtx);

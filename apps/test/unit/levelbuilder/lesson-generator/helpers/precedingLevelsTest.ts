@@ -46,27 +46,16 @@ describe('priorOutputFromLevelProperties', () => {
     expect(out?.multi?.summary).toBe('Multi — Q: What is 2+2?; A: 4');
   });
 
-  it('propagates a markdown page whole', () => {
-    const text = formatPrecedingLevels([
-      {
-        position: 1,
-        name: 'l-read',
-        labType: 'external',
-        description: 'Read about sensors.',
-        output: {
-          external: {
-            dslText: '',
-            title: 'Collecting Data',
-            markdown: '### Sensors\n\nEverywhere.',
-            teacherMarkdown: '',
-            summary: 'Markdown page "Collecting Data"',
-          },
-        },
-      },
-    ]);
-    expect(text).toContain('  Page:');
-    expect(text).toContain('    ### Sensors');
-    expect(text).toContain('    Everywhere.');
+  it('carries a markdown page through from level properties', () => {
+    const out = priorOutputFromLevelProperties(
+      props({markdown: '### Sensors', title: 'Collecting Data'}),
+      'external'
+    );
+    expect(out?.external?.markdown).toBe('### Sensors');
+    expect(out?.external?.title).toBe('Collecting Data');
+    expect(
+      priorOutputFromLevelProperties(props({}), 'external')
+    ).toBeUndefined();
   });
 
   it('summarizes a free response question', () => {
@@ -94,6 +83,28 @@ describe('priorOutputFromLevelProperties', () => {
 });
 
 describe('formatPrecedingLevels', () => {
+  it('propagates a markdown page whole', () => {
+    const text = formatPrecedingLevels([
+      {
+        position: 1,
+        name: 'l-read',
+        labType: 'external',
+        description: 'Read about sensors.',
+        output: {
+          external: {
+            dslText: '',
+            title: 'Collecting Data',
+            markdown: '### Sensors\n\nEverywhere.',
+            teacherMarkdown: '',
+          },
+        },
+      },
+    ]);
+    expect(text).toContain('  Page:');
+    expect(text).toContain('    ### Sensors');
+    expect(text).toContain('    Everywhere.');
+  });
+
   it('returns the empty string for no entries', () => {
     expect(formatPrecedingLevels([])).toBe('');
   });

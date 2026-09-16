@@ -74,17 +74,12 @@ export function priorOutputFromLevelProperties(
       : {pythonlab: generation};
   }
   if (labType === 'external') {
-    const markdown = (props as {markdown?: string}).markdown || '';
-    if (!markdown) return undefined;
-    return {
-      external: {
-        dslText: '',
-        title: '',
-        markdown,
-        teacherMarkdown: '',
-        summary: 'Markdown page',
-      },
+    const {markdown = '', title = ''} = props as {
+      markdown?: string;
+      title?: string;
     };
+    if (!markdown) return undefined;
+    return {external: {dslText: '', title, markdown, teacherMarkdown: ''}};
   }
   if (labType === 'multi' || labType === 'match') {
     const summary = formatAssessmentSummary(props, labType);
@@ -277,8 +272,7 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
       }
     }
     if (e.output?.external) {
-      // The page is prose downstream levels may call back to; propagate
-      // it whole, like panel text.
+      // Prose later levels may call back to; propagate whole, like panel text.
       lines.push('  Page:');
       for (const line of e.output.external.markdown.split('\n')) {
         lines.push(`    ${line}`);

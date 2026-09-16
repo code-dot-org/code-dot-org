@@ -146,9 +146,10 @@ export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
     promptLabel: 'External',
     promptDescription: [
       'a standalone markdown page the student reads — narrative, framing,',
-      'reference material, or a wrap-up. One scrolling page of prose, no',
-      'interaction and no images. Prefer Panels when illustrations would',
-      'carry the story; prefer External for pure reading.',
+      'reference material, or a wrap-up. One scrolling page of prose with',
+      'no interaction. Prefer Panels when illustrations carry the story;',
+      'prefer External for reading, or where the author will embed a video',
+      'or article.',
     ],
     chooseFor: 'standalone reading pages',
   },

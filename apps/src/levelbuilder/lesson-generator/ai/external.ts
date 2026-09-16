@@ -15,10 +15,7 @@ import {
 
 import {dslHeredoc, dslQuote} from './dsl';
 
-// External is a DSLDefined markdown page: the whole level is prose the
-// student reads. Unlike the stub-policy labs, the page IS the content,
-// so this generator writes a real first draft (like panel text) rather
-// than TODO scaffolding.
+// The page IS the content, so this writes a real first draft, not a TODO stub.
 
 const externalPlanSchema = Output.object({
   schema: z.object({
@@ -50,14 +47,13 @@ export interface ExternalGeneration {
   title: string;
   markdown: string;
   teacherMarkdown: string;
-  summary: string;
 }
 
 export async function generateExternalLevel(
   ctx: LevelContext
 ): Promise<ExternalGeneration> {
   const prompt = [
-    'You are helping a curriculum author build a "Markdown" level: a',
+    'You are helping a curriculum author build an "External" level: a',
     'standalone page of markdown the student reads — narrative, framing,',
     'reference material, or a wrap-up. There is no interaction beyond',
     'reading. Assume a middle-school student unless the description below',
@@ -131,7 +127,6 @@ export async function generateExternalLevel(
     title,
     markdown,
     teacherMarkdown,
-    summary: `Markdown page "${title}"`,
   };
 }
 
