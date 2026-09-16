@@ -1,0 +1,23 @@
+{
+  "name": "ui-test-level-swap",
+  "script_names": [
+    "ui-test-level-swap"
+  ],
+  "original_script_names": [
+    "ui-test-level-swap"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-level-swap",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

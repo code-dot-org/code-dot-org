@@ -44,7 +44,7 @@ const SkillEvaluationSettings: React.FC<Props> = ({
           size="s"
         />
       </p>
-      <AccuracyCheck levelId={levelId} hasSkills={skills.length > 0} />
+      <AccuracyCheck levelId={levelId} />
       <br />
       <ViewSystemPrompt systemPrompt={systemPrompt} />
       <br />
