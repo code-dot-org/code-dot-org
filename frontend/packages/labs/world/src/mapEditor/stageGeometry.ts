@@ -17,7 +17,7 @@ import {placementKey} from '../blockly/mapPlacements';
 
 import {
   positionOf,
-  transformOf,
+  worldTransformOf,
   type Placement,
   type Size,
   type Tile,
@@ -287,7 +287,7 @@ export function hitTest(
     if (!positionOf(actor)) {
       continue;
     }
-    const local = toLocalFrame(world, transformOf(actor, scales?.[actor.type]));
+    const local = toLocalFrame(world, worldTransformOf(actor, actors, scales));
     const box = placementSize(actor, sizes, placementSizes);
     const hw = Math.max(box.width, MIN_HIT_SIZE) / 2;
     const hh = Math.max(box.height, MIN_HIT_SIZE) / 2;

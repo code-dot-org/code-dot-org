@@ -44,7 +44,6 @@ import {
   linksFrom,
   placementChoices,
   propValue,
-  transformOf,
   withPicked,
   withProperty,
   type MapDoc,
@@ -53,6 +52,10 @@ import {
   type Size,
   type Vec,
   type View,
+  parentIdOf,
+  toLocalPosition,
+  withParent,
+  worldTransformOf,
 } from './mapModel';
 import {
   DRAW_SIZE,
@@ -339,6 +342,21 @@ export const MapStage = ({
   const hitUnder = (world: Vec): Placement | undefined =>
     hitTest(mapRef.current.actors, world, sizes, scales, placementSizes);
 
+  /**
+   * What to STORE so that placement `id` lands at world point `at`: the
+   * point itself for a root, and the point in its parent's frame for a
+   * child (`mapModel.toLocalPosition`).
+   */
+  const storedPosition = (id: string, at: Vec): Vec => {
+    const actors = mapRef.current.actors;
+    const actor = actors.find(one => one.id === id);
+    const parentId = actor && parentIdOf(actor);
+    const parent = parentId && actors.find(one => one.id === parentId);
+    return parent
+      ? toLocalPosition(at, worldTransformOf(parent, actors, scales))
+      : at;
+  };
+
   // Live-patch a placed actor's `owner.prop` override (local only — a drag or
   // field edit commits once on release / blur).
   const setProperty = (
@@ -471,11 +489,17 @@ export const MapStage = ({
       return;
     }
     setDraft(d => ({...d, [fieldKey(prop)]: value}));
+    // A parent chosen here keeps the placement where it is on the canvas,
+    // as the engine's `set parent` does: the stored transform is rewritten
+    // in the new parent's frame (`mapModel.withParent`).
+    const isParent = prop.ownerId === 'positional' && prop.propId === 'parent';
     const next = {
       ...mapRef.current,
       actors: mapRef.current.actors.map(a =>
         a.id === selectedActor.id
-          ? withProperty(a, prop.ownerId, prop.propId, value)
+          ? isParent
+            ? withParent(a, value || undefined, mapRef.current.actors, scales)
+            : withProperty(a, prop.ownerId, prop.propId, value)
           : a,
       ),
     };
@@ -737,8 +761,26 @@ export const MapStage = ({
       );
     }
     if (prop.type === 'vector' || prop.type === 'point') {
+      // A child's position is stored in its parent's frame; the place it
+      // lands on the canvas is worth seeing beside it.
+      const carried =
+        prop.ownerId === 'positional' &&
+        prop.propId === 'position' &&
+        selectedActor &&
+        parentIdOf(selectedActor)
+          ? worldTransformOf(selectedActor, map.actors, scales).pos
+          : undefined;
       return (
         <div key={fieldKey(prop)} className={styles.inspectorGrid}>
+          {carried && (
+            <Typography
+              variant="body3"
+              component="span"
+              className={styles.inspectorNote}
+            >
+              In the world: {Math.round(carried.x)}, {Math.round(carried.y)}
+            </Typography>
+          )}
           {(['x', 'y'] as const).map(axis => (
             <TextField
               key={axis}
@@ -869,7 +911,7 @@ export const MapStage = ({
     // Left button in SELECT mode: grab a placed actor, else deselect + pan.
     if (hit) {
       event.preventDefault();
-      const pos = positionOf(hit)!;
+      const pos = worldTransformOf(hit, mapRef.current.actors, scales).pos;
       setSelectedId(hit.id);
       dragRef.current = {
         id: hit.id,
@@ -896,7 +938,10 @@ export const MapStage = ({
         drag.id,
         'positional',
         'position',
-        snap({x: world.x + drag.offX, y: world.y + drag.offY}, event.altKey),
+        storedPosition(
+          drag.id,
+          snap({x: world.x + drag.offX, y: world.y + drag.offY}, event.altKey),
+        ),
       );
       return;
     }
@@ -944,7 +989,7 @@ export const MapStage = ({
     const next = nextSelection(mapRef.current.actors, selectedId, dir);
     if (next) {
       setSelectedId(next.id);
-      ensureVisible(positionOf(next)!);
+      ensureVisible(worldTransformOf(next, mapRef.current.actors, scales).pos);
     }
   };
 
@@ -969,8 +1014,15 @@ export const MapStage = ({
     if (!selectedActor) {
       return;
     }
-    const from = positionOf(selectedActor) ?? {x: 0, y: 0};
-    const to = steppedBy(from, map.tile, dx, dy, free);
+    const from = worldTransformOf(
+      selectedActor,
+      mapRef.current.actors,
+      scales,
+    ).pos;
+    const to = storedPosition(
+      selectedActor.id,
+      steppedBy(from, map.tile, dx, dy, free),
+    );
     const next = {
       ...mapRef.current,
       actors: mapRef.current.actors.map(a =>
@@ -1262,7 +1314,9 @@ export const MapStage = ({
       if (!positionOf(actor)) {
         continue;
       }
-      const t = transformOf(actor, scales?.[actor.type]);
+      // Through the parent, so a child sits where the engine will put it and
+      // a dragged parent brings its children (specs/PARENTING.md).
+      const t = worldTransformOf(actor, map.actors, scales);
       const key = placementKey(actor.type, actor.properties);
       drawSprite(actor.type, t, 1, key, actor.id);
       transformById.set(actor.id, t);

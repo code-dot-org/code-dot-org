@@ -506,6 +506,14 @@ false})`), since the stored values are already local and were stored before
 the parent could be known. The events are raised in that pass, after every
 entry's `is created`, as the design asked.
 
+**The editor did not need `Transform2D` either.** `mapModel.composeTransforms`
+and `toLocalPosition` are the engine's two functions over the editor's own
+shapes, and the stage's `toLocalFrame` still undoes the drawn transform for
+a hit — now from the composed world transform rather than the stored one.
+A reparent from the inspector rewrites rotation and scale only when they say
+something, so a button dropped on an unturned panel stores its position and
+its parent and nothing else.
+
 **The driver's shear replaced the parent matrix, and now composes onto it.**
 The skew hook handed the renderer a shear matrix IN PLACE OF the parent
 matrix it was given — and a Container gives each child its own matrix as
@@ -593,12 +601,15 @@ no-op.
    setters are hand-made in the Space category
    (`blockly/__tests__/parentingBlocks`, which also compiles a project that
    parents a Button to a Label and checks where it lands).
-3. **The map.** `parent` as a positional override; `loadMap` resolving it in
-   the reference pass with the stored local position applied after, and
-   raising the events. The editor's `transformOf`, `toLocalFrame` and
-   `hitTest` move onto `Transform2D` and compose through the parent; it
-   drags groups, edits local in the inspector and shows world beside it,
-   and parents on drop.
+3. **The map and the editor — DONE, but for parenting by drop.** `parent`
+   is a positional override the inspector already offered as a reference;
+   `loadMap` resolves it in the reference pass and applies the stored local
+   position after. The stage draws, outlines, hit-tests, drags and nudges
+   every placement through `mapModel.worldTransformOf`, stores a dragged
+   child back in its parent's frame, keeps a placement where it is when a
+   parent is chosen in the inspector (`withParent`), and shows a child's
+   place on the canvas beside its stored position. Parenting by dropping
+   onto a placement waits for the Panel to say which kinds accept children.
 4. **Retire Attachment.** The health enhancement's rows and the villager
    lesson's steps and check; the stock Health Bar's trait; the rule file and
    its generator script removed; the enhancement and lesson tests updated.

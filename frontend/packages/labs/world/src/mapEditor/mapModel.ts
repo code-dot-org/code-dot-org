@@ -187,6 +187,161 @@ export const transformOf = (actor: Placement, kindScale?: Vec): Transform => ({
   skew: asNum(propValue(actor, 'positional', 'skew')) ?? 0,
 });
 
+// ── Parenting (specs/PARENTING.md) ──────────────────────────────────────────
+//
+// A placement's stored `position`, `rotation` and `scale` are in its PARENT'S
+// frame when it has one — the same slot the engine keeps local values in —
+// and its place on the canvas is worked out through the chain of parents,
+// exactly as the engine works out the world position. So dragging a parent
+// moves its children, because nothing about the children changed; and a child
+// dragged is stored back in its parent's frame.
+
+/** The id of the placement this one is carried by, if any. */
+export const parentIdOf = (actor: Placement): string | undefined => {
+  const value = propValue(actor, 'positional', 'parent');
+  return typeof value === 'string' && value !== '' ? value : undefined;
+};
+
+const DEG = Math.PI / 180;
+
+/** A component-wise division that answers 0 where the parent's scale is 0. */
+const unscale = (v: Vec, by: Vec): Vec => ({
+  x: by.x === 0 ? 0 : v.x / by.x,
+  y: by.y === 0 ? 0 : v.y / by.y,
+});
+
+/**
+ * A child's world transform from its parent's and its local one — the
+ * engine's `compose` (`core/parenting`), over the editor's own shapes.
+ * Skew is the child's own and is not composed.
+ */
+export const composeTransforms = (
+  parent: Transform,
+  local: Transform,
+): Transform => {
+  const scaled = {
+    x: local.pos.x * parent.scale.x,
+    y: local.pos.y * parent.scale.y,
+  };
+  const cos = Math.cos(parent.rotation * DEG);
+  const sin = Math.sin(parent.rotation * DEG);
+  return {
+    pos: {
+      x: parent.pos.x + scaled.x * cos - scaled.y * sin,
+      y: parent.pos.y + scaled.x * sin + scaled.y * cos,
+    },
+    scale: {
+      x: parent.scale.x * local.scale.x,
+      y: parent.scale.y * local.scale.y,
+    },
+    rotation: parent.rotation + local.rotation,
+    skew: local.skew,
+  };
+};
+
+/** The local position that puts a child at `world` under `parent`. */
+export const toLocalPosition = (world: Vec, parent: Transform): Vec => {
+  const dx = world.x - parent.pos.x;
+  const dy = world.y - parent.pos.y;
+  const cos = Math.cos(-parent.rotation * DEG);
+  const sin = Math.sin(-parent.rotation * DEG);
+  return unscale(
+    {x: dx * cos - dy * sin, y: dx * sin + dy * cos},
+    parent.scale,
+  );
+};
+
+/**
+ * Where a placement is on the canvas: its own transform composed onto its
+ * parent's, all the way up. A root's is its own; a parent the map does not
+ * hold, or a cycle, ends the chain where it is rather than nowhere.
+ */
+export function worldTransformOf(
+  actor: Placement,
+  actors: readonly Placement[],
+  scales?: Record<string, Vec>,
+  seen: ReadonlySet<string> = new Set(),
+): Transform {
+  const local = transformOf(actor, scales?.[actor.type]);
+  const parentId = parentIdOf(actor);
+  if (!parentId || seen.has(actor.id)) {
+    return local;
+  }
+  const parent = actors.find(other => other.id === parentId);
+  if (!parent) {
+    return local;
+  }
+  return composeTransforms(
+    worldTransformOf(parent, actors, scales, new Set([...seen, actor.id])),
+    local,
+  );
+}
+
+/** Whether `candidate` is `actor` or is carried, at any depth, by it. */
+export const isCarriedBy = (
+  candidate: Placement,
+  actor: Placement,
+  actors: readonly Placement[],
+): boolean => {
+  const seen = new Set<string>();
+  for (
+    let at: Placement | undefined = candidate;
+    at && !seen.has(at.id);
+    at = actors.find(other => other.id === parentIdOf(at!))
+  ) {
+    if (at.id === actor.id) {
+      return true;
+    }
+    seen.add(at.id);
+  }
+  return false;
+};
+
+/**
+ * A copy of `actor` carried by `parentId` (or by nobody), KEEPING ITS PLACE
+ * ON THE CANVAS: the stored position, rotation and scale are rewritten in
+ * the new parent's frame from where the actor already is, which is what the
+ * engine's `set parent` does and what somebody dragging a button onto a
+ * panel meant. A cycle changes nothing.
+ */
+export function withParent(
+  actor: Placement,
+  parentId: string | undefined,
+  actors: readonly Placement[],
+  scales?: Record<string, Vec>,
+): Placement {
+  const parent = parentId
+    ? actors.find(other => other.id === parentId)
+    : undefined;
+  if (parentId && (!parent || isCarriedBy(parent, actor, actors))) {
+    return actor;
+  }
+  const world = worldTransformOf(actor, actors, scales);
+  const frame = parent
+    ? worldTransformOf(parent, actors, scales)
+    : {pos: {x: 0, y: 0}, scale: {x: 1, y: 1}, rotation: 0, skew: 0};
+  const local: Transform = {
+    pos: toLocalPosition(world.pos, frame),
+    rotation: world.rotation - frame.rotation,
+    scale: unscale(world.scale, frame.scale),
+    skew: world.skew,
+  };
+  let next = withProperty(actor, 'positional', 'parent', parent?.id ?? '');
+  next = withProperty(next, 'positional', 'position', local.pos);
+  // Rotation and scale are written only where they say something: a
+  // placement stores what it overrides, and a child of an unturned,
+  // unscaled parent overrides neither more than it did.
+  const stored = (id: string) =>
+    propValue(actor, 'positional', id) !== undefined;
+  if (stored('rotation') || local.rotation !== 0) {
+    next = withProperty(next, 'positional', 'rotation', local.rotation);
+  }
+  if (stored('scale') || local.scale.x !== 1 || local.scale.y !== 1) {
+    next = withProperty(next, 'positional', 'scale', local.scale);
+  }
+  return next;
+}
+
 /** A copy of `actor` with `owner.prop` set to `value`. */
 export const withProperty = (
   actor: Placement,

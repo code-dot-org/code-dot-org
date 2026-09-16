@@ -367,3 +367,10 @@
   justify-content: space-between;
   gap: 4px;
 }
+
+/* A line across the inspector's two-column grid: where a child's stored,
+   parent-relative position lands on the canvas (specs/PARENTING.md). */
+.inspectorNote {
+  grid-column: 1 / -1;
+  color: var(--text-neutral-secondary, #5b5f66);
+}

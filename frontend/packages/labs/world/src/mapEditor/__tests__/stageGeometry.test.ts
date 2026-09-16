@@ -309,6 +309,19 @@ describe('hitTest', () => {
     expect(hitTest(actors, {x: 128, y: 100}, sizes)).toBeUndefined();
   });
 
+  it('finds a child where its parent puts it', () => {
+    // A child stores its place in its parent's frame; the canvas draws it
+    // through the parent, and the hit test asks the same function.
+    const dialog = at('Dialog', 100, 100);
+    const ok: Placement = {
+      type: 'actors/coin',
+      id: 'OK',
+      properties: {positional: {parent: 'Dialog', position: {x: 60, y: 30}}},
+    };
+    expect(hitTest([dialog, ok], {x: 160, y: 130}, undefined)?.id).toBe('OK');
+    expect(hitTest([dialog, ok], {x: 60, y: 30}, undefined)).toBeUndefined();
+  });
+
   it('cannot hit an actor with no position', () => {
     const ghost: Placement = {type: 'actors/coin', id: 'g', properties: {}};
     expect(hitTest([ghost], {x: 0, y: 0}, undefined)).toBeUndefined();

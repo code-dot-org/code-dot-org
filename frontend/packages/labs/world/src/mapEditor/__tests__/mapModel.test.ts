@@ -19,8 +19,15 @@ import {
   linksFrom,
   withPicked,
   placementChoices,
+  composeTransforms,
+  isCarriedBy,
+  parentIdOf,
+  toLocalPosition,
+  withParent,
+  worldTransformOf,
   type MapDoc,
   type Placement,
+  type Transform,
 } from '../mapModel';
 
 const doc = (map: Partial<MapDoc>): string =>
@@ -320,5 +327,124 @@ describe('linksFrom', () => {
       'subject',
       'attached to',
     ]);
+  });
+});
+
+describe('a placement carried by another (parenting)', () => {
+  const at = (
+    id: string,
+    x: number,
+    y: number,
+    more: Record<string, unknown> = {},
+  ): Placement => ({
+    type: 'actors/thing',
+    id,
+    properties: {positional: {position: {x, y}, ...more}},
+  });
+  const round = (t: Transform) => ({
+    x: Math.round(t.pos.x),
+    y: Math.round(t.pos.y),
+    rotation: Math.round(t.rotation),
+    scale: {
+      x: Math.round(t.scale.x * 100) / 100,
+      y: Math.round(t.scale.y * 100) / 100,
+    },
+  });
+
+  it('reads the parent id, and nothing for an empty one', () => {
+    expect(parentIdOf(at('a', 0, 0, {parent: 'Dialog'}))).toBe('Dialog');
+    expect(parentIdOf(at('a', 0, 0, {parent: ''}))).toBeUndefined();
+    expect(parentIdOf(at('a', 0, 0))).toBeUndefined();
+  });
+
+  it('is drawn at its parent plus its stored, local place', () => {
+    const dialog = at('Dialog', 100, 100);
+    const ok = at('OK', 60, 30, {parent: 'Dialog'});
+    const actors = [dialog, ok];
+    expect(round(worldTransformOf(ok, actors))).toMatchObject({x: 160, y: 130});
+    // Move the parent: the child's stored values did not change, its place did.
+    const moved = [at('Dialog', 200, 100), ok];
+    expect(round(worldTransformOf(ok, moved))).toMatchObject({x: 260, y: 130});
+  });
+
+  it('turns and grows with a turned, scaled parent', () => {
+    const tank = at('Tank', 100, 100, {rotation: 90, scale: {x: 2, y: 2}});
+    const turret = at('Turret', 0, -24, {parent: 'Tank'});
+    const world = worldTransformOf(turret, [tank, turret]);
+    expect(round(world)).toEqual({
+      x: 148,
+      y: 100,
+      rotation: 90,
+      scale: {x: 2, y: 2},
+    });
+  });
+
+  it('composes through a chain, and stops at a parent the map lacks', () => {
+    const a = at('a', 10, 10);
+    const b = at('b', 5, 0, {parent: 'a'});
+    const c = at('c', 0, 5, {parent: 'b'});
+    expect(round(worldTransformOf(c, [a, b, c]))).toMatchObject({x: 15, y: 15});
+    const orphan = at('o', 7, 7, {parent: 'gone'});
+    expect(round(worldTransformOf(orphan, [orphan]))).toMatchObject({
+      x: 7,
+      y: 7,
+    });
+  });
+
+  it('ends a cycle where it is rather than nowhere', () => {
+    const a = at('a', 1, 1, {parent: 'b'});
+    const b = at('b', 2, 2, {parent: 'a'});
+    expect(() => worldTransformOf(a, [a, b])).not.toThrow();
+    expect(isCarriedBy(a, b, [a, b])).toBe(true);
+  });
+
+  it('undoes its own composition', () => {
+    const parent: Transform = {
+      pos: {x: 100, y: 100},
+      scale: {x: 2, y: 0.5},
+      rotation: 30,
+      skew: 0,
+    };
+    const local: Transform = {
+      pos: {x: 12, y: -7},
+      scale: {x: 1, y: 1},
+      rotation: 0,
+      skew: 0,
+    };
+    const back = toLocalPosition(composeTransforms(parent, local).pos, parent);
+    expect(back.x).toBeCloseTo(12);
+    expect(back.y).toBeCloseTo(-7);
+  });
+
+  it('keeps a placement where it is when it is given a parent', () => {
+    const dialog = at('Dialog', 100, 100, {rotation: 90});
+    const ok = at('OK', 160, 130);
+    const carried = withParent(ok, 'Dialog', [dialog, ok]);
+    expect(parentIdOf(carried)).toBe('Dialog');
+    const world = worldTransformOf(carried, [dialog, carried]);
+    expect(round(world)).toMatchObject({x: 160, y: 130, rotation: 0});
+    // …and where it is when the parent is taken away again.
+    const freed = withParent(carried, undefined, [dialog, carried]);
+    expect(parentIdOf(freed)).toBeUndefined();
+    expect(round(worldTransformOf(freed, [dialog, freed]))).toMatchObject({
+      x: 160,
+      y: 130,
+    });
+  });
+
+  it('writes no rotation or scale for a child of a plain parent', () => {
+    const dialog = at('Dialog', 100, 100);
+    const ok = withParent(at('OK', 160, 130), 'Dialog', [dialog]);
+    expect(ok.properties?.positional).toEqual({
+      position: {x: 60, y: 30},
+      parent: 'Dialog',
+    });
+  });
+
+  it('refuses a cycle and changes nothing', () => {
+    const a = at('a', 0, 0);
+    const b = at('b', 0, 0, {parent: 'a'});
+    expect(withParent(a, 'b', [a, b])).toBe(a);
+    expect(withParent(a, 'a', [a, b])).toBe(a);
   });
 });
