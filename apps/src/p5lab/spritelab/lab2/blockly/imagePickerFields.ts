@@ -240,12 +240,10 @@ export class BlockImageField extends Lab2AnimationDropdown {
 }
 
 /**
- * Refresh every image dropdown against the current list: thumbnails, so
- * blocks rendered before an image was trimmed pick up the trim, and values,
- * so a block whose image Start Over deleted stops showing it. The flyout's
- * blocks too: a flyout-only toolbox builds them at injection, before any
- * image has loaded, so a character set's field otherwise keeps showing the
- * whole sheet.
+ * Refresh every image dropdown against the current list: thumbnails that
+ * landed after a block rendered, and values whose image is gone. The
+ * flyout's blocks too: a flyout-only toolbox builds them at injection,
+ * before any image has loaded.
  */
 export function refreshAnimationDropdownThumbnails(): void {
   const workspace: BlocklyCore.WorkspaceSvg | undefined =
@@ -264,8 +262,6 @@ export function refreshAnimationDropdownThumbnails(): void {
         input.fieldRow.forEach(field => {
           if (field instanceof Lab2AnimationDropdown) {
             field.followList();
-          } else if (field instanceof CdoFieldAnimationDropdown) {
-            field.refreshSelectedOption();
           }
         });
       });

@@ -26,7 +26,6 @@
     },
     "image_defaults": {
       "sprite": "hero",
-      "block": "block",
       "gamelab_addBehaviorSimple": [
         "friend"
       ],
