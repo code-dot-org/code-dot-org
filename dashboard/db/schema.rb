@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_16_180336) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2530,6 +2530,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.datetime "sign_in_at", precision: nil, null: false
     t.integer "sign_in_count", null: false
     t.string "anon_user_id", limit: 36
+    t.integer "authentication_option_id"
+    t.string "event_type", limit: 32
     t.index ["sign_in_at"], name: "index_sign_ins_on_sign_in_at"
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
