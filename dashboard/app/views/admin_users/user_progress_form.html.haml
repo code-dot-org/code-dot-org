@@ -15,6 +15,7 @@
     %i.fa-solid.fa-magnifying-glass
 
 - if @target_user
+  %p#progress-reset-success.alert.alert-success{style: 'display:none'}
   %h2 User information
   %table.table.table-hover.table-condensed
     %thead
@@ -33,7 +34,7 @@
         %td= format_time(@target_user.current_sign_in_at)
         %td= format_time(@target_user.created_at)
 
-  = form_tag url_for(action: 'bulk_delete_progress'), method: 'post', id: 'bulk-progress-form' do
+  = form_tag url_for(action: 'mass_progress_reset'), method: 'post', id: 'bulk-progress-form', data: {redirect: user_progress_form_path(user_identifier: params[:user_identifier])} do
 
     - if @target_user.teacher?
 
@@ -119,15 +120,42 @@
               %td= format_time(user_script.assigned_at)
               %td= format_time(user_script.last_progress_at)
 
+    %p#progress-reset-error.alert.alert-danger{style: 'display:none'}
     %p
-      %button.btn.btn-danger{
-        type: 'submit',
-        onclick: "return confirm('Reset progress for all selected students in all selected units? This cannot be undone.')"
-      }
+      %button.btn.btn-danger{type: 'submit'}
         Reset Selected Progress
 
   :javascript
     (function () {
+      // Submit via fetch, show inline error on failure, redirect on success.
+      var form = document.getElementById('bulk-progress-form');
+      var errorEl = document.getElementById('progress-reset-error');
+      var successEl = document.getElementById('progress-reset-success');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!confirm('Reset progress for all selected students in all selected units? This cannot be undone.')) return;
+          errorEl.style.display = 'none';
+          successEl.style.display = 'none';
+          fetch(form.action, {method: 'POST', body: new FormData(form)})
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+              if (data.success) {
+                successEl.textContent = 'Progress reset successfully.';
+                successEl.style.display = '';
+                successEl.scrollIntoView({behavior: 'smooth', block: 'center'});
+              } else {
+                errorEl.textContent = data.error || 'An error occurred.';
+                errorEl.style.display = '';
+              }
+            })
+            .catch(function () {
+              errorEl.textContent = 'Request failed. Please try again.';
+              errorEl.style.display = '';
+            });
+        });
+      }
+
       // Toggle section student list visibility.
       document.querySelectorAll('.toggle-section-link').forEach(function (link) {
         link.addEventListener('click', function (e) {

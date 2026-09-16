@@ -823,7 +823,6 @@ Dashboard::Application.routes.draw do
         post :studio_person_split
         post :studio_person_add_email_to_emails
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
-        post :bulk_delete_progress
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
         get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
         get :cap_actions, action: 'cap_actions_form', as: 'cap_actions_form'

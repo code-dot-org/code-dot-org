@@ -164,23 +164,6 @@ class AdminUsersController < ApplicationController
     end
   end
 
-  # POST /admin/bulk_delete_progress
-  # Stub: accepts student_ids[] and unit_ids[], to be wired to the in-progress
-  # progress deletion API once it lands.
-  def bulk_delete_progress
-    student_ids = Array(params[:student_ids]).map(&:to_i).select(&:positive?)
-    unit_ids = Array(params[:unit_ids]).map(&:to_i).select(&:positive?)
-
-    if student_ids.empty? || unit_ids.empty?
-      redirect_to user_progress_form_path, alert: 'Select at least one student and one unit.'
-      return
-    end
-
-    log_admin_action('bulk_delete_progress', nil, {student_ids: student_ids, unit_ids: unit_ids})
-    User.delete_progress_for_units(user_ids: student_ids, unit_ids: unit_ids)
-    redirect_to user_progress_form_path, notice: "Queued progress reset for #{student_ids.length} #{'student'.pluralize(student_ids.length)} across #{unit_ids.length} #{'unit'.pluralize(unit_ids.length)}. (Deletion API pending.)"
-  end
-
   # GET /admin/user_projects
   # This page takes an optional user_identifier param and renders a page with the users active and deleted projects
   def user_projects_form
