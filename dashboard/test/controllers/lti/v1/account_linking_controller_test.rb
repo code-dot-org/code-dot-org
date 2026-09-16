@@ -42,6 +42,32 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     assert Policies::Lti.lti?(@user)
   end
 
+  # link_email checks the password itself rather than going through a Warden strategy,
+  # so the credential presented is the account's email option -- not the LTI option this
+  # same request is linking to it.
+  test 'link_email attributes the sign_in to the email credential, not the LTI one' do
+    partial_lti_teacher = create(:teacher)
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    ao = AuthenticationOption.new(
+      authentication_id: Services::Lti::AuthIdGenerator.new(fake_id_token).call,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: @user.email,
+    )
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes session, partial_lti_teacher
+    User.any_instance.stubs(:valid_password?).returns(true)
+    email_option = @user.primary_contact_info
+    assert_equal AuthenticationOption::EMAIL, email_option.credential_type
+
+    assert_creates(SignIn) do
+      post :link_email, params: {email: @user.email, password: 'password'}
+    end
+
+    sign_in = SignIn.where(user_id: @user.id).order(:id).last
+    assert_equal SignIn::CREDENTIAL, sign_in.event_type
+    assert_equal email_option.id, sign_in.authentication_option_id
+  end
+
   test 'links a roster-synced LTI account to an existing account' do
     roster_synced_teacher = create(:teacher)
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}

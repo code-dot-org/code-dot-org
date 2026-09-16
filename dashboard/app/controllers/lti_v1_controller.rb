@@ -191,7 +191,9 @@ class LtiV1Controller < ApplicationController
       session[:user_return_to] = destination_url
 
       if user
-        sign_in user
+        sign_in user,
+          event_type: SignIn::CREDENTIAL,
+          authentication_option: user.authentication_options.find(&:lti?)
 
         metadata = {
           'user_type' => user.user_type,

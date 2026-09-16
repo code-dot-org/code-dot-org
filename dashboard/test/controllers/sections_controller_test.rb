@@ -90,6 +90,22 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
+  # These students have no authentication_option at all, so the credential stays NULL
+  # and event_type is the only thing distinguishing the row from an undetermined one.
+  test "log_in with word records a section code sign in" do
+    assert_creates(SignIn) do
+      post :log_in, params: {
+        id: @word_section.code,
+        user_id: @word_user_1.id,
+        secret_words: @word_user_1.secret_words
+      }
+    end
+
+    sign_in = SignIn.where(user_id: @word_user_1.id).order(:id).last
+    assert_equal SignIn::SECTION_CODE, sign_in.event_type
+    assert_nil sign_in.authentication_option_id
+  end
+
   test "valid log_in with word without spaces" do
     assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
