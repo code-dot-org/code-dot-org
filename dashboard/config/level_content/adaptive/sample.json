@@ -1,19 +1,206 @@
 {
-  "formatVersion": 1,
+  "formatVersion": 3,
   "id": "sample",
-  "title": "Adaptive Sample",
-  "objective": "Placeholder content that exercises the Adaptive level type end to end.",
+  "title": "Build a website with AI",
+  "objective": "Build a personal website with an AI build partner by developing two skills, prompting and debugging, then applying them to a project of the student's own.",
+  "project": {
+    "lab": {
+      "type": "weblab2"
+    },
+    "description": "A one-page website about something the student cares about: a team, their art, a cause, a business idea."
+  },
   "steps": [
     {
-      "id": "intro",
+      "id": "welcome",
       "kind": "panels",
-      "title": "Welcome",
+      "title": "You can make this yourself",
       "panels": [
         {
-          "caption": "This content is a placeholder. The player replaces this view in a later change."
+          "caption": "In this lesson you will build a website of your own with an AI build partner."
+        },
+        {
+          "caption": "First, a few quick questions so the lesson can start you in the right place."
         }
-      ],
-      "next": "end"
+      ]
+    },
+    {
+      "id": "diagnostic",
+      "kind": "questions",
+      "title": "What do you already know?",
+      "description": "Places the student in each skill. No penalty for guessing.",
+      "questions": [
+        {
+          "id": "q-footer",
+          "type": "multipleChoice",
+          "prompt": "Where do you usually find the footer on a website?",
+          "options": [
+            {
+              "id": "top",
+              "label": "At the very top"
+            },
+            {
+              "id": "bottom",
+              "label": "At the very bottom",
+              "correct": true
+            },
+            {
+              "id": "side",
+              "label": "Along the left side"
+            },
+            {
+              "id": "popup",
+              "label": "In a popup window"
+            }
+          ]
+        },
+        {
+          "id": "q-header",
+          "type": "multipleChoice",
+          "prompt": "What does a website header usually contain?",
+          "options": [
+            {
+              "id": "name-nav",
+              "label": "The site name and main navigation",
+              "correct": true
+            },
+            {
+              "id": "legal",
+              "label": "Copyright and legal fine print"
+            },
+            {
+              "id": "comments",
+              "label": "The comments section"
+            },
+            {
+              "id": "everything",
+              "label": "The full text of every page"
+            }
+          ]
+        },
+        {
+          "id": "q-prompt",
+          "type": "multipleChoice",
+          "prompt": "Which prompt is most likely to get the layout you want?",
+          "options": [
+            {
+              "id": "nice",
+              "label": "Make it look nice"
+            },
+            {
+              "id": "structure",
+              "label": "A header with the site name, a section with three cards, and a footer",
+              "correct": true
+            },
+            {
+              "id": "colors",
+              "label": "Use blue and white"
+            },
+            {
+              "id": "better",
+              "label": "Make it better than before"
+            }
+          ]
+        },
+        {
+          "id": "q-css",
+          "type": "multipleChoice",
+          "prompt": "The heading should be blue but is black. Which file most likely has the bug?",
+          "options": [
+            {
+              "id": "html",
+              "label": "index.html"
+            },
+            {
+              "id": "css",
+              "label": "style.css",
+              "correct": true
+            },
+            {
+              "id": "js",
+              "label": "script.js"
+            },
+            {
+              "id": "none",
+              "label": "None of them"
+            }
+          ]
+        },
+        {
+          "id": "q-js",
+          "type": "multipleChoice",
+          "prompt": "A button does nothing when clicked. Which file most likely has the bug?",
+          "options": [
+            {
+              "id": "html",
+              "label": "index.html"
+            },
+            {
+              "id": "css",
+              "label": "style.css"
+            },
+            {
+              "id": "js",
+              "label": "script.js",
+              "correct": true
+            },
+            {
+              "id": "none",
+              "label": "None of them"
+            }
+          ]
+        },
+        {
+          "id": "q-symptom",
+          "type": "multipleChoice",
+          "prompt": "Two paragraphs run together as one. What is the most likely cause?",
+          "options": [
+            {
+              "id": "closing",
+              "label": "A missing closing tag",
+              "correct": true
+            },
+            {
+              "id": "font",
+              "label": "The wrong font"
+            },
+            {
+              "id": "js-off",
+              "label": "JavaScript is turned off"
+            },
+            {
+              "id": "slow",
+              "label": "A slow connection"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill-tree",
+      "kind": "skillTree",
+      "title": "Your skill map",
+      "description": "Reach the first checkpoint of each skill, then take them to your project. Keep going deeper if you want.",
+      "skills": [
+        {
+          "skillId": "prompting",
+          "requiredCheckpointId": "basics"
+        },
+        {
+          "skillId": "debugging",
+          "requiredCheckpointId": "symptoms"
+        }
+      ]
+    },
+    {
+      "id": "build-project",
+      "kind": "lab",
+      "lab": {
+        "type": "weblab2",
+        "initialViewMode": "preview"
+      },
+      "title": "Build your site",
+      "sourceMode": "project",
+      "instructions": "Time to build your own site.\n\nStart with structure: write a prompt that names the sections your site needs and where they go. Then refine one element at a time. When something breaks, name the symptom before you fix it."
     }
   ]
 }
