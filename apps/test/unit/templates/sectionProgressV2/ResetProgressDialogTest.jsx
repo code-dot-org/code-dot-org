@@ -1,8 +1,8 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import ResetProgressDialog from '@cdo/apps/templates/sectionProgressV2/ResetProgressDialog';
+import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
@@ -69,9 +69,7 @@ describe('ResetProgressDialog', () => {
   it('cancel on the select step closes without calling the API', () => {
     renderComponent();
 
-    fireEvent.click(
-      screen.getByRole('button', {name: i18n.dialogCancel()})
-    );
+    fireEvent.click(screen.getByRole('button', {name: i18n.dialogCancel()}));
 
     expect(onClose).toHaveBeenCalledTimes(1);
     expect(global.fetch).not.toHaveBeenCalled();
@@ -93,9 +91,7 @@ describe('ResetProgressDialog', () => {
 
     fireEvent.click(screen.getByLabelText('Student1 Familyone'));
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
-    fireEvent.click(
-      screen.getByRole('button', {name: i18n.dialogCancel()})
-    );
+    fireEvent.click(screen.getByRole('button', {name: i18n.dialogCancel()}));
 
     expect(onClose).toHaveBeenCalledTimes(1);
     expect(global.fetch).not.toHaveBeenCalled();
@@ -107,9 +103,7 @@ describe('ResetProgressDialog', () => {
     fireEvent.click(screen.getByLabelText('Student1 Familyone'));
     fireEvent.click(screen.getByLabelText('Student2 Familytwo'));
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
-    fireEvent.click(
-      screen.getByRole('button', {name: i18n.resetProgress()})
-    );
+    fireEvent.click(screen.getByRole('button', {name: i18n.resetProgress()}));
 
     await waitFor(() => expect(onClose).toHaveBeenCalledTimes(1));
 
@@ -135,9 +129,7 @@ describe('ResetProgressDialog', () => {
 
     fireEvent.click(screen.getByLabelText('Student1 Familyone'));
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
-    fireEvent.click(
-      screen.getByRole('button', {name: i18n.resetProgress()})
-    );
+    fireEvent.click(screen.getByRole('button', {name: i18n.resetProgress()}));
 
     await waitFor(() =>
       expect(screen.getByText(i18n.formServerError())).toBeTruthy()

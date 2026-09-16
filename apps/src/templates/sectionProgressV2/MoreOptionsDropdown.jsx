@@ -62,10 +62,7 @@ function MoreOptionsDropdown({
           id: 'ui-see-more-options-dropdown',
           'aria-label': i18n.additionalOptions(),
           children: (
-            <FontAwesomeV6Icon
-              iconName="ellipsis-vertical"
-              iconStyle="solid"
-            />
+            <FontAwesomeV6Icon iconName="ellipsis-vertical" iconStyle="solid" />
           ),
           className: styles.moreOptionsDropdownButton,
           variant: 'outlined',
