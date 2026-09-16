@@ -10,8 +10,8 @@
   end
 
 = form_tag url_for(action: 'user_progress_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
-  = text_field_tag :user_identifier, params[:user_identifier], class: 'form-control', placeholder: 'user id, email, or username', size: 80
-  %button.btn{type: 'submit'}
+  = text_field_tag :user_identifier, params[:user_identifier], class: 'form-control', placeholder: 'user id, email, or username', size: 80, style: 'margin: 0;'
+  %button.btn{type: 'submit', style: ' margin: 0; height: 34px'}
     %i.fa-solid.fa-magnifying-glass
 
 - if @target_user
@@ -77,7 +77,7 @@
       - else
         %table.table.table-hover.table-condensed
           %thead
-            %th
+            %th= check_box_tag 'select_all_units', '1', false, id: 'select-all-units', title: 'Select all units'
             %th Unit id
             %th Unit name
             %th Title
@@ -99,7 +99,7 @@
         Check units to include in the reset.
       %table.table.table-hover.table-condensed
         %thead
-          %th
+          %th= check_box_tag 'select_all_units', '1', false, id: 'select-all-units', title: 'Select all units'
           %th Id
           %th Unit id
           %th Unit name
@@ -149,6 +149,22 @@
           });
         });
       });
+
+      // Select-all for unit checkboxes.
+      var selectAllUnits = document.getElementById('select-all-units');
+      if (selectAllUnits) {
+        selectAllUnits.addEventListener('change', function () {
+          document.querySelectorAll('input[name="unit_ids[]"]').forEach(function (cb) {
+            cb.checked = selectAllUnits.checked;
+          });
+        });
+        document.querySelectorAll('input[name="unit_ids[]"]').forEach(function (cb) {
+          cb.addEventListener('change', function () {
+            var allChecked = Array.from(document.querySelectorAll('input[name="unit_ids[]"]')).every(function (c) { return c.checked; });
+            selectAllUnits.checked = allChecked;
+          });
+        });
+      }
 
       // Uncheck section header if any individual student is unchecked.
       document.querySelectorAll('.student-checkbox').forEach(function (studentCb) {
