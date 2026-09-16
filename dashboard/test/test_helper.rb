@@ -59,9 +59,7 @@ I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
 
-Mocha::Mockery.setup
-at_exit {Mocha::Mockery.teardown}
-
+Mocha::Mockery.setup # enable stubbing
 CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 
