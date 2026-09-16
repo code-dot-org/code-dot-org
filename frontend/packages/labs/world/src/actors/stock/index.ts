@@ -13,6 +13,7 @@
 
 import {buttonActor} from './button';
 import {COIN_ANIMATION, coinActor} from './coin';
+import {dropdownActor} from './dropdown';
 import {GROUND_SPRITE, groundActor} from './ground';
 import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
@@ -175,6 +176,18 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: ['Input', 'Mouse', 'Tab Navigation'],
     actors: ['label'],
     contents: textInputActor,
+  },
+  {
+    id: 'dropdown',
+    name: 'Dropdown',
+    description:
+      'A list of words with one of them chosen. Click it to open, click a row to choose; the arrows and Enter do the same from the keyboard. The choice is its text, and “chosen” says when it changed.',
+    // Mouse for the click and for the press elsewhere that closes it, Tab
+    // Navigation for the focus, Input for the keys. Its words and its box are
+    // the Label's, which it acts like.
+    requires: ['Mouse', 'Tab Navigation', 'Input'],
+    actors: ['label'],
+    contents: dropdownActor,
   },
   {
     id: 'speechBox',

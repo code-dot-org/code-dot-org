@@ -167,7 +167,7 @@ a rule pulls its dependencies.
 | Speech Box   | a Label that lets its line out a letter at a time | DONE                                        |
 | Text Input   | one line you can type in                          | BUILT, on the shelf (`story/form`)          |
 | Text Area    | several lines you can type in                     | PROPOSED, last — see "The rest"             |
-| Dropdown     | a list of words, one of them chosen               | PROPOSED — a list property, a menu to draw  |
+| Dropdown     | a list of words, one of them chosen               | BUILT — `choices`, `chosen`, keyboard too   |
 | Panel        | a background behind a group                       | BUILT — a Label with no words, and children |
 | Toggle       | a Button that is on or off                        | BUILT — `on`, `turned on`, `turned off`     |
 | Slider       | a Progress Bar the pointer drags                  | BUILT — `fraction`, `changed`, arrow keys   |
@@ -1063,23 +1063,26 @@ button ⟨left⟩ is down`, letting go when it comes up. There is no drag
    fraction moves; the arrow keys nudge it once it holds the focus. It has
    its own `width` and `height`, since a bar eight pixels tall is a poor
    thing to catch. The Interface Kit's dialog carries one.
-4. **A score readout, as a recipe rather than an actor.** With world state
-   built, a score on the screen is a Label and one handler that writes the
-   count into `text`. That is an enhancement row (specs/ENHANCEMENTS.md) or a
-   lesson tile, and adding a "Score" kind would be a Label with a longer name.
-
-5. **Dropdown.** A list of words with one of them chosen, which needs two
-   things the engine has not got and one it has. The first is a LIST-TYPED
-   PROPERTY on an actor — the Lists drawer has values but an actor cannot yet
-   keep a list as its own — and the second is a menu that draws BIGGER THAN
-   THE CLOSED CONTROL: the canvas is exactly the actor's size, so an open menu
-   is the actor changing its own height while it is open, which a size that
-   is a property allows and nothing has tried. The third, choosing a row, is
-   `mouse position` minus the actor's position divided by the row height,
-   which is arithmetic. Medium to large, and a row of Toggles or a set of
-   Buttons answers most of the questions a Dropdown does, which is why it is
-   fifth.
-
+4. **A score readout — ALREADY BUILT**, as a recipe: the `scoreboard`
+   enhancement (`actors/enhance/scoreboard`) writes a Scoreboard kind that
+   acts like a Label, elects `Watches the Score`, rewrites its words when
+   the score changes, and places it on a fixed Interface layer. A kind of
+   its own rather than the stock Label pointed at, because a hat names a
+   kind and `any ⟨Label⟩` would rewrite every label in the project.
+5. **Dropdown — BUILT** (`actors/stock/dropdown`). Of the two gaps it was
+   said to need, one had already closed and the other was one block. An
+   actor could already declare a `words` list (`define property` offers the
+   list types), so `choices` is the Dropdown's own; what was missing was a
+   way to read the third word, and `item ⟨n⟩ of ⟨list⟩` is the block that
+   drawing the rows and answering a click both needed (specs/LISTS.md). The
+   menu grows when it opens — the height is a property, and opening sets it
+   and shifts the actor down by half the growth so the face stays put — and
+   a press anywhere else closes it, since the Mouse rule announces a press
+   to everything before it announces a click to what is under the pointer.
+   Enter and the arrows do the same from the keyboard. Two things it leaves
+   open: the map editor cannot author a list, so a placement's choices are
+   set in blocks; and the open menu's rows are read by the drawing reader as
+   incomplete, so the editor shows the sandbox's picture for an open one.
 6. **Text Area.** Several lines to type in. `draw paragraph` makes the drawing
    free, so what is left is the caret: an index that has to become a line and
    a column over WRAPPED text, click-to-caret in two dimensions where the Text

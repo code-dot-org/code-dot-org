@@ -23,6 +23,7 @@ import handPointer from '@fortawesome/fontawesome-free/svgs/solid/hand-pointer.s
 import heartPulse from '@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg?raw';
 import iCursor from '@fortawesome/fontawesome-free/svgs/solid/i-cursor.svg?raw';
 import sliders from '@fortawesome/fontawesome-free/svgs/solid/sliders.svg?raw';
+import squareCaretDown from '@fortawesome/fontawesome-free/svgs/solid/square-caret-down.svg?raw';
 import toggleOn from '@fortawesome/fontawesome-free/svgs/solid/toggle-on.svg?raw';
 import windowMaximize from '@fortawesome/fontawesome-free/svgs/solid/window-maximize.svg?raw';
 
@@ -72,6 +73,7 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   button: tile(handPointer),
   toggle: tile(toggleOn),
   slider: tile(sliders),
+  dropdown: tile(squareCaretDown),
   bar: tile(barsProgress),
   // A Health Bar is not a Progress Bar wearing the same face. One is filled by
   // whatever the project decides; the other reads a subject's health and is

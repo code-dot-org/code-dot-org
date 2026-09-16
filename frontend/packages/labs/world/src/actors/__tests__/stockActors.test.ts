@@ -95,6 +95,8 @@ describe('every stock actor', () => {
       toggle: ['on'],
       // A slider is as big as it says, and remembers a press it is following.
       slider: ['width', 'height', 'held'],
+      // A dropdown's words, whether it is open, and which row the keys are on.
+      dropdown: ['choices', 'open', 'highlighted'],
       // …and what a bar IS: how far along it is, and the two colors it is
       // drawn in. These were `Progress`, a rule with three properties and no
       // behavior; the bars that are not this one act like it and get them

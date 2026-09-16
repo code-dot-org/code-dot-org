@@ -69,7 +69,7 @@ describe('the interface kit', () => {
     const panel = actors.find(actor => actor.type === 'actors/panel')!;
     const field = actors.find(actor => actor.type === 'actors/textInput')!;
     expect(field.parent()).toBe(panel);
-    expect(panel.children()).toHaveLength(6);
+    expect(panel.children()).toHaveLength(7);
     const before = field.get(PositionProperty);
     expect([before.x, before.y]).toEqual([160, 80]);
     panel.set(PositionProperty, new Vector(200, 300));

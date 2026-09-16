@@ -107,7 +107,7 @@ const INTERFACE_MAP = JSON.stringify(
       // they always did: the panel is at (160, 100) and the field 20 above
       // its middle is at (160, 80).
       place('actors/panel', 'Dialog', 160, 100, {
-        Label: {width: 300, height: 256},
+        Label: {width: 300, height: 296},
       }),
       // A title, which is a Label doing the one thing a Label does.
       place('actors/label', 'Title', 0, -70, {
@@ -137,6 +137,11 @@ const INTERFACE_MAP = JSON.stringify(
       }),
       // A bar the pointer drags, whose fraction a game reads as a volume.
       place('actors/slider', 'Volume', 0, 124, {
+        positional: {parent: 'Dialog'},
+      }),
+      // One answer out of several. Its choices are set in its file; the map
+      // editor cannot author a list yet.
+      place('actors/dropdown', 'Size', 0, 152, {
         positional: {parent: 'Dialog'},
       }),
       // …and the box that says the answer, a letter at a time. At the foot
@@ -260,6 +265,7 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
     'panel',
     'toggle',
     'slider',
+    'dropdown',
   ]) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }

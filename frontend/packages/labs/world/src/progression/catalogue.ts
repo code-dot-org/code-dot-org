@@ -2498,6 +2498,8 @@ export const TILES: readonly Tile[] = [
       {kind: 'actor', id: 'panel'},
       // …and an answer that stays answered: a Button that is on or off.
       {kind: 'actor', id: 'toggle'},
+      // …and one answer out of several.
+      {kind: 'actor', id: 'dropdown'},
     ],
     offers: [
       {kind: 'block', type: 'controls_if'},
