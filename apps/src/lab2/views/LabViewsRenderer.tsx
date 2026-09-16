@@ -38,6 +38,9 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const initialSources = useAppSelector(state => state.lab.initialSources);
   const channel = useAppSelector(state => state.lab.channel);
+  // An embed sits inside curriculum content a student reads; levelbuilder debug links
+  // do not belong there.
+  const isEmbedView = useAppSelector(state => state.lab.isEmbedView);
 
   const currentAppName = levelProperties?.appName;
   useEffect(() => {
@@ -116,7 +119,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
               channel={channel}
             />
           </Suspense>
-          {!queryHideExtraLinks && showExtraLinksButton && (
+          {!queryHideExtraLinks && showExtraLinksButton && !isEmbedView && (
             <ExtraLinks levelId={levelProperties.id} />
           )}
           <KeyboardShortcutsDialog appName={currentAppName} />
