@@ -1126,4 +1126,27 @@ class LevelsHelperTest < ActionView::TestCase
 
     reset_view_options
   end
+
+  test "lab2_options passes the embed flag through" do
+    @level = create(:music)
+
+    level_view_options(@level.id, embed: true)
+
+    options = lab2_options
+    assert_equal true, options["embed"]
+    # An embed sits in a curriculum page with a white background.
+    assert_equal 'light', options["theme"]
+
+    reset_view_options
+  end
+
+  test "lab2_options omits the embed flag when not embedding" do
+    @level = create(:music)
+
+    level_view_options(@level.id)
+
+    assert_nil lab2_options["embed"]
+
+    reset_view_options
+  end
 end

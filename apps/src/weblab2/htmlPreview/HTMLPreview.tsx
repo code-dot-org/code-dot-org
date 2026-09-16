@@ -71,11 +71,17 @@ export const HTMLPreview: React.FC = () => {
   const widget2 = levelProperties.widget2;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
+  const isEmbedView = useAppSelector(state => state.lab.isEmbedView);
+  // Distinguishes two embeds of the same widget on one page; see previewUrl below.
+  const embedInstanceId = useRef(Math.random().toString(36).slice(2, 8));
   const previewUrl = useMemo(() => {
     const {subdomain, isLocalhost, port} = getInnerEnvironment();
-    const useFullUrlOnLocal = experiments.isEnabledAllowingQueryString(
-      experiments.WEBLAB2_FULL_URLS
-    );
+    const useFullUrlOnLocal =
+      // Several embeds can share one markdown page. On localhost they would otherwise
+      // all sit on the fixed 'localtesting' origin, sharing one service worker and one
+      // BroadcastChannel, and the last one to push its files would win for all of them.
+      isEmbedView ||
+      experiments.isEnabledAllowingQueryString(experiments.WEBLAB2_FULL_URLS);
     // When testing on localhost, it is convenient to have a fixed subdomain
     // to avoid having to give permissions to every channel id version of the preview url.
     // Use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls
@@ -89,6 +95,11 @@ export const HTMLPreview: React.FC = () => {
         prefix = `exemplar-${levelId}`;
       } else if (isStartMode) {
         prefix = `start-mode-${levelId}`;
+      } else if (isEmbedView) {
+        // The same widget can be embedded twice on one page. Sharing a prefix would mean
+        // sharing a service worker registration, and unmounting either embed unregisters
+        // the worker the other is still using.
+        prefix = `weblab2-${levelId}-${embedInstanceId.current}`;
       } else {
         // Unknown channel, not in exemplar or start mode, use generic preview prefix.
         prefix = `weblab2-${levelId}`;
@@ -100,6 +111,7 @@ export const HTMLPreview: React.FC = () => {
     }//${prefix}.preview.${subdomain}${getPreviewDomain()}${port}`;
   }, [
     isEditingExemplar,
+    isEmbedView,
     isStartMode,
     isViewingExemplar,
     levelId,

@@ -34,6 +34,7 @@ import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
 import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
 import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
+import EmbedView from './layout/EmbedView';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import {
@@ -65,6 +66,7 @@ const defaultConfig: ConfigType = {
     vertical: VerticalLayout,
     widget: VerticalLayout,
     share: ShareView,
+    embed: EmbedView,
   },
 };
 

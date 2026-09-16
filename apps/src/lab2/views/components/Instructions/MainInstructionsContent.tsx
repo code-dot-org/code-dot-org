@@ -3,6 +3,7 @@ import React, {forwardRef, useRef, MutableRefObject} from 'react';
 
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import levelMarkdownRehypeMap from '@cdo/apps/templates/markdown/levelMarkdownRehypeMap';
 
 import moduleStyles from './instructions.module.scss';
 
@@ -85,6 +86,7 @@ const MainInstructionsContent = forwardRef<
       >
         <EnhancedSafeMarkdown
           markdown={markdown}
+          rehypeMap={levelMarkdownRehypeMap}
           openExternalLinksInNewTab={true}
           className={classNames(
             moduleStyles.markdownText,

@@ -16,6 +16,7 @@ export interface PartialAppOptions {
   publicCaching: boolean;
   theme?: string;
   isBuildingQuizQuestions: boolean;
+  embed: boolean;
 }
 
 /**
@@ -108,6 +109,17 @@ export function getIsShareView(): boolean | undefined {
   if (hasScriptData('script[data-appoptions]')) {
     const appOptions = getScriptData('appoptions') as PartialAppOptions;
     return appOptions.share;
+  }
+}
+
+/**
+ * Returns whether the lab is being rendered for embedding in another level's
+ * markdown, if present in App Options. Set by LevelsController#embed_level.
+ */
+export function getIsEmbedView(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.embed;
   }
 }
 

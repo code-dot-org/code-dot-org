@@ -43,13 +43,14 @@ export type ConfigType = {
   layoutComponents: LayoutComponents;
 };
 
-// At least one of horizontal/vertical must be supplied; share/widget are
+// At least one of horizontal/vertical must be supplied; share/widget/embed are
 // always optional. The union forces one of the two required keys to be present.
 type LayoutComponentMap = {
   horizontal?: React.FunctionComponent<LayoutProps>;
   vertical?: React.FunctionComponent<LayoutProps>;
   share?: React.FunctionComponent<LayoutProps>;
   widget?: React.FunctionComponent<LayoutProps>;
+  embed?: React.FunctionComponent<LayoutProps>;
 };
 
 type LayoutComponents = LayoutComponentMap &

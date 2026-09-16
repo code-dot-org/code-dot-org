@@ -18,6 +18,12 @@
     bottom: 0;
   }
 
+  // The embed iframe has no studio header to offset against.
+  &EmbedView {
+    top: 0;
+    bottom: 0;
+  }
+
   .pageErrorContainer {
     @extend %full-container-overlay;
     animation: fadein 0.5s;

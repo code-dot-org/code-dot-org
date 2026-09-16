@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array State Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Screen readers announce run results here. -->
+  <div id="aria-live" class="sr-live" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="directions" role="note">
+    <strong>How to use this visualizer:</strong>
+    <ol>
+      <li>Look at the code — notice the original array and the method being used.</li>
+      <li>Try to predict: will the original array change, or stay the same?</li>
+      <li>Press <strong>Run this code</strong> and compare the original array to the result.</li>
+    </ol>
+  </div>
+
+  <section class="section" aria-labelledby="filter-heading">
+    <div class="section-header">
+      <h2 id="filter-heading">.filter()</h2>
+    </div>
+    <div class="code-block" role="img" aria-label="Code example using .filter() to remove art from the opportunities array"><span class="comment">const opportunities = ["tutoring","mentoring","coding","art","music"];</span>
+
+const result = opportunities.<span class="hl">filter</span>(role =&gt; role !== "art");
+
+console.log(opportunities); <span class="comment">// ?</span>
+console.log(result);       <span class="comment">// ?</span></div>
+    <button class="run-btn" data-run="filter" aria-controls="filter-orig filter-result filter-verdict">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l11 6-11 6V2z"/></svg>
+      Run this code
+    </button>
+    <div class="arrays-row">
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-orig">original</span> opportunities</div>
+        <div class="arr-items" id="filter-orig" role="list" aria-label="Original opportunities array"><span class="empty-msg">not run yet</span></div>
+      </div>
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-result">result</span> result</div>
+        <div class="arr-items" id="filter-result" role="list" aria-label="Result array returned by filter"><span class="empty-msg">not run yet</span></div>
+      </div>
+    </div>
+    <div class="verdict pure" id="filter-verdict" role="status">
+      <span class="icon" aria-hidden="true">&#10003;</span> <span class="type-badge pure">Pure method</span> Original array unchanged — <code>.filter()</code> returned a brand new array.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" aria-labelledby="map-heading">
+    <div class="section-header">
+      <h2 id="map-heading">.map()</h2>
+    </div>
+    <div class="code-block" role="img" aria-label="Code example using .map() to uppercase each item in the opportunities array"><span class="comment">const opportunities = ["tutoring","mentoring","coding","art","music"];</span>
+
+const result = opportunities.<span class="hl">map</span>(role =&gt; role.toUpperCase());
+
+console.log(opportunities); <span class="comment">// ?</span>
+console.log(result);       <span class="comment">// ?</span></div>
+    <button class="run-btn" data-run="map" aria-controls="map-orig map-result map-verdict">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l11 6-11 6V2z"/></svg>
+      Run this code
+    </button>
+    <div class="arrays-row">
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-orig">original</span> opportunities</div>
+        <div class="arr-items" id="map-orig" role="list" aria-label="Original opportunities array"><span class="empty-msg">not run yet</span></div>
+      </div>
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-result">result</span> result</div>
+        <div class="arr-items" id="map-result" role="list" aria-label="Result array returned by map"><span class="empty-msg">not run yet</span></div>
+      </div>
+    </div>
+    <div class="verdict pure" id="map-verdict" role="status">
+      <span class="icon" aria-hidden="true">&#10003;</span> <span class="type-badge pure">Pure method</span> Original array unchanged — <code>.map()</code> transformed each item into a brand new array.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" aria-labelledby="foreach-heading">
+    <div class="section-header">
+      <h2 id="foreach-heading">.forEach()</h2>
+    </div>
+    <div class="code-block" role="img" aria-label="Code example using .forEach() to uppercase items, modifying the original array"><span class="comment">const opportunities = ["tutoring","mentoring","coding","art","music"];</span>
+
+opportunities.<span class="hl">forEach</span>((role, i) =&gt; {
+  opportunities[i] = role.toUpperCase();
+});
+
+console.log(opportunities); <span class="comment">// ?</span></div>
+    <button class="run-btn" data-run="forEach" aria-controls="foreach-before foreach-after foreach-verdict">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l11 6-11 6V2z"/></svg>
+      Run this code
+    </button>
+    <div class="arrays-row">
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-orig">original</span> opportunities <span class="arr-note">(before)</span></div>
+        <div class="arr-items" id="foreach-before" role="list" aria-label="Original opportunities array before forEach runs"><span class="empty-msg">not run yet</span></div>
+      </div>
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-mut">mutated</span> opportunities <span class="arr-note">(after)</span></div>
+        <div class="arr-items" id="foreach-after" role="list" aria-label="Opportunities array after forEach mutates it"><span class="empty-msg">not run yet</span></div>
+      </div>
+    </div>
+    <div class="verdict mutated" id="foreach-verdict" role="status">
+      <span class="icon" aria-hidden="true">&#9888;</span> <span class="type-badge mutated">Side effect</span> Original array was changed! <code>.forEach()</code> has no return value — any modification inside it is a side effect on the original data.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" aria-labelledby="forloop-heading">
+    <div class="section-header">
+      <h2 id="forloop-heading">for loop</h2>
+    </div>
+    <div class="code-block" role="img" aria-label="Code example using a for loop to overwrite each item in the opportunities array"><span class="comment">const opportunities = ["tutoring","mentoring","coding","art","music"];</span>
+
+for (let i = 0; i &lt; opportunities.length; i++) {
+  <span class="hl">opportunities[i]</span> = opportunities[i].toUpperCase();
+}
+
+console.log(opportunities); <span class="comment">// ?</span></div>
+    <button class="run-btn" data-run="for" aria-controls="for-before for-after for-verdict">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l11 6-11 6V2z"/></svg>
+      Run this code
+    </button>
+    <div class="arrays-row">
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-orig">original</span> opportunities <span class="arr-note">(before)</span></div>
+        <div class="arr-items" id="for-before" role="list" aria-label="Original opportunities array before for loop runs"><span class="empty-msg">not run yet</span></div>
+      </div>
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-mut">mutated</span> opportunities <span class="arr-note">(after)</span></div>
+        <div class="arr-items" id="for-after" role="list" aria-label="Opportunities array after for loop mutates it"><span class="empty-msg">not run yet</span></div>
+      </div>
+    </div>
+    <div class="verdict mutated" id="for-verdict" role="status">
+      <span class="icon" aria-hidden="true">&#9888;</span> <span class="type-badge mutated">Side effect</span> Original array was changed! The <code>for</code> loop wrote directly into <code>opportunities[i]</code>, overwriting each item in place.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" aria-labelledby="shift-heading">
+    <div class="section-header">
+      <h2 id="shift-heading">.shift()</h2>
+    </div>
+    <div class="code-block" role="img" aria-label="Code example using .shift() to remove the first item from the opportunities array"><span class="comment">const opportunities = ["tutoring","mentoring","coding","art","music"];</span>
+
+const first = opportunities.<span class="hl">shift</span>();
+
+console.log(opportunities); <span class="comment">// ?</span>
+console.log(first);        <span class="comment">// ?</span></div>
+    <button class="run-btn" data-run="shift" aria-controls="shift-before shift-after shift-verdict">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l11 6-11 6V2z"/></svg>
+      Run this code
+    </button>
+    <div class="arrays-row">
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-orig">original</span> opportunities <span class="arr-note">(before)</span></div>
+        <div class="arr-items" id="shift-before" role="list" aria-label="Original opportunities array before shift runs"><span class="empty-msg">not run yet</span></div>
+      </div>
+      <div class="arr-card">
+        <div class="arr-title"><span class="badge badge-mut">mutated</span> opportunities <span class="arr-note">(after)</span></div>
+        <div class="arr-items" id="shift-after" role="list" aria-label="Opportunities array after shift removes the first item"><span class="empty-msg">not run yet</span></div>
+      </div>
+    </div>
+    <div class="verdict mutated" id="shift-verdict" role="status">
+      <span class="icon" aria-hidden="true">&#9888;</span> <span class="type-badge mutated">Side effect</span> Original array was changed! <code>.shift()</code> removed <code>"tutoring"</code> from the front and returned it — the original is now shorter.
+    </div>
+  </section>
+
+  <div class="reset-wrap">
+    <button class="reset-btn" data-reset>Reset all</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

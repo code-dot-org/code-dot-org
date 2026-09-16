@@ -724,7 +724,13 @@ module LevelsHelper
     app_options[:share] = level_options[:share] if level_options[:share]
     app_options[:is_building_quiz_questions] = level_options[:is_building_quiz_questions] if level_options[:is_building_quiz_questions]
     app_options[:public_caching] = @public_caching
-    if @script_level&.lesson
+    # Selects the preview-only layout; see getIsEmbedView in apps/src/lab2/projects/utils.ts.
+    app_options[:embed] = level_options[:embed] if level_options[:embed]
+    if level_options[:embed]
+      # An embed sits inside a curriculum page with a white background, so the signed-in
+      # Weblab2 default of 'dark' below would put background-dark on the host body.
+      app_options[:theme] = 'light'
+    elsif @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
     elsif @level.uses_theme_preference? && current_user
       theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme

@@ -5,6 +5,9 @@ class Widget2ControllerTest < ActionController::TestCase
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    # Creating a widget2 also creates its level, whose after_save would otherwise write a
+    # .level file into the repo.
+    Policies::LevelFiles.stubs(:write_to_file?).returns(false)
     @levelbuilder = create(:levelbuilder)
     @widget2_directory = "#{Widget2Helper::WIDGET2_BASE_DIRECTORY}/mywidget"
   end
@@ -104,6 +107,28 @@ class Widget2ControllerTest < ActionController::TestCase
 
     post :new, params: {id: 'mywidget'}
     assert_redirected_to "/levels/#{level.id}/edit_blocks/widget2_sources?widget2=mywidget"
+  end
+
+  test 'a new widget2 gets the level that /widget2/:id/embed resolves to' do
+    sign_in @levelbuilder
+    create(:weblab2, name: 'New Web Lab 2 Project')
+
+    post :new, params: {id: 'mywidget'}
+
+    level = Weblab2.find_by(name: 'widget2 mywidget')
+    assert level
+    assert_equal 'mywidget', level.properties.dig('widget2', 'id')
+    assert level.published
+  end
+
+  test 'creating a widget2 that already exists reuses its level' do
+    sign_in @levelbuilder
+    create(:weblab2, name: 'New Web Lab 2 Project')
+
+    post :new, params: {id: 'mywidget'}
+    post :new, params: {id: 'mywidget'}
+
+    assert_equal 1, Weblab2.where(name: 'widget2 mywidget').count
   end
 
   test 'a new widget2 with an invalid id returns to the widget2 list' do

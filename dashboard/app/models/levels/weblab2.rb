@@ -79,6 +79,15 @@ class Weblab2 < Level
     true
   end
 
+  # A widget2 level always serves start sources from the repo and sets
+  # usesProjects false, so the channel the Game would otherwise allocate is never
+  # written to. Without this, every viewer of an embedded widget — including
+  # signed-out ones — creates a ChannelToken that is then discarded.
+  def channel_backed?
+    return false if properties.dig("widget2", "id")
+    super
+  end
+
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil, widget2_start_sources: nil)
     properties_camelized = super(script, script_level, current_user, unit_group_unit: unit_group_unit)
 
@@ -120,6 +129,13 @@ class Weblab2 < Level
     end
     if widget2['parameters'] && !widget2['parameters'].is_a?(Hash)
       errors.add(:widget2, 'parameters must be a hash if present.')
+    end
+
+    # /widget2/:widget2_id/embed finds this level by name, so the two must agree.
+    return unless widget2['id'].is_a?(String) && valid_widget2_id?(widget2['id'])
+    expected_name = Widget2Helper.level_name_for_widget2(widget2['id'])
+    unless name == expected_name
+      errors.add(:widget2, "level for widget2 #{widget2['id']} must be named #{expected_name.inspect}")
     end
   end
 end

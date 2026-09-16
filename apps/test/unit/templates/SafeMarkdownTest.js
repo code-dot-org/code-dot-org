@@ -2,6 +2,7 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import levelMarkdownRehypeMap from '@cdo/apps/templates/markdown/levelMarkdownRehypeMap';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 describe('SafeMarkdown', () => {
@@ -424,6 +425,84 @@ describe('SafeMarkdown', () => {
       />
     );
     expect(wrapper.equals(<div />)).toBe(true);
+  });
+
+  describe('weblab2-widget', () => {
+    // Attributes a curriculum writer is allowed to set, plus two we must drop.
+    const WIDGET_MARKDOWN =
+      '<weblab2-widget data-widget-id="viz" data-height="920" ' +
+      'data-title="Visualizer" onclick="alert(1)" src="https://evil.example">' +
+      '</weblab2-widget>';
+
+    it('survives sanitization for student audiences', () => {
+      // allowEmbeds unset is the student path, and the whole point of the tag: a raw
+      // iframe would be stripped here.
+      const wrapper = shallow(<SafeMarkdown markdown={WIDGET_MARKDOWN} />);
+      const html = wrapper.html();
+      expect(html).toContain('weblab2-widget');
+      expect(html).toContain('data-widget-id="viz"');
+      expect(html).toContain('data-height="920"');
+      expect(html).toContain('data-title="Visualizer"');
+    });
+
+    it('strips attributes outside the allowlist', () => {
+      const wrapper = shallow(<SafeMarkdown markdown={WIDGET_MARKDOWN} />);
+      const html = wrapper.html();
+      expect(html).not.toContain('onclick');
+      expect(html).not.toContain('evil.example');
+    });
+
+    it('survives when allowEmbeds is explicitly false', () => {
+      const wrapper = shallow(
+        <SafeMarkdown allowEmbeds={false} markdown={WIDGET_MARKDOWN} />
+      );
+      expect(wrapper.html()).toContain('weblab2-widget');
+    });
+
+    it('is inert without a rehypeMap', () => {
+      // Allowing the tag in the base schema is only safe because a page that does not
+      // register a component renders an empty custom element, never an iframe.
+      const wrapper = shallow(<SafeMarkdown markdown={WIDGET_MARKDOWN} />);
+      expect(wrapper.html()).not.toContain('<iframe');
+    });
+
+    it('becomes an iframe when the level rehypeMap is supplied', () => {
+      const wrapper = mount(
+        <SafeMarkdown
+          markdown={WIDGET_MARKDOWN}
+          rehypeMap={levelMarkdownRehypeMap}
+        />
+      );
+      const html = wrapper.html();
+      expect(html).toContain('<iframe');
+      expect(html).toContain('src="/widget2/viz/embed"');
+    });
+
+    it('renders between markdown above and below it', () => {
+      // The shape curriculum files use. CommonMark only treats this as an HTML block
+      // when the opening tag is complete on one line, so the tag must not be wrapped.
+      const wrapper = mount(
+        <SafeMarkdown
+          markdown={
+            'Text above.\n\n' +
+            '<weblab2-widget data-widget-id="pure-methods-visualizer" data-height="920" data-title="Array state visualizer"></weblab2-widget>\n\n' +
+            'Text below.'
+          }
+          rehypeMap={levelMarkdownRehypeMap}
+        />
+      );
+      const html = wrapper.html();
+      expect(html).toContain('src="/widget2/pure-methods-visualizer/embed"');
+      expect(html).toContain('Text above.');
+      expect(html).toContain('Text below.');
+    });
+
+    it('is not a bypass for nested iframes', () => {
+      const wrapper = shallow(
+        <SafeMarkdown markdown='<weblab2-widget data-widget-id="viz"><iframe src="https://evil.example"></iframe></weblab2-widget>' />
+      );
+      expect(wrapper.html()).not.toContain('evil.example');
+    });
   });
 
   it('handles whitespace', () => {

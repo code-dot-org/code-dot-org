@@ -1269,6 +1269,86 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'embed level hides the page chrome' do
+    set_env :test
+
+    get :embed_level, params: {id: create(:artist)}
+    assert_response :success
+    assert @controller.view_options[:no_header]
+    assert @controller.view_options[:no_footer]
+    assert @controller.view_options[:white_background]
+  end
+
+  test 'embed level marks a lab2 level as embedded' do
+    set_env :test
+
+    # lab2_options ignores level_view_options[:embed], so without this the embedded lab
+    # would keep the full studio chrome and the split editor view.
+    get :embed_level, params: {id: create(:weblab2, name: 'embeddable weblab2 level')}
+    assert_response :success
+    assert @controller.view_options[:no_header]
+
+    app_options = JSON.parse(css_select('script[data-appoptions]').first['data-appoptions'])
+    assert_equal true, app_options['embed']
+    assert_equal 'light', app_options['theme']
+  end
+
+  def create_widget2_level(widget2_id)
+    level = create(:weblab2, name: Widget2Helper.level_name_for_widget2(widget2_id))
+    level.widget2 = {'id' => widget2_id}
+    level.save!
+    level
+  end
+
+  test 'embed widget2 renders for a signed out user' do
+    set_env :test
+
+    create_widget2_level('my-widget')
+    sign_out @levelbuilder
+
+    get :embed_widget2, params: {widget2_id: 'my-widget'}
+    assert_response :success
+  end
+
+  test 'embed widget2 renders for students and teachers' do
+    set_env :test
+
+    create_widget2_level('my-widget')
+
+    [create(:student), create(:teacher)].each do |user|
+      sign_in user
+      get :embed_widget2, params: {widget2_id: 'my-widget'}
+      assert_response :success
+    end
+  end
+
+  test 'embed widget2 does not allocate a channel' do
+    set_env :test
+
+    create_widget2_level('my-widget')
+    ChannelToken.expects(:find_or_create_channel_token).never
+
+    get :embed_widget2, params: {widget2_id: 'my-widget'}
+    assert_response :success
+  end
+
+  test 'embed widget2 is not found for an unknown widget' do
+    set_env :test
+
+    get :embed_widget2, params: {widget2_id: 'no-such-widget'}
+    assert_response :not_found
+  end
+
+  test 'embed widget2 is not found when the level is not a widget' do
+    set_env :test
+
+    # The conventional name is only a lookup key; the widget2 property is the truth.
+    create(:weblab2, name: Widget2Helper.level_name_for_widget2('impostor'))
+
+    get :embed_widget2, params: {widget2_id: 'impostor'}
+    assert_response :not_found
+  end
+
   test 'external markdown levels will render <user_id/> as the actual user id' do
     File.stubs(:write)
     dsl_text = <<~DSL

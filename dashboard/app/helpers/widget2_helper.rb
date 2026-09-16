@@ -6,8 +6,21 @@ module Widget2Helper
   WIDGET2_ID_PATTERN = /\A[a-z0-9][a-z0-9_-]*\z/
   WIDGET2_SOURCE_NAME_PATTERN = /\A[A-Za-z0-9][A-Za-z0-9_-]*\.(html|css|js|json)\z/
 
+  WIDGET2_LEVEL_NAME_PREFIX = 'widget2 '.freeze
+
   def valid_widget2_id?(widget2_id)
     WIDGET2_ID_PATTERN.match?(widget2_id.to_s)
+  end
+
+  # The Weblab2 level carrying a widget2 is addressed by widget2 id: level ids differ
+  # between environments, and level names are not URL-safe (most contain spaces, some
+  # contain "?" and "&"). Deriving the name from the id keeps the lookup a single read
+  # on the indexed levels.name column; levels.properties has no index.
+  def self.level_name_for_widget2(widget2_id)
+    unless WIDGET2_ID_PATTERN.match?(widget2_id.to_s)
+      raise ArgumentError, "Invalid widget2 id: #{widget2_id.inspect}"
+    end
+    "#{WIDGET2_LEVEL_NAME_PREFIX}#{widget2_id}"
   end
 
   # Retrieve widget2 sources from the file system.  Returns nil when there are none to

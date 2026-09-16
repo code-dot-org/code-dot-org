@@ -8,9 +8,10 @@ class LevelsController < ApplicationController
   include LevelsHelper
   include Widget2Helper
   include ActiveSupport::Inflector
-  before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
-  load_and_authorize_resource except: [:create]
+  before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :embed_widget2, :get_rubric, :get_serialized_maze]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :embed_widget2, :get_rubric, :get_serialized_maze, :extra_links]
+  # embed_widget2 finds its level by widget2 id, so there is no params[:id] to load.
+  load_and_authorize_resource except: [:create, :embed_widget2]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy, :build_quiz_questions]
 
@@ -569,7 +570,29 @@ class LevelsController < ApplicationController
       skip_instructions_popup: true
     )
     view_options(full_width: true)
+    # blockly_options and non_blockly_puzzle_options translate level_view_options[:embed]
+    # into these, but lab2_options does not, so an embedded lab2 level would keep the
+    # full studio chrome. Writing them twice on the blockly path is a no-op.
+    view_options(no_header: true, no_footer: true, white_background: true)
     render 'levels/show'
+  end
+
+  # GET /widget2/:widget2_id/embed
+  # Chrome-less, preview-only render of a Web Lab 2 widget, for iframing into another
+  # level's markdown. Open to signed-out and student users, like embed_level.
+  def embed_widget2
+    widget2_id = params[:widget2_id]
+    # The route constrains this too; re-check so the filesystem is never reached on the
+    # strength of routing alone.
+    return head :not_found unless valid_widget2_id?(widget2_id)
+
+    @level = Weblab2.find_by(name: Widget2Helper.level_name_for_widget2(widget2_id))
+    # The name is a convention; the widget2 property is the truth. A level that never had
+    # the property, or lost it, is not a widget and must not render here.
+    return head :not_found unless @level&.properties&.dig('widget2', 'id') == widget2_id
+
+    authorize! :embed_level, @level
+    embed_level
   end
 
   # GET /levels/:id/extra_links

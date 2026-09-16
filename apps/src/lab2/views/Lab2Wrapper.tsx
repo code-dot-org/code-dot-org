@@ -16,6 +16,7 @@ import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelector
 import {
   getAppOptionsLevelId,
   getAppOptionsTheme,
+  getIsEmbedView,
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
 import {
@@ -36,7 +37,12 @@ import {PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import useLoadLevelProperties from '../hooks/useLoadLevelProperties';
-import {LabState, setIsShareView, setPermissions} from '../lab2Redux';
+import {
+  LabState,
+  setIsEmbedView,
+  setIsShareView,
+  setPermissions,
+} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 import {PartialUserAppOptions} from '../types';
 import {LifecycleEvent} from '../utils';
@@ -128,6 +134,14 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     }
   }, [isShareView, dispatch]);
 
+  // Store whether we are in embed view in redux, from App Options.
+  const isEmbedView = getIsEmbedView();
+  useEffect(() => {
+    if (isEmbedView !== undefined) {
+      dispatch(setIsEmbedView(isEmbedView));
+    }
+  }, [isEmbedView, dispatch]);
+
   // If there is a user app options path because we are in a script level, prefetch it.
   // This is the shared source for both pairing data and teacher-role state. We use it
   // to set teacher role state because it is the only way to get this info on cached levels.
@@ -172,7 +186,8 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
         className={classNames(
           moduleStyles.labContainer,
           isLoading && moduleStyles.labContainerLoading,
-          isShareView && moduleStyles.labContainerShareView
+          isShareView && moduleStyles.labContainerShareView,
+          isEmbedView && moduleStyles.labContainerEmbedView
         )}
       >
         {levelPropertiesMap && (

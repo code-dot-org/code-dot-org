@@ -82,6 +82,9 @@ export interface LabState {
   scriptId: number | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  // If this lab is being rendered for embedding in another level's markdown, which shows
+  // the preview alone.
+  isEmbedView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
   isBlockedAbuse: boolean | undefined;
   // The failure the server's share filter found in the project content
@@ -109,6 +112,7 @@ const initialState: LabState = {
   levelProperties: undefined,
   scriptId: undefined,
   isShareView: undefined,
+  isEmbedView: undefined,
   isBlockedAbuse: undefined,
   shareFailure: null,
   projectSharingDisabled: undefined,
@@ -335,6 +339,9 @@ const labSlice = createSlice({
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
     },
+    setIsEmbedView(state, action: PayloadAction<boolean>) {
+      state.isEmbedView = action.payload;
+    },
     setOverrideValidations(
       state,
       action: PayloadAction<Validation[] | undefined>
@@ -556,6 +563,7 @@ export const {
   clearPageError,
   setValidationState,
   setIsShareView,
+  setIsEmbedView,
   setOverrideValidations,
   setScriptId,
   onLevelChange,

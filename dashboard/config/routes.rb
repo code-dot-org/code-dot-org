@@ -1413,6 +1413,11 @@ Dashboard::Application.routes.draw do
     get 'widget2', to: 'widget2#index'
     post 'widget2/:widget2_id/update_code', to: 'widget2#update_code'
     post 'widget2/new', to: 'widget2#new'
+    # Public render of a widget for embedding in level markdown. Addressed by widget2 id
+    # because checked-in curriculum cannot name a level id, which differs per environment.
+    # The constraint mirrors WIDGET2_ID_PATTERN, so a traversal attempt 404s at routing.
+    get 'widget2/:widget2_id/embed', to: 'levels#embed_widget2',
+      as: 'embed_widget2', constraints: {widget2_id: /[a-z0-9][a-z0-9_-]*/}
 
     namespace :foorm do
       resources :simple_survey_forms, only: [:index, :new, :create]

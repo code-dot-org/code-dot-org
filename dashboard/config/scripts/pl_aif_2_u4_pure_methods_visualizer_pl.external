@@ -28,16 +28,7 @@ When you run a function to filter that list, one of two things happens:
 ## Array State Vizualizer
 
 
-<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-  <iframe 
-    src="https://amandadennard-dotcom.github.io/Unit4-pure-methods-vizualizer/array-state-visualizer2.html"
-    width="100%" 
-    height="920" 
-    frameborder="0"
-    scrolling="no"
-    style="display:block; border-radius:10px;">
-  </iframe>
-</div>
+<weblab2-widget data-widget-id="pure-methods-visualizer" data-height="920" data-title="Array state visualizer: compare pure and mutating array methods"></weblab2-widget>
 
 ---
 

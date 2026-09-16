@@ -174,6 +174,22 @@ blocklyTags.forEach(tag => {
   blocklyComponentWrappers[tag] = makeBlocklyWrapper(tag);
 });
 
+// A curriculum writer embeds a Web Lab 2 widget by writing <weblab2-widget> in level
+// markdown. The tag lives in the base schema because student-facing levels render with
+// allowEmbeds off, which never reaches schemaWithEmbeds. Allowing it here only makes it
+// inert markup: it becomes an iframe solely on pages that register a component for it
+// (see levelMarkdownRehypeMap), so AI chat output cannot mint a same-origin studio frame.
+export const WEBLAB2_WIDGET_TAG = 'weblab2-widget';
+schema.tagNames.push(WEBLAB2_WIDGET_TAG);
+// hast-util-sanitize matches hast property names, so data-widget-id is dataWidgetId here.
+// Anything absent from this list is dropped.
+schema.attributes[WEBLAB2_WIDGET_TAG] = [
+  'dataWidgetId',
+  'dataHeight',
+  'dataTitle',
+  'dataMaxWidth',
+];
+
 // These wrappers add context for Localize to better understand the markdown
 // output. This also will enable URL localization for all links.
 const localizationComponentWrappers = {

@@ -88,6 +88,7 @@ export const Codebridge = React.memo(
     enableUserAddedSelectionContext = false,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
+    const isEmbedView = useAppSelector(state => state.lab.isEmbedView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
@@ -156,6 +157,11 @@ export const Codebridge = React.memo(
     }, []);
 
     const InnerLayout = useMemo((): React.FunctionComponent<LayoutProps> => {
+      // Ahead of the widget check: a widget2 level always has widgetView set, so the
+      // widget branch would otherwise win and keep the chrome an embed cannot carry.
+      if (isEmbedView && config.layoutComponents.embed && !isStartMode) {
+        return config.layoutComponents.embed;
+      }
       if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
       }
@@ -176,6 +182,7 @@ export const Codebridge = React.memo(
       appName,
       config.activeLayout,
       config.layoutComponents,
+      isEmbedView,
       isShareView,
       isStartMode,
       isWidgetView,

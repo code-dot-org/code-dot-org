@@ -1,0 +1,12 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "level_num": "custom",
+  "published": true,
+  "properties": {
+    "widget2": {
+      "id": "pure-methods-visualizer"
+    }
+  }
+}]]></config>
+</Weblab2>

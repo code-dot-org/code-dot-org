@@ -129,6 +129,9 @@ export default class EnhancedSafeMarkdown extends React.Component {
     expandableImages: PropTypes.bool,
     className: PropTypes.string,
     handleInstructionsTextClick: PropTypes.func,
+    // Passed straight to SafeMarkdown. Callers must supply a stable object; see the
+    // rehypeMap notes there.
+    rehypeMap: PropTypes.objectOf(PropTypes.func),
   };
 
   render() {
@@ -146,6 +149,7 @@ export default class EnhancedSafeMarkdown extends React.Component {
         markdown={this.props.markdown}
         openExternalLinksInNewTab={this.props.openExternalLinksInNewTab}
         className={this.props.className}
+        rehypeMap={this.props.rehypeMap}
       />
     );
 
