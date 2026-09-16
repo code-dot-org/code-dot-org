@@ -240,8 +240,10 @@ describe('SpriteLab2 trimAnimationListImages native pixel art', () => {
     global.Image = realImage;
   });
 
-  it('upscales a grid-1 image by the display factor, geometry included', async () => {
-    const out = await trimAnimationListImages(native);
+  it('upscales a grid-1 image for the engine, geometry included', async () => {
+    const out = await trimAnimationListImages(native, undefined, {
+      forEngine: true,
+    });
     expect(upscaleImageNearest).toHaveBeenCalledWith(
       'data:native',
       expect.any(Function)
@@ -249,6 +251,13 @@ describe('SpriteLab2 trimAnimationListImages native pixel art', () => {
     expect(out.propsByKey.k.dataURI).toBe('data:native@8x');
     expect(out.propsByKey.k.frameSize).toEqual({x: 512, y: 512});
     expect(out.propsByKey.k.sourceSize).toEqual({x: 512, y: 512});
+  });
+
+  it('leaves the thumbnail pass at native size', async () => {
+    const out = await trimAnimationListImages(native);
+    expect(upscaleImageNearest).not.toHaveBeenCalled();
+    expect(out.propsByKey.k.dataURI).toBe('data:native');
+    expect(out.propsByKey.k.frameSize).toEqual({x: 64, y: 64});
   });
 
   it('leaves an asset stored upscaled alone', async () => {
@@ -262,7 +271,9 @@ describe('SpriteLab2 trimAnimationListImages native pixel art', () => {
         },
       },
     };
-    const out = await trimAnimationListImages(stored);
+    const out = await trimAnimationListImages(stored, undefined, {
+      forEngine: true,
+    });
     expect(upscaleImageNearest).not.toHaveBeenCalled();
     expect(out.propsByKey.k.dataURI).toBe('data:native');
     expect(out.propsByKey.k.frameSize).toEqual({x: 512, y: 512});

@@ -1,8 +1,8 @@
 // Trim transparent borders off sprite images at load time, so content reaches
 // the edges of the bounding box (AI-generated images carry generous margins),
-// and upscale pixel art stored at its logical size, so the engine, which
-// draws with smoothing on, gets the sizes crisp-stored assets have. Saved
-// project data is untouched.
+// and, for the engine, upscale pixel art stored at its logical size to the
+// sizes crisp-stored assets have (it draws with smoothing on). Saved project
+// data is untouched.
 
 import {
   NATIVE_PIXEL_GRID,
@@ -228,7 +228,8 @@ export function scaleAnimationGeometry(
 /**
  * Pixel art stored at its logical size (pixelGridSize 1), upscaled to the
  * size a crisp-stored asset has, geometry included. Anything else passes
- * through. Uncached, like trimTransparentBorder: a draw per image per pass.
+ * through. Uncached, like trimTransparentBorder: a draw per image per
+ * engine preload.
  */
 async function upscaledForDisplay(
   props: RuntimeAnimationProps
@@ -346,10 +347,14 @@ export function filterAnimationsToNames(
  * keepNames lists every name in the project, so that a scene-scoped
  * subset doesn't prune thumbnails of images other scenes still use — a
  * thumbnail is only dropped for a name absent from the whole project.
+ *
+ * forEngine also upscales native pixel art in the returned list. Thumbnails
+ * are always made from the native pixels, so the two passes agree.
  */
 export async function trimAnimationListImages(
   list: RuntimeAnimationList,
-  keepNames?: Set<string>
+  keepNames?: Set<string>,
+  {forEngine = false} = {}
 ): Promise<RuntimeAnimationList> {
   const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
@@ -368,13 +373,14 @@ export async function trimAnimationListImages(
       newTrims = true;
     }
   };
+  const forEngineProps = (props: RuntimeAnimationProps) =>
+    forEngine ? upscaledForDisplay(props) : props;
   await Promise.all(
     (list.orderedKeys || []).map(async key => {
-      const stored = list.propsByKey[key];
-      if (!stored) {
+      const props = list.propsByKey[key];
+      if (!props) {
         return;
       }
-      const props = await upscaledForDisplay(stored);
       const pixelated = !!props.pixelGridSize;
       const isBackground = (props.categories || []).includes(
         BACKGROUNDS_CATEGORY
@@ -386,7 +392,7 @@ export async function trimAnimationListImages(
             await thumbnailFromDataURI(props.dataURI, pixelated)
           );
         }
-        propsByKey[key] = props;
+        propsByKey[key] = await forEngineProps(props);
         return;
       }
       const isSheet = props.frameCount > 1 && !!props.frameSize;
@@ -398,7 +404,9 @@ export async function trimAnimationListImages(
         ? props.dataURI
         : await trimTransparentBorder(props.dataURI);
       noteThumb(props.name, await thumbnailFromDataURI(trimmed, pixelated));
-      propsByKey[key] = isSheet ? props : {...props, dataURI: trimmed};
+      propsByKey[key] = await forEngineProps(
+        isSheet ? props : {...props, dataURI: trimmed}
+      );
     })
   );
   if (newTrims) {
