@@ -4,6 +4,7 @@ import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
+import {ImageDefaults} from './imageDefaults';
 import {LevelMode} from './levelMode';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
@@ -31,6 +32,8 @@ export interface SerializedAnimationProps {
   recentColors?: RGBA[];
   /** The stored image is already cropped to its content. */
   trimmed?: boolean;
+  /** What the image level that made it was for (level_mode.imageRole). */
+  role?: string;
   /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */
@@ -130,6 +133,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       anchored to the floor. 'B' cells take the block image the student made
       most recently, 'S' their first character. */
   worldStartPattern?: string[];
+  /** The image role each dropdown starts on (imageDefaults.ts). */
+  imageDefaults?: ImageDefaults;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

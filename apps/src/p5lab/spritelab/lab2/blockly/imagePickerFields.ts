@@ -9,6 +9,8 @@ import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimatio
 import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 
+import {ImageType} from '../ai/images/types';
+import {defaultImageName, ImageSlot} from '../imageDefaults';
 import {noteImageFieldValue} from '../imageReferences';
 import {getImageThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
@@ -89,35 +91,87 @@ function animationOptions(kind: AnimationKind): [string, string][] {
   return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
-/** Costume field option: a fresh field starts on the oldest sprite in the
-    project instead of the newest image. The player blocks set it: the hero
-    is the first sprite a student makes. */
-export const OLDEST_SPRITE_OPTION = 'oldestSprite';
+const IMAGE_TYPE_OF: Record<AnimationKind, ImageType> = {
+  costume: 'sprite',
+  background: 'background',
+  block: 'block',
+};
 
-/** A block definition's costume field argument. */
-export function costumeFieldArg(name: string, {oldestSprite = false} = {}) {
-  const arg = {type: FIELD_COSTUME_TYPE, name};
-  return oldestSprite ? {...arg, [OLDEST_SPRITE_OPTION]: true} : arg;
+// Sprite sockets take a "sprite with costume" shadow; the connection check
+// is how a parent's sockets are told apart from its other inputs.
+const SPRITE_CHECK = 'Sprite';
+
+/**
+ * Where a field sits for image_defaults: its block, or, on a shadow filling
+ * a sprite socket, the parent block and the socket's position among the
+ * parent's sprite sockets.
+ */
+function slotOf(block: BlocklyCore.Block): ImageSlot {
+  const parentInput =
+    block.outputConnection?.targetConnection?.getParentInput();
+  const parent = block.getParent();
+  if (!parentInput || !parent) {
+    return {blockType: block.type, index: 0};
+  }
+  const sockets = parent.inputList.filter(input =>
+    input.connection?.getCheck()?.includes(SPRITE_CHECK)
+  );
+  return {
+    blockType: parent.type,
+    index: Math.max(0, sockets.indexOf(parentInput)),
+  };
+}
+
+/**
+ * The lab's image dropdown. A fresh field starts on the image the level's
+ * image_defaults name for its slot, decided once the field is on its block;
+ * a saved block's own value wins, and a level naming nothing leaves the
+ * newest image, Blockly's first option.
+ */
+export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
+  kind: AnimationKind = 'costume';
+  private valueLoaded = false;
+
+  loadState(state: unknown) {
+    this.valueLoaded = true;
+    super.loadState(state);
+  }
+
+  fromXml(element: Element) {
+    this.valueLoaded = true;
+    super.fromXml(element);
+  }
+
+  init() {
+    super.init();
+    const block = this.getSourceBlock();
+    if (this.valueLoaded || !block) {
+      return;
+    }
+    const state = getStore().getState();
+    const name = defaultImageName(
+      state.animationList,
+      state.lab?.levelProperties?.imageDefaults,
+      IMAGE_TYPE_OF[this.kind],
+      slotOf(block)
+    );
+    if (name) {
+      this.setValue(`"${name}"`);
+    }
+  }
 }
 
 function animationDropdown(
   kind: AnimationKind,
-  Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown,
-  oldestSprite = false
-): CdoFieldAnimationDropdown {
+  Ctor: typeof Lab2AnimationDropdown = Lab2AnimationDropdown
+): Lab2AnimationDropdown {
   const field = new Ctor(
     () => animationOptions(kind),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
     MAKE_IMAGE_BUTTONS
   );
-  // A fresh field takes the first option, the newest image. The list is
-  // newest-first, so the oldest sprite is the last option. A saved block's
-  // value replaces this.
-  if (oldestSprite) {
-    const options = field.getOptions(false);
-    field.setValue(options[options.length - 1][1]);
-  }
+  field.kind = kind;
   return field;
 }
 
@@ -145,17 +199,13 @@ export function animationPicker(kind: AnimationKind) {
 
 // Registered field types (see setup.ts) so JSON block definitions get the
 // same dropdowns.
-export class CostumeField extends CdoFieldAnimationDropdown {
-  static fromJson(options: BlocklyCore.FieldConfig) {
-    return animationDropdown(
-      'costume',
-      CostumeField,
-      !!(options as Record<string, unknown>)[OLDEST_SPRITE_OPTION]
-    );
+export class CostumeField extends Lab2AnimationDropdown {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
+    return animationDropdown('costume', CostumeField);
   }
 }
 
-export class BlockImageField extends CdoFieldAnimationDropdown {
+export class BlockImageField extends Lab2AnimationDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
     return animationDropdown('block', BlockImageField);
   }

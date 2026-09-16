@@ -11,6 +11,9 @@ export interface LevelMode {
   kind: LevelModeKind;
   /** The kind of image the level is about. */
   imageType?: ImageType;
+  /** Recorded on every image this level makes, so later levels'
+      image_defaults can name it. */
+  imageRole?: string;
   /** Word combos to offer, in place of the set the kind implies. */
   adlibs?: ImageAdlibSet;
 }

@@ -24,6 +24,9 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_defaults": {
+      "sprite": "hero"
+    },
     "guide_steps": [
       {
         "text": "**Link your scenes.** Use the new **go to scene** block to jump from one scene to another - for example, when your character is clicked. Press **Play** to try the jump."

@@ -25,6 +25,9 @@
       "kind": "world",
       "imageType": "sprite"
     },
+    "image_defaults": {
+      "sprite": "treasure"
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",

@@ -50,6 +50,7 @@ import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
 import {countImagesByType, useGuideSteps} from '../guideSteps';
+import {defaultImageName, defaultRole} from '../imageDefaults';
 import {imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
@@ -483,6 +484,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     pinnedSceneId,
     enabled: animationsSeeded,
     animations: animationList,
+    spriteRole: defaultRole(levelProperties.imageDefaults, 'sprite'),
     updateSources,
   });
 
@@ -519,6 +521,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // excluded, a world cell being a sprite or a block; a selection whose image
   // is gone counts as none.
   const focusImageType = levelProperties.levelMode?.imageType;
+  const imageDefaults = levelProperties.imageDefaults;
   useEffect(() => {
     if (!focusImageType || focusImageType === 'background') {
       return;
@@ -532,15 +535,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (live) {
       return;
     }
-    // orderedKeys is newest-first: Sprite Lab prepends new animations.
+    // The level's image_defaults role first; else the newest of the kind
+    // (orderedKeys is newest-first: Sprite Lab prepends new animations).
     const newest = animationList.orderedKeys.find(
       key =>
         imageTypeFromCategories(animationList.propsByKey[key]?.categories) ===
         focusImageType
     );
-    const name = newest && animationList.propsByKey[newest]?.name;
+    const name =
+      defaultImageName(animationList, imageDefaults, focusImageType) ??
+      (newest && animationList.propsByKey[newest]?.name);
     setWorldPaletteSelection(name ? {image: name, kind: focusImageType} : null);
-  }, [worldPaletteSelection, focusImageType, animationList]);
+  }, [worldPaletteSelection, focusImageType, animationList, imageDefaults]);
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
@@ -1563,6 +1569,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onRenameImage: handleRenameImage,
     onDeleteImage: handleDeleteImage,
     lockedImageType: levelProperties.levelMode?.imageType,
+    imageRole: levelProperties.levelMode?.imageRole,
     advanced: imagesAdvanced,
     adlibSet: imageAdlibSetParam || adlibSetForMode(levelProperties.levelMode),
     // Freeplay hands back the prompt box and the paint tools; every other

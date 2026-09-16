@@ -267,6 +267,8 @@ interface GenerateImagePaneProps {
   onDeleteImage: (name: string) => void;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
+  /** Recorded on every image made here (level_mode.imageRole). */
+  imageRole?: string;
   /** Show the full internal dialog and gallery names; the default is the
       student version (auto-named images, fewer generation controls). */
   advanced?: boolean;
@@ -320,6 +322,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onRenameImage,
   onDeleteImage,
   lockedImageType,
+  imageRole,
   advanced,
   adlibSet,
   adlibOnly,
@@ -661,6 +664,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
           ...framesPatch(result.frames),
           categories: categoriesForType(result.generation.imageType),
+          ...(imageRole && {role: imageRole}),
           pixelGridSize: result.pixelGridSize,
           trimmed: !!result.trimmed,
           generation: result.generation,
@@ -692,6 +696,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     },
     [
       dialogTarget,
+      imageRole,
       targetProps,
       uploadImage,
       dispatch,
@@ -781,6 +786,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           sourceUrl,
           frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
           categories: categoriesForType(imageType),
+          ...(imageRole && {role: imageRole}),
           pixelGridSize: meta.pixelGridSize,
           recentColors: meta.recentColors,
         });
@@ -844,6 +850,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     },
     [
       dialogTarget,
+      imageRole,
       targetProps,
       paintNewDraft,
       uploadEdited,
