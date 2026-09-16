@@ -92,6 +92,18 @@ describe('SpriteLab2 playerEvents', () => {
     ).toEqual([[]]);
   });
 
+  it('reports a step the wall only stopped partway', () => {
+    // Release the key and no later frame catches it, so it lands here —
+    // and the two px that did happen still earn their step.
+    expect(run(frame({moved: 2, requested: 4}))).toEqual([['step', 'blocked']]);
+  });
+
+  it('reports a partial stop going left too', () => {
+    expect(run(frame({moved: -2, requested: -4}))).toEqual([
+      ['step', 'blocked'],
+    ]);
+  });
+
   it('reports a wall hit in mid-air, not just on the ground', () => {
     expect(run(frame({moved: 0, requested: 4, grounded: false}))).toEqual([
       ['blocked'],

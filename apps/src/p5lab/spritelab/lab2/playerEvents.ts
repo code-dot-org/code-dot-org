@@ -6,8 +6,13 @@ import {PlayerSoundEvent} from './playerSounds';
 // Pixels walked between footsteps, so the beat follows the player's speed.
 const STEP_DISTANCE = 16;
 
-// Rise a block has to swallow to count as a bump, not as a graze.
-const BUMP_REFUSED_PX = 0.5;
+// A bump, not a graze: px of a move the walls must swallow to count.
+const REFUSED_PX = 0.5;
+
+// Signed along the way it was asked for, so leftward reads like rightward.
+function refused(asked: number, got: number): boolean {
+  return Math.abs(asked) - got * Math.sign(asked) > REFUSED_PX;
+}
 
 export interface PlayerFrame {
   moved: number;
@@ -51,11 +56,12 @@ export function playerEvents(
   }
 
   // Two latches, or a wall held in the air masks the ceiling above it. A
-  // wall keeps refusing while held; a block only clips one frame's rise.
-  const intoWall = isMoving(frame.requested) && !isMoving(frame.moved);
+  // move that came back short counts: release the key and no later frame
+  // would catch it.
+  const intoWall =
+    isMoving(frame.requested) && refused(frame.requested, frame.moved);
   const intoBlock =
-    frame.requestedUp > 0 &&
-    frame.requestedUp - frame.movedUp > BUMP_REFUSED_PX;
+    frame.requestedUp > 0 && refused(frame.requestedUp, frame.movedUp);
   if ((intoWall && !state.intoWall) || (intoBlock && !state.intoBlock)) {
     events.push('blocked');
   }

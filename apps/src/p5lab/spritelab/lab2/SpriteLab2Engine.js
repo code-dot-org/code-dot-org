@@ -1033,8 +1033,10 @@ export default class SpriteLab2Engine extends SpriteLab {
         !this.onPlayerSound) ||
       !players.length
     ) {
-      // Forget them, or the gap reads as a stride when they come back.
+      // Silence the held voices, or they hang where the player left them.
       if (this.observedX_ !== null) {
+        this.onPlayerHeight?.({above: 0, airborne: false});
+        this.onPlayerProximity?.({wall: Infinity, edge: Infinity});
         this.forgetPlayer_();
       }
       return;
@@ -1050,15 +1052,20 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.observedX_ = sprite.position.x;
     this.observedY_ = sprite.position.y;
     const moved = sprite.position.x - previousX;
+    const requested = first ? 0 : requestedX - previousX;
     // Positive is away from the ground, whichever way gravity points.
     const up = weightless ? 0 : -Math.sign(gravity);
-    // Kept while standing still, so a warning doesn't drop when you pause.
-    this.observedFacing_ = nextFacing(this.observedFacing_, moved);
+    // Follows the key, not the ground won, so turning into a wall faces
+    // it; kept while standing still, so a warning doesn't drop on a pause.
+    this.observedFacing_ = nextFacing(
+      this.observedFacing_,
+      isMoving(moved) ? moved : requested
+    );
     const direction = this.observedFacing_ === 'left' ? -1 : 1;
     if (this.onPlayerSound) {
       playerEvents(this.playerEvents_, {
         moved,
-        requested: first ? 0 : requestedX - previousX,
+        requested,
         movedUp: (sprite.position.y - previousY) * up,
         requestedUp: first ? 0 : (requestedY - previousY) * up,
         grounded,
