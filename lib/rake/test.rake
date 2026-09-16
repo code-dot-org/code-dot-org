@@ -141,15 +141,15 @@ namespace :test do
     raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional)
   end
 
-  # Never stops a build. A person approves each new image in Applitools.
-  # Drone exports the Applitools variables (.drone.yml). The DTT daemon has the
-  # key Cucumber's Eyes suite uses (eyes_steps.rb) and derives the rest.
+  # A visual diff never stops a build; a person approves each new image in
+  # Applitools. Drone exports the Applitools variables (.drone.yml). The DTT
+  # daemon has the key Cucumber's Eyes suite uses (eyes_steps.rb) and derives
+  # the rest; on that machine a missing key is a configuration error.
   timed_task_with_logging playwright_eyes: :playwright_install do
     env = dtt_playwright_eyes_env
     if env.empty? && ENV['VISUAL_PROVIDER'].blank?
-      # Into the rollup too, or ui_all reports a skipped suite as passed.
-      PLAYWRIGHT_ROLLUP[:eyes] = "🟡 #{PLAYWRIGHT_SUITES[:eyes]} (non-blocking): skipped, no Applitools key."
-      ChatClient.log PLAYWRIGHT_ROLLUP[:eyes]
+      raise 'Playwright Eyes: the test system has no applitools_eyes_api_key' if CDO.test_system?
+      ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
       next
     end
     secrets = env.empty? ? {} : {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
