@@ -50,10 +50,6 @@ const LevelCard: React.FC<LevelCardProps> = ({
   onMove,
 }) => {
   const unsupported = !!spec.unsupportedType;
-  const displayName =
-    unsupported && spec.existing
-      ? spec.existing.scriptLevel.levels?.[0]?.name || previewName
-      : previewName;
 
   const sublevelLabOptions = labOptions.filter(o =>
     SUBLEVEL_LAB_TYPE_SET.has(o.value)
@@ -109,7 +105,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
     <ReorderableCard
       title={
         <h3>
-          Level {index + 1} — <code>{displayName}</code>
+          Level {index + 1} — <code>{previewName}</code>
         </h3>
       }
       canMoveUp={index > 0}
@@ -135,7 +131,7 @@ const LevelCard: React.FC<LevelCardProps> = ({
               value={spec.id}
               onChange={e => onChange(spec.key, {id: e.target.value})}
               placeholder="e.g. intro-1"
-              disabled={disabled || unsupported}
+              disabled={disabled || unsupported || !!spec.existing}
             />
           </div>
           <div className={sharedStyles.cardField}>

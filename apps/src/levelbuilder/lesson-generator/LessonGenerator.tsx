@@ -54,6 +54,7 @@ import {
   saveGeneratorPrompts,
 } from './helpers/generatorPrompts';
 import {levelContextFor} from './helpers/levelContext';
+import {levelNameFor, prefixedName} from './helpers/levelName';
 import {
   formatPrecedingLevels,
   PriorEntry,
@@ -272,7 +273,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
   }, [prefix, levelSpecs]);
 
   const fullName = useCallback(
-    (id: string) => (prefix ? `${prefix}-${id}` : id),
+    (id: string) => prefixedName(prefix, id),
     [prefix]
   );
 
@@ -489,7 +490,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           s => s.labType === 'weblab2' && s.templateGroup?.trim() === groupId
         )
         .map(s => ({
-          name: fullName(s.id.trim()),
+          name: levelNameFor(s, prefix),
           description: s.description.trim(),
           suppliedCode: s.suppliedCode?.trim() || undefined,
         }));
@@ -529,7 +530,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
 
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
-      const levelName = fullName(spec.id.trim());
+      const levelName = levelNameFor(spec, prefix);
       const setStage = (phase: ProgressUpdate['phase'], detail?: string) => {
         setProgress({
           levelIndex: i,
@@ -627,7 +628,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             `Planning ${sublevels.length} sublevel(s) for "${levelName}"…`
           );
           for (const sub of sublevels) {
-            const subName = fullName(`${spec.id.trim()}-${sub.id.trim()}`);
+            const subName = `${levelName}-${sub.id.trim()}`;
             const subLevel = await createOrFindLevel(sub.labType, subName);
             const subCtx = levelContextFor(sub, subName, levelCtxBase);
             await generateSublevelContent(sub, subCtx, subLevel.id, appendLog);
@@ -677,31 +678,14 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             : `Skipping content generation for "${levelName}" (Generate is unchecked).`
         );
         const level = await createOrFindLevel(spec.labType, levelName, dslText);
-        if (level.reused && shouldGenerate && !isExisting) {
-          appendLog(
-            `Level "${levelName}" already exists — reusing and overwriting its content.`
-          );
-          // For DSL types we PATCHed nothing on create (the existing
-          // record kept its old dsl_text). Re-write with the fresh DSL.
-          if (multiResult) {
-            await updateLevelProperty(
-              level.id,
-              'dsl_text',
-              multiResult.dslText
+        if (level.reused && shouldGenerate) {
+          if (!isExisting) {
+            appendLog(
+              `Level "${levelName}" already exists — reusing and overwriting its content.`
             );
-          } else if (matchResult) {
-            await updateLevelProperty(
-              level.id,
-              'dsl_text',
-              matchResult.dslText
-            );
-          } else if (externalResult) {
-            await updateLevelProperty(
-              level.id,
-              'dsl_text',
-              externalResult.dslText
-            );
-          } else if (bubbleChoicePlan && dslText) {
+          }
+          // A found level kept its old dsl_text; the create POST never ran.
+          if (dslText) {
             await updateLevelProperty(level.id, 'dsl_text', dslText);
           }
         }
@@ -1126,6 +1110,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     setIsGenerating(false);
     setProgress(null);
   }, [
+    prefix,
     validationError,
     lesson,
     levelSpecs,
@@ -1206,7 +1191,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             spec={spec}
             index={index}
             total={levelSpecs.length}
-            previewName={fullName(spec.id || '<id>')}
+            previewName={levelNameFor(spec, prefix) || fullName('<id>')}
             disabled={isGenerating}
             labOptions={LAB_OPTIONS}
             onChange={updateSpec}
