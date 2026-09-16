@@ -344,7 +344,7 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   test 'retrieve_lessons_for_dropdown returns demo preset lesson links for a demo type' do
-    # In the test environment, demo presets resolve to the ui test unit
+    # In the test environment, demo presets resolve to the UI test unit
     # and unit group (see Policies::DemoSections.curriculum_names).
     demo_unit = create(:unit, :with_levels, name: Policies::DemoSections::UI_TEST_UNIT_NAME)
     demo_unit.lessons.first.update!(has_lesson_plan: true)

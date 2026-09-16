@@ -74,6 +74,8 @@ namespace :seed do
   end
 
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
+
+  # Every unit the UI tests need now lives in the UI test curriculum tree.
   UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -241,7 +243,7 @@ namespace :seed do
   end
 
   timed_task_with_logging courses_ui_tests: :environment do
-    # seed those courses that are needed for UI tests
+    # Every course the UI tests need now lives in the UI test curriculum tree.
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
       UnitGroup.load_from_path(path)
     end
