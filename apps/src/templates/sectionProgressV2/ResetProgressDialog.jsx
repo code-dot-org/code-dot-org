@@ -111,6 +111,7 @@ export default function ResetProgressDialog({
               {students.map(student => (
                 <Checkbox
                   key={student.id}
+                  className={styles.studentCheckboxItem}
                   name={`reset-progress-student-${student.id}`}
                   label={getFullName(student)}
                   checked={selectedIds.has(student.id)}
@@ -154,6 +155,7 @@ export default function ResetProgressDialog({
         id: 'ui-reset-progress-confirm',
         children: i18n.resetProgress(),
         'aria-label': i18n.resetProgress(),
+        color: 'error',
         disabled: isSubmitting,
         onClick: resetProgress,
       }}

@@ -10,12 +10,17 @@
   border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
+// CSS multi-column (not grid) so each column's items flow independently —
+// a long name in one column doesn't stretch the row height for the others.
 .studentGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
+  column-count: 3;
   column-gap: 36px;
-  row-gap: 8px;
+  width: 100%;
+}
+
+.studentCheckboxItem {
+  margin-bottom: 8px;
+  break-inside: avoid;
 }
 
 .error {
