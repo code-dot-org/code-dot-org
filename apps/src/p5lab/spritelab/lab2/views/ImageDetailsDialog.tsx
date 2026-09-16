@@ -110,6 +110,8 @@ export interface AlternativeImage {
   id: string;
   thumb: string;
   selected: boolean;
+  /** Pixel art: the tile upscales the thumb with hard edges. */
+  pixelGridSize?: number;
 }
 
 /**
@@ -406,7 +408,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                         aria-pressed={alt.selected}
                         onClick={() => onSelectAlternative?.(alt.id)}
                       >
-                        <img src={alt.thumb} alt="" />
+                        <img
+                          src={alt.thumb}
+                          alt=""
+                          className={classNames(
+                            alt.pixelGridSize && moduleStyles.pixelArt
+                          )}
+                        />
                       </button>
                     ))}
                   </div>

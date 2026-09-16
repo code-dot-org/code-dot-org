@@ -10,7 +10,11 @@ import {
   upscaleImageNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
 
-import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
+import {
+  BACKGROUNDS_CATEGORY,
+  RuntimeAnimationList,
+  RuntimeAnimationProps,
+} from './types';
 
 // Alpha above which a pixel counts as content: high enough to shed the soft
 // matte's near-invisible fringe (which otherwise stretches sprite bounds
@@ -205,18 +209,11 @@ function trimTransparentBorder(source: string): Promise<string> {
   });
 }
 
-type AnimationProps = RuntimeAnimationList['propsByKey'][string];
-
-// Native pixel art's display upscale, cached by source (a native image is a
-// few KB, so the keys stay cheap).
-const displayUpscaleCache = new Map<string, Promise<string>>();
-const DISPLAY_UPSCALE_CACHE_LIMIT = 60;
-
 /** The props with every recorded dimension multiplied by factor. Pure. */
 export function scaleAnimationGeometry(
-  props: AnimationProps,
+  props: RuntimeAnimationProps,
   factor: number
-): AnimationProps {
+): RuntimeAnimationProps {
   const scale = (size: {x: number; y: number}) => ({
     x: size.x * factor,
     y: size.y * factor,
@@ -231,37 +228,21 @@ export function scaleAnimationGeometry(
 /**
  * Pixel art stored at its logical size (pixelGridSize 1), upscaled to the
  * size a crisp-stored asset has, geometry included. Anything else passes
- * through.
+ * through. Uncached, like trimTransparentBorder: a draw per image per pass.
  */
 async function upscaledForDisplay(
-  props: AnimationProps
-): Promise<AnimationProps> {
-  const source = props.dataURI;
-  if (props.pixelGridSize !== NATIVE_PIXEL_GRID || !source) {
+  props: RuntimeAnimationProps
+): Promise<RuntimeAnimationProps> {
+  if (props.pixelGridSize !== NATIVE_PIXEL_GRID || !props.dataURI) {
     return props;
   }
-  const size = props.frameSize ?? props.sourceSize;
-  if (!size) {
-    return props;
-  }
-  const factor = crispScaleFor(size.x, size.y);
-  if (factor <= 1) {
-    return props;
-  }
-  let cached = displayUpscaleCache.get(source);
-  if (!cached) {
-    cached = upscaleImageNearest(source, factor);
-    while (displayUpscaleCache.size >= DISPLAY_UPSCALE_CACHE_LIMIT) {
-      displayUpscaleCache.delete(
-        displayUpscaleCache.keys().next().value as string
-      );
-    }
-    displayUpscaleCache.set(source, cached);
-  }
-  const dataURI = await cached;
-  return dataURI === source
-    ? props
-    : {...scaleAnimationGeometry(props, factor), dataURI};
+  const {dataURI, factor} = await upscaleImageNearest(
+    props.dataURI,
+    crispScaleFor
+  );
+  return factor > 1
+    ? {...scaleAnimationGeometry(props, factor), dataURI}
+    : props;
 }
 
 /** The animation list restricted to images whose data has arrived. */

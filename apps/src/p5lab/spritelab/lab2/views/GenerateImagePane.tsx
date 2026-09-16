@@ -612,13 +612,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     // The model drew this at ~1K; pixel art stored at its logical size goes
     // back up to that before it is shown to the model again.
     if (dataURI && targetProps.pixelGridSize === NATIVE_PIXEL_GRID) {
-      const size = await dataURIToSourceSize(dataURI).catch(() => null);
-      if (size) {
-        dataURI = await upscaleImageNearest(
-          dataURI,
-          Math.floor(MODEL_OUTPUT_PX / Math.max(size.x, size.y))
-        );
-      }
+      dataURI = (
+        await upscaleImageNearest(dataURI, (width, height) =>
+          Math.floor(MODEL_OUTPUT_PX / Math.max(width, height))
+        )
+      ).dataURI;
     }
     // "Start from current image" on a character set references one frame,
     // not the five-frame strip.
@@ -1000,6 +998,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
               id: alt.id,
               thumb: alt.thumb,
               selected: alt.sourceUrl === targetProps?.sourceUrl,
+              pixelGridSize: alt.pixelGridSize,
             })
           )}
           onSelectAlternative={handleSelectAlternative}

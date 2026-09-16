@@ -1,8 +1,10 @@
 jest.mock('@cdo/apps/pixelEditor/pixelArt', () => ({
   ...jest.requireActual('@cdo/apps/pixelEditor/pixelArt'),
-  upscaleImageNearest: jest.fn((source, factor) =>
-    Promise.resolve(`${source}@${factor}x`)
-  ),
+  // The 64px fixture decodes to 64x64; factorFor is the real crispScaleFor.
+  upscaleImageNearest: jest.fn((source, factorFor) => {
+    const factor = factorFor(64, 64);
+    return Promise.resolve({dataURI: `${source}@${factor}x`, factor});
+  }),
 }));
 
 import {
@@ -240,7 +242,10 @@ describe('SpriteLab2 trimAnimationListImages native pixel art', () => {
 
   it('upscales a grid-1 image by the display factor, geometry included', async () => {
     const out = await trimAnimationListImages(native);
-    expect(upscaleImageNearest).toHaveBeenCalledWith('data:native', 8);
+    expect(upscaleImageNearest).toHaveBeenCalledWith(
+      'data:native',
+      expect.any(Function)
+    );
     expect(out.propsByKey.k.dataURI).toBe('data:native@8x');
     expect(out.propsByKey.k.frameSize).toEqual({x: 512, y: 512});
     expect(out.propsByKey.k.sourceSize).toEqual({x: 512, y: 512});

@@ -794,37 +794,39 @@ export async function normalizePixelArtBlob(
 }
 
 /**
- * An image (dataURI or URL) upscaled nearest-neighbor by an integer factor,
- * as a PNG dataURI. Resolves to the source itself when the factor is 1 or
- * the image cannot be drawn.
+ * An image (dataURI or URL) upscaled nearest-neighbor by the integer factor
+ * factorFor picks from its decoded size, as a PNG dataURI. Resolves to the
+ * source at factor 1 when the factor is 1 or the image cannot be drawn.
  */
 export function upscaleImageNearest(
   source: string,
-  factor: number
-): Promise<string> {
-  if (factor <= 1) {
-    return Promise.resolve(source);
-  }
-  return new Promise<string>(resolve => {
+  factorFor: (width: number, height: number) => number
+): Promise<{dataURI: string; factor: number}> {
+  const unchanged = {dataURI: source, factor: 1};
+  return new Promise(resolve => {
     const img = new Image();
     img.crossOrigin = 'anonymous';
     img.onload = () => {
+      const factor = Math.floor(factorFor(img.naturalWidth, img.naturalHeight));
+      if (factor <= 1) {
+        return resolve(unchanged);
+      }
       try {
         const canvas = document.createElement('canvas');
         canvas.width = img.naturalWidth * factor;
         canvas.height = img.naturalHeight * factor;
         const ctx = canvas.getContext('2d');
         if (!ctx) {
-          return resolve(source);
+          return resolve(unchanged);
         }
         ctx.imageSmoothingEnabled = false;
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        resolve(canvas.toDataURL('image/png'));
+        resolve({dataURI: canvas.toDataURL('image/png'), factor});
       } catch {
-        resolve(source);
+        resolve(unchanged);
       }
     };
-    img.onerror = () => resolve(source);
+    img.onerror = () => resolve(unchanged);
     img.src = source;
   });
 }

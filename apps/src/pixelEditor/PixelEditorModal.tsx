@@ -112,9 +112,9 @@ interface PixelEditorModalProps {
   // The image to edit (dataURI or URL; must be canvas-readable).
   imageUrl: string;
   // Physical pixels per art pixel, when the image is known pixel art (e.g.
-  // recorded at generation time). > 1 opens the editor at the image's
-  // LOGICAL resolution. Absent/1 = edit at native resolution; the editor
-  // does no detection of its own.
+  // recorded at generation time). > 1 downsamples to the image's LOGICAL
+  // resolution; 1 is pixel art already at that size. Absent = smooth art,
+  // edited as is; the editor does no detection of its own.
   knownPixelGrid?: number;
   // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
   initialRecentColors?: RGBA[];
