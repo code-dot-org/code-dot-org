@@ -9,7 +9,8 @@ import {RuntimeAnimationList} from './types';
 /**
  * The image_defaults level property. 'sprite', 'background' and 'block'
  * name the role every dropdown of that kind starts on; a block type names
- * the role of each of that block's sprite slots, in order.
+ * the role of each of that block's sprite slots, in order, or one role for
+ * all of them.
  */
 export type ImageDefaults = {[key: string]: string | string[]};
 

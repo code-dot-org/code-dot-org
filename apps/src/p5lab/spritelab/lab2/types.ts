@@ -131,7 +131,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideSteps?: GuideStep[];
   /** Premade world for the pinned scene, one string per playfield row
       anchored to the floor. 'B' cells take the block image the student made
-      most recently, 'S' their first character. */
+      most recently, 'S' the image_defaults sprite, else their first
+      character. */
   worldStartPattern?: string[];
   /** The image role each dropdown starts on (imageDefaults.ts). */
   imageDefaults?: ImageDefaults;
