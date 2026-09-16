@@ -2,7 +2,7 @@ import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import {noteImageFieldValue} from '../../imageReferences';
-import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
+import {costumeFieldArg} from '../imagePickerFields';
 
 /**
  * Promote existing sprites (e.g. ones the World tab placed) to platform
@@ -12,7 +12,7 @@ import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 const definition: BlockJson = {
   type: 'spritelab2_setAsPlatformPlayer',
   message0: 'set %1 as player',
-  args0: [{type: FIELD_COSTUME_TYPE, name: 'ANIMATION_NAME'}],
+  args0: [costumeFieldArg('ANIMATION_NAME', {oldestSprite: true})],
   previousStatement: null,
   nextStatement: null,
   style: BlockStyles.SPRITE,

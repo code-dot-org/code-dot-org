@@ -3,13 +3,13 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import {noteImageFieldValue} from '../../imageReferences';
 import {FIELD_GRID_SINGLE_TYPE} from '../gridFields';
-import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
+import {costumeFieldArg} from '../imagePickerFields';
 
 const definition: BlockJson = {
   type: 'spritelab2_makePlatformPlayer',
   message0: 'make platform player %1 %2 at grid location: %3',
   args0: [
-    {type: FIELD_COSTUME_TYPE, name: 'ANIMATION_NAME'},
+    costumeFieldArg('ANIMATION_NAME', {oldestSprite: true}),
     // Row break: picker on the first row, grid on its own below.
     {type: 'input_dummy', name: 'ROW_BREAK'},
     {type: FIELD_GRID_SINGLE_TYPE, name: 'GRID'},

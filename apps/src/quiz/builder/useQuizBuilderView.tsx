@@ -4,9 +4,11 @@ import {LabProps} from '@cdo/apps/lab2/types';
 
 import {QuizLevelProperties, QuizViewContent, toBool} from '../types';
 
+import QuizBuilderWorkspace from './QuizBuilderWorkspace';
 import QuizConfigurationPanel, {
   QuizConfigurationData,
 } from './QuizConfigurationPanel';
+import useQuizBuilderQuestions from './useQuizBuilderQuestions';
 
 export default function useQuizBuilderView({
   levelProperties,
@@ -22,6 +24,8 @@ export default function useQuizBuilderView({
     showIntroScreen: toBool(props.showIntroScreen),
     allowMultipleAttempts: toBool(props.allowMultipleAttempts),
   });
+
+  const builderQuestions = useQuizBuilderQuestions(levelId);
 
   return {
     resourcePanelProps: {
@@ -40,6 +44,11 @@ export default function useQuizBuilderView({
         },
       ],
     },
-    workspaceContent: <div>Quiz builder workspace placeholder</div>,
+    workspaceContent: (
+      <QuizBuilderWorkspace
+        quizTitle={quizConfig.displayName || levelProperties.name}
+        {...builderQuestions}
+      />
+    ),
   };
 }

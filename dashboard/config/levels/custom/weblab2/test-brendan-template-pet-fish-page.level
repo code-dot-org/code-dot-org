@@ -1,0 +1,30 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-09-15T06:59:10.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "e5b08fa9-aa9e-4eed-bc78-4fecbb887003": {
+          "id": "e5b08fa9-aa9e-4eed-bc78-4fecbb887003",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html><html><head></head><body></body></html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "e5b08fa9-aa9e-4eed-bc78-4fecbb887003"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 06:59:10 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

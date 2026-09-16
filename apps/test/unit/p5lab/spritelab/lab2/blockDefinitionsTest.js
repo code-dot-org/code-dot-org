@@ -5,6 +5,11 @@ import {parse} from 'acorn';
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/blockly/imagePickerFields', () => ({
   FIELD_COSTUME_TYPE: 'field_spritelab2_costume',
   FIELD_BLOCK_IMAGE_TYPE: 'field_spritelab2_block_image',
+  costumeFieldArg: (name, {oldestSprite = false} = {}) => ({
+    type: 'field_spritelab2_costume',
+    name,
+    ...(oldestSprite && {oldestSprite: true}),
+  }),
 }));
 
 import labBlockDefinitions from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions';
