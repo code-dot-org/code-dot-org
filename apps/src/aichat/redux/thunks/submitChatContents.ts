@@ -31,7 +31,10 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
 import shouldUseAiGateway from '../../api/shouldUseAiGateway';
-import {parseJsonObject} from '../../helpers/applySchemaDisplayTransform';
+import {
+  applySchemaDisplayTransform,
+  parseJsonObject,
+} from '../../helpers/applySchemaDisplayTransform';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -66,6 +69,7 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
       lessonId?: number;
       onSchemaResponse?: (response: unknown) => void;
+      formatSchemaResponseForDisplay?: (response: unknown) => string;
     },
     thunkAPI
   ) => {
@@ -82,7 +86,18 @@ export const submitChatContents = createAsyncThunk(
       userAddedSelectionContext,
       lessonId,
       onSchemaResponse,
+      formatSchemaResponseForDisplay,
     } = newUserMessageInput;
+
+    // The model gets what the reader was shown, so a prior turn's code payload
+    // does not re-enter the context it was already merged into or rejected from.
+    const modelHistory = () =>
+      buildMessagesForModelHistory(
+        applySchemaDisplayTransform(
+          chatEventsCurrent,
+          formatSchemaResponseForDisplay
+        )
+      );
 
     // Clear any staged files if present (used with multimodal models)
     dispatch(clearStagedFiles());
@@ -185,9 +200,7 @@ export const submitChatContents = createAsyncThunk(
 
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          buildMessagesForModelHistory(chatEventsCurrent).filter(
-            event => event.status === Status.OK
-          ),
+          modelHistory().filter(event => event.status === Status.OK),
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -197,7 +210,7 @@ export const submitChatContents = createAsyncThunk(
       } else {
         messages = await postAichatCompletionMessage(
           newUserMessage,
-          buildMessagesForModelHistory(chatEventsCurrent),
+          modelHistory(),
           {...modelParameters},
           aichatContext
         );
