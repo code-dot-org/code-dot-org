@@ -132,14 +132,21 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
   kind: AnimationKind = 'costume';
   private valueLoaded = false;
 
+  // A saved value names an image; one the project no longer has (or a
+  // toolbox's placeholder) fails validation and leaves the constructor's
+  // choice, which is no choice at all, so the level default still applies.
   loadState(state: unknown) {
-    this.valueLoaded = true;
     super.loadState(state);
+    const saved =
+      typeof state === 'string' && /<field/.test(state)
+        ? BlocklyCore.utils.xml.textToDom(state).textContent
+        : state;
+    this.valueLoaded = this.getValue() === saved;
   }
 
   fromXml(element: Element) {
-    this.valueLoaded = true;
     super.fromXml(element);
+    this.valueLoaded = this.getValue() === element.textContent;
   }
 
   init() {
