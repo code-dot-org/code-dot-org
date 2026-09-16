@@ -6,6 +6,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import Adlib, {AdlibChoices} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
@@ -21,6 +22,11 @@ import {
   CharacterSetProgress,
   generateCharacterSet,
 } from '../ai/images/characterSet';
+import {
+  ImageAdlibSet,
+  imageAdlibFor,
+  imageAdlibId,
+} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   generateImage,
@@ -94,7 +100,23 @@ export interface NewImageDraft {
   style: ImageStyle;
 }
 
-interface GenerateImageViewProps {
+/** Level and session choices the image dialog forwards to the generate
+    view unchanged. */
+export interface ImageFormOptions {
+  /** Level-imposed type for new images; the Type choice is locked to it. */
+  lockedImageType?: ImageType;
+  /** Offer this tier of adlib prompt combos (student form only). */
+  adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: hide the free-text box. */
+  adlibOnly?: boolean;
+  /** Style the form starts on for new images (default smooth). */
+  defaultStyle?: ImageStyle;
+  /** A generation request is leaving; fires before the model call, so the
+      caller can stamp what the eventual result belongs to. */
+  onGenerateStart?: () => void;
+}
+
+interface GenerateImageViewProps extends ImageFormOptions {
   /** Set for an existing image; absent when generating a brand-new one. */
   existing?: {
     generation?: ImageGenerationMetadata;
@@ -122,15 +144,10 @@ interface GenerateImageViewProps {
   };
   /** Open the paint editor on a blank canvas instead of generating. */
   onPaintManually?: (draft: NewImageDraft) => void;
-  /** Level-imposed type for new images; the Type choice is locked to it. */
-  lockedImageType?: ImageType;
   /** Show the full internal form. The default student form has no name
       field (new images name themselves), no Start from, no temperature,
       and Paint manually moves from the footer into the blank image area. */
   advanced?: boolean;
-  /** A generation request is leaving; fires before the model call, so the
-      caller can stamp what the eventual result belongs to. */
-  onGenerateStart?: () => void;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -139,6 +156,8 @@ interface GenerateImageViewProps {
   /** Leave without generating: back to the summary, or out of the dialog
       for a brand-new image. */
   onCancel: () => void;
+  /** An image level, brand-new image: there is nowhere to cancel to. */
+  hideCancel?: boolean;
   /** Delete this image (existing images). */
   onDelete?: () => void;
 }
@@ -160,10 +179,14 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   create,
   lockedImageType,
   advanced,
+  adlibSet,
+  adlibOnly,
+  defaultStyle,
   onPaintManually,
   onGenerateStart,
   onAccept,
   onCancel,
+  hideCancel,
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
@@ -176,7 +199,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     'sprite';
   const [imageType, setImageType] = useState<ImageType>(initialImageType);
   const [style, setStyle] = useState<ImageStyle>(
-    existing?.generation?.style || create?.initial?.style || 'smooth'
+    existing?.generation?.style ||
+      create?.initial?.style ||
+      defaultStyle ||
+      'smooth'
   );
   // Advanced-only pixel resolution choice, held as a divisor of the type's
   // default grid so it keeps meaning across a Type switch. Seeded from the
@@ -204,6 +230,33 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   // Sets are drawn from a fresh base, so the offer follows the 'new' source.
   const canMakeSet = imageType === 'sprite' && source === 'new';
   const makingSet = canMakeSet && characterSet;
+
+  // Adlib prompt combos (student form): a sentence with word choices, an
+  // alternative to typing. Typed text wins while present.
+  const adlib =
+    adlibSet && !advanced ? imageAdlibFor(imageType, adlibSet) : undefined;
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>({});
+  const [adlibText, setAdlibText] = useState('');
+  const handleAdlibText = useCallback((text: string) => setAdlibText(text), []);
+  // A fresh combo (opening, or a Type switch swapping templates) rolls its
+  // own choices, so not every sentence starts the same.
+  useEffect(() => {
+    if (adlib) {
+      setAdlibChoices(
+        Object.fromEntries(
+          Object.entries(adlib.options).map(([slot, options]) => [
+            slot,
+            options[Math.floor(Math.random() * options.length)].id,
+          ])
+        )
+      );
+    }
+  }, [adlib]);
+  const freeTextEntered = !!prompt.trim();
+  // What Generate will send: typed text when present, else the combo's
+  // sentence.
+  const usingAdlib = !!adlib && !freeTextEntered;
+  const promptText = usingAdlib ? adlibText : prompt.trim();
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
   // The student form has no name field, so the name never holds it back.
@@ -240,8 +293,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
-        promptText: prompt.trim(),
+        promptText,
+        method: usingAdlib ? 'adlib' : 'freeText',
         imageType,
+        ...(usingAdlib && adlibSet
+          ? {adlibId: imageAdlibId(imageType, adlibSet)}
+          : {}),
       },
       true
     );
@@ -273,7 +330,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       }
       if (makingSet) {
         const result = await generateCharacterSet(
-          prompt.trim(),
+          promptText,
           {
             style,
             temperature: options.temperature,
@@ -288,7 +345,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         await onAccept(result, create ? newImageName() : undefined);
         return;
       }
-      const result = await generateImage(prompt.trim(), options);
+      const result = await generateImage(promptText, options);
       // Apply immediately; the caller flips back to the summary view.
       await onAccept(result, create ? newImageName() : undefined);
     } catch (e) {
@@ -312,7 +369,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       setProgress(null);
     }
   }, [
-    prompt,
+    promptText,
+    usingAdlib,
+    adlibSet,
     imageType,
     style,
     pixelScale,
@@ -416,24 +475,43 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </div>
           )}
 
-          <div className={moduleStyles.formRow}>
-            <label
-              className={classNames(
-                moduleStyles.promptLabel,
-                moduleStyles.wide
-              )}
+          {adlib && (
+            // Native disable dims the combo while typed text wins.
+            <fieldset
+              className={moduleStyles.adlibGroup}
+              disabled={generating || freeTextEntered}
             >
-              <span>Prompt</span>
-              <textarea
-                className={moduleStyles.promptInput}
-                value={prompt}
-                rows={5}
-                maxLength={MAX_PROMPT_LENGTH}
-                placeholder={PROMPT_PLACEHOLDERS[imageType]}
-                disabled={generating}
-                onChange={e => setPrompt(e.target.value)}
+              <Adlib
+                adlib={adlib}
+                adlibChoices={adlibChoices}
+                glowSpeed={freeTextEntered ? undefined : 'normal'}
+                onChoicesChange={setAdlibChoices}
+                onTextChange={handleAdlibText}
               />
-            </label>
+            </fieldset>
+          )}
+          <div className={moduleStyles.formRow}>
+            {/* Adlib-only levels have no free-text box; the combo above is
+                the whole prompt. */}
+            {!(adlibOnly && adlib) && (
+              <label
+                className={classNames(
+                  moduleStyles.promptLabel,
+                  moduleStyles.wide
+                )}
+              >
+                <span>{adlib ? 'Or prompt' : 'Prompt'}</span>
+                <textarea
+                  className={moduleStyles.promptInput}
+                  value={prompt}
+                  rows={5}
+                  maxLength={MAX_PROMPT_LENGTH}
+                  placeholder={PROMPT_PLACEHOLDERS[imageType]}
+                  disabled={generating}
+                  onChange={e => setPrompt(e.target.value)}
+                />
+              </label>
+            )}
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
                   level can lock the choice for new images too. */}
@@ -647,18 +725,20 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </button>
           </div>
         )}
-        <button
-          type="button"
-          className={moduleStyles.button}
-          disabled={generating}
-          onClick={onCancel}
-        >
-          Cancel
-        </button>
+        {!hideCancel && (
+          <button
+            type="button"
+            className={moduleStyles.button}
+            disabled={generating}
+            onClick={onCancel}
+          >
+            Cancel
+          </button>
+        )}
         <button
           type="button"
           className={moduleStyles.primaryButton}
-          disabled={generating || !prompt.trim() || !nameUsable}
+          disabled={generating || !promptText || !nameUsable}
           onClick={generate}
         >
           <FontAwesomeV6Icon iconName="sparkles" />

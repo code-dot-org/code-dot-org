@@ -21,47 +21,27 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Images",
-      "World",
-      "Code",
-      "Play"
-    ],
-    "locked_image_type": "sprite",
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "guide_steps": [
       {
-        "text": "**Make some treasure.** Describe a jewel for your player to find - try a color and a shape, like \"a shiny purple gem\"."
+        "text": "**Make your treasure worth finding.** Add **when [ ] touches [ ]**, picking your character and your treasure from the dropdowns, and put a **say** block inside it.  Then click **Play** and go and get it."
       },
       {
-        "text": "**Put it in your world.** Switch to the **World** tab, pick your jewel from the palette, and place it somewhere your player can reach.",
-        "after": {
-          "spriteImages": 1
-        }
-      },
-      {
-        "text": "**Now make it worth finding.** Head to the **Code** tab - your platformer is waiting there.",
-        "after": {
-          "worldSprites": 2
-        }
-      },
-      {
-        "text": "**When they touch it, say something!** Add **when [ ] touches [ ]**, picking your character and your jewel from the dropdowns, and put a **say** block inside it. Then press **Play** and go get the treasure.",
-        "after": {
-          "tab": "Code"
-        }
-      },
-      {
-        "text": "**Treasure hunt!** Go find your jewel, then continue when you're ready.",
+        "text": "**Your treasure says something when you reach it.** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Add some treasure\nMake a jewel, place it in your world, and have your character say something when they touch it.",
+    "long_instructions": "# Make your treasure worth finding\nAdd **when [ ] touches [ ]**, picking your character and your treasure, and put a **say** block inside it.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

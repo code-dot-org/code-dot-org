@@ -21,24 +21,23 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Images"
-    ],
-    "locked_image_type": "block",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "image",
+      "imageType": "block"
+    },
     "guide_steps": [
       {
-        "text": "**Make a platform block.** Platformers are built from blocks. Create a square tile the player can stand on - grass, brick, ice, anything."
+        "text": "**Make a platform block.** Platformers are built from blocks. Pick a material for a square tile the player can stand on and press **Generate**."
       },
       {
-        "text": "**Nice!** Make more block styles if you like, then continue when you're ready.",
+        "text": "**Nice!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "blockImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a platform block\nPlatformers are built from blocks. Create a square tile the player can stand on - grass, brick, ice, anything."
+    "long_instructions": "# Make a platform block\nPlatformers are built from blocks. Pick a material for a square tile the player can stand on and press **Generate**."
   }
 }]]></config>
 </GamelabJr>

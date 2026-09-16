@@ -269,7 +269,10 @@ export async function generateImage(
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  let fullPrompt = `${prompt}. ${styleClause(style, pixelBlock)}`;
+  // Read the prompt as a sentence before the clauses, without doubling the
+  // punctuation a prompt may already end with.
+  const sentence = /[.!?]$/.test(prompt) ? prompt : `${prompt}.`;
+  let fullPrompt = `${sentence} ${styleClause(style, pixelBlock)}`;
   if (imageType === 'sprite') {
     fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
   } else if (imageType === 'block') {
