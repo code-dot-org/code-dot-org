@@ -8,6 +8,12 @@
     - if @level.is_a? Weblab2
       The view mode toggle is also hidden.
 
+  - if @level.is_a? Weblab2
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_preview_header, description: "Hide Preview Header"}
+    %p
+      If checked, the bar above the preview (page name, navigation, refresh, desktop/mobile toggle, full screen) is hidden.
+      Meant for widget view, where the preview is the whole level; it applies to any view mode.
+
   - if @level.is_a? Pythonlab
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_view_allow_show_code, description: "Enable Show/Hide Code in Widget View"}
     %p

@@ -12,6 +12,7 @@ export type Widget2 = {
 
 export interface Weblab2LevelProperties extends LevelProperties {
   widgetView?: boolean;
+  hidePreviewHeader?: boolean;
   initialViewMode?: ViewMode;
   aiTutorMode?: string;
   levelSystemPrompt?: string;

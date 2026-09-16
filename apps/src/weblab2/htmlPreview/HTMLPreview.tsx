@@ -524,7 +524,7 @@ export const HTMLPreview: React.FC = () => {
           isFullScreenView && moduleStyles.fullScreenPreviewContainer
         )}
       >
-        {!widget2 && (
+        {!levelProperties.hidePreviewHeader && (
           <HTMLPreviewHeader
             value={inputValue}
             onChange={setInputValue}
