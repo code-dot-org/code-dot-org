@@ -144,7 +144,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # preset_view
 
   test 'preset_view returns a display projection for a valid preset' do
-    # In the test environment, presets resolve to the ui test unit and
+    # In the test environment, presets resolve to the UI test unit and
     # unit group (see Policies::DemoSections.curriculum_names). The unit's
     # display name comes from static i18n keyed by its name.
     unit = create(:unit, name: Policies::DemoSections::UI_TEST_UNIT_NAME)

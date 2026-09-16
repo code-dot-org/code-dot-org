@@ -8,8 +8,8 @@ class Policies::DemoSections
   # Use `DEMO_TYPES` for the active demo types that can be created.
   VALID_DEMO_TYPES = (DEMO_TYPES + [ARCHIVED_DEMO_TYPE]).freeze
 
-  # The ui test environments seed only the ui test curriculum tree, so the
-  # preset they fall back to has to name a unit that lives in it.
+  # The UI test environments seed only the UI test curriculum tree, so the
+  # preset they fall back to has to name UI test course and unit.
   UI_TEST_UNIT_NAME = 'ui-test-all-the-levels'
   UI_TEST_UNIT_GROUP_NAME = 'ui-test-original-all-the-levels'
 
