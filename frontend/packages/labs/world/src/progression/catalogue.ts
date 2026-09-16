@@ -2554,6 +2554,8 @@ export const TILES: readonly Tile[] = [
       // …and the first actor that takes something other than a press. It
       // brings the Label it acts like, and the two rules it reads.
       {kind: 'actor', id: 'textInput'},
+      // …and the one that takes a number: a bar the pointer drags.
+      {kind: 'actor', id: 'slider'},
     ],
     offers: [
       {kind: 'block', type: 'world_this_actor'},

@@ -21,6 +21,7 @@ import {PLAYER_ANIMATION, playerActor} from './player';
 import {PORTRAIT_SPRITE, portraitActor} from './portrait';
 import {progressBarActor} from './progressBar';
 import {shotActor} from './shot';
+import {sliderActor} from './slider';
 import {speechBoxActor} from './speechBox';
 import {textInputActor} from './textInput';
 import {toggleActor} from './toggle';
@@ -150,6 +151,18 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     // The Button it acts like, and the Label whose box it reads through it.
     actors: ['button', 'label'],
     contents: toggleActor,
+  },
+  {
+    id: 'slider',
+    name: 'Slider',
+    description:
+      'A bar the player drags. Press it and the knob follows the pointer; the arrow keys nudge it once the keyboard is on it. Read its fraction, or hear “changed” when it moves.',
+    // Mouse for the press it follows, Tab Navigation for the focus its ring
+    // reads, and Input for the arrows; its fraction and colours are the
+    // Progress Bar's, which it acts like.
+    requires: ['Mouse', 'Tab Navigation', 'Input'],
+    actors: ['progressBar'],
+    contents: sliderActor,
   },
   {
     id: 'textInput',

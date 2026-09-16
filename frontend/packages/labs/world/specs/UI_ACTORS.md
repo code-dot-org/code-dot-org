@@ -170,7 +170,7 @@ a rule pulls its dependencies.
 | Dropdown     | a list of words, one of them chosen               | PROPOSED — a list property, a menu to draw  |
 | Panel        | a background behind a group                       | BUILT — a Label with no words, and children |
 | Toggle       | a Button that is on or off                        | BUILT — `on`, `turned on`, `turned off`     |
-| Slider       | a Progress Bar the pointer drags                  | PROPOSED                                    |
+| Slider       | a Progress Bar the pointer drags                  | BUILT — `fraction`, `changed`, arrow keys   |
 
 Six of the eleven are built, and the three that arrived after this document was
 first written are the ones that changed what the rest should be. The two new
@@ -1055,15 +1055,14 @@ where they bite.
    with `on`, all read off the actor by the drawing. It is not the Switches
    rule's `Is a Switch`, which is a thing in a LEVEL that a player stands on;
    this is a control on the screen. The Interface Kit's dialog carries one.
-3. **Slider.** Acts like a Progress Bar and elects `Can Be Clicked`: while
-   `mouse button ⟨left⟩ is down` and the press began on it, `fraction` is the
-   pointer's x across its width. There is no drag event and none is needed —
-   the two blocks that exist make it one row each frame — and a `changed`
-   event as the Text Input has lets a volume screen hear it. Volume and
-   difficulty. A Slider is the first control whose value is a number rather
-   than words or a truth, which is the one thing a Progress Bar could not yet
-   be asked for.
-
+3. **Slider — BUILT** (`actors/stock/slider`). It acts like a Progress Bar
+   and elects `Can Be Clicked`: a press marks it held and jumps the fraction
+   to the press, and a step follows the pointer each frame while `mouse
+button ⟨left⟩ is down`, letting go when it comes up. There is no drag
+   event and none was needed. `changed` is its own event, raised when the
+   fraction moves; the arrow keys nudge it once it holds the focus. It has
+   its own `width` and `height`, since a bar eight pixels tall is a poor
+   thing to catch. The Interface Kit's dialog carries one.
 4. **A score readout, as a recipe rather than an actor.** With world state
    built, a score on the screen is a Label and one handler that writes the
    count into `text`. That is an enhancement row (specs/ENHANCEMENTS.md) or a

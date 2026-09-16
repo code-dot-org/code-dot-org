@@ -93,6 +93,8 @@ describe('every stock actor', () => {
       healthBar: ['subject'],
       // Whether the switch is on: the Toggle's, and what its two events say.
       toggle: ['on'],
+      // A slider is as big as it says, and remembers a press it is following.
+      slider: ['width', 'height', 'held'],
       // …and what a bar IS: how far along it is, and the two colors it is
       // drawn in. These were `Progress`, a rule with three properties and no
       // behavior; the bars that are not this one act like it and get them
