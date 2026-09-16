@@ -26,7 +26,7 @@ Large updates (i.e., anything over 500 lines of code) should be broken down into
 - Describe the human intent of the change: what prompted it and how we arrived at the current solution. Don't infer intent from the implementation.
 - Describe what is changing conceptually and why the approach is appropriate. Omit unnecessary technical detail, especially around how the change works.
 - Include enough context to bring an unfamiliar reviewer up to speed.
-- Follow the PR template and be concise.
+- Follow pull_request_template.md and be concise.
 
 ## Writing style
 - Use plain English and existing terminology.
