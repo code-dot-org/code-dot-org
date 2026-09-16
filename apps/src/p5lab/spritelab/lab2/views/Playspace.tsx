@@ -356,10 +356,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           screen readers, so anything to be read must sit beside it. */}
       {mode === 'play' && hasPlatformer && (
         <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
-          Left and right arrows move. Space or the up arrow jumps. The game
-          answers in sound: footsteps while you walk, and a tone that follows
-          your height — a jump slides it up and back, and where it ends tells
-          you how far you fell.
+          Left and right arrows move. Space or up arrow jumps. In zero gravity,
+          up and down steer. Toggle sounds in settings. A tone marks your height
+          in the frame. Obstacle sounds warn of collisions and edges.
         </p>
       )}
     </div>
