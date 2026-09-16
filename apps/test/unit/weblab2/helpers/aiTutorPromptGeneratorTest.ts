@@ -1,11 +1,18 @@
 import askContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/ask.md';
-import {generateAiTutorPrompt} from '@cdo/apps/weblab2/helpers/aiTutorPromptGenerator';
+import {
+  generateAiTutorBuilderPrompt,
+  generateAiTutorPrompt,
+} from '@cdo/apps/weblab2/helpers/aiTutorPromptGenerator';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
 import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
+import buildJavaScriptContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJavaScript.md';
 import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
 import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
 import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
+import builderBuildJavaScriptContract from '@cdo/apps/weblab2/prompts/builder/answerTypeContracts/buildJavaScript.md';
+import builderPrompt from '@cdo/apps/weblab2/prompts/builder/builderPrompt.md';
+import builderPreReplyCheck from '@cdo/apps/weblab2/prompts/builder/preReplyCheck.md';
 import environmentPrompt from '@cdo/apps/weblab2/prompts/environment.md';
 import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
 import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
@@ -195,5 +202,47 @@ describe('generateAiTutorPrompt', () => {
       // Default answer types list does not include buildJavaScript.
       expect(result).toContain(preReplyCheckNoJs.trim());
     });
+  });
+});
+
+describe('generateAiTutorBuilderPrompt', () => {
+  const prompt = generateAiTutorBuilderPrompt('mywidget1');
+
+  it('keeps the environment and security sections', () => {
+    expect(prompt.startsWith(environmentPrompt.trim())).toBe(true);
+    expect(prompt).toContain(securityIntro.trim());
+    expect(prompt).toContain(AllowedHostnameSuffixes.join(', '));
+  });
+
+  it('replaces the Socratic base prompt with the builder prompt', () => {
+    expect(prompt).toContain(builderPrompt.trim());
+    expect(prompt).not.toContain(basePrompt.trim());
+  });
+
+  it('names the widget being edited', () => {
+    expect(prompt).toContain('You are editing the shared widget `mywidget1`.');
+  });
+
+  it('omits the widget section when no widget id is given', () => {
+    expect(generateAiTutorBuilderPrompt()).not.toContain('## Current widget');
+  });
+
+  it('uses builder contracts in place of tutor contracts', () => {
+    expect(prompt).toContain(builderBuildJavaScriptContract.trim());
+    expect(prompt).not.toContain(buildJavaScriptContract.trim());
+  });
+
+  it('offers no tutoring-only modes or JavaScript refusals', () => {
+    expect(prompt).not.toContain('### Tutoring Modes');
+    expect(prompt).not.toContain('refusalJavaScriptSnippets');
+    expect(prompt).not.toContain('### hint');
+    expect(prompt).not.toContain('### pseudocode');
+    expect(prompt).toContain('### Build Modes (produce code now)');
+    expect(prompt).toContain('### Discussion Modes');
+    expect(prompt).toContain('### refusal');
+  });
+
+  it('ends with the builder pre-reply check', () => {
+    expect(prompt.endsWith(builderPreReplyCheck.trim())).toBe(true);
   });
 });

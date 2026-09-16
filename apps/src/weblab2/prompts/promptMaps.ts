@@ -21,6 +21,7 @@ import hintContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/hint.md'
 import pseudocodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/pseudocode.md';
 import refusalJavaScriptSnippetsContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/refusalJavaScriptSnippets.md';
 import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
+// Builder (authoring mode) overrides
 import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
 import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
 import buildJavaScriptTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildJavaScript.md';
@@ -28,6 +29,15 @@ import documentationTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/d
 import explainCodeTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/explainCode.md';
 import hintTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/hint.md';
 import refusalJavaScriptSnippetsTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/refusalJavaScriptSnippets.md';
+import builderAskContract from '@cdo/apps/weblab2/prompts/builder/answerTypeContracts/ask.md';
+import builderBuildCSSContract from '@cdo/apps/weblab2/prompts/builder/answerTypeContracts/buildCSS.md';
+import builderBuildHTMLContract from '@cdo/apps/weblab2/prompts/builder/answerTypeContracts/buildHTML.md';
+import builderBuildJavaScriptContract from '@cdo/apps/weblab2/prompts/builder/answerTypeContracts/buildJavaScript.md';
+import builderBuildJSONContract from '@cdo/apps/weblab2/prompts/builder/answerTypeContracts/buildJSON.md';
+import builderDebugContract from '@cdo/apps/weblab2/prompts/builder/answerTypeContracts/debug.md';
+import builderRefusalContract from '@cdo/apps/weblab2/prompts/builder/answerTypeContracts/refusal.md';
+import builderAskTrigger from '@cdo/apps/weblab2/prompts/builder/answerTypeTriggers/ask.md';
+import builderDebugTrigger from '@cdo/apps/weblab2/prompts/builder/answerTypeTriggers/debug.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
 
 export const ANSWER_TYPE_TRIGGERS: Record<AiTutorAnswerType, string> = {
@@ -62,4 +72,26 @@ export const ANSWER_TYPE_CONTRACTS: Record<AiTutorAnswerType, string> = {
   refusal: refusalContract,
   refusalJavaScriptSnippets: refusalJavaScriptSnippetsContract,
   testCase: testCaseContract,
+};
+
+// Authoring mode (a levelbuilder editing shared widget sources) swaps the
+// Socratic contracts for build-what-they-ask ones. Answer types not listed
+// here fall back to the maps above.
+export const BUILDER_ANSWER_TYPE_TRIGGERS: Partial<
+  Record<AiTutorAnswerType, string>
+> = {
+  ask: builderAskTrigger,
+  debug: builderDebugTrigger,
+};
+
+export const BUILDER_ANSWER_TYPE_CONTRACTS: Partial<
+  Record<AiTutorAnswerType, string>
+> = {
+  ask: builderAskContract,
+  buildCSS: builderBuildCSSContract,
+  buildHTML: builderBuildHTMLContract,
+  buildJavaScript: builderBuildJavaScriptContract,
+  buildJSON: builderBuildJSONContract,
+  debug: builderDebugContract,
+  refusal: builderRefusalContract,
 };

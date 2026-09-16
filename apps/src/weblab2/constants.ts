@@ -127,5 +127,20 @@ export const TUTOR_MODE_TO_ANSWER_TYPE: Record<
   ],
 };
 
+// Answer types offered in authoring mode (levelbuilder editing widget2
+// sources). No hint/example/pseudocode: the tutor builds instead of teaching.
+export const BUILDER_ANSWER_TYPES: AiTutorAnswerType[] = [
+  'buildHTML',
+  'buildCSS',
+  'buildJavaScript',
+  'buildJSON',
+  'debug',
+  'explainCode',
+  'ask',
+];
+
+export const WEBLAB2_BUILDER_WELCOME_CHAT_MESSAGE =
+  "You're editing a widget, so I'm in build mode.  Tell me what you want and I'll write the HTML, CSS or JavaScript for it.";
+
 export const WEBLAB2_WELCOME_CHAT_MESSAGE =
   "Hi, I'm your AI Tutor! I can help you brainstorm, debug, and work through this level.";
