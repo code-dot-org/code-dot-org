@@ -29,7 +29,7 @@ module OpenaiEvaluateHelper
     aiReasoning: "Dummy data returned for testing purposes."
   }
 
-  def self.evaluate(level, student_work:, evaluation_type:, should_evaluate_skills: false)
+  def self.evaluate(level, student_work:, evaluation_type:)
     if (level.is_a?(FreeResponse) && student_work.delete(' ').empty?) || (level.upper_grades_programming_level? && level.get_starter_code == student_work)
       response = NO_ATTEMPT_RESPONSE
       # mimic the format of the response from AI
@@ -49,7 +49,7 @@ module OpenaiEvaluateHelper
       system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, evaluation_type)
       student_work_message = [{role: "user", content: student_work}]
       messages = prepend_system_prompt(system_prompt, student_work_message)
-      response = should_evaluate_skills ? client.request_skill_evaluations(messages) : client.request_evaluation(messages)
+      response = client.request_evaluation(messages)
       response_body = JSON.parse(response.body)
       response_body = response_body['choices'][0]['message'] if response.code == 200
       evaluation =  {status: response.code, json: response_body}
@@ -87,30 +87,7 @@ module OpenaiEvaluateHelper
       ai_model_version: SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
     }
 
-    work_evaluation = StudentWorkEvaluation.create!(student_work_evaluation_params)
-
-    skill_evaluations = parsed_evaluation['skillEvaluations']
-    skill_evaluations&.each do |skill_evaluation|
-      skill_evaluation_params = {
-        type: 'UserLevelSkillEvaluation',
-        student_id: user_level.user.id,
-        code_version: options[:code_version] || nil,
-        level_id: user_level.level.id,
-        unit_id: unit.id,
-        evaluator: 'AI',
-        evaluation_criteria: skill_evaluation['evaluationCriteria'],
-        evaluation: skill_evaluation['aiEvaluation'],
-        reasoning: skill_evaluation['aiReasoning'],
-        skill_id: skill_evaluation['skillId'],
-      }
-
-      created_skill_evaluation = StudentWorkEvaluation.create!(skill_evaluation_params)
-
-      summary_params = {student_work_evaluation_id: created_skill_evaluation.id,
-        student_work_evaluation_summary_id: work_evaluation.id}
-
-      StudentWorkEvaluationSummary.create!(summary_params)
-    end
+    StudentWorkEvaluation.create!(student_work_evaluation_params)
   end
 
   def self.client
