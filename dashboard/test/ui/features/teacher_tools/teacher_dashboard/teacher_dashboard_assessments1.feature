@@ -7,7 +7,7 @@ Feature: Using the assessments tab in the teacher dashboard
     # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
-    And I assign my section in row 1 to course "allthethingscourse" unit 1
+    And I assign my section in row 1 to course "ui-test-student-labs" unit 1
     And I reload the page
     And I click selector "a:contains(View progress)" once I see it
 

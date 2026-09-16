@@ -1,0 +1,23 @@
+{
+  "name": "ui-test-student-labs",
+  "script_names": [
+    "ui-test-student-labs"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-student-labs",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

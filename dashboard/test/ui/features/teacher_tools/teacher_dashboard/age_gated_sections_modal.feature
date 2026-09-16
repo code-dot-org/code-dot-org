@@ -5,7 +5,7 @@ Feature: Age Gated Sections Modal and Banner
     Given CPA all user lockout phase
 
     Given I create a teacher-associated under-13 student named "Sally"
-    Given I am assigned to course "allthethingscourse" unit 1
+    Given I am assigned to course "ui-test-student-labs" unit 1
 
     When I sign in as "Teacher_Sally" and go home
     And I wait until element "#ui-test-section-list" is visible
@@ -17,7 +17,7 @@ Feature: Age Gated Sections Modal and Banner
     Given CPA all user lockout phase
 
     Given I create an authorized teacher-associated under-13 student in Colorado named "Sally" after CAP start
-    Given I am assigned to course "allthethingscourse" unit 1
+    Given I am assigned to course "ui-test-student-labs" unit 1
 
     When I sign in as "Teacher_Sally" and go home
     And I wait until element "#ui-test-section-list" is visible

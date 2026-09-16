@@ -17,7 +17,7 @@ Scenario: Check that TTS player is displayed
 
 @chrome
 Scenario: Listen to TTS Audio in CSF
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/3?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/6/levels/3?noautoplay=true"
   And I wait for the lab page to fully load
 
   # note: we expect no audio for the instructions, because this test

@@ -3,7 +3,7 @@ Feature: Checking the footer appearance
   @eyes
   Scenario: Desktop puzzle using light small footer
     When I open my eyes to test "Desktop puzzle using light small footer"
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/2/levels/1?noautoplay=true"
     And I wait for the lab page to fully load
 
     Then I see no difference for "small footer"
@@ -19,7 +19,7 @@ Feature: Checking the footer appearance
   @eyes
   Scenario: Desktop Minecraft puzzle using dark small footer
     When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/1?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/25/levels/1?noautoplay=true"
     And I wait for the lab page to fully load
 
     Then I see no difference for "small footer"
@@ -33,7 +33,7 @@ Feature: Checking the footer appearance
   @eyes
   Scenario: Desktop Star Wars share small footer
     When I open my eyes to test "Desktop Star Wars share small footer"
-    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/24/levels/9?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/24/levels/9?noautoplay=true"
     And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element "#finishButton" is visible

@@ -17,12 +17,12 @@ export interface LabLevelUrlParams {
 
 /**
  * Build a relative URL for a lab level. Most ported scenarios target
- * allthethingscourse unit 1 and vary only lesson/level.
+ * ui-test-student-labs unit 1 and vary only lesson/level.
  *
  * Usage: labLevelUrl({lesson: 6, level: 2})
  */
 export function labLevelUrl({
-  course = 'allthethingscourse',
+  course = 'ui-test-student-labs',
   unit = 1,
   lesson,
   level,
@@ -58,7 +58,7 @@ export interface UnitOverviewUrlParams {
 
 /** Build a relative URL for a unit overview page. */
 export function unitOverviewUrl({
-  course = 'allthethingscourse',
+  course = 'ui-test-student-labs',
   unit = 1,
 }: UnitOverviewUrlParams = {}): string {
   return `/courses/${course}/units/${unit}`;
@@ -72,7 +72,7 @@ export interface LessonOverviewUrlParams {
 
 /** Build a relative URL for a lesson overview (lesson plan) page. */
 export function lessonOverviewUrl({
-  course = 'allthethingscourse',
+  course = 'ui-test-student-labs',
   unit = 1,
   lesson,
 }: LessonOverviewUrlParams): string {

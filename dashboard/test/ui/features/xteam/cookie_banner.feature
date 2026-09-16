@@ -20,4 +20,4 @@ Scenario Outline: Show cookie banner, dismiss it and confirm it's dismissed
 
 Examples:
   | url                                                               | test_name                  |
-  | http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/1    | studio.code.org puzzle     |
+  | http://studio.code.org/courses/ui-test-student-labs/units/1/lessons/3/levels/1    | studio.code.org puzzle     |
