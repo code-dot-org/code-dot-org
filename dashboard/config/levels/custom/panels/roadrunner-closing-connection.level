@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-15T21:31:40.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "roadrunner-closing-connection-5d3985af-d7a4-4902-b6d2-14ba280bf655",
+        "text": "We've learned a lot about how AI generates text and how to guide it with clear prompts. But what does it all mean for us?",
+        "imageUrl": "https://images.code.org/77fc0136ef81cced3476e9e2bf7ea1c8-roadrunner-closing-connection-panel-1-08411f46-1555-40d4-ace3-4d754e80f7fe.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "roadrunner-closing-connection-ea18eaa9-3338-4b80-9538-08c87c95b95f",
+        "text": "Think of AI as a powerful tool. Just like a hammer or a paintbrush, its value depends entirely on how we choose to use it, and for what purpose.",
+        "imageUrl": "https://images.code.org/aaca0a9f179cd4a9da65f0a0b0afb9fa-roadrunner-closing-connection-panel-2-d8742163-bb23-4f72-a6ed-fc262f6635ed.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "roadrunner-closing-connection-8b951e88-a9b2-46b0-a8bd-0b0784384be1",
+        "text": "AI can suggest ideas or draft text, but *you* are always the expert who decides what's truly effective and appropriate. Your human judgment is crucial!",
+        "imageUrl": "https://images.code.org/3cc008ef060684607132ce17a0597697-roadrunner-closing-connection-panel-3-1809e64b-2358-408e-b5cc-185e51121e06.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "roadrunner-closing-connection-2c8f41dc-0983-41ee-8653-8cd727f5d5b5",
+        "text": "It's like having a co-pilot. The AI can help navigate, suggest routes, and handle some tasks, but you're always in command, setting the direction and making the final decisions.",
+        "imageUrl": "https://images.code.org/6e2032004b70a3d787c799c7017e4179-roadrunner-closing-connection-panel-4-fc95cc3a-ec57-47d4-9ea9-dfde04f447ee.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "roadrunner-closing-connection-d1074109-9be5-40c2-8ef9-157f81c3cec8",
+        "text": "When used thoughtfully, AI isn't just a tool; it's a creative partner that can amplify your abilities to write, create, and communicate even more powerfully!",
+        "imageUrl": "https://images.code.org/5b70dfe241313a43fd27b7f0c2db11ac-roadrunner-closing-connection-panel-5-f53b2b67-f3ab-4437-b6c2-33cc177d0296.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Reinforce the idea that AI is a powerful tool whose value depends heavily on context, purpose, and human judgment, emphasizing the Co-Pilot metaphor."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:32:35 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:32:36 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>
