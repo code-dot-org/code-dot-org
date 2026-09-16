@@ -108,6 +108,7 @@ describe('UnifiedBackpackPanel', () => {
   });
 
   afterEach(() => {
+    jest.useRealTimers();
     restoreRedux();
   });
 
@@ -183,6 +184,25 @@ describe('UnifiedBackpackPanel', () => {
 
     await screen.findByText('tree.png (added)');
     // The copy in the other backpack is untouched, so it keeps its add button.
+    expect(screen.getByText('tree.png')).toBeInTheDocument();
+  });
+
+  it('restarts the Added window when the same file is saved again', async () => {
+    jest.useFakeTimers();
+    mockBackpackApi.getFileLists.mockResolvedValue({universal: ['tree.png']});
+    renderPanel();
+    await act(async () => {});
+
+    const listener = mockBackpackApi.addEventListener.mock.calls.at(-1)?.[0];
+    act(() => listener(BackpackEvent.FileAdded, 'tree.png', 'universal'));
+    act(() => jest.advanceTimersByTime(3000));
+    act(() => listener(BackpackEvent.FileAdded, 'tree.png', 'universal'));
+
+    // Past the first save's window, inside the second's.
+    act(() => jest.advanceTimersByTime(2000));
+    expect(screen.getByText('tree.png (added)')).toBeInTheDocument();
+
+    act(() => jest.advanceTimersByTime(2000));
     expect(screen.getByText('tree.png')).toBeInTheDocument();
   });
 

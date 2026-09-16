@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useToast} from '@code-dot-org/component-library/toast';
 import {Button as MuiButton, Typography} from '@mui/material';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
@@ -118,15 +118,35 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
   }, [currentUserId, backpackRefreshKey, loadFiles]);
 
+  const recentlyAddedTimers = useRef(
+    new Map<string, ReturnType<typeof setTimeout>>()
+  );
+
   const markRecentlyAdded = useCallback((fileKey: string) => {
     setRecentlyAddedKeys(prevKeys => new Set(prevKeys).add(fileKey));
-    setTimeout(() => {
-      setRecentlyAddedKeys(prevKeys => {
-        const nextKeys = new Set(prevKeys);
-        nextKeys.delete(fileKey);
-        return nextKeys;
-      });
-    }, SHOW_RECENTLY_ADDED_DURATION_MS);
+    // Saving the same file again restarts its window. Leaving the first timer in
+    // place would clear the flag partway through the second one.
+    const pendingTimer = recentlyAddedTimers.current.get(fileKey);
+    if (pendingTimer) {
+      clearTimeout(pendingTimer);
+    }
+    recentlyAddedTimers.current.set(
+      fileKey,
+      setTimeout(() => {
+        recentlyAddedTimers.current.delete(fileKey);
+        setRecentlyAddedKeys(prevKeys => {
+          const nextKeys = new Set(prevKeys);
+          nextKeys.delete(fileKey);
+          return nextKeys;
+        });
+      }, SHOW_RECENTLY_ADDED_DURATION_MS)
+    );
+  }, []);
+
+  useEffect(() => {
+    // Clean up any remaining timers on unmount.
+    const timers = recentlyAddedTimers.current;
+    return () => timers.forEach(timer => clearTimeout(timer));
   }, []);
 
   useEffect(() => {
