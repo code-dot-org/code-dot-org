@@ -16,18 +16,19 @@ import {
 
 // Newest-first, as Sprite Lab keeps it: 'hero' was made first, 'rival'
 // second, 'brick' (a block) last.
-const mockStore = {
-  getState: () => ({
-    animationList: {
-      orderedKeys: ['brick', 'rival', 'hero'],
-      propsByKey: {
-        brick: {name: 'brick', categories: ['blocks']},
-        rival: {name: 'rival', categories: []},
-        hero: {name: 'hero', categories: []},
-      },
-    },
-  }),
+const fullList = {
+  orderedKeys: ['brick', 'rival', 'hero'],
+  propsByKey: {
+    brick: {name: 'brick', categories: ['blocks']},
+    rival: {name: 'rival', categories: []},
+    hero: {name: 'hero', categories: []},
+  },
 };
+let animationList: {
+  orderedKeys: string[];
+  propsByKey: Record<string, {name: string; categories: string[]}>;
+} = fullList;
+const mockStore = {getState: () => ({animationList})};
 
 describe('image picker fields', () => {
   it('lists costumes newest-first', () => {
@@ -72,5 +73,37 @@ describe('image picker fields', () => {
     };
     refreshAnimationDropdownThumbnails();
     spies.forEach(spy => expect(spy).toHaveBeenCalledTimes(1));
+  });
+
+  describe('followList', () => {
+    afterEach(() => {
+      animationList = fullList;
+    });
+
+    it('keeps a value the list still has', () => {
+      const field = CostumeField.fromJson({});
+      field.setValue('"hero"');
+      field.followList();
+      expect(field.getValue()).toBe('"hero"');
+    });
+
+    it('moves off a value the list lost', () => {
+      const field = CostumeField.fromJson({});
+      field.setValue('"hero"');
+      animationList = {
+        orderedKeys: ['rival'],
+        propsByKey: {rival: {name: 'rival', categories: []}},
+      };
+      field.followList();
+      expect(field.getValue()).toBe('"rival"');
+    });
+
+    it('lands on the placeholder when every image is gone', () => {
+      const field = CostumeField.fromJson({});
+      field.setValue('"hero"');
+      animationList = {orderedKeys: [], propsByKey: {}};
+      field.followList();
+      expect(field.getValue()).toBe('null');
+    });
   });
 });

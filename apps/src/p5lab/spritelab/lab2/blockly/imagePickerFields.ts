@@ -151,8 +151,29 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
 
   init() {
     super.init();
+    if (!this.valueLoaded) {
+      this.applyLevelDefault();
+    }
+  }
+
+  /** After the image list changed: a value the list lost gives way to the
+      level default, else the first option; a kept value refreshes its
+      thumbnail. */
+  followList() {
+    const options = this.getOptions(false);
+    if (options.some(([, value]) => value === this.getValue())) {
+      this.refreshSelectedOption();
+      return;
+    }
+    this.valueLoaded = false;
+    this.setValue(options[0][1]);
+    this.applyLevelDefault();
+    this.forceRerender();
+  }
+
+  private applyLevelDefault() {
     const block = this.getSourceBlock();
-    if (this.valueLoaded || !block) {
+    if (!block) {
       return;
     }
     const state = getStore().getState();
@@ -219,10 +240,12 @@ export class BlockImageField extends Lab2AnimationDropdown {
 }
 
 /**
- * Refresh every costume dropdown's thumbnail, so blocks rendered before an
- * image was trimmed pick up the trim. The flyout's blocks too: a flyout-only
- * toolbox builds them at injection, before any image has loaded, so a
- * character set's field otherwise keeps showing the whole sheet.
+ * Refresh every image dropdown against the current list: thumbnails, so
+ * blocks rendered before an image was trimmed pick up the trim, and values,
+ * so a block whose image Start Over deleted stops showing it. The flyout's
+ * blocks too: a flyout-only toolbox builds them at injection, before any
+ * image has loaded, so a character set's field otherwise keeps showing the
+ * whole sheet.
  */
 export function refreshAnimationDropdownThumbnails(): void {
   const workspace: BlocklyCore.WorkspaceSvg | undefined =
@@ -239,7 +262,9 @@ export function refreshAnimationDropdownThumbnails(): void {
     ws?.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
       block.inputList.forEach(input => {
         input.fieldRow.forEach(field => {
-          if (field instanceof CdoFieldAnimationDropdown) {
+          if (field instanceof Lab2AnimationDropdown) {
+            field.followList();
+          } else if (field instanceof CdoFieldAnimationDropdown) {
             field.refreshSelectedOption();
           }
         });
