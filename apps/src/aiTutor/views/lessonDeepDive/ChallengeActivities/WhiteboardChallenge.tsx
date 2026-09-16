@@ -359,6 +359,7 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
               recordedUrl={recordedUrl}
               setRecordedUrl={setRecordedUrl}
               disabled={submitted}
+              timeLimitSeconds={60}
             />
           </div>
         )}

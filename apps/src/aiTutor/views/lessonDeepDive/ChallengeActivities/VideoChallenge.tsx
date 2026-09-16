@@ -192,6 +192,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         setRecordedUrl={setRecordedUrl}
         recordedAudioUrl={recordedAudioUrl}
         setRecordedAudioUrl={setRecordedAudioUrl}
+        timeLimitSeconds={60}
       />
     </div>
   );
