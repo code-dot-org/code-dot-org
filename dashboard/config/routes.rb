@@ -470,7 +470,7 @@ Dashboard::Application.routes.draw do
         post 'remove_skill'
       end
 
-      resource :quiz_configuration, only: [:update], controller: 'quizzes'
+      resource :quiz_configuration, only: [:show, :update], controller: 'quizzes'
       resources :quiz_question_placements, only: [:create, :destroy] do
         member do
           post 'attach'
@@ -832,6 +832,7 @@ Dashboard::Application.routes.draw do
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        post :mass_progress_reset
         get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
@@ -1124,9 +1125,17 @@ Dashboard::Application.routes.draw do
         File.basename(file).to_s.gsub(/\..*$/, '')
       end).uniq
 
+    # Mutating actions kept out of the GET wildcard below: a GET would skip
+    # CSRF verification.
+    api_post_only_methods = [:import_classlink_classroom]
+    api_methods -= api_post_only_methods
+
     namespace :dashboardapi, module: :api do
       api_methods.each do |action|
         get action, action: action
+      end
+      api_post_only_methods.each do |action|
+        post action, action: action
       end
     end
     get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'

@@ -106,4 +106,28 @@ describe('UnitSelector', () => {
     );
     expect(screen.queryByRole('combobox')).toBeNull();
   });
+
+  it('keeps a visible label on screen while loading', () => {
+    render(
+      <UnconnectedUnitSelectorV2
+        {...DEFAULT_PROPS}
+        isLoadingCourses={true}
+        isLabelVisible
+        labelText="Select a course or unit"
+      />
+    );
+    expect(screen.queryByRole('combobox')).toBeNull();
+    screen.getByText('Select a course or unit');
+  });
+
+  it('renders no label while loading when the label is hidden', () => {
+    render(
+      <UnconnectedUnitSelectorV2
+        {...DEFAULT_PROPS}
+        isLoadingCourses={true}
+        labelText="Select a course or unit"
+      />
+    );
+    expect(screen.queryByText('Select a course or unit')).toBeNull();
+  });
 });

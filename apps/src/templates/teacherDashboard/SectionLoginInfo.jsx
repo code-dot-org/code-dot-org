@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
 import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
@@ -88,9 +89,11 @@ class SectionLoginInfo extends React.Component {
               'cannot join a demo section.'}
           </p>
         )}
-        {[SectionLoginType.google_classroom, SectionLoginType.clever].includes(
-          section.loginType
-        ) && (
+        {[
+          SectionLoginType.google_classroom,
+          SectionLoginType.clever,
+          SectionLoginType.classlink,
+        ].includes(section.loginType) && (
           <OAuthLogins sectionId={section.id} loginType={section.loginType} />
         )}
         {section.loginType === SectionLoginType.lti_v1 && (
@@ -147,12 +150,15 @@ class OAuthLogins extends React.Component {
     loginType: PropTypes.oneOf([
       SectionLoginType.google_classroom,
       SectionLoginType.clever,
+      SectionLoginType.classlink,
     ]).isRequired,
   };
 
   render() {
     const {sectionId, loginType} = this.props;
     let loginTypeLabel = '';
+    // ClassLink has no sync screenshot yet (capture one from a local
+    // ClassLink section's Manage Students tab); the image is optional.
     let syncSectionImgSrc = '';
     if (loginType === SectionLoginType.google_classroom) {
       loginTypeLabel = i18n.loginTypeGoogleClassroom();
@@ -160,13 +166,15 @@ class OAuthLogins extends React.Component {
     } else if (loginType === SectionLoginType.clever) {
       loginTypeLabel = i18n.loginTypeClever();
       syncSectionImgSrc = syncClever;
+    } else if (loginType === SectionLoginType.classlink) {
+      loginTypeLabel = LmsLoginTypeNames.classlink;
     }
 
     return (
       <div>
         <SignInInstructions loginType={loginType} />
         <br />
-        <h2 style={styles.heading}>{i18n.syncingYourStudents()}</h2>
+        <h2 className={styles.heading}>{i18n.syncingYourStudents()}</h2>
         <div>
           <SafeMarkdown
             markdown={i18n.syncingYourStudentsDescription({
@@ -175,11 +183,13 @@ class OAuthLogins extends React.Component {
             })}
           />
           <br />
-          <img
-            src={syncSectionImgSrc}
-            style={{maxWidth: '50%'}}
-            alt={i18n.syncingYourStudents()}
-          />
+          {syncSectionImgSrc && (
+            <img
+              src={syncSectionImgSrc}
+              style={{maxWidth: '50%'}}
+              alt={i18n.syncingYourStudents()}
+            />
+          )}
         </div>
       </div>
     );
