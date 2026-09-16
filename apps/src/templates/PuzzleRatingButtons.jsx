@@ -82,7 +82,7 @@ class PuzzleRatingButtons extends Component {
           id="like"
           key="like"
           data-value="1"
-          aria-label="Heart"
+          aria-label="Like"
           onClick={this.like}
         >
           <svg
@@ -109,7 +109,7 @@ class PuzzleRatingButtons extends Component {
           id="dislike"
           key="dislike"
           data-value="0"
-          aria-label="Frowny face"
+          aria-label="Dislike"
           onClick={this.dislike}
         >
           <svg
