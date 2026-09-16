@@ -17,7 +17,7 @@
 - if @target_user
   %p#progress-reset-success.alert.alert-success{style: 'display:none'}
   %h2 User information
-  %table.table.table-hover.table-condensed
+  %table#user-info-table.table.table-hover.table-condensed
     %thead
       %th Id
       %th Email
@@ -98,7 +98,7 @@
       %p
         Data represents rows from the user_scripts table (sorted by updated_at, up to 100 shown).
         Check units to include in the reset.
-      %table.table.table-hover.table-condensed
+      %table#user-scripts-table.table.table-hover.table-condensed
         %thead
           %th= check_box_tag 'select_all_units', '1', false, id: 'select-all-units', title: 'Select all units'
           %th Id
