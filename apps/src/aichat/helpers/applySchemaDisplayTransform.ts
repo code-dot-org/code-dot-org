@@ -4,19 +4,12 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 import {ChatEvent, isChatMessage} from '../types';
 
 /**
- * Renders a schema lab's stored assistant messages for display. Stored
- * messages hold the model's response as the model produced it; the lab's
- * formatForDisplay turns that into the text a reader sees.
+ * A row holds either the raw JSON the model returned or prose, with nothing to
+ * mark which: messages saved before the display transform moved to render time
+ * had formatForDisplay applied first. Hence the parse attempt.
  *
- * Two representations are in play, and nothing in the message distinguishes
- * them: the raw JSON the model returned, and prose. So the choice is made by
- * attempting a parse -- objects and arrays get formatted, anything else is
- * rendered unchanged.
- *
- * The prose case exists because these messages once had formatForDisplay
- * applied before they were saved. bin/cron/delete_old_ai_chat_data drops
- * aichat_events rows after 90 days, so the prose branch can go 90 days after
- * this ships.
+ * bin/cron/delete_old_ai_chat_data drops aichat_events rows after 90 days, so
+ * the prose case can go 90 days after this ships.
  */
 export function applySchemaDisplayTransform(
   events: ChatEvent[],
