@@ -2500,6 +2500,16 @@ export const TILES: readonly Tile[] = [
       {kind: 'actor', id: 'toggle'},
       // …and one answer out of several.
       {kind: 'actor', id: 'dropdown'},
+      // …and the pause a menu of answers is usually for: the world stops
+      // moving and keeps listening, so the menu works while the game waits.
+      {kind: 'block', type: 'world_pause_game'},
+      {kind: 'block', type: 'world_resume_game'},
+      {kind: 'block', type: 'world_game_is_paused'},
+      // …and the menu itself, which the stock Pause Menu map places
+      // (`maps/stock`): a panel that says what was pressed, and its buttons.
+      {kind: 'actor', id: 'pauseMenu'},
+      {kind: 'actor', id: 'resumeButton'},
+      {kind: 'actor', id: 'quitButton'},
     ],
     offers: [
       {kind: 'block', type: 'controls_if'},

@@ -32,6 +32,7 @@ import {
 } from './Layer';
 import {asList, isListType} from './lists';
 import {parentingKeys} from './parenting';
+import {phaseIndex} from './phases';
 import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
 import {SpatialIndex} from './spatialIndex';
@@ -56,6 +57,17 @@ import {
   VIEWPORT_WIDTH,
   fitToTile,
 } from './viewport';
+
+/**
+ * The steps a paused world still runs: the `sense` phase, where held keys
+ * and buttons become events, and nothing else (`World.pause`). A step with
+ * no phase — the Animation rule's frame advance is one — is work, and waits
+ * with the rest; the only thing a paused world does is notice.
+ */
+const SENSE = phaseIndex('sense') ?? 0;
+const whilePaused = (step: Step): boolean =>
+  step.order.kind === 'phase' &&
+  (phaseIndex(step.order.phase) ?? Infinity) <= SENSE;
 
 /**
  * The part of an `ActorBuilder` that placing one needs.
@@ -810,6 +822,8 @@ export class World {
   private readonly leaving = new Set<Actor>();
   /** Whether a tick is running, which is what makes removal deferred. */
   private inTick = false;
+  /** Whether the game is paused — see {@link pause}. */
+  private paused = false;
 
   /**
    * Whether the world is inside a frame right now.
@@ -1220,6 +1234,34 @@ export class World {
    */
   childrenOf(actor: Actor): Actor[] {
     return this.actorList.filter(candidate => candidate.parent() === actor);
+  }
+
+  /**
+   * Stop the game moving, and keep it listening.
+   *
+   * A paused world still ticks: the clock runs, the driver draws, and the
+   * `sense` phase runs — key and mouse edges become events, so a pause menu's
+   * buttons still hear a click and Tab still walks the focus — and every
+   * event handler runs, since handlers are how a menu answers. What stops is
+   * every step after `sense`: nothing decides, moves, collides, settles or
+   * animates until {@link resume}. That is what "paused" means to a player,
+   * and it needs no rule to know it is paused (specs/UI_ACTORS.md).
+   *
+   * The interface actors that DO something each frame — a slider following
+   * the pointer, a field sliding its caret — are steps too, and stop with
+   * the rest; a pause menu is buttons, and buttons are events.
+   */
+  pause(): void {
+    this.paused = true;
+  }
+
+  /** The other end of {@link pause}. */
+  resume(): void {
+    this.paused = false;
+  }
+
+  isPaused(): boolean {
+    return this.paused;
   }
 
   /** Whether an actor with `id` is already in this world. */
@@ -2003,7 +2045,7 @@ export class World {
     // value is the time the positions they compute belong to (see `time`).
     this.elapsed += delta;
     try {
-      this.scheduler.run(this, delta);
+      this.scheduler.run(this, delta, this.paused ? whilePaused : undefined);
       // Handlers run here, and a handler is where "remove that coin" comes
       // from — so the sweep below is after them, not before.
       this.events.flush(this);

@@ -26,9 +26,16 @@ export class Scheduler {
     return this.ordered;
   }
 
-  /** Run every step in order, once, for this tick. */
-  run(world: World, delta: number): void {
+  /**
+   * Run every step in order, once, for this tick — or only the ones `only`
+   * admits, which is how a paused world keeps sensing while nothing moves
+   * (`World.pause`).
+   */
+  run(world: World, delta: number, only?: (step: Step) => boolean): void {
     for (const step of this.ordered) {
+      if (only && !only(step)) {
+        continue;
+      }
       // Say that a step is beginning, which is what the spatial index is kept
       // against: a step is the unit of "somebody may have moved things", so
       // asking after one is asking about a different world (`World.actorsNear`).

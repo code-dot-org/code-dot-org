@@ -125,6 +125,7 @@ import {eventActorToolboxExtension} from './extensions/eventActorToolbox';
 import {glyphIcon} from './extensions/glyphIcon';
 import {installIfPlusMinus} from './extensions/ifPlusMinus';
 import {lessonButtonExtension} from './extensions/lessonButton';
+import {mapImportFieldExtension} from './extensions/mapImportField';
 import {missingRuleExtension} from './extensions/missingRule';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
@@ -6078,6 +6079,61 @@ const worldClearWorld = defineBlock({
   },
 });
 
+// ── Pausing (specs/UI_ACTORS.md, "The second axis") ──────────────────────────
+//
+// A paused world keeps sensing and keeps answering events, and nothing in it
+// moves: every step after `sense` waits for `resume` (`World.pause`). That is
+// what lets a pause menu be ordinary actors — its buttons hear a click while
+// the game behind them stands still — and what lets a project say "pause" in
+// one block rather than guarding every rule it uses.
+
+const worldPauseGame = defineBlock({
+  type: 'world_pause_game',
+  message0: 'pause the game',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'behavior_blocks',
+  tooltip:
+    'Stop everything moving. Keys and clicks still arrive and handlers still ' +
+    'run, so a menu works while the game waits; nothing moves, falls, ' +
+    'collides or animates until “resume the game”.',
+  generator: {
+    javascript() {
+      return 'world.pause();\n';
+    },
+  },
+});
+
+const worldResumeGame = defineBlock({
+  type: 'world_resume_game',
+  message0: 'resume the game',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'behavior_blocks',
+  tooltip: 'Let everything move again after “pause the game”.',
+  generator: {
+    javascript() {
+      return 'world.resume();\n';
+    },
+  },
+});
+
+const worldGameIsPaused = defineBlock({
+  type: 'world_game_is_paused',
+  message0: 'the game is paused',
+  output: 'Boolean',
+  extensions: [worldContextExtension],
+  style: 'logic_blocks',
+  tooltip: 'Whether “pause the game” has been said and not yet undone.',
+  generator: {
+    javascript() {
+      return ['world.isPaused()', Order.FUNCTION_CALL] as [string, number];
+    },
+  },
+});
+
 const worldCreateInMap = defineBlock({
   type: 'world_create_in_map',
   message0: 'create %1 in map %2',
@@ -6150,6 +6206,7 @@ const worldLoadMap = defineBlock({
   // (`clear world`, then this).
   extensions: [
     mapOptionsExtension,
+    mapImportFieldExtension,
     worldContextExtension,
     openSourceButtonExtension,
   ],
@@ -9766,6 +9823,9 @@ export const DOMAIN_BLOCKS = [
   worldAddActor,
   worldRemoveActor,
   worldClearWorld,
+  worldPauseGame,
+  worldResumeGame,
+  worldGameIsPaused,
   worldCreateInMap,
   worldLoadMap,
   worldWorld,
@@ -10082,6 +10142,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
       'world_clear_world',
+      'world_pause_game',
+      'world_resume_game',
+      'world_game_is_paused',
       // Here as well as in Actor, because this is the category a world file is
       // built from and `any ⟨Coin⟩` is what its blocks take as a subject. It is
       // also how "remove every coin" is written: `remove actor` over a value

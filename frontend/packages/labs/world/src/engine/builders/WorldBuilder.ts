@@ -410,6 +410,25 @@ export class WorldBuilder {
   }
 
   /**
+   * Pause, resume, and ask — the world's own (`World.pause`), reachable from
+   * the builder because a block may say them under `define world` as well as
+   * in a handler: a world that opens on its title screen starts paused.
+   */
+  pause(): this {
+    this.getWorld().pause();
+    return this;
+  }
+
+  resume(): this {
+    this.getWorld().resume();
+    return this;
+  }
+
+  isPaused(): boolean {
+    return this.getWorld().isPaused();
+  }
+
+  /**
    * Play a track. See {@link World.setMusic}.
    *
    * Deferred and COLLAPSED, like `set`: music has one value and the last write
