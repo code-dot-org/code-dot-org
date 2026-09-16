@@ -1,6 +1,14 @@
 // Trim transparent borders off sprite images at load time, so content reaches
-// the edges of the bounding box (AI-generated images carry generous margins).
-// Saved project data is untouched.
+// the edges of the bounding box (AI-generated images carry generous margins),
+// and upscale pixel art stored at its logical size, so the engine, which
+// draws with smoothing on, gets the sizes crisp-stored assets have. Saved
+// project data is untouched.
+
+import {
+  NATIVE_PIXEL_GRID,
+  crispScaleFor,
+  upscaleImageNearest,
+} from '@cdo/apps/pixelEditor/pixelArt';
 
 import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
 
@@ -197,6 +205,65 @@ function trimTransparentBorder(source: string): Promise<string> {
   });
 }
 
+type AnimationProps = RuntimeAnimationList['propsByKey'][string];
+
+// Native pixel art's display upscale, cached by source (a native image is a
+// few KB, so the keys stay cheap).
+const displayUpscaleCache = new Map<string, Promise<string>>();
+const DISPLAY_UPSCALE_CACHE_LIMIT = 60;
+
+/** The props with every recorded dimension multiplied by factor. Pure. */
+export function scaleAnimationGeometry(
+  props: AnimationProps,
+  factor: number
+): AnimationProps {
+  const scale = (size: {x: number; y: number}) => ({
+    x: size.x * factor,
+    y: size.y * factor,
+  });
+  return {
+    ...props,
+    ...(props.frameSize && {frameSize: scale(props.frameSize)}),
+    ...(props.sourceSize && {sourceSize: scale(props.sourceSize)}),
+  };
+}
+
+/**
+ * Pixel art stored at its logical size (pixelGridSize 1), upscaled to the
+ * size a crisp-stored asset has, geometry included. Anything else passes
+ * through.
+ */
+async function upscaledForDisplay(
+  props: AnimationProps
+): Promise<AnimationProps> {
+  const source = props.dataURI;
+  if (props.pixelGridSize !== NATIVE_PIXEL_GRID || !source) {
+    return props;
+  }
+  const size = props.frameSize ?? props.sourceSize;
+  if (!size) {
+    return props;
+  }
+  const factor = crispScaleFor(size.x, size.y);
+  if (factor <= 1) {
+    return props;
+  }
+  let cached = displayUpscaleCache.get(source);
+  if (!cached) {
+    cached = upscaleImageNearest(source, factor);
+    while (displayUpscaleCache.size >= DISPLAY_UPSCALE_CACHE_LIMIT) {
+      displayUpscaleCache.delete(
+        displayUpscaleCache.keys().next().value as string
+      );
+    }
+    displayUpscaleCache.set(source, cached);
+  }
+  const dataURI = await cached;
+  return dataURI === source
+    ? props
+    : {...scaleAnimationGeometry(props, factor), dataURI};
+}
+
 /** The animation list restricted to images whose data has arrived. */
 export function loadedAnimations(
   list: RuntimeAnimationList
@@ -322,10 +389,11 @@ export async function trimAnimationListImages(
   };
   await Promise.all(
     (list.orderedKeys || []).map(async key => {
-      const props = list.propsByKey[key];
-      if (!props) {
+      const stored = list.propsByKey[key];
+      if (!stored) {
         return;
       }
+      const props = await upscaledForDisplay(stored);
       const pixelated = !!props.pixelGridSize;
       const isBackground = (props.categories || []).includes(
         BACKGROUNDS_CATEGORY

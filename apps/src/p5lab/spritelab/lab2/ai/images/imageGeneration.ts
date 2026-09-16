@@ -3,7 +3,7 @@ import {type GeneratedFile} from 'ai';
 import {generateText} from '@cdo/apps/aiGateway';
 import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {
-  crispScaleFor,
+  NATIVE_PIXEL_GRID,
   normalizePixelArtBlob,
 } from '@cdo/apps/pixelEditor/pixelArt';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -78,11 +78,11 @@ const BLOCK_PROMPT_CLAUSE =
 /**
  * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
  * ~10-20px block (the model can't emit small canvases). Normalize: detect the
- * block grid, downsample to true logical resolution, and re-upscale
- * nearest-neighbor — uniform, edge-aligned blocks that the pixel editor can
- * edit at art-pixel granularity. Left unchanged (no grid size) when no grid
- * is detected. The returned pixelGridSize (physical pixels per art pixel) is
- * recorded on the animation so the editor never has to re-detect.
+ * block grid and downsample to true logical resolution, which is how the
+ * image is stored; the load-time pass (imageTrim.ts) upscales it for the
+ * engine. Left unchanged (no grid size) when no grid is detected. The
+ * pixelGridSize of 1 recorded on the animation marks it pixel art at its
+ * logical size.
  */
 async function normalizeIfPixelArt(
   blob: Blob,
@@ -103,13 +103,7 @@ async function normalizeIfPixelArt(
     ) {
       return {blob};
     }
-    return {
-      blob: normalized.blob,
-      pixelGridSize: crispScaleFor(
-        normalized.logicalWidth,
-        normalized.logicalHeight
-      ),
-    };
+    return {blob: normalized.blob, pixelGridSize: NATIVE_PIXEL_GRID};
   } catch {
     return {blob};
   }

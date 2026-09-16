@@ -13,7 +13,7 @@ import React, {
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
-import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
+import {NATIVE_PIXEL_GRID, downsampleToGrid} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
 import {PixelTool, TOOLS, toolTitle} from './toolDefinitions';
 import {
@@ -448,15 +448,16 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       const ctx = backing.getContext('2d', {willReadFrequently: true});
       ctx?.drawImage(source, 0, 0);
       // Trust the metadata only when it divides the image cleanly (a resize
-      // elsewhere would otherwise smear the downsample).
+      // elsewhere would otherwise smear the downsample). A grid of 1 is
+      // pixel art already at its logical size: nothing to downsample.
       const grid =
         knownPixelGrid &&
-        knownPixelGrid > 1 &&
         width % knownPixelGrid === 0 &&
         height % knownPixelGrid === 0
           ? knownPixelGrid
           : null;
-      const raster = grid ? ctx?.getImageData(0, 0, width, height) : null;
+      const raster =
+        grid && grid > 1 ? ctx?.getImageData(0, 0, width, height) : null;
       if (raster && grid) {
         const logical = downsampleToGrid(raster, {
           sizeX: grid,
@@ -479,12 +480,9 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0,
             0
           );
-        setPixelMode(true);
-        pixelModeRef.current = true;
-      } else {
-        setPixelMode(false);
-        pixelModeRef.current = false;
       }
+      setPixelMode(!!grid);
+      pixelModeRef.current = !!grid;
       backingRef.current = backing;
       const preview = document.createElement('canvas');
       preview.width = backing.width;
@@ -1250,33 +1248,14 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       }
       onSave(source.toDataURL('image/png'), meta);
     };
-    if (pixelMode) {
-      // Store crisp: nearest-neighbor upscale of the logical pixels, so the
-      // runtime renders sharply without engine smoothing changes.
-      const ctx = backing.getContext('2d');
-      if (ctx) {
-        const logical = ctx.getImageData(0, 0, backing.width, backing.height);
-        const crispScale = crispScaleFor(backing.width, backing.height);
-        const crisp = upscaleNearest(logical, crispScale);
-        const out = document.createElement('canvas');
-        out.width = crisp.width;
-        out.height = crisp.height;
-        out
-          .getContext('2d')
-          ?.putImageData(
-            new ImageData(
-              new Uint8ClampedArray(crisp.data),
-              crisp.width,
-              crisp.height
-            ),
-            0,
-            0
-          );
-        finish(out, {pixelGridSize: crispScale, recentColors});
-        return;
-      }
-    }
-    finish(backing, {recentColors});
+    // Pixel art is stored at its logical size, one physical px per art
+    // pixel; the grid of 1 is what marks it pixel art.
+    finish(
+      backing,
+      pixelMode
+        ? {pixelGridSize: NATIVE_PIXEL_GRID, recentColors}
+        : {recentColors}
+    );
   }, [onSave, pixelMode, recentColors, opaqueGround]);
 
   // historyVersion re-renders this component whenever the stacks change; the

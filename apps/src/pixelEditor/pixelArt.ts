@@ -2,7 +2,7 @@
  * Pixel-art grid utilities: detect the logical pixel grid of an image that
  * DEPICTS pixel art at a higher resolution (e.g. AI output where one art
  * pixel is an ~11px block), downsample to true logical resolution, and
- * upscale nearest-neighbor for crisp storage/display.
+ * upscale nearest-neighbor for crisp display.
  *
  * Detection and resampling are pure raster functions (unit-testable); the
  * blob helpers at the bottom are canvas-based conveniences for callers.
@@ -665,13 +665,17 @@ export function upscaleNearest(raster: Raster, factor: number): Raster {
   return {width: outW, height: outH, data: out};
 }
 
-// Storage upscale: aim for roughly CRISP_TARGET_PX on the long side (sharp
-// at playspace sizes without engine smoothing changes), capped at
-// MAX_CRISP_SCALE so assets stay reasonable.
+/** pixelGridSize of pixel art stored at its logical size: one physical px
+    per art pixel. Marks the image pixel art without recording a scale. */
+export const NATIVE_PIXEL_GRID = 1;
+
+// Display upscale: aim for roughly CRISP_TARGET_PX on the long side (sharp
+// at playspace sizes, where the engine draws with smoothing on), capped at
+// MAX_CRISP_SCALE.
 const CRISP_TARGET_PX = 640;
 const MAX_CRISP_SCALE = 8;
 
-/** The integer factor logical pixel art is upscaled by for storage. */
+/** The integer factor logical pixel art is upscaled by for display. */
 export function crispScaleFor(logicalW: number, logicalH: number): number {
   return Math.max(
     1,
@@ -752,11 +756,10 @@ export async function detectImageGridSize(
 
 /**
  * Normalize a blob the user declared to be pixel art: find its grid (best
- * attempt — the style choice is the classifier, so this never bails),
- * downsample to logical resolution, and re-upscale nearest-neighbor to a
- * crisp, uniform, edge-aligned image. squareGrid pins the offsets to the
- * frame, so a square input yields a square logical output (an offset grid
- * would add a partial edge cell).
+ * attempt — the style choice is the classifier, so this never bails) and
+ * downsample to logical resolution, one image pixel per art pixel.
+ * squareGrid pins the offsets to the frame, so a square input yields a
+ * square logical output (an offset grid would add a partial edge cell).
  */
 export async function normalizePixelArtBlob(
   blob: Blob,
@@ -778,12 +781,8 @@ export async function normalizePixelArtBlob(
     grid = {...grid, offsetX: 0, offsetY: 0};
   }
   const logical = downsampleToGrid(raster, grid);
-  const crisp = upscaleNearest(
-    logical,
-    crispScaleFor(logical.width, logical.height)
-  );
   const outBlob = await new Promise<Blob | null>(resolve =>
-    canvasFromRaster(crisp).toBlob(resolve, 'image/png')
+    canvasFromRaster(logical).toBlob(resolve, 'image/png')
   );
   return outBlob
     ? {
@@ -792,4 +791,40 @@ export async function normalizePixelArtBlob(
         logicalHeight: logical.height,
       }
     : null;
+}
+
+/**
+ * An image (dataURI or URL) upscaled nearest-neighbor by an integer factor,
+ * as a PNG dataURI. Resolves to the source itself when the factor is 1 or
+ * the image cannot be drawn.
+ */
+export function upscaleImageNearest(
+  source: string,
+  factor: number
+): Promise<string> {
+  if (factor <= 1) {
+    return Promise.resolve(source);
+  }
+  return new Promise<string>(resolve => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth * factor;
+        canvas.height = img.naturalHeight * factor;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          return resolve(source);
+        }
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL('image/png'));
+      } catch {
+        resolve(source);
+      }
+    };
+    img.onerror = () => resolve(source);
+    img.src = source;
+  });
 }
