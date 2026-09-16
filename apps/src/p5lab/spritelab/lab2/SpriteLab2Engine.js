@@ -162,10 +162,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onPlayerHeight = null;
     this.onPlayerProximity = null;
     this.onPlayerSound = null;
-    this.observedX_ = null;
-    this.observedY_ = null;
-    this.observedFacing_ = 'right';
-    this.playerEvents_ = initialPlayerEventState();
+    this.forgetPlayer_();
     // Jump lifecycle for the view's cover/fade: start fires with the block,
     // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
@@ -327,10 +324,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     // A fresh run is a fresh player, not a stride across the map.
-    this.observedX_ = null;
-    this.observedY_ = null;
-    this.observedFacing_ = 'right';
-    this.playerEvents_ = initialPlayerEventState();
+    this.forgetPlayer_();
     library.commands.setPlatformGravity = value => {
       this.platformGravity_ = Number(value) || 0;
     };
@@ -1023,6 +1017,14 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.observePlayer_(players, walls, view);
   }
 
+  // Facing resets too: a player who comes back has no history to face.
+  forgetPlayer_() {
+    this.observedX_ = null;
+    this.observedY_ = null;
+    this.observedFacing_ = 'right';
+    this.playerEvents_ = initialPlayerEventState();
+  }
+
   // First player only: the controls drive the whole group as one.
   observePlayer_(players, walls, view) {
     if (
@@ -1033,9 +1035,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     ) {
       // Forget them, or the gap reads as a stride when they come back.
       if (this.observedX_ !== null) {
-        this.observedX_ = null;
-        this.observedY_ = null;
-        this.playerEvents_ = initialPlayerEventState();
+        this.forgetPlayer_();
       }
       return;
     }

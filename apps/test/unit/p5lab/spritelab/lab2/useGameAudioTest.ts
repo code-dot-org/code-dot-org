@@ -37,7 +37,7 @@ describe('SpriteLab2 useGameAudio', () => {
   });
 
   it('starts sound effects on and obstacle sounds off', () => {
-    // Nothing stored yet: the case that once silenced the whole game.
+    // With nothing stored, the fallbacks decide.
     const {setting} = setup();
     expect(setting(EFFECTS).selectedValue).toBe('on');
     expect(setting(OBSTACLES).selectedValue).toBe('off');

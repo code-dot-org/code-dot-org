@@ -28,7 +28,7 @@ describe('SpriteLab2 playerEvents', () => {
     frames.map(f => playerEvents(state, f));
 
   it('is silent on the first frame of a run', () => {
-    // A spawn measured against zero used to read as a stride, and step.
+    // A spawn is a position, not a stride.
     expect(run(STILL)).toEqual([[]]);
   });
 
