@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, KeyboardEvent, useRef, useState} from 'react';
 
 import {DrawingTool} from './types';
 
@@ -26,6 +26,10 @@ const COLORS: {value: string; label: string}[] = [
   {value: '#ffffff', label: 'White'},
 ];
 
+// Static offsets into the flat button list produced by querySelectorAll.
+const COLOR_OFFSET = TOOLS.length;
+const DELETE_OFFSET = TOOLS.length + COLORS.length;
+
 interface ToolbarProps {
   tool: DrawingTool;
   color: string;
@@ -42,61 +46,104 @@ const Toolbar: FC<ToolbarProps> = ({
   onToolChange,
   onColorChange,
   onDeleteSelected,
-}) => (
-  <div role="toolbar" aria-label="Drawing tools" className={styles.toolbar}>
-    {TOOLS.map(t => (
-      <button
-        key={t.id}
-        type="button"
-        aria-label={t.label}
-        aria-pressed={tool === t.id}
-        onClick={() => onToolChange(t.id)}
-        className={`${styles.toolButton} ${
-          tool === t.id ? styles.toolButtonActive : ''
-        }`}
-        title={t.label}
-      >
-        <span aria-hidden="true">{t.symbol}</span>
-      </button>
-    ))}
+}) => {
+  const toolbarRef = useRef<HTMLDivElement>(null);
+  // Index of the button that currently "owns" tabIndex=0 (roving tabindex).
+  const [activeIdx, setActiveIdx] = useState(0);
 
-    <div role="separator" aria-hidden="true" className={styles.toolbarSep} />
+  const move = (delta: number, e: KeyboardEvent<HTMLDivElement>) => {
+    if (!toolbarRef.current) return;
+    const buttons = Array.from(
+      toolbarRef.current.querySelectorAll<HTMLButtonElement>('button')
+    );
+    if (!buttons.length) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const current = buttons.indexOf(
+      document.activeElement as HTMLButtonElement
+    );
+    const from = current === -1 ? activeIdx : current;
+    const next = (from + delta + buttons.length) % buttons.length;
+    setActiveIdx(next);
+    buttons[next].focus();
+  };
 
-    {COLORS.map(c => (
-      <button
-        key={c.value}
-        type="button"
-        aria-label={`${c.label}${color === c.value ? ' (selected)' : ''}`}
-        aria-pressed={color === c.value}
-        onClick={() => onColorChange(c.value)}
-        className={styles.colorSwatch}
-        style={{
-          backgroundColor: c.value,
-          boxShadow: color === c.value ? '0 0 0 3px #4A90E2' : undefined,
-        }}
-        title={c.label}
-      />
-    ))}
+  const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') move(1, e);
+    else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') move(-1, e);
+  };
 
-    {selectedId !== null && (
-      <>
-        <div
-          role="separator"
-          aria-hidden="true"
-          className={styles.toolbarSep}
-        />
+  const tab = (idx: number) => (idx === activeIdx ? 0 : -1);
+
+  return (
+    <div
+      role="toolbar"
+      aria-label="Drawing tools"
+      aria-orientation="vertical"
+      className={styles.toolbar}
+      ref={toolbarRef}
+      onKeyDown={handleKeyDown}
+    >
+      {TOOLS.map((t, i) => (
         <button
+          key={t.id}
           type="button"
-          aria-label="Delete selected object"
-          onClick={onDeleteSelected}
-          className={styles.toolButton}
-          title="Delete"
+          aria-label={t.label}
+          aria-pressed={tool === t.id}
+          tabIndex={tab(i)}
+          onFocus={() => setActiveIdx(i)}
+          onClick={() => onToolChange(t.id)}
+          className={`${styles.toolButton} ${
+            tool === t.id ? styles.toolButtonActive : ''
+          }`}
+          title={t.label}
         >
-          <span aria-hidden="true">✕</span>
+          <span aria-hidden="true">{t.symbol}</span>
         </button>
-      </>
-    )}
-  </div>
-);
+      ))}
+
+      <div role="separator" aria-hidden="true" className={styles.toolbarSep} />
+
+      {COLORS.map((c, i) => (
+        <button
+          key={c.value}
+          type="button"
+          aria-label={`${c.label}${color === c.value ? ' (selected)' : ''}`}
+          aria-pressed={color === c.value}
+          tabIndex={tab(COLOR_OFFSET + i)}
+          onFocus={() => setActiveIdx(COLOR_OFFSET + i)}
+          onClick={() => onColorChange(c.value)}
+          className={styles.colorSwatch}
+          style={{
+            backgroundColor: c.value,
+            boxShadow: color === c.value ? '0 0 0 3px #4A90E2' : undefined,
+          }}
+          title={c.label}
+        />
+      ))}
+
+      {selectedId !== null && (
+        <>
+          <div
+            role="separator"
+            aria-hidden="true"
+            className={styles.toolbarSep}
+          />
+          <button
+            type="button"
+            aria-label="Delete selected object"
+            tabIndex={tab(DELETE_OFFSET)}
+            onFocus={() => setActiveIdx(DELETE_OFFSET)}
+            onClick={onDeleteSelected}
+            className={styles.toolButton}
+            title="Delete"
+          >
+            <span aria-hidden="true">✕</span>
+          </button>
+        </>
+      )}
+    </div>
+  );
+};
 
 export default Toolbar;
