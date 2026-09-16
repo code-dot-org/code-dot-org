@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -22,22 +22,27 @@
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
-      "kind": "image",
+      "kind": "world",
       "imageType": "sprite"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
     },
     "guide_steps": [
       {
-        "text": "**Make a character.** Create the hero of your story. Pick the words that describe them and press **Generate**."
+        "text": "**Put your treasure in the world.** Pick it from the palette and place it somewhere your player can reach."
       },
       {
-        "text": "**There's your hero!** Continue when you're ready.",
+        "text": "**It's in your world.** Click **Play** to run around and find it, then continue when you're ready.",
         "showContinue": true,
         "after": {
-          "spriteImages": 1
+          "worldSprites": 2
         }
       }
     ],
-    "long_instructions": "# Make a character\nCreate the hero of your story. Pick the words that describe them and press **Generate**."
+    "long_instructions": "# Put your treasure in the world\nPick your treasure from the palette and place it somewhere your player can reach."
   }
 }]]></config>
 </GamelabJr>

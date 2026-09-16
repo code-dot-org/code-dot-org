@@ -89,16 +89,36 @@ function animationOptions(kind: AnimationKind): [string, string][] {
   return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
+/** Costume field option: a fresh field starts on the oldest sprite in the
+    project instead of the newest image. The player blocks set it: the hero
+    is the first sprite a student makes. */
+export const OLDEST_SPRITE_OPTION = 'oldestSprite';
+
+/** A block definition's costume field argument. */
+export function costumeFieldArg(name: string, {oldestSprite = false} = {}) {
+  const arg = {type: FIELD_COSTUME_TYPE, name};
+  return oldestSprite ? {...arg, [OLDEST_SPRITE_OPTION]: true} : arg;
+}
+
 function animationDropdown(
   kind: AnimationKind,
-  Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown
+  Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown,
+  oldestSprite = false
 ): CdoFieldAnimationDropdown {
-  return new Ctor(
+  const field = new Ctor(
     () => animationOptions(kind),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
     MAKE_IMAGE_BUTTONS
   );
+  // A fresh field takes the first option, the newest image. The list is
+  // newest-first, so the oldest sprite is the last option. A saved block's
+  // value replaces this.
+  if (oldestSprite) {
+    const options = field.getOptions(false);
+    field.setValue(options[options.length - 1][1]);
+  }
+  return field;
 }
 
 // The classic costumePicker/backgroundPicker input types, with lab2's empty
@@ -126,8 +146,12 @@ export function animationPicker(kind: AnimationKind) {
 // Registered field types (see setup.ts) so JSON block definitions get the
 // same dropdowns.
 export class CostumeField extends CdoFieldAnimationDropdown {
-  static fromJson(_options: BlocklyCore.FieldConfig) {
-    return animationDropdown('costume', CostumeField);
+  static fromJson(options: BlocklyCore.FieldConfig) {
+    return animationDropdown(
+      'costume',
+      CostumeField,
+      !!(options as Record<string, unknown>)[OLDEST_SPRITE_OPTION]
+    );
   }
 }
 
@@ -139,19 +163,29 @@ export class BlockImageField extends CdoFieldAnimationDropdown {
 
 /**
  * Refresh every costume dropdown's thumbnail, so blocks rendered before an
- * image was trimmed pick up the trim.
+ * image was trimmed pick up the trim. The flyout's blocks too: a flyout-only
+ * toolbox builds them at injection, before any image has loaded, so a
+ * character set's field otherwise keeps showing the whole sheet.
  */
 export function refreshAnimationDropdownThumbnails(): void {
-  const workspace = Blockly.getMainWorkspace?.();
+  const workspace: BlocklyCore.WorkspaceSvg | undefined =
+    Blockly.getMainWorkspace?.();
   if (!workspace) {
     return;
   }
-  workspace.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
-    block.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        if (field instanceof CdoFieldAnimationDropdown) {
-          field.refreshSelectedOption();
-        }
+  const flyouts = [workspace.getFlyout(), workspace.getToolbox()?.getFlyout()];
+  const workspaces = [
+    workspace,
+    ...flyouts.map(flyout => flyout?.getWorkspace()),
+  ];
+  workspaces.forEach(ws => {
+    ws?.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
+      block.inputList.forEach(input => {
+        input.fieldRow.forEach(field => {
+          if (field instanceof CdoFieldAnimationDropdown) {
+            field.refreshSelectedOption();
+          }
+        });
       });
     });
   });

@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -24,39 +24,30 @@
     "level_mode": {
       "kind": "code"
     },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "guide_steps": [
       {
-        "text": "**Link your scenes.** Use the new **go to scene** block to jump from one scene to another - for example, when your character is clicked. Press **Play** to try the jump."
+        "text": "**Add your background to the game.** Use the **set background** block and pick the one you just made. Then press **Play** to see your world dressed up."
       },
       {
-        "text": "**Your scenes are connected!** Try jumping between them, then continue when you're ready.",
+        "text": "**Now that's a game!** Take it for a spin, then continue when you're ready.",
         "showContinue": true,
         "after": {
           "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked.",
+    "long_instructions": "# Add your background to the game\nUse the **set background** block and pick the one you just made. Then press **Play** to see your world dressed up.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
-          "type": "gamelab_spriteClicked",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
-              }
-            }
-          }
-        },
-        {
-          "kind": "block",
-          "type": "spritelab2_goToScene",
-          "fields": {
-            "SCENE": "platform-scene"
-          }
+          "type": "gamelab_setBackgroundImageAs"
         }
       ]
     }

@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 64,
-  "created_at": "2026-08-10T00:00:00.000Z",
+  "created_at": "2026-09-12T00:00:00.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -27,17 +27,17 @@
     },
     "guide_steps": [
       {
-        "text": "**Make a character.** Create the hero of your story. Pick the words that describe them and press **Generate**."
+        "text": "**Make another character.** Every story needs a second character - a friend, a rival, a sidekick. Pick the words and press **Generate**."
       },
       {
-        "text": "**There's your hero!** Continue when you're ready.",
+        "text": "**What a pair!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "spriteImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a character\nCreate the hero of your story. Pick the words that describe them and press **Generate**."
+    "long_instructions": "# Make another character\nEvery story needs a second character - a friend, a rival, a sidekick. Pick the words and press **Generate**."
   }
 }]]></config>
 </GamelabJr>
