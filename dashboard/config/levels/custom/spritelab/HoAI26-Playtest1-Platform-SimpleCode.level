@@ -6,6 +6,14 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -20,13 +28,6 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "HoAI26-Playtest1-Platform-Template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "guide_mode": "instructions",
     "long_instructions": "# Code your player sprite\r\n\r\n1.  Use the blocks to set your sprite as the player.\r\n\r\n2. Make it speak with a say block.",
     "toolbox_definition": {
       "contents": [
