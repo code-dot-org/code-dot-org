@@ -29,6 +29,8 @@ module Services
         )
 
         anonymous_level_geo
+      rescue ActiveRecord::RecordNotUnique
+        anonymous_level_geo
       end
     end
   end
