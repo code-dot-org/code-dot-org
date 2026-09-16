@@ -739,10 +739,11 @@ Container, because the driver keeps one GameObject per actor and a button is a
 picture with a word on it. In a drawing routine it is `draw image` then `draw
 text`, one texture, and no Container anywhere.
 
-The same holds for a panel and its buttons once parenting exists
-(specs/PARENTING.md, PROPOSED): a child is an image of its own at the world
-transform the engine derives, on its parent's layer, drawn after it. The
-driver stays one image per actor.
+A panel and its buttons are the one case that does want a Container, and
+parenting gives it one (specs/PARENTING.md, PROPOSED): an actor with
+children becomes a Container holding its own image and its children, so the
+panel's opacity and effects apply to the group as a layer's do. Each actor
+is still one image of its own inside it.
 
 **Interface actors are ordinary actors, and that is already safe.** A Label in a
 world with gravity does not fall, because gravity is elected and a Label elects

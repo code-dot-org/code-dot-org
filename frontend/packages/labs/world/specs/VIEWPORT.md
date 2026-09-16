@@ -584,9 +584,10 @@ first reload that silently does nothing.
 
 A child actor is drawn on its parent's layer, whatever layer it was placed
 in, and within a layer a parent draws before its children (PROPOSED,
-specs/PARENTING.md). The driver keeps one Container per layer and one image
-per actor with the world transform the engine derives; a parent does not
-become a Container of its own, for the reasons given there.
+specs/PARENTING.md). A parent is to the driver what a layer is: a Container
+in its layer's Container, carrying the parent's opacity and effects for the
+group, with the parent's own image first and its children after, each at its
+local transform.
 
 Most actions do not really care about which layer certain actors are within.
 This is because you are likely only placing game actors in a game layer,

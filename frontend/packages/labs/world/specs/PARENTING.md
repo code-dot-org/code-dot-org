@@ -122,9 +122,17 @@ placed in. A panel fixed to the screen brings its buttons with it, and a bar
 parented to an enemy in the game layer is in the game layer. Set at `set
 parent`, so `inLayer` and the driver need no second answer.
 
-**Nothing else.** A child does not inherit its parent's rules, traits,
-visibility or opacity. Those are the actor's own, and a rule that wants a
-child to fade with its parent is a rule somebody can write.
+**Opacity and effects.** A parent's opacity fades its children with it,
+and an effect on a parent is applied to the group — a dialog that fades out
+takes its buttons with it, a panel with a ripple ripples as one surface.
+This is what a LAYER already does for everything in it, and a parent is the
+same idea one level down: opacity multiplies down the tree, and a child's own
+effects apply to the child alone, inside its parent's. To affect a panel's
+background and not its children, the background is a child of its own — a
+plain drawn actor under the panel — rather than a second knob on the panel.
+
+**Nothing else.** A child does not inherit its parent's rules, traits or
+visibility of the kind a rule decides. Those are the actor's own.
 
 ### Physics on a child
 
@@ -284,30 +292,43 @@ with shear left out — so that a transform the engine derives, one the map
 editor draws, and one Phaser would compute if it nested the objects all agree
 to the pixel. Nothing here is a second opinion about what a scene tree is.
 
-**But the driver does not nest.** Today it keeps one Container per LAYER, in
-stack order, and one Image per actor inside it, and it applies the world
-transform `renderSnapshot` hands it: position, scale, rotation, then a shear
-matrix about the drawn centre (`PhaserBinding`, `applySkew`). That stays.
-A parent does not become a Container holding its children, for three
-reasons, each of which is a decision made above:
+**And the driver nests, the way it already nests a layer.** Today it keeps
+one Container per LAYER, in stack order, and one Image per actor inside it,
+applying the world transform `renderSnapshot` hands it: position, scale,
+rotation, then a shear matrix about the drawn centre (`PhaserBinding`,
+`applySkew`). A layer's effects are reconciled onto its Container
+(`effectRegistry.reconcile`), which is what makes them apply to everything
+in the layer. A parent gets the same treatment one level down:
 
-- **The engine owns world transforms anyway.** Collisions, the camera, hit
-  tests and the map editor all need them, so the engine derives them
-  (`Actor.get`), and the driver would be re-deriving what it was handed.
-- **Nothing but the transform is inherited.** A Phaser Container's alpha,
-  visibility and post-effects apply to the whole subtree, and this document
-  says a child does not fade, hide or tint with its parent. Flat images keep
-  effects per actor, which is how `AppliedEffectSpec` attaches them now.
-- **The layer is the parent's, not the parent.** A child moves to its
-  parent's layer container at `set parent`; inside a nested Container it
-  would have had no layer of its own to move between.
+- **An actor with children is a Container.** Its own image is the
+  Container's first child, at the origin; each child's image, or a child's
+  own Container if it has children, follows in placement order, at the
+  CHILD'S LOCAL transform. Phaser composes the rest, in the order the
+  arithmetic above states. An actor without children stays a plain image,
+  which is nearly every actor.
+- **The Container carries the parent's WORLD transform**, still derived by
+  the engine, because collisions, the camera, hit tests and the map editor
+  need world values whether or not the renderer does. So `renderSnapshot`
+  publishes both: the world transform as now, and, for a child, its parent
+  and its local transform. The driver reads world for a root or a parent's
+  Container and local for a child inside one.
+- **The parent's opacity and effects go on the Container**, exactly as a
+  layer's do, which is what makes them the group's. A child's own opacity
+  and effects go on its own image inside, so they apply to the child alone.
+- **The Container lives in the parent's layer container**, which is what
+  "a child is drawn on its parent's layer" means in the driver: moving a
+  child between layers is moving it into its parent's Container.
 
-What the driver does take from the tree is DRAW ORDER. Within a layer,
-actors draw in a pre-order walk — a parent, then its children in placement
-order, then the next root — so a child is always over its parent and a
-dialog's buttons are over its panel. The driver already sorts a layer's
-children by depth on demand rather than every frame; the walk is what the
-depths are assigned from.
+DRAW ORDER falls out of the nesting. Inside a Container the parent's image
+comes first and its children after, so a child is always over its parent and
+a dialog's buttons are over its panel; between roots in a layer, depth is
+what it is today.
+
+The one thing nesting changes for the driver's existing per-actor code is
+that a child's image is positioned by its local transform rather than its
+world one. `applySkew` shears about the drawn centre in whichever frame the
+image is in, and a drawing's texture, a sprite's cell and an animation's
+frame are all the actor's own and do not care which Container holds them.
 
 **One matrix, three users.** The composition and its inverse are written
 once, as a small affine transform in the engine core (`Transform2D`: the
@@ -320,7 +341,8 @@ multiply, invert and apply-to-point), and used by:
   scale by hand in `stageGeometry.toLocalFrame` and `transformOf`, and
   composes through the parent instead;
 - the driver's `applySkew`, whose shear-about-the-centre is the same matrix
-  with the shear term set.
+  with the shear term set, and the tests that check a nested Container lands
+  a child where the engine says it is.
 
 Three hand-written copies of the same arithmetic are three places for a sign
 to differ; the editor's hit test and the game's click box disagreeing by a
@@ -330,10 +352,17 @@ rotation is the bug this prevents.
 
 **Engine.** `Actor.get` and `Actor.set` intercept the three world properties
 for a parented actor; `World.detach` cascades; `loadMap` gains one reference
-in its second pass; `renderSnapshot`, `sizeOf`, `scaleOf` and every rule are
+in its second pass; `renderSnapshot` publishes a child's parent and local
+transform beside the world one; `sizeOf`, `scaleOf` and every rule are
 unchanged, since they read world values as they do now. `intrinsic size` is
 the actor's own and is not scaled by a parent in the property — the world
 scale is what scales the drawn box, as it does today.
+
+**Driver.** An actor with children becomes a Container in its parent's layer
+container, holding its own image and its children; the parent's opacity and
+effects reconcile onto the Container as a layer's do; a child's image is
+placed by its local transform. Reparenting moves an image between
+Containers; a child that gains children is promoted to a Container in place.
 
 **Hot reload.** `reconcile` treats any actor value change as a restart, and
 a parent is an actor value, so a map edit that reparents restarts the game
@@ -403,19 +432,22 @@ local values and let the child jump to wherever that lands it — is never what
 somebody dragging a button onto a panel meant. If a project wants a child
 snapped to a particular local place, it sets `local position` after.
 
-**Removal cascades; nothing else does.** A parent's children are part of
-what it is, so they go with it. Its rules, opacity and visibility are not, and
-a child fading with its parent is one `each frame` row a project can write.
+**Removal cascades, and so do opacity and effects.** A parent's children are
+part of what it is, so they go with it, fade with it and take its effects,
+exactly as everything in a layer does. Its rules and traits are not part of
+it. Affecting only a panel's background is done by making the background a
+child, not by a second knob.
 
 **Physics acts in the parent's frame.** Not pinned: a child that can move,
 moves, and one that is pushed is pushed. Pinning would need a second kind of
 child, and interface actors — the ones parented today — have no physics.
 
-**Phaser's composition, not Phaser's Containers.** The arithmetic is the
-scene tree's, so the engine, the editor and the renderer agree; the driver
-stays flat because the engine must own world transforms regardless, because
-a Container inherits more than the transform, and because a child's layer is
-its parent's. Nesting would buy the driver nothing it is not handed.
+**Phaser's composition AND Phaser's Containers.** The arithmetic is the
+scene tree's, so the engine, the editor and the renderer agree; and the
+driver nests a Container per parent because that is what carries a group's
+opacity and effects, which is how a layer already carries its own. The
+engine still derives world transforms, because everything that is not the
+renderer needs them; the driver is handed both and uses each where it fits.
 
 **Reparenting is heard, as creation is.** Four events with the other actor
 as the value, raised in the moment the block ran, and by `loadMap` after its
@@ -465,9 +497,12 @@ reference pass. A cascade is a removal and says so.
   on each child and no parent events; a loaded map raises `gains a child` on
   a Dialog once per button, after every entry's `is created`.
 - Within a layer a child is drawn over its parent, and over a sibling root
-  placed before the parent; the engine's world transform for a turned,
-  scaled parent's child matches what a Phaser Container would draw, checked
-  by composing the same matrices.
+  placed before the parent; a child placed by its local transform inside its
+  parent's Container lands where the engine's world transform says, for a
+  turned, scaled, translated parent, checked by composing the same matrices.
+- A parent's opacity fades its children; an effect on a parent applies to
+  the group and a child's own effect to the child alone; a child moved to
+  another parent takes the new parent's effects and drops the old one's.
 - `Transform2D`'s inverse undoes its composition for a rotated, scaled,
   translated case, and the stage's hit test and the driver's shear are both
   written over it.
@@ -478,8 +513,10 @@ reference pass. A cascade is a removal and says so.
    positional trait; the intercepted read and write on `Actor.get` and
    `Actor.set` for a parented actor, with the composition above; cycle
    refusal; removal cascade; the layer following the parent; the four events
-   and their order. The driver assigns depth from the pre-order walk. Tests
-   for the arithmetic and each check above.
+   and their order; `renderSnapshot` publishing parent and local transform.
+   The driver nests a Container per parent, reconciles the parent's opacity
+   and effects onto it, and places a child by its local transform. Tests for
+   the arithmetic and each check above.
 2. **The blocks.** `set parent`, `parent of`, `children of`, and the three
    local getters and setters, in the Space category. The palette guard covers
    them.
