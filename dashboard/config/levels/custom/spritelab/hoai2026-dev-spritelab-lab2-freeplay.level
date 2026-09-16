@@ -143,20 +143,6 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_makeNewSpriteAnon",
-              "inputs": {
-                "LOCATION": {
-                  "block": {
-                    "type": "gamelab_location_picker",
-                    "fields": {
-                      "LOCATION": "{\"x\":200,\"y\":200}"
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
               "type": "gamelab_setProp",
               "inputs": {
                 "SPRITE": {
