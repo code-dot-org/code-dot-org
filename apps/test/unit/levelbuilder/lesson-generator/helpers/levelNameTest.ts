@@ -1,6 +1,7 @@
 import {
   levelNameFor,
   prefixedName,
+  sublevelNameFor,
 } from '@cdo/apps/levelbuilder/lesson-generator/helpers/levelName';
 import {LevelSpec} from '@cdo/apps/levelbuilder/lesson-generator/types';
 
@@ -38,5 +39,19 @@ describe('levelNameFor', () => {
       },
     });
     expect(levelNameFor(existing, 'renamed')).toBe('old-unit-intro');
+  });
+});
+
+describe('sublevelNameFor', () => {
+  it('names a new sublevel under its parent', () => {
+    expect(sublevelNameFor(spec({id: ' art '}), 'u1-choose')).toBe(
+      'u1-choose-art'
+    );
+  });
+
+  it('keeps an existing sublevel under its own name', () => {
+    expect(
+      sublevelNameFor(spec({id: 'art', existingName: 'old-choose-art'}), 'new')
+    ).toBe('old-choose-art');
   });
 });

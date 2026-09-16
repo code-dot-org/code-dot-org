@@ -159,6 +159,10 @@ describe('buildInitialState', () => {
     );
     const subs = specs[0].sublevels!;
     expect(subs.map(s => s.id)).toEqual(['art', 'quiz']);
+    expect(subs.map(s => s.existingName)).toEqual([
+      'l-choose-art',
+      'l-choose-quiz',
+    ]);
     expect(subs[0].labType).toBe('weblab2');
     expect(subs[0].unsupportedType).toBeUndefined();
     expect(subs[1].unsupportedType).toBe('Multi');

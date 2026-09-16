@@ -238,6 +238,8 @@ export interface LevelSpec {
   // Set when this card is a level already in the lesson; restores it to
   // the same activity/section on save.
   existing?: ExistingLevelRef;
+  // Sublevels only: the level's own name (they have no script_level ref).
+  existingName?: string;
   // Set when the lab type is unsupported: card renders read-only so the
   // user can still see and reorder around it.
   unsupportedType?: string;

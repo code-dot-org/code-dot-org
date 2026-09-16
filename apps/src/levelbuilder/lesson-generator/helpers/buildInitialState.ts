@@ -183,6 +183,7 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
           return {
             key: createUuid(),
             id: subId,
+            existingName: sub.name,
             labType: supportedSubLabType ?? BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES[0],
             description: sub.generateOutline || '',
             lastGeneratedDescription: sub.generateOutline || undefined,

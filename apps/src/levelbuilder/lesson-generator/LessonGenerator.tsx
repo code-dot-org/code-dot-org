@@ -58,7 +58,12 @@ import {
   saveGeneratorPrompts,
 } from './helpers/generatorPrompts';
 import {levelContextFor} from './helpers/levelContext';
-import {levelNameFor, prefixedName} from './helpers/levelName';
+import {
+  existingLevelName,
+  levelNameFor,
+  prefixedName,
+  sublevelNameFor,
+} from './helpers/levelName';
 import {
   formatPrecedingLevels,
   PriorEntry,
@@ -282,11 +287,6 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     return null;
   }, [prefix, levelSpecs]);
 
-  const fullName = useCallback(
-    (id: string) => prefixedName(prefix, id),
-    [prefix]
-  );
-
   const appendLog = useCallback((line: string) => {
     setProgressLog(log => [...log, line]);
   }, []);
@@ -491,7 +491,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     }
 
     for (const groupId of groupsToGenerate) {
-      const templateName = fullName(`template-${groupId}`);
+      const templateName = prefixedName(prefix, `template-${groupId}`);
       // Feed the prompt every member of the group so the template
       // scaffolds for all of them, not just the ones being regenerated
       // this run.
@@ -638,7 +638,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             `Planning ${sublevels.length} sublevel(s) for "${levelName}"…`
           );
           for (const sub of sublevels) {
-            const subName = `${levelName}-${sub.id.trim()}`;
+            const subName = sublevelNameFor(sub, levelName);
             const subLevel = await createOrFindLevel(sub.labType, subName);
             const subCtx = levelContextFor(sub, subName, levelCtxBase);
             await generateSublevelContent(sub, subCtx, subLevel.id, appendLog);
@@ -1105,13 +1105,22 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         specs.map(s => {
           const desc = succeededDescriptions.get(s.key);
           if (desc === undefined) return s;
-          const existing =
-            s.existing ?? savedRefs?.get(levelNameFor(s, prefix));
+          const name = levelNameFor(s, prefix);
+          const existing = s.existing ?? savedRefs?.get(name);
           return {
             ...s,
             lastGeneratedDescription: desc,
             generate: false,
             ...(existing ? {existing} : {}),
+            ...(s.sublevels
+              ? {
+                  sublevels: s.sublevels.map(sl => ({
+                    ...sl,
+                    existingName:
+                      existingLevelName(sl) ?? sublevelNameFor(sl, name),
+                  })),
+                }
+              : {}),
           };
         })
       );
@@ -1132,7 +1141,6 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     validationError,
     lesson,
     levelSpecs,
-    fullName,
     appendLog,
     outline,
     setLevelSpecs,
@@ -1209,7 +1217,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             spec={spec}
             index={index}
             total={levelSpecs.length}
-            previewName={levelNameFor(spec, prefix) || fullName('<id>')}
+            previewName={
+              spec.id.trim()
+                ? levelNameFor(spec, prefix)
+                : prefixedName(prefix, '<id>')
+            }
             disabled={isGenerating}
             labOptions={LAB_OPTIONS}
             onChange={updateSpec}
