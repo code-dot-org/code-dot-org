@@ -44,10 +44,6 @@ interface UserChatMessageEditorProps {
   // response after that response has been logged.
   onSchemaResponse?: (response: unknown) => void;
 
-  // Forwarded to submitChatContents, which applies it to prior turns before
-  // sending them to the model.
-  formatSchemaResponseForDisplay?: (response: unknown) => string;
-
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
   levelName?: UploadButtonProps['levelName'];
@@ -80,7 +76,6 @@ const UserChatMessageEditor: React.FunctionComponent<
   sendDisabled = false,
   onMessageSent,
   onSchemaResponse,
-  formatSchemaResponseForDisplay,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const isWaitingForChatResponse = useAppSelector(
@@ -138,7 +133,6 @@ const UserChatMessageEditor: React.FunctionComponent<
                 : undefined,
             lessonId,
             onSchemaResponse,
-            formatSchemaResponseForDisplay,
           })
         );
         onMessageSent?.();
@@ -157,7 +151,6 @@ const UserChatMessageEditor: React.FunctionComponent<
       lessonId,
       onMessageSent,
       onSchemaResponse,
-      formatSchemaResponseForDisplay,
     ]
   );
 

@@ -460,7 +460,6 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               sendDisabled={sendDisabled}
               onMessageSent={onMessageSent}
               onSchemaResponse={onSchemaResponse}
-              formatSchemaResponseForDisplay={formatSchemaResponseForDisplay}
             />
           )}
         </div>
