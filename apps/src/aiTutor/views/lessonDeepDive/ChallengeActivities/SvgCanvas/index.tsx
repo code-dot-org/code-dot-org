@@ -728,66 +728,68 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
           />
         )}
 
-        {/* role="application" suppresses AT browse-mode key interception so
-            arrow keys reach our handler; jsx-a11y doesn't list it as
-            interactive even though the ARIA spec requires it to have keyboard
-            handlers. */}
-        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
-        <div
-          className={styles.canvasContainer}
-          ref={containerRef}
-          style={readOnly ? {pointerEvents: 'none'} : undefined}
-          tabIndex={readOnly ? undefined : 0}
-          role="application"
-          aria-label={canvasAriaLabel}
-          onFocus={handleContainerFocus}
-          onBlur={handleContainerBlur}
-          onKeyDown={handleContainerKeyDown}
-        >
-          <canvas ref={canvasElRef} />
-
-          {/* Keyboard placement cursor — crosshair at the current cursor position. */}
-          {showCursor && cursorPos && (
-            <div
-              aria-hidden="true"
-              className={styles.canvasCursor}
-              style={{left: cursorPos.x, top: cursorPos.y}}
-            />
-          )}
-
-          {/* Marker for the first click of a keyboard-drawn line. */}
-          {showCursor && lineKeyStart && (
-            <div
-              aria-hidden="true"
-              className={styles.lineStartMarker}
-              style={{left: lineKeyStart.x, top: lineKeyStart.y}}
-            />
-          )}
-
-          {/* Keyboard-navigable object list: visually hidden, screen reader accessible. */}
-          <AccessibleObjectList
-            objects={objects}
-            selectedId={selectedId}
-            onSelect={handleListSelect}
-          />
-
-          {/* Announces add / select / delete events to screen readers. */}
+        <div className={styles.canvasColumn}>
+          {/* role="application" suppresses AT browse-mode key interception so
+              arrow keys reach our handler; jsx-a11y doesn't list it as
+              interactive even though the ARIA spec requires it to have keyboard
+              handlers. */}
+          {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
           <div
-            aria-live="polite"
-            aria-atomic="true"
-            className={styles.srOnly}
-            role="status"
+            className={styles.canvasContainer}
+            ref={containerRef}
+            style={readOnly ? {pointerEvents: 'none'} : undefined}
+            tabIndex={readOnly ? undefined : 0}
+            role="application"
+            aria-label={canvasAriaLabel}
+            onFocus={handleContainerFocus}
+            onBlur={handleContainerBlur}
+            onKeyDown={handleContainerKeyDown}
           >
-            {announcement}
-          </div>
-        </div>
+            <canvas ref={canvasElRef} />
 
-        {!readOnly && (
-          <PropertyPanel
-            selected={selectedRecord}
-            onDescriptionChange={handleDescriptionChange}
-          />
-        )}
+            {/* Keyboard placement cursor — crosshair at the current cursor position. */}
+            {showCursor && cursorPos && (
+              <div
+                aria-hidden="true"
+                className={styles.canvasCursor}
+                style={{left: cursorPos.x, top: cursorPos.y}}
+              />
+            )}
+
+            {/* Marker for the first click of a keyboard-drawn line. */}
+            {showCursor && lineKeyStart && (
+              <div
+                aria-hidden="true"
+                className={styles.lineStartMarker}
+                style={{left: lineKeyStart.x, top: lineKeyStart.y}}
+              />
+            )}
+
+            {/* Keyboard-navigable object list: visually hidden, screen reader accessible. */}
+            <AccessibleObjectList
+              objects={objects}
+              selectedId={selectedId}
+              onSelect={handleListSelect}
+            />
+
+            {/* Announces add / select / delete events to screen readers. */}
+            <div
+              aria-live="polite"
+              aria-atomic="true"
+              className={styles.srOnly}
+              role="status"
+            >
+              {announcement}
+            </div>
+          </div>
+
+          {!readOnly && (
+            <PropertyPanel
+              selected={selectedRecord}
+              onDescriptionChange={handleDescriptionChange}
+            />
+          )}
+        </div>
       </div>
     );
   }
