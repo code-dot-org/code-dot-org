@@ -918,6 +918,199 @@ registerValueShadows('world_set_position', [
   {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
 ]);
 
+// ── Parenting (specs/PARENTING.md) ──────────────────────────────────────────
+//
+// `parent of`, `set parent of … to`, and the four events are minted from the
+// Space rule like every other member of a built-in rule. What is hand-made is
+// the LOCAL transform — where a child sits in its parent's frame — which is
+// the same slot `position`, `rotation` and `scale` read through the parent
+// (`core/parenting`), reached unconverted by `Actor.local` and `setLocal`;
+// and `children of`, which the world answers rather than a property holds.
+
+const worldSetLocalPosition = defineBlock({
+  type: 'world_set_local_position',
+  message0: 'set local position of %1  x %2  y %3',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {type: 'input_value', name: 'X', check: 'Number'},
+    {type: 'input_value', name: 'Y', check: 'Number'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, valueShadowExtension],
+  style: 'default',
+  tooltip:
+    "Where an actor sits in its parent's frame — measured from the parent, " +
+    'turning and growing with it. For an actor with no parent this is its ' +
+    'position.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator, Order.MEMBER);
+      const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
+      const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
+      return forEachActor(
+        target,
+        actor =>
+          `${actor}.setLocal(WorldLab.PositionProperty, new WorldLab.Vector(${x}, ${y}))`,
+      );
+    },
+  },
+});
+registerValueShadows('world_set_local_position', [
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
+
+const worldLocalPosition = defineBlock({
+  type: 'world_local_position',
+  message0: 'local position of %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  output: 'Vector',
+  extensions: [actorInputExtension],
+  style: 'location_blocks',
+  tooltip:
+    "Where an actor sits in its parent's frame. For an actor with no parent, " +
+    'its position.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator, Order.MEMBER);
+      return [
+        `${oneActor(target)}.local(WorldLab.PositionProperty)`,
+        Order.MEMBER,
+      ] as [string, number];
+    },
+  },
+});
+
+const worldSetLocalRotation = defineBlock({
+  type: 'world_set_local_rotation',
+  message0: 'set local rotation of %1 to %2',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {type: 'input_value', name: 'DEGREES', check: 'Number'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, valueShadowExtension],
+  style: 'default',
+  tooltip:
+    "How far an actor is turned from its parent's heading. For an actor with " +
+    'no parent this is its rotation.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator, Order.MEMBER);
+      const degrees =
+        generator.valueToCode(block, 'DEGREES', Order.NONE) || '0';
+      return forEachActor(
+        target,
+        actor => `${actor}.setLocal(WorldLab.RotationProperty, ${degrees})`,
+      );
+    },
+  },
+});
+registerValueShadows('world_set_local_rotation', [
+  {name: 'DEGREES', shadow: {type: 'world_angle', fields: {ANGLE: 0}}},
+]);
+
+const worldLocalRotation = defineBlock({
+  type: 'world_local_rotation',
+  message0: 'local rotation of %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  output: 'Number',
+  extensions: [actorInputExtension],
+  style: 'math_blocks',
+  tooltip:
+    "How far an actor is turned from its parent's heading, in degrees. For " +
+    'an actor with no parent, its rotation.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator, Order.MEMBER);
+      return [
+        `${oneActor(target)}.local(WorldLab.RotationProperty)`,
+        Order.MEMBER,
+      ] as [string, number];
+    },
+  },
+});
+
+const worldSetLocalScale = defineBlock({
+  type: 'world_set_local_scale',
+  message0: 'set local scale of %1  x %2  y %3',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {type: 'input_value', name: 'X', check: 'Number'},
+    {type: 'input_value', name: 'Y', check: 'Number'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, valueShadowExtension],
+  style: 'default',
+  tooltip:
+    "How an actor is scaled beside its parent's scale. For an actor with no " +
+    'parent this is its scale.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator, Order.MEMBER);
+      const x = generator.valueToCode(block, 'X', Order.NONE) || '1';
+      const y = generator.valueToCode(block, 'Y', Order.NONE) || '1';
+      return forEachActor(
+        target,
+        actor =>
+          `${actor}.setLocal(WorldLab.ScaleProperty, new WorldLab.Vector(${x}, ${y}))`,
+      );
+    },
+  },
+});
+registerValueShadows('world_set_local_scale', [
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 1}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 1}}},
+]);
+
+const worldLocalScale = defineBlock({
+  type: 'world_local_scale',
+  message0: 'local scale of %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  output: 'Vector',
+  extensions: [actorInputExtension],
+  style: 'location_blocks',
+  tooltip:
+    "How an actor is scaled beside its parent's scale. For an actor with no " +
+    'parent, its scale.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator, Order.MEMBER);
+      return [
+        `${oneActor(target)}.local(WorldLab.ScaleProperty)`,
+        Order.MEMBER,
+      ] as [string, number];
+    },
+  },
+});
+
+const worldChildrenOf = defineBlock({
+  type: 'world_children_of',
+  message0: 'children of %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  output: 'Actor',
+  extensions: [actorInputExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'The actors this one carries, in the order they were placed. A list: ' +
+    'count them, loop over them, or pick from them.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator, Order.MEMBER);
+      return [`[...${oneActor(target)}.children()]`, Order.ATOMIC] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
 const worldSetSprite = defineBlock({
   type: 'world_set_sprite',
   message0: 'set sprite %1 on %2',
@@ -9463,6 +9656,13 @@ export const DOMAIN_BLOCKS = [
   ...SLOT_BLOCKS,
   worldSetBackgroundColor,
   worldSetPosition,
+  worldSetLocalPosition,
+  worldLocalPosition,
+  worldSetLocalRotation,
+  worldLocalRotation,
+  worldSetLocalScale,
+  worldLocalScale,
+  worldChildrenOf,
   worldSetSprite,
   worldPlayAnimation,
   ...PROPERTY_BLOCKS,
@@ -9608,7 +9808,19 @@ export const DOMAIN_BLOCKS = [
 // rule's traits/queries. `use trait`/`use rule` span every rule, so they live
 // with the Actor/World they build, not in any one rule category.
 const RULE_HAND_BLOCKS = new Map<string, string[]>([
-  ['spatial', ['world_set_position']],
+  [
+    'spatial',
+    [
+      'world_set_position',
+      'world_set_local_position',
+      'world_local_position',
+      'world_set_local_rotation',
+      'world_local_rotation',
+      'world_set_local_scale',
+      'world_local_scale',
+      'world_children_of',
+    ],
+  ],
   ['animation', ['world_set_sprite', 'world_play_animation']],
 ]);
 

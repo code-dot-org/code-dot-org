@@ -168,6 +168,17 @@ The `position`, `rotation` and `scale` getters and setters are unchanged and
 unrenamed. A learner who has never parented anything sees nothing new in
 them.
 
+BUILT. `parent of`, `set parent of … to` and the four hats came for free:
+a built-in rule's properties and events are minted into blocks from the rule
+itself, so declaring `parent` on the positional trait put
+`world_get_Space_ParentProperty`, `world_set_Space_ParentProperty` and the
+four `world_on_Space_…Event` hats in the Space category with nothing
+written. The seven hand-made ones sit beside `set position`
+(`domainBlocks`, "Parenting"). `local position of` and `local scale of`
+report a `Vector`, which `x of`/`y of` split, where the minted `position of`
+reports one axis at a time; a local position is mostly wanted whole, to
+compare or to tween, and a vector is what the setter beside it takes apart.
+
 ## Events
 
 Reparenting is something a project has to be able to hear: a dialog that
@@ -577,9 +588,11 @@ no-op.
    reconciles the parent's opacity and effects onto it, places a child by
    its local transform, and composes a shear onto the parent matrix rather
    than replacing it. The driver half is the one not checked headless.
-2. **The blocks.** `set parent`, `parent of`, `children of`, and the three
-   local getters and setters, in the Space category. The palette guard covers
-   them.
+2. **The blocks — DONE.** `set parent`, `parent of` and the four hats are
+   minted from the rule; `children of` and the three local getters and
+   setters are hand-made in the Space category
+   (`blockly/__tests__/parentingBlocks`, which also compiles a project that
+   parents a Button to a Label and checks where it lands).
 3. **The map.** `parent` as a positional override; `loadMap` resolving it in
    the reference pass with the stored local position applied after, and
    raising the events. The editor's `transformOf`, `toLocalFrame` and
