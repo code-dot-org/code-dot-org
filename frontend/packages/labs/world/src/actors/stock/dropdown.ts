@@ -354,7 +354,7 @@ export const dropdownActor = actorFile(
         },
       },
       // The arrows move the highlight while it is open.
-      ...(['up', 'down'] as const).map(key => ({
+      ...(['up arrow', 'down arrow'] as const).map(key => ({
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: key},
         inputs: {ACTOR: me()},
@@ -363,7 +363,11 @@ export const dropdownActor = actorFile(
             set(
               'HighlightedProperty',
               clamp(
-                arithmetic('ADD', highlighted(), num(key === 'up' ? -1 : 1)),
+                arithmetic(
+                  'ADD',
+                  highlighted(),
+                  num(key === 'up arrow' ? -1 : 1),
+                ),
                 num(1),
                 count(),
               ),

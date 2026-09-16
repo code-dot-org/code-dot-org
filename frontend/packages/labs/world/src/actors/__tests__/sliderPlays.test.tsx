@@ -129,6 +129,27 @@ describe('a Slider', () => {
     expect(s.said()).toBe('MOVED');
   }, 60000);
 
+  it('nudges by a tenth on the arrow keys once it holds the focus', async () => {
+    const s = await open();
+    // A press brings the keyboard here (and jumps the slider to the press).
+    s.press(100);
+    s.release();
+    expect(s.at()).toBeCloseTo(0.5, 5);
+    const tap = (key: string) => {
+      // The world's own key names (`engine/core/keys`).
+      s.world.setInput([key]);
+      s.world.tick(1 / 60);
+      s.world.setInput([]);
+      s.world.tick(1 / 60);
+      s.world.tick(1 / 60);
+    };
+    tap('right arrow');
+    expect(s.at()).toBeCloseTo(0.6, 5);
+    tap('left arrow');
+    tap('left arrow');
+    expect(s.at()).toBeCloseTo(0.4, 5);
+  }, 60000);
+
   it('follows the pointer while held, past either end, and lets go', async () => {
     const s = await open();
     s.press(124);

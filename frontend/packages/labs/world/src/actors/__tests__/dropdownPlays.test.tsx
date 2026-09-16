@@ -149,6 +149,33 @@ describe('a Dropdown', () => {
     expect(d.heard()).toBe('CHOSEN');
   }, 60000);
 
+  it('chooses with the arrows and Enter once it holds the focus', async () => {
+    const d = await open();
+    const tap = (key: string) => {
+      // The world's own key names (`engine/core/keys`).
+      d.world.setInput([key]);
+      d.world.tick(1 / 60);
+      d.world.setInput([]);
+      d.world.tick(1 / 60);
+      d.world.renderSnapshot();
+      d.world.tick(1 / 60);
+    };
+    // A click brings the keyboard here and opens the menu.
+    d.click(100, 100);
+    expect(d.isOpen()).toBe(true);
+    tap('down arrow');
+    tap('down arrow');
+    tap('enter');
+    expect(d.says()).toBe('THREE');
+    expect(d.isOpen()).toBe(false);
+    // Enter again opens; Up walks back; Enter chooses.
+    tap('enter');
+    expect(d.isOpen()).toBe(true);
+    tap('up arrow');
+    tap('enter');
+    expect(d.says()).toBe('TWO');
+  }, 60000);
+
   it('closes on a press anywhere else, choosing nothing', async () => {
     const d = await open();
     d.click(100, 100);

@@ -242,8 +242,8 @@ export const sliderActor = actorFile(
           block: chain([takeFocus(), setHeld(true), moveTo(fractionAtPointer)]),
         },
       },
-      onKey('left', -STEP),
-      onKey('right', STEP),
+      onKey('left arrow', -STEP),
+      onKey('right arrow', STEP),
     ],
     drawing: {
       width: width(),
