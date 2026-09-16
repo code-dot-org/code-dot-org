@@ -3,7 +3,7 @@ import {Button as MuiButton} from '@mui/material';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
-import './skills.css';
+import './ai-evaluation.css';
 
 import {evaluationFromOpenAI} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {

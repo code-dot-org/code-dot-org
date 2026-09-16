@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './skills.css';
+import './ai-evaluation.css';
 
 interface SystemPromptModificationFieldProps {
   initialValue?: string;

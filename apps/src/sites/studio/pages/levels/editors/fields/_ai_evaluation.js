@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 
-import SkillEvaluationSettings from '@cdo/apps/levelbuilder/skills/SkillEvaluationSettings';
+import AiEvaluationSettings from '@cdo/apps/levelbuilder/aiEvaluation/AiEvaluationSettings';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
@@ -9,10 +9,9 @@ $(document).ready(function () {
   const aiPromptModificationInput = $(
     'input#level_additional_ai_evaluation_instructions'
   );
-  const data = getScriptData('skillevaluationdata');
+  const data = getScriptData('aievaluationdata');
   createReactRoot(
-    <SkillEvaluationSettings
-      skills={data.skills}
+    <AiEvaluationSettings
       levelId={data.levelId}
       systemPrompt={data.systemPrompt}
       additionalAiEvaluationInstructions={
@@ -22,7 +21,7 @@ $(document).ready(function () {
         aiPromptModificationInput.val(newInstructions)
       }
     />,
-    document.getElementById('skill-evaluation-settings-editor'),
+    document.getElementById('ai-evaluation-settings-editor'),
     {
       legacyReactDomRender: true,
     }
