@@ -5,8 +5,6 @@ Large updates (i.e., anything over 500 lines of code) should be broken down into
 ## Code quality
 - Code should not be over-engineered. It is the engineer's responsibility to weigh the cost of any added complexity against the real-world benefit.
 - Code should be well-named and well-factored.
-- Good naming makes code readable without the need for line-by-line comments.
-- Engineers should use their judgment on whether it is appropriate to refactor modified or adjacent code.
 
 ## Comments
 - Be concise and don't repeat other comments.
@@ -23,10 +21,9 @@ Large updates (i.e., anything over 500 lines of code) should be broken down into
 - Passive voice is ambiguous (e.g. "Was manually verified"). If the description uses the passive voice, it's fair for reviewers to ask who performed the action.
 
 ## Description content
-- Describe the human intent of the change: what prompted it and how we arrived at the current solution. Don't infer intent from the implementation.
-- Describe what is changing conceptually and why the approach is appropriate. Omit unnecessary technical detail, especially around how the change works.
+- Omit unnecessary technical detail, especially around how the change works.
 - Include enough context to bring an unfamiliar reviewer up to speed.
-- Follow pull_request_template.md and be concise.
+- Follow [pull_request_template.md](pull_request_template.md) and be concise.
 
 ## Writing style
 - Use plain English and existing terminology.
