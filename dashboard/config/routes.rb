@@ -1413,6 +1413,7 @@ Dashboard::Application.routes.draw do
     get 'widget2', to: 'widget2#index'
     post 'widget2/:widget2_id/update_code', to: 'widget2#update_code'
     post 'widget2/new', to: 'widget2#new'
+    get 'widget2/:widget2_id/*path', to: 'widget2#asset', format: false
 
     namespace :foorm do
       resources :simple_survey_forms, only: [:index, :new, :create]
