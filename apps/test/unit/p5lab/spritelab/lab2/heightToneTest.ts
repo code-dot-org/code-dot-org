@@ -35,6 +35,13 @@ describe('SpriteLab2 heightTone', () => {
       expect(heightPitch(0.5)).toBeLessThan((low + high) / 2);
     });
 
+    it('puts the floor at 0 and the top at 1', () => {
+      // The engine measures from the feet, so standing on the floor is 0
+      // whatever the costume's height.
+      expect(heightPitch(0)).toBeLessThan(heightPitch(0.01));
+      expect(heightPitch(1)).toBeGreaterThan(heightPitch(0.99));
+    });
+
     it('clamps outside the view rather than running away', () => {
       // A jump can carry above the top of the screen.
       expect(heightPitch(5)).toBe(heightPitch(1));

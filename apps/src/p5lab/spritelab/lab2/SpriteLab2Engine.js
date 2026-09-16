@@ -1019,6 +1019,10 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   // Facing resets too: a player who comes back has no history to face.
   forgetPlayer_() {
+    // Held voices first: with no player to describe they would otherwise
+    // hang wherever the last one left them.
+    this.onPlayerHeight?.({above: 0, airborne: false});
+    this.onPlayerProximity?.({wall: Infinity, edge: Infinity});
     this.observedX_ = null;
     this.observedY_ = null;
     this.observedFacing_ = 'right';
@@ -1033,10 +1037,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         !this.onPlayerSound) ||
       !players.length
     ) {
-      // Silence the held voices, or they hang where the player left them.
       if (this.observedX_ !== null) {
-        this.onPlayerHeight?.({above: 0, airborne: false});
-        this.onPlayerProximity?.({wall: Infinity, edge: Infinity});
         this.forgetPlayer_();
       }
       return;
@@ -1072,8 +1073,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       }).forEach(event => this.onPlayerSound(event));
     }
     if (this.onPlayerHeight) {
+      // From the feet, not the centre: standing on the floor is 0 however
+      // tall the costume, so two players on a row sound the same note.
+      const feet = sprite.position.y + (sprite.height * sprite.scale) / 2;
       this.onPlayerHeight({
-        above: (view.height - sprite.position.y) / view.height,
+        above: (view.height - feet) / view.height,
         airborne: !grounded,
       });
     }

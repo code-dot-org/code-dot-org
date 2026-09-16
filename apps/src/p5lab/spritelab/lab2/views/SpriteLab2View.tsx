@@ -1456,11 +1456,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources]
   );
 
+  // Entering Play by keyboard leaves focus on the tab button, where
+  // swallowOnControls eats every game key and the game can't be played.
+  const focusPlayspaceRef = useRef(false);
   const handleTabChange = useCallback(
-    (tab: Tab) => {
+    (tab: Tab, event: React.MouseEvent<HTMLElement>) => {
       // Entering Play from the tab button starts from the beginning.
       if (tab === 'Play') {
         setPlayStartSceneId(null);
+        focusPlayspaceRef.current = !isPointerClick(event);
       }
       dispatch(setActiveTab(tab));
     },
@@ -1551,6 +1555,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // engineReady: a level that STARTS on a hidden tab (an images-only
     // level) must pause the engine as soon as it exists.
   }, [playspaceMode, documentHidden, engineReady]);
+
+  // Once the playspace is focusable, which is the render after this one.
+  useEffect(() => {
+    if (playspaceMode === 'play' && focusPlayspaceRef.current) {
+      focusPlayspaceRef.current = false;
+      playspaceRef.current?.focus({preventScroll: true});
+    }
+  }, [playspaceMode]);
 
   const hasPlatformer = usesPlatformPhysics(levelProperties.helperLibraries);
   const audioSettings = useGameAudio(engineRef, {

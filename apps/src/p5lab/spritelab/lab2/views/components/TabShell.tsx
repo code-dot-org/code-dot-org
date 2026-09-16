@@ -18,7 +18,7 @@ const SCENE_TABS: readonly Tab[] = ['World', 'Code'];
 
 interface TabShellProps {
   activeTab: Tab;
-  onTabChange: (tab: Tab) => void;
+  onTabChange: (tab: Tab, event: React.MouseEvent<HTMLElement>) => void;
   // Tabs not yet implemented are disabled in the bar.
   enabledTabs: readonly Tab[];
   // Tabs to show at all. Defaults to every tab.
@@ -86,7 +86,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
       )}
       onClick={event => {
         blurAfterPointerClick(event);
-        onTabChange(tab);
+        onTabChange(tab, event);
       }}
       // Read by .tab::after, which reserves the selected label's width.
       data-label={tab}
@@ -124,7 +124,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                       !sceneTabs.includes(activeTab) &&
                       enabledTabs.includes(groupTarget)
                     ) {
-                      onTabChange(groupTarget);
+                      onTabChange(groupTarget, e);
                     }
                   }}
                 >
