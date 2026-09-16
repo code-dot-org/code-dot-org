@@ -177,7 +177,9 @@ describe('UnifiedBackpackPanel', () => {
     });
     renderPanel();
 
-    await waitFor(() => expect(screen.getAllByText('tree.png')).toHaveLength(2));
+    await waitFor(() =>
+      expect(screen.getAllByText('tree.png')).toHaveLength(2)
+    );
 
     const listener = mockBackpackApi.addEventListener.mock.calls.at(-1)?.[0];
     act(() => listener(BackpackEvent.FileAdded, 'tree.png', 'universal'));
