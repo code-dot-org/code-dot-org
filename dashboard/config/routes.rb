@@ -35,6 +35,20 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
+  get '/badge_login', to: 'badge_logins#show', as: :badge_login
+  post '/badge_login', to: 'badge_logins#create'
+  post '/badge_login/switch', to: 'badge_logins#switch', as: :switch_badge_login
+  post '/badge_login/activity', to: 'badge_logins#activity'
+  get '/badge_login/reauthenticate', to: 'badge_logins#reauthenticate', as: :badge_reauthentication
+  post '/badge_login/reauthenticate', to: 'badge_logins#begin_reauthentication'
+  get '/account/badge', to: 'student_login_badges#account', as: :account_badge
+  post '/account/badge/revoke', to: 'student_login_badges#revoke_own'
+  get '/sections/:section_id/badges', to: 'student_login_badges#show', as: :section_badges
+  get '/sections/:section_id/badges/students', to: 'student_login_badges#index'
+  get '/sections/:section_id/badges/availability', to: 'student_login_badges#availability'
+  post '/sections/:section_id/badges/print', to: 'student_login_badges#print'
+  post '/sections/:section_id/badges/:student_id', to: 'student_login_badges#update'
+
   # format: false keeps the extension in :path. Without it Rails reads '.js' as
   # the format, and a missing asset raises a cross-origin error, not our 404.
   get "frontend-studio(/*path)", to: "frontend_studio#index", format: false

@@ -9,6 +9,7 @@ require "cdo/honeybadger"
 require 'metrics/events'
 
 class LtiV1Controller < ApplicationController
+  before_action :require_non_badge_authentication
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.
   skip_before_action :verify_authenticity_token

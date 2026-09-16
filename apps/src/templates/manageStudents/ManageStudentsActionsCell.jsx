@@ -237,6 +237,7 @@ class ManageStudentsActionsCell extends Component {
           </div>
         )}
         <ConfirmRemoveStudentDialog
+          sectionId={this.props.sectionId}
           isOpen={this.state.deleting}
           disabled={this.state.requestInProgress}
           studentName={this.props.studentName}

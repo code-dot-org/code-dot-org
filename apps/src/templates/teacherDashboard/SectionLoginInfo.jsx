@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
+import BadgeManagementLink from '@cdo/apps/templates/badges/BadgeManagementLink';
 import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
@@ -62,6 +63,10 @@ class SectionLoginInfo extends React.Component {
 
     return (
       <div id="ui-test-section-login-info">
+        {!isDemoSection &&
+          [SectionLoginType.word, SectionLoginType.picture].includes(
+            section.loginType
+          ) && <BadgeManagementLink sectionId={section.id} />}
         {[SectionLoginType.word, SectionLoginType.picture].includes(
           section.loginType
         ) && (

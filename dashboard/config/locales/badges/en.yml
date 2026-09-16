@@ -1,0 +1,53 @@
+en:
+  student_badges:
+    title: Sign in with a badge
+    instruction: Hold your badge in front of the camera.
+    start: Start camera
+    cancel: Stop camera
+    switch_camera: Switch camera
+    waiting: Allow camera access, then hold up your badge.
+    scanning: Looking for your badge…
+    signing_in: Badge found. Signing in…
+    camera_error: The camera is unavailable. Check camera permission, or use another sign-in method.
+    camera_denied: Camera access was blocked. Allow camera access in your browser settings and try again, or use another sign-in method.
+    camera_missing: No camera was found. Use a device with a camera, or use another sign-in method.
+    camera_busy: Another app may be using the camera. Close it and try again, or use another sign-in method.
+    camera_unsupported: This browser cannot use the camera. Open this page in Safari or Chrome on a device with a camera, or use another sign-in method.
+    try_later: Too many attempts. Wait a minute and try again, or use another sign-in method.
+    login_error: We could not sign you in. Try again, use another sign-in method, or ask your teacher for a replacement badge.
+    network_error: Something went wrong. Check your connection and try again.
+    other_login: Use another sign-in method
+    continue: Continue with this account
+    switch_account: Sign out and use a badge
+    signed_in: This device is already signed in.
+    manage: Student badges
+    issue: Create badge
+    issue_all: Create missing badges
+    print: Print another copy
+    print_all: Print available badges
+    close_print: Close printed badges
+    replace: Replace lost badge
+    renew: Renew badge
+    revoke: Revoke badge
+    confirm_change: Old copies will stop working, and anyone signed in with this badge will need to sign in again.
+    confirm: Confirm
+    back: Back
+    none: No badge
+    active: Active badge
+    revoked: Revoked badge
+    expired: Expired badge
+    expires: Expires
+    expires_soon: This badge expires within 30 days.
+    unavailable: Badge management is not available for this student.
+    loading: Loading…
+    privacy: Anyone with a copy of this badge can sign in. Keep school and home copies private. Reprinting does not cancel other copies.
+    recovery: If every copy is lost, use an existing picture, word, or personal login, or ask a current teacher for a replacement. Without another login or a current teacher, contact support; account recovery is not guaranteed.
+    continuity: A badge can keep working after a student leaves a class until it expires. Section-based sign-in and recovery through that teacher may stop working.
+    reauthenticate: Sign in another way to manage your account
+    reauthenticate_body: Use the same account's picture, word, password, or connected sign-in provider. A badge alone cannot change account credentials.
+    reauthenticate_action: Sign out and sign in another way
+    account: Manage my badge
+    done: Saved.
+    session_warning: Your badge session will end soon. Save your work and sign in again.
+    session_expired: Your badge session has ended. Save any unsaved work before signing in again.
+    sign_out: Sign out

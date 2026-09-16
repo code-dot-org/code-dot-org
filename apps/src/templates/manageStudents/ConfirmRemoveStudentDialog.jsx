@@ -7,6 +7,7 @@ import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION,
 } from '@cdo/apps/lib/util/urlHelpers';
+import BadgeManagementLink from '@cdo/apps/templates/badges/BadgeManagementLink';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
@@ -22,6 +23,7 @@ export const MINIMUM_TEST_PROPS = {
 
 export default class ConfirmRemoveStudentDialog extends React.Component {
   static propTypes = {
+    sectionId: PropTypes.number,
     isOpen: PropTypes.bool,
     disabled: PropTypes.bool,
     studentName: PropTypes.string.isRequired,
@@ -45,6 +47,12 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
     }
     return (
       <div>
+        {this.props.sectionId && (
+          <BadgeManagementLink
+            sectionId={this.props.sectionId}
+            showContinuity
+          />
+        )}
         <SafeMarkdown markdown={i18n.removeStudentBody1()} />
         <p>
           <a

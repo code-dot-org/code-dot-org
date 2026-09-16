@@ -1,4 +1,5 @@
 class Pd::WorkshopEnrollmentController < ApplicationController
+  before_action :require_non_badge_authentication, only: :confirm_join_session
   authorize_resource class: 'Pd::Enrollment', only: [:join_session, :confirm_join_session]
   load_and_authorize_resource :session, class: 'Pd::Session', find_by: :code, id_param: :session_code,
     only: [:join_session, :confirm_join_session]

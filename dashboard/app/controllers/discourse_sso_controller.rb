@@ -1,6 +1,7 @@
 require 'single_sign_on'
 
 class DiscourseSsoController < ApplicationController
+  before_action :require_non_badge_authentication
   before_action :authenticate_user! # ensures user must login
 
   VERIFIED_TEACHERS_GROUP_NAME = 'Verified-Teachers'.freeze

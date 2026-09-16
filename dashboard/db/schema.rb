@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
+ActiveRecord::Schema[7.0].define(version: 2026_09_16_190000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2589,6 +2589,35 @@ ActiveRecord::Schema[7.0].define(version: 2026_09_04_165528) do
     t.index ["category_id"], name: "index_standards_on_category_id"
     t.index ["description"], name: "index_standards_on_description", type: :fulltext
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
+  end
+
+  create_table "student_login_badge_events", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "actor_id", null: false
+    t.string "operation", limit: 16, null: false
+    t.integer "generation", null: false
+    t.string "request_id", limit: 36
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "request_id"], name: "index_badge_events_on_user_and_request", unique: true
+  end
+
+  create_table "student_login_badges", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "public_id", limit: 32, null: false
+    t.integer "generation", default: 1, null: false
+    t.string "secret_digest", limit: 64, null: false
+    t.binary "encrypted_secret"
+    t.string "key_version", limit: 32, null: false
+    t.integer "issuer_id", null: false
+    t.integer "section_id", null: false
+    t.datetime "issued_at", null: false
+    t.datetime "expires_at", null: false
+    t.datetime "revoked_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["public_id"], name: "index_student_login_badges_on_public_id", unique: true
+    t.index ["user_id"], name: "index_student_login_badges_on_user_id", unique: true
   end
 
   create_table "student_work_evaluation_summaries", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

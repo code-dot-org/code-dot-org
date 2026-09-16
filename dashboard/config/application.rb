@@ -292,6 +292,7 @@ module Dashboard
     # functionality such as I18n, GlobalEdition, Redis-backed sessions, and cookies.
     initializer 'dashboard.legacy_apis', after: :load_config_initializers do |app|
       app.config.middleware.insert_after RedisSessionStore, Middleware::LegacyApiStack
+      app.config.middleware.insert_before Middleware::LegacyApiStack, Middleware::StudentBadgeSessions
     end
   end
 end

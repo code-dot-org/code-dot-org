@@ -24,13 +24,23 @@ class SectionsController < ApplicationController
 
   def log_in
     if user = User.authenticate_with_section(section: @section, params: params)
+      expected_user = session[:badge_reauthentication_user_id]
+      if expected_user && expected_user != user.id
+        return redirect_to section_path(id: @section.code), alert: I18n.t('signinsection.invalid_login')
+      end
+      session.delete(:badge_reauthentication_user_id)
+      session.delete(Services::StudentBadges::Session::KEY)
       unless user == current_user
         bypass_sign_in user
         user.update_tracked_fields!(request)
       end
 
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
-      redirect_to_section_script_or_course
+      if expected_user
+        redirect_to edit_user_registration_path
+      else
+        redirect_to_section_script_or_course
+      end
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')
       redirect_to section_path(id: @section.code)

@@ -1,4 +1,6 @@
 - @page_title = @section.name
+- if Policies::StudentBadges.authentication_enabled?
+  = render 'shared/badge_link', href: badge_login_path, label: t('student_badges.title')
 
 :ruby
   picture_login = @section.login_type == Section::LOGIN_TYPE_PICTURE

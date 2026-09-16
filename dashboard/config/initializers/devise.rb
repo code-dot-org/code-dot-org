@@ -322,6 +322,14 @@ Devise.setup do |config|
 
   require 'cdo/cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
+    expected_user = auth.raw_session['badge_reauthentication_user_id']
+    if expected_user
+      if expected_user != user.id
+        auth.logout(:user)
+        throw :warden, scope: :user, message: :invalid
+      end
+      auth.raw_session.delete('badge_reauthentication_user_id')
+    end
     user_type =
       if user.teacher?
         "teacher"

@@ -12081,6 +12081,7 @@ __metadata:
     jshint: "npm:^2.13.6"
     json-parse-better-errors: "npm:^1.0.1"
     jsonic: "npm:^0.3.0"
+    jsqr: "npm:1.4.0"
     jszip: "npm:3.10.1"
     karma: "npm:^6.4.2"
     karma-chrome-launcher: "npm:^3.2.0"
@@ -21584,6 +21585,13 @@ canvg@gabelerner/canvg:
     object.assign: "npm:^4.1.4"
     object.values: "npm:^1.1.6"
   checksum: 10/b61d44613687dfe4cc8ad4b4fbf3711bf26c60b8d5ed1f494d723e0808415c59b24a7c0ed8ab10736a40ff84eef38cbbfb68b395e05d31117b44ffc59d31edfc
+  languageName: node
+  linkType: hard
+
+"jsqr@npm:1.4.0":
+  version: 1.4.0
+  resolution: "jsqr@npm:1.4.0"
+  checksum: 10/a959aed9e6f0af2616e0a9c29431bf4c8a617a316f6fdf3ac922c405f283224a5c77b8c8dfa5deda4e4848aeb87333dc70fe5d9cf9c116e76643c5cccc5c53f2
   languageName: node
   linkType: hard
 

@@ -1,4 +1,5 @@
 class Pd::SessionAttendanceController < ApplicationController
+  before_action :require_non_badge_authentication, only: [:select_enrollment, :confirm_upgrade_account]
   load_and_authorize_resource :session, class: 'Pd::Session', id_param: :session_code, find_by: :code
   rescue_from ActiveRecord::RecordNotFound do
     render :not_found, status: :not_found

@@ -1,6 +1,7 @@
 require 'policies/child_account'
 
 class SessionsController < Devise::SessionsController
+  before_action :require_non_badge_authentication, only: :expire_other
   include UsersHelper
 
   # see also

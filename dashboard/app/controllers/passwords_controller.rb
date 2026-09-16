@@ -1,4 +1,5 @@
 class PasswordsController < Devise::PasswordsController
+  before_action :require_non_badge_authentication
   skip_before_action :require_no_authentication
   prepend_before_action :require_no_or_admin_authentication
 

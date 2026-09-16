@@ -2,3 +2,4 @@
 
 # Configure sensitive parameters which will be filtered from the log file.
 Rails.application.config.filter_parameters += [:password, :email, :phone, :secret_picture_id]
+Rails.application.config.filter_parameters += [:badge_payload, :encrypted_secret, :secret_digest]

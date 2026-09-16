@@ -3,6 +3,7 @@ require 'metrics/events'
 module Lti
   module V1
     class AccountLinkingController < ApplicationController
+      before_action :require_non_badge_authentication
       before_action :authenticate_user!, only: %i[unlink]
 
       # GET /lti/v1/account_linking/landing

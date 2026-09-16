@@ -1,4 +1,6 @@
 - require 'policies/lti'
+- if Policies::StudentBadges.authentication_enabled?
+  = render 'shared/badge_link', href: badge_login_path, label: t('student_badges.title')
 %link{href: "/shared/css/2022-rebrand-update.css", rel: "stylesheet"}
 %script{src: webpack_asset_path('js/devise/sessions/new.js')}
 

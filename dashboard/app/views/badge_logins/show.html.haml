@@ -1,0 +1,5 @@
+- @page_title = t('student_badges.title')
+- @disable_session_replay = true
+- data = @badge_page.merge(strings: I18n.t('student_badges'), authenticityToken: form_authenticity_token)
+%script{src: webpack_asset_path('js/badge_logins/show.js'), defer: true}
+#badge-login-page{data: {badge_page: data.to_json}}

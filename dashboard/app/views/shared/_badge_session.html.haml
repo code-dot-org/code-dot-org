@@ -1,0 +1,5 @@
+- data = session[Services::StudentBadges::Session::KEY]
+- expires_at = [data['authenticated_at'] + Policies::StudentBadges::ABSOLUTE_TIMEOUT, data['last_activity_at'] + Policies::StudentBadges::IDLE_TIMEOUT].min
+- props = {expiresAt: expires_at, strings: I18n.t('student_badges'), authenticityToken: form_authenticity_token}
+#badge-session-notice{data: {badge_session: props.to_json}}
+%script{src: webpack_asset_path('js/badge_logins/session.js'), defer: true}

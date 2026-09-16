@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import BadgeManagementLink from '@cdo/apps/templates/badges/BadgeManagementLink';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -77,6 +78,9 @@ class ManageStudentsLoginInfo extends Component {
 
     return (
       <div className={styles.explanation}>
+        {[SectionLoginType.word, SectionLoginType.picture].includes(
+          loginType
+        ) && <BadgeManagementLink sectionId={sectionId} />}
         <Typography variant="body3" component="p">
           {i18n.setUpClass_childAccountPolicyNotice()}
         </Typography>

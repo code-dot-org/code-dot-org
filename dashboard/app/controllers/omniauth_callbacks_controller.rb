@@ -6,6 +6,7 @@ require 'metrics/events'
 require 'policies/devise/email_domains'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  before_action :require_non_badge_authentication
   include UsersHelper
 
   skip_before_action :clear_sign_up_session_vars

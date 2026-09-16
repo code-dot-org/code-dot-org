@@ -7,6 +7,7 @@ require 'queries/lti'
 require 'policies/devise/email_domains'
 
 class RegistrationsController < Devise::RegistrationsController
+  before_action :require_non_badge_authentication, except: [:edit, :personalization_information]
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
   before_action :assign_country_code, only: [:begin_sign_up, :login_type, :finish_student_account, :finish_teacher_account, :edit]
   before_action :assign_redirect_url, only: [:finish_teacher_account, :finish_student_account]

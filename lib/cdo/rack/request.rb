@@ -144,6 +144,9 @@ module Cdo
         connection.get(session_id.private_id) || connection.get(session_id.public_id)
       end
       return nil unless session
+      if session['student_badge'] && !env['cdo.badge_verified'] && !Services::StudentBadges::Session.valid?(session)
+        return nil
+      end
       return nil unless warden = session['warden.user.user.key']
       warden.first.first
     rescue

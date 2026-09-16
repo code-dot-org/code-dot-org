@@ -62,6 +62,9 @@ class StatsigSessionReplay {
   }
 
   async startRecording() {
+    if (document.querySelector('meta[name="disable-session-replay"]')) {
+      return;
+    }
     // check if the statsig client is already initialized
     if (this.statsigClient) {
       return;

@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  include StudentBadgeAuthentication
+
   before_action :handle_cap_lockout, :assert_lms_landing_policy, if: :current_user
 
   # this is needed to avoid devise breaking on email param
@@ -393,6 +395,8 @@ class ApplicationController < ActionController::Base
       api_v1_users_current_path,
       # Don't block any user from signing out
       destroy_user_session_path,
+      switch_badge_login_path,
+      badge_reauthentication_path,
       # Allow retrieval of CSRF token
       get_token_path,
       # Don't block any user from changing the language

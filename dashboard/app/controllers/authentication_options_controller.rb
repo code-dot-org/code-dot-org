@@ -1,4 +1,5 @@
 class AuthenticationOptionsController < ApplicationController
+  before_action :require_non_badge_authentication
   # POST /users/auth/:id/disconnect
   def disconnect
     unless current_user&.migrated?

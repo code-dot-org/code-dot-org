@@ -206,6 +206,9 @@ class Ability
       can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
 
       if user.teacher?
+        can :manage_badges, Section do |section|
+          !section.demo_section? && [Section::LOGIN_TYPE_WORD, Section::LOGIN_TYPE_PICTURE].include?(section.login_type) && section.instructors.exists?(id: user.id)
+        end
         can :access, :teacher_only
         can :manage, Section do |s|
           s.instructors.include?(user)

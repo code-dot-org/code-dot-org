@@ -473,6 +473,7 @@ class User < ApplicationRecord
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_destroy :soft_delete_channels
+  before_destroy {StudentLoginBadge.where(user_id: id).update_all(encrypted_secret: nil, revoked_at: Time.current)}
 
   after_create :associate_with_potential_pd_enrollments
 

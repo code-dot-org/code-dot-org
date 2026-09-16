@@ -46,6 +46,7 @@ module Services
       end
 
       private def scrub_user
+        StudentLoginBadge.where(user_id: user.id).update_all(encrypted_secret: nil, revoked_at: Time.current)
         # Email and authentication
         user.authentication_options.with_deleted.each do |ao|
           ao.destroy unless ao.destroyed?

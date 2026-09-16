@@ -1,0 +1,77 @@
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--text-neutral-primary);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.camera {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 4 / 3;
+  background: var(--background-neutral-secondary);
+  border: 3px solid var(--borders-neutral-primary);
+  border-radius: 1rem;
+}
+
+.guide {
+  width: 280px;
+  max-width: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3px;
+}
+
+.row {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  box-sizing: border-box;
+  break-inside: avoid;
+  width: 300px;
+  max-width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--borders-neutral-primary);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.qr {
+  display: inline-block;
+  padding: 24px;
+  background: white;
+}
+
+.printFrame {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  inset-inline-start: -10000px;
+}
+
+.sessionNotice {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
