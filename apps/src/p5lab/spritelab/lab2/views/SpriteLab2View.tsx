@@ -516,6 +516,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [worldPaletteSelection, setWorldPaletteSelection] = useState<
     WorldCell | 'erase' | null
   >(null);
+  // Only a choice the student made holds against the level default; a
+  // default picked from an incomplete list gives way once the list fills in.
+  const paletteChosenByStudent = useRef(false);
+  const choosePaletteSelection = useCallback(
+    (selection: WorldCell | 'erase') => {
+      paletteChosenByStudent.current = true;
+      setWorldPaletteSelection(selection);
+    },
+    []
+  );
 
   // Preselect the newest image of the level's imageType. Backgrounds are
   // excluded, a world cell being a sprite or a block; a selection whose image
@@ -532,7 +542,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     const live =
       worldPaletteSelection === 'erase' ||
       (worldPaletteSelection && names.has(worldPaletteSelection.image));
-    if (live) {
+    if (live && paletteChosenByStudent.current) {
       return;
     }
     // The level's image_defaults role first; else the newest of the kind
@@ -545,6 +555,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     const name =
       defaultImageName(animationList, imageDefaults, focusImageType) ??
       (newest && animationList.propsByKey[newest]?.name);
+    const current =
+      worldPaletteSelection === 'erase' ? null : worldPaletteSelection?.image;
+    if ((name ?? null) === (current ?? null)) {
+      return;
+    }
     setWorldPaletteSelection(name ? {image: name, kind: focusImageType} : null);
   }, [worldPaletteSelection, focusImageType, animationList, imageDefaults]);
 
@@ -1729,7 +1744,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
                 selected={worldPaletteSelection}
-                onSelect={setWorldPaletteSelection}
+                onSelect={choosePaletteSelection}
               />
             </div>
           )}
