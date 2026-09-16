@@ -166,12 +166,13 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (!STORY_SCREENS.has(BOX_IDS[currentIndex])) return;
       if (e.key === 'ArrowRight') goToNext();
       if (e.key === 'ArrowLeft') goToPrev();
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [goToNext, goToPrev]);
+  }, [currentIndex, goToNext, goToPrev]);
 
   useEffect(() => {
     const screenId = BOX_IDS[currentIndex];
