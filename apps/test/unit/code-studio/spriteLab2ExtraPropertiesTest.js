@@ -10,6 +10,7 @@ describe('camelize', () => {
     const expected = {
       guide_steps: 'guideSteps',
       hide_custom_blocks: 'hideCustomBlocks',
+      image_defaults: 'imageDefaults',
       level_mode: 'levelMode',
       pinned_scene: 'pinnedScene',
       world_start_pattern: 'worldStartPattern',
