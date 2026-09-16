@@ -156,9 +156,11 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
     }
   }
 
-  /** After the image list changed: a value the list lost gives way to the
-      level default, else the first option; a kept value refreshes its
-      thumbnail. */
+  /**
+   * After the image list changed: a value the list lost gives way to the
+   * level default, else the first option; a kept value refreshes its
+   * thumbnail.
+   */
   followList() {
     const options = this.getOptions(false);
     if (options.some(([, value]) => value === this.getValue())) {

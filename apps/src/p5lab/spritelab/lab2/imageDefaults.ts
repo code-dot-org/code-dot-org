@@ -7,12 +7,20 @@ import {imageTypeFromCategories} from './imageGallery';
 import {RuntimeAnimationList} from './types';
 
 /**
- * The image_defaults level property. 'sprite', 'background' and 'block'
- * name the role every dropdown of that kind starts on; a block type names
- * the role of each of that block's sprite slots, in order, or one role for
- * all of them.
+ * The image_defaults level property: which image, by role, each dropdown
+ * starts on. A kind key sets every dropdown of that kind; a block type key
+ * sets that block's sprite sockets one by one, in socket order (a single
+ * role covers them all). Roles are the strings the unit's image levels
+ * record through level_mode.imageRole.
+ *
+ *   {"sprite": "friend", "gamelab_checkTouching": ["hero", "friend"]}
  */
-export type ImageDefaults = {[key: string]: string | string[]};
+export type ImageDefaults = {
+  sprite?: string;
+  background?: string;
+  block?: string;
+  [blockType: string]: string | string[] | undefined;
+};
 
 /** A dropdown's place on its block, for the per-block slot roles. */
 export interface ImageSlot {
@@ -57,8 +65,10 @@ export function imageNamedForRole(
   return key ? list.propsByKey[key].name : undefined;
 }
 
-/** The image a dropdown of this kind should start on, or undefined to keep
-    the plain default (the newest image). */
+/**
+ * The image a dropdown of this kind should start on, or undefined to keep
+ * the plain default (the newest image).
+ */
 export function defaultImageName(
   list: RuntimeAnimationList,
   defaults: ImageDefaults | undefined,

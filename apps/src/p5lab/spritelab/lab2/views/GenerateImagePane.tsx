@@ -267,7 +267,7 @@ interface GenerateImagePaneProps {
   onDeleteImage: (name: string) => void;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
-  /** Recorded on every image made here (level_mode.imageRole). */
+  /** Recorded on every image made here. */
   imageRole?: string;
   /** Show the full internal dialog and gallery names; the default is the
       student version (auto-named images, fewer generation controls). */

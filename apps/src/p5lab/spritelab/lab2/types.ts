@@ -134,7 +134,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       most recently, 'S' the image_defaults sprite, else their first
       character. */
   worldStartPattern?: string[];
-  /** The image role each dropdown starts on (imageDefaults.ts). */
+  /** The role each dropdown starts on (imageDefaults.ts); roles are what
+      image levels record through level_mode.imageRole. */
   imageDefaults?: ImageDefaults;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
