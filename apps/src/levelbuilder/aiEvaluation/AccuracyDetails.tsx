@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './skills.css';
+import './ai-evaluation.css';
 
 // Displays accuracy percent
 const AccuracyPercent: React.FC<{percentAccurate: number}> = ({
