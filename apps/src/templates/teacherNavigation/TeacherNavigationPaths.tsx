@@ -23,7 +23,6 @@ export const TEACHER_NAVIGATION_PATHS = {
   settings: 'settings',
   aiChatSettings: 'ai_chat_settings',
   home: 'home',
-  skills: 'skills_in_dev',
   studentSnapshot: 'student_snapshot',
 };
 
@@ -146,12 +145,6 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiChatSettings),
     label: i18n.aiSettings(),
     icon: 'ai-head-solid',
-  },
-  skills: {
-    url: TEACHER_NAVIGATION_PATHS.skills,
-    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.skills),
-    label: 'Skills (In Development)',
-    icon: 'brain',
   },
   studentSnapshot: {
     url: TEACHER_NAVIGATION_PATHS.studentSnapshot,

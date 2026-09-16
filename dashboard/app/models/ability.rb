@@ -197,7 +197,6 @@ class Ability
       can :get_level_source, UserLevel
 
       can :evaluate, :openai_evaluate
-      can :evaluate_section, :openai_evaluate
       can :match_teaching_profile, :openai_personalization
 
       # all signed in users can access the aichat_request and aichat_events endpoints

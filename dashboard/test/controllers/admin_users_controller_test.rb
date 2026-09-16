@@ -286,7 +286,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   test 'user_progress returns progress' do
-    user = @not_admin
+    user = create(:student)
     script1 = create(:script, :in_single_unit_course, :with_levels, levels_count: 2)
     script2 = create(:script, :in_single_unit_course, :with_levels, levels_count: 1)
 
@@ -294,14 +294,14 @@ class AdminUsersControllerTest < ActionController::TestCase
     UserScript.create!(user: user, script: script2)
 
     sign_in @admin
-    post :user_progress_form, params: {user_identifier: @not_admin.id.to_s}
+    post :user_progress_form, params: {user_identifier: user.id.to_s}
 
     # page has 2 tables:
     # table 1 - user information (1 row)
     # table 2 - script progress (2 rows)
     assert_select "table", 2
-    assert_select "table:nth-of-type(1) tbody tr", 1
-    assert_select "table:nth-of-type(2) tbody tr", 2
+    assert_select "#user-info-table tbody tr", 1
+    assert_select "#user-scripts-table tbody tr", 2
   end
 
   test "delete_progress_form returns error if not admin" do
