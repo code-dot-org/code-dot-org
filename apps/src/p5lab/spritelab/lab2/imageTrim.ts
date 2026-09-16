@@ -83,9 +83,11 @@ export function getImageThumbnail(name: string): string | undefined {
 }
 
 /**
- * Downscale a dataURI to fit THUMB_PX, cached by source. Pixel art scales
- * with hard edges; anything else gets high-quality smoothing. Returns the
- * input on any failure.
+ * Scale a dataURI to fit THUMB_PX, cached by source: down for anything
+ * larger, and up with hard edges for pixel art, which is stored at its
+ * logical size and would otherwise blur when the tile stretches it.
+ * Anything else gets high-quality smoothing, and is never enlarged.
+ * Returns the input on any failure.
  */
 // Bounded because keys are whole source dataURIs, every edit mints a new
 // one, and module state outlives levels. The limit sits far above any
@@ -111,7 +113,7 @@ function thumbnailFromDataURI(
         try {
           const scale =
             THUMB_PX / Math.max(img.naturalWidth, img.naturalHeight);
-          if (scale >= 1) {
+          if (scale >= 1 && !pixelated) {
             return resolve(source);
           }
           const canvas = document.createElement('canvas');
