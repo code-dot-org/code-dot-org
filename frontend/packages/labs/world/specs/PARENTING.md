@@ -258,8 +258,11 @@ Attachment rule could never give it.
   hold others — a Panel, or any actor the project says so of — sets its
   parent. Which actors can hold others is a question for the Panel's design;
   the mechanism does not care.
-- **The line the stage already draws** for a reference points from a child to
-  its parent, and the outline of a selected parent can take in its children.
+- **No line to the parent.** The stage draws a line for every other actor
+  reference, because a reference is otherwise invisible; a parent is shown by
+  where the child sits and how it moves, and a line on top of that says the
+  same thing twice (`mapModel.linksFrom` leaves it out). The outline of a
+  selected parent can still take in its children.
 - **The interface layer is a tree.** A dialog map is a Panel and its
   children; loading it on top of a level and removing the Panel removes the
   dialog. That is the "stock interface maps" case in UI_ACTORS.md, and the

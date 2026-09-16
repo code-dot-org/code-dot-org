@@ -461,6 +461,13 @@ export const linksFrom = (
   schema
     .flatMap(group => group.props)
     .filter(prop => prop.type === 'actor' || prop.type === 'actors')
+    // A child's parent is shown by where the child sits — drawn through the
+    // parent, moved with it — and a line to it on top of that says the same
+    // thing twice (specs/PARENTING.md). Every other reference is invisible
+    // without its line.
+    .filter(
+      prop => !(prop.ownerId === 'positional' && prop.propId === 'parent'),
+    )
     .flatMap(prop => {
       const value = propValue(actor, prop.ownerId, prop.propId);
       // A SET is the same thing several times over, and drawing every one of

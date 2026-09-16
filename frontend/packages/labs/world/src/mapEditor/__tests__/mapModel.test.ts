@@ -330,6 +330,37 @@ describe('linksFrom', () => {
   });
 });
 
+describe('linksFrom, for a parent', () => {
+  it('draws no line to the parent, which the child’s place already shows', () => {
+    const schema = [
+      {
+        props: [
+          {
+            ownerId: 'positional',
+            propId: 'parent',
+            name: 'parent',
+            type: 'actor',
+          },
+          {ownerId: 'bar', propId: 'subject', name: 'subject', type: 'actor'},
+        ],
+      },
+    ];
+    const dialog: Placement = {
+      type: 'actors/panel',
+      id: 'Dialog',
+      properties: {},
+    };
+    const ok: Placement = {
+      type: 'actors/button',
+      id: 'OK',
+      properties: {positional: {parent: 'Dialog'}, bar: {subject: 'Dialog'}},
+    };
+    expect(linksFrom(ok, schema, [dialog, ok])).toEqual([
+      {name: 'subject', targetId: 'Dialog'},
+    ]);
+  });
+});
+
 describe('a placement carried by another (parenting)', () => {
   const at = (
     id: string,
