@@ -43,6 +43,7 @@ const CODE_STUDIO_ENTRIES = {
   'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
   'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
   'experiments/index': './src/sites/studio/pages/experiments/index.js',
+  'export_student_data/show': './src/sites/studio/pages/export_student_data/show.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'lessons/tutor': './src/sites/studio/pages/lessons/tutor.js',
