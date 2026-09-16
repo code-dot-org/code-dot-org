@@ -1,0 +1,198 @@
+@import url("components/coin.css");
+@import url("components/confetti.css");
+@import url("components/distribution.css");
+
+:root {
+    --gray-0: #fdfdfd;
+    --gray-50: #f9f9f9;
+    --gray-100: #f4f4f4;
+    --gray-150: #eeeeee;
+    --gray-200: #e5e5e5;
+    --gray-300: #d4d4d4;
+    --gray-400: #a3a3a3;
+    --gray-500: #737373;
+    --gray-600: #525252;
+    --gray-700: #404040;
+    --gray-800: #262626;
+    --gray-900: #171717;
+    --gray-950: #0a0a0a;
+    --purple-0: rgb(245, 244, 253);
+    --purple-100: rgb(234, 232, 251);
+    --purple-200: rgb(214, 210, 246);
+    --purple-300: rgb(192, 188, 240);
+    --purple-400: rgb(169, 163, 232);
+    --purple-500: rgb(105, 98, 210);
+    --purple-600: rgb(82, 75, 184);
+    --purple-700: rgb(59, 53, 153);
+    --purple-800: rgb(41, 35, 126);
+    --purple-900: rgb(30, 25, 113);
+    --mint-0: rgb(244, 252, 247);
+    --mint-100: rgb(230, 247, 237);
+    --mint-200: rgb(211, 240, 211);
+    --mint-300: rgb(184, 228, 196);
+    --mint-400: rgb(141, 207, 170);
+    --mint-500: rgb(91, 175, 138);
+    --mint-600: rgb(56, 140, 110);
+    --mint-700: rgb(34, 107, 86);
+    --mint-800: rgb(21, 74, 60);
+    --mint-900: rgb(12, 46, 38);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+body {
+    align-items: center;
+    background-color: var(--gray-50);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: "Geist", sans-serif;
+    justify-content: center;
+    margin: 0;
+    gap: 2em;
+    min-height: 100vh;
+    padding: 1.5em 1em;
+    color: var(--purple-900);
+}
+
+header {
+    text-align: center;
+    max-width: 34em;
+}
+
+header h1 {
+    font-family: "Space Grotesk", monospace;
+    font-weight: 700;
+}
+
+main {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.row {
+    display: flex;
+    gap: 1em;
+}
+
+section {
+    background-color: var(--gray-0);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+}
+
+.heading {
+    font-family: "Space Grotesk", monospace;
+    font-weight: bold;
+}
+
+.distribution-text {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.distribution-category-container * {
+    display: block;
+    text-align: center;
+}
+
+.category-label {
+    font-weight: 600;
+}
+
+.results-container {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.flips-remaining-container {
+    font-size: 1.25em;
+    text-align: center;
+}
+
+#flips-remaining-label {
+    font-weight: 600;
+}
+
+#points-label {
+    font-weight: 600;
+}
+
+.flip-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.button-semantic {
+    transition: background-color 0.1s ease-in-out;
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: 0.25em;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5em 1em;
+}
+
+.button-semantic:not(:disabled):hover {
+    background-color: var(--button-background-color-hover);
+    cursor: pointer;
+}
+
+.button-semantic:not(:disabled):active {
+    background-color: var(--button-background-color-active);
+}
+
+/* Out of flips — the button stays visible but reads as spent. */
+.button-semantic:disabled {
+    background-color: var(--gray-300);
+    color: var(--gray-700);
+    cursor: not-allowed;
+}
+
+.button-semantic.button-primary {
+    appearance: none;
+    --button-background-color: var(--purple-900);
+    --button-background-color-hover: var(--purple-800);
+    --button-background-color-active: var(--purple-700);
+    color: var(--purple-0);
+}
+
+.button-semantic.button-secondary {
+    appearance: none;
+    --button-background-color: var(--purple-100);
+    --button-background-color-hover: var(--purple-0);
+    --button-background-color-active: white;
+    color: var(--purple-900);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        flex-direction: column;
+    }
+}

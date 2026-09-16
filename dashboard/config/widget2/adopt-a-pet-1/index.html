@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adopt-a-Pet</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="controls.js"></script>
+</head>
+
+<body>
+  <div class="layout">
+    <!-- CONTROL PANEL -->
+    <aside class="controls" aria-label="Design controls">
+      <h2>Redesign Controls</h2>
+
+      <div class="control-group">
+        <h3>Navigation</h3>
+
+        <label for="navPosition">Nav position</label>
+        <select id="navPosition">
+          <option value="bottom">Bottom</option>
+          <option value="top">Top</option>
+        </select>
+
+        <label for="navSize">Nav size</label>
+        <input id="navSize" type="range" min="10" max="20" value="10" />
+
+        <label>
+          <input id="showBack" type="checkbox" checked />
+          Show “Back”
+        </label>
+      </div>
+
+      <div class="control-group">
+        <h3>Readability</h3>
+
+        <label for="textSize">Text size</label>
+        <input id="textSize" type="range" min="8" max="20" value="10" />
+
+        <label for="lineHeight">Line spacing</label>
+        <input id="lineHeight" type="range" min="10" max="18" value="10" />
+
+        <label for="spacing">Spacing</label>
+        <input id="spacing" type="range" min="0" max="28" value="2" />
+
+        <!-- NEW: Tap target size -->
+        <label for="tapSize">Tap target size</label>
+        <input id="tapSize" type="range" min="0" max="100" value="50" />
+      </div>
+
+      <div class="control-group">
+        <h3>Color Contrast</h3>
+
+        <label for="contrast">Contrast</label>
+        <input id="contrast" type="range" min="0" max="100" value="0" />
+      </div>
+
+      <div class="control-group">
+        <button id="reset" type="button">Reset to Bad</button>
+      </div>
+    </aside>
+
+    <!-- APP -->
+    <div class="app" aria-label="Adopt a Pet App (Level 2)">
+
+      <!-- Header -->
+      <header>
+        <div class="brand">
+          <img src="assets/logo.png" alt="PawPrint Shelter Logo" />
+          <span>PawPrint Shelter</span>
+        </div>
+        <div class="header-links">
+          <a href="#contact">Contact</a>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero" aria-label="Hero">
+        <img src="assets/hero-dog.jpg" alt="Happy dog ready for adoption" />
+        <div class="hero-copy">
+          <h1>Adopt a Pet Today</h1>
+          <p>Find your new best friend. Browse our available pets below.</p>
+        </div>
+      </section>
+
+      <!-- Pet Grid (NO FILTERS) -->
+      <main aria-label="Pet listings">
+        <!-- 1 -->
+        <article class="pet-card" aria-label="Pet card: Rocky">
+          <img src="assets/adopt-dog-1.jpg" alt="Rocky the dog" />
+          <h3>Rocky</h3>
+
+          <p class="meta">Age: <span class="value">2 years</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Large</span></p>
+          <p class="meta">Good with kids: <span class="value">Sometimes</span></p>
+
+          <p class="desc">
+            Rocky is energetic and loves long walks, squeaky toys, meeting new people, playing fetch endlessly, and sitting right in the middle of wherever you are trying to walk because he thinks he is much smaller than he actually is and because he is convinced that being directly underfoot is the best possible way to stay close to you at all times even when you are clearly trying to do something else.
+          </p>
+
+          <div class="actions" aria-label="Actions for Rocky">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Rocky — Age: 2 years — Size: Large — Good with kids: Sometimes</p>
+                <p>
+                  Rocky is enthusiastic and friendly but can be bouncy and forgets his size, so he may do best with older kids who can handle a playful, energetic dog and who like being followed everywhere including the kitchen, hallway, and anywhere else you try to walk.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Rocky">Adopt</button>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="pet-card" aria-label="Pet card: Milo">
+          <img src="assets/adopt-cat-2.jpg" alt="Milo the cat" />
+          <h3>Milo</h3>
+
+          <p class="meta">Age: <span class="value">6 months</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Small</span></p>
+          <p class="meta">Good with kids: <span class="value">Yes</span></p>
+
+          <p class="desc">
+            Milo is playful, curious, and always exploring, he loves chasing toy mice, climbing onto shelves he probably should not be on, investigating every bag that enters the house, sprinting down hallways for no obvious reason, and then suddenly flopping down like nothing happened, and because he is still young he learns quickly and enjoys interactive play that keeps his brain busy even when you are just trying to sit down for a minute.
+          </p>
+
+          <div class="actions" aria-label="Actions for Milo">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Milo — Age: 6 months — Size: Small — Good with kids: Yes</p>
+                <p>
+                  Milo enjoys gentle attention and does well with respectful kids who like to play using wand toys and who understand that kittens need breaks, naps, and a calm approach even when they are being silly and zooming around the room.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Milo">Adopt</button>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="pet-card" aria-label="Pet card: Bella">
+          <img src="assets/adopt-dog-2.jpg" alt="Bella the dog" />
+          <h3>Bella</h3>
+
+          <p class="meta">Age: <span class="value">4 years</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Small</span></p>
+          <p class="meta">Good with kids: <span class="value">Yes</span></p>
+
+          <p class="desc">
+            Bella is calm, affectionate, and enjoys being around families, she loves belly rubs, gentle walks, and will happily follow you from room to room just to make sure she is included in absolutely everything, and if you sit down she will quietly appear next to you like she has always been there and like it is her job to supervise the entire household in the sweetest possible way.
+          </p>
+
+          <div class="actions" aria-label="Actions for Bella">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Bella — Age: 4 years — Size: Small — Good with kids: Yes</p>
+                <p>
+                  Bella is gentle and patient and tends to settle quickly after a walk, making her a good fit for families who want a steady companion that enjoys routine, calm attention, and being near people without needing constant excitement.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Bella">Adopt</button>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="pet-card" aria-label="Pet card: Luna">
+          <img src="assets/adopt-cat-1.jpg" alt="Luna the cat" />
+          <h3>Luna</h3>
+
+          <p class="meta">Age: <span class="value">3 years</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Small</span></p>
+          <p class="meta">Good with kids: <span class="value">No</span></p>
+
+          <p class="desc">
+            Luna is quiet and observant and prefers a predictable environment, she enjoys sunny windowsills, gentle pets, and curling up next to you in the evenings, and she would do best in a calm home where she can relax at her own pace without a lot of sudden noise or fast movement, because she likes to choose when she interacts and when she simply watches everything from a comfortable spot.
+          </p>
+
+          <div class="actions" aria-label="Actions for Luna">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Luna — Age: 3 years — Size: Small — Good with kids: No</p>
+                <p>
+                  Luna bonds slowly but deeply and would love an adult or teen household that understands cat body language, appreciates a calm companion, and can offer a quiet routine with cozy places to perch and nap.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Luna">Adopt</button>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="pet-card" aria-label="Pet card: Max">
+          <img src="assets/adopt-dog-3.jpg" alt="Max the dog" />
+          <h3>Max</h3>
+
+          <p class="meta">Age: <span class="value">1 year</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Large</span></p>
+          <p class="meta">Good with kids: <span class="value">Yes</span></p>
+
+          <p class="desc">
+            Max is smart and highly trainable and needs an active home where he can learn new skills, play outside, and burn off energy throughout the day, he thrives with structure and clear expectations and likes having a job to do, and when he is bored he invents his own activities which may include reorganizing your shoes, investigating every corner of the yard, and following you closely to see what happens next.
+          </p>
+
+          <div class="actions" aria-label="Actions for Max">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Max — Age: 1 year — Size: Large — Good with kids: Yes</p>
+                <p>
+                  Max does best with families who like training games and daily exercise, and he can be a great match for kids who enjoy helping with routines like practicing basic cues, going on walks, and playing structured fetch.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Max">Adopt</button>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="pet-card" aria-label="Pet card: Chloe">
+          <img src="assets/adopt-cat-3.jpg" alt="Chloe the cat" />
+          <h3>Chloe</h3>
+
+          <p class="meta">Age: <span class="value">5 years</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Small</span></p>
+          <p class="meta">Good with kids: <span class="value">Yes</span></p>
+
+          <p class="desc">
+            Chloe is affectionate and talkative and enjoys interactive play and will happily keep you company throughout the day, she bonds closely with her person and loves attention and will remind you that it is time to focus on her by politely speaking up, and because she likes engagement she enjoys routines that include play, brushing, and a place to sit where she can watch what you are doing and comment on it.
+          </p>
+
+          <div class="actions" aria-label="Actions for Chloe">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Chloe — Age: 5 years — Size: Small — Good with kids: Yes</p>
+                <p>
+                  Chloe is social and does well with kids who enjoy gentle interaction and can respect when she steps away, and she tends to thrive when there are predictable daily moments for play and attention.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Chloe">Adopt</button>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="pet-card" aria-label="Pet card: Poppy">
+          <img src="assets/dog4-adoption.jpg" alt="Poppy the dog" />
+          <h3>Poppy</h3>
+
+          <p class="meta">Age: <span class="value">10 months</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Small</span></p>
+          <p class="meta">Good with kids: <span class="value">Yes</span></p>
+
+          <p class="desc">
+            Poppy is bright and bouncy and loves sniffing every single thing on a walk, she enjoys learning tricks, chasing soft toys, and then curling up the moment she decides the fun is over, and because she is small she fits nicely into apartments as long as she gets daily play and a chance to explore, and she tends to greet new people with a wag and a quick little hop that makes everyone laugh.
+          </p>
+
+          <div class="actions" aria-label="Actions for Poppy">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Poppy — Age: 10 months — Size: Small — Good with kids: Yes</p>
+                <p>
+                  Poppy is a great match for families who want a small, young pet and who can offer gentle play and short training sessions, and she does best with kids who understand that even small dogs need calm handling and breaks.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Poppy">Adopt</button>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="pet-card" aria-label="Pet card: Duke">
+          <img src="assets/dog5-adoption.jpg" alt="Duke the dog" />
+          <h3>Duke</h3>
+
+          <p class="meta">Age: <span class="value">7 years</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Medium</span></p>
+          <p class="meta">Good with kids: <span class="value">Yes</span></p>
+
+          <p class="desc">
+            Duke is steady and sweet and enjoys routine more than surprises, he likes slow walks, comfortable naps, and being near people without needing to be the center of attention every second, and he is the kind of dog who will quietly sit next to you while you do homework or watch a movie and then follow you to the kitchen just in case something interesting happens, and he responds well to calm voices and predictable schedules.
+          </p>
+
+          <div class="actions" aria-label="Actions for Duke">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Duke — Age: 7 years — Size: Medium — Good with kids: Yes</p>
+                <p>
+                  Duke is a good fit for families who want a calmer companion and can offer a stable home, and he tends to do well with kids who like a gentle dog that enjoys relaxed play and quiet time.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Duke">Adopt</button>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="pet-card" aria-label="Pet card: Nori">
+          <img src="assets/dog6-adoption.jpg" alt="Nori the dog" />
+          <h3>Nori</h3>
+
+          <p class="meta">Age: <span class="value">18 months</span></p>
+          <p class="meta"><span class="label">Size</span>: <span class="value">Medium</span></p>
+          <p class="meta">Good with kids: <span class="value">No</span></p>
+
+          <p class="desc">
+            Nori is sensitive and prefers a quieter environment and can be cautious in busy spaces, she enjoys gentle routines, sniffy walks, and having a safe spot where she can relax, and she does best when people move slowly and give her time to warm up, and while she bonds strongly once she trusts you she can get overwhelmed by sudden noises and quick movement which is why she would prefer an adult household or a home with older teens.
+          </p>
+
+          <div class="actions" aria-label="Actions for Nori">
+            <details class="details">
+              <summary>Details</summary>
+              <div class="details-body">
+                <p><strong>Confirm:</strong> Nori — Age: 18 months — Size: Medium — Good with kids: No</p>
+                <p>
+                  Nori thrives with patient handling and calm spaces, and she would love a home that values a gentle approach, slow introductions, and predictable daily rhythms that help her feel secure.
+                </p>
+              </div>
+            </details>
+            <button class="adopt" type="button" aria-label="Adopt Nori">Adopt</button>
+          </div>
+        </article>
+      </main>
+
+      <!-- Navigation -->
+      <nav aria-label="Bottom navigation" class="nav-bottom">
+        <a href="#">
+          <img src="assets/home.png" alt="Home icon" />
+          <div>Home</div>
+        </a>
+        <a href="#">
+          <img src="assets/dogs.png" alt="Dogs icon" />
+          <div>Dogs</div>
+        </a>
+        <a href="#">
+          <img src="assets/cats.png" alt="Cats icon" />
+          <div>Cats</div>
+        </a>
+        <a class="nav-back" href="#">
+          <img src="assets/back.png" alt="Back icon" />
+          <div>Back</div>
+        </a>
+      </nav>
+
+      <!-- Footer -->
+      <footer id="contact" aria-label="Contact">
+        <p>PawPrint Shelter</p>
+        <p>123 Rescue Lane</p>
+        <p>Open 7 Days a Week</p>
+        <p>Email: adopt@pawprint.org</p>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>

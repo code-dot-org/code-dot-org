@@ -1,0 +1,601 @@
+:root {
+    --slight-off-white: #fdfdfd;
+    --off-white: #f4f4f4;
+    --light-gray: #eeeeee;
+    --purple-0: rgb(245, 244, 253);
+    --purple-100: rgb(234, 232, 251);
+    --purple-200: rgb(214, 210, 246);
+    --purple-300: rgb(192, 188, 240);
+    --purple-400: rgb(169, 163, 232);
+    --purple-500: rgb(105, 98, 210);
+    --purple-600: rgb(82, 75, 184);
+    --purple-700: rgb(59, 53, 153);
+    --purple-800: rgb(41, 35, 126);
+    --purple-900: rgb(30, 25, 113);
+    --mint-0: rgb(244, 252, 247);
+    --mint-100: rgb(230, 247, 237);
+    --mint-200: rgb(211, 240, 211);
+    --mint-300: rgb(184, 228, 196);
+    --mint-400: rgb(141, 207, 170);
+    --mint-500: rgb(91, 175, 138);
+    --mint-600: rgb(56, 140, 110);
+    --mint-700: rgb(34, 107, 86);
+    --mint-800: rgb(21, 74, 60);
+    --mint-900: rgb(12, 46, 38);
+    /* Neutral grays for "inactive / not yet possible" states. */
+    --gray-200: #e6e6ec;
+    --gray-400: #c2c0cf;
+    --gray-500: #8d8aa3;
+}
+
+body {
+    align-items: center;
+    background-color: var(--off-white);
+    box-sizing: border-box;
+    color: var(--purple-900);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    font-family: "Geist", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 1.5em 1em;
+    min-width: 900px;
+}
+
+.button-container {
+    display: flex;
+    gap: 0.5em;
+}
+
+.button-hero {
+    background-color: var(--mint-200);
+    border-radius: 0.5em;
+    border: none;
+    color: inherit;
+    font-family: "Space Grotesk", monospace;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 1em 2em;
+    transition:
+        background-color 0.15s ease-in-out,
+        color 0.15s ease-in-out;
+}
+
+.button-hero:hover {
+    background-color: var(--mint-100);
+    cursor: pointer;
+}
+
+.button-hero:active {
+    background-color: var(--mint-0);
+    cursor: pointer;
+}
+
+.button-semantic {
+    transition: background-color 0.1s ease-in-out;
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: 0.25em;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.5em 1em;
+}
+
+.button-semantic:hover {
+    background-color: var(--button-background-color-hover);
+    cursor: pointer;
+}
+
+.button-semantic:active {
+    background-color: var(--button-background-color-active);
+}
+
+.button-semantic.button-primary {
+    appearance: none;
+    --button-background-color: var(--purple-900);
+    --button-background-color-hover: var(--purple-800);
+    --button-background-color-active: var(--purple-700);
+    color: var(--purple-0);
+}
+
+.button-semantic.button-secondary {
+    appearance: none;
+    --button-background-color: var(--purple-100);
+    --button-background-color-hover: var(--purple-0);
+    --button-background-color-active: white;
+    color: var(--purple-900);
+}
+
+canvas {
+    background-color: white;
+    border-radius: 0.5em;
+    border: 0.1em solid var(--purple-400);
+    display: block;
+}
+
+.draw-canvas {
+    width: 160px;
+    height: 160px;
+    cursor: crosshair;
+    touch-action: none; /* let pointer-drag draw instead of scrolling */
+}
+
+#predict-canvas {
+    width: 180px;
+    height: 180px;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.class-container {
+    background-color: var(--slight-off-white);
+    border-radius: 0.5em;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+}
+
+.class-container input {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    font-family: "Space Grotesk", monospace;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: inherit;
+}
+
+.class-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+    z-index: 1; /* sit above the background wiring layer */
+}
+
+.data-container {
+    background-color: var(--purple-0);
+    border: 0.1em solid var(--purple-400);
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    min-height: 160px;
+    width: 115px;
+    padding: 0.4em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 0.4em;
+}
+
+.draw-data-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+header {
+    color: var(--purple-900);
+    font-family: "Space Grotesk", monospace;
+    font-weight: bold;
+}
+
+main {
+    align-items: center;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 1em;
+    position: relative; /* containing block for the wiring layer */
+}
+
+.prediction-container {
+    align-items: center;
+    background-color: var(--slight-off-white);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+.training-container {
+    align-items: center;
+    background-color: var(--slight-off-white);
+    border: 2px solid transparent; /* reserved so .not-ready adds no shift */
+    border-radius: 0.5em;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    justify-content: center;
+    padding: 1.5em 1em;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    width: 200px;
+    height: 200px;
+}
+
+/* Training isn't possible yet: the central node reads as dormant. */
+.training-container.not-ready {
+    background-color: var(--off-white);
+    border-color: var(--gray-400);
+    border-style: dashed;
+    box-shadow: none;
+}
+
+/* ---------- Accessibility helpers ---------- */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+:focus-visible {
+    outline: 3px solid var(--purple-600);
+    outline-offset: 2px;
+}
+
+/* ---------- Disabled buttons ---------- */
+
+.button-semantic:disabled,
+.button-semantic[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* The hero TRAIN button goes fully gray when training isn't possible, so it
+   clearly reads as "can't do this yet" rather than just a dimmer mint. */
+.button-hero:disabled,
+.button-hero[aria-disabled="true"] {
+    background-color: var(--gray-200);
+    color: var(--gray-500);
+    cursor: not-allowed;
+}
+
+.button-hero:disabled:hover,
+.button-hero[aria-disabled="true"]:hover,
+.button-hero[aria-disabled="true"]:active {
+    background-color: var(--gray-200);
+}
+
+.button-semantic.button-primary:disabled:hover,
+.button-semantic.button-primary[aria-disabled="true"]:hover {
+    background-color: var(--button-background-color);
+}
+
+/* ---------- Category title ---------- */
+
+.class-container input:focus-visible {
+    outline: 3px solid var(--purple-600);
+    outline-offset: 2px;
+    border-radius: 0.25em;
+}
+
+/* ---------- Saved doodles (thumbnails) ---------- */
+
+.data-empty {
+    color: var(--purple-600);
+    font-size: 0.8em;
+    margin: auto;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+.doodle {
+    appearance: none;
+    background: white;
+    border: 0.1em solid var(--purple-300);
+    border-radius: 0.35em;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    padding: 0;
+    position: relative;
+    transition:
+        border-color 0.1s ease-in-out,
+        transform 0.1s ease-in-out;
+}
+
+.doodle canvas {
+    border: none;
+    border-radius: 0.25em;
+    height: 100%;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+.doodle-remove {
+    align-items: center;
+    background-color: var(--purple-700);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-size: 0.85em;
+    height: 1.25em;
+    justify-content: center;
+    line-height: 1;
+    opacity: 0;
+    position: absolute;
+    right: -0.4em;
+    top: -0.4em;
+    transition: opacity 0.1s ease-in-out;
+    width: 1.25em;
+}
+
+.doodle:hover,
+.doodle:focus-visible {
+    border-color: var(--purple-700);
+    transform: scale(1.05);
+}
+
+.doodle:hover .doodle-remove,
+.doodle:focus-visible .doodle-remove {
+    opacity: 1;
+}
+
+/* ---------- Doodle indicator (pips + caption) ---------- */
+
+.doodle-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+}
+
+.pips {
+    display: flex;
+    gap: 0.35em;
+}
+
+.pip {
+    background-color: transparent;
+    border: 0.13em solid var(--purple-400);
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 0.85em;
+    width: 0.85em;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.pip.required {
+    border-style: solid;
+}
+
+.pip:not(.required) {
+    border-style: dashed;
+    opacity: 0.7;
+}
+
+.pip.filled {
+    background-color: var(--purple-700);
+    border-color: var(--purple-700);
+}
+
+.indicator-caption {
+    color: var(--purple-700);
+    font-size: 0.8em;
+    min-height: 1.2em;
+}
+
+.indicator-caption.ready {
+    font-weight: bold;
+}
+
+/* ---------- Training progress + loading animation ---------- */
+
+.button-hero.is-training {
+    animation: pulse 1s ease-in-out infinite;
+    cursor: progress;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.65;
+    }
+}
+
+.train-progress {
+    background-color: var(--purple-200);
+    border-radius: 1em;
+    height: 0.6em;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.train-progress-fill {
+    background-color: var(--mint-600);
+    border-radius: 1em;
+    height: 100%;
+    transition: width 0.2s ease-out;
+    width: 0%;
+    position: relative;
+}
+
+/* Moving shimmer so the bar reads as "working" between epoch updates. */
+.train-progress-fill::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+    animation: shimmer 1s linear infinite;
+}
+
+@keyframes shimmer {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.train-status {
+    color: var(--purple-900);
+    font-size: 0.85em;
+    max-width: 12em;
+    text-align: center;
+}
+
+/* ---------- Prediction ---------- */
+
+.prediction-container canvas {
+    border-color: var(--purple-400);
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+/* Locked until a model is trained: the canvas can't be drawn in, and looks
+   it. Drawing is also blocked in JS (the surface is disabled). */
+.prediction-container.is-locked #predict-canvas {
+    background-color: var(--off-white);
+    border-color: var(--purple-200);
+    border-style: dashed;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#prediction {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    min-height: 3em;
+    justify-content: center;
+    max-width: 180px;
+}
+
+.prediction-label {
+    color: var(--purple-600);
+    font-size: 0.85em;
+}
+
+.prediction-name {
+    font-family: "Space Grotesk", monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+/* ---------- Background wiring ---------- */
+
+.wiring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* behind the columns, above main's background */
+    pointer-events: none;
+    overflow: visible;
+}
+
+/* The always-visible wire connecting the containers. */
+.wire {
+    fill: none;
+    stroke: var(--purple-700);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    opacity: 0.5;
+    transition:
+        opacity 0.2s ease,
+        stroke 0.2s ease;
+}
+
+/* A connection that can't carry data yet (its source isn't ready): a faint,
+   dashed wire instead of the solid "live" one. */
+.wire.is-dormant {
+    stroke: var(--gray-400);
+    stroke-dasharray: 4 7;
+    opacity: 0.55;
+}
+
+/* A brighter pulse that travels along a wire while it is "active". */
+.wire-flow {
+    fill: none;
+    stroke: var(--purple-500);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 0.18 0.82; /* fractions of pathLength="1" */
+    opacity: 0;
+}
+
+.wire-flow.is-flowing {
+    opacity: 1;
+    animation: wire-flow 0.9s linear infinite;
+}
+
+@keyframes wire-flow {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -1; /* travels from the path's start to its end */
+    }
+}
+
+/* ---------- Motion preferences ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .button-hero.is-training,
+    .train-progress-fill::after {
+        animation: none;
+    }
+
+    /* Keep the "active" cue without motion: a steady brighter wire. */
+    .wire-flow.is-flowing {
+        animation: none;
+        stroke-dasharray: none;
+        opacity: 0.85;
+    }
+}

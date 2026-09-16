@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>RemindMe — Reminders</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Remind<span>Me</span></a>
+      <nav>
+        <ul class="nav">
+          <li><a class="nav-link" href="index.html">🏠 Home</a></li>
+          <li><a class="nav-link" href="about.html">❓ About</a></li>
+          <li>
+            <button id="themeToggle" class="btn btn-ghost">
+              🌗 Theme
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1 class="title">Your reminders, simplified</h1>
+          <p class="lede">Add tasks, mark them done, and keep your day on track.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container grid">
+      <article class="card">
+        <h2 class="h2">Add Reminder</h2>
+
+        <!-- NOTE: no form submission. Just input + buttons. -->
+        <div class="stack" role="group">
+          <label id="addLabel" class="field">
+            <span class="label">Title</span>
+            <input id="title" class="input" name="title" type="text" placeholder="e.g., Finish history outline" />
+          </label>
+
+          <div class="row">
+            <button id="addBtn" type="button" class="btn btn-primary">Add</button>
+            <button id="clearAll" type="button" class="btn btn-secondary">Clear All</button>
+          </div>
+
+          <p id="hint" class="hint"></p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="h2">Reminders</h2>
+        <ul id="list" class="list"></ul>
+        <p id="emptyState" class="empty">No reminders yet. Add your first one above.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 RemindMe</p>
+      <nav>
+        <a class="nav-link" href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Load script AFTER the DOM to avoid timing issues -->
+  <script src="script.js"></script>
+</body>
+</html>
