@@ -99,7 +99,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'healthBar',
     name: 'Health Bar',
     description:
-      'A bar that fills itself in. Point it at an actor with “subject” and it shows how much health that actor has left. Put it in the corner for a HUD, or add “Attached” to have it ride above the actor it is about.',
+      'A bar that fills itself in. Point it at an actor with “subject” and it shows how much health that actor has left. Put it in the corner for a HUD, or set its parent to have it ride above the actor it is about.',
     // HEALTH ALONE, for what it READS. The health belongs to the actor this
     // bar is pointed at, and a `world_get_Health_…` block in a project without
     // that rule is one the palette never mints — the file then fails to
@@ -110,8 +110,8 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     // `define property` rows now, where they used to be a rule this had to
     // ask for as well.
     //
-    // NOT Attachment: where a bar sits is the project's business. One over an
-    // enemy's head elects it too; one in the corner of the screen does not.
+    // Where a bar sits is the project's business: one over an enemy's head is
+    // the enemy's child (specs/PARENTING.md); one in the corner is nobody's.
     requires: ['Health'],
     // …and the bar it IS. `acts like ⟨actors/progressBar⟩` names a module
     // path, and a path naming a file the project lacks inherits nothing at all

@@ -4349,7 +4349,7 @@ const people: WorldScenario = {
     }),
     stockActors: ['label'],
     sprites: ['player'],
-    rules: ['patrol', 'attachment'],
+    rules: ['patrol'],
   }),
   instructions: `
 ## Somebody who is there
@@ -4358,17 +4358,17 @@ Mara walks her beat, and her name stays where it was put. It was put there
 once, at the start, by a \`set position\` that has long since finished running.
 
 A name over somebody's head is not a place — it is a RELATIONSHIP: this thing,
-that thing, and how far apart they are. **Attachment** is that relationship,
-and it is the same sentence as a camera following a player, one level down.
+that thing, and how far apart they are. A **parent** is that relationship:
+where a child sits is measured from its parent, so wherever the parent goes,
+the child is still the same distance away.
 
 ### What you do
 
-1. Give the Label **use trait ⟨Attached⟩**.
-2. **set attached to of ⟨the Label⟩ to ⟨any Villager⟩**, and **set offset** to
-   x 0, y -24 — over her head rather than on it.
-3. Run it. The name goes with her, and nothing copies a position every frame
+1. **set parent of ⟨the Label⟩ to ⟨any Villager⟩**. The name stays exactly
+   where it was — over her head — and is measured from her now.
+2. Run it. The name goes with her, and nothing copies a position every frame
    in anything you wrote.
-4. Give the Villager a second beat with **patrols down** as well. The name
+3. Give the Villager a second beat with **patrols down** as well. The name
    still follows, because the relationship never said anything about walking.
 `.trim(),
 };

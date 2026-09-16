@@ -178,13 +178,15 @@ Every line of it lands in the ACTOR:
                              when ⟨this actor⟩ is created:
                                add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
                                  set subject of ⟨bar⟩ to ⟨this actor⟩
-                                 set attached to of ⟨bar⟩ to ⟨this actor⟩
+                                 set parent of ⟨bar⟩ to ⟨this actor⟩
+                                 set local position of ⟨bar⟩ to x 0 y −24
                                  set ⟨health bar⟩ of ⟨this actor⟩ to ⟨bar⟩
 
-                             when ⟨this actor⟩ is removed:
-                               remove actor ⟨health bar of this actor⟩
-
-    actors/healthBar.actor   use trait ⟨Attachment#Attached⟩
+(An earlier version added a `when ⟨this actor⟩ is removed: remove actor ⟨health
+bar of this actor⟩` hat and elected the Attachment rule's `Attached` on the
+bar. The bar is the actor's CHILD now — specs/PARENTING.md — which is what
+makes it ride along and what removes it with the actor, and the rule is
+gone.)
 
 **No world is touched, and the first draft's mistake is why that matters.** It
 placed the bar in every `.world` and pointed it with `any ⟨kind⟩`, which was
@@ -227,15 +229,11 @@ reading rebinds `this actor` to the thing being placed — and both halves of
 this wiring are about the actor that was CREATED, which is the handler's own
 subject.
 
-**No offset**, though a bar over a head plainly needs one: 24 above is already
-the Attachment rule's default, chosen there for this. A line saying what would
-have happened anyway is a line to keep in step with a default that may change
-for a reason.
-
-PROPOSED TO CHANGE: specs/PARENTING.md retires the Attachment rule for a
-`parent` every actor has. The bar is then placed 24 above its target by one
-row and given the target as its parent; the `when removed` handler goes,
-since a parent's removal removes its children.
+**24 above, in the bar's own frame.** `set parent` keeps the bar where
+`add actor` made it, and one `set local position` after it puts it over the
+head whatever the actor's size or heading — which is where the Attachment
+rule's default used to put it, now said in the actor's file where it can be
+read (specs/PARENTING.md).
 
 ## The second one: the camera follows it
 
@@ -567,7 +565,7 @@ health` is
   already an event), and the flicker that makes Health's existing mercy time
   visible.
 - **A voice** — a Speech Box that rides above an actor, a name plate, a
-  floating "+10". Composition of Writing and Attachment, no new rules. Typing
+  floating "+10". Composition of Writing and a parent, no new rules. Typing
   what it says is built (above), and is the first one whose blocks used to be a
   rule.
 - **A verb it did not have** — zaps, chases, is pushable, damages on touch.

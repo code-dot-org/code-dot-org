@@ -610,8 +610,13 @@ no-op.
    parent is chosen in the inspector (`withParent`), and shows a child's
    place on the canvas beside its stored position. Parenting by dropping
    onto a placement waits for the Panel to say which kinds accept children.
-4. **Retire Attachment.** The health enhancement's rows and the villager
-   lesson's steps and check; the stock Health Bar's trait; the rule file and
-   its generator script removed; the enhancement and lesson tests updated.
+4. **Retire Attachment — DONE.** The rule file, its generator script and
+   its demo are gone, and so is the `Attached` election on the stock Health
+   Bar. The health enhancement writes `set parent of ⟨bar⟩` and `set local
+position of ⟨bar⟩ to x 0 y −24` where it wrote `set attached to`, and no
+   longer writes the `when removed` hat, since the bar goes with its parent
+   (`actors/enhance/__tests__/health` plays the removal). The villager
+   lesson is one row, `set parent of ⟨the Label⟩ to ⟨any Villager⟩`, and its
+   tile hands over that block and `set local position`.
 5. **Panel**, as a Label with no words that accepts children in the editor,
    and a dialog in the Interface Kit's map to try the group on.

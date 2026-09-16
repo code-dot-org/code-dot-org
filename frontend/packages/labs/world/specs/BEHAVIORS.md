@@ -195,9 +195,9 @@ it was being written into, and esbuild refused the duplicate symbol.
 Nobody reached for it. Six weeks after it was built the lab held one
 `.behavior` — Tapper's `Spin`, written to demonstrate the construct — and one
 lesson, written to teach it. Against that: twenty-three actor-own `each frame`s
-across the lessons and fixtures, and forty-seven stock rules, four of them
-exactly behavior-shaped (`attachment`, `drag`, `expires`, `patrol`: one trait,
-one step, no events), every one of which the lab's own authors wrote as a
+across the lessons and fixtures, and forty-six stock rules, three of them
+exactly behavior-shaped (`drag`, `expires`, `patrol`: one trait, one step, no
+events), every one of which the lab's own authors wrote as a
 `.rule`.
 
 The diagnosis is in the table at the top. The third row was not empty because

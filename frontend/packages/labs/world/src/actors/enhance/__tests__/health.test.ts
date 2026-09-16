@@ -45,12 +45,14 @@ describe('the health enhancement, as edits', () => {
     const after = healthEnhancement.apply(before, PLAYER);
 
     expect(at(after, 'actors/player.actor')).toContain('Health#HasHealthTrait');
-    // The bar, the rule its drawing reads, and the rule that makes it ride.
+    // The bar and the rule its drawing reads. Riding along is the engine's
+    // own parenting (specs/PARENTING.md), so no rule is imported for it and
+    // the bar's file is the shelf's, untouched.
     expect(at(after, 'actors/healthBar.actor')).toBeTruthy();
     expect(at(after, 'rules/health.rule')).toBeTruthy();
-    expect(at(after, 'rules/attachment.rule')).toBeTruthy();
-    expect(at(after, 'actors/healthBar.actor')).toContain(
-      'Attachment#AttachedTrait',
+    expect(at(after, 'rules/attachment.rule')).toBeUndefined();
+    expect(at(after, 'actors/healthBar.actor')).toBe(
+      stockActorById('healthBar')!.contents,
     );
   });
 
@@ -64,7 +66,8 @@ describe('the health enhancement, as edits', () => {
     expect(actor).toContain('world_on_Space_CreatedEvent');
     expect(actor).toContain('world_add_actor');
     expect(actor).toContain('ActorsHealthBar_SubjectProperty');
-    expect(actor).toContain('world_set_Attachment_AttachedToProperty');
+    expect(actor).toContain('world_set_Space_ParentProperty');
+    expect(actor).toContain('world_set_local_position');
     // Named, so `this actor` in the body still means the actor that was
     // created rather than the bar being placed.
     expect(actor).toContain('playerBar');
@@ -74,18 +77,19 @@ describe('the health enhancement, as edits', () => {
     );
   });
 
-  it('teaches the actor to take its bar away again', () => {
+  it('gives the actor a property to remember its bar in, and no remover', () => {
     const actor = at(
       healthEnhancement.apply(withPlayer(), PLAYER),
       'actors/player.actor',
     )!;
 
-    // A property to remember it in, because `as ⟨bar⟩` is a block scope and
-    // the handler that removes it is a different root entirely.
+    // A property to remember it in, because `as ⟨bar⟩` is a block scope. No
+    // handler takes the bar away: a child goes with its parent
+    // (specs/PARENTING.md), so the one an earlier version wrote is gone.
     expect(actor).toContain('world_rule_property');
     expect(actor).toContain('health bar');
-    expect(actor).toContain('world_on_Space_RemovedEvent');
-    expect(actor).toContain('world_remove_actor');
+    expect(actor).not.toContain('world_on_Space_RemovedEvent');
+    expect(actor).not.toContain('world_remove_actor');
   });
 
   it('does nothing the second time', () => {
@@ -172,10 +176,10 @@ describe('the health enhancement, played', () => {
       MostHealthProperty: never;
     };
     // TWO ticks, and the reason is the design: `is created` is queued like
-    // every other event, so the bar is added on the first and the attachment
-    // step puts it over the head on the second. One frame, and it buys a
-    // handler that may add an actor without the world growing while somebody
-    // walks it (`engine/rules/spatial`).
+    // every other event, so the bar is added on the first tick's flush and
+    // is in the world by the second. One frame, and it buys a handler that
+    // may add an actor without the world growing while somebody walks it
+    // (`engine/rules/spatial`).
     world.tick(1 / 60);
     world.tick(1 / 60);
     const actors = [...world.actors];
@@ -229,8 +233,8 @@ describe('the health enhancement, played', () => {
     const [player] = players;
     const [bar] = bars;
 
-    // 24 above, which is the Attachment rule's own default and the reason the
-    // enhancement writes no offset of its own.
+    // 24 above, in the actor's own frame: the bar is the actor's child at a
+    // local position of (0, −24) (specs/PARENTING.md).
     expect(bar.get(PositionProperty).x).toBeCloseTo(
       player.get(PositionProperty).x,
       3,
@@ -252,6 +256,15 @@ describe('the health enhancement, played', () => {
       player.get(PositionProperty).y - 24,
       3,
     );
+  }, 60000);
+
+  it('takes the bar away with the actor', async () => {
+    // What the removed-handler used to do, and what a child does for free.
+    const {world, players, bars} = await played();
+    expect(bars).toHaveLength(1);
+    world.removeActor(players[0]);
+    world.tick(1 / 60);
+    expect([...world.actors]).toHaveLength(0);
   }, 60000);
 
   it('gives every one of them its own bar', async () => {

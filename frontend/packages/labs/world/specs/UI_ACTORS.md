@@ -204,8 +204,9 @@ set subject of ⟨any ⟨Health Bar⟩⟩ to ⟨this actor⟩
 
 WHERE IT SITS IS A SEPARATE QUESTION, and that is the design. A bar in the
 corner of the screen shows the player and must not follow the player; a bar
-over an enemy's head must. So position is `rules/attachment`'s, and a floating
-bar is this actor with `Attached` elected too. Two intentions, two properties.
+over an enemy's head must. So position is the project's, and a floating
+bar is this actor with its `parent` set too (specs/PARENTING.md). Two
+intentions, two properties.
 
 **It took three tries, and the wrong turns are the useful part.** The first
 elected `Shows Progress` and came with a rule whose only job was a step writing

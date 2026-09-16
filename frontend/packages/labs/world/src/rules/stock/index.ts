@@ -11,7 +11,6 @@
 // default project is a project that imported it.
 
 import {arrowsRule} from './arrows';
-import {attachmentRule} from './attachment';
 import {boundsRule} from './bounds';
 import {cameraRule} from './camera';
 import {cameraConfinedRule} from './cameraConfined';
@@ -191,15 +190,6 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Moves whatever is standing on an actor along with it, however that actor is being moved \u2014 a lift, a raft, a platform on a track. Two abilities: what carries, and what rides.',
     provides: ['Carries', 'Rides'],
     contents: carryRule,
-  },
-  {
-    id: 'attachment',
-    name: 'Attachment',
-    ability: 'Rides on an Actor',
-    description:
-      'Keeps one actor on another, at an offset it carries. A health bar over an enemy, a name over a player, a shield around a ship — anything that should move as one thing with something else.',
-    provides: ['Attached'],
-    contents: attachmentRule,
   },
   {
     id: 'time',
@@ -570,5 +560,4 @@ export {
   gridRule,
   conversationRule,
   inventoryRule,
-  attachmentRule,
 };

@@ -18,10 +18,10 @@
 //
 // WHERE IT SITS IS A SEPARATE QUESTION, deliberately. A bar in the corner of
 // the screen shows the player and must not follow the player; a bar over an
-// enemy's head must. So position is Attachment's, and a floating one is this
-// actor with `Attached` elected as well and `attached to` set to the same
-// thing. One intention each. An earlier version used `attached to` for both,
-// which made the commonest health bar there is — the one in the HUD —
+// enemy's head must. So position is the project's, and a floating one is this
+// actor with its `parent` set to the same thing (specs/PARENTING.md). One
+// intention each. An earlier version used the rider's `attached to` for
+// both, which made the commonest health bar there is — the one in the HUD —
 // impossible to write.
 //
 // IT ACTS LIKE A PROGRESS BAR, which is the whole of what it has in common

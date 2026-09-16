@@ -48,7 +48,6 @@ const RULES = [
   'spawner',
   'score',
   'patrol',
-  'attachment',
   'conversation',
   'camera',
   'cameraFollow',

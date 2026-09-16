@@ -479,7 +479,7 @@ The first thing anybody wants is for something to move when they press a key.
 | `adventure/world`  | A room three screens wide, seen through a window that never moves. | (Camera family, if not held)           | `[o]` the player leaves the first screen and the view follows                 |
 | `adventure/rooms`  | Two rooms in two files, and a door that does nothing.              | `clear world`; `load map` in a handler | `[o]` the Door is gone, a Chest has arrived, and the Player is at the doorway |
 | `adventure/keys`   | Two locked doors, one key, and no way through either of them.      | Inventory rule                         | `[o]` the first door opens, the second stays shut                             |
-| `adventure/people` | A villager who walks her beat and leaves her own name behind.      | Patrol, Attachment rules               | `[o]` the NPC patrols and its conversation starts on contact                  |
+| `adventure/people` | A villager who walks her beat and leaves her own name behind.      | Patrol rule; parenting                 | `[o]` the NPC patrols and its conversation starts on contact                  |
 | `adventure/errand` | Four things to find, and a bar that has no idea how it is going.   | Progress rule; the adventure template  | `[o]` progress reaches 1 exactly when the last item is found                  |
 
 ### Genre: Simulation — entered from Place and Input

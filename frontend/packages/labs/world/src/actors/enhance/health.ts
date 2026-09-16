@@ -17,19 +17,19 @@
 //                            when ⟨this actor⟩ is created:
 //                              add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
 //                                set subject of ⟨bar⟩ to ⟨this actor⟩
-//                                set attached to of ⟨bar⟩ to ⟨this actor⟩
+//                                set parent of ⟨bar⟩ to ⟨this actor⟩
+//                                set local position of ⟨bar⟩ to x 0 y −24
 //                                set ⟨health bar⟩ of ⟨this actor⟩ to ⟨bar⟩
 //
-//                            when ⟨this actor⟩ is removed:
-//                              remove actor ⟨health bar of this actor⟩
+// THE BAR IS THE ACTOR'S CHILD (specs/PARENTING.md), which is what makes it
+// ride along and what takes it away again: a parent removed removes its
+// children, so the handler an earlier version wrote for that — `when this
+// actor is removed: remove actor ⟨health bar of this actor⟩` — is gone, and
+// with it the reason the Attachment rule existed.
 //
-//   actors/healthBar.actor   use trait ⟨Attachment#Attached⟩
-//
-// THE ACTOR REMEMBERS ITS BAR, in a property of its own, and that is what the
-// second handler is for: an actor removed with its bar still in the world
-// leaves a bar about nobody, hanging where its subject used to be. The
-// variable the placement binds cannot answer this — `add actor` opens a block
-// scope, so `as ⟨bar⟩` is visible in that body and nowhere else — and a
+// THE ACTOR STILL REMEMBERS ITS BAR, in a property of its own, because a
+// project wants to say things about it — hide it, colour it — and `as ⟨bar⟩`
+// is a block scope visible in the `add actor` body and nowhere else. A
 // property is what an actor has that outlives a statement.
 //
 // NO WORLD IS TOUCHED, and that is the whole of the second draft. The first one
@@ -49,10 +49,9 @@
 // this wiring are about the actor that was CREATED, which is the handler's own
 // subject (`blockly/extensions/addActorName`).
 //
-// NO OFFSET, though a bar over a head plainly needs one: 24 above is already
-// the Attachment rule's default, chosen there for exactly this. A line saying
-// what would have happened anyway is a line to keep in step with a default
-// that may change for a reason.
+// 24 ABOVE, said in the bar's own frame: `set parent` keeps the bar where it
+// was made, which is wherever `add actor` put it, and one `set local position`
+// after it puts it over the head whatever the actor's size or heading.
 //
 // The bar stays a FILE in both: `add actor ⟨Health Bar⟩` reads the same in a
 // world as in an actor, and a world that defines its own actors has no more
@@ -65,15 +64,7 @@ import {fileIdAt} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
-import {
-  edit,
-  electTraits,
-  fileOf,
-  importRules,
-  me,
-  subjectOf,
-  wears,
-} from './actorPatch';
+import {edit, electTraits, fileOf, me, subjectOf, wears} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
 import {
   addRoot,
@@ -90,8 +81,6 @@ const HAS_HEALTH = 'Health#HasHealthTrait';
 /** `when ⟨this actor⟩ is created` — the Space rule's own event, minted as a
  *  hat by the same machinery every rule event is (`blockly/domainBlocks`). */
 const CREATED_HAT = 'world_on_Space_CreatedEvent';
-/** …and its other end, for taking the bar away again. */
-const REMOVED_HAT = 'world_on_Space_RemovedEvent';
 /**
  * The property the actor keeps its bar in.
  *
@@ -101,7 +90,6 @@ const REMOVED_HAT = 'world_on_Space_RemovedEvent';
  */
 const BAR_PROPERTY = 'health bar';
 const BAR_PROPERTY_EXPORT = 'HealthBarProperty';
-const ATTACHED = 'Attachment#AttachedTrait';
 
 /** What an own property this actor declares is keyed by: its file. */
 const ownerOf = (target: EnhanceTarget): string => target.path;
@@ -124,14 +112,6 @@ const declareBar = (): BlockJson => ({
     TYPE: 'actor',
     ACCESS: 'writable',
     NAME: BAR_PROPERTY,
-  },
-});
-
-/** `⟨health bar⟩ of this actor`, on whoever declares it. */
-const barOfMe = (target: EnhanceTarget) => ({
-  block: {
-    type: `world_get_${pathSlug(ownerOf(target))}_${BAR_PROPERTY_EXPORT}`,
-    inputs: {ACTOR: me()},
   },
 });
 
@@ -170,18 +150,30 @@ const handler = (target: EnhanceTarget): BlockJson => {
               inputs: {ACTOR: bar, VALUE: me()},
               next: {
                 block: {
-                  // …and where it sits, which is a separate question from
-                  // what it is about: a HUD bar shows the player and must not
-                  // follow it. How far above is the Attachment rule's default.
-                  type: 'world_set_Attachment_AttachedToProperty',
+                  // …and whose it is, which is a separate question from what
+                  // it is about: a HUD bar shows the player and must not
+                  // follow it. A child goes where its parent goes, and goes
+                  // when its parent goes (specs/PARENTING.md).
+                  type: 'world_set_Space_ParentProperty',
                   inputs: {ACTOR: bar, VALUE: me()},
                   next: {
                     block: {
-                      // …and the actor remembers it, because `as ⟨bar⟩` is a
-                      // block scope and the handler that takes it away again
-                      // is somewhere else entirely.
-                      type: `world_set_${pathSlug(ownerOf(target))}_${BAR_PROPERTY_EXPORT}`,
-                      inputs: {ACTOR: me(), VALUE: bar},
+                      // …and where it sits on its parent: over the head.
+                      type: 'world_set_local_position',
+                      inputs: {
+                        ACTOR: bar,
+                        X: {block: {type: 'math_number', fields: {NUM: 0}}},
+                        Y: {block: {type: 'math_number', fields: {NUM: -24}}},
+                      },
+                      next: {
+                        block: {
+                          // …and the actor remembers it, because `as ⟨bar⟩`
+                          // is a block scope and a project may want to say
+                          // things about the bar later.
+                          type: `world_set_${pathSlug(ownerOf(target))}_${BAR_PROPERTY_EXPORT}`,
+                          inputs: {ACTOR: me(), VALUE: bar},
+                        },
+                      },
                     },
                   },
                 },
@@ -193,18 +185,6 @@ const handler = (target: EnhanceTarget): BlockJson => {
     },
   };
 };
-
-/** The other hat: when it goes, its bar goes with it. */
-const remover = (target: EnhanceTarget): BlockJson => ({
-  type: REMOVED_HAT,
-  inputs: {ACTOR: subjectOf()},
-  next: {
-    block: {
-      type: 'world_remove_actor',
-      inputs: {ACTOR: barOfMe(target)},
-    },
-  },
-});
 
 /** Whether this actor already brings its own bar. */
 const brings = (contents: string, target: EnhanceTarget): boolean => {
@@ -226,7 +206,7 @@ export const healthEnhancement: Enhancement = {
   name: 'Health, and a bar above it',
   description:
     'Gives the actor health it can lose, and a Health Bar that rides over its head showing how much is left. Every one of these actors gets its own, brought along when it appears and taken away when it goes.',
-  brings: ['Has Health', 'Attached', 'a Health Bar it carries with it'],
+  brings: ['Has Health', 'a Health Bar it carries with it'],
   refuse(_source: MultiFileSource, target: EnhanceTarget) {
     // A bar about itself would ride above its own head and draw its own empty
     // health, which is a picture of nothing rather than an error.
@@ -242,10 +222,9 @@ export const healthEnhancement: Enhancement = {
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
     let current = source;
-    // The bar brings Health with it; Attachment is what makes it ride along,
-    // and nothing else here would have imported it.
+    // The bar brings Health with it; riding along is the engine's own
+    // parenting and imports nothing.
     current = importStockActor(current, stockActorById('healthBar')!).source;
-    current = importRules(current, ['Attachment']);
 
     const {path, root} = fileOf(target);
     const targetId = fileIdAt(current, path);
@@ -257,18 +236,10 @@ export const healthEnhancement: Enhancement = {
         }
         if (!brings(next, target)) {
           next = addRoot(next, handler(target));
-          next = addRoot(next, remover(target));
           next = withVariable(next, barVariable(target));
         }
         return next;
       });
-    }
-
-    const barId = fileIdAt(current, `${BAR_PATH}.actor`);
-    if (barId) {
-      current = edit(current, barId, contents =>
-        electTraits(contents, {type: 'world_actor'}, [ATTACHED]),
-      );
     }
     return current;
   },

@@ -2771,7 +2771,13 @@ export const TILES: readonly Tile[] = [
       'An actor with a life of its own, and a label that travels with it.',
     task: 'A villager who walks her beat and leaves her own name behind.',
     requires: ['adventure/world'],
-    unlocks: [{kind: 'rule', id: 'attachment'}],
+    // The Space rule's own, which every project holds; what the tile hands
+    // over is the two blocks that make one actor another's
+    // (specs/PARENTING.md), the way `place/actor` hands over `set position`.
+    unlocks: [
+      {kind: 'block', type: 'world_set_Space_ParentProperty'},
+      {kind: 'block', type: 'world_set_local_position'},
+    ],
     // Electing on ONE placed actor is `story/reveal`'s block, a region away.
     offers: [{kind: 'block', type: 'world_add_trait'}],
     check: {

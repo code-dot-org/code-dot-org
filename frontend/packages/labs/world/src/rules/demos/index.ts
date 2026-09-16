@@ -7,7 +7,6 @@
 import {getDemoBaseUrl} from '../../runtime/worldConfig';
 
 import {arrowsDemo} from './arrows';
-import {attachmentDemo} from './attachment';
 import {boundsDemo} from './bounds';
 import {
   cameraConfinedDemo,
@@ -66,7 +65,6 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   patrol: patrolDemo,
   carry: carryDemo,
   grid: gridDemo,
-  attachment: attachmentDemo,
   time: timeDemo,
   spawner: spawnerDemo,
   conversation: conversationDemo,

@@ -3661,36 +3661,21 @@ describe('the people lesson’s check', () => {
       )!;
       const body = inSocket(label, 'DO')!;
       const me = () => ({block: {type: 'world_this_actor'}});
+      // One row: the name is already over her head, and a parent keeps a
+      // child where it is (specs/PARENTING.md).
       label.inputs!.DO = {
         block: {
-          type: 'world_add_trait',
-          fields: {TRAIT: 'Attachment#AttachedTrait'},
-          inputs: {ACTOR: me()},
-          next: {
-            block: {
-              type: 'world_set_Attachment_AttachedToProperty',
-              inputs: {
-                ACTOR: me(),
-                VALUE: {
-                  block: {
-                    type: 'world_actor_kind',
-                    fields: {ACTOR: actorPath('villager')},
-                  },
-                },
-              },
-              next: {
-                block: {
-                  type: 'world_set_Attachment_OffsetProperty',
-                  inputs: {
-                    ACTOR: me(),
-                    X: {shadow: {type: 'math_number', fields: {NUM: 0}}},
-                    Y: {shadow: {type: 'math_number', fields: {NUM: -24}}},
-                  },
-                  next: {block: body},
-                },
+          type: 'world_set_Space_ParentProperty',
+          inputs: {
+            ACTOR: me(),
+            VALUE: {
+              block: {
+                type: 'world_actor_kind',
+                fields: {ACTOR: actorPath('villager')},
               },
             },
           },
+          next: {block: body},
         },
       };
       return JSON.stringify(workspace);
