@@ -16,6 +16,7 @@ import {COIN_ANIMATION, coinActor} from './coin';
 import {GROUND_SPRITE, groundActor} from './ground';
 import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
+import {panelActor} from './panel';
 import {PLAYER_ANIMATION, playerActor} from './player';
 import {PORTRAIT_SPRITE, portraitActor} from './portrait';
 import {progressBarActor} from './progressBar';
@@ -157,6 +158,17 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: ['Time'],
     actors: ['label'],
     contents: speechBoxActor,
+  },
+  {
+    id: 'panel',
+    name: 'Panel',
+    description:
+      'A box behind a group. Make a title, a field and a button its children and they move, turn and fade with it — a dialog is a Panel and what it carries.',
+    // Nothing: a fill, an edge and the box the Label it acts like already
+    // has. Carrying things is the engine's own parenting (specs/PARENTING.md).
+    requires: [],
+    actors: ['label'],
+    contents: panelActor,
   },
   {
     id: 'portrait',

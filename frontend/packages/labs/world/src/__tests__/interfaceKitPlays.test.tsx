@@ -10,6 +10,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {PositionProperty, Vector, type Actor} from '../engine';
 import {PORTRAIT} from '../fixtures/interfaceKit';
 import {WORLD_SCENARIOS} from '../fixtures/scenarios';
 import {projectFiles} from '../runtime/projectFiles';
@@ -55,6 +56,25 @@ describe('the interface kit', () => {
     // The field ships EMPTY, where a Label ships with words: a field whose
     // first keystroke has to delete something is a field with a bug in it.
     expect(kit.says('actors/textInput')).toBe('');
+  });
+
+  it('is a dialog: the form is the Panel’s, and goes where the Panel goes', async () => {
+    // The title, the field, the button and the bar are the Panel's children
+    // (specs/PARENTING.md): each is stored in the Panel's frame and lands
+    // where the map editor and the game both put it. The test's clicks
+    // above still land, because the Panel is at (160, 100) and the field
+    // sits 20 above its middle.
+    const {world} = await open();
+    const actors = [...world.actors] as Actor[];
+    const panel = actors.find(actor => actor.type === 'actors/panel')!;
+    const field = actors.find(actor => actor.type === 'actors/textInput')!;
+    expect(field.parent()).toBe(panel);
+    expect(panel.children()).toHaveLength(4);
+    const before = field.get(PositionProperty);
+    expect([before.x, before.y]).toEqual([160, 80]);
+    panel.set(PositionProperty, new Vector(200, 300));
+    const after = field.get(PositionProperty);
+    expect([after.x, after.y]).toEqual([200, 280]);
   });
 
   it('is seen through a phone-shaped window, on a map of the same size', async () => {

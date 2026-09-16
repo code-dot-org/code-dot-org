@@ -618,5 +618,11 @@ position of ⟨bar⟩ to x 0 y −24` where it wrote `set attached to`, and no
    (`actors/enhance/__tests__/health` plays the removal). The villager
    lesson is one row, `set parent of ⟨the Label⟩ to ⟨any Villager⟩`, and its
    tile hands over that block and `set local position`.
-5. **Panel**, as a Label with no words that accepts children in the editor,
-   and a dialog in the Interface Kit's map to try the group on.
+5. **Panel — DONE** (`actors/stock/panel`): a Label with no words and a
+   face of its own, on the shelf beside the Speech Box and unlocked with the
+   Button. The Interface Kit's form is a Dialog panel carrying the title,
+   the field, the button and the bar as children stored in its frame, which
+   the play test moves as a group. Parenting by DROPPING a placement onto
+   another in the editor is the one piece of the plan not built: nothing
+   yet says which kinds accept children, and the inspector's `parent` field
+   does the job meanwhile.

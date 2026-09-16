@@ -2491,8 +2491,11 @@ export const TILES: readonly Tile[] = [
     requires: ['story/script'],
     unlocks: [
       {kind: 'block', type: 'world_do_Conversation_SendToLineAction'},
-      // Something to click an answer with.
+      // Something to click an answer with, and something to put it on: a
+      // question is a Panel with a line and two Buttons, which it carries
+      // (specs/PARENTING.md).
       {kind: 'actor', id: 'button'},
+      {kind: 'actor', id: 'panel'},
     ],
     offers: [
       {kind: 'block', type: 'controls_if'},

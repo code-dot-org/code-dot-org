@@ -158,19 +158,19 @@ a rule pulls its dependencies.
 
 ## The base set, and what each one still waits on
 
-| actor        | what it is                                        | state                                      |
-| ------------ | ------------------------------------------------- | ------------------------------------------ |
-| Label        | words in a space                                  | DONE; wants `new line` and a list of words |
-| Button       | a Label with an edge that answers a press         | DONE, and acts like a Label                |
-| Progress Bar | a bar whose length is a number                    | DONE                                       |
-| Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                           |
-| Speech Box   | a Label that lets its line out a letter at a time | DONE                                       |
-| Text Input   | one line you can type in                          | BUILT, on the shelf (`story/form`)         |
-| Text Area    | several lines you can type in                     | PROPOSED, last — see "The rest"            |
-| Dropdown     | a list of words, one of them chosen               | PROPOSED — a list property, a menu to draw |
-| Panel        | a background behind a group                       | PROPOSED, first — see "The rest"           |
-| Toggle       | a Button that is on or off                        | PROPOSED                                   |
-| Slider       | a Progress Bar the pointer drags                  | PROPOSED                                   |
+| actor        | what it is                                        | state                                       |
+| ------------ | ------------------------------------------------- | ------------------------------------------- |
+| Label        | words in a space                                  | DONE; wants `new line` and a list of words  |
+| Button       | a Label with an edge that answers a press         | DONE, and acts like a Label                 |
+| Progress Bar | a bar whose length is a number                    | DONE                                        |
+| Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                            |
+| Speech Box   | a Label that lets its line out a letter at a time | DONE                                        |
+| Text Input   | one line you can type in                          | BUILT, on the shelf (`story/form`)          |
+| Text Area    | several lines you can type in                     | PROPOSED, last — see "The rest"             |
+| Dropdown     | a list of words, one of them chosen               | PROPOSED — a list property, a menu to draw  |
+| Panel        | a background behind a group                       | BUILT — a Label with no words, and children |
+| Toggle       | a Button that is on or off                        | PROPOSED                                    |
+| Slider       | a Progress Bar the pointer drags                  | PROPOSED                                    |
 
 Six of the eleven are built, and the three that arrived after this document was
 first written are the ones that changed what the rest should be. The two new
@@ -1037,16 +1037,15 @@ where they bite.
 
 ### The rows, in the order to build them
 
-1. **Panel.** A box behind a group: a fill, an outline, a width and a height,
-   and no words. It is nearly a Label with `text` left empty, and it should
-   ACT LIKE one so that a dialog's background and its title are the same shape
-   of thing. What the table deferred as "grouping, which is layout" has an
-   answer that is not a layout engine: PARENTING (specs/PARENTING.md). A
-   Label, a Button and a bar whose parent is the Panel move and turn when the
-   Panel does, and the map editor drags them as a group, which is all
-   "belongs together" has to mean for a dialog that slides in. Cheapest row
-   in the list once parenting exists, and first because the maps below want
-   it.
+1. **Panel — BUILT** (`actors/stock/panel`). A box behind a group: a fill,
+   an outline, and the Label's box and words with the words left empty; it
+   ACTS LIKE a Label so a dialog's background and its title are the same
+   shape of thing. What the table deferred as "grouping, which is layout"
+   is answered by PARENTING (specs/PARENTING.md): the Interface Kit's form
+   is a Panel with the title, the field, the button and the bar as its
+   children, stored in the Panel's frame, and the map editor drags them as
+   a group. Unlocked with the Button, since a question is a Panel with a
+   line and two Buttons on it.
 
 2. **Toggle.** A Button carrying a boolean `on` that flips when clicked and
    draws its state — a box with a mark in it, or a switch — with `turned on`

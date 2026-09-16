@@ -75,7 +75,10 @@ const place = (
 ) => ({
   type,
   id,
-  properties: {positional: {position: {x, y}}, ...overrides},
+  properties: {
+    ...overrides,
+    positional: {position: {x, y}, ...overrides.positional},
+  },
 });
 
 /** `⟨text⟩ of ⟨any ⟨Text Input⟩⟩` — what has been typed into the field. */
@@ -96,21 +99,37 @@ const INTERFACE_MAP = JSON.stringify(
     size: {width: PORTRAIT.columns, height: PORTRAIT.rows},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
     actors: [
+      // THE FORM IS A DIALOG: a Panel, and the title, the field, the button
+      // and the bar as its children (specs/PARENTING.md). Each child's
+      // stored position is measured from the panel — the same slot the
+      // engine keeps a child's local position in — so moving the panel in
+      // the editor moves the form, and the play test's clicks land where
+      // they always did: the panel is at (160, 100) and the field 20 above
+      // its middle is at (160, 80).
+      place('actors/panel', 'Dialog', 160, 100, {
+        Label: {width: 300, height: 176},
+      }),
       // A title, which is a Label doing the one thing a Label does.
-      place('actors/label', 'Title', 160, 30, {
+      place('actors/label', 'Title', 0, -70, {
+        positional: {parent: 'Dialog'},
         Label: {text: 'WHAT IS YOUR NAME?'},
       }),
       // The field. Click it and type.
-      place('actors/textInput', 'Name', 160, 80),
+      place('actors/textInput', 'Name', 0, -20, {
+        positional: {parent: 'Dialog'},
+      }),
       // A button that answers the field.
-      place('actors/button', 'Hello', 160, 130, {Label: {text: 'SAY HELLO'}}),
+      place('actors/button', 'Hello', 0, 30, {
+        positional: {parent: 'Dialog'},
+        Label: {text: 'SAY HELLO'},
+      }),
       // How full the field is, as a bar — empty until something is typed.
-      place('actors/progressBar', 'Bar', 160, 168, {
+      place('actors/progressBar', 'Bar', 0, 68, {
+        positional: {parent: 'Dialog'},
         Progress_Bar: {fraction: 0},
       }),
       // …and the box that says the answer, a letter at a time. At the foot
-      // of the screen, where a phone keeps its replies; the form stays at
-      // the top, where the test's clicks land.
+      // of the screen, where a phone keeps its replies, and nobody's child.
       place('actors/speechBox', 'Reply', 160, 500),
     ],
   },
@@ -222,7 +241,13 @@ const MAIN_WORLD = JSON.stringify(
 /** The kit, built by importing each actor into an empty project. */
 export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
   let source = empty;
-  for (const actor of ['label', 'button', 'progressBar', 'speechBox']) {
+  for (const actor of [
+    'label',
+    'button',
+    'progressBar',
+    'speechBox',
+    'panel',
+  ]) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }
   source = importStockActor(source, stockActorById('textInput')!).source;
