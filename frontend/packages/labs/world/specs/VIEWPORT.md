@@ -582,6 +582,12 @@ live scene graph — so layers and cameras belong in the snapshot from the start
 alongside `ruleIds` and `effectIds`, rather than being retrofitted after the
 first reload that silently does nothing.
 
+A child actor is drawn on its parent's layer, whatever layer it was placed
+in, and within a layer a parent draws before its children (PROPOSED,
+specs/PARENTING.md). The driver keeps one Container per layer and one image
+per actor with the world transform the engine derives; a parent does not
+become a Container of its own, for the reasons given there.
+
 Most actions do not really care about which layer certain actors are within.
 This is because you are likely only placing game actors in a game layer,
 background elements in a background layer, and user interface widgets in the
