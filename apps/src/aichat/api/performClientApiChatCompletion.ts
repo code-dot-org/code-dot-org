@@ -15,10 +15,7 @@ import {
 } from '../types';
 
 import {getClientApi} from './client';
-import {
-  createAichatRequest,
-  updateAichatRequest,
-} from './client/helpers/aichatRequestHelpers';
+import {createAichatRequest} from './client/helpers/aichatRequestHelpers';
 
 const metricPrefix = 'AichatClientApi';
 
@@ -36,8 +33,8 @@ export async function performClientApiChatCompletion(
   buildAssetUrl: (asset: ChatAsset) => string,
   levelSystemPrompt?: string
 ): Promise<CompletedChatMessage[]> {
-  // Create a new AichatRequest record for this request. This is only needed because the AichatEvent model
-  // (which tracks chat history) has a foreign key dependency on it. Remove if/when we are able to decouple.
+  // Create an AichatRequest row for this request. Needed only because the
+  // AichatEvent model (which tracks chat history) has a foreign key to it.
   const requestId = await createAichatRequest(
     newMessage,
     storedMessages,
@@ -54,13 +51,14 @@ export async function performClientApiChatCompletion(
   ];
   metricsReporter.incrementCounter(`${metricPrefix}.Start`, metricDimensions);
 
-  const {response, assets, status} = await clientApi.generateChatResponse(
-    newMessage,
-    storedMessages,
-    modelParameters,
-    buildAssetUrl,
-    levelSystemPrompt
-  );
+  const {response, assets, status, responseSignature} =
+    await clientApi.generateChatResponse(
+      newMessage,
+      storedMessages,
+      modelParameters,
+      buildAssetUrl,
+      levelSystemPrompt
+    );
 
   metricsReporter.reportLoadTime(
     `${metricPrefix}.Latency`,
@@ -78,9 +76,7 @@ export async function performClientApiChatCompletion(
     {name: 'ExecutionStatus', value: statusName},
   ]);
 
-  await updateAichatRequest(requestId, status, response);
-
-  const updatedUserMessage = {...newMessage, requestId};
+  const updatedUserMessage = {...newMessage, requestId, responseSignature};
 
   if (status === AiRequestExecutionStatus.USER_PROFANITY) {
     return [
@@ -94,6 +90,7 @@ export async function performClientApiChatCompletion(
     role: Role.ASSISTANT,
     timestamp: Date.now(),
     assets,
+    responseSignature,
   };
 
   if (
