@@ -527,9 +527,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // Preselect the newest image of the level's imageType. Backgrounds are
-  // excluded, a world cell being a sprite or a block; a selection whose image
-  // is gone counts as none.
+  // Preselect the level's image of its imageType: the image_defaults role,
+  // else the newest. Backgrounds are excluded, a world cell being a sprite or
+  // a block; a selection whose image is gone counts as none.
   const focusImageType = levelProperties.levelMode?.imageType;
   const imageDefaults = levelProperties.imageDefaults;
   useEffect(() => {
