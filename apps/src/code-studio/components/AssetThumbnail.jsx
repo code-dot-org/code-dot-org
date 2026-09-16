@@ -1,16 +1,17 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import color from '@cdo/apps/util/color';
 
 const defaultIcons = {
-  image: 'fa-regular fa-image',
-  audio: 'fa-solid fa-music',
-  video: 'fa-solid fa-video',
-  pdf: 'fa-regular fa-file-pdf',
-  doc: 'fa-regular fa-file-lines',
-  unknown: 'fa-solid fa-question',
+  image: {iconName: 'image', iconStyle: 'regular'},
+  audio: {iconName: 'music', iconStyle: 'solid'},
+  video: {iconName: 'video', iconStyle: 'solid'},
+  pdf: {iconName: 'file-pdf', iconStyle: 'regular'},
+  doc: {iconName: 'file-lines', iconStyle: 'regular'},
+  unknown: {iconName: 'question', iconStyle: 'solid'},
 };
 
 const assetThumbnailStyle = {
@@ -36,18 +37,17 @@ export const styles = {
     margin: '10px auto',
   },
   background: {
-    background: '#eee',
-    border: '1px solid #ccc',
+    background: 'var(--background-neutral-tertiary)',
+    border: '1px solid var(--borders-neutral-primary)',
     textAlign: 'center',
   },
   audioIcon: {
-    color: color.purple,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    display: 'block',
+    color: 'var(--text-brand-purple-primary)',
   },
   audioWrapper: {
     display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 };
 
@@ -136,17 +136,31 @@ const AudioThumbnail = class extends React.Component {
   };
 
   render() {
-    const playIcon = this.props.isPlaying
-      ? 'fa-circle-pause'
-      : 'fa-circle-play';
+    const playIcon = this.props.isPlaying ? 'circle-pause' : 'circle-play';
 
     return (
       <div style={{...styles.wrapper, ...styles.audioWrapper}}>
-        <i
+        <MuiIconButton
           onClick={this.props.clickSoundControl}
-          className={'fa-solid ' + playIcon + ' fa-4x'}
-          style={styles.audioIcon}
-        />
+          aria-label={this.props.isPlaying ? 'Pause sound' : 'Play sound'}
+          sx={{
+            width: 60,
+            height: 60,
+            minWidth: 'auto',
+            minHeight: 'auto',
+            padding: 0,
+            '& i': {
+              fontSize: '2.25rem',
+              width: 'auto',
+            },
+          }}
+        >
+          <FontAwesomeV6Icon
+            iconName={playIcon}
+            iconStyle="solid"
+            style={styles.audioIcon}
+          />
+        </MuiIconButton>
       </div>
     );
   }
@@ -182,9 +196,11 @@ const DefaultThumbnail = class extends React.Component {
   };
 
   render() {
+    const iconDef = defaultIcons[this.props.type] || defaultIcons.unknown;
     return (
-      <i
-        className={defaultIcons[this.props.type] || defaultIcons.unknown}
+      <FontAwesomeV6Icon
+        iconName={iconDef.iconName}
+        iconStyle={iconDef.iconStyle}
         style={{...assetIconStyle, ...this.props.iconStyle}}
       />
     );

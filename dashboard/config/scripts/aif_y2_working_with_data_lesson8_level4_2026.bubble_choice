@@ -1,0 +1,13 @@
+name 'aif-y2-working-with-data-lesson8-level4-2026'
+display_name 'Limits and Honesty'
+description 'Continue your visualization.'
+
+sublevels
+level 'aif-y2-working-with-data-lesson8-level4-choice1-2026'
+level 'aif-y2-working-with-data-lesson8-level4-choice2-2026'
+level 'aif-y2-working-with-data-lesson8-level4-choice3-2026'
+level 'aif-y2-working-with-data-lesson8-level4-choice4-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

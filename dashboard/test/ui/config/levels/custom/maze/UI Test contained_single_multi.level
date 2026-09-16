@@ -1,0 +1,39 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2026-07-08T05:29:37.000Z",
+  "level_num": "custom",
+  "user_id": 26,
+  "properties": {
+    "encrypted": "false",
+    "skin": "birds",
+    "maze": "[[2,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "contained_level_names": [
+      "UI Test contained_Happy_Maps_Multi 1"
+    ],
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "start_direction": "0",
+    "step_mode": "0",
+    "shape_shift": "false",
+    "teacher_markdown": "Teacher markdown for the original level.",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-07-08T05:29:37.601+00:00\",\"changed\":[\"cloned from \\\"contained_single_multi\\\"\"],\"cloned_from\":\"contained_single_multi\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Maze>

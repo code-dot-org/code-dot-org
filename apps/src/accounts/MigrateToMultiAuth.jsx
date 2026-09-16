@@ -1,19 +1,27 @@
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
-import Notification, {
-  NotificationType,
-} from '@cdo/apps/sharedComponents/Notification';
 import i18n from '@cdo/locale';
 
 export default function MigrateToMultiAuth() {
   return (
-    <Notification
-      type={NotificationType.information}
-      notice={i18n.migrateToMultiAuth_notice_v2()}
-      details={i18n.migrateToMultiAuth_details_v2()}
-      buttonText={i18n.migrateToMutiAuth_buttonText_v2()}
-      buttonLink="/users/migrate_to_multi_auth"
-      dismissible={false}
+    <NotificationBanner
+      variant="info"
+      style="filled"
+      title={i18n.migrateToMultiAuth_notice_v2()}
+      description={i18n.migrateToMultiAuth_details_v2()}
+      icon={{iconName: 'circle-info', iconStyle: 'solid'}}
+      actions={
+        <MuiButton
+          href="/users/migrate_to_multi_auth"
+          variant="contained"
+          color="primary"
+          size="small"
+        >
+          {i18n.migrateToMutiAuth_buttonText_v2()}
+        </MuiButton>
+      }
     />
   );
 }

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-07-10T18:58:14.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "pl-aif2-filter-for-transparency",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "\r\n</div>\r\n\r\n\r\n## Activity Tutorial\r\n\r\nThis video walks through the next activity, updating a filter to be more inclusive and fair. You will take on the role of a Responsible AI Specialist \r\n\r\n>**Responsible AI Specialists** help make digital systems more:\r\n>- Fair\r\n>- Transparent\r\n>- Safe\r\n>- Accountable\r\n\r\nWatch it to prepare for the activity, and feel free to revisit it anytime as you work through the improvement process. \r\n\r\n*You can use the YouTube features to make the video fullscreen, speed it up, or slow it down.* \r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-07-10T18:58:14.386+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-filtering-for-transparency-video\\\"\"],\"cloned_from\":\"pl-aif-2-U4-filtering-for-transparency-video\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

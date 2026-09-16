@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -19,10 +21,15 @@ class ArrowButtons extends React.Component {
     // from redux
     visible: PropTypes.bool.isRequired,
     disabled: PropTypes.bool.isRequired,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
   };
 
   render() {
-    const {visible, disabled} = this.props;
+    const {visible, disabled, leftIcon, rightIcon, upIcon, downIcon} =
+      this.props;
     const style = visible ? styles.visible : styles.hidden;
 
     const onKeyDown = e => {
@@ -46,62 +53,58 @@ class ArrowButtons extends React.Component {
 
     return (
       <div style={style} id="soft-buttons">
-        <button
-          type="button"
+        <MuiIconButton
           id="leftButton"
+          variant="outlined"
+          color="secondary"
+          size="medium"
           disabled={disabled}
           className="arrow"
           aria-label="Left arrow"
           onKeyDown={onKeyDown}
           onKeyUp={onKeyUp}
         >
-          <img
-            src="/blockly/media/1x1.gif"
-            className="left-btn icon21"
-            alt=""
-          />
-        </button>
-        <button
-          type="button"
+          {leftIcon ?? <FontAwesomeV6Icon iconName="caret-left" />}
+        </MuiIconButton>
+        <MuiIconButton
           id="rightButton"
+          variant="outlined"
+          color="secondary"
+          size="medium"
           disabled={disabled}
           className="arrow"
-          aria-label="Right arrow"
+          aria-label="Left arrow"
           onKeyDown={onKeyDown}
           onKeyUp={onKeyUp}
         >
-          <img
-            src="/blockly/media/1x1.gif"
-            className="right-btn icon21"
-            alt=""
-          />
-        </button>
-        <button
-          type="button"
+          {rightIcon ?? <FontAwesomeV6Icon iconName="caret-right" />}
+        </MuiIconButton>
+        <MuiIconButton
           id="upButton"
+          variant="outlined"
+          color="secondary"
+          size="medium"
           disabled={disabled}
           className="arrow"
-          aria-label="Up arrow"
+          aria-label="Left arrow"
           onKeyDown={onKeyDown}
           onKeyUp={onKeyUp}
         >
-          <img src="/blockly/media/1x1.gif" className="up-btn icon21" alt="" />
-        </button>
-        <button
-          type="button"
+          {upIcon ?? <FontAwesomeV6Icon iconName="caret-up" />}
+        </MuiIconButton>
+        <MuiIconButton
           id="downButton"
+          variant="outlined"
+          color="secondary"
+          size="medium"
           disabled={disabled}
           className="arrow"
-          aria-label="Down arrow"
+          aria-label="Left arrow"
           onKeyDown={onKeyDown}
           onKeyUp={onKeyUp}
         >
-          <img
-            src="/blockly/media/1x1.gif"
-            className="down-btn icon21"
-            alt=""
-          />
-        </button>
+          {downIcon ?? <FontAwesomeV6Icon iconName="caret-down" />}
+        </MuiIconButton>
       </div>
     );
   }
@@ -109,7 +112,7 @@ class ArrowButtons extends React.Component {
 
 const styles = {
   hidden: {display: 'none'},
-  visible: {display: 'inline-block'},
+  visible: {display: 'flex', gap: '.5rem'},
 };
 
 export default connect(state => ({

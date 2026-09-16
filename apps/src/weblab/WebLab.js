@@ -272,6 +272,7 @@ WebLab.prototype.onMount = function (config) {
   this.studioApp_.alertIfCompletedWhilePairing(config);
   this.studioApp_.initVersionHistoryUI(config);
   this.studioApp_.initTimeSpent();
+  this.studioApp_.alertIfAbusiveProject();
 
   let finishButton = document.getElementById('finishButton');
   if (finishButton) {

@@ -1,24 +1,22 @@
-import {createSlice, type PayloadAction} from '@reduxjs/toolkit';
-import type KNN from 'ml-knn';
-
 import {
-  ColumnTypes,
-  RegressionTrainer,
-  ClassificationTrainer,
-  TestDataLocations,
-  ResultsGrades,
-} from './constants';
+  createSlice,
+  type PayloadAction,
+  type ThunkAction,
+  type AnyAction,
+} from '@reduxjs/toolkit';
+
+import {ColumnTypes, TestDataLocations, ResultsGrades} from './constants';
 import {
   getSummaryStat,
   getResultsDataInDataTableForm,
 } from './helpers/accuracy';
-import {isRegression, getColumnDataToSave} from './helpers/columnDetails';
+import {getColumnDataToSave} from './helpers/columnDetails';
 import {getDatasetDetails} from './helpers/datasetDetails';
-import {type InstructionsKey} from './helpers/instructions';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
+import {getTrainerId} from './trainers/ids';
 import type {
   DataRow,
   Metadata,
@@ -29,6 +27,11 @@ import type {
   ModelCardColumn,
   ModelDataToSave,
   PrevNextButtons,
+  InstructionsKey,
+  SaveResponse,
+  SaveTrainedModel,
+  Panel,
+  TrainedModel,
 } from './types';
 
 export interface RootState {
@@ -53,9 +56,9 @@ export interface RootState {
   accuracyCheckPredictedLabels: (number | string)[];
   testData: Record<string, string | number>;
   prediction: number | string | undefined;
-  trainedModel: KNN | undefined;
+  trainedModel: TrainedModel | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
-  currentPanel: string;
+  currentPanel: Panel;
   currentColumn: string | undefined;
   resultsPhase: number | undefined;
   saveStatus: string;
@@ -125,7 +128,7 @@ const ailabSlice = createSlice({
   name: 'ailab',
   initialState,
   reducers: {
-    setMode(state, action: PayloadAction<Mode>) {
+    setMode(state, action: PayloadAction<Mode | undefined>) {
       state.mode = action.payload;
     },
     setSelectedName(state, action: PayloadAction<string>) {
@@ -251,9 +254,10 @@ const ailabSlice = createSlice({
         ...initialState,
         mode: state.mode,
         reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
       };
     },
-    setTrainedModel(state, action: PayloadAction<KNN>) {
+    setTrainedModel(state, action: PayloadAction<TrainedModel>) {
       state.trainedModel = action.payload;
     },
     setTrainedModelDetail: {
@@ -285,9 +289,9 @@ const ailabSlice = createSlice({
         return {payload: {field, value, isColumn}};
       },
     },
-    setCurrentPanel(state, action: PayloadAction<string>) {
+    setCurrentPanel(state, action: PayloadAction<Panel>) {
       const currentPanel = action.payload;
-      // Show the overlay only on a panel's first visit, only when 
+      // Show the overlay only on a panel's first visit, only when
       // instructions are enabled, and the mode doesn't suppress it.
       let showedOverlay = false;
       if (
@@ -470,6 +474,27 @@ export const {
 
 export default ailabSlice.reducer;
 
+/**
+ * Save the trained model. Composes the payload from current state, marks the
+ * save in progress, then hands off to the consumer's `save` callback.
+ */
+export const saveModel =
+  (
+    saveTrainedModel: SaveTrainedModel,
+  ): ThunkAction<void, RootState, unknown, AnyAction> =>
+  (dispatch, getState) => {
+    const dataToSave = getTrainedModelDataToSave(getState());
+    dispatch(setSaveStatus('started'));
+    saveTrainedModel(dataToSave, (response: SaveResponse) => {
+      dispatch(setSaveStatus(response.status, response.data));
+      dispatch(
+        setCurrentPanel(
+          response.status === 'success' ? 'modelSummary' : 'saveModel',
+        ),
+      );
+    });
+  };
+
 export function getSpecifiedDatasets(state: RootState): string[] | undefined {
   return state.mode && state.mode.datasets;
 }
@@ -530,9 +555,7 @@ export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
     datasetDetails: getDatasetDetails(state),
     potentialUses: state.trainedModelDetails.potentialUses,
     potentialMisuses: state.trainedModelDetails.potentialMisuses,
-    selectedTrainer: isRegression(state)
-      ? RegressionTrainer
-      : ClassificationTrainer,
+    selectedTrainer: getTrainerId(state),
     featureNumberKey: state.featureNumberKey,
     label: getColumnDataToSave(state, state.labelColumn!),
     features: getFeaturesToSave(state),

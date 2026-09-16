@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-07-10T18:58:17.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "aif2-pl-redesign-filter-logic",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "\r\n\r\n\r\n\r\n## Activity Tutorial\r\n\r\nThe video below walks through the steps of a music filtering activity. Watch the video to get a basic understanding of the activity, and then try it on your own. Feel free to rewatch the video as needed.  \r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-07-10T18:58:17.967+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-filter-logic-video\\\"\"],\"cloned_from\":\"pl-aif-2-U4-filter-logic-video\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

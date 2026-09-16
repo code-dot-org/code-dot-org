@@ -7,10 +7,16 @@ import QRCode from 'qrcode.react';
 import React, {useCallback} from 'react';
 import FocusLock from 'react-focus-lock';
 
+import ProjectAbuseAlert from '@cdo/apps/code-studio/components/ProjectAbuseAlert';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
+import {
+  ProjectType,
+  ShareDialogId,
+  ShareFailure,
+  ShareFailureType,
+} from '@cdo/apps/lab2/types';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import {commonI18n as i18n} from '@cdo/apps/types/locale';
@@ -21,6 +27,27 @@ import {CopyToClipboardButton} from './CopyToClipboardButton';
 import HoaiCongrats from './finishDialogs/HoaiCongrats';
 
 import moduleStyles from './share-dialog.module.scss';
+
+export const SHARE_FAILURE_TITLE = "This project can't be shared";
+
+export const SHARE_FAILURE_FALLBACK_PREFIX =
+  "The project can't be shared because it contains flagged content. ";
+
+export const SHARE_FAILURE_MESSAGE_PREFIXES: Record<ShareFailureType, string> =
+  {
+    profanity:
+      "This project can't be shared because it may contain profanity. ",
+    email:
+      "This project can't be shared because it appears to contain an email address. ",
+    phone:
+      "This project can't be shared because it appears to contain a phone number. ",
+    address:
+      "This project can't be shared because it appears to contain a street address. ",
+  };
+
+const SHARE_FILTER_MESSAGE_SUFFIX =
+  'Remove that content and save your project, then try sharing again. ' +
+  'If you think this is a mistake, contact support@code.org.';
 
 const TEACHER_FEEDBACK_LINK =
   'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
@@ -117,6 +144,8 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick: () => void;
   submissionStatus: SubmissionStatusType | undefined;
   userSharingDisabled: boolean | undefined;
+  shareFailure?: ShareFailure | null;
+  isAbusive?: boolean;
 }> = ({
   dialogId,
   shareUrl,
@@ -125,6 +154,8 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick,
   submissionStatus,
   userSharingDisabled,
+  shareFailure,
+  isAbusive = false,
 }) => {
   const dispatch = useAppDispatch();
   const sharingDisabled = () =>
@@ -146,6 +177,29 @@ const ShareDialog: React.FunctionComponent<{
   // ThemeProvider (the header is in its own tree). We copy the lab theme to the registry
   // in Lab2Wrapper.
   const theme = Lab2Registry.getInstance().getTheme();
+
+  if (shareFailure) {
+    const flaggedText = shareFailure.content
+      ? ` Flagged text: "${shareFailure.content}"`
+      : '';
+    return (
+      <div data-theme={theme}>
+        <Modal
+          title={SHARE_FAILURE_TITLE}
+          description={
+            (SHARE_FAILURE_MESSAGE_PREFIXES[shareFailure.type] ??
+              SHARE_FAILURE_FALLBACK_PREFIX) +
+            SHARE_FILTER_MESSAGE_SUFFIX +
+            flaggedText
+          }
+          primaryButtonProps={{
+            onClick: handleClose,
+            children: i18n.ok(),
+          }}
+        />
+      </div>
+    );
+  }
 
   if (finishUrl && dialogId === 'hoai2025') {
     return (
@@ -174,53 +228,56 @@ const ShareDialog: React.FunctionComponent<{
     <FocusLock>
       <div className={moduleStyles.dialogContainer} data-theme={theme}>
         <div id="share-dialog" className={moduleStyles.shareDialog}>
-          <Typography
-            className={moduleStyles.heading}
-            component="h1"
-            variant="h3"
-            gutterBottom
-          >
-            {dialogId === 'hoc2024'
-              ? i18n.congratulations()
-              : i18n.shareTitle()}
-          </Typography>
-          <div>{dialogId === 'hoc2024' && i18n.congratsFinishedHoc()}</div>
-          <div className={moduleStyles.columns}>
-            <div className={moduleStyles.column}>
-              <div className={moduleStyles.block}>
-                {dialogId === 'hoc2024' && (
-                  <Typography
-                    className={moduleStyles.heading}
-                    component="h2"
-                    variant="h4"
-                    gutterBottom
-                  >
-                    {i18n.shareTitle()}
-                  </Typography>
-                )}
-                <div
-                  className={moduleStyles.QRCodeContainer}
-                  id="share-qrcode-container"
-                >
-                  <div className={moduleStyles.QRCodeBorder}>
-                    <QRCode value={shareUrl + '?qr=true'} size={117} />
-                  </div>
-                </div>
-                <CopyToClipboardButton
-                  shareUrl={shareUrl}
-                  projectType={projectType}
-                />
-                <SubmitButtonInfo
-                  submissionStatus={submissionStatus}
-                  onSubmitClick={onSubmitClick}
-                />
-              </div>
-            </div>
-            {dialogId === 'hoc2024' && (
+          <div className={moduleStyles.shareDialogBody}>
+            <Typography
+              className={moduleStyles.heading}
+              component="h1"
+              variant="h3"
+              gutterBottom
+            >
+              {dialogId === 'hoc2024'
+                ? i18n.congratulations()
+                : i18n.shareTitle()}
+            </Typography>
+            {dialogId === 'hoc2024' && <div>{i18n.congratsFinishedHoc()}</div>}
+            {isAbusive && <ProjectAbuseAlert shareUrl={shareUrl} />}
+            <div className={moduleStyles.columns}>
               <div className={moduleStyles.column}>
-                <AfeCareerTourBlock />
+                <div className={moduleStyles.block}>
+                  {dialogId === 'hoc2024' && (
+                    <Typography
+                      className={moduleStyles.heading}
+                      component="h2"
+                      variant="h4"
+                      gutterBottom
+                    >
+                      {i18n.shareTitle()}
+                    </Typography>
+                  )}
+                  <div
+                    className={moduleStyles.QRCodeContainer}
+                    id="share-qrcode-container"
+                  >
+                    <div className={moduleStyles.QRCodeBorder}>
+                      <QRCode value={shareUrl + '?qr=true'} size={117} />
+                    </div>
+                  </div>
+                  <CopyToClipboardButton
+                    shareUrl={shareUrl}
+                    projectType={projectType}
+                  />
+                  <SubmitButtonInfo
+                    submissionStatus={submissionStatus}
+                    onSubmitClick={onSubmitClick}
+                  />
+                </div>
               </div>
-            )}
+              {dialogId === 'hoc2024' && (
+                <div className={moduleStyles.column}>
+                  <AfeCareerTourBlock />
+                </div>
+              )}
+            </div>
           </div>
           <div className={moduleStyles.bottom}>
             {feedbackLink && finishUrl && (

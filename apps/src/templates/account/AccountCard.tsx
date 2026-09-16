@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, ButtonProps} from '@mui/material';
+import {Button as MuiButton, ButtonProps, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -47,7 +47,7 @@ const AccountCard: React.FunctionComponent<{
         }
       />
       <CardContent className={classNames(styles.cardContent)}>
-        {content}
+        <Typography variant="body2">{content}</Typography>
         {iconList && (
           <ul className={styles.iconList}>
             {iconList.map((item, index) => (
@@ -57,7 +57,7 @@ const AccountCard: React.FunctionComponent<{
                   iconName="check-circle"
                   aria-hidden
                 />
-                {item}
+                <Typography variant="body2">{item}</Typography>
               </li>
             ))}
           </ul>

@@ -1,15 +1,10 @@
-import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {
-  BlocklyLevelProperties,
-  LevelProperties,
-  ProjectSources,
-} from '@cdo/apps/lab2/types';
+import {LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
@@ -21,8 +16,9 @@ const isViewingExemplar = getAppOptionsViewingExemplar();
  */
 export default function <T extends ProjectSources>(
   levelProperties: LevelProperties,
-  projectSources?: T
-) {
+  projectSources?: T,
+  toolboxEditSources?: T
+): T | undefined {
   const startSources = levelProperties.startSources as T | undefined;
   const templateSources = levelProperties.templateSources as T | undefined;
   const exemplarSources = levelProperties.exemplarSources as T | undefined;
@@ -33,11 +29,7 @@ export default function <T extends ProjectSources>(
   }
 
   if (isToolboxMode) {
-    return {
-      source: toolboxToWorkspaceBlocks(
-        (levelProperties as BlocklyLevelProperties).toolboxDefinition
-      ),
-    };
+    return toolboxEditSources;
   }
 
   if (isEditingExemplar || isViewingExemplar) {

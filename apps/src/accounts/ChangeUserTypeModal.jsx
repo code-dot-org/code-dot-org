@@ -1,17 +1,14 @@
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {
-  Header,
-  ConfirmCancelFooter,
-} from '../sharedComponents/SystemDialog/SystemDialog';
-import BaseDialog from '../templates/BaseDialog';
-import color from '../util/color';
 import {isEmail} from '../util/formatValidation';
 
 import ChangeUserTypeForm from './ChangeUserTypeForm';
+
+import styles from './change-user-type-modal.module.scss';
 
 const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
@@ -54,6 +51,14 @@ export default class ChangeUserTypeModal extends React.Component {
   };
 
   cancel = () => this.props.handleCancel();
+
+  // The DSCO Modal close affordances (X button, Esc) route here; ignore them
+  // while a save is in flight, matching the old BaseDialog `uncloseable` prop.
+  handleClose = () => {
+    if (this.state.saveState !== STATE_SAVING) {
+      this.cancel();
+    }
+  };
 
   onSubmitFailure = error => {
     if (error && Object.prototype.hasOwnProperty.call(error, 'serverErrors')) {
@@ -119,44 +124,44 @@ export default class ChangeUserTypeModal extends React.Component {
     const {saveState, values} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = this.isFormValid(validationErrors);
+    const saving = STATE_SAVING === saveState;
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen
-        handleClose={this.cancel}
-        uncloseable={STATE_SAVING === saveState}
-      >
-        <div style={styles.container}>
-          <Header text={i18n.changeUserTypeModal_title()} />
+      <Modal
+        title={i18n.changeUserTypeModal_title()}
+        description={i18n.changeUserTypeModal_description_toTeacher()}
+        onClose={this.handleClose}
+        closeLabel={i18n.closeDialog()}
+        customContent={
           <ChangeUserTypeForm
             ref={x => (this.changeUserTypeForm = x)}
             values={values}
             validationErrors={validationErrors}
-            disabled={STATE_SAVING === saveState}
+            disabled={saving}
             onChange={this.onFormChange}
             onSubmit={this.save}
           />
-          <ConfirmCancelFooter
-            confirmText={i18n.changeUserTypeModal_save_teacher()}
-            onConfirm={this.save}
-            onCancel={this.cancel}
-            disableConfirm={STATE_SAVING === saveState || !isFormValid}
-            disableCancel={STATE_SAVING === saveState}
-          >
-            {STATE_SAVING === saveState && <em>{i18n.saving()}</em>}
-            {STATE_UNKNOWN_ERROR === saveState && (
-              <em>{i18n.changeUserTypeModal_unexpectedError()}</em>
-            )}
-          </ConfirmCancelFooter>
-        </div>
-      </BaseDialog>
+        }
+        primaryButtonProps={{
+          children: i18n.changeUserTypeModal_save_teacher(),
+          onClick: this.save,
+          disabled: saving || !isFormValid,
+        }}
+        secondaryButtonProps={{
+          children: i18n.cancel(),
+          onClick: this.cancel,
+          disabled: saving,
+        }}
+        customBottomContent={
+          (saving || STATE_UNKNOWN_ERROR === saveState) && (
+            <div className={styles.status}>
+              {saving && <em>{i18n.saving()}</em>}
+              {STATE_UNKNOWN_ERROR === saveState && (
+                <em>{i18n.changeUserTypeModal_unexpectedError()}</em>
+              )}
+            </div>
+          )
+        }
+      />
     );
   };
 }
-
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-  },
-};

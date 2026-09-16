@@ -49,18 +49,26 @@
           "language": "js",
           "contents": "Add your changes to script.js",
           "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "capstone.md",
+          "contents": "# APP PLAN\n\n## App Idea\nWhat is your app about? What problem does it solve?\n\n\n## Audience\nWho is this app for? Why does this problem matter to them?\n\n\n## Scope\nWhat will this version of your app include?\n\n\nWhat did you intentionally leave out? Why?\n\n\n## System\nDescribe one complete user interaction:\n- User action:\n- App decision or logic:\n- Result:\n\n\n# TESTING LOG\n\n## What I tested:\n\n\n## What happened:\n\n\n## What I changed or decided because of the test:\n\n\n# AI USE LOG\n\n## What I asked AI to help with:\n\n\n## What I accepted, revised, or rejected — and why:\n\n\n# FEEDBACK LOG\n\n## Feedback I received:\n\n\n## What I changed based on feedback:\n\n\n## What I chose not to change — and why:\n\n",
+          "folderId": "0",
           "active": true
         }
       },
       "openFiles": [
         "1",
         "2",
-        "3"
+        "3",
+        "4"
       ]
     },
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:45:33.165+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-project-template-test_2025-pilot\\\"\"],\"cloned_from\":\"capstone-project-lesson1-project-template-test_2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:45:33.165+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-project-template-test_2025-pilot\\\"\"],\"cloned_from\":\"capstone-project-lesson1-project-template-test_2025-pilot\"},{\"changed_at\":\"2026-06-30 20:57:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

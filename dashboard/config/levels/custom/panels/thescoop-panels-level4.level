@@ -1,0 +1,72 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-07-11T02:53:58.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Human Problems",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "[SAM]:  Orders are flowing and I haven't touched the register in twenty minutes. I could get used to this.",
+        "imageUrl": "",
+        "key": "undefined-e0a9bcf5-aa9e-443d-a879-725e04f602e9",
+        "typing": true,
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "[SAM]: But something happened earlier that I need you to hear.",
+        "imageUrl": "",
+        "key": "undefined-0c3cc5e2-306f-4680-a231-81a4c98f04fd",
+        "layout": "text-bottom-center",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "[SAM]: A customer asked if our cookie dough has nuts in it. They have a serious allergy. The agent just... froze. None of its tools cover that.",
+        "imageUrl": "",
+        "key": "undefined-5ea2ca70-9731-48d5-8da0-199f0863e0d3",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "[SAM]: And honestly? Good. Because the worst thing it could do is GUESS. Some things are human problems. Allergies. Refunds. Complaints. Those come to ME.",
+        "imageUrl": "",
+        "key": "undefined-8823d531-5f2b-49fe-b76e-6f7a4c0a5204",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "[SAM]: So here's my number. But be careful with this one — if it buzzes me for every tiny question, I'll never scoop anything again.",
+        "imageUrl": "",
+        "key": "undefined-7b46e7f5-ca1e-4332-a4c3-fba6bd9b9c34",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "[SAM]: Your job: teach it the difference between \"handle it yourself\" and \"get a human.\"",
+        "imageUrl": "",
+        "key": "thescoop-panels-level3-2583124b-14f4-4268-9da5-37f933b77a30",
+        "layout": "text-bottom-center",
+        "typing": true,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "# 🔓 TOOL UNLOCKED: Notify Sam\n\nInterrupts a real human. Costs Sam time. Use wisely.",
+        "imageUrl": "",
+        "key": "undefined-fee4b686-0582-462c-9774-c2f0ced0f100",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-11T02:53:58.825+00:00\",\"changed\":[\"cloned from \\\"thescoop-panels-level3\\\"\"],\"cloned_from\":\"thescoop-panels-level3\"},{\"changed_at\":\"2026-07-11 02:56:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-11 03:13:37 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

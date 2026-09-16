@@ -1,0 +1,85 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-07-02T14:36:25.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Pet Data Viewer</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <header>\n    <h1>Pet Data Viewer</h1>\n    <p>Help reunite lost pets with their families. Browse animals recently found in your area.</p>\n  </header>\n\n  <main>\n    <button id=\"fetchButton\">\n      <svg class=\"paw-icon\" viewBox=\"0 0 24 24\" fill=\"white\">\n        <ellipse cx=\"12\" cy=\"15\" rx=\"5.2\" ry=\"4.6\"/>\n        <ellipse cx=\"5.2\" cy=\"9\" rx=\"2.1\" ry=\"2.6\"/>\n        <ellipse cx=\"9.8\" cy=\"5.2\" rx=\"2.1\" ry=\"2.6\"/>\n        <ellipse cx=\"14.2\" cy=\"5.2\" rx=\"2.1\" ry=\"2.6\"/>\n        <ellipse cx=\"18.8\" cy=\"9\" rx=\"2.1\" ry=\"2.6\"/>\n      </svg>\n      Get a pet\n    </button>\n    <ul id=\"dataOutput\"></ul>\n  </main>\n\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  background-color: #FFF8EC;\n  background-image: radial-gradient(#F3D9B1 1.5px, transparent 1.5px);\n  background-size: 28px 28px;\n  color: #4A3728;\n  padding: 32px 20px;\n  line-height: 1.4;\n  min-height: 100vh;\n}\n\nheader {\n  max-width: 480px;\n  margin: 0 auto 28px;\n  text-align: center;\n}\n\nheader h1 {\n  font-size: 2rem;\n  font-weight: 800;\n  color: #B5651D;\n  margin-bottom: 6px;\n  letter-spacing: -0.01em;\n}\n\nheader p {\n  color: #8C7560;\n  font-size: 0.95rem;\n}\n\nmain {\n  max-width: 480px;\n  margin: 0 auto;\n}\n\nbutton {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  margin: 0 auto 28px;\n  padding: 14px 28px;\n  font-size: 1rem;\n  font-weight: 700;\n  color: white;\n  background-color: #E8954A;\n  border: none;\n  border-radius: 100px;\n  cursor: pointer;\n  box-shadow: 0 4px 0 #B5651D;\n  transition: transform 0.1s ease, box-shadow 0.1s ease;\n}\n\nbutton:hover {\n  background-color: #DE8538;\n}\n\nbutton:active {\n  transform: translateY(3px);\n  box-shadow: 0 1px 0 #B5651D;\n}\n\n.paw-icon {\n  width: 18px;\n  height: 18px;\n  flex-shrink: 0;\n}\n\n#dataOutput {\n  list-style: none;\n}\n\n.status-text {\n  text-align: center;\n  color: #8C7560;\n  font-style: italic;\n  padding: 20px;\n}\n\n.pet-item {\n  position: relative;\n  background: #FFFDF8;\n  border: 2px dashed #E8B978;\n  border-radius: 16px;\n  padding: 20px 22px 20px 64px;\n  margin-bottom: 16px;\n}\n\n.pet-item::before {\n  content: \"\";\n  position: absolute;\n  left: 18px;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 32px;\n  height: 32px;\n  background-color: #F3D9B1;\n  border-radius: 50%;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B5651D'%3E%3Cellipse cx='12' cy='15' rx='5.2' ry='4.6'/%3E%3Cellipse cx='5.2' cy='9' rx='2.1' ry='2.6'/%3E%3Cellipse cx='9.8' cy='5.2' rx='2.1' ry='2.6'/%3E%3Cellipse cx='14.2' cy='5.2' rx='2.1' ry='2.6'/%3E%3Cellipse cx='18.8' cy='9' rx='2.1' ry='2.6'/%3E%3C/svg%3E\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 18px 18px;\n}\n\n.pet-breed {\n  font-size: 1.2rem;\n  font-weight: 800;\n  color: #4A3728;\n  margin-bottom: 6px;\n}\n\n.pet-color,\n.pet-address {\n  font-size: 0.88rem;\n  color: #8C7560;\n}\n\n.pet-color {\n  margin-bottom: 2px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const API_URL = \"https://data.austintexas.gov/api/v3/views/pyqf-r2dc/query.json\";\n\nconst fetchPets = async () => {\n  showStatus(\"Fetching furry friends...\");\n\n  const response = await fetch(API_URL);\n  const data = await response.json();\n  const firstPet = data[0];\n\n  let breed = \"\";\n  let color = \"\";\n  let address = \"\";\n\n\n  displayPet(color, breed, address);\n};\n\ndocument.getElementById(\"fetchButton\").addEventListener(\"click\", () => {\n  fetchPets();\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "helpers.js",
+          "contents": "// Shows a status message in the dataOutput list.\nconst showStatus = (message) => {\n  const dataOutput = document.getElementById(\"dataOutput\");\n  dataOutput.innerHTML = \"\";\n\n  const status = document.createElement(\"p\");\n  status.className = \"status-text\";\n  status.textContent = message;\n\n  dataOutput.appendChild(status);\n};\n\n// Builds a list item element showing a pet's color, breed, and address.\nconst createListItem = (color, breed, address) => {\n  const li = document.createElement(\"li\");\n  li.className = \"pet-item\";\n\n  const breedLine = document.createElement(\"p\");\n  breedLine.className = \"pet-breed\";\n  breedLine.textContent = breed;\n\n  const colorLine = document.createElement(\"p\");\n  colorLine.className = \"pet-color\";\n  colorLine.textContent = \"Color: \" + color;\n\n  const addressLine = document.createElement(\"p\");\n  addressLine.className = \"pet-address\";\n  addressLine.textContent = \"Found: \" + address;\n\n  li.appendChild(breedLine);\n  li.appendChild(colorLine);\n  li.appendChild(addressLine);\n\n  return li;\n};\n\n// Adds a list item to the dataOutput list in the page.\nconst addItemToUI = (listItem) => {\n  const dataOutput = document.getElementById(\"dataOutput\");\n  dataOutput.appendChild(listItem);\n};\n\n// Builds a pet list item and adds it to the page, replacing any status message.\nconst displayPet = (color, breed, address) => {\n  const dataOutput = document.getElementById(\"dataOutput\");\n  dataOutput.innerHTML = \"\";\n\n  const listItem = createListItem(color, breed, address);\n  addItemToUI(listItem);\n};",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "### Do This:\r\n\r\nLet's display the first pet in the app. Open the debugging tool and go to the Network tab. Find the API request and look at the response to see the available field names.\r\n\r\nThen, use dot notation on the `firstPet` object to set each variable:\r\n\r\n1. Set `breed` to the pet's breed.\r\n2. Set `color` to the pet's color.\r\n3. Set `address` to the address where the pet was found.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "level_system_prompt": "You are an AI Tutor helping a student fill in variables using dot notation on a JavaScript object called firstPet.\r\n\r\nThe starter code already has empty variables for color, breed, and address. These get passed into createListItem(color, breed, address) to build a list item and show it in the app.\r\n\r\nHere is the correct solution:\r\n\r\nbreed = firstPet.primary_breed;\r\ncolor = firstPet.primary_color;\r\naddress = firstPet.found_address;",
+    "project_template_level_name": "designing-reliable-apps-lesson5-template_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-02T14:36:25.810+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson5-level4-2025-pilot_2025-pilot_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson5-level4-2025-pilot_2025-pilot_2026\"}]"
+}]]></config>
+</Weblab2>

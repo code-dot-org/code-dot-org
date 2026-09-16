@@ -69,8 +69,8 @@ const styles = {
     color: 'var(--text-neutral-inverse)',
     padding: 15,
     marginBottom: 0,
-    // matches the lineHeight of the legacy Button height (34px).
-    height: 34,
+    // matches the lineHeight of the legacy Button height (34px) plus padding.
+    height: 64,
     lineHeight: '34px',
   },
   // absolutely position children so that they're located correctly in RTL as well

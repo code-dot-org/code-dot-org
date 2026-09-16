@@ -1,0 +1,18 @@
+/*
+ * DSCO Link is display:inline-flex, which makes a link inside a sentence an
+ * atomic box — it can't wrap, so it gets pushed onto its own line mid-phrase.
+ * These links sit inside prose, so flow them as text.
+ */
+.inlineLink {
+  display: inline;
+}
+
+/*
+ * DSCO Checkbox hides its real input as position:absolute/opacity:0 stretched
+ * across the label's first line, so it covers any link that lands there and eats
+ * the click. The visible box is a sibling <i>, and label activation reaches the
+ * input whether or not it receives the pointer, so this only gives the links back.
+ */
+.acknowledgment input[type='checkbox'] {
+  pointer-events: none;
+}

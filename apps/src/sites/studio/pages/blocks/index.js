@@ -54,7 +54,7 @@ $(document).ready(() => {
   Blockly.assetUrl = assetUrl;
   Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
   Blockly.typeHints = true;
-  Blockly.Css.inject(true, 'media');
+  Blockly.Css.inject(document.body, true, 'media');
 
   const divs = document.getElementsByClassName('blockly-container');
   for (let i = 0; i < divs.length; i++) {

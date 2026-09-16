@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-08-17T14:34:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "753ee6cb-4189-4703-8aa8-655d6deefa07": {
+          "id": "753ee6cb-4189-4703-8aa8-655d6deefa07",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>RPG Game Setup</title>\n    <style>\n        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; text-align: center; background-color: #2c3e50; color: #ecf0f1; }\n        h1 { color: #e74c3c; margin-bottom: 20px; }\n        p { margin-bottom: 25px; font-size: 1.1em; }\n        .console-hint { background-color: #34495e; padding: 10px; border-radius: 5px; display: inline-block; margin-top: 20px; font-size: 0.9em; }\n    </style>\n</head>\n<body>\n    <h1>Welcome to the RPG Game!</h1>\n    <p>Let's set up your character. Open the console to see your character's stats!</p>\n    <div class=\"console-hint\">Remember to open your browser's console (F12) to see output from `script.js`.</div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "a05f86ae-30f4-40ac-a072-cad01ff8dedc": {
+          "id": "a05f86ae-30f4-40ac-a072-cad01ff8dedc",
+          "name": "script.js",
+          "contents": "// Welcome to the RPG Game!\n// Before Byte can help you on your adventure, we need to create your character's basic stats.\n\n// Your task: Create two variables for your character.\n\n// 1. Create a variable called `character_class`.\n//    This variable should store a String value, like \"Warrior\", \"Mage\", or \"Rogue\".\n//    Example: let character_class = \"Warrior\";\n\n// 2. Create a variable called `strength_points`.\n//    This variable should store an Integer (whole number) value, like 10, 15, or 20.\n//    Example: let strength_points = 15;\n\n// Write your code below this line:\n// --- Your code starts here ---\n\n\n// --- Your code ends here ---\n\n// Let's check your character's stats!\nconsole.log(\"--- Character Stats ---\");\nconsole.log(\"Class: \" + character_class);\nconsole.log(\"Strength: \" + strength_points);\nconsole.log(\"-----------------------\");\n\n// If you see 'undefined' or an error, double-check that you've created both variables correctly.\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "753ee6cb-4189-4703-8aa8-655d6deefa07",
+        "a05f86ae-30f4-40ac-a072-cad01ff8dedc"
+      ]
+    },
+    "long_instructions": "Welcome, adventurer! Your robot assistant, Byte, is ready to help you on an epic quest, but first, we need to define your character.\r\n\r\nIn this level, you'll practice creating variables. Variables are like containers that hold information your program needs.\r\n\r\n1.  **Open `script.js`.** Inside this file, you'll find comments guiding you.\r\n2.  **Create a variable named `character_class`.** This variable should store a **String** (text) value, like `\"Warrior\"`, `\"Mage\"`, or `\"Rogue\"`. Make sure to put your chosen class name inside double quotes!\r\n3.  **Create a variable named `strength_points`.** This variable should store an **Integer** (whole number) value, like `10`, `15`, or `20`. This should be a number without quotes.\r\n4.  **Save `script.js`** and refresh `index.html` in your browser. Open your browser's console (usually by pressing `F12`) to see if your character's stats are displayed correctly. Byte will print out the values you assigned!",
+    "generate_outline": "Scenario: The RPG Game\r\n\r\nTask: Create variables for character_class (String) and strength_points (Integer)."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-17 14:34:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:34:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-08-17 14:34:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

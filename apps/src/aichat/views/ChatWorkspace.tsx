@@ -81,9 +81,9 @@ interface ChatWorkspaceProps {
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
 
-  // Optional callback to process the model's response before it is recorded in chat
-  // history (useful for structured outputs).
-  responseCallback?: (response: string) => string;
+  // Formats a jsonSchema-configured session's parsed response before it's
+  // recorded in chat history. Only ever set alongside modelParameters.responseJsonSchema.
+  jsonSchemaResponseCallback?: (response: unknown) => string;
 
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
@@ -119,7 +119,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       onAssetUploaded,
       onAssetRemoved,
       hideModelChangeMessage = false,
-      responseCallback,
+      jsonSchemaResponseCallback,
       hasInstructionsDrawer,
       lessonId,
       disabledState,
@@ -430,7 +430,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               chatButtons={chatButtons}
               hiddenContextCallback={hiddenContextCallback}
               multimodalAvailable={canUploadAssets}
-              responseCallback={responseCallback}
+              jsonSchemaResponseCallback={jsonSchemaResponseCallback}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}

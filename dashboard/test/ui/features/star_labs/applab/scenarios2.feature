@@ -56,6 +56,6 @@ Feature: App Lab Scenarios 2
     And I wait until element ".assetRow td:contains(artist_image_1.png)" is visible
 
     # Delete asset.
-    Then I press the first ".btn-danger" element
-    And I press the first ".btn-danger" element
+    Then I press the first ".uitest-delete-asset" element
+    And I press the first ".uitest-confirm-delete-asset" element
     And I wait until element "#manage-asset-status" contains text "successfully deleted!"

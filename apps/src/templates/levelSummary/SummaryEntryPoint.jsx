@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -49,10 +49,20 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
             data-testid={'response-counter'}
           >
             <p>
-              <span className={styles.counter}>
+              <MuiTypography
+                variant="label1"
+                component="span"
+                className={styles.counter}
+              >
                 {scriptData.response_count}/{students.length}{' '}
-              </span>
-              <span className={styles.text}>{i18n.studentsAnswered()}</span>
+              </MuiTypography>
+              <MuiTypography
+                variant="body3"
+                component="span"
+                className={styles.text}
+              >
+                {i18n.studentsAnswered()}
+              </MuiTypography>
             </p>
           </div>
         </>

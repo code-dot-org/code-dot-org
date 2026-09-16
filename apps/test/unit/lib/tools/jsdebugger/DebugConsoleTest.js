@@ -359,19 +359,20 @@ describe('The DebugConsole component when the console is enabled', () => {
       expect(debugOutput().instance().style.backgroundColor).toBe('');
     });
 
-    it('warning debug output will change background color to lightest yellow', async () => {
+    it('warning debug output will change background color to the warning token', async () => {
       await act(() => {
         getStore().dispatch(actions.appendLog({output: 'test normal text'}));
         getStore().dispatch(
           actions.appendLog({output: 'test warning text'}, 'WARNING')
         );
       });
-      expect(debugOutput().instance().style.backgroundColor).toBe(
-        'rgb(255, 247, 223)'
+      root.update();
+      expect(debugOutput().prop('style').backgroundColor).toBe(
+        'var(--background-warning-extra-light)'
       );
     });
 
-    it('error debug output will change background color to lightest red', async () => {
+    it('error debug output will change background color to the error token', async () => {
       await act(() => {
         getStore().dispatch(actions.appendLog({output: 'test normal text'}));
         getStore().dispatch(
@@ -381,8 +382,9 @@ describe('The DebugConsole component when the console is enabled', () => {
           actions.appendLog({output: 'test error text'}, 'ERROR')
         );
       });
-      expect(debugOutput().instance().style.backgroundColor).toBe(
-        'rgb(255, 204, 204)'
+      root.update();
+      expect(debugOutput().prop('style').backgroundColor).toBe(
+        'var(--background-error-extra-light)'
       );
     });
   });

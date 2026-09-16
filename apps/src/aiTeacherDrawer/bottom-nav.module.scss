@@ -1,15 +1,13 @@
-@import 'color';
-
 .nav {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   flex-shrink: 0;
-  background: $neutral_white;
+  background: var(--background-neutral-primary);
   border-top: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-right: 0.125rem solid $neutral_dark;
-  border-bottom: 0.125rem solid $neutral_dark;
-  border-left: 0.125rem solid $neutral_dark;
+  border-right: 0.125rem solid var(--borders-neutral-solid);
+  border-bottom: 0.125rem solid var(--borders-neutral-solid);
+  border-left: 0.125rem solid var(--borders-neutral-solid);
   border-radius: 0 0 0.25rem 0.25rem;
 }
 
@@ -24,10 +22,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: $neutral_dark60;
+  color: var(--text-neutral-placeholder);
 
   &.active {
-    color: $neutral_dark;
+    color: var(--text-neutral-primary);
 
     .label {
       font-weight: 700;

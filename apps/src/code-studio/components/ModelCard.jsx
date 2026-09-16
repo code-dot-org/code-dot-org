@@ -1,8 +1,10 @@
+import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import color from '@cdo/apps/util/color';
+import localization from '@cdo/apps/localization';
+
+import moduleStyles from './ModelCard.module.scss';
 
 class FeatureDetails extends React.Component {
   static propTypes = {
@@ -13,19 +15,19 @@ class FeatureDetails extends React.Component {
     const {feature} = this.props;
 
     return (
-      <div>
-        <p style={styles.bold}>{feature.id}</p>
-        <p>{feature.description}</p>
-        <div>
-          Possible Values:{' '}
-          {!feature.values && (
-            <p style={styles.details}>
-              min: {feature.min}, max: {feature.max}
-            </p>
-          )}
-          {feature.values && feature.values.join(', ')}
-        </div>
-        <br />
+      <div className={moduleStyles.feature}>
+        <Typography variant="body2" className={moduleStyles.featureId}>
+          {feature.id}
+        </Typography>
+        <Typography variant="body2">{feature.description}</Typography>
+        <Typography variant="body2">
+          <span className={moduleStyles.bold}>Possible Values: </span>
+          {feature.values
+            ? feature.values
+                .map(value => localization.translate(value))
+                .join(', ')
+            : `min: ${feature.min}, max: ${feature.max}`}
+        </Typography>
       </div>
     );
   }
@@ -39,103 +41,74 @@ export default class ModelCard extends React.Component {
   render() {
     const model = this.props.model;
     const metadata = model?.metadata;
-    const selectedFeatures = metadata?.features.map(feature => {
-      return feature.id;
-    });
+    if (!model || !metadata) {
+      return <div />;
+    }
+    const selectedFeatures = metadata.features.map(feature => feature.id);
 
     return (
-      <div>
-        {model && metadata && (
-          <div style={styles.container}>
-            <h3 style={styles.header}>{metadata.name}</h3>
-            <div>
-              <span style={styles.bold}>Id: </span>
-              <span>{this.props.model.id}</span>
-            </div>
-            <br />
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>Accuracy</div>
-              <p style={styles.details}>{metadata.summaryStat?.stat}%</p>
-            </div>
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>Intended Use</div>
-              <p style={styles.details}>{metadata.potentialUses}</p>
-            </div>
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>Warnings and Limitations</div>
-              <p style={styles.details}>{metadata.potentialMisuses}</p>
-            </div>
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>About the Data</div>
-              <p style={styles.details}>
-                {metadata.datasetDetails?.description}
-              </p>
-              <br />
-              {metadata.datasetDetails?.numRows && (
-                <p style={styles.details}>
-                  Dataset size: {metadata.datasetDetails?.numRows} rows
-                </p>
-              )}
-            </div>
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>Features and Label</div>
-              <p style={styles.details}>
-                Predict {metadata.label.id} based on{' '}
-                {selectedFeatures.join(', ')}.
-              </p>
-            </div>
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>Label</div>
-              <FeatureDetails feature={metadata.label} />
-            </div>
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>Features</div>
-              {metadata.features.map(feature => {
-                return <FeatureDetails feature={feature} key={feature.id} />;
-              })}
-            </div>
-          </div>
-        )}
+      <div className={moduleStyles.container}>
+        <Typography variant="h5" className={moduleStyles.header}>
+          {metadata.name}
+        </Typography>
+        <Typography variant="body2">
+          <span className={moduleStyles.bold}>Id: </span>
+          {this.props.model.id}
+        </Typography>
+        <div className={moduleStyles.subPanel}>
+          <Typography variant="label1" className={moduleStyles.heading}>
+            Accuracy
+          </Typography>
+          <Typography variant="body2">{metadata.summaryStat?.stat}%</Typography>
+        </div>
+        <div className={moduleStyles.subPanel}>
+          <Typography variant="label1" className={moduleStyles.heading}>
+            Intended Use
+          </Typography>
+          <Typography variant="body2">{metadata.potentialUses}</Typography>
+        </div>
+        <div className={moduleStyles.subPanel}>
+          <Typography variant="label1" className={moduleStyles.heading}>
+            Warnings and Limitations
+          </Typography>
+          <Typography variant="body2">{metadata.potentialMisuses}</Typography>
+        </div>
+        <div className={moduleStyles.subPanel}>
+          <Typography variant="label1" className={moduleStyles.heading}>
+            About the Data
+          </Typography>
+          <Typography variant="body2">
+            {metadata.datasetDetails?.description}
+          </Typography>
+          {metadata.datasetDetails?.numRows && (
+            <Typography variant="body2" className={moduleStyles.spacer}>
+              Dataset size: {metadata.datasetDetails?.numRows} rows
+            </Typography>
+          )}
+        </div>
+        <div className={moduleStyles.subPanel}>
+          <Typography variant="label1" className={moduleStyles.heading}>
+            Features and Label
+          </Typography>
+          <Typography variant="body2">
+            Predict {metadata.label.id} based on {selectedFeatures.join(', ')}.
+          </Typography>
+        </div>
+        <div className={moduleStyles.subPanel}>
+          <Typography variant="label1" className={moduleStyles.heading}>
+            Label
+          </Typography>
+          <FeatureDetails feature={metadata.label} />
+        </div>
+        <div className={moduleStyles.subPanel}>
+          <Typography variant="label1" className={moduleStyles.heading}>
+            Features
+          </Typography>
+          {metadata.features.map(feature => (
+            <FeatureDetails feature={feature} key={feature.id} />
+          ))}
+        </div>
       </div>
     );
   }
 }
-
-const styles = {
-  container: {
-    color: color.black,
-    textAlign: 'left',
-    backgroundColor: color.lighter_gray,
-    borderRadius: 5,
-    padding: 20,
-    whiteSpace: 'normal',
-    lineHeight: 1.5,
-    maxHeight: 'calc(80vh - 150px)',
-    overflow: 'scroll',
-  },
-  subPanel: {
-    backgroundColor: color.lightest_gray,
-    borderRadius: 5,
-    borderColor: color.gray,
-    marginBottom: 10,
-    padding: 10,
-    overflowWrap: 'break-word',
-  },
-  bold: {
-    ...fontConstants['main-font-bold'],
-  },
-  header: {
-    ...fontConstants['main-font-bold'],
-    marginTop: 0,
-    lineHeight: '20px',
-  },
-  heading: {
-    ...fontConstants['main-font-bold'],
-    fontSize: 14,
-    marginBottom: 5,
-    textAlign: 'center',
-  },
-  details: {
-    marginBottom: 0,
-  },
-};

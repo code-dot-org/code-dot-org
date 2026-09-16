@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-07-10T19:04:34.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "pl-teaching-moves-assessment-in-the-age-of-ai",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "\r\nIn an era where AI tools can generate code quickly, assessment must shift from evaluating what students build to understanding how they build it.\r\n\r\n\r\n## Redefining “Success” in Coding\r\n\r\nWhen AI can produce working features or write code, evaluating only the final product is no longer sufficient.\r\n\r\nThis capstone is designed as a process-oriented experience, emphasizing:\r\n- Decision-making\r\n- Testing\r\n- Iteration and refinement\r\n- Evaluating AI Judgment\r\n\r\n\r\nA student’s final app is only one part of their work.\r\n\r\n<div style=\"background-color: #e4e2f8; padding: 20px; border-radius: 10px; margin: 20px 0px;\"> <p style=\"font-weight: bold; font-size: 12pt;\">Simplicity + Reasoning &gt; Complexity + Confusion</p> </div>\r\n\r\n---\r\n\r\nWatch the video below to learn about assessment in the age of AI.  \r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-07-10T19:04:34.917+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U6-teaching-moves-assesment-16\\\"\"],\"cloned_from\":\"pl-aif-2-U6-teaching-moves-assesment-16\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

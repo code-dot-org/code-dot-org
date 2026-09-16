@@ -1,0 +1,128 @@
+name 'pl-aif-2-U4-introducing-loops-1_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+<img src="https://images.code.org/94f55e513cce8e0dc448aff4c12c4f33-image-1781706617134.png" alt="basketball going through hoop" width="180px" style="border-radius:10px; float:right; margin: 0 60px 0 30px;">
+
+# Hoop, there it is! 
+
+Imagine you are practicing your free throw shot.
+
+**Round 1:**
+You take exactly five free throws.
+
+**Round 2:**
+You keep tossing the basketball until you make one shot, no matter how many tries it takes.
+
+**Which round do you think would take longer and why?**
+
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; width:60%;">
+    <summary style="font-size: 12pt; font-weight: bold;">🔎 Check your thinking:</summary>
+<div style="margin: 20px;">
+    <p style = "font-size: 12pt;">
+    <ul>
+    <li style = "font-size: 12pt;">In one case, you already know how many times you’ll repeat the action.</li>
+    <li style = "font-size: 12pt;">In the other, you don’t know how many tries it will take—you stop only when a condition is met.</li>
+    </ul>
+    <p style = "font-size: 12pt;"> This same distinction shows up in programming.</p>
+
+</p>
+</div>
+</details>
+
+<div style="clear:both;"></div>
+
+---
+
+## Types of Loops
+
+Not all loops repeat in the same way. What makes loops different is how the repetition is controlled.
+
+In most programs, iteration falls into one of two common categories.
+
+<div style="
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+">
+
+  <!-- Count-Controlled Iteration Card -->
+  <div style="
+    background-color: #F5F7F8;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+  ">
+
+<p style="font-size: 12pt; font-weight: bold; margin: 0; ">
+      Count-Controlled Iteration<br>(For Loop)
+    </p>
+
+<ul style="
+  list-style-position: outside; padding-left: 16px; margin: 12px 0 0 0;">
+
+
+<li style="font-size: 12pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;  padding-left: 0;
+">
+        Repeats a set of steps a <strong>specific number of times</strong>
+      </li>
+
+<li style="  font-size: 12pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0;">
+        The number of repetitions is known before the loop starts
+      </li>
+
+ <li style="  font-size: 12pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0; font-style: italic;">
+         “How many times should this happen?”
+      </li>
+
+ </ul>
+
+  </div>
+
+  <!-- Condition-Controlled Iteration Card -->
+  <div style="
+    background-color: #F5F7F8;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+  ">
+
+ <p style="font-size: 12pt; font-weight: bold; margin: 0;">
+      Condition-Controlled Iteration<br>(While Loop)
+    </p>
+
+<ul style="
+  list-style-position: outside; padding-left: 12px; margin: 12px 0 0 0;">
+
+<li style="  font-size: 13pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0;">
+        Repeats a set of steps <strong>as long as a condition is true</strong>
+      </li>
+
+ <li style="  font-size: 12pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0;">
+        The number of repetitions is not known ahead of time
+      </li>
+
+ <li style="  font-size: 12pt; line-height: 1.3; margin-bottom: 8px; margin-left: 0;padding-left: 0; font-style: italic;">
+         “When should this stop?”
+      </li>
+
+</ul>
+
+  </div>
+
+</div>
+
+
+MARKDOWN

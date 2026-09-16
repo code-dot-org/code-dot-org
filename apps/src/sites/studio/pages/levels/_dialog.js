@@ -3,6 +3,7 @@ import {
   showDialog,
   processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
+import {showLevelGroupSubmitDialog} from '@cdo/apps/code-studio/levels/LevelGroupSubmitDialog';
 import {LegacyUnsubmitDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 
 /**
@@ -54,14 +55,8 @@ $(document).ready(() => {
 
     var result = getResult();
     if (result.confirmationDialog) {
-      // This is only used by level_group.js, and only uses the React approach to
-      // showDialog
-      if (typeof result.confirmationDialog === 'string') {
-        throw new Error(
-          'result.confirmationDialog only supports React approach to showDialog'
-        );
-      }
-      showDialog(result.confirmationDialog, function () {
+      // Only level groups set this; see getAggregatedResults in _level_group.js.
+      showLevelGroupSubmitDialog(result.confirmationDialog, function () {
         processResults(undefined, result.beforeProcessResultsHook);
       });
     } else {

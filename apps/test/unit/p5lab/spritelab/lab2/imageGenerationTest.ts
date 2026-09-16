@@ -1,0 +1,166 @@
+import {generateText} from '@cdo/apps/aiGateway';
+import {
+  generateImage,
+  pixelBlockFor,
+  requestImage,
+  styleClause,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+
+jest.mock('@cdo/apps/aiGateway', () => ({
+  generateText: jest.fn(),
+}));
+
+// The safety checks have their own suite; here they pass silently so the
+// generation mechanics stay the subject.
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety', () => ({
+  checkPromptSafety: jest.fn().mockResolvedValue(undefined),
+  checkImageSafety: jest.fn().mockResolvedValue(undefined),
+  markHandled: jest.fn(promise => promise),
+}));
+
+const mockGenerateText = generateText as jest.Mock;
+
+// A smooth-style background delivered as JPEG (no alpha) skips the canvas
+// post-processing, which jsdom can't run; these tests exercise the
+// request/metadata plumbing only.
+const OPTIONS = {imageType: 'background', style: 'smooth'} as const;
+
+describe('generateImage', () => {
+  beforeEach(() => {
+    mockGenerateText.mockReset();
+    mockGenerateText.mockResolvedValue({
+      files: [{mediaType: 'image/jpeg', uint8Array: new Uint8Array([1, 2, 3])}],
+    });
+  });
+
+  it('rolls an integer seed when none is given, and reports it', async () => {
+    const {generation} = await generateImage('a beach', OPTIONS);
+    const sent = mockGenerateText.mock.calls[0][0];
+    expect(Number.isInteger(sent.seed)).toBe(true);
+    expect(sent.seed).toBeGreaterThanOrEqual(0);
+    expect(generation.seed).toBe(sent.seed);
+  });
+
+  it('replays a given seed and forwards temperature', async () => {
+    const {generation} = await generateImage('a beach', {
+      ...OPTIONS,
+      seed: 1234,
+      temperature: 1.5,
+    });
+    const sent = mockGenerateText.mock.calls[0][0];
+    expect(sent.seed).toBe(1234);
+    expect(sent.temperature).toBe(1.5);
+    expect(generation).toMatchObject({
+      prompt: 'a beach',
+      imageType: 'background',
+      style: 'smooth',
+      seed: 1234,
+      temperature: 1.5,
+    });
+    expect(generation.editedPrevious).toBeUndefined();
+  });
+
+  it('keeps the last image file: a thinking model sends its drafts first', async () => {
+    mockGenerateText.mockResolvedValue({
+      files: [
+        {mediaType: 'image/jpeg', uint8Array: new Uint8Array([1])},
+        {mediaType: 'text/plain', uint8Array: new Uint8Array([2])},
+        {mediaType: 'image/jpeg', uint8Array: new Uint8Array([3])},
+      ],
+    });
+    const result = await generateImage('a beach', OPTIONS);
+    expect(Array.from(result.uint8Array)).toEqual([3]);
+  });
+
+  it('asks for a 1K square through provider options', async () => {
+    await generateImage('a beach', OPTIONS);
+    expect(mockGenerateText.mock.calls[0][0].providerOptions).toEqual({
+      google: {imageConfig: {aspectRatio: '1:1', imageSize: '1K'}},
+    });
+  });
+
+  it('lets a request choose its output size', async () => {
+    await requestImage('a frame', {seed: 1, imageSize: '2K'});
+    expect(
+      mockGenerateText.mock.calls[0][0].providerOptions.google.imageConfig
+        .imageSize
+    ).toBe('2K');
+  });
+
+  it('reads the prompt as a sentence without doubling its punctuation', async () => {
+    await generateImage('a beach.', OPTIONS);
+    await generateImage('a beach!', OPTIONS);
+    await generateImage('a beach', OPTIONS);
+    const sent = mockGenerateText.mock.calls.map(
+      call => call[0].messages[0].content
+    );
+    expect(sent[0]).toMatch(/^a beach\. Render/);
+    expect(sent[1]).toMatch(/^a beach! Render/);
+    expect(sent[2]).toMatch(/^a beach\. Render/);
+  });
+
+  it('omits temperature from the request unless given', async () => {
+    await generateImage('a beach', OPTIONS);
+    expect('temperature' in mockGenerateText.mock.calls[0][0]).toBe(false);
+  });
+
+  it('sends the previous image as an image part when editing', async () => {
+    const dataURI = 'data:image/png;base64,AAAA';
+    const {generation} = await generateImage('add a lighthouse', {
+      ...OPTIONS,
+      inputImageDataURI: dataURI,
+    });
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content[0]).toEqual({type: 'image', image: dataURI});
+    expect(content[1].type).toBe('text');
+    expect(content[1].text).toContain('Modify the provided image');
+    expect(content[1].text).toContain('add a lighthouse');
+    expect(generation.editedPrevious).toBe(true);
+  });
+
+  it('sends a plain text message when not editing', async () => {
+    await generateImage('a beach', OPTIONS);
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(typeof content).toBe('string');
+    expect(content).toContain('a beach');
+  });
+
+  it('asks backgrounds to fill the whole image (no painted frame)', async () => {
+    await generateImage('a beach', OPTIONS);
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content).toContain('reaching all four edges');
+    expect(content).toContain('Do not frame the picture');
+  });
+
+  it('asks for the pixel grid of the image type', async () => {
+    // Sprites and blocks read at 64x64; a background carries a whole scene,
+    // so its grid is finer.
+    expect(styleClause('pixel', pixelBlockFor('sprite'))).toContain('64x64');
+    expect(styleClause('pixel', pixelBlockFor('block'))).toContain('64x64');
+    expect(styleClause('pixel', pixelBlockFor('background'))).toContain(
+      '128x128'
+    );
+    expect(styleClause('pixel', pixelBlockFor('background'))).toContain(
+      '8x8 block'
+    );
+    await generateImage('a beach', {imageType: 'background', style: 'smooth'});
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content).not.toContain('pixel grid');
+  });
+
+  it('a chosen pixel grid overrides the default in the prompt', async () => {
+    expect(styleClause('pixel', 32)).toContain('32x32 pixel grid');
+    expect(styleClause('pixel', 64)).toContain('16x16 pixel grid');
+    expect(styleClause('pixel', 64)).toContain('64x64 block');
+    // End to end: the request carries the chosen grid. Post-processing needs
+    // a real canvas and throws in jsdom, after the request has been sent.
+    await generateImage('a cave', {
+      imageType: 'background',
+      style: 'pixel',
+      pixelGrid: 64,
+    }).catch(() => {});
+    const content = mockGenerateText.mock.calls[0][0].messages[0].content;
+    expect(content).toContain('64x64 pixel grid');
+    expect(content).toContain('16x16 block');
+  });
+});

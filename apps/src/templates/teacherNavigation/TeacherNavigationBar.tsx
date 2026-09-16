@@ -127,11 +127,14 @@ const TeacherNavigationBar: React.FC<{
   const performanceSectionTitle = getSectionHeader(i18n.performance());
 
   const defaultPerformanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
-  const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    experiments.isEnabled('student-snapshot')
-      ? [...defaultPerformanceContentKeys, 'studentSnapshot']
-      : defaultPerformanceContentKeys;
+    [
+      'progress',
+      'assessments',
+      'projects',
+      'stats',
+      'textResponses',
+      'studentSnapshot',
+    ];
 
   const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
   const defaultClassroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
@@ -148,7 +151,7 @@ const TeacherNavigationBar: React.FC<{
     },
     {
       title: performanceSectionTitle,
-      keys: performanceContentKeys,
+      keys: defaultPerformanceContentKeys,
     },
     {
       title: classroomContentSectionTitle,

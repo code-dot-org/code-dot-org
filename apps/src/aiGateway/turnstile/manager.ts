@@ -1,3 +1,5 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {
   CHALLENGE_TIMEOUT_MS,
   CONTAINER_ID,
@@ -6,8 +8,24 @@ import {
   TURNSTILE_SITE_KEY,
 } from './constants';
 import {debuggerWillPauseInAnonymousScope} from './debuggerProbe';
+import {type TurnstileEnforcementMode} from './enforcementMode';
 import {loadTurnstileScript} from './loadScript';
-import {TurnstileDevToolsError} from './types';
+import {recordTurnstileOutcome} from './outcome';
+import {
+  TokenAcquisitionMode,
+  TurnstileChallengeError,
+  TurnstileDevToolsError,
+} from './types';
+
+interface TokenAcquisition {
+  acquisitionMode: TokenAcquisitionMode;
+  token: Promise<string>;
+}
+
+// Mutable so a caller adopting a pre-fetch can relabel it before it settles.
+interface ChallengeOutcomeMode {
+  acquisitionMode: TokenAcquisitionMode;
+}
 
 /**
  * Manages Turnstile widget lifecycle with three goals:
@@ -44,6 +62,14 @@ export class TurnstileManager {
   // detect tokens older than TOKEN_MAX_AGE_MS before they are consumed.
   private nextTokenResolvedAt: number | null = null;
 
+  private nextTokenOutcomeMode: ChallengeOutcomeMode | null = null;
+
+  // Enforcement mode of the most recent caller. A pre-fetch is speculative for
+  // a request that has not happened yet, so it is attributed to the policy in
+  // force when it was scheduled. That is only wrong across a DCDO flip, and
+  // only for the one challenge already in flight when the flag changed.
+  private enforcementMode: TurnstileEnforcementMode = 'monitor';
+
   private widgetId: string | null = null;
 
   // Created once in the constructor and appended directly to document.body,
@@ -69,9 +95,14 @@ export class TurnstileManager {
     return TurnstileManager.instance;
   }
 
-  async getTurnstileToken(): Promise<string> {
+  async getTurnstileToken(
+    enforcementMode: TurnstileEnforcementMode
+  ): Promise<string> {
     const start = performance.now();
-    console.log(`${LOG} getTurnstileToken() called`);
+    this.enforcementMode = enforcementMode;
+    console.log(
+      `${LOG} getTurnstileToken() called (enforcementMode=${enforcementMode})`
+    );
 
     if (await debuggerWillPauseInAnonymousScope()) {
       console.error(
@@ -116,29 +147,59 @@ export class TurnstileManager {
       console.error(
         `${LOG} Throwing TurnstileDevToolsError — challenge cannot proceed`
       );
-      throw new TurnstileDevToolsError();
+      // This path returns before any challenge is enqueued, so it is the only
+      // place that can account for the token the caller will not receive.
+      const devToolsError = new TurnstileDevToolsError();
+      recordTurnstileOutcome({
+        acquisitionMode: 'on-demand',
+        enforcementMode,
+        durationMs: performance.now() - start,
+        error: devToolsError,
+      });
+      throw devToolsError;
     }
 
-    try {
-      const token = await this.getToken();
-      console.log(
-        `${LOG} Token delivered successfully (len=${token.length}) in ${(
-          performance.now() - start
-        ).toFixed(0)}ms`
-      );
-      return token;
-    } catch (err) {
-      console.error(
-        `${LOG} getToken() failed after ${(performance.now() - start).toFixed(
-          0
-        )}ms:`,
-        err
-      );
-      throw err;
-    }
+    // The mode is decided synchronously, before the challenge is awaited, so it
+    // can be attached to the span at creation.
+    const {acquisitionMode, token: pendingToken} = this.startTokenAcquisition();
+
+    const awaitTokenDelivery = async (): Promise<string> => {
+      try {
+        const token = await pendingToken;
+        console.log(
+          `${LOG} Token delivered successfully (len=${token.length}) in ${(
+            performance.now() - start
+          ).toFixed(0)}ms`
+        );
+        return token;
+      } catch (err) {
+        console.error(
+          `${LOG} Token acquisition failed after ${(
+            performance.now() - start
+          ).toFixed(0)}ms:`,
+          err
+        );
+        throw err;
+      }
+    };
+
+    return Observability.startSpan(
+      {
+        name: 'ai-gateway.turnstile',
+        op: 'ai.turnstile',
+        attributes: {
+          'turnstile.acquisition_mode': acquisitionMode,
+          'turnstile.enforcement_mode': enforcementMode,
+          feature: 'ai-gateway',
+        },
+      },
+      awaitTokenDelivery
+    );
   }
 
-  private getToken(): Promise<string> {
+  // Starts (or claims) a challenge and reports where the token came from. The
+  // returned token is still pending — callers must await it.
+  private startTokenAcquisition(): TokenAcquisition {
     if (this.nextTokenPromise) {
       const age =
         this.nextTokenResolvedAt !== null
@@ -152,6 +213,7 @@ export class TurnstileManager {
         );
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
+        this.nextTokenOutcomeMode = null;
       } else {
         console.log(
           `${LOG} Pre-fetch hit — returning in-progress token${
@@ -159,20 +221,25 @@ export class TurnstileManager {
           }`
         );
         const p = this.nextTokenPromise;
+        // This caller now awaits it, so a failure here is user-visible.
+        if (age === null && this.nextTokenOutcomeMode) {
+          this.nextTokenOutcomeMode.acquisitionMode = 'on-demand';
+        }
         this.nextTokenPromise = null;
         this.nextTokenResolvedAt = null;
+        this.nextTokenOutcomeMode = null;
         this.schedulePrefetch();
-        return p;
+        return {acquisitionMode: 'pre-fetch', token: p};
       }
     }
 
     console.log(`${LOG} Pre-fetch miss — enqueueing fresh challenge`);
-    const result = this.runSerializedChallenge();
+    const result = this.runSerializedChallenge({acquisitionMode: 'on-demand'});
     result.then(
       () => this.schedulePrefetch(),
       () => {}
     );
-    return result;
+    return {acquisitionMode: 'on-demand', token: result};
   }
 
   private schedulePrefetch(): void {
@@ -181,8 +248,10 @@ export class TurnstileManager {
       return;
     }
     console.log(`${LOG} Scheduling pre-fetch challenge`);
-    const p = this.runSerializedChallenge();
+    const outcomeMode: ChallengeOutcomeMode = {acquisitionMode: 'pre-fetch'};
+    const p = this.runSerializedChallenge(outcomeMode);
     this.nextTokenPromise = p;
+    this.nextTokenOutcomeMode = outcomeMode;
     p.then(
       token => {
         this.nextTokenResolvedAt = Date.now();
@@ -200,23 +269,58 @@ export class TurnstileManager {
         if (this.nextTokenPromise === p) {
           this.nextTokenPromise = null;
           this.nextTokenResolvedAt = null;
+          this.nextTokenOutcomeMode = null;
         }
       }
     );
   }
 
-  private runSerializedChallenge(): Promise<string> {
+  private runSerializedChallenge(
+    outcomeMode: ChallengeOutcomeMode
+  ): Promise<string> {
     console.log(`${LOG} Challenge enqueued on chain`);
+
+    // Captured when the challenge is created rather than read at settle time,
+    // so a DCDO flip mid-challenge cannot relabel a challenge that ran under
+    // the previous policy.
+    const enforcementMode = this.enforcementMode;
+
+    // Timed from chain release, not enqueue, to match CHALLENGE_TIMEOUT_MS.
+    const startChallenge = () => {
+      const start = performance.now();
+      return loadTurnstileScript()
+        .then(() => this.runChallenge())
+        .then(
+          token => {
+            recordTurnstileOutcome({
+              acquisitionMode: outcomeMode.acquisitionMode,
+              enforcementMode,
+              durationMs: performance.now() - start,
+            });
+            return token;
+          },
+          error => {
+            recordTurnstileOutcome({
+              acquisitionMode: outcomeMode.acquisitionMode,
+              enforcementMode,
+              durationMs: performance.now() - start,
+              error,
+            });
+            throw error;
+          }
+        );
+    };
+
     const result = this.chain.then(
       () => {
         console.log(`${LOG} Challenge starting (chain released)`);
-        return loadTurnstileScript().then(() => this.runChallenge());
+        return startChallenge();
       },
       () => {
         console.log(
           `${LOG} Challenge starting after previous chain error (chain released)`
         );
-        return loadTurnstileScript().then(() => this.runChallenge());
+        return startChallenge();
       }
     );
     // Absorb so the chain always advances for subsequent callers.
@@ -249,7 +353,11 @@ export class TurnstileManager {
         } catch (err) {
           console.error(`${LOG} remove(${this.widgetId}) threw:`, err);
           this.widgetId = null;
-          throw err;
+          throw new TurnstileChallengeError(
+            'remove_failed',
+            'Turnstile failed to remove the previous widget',
+            {cause: err}
+          );
         }
         this.widgetId = null;
 
@@ -269,6 +377,12 @@ export class TurnstileManager {
           `${LOG} WARNING: container has ${beforeRenderCount} children before render() — widget accumulation risk`
         );
       }
+
+      // Set by error-callback, read only if the deadline passes. Turnstile
+      // retries on its own, so an error here is not yet a verdict -- but if we
+      // do end up timing out, it tells us Cloudflare was actively failing
+      // rather than silent.
+      let lastErrorCode: string | undefined;
 
       const timeout = setTimeout(() => {
         if (settled) {
@@ -292,7 +406,17 @@ export class TurnstileManager {
             }
             this.widgetId = null;
           }
-          reject(new Error('Turnstile challenge timed out'));
+          reject(
+            lastErrorCode === undefined
+              ? new TurnstileChallengeError(
+                  'timeout',
+                  'Turnstile challenge timed out with no error reported'
+                )
+              : new TurnstileChallengeError(
+                  'challenge_failed',
+                  `Turnstile challenge failed; last error ${lastErrorCode}`
+                )
+          );
         });
       }, CHALLENGE_TIMEOUT_MS);
 
@@ -323,11 +447,51 @@ export class TurnstileManager {
               resolve(token);
             });
           },
+          // Records only. Turnstile retries automatically, so settling here
+          // would abandon a challenge that may still succeed.
+          'error-callback': (errorCode: string) => {
+            lastErrorCode = errorCode;
+            console.warn(
+              `${LOG} error-callback: ${errorCode} (retrying if enabled)`
+            );
+          },
+          // Terminal: retrying cannot make an unsupported browser supported,
+          // so fail now rather than stalling until the deadline.
+          'unsupported-callback': () => {
+            if (settled) {
+              return;
+            }
+            console.error(`${LOG} Browser is not supported by Turnstile`);
+            settle(() => {
+              clearTimeout(timeout);
+              if (this.widgetId) {
+                try {
+                  window.turnstile.remove(this.widgetId);
+                } catch (removeErr) {
+                  console.error(
+                    `${LOG} remove() in unsupported handler threw:`,
+                    removeErr
+                  );
+                }
+                this.widgetId = null;
+              }
+              reject(
+                new TurnstileChallengeError(
+                  'unsupported',
+                  'Browser is not supported by Turnstile'
+                )
+              );
+            });
+          },
         });
       } catch (err) {
         console.error(`${LOG} render() threw:`, err);
         clearTimeout(timeout);
-        throw err;
+        throw new TurnstileChallengeError(
+          'render_threw',
+          'Turnstile render() threw',
+          {cause: err}
+        );
       }
 
       renderTime = performance.now();
@@ -340,7 +504,12 @@ export class TurnstileManager {
         console.error(`${LOG} render() returned falsy widgetId — rejecting`);
         settle(() => {
           clearTimeout(timeout);
-          reject(new Error('Turnstile failed to render widget'));
+          reject(
+            new TurnstileChallengeError(
+              'render_failed',
+              'Turnstile failed to render widget'
+            )
+          );
         });
       } else {
         this.widgetId = widgetId;

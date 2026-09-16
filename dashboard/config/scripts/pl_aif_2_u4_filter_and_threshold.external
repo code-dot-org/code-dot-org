@@ -9,19 +9,19 @@ When you browse a website or app, filters help narrow down large lists of items.
 
 But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
 
-## Two websites, same goal
+## Two Websites, Same Goal
 Below are two websites that sell similar products.
 Both allow users to filter results, but they do it differently.
 
-<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;">
+<div style="background:#ececec; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;">
 
-  <p style="font-size:14pt; margin-top:0;">
-    💡 <strong>Look at each retail website’s filtering system.</strong>
+  <p style="font-size:12pt; margin-top:0;">
+    <strong>Look at each retail website’s filtering system.</strong>
   </p>
 
   <ul>
-    <li style="font-size:14pt;">Which do you prefer?</li>
-    <li style="font-size:14pt;">Which would be easier to use?</li>
+    <li style="font-size:12pt;">Which do you prefer?</li>
+    <li style="font-size:12pt;">Which would be easier to use?</li>
   </ul>
 
 </div>
@@ -95,32 +95,32 @@ Both allow users to filter results, but they do it differently.
 
 <br>
 
-<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
-  <summary style="font-size:1.4em; font-weight:bold;">🔍 Check your thinking</summary>
+<details style="background-color:#ececec;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:12pt; font-weight:bold;">🔎 Check your thinking</summary>
 
 <div style="margin-top:12px; line-height:140%;">
 
-<p style="font-size:14pt; margin-top:0;">
+<p style="font-size:12pt; margin-top:0;">
       Take a closer look at the filters each site offers:
     </p>
 
 <ul>
-      <li style="font-size:14pt;">
+      <li style="font-size:12pt;">
         <strong>Website 1</strong> has many filters (Deals, Rating, Occasion, Price, Category)
       </li>
-      <li style="font-size:14pt; margin-top:8px;">
+      <li style="font-size:12pt; margin-top:8px;">
         <strong>Website 2</strong> has fewer filters and simpler labels
       </li>
     </ul>
 
-<p style="font-size:14pt; margin-top:12px;">
+<p style="font-size:12pt; margin-top:12px;">
       <strong>This design choice affects:</strong>
     </p>
 
 <ul>
-      <li style="font-size:14pt;">What items appear first</li>
-      <li style="font-size:14pt;">What feels easy vs. hard to find</li>
-      <li style="font-size:14pt;">Which users feel supported — and which feel overwhelmed</li>
+      <li style="font-size:12pt;">What items appear first</li>
+      <li style="font-size:12pt;">What feels easy vs. hard to find</li>
+      <li style="font-size:12pt;">Which users feel supported — and which feel overwhelmed</li>
     </ul>
 
   </div>
@@ -134,8 +134,8 @@ Both allow users to filter results, but they do it differently.
       That same user may struggle on Website 2, not because the items don’t exist, but because the filters don’t.
     </p>
 
- <p style="font-size:12pt; margin-bottom:0;">
-      <strong>👉</strong> Filters don’t just show things, they also exclude things.
+ <p style="font-size:12pt; margin-bottom:0;"><b>
+      Filters don’t just show things, they also exclude things.</b>
     </p>
 
 

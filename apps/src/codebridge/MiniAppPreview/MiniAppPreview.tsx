@@ -1,13 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -28,13 +24,6 @@ interface MiniAppPreviewProps {
   handleScaling?: boolean;
 }
 
-const tooltipProps: TooltipProps = {
-  text: codebridgeI18n.resetPreview(),
-  size: 'xs',
-  direction: 'onLeft',
-  tooltipId: 'reset-preview-tooltip',
-};
-
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   maximizeMiniApp,
   minimizeMiniApp,
@@ -45,6 +34,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
 }) => {
   const {levelProperties} = useCodebridgeContext();
   const [isResetButtonDisabled, setIsResetButtonDisabled] = useState(true);
+  const [isTheaterOutputVisible, setIsTheaterOutputVisible] = useState(false);
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
   useEffect(() => {
@@ -59,15 +49,31 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
 
-  const miniAppComponent = useMemo(() => {
+  const {miniAppComponent, miniAppTitle} = useMemo(() => {
     if (miniApp === MiniApps.Neighborhood) {
-      return <NeighborhoodPreview handleScaling={handleScaling} />;
+      return {
+        miniAppComponent: <NeighborhoodPreview handleScaling={handleScaling} />,
+        miniAppTitle: 'Neighborhood',
+      };
     }
     if (miniApp === MiniApps.Theater) {
-      return <TheaterPreview />;
+      return {
+        miniAppComponent: (
+          <TheaterPreview
+            isOutputVisible={isTheaterOutputVisible}
+            setIsOutputVisible={setIsTheaterOutputVisible}
+          />
+        ),
+        miniAppTitle: 'Theater',
+      };
     }
-    return null;
-  }, [handleScaling, miniApp]);
+    return {miniAppComponent: null, miniAppTitle: codebridgeI18n.preview()};
+  }, [handleScaling, miniApp, isTheaterOutputVisible]);
+
+  // Stopping clears the theater's stage, so there is nothing left to reset.
+  const isResetDisabled =
+    isResetButtonDisabled ||
+    (miniApp === MiniApps.Theater && !isTheaterOutputVisible);
 
   const resetMiniApp = () => {
     setIsResetButtonDisabled(true);
@@ -82,29 +88,29 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   return (
     <PanelContainer
       id="codebridge-preview"
-      headerContent={codebridgeI18n.preview()}
+      headerContent={miniAppTitle}
       leftHeaderContent={<ControlButtons />}
       className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
       rightHeaderContent={
         <>
-          <WithTooltip tooltipProps={tooltipProps}>
+          <Tooltip placement="left" title={codebridgeI18n.resetPreview()}>
             <MuiIconButton
               variant="text"
-              color="primary"
+              color="tertiary"
               size="extraSmall"
-              disabled={isResetButtonDisabled}
+              disabled={isResetDisabled}
               onClick={resetMiniApp}
               aria-label={codebridgeI18n.resetPreview()}
               type="button"
             >
               <FontAwesomeV6Icon iconStyle="solid" iconName="rotate-left" />
             </MuiIconButton>
-          </WithTooltip>
+          </Tooltip>
           {showMaximizeButton && (
             <MuiIconButton
               variant="text"
-              color="primary"
+              color="tertiary"
               size="extraSmall"
               onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
               aria-label={

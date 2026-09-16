@@ -14,6 +14,7 @@ import {
   expandableImages,
   externalLinks,
   inlineStyles,
+  lenientHeadings,
   visualCodeBlock,
   vocabularyDefinition,
 } from '../extensions';
@@ -66,6 +67,52 @@ describe('Markdown', () => {
   it('reads from children when content is absent', () => {
     const html = renderToStaticMarkup(<Markdown>{'plain text'}</Markdown>);
     expect(html).toContain('plain text');
+  });
+
+  it('renders --- as a design-system divider', () => {
+    const html = render('above\n\n---\n\nbelow');
+    // The DSCO Divider renders an <hr> carrying its (hashed) module class.
+    expect(html).toMatch(/<hr[^>]*class="[^"]*divider/);
+  });
+
+  /*
+   * A tight list (`- one`, no blank line between items) and a raw HTML `<li>`
+   * both hold their text directly, with no paragraph of their own. The
+   * paragraph is what carries the body type scale and the translation
+   * isolation, so the pipeline inserts one; see rehypeListItemParagraphs.
+   */
+  describe('list items', () => {
+    it('wraps tight list item text in a body paragraph', () => {
+      const html = render('- one\n- two');
+      expect(html.match(/<p[^>]*MuiTypography-body2/g)).toHaveLength(2);
+    });
+
+    it('wraps raw HTML list item text in a body paragraph', () => {
+      const html = render('<ul>\n<li>an item</li>\n</ul>');
+      expect(html).toMatch(
+        /<li><p[^>]*MuiTypography-body2[^>]*>an item<\/p><\/li>/,
+      );
+    });
+
+    it('leaves a loose list item with the one paragraph it already had', () => {
+      const html = render('- one\n\n- two');
+      expect(html.match(/<p[^>]*MuiTypography-body2/g)).toHaveLength(2);
+    });
+
+    it('keeps a nested list beside the paragraph, not inside it', () => {
+      const {container} = renderDom(
+        <Markdown content={'- outer\n  - inner'} />,
+      );
+      expect(container.querySelectorAll('li > p')).toHaveLength(2);
+      expect(container.querySelector('li > ul')).not.toBeNull();
+      expect(container.querySelector('p ul')).toBeNull();
+    });
+
+    it('does not wrap block content in a list item', () => {
+      const html = render('- ### a heading');
+      expect(html).toContain('<h3');
+      expect(html).not.toMatch(/<p[^>]*>\s*<h3/);
+    });
   });
 
   describe('localization wrappers', () => {
@@ -170,6 +217,24 @@ describe('Markdown', () => {
       const md = '<span style="color:red">x</span>';
       expect(render(md)).not.toContain('color');
       expect(render(md, [inlineStyles])).toContain('color:red');
+    });
+
+    /*
+     * A mapped element keeps only the props its component forwards, so an
+     * allowed `style` reaches the page only if the mapping passes it on. One
+     * case per element the base mappings claim.
+     */
+    it.each([
+      ['p', '<p style="color:red">x</p>', 'color:red'],
+      ['strong', '<strong style="color:red">x</strong>', 'color:red'],
+      ['em', '<em style="color:red">x</em>', 'color:red'],
+      ['h2', '<h2 style="color:red">x</h2>', 'color:red'],
+      ['a', '<a style="color:red" href="https://code.org">x</a>', 'color:red'],
+      // `clear:both` after a floated image is the overwhelmingly common
+      // styled <hr> in our curriculum.
+      ['hr', '<hr style="clear:both">', 'clear:both'],
+    ])('inlineStyles survives the %s mapping', (_tag, md, expected) => {
+      expect(render(md, [inlineStyles])).toContain(expected);
     });
 
     describe('inlineStyles restricts which properties survive', () => {
@@ -332,6 +397,51 @@ describe('Markdown', () => {
       expect(screen.getByRole('img').getAttribute('alt')).toBe('A cat');
     });
 
+    /*
+     * The component is registered for every <span>, so the option must reach the
+     * expandable images and nothing else.
+     */
+    describe('className option', () => {
+      it('applies it to the button, alongside the author class', () => {
+        renderDom(
+          <Markdown
+            content='<span class="author" data-url="https://img/cat.png">A cat</span>'
+            extensions={[
+              expandableImages({onExpand: vi.fn(), className: 'from-option'}),
+            ]}
+          />,
+        );
+        const button = screen.getByRole('button', {name: /A cat/});
+        expect(button.className).toContain('from-option');
+        expect(button.className).toContain('author');
+      });
+
+      it('applies it to the wrapping span when no handler is supplied', () => {
+        renderDom(
+          <Markdown
+            content={md}
+            extensions={[expandableImages({className: 'from-option'})]}
+          />,
+        );
+        const wrapper = screen.getByRole('img').parentElement;
+        expect(wrapper?.tagName).toBe('SPAN');
+        expect(wrapper?.className).toContain('from-option');
+      });
+
+      it('leaves a span that is not an expandable image untouched', () => {
+        renderDom(
+          <Markdown
+            content='<span class="author">plain</span>'
+            extensions={[
+              expandableImages({onExpand: vi.fn(), className: 'from-option'}),
+            ]}
+          />,
+        );
+        const span = screen.getByText('plain');
+        expect(span.className).toBe('author');
+      });
+    });
+
     it('leaves ordinary images alone', () => {
       renderDom(
         <Markdown
@@ -480,6 +590,19 @@ describe('Markdown', () => {
       expect(html).toContain('<code');
       expect(html).not.toContain('background-color');
     });
+
+    /*
+     * Legacy curriculum colors a code block with a raw inline style rather than
+     * the (#rrggbb) syntax. This extension owns the `code` mapping, so it renders
+     * those too; enabling it must not strip what inlineStyles allowed through.
+     */
+    it('keeps an inline style on raw <code> when inlineStyles is enabled', () => {
+      const html = render(
+        'Press <code style="background-color:#6af36c">up</code> now',
+        [inlineStyles, visualCodeBlock],
+      );
+      expect(html).toContain('background-color:#6af36c');
+    });
   });
 
   describe('vocabularyDefinition', () => {
@@ -531,6 +654,55 @@ describe('Markdown', () => {
     });
   });
 
+  describe('lenientHeadings', () => {
+    it('renders a heading when the space after the # is missing', () => {
+      const html = render('###Build a sequence', [lenientHeadings]);
+      expect(html).toContain('<h3');
+      expect(html).toContain('Build a sequence');
+      expect(html).not.toContain('###');
+    });
+
+    it('maps the number of #s to the heading level', () => {
+      expect(render('#One', [lenientHeadings])).toContain('<h1');
+      expect(render('####Four', [lenientHeadings])).toContain('<h4');
+    });
+
+    it('keeps following inline content, e.g. an icon (with inlineStyles)', () => {
+      // The real curriculum shape: an icon immediately after the #s.
+      const html = render('###<i class="fa-list-check"></i> Build a sequence', [
+        lenientHeadings,
+        inlineStyles,
+      ]);
+      expect(html).toContain('<h3');
+      expect(html).toContain('fa-list-check');
+      expect(html).toContain('Build a sequence');
+    });
+
+    it('leaves well-formed headings unchanged', () => {
+      const html = render('### Spaced heading', [lenientHeadings]);
+      expect(html).toContain('<h3');
+      expect(html).toContain('Spaced heading');
+    });
+
+    it('leaves seven or more #s as a paragraph', () => {
+      const html = render('#######Seven', [lenientHeadings]);
+      expect(html).not.toMatch(/<h[1-6]/);
+      expect(html).toContain('#######Seven');
+    });
+
+    it('does not touch #-prefixed lines inside a code block', () => {
+      const html = render('```\n#include <stdio.h>\n```', [lenientHeadings]);
+      expect(html).not.toMatch(/<h[1-6]/);
+      expect(html).toContain('#include');
+    });
+
+    it('leaves the malformed heading as text when not enabled', () => {
+      const html = render('###Build a sequence');
+      expect(html).not.toContain('<h3');
+      expect(html).toContain('###');
+    });
+  });
+
   describe('localization', () => {
     afterEach(() => vi.restoreAllMocks());
 
@@ -551,6 +723,31 @@ describe('Markdown', () => {
       expect(html).toContain('HELLO WORLD');
       expect(html).toContain('data-notranslate="true"');
       expect(html).not.toContain('data-isolate');
+    });
+
+    it('translates a tight list item', () => {
+      // Only the inserted paragraph makes the item a block rehypeLocalize
+      // recognizes; without it the item text is never handed to the translator.
+      activateLocalization();
+      const html = render('- an item');
+      expect(html).toContain('AN ITEM');
+    });
+
+    it('hides a non-phrasing element from the translator and restores it', () => {
+      // rehypeLocalize stashes anything outside its inline allowlist behind a
+      // <code> placeholder the translator ignores, then restores it verbatim.
+      const widget: MarkdownExtension = {
+        name: 'widget',
+        sanitizeSchema: {tagNames: ['widget']},
+      };
+      const seen = activateLocalization();
+      const html = render('Press <widget></widget> now', [widget]);
+      // the translator never saw the stashed element...
+      expect(seen.join('')).not.toContain('<widget');
+      // ...just a <code> placeholder (which the translator leaves untouched)
+      expect(seen.join('')).toMatch(/<code[^>]*data-localize-token/);
+      // ...but the output preserves the original
+      expect(html).toContain('<widget');
     });
 
     it('renames <code> for translation and restores it', () => {

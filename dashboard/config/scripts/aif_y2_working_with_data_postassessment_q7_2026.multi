@@ -1,0 +1,23 @@
+name 'aif-y2-working-with-data-postassessment-q7-2026'
+
+wrong '9'
+wrong '5'
+right '3'
+wrong '1'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What will this program print?
+
+```python
+import statistics
+
+data = [1, 3, 5]
+print(statistics.mean(data))
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Analyzing Numerical Data
+MARKDOWN

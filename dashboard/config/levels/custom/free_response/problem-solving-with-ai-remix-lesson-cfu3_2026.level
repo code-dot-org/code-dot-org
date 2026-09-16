@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-08-03T21:47:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "> You just sampled a real artist's track, and the AI you used learned from real artists' music.\r\n>\r\n> In one sentence explain your stance: **is what you made yours?** (Keep your answer in mind — you're about to debate this.)",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026_dev",
+    "ai_tutor_available": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-03T21:47:07.240+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-remix-lesson-cfu2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-remix-lesson-cfu2_2026\"},{\"changed_at\":\"2026-08-03 21:47:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

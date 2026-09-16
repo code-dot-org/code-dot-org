@@ -118,7 +118,12 @@ const LessonResources: React.FC<LessonResourcesProps> = ({
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
-        <Typography className={styles.headerText} variant="h6" gutterBottom>
+        <Typography
+          className={styles.headerText}
+          variant="label1"
+          component="h6"
+          gutterBottom
+        >
           {sectionHeaderText}
         </Typography>
       </div>

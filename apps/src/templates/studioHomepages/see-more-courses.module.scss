@@ -1,0 +1,14 @@
+.courseCards {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.viewMoreContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.button {
+    margin: 0 0 20px;
+}

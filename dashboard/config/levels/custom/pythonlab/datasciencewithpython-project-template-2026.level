@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-22T20:25:55.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "template",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "project_plan.txt",
+          "contents": "Project Overview\n\nCommunity:\nWhat community are you focusing on?\n\nAnswer:\n\n\nCommunity Problem:\nWhat problem do you want to investigate?\n\nAnswer:\n\n\nData Question:\nWhat is your final data question?\n\nAnswer:\n\n\n---\n\nData Collection\n\nData Needed:\nWhat data will help you answer your question?\n\nAnswer:\n\n\nCollection Method:\nWho will you collect data from, and how will you collect it?\n\nAnswer:\n\n\nResponsible Data Collection:\nHow will you protect privacy, show respect, and reduce possible risks?\n\nAnswer:\n\n\n---\n\nAnalysis\n\nHypothesis:\nWhat do you predict the data will show?\n\nAnswer:\n\n\nAnalysis Plan:\nHow might you organize, compare, or summarize the data?\n\nAnswer:\n\n\nVisualization Plan:\nWhat type of graph might help answer your data question?\n\nAnswer:",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "name_suffix": "_pilot-2024",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-22T20:25:55.830+00:00\",\"changed\":[\"cloned from \\\"datasciencewithpython-lesson2-level1-2026\\\"\"],\"cloned_from\":\"datasciencewithpython-lesson2-level1-2026\"},{\"changed_at\":\"2026-07-22 20:26:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-22 20:28:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

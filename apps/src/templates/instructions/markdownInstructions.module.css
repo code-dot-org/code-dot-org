@@ -1,0 +1,15 @@
+/* Expandable Image button/img */
+button.expandableImage {
+  background: none;
+  border: none;
+  border-radius: .5rem;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0;
+  width: 80px;
+}
+
+button.expandableImage img {
+  opacity: 1;
+}

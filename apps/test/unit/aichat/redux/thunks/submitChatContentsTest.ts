@@ -100,14 +100,14 @@ describe('submitChatContents', () => {
     mockSendAnalytics.mockReturnValue({type: 'analytics/send'});
   });
 
-  it('applies responseCallback to successful assistant messages', async () => {
+  it('applies jsonSchemaResponseCallback to successful assistant messages', async () => {
     mockPostAichatCompletionMessage.mockResolvedValue(
       makeMessages({
         chatMessageText: '{"answer":"formatted"}',
         status: Status.OK,
       })
     );
-    const responseCallback = jest.fn(() => 'formatted response');
+    const jsonSchemaResponseCallback = jest.fn(() => 'formatted response');
     const store = makeStore();
 
     const result = await store.dispatch(
@@ -115,12 +115,17 @@ describe('submitChatContents', () => {
         text: 'Hello',
         modelParameters,
         clientType: AiChatClientTypes.AI_TUTOR,
-        responseCallback,
+        jsonSchemaResponseCallback,
       })
     );
 
     expect(submitChatContents.fulfilled.match(result)).toBe(true);
-    expect(responseCallback).toHaveBeenCalledWith('{"answer":"formatted"}');
+    // The legacy Rails-job path never has a parsed form to offer, so
+    // submitChatContents parses chatMessageText itself before invoking the
+    // callback -- the callback always receives already-parsed JSON.
+    expect(jsonSchemaResponseCallback).toHaveBeenCalledWith({
+      answer: 'formatted',
+    });
     expect(store.getState().aichat.chatEventsCurrent).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -132,14 +137,14 @@ describe('submitChatContents', () => {
     );
   });
 
-  it('does not apply responseCallback to assistant error messages', async () => {
+  it('does not apply jsonSchemaResponseCallback to assistant error messages', async () => {
     mockPostAichatCompletionMessage.mockResolvedValue(
       makeMessages({
         chatMessageText: 'Error: service account missing',
         status: Status.ERROR,
       })
     );
-    const responseCallback = jest.fn(() => {
+    const jsonSchemaResponseCallback = jest.fn(() => {
       throw new Error('should not parse error text');
     });
     const store = makeStore();
@@ -149,12 +154,12 @@ describe('submitChatContents', () => {
         text: 'Hello',
         modelParameters,
         clientType: AiChatClientTypes.AI_TUTOR,
-        responseCallback,
+        jsonSchemaResponseCallback,
       })
     );
 
     expect(submitChatContents.fulfilled.match(result)).toBe(true);
-    expect(responseCallback).not.toHaveBeenCalled();
+    expect(jsonSchemaResponseCallback).not.toHaveBeenCalled();
     expect(store.getState().aichat.chatEventsCurrent).toEqual(
       expect.arrayContaining([
         expect.objectContaining({

@@ -68,7 +68,7 @@ export default class VersionRow extends React.Component {
         <MuiTypography
           key={'latest-version-message'}
           component="span"
-          variant="body2"
+          variant="body3"
         >
           {msg.latestVersion()}
         </MuiTypography>
@@ -118,12 +118,11 @@ export default class VersionRow extends React.Component {
           key={'disabled-view-button'}
           id={viewButtonId}
           type="button"
-          color="secondary"
+          color="primary"
           size="small"
           variant="contained"
           disabled
           aria-describedby={versionLabelId}
-          className={styles.disabledViewButton}
         >
           {msg.view()}
         </MuiButton>
@@ -137,12 +136,12 @@ export default class VersionRow extends React.Component {
           highlight: this.props.isSelectedVersion,
         })}
       >
-        <td>
+        <td className={styles.labelCell}>
           <MuiTypography id={versionLabelId} variant="body1">
             {versionLabel}
           </MuiTypography>
         </td>
-        <td width="275" height="52" className={styles.actionCell}>
+        <td width="275" className={styles.actionCell}>
           <MuiStack
             direction="row"
             spacing={1}

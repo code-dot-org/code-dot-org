@@ -2,6 +2,6 @@ dist/
 node_modules/
 test-results/
 playwright-report/
-e2e/tmp/
+.visual-baselines/
 src/oceans/model.json
 src/oceans/group1-shard1of1.bin

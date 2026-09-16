@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-07-10T18:58:06.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "pl-aif2-debug-for-loop",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "\r\n</div>\r\n\r\n\r\n## Activity Tutorial\r\n\r\nThis video walks through the next activity, debugging a password generator with a loop that isn't producing the correct output. \r\n\r\nWatch it to prepare for the activity, and feel free to revisit it anytime as you work through the debugging process. \r\n\r\n*You can use the YouTube features to make the video fullscreen, speed it up, or slow it down.* \r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-07-10T18:58:06.196+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-debugging-for-loops-video\\\"\"],\"cloned_from\":\"pl-aif-2-U4-debugging-for-loops-video\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

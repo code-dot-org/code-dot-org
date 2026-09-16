@@ -6,6 +6,7 @@ var path = require('path');
 var pyodide = require('pyodide');
 var sass = require('sass');
 
+const {BUNDLERS, resolveBundler} = require('./bundlerBase');
 var envConstants = require('./envConstants');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 var checkEntryPoints = require('./script/checkEntryPoints');
@@ -274,7 +275,7 @@ module.exports = function (grunt) {
           dest: 'build/package/js',
           // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
           rename: function (dest, src) {
-            var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
+            var outputFile = src.replace(/wp[0-9a-f]{16,20}/, '');
             return path.join(dest, outputFile);
           },
         },
@@ -336,6 +337,14 @@ module.exports = function (grunt) {
             'build/package/css/foorm_editor.css',
             'style/code-studio/foorm_editor.scss',
           ],
+          [
+            'build/package/css/contract_match.css',
+            'style/code-studio/levels/contract_match.scss',
+          ],
+          [
+            'build/package/css/pixelation.css',
+            'style/code-studio/levels/pixelation.scss',
+          ],
         ].concat(
           appsToBuild.map(function (app) {
             return [
@@ -379,13 +388,97 @@ module.exports = function (grunt) {
     },
   };
 
+  // One source for the Node heap given to rspack: APPS_BUILD_MAX_MEMORY,
+  // the same knob build-in-parallel.sh uses (it exports the value).
+  // Always set explicitly — every documented entry point reaches here
+  // with NODE_OPTIONS already in the environment (the yarn `grunt`
+  // script sets 4096MB), and that value is sized for grunt itself, not
+  // for a full rspack build.  Appending rather than replacing keeps any
+  // other flags the caller passed (--inspect, say); node takes the last
+  // --max-old-space-size, so ours is the one that applies.
+  const buildMaxMemory = /^\d+$/.test(process.env.APPS_BUILD_MAX_MEMORY || '')
+    ? process.env.APPS_BUILD_MAX_MEMORY
+    : 8192;
+  if (
+    process.env.APPS_BUILD_MAX_MEMORY &&
+    !/^\d+$/.test(process.env.APPS_BUILD_MAX_MEMORY)
+  ) {
+    grunt.log.warn(
+      `APPS_BUILD_MAX_MEMORY=${process.env.APPS_BUILD_MAX_MEMORY} is not a number of megabytes; using ${buildMaxMemory}.`
+    );
+  }
+  // The rspack build runs in a child process, so grunt options the
+  // webpack path consumes in-process must cross as environment
+  // variables: --app as APP (rspack.config.js's entry default) and
+  // --piskel-dev as PISKEL_DEV.  These go through grunt-exec's `options`
+  // rather than a prefix on the command string, so no value needs shell
+  // quoting — an app name with a space, or a NODE_OPTIONS carrying
+  // `--require "/path with spaces/x.js"`, would otherwise garble the
+  // command.  child_process.exec replaces the environment wholesale when
+  // given one, hence the spread.
+  const rspackEnv = {
+    ...process.env,
+    ...(SINGLE_APP ? {APP: SINGLE_APP} : {}),
+    ...(PISKEL_DEVELOPMENT_MODE ? {PISKEL_DEV: '1'} : {}),
+    ...('RSPACK_SWC' in process.env ? {} : {RSPACK_SWC: 'all'}),
+    NODE_OPTIONS: `${
+      process.env.NODE_OPTIONS ? process.env.NODE_OPTIONS + ' ' : ''
+    }--max-old-space-size=${buildMaxMemory}`,
+  };
+
   config.exec = {
+    // `--rspack` (or APPS_BUNDLER=rspack) swaps only the JS bundling
+    // step of `grunt build`; every other task (sass, locales, copies,
+    // karma) is bundler-independent and runs unchanged.  RSPACK_SWC
+    // defaults to the full-swc mode here because this path exists to
+    // prove the production story; see rspack.config.js.  NODE_ENV is
+    // pinned from DEV — the same switch that selects webpack:build vs
+    // webpack:uglify and gates uglify:lib and copy:unhash in the build
+    // task — so the child's minify decision cannot disagree with the
+    // grunt steps around it.  (Left to the rspack CLI, NODE_ENV would
+    // default to production and silently minify dev builds.)
+    rspackBuild: {
+      command: 'node node_modules/.bin/rspack build --config rspack.config.js',
+      options: {
+        env: {
+          ...rspackEnv,
+          NODE_ENV: envConstants.DEV ? 'development' : 'production',
+        },
+      },
+    },
+    // The dev server is development by definition, so NODE_ENV is
+    // pinned outright (an exported NODE_ENV=production in the calling
+    // shell would otherwise serve minified).  Full-swc here too: it is
+    // the mode every browser and drone verification ran in, and the
+    // hybrid RSPACK_SWC=ts fallback starts several times slower.
+    // prepareBundlerOutputDir cleans the output directory beforehand
+    // (a populated one costs rspack ~18s of startup), and doing it
+    // there rather than here keeps prebuild's copied assets.
+    rspackServe: {
+      command: 'node node_modules/.bin/rspack serve --config rspack.config.js',
+      // HOT and DEV are set here rather than inherited: the `dev` task
+      // sets them after this config is built, and rspack.config.js
+      // gives a DEV-less run no devServer block at all — no port, no
+      // proxy, no writeToDisk — which reads as a mysteriously broken
+      // `yarn start --rspack` rather than an error.  Mirrors the `||=`
+      // the dev task uses, so an explicit HOT=0 still wins.
+      options: {
+        env: {
+          ...rspackEnv,
+          HOT: process.env.HOT || '1',
+          DEV: process.env.DEV || '1',
+          NODE_ENV: 'development',
+        },
+      },
+    },
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
       'bundle exec ./script/generateRegionConfigurations.rb',
     generateStudioRoutes: 'bundle exec ./script/generateStudioRoutes.rb',
     buildFrontendDependencies: './script/build-frontend-dependencies.sh',
+    watchFrontendDependencies:
+      './script/build-frontend-dependencies.sh --watch',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -467,7 +560,7 @@ module.exports = function (grunt) {
     // JS files watched by webpack
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
-      tasks: ['newer:sass', 'notify:sass'],
+      tasks: ['newer:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         interrupt: true,
@@ -475,21 +568,21 @@ module.exports = function (grunt) {
     },
     content: {
       files: ['static/**/*'],
-      tasks: ['newer:copy', 'notify:content'],
+      tasks: ['newer:copy'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
     },
     vendor_js: {
       files: ['lib/**/*.js'],
-      tasks: ['newer:copy:lib', 'notify:vendor_js'],
+      tasks: ['newer:copy:lib'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['messages', 'notify:messages'],
+      tasks: ['messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
@@ -497,25 +590,37 @@ module.exports = function (grunt) {
   };
 
   config.concurrent = {
-    // run our two watch tasks concurrently so that they dont block each other
+    // run our watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack-dev-server'],
+      tasks: ['watch', 'webpack-dev-server', 'exec:watchFrontendDependencies'],
+      options: {
+        logConcurrentOutput: true,
+      },
+    },
+    // Same set as `watch` above, with the rspack dev server in place of
+    // webpack's: both need the frontend/ package rebuilds.
+    watchRspack: {
+      tasks: ['watch', 'exec:rspackServe', 'exec:watchFrontendDependencies'],
       options: {
         logConcurrentOutput: true,
       },
     },
   };
 
-  config.notify = {
-    'js-build': {options: {message: 'JS build completed.'}},
-    sass: {options: {message: 'SASS build completed.'}},
-    content: {options: {message: 'Content build completed.'}},
-    ejs: {options: {message: 'EJS build completed.'}},
-    messages: {options: {message: 'i18n messages build completed.'}},
-    vendor_js: {options: {message: 'vendor JS copy done.'}},
-  };
-
   grunt.initConfig(config);
+
+  // grunt-newer compares each Sass entry file's mtime against its compiled
+  // output, so it never notices a change to a partial pulled in only via
+  // @import. Force a full recompile when the changed file isn't one of the
+  // known entries, so partial edits actually take effect.
+  var sassEntryFiles = new Set(_.values(config.sass.all.files));
+  grunt.event.on('watch', function (action, filepath, target) {
+    if (target !== 'style') {
+      return;
+    }
+    var tasks = sassEntryFiles.has(filepath) ? ['newer:sass'] : ['sass:all'];
+    grunt.config(['watch', 'style', 'tasks'], tasks);
+  });
 
   // Autoload grunt tasks
   require('load-grunt-tasks')(grunt, {
@@ -616,16 +721,89 @@ module.exports = function (grunt) {
 
   grunt.registerTask('postbuild', ['newer:copy:static', 'newer:sass']);
 
-  grunt.registerTask('build', [
-    'prebuild',
-    // For any minifiable libs, generate minified sources if they do not already
-    // exist in our repo. Skip minification in development environment.
-    envConstants.DEV ? 'noop' : 'uglify:lib',
-    envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
-    'notify:js-build',
-    'postbuild',
-    envConstants.DEV ? 'noop' : 'newer:copy:unhash',
-  ]);
+  // `yarn start --rspack` / `yarn build --rspack` / `yarn build:dist
+  // --rspack` opt into the rspack bundler for one run; APPS_BUNDLER is
+  // the env-var form for CI and scripts.  bundlerBase owns the default,
+  // where a test guards it.
+  const APPS_BUNDLER = resolveBundler({rspackFlag: !!grunt.option('rspack')});
+  if (
+    process.env.APPS_BUNDLER &&
+    !BUNDLERS.includes(process.env.APPS_BUNDLER)
+  ) {
+    grunt.log.warn(
+      `Unrecognized APPS_BUNDLER value ${process.env.APPS_BUNDLER}; building with ${APPS_BUNDLER}.`
+    );
+  }
+  const rspackNotice = () => {
+    if (APPS_BUNDLER === 'rspack') {
+      grunt.log.writeln(
+        '[rspack] Bundling with rspack (opt-in). swc and babel can transpile edge cases differently, so check your change under the default webpack build before shipping.'
+      );
+    }
+  };
+
+  // The two bundlers share build/package/js.  Leftovers from the other
+  // one are never *referenced* (each build rewrites everything a page
+  // loads), but they accumulate gigabytes over weeks — so a marker file
+  // records who wrote the directory, and switching cleans it.  Under
+  // `serve`, rspack additionally cleans every start, switch or not: its
+  // writeToDisk step compares against every existing file, and starting
+  // over a populated directory costs ~18s.  A one-shot build pays no
+  // such penalty and keeps its predecessor's output.
+  //
+  // The marker lives beside the packaged directory rather than inside
+  // it: deployment tars build/package wholesale, excluding only
+  // *.cache.json, so a marker under js/ would ship to the servers.
+  //
+  // Runs before prebuild, so the static assets prebuild copies into
+  // build/package/js (ace, piskel, p5play, the pyodide wheels) are put
+  // back after the clean rather than wiped by it — grunt-newer recopies
+  // them because their destinations are gone.
+  const prepareBundlerOutputDir = ({serve = false} = {}) => {
+    const dir = path.resolve(__dirname, 'build/package/js');
+    const marker = path.resolve(__dirname, 'build/.bundler');
+    // Output that predates the marker is grandfathered as webpack's:
+    // that is what it was in practice, and it keeps rollout quiet for
+    // developers who never opt into rspack.
+    const prev = fs.existsSync(marker)
+      ? fs.readFileSync(marker, 'utf8').trim()
+      : fs.existsSync(dir) && fs.readdirSync(dir).length > 0
+      ? 'webpack'
+      : null;
+    if (prev && prev !== APPS_BUNDLER) {
+      grunt.log.writeln(
+        `[build] switching ${prev} -> ${APPS_BUNDLER}: cleaning build/package/js of the previous output`
+      );
+      fs.rmSync(dir, {recursive: true, force: true});
+    } else if (serve && APPS_BUNDLER === 'rspack' && prev) {
+      fs.rmSync(dir, {recursive: true, force: true});
+    }
+    fs.mkdirSync(dir, {recursive: true});
+    fs.mkdirSync(path.dirname(marker), {recursive: true});
+    fs.writeFileSync(marker, APPS_BUNDLER + '\n');
+  };
+
+  grunt.registerTask('build', function () {
+    rspackNotice();
+    prepareBundlerOutputDir();
+    grunt.task.run([
+      'prebuild',
+      // For any minifiable libs, generate minified sources if they do not already
+      // exist in our repo. Skip minification in development environment.
+      envConstants.DEV ? 'noop' : 'uglify:lib',
+      // exec:rspackBuild pins NODE_ENV from the same DEV switch used
+      // above and below, so one exec target covers both dev and
+      // production builds without disagreeing with uglify:lib or
+      // copy:unhash.
+      APPS_BUNDLER === 'rspack'
+        ? 'exec:rspackBuild'
+        : envConstants.DEV
+        ? 'webpack:build'
+        : 'webpack:uglify',
+      'postbuild',
+      envConstants.DEV ? 'noop' : 'newer:copy:unhash',
+    ]);
+  });
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
@@ -633,7 +811,14 @@ module.exports = function (grunt) {
     // Unless explicitly overridden, set HOT=1 and DEV=1 when running `grunt dev`
     process.env.HOT ||= 1;
     process.env.DEV ||= 1;
-    grunt.task.run(['prebuild', 'newer:sass', 'concurrent:watch', 'postbuild']);
+    rspackNotice();
+    prepareBundlerOutputDir({serve: true});
+    grunt.task.run([
+      'prebuild',
+      'newer:sass',
+      APPS_BUNDLER === 'rspack' ? 'concurrent:watchRspack' : 'concurrent:watch',
+      'postbuild',
+    ]);
   });
 
   grunt.registerTask('default', ['rebuild', 'test']);

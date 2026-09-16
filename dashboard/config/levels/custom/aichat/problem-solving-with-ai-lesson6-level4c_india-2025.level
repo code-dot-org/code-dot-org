@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-06-26T19:33:09.000Z",
   "level_num": "custom",
@@ -44,12 +45,14 @@
     "bubble_choice_description": "Use AI Chat to help you choose which two candidates to interview for the Software Engineering position.",
     "display_name": "Software Engineering Hiring Manager",
     "thumbnail_url": "https://images.code.org/a7b59d67e228c6d17baab72cb8a118aa-resume.png",
+    "name_suffix": "_india-2025",
     "starter_assets": {
-      "Resumes.pdf": "8bb4e260-ac5a-425d-a9b0-5f01bd666f47.pdf"
+      "All_Candidates_Resumes.pdf": "8661bb58-4eab-4b9c-be92-c4d25b90327f.pdf"
     },
-    "name_suffix": "_india-2025"
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:09.190+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4c_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4c_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:09.190+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4c_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4c_2025\"},{\"changed_at\":\"2026-08-07 02:16:31 +0000\",\"changed\":[],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

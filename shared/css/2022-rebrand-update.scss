@@ -14,7 +14,8 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: $barlowSemiCondensed-semibold;
+  font-family: $main-font;
+  font-weight: $semi-bold-font-weight;
   margin-bottom: 1em;
 }
 
@@ -31,7 +32,8 @@ h2 {
 }
 
 h4 {
-  font-family: $barlowSemiCondensed-medium;
+  font-family: $main-font;
+  font-weight: $medium-font-weight;
   font-size: 1.5em;
   line-height: 1.2;
   margin-bottom: 1em;
@@ -49,11 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: $brand_secondary_default;
+  color: var(--text-brand-primary);
   text-decoration: underline;
 
   &:hover {
-    color: $brand_secondary_dark;
+    color: var(--text-brand-secondary);
     text-decoration: underline;
   }
 }

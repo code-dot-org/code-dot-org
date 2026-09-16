@@ -840,18 +840,10 @@ class UserTest < ActiveSupport::TestCase
     # login by username still works
     user = create(:user)
     assert_equal user, User.find_for_authentication(login: user.username)
-    Cdo::Metrics.
-      expects(:put).
-      with('User', 'LoginByUsername', 1, includes(:Environment)).
-      once
 
     # login by email still works
     email_user = create(:user, email: 'not@an.email')
     assert_equal email_user, User.find_for_authentication(login: 'not@an.email')
-    Cdo::Metrics.
-      expects(:put).
-      with('User', 'LoginByEmail', 1, includes(:Environment)).
-      once
 
     # login by hashed email
     hashed_email_user = create(:user, age: 4)
@@ -1132,7 +1124,7 @@ class UserTest < ActiveSupport::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal [email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
+    assert_equal 'CodeAI reset password instructions', mail.subject
     student = User.find(student.id)
     old_password = student.encrypted_password
 
@@ -1189,7 +1181,7 @@ class UserTest < ActiveSupport::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal [email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
+    assert_equal 'CodeAI reset password instructions', mail.subject
     student = User.find(student.id)
     old_password = student.encrypted_password
 
@@ -1243,7 +1235,7 @@ class UserTest < ActiveSupport::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal [email], mail.to
-    assert_equal 'Code.org reset password instructions', mail.subject
+    assert_equal 'CodeAI reset password instructions', mail.subject
     student = student.reload
     refute student.age
     assert student.reset_password_token
@@ -3779,6 +3771,56 @@ class UserTest < ActiveSupport::TestCase
       )
   end
 
+  test 'find_by_credential matches case-sensitive provider ids byte-exactly by default' do
+    user = create(:student, :classlink_sso_provider, uid: 'Abc-01')
+
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'Abc-01'
+    )
+    # A case-variant id is no match under the type's default policy...
+    assert_nil User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01'
+    )
+    # ...though exact_match: false can still override back to the collation lookup.
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01',
+      exact_match: false
+    )
+  end
+
+  test 'find_by_credential exact matching still finds non-migrated users through the uid fallback' do
+    user = create(:student, :classlink_sso_provider, :demigrated, uid: 'Abc-01')
+    assert_empty user.authentication_options
+
+    assert_equal user, User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'Abc-01'
+    )
+    assert_nil User.find_by_credential(
+      type: AuthenticationOption::CLASSLINK,
+      id: 'ABC-01'
+    )
+  end
+
+  test 'create validation allows a case-sensitive provider uid differing from an existing id only by case' do
+    create(:student, :classlink_sso_provider, uid: 'Abc-01')
+
+    twin = build(:student, :classlink_sso_provider, uid: 'ABC-01')
+    assert twin.valid?
+    assert twin.save
+  end
+
+  test 'create validation rejects a duplicate uid for a case-sensitive provider' do
+    create(:student, :classlink_sso_provider, uid: 'Abc-01')
+
+    duplicate = build(:student, :classlink_sso_provider, uid: 'Abc-01')
+    refute duplicate.valid?
+    assert duplicate.errors[:uid].any?
+  end
+
   test 'find_credential returns matching AuthenticationOption if one exists for migrated user' do
     user = create(:user, :google_sso_provider)
     assert_equal user.authentication_options.first, user.find_credential(AuthenticationOption::GOOGLE)
@@ -4354,6 +4396,54 @@ class UserTest < ActiveSupport::TestCase
     assert_equal new_us_state, student.reload.us_state
   end
 
+  describe '.delete_progress_for_units' do
+    let(:script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 1)}
+    let(:other_script) {create(:script, :in_single_unit_course, :with_levels, levels_count: 1)}
+    let(:level) {script.script_levels.first.level}
+    let(:other_level) {other_script.script_levels.first.level}
+    let(:student) {create(:student)}
+    let(:other_student) {create(:student)}
+
+    it 'deletes user_levels, user_scripts, teacher_feedback, and code_reviews for every user/unit pair' do
+      UserLevel.create!(user: student, script: script, level: level, best_result: 100)
+      UserLevel.create!(user: other_student, script: script, level: level, best_result: 100)
+      UserLevel.create!(user: student, script: other_script, level: other_level, best_result: 100)
+      UserScript.create!(user: student, script: script)
+      UserScript.create!(user: other_student, script: other_script)
+
+      teacher = create(:teacher)
+      TeacherFeedback.create!(teacher: teacher, student: student, script: script, level: level)
+      review = create(:code_review, user_id: student.id, script_id: script.id, level_id: level.id)
+
+      User.delete_progress_for_units(user_ids: [student.id, other_student.id], unit_ids: [script.id, other_script.id])
+
+      assert_equal 0, UserLevel.where(user_id: [student.id, other_student.id], script_id: [script.id, other_script.id]).count
+      assert_equal 0, UserScript.where(user_id: [student.id, other_student.id], script_id: [script.id, other_script.id]).count
+      assert_equal 0, TeacherFeedback.where(student_id: student.id, script_id: script.id).count
+      assert_equal 0, CodeReview.where(id: review.id).count
+    end
+
+    it 'leaves progress for units/students not included in the given lists' do
+      UserLevel.create!(user: student, script: other_script, level: other_level, best_result: 100)
+
+      User.delete_progress_for_units(user_ids: [student.id], unit_ids: [script.id])
+
+      assert_equal 1, UserLevel.where(user_id: student.id, script_id: other_script.id).count
+    end
+
+    it 'raises if user_ids is empty' do
+      assert_raises do
+        User.delete_progress_for_units(user_ids: [], unit_ids: [script.id])
+      end
+    end
+
+    it 'raises if unit_ids is empty' do
+      assert_raises do
+        User.delete_progress_for_units(user_ids: [student.id], unit_ids: [])
+      end
+    end
+  end
+
   describe 'Access to AI Chat Lab' do
     context 'when user is a teacher with oauth account' do
       let(:teacher) {create(:teacher, :google_sso_provider)}
@@ -4568,10 +4658,36 @@ class UserTest < ActiveSupport::TestCase
         end
       end
 
-      context 'with sections' do
+      context 'with a non-demo section' do
         let(:user) {create(:teacher)}
 
         before do
+          create(:section, user: user)
+        end
+
+        it 'cannot change own user type' do
+          _can_change_own_user_type?.must_equal false
+        end
+      end
+
+      context 'with only demo sections' do
+        let(:user) {create(:teacher)}
+
+        before do
+          create(:section, user: user, demo_type: 'high')
+          create(:section, user: user, demo_type: 'middle')
+        end
+
+        it 'can change own user type' do
+          _can_change_own_user_type?.must_equal true
+        end
+      end
+
+      context 'with demo and non-demo sections' do
+        let(:user) {create(:teacher)}
+
+        before do
+          create(:section, user: user, demo_type: 'high')
           create(:section, user: user)
         end
 

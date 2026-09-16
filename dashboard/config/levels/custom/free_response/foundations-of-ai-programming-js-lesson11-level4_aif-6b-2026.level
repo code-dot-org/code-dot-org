@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-08-25T21:12:58.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "> An app should show one emoji for each number the user enters. A user enters 6, but the app only shows 5 emojis.\r\n>\r\n> How would you test and debug the loop?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_aif-6b-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-25T21:12:58.213+00:00\",\"changed\":[\"cloned from \\\"foundations-of-ai-programming-js-lesson11-level4_2026\\\"\"],\"cloned_from\":\"foundations-of-ai-programming-js-lesson11-level4_2026\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

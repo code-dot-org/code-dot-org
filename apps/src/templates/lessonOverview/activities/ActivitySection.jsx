@@ -1,3 +1,5 @@
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import React, {Component} from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
@@ -6,6 +8,8 @@ import LessonTip from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
 import {activitySectionShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import i18n from '@cdo/locale';
+
+import styles from '../lesson-plan.module.scss';
 
 export default class ActivitySection extends Component {
   static propTypes = {
@@ -17,7 +21,13 @@ export default class ActivitySection extends Component {
 
     return (
       <div>
-        <h3 id={`activity-section-${section.key}`}>
+        {/* Nested under the activity's h3, so h4 in the outline. */}
+        <Typography
+          variant="h5"
+          component="h4"
+          id={`activity-section-${section.key}`}
+          className={styles.activitySectionHeader}
+        >
           {section.displayName}
           {section.duration > 0 && (
             <span>
@@ -26,36 +36,24 @@ export default class ActivitySection extends Component {
               })}
             </span>
           )}
-        </h3>
+        </Typography>
         <div className="activity-section-text">
-          <div
-            style={{
-              ...styles.textAndProgression,
-            }}
-          >
+          <div className={styles.textAndProgression}>
             {section.remarks && (
               <div>
-                <h4 style={styles.remarksHeader}>
+                <Typography variant="h6" component="h5">
                   <FontAwesome icon="microphone" />
-                  <span style={styles.remarks}>{i18n.remarks()}</span>
-                </h4>
+                  <span className={styles.remarks}>{i18n.remarks()}</span>
+                </Typography>
               </div>
             )}
-            <div
-              style={{
-                ...(section.remarks && {
-                  borderLeft: '5px solid #CCC',
-                  paddingLeft: 5,
-                  marginBottom: 5,
-                }),
-              }}
-            >
+            <div className={classNames(section.remarks && styles.remarksBody)}>
               <EnhancedSafeMarkdown markdown={section.text} expandableImages />
             </div>
           </div>
         </div>
         {section.scriptLevels.length > 0 && (
-          <div style={styles.progression}>
+          <div className={styles.progression}>
             <ProgressionDetails section={section} />
           </div>
         )}
@@ -68,37 +66,3 @@ export default class ActivitySection extends Component {
     );
   }
 }
-
-const styles = {
-  activitySection: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%',
-  },
-  tipIcons: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 20,
-    padding: 5,
-    alignItems: 'center',
-  },
-  tips: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  remarks: {
-    marginLeft: 5,
-    fontStyle: 'italic',
-  },
-  remarksHeader: {
-    marginTop: 0,
-  },
-  textAndProgression: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%', // If there are tips for the activity section this is updated below
-  },
-  progression: {
-    marginBottom: 5,
-  },
-};

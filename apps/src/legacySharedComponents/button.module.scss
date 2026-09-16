@@ -1,4 +1,3 @@
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
 // Note: Keep these constants in sync with Button.jsx.
@@ -8,7 +7,7 @@ $button-height-narrow: 40px;
 $button-height-small: 20px;
 
 @mixin focus-outline {
-  outline: $brand_primary_default solid 2px;
+  outline: var(--borders-brand-teal-primary, #0093a4) solid 2px;
   outline-offset: 2px;
 }
 
@@ -26,7 +25,7 @@ a:visited,
     @include main-font-regular;
     display: inline-block;
     font-size: 12px;
-    border: 1px solid $border_gray;
+    border: 1px solid var(--borders-neutral-strong, #b7c1cb);
     border-radius: 3px;
     text-decoration: none;
     box-sizing: border-box;
@@ -34,7 +33,7 @@ a:visited,
     white-space: nowrap;
 
     &:hover {
-      background-color: $white;
+      background-color: var(--background-neutral-primary, #fff);
       cursor: pointer;
     }
 
@@ -58,170 +57,170 @@ a:visited,
 
   // Button colors.
   &.orange {
-    color: $white;
-    background-color: $orange;
+    color: var(--text-neutral-white-fixed, #fff);
+    background-color: var(--background-accent-orange-primary, #ffb42e);
     font-weight: bold;
     box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.63);
 
     &:hover {
-      color: $orange;
-      border-color: $orange;
+      // accent-orange has no text/border semantic token; use the primitive.
+      color: var(--accent-orange-60, #ffa400);
+      border-color: var(--accent-orange-60, #ffa400);
     }
 
     &:disabled,
     &[disabled] {
-      // This color is in Mikes styleguide, but we dont use it anywhere else;
-      // and it might be changed by Mark soon - so just hard-coding the string.
-      background-color: #ffd27f;
+      // Nearest DSCO orange tint to the legacy disabled color (#ffd27f).
+      background-color: var(--accent-orange-30, #ffd58a);
       box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
     }
   }
 
   &.gray {
-    color: $charcoal;
-    background-color: $lightest_gray;
+    color: var(--text-neutral-primary, #292f36);
+    background-color: var(--background-neutral-secondary, #f0f2f5);
     box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.73);
 
     &:disabled,
     &[disabled] {
-      background-color: $lighter_gray;
+      background-color: var(--background-neutral-disabled, #d4dae1);
       box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
     }
   }
 
   &.blue {
-    color: $white;
-    background-color: $cyan;
+    color: var(--text-neutral-white-fixed, #fff);
+    background-color: var(--background-info-strong, #19bbb5);
     font-weight: bold;
     box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
 
     &:hover {
       box-shadow: none;
-      color: $cyan;
-      border-color: $cyan;
-      background-color: $lightest_cyan;
+      color: var(--text-info-secondary, #19bbb5);
+      border-color: var(--borders-info-strong, #19bbb5);
+      background-color: var(--background-info-extra-light, #ebfffe);
     }
 
     &:disabled,
     &[disabled] {
-      color: $lighter_cyan;
-      background-color: $lightest_cyan;
+      color: var(--text-neutral-disabled, #d4dae1);
+      background-color: var(--background-info-extra-light, #ebfffe);
       box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
     }
   }
 
   &.teal {
-    color: $white;
-    background-color: $teal;
+    color: var(--text-neutral-white-fixed, #fff);
+    background-color: var(--background-brand-teal-primary, #00818f);
     font-weight: bold;
     box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
 
     &:hover {
       box-shadow: none;
-      color: $teal;
-      border-color: $teal;
-      background-color: $lightest_teal;
+      color: var(--text-brand-teal-primary, #0093a4);
+      border-color: var(--borders-brand-teal-primary, #0093a4);
+      background-color: var(--background-brand-teal-extra-light, #e0f8f9);
     }
 
     &:disabled,
     &[disabled] {
-      color: $lighter_cyan;
-      background-color: $lightest_cyan;
+      color: var(--text-neutral-disabled, #d4dae1);
+      background-color: var(--background-info-extra-light, #ebfffe);
       box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
     }
   }
 
   &.white {
-    color: $charcoal;
-    background-color: $white;
+    color: var(--text-neutral-primary, #292f36);
+    background-color: var(--background-neutral-primary, #fff);
     box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.06);
 
     &:hover {
       box-shadow: none;
-      background-color: $lightest_gray;
+      background-color: var(--background-neutral-secondary, #f0f2f5);
     }
 
     &:disabled,
     &[disabled] {
-      background-color: $lightest_gray;
+      background-color: var(--background-neutral-secondary, #f0f2f5);
       box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
     }
   }
 
   &.red {
-    color: $white;
-    background-color: $red;
+    color: var(--text-neutral-white-fixed, #fff);
+    background-color: var(--background-error-primary, #e02d16);
     font-weight: bold;
     box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
 
     &:hover {
       box-shadow: none;
-      color: $red;
-      border-color: $red;
+      color: var(--text-error-primary, #e02d16);
+      border-color: var(--borders-error-primary, #e02d16);
     }
 
     &:disabled,
     &[disabled] {
-      background-color: $lightest_red;
+      background-color: var(--background-error-extra-light, #ffe1dd);
       box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
     }
   }
 
   &.purple {
-    color: $white;
-    background-color: $purple;
+    color: var(--text-neutral-white-fixed, #fff);
+    background-color: var(--background-brand-purple-primary, #9657c7);
     font-weight: bold;
     box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
 
     &:hover {
       box-shadow: none;
-      color: $purple;
-      border-color: $purple;
-      background-color: $lightest_purple;
+      color: var(--text-brand-purple-primary, #9657c7);
+      border-color: var(--borders-brand-purple-primary, #9657c7);
+      background-color: var(--background-brand-purple-extra-light, #f2e2ff);
     }
 
     &:disabled,
     &[disabled] {
-      color: $lighter_purple;
-      background-color: $lightest_purple;
+      color: var(--text-neutral-disabled, #d4dae1);
+      background-color: var(--background-brand-purple-extra-light, #f2e2ff);
       box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
     }
   }
 
   &.green {
-    color: $white;
-    background-color: $level_perfect;
+    color: var(--text-neutral-white-fixed, #fff);
+    background-color: var(--background-success-primary, #3ea33e);
     font-weight: bold;
     box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
 
     &:hover {
       box-shadow: none;
-      color: $charcoal;
-      border-color: $lightest_gray;
-      background-color: $lightest_gray;
+      color: var(--text-neutral-primary, #292f36);
+      border-color: var(--borders-neutral-light, #dfe3e9);
+      background-color: var(--background-neutral-secondary, #f0f2f5);
     }
 
     &:disabled,
     &[disabled] {
-      background-color: $lightest_gray;
+      background-color: var(--background-neutral-secondary, #f0f2f5);
       box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
     }
   }
 
   // Phase 1 of CodeAI Redesign - Colors
   &.brandSecondaryDefault {
-    color: $neutral_white;
-    background-color: $brand_secondary_default;
-    border-color: $brand_secondary_default;
+    color: var(--text-neutral-white-fixed, #fff);
+    background-color: var(--background-brand-purple-primary, #9657c7);
+    border-color: var(--borders-brand-purple-primary, #9657c7);
     border-radius: 4px;
     border-width: 1px;
     line-height: 30px;
 
     &:hover {
       box-shadow: none;
-      color: $white;
-      border-color: $brand_secondary_dark;
-      background-color: $brand_secondary_dark;
+      color: var(--text-neutral-white-fixed, #fff);
+      border-color: var(--borders-brand-purple-strong, #6c468a);
+      background-color: var(--background-brand-purple-strong, #6c468a);
     }
 
     &:focus-visible {
@@ -230,20 +229,20 @@ a:visited,
 
     &:disabled,
     &[disabled] {
-      background-color: $brand_secondary_light;
+      background-color: var(--background-brand-purple-light, #e8cbff);
       border: none;
     }
   }
 
   &.neutralDark {
-    color: $neutral_dark;
-    background-color: $neutral_white;
-    border: 1px solid $neutral_dark;
+    color: var(--text-neutral-primary, #292f36);
+    background-color: var(--background-neutral-primary, #fff);
+    border: 1px solid var(--borders-neutral-solid, #292f36);
     border-radius: 4px;
     line-height: 30px;
 
     &:hover {
-      background-color: $neutral_dark10;
+      background-color: var(--background-neutral-secondary, #f0f2f5);
     }
 
     &:focus-visible {
@@ -251,9 +250,9 @@ a:visited,
     }
 
     &:disabled {
-      color: $neutral_dark20;
-      border-color: $neutral_dark20;
-      background-color: $neutral_white;
+      color: var(--text-neutral-disabled, #d4dae1);
+      border-color: var(--borders-neutral-disabled, #d4dae1);
+      background-color: var(--background-neutral-primary, #fff);
       cursor: not-allowed;
     }
   }
@@ -314,7 +313,7 @@ a:visited,
 
   &.textButton {
     @include main-font-semi-bold;
-    color: $teal;
+    color: var(--text-brand-teal-primary, #0093a4);
     border-width: 0;
     background-color: unset;
     box-shadow: none;
@@ -326,17 +325,17 @@ a:visited,
     }
 
     &:disabled {
-      color: $light_gray_300;
+      color: var(--text-neutral-disabled, #d4dae1);
     }
   }
 
   &.rebrandedTextButton {
-    color: $brand_secondary_default;
+    color: var(--text-brand-purple-primary, #9657c7);
     font-size: 16px;
     padding: 12px 16px;
 
     &:hover {
-      color: $brand_secondary_dark;
+      color: var(--text-brand-purple-secondary, #6c468a);
     }
 
     &:focus-visible {

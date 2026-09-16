@@ -465,6 +465,11 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   };
 
   const handleAiClick = useCallback(async () => {
+    // Guard here, not via the button's `disabled` — see the Generate button below.
+    if (generateState === 'generating') {
+      return;
+    }
+
     const seedEvents = currentValue.events.filter(
       event => event.tick <= PATTERN_AI_NUM_SEED_EVENTS
     );
@@ -516,6 +521,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     stopPreview,
     generateCount,
     startPreview,
+    generateState,
   ]);
 
   const [generatingScanStep, setGeneratingScanStep] = useState(0);
@@ -721,7 +727,12 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                 variant="contained"
                 color="white"
                 size="small"
-                disabled={generateState === 'generating'}
+                // Native `disabled` blurs the button, which closes Blockly's
+                // DropDownDiv. Use aria-disabled + a handler guard instead;
+                // disableRipple suppresses MUI's press feedback while busy.
+                aria-disabled={generateState === 'generating'}
+                disableRipple={generateState === 'generating'}
+                data-generating={generateState === 'generating'}
                 className={styles.button}
                 onClick={handleAiClick}
                 aria-label={musicI18n.generate()}

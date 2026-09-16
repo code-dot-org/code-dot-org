@@ -5,9 +5,19 @@ import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import type UnifiedBackpackClientApi from '@cdo/apps/sharedComponents/backpack/UnifiedBackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createUuid} from '@cdo/apps/utils';
+
+export type SaveToBackpackApi = BackpackClientApi | UnifiedBackpackClientApi;
+
+// Check if the provided API is a UnifiedBackpackClientApi.
+// We check against the existence of getFileLists so we can use a
+// mocked UnifiedBackpackClientApi in tests.
+export const isUnifiedApi = (
+  api: SaveToBackpackApi
+): api is UnifiedBackpackClientApi =>
+  typeof (api as UnifiedBackpackClientApi).getFileLists === 'function';
 
 export const handleSaveSupportFile = async (
   dialogControl: DialogControlInterface,
@@ -53,13 +63,7 @@ export const handleSaveDuplicateFile = async (
   createNewFile: (fileName: string, contents: string, url?: string) => void,
   findIdForFileName: (fileName: string) => string | undefined,
   selectedFileName: string,
-  newFileName?: string,
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void,
-  isSecondaryBackpack?: boolean
+  newFileName?: string
 ) => {
   // The file name is a duplicate, but not a support file.
   // Give user the choice to replace or import with the new name.
@@ -89,8 +93,6 @@ export const handleSaveDuplicateFile = async (
       findIdForFileName,
       selectedFileName,
       newFileName,
-      onImageFlagged,
-      isSecondaryBackpack,
     });
   } else if (results.type === 'neutral') {
     // Import as new file
@@ -103,8 +105,6 @@ export const handleSaveDuplicateFile = async (
       createNewFile,
       findIdForFileName,
       selectedFileName,
-      onImageFlagged,
-      isSecondaryBackpack,
     });
   }
 };
@@ -119,12 +119,6 @@ export interface FetchAndSaveFileParams {
   findIdForFileName: (fileName: string) => string | undefined;
   selectedFileName: string;
   newFileName?: string;
-  isSecondaryBackpack?: boolean;
-  onImageFlagged?: (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => void;
 }
 
 export const fetchAndSaveFile = async ({
@@ -137,8 +131,6 @@ export const fetchAndSaveFile = async ({
   findIdForFileName,
   selectedFileName,
   newFileName,
-  isSecondaryBackpack,
-  onImageFlagged,
 }: FetchAndSaveFileParams) => {
   const errorMessage = `An error occurred while adding ${
     newFileName || selectedFileName
@@ -157,61 +149,18 @@ export const fetchAndSaveFile = async ({
   }
   let fileContent = '';
   let url: string | undefined = undefined;
-  if (response?.headers.get('Content-Type')?.startsWith('image/')) {
+  const contentType = response.headers.get('Content-Type') || '';
+  const isImage = contentType.startsWith('image/');
+  const isAudio = contentType.startsWith('audio/');
+  // Images and audio have no text contents; they are uploaded to the channel's
+  // assets and the project file refers to them by url.
+  if (isImage || isAudio) {
     const fileType = selectedFileName.split('.').pop();
     const blob = await response.blob();
     const uuid = createUuid();
     const uploadUrl = `/v3/assets/${channelId}/${uuid}.${fileType}`;
 
-    // Moderate image if file is from a secondary backpack.
-    if (isSecondaryBackpack && fileType) {
-      // Convert blob to File object for moderation
-      const contentType = response.headers.get('Content-Type') || 'image/*';
-      const file = new File([blob], selectedFileName, {type: contentType});
-      const appName = Lab2Registry.getInstance().getAppName();
-
-      const moderationStatus = await moderateImage(file, appName ?? '', {
-        uploaderType: 'Lab2FileUploader',
-        assetUrl: uploadUrl,
-      });
-      if (moderationStatus === 'flagged') {
-        // Callback function so if user accepts flagged image, we can save the image to the project.
-        const saveBackpackImageFileToProjectFunction = async () => {
-          const uploadedUrl = await handleSaveImageToChannelAssets(
-            uploadUrl,
-            blob,
-            errorMessage,
-            addAlert
-          );
-          if (uploadedUrl) {
-            await handleSaveFileToProject(
-              newFileName,
-              selectedFileName,
-              createNewFile,
-              findIdForFileName,
-              saveFile,
-              fileContent,
-              uploadedUrl,
-              errorMessage,
-              addAlert,
-              successMetric,
-              successMessage
-            );
-          }
-        };
-        // FlagedImageModal will be shown to the user and user can choose to add the image file to the project or not.
-        onImageFlagged &&
-          onImageFlagged(
-            file,
-            fileType,
-            saveBackpackImageFileToProjectFunction
-          );
-        return;
-      }
-    }
-
-    // Proceed without moderation because image was already moderated when uploaded to project (for primary backpack files).
-    const uploadedUrl = await handleSaveImageToChannelAssets(
+    const uploadedUrl = await handleSaveBlobToChannelAssets(
       uploadUrl,
       blob,
       errorMessage,
@@ -240,9 +189,9 @@ export const fetchAndSaveFile = async ({
   );
 };
 
-// Handle image file content as a blob, and upload as an asset.
+// Upload binary file content (image or audio) as a channel asset.
 // Return the url for the new file contents.
-const handleSaveImageToChannelAssets = async (
+const handleSaveBlobToChannelAssets = async (
   uploadUrl: string,
   blob: Blob,
   errorMessage: string,
@@ -255,7 +204,7 @@ const handleSaveImageToChannelAssets = async (
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError(
-        'Backpack could not upload image file to assets channel',
+        'Backpack could not upload binary file to assets channel',
         error as Error
       );
     addAlert('danger', errorMessage);

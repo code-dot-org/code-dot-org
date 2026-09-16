@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
 import memoize from 'memoize-one';
@@ -11,7 +12,6 @@ import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import msg from '@cdo/locale';
 
-import color from '../../../util/color';
 import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 
 import {MAX_CROSSTAB_CELLS, MAX_CROSSTAB_COLUMNS} from './CrossTabChart';
@@ -293,20 +293,19 @@ class VisualizerModal extends React.Component {
         >
           <div style={styles.modalBody}>
             <div>
-              <h2 style={styles.h2}>
-                {' '}
+              <Typography variant="h5" component="h2" sx={{m: '0 0 10px 0'}}>
                 {msg.exploreDataset({
                   datasetName: this.props.tableName,
-                })}{' '}
-              </h2>
+                })}
+              </Typography>
 
               <div>
                 <div style={styles.input}>
-                  <label style={rowStyle.description}>
+                  <label style={styles.label}>
                     {msg.dataVisualizerChartTitle()}
                   </label>
                   <DebounceInput
-                    style={rowStyle.input}
+                    style={styles.textInput}
                     minLength={1}
                     debounceTimeout={500}
                     value={this.state.chartTitle}
@@ -338,11 +337,11 @@ class VisualizerModal extends React.Component {
 
               {this.state.chartType === ChartType.HISTOGRAM && (
                 <div style={styles.input}>
-                  <label style={rowStyle.description}>
+                  <label style={styles.label}>
                     {msg.dataVisualizerBucketSize()}
                   </label>
                   <input
-                    style={rowStyle.input}
+                    style={styles.textInput}
                     value={this.state.bucketSize}
                     onChange={event =>
                       this.setState({bucketSize: event.target.value})
@@ -494,8 +493,14 @@ const styles = {
     flexDirection: 'column',
     height: '100%',
   },
-  h2: {
-    margin: '0 0 10px 0',
+  label: {
+    ...rowStyle.description,
+    color: 'var(--text-neutral-primary)',
+  },
+  textInput: {
+    ...rowStyle.input,
+    color: 'var(--text-neutral-primary)',
+    borderColor: 'var(--borders-neutral-strong)',
   },
   input: {
     ...rowStyle.container,
@@ -518,7 +523,7 @@ const styles = {
     bottom: '50%',
     ...fontConstants['main-font-semi-bold'],
     fontSize: 20,
-    color: color.dark_charcoal,
+    color: 'var(--text-neutral-primary)',
   },
 };
 

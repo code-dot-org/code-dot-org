@@ -1,0 +1,12 @@
+name 'aif-y2-working-with-data-lesson6-level2-2026'
+display_name 'Analyzing Data'
+description 'Choose a dataset to analyze.'
+
+sublevels
+level 'aif-y2-working-with-data-lesson6-level2-choice1-2026'
+level 'aif-y2-working-with-data-lesson6-level2-choice2-2026'
+level 'aif-y2-working-with-data-lesson6-level2-choice3-2026'
+level 'aif-y2-working-with-data-lesson6-level2-choice4-2026'
+level 'aif-y2-working-with-data-lesson6-level2-choice5-2026'
+
+uses_lab2

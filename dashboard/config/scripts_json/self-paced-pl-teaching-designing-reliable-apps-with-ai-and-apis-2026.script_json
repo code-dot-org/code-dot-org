@@ -33,12 +33,13 @@
       ],
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 03:03:30 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-07-13 16:21:45 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -61,19 +62,1561 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "Teaching Designing Reliable Apps with AI and APIs",
+      "name": "Teaching Designing Reliable Apps with AI and APIs",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "\n#### **By the end of this professional learning module, you will be able to:**\n\n* #### Use JavaScript to get data from an external API and show it in a web app.\n\n* #### Write asynchronous code with `async/await` to load data without freezing the page.\n\n* #### Compare using local data versus API data and explain when each makes sense.",
+        "student_overview": "\n#### **By the end of this professional learning module, you will be able to:**\n\n* #### Use JavaScript to get data from an external API and show it in a web app.\n\n* #### Write asynchronous code with `async/await` to load data without freezing the page.\n\n* #### Compare using local data versus API data and explain when each makes sense."
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ce5aa818-4931-47a9-82ab-b32cae4e2758",
+      "position": 1,
+      "properties": {
+        "duration": 90
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758",
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c",
+      "position": 1,
+      "properties": {
+        "name": "Introduction (5 min)",
+        "progression_name": "Introdcution (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c",
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758"
+      }
+    },
+    {
+      "key": "b9189ccb-7003-4101-8e6d-eaebad9fa468",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is an API? (15 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468",
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758"
+      }
+    },
+    {
+      "key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Getting Data Online (15 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e",
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758"
+      }
+    },
+    {
+      "key": "7251acfe-c21d-4648-bb46-125ed2d5815a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Making Sense of Data (15 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a",
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758"
+      }
+    },
+    {
+      "key": "a0cafc68-71fe-4677-9904-7aea3522a347",
+      "position": 5,
+      "properties": {
+        "progression_name": "Displaying Data (15 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347",
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758"
+      }
+    },
+    {
+      "key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e",
+      "position": 6,
+      "properties": {
+        "progression_name": "Catching Problems (10 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e",
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758"
+      }
+    },
+    {
+      "key": "79166434-692d-4eb8-aecf-5f1288b00055",
+      "position": 7,
+      "properties": {
+        "progression_name": "Local and Live Data (10 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "79166434-692d-4eb8-aecf-5f1288b00055",
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758"
+      }
+    },
+    {
+      "key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5",
+      "position": 8,
+      "properties": {
+        "progression_name": "Wrapping Up (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5",
+        "lesson_activity.key": "ce5aa818-4931-47a9-82ab-b32cae4e2758"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introdcution (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-Intro-1_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-Intro-1_pl"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introdcution (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl=aif-2-U5-curriculum-overview-2_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c"
+      },
+      "level_keys": [
+        "pl=aif-2-U5-curriculum-overview-2_pl"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introdcution (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U5-class-context-3_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U5-class-context-3_pl"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introdcution (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-project-overview-4_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-project-overview-4_pl"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-API-JSON-intro_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-API-JSON-intro_pl"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-API-JSON-intro2_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-API-JSON-intro2_pl"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-JSON_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-JSON_pl"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-u5-json-weather-data_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      },
+      "level_keys": [
+        "pl-aif2-u5-json-weather-data_pl"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-AIF2-U5-API-panel_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      },
+      "level_keys": [
+        "pl-AIF2-U5-API-panel_pl"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-u5-pokemon-generate-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      },
+      "level_keys": [
+        "pl-aif2-u5-pokemon-generate-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-programming_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-sync-async-programming_pl"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-code-chef_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-sync-async-code-chef_pl"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-mailbox-promise_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-mailbox-promise_pl"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-fetch_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-fetch_pl"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-promise-chain_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-promise-chain_pl"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-promise-chain-interactive_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-promise-chain-interactive_pl"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-trace-a-promise-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-trace-a-promise-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-making-steps-clear-L4_pl"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-async-await_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-async-await_pl"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-u5-refactor-joke-gen-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      },
+      "level_keys": [
+        "pl-aif2-u5-refactor-joke-gen-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Sense of Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-JSON-data_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-JSON-data_pl"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Sense of Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-shape-of-JSON_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-shape-of-JSON_pl"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Sense of Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U5-dotnotation-video_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a"
+      },
+      "level_keys": [
+        "pl-aif2-U5-dotnotation-video_pl"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Sense of Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-u5-api-dot-notation-pet-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a"
+      },
+      "level_keys": [
+        "pl-aif2-u5-api-dot-notation-pet-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-displaying-data_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-displaying-data_pl"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-parsing-JSON_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-parsing-JSON_pl"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-weblab-music-app-design_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-weblab-music-app-design_pl"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-steps-music-app-panal_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-steps-music-app-panal_pl"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-u5-music-app-api-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      },
+      "level_keys": [
+        "pl-aif2-u5-music-app-api-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-catching-problems_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-catching-problems_pl"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-try-catch-define_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-try-catch-define_pl"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U5-try-catch-video_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      },
+      "level_keys": [
+        "pl-aif2-U5-try-catch-video_pl"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-u5-try-catch-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      },
+      "level_keys": [
+        "pl-aif2-u5-try-catch-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-keeping-users-informed_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-keeping-users-informed_pl"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-matching-errorstates_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-matching-errorstates_pl"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Local and Live Data (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-local-and-live-data_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "79166434-692d-4eb8-aecf-5f1288b00055"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-local-and-live-data_pl"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Local and Live Data (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-local-data-jobs_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "79166434-692d-4eb8-aecf-5f1288b00055"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-local-data-jobs_pl"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 38,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Local and Live Data (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl=aif2-u5-create-app-shell_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "79166434-692d-4eb8-aecf-5f1288b00055"
+      },
+      "level_keys": [
+        "pl=aif2-u5-create-app-shell_pl"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 39,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-wrap-up-project_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-wrap-up-project_pl"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 40,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-reflect-wrap-1_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-reflect-wrap-1_pl"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 41,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-lesson-resources-2_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-lesson-resources-2_pl"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 42,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-final-level_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-final-level_pl"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-Intro-1_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-Intro-1_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl=aif-2-U5-curriculum-overview-2_pl",
+        "script_level.level_keys": [
+          "pl=aif-2-U5-curriculum-overview-2_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U5-class-context-3_pl",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U5-class-context-3_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-project-overview-4_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-project-overview-4_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f4277460-8b1b-4217-a0cd-8dbb628ae06c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-API-JSON-intro_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-API-JSON-intro_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-API-JSON-intro2_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-API-JSON-intro2_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-JSON_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-JSON_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-u5-json-weather-data_pl",
+        "script_level.level_keys": [
+          "pl-aif2-u5-json-weather-data_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-AIF2-U5-API-panel_pl",
+        "script_level.level_keys": [
+          "pl-AIF2-U5-API-panel_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-u5-pokemon-generate-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif2-u5-pokemon-generate-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-sync-async-programming_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-programming_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-sync-async-code-chef_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-sync-async-code-chef_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b9189ccb-7003-4101-8e6d-eaebad9fa468"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-mailbox-promise_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-mailbox-promise_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-fetch_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-fetch_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-promise-chain_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-promise-chain_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-promise-chain-interactive_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-promise-chain-interactive_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-trace-a-promise-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-trace-a-promise-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-making-steps-clear-L4_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-making-steps-clear-L4_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-async-await_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-async-await_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-u5-refactor-joke-gen-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif2-u5-refactor-joke-gen-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "24bf5625-efc8-4e46-9d60-2294a83e9d4e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-JSON-data_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-JSON-data_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-shape-of-JSON_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-shape-of-JSON_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U5-dotnotation-video_pl",
+        "script_level.level_keys": [
+          "pl-aif2-U5-dotnotation-video_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-u5-api-dot-notation-pet-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif2-u5-api-dot-notation-pet-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "7251acfe-c21d-4648-bb46-125ed2d5815a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-displaying-data_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-displaying-data_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-parsing-JSON_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-parsing-JSON_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-weblab-music-app-design_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-weblab-music-app-design_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-steps-music-app-panal_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-steps-music-app-panal_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-u5-music-app-api-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif2-u5-music-app-api-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "a0cafc68-71fe-4677-9904-7aea3522a347"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-catching-problems_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-catching-problems_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-try-catch-define_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-try-catch-define_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U5-try-catch-video_pl",
+        "script_level.level_keys": [
+          "pl-aif2-U5-try-catch-video_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-u5-try-catch-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif2-u5-try-catch-weblab_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-keeping-users-informed_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-keeping-users-informed_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-matching-errorstates_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-matching-errorstates_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c4345315-dc9f-4b7a-93dd-4f36f2b1d24e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-local-and-live-data_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-local-and-live-data_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "79166434-692d-4eb8-aecf-5f1288b00055"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-local-data-jobs_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-local-data-jobs_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "79166434-692d-4eb8-aecf-5f1288b00055"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl=aif2-u5-create-app-shell_pl",
+        "script_level.level_keys": [
+          "pl=aif2-u5-create-app-shell_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "79166434-692d-4eb8-aecf-5f1288b00055"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-wrap-up-project_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-wrap-up-project_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-reflect-wrap-1_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-reflect-wrap-1_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-lesson-resources-2_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-lesson-resources-2_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-final-level_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-final-level_pl"
+        ],
+        "lesson.key": "Teaching Designing Reliable Apps with AI and APIs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "18cf0994-4703-44ca-9d61-2c29c7ab99a5"
+      }
+    }
   ],
   "resources": [
 

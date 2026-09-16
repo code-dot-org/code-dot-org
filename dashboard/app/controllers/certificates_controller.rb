@@ -56,23 +56,32 @@ class CertificatesController < ApplicationController
     end
 
     begin
-      course_name = params[:course] ? Base64.urlsafe_decode64(params[:course]) : 'hourofcode'
+      course_name = Base64.urlsafe_decode64(params[:course]) if params[:course]
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
-    course_version = CurriculumHelper.find_matching_course_version(course_name)
-    return render status: :bad_request, json: {message: "invalid course name: #{course_name.inspect}"} unless course_version
-
-    course_title = course_name == 'hourofcode' ? I18n.t('certificate_hour_of_code') : course_version.localized_title
-
     student_names = params[:names]&.present? || request.method == 'POST' ? params[:names] : []
 
+    # A nil courseName posts as blank, which print_certificates#batch resolves
+    # to its own Hour of Code default. certificate_image_url treats a blank
+    # course as hoc.
     @certificate_data = {
       courseName: course_name,
-      courseTitle: course_title,
+      courseTitle: get_course_title(course_name),
       studentNames: student_names,
       imageUrl: certificate_image_url(nil, course_name, nil),
     }
+  end
+
+  # Returns Hour of Code title if course_name is nil, otherwise returns the
+  # localized title of the course.
+  # Raises ActiveRecord::RecordNotFound if the named course is not seeded.
+  private def get_course_title(course_name)
+    return I18n.t('certificate_hour_of_code') unless course_name
+
+    course_version = CurriculumHelper.find_matching_course_version(course_name)
+    raise ActiveRecord::RecordNotFound, "course not found: #{course_name.inspect}" unless course_version
+    course_version.localized_title
   end
 end

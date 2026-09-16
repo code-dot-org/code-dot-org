@@ -1,0 +1,635 @@
+@use './imageTile' as tile;
+@use '../quiet-button.scss' as buttons;
+
+.labRow {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  .tabShell {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+// Instructions column width when the full panel shows (no guide).
+.instructionsArea {
+  flex: 0;
+  min-width: 25%;
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
+.tabShell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+// One outer height for every tab item — plain tabs and the Code+scene group —
+// so the bar reads as a row of equal boxes (border-box: height includes the
+// 1px outlines).
+$tab-item-height: 34px;
+
+.tabContainer {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  justify-content: space-between;
+}
+
+.tabBar {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  // The tabs are distinct destinations, not a continuous strip: separate them
+  // enough to be told apart at a glance.
+  gap: 10px;
+}
+
+.tab {
+  height: $tab-item-height;
+  padding: 0 16px;
+  // Cancel the legacy global button margin so hover fills the group.
+  margin: 0;
+  // Every tab item carries the same "button" structure, so the scene group
+  // reads coherently next to plain tabs. The outer edges are the stronger
+  // border; dividers inside a group stay subtle (see .tabGroup).
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  // Selecting a tab bolds it, and bold text is a couple of px wider — enough
+  // to nudge every tab after it along. Hold the bold width at all times: this
+  // copy of the label is never painted and adds no height, it only sets how
+  // wide the button wants to be.
+  &::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 600;
+  }
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.tabActive {
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  // Already here: clicking does nothing, so don't promise otherwise.
+  cursor: default;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-primary);
+  }
+}
+
+// The scene selector plus the tabs that edit that scene, as one segmented
+// control: the selector leads, the tabs follow. Segments share this explicit
+// height so their text sits on one centerline inside the group's outline.
+$tab-segment-height: $tab-item-height - 2px;
+
+.tabGroup {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: $tab-item-height;
+  // Clips the square-cornered segments to the group's radius.
+  overflow: hidden;
+  // The arrow, not the I-beam `auto` gives over the scene name's text.
+  cursor: default;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-primary);
+
+  .tab {
+    height: $tab-segment-height;
+    border: none;
+    border-radius: 0;
+    // Dividers between segments; the group draws the outer edge.
+    border-left: 1px solid var(--borders-neutral-primary);
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  .tabActive {
+    background: transparent;
+
+    &:hover:not(:disabled) {
+      background: transparent;
+    }
+  }
+
+  .sceneSelect,
+  .sceneName {
+    border-left: none;
+    border-radius: 0;
+  }
+}
+
+// Set while a click on the group's non-tab area would open one of its tabs.
+.tabGroupOpensTab {
+  cursor: pointer;
+}
+
+// Action buttons beside the Play tab (shown only while playing), not tabs.
+// The song a playing game is using, sized to sit among the tab controls.
+.musicBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: $tab-item-height;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  line-height: 1.2;
+  max-width: 220px;
+}
+
+.musicBarTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.startOver {
+  height: $tab-item-height;
+  padding: 0 12px;
+  // The tab bar's gap spaces these; cancel the legacy global button margin.
+  margin: 0;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: var(--background-neutral-primary);
+  }
+}
+
+.sceneSelect {
+  height: $tab-segment-height;
+  max-width: 160px;
+  margin: 0;
+  // Native (appearance: auto) selects paint their own UA box when disabled,
+  // which reads as a stray grey pill. Take over rendering entirely: no
+  // appearance, our own chevron.
+  appearance: none;
+  padding: 0 26px 0 10px;
+  border: none;
+  border-left: 1px solid var(--borders-neutral-primary);
+  border-radius: 0 4px 0 0;
+  background: transparent
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.5'/></svg>")
+    no-repeat right 9px center;
+  color: var(--text-neutral-primary);
+  // Match the tab buttons.
+  font-size: 14px;
+  cursor: pointer;
+
+  // Unusable off the scene tabs, but not dimmed: it reads as one of the
+  // group's labels, and those stay bright when their tab isn't the active one.
+  &:disabled {
+    // Disabled controls swallow clicks entirely; let them fall through so
+    // clicking the dropdown area activates the Code tab.
+    pointer-events: none;
+    // Chrome re-applies a UA background-color and dims the text on :disabled.
+    background-color: transparent;
+    color: var(--text-neutral-primary);
+    opacity: 1;
+  }
+}
+
+// Pinned-scene levels show the scene's name where the picker would be: the
+// select's geometry without the chevron or the affordances.
+.sceneName {
+  display: inline-flex;
+  align-items: center;
+  height: $tab-segment-height;
+  max-width: 160px;
+  padding: 0 10px;
+  overflow: hidden;
+  border-left: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.tabContent {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+// Code tab is kept mounted; the parent toggles visibility with clip-path so the
+// Blockly workspace and flyout SVG keep their real dimensions across switches.
+.codeTabWrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.blocklyDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.imagesTab {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+// Sidebar-only resource panel (guide-based instructions): no instruction
+// tabs render inside the nav, so its top border would read as a stray line.
+.resourceSidebar {
+  :global(#resource-panel-tabs) {
+    border-top: 0;
+  }
+}
+
+.imagesManager {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  // Generous row spacing so the cards read as rows, not a dense grid; the
+  // bottom padding lets the last row scroll clear of the Guide overlay.
+  gap: 28px 14px;
+  padding: 28px 16px 220px;
+}
+
+.imageCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 125px;
+}
+
+// Compact, quiet delete: the image is the star of the card. (Scoped by
+// class — a bare `.imageCard button` would also hit the thumbnail button.)
+.deleteButton {
+  @include buttons.quiet-button(22px, 11px);
+}
+
+// The trailing "new image" card: a blank tile with a plus. Same footprint as
+// a thumbnail so the gallery grid stays regular.
+.newImageCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 104px;
+  height: 104px;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+  border: 1px dashed var(--borders-neutral-primary);
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+  }
+}
+
+.newImageLabel {
+  font-size: 12px;
+}
+
+.imageThumb {
+  @include tile.image-tile(104px);
+}
+
+.imageName {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Sized wrapper around .guideBody: an explicit pixel height (kept in sync
+// with the body's natural height via a ResizeObserver) is transitionable,
+// where height: auto is not. Content is clipped mid-transition.
+.guideAnimator {
+  overflow: hidden;
+  transition: height 0.25s ease;
+}
+
+// The new-scene dialog: name above the type choice.
+.newSceneFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sceneTypeGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  // The global legend style carries a fixed dark color and a full-width
+  // underline, neither of which suits a themed dialog. Sized to read as a
+  // peer of the name field's label above it.
+  legend {
+    width: auto;
+    margin-bottom: 4px;
+    padding: 0;
+    border: none;
+    color: var(--text-neutral-primary);
+    font-size: 14px;
+    line-height: inherit;
+  }
+}
+
+.guideBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+
+  // The shared read-aloud button paints a ~17x20 icon and sets no box; WCAG
+  // 2.2 target size (SC 2.5.8) wants 24x24.
+  button[aria-pressed] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+.guideInstructions {
+  line-height: 1.6;
+
+  // Markdown output brings document-level margins; keep it compact inside
+  // the guide, and keep links readable on the dark panel.
+  // Size and line height sit on the elements, not just the container:
+  // dashboard's scaffolds.scss styles `p, ol, ul, td` directly.
+  p,
+  ul,
+  ol {
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.6;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // List markers need this inset back: a global reset zeroes it, this
+  // margin shorthand zeroes the compensating margin, and the outside
+  // markers then draw past the guide's overflow clip — numbered lists
+  // showed items with no numbers.
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+
+  li + li {
+    margin-top: 4px;
+  }
+
+  // A leading heading sits flush with the panel's own padding; one that
+  // follows other content keeps a little separation.
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 6px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  a {
+    color: #8ab4f8;
+  }
+}
+
+// The Continue button once the level's task is done.
+.guideContinue {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+// The persistent playspace overlay: spans the tab content area; lets clicks
+// through to the content beneath (e.g. the Blockly workspace) except over the
+// box itself.
+.playspaceOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+// Fixed 400x400 (the engine canvas size); positioned via a transform so it can
+// animate between the corner preview and the centered play view.
+.playspaceBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  transform-origin: 0 0;
+  background: var(--background-neutral-secondary);
+  // Transitions, and the preview-only hairline seam, are set inline:
+  // transform only animates between the two visible placements; opacity
+  // fades the box in on appearance.
+
+  // Keyboard focus ring for the play-mode game region; an outline so the
+  // 400x400 geometry the transform and pointer math rely on is untouched.
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: 2px;
+  }
+}
+
+.playspaceCanvas {
+  width: 400px;
+  height: 400px;
+}
+
+// Click-to-play catcher over the live preview. Transparent until hover/focus,
+// when a faint veil + play glyph signal that clicking opens Play on this scene.
+// pointer-events: auto re-enables it over the otherwise-inert preview box.
+.previewClickCatch {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  cursor: pointer;
+
+  &::after {
+    content: '▶';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    opacity: 0;
+    transition: opacity 0.12s ease-in;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgb(0 0 0 / 28%);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: -2px;
+  }
+}
+
+// Location-picker hover ghost: the sprite being placed, previewed at the
+// hovered spot.
+.locationGhost {
+  position: absolute;
+  opacity: 0.6;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+// Scene-jump transition (scenes UI variant): sceneCover blanks the canvas the
+// instant a jump triggers and holds while the target loads; sceneFade takes
+// over when it lands and fades out, revealing the new scene.
+.sceneCover {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  pointer-events: none;
+}
+
+.sceneFade {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  animation: scene-fade-in 0.45s ease-out;
+  pointer-events: none;
+}
+
+@keyframes scene-fade-in {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+// Loading an external scene: a dimming overlay + spinner that fades in only
+// after a delay, so fast loads never flash it (the Lab2 loading pattern).
+.sceneLoading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 55%);
+  opacity: 0;
+  animation: scene-loading-fade-in 0.4s ease-in 1.5s both;
+  pointer-events: none;
+}
+
+.sceneLoadingSpinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgb(255 255 255 / 30%);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: scene-loading-spin 0.9s linear infinite;
+}
+
+@keyframes scene-loading-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scene-loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// The lab's own ground, which the dance generator also sits on: black in
+// dark mode, so the panel and the floating guide read as the level itself.
+.imageLevelArea {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  padding: 24px 16px;
+  overflow: auto;
+  background-color: var(--background-neutral-primary);
+}

@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-07-29T20:31:57.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Welcome!\nThis is a special sneak peek into a new Hour of AI activity!\n\n**We need YOUR help to make it the best activity yet!**\n- Be honest (you won't hurt our feelings)\n- Explain your thinking\n- New ideas are welcome",
+        "imageUrl": "https://images.code.org/7e7ae9832a302fb2015b49c56c2c3bf5-hoaititle.png",
+        "key": "IntroHoAI26Playtest-fa999b4b-15a0-4062-9be8-79e787c78866",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##About You\n\n- Age, grade\n- How much coding have you done?\n- How much have you used AI?",
+        "imageUrl": "https://images.code.org/7e7ae9832a302fb2015b49c56c2c3bf5-hoaititle.png",
+        "key": "IntroHoAI26Playtest-b7fb84e6-4bc9-444a-bd9d-2fb90bf2d729",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##Quick Questions\n- What is AI? \n- What is it used for? \n- How much do you want to learn about AI (scale of 1-5 where 1 = none and 5=a lot)",
+        "imageUrl": "https://images.code.org/7e7ae9832a302fb2015b49c56c2c3bf5-hoaititle.png",
+        "key": "IntroHoAI26Playtest-6c2183bd-8da1-4d71-a31e-fd1978af8499",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##Last Questions\n- Do you play video games? \n- What kind do you like best? \n- Explain what a platform game is",
+        "imageUrl": "https://images.code.org/7e7ae9832a302fb2015b49c56c2c3bf5-hoaititle.png",
+        "key": "IntroHoAI26Playtest-c51e5448-0362-45f8-9d88-3352127a8511",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29 20:51:36 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

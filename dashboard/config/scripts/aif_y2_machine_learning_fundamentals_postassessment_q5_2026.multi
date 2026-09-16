@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q5-2026'
+
+wrong 'Whether the shop will be busy or slow on a given day'
+wrong 'What day of the week will have the most customers'
+right 'How many items a store will sell if each item is priced at $5'
+wrong 'What the most popular item in the store is'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which of the following questions would best be answered using a regression model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Prediction Models
+MARKDOWN

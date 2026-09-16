@@ -152,7 +152,36 @@ class Unit < ApplicationRecord
 
   scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
 
-  scope :with_essential_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools)}
+  # Bandaid. Units that do not count as requiring AI chat tools, even though
+  # Level.with_essential_ai_chat_tools says every Weblab2 level does.
+  #
+  # Web Lab 2 builds an AI Tutor panel into the lab, so a unit built in Web Lab 2
+  # is reported as requiring AI chat tools, and so is any course containing it.
+  # That is right for AI Foundations and wrong for CS Discoveries 2026, whose
+  # Unit 2 was rebuilt in Web Lab 2 but whose curriculum never asks students to
+  # use the tutor: teachers were being told the course cannot be completed
+  # without AI chat tools.
+  #
+  # A unit named here reports AVAILABLE rather than ESSENTIAL, which quiets the
+  # alerts that state the stronger claim. It does not change what students and
+  # teachers may do -- level-by-level access is decided by
+  # Level.with_essential_ai_chat_tools, which this does not touch -- nor whether
+  # assigning the course turns AI chat tools on, which follows has_ai_chat_tools?.
+  #
+  # Emptying the list restores the previous reporting. The real fix, which lets a
+  # Web Lab 2 level say whether its tutor is essential, makes the list unnecessary.
+  NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS = %w(
+    csd2-2026
+  ).freeze
+
+  # Every caller reaches this through Unit#requires_ai_chat_tools? or
+  # UnitGroup#requires_ai_chat_tools?, so excluding the exempt units here reaches
+  # the course, unit, and section dependencies together. An empty exempt list is
+  # a no-op.
+  scope :with_essential_ai_chat_tools, (lambda do
+    joins(:levels).merge(Level.with_essential_ai_chat_tools).
+      where.not(scripts: {name: NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS})
+  end)
 
   attr_accessor :skip_name_format_validation
 
@@ -308,11 +337,9 @@ class Unit < ApplicationRecord
     topic_tags
     enable_blockly_keyboard_navigation
     generate_outline
+    generate_drafting_rules
+    generate_authoring_rules
   )
-
-  def self.hoc_2014_unit
-    Unit.get_from_cache(Unit::HOC_NAME)
-  end
 
   def self.starwars_unit
     Unit.get_from_cache(Unit::STARWARS_NAME)
@@ -604,10 +631,9 @@ class Unit < ApplicationRecord
           TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         is_not_predict_free_response = !level.predict_level? || level.properties.dig('predict_settings', 'questionType') != 'freeResponse'
         next if is_not_contained && is_not_predict_free_response
-        text_response_level = level.predict_level? ? level : level.contained_levels.first
         text_response_levels << {
           script_level: script_level,
-          levels: [text_response_level]
+          levels: level.levels_for_progress
         }
       end
     end
@@ -826,7 +852,7 @@ class Unit < ApplicationRecord
 
     # hard code some exceptions. ideally we'd get rid of these and just make our
     # UI tests deal with the 13+ requirement
-    return false if %w(allthethings allthettsthings).include?(name)
+    return false if %w(allthethings allthettsthings ui-test-tts).include?(name)
 
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
@@ -1147,10 +1173,16 @@ class Unit < ApplicationRecord
   # to operate on units with more than one user-facing lesson group, since
   # cross-group reordering is out of scope for this page.
   #
-  # `unit_generate_outline`, when supplied, is persisted on the Unit so the
-  # /generate page can restore it across reloads. nil leaves the existing
-  # value alone; '' clears it.
-  def update_lesson_outlines(raw_lessons, unit_generate_outline = nil)
+  # `prompts` holds GENERATOR_PROMPTS keys; a key left out keeps the stored
+  # value, '' clears it.
+  # Request keys of the /generate pages' unit prompts -> the property each saves.
+  GENERATOR_PROMPTS = {
+    generateOutline: :generate_outline,
+    generateDraftingRules: :generate_drafting_rules,
+    generateAuthoringRules: :generate_authoring_rules,
+  }.freeze
+
+  def update_lesson_outlines(raw_lessons, prompts = {})
     user_facing_groups = lesson_groups.select(&:user_facing)
     if user_facing_groups.length > 1
       raise 'Cannot bulk-edit lessons on a unit with multiple user-facing lesson groups.'
@@ -1212,10 +1244,12 @@ class Unit < ApplicationRecord
       target_group.lessons = new_lessons
       target_group.save!
 
-      unless unit_generate_outline.nil?
-        self.generate_outline = unit_generate_outline
-        save! if changed?
+      GENERATOR_PROMPTS.each do |param, attr|
+        next unless prompts.key?(param)
+        value = prompts[param].to_s
+        public_send("#{attr}=", value) unless value.presence == public_send(attr)
       end
+      save! if changed?
     end
 
     if Rails.application.config.levelbuilder_mode
@@ -1410,8 +1444,8 @@ class Unit < ApplicationRecord
         student_detail_progress_view: student_detail_progress_view?,
         project_widget_visible: project_widget_visible?,
         project_widget_types: project_widget_types,
-        teacher_resources: sorted_user_facing_resources(resources),
-        student_resources: sorted_user_facing_resources(student_resources),
+        teacher_resources: sorted_user_facing_resources(resources, unit_group_unit: unit_group_unit),
+        student_resources: sorted_user_facing_resources(student_resources, unit_group_unit: unit_group_unit),
         lesson_extras_available: lesson_extras_available,
         hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
@@ -1483,8 +1517,8 @@ class Unit < ApplicationRecord
       unitName: title_for_display(unit_group_unit: unit_group_unit),
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      teacher_resources: sorted_user_facing_resources(resources),
-      student_resources: sorted_user_facing_resources(student_resources),
+      teacher_resources: sorted_user_facing_resources(resources, unit_group_unit: unit_group_unit),
+      student_resources: sorted_user_facing_resources(student_resources, unit_group_unit: unit_group_unit),
       numberedUnits: numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: course_version_year,
@@ -1539,11 +1573,8 @@ class Unit < ApplicationRecord
       # page's bulk-write path. The page degrades to "edit prompts only"
       # when multiple user-facing lesson groups are present.
       multipleLessonGroups: user_facing_groups.length > 1,
-      # Persisted unit-level outline prompt — same role as the lesson's
-      # generate_outline, but at the unit scope. The page restores it on
-      # reload so the levelbuilder doesn't have to retype the unit
-      # description on every visit.
-      generateOutline: generate_outline,
+      # Persisted unit-level generator prompts, restored on reload.
+      **GENERATOR_PROMPTS.transform_values {|attr| public_send(attr)},
     }
   end
 
@@ -1955,6 +1986,14 @@ class Unit < ApplicationRecord
     unit_group&.pl_course?
   end
 
+  # The lesson tutor deep dive is scoped to the AI Foundations (AIF) and AI
+  # Discovery (AID) student curricula. PL/facilitator courses are excluded even
+  # if they carry an AI marketing initiative.
+  def lesson_tutor_available?
+    return false if pl_course?
+    !!get_course_version&.course_offering&.ai_initiative?
+  end
+
   # returns true if the user is a levelbuilder, or a teacher with any pilot
   # unit experiments enabled.
   def self.has_any_pilot_access?(user = nil)
@@ -2063,7 +2102,44 @@ class Unit < ApplicationRecord
     TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 
-  private def sorted_user_facing_resources(resources)
-    resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown)
+  private def sorted_user_facing_resources(resources, unit_group_unit: nil)
+    resources.
+      filter(&:show_in_resource_ui?).
+      sort_by(&:name).
+      map {|resource| summarize_resource_for_dropdown(resource, unit_group_unit)}
+  end
+
+  # Rollup resources ("All Resources", "All Code", "All Standards", "All
+  # Vocabulary") store a single static URL, baked at generation time to the
+  # unit's original course. When the same unit is reused in another unit group
+  # (e.g. a full-year course built from semester courses), that URL points at
+  # the wrong course, which corrupts the resource-page breadcrumb trail. Rewrite
+  # the course/position portion of rollup URLs to match the unit group the user
+  # is actually viewing.
+  private def summarize_resource_for_dropdown(resource, unit_group_unit)
+    summary = resource.summarize_for_resources_dropdown
+    if resource.is_rollup && Policies::Courses.modularity_enabled? && unit_group_unit
+      rebuilt = rebuild_rollup_url(summary[:url], unit_group_unit)
+      summary[:url] = rebuilt if rebuilt
+    end
+    summary
+  end
+
+  private def rebuild_rollup_url(url, unit_group_unit)
+    rollup_type = url[%r{/(code|resources|standards|vocab)\z}, 1]
+    return nil unless rollup_type
+
+    course = unit_group_unit.cached_unit_group
+    position = unit_group_unit.position
+    case rollup_type
+    when 'code'
+      code_course_unit_path(course, position)
+    when 'resources'
+      resources_course_unit_path(course, position)
+    when 'standards'
+      standards_course_unit_path(course, position)
+    when 'vocab'
+      vocab_course_unit_path(course, position)
+    end
   end
 end

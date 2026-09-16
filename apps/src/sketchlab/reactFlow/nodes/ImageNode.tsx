@@ -1,16 +1,18 @@
-import {NodeResizer, type NodeProps} from '@xyflow/react';
+import {type NodeProps} from '@xyflow/react';
 import React, {memo, useMemo} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
 import {ImageNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './image-node.module.scss';
 
 function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
-  const {src, altText} = data;
+  const {src} = data;
   const {showHandles, hoverHandlers} = useConnectionHandleVisibility(
     selected,
     isConnectable
@@ -20,29 +22,26 @@ function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
     () => ({transform: `rotate(${rotation}deg)`}),
     [rotation]
   );
+  useRotatedHandleInternals(rotation);
 
   return (
-    <div
-      className={styles.imageNode}
-      aria-label={altText || 'Image node'}
-      {...hoverHandlers}
-    >
-      <NodeResizer
-        isVisible={selected && !data.locked}
-        minWidth={MIN_NODE_WIDTH}
-        minHeight={MIN_NODE_HEIGHT}
-      />
-
+    <div className={styles.imageNode} {...hoverHandlers}>
       <div className={styles.rotatable} style={rotatableStyle}>
-        <img
-          src={src}
-          alt={altText}
-          className={styles.image}
-          draggable={false}
+        {/* The node wrapper carries the name; alt here would repeat it. */}
+        <img src={src} alt="" className={styles.image} draggable={false} />
+
+        <RotatedNodeResizer
+          isVisible={selected && !data.locked}
+          rotation={rotation}
+          minWidth={MIN_NODE_WIDTH}
+          minHeight={MIN_NODE_HEIGHT}
+        />
+
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
         />
       </div>
-
-      <ConnectionHandles visible={showHandles} isConnectable={isConnectable} />
     </div>
   );
 }

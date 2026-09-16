@@ -18,6 +18,7 @@ const BEYOND_BLOCKS_PROJECT_TYPES = [
 ];
 
 const OPEN_ENDED_PROJECT_TYPES = [
+  'sketchlab',
   'music_dance_ai',
   'music',
   'spritelab',

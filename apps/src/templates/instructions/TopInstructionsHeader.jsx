@@ -9,9 +9,6 @@ import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
 import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
 
-import styleConstants from '../../styleConstants';
-import color from '../../util/color';
-
 import {TabType} from './TopInstructions';
 
 function TopInstructionsHeader(props) {
@@ -55,166 +52,161 @@ function TopInstructionsHeader(props) {
   const showContainedLevelAnswer =
     hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
-  const collapserIconStyles = {
-    ...styles.collapserIcon.showHideButton,
-    ...(isRtl
-      ? styles.collapserIcon.showHideButtonRtl
-      : styles.collapserIcon.showHideButtonLtr),
-    ...(!isOldPurpleColor && styles.collapserIcon.rebrandPhase1StylesColor),
-    ...(teacherOnly && styles.collapserIcon.teacherOnlyColor),
-  };
-
   return (
     <PaneHeader
-      hasFocus={false}
-      isOldPurpleColor={isOldPurpleColor}
-      teacherOnly={teacherOnly}
-      isMinecraft={isMinecraft}
+      style={{
+        padding: '0 0.5rem',
+        backgroundColor:
+          tabSelected === TabType.TEACHER_ONLY
+            ? 'var(--background-info-primary)'
+            : isOldPurpleColor
+            ? '#7665a0'
+            : undefined,
+      }}
     >
-      <div style={styles.paneHeaderOverride}>
-        {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-        {collapsible &&
-          !isEmbedView &&
-          (isCSDorCSP || hasContainedLevels) &&
-          !dynamicInstructions && (
-            <CollapserIcon
-              id="ui-test-collapser"
-              isCollapsed={isCollapsed}
-              onClick={handleClickCollapser}
-              style={collapserIconStyles}
-            />
-          )}
-        {documentationUrl && tabSelected !== TabType.COMMENTS && (
-          <PaneButton
-            iconClass="fa-solid fa-book"
-            label={i18n.documentation()}
-            isRtl={isRtl}
-            headerHasFocus={false}
-            onClick={handleDocumentationClick}
-            isMinecraft={isMinecraft}
-            style={styles.documentationButton}
+      {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
+      {collapsible &&
+        !isEmbedView &&
+        (isCSDorCSP || hasContainedLevels) &&
+        !dynamicInstructions && (
+          <CollapserIcon
+            id="ui-test-collapser"
+            isCollapsed={isCollapsed}
+            onClick={handleClickCollapser}
           />
         )}
-        <div
-          style={{
-            ...styles.helpTabs,
-            ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr),
-          }}
-        >
+      {documentationUrl && tabSelected !== TabType.COMMENTS && (
+        <PaneButton
+          iconProps={{iconName: 'book', iconStyle: 'solid'}}
+          label={i18n.documentation()}
+          isRtl={isRtl}
+          headerHasFocus={false}
+          onClick={handleDocumentationClick}
+          isMinecraft={isMinecraft}
+          style={styles.documentationButton}
+        />
+      )}
+      <div
+        style={{
+          ...styles.helpTabs,
+          ...(isOldPurpleColor
+            ? {color: 'var(--text-neutral-white-fixed)'}
+            : {}),
+          ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr),
+        }}
+      >
+        <InstructionsTab
+          className="uitest-instructionsTab"
+          onClick={handleInstructionTabClick}
+          selected={tabSelected === TabType.INSTRUCTIONS}
+          isLegacyTextColor={isOldPurpleColor}
+          text={i18n.instructions()}
+          teacherOnly={teacherOnly}
+          isMinecraft={isMinecraft}
+          isRtl={isRtl}
+        />
+        {isCSDorCSP && displayHelpTab && (
           <InstructionsTab
-            className="uitest-instructionsTab"
-            onClick={handleInstructionTabClick}
-            selected={tabSelected === TabType.INSTRUCTIONS}
+            className="uitest-helpTab"
+            onClick={handleHelpTabClick}
+            selected={tabSelected === TabType.RESOURCES}
             isLegacyTextColor={isOldPurpleColor}
-            text={i18n.instructions()}
+            text={i18n.helpTips()}
             teacherOnly={teacherOnly}
             isMinecraft={isMinecraft}
             isRtl={isRtl}
           />
-          {isCSDorCSP && displayHelpTab && (
-            <InstructionsTab
-              className="uitest-helpTab"
-              onClick={handleHelpTabClick}
-              selected={tabSelected === TabType.RESOURCES}
-              isLegacyTextColor={isOldPurpleColor}
-              text={i18n.helpTips()}
-              teacherOnly={teacherOnly}
-              isMinecraft={isMinecraft}
-              isRtl={isRtl}
-            />
-          )}
-          {displayFeedback && (!fetchingData || teacherOnly) && (
-            <InstructionsTab
-              className="uitest-feedback"
-              onClick={handleCommentTabClick}
-              selected={tabSelected === TabType.COMMENTS}
-              isLegacyTextColor={isOldPurpleColor}
-              text={levelHasMiniRubric ? i18n.rubric() : i18n.feedback()}
-              teacherOnly={teacherOnly}
-              isMinecraft={isMinecraft}
-              isRtl={isRtl}
-            />
-          )}
-          {displayDocumentationTab && (
-            <InstructionsTab
-              onClick={handleDocumentationTabClick}
-              selected={tabSelected === TabType.DOCUMENTATION}
-              isLegacyTextColor={isOldPurpleColor}
-              text={i18n.documentation()}
-              teacherOnly={teacherOnly}
-              isMinecraft={isMinecraft}
-              isRtl={isRtl}
-            />
-          )}
-          {displayReviewTab && (
-            <InstructionsTab
-              className="uitest-reviewTab"
-              onClick={handleReviewTabClick}
-              selected={tabSelected === TabType.REVIEW}
-              isLegacyTextColor={isOldPurpleColor}
-              text={i18n.review()}
-              teacherOnly={teacherOnly}
-              isMinecraft={isMinecraft}
-              isRtl={isRtl}
-            />
-          )}
-          {displayTaRubricTab && (
-            <InstructionsTab
-              className="uitest-taRubricTab"
-              onClick={handleTaRubricTabClick}
-              selected={tabSelected === TabType.TA_RUBRIC}
-              isLegacyTextColor={isOldPurpleColor}
-              text={i18n.rubric()}
-              teacherOnly={false}
-              isMinecraft={isMinecraft}
-              isRtl={isRtl}
-            />
-          )}
-          {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
-            (teacherMarkdown ||
-              showContainedLevelAnswer ||
-              exampleSolutions.length > 0) && (
-              <InstructionsTab
-                className="uitest-teacherOnlyTab"
-                onClick={handleTeacherOnlyTabClick}
-                selected={tabSelected === TabType.TEACHER_ONLY}
-                text={i18n.teacherOnly()}
-                teacherOnly={teacherOnly}
-                isMinecraft={isMinecraft}
-                isRtl={isRtl}
-              />
-            )}
-        </div>
-        {hasBackgroundMusic && (
-          <BackgroundMusicMuteButton
-            className="uitest-mute-music-button"
+        )}
+        {displayFeedback && (!fetchingData || teacherOnly) && (
+          <InstructionsTab
+            className="uitest-feedback"
+            onClick={handleCommentTabClick}
+            selected={tabSelected === TabType.COMMENTS}
+            isLegacyTextColor={isOldPurpleColor}
+            text={levelHasMiniRubric ? i18n.rubric() : i18n.feedback()}
+            teacherOnly={teacherOnly}
             isMinecraft={isMinecraft}
             isRtl={isRtl}
           />
         )}
-        {/* For CSF contained levels we use the same audio button location as CSD/CSP*/}
-        {tabSelected === TabType.INSTRUCTIONS &&
-          ttsLongInstructionsUrl &&
-          (hasContainedLevels || isCSDorCSP) && (
-            <InlineAudio
-              src={ttsLongInstructionsUrl}
-              style={{
-                ...styles.audio,
-                ...(isRtl ? styles.audioRTL : styles.audioLTR),
-              }}
-              autoplayTriggerElementId="codeApp"
-              isRoundedVolumeIcon
-              isLegacyStyles={isOldPurpleColor}
+        {displayDocumentationTab && (
+          <InstructionsTab
+            onClick={handleDocumentationTabClick}
+            selected={tabSelected === TabType.DOCUMENTATION}
+            isLegacyTextColor={isOldPurpleColor}
+            text={i18n.documentation()}
+            teacherOnly={teacherOnly}
+            isMinecraft={isMinecraft}
+            isRtl={isRtl}
+          />
+        )}
+        {displayReviewTab && (
+          <InstructionsTab
+            className="uitest-reviewTab"
+            onClick={handleReviewTabClick}
+            selected={tabSelected === TabType.REVIEW}
+            isLegacyTextColor={isOldPurpleColor}
+            text={i18n.review()}
+            teacherOnly={teacherOnly}
+            isMinecraft={isMinecraft}
+            isRtl={isRtl}
+          />
+        )}
+        {displayTaRubricTab && (
+          <InstructionsTab
+            className="uitest-taRubricTab"
+            onClick={handleTaRubricTabClick}
+            selected={tabSelected === TabType.TA_RUBRIC}
+            isLegacyTextColor={isOldPurpleColor}
+            text={i18n.rubric()}
+            teacherOnly={false}
+            isMinecraft={isMinecraft}
+            isRtl={isRtl}
+          />
+        )}
+        {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
+          (teacherMarkdown ||
+            showContainedLevelAnswer ||
+            exampleSolutions.length > 0) && (
+            <InstructionsTab
+              className="uitest-teacherOnlyTab"
+              onClick={handleTeacherOnlyTabClick}
+              selected={tabSelected === TabType.TEACHER_ONLY}
+              text={i18n.teacherOnly()}
+              teacherOnly={teacherOnly}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
             />
           )}
       </div>
+      {hasBackgroundMusic && (
+        <BackgroundMusicMuteButton
+          className="uitest-mute-music-button"
+          isMinecraft={isMinecraft}
+          isRtl={isRtl}
+        />
+      )}
+      {/* For CSF contained levels we use the same audio button location as CSD/CSP*/}
+      {tabSelected === TabType.INSTRUCTIONS &&
+        ttsLongInstructionsUrl &&
+        (hasContainedLevels || isCSDorCSP) && (
+          <InlineAudio
+            src={ttsLongInstructionsUrl}
+            style={{
+              ...styles.audio,
+              ...(isRtl ? styles.audioRTL : styles.audioLTR),
+            }}
+            autoplayTriggerElementId="codeApp"
+            isRoundedVolumeIcon
+            isLegacyStyles={isOldPurpleColor}
+          />
+        )}
     </PaneHeader>
   );
 }
 
 const styles = {
   paneHeaderOverride: {
-    color: color.default_text,
     display: 'flex',
     width: '100%',
     justifyContent: 'space-between',
@@ -247,42 +239,7 @@ const styles = {
     boxSizing: 'border-box',
     display: 'flex',
     minWidth: 100,
-  },
-  helpTabsLtr: {
-    paddingLeft: 30,
-  },
-  helpTabsRtl: {
-    paddingRight: 30,
-  },
-  collapserIcon: {
-    showHideButton: {
-      position: 'absolute',
-      top: 0,
-      margin: 0,
-      cursor: 'pointer',
-      lineHeight: styleConstants['workspace-headers-height'] + 'px',
-      fontSize: 18,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.white,
-      },
-    },
-    showHideButtonLtr: {
-      left: 8,
-    },
-    showHideButtonRtl: {
-      right: 8,
-    },
-    rebrandPhase1StylesColor: {
-      color: color.white,
-    },
-    teacherOnlyColor: {
-      color: color.lightest_cyan,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.default_text,
-      },
-    },
+    flex: '1 1 0',
   },
   documentationButton: {
     order: 4,

@@ -1,3 +1,5 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import Modal from '@code-dot-org/component-library/modal';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -11,15 +13,16 @@ const defaultProps = {
 };
 
 it('warning message requires both checkboxes to be checked to go forward for students', () => {
-  const body = shallow(<ImageUploadModal {...defaultProps} />);
+  const wrapper = shallow(<ImageUploadModal {...defaultProps} />);
 
-  let confirmButton = body.find('button').at(1);
-  expect(confirmButton.props().disabled).toBe(true);
-  const checkboxes = body.find('input');
-  checkboxes.at(0).simulate('change', {target: {checked: true}});
-  checkboxes.at(1).simulate('change', {target: {checked: true}});
-  confirmButton = body.find('button').at(1);
-  expect(confirmButton.props().disabled).toBe(false);
+  expect(wrapper.find(Modal).prop('primaryButtonProps').disabled).toBe(true);
+
+  const content = shallow(wrapper.find(Modal).prop('customContent'));
+  const checkboxes = content.find(Checkbox);
+  checkboxes.at(0).prop('onChange')();
+  checkboxes.at(1).prop('onChange')();
+
+  expect(wrapper.find(Modal).prop('primaryButtonProps').disabled).toBe(false);
 });
 
 it('warning message requires PII checkbox to be checked to go forward for teachers', () => {
@@ -27,12 +30,12 @@ it('warning message requires PII checkbox to be checked to go forward for teache
     ...defaultProps,
     isTeacher: true,
   };
-  const body = shallow(<ImageUploadModal {...props} />);
+  const wrapper = shallow(<ImageUploadModal {...props} />);
 
-  let confirmButton = body.find('button').at(1);
-  expect(confirmButton.props().disabled).toBe(true);
-  const checkboxes = body.find('input');
-  checkboxes.at(0).simulate('change', {target: {checked: true}});
-  confirmButton = body.find('button').at(1);
-  expect(confirmButton.props().disabled).toBe(false);
+  expect(wrapper.find(Modal).prop('primaryButtonProps').disabled).toBe(true);
+
+  const content = shallow(wrapper.find(Modal).prop('customContent'));
+  content.find(Checkbox).at(0).prop('onChange')();
+
+  expect(wrapper.find(Modal).prop('primaryButtonProps').disabled).toBe(false);
 });

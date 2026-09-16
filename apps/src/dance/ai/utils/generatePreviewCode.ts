@@ -18,7 +18,7 @@ export const generatePreviewCode = (
   ) as BlocklyCore.BlockSvg;
 
   // Attach the blocks to the setup block
-  setup.getInput('DO')?.connection?.connect(blocks[0].previousConnection);
+  setup.getInput('DO')?.connection?.connect(blocks[0].previousConnection!);
 
   if (!Blockly.getGenerator().isInitialized) {
     Blockly.getGenerator().init(workspace);

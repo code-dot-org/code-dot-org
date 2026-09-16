@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-11T07:56:15.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Ruha Benjamin\n\n### Technology & Social Justice\n\n*Image attribution: [Ruha Benjamin at Databites 2019](https://commons.wikimedia.org/wiki/File:Ruha_Benjamin,_Databite_124,_2019_(cropped).jpg) by Data & Society Research Institute, via Wikimedia Commons. CC BY 3.0.*\n",
+        "imageUrl": "https://images.code.org/6340be1e394dadcd81f4e6f65107b549-benjamin2.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What She Contributed\n\nBenjamin is a scholar of science, technology, and society whose work examines how technologies — including AI — can appear neutral while reinforcing existing inequalities. Her book *Race After Technology* introduced the concept of the “New Jim Code” to describe how discriminatory practices can be embedded in digital tools and algorithms.<sup>1</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n",
+        "imageUrl": "https://images.code.org/706826f032823f9a4a857be1cf329f63-technology.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Connection to AI History\n\nBenjamin’s contributions belong to the critical study of AI’s social impact. Her work connects AI bias to broader histories of race, inequality, and institutional design — pushing researchers to ask not just whether a system is accurate, but who it serves and who it may harm.<sup>2</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n",
+        "imageUrl": "https://images.code.org/555fa7ef33e65e6c3c3356089ead5f71-technology2.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "### Why It Matters\n\nBy bringing social science and humanities perspectives to AI, Benjamin helps explain why technical accuracy alone is not enough to make a system fair. Her scholarship pushes researchers, designers, and policymakers to examine whose interests AI systems are built to serve.<sup>1</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n\n**Sources**\n\n1. [MacArthur Foundation — Ruha Benjamin](https://www.macfound.org/fellows/class-of-2024/ruha-benjamin)\n2. [Institute for Advanced Study — Race After Technology](https://www.ias.edu/ideas/race-after-technology)\n",
+        "imageUrl": "https://images.code.org/434b4d886b8064cb6d91e2b687c7361a-technology3.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026-dev",
+    "display_name": "Ruha Benjamin",
+    "bubble_choice_description": "Choose Ruha Benjamin to explore how her work reveals ways AI can reinforce inequality and challenges people to build technology that serves society more fairly.",
+    "use_links": "false",
+    "thumbnail_url": "https://images.code.org/f3ab9a1b3072fcc5c261551adafd8f6f-benjamin.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-11T07:56:15.710+00:00\",\"changed\":[\"cloned from \\\"ai-history-lesson2-level1g-v4-2026\\\"\"],\"cloned_from\":\"ai-history-lesson2-level1g-v4-2026\"},{\"changed_at\":\"2026-08-11 07:58:52 +0000\",\"changed\":[\"panels\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Panels>

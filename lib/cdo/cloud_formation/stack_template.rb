@@ -90,7 +90,7 @@ module Cdo::CloudFormation
 
     # Indent all lines in the string by the specified number of characters.
     private def indent(string, chars)
-      string.gsub(/\n/, "\n#{' ' * chars}")
+      string.gsub("\n", "\n#{' ' * chars}")
     end
 
     # Creates Binding object used for ERB template context.

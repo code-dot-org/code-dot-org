@@ -111,35 +111,26 @@ var ELEMENT_ID_DENYLIST = [
 var TURTLE_CANVAS_ID = 'turtleCanvas';
 
 /**
- * Returns true if newId is available and won't collide with other elements.
- * Always reject element ids which are denylisted or already exist outside divApplab.
- * Allow or reject other element types based on the options specified.
+ * Returns a message explaining why newId is unavailable, or null if the id is
+ * available. isIdAvailable() is the boolean form of this. See isIdAvailable()
+ * for the meaning of options.
  * @param {string} newId The id to evaluate.
- * @param {Object.<string, boolean>} options Optional map of options
- *     indicating whether certain elements are allowed.
- * @param {string} options.allowCodeElements allow element ids which are
- *     inside divApplab. Default: false
- * @param {string} options.allowDesignElements: allow element ids which, when
- *     prefixed with "design_", already exist in designModeViz. Default: false
- * @param {string} options.allowDesignPrefix: allow element ids which
- *     start with "design_". Default: false
- * @param {string} options.allowTurtleCanvas: allow turtle canvas element
- *     to be created. Default: false
- * @returns {boolean}
+ * @param {Object.<string, boolean>} options Optional map of options.
+ * @returns {?string} A reason the id is unavailable, or null if it's available.
  */
-export function isIdAvailable(newId, options) {
+export function getIdAvailabilityError(newId, options) {
   options = options || {};
   if (!newId) {
-    return false;
+    return 'Enter an ID.';
   }
 
   // Don't allow denylisted elements.
   if (ELEMENT_ID_DENYLIST.indexOf(newId) !== -1) {
-    return false;
+    return 'That ID is reserved. Choose a different one.';
   }
 
   if (!options.allowTurtleCanvas && TURTLE_CANVAS_ID === newId) {
-    return false;
+    return 'That ID is reserved. Choose a different one.';
   }
 
   // Don't allow elements with reserved prefixes. Otherwise you can have
@@ -159,30 +150,51 @@ export function isIdAvailable(newId, options) {
     !options.allowDesignPrefix &&
     newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0
   ) {
-    return false;
+    return `IDs cannot start with the reserved prefix "${constants.DESIGN_ELEMENT_ID_PREFIX}".`;
   }
 
   // Don't allow if any other element in design mode has this prefixed id
   // (e.g. don't allow 'button1' if 'design_button1' exists),
   // unless options.allowDesignElements is specified.
   if (!options.allowDesignElements && getPrefixedElementById(newId)) {
-    return false;
+    return 'That ID is already in use. Choose a different one.';
   }
 
   // Don't allow if any element outside of divApplab has this id.
   var element = document.getElementById(newId);
   if (element && !$('#divApplab').find(element)[0]) {
-    return false;
+    return 'That ID is reserved. Choose a different one.';
   }
 
   // Don't allow if any element inside divApplab has this id,
   // unless options.allowCodeElements is specified.
   var existsInApplab = Boolean(element && $('#divApplab').find(element)[0]);
   if (!options.allowCodeElements && existsInApplab) {
-    return false;
+    return 'That ID is already in use. Choose a different one.';
   }
 
-  return true;
+  return null;
+}
+
+/**
+ * Returns true if newId is available and won't collide with other elements.
+ * Always reject element ids which are denylisted or already exist outside divApplab.
+ * Allow or reject other element types based on the options specified.
+ * @param {string} newId The id to evaluate.
+ * @param {Object.<string, boolean>} options Optional map of options
+ *     indicating whether certain elements are allowed.
+ * @param {string} options.allowCodeElements allow element ids which are
+ *     inside divApplab. Default: false
+ * @param {string} options.allowDesignElements: allow element ids which, when
+ *     prefixed with "design_", already exist in designModeViz. Default: false
+ * @param {string} options.allowDesignPrefix: allow element ids which
+ *     start with "design_". Default: false
+ * @param {string} options.allowTurtleCanvas: allow turtle canvas element
+ *     to be created. Default: false
+ * @returns {boolean}
+ */
+export function isIdAvailable(newId, options) {
+  return getIdAvailabilityError(newId, options) === null;
 }
 
 export function getScreens() {

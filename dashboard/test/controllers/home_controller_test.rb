@@ -12,6 +12,17 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/teacher_dashboard/home'
   end
 
+  test "student home has branded sharing metadata" do
+    sign_in create(:student)
+
+    get :home
+
+    assert_response :success
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_select "meta[property='og:site_name'][content='#{brand_name}']"
+    assert_select "meta[property='og:title'][content='Learn on #{brand_name}']"
+  end
+
   test "teacher without progress or assigned course/script redirected to index" do
     teacher = create(:teacher)
     sign_in teacher

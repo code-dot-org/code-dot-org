@@ -36,10 +36,7 @@
             "width": 609,
             "height": 165,
             "resizing": false,
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "YS16P5XavpzHppFU09VwJ",
@@ -227,7 +224,7 @@
             },
             "measured": {
               "width": 362,
-              "height": 605
+              "height": 606
             }
           },
           {
@@ -249,9 +246,6 @@
               "height": 64
             },
             "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false,
             "width": 326,
             "height": 64,
             "resizing": false
@@ -278,10 +272,7 @@
             "dragging": false,
             "width": 262,
             "height": 145,
-            "resizing": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "resizing": false
           },
           {
             "id": "vyk5QEP11-RQwlA5R0Fe1",
@@ -299,13 +290,10 @@
               "locked": true
             },
             "measured": {
-              "width": 570,
-              "height": 74
+              "width": 578,
+              "height": 75
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "dXfkULvHASgme2YmV6ABA",
@@ -328,10 +316,7 @@
             "dragging": false,
             "width": 197,
             "height": 63,
-            "resizing": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "resizing": false
           },
           {
             "id": "lkGTDVR_VvNc84Y0jVYf1",
@@ -446,10 +431,7 @@
             "measured": {
               "width": 1064,
               "height": 815
-            },
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            }
           },
           {
             "id": "5WYZ_9XHpUE7BVOreSkan",
@@ -588,8 +570,8 @@
               "locked": true
             },
             "measured": {
-              "width": 417,
-              "height": 160
+              "width": 429,
+              "height": 161
             },
             "dragging": false,
             "zIndex": -2
@@ -1065,15 +1047,15 @@
           }
         ],
         "viewport": {
-          "x": 113.05970689729179,
-          "y": 405.530144835398,
-          "zoom": 0.26735273129884557
+          "x": 2620.7421314484827,
+          "y": 400.6725492769576,
+          "zoom": 0.6142152852938966
         }
       }
     },
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-22T21:14:45.218+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-22 21:39:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:45:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:47:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 15:21:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-29 18:19:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-03 18:36:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-07 15:21:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:02:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:02:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:02:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 18:00:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 21:54:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-22T21:14:45.218+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot_2026\"},{\"changed_at\":\"2026-04-22 21:39:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:45:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-22 21:47:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-23 15:21:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-29 18:19:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-03 18:36:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-07 15:21:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:02:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:02:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 14:02:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 18:00:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-20 21:54:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-08-14 16:31:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

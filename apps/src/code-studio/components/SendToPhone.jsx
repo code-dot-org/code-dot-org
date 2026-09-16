@@ -1,6 +1,11 @@
+import Link from '@code-dot-org/component-library/link';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import moduleStyles from './send-to-phone.module.scss';
 
 // Similar UI exists in sharing.html.ejs. At some point int he future, it may
 // make sense to see if we can get rid of the stuff in the .ejs file
@@ -29,11 +34,6 @@ function sendButtonString(sendState) {
   }
 }
 
-const baseStyles = {
-  label: {},
-  div: {},
-};
-
 /**
  * Send-to-phone component used by share project dialog.
  */
@@ -42,31 +42,25 @@ export default class SendToPhone extends React.Component {
     isLegacyShare: PropTypes.bool.isRequired,
     channelId: PropTypes.string,
     appType: PropTypes.string.isRequired,
-    styles: PropTypes.shape({
-      label: PropTypes.object,
-      div: PropTypes.object,
-    }),
   };
 
   state = {sendState: SendState.invalidVal};
+
+  phoneRef = React.createRef();
 
   componentDidMount() {
     this.maskPhoneInput();
   }
 
   maskPhoneInput() {
-    if (!this.refs.phone) {
+    const phone = this.phoneRef.current;
+    if (!phone) {
       return;
     }
 
-    var phone = this.refs.phone;
     $(phone).mask('(000) 000-0000', {
-      onComplete: function () {
-        this.setState({sendState: SendState.canSubmit});
-      }.bind(this),
-      onChange: function () {
-        this.setState({sendState: SendState.invalidVal});
-      }.bind(this),
+      onComplete: () => this.setState({sendState: SendState.canSubmit}),
+      onChange: () => this.setState({sendState: SendState.invalidVal}),
     });
     phone.focus();
   }
@@ -77,7 +71,7 @@ export default class SendToPhone extends React.Component {
     if (this.state.sendState !== SendState.canSubmit) {
       return;
     }
-    const {phone} = this.refs;
+    const phone = this.phoneRef.current;
 
     this.setState({sendState: SendState.sending});
 
@@ -92,46 +86,47 @@ export default class SendToPhone extends React.Component {
     }
 
     $.post('/sms/send', $.param(params))
-      .done(
-        function () {
-          this.setState({sendState: SendState.sent});
-        }.bind(this)
-      )
-      .fail(
-        function () {
-          this.setState({sendState: SendState.error});
-        }.bind(this)
-      );
+      .done(() => this.setState({sendState: SendState.sent}))
+      .fail(() => this.setState({sendState: SendState.error}));
   };
 
   render() {
-    const styles = {...baseStyles, ...this.props.styles};
+    const inputDisabled =
+      this.state.sendState !== SendState.invalidVal &&
+      this.state.sendState !== SendState.canSubmit;
     return (
-      <div>
-        <label style={styles.label} htmlFor="phone">
-          Enter a US phone number:
-        </label>
-        <input
-          type="text"
-          ref="phone"
+      <div className={moduleStyles.root}>
+        <TextField
+          ref={this.phoneRef}
+          id="phone"
           name="phone"
-          style={{height: 32, margin: 0}}
-          disabled={
-            this.state.sendState !== SendState.invalidVal &&
-            this.state.sendState !== SendState.canSubmit
-          }
+          label="Enter a US phone number:"
+          size="s"
+          onChange={() => {}}
+          disabled={inputDisabled}
         />
-        <button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           type="button"
           disabled={this.state.sendState === SendState.invalidVal}
           onClick={this.handleSubmit}
         >
           {sendButtonString(this.state.sendState)}
-        </button>
-        <div style={styles.div}>
-          A text message will be sent via <a href="http://twilio.com">Twilio</a>
+        </MuiButton>
+        <MuiTypography variant="body4" className={moduleStyles.disclaimer}>
+          A text message will be sent via{' '}
+          <Link
+            href="http://twilio.com"
+            text="Twilio"
+            external
+            openInNewTab
+            size="xs"
+            className={moduleStyles.twilioLink}
+          />
           . Charges may apply to the recipient.
-        </div>
+        </MuiTypography>
       </div>
     );
   }

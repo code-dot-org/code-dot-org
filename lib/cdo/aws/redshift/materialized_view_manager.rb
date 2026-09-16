@@ -1,7 +1,9 @@
+require 'csv'
 require 'digest'
 require 'erb'
 require 'fileutils'
 require 'cdo/aws/redshift/client'
+require 'cdo/aws/redshift/zero_etl'
 require 'cdo/aws/metrics'
 
 module Cdo
@@ -63,12 +65,6 @@ module Cdo
         PII_CLASSIFICATIONS = %i[public confidential restricted].freeze
         SQL_INDENT = ' ' * 2
 
-        # The Redshift Data API's BatchExecuteStatement accepts at most 40 SQL statements per
-        # call. The consolidated orphan-drop can exceed this (a full re-provision of ~110 models
-        # produces ~220 drops), so we submit it in chunks of this size.
-        # https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_BatchExecuteStatement.html
-        MAX_BATCH_STATEMENTS = 40
-
         # Human-readable descriptions for the numeric `state` column of
         # SVV_MV_INFO. States 0/1 are healthy (the view refreshes, either by
         # full recompute or incrementally); states >= 100 mean the view can no
@@ -119,12 +115,6 @@ module Cdo
         # team's dbt schemas in `dev`.
         VIEW_SCHEMA_PREFIX = 'learning_platform'.freeze
 
-        # Schema prefix of the Zero ETL *source* tables inside the Zero ETL target database, e.g.
-        # `production_learningplatform_mysql_zeroetl.dashboard_production.<table>`. This mirrors
-        # the MySQL `dashboard` database name and is fixed by the Zero ETL integration — it is NOT
-        # the schema our views live in, and must not be renamed.
-        ZERO_ETL_SOURCE_SCHEMA_PREFIX = 'dashboard'.freeze
-
         # ERB template variable for the environment type (e.g., 'test' or 'production').
         ENVIRONMENT_TYPE_ERB = '<%=environment_type%>'.freeze
 
@@ -170,6 +160,18 @@ module Cdo
           view_variants.map {|pii| fully_qualified_view_name(env, pii: pii)}
         end
 
+        # Views share the bare name of their Model's table.
+        # @return [String]
+        def view_name
+          mysql_table_name
+        end
+
+        # The model's table name without any `database.` qualifier.
+        # @return [String]
+        def mysql_table_name
+          model.table_name.to_s.rpartition('.').last
+        end
+
         # Generates the DDL for the PII Materialized View, which projects every column
         # except those classified :highly_restricted.
         def generate_pii_ddl
@@ -194,14 +196,14 @@ module Cdo
 
           pii_ddl = generate_pii_ddl
           if pii_ddl
-            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{model.table_name}_pii.sql.erb")
+            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{view_name}_pii.sql.erb")
             File.write(path, GENERATED_TEMPLATE_HEADER + pii_ddl)
             files << path
           end
 
           non_pii_ddl = generate_non_pii_ddl
           if non_pii_ddl
-            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{model.table_name}.sql.erb")
+            path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{view_name}.sql.erb")
             File.write(path, GENERATED_TEMPLATE_HEADER + non_pii_ddl)
             files << path
           end
@@ -297,7 +299,9 @@ module Cdo
             create_sql = info[:sql]
             comment_sql = "COMMENT ON COLUMN #{fqn}.#{info[:first_column]} IS '#{self.class.ddl_hash(create_sql)}'"
 
-            statements[fqn] = client.batch_execute_async([drop_sql, create_sql, comment_sql])
+            # A create-or-replace is drop+create+comment (3 statements), always a single batch, so
+            # `batch_execute_async` returns exactly one statement id.
+            statements[fqn] = client.batch_execute_async([drop_sql, create_sql, comment_sql]).first
           end
 
           statements
@@ -405,7 +409,7 @@ module Cdo
           return plan if dry_run
 
           generators.each do |gen|
-            table_name = gen.model.table_name
+            table_name = gen.view_name
             gen_fqns = gen.expected_view_fqns(environment_type)
 
             if gen_fqns.any? && gen_fqns.all? {|fqn| unchanged_fqns.include?(fqn)}
@@ -423,11 +427,17 @@ module Cdo
             end
           end
 
-          # Drop orphaned views in chunks: the Data API caps a batch at MAX_BATCH_STATEMENTS.
-          plan[:to_drop].each_slice(MAX_BATCH_STATEMENTS).with_index do |fqns, chunk_index|
-            drop_sql = fqns.map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
-            plan[:statements]["__drop_orphans___#{chunk_index}"] = client.batch_execute_async(drop_sql)
-            yield(:drop_batch_submitted, fqns) if block_given?
+          # Drop orphaned views. A full re-provision can orphan a couple hundred, exceeding the Data
+          # API's per-call statement limit, so we opt into `allow_separate_transactions`: these drops
+          # are mutually independent and idempotent (`DROP ... IF EXISTS`), so splitting them across
+          # independent, unordered batches is safe. `batch_execute_async` returns one statement id per
+          # batch.
+          if plan[:to_drop].any?
+            drop_sqls = plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
+            client.batch_execute_async(drop_sqls, allow_separate_transactions: true).each_with_index do |statement_id, batch_index|
+              plan[:statements]["__drop_orphans___#{batch_index}"] = statement_id
+            end
+            yield(:drop_batch_submitted, plan[:to_drop]) if block_given?
           end
 
           plan
@@ -477,7 +487,7 @@ module Cdo
 
           models.each do |model|
             gen = new(model)
-            table_name = model.table_name
+            table_name = gen.view_name
             expected_fqns = gen.expected_view_fqns(environment_type)
 
             if expected_fqns.empty?
@@ -676,14 +686,14 @@ module Cdo
 
           rows = []
           model_fqns.sort_by {|fqn, m| [m.name, view_type_for.call(fqn)]}.each do |fqn, model|
-            rows << build_row.call(model.name, model.table_name, fqn)
+            rows << build_row.call(model.name, new(model).view_name, fqn)
           end
 
           orphan_fqns = (fqn_to_latest.keys - expected_set.to_a).sort
           orphan_fqns.each do |fqn|
             prefix = schema_prefixes.find {|p| fqn.start_with?(p)}
             orphan_table = prefix ? fqn.delete_prefix(prefix) : fqn
-            rows << build_row.call('(orphan)', orphan_table, fqn)
+            rows << build_row.call(ORPHAN_MODEL_NAME, orphan_table, fqn)
           end
 
           rows
@@ -709,10 +719,18 @@ module Cdo
           nil
         end
 
+        # A view's data is known current as of `executed_at` after either operation: CREATE fully
+        # materializes it from scratch, REFRESH incrementally brings it up to date. DROP does not
+        # (the view has no data). Both must count toward the freshness/duration metrics below, or a
+        # routine re-provision (CREATE) makes a view look never-refreshed until its next REFRESH,
+        # which can be up to a day away on the daily post-DMS-export refresh cadence.
+        FRESHENING_OPERATIONS = %w[CREATE REFRESH].freeze
+
         # @param rows [Array<ViewStatusRow>]
         # @param now [Time] reference time for "seconds since last refresh".
         # @return [Hash] :error_views (rows + :condition), :stale_views, :total,
-        #   :max_seconds_since_last_refresh (nil if no refresh seen), :max_refresh_duration_seconds (nil).
+        #   :max_seconds_since_last_refresh (nil if no CREATE/REFRESH seen),
+        #   :max_refresh_duration_seconds (nil, same condition).
         def self.view_status_summary(rows, now:)
           error_views = rows.filter_map do |row|
             condition = error_condition_for(row)
@@ -722,11 +740,11 @@ module Cdo
           stale_views = rows.select(&:is_stale)
 
           refresh_ages = rows.filter_map do |row|
-            next unless row.operation == 'REFRESH' && row.executed_at
+            next unless FRESHENING_OPERATIONS.include?(row.operation) && row.executed_at
             (now - row.executed_at).to_i
           end
           refresh_durations = rows.filter_map do |row|
-            row.duration_seconds if row.operation == 'REFRESH' && row.duration_seconds
+            row.duration_seconds if FRESHENING_OPERATIONS.include?(row.operation) && row.duration_seconds
           end
 
           {
@@ -736,6 +754,74 @@ module Cdo
             max_seconds_since_last_refresh: refresh_ages.max,
             max_refresh_duration_seconds: refresh_durations.max
           }
+        end
+
+        # `model_name` value `view_status` assigns to a row for a view present in Redshift but not
+        # produced by any current model (an orphan left behind after a model stopped exporting).
+        ORPHAN_MODEL_NAME = '(orphan)'.freeze
+
+        # Ordered column headers for `view_status_to_csv`. Kept in lockstep with the value order in
+        # `view_status_csv_values`; a test asserts the two stay the same length.
+        VIEW_STATUS_CSV_HEADERS = %w[
+          model
+          mysql_table_name
+          view_type
+          most_recent_operation
+          operation_executed_at
+          operation_duration_seconds
+          redshift_statement_id
+          operation_status
+          redshift_db_user
+          view_is_stale
+          view_state
+          view_state_description
+          error
+        ].freeze
+
+        # A light tally of `view_status` rows for human-readable (CLI / log) reporting — distinct from
+        # `view_status_summary`, which computes the CloudWatch error/stale/freshness metrics.
+        # @param rows [Array<ViewStatusRow>]
+        # @return [Hash] :by_status (status => count), :expected (non-orphan row count),
+        #   :orphan (orphan row count), :failures_by_error (error message => [rows]).
+        def self.summarize_view_status(rows)
+          {
+            by_status: rows.each_with_object(Hash.new(0)) {|row, counts| counts[row.status] += 1},
+            expected: rows.count {|row| row.model_name != ORPHAN_MODEL_NAME},
+            orphan: rows.count {|row| row.model_name == ORPHAN_MODEL_NAME},
+            failures_by_error: rows.select(&:error).group_by(&:error)
+          }
+        end
+
+        # Serializes `view_status` rows to a CSV string: a `VIEW_STATUS_CSV_HEADERS` header row
+        # followed by one row per view.
+        # @param rows [Array<ViewStatusRow>]
+        # @return [String] CSV text
+        def self.view_status_to_csv(rows)
+          CSV.generate do |csv|
+            csv << VIEW_STATUS_CSV_HEADERS
+            rows.each {|row| csv << view_status_csv_values(row)}
+          end
+        end
+
+        # One row's CSV values, ordered to match `VIEW_STATUS_CSV_HEADERS`.
+        # @param row [ViewStatusRow]
+        # @return [Array]
+        def self.view_status_csv_values(row)
+          [
+            row.model_name,
+            row.table_name,
+            row.view_type,
+            row.operation,
+            row.executed_at&.iso8601,
+            row.duration_seconds&.round(1),
+            row.statement_id,
+            row.status,
+            row.db_user,
+            row.is_stale&.to_s,
+            row.state,
+            row.state_description,
+            row.error
+          ]
         end
 
         # Computes `view_status` for the given models, emits CloudWatch metrics (one set per
@@ -856,12 +942,28 @@ module Cdo
           model.column_names_classified_as(*NON_PII_CLASSIFICATIONS)
         end
 
-        # The materialized view shares its source table's name (e.g., `level_sources`). It no
-        # longer carries a `zeroetl_` prefix: the views live in dedicated `learning_platform_*`
-        # schemas (see VIEW_SCHEMA_PREFIX), so there is nothing to disambiguate them from — and
-        # mirroring the source table name reads naturally for analysts and dbt.
-        private def view_name
-          model.table_name
+        # Symbol identifying the logical MySQL database this Model is persisted in, default to `:dashboard`.
+        # @return [Symbol] :dashboard or :pegasus
+        private def mysql_database
+          # `rpartition` returns an empty string for the database when table name is unqualified, which defaults to
+          # Dashboard below.
+          physical_database_name = model.table_name.to_s.rpartition('.').first
+
+          # Match all variations of Pegasus (`pegasus_test`, `pegasus_unittest`, etc.).
+          physical_database_name.start_with?('pegasus') ? :pegasus : :dashboard
+        end
+
+        # The schema holding this Model's table inside the Zero ETL target Redshift database, as an ERB
+        # fragment resolved when the View DDL is rendered for a deployed environment.
+        # # @return [String] ERB fragment embedded in View DDL: `dashboard_<%=environment_type%>`
+        private def zero_etl_schema_erb
+          if mysql_database == :pegasus
+            pairs = ZeroEtl::REDSHIFT_SCHEMA_PEGASUS_BY_ENVIRONMENT.
+              map {|env, schema| "'#{env}' => '#{schema}'"}.join(', ')
+            "<%={#{pairs}}.fetch(environment_type)%>"
+          else
+            "#{ZeroEtl::REDSHIFT_SCHEMA_PREFIX_DASHBOARD}_#{ENVIRONMENT_TYPE_ERB}"
+          end
         end
 
         private def fully_qualified_view_name(env, pii:)
@@ -891,7 +993,7 @@ module Cdo
               AUTO REFRESH NO
             AS SELECT
               #{quoted_columns.join(",\n" + SQL_INDENT)}
-            FROM #{ENVIRONMENT_TYPE_ERB}_learningplatform_mysql_zeroetl.#{ZERO_ETL_SOURCE_SCHEMA_PREFIX}_#{ENVIRONMENT_TYPE_ERB}.#{model.table_name};
+            FROM #{ENVIRONMENT_TYPE_ERB}_learningplatform_mysql_zeroetl.#{zero_etl_schema_erb}.#{mysql_table_name};
           SQL
         end
 

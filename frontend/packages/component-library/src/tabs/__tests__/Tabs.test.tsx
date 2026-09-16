@@ -5,6 +5,8 @@ import {vi} from 'vitest';
 
 import Tabs, {TabsProps} from '../index';
 
+import moduleStyles from '../tabs.module.scss';
+
 describe('Design System - Tabs', () => {
   const valuesMap: Record<string, string> = {};
   const onSelectedTabChange = (name: string, value: string): void => {
@@ -98,14 +100,12 @@ describe('Design System - Tabs', () => {
     expect(valuesMap.test2).toBe('tab1');
   });
 
-  it("renders disabled tab, doesn't change on click", async () => {
+  it('renders a disabled tab that is focusable but does not respond', async () => {
     const user = userEvent.setup();
     const spyOnChange = vi.fn();
 
-    onSelectedTabChange('test3', 'tab1');
-
     renderTabs({
-      defaultSelectedTabValue: valuesMap.test3,
+      defaultSelectedTabValue: 'tab1',
       tabs: [
         {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
         {
@@ -119,17 +119,19 @@ describe('Design System - Tabs', () => {
       name: 'test3',
     });
 
-    const tab1 = screen.getByText('tab1');
-    const tab2 = screen.getByText('tab2');
+    const tab2 = screen.getByRole('tab', {name: 'tab2'});
 
-    expect(tab1).toBeInTheDocument();
-    expect(tab2).toBeInTheDocument();
-    expect(valuesMap.test3).toBe('tab1');
+    expect(tab2).toHaveAttribute('aria-disabled', 'true');
+    expect(tab2).not.toHaveAttribute('disabled');
 
+    await user.tab();
+    await user.tab();
+    expect(tab2).toHaveFocus();
+
+    await user.keyboard('{Enter}');
     await user.click(tab2);
 
     expect(spyOnChange).not.toHaveBeenCalled();
-    expect(valuesMap.test3).toBe('tab1');
   });
 
   it('renders with tooltip and displays it on hover', async () => {
@@ -160,7 +162,8 @@ describe('Design System - Tabs', () => {
 
     await user.hover(tab1);
 
-    tooltip = screen.getByText('Tooltip for tab1');
+    // MUI opens the tooltip after an enter delay, so this has to wait.
+    tooltip = await screen.findByText('Tooltip for tab1');
 
     expect(tooltip).toBeInTheDocument();
   });
@@ -184,5 +187,46 @@ describe('Design System - Tabs', () => {
     expect(tab2).toBeInTheDocument();
     expect(screen.queryByText('tab1 content')).not.toBeInTheDocument();
     expect(screen.queryByText('tab2 content')).not.toBeInTheDocument();
+  });
+
+  describe('scrollable', () => {
+    const scrollableTabs = (count: number) =>
+      Array.from({length: count}, (_, index) => ({
+        text: `tab${index + 1}`,
+        value: `tab${index + 1}`,
+        tabContent: <div>{`tab${index + 1} content`}</div>,
+      }));
+
+    // The affordance itself is pure CSS (a scroll-driven mask), invisible to
+    // jsdom; only the class contract is assertable here.
+    it('leaves the tab strip untouched when scrollable is unset', () => {
+      renderTabs({
+        defaultSelectedTabValue: 'tab1',
+        tabs: scrollableTabs(6),
+        onChange: () => {},
+        name: 'not-scrollable',
+      });
+
+      const container = screen.getByRole('tablist')
+        .parentElement as HTMLElement;
+
+      expect(container).not.toHaveClass(moduleStyles.scroller);
+    });
+
+    it('marks the tabs container as the scroller when scrollable is true', () => {
+      renderTabs({
+        defaultSelectedTabValue: 'tab1',
+        tabs: scrollableTabs(6),
+        onChange: () => {},
+        name: 'scrollable',
+        scrollable: true,
+      });
+
+      const container = screen.getByRole('tablist')
+        .parentElement as HTMLElement;
+
+      expect(container).toHaveClass(moduleStyles.scroller);
+      expect(container).toHaveClass(moduleStyles.tabs);
+    });
   });
 });

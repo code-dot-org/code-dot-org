@@ -548,8 +548,8 @@ describe('LoginTypeSelection', () => {
     // Checks that the page is displaying teacher-facing LMS content
     screen.getByText(locale.using_lms_platforms());
     screen.getByText(locale.access_detailed_instructions());
-    screen.getByText('Canvas', {selector: 'span'});
-    screen.getByText('Schoology', {selector: 'span'});
+    screen.getByRole('link', {name: 'Canvas'});
+    screen.getByRole('link', {name: 'Schoology'});
   });
 
   it('email is stored in sessionStorage', async () => {

@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-07-14T01:28:45.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "What role did AI play in your process, and what did you learn about using it effectively?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_-js-2026",
+    "ai_tutor_available": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-14T01:28:45.128+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson11-level11b_-js-2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson11-level11b_-js-2026\"},{\"changed_at\":\"2026-07-14 01:28:47 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

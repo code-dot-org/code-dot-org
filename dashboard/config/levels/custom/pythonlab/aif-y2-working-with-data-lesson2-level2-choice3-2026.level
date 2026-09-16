@@ -1,0 +1,60 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T14:21:40.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’d like to convert the cafeteria meal data from [the spreadsheet](https://docs.google.com/spreadsheets/d/1bpIy7wASa0nNpZ3P3ia3CQr5iAK_hUAFjT2jb7-rCJ0/edit?usp=sharing) to a CSV file so that Python programs can more easily work with the data.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Populate `meals.csv` with data from at least three rows from the spreadsheet. Remember to also include a header row with column names!\r\n2. Press “Run” to see a visual representation of the CSV file and verify that it looks like what you expect.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Cafeteria Meal Data",
+    "bubble_choice_description": "Create a CSV file for a school's cafeteria meals.",
+    "thumbnail_url": "https://images.code.org/f65ca517227529f9b20c2ecedb69cac3-cafeteria.png",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nFILENAME = \"meals.csv\"\n\n\ndef read_rows(filename):\n    with open(filename) as f:\n        return [row for row in csv.reader(f)]\n\n\ndef column_widths(rows):\n    widths = []\n    for row in rows:\n        for i, cell in enumerate(row):\n            if i == len(widths):\n                widths.append(0)\n            widths[i] = max(widths[i], len(cell))\n    return widths\n\n\ndef separator(widths):\n    return \"+\" + \"+\".join(\"-\" * (w + 2) for w in widths) + \"+\"\n\n\ndef format_row(row, widths):\n    cells = []\n    for i, w in enumerate(widths):\n        cell = row[i] if i < len(row) else \"\"\n        cells.append(\" \" + cell.ljust(w) + \" \")\n    return \"|\" + \"|\".join(cells) + \"|\"\n\n\ndef main():\n    rows = read_rows(FILENAME)\n    if len(rows) == 0:\n        print(f\"{FILENAME} is empty. Add your data and try again.\")\n        return\n\n    widths = column_widths(rows)\n    line = separator(widths)\n\n    print(line)\n    print(format_row(rows[0], widths))\n    print(line)\n    for row in rows[1:]:\n        print(format_row(row, widths))\n    print(line)\n\n\nmain()",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "1": {
+          "id": "1",
+          "name": "meals.csv",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nX8lHv/CWJuN4+mZbeVHdafhx6ykSAQ==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 14:22:00 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 14:22:22 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 14:22:32 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

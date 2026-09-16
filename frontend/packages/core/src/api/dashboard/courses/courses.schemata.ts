@@ -224,3 +224,34 @@ export const LevelKinds = {
   Level: 'level',
   StageExtras: 'stage_extras',
 } as const;
+
+/**
+ * Permissive schemas for /api/script_structure/courses/:course/units/:pos.
+ * Only the fields the route loader uses are required; everything else passes
+ * through so unknown serializer fields never break validation.
+ */
+const ScriptStructureLevelSchema = z
+  .object({
+    id: z.string(),
+    activeId: z.string(),
+    position: z.number(),
+    path: z.string(),
+    app: z.string(),
+  })
+  .passthrough();
+
+const ScriptStructureLessonSchema = z
+  .object({
+    script_name: z.string(),
+    position: z.number(),
+    finishLink: z.string().optional(),
+    levels: z.array(ScriptStructureLevelSchema),
+  })
+  .passthrough();
+
+export const ScriptStructureSchema = z
+  .object({
+    name: z.string(),
+    lessons: z.array(ScriptStructureLessonSchema),
+  })
+  .passthrough();

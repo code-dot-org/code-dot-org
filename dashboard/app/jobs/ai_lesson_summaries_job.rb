@@ -1,7 +1,7 @@
 require 'cdo/aws/metrics'
 
 class AiLessonSummariesJob < ApplicationJob
-  queue_as :low_priority
+  queue_as CDO.active_job_queues[:low_priority]
 
   after_perform do |job|
     next unless DCDO.get('ai-lesson-summaries-notifications-enabled', false)
@@ -37,7 +37,7 @@ class AiLessonSummariesJob < ApplicationJob
   # Catch any exceptions that occur during the job and update the request status accordingly.
   rescue_from StandardError do |exception|
     request = arguments.first[:request]
-    Honeybadger.notify(
+    Observability::Errors.report(
       "AiLessonSummariesJob failed with unexpected error: #{exception.message}",
       context: {
         request: request.to_json

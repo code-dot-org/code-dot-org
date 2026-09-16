@@ -64,7 +64,7 @@ class ProjectInfo extends React.Component {
 
     const HeaderComponent = headerComponents[this.props.currentHeader];
     return (
-      <div style={styles.headerContainer}>
+      <div className="project_info_container" style={styles.headerContainer}>
         <div
           className="project_info"
           ref="projectInfo"
@@ -80,11 +80,14 @@ class ProjectInfo extends React.Component {
 const styles = {
   headerContainer: {
     position: 'relative',
-    overflow: 'hidden',
     height: 38,
   },
   projectInfo: {
     position: 'absolute',
+    top: 0,
+    bottom: 0,
+    display: 'flex',
+    alignItems: 'center',
   },
 };
 

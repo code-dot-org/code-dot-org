@@ -79,9 +79,9 @@ module AWS
 
     # Returns the S3 bucket holding runtime-generated user content (podcasts,
     # etc) for the current environment. See user_content_s3_bucket in
-    # config.yml.erb for per-env values. Returns nil in environments without a
-    # configured bucket (eg. development), in which case callers should treat
-    # the content as unavailable.
+    # config.yml.erb for per-env values (development borrows the test bucket).
+    # Returns nil in environments without a configured bucket, in which case
+    # callers should treat the content as unavailable.
     def self.user_content_bucket
       CDO.user_content_s3_bucket
     end
@@ -320,7 +320,7 @@ module AWS
     # @return [String] a direct link to the file in the S3 console
     # @raise [Exception] if the provided link isn't a presigned S3 URL
     def self.get_console_link_from_presigned(presigned_url)
-      presigned_regex = /^https\:\/\/([a-z0-9][a-z0-9-]{1,61}[a-z0-9])\.s3\.amazonaws.com\/(.*)\?.*$/
+      presigned_regex = /^https:\/\/([a-z0-9][a-z0-9-]{1,61}[a-z0-9])\.s3\.amazonaws.com\/(.*)\?.*$/
       unless presigned_url.match(presigned_regex)
         raise ArgumentError.new("expected presigned S3 URL like 'https://bucket-name.s3.amazonaws.com/prefix/filename?with=any&query=params'")
       end

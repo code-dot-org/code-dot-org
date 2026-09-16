@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-07-13T00:13:35.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "Think about one specific styling change you made to improve your page. Write 1–2 sentences explaining how you refined your prompt and how the final change better reflects your brand and improves usability using this sentence frame:\r\n\r\n> I improved my design by . . . This helped my page by . . .",
+    "stay_on_level_after_submit": "false",
+    "height": "300",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_-js-2026",
+    "teacher_markdown": "- **Push for specificity.**  \r\n  If students write something vague like “I changed the colors,” prompt them to name the exact element they changed (e.g., buttons, headings, card spacing).\r\n\r\n- **Require connection to prompting.**  \r\n  Make sure students explain how they refined or clarified their prompt, not just what changed visually.\r\n\r\n- **Check for CSS understanding.**  \r\n  If students describe structural changes, redirect them to explain how CSS controlled styling (not HTML structure).\r\n\r\n- **Look for usability impact.**  \r\n  Ask: “How did this change make the page clearer, more readable, or more consistent with the brand?”"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-13T00:13:35.329+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level8_2026-v2\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level8_2026-v2\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

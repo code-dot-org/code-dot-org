@@ -48,7 +48,7 @@ require 'cdo/pegasus/src/database'
 Dir.glob(pegasus_dir('rake/*.rake')) {|path| load path}
 
 namespace :pegasus do
-  task setup_db: ['db:ensure_created', 'db:migrate', 'seed:migrate'] do
+  task setup_db: ['db:ensure_created', 'db:migrate'] do
   end
 end
 

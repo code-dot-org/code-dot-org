@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 Body text makes up most of professional learning content. Use the following guidelines to format it.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
 	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Keep paragraphs short</b></p>
 	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Long paragraphs confront the reader with what Caroline Jarrett and Ginny Redish call a “wall of words.” They’re daunting, they make it harder for readers to keep their place, and they’re harder to scan than a series of shorter paragraphs.</p>
@@ -24,7 +24,7 @@ Body text makes up most of professional learning content. Use the following guid
 
 ## Font Size
 
-Generally, body text should be H4 (`####` or `<p></p>`) for legibility. This translates to about 14 point font. This is considered an accessible font size on Level Builder.
+Default body text in Level Builder is 16px, which is considered accessible on screens.
 
 You may use H5 (`#####` or `<h5></h5>`) for text that is secondary to the body text, such as directions to expand a drop-down box or that a link opens in a new window. 
 
@@ -38,13 +38,13 @@ Do not use body text below H5.
 * <mark>**Highlighted text**</mark> - Highlighting should only be used to message caution or an important message.
 * `Code Snippets`: Use code snippets to set commands apart from regular text.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> 
+<div style="background-color: #E4E2F8; border-radius: 10px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin-bottom: 10px"> 
 
 * **Block Text** - Use block text to set apart a chunk of text, such as a quote or excerpt. This helps create visual interest on a page. Do not create more than one or two per page. 
 
 </div>
 
-Use the white, gray, or teal background colors with their respective font colors on the <a href="https://levelbuilder-studio.code.org/s/pl-team-design-guide/lessons/2/levels/2" target="blank" rel="noopener noreferrer">Color Bank page</a> to format your block quotes. Do not use purple or black.
+Use the primary background colors with their respective font colors on the <a href="https://levelbuilder-studio.code.org/s/pl-team-design-guide/lessons/2/levels/2" target="blank" rel="noopener noreferrer">Color Bank page</a> to format your block quotes. Do not use purple or black.
 
 ## Font Alignment
 

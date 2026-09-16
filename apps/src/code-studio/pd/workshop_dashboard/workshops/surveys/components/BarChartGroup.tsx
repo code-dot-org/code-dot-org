@@ -33,7 +33,7 @@ const gridColor = COLOR_MAP.get('light-gray');
 const bodyFourTextStyle = {
   // Body-4 Text styles
   color: 'var(--text-neutral-primary, #292F36)',
-  fontFamily: 'var(--font-family-body, Figtree)',
+  fontFamily: 'var(--font-family-body, Geist)',
   fontSize: 'var(--font-size-body-xs, 12px)',
   fontStyle: 'normal',
   fontWeight: 400,

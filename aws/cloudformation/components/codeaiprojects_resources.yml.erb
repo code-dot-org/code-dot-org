@@ -1,0 +1,152 @@
+# -----------------------------------------------
+# Begin codeaiprojects.org resources
+#
+# Web Lab 2 (weblab2) and Python Lab's pyodide sandbox render student code in
+# sandboxed iframes on *.preview.codeaiprojects.org, a registrable domain wholly
+# separate from both code.org and the legacy codeprojects.org apex. Serving the
+# sandboxed-preview architecture from its own domain keeps it from sharing
+# reputation (and content-filter block-lists) with legacy codeprojects.org
+# content. See docs/weblab-preview-domain-migration.md.
+#
+# This component mirrors codeprojects_resources.yml.erb. Like that one, the base
+# domain and its NS delegation are managed manually; this template owns the
+# preview cert, the CloudFront distribution, and the wildcard alias.
+#
+# This component requires the codeaiprojects.org hosted zone to exist; template
+# render fails loudly if it does not. The origin is the same dashboard origin the
+# codeprojects preview uses; Rails routes preview hosts to
+# CodeprojectsPreviewController regardless of which registrable domain they are
+# under (see dashboard/config/routes.rb).
+#
+# Domains:
+# - codeaiprojects.org (apex; not served directly today)
+# - *.preview.codeaiprojects.org (Web Lab 2 + pyodide-sandbox preview)
+# - localhost.codeaiprojects.org (dev)
+# - *.preview.localhost.codeaiprojects.org (dev)
+# -----------------------------------------------
+
+<%- if rack_env?(:staging) -%>
+# Developer Resources (Deployed with Staging)
+LocalhostCodeaiprojectsRecord:
+  Type: AWS::Route53::RecordSet
+  Properties:
+    HostedZoneId: !Ref CodeaiprojectsHostedZoneId
+    Name: !Sub localhost.codeaiprojects.org
+    Type: A
+    TTL: 3600
+    ResourceRecords:
+      - 127.0.0.1
+
+LocalhostPreviewCodeaiprojectsRecord:
+  Type: AWS::Route53::RecordSet
+  Properties:
+    HostedZoneId: !Ref CodeaiprojectsHostedZoneId
+    Name: !Sub '*.preview.localhost.codeaiprojects.org'
+    Type: A
+    TTL: 3600
+    ResourceRecords:
+      - 127.0.0.1
+<%- end -%>
+
+# A shared codeaiprojects certificate for this environment, avoiding wildcard certificates.
+CodeaiprojectsCertificate:
+  Type: AWS::CertificateManager::Certificate
+  Properties:
+    DomainName: !Ref CodeaiprojectsBaseDomainName
+    SubjectAlternativeNames:
+      - !Sub '*.preview.${CodeaiprojectsBaseDomainName}'
+      - !Sub www.${CodeaiprojectsBaseDomainName}
+    ValidationMethod: DNS
+    DomainValidationOptions:
+      - DomainName: !Ref CodeaiprojectsBaseDomainName
+        HostedZoneId: !Ref CodeaiprojectsHostedZoneId
+      - DomainName: !Sub '*.preview.${CodeaiprojectsBaseDomainName}'
+        HostedZoneId: !Ref CodeaiprojectsHostedZoneId
+      - DomainName: !Sub www.${CodeaiprojectsBaseDomainName}
+        HostedZoneId: !Ref CodeaiprojectsHostedZoneId
+
+CodeaiprojectsRecords:
+  Type: AWS::Route53::RecordSetGroup
+  Properties:
+    HostedZoneId: !Ref CodeaiprojectsHostedZoneId
+    RecordSets:
+      - Name: !Sub '*.preview.${CodeaiprojectsBaseDomainName}'
+        Type: A
+        AliasTarget:
+          DNSName: !GetAtt CodeaiprojectsCloudFrontDistribution.DomainName
+          HostedZoneId: Z2FDTNDATAQYW2
+
+# Codeaiprojects CloudFront Distribution
+CodeaiprojectsCloudFrontDistribution:
+  Type: AWS::CloudFront::Distribution
+  Properties:
+    DistributionConfig:
+      Enabled: true
+      Comment: !Sub ${CodeaiprojectsBaseDomainName} main distribution
+      PriceClass: PriceClass_All
+      Aliases:
+        - !Sub '*.preview.${CodeaiprojectsBaseDomainName}'
+      Origins:
+        - Id: DashboardOrigin
+          DomainName: <%= cdn_enabled ? subdomain('origin') : '!Sub ${DashboardSubdomainName}.${BaseDomainName}' %>
+          CustomOriginConfig:
+            OriginProtocolPolicy: https-only
+            OriginSSLProtocols:
+              - TLSv1.2
+      DefaultCacheBehavior:
+        TargetOriginId: DashboardOrigin
+        ViewerProtocolPolicy: redirect-to-https
+        CachePolicyId: !Ref CodeaiprojectsCachePolicy
+        OriginRequestPolicyId: !Ref CodeaiprojectsOriginRequestPolicy
+        Compress: true
+      ViewerCertificate:
+        AcmCertificateArn: !Ref CodeaiprojectsCertificate
+        MinimumProtocolVersion: TLSv1.2_2021
+        SslSupportMethod: sni-only
+
+# Cache policy for the main distribution
+CodeaiprojectsCachePolicy:
+  Type: AWS::CloudFront::CachePolicy
+  Properties:
+    CachePolicyConfig:
+      Name: !Sub ${AWS::StackName}-codeaiprojects-cache-policy
+      MinTTL: 0
+      MaxTTL: 31536000
+      DefaultTTL: 0
+      ParametersInCacheKeyAndForwardedToOrigin:
+        EnableAcceptEncodingGzip: true
+        CookiesConfig:
+          CookieBehavior: all
+        HeadersConfig:
+          HeaderBehavior: whitelist
+          Headers:
+            - CloudFront-Forwarded-Proto
+            - Host
+            - Origin
+            - Referer
+            - User-Agent
+        QueryStringsConfig:
+          QueryStringBehavior: all
+
+# Origin request policy for the main distribution
+CodeaiprojectsOriginRequestPolicy:
+  Type: AWS::CloudFront::OriginRequestPolicy
+  Properties:
+    OriginRequestPolicyConfig:
+      Name: !Sub ${AWS::StackName}-codeaiprojects-origin-request-policy
+      CookiesConfig:
+        CookieBehavior: all
+      HeadersConfig:
+        HeaderBehavior: whitelist
+        Headers:
+          - CloudFront-Forwarded-Proto
+          - Host
+          - Origin
+          - Referer
+          - User-Agent
+      QueryStringsConfig:
+        QueryStringBehavior: all
+
+# -----------------------------------------------
+# End codeaiprojects.org resources
+# -----------------------------------------------

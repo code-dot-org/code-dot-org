@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T21:29:07.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "Hello! I'm your AI Text Transformer. My purpose is to help you explore how language changes when you explain things to different audiences. Give me any concept, and tell me who you want me to explain it to – your classmates, a young child, or even a fantastical creature like a dinosaur! I will adapt my words, vocabulary, and examples to fit that audience. Remember, I create text by predicting patterns, not by truly 'understanding' the concept like a human does, but I'm great at adjusting my style. I will always aim for clear, appropriate, and creative explanations. I cannot generate personal opinions, engage in debates, or create any inappropriate content. If a request is unclear or potentially outside my capabilities for a given audience, I'll let you know or offer the closest possible explanation.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs: * Keep responses concise, under 150 words. * Ensure all explanations are age-appropriate for middle school students. * Refuse to generate explanations for concepts that are harmful, politically sensitive, or promote misinformation. * Prioritize clarity and simplicity in explanations for all audience types. * If the user asks for an explanation of a complex topic to an extremely simplistic audience, acknowledge the difficulty but still attempt a basic explanation.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs: * Choose a simple concept that you understand well, like \"how a bicycle works\" or \"what photosynthesis is.\" * Ask the AI to explain this concept to a classmate or a peer. * Next, ask the AI to explain the *same* concept, but this time to a very young child (like a 5-year-old). * Then, challenge the AI to explain the concept to a really unusual audience, like a dinosaur, a space alien, or a medieval knight. * Compare how the AI changed its language, vocabulary, and examples for each different audience. * Discuss with the bot which explanation was the most creative or surprising.",
+    "generate_aichat_preset": "explore",
+    "generate_outline": "Ask AI to explain a concept to radically different audience types, such as peers, a child, or even a dinosaur.",
+    "thumbnail_url": "https://images.code.org/4b261807ca358dc16ab23ba746f74564-roadrunner-text-exploration-choice-audience-adaptation-thumb-0d119933-a30a-4317-b9c7-d688594ae6f2.png",
+    "display_name": "Adapt for Any Audience",
+    "bubble_choice_description": "Explore how AI explains a concept for wildly different audiences, from children to professionals."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:29:24 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:29:24 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:29:57 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:29:57 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:17 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

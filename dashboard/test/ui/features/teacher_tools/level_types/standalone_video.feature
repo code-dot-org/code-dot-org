@@ -1,3 +1,4 @@
+@playwright
 Feature: Standalone video levels
 
 @as_student

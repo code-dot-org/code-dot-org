@@ -1,0 +1,10 @@
+name 'aif-y2-machine-learning-fundamentals-lesson5-level1-2026'
+display_name 'Implement a Prediction Model'
+submittable 'true'
+description "Choose what kind of prediction model you'd like to implement."
+sublevels
+level 'aif-y2-machine-learning-fundamentals-lesson5-level1-choice1-2026'
+level 'aif-y2-machine-learning-fundamentals-lesson5-level1-choice2-2026'
+level 'aif-y2-machine-learning-fundamentals-lesson5-level1-choice3-2026'
+
+uses_lab2

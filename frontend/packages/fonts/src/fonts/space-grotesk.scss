@@ -1,0 +1,7 @@
+@use '@fontsource/space-grotesk/scss/mixins' as SpaceGrotesk;
+@include SpaceGrotesk.faces(
+  $family: 'Space Grotesk',
+  $styles: [ 'normal'],
+  $weights: [500,
+  600]
+);

@@ -72,4 +72,23 @@ class ParentLevelsChildLevelTest < ActiveSupport::TestCase
     assert_equal [sublevel],
       ParentLevelsChildLevel.where(parent_level: parent).sublevel.map(&:child_level)
   end
+
+  test 'parent and child must be on the same side of the UI Test partition' do
+    prod_level = create(:level, name: 'PLCL prod level')
+    ui_test_level = create(:level, name: 'UI Test PLCL level')
+
+    e = assert_raises ActiveRecord::RecordInvalid do
+      ParentLevelsChildLevel.create!(parent_level: prod_level, child_level: ui_test_level)
+    end
+    assert_includes e.message, ui_test_level.name
+
+    e = assert_raises ActiveRecord::RecordInvalid do
+      ParentLevelsChildLevel.create!(parent_level: ui_test_level, child_level: prod_level)
+    end
+    assert_includes e.message, prod_level.name
+
+    # same-side rows are fine in both partitions
+    ParentLevelsChildLevel.create!(parent_level: prod_level, child_level: create(:level, name: 'PLCL prod child'))
+    ParentLevelsChildLevel.create!(parent_level: ui_test_level, child_level: create(:level, name: 'UI Test PLCL child'))
+  end
 end

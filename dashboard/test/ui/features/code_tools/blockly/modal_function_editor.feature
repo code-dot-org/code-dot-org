@@ -11,9 +11,9 @@ Background:
   And element "#resetButton" is hidden
 
 Scenario: Can create a function
-  Then element "#blockly-a" is visible
+  Then element ".blocklyToolboxCategory:contains('Functions')" is visible
   And element "#modalFunctionEditor" is not visible
-  And I press "blockly-a"
+  And I click toolbox category selector ".blocklyToolboxCategory:contains('Functions')"
   And the open flyout has 1 blocks
   And I click toolbox block with selector ".blocklyFlyoutButton"
   # Open modal function editor
@@ -21,7 +21,7 @@ Scenario: Can create a function
   # Close editor
   And I press "closeModalFunctionEditor"
   # Now the function should be in the toolbox, along with the original function from start code
-  Then I press "blockly-a"
+  Then I click toolbox category selector ".blocklyToolboxCategory:contains('Functions')"
   And the open flyout has 2 blocks
 
 Scenario: Can edit a function
@@ -29,7 +29,7 @@ Scenario: Can edit a function
   Then I click block field that is number 1 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
-  And I press "blockly-f"
+  And I click toolbox category selector "#modalFunctionEditor .blocklyToolboxCategory:contains('Sprites')"
   # Drag new sprite block to top of function
   And I drag block number 2 to offset "40, 100"
   # Close function

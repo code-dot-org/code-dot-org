@@ -1,3 +1,4 @@
+@playwright
 Feature: Playing the Artist Game
 
 Background:

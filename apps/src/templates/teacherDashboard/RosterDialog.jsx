@@ -1,9 +1,14 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {
+  LmsLoginTypeNames,
+  OAuthSectionTypes,
+} from '@cdo/apps/accounts/constants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 import locale from '@cdo/locale';
 
 import color from '../../util/color';
@@ -18,20 +23,12 @@ import {
 } from './teacherSectionsRedux';
 import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 
+import moduleStyles from './rosterDialog.module.scss';
+
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 
 const ARCHIVED_STATE = 'ARCHIVED';
-
-const ctaButtonStyle = {
-  background: color.orange,
-  color: color.white,
-  border: '1px solid #b07202',
-  borderRadius: 3,
-  boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
-  fontSize: 14,
-  padding: '8px 20px',
-};
 
 const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
   classrooms.length ? (
@@ -94,6 +91,12 @@ const NoClassroomsFound = ({rosterProvider}) => {
           <a href="https://clever.com/">{locale.addRemoveCleverClassrooms()}</a>
         </div>
       );
+    case OAuthSectionTypes.classlink:
+      return (
+        <div>
+          <p>{locale.noClassroomsFound()}</p>
+        </div>
+      );
   }
 };
 NoClassroomsFound.propTypes = {
@@ -141,6 +144,21 @@ const LoadError = ({rosterProvider, loginType, loadError}) => {
       return (
         <p>
           {locale.errorLoadingRosteredSections({type: loginType})}{' '}
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {locale.errorLoadingRosteredSectionsSupport()}
+          </a>
+        </p>
+      );
+    case OAuthSectionTypes.classlink:
+      // Fall back to generic copy when the server returns no ClassLink error message.
+      return (
+        <p>
+          {(loadError && loadError.message) ||
+            "We're having trouble getting roster information from ClassLink. Please try again later."}{' '}
           <a
             href={ROSTERED_SECTIONS_SUPPORT_URL}
             target="_blank"
@@ -204,39 +222,53 @@ class RosterDialog extends React.Component {
   };
 
   // Creates the section and redirects to the edit page
-  handleRedirect = () => {
-    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
+  handleRedirect = async () => {
     const classrooms = this.props.classrooms;
     const courseName =
       classrooms &&
       classrooms.find(classroom => {
         return classroom.id === this.state.selectedId;
       }).name;
-
-    const importSectionUrl =
-      this.props.rosterProvider === OAuthSectionTypes.google_classroom
-        ? '/dashboardapi/import_google_classroom'
-        : '/dashboardapi/import_clever_classroom';
     const courseId = this.state.selectedId;
 
-    return new Promise((resolve, reject) => {
-      $.getJSON(importSectionUrl, {
-        courseId,
-        courseName,
-      })
-        .done(resolve)
-        .fail(jqxhr => {
-          this.props.handleImportFailure(jqxhr);
-          reject(
-            new Error(`
-            url: ${importSectionUrl}
-            status: ${jqxhr.status}
-            statusText: ${jqxhr.statusText}
-            responseText: ${jqxhr.responseText}
-          `)
-          );
-        });
-    }).then(newSection => this.redirectToEditSectionPage(newSection.id));
+    try {
+      let response;
+      if (this.props.rosterProvider === OAuthSectionTypes.classlink) {
+        // The ClassLink import route is POST-only: importing mutates a
+        // section, and a GET request would skip Rails CSRF verification.
+        response = await HttpClient.post(
+          '/dashboardapi/import_classlink_classroom',
+          JSON.stringify({courseId, courseName}),
+          true,
+          {'Content-Type': 'application/json'}
+        );
+      } else {
+        const importSectionUrl =
+          this.props.rosterProvider === OAuthSectionTypes.google_classroom
+            ? '/dashboardapi/import_google_classroom'
+            : '/dashboardapi/import_clever_classroom';
+        const query = new URLSearchParams({courseId, courseName});
+        response = await HttpClient.get(`${importSectionUrl}?${query}`);
+      }
+      const newSection = await response.json();
+      // Recorded after the import so the event can carry the new section's id.
+      this.recordSectionSetupExitEvent(COMPLETED_EVENT, {
+        sectionId: newSection.id,
+      });
+      this.redirectToEditSectionPage(newSection.id);
+    } catch (error) {
+      let status = 0;
+      let message = '';
+      if (isNetworkError(error)) {
+        status = error.response.status;
+        message = await error.response
+          .json()
+          .then(body => body.error || '')
+          .catch(() => '');
+      }
+      this.props.handleImportFailure({status, message});
+      throw error;
+    }
   };
 
   cancel = () => {
@@ -249,11 +281,12 @@ class RosterDialog extends React.Component {
   };
 
   // valid event names: 'Section Setup Completed', 'Section Setup Cancelled'.
-  recordSectionSetupExitEvent = eventName => {
+  recordSectionSetupExitEvent = (eventName, metadata = {}) => {
     const {rosterProvider} = this.props;
 
     analyticsReporter.sendEvent(eventName, {
       oauthSource: rosterProvider,
+      ...metadata,
     });
   };
 
@@ -268,6 +301,10 @@ class RosterDialog extends React.Component {
       case OAuthSectionTypes.clever:
         title = locale.selectCleverSection();
         loginType = locale.loginTypeClever();
+        break;
+      case OAuthSectionTypes.classlink:
+        title = 'Select a ClassLink section';
+        loginType = LmsLoginTypeNames.classlink;
         break;
     }
 
@@ -298,28 +335,28 @@ class RosterDialog extends React.Component {
             locale.loading()
           )}
         </div>
-        <div style={styles.footer}>
-          <button
-            id="cancel-button"
+        <div className={moduleStyles.footer}>
+          <MuiButton
+            id="roster-cancel-button"
+            variant="outlined"
+            color="tertiary"
+            size="small"
             type="button"
             onClick={this.cancel}
-            style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
           >
             {locale.dialogCancel()}
-          </button>
-          <button
+          </MuiButton>
+          <MuiButton
             id="import-button-and-redirect"
+            variant="contained"
+            color="primary"
+            size="small"
             type="button"
             onClick={this.handleRedirect}
-            style={Object.assign(
-              {},
-              styles.buttonPrimary,
-              !this.state.selectedId && {opacity: 0.5}
-            )}
             disabled={!this.state.selectedId}
           >
             {locale.chooseSection()}
-          </button>
+          </MuiButton>
         </div>
       </BaseDialog>
     );
@@ -348,22 +385,6 @@ const styles = {
   highlightRow: {
     backgroundColor: color.default_blue,
     color: color.white,
-  },
-  footer: {
-    position: 'absolute',
-    bottom: 15,
-    right: 20,
-    left: 20,
-  },
-  buttonPrimary: {
-    ...ctaButtonStyle,
-    float: 'right',
-  },
-  buttonSecondary: {
-    float: 'left',
-    background: '#eee',
-    color: '#5b6770',
-    border: '1px solid #c5c5c5',
   },
 };
 export const UnconnectedRosterDialog = RosterDialog;

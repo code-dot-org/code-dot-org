@@ -1,0 +1,11 @@
+name 'aif-y2-working-with-data-lesson7-level5-2026'
+display_name 'Choosing a Visualization'
+description 'Choose the data you want to visualize.'
+
+sublevels
+level 'aif-y2-working-with-data-lesson7-level5-choice1-2026'
+level 'aif-y2-working-with-data-lesson7-level5-choice2-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

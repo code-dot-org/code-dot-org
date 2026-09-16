@@ -2,6 +2,10 @@ require 'test_helper'
 
 class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerTest < ActiveSupport::TestCase
   test '.as_json with only_numbered_lessons scope returns correct data' do
+    # The lesson below references a persisted script by id so that its crowdin
+    # URL (which resolves the lesson's script from the database) can be built.
+    lesson_script = create(:script, name: 'numbered-lesson-script')
+
     script = FactoryBot.build(
       :script,
       name: 'script_name',
@@ -39,7 +43,7 @@ class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerT
 
     script.lessons.new(
       id:                       0,
-      script_id:                1,
+      script_id:                lesson_script.id,
       has_lesson_plan:          true,
       name:                     'numbered_lesson_name',
       overview:                 'numbered_lesson_overview',
@@ -109,7 +113,7 @@ class Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializerT
           }
         },
         lessons: {
-          URI('https://studio.code.org/s/20-hour/lessons/') => {
+          URI('https://studio.code.org/s/numbered-lesson-script/lessons/') => {
             name:                     'numbered_lesson_name',
             assessment_opportunities: 'numbered_lesson_assessment_opportunities',
             overview:                 'numbered_lesson_overview',

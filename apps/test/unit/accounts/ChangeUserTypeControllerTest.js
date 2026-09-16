@@ -4,12 +4,11 @@ import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
 import * as utils from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ChangeUserTypeController', () => {
-  let controller, form, button, status, dropdown;
+  let controller, form;
 
   beforeEach(() => {
     stub(utils, 'reload');
@@ -24,6 +23,18 @@ describe('ChangeUserTypeController', () => {
     ReactDOM.unmountComponentAtNode.restore();
   });
 
+  function setupWithInitialUserType(userType) {
+    form = $(`
+      <form>
+        <input type="hidden" id="change-user-type_user_email"/>
+        <input type="hidden" id="change-user-type_user_email_preference_opt_in"/>
+        <input type="hidden" id="change-user-type_user_user_type"/>
+      </form>
+    `);
+    stub(form, 'submit');
+    controller = new ChangeUserTypeController(form, userType);
+  }
+
   describe('handling user_return_to param', () => {
     const windowLocation = window.location;
 
@@ -33,8 +44,7 @@ describe('ChangeUserTypeController', () => {
         href: '',
         search: '',
       };
-      const INITIAL_USER_TYPE = 'student';
-      setupWithInitialUserType(INITIAL_USER_TYPE);
+      setupWithInitialUserType('student');
     });
 
     afterEach(() => {
@@ -85,36 +95,33 @@ describe('ChangeUserTypeController', () => {
     });
   });
 
-  describe('when initialUserType = "student"', () => {
-    const INITIAL_USER_TYPE = 'student';
-    const OTHER_USER_TYPE = 'teacher';
+  describe('handleConfirm', () => {
+    beforeEach(() => setupWithInitialUserType('student'));
 
-    beforeEach(() => {
-      setupWithInitialUserType(INITIAL_USER_TYPE);
+    it('sets the hidden user_type field', () => {
+      controller.handleConfirm('teacher');
+      expect(form.find('#change-user-type_user_user_type').val()).to.equal(
+        'teacher'
+      );
     });
 
-    it('button is initially disabled', () => {
-      expect(button.prop('disabled')).to.be.true;
-    });
-
-    it('changing dropdown enables/disables button', () => {
-      dropdown.val(OTHER_USER_TYPE);
-      dropdown.change();
-      expect(button.prop('disabled')).to.be.false;
-
-      dropdown.val(INITIAL_USER_TYPE);
-      dropdown.change();
-      expect(button.prop('disabled')).to.be.true;
-    });
-
-    it('clicking the enabled button shows a modal dialog', () => {
-      dropdown.val(OTHER_USER_TYPE);
-      dropdown.change();
-
+    it('opens the email-confirmation modal when changing to teacher', () => {
       expect(ReactDOM.render).not.to.have.been.called;
-      button.click();
+      const result = controller.handleConfirm('teacher');
       expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(result).to.be.undefined;
     });
+
+    it('submits the form directly when changing to student', () => {
+      const result = controller.handleConfirm('student');
+      expect(form.submit).to.have.been.calledOnce;
+      expect(ReactDOM.render).not.to.have.been.called;
+      expect(result).to.be.an.instanceof(Promise);
+    });
+  });
+
+  describe('modal show/hide', () => {
+    beforeEach(() => setupWithInitialUserType('student'));
 
     it('show is idempotent', () => {
       expect(ReactDOM.render).not.to.have.been.called;
@@ -124,9 +131,7 @@ describe('ChangeUserTypeController', () => {
     });
 
     it('can hide the modal dialog', () => {
-      dropdown.val(OTHER_USER_TYPE);
-      dropdown.change();
-      button.click();
+      controller.showChangeUserTypeModal();
       expect(ReactDOM.render).to.have.been.calledOnce;
 
       expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
@@ -143,88 +148,4 @@ describe('ChangeUserTypeController', () => {
       expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
     });
   });
-
-  describe('when initialUserType = "teacher"', () => {
-    const INITIAL_USER_TYPE = 'teacher';
-    const OTHER_USER_TYPE = 'student';
-
-    beforeEach(() => {
-      setupWithInitialUserType(INITIAL_USER_TYPE);
-    });
-
-    it('button is initially disabled', () => {
-      expect(button.prop('disabled')).to.be.true;
-    });
-
-    it('changing dropdown enables/disables button', () => {
-      dropdown.val(OTHER_USER_TYPE);
-      dropdown.change();
-      expect(button.prop('disabled')).to.be.false;
-
-      dropdown.val(INITIAL_USER_TYPE);
-      dropdown.change();
-      expect(button.prop('disabled')).to.be.true;
-    });
-
-    it('clicking button submits form, reloads page on success', async () => {
-      dropdown.val(OTHER_USER_TYPE);
-      dropdown.change();
-      button.click();
-      expect(form.submit).to.have.been.calledOnce;
-
-      expect(dropdown.prop('disabled')).to.be.true;
-      expect(button.prop('disabled')).to.be.true;
-      expect(status.text()).to.equal(i18n.saving());
-
-      form.trigger('ajax:success');
-      await controller.submitPromise;
-
-      expect(utils.reload).to.have.been.calledOnce;
-    });
-
-    it('re-enables controls on failure and displays error', async () => {
-      dropdown.val(OTHER_USER_TYPE);
-      dropdown.change();
-      button.click();
-      expect(form.submit).to.have.been.calledOnce;
-
-      expect(dropdown.prop('disabled')).to.be.true;
-      expect(button.prop('disabled')).to.be.true;
-      expect(status.text()).to.equal(i18n.saving());
-
-      form.trigger('ajax:error', [{}]);
-      await controller.submitPromise;
-
-      expect(dropdown.prop('disabled')).to.be.false;
-      expect(button.prop('disabled')).to.be.false;
-      expect(status.text()).to.equal(
-        i18n.changeUserTypeModal_unexpectedError()
-      );
-    });
-  });
-
-  function setupWithInitialUserType(userType) {
-    form = $(`
-      <form>
-        <input type="hidden" id="change-user-type_user_email"/>
-        <input type="hidden" id="change-user-type_user_email_preference_opt_in"/>
-        <select id="change-user-type_user_user_type">
-          <option value="student">Student</option>
-          <option value="teacher">Teacher</option>
-        </select>
-        <span id="change-user-type-status"/>
-        <button id="change-user-type-button"/>
-      </form>
-    `);
-    stub(form, 'submit');
-
-    dropdown = form.find('#change-user-type_user_user_type');
-    dropdown.val(userType);
-
-    button = form.find('#change-user-type-button');
-
-    status = form.find('#change-user-type-status');
-
-    controller = new ChangeUserTypeController(form, userType);
-  }
 });

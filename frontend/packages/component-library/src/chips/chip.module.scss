@@ -24,7 +24,7 @@
       background-color: var(--background-neutral-primary);
       border: 1px solid var(--borders-neutral-solid);
       color: var(--text-neutral-primary);
-      min-width: 30px;
+      min-width: 64px;
       text-align: center;
       border-radius: 100px;
       white-space: nowrap;
@@ -129,7 +129,7 @@
   }
 
   .chip {
-    padding: calc(0.62rem + 2px) 1.25rem 0.62rem;
+    padding: 0.62rem 1.25rem;
 
     &.chip-thick {
       @include mixins.button-one-text;
@@ -147,7 +147,7 @@
   }
 
   .chip {
-    padding: calc(0.5rem + 2px) 1rem 0.5rem;
+    padding: 0.5rem 1rem;
 
     &.chip-thick {
       @include mixins.button-two-text;
@@ -165,7 +165,7 @@
   }
 
   .chip {
-    padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
+    padding: 0.31rem 0.75rem;
 
     &.chip-thick {
       @include mixins.button-three-text;
@@ -183,7 +183,7 @@
   }
 
   .chip {
-    padding: calc(0.12rem + 1px) 0.5rem 0.12rem;
+    padding: 0.12rem 0.5rem;
 
     &.chip-thick {
       @include mixins.button-four-text;
@@ -191,6 +191,46 @@
 
     &.chip-thin {
       @include typography.body-four;
+    }
+  }
+}
+
+// CodeAI (CADS) brand overrides — see themes/README.md
+[data-brand='codeai-next'] {
+  .chips fieldset .chip {
+    // Pressed
+    &:active {
+      background-color: var(--background-brand-light);
+    }
+
+    // Selected
+    &:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-primary);
+      background-color: var(--background-selected-primary);
+      color: var(--text-selected-primary);
+    }
+
+    // Selected + hover (border intentionally matches the fill)
+    &:hover:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-strong);
+      background-color: var(--background-selected-strong);
+    }
+
+    // Selected + pressed; border and the legacy inset outline both take
+    // the fill color, so no ring shows regardless of hover state.
+    &:active:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-strong);
+      background-color: var(--background-selected-strong);
+      outline-color: var(--border-selected-strong);
+    }
+
+    // Selected + disabled — solid disabled fill with the inverse label
+    // (white in light, black in dark), unlike the always-white legacy
+    // label. Last so it outranks the checked hover/pressed rules above.
+    &:has(input[type='checkbox']:disabled:checked) {
+      border-color: var(--border-disabled-neutral);
+      background-color: var(--background-disabled-neutral);
+      color: var(--text-disabled-neutral-inverse);
     }
   }
 }

@@ -15,24 +15,29 @@
   }
 }
 
-// Shared pill metrics for both auth buttons (match prod).
+// Shared pill metrics for both auth buttons (match prod). Header-button pill
+// geometry matches the Rails header's `.header_button` under codeai-brand.
+// Hover/press background is per-button below -- Create account's white fill is
+// unconditional, so only Sign in picks up the alpha-overlay hover/press.
 %pill {
   align-self: center;
   min-width: 0;
-  height: 35px;
+  height: 32px;
   padding: 6.5px 1rem;
   border: 1px solid var(--neutral-base-white);
-  border-radius: 4px;
+  border-radius: 0.5rem;
   box-shadow: none;
   font-size: 14px;
+  font-weight: var(--font-weight-semi-bold);
   line-height: 1.5;
   text-transform: none;
   white-space: nowrap;
 
   // The pills render as <a href>; the focus outline stays inverse-white so it
-  // shows on the teal bar.
+  // shows on the teal bar. Matches the other header triggers' focus ring
+  // (NavMenu, CreateMenu, SignedInUserButton, HelpButton).
   &:focus-visible {
-    outline: 2px solid var(--text-neutral-white-fixed);
+    outline: 1px solid var(--border-neutral-white-fixed);
     outline-offset: 2px;
   }
 }
@@ -47,13 +52,18 @@
 
   &:hover,
   &:active {
-    background-color: transparent;
+    background-color: var(--neutral-white-alpha-20);
     box-shadow: none;
     border: 1px solid var(--neutral-base-white);
   }
+
+  &:active {
+    background-color: var(--neutral-white-alpha-30);
+  }
 }
 
-// Create account: filled white with teal text.
+// Create account: filled white with teal text. No hover override here -- its
+// background stays unconditional, winning over %pill regardless.
 .createAccount {
   @extend %pill;
 

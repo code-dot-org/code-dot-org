@@ -1,0 +1,102 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-24T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "guide_steps": [
+      {
+        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**.  Then add **when [ ] touches [ ]**, pick your player and your second character, and decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start.  Click **Play** and go and meet them."
+      },
+      {
+        "text": "**Your world has company.** Continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
+      }
+    ],
+    "long_instructions": "# Set them walking\nUse **sprite [them] begins [patrolling left and right on blocks]**, then decide what happens when your player meets them: a friendly hello, or back to the start.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_addBehaviorSimple",
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "BEHAVIOR": {
+              "block": {
+                "type": "spritelab2_patrollingOnBlocks"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_checkTouching",
+          "inputs": {
+            "SPRITE1": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "SPRITE2": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Hello!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_restartScene"
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

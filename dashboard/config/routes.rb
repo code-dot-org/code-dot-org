@@ -1,13 +1,43 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  # Sandboxed preview hosts (Web Lab 2's HTML preview, Python Lab's pyodide
+  # sandbox). Declared before everything else so these hosts can reach no other
+  # Rails route: the catch-all 404s any other path before the
+  # host-unconstrained routes below (draw :api, draw :marketing, /cable, ...)
+  # are consulted. Rack middleware mounted ahead of routing (FilesApi and
+  # friends, /v3/... — see config/application.rb) is not host-constrained and
+  # still answers on these hosts. Both the codeaiprojects.org (migration
+  # target) and codeprojects.org (pre-migration, current default) origins are
+  # served; clients pick which one to embed via the 'sandboxed-preview-domain'
+  # DCDO flag. See docs/weblab-preview-domain-migration.md.
+  preview_host_pattern = [
+    CDO.preview_codeaiprojects_hostname,
+    CDO.preview_codeprojects_hostname,
+  ].map {|host| Regexp.escape(host)}.join('|')
+
+  constraints host: /^pyodide-sandbox\.(?:#{preview_host_pattern})$/ do
+    get '/', to: 'pyodide_sandbox#show'
+  end
+
+  constraints host: /^[^.]+\.(?:#{preview_host_pattern})$/ do
+    get '/', to: 'codeprojects_preview#show'
+    # Must be served from / on the preview host to control the root scope:
+    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
+    # Custom 404 page for anything else, GET or not, so no other route can
+    # match on a preview host.
+    match '*path', to: 'codeprojects_preview#not_found', via: :all
+  end
+
   mount ActionCable.server => '/cable'
   get 'chatter/index'
 
   draw :api
   draw :marketing
 
-  get "frontend-studio(/*path)", to: "frontend_studio#index"
+  # format: false keeps the extension in :path. Without it Rails reads '.js' as
+  # the format, and a missing asset raises a cross-origin error, not our 404.
+  get "frontend-studio(/*path)", to: "frontend_studio#index", format: false
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -31,21 +61,15 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
-  constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
-    get '/', to: 'codeprojects_preview#show'
-    # Must be served from / on preview.codeprojects.org to control the root scope:
-    get '/weblab2_project_service_worker.js', to: 'codeprojects_preview#weblab2_project_service_worker'
-    # Custom 404 page for codeprojects preview
-    get '*path', to: 'codeprojects_preview#not_found'
-  end
-
-  # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname}|[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)})/ do
+  # This matches any host that is neither the codeprojects apex nor a sandboxed
+  # preview host. The preview hosts are already fully handled by the constraint
+  # blocks at the top of this file; excluding them here is defense in depth.
+  constraints host: /^(?!#{Regexp.escape(CDO.codeprojects_hostname)}|[^.]+\.(?:#{preview_host_pattern}))/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
       get :get_drawer_data, controller: :teacher_dashboard, action: :get_drawer_data
-      get :unit_in_aif, controller: :teacher_dashboard, action: :unit_in_aif
+      get :lesson_summaries_enabled_for_unit, controller: :teacher_dashboard, action: :lesson_summaries_enabled_for_unit
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -66,6 +90,7 @@ Dashboard::Application.routes.draw do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
       get '/theme', to: 'user_preferences#theme'
+      get '/editor_settings', to: 'user_preferences#editor_settings'
     end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
@@ -75,7 +100,7 @@ Dashboard::Application.routes.draw do
     resources :user_levels, only: [:update, :destroy]
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
     get '/user_levels/get_token', to: 'user_levels#get_token'
-    get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
+    get '/user_levels/level_source/:script_id/:level_id(/user/:user_id)', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
     resources :student_work_evaluations, only: [:create] do
@@ -119,7 +144,7 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
-    resources :json_videos, only: [:create] do
+    resources :json_videos, only: [:create, :update, :destroy] do
       member do
         get 'content'
       end
@@ -227,6 +252,7 @@ Dashboard::Application.routes.draw do
           get 'available_participant_types'
           get 'require_captcha'
           get 'assigned_essential_ai_dependency'
+          get 'suggested_lessons'
         end
         collection do
           get 'demo/presets', action: 'presets', as: 'presets'
@@ -343,6 +369,9 @@ Dashboard::Application.routes.draw do
 
     get 'projects/:channel_id/extra_links', to: 'projects#extra_links'
 
+    # Internal playtest review of AI-generated images (project validators only).
+    get 'spritelab_lab2_images_review', to: 'spritelab_lab2_images_review#index'
+
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -427,6 +456,7 @@ Dashboard::Application.routes.draw do
         get 'embed_level'
         get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
         get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
+        get 'build_quiz_questions'
         get 'get_serialized_maze'
         post 'update_properties'
         post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
@@ -438,6 +468,20 @@ Dashboard::Application.routes.draw do
         patch 'update_bubble_choice_settings'
         post 'add_skill'
         post 'remove_skill'
+      end
+
+      resource :quiz_configuration, only: [:show, :update], controller: 'quizzes'
+      resources :quiz_question_placements, only: [:create, :destroy] do
+        member do
+          post 'attach'
+          delete 'detach'
+        end
+      end
+    end
+
+    resources :quiz_questions, only: [:index, :show, :update] do
+      collection do
+        get 'course_unit_search'
       end
     end
 
@@ -481,6 +525,7 @@ Dashboard::Application.routes.draw do
         get 'instructions'
         get 'get_rollup_resources'
         get 'generate', to: 'scripts#generate'
+        get 'listing', to: 'scripts#listing'
         put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
@@ -495,6 +540,7 @@ Dashboard::Application.routes.draw do
         get 'slides/edit', to: 'lessons/slides#edit'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
+        get 'tutor/gallery', to: 'lessons#tutor_gallery', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -680,6 +726,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    get '/scrapbook', to: 'scrapbook#show'
+    # :token is an urlsafe-base64 signed token (no dots/slashes), so it needs no
+    # constraint. It carries the image's identity and authorization, letting an
+    # <img> tag load the image without relying on the session cookie.
+    get '/scrapbook/images/:token', to: 'scrapbook#image'
+
     get '/beta', to: redirect('/')
 
     get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
@@ -727,6 +779,7 @@ Dashboard::Application.routes.draw do
           get :find_students
           get :lookup_section
           post :lookup_section
+          post :set_section_picture_passwords
           post :undelete_section
         end
       end
@@ -772,9 +825,14 @@ Dashboard::Application.routes.draw do
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
         get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
+        get :cap_actions, action: 'cap_actions_form', as: 'cap_actions_form'
+        post :update_cap_state
+        post :grant_cap_permission
+        post :force_cap_permission
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        post :mass_progress_reset
         get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
@@ -846,10 +904,15 @@ Dashboard::Application.routes.draw do
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
-    # Experiments are get requests so that a user can click on a link to join or leave an experiment
+    get '/experiments', to: 'experiments#index'
+
+    # The set/disable experiment routes are state-mutating GETs, kept only so
+    # they can be clickable links in emails. Use them nowhere else; the
+    # /experiments page leaves experiments via the POST route.
     resource :experiments, only: [] do
       get 'set_single_user_experiment/:experiment_name', action: :set_single_user_experiment
       get 'disable_single_user_experiment/:experiment_name', action: :disable_single_user_experiment
+      post 'leave/:experiment_name', action: :leave
     end
 
     get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
@@ -1062,9 +1125,17 @@ Dashboard::Application.routes.draw do
         File.basename(file).to_s.gsub(/\..*$/, '')
       end).uniq
 
+    # Mutating actions kept out of the GET wildcard below: a GET would skip
+    # CSRF verification.
+    api_post_only_methods = [:import_classlink_classroom]
+    api_methods -= api_post_only_methods
+
     namespace :dashboardapi, module: :api do
       api_methods.each do |action|
         get action, action: action
+      end
+      api_post_only_methods.each do |action|
+        post action, action: action
       end
     end
     get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
@@ -1112,6 +1183,9 @@ Dashboard::Application.routes.draw do
 
     namespace :api do
       namespace :v1 do
+        resources :scrapbook_entries, only: [:create, :index, :destroy] do
+          post :image, on: :collection
+        end
         concerns :api_v1_pd_routes
         concerns :section_api_routes
 
@@ -1283,7 +1357,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
-    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
@@ -1321,6 +1394,7 @@ Dashboard::Application.routes.draw do
     get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
+    post '/javabuilder/access_token_with_override_sources_and_validation', to: 'javabuilder_sessions#access_token_with_override_sources_and_validation'
 
     post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
@@ -1406,7 +1480,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/backpacks/channel/:app_type', to: 'backpacks#get_channel'
+    get '/backpacks/channel(/:app_type)', to: 'backpacks#get_channel'
+    get '/backpacks/channels', to: 'backpacks#get_channels'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
@@ -1432,6 +1507,10 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
+    # Lab2 Sprite Lab scenes UI variant: cross-project scene jumps.
+    get '/sprite_lab2/section_scenes', to: 'sprite_lab2#section_scenes'
+    get '/sprite_lab2/external_scenes', to: 'sprite_lab2#external_scenes'
+
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]
@@ -1450,6 +1529,33 @@ Dashboard::Application.routes.draw do
 
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
     resources :practice_problems, only: [:index, :show]
+
+    resources :quiz_attempts, only: [:index, :create, :update]
+    resources :quiz_question_responses, only: [:create]
+
+    resources :challenges, only: [:index, :show] do
+      member do
+        get :starter_image
+      end
+    end
+    resources :challenge_responses, only: [:index, :create, :show] do
+      collection do
+        get :unit_counts
+      end
+      member do
+        post :evaluate
+      end
+      # The signed-in viewer's emoji reactions on this response. The emoji
+      # name (e.g. "heart") is the member id, so removing a reaction is a
+      # plain DELETE .../reactions/:emoji with no reaction row id exposed.
+      resources :reactions, only: [:create, :destroy], param: :emoji,
+        controller: 'challenge_response_reactions'
+    end
+    resources :challenge_response_assets, only: [:show] do
+      member do
+        put :upload
+      end
+    end
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

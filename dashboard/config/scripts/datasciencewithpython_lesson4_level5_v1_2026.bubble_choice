@@ -1,0 +1,10 @@
+name 'datasciencewithpython-lesson4-level5-v1-2026'
+display_name 'Pandas Practice'
+description 'Choose one of the options below!'
+
+sublevels
+level 'datasciencewithpython-lesson4-level5a-v1-2026'
+level 'datasciencewithpython-lesson4-level5b-v1-2026'
+level 'datasciencewithpython-lesson4-level5c-v1-2026'
+
+uses_lab2

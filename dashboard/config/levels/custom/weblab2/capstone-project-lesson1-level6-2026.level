@@ -1,0 +1,90 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-30T20:31:01.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "capstone-project-lesson1-project-template-2026",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "# Iterate & Refine\r\n\r\nUse Web Lab to improve your app based on feedback and what you learned from testing.\r\n\r\nOpen `capstone.md` and review your **Feedback Log** and **Testing Log** before making changes. Then ask yourself:\r\n- What is the most important thing to fix or change right now?\r\n- What feedback should I act on — and what should I set aside for now?\r\n\r\nNot every piece of feedback needs to become a change. Deciding what not to change — and being able to explain why — is part of good design.\r\n\r\nDecide how you want to use AI Tutor to help you make changes — whether that's updating the layout, restyling a section, fixing a behavior, or adding a new interaction. \r\n\r\nAs you work, update your **Feedback Log**, **Testing Log**, and **AI Use Log** in `capstone.md`.\r\n\r\n\r\n\r\n",
+    "bubble_choice_description": "Use Web Lab to build and test a working version of your app. Return to this level whenever you need to test or iterate on your app as it evolves. ***(supports completing Milestone 3)***.",
+    "display_name": "App Build & Test",
+    "thumbnail_url": "https://images.code.org/5494ca590188877825b06cfa6593af39-dashboard.png",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "Add your changes to style.css.css",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "Add your changes to script.js",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-30T20:31:01.303+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-level3a-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"capstone-project-lesson1-level3a-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-30 20:31:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 20:59:19 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:33:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:45:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:48:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:49:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

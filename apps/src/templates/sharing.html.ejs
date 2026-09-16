@@ -19,7 +19,7 @@ var options = locals.options;
 
   <div id="sharing-input-container">
     <button id="sharing-dialog-copy-button" value=<%= options.shareLink %>>
-      <i class="fa fa-clipboard fa-lg"></i>
+      <i class="fa-solid fa-clipboard fa-lg"></i>
         <%= msg.copyLinkToProject() %>
     </button>
   </div>
@@ -27,20 +27,20 @@ var options = locals.options;
     <% if (options.facebookUrl) { -%>
       <a id='sharing-facebook' href='<%= options.facebookUrl %>' target="_blank" class="popup-window" style="display: none">
         <button id='facebook-button'>
-          <i class="fa fa-facebook fa-lg"></i>
+          <i class="fa-brands fa-facebook fa-lg"></i>
         </button>
       </a>
     <% } -%>
     <% if (options.twitterUrl) { -%>
       <a id='sharing-twitter' href='<%= options.twitterUrl %>' target="_blank" class="popup-window" style="display: none">
         <button id='twitter-button'>
-          <i class="fa fa-twitter fa-lg"></i>
+          <i class="fa-brands fa-x-twitter fa-lg"></i>
         </button>
       </a>
     <% } -%>
     <% if (!options.onMainPage && options.enablePrinting) { %>
       <button id="print-button">
-        <i class="fa fa-print fa-lg"></i>
+        <i class="fa-solid fa-print fa-lg"></i>
       </button>
     <% } %>
     <% if (options.alreadySaved) { %>
@@ -53,7 +53,7 @@ var options = locals.options;
       </button>
     <% } %>
    <button id="sharing-phone">
-      <i class="fa fa-mobile fa-lg"></i>
+      <i class="fa-solid fa-mobile-screen fa-lg"></i>
       &nbsp;
       <%= msg.sendToPhone() %>
     </button>

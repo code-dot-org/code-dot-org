@@ -233,14 +233,8 @@ FactoryBot.define do
       trait :not_first_sign_in do
         sign_in_count {2}
       end
-      trait :with_recent_captcha do
-        last_verified_captcha_at {Time.now.utc}
-      end
       factory :terms_of_service_teacher do
         with_terms_of_service
-      end
-      factory :with_recent_captcha_teacher do
-        with_recent_captcha
       end
       factory :levelbuilder do
         after(:create) do |levelbuilder|
@@ -721,6 +715,26 @@ FactoryBot.define do
       end
     end
 
+    trait :with_classlink_authentication_option do
+      after(:create) do |user, evaluator|
+        create(
+          :authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::CLASSLINK,
+          # v1 id: ClassLink's internal UserId, a plain integer string. Still
+          # issued to districts without OneRoster, so this is a current format.
+          authentication_id: rand(10_000_000..99_999_999).to_s,
+          version: evaluator.auth_option_version,
+          data: {
+            oauth_token: 'some-classlink-token'
+          }.to_json
+        )
+        user.reload
+      end
+    end
+
     trait :with_lti_authentication_option do
       after(:create) do |user|
         create(:lti_authentication_option, user: user)
@@ -1091,6 +1105,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :quiz, parent: :level, class: Quiz do
+    game {Game.quiz}
+    level_num {'custom'}
+  end
+
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
     sublevels do
@@ -1266,20 +1285,22 @@ FactoryBot.define do
   factory :project_storage do
   end
 
+  factory :project_storage_geo, class: 'ProjectStorage::Geo' do
+    association :project_storage
+
+    country {Faker::Address.unique.country}
+    state {Faker::Address.unique.state}
+    city {Faker::Address.unique.city}
+    postal_code {Faker::Address.unique.postcode}
+  end
+
   # WARNING: using this factory in new tests may cause other tests, including
   # ProjectsController tests, to fail with: `Mysql2::Error::TimeoutError`
   # See: https://codedotorg.atlassian.net/browse/TEACH-230
   factory :project do
-    transient do
-      owner {create(:user)}
-    end
+    association :owner, factory: :user
 
-    updated_ip {'127.0.0.1'}
-
-    after(:build) do |project, evaluator|
-      project_storage = create(:project_storage, user_id: evaluator.owner.id)
-      project.storage_id = project_storage.id
-    end
+    updated_ip {Faker::Internet.unique.public_ip_v4_address}
   end
 
   factory :featured_project do
@@ -1456,6 +1477,38 @@ FactoryBot.define do
     delivery_context_type {SharedConstants::PRACTICE_PROBLEM_DELIVERY_CONTEXT[:AI_TUTOR_LESSON_DEEP_DIVE]}
   end
 
+  factory :challenge do
+    association :lesson
+    question {'What is 2 + 2?'}
+
+    trait :with_rubric do
+      rubric do
+        [
+          {'level' => 0, 'description' => 'No answer is present'},
+          {'level' => 1, 'description' => 'Answer is partially correct'},
+          {'level' => 2, 'description' => 'Answer is correct'},
+          {'level' => 3, 'description' => 'Answer is correct and the reasoning is clearly explained'},
+        ]
+      end
+    end
+  end
+
+  factory :challenge_response do
+    association :challenge
+    association :user, factory: :student
+  end
+
+  factory :challenge_response_asset do
+    association :challenge_response
+    asset_type {'whiteboard_image'}
+  end
+
+  factory :challenge_response_reaction do
+    association :challenge_response
+    association :user, factory: :student
+    emoji {'heart'}
+  end
+
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective
@@ -1606,6 +1659,21 @@ FactoryBot.define do
   factory :user_level do
     user {create(:student)}
     level {create(:applab)}
+  end
+
+  factory :anonymous_level_progress, class: 'AnonymousLevel::Progress' do
+    association :script
+    association :level, factory: :applab
+
+    anon_user_id {Cdo::AnonUserId.generate}
+  end
+
+  factory :anonymous_level_geo, class: 'AnonymousLevel::Geo' do
+    anon_user_id {Cdo::AnonUserId.generate}
+    country {Faker::Address.unique.country}
+    state {Faker::Address.unique.state}
+    city {Faker::Address.unique.city}
+    postal_code {Faker::Address.unique.postcode}
   end
 
   factory :user_script do
@@ -2100,11 +2168,6 @@ FactoryBot.define do
     end
   end
 
-  factory :contact_rollups_final do
-    sequence(:email) {|n| "contact_#{n}@example.domain"}
-    data {{'opt_in' => true}}
-  end
-
   factory :contact_rollups_pardot_memory do
     sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
@@ -2462,5 +2525,50 @@ FactoryBot.define do
     expires_at {1.day.from_now}
     read_at {nil}
     is_dismissed {false}
+  end
+
+  factory :quiz_question do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Question #{n}"}
+    content {{stem: 'What is 2 + 2?', choices: ['3', '4', '5'], correct: ['4']}}
+  end
+
+  factory :multiple_choice_question, class: MultipleChoiceQuestion do
+    sequence(:key) {SecureRandom.uuid}
+    sequence(:name) {|n| "Multiple choice question #{n}"}
+    content do
+      {
+        stem: 'What is 2 + 2?',
+        choices: [{id: 'a', text: '3'}, {id: 'b', text: '4'}, {id: 'c', text: '5'}],
+        correct_choice_id: 'b'
+      }
+    end
+  end
+
+  factory :quiz_question_standard do
+    quiz_question
+    standard
+  end
+
+  factory :quiz_question_placement do
+    level factory: :quiz
+    quiz_question
+    page {1}
+    sequence(:position)
+  end
+
+  factory :quiz_attempt do
+    user
+    level factory: :quiz
+    unit
+    attempt_number {1}
+    started_at {Time.now}
+  end
+
+  factory :quiz_question_response do
+    quiz_attempt
+    quiz_question
+    response_data {{selected: ['4']}}
+    grading_status {QuizQuestionResponse::GRADING_STATUSES.first}
   end
 end

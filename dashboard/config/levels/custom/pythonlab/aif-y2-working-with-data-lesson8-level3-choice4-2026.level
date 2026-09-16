@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T23:13:58.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Anime vs. K-Drama",
+    "project_template_level_name": "aif-y2-working-with-data-lesson8-choice4-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Read the documentation given to you.\r\n- Improve your plot’s accessibility. Update your plot’s…\r\n  - Color\r\n  - Markers\r\n",
+    "bubble_choice_description": "Animes and K-dramas can have similar themes but very different formats. Is one more highly rated than another?",
+    "thumbnail_url": "https://images.code.org/64891dff5df0a56a1297ad9548269952-anime-kdrama.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMq9uOhngy56WotH\nIyAqnqIW2Yfwx+E7fYvO/p/KVjaqXeWusKYW5MFcT+KjRmwmPXmgjbvUv0s+\n0DHUj2s+L2sZUUZndlM9VbVpDQivwvpNFMu0gJrvEfEyeXemMYnID7Om+nr7\nC9rc777Ry5fHbMCcj5xEzJ1jFft9LA8e+eHQTcnMt5ykAEXaX8jNjIWzCk2w\nnIridrcFoTW6PtVA/Z8Lb1IYxVjkcAVFijRWhUpTfsz9C/0Y9iKTFLG6iOic\niDecG3nY0IF5cpdIFP8XZ0p5Q9S+O0fWGWboXn76VQzODFR+C7mi+6ubGhBx\n56Io4OlGzAASqcF1iW8jjBWpC/w9iChSXt6fBHmvcZ6emjkx3+VXkL51WZHn\nfKDXWxFdJxB9CmsVbz4dr5IaUNYU2gacQDY2kAXer3UWkPSLDvG2VAD77r6i\nPZtTI/CaRMY023u5H/FXnrj3Iex6XpzzzBS1+z0LbDO5Kst5RDyUhCMh4tR3\nsa0C3rQmefdQ7ybXFbJhwMY0OnL706KWTXaOsv/AaHvwtsZ6hjCoFGdPUzyb\nQ+Jprbax2RVO4EkfkTzf17SrlVe2zQSnHsBa79EBEyuJ3WqMyaUUr9UGsG5t\nliC4Pn/QEvuY7JINE+lIBdPCjmFEoptwib2qmNzjNBeZGikkdiOZ/eEPjOPS\noyt/61eZuzqzNbCdMRO/DNz1IG/ToLZs6cLwlF8J4Tdn1Gismm+PwCxT/f9P\nvge0DMMP/nPlELXyXE1w/Y8/pddhMRdDlyfazCE4sWRku2sNxp1kcjs7uBUs\nZFmBxD5naVn1v3D6BEQT0dQHaOnY1v+I99kx/OYSZ3PCwO3BUywTJsG40E1/\naFpdRrAYl5Oe4/3jUotJRsMKMPv4eQDMYhlJpJmRagw5IFPC9u0ikOZo5++D\n5ryc8dOLHFCo7GPm9k3DNv2xNO3XaPLAh9AMuOnVQtZBcUqjCoZjKU1xGtdx\npK5wlyRMxseQ0HYBriLuBMohaq3YfE+CQEsdG6NBIBfYRwTudX/+v4iq2etv\nz5oFR8eRjnU5/Pdv3WGrW6NR1DP9lJs2z4sWr3C38Go96bST6avXgtYkUZJR\np+lYzb9fbOFPX/CB9WRIlKngvYlEn3tHg5FpvAkOC+KLer1wyv+wAKiP/8Ng\nEi0PAM67YQLIsW+HmM4z\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 23:19:44 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:20:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -7,8 +7,6 @@ markdown <<MARKDOWN
 
 Before you write any code, you need to **see the shape** of the data.
 
----
-
 ## Scan the JSON
 
 Don’t try to understand *everything* yet.
@@ -18,13 +16,10 @@ First, look for the **patterns**:
 - **Objects**: key–value pairs (look for **{ }**)
 - **Values**: can be primitive (**string, number, boolean**) or nested inside objects/arrays
 
-<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;">
-  <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Tip:</strong> JSON isn’t random text. It has a structure. Your job is to spot the structure first.</p>
+<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;">
+  <p style="font-size:12pt; margin:0; line-height:130%;">💡 <strong>Tip:</strong> JSON isn’t random text. It has a structure. Your job is to spot the structure first.</p>
 </div>
 
----
-
-## JSON Sample 
 
 <div style="background:#111; color:#f1f1f1; border-radius:12px; padding:16px; font-size:14pt; line-height:1.35; overflow:auto; max-height:520px; white-space:pre; border:1px solid #222;">
 {
@@ -111,9 +106,7 @@ First, look for the **patterns**:
 }
 </div>
 
----
-
-## Call to Action: Find the Patterns
+### **Find the Patterns**
 
 In the JSON above, try to find:
 
@@ -123,12 +116,12 @@ In the JSON above, try to find:
 4. **One place where an array contains objects** (a list of `{ ... }` items)
 
 <details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;">
-<summary style="font-size:1.4em; font-weight:bold;">🎨 Check your answers </summary>
+<summary style="font-size:12pt; font-weight:bold;">🔎 Check your answers </summary>
 
 <div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;">
 
 <div style="background:#ffffff; border-radius:10px; padding:12px; border:1px solid #ddd;">
-  <div style="font-size:13pt; font-weight:bold; margin-bottom:8px;">Color Key</div>
+  <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Color Key</div>
   <div style="font-size:12pt; line-height:150%;">
     <span style="background:#fff2a8; padding:2px 6px; border-radius:6px;"><strong>Arrays</strong> [ ]</span>
     <span style="background:#d6f5d6; padding:2px 6px; border-radius:6px; margin-left:8px;"><strong>Objects</strong> { }</span>
@@ -181,15 +174,5 @@ In the JSON above, try to find:
 </div>
 </details>
 
----
 
-## Why “seeing the shape” helps
-
-When you can spot arrays, objects, and values, you can write code more confidently:
-
-- You know **what can be looped over** (arrays)
-- You know **what can be accessed by name** (objects)
-- You know **what values you can display** (strings / numbers / booleans)
-
-Next, we’ll practice pulling out a few key fields and using them to build a small UI card.
 MARKDOWN

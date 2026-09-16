@@ -1,7 +1,10 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useMemo} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {Student} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -79,12 +82,19 @@ const Header: React.FC<HeaderProps> = ({
   const handlePreviousLesson = () => {
     if (previousLesson) {
       setSelectedLessonId(previousLesson.id);
+      analyticsReporter.sendEvent(
+        EVENTS.STUDENT_SNAPSHOT_PREVIOUS_LESSON_CLICKED,
+        {lessonId: previousLesson.id}
+      );
     }
   };
 
   const handleNextLesson = () => {
     if (nextLesson) {
       setSelectedLessonId(nextLesson.id);
+      analyticsReporter.sendEvent(EVENTS.STUDENT_SNAPSHOT_NEXT_LESSON_CLICKED, {
+        lessonId: nextLesson.id,
+      });
     }
   };
 
@@ -122,102 +132,145 @@ const Header: React.FC<HeaderProps> = ({
   const handlePreviousStudent = useCallback(() => {
     if (previousStudent) {
       setSelectedStudentId(previousStudent.id);
+      analyticsReporter.sendEvent(
+        EVENTS.STUDENT_SNAPSHOT_PREVIOUS_STUDENT_CLICKED,
+        {studentId: previousStudent.id}
+      );
     }
   }, [previousStudent, setSelectedStudentId]);
 
   const handleNextStudent = useCallback(() => {
     if (nextStudent) {
       setSelectedStudentId(nextStudent.id);
+      analyticsReporter.sendEvent(
+        EVENTS.STUDENT_SNAPSHOT_NEXT_STUDENT_CLICKED,
+        {studentId: nextStudent.id}
+      );
     }
   }, [nextStudent, setSelectedStudentId]);
 
   return (
     <div className={styles.header}>
       <div className={styles.headerColumn}>
-        <UnitSelectorV2
-          filterToSelectedCourse={false}
-          className={styles.unitSelector}
-          isLabelVisible={true}
-          labelText="Unit"
-        />
-        <LessonSelector
-          lessons={lessons || []}
-          selectedLesson={selectedLesson}
-          onLessonChange={(lessonId: number) => {
-            setSelectedLessonId(lessonId);
-          }}
-          hasUnnumberedLessons={hasUnnumberedLessons}
-          isLoading={isLessonsLoading}
-          className={styles.dropdown}
-          isLabelVisible={true}
-          labelText="Lesson"
-        />
-        <div className={styles.buttonGroup}>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!previousLesson || !lessons?.length || isLessonsLoading}
-            className={styles.button}
-            onClick={handlePreviousLesson}
-            type="button"
-          >
-            {'< Previous lesson'}
-          </MuiButton>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!nextLesson || !lessons?.length || isLessonsLoading}
-            className={styles.button}
-            onClick={handleNextLesson}
-            type="button"
-          >
-            {'Next lesson >'}
-          </MuiButton>
+        <div>
+          <span className={styles.groupLabel}>Unit</span>
+          <UnitSelectorV2
+            filterToSelectedCourse={false}
+            className={styles.unitSelector}
+            labelText="Unit"
+            onUserUnitChange={(unitId: number) => {
+              analyticsReporter.sendEvent(
+                EVENTS.STUDENT_SNAPSHOT_UNIT_SELECTED,
+                {unitId}
+              );
+            }}
+          />
+        </div>
+        <div>
+          <span className={styles.groupLabel}>Lesson</span>
+          <div className={styles.prevNextDropdown}>
+            <LessonSelector
+              lessons={lessons || []}
+              selectedLesson={selectedLesson}
+              onLessonChange={(lessonId: number) => {
+                setSelectedLessonId(lessonId);
+              }}
+              onUserLessonChange={(lessonId: number) => {
+                analyticsReporter.sendEvent(
+                  EVENTS.STUDENT_SNAPSHOT_LESSON_SELECTED,
+                  {lessonId}
+                );
+              }}
+              hasUnnumberedLessons={hasUnnumberedLessons}
+              isLoading={isLessonsLoading}
+              className={styles.dropdown}
+              isLabelVisible={false}
+              labelText="Lesson"
+              dropdownTextThickness="thin"
+            />
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              disabled={!previousLesson || !lessons?.length || isLessonsLoading}
+              onClick={handlePreviousLesson}
+              type="button"
+              startIcon={<FontAwesomeV6Icon iconName="chevron-left" />}
+            >
+              Prev
+            </MuiButton>
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              disabled={!nextLesson || !lessons?.length || isLessonsLoading}
+              onClick={handleNextLesson}
+              type="button"
+              endIcon={<FontAwesomeV6Icon iconName="chevron-right" />}
+            >
+              Next
+            </MuiButton>
+          </div>
         </div>
       </div>
 
       <div className={styles.headerColumn}>
-        <SortByNameDropdown
-          sectionId={selectedSectionId ?? undefined}
-          unitName={selectedSectionUnitName || undefined}
-          source="STUDENT_SNAPSHOT"
-          className={styles.dropdown}
-        />
-        <SimpleDropdown
-          labelText="Student"
-          name="student"
-          items={studentOptions}
-          selectedValue={selectedStudent?.id.toString() || ''}
-          onChange={event => setSelectedStudentId(Number(event.target.value))}
-          className={styles.dropdown}
-          size="s"
-          color="gray"
-        />
-        <div className={styles.buttonGroup}>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!previousStudent || !selectedStudents?.length}
-            className={styles.button}
-            onClick={handlePreviousStudent}
-            type="button"
-          >
-            {'< Previous student'}
-          </MuiButton>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            disabled={!nextStudent || !selectedStudents?.length}
-            className={styles.button}
-            onClick={handleNextStudent}
-            type="button"
-          >
-            {'Next student >'}
-          </MuiButton>
+        <div>
+          <span className={styles.groupLabel}>Sort by</span>
+          <SortByNameDropdown
+            sectionId={selectedSectionId ?? undefined}
+            unitName={selectedSectionUnitName || undefined}
+            source="STUDENT_SNAPSHOT"
+            className={styles.dropdown}
+            isLabelVisible={false}
+          />
+        </div>
+
+        <div>
+          <span className={styles.groupLabel}>Student</span>
+          <div className={styles.prevNextDropdown}>
+            <SimpleDropdown
+              labelText="Student"
+              name="student"
+              items={studentOptions}
+              selectedValue={selectedStudent?.id.toString() || ''}
+              onChange={event => {
+                const studentId = Number(event.target.value);
+                setSelectedStudentId(studentId);
+                analyticsReporter.sendEvent(
+                  EVENTS.STUDENT_SNAPSHOT_STUDENT_SELECTED,
+                  {studentId}
+                );
+              }}
+              className={styles.dropdown}
+              size="s"
+              color="gray"
+              isLabelVisible={false}
+              dropdownTextThickness="thin"
+            />
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              disabled={!previousStudent || !selectedStudents?.length}
+              onClick={handlePreviousStudent}
+              type="button"
+              startIcon={<FontAwesomeV6Icon iconName="chevron-left" />}
+            >
+              Prev
+            </MuiButton>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
+              disabled={!nextStudent || !selectedStudents?.length}
+              onClick={handleNextStudent}
+              type="button"
+              endIcon={<FontAwesomeV6Icon iconName="chevron-right" />}
+            >
+              Next
+            </MuiButton>
+          </div>
         </div>
       </div>
     </div>

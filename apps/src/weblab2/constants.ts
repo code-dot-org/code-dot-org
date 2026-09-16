@@ -1,6 +1,4 @@
-import {extensions as mimeToExtensions} from 'mime-types';
-
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
+import {SUPPORTED_IMAGE_EXTENSIONS} from '../lab2/constants';
 
 import {AiTutorMode, AiTutorAnswerType} from './types';
 export const WEBLAB2_EDITABLE_FILE_TYPES = [
@@ -13,12 +11,8 @@ export const WEBLAB2_EDITABLE_FILE_TYPES = [
   'json',
 ];
 
-export const WEBLAB2_IMAGE_FILE_TYPES = SafeAndSupportedImageTypes.flatMap(
-  mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
-);
-
 export const WEBLAB2_SUPPORTED_FILE_TYPES = WEBLAB2_EDITABLE_FILE_TYPES.concat(
-  WEBLAB2_IMAGE_FILE_TYPES
+  SUPPORTED_IMAGE_EXTENSIONS
 );
 
 export const AI_SAVED_COMMENT = 'AI***SAVE';

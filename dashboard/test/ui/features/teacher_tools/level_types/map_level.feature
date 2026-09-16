@@ -1,4 +1,5 @@
 @no_mobile
+@playwright
 Feature: Map Levels
 
   # Map levels should render the reference guide content inside an iframe

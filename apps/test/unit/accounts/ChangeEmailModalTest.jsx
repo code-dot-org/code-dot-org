@@ -71,7 +71,10 @@ describe('ChangeEmailModal', () => {
         }
         expect(submitButton(wrapper)).to.have.attr('disabled');
         expect(cancelButton(wrapper)).to.have.attr('disabled');
-        expect(wrapper.find('i.fa-spinner.fa-spin')).to.exist;
+        // The save button enters its loading (spinner) state while saving. We
+        // assert the MUI loading state rather than a specific spinner icon,
+        // since the DSCO Modal renders its buttons through its own MUI context.
+        expect(wrapper.find('.MuiButton-loading').length).to.be.greaterThan(0);
       });
 
       it('shows unknown error text when an unknown error occurs', () => {

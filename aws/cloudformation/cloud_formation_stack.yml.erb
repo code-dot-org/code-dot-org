@@ -28,6 +28,14 @@ Parameters:
     Type: String
     Default: <%=CDO.hostedzone_id('codeprojects.org') %>
     Description: Route 53 Hosted Zone ID for Codeprojects base domain name.
+  CodeaiprojectsBaseDomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? 'codeaiprojects.org' : "#{stack_name}.codeaiprojects.org" %>
+    Description: Base domain name for the Web Lab 2 / pyodide preview origin (migrated off codeprojects.org).
+  CodeaiprojectsHostedZoneId:
+    Type: String
+    Default: <%=CDO.hostedzone_id('codeaiprojects.org') %>
+    Description: Route 53 Hosted Zone ID for the codeaiprojects base domain name.
   InstanceType:
     Type: String
     Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
@@ -116,6 +124,11 @@ Resources:
           # Put custom metrics to CloudWatch.
           - Effect: Allow
             Action: 'cloudwatch:PutMetricData'
+            Resource: '*'
+          # Read on-demand list prices to publish modeled compute-cost metrics.
+          # The Price List Query API does not support resource-level permissions.
+          - Effect: Allow
+            Action: 'pricing:GetProducts'
             Resource: '*'
           # Read EC2 tags to determine Auto Scaling Group in CloudWatch Monitoring Scripts.
           - Effect: Allow
@@ -535,11 +548,17 @@ Resources:
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbuser:${ClusterNamespace}/etl_client"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # Legacy Database Migration Service exports Learning Platform tables to the `dashboard` database.
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dashboard"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # Zero ETL exports Learning Platform tables to the `[environment type]_learningplatform_mysql_zeroetl` database.
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/<%=rack_env%>_learningplatform_mysql_zeroetl"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # We provision Materialized Views on Zero ETL tables in the `dev` database.
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dev"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
 <% end -%>
 <% if rack_env?(:production) -%>
@@ -867,9 +886,14 @@ Resources:
 
 <% if cdn_enabled -%>
   # ---------------------------------------------
-  # Codeprojects Resources
+  # Codeprojects Resources (legacy Web Lab: bare codeprojects.org apex)
   # ---------------------------------------------
 <%= resource_component 'codeprojects_resources' %>
+
+  # ---------------------------------------------
+  # Codeaiprojects Resources (Web Lab 2 / pyodide preview origin)
+  # ---------------------------------------------
+<%= resource_component 'codeaiprojects_resources' %>
 <% end -%>
   # ---------------------------------------------
   # Custom Chef Configuration Secret
@@ -894,6 +918,9 @@ Outputs:
   PreviewCodeprojectsURL:
     Description: Codeprojects URL
     Value: !Sub preview.${CodeprojectsBaseDomainName}
+  PreviewCodeaiprojectsURL:
+    Description: Web Lab 2 / pyodide preview origin
+    Value: !Sub preview.${CodeaiprojectsBaseDomainName}
 <% end -%>
 <% if rack_env?(:adhoc) -%>
   DaemonSSHCommand:

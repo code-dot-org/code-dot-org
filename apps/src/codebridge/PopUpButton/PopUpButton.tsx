@@ -239,6 +239,7 @@ export const PopUpButton = ({
                 }
                 return event.key === 'Tab' && event.shiftKey;
               },
+              onDeactivate: setIsOpenFalse,
               clickOutsideDeactivates: true,
               preventScroll: true,
               fallbackFocus: initialFocusId

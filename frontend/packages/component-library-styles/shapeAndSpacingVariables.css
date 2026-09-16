@@ -1,0 +1,24 @@
+/* CADS shape (border-radius) spacing (padding) ramps, and elevation shadows.
+ * Generated - do not hand-edit; check with the design team first, 
+ * then re-export from the Shape foundation page.
+ */
+:root {
+  --shape-sm: 0.375rem;
+  --shape-md: 0.5rem;
+  --shape-lg: 0.625rem;
+  --shape-xl: 0.75rem;
+  --shape-round: 62.4375rem;
+  --spacing-p-xxs: 0.5rem;
+  --spacing-p-xs: 1rem;
+  --spacing-p-s: 1.5rem;
+  --spacing-p-m: 2rem;
+  --spacing-p-l: 2.5rem;
+  --spacing-p-xl: 3rem;
+  --spacing-p-xxl: 3.5rem;
+  --spacing-p-xxxl: 4rem;
+  --shadow-sm: 0 4px 7px rgb(0 0 0 / 7%), 0 2px 2px rgb(0 0 0 / 7%);
+  --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 10%),
+    0 4px 6px -4px rgb(0 0 0 / 10%);
+  --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 10%),
+    0 8px 10px -6px rgb(0 0 0 / 10%);
+}

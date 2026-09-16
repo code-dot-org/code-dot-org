@@ -45,6 +45,8 @@ export interface InstructionsProps {
   hideNavigation?: boolean;
   /** If the continue button should be hidden if disabled. */
   hideContinueIfDisabled?: boolean;
+  /** Instructions content that updates dynamically throughout a level. Replaces `longInstructions` if provided. */
+  dynamicInstructions?: string;
 }
 
 /**
@@ -61,6 +63,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   bottomComponent,
   fixedDarkBackground,
   overrideTheme,
+  dynamicInstructions,
   hideNavigation = false,
   hideContinueIfDisabled = false,
   ...feedbackProps
@@ -85,8 +88,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     return () => observer.disconnect();
   }, []);
 
+  const displayInstructions = dynamicInstructions || longInstructions;
   // Don't render anything if we don't have any instructions.
-  if (longInstructions === undefined) {
+  if (displayInstructions === undefined) {
     return null;
   }
 
@@ -108,7 +112,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         className={classNames(moduleStyles.item)}
       >
         <div
-          key={longInstructions}
+          key={displayInstructions}
           id="instructions-text"
           className={classNames(moduleStyles.bubble, moduleStyles.textContent)}
         >
@@ -120,7 +124,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             aria-label={isScrollable ? 'Instructions' : undefined}
           >
             <MainInstructionsContent
-              instructionsText={longInstructions}
+              instructionsText={displayInstructions}
               handleInstructionsTextClick={handleInstructionsTextClick}
               ref={ref}
             />

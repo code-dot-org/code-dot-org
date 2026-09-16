@@ -25,7 +25,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
         level_source: create(:level_source, level: level)
       )
 
-      assert_cached_queries(18) do
+      assert_cached_queries(20) do
         get course_unit_lesson_script_level_path(
           course_course_name: script.get_original_unit_group.name,
           unit_position: 1,
@@ -78,7 +78,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       sl = script.script_levels[2]
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
-      assert_cached_queries(8) do
+      assert_cached_queries(9) do
         post milestone_path(
           user_id: student.id,
           script_level_id: sl.id,
@@ -100,7 +100,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       params = {program: 'fake program', testResult: 100, result: 'true'}
 
       Unit.clear_cache
-      assert_cached_queries(7) do
+      assert_cached_queries(8) do
         post milestone_path(
           user_id: student.id,
           script_level_id: sl.id,
@@ -121,7 +121,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       sl = script.script_levels[2]
       params = {program: 'fake program', testResult: 0, result: 'false'}
 
-      assert_cached_queries(8) do
+      assert_cached_queries(9) do
         post milestone_path(
           user_id: student.id,
           script_level_id: sl.id,
@@ -189,7 +189,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       student.assign_script(unit)
       sign_in student
 
-      assert_cached_queries(21) do
+      assert_cached_queries(23) do
         get "/courses/#{course.name}/units/1/lessons/1/levels/1"
         assert_response :success
       end

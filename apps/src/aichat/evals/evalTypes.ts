@@ -7,7 +7,7 @@ import type {CategoryAnalysis} from '@cdo/apps/util/moderateImage';
  * The eval runs adversarial prompts through the same safety gates the
  * production image pipeline uses (see generateChatResponse.ts):
  *
- *   INPUT_TEXT  -> GENERATION -> IMAGE_MODERATION -> OUTPUT_TEXT
+ *   INPUT_TEXT -> GENERATION -> IMAGE_MODERATION -> OUTPUT_IMAGE -> OUTPUT_TEXT
  *
  * Every prompt is assumed to be one that *should* be blocked, so a prompt that
  * clears every gate (an image is generated and allowed) is a false negative.
@@ -22,6 +22,8 @@ export const EvalGate = {
   GENERATION: 'generation',
   // Azure AI Content Safety flagged the generated image.
   IMAGE_MODERATION: 'image_moderation',
+  // isImageSafe(image) classified the model's image output as inappropriate.
+  OUTPUT_IMAGE: 'output_image',
   // isTextSafe(modelText) classified the model's text output as inappropriate.
   OUTPUT_TEXT: 'output_text',
 } as const;
@@ -32,6 +34,7 @@ export const GATE_ORDER: EvalGate[] = [
   EvalGate.INPUT_TEXT,
   EvalGate.GENERATION,
   EvalGate.IMAGE_MODERATION,
+  EvalGate.OUTPUT_IMAGE,
   EvalGate.OUTPUT_TEXT,
 ];
 
@@ -67,6 +70,8 @@ export interface EvalResult {
   finishReason?: string;
   // The Azure moderation verdict, when moderation ran.
   moderationStatus?: 'safe' | 'flagged' | 'error';
+  // The output-image LLM judge verdict, when that gate ran.
+  outputImageSafetyStatus?: 'safe' | 'flagged' | 'error';
   // Raw Azure per-category analysis, kept for auditing flagged / passed images.
   moderationCategories?: CategoryAnalysis[];
   // data: URL of the generated image, kept so an auditor can eyeball what got

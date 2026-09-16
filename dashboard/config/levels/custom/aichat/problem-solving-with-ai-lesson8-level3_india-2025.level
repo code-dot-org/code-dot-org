@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-06-26T19:33:15.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Format\r\n\r\nUse AI Chat to help you become a professional food critic. \r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response. \r\n\r\n>You are a professional food critic. Generate some ideas for how to evaluate a new restaurant.\r\n\r\n2. Here are some **format** ideas you can add to your prompt:\r\n    - Bullet points\r\n    - A five-paragraph essay\r\n    - A numbered list\r\n3. Revise your prompt to AI Chat by adding in **Format**. Press **Send** and read AI Chat's response. \r\n4. Find and complete the section in your Unit Guide called \"Format\". \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what format to add?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\n>You are a professional food critic. Generate a numbered list in order of importance, from most to least important, of what to consider when evaluating a new restaurant.\r\n:::",
+    "long_instructions": "## Format\r\n\r\nUse AI Chat to help you become a professional food critic. \r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the prompt below into AI Chat. Press **Send** and read AI Chat's response. \r\n\r\n>You are a professional food blogger. Generate some ideas for how to evaluate a new restaurant.\r\n\r\n2. Here are some **format** ideas you can add to your prompt:\r\n    - Bullet points\r\n    - A five-paragraph essay\r\n    - A numbered list\r\n3. Revise your prompt to AI Chat by adding in **Format**. Press **Send** and read AI Chat's response. \r\n4. Find and complete the section in your Unit Guide called \"Format\". \r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\n::: details [**Not sure what format to add?**]\r\nTry copy and pasting the following revised prompt into AI Chat: \r\n>You are a professional food blogger. Generate a numbered list in order of importance, from most to least important, of what to consider when evaluating a new restaurant.\r\n:::",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -43,9 +44,11 @@
     "bubble_choice_description": "Use AI Chat to help you decide which two patients to assist first.",
     "display_name": "Hospital Triage Nurse",
     "thumbnail_url": "https://images.code.org/249b43f221aed22f6ebc602a3084c4bf-medical-clipboard.png",
-    "name_suffix": "_india-2025"
+    "name_suffix": "_india-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:15.048+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level3_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level3_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:33:15.048+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level3_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level3_2025\"},{\"changed_at\":\"2026-07-31 06:39:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

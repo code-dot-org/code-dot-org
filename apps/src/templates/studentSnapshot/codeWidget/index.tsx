@@ -5,11 +5,15 @@ import {
   ProjectFile,
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import WidgetTemplate from '@cdo/apps/templates/studentSnapshot/widgetTemplate';
 
+import {CodeWidgetLevelInfo, INSTRUCTIONS_TAB_ID} from './types';
 import Workspace from './Workspace';
 
 import styles from './codeWidget.module.scss';
+
+const IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg'];
 
 interface CodeWidgetProps {
   codeData?: MultiFileSource;
@@ -17,6 +21,8 @@ interface CodeWidgetProps {
   gridWidth?: number;
   gridHeight?: number;
   loading?: boolean;
+  levelInfo?: CodeWidgetLevelInfo;
+  emptyMessage?: string;
 }
 
 const CodeWidget = ({
@@ -25,6 +31,8 @@ const CodeWidget = ({
   gridWidth = 2,
   gridHeight = 2,
   loading,
+  levelInfo,
+  emptyMessage,
 }: CodeWidgetProps) => {
   const [theme, setTheme] = useState<'Light' | 'Dark'>('Light');
 
@@ -32,7 +40,9 @@ const CodeWidget = ({
   const projectFiles = useMemo<ProjectFile[]>(() => {
     if (!codeData?.files) return [];
     return Object.values(codeData.files).filter(
-      file => file.type !== ProjectFileType.SYSTEM_SUPPORT
+      file =>
+        file.type !== ProjectFileType.SYSTEM_SUPPORT &&
+        !IMAGE_EXTENSIONS.includes(getFileExtension(file.name))
     );
   }, [codeData]);
 
@@ -40,9 +50,13 @@ const CodeWidget = ({
 
   useEffect(() => {
     if (projectFiles.length > 0) {
-      setSelectedFileId(projectFiles[0].id);
+      // Select `index.html` if it exists, otherwise select the first file
+      const indexHtmlFile = projectFiles.find(
+        file => file.name === 'index.html'
+      );
+      setSelectedFileId(indexHtmlFile?.id ?? projectFiles[0].id);
     } else {
-      setSelectedFileId('');
+      setSelectedFileId(INSTRUCTIONS_TAB_ID);
     }
   }, [projectFiles]);
 
@@ -78,6 +92,8 @@ const CodeWidget = ({
           selectedFileId={selectedFileId}
           onFileSelect={setSelectedFileId}
           theme={theme}
+          levelInfo={levelInfo}
+          emptyMessage={emptyMessage}
         />
       </div>
     </WidgetTemplate>

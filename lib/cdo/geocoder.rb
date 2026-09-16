@@ -2,6 +2,7 @@ require 'geocoder'
 require 'geocoder/results/mapbox'
 require 'geocoder/lookups/freegeoip'
 require "active_support/cache/redis_cache_store"
+require 'retryable'
 
 module Geocoder
   module Result
@@ -82,6 +83,13 @@ module Geocoder
 
   MIN_ADDRESS_LENGTH = 10
   MAX_ADDRESS_WORDS = 8
+  RETRIES = 2
+
+  def self.find(query, options = {})
+    Retryable.retryable(on: [Redis::CannotConnectError, Timeout::Error], tries: RETRIES) do
+      search(query, options).first
+    end
+  end
 
   # Geocodes a pre-validated candidate string and returns it if Mapbox confirms
   # a street-level address match, nil otherwise.

@@ -19,38 +19,40 @@ markdown <<MARKDOWN
 </div>
 ```
 
-<div style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; text-align: center;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card Title</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">This is a sample card with a light teal background.</p>
-</div>
-
-```html
-<div style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; text-align: center;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card Title</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">This is a sample card with a light teal background.</p>
-</div>
-```
-
-<div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; text-align: center;">
+<div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; text-align: center;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card Title</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">This is a sample card with a light purple background.</p>
 </div>
 
 ```html
-<div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; text-align: center;">
+<div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; text-align: center;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card Title</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">This is a sample card with a light purple background.</p>
 </div>
 ```
+
+<div style="background-color: #ACA8EA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; text-align: center;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card Title</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">This is a sample card with a mid purple background.</p>
+</div>
+
+```html
+<div style="background-color: #ACA8EA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; margin: 10px auto; text-align: center;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card Title</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">This is a sample card with a mid purple background.</p>
+</div>
+```
+
+
 
 ___
 
 ### **Card with Icon**
 
 <!-- Centered Card with Icon -->
-<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+<div style="background-color: #4c42Cf; color: #FFFFFF; padding: 20px; border-radius: 10px; 
             box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; text-align: center; margin: 20px auto;">
-    <img src="https://images.code.org/e346f3a4b029ca6903e42add49283e6e-image-1740518315415.png" 
+    <img src="https://images.code.org/9a073b54c8ec149dcead2553a4e888ce-image-1783634345218.png" 
          alt="ADD ALT TEXT" style="width: 50px; height: 50px; margin-bottom: 10px;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card Title</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
@@ -58,9 +60,9 @@ ___
 
 ```html
 <!-- Centered Card with Icon -->
-<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+<div style="background-color: #4c42Cf; color: #FFFFFF; padding: 20px; border-radius: 10px; 
             box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 300px; text-align: center; margin: 20px auto;">
-    <img src="https://images.code.org/e346f3a4b029ca6903e42add49283e6e-image-1740518315415.png" 
+    <img src="https://images.code.org/9a073b54c8ec149dcead2553a4e888ce-image-1783634345218.png" 
          alt="ADD ALT TEXT" style="width: 50px; height: 50px; margin-bottom: 10px;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card Title</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
@@ -73,22 +75,22 @@ ___
 <!-- Unified container for all four cards -->
 <div style="display: flex; justify-content: space-between; width: 100%; gap: 10px; margin: 20px 0px 20px 0px">
     <!-- Card 1 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 1</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 2 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 2</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 3 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 3</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 4 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 4</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
@@ -98,22 +100,22 @@ ___
 <!-- Unified container for all four cards -->
 <div style="display: flex; justify-content: space-between; width: 100%; gap: 10px; margin: 20px 0px 20px 0px">
     <!-- Card 1 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 1</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 2 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 2</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 3 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 3</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 4 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 25%; text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 4</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
@@ -127,37 +129,37 @@ ___
 <!-- Unified container for the grid of cards -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
     <!-- Card 1 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 1</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 2 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 2</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 3 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 3</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 4 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 4</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 5 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 5</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 6 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 6</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
@@ -168,37 +170,37 @@ ___
 <!-- Unified container for the grid of cards -->
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
     <!-- Card 1 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 1</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 2 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 2</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 3 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 3</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 4 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 4</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 5 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 5</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
     </div>
     <!-- Card 6 -->
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+    <div style="background-color: #E4E2F8; color: #000000; padding: 20px; border-radius: 10px; 
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
         <p style="font-size: 14pt; font-weight: bold; margin: 0;">Card 6</p>
         <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Your text here.</p>
@@ -206,4 +208,5 @@ ___
 </div>
 ```
 
+![]()
 MARKDOWN

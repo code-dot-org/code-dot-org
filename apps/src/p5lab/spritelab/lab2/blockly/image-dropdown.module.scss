@@ -1,0 +1,14 @@
+@use '../quiet-button.scss' as buttons;
+
+// Styling for the lab's additions to the Blockly image-dropdown grid, which
+// portals into the document-level DropDownDiv (white panel), outside the
+// lab's component tree.
+
+// Full-width button under the thumbnail grid.
+.makeImageButton {
+  @include buttons.quiet-button(28px, 12px);
+
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+}

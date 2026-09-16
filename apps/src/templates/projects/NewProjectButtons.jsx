@@ -130,6 +130,10 @@ const PROJECT_INFO = {
     thumbnail: studio('/shared/images/courses/music-dance-ai-icon.png'),
     urlOverride: pegasus('/mix-move-ai'),
   },
+  sketchlab: {
+    label: 'Sketch Lab',
+    thumbnail: studio('/shared/images/courses/sketch-lab-icon.png'),
+  },
 };
 
 const TILES_PER_ROW = 4;
@@ -199,8 +203,8 @@ const styles = {
     marginBottom: 10,
   },
   tile: {
-    width: 214,
-    height: 70,
+    width: 216,
+    height: 72,
     border: '1px solid var(--borders-neutral-primary)',
     borderRadius: 2,
     float: 'left',

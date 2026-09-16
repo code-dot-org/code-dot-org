@@ -34,17 +34,21 @@ module Middleware
 
           redirect_uri = URI(request.path)
           redirect_uri.query = request.GET.except(LOCALE_PARAM_KEY).to_query.presence
+
           response.redirect redirect_uri.to_s
           response.do_not_cache!
-
-          response.finish
         else
-          ::I18n.with_locale(locale = cookie_locale || http_locale) do
-            response = Rack::Response[*app.call(env)]
-            response.set_cdo_cookie(LOCALE_COOKIE_KEY, locale) unless cookie_locale == locale
-            response.finish
-          end
+          request_locale = cookie_locale || http_locale
+          ::I18n.locale = request_locale || Cdo::I18n::DEFAULT_LOCALE
+
+          response = Rack::Response[*app.call(env)]
+          response.set_cdo_cookie(LOCALE_COOKIE_KEY, request_locale) if request_locale && request_locale != cookie_locale
         end
+
+        response.finish
+      ensure
+        # Resets the locale to prevent any leaks between requests on the same thread.
+        ::I18n.locale = Cdo::I18n::DEFAULT_LOCALE
       end
 
       private def resolve_locale(locale)

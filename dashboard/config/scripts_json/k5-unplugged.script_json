@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-03 00:43:51 UTC",
+    "serialized_at": "2026-07-30 01:39:22 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6501,6 +6501,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/courses/k5-unplugged/units/1/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/k5-unplugged/units/1/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/k5-unplugged/units/1/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Binary Bracelets",
       "url": "https://youtu.be/3S2YfoO4_CM",
       "key": "binary_bracelets",
@@ -8209,7 +8242,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "k5-unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "k5-unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "k5-unplugged"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -10041,6 +10091,9 @@
         "opportunity_standard.shortcode": "K-2-ETS1-2"
       }
     }
+  ],
+  "jit_pl_concepts_lessons": [
+
   ],
   "rubrics": [
 

@@ -3,12 +3,49 @@ module BlocklyHelpers
 
   def drag_block_relative(block_id, dx, dy)
     id_selector = get_id_selector
-    @browser.execute_script("$(\"[#{id_selector}='#{block_id}']\").simulate( 'drag', {handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
+    drag_indexed_block_to_offset("[#{id_selector}='#{block_id}']", dx, dy)
   end
 
   def generate_drag_code(from, to, target_dx, target_dy)
     id_selector = get_id_selector
-    generate_selector_drag_code "[#{id_selector}='#{from}']:last", ".blocklySvg [#{id_selector}='#{to}']", target_dx, target_dy
+    from_selector = "[#{id_selector}='#{from}']:last"
+    to_selector = ".blocklySvg [#{id_selector}='#{to}']"
+    # Blockly 13 uses pointer events; return JS that fires them directly.
+    # pointerdown on the from element, pointermove/pointerup on document.
+    <<~JS
+      (function() {
+        var filter = function() { return $(this).parents(':hidden').length === 0; };
+        var fromEl = $("#{from_selector}").filter(filter)[0];
+        var toEl = $("#{to_selector}").filter(filter)[0];
+        if (!fromEl || !toEl) return;
+        var fromRect = fromEl.getBoundingClientRect();
+        var toRect = toEl.getBoundingClientRect();
+        var startX = fromRect.left + fromRect.width / 2;
+        var startY = fromRect.top + fromRect.height / 2;
+        var endX = toRect.left + #{target_dx.to_i};
+        var endY = toRect.top + #{target_dy.to_i};
+        var moves = 8;
+        fromEl.dispatchEvent(new PointerEvent('pointerdown', {
+          bubbles: true, cancelable: true,
+          clientX: startX, clientY: startY,
+          pointerId: 1, pointerType: 'mouse', isPrimary: true
+        }));
+        for (var i = 1; i <= moves; i++) {
+          var x = startX + (endX - startX) * i / moves;
+          var y = startY + (endY - startY) * i / moves;
+          document.dispatchEvent(new PointerEvent('pointermove', {
+            bubbles: true, cancelable: true,
+            clientX: x, clientY: y,
+            pointerId: 1, pointerType: 'mouse', isPrimary: true
+          }));
+        }
+        document.dispatchEvent(new PointerEvent('pointerup', {
+          bubbles: true, cancelable: true,
+          clientX: endX, clientY: endY,
+          pointerId: 1, pointerType: 'mouse', isPrimary: true
+        }));
+      })();
+    JS
   end
 
   def generate_selector_drag_code(from, to, target_dx, target_dy)
@@ -24,9 +61,43 @@ module BlocklyHelpers
   end
 
   def drag_indexed_block_to_offset(block_selector, dx, dy)
-    target_selector = block_selector # Using the same block as target for relative drag
-    code = generate_selector_drag_code(block_selector, target_selector, dx.to_i, dy.to_i)
-    @browser.execute_script(code)
+    # Blockly 13 registers listeners for pointer events (pointerdown/pointermove/pointerup)
+    # via its TOUCH_MAP, so jQuery simulate's mouse-event drag no longer works.
+    # Fire synthetic pointer events directly: pointerdown on the element,
+    # then pointermove/pointerup on document (where Blockly binds those handlers).
+    @browser.execute_script(<<~JS)
+      (function() {
+        var el = $("#{block_selector}").filter(function() {
+          return $(this).parents(':hidden').length === 0;
+        })[0];
+        if (!el) return;
+        var rect = el.getBoundingClientRect();
+        var startX = rect.left + 1;
+        var startY = rect.top + 1;
+        var endX = startX + #{dx.to_i};
+        var endY = startY + #{dy.to_i};
+        var moves = 8;
+        el.dispatchEvent(new PointerEvent('pointerdown', {
+          bubbles: true, cancelable: true,
+          clientX: startX, clientY: startY,
+          pointerId: 1, pointerType: 'mouse', isPrimary: true
+        }));
+        for (var i = 1; i <= moves; i++) {
+          var x = startX + (endX - startX) * i / moves;
+          var y = startY + (endY - startY) * i / moves;
+          document.dispatchEvent(new PointerEvent('pointermove', {
+            bubbles: true, cancelable: true,
+            clientX: x, clientY: y,
+            pointerId: 1, pointerType: 'mouse', isPrimary: true
+          }));
+        }
+        document.dispatchEvent(new PointerEvent('pointerup', {
+          bubbles: true, cancelable: true,
+          clientX: endX, clientY: endY,
+          pointerId: 1, pointerType: 'mouse', isPrimary: true
+        }));
+      })();
+    JS
   end
 
   def generate_offset_code(selector)

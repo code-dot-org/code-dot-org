@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_3_4",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "How could biased or unbalanced training data affect an AI model's behavior?",
+  "solution": [
+    {"option": "It has no effect since AI treats all data equally regardless of source.", "correct": false},
+    {"option": "It could cause the AI to reflect or repeat the same imbalances or stereotypes present in that data.", "correct": true},
+    {"option": "It would make the AI stop generating responses.", "correct": false},
+    {"option": "It would only affect how fast the AI responds, not what it says.", "correct": false}
+  ],
+  "objective_keys": [
+    "9d332603-a481-4b83-8ae3-5577093a37e3"
+  ]
+}

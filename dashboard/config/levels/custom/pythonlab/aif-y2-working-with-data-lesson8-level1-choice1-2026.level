@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T21:55:05.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-working-with-data-lesson8-choice1-2026 + template",
+    "long_instructions": "Rap and R&B are two genres that have influenced each other for decades. What still sets them apart? This program plots two traits for a sample of tracks: BPM (beats per minute) and danceability, a score from 0 (not danceable) to 1 (very danceable).\r\n\r\n**☑️ Do This:**\r\n- Read the program in `main.py`.\r\n- Predict what the plot will look like.\r\n- Run the program to see the plot.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "display_name": "Rap vs. R&B",
+    "bubble_choice_description": "Rap and R&B are two genres that have influenced each other for decades. What still sets them apart?",
+    "thumbnail_url": "https://images.code.org/f3f1aae3fe45681d8bc0f8e853546471-rap.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 21:58:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 21:59:23 +0000\",\"changed\":[\"project_template_level_name\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 22:12:19 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 22:13:18 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

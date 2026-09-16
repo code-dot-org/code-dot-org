@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:46:09.000Z",
   "level_num": "custom",
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Debug: Missing Paragraph\r\n\r\nSomeone has submitted a bug report on this web page. Can you fix the bug?\r\n\r\n![](https://images.code.org/4692981592c07e166945a4037b73c680-image-1767512171987.png)\r\n\r\n# Do this\r\n\r\n1) Find and fix the problem that is causing the bug",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it [here](https://youtu.be/auv10y-dN4s).*\r\n\r\n# Debug: Missing Paragraph\r\n\r\nSomeone has submitted a bug report on this web page. Can you fix the bug?\r\n\r\n**What I expected to happen:** Three paragraphs, one each on dogs, turtles, and birds.\r\n\r\n**What happened instead:** The turtle paragraph is missing.\r\n\r\n## Do this\r\n\r\n1) Find and fix the problem that is causing the bug.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -55,9 +56,10 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:09.490+00:00\",\"changed\":[\"cloned from \\\"CSD U2L3-L8_weblab2_2025\\\"\"],\"cloned_from\":\"CSD U2L3-L8_weblab2_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:09.490+00:00\",\"changed\":[\"cloned from \\\"CSD U2L3-L8_weblab2_2025\\\"\"],\"cloned_from\":\"CSD U2L3-L8_weblab2_2025\"},{\"changed_at\":\"2026-07-24 00:45:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-24 00:46:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-25 04:54:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

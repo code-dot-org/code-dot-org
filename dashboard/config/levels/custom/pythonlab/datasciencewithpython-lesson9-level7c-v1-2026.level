@@ -1,0 +1,68 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-20T06:39:51.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Airline Satisfaction\r\n\r\nThis dataset summarizes passenger satisfaction across three airline classes.\r\n\r\n**Data Question:** How do passenger satisfaction counts compare across airline classes?\r\n\r\n1. Run the starter code and identify the `Class`, `Satisfaction`, and `Count` columns.\r\n2. Group the data by `Class` and `Satisfaction`. Use `sum()` and `unstack()` to prepare the passenger counts for plotting.\r\n3. Create a stacked bar chart with a meaningful title, axis labels, legend, and readable class labels. Run the program.\r\n4. Answer the data question using at least one specific comparison from the chart.\r\n\r\n:::: details [Need Help?]\r\n\r\nAsk AI Tutor to explain your code, output, or errors. Use its guidance to complete the chart yourself.\r\n\r\n::::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\n# Read the dataset\ndata = pd.read_csv('Airline_Ratings.csv')\n\n# Explore the dataset\ndata.info()\nprint(data.describe())\nprint(data.head())\n\n# Group the data\n\n\n# Create a stacked bar chart",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        },
+        "1": {
+          "id": "1",
+          "name": "Airline_Ratings.csv",
+          "language": "csv",
+          "contents": "Class,Satisfaction,Count\nBusiness,Neutral or Dissatisfied,18994\nBusiness,Satisfied,43166\nEconomy,Neutral or Dissatisfied,47366\nEconomy,Satisfied,10943\nEconomy Plus,Neutral or Dissatisfied,7092\nEconomy Plus,Satisfied,2319\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "teacher_markdown": "**What Students Should Take Away:**\r\n\r\n- Students use `groupby()`, `sum()`, and `unstack()` to organize existing passenger counts by class and satisfaction.\r\n- Students compare the satisfied and neutral-or-dissatisfied segments within and across airline classes.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n\r\n- Students may use `size()` instead of adding the values in `Count`.\r\n  - Tip: Explain that each row already contains a passenger count. `size()` would count rows, while `sum()` calculates the number of passengers.\r\n- Students may assume that the tallest bar represents the most satisfied class.\r\n  - Tip: Direct students to compare the individual satisfaction segments, not only the total height of each bar.\r\n- Students may treat “Neutral or Dissatisfied” as two separate categories.\r\n  - Tip: Reinforce that the dataset combines them into one category. AI Tutor can help explain the grouped output or chart code without answering the data question.",
+    "display_name": "Airline Quality Ratings",
+    "bubble_choice_description": "Practice creating a **stacked bar chart** to answer a question about airline quality!",
+    "thumbnail_url": "https://images.code.org/3a1eb30553b7e33e5e4bf26c8b929dd6-dashboard.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFYwcyymO6uHelW0dYgXxDW4yzUYEXBKik0pdY9UK\nTiy8zV7G/sIMKH+8TawQnQ1VYwquNu6WFnqbX/ypGyd1zlW7sPDuwPTJCmCo\nsCECNOIc0Pg0GVyBWRcPcsmQ+swpo0pUx2wuuNwyh8Hzb+iuHSLyhzbUz80q\nr7lIl9YKTWtT2SclF2RjL2L9bUSQS4/dXvqEVV3n5eKR7lX4PbkmKLW8TL2i\nMGrNozCUbn6OH0dkDOE9PhkN/sN1LqyaY99Xh0OGTSjnpsgjI0aQ6o+UM0kn\n8PZkr63wVzqPCXZEsKRSJDY+xtexpaqAQZ+idK8StbsqObjMNeWHYURbgIzk\nuoE3vSI6m8R+SAxZBAHQu9v3uj3nO+r1EXR4BCZh5G957uorRHrd4cLcKRZP\ngNSizpMxm5l5tkLJrkCvvLnN9pp0fbPNip7hWGL79udteeYkg1MEsliCUCFY\ndkPvTLv1DR27ldZjvxSq5RidVar4JfSOGUjecV3D6Uqbpe9NtyufiQAhYaJB\nMdWjraUdC3RsGSh9EpVbKMmpo2aDUnwrsbCFADCZj9rQ/PSzuZpoYcf5BRrw\nre+MmQHuLRXb0yOlTB+gHwYf+r/I35oCFOhEqINCXjGgkLIQ7JwXKjF7ApR3\n/HWEE0GcBXOznpfW7U0SDEeWiJZmlPjLtwPoIp9hSVR93OC+fxUwAMhrQk8H\nYKKHH6CRKl3uiFaUimVAnSQcOib8pP6kL9qLEw9D8/NWB0FiIO3EySmg42QN\nU1CZ52MJ1e1L32Qu7qX5pmAWgzuWTHS3Ij0LG3AmiaUIn2qtecy8zEE7kmr6\n41vUWkqr9BSbIy6JM6mNgf6/nMlni2wa/r04hcAwlqCJe3uLigdxCK8vEeAT\nsCqEwCTxd1hUqZ/n8rCCPzq9z+otl7J64S4dB0Gljd/gxFAiZzbc3/Wx47JL\nE+ml8Y+YpNXjt9s0Rnr2HBIo5fSqiU0C6wIjUBw9vpDrz39GNB+XKrbzAaZz\nLMZfD9Zm91SeRkJf+SI/ySTvrCRc5KtmZyBvbvEE1Yv40O6yEjmEkdINJdJm\nmoe5XT4C7dYKK3HEcivyHgnM38bDFkCVeBIBp5q8nv874+i1b8GimGMPv4E9\n90+MQaObYsmZQOxygXNhT3elmSFRER2Gn3KAFpkT99ND19McWnKytqwAbqeE\nQQ44acEXuOIMdzmdPFkKcwC/tWKzOrKXT3i4Aq9uXDac3cHU4StoUzUXRf9N\n3L7DNO008p2qk70Rlnk9N/veKNWOmH9jIavpNo9xtE230ZVldm6u0lYisF7P\nzlyP+hLQoSTIGUTsNujheX9u7zZ2VHHoWB2Pm0cbszHvt73ukmsRrIrEZYL3\norf5eyfVVPiInWJ0iGJh5+GI5/c1MQ86W3+AYWt54qEG1YAOI82sLdXagusA\nhU/arj3b/lXGRaiRx667nTMQkeGTcKAw5JFODPz62WnFRUqp9AFYEdCHMcRu\nDWRVwHsiezqFTNsZc/BTsC1Q4bqrHkAXmC4ov1yZs8tLwFDKZCO3yT53ofhj\nKAonJEUMKqL30/Vrwvo=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-20T06:39:51.040+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L9c_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L8-L9c_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-08-20 06:40:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-20 06:40:49 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-08-20 06:40:57 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

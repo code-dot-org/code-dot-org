@@ -70,8 +70,20 @@
       "return_value": null
     },
     {
-      "key": "take-paint",
+      "key": "paint2",
       "position": 5,
+      "name": "paint(red, green, blue)",
+      "content": "Paints the space the `Painter` object is standing on with a color built from red, green, and blue amounts.",
+      "parameters": "[{\"name\":\"red\",\"type\":\"int\",\"required\":true,\"description\":\"how much red is in the color, from `0` to `255`\"},{\"name\":\"green\",\"type\":\"int\",\"required\":true,\"description\":\"how much green is in the color, from `0` to `255`\"},{\"name\":\"blue\",\"type\":\"int\",\"required\":true,\"description\":\"how much blue is in the color, from `0` to `255`\"}]",
+      "examples": "[{\"code\":\"```\\nmy_painter = Painter(2, 4, \\\"South\\\", 10)\\nmy_painter.paint(255, 0, 0)\\n```\"}]",
+      "syntax": null,
+      "external_link": null,
+      "overload_of": "paint",
+      "return_value": null
+    },
+    {
+      "key": "take-paint",
+      "position": 6,
       "name": "take_paint",
       "content": "Takes paint from the paint bucket the `Painter` object is currently standing on and adds a single unit of paint to their paint bucket. The number of units of paint in the paint bucket decreases by `1`. If the `Painter` object is not on a paint bucket, nothing happens.",
       "parameters": "[]",
@@ -83,7 +95,7 @@
     },
     {
       "key": "scrape-paint",
-      "position": 6,
+      "position": 7,
       "name": "scrape_paint",
       "content": "Removes the paint from the space the `Painter` object is standing on.",
       "parameters": "[]",
@@ -95,7 +107,7 @@
     },
     {
       "key": "can-move",
-      "position": 7,
+      "position": 8,
       "name": "can_move",
       "content": "Returns `true` if there is no barrier one space ahead in the direction the `Painter` object is currently facing.",
       "parameters": "[]",
@@ -107,7 +119,7 @@
     },
     {
       "key": "can-move2",
-      "position": 8,
+      "position": 9,
       "name": "can_move(direction)",
       "content": "Returns `true` if there is no barrier one space ahead in the specified direction.",
       "parameters": "[{\"name\":\"direction\",\"type\":\"str\",\"required\":true,\"description\":\"the direction to check\"}]",
@@ -119,7 +131,7 @@
     },
     {
       "key": "is-on-paint",
-      "position": 9,
+      "position": 10,
       "name": "is_on_paint",
       "content": "Returns `true` if there is paint on the space the `Painter` object is currently standing on.",
       "parameters": "[]",
@@ -131,7 +143,7 @@
     },
     {
       "key": "is-on-bucket",
-      "position": 10,
+      "position": 11,
       "name": "is_on_bucket",
       "content": "Returns `true` if there is a paint bucket on the space the `Painter` object is currently standing on and the paint bucket has paint in it.",
       "parameters": "[]",
@@ -143,7 +155,7 @@
     },
     {
       "key": "has-paint",
-      "position": 11,
+      "position": 12,
       "name": "has_paint",
       "content": "Returns `true` if the `Painter` object has paint in their paint bucket.",
       "parameters": "[]",
@@ -155,7 +167,7 @@
     },
     {
       "key": "is-facing-north",
-      "position": 12,
+      "position": 13,
       "name": "is_facing_north",
       "content": "Returns `true` if the `Painter` object is currently facing `\"North\"`.",
       "parameters": "[]",
@@ -167,7 +179,7 @@
     },
     {
       "key": "is-facing-south",
-      "position": 13,
+      "position": 14,
       "name": "is_facing_south",
       "content": "Returns `true` if the `Painter` object is currently facing `\"South\"`.",
       "parameters": "[]",
@@ -179,7 +191,7 @@
     },
     {
       "key": "is-facing-east",
-      "position": 14,
+      "position": 15,
       "name": "is_facing_east",
       "content": "Returns `true` if the `Painter` object is currently facing `\"East\"`.",
       "parameters": "[]",
@@ -191,7 +203,7 @@
     },
     {
       "key": "is-facing-west",
-      "position": 15,
+      "position": 16,
       "name": "is_facing_west",
       "content": "Returns `true` if the `Painter` object is currently facing `\"West\"`.",
       "parameters": "[]",
@@ -203,7 +215,7 @@
     },
     {
       "key": "get-my-paint",
-      "position": 16,
+      "position": 17,
       "name": "get_my_paint",
       "content": "Returns the number of units of paint that the `Painter` object has in their paint bucket.",
       "parameters": "[]",
@@ -215,7 +227,7 @@
     },
     {
       "key": "get-color",
-      "position": 17,
+      "position": 18,
       "name": "get_color",
       "content": "Returns the color of the space the `Painter` object is currently standing on.",
       "parameters": "[]",
@@ -227,7 +239,7 @@
     },
     {
       "key": "get-x",
-      "position": 18,
+      "position": 19,
       "name": "get_x",
       "content": "Returns the x coordinate for the current position of the `Painter` object.",
       "parameters": "[]",
@@ -239,7 +251,7 @@
     },
     {
       "key": "get-y",
-      "position": 19,
+      "position": 20,
       "name": "get_y",
       "content": "Returns the y coordinate for the current position of the `Painter` object.",
       "parameters": "[]",
@@ -251,7 +263,7 @@
     },
     {
       "key": "get-direction",
-      "position": 20,
+      "position": 21,
       "name": "get_direction",
       "content": "Returns the direction that the `Painter` object is currently facing.",
       "parameters": "[]",
@@ -263,7 +275,7 @@
     },
     {
       "key": "set-paint",
-      "position": 21,
+      "position": 22,
       "name": "set_paint",
       "content": "Sets the number of units of paint in the `Painter` object's paint bucket. If the value passed is a negative number, nothing happens.",
       "parameters": "[{\"name\":\"paint\",\"type\":\"int\",\"required\":true,\"description\":\"the number of units of paint that should be in the `Painter` object's paint bucket\"}]",

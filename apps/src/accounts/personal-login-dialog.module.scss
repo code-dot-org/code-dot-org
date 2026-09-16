@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dangerText {
+  color: var(--text-error-primary);
+}
+
+.button {
+  align-self: flex-start;
+}

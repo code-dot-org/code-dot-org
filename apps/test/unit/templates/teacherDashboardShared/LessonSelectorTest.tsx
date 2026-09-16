@@ -85,6 +85,45 @@ describe('LessonSelector', () => {
     expect(mockOnChange).toHaveBeenCalledWith(mockLessons[0].id);
   });
 
+  it('auto-selects first numbered lesson, skipping a leading survey/assessment', () => {
+    const mockOnChange = jest.fn();
+    const lessonsWithLeadingSurvey = [
+      {...mockLessons[0], isLockable: true, hasLessonPlan: false},
+      mockLessons[1],
+    ];
+
+    render(
+      <LessonSelector
+        {...defaultProps}
+        lessons={lessonsWithLeadingSurvey}
+        selectedLesson={null}
+        onLessonChange={mockOnChange}
+      />
+    );
+
+    expect(mockOnChange).toHaveBeenCalledWith(mockLessons[1].id);
+  });
+
+  it('falls back to first lesson when every lesson is unnumbered', () => {
+    const mockOnChange = jest.fn();
+    const allUnnumberedLessons = mockLessons.map(lesson => ({
+      ...lesson,
+      isLockable: true,
+      hasLessonPlan: false,
+    }));
+
+    render(
+      <LessonSelector
+        {...defaultProps}
+        lessons={allUnnumberedLessons}
+        selectedLesson={null}
+        onLessonChange={mockOnChange}
+      />
+    );
+
+    expect(mockOnChange).toHaveBeenCalledWith(mockLessons[0].id);
+  });
+
   it('shows loading skeleton when isLoading is true', () => {
     render(<LessonSelector {...defaultProps} isLoading={true} />);
 

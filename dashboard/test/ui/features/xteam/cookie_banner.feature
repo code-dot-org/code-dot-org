@@ -1,4 +1,5 @@
 @eyes
+@playwright
 Feature: Cookie banner on various sites
 
 Scenario Outline: Show cookie banner, dismiss it and confirm it's dismissed

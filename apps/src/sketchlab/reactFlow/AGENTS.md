@@ -26,24 +26,16 @@ tool for making interactive diagrams, used by students in grades 6-12.
 
 ## Comment style
 
-- Write comments in plain English, avoiding dense jargon.
-- Default to no comment. Only add one when the WHY is non-obvious — a
-  subtle constraint, a load-bearing ordering, a workaround for a specific
-  library behavior. Well-named identifiers and code structure should
-  carry the WHAT on their own.
-- Aim for 1–2 lines. If you need more, the code probably needs a name
-  change or a small helper instead.
-- No history. Don't write "previously this had to ...", "used to ...", or
-  "MUI's old behavior was ..." — those rot the moment the underlying code
-  changes. Document the *current* WHY in the present tense.
-- No restating JSX. Comments like "If transparent, show the icon, else
-  show the color" duplicate code that's already self-explanatory.
-- Don't comment self-explanatory props. A prop named `title: string`
-  with usage like `title="Shape"` doesn't need a docstring.
-- For load-bearing timing / ordering rules (e.g. `useLayoutEffect` vs
-  `useEffect`, commit-phase vs effect-phase), one short sentence naming
-  the constraint is enough. Skip the multi-paragraph effect-ordering
-  recap.
+General comment rules live in `apps/src/AGENTS.md` → Comments. This lab adds a
+few React/JSX specifics:
+
+- No restating JSX. "If transparent, show the icon, else show the color"
+  duplicates code that's already self-explanatory.
+- Don't comment self-explanatory props. A prop named `title: string` used as
+  `title="Shape"` doesn't need a docstring.
+- For load-bearing timing / ordering (`useLayoutEffect` vs `useEffect`,
+  commit-phase vs effect-phase), one short sentence naming the constraint is
+  enough.
 
 Examples:
 

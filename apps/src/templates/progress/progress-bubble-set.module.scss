@@ -6,4 +6,9 @@
 .withBackground {
   display: inline-block;
   position: relative;
+
+  // Bubbles have different internal text baselines (pill, diamond, circle),
+  // so baseline alignment would offset the shapes vertically. Align tops:
+  // each bubble container has the same fixed row height.
+  vertical-align: top;
 }

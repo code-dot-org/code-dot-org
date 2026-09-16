@@ -1,0 +1,49 @@
+%style
+  :plain
+    .slir-project {margin: 24px 0; padding: 16px; border: 1px solid #ccc; border-radius: 6px;}
+    .slir-project h2 {margin: 0 0 4px; font-size: 18px;}
+    .slir-meta {color: #666; font-size: 13px; margin-bottom: 12px;}
+    .slir-images {display: flex; flex-wrap: wrap; gap: 12px;}
+    .slir-image {width: 170px; font-size: 12px;}
+    .slir-image img {width: 128px; height: 128px; object-fit: contain; background: #f4f4f4; border: 1px solid #ddd; display: block;}
+    .slir-image.slir-discarded img {opacity: 0.6; border-style: dashed;}
+    .slir-badge {display: inline-block; padding: 0 6px; border-radius: 8px; background: #fdd; color: #900; font-size: 11px;}
+    .slir-kind {color: #666;}
+    .slir-prompt {margin: 4px 0 0; word-break: break-word;}
+    .slir-none {color: #999;}
+
+%h1 Sprite Lab in Lab2: generated images
+
+%p
+  The #{@project_count} most recently used Sprite Lab in Lab2 projects, with every
+  AI-generated image and the prompt that made it.  Includes images students
+  discarded (shown dimmed), recovered from asset versions.  Internal playtest
+  review only.
+
+- if @reports.empty?
+  %p.slir-none No Sprite Lab in Lab2 projects found.
+
+- @reports.each do |report|
+  .slir-project
+    %h2
+      %a{href: "/projects/spritelab/#{report[:channel]}/view", target: '_blank', rel: 'noopener'}
+        = report[:level_names].presence&.join(', ') || report[:channel]
+    .slir-meta
+      = "Channel #{report[:channel]} · last used #{report[:updated_at]&.to_fs(:db)} · #{report[:images].size} generated #{'image'.pluralize(report[:images].size)}"
+    - if report[:images].empty?
+      %p.slir-none No generated images.
+    .slir-images
+      - report[:images].each do |image|
+        - url = "/v3/assets/#{report[:channel]}/#{image[:filename]}?version=#{image[:version_id]}"
+        .slir-image{class: image[:discarded] ? 'slir-discarded' : nil}
+          %a{href: url, target: '_blank', rel: 'noopener'}
+            %img{src: url, loading: 'lazy', alt: image.dig(:generation, :name) || image[:filename]}
+          %div
+            - if image[:discarded]
+              %span.slir-badge discarded
+            %span.slir-kind
+              = [image.dig(:generation, :image_type), image.dig(:generation, :style)].compact.join(' · ')
+          - if image.dig(:generation, :prompt)
+            %p.slir-prompt= image.dig(:generation, :prompt)
+          - else
+            %p.slir-prompt.slir-none (prompt not found in the project's saved history)

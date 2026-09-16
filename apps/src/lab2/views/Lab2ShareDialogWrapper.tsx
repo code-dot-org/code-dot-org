@@ -48,13 +48,14 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const selectedSong = null;
   // TODO: support thumbnail url.
   const thumbnailUrl = null;
-  // TODO: support abuse reporting.
-  const exceedsAbuseThreshold = false;
+  const isAbusive = useAppSelector(state => !!state.lab.isBlockedAbuse);
   const canShareSocial = isSignedIn && is13Plus;
 
   const [submissionStatus, setSubmissionStatus] = useState<
     SubmissionStatusType | undefined
   >(undefined);
+
+  const shareFailure = useAppSelector(state => state.lab.shareFailure);
 
   const fetchSubmissionStatusHandleError = (
     channelId: string,
@@ -117,6 +118,8 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         onSubmitClick={onSubmitClick}
         submissionStatus={submissionStatus}
         userSharingDisabled={userSharingDisabled}
+        shareFailure={shareFailure}
+        isAbusive={isAbusive}
       />
     ) : (
       <SubmitProjectDialog
@@ -135,7 +138,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
       shareUrl={shareUrl}
       selectedSong={selectedSong}
       thumbnailUrl={thumbnailUrl}
-      isAbusive={exceedsAbuseThreshold}
+      isAbusive={isAbusive}
       canPrint={projectType === 'artist'}
       channelId={channelId}
       appType={projectType}

@@ -39,6 +39,30 @@ class JSONVideoTest < ActiveSupport::TestCase
     assert_equal 'Student', summary[:audience]
   end
 
+  test 'summarize_for_lesson_edit scopes objectiveIds to the given lesson' do
+    lesson = create(:lesson)
+    other_lesson = create(:lesson)
+    lesson_objective = create(:objective, lesson: lesson)
+    other_objective = create(:objective, lesson: other_lesson)
+    video = create(:json_video)
+    video.objectives = [lesson_objective, other_objective]
+
+    summary = video.summarize_for_lesson_edit(lesson)
+
+    assert_equal video.id, summary[:id]
+    assert_equal video.s3_uri, summary[:s3Uri]
+    assert_equal [lesson_objective.id], summary[:objectiveIds]
+  end
+
+  test 'summarize_for_lesson_edit without a lesson returns all objectiveIds' do
+    video = create(:json_video)
+    video.objectives = [@objective1, @objective2]
+
+    summary = video.summarize_for_lesson_edit
+
+    assert_equal [@objective1.id, @objective2.id].sort, summary[:objectiveIds].sort
+  end
+
   test 'seed_record creates a new video' do
     File.stubs(:read).returns(video_data.to_json)
 

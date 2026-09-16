@@ -70,7 +70,7 @@ export const convertChannelsToProjectData = function (projects: Channel[]) {
 };
 
 export const PROJECT_DEFAULT_IMAGE =
-  '/blockly/media/projects/project_default.png';
+  '/blockly/media/projects/project_default.svg';
 
 export const PROJECT_DEFAULT_CARD_IMAGE_OVERRIDE: {
   [projectType: string]: string;

@@ -357,6 +357,18 @@
 <%    unless rack_env?(:adhoc) -%>
       BackupRetentionPeriod: !Ref DBBackupRetention
 <%    end -%>
+      # Database Insights + Enhanced Monitoring settings.
+<%    insights = {mode: 'standard', retention: 7, monitoring_interval: 60}
+      insights = {mode: 'advanced', retention: 465, monitoring_interval: 1} if rack_env?(:production)
+      if rack_env?(:production, :test)
+-%>
+      PerformanceInsightsEnabled: true
+      DatabaseInsightsMode: <%=insights[:mode]%>
+      PerformanceInsightsRetentionPeriod: <%=insights[:retention]%>
+      MonitoringInterval: <%=insights[:monitoring_interval]%>
+      # rds-monitoring-role was provisioned manually in 2015.
+      MonitoringRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/rds-monitoring-role"
+<%    end -%>
 <%    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
@@ -368,10 +380,6 @@
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       DBParameterGroupName: default.aurora-mysql8.0 #Explicitly stop setting a custom Instance ParameterGroup.
-<%      if rack_env?(:production) || rack_env?(:test) -%>
-      EnablePerformanceInsights: true
-      PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>
-<%      end -%>
 <%    end -%>
   DBProxy:
     Type: AWS::RDS::DBProxy

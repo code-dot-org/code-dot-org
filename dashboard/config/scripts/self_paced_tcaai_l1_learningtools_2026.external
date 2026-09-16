@@ -55,7 +55,7 @@ To support safe and appropriate use, students encounter a reminder message befor
 
 <!-- Start Chatting Button -->
 <div align="right">
-  <a href="#start" style="background-color: #8148B2; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 12pt; border-radius: 8px; display: inline-block;">
+  <a href="#start" style="background-color: #4C42CF; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 12pt; border-radius: 8px; display: inline-block;">
     Start Chatting
   </a>
 </div>

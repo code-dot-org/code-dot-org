@@ -4,10 +4,7 @@ import {
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
-import {
-  ScrollBlockDragger,
-  ScrollOptions,
-} from '@blockly/plugin-scroll-options';
+import {ScrollOptions} from '@blockly/plugin-scroll-options';
 import * as BlocklyCore from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -16,12 +13,10 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
-import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
-import experiments from '@cdo/apps/util/experiments';
 import * as utils from '@cdo/apps/utils';
 
 import {START_BLOCKS} from '../constants';
@@ -39,15 +34,12 @@ import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
-import {
-  initializeKeyboardNavigation,
-  preInjectRegistrations,
-} from './addons/cdoKeyboardNavigation';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {CdoScrollBlockDragger} from './addons/cdoScrollBlockDragger';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
 import initializeVariables from './addons/cdoVariables';
@@ -77,6 +69,7 @@ import {
   storeWorkspaceWidth,
   updateBlockLimits,
 } from './eventHandlers';
+import applyDscoThemeColors from './themes/applyDscoThemeColors';
 import {
   CdoDeuteranopiaDarkTheme,
   CdoProtanopiaDarkTheme,
@@ -159,11 +152,40 @@ const BlocklyWrapper = function (
   };
 };
 
+// Monkey patch: prevents toolbox from consuming keydown events so they reach
+// the workspace keyboard navigation handler. Still needed per blockly issue #713.
+// Also defers onClick_ past any pending focus/blur callbacks — Blockly 13's
+// FocusManager locks itself during those callbacks, which causes onClick_ to
+// throw when clicking the toolbox immediately after workspace disposal.
+class NavigationDeferringToolbox extends BlocklyCore.Toolbox {
+  protected override onKeyDown_(e: KeyboardEvent) {}
+
+  protected override onClick_(e: PointerEvent) {
+    try {
+      super.onClick_(e);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.includes('FocusManager state changes cannot happen')
+      ) {
+        setTimeout(() => super.onClick_(e), 0);
+      } else {
+        throw error;
+      }
+    }
+  }
+}
+
 function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
   registerTextJoinMutator();
-  preInjectRegistrations();
+  BlocklyCore.registry.register(
+    BlocklyCore.registry.Type.TOOLBOX,
+    BlocklyCore.registry.DEFAULT,
+    NavigationDeferringToolbox,
+    true
+  );
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -485,6 +507,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     xml,
     options = {}
   ) {
+    applyDscoThemeColors([CdoTheme, CdoDarkTheme, CdoJigsawTheme]);
     const theme = options.theme || CdoTheme;
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
@@ -545,6 +568,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    applyDscoThemeColors([CdoTheme, CdoDarkTheme, CdoJigsawTheme]);
+
     // Ensure we do not translate content within the blockly workspace
     if (typeof container !== 'string') {
       (container as HTMLElement).classList.add('notranslate');
@@ -571,7 +596,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
         },
       },
       plugins: {
-        blockDragger: ScrollBlockDragger,
+        blockDragger: CdoScrollBlockDragger,
         metricsManager: CdoMetricsManager,
         connectionChecker: CdoConnectionChecker,
       },
@@ -669,19 +694,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
-    }
-
-    if (
-      options.enableKeyboardNavigation ||
-      experiments.isEnabledAllowingQueryString(
-        experiments.BLOCKLY_KEYBOARD_NAVIGATION
-      ) ||
-      DCDO.get('blockly-keyboard-navigation', false)
-    ) {
-      initializeKeyboardNavigation(
-        workspace,
-        blocklyWrapper.isDarkTheme || false
-      );
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

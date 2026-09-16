@@ -37,6 +37,15 @@ export function getDatasets(): Dataset[] {
 }
 
 /**
+ * Returns the raw manifest entries without touching I18n. Safe to call
+ * before the ailab package has been mounted (e.g. from levelbuilder
+ * tooling that inspects the dataset catalogue but never renders the lab).
+ */
+export function getRawDatasets(): Dataset[] {
+  return datasetsManifest.datasets;
+}
+
+/**
  * Modifies the given datasets to have localized values.
  * @param datasets {Object[]} Array of information about datasets. Modifies the given objects.
  * @returns {Object[]} The given datasets.

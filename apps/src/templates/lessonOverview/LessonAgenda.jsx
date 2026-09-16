@@ -4,6 +4,8 @@ import React, {Component} from 'react';
 
 import i18n from '@cdo/locale';
 
+import styles from './lesson-plan.module.scss';
+
 export default class LessonAgenda extends Component {
   static propTypes = {
     activities: PropTypes.array.isRequired,
@@ -21,7 +23,7 @@ export default class LessonAgenda extends Component {
     return (
       <div>
         {filteredActivitiesList.map(activity => (
-          <ul key={activity.key} style={{listStyleType: 'none'}}>
+          <ul key={activity.key} className={styles.noBullets}>
             <li>
               {activity.duration > 0 && (
                 <a href={`#activity-${activity.key}`}>{`${
@@ -35,7 +37,7 @@ export default class LessonAgenda extends Component {
               )}
             </li>
             {activity.activitySections.map(section => (
-              <li style={{marginLeft: 15}} key={section.key}>
+              <li className={styles.agendaSection} key={section.key}>
                 {section.duration > 0 && (
                   <a
                     href={`#activity-section-${section.key}`}

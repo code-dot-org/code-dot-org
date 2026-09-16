@@ -6,7 +6,6 @@ import fontConstants from '@cdo/apps/fontConstants';
 import msg from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import color from '../../util/color';
 import experiments from '../../util/experiments';
 import {showPreview} from '../redux/data';
 
@@ -98,16 +97,16 @@ const styles = {
   tableName: {
     ...fontConstants['main-font-bold'],
     cursor: 'pointer',
-    color: color.dark_charcoal,
+    color: 'var(--text-neutral-primary)',
   },
   tableDescription: {
     ...fontConstants['main-font-regular'],
-    color: color.dark_charcoal,
+    color: 'var(--text-neutral-primary)',
     wordBreak: 'break-word',
   },
   preview: {
-    backgroundColor: color.background_gray,
-    borderColor: color.lighter_gray,
+    backgroundColor: 'var(--background-neutral-secondary)',
+    borderColor: 'var(--borders-neutral-primary)',
     ...fontConstants['main-font-regular'],
     fontSize: '14px',
     padding: '1px 7px 2px',
@@ -117,11 +116,11 @@ const styles = {
     marginLeft: 0,
   },
   import: {
-    backgroundColor: color.orange,
+    backgroundColor: 'var(--background-accent-orange-primary)',
     border: 'none',
     ...fontConstants['main-font-semi-bold'],
     fontSize: '14px',
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
     padding: '1px 7px 2px',
     height: '30px',
     width: '90px',

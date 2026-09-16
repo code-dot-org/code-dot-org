@@ -1,10 +1,12 @@
+import Alert from '@code-dot-org/component-library/alert';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import msg from '@cdo/locale';
 
 import SafeMarkdown from '../../templates/SafeMarkdown';
-import color from '../../util/color';
+
+import moduleStyles from './data-entry-error.module.scss';
 
 class DataEntryError extends React.Component {
   static propTypes = {
@@ -12,33 +14,23 @@ class DataEntryError extends React.Component {
   };
 
   render() {
-    return this.props.isVisible ? (
-      <div style={styles.bottom}>
-        <div style={{...styles.container, ...styles.visible}}>
-          <SafeMarkdown markdown={msg.invalidDataEntryTypeError()} />
-        </div>
+    return (
+      <div className={moduleStyles.wrapper}>
+        {this.props.isVisible && (
+          <Alert
+            type="warning"
+            className={moduleStyles.alert}
+            text={
+              <SafeMarkdown
+                markdown={msg.invalidDataEntryTypeError()}
+                unwrapped
+              />
+            }
+          />
+        )}
       </div>
-    ) : (
-      // Blank space so layout stays the same whether or not error is visible.
-      <div style={{...styles.container, ...styles.bottom}} />
     );
   }
 }
-
-const styles = {
-  container: {
-    height: 40,
-    paddingTop: 12,
-  },
-  visible: {
-    background: color.lighter_yellow,
-    paddingLeft: 12,
-    paddingRight: 12,
-    paddingBottom: 0,
-  },
-  bottom: {
-    paddingBottom: 8,
-  },
-};
 
 export default DataEntryError;

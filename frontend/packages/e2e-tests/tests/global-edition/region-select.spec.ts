@@ -15,11 +15,11 @@ test.describe('Global Edition - Region Select', () => {
       const signIn = new SignInPage(page);
 
       await signIn.goto();
-      await expect(signIn.selectedLocale).toContainText('English');
+      await expect(signIn.footer.selectedLocale).toContainText('English');
 
       await signIn.selectLocale('فارسی');
       await expect(page).toHaveURL(/\/fa\/users\/sign_in\?lang=fa-IR/);
-      await expect(signIn.selectedLocale).toContainText('فارسی');
+      await expect(signIn.footer.selectedLocale).toContainText('فارسی');
 
       // Root redirects to the persisted region (no lang=).
       await page.goto('/');
@@ -27,7 +27,7 @@ test.describe('Global Edition - Region Select', () => {
 
       await signIn.selectLocale('English');
       await expect(page).toHaveURL(/\/users\/sign_in\?lang=en-US/);
-      await expect(signIn.selectedLocale).toContainText('English');
+      await expect(signIn.footer.selectedLocale).toContainText('English');
     },
   );
 
@@ -43,7 +43,7 @@ test.describe('Global Edition - Region Select', () => {
 
       await lab.new();
       await expect(lab.instructionsTab).toContainText('Instructions');
-      await expect(lab.selectedLocale).toContainText('English');
+      await expect(lab.footer.selectedLocale).toContainText('English');
 
       await lab.selectLabLocale('فارسی');
       await expect(page).toHaveURL(
@@ -51,12 +51,12 @@ test.describe('Global Edition - Region Select', () => {
       );
       // Farsi for "Instructions".
       await expect(lab.instructionsTab).toContainText('دستورالعمل');
-      await expect(lab.selectedLocale).toContainText('فارسی');
+      await expect(lab.footer.selectedLocale).toContainText('فارسی');
 
       await lab.selectLabLocale('English');
       await expect(page).toHaveURL(/\/projects\/artist\/.*\/edit\?lang=en-US/);
       await expect(lab.instructionsTab).toContainText('Instructions');
-      await expect(lab.selectedLocale).toContainText('English');
+      await expect(lab.footer.selectedLocale).toContainText('English');
     },
   );
 });

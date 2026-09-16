@@ -1,0 +1,35 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-08-20T20:46:03.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-ml-fundamentals-lesson8-level1-choice2-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Change the value of `neighbors` to adjust how many neighbors are considered when making a prediction.\r\n- Find the value of `neighbors` that you think results in the best prediction. You’ll answer a question about this later.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "display_name": "The Alaskan Tundra",
+    "bubble_choice_description": "Can you brave the darkness and snow?",
+    "thumbnail_url": "https://images.code.org/ba803fc26897c6b0103f89f0af31694a-alaska.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-20 20:47:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-08-20 20:50:48 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

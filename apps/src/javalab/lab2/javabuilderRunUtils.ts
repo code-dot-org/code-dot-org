@@ -154,7 +154,6 @@ export async function handleRunClick(
       resolve();
     };
 
-    // TODO: Captcha handling.
     activeConnection = new JavabuilderConnection(
       writeToConsole,
       miniApp,
@@ -171,16 +170,18 @@ export async function handleRunClick(
       /* onValidationPassed */ () => {},
       /* onValidationFailed */ () => {},
       /* onConnectDone */ () => {},
-      /* setIsCaptchaDialogOpen */ () => {},
       channelId,
       /* onValidationResult */ onValidationResult
     );
 
-    if (overrideSources) {
+    if (overrideSources && overrideValidation) {
+      // Levelbuilder-only endpoint; only start mode sets overrideValidation.
       activeConnection.connectJavabuilderWithOverrides(
         overrideSources,
         overrideValidation
       );
+    } else if (overrideSources) {
+      activeConnection.connectJavabuilderWithOverrideSources(overrideSources);
     } else {
       activeConnection.connectJavabuilder();
     }

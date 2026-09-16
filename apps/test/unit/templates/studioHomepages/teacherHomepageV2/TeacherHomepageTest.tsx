@@ -164,6 +164,9 @@ describe('TeacherHomepage', () => {
         json: () => Promise.resolve({data: {matchedPersona: true}}),
       } as Response);
     postSpy = jest.spyOn(HttpClient, 'post');
+    // OnboardingChecklist checks demo-section staleness on mount; a 204 means
+    // "up to date" and keeps the check from hitting the real network.
+    jest.spyOn(HttpClient, 'get').mockResolvedValue({status: 204} as Response);
     sendEventSpy = jest
       .spyOn(analyticsReporter, 'sendEvent')
       .mockImplementation(() => {});
@@ -288,6 +291,15 @@ describe('TeacherHomepage', () => {
     await act(async () => await new Promise(process.nextTick));
     expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TEACHER_LOGIN_EVENT, {
       'user id': 1,
+    });
+  });
+
+  it('requests teaching profile data as JSON', async () => {
+    renderComponent();
+    await act(async () => await new Promise(process.nextTick));
+
+    expect(globalThis.fetch).toHaveBeenCalledWith('/teaching_profile_data', {
+      headers: {Accept: 'application/json'},
     });
   });
 

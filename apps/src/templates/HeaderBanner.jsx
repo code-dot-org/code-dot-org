@@ -15,7 +15,8 @@ export default class HeaderBanner extends React.Component {
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
     children: PropTypes.node,
-    backgroundUrl: PropTypes.string.isRequired,
+    backgroundUrl: PropTypes.string,
+    backgroundColor: PropTypes.string,
     backgroundImageStyling: PropTypes.object,
     imageUrl: PropTypes.string,
     imgStyling: PropTypes.object,
@@ -28,13 +29,15 @@ export default class HeaderBanner extends React.Component {
       description,
       children,
       backgroundUrl,
+      backgroundColor,
       backgroundImageStyling,
       imageUrl,
       imgStyling,
     } = this.props;
 
     const backgroundImageStyle = {
-      backgroundImage: `url(${backgroundUrl})`,
+      ...(backgroundColor && {backgroundColor}),
+      ...(backgroundUrl && {backgroundImage: `url(${backgroundUrl})`}),
       ...backgroundImageStyling,
     };
 

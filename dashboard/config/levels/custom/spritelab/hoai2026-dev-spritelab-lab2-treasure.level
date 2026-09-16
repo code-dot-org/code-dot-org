@@ -1,0 +1,82 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-08-24T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "code"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
+    "guide_steps": [
+      {
+        "text": "**Make your treasure worth finding.** Add **when [ ] touches [ ]**, picking your character and your treasure from the dropdowns, and put a **say** block inside it.  Then click **Play** and go and get it."
+      },
+      {
+        "text": "**Your treasure says something when you reach it.** Continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
+      }
+    ],
+    "long_instructions": "# Make your treasure worth finding\nAdd **when [ ] touches [ ]**, picking your character and your treasure, and put a **say** block inside it.",
+    "toolbox_definition": {
+      "kind": "flyoutToolbox",
+      "contents": [
+        {
+          "kind": "block",
+          "type": "gamelab_checkTouching",
+          "inputs": {
+            "SPRITE1": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            },
+            "SPRITE2": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_spriteSay",
+          "fields": {
+            "SPEECH": "Treasure!"
+          },
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

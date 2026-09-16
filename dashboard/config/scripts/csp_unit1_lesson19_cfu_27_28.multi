@@ -1,0 +1,23 @@
+name 'csp-unit1-lesson19-cfu_27_28'
+title 'Check Your Understanding'
+
+wrong 'One space from the start, still facing the food truck'
+right 'Back where it started, facing the opposite direction'
+wrong 'Two spaces from the start, still facing the food truck'
+wrong 'Two spaces from the start, facing the opposite direction'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+The painter starts at the corner, facing the food truck. Where will it be after this code runs?
+
+```
+move()
+turn_left()
+turn_left()
+move()
+
+```
+
+![](https://images.code.org/f8930dedd4ffd14ac9f82e7bfe01e433-image-1787770393518.png)
+MARKDOWN

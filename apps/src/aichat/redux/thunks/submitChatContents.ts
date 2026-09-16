@@ -11,7 +11,10 @@ import {
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import type {AichatLevelProperties} from '@cdo/apps/aichatLab/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {isTurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
+import {
+  isTurnstileDevToolsError,
+  turnstileUserMessage,
+} from '@cdo/apps/aiGateway/turnstile';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -60,7 +63,7 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
-      responseCallback?: (response: string) => string;
+      jsonSchemaResponseCallback?: (response: unknown) => string;
       lessonId?: number;
     },
     thunkAPI
@@ -76,7 +79,7 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
-      responseCallback,
+      jsonSchemaResponseCallback,
       lessonId,
     } = newUserMessageInput;
 
@@ -230,11 +233,23 @@ export const submitChatContents = createAsyncThunk(
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
-        // Structured-output callbacks only apply to successful model responses.
-        if (message.status === Status.OK) {
-          message.chatMessageText =
-            responseCallback?.(message.chatMessageText) ??
-            message.chatMessageText;
+        // jsonSchemaResponseCallback only applies to successful model
+        // responses, and is only ever set for a jsonSchema-configured
+        // session -- so it always gets parsed JSON, never a bare string.
+        // structuredOutput is already parsed (gateway path); the legacy
+        // Rails-job path never has a parsed form, so parse chatMessageText
+        // here once, rather than pushing that split onto every callback.
+        if (message.status === Status.OK && jsonSchemaResponseCallback) {
+          try {
+            const parsedResponse =
+              message.structuredOutput ?? JSON.parse(message.chatMessageText);
+            message.chatMessageText =
+              jsonSchemaResponseCallback(parsedResponse);
+          } catch (err) {
+            // Model didn't return valid JSON despite the schema -- keep the
+            // raw text rather than losing the response to a crashed thunk.
+            console.error('Failed to parse structured chat response', err);
+          }
         }
         dispatch(addChatEvent(message));
       }
@@ -264,10 +279,16 @@ async function handleChatCompletionError(
   viewAsUserId: number | null,
   dimensions: MetricDimension[] = []
 ) {
+  // A Turnstile failure that got this far already produced a metric and a log
+  // in recordTurnstileOutcome, and an error tag on reportGatewayError. Logging
+  // it a third time here adds nothing.
+  const turnstileMessage = turnstileUserMessage(error);
+
   // Skip log report for expected client-side conditions (403, DevTools block).
   if (
     !(error instanceof NetworkError && error.response.status === 403) &&
-    !isTurnstileDevToolsError(error)
+    !isTurnstileDevToolsError(error) &&
+    !turnstileMessage
   ) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -296,6 +317,15 @@ async function handleChatCompletionError(
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
+  } else if (turnstileMessage) {
+    dispatch(
+      addChatEvent({
+        removeId: getNewRemoveId(),
+        text: turnstileMessage,
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
   } else if (isTurnstileDevToolsError(error)) {
     dispatch(
       addChatEvent({

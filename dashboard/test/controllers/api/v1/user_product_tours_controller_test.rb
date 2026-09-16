@@ -8,7 +8,7 @@ class Api::V1::UserProductToursControllerTest < ActionDispatch::IntegrationTest
     assert_response :unauthorized
   end
 
-  test 'returns only tour names with completed_at set' do
+  test 'separates tour names into completed and started (not yet completed)' do
     teacher = create(:teacher)
     sign_in teacher
     UserProductTour.create!(user: teacher, tour_name: UserProductTour::CREATE_CLASS_SECTION, completed_at: Time.now.utc)
@@ -17,17 +17,20 @@ class Api::V1::UserProductToursControllerTest < ActionDispatch::IntegrationTest
     get '/dashboardapi/v1/user_product_tours', as: :json
 
     assert_response :ok
-    assert_equal [UserProductTour::CREATE_CLASS_SECTION], response.parsed_body
+    assert_equal(
+      {'completed' => [UserProductTour::CREATE_CLASS_SECTION], 'started' => [UserProductTour::VIEW_SYLLABUS]},
+      response.parsed_body
+    )
   end
 
-  test 'returns empty array when no tours are completed' do
+  test 'returns empty arrays when no tours exist' do
     teacher = create(:teacher)
     sign_in teacher
 
     get '/dashboardapi/v1/user_product_tours', as: :json
 
     assert_response :ok
-    assert_equal [], response.parsed_body
+    assert_equal({'completed' => [], 'started' => []}, response.parsed_body)
   end
 
   test 'only returns tours belonging to the current user' do
@@ -39,7 +42,7 @@ class Api::V1::UserProductToursControllerTest < ActionDispatch::IntegrationTest
     get '/dashboardapi/v1/user_product_tours', as: :json
 
     assert_response :ok
-    assert_equal [], response.parsed_body
+    assert_equal({'completed' => [], 'started' => []}, response.parsed_body)
   end
 
   # POST /create

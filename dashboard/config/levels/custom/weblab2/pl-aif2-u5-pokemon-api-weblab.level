@@ -1,0 +1,78 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-07-01T21:03:09.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "bubble_choice_description": "Predict what will be displayed on screen.",
+    "display_name": "Pokémon API",
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "## Make a Prediction\r\n\r\nRead through `script.js` and look at the display preview. What do you think will appear on screen when you click \"Generate Random Pokémon\"?",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>PokéStats Generator</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"dex\">\n        <div class=\"dex-top\">\n            <div class=\"light-big\"></div>\n            <div class=\"lights-row\">\n                <div class=\"light-small light-red\"></div>\n                <div class=\"light-small light-yellow\"></div>\n                <div class=\"light-small light-green\"></div>\n            </div>\n        </div>\n        <div class=\"screen-housing\">\n            <div class=\"screen\">\n                <div class=\"screen-label\">Pokédex v1.0</div>\n                <h1 id=\"pokeName\">Ready?</h1>\n                <p id=\"pokeType\">---</p>\n                <div class=\"stats-grid\">\n                    <div class=\"stat-box wide\">\n                        <div class=\"stat-label\">Base Experience</div>\n                        <div id=\"baseExp\">--</div>\n                    </div>\n                    <div class=\"stat-box\">\n                        <div class=\"stat-label\">Height</div>\n                        <div id=\"pokeHeight\">--</div>\n                    </div>\n                    <div class=\"stat-box\">\n                        <div class=\"stat-label\">Weight</div>\n                        <div id=\"pokeWeight\">--</div>\n                    </div>\n                    <div class=\"stat-box wide\">\n                        <div class=\"stat-label\">Ability</div>\n                        <div id=\"pokeAbility\">--</div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"dex-bottom\">\n            <button id=\"generateBtn\">Generate Pokémon</button>\n        </div>\n    </div>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const generateBtn = document.getElementById('generateBtn');\n\nconst updateUI = (data) => {\n    document.getElementById('pokeName').innerText = data.name;\n\n    let typeString = '';\n    for (let i = 0; i < data.types.length; i++) {\n        if (i > 0) typeString = typeString + ' • ';\n        typeString = typeString + data.types[i].type.name;\n    }\n    document.getElementById('pokeType').innerText = typeString;\n\n    document.getElementById('baseExp').innerText = data.base_experience;\n    document.getElementById('pokeHeight').innerText = (data.height / 10) + 'm';\n    document.getElementById('pokeWeight').innerText = (data.weight / 10) + 'kg';\n    document.getElementById('pokeAbility').innerText = data.abilities[0].ability.name.replace('-', ' ');\n    generateBtn.innerText = 'Fetch New Pokémon';\n};\n\nconst handleGenerate = () => {\n    const randomId = Math.floor(Math.random() * 898) + 1;\n    fetch('https://pokeapi.co/api/v2/pokemon/' + randomId)\n        .then(response => response.json())\n        .then(data => updateUI(data))\n        .catch(error => {\n            document.getElementById('pokeName').innerText = 'Error!';\n        });\n};\n\ngenerateBtn.addEventListener('click', handleGenerate);",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n    box-sizing: border-box;\n}\n\nbody {\n    margin: 0;\n    background: white;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-height: 100vh;\n    font-family: 'Courier New', monospace;\n}\n\n.dex {\n    background: #cc0000;\n    border: 3px solid #990000;\n    border-radius: 12px 12px 4px 4px;\n    padding: 20px;\n    max-width: 480px;\n    width: 100%;\n}\n\n.dex-top {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    margin-bottom: 14px;\n}\n\n.light-big {\n    width: 28px;\n    height: 28px;\n    border-radius: 50%;\n    background: #3399ff;\n    border: 3px solid #1a1a1a;\n}\n\n.lights-row {\n    display: flex;\n    gap: 6px;\n    align-items: center;\n}\n\n.light-small {\n    width: 12px;\n    height: 12px;\n    border-radius: 50%;\n    border: 2px solid #1a1a1a;\n}\n\n.light-red { background: #ff4444; }\n.light-yellow { background: #ffcc00; }\n.light-green { background: #44cc44; }\n\n.screen-housing {\n    background: #1a1a1a;\n    border-radius: 8px;\n    padding: 12px;\n    border: 3px solid #111;\n}\n\n.screen {\n    background: #1c2b1c;\n    border-radius: 4px;\n    padding: 20px;\n    border: 2px solid #0a150a;\n}\n\n.screen-label {\n    font-size: 18px;\n    color: #4a7a4a;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n    margin-bottom: 12px;\n}\n\n.screen h1 {\n    font-size: 28px;\n    color: #88ff88;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    margin: 0 0 4px 0;\n}\n\n#pokeType {\n    font-size: 18px;\n    color: #44aa44;\n    letter-spacing: 3px;\n    margin: 0 0 16px 0;\n}\n\n.stats-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 10px;\n}\n\n.stat-box {\n    background: #0f1f0f;\n    border: 1px solid #2a4a2a;\n    border-radius: 4px;\n    padding: 10px;\n    font-size: 20px;\n    color: #88ff88;\n    font-weight: bold;\n}\n\n.stat-box.wide {\n    grid-column: span 2;\n    text-align: center;\n    font-size: 36px;\n}\n\n#pokeAbility {\n    font-size: 16px;\n}\n\n.stat-label {\n    font-size: 18px;\n    color: #4a7a4a;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    margin-bottom: 4px;\n    font-weight: normal;\n}\n\n.dex-bottom {\n    margin-top: 14px;\n    display: flex;\n    justify-content: center;\n}\n\n#generateBtn {\n    background: #1a1a1a;\n    color: #88ff88;\n    border: 2px solid #333;\n    border-radius: 6px;\n    padding: 12px 32px;\n    font-family: 'Courier New', monospace;\n    font-size: 18px;\n    font-weight: bold;\n    letter-spacing: 1px;\n    cursor: pointer;\n    text-transform: uppercase;\n}\n\n#generateBtn:hover {\n    background: #2a2a2a;\n    border-color: #555;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/1cd917418afc57df2c8066621c2004e5-Pasted Graphic.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-01T21:03:09.580+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level4a-choice-test-2025-pi_2025-_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level4a-choice-test-2025-pi_2025-_2026\"},{\"changed_at\":\"2026-07-01 21:04:41 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>

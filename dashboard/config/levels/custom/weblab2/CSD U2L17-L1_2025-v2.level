@@ -6,7 +6,7 @@
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Making a Multi-page Site\r\n\r\n\r\n\r\nA web site should include more than one web page, and they should connect to each other.   Here's an example of a project with multiple pages that are connected by hyperlinks (the blue underlined words that take you to another page when you click on them).\r\n\r\n# Do This\r\n1) Use the inspector tool to see the code that creates the hyperlinks on the top of index.html.\r\n* Discuss with your partner how you think that code works.\r\n",
+    "long_instructions": "# Making a Multi-page Site\r\n\r\n\r\n\r\nA web site should include more than one web page, and they should connect to each other.   Here's an example of a project with multiple pages that are connected by hyperlinks (the blue underlined words that take you to another page when you click on them).\r\n\r\n# Do This\r\n1) Use the Inspect Tool to see what tag is used to create the hyperlinks on the top of index.html.\r\n2) Find that tag in the code editor.\r\n3) Discuss with your partner how you think that code works.\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -33,7 +33,7 @@
           "name": "index.html",
           "language": "html",
           "contents": "<!DOCTYPE html>\n<html>\n   <head>\n     <link rel=\"stylesheet\" href=\"style-sheet.css\">\n     <link href=\"https://fonts.googleapis.com/css?family=Rock Salt&display=swap\" rel=\"stylesheet\">\n   </head>\n  <body>\n    <!-- website header -->\n    <a href=\"index.html\">Home</a>\n    <a href=\"facts.html\">Fun Facts</a>\n    <a href=\"need.html\">Why Do We Need Them?</a>\n    <a href=\"remedies.html\">Bite Remedies</a>\n     <h1>Mosquitoes</h1>\n    <img src=\"mosquito_leaf.jpg\" class=\"pictures\" alt=\"mosquito on a leaf\">\n    <h6> Jurgen, Pexels, Pexels License </h6>\n     <p>Mosquitoes. Most people know them as the bug that gives them the itchiest bites. Many times we may wonder why we even need mosquitoes on this world. But like an animal, there are still a lot of cool things about mosquitoes that many times we don't care to learn or think about..<p>\n     <hr>\n     <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.\n   </body>\n\n</html>",
-          "active": false,
+          "active": true,
           "folderId": "0"
         },
         "2": {
@@ -42,7 +42,7 @@
           "language": "html",
           "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style-sheet.css\">\n    <link href=\"https://fonts.googleapis.com/css?family=Rock Salt&display=swap\" rel=\"stylesheet\">\n  </head>\n  <body>\n    <!-- website header -->\n    <a href=\"index.html\">Home</a>\n    <a href=\"facts.html\">Fun Facts</a>\n    <a href=\"need.html\">Why Do We Need Them?</a>\n    <a href=\"remedies.html\">Bite Remedies</a>\n    <h1>\n      Fun Facts About Mosquitoes\n    </h1>  \n    <img src=\"tiger_mosquito.jpg\" class=\"pictures\" alt=\"a tiger mosquito\">\n    <h6> WikiImages, Pixabay, Pixabay License </h6>\n   <ol> \n     <li> Only female mosquitoes bite people </li>\n     <h6> Male mosquitoes can live off of plants, but females need to proteins in blood to help them prohduce eggs.</h6>\n     <li> Their spit causes us to itch </li>\n     <h6> The saliva from the mosquito when it draws our blood triggers a response from out immune system, giving us bump on our skin that's really itchy. </h6> \n     <li> They LOVE carbon dioxide </li>\n     <h6> Mosquitoes are attracted to carbon dioxide. It is how they locate more bodies to bite. </h6>\n     <li> There's a lot of them </li>\n     <h6> There are 3000+ species of mosquitoes out in the world. But don't worry, only a couple hundred bite humans. Other species may bite other animals. </h6>\n     <li> The CDC lists 6 chemicals that can be used to prevent mosquito bites </li>\n     <h6> When getting insect repellent, make sure it contains one of these chemicals: DEET, Picaridin, IR3535, Oil of lemon eucalyptus (OLE), Para-menthane-diol (PMD), 2-undecanone </h6>\n    </ol>\n\n<hr>\n    <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/88x31.png\" /></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International License</a>.\n  </body>\n</html>  ",
           "folderId": "0",
-          "active": true
+          "active": false
         },
         "3": {
           "id": "3",
@@ -114,11 +114,7 @@
         "2",
         "3",
         "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9"
+        "5"
       ]
     },
     "ai_tutor_prompt_settings": {
@@ -134,9 +130,11 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:25.304+00:00\",\"changed\":[\"cloned from \\\"CSD U2L17-L1-2025\\\"\"],\"cloned_from\":\"CSD U2L17-L1-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:25.304+00:00\",\"changed\":[\"cloned from \\\"CSD U2L17-L1-2025\\\"\"],\"cloned_from\":\"CSD U2L17-L1-2025\"},{\"changed_at\":\"2026-07-25 01:09:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-25 01:09:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

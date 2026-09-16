@@ -141,8 +141,11 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
 
     it 'routing helpers generates region version of urls' do
       get_regional_page
-      new_user_button = must_select("form#new_user[method='post']").first
-      _(new_user_button['action']).must_equal regional_page_path
+      # The sign-in form is React-rendered now, so the region-versioned action
+      # (session_path) is handed to the mount point as a data attribute rather
+      # than a server-rendered form[action].
+      sign_in_mount = must_select('#sign-in-page-layout').first
+      _(sign_in_mount['data-sign-in-path']).must_equal regional_page_path
     end
 
     context 'for signed-in user' do

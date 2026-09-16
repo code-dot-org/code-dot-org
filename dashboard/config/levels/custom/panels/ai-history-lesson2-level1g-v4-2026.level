@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-08-11T07:52:55.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Timnit Gebru\n\n### AI Ethics & Accountability\n\n*Image attribution: [Timnit Gebru](https://commons.wikimedia.org/wiki/File:Timnit_Gebru_crop.jpg) by TechCrunch, via Wikimedia Commons. CC BY 2.0.*\n",
+        "imageUrl": "https://images.code.org/aa203136e542a258dcfa69238038e9b1-gebru2.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-37f6d857-ab3b-4e1e-b18d-ce3bfaa38a45",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### What She Contributed\n\nGebru is a computer scientist and AI ethics researcher who co-authored the Gender Shades study on facial recognition bias, and later co-wrote an influential paper on the risks of large language models. After a high-profile departure from Google in 2020, she founded the Distributed AI Research Institute (DAIR) to support independent AI research.<sup>1</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n",
+        "imageUrl": "https://images.code.org/c7831aab84b152f0640737890a1543f6-datasets.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-1eab77e5-f2ef-4fdf-b059-19dd3b604abd",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Connection to AI History\n\nGebru’s work connects to growing debates about AI accountability, especially as large-scale AI systems became more commercially significant. Her research showed that bias in facial recognition and risks from language models were not just technical problems — they were social and ethical ones.<sup>2</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n",
+        "imageUrl": "https://images.code.org/238a7ffdbbb69a70e116cbbb9073dfa7-datasets_2.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-0c7ff7a4-4735-4c26-84d0-b8872e1b2b50",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "### Why It Matters\n\nGebru’s career illustrates both the importance and the difficulty of doing critical AI research inside and outside large technology companies. Her work helped establish AI ethics as a serious field of inquiry and pushed the industry to reckon with the social consequences of large AI systems.<sup>1</sup>\n\n*Image attribution: AI-generated illustration created with ChatGPT (OpenAI), 2026.*\n\n**Sources**\n\n1. [TIME100 AI — Timnit Gebru](https://time.com/collections/time100-ai/6308988/timnit-gebru-ai/)\n2. [MIT News — Study finds gender and skin-type bias in AI systems](https://news.mit.edu/2018/study-finds-gender-skin-type-bias-artificial-intelligence-systems-0212)",
+        "imageUrl": "https://images.code.org/c8d06c9a27a81d45cb186308fd14392e-datasets_3.jpg",
+        "key": "aif-ai-powered-threats-defenses-lesson2-ddos-panels-87ad2c1f-b495-4264-a7c0-51cce6ca9fff",
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_2026-dev",
+    "display_name": "Timnit Gebru",
+    "bubble_choice_description": "Choose Timnit Gebru to explore how her research exposed bias and risks in AI systems and advanced accountability, independent research, and AI ethics.",
+    "use_links": "false",
+    "thumbnail_url": "https://images.code.org/0202a41ebff2d16f59eecb8b3b31b574-gebru.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-11T07:52:55.270+00:00\",\"changed\":[\"cloned from \\\"ai-history-lesson2-level1f-v4-2026\\\"\"],\"cloned_from\":\"ai-history-lesson2-level1f-v4-2026\"},{\"changed_at\":\"2026-08-11 07:56:07 +0000\",\"changed\":[\"panels\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Panels>

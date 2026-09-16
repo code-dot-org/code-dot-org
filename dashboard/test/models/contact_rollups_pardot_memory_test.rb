@@ -46,45 +46,6 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       first
   end
 
-  test 'download_pardot_prospects' do
-    prospects = [
-      {'id' => '1', 'email' => 'alex@rollups.com', 'db_Opt_In' => 'Yes'},
-      {'id' => '2', 'email' => 'beta@rollups.com', 'db_City' => 'Seattle'},
-    ]
-    PardotV2.stubs(:retrieve_prospects).once.yields(prospects)
-
-    ContactRollupsPardotMemory.download_pardot_prospects
-
-    prospects.each do |prospect|
-      record = ContactRollupsPardotMemory.
-        find_by(email: prospect['email'], pardot_id: prospect['id'].to_i)
-
-      refute_nil record
-      refute_nil record.pardot_id_updated_at
-      refute_nil record.data_synced_at
-      assert_equal prospect.except('email', 'id'), record.data_synced
-    end
-  end
-
-  test 'download_deleted_pardot_prospects' do
-    deleted_prospects = [
-      {'id' => '1', 'email' => 'earth@rollups.com'},
-      {'id' => '2', 'email' => 'mars@rollups.com'},
-      # There could be multiple prospects with the same email address, but with different pardot_id.
-      {'id' => '3', 'email' => 'earth@rollups.com'}
-    ]
-    PardotV2.stubs(:retrieve_prospects).once.yields(deleted_prospects)
-
-    ContactRollupsPardotMemory.download_deleted_pardot_prospects
-
-    deleted_prospects.each do |prospect|
-      record = ContactRollupsPardotMemory.find_by(email: prospect['email'])
-      refute_nil record
-      refute_nil record.data_rejected_at
-      assert_equal PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT, record.data_rejected_reason
-    end
-  end
-
   test 'query_new_contacts' do
     assert_equal 0, ContactRollupsProcessed.count
 
@@ -190,6 +151,24 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
         data_synced: {db_Opt_In: 'Yes'},
         data_rejected_reason: PardotHelpers::ERROR_PROSPECT_DELETED_FROM_PARDOT
       },
+      {
+        email: 'stale-invalid-id',
+        pardot_id: 6,
+        pardot_id_updated_at: base_time - 2.days,
+        data_synced_at: base_time - 1.day,
+        data_synced: {db_Opt_In: 'Yes'},
+        data_rejected_at: base_time,
+        data_rejected_reason: PardotHelpers::ERROR_INVALID_PROSPECT_ID
+      },
+      {
+        email: 'refreshed-invalid-id',
+        pardot_id: 7,
+        pardot_id_updated_at: base_time + 1.day,
+        data_synced_at: base_time - 1.day,
+        data_synced: {db_Opt_In: 'Yes'},
+        data_rejected_at: base_time,
+        data_rejected_reason: PardotHelpers::ERROR_INVALID_PROSPECT_ID
+      },
       # dummy records
       {email: 'delta', pardot_id: nil},
       {email: 'epsilon', pardot_id: 4},
@@ -206,6 +185,10 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
       {email: 'gamma', data: {opt_in: 1}, data_updated_at: base_time},
       # Case 4 (should be ignored): prospect has been deleted from Pardot
       {email: 'omega', data: {opt_in: 1}, data_updated_at: base_time},
+      # Case 5 (should be ignored): invalid Pardot ID has not changed since its rejection
+      {email: 'stale-invalid-id', data: {opt_in: 0}, data_updated_at: base_time},
+      # Case 6: invalid Pardot ID was refreshed after its rejection
+      {email: 'refreshed-invalid-id', data: {opt_in: 0}, data_updated_at: base_time},
       # dummy records
       {email: 'delta'},
       {email: 'zeta'},
@@ -221,7 +204,8 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
     expected_results = [
       {'email' => 'alpha', 'pardot_id_changed' => 0},
       {'email' => 'beta', 'pardot_id_changed' => 0},
-      {'email' => 'gamma', 'pardot_id_changed' => 1}
+      {'email' => 'gamma', 'pardot_id_changed' => 1},
+      {'email' => 'refreshed-invalid-id', 'pardot_id_changed' => 1}
     ]
     assert_equal expected_results, results
   end

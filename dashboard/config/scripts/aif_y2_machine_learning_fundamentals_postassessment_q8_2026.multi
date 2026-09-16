@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q8-2026'
+
+wrong 'To describe how many predictions a model can make accurately'
+wrong 'To measure how much data was missing from the training data'
+wrong "To measure how much a change to a model's input will affect its output"
+right "To measure how good or bad a model's predictions are"
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+What purpose does a loss function serve in machine learning?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Testing Regression Models
+MARKDOWN

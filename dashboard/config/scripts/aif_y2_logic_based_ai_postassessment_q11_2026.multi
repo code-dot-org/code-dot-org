@@ -1,0 +1,16 @@
+name 'aif-y2-logic-based-ai-postassessment-q11-2026'
+
+right 'Set the variable `x` equal to a value'
+wrong 'Change the type of the variable `x`'
+wrong 'Change `x` to a more descriptive name'
+wrong 'Put the line that uses `x` in a conditional statement'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+If Python produces the error `NameError: name 'x' is not defined`, which of the following is the most likely fix?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: Debugging Intelligent Systems
+MARKDOWN

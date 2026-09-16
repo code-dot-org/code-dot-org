@@ -4,17 +4,11 @@ import {THEATER_AUDIO_ID, THEATER_IMAGE_ID} from './constants';
 
 import moduleStyles from './theater.module.scss';
 
-// Applied inline rather than in the scss module: a module url() makes
-// css-loader try to bundle the static asset, which it can't resolve.
-const backdropStyle: React.CSSProperties = {
-  backgroundImage: 'url("/blockly/media/javalab/Theater.png")',
-};
-
 // Shared theater output: the generated image plus its audio track. The Theater
 // mini-app drives both elements by id.
 const TheaterVisualization: React.FunctionComponent = () => {
   return (
-    <div className={moduleStyles.theaterContainer} style={backdropStyle}>
+    <div className={moduleStyles.theaterContainer}>
       {/* Alt text is intentionally empty: the image is generated at runtime
           from student code, so there is no meaningful description for it. */}
       <img id={THEATER_IMAGE_ID} className={moduleStyles.image} alt="" />

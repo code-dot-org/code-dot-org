@@ -14,7 +14,7 @@ class AichatAiUsageReporter
 
   def report_usage_and_throttling_metrics(usage, config, request, context, response_time)
     unless usage
-      Honeybadger.notify("Response detected without usage statistics, which are required for throttling.")
+      Observability::Errors.report("Response detected without usage statistics, which are required for throttling.")
       return
     end
 

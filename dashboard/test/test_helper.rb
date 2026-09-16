@@ -183,26 +183,13 @@ class ActiveSupport::TestCase
   include CaptureQueries
   include Curriculum::SharedCourseConstants
 
-  # Create the hourofcode unit and levels from factories, taking care to first
-  # delete any conflicting objects that may have already been created in test
-  # fixtures. This paves the way to remove this unit from the test fixtures
-  # without breaking tests which use this helper.
+  # Create the hourofcode unit and levels from factories.
   #
   # The hourofcode unit has some special properties, such as special routes for
   # script lavels (e.g. /hoc/1), which make it helpful to test against a unit
   # with this exact name.
   def create_hourofcode_unit_and_levels
     unit_name = Unit::HOC_NAME
-
-    # remove any existing fixture-provided unit with this name.
-    # TODO: remove these lines once the hourofcode unit is no longer in fixtures.
-    Unit.find_by_name(unit_name)&.destroy
-    UnitGroup.find_by_name(unit_name)&.destroy
-    CourseOffering.find_by_key(unit_name)&.destroy
-
-    # clear the unit cache to ensure we don't have a stale reference to the
-    # deleted unit and unit group
-    UnitGroup.clear_cache
 
     # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
     unit = create(:script, :with_levels, levels_count: 10, name: unit_name)
@@ -573,17 +560,19 @@ class ActionController::TestCase
   end
 
   def assert_sharing_meta_tags(opts = {})
+    brand_name = Cdo::Brand.legal_name(@request)
+
     # example:
     # <meta content="500177453358606" property="fb:app_id" />
     # <meta content="article" property="og:type" />
-    # <meta content="Code.org" property="og:site_name" />
+    # <meta content="<brand name>" property="og:site_name" />
     # <meta content="Check out what I made" property="og:title" />
-    # <meta content="I wrote the code myself with Code.org" property="og:description" />
+    # <meta content="I wrote the code myself with <brand name>" property="og:description" />
     # <meta content="http://localhost:3000/assets/sharing_drawing.png" property="og:image" />
     # <meta content="https://www.facebook.com/Code.org" property="article:publisher" />
     # <meta content="http://localhost:3000/p/artist" property="og:url" />
     # <meta content="Check out what I made" name="twitter:title" />
-    # <meta content="I wrote the code myself with Code.org" name="twitter:description" />
+    # <meta content="I wrote the code myself with <brand name>" name="twitter:description" />
     # <meta content="@codeorg" name="twitter:site" />
     # <meta content="photo" name="twitter:card" />
     # <meta content="http://localhost:3000/assets/sharing_drawing.png" name="twitter:image" />
@@ -600,7 +589,7 @@ class ActionController::TestCase
 
     # constants
     assert_select 'meta[property="fb:app_id"][content="500177453358606"]'
-    assert_select 'meta[content="Code.org"][property="og:site_name"]'
+    assert_select "meta[content='#{brand_name}'][property='og:site_name']"
     assert_select 'meta[content="article"][property="og:type"]'
     assert_select 'meta[content="https://www.facebook.com/Code.org"][property="article:publisher"]'
 
@@ -609,6 +598,7 @@ class ActionController::TestCase
     {og: 'property', twitter: 'name'}.each do |namespace, attr|
       # descriptions
       assert_select "meta[content='Check out what I made'][#{attr}='#{namespace}:title']"
+      assert_select "meta[content='I wrote the code myself with #{brand_name}'][#{attr}='#{namespace}:description']"
 
       # url
       assert_select "meta[content='#{opts[:url]}'][#{attr}='#{namespace}:url']" if opts[:url]

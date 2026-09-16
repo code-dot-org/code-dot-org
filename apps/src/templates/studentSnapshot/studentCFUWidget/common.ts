@@ -6,7 +6,7 @@ export const statusBucketsMap: Record<
 > = {
   correct: {label: 'Correct', iconName: 'check'},
   partially_correct: {
-    label: 'Partially Correct',
+    label: 'Partly Correct',
     iconName: 'circle-half-stroke',
   },
   incorrect: {label: 'Incorrect', iconName: 'xmark'},

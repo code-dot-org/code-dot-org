@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {AppName, ExemplarSettings} from '../../types';
+import {AppName, type ExemplarSettings} from '../../types';
 
 import ExemplarValidation from './ExemplarValidation';
 import MusicExemplarSettings from './MusicExemplarSettings';

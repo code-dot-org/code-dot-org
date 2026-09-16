@@ -76,7 +76,7 @@ module TestRunUtils
     database = writer.path[1..]
     writer.path = ''
     opts = MysqlConsoleHelper.options(writer)
-    mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
+    mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF --no-tablespaces"
 
     if seed_data
       File.write(seed_file, seed_data)

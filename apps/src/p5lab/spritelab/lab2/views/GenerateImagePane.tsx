@@ -1,0 +1,1036 @@
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {AnyAction} from 'redux';
+
+import {dataURIToSourceSize, toImage} from '@cdo/apps/imageUtils';
+import {
+  addAnimation,
+  deleteAnimation,
+  isNameUnique,
+  setAnimationName,
+  SET_INITIAL_ANIMATION_LIST,
+} from '@cdo/apps/p5lab/redux/animationList';
+import {detectImageGridSize} from '@cdo/apps/pixelEditor/pixelArt';
+import PixelEditorModal, {
+  PixelEditorSaveMeta,
+} from '@cdo/apps/pixelEditor/PixelEditorModal';
+import {getStore} from '@cdo/apps/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
+
+import {bytesToDataURI} from '../ai/images/encoding';
+import {ImageAdlibSet} from '../ai/images/imageAdlibs';
+import {
+  GeneratedImageResult,
+  UploadImageFunction,
+} from '../ai/images/imageGeneration';
+import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
+import {
+  ImageGenerationMetadata,
+  ImageStyle,
+  ImageType,
+} from '../ai/images/types';
+import {AnimationPoses} from '../characterAnimations';
+import {
+  categoriesForType,
+  galleryOrder,
+  imageTypeFromCategories,
+} from '../imageGallery';
+import {
+  forgetImageThumbnail,
+  getImageThumbnail,
+  onTrimsUpdated,
+  trimAnimationListImages,
+} from '../imageTrim';
+import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
+
+import type {NewImageDraft} from './GenerateImageView';
+import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
+import {
+  alternativeFromAnimation,
+  framesFromAnimation,
+  useImageSession,
+} from './useImageSession';
+
+import moduleStyles from './sprite-lab2-view.module.scss';
+
+type Dispatch = ReturnType<typeof useAppDispatch>;
+
+// The animation fields the dialog's persist paths write. An explicit
+// `undefined` clears the field (the spread keeps the key).
+interface AnimationPatch {
+  sourceUrl?: string;
+  dataURI?: string;
+  frameSize?: {x: number; y: number};
+  sourceSize?: {x: number; y: number};
+  frameCount?: number;
+  frameDelay?: number;
+  looping?: boolean;
+  poses?: AnimationPoses;
+  categories?: string[];
+  pixelGridSize?: number;
+  /** Set wherever an animation's pixels are replaced — a stale true would
+   * skip a needed trim. */
+  trimmed?: boolean;
+  generation?: ImageGenerationMetadata;
+  recentColors?: PixelEditorSaveMeta['recentColors'];
+}
+
+/** Where a strip's standing frame sits — the base picture the set was drawn
+    from (the last frame of the stand range; see CHARACTER_STRIP_POSES). */
+function standingFrameIndex(poses?: AnimationPoses): number {
+  const stand = poses?.['stand-right'];
+  return stand ? stand.start + stand.count - 1 : 0;
+}
+
+/**
+ * The standing frame of a character strip, full size. Falls back to the
+ * whole image if the crop can't be made.
+ */
+async function cropStandingFrame(
+  dataURI: string,
+  props: {frameSize: {x: number; y: number}; poses?: AnimationPoses}
+): Promise<string> {
+  try {
+    const img = await toImage(dataURI);
+    const canvas = document.createElement('canvas');
+    canvas.width = props.frameSize.x;
+    canvas.height = props.frameSize.y;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return dataURI;
+    }
+    ctx.drawImage(img, -standingFrameIndex(props.poses) * props.frameSize.x, 0);
+    return canvas.toDataURL('image/png');
+  } catch {
+    return dataURI;
+  }
+}
+
+// The Alternatives row displays ~64px entries; full-resolution sources
+// would each hold a decoded multi-megabyte bitmap for the dialog's life.
+const ALTERNATIVE_THUMB_PX = 160;
+
+/**
+ * A small thumbnail for an Alternatives entry: a strip's standing frame, or
+ * the whole picture, downscaled. Falls back to the full image.
+ */
+async function alternativeThumb(
+  dataURI: string,
+  frames?: GeneratedImageResult['frames']
+): Promise<string> {
+  try {
+    const img = await toImage(dataURI);
+    const cell = frames ? frames.frameSize : {x: img.width, y: img.height};
+    const scale = Math.min(1, ALTERNATIVE_THUMB_PX / Math.max(cell.x, cell.y));
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(cell.x * scale));
+    canvas.height = Math.max(1, Math.round(cell.y * scale));
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      return dataURI;
+    }
+    ctx.drawImage(
+      img,
+      (frames ? standingFrameIndex(frames.poses) : 0) * cell.x,
+      0,
+      cell.x,
+      cell.y,
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+    return canvas.toDataURL('image/png');
+  } catch {
+    return dataURI;
+  }
+}
+
+// A plain single-frame picture's playback fields; also what a brand-new
+// animation starts as.
+const SINGLE_FRAME_PROPS = {frameCount: 1, frameDelay: 2, looping: true};
+
+/**
+ * The patch a result's frame grid dictates: a character strip's layout, or a
+ * plain picture's single frame — which must overwrite any strip the image
+ * used to be (explicit undefined clears poses).
+ */
+function framesPatch(frames: GeneratedImageResult['frames']): AnimationPatch {
+  return frames
+    ? {
+        frameSize: frames.frameSize,
+        sourceSize: {
+          x: frames.frameSize.x * frames.frameCount,
+          y: frames.frameSize.y,
+        },
+        frameCount: frames.frameCount,
+        frameDelay: frames.frameDelay,
+        looping: frames.looping,
+        poses: frames.poses,
+      }
+    : {...SINGLE_FRAME_PROPS, poses: undefined};
+}
+
+/**
+ * Create an animation under a name callers have already validated as free,
+ * and return its key. The classic addAnimation thunk always renames to
+ * name_N; the plain name is set back afterwards.
+ */
+function createNamedAnimation(
+  dispatch: Dispatch,
+  name: string,
+  props: AnimationPatch
+): string {
+  const key = createUuid();
+  dispatch(
+    // addAnimation is an untyped JS thunk; cast for dispatch.
+    addAnimation(key, {
+      name,
+      ...SINGLE_FRAME_PROPS,
+      ...props,
+    }) as unknown as AnyAction
+  );
+  if (isNameUnique(name, getStore().getState().animationList.propsByKey)) {
+    dispatch(setAnimationName(key, name) as unknown as AnyAction);
+  }
+  return key;
+}
+
+/**
+ * Point an existing animation at new pixels and refresh its thumbnails.
+ * Uses the raw list-replace action because the classic edit action clears
+ * sourceUrl, which is what Lab2 saves. Returns the file URL the change
+ * replaced.
+ */
+function repointAnimation(
+  dispatch: Dispatch,
+  key: string,
+  changes: AnimationPatch
+): string | undefined {
+  const current = getStore().getState().animationList;
+  const updated = {
+    orderedKeys: current.orderedKeys,
+    propsByKey: {
+      ...current.propsByKey,
+      [key]: {
+        ...current.propsByKey[key],
+        ...changes,
+        loadedFromSource: true,
+        saved: false,
+      },
+    },
+  };
+  dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
+  trimAnimationListImages(updated);
+  return current.propsByKey[key]?.sourceUrl;
+}
+
+interface GalleryCardProps {
+  animKey: string;
+  /** The image's name; the thumbnail's alt text. */
+  name?: string;
+  /** Name shown under the thumbnail; omitted in the student gallery. */
+  caption?: string;
+  thumb?: string;
+  onOpen: (key: string, trigger: HTMLElement) => void;
+}
+
+// Memoized: opening or closing the dialog re-renders the pane, and every
+// card would re-render with it. Thumbnail updates arrive as a changed prop.
+// Deliberately no title attribute: the card's label is the image's name
+// alone, and the full prompt lives in the image's dialog.
+// Exported for the label tests.
+export const GalleryCard = React.memo<GalleryCardProps>(
+  ({animKey, name, caption, thumb, onOpen}) => (
+    <div className={moduleStyles.imageCard}>
+      <button
+        type="button"
+        className={moduleStyles.imageThumb}
+        onClick={event => onOpen(animKey, event.currentTarget)}
+      >
+        {thumb && <img src={thumb} alt={name || 'image'} />}
+      </button>
+      {caption !== undefined && (
+        <div className={moduleStyles.imageName}>{caption}</div>
+      )}
+    </div>
+  )
+);
+GalleryCard.displayName = 'GalleryCard';
+
+interface GenerateImagePaneProps {
+  uploadImage?: UploadImageFunction;
+  /** Rename an image and every reference to it; error message or null. */
+  onRenameImage: (oldName: string, newName: string) => string | null;
+  /** Drop every reference to a deleted image (called after the removal). */
+  onDeleteImage: (name: string) => void;
+  /** Level-imposed type for new images. */
+  lockedImageType?: ImageType;
+  /** Show the full internal dialog and gallery names; the default is the
+      student version (auto-named images, fewer generation controls). */
+  advanced?: boolean;
+  /** Offer this tier of adlib prompt combos in the student dialog. */
+  adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: no free-text box. */
+  adlibOnly?: boolean;
+  /** Style the generate form starts on for new images. */
+  defaultStyle?: ImageStyle;
+  /** No paint entry points anywhere in the dialog. */
+  paintDisabled?: boolean;
+  /** The image panel is the level: no gallery, no modal, always open on a
+      blank generate form. */
+  imageLevel?: boolean;
+}
+
+/**
+ * The Images tab: the project's image gallery. Clicking an image (or the
+ * new-image card) opens the image dialog; painting happens from there.
+ */
+// Detection runs a full-raster scan (~tens of ms, more on Chromebooks) and
+// the answer never changes for the same pixels, so it is cached across
+// dialog opens. Keys are digests, not the sources themselves — a data URI
+// key would pin megabytes per entry.
+const gridDetectionCache = new Map<string, Promise<number | null>>();
+const GRID_CACHE_MAX = 32;
+function cachedGridDetection(
+  source: string,
+  frameSize?: {x: number; y: number}
+): Promise<number | null> {
+  const key = `${source.length}:${source.slice(0, 48)}:${source.slice(-48)}:${
+    frameSize?.x ?? ''
+  }x${frameSize?.y ?? ''}`;
+  const hit = gridDetectionCache.get(key);
+  if (hit) {
+    return hit;
+  }
+  const pending = detectImageGridSize(source, frameSize).catch(() => {
+    gridDetectionCache.delete(key);
+    return null;
+  });
+  if (gridDetectionCache.size >= GRID_CACHE_MAX) {
+    gridDetectionCache.delete(gridDetectionCache.keys().next().value as string);
+  }
+  gridDetectionCache.set(key, pending);
+  return pending;
+}
+
+const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
+  uploadImage,
+  onRenameImage,
+  onDeleteImage,
+  lockedImageType,
+  advanced,
+  adlibSet,
+  adlibOnly,
+  defaultStyle,
+  paintDisabled,
+  imageLevel,
+}) => {
+  const dispatch = useAppDispatch();
+
+  // The project's images, from the classic animation-list store. Sorted
+  // under useMemo: a fresh array from the selector would count as a change
+  // on every store dispatch.
+  const animationList = useAppSelector(state => state.animationList);
+  const images = useMemo(
+    () =>
+      galleryOrder(
+        animationList.orderedKeys.map((key: string) => ({
+          key,
+          props: animationList.propsByKey[key],
+        })),
+        image => imageTypeFromCategories(image.props?.categories)
+      ),
+    [animationList]
+  );
+
+  // Gallery thumbnails prefer the border-trimmed image (backgrounds aren't
+  // trimmed and fall through). Trims land as the engine preloads; re-render
+  // when they do.
+  const [, setTrimVersion] = useState(0);
+  useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
+
+  // Compute trims for images added after the initial load (a fresh
+  // generation lands here before any engine preload runs). The pass is
+  // source-cached, so only new images do work.
+  useEffect(() => {
+    trimAnimationListImages(animationList);
+  }, [animationList]);
+
+  // Used only to recognize this project's own uploaded-file URLs.
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+
+  // Delete an uploaded image file nothing uses anymore. Deliberately
+  // narrow and best-effort: only this project's own uploads, only when no
+  // image still points at the file, and a failed delete is ignored.
+  const deleteUnreferencedAsset = useCallback(
+    (url?: string) => {
+      if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
+        return;
+      }
+      const stillUsed = Object.values(
+        getStore().getState().animationList.propsByKey
+      ).some(p => (p as {sourceUrl?: string} | undefined)?.sourceUrl === url);
+      if (stillUsed) {
+        return;
+      }
+      HttpClient.delete(url, true).catch(() => undefined);
+    },
+    [channelId]
+  );
+
+  // Guards a second Save click while one save is in flight. Reset on every
+  // editor open, so a save that never settles can't leave Save dead for the
+  // next session.
+  const savingPaintRef = useRef(false);
+
+  // The dialog's subject: an animation key, 'new', or closed. Painting is
+  // three-way so the two dialogs swap in one step: the details dialog stays
+  // up through 'loading', and the paint editor takes over once it can
+  // render — otherwise the backdrop blinks between them.
+  const [dialogTarget, setDialogTarget] = useState<string | 'new' | null>(null);
+  const [painting, setPainting] = useState<'no' | 'loading' | 'active'>('no');
+  // Set while a brand-new image is being painted onto a blank canvas; kept
+  // through a cancel so the form reopens with what was typed.
+  const [paintNewDraft, setPaintNewDraft] = useState<NewImageDraft | null>(
+    null
+  );
+  const blankPaint = useMemo(
+    () =>
+      paintNewDraft
+        ? blankPaintImage(paintNewDraft.imageType, paintNewDraft.style)
+        : null,
+    [paintNewDraft]
+  );
+
+  const handlePaintNew = useCallback((draft: NewImageDraft) => {
+    setPaintNewDraft(draft);
+    savingPaintRef.current = false;
+    setPainting('loading');
+  }, []);
+
+  const {
+    alternatives,
+    reset: resetSession,
+    end: endSession,
+    push: pushAlternative,
+    setThumb: setAlternativeThumb,
+    noteAsset,
+    seedSourceUrl,
+  } = useImageSession(deleteUnreferencedAsset);
+  // The gallery card that opened the dialog; focus returns to it on close.
+  const triggerRef = useRef<HTMLElement | null>(null);
+
+  // Counts changes of the dialog's subject. Generating and saving are
+  // slow; a result that finishes after the subject changed must not land.
+  const sessionEpochRef = useRef(0);
+  // The count when the current generation was requested, so the whole
+  // request is covered. One at a time: Generate disables while one is out.
+  const generationEpochRef = useRef(0);
+  const handleGenerateStart = useCallback(() => {
+    generationEpochRef.current = sessionEpochRef.current;
+  }, []);
+
+  // True when work stamped with `epoch` no longer matches the subject;
+  // whatever the stale work uploaded is deleted, since nothing uses it.
+  const persistIsStale = useCallback(
+    (epoch: number, uploadedUrl?: string) => {
+      if (epoch === sessionEpochRef.current) {
+        return false;
+      }
+      deleteUnreferencedAsset(uploadedUrl);
+      return true;
+    },
+    [deleteUnreferencedAsset]
+  );
+
+  const openDialog = useCallback(
+    (key: string, trigger: HTMLElement) => {
+      sessionEpochRef.current++;
+      triggerRef.current = trigger;
+      setDialogTarget(key);
+      setPaintNewDraft(null);
+      const seed = alternativeFromAnimation(
+        getStore().getState().animationList.propsByKey[key]
+      );
+      resetSession(seed);
+      if (seed) {
+        alternativeThumb(seed.thumb, seed.frames).then(thumb =>
+          setAlternativeThumb(seed.id, thumb)
+        );
+      }
+    },
+    [resetSession, setAlternativeThumb]
+  );
+
+  const openNewDialog = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      sessionEpochRef.current++;
+      triggerRef.current = event.currentTarget;
+      setDialogTarget('new');
+      setPaintNewDraft(null);
+      resetSession();
+    },
+    [resetSession]
+  );
+
+  const closeDialog = useCallback(() => {
+    sessionEpochRef.current++;
+    setDialogTarget(null);
+    setPainting('no');
+    setPaintNewDraft(null);
+    endSession();
+    triggerRef.current?.focus();
+  }, [endSession]);
+
+  // Leaving the tab mid-session must still reclaim the session's leftover
+  // assets (and orphan any in-flight persist), exactly as closing would.
+  useEffect(
+    () => () => {
+      sessionEpochRef.current++;
+      endSession();
+    },
+    [endSession]
+  );
+
+  const targetProps =
+    dialogTarget && dialogTarget !== 'new'
+      ? images.find(i => i.key === dialogTarget)?.props
+      : undefined;
+
+  // The Resolution row's grid for a pixel image that never recorded one:
+  // character sheets skip normalization (a strip's frames must agree), and
+  // images saved before normalization existed have nothing stored — detect
+  // what the model drew from the first frame instead. Display only. The
+  // result is keyed to its source, so a switched dialog target never wears
+  // the previous image's grid for a frame.
+  const [detectedGrid, setDetectedGrid] = useState<{
+    source: string;
+    size: number;
+  }>();
+  const detectSource = targetProps?.dataURI || targetProps?.sourceUrl;
+  const frameSize = targetProps?.frameSize;
+  const needsGridDetection =
+    targetProps?.generation?.style === 'pixel' &&
+    !targetProps.pixelGridSize &&
+    !!detectSource;
+  useEffect(() => {
+    if (!needsGridDetection || !detectSource) {
+      return;
+    }
+    let cancelled = false;
+    cachedGridDetection(detectSource, frameSize)
+      .then(size => {
+        if (!cancelled && size && size > 1) {
+          setDetectedGrid({source: detectSource, size});
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [needsGridDetection, detectSource, frameSize]);
+  const detectedGridSize =
+    detectedGrid && detectedGrid.source === detectSource
+      ? detectedGrid.size
+      : undefined;
+
+  const handleDelete = useCallback(() => {
+    if (dialogTarget && dialogTarget !== 'new') {
+      const removed =
+        getStore().getState().animationList.propsByKey[dialogTarget];
+      dispatch(
+        // deleteAnimation is an untyped JS thunk; cast for dispatch.
+        deleteAnimation(
+          dialogTarget,
+          true /* isSpriteLab */
+        ) as unknown as AnyAction
+      );
+      // The removal already happened; reclaim the asset if unreferenced now,
+      // and take the blocks and World cells that pointed at the image along.
+      deleteUnreferencedAsset(removed?.sourceUrl);
+      if (removed?.name) {
+        onDeleteImage(removed.name);
+      }
+    }
+    closeDialog();
+  }, [
+    dispatch,
+    dialogTarget,
+    closeDialog,
+    deleteUnreferencedAsset,
+    onDeleteImage,
+  ]);
+
+  const handleRename = useCallback(
+    (newName: string): string | null => {
+      if (!targetProps?.name) {
+        return 'Image not found.';
+      }
+      return onRenameImage(targetProps.name, newName);
+    },
+    [targetProps, onRenameImage]
+  );
+
+  const isNameTaken = useCallback(
+    (name: string): boolean =>
+      !isNameUnique(name, getStore().getState().animationList.propsByKey),
+    []
+  );
+
+  // Current pixels as a data URI (generation's "use previous image" sends
+  // them in a JSON request body, so an object-URL image is read back to
+  // base64 here).
+  const getTargetDataURI = useCallback(async (): Promise<string | null> => {
+    if (!targetProps) {
+      return null;
+    }
+    const readAsDataURL = (blob: Blob) =>
+      new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    let dataURI = targetProps.dataURI ?? null;
+    try {
+      if (dataURI?.startsWith('blob:')) {
+        dataURI = await readAsDataURL(await (await fetch(dataURI)).blob());
+      } else if (!dataURI && targetProps.sourceUrl) {
+        dataURI = await readAsDataURL(
+          await (await HttpClient.get(targetProps.sourceUrl)).blob()
+        );
+      }
+    } catch {
+      return null;
+    }
+    // "Start from current image" on a character set references one frame,
+    // not the five-frame strip.
+    return dataURI && targetProps.poses
+      ? cropStandingFrame(dataURI, targetProps)
+      : dataURI;
+  }, [targetProps]);
+
+  // Persist an accepted generation: upload, then create the animation (new
+  // image) or repoint the existing one, with the generation metadata.
+  const handleAcceptGenerated = useCallback(
+    async (result: GeneratedImageResult, newName?: string) => {
+      // Stamped when the generation was requested, so a dialog closed or
+      // moved during the request drops its result here.
+      const epoch = generationEpochRef.current;
+      if (persistIsStale(epoch)) {
+        return;
+      }
+      const dataURI = bytesToDataURI(result.uint8Array, result.mediaType);
+      let sourceUrl = dataURI;
+      if (uploadImage) {
+        try {
+          sourceUrl = await uploadImage(
+            result.filename,
+            result.uint8Array,
+            result.mediaType
+          );
+        } catch {
+          // Keep the embedded data URI.
+        }
+      }
+      const frameSize: {x: number; y: number} | null =
+        await dataURIToSourceSize(dataURI).catch(() => null);
+      if (persistIsStale(epoch, sourceUrl)) {
+        return;
+      }
+
+      pushAlternative({
+        id: createUuid(),
+        // A strip's row entry shows its standing frame, not the whole sheet.
+        thumb: await alternativeThumb(dataURI, result.frames),
+        sourceUrl,
+        dataURI,
+        frameSize,
+        frames: result.frames,
+        pixelGridSize: result.pixelGridSize,
+        trimmed: result.trimmed,
+        generation: result.generation,
+      });
+      noteAsset(sourceUrl);
+
+      if (dialogTarget === 'new' && newName) {
+        const key = createNamedAnimation(dispatch, newName, {
+          sourceUrl,
+          frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
+          ...framesPatch(result.frames),
+          categories: categoriesForType(result.generation.imageType),
+          pixelGridSize: result.pixelGridSize,
+          trimmed: !!result.trimmed,
+          generation: result.generation,
+        });
+        // A new subject, even though the session continues.
+        sessionEpochRef.current++;
+        setDialogTarget(key);
+        return;
+      }
+
+      const key = dialogTarget;
+      if (!key || key === 'new' || !targetProps) {
+        return;
+      }
+      const previousUrl = repointAnimation(dispatch, key, {
+        sourceUrl,
+        dataURI,
+        ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
+        // A regenerated image takes the new result's frame grid: a plain
+        // sprite replacing a character set drops its poses.
+        ...framesPatch(result.frames),
+        pixelGridSize: result.pixelGridSize,
+        trimmed: !!result.trimmed,
+        generation: result.generation,
+      });
+      // The superseded asset stays until the dialog closes: it's in the
+      // Alternatives strip and may become the image again.
+      noteAsset(previousUrl);
+    },
+    [
+      dialogTarget,
+      targetProps,
+      uploadImage,
+      dispatch,
+      pushAlternative,
+      noteAsset,
+      persistIsStale,
+    ]
+  );
+
+  // Make a strip entry the image again. The same repoint an accepted
+  // generation does, minus the upload — the asset already exists.
+  const handleSelectAlternative = useCallback(
+    (id: string) => {
+      const alt = alternatives.find(a => a.id === id);
+      const key = dialogTarget;
+      if (!alt || !key || key === 'new') {
+        return;
+      }
+      // An entry with no pixel data in hand (the seed of an image loaded
+      // from its URL) can't be re-trimmed until the data arrives; drop the
+      // superseded image's cached trim so thumbnails don't keep showing it.
+      if (!alt.dataURI) {
+        forgetImageThumbnail(
+          getStore().getState().animationList.propsByKey[key]?.name
+        );
+      }
+      const previousUrl = repointAnimation(dispatch, key, {
+        sourceUrl: alt.sourceUrl,
+        dataURI: alt.dataURI,
+        ...(alt.frameSize
+          ? {frameSize: alt.frameSize, sourceSize: alt.frameSize}
+          : {}),
+        // The entry's frame grid comes back with it — or clears the frame
+        // grid of the strip the image was a moment ago.
+        ...framesPatch(alt.frames),
+        pixelGridSize: alt.pixelGridSize,
+        trimmed: !!alt.trimmed,
+        generation: alt.generation,
+      });
+      noteAsset(previousUrl);
+    },
+    [alternatives, dialogTarget, dispatch, noteAsset]
+  );
+
+  // Persist an edited (or first-painted) image: upload the PNG as a fresh
+  // asset (new filename, so nothing caches the old pixels).
+  const uploadEdited = useCallback(
+    async (name: string, dataURI: string): Promise<string> => {
+      if (!uploadImage) {
+        // With nowhere to upload, the dataURI itself is stored as the
+        // source, which persists in project sources.
+        return dataURI;
+      }
+      try {
+        const base64 = dataURI.split(',')[1];
+        const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+        const safeName = (name || 'image')
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '_');
+        return await uploadImage(
+          `${safeName}_${Date.now()}.png`,
+          bytes,
+          'image/png'
+        );
+      } catch {
+        return dataURI;
+      }
+    },
+    [uploadImage]
+  );
+
+  const applyEditorSave = useCallback(
+    async (dataURI: string, meta: PixelEditorSaveMeta) => {
+      const epoch = sessionEpochRef.current;
+      const frameSize: {x: number; y: number} | null =
+        await dataURIToSourceSize(dataURI).catch(() => null);
+
+      if (dialogTarget === 'new' && paintNewDraft) {
+        const {name, imageType} = paintNewDraft;
+        const sourceUrl = await uploadEdited(name, dataURI);
+        // The paint may have been cancelled (or the dialog moved on) while
+        // the upload was out.
+        if (persistIsStale(epoch, sourceUrl)) {
+          return;
+        }
+        const key = createNamedAnimation(dispatch, name, {
+          sourceUrl,
+          frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
+          categories: categoriesForType(imageType),
+          pixelGridSize: meta.pixelGridSize,
+          recentColors: meta.recentColors,
+        });
+        pushAlternative({
+          id: createUuid(),
+          thumb: await alternativeThumb(dataURI),
+          sourceUrl,
+          dataURI,
+          frameSize,
+          pixelGridSize: meta.pixelGridSize,
+        });
+        noteAsset(sourceUrl);
+        setPaintNewDraft(null);
+        // A new subject, even though the session continues.
+        sessionEpochRef.current++;
+        setDialogTarget(key);
+        return;
+      }
+
+      const props = targetProps;
+      const key = dialogTarget;
+      if (!key || key === 'new' || !props) {
+        return;
+      }
+      const sourceUrl = await uploadEdited(props.name || 'image', dataURI);
+      if (persistIsStale(epoch, sourceUrl)) {
+        return;
+      }
+      const previousUrl = repointAnimation(dispatch, key, {
+        sourceUrl,
+        dataURI,
+        // An edited character strip keeps its frame grid — the editor hands
+        // back the same canvas — so only a plain picture takes the measured
+        // size (which would otherwise turn the strip into one wide frame).
+        ...(frameSize && !props.poses
+          ? {frameSize, sourceSize: frameSize}
+          : {}),
+        pixelGridSize: meta.pixelGridSize,
+        // The editor hands back the full canvas, margins and all.
+        trimmed: false,
+        // Hand-edited pixels are not the prompt's output anymore; drop the
+        // stale prompt and seed.
+        generation: undefined,
+        // Serialized with the animation, so the editor's recent-colors row
+        // follows the project.
+        recentColors: meta.recentColors,
+      });
+      const editedFrames = framesFromAnimation(props);
+      pushAlternative({
+        id: createUuid(),
+        thumb: await alternativeThumb(dataURI, editedFrames),
+        sourceUrl,
+        dataURI,
+        frameSize,
+        frames: editedFrames,
+        pixelGridSize: meta.pixelGridSize,
+      });
+      noteAsset(sourceUrl);
+      // Reclaimed at dialog close, with the rest of the session's leftovers.
+      noteAsset(previousUrl);
+    },
+    [
+      dialogTarget,
+      targetProps,
+      paintNewDraft,
+      uploadEdited,
+      dispatch,
+      pushAlternative,
+      noteAsset,
+      persistIsStale,
+    ]
+  );
+
+  const handleEditorSave = useCallback(
+    async (dataURI: string, meta: PixelEditorSaveMeta) => {
+      if (savingPaintRef.current) {
+        return;
+      }
+      savingPaintRef.current = true;
+      try {
+        await applyEditorSave(dataURI, meta);
+      } finally {
+        savingPaintRef.current = false;
+        // The editor stays up through the save, so the dialog reappears
+        // only once the new state is in place — no flash of a stale view.
+        setPainting('no');
+      }
+    },
+    [applyEditorSave]
+  );
+
+  // An image level opens on a blank form, and returns to one whenever a
+  // close or delete clears the target: the level is there to make an image,
+  // and the newest one of its type belongs to whichever level made it.
+  useEffect(() => {
+    if (imageLevel && !dialogTarget) {
+      setDialogTarget('new');
+    }
+  }, [imageLevel, dialogTarget]);
+
+  const creating = dialogTarget === 'new';
+  // Backgrounds paint over the stage's opaque ground instead of
+  // transparency; they must stay fully opaque.
+  const paintedType =
+    creating && paintNewDraft
+      ? paintNewDraft.imageType
+      : imageTypeFromCategories(targetProps?.categories);
+  return (
+    <div className={moduleStyles.imagesManager}>
+      {!imageLevel && (
+        <div className={moduleStyles.imageGallery}>
+          {/* First slot, so it never hides behind a scroll. */}
+          <div className={moduleStyles.imageCard}>
+            <button
+              type="button"
+              className={moduleStyles.newImageCard}
+              onClick={openNewDialog}
+            >
+              <span aria-hidden>+</span>
+              <span className={moduleStyles.newImageLabel}>New image</span>
+            </button>
+          </div>
+          {images.map(({key, props}) => (
+            <GalleryCard
+              key={key}
+              animKey={key}
+              name={props?.name}
+              caption={advanced ? props?.name : undefined}
+              thumb={
+                getImageThumbnail(props?.name) ||
+                props?.dataURI ||
+                props?.sourceUrl ||
+                undefined
+              }
+              onOpen={openDialog}
+            />
+          ))}
+        </div>
+      )}
+
+      {dialogTarget && painting !== 'active' && (
+        <ImageDetailsDialog
+          // Keyed by subject: when a paint-save turns 'new' into a real
+          // image, the dialog remounts and opens on the summary view.
+          key={dialogTarget}
+          animKey={creating ? null : dialogTarget}
+          name={targetProps?.name}
+          thumb={
+            // The dialog is the full-resolution view; the small gallery
+            // thumbnail only stands in until the image's data arrives.
+            creating
+              ? undefined
+              : targetProps?.dataURI ||
+                getImageThumbnail(targetProps?.name || '') ||
+                targetProps?.sourceUrl ||
+                undefined
+          }
+          generation={targetProps?.generation}
+          sheet={
+            !creating && targetProps?.poses
+              ? {
+                  src: targetProps.dataURI || targetProps.sourceUrl || '',
+
+                  frameSize: targetProps.frameSize,
+
+                  poses: targetProps.poses,
+                }
+              : undefined
+          }
+          onClose={closeDialog}
+          onPaint={() => {
+            savingPaintRef.current = false;
+            setPainting('loading');
+          }}
+          onPaintNew={handlePaintNew}
+          newImageDraft={paintNewDraft ?? undefined}
+          onRename={handleRename}
+          onDelete={handleDelete}
+          imageType={imageTypeFromCategories(targetProps?.categories)}
+          lockedImageType={lockedImageType}
+          // No seed means the session started from nothing; any image
+          // differs from that.
+          imageChanged={
+            !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
+          }
+          advanced={advanced}
+          adlibSet={adlibSet}
+          adlibOnly={adlibOnly}
+          defaultStyle={defaultStyle}
+          paintDisabled={paintDisabled}
+          imageLevel={imageLevel}
+          pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
+          // A sheet's resolution is its frame: the image the pane shows.
+          resolution={creating ? undefined : targetProps?.frameSize}
+          pixelGridSize={targetProps?.pixelGridSize ?? detectedGridSize}
+          getDataURI={getTargetDataURI}
+          isNameTaken={isNameTaken}
+          onGenerateStart={handleGenerateStart}
+          onAcceptGenerated={handleAcceptGenerated}
+          alternatives={alternatives.map(
+            (alt): AlternativeImage => ({
+              id: alt.id,
+              thumb: alt.thumb,
+              selected: alt.sourceUrl === targetProps?.sourceUrl,
+            })
+          )}
+          onSelectAlternative={handleSelectAlternative}
+        />
+      )}
+
+      {dialogTarget && painting !== 'no' && (
+        <PixelEditorModal
+          title={
+            creating && paintNewDraft
+              ? advanced
+                ? `Paint ${paintNewDraft.name}`
+                : 'Paint image'
+              : advanced
+              ? `Edit ${targetProps?.name ?? 'image'}`
+              : 'Edit image'
+          }
+          // Edit the original, untrimmed pixels; a brand-new image starts
+          // on a blank canvas sized for its style.
+          imageUrl={
+            creating && blankPaint
+              ? blankPaint.dataURI
+              : targetProps?.dataURI || targetProps?.sourceUrl || ''
+          }
+          // Recorded at generation time; images without it (legacy, smooth
+          // style) edit at native resolution.
+          knownPixelGrid={
+            creating && blankPaint
+              ? blankPaint.pixelGridSize
+              : targetProps?.pixelGridSize
+          }
+          initialRecentColors={creating ? undefined : targetProps?.recentColors}
+          opaqueGround={
+            paintedType === 'background' ? BACKGROUND_GROUND_COLOR : undefined
+          }
+          onReady={() => setPainting('active')}
+          onSave={handleEditorSave}
+          onCancel={() => {
+            // Orphan a save still uploading: cancelled means not applied.
+            sessionEpochRef.current++;
+            setPainting('no');
+          }}
+        />
+      )}
+    </div>
+  );
+};
+
+export default GenerateImagePane;

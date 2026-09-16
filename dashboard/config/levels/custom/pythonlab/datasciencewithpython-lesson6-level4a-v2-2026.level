@@ -1,0 +1,69 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-08-14T03:09:29.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Inspect and Convert Health & Fitness Data\r\n\r\nThe program loads `health_and_fitness.csv` into a DataFrame named `survey_data`.\r\n\r\n### Do This:\r\n\r\n1. Use `info()` and `describe()` to examine the dataset.\r\n\r\n2. Use `astype()` to convert:\r\n\r\n   * `StudentID` to `int64`\r\n   * `Age` to `int64`\r\n\r\n3. Use `pd.to_datetime()` to convert `LastCheckupDate`.\r\n\r\n4. Use `info()` again to verify the conversions. Run the program to view the provided graph.\r\n\r\n::: details [Need help?]\r\n\r\nUse AI Tutor to:\r\n\r\n* View examples using different data\r\n* Learn how a pandas function works\r\n* Understand unfamiliar code or an error message\r\n\r\nThen use what you learn to write your own code.\r\n\r\n:::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import pandas as pd\nimport matplotlib.pyplot as plt\n\nsurvey_data = pd.read_csv(\"health_and_fitness.csv\")\n\n# Examine the dataset\n\n\n# Convert the data types\n\n\n# Verify the conversions\n\n\n# Visualize the data\nplt.figure()\nfavorite_sport_counts = survey_data[\"FavoriteSport\"].value_counts()\nplt.bar(\n    favorite_sport_counts.index,\n    favorite_sport_counts.values,\n    color=\"blue\"\n)\nplt.title(\"Count of Favorite Sport Choices\")\nplt.xlabel(\"Favorite Sport\")\nplt.ylabel(\"Count\")\nplt.show()",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "locked_starter"
+        },
+        "1": {
+          "id": "1",
+          "name": "health_and_fitness.csv",
+          "language": "csv",
+          "contents": "StudentID,Age,ExerciseHoursPerWeek,FavoriteSport,LastCheckupDate\n2621477,14,14.04,Running,6/29/2025\n5535708,14,12.03,Running,1/18/2025\n8979258,17,12.38,Running,1/22/2025\n5161423,16,13.65,Running,7/4/2025\n5960379,18,13.65,Swimming,12/6/2025\n8984456,14,3.25,Running,2/11/2025\n3810604,14,10.31,Soccer,2/20/2025\n4135619,15,7.32,Cycling,4/12/2025\n1677777,17,14.66,Swimming,12/30/2025\n9042459,14,6.93,Tennis,8/25/2025\n5897873,17,8.22,Cycling,9/26/2025\n6657852,18,10.06,Cycling,5/10/2025\n9293776.1,17,10.84,Tennis,12/29/2025\n3635234,15,10.69,Tennis,6/6/2025\n1011927,15,11.51,Basketball,8/4/2025\n9302338,16,7.55,Swimming,6/9/2025\n5526975,14,1.03,Cycling,3/6/2025\n6078490,14,14.89,Swimming,4/6/2025\n5722174,15,1.12,Soccer,4/1/2025\n4759600,15,13.82,Basketball,2/14/2025\n6494920,15,0.53,Swimming,4/2/2025\n1698754,17,8.35,Swimming,8/30/2025\n2827967,17,10.98,Running,6/10/2025\n9463512,18,14.02,Basketball,3/31/2025\n6341715,17,11.46,Tennis,9/29/2025\n6869298,17,7.39,Running,10/18/2025\n8315288,14,7.2,Running,1/18/2025\n9823602,17.2,2.47,Soccer,7/29/2025\n9571135,18,5.26,Soccer,12/10/2025\n8501403,15,1.87,Swimming,10/7/2025\n8988002,14,12.06,Swimming,8/9/2025\n2268721,17,7.71,Running,9/14/2025\n9964615,14,10.5,Tennis,6/10/2025\n7875340,18,14.78,Tennis,2/15/2025\n2236031,15,1.59,Swimming,3/4/2025\n2286242,16,5.53,Swimming,8/21/2025\n6649310,18,2.67,Swimming,2/20/2025\n3064983,17,10.32,Basketball,1/25/2025\n8338855,16,4.62,Swimming,10/15/2025\n4777049,17,8.98,Tennis,3/9/2025\n8463784,14,14.55,Cycling,3/27/2025\n9978311,18,6.12,Swimming,7/5/2025\n3107511,15,11.67,Basketball,5/25/2025\n2718476,15,1.45,Soccer,6/18/2025\n7397026,15,1.48,Tennis,7/19/2025\n7600393,17,12,Tennis,9/2/2025\n1030530,17,10.72,Basketball,2/4/2025\n6134238,17,4.4,Running,1/4/2025\n7143352,17,8.01,Soccer,7/5/2025\n9697419,16,13.84,Swimming,5/23/2025\n4408909,18,2.85,Tennis,7/11/2025\n9046991,14,0.86,Tennis,4/25/2025\n5590298,14,2.43,Swimming,10/18/2025\n5926389,16,6.04,Tennis,5/30/2025\n6847436,15,6.93,Basketball,11/30/2025\n5619907,14,2.63,Tennis,6/21/2025\n3910671,15,7.2,Basketball,12/4/2025\n9218141,16,9.62,Basketball,10/25/2025\n8814476,14,14.48,Swimming,1/29/2025\n6015706,15,10.24,Cycling,5/22/2025\n4023737,15,1.92,Running,7/24/2025\n7127936,15,6,Swimming,4/18/2025\n4779678,15,1.74,Running,2/9/2025\n4994408,14,6.62,Tennis,2/21/2025\n3761281,15,9.25,Running,2/5/2025\n5679050,16,10.1,Soccer,11/29/2025\n1031552,18,9.82,Tennis,4/12/2025\n3408063,17,8.44,Cycling,1/13/2025\n3772000,14,7.59,Basketball,11/24/2025\n8943488,18,5.19,Basketball,10/15/2025\n7456937,15,0.67,Tennis,1/8/2025\n2604075,17,3.45,Basketball,2/18/2025\n3555386,17,12.87,Running,2/19/2025\n9354804,15,11.06,Cycling,8/14/2025\n5825393,14,2.46,Running,3/26/2025\n3034676,17,6.25,Cycling,12/16/2025\n8901957,18,12.07,Basketball,10/5/2025\n1488175,14,10.74,Soccer,1/29/2025\n2140359,17,1.31,Running,1/9/2025\n8172232,15,9.34,Basketball,11/23/2025\n1079156,18,3.22,Swimming,7/24/2025\n9565292,17,1.8,Running,11/3/2025\n4210821,14,0.99,Cycling,1/8/2025\n6143942,17,13.27,Running,4/16/2025\n3114870,14,9.61,Basketball,9/24/2025\n5936855,18,4.74,Soccer,8/5/2025\n2377675,18,6.05,Cycling,2/19/2025\n6502618,14,6.7,Running,5/26/2025\n1819441,15,8.12,Tennis,1/5/2025\n4645074,14,11.88,Tennis,7/4/2025\n7297067,17,13.19,Cycling,1/16/2025\n4807219,17,5.65,Cycling,4/23/2025\n6046123,14,8.79,Basketball,10/28/2025\n1984459,16,6.71,Soccer,10/14/2025\n3344788,18,0.32,Cycling,7/30/2025\n5213094,18,10.04,Swimming,3/8/2025\n8911912,14,7.3,Swimming,6/14/2025\n8012421,18,13.47,Swimming,9/17/2025\n7887291,14,2.46,Tennis,8/20/2025\n7638768,14,4.36,Soccer,8/29/2025\n",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "display_name": "Health & Fitness Survey",
+    "teacher_markdown": "This level practices and assesses students’ ability to examine a dataset using info() and describe(), convert numerical data types using astype(), convert date data using pd.to_datetime(), and verify the conversions using info(). The provided graph reinforces prior visualization skills.",
+    "bubble_choice_description": "Practice converting data types with a survey about favorite sports, doctor check-ups, and time spent exercising. ",
+    "thumbnail_url": "https://images.code.org/f53a8695eb9b5f8e775d461e000017fe-swimming.png",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-08-14T03:09:29.401+00:00\",\"changed\":[\"cloned from \\\"datasciencewithpython-lesson6-level4-v2-2026\\\"\"],\"cloned_from\":\"datasciencewithpython-lesson6-level4-v2-2026\"},{\"changed_at\":\"2026-08-14 03:09:41 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

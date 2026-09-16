@@ -180,7 +180,7 @@ module Cdo
     def self.wait_for_workers_to_exit(pids_to_watch, timeout_s)
       Timeout.timeout(timeout_s) do
         pids_to_watch = all_pids = pids_to_watch.to_set
-        until (all_pids & pids_to_watch).empty?
+        while all_pids.intersect?(pids_to_watch)
           sleep 0.25
           all_pids = ExistingWorkers.get_workers_from_ps.to_set {|worker| worker[1]}
         end

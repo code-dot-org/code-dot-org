@@ -1,37 +1,14 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {Portal} from 'react-portal';
 
 import msg from '@cdo/locale';
 
-import Dialog, {
-  Title,
-  Body,
-  Footer,
-  Confirm,
-  Cancel,
-} from '../../legacySharedComponents/Dialog';
-import color from '../../util/color';
-
-const style = {
-  description: {
-    fontSize: 'smaller',
-  },
-  warning: {
-    color: color.red,
-    fontSize: 'smaller',
-    fontStyle: 'italic',
-    textAlign: 'center',
-    padding: 10,
-  },
-  footerButtons: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  buttonGroupSpacing: {
-    marginLeft: 15,
-  },
-};
+import styles from './confirm-enable-maker-dialog.module.scss';
 
 export class ConfirmEnableMakerDialog extends Component {
   static propTypes = {
@@ -42,41 +19,55 @@ export class ConfirmEnableMakerDialog extends Component {
 
   render() {
     return (
-      <Dialog
-        isOpen={this.props.isOpen}
-        confirmText={null}
-        onConfirm={null}
-        onCancel={null}
-        handleClose={this.props.handleCancel}
+      <CustomDialog
+        aria-label={msg.enableMakerDialogTitle()}
+        onClose={this.props.handleCancel}
+        className={styles.dialog}
       >
-        <Title>{msg.enableMakerDialogTitle()}</Title>
-        <Body>
-          <div style={style.description}>
+        <MuiTypography variant="h2">
+          {msg.enableMakerDialogTitle()}
+        </MuiTypography>
+        <div className={styles.content}>
+          <MuiTypography id="dsco-dialog-description" variant="body2">
             {msg.enableMakerDialogDescription()}{' '}
-            <a href="/maker/setup" target="_blank">
+            <Link href="/maker/setup" openInNewTab>
               {msg.enableMakerDialogSetupPageLinkText()}
-            </a>
+            </Link>
+          </MuiTypography>
+          <Alert
+            text={msg.enableMakerDialogWarning()}
+            type="warning"
+            size="xs"
+            className={styles.warning}
+            showIcon={false}
+          />
+        </div>
+        <div className={styles.actions}>
+          <div className={styles.confirmButtons}>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              onClick={() => this.props.handleConfirm('microbit')}
+            >
+              {msg.useMicroBit()}
+            </MuiButton>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              onClick={() => this.props.handleConfirm('circuitPlayground')}
+            >
+              {msg.useCircuitPlayground()}
+            </MuiButton>
           </div>
-          <div style={style.warning}>{msg.enableMakerDialogWarning()}</div>
-
-          <Footer key="footer">
-            <div style={style.footerButtons}>
-              <Cancel onClick={this.props.handleCancel} />
-              <div>
-                <Confirm onClick={() => this.props.handleConfirm('microbit')}>
-                  {msg.useMicroBit()}
-                </Confirm>
-                <Confirm
-                  onClick={() => this.props.handleConfirm('circuitPlayground')}
-                  style={style.buttonGroupSpacing}
-                >
-                  {msg.useCircuitPlayground()}
-                </Confirm>
-              </div>
-            </div>
-          </Footer>
-        </Body>
-      </Dialog>
+          <MuiButton
+            variant="text"
+            color="primary"
+            onClick={this.props.handleCancel}
+          >
+            {msg.dialogCancel()}
+          </MuiButton>
+        </div>
+      </CustomDialog>
     );
   }
 }

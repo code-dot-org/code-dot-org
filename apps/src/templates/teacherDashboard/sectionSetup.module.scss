@@ -56,7 +56,8 @@
   vertical-align: baseline;
 }
 
-.cards {
+.cards,
+.lmsCards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
@@ -108,11 +109,6 @@
 }
 
 .lmsCards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  row-gap: 16px;
-  column-gap: 16px;
   padding-bottom: 16px;
 }
 
@@ -144,7 +140,8 @@
     padding: 24px 16px;
   }
 
-  .cards {
+  .cards,
+  .lmsCards {
     grid-template-columns: 1fr;
   }
 }

@@ -175,6 +175,7 @@ describe('WebLab', () => {
       sinon.stub(studioApp(), 'alertIfCompletedWhilePairing');
       sinon.stub(studioApp(), 'initVersionHistoryUI');
       sinon.stub(studioApp(), 'initTimeSpent');
+      sinon.stub(studioApp(), 'alertIfAbusiveProject');
       weblab.level = {unsubmitUrl: 'url'};
       sinon.stub(dom, 'addClickTouchEvent');
     });

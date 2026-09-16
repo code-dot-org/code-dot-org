@@ -24,7 +24,7 @@ Traces are exported to the local OpenTelemetry Collector via OTLP. The collector
 
 Only activates when `CDO.enable_sentry` is true **and** the process is a web server (`CDO.running_web_application?`). This prevents Sentry from initializing during rake tasks, migrations, and test runners. When `CDO.enable_opentelemetry` is also enabled, Sentry's OTLP integration is turned on so errors include trace context. When OpenTelemetry is off, the OTLP integration is disabled.
 
-Main Dashboard code should capture errors via `Observability::Errors.capture_exception` and `Observability::Errors.capture_message`, not by referencing `Sentry` directly.
+Main Dashboard code should report handled errors via `Observability::Errors.report`, not by referencing `Honeybadger` or `Sentry` directly.
 
 ## Testing
 

@@ -1,9 +1,17 @@
+import type {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
+
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   GROUP_PADDING_PX,
 } from '../constants';
 import type {GroupNodeType, SketchLabNode} from '../types';
+
+type LockableEdge = {
+  source: string;
+  target: string;
+  data?: {locked?: boolean};
+};
 
 export function isGroupNode(node: SketchLabNode): node is GroupNodeType {
   return node.type === 'group';
@@ -18,6 +26,61 @@ export function getGroupChildren(
   nodes: SketchLabNode[]
 ): SketchLabNode[] {
   return nodes.filter(n => n.parentId === groupId);
+}
+
+/**
+ * Counts elements as a user sees them: a regular node is one, and each pair of
+ * lineAnchor nodes is one standalone line.
+ */
+export function countLogicalElements(
+  nodes: Pick<SketchLabNode, 'type'>[]
+): number {
+  const anchorCount = nodes.filter(node => node.type === 'lineAnchor').length;
+  return nodes.length - anchorCount + Math.floor(anchorCount / 2);
+}
+
+/**
+ * Anchor pseudo-nodes at the ends of a locked line. A line's lock lives on its
+ * edge, so the anchors themselves carry no lock and have to inherit one.
+ * Endpoints that are real nodes are left alone; they have their own lock state.
+ */
+export function getLockedLineAnchorIds(
+  nodes: SketchlabReactFlowNode[],
+  edges: LockableEdge[]
+): Set<string> {
+  const anchorIds = new Set(
+    nodes.filter(node => node.type === 'lineAnchor').map(node => node.id)
+  );
+  const lockedAnchorIds = new Set<string>();
+  for (const edge of edges) {
+    if (edge.data?.locked !== true) continue;
+    if (anchorIds.has(edge.source)) lockedAnchorIds.add(edge.source);
+    if (anchorIds.has(edge.target)) lockedAnchorIds.add(edge.target);
+  }
+  return lockedAnchorIds;
+}
+
+/**
+ * Ids a whole-selection move should translate, in node order; empty when fewer
+ * than two elements survive filtering.
+ *
+ * Locked elements and grouped children are dropped: undo can restore either
+ * state while the selection that predates it is still live.
+ */
+export function getSelectionMoveIds(
+  selectedIds: ReadonlySet<string>,
+  nodes: SketchlabReactFlowNode[],
+  edges: LockableEdge[]
+): string[] {
+  const lockedAnchorIds = getLockedLineAnchorIds(nodes, edges);
+  const movable = nodes.filter(
+    node =>
+      selectedIds.has(node.id) &&
+      !node.data?.locked &&
+      !lockedAnchorIds.has(node.id) &&
+      !isGroupedChildNode(node)
+  );
+  return countLogicalElements(movable) >= 2 ? movable.map(node => node.id) : [];
 }
 
 function computeBounds(nodes: SketchLabNode[]) {
@@ -59,7 +122,7 @@ export function groupSelectedNodes(
   const targets = nodes.filter(
     n => selectedIds.includes(n.id) && !n.parentId && !n.data?.locked
   );
-  if (targets.length < 2) return nodes;
+  if (countLogicalElements(targets) < 2) return nodes;
 
   const {minX, minY, maxX, maxY} = computeBounds(targets);
   const groupX = minX - GROUP_PADDING_PX;
@@ -93,6 +156,48 @@ export function groupSelectedNodes(
   // Group node goes first so it sits beneath children when React Flow
   // renders the list top-to-bottom.
   return [groupNode, ...updatedNodes];
+}
+
+/**
+ * Expands a pending deletion so removing a group also removes its children.
+ *
+ * React Flow's cascade delete only propagates to deletable children, but
+ * grouped children are marked deletable:false (so a user can't delete one
+ * child out of a group). This re-adds each deleted group's children, plus any edges whose
+ * endpoints are being removed, so no dangling nodes or edges survive.
+ */
+export function expandGroupDeletion<
+  E extends {id: string; source: string; target: string}
+>(
+  nodesToDelete: SketchLabNode[],
+  edgesToDelete: E[],
+  allNodes: SketchLabNode[],
+  allEdges: E[]
+): {nodes: SketchLabNode[]; edges: E[]} {
+  const deletedNodeIds = new Set(nodesToDelete.map(node => node.id));
+  const orphanedChildren = allNodes.filter(
+    node =>
+      node.parentId &&
+      deletedNodeIds.has(node.parentId) &&
+      !deletedNodeIds.has(node.id)
+  );
+  if (orphanedChildren.length === 0) {
+    return {nodes: nodesToDelete, edges: edgesToDelete};
+  }
+
+  const finalNodesToDelete = [...nodesToDelete, ...orphanedChildren];
+  const finalNodeIds = new Set(finalNodesToDelete.map(node => node.id));
+  const finalEdgeIds = new Set(edgesToDelete.map(edge => edge.id));
+  const finalEdgesToDelete = [...edgesToDelete];
+  for (const edge of allEdges) {
+    if (
+      !finalEdgeIds.has(edge.id) &&
+      (finalNodeIds.has(edge.source) || finalNodeIds.has(edge.target))
+    ) {
+      finalEdgesToDelete.push(edge);
+    }
+  }
+  return {nodes: finalNodesToDelete, edges: finalEdgesToDelete};
 }
 
 /**

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -9,7 +10,6 @@ import {
   SettingsCog,
 } from '@cdo/apps/code-studio/components/SettingsCog';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import * as makerRedux from '@cdo/apps/maker/redux';
 import {
   getStore,
@@ -23,9 +23,11 @@ import pageConstantsReducer, {
 import msg from '@cdo/locale';
 
 describe('SettingsCog', () => {
-  it('renders as a FontAwesome icon', () => {
+  it('renders a gear icon', () => {
     const wrapper = shallow(<SettingsCog />);
-    expect(wrapper.find(FontAwesome)).toHaveLength(1);
+    const icon = wrapper.find(FontAwesomeV6Icon);
+    expect(icon).toHaveLength(1);
+    expect(icon.props().iconName).toBe('gear');
   });
 
   it('opens the menu when the cog is clicked', () => {

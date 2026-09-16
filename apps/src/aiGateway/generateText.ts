@@ -12,9 +12,16 @@ import {
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
-import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
+import {
+  fetchTurnstileToken,
+  turnstileErrorTags,
+  turnstileHeaders,
+} from './turnstile';
+
+export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
 
 type SDKOptions = Parameters<typeof generateText>[0];
+type ExtraOptions = Record<string, unknown>;
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
 
@@ -77,9 +84,11 @@ const generateTextThroughGateway = async <
   TOOLS extends SDKTools = SDKTools,
   OUTPUT extends SDKOutput = SDKOutput
 >(
-  options: SDKOptions
+  options: SDKOptions,
+  extraOptions?: ExtraOptions
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
+  const phase = extraOptions?.phase as GatewayPhase | undefined;
   const modelString = getModelString(model);
   const promptLength =
     typeof options.prompt === 'string' ? options.prompt.length : 0;
@@ -96,15 +105,20 @@ const generateTextThroughGateway = async <
         output: serializedOutput,
       };
 
-      const [token, turnstileToken] = await Promise.all([
-        fetchAccessToken(),
-        fetchTurnstileTokenIfEnabled(),
-      ]);
+      // Serialized, not parallel: the access token response carries the
+      // Turnstile mode that decides whether a challenge is needed at all. The
+      // manager pre-fetches a token after every delivery, so only the first
+      // call of a session waits on a challenge here.
+      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const turnstileToken = await fetchTurnstileToken(
+        turnstileEnforcementMode
+      );
 
       const headers = {
         'Content-Type': 'application/json',
         'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
         ...turnstileHeaders(turnstileToken),
+        ...(phase && {'x-ai-gateway-phase': phase}),
       };
 
       const response = await HttpClient.post(
@@ -140,7 +154,8 @@ const generateTextThroughGateway = async <
         await reportGatewayError(
           error,
           'generateTextThroughGateway',
-          modelString
+          modelString,
+          turnstileErrorTags(error)
         );
       }
       throw error;

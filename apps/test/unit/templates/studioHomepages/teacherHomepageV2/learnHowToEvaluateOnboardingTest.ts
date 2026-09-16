@@ -54,7 +54,8 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
   it('returns one step attached to the View progress button', () => {
     const steps = createLearnHowToEvaluateHomepageSteps(
       mockTour as unknown as Tour,
-      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+      'test_tour'
     );
     expect(steps).toHaveLength(1);
     expect(steps[0].attachTo?.element).toContain('task-button-View-progress');
@@ -63,7 +64,8 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
   it('saves the progress table step id to sessionStorage when View progress is clicked', () => {
     const steps = createLearnHowToEvaluateHomepageSteps(
       mockTour as unknown as Tour,
-      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+      'test_tour'
     );
     (steps[0].when as {show: () => void}).show();
 
@@ -78,7 +80,8 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
   it('removes the highlight class when the step is hidden', () => {
     const steps = createLearnHowToEvaluateHomepageSteps(
       mockTour as unknown as Tour,
-      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+      'test_tour'
     );
     const when = steps[0].when as {show: () => void; hide: () => void};
     when.show();
@@ -114,7 +117,8 @@ describe('createLearnHowToEvaluateProgressSteps step structure', () => {
 
   it('includes quiz step, no snapshot steps, and completion step when snapshot link is absent', () => {
     const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
+      mockTour as unknown as Tour,
+      'test_tour'
     );
     expect(steps.some(s => s.id === PROGRESS_TABLE_STEP_ID)).toBe(true);
     expect(steps.some(s => s.id === 'student-snapshot-step')).toBe(false);
@@ -131,7 +135,8 @@ describe('createLearnHowToEvaluateProgressSteps step structure', () => {
   it('includes snapshot link step and all snapshot page steps when Student Snapshot link is present', () => {
     document.body.innerHTML += `<a href="/teacher_dashboard/sections/1/student_snapshot">Student Snapshot</a>`;
     const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
+      mockTour as unknown as Tour,
+      'test_tour'
     );
     expect(steps.some(s => s.id === 'student-snapshot-step')).toBe(true);
     expect(steps.some(s => s.id === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID)).toBe(
@@ -146,7 +151,8 @@ describe('createLearnHowToEvaluateProgressSteps step structure', () => {
 
   it('quiz step text contains all three student names', () => {
     const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
+      mockTour as unknown as Tour,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === PROGRESS_TABLE_STEP_ID)!;
     expect(quizStep.text).toContain('Samir Patel');
@@ -181,7 +187,7 @@ describe('progress-table-step when handler', () => {
   });
 
   const getQuizStep = (tour: Tour) => {
-    const steps = createLearnHowToEvaluateProgressSteps(tour);
+    const steps = createLearnHowToEvaluateProgressSteps(tour, 'test_tour');
     const step = steps.find(s => s.id === PROGRESS_TABLE_STEP_ID)!;
     (step.when as {show: () => void}).show();
     return step;
@@ -238,7 +244,8 @@ describe('student-snapshot-step when handler', () => {
 
   it('saves the ai-insights step id to sessionStorage and allows navigation on click', () => {
     const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
+      mockTour as unknown as Tour,
+      'test_tour'
     );
     const snapshotStep = steps.find(s => s.id === 'student-snapshot-step')!;
     (snapshotStep.when as {show: () => void}).show();
@@ -263,7 +270,8 @@ describe('student-snapshot-step when handler', () => {
   it('ai-insights step has a single next button that advances the tour', () => {
     document.body.innerHTML += `<div id="ui-test-lesson-insight-widget"></div>`;
     const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
+      mockTour as unknown as Tour,
+      'test_tour'
     );
     const step = steps.find(
       s => s.id === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
@@ -279,7 +287,8 @@ describe('student-snapshot-step when handler', () => {
   it('ai-insights step highlights the lesson insight widget on show and removes it on hide', () => {
     document.body.innerHTML += `<div id="ui-test-lesson-insight-widget"></div>`;
     const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
+      mockTour as unknown as Tour,
+      'test_tour'
     );
     const step = steps.find(
       s => s.id === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
@@ -304,7 +313,8 @@ describe('student-snapshot-step when handler', () => {
   it('ai-feedback step highlights the lesson feedback widget on show and removes it on hide', () => {
     document.body.innerHTML += `<div id="ui-test-lesson-feedback-widget"></div>`;
     const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
+      mockTour as unknown as Tour,
+      'test_tour'
     );
     const step = steps.find(s => s.id === 'student-snapshot-ai-feedback-step')!;
     const when = step.when as {show: () => void; hide: () => void};
@@ -327,7 +337,8 @@ describe('student-snapshot-step when handler', () => {
   it('cfu step highlights the cfu widget on show and removes it on hide', () => {
     document.body.innerHTML += `<div id="ui-test-cfu-widget"></div>`;
     const steps = createLearnHowToEvaluateProgressSteps(
-      mockTour as unknown as Tour
+      mockTour as unknown as Tour,
+      'test_tour'
     );
     const step = steps.find(s => s.id === 'student-snapshot-cfu-step')!;
     const when = step.when as {show: () => void; hide: () => void};

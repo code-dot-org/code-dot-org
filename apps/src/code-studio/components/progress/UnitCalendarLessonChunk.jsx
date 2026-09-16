@@ -74,11 +74,8 @@ class UnitCalendarLessonChunk extends Component {
             {(assessment || unplugged) && (
               <div key={`lesson-${id}`} style={styles.iconSection}>
                 <FontAwesomeV6Icon
-                  iconName="check-circle"
+                  iconName="star"
                   style={{
-                    color: isHover
-                      ? 'var(--text-neutral-white-fixed)'
-                      : 'var(--text-brand-purple-primary)',
                     visibility: assessment ? 'visible' : 'hidden',
                   }}
                 />

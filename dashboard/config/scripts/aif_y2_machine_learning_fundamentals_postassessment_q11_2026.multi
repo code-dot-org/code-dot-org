@@ -1,0 +1,16 @@
+name 'aif-y2-machine-learning-fundamentals-postassessment-q11-2026'
+
+wrong 'Considering more neighbors makes the model run faster'
+right 'Considering more neighbors can make predictions more reliable'
+wrong 'Considering more neighbors lets the model predict multiple labels for each input'
+wrong 'Considering more neighbors avoids the need for labeled training data'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Why might you want a nearest-neighbor classifier to consider more than one neighbor?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Building Classifiers
+MARKDOWN

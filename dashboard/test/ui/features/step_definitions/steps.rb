@@ -1,4 +1,5 @@
 require 'cdo/url_converter'
+require 'cdo/brand'
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
 SHORT_WAIT_TIMEOUT = 30.seconds
@@ -218,8 +219,19 @@ end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
+  # Legacy BaseDialog renders `#x-close`; DSCO CustomDialog renders a button
+  # with `aria-label="Close"`. Both may coexist in the DOM (legacy dialogs
+  # stay mounted after being hidden), so match only the visible one.
+  script = <<~JS
+    var candidates = Array.from(document.querySelectorAll(
+      '#x-close, [role="dialog"] button[aria-label="Close"]'
+    ));
+    var el = candidates.find(function (n) { return n.offsetParent !== null; });
+    if (el) { el.click(); }
+    return !!el;
+  JS
+  wait_short_until {@browser.execute_script(script)}
   steps <<-GHERKIN
-    When I press "x-close"
     And I wait for 0.75 seconds
   GHERKIN
 end
@@ -575,7 +587,13 @@ rescue
 end
 
 When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
+  @browser.execute_script(<<~JS)
+    var el = $('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first()[0];
+    if (!el) return;
+    var opts = {bubbles: true, cancelable: true, pointerId: 1, pointerType: 'mouse', isPrimary: true};
+    el.dispatchEvent(new PointerEvent('pointerdown', opts));
+    document.dispatchEvent(new PointerEvent('pointerup', opts));
+  JS
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
@@ -709,6 +727,10 @@ Then /^I should see title includes "([^"]*)"$/ do |title|
   expect(@browser.title).to include(title)
 end
 
+Then /^I should see branded title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include("#{title} - #{Cdo::Brand.legal_name}")
+end
+
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
@@ -758,7 +780,7 @@ end
 
 Then /^element "([^"]*)" has escaped text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
   # Add more unescaping rules here as needed.
-  expected_text.gsub!(/\\n/, "\n")
+  expected_text.gsub!("\\n", "\n")
   element_has_text(selector, expected_text)
 end
 
@@ -767,10 +789,11 @@ Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
 end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
-  steps %{
-    Then I wait to see a ".dialog-title"
-    And element ".dialog-title" has text "#{expected_text}"
-  }
+  # Legacy BaseDialog uses `.dialog-title`; DSCO dialogs put the title in a
+  # heading (h2 for Dialog, h3 for Modal) inside a `[role="dialog"]` or, for
+  # Dialog, `[role="alertdialog"]`. Accept any of them.
+  selector = %q($('.dialog-title:visible').first().text() || $('[role="dialog"]:visible :header, [role="alertdialog"]:visible :header').first().text())
+  wait_short_until {@browser.execute_script("return #{selector};")&.include?(expected_text)}
 end
 
 Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
@@ -928,6 +951,14 @@ end
 
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
+end
+
+Then /^element "([^"]*)" is visible if present$/ do |selector|
+  next unless element_exists?(selector)
+
+  wait_short_until do
+    expect(element_visible?(selector)).to eq(true)
+  end
 end
 
 Then /^element "([^"]*)" does exist/ do |selector|
@@ -1381,7 +1412,7 @@ end
 def convert_keys(keys)
   return keys[1..].to_sym if keys.start_with?(':')
   keys.gsub!(/([^\\])\\n/, "\\1\n") # Cucumber does not convert captured \n to newline.
-  keys.gsub!(/\\\\n/, "\\n") # Fix up escaped newline
+  keys.gsub!("\\\\n", "\\n") # Fix up escaped newline
   # Convert newlines to :enter keys.
   keys.chars.map {|k| k == "\n" ? :enter : k}
 end

@@ -1,4 +1,5 @@
 @as_student
+@playwright
 Feature: Race Interstitial
 
   @eyes

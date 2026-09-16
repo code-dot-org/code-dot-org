@@ -1,13 +1,11 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import CloseButton from '@code-dot-org/component-library/closeButton';
-import {Typography, Button as MuiButton} from '@mui/material';
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import i18n from '@cdo/locale';
 
 import {hashEmail} from '../../code-studio/hashEmail';
-import BaseDialog from '../../templates/BaseDialog';
 import {isEmail} from '../../util/formatValidation';
 
 import {ChangeEmailForm} from './ChangeEmailForm';
@@ -60,6 +58,14 @@ export default class ChangeEmailModal extends React.Component {
   };
 
   cancel = () => this.props.handleCancel();
+
+  // The DSCO Modal close affordances (X button, Esc) route here; ignore them
+  // while a save is in flight, matching the old BaseDialog `uncloseable` prop.
+  handleClose = () => {
+    if (this.state.saveState !== STATE_SAVING) {
+      this.cancel();
+    }
+  };
 
   onSubmitFailure = error => {
     if (error && Object.prototype.hasOwnProperty.call(error, 'serverErrors')) {
@@ -138,59 +144,44 @@ export default class ChangeEmailModal extends React.Component {
     const {saveState, values} = this.state;
     const validationErrors = this.getValidationErrors();
     const isFormValid = this.isFormValid(validationErrors);
+    const saving = STATE_SAVING === saveState;
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen
-        hideCloseButton
-        uncloseable={STATE_SAVING === saveState}
-      >
-        <CloseButton onClick={this.cancel} className={styles.closeButton} />
-        <div className={styles.container}>
-          <Typography component="h3" variant="h5" gutterBottom>
-            {i18n.changeEmailModal_title()}
-          </Typography>
-          <ChangeEmailForm
-            values={values}
-            validationErrors={validationErrors}
-            disabled={STATE_SAVING === saveState}
-            userType={userType}
-            isPasswordRequired={isPasswordRequired}
-            onChange={this.onFormChange}
-            onSubmit={this.save}
-          />
-          {STATE_UNKNOWN_ERROR === saveState && (
-            <Alert
-              text={i18n.changeEmailModal_unexpectedError()}
-              type={alertTypes.danger}
-              className={styles.hasError}
+      <Modal
+        title={i18n.changeEmailModal_title()}
+        onClose={this.handleClose}
+        closeLabel={i18n.closeDialog()}
+        customContent={
+          <>
+            <ChangeEmailForm
+              values={values}
+              validationErrors={validationErrors}
+              disabled={saving}
+              userType={userType}
+              isPasswordRequired={isPasswordRequired}
+              onChange={this.onFormChange}
+              onSubmit={this.save}
             />
-          )}
-          <div className={styles.buttonContainer}>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="medium"
-              disabled={STATE_SAVING === saveState}
-              onClick={this.cancel}
-              type="button"
-            >
-              {i18n.cancel()}
-            </MuiButton>
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              loading={STATE_SAVING === saveState}
-              disabled={STATE_SAVING === saveState || !isFormValid}
-              onClick={this.save}
-              type="button"
-            >
-              {i18n.changeEmailModal_save()}
-            </MuiButton>
-          </div>
-        </div>
-      </BaseDialog>
+            {STATE_UNKNOWN_ERROR === saveState && (
+              <Alert
+                text={i18n.changeEmailModal_unexpectedError()}
+                type={alertTypes.danger}
+                className={styles.hasError}
+              />
+            )}
+          </>
+        }
+        primaryButtonProps={{
+          children: i18n.changeEmailModal_save(),
+          onClick: this.save,
+          loading: saving,
+          disabled: saving || !isFormValid,
+        }}
+        secondaryButtonProps={{
+          children: i18n.cancel(),
+          onClick: this.cancel,
+          disabled: saving,
+        }}
+      />
     );
   };
 }

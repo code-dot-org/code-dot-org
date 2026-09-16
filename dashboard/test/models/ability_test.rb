@@ -49,6 +49,12 @@ class AbilityTest < ActiveSupport::TestCase
       @pl_pilot_course_script_level = create(:script_level, script: script)
     end
 
+    @old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
+
+    @hoc_tutorial_unit = create(:script, name: 'flappy').tap do |script|
+      create(:hoc_course, unit: script, name: 'flappy', family_name: 'flappy', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    end
+
     @in_development_unit_group = create(:unit_group, published_state: 'in_development')
     @in_development_script = create(:script).tap do |script|
       @in_development_lesson = create(:lesson, script: script, has_lesson_plan: true)
@@ -71,8 +77,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    refute ability.can?(:read, @old_pl_course_unit) # old PL courses are facilitator-audience only
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -108,8 +114,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @old_pl_course_unit)
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -145,8 +151,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @old_pl_course_unit)
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -182,8 +188,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    refute ability.can?(:read, @old_pl_course_unit) # old PL courses are facilitator-audience only
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     refute ability.can?(:read, @in_development_script)
     assert ability.can?(:read, @public_teacher_to_student_unit)
@@ -226,8 +232,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    refute ability.can?(:read, @old_pl_course_unit) # old PL courses are facilitator-audience only
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     refute ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -263,8 +269,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    refute ability.can?(:read, @old_pl_course_unit) # old PL courses are facilitator-audience only
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -307,8 +313,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @old_pl_course_unit)
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -352,8 +358,8 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @old_pl_course_unit)
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -393,8 +399,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @old_pl_course_unit)
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -440,8 +446,8 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:destroy, Game)
     assert ability.cannot?(:destroy, Level)
     assert ability.cannot?(:destroy, Activity)
-    assert ability.cannot?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.cannot?(:read, Unit.find_by_name('flappy'))
+    assert ability.cannot?(:read, @old_pl_course_unit)
+    assert ability.cannot?(:read, @hoc_tutorial_unit)
 
     assert ability.cannot?(:read, @public_teacher_to_student_unit)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
@@ -487,8 +493,8 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, Section)
 
-    assert ability.can?(:read, Unit.find_by_name('ECSPD'))
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @old_pl_course_unit)
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -705,31 +711,31 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
   end
 
-  test 'verified teacher can access main javabuilder' do
+  test 'verified teacher can access javabuilder' do
     verified_teacher = create(:authorized_teacher)
-    assert Ability.new(verified_teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
+    assert Ability.new(verified_teacher).can? :get_access_token, :javabuilder_session
   end
 
-  test 'student of verified teacher in CSA section can access main javabuilder' do
+  test 'student of verified teacher in CSA section can access javabuilder' do
     teacher = create(:authorized_teacher)
     csa_script = create(:csa_script)
     create(:single_unit_course, unit: csa_script)
     section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student = create(:follower, section: section).student_user
 
-    assert Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
+    assert Ability.new(student).can? :get_access_token, :javabuilder_session
   end
 
-  test 'unverified teacher cannot access main javabuilder' do
+  test 'unverified teacher cannot access javabuilder' do
     teacher = create(:teacher)
-    refute Ability.new(teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
+    refute Ability.new(teacher).can? :get_access_token, :javabuilder_session
   end
 
-  test 'student in section of unverified teacher cannot access main javabuilder' do
+  test 'student in section of unverified teacher cannot access javabuilder' do
     student = create(:student)
     section = create(:section)
     create(:follower, section: section, student_user: student)
-    refute Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
+    refute Ability.new(student).can? :get_access_token, :javabuilder_session
   end
 
   test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer' do

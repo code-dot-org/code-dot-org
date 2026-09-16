@@ -17,6 +17,7 @@ function SortByNameDropdown({
   isSortedByFamilyName,
   setSortByFamilyName,
   className,
+  isLabelVisible = true,
 }) {
   const onSortByFamilyNameChange = useCallback(
     e => {
@@ -42,6 +43,7 @@ function SortByNameDropdown({
       size="s"
       dropdownTextThickness="thin"
       color="gray"
+      isLabelVisible={isLabelVisible}
     />
   );
 }
@@ -53,6 +55,7 @@ SortByNameDropdown.propTypes = {
   isSortedByFamilyName: PropTypes.bool,
   setSortByFamilyName: PropTypes.func,
   className: PropTypes.string,
+  isLabelVisible: PropTypes.bool,
 };
 
 export const UnconnectedSortByNameDropdown = SortByNameDropdown;

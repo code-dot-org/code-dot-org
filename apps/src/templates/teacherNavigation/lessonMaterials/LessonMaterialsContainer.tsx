@@ -9,7 +9,7 @@ import {THREAD_TYPES} from '@cdo/apps/aiDifferentiation/constants';
 import {
   setChatIsOpen,
   fetchThreadMessages,
-} from '@cdo/apps/aiDifferentiation/redux';
+} from '@cdo/apps/aiTeacherDrawer/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -61,8 +61,8 @@ interface LessonSummaryInfoResponse {
   script: string;
 }
 
-interface AIFStatus {
-  aif: boolean;
+interface LessonSummariesEnabledResponse {
+  enabled: boolean;
 }
 
 const lessonMaterialsApiCall = (unitId: number) =>
@@ -225,10 +225,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           console.log(`Error: ${error}`);
         });
       if (showAITAPodcasts || experiments.isEnabled('ai-lesson-podcasts')) {
-        HttpClient.fetchJson<AIFStatus>(
-          `/teacher_dashboard/unit_in_aif?unit_id=${selectedSection.unitId}`
+        HttpClient.fetchJson<LessonSummariesEnabledResponse>(
+          `/teacher_dashboard/lesson_summaries_enabled_for_unit?unit_id=${selectedSection.unitId}`
         )
-          .then(data => setCanShowPodcasts(data.value.aif))
+          .then(data => setCanShowPodcasts(data.value.enabled))
           .catch(error => console.error(error));
       }
     }

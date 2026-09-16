@@ -1,0 +1,20 @@
+<Fish>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 66,
+  "created_at": "2026-08-06T18:33:48.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "mode": "short",
+    "guides": "K5",
+    "background": "oceans-blue",
+    "parent_level_id": 19645,
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true",
+    "encrypted": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-08-06T18:33:48.324+00:00\",\"changed\":[\"cloned from \\\"Oceans_Short_2025\\\"\"],\"cloned_from\":\"Oceans_Short_2025\"},{\"changed_at\":\"2026-08-06 18:33:51 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Fish>

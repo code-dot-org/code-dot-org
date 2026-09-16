@@ -7,22 +7,48 @@
   %br/
   = submit_tag 'Go!'
 
-= form_tag(undelete_section_admin_search_index_url, method: :post) do
-  - if @section && @section.user
-    %p= "Section code: #{@section.code}"
+- if @section
+  %p= "Section code: #{@section.code}"
+  - if @section.user
     %p{id: 'section_owner'}= "Owner: #{@section.user.email}"
     - if @section.deleted?
-      = hidden_field_tag 'section_code', @section.code
-      = submit_tag 'Undelete!'
+      = form_tag(undelete_section_admin_search_index_url, method: :post) do
+        = hidden_field_tag 'section_code', @section.code
+        = submit_tag 'Undelete!'
     - else
       %a{href: subpath_teacher_dashboard_section_url(@section, path: :progress)}
         %p View this section
+  - else
+    %p{id: 'section_owner'}= "Owner: DELETED"
+
+  - if !@section.deleted? && @section.login_type == Section::LOGIN_TYPE_PICTURE
+    %h2 Set picture passwords
+    %p= "Section: #{@section.name}; Students: #{@section.students.where(user_type: User::TYPE_STUDENT).count}"
+    %p.alert.alert-warning
+      %strong Warning:
+      Use this tool only to simplify classroom playtests run by internal Code.org teams.
+      Do not use it to set picture passwords for regular teacher sections.
+    %p
+      This changes the picture password for every student account currently enrolled in this section.
+      Teacher accounts are excluded.
+      Picture passwords belong to user accounts, so the change also applies in their other sections.
+
+    = form_tag set_section_picture_passwords_admin_search_index_path, method: :post do
+      = hidden_field_tag :section_code, @section.code
+      %fieldset
+        %legend Choose the picture password
+        %div{style: 'display: flex; flex-wrap: wrap; gap: 16px;'}
+          - @secret_pictures.each do |picture|
+            = label_tag "secret_picture_id_#{picture.id}", style: 'display: flex; align-items: center; gap: 8px; padding: 8px;' do
+              = radio_button_tag :secret_picture_id, picture.id, false, required: true
+              = image_tag picture.path, alt: '', width: 66, height: 66
+              = picture.name
+      = submit_tag 'Set picture password for all students in this section', data: {disable_with: 'Updating picture passwords…'}
+
+  - if @section.user
     %h3 Section dump
     %pre= @section.inspect
     %h3 Teacher dump
     %pre= @section.user.inspect
-  - elsif @section
-    %p= "Section code: #{@section.code}"
-    %p{id: 'section_owner'}= "Owner: DELETED"
 
 = render partial: 'home/admin'

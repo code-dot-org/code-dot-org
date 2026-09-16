@@ -1,0 +1,15 @@
+name 'aif-y2-logic-based-ai-postassessment-q6-2026'
+
+wrong 'To print a value to the screen so that the user can see it'
+right 'To produce output that can be used later in a program'
+wrong 'To end the Python program so that no more lines of code run'
+wrong 'To give a value a name that the function can use later'
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Why might it be useful to return a value from a Python function?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Defining Functions
+MARKDOWN

@@ -1,6 +1,5 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
-import {useState} from 'react';
-
+import {getAssetPath} from '../assetPath';
 import {styles} from '../constants';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
@@ -35,11 +34,8 @@ const SelectDataset = () => {
   const setHighlightDataset = (id: string | undefined) =>
     dispatch(setHighlightDatasetAction(id as string));
 
-  const [, setDownload] = useState(false);
-
   const handleDatasetClick = (id: string) => {
-    const assetPath = (global as unknown as Record<string, string>)
-      .__ml_playground_asset_public_path__;
+    const assetPath = getAssetPath();
     const dataset = getDatasets().find(dataset => dataset.id === id);
 
     // Don't process the click if we're just clicking the current
@@ -52,7 +48,6 @@ const SelectDataset = () => {
       setSelectedName(dataset.name);
       setSelectedCSV(csvPath);
       setSelectedJSON(jsonPath);
-      setDownload(true);
 
       parseCSV(csvPath, true, false);
 
@@ -63,7 +58,6 @@ const SelectDataset = () => {
   const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     resetState();
     setSelectedCSV(event.target.files![0]);
-    setDownload(false);
     parseCSV(event.target.files![0] as unknown as string, false, true);
   };
 
@@ -85,8 +79,7 @@ const SelectDataset = () => {
 
   const datasets = getAvailableDatasets(specifiedDatasets);
 
-  const assetPath = (global as unknown as Record<string, string>)
-    .__ml_playground_asset_public_path__;
+  const assetPath = getAssetPath();
 
   return (
     <div id="select-dataset" style={styles.panel}>

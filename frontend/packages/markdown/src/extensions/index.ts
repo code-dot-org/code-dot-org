@@ -5,6 +5,7 @@ export {embeds} from './embeds';
 export {expandableImages} from './expandableImages';
 export {externalLinks} from './externalLinks';
 export {inlineStyles} from './inlineStyles';
+export {lenientHeadings} from './lenientHeadings';
 export {visualCodeBlock} from './visualCodeBlock';
 export {
   vocabularyDefinition,

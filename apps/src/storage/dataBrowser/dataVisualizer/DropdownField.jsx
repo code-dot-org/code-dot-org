@@ -16,14 +16,13 @@ class DropdownField extends React.Component {
   };
 
   render() {
-    const labelStyle = this.props.inlineLabel
-      ? {
-          ...rowStyle.description,
-          float: 'left',
-          marginTop: '5px',
-          paddingRight: '5px',
-        }
-      : rowStyle.description;
+    const labelStyle = {
+      ...rowStyle.description,
+      color: 'var(--text-neutral-primary)',
+      ...(this.props.inlineLabel
+        ? {float: 'left', marginTop: '5px', paddingRight: '5px'}
+        : {}),
+    };
 
     const containerStyle = {
       paddingLeft: this.props.inlineLabel ? 10 : 20,
@@ -31,10 +30,19 @@ class DropdownField extends React.Component {
       marginBottom: 8,
     };
 
+    const selectStyle = {
+      color: 'var(--text-neutral-primary)',
+      borderColor: 'var(--borders-neutral-strong)',
+    };
+
     return (
       <div style={containerStyle}>
         <label style={labelStyle}>{this.props.displayName}</label>
-        <select value={this.props.value} onChange={this.props.onChange}>
+        <select
+          value={this.props.value}
+          onChange={this.props.onChange}
+          style={selectStyle}
+        >
           <option value="">{msg.select()}</option>
           {this.props.options.map(option => (
             <option

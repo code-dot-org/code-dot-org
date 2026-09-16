@@ -3,6 +3,8 @@ import React, {useEffect, useState} from 'react';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {CodeWidgetLevelInfo} from './types';
+
 import CodeWidget from './';
 
 interface ExemplarCodeWidgetProps {
@@ -13,8 +15,8 @@ interface ExemplarCodeWidgetProps {
 
 interface ExemplarCodeData {
   id: number;
-  name: string;
   exemplarSources?: MultiFileSource;
+  instructions?: string;
 }
 
 const getExemplarCodeData = (lessonId: number) => {
@@ -29,12 +31,18 @@ const ExemplarCodeWidget = ({
   lessonId,
 }: ExemplarCodeWidgetProps) => {
   const [exemplarCode, setExemplarCode] = useState<ExemplarCodeData>();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [lastLessonId, setLastLessonId] = useState(lessonId);
+  if (lessonId !== lastLessonId) {
+    setLastLessonId(lessonId);
+    setExemplarCode(undefined);
+    setIsLoading(!!lessonId);
+  }
 
   useEffect(() => {
     if (lessonId) {
       let isCancelled = false;
-      setIsLoading(true);
 
       getExemplarCodeData(lessonId)
         .then(data => {
@@ -57,11 +65,16 @@ const ExemplarCodeWidget = ({
       return () => {
         isCancelled = true;
       };
-    } else {
-      setExemplarCode(undefined);
-      setIsLoading(false);
     }
   }, [lessonId]);
+
+  if (!isLoading && !exemplarCode?.exemplarSources) {
+    return null;
+  }
+
+  const levelInfo: CodeWidgetLevelInfo | undefined = exemplarCode?.instructions
+    ? {instructions: exemplarCode.instructions}
+    : undefined;
 
   return (
     <CodeWidget
@@ -70,6 +83,8 @@ const ExemplarCodeWidget = ({
       gridWidth={gridWidth}
       gridHeight={gridHeight}
       loading={isLoading}
+      levelInfo={levelInfo}
+      emptyMessage="No exemplar code available"
     />
   );
 };

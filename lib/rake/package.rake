@@ -1,7 +1,6 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/aws/s3_packaging'
-require 'cdo/aws/turbo_s3_packaging'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -70,14 +69,16 @@ namespace :package do
   timed_task_with_logging apps: ['apps:update', 'apps:symlink']
 
   namespace :studio do
+    # Keyed on a git hash of frontend/, like apps, so frontends without node
+    # can work out which package they need.
     def studio_packager
-      TurboS3Packaging.new('studio', vite_dir, dashboard_dir('public/studio-package'), frontend_dir, '@code-dot-org/studio')
+      S3Packaging.new('studio', vite_dir, [frontend_dir], dashboard_dir('public/studio-package'))
     end
 
     desc 'Update studio static asset package.'
     timed_task_with_logging 'update' do
-      # temporarily skip if levelbuilder or production
-      next if rack_env?(:levelbuilder) || rack_env?(:production)
+      # temporarily skip if levelbuilder
+      next if rack_env?(:levelbuilder)
 
       # never download if we build our own and we're not building a package ourselves.
       next if CDO.use_my_studio && !BUILD_PACKAGE
@@ -96,9 +97,7 @@ namespace :package do
       # temporarily skip if levelbuilder or production
       next if rack_env?(:levelbuilder) || rack_env?(:production)
 
-      # Store initial turbo hash to make sure inputs don't change during the build.
-      # Turborepo's hash covers all source inputs, replacing the git-tree-hash
-      # approach used for apps.
+      # Store initial commit hash to make sure it doesn't change out from under us during the build
       packager = studio_packager
       expected_commit_hash = packager.commit_hash
 
@@ -108,8 +107,8 @@ namespace :package do
         ChatClient.wrap('Testing studio') {Rake::Task['test:studio'].invoke}
       end
 
-      # upload to s3
-      package = packager.create_package('/dist/frontend-studio', expected_commit_hash: expected_commit_hash)
+      # Ship .vite so Rails renders tags that match these assets.
+      package = packager.create_package('/dist/frontend-studio', expected_commit_hash: expected_commit_hash, extra_paths: ['.vite'])
 
       unless rack_env?(:adhoc)
         packager.upload_package_to_s3(package)

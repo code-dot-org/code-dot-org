@@ -1,0 +1,13 @@
+name 'aif-y2-machine-learning-fundamentals-lesson8-level1-2026'
+display_name 'Making Predictions'
+description 'Choose where you would like to be a postmaster.'
+
+sublevels
+level 'aif-y2-machine-learning-fundamentals-lesson8-level1-choice1-2026'
+level 'aif-y2-machine-learning-fundamentals-lesson8-level1-choice2-2026'
+level 'aif-y2-machine-learning-fundamentals-lesson8-level1-choice3-2026'
+level 'aif-y2-machine-learning-fundamentals-lesson8-level1-choice4-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

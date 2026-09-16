@@ -1,13 +1,11 @@
-import classNames from 'classnames';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {addMouseUpTouchEvent} from '../../dom';
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import {getOuterHeight, scrollBy} from './utils';
-
-import moduleStyles from './scroll-buttons.module.scss';
 
 // By how many pixels should we scroll when clicked?
 const SCROLL_BY = 100;
@@ -29,7 +27,6 @@ const DIRECTIONS = {
 };
 
 const MARGIN = 5;
-const CRAFT_MARGIN = 0;
 
 /**
  * A pair of buttons for scrolling instructions in CSF
@@ -40,18 +37,15 @@ class ScrollButtons extends React.Component {
     visible: PropTypes.bool.isRequired,
     height: PropTypes.number.isRequired,
     getScrollTarget: PropTypes.func.isRequired,
-    isMinecraft: PropTypes.bool.isRequired,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
   };
-
-  getMargin() {
-    return this.props.isMinecraft ? CRAFT_MARGIN : MARGIN;
-  }
 
   getMinHeight() {
     const scrollButtonsHeight =
       getOuterHeight(this.scrollUp, true) +
       getOuterHeight(this.scrollDown, true);
-    return scrollButtonsHeight + this.getMargin() * 2;
+    return scrollButtonsHeight + MARGIN * 2;
   }
 
   continuousScrollStartUp = () => {
@@ -113,116 +107,61 @@ class ScrollButtons extends React.Component {
   };
 
   render() {
-    const showItems = this.props.isMinecraft
-      ? this.props.height > 50
-      : this.props.height > 20;
-    const centerItems = this.props.isMinecraft
-      ? this.props.height > 100
-      : this.props.height > 60;
-
-    // for most tutorials, we have minimalist arrow elements. For
-    // minecraft, we use a special button element to stylistically align
-    // with the other buttons on the screen.
-
-    const upButton = this.props.isMinecraft ? (
-      <button
-        type="button"
-        className={classNames(
-          moduleStyles.up,
-          this.props.visible && moduleStyles.visible,
-          centerItems && moduleStyles.upCenter,
-          moduleStyles.minecraftButton,
-          'arrow'
-        )}
-        ref={c => {
-          this.scrollUp = c;
-        }}
-        key="scrollUp"
-        onClick={this.singleScrollUp}
-        onMouseDown={this.continuousScrollStartUp}
-        aria-label="Scroll instructions up"
-      >
-        <img src="/blockly/media/1x1.gif" className="scroll-up-btn" alt="" />
-      </button>
-    ) : (
-      <button
-        type="button"
-        ref={c => {
-          this.scrollUp = c;
-        }}
-        key="scrollUp"
-        onClick={this.singleScrollUp}
-        onMouseDown={this.continuousScrollStartUp}
-        className={classNames(
-          moduleStyles.up,
-          this.props.visible && moduleStyles.visible,
-          centerItems && moduleStyles.upCenter,
-          moduleStyles.arrowGlyph,
-          moduleStyles.removeButtonStyles
-        )}
-        aria-label="Scroll instructions up"
-      >
-        <FontAwesome
-          icon="caret-up"
-          style={{lineHeight: '22px', pointerEvents: 'none'}}
-        />
-      </button>
-    );
-
-    const downButton = this.props.isMinecraft ? (
-      <button
-        type="button"
-        className={classNames(
-          moduleStyles.down,
-          this.props.visible && moduleStyles.visible,
-          centerItems && moduleStyles.downCenter,
-          moduleStyles.minecraftButton,
-          'arrow'
-        )}
-        ref={c => {
-          this.scrollDown = c;
-        }}
-        key="scrollDown"
-        onClick={this.singleScrollDown}
-        onMouseDown={this.continuousScrollStartDown}
-        aria-label="Scroll instructions down"
-      >
-        <img src="/blockly/media/1x1.gif" className="scroll-down-btn" alt="" />
-      </button>
-    ) : (
-      <button
-        type="button"
-        ref={c => {
-          this.scrollDown = c;
-        }}
-        className={classNames(
-          moduleStyles.down,
-          this.props.visible && moduleStyles.visible,
-          centerItems && moduleStyles.downCenter,
-          moduleStyles.arrowGlyph,
-          moduleStyles.removeButtonStyles,
-          'uitest-scroll-button-down'
-        )}
-        key="scrollDown"
-        onClick={this.singleScrollDown}
-        onMouseDown={this.continuousScrollStartDown}
-        aria-label="Scroll instructions down"
-      >
-        <FontAwesome
-          icon="caret-down"
-          style={{lineHeight: '22px', pointerEvents: 'none'}}
-        />
-      </button>
-    );
+    const showItems = this.props.height > 20;
 
     return (
       showItems && (
         <div
-          className={moduleStyles.container}
-          style={{height: this.props.height, ...this.props.style}}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            flexWrap: 'wrap',
+            gap: 5,
+            padding: '0 5px',
+            overflow: 'hidden',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            boxSizing: 'border-box',
+            height: '100%',
+          }}
         >
-          {upButton}
-          {downButton}
+          <MuiIconButton
+            type="button"
+            variant="outlined"
+            size="small"
+            color="secondary"
+            sx={{
+              width: 32,
+            }}
+            ref={c => {
+              this.scrollUp = c;
+            }}
+            key="scrollUp"
+            onClick={this.singleScrollUp}
+            onMouseDown={this.continuousScrollStartUp}
+            aria-label="Scroll instructions up"
+          >
+            {this.props.upIcon ?? <FontAwesomeV6Icon iconName="caret-up" />}
+          </MuiIconButton>
+          <MuiIconButton
+            type="button"
+            variant="outlined"
+            size="small"
+            color="secondary"
+            sx={{
+              width: 32,
+            }}
+            ref={c => {
+              this.scrollDown = c;
+            }}
+            className="uitest-scroll-button-down"
+            key="scrollDown"
+            onClick={this.singleScrollDown}
+            onMouseDown={this.continuousScrollStartDown}
+            aria-label="Scroll instructions down"
+          >
+            {this.props.downIcon ?? <FontAwesomeV6Icon iconName="caret-down" />}
+          </MuiIconButton>
         </div>
       )
     );

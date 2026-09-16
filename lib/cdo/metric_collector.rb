@@ -3,6 +3,7 @@
 require 'cdo/aws/metrics'
 require 'honeybadger/ruby'
 require 'concurrent/timer_task'
+require 'observability/errors'
 
 module Cdo
   class MetricCollector
@@ -16,7 +17,7 @@ module Cdo
     def start
       return @task if @task&.running?
       @task = Concurrent::TimerTask.new(execution_interval: @interval) {collect}.
-        with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
+        with_observer {|_, _, ex| Observability::Errors.report(ex) if ex}.
         execute
     end
 

@@ -5,7 +5,7 @@
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {Channel} from '../types';
+import {Channel, ShareFailure} from '../types';
 
 const rootUrl = '/v3/channels';
 
@@ -53,6 +53,19 @@ export async function fetchSharingDisabled(
     `${rootUrl}/${channelId}/sharing_disabled`
   );
   return value.sharing_disabled;
+}
+
+export async function fetchShareFailure(
+  channelId: string
+): Promise<ShareFailure | null> {
+  const {value} = await HttpClient.fetchJson<{
+    share_failure: ShareFailure | false;
+    intl_share_failure: ShareFailure | false | null;
+    language: string;
+  }>(`${rootUrl}/${channelId}/share-failure`);
+  const failure =
+    value.language === 'en' ? value.share_failure : value.intl_share_failure;
+  return failure || null;
 }
 
 export async function fetchIsTeacherOfProjectOwner(

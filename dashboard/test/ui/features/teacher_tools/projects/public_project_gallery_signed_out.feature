@@ -1,3 +1,4 @@
+@playwright
 Feature: Public Project Gallery - Signed Out
 
 Background:

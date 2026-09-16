@@ -15,6 +15,17 @@
 #
 
 class UserProductTour < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    tour_name: :confidential,
+    started_at: :confidential,
+    completed_at: :confidential,
+    properties: :restricted,
+  )
+
   belongs_to :user
 
   VALID_TOUR_NAMES = [

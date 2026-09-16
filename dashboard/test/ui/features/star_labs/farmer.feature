@@ -4,7 +4,7 @@ Background:
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/6/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
-  And element ".instructions-markdown p" has escaped text "Wow, look at that! I don't know how many shovelfuls of dirt this hole needs.\nCan you write a program that keeps using the fill block until the ground is even?  "
+  And element ".instructions-markdown p" has escaped text "Wow, look at that!I don't know how many shovelfuls of dirt this hole needs.\nCan you write a program that keeps using the fill block until the ground is even?"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
