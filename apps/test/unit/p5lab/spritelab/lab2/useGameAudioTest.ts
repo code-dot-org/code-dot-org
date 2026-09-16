@@ -13,14 +13,15 @@ interface Engine {
   onPlayerProximity: (() => void) | null;
 }
 
-function setup(playing = true) {
+function setup({playing = true, hasPlatformer = true} = {}) {
   const engine: Engine = {
     onPlayerSound: null,
     onPlayerHeight: null,
     onPlayerProximity: null,
   };
   const view = renderHook(
-    ({play}: {play: boolean}) => useGameAudio({current: engine}, play),
+    ({play}: {play: boolean}) =>
+      useGameAudio({current: engine}, {hasPlatformer, playing: play}),
     {initialProps: {play: playing}}
   );
   const setting = (id: string) =>
@@ -58,7 +59,7 @@ describe('SpriteLab2 useGameAudio', () => {
   });
 
   it('wires the engine only while the game is being played', () => {
-    const {engine, view} = setup(false);
+    const {engine, view} = setup({playing: false});
     expect(engine.onPlayerSound).toBeNull();
     view.rerender({play: true});
     expect(engine.onPlayerSound).not.toBeNull();
@@ -66,7 +67,6 @@ describe('SpriteLab2 useGameAudio', () => {
   });
 
   it('leaves proximity unwired so the engine can skip measuring it', () => {
-    // Its distances cost the most, and by default nothing listens.
     const {engine} = setup();
     expect(engine.onPlayerProximity).toBeNull();
     expect(engine.onPlayerHeight).not.toBeNull();
@@ -111,6 +111,21 @@ describe('SpriteLab2 useGameAudio', () => {
     view.unmount();
     expect(engine.onPlayerSound).toBeNull();
     expect(engine.onPlayerHeight).toBeNull();
+  });
+
+  it('offers nothing on a level with no platformer to hear', () => {
+    const {engine, view} = setup({hasPlatformer: false});
+    expect(view.result.current).toEqual([]);
+    expect(engine.onPlayerSound).toBeNull();
+    expect(engine.onPlayerHeight).toBeNull();
+  });
+
+  it('survives a browser that refuses another audio context', () => {
+    (window as unknown as {AudioContext: unknown}).AudioContext = function () {
+      throw new Error('no more contexts');
+    };
+    const {engine} = setup();
+    expect(engine.onPlayerSound).toBeNull();
   });
 
   it('builds nothing when both switches are off', () => {

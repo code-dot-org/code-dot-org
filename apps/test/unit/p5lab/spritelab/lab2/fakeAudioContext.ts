@@ -1,20 +1,18 @@
-// A stand-in for Web Audio that records what the voices ask of it, so they
-// can be tested without a sound card. Each voice makes its oscillator and
-// then its gain, so a gain belongs to the oscillator made just before it.
+// Records what the voices ask of Web Audio, to test them without a sound
+// card. Each makes its oscillator then its gain, so a gain pairs backwards.
 
 export interface FakeVoice {
   type: string;
-  /** The note it starts on. */
   hz: number;
-  /** A slide to `to`, arriving at `at`. */
+  /** Frequency ramps. */
   sweeps: {to: number; at: number}[];
-  /** A pitch it was sent toward. */
+  /** Frequency targets. */
   glides: number[];
-  /** A volume a held voice was sent toward. */
+  /** Gain targets. */
   levels: number[];
-  /** How fast each of those moves, in the same order. */
+  /** Time constant of each gain target, in order. */
   taus: number[];
-  /** The volume a struck blip rises to. */
+  /** Gain attack peaks. */
   peaks: {to: number; at: number}[];
   stopped: boolean;
 }

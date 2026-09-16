@@ -5,7 +5,6 @@ import {
   PlayerFrame,
 } from '@cdo/apps/p5lab/spritelab/lab2/playerEvents';
 
-// Standing still on the ground, asking for nothing.
 const STILL: PlayerFrame = {
   moved: 0,
   requested: 0,
@@ -91,6 +90,27 @@ describe('SpriteLab2 playerEvents', () => {
     expect(
       run(frame({grounded: false, requestedUp: 13, movedUp: 12.9}))
     ).toEqual([[]]);
+  });
+
+  it('reports a wall hit in mid-air, not just on the ground', () => {
+    expect(run(frame({moved: 0, requested: 4, grounded: false}))).toEqual([
+      ['blocked'],
+    ]);
+  });
+
+  it('lets a block overhead through while a wall is already held', () => {
+    expect(
+      run(
+        frame({moved: 0, requested: 4, grounded: false}),
+        frame({
+          moved: 0,
+          requested: 4,
+          grounded: false,
+          requestedUp: 13,
+          movedUp: 10,
+        })
+      )
+    ).toEqual([['blocked'], ['blocked']]);
   });
 
   it('reports the wall again after walking away and back', () => {

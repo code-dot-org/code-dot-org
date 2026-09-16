@@ -52,6 +52,7 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
+  hasPlatformer?: boolean;
 }
 
 /**
@@ -67,6 +68,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
+  hasPlatformer = false,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -259,7 +261,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
-        aria-describedby={mode === 'play' ? CONTROLS_HELP_ID : undefined}
+        aria-describedby={
+          mode === 'play' && hasPlatformer ? CONTROLS_HELP_ID : undefined
+        }
         tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
@@ -350,7 +354,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       </div>
       {/* Outside the box: role="application" hides what is inside it from
           screen readers, so anything to be read must sit beside it. */}
-      {mode === 'play' && (
+      {mode === 'play' && hasPlatformer && (
         <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
           Left and right arrows move. Space or the up arrow jumps. The game
           answers in sound: footsteps while you walk, and a tone that follows

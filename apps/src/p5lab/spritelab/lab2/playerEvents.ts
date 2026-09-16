@@ -1,5 +1,4 @@
-// Which blips a frame of the player earns. Only things that happen on the
-// ground: being off it is the height tone's to report (heightTone.ts).
+// Blips for what happens on the ground; being off it is heightTone's.
 
 import {isMoving} from './characterAnimations';
 import {PlayerSoundEvent} from './playerSounds';
@@ -10,7 +9,6 @@ const STEP_DISTANCE = 16;
 // Rise a block has to swallow to count as a bump, not as a graze.
 const BUMP_REFUSED_PX = 0.5;
 
-/** One frame of the player, as the platform resolver left it. */
 export interface PlayerFrame {
   moved: number;
   // What the keys asked for; its gap from `moved` is a wall.
@@ -22,13 +20,15 @@ export interface PlayerFrame {
 }
 
 export interface PlayerEventState {
-  blocked: boolean;
+  intoWall: boolean;
+  intoBlock: boolean;
   stride: number;
 }
 
 export function initialPlayerEventState(): PlayerEventState {
   return {
-    blocked: false,
+    intoWall: false,
+    intoBlock: false,
     // Primed, so the first step of a walk sounds at once.
     stride: STEP_DISTANCE,
   };
@@ -50,17 +50,17 @@ export function playerEvents(
     state.stride = STEP_DISTANCE;
   }
 
-  // Asked to move and refused. A wall keeps refusing while the key is
-  // held, but a block overhead only clips one frame of the rise, so it
-  // shows up as a rise that came back short rather than one that failed.
-  const blocked = frame.grounded
-    ? isMoving(frame.requested) && !isMoving(frame.moved)
-    : frame.requestedUp > 0 &&
-      frame.requestedUp - frame.movedUp > BUMP_REFUSED_PX;
-  if (blocked && !state.blocked) {
+  // Two latches, or a wall held in the air masks the ceiling above it. A
+  // wall keeps refusing while held; a block only clips one frame's rise.
+  const intoWall = isMoving(frame.requested) && !isMoving(frame.moved);
+  const intoBlock =
+    frame.requestedUp > 0 &&
+    frame.requestedUp - frame.movedUp > BUMP_REFUSED_PX;
+  if ((intoWall && !state.intoWall) || (intoBlock && !state.intoBlock)) {
     events.push('blocked');
   }
-  state.blocked = blocked;
+  state.intoWall = intoWall;
+  state.intoBlock = intoBlock;
 
   return events;
 }

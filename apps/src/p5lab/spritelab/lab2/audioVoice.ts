@@ -1,5 +1,3 @@
-// Sound setup shared by the game's voices.
-
 export interface Voice {
   oscillator: OscillatorNode;
   gain: GainNode;

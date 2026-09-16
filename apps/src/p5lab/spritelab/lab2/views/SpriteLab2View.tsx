@@ -76,6 +76,7 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
+import {usesPlatformPhysics} from '../platformPhysics';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -1551,10 +1552,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // level) must pause the engine as soon as it exists.
   }, [playspaceMode, documentHidden, engineReady]);
 
-  const audioSettings = useGameAudio(
-    engineRef,
-    engineReady && playspaceMode === 'play'
-  );
+  const hasPlatformer = usesPlatformPhysics(levelProperties.helperLibraries);
+  const audioSettings = useGameAudio(engineRef, {
+    hasPlatformer,
+    // A hidden document has already stopped the engine feeding it.
+    playing: engineReady && playspaceMode === 'play' && !documentHidden,
+  });
 
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
@@ -1737,6 +1740,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           Code tab's corner preview and the Play tab's centered view. */}
           <Playspace
             boxRef={playspaceRef}
+            hasPlatformer={hasPlatformer}
             mode={playspaceMode}
             fadeTrigger={fadeTrigger}
             covered={jumpCover}

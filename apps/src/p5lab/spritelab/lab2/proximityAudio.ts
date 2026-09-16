@@ -1,6 +1,5 @@
-// A steady tone per hazard, growing louder as the player nears it. The
-// blips (playerSounds.ts) say what has happened; these say what is about
-// to. Both hold their pitch, because a sliding note means height.
+// A steady tone per hazard, growing louder as the player nears it. Both
+// hold their pitch, because a sliding note means height (heightTone.ts).
 
 import {endVoice, startVoice, Voice, wake} from './audioVoice';
 
@@ -28,10 +27,7 @@ export interface ProximityAudio {
   stop(): void;
 }
 
-/**
- * Loudness for a hazard `distance` px away, 0 (too far) to 1 (touching).
- * Squared, so open ground stays quiet and the last step is the loud one.
- */
+/** Loudness, 0 (too far) to 1 (touching). Squared: open ground is quiet. */
 export function proximityLevel(
   distance: number,
   range: number = PROXIMITY_RANGE

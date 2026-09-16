@@ -1,5 +1,4 @@
-// Short blips for what the player does on the ground. Jumping isn't here:
-// that is the height tone sliding (heightTone.ts).
+// Blips for what the player does on the ground; jumping is heightTone's.
 
 import {startVoice, wake} from './audioVoice';
 
@@ -15,14 +14,13 @@ interface Sweep {
 
 // Both stay above ~200Hz: laptop speakers can't really play below that.
 const SWEEPS: Record<PlayerSoundEvent, Sweep> = {
-  // The quieter of the two: it plays several times a second.
+  // Quiet: it plays several times a second.
   step: {from: 300, to: 200, seconds: 0.07, type: 'triangle', volume: 0.18},
-  // Sawtooth because it should sound wrong, and it is the game's only
-  // buzz. Louder than a footstep, or a bump reads as another step.
+  // The game's only buzz, and louder than a step so it isn't taken for one.
   blocked: {from: 320, to: 140, seconds: 0.12, type: 'sawtooth', volume: 0.22},
 };
 
-// The other foot, a little lower. Alternating sounds like walking.
+// The other foot. Alternating sounds like walking rather than ticking.
 const OTHER_FOOT = 0.84;
 
 // Long enough that the blip doesn't start with a click.
@@ -59,7 +57,6 @@ export function createPlayerSounds(context: AudioContext): PlayerSounds {
       );
       gain.gain.linearRampToValueAtTime(volume, now + ATTACK_S);
       gain.gain.exponentialRampToValueAtTime(SILENCE, now + seconds);
-      // Each blip owns its nodes, so overlapping ones just stack up.
       oscillator.stop(now + seconds);
       oscillator.onended = () => {
         oscillator.disconnect();

@@ -1,6 +1,5 @@
-// The player's height as a pitch, played while they are off the ground. It
-// is the only voice that slides, so a moving note always means height, and
-// the note you land on tells you how far you fell.
+// The player's height as a pitch, sounded while they are off the ground.
+// The only voice that slides, so the note you land on says how far you fell.
 
 import {endVoice, startVoice, wake} from './audioVoice';
 
@@ -8,7 +7,6 @@ const LOW_HZ = 220;
 const HIGH_HZ = 880;
 const VOLUME = 0.16;
 
-// How quickly the pitch chases the player.
 const GLIDE_S = 0.02;
 const ATTACK_S = 0.01;
 // Outlasts the landing, so the note you land on can be heard.

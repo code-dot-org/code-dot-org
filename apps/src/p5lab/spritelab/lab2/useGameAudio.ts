@@ -1,6 +1,5 @@
-// The game's audio: two settings, and the voices they switch on. Built on
-// each visit to the Play tab and torn down on the way out, over a single
-// context, because browsers limit how many a page may open.
+// The game's audio: two settings, and the voices they switch on. Rebuilt
+// per visit to the Play tab, over one context — browsers limit how many.
 
 import {useEffect, useMemo, useState} from 'react';
 
@@ -24,10 +23,8 @@ interface AudioEngine {
   onPlayerProximity: ((distances: ProximityDistances) => void) | null;
 }
 
-/** A remembered on/off entry for the settings panel. */
 function useStoredToggle(key: string, label: string, fallback: 'on' | 'off') {
-  // tryGetLocalStorage returns null for a key that was never set; its
-  // fallback only covers localStorage throwing.
+  // tryGetLocalStorage returns null for a key that was never set.
   const [on, setOn] = useState(
     () => (tryGetLocalStorage(key, fallback) ?? fallback) === 'on'
   );
@@ -51,21 +48,35 @@ function audioContext(): AudioContext | null {
   const Context =
     window.AudioContext ||
     (window as {webkitAudioContext?: typeof AudioContext}).webkitAudioContext;
-  return Context ? new Context() : null;
+  if (!Context) {
+    return null;
+  }
+  try {
+    return new Context();
+  } catch {
+    // Chrome refuses one often enough to warrant Sounds.js's own guard.
+    return null;
+  }
 }
 
-/** Returns the two entries for the settings panel. */
+interface GameAudioOptions {
+  hasPlatformer: boolean;
+  /** On the Play tab, running, and on screen. */
+  playing: boolean;
+}
+
+/** The settings-panel entries, or none where the level makes no sound. */
 export default function useGameAudio(
   engineRef: React.RefObject<AudioEngine | null>,
-  playing: boolean
+  {hasPlatformer, playing}: GameAudioOptions
 ) {
-  // Off by default: noise to anyone who can see the hazard coming.
+  // Noise to anyone who can see the hazard coming, so off by default.
   const [proximitySound, proximitySetting] = useStoredToggle(
     PROXIMITY_SOUND_KEY,
     'Obstacle sounds',
     'off'
   );
-  // On by default: short, and what a platformer should sound like.
+  // Short, and what a platformer should sound like, so on by default.
   const [soundEffects, soundEffectsSetting] = useStoredToggle(
     SOUND_EFFECTS_KEY,
     'Sound effects',
@@ -74,7 +85,8 @@ export default function useGameAudio(
 
   useEffect(() => {
     const engine = engineRef.current;
-    if (!engine || !playing || (!proximitySound && !soundEffects)) {
+    const wanted = proximitySound || soundEffects;
+    if (!engine || !hasPlatformer || !playing || !wanted) {
       return;
     }
     const context = audioContext();
@@ -102,7 +114,7 @@ export default function useGameAudio(
       sounds.stop();
       context.close().catch(() => undefined);
     };
-  }, [engineRef, playing, proximitySound, soundEffects]);
+  }, [engineRef, hasPlatformer, playing, proximitySound, soundEffects]);
 
-  return [soundEffectsSetting, proximitySetting];
+  return hasPlatformer ? [soundEffectsSetting, proximitySetting] : [];
 }

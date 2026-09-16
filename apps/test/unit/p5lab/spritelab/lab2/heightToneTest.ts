@@ -11,7 +11,6 @@ const build = () => {
   return {context, tone, voice: voices[0], voices};
 };
 
-// The last pitch and volume the tone was sent toward.
 const pitch = (voice: {glides: number[]; hz: number}) =>
   voice.glides.length ? voice.glides[voice.glides.length - 1] : voice.hz;
 const level = (voice: {levels: number[]}) =>
@@ -90,7 +89,6 @@ describe('SpriteLab2 heightTone', () => {
     });
 
     it('ends lower than it began when the player falls a ledge', () => {
-      // The point of the whole thing: a drop sounds like a drop.
       const {tone, voice} = build();
       tone.update({above: 0.5, airborne: false});
       const takeoff = pitch(voice);
@@ -100,7 +98,6 @@ describe('SpriteLab2 heightTone', () => {
     });
 
     it('releases more slowly than it attacks, so the last note is heard', () => {
-      // Cutting off at touchdown would throw away the answer.
       const {tone, voice} = build();
       tone.update({above: 0.5, airborne: true});
       tone.update({above: 0.5, airborne: false});

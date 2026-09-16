@@ -24,8 +24,6 @@ describe('SpriteLab2 playerSounds', () => {
   });
 
   it('keeps every sweep where a laptop speaker can reproduce it', () => {
-    // A blip below ~200Hz is silent on a laptop speaker, however correct
-    // the code that fires it.
     const {voices, sounds} = build();
     EVENTS.forEach(event => sounds.play(event));
     voices.forEach(voice => {

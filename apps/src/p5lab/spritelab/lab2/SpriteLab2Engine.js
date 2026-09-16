@@ -46,6 +46,7 @@ import {
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
+  usesPlatformPhysics,
 } from './platformPhysics';
 import {initialPlayerEventState, playerEvents} from './playerEvents';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
@@ -543,9 +544,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
-    // The zGameDev name is only the level's opt-in to platformer physics,
-    // which is engine-owned (platformPhysics.ts); no library loads for it.
-    this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
+    // The name loads no library; the physics are engine-owned.
+    this.usesPlatformPhysics_ = usesPlatformPhysics(helperLibraries);
     this.level = {
       helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
@@ -1031,6 +1031,12 @@ export default class SpriteLab2Engine extends SpriteLab {
         !this.onPlayerSound) ||
       !players.length
     ) {
+      // Forget them, or the gap reads as a stride when they come back.
+      if (this.observedX_ !== null) {
+        this.observedX_ = null;
+        this.observedY_ = null;
+        this.playerEvents_ = initialPlayerEventState();
+      }
       return;
     }
     const {sprite, x: requestedX, y: requestedY} = players[0];
@@ -1038,7 +1044,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Weightless is steering: no footing to lose, no edge to fall from.
     const weightless = gravity === 0;
     const grounded = weightless || isSupported(sprite, walls, view, gravity);
-    // A run's first frame has nothing to measure against.
     const first = this.observedX_ === null;
     const previousX = first ? sprite.position.x : this.observedX_;
     const previousY = first ? sprite.position.y : this.observedY_;

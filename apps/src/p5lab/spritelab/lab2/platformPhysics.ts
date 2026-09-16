@@ -5,6 +5,13 @@
 // resolved position, resolves it per axis against the walls, then settles
 // leftover thin overlap.
 
+// The name a level uses to ask for these physics; it loads no library.
+const PLATFORM_LIBRARY = 'zGameDev';
+
+export function usesPlatformPhysics(helperLibraries?: string[]): boolean {
+  return !!helperLibraries?.includes(PLATFORM_LIBRARY);
+}
+
 // Max downward speed (px/frame): a single frame's step must stay small
 // enough that a falling body can't pass a block corner between frames.
 export const TERMINAL_FALL_SPEED = 10;
@@ -405,9 +412,8 @@ function feetLine(sprite: PhysicsSprite): {halfW: number; feet: number} {
 }
 
 /**
- * Pixels from the player's leading edge (`direction` 1 right, -1 left) to
- * the nearest wall that would stop it; 0 when already against one. Follows
- * the resolver's own rule, so it measures the wall actually hit.
+ * Pixels from the leading edge (`direction` 1 right, -1 left) to the nearest
+ * wall that would stop it; 0 against one. Follows the resolver's own rule.
  */
 export function distanceToWallAhead(
   sprite: PhysicsSprite,
@@ -437,8 +443,7 @@ export function distanceToWallAhead(
         nearest = Math.min(nearest, gap);
       }
     });
-    // The screen edges stop the player too, measured on the art, as the
-    // resolver measures them.
+    // The screen edges stop the player too, measured on the art.
     const imgLead = s.position.x + direction * imgHalfW;
     const side = direction > 0 ? view.width - imgLead : imgLead;
     return Math.max(0, Math.min(nearest, side));
@@ -446,9 +451,8 @@ export function distanceToWallAhead(
 }
 
 /**
- * Pixels from the player's leading edge to the end of the ground underfoot;
- * 0 at the edge, Infinity when there is none to reach (the screen floor, or
- * already falling).
+ * Pixels from the leading edge to the end of the ground underfoot; 0 at the
+ * edge, Infinity with none to reach (the screen floor, or already falling).
  */
 export function distanceToEdgeAhead(
   sprite: PhysicsSprite,
@@ -477,8 +481,7 @@ export function distanceToEdgeAhead(
     if (index < 0) {
       return Infinity;
     }
-    // A row of touching blocks is one platform, so walk to its far end.
-    // They are sorted, so touching is a property of the pair either way.
+    // A row of touching blocks is one platform; sorted, so pairs suffice.
     const abuts = (i: number) =>
       i + 1 < spans.length &&
       spans[i + 1].min <= spans[i].max + CONTACT_EPSILON;
