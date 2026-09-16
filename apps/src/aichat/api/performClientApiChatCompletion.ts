@@ -34,10 +34,7 @@ export async function performClientApiChatCompletion(
   levelSystemPrompt?: string
 ): Promise<CompletedChatMessage[]> {
   // Create an AichatRequest row for this request. Needed only because the
-  // AichatEvent model (which tracks chat history) has a foreign key to it, so
-  // the row is created and never written to again. Remove if/when we can
-  // decouple. The worker's signature, relayed on each message below, is what
-  // dashboard checks this turn against.
+  // AichatEvent model (which tracks chat history) has a foreign key to it.
   const requestId = await createAichatRequest(
     newMessage,
     storedMessages,
