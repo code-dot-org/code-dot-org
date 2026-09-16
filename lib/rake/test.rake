@@ -125,21 +125,33 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
+  # Both Playwright suites share one checkout, and ui_all starts them together.
+  # Rake runs a task once per process and serializes concurrent invokes, so this
+  # is the one install however many suites depend on it.
+  timed_task_with_logging :playwright_install do
+    Dir.chdir(frontend_dir('packages', 'e2e-tests')) do
+      RakeUtils.system_stream_output 'yarn install --immutable'
+      # Chef does not install the browsers. Each Playwright version needs its own.
+      RakeUtils.system_stream_output 'yarn exec playwright install chromium firefox webkit' if CDO.test_system?
+    end
+  end
+
   # A failure stops the Drone PR build (lib/rake/ci.rake) and the DTT (ui_all).
-  timed_task_with_logging :playwright_ui do
+  timed_task_with_logging playwright_ui: :playwright_install do
     raise 'Playwright e2e tests failed' unless run_playwright_suite(:functional)
   end
 
   # Never stops a build. A person approves each new image in Applitools.
   # Drone exports the Applitools variables (.drone.yml). The DTT daemon has the
   # key Cucumber's Eyes suite uses (eyes_steps.rb) and derives the rest.
-  timed_task_with_logging :playwright_eyes do
+  timed_task_with_logging playwright_eyes: :playwright_install do
     env = dtt_playwright_eyes_env
     if env.empty? && ENV['VISUAL_PROVIDER'].blank?
       ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
       next
     end
-    run_playwright_suite(:eyes, env: env)
+    secrets = env.empty? ? {} : {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
+    run_playwright_suite(:eyes, env: env, env_secrets: secrets)
   end
 
   # Dispatch the dtt.yml Playwright run on GitHub Actions (ref: test), moving e2e
@@ -618,15 +630,14 @@ PLAYWRIGHT_UI_SUITES = {playwright_ui: :functional, playwright_eyes: :eyes}.free
 # An exception cannot carry the test counts and the report link.
 PLAYWRIGHT_ROLLUP = {}
 
-# Empty without the key, which stays out of the logged command line (see
-# RakeUtils.system_stream_output). The batch id is the commit, as on Drone and
-# GitHub Actions, so every Playwright Eyes run of one commit lands in one batch.
+# Empty without the key. The key itself travels as a secret, not in here. The
+# -dtt suffix keeps this batch apart from the GitHub Actions run of the same
+# commit until the two are deliberately merged into one batch.
 def dtt_playwright_eyes_env
   return {} unless CDO.test_system? && CDO.applitools_eyes_api_key
   {
     'VISUAL_PROVIDER' => 'applitools',
-    'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key,
-    'APPLITOOLS_BATCH_ID' => RakeUtils.git_revision,
+    'APPLITOOLS_BATCH_ID' => "#{RakeUtils.git_revision}-dtt",
     'APPLITOOLS_BATCH_NAME' => 'DTT Playwright Visual Diff Tests',
     'APPLITOOLS_BRANCH' => GitUtils.current_branch,
   }
@@ -637,8 +648,9 @@ def applitools_batch_url(batch_id)
   "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{batch_id}&hideBatchList=true"
 end
 
-# Never raises. The caller decides if a failure stops the build.
-def run_playwright_suite(suite, env: {})
+# Never raises. The caller decides if a failure stops the build. `env` is
+# logged with the command; `env_secrets` are not.
+def run_playwright_suite(suite, env: {}, env_secrets: {})
   label = PLAYWRIGHT_SUITES.fetch(suite)
   # Both suites run in one directory. Equal names would lose the first report.
   suffix = suite == :eyes ? '-eyes' : ''
@@ -666,7 +678,8 @@ def run_playwright_suite(suite, env: {})
     begin
       env_prefix = ["TARGET_URL=#{target_url}"]
       env_prefix << "PLAYWRIGHT_PROVIDER=#{provider}" if provider
-      RakeUtils.system_stream_output(*env_prefix, script, suite.to_s, env: env)
+      env_prefix += env.map {|key, value| "#{key}=#{Shellwords.escape(value)}"}
+      RakeUtils.system_stream_output(*env_prefix, script, suite.to_s, env_secrets: env_secrets)
       true
     rescue StandardError
       false

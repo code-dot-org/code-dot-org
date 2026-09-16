@@ -6,15 +6,15 @@ class RakeUtilsTest < Minitest::Test
     # The args are joined into one shell line, so the script needs its own quotes.
     SECRET_IS_SET = %q(sh -c 'test -n "$SECRET"')
 
-    it 'passes env to the child' do
-      CDO.log.stubs(:info)
+    it 'passes env_secrets to the child and logs the name redacted' do
+      CDO.log.expects(:info).with {|line| line.include?('SECRET=<redacted>') && !line.include?('s3cret')}
 
-      status = RakeUtils.system_stream_output(SECRET_IS_SET, env: {'SECRET' => 's3cret'})
+      status = RakeUtils.system_stream_output(SECRET_IS_SET, env_secrets: {'SECRET' => 's3cret'})
 
       assert_equal 0, status
     end
 
-    it 'fails the child without env' do
+    it 'fails the child without env_secrets' do
       CDO.log.stubs(:info)
 
       assert_raises(RuntimeError) {RakeUtils.system_stream_output(SECRET_IS_SET)}

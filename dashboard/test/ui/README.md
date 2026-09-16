@@ -30,7 +30,7 @@ The UI tests run as part of our deployment during the Deploy To Test (DTT) via `
 | Playwright | test machine | `chromium`, `firefox`, `webkit` (functional) |
 | Playwright Eyes | test machine | `chromium` (visual diffs) |
 
-Each Cucumber suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3. Playwright reports are also uploaded to the test machine and to S3.
+Each Cucumber suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3. Playwright reports are uploaded to S3 and linked from Slack.
 
 ## Concurrency limits
 
