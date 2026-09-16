@@ -21,13 +21,9 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Images",
-      "World",
-      "Play"
-    ],
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "freeplay"
+    },
     "guide_steps": [
       {
         "text": "**Free play!** Everything is unlocked: all of your images, all of your scenes, and the full set of blocks. Finish your game, and finish the lesson whenever you're done.",
@@ -129,6 +125,10 @@
             {
               "kind": "block",
               "type": "spritelab2_playMusic"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeSpriteAtPosition"
             },
             {
               "kind": "block",

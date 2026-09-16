@@ -614,7 +614,7 @@ class ActivitiesControllerTest < ActionController::TestCase
         session[:statsig_stable_id] = anon_user_id
       end
 
-      def expect_anonymous_level_progress_tracking(new_result:)
+      def expect_anonymous_level_tracking(new_result:)
         Services::AnonymousLevel::ProgressTracker.expects(:call).with(
           has_entries(
             anon_user_id:,
@@ -628,10 +628,15 @@ class ActivitiesControllerTest < ActionController::TestCase
             locale: I18n.locale,
           )
         ).once
+
+        Services::AnonymousLevel::GeoRecording.expects(:call).with(
+          anon_user_id:,
+          ip_address: @request.ip,
+        ).once
       end
 
       it 'saves progress from an empty session' do
-        expect_anonymous_level_progress_tracking(new_result: 100)
+        expect_anonymous_level_tracking(new_result: 100)
 
         assert_creates(LevelSource) do
           assert_does_not_create(Activity, UserLevel) do
@@ -649,7 +654,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
       it 'adds progress to an existing session' do
         client_state.set_level_progress(@script_level_prev, 50)
-        expect_anonymous_level_progress_tracking(new_result: 100)
+        expect_anonymous_level_tracking(new_result: 100)
 
         assert_creates(LevelSource) do
           assert_does_not_create(Activity, UserLevel) do
@@ -666,7 +671,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
 
       it 'saves a failed attempt' do
-        expect_anonymous_level_progress_tracking(new_result: 0)
+        expect_anonymous_level_tracking(new_result: 0)
 
         assert_creates(LevelSource) do
           assert_does_not_create(Activity, UserLevel) do
@@ -686,7 +691,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
       it 'saves an image' do
         client_state.set_level_progress(@script_level_prev, 50)
-        expect_anonymous_level_progress_tracking(new_result: 100)
+        expect_anonymous_level_tracking(new_result: 100)
         expect_s3_upload
 
         assert_creates(LevelSource, LevelSourceImage) do
@@ -709,7 +714,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
       it 'does not save an image when its upload fails' do
         client_state.set_level_progress(@script_level_prev, 50)
-        expect_anonymous_level_progress_tracking(new_result: 100)
+        expect_anonymous_level_tracking(new_result: 100)
         expect_s3_upload_failure
 
         assert_creates(LevelSource) do

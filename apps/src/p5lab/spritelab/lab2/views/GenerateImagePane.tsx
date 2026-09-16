@@ -9,6 +9,7 @@ import {
   setAnimationName,
   SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
+import {detectImageGridSize} from '@cdo/apps/pixelEditor/pixelArt';
 import PixelEditorModal, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditorModal';
@@ -18,12 +19,17 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from '../ai/images/encoding';
+import {ImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
 import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
-import {ImageGenerationMetadata, ImageType} from '../ai/images/types';
+import {
+  ImageGenerationMetadata,
+  ImageStyle,
+  ImageType,
+} from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
 import {
   categoriesForType,
@@ -106,9 +112,8 @@ async function cropStandingFrame(
 const ALTERNATIVE_THUMB_PX = 160;
 
 /**
- * A small standalone thumbnail for an Alternatives entry: a strip's
- * standing frame, or the whole picture, downscaled. Falls back to the
- * full image if it can't be made.
+ * A small thumbnail for an Alternatives entry: a strip's standing frame, or
+ * the whole picture, downscaled. Falls back to the full image.
  */
 async function alternativeThumb(
   dataURI: string,
@@ -265,18 +270,62 @@ interface GenerateImagePaneProps {
   /** Show the full internal dialog and gallery names; the default is the
       student version (auto-named images, fewer generation controls). */
   advanced?: boolean;
+  /** Offer this tier of adlib prompt combos in the student dialog. */
+  adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: no free-text box. */
+  adlibOnly?: boolean;
+  /** Style the generate form starts on for new images. */
+  defaultStyle?: ImageStyle;
+  /** No paint entry points anywhere in the dialog. */
+  paintDisabled?: boolean;
+  /** The image panel is the level: no gallery, no modal, always open on a
+      blank generate form. */
+  imageLevel?: boolean;
 }
 
 /**
  * The Images tab: the project's image gallery. Clicking an image (or the
  * new-image card) opens the image dialog; painting happens from there.
  */
+// Detection runs a full-raster scan (~tens of ms, more on Chromebooks) and
+// the answer never changes for the same pixels, so it is cached across
+// dialog opens. Keys are digests, not the sources themselves — a data URI
+// key would pin megabytes per entry.
+const gridDetectionCache = new Map<string, Promise<number | null>>();
+const GRID_CACHE_MAX = 32;
+function cachedGridDetection(
+  source: string,
+  frameSize?: {x: number; y: number}
+): Promise<number | null> {
+  const key = `${source.length}:${source.slice(0, 48)}:${source.slice(-48)}:${
+    frameSize?.x ?? ''
+  }x${frameSize?.y ?? ''}`;
+  const hit = gridDetectionCache.get(key);
+  if (hit) {
+    return hit;
+  }
+  const pending = detectImageGridSize(source, frameSize).catch(() => {
+    gridDetectionCache.delete(key);
+    return null;
+  });
+  if (gridDetectionCache.size >= GRID_CACHE_MAX) {
+    gridDetectionCache.delete(gridDetectionCache.keys().next().value as string);
+  }
+  gridDetectionCache.set(key, pending);
+  return pending;
+}
+
 const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   uploadImage,
   onRenameImage,
   onDeleteImage,
   lockedImageType,
   advanced,
+  adlibSet,
+  adlibOnly,
+  defaultStyle,
+  paintDisabled,
+  imageLevel,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -448,6 +497,43 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   const targetProps =
     dialogTarget && dialogTarget !== 'new'
       ? images.find(i => i.key === dialogTarget)?.props
+      : undefined;
+
+  // The Resolution row's grid for a pixel image that never recorded one:
+  // character sheets skip normalization (a strip's frames must agree), and
+  // images saved before normalization existed have nothing stored — detect
+  // what the model drew from the first frame instead. Display only. The
+  // result is keyed to its source, so a switched dialog target never wears
+  // the previous image's grid for a frame.
+  const [detectedGrid, setDetectedGrid] = useState<{
+    source: string;
+    size: number;
+  }>();
+  const detectSource = targetProps?.dataURI || targetProps?.sourceUrl;
+  const frameSize = targetProps?.frameSize;
+  const needsGridDetection =
+    targetProps?.generation?.style === 'pixel' &&
+    !targetProps.pixelGridSize &&
+    !!detectSource;
+  useEffect(() => {
+    if (!needsGridDetection || !detectSource) {
+      return;
+    }
+    let cancelled = false;
+    cachedGridDetection(detectSource, frameSize)
+      .then(size => {
+        if (!cancelled && size && size > 1) {
+          setDetectedGrid({source: detectSource, size});
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [needsGridDetection, detectSource, frameSize]);
+  const detectedGridSize =
+    detectedGrid && detectedGrid.source === detectSource
+      ? detectedGrid.size
       : undefined;
 
   const handleDelete = useCallback(() => {
@@ -786,6 +872,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     [applyEditorSave]
   );
 
+  // An image level opens on a blank form, and returns to one whenever a
+  // close or delete clears the target: the level is there to make an image,
+  // and the newest one of its type belongs to whichever level made it.
+  useEffect(() => {
+    if (imageLevel && !dialogTarget) {
+      setDialogTarget('new');
+    }
+  }, [imageLevel, dialogTarget]);
+
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
   // transparency; they must stay fully opaque.
@@ -795,34 +890,36 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
-      <div className={moduleStyles.imageGallery}>
-        {/* First slot, so it never hides behind a scroll. */}
-        <div className={moduleStyles.imageCard}>
-          <button
-            type="button"
-            className={moduleStyles.newImageCard}
-            onClick={openNewDialog}
-          >
-            <span aria-hidden>+</span>
-            <span className={moduleStyles.newImageLabel}>New image</span>
-          </button>
+      {!imageLevel && (
+        <div className={moduleStyles.imageGallery}>
+          {/* First slot, so it never hides behind a scroll. */}
+          <div className={moduleStyles.imageCard}>
+            <button
+              type="button"
+              className={moduleStyles.newImageCard}
+              onClick={openNewDialog}
+            >
+              <span aria-hidden>+</span>
+              <span className={moduleStyles.newImageLabel}>New image</span>
+            </button>
+          </div>
+          {images.map(({key, props}) => (
+            <GalleryCard
+              key={key}
+              animKey={key}
+              name={props?.name}
+              caption={advanced ? props?.name : undefined}
+              thumb={
+                getImageThumbnail(props?.name) ||
+                props?.dataURI ||
+                props?.sourceUrl ||
+                undefined
+              }
+              onOpen={openDialog}
+            />
+          ))}
         </div>
-        {images.map(({key, props}) => (
-          <GalleryCard
-            key={key}
-            animKey={key}
-            name={props?.name}
-            caption={advanced ? props?.name : undefined}
-            thumb={
-              getImageThumbnail(props?.name) ||
-              props?.dataURI ||
-              props?.sourceUrl ||
-              undefined
-            }
-            onOpen={openDialog}
-          />
-        ))}
-      </div>
+      )}
 
       {dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
@@ -870,7 +967,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
             !!targetProps?.sourceUrl && targetProps.sourceUrl !== seedSourceUrl
           }
           advanced={advanced}
-          pixelated={!!targetProps?.pixelGridSize}
+          adlibSet={adlibSet}
+          adlibOnly={adlibOnly}
+          defaultStyle={defaultStyle}
+          paintDisabled={paintDisabled}
+          imageLevel={imageLevel}
+          pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
+          // A sheet's resolution is its frame: the image the pane shows.
+          resolution={creating ? undefined : targetProps?.frameSize}
+          pixelGridSize={targetProps?.pixelGridSize ?? detectedGridSize}
           getDataURI={getTargetDataURI}
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}

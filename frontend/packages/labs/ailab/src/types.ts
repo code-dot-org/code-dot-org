@@ -1,5 +1,3 @@
-import type KNN from 'ml-knn';
-
 export type DataRow = Record<string, string | number>;
 
 export interface Mode {
@@ -88,10 +86,10 @@ export interface Metadata {
   fields?: MetadataField[];
 }
 
-export interface KNNTrainedModelDetails {
-  model: KNN;
-  predictedLabels: (number | string)[];
-  kValue: number;
+/* What the lab needs from a trained model, whichever algorithm made it. */
+export interface TrainedModel {
+  predict(rows: number[][]): (number | string)[];
+  toJSON(): object;
 }
 
 export interface TrainedModelDetails {

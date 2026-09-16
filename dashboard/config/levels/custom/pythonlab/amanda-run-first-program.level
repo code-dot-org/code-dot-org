@@ -1,0 +1,31 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-15T20:59:49.000Z",
+  "level_num": "custom",
+  "user_id": 19028,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "b9a8b014-6729-4cfb-9d0f-a0546b850a8f": {
+          "id": "b9a8b014-6729-4cfb-9d0f-a0546b850a8f",
+          "name": "main.py",
+          "contents": "# This is your very first Python program!\n# Press the 'Run' button above to see what it does.\n\n# The computer will follow these instructions, one by one.\nprint(\"Hello, future programmer!\")\nprint(\"I am a computer, and I just followed your instructions precisely.\")\nprint(\"What clear instructions you gave!\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "b9a8b014-6729-4cfb-9d0f-a0546b850a8f"
+      ]
+    },
+    "long_instructions": "TODOs:\r\n- Run main.py to execute the pre-written program.\r\n- Observe the output of the program in the console.\r\n- Change the text inside the parentheses of the print() statement in main.py.\r\n- Run main.py again to see how the computer executes your new instruction.",
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrA1Ks2GxDB7/ifchdO\nEB1k/cQYSWVoQ0tpvsVBPNvJvR/09T+I3cJ1G4L7HbhpZ+DyzKTqhELRRHJo\n+fIRUzXCJjlkx63z4VeP1ryQgTo4dSIn/biY2WyqAtUy+j0ccXcx2cCjIXut\npIb4Y4rOpoX14vihOxaUV7uG0slNsu4Lfz6K2+tLm53kn9TqyCBGU0E2JxtH\nCMZ03+capWVjOhKzQOc127mvr/5Ya0YH421Vo0v/r+Z1JYcPA3sXBWCR7meL\njJ8HDJYHp14PLLZt23G3Uf/HyH9npofdUdPVFrSizk+Iym4BYQsO2VNvhKGw\nf2DCDuHbL/3CfU3PsQRBqKDBUvNPy2BvjDomxEkVDa+SzZ77WivkG+XktUZT\noxiT1Z1rKmt22M26Qu7HQq03jRVPsQvZqiTYhQAJ/wE59PsD4lbEhIJ9y3kk\ni1uhj3vVhxyVEvLDFm4Rt5IxUuDBJDgYW+9o3Iw/JaI0EegMBbcKv+wRfKhs\n1SjbsQKwMctq018nfyCtv2K6i7+PUvc62B67C2PwZ0dFcItfHupT6ONO+k6I\nSWddKf/WbdFoSLY8WP8GiuwRbWJgi6EQKkB2KncHct/tWq6uOtgBZs7TVwLL\nyYtokoXCj/tr6lEGHtZMHzXdMxukt4crjOHCk00T906mykqJCYM/L/NWNXda\nPGEVMRtZ+e66LogpVGB+Xi38jiIGJCDYBlDfFzLg26KglcT76fECjh3QUqmn\nrrQlA4rX1Q==\n",
+    "generate_outline": "Run your very first Python program! This level provides a simple pre-written Python script for you to execute and observe its output, demonstrating how computers follow instructions."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:59:53 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 20:59:54 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:00:28 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 21:00:29 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

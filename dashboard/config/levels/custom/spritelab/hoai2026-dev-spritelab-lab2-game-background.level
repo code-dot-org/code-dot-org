@@ -1,0 +1,43 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-12T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
+    "level_mode": {
+      "kind": "image",
+      "imageType": "background"
+    },
+    "guide_steps": [
+      {
+        "text": "**Make a background for your game.** Your platformer needs scenery behind it. Pick the words for a place and press **Generate**."
+      },
+      {
+        "text": "**That sets the mood!** Continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "backgroundImages": 1
+        }
+      }
+    ],
+    "long_instructions": "# Make a background for your game\nYour platformer needs scenery behind it. Pick the words for a place and press **Generate**."
+  }
+}]]></config>
+</GamelabJr>
