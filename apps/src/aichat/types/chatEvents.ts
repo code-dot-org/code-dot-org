@@ -59,7 +59,6 @@ export interface CompletedChatMessage extends BaseChatMessage {
   /**
    * One signature per turn, carried by both of its messages: it holds a digest
    * of the prompt and one of the response, so each is checked against its own.
-   * Verified by log_chat_event and then dropped; never stored.
    */
   responseSignature?: string;
   /**

@@ -76,8 +76,6 @@ export async function performClientApiChatCompletion(
     {name: 'ExecutionStatus', value: statusName},
   ]);
 
-  // Carried by the student's message too: one signature covers both halves.
-  // Undefined when the model was never called, which log_chat_event carves out.
   const updatedUserMessage = {...newMessage, requestId, responseSignature};
 
   if (status === AiRequestExecutionStatus.USER_PROFANITY) {
@@ -86,7 +84,6 @@ export async function performClientApiChatCompletion(
     ];
   }
 
-  // Relayed by logChatEvent, then stripped: provenance, not transcript.
   const assistantMessageBase = {
     requestId,
     chatMessageText: response,
