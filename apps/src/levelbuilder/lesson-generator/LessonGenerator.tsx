@@ -28,6 +28,7 @@ import {
   generateBubbleChoiceThumbnail,
   renderBubbleChoiceDsl,
 } from './ai/bubbleChoice';
+import {type ExternalGeneration, generateExternalLevel} from './ai/external';
 import {generateFreeResponseLevel} from './ai/freeResponse';
 import {ImportedPlan} from './ai/importPlan';
 import {generateLessonOutline} from './ai/outline';
@@ -596,6 +597,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         // dsl_text on POST; other labs go the create-then-save path.
         let multiResult: MultiGeneration | undefined;
         let matchResult: MatchGeneration | undefined;
+        let externalResult: ExternalGeneration | undefined;
         let bubbleChoicePlan: BubbleChoiceGeneration | undefined;
         const bubbleChoiceSublevelLevels: {
           spec: LevelSpec;
@@ -613,6 +615,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           appendLog(`Planning content for "${levelName}"…`);
           matchResult = await generateMatchLevel(levelCtx);
           dslText = matchResult.dslText;
+        } else if (shouldGenerate && spec.labType === 'external') {
+          setStage('planning');
+          appendLog(`Planning content for "${levelName}"…`);
+          externalResult = await generateExternalLevel(levelCtx);
+          dslText = externalResult.dslText;
         } else if (shouldGenerate && spec.labType === 'bubbleChoice') {
           const sublevels = spec.sublevels ?? [];
           setStage('planning');
@@ -688,6 +695,12 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               'dsl_text',
               matchResult.dslText
             );
+          } else if (externalResult) {
+            await updateLevelProperty(
+              level.id,
+              'dsl_text',
+              externalResult.dslText
+            );
           } else if (bubbleChoicePlan && dslText) {
             await updateLevelProperty(level.id, 'dsl_text', dslText);
           }
@@ -697,7 +710,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           // Multi/Match ran the planning stage above (before create);
           // the others run it here. Either way the stage label lines up
           // with where the AI work actually happens.
-          if (spec.labType !== 'multi' && spec.labType !== 'match') {
+          if (
+            spec.labType !== 'multi' &&
+            spec.labType !== 'match' &&
+            spec.labType !== 'external'
+          ) {
             setStage('planning');
             appendLog(`Planning content for "${levelName}"…`);
           }
@@ -906,6 +923,10 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               );
             }
             generatedOutput = {match: matchResult};
+          } else if (spec.labType === 'external' && externalResult) {
+            // The whole page rode in on the DSL (create POST or reused-
+            // level PATCH); nothing further to save.
+            generatedOutput = {external: externalResult};
           } else if (spec.labType === 'freeResponse') {
             const result = await generateFreeResponseLevel(levelCtx);
             setStage('saving-properties');
