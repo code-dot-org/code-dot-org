@@ -1,6 +1,7 @@
 import {useCallback, useEffect, useRef, useState} from 'react';
 
-import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
+import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {QuizAttemptData} from './types';
 
@@ -118,6 +119,7 @@ export default function useQuizAttempt({
         );
       } catch (postError) {
         setError(await networkErrorMessage(postError));
+        throw postError;
       }
     },
     [attempt]
@@ -158,18 +160,4 @@ export default function useQuizAttempt({
     submitQuestionResponse,
     finishAttempt,
   };
-}
-
-async function networkErrorMessage(error: unknown): Promise<string> {
-  if (isNetworkError(error)) {
-    try {
-      const data = await error.response.json();
-      if (typeof data.error === 'string' && data.error) {
-        return data.error;
-      }
-    } catch {
-      // Response body was not JSON.
-    }
-  }
-  return 'Something went wrong.';
 }

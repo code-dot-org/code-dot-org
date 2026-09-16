@@ -180,6 +180,31 @@ describe('useQuizAttempt', () => {
     expect(post).not.toHaveBeenCalled();
   });
 
+  it('surfaces the server error message when submitQuestionResponse rejects', async () => {
+    get.mockResolvedValue(jsonResponse(ATTEMPT));
+    post.mockRejectedValue(
+      new NetworkError(
+        '400 Bad Request',
+        new Response(JSON.stringify({error: 'quiz is closed'}), {
+          status: 400,
+          headers: {'Content-Type': 'application/json'},
+        })
+      )
+    );
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizAttempt({levelId: 42, unitId: 7})
+    );
+    await waitForNextUpdate();
+
+    await act(async () => {
+      await expect(
+        result.current.submitQuestionResponse(99, {selectedChoiceId: 'a'})
+      ).rejects.toThrow();
+    });
+
+    expect(result.current.error).toBe('quiz is closed');
+  });
+
   it('finishAttempt PUTs and stores the submitted attempt', async () => {
     get.mockResolvedValue(jsonResponse(ATTEMPT));
     const submitted: QuizAttemptData = {
