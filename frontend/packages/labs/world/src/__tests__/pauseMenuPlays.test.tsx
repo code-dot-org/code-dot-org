@@ -59,13 +59,15 @@ describe('the pause menu, in breakout', () => {
     }
     expect(ball.get(PositionProperty).y).toBe(held);
 
-    // Resume is the panel's child, four below its middle at (160, 160).
-    const [resume] = g.ofType('actors/resumeButton');
+    // Resume is a plain Button the map names, the panel's child four below
+    // its middle at (160, 160).
+    const [resume] = g.world.actorsNamed('Resume');
+    expect(resume.type).toBe('actors/button');
     const at = resume.get(PositionProperty);
     g.click(at.x, at.y);
     expect(g.world.isPaused()).toBe(false);
     expect(g.ofType('actors/pauseMenu')).toHaveLength(0);
-    expect(g.ofType('actors/resumeButton')).toHaveLength(0);
+    expect(g.world.actorsNamed('Resume')).toHaveLength(0);
     g.frame();
     g.frame();
     expect(ball.get(PositionProperty).y).not.toBe(held);
@@ -78,7 +80,7 @@ describe('the pause menu, in breakout', () => {
       g.frame();
     }
     g.tap('p');
-    const [quit] = g.ofType('actors/quitButton');
+    const [quit] = g.world.actorsNamed('Quit');
     const at = quit.get(PositionProperty);
     g.click(at.x, at.y);
     expect(g.world.isPaused()).toBe(false);

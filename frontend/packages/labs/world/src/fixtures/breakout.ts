@@ -139,9 +139,9 @@ export const setNumber = (type: string, value: number) => ({
  * second axis"): P stops the game and loads the stock menu; the menu says
  * `resumed` or `quit` when a button is pressed, and the world decides what
  * each means — here, carry on, or start the level over. The menu is the
- * project's `maps/pauseMenu.map`, imported with the three actors it places
- * (`maps/importStockMap`), and a project may open it in the map editor and
- * move things.
+ * project's `maps/pauseMenu.map`, imported with the actors it places
+ * (`maps/importStockMap`) — the menu and two plain Buttons it knows by
+ * name — and a project may open it in the map editor and move things.
  */
 export const pauseHandlers = (level: string) => {
   // The hat's subject — the menu that spoke — is `this actor` in a world's

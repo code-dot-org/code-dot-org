@@ -183,7 +183,10 @@ import {
   mapActorTypes,
   mapOptions,
   mapOptionsExtension,
+  NONE_VALUE,
   orNone,
+  placementNameOptions,
+  placementNameOptionsExtension,
   ruleModuleOptions,
   backgroundImportOptions,
   soundImportOptions,
@@ -261,7 +264,7 @@ import {
   type ShadowSpec,
 } from './valueShadow';
 import {isRedeclaration} from './variableScope';
-import {definesRule, workspaceOfBlock} from './workspaceRoots';
+import {definesRule, definesWorld, workspaceOfBlock} from './workspaceRoots';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
@@ -4326,6 +4329,60 @@ const worldActorKind = defineBlock({
 // bare identifier `actor`, so a loop variable named `actor` would shadow it
 // (`for (const actor of world.actors)`) and break "this actor is touching it".
 // The generator also reserves `actor` (see BlocklyGenerator) against a rename.
+/**
+ * `the actor named ⟨…⟩` — one placement, by the name a map gave it.
+ *
+ * A hat names a KIND, and two placements of one kind could not be told apart
+ * until this: a pause menu's Resume and Quit are both Buttons, and "when the
+ * Resume button is clicked" had nowhere to be said (specs/MAPS.md). The
+ * dropdown offers the names in the project's maps.
+ *
+ * TWO READINGS, as `any ⟨kind⟩` has. As a HAT'S SUBJECT it is something to
+ * register on, which reaches the actor placed now and any placed later,
+ * since a menu's buttons arrive when the menu is loaded: `world.named(…)` in
+ * a world file, and `actor.named(…)` in an actor file, which has no world at
+ * module scope and so leaves the handler with its template for the world to
+ * register when the kind is first placed (`ActorBuilder.named`). As a VALUE
+ * it is the actors so named, a list like every actor value, usually of one
+ * (`World.actorsNamed`).
+ */
+const worldActorNamed = defineBlock({
+  type: 'world_actor_named',
+  message0: 'the actor named %1',
+  args0: [
+    {
+      type: 'field_dropdown',
+      name: 'NAME',
+      options: placementNameOptions,
+    },
+  ],
+  output: 'Actor',
+  extensions: [placementNameOptionsExtension, worldContextExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'The actor a map placed under this name — placed now, or placed later ' +
+    'when the map is loaded. Under a “when” block it is the one the block is ' +
+    'about; anywhere else it is that actor, to move, remove or ask.',
+  generator: {
+    javascript(block) {
+      const name = String(block.getFieldValue('NAME') ?? '');
+      const parent = block.outputConnection?.targetConnection?.getSourceBlock();
+      const isSubject = Boolean(parent?.type.startsWith('world_on_'));
+      if (!name || name === NONE_VALUE) {
+        return [isSubject ? 'actor' : '[]', Order.ATOMIC] as [string, number];
+      }
+      if (!isSubject) {
+        return [`world.actorsNamed(${str(name)})`, Order.MEMBER] as [
+          string,
+          number,
+        ];
+      }
+      const scope = definesWorld(block.workspace) ? 'world' : 'actor';
+      return [`${scope}.named(${str(name)})`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+
 /**
  * Every actor in the world — the value a loop walked before it could be given
  * one, and an actor value like any other (specs/ACTOR_LISTS.md).
@@ -9790,6 +9847,7 @@ export const DOMAIN_BLOCKS = [
   worldVectorComponent,
   worldThisActor,
   worldActorKind,
+  worldActorNamed,
   ActorVariable.getterBlock,
   worldAllActors,
   worldCameraValue,
@@ -9997,6 +10055,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_this_actor',
       // The 'any of this kind' counterpart, for a world file naming several.
       'world_actor_kind',
+      'world_actor_named',
       'world_all_actors',
       // …and the one filter written more often than every other put together
       // (specs/ACTOR_LISTS.md).
@@ -10151,6 +10210,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // holding several broadcasts, so the two blocks together are the bulk
       // operation, and no third block has to exist to say it.
       'world_actor_kind',
+      // …and one of them by name: the id a map gave a placement, which is how
+      // a world says "when the Resume button is clicked" about one of two
+      // Buttons (MAPS.md).
+      'world_actor_named',
       // Many of one kind, arranged on a map that lives in this world (MAPS.md).
       'world_create_in_map',
       'world_add_world_effect',

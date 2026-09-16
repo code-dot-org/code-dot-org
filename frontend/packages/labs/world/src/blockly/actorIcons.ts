@@ -24,10 +24,8 @@ import heartPulse from '@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg
 import iCursor from '@fortawesome/fontawesome-free/svgs/solid/i-cursor.svg?raw';
 import paragraph from '@fortawesome/fontawesome-free/svgs/solid/paragraph.svg?raw';
 import pause from '@fortawesome/fontawesome-free/svgs/solid/pause.svg?raw';
-import play from '@fortawesome/fontawesome-free/svgs/solid/play.svg?raw';
 import sliders from '@fortawesome/fontawesome-free/svgs/solid/sliders.svg?raw';
 import squareCaretDown from '@fortawesome/fontawesome-free/svgs/solid/square-caret-down.svg?raw';
-import stop from '@fortawesome/fontawesome-free/svgs/solid/stop.svg?raw';
 import toggleOn from '@fortawesome/fontawesome-free/svgs/solid/toggle-on.svg?raw';
 import windowMaximize from '@fortawesome/fontawesome-free/svgs/solid/window-maximize.svg?raw';
 
@@ -86,11 +84,7 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   panel: tile(windowMaximize),
   input: tile(iCursor),
   paragraph: tile(paragraph),
-  // The pause menu and its two buttons, each its own symbol so a dropdown
-  // can tell the three apart (`actorIcons.test`).
   pause: tile(pause),
-  play: tile(play),
-  stop: tile(stop),
 };
 
 /** The dropdown's rows, in the order an interface is usually built. */

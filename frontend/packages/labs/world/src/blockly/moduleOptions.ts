@@ -42,6 +42,8 @@ let projectEffectFiles: Array<[string, string]> = [];
 let projectRuleModules: Array<[string, string]> = [];
 // Map path -> the actor module paths it places (for the load-map generator).
 let projectMaps: Record<string, string[]> = {};
+/** The names the project's maps give their placements (`projectPlacementNames`). */
+let placementNames: string[] = [];
 // Effect path -> the parameters that effect declares (for the use-effect
 // mutator, which builds one socket row per parameter).
 let projectEffectParams: Record<string, EffectParameter[]> = {};
@@ -141,6 +143,18 @@ export function ruleModuleOptions(): Array<[string, string]> {
 }
 
 /** Replace the map registry (path -> the actor modules each map places). */
+export function setPlacementNames(names: string[]): void {
+  placementNames = names;
+}
+
+/** Rows for `the actor named ⟨…⟩`: every placement name, or a fallback. */
+export function placementNameOptions(): Array<[string, string]> {
+  return orNone(
+    placementNames.map(name => [name, name]),
+    '(no placements yet)',
+  );
+}
+
 export function setProjectMaps(maps: Record<string, string[]>): void {
   projectMaps = maps;
 }
@@ -163,7 +177,7 @@ export function mapActorTypes(path: string): string[] {
 }
 
 /** What a dropdown holds before the project offers it anything real. */
-const NONE_VALUE = '';
+export const NONE_VALUE = '';
 
 /**
  * A list, or the one row a dropdown shows when the project offers nothing.
@@ -652,6 +666,11 @@ export const soundOptionsExtension = liveDropdown(
   soundImportOptions,
 );
 
+export const placementNameOptionsExtension = liveDropdown(
+  'world_placement_name_options',
+  'NAME',
+  placementNameOptions,
+);
 export const mapOptionsExtension = liveDropdown(
   'world_map_options',
   'MAP',

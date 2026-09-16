@@ -752,11 +752,13 @@ world with gravity does not fall, because gravity is elected and a Label elects
 is not a guarantee to build; it is what election already means, and it is the
 strongest single argument for these being actors.
 
-**One Label kind per readout, until world state lands.** `set text of ⟨any
+**One Label kind per readout, or one NAME per readout.** `set text of ⟨any
 ⟨Score⟩⟩ to …` works because there is exactly one, and `any ⟨kind⟩` already
-exists. Two labels of one kind cannot be told apart, because a placement's id is
-not something a block can name. That is a real limit, and the general answer
-belongs with world-scoped state rather than here.
+exists. Two labels of one kind are told apart by the name their map gives each
+placement: `set text of ⟨the actor named Score⟩ to …` (MAPS.md, "A block
+naming a placement"). A readout with no map — one an `add actor` block makes —
+still needs a kind of its own, and world-scoped state is still the general
+answer for a value several things read.
 
 ## What it takes
 
@@ -1100,10 +1102,10 @@ button ⟨left⟩ is down`, letting go when it comes up. There is no drag
 ### The second axis: stock interface MAPS — the first one is built
 
 The pause menu is on the shelf (`maps/stock`, `maps/importStockMap`): a
-`.map` placing a Pause Menu panel and its Resume and Quit buttons, imported
-whole with the three actors, from the `load map` dropdown's `(import…)` row
-or the Maps folder's menu. Breakout uses it — P pauses and loads it, and
-what follows is below. What building it found:
+`.map` placing a Pause Menu panel and two plain Buttons named Resume and
+Quit, imported whole with the two actor kinds, from the `load map`
+dropdown's `(import…)` row or the Maps folder's menu. Breakout uses it — P
+pauses and loads it, and what follows is below. What building it found:
 
 - **A menu needs the game to STOP, and that is the engine's.** `pause the
 game` runs the `sense` phase and nothing else, so keys and clicks still
@@ -1113,12 +1115,17 @@ game` runs the `sense` phase and nothing else, so keys and clicks still
   frame — a slider following the pointer — stop with the rest, which a
   pause menu does not mind.
 - **The menu speaks, the world decides.** The Pause Menu is a Panel with two
-  own events, `resumed` and `quit`; its buttons are kinds of their own whose
-  one handler raises the event on `parent of this actor`. So a project
-  answers the MENU — `when ⟨any Pause Menu⟩ resumed` — rather than every
-  Button in the game, and the buttons can be moved anywhere on the map
-  without rewiring. What "quit" means is the project's: breakout clears the
-  world and loads its level again.
+  own events, `resumed` and `quit`. Its buttons are plain Buttons, told
+  apart by the NAMES the map gives them. The menu's file holds a hat for
+  each: when `the actor named Resume` is clicked, emit `resumed` for the
+  parent of this actor (MAPS.md, "A block naming a placement"). So a
+  project answers the MENU — `when ⟨any Pause Menu⟩ resumed` — rather than
+  every Button in the game, and the buttons can be moved anywhere on the
+  map without rewiring. What "quit" means is the project's: breakout clears
+  the world and loads its level again. The first cut made Resume Button and
+  Quit Button kinds of their own, because a kind was the only thing a hat
+  could name; two actor files whose whole content was a caption and one
+  handler were the cost of that, and the named-actor block replaced them.
 - **Removing the panel removes the menu**, buttons and all
   (specs/PARENTING.md), which is the whole of what "take the menu away" costs.
 - **A map has no layer of its own.** `load map` in a handler puts the menu on

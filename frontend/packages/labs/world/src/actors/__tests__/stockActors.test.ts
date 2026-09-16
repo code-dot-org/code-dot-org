@@ -165,7 +165,7 @@ describe('every stock actor', () => {
       const owners = [
         ...actor.contents.matchAll(
           // …and `emit`: raising another kind's event names that kind, and
-          // the file will not generate without it (`menuButtons`).
+          // the file will not generate without it.
           /"type": "world_(?:get|set|do|query|emit)_([A-Za-z0-9]+)_/g,
         ),
       ]

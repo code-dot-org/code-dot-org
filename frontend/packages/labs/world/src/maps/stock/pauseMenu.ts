@@ -6,6 +6,12 @@
 // so loading the map puts the menu on screen as one thing and removing the
 // panel takes it away as one thing.
 //
+// THE BUTTONS ARE PLAIN BUTTONS, told apart by the NAMES this map gives
+// them: the Pause Menu's file says `when ⟨the actor named Resume⟩ is
+// clicked`, and Resume is whatever this map places under that name
+// (specs/MAPS.md, "A block naming a placement"). Rename one in the editor
+// and the menu stops hearing it, which is the one thing to know.
+//
 // AT THE MIDDLE OF THE STANDARD WINDOW, which is where a project with a
 // square view wants it and which a project with another view moves in the
 // map editor — a map is a starting point to arrange, not a layout that
@@ -28,14 +34,20 @@ export const pauseMenuMap = JSON.stringify(
       },
       // In the panel's frame: a little below its middle, and lower again.
       {
-        type: 'actors/resumeButton',
+        type: 'actors/button',
         id: 'Resume',
-        properties: {positional: {parent: 'Pause', position: {x: 0, y: 4}}},
+        properties: {
+          positional: {parent: 'Pause', position: {x: 0, y: 4}},
+          Label: {text: 'RESUME'},
+        },
       },
       {
-        type: 'actors/quitButton',
+        type: 'actors/button',
         id: 'Quit',
-        properties: {positional: {parent: 'Pause', position: {x: 0, y: 40}}},
+        properties: {
+          positional: {parent: 'Pause', position: {x: 0, y: 40}},
+          Label: {text: 'QUIT'},
+        },
       },
     ],
   },

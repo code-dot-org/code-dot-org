@@ -26,7 +26,7 @@ export const STOCK_MAPS: readonly StockMap[] = [
     name: 'Pause Menu',
     description:
       'A panel that says PAUSED with a Resume and a Quit button. Load it when a key is pressed and “pause the game”; it says “resumed” or “quit” when a button is pressed, and the world decides what each means.',
-    actors: ['pauseMenu', 'resumeButton', 'quitButton'],
+    actors: ['pauseMenu', 'button'],
     contents: pauseMenuMap,
   },
 ];

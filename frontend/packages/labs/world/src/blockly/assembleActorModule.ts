@@ -100,9 +100,16 @@ export function assembleWorldModule(
   // and the whole project stopped — and because esbuild rewrites the `const`,
   // it threw as "Cannot read properties of undefined (reading 'on')" rather
   // than as the use-before-declaration it actually is.
+  //
+  // A hat about `the actor named ⟨…⟩` is an actor's event registered THROUGH
+  // the world (`world.named(…).on(…)`), so it needs the binding too. Told by
+  // its code rather than its type, because the type is the event's and the
+  // subject is what decides.
   const handlers = blocks.filter(block => block.type.startsWith('world_on_'));
-  const onActors = handlers.filter(block => !worldEventTypes.has(block.type));
-  const onWorld = handlers.filter(block => worldEventTypes.has(block.type));
+  const needsWorld = (block: GeneratedBlock) =>
+    worldEventTypes.has(block.type) || block.code.startsWith('world.');
+  const onActors = handlers.filter(block => !needsWorld(block));
+  const onWorld = handlers.filter(needsWorld);
   const rest = blocks.filter(
     block =>
       block !== world && !tweens.includes(block) && !handlers.includes(block),

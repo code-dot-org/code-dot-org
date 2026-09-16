@@ -10,9 +10,12 @@
 // is FOR, and they are the menu's own so that a project answers the menu and
 // not its buttons: `when ⟨any Pause Menu⟩ resumed` is one hat about one
 // kind, where `when ⟨any Button⟩ is clicked` would fire for every button in
-// the game. The buttons that raise them are kinds of their own
-// (`menuButtons`), each a Button whose one row of behavior is to tell its
-// parent.
+// the game. The buttons that raise them are plain Buttons the map places
+// under the names Resume and Quit, and this file holds the two hats that
+// give the names a meaning: `when ⟨the actor named Resume⟩ is clicked, emit
+// resumed for ⟨parent of this actor⟩` (specs/MAPS.md, "A block naming a
+// placement"). The menu is the parent, so the event is the menu's, and a
+// project that rearranges the map in the editor rewires nothing.
 //
 // IT DOES NOT PAUSE ANYTHING ITSELF. Pausing is the world's, in one block
 // (`pause the game`), and which key opens the menu and what "quit" does are
@@ -24,6 +27,7 @@ import {
   actorFile,
   actsLike,
   defineEvent,
+  emitFor,
   drawParagraph,
   fill,
   me,
@@ -34,6 +38,7 @@ import {
   showAs,
   swatch,
   textOf,
+  whenNamedClicked,
   words,
 } from './workspace';
 
@@ -41,6 +46,19 @@ const WIDTH = 200;
 const HEIGHT = 120;
 /** Where the title sits: near the top, so the buttons have the rest. */
 const TITLE_Y = 20;
+
+/** `parent of ⟨this actor⟩`, the Space rule's own (specs/PARENTING.md). */
+const parent = () => ({
+  block: {type: 'world_get_Space_ParentProperty', inputs: {ACTOR: me()}},
+});
+
+/**
+ * `when ⟨the actor named ⟨name⟩⟩ is clicked → emit ⟨event⟩ for ⟨parent of
+ * this actor⟩`. In the handler `this actor` is the button that was clicked,
+ * and its parent is the menu carrying it.
+ */
+const tellsParent = (name: string, event: 'Resumed' | 'Quit') =>
+  whenNamedClicked(name, emitFor(`ActorsPauseMenu_${event}Event`, parent()));
 
 const width = () => labelSizeOf('Width');
 const height = () => labelSizeOf('Height');
@@ -66,6 +84,7 @@ export const pauseMenuActor = actorFile(
     setText('TextProperty', words('PAUSED')),
   ],
   {
+    handlers: [tellsParent('Resume', 'Resumed'), tellsParent('Quit', 'Quit')],
     // The Panel's face, with the title near the top rather than in the
     // middle, so the buttons below have the rest of the box.
     drawing: {

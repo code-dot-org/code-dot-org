@@ -324,6 +324,23 @@ export const actorFile = (
     2,
   );
 
+/**
+ * `when ⟨the actor named ⟨name⟩⟩ is clicked` with `then` below it — a hat
+ * about one placement by the name its map gives it (specs/MAPS.md).
+ */
+export const whenNamedClicked = (name: string, then: object) => ({
+  type: 'world_on_Mouse_IsClickedWithEvent',
+  fields: {FILTER0: ''},
+  inputs: {ACTOR: {block: {type: 'world_actor_named', fields: {NAME: name}}}},
+  next: {block: then},
+});
+
+/** `emit ⟨event⟩ for ⟨actor⟩`, for an event some actor kind declared. */
+export const emitFor = (event: string, actor: object) => ({
+  type: `world_emit_${event}`,
+  inputs: {ACTOR: actor},
+});
+
 /** `set fill ⟨color⟩`. */
 export const fill = (color: object) => ({
   type: 'world_pen_fill',

@@ -259,6 +259,49 @@ the dropdown's "(none)" row is for, and a missed click should not be
 destructive — and selecting another actor disarms too, since the armed property
 belonged to the one that was selected when the button was pressed.
 
+## A block naming a placement: `the actor named ⟨…⟩`
+
+A map gives each placement an id — the inspector's name field, `Resume` — and
+until this block nothing outside the map could say it. A hat names a KIND, so
+two placements of one kind could not be told apart: a pause menu's Resume and
+Quit are both Buttons, and "when the Resume button is clicked" had nowhere to
+be written except as a Resume Button kind of its own, which is what the first
+stock menu did.
+
+`the actor named ⟨Resume⟩` is an actor value with a dropdown of every name
+the project's maps give a placement (`projectPlacementNames`, refreshed with
+the other project dropdowns). It reads two ways, as `any ⟨kind⟩` does:
+
+- **As a hat's subject** it is something to register on that reaches the
+  actor placed now AND any placed later, since a menu's buttons arrive when
+  its map is loaded. In a world file it generates `world.named("Resume")`;
+  the assembler puts such a hat after the world block, because the binding
+  it needs is the one the block makes. In an actor file there is no world at
+  module scope, so it generates `actor.named("Resume")`: the template keeps
+  the handler and the world registers it the first time it places an actor
+  of that kind (`ActorBuilder.named`, `World.useActorKind`). Once per kind
+  and per world, not per instance, so two menus do not answer one click
+  twice.
+- **Anywhere else** it is the actors so named — `world.actorsNamed("Resume")`,
+  a list like every actor value, and usually of one. A statement over it
+  broadcasts as over `any ⟨kind⟩`.
+
+**By NAME, not by id.** A map loaded twice numbers its second Resume
+`Resume#2` (`resolveInstanceId`), and a handler about "Resume" means both;
+`World.actorsNamed` strips the ordinal. This is the opposite choice from an
+actor-typed property above, which resolves by entry id within ONE map: a
+property says which placement in this map, a block says which name in the
+world, and a project that loads the menu twice is asking for two menus that
+both work.
+
+**What it costs.** Rename the placement in the editor and every block naming
+it goes quiet, as a rule renamed under a `use rule` would; the dropdown shows
+the new name and the old block keeps the old one. Rewriting blocks on a
+rename is the same unbuilt answer the actor-typed property gives above. And
+the kind a hat is ABOUT is not known from a name (`actorAbout`), so the
+property blocks inside such a hat offer no kind-specific shadow; `parent of
+this actor` and the general blocks are what the pause menu's hats use.
+
 ## 5. What once blocked this: a world-local actor had no schema
 
 The inspector is driven by `schemas[type]`, which the sandbox builds by

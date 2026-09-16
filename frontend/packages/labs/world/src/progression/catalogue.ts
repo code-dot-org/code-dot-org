@@ -2506,10 +2506,10 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_resume_game'},
       {kind: 'block', type: 'world_game_is_paused'},
       // …and the menu itself, which the stock Pause Menu map places
-      // (`maps/stock`): a panel that says what was pressed, and its buttons.
+      // (`maps/stock`): a panel that says what was pressed, over two plain
+      // Buttons it knows by name.
       {kind: 'actor', id: 'pauseMenu'},
-      {kind: 'actor', id: 'resumeButton'},
-      {kind: 'actor', id: 'quitButton'},
+      {kind: 'block', type: 'world_actor_named'},
     ],
     offers: [
       {kind: 'block', type: 'controls_if'},

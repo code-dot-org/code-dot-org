@@ -17,7 +17,6 @@ import {dropdownActor} from './dropdown';
 import {GROUND_SPRITE, groundActor} from './ground';
 import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
-import {quitButtonActor, resumeButtonActor} from './menuButtons';
 import {panelActor} from './panel';
 import {pauseMenuActor} from './pauseMenu';
 import {PLAYER_ANIMATION, playerActor} from './player';
@@ -229,33 +228,14 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'pauseMenu',
     name: 'Pause Menu',
     description:
-      'A panel that says PAUSED and carries a Resume and a Quit button. It says “resumed” or “quit” when one is pressed; what those mean is the world’s to decide.',
+      'A panel that says PAUSED, with a Resume and a Quit button beside it in its map. It says “resumed” or “quit” when one is pressed; what those mean is the world’s to decide.',
     // The Panel it is, and the Label whose box and words it reads through
-    // it; the buttons are their own kinds, brought by the map that arranges
-    // them (`maps/stock`).
+    // it. The buttons are plain Buttons the map places under the names its
+    // two hats listen for, brought by the map that arranges them
+    // (`maps/stock`).
     requires: [],
     actors: ['panel', 'label'],
     contents: pauseMenuActor,
-  },
-  {
-    id: 'resumeButton',
-    name: 'Resume Button',
-    description:
-      'A Button that says RESUME and tells the Pause Menu it is on that it was pressed.',
-    requires: [],
-    // The Button it is, the Label whose words it sets through it, and the
-    // Pause Menu whose event it raises.
-    actors: ['button', 'label', 'pauseMenu'],
-    contents: resumeButtonActor,
-  },
-  {
-    id: 'quitButton',
-    name: 'Quit Button',
-    description:
-      'A Button that says QUIT and tells the Pause Menu it is on that it was pressed.',
-    requires: [],
-    actors: ['button', 'label', 'pauseMenu'],
-    contents: quitButtonActor,
   },
   {
     id: 'portrait',

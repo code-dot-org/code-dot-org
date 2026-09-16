@@ -429,6 +429,20 @@ export class WorldBuilder {
   }
 
   /**
+   * The actors a map placed under `name`, and the thing a hat about them
+   * registers on — see {@link World.actorsNamed} and {@link World.named}. On
+   * the builder because a world file says `when ⟨the actor named Resume⟩ is
+   * clicked` at module scope, where `world` is this.
+   */
+  actorsNamed(name: string): Actor[] {
+    return this.getWorld().actorsNamed(name);
+  }
+
+  named(name: string): ReturnType<World['named']> {
+    return this.getWorld().named(name);
+  }
+
+  /**
    * Play a track. See {@link World.setMusic}.
    *
    * Deferred and COLLAPSED, like `set`: music has one value and the last write
