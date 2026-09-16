@@ -9,7 +9,14 @@ const section = (overrides: Partial<Section> = {}): Section => ({
   hidden: false,
   courseName: null,
   units: [unit('csd1-2023')],
-  students: [{id: 10, username: 'zoe_abc', name: 'Zoe A'}],
+  students: [
+    {
+      id: 10,
+      username: 'paul_atreides',
+      name: 'Paul',
+      familyName: 'Atreides',
+    },
+  ],
   ...overrides,
 });
 
@@ -32,7 +39,11 @@ describe('buildExportRows', () => {
     };
 
     expect(buildExportRows([s], selection)).toEqual([
-      {student_username: 'zoe_abc', student_id: '10', unit_name: 'csd1-2023'},
+      {
+        student_username: 'paul_atreides',
+        student_id: '10',
+        unit_name: 'csd1-2023',
+      },
     ]);
   });
 
@@ -40,8 +51,13 @@ describe('buildExportRows', () => {
     const s = section({
       units: [unit('csd1-2023'), unit('csd2-2023'), unit('csd3-2023')],
       students: [
-        {id: 10, username: 'zoe_abc', name: 'Zoe A'},
-        {id: 11, username: 'liam_def', name: 'Liam D'},
+        {
+          id: 10,
+          username: 'paul_atreides',
+          name: 'Paul',
+          familyName: 'Atreides',
+        },
+        {id: 11, username: 'duncan_idaho', name: 'Duncan', familyName: 'Idaho'},
       ],
     });
 
@@ -49,7 +65,7 @@ describe('buildExportRows', () => {
 
     expect(rows).toHaveLength(6);
     expect(rows[0]).toEqual({
-      student_username: 'zoe_abc',
+      student_username: 'paul_atreides',
       student_id: '10',
       unit_name: 'csd1-2023',
     });
@@ -68,7 +84,7 @@ describe('buildExportRows', () => {
 
   it('writes an empty username rather than dropping the student', () => {
     const s = section({
-      students: [{id: 12, username: null, name: 'Grace H'}],
+      students: [{id: 12, username: null, name: 'Chani', familyName: 'Kynes'}],
     });
 
     expect(buildExportRows([s], selectAll(s))).toEqual([
@@ -77,7 +93,12 @@ describe('buildExportRows', () => {
   });
 
   it('emits a student once when two selected sections share a unit', () => {
-    const shared = {id: 10, username: 'zoe_abc', name: 'Zoe A'};
+    const shared = {
+      id: 10,
+      username: 'paul_atreides',
+      name: 'Paul',
+      familyName: 'Atreides',
+    };
     const first = section({id: 1, students: [shared]});
     const second = section({id: 2, name: 'Robotics', students: [shared]});
 
@@ -87,12 +108,21 @@ describe('buildExportRows', () => {
     });
 
     expect(rows).toEqual([
-      {student_username: 'zoe_abc', student_id: '10', unit_name: 'csd1-2023'},
+      {
+        student_username: 'paul_atreides',
+        student_id: '10',
+        unit_name: 'csd1-2023',
+      },
     ]);
   });
 
   it('still emits both rows when two sections resolve to different units', () => {
-    const shared = {id: 10, username: 'zoe_abc', name: 'Zoe A'};
+    const shared = {
+      id: 10,
+      username: 'paul_atreides',
+      name: 'Paul',
+      familyName: 'Atreides',
+    };
     const first = section({id: 1, students: [shared]});
     const second = section({
       id: 2,
@@ -121,8 +151,13 @@ describe('buildExportRows', () => {
   it('ignores students that are not selected', () => {
     const s = section({
       students: [
-        {id: 10, username: 'zoe_abc', name: 'Zoe A'},
-        {id: 11, username: 'liam_def', name: 'Liam D'},
+        {
+          id: 10,
+          username: 'paul_atreides',
+          name: 'Paul',
+          familyName: 'Atreides',
+        },
+        {id: 11, username: 'duncan_idaho', name: 'Duncan', familyName: 'Idaho'},
       ],
     });
     const selection: Selection = {

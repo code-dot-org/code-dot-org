@@ -14,8 +14,8 @@ const SECTION: Section = {
   courseName: null,
   units: [unit('csd1-2023')],
   students: [
-    {id: 10, username: 'zoe_abc', name: 'Zoe A'},
-    {id: 11, username: 'liam_def', name: 'Liam D'},
+    {id: 10, username: 'paul_atreides', name: 'Paul', familyName: 'Atreides'},
+    {id: 11, username: 'duncan_idaho', name: 'Duncan', familyName: 'Idaho'},
   ],
 };
 
@@ -55,7 +55,7 @@ describe('ExportStudentDataTable', () => {
 
     await userEvent.click(sectionCheckbox('Period 1'));
     await userEvent.click(screen.getByRole('button', {name: /Show students/}));
-    await userEvent.click(sectionCheckbox('zoe_abc'));
+    await userEvent.click(sectionCheckbox('Paul Atreides'));
 
     const section = sectionCheckbox('Period 1');
     expect(section.checked).toBe(false);
@@ -76,7 +76,31 @@ describe('ExportStudentDataTable', () => {
         .getByRole('button', {name: /Hide students/})
         .getAttribute('aria-expanded')
     ).toBe('true');
-    expect(screen.getByRole('checkbox', {name: 'liam_def'})).toBeDefined();
+    expect(screen.getByRole('checkbox', {name: 'Duncan Idaho'})).toBeDefined();
+  });
+
+  it("shows the student's full name, not their username", async () => {
+    renderTable([SECTION]);
+
+    await userEvent.click(screen.getByRole('button', {name: /Show students/}));
+
+    // The checkbox's accessible name comes from its visible label.
+    expect(screen.getByRole('checkbox', {name: 'Paul Atreides'})).toBeDefined();
+    expect(screen.queryByText('paul_atreides')).toBeNull();
+  });
+
+  it('flags a student with no username without hiding their name', async () => {
+    const section: Section = {
+      ...SECTION,
+      students: [{id: 12, username: null, name: 'Chani', familyName: 'Kynes'}],
+    };
+    renderTable([section]);
+
+    await userEvent.click(screen.getByRole('button', {name: /Show students/}));
+
+    expect(
+      screen.getByRole('checkbox', {name: 'Chani Kynes (no username)'})
+    ).toBeDefined();
   });
 
   it('disables a section with no unit assigned', () => {
@@ -189,7 +213,7 @@ describe('ExportStudentDataTable', () => {
       )
     ).toBeDefined();
 
-    await userEvent.click(sectionCheckbox('zoe_abc'));
+    await userEvent.click(sectionCheckbox('Paul Atreides'));
 
     expect(
       within(students).queryByText(
@@ -243,23 +267,23 @@ describe('ExportStudentDataTable', () => {
     expect(studentsAll.checked).toBe(false);
 
     await userEvent.click(studentsAll);
-    expect(sectionCheckbox('zoe_abc').checked).toBe(true);
-    expect(sectionCheckbox('liam_def').checked).toBe(true);
+    expect(sectionCheckbox('Paul Atreides').checked).toBe(true);
+    expect(sectionCheckbox('Duncan Idaho').checked).toBe(true);
     expect(studentsAll.checked).toBe(true);
     // Also reflected on the section-level checkbox, which reads the same set.
     expect(sectionCheckbox('Period 1').checked).toBe(true);
 
-    await userEvent.click(sectionCheckbox('zoe_abc'));
+    await userEvent.click(sectionCheckbox('Paul Atreides'));
     expect(studentsAll.checked).toBe(false);
     expect(studentsAll.indeterminate).toBe(true);
 
     await userEvent.click(studentsAll);
-    expect(sectionCheckbox('zoe_abc').checked).toBe(true);
-    expect(sectionCheckbox('liam_def').checked).toBe(true);
+    expect(sectionCheckbox('Paul Atreides').checked).toBe(true);
+    expect(sectionCheckbox('Duncan Idaho').checked).toBe(true);
 
     await userEvent.click(studentsAll);
-    expect(sectionCheckbox('zoe_abc').checked).toBe(false);
-    expect(sectionCheckbox('liam_def').checked).toBe(false);
+    expect(sectionCheckbox('Paul Atreides').checked).toBe(false);
+    expect(sectionCheckbox('Duncan Idaho').checked).toBe(false);
     expect(studentsAll.checked).toBe(false);
     expect(studentsAll.indeterminate).toBe(false);
   });
@@ -273,7 +297,7 @@ describe('ExportStudentDataTable', () => {
     renderTable([course]);
 
     await userEvent.click(screen.getByRole('button', {name: /Show students/}));
-    await userEvent.click(sectionCheckbox('zoe_abc'));
+    await userEvent.click(sectionCheckbox('Paul Atreides'));
 
     const units = screen.getByRole('group', {name: 'Units'});
     expect(checkboxWithin(units, 'Units').checked).toBe(false);
@@ -299,7 +323,7 @@ describe('ExportStudentDataTable', () => {
     renderTable([SECTION]);
 
     await userEvent.click(screen.getByRole('button', {name: /Show students/}));
-    await userEvent.click(sectionCheckbox('zoe_abc'));
+    await userEvent.click(sectionCheckbox('Paul Atreides'));
 
     // SECTION has only one unit, so there is no Units fieldset to check.
     expect(screen.queryByRole('group', {name: 'Units'})).toBeNull();

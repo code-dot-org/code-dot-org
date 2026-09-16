@@ -10,6 +10,7 @@ export interface Student {
   /** Null for email/OAuth/LTI students, who never get one generated. */
   username: string | null;
   name: string;
+  familyName: string | null;
 }
 
 export interface Section {

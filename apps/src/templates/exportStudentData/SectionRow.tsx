@@ -3,6 +3,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React from 'react';
 
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
+
 import {checkedState} from './selectionReducer';
 import {Section, SectionSelection} from './types';
 
@@ -148,11 +150,15 @@ const SectionRow: React.FunctionComponent<SectionRowProps> = ({
                   key={student.id}
                   name={`export-section-${section.id}-student-${student.id}`}
                   label={
-                    student.username || (
-                      <span className={styles.noUsername}>
-                        {`${student.name} (no username)`}
-                      </span>
-                    )
+                    <>
+                      {getFullName(student)}
+                      {!student.username && (
+                        <span className={styles.noUsername}>
+                          {' '}
+                          (no username)
+                        </span>
+                      )}
+                    </>
                   }
                   checked={selection.studentIds.has(student.id)}
                   onChange={() => onToggleStudent(student.id)}
