@@ -8,7 +8,6 @@ class OpenaiEvaluateController < ApplicationController
     level_id = evaluate_params[:level_id]
     student_work = evaluate_params[:student_work]
     evaluation_type = evaluate_params[:evaluation_type]
-    should_evaluate_skills = evaluate_params[:should_evaluate_skills] || false
 
     begin
       level = Level.find(level_id)
@@ -19,14 +18,13 @@ class OpenaiEvaluateController < ApplicationController
     response = OpenaiEvaluateHelper.evaluate(
       level,
       student_work: student_work,
-      evaluation_type: evaluation_type,
-      should_evaluate_skills: should_evaluate_skills
+      evaluation_type: evaluation_type
     )
 
     return render(status: response[:status], json: response[:json])
   end
 
   private def evaluate_params
-    params.transform_keys(&:underscore).permit(:level_id, :unit_id, :student_work, :evaluation_type, :should_evaluate_skills)
+    params.transform_keys(&:underscore).permit(:level_id, :unit_id, :student_work, :evaluation_type)
   end
 end
