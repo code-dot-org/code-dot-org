@@ -143,6 +143,7 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
     const saved = getTrainedModelDataToSave(state);
 
     expect(state.hyperparameters).toEqual({k: 1});
+    expect(state.hyperparameters).toEqual({k: 1});
     expect(getPercentCorrect(state)).toBe('90.00');
     expect(saved.selectedTrainer).toBe('knnClassify');
     expect(saved.hyperparameters).toEqual({k: 1});
@@ -165,6 +166,7 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
 
     expect(getPercentCorrect(state)).toBe('100.00');
     expect(state.hyperparameters).toEqual({k: 1});
+    expect(state.hyperparameters).toEqual({k: 1});
   });
 
   test('records a sweep that does not choose the smallest k', () => {
@@ -174,6 +176,7 @@ describe('KNN characterization: shapes_v1_toy, a categorical label', () => {
       'fill color',
     ]);
 
+    expect(state.hyperparameters).toEqual({k: 7});
     expect(state.hyperparameters).toEqual({k: 7});
     expect(getPercentCorrect(state)).toBe('100.00');
 
@@ -188,6 +191,7 @@ describe('KNN characterization: jeans, a numerical label', () => {
     const saved = getTrainedModelDataToSave(state);
 
     // A numerical label under 100 rows takes the minimal k, without a sweep.
+    expect(state.hyperparameters).toEqual({k: 1});
     expect(state.hyperparameters).toEqual({k: 1});
     expect(saved.selectedTrainer).toBe('knnRegress');
     expect(saved.hyperparameters).toEqual({k: 1});
