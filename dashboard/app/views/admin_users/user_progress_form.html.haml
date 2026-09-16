@@ -128,9 +128,9 @@
   :javascript
     (function () {
       // Submit via fetch, show inline error on failure, redirect on success.
-      var form = document.getElementById('bulk-progress-form');
-      var errorEl = document.getElementById('progress-reset-error');
-      var successEl = document.getElementById('progress-reset-success');
+      const form = document.getElementById('bulk-progress-form');
+      const errorEl = document.getElementById('progress-reset-error');
+      const successEl = document.getElementById('progress-reset-success');
       if (form) {
         form.addEventListener('submit', function (e) {
           e.preventDefault();
@@ -160,9 +160,9 @@
       document.querySelectorAll('.toggle-section-link').forEach(function (link) {
         link.addEventListener('click', function (e) {
           e.preventDefault();
-          var sectionId = this.dataset.sectionId;
-          var panel = document.getElementById('section-students-' + sectionId);
-          var hidden = panel.style.display === 'none';
+          const sectionId = this.dataset.sectionId;
+          const panel = document.getElementById('section-students-' + sectionId);
+          const hidden = panel.style.display === 'none';
           panel.style.display = hidden ? '' : 'none';
           this.textContent = hidden ? 'Hide students' : 'Show students';
         });
@@ -171,7 +171,7 @@
       // Section "select all" toggles every student checkbox in that section.
       document.querySelectorAll('.section-select-all').forEach(function (cb) {
         cb.addEventListener('change', function () {
-          var sectionId = this.dataset.sectionId;
+          const sectionId = this.dataset.sectionId;
           document.querySelectorAll('.section-students-' + sectionId).forEach(function (studentCb) {
             studentCb.checked = cb.checked;
           });
@@ -179,7 +179,7 @@
       });
 
       // Select-all for unit checkboxes.
-      var selectAllUnits = document.getElementById('select-all-units');
+      const selectAllUnits = document.getElementById('select-all-units');
       if (selectAllUnits) {
         selectAllUnits.addEventListener('change', function () {
           document.querySelectorAll('input[name="unit_ids[]"]').forEach(function (cb) {
@@ -188,7 +188,7 @@
         });
         document.querySelectorAll('input[name="unit_ids[]"]').forEach(function (cb) {
           cb.addEventListener('change', function () {
-            var allChecked = Array.from(document.querySelectorAll('input[name="unit_ids[]"]')).every(function (c) { return c.checked; });
+            const allChecked = Array.from(document.querySelectorAll('input[name="unit_ids[]"]')).every(function (c) { return c.checked; });
             selectAllUnits.checked = allChecked;
           });
         });
@@ -197,12 +197,12 @@
       // Uncheck section header if any individual student is unchecked.
       document.querySelectorAll('.student-checkbox').forEach(function (studentCb) {
         studentCb.addEventListener('change', function () {
-          var classes = Array.from(this.classList);
-          var sectionClass = classes.find(function (c) { return c.startsWith('section-students-'); });
+          const classes = Array.from(this.classList);
+          const sectionClass = classes.find(function (c) { return c.startsWith('section-students-'); });
           if (!sectionClass) return;
-          var sectionId = sectionClass.replace('section-students-', '');
-          var allChecked = Array.from(document.querySelectorAll('.' + sectionClass)).every(function (c) { return c.checked; });
-          var sectionCb = document.querySelector('.section-select-all[data-section-id="' + sectionId + '"]');
+          const sectionId = sectionClass.replace('section-students-', '');
+          const allChecked = Array.from(document.querySelectorAll('.' + sectionClass)).every(function (c) { return c.checked; });
+          const sectionCb = document.querySelector('.section-select-all[data-section-id="' + sectionId + '"]');
           if (sectionCb) sectionCb.checked = allChecked;
         });
       });
