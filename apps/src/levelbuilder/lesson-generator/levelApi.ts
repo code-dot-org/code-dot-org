@@ -47,6 +47,12 @@ export async function createOrFindLevel(
       if (/name has already been taken/i.test(body)) {
         const racy = await findLevelByName(type, name);
         if (racy) return {...racy, reused: true};
+        // Level names are unique across types; a same-type match would
+        // have been found above.
+        throw new Error(
+          `A level named "${name}" already exists with a different lab type. ` +
+            "Change this card's ID, or delete that level first."
+        );
       }
       throw new Error(`Failed to create level "${name}": 406 ${body}`);
     }
