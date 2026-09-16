@@ -117,6 +117,19 @@ class ExportStudentDataControllerTest < ActionController::TestCase
     assert_nil students.first[:username]
   end
 
+  test 'serializes both the given name and family name for a student' do
+    section = assigned_section(@course, @course_units.first)
+    student = create(:student, name: 'Chani', family_name: 'Kynes')
+    create(:follower, section: section, student_user: student, user: @teacher)
+
+    sign_in @teacher
+    get :show
+
+    student_data = section_data_for(section)[:students].find {|s| s[:id] == student.id}
+    assert_equal 'Chani', student_data[:name]
+    assert_equal 'Kynes', student_data[:familyName]
+  end
+
   test 'does not cache the page' do
     sign_in @teacher
     get :show

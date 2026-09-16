@@ -27,19 +27,26 @@ class ExportStudentDataController < ApplicationController
     end
   end
 
-  # pluck minimal user info instead of the full user summary
+  # family_name is a serialized_attrs field stored in the properties blob, not
+  # a real column, so it needs a real User to read through the accessor
+  # instead of a plain pluck. Still select only the minimal columns instead of
+  # the full user summary.
   private def students_by_section_id(section_ids)
     return {} if section_ids.empty?
 
-    User.joins(:followeds).
+    students = User.
+      select('users.id, users.username, users.name, users.properties, followers.section_id AS export_section_id').
+      joins(:followeds).
       where(followers: {section_id: section_ids, deleted_at: nil}).
       order('users.name').
-      pluck('followers.section_id', 'users.id', 'users.username', 'users.name').
-      uniq.
-      group_by(&:first).
-      transform_values do |rows|
-        rows.map {|(_, id, username, name)| {id: id, username: username, name: name}}
+      to_a.
+      uniq {|student| [student.export_section_id, student.id]}
+
+    students.group_by(&:export_section_id).transform_values do |rows|
+      rows.map do |student|
+        {id: student.id, username: student.username, name: student.name, familyName: student.family_name}
       end
+    end
   end
 
   # Returns [unit_group, units]. A section assigned a course has both course_id
