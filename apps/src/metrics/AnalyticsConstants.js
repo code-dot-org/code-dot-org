@@ -202,6 +202,7 @@ const EVENTS = {
     'Section New Progress All Student Rows Collapsed',
   PROGRESS_V2_DOWNLOAD_LEVEL_CSV: 'Section New Progress Download Level CSV',
   PROGRESS_V2_DOWNLOAD_LESSON_CSV: 'Section New Progress Download Lesson CSV',
+  PROGRESS_V2_RESET_PROGRESS: 'Section New Progress Reset Progress',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
