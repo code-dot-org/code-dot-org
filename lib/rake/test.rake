@@ -147,7 +147,9 @@ namespace :test do
   timed_task_with_logging playwright_eyes: :playwright_install do
     env = dtt_playwright_eyes_env
     if env.empty? && ENV['VISUAL_PROVIDER'].blank?
-      ChatClient.log 'Playwright Eyes e2e tests: skipped, no Applitools key.'
+      # Into the rollup too, or ui_all reports a skipped suite as passed.
+      PLAYWRIGHT_ROLLUP[:eyes] = "🟡 #{PLAYWRIGHT_SUITES[:eyes]} (non-blocking): skipped, no Applitools key."
+      ChatClient.log PLAYWRIGHT_ROLLUP[:eyes]
       next
     end
     secrets = env.empty? ? {} : {'APPLITOOLS_API_KEY' => CDO.applitools_eyes_api_key}
@@ -631,13 +633,14 @@ PLAYWRIGHT_UI_SUITES = {playwright_ui: :functional, playwright_eyes: :eyes}.free
 PLAYWRIGHT_ROLLUP = {}
 
 # Empty without the key. The key itself travels as a secret, not in here. The
-# -dtt suffix keeps this batch apart from the GitHub Actions run of the same
-# commit until the two are deliberately merged into one batch.
+# batch id is the commit, as on GitHub Actions, so both Playwright Eyes runs of
+# a deploy share one batch; Applitools documents that as the way to aggregate:
+# https://applitools.com/docs/eyes/concepts/best-practices/batching#associate-tests-with-a-common-batch
 def dtt_playwright_eyes_env
   return {} unless CDO.test_system? && CDO.applitools_eyes_api_key
   {
     'VISUAL_PROVIDER' => 'applitools',
-    'APPLITOOLS_BATCH_ID' => "#{RakeUtils.git_revision}-dtt",
+    'APPLITOOLS_BATCH_ID' => RakeUtils.git_revision,
     'APPLITOOLS_BATCH_NAME' => 'DTT Playwright Visual Diff Tests',
     'APPLITOOLS_BRANCH' => GitUtils.current_branch,
   }
@@ -691,18 +694,27 @@ def run_playwright_suite(suite, env: {}, env_secrets: {})
 
   pass_fail_line = playwright_pass_fail_summary(summary, duration)
   qualifier = suite == :eyes ? ' (non-blocking)' : ''
+  # Yellow: the suite failed and the build did not.
+  glyph, color =
+    if passed
+      ['✅', 'green']
+    elsif suite == :eyes
+      ['🟡', 'yellow']
+    else
+      ['❌', 'red']
+    end
 
-  rollup = "#{passed ? '✅' : '❌'} #{label}#{qualifier}: #{pass_fail_line}"
+  rollup = "#{glyph} #{label}#{qualifier}: #{pass_fail_line}"
   rollup += %( <a href="#{report_url}">HTML report</a>.) if report_url
   rollup += %( <a href="#{batch_url}">Visual diffs</a>.) if batch_url
   PLAYWRIGHT_ROLLUP[suite] = rollup
 
-  status = passed ? '<b>✅ PASSED</b>' : "<b>❌ FAILED</b>#{qualifier}"
+  status = passed ? '<b>✅ PASSED</b>' : "<b>#{glyph} FAILED</b>#{qualifier}"
   report = "#{label} e2e tests for <b>dashboard</b>: #{status}\n"
   report += pass_fail_line
   report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
   report += %(\nVisual diffs can be found <a href="#{batch_url}">here</a>.) if batch_url && !passed
-  ChatClient.log report, color: (passed ? 'green' : 'red')
+  ChatClient.log report, color: color
 
   passed
 end
