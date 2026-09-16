@@ -176,33 +176,6 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_spriteSayTime",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "TEXT1": {
-                  "shadow": {
-                    "type": "text",
-                    "fields": {
-                      "TEXT": "Hello!"
-                    }
-                  }
-                },
-                "NUM": {
-                  "shadow": {
-                    "type": "math_number",
-                    "fields": {
-                      "NUM": 4
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
               "type": "gamelab_spriteClicked",
               "inputs": {
                 "SPRITE": {
