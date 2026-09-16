@@ -9,7 +9,6 @@ import {AdaptiveLevelProperties} from './types';
 
 import moduleStyles from './adaptiveView.module.scss';
 
-// Placeholder Adaptive view
 const AdaptiveView: React.FunctionComponent<
   LabProps<AdaptiveLevelProperties>
 > = ({levelProperties}) => {
