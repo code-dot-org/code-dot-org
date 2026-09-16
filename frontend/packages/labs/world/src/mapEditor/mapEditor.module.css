@@ -374,3 +374,25 @@
   grid-column: 1 / -1;
   color: var(--text-neutral-secondary, #5b5f66);
 }
+
+/* A list in the inspector — a set of references, or a list of words or
+   numbers: one row per item with its own Remove, and an Add below. */
+.inspectorSetList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inspectorSetItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.inspectorSetItem > :first-child {
+  flex: 1;
+  min-width: 0;
+}

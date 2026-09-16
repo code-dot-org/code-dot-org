@@ -279,7 +279,14 @@ export interface PropertySchema {
     | 'vector'
     | 'point'
     | 'actor'
-    | 'actors';
+    | 'actors'
+    /**
+     * A list of plain values (specs/LISTS.md), stored as an array. The
+     * inspector edits one a row at a time, with a way to add and remove
+     * rows — a Dropdown's `choices` is the first that wanted it.
+     */
+    | 'numbers'
+    | 'words';
   /** Default value; a vector/point is `{x, y}`. */
   default: unknown;
   /**

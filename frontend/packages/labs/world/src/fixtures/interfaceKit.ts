@@ -139,10 +139,12 @@ const INTERFACE_MAP = JSON.stringify(
       place('actors/slider', 'Volume', 0, 124, {
         positional: {parent: 'Dialog'},
       }),
-      // One answer out of several. Its choices are set in its file; the map
-      // editor cannot author a list yet.
+      // One answer out of several, with the choices on the placement: a
+      // list of words the inspector edits a row at a time.
       place('actors/dropdown', 'Size', 0, 152, {
         positional: {parent: 'Dialog'},
+        Dropdown: {choices: ['SMALL', 'MEDIUM', 'LARGE']},
+        Label: {text: 'SMALL'},
       }),
       // …and the box that says the answer, a letter at a time. At the foot
       // of the screen, where a phone keeps its replies, and nobody's child.

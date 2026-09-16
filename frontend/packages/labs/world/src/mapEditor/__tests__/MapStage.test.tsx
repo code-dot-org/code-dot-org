@@ -440,6 +440,56 @@ describe('what it draws', () => {
     ).toEqual(['b']);
   });
 
+  it('edits a list of words in the inspector: add, type, remove', () => {
+    // A Dropdown's `choices` is the first list a placement wanted to hold
+    // (specs/LISTS.md). One field per row, with a way to add and remove.
+    const map = doc();
+    map.actors = [
+      {
+        type: 'actors/menu',
+        id: 'm',
+        properties: {
+          positional: {position: {x: 48, y: 144}},
+          Dropdown: {choices: ['ONE']},
+        },
+      },
+    ];
+    const schemas: Record<string, ActorSchema> = {
+      'actors/menu': [
+        {
+          trait: 'actors/menu',
+          traitName: 'Dropdown',
+          props: [
+            {
+              ownerId: 'Dropdown',
+              propId: 'choices',
+              name: 'choices',
+              type: 'words',
+              default: [],
+            },
+          ],
+        },
+      ],
+    };
+    const {canvas, getByLabelText, written} = mount(map, {schemas});
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 144}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 144}));
+
+    const choices = () =>
+      written().actors[0].properties?.Dropdown?.choices as unknown[];
+
+    fireEvent.click(getByLabelText('Add to choices'));
+    expect(choices()).toEqual(['ONE', '']);
+
+    const second = getByLabelText('Choices 2') as HTMLInputElement;
+    fireEvent.change(second, {target: {value: 'TWO'}});
+    fireEvent.blur(second);
+    expect(choices()).toEqual(['ONE', 'TWO']);
+
+    fireEvent.click(getByLabelText('Remove choices 1'));
+    expect(choices()).toEqual(['TWO']);
+  });
+
   it('draws nothing of the sort with nothing selected', () => {
     const {map, schemas} = withTargets();
     mount(map, {schemas});

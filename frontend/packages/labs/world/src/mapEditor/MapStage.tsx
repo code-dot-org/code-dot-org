@@ -404,6 +404,12 @@ export const MapStage = ({
   const valueOf = (actor: Placement, prop: PropertySchema): unknown =>
     propValue(actor, prop.ownerId, prop.propId) ?? prop.default;
 
+  /** A list property's rows, as the inspector draws them. */
+  const listItems = (value: unknown): unknown[] =>
+    Array.isArray(value) ? value : [];
+  const itemKey = (prop: PropertySchema, index: number) =>
+    `${fieldKey(prop)}.${index}`;
+
   // Seed every field draft from the selected actor's schema + current values.
   const seedDraft = (actor: Placement | null) => {
     if (!actor) {
@@ -418,6 +424,12 @@ export const MapStage = ({
           const v = asVec(value) ?? {x: 0, y: 0};
           next[fieldKey(prop, 'x')] = String(v.x);
           next[fieldKey(prop, 'y')] = String(v.y);
+        } else if (prop.type === 'words' || prop.type === 'numbers') {
+          // One draft per row, so a row being typed into is not clobbered by
+          // its neighbours being added or removed.
+          listItems(value).forEach((item, index) => {
+            next[itemKey(prop, index)] = String(item ?? '');
+          });
         } else if (prop.type !== 'boolean') {
           next[fieldKey(prop)] = String(value ?? '');
         }
@@ -466,6 +478,61 @@ export const MapStage = ({
       x: axis === 'x' ? n : cur.x,
       y: axis === 'y' ? n : cur.y,
     });
+  };
+
+  // A LIST OF WORDS OR NUMBERS (specs/LISTS.md), a row at a time. Editing a
+  // row is a field edit and commits on blur like one; adding and removing
+  // rows are discrete and commit at once, the way a checkbox does.
+  const editItem = (prop: PropertySchema, index: number, text: string) => {
+    setDraft(d => ({...d, [itemKey(prop, index)]: text}));
+    if (!selectedActor) {
+      return;
+    }
+    const items = [...listItems(valueOf(selectedActor, prop))];
+    if (prop.type === 'numbers') {
+      const n = Number(text);
+      if (text.trim() === '' || !Number.isFinite(n)) {
+        return;
+      }
+      items[index] = n;
+    } else {
+      items[index] = text;
+    }
+    setProperty(selectedActor.id, prop.ownerId, prop.propId, items);
+  };
+  const setItems = (prop: PropertySchema, items: unknown[]) => {
+    if (!selectedActor) {
+      return;
+    }
+    const next = {
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(a =>
+        a.id === selectedActor.id
+          ? withProperty(a, prop.ownerId, prop.propId, items)
+          : a,
+      ),
+    };
+    mapRef.current = next;
+    commit(next);
+    seedDraft(next.actors.find(a => a.id === selectedActor.id) ?? null);
+  };
+  const addItem = (prop: PropertySchema) => {
+    if (!selectedActor) {
+      return;
+    }
+    setItems(prop, [
+      ...listItems(valueOf(selectedActor, prop)),
+      prop.type === 'numbers' ? 0 : '',
+    ]);
+  };
+  const removeItem = (prop: PropertySchema, index: number) => {
+    if (!selectedActor) {
+      return;
+    }
+    setItems(
+      prop,
+      listItems(valueOf(selectedActor, prop)).filter((_, at) => at !== index),
+    );
   };
 
   // Toggle a boolean — a discrete action, so commit immediately.
@@ -696,6 +763,57 @@ export const MapStage = ({
             }
           >
             {pickingThis ? 'Click an actor…' : 'Add'}
+          </Button>
+        </div>
+      );
+    }
+    if (prop.type === 'words' || prop.type === 'numbers') {
+      const items = selectedActor
+        ? listItems(valueOf(selectedActor, prop))
+        : [];
+      return (
+        <div key={fieldKey(prop)} className={styles.inspectorPick}>
+          <Typography variant="body3" component="span">
+            {capitalize(prop.name)}
+          </Typography>
+          {items.length > 0 && (
+            <ul className={styles.inspectorSetList}>
+              {items.map((_, index) => (
+                <li key={index} className={styles.inspectorSetItem}>
+                  <TextField
+                    name={`prop-${itemKey(prop, index)}`}
+                    label={`${capitalize(prop.name)} ${index + 1}`}
+                    inputType={prop.type === 'numbers' ? 'number' : 'text'}
+                    size="s"
+                    value={draft[itemKey(prop, index)] ?? ''}
+                    disabled={isReadOnly}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                      editItem(prop, index, event.target.value)
+                    }
+                    onBlur={commitEdit}
+                    onKeyDown={blurOnEnter}
+                  />
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    disabled={isReadOnly}
+                    aria-label={`Remove ${prop.name} ${index + 1}`}
+                    onClick={() => removeItem(prop, index)}
+                  >
+                    Remove
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          )}
+          <Button
+            variant="text"
+            size="extraSmall"
+            disabled={isReadOnly}
+            aria-label={`Add to ${prop.name}`}
+            onClick={() => addItem(prop)}
+          >
+            Add
           </Button>
         </div>
       );

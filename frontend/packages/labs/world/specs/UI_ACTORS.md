@@ -1079,10 +1079,12 @@ button ⟨left⟩ is down`, letting go when it comes up. There is no drag
    and shifts the actor down by half the growth so the face stays put — and
    a press anywhere else closes it, since the Mouse rule announces a press
    to everything before it announces a click to what is under the pointer.
-   Enter and the arrows do the same from the keyboard. Two things it leaves
-   open: the map editor cannot author a list, so a placement's choices are
-   set in blocks; and the open menu's rows are read by the drawing reader as
-   incomplete, so the editor shows the sandbox's picture for an open one.
+   Enter and the arrows do the same from the keyboard. The map editor edits
+   a placement's `choices` a row at a time, with Add and Remove — the first
+   list a placement wanted to hold, and the inspector's list editor came with
+   it (`MapStage`). What it leaves open: the open menu's rows are read by the
+   drawing reader as incomplete, so the editor shows the sandbox's picture
+   for an open one.
 6. **Text Area.** Several lines to type in. `draw paragraph` makes the drawing
    free, so what is left is the caret: an index that has to become a line and
    a column over WRAPPED text, click-to-caret in two dimensions where the Text

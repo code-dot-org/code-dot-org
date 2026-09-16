@@ -98,7 +98,9 @@ storage:
 A list of numbers, words or vectors is plain data with no cycle in it. It
 stringifies, so it is in the snapshot; it compares, so a reload patches it live;
 and it is authorable as data. That is what makes a high-score table survive a
-rebuild and History's tape one property instead of eight.
+rebuild and History's tape one property instead of eight — and what lets the
+map editor's inspector edit one a row at a time, with Add and Remove, which
+a Dropdown's `choices` was the first placement to want (`MapStage`).
 
 ## The blocks
 
