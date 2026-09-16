@@ -30,6 +30,7 @@ export {
   addTo,
   addToFront,
   items,
+  itemOf,
   lastOf,
   listHas,
   takeFirst,

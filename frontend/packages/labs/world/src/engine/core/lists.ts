@@ -225,3 +225,22 @@ function sameValue(one: unknown, other: unknown): boolean {
  */
 export const lastOf = (list: unknown): unknown =>
   items(list)[items(list).length - 1];
+
+/**
+ * The `n`th thing in a list, counting from ONE, or nothing.
+ *
+ * The index `last of` deliberately did without, until a use decided what
+ * "past the end" means (specs/LISTS.md). The Dropdown decided it: a menu of
+ * five rows asked for row seven has nothing there, and nothing is what it
+ * says — the same answer an empty list gives `last of`, and one that reads
+ * as an empty word in a sentence (`textValue.text`) rather than as a guess.
+ * One-based, to agree with the cursor a script is read by and with Blockly's
+ * own convention; a fraction is rounded down, so a computed row lands on the
+ * row it is in.
+ */
+export const itemOf = (list: unknown, n: unknown): unknown => {
+  const index = Math.floor(Number(n));
+  return Number.isFinite(index) && index >= 1
+    ? items(list)[index - 1]
+    : undefined;
+};

@@ -8,7 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {ActorBuilder, RuleBuilder, Vector, WorldBuilder} from '..';
+import {ActorBuilder, itemOf, RuleBuilder, Vector, WorldBuilder} from '..';
 
 /** A rule with one list property of each shape, world- and actor-scoped. */
 const listRule = () => {
@@ -95,5 +95,18 @@ describe('a list property', () => {
 
     expect(snapshot.world['tally.scores']).toEqual([7, 8]);
     expect(() => JSON.stringify(snapshot)).not.toThrow();
+  });
+});
+
+describe('item n of', () => {
+  it('counts from one, rounds a fraction down, and answers nothing past the end', () => {
+    const lines = ['one', 'two', 'three'];
+    expect(itemOf(lines, 1)).toBe('one');
+    expect(itemOf(lines, 3)).toBe('three');
+    expect(itemOf(lines, 2.9)).toBe('two');
+    expect(itemOf(lines, 4)).toBeUndefined();
+    expect(itemOf(lines, 0)).toBeUndefined();
+    expect(itemOf(lines, -1)).toBeUndefined();
+    expect(itemOf('not a list', 1)).toBeUndefined();
   });
 });

@@ -220,24 +220,19 @@ of` gave it a reason.
    grants the category — eleven blocks that are one idea, where the Actor drawer
    is forty-two that are not — and its lesson is the next step.
 
-3. **The index.** `item ⟨n⟩ of ⟨list⟩`, one-based — STILL held back, and now
-   for a better reason than caution. It was expected to be forced by step 5, and
-   step 5 came and went: History wanted a stack, which is `add … to` and `take
-the last off` and `last of`, and Conversation wants no list at all.
+3. ✅ **The index.** `item ⟨n⟩ of ⟨list⟩`, one-based, and the use that
+   forced it was not a lesson but a CONTROL: a Dropdown draws its choices as
+   rows and answers a click with the row it landed on, which is "the third
+   word" said two ways (`actors/stock/dropdown`). Held back until then for
+   the discipline the actor lists kept — `ordered by` arrived only when
+   `take ⟨3⟩ of` gave it a reason.
 
-   So nothing in the library indexes a list, and the discipline the actor lists
-   kept applies — `ordered by` arrived only when `take ⟨3⟩ of` gave it a reason.
-   What would give this one a reason is a LESSON: a script addressed by its
-   cursor (`say ⟨item ⟨line⟩ of ⟨lines⟩⟩` in place of an `if` per line) would
-   force it, and that is a teaching decision rather than a code one — `story/
-script` is about the cursor today, and Story does not pass through the tile
-   that grants the Lists drawer.
-
-   When it is built, the question to answer first is what "past the end" is.
-   The candidates are nothing (an empty word: quiet, and quietly odd in a
-   number socket), the nearest one there is (never wrong-looking, silently
-   wrong), and a zero of a type the block cannot know. The motivating use will
-   decide it, which is why it has not been decided here.
+   PAST THE END IS NOTHING. Of the three candidates — nothing, the nearest
+   one, a zero of a type the block cannot know — the menu decided it: a row
+   asked for that is not there has nothing in it, which is what `last of` an
+   empty list already answers, and `as text` now says an empty word for
+   nothing rather than "undefined" (`textValue.text`). A fraction rounds
+   down, so a row worked out from a pointer lands on the row it is in.
 
 4. ✅ **A lesson.** `memory/lists` — three notes made by three stacks of blocks
    that know nothing about each other, and one list and one loop that make the

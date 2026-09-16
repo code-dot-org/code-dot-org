@@ -76,6 +76,22 @@ describe('emptying a list', () => {
   });
 });
 
+describe('reading one item', () => {
+  it('asks the engine, counting from one', () => {
+    const [code] = codeOf(
+      'world_list_item',
+      {},
+      {N: 'row', LIST: 'choices'},
+    ) as [string, number];
+    expect(code).toBe('WorldLab.itemOf(choices, row)');
+  });
+
+  it('reports whatever the list holds, as `last of` does', () => {
+    expect(blockOf('world_list_item').output).toBeNull();
+    expect(blockOf('world_list_item').message0).toBe('item %1 of %2');
+  });
+});
+
 describe('asking what a list holds', () => {
   it('compares by value, which `includes` does not for places', () => {
     const [code] = codeOf(
@@ -158,6 +174,9 @@ describe('the Lists drawer', () => {
       // The end a stack is read from — and the only reading there is, because
       // an index is a decision about "past the end" and waits for a use.
       'world_list_last',
+      // …and the one place in it, which waited for a use to say what "past
+      // the end" means: the Dropdown said nothing (`core/lists.itemOf`).
+      'world_list_item',
       'world_for_each_number',
       'world_for_each_word',
       'world_for_each_place',

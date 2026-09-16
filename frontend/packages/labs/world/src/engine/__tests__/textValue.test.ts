@@ -19,6 +19,13 @@ describe('a value said as words', () => {
     expect(text([['a', 'b'], ['c']])).toBe('a b c');
   });
 
+  it('says nothing for nothing', () => {
+    // What `last of` an empty list and `item ⟨n⟩ of` past the end answer
+    // with: an empty word in the sentence, not "undefined".
+    expect(text(undefined)).toBe('');
+    expect(text(null)).toBe('');
+  });
+
   it('leaves everything else to String', () => {
     expect(text(7)).toBe('7');
     expect(text(true)).toBe('true');

@@ -26,5 +26,11 @@
  * flattening it is the least surprising of the wrong answers.
  */
 export function text(value: unknown): string {
+  // NOTHING IS AN EMPTY WORD. `last of` an empty list and `item ⟨n⟩ of` past
+  // the end answer with nothing, and a sentence with nothing in it is a
+  // sentence, not the word "undefined".
+  if (value === undefined || value === null) {
+    return '';
+  }
   return Array.isArray(value) ? value.map(text).join(' ') : String(value);
 }

@@ -3298,6 +3298,36 @@ const worldListLast = defineBlock({
   },
 });
 
+const worldListItem = defineBlock({
+  type: 'world_list_item',
+  message0: 'item %1 of %2',
+  args0: [
+    {type: 'input_value', name: 'N', check: 'Number'},
+    {type: 'input_value', name: 'LIST', check: LIST_CHECK},
+  ],
+  inputsInline: true,
+  // Whatever the list holds, as `last of` reports.
+  output: null,
+  extensions: [valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'One thing from a list, by its place — item 1 is the first. Past the end ' +
+    'there is nothing, and this says so.',
+  generator: {
+    javascript(block, generator) {
+      const n = generator.valueToCode(block, 'N', Order.NONE) || '1';
+      const list = generator.valueToCode(block, 'LIST', Order.NONE) || '[]';
+      return [`WorldLab.itemOf(${list}, ${n})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+registerValueShadows('world_list_item', [
+  {name: 'N', shadow: {type: 'math_number', fields: {NUM: 1}}},
+]);
+
 const worldListHas = defineBlock({
   type: 'world_list_has',
   message0: '%1 has %2',
@@ -9678,6 +9708,7 @@ export const DOMAIN_BLOCKS = [
   worldListTakeFirst,
   worldListEmpty,
   worldListLast,
+  worldListItem,
   worldListHas,
   worldForEachNumber,
   worldLetNumber,
@@ -10259,6 +10290,7 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       // decision about what "past the end" means, and it waits for a use that
       // argues for one (specs/LISTS.md).
       'world_list_last',
+      'world_list_item',
       // …and a loop per kind of thing, beside the one that walks actors.
       'world_for_each_number',
       'world_for_each_word',
