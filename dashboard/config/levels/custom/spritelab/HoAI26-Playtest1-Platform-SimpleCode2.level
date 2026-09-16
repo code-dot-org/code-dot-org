@@ -7,6 +7,14 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "level_mode": {
+      "kind": "freeplay"
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -21,15 +29,6 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "HoAI26-Playtest1-Platform-Template",
-    "visible_tabs": [
-      "Code",
-      "Play",
-      "Images",
-      "World"
-    ],
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "guide_mode": "instructions",
     "long_instructions": "# Add your Background\r\n- Add the set background block to your program.",
     "toolbox_definition": {
       "contents": [
@@ -244,7 +243,6 @@
         "showContinue": true
       }
     ],
-    "locked_image_type": "background",
     "preload_asset_list": null,
     "encrypted_examples": [
 
