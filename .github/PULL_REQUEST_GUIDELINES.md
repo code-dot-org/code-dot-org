@@ -1,6 +1,6 @@
 # PR content
 ## PR length
-Large updates (i.e., anything over 500 lines of code) should be broken down into smaller PRs when possible to make them easier to review. AI tools can help split large PRs. Exceptions should be noted in the PR description so reviewers know what to focus on.
+Large updates (i.e., anything over 500 lines of code) should be broken down into smaller PRs when possible to make them easier to review. AI tools can help split large PRs. Exceptions (e.g., large data files) should be noted in the PR description so reviewers know what to focus on.
 
 ## Code quality
 - Code should not be over-engineered. It is the engineer's responsibility to weigh the cost of any added complexity against the real-world benefit.
