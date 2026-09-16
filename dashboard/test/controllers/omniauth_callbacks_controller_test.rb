@@ -627,6 +627,122 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.id, signed_in_user_id
   end
 
+  # One case per configured OmniAuth provider. The resolver itself is provider-agnostic
+  # -- it reads the auth hash the middleware leaves in the env -- but what auth_hash.uid
+  # holds by the time sign_in runs is not: ClassLink rewrites the uid, and Clever rewrites
+  # the stored option. Attribution compares those two, so each provider is pinned here.
+  test 'google_oauth2: attributes the sign_in to the google credential' do
+    user = create(:student, :google_sso_provider)
+    @request.env['omniauth.auth'] = generate_auth_user_hash \
+      provider: AuthenticationOption::GOOGLE,
+      uid: user.primary_contact_info.authentication_id
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(SignIn) do
+      get :google_oauth2
+    end
+
+    assert_sign_in_attributed_to user, user.primary_contact_info
+  end
+
+  test 'facebook: attributes the sign_in to the facebook credential' do
+    user = create(:teacher, :facebook_sso_provider)
+    @request.env['omniauth.auth'] = generate_auth_user_hash \
+      provider: AuthenticationOption::FACEBOOK,
+      uid: user.primary_contact_info.authentication_id,
+      email: user.email
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(SignIn) do
+      get :facebook
+    end
+
+    assert_sign_in_attributed_to user, user.primary_contact_info
+  end
+
+  # extract_microsoft_data rewrites auth.info before login runs, but never the uid.
+  test 'microsoft_v2_auth: attributes the sign_in to the microsoft credential' do
+    user = create(:teacher, :microsoft_v2_sso_provider)
+    @request.env['omniauth.auth'] = generate_auth_user_hash \
+      provider: AuthenticationOption::MICROSOFT,
+      uid: user.primary_contact_info.authentication_id,
+      email: user.email
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(SignIn) do
+      get :microsoft_v2_auth
+    end
+
+    assert_sign_in_attributed_to user, user.primary_contact_info
+  end
+
+  test 'clever: attributes the sign_in to the clever credential' do
+    user = create(:student, :clever_sso_provider)
+    @request.env['omniauth.auth'] = generate_auth_user_hash \
+      provider: AuthenticationOption::CLEVER,
+      uid: user.primary_contact_info.authentication_id
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(SignIn) do
+      get :clever
+    end
+
+    assert_sign_in_attributed_to user, user.primary_contact_info
+  end
+
+  # The legacy lookup finds the user by an old id and updates the option to the new uid.
+  # Attribution resolves only because that update lands before sign_in.
+  test 'clever: attributes the sign_in after the legacy id is migrated to the new uid' do
+    legacy_id = SecureRandom.alphanumeric(10)
+    user = create(:teacher, :with_clever_authentication_option)
+    option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
+    option.update!(authentication_id: legacy_id)
+
+    auth = generate_auth_user_hash provider: AuthenticationOption::CLEVER, uid: 'new-uid'
+    auth.extra[:raw_info][:canonical] = {data: {roles: {teacher: {legacy_id: legacy_id}}}}
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(SignIn) do
+      get :clever
+    end
+
+    assert_sign_in_attributed_to user, option
+  end
+
+  test 'classlink: attributes the sign_in to the v2 credential the uid is rewritten to' do
+    user = create(:teacher, :with_classlink_authentication_option)
+    option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLASSLINK)
+    option.update!(
+      authentication_id: "0001#{AuthenticationOption::Classlink::SEPARATOR}1234_5678-0000",
+      version: AuthenticationOption::Classlink::VERSION[:v2]
+    )
+    @request.env['omniauth.auth'] = generate_classlink_auth_hash
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(SignIn) do
+      get :classlink
+    end
+
+    assert_sign_in_attributed_to user, option
+  end
+
+  # A district without OneRoster sends no SourcedId, so the uid stays in the v1 format
+  # permanently. That population must attribute too, not just the rewritten one.
+  test 'classlink: attributes the sign_in for a district still on a v1 credential' do
+    user = create(:teacher, :with_classlink_authentication_option)
+    option = user.authentication_options.find_by(credential_type: AuthenticationOption::CLASSLINK)
+    option.update!(authentication_id: '987654321')
+    @request.env['omniauth.auth'] = generate_classlink_auth_hash(external_id: '')
+    @request.env['omniauth.params'] = {}
+
+    assert_creates(SignIn) do
+      get :classlink
+    end
+
+    assert_sign_in_attributed_to user, option
+  end
+
   test 'google_oauth2: updates tokens when unmigrated user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create(:teacher, :google_sso_provider, :demigrated)
@@ -2320,6 +2436,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   # info's district_id and external_id. external_id is ClassLink's SourcedId,
   # which is empty for districts that have not enabled OneRoster — pass
   # external_id: '' for that case.
+  private def assert_sign_in_attributed_to(user, authentication_option)
+    sign_in = SignIn.where(user_id: user.id).order(:id).last
+
+    assert_equal SignIn::CREDENTIAL, sign_in.event_type
+    assert_equal authentication_option.id, sign_in.authentication_option_id
+  end
+
   private def generate_classlink_auth_hash(uid: '987654321', district_id: '0001', external_id: '1234_5678-0000')
     auth = generate_auth_user_hash(provider: 'classlink', uid: uid)
     auth.info.district_id = district_id
