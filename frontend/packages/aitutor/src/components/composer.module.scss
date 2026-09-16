@@ -1,0 +1,46 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+.container {
+  background: var(--background-neutral-primary);
+  padding: 0.625rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: outline 0.2s ease-in;
+  cursor: text;
+
+  @include mixins.border-styles($border-color: var(--borders-neutral-strong));
+
+  // On the container, not the textarea: the outline belongs around the whole
+  // control, and a textarea cannot be told to draw one there.
+  &.focused {
+    @include mixins.focus-styles;
+  }
+}
+
+.textArea {
+  min-height: 22px;
+  max-height: 250px;
+  box-sizing: border-box;
+  resize: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+
+  &:disabled {
+    opacity: 0.5;
+    background: none;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}

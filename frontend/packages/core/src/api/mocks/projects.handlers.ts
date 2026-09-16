@@ -1,6 +1,7 @@
 import {http, HttpResponse} from 'msw';
 
 import {getActiveScenario} from './scenario';
+import {commentOnVersion} from './sources.handlers';
 import {writeResource} from './scenarioStore';
 
 function activeChannelId(): string {
@@ -42,8 +43,21 @@ export const projectsHandlers = [
   http.get('*/projects/level/:levelId/user/:userId', channelForLevel),
   http.get('*/projects/level/:levelId', channelForLevel),
 
-  // POST /project_commits
-  http.post('*/project_commits', () => HttpResponse.json({})),
+  // POST /project_commits — the NAME on a named version.
+  //
+  // Returned `{}` and recorded nothing, so saving "before I broke it" produced
+  // a version whose row in the panel was a bare timestamp. The comment is the
+  // whole reason a student presses that button.
+  http.post('*/project_commits', async ({request}) => {
+    const body = (await request.json()) as {
+      version_id?: string;
+      comment?: string;
+    };
+    if (body?.version_id && body?.comment) {
+      commentOnVersion(body.version_id, body.comment);
+    }
+    return HttpResponse.json({});
+  }),
 
   // GET /projects/:channelId/extra_links
   http.get('*/projects/:channelId/extra_links', () =>

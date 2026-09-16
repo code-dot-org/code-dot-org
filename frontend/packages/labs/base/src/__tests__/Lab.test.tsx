@@ -1,9 +1,21 @@
-import {render, screen} from '@testing-library/react';
+import type {RenderOptions} from '@testing-library/react';
+import {render as renderComponent, screen} from '@testing-library/react';
+import type {ReactElement} from 'react';
 import {describe, expect, it, vi} from 'vitest';
+
+import {RootStateProvider} from '@code-dot-org/core/redux';
 
 import Lab from '../components/Lab';
 import {useLevelProperties} from '../contexts/LevelPropertiesContext';
 import type {LevelPropertiesMap} from '../types';
+
+// This Lab dispatches to the shared store (it sets the current level id), so it
+// only renders inside the host's store provider — Studio supplies it via
+// LabProviders. Upstream's leaner shell had no such requirement; the provider
+// came with folding the fuller implementation in behind /host. Passing it as
+// `wrapper` means rerender() keeps it too.
+const render = (ui: ReactElement, options?: RenderOptions) =>
+  renderComponent(ui, {wrapper: RootStateProvider, ...options});
 
 // Minimal stub — the shell threads this through context without inspecting it.
 const LEVEL_MAP = {
