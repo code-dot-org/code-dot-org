@@ -2558,6 +2558,8 @@ export const TILES: readonly Tile[] = [
       {kind: 'actor', id: 'textInput'},
       // …and the one that takes a number: a bar the pointer drags.
       {kind: 'actor', id: 'slider'},
+      // …and the one that takes a paragraph.
+      {kind: 'actor', id: 'textArea'},
     ],
     offers: [
       {kind: 'block', type: 'world_this_actor'},

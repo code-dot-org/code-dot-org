@@ -22,6 +22,7 @@ import font from '@fortawesome/fontawesome-free/svgs/solid/font.svg?raw';
 import handPointer from '@fortawesome/fontawesome-free/svgs/solid/hand-pointer.svg?raw';
 import heartPulse from '@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg?raw';
 import iCursor from '@fortawesome/fontawesome-free/svgs/solid/i-cursor.svg?raw';
+import paragraph from '@fortawesome/fontawesome-free/svgs/solid/paragraph.svg?raw';
 import sliders from '@fortawesome/fontawesome-free/svgs/solid/sliders.svg?raw';
 import squareCaretDown from '@fortawesome/fontawesome-free/svgs/solid/square-caret-down.svg?raw';
 import toggleOn from '@fortawesome/fontawesome-free/svgs/solid/toggle-on.svg?raw';
@@ -81,6 +82,7 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   health: tile(heartPulse),
   panel: tile(windowMaximize),
   input: tile(iCursor),
+  paragraph: tile(paragraph),
 };
 
 /** The dropdown's rows, in the order an interface is usually built. */

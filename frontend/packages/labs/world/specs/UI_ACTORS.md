@@ -166,7 +166,7 @@ a rule pulls its dependencies.
 | Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                            |
 | Speech Box   | a Label that lets its line out a letter at a time | DONE                                        |
 | Text Input   | one line you can type in                          | BUILT, on the shelf (`story/form`)          |
-| Text Area    | several lines you can type in                     | PROPOSED, last — see "The rest"             |
+| Text Area    | several lines you can type in                     | BUILT — Enter is a line; no wrap, no scroll |
 | Dropdown     | a list of words, one of them chosen               | BUILT — `choices`, `chosen`, keyboard too   |
 | Panel        | a background behind a group                       | BUILT — a Label with no words, and children |
 | Toggle       | a Button that is on or off                        | BUILT — `on`, `turned on`, `turned off`     |
@@ -1085,11 +1085,17 @@ button ⟨left⟩ is down`, letting go when it comes up. There is no drag
    it (`MapStage`). What it leaves open: the open menu's rows are read by the
    drawing reader as incomplete, so the editor shows the sandbox's picture
    for an open one.
-6. **Text Area.** Several lines to type in. `draw paragraph` makes the drawing
-   free, so what is left is the caret: an index that has to become a line and
-   a column over WRAPPED text, click-to-caret in two dimensions where the Text
-   Input measures in one, and the words sliding to keep the caret in the box
-   vertically as well. Real work for a control a game rarely wants. Last.
+6. **Text Area — BUILT** (`actors/stock/textArea`). A Text Input with
+   lines, and a line is a newline in the words: Enter is the one key that
+   inserts something, `draw paragraph` breaks on it in a column of zero so
+   nothing else breaks, and the caret's line and column are counted from the
+   newlines before it with Blockly's own `count` and `find last`. Up and
+   down keep the column where the line above or below has room. Two things
+   the Text Input does that it does not: a click puts the caret at the end
+   rather than in the word, since which line was clicked is the prefix scan
+   over one line of several and a first cut that scans the wrong line is
+   worse; and nothing scrolls — long lines and long paragraphs are clipped.
+   Both are the next things to add.
 
 ### The second axis: stock interface MAPS
 

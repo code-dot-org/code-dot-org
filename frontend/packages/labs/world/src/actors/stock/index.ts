@@ -24,6 +24,7 @@ import {progressBarActor} from './progressBar';
 import {shotActor} from './shot';
 import {sliderActor} from './slider';
 import {speechBoxActor} from './speechBox';
+import {textAreaActor} from './textArea';
 import {textInputActor} from './textInput';
 import {toggleActor} from './toggle';
 
@@ -188,6 +189,17 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: ['Mouse', 'Tab Navigation', 'Input'],
     actors: ['label'],
     contents: dropdownActor,
+  },
+  {
+    id: 'textArea',
+    name: 'Text Area',
+    description:
+      'Several lines the player types into. Enter starts a new one, the arrows walk the caret up and down them, and the words break where Enter was pressed and nowhere else.',
+    // Input for what was typed and the keys that edit it, Mouse so a click
+    // can choose it, and Tab Navigation for the focus itself.
+    requires: ['Input', 'Mouse', 'Tab Navigation'],
+    actors: ['label'],
+    contents: textAreaActor,
   },
   {
     id: 'speechBox',
