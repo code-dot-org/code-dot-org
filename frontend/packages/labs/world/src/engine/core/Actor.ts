@@ -4,7 +4,15 @@
 // elected to respond to. Instances are produced from an ActorBuilder when a
 // world places them.
 
+import {all, LazyActors} from './actorValue';
 import {fnv1a} from './hash';
+import {
+  isDescendantOf,
+  isWorldTransformProperty,
+  parentingKeys,
+  toLocal,
+  worldTransformOf,
+} from './parenting';
 import {Trait} from './Trait';
 import {Traited} from './Traited';
 import type {TweenRun} from './tween';
@@ -16,6 +24,7 @@ import type {
   Property,
   Query,
 } from './types';
+import {Vector, type VectorLike} from './Vector';
 import type {World} from './World';
 
 /** The data an ActorBuilder hands the Actor constructor. */
@@ -101,8 +110,115 @@ export class Actor {
     this.appliedEffects = init.effects ? [...init.effects] : [];
   }
 
+  /**
+   * A property's value — through the parent, for the three that have a frame.
+   *
+   * `position`, `rotation` and `scale` on an actor that has a parent are
+   * stored in the parent's frame and answered in the world's, composed up the
+   * chain on every read (`core/parenting`). Every other property, and every
+   * property of an actor with no parent, is one map lookup as it always was.
+   */
   get<T>(property: Property<T>): T {
+    if (isWorldTransformProperty(property) && this.parent()) {
+      const world = worldTransformOf(this);
+      const keys = parentingKeys()!;
+      return (
+        property === keys.position
+          ? world.position
+          : property === keys.rotation
+            ? world.rotation
+            : world.scale
+      ) as T;
+    }
     return this.traited.get(property);
+  }
+
+  /** The value a property STORES: a child's local transform, unconverted. */
+  local<T>(property: Property<T>): T {
+    return this.traited.get(property);
+  }
+
+  /**
+   * Store a value as it is, in the frame the slot is in — a child's local
+   * position rather than a world one to convert. Watchers still run.
+   */
+  setLocal<T>(property: Property<T>, value: T): this {
+    return this.store(property, value);
+  }
+
+  /** The actor this one is carried by, or undefined for a root. */
+  parent(): Actor | undefined {
+    const keys = parentingKeys();
+    if (!keys || !this.hasProperty(keys.parent)) {
+      return undefined;
+    }
+    return this.traited.get(keys.parent)[0];
+  }
+
+  /** The actors this one carries, in placement order — asked of the world. */
+  children(): readonly Actor[] {
+    return this.world?.childrenOf(this) ?? [];
+  }
+
+  /**
+   * Give this actor a parent, or none (specs/PARENTING.md).
+   *
+   * KEEPS THE WORLD POSITION unless told otherwise: the local transform is
+   * worked out from where the actor already is, so nothing jumps. `keepWorld:
+   * false` is for a map, whose stored values are already local. A cycle — a
+   * parent that is this actor or is carried by it — is refused with a warning
+   * and nothing changes. The same parent again changes nothing and raises
+   * nothing.
+   *
+   * The child takes its parent's layer, and four events are raised in order:
+   * the old parent loses a child, this actor loses its parent, this actor
+   * gets a parent, the new parent gains a child.
+   *
+   * @returns whether the parent was set.
+   */
+  setParent(
+    parent: Actor | undefined,
+    {keepWorld = true}: {keepWorld?: boolean} = {},
+  ): boolean {
+    const keys = parentingKeys();
+    if (!keys || !this.hasProperty(keys.parent)) {
+      return false;
+    }
+    const previous = this.parent();
+    if (previous === parent) {
+      return true;
+    }
+    if (parent && isDescendantOf(parent, this)) {
+      console.warn(
+        `world-lab: “${this.id}” cannot have “${parent.id}” as its parent, ` +
+          'which is carried by it already. Nothing was changed.',
+      );
+      return false;
+    }
+    const world = keepWorld ? worldTransformOf(this) : undefined;
+    this.store(keys.parent, parent ? [parent] : []);
+    if (world) {
+      const local = parent ? toLocal(worldTransformOf(parent), world) : world;
+      this.store(keys.position, local.position);
+      this.store(keys.rotation, local.rotation);
+      this.store(keys.scale, local.scale);
+    }
+    if (parent?.layer !== undefined) {
+      this.layer = parent.layer;
+    }
+    const {events} = keys;
+    const raise = this.world;
+    if (raise) {
+      if (previous) {
+        raise.emit(events.lostChild, previous, this);
+        raise.emit(events.lostParent, this, previous);
+      }
+      if (parent) {
+        raise.emit(events.gotParent, this, parent);
+        raise.emit(events.gainedChild, parent, this);
+      }
+    }
+    return true;
   }
 
   /**
@@ -117,6 +233,43 @@ export class Actor {
    * hot path for — costs one field read.
    */
   set<T>(property: Property<T>, value: T): this {
+    const keys = parentingKeys();
+    if (keys) {
+      // A parent is set through `setParent`, which refuses a cycle, keeps
+      // the world position and raises the events; the property is the door
+      // a `set parent of` block comes through.
+      if (property === keys.parent) {
+        const given: unknown = value instanceof LazyActors ? all(value) : value;
+        const one: unknown = Array.isArray(given) ? given[0] : given;
+        this.setParent(one instanceof Actor ? one : undefined);
+        return this;
+      }
+      // A world value written to a child is stored in the parent's frame.
+      if (isWorldTransformProperty(property) && this.parent()) {
+        const parent = worldTransformOf(this.parent()!);
+        const world = worldTransformOf(this);
+        const next =
+          property === keys.position
+            ? {...world, position: Vector.from(value as VectorLike)}
+            : property === keys.rotation
+              ? {...world, rotation: value as number}
+              : {...world, scale: Vector.from(value as VectorLike)};
+        const local = toLocal(parent, next);
+        return this.store(
+          property,
+          (property === keys.position
+            ? local.position
+            : property === keys.rotation
+              ? local.rotation
+              : local.scale) as T,
+        );
+      }
+    }
+    return this.store(property, value);
+  }
+
+  /** The write itself: coerce, store, and tell the watchers. */
+  private store<T>(property: Property<T>, value: T): this {
     const watchers = property.watch;
     if (!watchers) {
       this.traited.set(property, value);

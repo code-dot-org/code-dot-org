@@ -75,6 +75,18 @@ describe('installSkewHook', () => {
     expect(original).toHaveBeenCalledWith(RENDERER, object, CONTEXT, MATRIX);
   });
 
+  it('hands the parent matrix to the caller, so a shear can compose onto it', () => {
+    // A Container gives each child its own matrix as the parent one; an
+    // actor in a shifted layer, or in its parent's group, must keep it.
+    const {object} = fakeObject();
+    const matrixFor = vi.fn(() => MATRIX);
+
+    installSkewHook(object, matrixFor);
+    object._renderSteps?.[0](RENDERER, object, CONTEXT, PARENT);
+
+    expect(matrixFor).toHaveBeenCalledWith(object, PARENT);
+  });
+
   it('passes the parent matrix through when the object is not skewed', () => {
     const {object, original} = fakeObject();
 

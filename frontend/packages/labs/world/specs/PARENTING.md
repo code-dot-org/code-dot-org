@@ -1,8 +1,9 @@
-# Parenting: one actor carried by another — PROPOSED
+# Parenting: one actor carried by another
 
-Nothing in this document is built. It records a design discussion and the
-implementation it settled on, so that the build is a decision already made
-rather than one made again at the keyboard.
+Step 1 of the plan at the end — the engine — is BUILT; the rest is proposed.
+The document records the design discussion and the implementation it settled
+on, so that each step is a decision already made rather than one made again
+at the keyboard, and "What the build found" records where the build differed.
 
 ## The problem
 
@@ -453,6 +454,64 @@ renderer needs them; the driver is handed both and uses each where it fits.
 as the value, raised in the moment the block ran, and by `loadMap` after its
 reference pass. A cascade is a removal and says so.
 
+## What the build found
+
+**Three properties, not seven.** The design listed `local position`, `local
+rotation` and `local scale` beside the three world ones. The build stores a
+child's local values IN THE SLOTS `position`, `rotation` and `scale` ALREADY
+HAVE, and derives the world values on read (`Actor.get`) and converts on
+write (`Actor.set`); `Actor.local` and `Actor.setLocal` reach the slot
+unconverted. For a root the slot is the world value, as it always was. What
+this buys is the map format for free — a placement's stored `position` is
+its local one when it has a parent, because the slot is — and one fewer
+place for a local and a world value to disagree. The `local …` blocks read
+and write the slot; they are not separate properties.
+
+**`parent` is one property, on the positional trait**, actor-typed, so it
+is already an inspector field on every placement and a reference the stage
+draws a line for. It arrives in the map editor before the editor can draw a
+child through it (step 3), which is the one thing to know between the two
+steps: a placement given a parent in the inspector is right in the game and
+drawn at its local place in the editor until then.
+
+**The arithmetic is two functions over `Vector`** (`core/parenting.compose`
+and `toLocal`), not a matrix class: per node the composition is a
+component-wise scale, a rotation and an addition, and the inverse the same
+three backwards, so there was nothing a six-number matrix would have said
+more plainly. The driver and the stage will import these two rather than a
+`Transform2D`; the name in the plan was a placeholder for them.
+
+**A division by a parent scaled to zero answers zero**, not infinity. A
+parent squashed flat has children at its centre, which is the only place a
+flat thing has.
+
+**The cascade is in `World.detach`**, which both removal paths pass through,
+so a parent removed by a handler mid-tick takes its children at the sweep
+and one removed between ticks takes them at once. A child already leaving is
+detached once.
+
+**A map's parent is set without converting** (`setParent(…, {keepWorld:
+false})`), since the stored values are already local and were stored before
+the parent could be known. The events are raised in that pass, after every
+entry's `is created`, as the design asked.
+
+**The driver's shear replaced the parent matrix, and now composes onto it.**
+The skew hook handed the renderer a shear matrix IN PLACE OF the parent
+matrix it was given — and a Container gives each child its own matrix as
+that parent, so a skewed actor in a camera-shifted layer was drawn without
+the shift. Nesting a child in its parent's group would have lost the whole
+parent transform the same way. The hook now hands the caller the parent
+matrix and the binding multiplies the shear onto it, which fixes the layer
+case as well (`driver/skew`, `PhaserBinding`).
+
+**A group is made on the first child that asks**, taking the parent's own
+image in as its first child and the parent's effects off the image and onto
+the group. A parent whose children all leave keeps its group; nothing is
+lost by an empty Container, and un-grouping would be a second path to test
+for no picture that differs. Phaser destroys a Container's children with it,
+which is what a cascade wants, and a child's own destroy afterwards is a
+no-op.
+
 ## Costs, and what is deliberately not solved
 
 - **The read is a walk.** Three levels deep at most in anything imagined, and
@@ -509,14 +568,15 @@ reference pass. A cascade is a removal and says so.
 
 ## Plan
 
-1. **The engine.** `Transform2D` in the core; the four properties on the
-   positional trait; the intercepted read and write on `Actor.get` and
-   `Actor.set` for a parented actor, with the composition above; cycle
-   refusal; removal cascade; the layer following the parent; the four events
-   and their order; `renderSnapshot` publishing parent and local transform.
-   The driver nests a Container per parent, reconciles the parent's opacity
-   and effects onto it, and places a child by its local transform. Tests for
-   the arithmetic and each check above.
+1. **The engine — DONE.** `compose` and `toLocal` in the core; `parent` on
+   the positional trait; the intercepted read and write on `Actor.get` and
+   `Actor.set` for a parented actor; cycle refusal; removal cascade; the
+   layer following the parent; the four events and their order;
+   `renderSnapshot` publishing parent and local transform
+   (`engine/__tests__/parenting`). The driver nests a Container per parent,
+   reconciles the parent's opacity and effects onto it, places a child by
+   its local transform, and composes a shear onto the parent matrix rather
+   than replacing it. The driver half is the one not checked headless.
 2. **The blocks.** `set parent`, `parent of`, `children of`, and the three
    local getters and setters, in the Space category. The palette guard covers
    them.

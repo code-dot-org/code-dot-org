@@ -11,6 +11,7 @@ import {
   type ActorValue,
   LazyActors,
 } from '../core/actorValue';
+import {registerParenting} from '../core/parenting';
 import {SPATIAL} from '../core/spatialKeys';
 import {advanceTween} from '../core/tween';
 import {Vector, type VectorLike} from '../core/Vector';
@@ -80,6 +81,49 @@ export const IntrinsicSizeProperty = PositionalTrait.addProperty(
   new Vector(0, 0),
   {readonly: true, name: 'intrinsic size'},
 );
+
+// ── Parenting ────────────────────────────────────────────────────────────────
+//
+// The actor this one is carried by (specs/PARENTING.md). A property every
+// actor has rather than a trait to elect, because a position relative to
+// something is part of what a position IS. With a parent set, this actor's
+// position, rotation and scale are stored in the parent's frame and read in
+// the world's; the derivation is the Actor's own (`core/parenting`), and this
+// rule only declares the slots and the events and hands them over.
+export const ParentProperty = PositionalTrait.addProperty<readonly Actor[]>(
+  SPATIAL.parent,
+  'actor',
+  [],
+  {name: 'parent'},
+);
+/** On the child, with the new parent as the value. */
+export const GotParentEvent = rule.addEvent(SPATIAL.gotParent, {
+  name: 'gets a parent',
+});
+/** On the child, with the parent it had as the value. */
+export const LostParentEvent = rule.addEvent(SPATIAL.lostParent, {
+  name: 'loses its parent',
+});
+/** On the parent, with the child as the value. */
+export const GainedChildEvent = rule.addEvent(SPATIAL.gainedChild, {
+  name: 'gains a child',
+});
+/** On the parent, with the child that left as the value. */
+export const LostChildEvent = rule.addEvent(SPATIAL.lostChild, {
+  name: 'loses a child',
+});
+registerParenting({
+  parent: ParentProperty,
+  position: PositionProperty,
+  rotation: RotationProperty,
+  scale: ScaleProperty,
+  events: {
+    gotParent: GotParentEvent,
+    lostParent: LostParentEvent,
+    gainedChild: GainedChildEvent,
+    lostChild: LostChildEvent,
+  },
+});
 
 export const MoveAction = PositionalTrait.addAction(
   'move',

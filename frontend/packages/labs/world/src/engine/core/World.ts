@@ -31,6 +31,7 @@ import {
   type SlotName,
 } from './Layer';
 import {asList, isListType} from './lists';
+import {parentingKeys} from './parenting';
 import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
 import {SpatialIndex} from './spatialIndex';
@@ -268,6 +269,20 @@ const slotValues = (layer: string, slot: LayerSlot): SlotValues => ({
  */
 export interface RenderState {
   actor: Actor;
+  /**
+   * The actor this one is carried by, and its transform IN THAT ACTOR'S
+   * FRAME, for a driver that nests (specs/PARENTING.md). `x`, `y`, `scaleX`,
+   * `scaleY` and `rotation` are the world values whether or not there is a
+   * parent, for everything that does not nest.
+   */
+  parent?: Actor;
+  local?: {
+    x: number;
+    y: number;
+    scaleX: number;
+    scaleY: number;
+    rotation: number;
+  };
   x: number;
   y: number;
   scaleX: number;
@@ -1167,6 +1182,12 @@ export class World {
 
   /** Actually take it out: off the list, and no longer pointing at this world. */
   private detach(actor: Actor): void {
+    // Its children first: a parent's children are part of what it is, so
+    // they go with it and hear `is removed` themselves (specs/PARENTING.md).
+    // Nobody hears a loss — there is no actor left to have lost anything.
+    for (const child of this.childrenOf(actor)) {
+      this.detach(child);
+    }
     // …and the actor hears that it is going. Here rather than in
     // `removeActor`, because that has two paths — straight out, or added to
     // the set swept at the end of a tick — and this is the one moment both of
@@ -1190,6 +1211,15 @@ export class World {
     // be able to reach the world it used to be in, nor claim a layer in it.
     actor.world = undefined;
     actor.layer = undefined;
+  }
+
+  /**
+   * The actors carried by `actor`, in placement order — asked here rather
+   * than stored on the parent, so a `parent` set anywhere is the one answer
+   * (specs/PARENTING.md).
+   */
+  childrenOf(actor: Actor): Actor[] {
+    return this.actorList.filter(candidate => candidate.parent() === actor);
   }
 
   /** Whether an actor with `id` is already in this world. */
@@ -1633,9 +1663,19 @@ export class World {
         continue;
       }
       const target = placed.get(id);
-      if (target) {
-        actor.set(property, target as never);
+      if (!target) {
+        continue;
       }
+      // A placement's stored position is its LOCAL one when it has a parent
+      // (specs/PARENTING.md, "The map"), and it was stored before the parent
+      // could be known; so the parent is set WITHOUT converting, and the
+      // events a parent raises are raised here, after every entry's
+      // `is created`.
+      if (parentingKeys()?.parent === property) {
+        actor.setParent(target, {keepWorld: false});
+        continue;
+      }
+      actor.set(property, target as never);
     }
     return added;
   }
@@ -2669,8 +2709,27 @@ export class World {
       }
       const position = actor.get(positionProp);
       const scale = actor.get(scaleProp);
+      const parent = actor.parent();
+      const stored = parent
+        ? {
+            position: actor.local(positionProp),
+            scale: actor.local(scaleProp),
+          }
+        : undefined;
       states.push({
         actor,
+        ...(parent && stored
+          ? {
+              parent,
+              local: {
+                x: stored.position.x,
+                y: stored.position.y,
+                scaleX: stored.scale.x,
+                scaleY: stored.scale.y,
+                rotation: actor.local(rotationProp),
+              },
+            }
+          : {}),
         x: position.x,
         y: position.y,
         scaleX: scale.x,

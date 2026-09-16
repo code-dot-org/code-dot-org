@@ -71,9 +71,22 @@ export interface RenderStepInternals {
  *   it is not skewed — consulted per frame, so the caller may rebuild the matrix
  *   as freely as it likes
  */
+/**
+ * Wrap `object`'s WebGL render step so that `matrixFor` may hand the renderer
+ * a matrix in place of the parent one.
+ *
+ * `matrixFor` is given the parent matrix the renderer had — a Container
+ * passes its own to each child (`ContainerWebGLRenderer`) — so that a shear
+ * can be COMPOSED onto it rather than replace it: a skewed actor inside a
+ * shifted layer, or inside its parent's group (specs/PARENTING.md), has to
+ * keep the shift. Answering undefined passes the parent matrix through.
+ */
 export function installSkewHook<T extends RenderStepInternals>(
   object: T,
-  matrixFor: (object: T) => TransformMatrix | undefined,
+  matrixFor: (
+    object: T,
+    parentMatrix?: TransformMatrix,
+  ) => TransformMatrix | undefined,
 ): void {
   const original = object.renderWebGL;
   const hook: WebGLRenderHook = (
@@ -88,7 +101,7 @@ export function installSkewHook<T extends RenderStepInternals>(
       renderer,
       src,
       drawingContext,
-      matrixFor(object) ?? parentMatrix,
+      matrixFor(object, parentMatrix) ?? parentMatrix,
       ...rest,
     );
   };

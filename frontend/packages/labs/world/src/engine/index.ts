@@ -10,6 +10,12 @@ export {ActorBuilder, FOUNDATION_TRAIT_IDS} from './builders/ActorBuilder';
 
 // Core value type and runtime classes.
 export {Vector, type VectorLike} from './core/Vector';
+export {
+  compose,
+  toLocal,
+  worldTransformOf,
+  type Transform,
+} from './core/parenting';
 // The scale between rates and positions, reachable from blocks as `pixels per
 // unit` — the rule that converts is authored (rules/stock/motion).
 export {PIXELS_PER_UNIT} from './core/units';

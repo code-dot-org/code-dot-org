@@ -20,6 +20,14 @@ export const SPATIAL = {
   // …and the other end of the same fact. Not raised by `clear world`, which
   // empties a world rather than removing anybody from it (`rules/spatial`).
   removed: 'removed',
+  // Parenting (specs/PARENTING.md): the actor this one is carried by, and the
+  // four events a change of parent raises. The transform properties above hold
+  // a child's LOCAL values; the world ones are derived (`core/parenting`).
+  parent: 'parent',
+  gotParent: 'gotParent',
+  lostParent: 'lostParent',
+  gainedChild: 'gainedChild',
+  lostChild: 'lostChild',
 } as const;
 
 // The Animation rule's member ids, shared with core so `World.renderSnapshot`

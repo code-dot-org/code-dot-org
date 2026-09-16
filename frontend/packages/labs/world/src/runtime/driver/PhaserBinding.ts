@@ -251,6 +251,15 @@ export class PhaserBinding {
     // from the page. Read and cleared by the focus handler below.
     let viaPointer = false;
     const objects = new Map<Actor, GameObject>();
+    /**
+     * One Container per actor that CARRIES others (specs/PARENTING.md): the
+     * actor's own image is its first child, at the origin, and each child's
+     * object follows, at the child's local transform. The Container carries
+     * the parent's world transform, its opacity and its effects, so those are
+     * the group's, exactly as a layer's are its Container's. An actor with no
+     * children is a plain object, as ever.
+     */
+    const groups = new Map<Actor, Phaser.GameObjects.Container>();
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.
     /**
@@ -413,6 +422,9 @@ export class PhaserBinding {
       Phaser.GameObjects.Components.TransformMatrix
     >();
     const shear = new Phaser.GameObjects.Components.TransformMatrix();
+    // The parent's matrix with the shear applied, rebuilt per render call and
+    // never held past it: one scratch matrix for every skewed object.
+    const composed = new Phaser.GameObjects.Components.TransformMatrix();
     // Build (or clear) an object's shear matrix M = T(c)·shear·T(-c) about its
     // drawn center c; the render hook feeds M to the object's WebGL renderer.
     const applySkew = (
@@ -460,8 +472,24 @@ export class PhaserBinding {
             );
       // Give either object kind a skew-aware render hook up front; it is a no-op
       // cost until the actor actually carries a non-zero skew.
-      installSkewHook(object as unknown as RenderStepInternals, () =>
-        skewMatrices.get(object),
+      installSkewHook(
+        object as unknown as RenderStepInternals,
+        (_hooked, parentMatrix) => {
+          const skew = skewMatrices.get(object);
+          if (!skew) {
+            return undefined;
+          }
+          if (!parentMatrix) {
+            return skew;
+          }
+          // ONTO the parent's matrix, not in place of it: the parent is the
+          // layer's container, shifted by the camera, or the actor's own
+          // parent's group (specs/PARENTING.md), and the shear is about the
+          // actor's centre in that frame.
+          composed.copyFrom(parentMatrix);
+          composed.multiply(skew);
+          return composed;
+        },
       );
       return object;
     };
@@ -775,30 +803,122 @@ export class PhaserBinding {
             // a picture nothing draws any more stays in the texture manager
             // for the life of the game.
             drawings.release(scene, actor);
+            // A group goes with its actor, and its children's objects go with
+            // it — Phaser destroys a Container's children — which is right,
+            // since a removed parent's children are removed too. A child's
+            // own turn in this loop then finds an object already gone, which
+            // Phaser's `destroy` treats as nothing to do.
+            const group = groups.get(actor);
+            if (group) {
+              effectRegistry.release(group);
+              group.destroy();
+              groups.delete(actor);
+            }
             object.destroy();
             objects.delete(actor);
           }
         }
       }
 
-      for (const state of snapshot) {
+      const stateOf = new Map(snapshot.map(state => [state.actor, state]));
+      /** Move `child` into `host`, if it is not already there. */
+      const into = (
+        host: Phaser.GameObjects.Container,
+        child: GameObject | Phaser.GameObjects.Container,
+        depthSorted: boolean,
+      ) => {
+        const current = (
+          child as {parentContainer?: {remove?: (what: unknown) => void}}
+        ).parentContainer;
+        if (current === host) {
+          return;
+        }
+        // Whatever held it lets go first; a Container's `add` would otherwise
+        // leave the object listed in two. Duck-typed rather than `instanceof`,
+        // which the tests' stand-in Phaser has no Container class for.
+        current?.remove?.(child);
+        host.add(child);
+        if (depthSorted) {
+          unsorted.add(host);
+        }
+      };
+      /** The actor's own object, made from this frame's state if new. */
+      const objectFor = (state: RenderState): GameObject => {
         let object = objects.get(state.actor);
         if (!object) {
           object = create(scene, state);
-          // Into its layer's container, at the actors' depth within it.
           object.setDepth(ACTOR_DEPTH);
-          intoLayer(scene, state.layer, object);
           objects.set(state.actor, object);
         }
+        return object;
+      };
+      /**
+       * The Container an actor's things go into: its parent's group, or its
+       * layer's container. A parent's group is made on the first child that
+       * asks, taking the parent's own image in as its first child.
+       */
+      const hostFor = (state: RenderState): Phaser.GameObjects.Container => {
+        const parent = state.parent && stateOf.get(state.parent);
+        if (!parent) {
+          return containerFor(scene, state.layer);
+        }
+        let group = groups.get(parent.actor);
+        if (!group) {
+          group = scene.add.container(0, 0);
+          group.setDepth(ACTOR_DEPTH);
+          groups.set(parent.actor, group);
+          // The parent's image had the parent's effects; they belong to the
+          // group now, and the image is re-reconciled with none below.
+          const own = objectFor(parent);
+          effectRegistry.release(own);
+          into(group, own, false);
+          into(hostFor(parent), group, true);
+        }
+        return group;
+      };
+
+      for (const state of snapshot) {
+        const object = objectFor(state);
+        const group = groups.get(state.actor);
+        // What carries this actor's transform: its group when it has one,
+        // else its own object; and which transform — its local one inside
+        // its parent's group, else its world one.
+        const carrier: GameObject | Phaser.GameObjects.Container =
+          group ?? object;
+        into(hostFor(state), carrier, !state.parent);
+        const base = state.parent
+          ? state.local!
+          : {
+              x: state.x,
+              y: state.y,
+              scaleX: state.scaleX,
+              scaleY: state.scaleY,
+              rotation: state.rotation,
+            };
         // Effects are reconciled every frame, not applied once at creation: an
         // event handler can add or remove one while the game runs, and the
         // engine's list is re-read here each tick. `reconcile` attaches only
         // what is new and detaches what is gone (attaching twice would stack a
         // second filter), and returns immediately for the common case of an
-        // actor with no effects.
-        effectRegistry.reconcile(scene, object, state.effects);
+        // actor with no effects. On the GROUP for a parent, so they apply to
+        // its children as a layer's apply to everything in it.
+        effectRegistry.reconcile(scene, carrier as never, state.effects);
+        if (group) {
+          group.setPosition(base.x, base.y);
+          group.setScale(base.scaleX, base.scaleY);
+          group.setRotation(base.rotation * DEGREES_TO_RADIANS);
+          group.setAlpha(state.opacity);
+          into(group, object, false);
+        }
+        // The actor's own image: at the group's origin when it has one, so
+        // its picture, its frame's fit and its shear are its own and the
+        // group carries the rest.
+        const own = group
+          ? {x: 0, y: 0, scaleX: 1, scaleY: 1, rotation: 0}
+          : base;
 
         const frame = state.frame;
+        const {x, y, scaleX, scaleY, rotation} = own;
         if (state.drawing && object instanceof Phaser.GameObjects.Image) {
           // `acquire` is what notices a change: the key is computed from the
           // commands, so this is a map lookup on every frame where the picture
@@ -806,18 +926,15 @@ export class PhaserBinding {
           object.setTexture(
             drawings.acquire(scene, state.actor, state.drawing),
           );
-          object.setPosition(state.x, state.y);
+          object.setPosition(x, y);
           // DIVIDED BY THE RENDER SCALE, because a drawing's texture is made at
           // it (`drawingTextures.rasterize`). The picture is three times as
           // many pixels and the same number of world units, which is the whole
           // point: a label is sharp instead of being three nearest-neighbor
           // copies of a small one.
-          object.setScale(
-            state.scaleX / RENDER_SCALE,
-            state.scaleY / RENDER_SCALE,
-          );
-          object.setRotation(state.rotation * DEGREES_TO_RADIANS);
-          applySkew(object, state.x, state.y, state.skew);
+          object.setScale(scaleX / RENDER_SCALE, scaleY / RENDER_SCALE);
+          object.setRotation(rotation * DEGREES_TO_RADIANS);
+          applySkew(object, x, y, state.skew);
         } else if (frame && object instanceof Phaser.GameObjects.Image) {
           // A cell is a source rectangle in the image, named and registered on
           // the texture the first time it is drawn (`cellFrame`); no cell ⇒ the
@@ -828,34 +945,26 @@ export class PhaserBinding {
             frame.sprite,
             frame.cell ? cellFrame(scene, frame.sprite, frame.cell) : undefined,
           );
-          object.setPosition(
-            state.x + frame.offset.x,
-            state.y + frame.offset.y,
-          );
-          object.setScale(
-            state.scaleX * frame.scale,
-            state.scaleY * frame.scale,
-          );
-          object.setRotation(state.rotation * DEGREES_TO_RADIANS);
+          object.setPosition(x + frame.offset.x, y + frame.offset.y);
+          object.setScale(scaleX * frame.scale, scaleY * frame.scale);
+          object.setRotation(rotation * DEGREES_TO_RADIANS);
           // Shear about the drawn center (position plus the frame's offset).
-          applySkew(
-            object,
-            state.x + frame.offset.x,
-            state.y + frame.offset.y,
-            state.skew,
-          );
+          applySkew(object, x + frame.offset.x, y + frame.offset.y, state.skew);
         } else {
-          object.setPosition(state.x, state.y);
-          object.setScale(state.scaleX, state.scaleY);
-          object.setRotation(state.rotation * DEGREES_TO_RADIANS);
+          object.setPosition(x, y);
+          object.setScale(scaleX, scaleY);
+          object.setRotation(rotation * DEGREES_TO_RADIANS);
           // The rectangle is centered on its position; shear about that point.
-          applySkew(object, state.x, state.y, state.skew);
+          applySkew(object, x, y, state.skew);
         }
         // AFTER the branches, because all three want it and none of them
         // differs about it: a drawing, a sprite frame and a plain rectangle are
         // three ways to have a picture, and how solid that picture is is the
         // same question in each. An actor with no appearance reports 1.
-        object.setAlpha(state.opacity);
+        // …and on the group when there is one, where it fades the children
+        // too; the image inside is then left solid, or the group's would
+        // be counted twice.
+        object.setAlpha(group ? 1 : state.opacity);
       }
     };
 
