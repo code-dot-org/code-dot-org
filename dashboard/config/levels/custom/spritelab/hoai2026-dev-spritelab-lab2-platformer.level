@@ -25,7 +25,7 @@
       "kind": "world",
       "imageType": "block"
     },
-    "image_defaults": {
+    "image_role_defaults": {
       "block": "block"
     },
     "pinned_scene": {

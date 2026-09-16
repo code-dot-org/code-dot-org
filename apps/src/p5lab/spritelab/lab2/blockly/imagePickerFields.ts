@@ -10,8 +10,8 @@ import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 
 import {ImageType} from '../ai/images/types';
-import {defaultImageName, ImageSlot} from '../imageDefaults';
 import {noteImageFieldValue} from '../imageReferences';
+import {defaultImageName, ImageSlot} from '../imageRoleDefaults';
 import {getImageThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
@@ -102,7 +102,7 @@ const IMAGE_TYPE_OF: Record<AnimationKind, ImageType> = {
 const SPRITE_CHECK = 'Sprite';
 
 /**
- * Where a field sits for image_defaults: its block, or, on a shadow filling
+ * Where a field sits for image_role_defaults: its block, or, on a shadow filling
  * a sprite socket, the parent block and the socket's position among the
  * parent's sprite sockets.
  */
@@ -124,7 +124,7 @@ function slotOf(block: BlocklyCore.Block): ImageSlot {
 
 /**
  * The lab's image dropdown. A fresh field starts on the image the level's
- * image_defaults name for its slot, decided once the field is on its block;
+ * image_role_defaults name for its slot, decided once the field is on its block;
  * a saved block's own value wins, and a level naming nothing leaves the
  * newest image, Blockly's first option.
  */
@@ -181,7 +181,7 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
     const state = getStore().getState();
     const name = defaultImageName(
       state.animationList,
-      state.lab?.levelProperties?.imageDefaults,
+      state.lab?.levelProperties?.imageRoleDefaults,
       IMAGE_TYPE_OF[this.kind],
       slotOf(block)
     );

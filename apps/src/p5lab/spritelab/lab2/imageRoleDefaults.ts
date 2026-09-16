@@ -1,13 +1,13 @@
 // Which of a student's images a level's dropdowns start on. The image level
 // that makes an image records a role on it (level_mode.imageRole); a later
-// level names the role each dropdown should open on (image_defaults).
+// level names the role each dropdown should open on (image_role_defaults).
 
 import {ImageType} from './ai/images/types';
 import {imageTypeFromCategories} from './imageGallery';
 import {RuntimeAnimationList} from './types';
 
 /**
- * The image_defaults level property: which image, by role, each dropdown
+ * The image_role_defaults level property: which image, by role, each dropdown
  * starts on. A kind key sets every dropdown of that kind; a block type key
  * sets that block's sprite sockets one by one, in socket order (a single
  * role covers them all). Roles are the strings the unit's image levels
@@ -15,7 +15,7 @@ import {RuntimeAnimationList} from './types';
  *
  *   {"sprite": "friend", "gamelab_checkTouching": ["hero", "friend"]}
  */
-export type ImageDefaults = {
+export type ImageRoleDefaults = {
   sprite?: string;
   background?: string;
   block?: string;
@@ -29,7 +29,7 @@ export interface ImageSlot {
 }
 
 export function defaultRole(
-  defaults: ImageDefaults | undefined,
+  defaults: ImageRoleDefaults | undefined,
   kind: ImageType,
   slot?: ImageSlot
 ): string | undefined {
@@ -71,7 +71,7 @@ export function imageNamedForRole(
  */
 export function defaultImageName(
   list: RuntimeAnimationList,
-  defaults: ImageDefaults | undefined,
+  defaults: ImageRoleDefaults | undefined,
   kind: ImageType,
   slot?: ImageSlot
 ): string | undefined {

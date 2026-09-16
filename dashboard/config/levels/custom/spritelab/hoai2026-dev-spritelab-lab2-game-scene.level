@@ -24,7 +24,7 @@
     "level_mode": {
       "kind": "code"
     },
-    "image_defaults": {
+    "image_role_defaults": {
       "background": "platform-background"
     },
     "pinned_scene": {

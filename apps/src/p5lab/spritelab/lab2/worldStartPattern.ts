@@ -3,8 +3,8 @@
 import {useEffect} from 'react';
 
 import {countWorldCells} from './guideSteps';
-import {imageNamedForRole} from './imageDefaults';
 import {imageTypeFromCategories} from './imageGallery';
+import {imageNamedForRole} from './imageRoleDefaults';
 import {RuntimeAnimationList, Scene, Sources} from './types';
 import {createEmptyWorld, sceneGridSize, World, WorldCell} from './world';
 

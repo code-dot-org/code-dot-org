@@ -50,7 +50,6 @@ import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
 import {countImagesByType, useGuideSteps} from '../guideSteps';
-import {defaultImageName, defaultRole} from '../imageDefaults';
 import {imageTypeFromCategories} from '../imageGallery';
 import {
   removeImageReferences,
@@ -59,6 +58,7 @@ import {
   renameImageReferences,
   renameImageReferencesOnWorkspace,
 } from '../imageReferences';
+import {defaultImageName, defaultRole} from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
 import {
   adlibSetForMode,
@@ -484,7 +484,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     pinnedSceneId,
     enabled: animationsSeeded,
     animations: animationList,
-    spriteRole: defaultRole(levelProperties.imageDefaults, 'sprite'),
+    spriteRole: defaultRole(levelProperties.imageRoleDefaults, 'sprite'),
     updateSources,
   });
 
@@ -527,11 +527,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     []
   );
 
-  // Preselect the level's image of its imageType: the image_defaults role,
+  // Preselect the level's image of its imageType: the image_role_defaults role,
   // else the newest. Backgrounds are excluded, a world cell being a sprite or
   // a block; a selection whose image is gone counts as none.
   const focusImageType = levelProperties.levelMode?.imageType;
-  const imageDefaults = levelProperties.imageDefaults;
+  const imageRoleDefaults = levelProperties.imageRoleDefaults;
   useEffect(() => {
     if (!focusImageType || focusImageType === 'background') {
       return;
@@ -545,7 +545,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (live && paletteChosenByStudent.current) {
       return;
     }
-    // The level's image_defaults role first; else the newest of the kind
+    // The level's image_role_defaults role first; else the newest of the kind
     // (orderedKeys is newest-first: Sprite Lab prepends new animations).
     const newest = animationList.orderedKeys.find(
       key =>
@@ -553,7 +553,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         focusImageType
     );
     const name =
-      defaultImageName(animationList, imageDefaults, focusImageType) ??
+      defaultImageName(animationList, imageRoleDefaults, focusImageType) ??
       (newest && animationList.propsByKey[newest]?.name);
     const current =
       worldPaletteSelection === 'erase' ? null : worldPaletteSelection?.image;
@@ -561,7 +561,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     setWorldPaletteSelection(name ? {image: name, kind: focusImageType} : null);
-  }, [worldPaletteSelection, focusImageType, animationList, imageDefaults]);
+  }, [worldPaletteSelection, focusImageType, animationList, imageRoleDefaults]);
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?

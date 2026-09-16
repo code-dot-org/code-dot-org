@@ -24,7 +24,7 @@
     "level_mode": {
       "kind": "freeplay"
     },
-    "image_defaults": {
+    "image_role_defaults": {
       "sprite": "hero",
       "gamelab_addBehaviorSimple": [
         "friend"

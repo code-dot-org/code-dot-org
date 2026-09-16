@@ -12,7 +12,7 @@ export interface LevelMode {
   /** The kind of image the level is about. */
   imageType?: ImageType;
   /** Recorded on every image this level makes. The other end of the link
-      is the image_defaults level property (imageDefaults.ts), which code
+      is the image_role_defaults level property (imageRoleDefaults.ts), which code
       and world levels use to open their dropdowns on an image by role. */
   imageRole?: string;
   /** Word combos to offer, in place of the set the kind implies. */

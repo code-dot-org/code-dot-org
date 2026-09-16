@@ -25,7 +25,7 @@
       "kind": "world",
       "imageType": "sprite"
     },
-    "image_defaults": {
+    "image_role_defaults": {
       "sprite": "treasure"
     },
     "pinned_scene": {

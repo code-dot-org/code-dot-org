@@ -1,7 +1,7 @@
 import {
   defaultImageName,
   defaultRole,
-} from '@cdo/apps/p5lab/spritelab/lab2/imageDefaults';
+} from '@cdo/apps/p5lab/spritelab/lab2/imageRoleDefaults';
 import {RuntimeAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 // Newest-first, as Sprite Lab keeps it.

@@ -4,7 +4,7 @@ import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
-import {ImageDefaults} from './imageDefaults';
+import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
@@ -131,12 +131,12 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideSteps?: GuideStep[];
   /** Premade world for the pinned scene, one string per playfield row
       anchored to the floor. 'B' cells take the block image the student made
-      most recently, 'S' the image_defaults sprite, else their first
+      most recently, 'S' the image_role_defaults sprite, else their first
       character. */
   worldStartPattern?: string[];
-  /** The role each dropdown starts on (imageDefaults.ts); roles are what
+  /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
-  imageDefaults?: ImageDefaults;
+  imageRoleDefaults?: ImageRoleDefaults;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }
