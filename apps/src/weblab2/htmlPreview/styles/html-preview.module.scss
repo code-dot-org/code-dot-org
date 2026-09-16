@@ -10,6 +10,12 @@
   grid-template-rows: 40px 1fr;
 }
 
+// A widget renders no preview header, so without this the preview would auto-place
+// into the 40px header row and show as a thin strip.
+.headerlessPreviewContainer {
+  grid-template-rows: 1fr;
+}
+
 // Styles applied when in full screen view mode
 .fullScreenPanelContainer {
   position: absolute;

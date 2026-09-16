@@ -1,5 +1,6 @@
+// PanelContainer inside sizes itself to 100% of this box, so the box must be the
+// full height of the embedding iframe.
 .embedContainer {
-  display: flex;
   height: 100%;
   width: 100%;
   color: var(--text-neutral-primary);

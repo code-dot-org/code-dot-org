@@ -525,6 +525,7 @@ export const HTMLPreview: React.FC = () => {
       <div
         className={classNames(
           moduleStyles.previewContainer,
+          widget2 && moduleStyles.headerlessPreviewContainer,
           isFullScreenView && moduleStyles.fullScreenPreviewContainer
         )}
       >
