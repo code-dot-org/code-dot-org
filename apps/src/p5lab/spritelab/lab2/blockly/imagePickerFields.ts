@@ -102,9 +102,9 @@ const IMAGE_TYPE_OF: Record<AnimationKind, ImageType> = {
 const SPRITE_CHECK = 'Sprite';
 
 /**
- * Where a field sits for image_role_defaults: its block, or, on a shadow filling
- * a sprite socket, the parent block and the socket's position among the
- * parent's sprite sockets.
+ * Where a field sits for image_role_defaults: its block, or, on a shadow
+ * filling a sprite socket, the parent block and the socket's position among
+ * the parent's sprite sockets.
  */
 function slotOf(block: BlocklyCore.Block): ImageSlot {
   const parentInput =
@@ -124,9 +124,9 @@ function slotOf(block: BlocklyCore.Block): ImageSlot {
 
 /**
  * The lab's image dropdown. A fresh field starts on the image the level's
- * image_role_defaults name for its slot, decided once the field is on its block;
- * a saved block's own value wins, and a level naming nothing leaves the
- * newest image, Blockly's first option.
+ * image_role_defaults name for its slot, decided once the field is on its
+ * block; a saved block's own value wins, and a level naming nothing leaves
+ * the newest image, Blockly's first option.
  */
 export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
   kind: AnimationKind = 'costume';
