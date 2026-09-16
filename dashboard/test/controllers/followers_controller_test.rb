@@ -249,6 +249,28 @@ class FollowersControllerTest < ActionController::TestCase
     end
   end
 
+  # Devise's sign_in no-ops for an already-signed-in user, so the row is written only
+  # for the account created by this request.
+  test "student_register records a registration attributed to the new credential" do
+    student_params = {email: 'student-attribution@school.edu',
+                      name: "A name",
+                      password: "apassword",
+                      gender: 'F',
+                      age: '13'}
+
+    assert_creates(SignIn) do
+      post :student_register, params: {
+        section_code: @chris_section.code,
+        user: student_params
+      }
+    end
+
+    user = assigns(:user)
+    sign_in = SignIn.where(user_id: user.id).order(:id).last
+    assert_equal SignIn::REGISTRATION, sign_in.event_type
+    assert_equal user.primary_contact_info.id, sign_in.authentication_option_id
+  end
+
   test "student_register with age and hashed email" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       student_params = {hashed_email: User.hash_email('studentx@school.edu'),

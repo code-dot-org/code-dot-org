@@ -63,7 +63,7 @@ class SessionsController < Devise::SessionsController
     sign_out
 
     # Create a new session for the user and restore data from previous session.
-    sign_in(:user, user)
+    sign_in(:user, user, event_type: SignIn::REAUTHENTICATION)
     session.merge!(existing_session_data) if existing_session_data
 
     # Success! Display a notice and redirect to the account settings page, from
