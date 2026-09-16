@@ -46,6 +46,29 @@ describe('priorOutputFromLevelProperties', () => {
     expect(out?.multi?.summary).toBe('Multi — Q: What is 2+2?; A: 4');
   });
 
+  it('propagates a markdown page whole', () => {
+    const text = formatPrecedingLevels([
+      {
+        position: 1,
+        name: 'l-read',
+        labType: 'external',
+        description: 'Read about sensors.',
+        output: {
+          external: {
+            dslText: '',
+            title: 'Collecting Data',
+            markdown: '### Sensors\n\nEverywhere.',
+            teacherMarkdown: '',
+            summary: 'Markdown page "Collecting Data"',
+          },
+        },
+      },
+    ]);
+    expect(text).toContain('  Page:');
+    expect(text).toContain('    ### Sensors');
+    expect(text).toContain('    Everywhere.');
+  });
+
   it('summarizes a free response question', () => {
     const out = priorOutputFromLevelProperties(
       props({longInstructions: 'Explain loops\nin your own words.'}),

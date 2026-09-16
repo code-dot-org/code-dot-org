@@ -7,6 +7,7 @@ export const SUPPORTED_LAB_TYPES = [
   'ailab',
   'aichat',
   'sketchlab',
+  'external',
   'multi',
   'match',
   'freeResponse',
@@ -23,6 +24,7 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   ailab: 'Ailab',
   aichat: 'Aichat',
   sketchlab: 'Sketchlab',
+  external: 'External',
   multi: 'Multi',
   match: 'Match',
   freeResponse: 'FreeResponse',
@@ -37,6 +39,7 @@ export const LAB_LABELS = {
   ailab: 'AI Lab',
   aichat: 'AI Chat',
   sketchlab: 'Sketch Lab',
+  external: 'Markdown',
   multi: 'Multiple Choice',
   match: 'Matching',
   freeResponse: 'Free Response',
@@ -46,6 +49,7 @@ export const LAB_LABELS = {
 // Lab types saved as parsed DSL text (dsl_text) rather than serialized
 // JSON properties; createOrFindLevel and updateLevelProperty branch on this.
 export const DSL_LAB_TYPES: readonly LabType[] = [
+  'external',
   'multi',
   'match',
   'bubbleChoice',
@@ -137,6 +141,16 @@ export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
       'canvas itself is left blank for the student to draw.',
     ],
     chooseFor: 'drawing / annotation exercises',
+  },
+  external: {
+    promptLabel: 'External',
+    promptDescription: [
+      'a standalone markdown page the student reads — narrative, framing,',
+      'reference material, or a wrap-up. One scrolling page of prose, no',
+      'interaction and no images. Prefer Panels when illustrations would',
+      'carry the story; prefer External for pure reading.',
+    ],
+    chooseFor: 'standalone reading pages',
   },
   multi: {
     promptLabel: 'Multi',

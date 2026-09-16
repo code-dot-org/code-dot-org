@@ -5,6 +5,7 @@ import {AichatGeneration} from '../ai/aichat';
 import {AilabGeneration} from '../ai/ailab';
 import {MatchGeneration, MultiGeneration} from '../ai/assessments';
 import {BubbleChoiceGeneration} from '../ai/bubbleChoice';
+import {ExternalGeneration} from '../ai/external';
 import {FreeResponseGeneration} from '../ai/freeResponse';
 import {PythonlabGeneration} from '../ai/pythonlab';
 import {SketchlabGeneration} from '../ai/sketchlab';
@@ -20,6 +21,7 @@ export interface PriorOutputByLab {
   ailab: AilabGeneration;
   aichat: AichatGeneration;
   sketchlab: SketchlabGeneration;
+  external: ExternalGeneration;
   multi: MultiGeneration;
   match: MatchGeneration;
   freeResponse: FreeResponseGeneration;
@@ -70,6 +72,19 @@ export function priorOutputFromLevelProperties(
     return labType === 'weblab2'
       ? {weblab2: generation}
       : {pythonlab: generation};
+  }
+  if (labType === 'external') {
+    const markdown = (props as {markdown?: string}).markdown || '';
+    if (!markdown) return undefined;
+    return {
+      external: {
+        dslText: '',
+        title: '',
+        markdown,
+        teacherMarkdown: '',
+        summary: 'Markdown page',
+      },
+    };
   }
   if (labType === 'multi' || labType === 'match') {
     const summary = formatAssessmentSummary(props, labType);
@@ -259,6 +274,14 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
         for (const line of e.output.ailab.longInstructions.split('\n')) {
           lines.push(`    ${line}`);
         }
+      }
+    }
+    if (e.output?.external) {
+      // The page is prose downstream levels may call back to; propagate
+      // it whole, like panel text.
+      lines.push('  Page:');
+      for (const line of e.output.external.markdown.split('\n')) {
+        lines.push(`    ${line}`);
       }
     }
     if (e.output?.freeResponse) {
