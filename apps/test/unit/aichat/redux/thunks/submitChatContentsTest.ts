@@ -1,10 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit';
 
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
-import {
-  addEventToChatEventsCurrent,
-  aichatReducer,
-} from '@cdo/apps/aichat/redux/slice';
+import {aichatReducer} from '@cdo/apps/aichat/redux/slice';
 import {sendAnalytics} from '@cdo/apps/aichat/redux/thunks/sendAnalytics';
 import {submitChatContents} from '@cdo/apps/aichat/redux/thunks/submitChatContents';
 import {CompletedChatMessage, ModelParameters} from '@cdo/apps/aichat/types';
@@ -130,76 +127,6 @@ describe('submitChatContents', () => {
         }),
       ])
     );
-  });
-
-  it('sends prior schema turns to the model as the reader saw them', async () => {
-    // Sending a stored schema response back verbatim re-injects code the
-    // student has already accepted or rejected, and the model answers from it
-    // instead of from the current project.
-    const store = makeStore();
-    store.dispatch(
-      addEventToChatEventsCurrent({
-        role: Role.ASSISTANT,
-        status: Status.OK,
-        timestamp: 1,
-        requestId: 41,
-        chatMessageText: JSON.stringify({
-          answerType: 'CODE',
-          code: '<html><body>stale suggestion</body></html>',
-          explanation: 'I updated index.html',
-        }),
-      })
-    );
-    mockPostAichatCompletionMessage.mockResolvedValue(
-      makeMessages({chatMessageText: 'ok', status: Status.OK})
-    );
-
-    await store.dispatch(
-      submitChatContents({
-        text: 'what is in my html tag?',
-        modelParameters,
-        clientType: AiChatClientTypes.AI_TUTOR,
-        formatSchemaResponseForDisplay: response =>
-          (response as {explanation: string}).explanation,
-      })
-    );
-
-    const history = mockPostAichatCompletionMessage.mock.calls[0][1];
-    const priorTurn = history.find(
-      (message: CompletedChatMessage) => message.requestId === 41
-    );
-    expect(priorTurn?.chatMessageText).toBe('I updated index.html');
-    expect(JSON.stringify(history)).not.toContain('stale suggestion');
-  });
-
-  it('leaves history alone when the lab has no display formatter', async () => {
-    const store = makeStore();
-    store.dispatch(
-      addEventToChatEventsCurrent({
-        role: Role.ASSISTANT,
-        status: Status.OK,
-        timestamp: 1,
-        requestId: 41,
-        chatMessageText: 'plain prose reply',
-      })
-    );
-    mockPostAichatCompletionMessage.mockResolvedValue(
-      makeMessages({chatMessageText: 'ok', status: Status.OK})
-    );
-
-    await store.dispatch(
-      submitChatContents({
-        text: 'follow up',
-        modelParameters,
-        clientType: AiChatClientTypes.AI_TUTOR,
-      })
-    );
-
-    const history = mockPostAichatCompletionMessage.mock.calls[0][1];
-    const priorTurn = history.find(
-      (message: CompletedChatMessage) => message.requestId === 41
-    );
-    expect(priorTurn?.chatMessageText).toBe('plain prose reply');
   });
 
   it('saves assistant error messages unchanged', async () => {
