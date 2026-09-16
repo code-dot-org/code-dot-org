@@ -27,6 +27,9 @@
     "image_defaults": {
       "sprite": "hero",
       "block": "block",
+      "gamelab_addBehaviorSimple": [
+        "friend"
+      ],
       "gamelab_checkTouching": [
         "hero",
         "treasure"
