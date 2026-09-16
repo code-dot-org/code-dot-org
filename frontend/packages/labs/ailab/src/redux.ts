@@ -66,7 +66,7 @@ export interface RootState {
   historicResults: HistoricResult[];
   showResultsDetails: boolean;
   resultsHighlightRow: number | undefined;
-  kValue: number | null;
+  hyperparameters: Record<string, number>;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
@@ -115,7 +115,7 @@ export const initialState: RootState = {
   historicResults: [],
   showResultsDetails: false,
   resultsHighlightRow: undefined,
-  kValue: null,
+  hyperparameters: {},
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
@@ -417,8 +417,8 @@ const ailabSlice = createSlice({
       state.showOverlay = false;
       state.showResultsDetails = action.payload;
     },
-    setKValue(state, action: PayloadAction<number>) {
-      state.kValue = action.payload;
+    setHyperparameters(state, action: PayloadAction<Record<string, number>>) {
+      state.hyperparameters = action.payload;
     },
     setInstructionsDismissed(state) {
       state.instructionsOverlayActive = false;
@@ -466,7 +466,7 @@ export const {
   setSaveStatus,
   setHistoricResult,
   setShowResultsDetails,
-  setKValue,
+  setHyperparameters,
   setInstructionsDismissed,
   setInstructionsEnabled,
   setResultsTab,
@@ -561,7 +561,8 @@ export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
     features: getFeaturesToSave(state),
     summaryStat: getSummaryStat(state),
     trainedModel: state.trainedModel ? state.trainedModel.toJSON() : null,
-    kValue: state.kValue,
+    hyperparameters: state.hyperparameters,
+    kValue: state.hyperparameters.k ?? null,
   };
 
   return dataToSave;

@@ -152,6 +152,8 @@ export interface ModelDataToSave {
   features: ModelCardColumn[];
   summaryStat: {type: string; stat: string};
   trainedModel: object | null;
+  hyperparameters: Record<string, number>;
+  // Duplicates hyperparameters.k. Written for one release, until every reader takes the new field.
   kValue: number | null;
 }
 
