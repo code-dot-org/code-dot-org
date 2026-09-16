@@ -44,6 +44,8 @@ jest.mock(
   '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/BackpackFileChip',
   () => ({
     __esModule: true,
+    // The panel reads this to time the flag; without it the timer fires at once.
+    SHOW_RECENTLY_ADDED_DURATION_MS: 4000,
     default: ({
       fileName,
       isRecentlyAdded,
@@ -162,9 +164,26 @@ describe('UnifiedBackpackPanel', () => {
     expect(screen.getByText('tree.png')).toBeInTheDocument();
 
     const listener = mockBackpackApi.addEventListener.mock.calls.at(-1)?.[0];
-    act(() => listener(BackpackEvent.FileAdded, 'tree.png'));
+    act(() => listener(BackpackEvent.FileAdded, 'tree.png', 'universal'));
 
     await screen.findByText('tree.png (added)');
+  });
+
+  it('marks only the backpack the file was saved to', async () => {
+    mockBackpackApi.getFileLists.mockResolvedValue({
+      universal: ['tree.png'],
+      sketchlab: ['tree.png'],
+    });
+    renderPanel();
+
+    await waitFor(() => expect(screen.getAllByText('tree.png')).toHaveLength(2));
+
+    const listener = mockBackpackApi.addEventListener.mock.calls.at(-1)?.[0];
+    act(() => listener(BackpackEvent.FileAdded, 'tree.png', 'universal'));
+
+    await screen.findByText('tree.png (added)');
+    // The copy in the other backpack is untouched, so it keeps its add button.
+    expect(screen.getByText('tree.png')).toBeInTheDocument();
   });
 
   it('keeps the save button when the file list fails to load', async () => {

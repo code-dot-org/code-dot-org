@@ -35,6 +35,9 @@ interface UnifiedBackpackFile {
   fileName: string;
 }
 
+const fileKeyFor = (appType: string, fileName: string) =>
+  `${appType}/${fileName}`;
+
 interface UnifiedBackpackPanelProps extends BackpackProps {
   openPanelCallback: () => void;
   backpackRefreshKey: number;
@@ -65,9 +68,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [loadError, setLoadError] = useState<boolean>(false);
-  const [recentlyAddedFileNames, setRecentlyAddedFileNames] = useState<
-    Set<string>
-  >(new Set());
+  const [recentlyAddedKeys, setRecentlyAddedKeys] = useState<Set<string>>(
+    new Set()
+  );
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const [selectedCategoryId, setSelectedCategoryId] = useState<
     FileCategoryId | typeof ALL_FILES_CATEGORY_ID
@@ -115,30 +118,32 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
   }, [currentUserId, backpackRefreshKey, loadFiles]);
 
-  const markRecentlyAdded = useCallback((fileName: string) => {
-    setRecentlyAddedFileNames(prevNames => new Set(prevNames).add(fileName));
+  const markRecentlyAdded = useCallback((fileKey: string) => {
+    setRecentlyAddedKeys(prevKeys => new Set(prevKeys).add(fileKey));
     setTimeout(() => {
-      setRecentlyAddedFileNames(prevNames => {
-        const nextNames = new Set(prevNames);
-        nextNames.delete(fileName);
-        return nextNames;
+      setRecentlyAddedKeys(prevKeys => {
+        const nextKeys = new Set(prevKeys);
+        nextKeys.delete(fileKey);
+        return nextKeys;
       });
     }, SHOW_RECENTLY_ADDED_DURATION_MS);
   }, []);
 
   useEffect(() => {
-    const listenerId = backpackApi.addEventListener((event, fileName) => {
-      if (
-        event === BackpackEvent.FileAdded ||
-        event === BackpackEvent.FileDeleted
-      ) {
-        // Reload without the loading view, so the list doesn't flicker on every change.
-        loadFiles(false);
+    const listenerId = backpackApi.addEventListener(
+      (event, fileName, appType) => {
+        if (
+          event === BackpackEvent.FileAdded ||
+          event === BackpackEvent.FileDeleted
+        ) {
+          // Reload without the loading view, so the list doesn't flicker on every change.
+          loadFiles(false);
+        }
+        if (event === BackpackEvent.FileAdded) {
+          markRecentlyAdded(fileKeyFor(appType, fileName));
+        }
       }
-      if (event === BackpackEvent.FileAdded) {
-        markRecentlyAdded(fileName);
-      }
-    });
+    );
     return () => backpackApi.removeEventListener(listenerId);
   }, [backpackApi, loadFiles, markRecentlyAdded]);
 
@@ -185,14 +190,15 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       const sourceDisplayName = duplicateFileNames.has(fileName)
         ? convertProjectTypeToDisplayName(appType as ProjectType) || undefined
         : undefined;
+      const fileKey = fileKeyFor(appType, fileName);
       return (
         <BackpackFileChip
-          key={`${appType}/${fileName}`}
+          key={fileKey}
           fileName={fileName}
           backpackApi={client}
           addAlert={notify}
           showToast={showToast}
-          isRecentlyAdded={recentlyAddedFileNames.has(fileName)}
+          isRecentlyAdded={recentlyAddedKeys.has(fileKey)}
           validateFileName={validateFileName}
           saveFileToProject={saveFileToProject}
           createNewProjectFile={createNewProjectFile}
@@ -212,7 +218,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       duplicateFileNames,
       notify,
       showToast,
-      recentlyAddedFileNames,
+      recentlyAddedKeys,
       validateFileName,
       saveFileToProject,
       createNewProjectFile,
