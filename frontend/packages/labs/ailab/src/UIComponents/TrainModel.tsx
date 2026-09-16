@@ -40,7 +40,7 @@ const TrainModel = () => {
 
   useEffect(() => {
     train.init(store);
-    train.onClickTrain(store);
+    train.onClickTrain();
 
     const animationTimer = setInterval(() => {
       const currentData = dataRef.current;

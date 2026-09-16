@@ -1,41 +1,31 @@
+import {muiPlacementFor} from '@code-dot-org/component-library/common/helpers';
+import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  TooltipProps,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
-import classNames from 'classnames';
+import {Tooltip} from '@mui/material';
 import React from 'react';
 
 import styles from './info-tooltip-icon.module.scss';
 
 interface InfoTooltipIconProps {
-  id: string;
   tooltipText: string;
-  direction?: TooltipProps['direction'];
+  direction?: ComponentPlacementDirection;
 }
 
 const InfoTooltipIcon: React.FunctionComponent<InfoTooltipIconProps> = ({
-  id,
   tooltipText,
   direction,
 }) => {
   return (
-    <WithTooltip
-      tooltipProps={{
-        text: tooltipText,
-        size: 's',
-        tooltipId: `${id}-tooltip`,
-        direction,
-        className: classNames(
-          styles.tooltip,
-          direction && styles[`tooltip-${direction}`]
-        ),
-      }}
-    >
-      <button type="button" className={styles.iconButton}>
+    <Tooltip title={tooltipText} placement={muiPlacementFor(direction)}>
+      {/* Short name; the tooltip text becomes the description. */}
+      <button
+        type="button"
+        className={styles.iconButton}
+        aria-label="More information"
+      >
         <FontAwesomeV6Icon iconName={'info-circle'} className={styles.icon} />
       </button>
-    </WithTooltip>
+    </Tooltip>
   );
 };
 

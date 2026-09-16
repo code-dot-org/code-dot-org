@@ -71,6 +71,19 @@ $gap-height: 43px;
     width: 20%;
   }
 
+  // Collapsed: no content but the controls left showing, so the panel is
+  // only as big as they are. Declared after every width so it wins.
+  &Collapsed {
+    // inline-size containment sizes the box without looking at its contents,
+    // which makes an intrinsic width collapse to the padding; a collapsed
+    // guide has no container queries to serve.
+    container-type: normal;
+    width: max-content;
+    min-width: 0;
+    padding: 28px 12px 12px;
+    gap: 8px;
+  }
+
   &NormalPosition {
     top: $top-position;
     animation: 0.75s ease 1.5s backwards slide-up;

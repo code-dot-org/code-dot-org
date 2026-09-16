@@ -1550,13 +1550,22 @@ class User < ApplicationRecord
     raise "User id required" unless user_id
     raise "Script id required" unless script_id
 
-    user_storage_id = storage_id_for_user_id(user_id)
+    delete_progress_for_units(user_ids: [user_id], unit_ids: [script_id])
+  end
 
-    paranoid_destroy_all_with_retry(UserScript.where(user_id: user_id, script_id: script_id))
-    paranoid_destroy_all_with_retry(UserLevel.where(user_id: user_id, script_id: script_id))
-    paranoid_destroy_all_with_retry(ChannelToken.where(storage_id: user_storage_id, script_id: script_id)) unless user_storage_id.nil?
-    TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
-    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
+  # Batched version of delete_progress_for_unit: deletes progress for every
+  # (user, unit) pair in one pass instead of one query round-trip per pair.
+  def self.delete_progress_for_units(user_ids:, unit_ids:)
+    raise "User ids required" if Array(user_ids).empty?
+    raise "Unit ids required" if Array(unit_ids).empty?
+
+    storage_ids = get_storage_ids_by_user_ids(user_ids).values
+
+    paranoid_destroy_all_with_retry(UserScript.where(user_id: user_ids, script_id: unit_ids))
+    paranoid_destroy_all_with_retry(UserLevel.where(user_id: user_ids, script_id: unit_ids))
+    paranoid_destroy_all_with_retry(ChannelToken.where(storage_id: storage_ids, script_id: unit_ids)) if storage_ids.present?
+    TeacherFeedback.where(student_id: user_ids, script_id: unit_ids).destroy_all
+    CodeReview.where(user_id: user_ids, script_id: unit_ids).destroy_all
   end
 
   # If two records collide on a unique index that includes deleted_at
@@ -1765,13 +1774,6 @@ class User < ApplicationRecord
         new_csf_level_perfected = true
       end
 
-      # Update user_level with the new attempt.
-      # We increment the attempt count unless they've already perfected the level.
-      user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
-      user_level.best_result = new_result if user_level.best_result.nil? ||
-        new_result > user_level.best_result
-
-      user_level.submitted = submitted
       # We only lock levels of type LevelGroup
       # When the student submits an assessment, lock the level so they no
       # longer have access for the remainder of the autolock period
@@ -1779,20 +1781,16 @@ class User < ApplicationRecord
       if submitted && is_level_group
         user_level.locked = true
       end
-      if level_source_id && !is_navigator
-        user_level.level_source_id = level_source_id
-      end
 
-      total_time_spent = user_level.calculate_total_time_spent(time_spent)
-      user_level.time_spent = total_time_spent if total_time_spent
-
-      user_level.assign_locale_data(locale) if locale
-
-      if unit_group && user_level.new_record?
-        user_level.unit_group_id = unit_group.id
-      end
-
-      user_level.atomic_save!
+      user_level.update_progress!(
+        unit_group_id: unit_group&.id,
+        level_source_id:,
+        new_result:,
+        submitted:,
+        is_navigator:,
+        time_spent:,
+        locale:,
+      )
     end
 
     if pairing_user_ids&.any? && user_level.level.should_allow_pairing?(script.id)

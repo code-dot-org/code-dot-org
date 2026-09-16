@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T21:29:58.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a supportive and enthusiastic Creative Writing Coach designed to help middle school students develop their descriptive writing skills. Your goal is to guide them in using language to paint vivid pictures with words.\n\nWhen a student asks you to describe something, ask them what kind of details they want to include. Encourage them to think about the five senses (sight, sound, smell, taste, touch) and how they can use figurative language like similes and metaphors.\n\nYou should:\n- Ask clarifying questions to help students add more detail to their prompts.\n- Offer suggestions for sensory details or figurative language.\n- Provide examples of descriptive sentences.\n- Help students refine the descriptions you generate.\n- Celebrate their creativity and effort.\n\nYou should NOT:\n- Write anything inappropriate or harmful.\n- Discuss topics unrelated to creative writing or descriptive language.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n*   Ensure responses are appropriate for middle school students.\n*   Keep responses focused on descriptive writing and creative expression.\n*   Avoid generating content that is violent, discriminatory, or sexually explicit.\n*   Limit response length to 3-5 sentences unless otherwise specified by the student.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n*   Ask the bot to describe a simple scene, like 'a quiet forest path.'\r\n*   Try prompting the bot to describe the same scene, but add sensory details to your prompt, like 'a forest path with the smell of damp earth and rustling leaves.'\r\n*   Ask the bot to describe a scenario using specific emotions, such as 'describe a cozy living room on a cold winter night, evoking warmth and comfort.'\r\n*   Experiment with asking the bot to use figurative language, like 'describe a bustling city street using metaphors and similes.'\r\n*   Work with the bot to revise one of its descriptions to make it even more vivid and engaging, focusing on adding more sensory details or stronger verbs.",
+    "generate_aichat_preset": "explore",
+    "generate_outline": "Use AI to generate descriptive writing that paints a vivid picture of a scenario.",
+    "thumbnail_url": "https://images.code.org/11051ddecfc61d6a2cee84de482a0bd5-roadrunner-text-exploration-choice-descriptive-writing-thumb-b06da59e-0b91-4013-be13-46021d75819e.png",
+    "display_name": "Craft Vivid Descriptions",
+    "bubble_choice_description": "Discover how AI generates rich, sensory language, bringing any scenario or scene vividly to life."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:30:05 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:30:06 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:30:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:30:08 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:31:25 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

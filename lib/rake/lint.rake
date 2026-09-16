@@ -16,11 +16,6 @@ namespace :lint do
     RakeUtils.bundle_exec 'haml-lint dashboard pegasus shared'
   end
 
-  desc 'Lints SCSS code with scss-lint.'
-  timed_task_with_logging :scss do
-    RakeUtils.bundle_exec 'scss-lint'
-  end
-
   desc 'Lints JavaScript code.'
   timed_task_with_logging :javascript do
     Dir.chdir(apps_dir) do
@@ -50,7 +45,7 @@ namespace :lint do
     end
   end
 
-  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript, :python, :zeitwerk]
+  timed_task_with_logging all: [:ruby, :haml, :javascript, :python, :zeitwerk]
 end
 desc 'Lints all code.'
 timed_task_with_logging lint: ['lint:all']

@@ -1,0 +1,16 @@
+name 'scottsdale-erik-1-brainstorm-website-ideas'
+display_name 'Choose Your Website Challenge'
+description <<MARKDOWN
+You're about to explore the power of AI in brainstorming creative ideas. Select one of the unique website challenges below.
+
+Once you choose, you'll use AI to generate innovative features and content for your website. Think creatively and see what AI can suggest!
+
+Prepare to discover how AI can spark your imagination and help you design something truly unique.
+MARKDOWN
+
+sublevels
+level 'scottsdale-erik-1-brainstorm-website-ideas-retro-food-delivery'
+level 'scottsdale-erik-1-brainstorm-website-ideas-colonial-social-media'
+level 'scottsdale-erik-1-brainstorm-website-ideas-future-ride-sharing'
+
+uses_lab2

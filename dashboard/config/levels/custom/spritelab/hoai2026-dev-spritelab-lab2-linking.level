@@ -21,11 +21,9 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
-    ],
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
     "guide_steps": [
       {
         "text": "**Link your scenes.** Use the new **go to scene** block to jump from one scene to another - for example, when your character is clicked. Press **Play** to try the jump."

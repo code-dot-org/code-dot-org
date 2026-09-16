@@ -28,6 +28,14 @@ describe Cdo::AnonUserId do
       end
     end
 
+    context 'when value has a non-RFC variant nibble' do
+      let(:input) {'37fdc3bf-8392-45d2-0810-7ea304d2d9c9'}
+
+      it 'returns true' do
+        _(valid?).must_equal true
+      end
+    end
+
     context 'when value is another UUID version' do
       let(:input) do
         SecureRandom.uuid.tap {|uuid| uuid[14] = '1'}
