@@ -157,6 +157,9 @@ export const openSaveToBackpackPrompt = async ({
     } else {
       backpackApi.saveFile(selectedFileName, file.contents, onError, onSuccess);
     }
+  }).catch(error => {
+    errorCallback(error as Error);
+    return false;
   });
 
   const replacedLegacyCopy =

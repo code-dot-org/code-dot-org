@@ -65,9 +65,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   const [files, setFiles] = useState<UnifiedBackpackFile[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [loadError, setLoadError] = useState<boolean>(false);
-  const [recentlyAddedKeys, setRecentlyAddedKeys] = useState<Set<string>>(
-    new Set()
-  );
+  const [recentlyAddedFileNames, setRecentlyAddedFileNames] = useState<
+    Set<string>
+  >(new Set());
   const [actionInProgress, setActionInProgress] = useState<boolean>(false);
   const [selectedCategoryId, setSelectedCategoryId] = useState<
     FileCategoryId | typeof ALL_FILES_CATEGORY_ID
@@ -115,8 +115,19 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
   }, [currentUserId, backpackRefreshKey, loadFiles]);
 
+  const markRecentlyAdded = useCallback((fileName: string) => {
+    setRecentlyAddedFileNames(prevNames => new Set(prevNames).add(fileName));
+    setTimeout(() => {
+      setRecentlyAddedFileNames(prevNames => {
+        const nextNames = new Set(prevNames);
+        nextNames.delete(fileName);
+        return nextNames;
+      });
+    }, SHOW_RECENTLY_ADDED_DURATION_MS);
+  }, []);
+
   useEffect(() => {
-    const listenerId = backpackApi.addEventListener(event => {
+    const listenerId = backpackApi.addEventListener((event, fileName) => {
       if (
         event === BackpackEvent.FileAdded ||
         event === BackpackEvent.FileDeleted
@@ -124,9 +135,12 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
         // Reload without the loading view, so the list doesn't flicker on every change.
         loadFiles(false);
       }
+      if (event === BackpackEvent.FileAdded) {
+        markRecentlyAdded(fileName);
+      }
     });
     return () => backpackApi.removeEventListener(listenerId);
-  }, [backpackApi, loadFiles]);
+  }, [backpackApi, loadFiles, markRecentlyAdded]);
 
   useEffect(() => {
     // Deleting the last file of a category retires that category, so fall back to
@@ -141,25 +155,10 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
   }, [files, selectedCategoryId]);
 
-  const markRecentlyAdded = useCallback((fileKey: string) => {
-    setRecentlyAddedKeys(prevKeys => new Set(prevKeys).add(fileKey));
-    setTimeout(() => {
-      setRecentlyAddedKeys(prevKeys => {
-        const nextKeys = new Set(prevKeys);
-        nextKeys.delete(fileKey);
-        return nextKeys;
-      });
-    }, SHOW_RECENTLY_ADDED_DURATION_MS);
-  }, []);
-
-  const makeAddToBackpackAlert = useCallback(
-    (fileKey: string) => (type: BackpackAlertType, message: string) => {
-      if (type === 'success') {
-        markRecentlyAdded(fileKey);
-      }
-      showToast(message, toastOptionsFor(type));
-    },
-    [markRecentlyAdded, showToast]
+  const notify = useCallback(
+    (type: BackpackAlertType, message: string) =>
+      showToast(message, toastOptionsFor(type)),
+    [showToast]
   );
 
   // Names held by more than one backpack. Those rows have to say which backpack they
@@ -182,19 +181,18 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
       if (!client) {
         return null;
       }
-      const fileKey = `${appType}/${fileName}`;
       // The universal backpack has no display name, so its rows stay unlabeled.
       const sourceDisplayName = duplicateFileNames.has(fileName)
         ? convertProjectTypeToDisplayName(appType as ProjectType) || undefined
         : undefined;
       return (
         <BackpackFileChip
-          key={fileKey}
+          key={`${appType}/${fileName}`}
           fileName={fileName}
           backpackApi={client}
-          addAlert={makeAddToBackpackAlert(fileKey)}
+          addAlert={notify}
           showToast={showToast}
-          isRecentlyAdded={recentlyAddedKeys.has(fileKey)}
+          isRecentlyAdded={recentlyAddedFileNames.has(fileName)}
           validateFileName={validateFileName}
           saveFileToProject={saveFileToProject}
           createNewProjectFile={createNewProjectFile}
@@ -212,9 +210,9 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     [
       backpackApi,
       duplicateFileNames,
-      makeAddToBackpackAlert,
+      notify,
       showToast,
-      recentlyAddedKeys,
+      recentlyAddedFileNames,
       validateFileName,
       saveFileToProject,
       createNewProjectFile,
@@ -234,13 +232,11 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
     }
     setActionInProgress(true);
     try {
-      await saveToBackpackButton.onClick(fileNames, (type, message) =>
-        showToast(message, toastOptionsFor(type))
-      );
+      await saveToBackpackButton.onClick(fileNames, notify);
     } finally {
       setActionInProgress(false);
     }
-  }, [saveToBackpackButton, fileNames, showToast]);
+  }, [saveToBackpackButton, fileNames, notify]);
 
   const visibleFiles = useMemo(() => {
     const matchingFiles =

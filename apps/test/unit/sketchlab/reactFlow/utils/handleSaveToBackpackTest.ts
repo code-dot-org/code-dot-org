@@ -232,6 +232,37 @@ describe('handleSaveToBackpack', () => {
       ]);
     });
 
+    it('replaces the progress toast when the snapshot throws', async () => {
+      // The progress toast has no auto-hide, so a rejection that reached the
+      // caller would leave it on screen for good.
+      mockCreateSketchSnapshotBlob.mockRejectedValue(new Error('tainted canvas'));
+
+      await runUnifiedSave();
+
+      expect(notify.mock.calls).toEqual([
+        ['info', 'Saving sketch.png to your Backpack...'],
+        ['danger', 'Error saving sketch.png to your Backpack. Please try again'],
+      ]);
+      expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
+        'Sketch snapshot error',
+        expect.any(Error)
+      );
+    });
+
+    it('replaces the progress toast when the save rejects', async () => {
+      unifiedApi.saveBlobFile = jest.fn(() => {
+        throw new Error('upload exploded');
+      });
+
+      await runUnifiedSave();
+
+      expect(notify.mock.calls).toEqual([
+        ['info', 'Saving sketch.png to your Backpack...'],
+        ['danger', 'Error saving sketch.png to your Backpack. Please try again'],
+      ]);
+      expect(unifiedApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
+    });
+
     it('treats a name held only by another lab as a duplicate, and clears it', async () => {
       unifiedApi.getFileLists.mockResolvedValue({aichat: ['sketch.png']});
 

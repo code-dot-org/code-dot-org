@@ -12,6 +12,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import {BackpackEvent} from '@cdo/apps/sharedComponents/backpack/types';
 
 const SAVE_BUTTON_TEXT = 'Save Sketch to Backpack';
 
@@ -37,12 +38,28 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   },
 }));
 
-// The chip fetches on its own behalf; this suite only cares about the save button.
+// The chip fetches on its own behalf; this suite only cares about what the panel
+// hands it, so the stand-in renders the name and the recently-saved flag.
 jest.mock(
   '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/BackpackFileChip',
   () => ({
     __esModule: true,
-    default: ({fileName}: {fileName: string}) => <div>{fileName}</div>,
+    default: ({
+      fileName,
+      isRecentlyAdded,
+      addAlert,
+    }: {
+      fileName: string;
+      isRecentlyAdded?: boolean;
+      addAlert: (type: string, message: string) => void;
+    }) => (
+      <div>
+        {isRecentlyAdded ? `${fileName} (added)` : fileName}
+        <button type="button" onClick={() => addAlert('success', 'in project')}>
+          {`add ${fileName} to project`}
+        </button>
+      </div>
+    ),
   })
 );
 
@@ -84,6 +101,7 @@ describe('UnifiedBackpackPanel', () => {
     mockShowToast.mockReset();
     mockBackpackApi.getFileLists.mockReset();
     mockBackpackApi.getFileLists.mockResolvedValue({});
+    mockBackpackApi.addEventListener.mockClear();
     stubRedux();
   });
 
@@ -129,6 +147,24 @@ describe('UnifiedBackpackPanel', () => {
         {type: 'success', autoHideDuration: 4000},
       ],
     ]);
+  });
+
+  it('marks a file the backpack just accepted, not one added to the project', async () => {
+    const user = userEvent.setup();
+    mockBackpackApi.getFileLists.mockResolvedValue({universal: ['tree.png']});
+    renderPanel();
+
+    await screen.findByText('tree.png');
+    // Adding to the project says nothing about what the backpack holds.
+    await user.click(
+      screen.getByRole('button', {name: 'add tree.png to project'})
+    );
+    expect(screen.getByText('tree.png')).toBeInTheDocument();
+
+    const listener = mockBackpackApi.addEventListener.mock.calls.at(-1)?.[0];
+    act(() => listener(BackpackEvent.FileAdded, 'tree.png'));
+
+    await screen.findByText('tree.png (added)');
   });
 
   it('keeps the save button when the file list fails to load', async () => {

@@ -146,18 +146,29 @@ export const handleSaveToBackpack = async (
     notify('info', `Saving ${newFileName} to your Backpack...`);
   }
 
-  const {blob, error} = await createSketchSnapshotBlob(reactFlow);
-  if (error) {
-    notify('danger', error);
+  const saveErrorMessage = `Error saving ${newFileName} to your Backpack. Please try again`;
+
+  // The progress toast above never expires on its own, so every path from here
+  // has to end in a toast that replaces it.
+  let snapshot: {blob?: Blob; error?: string};
+  try {
+    snapshot = await createSketchSnapshotBlob(reactFlow);
+  } catch (error) {
+    notify('danger', saveErrorMessage);
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Sketch snapshot error', error as Error);
     return;
   }
-  if (!blob) {
-    notify(
-      'danger',
-      `Error saving ${newFileName} to your Backpack. Please try again`
-    );
+  if (snapshot.error) {
+    notify('danger', snapshot.error);
     return;
   }
+  if (!snapshot.blob) {
+    notify('danger', saveErrorMessage);
+    return;
+  }
+  const {blob} = snapshot;
 
   const isDuplicateFileName = existingFilenames.includes(newFileName);
   const eventName = isDuplicateFileName
@@ -168,10 +179,7 @@ export const handleSaveToBackpack = async (
       newFileName,
       blob,
       () => {
-        notify(
-          'danger',
-          `Error saving ${newFileName} to your Backpack. Please try again`
-        );
+        notify('danger', saveErrorMessage);
         resolve(false);
       },
       () => {
@@ -182,6 +190,12 @@ export const handleSaveToBackpack = async (
         resolve(true);
       }
     );
+  }).catch(error => {
+    notify('danger', saveErrorMessage);
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Save to backpack error', error as Error);
+    return false;
   });
 
   if (!unifiedApi || !saved || !isDuplicateFileName) {

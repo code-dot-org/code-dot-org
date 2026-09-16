@@ -423,9 +423,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           disabled={actionInProgress || viewingOldVersion}
           onClick={() =>
             saveToBackpackButton.onClick(fileList || [], (type, message) =>
-              // Only a success clears itself; progress and errors stay until the
-              // next alert replaces them.
-              addAlert(type, message, type === 'success')
+              addAlert(type, message, false)
             )
           }
           type="button"
