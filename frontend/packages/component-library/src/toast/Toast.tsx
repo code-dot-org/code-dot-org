@@ -9,6 +9,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useRef,
   useState,
   type ReactNode,
 } from 'react';
@@ -47,16 +48,23 @@ export const DEFAULT_TOAST_POLITENESS: ToastPoliteness = 'assertive';
  * change a text mutation inside a region already in the accessibility tree —
  * which screen readers announce reliably — rather than inserting a text node
  * into a previously-empty region (a transition many SR/browser pairs, notably
- * Orca, miss). The two-step also re-announces an identical repeat message.
+ * Orca, miss). A repeat of the same text needs `announcementId` to be heard
+ * again; the region is otherwise unchanged and screen readers say nothing.
  * Render this standalone if you drive the visual toast yourself and only need
  * the announcement.
  */
 export function ToastAnnouncer({
   message,
   politeness = DEFAULT_TOAST_POLITENESS,
+  announcementId,
 }: {
   message: string | null;
   politeness?: ToastPoliteness;
+  /**
+   * Change this alongside an unchanged `message` to announce it again. Without
+   * it the same text raised twice in a row mutates nothing, so nothing is said.
+   */
+  announcementId?: number | string;
 }) {
   const [announced, setAnnounced] = useState('');
 
@@ -69,7 +77,7 @@ export function ToastAnnouncer({
     setAnnounced('');
     const id = requestAnimationFrame(() => setAnnounced(message));
     return () => cancelAnimationFrame(id);
-  }, [message]);
+  }, [message, announcementId]);
 
   return (
     <div
@@ -99,8 +107,19 @@ export interface ToastProps {
   onClose?: () => void;
   /** Override the anchor position; defaults to top-center. */
   anchorOrigin?: SnackbarProps['anchorOrigin'];
+  /**
+   * Class on the Snackbar itself.
+   */
+  className?: string;
   /** Live-region politeness; defaults to `assertive` (see {@link ToastPoliteness}). */
   politeness?: ToastPoliteness;
+  /**
+   * Identifies this toast among consecutive ones; change it to restart the
+   * auto-hide timer and re-announce a message identical to the one before it.
+   * Not a DOM id - it reaches the Snackbar's key and the announcer, nothing
+   * else.
+   */
+  toastId?: number | string;
   /** Accessible name for the dismiss button; defaults to Alert's own default. */
   closeLabel?: string;
   /**
@@ -135,7 +154,9 @@ export default function Toast({
   autoHideDuration = DEFAULT_TOAST_DURATION,
   onClose,
   anchorOrigin = DEFAULT_ANCHOR_ORIGIN,
+  className,
   politeness = DEFAULT_TOAST_POLITENESS,
+  toastId,
   closeLabel,
   alertProps,
 }: ToastProps) {
@@ -153,12 +174,26 @@ export default function Toast({
       {/* The Snackbar is the visual surface only — its Alert role drops to
           'presentation' so the announcer, not the Alert, speaks the message
           (announcing from both would double it). */}
-      <ToastAnnouncer message={open ? message : null} politeness={politeness} />
+      <ToastAnnouncer
+        message={open ? message : null}
+        politeness={politeness}
+        announcementId={toastId}
+      />
       <Snackbar
+        // MUI restarts its auto-hide timer only when `open` or
+        // `autoHideDuration` changes, so a replacing toast of the same
+        // duration would inherit the remaining time. A changing key is MUI's
+        // documented remedy; include an id so duplicate messages get a new timer.
+        key={`${toastId ?? ''}:${message}`}
         open={open}
         autoHideDuration={autoHideDuration}
         onClose={handleClose}
         anchorOrigin={anchorOrigin}
+        className={className}
+        // MUI otherwise pauses auto-hide while the window is unfocused and
+        // only resumes on refocus, which strands a toast for as long as the
+        // user is elsewhere.
+        disableWindowBlurListener
       >
         <Alert
           {...alertProps}
@@ -199,6 +234,7 @@ export function useToast(): ShowToast {
 }
 
 interface ToastState {
+  id: number;
   message: string;
   type: ToastType;
   autoHideDuration: number | null;
@@ -210,6 +246,8 @@ export interface ToastProviderProps {
   autoHideDuration?: number | null;
   /** Default anchor position for the provider's toast; defaults to top-center. */
   anchorOrigin?: SnackbarProps['anchorOrigin'];
+  /** Class on the Snackbar itself; see {@link ToastProps.className}. */
+  className?: string;
   /** Live-region politeness; defaults to `assertive` (see {@link ToastPoliteness}). */
   politeness?: ToastPoliteness;
 }
@@ -223,32 +261,48 @@ export function ToastProvider({
   children,
   autoHideDuration = DEFAULT_TOAST_DURATION,
   anchorOrigin,
+  className,
   politeness = DEFAULT_TOAST_POLITENESS,
 }: ToastProviderProps) {
   const [toast, setToast] = useState<ToastState | null>(null);
+  const [open, setOpen] = useState(false);
+  const nextId = useRef(0);
 
   const show = useCallback<ShowToast>(
-    (message, options) =>
+    (message, options) => {
+      nextId.current += 1;
       setToast({
+        id: nextId.current,
         message,
         type: options?.type ?? 'success',
-        autoHideDuration: options?.autoHideDuration ?? autoHideDuration,
-      }),
+        // Ensure we keep an explicit null, as that means
+        // the toast will stay visible until manually closed.
+        autoHideDuration:
+          options?.autoHideDuration !== undefined
+            ? options.autoHideDuration
+            : autoHideDuration,
+      });
+      setOpen(true);
+    },
     [autoHideDuration],
   );
 
-  const close = useCallback(() => setToast(null), []);
+  // Hold the message through the exit transition: clearing it would change
+  // the Snackbar's key mid-exit, unmounting it instead of letting it animate.
+  const close = useCallback(() => setOpen(false), []);
 
   return (
     // `show` is a stable useCallback, so it is a stable context value.
     <ToastContext.Provider value={show}>
       {children}
       <Toast
-        open={toast !== null}
+        open={open}
+        toastId={toast?.id}
         message={toast?.message ?? ''}
         type={toast?.type}
         autoHideDuration={toast?.autoHideDuration}
         anchorOrigin={anchorOrigin}
+        className={className}
         politeness={politeness}
         onClose={close}
       />

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-15 07:02:42 UTC",
+    "serialized_at": "2026-09-15 18:28:35 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -118,7 +118,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-intro-web-html"
+          "test-brendan-intro-html-fish"
         ],
         "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
@@ -126,7 +126,7 @@
         "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       },
       "level_keys": [
-        "test-brendan-intro-web-html"
+        "test-brendan-intro-html-fish"
       ]
     },
     {
@@ -139,7 +139,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-first-html-page"
+          "test-brendan-build-fish-page"
         ],
         "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
@@ -147,100 +147,16 @@
         "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       },
       "level_keys": [
-        "test-brendan-first-html-page"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-brendan-add-page-title"
-        ],
-        "lesson.key": "intro-web-pages",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
-      },
-      "level_keys": [
-        "test-brendan-add-page-title"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-brendan-headings-paragraphs"
-        ],
-        "lesson.key": "intro-web-pages",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
-      },
-      "level_keys": [
-        "test-brendan-headings-paragraphs"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-brendan-html-structure-check"
-        ],
-        "lesson.key": "intro-web-pages",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
-      },
-      "level_keys": [
-        "test-brendan-html-structure-check"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-brendan-my-fish-page-reflection"
-        ],
-        "lesson.key": "intro-web-pages",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
-      },
-      "level_keys": [
-        "test-brendan-my-fish-page-reflection"
+        "test-brendan-build-fish-page"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "test-brendan-intro-web-html",
+        "level.key": "test-brendan-intro-html-fish",
         "script_level.level_keys": [
-          "test-brendan-intro-web-html"
+          "test-brendan-intro-html-fish"
         ],
         "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
@@ -250,57 +166,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-first-html-page",
+        "level.key": "test-brendan-build-fish-page",
         "script_level.level_keys": [
-          "test-brendan-first-html-page"
-        ],
-        "lesson.key": "intro-web-pages",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-brendan-add-page-title",
-        "script_level.level_keys": [
-          "test-brendan-add-page-title"
-        ],
-        "lesson.key": "intro-web-pages",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-brendan-headings-paragraphs",
-        "script_level.level_keys": [
-          "test-brendan-headings-paragraphs"
-        ],
-        "lesson.key": "intro-web-pages",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-brendan-html-structure-check",
-        "script_level.level_keys": [
-          "test-brendan-html-structure-check"
-        ],
-        "lesson.key": "intro-web-pages",
-        "lesson_group.key": "outlines",
-        "script.name": "test-brendan",
-        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-brendan-my-fish-page-reflection",
-        "script_level.level_keys": [
-          "test-brendan-my-fish-page-reflection"
+          "test-brendan-build-fish-page"
         ],
         "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",

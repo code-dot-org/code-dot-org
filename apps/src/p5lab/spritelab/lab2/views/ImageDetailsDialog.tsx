@@ -17,12 +17,15 @@ import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
 import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
-import GenerateImageView, {NewImageDraft} from './GenerateImageView';
+import GenerateImageView, {
+  ImageFormOptions,
+  NewImageDraft,
+} from './GenerateImageView';
 import ImagePaneButton from './ImagePaneButton';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
-interface ImageDetailsDialogProps {
+interface ImageDetailsDialogProps extends ImageFormOptions {
   // null = the "new image" state: it opens straight into the generate view
   // and nothing is created until a generation succeeds.
   animKey: string | null;
@@ -50,8 +53,6 @@ interface ImageDetailsDialogProps {
   onDelete: () => void;
   /** The image's kind; locked while regenerating an existing image. */
   imageType?: ImageType;
-  /** Level-imposed type for new images. */
-  lockedImageType?: ImageType;
   /** This session replaced the image it opened on (closing keeps that). */
   imageChanged?: boolean;
   /** Show the full internal dialog — the image's name (and renaming),
@@ -59,12 +60,21 @@ interface ImageDetailsDialogProps {
   advanced?: boolean;
   /** The image is pixel art: previews upscale it with hard edges. */
   pixelated?: boolean;
+  /** No paint entry points: the pane is a plain preview and new images
+      offer no blank canvas. */
+  paintDisabled?: boolean;
+  /** An image level: the panel sits in the page, not in a modal — no
+      overlay, no Done/Cancel exits. */
+  imageLevel?: boolean;
+  /** Stored pixel size of the image (one frame of a sheet). */
+  resolution?: {x: number; y: number};
+  /** Pixel art's physical px per art pixel; sets the resolution row's
+      logical size (the 1px brush grid). */
+  pixelGridSize?: number;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
   /** Whether another image already uses this name. */
   isNameTaken: (name: string) => boolean;
-  /** A generation request is leaving (see GenerateImageView). */
-  onGenerateStart?: () => void;
   /** Persist an accepted generation (newName set when creating). */
   onAcceptGenerated: (
     result: GeneratedImageResult,
@@ -74,6 +84,26 @@ interface ImageDetailsDialogProps {
   alternatives?: AlternativeImage[];
   /** Make this alternative the image. */
   onSelectAlternative?: (id: string) => void;
+}
+
+/**
+ * The Resolution row's text. Pixel art leads with its logical size — the
+ * grid the 1px brush paints on, which is the resolution we treat the image
+ * as — with the stored size in parentheses; the parenthetical goes away if
+ * pixel art is ever stored at its logical size (which needs the engine to
+ * upscale with hard edges).
+ */
+export function resolutionLabel(
+  resolution: {x: number; y: number},
+  pixelGridSize?: number
+): string {
+  const stored = `${resolution.x} × ${resolution.y}`;
+  if (!pixelGridSize || pixelGridSize <= 1) {
+    return stored;
+  }
+  const logicalX = Math.round(resolution.x / pixelGridSize);
+  const logicalY = Math.round(resolution.y / pixelGridSize);
+  return `${logicalX} × ${logicalY} (${stored})`;
 }
 
 /** One choice in the Alternatives strip. */
@@ -107,7 +137,14 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   lockedImageType,
   imageChanged,
   advanced,
+  adlibSet,
+  adlibOnly,
+  defaultStyle,
+  paintDisabled,
+  imageLevel,
   pixelated,
+  resolution,
+  pixelGridSize,
   getDataURI,
   isNameTaken,
   onGenerateStart,
@@ -158,23 +195,18 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     setNameError(null);
   };
 
-  return (
-    // data-theme drives both the chrome's own colors and the design
-    // system's semantic colors inside the panel (the TextField reads them).
-    <div className={moduleStyles.dialogHost} data-theme={mode}>
-      <CustomDialog
-        aria-label={title}
-        onClose={onClose}
-        mode={mode}
-        className={moduleStyles.dialog}
-      >
-        <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
-          {view === 'generate'
-            ? 'Describe the image and generate it with AI.'
-            : advanced
-            ? 'View, edit, rename, or delete this image.'
-            : 'View, edit, or delete this image.'}
-        </span>
+  const panelBody = (
+    <>
+      <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
+        {view === 'generate'
+          ? 'Describe the image and generate it with AI.'
+          : advanced
+          ? 'View, edit, rename, or delete this image.'
+          : 'View, edit, or delete this image.'}
+      </span>
+      {/* An image level drops the title bar: the section's aria-label still
+          names it, and the floating guide carries the instruction. */}
+      {!imageLevel && (
         <div className={moduleStyles.header}>
           {renaming ? (
             <>
@@ -256,106 +288,138 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             </>
           )}
         </div>
-        {view === 'generate' ? (
-          <GenerateImageView
-            existing={
-              isNew
-                ? undefined
-                : {
-                    generation,
-                    imageType: imageType || 'sprite',
-                    getDataURI,
-                  }
-            }
-            thumb={isNew ? undefined : thumb}
-            sheet={isNew ? undefined : sheet}
-            thumbPixelated={pixelated}
-            create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
-            lockedImageType={lockedImageType}
-            advanced={advanced}
-            onPaintManually={isNew ? onPaintNew : undefined}
-            onGenerateStart={onGenerateStart}
-            onAccept={async (result, newName) => {
-              await onAcceptGenerated(result, newName);
-              setView('details');
-            }}
-            // A brand-new image has no summary to fall back to.
-            onCancel={isNew ? onClose : () => setView('details')}
-            onDelete={isNew ? undefined : onDelete}
-          />
-        ) : (
-          <>
-            <div className={moduleStyles.body}>
-              {/* A set is not painted (the editor would see one frame of
-                  many), so its pane is a preview, not the paint button. */}
-              {sheet ? (
-                <div
-                  className={classNames(
-                    moduleStyles.imagePane,
-                    moduleStyles.imagePaneChecker
-                  )}
-                >
-                  <AnimatedSheetPreview {...sheet} />
-                </div>
-              ) : (
-                <ImagePaneButton
-                  thumb={thumb}
-                  pixelated={pixelated}
-                  iconName="pen"
-                  label="Edit with paint tools"
-                  onClick={onPaint}
-                />
-              )}
-              <div className={moduleStyles.detailsPane}>
-                {generation && (
-                  <dl className={moduleStyles.metadata}>
-                    <dt>Prompt</dt>
-                    {/* Italic: the one field here the user wrote themselves. */}
-                    <dd className={moduleStyles.promptValue}>
-                      {generation.prompt}
-                    </dd>
-                    <dt>Type</dt>
-                    <dd>
-                      {sheet
-                        ? 'Sprite (animated)'
-                        : IMAGE_TYPE_LABELS[generation.imageType]}
-                    </dd>
-                    <dt>Style</dt>
-                    <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
-                    {advanced && generation.temperature !== undefined && (
-                      <>
-                        <dt>Temperature</dt>
-                        <dd>{generation.temperature}</dd>
-                      </>
-                    )}
-                  </dl>
+      )}
+      {view === 'generate' ? (
+        <GenerateImageView
+          existing={
+            isNew
+              ? undefined
+              : {
+                  generation,
+                  imageType: imageType || 'sprite',
+                  getDataURI,
+                }
+          }
+          thumb={isNew ? undefined : thumb}
+          sheet={isNew ? undefined : sheet}
+          thumbPixelated={pixelated}
+          create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
+          lockedImageType={lockedImageType}
+          advanced={advanced}
+          adlibSet={adlibSet}
+          adlibOnly={adlibOnly}
+          defaultStyle={defaultStyle}
+          onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
+          onGenerateStart={onGenerateStart}
+          onAccept={async (result, newName) => {
+            await onAcceptGenerated(result, newName);
+            setView('details');
+          }}
+          // A brand-new image has no summary to fall back to.
+          onCancel={isNew ? onClose : () => setView('details')}
+          hideCancel={imageLevel && isNew}
+          onDelete={isNew ? undefined : onDelete}
+        />
+      ) : (
+        <>
+          <div className={moduleStyles.body}>
+            {/* A set is not painted (the editor would see one frame of
+                  many), and a paint-disabled level has nowhere to paint, so
+                  both show a plain pane instead of the paint button. */}
+            {sheet || paintDisabled ? (
+              <div
+                className={classNames(
+                  moduleStyles.imagePane,
+                  moduleStyles.imagePaneChecker
                 )}
-                {alternatives && alternatives.length > 1 && (
-                  <div className={moduleStyles.alternatives}>
-                    <div className={moduleStyles.alternativesLabel}>
-                      Alternatives
-                    </div>
-                    <div className={moduleStyles.alternativesRow}>
-                      {alternatives.map(alt => (
-                        <button
-                          key={alt.id}
-                          type="button"
-                          className={classNames(
-                            moduleStyles.alternativeThumb,
-                            alt.selected && moduleStyles.alternativeSelected
-                          )}
-                          aria-label="Use this image"
-                          aria-pressed={alt.selected}
-                          onClick={() => onSelectAlternative?.(alt.id)}
-                        >
-                          <img src={alt.thumb} alt="" />
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+              >
+                {sheet ? (
+                  <AnimatedSheetPreview {...sheet} />
+                ) : (
+                  thumb && (
+                    <img
+                      src={thumb}
+                      alt=""
+                      className={classNames(pixelated && moduleStyles.pixelArt)}
+                    />
+                  )
                 )}
               </div>
+            ) : (
+              <ImagePaneButton
+                thumb={thumb}
+                pixelated={pixelated}
+                iconName="pen"
+                label="Edit with paint tools"
+                onClick={onPaint}
+              />
+            )}
+            <div className={moduleStyles.detailsPane}>
+              {(generation || resolution) && (
+                <dl className={moduleStyles.metadata}>
+                  {generation && (
+                    <>
+                      <dt>Prompt</dt>
+                      {/* Italic: the one field here the user wrote
+                          themselves. */}
+                      <dd className={moduleStyles.promptValue}>
+                        {generation.prompt}
+                      </dd>
+                      <dt>Type</dt>
+                      <dd>
+                        {sheet
+                          ? 'Sprite (animated)'
+                          : IMAGE_TYPE_LABELS[generation.imageType]}
+                      </dd>
+                      <dt>Style</dt>
+                      <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>
+                    </>
+                  )}
+                  {resolution && (
+                    <>
+                      <dt>Resolution</dt>
+                      <dd>{resolutionLabel(resolution, pixelGridSize)}</dd>
+                    </>
+                  )}
+                  {advanced && generation?.temperature !== undefined && (
+                    <>
+                      <dt>Temperature</dt>
+                      <dd>{generation.temperature}</dd>
+                    </>
+                  )}
+                </dl>
+              )}
+              {alternatives && alternatives.length > 1 && (
+                <div className={moduleStyles.alternatives}>
+                  <div className={moduleStyles.alternativesLabel}>
+                    Alternatives
+                  </div>
+                  <div className={moduleStyles.alternativesRow}>
+                    {alternatives.map(alt => (
+                      <button
+                        key={alt.id}
+                        type="button"
+                        className={classNames(
+                          moduleStyles.alternativeThumb,
+                          alt.selected && moduleStyles.alternativeSelected
+                        )}
+                        aria-label="Use this image"
+                        aria-pressed={alt.selected}
+                        onClick={() => onSelectAlternative?.(alt.id)}
+                      >
+                        <img src={alt.thumb} alt="" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
+          </div>
+          {/* An image level's summary is a resting point, not a manager:
+              the guide's Continue is the only action, so no footer — no
+              delete, no second generate (the alternatives row above still
+              offers the session's variants). */}
+          {!imageLevel && (
             <div className={moduleStyles.footer}>
               <div className={moduleStyles.footerLeft}>
                 <DeleteImageButton onDelete={onDelete} />
@@ -376,9 +440,36 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 {imageChanged ? 'Accept' : 'Done'}
               </button>
             </div>
-          </>
-        )}
-      </CustomDialog>
+          )}
+        </>
+      )}
+    </>
+  );
+
+  return (
+    // data-theme drives both the chrome's own colors and the design
+    // system's semantic colors inside the panel (the TextField reads them).
+    <div className={moduleStyles.dialogHost} data-theme={mode}>
+      {imageLevel ? (
+        <section
+          aria-label={title}
+          className={classNames(
+            moduleStyles.dialog,
+            moduleStyles.imageLevelPanel
+          )}
+        >
+          {panelBody}
+        </section>
+      ) : (
+        <CustomDialog
+          aria-label={title}
+          onClose={onClose}
+          mode={mode}
+          className={moduleStyles.dialog}
+        >
+          {panelBody}
+        </CustomDialog>
+      )}
     </div>
   );
 };

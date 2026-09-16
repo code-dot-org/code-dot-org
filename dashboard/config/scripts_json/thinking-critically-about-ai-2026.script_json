@@ -14,6 +14,16 @@
           "visibility": "Teacher-only",
           "dismissible": true,
           "buttonText": "Let's go!"
+        },
+        {
+          "key": "4faa7518-e834-4b9e-a607-bce90349b444",
+          "notice": "Notice for Educators Outside the United States",
+          "details": "Unit 1: Thinking Critically About AI is currently only available to schools in the 50 U.S. states (excluding U.S. territories). Teachers outside the U.S. can continue to use all other units in this course.",
+          "link": "",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": ""
         }
       ],
       "content_area": "curriculum_6_8",
@@ -34,7 +44,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-11 15:48:39 UTC",
+    "serialized_at": "2026-09-15 23:02:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,

@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-09-15T20:44:55.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "TODOs:\r\n*   Open AI Tutor within Web Lab.\r\n*   Prompt AI Tutor to add the image you generated in Level 3 to `index.html`.\r\n*   Review the changes AI Tutor made to `index.html`.\r\n*   Prompt AI Tutor to restyle the page in `index.html` and `style.css` to match the look and feel of the image.\r\n*   Review the changes AI Tutor made to `style.css` and `index.html`.",
+    "project_template_level_name": "scottsdale-erik-template-website-builder",
+    "encrypted_exemplar_sources": "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\nvIbp8SargrY=\n",
+    "generate_outline": "Return to Web Lab and add the image generated in Level 3. Ask AI Tutor to restyle the page to match the image's look and feel.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:44:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:45:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:45:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:45:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:52:39 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

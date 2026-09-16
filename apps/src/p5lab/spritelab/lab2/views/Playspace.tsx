@@ -352,10 +352,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           screen readers, so anything to be read must sit beside it. */}
       {mode === 'play' && (
         <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
-          Arrow keys move left and right. Space jumps. The game answers in
-          sound: footsteps while you walk, and a tone that follows your height —
-          a jump slides it up and back, and where it ends tells you how far you
-          fell.
+          Left and right arrows move. Space or the up arrow jumps. The game
+          answers in sound: footsteps while you walk, and a tone that follows
+          your height — a jump slides it up and back, and where it ends tells
+          you how far you fell.
         </p>
       )}
     </div>
