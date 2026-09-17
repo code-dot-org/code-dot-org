@@ -82,6 +82,44 @@ class UserLevelsController < ApplicationController
     return render json: {response_count: response_count, num_students: section.students.count}, status: :ok
   end
 
+  # GET /user_levels/adaptive_state/:script_id/:level_id
+  # The current user's saved Adaptive player state for the level, or null
+  # when they have never saved any.
+  def get_adaptive_state
+    user_level = UserLevel.find_by(user_id: current_user.id, script_id: params[:script_id], level_id: params[:level_id])
+    render json: {state: user_level&.adaptive_state}
+  end
+
+  # The properties column is text(65535) and also carries locale data,
+  # so cap the state well below the column limit.
+  MAX_ADAPTIVE_STATE_BYTES = 32_000
+
+  # PUT /user_levels/adaptive_state/:script_id/:level_id
+  # Body: {"state": {...}}. Replaces the current user's saved state for the
+  # level. Only the state is written; best_result stays with the milestone
+  # path, so saving state never marks the level attempted or passed.
+  def update_adaptive_state
+    script = Unit.get_from_cache(params[:script_id], raise_exceptions: false)
+    return head :not_found unless script
+    level = Level.find_by(id: params[:level_id])
+    return head :not_found unless level.is_a?(Adaptive)
+    return head :not_found unless level.script_levels.exists?(script_id: script.id)
+    return head :payload_too_large if request.raw_post.bytesize > MAX_ADAPTIVE_STATE_BYTES
+
+    state = JSON.parse(request.raw_post)['state']
+    return head :bad_request unless state.is_a?(Hash)
+
+    # A milestone post for the same level may create the row concurrently.
+    Retryable.retryable on: ActiveRecord::RecordNotUnique do
+      user_level = UserLevel.where(user_id: current_user.id, script_id: script.id, level_id: level.id).first_or_initialize
+      user_level.adaptive_state = state
+      user_level.save!
+    end
+    head :no_content
+  rescue JSON::ParserError
+    head :bad_request
+  end
+
   private def set_user_level
     return unless params[:id]
     @user_level = UserLevel.find(params[:id])

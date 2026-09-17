@@ -52,6 +52,11 @@ class UserLevel < ApplicationRecord
 
   AUTOLOCK_PERIOD = 1.day
 
+  # Player state for an Adaptive level (position, answers, completion).
+  # Opaque to the server; the client owns the shape. Shares the JSON
+  # properties column that LevelProgressable already declares as a store.
+  store_accessor :properties, :adaptive_state
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :user, optional: true
