@@ -609,6 +609,46 @@ Resources:
                 Value: <%=environment%>-dashboard-cdn/
               - Name: suffix
                 Value: .gz
+<% if stack_name == 'DATA-production' -%>
+  # These groups collect logs across environments and must outlive individual application stacks.
+  AdhocSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: adhoc-syslog
+      RetentionInDays: 90
+  StagingSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: staging-syslog
+      RetentionInDays: 90
+  TestSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: test-syslog
+      RetentionInDays: 545
+  LevelbuilderSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: levelbuilder-syslog
+      RetentionInDays: 545
+      DeletionProtectionEnabled: true
+  ProductionSyslog:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      LogGroupName: production-syslog
+      RetentionInDays: 1096
+      DeletionProtectionEnabled: true
+<% end -%>
   AuditLogs:
     Type: AWS::Logs::LogGroup
     Properties:
