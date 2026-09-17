@@ -284,14 +284,6 @@ Resources:
       FromPort: 3306
       ToPort: 3306
       IpProtocol: tcp
-  DBSecurityGroupIngressDMS:
-    Type: AWS::EC2::SecurityGroupIngress
-    Properties:
-      GroupId: {Ref: DBSecurityGroup}
-      SourceSecurityGroupId: {Ref: DMSSecurityGroup}
-      FromPort: 3306
-      ToPort: 3306
-      IpProtocol: tcp
   DBSubnetGroup:
     Type: AWS::RDS::DBSubnetGroup
     Properties:
@@ -312,33 +304,6 @@ Resources:
           FromPort: 5439
           ToPort: 5439
           CidrIp: 0.0.0.0/0
-  DMSSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Outbound database access for DMS replication instance.
-      VpcId: {Ref: VPC}
-      SecurityGroupEgress:
-        - IpProtocol: tcp
-          FromPort: 3306
-          ToPort: 3306
-          DestinationSecurityGroupId: {Ref: DBSecurityGroup}
-        - IpProtocol: tcp
-          FromPort: 5439
-          ToPort: 5439
-          DestinationSecurityGroupId: {Ref: RedshiftSecurityGroup}
-        - Description: Permit Replication Instance to store intermediate data in S3.
-          IpProtocol: tcp
-          FromPort: 443
-          ToPort: 443
-          # Managed prefix list for AWS S3 in us-east-1
-          # https://docs.aws.amazon.com/vpc/latest/userguide/working-with-aws-managed-prefix-lists.html
-          DestinationPrefixListId: pl-63a5400a
-  DMSSubnetGroup:
-    Type: AWS::DMS::ReplicationSubnetGroup
-    Properties:
-      ReplicationSubnetGroupDescription: DMS Private Subnet Group.
-      ReplicationSubnetGroupIdentifier: VPC-DMSSubnetGroup
-      SubnetIds: <%=availability_zone_suffixes.map{|az| {Ref: "Subnet#{az}"}}.to_json%>
 Outputs:
   VpcId:
     Description: VPC ID
@@ -388,14 +353,6 @@ Outputs:
     Description: Security group for EFS
     Value: {'Fn::GetAtt': [EFSSecurityGroup, GroupId]}
     Export: {Name: !Sub "${AWS::StackName}-EFSSecurityGroup"}
-  DMSSubnetGroup:
-    Description: Subnet group for DMS
-    Value: !Ref DMSSubnetGroup
-    Export: {Name: !Sub "${AWS::StackName}-DMSSubnetGroup"}
-  DMSSecurityGroup:
-    Description: Security group for DMS
-    Value: !Ref DMSSecurityGroup
-    Export: {Name: !Sub "${AWS::StackName}-DMSSecurityGroup"}
   DaemonSecurityGroup:
     Description: Security group for Daemon
     Value: !Ref DaemonSecurityGroup
