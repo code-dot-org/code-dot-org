@@ -78,7 +78,7 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('0 questions')).toBeInTheDocument();
   });
 
-  it('lists each placed question with its type, name, and stem', () => {
+  it('lists each placed question with its name and stem', () => {
     renderWorkspace({
       questions: [
         question(),
@@ -91,7 +91,6 @@ describe('QuizBuilderWorkspace', () => {
     });
 
     expect(screen.getByText('2 questions')).toBeInTheDocument();
-    expect(screen.getAllByText('Multiple choice')).toHaveLength(2);
     expect(
       screen.getByText('JavaScript variable fundamentals')
     ).toBeInTheDocument();
@@ -99,6 +98,25 @@ describe('QuizBuilderWorkspace', () => {
       screen.getByText('What is a variable in JavaScript?')
     ).toBeInTheDocument();
     expect(screen.getByText('MVC frameworks')).toBeInTheDocument();
+  });
+
+  it('opens a newly created question directly into editing', async () => {
+    // Mirrors what the real hook does: a create appends a new question to
+    // `questions` and resolves with its id. The mocked hook's return value
+    // has to change too, so the appended question is actually there for
+    // the workspace to expand.
+    const createQuestion = jest.fn().mockImplementation(async () => {
+      mockUseQuizBuilderQuestions.mockReturnValue({
+        ...BASE_STATE,
+        questions: [question(), question({id: 2})],
+        createQuestion,
+      });
+      return 2;
+    });
+    renderWorkspace({questions: [question()], createQuestion});
+
+    fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
+    await screen.findByRole('tab', {name: 'Question'});
   });
 
   it('calls createQuestion when the create button is clicked', () => {
@@ -122,5 +140,34 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByRole('alert')).toHaveTextContent(
       'Something went wrong.'
     );
+  });
+
+  it('moves the server error onto the expanded card instead of the top banner', () => {
+    renderWorkspace({
+      questions: [question()],
+      error: 'Something went wrong.',
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+
+    // Still shown exactly once - on the card now open, not duplicated at
+    // the top where it's easy to miss while editing further down the page.
+    expect(screen.getAllByRole('alert')).toHaveLength(1);
+  });
+
+  it('collapses the previously expanded question when another is opened', () => {
+    renderWorkspace({
+      questions: [
+        question(),
+        question({id: 2, questionName: 'MVC frameworks'}),
+      ],
+    });
+
+    const editButtons = screen.getAllByRole('button', {name: 'Edit question'});
+    fireEvent.click(editButtons[0]);
+    expect(screen.getAllByRole('tab', {name: 'Question'})).toHaveLength(1);
+
+    fireEvent.click(editButtons[1]);
+    expect(screen.getAllByRole('tab', {name: 'Question'})).toHaveLength(1);
   });
 });
