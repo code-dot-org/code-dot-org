@@ -5,8 +5,6 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     @client = LangfuseClientHelper::Client.new('sk-lf-test', 'pk-lf-test')
   end
 
-  # Captures the single HTTParty.post the export makes and returns the URL, the
-  # request options and the decoded OTLP body.
   def capture_export(**overrides)
     captured = nil
     HTTParty.stubs(:post).with do |url, options|
@@ -40,7 +38,6 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     body.dig('resourceSpans', 0, 'scopeSpans', 0, 'spans')
   end
 
-  # Returns a span's attributes as a name => unwrapped value hash.
   def attributes_of(span)
     span['attributes'].to_h do |attribute|
       value = attribute['value']

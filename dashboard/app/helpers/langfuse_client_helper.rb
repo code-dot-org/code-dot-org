@@ -1,15 +1,8 @@
 require 'erb'
 include ERB::Util
 
-# HTTP client for the Langfuse public API.
-#
-# Tracing data goes to the OTLP/HTTP endpoint as OpenTelemetry spans. Langfuse
-# v4 has no separate trace record: a trace is just the set of spans sharing a
-# trace id, and each span is written once and never updated. Trace-wide
-# attributes are therefore repeated on every span, because v4 queries
-# observations directly and cannot see attributes that sit only on the root.
-#
-# Prompt and dataset-item calls are ordinary REST and are unaffected by v4.
+# Langfuse v4 has no trace record: a trace is the spans sharing a trace id, and
+# trace-wide attributes count only where they are repeated on each span.
 module LangfuseClientHelper
   class Client
     attr_accessor :api_key
@@ -17,8 +10,7 @@ module LangfuseClientHelper
     LANGFUSE_URL = "https://us.cloud.langfuse.com/api/public"
     OTLP_TRACES_URL = "#{LANGFUSE_URL}/otel/v1/traces".freeze
 
-    # Without this header Langfuse routes spans through the legacy pipeline and
-    # they take up to 10 minutes to appear.
+    # Without the version header, spans take up to 10 minutes to appear.
     OTLP_HEADERS = {
       "Content-Type" => "application/json",
       "x-langfuse-ingestion-version" => "4",
@@ -63,8 +55,7 @@ module LangfuseClientHelper
       response
     end
 
-    # Send completed OTLP spans to Langfuse. Spans are immutable once accepted:
-    # re-sending a span id duplicates the observation rather than updating it.
+    # Re-sending a span id duplicates the observation rather than updating it.
     def export_spans(spans)
       HTTParty.post(
         OTLP_TRACES_URL,
@@ -87,10 +78,8 @@ module LangfuseClientHelper
       nil
     end
 
-    # Export a trace holding a root observation and one generation beneath it.
-    # The root carries the overall input and output, which is what
-    # observation-level evaluators read; they do not see sibling or child spans.
-    # Only the user's message text should be passed as input (not system prompts).
+    # Input and output go on the root because observation evaluators see only the
+    # span they match. Pass the user's message as input, never the system prompt.
     def export_generation_trace(trace_name:, generation_name:, model:, user_id: nil, input: nil, output: nil, usage: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil, prompt_name: nil, prompt_version: nil)
       trace_id = SecureRandom.hex(16)
       root_span_id = SecureRandom.hex(8)
@@ -144,10 +133,8 @@ module LangfuseClientHelper
     private def trace_attributes(trace_name:, user_id:, tags:, metadata:)
       attributes = [
         otlp_attribute("langfuse.trace.name", trace_name),
-        # Every rack env shares one Langfuse project, so without this, adhoc and
-        # development traffic is indistinguishable from production. Langfuse's
-        # UI filter defaults to the "default" environment, which nothing here
-        # sends to any more.
+        # Every rack env shares one project. Nothing writes "default" after this,
+        # so Langfuse views pinned to that environment need repointing.
         otlp_attribute("langfuse.environment", CDO.rack_env.to_s),
       ]
       attributes << otlp_attribute("langfuse.user.id", user_id) if user_id
@@ -179,8 +166,6 @@ module LangfuseClientHelper
       {key: key, value: otlp_value(value)}
     end
 
-    # Langfuse only filters on top-level metadata keys, so every mapped value has
-    # to be a scalar or an array of scalars.
     private def otlp_value(value)
       case value
       when String then {stringValue: value}
