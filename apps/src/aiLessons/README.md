@@ -177,6 +177,10 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
   `dashboard/tmp/`. That's wiped on container restart and not shared
   across hosts. Anything beyond demo would move to ActiveRecord or
   object storage.
+- **LLM cost is unmetered.** Every Run and every checkpoint completion
+  triggers a tutor turn and a summary regeneration. A student running
+  their code 50 times generates 50 LLM calls. No batching, debouncing,
+  or rate limiting.
 - **Image GET endpoint skips auth.** Random hex filename acts as a
   capability token. Fine for demo; production would need signed URLs.
 - **No CSRF on the image GET / sources GET / progress GET.** Reads are
