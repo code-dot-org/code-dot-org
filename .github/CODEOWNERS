@@ -15,10 +15,6 @@
 # red-team #
 ############
 
-# Should Approve changes to
-# Database Migration Service (Redshift replication) configuration
-/aws/dms/                   @code-dot-org/red-team
-
 # Should be Informed of changes to
 # Redshift database SQL
 /aws/redshift/              @code-dot-org/red-team
