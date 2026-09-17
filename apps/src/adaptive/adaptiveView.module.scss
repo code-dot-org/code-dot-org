@@ -1,10 +1,1894 @@
-.container {
-  padding: 1rem;
-  height: 100%;
-  overflow: auto;
+// Hackathon AI Lessons styles.
+// Uses semantic design-system color tokens from
+// @code-dot-org/component-library-styles/colors.css.  The page sets
+// data-theme="Light" on document.documentElement when it mounts.
+
+// Note: we don't hide the lab2 ResourcePanel via CSS — instead, EmbeddedLab
+// dispatches setIsStandaloneCollapsed(true) on every lab mount so the panel
+// renders in its existing collapsed-sidebar state.  The student can still
+// expand it manually if they want the lab's settings/version-history UI.
+
+%button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  line-height: 1.2;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
-.dump {
+.primaryButton {
+  @extend %button-base;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover:not(:disabled) {
+    background: var(--background-brand-teal-strong);
+  }
+}
+
+.secondaryButton {
+  @extend %button-base;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border-color: var(--borders-neutral-primary);
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: var(--text-brand-teal-primary);
+  cursor: pointer;
+  padding: 4px 6px;
+  font-size: 14px;
+  text-decoration: underline;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.muted {
+  color: var(--text-neutral-tertiary);
+}
+
+.error {
+  color: var(--text-error-primary);
+  background: var(--background-error-extra-light);
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+// ---- Author / list page ----
+
+%page-base {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-primary);
+  min-height: 100vh;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.authorPage {
+  @extend %page-base;
+}
+
+.listPage {
+  @extend %page-base;
+}
+
+.authorHeader {
+  margin-bottom: 24px;
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+  }
+}
+
+.formSection {
+  background: var(--background-neutral-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid var(--borders-neutral-light);
+
+  h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-neutral-tertiary);
+    margin: 24px 0 8px;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  min-width: 0;
+
+  > span {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-neutral-secondary);
+  }
+
+  textarea,
+  input,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+textarea,
+input[type='text'] {
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  max-width: 100%;
+
+  &:focus {
+    outline: none;
+    border-color: var(--borders-brand-teal-primary);
+  }
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.checkpointList {
+  list-style: decimal inside;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkpointInput {
+  // The card opts into the design system's Dark theme via
+  // data-theme="Dark" on its wrapper, so all the semantic tokens below
+  // resolve to their dark-mode values automatically.  No need to reach
+  // for `*-inverse` / `*-octonary` slots by hand.
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  padding: 24px 28px;
+  border-radius: 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  box-shadow: 0 12px 32px -16px rgb(0 0 0 / 35%);
+  list-style-position: outside;
+  min-width: 0;
+  // Animate a small fade + slide-in when the parent carousel switches
+  // cards, so paging through checkpoints/slides feels horizontal rather
+  // than a hard swap.
+  animation: ai-lessons-carousel-slide 180ms ease-out;
+
+  > .field:last-child {
+    margin-bottom: 0;
+  }
+
+  // Field labels: small uppercase tag with an icon on the left.
+  .field > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-neutral-tertiary);
+  }
+
+  // Inputs and textareas inside the card resolve through the same
+  // dark-mode tokens, so they read coherently against the dark frame
+  // without us having to pick separate colours.
+  textarea,
+  input[type='text'] {
+    background: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+    border-color: var(--borders-neutral-primary);
+  }
+
+  // Title input is the marquee field on the card — give it some heft.
+  .titleField input[type='text'] {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 18px;
+  }
+
+  // Make the spacing under the title a bit looser than the rest.
+  .titleField {
+    margin-bottom: 22px;
+  }
+}
+
+.checkpointBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  text-transform: uppercase;
+}
+
+.sectionIcon {
+  font-size: 14px;
+  width: 14px;
+  text-align: center;
+}
+
+.sectionIconSuccess {
+  color: var(--text-success-primary);
+}
+
+// Trailing info-icon next to a section label.  Wrapped in <WithTooltip>;
+// keep it visually subtle so the label still reads first.
+.sectionInfo {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  font-size: 12px;
+  color: var(--text-neutral-tertiary);
+  cursor: help;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    color: var(--text-neutral-primary);
+  }
+}
+
+@keyframes ai-lessons-carousel-slide {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// One-at-a-time pager for the checkpoint cards and (within a panels
+// checkpoint) the slide cards.  The card itself is rendered inside; the
+// carouselNav row provides the prev/next + position indicator.
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.carouselNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--borders-neutral-light);
+}
+
+.carouselPosition {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-neutral-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.checkpointRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  strong {
+    flex: 0 0 auto;
+    color: var(--text-neutral-tertiary);
+  }
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.previewSection {
+  background: var(--background-neutral-secondary);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--borders-neutral-light);
+}
+
+.previewSummary {
+  h3 {
+    margin: 0 0 8px;
+  }
+  ol {
+    padding-left: 24px;
+    li {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.codeBlock {
+  background: var(--background-neutral-octonary);
+  color: var(--text-neutral-white-fixed);
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  overflow: auto;
+  max-height: 360px;
+}
+
+// ---- List page ----
+
+.lessonList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lessonRow {
+  background: var(--background-neutral-primary);
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+// Title link + status badge.  Scoped so the MUI-styled action buttons
+// below don't inherit the title color.
+.lessonTitleLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+
+  a {
+    color: var(--text-brand-teal-primary);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.statusNotStarted {
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-tertiary);
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+.statusInProgress {
+  background: var(--background-brand-teal-extra-light);
+  color: var(--text-brand-teal-primary);
+  border: 1px solid var(--borders-brand-teal-light);
+}
+
+.statusCompleted {
+  background: var(--background-success-primary);
+  color: var(--text-neutral-white-fixed);
+  border: 1px solid transparent;
+}
+
+.lessonRowActions {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.lessonStandards {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+
+  > strong {
+    color: var(--text-neutral-primary);
+  }
+
+  ul {
+    list-style: none;
+    margin: 6px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  li strong {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.standardCheck {
+  flex: none;
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--background-success-primary, #2e7d32);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.lessonAdaptivity {
+  margin-top: 10px;
+  font-size: 13px;
+
+  > strong {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.adaptivityPills {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+// Shared by the list page (anchor pills) and the Controls dialog
+// (button pills) — keep it element-agnostic.
+%adaptivity-pill-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.adaptivityPill {
+  @extend %adaptivity-pill-base;
+
+  border: 1px solid var(--borders-neutral-primary);
+  color: var(--text-neutral-secondary);
+  background: transparent;
+
+  &:hover {
+    border-color: var(--borders-brand-teal-primary);
+    color: var(--text-brand-teal-primary);
+  }
+}
+
+.adaptivityPillDefault {
+  @extend %adaptivity-pill-base;
+
+  border: 1px solid var(--borders-brand-teal-primary);
+  color: var(--text-brand-teal-primary);
+  background: var(--background-brand-teal-extra-light, transparent);
+  font-weight: 600;
+}
+
+.adaptivityDefaultTag {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-neutral-tertiary);
+}
+
+.adaptivityPillDisabled {
+  @extend %adaptivity-pill-base;
+
+  border: 1px dashed var(--borders-neutral-primary);
+  color: var(--text-neutral-tertiary);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// ---- Teacher progress page ----
+
+.studentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.studentLessons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.studentLessonRow {
+  background: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-light);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.studentLessonHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+
+  a {
+    color: var(--text-brand-teal-primary);
+    text-decoration: none;
+  }
+}
+
+.studentSummary {
+  margin: 6px 0 0;
+  color: var(--text-neutral-primary);
+  line-height: 1.45;
+}
+
+// ---- Student page ----
+
+.studentPage {
+  // Sized at runtime to fill the viewport area below whatever studio chrome
+  // is rendered above our React root.  StudentPage measures its own top
+  // offset on mount and sets `height: calc(100vh - <offset>)` inline so the
+  // studio header stays visible and our content fills the remainder.
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  width: 100%;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.tutorPanel {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-neutral-secondary);
+  border-right: 1px solid var(--borders-neutral-primary);
+  overflow: hidden;
+  // Without explicit min-height the column children can push the panel
+  // taller than its grid cell and the header scrolls off the top.
+  min-height: 0;
+  min-width: 0;
+  height: 100%;
+}
+
+.tutorHeader {
+  flex: 0 0 auto;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.lessonTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.lessonTitle {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+// ---- Demo settings dialog ----
+
+.demoSettingsDialog {
+  padding: 20px 24px;
+  max-width: 500px;
+}
+
+.demoSettingsTitle {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: var(--text-neutral-primary);
+}
+
+.demoSettingsSection {
+  margin-top: 16px;
+  color: var(--text-neutral-primary);
+
+  > strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+}
+
+.demoSettingsRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.demoSettingsNote {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-neutral-tertiary);
+}
+
+.demoSettingsFooter {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
+// ---- AI log dialog ----
+
+.headerIconRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.aiLogDialog {
+  padding: 20px 24px;
+  width: min(860px, 92vw);
+  max-width: none;
+}
+
+.aiLogList {
+  margin-top: 12px;
+  max-height: 62vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 4px;
+}
+
+.aiLogStepMarker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-neutral-tertiary);
+
+  // Rule line filling the rest of the row.
+  &::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--borders-neutral-primary);
+  }
+}
+
+.aiLogRow {
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
+  background: var(--background-neutral-primary);
+}
+
+.aiLogRowHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  color: var(--text-neutral-primary);
+  text-align: left;
+}
+
+.aiLogChevron {
+  font-size: 11px;
+  color: var(--text-neutral-tertiary);
+  width: 12px;
+}
+
+.aiLogAgentIcon {
+  color: var(--text-brand-teal-primary);
+  width: 16px;
+  text-align: center;
+}
+
+.aiLogLabel {
+  font-weight: 600;
+}
+
+.aiLogModel {
+  flex: 1;
+  font-size: 11px;
+  color: var(--text-neutral-tertiary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.aiLogStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  flex: none;
+}
+
+.aiLogStatusPending {
+  color: var(--text-neutral-tertiary);
+}
+
+.aiLogStatusSuccess {
+  color: var(--text-success-primary);
+}
+
+.aiLogStatusError {
+  color: var(--text-error-primary);
+}
+
+.aiLogDetail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 4px 12px 12px 34px;
+  border-top: 1px solid var(--borders-neutral-light);
+}
+
+.aiLogColumnTitle {
+  margin: 8px 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-neutral-secondary);
+}
+
+.aiLogFieldTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-neutral-tertiary);
+}
+
+// Expand/collapse caret next to a truncating section title.
+.aiLogCaret {
+  background: none;
+  border: none;
+  padding: 0 4px;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1;
+  color: var(--text-neutral-tertiary);
+
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.aiLogText {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  line-height: 1.45;
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+.aiLogTextError {
+  color: var(--text-error-primary);
+}
+
+// ---- AI log review page (/ai_lessons/ailogs) ----
+
+.aiLogReviewEntry {
+  margin-bottom: 12px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
+  padding: 12px 16px;
+  background: var(--background-neutral-primary);
+
+  > summary {
+    cursor: pointer;
+    font-size: 16px;
+  }
+}
+
+.aiLogReviewEntryTitle {
+  font-weight: 700;
+}
+
+.aiLogReviewSession {
+  margin-left: 14px;
+}
+
+.aiLogSessionHeader {
+  margin: 14px 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-neutral-secondary);
+  cursor: pointer;
+}
+
+.aiLogReviewRows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.demoSettingsStepRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// The step dropdown sits between the prev/next arrows and doubles as the
+// current-step readout.
+.demoSettingsStepLabel {
+  min-width: 0;
+}
+
+// MUI's default disabled color is black-based and vanishes in dark mode;
+// the semantic token flips with the theme.  The descendant selector
+// out-specifies .MuiIconButton-root.Mui-disabled.
+.demoSettingsStepRow .stepArrow:disabled {
+  color: var(--text-neutral-disabled);
+}
+
+.checkpointMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-neutral-tertiary);
+  margin-top: 4px;
+
+  & > span {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.demoNavArrow {
+  background: none;
+  border: none;
+  color: var(--text-neutral-tertiary);
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 16px;
+  line-height: 1;
+  flex: 0 0 auto;
+
+  &:hover:not(:disabled) {
+    color: var(--text-brand-teal-primary);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+// The tutor's opening (welcome + instruction) — pinned above the
+// scrolling transcript so the student always sees the current
+// call-to-action. Styled as instructional content (not a chat bubble),
+// distinct from the back-and-forth chat below.
+.pinnedOpening {
+  flex: 0 0 auto;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pinnedOpeningWelcome {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-neutral-secondary);
+}
+
+.pinnedOpeningInstruction {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-neutral-primary);
+}
+
+.pinnedOpeningIcon {
+  color: var(--text-brand-teal-primary);
+  font-size: 15px;
+  margin-right: 8px;
+  vertical-align: -1px;
+}
+
+.transcript {
+  flex: 1 1 auto;
+  // Required alongside `flex: 1` for the child to actually constrain its
+  // own height and let overflow-y scroll instead of expanding the parent.
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bubble {
+  padding: 10px 12px;
+  border-radius: 10px;
+  max-width: 90%;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.tutorBubble {
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  align-self: flex-start;
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+.studentBubble {
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  align-self: flex-end;
+}
+
+.thinking {
+  color: var(--text-neutral-tertiary);
+  font-style: italic;
+  font-size: 13px;
+}
+
+.composer {
+  flex: 0 0 auto;
+  padding: 12px 16px 16px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--background-neutral-primary);
+}
+
+// "Continue" CTA shown once the tutor has greenlit the checkpoint.
+// Glows + pulses + the text shimmers — deliberately loud so the
+// student notices it the moment the tutor advances.
+.continueButton {
+  // ease-out so each pulse decelerates as it spreads — feels like a
+  // ripple moving away rather than a heartbeat.
+  animation: continue-pulse 1.6s ease-out infinite;
+
+  // The loudness is earned only when the button is pressable; a glowing
+  // disabled button ("Preparing your code…") reads as a broken promise.
+  &:disabled {
+    animation: none;
+
+    .shimmerText {
+      animation: none;
+      background: none;
+      background-clip: unset;
+      -webkit-background-clip: unset;
+      color: inherit;
+      text-shadow: none;
+    }
+  }
+}
+
+.shimmerText {
+  // A moving light-coloured highlight sweeps across the text.
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 70%) 0%,
+    rgb(255 255 255 / 100%) 45%,
+    rgb(255 255 255 / 100%) 55%,
+    rgb(255 255 255 / 70%) 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 1.6s linear infinite;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgb(255 255 255 / 35%);
+}
+
+@keyframes continue-pulse {
+  // The radiating ring expands outward and fades to transparent; the
+  // loop snap back from 100% (invisible) to 0% (small) is instant and
+  // unseen, so the motion reads as outward-only.
+  0% {
+    box-shadow:
+      0 0 16px 2px rgb(var(--brand-teal-rgb, 0 173 188) / 55%),
+      0 0 0 0 rgb(var(--brand-teal-rgb, 0 173 188) / 75%);
+  }
+  100% {
+    box-shadow:
+      0 0 16px 2px rgb(var(--brand-teal-rgb, 0 173 188) / 55%),
+      0 0 0 14px rgb(var(--brand-teal-rgb, 0 173 188) / 0%);
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.composerActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.workShare {
+  background: var(--background-neutral-secondary);
+  border-radius: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  font-size: 13px;
+
+  summary {
+    cursor: pointer;
+    color: var(--text-neutral-tertiary);
+  }
+
+  textarea {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
+
+.labArea {
+  position: relative;
+  background: var(--background-neutral-primary);
+  overflow: hidden;
+  // DialogManager wraps its children in an extra unstyled <div>.  Without
+  // forcing that wrapper to stretch, lab views that rely on a definite
+  // parent height (Music's Blockly workspace in particular) collapse to
+  // zero.  Make the lab area a flex column and stretch its direct
+  // children to fill.
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    flex: 1 1 auto;
+    min-height: 0;
+    min-width: 0;
+  }
+}
+
+.labMessage {
+  padding: 32px;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-secondary);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.panelsView {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--background-neutral-secondary);
+}
+
+.panelStage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.panelCaption {
+  font-size: 28px;
+  line-height: 1.4;
+  max-width: 760px;
+  text-align: center;
+  color: var(--text-neutral-primary);
+}
+
+.panelControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+
+  button {
+    @extend %button-base;
+    background: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+    border: 1px solid var(--borders-neutral-primary);
+  }
+}
+
+.panelCounter {
+  color: var(--text-neutral-tertiary);
+  font-size: 13px;
+}
+
+.celebrate {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  padding: 24px;
+
+  h1 {
+    font-size: 48px;
+    margin: 0 0 16px;
+  }
+
+  a {
+    color: var(--text-brand-teal-primary);
+  }
+}
+
+
+
+// Interactive question surface (QuestionFlow): one big bold question at
+// a time in the main area, with entrance/exit transitions between
+// questions.  Timings must stay in sync with EXIT_TRANSITION_MS in
+// QuestionFlow.tsx.
+.questionFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 48px;
+  gap: 28px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.questionProgress {
+  display: flex;
+  gap: 8px;
+
+  // Dots are buttons: visited ones navigate, unreached ones are inert.
+  button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--borders-neutral-primary);
+    cursor: pointer;
+    transition: background 200ms ease, transform 200ms ease;
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &:not(:disabled):hover {
+      transform: scale(1.35);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--background-brand-teal-primary);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.questionDotActive {
+  background: var(--background-brand-teal-primary) !important;
+  transform: scale(1.35);
+}
+
+.questionDotDone {
+  background: var(--background-brand-teal-primary) !important;
+  opacity: 0.45;
+}
+
+// The per-question card that animates in and out.
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.questionEnter {
+  animation: question-enter 320ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+.questionExit {
+  animation: question-exit 200ms ease-in both;
+}
+
+@keyframes question-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes question-exit {
+  to {
+    opacity: 0;
+    transform: translateY(-28px) scale(0.98);
+  }
+}
+
+.questionPrompt {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 720px;
+  text-align: center;
+  margin: 0;
+}
+
+// Options render as chips in a responsive grid: as many columns as fit
+// at ~210px each, reflowing with the container (a two-option question
+// sits side by side on a laptop, everything stacks on narrow screens).
+// Grid rows keep chips in the same row equal-height.
+.questionOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  width: min(720px, 100%);
+  justify-items: stretch;
+
+  button {
+    @extend %button-base;
+    font-size: 17px;
+    padding: 14px 20px;
+    border-radius: 20px;
+    background: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+    border: 2px solid var(--borders-neutral-primary);
+    text-align: center;
+    display: flex;
+    // Column so the Suggested badge stacks under the label instead of
+    // squeezing it sideways.
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: border-color 150ms ease, transform 150ms ease,
+      box-shadow 150ms ease;
+
+    &:hover:not(:disabled) {
+      border-color: var(--background-brand-teal-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgb(0 0 0 / 18%);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--background-brand-teal-primary);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
+
+.optionsShake {
+  animation: options-shake 360ms ease both;
+}
+
+@keyframes options-shake {
+  15% {
+    transform: translateX(-8px);
+  }
+
+  35% {
+    transform: translateX(7px);
+  }
+
+  55% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.questionOptionSelected {
+  border-color: var(--background-brand-teal-primary) !important;
+  background: var(--background-brand-teal-secondary, rgb(0 128 128 / 15%)) !important;
+}
+
+.questionOptionCorrect {
+  border-color: #2e7d32 !important;
+  background: rgb(46 125 50 / 18%) !important;
+}
+
+.questionOptionWrong {
+  border-color: #c62828 !important;
+  background: rgb(198 40 40 / 14%) !important;
+}
+
+.questionTextarea {
+  width: min(640px, 100%);
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    border-color: var(--background-brand-teal-primary);
+  }
+}
+
+// Pill shape for the MUI submit buttons under each question.  The parent
+// selector out-specifies MUI's emotion classes without leaning on
+// stylesheet order.
+.questionFlow .pillButton {
+  border-radius: 999px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.questionScale {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(560px, 100%);
+
+  input[type='range'] {
+    flex: 1;
+    accent-color: var(--background-brand-teal-primary);
+  }
+}
+
+.questionScaleLabel {
+  font-size: 14px;
+  color: var(--text-neutral-tertiary);
+  max-width: 120px;
+  text-align: center;
+}
+
+.questionScaleValue {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.questionFeedbackCorrect {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-success, #2e7d32);
+  animation: feedback-pop 260ms cubic-bezier(0.2, 0.8, 0.3, 1.4) both;
+}
+
+.questionFeedbackIncorrect {
+  font-size: 18px;
+  color: var(--text-danger, #c62828);
+  animation: feedback-pop 200ms ease both;
+}
+
+@keyframes feedback-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Kill all question-surface motion for users who ask for less of it.
+@media (prefers-reduced-motion: reduce) {
+  .questionEnter,
+  .questionExit,
+  .optionsShake,
+  .questionFeedbackCorrect,
+  .questionFeedbackIncorrect {
+    animation: none;
+  }
+
+  .questionProgress button,
+  .questionOptions button {
+    transition: none;
+  }
+
+  .questionOptions button:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+// Build-with-AI controls in the tutor sidebar (BuildPartnerPanel).
+.buildPartner {
+  border-top: 1px solid var(--borders-neutral-primary);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buildPartnerTitle {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-neutral-tertiary);
+}
+
+.buildPartnerPreset {
+  @extend %button-base;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  text-align: start;
+
+  &:hover:not(:disabled) {
+    border-color: var(--background-brand-teal-primary);
+  }
+}
+
+.buildPartnerComposer {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+
+  textarea {
+    flex: 1;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--borders-neutral-primary);
+    background: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+    resize: vertical;
+  }
+
+  button {
+    @extend %button-base;
+    background: var(--background-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
+    border-radius: 10px;
+    padding: 8px 16px;
+  }
+}
+
+.buildPartnerResult {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.buildPartnerFiles {
+  font-size: 12px;
+  color: var(--text-neutral-tertiary);
+}
+
+.buildPartnerActions {
+  display: flex;
+  gap: 8px;
+
+  button {
+    @extend %button-base;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
+    border: 1px solid var(--borders-neutral-primary);
+
+    &:first-child {
+      background: var(--background-brand-teal-primary);
+      color: var(--text-neutral-white-fixed);
+      border: 0;
+    }
+  }
+}
+
+// Advisory "Suggested" pill, stacked under the option label.
+.suggestedBadge {
+  display: block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  white-space: nowrap;
+}
+
+// Project checklist in the tutor sidebar (ChecklistPanel).
+.checklistPanel {
+  border-top: 1px solid var(--borders-neutral-primary);
+  padding: 12px 16px;
+
+  ul {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-neutral-secondary);
+
+    > span {
+      color: var(--text-neutral-tertiary);
+    }
+  }
+}
+
+.checklistTitle {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-neutral-tertiary);
+}
+
+.checklistDone {
+  color: var(--text-neutral-tertiary) !important;
+  text-decoration: line-through;
+
+  > span {
+    color: var(--text-success, #2e7d32) !important;
+    text-decoration: none;
+  }
+}
+
+// --- Skill-tree hub (walking skeleton; rings land in the UI phase) ---
+
+.skillHub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 48px 24px;
+  height: 100%;
+  overflow-y: auto;
+  text-align: center;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-secondary);
+  animation: question-enter 320ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+
+  h2 {
+    margin: 0;
+    color: var(--text-neutral-primary);
+  }
+}
+
+.skillHubPaths {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.skillHubPath {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 12px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--background-brand-teal-primary);
+  }
+}
+
+.skillHubPathCount {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.skillHubPathTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.skillHubPathObjective {
+  font-size: 12px;
+  color: var(--text-neutral-secondary);
+}
+
+// "Back to hub" affordance shown while inside a skill path.  Becomes
+// the mini-ring progress header in the UI phase.
+.backToHub {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 16px;
+  background: none;
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-neutral-primary);
+    border-color: var(--background-brand-teal-primary);
+  }
+}
+
+.skillHubPathLocked {
+  opacity: 0.55;
+  cursor: not-allowed;
+
+  &:hover {
+    transform: none;
+    border-color: var(--borders-neutral-primary);
+  }
+}
+
+// --- Segmented progress rings (ProgressRing.tsx) ---
+
+.ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    display: block;
+    // Segments fill clockwise from 12 o'clock.
+    transform: rotate(0deg);
+  }
+}
+
+.ringSegment {
+  fill: none;
+  stroke: var(--borders-neutral-primary);
+  stroke-linecap: round;
+  transition: stroke 400ms ease;
+}
+
+.ringSegmentDone {
+  fill: none;
+  stroke: var(--background-brand-teal-primary);
+  stroke-linecap: round;
+  transition: stroke 400ms ease;
+}
+
+.ringCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skillHubPathCountDone {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-brand-teal-primary, var(--text-success-primary));
+}
+
+// Mini rings in the in-path header: the whole row is the back-to-hub
+// button; the current path's ring gets a subtle emphasis.
+.miniRing {
+  display: inline-flex;
+  opacity: 0.55;
+}
+
+.miniRingCurrent {
+  display: inline-flex;
+  border-radius: 50%;
+  outline: 2px solid var(--background-brand-teal-primary);
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ringSegment,
+  .ringSegmentDone {
+    transition: none;
+  }
+
+  .skillHub {
+    animation: none;
+  }
+}
+
+// Teacher roll-up: per-hub path rings on a student's lesson entry.
+.teacherHubRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.teacherHubTitle {
+  font-weight: 600;
+  color: var(--text-neutral-secondary);
+}
+
+.teacherHubPath {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-neutral-primary);
+}
+
+// Mastery verdict badges on teacher hub-path chips.  Hover shows the
+// judge's reasoning and any named gaps.
+.masteryBadge {
+  color: var(--text-success-primary);
+  font-weight: 600;
+  cursor: help;
+}
+
+.masteryBadgeGaps {
+  color: var(--text-warning-primary, var(--text-neutral-secondary));
+  font-weight: 600;
+  cursor: help;
+}
+
+// Full-adaptivity arc generation screen: shown in the main area while
+// the generator designs the student's personalized path.
+.arcGenerating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-neutral-primary);
+  background: var(--background-neutral-secondary);
+
+  // The standards block reuses the lesson-list styling; centered check
+  // rows read badly, so keep it left-aligned within the centered screen.
+  .lessonStandards {
+    text-align: left;
+    max-width: 560px;
+  }
+}
+
+.arcGeneratingTitle {
+  font-size: 22px;
+  font-weight: 700;
+  animation: arc-generating-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes arc-generating-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arcGeneratingTitle {
+    animation: none;
+  }
 }
