@@ -26,8 +26,7 @@ From `frontend/`:
 - **Drone** — both suites, against the build the PR makes, before the Cucumber
   tests. Runs `chromium` only. To add browsers, see the commit tags in
   [dashboard/test/ui/README.md](../../../dashboard/test/ui/README.md).
-- **DTT** — the functional suite in all three browsers, against test-studio, with
-  the Cucumber tests. Eyes runs only through GitHub Actions.
+- **DTT** — the functional suite in all three browsers, against test-studio. Visual diffs runs only on chromium against test-studio.
 - **DTT → GitHub Actions** (`dtt.yml` → `e2e-tests-ci.yml`) — both suites again,
   on GitHub runners, with nothing waiting for the result. Needs no CDO secrets
   and no local Rails build, so contributors and agents can run it too.
