@@ -53,7 +53,7 @@ class StudentWorkEvaluation < ApplicationRecord
 
   has_many :ai_interaction_feedbacks, as: :ai_interaction
 
-  VALID_TYPES = ['UserLevelSkillEvaluation', 'UserLevelEvaluation', 'SectionLevelEvaluation'].freeze
+  VALID_TYPES = ['UserLevelEvaluation', 'SectionLevelEvaluation'].freeze
 
   validates :type, inclusion: {in: VALID_TYPES}
 end

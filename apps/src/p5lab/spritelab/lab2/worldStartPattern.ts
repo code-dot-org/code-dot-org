@@ -4,17 +4,20 @@ import {useEffect} from 'react';
 
 import {countWorldCells} from './guideSteps';
 import {imageTypeFromCategories} from './imageGallery';
+import {imageNamedForRole} from './imageRoleDefaults';
 import {RuntimeAnimationList, Scene, Sources} from './types';
 import {createEmptyWorld, sceneGridSize, World, WorldCell} from './world';
 
 /**
  * Which image each pattern character draws: 'B' the block the student made
- * most recently, 'S' their first character. orderedKeys is newest-first,
+ * most recently, 'S' the sprite carrying spriteRole (the level's default
+ * sprite), else their first character. orderedKeys is newest-first,
  * because Sprite Lab prepends new animations.
  */
-export function patternCells(animations: RuntimeAnimationList): {
-  [char: string]: WorldCell;
-} {
+export function patternCells(
+  animations: RuntimeAnimationList,
+  spriteRole?: string
+): {[char: string]: WorldCell} {
   const {orderedKeys, propsByKey} = animations;
   const typeOf = (key: string) =>
     imageTypeFromCategories(propsByKey[key]?.categories);
@@ -23,11 +26,13 @@ export function patternCells(animations: RuntimeAnimationList): {
   if (blockKey) {
     cells.B = {image: propsByKey[blockKey].name, kind: 'block'};
   }
+  const roleName = imageNamedForRole(animations, 'sprite', spriteRole);
   const spriteKey = [...orderedKeys]
     .reverse()
     .find(key => typeOf(key) === 'sprite');
-  if (spriteKey) {
-    cells.S = {image: propsByKey[spriteKey].name, kind: 'sprite'};
+  const spriteName = roleName ?? (spriteKey && propsByKey[spriteKey].name);
+  if (spriteName) {
+    cells.S = {image: spriteName, kind: 'sprite'};
   }
   return cells;
 }
@@ -75,19 +80,21 @@ export function useWorldStartPattern({
   pinnedSceneId,
   enabled,
   animations,
+  spriteRole,
   updateSources,
 }: {
   pattern: string[] | undefined;
   pinnedSceneId: string | undefined;
   enabled: boolean;
   animations: RuntimeAnimationList;
+  spriteRole?: string;
   updateSources: (updater: (prev: Sources) => Sources) => void;
 }): void {
   useEffect(() => {
     if (!pattern?.length || !pinnedSceneId || !enabled) {
       return;
     }
-    const cellFor = patternCells(animations);
+    const cellFor = patternCells(animations, spriteRole);
     updateSources(prev => {
       const scenes: Scene[] = prev.scenes ?? [];
       const index = scenes.findIndex(scene => scene.id === pinnedSceneId);
@@ -102,5 +109,5 @@ export function useWorldStartPattern({
       next[index] = {...scenes[index], world};
       return {...prev, scenes: next};
     });
-  }, [pattern, pinnedSceneId, enabled, animations, updateSources]);
+  }, [pattern, pinnedSceneId, enabled, animations, spriteRole, updateSources]);
 }
