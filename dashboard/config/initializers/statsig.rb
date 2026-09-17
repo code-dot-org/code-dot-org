@@ -1,6 +1,5 @@
 require "cdo/statsig"
-# Statsig is initialized here for all environments. In managed
-# environments, it is also initialized in lib/cdo/app_server_hooks. This
-# guarantees Statsig has been initialized everywhere, and is available in all
-# worker threads.
+# Initialize Statsig in environments that use puma in Single mode (development environments). This is a no-op in
+# environments that use puma in cluster mode and that fork workers. Those initialize Statsig in the worker:
+# `Cdo::AppServerHooks.before_worker_boot`
 Cdo::StatsigInitializer.init

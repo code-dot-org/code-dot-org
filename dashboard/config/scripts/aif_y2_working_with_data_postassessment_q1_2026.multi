@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-postassessment-q1-2026'
+
+right 'Pose questions, collect data, and figure out what the data tells you.'
+wrong 'Pose questions, design surveys, and collect data.'
+wrong 'Pose questions, collect data, and publish the data.'
+wrong 'Pose questions, collect data, and build a dataset for a machine learning model.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which **best** describes the data analysis process?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: What is Data Analysis?
+MARKDOWN

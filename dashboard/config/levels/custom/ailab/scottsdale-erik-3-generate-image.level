@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-09-15T20:44:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "mode": "{\r\n  \"datasets\": [\r\n    \"shapes_v1_toy\"\r\n  ],\r\n  \"hideSelectLabel\": false,\r\n  \"hideSave\": true,\r\n  \"hideInstructionsOverlay\": false,\r\n  \"requireAccuracy\": 70\r\n}",
+    "dynamic_instructions": "{\r\n  \"selectDataset\": \"TODO: Select the Shapes V1 dataset.\",\r\n  \"dataDisplayLabel\": \"TODO: Choose a characteristic (e.g., 'Color' or 'Shape Type') for the AI to predict.\",\r\n  \"dataDisplayFeatures\": \"TODO: Select a few attributes (e.g., 'Size', 'Texture') that the AI should use to make its predictions.\",\r\n  \"trainModel\": \"TODO: Train the AI model using your chosen label and features.\",\r\n  \"generateResults\": \"TODO: Generate the AI's predictions.\",\r\n  \"results\": \"TODO: Review the accuracy of your AI's predictions.\",\r\n  \"saveModel\": \"\",\r\n  \"modelSummary\": \"\",\r\n  \"uploadedDataset\": \"\",\r\n  \"selectedDataset\": \"\",\r\n  \"selectedFeatureNumerical\": \"\",\r\n  \"selectedFeatureCategorical\": \"\",\r\n  \"resultsDetails\": \"\"\r\n}",
+    "uses_lab2": "true",
+    "long_instructions": "TODOs:\r\n* Select the dataset about shapes.\r\n* Decide what attribute of the shapes the AI should try to predict.\r\n* Choose the characteristics of the shapes the AI should use to make its predictions.\r\n* Train your AI model with the selected data.\r\n* See how well your AI model predicts the shape attribute.\r\n* Review the accuracy of your AI's predictions.",
+    "generate_outline": "Use image generation to create the image users will first see at the top of the site.",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:44:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:44:54 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-15 20:52:37 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

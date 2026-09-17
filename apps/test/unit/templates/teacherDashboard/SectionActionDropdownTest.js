@@ -104,6 +104,23 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Sync students from Google Classroom');
   });
 
+  it('renders the sync option but no login cards for ClassLink sections', () => {
+    const classlinkSection = {
+      ...sections[1],
+      loginType: 'classlink',
+      code: 'CL-2222|33333',
+    };
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={classlinkSection}
+      />
+    );
+    expect(wrapper).to.contain('Sync students from ClassLink');
+    // Logins are managed by ClassLink SSO; there are no cards to print.
+    expect(wrapper.text()).to.not.include('Print login cards');
+  });
+
   it('renders the four standard options for a third party section (Google Classroom)', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[1]} />
@@ -199,5 +216,51 @@ describe('SectionActionDropdown', () => {
     expect(wrapper.find('.manage-students-link').props().href).to.equal(
       expectedUrl
     );
+  });
+
+  it('handles a rejected sync instead of leaving an unhandled rejection', async () => {
+    const consoleError = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={sections[1]}
+        sectionCode="G-123"
+        sectionName="Sync me"
+        updateRoster={() => Promise.reject(new Error('sync failed'))}
+      />
+    );
+
+    wrapper.instance().onClickSync();
+    // A rejection that escaped would surface here rather than in the catch.
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    expect(consoleError.mock.calls.length).to.equal(1);
+    consoleError.mockRestore();
+  });
+
+  it('sends only the class sourcedId when syncing a ClassLink section', () => {
+    // The section code is CL-<TenantId>|<classSourcedId>; the tenant is never
+    // sent — the server derives it from the signed-in user.
+    let rosterArgs;
+    const classlinkSection = {
+      ...sections[1],
+      loginType: 'classlink',
+      code: 'CL-2222|33333',
+    };
+    const wrapper = shallow(
+      <SectionActionDropdown
+        {...DEFAULT_PROPS}
+        sectionData={classlinkSection}
+        sectionCode="CL-2222|33333"
+        sectionName="Sci5"
+        updateRoster={(...args) => {
+          rosterArgs = args;
+        }}
+      />
+    );
+    wrapper.instance().onClickSync();
+    expect(rosterArgs[0]).to.equal('33333');
   });
 });

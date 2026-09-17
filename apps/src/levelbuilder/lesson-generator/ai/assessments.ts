@@ -2,7 +2,10 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
+import {
+  authoringRulesLines,
+  LevelContext,
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
@@ -79,6 +82,7 @@ export async function generateMultiLevel(
     '  - longInstructions: optional hints for the author. When set, format',
     '    as a single literal `TODOs:` line followed by bare-content bullets.',
     '    May be empty.',
+    ...authoringRulesLines(ctx),
     ...(ctx.lessonOutline
       ? [
           '',
@@ -181,6 +185,7 @@ export async function generateMatchLevel(
     '  - longInstructions: optional hints for the author. When set, format',
     '    as a single literal `TODOs:` line followed by bare-content bullets.',
     '    May be empty.',
+    ...authoringRulesLines(ctx),
     ...(ctx.lessonOutline
       ? [
           '',

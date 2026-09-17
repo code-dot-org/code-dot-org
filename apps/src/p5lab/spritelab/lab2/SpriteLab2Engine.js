@@ -3,6 +3,10 @@ import * as BlocklyCore from 'blockly/core';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
+import {
+  setRetainBlobsOnLoad,
+  setStoreLoadedImagesAsObjectUrls,
+} from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -22,10 +26,16 @@ import {
   nextFacing,
   pickPose,
   poseFrame,
+  poseStartTick,
   posesByImageName,
   teeterTicks,
 } from './characterAnimations';
-import {loadedAnimations, trimAnimationListImages} from './imageTrim';
+import {
+  animationNames,
+  filterAnimationsToNames,
+  loadedAnimations,
+  trimAnimationListImages,
+} from './imageTrim';
 import {
   CONTACT_EPSILON,
   hasSupportAhead,
@@ -48,6 +58,13 @@ const IMAGE_LOAD_GRACE_MS = 10000;
 // let the user pick these per scene.
 const STORY_SCENE_SPRITE_SIZE = 300;
 
+// The position block's three lanes. Sized under STORY_SCENE_SPRITE_SIZE so a
+// left and a right character stand in one scene; y puts feet near the story
+// ground line.
+const STORY_LANE_X = {left: 100, center: 200, right: 300};
+const STORY_LANE_Y = 270;
+const STORY_LANE_SPRITE_SIZE = STORY_SCENE_SPRITE_SIZE * 0.7;
+
 // Extra canvas density beyond the device pixel ratio: the canvas is 400
 // logical px and the Playspace transform-scales it to ~900 CSS px on the
 // Play tab, so stock density paints ~2x2 blocks per canvas pixel.
@@ -61,6 +78,8 @@ const RESTART_QUIET_MS = 1000;
 // Markers in a scene's compiled program that make it a platformer: the
 // platform composites and player setup from the toolbox, or the world
 // prelude's wall spawns.
+// Legacy fallback for scenes with no declared type: read the program for
+// blocks only a platformer has. Scenes created since carry `type`.
 const PLATFORM_SCENE_MARKERS = [
   'makePlatformPlayer(',
   'makePlatformBlocks(',
@@ -110,12 +129,23 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
+    // Loaded images live as object URLs, not heap-resident base64 strings
+    // (legacy labs keep dataURIs for Piskel).
+    setStoreLoadedImagesAsObjectUrls(true);
+    // This lab saves images through its own asset uploads, so loaded
+    // animations don't keep their Blobs (legacy needs them for
+    // cloneAnimation).
+    setRetainBlobsOnLoad(false);
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
     this.showMobileControls = NOOP;
     this.debuggerEnabled = false;
     this.userCode = '';
+    // Image names the current program's compile registered
+    // (imageReferences.ts): the preload's scope. Null — a program set
+    // without a collected compile — preloads everything rather than guess.
+    this.referencedImages = null;
     // Scene-jump handlers, set by the view (it compiles the target and
     // re-runs).
     this.onGoToScene = null;
@@ -152,6 +182,44 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Unsubscribes the watch that re-runs when images arrive after a
     // give-up (see onImageLoadGiveUp_).
     this.lateImagesUnsubscribe_ = null;
+    // True while nobody can see the playspace (see setDrawPaused).
+    this.drawPaused_ = false;
+  }
+
+  /**
+   * Freeze or resume the engine while nobody can see the playspace: the
+   * draw loop stops (frame-based timing freezes with it), and the wall
+   * clock that CoreLibrary's timers and at-time events read stops
+   * accruing.
+   * Without this the engine kept painting a hidden canvas at full rate,
+   * and a game left on another tab ran its events unseen.
+   */
+  setDrawPaused(paused) {
+    this.drawPaused_ = !!paused;
+    this.applyDrawPaused_();
+  }
+
+  // Also reasserted after a rerun: a rerun builds a fresh library (whose
+  // pause clock starts at zero) and turns the loop back on.
+  applyDrawPaused_() {
+    if (!this.p5Wrapper?.p5) {
+      return;
+    }
+    const now = new Date().getTime();
+    if (this.drawPaused_) {
+      if (this.library && !this.library.currentPauseStartTime) {
+        this.library.startPause(now);
+      }
+      this.p5Wrapper.setLoop(false);
+    } else {
+      this.library?.endPause(now);
+      this.p5Wrapper.setLoop(true);
+      // setLoop only marks the flag; a draw loop stopped mid-run restarts
+      // only from p5.loop(), safe once setup has run.
+      if (this.p5Wrapper.p5?._setupDone) {
+        this.p5Wrapper.p5.loop();
+      }
+    }
   }
 
   /**
@@ -188,10 +256,46 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const size = APP_WIDTH * (this.p5._pixelDensity || 1);
-      if (this.background.width !== size || this.background.height !== size) {
-        this.background.resize(size, size);
+      let buffer = this.background._displayBuffer;
+      if (!buffer || buffer.width !== size || buffer.height !== size) {
+        // A copy sized to the canvas backing: the shared preloaded image is
+        // never mutated (a resize in place changed it for every other
+        // consumer), and the unzoomed draw stays a same-size copy, which
+        // machines without GPU acceleration need to stay cheap.
+        buffer = this.background.get();
+        buffer.resize(size, size);
+        this.background._displayBuffer = buffer;
       }
-      this.p5.image(this.background, 0, 0, APP_WIDTH, APP_HEIGHT);
+      this.p5.image(buffer, 0, 0, APP_WIDTH, APP_HEIGHT);
+    };
+    // A costume name the scene-scoped preload never saw (one built
+    // dynamically at runtime) decodes on demand: the sprite changes costume
+    // when the decode lands, instead of p5.play throwing on the missing
+    // label.
+    const engine = this;
+    const baseSetAnimation = library.commands.setAnimation;
+    library.commands.setAnimation = function (spriteArg, animation) {
+      if (engine.p5Wrapper.preloadedSprites?.[animation]) {
+        return baseSetAnimation.call(this, spriteArg, animation);
+      }
+      engine.decodeAnimationOnDemand_(animation).then(found => {
+        if (found) {
+          baseSetAnimation.call(this, spriteArg, animation);
+        }
+      });
+    };
+    // Backgrounds are scene-scoped like costumes, so the same escape hatch:
+    // a cold name applies when its decode lands instead of silently no-oping.
+    const baseSetBackgroundImageAs = library.commands.setBackgroundImageAs;
+    library.commands.setBackgroundImageAs = function (imageName) {
+      if (engine.p5Wrapper.preloadedSprites?.[imageName]) {
+        return baseSetBackgroundImageAs.call(this, imageName);
+      }
+      engine.decodeAnimationOnDemand_(imageName).then(found => {
+        if (found) {
+          baseSetBackgroundImageAs.call(this, imageName);
+        }
+      });
     };
     if (this.usesPlatformPhysics_) {
       // Sized per SCENE, not per level: one project holds both a platformer
@@ -199,7 +303,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       // One cell at the default playfield size. A scene with a world
       // overrides this from the prelude with its own cell size, and the
       // grid blocks size their sprites from their own bitmaps.
-      library.defaultSpriteSize = this.sceneLooksLikePlatformer_()
+      library.defaultSpriteSize = this.isPlatformScene_()
         ? cellSize(DEFAULT_SCENE_GRID_SIZE)
         : STORY_SCENE_SPRITE_SIZE;
       // Landings carry sub-pixel float noise; the classic footing command
@@ -226,6 +330,21 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
+    // Story lanes: placement by name instead of coordinates, sized so two
+    // characters share a scene; the right-lane character faces its partner
+    // (generated art faces right natively).
+    library.commands.makeSpriteAtPosition = (animation, position) => {
+      const x = STORY_LANE_X[position] ?? STORY_LANE_X.center;
+      const id = library.addSprite({
+        animation,
+        location: {x, y: STORY_LANE_Y},
+        scale: STORY_LANE_SPRITE_SIZE,
+      });
+      if (position === 'right' && id !== undefined) {
+        library.getSpriteArray({id}).forEach(sprite => sprite.mirrorX(-1));
+      }
+      return id;
+    };
     // Move existing sprites (e.g. world-placed ones) into the players
     // group; the per-frame resolver picks them up from there.
     library.commands.setPlatformPlayer = spriteArg => {
@@ -452,19 +571,23 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
-  setCode(code) {
+  setCode(code, referencedImages) {
     this.userCode = code || '';
+    this.referencedImages = referencedImages || null;
   }
 
-  sceneLooksLikePlatformer_() {
+  isPlatformScene_() {
+    if (this.sceneType_) {
+      return this.sceneType_ === 'platform';
+    }
     const code = this.userCode || '';
     return PLATFORM_SCENE_MARKERS.some(marker => code.includes(marker));
   }
 
   /** Run the given compiled JS program from scratch (creates/recreates p5). */
-  run(code) {
+  run(code, referencedImages) {
     if (code !== undefined) {
-      this.setCode(code);
+      this.setCode(code, referencedImages);
     }
     this.execute();
   }
@@ -474,9 +597,10 @@ export default class SpriteLab2Engine extends SpriteLab {
    * via execute(); after that it re-runs inside the existing p5 — recreating
    * p5 per edit flickers and races its own async preload callbacks.
    */
-  runProgram(code) {
+  runProgram(code, referencedImages, sceneType) {
+    this.sceneType_ = sceneType;
     if (code !== undefined) {
-      this.setCode(code);
+      this.setCode(code, referencedImages);
     }
     // A second execute() while the first's preload is pending crashes the
     // interpreter (getScope); defer and re-run with the latest code after.
@@ -586,6 +710,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneJumpInFlight_ = false;
     this.onP5Setup();
     this.p5Wrapper.setLoop(true);
+    this.applyDrawPaused_();
     // Stay frozen if "when run" already triggered the next jump.
     if (!this.sceneJumpInFlight_ && !this.isTickTimerRunning()) {
       this.startTickTimer();
@@ -690,18 +815,69 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.preloadTrimmedImages_(getStore().getState().animationList);
   }
 
-  // Trim the full list (the trimmer prunes its own caches from it), then
-  // preload only the images whose data has arrived; one without would just
-  // make p5 log an error.
+  // Decode only what this scene's program references — the names its
+  // compile registered (imageReferences.ts) — then preload the images whose
+  // data has arrived; one without would just make p5 log an error. A jump
+  // to another scene re-preloads behind its fade, and a name the compile
+  // never saw (one built at runtime) decodes on demand (the setAnimation
+  // wrapper in createLibrary). An uncollected program preloads everything.
   async preloadTrimmedImages_(animationList) {
-    // This preload sees every image; the watch has nothing to recover.
+    // This preload sees every image the scene can use; the watch has
+    // nothing to recover.
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
-    return this.p5Wrapper.preloadSpriteImages(
-      loadedAnimations(await trimAnimationListImages(animationList)),
+    const scoped = this.referencedImages
+      ? filterAnimationsToNames(animationList, this.referencedImages)
+      : animationList;
+    const preloaded = await this.p5Wrapper.preloadSpriteImages(
+      loadedAnimations(
+        await trimAnimationListImages(scoped, animationNames(animationList))
+      ),
       {multiFrame: true}
     );
+    this.pruneUnusedPreloads_(scoped);
+    return preloaded;
+  }
+
+  // Frees decoded images the current scene can't reference; a later scene
+  // that needs one re-decodes behind its jump fade. On-demand decodes made
+  // after this survive until the next scene's preload.
+  pruneUnusedPreloads_(list) {
+    const sprites = this.p5Wrapper.preloadedSprites;
+    if (!sprites) {
+      return;
+    }
+    const keep = animationNames(list);
+    Object.keys(sprites).forEach(name => {
+      if (!keep.has(name)) {
+        delete sprites[name];
+      }
+    });
+  }
+
+  // Decode one animation by name, mid-run: the escape hatch for a costume
+  // name built dynamically, which the scene-scoped preload cannot see.
+  async decodeAnimationOnDemand_(name) {
+    const list =
+      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const key = (list.orderedKeys || []).find(
+      k => list.propsByKey[k]?.name === name
+    );
+    if (!key) {
+      return false;
+    }
+    const single = {
+      orderedKeys: [key],
+      propsByKey: {[key]: list.propsByKey[key]},
+    };
+    await this.p5Wrapper.preloadSpriteImages(
+      loadedAnimations(
+        await trimAnimationListImages(single, animationNames(list))
+      ),
+      {multiFrame: true}
+    );
+    return true;
   }
 
   /**
@@ -972,7 +1148,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       if (pick.key !== state.key) {
         state.key = pick.key;
-        state.tick = 0;
+        // A strip's walk starts on the mid-stride frame, so the first
+        // step is visible the moment movement starts (see poseStartTick).
+        state.tick = poseStartTick(poses, pick);
       }
       // Frames drawn facing the other way are shown mirrored; a set drawn
       // facing right only turns left this way.

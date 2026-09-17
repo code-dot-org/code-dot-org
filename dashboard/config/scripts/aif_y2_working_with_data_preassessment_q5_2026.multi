@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q5-2026'
+
+wrong 'Yes.'
+wrong 'No.'
+wrong 'Probably.'
+right 'Probably not.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+When rolled, a fair die is equally likely to land on sides 1–6. Someone rolls a die 10 times. Each time, it lands on 1. Is the die fair?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Analyzing Categorical Data
+MARKDOWN

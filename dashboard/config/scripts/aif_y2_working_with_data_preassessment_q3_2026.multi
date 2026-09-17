@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q3-2026'
+
+right '`csv.DictReader`'
+wrong '`csv.ReadAsDicts`'
+wrong '`csv.RowReader`'
+wrong '`csv.Reader`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which Python class reads each row of a CSV file as a dictionary?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Working with Data Files
+MARKDOWN

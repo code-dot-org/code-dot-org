@@ -1,9 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Paper, Tooltip, Divider} from '@mui/material';
+import {IconButton, Paper, Divider} from '@mui/material';
 import {Panel, useReactFlow} from '@xyflow/react';
 import React, {useEffect, useState} from 'react';
 
 import {TOUR_GROUP, TOUR_GROUP_ATTR} from '../constants';
+
+import Tooltip from './ThemedTooltip';
 
 import styles from './toolbar.module.scss';
 

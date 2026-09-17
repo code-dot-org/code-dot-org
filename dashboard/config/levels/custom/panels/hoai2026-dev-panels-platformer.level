@@ -15,7 +15,7 @@
         "key": "hoai2026-dev-panels-platformer-133b13bb-27cd-485c-9905-941bb6ffb678"
       },
       {
-        "text": "##Build your own\nNext, you'll place platform blocks on a grid and add a player that can run and jump on them. You'll use the block image you're about to create.",
+        "text": "##Build your own\nFirst you'll make your character the player and try the controls. Then you'll create a block image and build a whole world out of it.",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-platformer-59c242fb-42d3-4e05-bbb7-ab05cebb1220",
         "fadeInOverPrevious": true

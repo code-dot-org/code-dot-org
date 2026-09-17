@@ -2646,6 +2646,12 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: unversioned
+        ui-test-instructor-in-training:
+          title: UI Test Instructor in Training
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: unversioned
         tessplayground:
           title: ''
           description_short: ''
@@ -7593,6 +7599,12 @@ en:
           version_title: ''
         hoai26-playtesting-course:
           title: Hour of AI 2026 Playtesting Course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sprite-lab-design-prototype:
+          title: sprite-lab-design-prototype
           description_short: ''
           description_student: ''
           description_teacher: ''

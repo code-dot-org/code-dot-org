@@ -50,7 +50,6 @@ const ClearChatButton: React.FunctionComponent = () => {
       variant="text"
       color="tertiary"
       size="extraSmall"
-      tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
       disabled={isDisabled}

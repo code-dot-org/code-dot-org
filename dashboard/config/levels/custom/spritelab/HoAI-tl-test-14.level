@@ -74,7 +74,7 @@
         "blocks": {
           "blocks": [
             {
-              "type": "when_run",
+              "type": "spritelab2_whenRun",
               "x": 20,
               "y": 20,
               "deletable": false,
@@ -92,7 +92,7 @@
               "languageVersion": 0,
               "blocks": [
                 {
-                  "type": "when_run",
+                  "type": "spritelab2_whenRun",
                   "id": "block-0",
                   "x": 20,
                   "y": 20,

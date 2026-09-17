@@ -2591,6 +2591,29 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal 'unit prompt', unit.summarize_for_unit_generate[:generateOutline]
   end
 
+  test 'summarize_for_unit_generate exposes course rules for round-trip' do
+    unit = create(:script)
+    unit.update!(properties: unit.properties.merge('generate_drafting_rules' => 'draft', 'generate_authoring_rules' => 'author'))
+    summary = unit.summarize_for_unit_generate
+    assert_equal 'draft', summary[:generateDraftingRules]
+    assert_equal 'author', summary[:generateAuthoringRules]
+  end
+
+  test 'update_lesson_outlines persists course rules; a missing key leaves them alone and empty clears' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    unit.update_lesson_outlines([], generateDraftingRules: 'draft', generateAuthoringRules: 'author')
+    unit.reload
+    assert_equal 'draft', unit.generate_drafting_rules
+    assert_equal 'author', unit.generate_authoring_rules
+
+    unit.update_lesson_outlines([], generateAuthoringRules: '')
+    unit.reload
+    assert_equal 'draft', unit.generate_drafting_rules
+    assert_nil unit.generate_authoring_rules
+  end
+
   test 'update_lesson_outlines creates new lessons in the order given' do
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -2644,7 +2667,7 @@ class UnitTest < ActiveSupport::TestCase
   test 'update_lesson_outlines persists supplied unit-level outline' do
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], 'overall prompt')
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], generateOutline: 'overall prompt')
     assert_equal 'overall prompt', unit.reload.generate_outline
   end
 
@@ -2652,7 +2675,7 @@ class UnitTest < ActiveSupport::TestCase
     unit = create(:script)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     unit.update!(properties: unit.properties.merge('generate_outline' => 'pre'))
-    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], nil)
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}])
     assert_equal 'pre', unit.reload.generate_outline
   end
 

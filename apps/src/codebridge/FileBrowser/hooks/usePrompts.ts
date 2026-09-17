@@ -1,3 +1,4 @@
+import {useToast} from '@code-dot-org/component-library/toast';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {
   openConfirmDeleteFile as globalOpenConfirmDeleteFile,
@@ -47,6 +48,7 @@ export const usePrompts = () => {
   const {validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dialogControl = useDialogControl();
+  const showToast = useToast();
   const dispatch = useAppDispatch();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -160,6 +162,7 @@ export const usePrompts = () => {
     globalOpenSaveToBackpackPrompt,
     {
       dialogControl,
+      showToast,
       sendLab2AnalyticsEvent,
     } satisfies PAFunctionArgs<typeof globalOpenSaveToBackpackPrompt>
   );
