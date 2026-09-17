@@ -247,6 +247,60 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   }
 
   /**
+   * Add a block to the workspace by type, under an explicit test-fixture id
+   * for later reference (blockLocator, connectBlockInside, clickBlockField).
+   * Mirrors blockly.rb's "I add a ... block with id ... to workspace" step.
+   */
+  async appendBlock(type: string, id: string): Promise<void> {
+    await this.page.evaluate(
+      ({type: blockType, id: blockId}) => {
+        const workspace = window.Blockly?.getMainWorkspace();
+        if (!window.Blockly || !workspace) {
+          throw new Error('Blockly main workspace unavailable');
+        }
+        window.Blockly.serialization.blocks.append(
+          {type: blockType, id: blockId},
+          workspace,
+        );
+      },
+      {type, id},
+    );
+  }
+
+  /**
+   * Connect a statement block inside another block's first statement slot.
+   * inputList[1] is positional — matching blockly_helpers.rb's
+   * connect_block_statement exactly — rather than a named getInput('DO')
+   * lookup, which the Ruby step does not use either.
+   */
+  async connectBlockInside(fromId: string, toId: string): Promise<void> {
+    await this.page.evaluate(
+      ({fromId: from, toId: to}) => {
+        const workspace = window.Blockly?.getMainWorkspace();
+        const blockToMove = workspace?.getBlockById(from);
+        const targetBlock = workspace?.getBlockById(to);
+        if (!blockToMove || !targetBlock) {
+          throw new Error(`Block not found: ${from} or ${to}`);
+        }
+        targetBlock.inputList[1].connection?.connect(
+          blockToMove.previousConnection,
+        );
+      },
+      {fromId, toId},
+    );
+  }
+
+  /**
+   * Click a Blockly field by a raw CSS locator. CSS: the field is an SVG
+   * <g>, which exposes no accessible role or name (a11y gap). `index` picks
+   * among multiple matches, mirroring blockly.rb's "I click block field ...
+   * number N".
+   */
+  async clickBlockField(selector: string, index = 0): Promise<void> {
+    await this.page.locator(selector).nth(index).click();
+  }
+
+  /**
    * A toolbox category's label, by 1-based position. Blockly exposes the
    * toolbox as an ARIA tree, so by position rather than by name: the name is
    * the locale-dependent text under test. The accessibility tree also omits
