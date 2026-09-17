@@ -1,11 +1,22 @@
+jest.mock('@cdo/apps/pixelEditor/pixelArt', () => ({
+  ...jest.requireActual('@cdo/apps/pixelEditor/pixelArt'),
+  // The 64px fixture decodes to 64x64; factorFor is the real crispScaleFor.
+  upscaleImageNearest: jest.fn((source, factorFor) => {
+    const factor = factorFor(64, 64);
+    return Promise.resolve({dataURI: `${source}@${factor}x`, factor});
+  }),
+}));
+
 import {
   animationNames,
   filterAnimationsToNames,
   findOpaqueBounds,
   getImageThumbnail,
   loadedAnimations,
+  scaleAnimationGeometry,
   trimAnimationListImages,
 } from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
+import {upscaleImageNearest} from '@cdo/apps/pixelEditor/pixelArt';
 
 // Build RGBA data for a w x h image from a rows array of 0/1 (1 = opaque).
 function rgba(rows) {
@@ -172,5 +183,99 @@ describe('SpriteLab2 animationNames', () => {
         propsByKey: {a: {name: 'x'}, b: {}},
       }),
     ]).toEqual(['x']);
+  });
+});
+
+describe('SpriteLab2 scaleAnimationGeometry', () => {
+  it('multiplies every recorded dimension and keeps the rest', () => {
+    const props = {
+      name: 'hero',
+      frameSize: {x: 64, y: 48},
+      sourceSize: {x: 256, y: 48},
+      frameCount: 4,
+    };
+    expect(scaleAnimationGeometry(props, 8)).toEqual({
+      name: 'hero',
+      frameSize: {x: 512, y: 384},
+      sourceSize: {x: 2048, y: 384},
+      frameCount: 4,
+    });
+  });
+
+  it('leaves props without dimensions alone', () => {
+    expect(scaleAnimationGeometry({name: 'bg'}, 5)).toEqual({name: 'bg'});
+  });
+});
+
+describe('SpriteLab2 trimAnimationListImages native pixel art', () => {
+  // A 64px sprite stored at its logical size; crispScaleFor(64, 64) is 8.
+  const native = {
+    orderedKeys: ['k'],
+    propsByKey: {
+      k: {
+        name: 'hero',
+        categories: [],
+        dataURI: 'data:native',
+        frameSize: {x: 64, y: 64},
+        sourceSize: {x: 64, y: 64},
+        frameCount: 1,
+        pixelGridSize: 1,
+        trimmed: true,
+      },
+    },
+  };
+
+  // jsdom's Image never fires load or error (see the save-time flag tests).
+  let realImage;
+  beforeEach(() => {
+    upscaleImageNearest.mockClear();
+    realImage = global.Image;
+    global.Image = class {
+      set src(value) {
+        setTimeout(() => this.onerror && this.onerror(), 0);
+      }
+    };
+  });
+  afterEach(() => {
+    global.Image = realImage;
+  });
+
+  it('upscales a grid-1 image for the engine, geometry included', async () => {
+    const out = await trimAnimationListImages(native, undefined, {
+      forEngine: true,
+    });
+    expect(upscaleImageNearest).toHaveBeenCalledWith(
+      'data:native',
+      expect.any(Function)
+    );
+    expect(out.propsByKey.k.dataURI).toBe('data:native@8x');
+    expect(out.propsByKey.k.frameSize).toEqual({x: 512, y: 512});
+    expect(out.propsByKey.k.sourceSize).toEqual({x: 512, y: 512});
+  });
+
+  it('leaves the thumbnail pass at native size', async () => {
+    const out = await trimAnimationListImages(native);
+    expect(upscaleImageNearest).not.toHaveBeenCalled();
+    expect(out.propsByKey.k.dataURI).toBe('data:native');
+    expect(out.propsByKey.k.frameSize).toEqual({x: 64, y: 64});
+  });
+
+  it('leaves an asset stored upscaled alone', async () => {
+    const stored = {
+      orderedKeys: ['k'],
+      propsByKey: {
+        k: {
+          ...native.propsByKey.k,
+          pixelGridSize: 8,
+          frameSize: {x: 512, y: 512},
+        },
+      },
+    };
+    const out = await trimAnimationListImages(stored, undefined, {
+      forEngine: true,
+    });
+    expect(upscaleImageNearest).not.toHaveBeenCalled();
+    expect(out.propsByKey.k.dataURI).toBe('data:native');
+    expect(out.propsByKey.k.frameSize).toEqual({x: 512, y: 512});
   });
 });

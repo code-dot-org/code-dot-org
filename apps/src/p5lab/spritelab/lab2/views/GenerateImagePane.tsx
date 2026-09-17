@@ -9,7 +9,11 @@ import {
   setAnimationName,
   SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
-import {detectImageGridSize} from '@cdo/apps/pixelEditor/pixelArt';
+import {
+  NATIVE_PIXEL_GRID,
+  detectImageGridSize,
+  upscaleImageNearest,
+} from '@cdo/apps/pixelEditor/pixelArt';
 import PixelEditorModal, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditorModal';
@@ -608,6 +612,15 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
     } catch {
       return null;
     }
+    // The model drew this at ~1K; pixel art stored at its logical size goes
+    // back up to that before it is shown to the model again.
+    if (dataURI && targetProps.pixelGridSize === NATIVE_PIXEL_GRID) {
+      dataURI = (
+        await upscaleImageNearest(dataURI, (width, height) =>
+          Math.floor(MODEL_OUTPUT_PX / Math.max(width, height))
+        )
+      ).dataURI;
+    }
     // "Start from current image" on a character set references one frame,
     // not the five-frame strip.
     return dataURI && targetProps.poses
@@ -992,6 +1005,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
               id: alt.id,
               thumb: alt.thumb,
               selected: alt.sourceUrl === targetProps?.sourceUrl,
+              pixelGridSize: alt.pixelGridSize,
             })
           )}
           onSelectAlternative={handleSelectAlternative}
