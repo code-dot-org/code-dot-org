@@ -190,7 +190,15 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
           if (!d?.id || d.starter) return;
           const kind = kindFromFabricObject(obj);
           if (!kind) return;
-          records.push({id: d.id, kind, description: d.description ?? ''});
+          const useStroke = kind === 'line' || kind === 'path';
+          const raw = useStroke ? obj.stroke : obj.fill;
+          const color = typeof raw === 'string' ? raw : '';
+          records.push({
+            id: d.id,
+            kind,
+            description: d.description ?? '',
+            color,
+          });
         });
         setObjects(records);
         onHasObjectsChange(records.length > 0);
@@ -322,6 +330,7 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
         height: h,
         backgroundColor: '#1e1e1e',
         selection: true,
+        preserveObjectStacking: true,
       });
       canvas.freeDrawingBrush = new PencilBrush(canvas);
       canvas.freeDrawingBrush.color = colorRef.current;
@@ -558,6 +567,26 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
           y: (container?.clientHeight ?? 300) / 2,
         });
       }
+      // In select mode with no active object, auto-select the first object and
+      // move focus to its accessible list item so screen readers announce it.
+      if (toolRef.current !== 'select') return;
+      const canvas = fabricRef.current;
+      if (!canvas || canvas.getActiveObject()) return;
+      const first = canvas.getObjects().find(o => {
+        const d = getData(o);
+        return d?.id && !d.starter;
+      });
+      if (!first) return;
+      canvas.setActiveObject(first);
+      canvas.renderAll();
+      const id = getData(first)?.id;
+      if (!id) return;
+      // Defer focus until React has re-rendered the list with the new selection.
+      setTimeout(() => {
+        containerRef.current
+          ?.querySelector<HTMLElement>(`li[data-id="${id}"]`)
+          ?.focus();
+      }, 0);
     };
 
     const handleContainerBlur = (e: FocusEvent<HTMLDivElement>) => {
@@ -573,9 +602,60 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       // the accessible-list arrow-key navigation is unaffected.
       if (e.target !== e.currentTarget) return;
       if (readOnly) return;
-      if (tool === 'select' || tool === 'freedraw') return;
+      if (tool === 'freedraw') return;
 
       const step = e.shiftKey ? CURSOR_STEP_LARGE : CURSOR_STEP;
+
+      if (tool === 'select') {
+        const canvas = fabricRef.current;
+        const obj = canvas?.getActiveObject();
+        if (!canvas || !obj) return;
+        const isArrow = [
+          'ArrowUp',
+          'ArrowDown',
+          'ArrowLeft',
+          'ArrowRight',
+        ].includes(e.key);
+        if (!isArrow) return;
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.altKey) {
+          // Alt + Arrow: resize along the arrow axis.
+          if (e.key === 'ArrowRight') {
+            const w = obj.getScaledWidth();
+            obj.scaleX = ((obj.scaleX ?? 1) * (w + step)) / w;
+          } else if (e.key === 'ArrowLeft') {
+            const w = obj.getScaledWidth();
+            obj.scaleX = ((obj.scaleX ?? 1) * Math.max(10, w - step)) / w;
+          } else if (e.key === 'ArrowUp') {
+            const h = obj.getScaledHeight();
+            obj.scaleY = ((obj.scaleY ?? 1) * (h + step)) / h;
+          } else {
+            const h = obj.getScaledHeight();
+            obj.scaleY = ((obj.scaleY ?? 1) * Math.max(10, h - step)) / h;
+          }
+          setAnnouncement(
+            `Resized to ${Math.round(obj.getScaledWidth())} by ${Math.round(
+              obj.getScaledHeight()
+            )}.`
+          );
+        } else {
+          // Arrow: move.
+          if (e.key === 'ArrowUp') obj.set({top: (obj.top ?? 0) - step});
+          else if (e.key === 'ArrowDown') obj.set({top: (obj.top ?? 0) + step});
+          else if (e.key === 'ArrowLeft')
+            obj.set({left: (obj.left ?? 0) - step});
+          else obj.set({left: (obj.left ?? 0) + step});
+          setAnnouncement(
+            `Position: ${Math.round(obj.left ?? 0)}, ${Math.round(
+              obj.top ?? 0
+            )}.`
+          );
+        }
+        obj.setCoords();
+        canvas.renderAll();
+        return;
+      }
 
       switch (e.key) {
         case 'ArrowUp':
@@ -686,6 +766,33 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       }
     }, [selectedId]);
 
+    // --- Layer order via toolbar buttons ---
+
+    const makeLayerHandler = useCallback(
+      (op: 'toFront' | 'forward' | 'backward' | 'toBack', label: string) =>
+        () => {
+          const canvas = fabricRef.current;
+          if (!canvas || !selectedId) return;
+          const obj = canvas
+            .getObjects()
+            .find(o => getData(o)?.id === selectedId);
+          if (!obj) return;
+          if (op === 'toFront') canvas.bringObjectToFront(obj);
+          else if (op === 'forward') canvas.bringObjectForward(obj);
+          else if (op === 'backward') canvas.sendObjectBackwards(obj);
+          else canvas.sendObjectToBack(obj);
+          canvas.renderAll();
+          syncObjects(canvas);
+          setAnnouncement(label);
+        },
+      [selectedId, syncObjects]
+    );
+
+    const handleBringToFront = makeLayerHandler('toFront', 'Brought to front.');
+    const handleBringForward = makeLayerHandler('forward', 'Moved forward.');
+    const handleSendBackward = makeLayerHandler('backward', 'Moved backward.');
+    const handleSendToBack = makeLayerHandler('toBack', 'Sent to back.');
+
     const selectedRecord = objects.find(o => o.id === selectedId) ?? null;
 
     // The aria-label on the canvas container describes the current interaction
@@ -693,7 +800,9 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
     const canvasAriaLabel = (() => {
       if (readOnly) return 'Drawing canvas, read only.';
       if (tool === 'select')
-        return 'Drawing canvas. Tab to navigate objects in the list below.';
+        return selectedId
+          ? 'Object selected. Arrow keys move, Alt and arrow keys resize, Shift for larger steps.'
+          : 'Drawing canvas. Select tool. Tab to navigate objects in the list below.';
       if (tool === 'freedraw')
         return 'Drawing canvas. Free draw tool selected; use a mouse or touch screen to draw.';
       if (tool === 'line') {
@@ -725,6 +834,10 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
             onToolChange={setTool}
             onColorChange={setColor}
             onDeleteSelected={handleDeleteSelected}
+            onBringToFront={handleBringToFront}
+            onBringForward={handleBringForward}
+            onSendBackward={handleSendBackward}
+            onSendToBack={handleSendToBack}
           />
         )}
 

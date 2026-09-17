@@ -4,6 +4,18 @@ import {DrawingObjectRecord} from './types';
 
 import styles from './svg-canvas.module.scss';
 
+// Mirrors the palette in Toolbar.tsx; human-readable name for screen readers.
+const COLOR_NAMES: Record<string, string> = {
+  '#e74c3c': 'Red',
+  '#e67e22': 'Orange',
+  '#f1c40f': 'Yellow',
+  '#2ecc71': 'Green',
+  '#3498db': 'Blue',
+  '#9b59b6': 'Purple',
+  '#1a1a1a': 'Black',
+  '#ffffff': 'White',
+};
+
 const KIND_LABELS: Record<DrawingObjectRecord['kind'], string> = {
   rectangle: 'Rectangle',
   circle: 'Circle',
@@ -58,6 +70,7 @@ const AccessibleObjectList: FC<AccessibleObjectListProps> = ({
       {objects.map((obj, index) => (
         <li
           key={obj.id}
+          data-id={obj.id}
           role="option"
           tabIndex={selectedId === obj.id ? 0 : -1}
           aria-selected={selectedId === obj.id}
@@ -65,6 +78,7 @@ const AccessibleObjectList: FC<AccessibleObjectListProps> = ({
           onKeyDown={e => handleKeyDown(e, index)}
         >
           {KIND_LABELS[obj.kind]}
+          {obj.color ? `, ${COLOR_NAMES[obj.color] ?? obj.color}` : ''}
           {obj.description ? `: ${obj.description}` : ', no description'}
         </li>
       ))}

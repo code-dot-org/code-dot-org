@@ -23,4 +23,6 @@ export interface DrawingObjectRecord {
     | 'path'
     | 'image';
   description: string;
+  // Hex color string; empty when not applicable (e.g. images).
+  color: string;
 }

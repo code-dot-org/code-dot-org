@@ -28,7 +28,8 @@ const COLORS: {value: string; label: string}[] = [
 
 // Static offsets into the flat button list produced by querySelectorAll.
 const COLOR_OFFSET = TOOLS.length;
-const DELETE_OFFSET = TOOLS.length + COLORS.length;
+const LAYER_OFFSET = TOOLS.length + COLORS.length;
+const DELETE_OFFSET = TOOLS.length + COLORS.length + 4;
 
 interface ToolbarProps {
   tool: DrawingTool;
@@ -37,6 +38,10 @@ interface ToolbarProps {
   onToolChange: (t: DrawingTool) => void;
   onColorChange: (c: string) => void;
   onDeleteSelected: () => void;
+  onBringToFront: () => void;
+  onBringForward: () => void;
+  onSendBackward: () => void;
+  onSendToBack: () => void;
 }
 
 const Toolbar: FC<ToolbarProps> = ({
@@ -46,6 +51,10 @@ const Toolbar: FC<ToolbarProps> = ({
   onToolChange,
   onColorChange,
   onDeleteSelected,
+  onBringToFront,
+  onBringForward,
+  onSendBackward,
+  onSendToBack,
 }) => {
   const toolbarRef = useRef<HTMLDivElement>(null);
   // Index of the button that currently "owns" tabIndex=0 (roving tabindex).
@@ -124,6 +133,52 @@ const Toolbar: FC<ToolbarProps> = ({
 
       {selectedId !== null && (
         <>
+          <div
+            role="separator"
+            aria-hidden="true"
+            className={styles.toolbarSep}
+          />
+          {(
+            [
+              {
+                label: 'Bring to front',
+                symbol: '⤒',
+                handler: onBringToFront,
+                offset: LAYER_OFFSET,
+              },
+              {
+                label: 'Bring forward',
+                symbol: '↑',
+                handler: onBringForward,
+                offset: LAYER_OFFSET + 1,
+              },
+              {
+                label: 'Send backward',
+                symbol: '↓',
+                handler: onSendBackward,
+                offset: LAYER_OFFSET + 2,
+              },
+              {
+                label: 'Send to back',
+                symbol: '⤓',
+                handler: onSendToBack,
+                offset: LAYER_OFFSET + 3,
+              },
+            ] as const
+          ).map(({label, symbol, handler, offset}) => (
+            <button
+              key={label}
+              type="button"
+              aria-label={label}
+              tabIndex={tab(offset)}
+              onFocus={() => setActiveIdx(offset)}
+              onClick={handler}
+              className={styles.toolButton}
+              title={label}
+            >
+              <span aria-hidden="true">{symbol}</span>
+            </button>
+          ))}
           <div
             role="separator"
             aria-hidden="true"
