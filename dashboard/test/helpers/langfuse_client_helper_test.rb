@@ -12,7 +12,7 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
       true
     end.returns(stub(code: 207))
 
-    @client.export_generation_trace(**default_args.merge(overrides))
+    @client.create_trace_and_generation(**default_args.merge(overrides))
     captured
   end
 
@@ -161,6 +161,6 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     HTTParty.stubs(:post).raises(Net::ReadTimeout)
     Rails.logger.expects(:warn).with(regexp_matches(/Langfuse OTLP export error/))
 
-    assert_nil @client.export_generation_trace(**default_args)
+    assert_nil @client.create_trace_and_generation(**default_args)
   end
 end

@@ -72,7 +72,9 @@ module LangfuseClientHelper
       nil
     end
 
-    def export_generation_trace(trace_name:, generation_name:, model:, user_id: nil, input: nil, output: nil, usage: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil, prompt_name: nil, prompt_version: nil)
+    # Create a trace span with a single generation span in one batch request.
+    # Only the user's message text should be passed as input (not system prompts).
+    def create_trace_and_generation(trace_name:, generation_name:, model:, user_id: nil, input: nil, output: nil, usage: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil, prompt_name: nil, prompt_version: nil)
       trace_id = SecureRandom.hex(16)
       root_span_id = SecureRandom.hex(8)
       start_nanos = unix_nanos(start_time)

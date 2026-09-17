@@ -31,7 +31,7 @@ module LangfuseHelper
   # than the fully compiled system prompt, since prompt_name/prompt_version already
   # link the trace to the instructional template text itself.
   def self.trace_student_snapshot_call(trace_name:, model:, teacher_id:, lesson_id:, lesson_name:, unit_id:, unit_name:, section_id:, student_id:, variables:, output:, usage:, start_time:, end_time:, prompt_name: nil, prompt_version: nil)
-    ta_client.export_generation_trace(
+    ta_client.create_trace_and_generation(
       trace_name: trace_name,
       generation_name: "llm-call",
       model: model,
