@@ -25785,6 +25785,8 @@ en:
               name: Network Panel Test
             lesson-3:
               name: Diffs Test
+            lesson-4:
+              name: mark-test
           lesson_groups: {}
           name: dani-test
           title: Dani Test
@@ -30836,9 +30838,36 @@ en:
               name: Amanda2
             lesson-9:
               name: Katie2
-          lesson_groups: {}
+            lesson-11:
+              name: Amanda
+            lesson-10:
+              name: Aryanna
+            lesson-12:
+              name: Emily
+            lesson-13:
+              name: Erik
+            lesson-14:
+              name: Joi
+            lesson-15:
+              name: Katie
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Level Builder AI Tools
+            lessonGroup-3:
+              display_name: WIDGETS!
           name: scottsdale-levelbuilder-exploration
           title: Scottsdale Levelbuilder Exploration
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sprite-lab-design-prototype:
+          lessons:
+            lesson-1:
+              name: Prototype
+          lesson_groups: {}
+          name: sprite-lab-design-prototype
+          title: Sprite Lab Design Prototype
           description_audience: ''
           description_short: ''
           description: ''
