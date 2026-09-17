@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q10-2026'
+
+wrong '`plt.label`'
+wrong '`plt.add_label`'
+right '`plt.title`'
+wrong '`plt.add_title`'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Which function adds a title to a `matplotlib` plot?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Visualizing Data (Part 2)
+MARKDOWN

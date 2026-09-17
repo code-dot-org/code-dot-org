@@ -11,12 +11,13 @@ interface GuideProps {
   position?: 'normal' | 'bottom';
   modal?: 'full' | 'gap';
   cornerIcon?: 'minimize' | 'maximize';
+  /** Shrink-wrap whatever is left showing, e.g. a single button. */
+  collapsed?: boolean;
   onCornerIconClick?: () => void;
 }
 
-// The Guide is a floating container for instructional content.  It is larger
-// and more prominent than our more traditional instructions.  It's named
-// for the Guide used for instructions in AI for Oceans.
+// A floating container for instructional content, larger and more prominent
+// than our traditional instructions.  Named for the Guide in AI for Oceans.
 const Guide: React.FunctionComponent<GuideProps> = ({
   id,
   children,
@@ -24,6 +25,7 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   position,
   modal,
   cornerIcon,
+  collapsed,
   onCornerIconClick,
 }) => {
   return (
@@ -46,7 +48,8 @@ const Guide: React.FunctionComponent<GuideProps> = ({
           position === 'bottom'
             ? styles.guideBottomPosition
             : styles.guideNormalPosition,
-          modal === 'gap' && styles.guideGap
+          modal === 'gap' && styles.guideGap,
+          collapsed && styles.guideCollapsed
         )}
       >
         {children}

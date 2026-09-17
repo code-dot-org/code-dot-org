@@ -306,3 +306,59 @@ export function removeImageReferencesOnWorkspace(
     });
   });
 }
+
+// --- Compile-time reference collection ---
+//
+// Which images a compiled program can reference, registered during the
+// compile itself: every generator that emits an image name notes it here, so
+// the scene preload decodes exactly the referenced set without scanning the
+// emitted code. A name a program builds at runtime (no block does today)
+// decodes on demand instead — SpriteLab2Engine's setAnimation wrapper.
+
+let collecting: Set<string> | null = null;
+
+/** Register one image name the compiled code references. */
+export function noteImageReference(name: string | null | undefined): void {
+  if (collecting && name) {
+    collecting.add(name);
+  }
+}
+
+/**
+ * Register an image-picker field's value: the quoted string literal the
+ * generator emits (`"cat"`), or `null` from the empty-gallery option, which
+ * registers nothing. Returns the value so generators can wrap their
+ * getFieldValue call in place.
+ */
+export function noteImageFieldValue(fieldValue: string | null): string | null {
+  if (collecting && fieldValue) {
+    try {
+      const name = JSON.parse(fieldValue);
+      if (typeof name === 'string') {
+        collecting.add(name);
+      }
+    } catch (e) {
+      // Not a literal; nothing to register.
+    }
+  }
+  return fieldValue;
+}
+
+/**
+ * Run one compile with the collector active and return what it registered.
+ * Nestable and exception-safe: the previous collector is restored when the
+ * compile finishes.
+ */
+export function collectImageReferences<T>(compile: () => T): {
+  result: T;
+  referencedImages: Set<string>;
+} {
+  const previous = collecting;
+  const referencedImages = new Set<string>();
+  collecting = referencedImages;
+  try {
+    return {result: compile(), referencedImages};
+  } finally {
+    collecting = previous;
+  }
+}

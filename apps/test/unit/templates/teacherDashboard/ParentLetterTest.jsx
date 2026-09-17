@@ -34,6 +34,22 @@ describe('ParentLetter', () => {
     expect(loginStep).toBeInTheDocument();
   });
 
+  it('has a document title as the only level-one heading', () => {
+    renderWithTheme(
+      <ParentLetter
+        section={{
+          ...sampleSection,
+          loginType: SectionLoginType.email,
+        }}
+        teacherName="Minerva McGonagall"
+      />
+    );
+
+    const titles = screen.getAllByRole('heading', {level: 1});
+    expect(titles).toHaveLength(1);
+    expect(titles[0]).toHaveTextContent(i18n.parentLetterTitle());
+  });
+
   it('Demo section uses the placeholder code in the sign-in link', () => {
     render(
       <ParentLetter

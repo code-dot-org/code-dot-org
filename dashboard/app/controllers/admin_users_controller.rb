@@ -149,11 +149,18 @@ class AdminUsersController < ApplicationController
     set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
-      @user_scripts = UserScript.
-        where(user_id: @target_user.id).
-        order(updated_at: :desc).
-        limit(100).
-        offset(script_offset)
+      if @target_user.teacher?
+        @sections = @target_user.sections_instructed.includes(:students).order(:name)
+        all_student_ids = @sections.flat_map {|s| s.students.map(&:id)}.uniq
+        script_ids = UserScript.where(user_id: all_student_ids).distinct.pluck(:script_id)
+        @all_scripts = Unit.where(id: script_ids).order(:name).sort.uniq
+      else
+        @user_scripts = UserScript.
+          where(user_id: @target_user.id).
+          order(updated_at: :desc).
+          limit(100).
+          offset(script_offset)
+      end
     end
   end
 
@@ -307,6 +314,23 @@ class AdminUsersController < ApplicationController
     log_admin_action("delete_progress", user_id, {script_id: script_id, reason: params[:reason]})
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
+  end
+
+  # POST /admin/mass_progress_reset
+  # Deletes progress for every (student, unit) pair in the given lists.
+  def mass_progress_reset
+    unit_ids = parse_id_list(params[:unit_ids])
+    student_ids = parse_id_list(params[:student_ids])
+
+    if unit_ids.blank? || student_ids.blank?
+      render json: {error: 'unit_ids and student_ids must be non-empty arrays of integer ids'}, status: :bad_request
+      return
+    end
+
+    User.delete_progress_for_units(user_ids: student_ids, unit_ids: unit_ids)
+    log_admin_action('mass_progress_reset', nil, {unit_ids: unit_ids, student_ids: student_ids})
+
+    render json: {success: true}
   end
 
   # get /admin/permissions
@@ -678,6 +702,10 @@ class AdminUsersController < ApplicationController
 
   private def redirect_to_cap_actions(user_identifier, notice: nil, alert: nil)
     redirect_to cap_actions_form_path(user_identifier: user_identifier), notice: notice, alert: alert
+  end
+
+  private def parse_id_list(param)
+    Array(param).map {|id| Integer(id, exception: false)}.compact
   end
 
   private def log_admin_action(event, affected_user_id = nil, attributes = {})

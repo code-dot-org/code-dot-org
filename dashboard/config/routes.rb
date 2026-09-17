@@ -113,12 +113,6 @@ Dashboard::Application.routes.draw do
 
     resources :user_level_interactions, only: [:create]
 
-    resources :skills, only: [:create, :index, :update, :destroy] do
-      collection do
-        get 'section/:section_id/unit/:unit_name', to: 'skills#section_skills'
-      end
-    end
-
     patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
     get '/download/:product', to: 'hoc_download#index'
@@ -369,6 +363,9 @@ Dashboard::Application.routes.draw do
 
     get 'projects/:channel_id/extra_links', to: 'projects#extra_links'
 
+    # Internal playtest review of AI-generated images (project validators only).
+    get 'spritelab_lab2_images_review', to: 'spritelab_lab2_images_review#index'
+
     resources :projects, path: '/projects/', only: [:index] do
       collection do
         ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -463,11 +460,9 @@ Dashboard::Application.routes.draw do
         get 'level_properties'
         get 'extra_links'
         patch 'update_bubble_choice_settings'
-        post 'add_skill'
-        post 'remove_skill'
       end
 
-      resource :quiz_configuration, only: [:update], controller: 'quizzes'
+      resource :quiz_configuration, only: [:show, :update], controller: 'quizzes'
       resources :quiz_question_placements, only: [:create, :destroy] do
         member do
           post 'attach'
@@ -776,6 +771,7 @@ Dashboard::Application.routes.draw do
           get :find_students
           get :lookup_section
           post :lookup_section
+          post :set_section_picture_passwords
           post :undelete_section
         end
       end
@@ -828,6 +824,7 @@ Dashboard::Application.routes.draw do
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        post :mass_progress_reset
         get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
@@ -1120,9 +1117,17 @@ Dashboard::Application.routes.draw do
         File.basename(file).to_s.gsub(/\..*$/, '')
       end).uniq
 
+    # Mutating actions kept out of the GET wildcard below: a GET would skip
+    # CSRF verification.
+    api_post_only_methods = [:import_classlink_classroom]
+    api_methods -= api_post_only_methods
+
     namespace :dashboardapi, module: :api do
       api_methods.each do |action|
         get action, action: action
+      end
+      api_post_only_methods.each do |action|
+        post action, action: action
       end
     end
     get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
@@ -1344,7 +1349,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
-    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
@@ -1481,7 +1485,6 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
-    post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'

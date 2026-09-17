@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-preassessment-q12-2026'
+
+wrong 'Employees who work day shifts.'
+right 'Employees who work night shifts.'
+wrong 'Employees who work Fridays.'
+wrong 'Employees who pack a lunch.'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A warehouse operates 24 hours a day. For a week, on every midday lunch break, the warehouse's management team surveys employees about their work conditions. Who's most likely to be missing from this sample?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Collecting Data
+MARKDOWN

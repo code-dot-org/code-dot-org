@@ -304,12 +304,14 @@ class Section < ApplicationRecord
     LOGIN_TYPE_WORD = 'word'.freeze,
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
     LOGIN_TYPE_CLEVER = 'clever'.freeze,
+    LOGIN_TYPE_CLASSLINK = 'classlink'.freeze,
     LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
   ]
 
   LOGIN_TYPES_OAUTH = [
     LOGIN_TYPE_GOOGLE_CLASSROOM,
-    LOGIN_TYPE_CLEVER
+    LOGIN_TYPE_CLEVER,
+    LOGIN_TYPE_CLASSLINK
   ]
 
   TYPES = [

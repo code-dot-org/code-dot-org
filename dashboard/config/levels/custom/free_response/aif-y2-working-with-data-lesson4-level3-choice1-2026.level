@@ -10,7 +10,7 @@
     "skip_sound": true,
     "encrypted": "false",
     "title": "Check Your Understanding",
-    "long_instructions": "Do you think the payment history suggests fraud?",
+    "long_instructions": "Do you think the payment history suggests fraud? Explain the evidence that supports your conclusion. How confident are you?",
     "stay_on_level_after_submit": "false",
     "submittable": "true",
     "allow_multiple_attempts": "false",
@@ -22,7 +22,7 @@
     "bubble_choice_description": "Analyze transaction data for fraud.",
     "thumbnail_url": "https://images.code.org/b55f2df366cfd78edacc490967ab7fb3-credit-cards.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-07 17:41:53 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 17:47:33 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 17:48:43 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-09-07 17:41:53 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 17:47:33 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 17:48:43 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-10 18:41:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

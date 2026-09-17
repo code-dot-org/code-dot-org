@@ -1,5 +1,6 @@
 // Public API for @code-dot-org/lesson-deep-dive
 // Export all public symbols from this file.
+export {default as LessonSummaryCard} from './LessonSummaryCard';
 export {default as LevelsAttemptedBox} from './StudentLessonStats/LevelsAttemptedBox';
 export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
 export {default as PreReviewBox} from './PreReviewBox';

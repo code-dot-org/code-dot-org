@@ -20,6 +20,7 @@ import BaseDialog from '../BaseDialog';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
+import {courseIdFromSectionCode} from './sectionCodeHelpers';
 import {sortableSectionShape} from './shapes.jsx';
 import {
   removeSectionOrThrow,
@@ -115,9 +116,13 @@ class SectionActionDropdown extends Component {
         );
         break;
     }
-    // Section code is the course ID, without the G- or C- prefix.
-    const courseId = this.props.sectionCode.replace(/^[GC]-/, '');
-    this.props.updateRoster(courseId, this.props.sectionName);
+    const courseId = courseIdFromSectionCode(this.props.sectionCode);
+
+    Promise.resolve(
+      this.props.updateRoster(courseId, this.props.sectionName)
+    ).catch(syncError => {
+      console.error('Roster sync failed', syncError);
+    });
   };
 
   onRequestDelete = () => {
@@ -178,7 +183,8 @@ class SectionActionDropdown extends Component {
             {i18n.manageStudents()}
           </PopUpMenu.Item>
           {sectionData.loginType !== OAuthSectionTypes.google_classroom &&
-            sectionData.loginType !== OAuthSectionTypes.clever && (
+            sectionData.loginType !== OAuthSectionTypes.clever &&
+            sectionData.loginType !== OAuthSectionTypes.classlink && (
               <PopUpMenu.Item
                 href={teacherDashboardUrl(sectionData.id, '/login_info')}
                 className="print-login-link"
@@ -207,6 +213,11 @@ class SectionActionDropdown extends Component {
           {sectionData.loginType === OAuthSectionTypes.google_classroom && (
             <PopUpMenu.Item onClick={this.onClickSync}>
               {i18n.syncGoogleClassroom()}
+            </PopUpMenu.Item>
+          )}
+          {sectionData.loginType === OAuthSectionTypes.classlink && (
+            <PopUpMenu.Item onClick={this.onClickSync}>
+              Sync students from ClassLink
             </PopUpMenu.Item>
           )}
           <PopUpMenu.Item onClick={this.onClickHideShow}>

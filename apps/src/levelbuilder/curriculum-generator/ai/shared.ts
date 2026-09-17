@@ -7,6 +7,7 @@ import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 export const PROMPT_TAGS = {
   UNIT_OUTLINE: 'lesson-gen/unit-outline',
   LESSON_OUTLINE: 'lesson-gen/lesson-outline',
+  LESSON_IMPORT: 'lesson-gen/lesson-import',
   PANELS_PLAN: 'lesson-gen/panels-plan',
   PANELS_IMAGE: 'lesson-gen/panels-image',
   WEBLAB2_PLAN: 'lesson-gen/weblab2-plan',

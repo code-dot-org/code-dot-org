@@ -1,0 +1,15 @@
+{
+  "key": "problem_solving_with_ai_2026_practice_problem_lesson_2_1",
+  "problem_type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "What does it mean for an AI model to be \"multimodal\"?",
+  "solution": [
+    {"option": "It can only process text input.", "correct": false},
+    {"option": "It can process information from multiple types of input, like text, images, and audio.", "correct": true},
+    {"option": "It can only generate images.", "correct": false},
+    {"option": "It runs on multiple computers at once.", "correct": false}
+  ],
+  "objective_keys": [
+    "beaec579-1df2-4014-bfc7-8df13308ced1"
+  ]
+}

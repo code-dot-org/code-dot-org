@@ -1,0 +1,16 @@
+name 'aif-y2-working-with-data-postassessment-q2-2026'
+
+wrong 'Separating values in a column with spaces'
+wrong 'Separating values in a column with commas'
+wrong 'Separating values in a row with spaces'
+right 'Separating values in a row with commas'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A CSV file stores tabular data by...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Exploring Structured Data
+MARKDOWN

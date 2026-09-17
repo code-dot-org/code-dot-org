@@ -117,7 +117,9 @@ def clone_dsl_level(level, new_name)
   if level.is_a?(LevelGroup) || level.is_a?(BubbleChoice)
     level.all_child_levels.uniq.each do |child|
       child_clone = clone_level(child)
-      new_text = new_text.gsub("level '#{child.name}'", "level '#{child_clone.name}'")
+      # A LevelGroup names its External sublevels with the text keyword and
+      # everything else with level; BubbleChoice uses level throughout.
+      new_text = new_text.gsub(/(level|text) '#{Regexp.escape(child.name)}'/) {"#{$1} '#{child_clone.name}'"}
     end
   end
 

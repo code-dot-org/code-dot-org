@@ -88,7 +88,12 @@ const CustomLessonResources: React.FC<CustomResourcesProps> = ({
   return (
     <div className={styles.resourcesTable}>
       <div className={styles.topRowForResourcesTable}>
-        <Typography className={styles.headerText} variant="h6" gutterBottom>
+        <Typography
+          className={styles.headerText}
+          variant="label1"
+          component="h6"
+          gutterBottom
+        >
           {'Custom Resources'}
         </Typography>
       </div>

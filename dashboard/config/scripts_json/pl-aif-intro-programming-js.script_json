@@ -2,13 +2,16 @@
   "script": {
     "name": "pl-aif-intro-programming-js",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-04 15:17:51 UTC",
+    "serialized_at": "2026-09-09 18:59:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,

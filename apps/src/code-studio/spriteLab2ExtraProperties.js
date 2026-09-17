@@ -13,16 +13,12 @@ import initializeCodeMirror6 from './initializeCodeMirror6';
 // empty, delete this file. Classic-era flags and ai_code_generate_*
 // (Music Lab only so far) are left out on purpose.
 export const RAW_EDITABLE_PROPERTIES = [
-  'guide_mode',
   'guide_steps',
   'hide_custom_blocks',
-  'images_advanced',
-  'locked_image_type',
-  'pinned_scene_id',
-  'pinned_scene_name',
-  'show_world_tab',
-  'visible_tabs',
-  'world_grid_size',
+  'image_role_defaults',
+  'level_mode',
+  'pinned_scene',
+  'world_start_pattern',
 ];
 
 // level_properties camelizes property names; saves use the stored
@@ -95,7 +91,7 @@ function buildSection() {
         <code>null</code> means unset.  Only these keys save here; every
         other property has its own editor.
       </p>
-      <p>Enter properties to change as JSON — for example <code>{"show_world_tab": true}</code></p>
+      <p>Enter properties to change as JSON — for example <code>{"level_mode": {"kind": "world"}}</code></p>
       <p>
         Keys are top-level property names, and each key's value replaces
         that property whole — to change part of a nested value, copy the

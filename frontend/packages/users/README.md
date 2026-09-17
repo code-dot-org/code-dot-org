@@ -1,8 +1,17 @@
 # @code-dot-org/users
 
-The "My Account" feature module: the Account Details page where a signed-in user
-edits their profile, login, language, and account actions. Consumed by the
-Studio app (`apps/studio`), which lazy-loads it at `/users/edit`.
+The "My Account" feature module: the page where a signed-in user edits their
+profile, login, school, role, and account actions. Consumed by the Studio app
+(`apps/studio`), which lazy-loads it at `/users/edit`.
+
+Two tabs are implemented: **Account Details** (profile, login, parent/guardian
+email, account actions) and **Educator Profile** (school information and
+educator role, educators only). **Communications** and **Integrations** are
+still disabled placeholders, for legacy parity.
+
+Each tab is its own form: one `FormProvider`, one `SaveBar`, one PATCH. School
+information is a modal flow instead, because it needs a zip search and a
+different endpoint (`PATCH /api/v1/user_school_infos`).
 
 It is **app-shaped but not a lab** — it has a standalone dev server, MSW
 fixtures, and a `./mocks` subpath like a lab, but it registers no lab entry and
@@ -42,14 +51,17 @@ no extra `GET /api/v1/users/current`. Editable settings come from
 ## Standalone dev server
 
 ```bash
-yarn dev   # from frontend/packages/users/
+VITE_API_MODE=msw yarn dev   # from frontend/packages/users/
 ```
 
-Runs the page in isolation against MSW (`src/main.tsx` + `index.html`). A
+Runs the page in isolation against MSW (`src/main.tsx` + `index.html`).
+Without `VITE_API_MODE=msw` the mocks stay off and requests go to the real
+backend at `localhost-studio.code.org:3000`. A
 `?scenario=` switch picks the persona — `teacher` (default), `student`,
-`sso-teacher` (SSO-only educator), `sso-student` (oauth-only student), or
-`minimal` (word/picture student with optional fields null and edits locked) —
-and a corner dropdown switches it live. Append `?devChrome=off` to suppress that
+`sso-teacher` (SSO-only educator), `sso-student` (oauth-only student),
+`minimal` (word/picture student with optional fields null and edits locked), or
+`teacher-no-school` (educator with no school and no role) — and a corner
+dropdown switches it live; the QA-only scenarios are in the dropdown too. Append `?devChrome=off` to suppress that
 dropdown (tool-agnostic: visual-comparison runs, embeds, or a clean screenshot
 opt in the same way). The host page's chrome (header/footer) is Studio's;
 standalone only loads the design-system styling foundation so the page looks
