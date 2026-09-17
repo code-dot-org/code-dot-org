@@ -89,6 +89,22 @@ describe('QuizQuestionCard', () => {
     );
   });
 
+  it('disables Save and Discard until something is edited', () => {
+    renderCard({isExpanded: true});
+
+    expect(screen.getByRole('button', {name: 'Save'})).toBeDisabled();
+    expect(
+      screen.getByRole('button', {name: 'Discard changes'})
+    ).toBeDisabled();
+
+    fireEvent.change(screen.getByLabelText('Internal name'), {
+      target: {value: 'Something else'},
+    });
+
+    expect(screen.getByRole('button', {name: 'Save'})).toBeEnabled();
+    expect(screen.getByRole('button', {name: 'Discard changes'})).toBeEnabled();
+  });
+
   it('discards edits back to the saved question', () => {
     renderCard({isExpanded: true});
 

@@ -3,6 +3,7 @@ import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button, IconButton, Typography} from '@mui/material';
+import isEqual from 'lodash/isEqual';
 import React, {useEffect, useState} from 'react';
 
 import AnswersTab from './QuizQuestionCard/AnswersTab';
@@ -51,6 +52,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
   const [isConfirmingRemove, setIsConfirmingRemove] = useState(false);
+  const isDirty = !isEqual(draft, toDraft(question));
 
   // A save can fork the question into a new id (see
   // useQuizBuilderQuestions#updateQuestion) - resync the draft whenever the
@@ -165,7 +167,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
                 color="secondary"
                 size="extraSmall"
                 type="button"
-                disabled={isSaving}
+                disabled={isSaving || !isDirty}
                 onClick={handleDiscard}
               >
                 Discard changes
@@ -175,6 +177,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
                 color="primary"
                 size="extraSmall"
                 type="button"
+                disabled={!isDirty}
                 loading={isSaving}
                 onClick={handleSave}
                 startIcon={
