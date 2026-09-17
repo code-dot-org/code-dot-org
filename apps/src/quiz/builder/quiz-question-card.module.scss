@@ -28,6 +28,19 @@
   color: var(--text-neutral-quaternary);
 }
 
+.unsavedBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border-warning-mid);
+  border-radius: var(--shape-sm);
+  background: var(--background-warning-light);
+  color: var(--text-warning-secondary);
+}
+
 .stemPreview {
   flex: 1 0 0;
   min-width: 0;

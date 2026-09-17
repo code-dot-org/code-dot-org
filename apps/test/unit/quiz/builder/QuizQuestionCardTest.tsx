@@ -115,6 +115,24 @@ describe('QuizQuestionCard', () => {
     expect(nameField).toHaveValue('Existing question');
   });
 
+  it('does not show an unsaved-changes badge before any edit', () => {
+    renderCard({isExpanded: true});
+
+    expect(screen.queryByLabelText('Unsaved changes')).toBeNull();
+  });
+
+  it('shows an unsaved-changes badge after an edit, even once collapsed', () => {
+    renderCard({isExpanded: true});
+
+    fireEvent.change(screen.getByLabelText('Internal name'), {
+      target: {value: 'Something else'},
+    });
+    expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse question'}));
+    expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
+  });
+
   it('confirms before removing the question from the quiz', async () => {
     const {onRemove} = renderCard({isExpanded: true});
 

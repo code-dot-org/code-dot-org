@@ -2,7 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs from '@code-dot-org/component-library/tabs';
-import {Button, IconButton, Typography} from '@mui/material';
+import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import isEqual from 'lodash/isEqual';
 import React, {useEffect, useState} from 'react';
 
@@ -100,6 +100,16 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
             {question.stem}
           </Typography>
         </div>
+        {isDirty && (
+          <Tooltip title="Unsaved changes">
+            <div className={styles.unsavedBadge} aria-label="Unsaved changes">
+              <FontAwesomeV6Icon
+                iconName="triangle-exclamation"
+                iconStyle="solid"
+              />
+            </div>
+          </Tooltip>
+        )}
         <IconButton
           aria-label={isExpanded ? 'Collapse question' : 'Edit question'}
           size="extraSmall"
