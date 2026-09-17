@@ -1,0 +1,132 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  background: var(--background-neutral-secondary);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: var(--background-neutral-primary);
+  border-bottom: 1px solid var(--border-neutral-primary);
+}
+
+.headerPreview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.typeIcon {
+  color: var(--text-neutral-quaternary);
+}
+
+.stemPreview {
+  flex: 1 0 0;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-neutral-tertiary);
+}
+
+.tabsRow {
+  padding: 0 10px;
+}
+
+.tabPanels {
+  background: var(--background-neutral-primary);
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 10px 10px;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  background: var(--background-neutral-secondary);
+}
+
+// IconButton has no border or fill by default - this is what gives the
+// unselected checkmark its resting, bordered-square appearance.
+.correctToggle {
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  color: var(--text-neutral-primary);
+}
+
+.correctToggleSelected {
+  background: var(--background-selected-primary);
+  border-color: var(--background-selected-primary);
+  color: var(--text-selected-primary);
+
+  &:hover {
+    background: var(--background-selected-primary);
+  }
+}
+
+.addOption {
+  width: 100%;
+
+  &:global(.MuiButton-outlined) {
+    border-style: dashed;
+  }
+}
+
+.optionText {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm);
+  font: inherit;
+  resize: vertical;
+}
+
+.saveError {
+  padding: 8px 10px 10px;
+  background: var(--background-neutral-primary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 10px;
+  background: var(--background-neutral-primary);
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
