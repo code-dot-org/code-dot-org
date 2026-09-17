@@ -21,24 +21,24 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Images"
-    ],
-    "locked_image_type": "sprite",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "image",
+      "imageType": "sprite",
+      "imageRole": "hero"
+    },
     "guide_steps": [
       {
-        "text": "**Make a character.** Now create the hero of your story. Describe what your character looks like and press **Generate**."
+        "text": "**Make a character.** Create the hero of your story. Pick the words that describe them and press **Generate**."
       },
       {
-        "text": "**There's your hero!** Make more characters if you like, then continue when you're ready.",
+        "text": "**There's your hero!** Continue when you're ready.",
         "showContinue": true,
         "after": {
           "spriteImages": 1
         }
       }
     ],
-    "long_instructions": "# Make a character\nNow create the hero of your story. Describe what your character looks like and press **Generate**."
+    "long_instructions": "# Make a character\nCreate the hero of your story. Pick the words that describe them and press **Generate**."
   }
 }]]></config>
 </GamelabJr>

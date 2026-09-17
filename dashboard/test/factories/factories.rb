@@ -1171,18 +1171,6 @@ FactoryBot.define do
     level_source {create(:level_source, level: level)}
   end
 
-  factory :skill do
-    sequence(:key) {|n| "skill-#{n}}"}
-    description {"Declares variables with conventional names"}
-    concept {"Variables"}
-    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
-  end
-
-  factory :levels_skill do
-    association :level
-    association :skill
-  end
-
   factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     is_migrated {true}
@@ -1666,6 +1654,14 @@ FactoryBot.define do
     association :level, factory: :applab
 
     anon_user_id {Cdo::AnonUserId.generate}
+  end
+
+  factory :anonymous_level_geo, class: 'AnonymousLevel::Geo' do
+    anon_user_id {Cdo::AnonUserId.generate}
+    country {Faker::Address.unique.country}
+    state {Faker::Address.unique.state}
+    city {Faker::Address.unique.city}
+    postal_code {Faker::Address.unique.postcode}
   end
 
   factory :user_script do
@@ -2366,16 +2362,6 @@ FactoryBot.define do
   factory :student_work_evaluation_summary do
     student_work_evaluation_id {1}
     student_work_evaluation_summary_id {1}
-  end
-
-  factory :user_level_skill_evaluation do
-    association :student, factory: :student
-    association :level
-    association :unit
-    evaluator {"AI"}
-    evaluation {"Great"}
-    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
-    reasoning {"The student's work demonstrated the skill."}
   end
 
   factory :user_level_evaluation do

@@ -15,29 +15,36 @@ import {
   setAccuracyCheckPredictedLabels,
   setHistoricResult,
 } from '../redux';
-import type {KNNTrainedModelDetails} from '../types';
+import type {TrainedModel} from '../types';
 
-export default class KNNTrainer {
-  private store: Store<RootState>;
+import type {Trainer} from './types';
+
+export interface OptimalModelDetails {
+  model: TrainedModel;
+  predictedLabels: (number | string)[];
+  kValue: number;
+}
+
+export default class KNNTrainer implements Trainer {
+  private readonly store: Store<RootState>;
   private knn: KNN | undefined;
 
   constructor(store: Store<RootState>) {
     this.store = store;
   }
 
-  startTraining(store: Store<RootState>): void {
-    this.store = store;
-    const state = store.getState();
+  startTraining(): void {
+    const state = this.store.getState();
 
-    const trainedModel = this.getOptimalModelDetails(state);
+    const optimalModel = this.getOptimalModelDetails(state);
 
-    this.storeTrainedModel(store, trainedModel);
+    this.storeTrainedModel(optimalModel);
 
-    const state2 = store.getState();
+    const trainedState = this.store.getState();
 
-    logMetric('train-model', state2);
+    logMetric('train-model', trainedState);
 
-    this.storeHistoricResult(store, state2);
+    this.storeHistoricResult(trainedState);
   }
 
   /*
@@ -47,7 +54,7 @@ export default class KNNTrainer {
     the curriculum. For large classification datasets we try a variety of K
     values and select the one that yields the most accurate model.
   */
-  getOptimalModelDetails(state: RootState): KNNTrainedModelDetails {
+  getOptimalModelDetails(state: RootState): OptimalModelDetails {
     let bestModel: KNN | undefined;
     let bestPredictedLabels: (number | string)[] = [];
     let bestK = -1;
@@ -67,6 +74,9 @@ export default class KNNTrainer {
         bestPredictedLabels = predictedLabels;
       }
     });
+    // The loop leaves `this.knn` on the last candidate it tried. Restore the
+    // winner, so a later batchPredict uses the model the lab stored.
+    this.knn = bestModel;
     return {
       model: bestModel!,
       predictedLabels: bestPredictedLabels,
@@ -143,20 +153,17 @@ export default class KNNTrainer {
     }
   }
 
-  storeTrainedModel(
-    store: Store<RootState>,
-    trainedModel: KNNTrainedModelDetails,
-  ): void {
-    store.dispatch(setKValue(trainedModel.kValue));
-    store.dispatch(
-      setAccuracyCheckPredictedLabels(trainedModel.predictedLabels),
+  storeTrainedModel(optimalModel: OptimalModelDetails): void {
+    this.store.dispatch(setKValue(optimalModel.kValue));
+    this.store.dispatch(
+      setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
     );
-    store.dispatch(setTrainedModel(trainedModel.model));
+    this.store.dispatch(setTrainedModel(optimalModel.model));
   }
 
-  storeHistoricResult(store: Store<RootState>, state: RootState): void {
+  storeHistoricResult(state: RootState): void {
     const accuracy = getPercentCorrect(state);
-    store.dispatch(
+    this.store.dispatch(
       setHistoricResult(state.labelColumn!, state.selectedFeatures, accuracy),
     );
   }

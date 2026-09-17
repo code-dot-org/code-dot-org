@@ -2,16 +2,16 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
-import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {ImageGenerationMetadata} from './ai/images/types';
 import {AnimationPoses} from './characterAnimations';
+import {ImageRoleDefaults} from './imageRoleDefaults';
+import {LevelMode} from './levelMode';
 import {Tab} from './redux/spriteLab2Redux';
 import {World} from './world';
 
-// The animation-list category marking an image as a background rather than a
-// costume.
+/** The animation-list category marking an image as a background, not a costume. */
 export const BACKGROUNDS_CATEGORY = 'backgrounds';
-// Square tiles for platform pieces (the "make platform blocks" block's grid
-// draws from these).
+/** The category marking an image as a square tile for platform pieces. */
 export const BLOCKS_CATEGORY = 'blocks';
 
 // The serializable subset of a Sprite Lab animation, mirroring the JSDoc
@@ -26,18 +26,17 @@ export interface SerializedAnimationProps {
   frameDelay: number;
   version?: string;
   categories?: string[];
-  // Physical pixels per art pixel; absent on non-pixel-art animations.
+  /** Physical pixels per art pixel; absent on non-pixel-art animations. */
   pixelGridSize?: number;
-  // Pixel-editor recently-used colors, in first-seen order; absent until the
-  // image is edited there.
+  /** Pixel-editor recently-used colors, in first-seen order. */
   recentColors?: RGBA[];
-  // The stored image is already cropped to content (set at save time), so
-  // load-time trimming skips it.
+  /** The stored image is already cropped to its content. */
   trimmed?: boolean;
-  // Present on AI-generated images.
+  /** What the image level that made it was for (level_mode.imageRole). */
+  role?: string;
+  /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
-  // Present on a character set: where each pose lives in the sheet
-  // (characterAnimations.ts).
+  /** Present on a character set: where each pose lives in the sheet. */
   poses?: AnimationPoses;
 }
 
@@ -58,24 +57,29 @@ export interface RuntimeAnimationList {
   propsByKey: {[key: string]: RuntimeAnimationProps};
 }
 
-// A named code workspace. The id is the source of truth (the go-to-scene
-// block stores it); scenes[0] is the default scene Play starts at.
+/** What a scene is for: the blocks it offers and how big its sprites are. */
+export type SceneType = 'story' | 'platform';
+
+/**
+ * A named code workspace. The id is the source of truth, being what the
+ * go-to-scene block stores; scenes[0] is where Play starts.
+ */
 export interface Scene {
   id: string;
   name: string;
-  // This scene's Blockly workspace serialization.
+  /** Absent on scenes created before scene types. */
+  type?: SceneType;
+  /** This scene's Blockly workspace serialization. */
   source?: WorkspaceSerialization;
-  // World-tab experiment: starter sprite/block placements, spawned ahead of
-  // the scene's program.
+  /** Starter sprite and block placements, spawned ahead of the program. */
   world?: World;
 }
 
-// The single ProjectSources.source JSON for a SpriteLab2 project.
+/** The single ProjectSources.source JSON for a SpriteLab2 project. */
 export interface Sources extends ProjectSources {
-  // Sprite Lab costumes + backgrounds, classic serialized animationList shape.
+  /** Costumes and backgrounds, in the classic animationList shape. */
   animations?: SerializedAnimationList;
-  // Scenes UI variant: per-scene code workspaces. When present, `source`
-  // mirrors scenes[0].source so projects still open with the variant off.
+  /** Per-scene code workspaces. */
   scenes?: Scene[];
 }
 
@@ -88,21 +92,23 @@ export interface GuideStep {
   text: string;
   /** Offer the Continue button to the next level while on this step. */
   showContinue?: boolean;
+  /**
+   * Image counts are measured from what the project held when the level
+   * opened, so a level gates on the images made on it, not the ones it
+   * inherited from earlier levels.
+   */
   after?: {
     /** At least this many block-kind cells placed in the World. */
     worldBlocks?: number;
     /** At least this many sprite-kind cells placed in the World. */
     worldSprites?: number;
-    /**
-     * At least this many images in the project — a count, because the project
-     * carries every image from the levels before this one.
-     */
+    /** At least this many images made on this level. */
     images?: number;
-    /** At least this many sprite-type images in the project. */
+    /** At least this many sprite-type images made on this level. */
     spriteImages?: number;
-    /** At least this many background-type images in the project. */
+    /** At least this many background-type images made on this level. */
     backgroundImages?: number;
-    /** At least this many block-type images in the project. */
+    /** At least this many block-type images made on this level. */
     blockImages?: number;
     /** This tab is active. */
     tab?: Tab;
@@ -110,32 +116,27 @@ export interface GuideStep {
 }
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
-  guideMode?: 'instructions' | 'aiCodeGenerate';
-  aiCodeGenerateAdlib?: string;
-  aiCodeGenerateText?: boolean;
-  // World-tab experiment: show the tab on this level (equivalent to the
-  // world-tab=true URL parameter).
-  showWorldTab?: boolean;
-  // Cells per side of the playfield for a world this level creates. An
-  // existing world keeps the size stored in its own grid; see resizeWorld.
-  worldGridSize?: number;
-  // The tabs this level shows, in the order that names the starting tab
-  // (the first entry). Absent or empty means the default set.
-  visibleTabs?: Tab[];
-  // Staged text for the floating guide, in order; requires guideMode.
+  /** What kind of level this is; decides the tabs and the image controls. */
+  levelMode?: LevelMode;
+  /** The one scene this level edits, created on first load if the project
+      lacks it. The id is the key the go-to-scene block stores; the name is
+      what the student sees, applied only at creation. The id must not be
+      'scene-1' (the id synthesized for sources saved before scenes). */
+  pinnedScene?: {
+    id: string;
+    name: string;
+    type?: SceneType;
+  };
+  /** Staged text for the floating guide, in order. */
   guideSteps?: GuideStep[];
-  // Locks the new-image dialog's Type choice.
-  lockedImageType?: ImageType;
-  // Show the full internal image dialog — name field, Start from,
-  // temperature — instead of the student one (equivalent to the
-  // images-advanced=true URL parameter).
-  imagesAdvanced?: boolean;
-  // The one scene this level edits, created on first load if the project
-  // lacks it. Must not be 'scene-1' (the id synthesized for sources saved
-  // before scenes existed).
-  pinnedSceneId?: string;
-  // Name given to the pinned scene at creation.
-  pinnedSceneName?: string;
+  /** Premade world for the pinned scene, one string per playfield row
+      anchored to the floor. 'B' cells take the block image the student made
+      most recently, 'S' the image_role_defaults sprite, else their first
+      character. */
+  worldStartPattern?: string[];
+  /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
+      image levels record through level_mode.imageRole. */
+  imageRoleDefaults?: ImageRoleDefaults;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

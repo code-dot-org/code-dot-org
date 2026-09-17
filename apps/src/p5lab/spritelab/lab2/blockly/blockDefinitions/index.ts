@@ -7,6 +7,7 @@ import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
 import makeSpriteAtGrid from './makeSpriteAtGrid';
+import makeSpriteAtPosition from './makeSpriteAtPosition';
 import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
@@ -37,6 +38,7 @@ const labBlockDefinitions: {
   patrollingOnBlocks,
   makePlatformPlayer,
   makeSpriteAtGrid,
+  makeSpriteAtPosition,
   makePlatformBlocks,
   setPlatformGravity,
   setAsPlatformPlayer,

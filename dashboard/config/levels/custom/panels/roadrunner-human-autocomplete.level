@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-15T21:32:36.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "roadrunner-human-autocomplete-f91a1b49-35a0-491c-8075-1d758598cebf",
+        "text": "Have you ever played a game where someone starts a sentence, and you try to guess the next word?",
+        "imageUrl": "https://images.code.org/62f488082a80988470705eba45af9678-roadrunner-human-autocomplete-panel-1-57c9dde0-70be-430f-a562-1beabe48ef21.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "roadrunner-human-autocomplete-77e61120-55c1-49ae-bf55-3bc57209ab81",
+        "text": "For example, if I say, \"The tired student sat down on the...\" What word comes to mind for you?",
+        "imageUrl": "https://images.code.org/5522935a0b16c760f971a51ffc5ba92a-roadrunner-human-autocomplete-panel-2-f61f6a7a-b87c-4368-b446-d2e45828c2df.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "roadrunner-human-autocomplete-3d3e08c1-275b-4f2a-8b11-ac13db61cd01",
+        "text": "Most likely, you thought of \"chair\" or \"bench\"! You used your experience and knowledge to predict the most probable word.",
+        "imageUrl": "https://images.code.org/e2aac3096e2d69ac013b120a31c31bc5-roadrunner-human-autocomplete-panel-3-d1f86ae1-c9cf-4cc8-9f7e-9a25d24ed6c7.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "roadrunner-human-autocomplete-09c45e5a-ef64-4b9c-81a8-0949fdc0bdc6",
+        "text": "Large Language Models, or LLMs, like the chatbots you might use, do something very similar, but at an incredible speed!",
+        "imageUrl": "https://images.code.org/30e42b6bfa8acfb41010b8e69c7ee897-roadrunner-human-autocomplete-panel-4-538bd4a5-f751-4eac-9547-2568af9c45a3.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "roadrunner-human-autocomplete-4df1a6a3-4791-4cd4-93eb-9417431873c4",
+        "text": "They don't truly 'understand' what a student or a chair is. Instead, they scan billions of sentences to calculate which word is most likely to come next.",
+        "imageUrl": "https://images.code.org/bf853c9abbef1a6db5051ebd1023d722-roadrunner-human-autocomplete-panel-5-0dec799d-3738-4dd8-8ebf-1bc6c54bedb0.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "roadrunner-human-autocomplete-adeff6b0-3b53-4a30-825a-50a2cbe09335",
+        "text": "It's all about recognizing patterns in language to predict the next word, building sentences, and even paragraphs, one word at a time!",
+        "imageUrl": "https://images.code.org/02224b85b27d15191763d1753ca72f12-roadrunner-human-autocomplete-panel-6-c4fd190b-22d1-4fb4-ace0-0a4a24146c3e.png",
+        "layout": "text-top-right"
+      }
+    ],
+    "generate_outline": "Learn about how Large Language Models (LLMs) generate text by predicting the next word, just like 'human autocomplete' based on patterns."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 21:33:28 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-09-15 21:33:29 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

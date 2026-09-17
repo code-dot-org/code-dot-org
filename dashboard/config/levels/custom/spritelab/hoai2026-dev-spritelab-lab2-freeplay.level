@@ -21,13 +21,19 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Images",
-      "World",
-      "Play"
-    ],
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "freeplay"
+    },
+    "image_role_defaults": {
+      "sprite": "hero",
+      "gamelab_addBehaviorSimple": [
+        "friend"
+      ],
+      "gamelab_checkTouching": [
+        "hero",
+        "treasure"
+      ]
+    },
     "guide_steps": [
       {
         "text": "**Free play!** Everything is unlocked: all of your images, all of your scenes, and the full set of blocks. Finish your game, and finish the lesson whenever you're done.",
@@ -132,17 +138,7 @@
             },
             {
               "kind": "block",
-              "type": "gamelab_makeNewSpriteAnon",
-              "inputs": {
-                "LOCATION": {
-                  "block": {
-                    "type": "gamelab_location_picker",
-                    "fields": {
-                      "LOCATION": "{\"x\":200,\"y\":200}"
-                    }
-                  }
-                }
-              }
+              "type": "spritelab2_makeSpriteAtPosition"
             },
             {
               "kind": "block",
@@ -173,33 +169,6 @@
                 "SPRITE": {
                   "shadow": {
                     "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              }
-            },
-            {
-              "kind": "block",
-              "type": "gamelab_spriteSayTime",
-              "inputs": {
-                "SPRITE": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "TEXT1": {
-                  "shadow": {
-                    "type": "text",
-                    "fields": {
-                      "TEXT": "Hello!"
-                    }
-                  }
-                },
-                "NUM": {
-                  "shadow": {
-                    "type": "math_number",
-                    "fields": {
-                      "NUM": 4
-                    }
                   }
                 }
               }
