@@ -24,3 +24,12 @@ declare module '@cdo/apps/util/createReactRoot' {
     options?: {legacyReactDomRender?: boolean},
   ): void;
 }
+
+declare module '@cdo/apps/aiTutor/views/gallery/ChallengeGallery' {
+  import type {FC} from 'react';
+
+  import type {TutorGalleryData} from './galleryFixtures';
+
+  const ChallengeGallery: FC<{tutorGalleryData: TutorGalleryData}>;
+  export default ChallengeGallery;
+}
