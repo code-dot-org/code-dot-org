@@ -1,9 +1,9 @@
 # kiosk
 
-The `kiosk` package gives Python Lab student code a screen to put buttons and
-labels on, and a loop that runs a Python function when a button is pressed.
-Unlike `neighborhood` and `theater`, which draw and finish, a kiosk program
-keeps running: what the student sees can send something back.
+The `kiosk` package gives Python Lab student code a screen to put buttons,
+labels and sliders on, and a loop that runs a Python function when one of them
+is used. Unlike `neighborhood` and `theater`, which draw and finish, a kiosk
+program keeps running: what the student sees can send something back.
 
 ```python
 import kiosk
@@ -32,9 +32,18 @@ code calls.
 | --- | --- |
 | `add_label(label_id, text, x, y)` | Place a label. |
 | `add_button(button_id, text, x, y)` | Place a button. |
-| `set_text(element_id, text)` | Change what a button or label says. |
+| `add_slider(slider_id, text, x, y, minimum=0, maximum=100, value=0)` | Place a slider, labelled `text`, with its handle at `value`. |
+| `set_text(element_id, text)` | Change what a button, label or slider says. |
+| `set_value(slider_id, value)` | Move a slider's handle. |
+| `get_value(slider_id)` | Where a slider's handle is now. |
 | `on_click(button_id, handler)` | Run `handler`, which takes no arguments, when the button is pressed. |
-| `start()` | Show the screen and react to presses until the program is stopped. |
+| `on_change(slider_id, handler)` | Run `handler` with the slider's new value each time it moves. |
+| `start()` | Show the screen and react to it until the program is stopped. |
+
+A press carries nothing, so `on_click` handlers take no arguments; a slider
+move carries where the handle was left, so `on_change` handlers take that
+value. Any handler can read a slider with `get_value`, which is how a button
+handler sees where a slider was left.
 
 `x` and `y` are percentages of the screen's width and height, measured from
 its top left corner, so a layout looks the same whatever size the preview
@@ -79,10 +88,15 @@ Under Pyodide's `jsglobals: {}` nothing else reaches the browser.
 - `publish(scene_json)` calls `_kiosk_bridge.publish`, a JS module the Pyodide
   web worker registers. The host posts the scene to the page, which draws it.
 - `wait_for_event()` calls `_kiosk_bridge.waitForEvent`, which blocks on a
-  synchronous request that a service worker answers when someone presses a
-  button. The answer is that button's id, or an empty id when Stop is asking the
-  program to end. This is the same round trip that makes `input()` work; see
+  synchronous request that a service worker answers when someone uses the
+  screen. The answer is `{"id": "go"}` for a press, with a `"value"` alongside
+  it when a slider moved, or nothing at all when Stop is asking the program to
+  end. This is the same round trip that makes `input()` work; see
   `apps/src/pythonlab/inputServiceWorker.js`.
+
+  A slider moves continuously while it is dragged, but this channel carries one
+  event at a time and the program is blocked until it handles each one. The page
+  therefore sends only where a handle comes to rest, not every step on the way.
 
 In any other interpreter the module is absent: publishing does nothing and
 `wait_for_event()` returns `None`, which is what lets `start()` return and the
@@ -100,13 +114,16 @@ One message per screen state:
 {
   "elements": [
     {"type": "label",  "id": "greeting", "text": "Hello",    "x": 5, "y": 10},
-    {"type": "button", "id": "go",       "text": "Press me", "x": 5, "y": 25}
+    {"type": "button", "id": "go",       "text": "Press me", "x": 5, "y": 25},
+    {"type": "slider", "id": "volume",   "text": "Volume",   "x": 5, "y": 40,
+     "min": 0, "max": 11, "value": 3}
   ]
 }
 ```
 
 The page redraws from this whole description each time, so it carries the
-screen's current state rather than a change to it.
+screen's current state rather than a change to it. Every element has the four
+common fields; a slider adds the ends of its range and where its handle sits.
 
 ## Tests
 

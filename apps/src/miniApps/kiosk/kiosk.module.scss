@@ -15,3 +15,10 @@
 .label {
   color: var(--text-neutral-primary);
 }
+
+// A slider has no width of its own, and an absolutely positioned box gives it
+// nothing to inherit.
+.sliderElement {
+  width: 40%;
+  min-width: 120px;
+}

@@ -6,4 +6,5 @@ export enum KioskSignalType {
 export enum KioskElementType {
   BUTTON = 'button',
   LABEL = 'label',
+  SLIDER = 'slider',
 }

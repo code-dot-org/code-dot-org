@@ -4,7 +4,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 
 import Kiosk from '@cdo/apps/miniApps/kiosk/Kiosk';
 import KioskVisualization from '@cdo/apps/miniApps/kiosk/KioskVisualization';
-import {KioskScene} from '@cdo/apps/miniApps/kiosk/types';
+import {KioskEvent, KioskScene} from '@cdo/apps/miniApps/kiosk/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import MiniAppEmptyState from './MiniAppEmptyState';
@@ -31,14 +31,14 @@ const KioskPreview: React.FunctionComponent = () => {
     };
   }, []);
 
-  const onElementClick = useCallback(
-    (elementId: string) => {
-      // Nothing is waiting for a press once the program has ended, and sending
+  const onElementEvent = useCallback(
+    (event: KioskEvent) => {
+      // Nothing is waiting for an event once the program has ended, and sending
       // then would be reported as an error the student cannot act on.
       if (!isRunning) {
         return;
       }
-      sendConsoleInput?.(elementId);
+      sendConsoleInput?.(JSON.stringify(event));
     },
     [isRunning, sendConsoleInput]
   );
@@ -46,7 +46,7 @@ const KioskPreview: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.miniAppContainer}>
       {scene ? (
-        <KioskVisualization scene={scene} onElementClick={onElementClick} />
+        <KioskVisualization scene={scene} onElementEvent={onElementEvent} />
       ) : (
         <MiniAppEmptyState
           iconName="display"

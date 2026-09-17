@@ -21,17 +21,27 @@ def fresh_default_screen():
 
 
 def install_fake_bridge(monkeypatch, events=()):
-  """Record published scenes and answer waits with the given element ids.
+  """Record published scenes and answer waits with the given events.
 
-  Returns the list the scenes land in, each already parsed from JSON. The wait
-  runs out after the last event, which is what lets start() return.
+  An event is an element id for a press, a dict for one carrying more than that
+  -- a slider's new value -- or "" for the empty answer Stop sends. Returns the
+  list the scenes land in, each already parsed from JSON. The wait runs out
+  after the last event, which is what lets start() return.
   """
   published = []
   remaining = list(events)
 
+  def next_answer():
+    if not remaining:
+      return None
+    event = remaining.pop(0)
+    if event == "":
+      return ""
+    return json.dumps({"id": event} if isinstance(event, str) else event)
+
   fake_bridge = types.ModuleType("_kiosk_bridge")
   fake_bridge.publish = lambda scene_json: published.append(json.loads(scene_json))
-  fake_bridge.waitForEvent = lambda: remaining.pop(0) if remaining else None
+  fake_bridge.waitForEvent = next_answer
   monkeypatch.setitem(sys.modules, "_kiosk_bridge", fake_bridge)
   return published
 
@@ -142,6 +152,96 @@ def test_an_empty_answer_ends_start(monkeypatch):
   kiosk.start()
 
   assert presses == [1]
+
+
+def test_a_slider_is_published_with_its_range(monkeypatch):
+  published = install_fake_bridge(monkeypatch)
+
+  kiosk.add_slider("volume", "Volume", 5, 40, minimum=0, maximum=11, value=3)
+
+  assert published[-1]["elements"] == [
+    {
+      "type": "slider", "id": "volume", "text": "Volume", "x": 5, "y": 40,
+      "min": 0, "max": 11, "value": 3,
+    }
+  ]
+
+
+def test_a_slider_reaches_the_page_complete(monkeypatch):
+  # The range must ride along with the first publish; a slider drawn without
+  # one would have nowhere to put its handle.
+  published = install_fake_bridge(monkeypatch)
+
+  kiosk.add_slider("volume", "Volume", 0, 0)
+
+  assert all("min" in scene["elements"][0] for scene in published)
+
+
+def test_moving_a_slider_runs_its_handler_with_the_new_value(monkeypatch):
+  install_fake_bridge(monkeypatch, events=[{"id": "volume", "value": 7}])
+  seen = []
+
+  kiosk.add_slider("volume", "Volume", 0, 0)
+  kiosk.on_change("volume", seen.append)
+  kiosk.start()
+
+  assert seen == [7]
+
+
+def test_a_moved_slider_remembers_where_it_was_left(monkeypatch):
+  # A button's handler asking get_value() must see what the page is showing.
+  install_fake_bridge(monkeypatch, events=[{"id": "volume", "value": 7}])
+
+  kiosk.add_slider("volume", "Volume", 0, 0)
+  kiosk.start()
+
+  assert kiosk.get_value("volume") == 7
+
+
+def test_set_value_moves_the_handle(monkeypatch):
+  published = install_fake_bridge(monkeypatch)
+
+  kiosk.add_slider("volume", "Volume", 0, 0)
+  kiosk.set_value("volume", 55)
+
+  assert published[-1]["elements"][0]["value"] == 55
+  assert kiosk.get_value("volume") == 55
+
+
+def test_a_slider_move_with_no_handler_still_records_the_value(monkeypatch):
+  install_fake_bridge(monkeypatch, events=[{"id": "volume", "value": 7}])
+
+  kiosk.add_slider("volume", "Volume", 0, 0)
+  kiosk.start()
+
+  assert kiosk.get_value("volume") == 7
+
+
+def test_a_slider_needs_a_minimum_below_its_maximum():
+  with pytest.raises(ValueError, match="minimum must be below"):
+    kiosk.add_slider("volume", "Volume", 0, 0, minimum=10, maximum=10)
+
+
+def test_a_slider_starts_inside_its_range():
+  with pytest.raises(ValueError, match="value must be between"):
+    kiosk.add_slider("volume", "Volume", 0, 0, minimum=0, maximum=10, value=11)
+
+
+def test_set_value_stays_inside_the_range():
+  kiosk.add_slider("volume", "Volume", 0, 0, minimum=0, maximum=10)
+  with pytest.raises(ValueError, match="value must be between"):
+    kiosk.set_value("volume", 11)
+
+
+def test_on_change_needs_a_slider():
+  kiosk.add_button("go", "Press me", 0, 0)
+  with pytest.raises(ValueError, match="no slider"):
+    kiosk.on_change("go", lambda value: None)
+
+
+def test_get_value_needs_a_slider():
+  with pytest.raises(ValueError, match="no slider"):
+    kiosk.get_value("volume")
 
 
 def test_a_press_with_no_handler_is_ignored(monkeypatch):

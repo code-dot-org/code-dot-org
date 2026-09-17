@@ -6,3 +6,4 @@ MAX_COORDINATE = 100
 # Element kinds, as they appear in a published scene.
 BUTTON = "button"
 LABEL = "label"
+SLIDER = "slider"

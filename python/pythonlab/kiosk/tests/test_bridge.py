@@ -24,12 +24,20 @@ def test_publish_hands_the_scene_to_the_host(monkeypatch):
   assert published == ['{"elements": []}']
 
 
-def test_wait_for_event_returns_what_the_host_sent(monkeypatch):
+def test_wait_for_event_returns_a_press(monkeypatch):
   fake_bridge = types.ModuleType("_kiosk_bridge")
-  fake_bridge.waitForEvent = lambda: "go"
+  fake_bridge.waitForEvent = lambda: '{"id": "go"}'
   monkeypatch.setitem(sys.modules, "_kiosk_bridge", fake_bridge)
 
-  assert bridge.wait_for_event() == "go"
+  assert bridge.wait_for_event() == {"id": "go"}
+
+
+def test_wait_for_event_returns_a_slider_value(monkeypatch):
+  fake_bridge = types.ModuleType("_kiosk_bridge")
+  fake_bridge.waitForEvent = lambda: '{"id": "volume", "value": 42}'
+  monkeypatch.setitem(sys.modules, "_kiosk_bridge", fake_bridge)
+
+  assert bridge.wait_for_event() == {"id": "volume", "value": 42}
 
 
 def test_an_empty_answer_reports_no_event(monkeypatch):

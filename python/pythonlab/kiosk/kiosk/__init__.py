@@ -1,6 +1,7 @@
 from .screen import (
-  add_button, add_label,
-  set_text, on_click,
+  add_button, add_label, add_slider,
+  set_text, set_value, get_value,
+  on_click, on_change,
   start,
 )
 # Exported so pythonlab_setup can drop the default screen between runs.
@@ -14,7 +15,11 @@ from .screen import reset_default_screen as reset_default_screen
 __all__ = [
   'add_button',
   'add_label',
+  'add_slider',
   'set_text',
+  'set_value',
+  'get_value',
   'on_click',
+  'on_change',
   'start',
 ]

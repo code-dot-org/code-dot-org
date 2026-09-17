@@ -23,11 +23,11 @@ loaded only for a program that imports `theater`, so an import in teardown would
 `ModuleNotFoundError` on every other run.
 
 ### kiosk
-This package gives student code a screen of buttons and labels, and a loop that runs a Python
-function when a button is pressed. It is the only interactive mini app: `kiosk/support/bridge.py`
+This package gives student code a screen of buttons, labels and sliders, and a loop that runs a Python
+function when one is used. It is the only interactive mini app: `kiosk/support/bridge.py`
 publishes the screen through `_kiosk_bridge.publish` (a JS module the Pyodide web worker registers,
 like theater's) and blocks on `_kiosk_bridge.waitForEvent`, a synchronous request the input service
-worker answers with the id of whatever was pressed — the same round trip that carries `input()`.
+worker answers with what the viewer did — the same round trip that carries `input()`.
 `kiosk.start()` does not return on its own; the student ends the program with Stop. Like theater's
 default scene, the default screen is state held across runs, so `teardown_pythonlab()` drops it via
 `reset_kiosk()`. The wheel is fetched only for a program that imports `kiosk`
