@@ -17,6 +17,11 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
   getClientApi: jest.fn(async () => ({transcribeAudio: mockTranscribeAudio})),
 }));
 
+// Referenced from inside jest.mock() below, so named with the "mock" prefix
+// babel-plugin-jest-hoist requires for out-of-scope variables.
+const mockRecordedVideoBlob = new Blob(['video-bytes'], {type: 'video/webm'});
+const mockRecordedAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
+
 // VideoRecorder relies on MediaRecorder and getUserMedia, unavailable in
 // jsdom. The stub honors the real component's caller-controlled contract:
 // it reacts to the `isRecording` prop instead of owning any buttons itself.
@@ -29,25 +34,30 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => {
     VideoRecorder: (props: {
       isRecording: boolean;
       onRecordingChange: (hasRecording: boolean) => void;
-      setRecordedUrl: (url: string | null) => void;
-      setRecordedAudioUrl: (url: string | null) => void;
+      setRecordedBlob: (blob: Blob | null) => void;
+      setRecordedAudioBlob: (blob: Blob | null) => void;
       disabled?: boolean;
     }) => {
       const {
         isRecording,
         onRecordingChange,
-        setRecordedUrl,
-        setRecordedAudioUrl,
+        setRecordedBlob,
+        setRecordedAudioBlob,
       } = props;
       const wasRecording = React.useRef(isRecording);
       React.useEffect(() => {
         if (wasRecording.current && !isRecording) {
-          setRecordedUrl('blob:fake-recording');
-          setRecordedAudioUrl('blob:fake-audio-recording');
+          setRecordedBlob(mockRecordedVideoBlob);
+          setRecordedAudioBlob(mockRecordedAudioBlob);
           onRecordingChange(true);
         }
         wasRecording.current = isRecording;
-      }, [isRecording, onRecordingChange, setRecordedUrl, setRecordedAudioUrl]);
+      }, [
+        isRecording,
+        onRecordingChange,
+        setRecordedBlob,
+        setRecordedAudioBlob,
+      ]);
       return null;
     },
   };
@@ -55,8 +65,6 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => {
 
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
-
-const fakeBlob = new Blob(['video-bytes'], {type: 'video/webm'});
 const createdResponse = {
   id: 7,
   challenge_id: 5,
@@ -134,21 +142,11 @@ const VideoHarness: FC<{
 };
 
 describe('VideoChallenge', () => {
-  let originalFetch: typeof globalThis.fetch | undefined;
-  let fetchMock: jest.Mock;
-
   beforeEach(() => {
     post.mockReset();
     put.mockReset();
     mockTranscribeAudio.mockReset();
     mockTranscribeAudio.mockResolvedValue('Hello this is a recording');
-    originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
-    fetchMock = jest.fn().mockResolvedValue({blob: async () => fakeBlob});
-    (globalThis as unknown as {fetch?: jest.Mock}).fetch = fetchMock;
-  });
-
-  afterEach(() => {
-    (globalThis as {fetch?: typeof originalFetch}).fetch = originalFetch;
   });
 
   it('disables submit until a video is recorded', () => {
@@ -170,7 +168,7 @@ describe('VideoChallenge', () => {
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
-  it('fetches the video blob, creates a response, and uploads the video', async () => {
+  it('transcribes the audio blob, creates a response, and uploads the video blob', async () => {
     post.mockResolvedValue({json: async () => createdResponse});
     put.mockResolvedValue({});
     const submitCallback = jest.fn();
@@ -182,9 +180,7 @@ describe('VideoChallenge', () => {
 
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
-    expect(fetchMock).toHaveBeenCalledWith('blob:fake-audio-recording');
-    expect(mockTranscribeAudio).toHaveBeenCalledWith(fakeBlob);
-    expect(fetchMock).toHaveBeenCalledWith('blob:fake-recording');
+    expect(mockTranscribeAudio).toHaveBeenCalledWith(mockRecordedAudioBlob);
     expect(post).toHaveBeenCalledWith(
       '/challenge_responses',
       JSON.stringify({
@@ -198,7 +194,7 @@ describe('VideoChallenge', () => {
     );
     expect(put).toHaveBeenCalledWith(
       '/challenge_response_assets/9/upload',
-      fakeBlob,
+      mockRecordedVideoBlob,
       true,
       {'Content-Type': 'video/webm'}
     );

@@ -25,16 +25,6 @@ def rack_env?(*env)
   e.include? rack_env.to_sym
 end
 
-def with_rack_env(temporary_env)
-  require 'mocha/api'
-  include Mocha::API
-  Mocha::Mockery.setup
-  CDO.stubs(rack_env: temporary_env)
-  yield
-  CDO.unstub(:rack_env)
-  Mocha::Mockery.teardown
-end
-
 def deploy_dir(*dirs)
   CDO.dir(*dirs)
 end
