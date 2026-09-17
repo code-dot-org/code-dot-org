@@ -515,8 +515,6 @@ class Ability
         ScriptLevel,
         Video,
         Vocabulary,
-        Skill,
-        LevelsSkill,
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
