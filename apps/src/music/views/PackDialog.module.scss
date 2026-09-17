@@ -112,8 +112,10 @@
           gap: 20px;
           align-items: center;
 
+          // Lift alternate rows off the list background without reaching the
+          // dialog's own surface color, which they would otherwise match.
           &Alternate {
-            background-color: var(--background-neutral-secondary);
+            background-color: var(--background-neutral-alpha-5);
           }
 
           &Selected {
