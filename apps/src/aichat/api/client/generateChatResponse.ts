@@ -79,20 +79,19 @@ export async function generateChatResponse(
     ? Output.object({schema: jsonSchema(modelParameters.responseJsonSchema)})
     : undefined;
 
-  // Generate a response with the model.
-  const {text, files, finishReason, response, output} = await generateText(
-    {
-      model: getModel(modelParameters.selectedModelId),
-      messages,
-      temperature: modelParameters.temperature,
-      ...(outputSchema && {output: outputSchema}),
-    },
-    {phase: 'generation'}
-  );
-
-  // chatMessageText has to stay a string: rendering, storage and non-schema
-  // messages all depend on that, even when a schema was used.
-  const responseText = outputSchema ? JSON.stringify(output) : text;
+  // Generate a response with the model. `text` is the response we return and
+  // store, even under a schema, where it holds the JSON the model emitted --
+  // not the parsed `output` re-serialized, which is not what was signed.
+  const {text, files, finishReason, response, responseSignature} =
+    await generateText(
+      {
+        model: getModel(modelParameters.selectedModelId),
+        messages,
+        temperature: modelParameters.temperature,
+        ...(outputSchema && {output: outputSchema}),
+      },
+      {phase: 'generation'}
+    );
 
   if (['content-filter', 'other'].includes(finishReason)) {
     // Gemini stores moderation information in a non-standard place so we need to dig into the raw HTTP body.
@@ -116,7 +115,7 @@ export async function generateChatResponse(
   const assets: ChatAsset[] = [];
   for (const file of files) {
     if (file.uint8Array.length === 0) {
-      return {response: responseText, status: AiRequestExecutionStatus.FAILURE};
+      return {response: text, status: AiRequestExecutionStatus.FAILURE};
     }
     let asset: ChatAsset;
     try {
@@ -168,13 +167,15 @@ export async function generateChatResponse(
         imageJudgeStatus === 'flagged'
       ) {
         return {
-          response: responseText,
+          response: text,
+          responseSignature,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
       if (imageModerationStatus === 'error' || imageJudgeStatus === 'error') {
         return {
-          response: responseText,
+          response: text,
+          responseSignature,
           status: AiRequestExecutionStatus.FAILURE,
         };
       }
@@ -182,20 +183,22 @@ export async function generateChatResponse(
   }
 
   // Check model text output for safety.
-  const modelOutputSafe = await isTextSafe(responseText, 'output_filter');
+  const modelOutputSafe = await isTextSafe(text, 'output_filter');
   Observability.metrics.count('ai-chat.text_moderation', 1, {
     phase: 'output_filter',
     result: modelOutputSafe ? 'ok' : 'flagged',
   });
   if (!modelOutputSafe) {
     return {
-      response: responseText,
+      response: text,
+      responseSignature,
       status: AiRequestExecutionStatus.MODEL_PROFANITY,
     };
   }
 
   return {
-    response: responseText,
+    response: text,
+    responseSignature,
     assets,
     status: AiRequestExecutionStatus.SUCCESS,
   };
