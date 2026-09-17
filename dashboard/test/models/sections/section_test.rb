@@ -1419,6 +1419,21 @@ class SectionTest < ActiveSupport::TestCase
     assert section.any_student_has_progress?
   end
 
+  test 'any_student_has_progress? returns true if student has progress in a sunsetting course' do
+    script = @jigsaw_unit
+    unit_group = create(:unit_group, name: 'sunsetcourse', version_year: '1991', family_name: 'sunset-family', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.sunsetting)
+    create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create(:section, script: script, unit_group: unit_group)
+
+    student = create(:follower, section: section).student_user
+    UserScript.create!(user: student, script: script)
+
+    refute unit_group.course_assignable?(section.user)
+    assert section.any_student_has_progress?
+  end
+
   test 'reset_code_review_groups creates new code review groups' do
     code_review_group_section = create(:section, user: @teacher, login_type: 'word')
     # Create 5 students
