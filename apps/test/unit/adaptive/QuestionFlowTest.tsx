@@ -1,35 +1,46 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import QuestionFlow from '@cdo/apps/aiLessons/QuestionFlow';
-import {AnswerRecord} from '@cdo/apps/aiLessons/studentInputs';
-import {QuestionsStep} from '@cdo/apps/aiLessons/types';
+import QuestionFlow from '@cdo/apps/adaptive/QuestionFlow';
+import {AnswerRecord, QuestionStep} from '@cdo/apps/adaptive/types';
 
-const interviewStep: QuestionsStep = {
-  id: 'interview',
-  kind: 'questions',
-  title: 'Tell us about your artist',
+// Two ungraded questions: no option is marked correct.
+const surveyStep: QuestionStep = {
+  id: 'survey',
+  kind: 'question',
+  title: 'About you',
   questions: [
-    {id: 'artist', type: 'freeResponse', prompt: 'Which artist?'},
     {
-      id: 'confidence',
-      type: 'scale',
-      prompt: 'How confident?',
-      scale: {min: 0, max: 10},
+      id: 'experience',
+      type: 'multipleChoice',
+      prompt: 'Have you built a website before?',
+      options: [
+        {id: 'yes', label: 'Yes'},
+        {id: 'no', label: 'No'},
+      ],
+    },
+    {
+      id: 'interest',
+      type: 'multipleChoice',
+      prompt: 'What interests you?',
+      multiSelect: true,
+      options: [
+        {id: 'games', label: 'Games'},
+        {id: 'art', label: 'Art'},
+      ],
     },
   ],
 };
 
-const quizStep: QuestionsStep = {
+const quizStep: QuestionStep = {
   id: 'quiz',
-  kind: 'questions',
+  kind: 'question',
   title: 'Quick check',
   questions: [
     {
       id: 'q',
       type: 'multipleChoice',
       prompt: 'Pick the element',
-      validation: 'key',
       options: [
         {id: 'right', label: '<p>Hello</p>', correct: true},
         {id: 'wrong', label: '<p>Hello'},
@@ -38,56 +49,57 @@ const quizStep: QuestionsStep = {
   ],
 };
 
-const branchStep: QuestionsStep = {
-  id: 'check-in',
-  kind: 'questions',
-  title: 'What next?',
+const multiQuizStep: QuestionStep = {
+  id: 'multi',
+  kind: 'question',
+  title: 'Check all',
   questions: [
     {
-      id: 'what-next',
+      id: 'tags',
       type: 'multipleChoice',
-      prompt: 'What next?',
+      prompt: 'Which are HTML tags?',
+      multiSelect: true,
       options: [
-        {id: 'more-html', label: 'More HTML', goTo: 'html-extra'},
-        {id: 'stay', label: 'Stay here', goTo: 'free-play'},
+        {id: 'p', label: 'p', correct: true},
+        {id: 'h1', label: 'h1', correct: true},
+        {id: 'css', label: 'css'},
       ],
     },
   ],
 };
 
 describe('QuestionFlow', () => {
-  // Advancing between questions plays a timed exit animation before the
-  // next question mounts; flush it with fake timers.
+  // Advancing plays a timed exit animation before the next question
+  // mounts; flush it with fake timers.
   beforeEach(() => jest.useFakeTimers());
   afterEach(() => jest.useRealTimers());
   const flushTransition = () => act(() => void jest.runAllTimers());
 
-  it('records a free response and advances to the next question', () => {
+  it('records an ungraded answer and advances to the next question', () => {
     const onAnswer = jest.fn();
     const onComplete = jest.fn();
     render(
       <QuestionFlow
-        step={interviewStep}
-        inputs={{}}
+        step={surveyStep}
+        answers={{}}
         onAnswer={onAnswer}
         onComplete={onComplete}
       />
     );
 
-    fireEvent.change(screen.getByPlaceholderText('Type your answer…'), {
-      target: {value: 'Beyonce'},
-    });
-    fireEvent.click(screen.getByText('Next →'));
+    fireEvent.click(screen.getByText('Yes'));
+    fireEvent.click(screen.getByText('Next'));
 
     expect(onAnswer).toHaveBeenCalledTimes(1);
     const record: AnswerRecord = onAnswer.mock.calls[0][0];
-    expect(record.questionId).toBe('artist');
-    expect(record.answer).toBe('Beyonce');
+    expect(record.questionId).toBe('experience');
+    expect(record.stepId).toBe('survey');
+    expect(record.optionIds).toEqual(['yes']);
     expect(record.outcome).toBe('accepted');
+    expect(record.attempts).toBe(1);
     expect(onComplete).not.toHaveBeenCalled();
-    // The scale question mounts once the exit transition finishes.
     flushTransition();
-    expect(screen.getByText('How confident?')).toBeDefined();
+    expect(screen.getByText('What interests you?')).toBeDefined();
   });
 
   it('completes the step after the last question', () => {
@@ -95,90 +107,98 @@ describe('QuestionFlow', () => {
     const onComplete = jest.fn();
     render(
       <QuestionFlow
-        step={interviewStep}
-        inputs={{}}
+        step={surveyStep}
+        answers={{}}
         onAnswer={onAnswer}
         onComplete={onComplete}
       />
     );
-    fireEvent.change(screen.getByPlaceholderText('Type your answer…'), {
-      target: {value: 'BTS'},
-    });
-    fireEvent.click(screen.getByText('Next →'));
+    fireEvent.click(screen.getByText('No'));
+    fireEvent.click(screen.getByText('Next'));
     flushTransition();
-    fireEvent.click(screen.getByText('Finish →'));
+    fireEvent.click(screen.getByText('Games'));
+    fireEvent.click(screen.getByText('Art'));
+    fireEvent.click(screen.getByText('Finish'));
 
     expect(onAnswer).toHaveBeenCalledTimes(2);
-    const scaleRecord: AnswerRecord = onAnswer.mock.calls[1][0];
-    expect(scaleRecord.questionId).toBe('confidence');
-    expect(scaleRecord.value).toBe(5);
-    expect(onComplete).toHaveBeenCalledWith();
+    expect(onAnswer.mock.calls[1][0].optionIds).toEqual(['games', 'art']);
+    expect(onComplete).toHaveBeenCalledTimes(1);
   });
 
-  it('gates a key-validated question until answered correctly', () => {
+  it('disables submission until an option is chosen', () => {
+    render(
+      <QuestionFlow
+        step={quizStep}
+        answers={{}}
+        onAnswer={jest.fn()}
+        onComplete={jest.fn()}
+      />
+    );
+    expect(
+      (screen.getByText('Finish').closest('button') as HTMLButtonElement)
+        .disabled
+    ).toBe(true);
+  });
+
+  it('gates a graded question until answered correctly', () => {
     const onAnswer = jest.fn();
     const onComplete = jest.fn();
     render(
       <QuestionFlow
         step={quizStep}
-        inputs={{}}
+        answers={{}}
         onAnswer={onAnswer}
         onComplete={onComplete}
       />
     );
 
     fireEvent.click(screen.getByText('<p>Hello'));
-    fireEvent.click(screen.getByText('Finish →'));
-    expect(screen.getByText('Not quite — try again!')).toBeDefined();
+    fireEvent.click(screen.getByText('Finish'));
+    expect(screen.getByText('Not quite. Try again!')).toBeDefined();
     expect(onComplete).not.toHaveBeenCalled();
     expect(onAnswer.mock.calls[0][0].outcome).toBe('incorrect');
 
     // Picking a different option clears the try-again feedback.
     fireEvent.click(screen.getByText('<p>Hello</p>'));
-    expect(screen.queryByText('Not quite — try again!')).toBeNull();
-    fireEvent.click(screen.getByText('Finish →'));
+    expect(screen.queryByText('Not quite. Try again!')).toBeNull();
+    fireEvent.click(screen.getByText('Finish'));
     expect(screen.getByText('Correct!')).toBeDefined();
     expect(onAnswer.mock.calls[1][0].outcome).toBe('correct');
-    expect(onAnswer.mock.calls[1][0].attempts).toBe(1);
     flushTransition();
-    expect(onComplete).toHaveBeenCalledWith();
+    expect(onComplete).toHaveBeenCalledTimes(1);
   });
 
-  it('completes with the option id on a submitted branch choice', () => {
+  it('grades a multi-select against the exact correct set', () => {
     const onAnswer = jest.fn();
-    const onComplete = jest.fn();
     render(
       <QuestionFlow
-        step={branchStep}
-        inputs={{}}
-        path={['a', 'free-play']}
+        step={multiQuizStep}
+        answers={{}}
         onAnswer={onAnswer}
-        onComplete={onComplete}
+        onComplete={jest.fn()}
       />
     );
 
-    // The option whose target was already visited is badged.
-    expect(screen.getByText('Stay here ✓')).toBeDefined();
+    fireEvent.click(screen.getByText('p'));
+    fireEvent.click(screen.getByText('Finish'));
+    expect(onAnswer.mock.calls[0][0].outcome).toBe('incorrect');
 
-    fireEvent.click(screen.getByText('More HTML'));
-    fireEvent.click(screen.getByText('Finish →'));
-    expect(onAnswer).toHaveBeenCalledTimes(1);
-    expect(onAnswer.mock.calls[0][0].optionId).toBe('more-html');
-    expect(onComplete).toHaveBeenCalledWith('more-html');
+    fireEvent.click(screen.getByText('h1'));
+    fireEvent.click(screen.getByText('Finish'));
+    expect(onAnswer.mock.calls[1][0].optionIds).toEqual(['p', 'h1']);
+    expect(onAnswer.mock.calls[1][0].outcome).toBe('correct');
   });
 
-  it('counts attempts across retries using prior inputs', () => {
+  it('counts attempts across retries using prior answers', () => {
     const onAnswer = jest.fn();
     render(
       <QuestionFlow
         step={quizStep}
-        inputs={{
+        answers={{
           q: {
             questionId: 'q',
             stepId: 'quiz',
-            prompt: 'Pick the element',
-            answer: '<p>Hello',
-            optionId: 'wrong',
+            optionIds: ['wrong'],
             outcome: 'incorrect',
             attempts: 2,
             at: '2026-01-01T00:00:00Z',
@@ -188,57 +208,40 @@ describe('QuestionFlow', () => {
         onComplete={jest.fn()}
       />
     );
-    fireEvent.click(screen.getByText('<p>Hello'));
-    fireEvent.click(screen.getByText('Finish →'));
-    expect(onAnswer.mock.calls[0][0].attempts).toBe(3);
-  });
-
-  it('badges the resolver-recommended option', async () => {
-    render(
-      <QuestionFlow
-        step={branchStep}
-        inputs={{}}
-        onAnswer={jest.fn()}
-        onComplete={jest.fn()}
-        getRecommendation={async () => 'more-html'}
-      />
+    // The prior choice is preselected.
+    expect(screen.getByText('<p>Hello').getAttribute('aria-pressed')).toBe(
+      'true'
     );
-    // The recommendation resolves asynchronously.
-    await act(async () => {});
-    expect(screen.getByText('✨ Suggested')).toBeDefined();
-    const button = screen.getByText('✨ Suggested').closest('button');
-    expect(button?.textContent).toContain('More HTML');
+    fireEvent.click(screen.getByText('Finish'));
+    expect(onAnswer.mock.calls[0][0].attempts).toBe(3);
   });
 
   it('navigates back and forward via the progress dots', () => {
     render(
       <QuestionFlow
-        step={interviewStep}
-        inputs={{}}
+        step={surveyStep}
+        answers={{}}
         onAnswer={jest.fn()}
         onComplete={jest.fn()}
       />
     );
 
-    // Unreached questions aren't clickable.
+    // Unreached questions are not clickable.
     const dot2 = screen.getByLabelText('Go to question 2') as HTMLButtonElement;
     expect(dot2.disabled).toBe(true);
 
-    fireEvent.change(screen.getByPlaceholderText('Type your answer…'), {
-      target: {value: 'Beyonce'},
-    });
-    fireEvent.click(screen.getByText('Next →'));
+    fireEvent.click(screen.getByText('Yes'));
+    fireEvent.click(screen.getByText('Next'));
     flushTransition();
-    expect(screen.getByText('How confident?')).toBeDefined();
+    expect(screen.getByText('What interests you?')).toBeDefined();
 
-    // Back to question 1 via its dot…
     fireEvent.click(screen.getByLabelText('Go to question 1'));
     flushTransition();
-    expect(screen.getByText('Which artist?')).toBeDefined();
+    expect(screen.getByText('Have you built a website before?')).toBeDefined();
 
-    // …and forward again: question 2 stays reachable once visited.
+    // Question 2 stays reachable once visited.
     fireEvent.click(screen.getByLabelText('Go to question 2'));
     flushTransition();
-    expect(screen.getByText('How confident?')).toBeDefined();
+    expect(screen.getByText('What interests you?')).toBeDefined();
   });
 });

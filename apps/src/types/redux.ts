@@ -1,5 +1,6 @@
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
+import {AdaptiveState} from '@cdo/apps/adaptive/adaptiveRedux';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {AichatLabState} from '@cdo/apps/aichatLab/redux/state';
 import {AiDiffChatState} from '@cdo/apps/aiTeacherDrawer/redux';
@@ -40,6 +41,7 @@ import {LegacyLabsState} from '../redux/legacyLabs';
 // We cannot infer the type of our store because we programmatically add to the store
 // with registerReducers.
 export interface RootState {
+  adaptive: AdaptiveState;
   animationList: RuntimeAnimationList;
   locationPicker: LocationPickerState;
   manageStudents: ManageStudentsState;

@@ -10,7 +10,57 @@
       "title": "Welcome",
       "panels": [
         {
-          "caption": "This content is a placeholder. The player replaces this view in a later change."
+          "caption": "This lesson has a few short steps. Read each panel, then answer the questions that follow."
+        },
+        {
+          "caption": "A web page is written in HTML. Tags like <p> and <h1> tell the browser what each piece of text is."
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "kind": "question",
+      "title": "Quick check",
+      "questions": [
+        {
+          "id": "experience",
+          "type": "multipleChoice",
+          "prompt": "Have you built a web page before?",
+          "options": [
+            {"id": "yes", "label": "Yes"},
+            {"id": "no", "label": "No"}
+          ]
+        },
+        {
+          "id": "paragraph",
+          "type": "multipleChoice",
+          "prompt": "Which tag marks a paragraph?",
+          "options": [
+            {"id": "p", "label": "<p>", "correct": true},
+            {"id": "h1", "label": "<h1>"},
+            {"id": "img", "label": "<img>"}
+          ]
+        },
+        {
+          "id": "tags",
+          "type": "multipleChoice",
+          "prompt": "Which of these are HTML tags? Pick all that apply.",
+          "multiSelect": true,
+          "options": [
+            {"id": "p", "label": "<p>", "correct": true},
+            {"id": "h1", "label": "<h1>", "correct": true},
+            {"id": "css", "label": "css"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wrap",
+      "kind": "panels",
+      "title": "Nice work",
+      "panels": [
+        {
+          "caption": "You have finished the sample lesson."
         }
       ],
       "next": "end"
