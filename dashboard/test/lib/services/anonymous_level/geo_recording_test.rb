@@ -77,6 +77,27 @@ class Services::AnonymousLevel::GeoRecordingTest < ActiveSupport::TestCase
       end
     end
 
+    context 'when uniqueness validation detects matching geo created by another request' do
+      let(:new_geo) {build(:anonymous_level_geo, anon_user_id:)}
+
+      before do
+        create(:anonymous_level_geo, anon_user_id:)
+        AnonymousLevel::Geo.stubs(:find_or_initialize_by).with(anon_user_id:).returns(new_geo)
+      end
+
+      it 'returns initialized geo' do
+        _(record_geo).must_equal new_geo
+      end
+    end
+
+    context 'when geo fails another validation' do
+      let(:anon_user_id) {'invalid'}
+
+      it 'raises the validation error' do
+        _ {record_geo}.must_raise ActiveRecord::RecordInvalid
+      end
+    end
+
     context 'when the IP address has no location' do
       let(:geocoder_result) {nil}
 
