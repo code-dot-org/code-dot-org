@@ -27,6 +27,7 @@ end
 
 def with_rack_env(temporary_env)
   require 'mocha/api'
+  include Mocha::API
   Mocha::Mockery.setup
   CDO.stubs(rack_env: temporary_env)
   yield
