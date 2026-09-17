@@ -28,6 +28,8 @@ export default defineConfig({
       entry: {
         index: 'src/index.ts',
         'fixtures/index': 'src/fixtures/index.ts',
+        // ./redux subpath export — its own chunk at dist/redux/index.*
+        'redux/index': 'src/redux/index.ts',
       },
       name: 'accounts',
       formats: ['es', 'cjs'],
