@@ -1,0 +1,55 @@
+{
+  "name": "@code-dot-org/craft",
+  "version": "0.2.1",
+  "description": "Top-down 2D game engine for the Craft app type. See NOTICE for restrictions on use.",
+  "main": "dist/main.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "webpack -p",
+    "dev": "webpack-dev-server --mode development",
+    "codecov": "nyc report --reporter=text-lcov > ./coverage/unit.lcov && codecov",
+    "test:unit": "tape ./test/unit/*.js",
+    "test:integration": "karma start",
+    "test": "npm run lint && nyc tape ./test/unit/*.js && npm run test:integration",
+    "lint": "eslint --ext .js src/js test",
+    "preversion": "npm run test:unit",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:code-dot-org/craft.git"
+  },
+  "author": "Code.org Contributors",
+  "license": "SEE LICENSE IN LICENSE",
+  "browserify-shim": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^6.3.0",
+    "browserify": "^10.2.4",
+    "browserify-istanbul": "^2.0.0",
+    "browserify-shim": "^3.8.9",
+    "canvas": "^1.6.6",
+    "codecov": "^2.3.0",
+    "copy-webpack-plugin": "^4.5.1",
+    "eslint": "^2.8.0",
+    "jsdom": "11.2.0",
+    "karma": "^1.7.0",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-tap": "^3.1.1",
+    "nyc": "^11.2.1",
+    "phaser": "^2.6.2",
+    "sinon": "^3.2.1",
+    "tape": "^4.8.0",
+    "watchify": "^3.11.0",
+    "webpack": "4.19.1",
+    "webpack-cli": "^2.1.5",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
