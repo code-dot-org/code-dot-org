@@ -112,6 +112,15 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     end
   end
 
+  test 'export stamps production spans as the default environment' do
+    CDO.stubs(:rack_env).returns(:production)
+    _url, _options, body = capture_export
+
+    spans_from(body).each do |span|
+      assert_equal 'default', attributes_of(span)['langfuse.environment']
+    end
+  end
+
   test 'export puts the overall input and output on both observations' do
     _url, _options, body = capture_export
 

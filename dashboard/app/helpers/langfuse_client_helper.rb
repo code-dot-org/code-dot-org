@@ -1,8 +1,6 @@
 require 'erb'
 include ERB::Util
 
-# Langfuse v4 has no trace record: a trace is the spans sharing a trace id, and
-# trace-wide attributes count only where they are repeated on each span.
 module LangfuseClientHelper
   class Client
     attr_accessor :api_key
@@ -10,13 +8,10 @@ module LangfuseClientHelper
     LANGFUSE_URL = "https://us.cloud.langfuse.com/api/public"
     OTLP_TRACES_URL = "#{LANGFUSE_URL}/otel/v1/traces".freeze
 
-    # Without the version header, spans take up to 10 minutes to appear.
     OTLP_HEADERS = {
       "Content-Type" => "application/json",
       "x-langfuse-ingestion-version" => "4",
     }.freeze
-
-    SPAN_KIND_INTERNAL = 1
 
     def initialize(secret_key, public_key)
       @secret_key = secret_key
@@ -55,7 +50,6 @@ module LangfuseClientHelper
       response
     end
 
-    # Re-sending a span id duplicates the observation rather than updating it.
     def export_spans(spans)
       HTTParty.post(
         OTLP_TRACES_URL,
@@ -78,8 +72,6 @@ module LangfuseClientHelper
       nil
     end
 
-    # Input and output go on the root because observation evaluators see only the
-    # span they match. Pass the user's message as input, never the system prompt.
     def export_generation_trace(trace_name:, generation_name:, model:, user_id: nil, input: nil, output: nil, usage: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil, prompt_name: nil, prompt_version: nil)
       trace_id = SecureRandom.hex(16)
       root_span_id = SecureRandom.hex(8)
@@ -123,7 +115,7 @@ module LangfuseClientHelper
         spanId: span_id,
         parentSpanId: parent_span_id,
         name: name,
-        kind: SPAN_KIND_INTERNAL,
+        kind: 1, # default for internal spans
         startTimeUnixNano: start_nanos,
         endTimeUnixNano: end_nanos,
         attributes: attributes,
@@ -133,9 +125,7 @@ module LangfuseClientHelper
     private def trace_attributes(trace_name:, user_id:, tags:, metadata:)
       attributes = [
         otlp_attribute("langfuse.trace.name", trace_name),
-        # Every rack env shares one project. Nothing writes "default" after this,
-        # so Langfuse views pinned to that environment need repointing.
-        otlp_attribute("langfuse.environment", CDO.rack_env.to_s),
+        otlp_attribute("langfuse.environment", langfuse_environment),
       ]
       attributes << otlp_attribute("langfuse.user.id", user_id) if user_id
       attributes << otlp_attribute("langfuse.trace.tags", tags.map(&:to_s)) if tags.present?
@@ -177,11 +167,15 @@ module LangfuseClientHelper
       end
     end
 
+    private def langfuse_environment
+      # Production uses "default" to maintain consistency with all existing traces.
+      CDO.rack_env?(:production) ? "default" : CDO.rack_env.to_s
+    end
+
     private def json_string(value)
       value.is_a?(String) ? value : value.to_json
     end
 
-    # OTLP JSON carries 64-bit timestamps as decimal strings.
     private def unix_nanos(time)
       ((time || Time.now).to_r * 1_000_000_000).to_i.to_s
     end
