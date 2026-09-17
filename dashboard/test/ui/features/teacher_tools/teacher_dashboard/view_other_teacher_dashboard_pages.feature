@@ -45,6 +45,10 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     Given I click selector "#ui-test-teacher-sidebar a:contains('Assessments')" once I see it
     And I wait until element "#unit-selector-v2" is visible
     And I select the "All The Levels! *" option in dropdown "unit-selector-v2"
+    # Name an assessment this scenario has not submitted to, rather than
+    # relying on which one loads by default: the tab defaults to the lowest
+    # level group id, which cloning reassigns.
+    And I select the "Lesson 23: Multi page assessment" option in dropdown "assessment-selector"
     And I wait until element "div:contains(no submissions for this assessment)" is visible
     And I wait until element "div:contains(this survey is anonymous)" is not visible
     And I select the "Lesson 30: Anonymous student survey" option in dropdown "assessment-selector"
