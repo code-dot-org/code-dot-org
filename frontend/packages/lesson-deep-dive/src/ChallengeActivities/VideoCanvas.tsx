@@ -110,10 +110,10 @@ interface VideoCanvasProps {
   // Called when the recording stops on its own (countdown expiry), so the
   // caller can bring its `isRecording` state back in sync.
   onIsRecordingChange?: (isRecording: boolean) => void;
-  recordedUrl: string | null;
-  setRecordedUrl: Dispatch<SetStateAction<string | null>>;
-  recordedAudioUrl: string | null;
-  setRecordedAudioUrl: Dispatch<SetStateAction<string | null>>;
+  recordedBlob: Blob | null;
+  setRecordedBlob: Dispatch<SetStateAction<Blob | null>>;
+  recordedAudioBlob: Blob | null;
+  setRecordedAudioBlob: Dispatch<SetStateAction<Blob | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
 }
@@ -122,10 +122,9 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   isRecording,
   onRecordingChange,
   onIsRecordingChange,
-  recordedUrl,
-  setRecordedUrl,
-  recordedAudioUrl,
-  setRecordedAudioUrl,
+  recordedBlob,
+  setRecordedBlob,
+  setRecordedAudioBlob,
   timeLimitSeconds = 30,
   disabled = false,
 }) => {
@@ -133,6 +132,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
   const [stageSize, setStageSize] = useState({width: 0, height: 0});
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   // A state-backed ref (rather than useRef) so the animation effect below
   // reruns when the Layer mounts — it unmounts/remounts across a re-record,
   // since it lives in the same conditional branch as the recorded-playback
@@ -239,18 +239,15 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     };
   }, [layerNode, stageSize]);
 
-  // Revoke the object URLs whenever they change or on unmount.
   useEffect(() => {
-    return () => {
-      if (recordedUrl) URL.revokeObjectURL(recordedUrl);
-    };
-  }, [recordedUrl]);
-
-  useEffect(() => {
-    return () => {
-      if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
-    };
-  }, [recordedAudioUrl]);
+    if (!recordedBlob) {
+      setPreviewUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(recordedBlob);
+    setPreviewUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [recordedBlob]);
 
   const stopRecording = useCallback(() => {
     clearTimer();
@@ -271,15 +268,15 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
   const startRecording = useCallback(async () => {
     // Re-recording over a previous take: that stream's tracks were stopped
     // when the previous recording finished, so get a fresh one first.
-    // Clearing recordedUrl (rather than setting recordingState) is what
+    // Clearing recordedBlob (rather than setting recordingState) is what
     // switches back to the preview render so the stage and <video
     // ref={videoRef}> are mounted in time to receive it — recordingState
     // itself stays 'recorded' until the new recorder actually starts, since
     // changing it here would re-trigger the isRecording effect below mid-await
     // and race a second startRecording() against this one's stale stream.
     if (recordingState === 'recorded') {
-      setRecordedUrl(null);
-      setRecordedAudioUrl(null);
+      setRecordedBlob(null);
+      setRecordedAudioBlob(null);
       onRecordingChange(false);
       await startStream();
     }
@@ -305,7 +302,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     };
     recorder.onstop = () => {
       const blob = new Blob(chunksRef.current, {type: 'video/webm'});
-      setRecordedUrl(URL.createObjectURL(blob));
+      setRecordedBlob(blob);
       onRecordingChange(true);
       onIsRecordingChange?.(false);
     };
@@ -323,7 +320,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     };
     audioRecorder.onstop = () => {
       const blob = new Blob(audioChunksRef.current, {type: 'audio/webm'});
-      setRecordedAudioUrl(URL.createObjectURL(blob));
+      setRecordedAudioBlob(blob);
     };
     audioRecorderRef.current = audioRecorder;
 
@@ -338,8 +335,8 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     recordingState,
     startStream,
     timeLimitSeconds,
-    setRecordedUrl,
-    setRecordedAudioUrl,
+    setRecordedBlob,
+    setRecordedAudioBlob,
     onRecordingChange,
     onIsRecordingChange,
   ]);
@@ -360,14 +357,14 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     return <p className={styles.error}>{error}</p>;
   }
 
-  if (recordingState === 'recorded' && recordedUrl) {
+  if (recordingState === 'recorded' && previewUrl) {
     return (
       <div className={styles.container}>
         <div className={styles.previewWrapper}>
           {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
           <video
             className={styles.video}
-            src={recordedUrl}
+            src={previewUrl}
             controls
             key="playback"
           />
