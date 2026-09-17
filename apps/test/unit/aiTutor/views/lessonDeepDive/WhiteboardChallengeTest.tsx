@@ -214,8 +214,6 @@ describe('WhiteboardChallenge', () => {
     snapshot.mockReset();
     mockTranscribeAudio.mockReset();
     mockTranscribeAudio.mockResolvedValue('Hello this is a recording');
-    // Only the starter-image fetch in buildStarterImageNode uses fetch()
-    // now; individual tests that need it set their own response.
     originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
     fetchMock = jest.fn();
     (globalThis as unknown as {fetch?: jest.Mock}).fetch = fetchMock;

@@ -89,10 +89,6 @@ interface VideoRecorderProps {
   // Called when the recording stops on its own (countdown expiry), so the
   // caller can bring its `isRecording` state back in sync.
   onIsRecordingChange?: (isRecording: boolean) => void;
-  // Lifted as a Blob rather than an object URL: the caller uploads it
-  // directly, so it never needs to fetch() a blob: URL (CSP's connect-src
-  // blocks that, even though the same URL is fine as this component's own
-  // <video src>).
   recordedBlob: Blob | null;
   setRecordedBlob: Dispatch<SetStateAction<Blob | null>>;
   recordedAudioBlob: Blob | null;
@@ -114,8 +110,6 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
   const [recordingState, setRecordingState] = useState<RecordingState>('idle');
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
-  // Preview playback needs a URL; derived here (rather than lifted) since
-  // only this component's own <video> ever reads it.
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   const previewRef = useRef<HTMLVideoElement>(null);

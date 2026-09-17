@@ -83,10 +83,6 @@ interface AudioRecorderProps {
   // Called when the recording stops on its own (countdown expiry), so the
   // caller can bring its `isRecording` state back in sync.
   onIsRecordingChange?: (isRecording: boolean) => void;
-  // Lifted as a Blob rather than an object URL: the caller uploads/transcribes
-  // it directly, so it never needs to fetch() a blob: URL (CSP's connect-src
-  // blocks that, even though the same URL is fine as this component's own
-  // <audio src>).
   recordedBlob: Blob | null;
   setRecordedBlob: React.Dispatch<React.SetStateAction<Blob | null>>;
   timeLimitSeconds?: number;
@@ -105,8 +101,6 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
   const [recordingState, setRecordingState] = useState<RecordingState>('idle');
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
-  // Preview playback needs a URL; derived here (rather than lifted) since
-  // only this component's own <audio> ever reads it.
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   const streamRef = useRef<MediaStream | null>(null);
