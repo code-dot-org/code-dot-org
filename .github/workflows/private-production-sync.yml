@@ -1,0 +1,21 @@
+name: Trigger Private Production Sync
+on:
+  push:
+    branches:
+      - production
+  workflow_dispatch:
+
+jobs:
+  trigger-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Private Production Sync
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.PRIVATE_PRODUCTION_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -H "X-GitHub-Event: push" \
+            -H "X-GitHub-Delivery: ${{ github.run_id }}" \
+            -H "X-Hub-Signature: sha1=${{ secrets.PRIVATE_PRODUCTION_WEBHOOK_SECRET }}" \
+            -d '{"ref":"refs/heads/production","repository":{"full_name":"code-dot-org/code-dot-org"}}' \
+            ${{ secrets.PRIVATE_PRODUCTION_LAMBDA_URL }}
