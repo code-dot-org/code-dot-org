@@ -3,10 +3,21 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 import {postLogChatEvent} from './aichatApi';
 import AichatContextManager from './aichatContextManager';
-import {ChatEvent} from './types';
+import {AichatContext, ChatEvent} from './types';
+
+interface QueuedChatEvent {
+  chatEvent: ChatEvent;
+  /**
+   * The context this event belongs to. Callers that know it -- because the
+   * work that produced the event started under a context that may since have
+   * been replaced -- should pass it. When absent, the context in effect at the
+   * moment the event is sent is used.
+   */
+  aichatContext?: AichatContext;
+}
 
 export default class ChatEventLogger {
-  private queue: ChatEvent[];
+  private queue: QueuedChatEvent[];
   private sendingInProgress: boolean;
 
   private static instance: ChatEventLogger;
@@ -23,22 +34,27 @@ export default class ChatEventLogger {
     return ChatEventLogger.instance;
   }
 
-  public logChatEvent(chatEvent: ChatEvent) {
-    this.queue.push(chatEvent);
+  public logChatEvent(chatEvent: ChatEvent, aichatContext?: AichatContext) {
+    this.queue.push({chatEvent, aichatContext});
     if (!this.sendingInProgress) {
       this.sendChatEvent();
     }
   }
 
   private async sendChatEvent() {
-    const aichatContext = AichatContextManager.getContext();
     // Send aichat events to the server to be logged.
     while (this.queue.length > 0) {
-      const chatEvent = this.queue.shift(); // Remove the first element from the queue.
-      if (chatEvent) {
+      const queued = this.queue.shift(); // Remove the first element from the queue.
+      if (queued) {
         this.sendingInProgress = true;
         try {
-          await postLogChatEvent(chatEvent, aichatContext);
+          // Resolve the context per event rather than once per drain. This loop
+          // awaits, and the level can change while it runs, so a context read
+          // at the start of the drain would file later events under the level
+          // the drain began on.
+          const aichatContext =
+            queued.aichatContext ?? AichatContextManager.getContext();
+          await postLogChatEvent(queued.chatEvent, aichatContext);
         } catch (error) {
           // Only send log report if not a 403 error.
           if (
