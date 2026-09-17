@@ -78,8 +78,34 @@ function kindFromFabricObject(
   return null;
 }
 
+// Maximum pixel length for the longer edge of the PNG export.
+const MAX_EXPORT_PX = 4096;
+
 function dataURLToBlob(dataUrl: string): Promise<Blob> {
   return fetch(dataUrl).then(r => r.blob());
+}
+
+// Returns the axis-aligned bounding box that covers the full canvas viewport
+// plus any objects that extend beyond it. The export area uses this so that
+// objects dragged outside the visible canvas are not silently clipped.
+function exportBounds(canvas: Canvas): {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+} {
+  let minX = 0;
+  let minY = 0;
+  let maxX = canvas.getWidth();
+  let maxY = canvas.getHeight();
+  canvas.getObjects().forEach(obj => {
+    const b = obj.getBoundingRect();
+    if (b.left < minX) minX = b.left;
+    if (b.top < minY) minY = b.top;
+    if (b.left + b.width > maxX) maxX = b.left + b.width;
+    if (b.top + b.height > maxY) maxY = b.top + b.height;
+  });
+  return {left: minX, top: minY, width: maxX - minX, height: maxY - minY};
 }
 
 async function loadStarterImage(
@@ -122,6 +148,7 @@ async function loadStarterImage(
 
 export interface SvgCanvasHandle {
   getBlob(): Promise<Blob>;
+  getSvgBlob(): Blob;
 }
 
 interface SvgCanvasProps {
@@ -308,12 +335,30 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
         if (!canvas) throw new Error('Canvas not initialized.');
         canvas.discardActiveObject();
         canvas.renderAll();
+        const bounds = exportBounds(canvas);
+        const multiplier = Math.min(
+          1,
+          MAX_EXPORT_PX / bounds.width,
+          MAX_EXPORT_PX / bounds.height
+        );
         const dataUrl = canvas.toDataURL({
           format: 'png',
           quality: 1,
-          multiplier: 1,
+          multiplier,
+          ...bounds,
         });
         return dataURLToBlob(dataUrl);
+      },
+      getSvgBlob: () => {
+        const canvas = fabricRef.current;
+        if (!canvas) throw new Error('Canvas not initialized.');
+        canvas.discardActiveObject();
+        canvas.renderAll();
+        const {left, top, width, height} = exportBounds(canvas);
+        const svg = canvas.toSVG({
+          viewBox: {x: left, y: top, width, height},
+        });
+        return new Blob([svg], {type: 'image/svg+xml'});
       },
     }));
 

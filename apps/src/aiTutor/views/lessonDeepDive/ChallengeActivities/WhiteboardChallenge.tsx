@@ -141,8 +141,11 @@ const WhiteboardChallenge: FC<WhiteboardChallengeProps> = ({
     setSubmitting(true);
     setSubmitError(null);
     try {
-      const blob = await svgCanvasRef.current?.getBlob();
-      if (!blob) {
+      const [blob, svgBlob] = await Promise.all([
+        svgCanvasRef.current?.getBlob(),
+        Promise.resolve(svgCanvasRef.current?.getSvgBlob()),
+      ]);
+      if (!blob || !svgBlob) {
         throw new Error('Could not capture your drawing.');
       }
 
@@ -159,7 +162,10 @@ const WhiteboardChallenge: FC<WhiteboardChallengeProps> = ({
         JSON.stringify({
           challenge_id: challengeId,
           is_final: true,
-          assets: [{asset_type: 'whiteboard_image'}],
+          assets: [
+            {asset_type: 'whiteboard_image'},
+            {asset_type: 'whiteboard_svg'},
+          ],
           transcript: transcript,
           student_text: text,
         }),
@@ -168,18 +174,31 @@ const WhiteboardChallenge: FC<WhiteboardChallengeProps> = ({
       );
       const created: CreatedChallengeResponse = await response.json();
 
-      const assetId = created.assets.find(
+      const imageAssetId = created.assets.find(
         asset => asset.asset_type === 'whiteboard_image'
       )?.id;
-      if (assetId === undefined) {
-        throw new Error('The server did not return a whiteboard asset.');
+      const svgAssetId = created.assets.find(
+        asset => asset.asset_type === 'whiteboard_svg'
+      )?.id;
+      if (imageAssetId === undefined || svgAssetId === undefined) {
+        throw new Error(
+          'The server did not return the expected whiteboard assets.'
+        );
       }
-      await HttpClient.put(
-        `/challenge_response_assets/${assetId}/upload`,
-        blob,
-        true,
-        {'Content-Type': 'image/png'}
-      );
+      await Promise.all([
+        HttpClient.put(
+          `/challenge_response_assets/${imageAssetId}/upload`,
+          blob,
+          true,
+          {'Content-Type': 'image/png'}
+        ),
+        HttpClient.put(
+          `/challenge_response_assets/${svgAssetId}/upload`,
+          svgBlob,
+          true,
+          {'Content-Type': 'image/svg+xml'}
+        ),
+      ]);
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
