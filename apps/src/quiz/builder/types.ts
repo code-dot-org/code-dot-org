@@ -34,8 +34,7 @@ export interface QuizBuilderQuestion extends QuizQuestion {
   page: number | null;
 }
 
-// What useQuizBuilderQuestions exposes, and what QuizBuilderWorkspace
-// takes as props.
+// What useQuizBuilderQuestions exposes.
 export interface QuizBuilderQuestionsState {
   questions: QuizBuilderQuestion[];
   isLoading: boolean;

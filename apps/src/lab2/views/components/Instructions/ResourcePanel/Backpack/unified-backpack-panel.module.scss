@@ -1,7 +1,6 @@
 $file-list-gap: 8px;
 
 .unifiedBackpackPanel {
-  position: relative;
   display: flex;
   padding: var(--padding-p-xxs, 8px);
   flex-direction: column;
@@ -18,23 +17,6 @@ $file-list-gap: 8px;
   // A save button, when present, is last instead and needs that padding.
   &:has(.unsupportedSection:not([open])):not(:has(.saveButton)) {
     padding-bottom: 0;
-  }
-}
-
-.alertContainer {
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-  position: absolute;
-}
-
-.alertList {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  > * {
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.07), 0 4px 7px 0 rgb(0 0 0 / 0.07);
   }
 }
 
