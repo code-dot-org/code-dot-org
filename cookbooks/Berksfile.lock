@@ -59,7 +59,7 @@ GRAPH
   aws_cloudwatch (2.0.0)
   cdo-analytics (0.1.17)
     apt (>= 0.0.0)
-  cdo-apps (0.2.716)
+  cdo-apps (0.2.717)
     apt (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
     cdo-cloudwatch-agent (>= 0.0.0)
