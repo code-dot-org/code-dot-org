@@ -474,4 +474,99 @@ class UserLevelsControllerTest < ActionController::TestCase
     get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
     assert_response :forbidden
   end
+
+  # Adaptive player state lives on the student's own UserLevel row.
+  def adaptive_script_level
+    create(:script_level, levels: [create(:adaptive)])
+  end
+
+  def put_adaptive_state(script_level, state)
+    @request.env['RAW_POST_DATA'] = {state: state}.to_json
+    put :update_adaptive_state, params: {script_id: script_level.script.id, level_id: script_level.level.id}
+  end
+
+  test "adaptive state is null before any save" do
+    sign_in create(:student)
+    script_level = adaptive_script_level
+
+    get :get_adaptive_state, params: {script_id: script_level.script.id, level_id: script_level.level.id}
+    assert_response :success
+    assert_nil JSON.parse(response.body)['state']
+  end
+
+  test "student saves and reads back adaptive state without touching best_result" do
+    student = create(:student)
+    sign_in student
+    script_level = adaptive_script_level
+    state = {'currentStepId' => 'check', 'completedStepIds' => ['intro'], 'answers' => {}}
+
+    put_adaptive_state(script_level, state)
+    assert_response :no_content
+
+    user_level = UserLevel.find_by(user: student, script_id: script_level.script.id, level_id: script_level.level.id)
+    assert_equal state, user_level.adaptive_state
+    assert_nil user_level.best_result
+    refute user_level.attempted?
+
+    get :get_adaptive_state, params: {script_id: script_level.script.id, level_id: script_level.level.id}
+    assert_equal state, JSON.parse(response.body)['state']
+  end
+
+  test "saving adaptive state keeps existing progress on the row" do
+    student = create(:student)
+    sign_in student
+    script_level = adaptive_script_level
+    create(:user_level, user: student, script: script_level.script, level: script_level.level, best_result: 3)
+
+    put_adaptive_state(script_level, {'completed' => true})
+    assert_response :no_content
+
+    user_level = UserLevel.find_by(user: student, script_id: script_level.script.id, level_id: script_level.level.id)
+    assert_equal 3, user_level.best_result
+    assert_equal({'completed' => true}, user_level.adaptive_state)
+  end
+
+  test "adaptive state is scoped to the signed-in user" do
+    script_level = adaptive_script_level
+    sign_in create(:student)
+    put_adaptive_state(script_level, {'completed' => true})
+
+    sign_in create(:student)
+    get :get_adaptive_state, params: {script_id: script_level.script.id, level_id: script_level.level.id}
+    assert_nil JSON.parse(response.body)['state']
+  end
+
+  test "adaptive state rejects non-adaptive levels and levels outside the unit" do
+    sign_in create(:student)
+
+    other = create(:script_level, levels: [create(:level)])
+    put_adaptive_state(other, {'completed' => true})
+    assert_response :not_found
+
+    adaptive = adaptive_script_level
+    @request.env['RAW_POST_DATA'] = {state: {}}.to_json
+    put :update_adaptive_state, params: {script_id: other.script.id, level_id: adaptive.level.id}
+    assert_response :not_found
+  end
+
+  test "adaptive state rejects malformed and oversized bodies" do
+    sign_in create(:student)
+    script_level = adaptive_script_level
+
+    @request.env['RAW_POST_DATA'] = 'not json'
+    put :update_adaptive_state, params: {script_id: script_level.script.id, level_id: script_level.level.id}
+    assert_response :bad_request
+
+    put_adaptive_state(script_level, 'a string')
+    assert_response :bad_request
+
+    put_adaptive_state(script_level, {'blob' => 'x' * UserLevelsController::MAX_ADAPTIVE_STATE_BYTES})
+    assert_response :payload_too_large
+  end
+
+  test "adaptive state requires sign in" do
+    script_level = adaptive_script_level
+    get :get_adaptive_state, params: {script_id: script_level.script.id, level_id: script_level.level.id}
+    assert_response :redirect
+  end
 end

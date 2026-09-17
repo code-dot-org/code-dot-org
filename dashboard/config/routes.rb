@@ -101,6 +101,8 @@ Dashboard::Application.routes.draw do
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id(/user/:user_id)', to: 'user_levels#get_level_source'
+    get '/user_levels/adaptive_state/:script_id/:level_id', to: 'user_levels#get_adaptive_state'
+    put '/user_levels/adaptive_state/:script_id/:level_id', to: 'user_levels#update_adaptive_state'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
     resources :student_work_evaluations, only: [:create] do

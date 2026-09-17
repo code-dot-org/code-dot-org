@@ -103,6 +103,8 @@ class Ability
       can :create, Activity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
+      # The actions scope themselves to current_user's own row.
+      can [:get_adaptive_state, :update_adaptive_state], UserLevel
       can :create, StudentWorkEvaluation do |evaluation|
         evaluation.requester_id == user.id &&
           (
