@@ -3,6 +3,7 @@ import {Navigate, Route, Routes} from 'react-router-dom';
 
 import ChallengeGallery from './gallery/ChallengeGallery';
 import {TutorGalleryData} from './gallery/types';
+import ChallengeRoute from './lessonDeepDive/ChallengeActivities/ChallengeRoute';
 import LessonDeepDiveContainer from './lessonDeepDive/LessonDeepDiveContainer';
 import {LessonDeepDiveData} from './lessonDeepDive/types';
 
@@ -21,12 +22,20 @@ const TutorApp: FC<TutorAppProps> = ({
     <Routes>
       <Route index element={<Navigate to={defaultRoute} replace />} />
       {lessonDeepDiveData && (
-        <Route
-          path=":screenId"
-          element={
-            <LessonDeepDiveContainer lessonDeepDiveData={lessonDeepDiveData} />
-          }
-        />
+        <>
+          <Route
+            path=":screenId"
+            element={
+              <LessonDeepDiveContainer
+                lessonDeepDiveData={lessonDeepDiveData}
+              />
+            }
+          />
+          <Route
+            path="challenge/:challengeId/:modality"
+            element={<ChallengeRoute lessonId={lessonDeepDiveData.lessonId} />}
+          />
+        </>
       )}
       {tutorGalleryData && (
         <Route

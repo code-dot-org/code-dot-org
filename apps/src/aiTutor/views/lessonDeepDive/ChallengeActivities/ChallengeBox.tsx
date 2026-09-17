@@ -33,10 +33,6 @@ interface ChallengeBoxProps {
   lessonId: number;
   challenge: Challenge;
   challengeType: string;
-  challengeSetCallback: (
-    pickedChallenge: Challenge | null,
-    pickedChallengeType: string | null
-  ) => void;
 }
 
 // Terminal evaluation_status values that map to a student-facing error
@@ -52,7 +48,6 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   lessonId,
   challenge,
   challengeType,
-  challengeSetCallback,
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -414,9 +409,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                   startIcon={
                     <FontAwesomeV6Icon iconStyle="solid" iconName="check" />
                   }
-                  onClick={() => {
-                    challengeSetCallback(null, null);
-                  }}
+                  onClick={() => navigate('/intervention')}
                   disabled={showConfirmation}
                 >
                   I'm done
@@ -437,9 +430,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                       iconName="arrow-left"
                     />
                   }
-                  onClick={() => {
-                    challengeSetCallback(null, null);
-                  }}
+                  onClick={() => navigate('/intervention')}
                 >
                   Choose a different challenge
                 </MuiButton>
