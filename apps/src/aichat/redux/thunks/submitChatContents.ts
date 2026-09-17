@@ -31,6 +31,10 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
 import shouldUseAiGateway from '../../api/shouldUseAiGateway';
+import {
+  applySchemaDisplayTransform,
+  parseJsonObject,
+} from '../../helpers/applySchemaDisplayTransform';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -63,8 +67,9 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
-      jsonSchemaResponseCallback?: (response: unknown) => string;
       lessonId?: number;
+      onSchemaResponse?: (response: unknown) => void;
+      formatSchemaResponseForDisplay?: (response: unknown) => string;
     },
     thunkAPI
   ) => {
@@ -79,9 +84,21 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
-      jsonSchemaResponseCallback,
       lessonId,
+      onSchemaResponse,
+      formatSchemaResponseForDisplay,
     } = newUserMessageInput;
+
+    // The history we send is prose the reader is shown which avoids poisoning
+    // the history with code in the actual JSON object message that was rejected
+    // or later changed.
+    const modelHistory = () =>
+      buildMessagesForModelHistory(
+        applySchemaDisplayTransform(
+          chatEventsCurrent,
+          formatSchemaResponseForDisplay
+        )
+      );
 
     // Clear any staged files if present (used with multimodal models)
     dispatch(clearStagedFiles());
@@ -184,9 +201,7 @@ export const submitChatContents = createAsyncThunk(
 
         messages = await performClientApiChatCompletion(
           newUserMessage,
-          buildMessagesForModelHistory(chatEventsCurrent).filter(
-            event => event.status === Status.OK
-          ),
+          modelHistory().filter(event => event.status === Status.OK),
           modelParameters,
           aichatContext,
           (asset: ChatAsset) =>
@@ -196,7 +211,7 @@ export const submitChatContents = createAsyncThunk(
       } else {
         messages = await postAichatCompletionMessage(
           newUserMessage,
-          buildMessagesForModelHistory(chatEventsCurrent),
+          modelHistory(),
           {...modelParameters},
           aichatContext
         );
@@ -233,25 +248,8 @@ export const submitChatContents = createAsyncThunk(
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
-        // jsonSchemaResponseCallback only applies to successful model
-        // responses, and is only ever set for a jsonSchema-configured
-        // session -- so it always gets parsed JSON, never a bare string.
-        // structuredOutput is already parsed (gateway path); the legacy
-        // Rails-job path never has a parsed form, so parse chatMessageText
-        // here once, rather than pushing that split onto every callback.
-        if (message.status === Status.OK && jsonSchemaResponseCallback) {
-          try {
-            const parsedResponse =
-              message.structuredOutput ?? JSON.parse(message.chatMessageText);
-            message.chatMessageText =
-              jsonSchemaResponseCallback(parsedResponse);
-          } catch (err) {
-            // Model didn't return valid JSON despite the schema -- keep the
-            // raw text rather than losing the response to a crashed thunk.
-            console.error('Failed to parse structured chat response', err);
-          }
-        }
         dispatch(addChatEvent(message));
+        notifySchemaResponse(message, onSchemaResponse);
       }
       if (message.role === Role.USER) {
         dispatch(
@@ -271,6 +269,31 @@ export const submitChatContents = createAsyncThunk(
     });
   }
 );
+
+/**
+ * Hands a freshly arrived structured response to the lab after the event is already
+ * logged and cannot be changed: the lab acts on the response, it does not get to
+ * decide what history records.
+ */
+function notifySchemaResponse(
+  message: CompletedChatMessage,
+  onSchemaResponse?: (response: unknown) => void
+) {
+  if (!onSchemaResponse || message.status !== Status.OK) {
+    return;
+  }
+  const parsed = parseJsonObject(message.chatMessageText || '');
+  if (parsed === undefined) {
+    return;
+  }
+  try {
+    onSchemaResponse(parsed);
+  } catch (error) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error handling structured aichat response', error as Error);
+  }
+}
 
 async function handleChatCompletionError(
   error: Error,

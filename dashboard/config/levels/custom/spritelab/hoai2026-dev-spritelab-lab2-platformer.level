@@ -25,6 +25,9 @@
       "kind": "world",
       "imageType": "block"
     },
+    "image_role_defaults": {
+      "block": "block"
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",

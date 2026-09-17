@@ -186,7 +186,7 @@ export default class BackpackClientApi {
           fileToUpload
         );
         Object.values(this.eventListeners).forEach(listener =>
-          listener(BackpackEvent.FileAdded, filename)
+          listener(BackpackEvent.FileAdded, filename, this.appType)
         );
         onSuccess?.();
       } else {
@@ -228,7 +228,7 @@ export default class BackpackClientApi {
       return;
     }
     Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.FileAdded, filename)
+      listener(BackpackEvent.FileAdded, filename, this.appType)
     );
     onSuccess();
   }
@@ -442,7 +442,7 @@ export default class BackpackClientApi {
     }
     if (!failedFileList.includes(filename)) {
       Object.values(this.eventListeners).forEach(listener =>
-        listener(requestType, filename)
+        listener(requestType, filename, this.appType)
       );
     } else if (requestType === BackpackEvent.FileAdded) {
       this.sendUploadFailedEvent(filename);
@@ -468,13 +468,13 @@ export default class BackpackClientApi {
 
   sendUploadStartedEvent(filename: string) {
     Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.UploadStarted, filename)
+      listener(BackpackEvent.UploadStarted, filename, this.appType)
     );
   }
 
   sendUploadFailedEvent(filename: string) {
     Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.UploadFailed, filename)
+      listener(BackpackEvent.UploadFailed, filename, this.appType)
     );
   }
 }

@@ -61,7 +61,7 @@ describe('handleSaveToBackpack', () => {
   let showDialog: jest.Mock;
   let dialogControl: {showDialog: jest.Mock};
   let backpackApi: {appType: string; saveBlobFile: jest.Mock};
-  let errorCallback: jest.Mock;
+  let notify: jest.Mock;
 
   function runSave(backpackFileList: string[] = []) {
     return handleSaveToBackpack(
@@ -69,7 +69,7 @@ describe('handleSaveToBackpack', () => {
       backpackApi as unknown as BackpackClientApi,
       dialogControl as never,
       backpackFileList,
-      errorCallback
+      notify
     );
   }
 
@@ -77,7 +77,7 @@ describe('handleSaveToBackpack', () => {
     showDialog = jest.fn().mockResolvedValue({type: 'confirm', args: 'sketch'});
     dialogControl = {showDialog};
     backpackApi = {appType: 'sketchlab', saveBlobFile: saveBlobFileMock(true)};
-    errorCallback = jest.fn();
+    notify = jest.fn();
     mockSendLab2AnalyticsEvent.mockReset();
     mockMetricsReporter.logError.mockReset();
     mockProjectManager.flushSave.mockReset();
@@ -152,9 +152,19 @@ describe('handleSaveToBackpack', () => {
 
     await runSave();
 
-    expect(errorCallback).toHaveBeenCalledWith(expect.stringContaining('save'));
+    expect(notify).toHaveBeenCalledWith(
+      'danger',
+      expect.stringContaining('save')
+    );
     expect(showDialog).not.toHaveBeenCalled();
     expect(backpackApi.saveBlobFile).not.toHaveBeenCalled();
+  });
+
+  it('leaves progress and success to the legacy panel', async () => {
+    // The legacy panel raises its own alerts off the backpack's upload events.
+    await runSave();
+
+    expect(notify).not.toHaveBeenCalled();
   });
 
   it('treats a name already in the backpack as a replacement', async () => {
@@ -179,7 +189,7 @@ describe('handleSaveToBackpack', () => {
         unifiedApi as unknown as UnifiedBackpackClientApi,
         dialogControl as never,
         [],
-        errorCallback
+        notify
       );
     }
 
@@ -200,6 +210,68 @@ describe('handleSaveToBackpack', () => {
         EVENTS.SAVE_TO_BACKPACK_NEW,
         {fileType: 'png'}
       );
+    });
+
+    it('reports progress then success around a save', async () => {
+      await runUnifiedSave();
+
+      expect(notify.mock.calls).toEqual([
+        ['info', 'Saving sketch.png to your Backpack...'],
+        ['success', 'sketch.png saved to your Backpack.'],
+      ]);
+    });
+
+    it('reports the failure after the progress it replaces', async () => {
+      unifiedApi.saveBlobFile = saveBlobFileMock(false);
+
+      await runUnifiedSave();
+
+      expect(notify.mock.calls).toEqual([
+        ['info', 'Saving sketch.png to your Backpack...'],
+        [
+          'danger',
+          'Error saving sketch.png to your Backpack. Please try again',
+        ],
+      ]);
+    });
+
+    it('replaces the progress toast when the snapshot throws', async () => {
+      // The progress toast has no auto-hide, so a rejection that reached the
+      // caller would leave it on screen for good.
+      mockCreateSketchSnapshotBlob.mockRejectedValue(
+        new Error('tainted canvas')
+      );
+
+      await runUnifiedSave();
+
+      expect(notify.mock.calls).toEqual([
+        ['info', 'Saving sketch.png to your Backpack...'],
+        [
+          'danger',
+          'Error saving sketch.png to your Backpack. Please try again',
+        ],
+      ]);
+      expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
+        'Sketch snapshot error',
+        expect.any(Error)
+      );
+    });
+
+    it('replaces the progress toast when the save rejects', async () => {
+      unifiedApi.saveBlobFile = jest.fn(() => {
+        throw new Error('upload exploded');
+      });
+
+      await runUnifiedSave();
+
+      expect(notify.mock.calls).toEqual([
+        ['info', 'Saving sketch.png to your Backpack...'],
+        [
+          'danger',
+          'Error saving sketch.png to your Backpack. Please try again',
+        ],
+      ]);
+      expect(unifiedApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
     });
 
     it('treats a name held only by another lab as a duplicate, and clears it', async () => {
@@ -227,7 +299,8 @@ describe('handleSaveToBackpack', () => {
 
       await runUnifiedSave();
 
-      expect(errorCallback).toHaveBeenCalledWith(
+      expect(notify).toHaveBeenCalledWith(
+        'danger',
         expect.stringContaining('sketch.png')
       );
       expect(unifiedApi.deleteFromLegacyBackpacks).not.toHaveBeenCalled();
@@ -242,7 +315,8 @@ describe('handleSaveToBackpack', () => {
       await runUnifiedSave();
 
       expect(unifiedApi.saveBlobFile).toHaveBeenCalled();
-      expect(errorCallback).toHaveBeenCalledWith(
+      expect(notify).toHaveBeenCalledWith(
+        'danger',
         expect.stringContaining("couldn't delete your old file")
       );
       expect(mockMetricsReporter.logError).toHaveBeenCalledWith(
@@ -256,7 +330,8 @@ describe('handleSaveToBackpack', () => {
 
       await runUnifiedSave();
 
-      expect(errorCallback).toHaveBeenCalledWith(
+      expect(notify).toHaveBeenCalledWith(
+        'danger',
         expect.stringContaining('Could not read your Backpack')
       );
       expect(showDialog).not.toHaveBeenCalled();
