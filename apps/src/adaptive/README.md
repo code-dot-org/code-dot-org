@@ -15,7 +15,10 @@ exist so far:
 - `question`: multiple-choice questions, one at a time. A question with
   any option marked `correct` gates progression until the chosen set
   matches exactly. A question with none records the answer and moves on.
-  `multiSelect` allows more than one choice.
+  `multiSelect` allows more than one choice. `dontKnowEnabled` adds an
+  "I don't know" button to a graded question: it records a `dontKnow`
+  answer, which counts as a failure, reveals the correct options, and
+  lets the student continue.
 
 `sample.json` shows both.
 

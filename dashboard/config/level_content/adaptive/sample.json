@@ -35,6 +35,7 @@
           "id": "paragraph",
           "type": "multipleChoice",
           "prompt": "Which tag marks a paragraph?",
+          "dontKnowEnabled": true,
           "options": [
             {"id": "p", "label": "<p>", "correct": true},
             {"id": "h1", "label": "<h1>"},

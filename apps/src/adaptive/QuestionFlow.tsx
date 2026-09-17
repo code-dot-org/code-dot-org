@@ -1,7 +1,9 @@
 // Renders a question step one question at a time. Every submission is
 // reported through onAnswer. A question with correct options gates
 // progression until the chosen set matches exactly; one without records
-// the choice and moves on.
+// the choice and moves on. A graded question with dontKnowEnabled also
+// offers "I don't know", which records a failure, reveals the correct
+// options, and unlocks Next without a correct answer.
 //
 // Transitions are CSS: advancing plays an exit animation on the current
 // card, then the next question mounts keyed by id with an entrance
@@ -20,12 +22,13 @@ const EXIT_TRANSITION_MS = 220;
 
 const SubmitButton: React.FunctionComponent<{
   disabled?: boolean;
+  variant?: 'contained' | 'outlined';
   onClick: () => void;
   children: React.ReactNode;
-}> = ({disabled, onClick, children}) => (
+}> = ({disabled, variant = 'contained', onClick, children}) => (
   <MuiButton
     type="button"
-    variant="contained"
+    variant={variant}
     color="primary"
     size="large"
     className={styles.pillButton}
@@ -66,7 +69,7 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
   const [qIndex, setQIndex] = useState(0);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<
-    {kind: 'correct' | 'incorrect'; text: string} | undefined
+    {kind: 'correct' | 'incorrect' | 'revealed'; text: string} | undefined
   >();
   // True while the current question plays its exit animation. Inputs lock
   // so a double click cannot submit into the outgoing question.
@@ -83,7 +86,10 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
 
   const question = step.questions[qIndex];
   const isLast = qIndex >= step.questions.length - 1;
-  const locked = exiting || feedback?.kind === 'correct';
+  // Once the answer is revealed the options stay locked and Next simply
+  // advances, so the student cannot turn a dontKnow into a correct.
+  const revealed = feedback?.kind === 'revealed';
+  const locked = exiting || feedback?.kind === 'correct' || revealed;
 
   // Prefill from the recorded answer when the active question changes.
   // `answers` is deliberately not a dependency: prefill happens on
@@ -154,6 +160,29 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
     goToNextQuestion();
   }, [step.id, question, selectedIds, answers, onAnswer, goToNextQuestion]);
 
+  const giveUp = useCallback(() => {
+    if (!question) return;
+    onAnswer({
+      questionId: question.id,
+      stepId: step.id,
+      optionIds: selectedIds,
+      outcome: 'dontKnow',
+      attempts: (answers[question.id]?.attempts || 0) + 1,
+      at: new Date().toISOString(),
+    });
+    const labels = question.options
+      .filter(option => option.correct)
+      .map(option => option.label);
+    // Naming the answer keeps the reveal usable without the color cue.
+    setFeedback({
+      kind: 'revealed',
+      text:
+        labels.length === 1
+          ? `The correct answer is ${labels[0]}.`
+          : `The correct answers are ${labels.join(', ')}.`,
+    });
+  }, [step.id, question, selectedIds, answers, onAnswer]);
+
   if (!question) {
     return (
       <div className={styles.questionFlow}>
@@ -173,9 +202,18 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
     setFeedback(undefined);
   };
 
-  // Selected options get a verdict tint once graded feedback exists.
+  // Selected options get a verdict tint once graded feedback exists. A
+  // reveal tints every correct option and any wrong selection.
   const optionClass = (optionId: string): string => {
-    if (!selectedIds.includes(optionId)) return '';
+    const selected = selectedIds.includes(optionId);
+    if (revealed) {
+      const correct = question.options.some(
+        option => option.id === optionId && option.correct
+      );
+      if (correct) return styles.questionOptionCorrect;
+      return selected ? styles.questionOptionWrong : '';
+    }
+    if (!selected) return '';
     const classes = [styles.questionOptionSelected];
     if (feedback) {
       classes.push(
@@ -240,18 +278,33 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
             </button>
           ))}
         </div>
-        <SubmitButton
-          disabled={selectedIds.length === 0 || locked}
-          onClick={submit}
-        >
-          {isLast ? 'Finish' : 'Next'}
-        </SubmitButton>
+        <div className={styles.questionActions}>
+          {isGraded(question) && question.dontKnowEnabled && !revealed && (
+            <SubmitButton variant="outlined" disabled={locked} onClick={giveUp}>
+              I don't know
+            </SubmitButton>
+          )}
+          {revealed ? (
+            <SubmitButton disabled={exiting} onClick={goToNextQuestion}>
+              {isLast ? 'Finish' : 'Next'}
+            </SubmitButton>
+          ) : (
+            <SubmitButton
+              disabled={selectedIds.length === 0 || locked}
+              onClick={submit}
+            >
+              {isLast ? 'Finish' : 'Next'}
+            </SubmitButton>
+          )}
+        </div>
         {feedback && (
           <div
             role="status"
             className={
               feedback.kind === 'correct'
                 ? styles.questionFeedbackCorrect
+                : feedback.kind === 'revealed'
+                ? styles.questionFeedbackRevealed
                 : styles.questionFeedbackIncorrect
             }
           >

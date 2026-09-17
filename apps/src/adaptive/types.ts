@@ -50,6 +50,10 @@ export interface Question {
   prompt: string;
   options: QuestionOption[];
   multiSelect?: boolean;
+  // Offers an "I don't know" button on a graded question. Choosing it
+  // records a dontKnow outcome, reveals the correct options, and lets the
+  // student continue without answering correctly. Ignored when ungraded.
+  dontKnowEnabled?: boolean;
 }
 
 export interface QuestionStep extends StepBase {
@@ -60,12 +64,14 @@ export interface QuestionStep extends StepBase {
 export type Step = PanelsStep | QuestionStep;
 
 // The latest submission for one question; `attempts` counts every
-// submission, so a wrong-then-right answer reads attempts: 2.
+// submission, so a wrong-then-right answer reads attempts: 2. `dontKnow`
+// is a failure like `incorrect`: the student gave up and was shown the
+// answer. `optionIds` then holds whatever was selected at the time.
 export interface AnswerRecord {
   questionId: string;
   stepId: string;
   optionIds: string[];
-  outcome: 'accepted' | 'correct' | 'incorrect';
+  outcome: 'accepted' | 'correct' | 'incorrect' | 'dontKnow';
   attempts: number;
   at: string;
 }

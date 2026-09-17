@@ -68,6 +68,30 @@ const multiQuizStep: QuestionStep = {
   ],
 };
 
+const dontKnowStep: QuestionStep = {
+  id: 'dk',
+  kind: 'question',
+  title: 'Give up allowed',
+  questions: [
+    {
+      id: 'q',
+      type: 'multipleChoice',
+      prompt: 'Pick the element',
+      dontKnowEnabled: true,
+      options: [
+        {id: 'right', label: '<p>Hello</p>', correct: true},
+        {id: 'wrong', label: '<p>Hello'},
+      ],
+    },
+    {
+      id: 'q2',
+      type: 'multipleChoice',
+      prompt: 'Second question',
+      options: [{id: 'a', label: 'A', correct: true}],
+    },
+  ],
+};
+
 describe('QuestionFlow', () => {
   // Advancing plays a timed exit animation before the next question
   // mounts; flush it with fake timers.
@@ -214,6 +238,102 @@ describe('QuestionFlow', () => {
     );
     fireEvent.click(screen.getByText('Finish'));
     expect(onAnswer.mock.calls[0][0].attempts).toBe(3);
+  });
+
+  it('hides "I don\'t know" unless the question enables it', () => {
+    render(
+      <QuestionFlow
+        step={quizStep}
+        answers={{}}
+        onAnswer={jest.fn()}
+        onComplete={jest.fn()}
+      />
+    );
+    expect(screen.queryByText("I don't know")).toBeNull();
+  });
+
+  it('records a dontKnow failure, reveals the answer, then advances', () => {
+    const onAnswer = jest.fn();
+    const onComplete = jest.fn();
+    render(
+      <QuestionFlow
+        step={dontKnowStep}
+        answers={{}}
+        onAnswer={onAnswer}
+        onComplete={onComplete}
+      />
+    );
+
+    fireEvent.click(screen.getByText('<p>Hello'));
+    fireEvent.click(screen.getByText("I don't know"));
+
+    expect(onAnswer).toHaveBeenCalledTimes(1);
+    const record: AnswerRecord = onAnswer.mock.calls[0][0];
+    expect(record.outcome).toBe('dontKnow');
+    expect(record.optionIds).toEqual(['wrong']);
+    expect(record.attempts).toBe(1);
+
+    // The correct option is highlighted and named, the options lock, and
+    // the give-up button goes away.
+    expect(
+      screen.getByText('The correct answer is <p>Hello</p>.')
+    ).toBeDefined();
+    const right = screen.getByText('<p>Hello</p>') as HTMLButtonElement;
+    expect(right.className).toContain('questionOptionCorrect');
+    expect(right.disabled).toBe(true);
+    expect(screen.queryByText("I don't know")).toBeNull();
+    expect(onComplete).not.toHaveBeenCalled();
+
+    // Next continues without a correct answer and records nothing more.
+    fireEvent.click(screen.getByText('Next'));
+    flushTransition();
+    expect(onAnswer).toHaveBeenCalledTimes(1);
+    expect(screen.getByText('Second question')).toBeDefined();
+  });
+
+  it('reveals every correct option on a multi-select', () => {
+    const onAnswer = jest.fn();
+    const step: QuestionStep = {
+      ...multiQuizStep,
+      questions: [{...multiQuizStep.questions[0], dontKnowEnabled: true}],
+    };
+    render(
+      <QuestionFlow
+        step={step}
+        answers={{}}
+        onAnswer={onAnswer}
+        onComplete={jest.fn()}
+      />
+    );
+
+    fireEvent.click(screen.getByText('p'));
+    fireEvent.click(screen.getByText('css'));
+    fireEvent.click(screen.getByText("I don't know"));
+
+    expect(onAnswer.mock.calls[0][0].optionIds).toEqual(['p', 'css']);
+    expect(screen.getByText('The correct answers are p, h1.')).toBeDefined();
+    expect(screen.getByText('p').className).toContain('questionOptionCorrect');
+    expect(screen.getByText('h1').className).toContain('questionOptionCorrect');
+    expect(screen.getByText('css').className).toContain('questionOptionWrong');
+  });
+
+  it('counts a dontKnow after wrong attempts', () => {
+    const onAnswer = jest.fn();
+    render(
+      <QuestionFlow
+        step={dontKnowStep}
+        answers={{}}
+        onAnswer={onAnswer}
+        onComplete={jest.fn()}
+      />
+    );
+    fireEvent.click(screen.getByText('<p>Hello'));
+    fireEvent.click(screen.getByText('Next'));
+    expect(onAnswer.mock.calls[0][0].outcome).toBe('incorrect');
+    fireEvent.click(screen.getByText("I don't know"));
+    expect(onAnswer.mock.calls[1][0].outcome).toBe('dontKnow');
+    // Attempts come from the answers prop, which this test never updates.
+    expect(onAnswer.mock.calls[1][0].attempts).toBe(1);
   });
 
   it('navigates back and forward via the progress dots', () => {

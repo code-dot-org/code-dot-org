@@ -289,6 +289,19 @@
   animation: feedback-pop 200ms ease both;
 }
 
+.questionFeedbackRevealed {
+  font-size: 18px;
+  color: var(--text-neutral-primary);
+  animation: feedback-pop 200ms ease both;
+}
+
+.questionActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
 @keyframes feedback-pop {
   from {
     opacity: 0;
@@ -306,7 +319,8 @@
   .questionExit,
   .optionsShake,
   .questionFeedbackCorrect,
-  .questionFeedbackIncorrect {
+  .questionFeedbackIncorrect,
+  .questionFeedbackRevealed {
     animation: none;
   }
 
