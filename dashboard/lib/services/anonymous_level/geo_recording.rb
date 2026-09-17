@@ -31,6 +31,9 @@ module Services
         anonymous_level_geo
       rescue ActiveRecord::RecordNotUnique
         anonymous_level_geo
+      rescue ActiveRecord::RecordInvalid => exception
+        raise unless exception.record.errors.of_kind?(:anon_user_id, :taken)
+        anonymous_level_geo
       end
     end
   end

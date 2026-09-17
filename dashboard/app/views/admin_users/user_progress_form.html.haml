@@ -45,30 +45,96 @@
       - if @sections.empty?
         %p.text-muted This teacher has no sections.
       - else
-        - @sections.each do |section|
-          .panel.panel-default{style: 'margin-bottom: 8px'}
-            .panel-heading{style: 'padding: 6px 10px'}
-              %label{style: 'margin: 0; font-weight: normal; cursor: pointer'}
-                = check_box_tag "section_select_#{section.id}", '1', false,
-                    class: 'section-select-all',
-                    data: {section_id: section.id},
-                    style: 'margin-right: 6px'
-                %strong= section.name
-                %span.text-muted &nbsp;(#{section.students.length} students)
-                %small
-                  &mdash;
-                  %a.toggle-section-link{href: '#', data: {section_id: section.id}}
-                    Show students
-            .section-students{id: "section-students-#{section.id}", style: 'display:none; padding: 6px 10px'}
-              - if section.students.empty?
-                %span.text-muted No students in this section.
-              - else
-                - section.students.each do |student|
+        - live_sections = @sections.reject(&:hidden?)
+        - archived_sections = @sections.select(&:hidden?)
+        - all_students = @sections.flat_map(&:students).uniq(&:id).sort_by(&:name)
+
+        %details{open: 'open', style: 'margin-bottom: 8px'}
+          %summary{style: 'cursor: pointer; padding: 4px 0; font-weight: bold'}
+            Live Sections
+            %span.text-muted{style: 'font-weight: normal'} &nbsp;(#{live_sections.length})
+          - if live_sections.empty?
+            %p.text-muted No live sections.
+          - else
+            - live_sections.each do |section|
+              .panel.panel-default{style: 'margin: 6px 0 0'}
+                .panel-heading{style: 'padding: 6px 10px'}
+                  %label{style: 'margin: 0; font-weight: normal; cursor: pointer'}
+                    = check_box_tag "section_select_#{section.id}", '1', false,
+                        class: 'section-select-all',
+                        data: {section_id: section.id},
+                        style: 'margin-right: 6px'
+                    %strong= section.name
+                    %span.text-muted &nbsp;(#{section.students.length} students)
+                    %small
+                      &mdash;
+                      %a.toggle-section-link{href: '#', data: {section_id: section.id}}
+                        Show students
+                .section-students{id: "section-students-#{section.id}", style: 'display:none; padding: 6px 10px'}
+                  - if section.students.empty?
+                    %span.text-muted No students in this section.
+                  - else
+                    - section.students.each do |student|
+                      %label.checkbox{style: 'display: block; font-weight: normal; margin: 2px 0'}
+                        = check_box_tag 'student_ids[]', student.id, false,
+                            class: "student-checkbox section-students-#{section.id}"
+                        = student.name
+                        %span.text-muted &nbsp;(@#{student.username}, ID: #{student.id})
+
+        %details{style: 'margin-bottom: 8px'}
+          %summary{style: 'cursor: pointer; padding: 4px 0; font-weight: bold'}
+            Archived Sections
+            %span.text-muted{style: 'font-weight: normal'} &nbsp;(#{archived_sections.length})
+          - if archived_sections.empty?
+            %p.text-muted No archived sections.
+          - else
+            - archived_sections.each do |section|
+              .panel.panel-default{style: 'margin: 6px 0 0'}
+                .panel-heading{style: 'padding: 6px 10px'}
+                  %label{style: 'margin: 0; font-weight: normal; cursor: pointer'}
+                    = check_box_tag "section_select_#{section.id}", '1', false,
+                        class: 'section-select-all',
+                        data: {section_id: section.id},
+                        style: 'margin-right: 6px'
+                    %strong= section.name
+                    %span.text-muted &nbsp;(#{section.students.length} students)
+                    %small
+                      &mdash;
+                      %a.toggle-section-link{href: '#', data: {section_id: section.id}}
+                        Show students
+                .section-students{id: "section-students-#{section.id}", style: 'display:none; padding: 6px 10px'}
+                  - if section.students.empty?
+                    %span.text-muted No students in this section.
+                  - else
+                    - section.students.each do |student|
+                      %label.checkbox{style: 'display: block; font-weight: normal; margin: 2px 0'}
+                        = check_box_tag 'student_ids[]', student.id, false,
+                            class: "student-checkbox section-students-#{section.id}"
+                        = student.name
+                        %span.text-muted &nbsp;(@#{student.username}, ID: #{student.id})
+
+        %details{style: 'margin-bottom: 8px'}
+          %summary{style: 'cursor: pointer; padding: 4px 0; font-weight: bold'}
+            All Students
+            %span.text-muted{style: 'font-weight: normal'} &nbsp;(#{all_students.length} unique)
+          - if all_students.empty?
+            %p.text-muted No students found.
+          - else
+            .panel.panel-default{style: 'margin: 6px 0 0'}
+              .panel-heading{style: 'padding: 6px 10px'}
+                %label{style: 'margin: 0; font-weight: normal; cursor: pointer'}
+                  = check_box_tag 'section_select_all_students', '1', false,
+                      class: 'section-select-all',
+                      data: {section_id: 'all-students'},
+                      style: 'margin-right: 6px'
+                  %strong Select all
+              .section-students{id: 'section-students-all-students', style: 'padding: 6px 10px'}
+                - all_students.each do |student|
                   %label.checkbox{style: 'display: block; font-weight: normal; margin: 2px 0'}
                     = check_box_tag 'student_ids[]', student.id, false,
-                        class: "student-checkbox section-students-#{section.id}"
-                    = "#{student.name}"
-                    %span.text-muted &nbsp;(ID: #{student.id})
+                        class: 'student-checkbox section-students-all-students'
+                    = student.name
+                    %span.text-muted &nbsp;(@#{student.username}, ID: #{student.id})
 
       %h2 Select Units
       %p Select units to reset. All selected units will be reset for all selected students.
