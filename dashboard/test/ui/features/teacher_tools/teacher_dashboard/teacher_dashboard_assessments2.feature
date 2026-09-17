@@ -48,4 +48,7 @@ Feature: Using the assessments tab in the teacher dashboard
     # Assessments tab
     And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
     And I wait until element "#unit-selector-v2" is visible
+    # Name the assessment rather than relying on which one loads by default:
+    # the tab defaults to the lowest level group id, which cloning reassigns.
+    And I select the "Example CSP Assessment" option in dropdown "assessment-selector"
     Then I wait until element "h2:contains(Multiple choice questions overview)" is visible
