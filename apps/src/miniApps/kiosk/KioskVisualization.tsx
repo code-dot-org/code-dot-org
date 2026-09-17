@@ -48,6 +48,7 @@ const KioskSlider: React.FunctionComponent<KioskSliderProps> = ({
 
   return (
     <Slider
+      className={moduleStyles.fluidSlider}
       name={element.id}
       label={element.text}
       value={value}

@@ -10,15 +10,26 @@
   position: absolute;
   left: var(--kiosk-x);
   top: var(--kiosk-y);
+  box-sizing: border-box;
+  // An element begins at its x and has only the rest of the screen to fill, so
+  // one placed near the right edge shrinks instead of running past the edge and
+  // being clipped. The 8px keeps it off the edge itself. No min-width anywhere
+  // below: it would win over this and put the overflow straight back.
+  max-width: calc(100% - var(--kiosk-x) - 8px);
 }
 
 .label {
   color: var(--text-neutral-primary);
 }
 
-// A slider has no width of its own, and an absolutely positioned box gives it
-// nothing to inherit.
 .sliderElement {
-  width: 40%;
-  min-width: 120px;
+  width: 100%;
+}
+
+// The design system slider is a fixed 300px wide, which a narrow preview panel
+// cannot hold -- and a parent's max-width does not shrink a fixed-width child,
+// it just clips it. Two classes, so this beats the component's own one-class
+// rule whichever stylesheet happens to load first.
+.sliderElement .fluidSlider {
+  width: 100%;
 }
