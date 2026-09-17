@@ -34,9 +34,7 @@ export interface QuizBuilderQuestion extends QuizQuestion {
   page: number | null;
 }
 
-// The fields a per-question editor can change. Matches
-// QuizQuestionSerialization#quiz_question_params on the Ruby side, minus
-// the read-only/administrative ones (id, type, standards, page, editMode).
+// The fields a per-question editor can change.
 export interface QuizQuestionEditableFields {
   questionName: string;
   stem: string;
