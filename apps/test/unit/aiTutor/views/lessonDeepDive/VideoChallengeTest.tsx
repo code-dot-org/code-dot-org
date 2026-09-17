@@ -22,16 +22,17 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
 const mockRecordedVideoBlob = new Blob(['video-bytes'], {type: 'video/webm'});
 const mockRecordedAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
 
-// VideoRecorder relies on MediaRecorder and getUserMedia, unavailable in
-// jsdom. The stub honors the real component's caller-controlled contract:
-// it reacts to the `isRecording` prop instead of owning any buttons itself.
-// Flipping `isRecording` back to false (a "stop", caller-driven) fires the
-// same side effects as the real recorder's onstop handler.
+// VideoCanvas relies on MediaRecorder, getUserMedia and a Konva canvas,
+// unavailable in jsdom. The stub honors the real component's
+// caller-controlled contract: it reacts to the `isRecording` prop instead of
+// owning any buttons itself. Flipping `isRecording` back to false (a "stop",
+// caller-driven) fires the same side effects as the real recorder's onstop
+// handler.
 jest.mock('@code-dot-org/lesson-deep-dive', () => {
   const React = require('react');
   return {
     ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-    VideoRecorder: (props: {
+    VideoCanvas: (props: {
       isRecording: boolean;
       onRecordingChange: (hasRecording: boolean) => void;
       setRecordedBlob: (blob: Blob | null) => void;
