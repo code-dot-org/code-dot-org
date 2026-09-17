@@ -36,7 +36,8 @@ class Services::SignInAttributionTest < ActiveSupport::TestCase
     Services::SignInAttribution.extract!(@request, args)
 
     assert_equal [@user], args
-    assert_equal [nil, nil], Services::SignInAttribution.resolve(@user, @request)
+    assert_nil @request.env[Services::SignInAttribution::EVENT_TYPE_KEY]
+    assert_nil @request.env[Services::SignInAttribution::AUTHENTICATION_OPTION_ID_KEY]
   end
 
   test 'an omniauth callback is attributed to the credential its auth hash names' do
@@ -83,18 +84,44 @@ class Services::SignInAttributionTest < ActiveSupport::TestCase
 
   # winning_strategy outlives the set_user that produced it, so a later programmatic
   # sign_in must not inherit the credentials of an earlier authentication.
+  # winning_strategy outlives the set_user that produced it, so a later programmatic
+  # sign_in must not inherit the credentials of an earlier authentication. Under strict
+  # mode that shows up as a refusal to guess rather than as a wrong answer.
   test 'a strategy is ignored unless it authenticated this set_user' do
     strategy = Devise::Strategies::DatabaseAuthenticatable.new(@request.env)
     strategy.authentication_hash = {hashed_email: @user.primary_contact_info.hashed_email}
     @request.env['warden'] = stub(winning_strategy: strategy)
     @request.env[Services::SignInAttribution::WARDEN_EVENT_KEY] = :set_user
 
+    assert_raises(Services::SignInAttribution::UnattributedSignIn) do
+      Services::SignInAttribution.resolve(@user, @request)
+    end
+  end
+
+  # Warden's login_as helper claims :authentication with no strategy behind it, on
+  # whichever request comes next. Those rows are harness artifacts, not a missing path,
+  # and every integration test that signs a user in would otherwise fail.
+  test 'the warden test helper signing a user in is not treated as a missing path' do
+    @request.env['warden'] = stub(winning_strategy: nil)
+    @request.env[Services::SignInAttribution::WARDEN_EVENT_KEY] = :authentication
+
     assert_equal [nil, nil], Services::SignInAttribution.resolve(@user, @request)
   end
 
-  # Every sign-in this does not yet account for -- LTI, section codes, registration --
-  # records a NULL event_type rather than a wrong one.
-  test 'a sign-in it cannot account for is left undetermined' do
+  test 'a sign-in nothing accounts for raises where failures get seen' do
+    error = assert_raises(Services::SignInAttribution::UnattributedSignIn) do
+      Services::SignInAttribution.resolve(@user, @request)
+    end
+
+    assert_match 'no attribution', error.message
+  end
+
+  # Production behaviour: report it and record NULL, which is what a row written before
+  # the column existed also holds.
+  test 'a sign-in nothing accounts for is reported and stored as null elsewhere' do
+    Services::SignInAttribution.stubs(:raise_attribution_errors?).returns(false)
+    Observability::Errors.expects(:report).once
+
     assert_equal [nil, nil], Services::SignInAttribution.resolve(@user, @request)
   end
 
