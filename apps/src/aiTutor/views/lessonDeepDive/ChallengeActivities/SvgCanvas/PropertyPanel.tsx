@@ -30,13 +30,9 @@ const PropertyPanel: FC<PropertyPanelProps> = ({
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           onDescriptionChange(e.target.value)
         }
-        placeholder="Describe this object…"
+        placeholder="e.g. a red circle in the upper right corner"
         className={styles.propertyInput}
-        aria-describedby="svg-canvas-description-hint"
       />
-      <p id="svg-canvas-description-hint" className={styles.propertyHint}>
-        Example: "a red circle in the upper right corner"
-      </p>
     </div>
   );
 };

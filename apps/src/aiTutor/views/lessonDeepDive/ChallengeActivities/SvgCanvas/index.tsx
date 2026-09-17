@@ -382,6 +382,16 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       canvas.freeDrawingBrush.width = 3;
       fabricRef.current = canvas;
 
+      // Tag freehand paths with an id so syncObjects treats them like other shapes.
+      // Fabric fires path:created after the stroke is committed and the Path
+      // object is added to the canvas; at that point object:added has already
+      // fired without an id, so we tag and re-sync here.
+      canvas.on('path:created', e => {
+        setData(e.path, {id: createUuid(), description: ''});
+        setAnnouncement('Added drawing.');
+        syncObjects(canvas);
+      });
+
       // Sync the accessible object list whenever objects are added/removed/moved.
       canvas.on('object:added', () => syncObjects(canvas));
       canvas.on('object:removed', () => syncObjects(canvas));

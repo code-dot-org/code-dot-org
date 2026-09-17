@@ -534,11 +534,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                       id="challenge-explanation"
                       className={styles.textArea}
                       placeholder="Write your explanation here"
+                      value={textExplanation}
                       onChange={e => setTextExplanation(e.target.value)}
                       disabled={showConfirmation}
-                    >
-                      {textExplanation}
-                    </textarea>
+                    />
                   )}
                 </div>
               )}

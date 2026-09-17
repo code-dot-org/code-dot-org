@@ -15,9 +15,10 @@
 class ChallengeResponseAsset < ApplicationRecord
   belongs_to :challenge_response
 
-  # whiteboard_image / video / audio.
+  # whiteboard_image / whiteboard_svg / video / audio.
   enum asset_type: {
     whiteboard_image: 'whiteboard_image',
+    whiteboard_svg: 'whiteboard_svg',
     video: 'video',
     audio: 'audio',
   }, _prefix: :asset
@@ -32,7 +33,13 @@ class ChallengeResponseAsset < ApplicationRecord
   # Whiteboard images are always PNG, so their keys carry a .png extension.
   def s3_key
     base = "challenge_response_assets/#{challenge_response_id}/#{id}"
-    asset_whiteboard_image? ? "#{base}.png" : base
+    if asset_whiteboard_image?
+      "#{base}.png"
+    elsif asset_whiteboard_svg?
+      "#{base}.svg"
+    else
+      base
+    end
   end
 
   # Accepted upload content types per asset_type. Whiteboard snapshots are
@@ -40,6 +47,7 @@ class ChallengeResponseAsset < ApplicationRecord
   # nothing else is accepted.
   CONTENT_TYPES = {
     'whiteboard_image' => %w[image/png],
+    'whiteboard_svg' => %w[image/svg+xml],
     'video' => %w[video/webm video/mp4],
     'audio' => %w[audio/webm audio/mpeg],
   }.freeze
