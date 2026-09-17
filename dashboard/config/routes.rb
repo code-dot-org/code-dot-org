@@ -1390,6 +1390,49 @@ Dashboard::Application.routes.draw do
 
     post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
+    # Hackathon: AI-authored lessons backed by simple filesystem JSON storage,
+    # deliberately not tied to Level/Lesson/Script models.
+    #
+    # Every in-app page path renders the same SPA shell (#app); the
+    # client-side router in AiLessonsApp inspects window.location and
+    # picks the page.  Data for each page is fetched lazily via the JSON
+    # endpoints further down.
+    # JSON list endpoints — declared before the page paths so the more
+    # specific routes match first.
+    get '/ai_lessons/data/lessons', to: 'ai_lessons#lessons_data'
+    get '/ai_lessons/data/progress', to: 'ai_lessons#progress_data'
+    get '/ai_lessons/:id.json', to: 'ai_lessons#read', defaults: {format: 'json'}
+
+    # Page paths — all render the same SPA shell.  Constrained to
+    # format: 'html' so `/ai_lessons/:id.json` requests fall through to
+    # the explicit JSON route above instead of being captured here with
+    # format=json and crashing on the missing template.
+    constraints format: 'html' do
+      get '/ai_lessons', to: 'ai_lessons#app', as: :ai_lessons
+      get '/ai_lessons/progress', to: 'ai_lessons#app', as: :ai_lessons_progress
+      get '/ai_lessons/new', to: 'ai_lessons#app', as: :new_ai_lesson
+      get '/ai_lessons/:id', to: 'ai_lessons#app', as: :ai_lesson
+      get '/ai_lessons/:id/edit', to: 'ai_lessons#app', as: :edit_ai_lesson
+    end
+
+    post '/ai_lessons', to: 'ai_lessons#create'
+    patch '/ai_lessons/:id', to: 'ai_lessons#update'
+    put '/ai_lessons/:id', to: 'ai_lessons#update'
+    delete '/ai_lessons/:id', to: 'ai_lessons#destroy'
+    post '/ai_lessons/:id/reset_progress', to: 'ai_lessons#reset_progress'
+    post '/ai_lessons/:id/images', to: 'ai_lessons#upload_image'
+    get '/ai_lessons/:id/images/:filename', to: 'ai_lessons#image',
+      constraints: {filename: /[a-zA-Z0-9_.-]+/}
+    # :scope is a lab type ("weblab2") or a sandbox slug ("sandbox-html-tags").
+    get '/ai_lessons/:id/sources/:scope', to: 'ai_lessons#read_sources',
+      constraints: {scope: /[a-z0-9_-]+/}
+    put '/ai_lessons/:id/sources/:scope', to: 'ai_lessons#write_sources',
+      constraints: {scope: /[a-z0-9_-]+/}
+    get '/ai_lessons/:id/progress', to: 'ai_lessons#read_progress'
+    put '/ai_lessons/:id/progress', to: 'ai_lessons#write_progress'
+    get '/ai_lessons/:id/inputs', to: 'ai_lessons#read_inputs'
+    put '/ai_lessons/:id/inputs', to: 'ai_lessons#write_inputs'
+
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
         get 'sprite_upload'
