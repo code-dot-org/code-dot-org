@@ -2,6 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -203,12 +204,8 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
     setChallengeResponse(null);
   };
 
-  // The gallery is a sibling Rails page one segment below the current tutor
-  // page: .../lessons/<n>/tutor -> .../lessons/<n>/tutor/gallery.
-  const handleViewGallery = () => {
-    const base = window.location.pathname.replace(/\/$/, '');
-    window.location.href = `${base}/gallery`;
-  };
+  const navigate = useNavigate();
+  const handleViewGallery = () => navigate('/gallery');
 
   const switchExplanationType = (type: string) => {
     setIsRecording(false);

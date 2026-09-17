@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-16 21:54:19 UTC",
+    "serialized_at": "2026-09-17 17:26:56 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sprite-lab-standalone-design-prototype"
+        ]
       },
       "bonus": false,
       "seeding_key": {
