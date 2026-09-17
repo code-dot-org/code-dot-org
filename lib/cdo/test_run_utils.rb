@@ -181,7 +181,7 @@ module TestRunUtils
         # Strangely, during our CI process, this is taken care of by the
         # prepare_dbs step in shared/rake/test.rake which works because shared
         # tests run before pegasus tests.
-        RakeUtils.rake_stream_output 'db:ensure_created', env: {'RAKE_ENV' => 'test'}
+        RakeUtils.rake_stream_output 'db:ensure_created', env: {RAILS_ENV: 'test', RACK_ENV: 'test'}
         RakeUtils.rake_stream_output 'test'
       end
     end
