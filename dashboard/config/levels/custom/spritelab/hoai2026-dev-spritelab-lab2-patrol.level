@@ -24,6 +24,13 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "sprite": "friend",
+      "gamelab_checkTouching": [
+        "hero",
+        "friend"
+      ]
+    },
     "pinned_scene": {
       "id": "platform-scene",
       "name": "Platformer",

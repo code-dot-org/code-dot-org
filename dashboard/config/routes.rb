@@ -113,12 +113,6 @@ Dashboard::Application.routes.draw do
 
     resources :user_level_interactions, only: [:create]
 
-    resources :skills, only: [:create, :index, :update, :destroy] do
-      collection do
-        get 'section/:section_id/unit/:unit_name', to: 'skills#section_skills'
-      end
-    end
-
     patch '/api/v1/user_scripts/course/:course_id/unit/:script_id', to: 'api/v1/user_scripts#update'
 
     get '/download/:product', to: 'hoc_download#index'
@@ -466,8 +460,6 @@ Dashboard::Application.routes.draw do
         get 'level_properties'
         get 'extra_links'
         patch 'update_bubble_choice_settings'
-        post 'add_skill'
-        post 'remove_skill'
       end
 
       resource :quiz_configuration, only: [:show, :update], controller: 'quizzes'
@@ -1493,7 +1485,6 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/evaluate', to: 'openai_evaluate#evaluate'
-    post '/openai/evaluate_section', to: 'openai_evaluate#evaluate_section'
     post '/openai/match_teaching_profile', to: 'openai_personalization#match_teaching_profile'
 
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'

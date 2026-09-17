@@ -7,6 +7,7 @@
 // while to load; and a sad bee when things go wrong.
 
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import {ToastProvider} from '@code-dot-org/component-library/toast';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -175,22 +176,24 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
           isShareView && moduleStyles.labContainerShareView
         )}
       >
-        {levelPropertiesMap && (
-          // Don't display children (including lab views) until we have loaded level properties.
-          <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
-            {children}
-          </LevelPropertiesWrapper>
-        )}
-        <Loading isLoading={isLoading} />
+        <ToastProvider className={moduleStyles.labToast}>
+          {levelPropertiesMap && (
+            // Don't display children (including lab views) until we have loaded level properties.
+            <LevelPropertiesWrapper levelPropertiesMap={levelPropertiesMap}>
+              {children}
+            </LevelPropertiesWrapper>
+          )}
+          <Loading isLoading={isLoading} />
 
-        {isPageError && <ErrorUI message={errorMessage} />}
-        {blockedType && (
-          <ProjectBlockedUI
-            blockedType={blockedType}
-            isProjectValidator={isProjectValidator}
-          />
-        )}
-        <ScreenAnalyticsOverlay />
+          {isPageError && <ErrorUI message={errorMessage} />}
+          {blockedType && (
+            <ProjectBlockedUI
+              blockedType={blockedType}
+              isProjectValidator={isProjectValidator}
+            />
+          )}
+          <ScreenAnalyticsOverlay />
+        </ToastProvider>
       </div>
     </ErrorBoundary>
   );

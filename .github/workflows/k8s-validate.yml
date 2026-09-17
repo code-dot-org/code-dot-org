@@ -30,5 +30,8 @@ jobs:
           tar -xzf /tmp/kustomize.tar.gz -C /tmp
           sudo install /tmp/kustomize /usr/local/bin/kustomize
 
+      - name: Verify worker priority modes
+        run: ruby k8s/bin/verify-worker-priorities
+
       - name: Verify kustomize/helm parity
         run: k8s/kustomize/bin/verify-helm-parity

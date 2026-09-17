@@ -64,6 +64,19 @@ class Services::AnonymousLevel::GeoRecordingTest < ActiveSupport::TestCase
       end
     end
 
+    context 'when another request creates matching geo first' do
+      let(:new_geo) {build(:anonymous_level_geo, anon_user_id:)}
+
+      before do
+        AnonymousLevel::Geo.stubs(:find_or_initialize_by).with(anon_user_id:).returns(new_geo)
+        new_geo.stubs(:update!).raises(ActiveRecord::RecordNotUnique.new)
+      end
+
+      it 'returns initialized geo' do
+        _(record_geo).must_equal new_geo
+      end
+    end
+
     context 'when the IP address has no location' do
       let(:geocoder_result) {nil}
 
