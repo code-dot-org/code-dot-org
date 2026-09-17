@@ -47,8 +47,7 @@ Resources:
       MasterUserPassword: {Ref: RedshiftAdminPassword}
       NodeType: dc1.large
       # This maintenance can interfere with analytics batch routines that execute a sequence of long duration SQL
-      # statements over an extended period, such as the daily export from MySQL to Redshift by Database Migration
-      # Service or the daily dbt model runs. Currently, those start at 23:00 UTC, so schedule Maintenance to end by then.
+      # statements over an extended period, such as the dbt model runs. This is scheduled to avoid conflicting.
       PreferredMaintenanceWindow: 'Mon:22:30-Mon:23:00'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
