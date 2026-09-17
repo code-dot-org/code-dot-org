@@ -1,10 +1,331 @@
+// Semantic color tokens come from
+// @code-dot-org/component-library-styles/colors.css, so the player follows
+// the Lab2 light/dark theme.
+
 .container {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   overflow: auto;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
 }
 
-.dump {
-  white-space: pre-wrap;
-  word-break: break-word;
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 24px 32px 0;
+}
+
+.lessonTitle,
+.stepCount {
+  color: var(--text-neutral-secondary);
+}
+
+.stepTitle {
+  margin: 0;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.finished {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100%;
+  padding: 48px;
+  text-align: center;
+}
+
+// The parent selector out-specifies MUI's emotion classes without
+// depending on stylesheet order.
+.container .pillButton {
+  border-radius: 999px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+// Panels
+
+.panelsStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  height: 100%;
+  padding: 48px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.panelImage {
+  max-width: 100%;
+  max-height: 40vh;
+  border-radius: 14px;
+}
+
+.panelCaption {
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+}
+
+.panelNav {
+  display: flex;
+  gap: 12px;
+}
+
+.panelCount {
+  font-size: 14px;
+  color: var(--text-neutral-secondary);
+}
+
+// Questions
+
+.questionFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  height: 100%;
+  padding: 48px;
+}
+
+.questionProgress {
+  display: flex;
+  gap: 8px;
+
+  // Dots are buttons: reached ones navigate, unreached ones are inert.
+  button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--borders-neutral-primary);
+    cursor: pointer;
+    transition: background 200ms ease, transform 200ms ease;
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &:not(:disabled):hover {
+      transform: scale(1.35);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--background-brand-teal-primary);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.questionDotActive {
+  background: var(--background-brand-teal-primary) !important;
+  transform: scale(1.35);
+}
+
+.questionDotDone {
+  background: var(--background-brand-teal-primary) !important;
+  opacity: 0.45;
+}
+
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.questionEnter {
+  animation: question-enter 320ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+.questionExit {
+  animation: question-exit 200ms ease-in both;
+}
+
+@keyframes question-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes question-exit {
+  to {
+    opacity: 0;
+    transform: translateY(-28px) scale(0.98);
+  }
+}
+
+.questionPrompt {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 720px;
+  text-align: center;
+  margin: 0;
+}
+
+// Options are chips in a grid that reflows with the container.
+.questionOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  width: min(720px, 100%);
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 14px 20px;
+    border-radius: 20px;
+    background: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+    border: 2px solid var(--borders-neutral-primary);
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 150ms ease, transform 150ms ease,
+      box-shadow 150ms ease;
+
+    &:hover:not(:disabled) {
+      border-color: var(--background-brand-teal-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgb(0 0 0 / 18%);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--background-brand-teal-primary);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
+
+.optionsShake {
+  animation: options-shake 360ms ease both;
+}
+
+@keyframes options-shake {
+  15% {
+    transform: translateX(-8px);
+  }
+
+  35% {
+    transform: translateX(7px);
+  }
+
+  55% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.questionOptionSelected {
+  border-color: var(--background-brand-teal-primary) !important;
+  background: var(--background-brand-teal-extra-light) !important;
+}
+
+.questionOptionCorrect {
+  border-color: var(--borders-success-primary) !important;
+  background: var(--background-success-extra-light) !important;
+}
+
+.questionOptionWrong {
+  border-color: var(--borders-error-primary) !important;
+  background: var(--background-error-extra-light) !important;
+}
+
+.questionFeedbackCorrect {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-success-primary);
+  animation: feedback-pop 260ms cubic-bezier(0.2, 0.8, 0.3, 1.4) both;
+}
+
+.questionFeedbackIncorrect {
+  font-size: 18px;
+  color: var(--text-error-primary);
+  animation: feedback-pop 200ms ease both;
+}
+
+.questionFeedbackRevealed {
+  font-size: 18px;
+  color: var(--text-neutral-primary);
+  animation: feedback-pop 200ms ease both;
+}
+
+.questionActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+@keyframes feedback-pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .questionEnter,
+  .questionExit,
+  .optionsShake,
+  .questionFeedbackCorrect,
+  .questionFeedbackIncorrect,
+  .questionFeedbackRevealed {
+    animation: none;
+  }
+
+  .questionProgress button,
+  .questionOptions button {
+    transition: none;
+  }
 }
