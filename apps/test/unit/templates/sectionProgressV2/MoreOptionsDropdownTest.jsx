@@ -61,4 +61,20 @@ describe('MoreOptionsDropdown', () => {
     expect(collapseMetadataForStudents).toHaveBeenCalledTimes(1);
     expect(collapseMetadataForStudents).toHaveBeenCalledWith([1, 2]);
   });
+
+  it('opens the reset progress dialog when reset-progress is clicked', () => {
+    renderComponent();
+
+    const trigger = screen.getByRole('button', {
+      name: i18n.additionalOptions(),
+    });
+    fireEvent.click(trigger);
+    fireEvent.click(screen.getByText(i18n.resetProgress()));
+
+    expect(
+      screen.getByText(i18n.resetProgressSelectStudentsDescription())
+    ).toBeTruthy();
+    expect(screen.getByText('Student1')).toBeTruthy();
+    expect(screen.getByText('Student2')).toBeTruthy();
+  });
 });
