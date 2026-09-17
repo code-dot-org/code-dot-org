@@ -357,6 +357,7 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
               recordedBlob={recordedBlob}
               setRecordedBlob={setRecordedBlob}
               disabled={submitted}
+              timeLimitSeconds={60}
             />
           </div>
         )}

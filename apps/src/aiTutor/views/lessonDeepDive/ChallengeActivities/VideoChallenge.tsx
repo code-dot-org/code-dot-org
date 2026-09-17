@@ -189,6 +189,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         setRecordedBlob={setRecordedBlob}
         recordedAudioBlob={recordedAudioBlob}
         setRecordedAudioBlob={setRecordedAudioBlob}
+        timeLimitSeconds={60}
       />
     </div>
   );
