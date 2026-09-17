@@ -149,24 +149,49 @@ function initPage() {
           studentId: !!studentLevelInfo ? studentLevelInfo.user_id : '',
         });
       }
-      createReactRoot(
-        <Provider store={getStore()}>
-          <RubricFloatingActionButton
-            rubric={rubric}
-            studentLevelInfo={studentLevelInfo}
-            reportingData={reportingData}
-            currentLevelName={config.level_name}
-            aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
-            parentLevelName={parentLevelName}
-            canShowTaScoresAlert={canShowTaScoresAlert}
-            levelType={levelType}
-          />
-        </Provider>,
-        rubricFabMountPoint,
-        {
-          legacyReactDomRender: true,
+      if (experiments.isEnabled('rubrics-drawer')) {
+        // Same trigger position as the rubric FAB below, but it hands off
+        // to the AI TA drawer's Rubrics screen (apps/src/aiTeacherDrawer/
+        // rubrics/) instead of the floating RubricContainer panel.
+        const differentiationContext = {type: AiDiffContext.LEVEL};
+        if (hasScriptData('script[data-aiDiffData]')) {
+          const aiDiffData = getScriptData('aiDiffData');
+          differentiationContext.levelId = aiDiffData.levelId;
+          differentiationContext.unitId = aiDiffData.scriptId;
         }
-      );
+        createReactRoot(
+          <Provider store={getStore()}>
+            <AiDiffFloatingActionButton
+              context={differentiationContext}
+              scriptName={reportingData.unitName}
+              openToNav="Rubrics"
+            />
+          </Provider>,
+          rubricFabMountPoint,
+          {
+            legacyReactDomRender: true,
+          }
+        );
+      } else {
+        createReactRoot(
+          <Provider store={getStore()}>
+            <RubricFloatingActionButton
+              rubric={rubric}
+              studentLevelInfo={studentLevelInfo}
+              reportingData={reportingData}
+              currentLevelName={config.level_name}
+              aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
+              parentLevelName={parentLevelName}
+              canShowTaScoresAlert={canShowTaScoresAlert}
+              levelType={levelType}
+            />
+          </Provider>,
+          rubricFabMountPoint,
+          {
+            legacyReactDomRender: true,
+          }
+        );
+      }
     } else {
       renderAiDiffButton();
     }
