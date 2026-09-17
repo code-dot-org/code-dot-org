@@ -99,11 +99,7 @@ class LessonsController < ApplicationController
     view_options(full_width: true, no_padding_container: true, no_footer: true)
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
-
-    @lesson = script.lessons.find do |l|
-      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
-    end
-    return render_404 unless @lesson&.lesson_tutor_available?
+    return render_404 unless find_tutor_lesson(script)
     unit_group_unit = unit_context[:unit_group_unit]
     unit_label = unit_group_unit ? "Unit #{unit_group_unit.position}" : nil
     json_videos = JSONVideo.joins(:objectives).where(objectives: {lesson_id: @lesson.id}).distinct
@@ -136,11 +132,7 @@ class LessonsController < ApplicationController
     view_options(full_width: true, no_padding_container: true, no_footer: true)
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
-
-    @lesson = script.lessons.find do |l|
-      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
-    end
-    return render_404 unless @lesson&.lesson_tutor_available?
+    return render_404 unless find_tutor_lesson(script)
 
     @tutor_gallery_data = build_tutor_gallery_data(script, unit_context)
     render 'tutor_app'
@@ -315,6 +307,15 @@ class LessonsController < ApplicationController
 
   # We have two urls you can use to edit a lesson with a lesson plan. This does the
   # work for both of them to prepare the data for editing
+  # Sets @lesson from the request params and returns true if it exists and has
+  # tutor content available; returns false otherwise (caller should render 404).
+  private def find_tutor_lesson(script)
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    @lesson&.lesson_tutor_available?
+  end
+
   private def build_tutor_gallery_data(script, unit_context)
     unit_group = unit_context[:unit_group] || script.original_unit_group
     units = unit_group ? unit_group.default_units : [script]
