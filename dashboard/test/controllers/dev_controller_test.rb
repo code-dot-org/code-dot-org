@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'tmpdir'
 
 FAKE_GITHUB_WEBHOOK_SECRET = 'fake-github-secret'.freeze
 FAKE_SLACK_SLASH_TOKEN = 'fake-start-build-token'.freeze
@@ -22,16 +23,16 @@ class DevControllerTest < ActionDispatch::IntegrationTest
   setup do
     CDO.stubs(github_webhook_secret: FAKE_GITHUB_WEBHOOK_SECRET)
     CDO.stubs(slack_start_build_token: FAKE_SLACK_SLASH_TOKEN)
-    FileUtils.stubs(:touch).with(DevController::BUILD_STARTED_PATH)
   end
 
   test 'start-build is forbidden on production and development' do
     [:production, :development].each do |forbidden_env|
       with_rack_env(forbidden_env) do
-        File.expects(:file?).with(DevController::BUILD_STARTED_PATH).never
-        FileUtils.expects(:touch).never
-        post '/api/dev/start-build', params: SLACK_PARAMS
-        assert_response :forbidden
+        with_build_started_path do |build_started_path|
+          post '/api/dev/start-build', params: SLACK_PARAMS
+          assert_response :forbidden
+          refute File.file?(build_started_path)
+        end
       end
     end
   end
@@ -39,10 +40,11 @@ class DevControllerTest < ActionDispatch::IntegrationTest
   test 'start-build is allowed on most environments' do
     [:staging, :test, :adhoc, :levelbuilder].each do |allowed_env|
       with_rack_env(allowed_env) do
-        File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
-        FileUtils.expects(:touch).once
-        post '/api/dev/start-build', params: SLACK_PARAMS
-        assert_response :success
+        with_build_started_path do |build_started_path|
+          post '/api/dev/start-build', params: SLACK_PARAMS
+          assert_response :success
+          assert File.file?(build_started_path)
+        end
       end
     end
   end
@@ -65,30 +67,34 @@ class DevControllerTest < ActionDispatch::IntegrationTest
 
   test 'start-build generates a start_build file if none exists' do
     with_rack_env(:test) do
-      File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(false)
-      FileUtils.expects(:touch).once
-      post '/api/dev/start-build', params: SLACK_PARAMS
+      with_build_started_path do |build_started_path|
+        post '/api/dev/start-build', params: SLACK_PARAMS
 
-      # Check appropriate response to whole room, too
-      assert_response :success
-      response_body = JSON.parse(response.body)
-      assert_equal 'Test build restarted by Dave', response_body['text']
-      assert_equal 'in_channel', response_body['response_type']
+        # Check appropriate response to whole room, too
+        assert_response :success
+        assert File.file?(build_started_path)
+        response_body = JSON.parse(response.body)
+        assert_equal 'Test build restarted by Dave', response_body['text']
+        assert_equal 'in_channel', response_body['response_type']
+      end
     end
   end
 
   test 'start-build succeeds without action if start_build exists' do
     with_rack_env(:test) do
-      File.expects(:file?).with(DevController::BUILD_STARTED_PATH).returns(true)
-      FileUtils.expects(:touch).never
-      post '/api/dev/start-build', params: SLACK_PARAMS
+      with_build_started_path do |build_started_path|
+        FileUtils.touch(build_started_path)
+        mtime = File.mtime(build_started_path)
+        post '/api/dev/start-build', params: SLACK_PARAMS
 
-      # Check response to requester
-      assert_response :success
-      assert_equal(
-        "I can't do that Dave - a build is already queued",
-        response.body
-      )
+        # Check response to requester
+        assert_response :success
+        assert_equal mtime, File.mtime(build_started_path)
+        assert_equal(
+          "I can't do that Dave - a build is already queued",
+          response.body
+        )
+      end
     end
   end
 
@@ -160,6 +166,15 @@ class DevControllerTest < ActionDispatch::IntegrationTest
 
       post '/api/dev/check-dts', params: GITHUB_PARAMS, headers: {HTTP_X_GITHUB_EVENT: 'pull_request'}
       assert_response :success
+    end
+  end
+
+  private def with_build_started_path
+    Dir.mktmpdir do |dir|
+      build_started_path = File.join(dir, 'build-started')
+      DevController.stub_const(:BUILD_STARTED_PATH, build_started_path) do
+        yield build_started_path
+      end
     end
   end
 end
