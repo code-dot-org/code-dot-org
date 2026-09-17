@@ -61,6 +61,7 @@ type CodebridgeProps = {
   aiTutorInitialWelcomeMessage?: string;
   allowMultipleValidationFiles?: boolean;
   enableUserAddedSelectionContext?: boolean;
+  hideResourcePanel?: boolean;
 };
 
 export const Codebridge = React.memo(
@@ -86,6 +87,7 @@ export const Codebridge = React.memo(
     aiTutorInitialWelcomeMessage,
     allowMultipleValidationFiles,
     enableUserAddedSelectionContext = false,
+    hideResourcePanel,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -260,6 +262,7 @@ export const Codebridge = React.memo(
             <InnerLayout
               isProjectLevel={levelProperties.isProjectLevel}
               isWidgetView={levelProperties.widgetView}
+              hideResourcePanel={hideResourcePanel}
             />
           </div>
         </BackpackAPIContext.Provider>

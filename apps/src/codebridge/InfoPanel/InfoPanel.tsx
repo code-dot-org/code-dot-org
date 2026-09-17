@@ -28,11 +28,15 @@ import moduleStyles from './styles/info-panel.module.scss';
 interface InfoPanelProps {
   style?: React.CSSProperties;
   className?: string;
+  // Forwarded from the host lab's ExtraLabProps; when true the panel and
+  // its surrounding column are dropped entirely.
+  hideResourcePanel?: boolean;
 }
 
 export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   style,
   className,
+  hideResourcePanel,
 }) => {
   const {
     levelProperties,
@@ -147,6 +151,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     }
     return undefined;
   }, [appName]);
+
+  if (hideResourcePanel) {
+    return null;
+  }
 
   return (
     <div style={style} className={className}>
