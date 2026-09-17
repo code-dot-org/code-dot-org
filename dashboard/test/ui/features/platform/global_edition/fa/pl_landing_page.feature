@@ -1,5 +1,6 @@
 @chrome
 @no_mobile
+@playwright
 Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
   @eyes
