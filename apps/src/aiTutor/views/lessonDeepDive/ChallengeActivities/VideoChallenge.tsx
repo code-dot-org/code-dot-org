@@ -53,8 +53,8 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   submitRef,
   resetRef,
 }) => {
-  const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
-  const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
+  const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
+  const [recordedAudioBlob, setRecordedAudioBlob] = useState<Blob | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const [isUploading, setIsUploading] = useState(false);
@@ -99,7 +99,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   );
 
   const handleSubmit = async () => {
-    if (!recordedUrl) return;
+    if (!recordedBlob) return;
     setIsUploading(true);
     try {
       const text = await transcribeAudio();
@@ -111,10 +111,9 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
       if (!assetId) {
         throw new Error('The server did not return a video asset.');
       }
-      const blob = await fetch(recordedUrl).then(r => r.blob());
       await HttpClient.put(
         `/challenge_response_assets/${assetId}/upload`,
-        blob,
+        recordedBlob,
         true, // useAuthenticityToken
         {'Content-Type': 'video/webm'}
       );
@@ -136,15 +135,13 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   };
 
   const transcribeAudio = async (timedOut = false) => {
-    if (!recordedAudioUrl) return null;
+    if (!recordedAudioBlob) return null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     try {
-      const audio = await fetch(recordedAudioUrl).then(r => r.blob());
-
       const aichatClientApi = await getClientApi();
-      const text = await aichatClientApi.transcribeAudio(audio);
+      const text = await aichatClientApi.transcribeAudio(recordedAudioBlob);
       return text;
       // setTranscribedText(text);
     } catch (error) {
@@ -156,8 +153,8 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   // Discard the recording (by remounting the recorder) so the student can
   // record again from scratch.
   const handleReset = () => {
-    setRecordedUrl(null);
-    setRecordedAudioUrl(null);
+    setRecordedBlob(null);
+    setRecordedAudioBlob(null);
     setHasRecording(false);
     setIsRecording(false);
     setResetKey(key => key + 1);
@@ -188,10 +185,10 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         onRecordingChange={setHasRecording}
         onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}
-        recordedUrl={recordedUrl}
-        setRecordedUrl={setRecordedUrl}
-        recordedAudioUrl={recordedAudioUrl}
-        setRecordedAudioUrl={setRecordedAudioUrl}
+        recordedBlob={recordedBlob}
+        setRecordedBlob={setRecordedBlob}
+        recordedAudioBlob={recordedAudioBlob}
+        setRecordedAudioBlob={setRecordedAudioBlob}
       />
     </div>
   );
