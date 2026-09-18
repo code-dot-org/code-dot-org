@@ -1,6 +1,8 @@
 # Proposal: the map as the front door
 
-STATUS: PROPOSED. Nothing here is built. It is a design to argue with, written
+STATUS: PROPOSED, with step 1 built — map scripts, on `.map` files
+(specs/MAP_SCRIPTS_PLAN.md records the commits and what they taught). The
+rest is a design to argue with, written
 after the pause menu showed where the current shape strains (UI_ACTORS.md,
 "The second axis"; MAPS.md, "A block naming a placement").
 
@@ -259,17 +261,21 @@ if the icons are not enough.
 another placement, drawn as a line from the one to the other. Sugar over the
 instance workspace, not a second store.
 
-### What the editor needs built
+### What the editor needed built, and what it got
 
-`BlocklyFileEditor` edits a whole file; the instance workspace needs the same
-workspace mounted on a subtree, taking one placement's `blocks` and writing
-back through the map's own `onChange`. That is a refactor that pulls the
-workspace out of the file editor, not a second Blockly integration. The mode
-switch is a segmented control on the stage toolbar. The icon is a glyph the
-stage already draws at a placement's corner for other reasons. The Script
-button is one row in the properties window, and the world's properties on
-empty selection are the same schema-driven form the inspector draws for an
-actor, over the world's own properties.
+The instance workspace is a component of its own
+(`mapEditor/PlacementScriptEditor`), not the file editor over a different
+file: `BlocklyFileEditor` is keyed to a FILE — its palette, its rename
+machinery, its body surfaces, the singletons it installs — and a placement
+is a subtree of a document that is no workspace. What is shared is what can
+be: the block definitions, the palette builder, the theme, the localization
+and the stand-ins. It takes one placement's `blocks` and writes back through
+the map's own `onChange`; the map's workspace is the same component with
+kind `map`. The Script button is a row in the inspector's head, the Map
+script button sits on the stage toolbar beside Reset view, the mark is a
+disc at the placement's top-right corner drawn in screen pixels, and the
+Icons toggle beside it hides the marks. The world's properties on empty
+selection, the Events section, and the World mode are step 2's.
 
 ### Two edges
 
@@ -277,10 +283,12 @@ actor, over the world's own properties.
   subject is always the one instance. `any ⟨Button⟩ in this map` is the
   world's workspace's, and covers "every switch in the level".
 - **A deleted placement takes its workspace with it**, which is what a
-  workspace belonging to the placement means; the editor confirms the delete
-  when the workspace is not empty. Duplicating a placement duplicates its
-  blocks. Renaming one rewrites the `the ⟨…⟩` values in other placements'
-  workspaces that name it, which is the rename the map editor already owns.
+  workspace belonging to the placement means. Duplicating a placement
+  duplicates its blocks. Renaming one rewrites the `the ⟨…⟩` values in every
+  workspace of the map that names it (`renamePlacementReferences`). The
+  confirmation before deleting a placement whose workspace is not empty is
+  not built; the map editor has no confirming dialog yet, and a browser
+  prompt is not the lab's.
 
 ## Levels: the Viewport
 
@@ -560,10 +568,10 @@ What map-first does better:
 
 ## Order of work
 
-1. **Map scripts.** The instance workspace, the Script button, the icons and
-   their toggle, and the map's own workspace, on `.map` files. This stands on
-   its own, replaces the named-actor commit, and is what the pause menu needs
-   whatever else happens.
+1. **Map scripts.** BUILT (specs/MAP_SCRIPTS_PLAN.md). The instance
+   workspace, the Script button, the icons and their toggle, and the map's
+   own workspace, on `.map` files. It stands on its own, replaced the
+   named-actor commit, and is what the pause menu needed.
 2. **The main map.** Placements on the world root, the editor opening a
    `.world` as a map with the World mode as its workspace, the world's
    properties on empty selection. Migration of `create actor in map`.

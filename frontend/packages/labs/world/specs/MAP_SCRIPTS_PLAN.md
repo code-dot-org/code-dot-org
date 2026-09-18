@@ -1,6 +1,7 @@
 # Plan: map scripts (MAP_FIRST.md, step 1)
 
-STATUS: IN PROGRESS. The first build step of specs/MAP_FIRST.md: a placed
+STATUS: BUILT, pending a look in the browser. The first build step of
+specs/MAP_FIRST.md: a placed
 actor gets a workspace of its own in the map editor, a map gets one for its
 own events, and the pause menu becomes a scripted map. This file is the
 working record: the plan as set out before building, then each commit as it
@@ -96,6 +97,11 @@ should be read with them.
   the manifest stubs maps before generation. The named-actor block, its
   engine registry and the Pause Menu actor retired; the stock pause menu
   scripted; Breakout on `quit`.
+- `f77851d4020` — the plan and MAP_FIRST.md brought in step with the file
+  shape.
+- `6b686502bac` — editor: `PlacementScriptEditor`, the Script and Map
+  script buttons, the corner marks and their toggle, rename rewriting the
+  blocks that name a placement, `blocks` on the map model.
 
 ## Learned while building
 
@@ -122,3 +128,43 @@ should be read with them.
   Button's click is a rule's event and needs the project's rules registered;
   `when this actor leaves the map` is built in and has the same shape, so the
   module-text test uses it and the end-to-end test keeps the click.
+- **The instance workspace is its own component, not the file editor
+  refactored.** The plan said "pull the workspace out of the file editor".
+  Read closely, that editor is 1,700 lines keyed to a file id — rule
+  renames, body surfaces, member reconciliation, five module-level opener
+  singletons — and none of it applies to a subtree of a JSON document. The
+  shared parts (definitions, palette, theme, localization, stand-ins,
+  options, the "opening is not editing" guard) are a hundred lines, and
+  `PlacementScriptEditor` is those. MAP_FIRST.md says so now.
+- **Who sets the placement dropdown.** The generator sets it per map before
+  loading a workspace; the editor sets it when the workspace opens. The
+  first cut set it only in the editor and the headless generator rejected
+  every `the ⟨…⟩` value on load, since Blockly validates a dropdown's value
+  against its options as the block is made.
+- **The canvas test records `fillStyle` now.** The stage's recording
+  context kept only `strokeStyle`; the corner mark is a fill, so the log
+  gained the other property.
+
+## Not built, and known
+
+- The confirmation before deleting a placement whose workspace holds
+  blocks. The map editor has no confirming dialog; a browser prompt is not
+  the lab's.
+- The Events section in the inspector, listing a kind's events with counts
+  and making a hat from one. The Script button is the door for now.
+- Selection and hat highlighting each other across the two views.
+- Hiding the map's own workspace when a map has nothing to declare: the
+  button is always offered.
+- A placement's workspace under `misplacedBlocks`: the placement palette
+  omits the definition roots, but a root pasted in is not greyed with a
+  reason as it is in a file.
+
+## What to look at in the browser
+
+The tests cover the generated module, the engine, the model and the two
+views with the workspace mocked. What they cannot: the placement palette as
+drawn (the Map category with the four blocks, the map's own drawer with its
+`emit`, the kind's own properties), the dropdown of `the ⟨placement⟩`
+filling, a hat dragged out and saved landing on the placement in the file,
+the corner mark and its toggle on a real canvas, and the stock pause menu
+imported into a project and opened in the editor.
