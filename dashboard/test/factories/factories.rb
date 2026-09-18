@@ -1110,12 +1110,6 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
-  factory :adaptive, parent: :level, class: Adaptive do
-    game {Game.adaptive}
-    level_num {'custom'}
-    adaptive_id {'sample'}
-  end
-
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
     sublevels do

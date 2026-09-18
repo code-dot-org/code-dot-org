@@ -14080,16 +14080,6 @@ en:
           description_short: ''
           description: ''
           student_description: ''
-        adaptive-dev:
-          lessons:
-            lesson-1:
-              name: Adaptive Sample
-          lesson_groups: {}
-          title: Adaptive (dev)
-          description_audience: ''
-          description_short: ''
-          description: Development unit for the Adaptive level type.
-          student_description: ''
         web-dev-2024:
           lesson_groups:
             lessonGroup-2:
