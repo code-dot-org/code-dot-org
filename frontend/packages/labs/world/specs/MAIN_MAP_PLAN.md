@@ -1,11 +1,12 @@
 # Plan: the main map (MAP_FIRST.md, step 2)
 
-STATUS: IN PROGRESS. The second build step of specs/MAP_FIRST.md, after
-specs/MAP_SCRIPTS_PLAN.md: every world has a main map, held in its own file;
-opening a world opens the map editor on it, with the world's workspace one
-switch away; the world's properties are set with nothing selected. The
-working record, as the first step's was: the plan before building, each
-commit as it lands, and what was decided or learned.
+STATUS: BUILT, pending a look in the browser, less the migration of
+`create actor in map` and the starter's level. The second build step of
+specs/MAP_FIRST.md, after specs/MAP_SCRIPTS_PLAN.md: every world has a main
+map, held in its own file; opening a world opens the map editor on it, with
+the world's workspace one switch away; the world's properties are set with
+nothing selected. The working record, as the first step's was: the plan
+before building, each commit as it lands, and what was decided or learned.
 
 ## What is being built
 
@@ -70,8 +71,33 @@ commit as it lands, and what was decided or learned.
 
 ## Commits
 
-(recorded as they land)
+- `35468572937` — this plan.
+- `d59021f0ef8` — generator: a world's `map` compiled into its module and
+  loaded after the world's rows; the manifest stubs its placements.
+- `843893ad6d6` — editor: the world editor with Map and World views over
+  one file; the map editor over a document adapter; the Blockly editor
+  keeping a file's other keys through a save; worlds routed to it.
+- `a073df9206f` — the world's name and properties on empty selection
+  (`WorldInspector`, `worldProperties`).
 
 ## Learned while building
 
-(recorded as it happens)
+- **A world with a main map and no `load map` row is a world the starter
+  project is not yet.** The mechanics work on any world; the starter still
+  loads `maps/level1`. Moving its level into the main map is content, and
+  the fixtures test pins the files a starter holds, so it is a change of
+  its own.
+- **Two views, one file, and the ref beside the state.** The map editor
+  writes from a ref of the last file text, since several commits may land
+  in one tick, and keeps a state beside it for what is drawn from the file
+  rather than from the map — the world's header. The world editor holds
+  the file too, so the view that mounts next opens on what the other last
+  wrote.
+- **A miss must not be a rewrite.** The first `writeWorldPropertyDefault`
+  re-stringified the file even when no row matched, which pretty-printed a
+  compact file and made "unchanged" false; a change now says whether it
+  changed anything.
+- **The test project needs a world file to name the world's module.** The
+  map editor test's mocked project had only a map; the world adapter
+  strips `.world`, so opening a world under a map's file id kept the map's
+  path. The mocked project gained a `worlds/main.world`.

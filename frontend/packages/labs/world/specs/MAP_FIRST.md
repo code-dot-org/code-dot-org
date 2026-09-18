@@ -174,9 +174,10 @@ and the map gains one for what is the map's:
 Each `blocks` is a whole workspace serialization, the shape an actor file
 holds, so the editor loads and saves it with the same calls. A placement
 with no `blocks` has no script, which is most of them. For the
-main map the same `actors`, `layers` and `camera` live on the `define world`
-root as a field value, and the world's workspace is the file's workspace.
-One shape, two homes.
+main map the same `actors`, `layers` and `camera` live under a `map` key
+beside the world file's `blocks` — not on the `define world` root as a
+field, which an earlier draft said and specs/MAIN_MAP_PLAN.md explains —
+and the world's workspace is the file's workspace. One shape, two homes.
 
 ### What it compiles to
 
@@ -496,6 +497,12 @@ the `set` block remains for a value that changes at run time. Every other
 map's window shows the same on empty selection, minus the laws: a level has
 a camera, layers and a background of its own.
 
+BUILT for the name and the properties (`mapEditor/WorldInspector`): a
+number, angle, string or boolean is a field, and an edit rewrites the row's
+DEFAULT in the file without opening the blocks (`worldProperties`). The
+other types are shown and not edited. The camera and the layers arrive with
+steps 3 and 4.
+
 ## Against the current shape
 
 What the current shape does better:
@@ -543,11 +550,10 @@ What map-first does better:
 
 ## What this changes in the files
 
-- `.world`: gains a placements document, stored as a field value on the
-  `define world` root the way `create actor in map` stores its own, but for
-  mixed kinds. The Blockly serialization remains the file; undo remains
-  Blockly's. `create actor in map` is retired; its placements migrate into the
-  main map on first open.
+- `.world`: gains a `map` beside its `blocks`, the shape a `.map` holds,
+  which the file editor carries through every save (`documentExtras`).
+  BUILT. `create actor in map` is to be retired, its placements migrated
+  into the main map on first open; not yet.
 - `.map`: each placement may carry a `blocks` workspace, and the map one of
   its own, serialized as an actor file's is; a map gains a `camera`. It
   compiles to a module exporting the arrangement and a script function.
@@ -572,9 +578,10 @@ What map-first does better:
    workspace, the Script button, the icons and their toggle, and the map's
    own workspace, on `.map` files. It stands on its own, replaced the
    named-actor commit, and is what the pause menu needed.
-2. **The main map.** Placements on the world root, the editor opening a
-   `.world` as a map with the World mode as its workspace, the world's
-   properties on empty selection. Migration of `create actor in map`.
+2. **The main map.** BUILT (specs/MAIN_MAP_PLAN.md), less the migration
+   of `create actor in map`: the map beside the world's blocks, the world
+   editor opening on it with the World view one switch away, the world's
+   name and properties on empty selection.
 3. **The Viewport.** The stock kind, the two blocks, spaces in the engine
    (pairwise rules partitioned, pointer mapping, bounds per space, undoable
    loads), one Phaser camera per Viewport in the driver, and the dimmed
