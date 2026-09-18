@@ -76,7 +76,7 @@ step 3 left it without, and says why the fifth stays.
   follows. The editor's parse keeps a map's `camera`.
 - `2f4f8906672` — driver: what the root holds in front of a Viewport is
   drawn in front of it, by a camera per band.
-- (next) — Breakout and `adventure/rooms` in Viewports; `clear world` and
+- `eaba70e2864` — Breakout and `adventure/rooms` in Viewports; `clear world` and
   `clearActors` deleted; a load by path writes the Viewport's `map`
   property; a main map's Viewports hold their maps from the load; the stock
   menu's Quit unloads the menu; the starter's level in its main map; specs.
