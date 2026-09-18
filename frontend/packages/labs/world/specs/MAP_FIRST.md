@@ -77,6 +77,164 @@ actors that load placed. Load the pause menu twice and each Resume closes its
 own menu. There is no registry, no global name, and nothing left behind on
 unload.
 
+## What a map script looks like
+
+Three scripts, as they read in the drawer. A level with a switch and a door,
+`maps/level3.map`:
+
+```
+when this map loads
+  set camera to follow ⟨the Player⟩
+
+when ⟨the Switch⟩ is pressed
+  open ⟨the Door⟩
+  play sound ⟨click⟩
+
+when ⟨the Player⟩ touches ⟨the Exit⟩
+  emit ⟨finished⟩
+```
+
+The pause menu, `maps/pauseMenu.map`, a Panel and two Buttons:
+
+```
+define event ⟨quit⟩
+
+when ⟨the Resume⟩ is clicked
+  resume the game
+  unload this map
+
+when ⟨the Quit⟩ is clicked
+  emit ⟨quit⟩
+```
+
+And the world's own script, which is the main map's, in Breakout:
+
+```
+when ⟨p⟩ is pressed
+  pause the game
+  load map ⟨pauseMenu⟩
+
+when ⟨pause menu⟩ quit
+  load map ⟨level1⟩ into ⟨the Game⟩
+```
+
+Three things to notice. `the ⟨Switch⟩` is a placement of this file and
+nothing else. `this map` is a subject in its own right, with `loads`,
+`unloads` and `define event`. And the world's script keeps its kind hats and
+its world events, since it is the world's script too; what it loses is any
+need to name a level's contents.
+
+**A hat about a placement knows the kind.** A placement has a type, so a hat
+about `the ⟨Switch⟩` is about a Button: `this actor` inside it is the
+Switch, the Button's own property blocks shadow correctly, and the subject
+dropdown offers only the placements whose kind has that event. The
+named-actor block could do none of that, because a name said nothing about a
+kind.
+
+### The file
+
+A `.map` gains a workspace beside its placements, serialized as an actor
+file's is:
+
+```jsonc
+{
+  "type": "map",
+  "size": {"width": 10, "height": 10},
+  "tile": {"width": 32, "height": 32},
+  "layers": [{"id": "game", "factor": {"x": 1, "y": 1}, "background": "sky"}],
+  "actors": [
+    {"type": "actors/button", "id": "Switch", "properties": {}},
+    {"type": "actors/door", "id": "Door", "properties": {}},
+  ],
+  "blocks": {"blocks": []},
+}
+```
+
+For the main map the same `actors` and `layers` live on the `define world`
+root as a field value, and the world's workspace is the script. One shape,
+two homes.
+
+### What it compiles to
+
+A map module exports its data and a script function:
+
+```js
+export const map = {size, tile, layers, actors};
+export const events = {quit: {id: 'quit', ownerId: 'maps/pauseMenu'}};
+export function script(world, placed, self) {
+  placed.Resume.on(ClickedEvent, (world, actor) => {
+    world.resume();
+    self.unload();
+  });
+  placed.Quit.on(ClickedEvent, () => self.emit(events.quit));
+}
+```
+
+`loadMap` builds `placed` from the entries' ids — the table it builds today
+for actor-typed references — and calls `script` once per load with a handle
+for `this map`. Two loads are two closures. Unloading removes what that load
+placed, and the handlers go with the actors. A world hat `when ⟨pause menu⟩
+quit` registers on the map's events as it registers on an actor kind's.
+
+### The palette
+
+Everything a world script has, less the definition roots and `load map` into
+the world's own space, plus:
+
+- `this map`, with `loads`, `unloads`, `unload this map`, `emit ⟨event⟩` and
+  `define event`;
+- `the ⟨placement⟩`, as an actor value and as a hat subject, its dropdown read
+  from this file;
+- `camera of this map` for the pose blocks, which is what `set camera to
+follow` becomes;
+- `layer ⟨…⟩ of this map` for the background and offset blocks.
+
+A fourth file kind, `map`, beside `actor`, `world` and `rule`, decides the
+shadow a hat's subject socket starts with: `the ⟨placement⟩` here, as
+`any ⟨kind⟩` is in a world and `this actor` in an actor (`blockly/fileKind`).
+
+### Opening the workspace
+
+Three doors, one drawer.
+
+1. **A toggle on the stage toolbar**, labelled Script, opens a drawer below
+   the canvas holding the whole workspace, at a height it remembers. The door
+   for someone who wants to read the map top to bottom.
+2. **From a placement.** Selecting one shows an Events section in the
+   inspector: the kind's events, each with a count of the hats about this
+   placement. Choosing one makes a hat with `the ⟨Switch⟩` in its subject,
+   opens the drawer if closed, and scrolls to the hat. The badge on the canvas
+   does the same, filtered: the drawer shows only that placement's hats, with
+   a way back to all of them. Selection and hats highlight each other both
+   ways.
+3. **From the map itself.** With nothing selected, the inspector's Events
+   section lists `loads`, `unloads` and the map's own events, and makes the
+   corresponding `this map` hat.
+
+Nothing is attached to an actor. Every hat lives in the one workspace, and
+"this placement's script" is a filter over it. Duplicating, deleting and
+renaming a placement stay edits to one document, and a hat that names two
+placements has no side to belong to.
+
+### What the editor needs built
+
+`BlocklyFileEditor` edits a whole file; the drawer needs the same workspace
+mounted on a subtree, taking the map's `blocks` and writing back through the
+map's own `onChange`. That is a refactor that pulls the workspace out of the
+file editor, not a second Blockly integration. The badge is a glyph the stage
+already draws at a placement's corner for other reasons. The Events section
+is a list built from the kind's schema, which the inspector already fetches.
+The filter is a workspace with some top blocks hidden.
+
+### Two edges
+
+- **Several placements in one subject.** `the ⟨Switch⟩ or ⟨Lever⟩` is not
+  offered; `any ⟨Button⟩ in this map` is, and covers it.
+- **A hat whose placement was deleted** is kept, its subject shown in the
+  warning color the way a `use rule` naming a missing rule is, rather than
+  deleting blocks a learner wrote. Renaming a placement rewrites the hats that
+  name it, which is the rename the map editor already owns.
+
 ## Levels: the Viewport
 
 This is the part that has no precedent in the lab. Three answers were
