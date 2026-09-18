@@ -161,15 +161,17 @@ and the map gains one for what is the map's:
       "type": "actors/button",
       "id": "Switch",
       "properties": {},
-      "blocks": {"blocks": []},
+      "blocks": {"blocks": {"blocks": []}},
     },
     {"type": "actors/door", "id": "Door", "properties": {}},
   ],
-  "blocks": {"blocks": []},
+  "blocks": {"blocks": {"blocks": []}},
 }
 ```
 
-A placement with no `blocks` has no script, which is most of them. For the
+Each `blocks` is a whole workspace serialization, the shape an actor file
+holds, so the editor loads and saves it with the same calls. A placement
+with no `blocks` has no script, which is most of them. For the
 main map the same `actors`, `layers` and `camera` live on the `define world`
 root as a field value, and the world's workspace is the file's workspace.
 One shape, two homes.

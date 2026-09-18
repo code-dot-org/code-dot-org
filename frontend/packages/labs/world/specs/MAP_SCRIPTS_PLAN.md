@@ -87,8 +87,38 @@ should be read with them.
 
 ## Commits
 
-(recorded as they land)
+- `bec9485202a` — this plan.
+- `8fc39fd43f2` — engine: `WorldMap.script`, `MapLoad` with `unload` and
+  `onUnload`, called once per load after every reference is followed.
+- `102832e2613` — generator and blocks: `.map` as a generated module; the
+  map assembler; `the ⟨placement⟩`, `unload this map`, the two map hats;
+  map own-events as world-scoped own metas; the bundler loads `.map` as JS;
+  the manifest stubs maps before generation. The named-actor block, its
+  engine registry and the Pause Menu actor retired; the stock pause menu
+  scripted; Breakout on `quit`.
 
 ## Learned while building
 
-(recorded as it happens)
+- **A placement's `blocks` is a whole workspace serialization**, the same
+  shape an actor file holds — `{blocks: {blocks: […]}, variables: […]}` —
+  not the inner block list. The first cut stored the inner list and Blockly
+  refused it on load with "a is not iterable"; the plan's file example and
+  MAP_FIRST.md's were corrected to match.
+- **The map branch must come before the file is loaded as a workspace.**
+  `generate` cleared and loaded the file into the headless workspace before
+  deciding its shape; a map's JSON is no workspace. The branch now sits
+  right after the reserved words are declared.
+- **The thumbnail manifest stubs SOURCE, not generated output.** It used to
+  replace generated files, which was fine while a map was JSON either way;
+  a JSON stub handed to a bundler that now loads `.map` as JS is a syntax
+  error. The thumbnail path stubs the project's files first and generates
+  after, so a placement edit is a cache hit in both the generator and the
+  compile, and a map's events still export.
+- **The root types a map's hats need are the palette's, not the constant.**
+  A placement's hats are minted per project (`world_on_ActorsButton_…`),
+  so the map generator takes the live root-type set the generator component
+  holds rather than `ROOT_BLOCK_TYPES`.
+- **A built-in actor hat makes the generator test self-contained.** A
+  Button's click is a rule's event and needs the project's rules registered;
+  `when this actor leaves the map` is built in and has the same shape, so the
+  module-text test uses it and the end-to-end test keeps the click.
