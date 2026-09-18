@@ -1,8 +1,9 @@
 # Proposal: the map as the front door
 
-STATUS: PROPOSED, with step 1 built — map scripts, on `.map` files
-(specs/MAP_SCRIPTS_PLAN.md records the commits and what they taught). The
-rest is a design to argue with, written
+STATUS: PROPOSED, with steps 1 to 3 built — map scripts on `.map` files,
+the main map in the world's file, and the Viewport (specs/MAP_SCRIPTS_PLAN.md,
+specs/MAIN_MAP_PLAN.md and specs/VIEWPORT_PLAN.md record the commits and what
+they taught). The rest is a design to argue with, written
 after the pause menu showed where the current shape strains (UI_ACTORS.md,
 "The second axis"; MAPS.md, "A block naming a placement").
 
@@ -385,6 +386,17 @@ In order of size:
   inside a Viewport, and render-to-texture is the later answer if anyone wants
   that.
 
+BUILT, with two departures the build found and specs/VIEWPORT_PLAN.md
+explains. The driver never moves its Phaser camera — a camera's pose is
+applied by shifting each layer's container — so a space is drawn the same
+way one level down: a masked container inside the Viewport's own group,
+shifted by the space's camera, and no second Phaser camera. And the rules
+were not partitioned one by one: the world keeps an ACTOR IN HAND — the
+subject whose handler is running, the actor a step or a loop is at, the
+candidate a predicate is asked about — and answers the map's size, the
+mouse's place, what is near a point and where a spawn lands for that actor's
+space. Every stock rule kept its source.
+
 ### Camera-follow is the level's property
 
 The main map's properties window cannot say "follows the Player", because
@@ -561,11 +573,12 @@ What map-first does better:
 - The named-actor block becomes the map script's `the ⟨Resume⟩`, scoped to its
   file. `World.named`, `World.actorsNamed`, `ActorBuilder.named` and the
   placement-name registry go.
-- `Viewport` joins the stock actors, with the map it holds, the Viewport it
-  mirrors, and its camera as properties. `load map … into ⟨viewport⟩` and
-  `unload ⟨viewport⟩` join the world's blocks; `load map` alone keeps meaning
-  the main map's own space, which is what a dialog wants. `clear world` and
-  `set actor to follow ⟨camera⟩` go; the second becomes a map's property.
+- `Viewport` joins the stock actors, with the map it holds as its property.
+  BUILT. `map ⟨…⟩`, `load map ⟨…⟩ into ⟨viewport⟩` and `unload ⟨viewport⟩`
+  join the world's blocks; `load map` alone keeps meaning the main map's own
+  space, which is what a dialog wants. A map's `camera.follows` is read when
+  it is loaded into a Viewport. Mirroring, `clear world`'s retirement and the
+  world's follow block are not yet.
 - `.map` gains layers, each with a background and a foreground, edited in the
   map editor. `define layer` in a world stops being how a layer is made.
 - VIEWPORT.md's selection model for viewports is superseded by containment
@@ -582,11 +595,9 @@ What map-first does better:
    of `create actor in map`: the map beside the world's blocks, the world
    editor opening on it with the World view one switch away, the world's
    name and properties on empty selection.
-3. **The Viewport.** The stock kind, the two blocks, spaces in the engine
-   (pairwise rules partitioned, pointer mapping, bounds per space, undoable
-   loads), one Phaser camera per Viewport in the driver, and the dimmed
-   preview of a held map in the editor. Mirroring last, since nothing in a
-   first game needs it.
+3. **The Viewport.** BUILT (specs/VIEWPORT_PLAN.md), less mirroring: the
+   stock kind, the three blocks, spaces in the engine, the masked container
+   in the driver, and the dimmed preview of a held map in the editor.
 4. **Layers in the editor.** The layer strip, backgrounds and foregrounds per
    layer in the inspector, and a placement's layer set where it is placed.
 5. **Retirements.** The Pause Menu actor, `create actor in map`, the global

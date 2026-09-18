@@ -1,9 +1,11 @@
 # Plan: the Viewport (MAP_FIRST.md, step 3)
 
-STATUS: IN PROGRESS. The third build step of specs/MAP_FIRST.md, after
-specs/MAP_SCRIPTS_PLAN.md and specs/MAIN_MAP_PLAN.md: a stock actor placed on
-the main map that holds a map in a coordinate space of its own, with a
-camera between that space and the screen. The working record, as before.
+STATUS: BUILT, pending a look in the browser, less mirroring and the
+editor's way to set a map's `camera.follows`. The third build step of
+specs/MAP_FIRST.md, after specs/MAP_SCRIPTS_PLAN.md and
+specs/MAIN_MAP_PLAN.md: a stock actor placed on the main map that holds a
+map in a coordinate space of its own, with a camera between that space and
+the screen. The working record, as before.
 
 ## What is being built
 
@@ -101,6 +103,12 @@ camera between that space and the screen. The working record, as before.
 - `08c543dd183` — blocks: `map ⟨…⟩`, `load map ⟨…⟩ into ⟨…⟩`, `unload ⟨…⟩`;
   every project map registered on the world; a Viewport shows the map its
   property names.
+- `48176fc3fed` — driver: a masked container pair per space inside the
+  Viewport's group, the inner shifted by the space's camera; a fake-scene
+  test.
+- `ed8e7e272b7` — the stock Viewport, its icon and catalogue unlock; the
+  inspector's dropdown of the project's maps for its `map`; the held map
+  drawn dimmed inside its box.
 
 ## Learned while building
 
@@ -126,3 +134,39 @@ camera between that space and the screen. The working record, as before.
   placement's `positional` overrides rather than through a `set` row in
   the actor file, which is also how the stock Viewport will get its size
   from the inspector.
+- **The mask is drawn last, off the outer container's world transform.**
+  A geometry mask's rectangle is in scene coordinates, and the Viewport's
+  corner on screen is only known once every group has been positioned for
+  the frame; reading it back from the container is what keeps a Viewport
+  carried by a parent, or on a scrolled layer, clipped where it is drawn.
+- **A Viewport's own image is under its space.** The outer container is
+  added to the Viewport's group after the Viewport's image, so the actor's
+  drawing is the window's backdrop: the stock Viewport paints a dark fill
+  and an edge, and the map draws over it.
+- **A foundation trait is not a dependency.** The stock-actor test counts
+  every `use trait` row as a rule the import must bring; the Viewport's
+  trait is the engine's, in play everywhere, and joined Space and
+  Appearance in the set the test leaves out.
+
+## Not built, and known
+
+- Mirroring: a Viewport showing another Viewport's contents through its
+  own camera.
+- Zoom, which waits on the engine's cameras having any.
+- The editor's way to set a map's `camera.follows`: the key is read when
+  a map is loaded into a Viewport and honoured, but a level's properties
+  window with nothing selected does not yet offer it.
+- A Viewport's own layers and backgrounds (step 4); until then the main
+  map's backdrop shows through a Viewport, over the Viewport's own face.
+- `clear world`'s retirement and the world's `set actor to follow` block,
+  which MAP_FIRST.md lists among what this step retires.
+
+## What to look at in the browser
+
+Place a Viewport on a world's main map, set its map to a level, and run:
+the level should draw inside the box with the rest of the screen still,
+clicks inside it should reach the level's actors and not the main map's,
+the space's camera should follow what the level's `camera.follows` names
+and stop at the level's edges, and `unload ⟨the Game⟩` should empty the
+box. In the editor, the held level should show dimmed inside the box and
+move with it.
