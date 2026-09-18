@@ -245,7 +245,7 @@ describe('the layer plan a world declares', () => {
 
   it('adds the default once, however many placements are loose', () => {
     expect(
-      ids(world('world_add_actor', 'world_load_map', 'world_create_in_map')),
+      ids(world('world_add_actor', 'world_load_map', 'world_add_actor')),
     ).toEqual([DEFAULT_LAYER_ID]);
   });
 

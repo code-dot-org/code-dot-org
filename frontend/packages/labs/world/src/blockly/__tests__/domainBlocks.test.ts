@@ -3127,7 +3127,7 @@ describe('builder-context warnings', () => {
     // on them is `worldContext` alone — the ordinary question of whether
     // `world` is bound — where `builderWorld` used to subsume it, so neither
     // block carries two warnings that say one thing.
-    for (const type of ['world_load_map', 'world_create_in_map']) {
+    for (const type of ['world_load_map']) {
       expect(extensionsOf(type), type).not.toContain(BUILDER_WORLD_EXTENSION);
       expect(extensionsOf(type), type).toContain(WORLD_CONTEXT_EXTENSION);
     }

@@ -8,8 +8,8 @@
 // the editor pushes them here, the same arrangement the project dropdowns use
 // (`moduleOptions`).
 //
-// Missing is a fine answer: the placement grid draws a plain marker for an
-// actor it has no picture of, which still says the cell is taken.
+// Missing is a fine answer: a dropdown row with no picture still says which
+// actor it is.
 
 /** Data URLs by actor type, as the sandbox rendered them. */
 let thumbnails: Record<string, string> = {};
@@ -79,23 +79,4 @@ export function setActorIcons(next: Record<string, string>): void {
 /** The icon an actor elected, or undefined if it elected none. */
 export function actorIcon(key: string): string | undefined {
   return icons[key];
-}
-
-/**
- * Pictures of particular PLACEMENTS, by `mapPlacements.placementKey`.
- *
- * A kind's picture is not a placement's: three Labels arranged on one map say
- * three different things, and drawing them all from the kind is three identical
- * smudges (specs/UI_ACTORS.md). Replaced rather than merged, because a
- * placement edited has a new key and the old one is nobody's.
- */
-let placements: Record<string, string> = {};
-
-export function setPlacementThumbnails(next: Record<string, string>): void {
-  placements = next;
-}
-
-/** The picture for one placement, or undefined — the kind's is the fallback. */
-export function placementThumbnail(key: string): string | undefined {
-  return placements[key];
 }

@@ -6,8 +6,8 @@
 // updates, and asking the sandbox what each actor template looks like and what
 // its editable properties are.
 //
-// The canvas and the inspector live in `MapStage`, which the `create actor in
-// map` popup also uses (MAPS.md §4). What this adds is the palette and the file.
+// The canvas and the inspector live in `MapStage`. What this adds is the
+// palette and the file.
 
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 

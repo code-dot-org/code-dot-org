@@ -5,10 +5,10 @@
 // write this shape; the engine reads the same one (`WorldBuilder.loadMap`), and
 // a `.map` file is it, serialized.
 //
-// Split out of `MapEditor` when the canvas grew a second caller: the `.map` file
-// editor holds a document, and the `create actor in map` popup holds one
-// synthesized from a block's own placements (MAPS.md §2). Both need these types
-// and these accessors; neither should own them.
+// Split out of `MapEditor` when the canvas grew a second caller, a block's
+// popup that is gone now; what holds a document today is a `.map` file's
+// editor and a world's, over its main map (specs/MAIN_MAP_PLAN.md). Both need
+// these types and these accessors; neither should own them.
 
 import type {BlocklySerialization} from '@code-dot-org/blockly';
 

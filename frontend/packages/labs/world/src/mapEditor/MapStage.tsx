@@ -3,10 +3,9 @@
 // Everything about arranging actors in a world: the camera, the drawing, the
 // gestures, and the panel that edits the selected placement's properties.
 // Everything EXCEPT which actors may be placed and where the document comes
-// from, because those are what its two callers differ on — the `.map` file
-// editor holds a file and offers a palette of every actor template; the
-// `create actor in map` popup holds a block's placements and offers exactly one
-// (MAPS.md §4).
+// from, because those are the caller's: `MapEditor` holds a file — a `.map`,
+// or a world with its main map — and offers a palette of every actor
+// template.
 //
 // So this takes the placements it may edit, the placements it may only draw,
 // and the type a click places. It knows nothing about files, blocks, or where

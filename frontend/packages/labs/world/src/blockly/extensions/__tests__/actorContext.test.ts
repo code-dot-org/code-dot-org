@@ -158,7 +158,7 @@ describe('inBuilderContext, for the blocks that place actors', () => {
     // binder decides: inside the handler `world` is the live one.
     expect(
       inBuilderContext(
-        chain('world_create_in_map', 'world_on_startsFalling', 'world_world'),
+        chain('world_load_map', 'world_on_startsFalling', 'world_world'),
         WORLD_ROOTS,
       ),
     ).toBe(false);

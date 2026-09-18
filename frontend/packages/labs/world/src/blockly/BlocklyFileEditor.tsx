@@ -55,11 +55,7 @@ import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {refreshActorPictures} from './actorAbout';
 import {projectActorIcons} from './actorIconMeta';
-import {
-  addActorThumbnails,
-  setActorIcons,
-  setPlacementThumbnails,
-} from './actorThumbnails';
+import {addActorThumbnails, setActorIcons} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
 import {documentExtras, withDocumentExtras} from './documentExtras';
@@ -87,7 +83,6 @@ import {
   setModuleOpeningOffered,
 } from './openModule';
 import {PasteAcrossTabsPlugin} from './pasteShortcut';
-import {projectPlacements} from './placementRequests';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {setProjectImages} from './projectImages';
 import {
@@ -509,8 +504,8 @@ export const BlocklyFileEditor = ({
    * (`blockly/actorThumbnails`), the same way the project dropdowns are fed.
    *
    * Once per world file, after the first compile: the manifest build is cached,
-   * and a `create actor in map` grid with plain markers instead of actors is
-   * usable but not much fun.
+   * and an actor dropdown with names instead of pictures is usable but not
+   * much fun.
    */
   // A fresh closure on every render, held in a ref so this effect does not
   // re-run for every one — the same guard MapEditor's fetch already uses.
@@ -530,14 +525,10 @@ export const BlocklyFileEditor = ({
       .current(
         projectActorOptions(files).map(([, path]) => path),
         worldPath,
-        projectPlacements(files),
       )
       .then(info => {
         if (alive) {
           addActorThumbnails(info.thumbnails);
-          // …and the pictures of particular placements, where a kind's own is
-          // not what a map should draw (specs/UI_ACTORS.md).
-          setPlacementThumbnails(info.placements);
           // The pictures have only just arrived, and the dropdowns that show
           // them were drawn before they did (moduleOptions.redrawLiveDropdowns).
           if (workspaceRef.current) {

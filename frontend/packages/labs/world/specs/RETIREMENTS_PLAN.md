@@ -12,13 +12,13 @@ step 3 left it without, and says why the fifth stays.
 
 ## What is being done
 
-- **`create actor in map` folds into the main map.** The block stored one
-  kind's placements in the world's file because an arrangement only one
-  world reads belongs there (MAPS.md §1). The main map is that decision for
-  the whole arrangement. A world opened in the editor has each such block's
-  placements moved into its `map` — same kinds, same instance ids, the layer
-  the block sat in — and the block removed. The block stays DEFINED, so a
-  file nobody has opened still loads and runs; it is no longer offered.
+- **`create actor in map` is deleted.** The block stored one kind's
+  placements in the world's file because an arrangement only one world reads
+  belongs there (MAPS.md §1). The main map is that decision for the whole
+  arrangement, so the block, its grid field, its popup and the pictures
+  asked for on its behalf all go. NO MIGRATION: nothing has shipped, so no
+  file exists that holds one, and code that reads a shape nobody wrote is
+  code to delete later.
 - **The lesson built on it moves with it.** `place/map`, "A room drawn, not
   typed", teaches that a level is data by handing over a block that holds
   three tiles. It hands over a main map that holds three tiles instead, and
@@ -28,12 +28,11 @@ step 3 left it without, and says why the fifth stays.
   editor no way to set it. A `.map` gains an inspector with nothing
   selected, as a world has: what the camera follows, from the map's own
   placements.
-- **Breakout's level moves into a Viewport, and `clear world` goes from the
-  palette.** Breakout is the one fixture that clears the world, to start a
-  level over under a pause menu. With the level in a Viewport, starting over
-  is `load map ⟨level⟩ into ⟨…⟩` and the menu is untouched. It is also the
-  first real game run inside a space, which is worth having under test. The
-  block stays defined, for the same reason the other does.
+- **Breakout's level moves into a Viewport, and `clear world` is deleted.**
+  Breakout is the one fixture that clears the world, to start a level over
+  under a pause menu. With the level in a Viewport, starting over is
+  `load map ⟨level⟩ into ⟨…⟩` and the menu is untouched. It is also the first
+  real game run inside a space, which is worth having under test.
 - **The starter project's level is its main map.** A new project opens on
   the map editor; it should open on its level, not on an empty canvas with a
   `load map` row behind it.
@@ -53,8 +52,9 @@ step 3 left it without, and says why the fifth stays.
 
 ## Order of work
 
-1. `create actor in map`: the migration as a pure function, applied when a
-   world is opened; off the palette; the lesson and its check moved.
+1. `create actor in map`: the block deleted with what only it used; the
+   lessons that placed tiles with it placing into their main maps; the
+   lesson built on it, and its check, moved.
 2. A map's inspector with nothing selected: what the camera follows.
 3. Breakout in a Viewport; `clear world` off the palette.
 4. The starter project's level in its main map.

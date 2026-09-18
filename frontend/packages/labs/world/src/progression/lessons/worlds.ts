@@ -232,6 +232,60 @@ export interface LessonWorld {
   actors: Record<string, string>;
 }
 
+/** A placement as a lesson writes one: an id and what it overrides. */
+export interface LessonPlacement {
+  id: string;
+  properties?: Record<string, Record<string, unknown>>;
+}
+
+const IN_MAP = 'inMainMap';
+
+/**
+ * Many of one kind, arranged in the world's MAIN MAP — a row of a lesson's
+ * world that is not a block. A world's arrangement is its map
+ * (specs/MAP_FIRST.md), so what a lesson places in bulk goes there, and
+ * `worldFile` takes these out of the rows before it chains the blocks.
+ */
+export const placeInMap = (kind: string, placements: LessonPlacement[]) => ({
+  [IN_MAP]: placements.map(placement => ({type: kind, ...placement})),
+});
+
+type MapRow = {[IN_MAP]: Array<{type: string} & LessonPlacement>};
+const isMapRow = (row: object): row is MapRow => IN_MAP in row;
+
+/** The rows' placements as one main map, ids kept unique within it. */
+const mainMapOf = (
+  rows: object[],
+  tiles: [x: number, y: number] | undefined,
+): object | undefined => {
+  const taken = new Set<string>();
+  const actors = rows.filter(isMapRow).flatMap(row =>
+    row[IN_MAP].map(placement => {
+      let id = placement.id;
+      for (let n = 2; taken.has(id); n++) {
+        id = `${placement.id}-${n}`;
+      }
+      taken.add(id);
+      return {...placement, id};
+    }),
+  );
+  if (actors.length === 0) {
+    return undefined;
+  }
+  return {
+    type: 'map',
+    // Sized as the world says it is, so the map editor opens on the whole
+    // level rather than on its first screen.
+    ...(tiles
+      ? {
+          size: {width: tiles[0], height: tiles[1]},
+          tile: {width: 32, height: 32},
+        }
+      : {}),
+    actors,
+  };
+};
+
 export const worldFile = ({
   name,
   tiles,
@@ -248,7 +302,7 @@ export const worldFile = ({
           },
         ]
       : []),
-    ...rows,
+    ...rows.filter(row => !isMapRow(row)),
   ];
   // A world that puts nothing in itself is a real thing to start a lesson
   // from — everything it holds arrives while it runs — and `chain` of nothing
@@ -272,7 +326,14 @@ export const worldFile = ({
     return at;
   });
   return {
-    world: JSON.stringify({blocks: {blocks: [world, ...beside]}}, null, 2),
+    world: JSON.stringify(
+      {
+        blocks: {blocks: [world, ...beside]},
+        ...(mainMapOf(rows, tiles) ? {map: mainMapOf(rows, tiles)} : {}),
+      },
+      null,
+      2,
+    ),
     actors: Object.fromEntries(
       (actors ?? []).map(spec => [spec.id, actorFileOf(spec)]),
     ),

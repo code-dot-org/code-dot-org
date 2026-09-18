@@ -46,6 +46,7 @@ import {
   declareProperty,
   actorPath,
   placeAt,
+  placeInMap,
   worldFile,
 } from './worlds';
 
@@ -1171,22 +1172,15 @@ moment: **⟨event actor⟩ is a ⟨Coin⟩**.
 
 // ── place/map ────────────────────────────────────────────────────────────────
 
-/** A placement, as the grid field stores one: an id and where it sits. */
+/** A placement, as the main map stores one: an id and where it sits. */
 const placed = (id: string, x: number, y: number) => ({
   id,
   properties: {positional: {position: {x, y}}},
 });
 
-/** `create ⟨kind⟩ in map ⟨grid⟩` — one block, however many tiles. */
-const createInMap = (actor: string, placements: object[]) => ({
-  type: 'world_create_in_map',
-  fields: {ACTOR: actor, PLACEMENTS: placements},
-});
-
 const map: WorldScenario = {
   name: 'A room drawn, not typed',
-  description:
-    'A floor made of twenty blocks, and the grid that replaces them.',
+  description: 'A floor made of twenty blocks, and the map that replaces them.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
@@ -1194,7 +1188,7 @@ const map: WorldScenario = {
         addActor(actorPath('hero'), [placeAt(48, 240)]),
         // Three tiles, painted by hand and stopping short: the floor the Hero
         // is standing on runs out, and the lesson is the rest of it.
-        createInMap(actorPath('ground'), [
+        placeInMap(actorPath('ground'), [
           placed('floor0', 16, 304),
           placed('floor1', 48, 304),
           placed('floor2', 80, 304),
@@ -1214,16 +1208,17 @@ Three floor tiles, and then nothing. You could add the rest with \`add actor\`,
 one block each, all the same — and the day you want the floor a tile lower you
 would edit twenty of them.
 
-**create ⟨Ground⟩ in map** is one block that places as many as you like. What
-it holds is not code: it is an ARRANGEMENT — a list of places, painted on a
-grid, kept with the block. The kind says what a Ground *is*, once; the
-arrangement says where they are.
+The world's **map** places as many as you like, and none of them is a block.
+What it holds is not code: it is an ARRANGEMENT — a list of what is where,
+painted on a grid, kept with the world. The kind says what a Ground *is*,
+once; the arrangement says where they are.
 
 ### What you do
 
-1. Click the grid on the **create ⟨Ground⟩ in map** block. The map editor opens.
-2. Paint a floor along the bottom of the room, and walls up both sides.
-3. Run it. Every tile you painted is a Ground, and there is still one block.
+1. Open the world. It opens on its map: the three tiles are there already.
+2. Pick **Ground** from the strip along the top, and paint a floor along the
+   bottom of the room and walls up both sides.
+3. Run it. Every tile you painted is a Ground, and you wrote no block.
 4. Paint some more, and run it again. You never opened \`ground.actor\` —
    what a Ground is and where the Grounds are are two different questions.
 `.trim(),
@@ -1249,7 +1244,7 @@ const camera: WorldScenario = {
       // one-screen world is a camera that cannot move.
       tiles: [30, 10],
       rows: [
-        createInMap(actorPath('ground'), floorAcross(30)),
+        placeInMap(actorPath('ground'), floorAcross(30)),
         addActor(actorPath('hero'), [placeAt(48, 272), setVelocity(6, 0)]),
       ],
       actors: [
@@ -1324,7 +1319,7 @@ const cameraFeel: WorldScenario = {
       name: 'My World',
       tiles: [30, 10],
       rows: [
-        createInMap(actorPath('ground'), floorAcross(30)),
+        placeInMap(actorPath('ground'), floorAcross(30)),
         addActor(actorPath('hero'), [placeAt(160, 272)]),
         chaseCamera('hero'),
         {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
@@ -1395,7 +1390,7 @@ const layers: WorldScenario = {
       name: 'My World',
       tiles: [30, 10],
       rows: [
-        createInMap(actorPath('ground'), floorAcross(30)),
+        placeInMap(actorPath('ground'), floorAcross(30)),
         // Three hills, far apart, so the eye can see whether they keep up —
         // and standing ON the floor rather than above it: the tiles are centered
         // at 304 and are 32 tall, so 272 puts a hill's foot on the grass.
@@ -1478,7 +1473,7 @@ const jump: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), floorAcross(10)),
+        placeInMap(actorPath('ground'), floorAcross(10)),
         addActor(actorPath('hero'), [placeAt(160, 272)]),
       ],
       actors: [
@@ -1556,7 +1551,7 @@ const jetpack: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), [
+        placeInMap(actorPath('ground'), [
           ...floorAcross(10),
           // Six tiles up, which no jump in the lab reaches: the default
           // clears 139 pixels and this is 192 above the floor.
@@ -1646,11 +1641,11 @@ const ladders: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), floorAcross(10)),
+        placeInMap(actorPath('ground'), floorAcross(10)),
         // The ledge is a ONE-WAY platform — `Acts as Ground` and not Solid,
         // which the lesson before this one built. It matters here for the
         // second half: you cannot climb down through something solid.
-        createInMap(
+        placeInMap(
           actorPath('ledge'),
           [4, 5, 6, 7, 8, 9].map(column =>
             placed(`ledge${column}`, column * 32 + 16, 144),
@@ -1658,7 +1653,7 @@ const ladders: WorldScenario = {
         ),
         // …and the ladder, standing on the floor and reaching a rung above
         // the ledge, so that letting go at the top drops you on to it.
-        createInMap(
+        placeInMap(
           actorPath('ladder'),
           [272, 240, 208, 176, 144, 112].map((y, index) =>
             placed(`rung${index}`, 144, y),
@@ -1769,7 +1764,7 @@ const surfaces: WorldScenario = {
       rows: [
         // The run the Hero walks: ordinary floor, then one stretch of each,
         // in the order the lesson asks about them.
-        createInMap(actorPath('ground'), [
+        placeInMap(actorPath('ground'), [
           ...[0, 1].map(column =>
             placed(`floor${column}`, column * 32 + 16, 304),
           ),
@@ -1777,19 +1772,19 @@ const surfaces: WorldScenario = {
             placed(`floor${column}`, column * 32 + 16, 304),
           ),
         ]),
-        createInMap(
+        placeInMap(
           actorPath('belt'),
           [2, 3, 4].map(column =>
             placed(`belt${column}`, column * 32 + 16, 304),
           ),
         ),
-        createInMap(
+        placeInMap(
           actorPath('sludge'),
           [5, 6].map(column =>
             placed(`sludge${column}`, column * 32 + 16, 304),
           ),
         ),
-        createInMap(
+        placeInMap(
           actorPath('ice'),
           [7, 8, 9, 10].map(column =>
             placed(`ice${column}`, column * 32 + 16, 304),
@@ -1900,7 +1895,7 @@ const pads: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), [
+        placeInMap(actorPath('ground'), [
           ...floorAcross(10),
           // The wall, floor to ceiling. There is no way round it, which is
           // what makes the pads the only answer rather than the quick one.
@@ -2109,8 +2104,8 @@ const walls: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), floorAcross(10)),
-        createInMap(
+        placeInMap(actorPath('ground'), floorAcross(10)),
+        placeInMap(
           actorPath('wall'),
           [176, 208, 240, 272].map(y => placed(`bar${y}`, 208, y)),
         ),
@@ -2213,13 +2208,13 @@ const digging: WorldScenario = {
         // The floor the Hero stands on, which is the one it has to get
         // through — and a second one below to land on, so that falling is
         // arriving somewhere rather than leaving the world.
-        createInMap(
+        placeInMap(
           actorPath('soil'),
           [2, 3, 4, 5, 6, 7].map(column =>
             placed(`soil${column}`, column * 32 + 16, 272),
           ),
         ),
-        createInMap(actorPath('ground'), floorAcross(10)),
+        placeInMap(actorPath('ground'), floorAcross(10)),
         addActor(actorPath('hero'), [placeAt(112, 240)]),
       ],
       actors: [
@@ -2356,7 +2351,7 @@ const enemies: WorldScenario = {
       // clock and turning on a wall visibly differ.
       tiles: [14, 10],
       rows: [
-        createInMap(actorPath('ground'), [
+        placeInMap(actorPath('ground'), [
           ...floorAcross(14),
           // Walls at both ends, reaching DOWN TO THE FLOOR — a wall that
           // stops above the thing meant to hit it is a wall it rolls under,
@@ -2456,7 +2451,7 @@ const hunter: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), [
+        placeInMap(actorPath('ground'), [
           ...floorAcross(10),
           // The upper floor, with the hole at the FAR END from where the
           // Robot and the Hero stand. That is the whole geometry of the
@@ -2473,7 +2468,7 @@ const hunter: WorldScenario = {
             placed(`east${y}`, 304, y),
           ]),
         ]),
-        createInMap(
+        placeInMap(
           actorPath('ladder'),
           [144, 176, 208, 240, 272].map((y, index) =>
             placed(`rung${index}`, 48, y),
@@ -2639,7 +2634,7 @@ const flier: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), [
+        placeInMap(actorPath('ground'), [
           ...floorAcross(10),
           // A ledge to stand on, high and to one side, so that the thing
           // below has somewhere to climb TO and something to be blocked by.
@@ -2760,7 +2755,7 @@ const pickups: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), floorAcross(10)),
+        placeInMap(actorPath('ground'), floorAcross(10)),
         addActor(actorPath('coin'), [placeAt(100, 272)]),
         addActor(actorPath('coin'), [placeAt(180, 272)]),
         addActor(actorPath('coin'), [placeAt(260, 272)]),
@@ -2823,7 +2818,7 @@ const hazards: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), floorAcross(10)),
+        placeInMap(actorPath('ground'), floorAcross(10)),
         addActor(actorPath('spike'), [placeAt(200, 272)]),
         addActor(actorPath('hero'), [placeAt(60, 272)]),
       ],
@@ -2894,7 +2889,7 @@ const level: WorldScenario = {
       tiles: [20, 10],
       rows: [
         declareProperty('boolean', 'won', 'false'),
-        createInMap(actorPath('ground'), floorAcross(20)),
+        placeInMap(actorPath('ground'), floorAcross(20)),
         addActor(actorPath('coin'), [placeAt(150, 272)]),
         addActor(actorPath('coin'), [placeAt(250, 272)]),
         addActor(actorPath('spike'), [placeAt(360, 272)]),
@@ -3025,7 +3020,7 @@ const bounce: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('wall'), wallsRound()),
+        placeInMap(actorPath('wall'), wallsRound()),
         addActor(actorPath('ball'), [placeAt(160, 160), setVelocity(4, 3)]),
       ],
       actors: [
@@ -4196,7 +4191,7 @@ const grid: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('wall'), wallsRound()),
+        placeInMap(actorPath('wall'), wallsRound()),
         addActor(actorPath('player'), [placeAt(144, 144)]),
       ],
       actors: [
@@ -4262,7 +4257,7 @@ const push: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('wall'), wallsRound()),
+        placeInMap(actorPath('wall'), wallsRound()),
         addActor(actorPath('crate'), [placeAt(144, 144)]),
         addActor(actorPath('player'), [placeAt(240, 144)]),
       ],
@@ -4759,7 +4754,7 @@ const bigWorld: WorldScenario = {
           type: 'world_set_background_color',
           inputs: {COLOR: swatch('#101822')},
         },
-        createInMap(actorPath('ground'), floorAcross(30)),
+        placeInMap(actorPath('ground'), floorAcross(30)),
         addActor(actorPath('walker'), [placeAt(60, 272)]),
       ],
       actors: [
@@ -4815,7 +4810,7 @@ const readRule: WorldScenario = {
       name: 'My World',
       rows: [
         declareProperty('number', 'how hard it pulls', '0'),
-        createInMap(actorPath('ground'), floorAcross(10)),
+        placeInMap(actorPath('ground'), floorAcross(10)),
         addActor(actorPath('hero'), [placeAt(160, 40)]),
       ],
       actors: [
@@ -5018,7 +5013,7 @@ const movingGround: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('ground'), floorAcross(10)),
+        placeInMap(actorPath('ground'), floorAcross(10)),
         addActor(actorPath('platform'), [placeAt(120, 200)]),
         addActor(actorPath('hero'), [placeAt(120, 168)]),
       ],
@@ -5100,7 +5095,7 @@ const goal: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('wall'), wallsRound()),
+        placeInMap(actorPath('wall'), wallsRound()),
         // Two tiles apart, not one: boxes are a tile square, so marks in
         // touching tiles are both touched by one crate — and a count that
         // reached two from one crate would win the puzzle on its own.
@@ -5712,7 +5707,7 @@ const neighbors: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('dot'), dotGrid()),
+        placeInMap(actorPath('dot'), dotGrid()),
         addActor(actorPath('walker'), [placeAt(10, 160), setVelocity(1, 0)]),
       ],
       actors: [
@@ -5786,7 +5781,7 @@ const turns: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('wall'), wallsRound()),
+        placeInMap(actorPath('wall'), wallsRound()),
         addActor(actorPath('enemy'), [placeAt(48, 240)]),
         addActor(actorPath('player'), [placeAt(80, 144)]),
       ],
@@ -5877,7 +5872,7 @@ const undo: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        createInMap(actorPath('wall'), wallsRound()),
+        placeInMap(actorPath('wall'), wallsRound()),
         // One row, and that is the whole puzzle: a crate is pushed and never
         // pulled, so a player on the left of it can only ever send it further
         // right. Past the Mark there is no way back except this lesson.

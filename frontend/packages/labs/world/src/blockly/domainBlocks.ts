@@ -140,7 +140,6 @@ import {
   FieldColorPicker,
   installColorPickerField,
 } from './fields/FieldColorPicker';
-import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {FieldMarkdown} from './fields/FieldMarkdown';
 import {
   FieldPropertyPreview,
@@ -166,7 +165,6 @@ import {lessonFlyoutButton} from './lessonFlyoutButton';
 import {localizeText} from './localizeBlocks';
 import {layerDeclarations, type MainMapLayer} from './mainMapLayers';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
-import {instanceId, type MapPlacement} from './mapPlacements';
 import {
   actorFieldOptions,
   actorParentOptions,
@@ -6240,66 +6238,6 @@ const worldGameIsPaused = defineBlock({
   },
 });
 
-const worldCreateInMap = defineBlock({
-  type: 'world_create_in_map',
-  message0: 'create %1 in map %2',
-  args0: [
-    {type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions},
-    // The arrangement is this field's VALUE, so Blockly saves it with the block
-    // and the `.world` file carries it (MAPS.md §2). Clicking it opens the grid.
-    fieldMapPlacementsArg('PLACEMENTS'),
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  // Was `builderWorld`, on the grounds that the live world had no `define` or
-  // `loadMap`. It has both now (`World.loadMap`), and this block generates the
-  // same two calls wherever it lands — so what is left to check is the ordinary
-  // question of whether `world` is bound to anything.
-  extensions: [
-    actorImportOptionsExtension,
-    worldContextExtension,
-    actorImportFieldExtension,
-    openSourceButtonExtension,
-  ],
-  style: 'behavior_blocks',
-  tooltip:
-    'Place several actors of one kind, arranged on the map. Their positions ' +
-    'and properties are part of this world.',
-  generator: {
-    javascript(block, generator) {
-      const actor = block.getFieldValue('ACTOR');
-      const placements =
-        (block.getFieldValue('PLACEMENTS') as MapPlacement[] | null) ?? [];
-      // Nothing arranged yet is nothing to place.
-      if (!actor || !placements.length) {
-        return '';
-      }
-      const template = importVar(actor);
-      const type = actor;
-      addImport(
-        generator,
-        `mod:${actor}`,
-        `import ${importVar(actor)} from ${str(actor)};`,
-      );
-      // Through `loadMap`, which already resolves each entry's overrides
-      // against the world's property registry and stamps the actor's type.
-      const actors = placements
-        .map(placement =>
-          JSON.stringify({
-            type,
-            id: instanceId(block.id, placement.id),
-            ...(placement.properties ? {properties: placement.properties} : {}),
-          }),
-        )
-        .join(', ');
-      return (
-        `world.define(${str(type)}, ${template});\n` +
-        `world.loadMap({actors: [${actors}]}, ${str(layerOf(block))});\n`
-      );
-    },
-  },
-});
-
 const worldLoadMap = defineBlock({
   type: 'world_load_map',
   message0: 'load map %1',
@@ -10067,7 +10005,6 @@ export const DOMAIN_BLOCKS = [
   worldPauseGame,
   worldResumeGame,
   worldGameIsPaused,
-  worldCreateInMap,
   worldLoadMap,
   worldMapRef,
   worldLoadMapInto,
@@ -10400,8 +10337,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // holding several broadcasts, so the two blocks together are the bulk
       // operation, and no third block has to exist to say it.
       'world_actor_kind',
-      // Many of one kind, arranged on a map that lives in this world (MAPS.md).
-      'world_create_in_map',
+      // `create ⟨kind⟩ in map` is NOT offered any more: many of one kind
+      // arranged in this world is what the world's main map is, and a world
+      // opened in the editor has its blocks folded into it
+      // (specs/RETIREMENTS_PLAN.md). The block stays defined, so a file
+      // nobody has opened still loads and runs.
       'world_add_world_effect',
       'world_remove_world_effect',
       // What is behind everything: an image, a color, and effects on that

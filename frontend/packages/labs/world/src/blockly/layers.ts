@@ -31,7 +31,6 @@ export const WITHIN_LAYER = 'world_within_layer';
 export const PLACING_BLOCKS: readonly string[] = [
   'world_add_actor',
   'world_load_map',
-  'world_create_in_map',
 ];
 
 /** What a LAYER dropdown stores for a layer defined in this workspace. */

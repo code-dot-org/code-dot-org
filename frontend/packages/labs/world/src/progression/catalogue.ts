@@ -1097,10 +1097,9 @@ export const TILES: readonly Tile[] = [
     requires: ['place/position'],
     unlocks: [
       {kind: 'editor', id: 'map'},
-      {kind: 'block', type: 'world_create_in_map'},
       // …and the same arrangement in a FILE, which is what a level shared
-      // between worlds is. The lesson keeps its own in the block, where the
-      // grid opens from the block that holds it.
+      // between worlds is. The lesson keeps its own in the world's main map,
+      // which is what a world opens on (specs/RETIREMENTS_PLAN.md).
       {kind: 'block', type: 'world_load_map'},
       // How big the level is, and how a world with no map says so. Both are
       // ideas about a world BIGGER than the view, which is `place/camera`.
@@ -1111,7 +1110,7 @@ export const TILES: readonly Tile[] = [
       kind: 'outcome',
       says: 'The room is painted: a dozen Grounds, in more than one row.',
       falsePass:
-        'Placing them with `add actor` instead, one block each — which is the thing the lesson replaces, and which the check refuses by counting only what the ARRANGEMENT placed.',
+        'Placing them with `add actor` instead, one block each — which is the thing the lesson replaces, and which the check refuses by counting only what the MAP placed.',
       run: {
         probes: {ground: {kind: 'positions', of: 'Ground'}},
         trace: [{seconds: 0.1}],
@@ -1119,13 +1118,7 @@ export const TILES: readonly Tile[] = [
       // What the ARRANGEMENT holds, rather than what the world ended up with:
       // twenty `add actor ⟨Ground⟩` rows reach the same world and are the thing
       // the lesson replaces.
-      inspect: files => {
-        const grid = blockIn(files, 'world_create_in_map');
-        const placements = (
-          grid?.fields as {PLACEMENTS?: unknown[]} | undefined
-        )?.PLACEMENTS;
-        return Array.isArray(placements) && placements.length >= 12;
-      },
+      inspect: files => mainMapPlacements(files) >= 12,
       passes: ({samples}) => {
         const tiles = lastList<{x: number; y: number}>(samples.ground);
         const rows = new Set(tiles.map(tile => tile.y));
@@ -3584,6 +3577,27 @@ function blocksIn(files: Record<string, string>, type: string): unknown[] {
     }
   }
   return found;
+}
+
+/**
+ * How many placements the project's worlds hold in their main maps — what an
+ * arrangement IS, as opposed to what a stack of `add actor` rows reaches.
+ */
+function mainMapPlacements(files: Record<string, string>): number {
+  let count = 0;
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.endsWith('.world')) {
+      continue;
+    }
+    try {
+      const actors = (JSON.parse(contents) as {map?: {actors?: unknown}}).map
+        ?.actors;
+      count += Array.isArray(actors) ? actors.length : 0;
+    } catch {
+      // A file mid-edit is not a failed lesson (see `nestedIn`).
+    }
+  }
+  return count;
 }
 
 function blockIn(

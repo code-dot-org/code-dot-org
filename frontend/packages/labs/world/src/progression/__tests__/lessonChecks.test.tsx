@@ -1825,17 +1825,18 @@ describe('the map lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  /** The room, painted — which is an edit to the block's own grid field. */
+  /** The room, painted — which is an edit to the world's main map. */
   const painted = (rows: number) =>
     editing(lesson.source, 'main.world', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      const grid = rowsOf(workspace).find(
-        row => row.type === 'world_create_in_map',
-      )!;
+      const workspace = JSON.parse(contents) as {
+        map: {actors: Array<{type: string; id: string}>};
+      };
+      const kind = workspace.map.actors[0].type;
       const tiles = [];
       for (let row = 0; row < rows; row++) {
         for (let column = 0; column < 10; column++) {
           tiles.push({
+            type: kind,
             id: `floor${row}_${column}`,
             properties: {
               positional: {
@@ -1845,7 +1846,7 @@ describe('the map lesson’s check', () => {
           });
         }
       }
-      grid.fields!.PLACEMENTS = tiles;
+      workspace.map.actors = tiles;
       return JSON.stringify(workspace);
     });
 
