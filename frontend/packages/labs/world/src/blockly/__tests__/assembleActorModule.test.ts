@@ -72,6 +72,30 @@ describe('assembleWorldModule', () => {
     );
   });
 
+  it('loads the main map after the world block and before its hats', () => {
+    // Rules are in force once the block has run; a world hat registered
+    // after the load still hears what the load raised, since events are
+    // dispatched after the tick (specs/MAIN_MAP_PLAN.md).
+    const code = assembleWorldModule(
+      [
+        {
+          type: 'world_on_Input_IsPressedEvent',
+          code: 'world.on(E, (world, eventValue) => {\n});\n',
+        },
+        {type: 'world_world', code: 'const world = mk();\n'},
+      ],
+      new Set(['world_on_Input_IsPressedEvent']),
+      'world.loadMap(mainMap);\n',
+    );
+
+    expect(code.indexOf('const world = mk();')).toBeLessThan(
+      code.indexOf('world.loadMap(mainMap);'),
+    );
+    expect(code.indexOf('world.loadMap(mainMap);')).toBeLessThan(
+      code.indexOf('world.on(E,'),
+    );
+  });
+
   it('keeps an ACTOR event\u2019s handler before it', () => {
     // The opposite constraint, and the reason this is a split rather than a
     // move: a template copies its handlers into each instance as it is made, so

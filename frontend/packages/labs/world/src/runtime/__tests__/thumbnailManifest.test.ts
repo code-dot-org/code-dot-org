@@ -73,6 +73,27 @@ describe('manifestFiles', () => {
     expect(after).toEqual(before);
   });
 
+  it('takes the placements out of a world’s main map, and nothing else', () => {
+    // The world's blocks are what the manifest is for; its main map's
+    // placements are what a map edit changes (specs/MAIN_MAP_PLAN.md).
+    const world = {
+      blocks: {blocks: [{type: 'world_world', fields: {NAME: 'W'}}]},
+      map: {
+        size: {width: 10, height: 10},
+        actors: [{type: 'actors/coin', id: 'c'}],
+      },
+    };
+    const stubbed = manifestFiles({
+      'worlds/main.world': JSON.stringify(world),
+      'worlds/bare.world': '{"blocks":{}}',
+    });
+    expect(JSON.parse(stubbed['worlds/main.world'])).toEqual({
+      ...world,
+      map: {size: {width: 10, height: 10}, actors: []},
+    });
+    expect(stubbed['worlds/bare.world']).toBe('{"blocks":{}}');
+  });
+
   it('keeps a map’s own workspace, whose events a world imports by name', () => {
     // A stub without them would fail the bundle on a missing export
     // (specs/MAP_FIRST.md); a placement's workspace is not kept, since

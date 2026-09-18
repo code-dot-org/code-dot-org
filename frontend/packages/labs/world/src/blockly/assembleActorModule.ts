@@ -80,6 +80,13 @@ export function assembleWorldModule(
    * an actor's, which is where every hat went before the split.
    */
   worldEventTypes: ReadonlySet<string> = new Set(),
+  /**
+   * The world's MAIN MAP, compiled — see {@link assembleMainMap} — or nothing
+   * for a world that holds none. Emitted after the world block's own code
+   * and before the world's hats: the rules are in force by then, any `load
+   * map` rows have placed theirs, and the main map draws over them.
+   */
+  mainMap = '',
 ): string {
   const world = blocks.find(block => block.type === 'world_world');
   // Tween definitions, hoisted for exactly the reason local actors are: they
@@ -112,7 +119,9 @@ export function assembleWorldModule(
     .concat(onActors.map(block => block.code))
     .join('');
   const worldCode =
-    (world ? world.code : '') + onWorld.map(block => block.code).join('');
+    (world ? world.code : '') +
+    (world ? mainMap : '') +
+    onWorld.map(block => block.code).join('');
   const restCode = rest.map(block => block.code).join('');
   return `${actorsCode}${worldCode}${restCode}export default world;\n`;
 }
@@ -141,6 +150,47 @@ export function assembleMapModule(
   const events = mapLevel.filter(block => block.type === 'world_rule_event');
   const runs = mapLevel.filter(block => block.type !== 'world_rule_event');
   const eventsCode = events.map(block => block.code).join('');
+  return (
+    `const mapData = ${JSON.stringify(data)};\n` +
+    eventsCode +
+    scriptAssignment('mapData', runs, placements) +
+    'export default mapData;\n'
+  );
+}
+
+/**
+ * A world's MAIN MAP, compiled into the world's module (specs/MAIN_MAP_PLAN.md).
+ *
+ * The same arrangement-plus-script a `.map` is, without a module of its
+ * own: the data as a const, its script if any placement says anything, a
+ * `define` per kind it places so `loadMap` can make them, and the load. The
+ * world's own workspace is the map's own, so there is no map-level code
+ * here — a world's events are the world's.
+ */
+export function assembleMainMap(
+  data: object,
+  placements: ReadonlyArray<{id: string; blocks: GeneratedBlock[]}>,
+  /** `world.define(…)` lines, one per kind the map places. */
+  defines: string,
+): string {
+  return (
+    `const mainMap = ${JSON.stringify(data)};\n` +
+    scriptAssignment('mainMap', [], placements) +
+    defines +
+    'world.loadMap(mainMap);\n'
+  );
+}
+
+/**
+ * `<name>.script = (world, placed, map) => {…}`, or nothing when no
+ * placement and no map-level block runs anything. Each placement's code sits
+ * in a block that binds `actor` to the actor placed under its id.
+ */
+function scriptAssignment(
+  name: string,
+  runs: GeneratedBlock[],
+  placements: ReadonlyArray<{id: string; blocks: GeneratedBlock[]}>,
+): string {
   const body =
     runs.map(block => block.code).join('') +
     placements
@@ -152,13 +202,5 @@ export function assembleMapModule(
           '}\n',
       )
       .join('');
-  const script = body
-    ? `mapData.script = (world, placed, map) => {\n${body}};\n`
-    : '';
-  return (
-    `const mapData = ${JSON.stringify(data)};\n` +
-    eventsCode +
-    script +
-    'export default mapData;\n'
-  );
+  return body ? `${name}.script = (world, placed, map) => {\n${body}};\n` : '';
 }

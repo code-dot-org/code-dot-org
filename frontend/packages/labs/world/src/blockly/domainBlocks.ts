@@ -267,7 +267,7 @@ import {isRedeclaration} from './variableScope';
 import {definesRule, workspaceOfBlock} from './workspaceRoots';
 
 /** JS string literal for a field value. */
-const str = (value: unknown): string => JSON.stringify(String(value));
+export const str = (value: unknown): string => JSON.stringify(String(value));
 
 // The images a `set sprite` block may name: the project's own (populated live by
 // the extension), and `(import…)` to copy one in. There is no built-in list —
@@ -5879,7 +5879,7 @@ const worldIsA = defineBlock({
 // the Blockly block's own id, which is stable across edits.
 
 /** A JS import identifier for a project module path (`actors/coin` → `Coin`). */
-const importVar = (path: string): string =>
+export const importVar = (path: string): string =>
   // THE WHOLE PATH, not the file name. It was the last segment, and a project
   // holding `actors/healthBar` and `rules/healthBar` — which is exactly what
   // importing the stock Health Bar gives you — emitted two different imports

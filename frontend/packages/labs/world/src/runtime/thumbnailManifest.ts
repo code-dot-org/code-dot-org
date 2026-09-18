@@ -52,6 +52,23 @@ const stubMap = (contents: string): string => {
 };
 
 /**
+ * A world with its main map's placements taken out (specs/MAIN_MAP_PLAN.md),
+ * for the reason a `.map`'s are: a placement edit must not recompile the
+ * manifest. A world with no map, or one that will not parse, is left alone.
+ */
+const stubWorld = (contents: string): string => {
+  try {
+    const parsed = JSON.parse(contents) as {map?: {actors?: unknown}};
+    if (!parsed.map?.actors) {
+      return contents;
+    }
+    return JSON.stringify({...parsed, map: {...parsed.map, actors: []}});
+  } catch {
+    return contents;
+  }
+};
+
+/**
  * The project's files as the manifest compile should see them: every `.map`
  * replaced by an empty one.
  *
@@ -69,7 +86,11 @@ export function manifestFiles(
 ): Record<string, string> {
   const out: Record<string, string> = {};
   for (const [path, contents] of Object.entries(files)) {
-    out[path] = path.endsWith('.map') ? stubMap(contents) : contents;
+    out[path] = path.endsWith('.map')
+      ? stubMap(contents)
+      : path.endsWith('.world')
+        ? stubWorld(contents)
+        : contents;
   }
   return out;
 }

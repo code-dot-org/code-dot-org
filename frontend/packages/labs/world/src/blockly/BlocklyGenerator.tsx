@@ -17,11 +17,13 @@ import {
 
 import {
   assembleActorModule,
+  assembleMainMap,
   assembleMapModule,
   assembleWorldModule,
+  type GeneratedBlock,
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
-import {buildDomainPalette} from './domainBlocks';
+import {buildDomainPalette, importVar, str} from './domainBlocks';
 import {fileKindOf, moduleShape} from './fileKind';
 import {setCurrentPlacements} from './moduleOptions';
 import {
@@ -58,31 +60,48 @@ import {standInBlocks} from './standInBlocks';
 
 /** What a `.map` file holds that the generator reads (specs/MAP_FIRST.md). */
 interface MapSource {
-  actors?: Array<{id?: string; blocks?: object}>;
+  actors?: Array<{id?: string; type?: string; blocks?: object}>;
   blocks?: object;
 }
 
+/** A workspace generated: its top blocks' code, keyed by the entry's id. */
+type GeneratedWorkspaces = {
+  placements: Array<{id: string; blocks: GeneratedBlock[]}>;
+  mapLevel: GeneratedBlock[];
+  /** The imports and variables every workspace here needed, merged. */
+  definitions: Record<string, string>;
+};
+
+/** What the file is when its workspaces are taken out of it. */
+const withoutBlocks = <T extends {blocks?: object}>(
+  held: T,
+): Omit<T, 'blocks'> => {
+  const copy: Partial<T> = {...held};
+  delete copy.blocks;
+  return copy as Omit<T, 'blocks'>;
+};
+
 /**
- * Generate a `.map` file's module: the map's own workspace, then one per
- * placement that has one, into the same headless workspace in turn.
+ * Generate a map's workspaces — the map's own, then one per placement that
+ * has one — into the same headless workspace in turn.
  *
- * One `finish` for the whole file. `init` empties the generator's import
- * definitions, so they are gathered after each workspace and handed back
- * before the end; Blockly's own `variables` entry is keyed per workspace so
- * one loop's variable does not erase another's. `__ruleModule` is the map's
- * path, so its own `emit` names the local event const rather than importing
- * the module into itself; `__mapModule` tells `define event` to write that
- * const (specs/MAP_SCRIPTS_PLAN.md).
+ * `init` empties the generator's import definitions, so they are gathered
+ * after each workspace and handed back for the caller to merge before the
+ * one `finish`; Blockly's own `variables` entry is keyed per workspace so
+ * one loop's variable does not erase another's. `__ruleModule` is the
+ * owning module's path, so an `emit` of the map's own event names the local
+ * const rather than importing the module into itself; `__mapModule` tells
+ * `define event` to write that const (specs/MAP_SCRIPTS_PLAN.md). The
+ * dropdown of placements is set first, since Blockly rejects a stored value
+ * its options do not hold.
  */
-function generateMap(
+function generateWorkspaces(
   generator: JavascriptGenerator,
   workspace: Blockly.Workspace,
-  contents: string,
-  path: string,
+  source: MapSource,
+  modulePath: string,
   rootTypes: ReadonlySet<string>,
-): string {
-  const modulePath = path.replace(/\.map$/, '');
-  const source = (contents.trim() ? JSON.parse(contents) : {}) as MapSource;
+): GeneratedWorkspaces {
   const ids = (source.actors ?? []).flatMap(entry =>
     entry.id ? [entry.id] : [],
   );
@@ -123,25 +142,102 @@ function generateMap(
   );
   (generator as {__mapModule?: string}).__mapModule = undefined;
   (generator as {__ruleModule?: string}).__ruleModule = undefined;
-  // What the file is when its workspaces are taken out of it.
-  const withoutBlocks = <T extends {blocks?: object}>(
-    held: T,
-  ): Omit<T, 'blocks'> => {
-    const copy: Partial<T> = {...held};
-    delete copy.blocks;
-    return copy as Omit<T, 'blocks'>;
-  };
-  const data = withoutBlocks(source);
-  const actors = (source.actors ?? []).map(withoutBlocks);
-  generator.init(workspace);
+  return {placements, mapLevel, definitions};
+}
+
+/** Put the imports several workspaces needed back before `finish` reads them. */
+const mergeDefinitions = (
+  generator: JavascriptGenerator,
+  definitions: Record<string, string>,
+): void => {
   Object.assign(
     (generator as unknown as {definitions_: Record<string, string>})
       .definitions_,
     definitions,
   );
+};
+
+/**
+ * Generate a `.map` file's module: one `finish` for the whole file, over the
+ * workspaces it holds (specs/MAP_FIRST.md, "What it compiles to").
+ */
+function generateMap(
+  generator: JavascriptGenerator,
+  workspace: Blockly.Workspace,
+  contents: string,
+  path: string,
+  rootTypes: ReadonlySet<string>,
+): string {
+  const modulePath = path.replace(/\.map$/, '');
+  const source = (contents.trim() ? JSON.parse(contents) : {}) as MapSource;
+  const {placements, mapLevel, definitions} = generateWorkspaces(
+    generator,
+    workspace,
+    source,
+    modulePath,
+    rootTypes,
+  );
+  const data = withoutBlocks(source);
+  const actors = (source.actors ?? []).map(withoutBlocks);
+  generator.init(workspace);
+  mergeDefinitions(generator, definitions);
   return generator.finish(
     assembleMapModule({...data, actors}, mapLevel, placements),
   );
+}
+
+/**
+ * A world's MAIN MAP, compiled for the world's module
+ * (specs/MAIN_MAP_PLAN.md): the code `assembleWorldModule` emits after the
+ * world block, and the imports it needs, which the caller merges once the
+ * world's own workspace has been generated. Nothing for a world that holds
+ * no map, or an empty one.
+ */
+function generateMainMap(
+  generator: JavascriptGenerator,
+  workspace: Blockly.Workspace,
+  contents: string,
+  path: string,
+  rootTypes: ReadonlySet<string>,
+): {code: string; definitions: Record<string, string>} | undefined {
+  let source: MapSource | undefined;
+  try {
+    source = (JSON.parse(contents) as {map?: MapSource}).map;
+  } catch {
+    return undefined;
+  }
+  if (!source?.actors?.length) {
+    return undefined;
+  }
+  const modulePath = path.replace(/\.world$/, '');
+  const {placements, definitions} = generateWorkspaces(
+    generator,
+    workspace,
+    source,
+    modulePath,
+    rootTypes,
+  );
+  // The kinds the map places, each imported and defined so `loadMap` can
+  // make them — what the `load map` block does for a `.map` from the
+  // registry, done here from the map itself.
+  const kinds = [
+    ...new Set(source.actors.flatMap(a => (a.type ? [a.type] : []))),
+  ];
+  for (const kind of kinds) {
+    definitions[`mod:${kind}`] = `import ${importVar(kind)} from ${str(kind)};`;
+  }
+  const defines = kinds
+    .map(kind => `world.define(${str(kind)}, ${importVar(kind)});\n`)
+    .join('');
+  const actors = source.actors.map(withoutBlocks);
+  return {
+    code: assembleMainMap(
+      {...withoutBlocks(source), actors},
+      placements,
+      defines,
+    ),
+    definitions,
+  };
 }
 
 export interface BlocklyGeneratorHandle {
@@ -291,6 +387,19 @@ export const BlocklyGenerator = forwardRef<
             rootTypesRef.current,
           );
         }
+        // A world's main map, generated FIRST: its placements' workspaces go
+        // through the same headless workspace this file is about to be
+        // loaded into (specs/MAIN_MAP_PLAN.md).
+        const mainMap =
+          fileKindOf(path) === 'world'
+            ? generateMainMap(
+                generator,
+                workspace,
+                contents,
+                path!,
+                rootTypesRef.current,
+              )
+            : undefined;
         workspace.clear();
         const state = contents.trim() ? JSON.parse(contents) : {};
         Blockly.serialization.workspaces.load(state, workspace);
@@ -420,9 +529,16 @@ export const BlocklyGenerator = forwardRef<
             generator.blockToCode(block, rootTypesRef.current.has(block.type)),
           ),
         }));
+        if (mainMap) {
+          mergeDefinitions(generator, mainMap.definitions);
+        }
         return generator.finish(
           shape === 'world'
-            ? assembleWorldModule(generated, worldEventsRef.current)
+            ? assembleWorldModule(
+                generated,
+                worldEventsRef.current,
+                mainMap?.code,
+              )
             : assembleActorModule(
                 generated,
                 ownActor ? ownPropertyDeclarations(ownActor) : '',
