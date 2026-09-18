@@ -22,6 +22,7 @@ vi.mock('../MapStage', () => ({
   MapStage: (props: {
     doc: MapDoc;
     onEditScript?: (id: string | undefined) => void;
+    canEditLayers?: boolean;
     world?: {
       header: {name: string};
       onRename: (name: string) => void;
@@ -32,6 +33,8 @@ vi.mock('../MapStage', () => ({
       data-testid="stage"
       data-size={`${props.doc.size.width}x${props.doc.size.height}`}
       data-actors={props.doc.actors.length}
+      data-scripts={String(Boolean(props.onEditScript))}
+      data-layers={String(props.canEditLayers !== false)}
     >
       <button type="button" onClick={() => props.onEditScript?.('a')}>
         Script
@@ -61,6 +64,14 @@ vi.mock('../MapStage', () => ({
  * The other heavy half: a Blockly workspace, replaced by its title, a way
  * back, and one edit it can report.
  */
+/** What the shelf holds; absent, there is no progression at all. */
+let shelf:
+  | {holds: (unlock: {kind: string; id?: string}) => boolean}
+  | undefined;
+vi.mock('../../progression/progressionContext', () => ({
+  useMaybeProgression: () => shelf,
+}));
+
 vi.mock('../PlacementScriptEditor', () => ({
   PlacementScriptEditor: (props: {
     title: string;
@@ -360,5 +371,25 @@ describe('over a world’s file', () => {
       'data-module',
       'worlds/main',
     );
+  });
+});
+
+describe('what a gated lab has got to', () => {
+  const stage = () => screen.getByTestId('stage');
+
+  it('holds scripts and layers when nothing gates them', () => {
+    shelf = undefined;
+    open();
+    expect(stage()).toHaveAttribute('data-scripts', 'true');
+    expect(stage()).toHaveAttribute('data-layers', 'true');
+  });
+
+  it('withholds each until the shelf holds it', () => {
+    const held = new Set(['affordance:map-layers']);
+    shelf = {holds: unlock => held.has(`${unlock.kind}:${unlock.id}`)};
+    open();
+    expect(stage()).toHaveAttribute('data-scripts', 'false');
+    expect(stage()).toHaveAttribute('data-layers', 'true');
+    shelf = undefined;
   });
 });

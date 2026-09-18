@@ -1179,6 +1179,9 @@ const placed = (id: string, x: number, y: number) => ({
 });
 
 const map: WorldScenario = {
+  // ON THE MAP, because the lesson is: the task is painting, and the canvas is
+  // where that is done.
+  levelData: {worldView: 'map'},
   name: 'A room drawn, not typed',
   description: 'A floor made of twenty blocks, and the map that replaces them.',
   source: lessonSource({
@@ -6362,6 +6365,16 @@ already in it.
  */
 const ONE_FILE: WorldScenario['levelData'] = {showFileBrowser: false};
 
+/**
+ * …AND IT OPENS ON ITS WORKSPACE. A world opens on its map
+ * (specs/MAP_FIRST.md), and nearly every lesson's task is a block: "add
+ * **when ⟨…⟩**". A lesson that opened on a canvas its instructions never
+ * mention would start a learner one click from their work and not say so.
+ * The lessons that ARE about the map say `worldView: 'map'` in their own
+ * `levelData` (specs/CURRICULUM_PLAN.md).
+ */
+const IN_THE_WORKSPACE: WorldScenario['levelData'] = {worldView: 'world'};
+
 const written: Readonly<Record<TileId, WorldScenario>> = {
   'origin/first-world': firstWorld,
   'input/arrows': arrows,
@@ -6448,7 +6461,10 @@ export const LESSONS: Readonly<Record<TileId, WorldScenario>> =
   Object.fromEntries(
     Object.entries(written).map(([id, lesson]) => [
       id,
-      {...lesson, levelData: {...ONE_FILE, ...lesson.levelData}},
+      {
+        ...lesson,
+        levelData: {...ONE_FILE, ...IN_THE_WORKSPACE, ...lesson.levelData},
+      },
     ]),
   ) as Readonly<Record<TileId, WorldScenario>>;
 

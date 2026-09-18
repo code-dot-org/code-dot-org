@@ -171,6 +171,15 @@ export interface MapStageProps {
   /** What the toolbar's way into the map's own workspace says. */
   mapScriptLabel?: string;
   /**
+   * Whether the map's LAYERS can be edited: the strip, a layer's inspector,
+   * a placement's Layer dropdown. On unless a gated lab has not got there
+   * (specs/CURRICULUM_PLAN.md). Off hides the controls and nothing else —
+   * the canvas draws the layers the map has, and a new placement lands on
+   * the default one. Scripts are withheld the same way, by `onEditScript`
+   * being absent.
+   */
+  canEditLayers?: boolean;
+  /**
    * The world this map is the main map of, shown in the inspector with
    * nothing selected (`WorldInspector`); absent for a `.map`.
    */
@@ -222,6 +231,7 @@ export const MapStage = ({
   onDocChange,
   onDocPreview,
   onEditScript,
+  canEditLayers = true,
   mapScriptLabel = 'Map script',
   world,
   mapChoices,
@@ -1786,14 +1796,17 @@ export const MapStage = ({
         >
           Reset view
         </button>
-        <button
-          type="button"
-          className={`${styles.resetButton} ${styles.toggleButton}`}
-          aria-pressed={showIcons}
-          onClick={() => setShowIcons(shown => !shown)}
-        >
-          Icons
-        </button>
+        {onEditScript && (
+          // Only with scripts to show or hide: the marks are about them.
+          <button
+            type="button"
+            className={`${styles.resetButton} ${styles.toggleButton}`}
+            aria-pressed={showIcons}
+            onClick={() => setShowIcons(shown => !shown)}
+          >
+            Icons
+          </button>
+        )}
         {onEditScript && (
           <button
             type="button"
@@ -1804,28 +1817,30 @@ export const MapStage = ({
           </button>
         )}
       </div>
-      <LayerPanel
-        layers={layersOf(map)}
-        selected={selectedLayer}
-        onSelect={id => {
-          setSelectedLayer(id);
-          setInspectingLayer(true);
-          setSelectedId(null);
-        }}
-        onAdd={() => {
-          const made = addLayer(mapRef.current);
-          commit(made.doc);
-          setSelectedLayer(made.id);
-          setInspectingLayer(true);
-          setSelectedId(null);
-        }}
-        onRemove={id => {
-          commit(removeLayer(mapRef.current, id));
-          setSelectedLayer(DEFAULT_LAYER);
-        }}
-        onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
-        isReadOnly={isReadOnly}
-      />
+      {canEditLayers && (
+        <LayerPanel
+          layers={layersOf(map)}
+          selected={selectedLayer}
+          onSelect={id => {
+            setSelectedLayer(id);
+            setInspectingLayer(true);
+            setSelectedId(null);
+          }}
+          onAdd={() => {
+            const made = addLayer(mapRef.current);
+            commit(made.doc);
+            setSelectedLayer(made.id);
+            setInspectingLayer(true);
+            setSelectedId(null);
+          }}
+          onRemove={id => {
+            commit(removeLayer(mapRef.current, id));
+            setSelectedLayer(DEFAULT_LAYER);
+          }}
+          onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
+          isReadOnly={isReadOnly}
+        />
+      )}
       {!selectedActor && inspectingLayer && inspectedLayer && (
         <LayerInspector
           // Re-keyed on what the document says, so a change from outside —
@@ -1898,7 +1913,7 @@ export const MapStage = ({
             onBlur={applyRename}
             onKeyDown={blurOnEnter}
           />
-          {layersOf(map).length > 1 && (
+          {canEditLayers && layersOf(map).length > 1 && (
             <SimpleDropdown
               name="actor-layer"
               labelText="Layer"

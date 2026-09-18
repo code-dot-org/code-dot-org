@@ -246,6 +246,26 @@ describe('what a lesson starts out doing', () => {
 /** A path a learner would have to use the file browser to reach. */
 const PATHS = /`(actors|rules|sprites|worlds|backgrounds|maps|effects)\//;
 
+describe('the view a lesson’s world opens on', () => {
+  // A world opens on its map, and a lesson's task is nearly always a block
+  // (specs/CURRICULUM_PLAN.md). The two ways this rots: a lesson that opens on
+  // a canvas it never mentions, and one that opens on a map it does not have.
+  const onTheMap = ids.filter(id => LESSONS[id].levelData?.worldView === 'map');
+
+  it('is the workspace unless the lesson is about the map', () => {
+    for (const id of ids) {
+      expect(LESSONS[id].levelData?.worldView, id).toBeDefined();
+    }
+    expect(onTheMap.sort()).toEqual(['place/map']);
+  });
+
+  it.each(onTheMap)('%s has a map to open on, and says so', id => {
+    const world = projectFiles(LESSONS[id].source)['worlds/main.world'];
+    expect((JSON.parse(world) as {map?: object}).map).toBeDefined();
+    expect(LESSONS[id].instructions).toMatch(/\bmap\b/i);
+  });
+});
+
 describe('a lesson with no file browser', () => {
   const oneFile = ids.filter(
     id => LESSONS[id].levelData?.showFileBrowser === false,

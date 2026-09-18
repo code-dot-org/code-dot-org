@@ -27,7 +27,7 @@ import {lessonHref} from './lessonRoute';
 import {levelPropertiesFor} from './lessons';
 import styles from './progressionDialog.module.css';
 import {region} from './regions';
-import type {Tile, TileId, TileState, Unlock} from './types';
+import type {Affordance, Tile, TileId, TileState, Unlock} from './types';
 import {useCheck} from './useCheck';
 
 import {TILES_BY_ID} from './index';
@@ -351,12 +351,20 @@ const unlockIcon = (unlock: Unlock): string => {
         ? iconFor('animations')
         : iconFor('sprites');
     case 'editor':
+    case 'affordance':
+      // Both affordances there are belong to the map editor.
       return iconFor('maps');
     case 'category':
       return 'shapes';
     default:
       return 'file';
   }
+};
+
+/** What an editor affordance is called: what it lets a learner do. */
+const AFFORDANCE_NAMES: Record<Affordance, string> = {
+  'map-scripts': 'Scripts on a map',
+  'map-layers': 'Layers in a map',
 };
 
 /**
@@ -383,6 +391,8 @@ const unlockName = (unlock: Unlock): string => {
       return `${unlock.name} Toolbox`;
     case 'block':
       return unlock.type;
+    case 'affordance':
+      return AFFORDANCE_NAMES[unlock.id];
     default:
       return unlock.id;
   }
@@ -403,6 +413,8 @@ const unlockLabel = (unlock: Unlock): string => {
       return `the ${unlock.id} picture`;
     case 'editor':
       return `the ${unlock.id} editor`;
+    case 'affordance':
+      return AFFORDANCE_NAMES[unlock.id].toLowerCase();
     case 'template':
       return `the ${unlock.id} starting project`;
   }

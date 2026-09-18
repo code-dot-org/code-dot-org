@@ -535,7 +535,9 @@ describe('a placement with a script', () => {
   });
 
   it('takes the marks off when the toolbar says so, and back on', () => {
-    const view = mount(scripted());
+    // With a way into scripts: the toggle is about their marks, and a stage
+    // that offers no scripts offers no toggle.
+    const view = mount(scripted(), {onEditScript: vi.fn()});
     const toggle = view.getByRole('button', {name: 'Icons'});
     expect(toggle).toHaveAttribute('aria-pressed', 'true');
 
@@ -701,6 +703,45 @@ describe('a level, with nothing selected', () => {
       },
     });
     expect(main.queryByTestId('map-inspector')).toBeNull();
+  });
+});
+
+describe('what a gated lab withholds', () => {
+  const layered = (): MapDoc => ({
+    ...doc(),
+    layers: [{id: 'sky'}, {id: 'main'}],
+  });
+
+  it('offers no way into a script without `onEditScript`, nor the marks’ toggle', () => {
+    const map = doc();
+    const {canvas, ...view} = mount(map);
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(view.queryByRole('button', {name: 'Script'})).toBeNull();
+    expect(view.queryByRole('button', {name: 'Icons'})).toBeNull();
+  });
+
+  it('shows the layer strip and a placement’s Layer unless told not to', () => {
+    const map = layered();
+    const {canvas, ...view} = mount(map);
+    expect(view.getByTestId('layer-panel')).toBeInTheDocument();
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(
+      view.container.querySelector('select[name="actor-layer"]'),
+    ).not.toBeNull();
+  });
+
+  it('hides both with `canEditLayers` off, and leaves the map as it is', () => {
+    const map = layered();
+    const {canvas, onDocChange, ...view} = mount(map, {canEditLayers: false});
+    expect(view.queryByTestId('layer-panel')).toBeNull();
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(
+      view.container.querySelector('select[name="actor-layer"]'),
+    ).toBeNull();
+    expect(onDocChange).not.toHaveBeenCalled();
   });
 });
 

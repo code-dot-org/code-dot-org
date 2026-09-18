@@ -2,7 +2,7 @@
 // between the two (`WorldEditor`, specs/MAIN_MAP_PLAN.md).
 
 import {fireEvent, render, screen} from '@testing-library/react';
-import {describe, expect, it, vi} from 'vitest';
+import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -60,7 +60,16 @@ vi.mock('../../blockly/BlocklyFileEditor', () => ({
 }));
 
 const SOURCE: MultiFileSource = {files: {}, folders: {}, openFiles: []};
+/** What the level says, and what the shelf holds; each test sets its own. */
+let levelData: {worldView?: 'map' | 'world'} | undefined;
+let shelf:
+  | {holds: (unlock: {kind: string; id?: string}) => boolean}
+  | undefined;
+vi.mock('../../progression/progressionContext', () => ({
+  useMaybeProgression: () => shelf,
+}));
 vi.mock('@code-dot-org/lab/contexts', () => ({
+  useMaybeLevelProperties: () => (levelData ? {levelData} : undefined),
   useSources: () => ({
     currentSources: {source: SOURCE},
     updateSources: vi.fn(),
@@ -93,6 +102,11 @@ const contentsOf = (testId: string) =>
   JSON.parse(screen.getByTestId(testId).getAttribute('data-contents')!);
 
 describe('WorldEditor', () => {
+  beforeEach(() => {
+    levelData = undefined;
+    shelf = undefined;
+  });
+
   it('opens on the map, with the workspace one switch away', () => {
     open();
     expect(screen.getByTestId('map-view')).toBeInTheDocument();
@@ -129,5 +143,30 @@ describe('WorldEditor', () => {
     open();
     fireEvent.click(screen.getByRole('button', {name: 'World script'}));
     expect(screen.getByTestId('world-view')).toBeInTheDocument();
+  });
+
+  it('opens on the workspace when the level says its work is there', () => {
+    levelData = {worldView: 'world'};
+    open();
+    expect(screen.getByTestId('world-view')).toBeInTheDocument();
+    // …with the map still one switch away.
+    fireEvent.click(screen.getByRole('tab', {name: 'Map'}));
+    expect(screen.getByTestId('map-view')).toBeInTheDocument();
+  });
+
+  it('is the workspace alone until the shelf holds the map editor', () => {
+    const held = new Set<string>();
+    shelf = {holds: unlock => held.has(`${unlock.kind}:${unlock.id}`)};
+    open();
+    expect(screen.getByTestId('world-view')).toBeInTheDocument();
+    expect(screen.queryByRole('tablist')).toBeNull();
+    expect(screen.queryByTestId('map-view')).toBeNull();
+  });
+
+  it('shows the view bar once the map editor is held', () => {
+    shelf = {holds: unlock => unlock.kind === 'editor' && unlock.id === 'map'};
+    open();
+    expect(screen.getByRole('tablist')).toBeInTheDocument();
+    expect(screen.getByTestId('map-view')).toBeInTheDocument();
   });
 });

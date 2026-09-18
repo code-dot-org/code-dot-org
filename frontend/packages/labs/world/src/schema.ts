@@ -39,6 +39,12 @@ export const WorldLevelDataSchema = z.object({
   // lesson about color is not a lesson about picking one exactly, and a level
   // says so here (`levelData.simpleColors`).
   simpleColors: z.boolean().optional(),
+  // Which view a WORLD opens on: its map, or its block workspace
+  // (mapEditor/WorldEditor). Default `map` — a world is its map first
+  // (specs/MAP_FIRST.md) — and a lesson whose task is in the workspace says
+  // `world`, so a learner lands where the instructions are
+  // (specs/CURRICULUM_PLAN.md).
+  worldView: z.enum(['map', 'world']).optional(),
 });
 
 /**

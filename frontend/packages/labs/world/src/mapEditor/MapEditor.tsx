@@ -27,6 +27,7 @@ import {
   projectWorldOptions,
 } from '../blockly/projectModules';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
+import {useMaybeProgression} from '../progression/progressionContext';
 import {agreedViewSize} from '../runtime/declaredSizes';
 import {browserTextMetrics} from '../runtime/driver/textMetrics';
 import type {ActorSchema} from '../runtime/messages';
@@ -86,6 +87,15 @@ export const MapEditor = ({
 }: MapEditorProps) => {
   const {getActorInfo, hasCompiled} = useWorldRuntime();
   const {currentSources, sourcesEpoch} = useSources<MultiFileSource>();
+  // What a gated lab has got to (specs/CURRICULUM_PLAN.md). With no
+  // progression, or an ungated one, both are held. A gate hides the control
+  // and nothing else: a map that has scripts or layers draws and runs as it
+  // is, and the script view cannot be reached without its button.
+  const progression = useMaybeProgression();
+  const canScript =
+    progression?.holds({kind: 'affordance', id: 'map-scripts'}) ?? true;
+  const canLayer =
+    progression?.holds({kind: 'affordance', id: 'map-layers'}) ?? true;
 
   const files = useMemo(
     () => projectFiles(currentSources.source),
@@ -541,15 +551,20 @@ export const MapEditor = ({
         scales={scales}
         isReadOnly={isReadOnly}
         visible={visible}
-        onEditScript={id => {
-          if (id !== undefined) {
-            setScript({kind: 'placement', id});
-          } else if (document.hasMapScript) {
-            setScript({kind: 'map'});
-          } else {
-            onOpenMapScript?.();
-          }
-        }}
+        onEditScript={
+          canScript
+            ? id => {
+                if (id !== undefined) {
+                  setScript({kind: 'placement', id});
+                } else if (document.hasMapScript) {
+                  setScript({kind: 'map'});
+                } else {
+                  onOpenMapScript?.();
+                }
+              }
+            : undefined
+        }
+        canEditLayers={canLayer}
         mapScriptLabel={document.hasMapScript ? 'Map script' : 'World'}
         world={worldInspector}
         mapChoices={mapChoices}

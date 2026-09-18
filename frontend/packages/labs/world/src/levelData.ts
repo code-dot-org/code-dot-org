@@ -50,6 +50,16 @@ export function showsFileBrowser(
   return properties?.levelData?.showFileBrowser !== false;
 }
 
+/**
+ * Which view a world's file opens on in this level: its map, unless the
+ * level says its work is in the workspace (specs/CURRICULUM_PLAN.md).
+ */
+export function worldOpensOn(
+  properties: WorldLevelProperties | undefined,
+): 'map' | 'world' {
+  return properties?.levelData?.worldView ?? 'map';
+}
+
 /** Toolbox categories this level leaves out, by their displayed name. */
 export function hiddenToolboxCategories(
   properties: WorldLevelProperties | undefined,

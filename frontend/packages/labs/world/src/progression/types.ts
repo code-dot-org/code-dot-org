@@ -82,10 +82,29 @@ export type UnlockTarget =
   | {kind: 'category'; name: string}
   /** A sprite, animation or backdrop from the appearance library. */
   | {kind: 'asset'; id: string}
-  /** One of the editors a file type opens in. */
+  /**
+   * One of the editors a file type opens in. `map` is also the MAP VIEW of a
+   * world: without it a gated lab shows a world's workspace and no view bar
+   * (`mapEditor/WorldEditor`).
+   */
   | {kind: 'editor'; id: 'map' | 'animation' | 'effect' | 'image'}
+  /**
+   * Something an editor lets you do, that a lesson teaches and a gated lab
+   * withholds until then (specs/CURRICULUM_PLAN.md). A gate hides the
+   * CONTROL and never refuses a file: a lesson's own map may hold a scripted
+   * placement or a layer nobody has earned, and it draws and runs as it is.
+   */
+  | {kind: 'affordance'; id: Affordance}
   /** A starting point offered by New Project. */
   | {kind: 'template'; id: string};
+
+/**
+ * - `map-scripts`: a script on a placement and a map's own, with the marks
+ *   that say which placements have one (specs/MAP_SCRIPTS_PLAN.md).
+ * - `map-layers`: a map's layers — the strip, a layer's inspector, and the
+ *   layer a placement is on (specs/LAYERS_PLAN.md).
+ */
+export type Affordance = 'map-scripts' | 'map-layers';
 
 export type Unlock = UnlockTarget & {
   /**
