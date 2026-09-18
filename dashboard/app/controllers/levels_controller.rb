@@ -18,6 +18,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Adaptive,
     Aichat,
     Ailab,
     Applab,
@@ -531,6 +532,8 @@ class LevelsController < ApplicationController
       elsif @type_class == Weblab2
         @game = Game.weblab2
         @widget2_ids = get_widget2_ids
+      elsif @type_class == Adaptive
+        @game = Game.adaptive
       end
       @level = @type_class.new
       render :edit
