@@ -11,19 +11,6 @@
 /bin/i18n/                  @code-dot-org/i18n
 
 
-############
-# red-team #
-############
-
-# Should Approve changes to
-# Database Migration Service (Redshift replication) configuration
-/aws/dms/                   @code-dot-org/red-team
-
-# Should be Informed of changes to
-# Redshift database SQL
-/aws/redshift/              @code-dot-org/red-team
-
-
 ##################
 # infrastructure #
 ##################
@@ -37,6 +24,19 @@
 
 # Should be Consulted on changes to
 .drone.yml                      @code-dot-org/infrastructure
+
+
+############
+# red-team #
+############
+
+# Should be Informed of changes to
+# Redshift database SQL
+/aws/redshift/                              @code-dot-org/infrastructure @code-dot-org/red-team
+
+# Materialized View DDL, generated from the Models declared `export_to_analytics`. The data team's
+# dbt models and Tableau dashboards read these Views.
+/aws/redshift/zeroetl_materialized_views/   @code-dot-org/infrastructure @code-dot-org/red-team
 
 
 #####################
