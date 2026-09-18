@@ -24,7 +24,7 @@ gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgr
 gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 
-gem 'rails', '~> 7.0'
+gem 'rails', '~> 7.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -120,7 +120,7 @@ group :development, :test do
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-rails', '~> 7.0', require: false
-  gem 'minitest-reporters', '~> 1.2.0.beta3'
+  gem 'minitest-reporters', '~> 1.6.1'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
@@ -237,7 +237,7 @@ gem 'twitter_cldr', '~> 6.12.1'
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.5.0'
+gem 'paranoia', '~> 2.6.3'
 
 # JSON model serializer for REST APIs.
 gem 'active_model_serializers', '~> 0.10.13'
@@ -311,9 +311,6 @@ gem 'sshkit'
 gem 'validates_email_format_of'
 gem 'validate_url', '~> 1.0.15'
 
-# Target 14.0.5 specifically, because 14.0.6 removed an important performance optimization.
-gem 'composite_primary_keys', '14.0.5'
-
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
 gem 'octokit'
@@ -339,7 +336,7 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
-gem 'loofah', '~> 2.19.1'
+gem 'loofah', '~> 2.21'
 
 # Install pg gem only on specific production hosts.
 require_pg = lambda do
