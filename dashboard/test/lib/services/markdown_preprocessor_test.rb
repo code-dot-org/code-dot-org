@@ -44,6 +44,47 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     assert_equal expected, result
   end
 
+  test 'process leaves vocab references in place when asked not to resolve them' do
+    input = "A string containing both a Resource link [r first-resource/test-course/1999] and a Vocab link [v first_vocab/test-course/1999]"
+    result = Services::MarkdownPreprocessor.process(input, resolve_vocab: false)
+    expected = "A string containing both a Resource link [First Resource](example.com/first) and a Vocab link [v first_vocab/test-course/1999]"
+    assert_equal expected, result
+  end
+
+  test 'process does not share a cache entry between its two vocab modes' do
+    Rails.cache.with_local_cache do
+      input = "[v first_vocab/test-course/1999]"
+
+      assert_equal "<span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span>",
+        Services::MarkdownPreprocessor.process(input)
+      assert_equal input, Services::MarkdownPreprocessor.process(input, resolve_vocab: false)
+    end
+  end
+
+  test 'process substitutes on a cache hit' do
+    Rails.cache.with_local_cache do
+      input = "[v first_vocab/test-course/1999]"
+      expected = "<span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span>"
+
+      assert_equal expected, Services::MarkdownPreprocessor.process(input)
+      assert_equal expected, Services::MarkdownPreprocessor.process(input)
+    end
+  end
+
+  test 'bang method process! substitutes on a cache hit' do
+    Rails.cache.with_local_cache do
+      expected = "<span class=\"vocab\" title=\"The first of the vocabulary entries.\">First Vocabulary</span>"
+
+      first = +"[v first_vocab/test-course/1999]"
+      Services::MarkdownPreprocessor.process!(first)
+      assert_equal expected, first
+
+      second = +"[v first_vocab/test-course/1999]"
+      Services::MarkdownPreprocessor.process!(second)
+      assert_equal expected, second
+    end
+  end
+
   test 'process is cached' do
     Rails.cache.with_local_cache do
       input = "[r first-resource/test-course/1999]"
@@ -246,5 +287,37 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
 
     result = Services::MarkdownPreprocessor.sub_vocab_definitions(input, replace_proc)
     assert_equal expected, result
+  end
+
+  test 'collect_vocab_definitions returns the word and definition of each reference' do
+    input = "this string has [v second_vocab/test-course/1999] two vocab [v first_vocab/test-course/1999] definitions"
+    expected = {
+      'second_vocab/test-course/1999' => {word: "Second Vocabulary", definition: "The second of the vocabulary entries."},
+      'first_vocab/test-course/1999' => {word: "First Vocabulary", definition: "The first of the vocabulary entries."},
+    }
+
+    assert_equal expected, Services::MarkdownPreprocessor.collect_vocab_definitions(input)
+  end
+
+  test 'collect_vocab_definitions accumulates across calls, querying each key once' do
+    definitions = Services::MarkdownPreprocessor.collect_vocab_definitions("[v first_vocab/test-course/1999]")
+    Services::MarkdownPreprocessor.collect_vocab_definitions("[v second_vocab/test-course/1999]", definitions)
+
+    # The repeated key is already known, so it costs no further queries.
+    assert_queries 0 do
+      Services::MarkdownPreprocessor.collect_vocab_definitions("[v first_vocab/test-course/1999]", definitions)
+    end
+
+    assert_equal ['first_vocab/test-course/1999', 'second_vocab/test-course/1999'], definitions.keys.sort
+  end
+
+  test 'collect_vocab_definitions omits unmatched vocab keys' do
+    input = "this string has a vocab [v nonexistent_vocab/test-course/1999] definition."
+    assert_empty Services::MarkdownPreprocessor.collect_vocab_definitions(input)
+  end
+
+  test 'collect_vocab_definitions handles blank content' do
+    assert_empty Services::MarkdownPreprocessor.collect_vocab_definitions(nil)
+    assert_empty Services::MarkdownPreprocessor.collect_vocab_definitions("")
   end
 end
