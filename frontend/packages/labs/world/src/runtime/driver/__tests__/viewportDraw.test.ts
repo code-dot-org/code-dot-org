@@ -1,11 +1,21 @@
-// A Viewport's space, drawn (specs/VIEWPORT_PLAN.md): a masked container pair
-// inside the Viewport's own group, the outer at the Viewport's top-left
-// corner, the inner shifted by the space's camera, the space's actors inside
-// it and not in any layer's container, and the clip drawn where the outer
-// container is on screen. Against a stand-in Phaser that records containers,
-// their parents and the mask's rectangle, and nothing else.
+// A Viewport's space, drawn (specs/VIEWPORT_PLAN.md): a container of its own
+// at the top of the scene holding the space's actors, drawn by a Phaser
+// camera of its own into the Viewport's rectangle on the canvas and by no
+// other; the main camera looks past it. Against a stand-in Phaser that
+// records containers, their parents and each camera's viewport, zoom, centre
+// and ignore list, and nothing else.
 
 import {beforeEach, describe, expect, it, vi} from 'vitest';
+
+interface FakeCamera {
+  viewport: number[];
+  zoom: number;
+  center: number[];
+  ignored: FakeNode[];
+  removed: boolean;
+}
+let cameras: FakeCamera[] = [];
+let mainIgnored: FakeNode[] = [];
 
 interface FakeNode {
   kind: 'image' | 'container' | 'graphics';
@@ -144,6 +154,35 @@ vi.mock('phaser', () => {
     middleButtonDown: () => false,
     rightButtonDown: () => false,
   });
+  const fakeCamera = () => {
+    const record: FakeCamera = {
+      viewport: [],
+      zoom: 1,
+      center: [],
+      ignored: [],
+      removed: false,
+    };
+    cameras.push(record);
+    return {
+      record,
+      setViewport(x: number, y: number, w: number, h: number) {
+        record.viewport = [x, y, w, h];
+        return this;
+      },
+      setZoom(zoom: number) {
+        record.zoom = zoom;
+        return this;
+      },
+      centerOn(x: number, y: number) {
+        record.center = [x, y];
+        return this;
+      },
+      ignore(entry: Base) {
+        record.ignored.push(entry.record);
+        return this;
+      },
+    };
+  };
   const scene = {
     cameras: {
       main: {
@@ -154,6 +193,14 @@ vi.mock('phaser', () => {
         centerOn() {
           return this;
         },
+        ignore(entry: Base) {
+          mainIgnored.push(entry.record);
+          return this;
+        },
+      },
+      add: () => fakeCamera(),
+      remove(camera: {record: FakeCamera}) {
+        camera.record.removed = true;
       },
     },
     scale: {
@@ -277,72 +324,66 @@ const pane = (): HTMLElement => {
   return element;
 };
 
-const containers = () =>
-  nodes.filter(n => n.kind === 'container' && !n.destroyed);
-const masked = () => containers().find(n => n.masked);
-
 describe('drawing a Viewport’s space', () => {
   beforeEach(() => {
     nodes = [];
+    cameras = [];
+    mainIgnored = [];
     document.body.innerHTML = '';
     HTMLCanvasElement.prototype.getContext = (() => ({
       getExtension: () => ({loseContext: () => {}}),
     })) as never;
   });
 
-  it('puts a masked container in the Viewport’s group, at its corner', () => {
+  const inner = () => cameras[0] && mainIgnored[0];
+
+  it('draws the space with a camera of its own, into the Viewport’s box', () => {
     new PhaserBinding(world({spaces: true}), pane());
     runFrame();
 
-    const outer = masked()!;
-    expect(outer.x).toBe(-50);
-    expect(outer.y).toBe(-40);
-    // Its parent is the Viewport's group: the container holding the
-    // Viewport's own image, itself in the layer's container.
-    const group = outer.parent!;
-    expect(group.kind).toBe('container');
-    expect(group.x).toBe(160);
-    expect(group.y).toBe(160);
-    expect(group.children.some(child => child.kind === 'image')).toBe(true);
-    expect(group.parent!.depth).toBe(0);
+    expect(cameras).toHaveLength(1);
+    const camera = cameras[0];
+    // The Viewport is at (160,160), 100 by 80: its corner is (110,120), and
+    // the canvas is the world at the render scale.
+    expect(camera.viewport).toEqual([110 * 3, 120 * 3, 100 * 3, 80 * 3]);
+    expect(camera.zoom).toBe(3);
+    expect(camera.center).toEqual([320, 160]);
   });
 
-  it('shifts the space by its camera and holds the space’s actors', () => {
+  it('holds the space’s actors in a container the main camera ignores', () => {
     new PhaserBinding(world({spaces: true}), pane());
     runFrame();
 
-    const outer = masked()!;
-    const inner = outer.children.find(child => child.kind === 'container')!;
-    expect(inner.x).toBe(-(320 - 50));
-    expect(inner.y).toBe(-(160 - 40));
-    const coin = inner.children.find(child => child.kind === 'image')!;
+    const container = inner()!;
+    expect(container.kind).toBe('container');
+    expect(container.parent).toBeNull();
+    const coin = container.children.find(child => child.kind === 'image')!;
     expect(coin.x).toBe(48);
     expect(coin.y).toBe(48);
-    // …and nowhere else: the layer's container holds the group, not the coin.
-    const layer = outer.parent!.parent!;
+    // …and nowhere else: the layer's container holds the Viewport's group,
+    // not the coin.
+    const layer = nodes.find(
+      n =>
+        n.kind === 'container' &&
+        n.depth === 0 &&
+        n.parent === null &&
+        n !== container,
+    )!;
     expect(layer.children.filter(child => child.kind === 'image')).toEqual([]);
+    // The space camera looks past the layers.
+    expect(cameras[0].ignored).toContain(layer);
   });
 
-  it('clips to the Viewport’s rectangle on screen', () => {
-    new PhaserBinding(world({spaces: true}), pane());
-    runFrame();
-
-    const mask = nodes.find(n => n.kind === 'graphics')!;
-    expect(mask.visible).toBe(false);
-    // Layer at (0,0), group at (160,160), outer at (-50,-40): the corner.
-    expect(mask.rects).toEqual([[110, 120, 100, 80]]);
-  });
-
-  it('takes the containers down with a Viewport that is gone', () => {
+  it('takes the camera and container down with a Viewport that is gone', () => {
     const held = {spaces: true};
     new PhaserBinding(world(held), pane());
     runFrame();
-    expect(masked()).toBeDefined();
+    const container = inner()!;
 
     held.spaces = false;
     runFrame();
 
-    expect(masked()).toBeUndefined();
-    expect(nodes.find(n => n.kind === 'graphics')!.destroyed).toBe(true);
+    expect(cameras[0].removed).toBe(true);
+    expect(container.destroyed).toBe(true);
   });
 });
