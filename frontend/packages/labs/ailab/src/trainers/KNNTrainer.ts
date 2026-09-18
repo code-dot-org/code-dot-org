@@ -9,7 +9,7 @@ import {isRegression} from '../helpers/columnDetails';
 import {logMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
 import {
-  setKValue,
+  setHyperparameters,
   setTrainedModel,
   setPrediction,
   setAccuracyCheckPredictedLabels,
@@ -154,7 +154,7 @@ export default class KNNTrainer implements Trainer {
   }
 
   storeTrainedModel(optimalModel: OptimalModelDetails): void {
-    this.store.dispatch(setKValue(optimalModel.kValue));
+    this.store.dispatch(setHyperparameters({k: optimalModel.kValue}));
     this.store.dispatch(
       setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
     );
