@@ -25,6 +25,7 @@ import {
 import styles from './blocklyGenerator.module.css';
 import {buildDomainPalette, importVar, str} from './domainBlocks';
 import {fileKindOf, moduleShape} from './fileKind';
+import {mainMapLayersOf} from './mainMapLayers';
 import {setCurrentPlacements} from './moduleOptions';
 import {
   ownPropertyDeclarations,
@@ -516,6 +517,10 @@ export const BlocklyGenerator = forwardRef<
           (generator as {__ruleModule?: string}).__ruleModule =
             owning.modulePath;
         }
+        // …and the main map's LAYERS, which the world block declares with
+        // its own (`mainMapLayers`). Cleared for every other kind of file.
+        (generator as {__mainMapLayers?: unknown}).__mainMapLayers =
+          shape === 'world' ? mainMapLayersOf(contents) : [];
         // The world block emits these itself, right after `const world` and
         // before its body — the body is what reads them (`world_world`).
         (generator as {__worldOwn?: string}).__worldOwn = ownWorld

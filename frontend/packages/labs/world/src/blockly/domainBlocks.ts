@@ -164,6 +164,7 @@ import {
 } from './layers';
 import {lessonFlyoutButton} from './lessonFlyoutButton';
 import {localizeText} from './localizeBlocks';
+import {layerDeclarations, type MainMapLayer} from './mainMapLayers';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {instanceId, type MapPlacement} from './mapPlacements';
 import {
@@ -6490,11 +6491,14 @@ const worldWorld = defineBlock({
       const imageSizes = Object.keys(sizes).length
         ? `world.useImageSizes(${JSON.stringify(sizes)});\n`
         : '';
-      const layers = plan.some(entry => entry.id !== DEFAULT_LAYER_ID)
-        ? plan
-            .map(entry => `world.defineLayer({id: ${str(entry.id)}});\n`)
-            .join('')
-        : '';
+      // …with the MAIN MAP's ahead of them, slots and all: the world's file
+      // holds the map, so the generator hands its layers over
+      // (`BlocklyGenerator`, specs/LAYERS_PLAN.md).
+      const layers = layerDeclarations(
+        (generator as {__mainMapLayers?: MainMapLayer[]}).__mainMapLayers ?? [],
+        plan,
+        DEFAULT_LAYER_ID,
+      );
       // The world's OWN state, hoisted for the same reason the layers above
       // are: a declaration cannot be emitted where its block sits when the body
       // around it reads the const it makes. `add actor … set text to ⟨score⟩`

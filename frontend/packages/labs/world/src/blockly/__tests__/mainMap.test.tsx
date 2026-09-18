@@ -113,3 +113,48 @@ describe('a world with a main map, running', () => {
     expect(built.isPaused()).toBe(true);
   });
 });
+
+describe('the main map’s layers', () => {
+  const LAYERED = {
+    ...MAIN,
+    layers: [
+      {
+        id: 'layer1',
+        name: 'Sky',
+        parallax: {x: 0.2, y: 0},
+        background: {sprite: 'sky.png'},
+      },
+      {id: 'main'},
+    ],
+    actors: [
+      {type: 'actors/coin', id: 'far', layer: 'layer1'},
+      {type: 'actors/coin', id: 'near'},
+    ],
+  };
+
+  it('are declared in the world’s prologue, before anything is placed', async () => {
+    const js = await generate(world(LAYERED));
+    expect(js).toContain(
+      'world.defineLayer({id: "layer1", name: "Sky", parallax: new WorldLab.Vector(0.2, 0)});',
+    );
+    expect(js).toContain('world.setBackground("sky.png", "layer1");');
+    expect(js.indexOf('world.defineLayer(')).toBeLessThan(
+      js.indexOf('world.pause();'),
+    );
+  });
+
+  it('are the world’s layers when it runs, with each placement on its own', async () => {
+    const {world: built} = await compileProject({
+      'worlds/main.world': world(LAYERED),
+      'actors/coin.actor': COIN,
+    });
+
+    expect(built.layers.map(layer => layer.id)).toEqual(['layer1', 'main']);
+    expect(built.layer('layer1')!.parallax).toEqual({x: 0.2, y: 0});
+    expect(built.layer('layer1')!.background.sprite).toBe('sky.png');
+    expect([...built.actors].map(actor => [actor.id, actor.layer])).toEqual([
+      ['far', 'layer1'],
+      ['near', 'main'],
+    ]);
+  });
+});
