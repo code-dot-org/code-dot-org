@@ -13,6 +13,7 @@ import {EffectFileEditor} from './effect/EffectFileEditor';
 import {FILE_ICONS} from './fileIcons';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
+import {WorldEditor} from './mapEditor/WorldEditor';
 import {whyKeepFile} from './rules/deleteGuard';
 import {resolveRuleContents} from './rules/ruleReference';
 
@@ -117,7 +118,9 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     png: ImageFileEditor,
     rule: BlocklyFileEditor,
     actor: BlocklyFileEditor,
-    world: BlocklyFileEditor,
+    // A world opens on its main map, with its workspace one switch away
+    // (specs/MAP_FIRST.md, "The editor's modes").
+    world: WorldEditor,
     map: MapEditor,
     anim: AnimationEditor,
     effect: EffectFileEditor,

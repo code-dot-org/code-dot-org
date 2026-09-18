@@ -152,6 +152,8 @@ export interface MapStageProps {
    * the map editor's third view (specs/MAP_FIRST.md, "The editor's modes").
    */
   onEditScript?: (id: string | undefined) => void;
+  /** What the toolbar's way into the map's own workspace says. */
+  mapScriptLabel?: string;
   /**
    * The window this map will be seen through, in pixels — see the guide below.
    *
@@ -178,6 +180,7 @@ export const MapStage = ({
   onDocChange,
   onDocPreview,
   onEditScript,
+  mapScriptLabel = 'Map script',
   placing,
   thumbnails,
   pictures,
@@ -1631,7 +1634,7 @@ export const MapStage = ({
             className={styles.resetButton}
             onClick={() => onEditScript(undefined)}
           >
-            Map script
+            {mapScriptLabel}
           </button>
         )}
       </div>

@@ -41,6 +41,10 @@ vi.mock('@xterm/addon-image', () => ({ImageAddon: class {}}));
 vi.mock('../blockly/BlocklyFileEditor', () => ({
   BlocklyFileEditor: () => <div>blockly editor</div>,
 }));
+// A world opens in the world editor — its map first (specs/MAP_FIRST.md).
+vi.mock('../mapEditor/WorldEditor', () => ({
+  WorldEditor: () => <div>world editor</div>,
+}));
 
 // Stub the info panel: it renders the base ResourcePanel, which calls the
 // dashboard API (via useApiClient) and needs the host's ApiClientProvider.
@@ -88,7 +92,7 @@ it('renders the World Lab shell from the default project', async () => {
   expect(screen.queryByText('actors')).toBeNull();
   expect(screen.queryByRole('button', {name: /file manager/i})).toBeNull();
   // The active file is the Blockly world, so its (stubbed) Blockly editor mounts.
-  expect(screen.getByText('blockly editor')).toBeTruthy();
+  expect(screen.getByText('world editor')).toBeTruthy();
   // The preview view toggle rendered.
   expect(screen.getByText('Preview')).toBeTruthy();
   // No sandbox is configured under jsdom, so the preview says so.

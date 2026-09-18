@@ -41,12 +41,12 @@ import {
   clampTiles,
   MAX_MAP_TILES,
   MIN_MAP_TILES,
-  parseMap,
   type MapDoc,
   type WorkspaceState,
 } from './mapModel';
 import {MapStage} from './MapStage';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
+import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
 
 /** How long after the last keystroke a placement's picture is asked for. */
 const PICTURE_DEBOUNCE_MS = 150;
@@ -54,12 +54,28 @@ const PICTURE_DEBOUNCE_MS = 150;
 /** Which workspace the editor is showing instead of the map, if any. */
 type ScriptView = {kind: 'placement'; id: string} | {kind: 'map'};
 
+export interface MapEditorProps extends CustomEditorProps {
+  /**
+   * What the file is: a `.map`, or a `.world` holding a map beside its
+   * blocks (specs/MAIN_MAP_PLAN.md). Decides how the map is read out of the
+   * contents and written back, and what owns its scripts.
+   */
+  document?: MapDocumentAdapter;
+  /**
+   * What "Map script" opens when the document's map has no workspace of its
+   * own — a world's is its World view.
+   */
+  onOpenMapScript?: () => void;
+}
+
 export const MapEditor = ({
   fileId,
   initialContents,
   isReadOnly,
   onChange,
-}: CustomEditorProps) => {
+  document = mapFileDocument,
+  onOpenMapScript,
+}: MapEditorProps) => {
   const {getActorInfo, hasCompiled} = useWorldRuntime();
   const {currentSources, sourcesEpoch} = useSources<MultiFileSource>();
 
@@ -82,7 +98,10 @@ export const MapEditor = ({
     [files],
   );
 
-  const [map, setMap] = useState(() => parseMap(initialContents));
+  const [map, setMap] = useState(() => document.read(initialContents));
+  // The file as last known — what a write is made from, so a world's blocks
+  // come through a map edit untouched.
+  const contentsRef = useRef(initialContents);
   // Re-seed when the lab is handed a different document — the project
   // loading, a version restored, a start-over. `sourcesEpoch` counts exactly
   // those (SourcesContext), so this editor's own writes never trip it.
@@ -92,8 +111,9 @@ export const MapEditor = ({
       return;
     }
     seenEpoch.current = sourcesEpoch;
-    setMap(parseMap(initialContents));
-  }, [sourcesEpoch, initialContents]);
+    contentsRef.current = initialContents;
+    setMap(document.read(initialContents));
+  }, [sourcesEpoch, initialContents, document]);
 
   const [thumbnails, setThumbnails] = useState<Record<string, string>>({});
   const [schemas, setSchemas] = useState<Record<string, ActorSchema>>({});
@@ -293,7 +313,9 @@ export const MapEditor = ({
 
   const commit = (next: MapDoc) => {
     setMap(next);
-    onChange(JSON.stringify(next, null, 2));
+    const written = document.write(contentsRef.current, next);
+    contentsRef.current = written;
+    onChange(written);
   };
 
   /**
@@ -304,8 +326,8 @@ export const MapEditor = ({
    */
   const [script, setScript] = useState<ScriptView | null>(null);
   const mapModule = useMemo(
-    () => (filePath(currentSources.source, fileId) ?? '').replace(/\.map$/, ''),
-    [currentSources, fileId],
+    () => document.modulePath(filePath(currentSources.source, fileId) ?? ''),
+    [currentSources, fileId, document],
   );
   const scripted =
     script?.kind === 'placement'
@@ -445,9 +467,16 @@ export const MapEditor = ({
         scales={scales}
         isReadOnly={isReadOnly}
         visible={visible}
-        onEditScript={id =>
-          setScript(id === undefined ? {kind: 'map'} : {kind: 'placement', id})
-        }
+        onEditScript={id => {
+          if (id !== undefined) {
+            setScript({kind: 'placement', id});
+          } else if (document.hasMapScript) {
+            setScript({kind: 'map'});
+          } else {
+            onOpenMapScript?.();
+          }
+        }}
+        mapScriptLabel={document.hasMapScript ? 'Map script' : 'World'}
       />
     </div>
   );

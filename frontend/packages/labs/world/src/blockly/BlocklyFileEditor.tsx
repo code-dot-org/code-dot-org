@@ -62,6 +62,7 @@ import {
 } from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
+import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {refreshBlockDesigns} from './extensions/blockDesigner';
@@ -710,13 +711,21 @@ export const BlocklyFileEditor = ({
     return HIDE_BODIES ? seam.show(document) : document;
   });
 
+  // What the file holds beside its workspace — a world's main map — kept
+  // from the contents this opened on and put back on every save
+  // (`documentExtras`). Re-read when the lab hands over a different document.
+  const extras = useRef(documentExtras(initialContents));
+
   /** The FILE: what the workspace shows, with its bodies put back. */
   const readFile = useCallback(
     (workspace: Blockly.Workspace) => {
       const saved = Blockly.serialization.workspaces.save(
         workspace,
       ) as BlocklySerialization;
-      return HIDE_BODIES ? seam.read(saved) : saved;
+      return withDocumentExtras(
+        HIDE_BODIES ? seam.read(saved) : saved,
+        extras.current,
+      );
     },
     [seam],
   );
@@ -1447,6 +1456,7 @@ export const BlocklyFileEditor = ({
       return;
     }
     seenEpoch.current = sourcesEpoch;
+    extras.current = documentExtras(initialContents);
     const {scrollX, scrollY} = workspace;
     // With events off, like the rename reload: the sources already hold this
     // state, and re-saving it would be a second write for an edit nobody made.

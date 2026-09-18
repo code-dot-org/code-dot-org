@@ -173,34 +173,32 @@ export const clampTiles = (value: unknown): number | undefined => {
 };
 
 export function parseMap(contents: string): MapDoc {
-  const empty: MapDoc = {
-    type: 'map',
-    size: {...DEFAULT_MAP_SIZE},
-    tile: {width: DEFAULT_TILE, height: DEFAULT_TILE},
-    actors: [],
-  };
   if (!contents.trim()) {
-    return empty;
+    return mapFromRaw({});
   }
   try {
-    const raw = JSON.parse(contents) as Partial<MapDoc>;
-    return {
-      type: 'map',
-      // A map written before maps had a size is the size every map was.
-      size: {
-        width: clampTiles(raw.size?.width) ?? DEFAULT_MAP_SIZE.width,
-        height: clampTiles(raw.size?.height) ?? DEFAULT_MAP_SIZE.height,
-      },
-      tile: {
-        width: raw.tile?.width ?? DEFAULT_TILE,
-        height: raw.tile?.height ?? DEFAULT_TILE,
-      },
-      actors: Array.isArray(raw.actors) ? raw.actors : [],
-      ...(raw.blocks ? {blocks: raw.blocks} : {}),
-    };
+    return mapFromRaw(JSON.parse(contents) as Partial<MapDoc>);
   } catch {
-    return empty;
+    return mapFromRaw({});
   }
+}
+
+/** A map from whatever was stored, with defaults for what was not. */
+export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
+  return {
+    type: 'map',
+    // A map written before maps had a size is the size every map was.
+    size: {
+      width: clampTiles(raw.size?.width) ?? DEFAULT_MAP_SIZE.width,
+      height: clampTiles(raw.size?.height) ?? DEFAULT_MAP_SIZE.height,
+    },
+    tile: {
+      width: raw.tile?.width ?? DEFAULT_TILE,
+      height: raw.tile?.height ?? DEFAULT_TILE,
+    },
+    actors: Array.isArray(raw.actors) ? raw.actors : [],
+    ...(raw.blocks ? {blocks: raw.blocks} : {}),
+  };
 }
 
 /** A map's extent in world pixels — its tile counts times its tile size. */
