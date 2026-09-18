@@ -29,24 +29,25 @@ the screen. The working record, as before.
   pointer mapped into that actor's space; what reads the map's size — out of
   the map, wrap, bounds, path, the camera's confinement — reads the size of
   the actor's or camera's space.
-- **The driver** draws each non-root space as a Phaser Container hosted by
-  the viewport actor's own group, so it moves with the viewport, sits in
-  the viewport's layer, and scrolls with the main camera as the viewport
-  does; masked to the viewport's rectangle; its contents shifted by the
-  space's camera as the root's layer containers are shifted by the world's.
+- **The driver** draws each non-root space as a Phaser Container at the top
+  of the scene, holding the space's actors, drawn by a Phaser camera of its
+  own into the Viewport's rectangle on the canvas and pointed at the space's
+  camera; the main camera looks past it, and it looks past the layers.
 - **The editor** offers the project's maps for the Viewport's map property,
   and draws the held map's placements inside the Viewport's box, dimmed.
 
 ## Decisions taken before building
 
-- **A masked container, not a second Phaser camera.** MAP_FIRST.md said one
-  Phaser camera per Viewport. The driver never moves its camera: a camera's
-  pose is applied by shifting each layer's container, and `fit` and parallax
-  are container transforms too. A space is the same mechanism one level
-  down — a container shifted by its own camera — and a geometry mask is the
-  clip. One camera keeps `roundPixels`, the effect registry and the layer
-  containers as they are. What is given up: a space cannot be zoomed apart
-  from the world until the engine's cameras have zoom, which they do not.
+- **One Phaser camera per Viewport, as MAP_FIRST.md said** — reached the
+  long way. The first cut was a masked container: the driver never moves its
+  camera, a camera's pose is applied by shifting each layer's container, and
+  a space looked like the same mechanism one level down with a geometry
+  mask as the clip. In the browser the level drew out to the edge of the
+  screen: this Phaser is version 4, where a mask is a filter and `setMask`
+  does nothing in WebGL. A second camera is what clips, and Phaser 4 keeps
+  `cameras.add`, `setViewport` and `ignore`, whose lists skip a container's
+  whole subtree. What it buys besides the clip: a space can be zoomed apart
+  from the world once the engine's cameras have zoom.
 - **Rules learn the space through the actor, not through the world.** The
   macros the stock rules use — `mapSize()`, `mousePosition()`, the near
   query behind collisions — are world-wide today. Each gains the actor it is
@@ -105,10 +106,12 @@ the screen. The working record, as before.
   property names.
 - `48176fc3fed` — driver: a masked container pair per space inside the
   Viewport's group, the inner shifted by the space's camera; a fake-scene
-  test.
+  test. Superseded by the next but two.
 - `ed8e7e272b7` — the stock Viewport, its icon and catalogue unlock; the
   inspector's dropdown of the project's maps for its `map`; the held map
   drawn dimmed inside its box.
+- `536eedccbc7` — driver, again: a camera per space, after the browser
+  showed the mask never clipped.
 
 ## Learned while building
 
@@ -134,15 +137,19 @@ the screen. The working record, as before.
   placement's `positional` overrides rather than through a `set` row in
   the actor file, which is also how the stock Viewport will get its size
   from the inspector.
-- **The mask is drawn last, off the outer container's world transform.**
-  A geometry mask's rectangle is in scene coordinates, and the Viewport's
-  corner on screen is only known once every group has been positioned for
-  the frame; reading it back from the container is what keeps a Viewport
-  carried by a parent, or on a scrolled layer, clipped where it is drawn.
-- **A Viewport's own image is under its space.** The outer container is
-  added to the Viewport's group after the Viewport's image, so the actor's
-  drawing is the window's backdrop: the stock Viewport paints a dark fill
-  and an edge, and the map draws over it.
+- **`setMask` is a no-op in this Phaser's WebGL renderer.** Phaser 4 makes
+  masks filters; the fake-scene test could not know, since it records what
+  the driver asked for and not what Phaser does with it. The tests pin the
+  driver's requests; only the browser pins Phaser's answers, and the plan's
+  "what to look at in the browser" is where that was caught.
+- **The camera's rectangle is read last, off the Viewport's group.** The
+  Viewport's corner on the canvas is only known once every group has been
+  positioned for the frame; the group's world transform gives its middle,
+  and the main camera maps the world onto the canvas at the render scale
+  from the origin (`fitCamera`), so a Viewport carried by a parent, or on a
+  scrolled layer, is still drawn where it is. Cameras render in the order
+  they were added, so a space draws over the Viewport's own face, which is
+  the window's backdrop.
 - **A foundation trait is not a dependency.** The stock-actor test counts
   every `use trait` row as a rule the import must bring; the Viewport's
   trait is the engine's, in play everywhere, and joined Space and

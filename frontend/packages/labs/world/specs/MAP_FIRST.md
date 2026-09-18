@@ -386,12 +386,11 @@ In order of size:
   inside a Viewport, and render-to-texture is the later answer if anyone wants
   that.
 
-BUILT, with two departures the build found and specs/VIEWPORT_PLAN.md
-explains. The driver never moves its Phaser camera — a camera's pose is
-applied by shifting each layer's container — so a space is drawn the same
-way one level down: a masked container inside the Viewport's own group,
-shifted by the space's camera, and no second Phaser camera. And the rules
-were not partitioned one by one: the world keeps an ACTOR IN HAND — the
+BUILT, with one departure the build found and specs/VIEWPORT_PLAN.md
+explains. The driver is one Phaser camera per Viewport as said, after a
+detour through a masked container that this Phaser's WebGL renderer
+ignores. The rules were not partitioned one by one: the world keeps an ACTOR
+IN HAND — the
 subject whose handler is running, the actor a step or a loop is at, the
 candidate a predicate is asked about — and answers the map's size, the
 mouse's place, what is near a point and where a spawn lands for that actor's
@@ -596,8 +595,9 @@ What map-first does better:
    editor opening on it with the World view one switch away, the world's
    name and properties on empty selection.
 3. **The Viewport.** BUILT (specs/VIEWPORT_PLAN.md), less mirroring: the
-   stock kind, the three blocks, spaces in the engine, the masked container
-   in the driver, and the dimmed preview of a held map in the editor.
+   stock kind, the three blocks, spaces in the engine, a camera per
+   Viewport in the driver, and the dimmed preview of a held map in the
+   editor.
 4. **Layers in the editor.** The layer strip, backgrounds and foregrounds per
    layer in the inspector, and a placement's layer set where it is placed.
 5. **Retirements.** The Pause Menu actor, `create actor in map`, the global
