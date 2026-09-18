@@ -1,0 +1,1535 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+@import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/mixins';
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90 153 212 / 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90 153 212 / 0);
+  }
+}
+
+.floatingActionButton {
+  position: fixed;
+  left: 10px;
+  bottom: 48px;
+
+  height: 55px;
+  width: 55px;
+  background-size: 55px;
+  padding: 0;
+
+  border-width: 0;
+  border-radius: 30px;
+
+  img {
+    opacity: 1;
+    border-radius: 30px;
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s 1.7;
+  box-shadow: 0 0 0 0 rgba(90 153 212 / 0.5);
+}
+
+.taOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  height: 22px;
+  width: 32px;
+  background-size: 32px;
+  padding: 0;
+
+  border-width: 2px;
+  border-color: var(--borders-neutral-light);
+  border-radius: 15px;
+  border-style: solid;
+}
+
+.countOverlay {
+  position: fixed;
+  left: 51px;
+  bottom: 97px;
+
+  border-radius: 100px;
+  border-width: 2px;
+  border-color: var(--borders-neutral-light);
+  border-style: solid;
+
+  display: inline-flex;
+  height: 26px;
+  min-width: 26px;
+  padding: 2px 2px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  background: var(--background-error-primary);
+}
+
+p.countText {
+  margin-top: 1px;
+  margin-bottom: 0 !important;
+  padding: 0 2px;
+
+  strong {
+    span {
+      color: var(--text-neutral-white-fixed, #fff);
+    }
+  }
+  font-variant-ligatures: no-common-ligatures;
+}
+
+.dismissableAlert {
+  position: fixed;
+  left: 86px;
+  bottom: 55px;
+  z-index: 2000;
+
+  display: flex;
+  width: 352px;
+  max-width: 352px;
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+
+  box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.25);
+}
+
+.dismissableAlertText {
+  max-width: 266px;
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-bottom: -24px;
+
+  color: var(--text-neutral-primary, #292f36);
+  font-variant-ligatures: no-common-ligatures;
+}
+
+.alertCloseButton {
+  // Clear default button styles
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  box-shadow: none;
+
+  position: absolute;
+  top: 1rem;
+  inset-inline-end: 1rem; // Logical property for right in LTR, left in RTL
+
+  i {
+    color: var(--text-neutral-quaternary);
+    font-size: 1.1875rem;
+    line-height: 1.4844rem;
+    width: 1.4844rem;
+  }
+
+  &:hover {
+    box-shadow: none;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    i {
+      color: var(--text-neutral-tertiary);
+    }
+  }
+
+  &:focus {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+  }
+}
+
+.viewScoresButton {
+  min-height: 35px;
+  width: 318px;
+
+  display: flex;
+  padding: 5px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+
+  border-radius: 4px;
+  background: var(--background-brand-aqua-primary) !important;
+}
+
+.viewScoresText {
+  color: var(--text-neutral-primary);
+  font-variant-ligatures: no-common-ligatures;
+
+  /* Button/Button 3 */
+  font-family: var(--font-family-main);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 154%; /* 21.56px */
+}
+
+// Unlike the floating-panel original this is copied from, this renders
+// in-flow inside the AI TA drawer's own layout (see RubricsScreen.tsx), not
+// as a fixed-position overlay - the drawer already handles positioning
+// and dismissal.
+.rubricContainer {
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.settings {
+  width: 762px;
+  min-height: 350px;
+  padding: 16px 16px 32px 16px;
+  gap: 16px;
+
+  border-radius: 0 0 4px 4px;
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-bottom: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
+  background: var(--background-neutral-secondary);
+  box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.settingsVisible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.settingsHidden {
+  display: none;
+}
+
+.aiAssessmentOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  padding-bottom: 1rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.rubricContent {
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
+  background: var(--background-neutral-secondary);
+  box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
+  height: 440px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 16px;
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+    border-bottom: 2px solid var(--borders-neutral-solid);
+  }
+}
+
+.visibleRubricContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.hiddenRubricContent {
+  display: none;
+}
+
+.rubricFooter {
+  background: var(--background-neutral-black-fixed);
+  border-radius: 0 0 4px 4px;
+  border-bottom: 2px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-white-fixed);
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.rubricFooterContent {
+  flex: 1 1 100%;
+  padding: 0.25rem 0;
+
+  input[type='checkbox'] {
+    & + i::before {
+      background: var(--background-neutral-primary);
+    }
+
+    & ~ span {
+      color: var(--text-neutral-white-fixed);
+    }
+  }
+}
+
+.submitToStudentButtonAndError {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  align-self: stretch;
+
+  p {
+    color: var(--text-neutral-white-fixed);
+    line-height: 0.75rem;
+    margin: 0;
+    min-height: 0.75rem;
+    position: relative;
+    top: 0.1875rem;
+    font-size: 0.6875rem;
+  }
+}
+
+.rubricContainerFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+}
+
+.submitToStudentButton {
+  margin: 0;
+}
+
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.studentMetadata {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.levelAndStudentDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  h5,
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.singleMetadatum {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rubricHeader {
+  border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-black-fixed);
+  color: var(--text-neutral-white-fixed);
+  // padding: 9px 15px 8px;
+
+  border-top: 2px solid var(--borders-neutral-solid);
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
+
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.rubricHeaderRedesign {
+  border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-black-fixed);
+  color: var(--text-neutral-white-fixed);
+  // padding: 9px 15px 8px;
+
+  border-top: 2px solid var(--borders-neutral-solid);
+  border-right: 2px solid var(--borders-neutral-solid);
+  border-left: 2px solid var(--borders-neutral-solid);
+
+  padding-inline-start: 0.75rem;
+
+  display: flex;
+  height: 42px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.rubricHeaderLeftSide {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+
+  .aiBotOutlineIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  span {
+    @include label-two;
+    margin: 0;
+  }
+}
+
+.rubricHeaderRightSide {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+button.buttonStyle {
+  border-width: 0;
+  margin: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.closeButton {
+  display: flex;
+  padding: 11px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background-color: var(--background-neutral-black-fixed);
+  color: var(--text-neutral-white-fixed);
+}
+
+button.rubricHeaderTab {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.selectedTab {
+  background: var(--background-neutral-secondary);
+  h6 {
+    line-height: 1.1875;
+    margin-bottom: 0;
+    color: var(--text-brand-teal-secondary);
+  }
+}
+
+.unselectedTab {
+  background: var(--background-neutral-septenary);
+  h6 {
+    color: var(--text-neutral-white-fixed);
+    margin-bottom: 0;
+    line-height: 1.1875;
+  }
+}
+
+.learningGoalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-strong);
+  background: var(--background-neutral-primary);
+}
+
+.learningGoalRow {
+  display: flex;
+  align-self: stretch;
+  border-bottom: 1px solid var(--borders-neutral-strong);
+  min-height: 40px;
+
+  // Directly target the <summary> child with the class
+  .learningGoalHeader {
+    display: flex;
+    height: 40px;
+    padding: 0 1rem 0 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    line-height: 154%;
+    position: relative;
+
+    // Common styles for the FontAwesome icons, regardless of state
+    &::after {
+      font: var(--fa-font-solid);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-35%);
+      padding-right: 10px;
+      height: 16px;
+      width: 16px;
+      // Icon for closed details
+      content: '\f107';
+    }
+
+    &:hover {
+      background: none;
+      cursor: pointer;
+    }
+
+    // Hide the default disclosure arrow for summary elements in Safari
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  // When the details are open, change the icon
+  &[open] .learningGoalHeader::after {
+    content: '\f106';
+  }
+}
+
+.learningGoalHeaderLeftSide {
+  @include main-font-semi-bold;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-top: 0.5rem;
+}
+
+.learningGoalHeaderRightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  font-weight: 325;
+  line-height: 154%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+p.feedbackIndicatorText {
+  margin-bottom: 0;
+}
+
+h2.studentName {
+  margin-bottom: 8px;
+}
+
+.submittedEvaluation {
+  display: flex;
+  width: 170px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.learningGoalOuterBlock {
+  align-self: stretch;
+}
+
+.learningGoalExpanded {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: stretch;
+
+  .tipsDetailsSummary {
+    font-size: 0.875rem;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+}
+
+.learningGoalTips {
+  display: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--borders-neutral-strong);
+  background: var(--background-neutral-secondary);
+
+  // This is body three styles but the typography components don't work well with markdown support
+  // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
+  div {
+    @include main-font-regular;
+    color: var(--text-neutral-primary);
+    font-size: 0.875rem;
+    line-height: 1.54;
+  }
+}
+
+.evidenceLevelSetHorizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+  min-height: 92px;
+}
+
+.evidenceLevelInnerDiv:first-child {
+  padding: 1em;
+  width: 100%;
+  border-left: 0;
+}
+
+.evidenceLevelInnerDiv {
+  padding: 1em;
+  border-left: 1px solid var(--borders-neutral-strong);
+  width: 100%;
+}
+
+.evidenceLevelSet {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: stretch;
+  flex: 1;
+
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.evidenceLevelOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  span {
+    @include main-font-semi-bold;
+    font-size: 0.875rem;
+    line-height: 154%;
+  }
+
+  p,
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.evidenceLevelLabel {
+  @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
+  font-size: 0.875rem;
+  line-height: 154%;
+  margin-bottom: 0;
+}
+
+.evidenceLevelDescriptionIndented {
+  padding-left: 2rem;
+}
+
+.submittedEvaluationEvidenceLevel {
+  border-radius: 4px;
+  background: var(--background-brand-teal-light);
+  height: 100%;
+}
+
+.studentLearningGoalContainer {
+  margin: 20px;
+}
+
+p.errorMessage {
+  color: var(--text-error-primary);
+  margin-bottom: 0;
+}
+
+.infoTipIcon {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 0.75rem;
+  vertical-align: middle;
+  color: var(--text-neutral-quaternary);
+}
+
+.openedAiAssessment {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.aiAssessmentOuterBlock {
+  padding: 0.75rem 0.75rem 1rem 1.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+  position: relative;
+}
+
+.aiAssessmentArrow {
+  position: absolute;
+  top: calc(-0.5rem * sqrt(2) + 0.125rem);
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1rem;
+  background: var(--background-neutral-primary);
+  transform: rotate(45deg);
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+}
+
+.aiAssessmentBlock {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.aiAssessmentInfoBlock {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 1rem;
+}
+
+.aiAssessmentInfoRow {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  gap: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+p.aiAssessmentScoreText {
+  strong::after {
+    content: ' ';
+  }
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+p.aiAssessmentEvidenceBlock {
+  margin: 0;
+
+  + ul li p {
+    margin: 0;
+  }
+}
+
+.aiConfidenceBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  > div:first-child {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    margin-top: 0.375rem;
+  }
+}
+
+.aiConfidenceBoxText {
+  display: flex;
+  align-items: center;
+
+  .labelThree {
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+
+.aiConfidenceBar {
+  display: inline-block;
+  width: 3.25rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background: var(--background-neutral-quaternary);
+  margin: 0;
+}
+
+.aiConfidenceBarLow {
+  &:first-child {
+    background: var(--background-error-primary);
+  }
+}
+
+.aiConfidenceBarMedium {
+  &:not(:last-child) {
+    background: var(--background-warning-primary);
+  }
+}
+
+.aiConfidenceBarHigh {
+  background: var(--background-success-primary);
+}
+
+.aiAssessmentFeedback {
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  padding: 1rem 0;
+
+  label {
+    margin: 0 0 1rem;
+  }
+}
+
+.aiBotImg {
+  width: 4rem;
+}
+
+.inputTextbox {
+  width: 100%;
+  box-sizing: border-box;
+  height: 2.375rem;
+  min-height: 2.375rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
+  resize: vertical;
+  overflow: auto;
+}
+
+.autosaveMessage {
+  float: right;
+  line-height: 100%;
+  padding: 0;
+  color: var(--text-success-primary);
+}
+
+.feedbackArea {
+  flex: 1;
+}
+
+.infoAlert {
+  display: flex;
+  padding: 4px 12px;
+  gap: 10px;
+  align-items: center;
+  align-self: stretch;
+  justify-content: space-between;
+  border-radius: 4px;
+  background: var(--background-info-extra-light);
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.25;
+  }
+}
+
+i.infoAlertIcon {
+  color: var(--text-info-primary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
+}
+
+.infoAlertClosed {
+  display: none;
+}
+
+.aiFeedbackRadioBox {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  gap: 0.125rem;
+}
+
+.aiFeedbackRadioBoxText {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.aiFeedbackRadioRow {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 1rem;
+
+  > label {
+    margin: 0;
+  }
+}
+
+.aiFeedbackRadioLabelChecked {
+  background-color: var(--background-neutral-tertiary);
+  color: var(--text-neutral-tertiary);
+}
+
+.aiFeedbackRadioLabel {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-neutral-tertiary);
+  }
+}
+
+.aiFeedbackRadio {
+  opacity: 0;
+  position: absolute;
+  height: 0;
+}
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 5px;
+}
+
+.aiFeedbackTextbox {
+  height: 2.375rem;
+  min-height: 2.375rem;
+  padding: 0.5rem 0.625rem;
+  width: 100%;
+  max-width: 100%;
+  resize: vertical;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  border: 1px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
+}
+
+.submitFeedbackRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.submitFeedbackButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+em.aiFeedbackReceived {
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+.selectors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 15px;
+}
+
+.studentInfoGroup {
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.75rem;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.learningGoalsWrapper {
+  width: 100%;
+}
+
+.studentSelector {
+  width: 300px;
+}
+
+.learningGoalsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+  width: auto;
+}
+
+.learningGoalRing {
+  flex: 0 0 auto;
+}
+
+button.learningGoalButton {
+  align-self: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.5rem;
+
+  &:active,
+  &:hover {
+    box-shadow: none;
+    // The important is needed here to override the common button:active style
+    border: none !important;
+  }
+}
+
+button.learningGoalButtonLeft {
+  margin-left: 0.5rem;
+  margin-right: 0.625rem;
+}
+
+button.learningGoalButtonRight {
+  margin-left: 0.625rem;
+  margin-right: 0.5rem;
+}
+
+.learningGoalsHeader {
+  display: flex;
+  flex-direction: row;
+  min-height: 60px;
+  justify-content: space-between;
+  align-self: stretch;
+  line-height: 154%;
+  position: relative;
+  margin: 1rem 0 0 0;
+  padding: 0 0 0.75rem 0;
+  border-bottom: 1px var(--borders-neutral-light) solid;
+  overflow: hidden;
+}
+
+.learningGoalsHeaderLeftSide {
+  @include main-font-semi-bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.learningGoalsHeaderRightSideV2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  gap: 16px;
+  font-weight: 325;
+  flex: 0 0 auto;
+}
+
+.learningGoalsHeaderText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0.5rem;
+  flex: 0 1 100%;
+  overflow: hidden;
+}
+
+p.learningGoalsHeaderTextBody,
+h5.learningGoalsHeaderTextBody {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+  margin: 0;
+}
+
+h5.learningGoalsHeaderTextBody {
+  margin: 0 0 0.25rem;
+  display: flex;
+  flex-direction: row;
+
+  span {
+    align-self: stretch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.learningGoalSummary {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px var(--borders-neutral-light) solid;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.aiTokenContainer {
+  align-self: start;
+  margin-left: 0.5rem;
+}
+
+.aiToken {
+  display: flex;
+  height: 24px;
+  padding: 2px 12px 2px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  border-radius: 30px;
+  background: var(--background-brand-aqua-primary);
+}
+
+p.aiTokenText {
+  color: var(--text-neutral-white-fixed);
+  font-size: 0.7rem;
+  line-height: 1rem;
+  margin-bottom: 0;
+}
+
+.progressRing {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progressRingTrack {
+  stroke: var(--borders-neutral-primary);
+}
+
+.progressRingCurrent {
+  stroke: var(--borders-neutral-strong);
+}
+
+.progressRingAssessed {
+  stroke: var(--borders-brand-teal-primary);
+}
+
+.progressRingText {
+  text-anchor: middle;
+  font-size: smaller;
+  fill: var(--text-neutral-primary);
+}
+
+.learningGoalsTips {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+}
+
+p.evidenceLevelHeaderText {
+  margin: 0 0 0.25rem;
+}
+
+.evidenceLevelSetHorizontalV2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 8px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.evidenceLevelDescriptionV2 {
+  // Always occupy its own full-width line and reserve a constant height so the
+  // container doesn't resize as descriptions of different lengths are shown.
+  // 1.64 is the body-four line-height; reserve room for 3 lines.
+  flex-basis: 100%;
+  min-height: calc(3 * 1.64em);
+}
+
+.evidenceLevelOptionV2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.evidenceLevelLabelV2 {
+  @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
+  font-size: 0.875rem;
+  line-height: 154%;
+  margin-bottom: 0;
+}
+
+.evidenceLevel {
+  border-radius: 100px;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+  padding: 0 16px 0;
+  font-size: 0.875rem;
+  height: 32px;
+  text-align: center;
+}
+
+.evidenceLevelUnselected {
+  border-color: var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
+
+  &:hover {
+    box-shadow: none;
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    border-color: var(--borders-neutral-solid);
+    background: var(--background-neutral-primary);
+  }
+}
+
+.evidenceLevelSelected {
+  border-color: var(--borders-brand-teal-primary);
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover {
+    box-shadow: none;
+    background-color: var(--background-brand-teal-strong);
+  }
+
+  &:disabled {
+    border-color: var(--borders-brand-teal-primary);
+    background: var(--background-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
+  }
+}
+
+.evidenceLevelSuggested {
+  border-radius: 100px;
+  border: 1px solid var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
+  gap: 10px;
+  font-size: 0.875rem;
+  height: 32px;
+  box-shadow: 0 0 0 0.125rem var(--background-brand-aqua-primary);
+
+  &:hover {
+    box-shadow: 0 0 0 0.125rem var(--background-brand-aqua-primary);
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    border-radius: 100px;
+    border: 1px solid var(--borders-neutral-solid);
+    background: var(--background-neutral-primary);
+    gap: 10px;
+    padding: 3px 16px 0;
+    font-size: 0.875rem;
+    height: 32px;
+    box-shadow: 0 0 0 0.125rem var(--background-brand-aqua-primary);
+  }
+}
+
+.fabBackground {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 1rem;
+  border-right: 0.125rem solid var(--borders-neutral-solid);
+  border-left: 0.125rem solid var(--borders-neutral-solid);
+  background: var(--background-neutral-primary);
+  box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
+  height: 440px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &:last-child {
+    height: 442px;
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-bottom: 0.125rem solid var(--borders-neutral-solid);
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.fabErrorBackground {
+  background: var(--background-error-extra-light) !important;
+  color: var(--text-error-secondary) !important;
+}
+
+.sectionSelector {
+  width: 180px;
+}
+
+.rubricTabGroup {
+  padding-bottom: 8px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+}
+
+.rubricTabGroupRight {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.infoAlertLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.infoAlertRight {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  margin: 0;
+}
+
+button.infoAlertRight {
+  box-shadow: none;
+  border: 1px solid transparent;
+
+  &:active,
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.settingsGroup {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.settingsContainers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+  gap: 15px;
+  padding: 20px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.aiSettingsContainer {
+  align-items: unset;
+}
+
+.runAiAllStatuses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailsGroup {
+  display: inline;
+  gap: 1rem;
+}
+
+p.detailsVisible {
+  display: inline;
+  padding-inline-end: 1rem;
+}
+
+p.detailsHidden {
+  display: none;
+}
+
+.studentDropdownOptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dropdownOption {
+  /* Reset's every elements apperance */
+  background: none repeat scroll 0 0 transparent;
+  border: none !important;
+  border-radius: 0;
+  border-spacing: 0;
+  list-style: none outside none;
+  margin: 0;
+  text-decoration: none;
+  text-indent: 0;
+  box-shadow: none;
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+
+  padding: 0.3125rem 1rem;
+  gap: 16px;
+
+  span {
+    @include typography.body-three;
+    color: inherit;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:active {
+    border: 0 !important;
+  }
+
+  &:hover {
+    color: var(--text-neutral-primary);
+    text-decoration: none;
+    box-shadow: none;
+  }
+}
+
+.unselectableDropdownOption {
+  div {
+    cursor: default !important;
+    span {
+      font-style: italic;
+    }
+  }
+
+  &:hover {
+    background-color: inherit !important;
+  }
+
+  &:active {
+    background-color: inherit !important;
+    span {
+      color: inherit !important;
+    }
+  }
+}
+
+.statusBlob {
+  border-radius: 20px;
+  padding: 0 10px;
+  height: 26px;
+  min-height: 26px;
+  min-width: 82px;
+  max-width: 82px;
+  display: flex;
+  align-items: center;
+}
+
+.greenStatusBlob {
+  background-color: var(--background-success-extra-light);
+}
+
+.yellowStatusBlob {
+  background-color: var(--background-warning-light);
+}
+
+.purpleStatusBlob {
+  background-color: var(--background-brand-purple-light);
+}
+
+.redStatusBlob {
+  background-color: var(--background-error-extra-light);
+}
+
+.grayStatusBlob {
+  background-color: var(--background-neutral-tertiary);
+}
+
+.announcementDialog {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 670px;
+  margin: 12px;
+
+  h2 {
+    margin: 8px 0 20px 0;
+  }
+}
+
+.announcementModal {
+  max-width: 682px !important;
+  max-height: 90% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 980px) {
+  .announcementModal {
+    width: 90% !important; /* Set width to 90% of the viewport width */
+  }
+}
+
+.announcementImage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  max-height: 218px;
+  border-radius: 4px;
+}
+
+.announcementBody {
+  max-width: 551px;
+}

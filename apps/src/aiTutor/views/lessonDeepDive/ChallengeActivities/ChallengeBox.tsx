@@ -132,11 +132,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
           challengeResponseValidator
         )
           .then(response => {
-            console.log(response);
             return response.value;
           })
           .then(value => {
-            console.log(value);
             const status = value.evaluation_status;
             const outcome =
               status === 'success'

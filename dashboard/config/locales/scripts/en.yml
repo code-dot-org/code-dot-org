@@ -418,6 +418,8 @@ en:
               name: AI Lab Lab2
             lesson-61:
               name: Choice Progression
+            lesson-62:
+              name: Quiz
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -14077,6 +14079,16 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
+        adaptive-dev:
+          lessons:
+            lesson-1:
+              name: Adaptive Sample
+          lesson_groups: {}
+          title: Adaptive (dev)
+          description_audience: ''
+          description_short: ''
+          description: Development unit for the Adaptive level type.
           student_description: ''
         web-dev-2024:
           lesson_groups:
