@@ -197,6 +197,79 @@ to name. The `define layer` block and the layer effect blocks stay for what a
 script needs to change at run time, and the map editor becomes the place a
 layer is made.
 
+### Backgrounds, foregrounds and parallax under this model
+
+VIEWPORT.md's layer model is kept whole: a layer has a background slot drawn
+behind its actors and a foreground slot drawn in front, each with repeat or
+stretch and an offset, and the layer has a per-axis parallax factor. What
+moves is whose the layers are and which camera the factor is a factor of.
+
+**The map editor makes them.** Every map, the main one included, has a layer
+strip. Selecting a layer shows its two slots and its factor in the inspector;
+a placement's layer is chosen where the placement is. A level's mountains at
+0.2, hills at 0.5, game at 1.0 and fog at 1.2 are four rows in the level's
+file and nothing in the world. Images stay in the `backgrounds/` pool, and a
+slot names one.
+
+**The camera is the Viewport's.** The composition stands unchanged:
+
+```
+image position = (camera position - camera rest) (*) layer factor + slot offset
+```
+
+with the camera the one viewing that space and the rest the middle of the
+map's rectangle. Three things follow. At rest every layer draws where it was
+authored, so a map that never moves its camera looks as it does in the
+editor. A Viewport that mirrors another applies its own camera to the same
+layers, so a minimap shows the level's parallax at its own zoom with no extra
+state. And the main map's camera cannot move a level's layers, because they
+are not in its space.
+
+**Compositing across spaces is depth.** A Viewport is an actor on some layer
+of the main map and draws its whole space at that depth, each of its layers
+in order — background, actors, foreground — clipped to its rectangle. The
+main map's background is behind it and its foreground in front of it. A level
+whose bottom layer has no background is transparent there, so the main map's
+backdrop shows through and a game sits inside a themed frame without a copy
+of the art. Fog over the level is the level's top foreground; a vignette over
+the whole screen, HUD included, is the main map's.
+
+**Drift stays a runtime value**, a handler writing a slot's offset each tick,
+which the snapshot patches rather than restarts. The blocks that do it are
+map-scoped: `set background offset of ⟨layer⟩` in a map's script means that
+map's layer, and in the world's script the main map's. `set background to
+⟨sky⟩` keeps meaning the default layer's background of the map the script
+belongs to.
+
+**Stretch covers the scroll.** An image stretched to the map's rectangle is
+larger than the view by the margin the camera can travel, and a layer at any
+factor below one moves less than the camera does, so the visible window never
+leaves the image. Repeat is for art smaller than the map, and repeat with
+offset is the pair to teach for drift.
+
+**`fit` retires, and not first.** It exists so a score on a scrolling world
+stays put. Once the scrolling world is inside a Viewport, the score is on the
+main map, which does not scroll, and the flag has nothing left to do. It
+stays while the main map keeps its implicit camera for the simple case and
+goes when the Viewport is what lessons teach for an interface.
+
+**The editor must show parallax, or nobody will author it.** The canvas
+draws the rest pose. A look-through mode, in which dragging pans the camera
+rather than the canvas and each layer moves at its factor, is the one
+addition the editor needs; without it a factor is a number in a field whose
+effect is visible only in the running game.
+
+**The driver has the primitives.** Phaser's per-object scroll factor is a
+per-axis parallax multiplier, a tile sprite is a repeating background, and
+one camera per Viewport with an ignore list keeps spaces apart. Each layer's
+slots become two game objects at the layer's depth with the layer's scroll
+factor.
+
+Two things deliberately not done. No background effects per Viewport: the
+layer's slot takes effects and a Viewport inherits them by drawing the layer.
+No per-placement parallax: a thing that scrolls at a rate other than its
+layer's is a thing on another layer.
+
 ## What the script drawer needs
 
 The interface question was worked through separately and the answer is
