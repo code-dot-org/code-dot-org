@@ -131,6 +131,60 @@ export interface WorldMap {
     /** Overrides keyed by owner id (rule or trait), then property id. */
     properties?: Record<string, Record<string, unknown>>;
   }>;
+  /**
+   * What the map DOES, run once per load — see {@link MapLoad}.
+   *
+   * A `.map` file's placements each carry a workspace of hats about that one
+   * instance, and the map one for its own events (specs/MAP_FIRST.md, "What
+   * a map script looks like"). The generator compiles them to this function:
+   * `placed` is the actors this load placed, by the id the map gave each
+   * entry, and `map` is the load itself, for `unload this map` and the hats
+   * about it. Absent on a map that says nothing, which is most of them.
+   */
+  script?: (world: World, placed: Record<string, Actor>, map: MapLoad) => void;
+}
+
+/**
+ * One loading of a map: what it placed, and the way to take it back.
+ *
+ * A map loaded twice is two of these, each closed over its own actors, so a
+ * pause menu's Resume closes its own menu and not the other one's. Nothing on
+ * an Actor says which load placed it; the load holds the list, and that is
+ * the whole record.
+ */
+export class MapLoad {
+  private readonly unloadHandlers: Array<(world: World) => void> = [];
+  private readonly world: World;
+  /** Every actor this load placed, in placement order. */
+  readonly actors: readonly Actor[];
+
+  constructor(world: World, actors: readonly Actor[]) {
+    this.world = world;
+    this.actors = actors;
+  }
+
+  /**
+   * Remove everything this load placed.
+   *
+   * Through `removeActor`, so a parent's children go with it and the
+   * `is removed` events fire — the same removal a handler writes by hand —
+   * and deferred to the end of the tick when asked mid-tick, as that is.
+   * An actor already gone is skipped, not an error: a script that removed
+   * the ball itself may still unload the level.
+   */
+  unload(): void {
+    for (const handler of this.unloadHandlers) {
+      handler(this.world);
+    }
+    for (const actor of this.actors) {
+      this.world.removeActor(actor);
+    }
+  }
+
+  /** Hear this load being unloaded — `when this map unloads`. */
+  onUnload(handler: (world: World) => void): void {
+    this.unloadHandlers.push(handler);
+  }
 }
 
 /** One per-frame body an actor kind declares, before it is bound to a kind. */
@@ -1786,6 +1840,12 @@ export class World {
         continue;
       }
       actor.set(property, target as never);
+    }
+    // What the map DOES, once everything it placed exists and every reference
+    // is followed, so a hat about the Resume button registers on the button
+    // and `the ⟨Door⟩` finds the door.
+    if (typeof map.script === 'function') {
+      map.script(this, Object.fromEntries(placed), new MapLoad(this, added));
     }
     return added;
   }
