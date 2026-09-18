@@ -157,7 +157,7 @@ Clockwise, by angle:
 By radius: Origin at the center; each foundation a spike running out to ring 3
 or 4 with two shoulders leaning into the wedge beside it; each genre five cells
 in the middle of a wedge, from ring 3 to ring 5; and one Making tile past each
-genre's capstone, at ring 6. Sixty-seven tiles.
+genre's capstone, at ring 6. Seventy-nine tiles.
 ```
 
 That is an angle, not a screenshot — the tiles inside a region are placed by
@@ -165,7 +165,7 @@ hand and a region is whatever shape they make. What it says:
 
 - **Origin**, one tile, at `(0,0)`.
 - **Six foundations** around it, in circle order
-  **Input → Motion → Logic → Memory → Look → Place**, four to six tiles each.
+  **Input → Motion → Logic → Memory → Look → Place**, four to seven tiles each.
   These are the programming concepts.
 - **Six genres** in the wedges between adjacent foundations, five tiles each:
   a gate, two branches out of it, one tile beyond the first branch, and a
@@ -423,14 +423,21 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Foundation: Place
 
-| Tile                | The lesson                                                                                 | Unlocks                                 | Check                                                                      |
-| ------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------- | -------------------------------------------------------------------------- |
-| `place/position`    | Where things are: three markers in a heap, and the numbers that separate them.             | `set position`, random place, a number  | `[o]` the three are apart, one of them in the middle                       |
-| `place/edges`       | What happens at a boundary is a choice. Stop across, come round downwards.                 | Boundaries; Screen Wrap                 | `[o]` never leaves across, and wraps down                                  |
-| `place/map`         | A level is data: an arrangement painted on a grid, held by the block that places it.       | map editor; `create in map`; `load map` | `[o]`+`[s]` a dozen tiles, in two rows, and the ARRANGEMENT holds them     |
-| `place/camera`      | A room three screens wide and a view showing the first. Follow, and stop at the walls.     | Camera, Camera Follow, Camera Confined  | `[o]` the view travels and never passes the end of the room                |
-| `place/camera-feel` | Correct and unpleasant: slack for small movements, and a moment to catch up on large ones. | Camera Ease; Camera Deadzone            | `[o]` a short step moves nothing; a long walk is still settling afterwards |
-| `place/layers`      | Drawing order is declared, and some things should not move with the view at all.           | `define layer`, within, fixed, parallax | `[s]` the Score's layer is fixed, the Hills' moves less than the camera    |
+The map editor is Place's, and what a gated lab offers of it is granted
+here (specs/CURRICULUM_PLAN.md): the Map view of a world by `place/map`, a
+map's layers by `place/layers`, and scripts on a map by `place/script`, the
+region's seventh tile, in the one free cell that keeps it one shape. The
+three lessons open on the map; every other lesson opens on its workspace.
+
+| Tile                | The lesson                                                                                       | Unlocks                                                  | Check                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `place/position`    | Where things are: three markers in a heap, and the numbers that separate them.                   | `set position`, random place, a number                   | `[o]` the three are apart, one of them in the middle                       |
+| `place/edges`       | What happens at a boundary is a choice. Stop across, come round downwards.                       | Boundaries; Screen Wrap                                  | `[o]` never leaves across, and wraps down                                  |
+| `place/map`         | A level is data: an arrangement painted on a grid, held by the world's own map.                  | the Map view of a world; `load map`                      | `[o]`+`[s]` a dozen tiles, in two rows, and the MAP holds them             |
+| `place/camera`      | A room three screens wide and a view showing the first. Follow, and stop at the walls.           | Camera, Camera Follow, Camera Confined                   | `[o]` the view travels and never passes the end of the room                |
+| `place/camera-feel` | Correct and unpleasant: slack for small movements, and a moment to catch up on large ones.       | Camera Ease; Camera Deadzone                             | `[o]` a short step moves nothing; a long walk is still settling afterwards |
+| `place/layers`      | Drawing order is declared, and some things should not move with the view at all.                 | layers in a map; `define layer`, within, fixed, parallax | `[s]` the Score's layer is fixed, the Hills' lags: on the map or in blocks |
+| `place/script`      | Two Buttons of one kind and a handler that cannot tell them apart. A script on each, in the map. | scripts on a map; `the ⟨…⟩`                              | `[o]`+`[s]` RED says RED, BLUE says BLUE, and two placements carry scripts |
 
 ### Genre: Platformer — entered from Input and Motion
 

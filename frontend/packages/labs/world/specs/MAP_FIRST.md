@@ -1,11 +1,13 @@
 # Proposal: the map as the front door
 
-STATUS: PROPOSED, with steps 1 to 5 built — map scripts on `.map` files,
-the main map in the world's file, the Viewport, layers in the editor, and
-the retirements (specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md,
-specs/VIEWPORT_PLAN.md, specs/LAYERS_PLAN.md and specs/RETIREMENTS_PLAN.md
-record the commits and what they taught). The rest
-is a design to argue with, written
+STATUS: BUILT, all six steps — map scripts on `.map` files, the main map in
+the world's file, the Viewport, layers in the editor, the retirements, and
+the curriculum (specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md,
+specs/VIEWPORT_PLAN.md, specs/LAYERS_PLAN.md, specs/RETIREMENTS_PLAN.md and
+specs/CURRICULUM_PLAN.md record the commits and what they taught). Steps
+1 to 4 have been seen working in the browser; 5 and 6 have not yet. One
+question is left open by the last of them: whether the first lessons move
+onto the canvas. What follows is the design as it was argued, written
 after the pause menu showed where the current shape strains (UI_ACTORS.md,
 "The second axis"; MAPS.md, "A block naming a placement").
 
@@ -542,7 +544,9 @@ What the current shape does better:
 - **The curriculum is built on it.** Every level pins `main.world`, every tile
   in the catalogue unlocks blocks, and the progression assumes the workspace is
   where a learner's hands are (PROGRESSION.md). Unlocking editor affordances
-  (the inspector, the palette, the modes) is a new kind of tile.
+  (the inspector, the palette, the modes) is a new kind of tile. (Built
+  as a new kind of UNLOCK, `affordance`, that ordinary tiles grant:
+  specs/CURRICULUM_PLAN.md.)
 - **Testing.** A block stack is a JSON document a test can compile and run.
   The map editor is a canvas jsdom cannot paint, and its arithmetic lives in
   pure modules for that reason. Moving the front door onto the canvas moves
@@ -624,7 +628,13 @@ What map-first does better:
    `clearActors` with them; Breakout's level and the two-rooms lesson's
    rooms are held by Viewports; the starter project's level is its main
    map.
-6. **Curriculum.** Tiles that unlock editor affordances; levels re-pinned.
+6. **Curriculum.** BUILT (specs/CURRICULUM_PLAN.md): a lesson says which
+   view its world opens on, and every lesson but the three about the map
+   opens on its workspace; a gated lab's shelf reaches the map editor — the
+   Map view (`place/map`), a map's layers (`place/layers`, retold in the
+   editor), scripts on a map (`place/script`, a new tile). The first
+   lessons stay in blocks; re-founding them on the canvas is left for a
+   decision.
 
 Step 1 is worth doing even if the rest is refused. Steps 2 and 3 are the
 proposal; 4 is where the layer question gets its answer.

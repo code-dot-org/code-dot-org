@@ -107,6 +107,11 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_use_trait',
   ],
   'place/camera-feel': ['world_use_trait'],
+  // In a PLACEMENT's workspace, which is the map editor's third view: the hat
+  // is the Mouse rule's and `the ⟨…⟩` is what the tile grants. `set text of`
+  // is the Label's own, minted from its file and gated by nothing
+  // (`toolboxShelf.generatedElsewhere`), so it is not a thing to list.
+  'place/script': ['world_on_Mouse_IsClickedWithEvent', 'world_placement'],
   // Nothing from the toolbox: the lesson is done in the map editor's layer
   // strip. The blocks that say the same are granted, and mentioned, and not
   // what the steps ask for.
@@ -264,7 +269,16 @@ const offeredAt = (id: TileId): Set<string> => {
   const keys = shelfKeys(new Set(before(id)), id);
   const granted = new Set(GRANTED_BY.keys());
   const offered = new Set<string>();
-  for (const fileKind of ['world', 'actor'] as const) {
+  // …and a placement's workspace, for a lesson that opens on the map: the
+  // map editor's Script view has a palette of its own, and only such a
+  // lesson sends anybody there.
+  const onTheMap = LESSONS[id]!.levelData?.worldView === 'map';
+  const kinds: Array<'world' | 'actor' | 'placement'> = [
+    'world',
+    'actor',
+    ...(onTheMap ? (['placement'] as const) : []),
+  ];
+  for (const fileKind of kinds) {
     const {toolbox} = buildDomainPalette(projectRuleMetas(files), {fileKind});
     const shown = shelvedToolbox(toolbox, {
       holds: unlock => heldBy(keys, granted, unlock),

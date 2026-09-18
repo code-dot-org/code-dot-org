@@ -152,12 +152,13 @@ describe('moving in a direction', () => {
   // keys. Nearest-in-direction has to cross the holes in the map, which is the
   // case a strict neighbor walk cannot do at all.
   it('crosses a hole rather than stopping at it', () => {
-    // Nothing sits between the tip of Place's spike and the tiles east of it,
-    // so a walk that only ever stepped to a neighbor would stop here.
+    // Nothing sits between the tip of Place's spike and the tiles west of it,
+    // so a walk that only ever stepped to a neighbor would stop here. (It was
+    // the east side until `place/script` took the cell there.)
     const from = tile('place/camera-feel');
-    const east = nearestInDirection(TILES, from, {x: 1, y: 0});
-    expect(east).toBeDefined();
-    expect(adjacent(from.at, east!.at)).toBe(false);
+    const west = nearestInDirection(TILES, from, {x: -1, y: 0});
+    expect(west).toBeDefined();
+    expect(adjacent(from.at, west!.at)).toBe(false);
   });
 
   it('finds nothing past the edge of the map', () => {

@@ -2225,6 +2225,118 @@ describe('the layers lesson’s check', () => {
   });
 });
 
+describe('the placement-script lesson’s check', () => {
+  const lesson = LESSONS['place/script'];
+
+  /**
+   * What the sign says once both Buttons have been clicked, by playing the
+   * check's script whatever its shape half thinks — which is how a near-miss
+   * is shown to WORK before it is shown to be refused.
+   */
+  const signAfter = async (source: MultiFileSource) => {
+    const {world} = await compileProject(projectFiles(source));
+    const {samples} = playCheck(world, tile('place/script').check.run!);
+    return ((samples.said ?? []).at(-1) as unknown[] | undefined)?.[0];
+  };
+
+  interface Placement {
+    id: string;
+    blocks?: object;
+  }
+
+  /** `when ⟨this actor⟩ is clicked: set text of ⟨the ⟨Sign⟩⟩ to ⟨words⟩`. */
+  const says = (text: string) => ({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_on_Mouse_IsClickedWithEvent',
+          x: 20,
+          y: 20,
+          fields: {FILTER0: ''},
+          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+          next: {
+            block: {
+              type: 'world_set_ActorsLabel_TextProperty',
+              inputs: {
+                ACTOR: {
+                  block: {type: 'world_placement', fields: {NAME: 'Sign'}},
+                },
+                VALUE: {shadow: {type: 'text', fields: {TEXT: text}}},
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+
+  /** The lesson done, with a knob for what each Button's script says. */
+  const scripted = (red: string, blue: string, keepWorldHat = false) =>
+    editing(lesson.source, 'main.world', contents => {
+      const file = JSON.parse(contents) as {
+        blocks: {blocks: Row[]};
+        map: {actors: Placement[]};
+      };
+      if (!keepWorldHat) {
+        file.blocks.blocks = file.blocks.blocks.filter(
+          root => root.type !== 'world_on_Mouse_IsClickedWithEvent',
+        );
+      }
+      file.map.actors = file.map.actors.map(actor =>
+        actor.id === 'Red'
+          ? {...actor, blocks: says(red)}
+          : actor.id === 'Blue'
+            ? {...actor, blocks: says(blue)}
+            : actor,
+      );
+      return JSON.stringify(file);
+    });
+
+  it('refuses a sign that says PRESSED whichever is clicked', async () => {
+    const {passes} = await check('place/script', lesson.source);
+    expect(passes).toBe(false);
+    // …and it does say PRESSED: the starter runs, and is wrong.
+    expect(await signAfter(lesson.source)).toBe('PRESSED');
+  });
+
+  it('accepts a script on each Button', async () => {
+    const {passes, result} = await check(
+      'place/script',
+      scripted('RED', 'BLUE'),
+    );
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses two scripts that say the same thing', async () => {
+    const {passes} = await check('place/script', scripted('RED', 'RED'));
+    expect(passes).toBe(false);
+  });
+
+  it('refuses one handler that copies the clicked Button’s words', async () => {
+    // The near-miss the tile names: it WORKS, from the world, with no script
+    // anywhere — so the run passes and the shape half is what refuses it.
+    const source = editing(lesson.source, 'main.world', contents => {
+      const file = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const hat = file.blocks.blocks.find(
+        root => root.type === 'world_on_Mouse_IsClickedWithEvent',
+      )!;
+      hat.next!.block!.inputs!.VALUE = {
+        block: {
+          type: 'world_get_ActorsLabel_TextProperty',
+          // The Button the hat matched, which under `any ⟨Button⟩` is
+          // what `this actor` means.
+          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+        },
+      } as never;
+      return JSON.stringify(file);
+    });
+    expect(await signAfter(source)).toBe('BLUE');
+    const {passes} = await check('place/script', source);
+    expect(passes).toBe(false);
+  });
+});
+
 describe('the surfaces lesson’s check', () => {
   const lesson = LESSONS['platformer/surfaces'];
 

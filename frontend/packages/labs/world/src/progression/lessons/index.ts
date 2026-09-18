@@ -1483,6 +1483,78 @@ one — and that is how a layer is changed while the game runs.
 `.trim(),
 };
 
+// ── place/script ─────────────────────────────────────────────────────────────
+
+/** A placement with words on it: a Label's, or a Button's, which acts like one. */
+const saying = (id: string, x: number, y: number, text: string) => ({
+  id,
+  properties: {positional: {position: {x, y}}, Label: {text}},
+});
+
+const placementScript: WorldScenario = {
+  // ON THE MAP: a script belongs to a thing placed there, and the way into
+  // one is a button in that thing's properties (specs/CURRICULUM_PLAN.md).
+  levelData: {worldView: 'map'},
+  name: 'This one, not the other',
+  description:
+    'Two buttons of one kind, and a handler that cannot tell them apart.',
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        placeInMap('actors/label', [saying('Sign', 160, 80, '…')]),
+        placeInMap('actors/button', [
+          saying('Red', 96, 200, 'RED'),
+          saying('Blue', 224, 200, 'BLUE'),
+        ]),
+      ],
+      // What a world can say about a click: that a Button got one. Which
+      // Button is not a thing a kind knows.
+      handlers: [
+        {
+          type: 'world_on_Mouse_IsClickedWithEvent',
+          fields: {FILTER0: ''},
+          inputs: {ACTOR: anyKind('button')},
+          next: {
+            block: {
+              type: 'world_set_ActorsLabel_TextProperty',
+              inputs: {
+                ACTOR: anyKind('label'),
+                VALUE: words('PRESSED'),
+              },
+            },
+          },
+        },
+      ],
+    }),
+    stockActors: ['label', 'button'],
+    rules: ['mouse'],
+  }),
+  instructions: `
+## This one, not the other
+
+Run it and click RED, then BLUE. The sign says PRESSED both times, because
+the world's handler is about **any ⟨Button⟩** and both of them are Buttons.
+A kind cannot tell two of its own apart — and giving each its own kind, a
+RedButton file and a BlueButton file, is a lot of file for one word.
+
+The **map** can tell them apart: it is where there are two. Anything placed
+on a map can carry a **script** of its own, which is blocks about THIS one.
+
+### What you do
+
+1. Open **World** and delete the handler about any Button. Open **Map** again.
+2. Click the RED button on the map, and press **Script** in its properties.
+3. Add **when ⟨this actor⟩ is clicked**, and in it **set text of ⟨the ⟨Sign⟩⟩
+   to ⟨RED⟩**. **the ⟨…⟩** is in the Map drawer: it names a thing on this map
+   by the name the map gives it, and the Sign is called Sign.
+4. Go **Back** to the map and do the same for BLUE. Each button now has a
+   small mark on its corner, which says it has a script.
+5. Run it. Two Buttons of one kind, doing two different things — and
+   \`button.actor\` has not changed at all.
+`.trim(),
+};
+
 // ── platformer/jump ──────────────────────────────────────────────────────────
 
 const jump: WorldScenario = {
@@ -6425,6 +6497,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'place/camera': camera,
   'place/camera-feel': cameraFeel,
   'place/layers': layers,
+  'place/script': placementScript,
   'platformer/jump': jump,
   'platformer/jetpack': jetpack,
   'platformer/ladders': ladders,

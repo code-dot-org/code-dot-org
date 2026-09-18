@@ -27,6 +27,10 @@
 //   (1,0) (2,0) (3,0) (4,0)   its axis, running outward from Origin
 //   (1,1) (2,1)               shoulders, leaning into the wedge clockwise
 //
+// Place has a seventh, `(3,1)`, the free cell beside both shoulders' far end
+// and the axis: `place/script`, which is there because the map editor is
+// Place's and that lesson is the map editor's (specs/CURRICULUM_PLAN.md).
+//
 // Two of those cells are GATEWAYS, and which lesson sits on them is a design
 // decision rather than a layout one. `(1,1)` touches the wedge clockwise of the
 // foundation and `(2,0)` touches the wedge anticlockwise of it, so those two
@@ -1215,6 +1219,55 @@ export const TILES: readonly Tile[] = [
       // The world is still a world: the shape half is what this lesson can be
       // judged on, and a project that no longer runs has not done it.
       passes: ({samples}) => (samples.view?.length ?? 0) > 0,
+    },
+  },
+  {
+    id: 'place/script',
+    region: 'place',
+    // The one free cell that keeps Place one shape: beside `layers`, `camera`
+    // and `camera-feel`, in the shoulder's second row. A foundation is six
+    // cells in the header's drawing; this is the seventh, and it is here
+    // because the map editor is Place's and this is the map editor's.
+    at: at('place', 3, 1),
+    title: 'This one, not the other',
+    teaches:
+      'A thing placed on a map can carry a script of its own: behavior that belongs to one placement, not to its kind.',
+    task: 'Two Buttons and a sign that says PRESSED whichever you click. Give each Button a script of its own, in the map.',
+    requires: ['place/layers'],
+    unlocks: [
+      // The way into a placement's workspace, a map's own, and the marks that
+      // say which placements have one (specs/CURRICULUM_PLAN.md)…
+      {kind: 'affordance', id: 'map-scripts'},
+      // …and the two blocks only a map's script can say: `the ⟨Sign⟩`, which
+      // names a placement by the name the map gives it, and `unload this
+      // map`, which is how the stock Pause Menu's buttons take it away. Both
+      // were parked on `story/choice` until there was a lesson about scripts.
+      {kind: 'block', type: 'world_placement'},
+      {kind: 'block', type: 'world_unload_this_map'},
+    ],
+    check: {
+      kind: 'outcome',
+      says: 'Clicking RED makes the sign say RED and clicking BLUE makes it say BLUE, and each Button carries the script that does it.',
+      falsePass:
+        'One handler about any Button that reads the clicked Button’s own text and copies it to the sign. It works, and it is the thing a script replaces: it works only while what a Button DOES can be read off what it SAYS. So the shape half asks that two placements on the map carry scripts.',
+      run: {
+        probes: {said: {kind: 'property', of: 'Label', name: 'text'}},
+        trace: [
+          {pointer: {x: 96, y: 200, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 96, y: 200, buttons: []}, seconds: 0.2},
+          {pointer: {x: 224, y: 200, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 224, y: 200, buttons: []}, seconds: 0.2},
+        ],
+      },
+      inspect: files => scriptedPlacements(files) >= 2,
+      passes: ({samples}) => {
+        // The sign is the first Label the world holds: the map places it
+        // before the Buttons, which are Labels too by acting like one.
+        const sign = (samples.said ?? []).map(
+          texts => (texts as unknown[] | undefined)?.[0],
+        );
+        return sign[2] === 'RED' && sign[4] === 'BLUE';
+      },
     },
   },
   {
@@ -2514,10 +2567,6 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_pause_game'},
       {kind: 'block', type: 'world_resume_game'},
       {kind: 'block', type: 'world_game_is_paused'},
-      // …and what a map's own script says (specs/MAP_FIRST.md): the stock
-      // Pause Menu map's Resume unloads it, and its Quit tells the world.
-      {kind: 'block', type: 'world_unload_this_map'},
-      {kind: 'block', type: 'world_placement'},
     ],
     offers: [
       {kind: 'block', type: 'controls_if'},
@@ -3600,6 +3649,34 @@ function mainMapPlacements(files: Record<string, string>): number {
       const actors = (JSON.parse(contents) as {map?: {actors?: unknown}}).map
         ?.actors;
       count += Array.isArray(actors) ? actors.length : 0;
+    } catch {
+      // A file mid-edit is not a failed lesson (see `nestedIn`).
+    }
+  }
+  return count;
+}
+
+/**
+ * How many placements on the project's worlds' main maps carry a script: a
+ * workspace of their own with at least one block in it
+ * (specs/MAP_SCRIPTS_PLAN.md).
+ */
+function scriptedPlacements(files: Record<string, string>): number {
+  let count = 0;
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.endsWith('.world')) {
+      continue;
+    }
+    try {
+      const actors =
+        (
+          JSON.parse(contents) as {
+            map?: {actors?: Array<{blocks?: {blocks?: {blocks?: unknown[]}}}>};
+          }
+        ).map?.actors ?? [];
+      count += actors.filter(
+        actor => (actor.blocks?.blocks?.blocks?.length ?? 0) > 0,
+      ).length;
     } catch {
       // A file mid-edit is not a failed lesson (see `nestedIn`).
     }
