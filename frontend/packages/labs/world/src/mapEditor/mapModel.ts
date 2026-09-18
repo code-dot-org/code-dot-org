@@ -69,6 +69,155 @@ export interface Placement {
    * shape an actor file holds, or nothing (specs/MAP_FIRST.md, "The file").
    */
   blocks?: WorkspaceState;
+  /** The layer it is on, by id; absent, the default (specs/LAYERS_PLAN.md). */
+  layer?: string;
+}
+
+/** The id of the layer every map has, and an unlayered placement is on. */
+export const DEFAULT_LAYER = 'main';
+
+/** One of a layer's two images: which, how it fills, where it sits. */
+export interface MapSlotDoc {
+  /** The image's file name in `backgrounds/` — `sky.png`. */
+  sprite?: string;
+  /** Tiled across the map rather than stretched over it. */
+  repeat?: boolean;
+  offset?: Vec;
+}
+
+/**
+ * A layer as the map states it (specs/LAYERS_PLAN.md): back to front in the
+ * document's list, which is draw order. The id is minted and never changes,
+ * so a placement's `layer` survives a rename; the name is the learner's.
+ */
+export interface MapLayerDoc {
+  id: string;
+  name?: string;
+  /** How much of the camera's motion it takes, per axis; `(1, 1)` unless said. */
+  parallax?: Vec;
+  /** Fixed to the screen: it does not consult the camera at all. */
+  fit?: boolean;
+  background?: MapSlotDoc;
+  foreground?: MapSlotDoc;
+}
+
+/**
+ * The map's layers, back to front, with the default among them — at the
+ * back when the document did not place it, which is where the engine puts
+ * it (`layersOfMap`).
+ */
+export const layersOf = (doc: MapDoc): MapLayerDoc[] => {
+  const stated = doc.layers ?? [];
+  return stated.some(layer => layer.id === DEFAULT_LAYER)
+    ? stated
+    : [{id: DEFAULT_LAYER}, ...stated];
+};
+
+/** What a layer is called: its name, or for the default, "Main". */
+export const layerName = (layer: MapLayerDoc): string =>
+  layer.name?.trim() || (layer.id === DEFAULT_LAYER ? 'Main' : layer.id);
+
+/** The layer a placement is on. */
+export const layerOfPlacement = (placement: Placement): string =>
+  placement.layer ?? DEFAULT_LAYER;
+
+/** A new layer in front of the rest, and its id: the lowest `layerN` free. */
+export function addLayer(doc: MapDoc): {doc: MapDoc; id: string} {
+  const layers = layersOf(doc);
+  const taken = new Set(layers.map(layer => layer.id));
+  let n = 1;
+  while (taken.has(`layer${n}`)) {
+    n++;
+  }
+  const id = `layer${n}`;
+  return {doc: {...doc, layers: [...layers, {id, name: `Layer ${n}`}]}, id};
+}
+
+/**
+ * The map without a layer; what was on it falls back to the default, which
+ * is the one layer that cannot be removed.
+ */
+export function removeLayer(doc: MapDoc, id: string): MapDoc {
+  if (id === DEFAULT_LAYER) {
+    return doc;
+  }
+  return {
+    ...doc,
+    layers: layersOf(doc).filter(layer => layer.id !== id),
+    actors: doc.actors.map(actor =>
+      actor.layer === id ? withPlacementLayer(actor, DEFAULT_LAYER) : actor,
+    ),
+  };
+}
+
+/** The map with a layer one place nearer the front (+1) or the back (−1). */
+export function moveLayer(doc: MapDoc, id: string, by: 1 | -1): MapDoc {
+  const layers = [...layersOf(doc)];
+  const at = layers.findIndex(layer => layer.id === id);
+  const to = at + by;
+  if (at < 0 || to < 0 || to >= layers.length) {
+    return doc;
+  }
+  [layers[at], layers[to]] = [layers[to], layers[at]];
+  return {...doc, layers};
+}
+
+/** The map with one layer's own values changed. */
+export function withLayer(
+  doc: MapDoc,
+  id: string,
+  change: Partial<Omit<MapLayerDoc, 'id'>>,
+): MapDoc {
+  return {
+    ...doc,
+    layers: layersOf(doc).map(layer =>
+      layer.id === id ? {...layer, ...change} : layer,
+    ),
+  };
+}
+
+/** The map with one slot of one layer changed; an empty slot is dropped. */
+export function withSlot(
+  doc: MapDoc,
+  id: string,
+  which: 'background' | 'foreground',
+  change: Partial<MapSlotDoc>,
+): MapDoc {
+  const layer = layersOf(doc).find(held => held.id === id);
+  const next: MapSlotDoc = {...layer?.[which], ...change};
+  if (!next.sprite) {
+    delete next.sprite;
+  }
+  const empty =
+    !next.sprite && !next.repeat && !(next.offset?.x || next.offset?.y);
+  return withLayer(doc, id, {[which]: empty ? undefined : next});
+}
+
+/** A placement on a layer; the default is said by saying nothing. */
+export function withPlacementLayer(
+  placement: Placement,
+  id: string,
+): Placement {
+  const rest: Placement = {...placement};
+  delete rest.layer;
+  return id === DEFAULT_LAYER ? rest : {...rest, layer: id};
+}
+
+/**
+ * The placements in the order they are drawn: by their layer's depth, then
+ * as the document lists them — what the engine does, since a layer is a
+ * container and placement order is draw order within one.
+ */
+export function drawOrder(doc: MapDoc): Placement[] {
+  const depth = new Map(layersOf(doc).map((layer, index) => [layer.id, index]));
+  return doc.actors
+    .map((actor, index) => ({actor, index}))
+    .sort(
+      (a, b) =>
+        (depth.get(layerOfPlacement(a.actor)) ?? 0) -
+          (depth.get(layerOfPlacement(b.actor)) ?? 0) || a.index - b.index,
+    )
+    .map(({actor}) => actor);
 }
 
 /** A Blockly workspace as serialized — `{blocks: {blocks: […]}, …}`. */
@@ -138,6 +287,8 @@ export interface MapDoc {
   actors: Placement[];
   /** The map's own workspace: its events and the map hats, or nothing. */
   blocks?: WorkspaceState;
+  /** The map's layers, back to front; absent, the one default. */
+  layers?: MapLayerDoc[];
 }
 /** The camera: screen_px = world * scale + offset (offset in CSS pixels). */
 export interface View {
@@ -198,6 +349,13 @@ export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
     },
     actors: Array.isArray(raw.actors) ? raw.actors : [],
     ...(raw.blocks ? {blocks: raw.blocks} : {}),
+    ...(Array.isArray(raw.layers) && raw.layers.length
+      ? {
+          layers: raw.layers.filter(
+            layer => layer && typeof layer.id === 'string',
+          ),
+        }
+      : {}),
   };
 }
 

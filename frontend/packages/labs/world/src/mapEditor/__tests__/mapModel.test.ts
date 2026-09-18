@@ -10,9 +10,19 @@ import {describe, expect, it} from 'vitest';
 
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 import {
+  addLayer,
   clampTiles,
+  drawOrder,
   extentOf,
   hasScript,
+  layerName,
+  layerOfPlacement,
+  layersOf,
+  moveLayer,
+  removeLayer,
+  withLayer,
+  withPlacementLayer,
+  withSlot,
   renamePlacementReferences,
   MAX_MAP_TILES,
   MIN_MAP_TILES,
@@ -539,5 +549,97 @@ describe('a placement’s workspace', () => {
     expect(renamed.actors[2].blocks).toEqual(naming('Quit'));
     expect(renamed.actors[0]).toBe(map.actors[0]);
     expect(map.actors[1].blocks).toEqual(naming('Pause'));
+  });
+});
+
+describe('a map’s layers', () => {
+  const base = (): MapDoc => ({
+    type: 'map',
+    size: {width: 10, height: 10},
+    tile: {width: 32, height: 32},
+    actors: [
+      {type: 'actors/coin', id: 'a'},
+      {type: 'actors/coin', id: 'b', layer: 'layer1'},
+      {type: 'actors/coin', id: 'c'},
+    ],
+    layers: [{id: 'layer1', name: 'Sky'}, {id: 'main'}],
+  });
+
+  it('always has the default, at the back unless the map places it', () => {
+    expect(layersOf({...base(), layers: undefined}).map(l => l.id)).toEqual([
+      'main',
+    ]);
+    expect(
+      layersOf({...base(), layers: [{id: 'layer1'}]}).map(l => l.id),
+    ).toEqual(['main', 'layer1']);
+    expect(layersOf(base()).map(l => l.id)).toEqual(['layer1', 'main']);
+  });
+
+  it('is kept through parseMap, with a placement’s layer', () => {
+    const map = parseMap(JSON.stringify(base()));
+    expect(map.layers).toEqual(base().layers);
+    expect(map.actors[1].layer).toBe('layer1');
+    // A map that says nothing keeps saying nothing.
+    expect(parseMap('{"type":"map","actors":[]}').layers).toBeUndefined();
+  });
+
+  it('names a layer by its name, and the default when it has none', () => {
+    expect(layerName({id: 'layer1', name: 'Sky'})).toBe('Sky');
+    expect(layerName({id: 'main'})).toBe('Main');
+    expect(layerName({id: 'layer2'})).toBe('layer2');
+  });
+
+  it('adds one in front, under the lowest id free', () => {
+    const {doc, id} = addLayer(base());
+    expect(id).toBe('layer2');
+    expect(layersOf(doc).map(l => l.id)).toEqual(['layer1', 'main', 'layer2']);
+    expect(layersOf(doc).at(-1)!.name).toBe('Layer 2');
+  });
+
+  it('removes one, its placements falling back to the default', () => {
+    const next = removeLayer(base(), 'layer1');
+    expect(layersOf(next).map(l => l.id)).toEqual(['main']);
+    expect(next.actors[1]).toEqual({type: 'actors/coin', id: 'b'});
+    // …and never the default.
+    expect(removeLayer(base(), 'main')).toEqual(base());
+  });
+
+  it('moves one nearer the front or the back, and stops at the ends', () => {
+    expect(layersOf(moveLayer(base(), 'layer1', 1)).map(l => l.id)).toEqual([
+      'main',
+      'layer1',
+    ]);
+    expect(moveLayer(base(), 'layer1', -1)).toEqual(base());
+  });
+
+  it('changes a layer’s own values, and a slot’s', () => {
+    const moved = withLayer(base(), 'layer1', {parallax: {x: 0.2, y: 0}});
+    expect(layersOf(moved)[0].parallax).toEqual({x: 0.2, y: 0});
+
+    const drawn = withSlot(base(), 'layer1', 'background', {sprite: 'sky.png'});
+    expect(layersOf(drawn)[0].background).toEqual({sprite: 'sky.png'});
+    // A slot with nothing left to say is dropped from the document.
+    const cleared = withSlot(drawn, 'layer1', 'background', {sprite: ''});
+    expect(layersOf(cleared)[0].background).toBeUndefined();
+    // A change to a map with no list yet makes the list.
+    const first = withSlot(
+      {...base(), layers: undefined},
+      'main',
+      'foreground',
+      {
+        repeat: true,
+      },
+    );
+    expect(first.layers).toEqual([{id: 'main', foreground: {repeat: true}}]);
+  });
+
+  it('puts a placement on a layer, the default by saying nothing', () => {
+    expect(withPlacementLayer(base().actors[0], 'layer1').layer).toBe('layer1');
+    expect('layer' in withPlacementLayer(base().actors[1], 'main')).toBe(false);
+    expect(layerOfPlacement(base().actors[0])).toBe('main');
+  });
+
+  it('draws by layer depth, then as the document lists them', () => {
+    expect(drawOrder(base()).map(actor => actor.id)).toEqual(['b', 'a', 'c']);
   });
 });

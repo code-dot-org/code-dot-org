@@ -35,6 +35,8 @@ import {placementKey} from '../blockly/mapPlacements';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 
+import {LayerInspector} from './LayerInspector';
+import {LayerPanel} from './LayerPanel';
 import styles from './mapEditor.module.css';
 import {
   asVec,
@@ -52,9 +54,20 @@ import {
   type Size,
   type Vec,
   type View,
+  addLayer,
+  DEFAULT_LAYER,
   hasScript,
+  layerName,
+  layerOfPlacement,
+  layersOf,
+  moveLayer,
   parentIdOf,
+  removeLayer,
   renamePlacementReferences,
+  withLayer,
+  withPlacementLayer,
+  withSlot,
+  type MapSlotDoc,
   toLocalPosition,
   withParent,
   worldTransformOf,
@@ -175,6 +188,13 @@ export interface MapStageProps {
    */
   heldMaps?: Readonly<Record<string, MapDoc>>;
   /**
+   * The project's backgrounds, by file name, for a layer's two slots — and
+   * the same images decoded, so the canvas can draw the one a slot names
+   * (specs/LAYERS_PLAN.md).
+   */
+  backgroundChoices?: readonly string[];
+  backgroundImages?: Readonly<Record<string, HTMLImageElement>>;
+  /**
    * The window this map will be seen through, in pixels — see the guide below.
    *
    * Given by the caller rather than read from the constant, because a world
@@ -204,6 +224,8 @@ export const MapStage = ({
   world,
   mapChoices,
   heldMaps,
+  backgroundChoices,
+  backgroundImages,
   placing,
   thumbnails,
   pictures,
@@ -236,6 +258,20 @@ export const MapStage = ({
    * crowded level.
    */
   const [showIcons, setShowIcons] = useState(true);
+  /**
+   * The layer a new placement lands on, and the one the strip shows as
+   * selected; and whether its inspector is open, which it is from a click on
+   * its row until it is closed or a placement is selected.
+   */
+  const [selectedLayer, setSelectedLayer] = useState(DEFAULT_LAYER);
+  const [inspectingLayer, setInspectingLayer] = useState(false);
+  // A placement selected closes the layer's inspector, so deselecting it
+  // goes back to the world's rather than to a layer nobody asked for again.
+  useEffect(() => {
+    if (selectedId) {
+      setInspectingLayer(false);
+    }
+  }, [selectedId]);
   /**
    * The actor-typed property being POINTED at something, if any.
    *
@@ -431,6 +467,10 @@ export const MapStage = ({
   const selectedActor = selectedId
     ? (map.actors.find(a => a.id === selectedId) ?? null)
     : null;
+  /** The layer whose inspector is open, if the map still has it. */
+  const inspectedLayer = layersOf(map).find(
+    layer => layer.id === selectedLayer,
+  );
   // The selected type's editable schema (trait groups), introspected in the
   // sandbox; empty until it arrives, or `[]` when nothing is selected.
   const selectedSchema: ActorSchema = selectedActor
@@ -1276,11 +1316,17 @@ export const MapStage = ({
       ...map,
       actors: [
         ...map.actors,
-        {
-          type: selected,
-          id: `${name}-${crypto.randomUUID().slice(0, 8)}`,
-          properties: {positional: {position: pos}},
-        },
+        withPlacementLayer(
+          {
+            type: selected,
+            id: `${name}-${crypto.randomUUID().slice(0, 8)}`,
+            properties: {positional: {position: pos}},
+          },
+          // On the layer the strip has selected, if the map still has it.
+          layersOf(map).some(layer => layer.id === selectedLayer)
+            ? selectedLayer
+            : DEFAULT_LAYER,
+        ),
       ],
     });
   };
@@ -1527,30 +1573,67 @@ export const MapStage = ({
     let hoveredKey: string | undefined;
     const transformById = new Map<string, Transform>();
     const keyById = new Map<string, string | undefined>();
-    for (const actor of map.actors) {
-      if (!positionOf(actor)) {
-        continue;
+    // LAYER BY LAYER, back to front, which is how the game draws them
+    // (specs/LAYERS_PLAN.md): a layer's background, then what is placed on
+    // it in the document's order, then its foreground. A placement naming a
+    // layer the map no longer has is on the default, as the engine puts it.
+    const layers = layersOf(map);
+    const known = new Set(layers.map(layer => layer.id));
+    /** One slot's image over the map: stretched to it, or tiled across it. */
+    const drawSlot = (slot: MapSlotDoc | undefined) => {
+      const image = slot?.sprite ? backgroundImages?.[slot.sprite] : undefined;
+      if (!slot || !image) {
+        return;
       }
-      // Through the parent, so a child sits where the engine will put it and
-      // a dragged parent brings its children (specs/PARENTING.md).
-      const t = worldTransformOf(actor, map.actors, scales);
-      const key = placementKey(actor.type, actor.properties);
-      drawSprite(actor.type, t, 1, key, actor.id);
-      transformById.set(actor.id, t);
-      keyById.set(actor.id, key);
-      if (showIcons && hasScript(actor.blocks)) {
-        markScripted(t, actor.type, key, actor.id);
+      const ox = slot.offset?.x ?? 0;
+      const oy = slot.offset?.y ?? 0;
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(0, 0, extent.w, extent.h);
+      ctx.clip();
+      if (slot.repeat) {
+        const pattern = ctx.createPattern(image, 'repeat');
+        if (pattern) {
+          ctx.translate(ox, oy);
+          ctx.fillStyle = pattern;
+          ctx.fillRect(-ox, -oy, extent.w, extent.h);
+        }
+      } else {
+        ctx.drawImage(image, ox, oy, extent.w, extent.h);
       }
-      if (actor.id === selectedId) {
-        selectedTransform = t;
-        selectedType = actor.type;
-        selectedKey = key;
+      ctx.restore();
+    };
+    for (const layer of layers) {
+      drawSlot(layer.background);
+      for (const actor of map.actors) {
+        const on = known.has(layerOfPlacement(actor))
+          ? layerOfPlacement(actor)
+          : DEFAULT_LAYER;
+        if (on !== layer.id || !positionOf(actor)) {
+          continue;
+        }
+        // Through the parent, so a child sits where the engine will put it
+        // and a dragged parent brings its children (specs/PARENTING.md).
+        const t = worldTransformOf(actor, map.actors, scales);
+        const key = placementKey(actor.type, actor.properties);
+        drawSprite(actor.type, t, 1, key, actor.id);
+        transformById.set(actor.id, t);
+        keyById.set(actor.id, key);
+        if (showIcons && hasScript(actor.blocks)) {
+          markScripted(t, actor.type, key, actor.id);
+        }
+        if (actor.id === selectedId) {
+          selectedTransform = t;
+          selectedType = actor.type;
+          selectedKey = key;
+        }
+        if (actor.id === hoveredId) {
+          hoveredTransform = t;
+          hoveredType = actor.type;
+          hoveredKey = key;
+        }
       }
-      if (actor.id === hoveredId) {
-        hoveredTransform = t;
-        hoveredType = actor.type;
-        hoveredKey = key;
-      }
+      drawSlot(layer.foreground);
     }
     // Hover highlight (a lighter outline), drawn under the selection outline and
     // skipped when the hovered actor is already the selected one.
@@ -1660,6 +1743,8 @@ export const MapStage = ({
     showIcons,
     // …and what each Viewport holds, which changes with the files.
     heldMaps,
+    // …and a slot's image, which arrives decoded after the first paint.
+    backgroundImages,
   ]);
 
   const canvasClass = [
@@ -1720,7 +1805,46 @@ export const MapStage = ({
           </button>
         )}
       </div>
-      {!selectedActor && world && (
+      <LayerPanel
+        layers={layersOf(map)}
+        selected={selectedLayer}
+        onSelect={id => {
+          setSelectedLayer(id);
+          setInspectingLayer(true);
+          setSelectedId(null);
+        }}
+        onAdd={() => {
+          const made = addLayer(mapRef.current);
+          commit(made.doc);
+          setSelectedLayer(made.id);
+          setInspectingLayer(true);
+          setSelectedId(null);
+        }}
+        onRemove={id => {
+          commit(removeLayer(mapRef.current, id));
+          setSelectedLayer(DEFAULT_LAYER);
+        }}
+        onMove={(id, by) => commit(moveLayer(mapRef.current, id, by))}
+        isReadOnly={isReadOnly}
+      />
+      {!selectedActor && inspectingLayer && inspectedLayer && (
+        <LayerInspector
+          // Re-keyed on what the document says, so a change from outside —
+          // and a different layer — is what the fields show.
+          key={JSON.stringify(inspectedLayer)}
+          layer={inspectedLayer}
+          backgrounds={backgroundChoices ?? []}
+          onChange={change =>
+            commit(withLayer(mapRef.current, inspectedLayer.id, change))
+          }
+          onSlot={(which, change) =>
+            commit(withSlot(mapRef.current, inspectedLayer.id, which, change))
+          }
+          onClose={() => setInspectingLayer(false)}
+          isReadOnly={isReadOnly}
+        />
+      )}
+      {!selectedActor && !(inspectingLayer && inspectedLayer) && world && (
         <WorldInspector
           // Re-keyed on what the file says, so a change from outside — the
           // World view, a version restored — is what the fields show.
@@ -1767,6 +1891,30 @@ export const MapStage = ({
             onBlur={applyRename}
             onKeyDown={blurOnEnter}
           />
+          {layersOf(map).length > 1 && (
+            <SimpleDropdown
+              name="actor-layer"
+              labelText="Layer"
+              size="s"
+              className={styles.inspectorDropdown}
+              disabled={isReadOnly}
+              selectedValue={layerOfPlacement(selectedActor)}
+              items={[...layersOf(map)].reverse().map(layer => ({
+                value: layer.id,
+                text: layerName(layer),
+              }))}
+              onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+                commit({
+                  ...mapRef.current,
+                  actors: mapRef.current.actors.map(actor =>
+                    actor.id === selectedActor.id
+                      ? withPlacementLayer(actor, event.target.value)
+                      : actor,
+                  ),
+                })
+              }
+            />
+          )}
           {selectedSchema.length > 0 && (
             <Accordion
               className={styles.inspectorAccordion}

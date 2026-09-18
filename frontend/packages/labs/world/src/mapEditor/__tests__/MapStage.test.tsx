@@ -769,3 +769,145 @@ describe('a Viewport on the map', () => {
     ).toBe(true);
   });
 });
+
+describe('the map’s layers', () => {
+  /** `a` on the default, `b` on a Sky behind it. */
+  const layered = (): MapDoc => {
+    const map = doc();
+    map.layers = [{id: 'layer1', name: 'Sky'}, {id: 'main'}];
+    map.actors[1].layer = 'layer1';
+    return map;
+  };
+
+  it('lists them front first, and adds one in front', () => {
+    const {written, ...view} = mount(layered());
+    const rows = () =>
+      [
+        ...view
+          .getByRole('list', {name: 'Layers, front first'})
+          .querySelectorAll('button'),
+      ].map(button => button.textContent);
+    expect(rows()).toEqual(['Main', 'Sky']);
+
+    fireEvent.click(view.getByRole('button', {name: 'Add'}));
+
+    expect(written().layers!.map(layer => layer.id)).toEqual([
+      'layer1',
+      'main',
+      'layer2',
+    ]);
+  });
+
+  it('opens a layer’s inspector from its row, and writes what is set', () => {
+    const {written, ...view} = mount(layered(), {
+      backgroundChoices: ['sky.png', 'hills.png'],
+    });
+    fireEvent.click(view.getByRole('button', {name: 'Sky'}));
+    expect(view.getByTestId('layer-inspector')).toBeInTheDocument();
+
+    const background = view.container.querySelector(
+      'select[name="layer-background"]',
+    ) as HTMLSelectElement;
+    expect([...background.options].map(option => option.text)).toEqual([
+      '(none)',
+      'sky.png',
+      'hills.png',
+    ]);
+    fireEvent.change(background, {target: {value: 'sky.png'}});
+    expect(written().layers![0].background).toEqual({sprite: 'sky.png'});
+
+    const movesX = view.container.querySelector(
+      'input[name="layer-parallax-x"]',
+    ) as HTMLInputElement;
+    fireEvent.change(movesX, {target: {value: '0.2'}});
+    fireEvent.blur(movesX);
+    expect(written().layers![0].parallax).toEqual({x: 0.2, y: 1});
+
+    fireEvent.click(view.getByRole('button', {name: 'Close'}));
+    expect(view.queryByTestId('layer-inspector')).toBeNull();
+  });
+
+  it('removes the selected one, and never the default', () => {
+    const {written, ...view} = mount(layered());
+    expect(view.getByRole('button', {name: 'Remove'})).toBeDisabled();
+
+    fireEvent.click(view.getByRole('button', {name: 'Sky'}));
+    fireEvent.click(view.getByRole('button', {name: 'Remove'}));
+
+    expect(written().layers!.map(layer => layer.id)).toEqual(['main']);
+    expect(written().actors[1].layer).toBeUndefined();
+  });
+
+  it('moves the selected one forward', () => {
+    const {written, ...view} = mount(layered());
+    fireEvent.click(view.getByRole('button', {name: 'Sky'}));
+    fireEvent.click(view.getByRole('button', {name: 'Move layer forward'}));
+    expect(written().layers!.map(layer => layer.id)).toEqual([
+      'main',
+      'layer1',
+    ]);
+  });
+
+  it('places a new actor on the selected layer', () => {
+    const map = layered();
+    const {canvas, written, ...view} = mount(map, {placing: 'actors/coin'});
+    fireEvent.click(view.getByRole('button', {name: 'Sky'}));
+
+    const at = screenPoint(map, {x: 6 * 32 + 5, y: 7 * 32 + 20});
+    fireEvent.click(canvas, {clientX: at.x, clientY: at.y});
+
+    expect(written().actors.at(-1)!.layer).toBe('layer1');
+  });
+
+  it('moves a placement to another layer from its inspector', () => {
+    const map = layered();
+    const {canvas, written, ...view} = mount(map);
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+
+    const select = view.container.querySelector(
+      'select[name="actor-layer"]',
+    ) as HTMLSelectElement;
+    expect(select.value).toBe('main');
+    fireEvent.change(select, {target: {value: 'layer1'}});
+
+    expect(written().actors.find(actor => actor.id === 'a')!.layer).toBe(
+      'layer1',
+    );
+  });
+
+  it('offers no layer for a placement on a map with only the default', () => {
+    const map = doc();
+    const {canvas, ...view} = mount(map);
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(
+      view.container.querySelector('select[name="actor-layer"]'),
+    ).toBeNull();
+  });
+
+  it('draws a layer’s background before what is on it, back to front', () => {
+    const map = layered();
+    map.layers![0].background = {sprite: 'sky.png'};
+    const sky = {width: 64, height: 64} as HTMLImageElement;
+    mount(map, {backgroundImages: {'sky.png': sky}});
+
+    const frame = lastFrame();
+    const backdrop = frame.findIndex(
+      call => call.method === 'drawImage' && call.args[0] === sky,
+    );
+    expect(backdrop).toBeGreaterThan(-1);
+    // Stretched over the map's rectangle, which is 320 square here.
+    expect(frame[backdrop].args.slice(1)).toEqual([0, 0, 320, 320]);
+    // `b` is on the Sky and `a` on the default in front of it: two
+    // placeholders — the stage's green stand-in for a kind with no picture —
+    // both after the backdrop.
+    const sprites = frame
+      .map((call, index) => ({call, index}))
+      .filter(
+        ({call}) => call.method === 'fillRect' && call.fillStyle === '#33cc66',
+      );
+    expect(sprites).toHaveLength(2);
+    expect(sprites.every(({index}) => index > backdrop)).toBe(true);
+  });
+});

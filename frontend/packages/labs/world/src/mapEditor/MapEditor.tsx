@@ -15,6 +15,7 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
 import {actorIconImage} from '../blockly/actorIcons';
@@ -29,7 +30,11 @@ import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import {agreedViewSize} from '../runtime/declaredSizes';
 import {browserTextMetrics} from '../runtime/driver/textMetrics';
 import type {ActorSchema} from '../runtime/messages';
-import {filePath, projectFiles} from '../runtime/projectFiles';
+import {
+  filePath,
+  projectFiles,
+  projectImagePaths,
+} from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {
@@ -337,6 +342,16 @@ export const MapEditor = ({
     setFileText(written);
     onChange(written);
   };
+  /** The project's backgrounds by file name, for a layer's two slots. */
+  const backgroundChoices = useMemo(
+    () =>
+      projectImagePaths(currentSources.source)
+        .filter(isBackgroundPath)
+        .map(path => path.split('/').pop() ?? path)
+        .sort(),
+    [currentSources],
+  );
+
   const heldMaps = useMemo(() => {
     const held: Record<string, MapDoc> = {};
     for (const actor of map.actors) {
@@ -539,6 +554,8 @@ export const MapEditor = ({
         world={worldInspector}
         mapChoices={mapChoices}
         heldMaps={heldMaps}
+        backgroundChoices={backgroundChoices}
+        backgroundImages={images}
       />
     </div>
   );
