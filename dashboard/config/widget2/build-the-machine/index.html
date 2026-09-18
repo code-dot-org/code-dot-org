@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build the Machine</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+
+  <symbol id="art-board" viewBox="0 0 1000 780">
+    <rect class="a-board" x="16" y="16" width="968" height="748" rx="22" stroke-width="6"/>
+    <g class="a-hole" fill="none" stroke-width="4">
+      <circle cx="58" cy="58" r="10"/>
+      <circle cx="942" cy="58" r="10"/>
+      <circle cx="58" cy="722" r="10"/>
+      <circle cx="942" cy="722" r="10"/>
+    </g>
+    <g class="a-trace" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M176 124 H200"/>
+      <path d="M176 228 H200"/>
+      <path d="M176 354 H188 V566 H430 V520 H560"/>
+      <path d="M176 458 H196 V582 H452 V534 H560"/>
+      <path d="M470 140 H620 V100 H700"/>
+      <path d="M470 220 H650 V230 H700"/>
+      <path d="M340 340 V420 H520 V470 H560"/>
+      <path d="M620 550 V600"/>
+      <path d="M680 470 H817 V400"/>
+      <path d="M586 460 H654 M586 486 H654 M586 512 H654"/>
+      <path d="M680 520 H920 V484"/>
+    </g>
+    <g class="a-chip" stroke-width="4">
+      <rect x="560" y="430" width="120" height="120" rx="12"/>
+    </g>
+    <g class="a-socket" stroke-width="6">
+      <rect x="20" y="76" width="156" height="96" rx="9"/>
+      <rect x="20" y="180" width="156" height="96" rx="9"/>
+      <rect x="20" y="306" width="156" height="96" rx="9"/>
+      <rect x="20" y="410" width="156" height="96" rx="9"/>
+      <rect x="200" y="70" width="270" height="270" rx="10"/>
+      <rect x="700" y="70" width="54" height="330" rx="7"/>
+      <rect x="790" y="70" width="54" height="330" rx="7"/>
+      <rect x="200" y="420" width="200" height="44" rx="7"/>
+      <rect x="150" y="600" width="560" height="54" rx="7"/>
+      <rect x="856" y="440" width="88" height="44" rx="7"/>
+    </g>
+    <g class="a-recess" stroke-width="4">
+      <rect x="36" y="92" width="124" height="64" rx="6"/>
+      <rect x="36" y="196" width="124" height="64" rx="6"/>
+      <rect x="36" y="322" width="124" height="64" rx="6"/>
+      <rect x="36" y="426" width="124" height="64" rx="6"/>
+      <rect x="238" y="108" width="194" height="194" rx="6"/>
+      <rect x="714" y="102" width="26" height="266" rx="4"/>
+      <rect x="804" y="102" width="26" height="266" rx="4"/>
+      <rect x="216" y="434" width="146" height="16" rx="4"/>
+      <rect x="168" y="618" width="90" height="20" rx="4"/>
+      <rect x="276" y="618" width="416" height="20" rx="4"/>
+      <rect x="868" y="452" width="64" height="20" rx="4"/>
+    </g>
+    <g class="a-chip" stroke-width="4">
+      <rect x="286" y="56" width="46" height="18" rx="4"/>
+      <rect x="342" y="56" width="46" height="18" rx="4"/>
+      <rect x="706" y="76" width="42" height="20" rx="4"/>
+      <rect x="706" y="374" width="42" height="20" rx="4"/>
+      <rect x="796" y="76" width="42" height="20" rx="4"/>
+      <rect x="796" y="374" width="42" height="20" rx="4"/>
+      <rect x="712" y="606" width="34" height="42" rx="6"/>
+    </g>
+    <g class="a-accent">
+      <rect x="252" y="122" width="26" height="26" rx="4"/>
+      <rect x="720" y="222" width="14" height="30" rx="3"/>
+      <rect x="810" y="222" width="14" height="30" rx="3"/>
+      <circle cx="380" cy="442" r="10"/>
+      <rect x="264" y="614" width="8" height="28" rx="3"/>
+      <rect x="24" y="118" width="8" height="12" rx="2"/>
+      <rect x="24" y="222" width="8" height="12" rx="2"/>
+      <rect x="164" y="348" width="8" height="12" rx="2"/>
+      <rect x="164" y="452" width="8" height="12" rx="2"/>
+    </g>
+  </symbol>
+
+  <symbol id="art-chipset" viewBox="0 0 240 240">
+    <g class="a-pin" stroke-width="7" stroke-linecap="round">
+      <path d="M70 44V22M110 44V22M150 44V22M190 44V22"/>
+      <path d="M70 196v22M110 196v22M150 196v22M190 196v22"/>
+      <path d="M44 70H22M44 110H22M44 150H22M44 190H22"/>
+    </g>
+    <rect class="a-chip" x="44" y="44" width="152" height="152" rx="12" stroke-width="6"/>
+    <rect class="a-recess" x="74" y="74" width="92" height="92" rx="8" stroke-width="4"/>
+    <rect class="a-accent" x="56" y="56" width="16" height="16" rx="3"/>
+  </symbol>
+
+  <symbol id="art-warn" viewBox="0 0 24 24">
+    <path d="M12 3.2 22.4 20.8H1.6Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M12 9.4v4.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="12" cy="17.6" r="1.35" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="art-check" viewBox="0 0 24 24">
+    <path d="M4 12.6 9.4 18 20 6.4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="art-power" viewBox="0 0 48 48">
+    <path d="M32.6 11.7A15 15 0 1 1 15.4 11.7" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    <path d="M24 5.5V22" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="art-cpu" viewBox="0 0 240 240">
+    <g class="a-pin" stroke-width="7" stroke-linecap="round">
+      <path d="M70 40V18M105 40V18M140 40V18M175 40V18"/>
+      <path d="M70 200v22M105 200v22M140 200v22M175 200v22"/>
+      <path d="M40 70H18M40 105H18M40 140H18M40 175H18"/>
+      <path d="M200 70h22M200 105h22M200 140h22M200 175h22"/>
+    </g>
+    <rect class="a-part" x="40" y="40" width="160" height="160" rx="10" stroke-width="6"/>
+    <rect class="a-face" x="82" y="82" width="76" height="76" rx="6" stroke-width="5"/>
+    <rect class="a-accent" x="54" y="54" width="18" height="18" rx="4"/>
+  </symbol>
+
+  <symbol id="art-gpu" viewBox="0 0 340 200">
+    <rect class="a-part" x="58" y="34" width="252" height="130" rx="10" stroke-width="6"/>
+    <circle class="a-face" cx="140" cy="99" r="40" stroke-width="5"/>
+    <circle class="a-face" cx="246" cy="99" r="40" stroke-width="5"/>
+    <g class="a-blade" fill="none" stroke-width="5" stroke-linecap="round">
+      <path d="M140 69v18M158 110l-18-11M122 110l18-11"/>
+      <path d="M246 69v18M264 110l-18-11M228 110l18-11"/>
+    </g>
+    <circle class="a-dark" cx="140" cy="99" r="9"/>
+    <circle class="a-dark" cx="246" cy="99" r="9"/>
+    <rect class="a-part" x="16" y="22" width="42" height="154" rx="8" stroke-width="6"/>
+    <g class="a-recess" stroke-width="4">
+      <rect x="28" y="46" width="18" height="42" rx="4"/>
+      <rect x="28" y="106" width="18" height="42" rx="4"/>
+    </g>
+    <rect class="a-accent" x="92" y="164" width="130" height="16" rx="4"/>
+  </symbol>
+
+  <symbol id="art-ram" viewBox="0 0 340 130">
+    <rect class="a-part" x="18" y="20" width="304" height="72" rx="8" stroke-width="6"/>
+    <g class="a-dark">
+      <rect x="42" y="38" width="34" height="36" rx="4"/>
+      <rect x="88" y="38" width="34" height="36" rx="4"/>
+      <rect x="134" y="38" width="34" height="36" rx="4"/>
+      <rect x="180" y="38" width="34" height="36" rx="4"/>
+      <rect x="226" y="38" width="34" height="36" rx="4"/>
+      <rect x="272" y="38" width="34" height="36" rx="4"/>
+    </g>
+    <rect class="a-face" x="40" y="92" width="82" height="18" rx="3" stroke-width="4"/>
+    <rect class="a-face" x="146" y="92" width="172" height="18" rx="3" stroke-width="4"/>
+    <rect class="a-accent" x="128" y="90" width="12" height="22" rx="3"/>
+  </symbol>
+
+  <symbol id="art-ssd" viewBox="0 0 340 130">
+    <rect class="a-part" x="52" y="38" width="256" height="54" rx="8" stroke-width="6"/>
+    <g class="a-dark">
+      <rect x="90" y="52" width="52" height="26" rx="4"/>
+      <rect x="154" y="52" width="52" height="26" rx="4"/>
+      <rect x="218" y="52" width="34" height="26" rx="4"/>
+    </g>
+    <rect class="a-face" x="16" y="46" width="42" height="38" rx="4" stroke-width="5"/>
+    <rect class="a-accent" x="24" y="54" width="10" height="22" rx="2"/>
+    <circle class="a-accent" cx="288" cy="65" r="11"/>
+  </symbol>
+
+  <symbol id="art-hdd" viewBox="0 0 340 160">
+    <rect class="a-part" x="24" y="24" width="292" height="112" rx="10" stroke-width="6"/>
+    <circle class="a-face" cx="132" cy="80" r="44" stroke-width="5"/>
+    <circle class="a-dark" cx="132" cy="80" r="13"/>
+    <circle class="a-dark" cx="268" cy="44" r="10"/>
+    <path class="a-blade" fill="none" stroke-width="7" stroke-linecap="round" d="M266 46 172 70"/>
+    <rect class="a-accent" x="240" y="106" width="52" height="14" rx="4"/>
+  </symbol>
+
+  <symbol id="art-camera" viewBox="0 0 240 200">
+    <rect class="a-part" x="34" y="46" width="172" height="110" rx="26" stroke-width="6"/>
+    <circle class="a-face" cx="120" cy="101" r="42" stroke-width="5"/>
+    <circle class="a-dark" cx="120" cy="101" r="20"/>
+    <circle class="a-accent" cx="176" cy="70" r="9"/>
+    <path class="a-pin" d="M120 156v20M84 176h72" fill="none" stroke-width="7" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="art-keyboard" viewBox="0 0 340 160">
+    <rect class="a-part" x="14" y="26" width="312" height="108" rx="12" stroke-width="6"/>
+    <g class="a-key" stroke-width="4">
+      <rect x="34" y="44" width="26" height="22" rx="4"/>
+      <rect x="68" y="44" width="26" height="22" rx="4"/>
+      <rect x="102" y="44" width="26" height="22" rx="4"/>
+      <rect x="136" y="44" width="26" height="22" rx="4"/>
+      <rect x="170" y="44" width="26" height="22" rx="4"/>
+      <rect x="204" y="44" width="26" height="22" rx="4"/>
+      <rect x="238" y="44" width="26" height="22" rx="4"/>
+      <rect x="272" y="44" width="34" height="22" rx="4"/>
+      <rect x="34" y="74" width="26" height="22" rx="4"/>
+      <rect x="68" y="74" width="26" height="22" rx="4"/>
+      <rect x="102" y="74" width="26" height="22" rx="4"/>
+      <rect x="136" y="74" width="26" height="22" rx="4"/>
+      <rect x="170" y="74" width="26" height="22" rx="4"/>
+      <rect x="204" y="74" width="26" height="22" rx="4"/>
+      <rect x="238" y="74" width="68" height="22" rx="4"/>
+      <rect x="34" y="104" width="46" height="20" rx="4"/>
+      <rect x="88" y="104" width="164" height="20" rx="4"/>
+      <rect x="260" y="104" width="46" height="20" rx="4"/>
+    </g>
+  </symbol>
+
+  <symbol id="art-monitor" viewBox="0 0 260 220">
+    <rect class="a-part" x="16" y="18" width="228" height="146" rx="12" stroke-width="6"/>
+    <rect class="a-dark" x="38" y="40" width="184" height="102" rx="6"/>
+    <rect class="a-part" x="112" y="164" width="36" height="28" stroke-width="6"/>
+    <rect class="a-part" x="72" y="188" width="116" height="18" rx="8" stroke-width="6"/>
+    <circle class="a-accent" cx="130" cy="153" r="6"/>
+  </symbol>
+
+  <symbol id="art-speakers" viewBox="0 0 240 200">
+    <rect class="a-part" x="26" y="20" width="76" height="164" rx="10" stroke-width="6"/>
+    <rect class="a-part" x="138" y="20" width="76" height="164" rx="10" stroke-width="6"/>
+    <circle class="a-face" cx="64" cy="132" r="26" stroke-width="5"/>
+    <circle class="a-face" cx="176" cy="132" r="26" stroke-width="5"/>
+    <circle class="a-dark" cx="64" cy="132" r="10"/>
+    <circle class="a-dark" cx="176" cy="132" r="10"/>
+    <circle class="a-face" cx="64" cy="66" r="14" stroke-width="5"/>
+    <circle class="a-face" cx="176" cy="66" r="14" stroke-width="5"/>
+    <circle class="a-accent" cx="64" cy="168" r="6"/>
+  </symbol>
+
+  <symbol id="seat-cpu" viewBox="0 0 1000 780">
+    <rect class="a-part" x="242" y="112" width="186" height="186" rx="8" stroke-width="6"/>
+    <rect class="a-face" x="282" y="152" width="106" height="106" rx="6" stroke-width="5"/>
+    <rect class="a-accent" x="254" y="124" width="22" height="22" rx="4"/>
+    <g class="a-chip" stroke-width="4">
+      <rect x="286" y="56" width="46" height="18" rx="4"/>
+      <rect x="342" y="56" width="46" height="18" rx="4"/>
+    </g>
+  </symbol>
+
+  <symbol id="seat-ram" viewBox="0 0 1000 780">
+    <rect class="a-part" x="706" y="82" width="42" height="306" rx="6" stroke-width="6"/>
+    <g class="a-dark">
+      <rect x="714" y="100" width="26" height="10" rx="3"/>
+      <rect x="714" y="124" width="26" height="10" rx="3"/>
+      <rect x="714" y="148" width="26" height="10" rx="3"/>
+      <rect x="714" y="172" width="26" height="10" rx="3"/>
+      <rect x="714" y="196" width="26" height="10" rx="3"/>
+      <rect x="714" y="220" width="26" height="10" rx="3"/>
+      <rect x="714" y="244" width="26" height="10" rx="3"/>
+      <rect x="714" y="268" width="26" height="10" rx="3"/>
+      <rect x="714" y="292" width="26" height="10" rx="3"/>
+      <rect x="714" y="316" width="26" height="10" rx="3"/>
+      <rect x="714" y="340" width="26" height="10" rx="3"/>
+    </g>
+    <g class="a-chip" stroke-width="4">
+      <rect x="706" y="76" width="42" height="20" rx="4"/>
+      <rect x="706" y="374" width="42" height="20" rx="4"/>
+    </g>
+  </symbol>
+
+  <symbol id="seat-gpu" viewBox="0 0 1000 780">
+    <g class="a-chip" stroke-width="5">
+      <rect x="400" y="556" width="54" height="26" rx="5"/>
+      <rect x="466" y="556" width="54" height="26" rx="5"/>
+    </g>
+    <rect class="a-part" x="162" y="578" width="618" height="98" rx="8" stroke-width="6"/>
+    <rect class="a-face" x="192" y="598" width="558" height="58" rx="5" stroke-width="4"/>
+    <path class="a-blade" fill="none" stroke-width="4" stroke-linecap="round" d="M212 606V648M246 606V648M280 606V648M314 606V648M348 606V648M382 606V648M416 606V648M450 606V648M484 606V648M518 606V648M552 606V648M586 606V648M620 606V648M654 606V648M688 606V648M722 606V648"/>
+    <rect class="a-part" x="136" y="548" width="26" height="160" rx="5" stroke-width="6"/>
+    <g class="a-recess" stroke-width="4">
+      <rect x="141" y="574" width="16" height="44" rx="3"/>
+      <rect x="141" y="638" width="16" height="44" rx="3"/>
+    </g>
+    <rect class="a-accent" x="758" y="612" width="14" height="30" rx="3"/>
+  </symbol>
+
+  <symbol id="seat-hdd" viewBox="0 0 1000 780">
+    <path class="a-pin" fill="none" stroke-width="8" stroke-linecap="round" d="M900 498V484"/>
+    <rect class="a-part" x="750" y="498" width="200" height="64" rx="7" stroke-width="6"/>
+    <circle class="a-face" cx="792" cy="530" r="22" stroke-width="4"/>
+    <circle class="a-dark" cx="792" cy="530" r="7"/>
+    <circle class="a-dark" cx="922" cy="512" r="6"/>
+    <path class="a-blade" fill="none" stroke-width="5" stroke-linecap="round" d="M920 514 822 526"/>
+    <rect class="a-accent" x="906" y="544" width="34" height="9" rx="3"/>
+  </symbol>
+
+  <symbol id="seat-ssd" viewBox="0 0 1000 780">
+    <rect class="a-part" x="222" y="424" width="168" height="36" rx="6" stroke-width="6"/>
+    <g class="a-dark">
+      <rect x="242" y="434" width="34" height="18" rx="3"/>
+      <rect x="286" y="434" width="34" height="18" rx="3"/>
+      <rect x="330" y="434" width="24" height="18" rx="3"/>
+    </g>
+    <rect class="a-socket" x="200" y="420" width="34" height="44" rx="7" stroke-width="6"/>
+    <circle class="a-accent" cx="380" cy="442" r="10"/>
+  </symbol>
+
+</svg>
+
+<header class="topbar">
+  <h1>Build the Machine</h1>
+  <div class="actions">
+    <button type="button" class="btn-run" id="power">
+      <svg class="btn-icon" aria-hidden="true" focusable="false"><use href="#art-power"/></svg>
+      <span id="power-label">Power on</span>
+    </button>
+    <button type="button" class="btn-reset" id="reset">Reset</button>
+  </div>
+</header>
+
+<p class="status" id="status" role="status">Pick a part.</p>
+
+<main class="layout">
+
+  <section class="bin-wrap" aria-labelledby="bin-label">
+    <h2 class="rail-title" id="bin-label">Parts</h2>
+    <ul class="bin" id="bin"></ul>
+  </section>
+
+  <section class="stage-wrap" aria-labelledby="stage-label">
+    <h2 class="rail-title visually-hidden" id="stage-label">Motherboard</h2>
+    <div class="stage" id="stage">
+      <svg class="board" viewBox="0 0 1000 780" aria-hidden="true" focusable="false">
+        <use href="#art-board"/>
+        <use class="seat" id="seat-use-cpu" href="#seat-cpu"/>
+        <use class="seat" id="seat-use-ram-1" href="#seat-ram"/>
+        <g class="seat" id="seat-use-ram-2" transform="translate(90 0)"><use href="#seat-ram"/></g>
+        <use class="seat" id="seat-use-gpu" href="#seat-gpu"/>
+        <use class="seat" id="seat-use-ssd" href="#seat-ssd"/>
+        <use class="seat" id="seat-use-hdd" href="#seat-hdd"/>
+      </svg>
+      <div class="sockets" id="sockets"></div>
+      <div class="hotspots" id="hotspots"></div>
+      <button type="button" class="board-tag" id="board-tag">Motherboard</button>
+    </div>
+    <div class="sortboard" id="sortboard" hidden></div>
+  </section>
+
+  <section class="notes-wrap" aria-labelledby="notes-label">
+    <h2 class="rail-title" id="notes-label">Notes</h2>
+    <div class="notes" id="notes">
+      <div class="note-body" id="note-body" aria-live="polite"></div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

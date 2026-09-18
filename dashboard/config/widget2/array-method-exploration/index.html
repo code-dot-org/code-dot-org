@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Method Exploration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Array Method Exploration</h1>
+    </header>
+
+    <div class="controls-section">
+      <div class="group safe">
+        <h3>Pure Methods</h3>
+        <button id="mapBtn" class="btn btn-safe">.map()</button>
+        <button id="filterBtn" class="btn btn-safe">.filter()</button>
+        <button id="loopCopyBtn" class="btn btn-safe">Loop (with a copy)</button>
+      </div>
+
+      <div class="group unsafe">
+        <h3>Mutating Methods</h3>
+        <button id="forEachBtn" class="btn btn-unsafe">.forEach()</button>
+        <button id="loopBtn" class="btn btn-unsafe">Loop</button>
+      </div>
+    </div>
+
+    <div class="reset-container">
+      <button id="resetBtn" class="btn btn-reset">Reset Everything</button>
+    </div>
+
+    <div class="display-grid">
+      
+      <div class="card" id="originalCard">
+        <h2><code>originalData</code> array</h2>
+        <ul id="originalList" class="price-list"></ul>
+        <div id="originalStatus" class="status-box">Waiting...</div>
+      </div>
+
+      <div class="card" id="resultCard">
+        <h2><code>newData</code> array</h2>
+        <ul id="resultList" class="price-list"></ul>
+        <div id="resultStatus" class="status-box">Waiting...</div>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>

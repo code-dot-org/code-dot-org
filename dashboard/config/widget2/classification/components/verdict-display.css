@@ -1,0 +1,62 @@
+.verdict {
+    font-family: "Space Grotesk", monospace;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.verdict.yes {
+    color: var(--mint-700);
+}
+
+.verdict.no {
+    color: var(--purple-700);
+}
+
+.prob-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    width: 100%;
+}
+
+.prob-row {
+    display: grid;
+    grid-template-columns: 2.2em 1fr 2.8em;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.prob-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--purple-700);
+}
+
+.prob-track {
+    height: 0.9em;
+    background-color: var(--gray-150);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.prob-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.25s ease;
+}
+
+.prob-fill.yes {
+    background-color: var(--mint-600);
+}
+
+.prob-fill.no {
+    background-color: var(--purple-600);
+}
+
+.prob-pct {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--purple-900);
+    text-align: right;
+}

@@ -158,6 +158,9 @@ function main() {
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }
 
+  // Root-relative asset URLs that live on the code.org origin rather than the preview origin.
+  const CODE_DOT_ORG_ASSET_PATHS = ['/level_starter_assets/', '/widget2/'];
+
   async function handleProjectRequest(requestedFile, fileData) {
     try {
       const {content, mimeType, url} = fileData;
@@ -169,8 +172,8 @@ function main() {
       }
       if (url) {
         let fetchUrl = url;
-        if (url.startsWith('/level_starter_assets/')) {
-          // We fetch level starter assets from the code.org origin for this environment.
+        if (CODE_DOT_ORG_ASSET_PATHS.some(prefix => url.startsWith(prefix))) {
+          // We fetch level starter assets and widget2 assets from the code.org origin for this environment.
           // We use a cache-busting query parameter to ensure that we get the correct response headers,
           // specifically to avoid CORs issues with Access-Control-Allow-Origin being set to someone else's
           // preview url.

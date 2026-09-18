@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Build an AI Agent — The Scoop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ===== TOP BAR ===== -->
+    <header id="topbar">
+      <div class="brand">
+        <span class="brand-icon" id="brand-icon"></span>
+        <span class="brand-name">Build an AI Agent</span>
+      </div>
+      <div class="level-chip" id="level-chip">Level 1</div>
+      <div class="ai-badge" id="ai-badge" title="AI mode">SIM</div>
+      <div class="topbar-right">
+        <button id="sound-btn" class="pill-btn" aria-label="Toggle read aloud"></button>
+        <div id="level-pills" class="level-pills"></div>
+      </div>
+    </header>
+
+    <!-- ===== SAM TIP STRIP ===== -->
+    <div id="tip-strip" class="tip-strip" hidden></div>
+
+    <!-- ===== MAIN GRID ===== -->
+    <div id="main-grid" class="main-grid">
+
+      <!-- category rail -->
+      <nav id="rail" class="rail" aria-label="Part categories"></nav>
+
+      <!-- palette -->
+      <aside id="palette" class="palette" aria-label="Parts palette"></aside>
+
+      <div id="divider-palette" class="panel-divider" role="separator" aria-label="Resize parts panel"></div>
+
+      <!-- workspace -->
+      <main id="workspace" class="workspace">
+        <div id="coach" class="coach-card" hidden>
+          <span class="coach-avatar" role="img" aria-label="Coach Sam">🧑🏽‍🍳</span>
+          <div class="coach-text"><span class="coach-step" id="coach-step"></span><span id="coach-body"></span></div>
+          <button id="coach-skip" class="coach-skip" hidden>Got it</button>
+        </div>
+        <div class="tabs" id="tabs" role="tablist"></div>
+        <div id="tab-content" class="tab-content">
+          <!-- build canvas -->
+          <div id="build-pane" class="pane">
+            <div id="canvas-viewport" class="canvas-viewport">
+              <div id="canvas-scaler" class="canvas-scaler">
+                <div id="canvas" class="canvas">
+                  <div id="canvas-hint" class="canvas-hint">Drag parts anywhere — then pull wires between the circles!</div>
+                  <svg id="wire-layer" class="wire-layer" aria-hidden="true"></svg>
+                  <div id="node-layer"></div>
+                </div>
+              </div>
+            </div>
+            <div id="wire-hint" class="wire-hint" hidden>Now tap another circle to connect — or tap the canvas to cancel</div>
+            <div class="zoom-controls">
+              <button id="zoom-out" class="zoom-btn" aria-label="Zoom out">−</button>
+              <div id="zoom-label" class="zoom-label">80%</div>
+              <button id="zoom-in" class="zoom-btn" aria-label="Zoom in">＋</button>
+              <button id="zoom-fit" class="zoom-btn zoom-fit" aria-label="Reset zoom">Fit</button>
+            </div>
+          </div>
+          <!-- rules -->
+          <div id="rules-pane" class="pane scroll" hidden></div>
+          <!-- brain -->
+          <div id="brain-pane" class="pane scroll" hidden></div>
+        </div>
+      </main>
+
+      <div id="divider-stage" class="panel-divider" role="separator" aria-label="Resize order window"></div>
+
+      <!-- stage -->
+      <section id="stage" class="stage" aria-label="The order window">
+        <div class="run-bar">
+          <button id="run-btn" class="run-btn" title="Run your agent" aria-label="Run your agent"></button>
+          <button id="stop-btn" class="stop-btn" title="Stop" aria-label="Stop the run" disabled></button>
+          <div class="speed-wrap" title="Playback speed">
+            <span aria-hidden="true">🐢</span>
+            <input type="range" id="speed" min="0" max="100" value="40" aria-label="Playback speed — turtle is slow, rabbit is fast" />
+            <span aria-hidden="true">🐰</span>
+          </div>
+          <div class="window-label">THE ORDER WINDOW</div>
+        </div>
+        <div id="feed" class="feed" aria-live="polite"></div>
+        <button id="verdict-bar" class="verdict-bar" hidden></button>
+      </section>
+    </div>
+
+    <!-- ===== SAM VERDICT MODAL ===== -->
+    <div id="verdict-modal" class="modal-backdrop" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="verdict-title">
+        <div class="modal-avatar" id="verdict-avatar">🧑🏽‍🍳</div>
+        <h2 id="verdict-title"></h2>
+        <p id="verdict-text"></p>
+        <div class="modal-actions">
+          <button id="verdict-close" class="btn-secondary">Keep working</button>
+          <button id="verdict-next" class="btn-primary" hidden>Next level →</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="helpers.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

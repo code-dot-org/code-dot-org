@@ -283,6 +283,19 @@ class ApplicationController < ActionController::Base
     redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
   end
 
+  # Let the sandboxed project preview hosts fetch this response cross-origin.  Any
+  # subdomain of either preview host (with optional port) is allowed.
+  protected def allow_cors_from_preview_hosts
+    preview_host_pattern = [
+      CDO.preview_codeaiprojects_hostname,
+      CDO.preview_codeprojects_hostname,
+    ].map {|host| Regexp.escape(host)}.join('|')
+    preview_regex = %r{\Ahttps?://[^/]+\.(?:#{preview_host_pattern})(:\d+)?\z}
+    return unless request.origin&.match?(preview_regex)
+
+    response.headers['Access-Control-Allow-Origin'] = request.origin
+  end
+
   protected def require_levelbuilder_mode
     require_english_in_levelbuilder_mode
 

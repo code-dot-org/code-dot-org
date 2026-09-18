@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Regression</title>
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header><h1>Predicting Customers</h1></header>
+        <main>
+            <section
+                class="data-container"
+                aria-label="Scatter plot of temperature versus customers"
+            ></section>
+            <section
+                class="prediction-container"
+                aria-label="Customer prediction"
+            >
+                <div class="predict-block">
+                    <label class="block-label" for="temperature-input"
+                        >Temperature</label
+                    >
+                    <div class="stepper">
+                        <button
+                            type="button"
+                            class="step-btn"
+                            id="temp-down"
+                            aria-label="Lower temperature"
+                        >
+                            −
+                        </button>
+                        <span class="temp-value">
+                            <input
+                                id="temperature-input"
+                                type="number"
+                                value="72"
+                                min="50"
+                                max="100"
+                                step="1"
+                                aria-label="Temperature in degrees Fahrenheit"
+                                aria-describedby="temp-error"
+                            />
+                            <span class="unit">℉</span>
+                        </span>
+                        <button
+                            type="button"
+                            class="step-btn"
+                            id="temp-up"
+                            aria-label="Raise temperature"
+                        >
+                            +
+                        </button>
+                    </div>
+                    <p class="field-error" id="temp-error" role="alert"></p>
+                </div>
+
+                <div class="arrow" aria-hidden="true">↓</div>
+
+                <div class="predict-block">
+                    <span id="customers-label" class="block-label"
+                        >Customers</span
+                    >
+                    <p class="prediction-readout">
+                        <output
+                            id="prediction"
+                            aria-labelledby="customers-label"
+                            aria-live="polite"
+                            >50</output
+                        >
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <div class="panels">
+            <details class="panel">
+                <summary>View the plotted data as a table</summary>
+                <div id="data-table"></div>
+            </details>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
