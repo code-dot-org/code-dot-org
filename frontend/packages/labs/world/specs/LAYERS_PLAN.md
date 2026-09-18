@@ -1,6 +1,7 @@
 # Plan: layers in the editor (MAP_FIRST.md, step 4)
 
-STATUS: IN PROGRESS. The fourth build step of specs/MAP_FIRST.md, after
+STATUS: BUILT, pending a look in the browser, less the look-through mode.
+The fourth build step of specs/MAP_FIRST.md, after
 specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md and specs/VIEWPORT_PLAN.md:
 a map's layers, backgrounds and foregrounds are part of the map, made in the
 map editor. The working record, as before.
@@ -78,8 +79,62 @@ map editor. The working record, as before.
 
 ## Commits
 
-(recorded as they land)
+- `90f82bb1006` — this plan.
+- `a2b0d784253` — engine: `layers` on a map and `layer` on a placement; a
+  space's own layer list; depth within a space; the space snapshot carrying
+  layers and slots.
+- `4533a80aa9c` — generator: the main map's layers declared in the world's
+  prologue, ahead of the blocks', with each slot's starting values.
+- `71e0291757b` — driver: layer containers and slots inside a space.
+- `034d0dcb4d0` — editor: the strip, the layer's inspector, the placement's
+  Layer dropdown, new placements on the selected layer, the canvas drawing
+  layers in order.
 
 ## Learned while building
 
-(recorded as it happens)
+- **The slot arithmetic carried over unchanged**, as the plan argued it
+  would. The driver's fake-scene test pins the numbers: under a space
+  camera scrolled by `(270, 120)`, a layer at `(0.5, 0)` sits at
+  `(135, 120)` and one at `(1, 1)` at the origin, and a stretched backdrop
+  is sized and centred by `stretchedPlacement` with the space's bounds and
+  view in place of the world's.
+- **The slot sync took a host, not a fork.** `syncSlots` parented every
+  image into a world layer; it now takes the function that parents one,
+  defaulting to the world's, so a space's slots are the same code with a
+  different container.
+- **An actor in a space goes into its layer's container, not the space's.**
+  The first Viewport cut sorted a space's one container by the actor's
+  layer depth; with layers of its own that became a container per layer, at
+  that depth, and the actor keeps the depth every actor has within one.
+- **The default layer is said by saying nothing.** A placement on `main`
+  carries no `layer`, a map whose only layer is `main` carries no `layers`
+  until something is said about it, and the placement's Layer dropdown is
+  offered only when there is more than one — so a map that never opens the
+  strip is byte-for-byte what it was.
+- **A canvas test tells a placeholder from a fill by its colour.** The
+  recording context logs every `fillRect`, the ground's among them; the
+  draw-order test picks out the stand-in sprites by the green they are
+  filled with.
+
+## Not built, and known
+
+- The look-through mode: panning the editor's camera to see each layer move
+  at its factor. Until then a factor is a number whose effect shows only in
+  the running game.
+- `layer ⟨…⟩ of this map`, the block that would let a map's script change a
+  space's layer while the game runs. The world's layers keep their blocks.
+- A map loaded into the root at run time adding layers, which the world's
+  fixed list rules out; its placements' layers resolve against the world's.
+- Per-layer effects inside a space, and reordering layers by drag.
+- Hit-testing by draw order: a click still finds placements in document
+  order, so where two overlap across layers the one in front is not always
+  the one picked.
+
+## What to look at in the browser
+
+On a world's main map, add a layer, give it a background from the project
+and a factor below one, and place something on it: the canvas should draw
+the image behind what is on the layer, and the running game should scroll it
+slower than the default layer once the camera moves. Do the same in a level
+held by a Viewport: the background should draw inside the Viewport's box and
+move at its factor as the space's camera follows.

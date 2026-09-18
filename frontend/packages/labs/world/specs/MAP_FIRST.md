@@ -1,9 +1,10 @@
 # Proposal: the map as the front door
 
-STATUS: PROPOSED, with steps 1 to 3 built — map scripts on `.map` files,
-the main map in the world's file, and the Viewport (specs/MAP_SCRIPTS_PLAN.md,
-specs/MAIN_MAP_PLAN.md and specs/VIEWPORT_PLAN.md record the commits and what
-they taught). The rest is a design to argue with, written
+STATUS: PROPOSED, with steps 1 to 4 built — map scripts on `.map` files,
+the main map in the world's file, the Viewport, and layers in the editor
+(specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md, specs/VIEWPORT_PLAN.md
+and specs/LAYERS_PLAN.md record the commits and what they taught). The rest
+is a design to argue with, written
 after the pause menu showed where the current shape strains (UI_ACTORS.md,
 "The second axis"; MAPS.md, "A block naming a placement").
 
@@ -424,6 +425,15 @@ to name. The `define layer` block and the layer effect blocks stay for what a
 script needs to change at run time, and the map editor becomes the place a
 layer is made.
 
+BUILT (specs/LAYERS_PLAN.md), with one line drawn that this section did not
+draw. A map's layers take effect in two places and not in a third. The MAIN
+map's are declared into the world by the world's module, since the world's
+layer list is fixed when it is built and the generator can read the main
+map. A map loaded into a VIEWPORT brings them as the space's own. A map
+loaded into the root by `load map` while the game runs cannot add any; its
+placements' layers resolve against the world's, and one that names none is
+on the layer the block says.
+
 ### Backgrounds, foregrounds and parallax under this model
 
 VIEWPORT.md's layer model is kept whole: a layer has a background slot drawn
@@ -579,7 +589,8 @@ What map-first does better:
   it is loaded into a Viewport. Mirroring, `clear world`'s retirement and the
   world's follow block are not yet.
 - `.map` gains layers, each with a background and a foreground, edited in the
-  map editor. `define layer` in a world stops being how a layer is made.
+  map editor. BUILT. `define layer` in a world stops being how a layer is
+  made, and stays for what a script changes while the game runs.
 - VIEWPORT.md's selection model for viewports is superseded by containment
   with mirroring; its layer and camera sections stand.
 - The Pause Menu actor goes. The stock pause menu is a map with a script.
@@ -598,8 +609,11 @@ What map-first does better:
    stock kind, the three blocks, spaces in the engine, a camera per
    Viewport in the driver, and the dimmed preview of a held map in the
    editor.
-4. **Layers in the editor.** The layer strip, backgrounds and foregrounds per
-   layer in the inspector, and a placement's layer set where it is placed.
+4. **Layers in the editor.** BUILT (specs/LAYERS_PLAN.md), less the
+   look-through mode: the layer strip, backgrounds and foregrounds per layer
+   in the inspector, a placement's layer set where it is placed, the canvas
+   drawing them in order, and both runtimes — the world's layers from the
+   main map, a space's from the map a Viewport holds.
 5. **Retirements.** The Pause Menu actor, `create actor in map`, the global
    name registry, `clear world`, the `fit` layer flag.
 6. **Curriculum.** Tiles that unlock editor affordances; levels re-pinned.
