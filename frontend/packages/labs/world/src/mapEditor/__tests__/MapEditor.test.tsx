@@ -22,6 +22,11 @@ vi.mock('../MapStage', () => ({
   MapStage: (props: {
     doc: MapDoc;
     onEditScript?: (id: string | undefined) => void;
+    world?: {
+      header: {name: string};
+      onRename: (name: string) => void;
+      onSetDefault: (property: string, value: string) => void;
+    };
   }) => (
     <div
       data-testid="stage"
@@ -34,6 +39,20 @@ vi.mock('../MapStage', () => ({
       <button type="button" onClick={() => props.onEditScript?.(undefined)}>
         Map script
       </button>
+      {props.world && (
+        <>
+          <span data-testid="world-name">{props.world.header.name}</span>
+          <button type="button" onClick={() => props.world!.onRename('Z')}>
+            Rename world
+          </button>
+          <button
+            type="button"
+            onClick={() => props.world!.onSetDefault('score', '30')}
+          >
+            Set score
+          </button>
+        </>
+      )}
     </div>
   ),
 }));
@@ -310,6 +329,28 @@ describe('over a world’s file', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Map script'}));
     expect(onOpenMapScript).toHaveBeenCalled();
     expect(screen.queryByTestId('script')).toBeNull();
+  });
+
+  it('shows the world with nothing selected, and writes its edits', () => {
+    const {onChange} = openWorld();
+    expect(screen.getByTestId('world-name')).toHaveTextContent('W');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Rename world'}));
+    let file = JSON.parse(onChange.mock.calls.at(-1)![0] as string);
+    expect(file.blocks.blocks[0].fields.NAME).toBe('Z');
+    expect(file.map.actors).toHaveLength(1);
+    expect(screen.getByTestId('world-name')).toHaveTextContent('Z');
+
+    // A map edit after it keeps the rename.
+    fireEvent.change(screen.getByLabelText('Width'), {target: {value: '7'}});
+    file = JSON.parse(onChange.mock.calls.at(-1)![0] as string);
+    expect(file.blocks.blocks[0].fields.NAME).toBe('Z');
+    expect(file.map.size.width).toBe(7);
+  });
+
+  it('is not shown for a map that is no world', () => {
+    open();
+    expect(screen.queryByTestId('world-name')).toBeNull();
   });
 
   it('owns a placement’s script in the world’s module', () => {

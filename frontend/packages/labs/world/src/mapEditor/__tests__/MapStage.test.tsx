@@ -601,3 +601,55 @@ describe('a placement with a script', () => {
     expect(JSON.stringify(next.actors[1].blocks)).not.toContain('"NAME":"a"');
   });
 });
+
+describe('the world, with nothing selected', () => {
+  const header = {
+    name: 'Tapper',
+    properties: [
+      {name: 'score', type: 'number', value: '0'},
+      {name: 'hard', type: 'boolean', value: 'false'},
+    ],
+  };
+
+  it('is shown until a placement is, and edits go back by name', () => {
+    const map = doc();
+    const onRename = vi.fn();
+    const onSetDefault = vi.fn();
+    const {canvas, ...view} = mount(map, {
+      world: {header, onRename, onSetDefault},
+    });
+    expect(view.getByTestId('world-inspector')).toBeInTheDocument();
+
+    const name = view.container.querySelector(
+      'input[name="world-name"]',
+    ) as HTMLInputElement;
+    expect(name.value).toBe('Tapper');
+    fireEvent.change(name, {target: {value: 'Clicker'}});
+    fireEvent.blur(name);
+    expect(onRename).toHaveBeenCalledWith('Clicker');
+
+    const score = view.container.querySelector(
+      'input[name="world-score"]',
+    ) as HTMLInputElement;
+    fireEvent.change(score, {target: {value: '30'}});
+    fireEvent.keyDown(score, {key: 'Enter'});
+    fireEvent.blur(score);
+    expect(onSetDefault).toHaveBeenCalledWith('score', '30');
+
+    const hard = view.container.querySelector(
+      'input[name="world-hard"]',
+    ) as HTMLInputElement;
+    fireEvent.click(hard);
+    expect(onSetDefault).toHaveBeenCalledWith('hard', 'true');
+
+    // A placement selected takes its place.
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(view.queryByTestId('world-inspector')).toBeNull();
+  });
+
+  it('is absent for a map that is no world', () => {
+    const view = mount(doc());
+    expect(view.queryByTestId('world-inspector')).toBeNull();
+  });
+});

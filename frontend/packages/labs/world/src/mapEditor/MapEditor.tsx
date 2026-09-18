@@ -100,8 +100,11 @@ export const MapEditor = ({
 
   const [map, setMap] = useState(() => document.read(initialContents));
   // The file as last known — what a write is made from, so a world's blocks
-  // come through a map edit untouched.
+  // come through a map edit untouched. A ref for writing, since several
+  // commits may land in one tick, and a state beside it for what is drawn
+  // from the file itself (the world's header).
   const contentsRef = useRef(initialContents);
+  const [fileText, setFileText] = useState(initialContents);
   // Re-seed when the lab is handed a different document — the project
   // loading, a version restored, a start-over. `sourcesEpoch` counts exactly
   // those (SourcesContext), so this editor's own writes never trip it.
@@ -112,6 +115,7 @@ export const MapEditor = ({
     }
     seenEpoch.current = sourcesEpoch;
     contentsRef.current = initialContents;
+    setFileText(initialContents);
     setMap(document.read(initialContents));
   }, [sourcesEpoch, initialContents, document]);
 
@@ -311,12 +315,37 @@ export const MapEditor = ({
     [schemas, files],
   );
 
-  const commit = (next: MapDoc) => {
-    setMap(next);
-    const written = document.write(contentsRef.current, next);
+  const writeFile = (written: string) => {
     contentsRef.current = written;
+    setFileText(written);
     onChange(written);
   };
+  const commit = (next: MapDoc) => {
+    setMap(next);
+    writeFile(document.write(contentsRef.current, next));
+  };
+  // The world itself, for the inspector with nothing selected — only when
+  // the document is one (specs/MAIN_MAP_PLAN.md).
+  const worldHeader = useMemo(
+    () => document.world?.read(fileText),
+    [document, fileText],
+  );
+  const worldInspector =
+    document.world && worldHeader
+      ? {
+          header: worldHeader,
+          onRename: (name: string) =>
+            writeFile(document.world!.writeName(contentsRef.current, name)),
+          onSetDefault: (property: string, value: string) =>
+            writeFile(
+              document.world!.writeDefault(
+                contentsRef.current,
+                property,
+                value,
+              ),
+            ),
+        }
+      : undefined;
 
   /**
    * The third view (specs/MAP_FIRST.md, "The editor's modes"): a placement's
@@ -477,6 +506,7 @@ export const MapEditor = ({
           }
         }}
         mapScriptLabel={document.hasMapScript ? 'Map script' : 'World'}
+        world={worldInspector}
       />
     </div>
   );

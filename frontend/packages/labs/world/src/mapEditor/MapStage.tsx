@@ -73,6 +73,7 @@ import {
   rememberedPicture,
   type Remembered,
 } from './stageGeometry';
+import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
 
 /** What the stage can blit: a decoded thumbnail, or a canvas painted here. */
 type Picture = HTMLImageElement | HTMLCanvasElement;
@@ -155,6 +156,11 @@ export interface MapStageProps {
   /** What the toolbar's way into the map's own workspace says. */
   mapScriptLabel?: string;
   /**
+   * The world this map is the main map of, shown in the inspector with
+   * nothing selected (`WorldInspector`); absent for a `.map`.
+   */
+  world?: Omit<WorldInspectorProps, 'isReadOnly'>;
+  /**
    * The window this map will be seen through, in pixels — see the guide below.
    *
    * Given by the caller rather than read from the constant, because a world
@@ -181,6 +187,7 @@ export const MapStage = ({
   onDocPreview,
   onEditScript,
   mapScriptLabel = 'Map script',
+  world,
   placing,
   thumbnails,
   pictures,
@@ -1638,6 +1645,15 @@ export const MapStage = ({
           </button>
         )}
       </div>
+      {!selectedActor && world && (
+        <WorldInspector
+          // Re-keyed on what the file says, so a change from outside — the
+          // World view, a version restored — is what the fields show.
+          key={JSON.stringify(world.header)}
+          {...world}
+          isReadOnly={isReadOnly}
+        />
+      )}
       {selectedActor && (
         <div className={styles.inspector}>
           <div className={styles.inspectorHead}>

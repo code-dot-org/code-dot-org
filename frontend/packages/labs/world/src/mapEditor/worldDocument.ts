@@ -7,6 +7,12 @@
 // (specs/MAIN_MAP_PLAN.md).
 
 import {mapFromRaw, parseMap, type MapDoc} from './mapModel';
+import {
+  readWorldHeader,
+  writeWorldName,
+  writeWorldPropertyDefault,
+  type WorldHeader,
+} from './worldProperties';
 
 export interface MapDocumentAdapter {
   /** The map the file holds. */
@@ -20,6 +26,15 @@ export interface MapDocumentAdapter {
    * world's is the world's workspace, reached another way.
    */
   hasMapScript: boolean;
+  /**
+   * The world the document is, for the inspector with nothing selected: its
+   * name and properties, and the two edits. Only a `.world` has one.
+   */
+  world?: {
+    read(contents: string): WorldHeader | undefined;
+    writeName(contents: string, name: string): string;
+    writeDefault(contents: string, property: string, value: string): string;
+  };
 }
 
 /** A `.map` file: the document is the map. */
@@ -58,4 +73,9 @@ export const worldFileDocument: MapDocumentAdapter = {
   },
   modulePath: path => path.replace(/\.world$/, ''),
   hasMapScript: false,
+  world: {
+    read: readWorldHeader,
+    writeName: writeWorldName,
+    writeDefault: writeWorldPropertyDefault,
+  },
 };
