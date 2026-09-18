@@ -77,6 +77,7 @@ import {
   fetchMusicProjects,
   withUnavailableSongs,
 } from '../musicProjects';
+import {usesPlatformPhysics} from '../platformPhysics';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -101,6 +102,7 @@ import {
 import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
+import useGameAudio from '../useGameAudio';
 import {
   compileWorldPrelude,
   DEFAULT_SCENE_GRID_SIZE,
@@ -1475,11 +1477,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources]
   );
 
+  // Entering Play by keyboard leaves focus on the tab button, where
+  // swallowOnControls eats every game key and the game can't be played.
+  const focusPlayspaceRef = useRef(false);
   const handleTabChange = useCallback(
-    (tab: Tab) => {
+    (tab: Tab, event: React.MouseEvent<HTMLElement>) => {
       // Entering Play from the tab button starts from the beginning.
       if (tab === 'Play') {
         setPlayStartSceneId(null);
+        focusPlayspaceRef.current = !isPointerClick(event);
       }
       dispatch(setActiveTab(tab));
     },
@@ -1571,6 +1577,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // level) must pause the engine as soon as it exists.
   }, [playspaceMode, documentHidden, engineReady]);
 
+  // Once the playspace is focusable, which is the render after this one.
+  useEffect(() => {
+    if (playspaceMode === 'play' && focusPlayspaceRef.current) {
+      focusPlayspaceRef.current = false;
+      playspaceRef.current?.focus({preventScroll: true});
+    }
+  }, [playspaceMode]);
+
+  const hasPlatformer = usesPlatformPhysics(levelProperties.helperLibraries);
+  const audioSettings = useGameAudio(engineRef, {
+    hasPlatformer,
+    // A hidden document has already stopped the engine feeding it.
+    playing: engineReady && playspaceMode === 'play' && !documentHidden,
+  });
+
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
   const getDefaultSpriteSize = useCallback(
@@ -1613,7 +1634,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         isRunning={isRunning}
         hasRun={hasRun}
         hasEdited={hasEdited}
-        settings={[...blocklySettings, themeSetting]}
+        settings={[...blocklySettings, themeSetting, ...audioSettings]}
         className={classNames(
           !levelProperties.levelMode && moduleStyles.instructionsArea,
           !!levelProperties.levelMode && moduleStyles.resourceSidebar
@@ -1753,6 +1774,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           Code tab's corner preview and the Play tab's centered view. */}
           <Playspace
             boxRef={playspaceRef}
+            hasPlatformer={hasPlatformer}
             mode={playspaceMode}
             fadeTrigger={fadeTrigger}
             covered={jumpCover}

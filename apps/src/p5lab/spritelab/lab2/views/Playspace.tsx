@@ -16,6 +16,9 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
+// Read when focus reaches the game. The play-by-play is all sound.
+const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
+
 // The engine's p5 canvas is a fixed 400x400 (p5lab APP_WIDTH/HEIGHT); we scale
 // it with a CSS transform to fit either the corner preview or the centered
 // play area.
@@ -49,6 +52,7 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
+  hasPlatformer?: boolean;
 }
 
 /**
@@ -64,6 +68,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
+  hasPlatformer = false,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -256,6 +261,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
+        aria-describedby={
+          mode === 'play' && hasPlatformer ? CONTROLS_HELP_ID : undefined
+        }
         tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
@@ -344,6 +352,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           </div>
         )}
       </div>
+      {/* Outside the box: role="application" hides what is inside it from
+          screen readers, so anything to be read must sit beside it. */}
+      {mode === 'play' && hasPlatformer && (
+        <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
+          Left and right arrows move. Space or up arrow jumps. In zero gravity,
+          up and down steer. Toggle sounds in settings. A tone marks your height
+          in the frame. Obstacle sounds warn of collisions and edges.
+        </p>
+      )}
     </div>
   );
 };

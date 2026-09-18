@@ -139,4 +139,6 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   imageRoleDefaults?: ImageRoleDefaults;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
+  /** Runtime libraries the level opts into (see usesPlatformPhysics). */
+  helperLibraries?: string[];
 }
