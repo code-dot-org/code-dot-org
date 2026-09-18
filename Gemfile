@@ -110,7 +110,7 @@ group :development, :test do
 
   gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
-  gem 'mocha', '< 2.0', require: false
+  gem 'mocha', '~> 2.2.0', require: false
   gem 'timecop', '>= 0.9.4' # required for Ruby 3.1 support
 
   # For UI testing.
