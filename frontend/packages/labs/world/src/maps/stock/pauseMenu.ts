@@ -10,10 +10,14 @@
 //
 // THE BUTTONS ARE PLAIN BUTTONS WITH SCRIPTS. Resume's workspace says `when
 // this actor is clicked: resume the game; unload this map`, because resuming
-// means one thing. Quit's says `emit quit`, an event the map's own workspace
-// declares, because what quitting means is the project's — breakout starts
-// the level over — and the world hears it with `when quit` under the map's
-// drawer. No kind of actor knows any of this; the map does.
+// means one thing. Quit's says `emit quit; unload this map`: `quit` is an
+// event the map's own workspace declares, because what quitting means is the
+// project's — breakout starts the level over — and the world hears it with
+// `when quit` under the map's drawer. The menu takes ITSELF away either way.
+// It used not to on Quit, while breakout answered with `clear world`, which
+// took the menu with everything else; a level restarted inside a Viewport
+// leaves the main map alone, so a menu that has been answered has to go by
+// its own hand. No kind of actor knows any of this; the map does.
 //
 // AT THE MIDDLE OF THE STANDARD WINDOW, which is where a project with a
 // square view wants it and which a project with another view moves in the
@@ -88,7 +92,11 @@ export const pauseMenuMap = JSON.stringify(
           positional: {parent: 'Pause', position: {x: 0, y: 40}},
           Label: {text: 'QUIT'},
         },
-        ...script(whenClicked(), {type: 'world_emit_MapsPauseMenu_QuitEvent'}),
+        ...script(
+          whenClicked(),
+          {type: 'world_emit_MapsPauseMenu_QuitEvent'},
+          {type: 'world_unload_this_map'},
+        ),
       },
     ],
     // The map's own workspace: the one event it raises.

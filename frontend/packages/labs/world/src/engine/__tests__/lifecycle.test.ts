@@ -172,19 +172,4 @@ describe('an actor being removed', () => {
 
     expect([...world.actors].length).toBe(0);
   });
-
-  it('is not raised by emptying the world', () => {
-    // A decision, not an oversight: nothing survives a `clear world` to react,
-    // and a hundred handlers running as a level is torn down is a hundred
-    // chances to put something back into a world that is being emptied.
-    const {heard, template} = leaver();
-    const world = new WorldBuilder({id: 'w', name: 'w'}).instantiate();
-    world.addActor(template, 'one');
-    world.tick(1 / 60);
-
-    world.clearActors();
-    world.tick(1 / 60);
-
-    expect(heard).toEqual([]);
-  });
 });

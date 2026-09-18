@@ -61,8 +61,9 @@ happens.`,
 // this only says which ending it is.
 //
 // THERE IS NO "restart the world" EITHER, for the same reason one level up.
-// Starting again is \`clear world\` and putting the level back, which the project
-// already knows how to do and this rule cannot: it has never seen the level.
+// Starting again is loading the level into its Viewport again, which the
+// project already knows how to do and this rule cannot: it has never seen the
+// level.
 // \`start again\` is the STATE going back to neither, and the event that says so
 // is where a project hangs the rebuilding.
 //

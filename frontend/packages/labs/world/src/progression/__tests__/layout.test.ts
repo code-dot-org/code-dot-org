@@ -239,12 +239,12 @@ describe('what a tile unlocks', () => {
     // Named rather than counted, so a tile that gives nothing has to come here
     // and argue for itself. Two have.
     //
-    // `adventure/rooms` is an ASSEMBLY. A door is `clear world` and `load map`
-    // in a handler, and both blocks are already somebody's to give
-    // (`arcade/bricks`, `place/map`); what the lesson adds is that the two
-    // together are a way out of the room, which is not a thing that can be put
-    // on a shelf. Inventing a block to have something to unlock would be a
-    // worse map.
+    // `arcade/bricks` is an ASSEMBLY. Counting what is left is `how many … in
+    // …` and an `if`, and both are already somebody's to give (`memory/many`,
+    // `logic/if`); what the lesson adds is where to ask the question, which is
+    // not a thing that can be put on a shelf. Inventing a block to have
+    // something to unlock would be a worse map. (`adventure/rooms` stood here
+    // while a door was two borrowed blocks; it grants the Viewport now.)
     //
     // `memory/actor-state` teaches a property an ACTOR'S OWN FILE declares,
     // and the blocks that read one are minted from a file path and a name
@@ -255,7 +255,7 @@ describe('what a tile unlocks', () => {
     // longer offered anywhere, and granting a block nobody is shown would be
     // a grant in name only. What it hands over is in `offers`: the block that
     // DECLARES one.
-    const givesNothing = new Set(['adventure/rooms', 'memory/actor-state']);
+    const givesNothing = new Set(['arcade/bricks', 'memory/actor-state']);
     for (const t of TILES) {
       if (givesNothing.has(t.id)) {
         expect(t.unlocks, t.id).toEqual([]);

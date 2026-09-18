@@ -349,16 +349,6 @@ describe('leaving a layer', () => {
     expect(one.layer).toBeUndefined();
     expect(one.world).toBeUndefined();
   });
-
-  it('happens to every actor when the world is cleared', () => {
-    const built = world();
-    const one = actor('a');
-    built.addActor(one);
-
-    built.clearActors();
-
-    expect(one.layer).toBeUndefined();
-  });
 });
 
 describe('asking which actors are in a layer', () => {
@@ -416,7 +406,7 @@ describe('asking which actors are in a layer', () => {
 
 describe('the camera', () => {
   // A pose, and nothing else. It is not in `world.actors`, so no rule has to
-  // learn to skip it and `clear world` does not take it away with the level.
+  // learn to skip it and removing actors does not take it away.
   it('exists without being asked for, resting on the middle of the view', () => {
     // Not the origin. A camera's position is the point it shows at the MIDDLE
     // of the view — the same meaning an actor's position has, which it must
@@ -459,10 +449,10 @@ describe('the camera', () => {
 
   it('is not an actor', () => {
     const built = world();
-    built.addActor(actor('player'));
-    built.clearActors();
+    const player = built.addActor(actor('player'));
+    built.removeActor(player);
 
-    // The level went; the view did not.
+    // The actor went; the view did not.
     expect([...built.cameras]).toHaveLength(1);
     expect([...built.actors]).toHaveLength(0);
   });

@@ -151,7 +151,9 @@ describe('a placed Viewport', () => {
     const {world} = await compileProject(FILES);
     const [window] = [...world.actors];
     expect(window.has(ViewportTrait)).toBe(true);
-    expect([...world.actors]).toHaveLength(1);
+    // The level is in the world as soon as the main map is loaded, with no
+    // tick run: a world is handed over holding what its Viewports hold.
+    expect([...world.actors]).toHaveLength(3);
 
     world.tick(0);
 

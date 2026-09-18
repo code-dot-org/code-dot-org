@@ -1,5 +1,14 @@
 # Plan: maps in the world
 
+STATUS: RETIRED in part. `create actor in map`, which §1 to §3 describe, is
+deleted: an arrangement that belongs to one world is that world's MAIN MAP,
+a `map` beside the `blocks` in its file, edited on the map canvas
+(specs/MAP_FIRST.md, specs/MAIN_MAP_PLAN.md, specs/RETIREMENTS_PLAN.md).
+The argument of §1 — that such an arrangement belongs in the world's file
+and not beside it — is the one the main map rests on, and is why this is
+kept. What is said here of `.map` files, of placements, of references
+between them and of `load map` stands.
+
 A world places actors two ways today. `add actor` places one, with its
 per-instance values set by blocks chained under it; `load map` places everything
 a `.map` file describes, which is where an arrangement of twenty coins belongs

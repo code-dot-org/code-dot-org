@@ -1424,9 +1424,8 @@ describe('domain block generators', () => {
       expect.arrayContaining([
         'world_load_map',
         'world_add_actor',
-        // Taking actors out belongs beside putting them in, one or all.
+        // Taking actors out belongs beside putting them in.
         'world_remove_actor',
-        'world_clear_world',
         // The subject a world file's blocks take, and half of "remove every
         // coin" — offered in the category that file is built from.
         'world_actor_kind',
@@ -2435,14 +2434,6 @@ describe('world block generators', () => {
     );
   });
 
-  it('world_clear_world empties the world, taking no subject at all', () => {
-    // "All of them" is the whole meaning of the block, so there is nothing to
-    // read off it — not a socket, not a field, not even `this actor`.
-    expect(run('world_clear_world', {}, {}, '', {})).toBe(
-      'world.clearActors();\n',
-    );
-  });
-
   it('world_add_effect emits nothing when the project has no effects', () => {
     // The dropdown shows a "(none)" placeholder with an empty value; emitting
     // `actor.addEffect("", undefined)` would be a runtime error for a block the
@@ -3119,9 +3110,9 @@ describe('builder-context warnings', () => {
   it('does NOT guard the two blocks that load a map, which the World does now', () => {
     // They were guarded, and for a true reason: `loadMap` instantiated
     // templates against a type registry the builder owned, and a World had no
-    // `define` at all. Both moved to the World the day a door had to lead to a
-    // second room — `clear world` then `load map ⟨Room 2⟩` in a handler — and
-    // the guard would now warn a learner off the thing the lesson asks for.
+    // `define` at all. Both moved to the World the day a map had to be loaded
+    // while the game runs — a menu over a game, in a handler — and the guard
+    // would now warn a learner off the thing a lesson asks for.
     //
     // The same move `add actor` made below, for the same reason. What is left
     // on them is `worldContext` alone — the ordinary question of whether
@@ -3167,7 +3158,6 @@ describe('builder-context warnings', () => {
       'world_actor_kind',
       'world_all_actors',
       'world_remove_actor',
-      'world_clear_world',
       'world_remove_world_effect',
     ]) {
       expect(extensionsOf(type), type).not.toContain('world_needs_live_world');

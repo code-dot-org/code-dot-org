@@ -6153,36 +6153,6 @@ const worldWithinLayer = defineBlock({
   },
 });
 
-/**
- * Take every actor out of the world at once.
- *
- * `remove actor` in bulk, and the block a learner reaches for at the end of a
- * level: the exit is touched, the room empties, the next one is placed. Doing it
- * one at a time needs a loop over a list that is being emptied as it is walked,
- * which is the sort of thing that works until it does not.
- *
- * Runtime-only, like `remove actor`: under `define world` the name `world` is
- * the builder, and the world it is building has nothing in it yet.
- *
- * No socket and no field — "all of them" is the whole meaning of the block.
- */
-const worldClearWorld = defineBlock({
-  type: 'world_clear_world',
-  message0: 'clear world',
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [worldContextExtension],
-  style: 'behavior_blocks',
-  tooltip:
-    'Remove every actor from the world. Nothing is left to draw or for the ' +
-    'rules to see. The world itself, and the rules it uses, stay as they are.',
-  generator: {
-    javascript() {
-      return 'world.clearActors();\n';
-    },
-  },
-});
-
 // ── Pausing (specs/UI_ACTORS.md, "The second axis") ──────────────────────────
 //
 // A paused world keeps sensing and keeps answering events, and nothing in it
@@ -6246,8 +6216,8 @@ const worldLoadMap = defineBlock({
   nextStatement: true,
   // NOT builder-only, though it was: `define` and `loadMap` are the live
   // World's as well now, so this block means the same thing in a handler as
-  // under `define world` — which is what a door to a second room is made of
-  // (`clear world`, then this).
+  // under `define world`: it ADDS a map to the world's own, which is how a
+  // menu comes up over a game. Replacing a level is `load map ⟨…⟩ into ⟨…⟩`.
   extensions: [
     mapOptionsExtension,
     mapImportFieldExtension,
@@ -6257,8 +6227,9 @@ const worldLoadMap = defineBlock({
   style: 'setup_blocks',
   tooltip:
     'Place all the actors a map file describes into the world. In a handler ' +
-    'it loads a map while the game runs — with "clear world" first, that is ' +
-    'how a game goes from one room to another.',
+    'it loads a map while the game runs, over what is already there — which ' +
+    'is how a menu comes up. To go from one room to another, load the map ' +
+    'into a Viewport instead.',
   generator: {
     javascript(block, generator) {
       const map = block.getFieldValue('MAP');
@@ -10001,7 +9972,6 @@ export const DOMAIN_BLOCKS = [
   worldMoveCamera,
   worldAddActor,
   worldRemoveActor,
-  worldClearWorld,
   worldPauseGame,
   worldResumeGame,
   worldGameIsPaused,
@@ -10325,9 +10295,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // …and how long it has been going, which is what every delay, cooldown
       // and lifetime is measured against.
       'world_time',
-      // …and taking one back out again, while the game runs — or all of them.
+      // …and taking one back out again, while the game runs. Taking ALL of
+      // them out was `clear world`, for changing level; a level is what a
+      // Viewport holds now, and `load map ⟨…⟩ into ⟨…⟩` replaces it.
       'world_remove_actor',
-      'world_clear_world',
       'world_pause_game',
       'world_resume_game',
       'world_game_is_paused',

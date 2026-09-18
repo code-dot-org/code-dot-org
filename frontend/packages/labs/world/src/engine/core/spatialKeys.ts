@@ -17,8 +17,7 @@ export const SPATIAL = {
   // core reaches the rule's members by id (`World.renderSnapshot` does the
   // same for the transform).
   created: 'created',
-  // …and the other end of the same fact. Not raised by `clear world`, which
-  // empties a world rather than removing anybody from it (`rules/spatial`).
+  // …and the other end of the same fact (`rules/spatial`).
   removed: 'removed',
   // Parenting (specs/PARENTING.md): the actor this one is carried by, and the
   // four events a change of parent raises. The transform properties above hold

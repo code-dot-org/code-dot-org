@@ -2033,10 +2033,13 @@ export const TILES: readonly Tile[] = [
     teaches: 'Counting what is left is how a game knows it is over.',
     task: 'Three bricks that go one at a time, and a game that never ends. End it on the last one.',
     requires: ['arcade/paddle'],
-    // NOT `how many … in …`, nor `remove actor`: `memory/many` grants the
-    // first and `adventure/keys` the second, and this lesson is handed both.
-    // What it adds is the way a world sheds EVERYTHING.
-    unlocks: [{kind: 'block', type: 'world_clear_world'}],
+    // IT GRANTS NOTHING. `how many … in …` is `memory/many`'s and `remove
+    // actor` is `adventure/keys`', and this lesson is handed both. What it
+    // adds is WHERE to ask — after the frame has settled, not in the handler
+    // that did the removing — which is not a thing that can be put on a
+    // shelf. It used to grant `clear world`, which no lesson of its own used
+    // and which went when a level became what a Viewport holds.
+    unlocks: [],
     // The question it turns on belongs to Memory, one region away, and Arcade
     // is entered from Motion and Logic.
     offers: [
@@ -2489,12 +2492,6 @@ export const TILES: readonly Tile[] = [
       // (specs/PARENTING.md).
       {kind: 'actor', id: 'button'},
       {kind: 'actor', id: 'panel'},
-      // …and a window onto a level, with the blocks that change what it
-      // shows (specs/VIEWPORT_PLAN.md).
-      {kind: 'actor', id: 'viewport'},
-      {kind: 'block', type: 'world_map_ref'},
-      {kind: 'block', type: 'world_load_map_into'},
-      {kind: 'block', type: 'world_unload_viewport'},
       // …and an answer that stays answered: a Button that is on or off.
       {kind: 'actor', id: 'toggle'},
       // …and one answer out of several.
@@ -2731,29 +2728,26 @@ export const TILES: readonly Tile[] = [
     task: 'Two rooms in two files, and a door that does nothing.',
     requires: ['adventure/world'],
     // NOT a Scenes rule, which is what this tile asked for while `load map`
-    // was a thing only a world being BUILT could do. Loading one while the game
-    // runs is the whole of going somewhere else (`World.loadMap`), and it is a
-    // block the world file already has — so what was a missing rule turned out
-    // to be a missing half of a block.
-    // IT GRANTS NOTHING, and it is the only tile that does not. Both blocks a
-    // door is made of are already somebody's to give — `load map` is
-    // `place/map`'s and `clear world` is `arcade/bricks`' — and what this
-    // lesson adds is that the two of them together, in a handler rather than
-    // under `define world`, are a way out of the room. There is no third block
-    // to hand over for that, and inventing one to have something to unlock
-    // would be a worse map.
-    unlocks: [],
-    // Lent, because the way here comes up through Look and Place and passes
-    // through neither of the tiles that grant them. Half a door is no door.
-    offers: [
-      {kind: 'block', type: 'world_load_map'},
-      {kind: 'block', type: 'world_clear_world'},
+    // was a thing only a world being BUILT could do. A room is a map and the
+    // screen is a window onto one: the Viewport, a stock actor on the world's
+    // own map, with the blocks that change what it holds
+    // (specs/MAP_FIRST.md, "Levels: the Viewport"). A door is one of them.
+    //
+    // It used to grant nothing, when a door was `clear world` then `load
+    // map` and both were somebody else's to give. `clear world` is gone —
+    // it took the score and the menu with the room — and what replaced the
+    // pair is this tile's own.
+    unlocks: [
+      {kind: 'actor', id: 'viewport'},
+      {kind: 'block', type: 'world_map_ref'},
+      {kind: 'block', type: 'world_load_map_into'},
+      {kind: 'block', type: 'world_unload_viewport'},
     ],
     check: {
       kind: 'outcome',
       says: 'Walking into the Door leaves room one behind and arrives at room two’s doorway.',
       falsePass:
-        'Teleporting within one big map, which moves the Player and leaves the Door standing — so the check reads WHICH map is loaded (a Chest that was not there, and a Door that is gone) rather than where the Player is. Loading room two without clearing room one is refused by the same reading: both rooms would be in the world at once.',
+        'Teleporting within one big map, which moves the Player and leaves the Door standing — so the check reads WHICH map is loaded (a Chest that was not there, and a Door that is gone) rather than where the Player is. Loading room two onto the world’s own map, beside the Viewport rather than into it, is refused by the same reading: both rooms would be in the world at once.',
       run: {
         probes: {
           chests: {kind: 'actorCount', of: 'Chest'},

@@ -21,7 +21,6 @@ describe('projectFiles', () => {
       'animations/coinSpin.anim',
       'animations/game.anim',
       'effects/ripple.effect',
-      'maps/level1.map',
       'rules/arrows.rule',
       'rules/collect.rule',
       'rules/collisions.rule',
@@ -38,8 +37,10 @@ describe('projectFiles', () => {
       'sprites/coinSpin.sheet',
       'worlds/main.world',
     ]);
-    // The world is a Blockly workspace (generated to a WorldBuilder at compile).
-    expect(files['worlds/main.world']).toContain('world_load_map');
+    // The world is a Blockly workspace (generated to a WorldBuilder at
+    // compile), with its level beside the blocks as its main map.
+    expect(files['worlds/main.world']).toContain('world_world');
+    expect(files['worlds/main.world']).toContain('"map"');
   });
 
   it('nests through multiple folder levels', () => {

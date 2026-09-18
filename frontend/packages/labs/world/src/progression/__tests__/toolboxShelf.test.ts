@@ -195,7 +195,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // Not `any ⟨Dot⟩`: the new block's source socket wears one already, so the
   // one trip to the toolbox is for the block itself.
   'simulation/neighbors': ['world_actors_within'],
-  'adventure/rooms': ['world_clear_world', 'world_load_map'],
+  // One block and the value it wears: `map ⟨…⟩` is the shadow in its socket,
+  // and `the ⟨Viewport⟩` is the kind block every handler here already uses.
+  'adventure/rooms': ['world_load_map_into'],
   'adventure/keys': [
     'controls_if',
     'world_event_actor',

@@ -401,12 +401,6 @@ export const CreatedEvent = rule.addEvent(SPATIAL.created, {
  * back-reference is gone. That is not a problem for a handler: an event
  * handler is passed the world it is being dispatched by, so `remove actor
  * ⟨…⟩` works from a handler on an actor that has itself left.
- *
- * NOT RAISED BY `clear world`, and that is a decision rather than an
- * oversight. Emptying a world is not something that happens TO each actor in
- * it — nothing survives to react, a companion would be cleared by the same
- * sweep, and a hundred handlers running as a level is torn down is a hundred
- * chances to put something back into a world that is being emptied.
  */
 export const RemovedEvent = rule.addEvent(SPATIAL.removed, {
   name: 'is removed',

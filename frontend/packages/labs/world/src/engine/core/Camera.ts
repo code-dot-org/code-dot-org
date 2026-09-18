@@ -20,8 +20,8 @@
 //
 // Not an Actor, though it is meant to be treated like one. A camera is the actor
 // foundation MINUS APPEARANCE: it has a position, it is never drawn, and it is
-// not in `world.actors`, so no rule has to learn to skip it and `clear world`
-// does not take it away with the level.
+// not in `world.actors`, so no rule has to learn to skip it and nothing that
+// removes actors takes it away.
 //
 // NO ZOOM YET. The spec's `fit` and a parallax factor of `(0, 0)` differ only
 // once a camera can scale — a layer at zero still zooms, a `fit` layer does not

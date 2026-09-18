@@ -139,11 +139,14 @@ export const setNumber = (type: string, value: number) => ({
  * second axis"; specs/MAP_FIRST.md): P stops the game and loads the stock
  * menu. The menu's own script takes it away on Resume and says `quit` on
  * Quit, and the world decides what quitting means — here, start the level
- * over. The menu is the project's `maps/pauseMenu.map`, imported with the
+ * over, which is loading it into the Viewport that holds it again: what the
+ * Viewport held goes, and nothing outside it is touched. The menu is loaded
+ * into the main map, over the Viewport, so it is not part of what restarts.
+ * The menu is the project's `maps/pauseMenu.map`, imported with the
  * kinds it places (`maps/importStockMap`), and a project may open it in the
  * map editor and move things or change what its buttons do.
  */
-export const pauseHandlers = (level: string) => {
+export const pauseHandlers = (level: string, viewport = 'actors/viewport') => {
   return [
     {
       type: 'world_on_Input_IsPressedEvent',
@@ -179,8 +182,13 @@ export const pauseHandlers = (level: string) => {
       next: {
         block: stack([
           {type: 'world_resume_game'},
-          {type: 'world_clear_world'},
-          {type: 'world_load_map', fields: {MAP: level}},
+          {
+            type: 'world_load_map_into',
+            inputs: {
+              MAP: {shadow: {type: 'world_map_ref', fields: {MAP: level}}},
+              ACTOR: kind(viewport),
+            },
+          },
         ]),
       },
     },
@@ -427,6 +435,9 @@ const BALL_ACTOR = JSON.stringify({
   },
 });
 
+/** The whole screen: the level is as big as the view. */
+const SCREEN = ALL_COLUMNS.length * TILE_SIZE;
+
 const BREAKOUT_WORLD = JSON.stringify({
   blocks: {
     blocks: [
@@ -435,18 +446,29 @@ const BREAKOUT_WORLD = JSON.stringify({
         x: 20,
         y: 20,
         fields: {NAME: 'Breakout'},
-        next: {
-          block: stack([
-            // By NAME, which is what a parsed `.rule` is referred to as from
-            // then on, wherever its file sits (useRuleOptions). A module path
-            // is what an unparseable one falls back to, and a name that names
-            // nothing quietly picks the first rule in the list instead.
-            {type: 'world_load_map', fields: {MAP: 'maps/breakout'}},
-          ]),
-        },
       },
       serveHandler('actors/ball'),
       ...pauseHandlers('maps/breakout'),
+    ],
+  },
+  // The main map is the screen, and the one thing on it is the window the
+  // level is played in (specs/MAP_FIRST.md, "Levels: the Viewport"). The
+  // level is `maps/breakout.map`, held by path; starting it over is loading
+  // it into the Viewport again.
+  map: {
+    type: 'map',
+    size: {width: ALL_COLUMNS.length, height: ALL_COLUMNS.length},
+    tile: {width: TILE_SIZE, height: TILE_SIZE},
+    actors: [
+      {
+        type: 'actors/viewport',
+        id: 'Game',
+        properties: {
+          positional: {position: {x: SCREEN / 2, y: SCREEN / 2}},
+          Label: {text: '', width: SCREEN, height: SCREEN},
+          showsMap: {map: 'maps/breakout'},
+        },
+      },
     ],
   },
 });

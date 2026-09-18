@@ -1,8 +1,7 @@
 # Plan: the Viewport (MAP_FIRST.md, step 3)
 
-STATUS: BUILT, pending a look in the browser, less mirroring and the
-editor's way to set a map's `camera.follows`. The third build step of
-specs/MAP_FIRST.md, after specs/MAP_SCRIPTS_PLAN.md and
+STATUS: BUILT, and seen working in the browser, less mirroring. The third
+build step of specs/MAP_FIRST.md, after specs/MAP_SCRIPTS_PLAN.md and
 specs/MAIN_MAP_PLAN.md: a stock actor placed on the main map that holds a
 map in a coordinate space of its own, with a camera between that space and
 the screen. The working record, as before.
@@ -160,13 +159,15 @@ the screen. The working record, as before.
 - Mirroring: a Viewport showing another Viewport's contents through its
   own camera.
 - Zoom, which waits on the engine's cameras having any.
-- The editor's way to set a map's `camera.follows`: the key is read when
-  a map is loaded into a Viewport and honoured, but a level's properties
-  window with nothing selected does not yet offer it.
+- (Built since, in step 5: the editor's way to set a map's
+  `camera.follows`, in a level's inspector with nothing selected.)
 - A Viewport's own layers and backgrounds (step 4); until then the main
   map's backdrop shows through a Viewport, over the Viewport's own face.
-- `clear world`'s retirement and the world's `set actor to follow` block,
-  which MAP_FIRST.md lists among what this step retires.
+- (Settled since, in step 5: `clear world` is deleted; the world's follow
+  blocks stay. Also fixed there: a load by path now writes the Viewport's
+  `map` property, where before the next tick loaded the old map back; and
+  what the root holds in front of a Viewport is drawn in front of it.
+  specs/RETIREMENTS_PLAN.md.)
 
 ## What to look at in the browser
 

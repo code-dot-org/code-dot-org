@@ -1,9 +1,10 @@
 # Proposal: the map as the front door
 
-STATUS: PROPOSED, with steps 1 to 4 built — map scripts on `.map` files,
-the main map in the world's file, the Viewport, and layers in the editor
-(specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md, specs/VIEWPORT_PLAN.md
-and specs/LAYERS_PLAN.md record the commits and what they taught). The rest
+STATUS: PROPOSED, with steps 1 to 5 built — map scripts on `.map` files,
+the main map in the world's file, the Viewport, layers in the editor, and
+the retirements (specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md,
+specs/VIEWPORT_PLAN.md, specs/LAYERS_PLAN.md and specs/RETIREMENTS_PLAN.md
+record the commits and what they taught). The rest
 is a design to argue with, written
 after the pause menu showed where the current shape strains (UI_ACTORS.md,
 "The second axis"; MAPS.md, "A block naming a placement").
@@ -573,8 +574,8 @@ What map-first does better:
 
 - `.world`: gains a `map` beside its `blocks`, the shape a `.map` holds,
   which the file editor carries through every save (`documentExtras`).
-  BUILT. `create actor in map` is to be retired, its placements migrated
-  into the main map on first open; not yet.
+  BUILT. `create actor in map` is deleted, with no migration: nothing has
+  shipped, so no file holds one (specs/RETIREMENTS_PLAN.md).
 - `.map`: each placement may carry a `blocks` workspace, and the map one of
   its own, serialized as an actor file's is; a map gains a `camera`. It
   compiles to a module exporting the arrangement and a script function.
@@ -586,8 +587,10 @@ What map-first does better:
   BUILT. `map ⟨…⟩`, `load map ⟨…⟩ into ⟨viewport⟩` and `unload ⟨viewport⟩`
   join the world's blocks; `load map` alone keeps meaning the main map's own
   space, which is what a dialog wants. A map's `camera.follows` is read when
-  it is loaded into a Viewport. Mirroring, `clear world`'s retirement and the
-  world's follow block are not yet.
+  it is loaded into a Viewport, and set in the map's inspector with nothing
+  selected. `clear world` is deleted. Mirroring is not yet; the world's
+  follow blocks stay, being a stock rule's and how the WORLD's camera is
+  steered (specs/RETIREMENTS_PLAN.md).
 - `.map` gains layers, each with a background and a foreground, edited in the
   map editor. BUILT. `define layer` in a world stops being how a layer is
   made, and stays for what a script changes while the game runs.
@@ -614,8 +617,13 @@ What map-first does better:
    in the inspector, a placement's layer set where it is placed, the canvas
    drawing them in order, and both runtimes — the world's layers from the
    main map, a space's from the map a Viewport holds.
-5. **Retirements.** The Pause Menu actor, `create actor in map`, the global
-   name registry, `clear world`, the `fit` layer flag.
+5. **Retirements.** BUILT (specs/RETIREMENTS_PLAN.md), less the `fit`
+   layer flag, which stays until lessons teach the Viewport for an
+   interface: the Pause Menu actor and the global name registry went in
+   step 1; `create actor in map` and `clear world` are deleted, the engine's
+   `clearActors` with them; Breakout's level and the two-rooms lesson's
+   rooms are held by Viewports; the starter project's level is its main
+   map.
 6. **Curriculum.** Tiles that unlock editor affordances; levels re-pinned.
 
 Step 1 is worth doing even if the rest is refused. Steps 2 and 3 are the

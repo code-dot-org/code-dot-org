@@ -186,9 +186,11 @@ Three consequences to implement:
   and is simply never drawn, or the block warns on a Camera the way
   `remove effect` warns under `define actor` (`runtimeActorExtension`). Silently
   storing a sprite nobody reads is the option to avoid.
-- **`clear world` leaves the Cameras.** It calls `clearActors()`, and Cameras
-  are not in the actor list — so clearing a level leaves the camera pointed
-  where it was. That is the wanted behavior, and now it is for a reason.
+- **Replacing a level leaves the Cameras.** Cameras are not in the actor
+  list, so a level taken away leaves the camera pointed where it was. (This
+  was first said of `clear world`, which is gone: a level is what a Viewport
+  holds, and a Viewport's space has a camera of its own that starts over
+  with each map. specs/RETIREMENTS_PLAN.md.)
 
 One known and accepted gap: because a Camera's value is typed `Actor`, it can be
 pushed into an actor variable and thereby reach `for each actor`. The
@@ -484,8 +486,10 @@ They do not exist yet at all, so there is nothing to migrate.
 
 ### Which layer a thing is placed in
 
-Layers complicate the scene graph. Three blocks place things — `add actor`,
-`load map`, `create actor in map` — and each has to end up in some layer.
+Layers complicate the scene graph. Two blocks place things — `add actor` and
+`load map` — and each has to end up in some layer. (There were three:
+`create actor in map` is gone, its placements being the world's main map,
+where a placement names its layer itself. specs/RETIREMENTS_PLAN.md.)
 
 A LAYER OWNS ITS CONTENTS. `define layer` has a `do` mouth, and what is placed
 inside it is placed in it:

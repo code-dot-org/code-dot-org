@@ -134,17 +134,6 @@ describe('when a declaration is too late', () => {
       /must come before the actors are placed/,
     );
   });
-
-  it('is in time again once the actors are cleared', () => {
-    // Not a case any block produces — `clear world` sits in a handler, where
-    // `world` is the live one. It falls out of asking the honest question, and
-    // the honest answer is that a world with nothing in it can be relaid.
-    const made = builder();
-    made.addActor(new ActorBuilder({id: 'a', name: 'A'}));
-    made.clearActors();
-
-    expect(() => made.useRules([GravityRule])).not.toThrow();
-  });
 });
 
 describe('reading the world from its own description', () => {

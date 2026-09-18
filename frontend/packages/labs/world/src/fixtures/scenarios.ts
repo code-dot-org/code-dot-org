@@ -24,6 +24,8 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {importStockActor} from '../actors/importStockActor';
+import {stockActorById} from '../actors/stock';
 import {buildProject, DEFAULT_PROJECT, type ProjectSpec} from '../constants';
 import type {WorldLevelData} from '../levelData';
 import {importStockMap} from '../maps/importStockMap';
@@ -155,9 +157,13 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'A paddle, a bouncing ball, and two rows of bricks to clear. Every ' +
       'mechanic in it is a stock rule.',
     // …with the stock pause menu, imported the way a project imports one.
-    source: importStockMap(
-      buildProject(BREAKOUT_SPEC).source,
-      stockMapById('pauseMenu')!,
+    // …and the stock Viewport its level is played in.
+    source: importStockActor(
+      importStockMap(
+        buildProject(BREAKOUT_SPEC).source,
+        stockMapById('pauseMenu')!,
+      ).source,
+      stockActorById('viewport')!,
     ).source,
     instructions:
       '## Breakout\n\nClear the bricks without losing the ball.\n\n' +
@@ -166,9 +172,12 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'Console counts what it has taken\n' +
       '- The room is open at the bottom: `when ⟨Ball⟩ leaves the map` is how ' +
       'it notices\n' +
+      '- The level is `maps/breakout.map`, played inside the Viewport on ' +
+      'the world’s map: select it there to see which map it holds\n' +
       '- Press P to pause: the stock Pause Menu map loads over the game, ' +
       'which stops moving and keeps listening. Resume takes it away; Quit ' +
-      'starts the level over. Open `maps/pauseMenu.map` to move it\n' +
+      'loads the level into the Viewport again. Open `maps/pauseMenu.map` ' +
+      'to move it\n' +
       '- Try a bouncier ball, a wider paddle, or a third row of bricks',
   },
   meteors: {

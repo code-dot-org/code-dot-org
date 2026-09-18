@@ -38,9 +38,9 @@ import {World, WorldBuilder} from '../index';
  */
 // `define` and `loadMap` were here — "registering a template is part of
 // describing a world", "placement instantiates templates" — and both moved to
-// the World the day a door had to lead to a second room: `clear world` then
-// `load map ⟨Room 2⟩` in a handler is that door, and neither call could be made
-// from one. The builder keeps its own registry and hands it over on the way
+// the World the day a map had to be loaded while the game runs: `load map` in a
+// handler is a menu coming up over a game, and neither call could be made from
+// one. The builder keeps its own registry and hands it over on the way
 // past, so a description still says `define` before it says `load map`.
 const BUILDER_ONLY: Record<string, string> = {
   defineLayer: 'a layer cannot be spliced into a scene graph that exists',
@@ -51,11 +51,10 @@ const BUILDER_ONLY: Record<string, string> = {
 /**
  * Runtime-only, because the question has no answer while a world is described.
  *
- * This list used to be longer. `clearActors` and `removeActor` were on it —
- * "nothing is placed to remove" — which stopped being true once `loadMap`
- * placed actors into a world the builder holds: `load map`, `clear world`,
- * `load map` is a world replacing its level, not a mistake. What is left is
- * the three that need a world that is RUNNING, not merely populated.
+ * This list used to be longer. `removeActor` was on it — "nothing is placed
+ * to remove" — which stopped being true once `loadMap` placed actors into a
+ * world the builder holds. What is left is the three that need a world that
+ * is RUNNING, not merely populated.
  */
 const RUNTIME_ONLY: Record<string, string> = {
   emit: 'nothing can hear an event before a tick dispatches it',

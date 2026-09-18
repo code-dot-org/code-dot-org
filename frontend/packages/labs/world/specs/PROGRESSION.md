@@ -449,7 +449,7 @@ The first thing anybody wants is for something to move when they press a key.
 | `arcade/bounce` | A ball that stops dead at the wall. What a collision does to a speed is the surface's business. | `bounciness`               | `[o]` as fast at the end of a long run as at the start            |
 | `arcade/paddle` | A paddle kept on screen by hand, with half of it hanging off.                                   | `view size`                | `[o]` stops half its own width from the wall, whatever that is    |
 | `arcade/zap`    | One per press, and none of them ever leaves.                                                    | Zapping; Expires           | `[o]` ten presses make fewer than ten, and the world empties      |
-| `arcade/bricks` | Counting what is left is how a game knows it is over.                                           | `clear world`              | `[o]` ends on the last brick and not the second to last           |
+| `arcade/bricks` | Counting what is left is how a game knows it is over.                                           | (nothing; an assembly)     | `[o]` ends on the last brick and not the second to last           |
 | `arcade/waves`  | A timer belongs to an actor, and the interval can be a value like any other.                    | Time rule; arcade template | `[o]` the gap between spawns is shorter at the end than the start |
 
 ### Genre: Puzzle — entered from Logic and Memory
@@ -474,13 +474,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Genre: Adventure — entered from Look and Place
 
-| Tile               | The lesson                                                         | Unlocks                                | Check                                                                         |
-| ------------------ | ------------------------------------------------------------------ | -------------------------------------- | ----------------------------------------------------------------------------- |
-| `adventure/world`  | A room three screens wide, seen through a window that never moves. | (Camera family, if not held)           | `[o]` the player leaves the first screen and the view follows                 |
-| `adventure/rooms`  | Two rooms in two files, and a door that does nothing.              | `clear world`; `load map` in a handler | `[o]` the Door is gone, a Chest has arrived, and the Player is at the doorway |
-| `adventure/keys`   | Two locked doors, one key, and no way through either of them.      | Inventory rule                         | `[o]` the first door opens, the second stays shut                             |
-| `adventure/people` | A villager who walks her beat and leaves her own name behind.      | Patrol rule; parenting                 | `[o]` the NPC patrols and its conversation starts on contact                  |
-| `adventure/errand` | Four things to find, and a bar that has no idea how it is going.   | Progress rule; the adventure template  | `[o]` progress reaches 1 exactly when the last item is found                  |
+| Tile               | The lesson                                                         | Unlocks                               | Check                                                                         |
+| ------------------ | ------------------------------------------------------------------ | ------------------------------------- | ----------------------------------------------------------------------------- |
+| `adventure/world`  | A room three screens wide, seen through a window that never moves. | (Camera family, if not held)          | `[o]` the player leaves the first screen and the view follows                 |
+| `adventure/rooms`  | Two rooms in two files, and a door that does nothing.              | Viewport; `load map ⟨…⟩ into ⟨…⟩`     | `[o]` the Door is gone, a Chest has arrived, and the Player is at the doorway |
+| `adventure/keys`   | Two locked doors, one key, and no way through either of them.      | Inventory rule                        | `[o]` the first door opens, the second stays shut                             |
+| `adventure/people` | A villager who walks her beat and leaves her own name behind.      | Patrol rule; parenting                | `[o]` the NPC patrols and its conversation starts on contact                  |
+| `adventure/errand` | Four things to find, and a bar that has no idea how it is going.   | Progress rule; the adventure template | `[o]` progress reaches 1 exactly when the last item is found                  |
 
 ### Genre: Simulation — entered from Place and Input
 

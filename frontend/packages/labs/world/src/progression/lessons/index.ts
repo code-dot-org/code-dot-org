@@ -5226,8 +5226,23 @@ const rooms: WorldScenario = {
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [{type: 'world_load_map', fields: {MAP: 'maps/room1'}}],
+      // The world's own map holds one thing: the window a room is seen
+      // through, the size of the screen, holding room one
+      // (specs/MAP_FIRST.md, "Levels: the Viewport").
+      rows: [
+        placeInMap('actors/viewport', [
+          {
+            id: 'Game',
+            properties: {
+              positional: {position: {x: 160, y: 160}},
+              Label: {text: '', width: 320, height: 320},
+              showsMap: {map: 'maps/room1'},
+            },
+          },
+        ]),
+      ],
     }),
+    stockActors: ['viewport'],
     actors: {
       player: actorFile('Player', [
         useTrait('Arrow Keys#MovesAcrossTrait'),
@@ -5265,14 +5280,16 @@ Two rooms, in two files. **maps/room1.map** is the one you are in — a Player
 and a Door — and **maps/room2.map** is the other one, which nothing has ever
 loaded. Walk into the Door and nothing happens.
 
-A room is a map, and going somewhere else is **taking this one away and loading
-that one**. Both blocks are ones you have: the world already loads a map, and
-**clear world** is how a world sheds everything.
+Open the world's **Map** and click the big box on it. That is a **Viewport**
+called Game: a window, and what you see through it is whichever map it holds.
+Right now it holds room one. A room is a map, and going somewhere else is
+**the window holding a different one**.
 
 ### What you do
 
 1. Add **when ⟨any Door⟩ starts touching**.
-2. In it, **clear world**, and then **load map ⟨maps/room2⟩**.
+2. In it, **load map ⟨map maps/room2⟩ into ⟨the Viewport⟩**. What the Viewport
+   held goes, and room two takes its place.
 3. Walk into the Door. The Chest is a room-two thing, so if you can see one you
    are somewhere else.
 

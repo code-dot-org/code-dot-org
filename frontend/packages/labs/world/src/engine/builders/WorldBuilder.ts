@@ -749,23 +749,10 @@ export class WorldBuilder {
   }
 
   /**
-   * Remove every actor. See {@link World.clearActors}.
-   *
-   * Named as the World names it, because one block calls whichever it lands on:
-   * `clear world` generates `world.clearActors()` under `define world` and in a
-   * handler alike. It reads as a strange thing to do while describing a world
-   * until you want a second map to REPLACE the first rather than stack on it,
-   * which is what `loadMap`'s note points at.
-   */
-  clearActors(): void {
-    this.getWorld().clearActors();
-  }
-
-  /**
    * Place the actors a Map describes. See {@link World.loadMap}.
    *
-   * Deferred like `clear world`'s, and for the same reason: one block calls
-   * whichever object it lands on. What this adds is the REGISTRY — a builder's
+   * Named as the World names it, because one block calls whichever object it
+   * lands on: `load map` means the same under `define world` and in a handler. What this adds is the REGISTRY — a builder's
    * `define` records templates before there is a world to record them in, so
    * they are handed over here, on the way past.
    */

@@ -385,16 +385,16 @@ describe('an actor’s own properties, enumerated', () => {
   });
 });
 
-describe('World.loadMap (a second room, while the game runs)', () => {
+describe('World.loadMap (a second map, while the game runs)', () => {
   // Loading a map was the builder's alone, so a project could describe as many
-  // maps as it liked so long as it never wanted to be in a different one. A
-  // door is `clear world` then `load map ⟨Room 2⟩` in a handler, and both calls
-  // had to be ones a live World could answer.
+  // maps as it liked so long as it never wanted another while it ran. A menu
+  // over a game is `load map` in a handler, which a live World has to answer.
+  // (Replacing a level is a Viewport's: `loadMapInto`, `spaces.test`.)
   const room = (type: string) => ({actors: [{type}]});
   const template = (id: string) =>
     new ActorBuilder({id, name: id}).useTraits([AffectedByGravityTrait]);
 
-  it('replaces one room with another while it runs', () => {
+  it('adds a second map to the first while it runs', () => {
     const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
       GravityRule,
     ]);
@@ -405,12 +405,12 @@ describe('World.loadMap (a second room, while the game runs)', () => {
     builder.loadMap(room('actors/tree'));
     expect([...world.actors].map(actor => actor.type)).toEqual(['actors/tree']);
 
-    // What the door does: everything goes, and the other room's actors arrive.
+    // A kind defined on the live world, and a map of it loaded over the first.
     world.define('actors/throne', template('throne'));
-    world.clearActors();
     world.loadMap(room('actors/throne'));
 
     expect([...world.actors].map(actor => actor.type)).toEqual([
+      'actors/tree',
       'actors/throne',
     ]);
   });
@@ -617,11 +617,6 @@ describe('WorldBuilder.loadMap (Map data)', () => {
     builder.loadMap({actors: [{type: 'faller', id: 'b'}]});
 
     expect(builder.getWorld().snapshot().actorIds.sort()).toEqual(['a', 'b']);
-
-    // …and `clear()` is how you replace instead of add.
-    builder.clearActors();
-    builder.loadMap({actors: [{type: 'faller', id: 'c'}]});
-    expect(builder.getWorld().snapshot().actorIds).toEqual(['c']);
   });
 
   it('rejects a map that references an unregistered type', () => {

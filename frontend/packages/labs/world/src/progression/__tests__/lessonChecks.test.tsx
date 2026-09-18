@@ -4907,20 +4907,30 @@ describe('the two-rooms lesson’s check', () => {
       } as unknown as Row);
       return JSON.stringify(workspace);
     });
-  const loadRoomTwo = (): Row => ({
-    type: 'world_load_map',
-    fields: {MAP: 'maps/room2'},
-  });
+  /** `load map ⟨map maps/room2⟩ into ⟨the Viewport⟩`. */
+  const intoTheGame = (): Row =>
+    ({
+      type: 'world_load_map_into',
+      inputs: {
+        MAP: {shadow: {type: 'world_map_ref', fields: {MAP: 'maps/room2'}}},
+        ACTOR: {
+          block: {
+            type: 'world_actor_kind',
+            fields: {ACTOR: 'actors/viewport'},
+          },
+        },
+      },
+    }) as unknown as Row;
 
   it('refuses a door that does nothing', async () => {
     const {passes} = await check('adventure/rooms', lesson.source);
     expect(passes).toBe(false);
   });
 
-  it('accepts clearing the world and loading the other room', async () => {
+  it('accepts loading the other room into the Viewport', async () => {
     const {passes, result} = await check(
       'adventure/rooms',
-      doorway({type: 'world_clear_world', next: {block: loadRoomTwo()}}),
+      doorway(intoTheGame()),
     );
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
@@ -4944,10 +4954,15 @@ describe('the two-rooms lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  it('refuses loading the second room on top of the first', async () => {
-    // Both rooms in the world at once, with two Players in it — which looks
-    // right for a moment, because a Chest really has arrived.
-    const {passes} = await check('adventure/rooms', doorway(loadRoomTwo()));
+  it('refuses loading the second room beside the Viewport', async () => {
+    // `load map` alone puts room two on the world's own map, over the
+    // window rather than in it: both rooms in the world at once, with two
+    // Players — which looks right for a moment, because a Chest really has
+    // arrived.
+    const {passes} = await check(
+      'adventure/rooms',
+      doorway({type: 'world_load_map', fields: {MAP: 'maps/room2'}} as Row),
+    );
     expect(passes).toBe(false);
   });
 });

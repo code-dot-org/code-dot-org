@@ -20,7 +20,7 @@ import {
   PositionProperty,
   ScaleProperty,
 } from '../rules/spatial';
-import {ViewportTrait} from '../rules/viewport';
+import {ViewportMapProperty, ViewportTrait} from '../rules/viewport';
 
 const Ping = new RuleBuilder({id: 'pinger', name: 'Pinger'}).addEvent('ping');
 const Coin = new ActorBuilder({id: 'coin', name: 'Coin'}).set(
@@ -154,6 +154,37 @@ describe('loading into a Viewport', () => {
     expect(world.loadMapInto(window, 'maps/level1')).toHaveLength(3);
     expect(world.loadMapInto(window, 'maps/missing')).toEqual([]);
     expect([...world.actors]).toHaveLength(1);
+  });
+
+  it('keeps showing a map loaded by path, which its property then names', () => {
+    const world = makeWorld();
+    const window = placeWindow(world);
+    world.defineMap('maps/level1', LEVEL);
+    world.defineMap('maps/level2', {
+      actors: [{type: 'actors/coin', id: 'z'}],
+    });
+    window.set(ViewportMapProperty, 'maps/level1');
+    world.tick(0);
+    expect([...world.actors].map(actor => actor.id)).toContain('a');
+
+    // The property named level1 when this ran. Were it left saying so, the
+    // next tick would see a Viewport not showing what its property names
+    // and load level1 back.
+    world.loadMapInto(window, 'maps/level2');
+    world.tick(16);
+    world.tick(16);
+    expect([...world.actors].map(actor => actor.id)).toEqual(['win', 'z']);
+    expect(window.get(ViewportMapProperty)).toBe('maps/level2');
+
+    // …and an unloaded Viewport names nothing, so naming level1 again is a
+    // change, and loads it.
+    world.unloadViewport(window);
+    world.tick(16);
+    expect([...world.actors].map(actor => actor.id)).toEqual(['win']);
+    expect(window.get(ViewportMapProperty)).toBe('');
+    window.set(ViewportMapProperty, 'maps/level1');
+    world.tick(16);
+    expect([...world.actors].map(actor => actor.id)).toContain('a');
   });
 
   it('refuses an actor that is no Viewport', () => {

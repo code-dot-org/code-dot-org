@@ -84,8 +84,9 @@ describe('the pause menu, in breakout', () => {
       g.frame();
     }
     g.tap('p');
-    // Quit's script says `quit`, the map's own event; the world hears it
-    // and starts the level over, which clears the menu with the rest.
+    // Quit's script says `quit`, the map's own event, and takes the menu
+    // away; the world hears it and loads the level into its Viewport again,
+    // which touches nothing outside it.
     const quit = g.byId('Quit')!;
     const at = quit.get(PositionProperty);
     g.click(at.x, at.y);

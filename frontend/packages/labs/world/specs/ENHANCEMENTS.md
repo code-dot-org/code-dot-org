@@ -213,10 +213,9 @@ else.
 its bar still in the world leaves a bar about nobody, hanging where its subject
 used to be — so `is removed` is the second half of the pair, raised the moment
 an actor actually leaves a world (both of `removeActor`'s paths pass through
-one `detach`). It is NOT raised by `clear world`: emptying a world is not
-something that happens to each actor in it, nothing survives to react, and a
-hundred handlers running as a level is torn down is a hundred chances to put
-something back into a world that is being emptied.
+one `detach`). That includes a level taken out of a Viewport, whose actors
+are removed one by one. (`clear world` did not raise it, and is gone:
+specs/RETIREMENTS_PLAN.md.)
 
 **The actor remembers its bar in a property of its own**, which is what makes
 the second handler possible: `add actor … as ⟨bar⟩` opens a block scope, so

@@ -116,16 +116,18 @@ describe('the starter project', () => {
     // importing, so the starter is a worked example of the shelf rather than a
     // thing beside it.
     //
-    // WHO IT IS ABOUT IS IN THE MAP and in no blocks at all: a placement holds
+    // WHO IT IS ABOUT IS IN THE WORLD'S MAP and in no blocks at all: a placement holds
     // the id of another placement, and `loadMap` resolves it once every entry
     // exists (specs/MAPS.md).
     expect(starterFile('healthBar').contents).toBe(healthBarActor);
 
-    const map = JSON.parse(starterFile('level1').contents) as {
-      actors: Array<{
-        id?: string;
-        properties?: Record<string, Record<string, unknown>>;
-      }>;
+    const {map} = JSON.parse(starterFile('main').contents) as {
+      map: {
+        actors: Array<{
+          id?: string;
+          properties?: Record<string, Record<string, unknown>>;
+        }>;
+      };
     };
     const bar = map.actors.find(actor => actor.id === 'HealthBar');
     const named = bar?.properties?.Health_Bar?.subject;
@@ -165,8 +167,8 @@ describe('the starter project', () => {
     // The player prints how many coins it has taken. With one coin in the map
     // that number is only ever 1, which makes `how many ⟨Coin⟩ in ⟨collected⟩`
     // look like decoration rather than a question — so the map ships three.
-    const map = JSON.parse(starterFile('level1').contents) as {
-      actors: Array<{type: string}>;
+    const {map} = JSON.parse(starterFile('main').contents) as {
+      map: {actors: Array<{type: string}>};
     };
     const coins = map.actors.filter(actor => actor.type === 'actors/coin');
     expect(coins.length).toBeGreaterThan(1);

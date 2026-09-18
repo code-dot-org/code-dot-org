@@ -1119,7 +1119,7 @@ export class World {
   ): Actor {
     // The back-reference an actor-scoped action or query reads to reach the
     // world (see `Actor.world`). Set here because placement is what makes it
-    // true, and cleared by `clearActors` for the same reason.
+    // true, and cleared when it leaves (`detach`) for the same reason.
     actor.world = this;
     // The zero its age counts from. Placement is what starts the clock, so a
     // template instantiated and placed twice gives two actors of different ages.
@@ -1358,8 +1358,7 @@ export class World {
     // …and the actor hears that it is going. Here rather than in
     // `removeActor`, because that has two paths — straight out, or added to
     // the set swept at the end of a tick — and this is the one moment both of
-    // them pass through. `clearActors` does not, which is deliberate
-    // (`rules/spatial`).
+    // them pass through.
     const removed = this.spatialEvent(SPATIAL.removed);
     if (removed && this.actorList.includes(actor)) {
       this.emit(removed, actor);
@@ -1774,7 +1773,7 @@ export class World {
     this.unloadSpace(space);
     const held = typeof map === 'string' ? this.maps.get(map) : map;
     if (typeof map === 'string') {
-      space.shown = map;
+      this.nowShows(viewport, space, map);
     }
     // The space's layers are the map's, made before anything is placed so
     // each placement's layer resolves against them.
@@ -1801,6 +1800,26 @@ export class World {
     const space = this.viewportSpaceOf(viewport);
     if (space) {
       this.unloadSpace(space);
+      this.nowShows(viewport, space, '');
+    }
+  }
+
+  /**
+   * Record the path a Viewport shows, in the space AND in the Viewport's
+   * `map` property. Both, because `showHeldMap` loads whatever the property
+   * names whenever that differs from what is shown: a load by path that left
+   * the property naming the old map was undone on the next tick, by the
+   * engine loading the old map back. With the property written, it is also
+   * what a block reading it and the inspector are told, and setting it back
+   * to an earlier path is a change again.
+   */
+  private nowShows(viewport: Actor, space: Space, path: string): void {
+    space.shown = path;
+    if (
+      viewport.has(ViewportTrait) &&
+      String(viewport.get(ViewportMapProperty) ?? '') !== path
+    ) {
+      viewport.set(ViewportMapProperty, path);
     }
   }
 
@@ -2005,20 +2024,36 @@ export class World {
   /**
    * Place the actors a Map describes.
    *
-   * A world may load several — a level and a HUD, say. Loading is additive, so
-   * they stack in call order; `clearActors()` first to replace rather than add.
+   * A world may load several — a HUD, a menu over a game. Loading is additive,
+   * so they stack in call order, and each load can be taken back by the
+   * handle its script is given (`MapLoad.unload`). REPLACING a level is not
+   * this: a level is what a Viewport holds, and `loadMapInto` replaces it.
    *
-   * IT WORKS WHILE THE GAME RUNS, which is what makes a second room possible:
-   * `clear world` then `load map ⟨Room 2⟩` in a handler is a door. It lived on
-   * `WorldBuilder` alone until then, and a project could describe as many maps
-   * as it liked so long as it never wanted to be in a different one.
+   * IT WORKS WHILE THE GAME RUNS, which is what lets a menu come up in a
+   * handler. It lived on `WorldBuilder` alone until that was wanted.
    *
    * `layer` puts every actor the map describes into one layer, which is what
    * makes a HUD a HUD: the map is an ordinary map, and the layer it is loaded
    * into is the whole of what makes it an interface (specs/VIEWPORT.md).
    */
   loadMap(map: WorldMap, layer?: string): Actor[] {
-    return this.loadInto(this.rootSpace, map, layer);
+    const added = this.loadInto(this.rootSpace, map, layer);
+    // A Viewport this map placed holds its map FROM HERE, not from the end
+    // of the next tick, which is when `settleSpaces` would get to it. A
+    // world built from a main map with a Viewport on it has its level in it
+    // when it is handed over, and a handler in the first frame — the key
+    // that serves the ball — finds the ball. One level deep on purpose: a
+    // Viewport inside the map just shown waits for the tick, so a map that
+    // holds a Viewport onto itself grows a level a tick and not a stack.
+    for (const actor of added) {
+      const space = actor.has(ViewportTrait)
+        ? this.viewportSpaceOf(actor)
+        : undefined;
+      if (space) {
+        this.showHeldMap(space);
+      }
+    }
+    return added;
   }
 
   /** Place a map's actors into `space` — `loadMap`'s body, for any space. */
@@ -3237,34 +3272,6 @@ export class World {
       });
     }
     return states;
-  }
-
-  /**
-   * Remove every actor (used by `WorldBuilder.clear` and the `clear world` block).
-   *
-   * DEFERRED while a tick is running, exactly as {@link removeActor} is and for
-   * the same reason: clearing the world is something a handler does — "the
-   * player reached the exit, take it all away" — and a handler runs inside the
-   * walk of the very list this empties. Emptying it underneath that walk skips
-   * whatever came next. `WorldBuilder.clear` calls this at setup, where nothing
-   * is ticking and it takes effect at once.
-   */
-  clearActors(): void {
-    if (this.inTick) {
-      for (const actor of this.actorList) {
-        this.leaving.add(actor);
-      }
-      return;
-    }
-    for (const actor of this.actorList) {
-      actor.world = undefined;
-      actor.layer = undefined;
-    }
-    this.actorList.length = 0;
-    this.actorsById.clear();
-    // An emptied world starts its counting over, so a `clear world` followed by
-    // a `load map` names things the way a fresh world would.
-    this.nextOrdinal.clear();
   }
 
   /** Set a world-scoped property by its `${ruleId}.${propId}` path. */

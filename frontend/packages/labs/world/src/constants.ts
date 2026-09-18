@@ -239,22 +239,12 @@ export const LEVEL1_ACTORS = [
   place('actors/scoreboard', 'Scoreboard', tileCenter(2), tileCenter(0)),
 ];
 
-const LEVEL1_MAP = JSON.stringify(
-  {
-    type: 'map',
-    // Said out loud rather than left to the default, so the shipped map is a
-    // worked example of the field: how many tiles across and down (the map
-    // editor's Width/Height), against `tile`, which is how big ONE is.
-    size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
-    tile: {width: TILE_SIZE, height: TILE_SIZE},
-    actors: LEVEL1_ACTORS,
-  },
-  null,
-  2,
-);
-
-// The world, authored in Blockly (`main.world`): a `world_world` root and the
-// map whose actors it places.
+// The world (`main.world`): its MAP, which is the level and what a new
+// project opens on, and its blocks, a `world_world` root
+// (specs/MAP_FIRST.md, "The main map"). The level used to be a file of its
+// own, `maps/level1.map`, behind a `load map` row; a world's arrangement is
+// its own map now, and a `.map` file is for what is loaded while the game
+// runs — a menu, or a level a Viewport holds.
 //
 // NO `use rule` ROWS, and this is where that reads loudest, since this is the
 // first thing a learner sees. The rules in play are the ones under `rules/` —
@@ -267,9 +257,11 @@ const LEVEL1_MAP = JSON.stringify(
 // from: a file is not a thing a world opts into, it is a thing the project has.
 //
 // One ordering survives, and it is the generator's rather than the author's:
-// rules and animations are emitted before the map, because `load map` builds
-// the World and a rule arriving after it is too late (WorldBuilder throws
-// rather than quietly dropping it).
+// rules and animations are emitted before the map is loaded, because loading
+// builds the World and a rule arriving after it is too late (WorldBuilder
+// throws rather than quietly dropping it). The rows under `define world` run
+// before the map is loaded too, so the target below is set on a world with
+// nothing in it yet, which is all it needs.
 const MAIN_WORLD = JSON.stringify(
   {
     blocks: {
@@ -281,7 +273,6 @@ const MAIN_WORLD = JSON.stringify(
           fields: {NAME: 'Platform World'},
           next: {
             block: stack([
-              {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
               // Three coins at ten each. Set HERE rather than left to the
               // rule's default of nothing, because a target of zero is a game
               // that can be played and not won — and the level has an ending
@@ -296,6 +287,15 @@ const MAIN_WORLD = JSON.stringify(
           },
         },
       ],
+    },
+    map: {
+      type: 'map',
+      // Said out loud rather than left to the default, so the shipped map is
+      // a worked example of the field: how many tiles across and down (the
+      // map editor's Width/Height), against `tile`, which is how big ONE is.
+      size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
+      tile: {width: TILE_SIZE, height: TILE_SIZE},
+      actors: LEVEL1_ACTORS,
     },
   },
   null,
@@ -966,12 +966,6 @@ export const STARTER_SPEC: ProjectSpec = {
       language: 'anim',
       contents: GAME_ANIMATIONS,
       folderId: 'animations',
-    },
-    level1: {
-      name: 'level1.map',
-      language: 'map',
-      contents: LEVEL1_MAP,
-      folderId: 'maps',
     },
     jumpRule: {
       name: 'jump.rule',
