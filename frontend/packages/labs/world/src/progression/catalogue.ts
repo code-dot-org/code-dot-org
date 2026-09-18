@@ -1177,6 +1177,11 @@ export const TILES: readonly Tile[] = [
     task: 'The score scrolls away with the scenery. Give it a layer that ignores the camera, and the hills one that lags.',
     requires: ['place/map'],
     unlocks: [
+      // Where a layer is made: the map editor's strip, a layer's inspector,
+      // and the layer a placement is on (specs/CURRICULUM_PLAN.md)…
+      {kind: 'affordance', id: 'map-layers'},
+      // …and the blocks that say the same, which are how a layer changes
+      // while the game runs.
       {kind: 'block', type: 'world_define_layer'},
       {kind: 'block', type: 'world_within_layer'},
       {kind: 'block', type: 'world_layer_fixed'},
@@ -1186,17 +1191,25 @@ export const TILES: readonly Tile[] = [
       kind: 'shape',
       says: 'The Score is in a layer fixed to the screen, and the Hills are in one that moves less than the camera.',
       falsePass:
-        'Moving the Score every frame to wherever the camera is, which looks identical and is a thing to keep in step by hand for the rest of the project. The check reads the LAYER, which is the declaration that makes it true once.',
+        'Moving the Score every frame to wherever the camera is, which looks identical and is a thing to keep in step by hand for the rest of the project. The check reads the LAYER, which is the declaration that makes it true once — from the map, where the lesson makes one, or from `define layer` blocks, which say the same.',
       run: {probes: {view: {kind: 'cameras'}}, trace: [{seconds: 0.1}]},
       inspect: files => {
         const declared = blocksIn(files, 'world_define_layer').map(layer =>
           JSON.stringify(layer),
         );
-        const holds = (what: string, who: string) =>
+        const inBlocks = (what: string, who: string) =>
           declared.some(layer => layer.includes(what) && layer.includes(who));
+        const layers = mainMapLayers(files);
+        const onMap = (is: (layer: MapLayerShape) => boolean, who: string) =>
+          layers.some(layer => is(layer) && layer.holds.includes(who));
         return (
-          holds('world_layer_fixed', 'actors/score') &&
-          holds('world_layer_parallax', 'actors/hill')
+          (onMap(layer => layer.fit === true, 'actors/score') ||
+            inBlocks('world_layer_fixed', 'actors/score')) &&
+          (onMap(
+            layer => !layer.fit && (layer.parallax?.x ?? 1) < 1,
+            'actors/hill',
+          ) ||
+            inBlocks('world_layer_parallax', 'actors/hill'))
         );
       },
       // The world is still a world: the shape half is what this lesson can be
@@ -3592,6 +3605,48 @@ function mainMapPlacements(files: Record<string, string>): number {
     }
   }
   return count;
+}
+
+/** A main map's layer, as a check reads it: how it moves, and the kinds on it. */
+interface MapLayerShape {
+  fit?: boolean;
+  parallax?: {x?: number; y?: number};
+  holds: string[];
+}
+
+/**
+ * The layers the project's worlds declare in their main maps, each with the
+ * kinds placed on it. A placement that names no layer is on `main`, which a
+ * map has whether or not it lists it.
+ */
+function mainMapLayers(files: Record<string, string>): MapLayerShape[] {
+  const found: MapLayerShape[] = [];
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.endsWith('.world')) {
+      continue;
+    }
+    try {
+      const map = (
+        JSON.parse(contents) as {
+          map?: {
+            layers?: Array<{id: string} & Omit<MapLayerShape, 'holds'>>;
+            actors?: Array<{type?: string; layer?: string}>;
+          };
+        }
+      ).map;
+      for (const layer of map?.layers ?? []) {
+        found.push({
+          ...layer,
+          holds: (map?.actors ?? [])
+            .filter(actor => (actor.layer ?? 'main') === layer.id)
+            .flatMap(actor => (actor.type ? [actor.type] : [])),
+        });
+      }
+    } catch {
+      // A file mid-edit is not a failed lesson (see `nestedIn`).
+    }
+  }
+  return found;
 }
 
 function blockIn(

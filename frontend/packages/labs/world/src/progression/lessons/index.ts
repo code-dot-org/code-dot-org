@@ -1385,6 +1385,11 @@ Two traits change how it FEELS, and neither changes where it ends up.
 const SCORE_OWNER = 'ActorsScore';
 
 const layers: WorldScenario = {
+  // ON THE MAP: a layer is made in the map editor's strip, and what is on it
+  // is said by selecting the thing (specs/CURRICULUM_PLAN.md). The blocks
+  // that declare a layer are still granted, for what changes while the game
+  // runs, and a learner who does the lesson with them has done it.
+  levelData: {worldView: 'map'},
   name: 'What is in front',
   description:
     'A score that scrolls away with the scenery, and the hills that do not lag.',
@@ -1397,13 +1402,16 @@ const layers: WorldScenario = {
         // Three hills, far apart, so the eye can see whether they keep up —
         // and standing ON the floor rather than above it: the tiles are centered
         // at 304 and are 32 tall, so 272 puts a hill's foot on the grass.
-        addActor(actorPath('hill'), [placeAt(80, 272)]),
-        addActor(actorPath('hill'), [placeAt(400, 272)]),
-        addActor(actorPath('hill'), [placeAt(720, 272)]),
-        addActor(actorPath('score'), [
-          placeAt(60, 30),
-          setText('TextProperty', words('SCORE 0'), SCORE_OWNER),
+        // ON THE MAP, with the floor: what a layer holds is said by selecting
+        // a thing there, and a thing placed by a block is not there to select.
+        placeInMap(actorPath('hill'), [
+          placed('Hill1', 80, 272),
+          placed('Hill2', 400, 272),
+          placed('Hill3', 720, 272),
         ]),
+        placeInMap(actorPath('score'), [placed('Score', 60, 30)]),
+        // The Hero stays a block: the camera below names who it follows when
+        // the world is built, which is before the map is loaded.
         addActor(actorPath('hero'), [placeAt(160, 272)]),
         chaseCamera('hero'),
         {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
@@ -1425,7 +1433,11 @@ const layers: WorldScenario = {
           // ITS OWN four text properties. A world's own actor cannot act like
           // the Label FILE — this project has none — so it declares what a
           // Label declares (`actors/stock/label`).
-          rows: [...LABEL_PROPERTIES, showAs('text')],
+          rows: [
+            ...LABEL_PROPERTIES,
+            showAs('text'),
+            setText('TextProperty', words('SCORE 0'), SCORE_OWNER),
+          ],
           drawing: {
             width: 96,
             height: 24,
@@ -1449,20 +1461,25 @@ Walk right. The score goes with the scenery and off the side of the screen,
 because it is a thing in the world like the hills and the floor — and nothing
 has ever said otherwise.
 
-A **layer** is a declared group with a drawing order and its own relationship
-to the camera. Everything so far has been in one layer, which is why everything
-so far has moved together.
+A **layer** is a group with a drawing order and its own relationship to the
+camera. Everything so far has been in one layer, which is why everything so
+far has moved together. A map's layers are listed beside it, front at the top.
 
 ### What you do
 
-1. Add **define layer ⟨Interface⟩** at the end of the world, put
-   **this layer ⟨is fixed to the screen⟩** in it, and move the Score's
-   \`add actor\` inside it. Now it stays where it is drawn, whatever the camera
-   does.
-2. Add **define layer ⟨Hills⟩** BEFORE the others — declaration order is
-   drawing order, so it is behind them — and move the three Hills into it.
-3. Put **this layer moves ⟨0.4, 1⟩ with the camera** in it. The hills now drift
-   slower than the floor, which is what makes them look far away.
+1. On the world's **Map**, add a layer in the **Layers** list and call it
+   Interface. Tick **Fixed to the screen**.
+2. Click the Score on the map and set its **Layer** to Interface. Run it: the
+   score stays where it is drawn, whatever the camera does.
+3. Add another layer, call it Hills, and move it BACK until it is at the
+   bottom of the list — lower in the list is further back, and the hills
+   belong behind the floor.
+4. Set its **Moves X** to 0.4 and leave **Moves Y** at 1, then put the three
+   Hills on it. They now drift slower than the floor, which is what makes
+   them look far away.
+
+The same can be said in blocks — **define layer** and the two rows that go in
+one — and that is how a layer is changed while the game runs.
 `.trim(),
 };
 

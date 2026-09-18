@@ -107,11 +107,10 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_use_trait',
   ],
   'place/camera-feel': ['world_use_trait'],
-  'place/layers': [
-    'world_define_layer',
-    'world_layer_fixed',
-    'world_layer_parallax',
-  ],
+  // Nothing from the toolbox: the lesson is done in the map editor's layer
+  // strip. The blocks that say the same are granted, and mentioned, and not
+  // what the steps ask for.
+  'place/layers': [],
   'platformer/jump': ['world_use_trait'],
   'platformer/jetpack': [
     'world_use_trait',

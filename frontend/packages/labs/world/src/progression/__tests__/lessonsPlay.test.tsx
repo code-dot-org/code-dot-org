@@ -256,7 +256,7 @@ describe('the view a lesson’s world opens on', () => {
     for (const id of ids) {
       expect(LESSONS[id].levelData?.worldView, id).toBeDefined();
     }
-    expect(onTheMap.sort()).toEqual(['place/map']);
+    expect(onTheMap.sort()).toEqual(['place/layers', 'place/map']);
   });
 
   it.each(onTheMap)('%s has a map to open on, and says so', id => {
