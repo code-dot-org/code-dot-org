@@ -24,6 +24,7 @@ RUN set -eux \
        default-mysql-client \
        imagemagick \
        libjemalloc2 \
+       libyaml-dev \
        locales \
        tzdata \
        > /dev/null \
