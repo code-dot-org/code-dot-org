@@ -423,17 +423,18 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Foundation: Place
 
-The map editor is Place's, and what a gated lab offers of it is granted
-here (specs/CURRICULUM_PLAN.md): the Map view of a world by `place/map`, a
-map's layers by `place/layers`, and scripts on a map by `place/script`, the
-region's seventh tile, in the one free cell that keeps it one shape. The
-three lessons open on the map; every other lesson opens on its workspace.
+The map editor is Place's, and what a gated lab offers of it is granted here
+(specs/CURRICULUM_PLAN.md): a map's layers by `place/layers`, and scripts on a
+map by `place/script`, the region's seventh tile, in the one free cell that
+keeps it one shape. The three lessons about the map open on it; every other
+lesson opens on its workspace. Neither view of a world is ever withheld, in
+any lesson.
 
 | Tile                | The lesson                                                                                       | Unlocks                                                  | Check                                                                      |
 | ------------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------------------------------------------------------------- |
 | `place/position`    | Where things are: three markers in a heap, and the numbers that separate them.                   | `set position`, random place, a number                   | `[o]` the three are apart, one of them in the middle                       |
 | `place/edges`       | What happens at a boundary is a choice. Stop across, come round downwards.                       | Boundaries; Screen Wrap                                  | `[o]` never leaves across, and wraps down                                  |
-| `place/map`         | A level is data: an arrangement painted on a grid, held by the world's own map.                  | the Map view of a world; `load map`                      | `[o]`+`[s]` a dozen tiles, in two rows, and the MAP holds them             |
+| `place/map`         | A level is data: an arrangement painted on a grid, held by the world's own map.                  | the map editor; `load map`                               | `[o]`+`[s]` a dozen tiles, in two rows, and the MAP holds them             |
 | `place/camera`      | A room three screens wide and a view showing the first. Follow, and stop at the walls.           | Camera, Camera Follow, Camera Confined                   | `[o]` the view travels and never passes the end of the room                |
 | `place/camera-feel` | Correct and unpleasant: slack for small movements, and a moment to catch up on large ones.       | Camera Ease; Camera Deadzone                             | `[o]` a short step moves nothing; a long walk is still settling afterwards |
 | `place/layers`      | Drawing order is declared, and some things should not move with the view at all.                 | layers in a map; `define layer`, within, fixed, parallax | `[s]` the Score's layer is fixed, the Hills' lags: on the map or in blocks |

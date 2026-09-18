@@ -1,6 +1,6 @@
 # Plan: the curriculum (MAP_FIRST.md, step 6)
 
-STATUS: BUILT, pending a look in the browser. The sixth and last build step of
+STATUS: BUILT, and seen working in the browser. The sixth and last build step of
 specs/MAP_FIRST.md, which says of it one line: "Tiles that unlock editor
 affordances; levels re-pinned." This plan says what that line is taken to
 mean, what is built, and what is left for a decision that is not the build's
@@ -35,7 +35,7 @@ over.
   - the MAP VIEW of a world, which is `editor: map`, `place/map`'s grant
     since before there was a view to gate. Without it a gated lab shows a
     world's workspace and no view bar, which is the lab the first lessons
-    were written for;
+    were written for. REMOVED since: see "Decided since";
   - SCRIPTS on a map: the Script button on a placement, the map's own, the
     corner marks and their toggle. A new unlock kind, `affordance`, with
     the id `map-scripts`;
@@ -163,18 +163,23 @@ over.
 
 ## What to look at in the browser
 
-In a gated lab with nothing done, a lesson's world should show its
-workspace with no Map and World tabs. With `place/map` open, the world
-should open on the map with the tabs above it, and no Layers list and no
-Script button. `place/layers` should open on the map with the Layers list:
-adding a layer, ticking Fixed to the screen and setting the Score's Layer
-should pass the check when run. `place/script` should open on the map with
-two Buttons and a sign: a Button's properties should offer Script, the
-workspace should offer `the ⟨Sign⟩` under Map, and each Button should get
-its corner mark. Any other lesson should open on its workspace, with Map
-one tab away once `place/map` is done. An ungated project should look as
-it did.
+In a gated lab a lesson's world should show both tabs, Map and World, whatever
+has been done. With `place/map` open, the world should open on the map, with
+no Layers list and no Script button. `place/layers` should open on the map
+with the Layers list: adding a layer, ticking Fixed to the screen and setting
+the Score's Layer should pass the check when run. `place/script` should open
+on the map with two Buttons and a sign: a Button's properties should offer
+Script, the workspace should offer `the ⟨Sign⟩` under Map, and each Button
+should get its corner mark. Any other lesson should open on its workspace,
+with Map one tab away. An ungated project should look as it did.
 
-## Left for a decision
+## Decided since
 
-- **Whether the curriculum is re-founded on the canvas**, as above.
+- **The first lessons move onto the canvas**, with blocks shown when a
+  lesson needs programmable behavior, and the World workspace never locked.
+  specs/CANVAS_FIRST.md is what that takes, lesson by lesson.
+- **Neither view of a world is ever withheld.** This step gated the Map
+  view behind `place/map`'s `editor: map`. That gate is removed: a learner
+  can open either view from the first lesson and see what is and is not
+  theirs yet. `editor: map` is read by nothing again. The two affordances
+  stand, since they withhold a control inside a view and not the view.

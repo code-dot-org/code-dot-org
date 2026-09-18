@@ -154,19 +154,12 @@ describe('WorldEditor', () => {
     expect(screen.getByTestId('map-view')).toBeInTheDocument();
   });
 
-  it('is the workspace alone until the shelf holds the map editor', () => {
-    const held = new Set<string>();
-    shelf = {holds: unlock => held.has(`${unlock.kind}:${unlock.id}`)};
+  it('offers both views whatever the shelf holds', () => {
+    // Neither view is ever locked: a gate withholds what is inside one.
+    shelf = {holds: () => false};
     open();
-    expect(screen.getByTestId('world-view')).toBeInTheDocument();
-    expect(screen.queryByRole('tablist')).toBeNull();
-    expect(screen.queryByTestId('map-view')).toBeNull();
-  });
-
-  it('shows the view bar once the map editor is held', () => {
-    shelf = {holds: unlock => unlock.kind === 'editor' && unlock.id === 'map'};
-    open();
-    expect(screen.getByRole('tablist')).toBeInTheDocument();
+    expect(screen.getByRole('tab', {name: 'Map'})).toBeInTheDocument();
+    expect(screen.getByRole('tab', {name: 'World'})).toBeInTheDocument();
     expect(screen.getByTestId('map-view')).toBeInTheDocument();
   });
 });

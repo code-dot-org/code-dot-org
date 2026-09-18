@@ -83,9 +83,9 @@ export type UnlockTarget =
   /** A sprite, animation or backdrop from the appearance library. */
   | {kind: 'asset'; id: string}
   /**
-   * One of the editors a file type opens in. `map` is also the MAP VIEW of a
-   * world: without it a gated lab shows a world's workspace and no view bar
-   * (`mapEditor/WorldEditor`).
+   * One of the editors a file type opens in. Read by nothing yet: a view is
+   * never locked (`mapEditor/WorldEditor`), and what a gate withholds is
+   * inside one — see `affordance`.
    */
   | {kind: 'editor'; id: 'map' | 'animation' | 'effect' | 'image'}
   /**

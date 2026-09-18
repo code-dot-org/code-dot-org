@@ -1,15 +1,15 @@
 # Proposal: the map as the front door
 
 STATUS: BUILT, all six steps — map scripts on `.map` files, the main map in
-the world's file, the Viewport, layers in the editor, the retirements, and
-the curriculum (specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md,
+the world's file, the Viewport, layers in the editor, the retirements, and the
+curriculum (specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md,
 specs/VIEWPORT_PLAN.md, specs/LAYERS_PLAN.md, specs/RETIREMENTS_PLAN.md and
-specs/CURRICULUM_PLAN.md record the commits and what they taught). Steps
-1 to 4 have been seen working in the browser; 5 and 6 have not yet. One
-question is left open by the last of them: whether the first lessons move
-onto the canvas. What follows is the design as it was argued, written
-after the pause menu showed where the current shape strains (UI_ACTORS.md,
-"The second axis"; MAPS.md, "A block naming a placement").
+specs/CURRICULUM_PLAN.md record the commits and what they taught). All six
+have been seen working in the browser. The last of them left one question,
+since answered: the first lessons move onto the canvas (specs/CANVAS_FIRST.md,
+PROPOSED). What follows is the design as it was argued, written after the
+pause menu showed where the current shape strains (UI_ACTORS.md, "The second
+axis"; MAPS.md, "A block naming a placement").
 
 The question: what does World Lab look like if a project opens on its MAP
 rather than on its world's block workspace? You place actors on a canvas, set
@@ -630,11 +630,11 @@ What map-first does better:
    map.
 6. **Curriculum.** BUILT (specs/CURRICULUM_PLAN.md): a lesson says which
    view its world opens on, and every lesson but the three about the map
-   opens on its workspace; a gated lab's shelf reaches the map editor — the
-   Map view (`place/map`), a map's layers (`place/layers`, retold in the
-   editor), scripts on a map (`place/script`, a new tile). The first
-   lessons stay in blocks; re-founding them on the canvas is left for a
-   decision.
+   opens on its workspace; a gated lab's shelf reaches the map editor — a
+   map's layers (`place/layers`, retold in the editor) and scripts on a map
+   (`place/script`, a new tile). Neither view of a world is ever withheld.
+   Moving the first lessons onto the canvas is specs/CANVAS_FIRST.md,
+   PROPOSED.
 
 Step 1 is worth doing even if the rest is refused. Steps 2 and 3 are the
 proposal; 4 is where the layer question gets its answer.

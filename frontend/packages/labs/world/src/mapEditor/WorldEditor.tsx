@@ -14,11 +14,12 @@
 //
 // WHICH ONE IS UP FIRST is the level's to say (`levelData.worldView`): a
 // project opens on its map, and a lesson whose task is in the workspace opens
-// there. WHETHER THERE IS A MAP VIEW AT ALL is the shelf's: in a gated lab it
-// is `place/map`'s grant (`editor: map`), and until then a world is its
-// workspace with no bar over it — the lab the first lessons were written for
-// (specs/CURRICULUM_PLAN.md). The file is untouched either way: a main map
-// nobody can see still loads.
+// there. BOTH ARE ALWAYS OFFERED. For a day the Map view was something a
+// gated lab withheld until `place/map`; the decision since is that neither
+// view is ever locked, so a learner can look round the mode they are not in
+// and see what is and is not theirs yet there. What a gate withholds is
+// INSIDE a view — a toolbox drawer, the Script button, the Layers list —
+// never the view (specs/CURRICULUM_PLAN.md, "Decided since").
 
 import {useEffect, useRef, useState} from 'react';
 
@@ -28,7 +29,6 @@ import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {BlocklyFileEditor} from '../blockly/BlocklyFileEditor';
 import {worldOpensOn, type WorldLevelProperties} from '../levelData';
-import {useMaybeProgression} from '../progression/progressionContext';
 
 import {MapEditor} from './MapEditor';
 import styles from './mapEditor.module.css';
@@ -39,12 +39,7 @@ type View = 'map' | 'world';
 export const WorldEditor = (props: CustomEditorProps) => {
   const {sourcesEpoch} = useSources<MultiFileSource>();
   const level = useMaybeLevelProperties<WorldLevelProperties>();
-  const progression = useMaybeProgression();
-  const hasMapView = progression?.holds({kind: 'editor', id: 'map'}) ?? true;
-  const [chosen, setView] = useState<View>(() => worldOpensOn(level));
-  // Read each render rather than folded into the state: the shelf changes
-  // when a lesson is finished, and the view should follow it.
-  const view: View = hasMapView ? chosen : 'world';
+  const [view, setView] = useState<View>(() => worldOpensOn(level));
   // The file as last written by either view, and what the next one opens on.
   const [contents, setContents] = useState(props.initialContents);
   const seenEpoch = useRef(sourcesEpoch);
@@ -63,28 +58,26 @@ export const WorldEditor = (props: CustomEditorProps) => {
 
   return (
     <div className={styles.worldEditor}>
-      {hasMapView && (
-        <div className={styles.viewBar} role="tablist" aria-label="World view">
-          <button
-            type="button"
-            role="tab"
-            className={styles.viewButton}
-            aria-selected={view === 'map'}
-            onClick={() => setView('map')}
-          >
-            Map
-          </button>
-          <button
-            type="button"
-            role="tab"
-            className={styles.viewButton}
-            aria-selected={view === 'world'}
-            onClick={() => setView('world')}
-          >
-            World
-          </button>
-        </div>
-      )}
+      <div className={styles.viewBar} role="tablist" aria-label="World view">
+        <button
+          type="button"
+          role="tab"
+          className={styles.viewButton}
+          aria-selected={view === 'map'}
+          onClick={() => setView('map')}
+        >
+          Map
+        </button>
+        <button
+          type="button"
+          role="tab"
+          className={styles.viewButton}
+          aria-selected={view === 'world'}
+          onClick={() => setView('world')}
+        >
+          World
+        </button>
+      </div>
       {view === 'map' ? (
         <MapEditor
           key="map"
