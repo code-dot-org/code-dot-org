@@ -227,7 +227,10 @@ describe('the loop takes a source', () => {
       {DO: 'body();\n'},
     );
 
-    expect(code).toBe('for (const each of world.actors) {\nbody();\n}\n');
+    expect(code).toBe(
+      'for (const each of world.actors) {\n' +
+        'world.enter(each);\ntry {\nbody();\n} finally {\nworld.leave();\n}\n}\n',
+    );
   });
 
   it('walks whatever else it is given', () => {
@@ -241,7 +244,7 @@ describe('the loop takes a source', () => {
 
     expect(code).toBe(
       'for (const each of WorldLab.all(world.actors.ofType("actors/coin"))) ' +
-        '{\nbody();\n}\n',
+        '{\nworld.enter(each);\ntry {\nbody();\n} finally {\nworld.leave();\n}\n}\n',
     );
   });
 

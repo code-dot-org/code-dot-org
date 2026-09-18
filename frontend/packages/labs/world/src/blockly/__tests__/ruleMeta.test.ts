@@ -1068,7 +1068,9 @@ describe('a step declared under a trait', () => {
     expect(ruleMetaToModule(meta, bodies)).toContain(
       `rule.addStepIn("aim_at_it", "aim", (world, delta) => {\n` +
         `for (const camera of world.cameras.with(FollowsTrait)) {\n` +
-        `camera.set(WorldLab.PositionProperty, here);\n}\n});`,
+        `world.enter(camera);\ntry {\n` +
+        `camera.set(WorldLab.PositionProperty, here);\n` +
+        `} finally {\nworld.leave();\n}\n}\n});`,
     );
   });
 

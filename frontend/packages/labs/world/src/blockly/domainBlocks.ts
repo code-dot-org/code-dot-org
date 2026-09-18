@@ -198,6 +198,7 @@ import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
 import {
   designedName,
+  inHand,
   propertyDefault,
   pascal,
   PROPERTY_TYPES,
@@ -5114,7 +5115,8 @@ const worldForEach = defineBlock({
     javascript(block, generator) {
       const variable = generator.getVariableName(block.getFieldValue('VAR'));
       const body = generator.statementToCode(block, 'DO');
-      return `for (const ${variable} of ${actorSource(block, generator)}) {\n${body}}\n`;
+      // The loop's actor in hand while its body runs (specs/VIEWPORT_PLAN.md).
+      return `for (const ${variable} of ${actorSource(block, generator)}) {\n${inHand(variable, body)}}\n`;
     },
   },
 });

@@ -1202,6 +1202,15 @@ const defaultLiteral = (property: PropertyMeta): string => {
  * bodies. The action/query bodies reference `WorldLab.*` (built-in members) and
  * the rule's own `export const`s, so a namespace import is added when any exist.
  */
+/**
+ * A loop body with its loop variable taken in hand for its length
+ * (`World.enter`/`leave`), the two halves of `withActor` written out so
+ * the body stays a real loop body — a `return` still leaves the rule, and a
+ * `continue` still continues.
+ */
+export const inHand = (variable: string, body: string): string =>
+  `world.enter(${variable});\ntry {\n${body}} finally {\nworld.leave();\n}\n`;
+
 export function ruleMetaToModule(
   meta: RuleMeta,
   bodies: ReadonlyMap<string, RuleBody> = new Map(),
@@ -1424,10 +1433,13 @@ export function ruleMetaToModule(
       : undefined;
     const scoped = step.scope !== 'world' && traitExport;
     const inner = code?.body ?? '';
+    // …and IN HAND while its body runs (`World.withActor`), so what the body
+    // asks about the map, the mouse or what is near is asked for the
+    // subject's space (specs/VIEWPORT_PLAN.md).
     const run = scoped
       ? `for (const ${step.scope} of world.${
           step.scope === 'camera' ? 'cameras' : 'actors'
-        }.with(${traitExport})) {\n${inner}}\n`
+        }.with(${traitExport})) {\n${inHand(step.scope, inner)}}\n`
       : inner;
     const closure = `(world, delta) => {\n${run}}`;
     const {kind, phase} = step.order;
