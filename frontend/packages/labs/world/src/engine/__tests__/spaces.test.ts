@@ -286,7 +286,106 @@ describe('what the driver is told', () => {
         camera: {x: 320, y: 160},
         view: {x: 100, y: 80},
         bounds: {x: 640, y: 320},
+        // A map that names no layers has the one every world has.
+        layers: [expect.objectContaining({id: 'main'})],
       },
+    ]);
+  });
+});
+
+describe('a map’s layers', () => {
+  const LAYERED: WorldMap = {
+    size: {width: 20, height: 10},
+    tile: {width: 32, height: 32},
+    layers: [
+      {
+        id: 'sky',
+        name: 'Sky',
+        parallax: {x: 0.2, y: 0},
+        background: {sprite: 'sky.png', repeat: true, offset: {x: 4, y: 0}},
+      },
+      {id: 'main'},
+      {id: 'fog', fit: true, foreground: {sprite: 'fog.png'}},
+    ],
+    actors: [
+      {type: 'actors/coin', id: 'far', layer: 'sky'},
+      {type: 'actors/coin', id: 'near'},
+      {type: 'actors/coin', id: 'lost', layer: 'nowhere'},
+    ],
+  };
+
+  it('become the space’s own when the map is loaded into a Viewport', () => {
+    const world = makeWorld();
+    const window = placeWindow(world);
+    const [far, near, lost] = world.loadMapInto(window, LAYERED);
+
+    expect(far.layer).toBe('sky');
+    expect(near.layer).toBe('main');
+    // A layer the map does not have is the default, as a world's is.
+    expect(lost.layer).toBe('main');
+    const depths = world
+      .renderSnapshot()
+      .filter(state => state.space)
+      .map(state => [state.actor.id, state.layer]);
+    expect(depths).toEqual([
+      ['far', 0],
+      ['near', 1],
+      ['lost', 1],
+    ]);
+    expect(world.spaceSnapshot()[0].layers).toEqual([
+      {
+        id: 'sky',
+        parallax: {x: 0.2, y: 0},
+        fit: false,
+        background: expect.objectContaining({
+          sprite: 'sky.png',
+          repeat: true,
+          offset: {x: 4, y: 0},
+        }),
+        foreground: expect.objectContaining({repeat: false}),
+      },
+      expect.objectContaining({id: 'main', parallax: {x: 1, y: 1}}),
+      expect.objectContaining({
+        id: 'fog',
+        fit: true,
+        foreground: expect.objectContaining({sprite: 'fog.png'}),
+      }),
+    ]);
+  });
+
+  it('puts the default at the back of a map that does not place it', () => {
+    const world = makeWorld();
+    const window = placeWindow(world);
+    world.loadMapInto(window, {layers: [{id: 'front'}], actors: []});
+    expect(world.spaceSnapshot()[0].layers.map(layer => layer.id)).toEqual([
+      'main',
+      'front',
+    ]);
+  });
+
+  it('resolve against the world’s layers when loaded into the root', () => {
+    // A world's layer list is fixed when it is built, so a map loaded into
+    // the root adds none; a placement naming one the world has lands on it.
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    builder.defineLayer({id: 'sky'});
+    const world = builder.getWorld();
+    world.define('actors/coin', Coin);
+
+    const [far, near, lost] = world.loadMap(LAYERED);
+
+    expect(far.layer).toBe('sky');
+    expect(near.layer).toBe('main');
+    expect(lost.layer).toBe('main');
+    expect(world.layers.map(layer => layer.id)).toEqual(['main', 'sky']);
+  });
+
+  it('start over when another map replaces the first', () => {
+    const world = makeWorld();
+    const window = placeWindow(world);
+    world.loadMapInto(window, LAYERED);
+    world.loadMapInto(window, LEVEL);
+    expect(world.spaceSnapshot()[0].layers.map(layer => layer.id)).toEqual([
+      'main',
     ]);
   });
 });

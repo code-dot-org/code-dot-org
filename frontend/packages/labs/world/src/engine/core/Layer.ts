@@ -139,6 +139,60 @@ export interface Layer {
 }
 
 /** A layer with its defaults filled in. */
+/**
+ * A layer as a MAP states it (specs/LAYERS_PLAN.md): what `LayerInit` says,
+ * plus the two slots' starting values, as plain data — a map is JSON. The
+ * world's own layers are declared by `LayerInit` and their slots set by
+ * calls; a space's are made whole from this when a map is loaded into it.
+ */
+export interface MapLayer {
+  id: string;
+  name?: string;
+  parallax?: {x: number; y: number};
+  fit?: boolean;
+  background?: MapSlot;
+  foreground?: MapSlot;
+}
+
+/** A slot's starting values in a map: the image, how it fills, where it sits. */
+export interface MapSlot {
+  sprite?: string;
+  repeat?: boolean;
+  offset?: {x: number; y: number};
+}
+
+const slotFrom = (slot: MapSlot | undefined): LayerSlot => ({
+  ...emptySlot(),
+  ...(slot?.sprite ? {sprite: slot.sprite} : {}),
+  repeat: slot?.repeat ?? false,
+  offset: slot?.offset
+    ? new Vector(slot.offset.x, slot.offset.y)
+    : new Vector(0, 0),
+});
+
+/**
+ * The layers a map states, as layers — with the default among them, at the
+ * back, when the map did not say where it goes: an actor with no layer is
+ * on it, so it has to exist.
+ */
+export function layersOfMap(layers: readonly MapLayer[] | undefined): Layer[] {
+  const made = (layers ?? []).map(layer => ({
+    ...makeLayer({
+      id: layer.id,
+      name: layer.name,
+      parallax: layer.parallax
+        ? new Vector(layer.parallax.x, layer.parallax.y)
+        : undefined,
+      fit: layer.fit,
+    }),
+    background: slotFrom(layer.background),
+    foreground: slotFrom(layer.foreground),
+  }));
+  return made.some(layer => layer.id === DEFAULT_LAYER_ID)
+    ? made
+    : [makeLayer({id: DEFAULT_LAYER_ID}), ...made];
+}
+
 export function makeLayer(init: LayerInit): Layer {
   return {
     id: init.id,

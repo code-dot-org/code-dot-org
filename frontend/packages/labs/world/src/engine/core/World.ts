@@ -26,10 +26,12 @@ import {EventQueue} from './EventQueue';
 import {RESERVED_KEYS} from './keys';
 import {
   DEFAULT_LAYER_ID,
+  layersOfMap,
   makeLayer,
   type Layer,
   type LayerInit,
   type LayerSlot,
+  type MapLayer,
   type SlotName,
 } from './Layer';
 import {asList, isListType} from './lists';
@@ -121,7 +123,22 @@ export interface WorldMap {
     id?: string;
     /** Overrides keyed by owner id (rule or trait), then property id. */
     properties?: Record<string, Record<string, unknown>>;
+    /**
+     * The layer this placement is on, by id (specs/LAYERS_PLAN.md). Absent,
+     * it is on the layer the load was given, which is the default's unless a
+     * block said otherwise.
+     */
+    layer?: string;
   }>;
+  /**
+   * The map's layers, back to front, with their slots. They become a
+   * Viewport's space's own when the map is loaded into one; the main map's
+   * are declared into the world by the world's module; a map loaded into
+   * the root while the game runs cannot add any, since the world's list is
+   * fixed when it is built, and its placements' layers resolve against the
+   * world's (specs/LAYERS_PLAN.md).
+   */
+  layers?: MapLayer[];
   /**
    * Where the space's camera looks once the map is loaded: the entry id of
    * the placement it keeps in the middle (specs/MAP_FIRST.md, "Camera-follow
@@ -1107,7 +1124,14 @@ export class World {
     // The zero its age counts from. Placement is what starts the clock, so a
     // template instantiated and placed twice gives two actors of different ages.
     actor.bornAt = this.elapsed;
-    actor.layer = this.layerIndex.has(layer) ? layer : DEFAULT_LAYER_ID;
+    // Against the layers of the space it is going into: the world's for
+    // the root, the loaded map's for a Viewport's (specs/LAYERS_PLAN.md).
+    const target = space ?? this.spaceOf(this.inHand.at(-1));
+    const known =
+      target === this.rootSpace
+        ? this.layerIndex.has(layer)
+        : target.layers.some(held => held.id === layer);
+    actor.layer = known ? layer : DEFAULT_LAYER_ID;
     // The space it is in: the one asked for, else the actor in hand's — a
     // bullet a ball spawns lands in the ball's level — else the root.
     actor.space = space ?? this.spaceOf(this.inHand.at(-1));
@@ -1284,7 +1308,11 @@ export class World {
   }
 
   /** How deep a layer draws — its position in the stack. */
-  depthOf(layer: string): number {
+  depthOf(layer: string, space?: Space): number {
+    if (space && space !== this.rootSpace) {
+      const at = space.layers.findIndex(held => held.id === layer);
+      return at < 0 ? 0 : at;
+    }
     return this.layerIndex.get(layer) ?? 0;
   }
 
@@ -1748,6 +1776,9 @@ export class World {
     if (typeof map === 'string') {
       space.shown = map;
     }
+    // The space's layers are the map's, made before anything is placed so
+    // each placement's layer resolves against them.
+    space.layers = layersOfMap(held?.layers);
     if (!held) {
       return [];
     }
@@ -1843,6 +1874,14 @@ export class World {
     camera: {x: number; y: number};
     view: {x: number; y: number};
     bounds: {x: number; y: number};
+    /** The space's own layers, back to front, as `layerSnapshot` gives the world's. */
+    layers: ReadonlyArray<{
+      id: string;
+      parallax: {x: number; y: number};
+      fit: boolean;
+      background: BackdropState;
+      foreground: BackdropState;
+    }>;
   }> {
     return this.viewportSpaces.flatMap(space => {
       if (!space.owner || !space.camera) {
@@ -1856,6 +1895,13 @@ export class World {
           camera: {x: space.camera.position.x, y: space.camera.position.y},
           view: {x: view.x, y: view.y},
           bounds: {x: space.bounds.x, y: space.bounds.y},
+          layers: space.layers.map(layer => ({
+            id: layer.id,
+            parallax: {x: layer.parallax.x, y: layer.parallax.y},
+            fit: layer.fit,
+            background: layer.background,
+            foreground: layer.foreground,
+          })),
         },
       ];
     });
@@ -2055,7 +2101,7 @@ export class World {
       // than inside `addActor` because this path builds the actor itself, so
       // the World never sees the template it came from.
       this.useActorKind(entry.type, builder);
-      this.place(actor, layer, space);
+      this.place(actor, entry.layer ?? layer, space);
       added.push(actor);
     }
     // Every entry exists now, so the references can be followed.
@@ -3184,7 +3230,7 @@ export class World {
         frame: frameFor(actor),
         drawing: drawingFor(actor),
         effects: actor.effects(),
-        layer: this.depthOf(actor.layer ?? DEFAULT_LAYER_ID),
+        layer: this.depthOf(actor.layer ?? DEFAULT_LAYER_ID, actor.space),
         ...(actor.space && actor.space !== this.rootSpace
           ? {space: actor.space.id}
           : {}),

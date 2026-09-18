@@ -11,6 +11,7 @@
 
 import type {Actor} from './Actor';
 import type {Camera} from './Camera';
+import type {Layer} from './Layer';
 import type {Vector} from './Vector';
 import type {MapLoad} from './World';
 
@@ -32,6 +33,13 @@ export class Space {
   readonly loads: MapLoad[] = [];
   /** The actor the space's camera keeps in the middle, if a map named one. */
   follows: Actor | undefined;
+  /**
+   * The space's own layers, back to front, from the map loaded into it
+   * (specs/LAYERS_PLAN.md). Empty for the root, whose layers are the
+   * world's and fixed when the world is built; a space's are the driver's
+   * to build, so a map brings them.
+   */
+  layers: Layer[] = [];
   /**
    * The path the Viewport's `map` property held when its map was last
    * loaded, so a change to the property is noticed (`World.showHeldMap`).
