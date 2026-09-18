@@ -312,10 +312,13 @@ const fullHeight = (
 /**
  * Which project the demo is showing, and a way to change it.
  *
- * Bottom left, above the boot badge, which is the corner this harness already
- * uses for things the lab itself does not have — a lab with a dev control in
- * its own chrome would be a lab that ships one. `?devChrome=off` takes it away
- * for screenshots and visual tests, the same opt-out `packages/users` uses.
+ * Bottom right, above the boot badge, which is the corner this harness uses
+ * for things the lab itself does not have — a lab with a dev control in its
+ * own chrome would be a lab that ships one. The RIGHT corner because the left
+ * one belongs to the instructions panel's icon strip, whose bottom buttons
+ * (settings, the progression map) this used to cover. `?devChrome=off` takes
+ * it away for screenshots and visual tests, the same opt-out `packages/users`
+ * uses.
  *
  * A full reload rather than a re-render: the scenario decides what the mock API
  * serves, and the API is chosen before the first fetch. Swapping it live would
@@ -331,7 +334,7 @@ function ScenarioSwitcher({value}: {value: string}) {
       style={{
         position: 'fixed',
         bottom: 72,
-        left: 8,
+        right: 8,
         zIndex: 99999,
         maxWidth: 260,
         background: 'rgba(0,0,0,0.78)',

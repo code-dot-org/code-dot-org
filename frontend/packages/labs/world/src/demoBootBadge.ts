@@ -22,7 +22,7 @@ export function mountBootBadge(): void {
   Object.assign(badge.style, {
     position: 'fixed',
     bottom: '8px',
-    left: '8px',
+    right: '8px',
     zIndex: '99999',
     font: '12px/1.4 ui-monospace, monospace',
     background: 'rgba(0,0,0,0.78)',
