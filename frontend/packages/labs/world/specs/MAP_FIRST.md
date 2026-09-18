@@ -39,15 +39,17 @@ on top, with an actor that presumes the buttons its map places.
 INTERFACE.md's "Simple World" paragraph asked for this years early: "just have
 the World view with PlatformActors where one can change their appearance only
 and add events to the World view per Actor". That is the map editor with a
-script drawer.
+workspace per placed actor.
 
 ## The shape
 
 **Every world has a main map, and they are one file.** The `.world` holds the
 world's laws (its rules, its own properties), its main ARRANGEMENT (the
 placements the map editor edits), and its SCRIPT (the hats). Opening a world
-opens the map editor on its main map, with the script in a drawer below the
-canvas. There is no separate world workspace to find; the drawer is it.
+opens the map editor on its main map. The map editor is the basic point of
+view of a world; the world's workspace, where world events are handled, is a
+MODE of that editor, one switch away, and the world's properties are set in
+the editor's properties window as an actor's are.
 
 MAPS.md §1 already decided the half of this that matters: an arrangement only
 one world reads belongs in that world's file, not beside it. `create actor in
@@ -56,21 +58,24 @@ that reason. The main map is the same decision applied to the whole
 arrangement rather than to one block's worth, and it retires that block.
 
 **A `.map` is an arrangement plus a script.** Every other map in the project
-keeps its own file and gains the same drawer. A dialog is a map whose first
+keeps its own file and gains the same modes. A dialog is a map whose first
 placement is the parent of the rest; a level is a map with no root. Both are
 loaded into a running world, both bring their behavior with them, and both are
 edited in the same editor as the main map. There is one editor for "things
 arranged in space and what they do", and the world is the one that also has
 laws and is the entry point.
 
-**A script is about its own placements.** A hat's subject dropdown lists the
-placements of the map it is in, and nothing else. `when ⟨the Switch⟩ is
-pressed, open ⟨the Door⟩` names two things in one file. Names are unique
-within a map, which the editor already enforces, and mean nothing outside it.
-The main map's script may also name kinds — `when ⟨any Coin⟩ is collected` —
-and world events, because it is the world's script too. A dialog's script may
-say `unload this map` and `emit ⟨quit⟩`, an event the map declares and the
-world listens for as it listens for an actor's.
+**A script is about its own placements.** An actor file says what a kind
+does everywhere; a map says what one INSTANCE does here, in a workspace of
+that instance's own, opened from the map editor. In it the hats are the
+kind's events with the subject implicit — `when this actor is pressed`, as
+in an actor file — and the body may name any other placement of the same map
+as a value: `open ⟨the Door⟩`. Names are unique within a map, which the
+editor already enforces, and mean nothing outside it. The world's workspace
+holds what is about the world: its events, and hats about kinds —
+`when ⟨any Coin⟩ is collected`. A dialog's button may say `unload this map`
+and `emit ⟨quit⟩`, an event the map declares and the world listens for as it
+listens for an actor's.
 
 A script compiles to a function that runs once per load, closed over the
 actors that load placed. Load the pause menu twice and each Resume closes its
@@ -79,35 +84,43 @@ unload.
 
 ## What a map script looks like
 
-Three scripts, as they read in the drawer. A level with a switch and a door,
-`maps/level3.map`:
+Three scripts, as they read. A level with a switch and a door,
+`maps/level3.map`. The Switch's workspace:
 
 ```
-when this map loads
-  set camera to follow ⟨the Player⟩
-
-when ⟨the Switch⟩ is pressed
+when this actor is pressed
   open ⟨the Door⟩
   play sound ⟨click⟩
-
-when ⟨the Player⟩ touches ⟨the Exit⟩
-  emit ⟨finished⟩
 ```
 
-The pause menu, `maps/pauseMenu.map`, a Panel and two Buttons:
+The Player's workspace, in the same map:
 
 ```
-define event ⟨quit⟩
+when this actor touches ⟨the Exit⟩
+  emit ⟨finished⟩ for this map
+```
 
-when ⟨the Resume⟩ is clicked
+And the map's properties window, with nothing selected: `camera follows
+⟨Player⟩`, a field rather than a block, because the thing it names is in the
+same file.
+
+The pause menu, `maps/pauseMenu.map`, a Panel and two Buttons. The map's own
+workspace declares `define event ⟨quit⟩`. The Resume button's workspace:
+
+```
+when this actor is clicked
   resume the game
   unload this map
-
-when ⟨the Quit⟩ is clicked
-  emit ⟨quit⟩
 ```
 
-And the world's own script, which is the main map's, in Breakout:
+The Quit button's:
+
+```
+when this actor is clicked
+  emit ⟨quit⟩ for this map
+```
+
+And the world's workspace, in Breakout, which is the main map's:
 
 ```
 when ⟨p⟩ is pressed
@@ -118,23 +131,23 @@ when ⟨pause menu⟩ quit
   load map ⟨level1⟩ into ⟨the Game⟩
 ```
 
-Three things to notice. `the ⟨Switch⟩` is a placement of this file and
-nothing else. `this map` is a subject in its own right, with `loads`,
-`unloads` and `define event`. And the world's script keeps its kind hats and
-its world events, since it is the world's script too; what it loses is any
-need to name a level's contents.
+Three things to notice. An instance's workspace reads exactly like an actor
+file — `this actor`, the kind's events, no subject to choose — and differs
+only in being about one placement. `the ⟨Door⟩` is a placement of this file
+and nothing else. And the world's workspace keeps its world events and its
+kind hats, since it is the world's; what it loses is any need to name a
+level's contents.
 
-**A hat about a placement knows the kind.** A placement has a type, so a hat
-about `the ⟨Switch⟩` is about a Button: `this actor` inside it is the
-Switch, the Button's own property blocks shadow correctly, and the subject
-dropdown offers only the placements whose kind has that event. The
-named-actor block could do none of that, because a name said nothing about a
-kind.
+**An instance's workspace knows the kind.** A placement has a type, so the
+Switch's workspace is a Button's: its events are the Button's, `this actor`
+is the Switch, and the Button's own property blocks are offered and shadow
+correctly. The named-actor block could do none of that, because a name said
+nothing about a kind.
 
 ### The file
 
-A `.map` gains a workspace beside its placements, serialized as an actor
-file's is:
+A placement gains a workspace of its own, serialized as an actor file's is,
+and the map gains one for what is the map's:
 
 ```jsonc
 {
@@ -142,24 +155,31 @@ file's is:
   "size": {"width": 10, "height": 10},
   "tile": {"width": 32, "height": 32},
   "layers": [{"id": "game", "factor": {"x": 1, "y": 1}, "background": "sky"}],
+  "camera": {"follows": "Player"},
   "actors": [
-    {"type": "actors/button", "id": "Switch", "properties": {}},
+    {
+      "type": "actors/button",
+      "id": "Switch",
+      "properties": {},
+      "blocks": {"blocks": []},
+    },
     {"type": "actors/door", "id": "Door", "properties": {}},
   ],
   "blocks": {"blocks": []},
 }
 ```
 
-For the main map the same `actors` and `layers` live on the `define world`
-root as a field value, and the world's workspace is the script. One shape,
-two homes.
+A placement with no `blocks` has no script, which is most of them. For the
+main map the same `actors`, `layers` and `camera` live on the `define world`
+root as a field value, and the world's workspace is the file's workspace.
+One shape, two homes.
 
 ### What it compiles to
 
 A map module exports its data and a script function:
 
 ```js
-export const map = {size, tile, layers, actors};
+export const map = {size, tile, layers, camera, actors};
 export const events = {quit: {id: 'quit', ownerId: 'maps/pauseMenu'}};
 export function script(world, placed, self) {
   placed.Resume.on(ClickedEvent, (world, actor) => {
@@ -170,70 +190,95 @@ export function script(world, placed, self) {
 }
 ```
 
-`loadMap` builds `placed` from the entries' ids — the table it builds today
-for actor-typed references — and calls `script` once per load with a handle
-for `this map`. Two loads are two closures. Unloading removes what that load
+Each placement's workspace compiles to registrations on that placement's
+entry in `placed`, the table `loadMap` already builds for actor-typed
+references. `loadMap` calls `script` once per load with a handle for
+`this map`, and points the space's camera at `camera.follows` before the
+first frame. Two loads are two closures. Unloading removes what that load
 placed, and the handlers go with the actors. A world hat `when ⟨pause menu⟩
 quit` registers on the map's events as it registers on an actor kind's.
 
-### The palette
+### The palettes
 
-Everything a world script has, less the definition roots and `load map` into
-the world's own space, plus:
+An INSTANCE'S workspace offers what an actor file offers, less the
+definition rows, and with three additions:
 
-- `this map`, with `loads`, `unloads`, `unload this map`, `emit ⟨event⟩` and
-  `define event`;
-- `the ⟨placement⟩`, as an actor value and as a hat subject, its dropdown read
-  from this file;
-- `camera of this map` for the pose blocks, which is what `set camera to
-follow` becomes;
-- `layer ⟨…⟩ of this map` for the background and offset blocks.
+- the kind's events as hats, with `this actor` as their subject and no world
+  events, which belong to the world's workspace;
+- `this actor`'s properties to get and set, and the world's properties to get
+  and set, since a switch may well add to the score;
+- `the ⟨placement⟩` as an actor value, its dropdown read from this file, and
+  `this map` with `unload this map` and `emit ⟨event⟩ for this map`.
 
-A fourth file kind, `map`, beside `actor`, `world` and `rule`, decides the
-shadow a hat's subject socket starts with: `the ⟨placement⟩` here, as
-`any ⟨kind⟩` is in a world and `this actor` in an actor (`blockly/fileKind`).
+The MAP'S own workspace, opened with nothing selected, holds `define event`
+and hats on `this map`: `loads` and `unloads`. Most maps never open it.
 
-### Opening the workspace
+The WORLD'S workspace is today's world file less what moved into the
+properties window and the map: world events, kind hats, `define property`,
+`use rule` where a project still says it, and `load map … into ⟨viewport⟩`.
 
-Three doors, one drawer.
+A fourth file kind, `map`, beside `actor`, `world` and `rule`
+(`blockly/fileKind`), and within it the instance workspaces, which are
+generated with the placement's type as the kind `this actor` is about.
 
-1. **A toggle on the stage toolbar**, labelled Script, opens a drawer below
-   the canvas holding the whole workspace, at a height it remembers. The door
-   for someone who wants to read the map top to bottom.
-2. **From a placement.** Selecting one shows an Events section in the
-   inspector: the kind's events, each with a count of the hats about this
-   placement. Choosing one makes a hat with `the ⟨Switch⟩` in its subject,
-   opens the drawer if closed, and scrolls to the hat. The badge on the canvas
-   does the same, filtered: the drawer shows only that placement's hats, with
-   a way back to all of them. Selection and hats highlight each other both
-   ways.
-3. **From the map itself.** With nothing selected, the inspector's Events
-   section lists `loads`, `unloads` and the map's own events, and makes the
-   corresponding `this map` hat.
+### The editor's modes
 
-Nothing is attached to an actor. Every hat lives in the one workspace, and
-"this placement's script" is a filter over it. Duplicating, deleting and
-renaming a placement stay edits to one document, and a hat that names two
-placements has no side to belong to.
+The map editor is one editor with three views of one file, and a switch in
+its toolbar that says which:
+
+1. **Map**, the default: the canvas, the palette of kinds, the properties
+   window. Selecting nothing shows the WORLD'S properties for the main map —
+   its name, its own properties, its camera, its layers and their backgrounds
+   — and the map's for any other. `set target score to 30` is a field here.
+2. **World**, on the main map: the world's workspace. One click from the map
+   and one click back. A level or a dialog has a **Map** workspace in this
+   position instead, for `define event` and the `this map` hats.
+3. **Actor**, entered from a placement: selecting one shows a **Script**
+   button in its properties window beside the values, and the button switches
+   the editor to that instance's workspace, titled with the placement's name
+   and kind. Escape, the switch, or clicking the canvas thumbnail returns to
+   the map with the placement still selected.
+
+**An icon on the placement.** A placement whose workspace holds any block
+wears a small glyph at its corner on the canvas, so a map can be read for
+where its behavior is without opening anything. A toolbar option hides or
+shows the icons, for a screenshot or a crowded level.
+
+**A store per placement, on purpose.** An earlier draft of this section kept
+one workspace per map and made "this placement's script" a filter over it,
+to keep a level readable top to bottom. It is reversed here because the
+instance workspace reads as an actor file for one thing, which every learner
+who has opened an actor already knows, and because the subject then never
+has to be chosen. What the map-wide read loses, the icons carry; a listing
+of every scripted placement in the map, one row each, is the later addition
+if the icons are not enough.
+
+**Wires on the canvas**, later: a hat with a one-block body that names
+another placement, drawn as a line from the one to the other. Sugar over the
+instance workspace, not a second store.
 
 ### What the editor needs built
 
-`BlocklyFileEditor` edits a whole file; the drawer needs the same workspace
-mounted on a subtree, taking the map's `blocks` and writing back through the
-map's own `onChange`. That is a refactor that pulls the workspace out of the
-file editor, not a second Blockly integration. The badge is a glyph the stage
-already draws at a placement's corner for other reasons. The Events section
-is a list built from the kind's schema, which the inspector already fetches.
-The filter is a workspace with some top blocks hidden.
+`BlocklyFileEditor` edits a whole file; the instance workspace needs the same
+workspace mounted on a subtree, taking one placement's `blocks` and writing
+back through the map's own `onChange`. That is a refactor that pulls the
+workspace out of the file editor, not a second Blockly integration. The mode
+switch is a segmented control on the stage toolbar. The icon is a glyph the
+stage already draws at a placement's corner for other reasons. The Script
+button is one row in the properties window, and the world's properties on
+empty selection are the same schema-driven form the inspector draws for an
+actor, over the world's own properties.
 
 ### Two edges
 
-- **Several placements in one subject.** `the ⟨Switch⟩ or ⟨Lever⟩` is not
-  offered; `any ⟨Button⟩ in this map` is, and covers it.
-- **A hat whose placement was deleted** is kept, its subject shown in the
-  warning color the way a `use rule` naming a missing rule is, rather than
-  deleting blocks a learner wrote. Renaming a placement rewrites the hats that
-  name it, which is the rename the map editor already owns.
+- **Several placements in one subject** is not a question here, since a
+  subject is always the one instance. `any ⟨Button⟩ in this map` is the
+  world's workspace's, and covers "every switch in the level".
+- **A deleted placement takes its workspace with it**, which is what a
+  workspace belonging to the placement means; the editor confirms the delete
+  when the workspace is not empty. Duplicating a placement duplicates its
+  blocks. Renaming one rewrites the `the ⟨…⟩` values in other placements'
+  workspaces that name it, which is the rename the map editor already owns.
 
 ## Levels: the Viewport
 
@@ -329,14 +374,16 @@ In order of size:
   inside a Viewport, and render-to-texture is the later answer if anyone wants
   that.
 
-### Camera-follow lives in the level's script
+### Camera-follow is the level's property
 
-The main map's inspector cannot say "follows the Player", because the Player
-is in the level's file and the main map has no name for it. The level's own
-script can: `when this map loads, set camera to follow ⟨the Player⟩`, where
-the camera in scope is the one viewing that map. This is the first example of
-a map script doing something only it can, and it is the reason the
-`set actor to follow ⟨camera⟩` block stops living in the world file.
+The main map's properties window cannot say "follows the Player", because
+the Player is in the level's file and the main map has no name for it. The
+level's own can: `camera follows ⟨Player⟩` is a field in the level's
+properties window, with nothing selected, and `loadMap` points the space's
+camera at that placement before the first frame. A script that wants to
+change it at run time has `camera of this map` in the pose blocks. This is
+the reason the `set actor to follow ⟨camera⟩` block stops living in the
+world file.
 
 ### Layers, backgrounds and foregrounds belong to the map
 
@@ -428,33 +475,16 @@ layer's slot takes effects and a Viewport inherits them by drawing the layer.
 No per-placement parallax: a thing that scrolls at a rate other than its
 layer's is a thing on another layer.
 
-## What the script drawer needs
+## Where the world's properties are set
 
-The interface question was worked through separately and the answer is
-recorded here so the spec is whole. One workspace per map, never one per
-placement or per event; the per-actor experience is a VIEW over it.
-
-- **A badge on the canvas** for every placement some hat is about, repeated in
-  the inspector. A lighter glyph for a placement a body merely names, so a
-  door opened by something else is marked too.
-- **An Events section in the inspector**, listing the kind's events with the
-  handled ones marked. Choosing one makes a hat with this placement in its
-  subject and opens the drawer on it.
-- **Filtering** rather than popups: the badge opens the drawer showing the hats
-  about that placement, one click from the whole script. Selection on the
-  canvas and hats in the drawer highlight each other. A modal would break that
-  link.
-- **Wires on the canvas**, later: a hat with a one-block body drawn as a line
-  from source to target. Sugar over the drawer, not a second store.
-
-The main map's drawer additionally holds what the world workspace holds today:
-`use rule` where a project still says it, `define property`, the world's `set`
-rows, and hats about kinds and world events. When nothing on the canvas is
-selected, the inspector shows the WORLD: its name, its own properties, its
-layers and their backgrounds. That is where `set target score to 30` goes,
-and it is a field rather than a block. Every map's inspector shows the same
-on empty selection, minus the laws: a level has layers and a background of
-its own.
+The properties window with nothing selected shows the world's own
+properties on the main map — the ones `define property` declares in the
+world's workspace, with their starting values as fields — beside its name,
+its camera, and its layers with their backgrounds and foregrounds. That is
+where `set target score to 30` goes, and it is a field rather than a block;
+the `set` block remains for a value that changes at run time. Every other
+map's window shows the same on empty selection, minus the laws: a level has
+a camera, layers and a background of its own.
 
 ## Against the current shape
 
@@ -462,17 +492,18 @@ What the current shape does better:
 
 - **One kind of editor at the front.** A learner meets Blockly and only
   Blockly until they choose to open a map. Map-first puts a canvas, a palette,
-  an inspector and a drawer on the first screen. The mitigation is that three
-  of those four are already the map editor, which has been built and tested
-  (NEXT.md §5), and a lesson about one thing can hide the rest.
+  an inspector and a mode switch on the first screen. The mitigation is that
+  three of those four are already the map editor, which has been built and
+  tested (NEXT.md §5), and a lesson about one thing can hide the rest.
 - **Everything the world does is readable top to bottom** as one block stack.
   Map-first splits it: the arrangement is a picture, the values are in an
-  inspector, the behavior is in the drawer. Reading a world means looking at
-  three places. The drawer's filter and badges are what make that bearable.
+  inspector, the behavior is in a workspace per placement. Reading a world
+  means looking at several places. The icons on the canvas and the one-click
+  mode switch are what make that bearable.
 - **The curriculum is built on it.** Every level pins `main.world`, every tile
   in the catalogue unlocks blocks, and the progression assumes the workspace is
   where a learner's hands are (PROGRESSION.md). Unlocking editor affordances
-  (the inspector, the palette, the drawer) is a new kind of tile.
+  (the inspector, the palette, the modes) is a new kind of tile.
 - **Testing.** A block stack is a JSON document a test can compile and run.
   The map editor is a canvas jsdom cannot paint, and its arithmetic lives in
   pure modules for that reason. Moving the front door onto the canvas moves
@@ -507,9 +538,10 @@ What map-first does better:
   mixed kinds. The Blockly serialization remains the file; undo remains
   Blockly's. `create actor in map` is retired; its placements migrate into the
   main map on first open.
-- `.map`: gains a `blocks` workspace beside `actors`, serialized as an actor
-  file's is, and compiles to a module exporting the arrangement and a script
-  function. Map-owned events appear in world hat dropdowns as actor events do.
+- `.map`: each placement may carry a `blocks` workspace, and the map one of
+  its own, serialized as an actor file's is; a map gains a `camera`. It
+  compiles to a module exporting the arrangement and a script function.
+  Map-owned events appear in world hat dropdowns as actor events do.
 - The named-actor block becomes the map script's `the ⟨Resume⟩`, scoped to its
   file. `World.named`, `World.actorsNamed`, `ActorBuilder.named` and the
   placement-name registry go.
@@ -517,7 +549,7 @@ What map-first does better:
   mirrors, and its camera as properties. `load map … into ⟨viewport⟩` and
   `unload ⟨viewport⟩` join the world's blocks; `load map` alone keeps meaning
   the main map's own space, which is what a dialog wants. `clear world` and
-  `set actor to follow ⟨camera⟩` go; the second becomes a map script's.
+  `set actor to follow ⟨camera⟩` go; the second becomes a map's property.
 - `.map` gains layers, each with a background and a foreground, edited in the
   map editor. `define layer` in a world stops being how a layer is made.
 - VIEWPORT.md's selection model for viewports is superseded by containment
@@ -526,12 +558,13 @@ What map-first does better:
 
 ## Order of work
 
-1. **Map scripts.** The drawer, placement-scoped hats, badges and the Events
-   section on `.map` files. This stands on its own, replaces the named-actor
-   commit, and is what the pause menu needs whatever else happens.
+1. **Map scripts.** The instance workspace, the Script button, the icons and
+   their toggle, and the map's own workspace, on `.map` files. This stands on
+   its own, replaces the named-actor commit, and is what the pause menu needs
+   whatever else happens.
 2. **The main map.** Placements on the world root, the editor opening a
-   `.world` as a map with the drawer as its workspace, the world inspector on
-   empty selection. Migration of `create actor in map`.
+   `.world` as a map with the World mode as its workspace, the world's
+   properties on empty selection. Migration of `create actor in map`.
 3. **The Viewport.** The stock kind, the two blocks, spaces in the engine
    (pairwise rules partitioned, pointer mapping, bounds per space, undoable
    loads), one Phaser camera per Viewport in the driver, and the dimmed
@@ -561,8 +594,8 @@ proposal; 4 is where the layer question gets its answer.
   with a script to kind with the same script is the "transform" INTERFACE.md's
   Simple World describes. Not designed here.
 - **Where `use rule` goes.** Today a project holds a rule by having the file
-  (constants.ts, `MAIN_WORLD`). The drawer can show the rule rows if a lesson
-  wants them said; the world inspector can list them; either is fine and
+  (constants.ts, `MAIN_WORLD`). The World mode can show the rule rows if a
+  lesson wants them said; the world inspector can list them; either is fine and
   neither is decided.
 - **The title screen.** Settled in the small: the Viewport holds `title.map`
   first and `level1` after, so there is one entry world and the title's laws
