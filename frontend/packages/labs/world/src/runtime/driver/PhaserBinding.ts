@@ -279,6 +279,12 @@ export class PhaserBinding {
         inner: Phaser.GameObjects.Container;
         camera: Phaser.Cameras.Scene2D.Camera;
         /**
+         * The camera that draws what the root holds IN FRONT of this
+         * Viewport — a score, a menu loaded over the game — after the
+         * space's camera has drawn, so that it lands on top. See `band`.
+         */
+        over: Phaser.Cameras.Scene2D.Camera;
+        /**
          * The space's own layers, back to front (specs/LAYERS_PLAN.md): a
          * container each inside `inner`, and the two slots' images by layer
          * index, as the world's are kept.
@@ -773,8 +779,11 @@ export class PhaserBinding {
      * Re-done after every resize, because the camera is resized with the game
      * and comes back centered on the canvas rather than on the world.
      */
-    const fitCamera = (scene: Phaser.Scene, view: {x: number; y: number}) => {
-      const camera = scene.cameras.main;
+    const fitCamera = (
+      scene: Phaser.Scene,
+      view: {x: number; y: number},
+      camera: Phaser.Cameras.Scene2D.Camera = scene.cameras.main,
+    ) => {
       camera.setZoom(RENDER_SCALE);
       camera.centerOn(view.x / 2, view.y / 2);
     };
@@ -811,6 +820,98 @@ export class PhaserBinding {
       this.game.scale.resize(view.x * RENDER_SCALE, view.y * RENDER_SCALE);
       this.game.scale.refresh();
       fitCamera(scene, view);
+    };
+
+    /**
+     * Who draws what the root holds, when a Viewport is among it.
+     *
+     * A space is drawn by a camera of its own, and Phaser draws a scene
+     * camera by camera: everything the main camera sees, then everything the
+     * next sees. With the main camera drawing the whole root, a space lands
+     * on top of all of it, and a score or a menu placed over a Viewport is
+     * drawn under the level it was placed over.
+     *
+     * So the root is cut into BANDS at each Viewport, in draw order: what
+     * comes before the first Viewport, that Viewport included, is the main
+     * camera's; what comes after it and up to the next is its `over`
+     * camera's, which is the main camera again — same rectangle, same fit —
+     * drawn after the space's. The scene's cameras are put in that order:
+     * main, then each Viewport's pair. A layer's container is seen by every
+     * one of them, and each of its children by exactly one: a container asks
+     * each child whether it will render for the camera in hand, and a
+     * child's `cameraFilter` is the set of cameras it will not.
+     *
+     * A Viewport carried by a parent cuts the root where the parent's group
+     * is; what the group holds stays under the space. A Viewport inside
+     * another space cuts nothing, since it is not in the root.
+     *
+     * Run while any space lives, and once more after the last one goes, so
+     * that what an `over` camera drew goes back to the main one.
+     */
+    let banded = false;
+    const band = (
+      scene: Phaser.Scene,
+      spaces: ReadonlyArray<{id: string; owner: string}>,
+      byId: ReadonlyMap<string, RenderState>,
+      stateOf: ReadonlyMap<unknown, RenderState>,
+    ) => {
+      if (!spaceHosts.size && !banded) {
+        return;
+      }
+      banded = spaceHosts.size > 0;
+      // Where each Viewport cuts: the top-level object it is, or is in.
+      const cuts = new Map<unknown, string[]>();
+      for (const space of spaces) {
+        let top = byId.get(space.owner);
+        while (top?.parent && stateOf.get(top.parent)) {
+          top = stateOf.get(top.parent);
+        }
+        if (!top || top.space || !spaceHosts.has(space.id)) {
+          continue;
+        }
+        const marker = groups.get(top.actor) ?? objects.get(top.actor);
+        cuts.set(marker, [...(cuts.get(marker) ?? []), space.id]);
+      }
+      const main = scene.cameras.main;
+      let every = main.id;
+      for (const host of spaceHosts.values()) {
+        every |= host.over.id;
+      }
+      const ordered: string[] = [];
+      let drawnBy = main;
+      for (const container of containers) {
+        for (const child of container?.list ?? []) {
+          (child as {cameraFilter: number}).cameraFilter = every & ~drawnBy.id;
+          for (const id of cuts.get(child) ?? []) {
+            ordered.push(id);
+            drawnBy = spaceHosts.get(id)!.over;
+          }
+        }
+      }
+      // The scene's cameras in band order, in place: the manager draws its
+      // list front to back and looks cameras up in it.
+      const list = (scene.cameras as {cameras?: unknown[]}).cameras;
+      if (list) {
+        const placed = new Set<unknown>([main]);
+        const next: unknown[] = [main];
+        for (const id of ordered) {
+          const host = spaceHosts.get(id)!;
+          next.push(host.camera, host.over);
+          placed.add(host.camera).add(host.over);
+        }
+        next.push(...list.filter(camera => !placed.has(camera)));
+        list.length = 0;
+        list.push(...next);
+      }
+      for (const host of spaceHosts.values()) {
+        host.over.setViewport(
+          0,
+          0,
+          shown.x * RENDER_SCALE,
+          shown.y * RENDER_SCALE,
+        );
+        fitCamera(scene, shown, host.over);
+      }
     };
 
     const sync = (scene: Phaser.Scene) => {
@@ -905,9 +1006,25 @@ export class PhaserBinding {
           // The parent's image had the parent's effects; they belong to the
           // group now, and the image is re-reconciled with none below.
           const own = objectFor(parent);
+          // The group takes the PLACE its image had among its siblings, not
+          // the end of the list: everything in a layer is at one depth, so
+          // the list's order is the draw order, and a parent that jumped to
+          // the front on its first child would be drawn over what was placed
+          // after it — and would cut the root's bands (`band`) in the wrong
+          // place when it is a Viewport.
+          const held = (
+            own as {parentContainer?: Phaser.GameObjects.Container | null}
+          ).parentContainer;
+          const index = held?.list ? held.list.indexOf(own) : -1;
           effectRegistry.release(own);
           into(group, own, false);
-          into(hostFor(parent), group, true);
+          const host = hostFor(parent);
+          if (held && held === host && index >= 0) {
+            host.addAt(group, index);
+            unsorted.add(host);
+          } else {
+            into(host, group, true);
+          }
         }
         return group;
       };
@@ -928,6 +1045,7 @@ export class PhaserBinding {
       // container, so that has to exist (specs/VIEWPORT_PLAN.md).
       const byId = new Map(snapshot.map(state => [state.actor.id, state]));
       const liveSpaces = new Set<string>();
+      const owners = new Set<unknown>();
       const spaces = world.spaceSnapshot();
       for (const space of spaces) {
         const owner = byId.get(space.owner);
@@ -936,17 +1054,21 @@ export class PhaserBinding {
         }
         liveSpaces.add(space.id);
         // The Viewport draws through a group even with no children, since
-        // the group's world transform is where its rectangle is read from.
-        groupOf(owner);
+        // the group's world transform is where its rectangle is read from
+        // — made at the Viewport's turn among the actors below, so that it
+        // lands where the Viewport is in the draw order.
+        owners.add(owner.actor);
         let host = spaceHosts.get(space.id);
         if (!host) {
           const inner = scene.add.container(0, 0);
           const camera = scene.cameras.add(0, 0, 1, 1);
           camera.setZoom(RENDER_SCALE);
-          // What each camera draws: the main one everything but the spaces,
-          // a space's its own container and nothing else — not the layers,
-          // not another space.
+          const over = scene.cameras.add(0, 0, 1, 1);
+          // What each camera draws: the main one and the `over` ones the
+          // layers and no space, a space's its own container and nothing
+          // else — not the layers, not another space.
           scene.cameras.main.ignore(inner);
+          over.ignore(inner);
           for (const container of containers) {
             if (container) {
               camera.ignore(container);
@@ -954,9 +1076,18 @@ export class PhaserBinding {
           }
           for (const other of spaceHosts.values()) {
             camera.ignore(other.inner);
+            over.ignore(other.inner);
             other.camera.ignore(inner);
+            other.over.ignore(inner);
           }
-          host = {inner, camera, layers: [], backdrops: [], foregrounds: []};
+          host = {
+            inner,
+            camera,
+            over,
+            layers: [],
+            backdrops: [],
+            foregrounds: [],
+          };
           spaceHosts.set(space.id, host);
         }
         // The space's own layers: a container each, in the space's
@@ -1037,6 +1168,7 @@ export class PhaserBinding {
       for (const [id, host] of [...spaceHosts]) {
         if (!liveSpaces.has(id)) {
           scene.cameras.remove(host.camera);
+          scene.cameras.remove(host.over);
           host.inner.destroy();
           spaceHosts.delete(id);
         }
@@ -1044,7 +1176,9 @@ export class PhaserBinding {
 
       for (const state of snapshot) {
         const object = objectFor(state);
-        const group = groups.get(state.actor);
+        const group = owners.has(state.actor)
+          ? groupOf(state)
+          : groups.get(state.actor);
         // What carries this actor's transform: its group when it has one,
         // else its own object; and which transform — its local one inside
         // its parent's group, else its world one.
@@ -1159,6 +1293,7 @@ export class PhaserBinding {
         host.camera.setZoom(RENDER_SCALE * Math.abs(matrix.scaleX));
         host.camera.centerOn(space.camera.x, space.camera.y);
       }
+      band(scene, spaces, byId, stateOf);
     };
 
     // The game must never steal focus: it runs in the preview iframe, and Phaser's

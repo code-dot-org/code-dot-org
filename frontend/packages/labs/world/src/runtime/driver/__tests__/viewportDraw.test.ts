@@ -8,6 +8,8 @@
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 interface FakeCamera {
+  /** The bit a game object's `cameraFilter` carries to be passed over. */
+  id: number;
   viewport: number[];
   zoom: number;
   center: number[];
@@ -16,6 +18,10 @@ interface FakeCamera {
 }
 let cameras: FakeCamera[] = [];
 let mainIgnored: FakeNode[] = [];
+/** The scene's camera list, in the order it would draw them. */
+let drawOrder: Array<{id: number; record?: FakeCamera}> = [];
+/** The main camera's bit; a `const` would not exist yet inside the mock. */
+const MAIN_ID = 1;
 
 interface FakeNode {
   kind: 'image' | 'container' | 'graphics';
@@ -27,6 +33,8 @@ interface FakeNode {
   destroyed: boolean;
   masked?: boolean;
   visible: boolean;
+  /** The cameras that pass it over, as Phaser keeps them: a bit each. */
+  filter: number;
   /** For a graphics: the rectangles filled since the last clear. */
   rects: number[][];
   /** For a slot image: its texture and the size it was stretched to. */
@@ -52,6 +60,7 @@ vi.mock('phaser', () => {
       parent: null,
       destroyed: false,
       visible: true,
+      filter: 0,
       rects: [],
     };
     nodes.push(made);
@@ -63,6 +72,9 @@ vi.mock('phaser', () => {
     parentContainer: Base | null = null;
     constructor(record: FakeNode) {
       this.record = record;
+    }
+    set cameraFilter(filter: number) {
+      this.record.filter = filter;
     }
     setDepth(depth: number) {
       this.record.depth = depth;
@@ -112,15 +124,25 @@ vi.mock('phaser', () => {
   }
   class Rectangle extends Base {}
   class Container extends Base {
+    list: Base[] = [];
     add(child: Base) {
       child.parentContainer = this;
       child.record.parent = this.record;
       this.record.children.push(child.record);
+      this.list.push(child);
+      return this;
+    }
+    addAt(child: Base, index: number) {
+      child.parentContainer = this;
+      child.record.parent = this.record;
+      this.record.children.splice(index, 0, child.record);
+      this.list.splice(index, 0, child);
       return this;
     }
     remove(child: Base) {
       child.parentContainer = null;
       child.record.parent = null;
+      this.list = this.list.filter(held => held !== child);
       this.record.children = this.record.children.filter(
         held => held !== child.record,
       );
@@ -169,6 +191,7 @@ vi.mock('phaser', () => {
   });
   const fakeCamera = () => {
     const record: FakeCamera = {
+      id: 1 << (cameras.length + 1),
       viewport: [],
       zoom: 1,
       center: [],
@@ -178,6 +201,7 @@ vi.mock('phaser', () => {
     cameras.push(record);
     return {
       record,
+      id: record.id,
       setViewport(x: number, y: number, w: number, h: number) {
         record.viewport = [x, y, w, h];
         return this;
@@ -196,24 +220,37 @@ vi.mock('phaser', () => {
       },
     };
   };
+  const main = {
+    id: 1,
+    setBackgroundColor() {},
+    setZoom() {
+      return this;
+    },
+    centerOn() {
+      return this;
+    },
+    ignore(entry: Base) {
+      mainIgnored.push(entry.record);
+      return this;
+    },
+  };
   const scene = {
     cameras: {
-      main: {
-        setBackgroundColor() {},
-        setZoom() {
-          return this;
-        },
-        centerOn() {
-          return this;
-        },
-        ignore(entry: Base) {
-          mainIgnored.push(entry.record);
-          return this;
-        },
+      get cameras() {
+        if (!drawOrder.length) {
+          drawOrder.push(main);
+        }
+        return drawOrder;
       },
-      add: () => fakeCamera(),
+      main,
+      add() {
+        const made = fakeCamera();
+        this.cameras.push(made);
+        return made;
+      },
       remove(camera: {record: FakeCamera}) {
         camera.record.removed = true;
+        drawOrder = drawOrder.filter(held => held !== camera);
       },
     },
     scale: {
@@ -278,6 +315,11 @@ import {PhaserBinding} from '../PhaserBinding';
 
 const WINDOW = {id: 'win'};
 const COIN = {id: 'a'};
+/** Root actors either side of the Viewport in the draw order. */
+const FLOOR = {id: 'floor'};
+const SCORE = {id: 'score'};
+/** Carried by the floor, and placed last. */
+const BADGE = {id: 'badge'};
 const state = (actor: object, x: number, y: number, more = {}) => ({
   actor,
   x,
@@ -303,7 +345,7 @@ const slot = (sprite?: string) => ({
  * A world with one Viewport at (160,160), 100 by 80, showing a coin on the
  * map's `main` layer in front of a half-speed `sky` with a backdrop.
  */
-const world = (held: {spaces: boolean}) =>
+const world = (held: {spaces: boolean; around?: boolean; carried?: boolean}) =>
   ({
     useTextMetrics: () => {},
     setInput: () => {},
@@ -328,13 +370,22 @@ const world = (held: {spaces: boolean}) =>
       {id: 'main', position: {x: 160, y: 160}, active: true},
     ],
     snapshot: () => ({world: {}}),
-    renderSnapshot: () =>
-      held.spaces
+    renderSnapshot: () => [
+      ...(held.around ? [state(FLOOR, 10, 10)] : []),
+      state(WINDOW, 160, 160),
+      ...(held.spaces
+        ? [state(COIN, 48, 48, {space: 'main/win', layer: 1})]
+        : []),
+      ...(held.around ? [state(SCORE, 160, 20)] : []),
+      ...(held.carried
         ? [
-            state(WINDOW, 160, 160),
-            state(COIN, 48, 48, {space: 'main/win', layer: 1}),
+            state(BADGE, 12, 12, {
+              parent: FLOOR,
+              local: {x: 2, y: 2, scaleX: 1, scaleY: 1, rotation: 0},
+            }),
           ]
-        : [state(WINDOW, 160, 160)],
+        : []),
+    ],
     spaceSnapshot: () =>
       held.spaces
         ? [
@@ -376,6 +427,7 @@ describe('drawing a Viewport’s space', () => {
     nodes = [];
     cameras = [];
     mainIgnored = [];
+    drawOrder = [];
     document.body.innerHTML = '';
     HTMLCanvasElement.prototype.getContext = (() => ({
       getExtension: () => ({loseContext: () => {}}),
@@ -388,7 +440,8 @@ describe('drawing a Viewport’s space', () => {
     new PhaserBinding(world({spaces: true}), pane());
     runFrame();
 
-    expect(cameras).toHaveLength(1);
+    // Two: the space's, and the one that draws what is in front of it.
+    expect(cameras).toHaveLength(2);
     const camera = cameras[0];
     // The Viewport is at (160,160), 100 by 80: its corner is (110,120), and
     // the canvas is the world at the render scale.
@@ -458,7 +511,89 @@ describe('drawing a Viewport’s space', () => {
     held.spaces = false;
     runFrame();
 
-    expect(cameras[0].removed).toBe(true);
+    expect(cameras.map(camera => camera.removed)).toEqual([true, true]);
     expect(container.destroyed).toBe(true);
+  });
+});
+
+describe('what the root holds around a Viewport', () => {
+  beforeEach(() => {
+    nodes = [];
+    cameras = [];
+    mainIgnored = [];
+    drawOrder = [];
+    document.body.innerHTML = '';
+    HTMLCanvasElement.prototype.getContext = (() => ({
+      getExtension: () => ({loseContext: () => {}}),
+    })) as never;
+  });
+
+  /** The world layer's children, in the order they were placed. */
+  const rootChildren = () =>
+    nodes.find(
+      n =>
+        n.kind === 'container' && n.parent === null && !mainIgnored.includes(n),
+    )!.children;
+
+  it('is drawn by the main camera up to the Viewport, and by its `over` camera after', () => {
+    new PhaserBinding(world({spaces: true, around: true}), pane());
+    runFrame();
+
+    const [, over] = cameras;
+    const [floor, viewport, score] = rootChildren();
+    // A filter names the cameras that pass a thing over. Behind the
+    // Viewport, and the Viewport's own face: the main camera's, so `over`
+    // passes. In front: the other way about.
+    expect(floor.filter).toBe(over.id);
+    expect(viewport.filter).toBe(over.id);
+    expect(score.filter).toBe(MAIN_ID);
+  });
+
+  it('draws the cameras in band order: main, the space, then what is over it', () => {
+    new PhaserBinding(world({spaces: true, around: true}), pane());
+    runFrame();
+
+    const [space, over] = cameras;
+    expect(drawOrder.map(camera => camera.id)).toEqual([
+      MAIN_ID,
+      space.id,
+      over.id,
+    ]);
+    // The `over` camera is the main camera again: the whole canvas, fitted
+    // to the view, and blind to the space.
+    expect(over.viewport).toEqual([0, 0, 320 * 3, 320 * 3]);
+    expect(over.zoom).toBe(3);
+    expect(over.center).toEqual([160, 160]);
+    expect(over.ignored).toEqual([mainIgnored[0]]);
+  });
+
+  it('keeps a parent where it was when its first child makes it a group', () => {
+    const held = {spaces: true, around: true, carried: false};
+    new PhaserBinding(world(held), pane());
+    runFrame();
+    const [floor] = rootChildren();
+    expect(floor.kind).toBe('image');
+
+    // The floor gains a child: it is drawn through a group from here on,
+    // and the group is where the floor was — behind the Viewport, and so
+    // still the main camera's.
+    held.carried = true;
+    runFrame();
+    const [group, , score] = rootChildren();
+    expect(group.kind).toBe('container');
+    expect(group.children).toContain(floor);
+    expect(group.filter).toBe(cameras[1].id);
+    expect(score.filter).toBe(MAIN_ID);
+  });
+
+  it('hands everything back to the main camera once the Viewport is gone', () => {
+    const held = {spaces: true, around: true};
+    new PhaserBinding(world(held), pane());
+    runFrame();
+    held.spaces = false;
+    runFrame();
+
+    expect(rootChildren().map(child => child.filter)).toEqual([0, 0, 0]);
+    expect(drawOrder.map(camera => camera.id)).toEqual([MAIN_ID]);
   });
 });
