@@ -92,8 +92,37 @@ camera between that space and the screen. The working record, as before.
 
 ## Commits
 
-(recorded as they land)
+- `9592b3bc20e` — this plan.
+- `dfe27c00b86` — engine: spaces, the Viewport rule as a third foundation
+  rule, `loadMapInto` and `unloadViewport`, per-space bounds, view and
+  mouse, the near query by space, the actor in hand, the frame's `space`
+  and `spaceSnapshot`.
+- `0dc0f38af7a` — the two generated loops take their actor in hand.
+- `08c543dd183` — blocks: `map ⟨…⟩`, `load map ⟨…⟩ into ⟨…⟩`, `unload ⟨…⟩`;
+  every project map registered on the world; a Viewport shows the map its
+  property names.
 
 ## Learned while building
 
-(recorded as it happens)
+- **The rule sources did not need touching.** The plan's step 2 was to pass
+  the actor into the `mapSize`, `mousePosition` and near-query macros. With
+  the actor in hand set by the two generated loops, by handler dispatch, by
+  per-kind steps and by the actor-value helpers (`each`, `filtered`,
+  `firstWhere` take the loop's actor and the predicate's candidate in
+  hand), every stock rule answers for the right space unchanged. The mouse
+  rule's hit test runs inside a `filter` predicate, which is why the
+  candidate had to be in hand there and not only in loops.
+- **A loop body stays a loop body.** `withActor` is written out as `enter`
+  and `leave` around a `try`/`finally` so that a `return` still leaves the
+  rule and a `continue` still continues; a callback would have broken both.
+- **A path nothing registered empties the Viewport.** The first cut
+  returned early and left the old map showing; "show the map at this path"
+  with no such map means show nothing.
+- **The builder hands maps over when the world is built,** not only when
+  a load asks, since a Viewport placed under `define world` looks its map
+  up on the first tick, after the world exists and before any load.
+- **A placement's own size is a property the map can set.** The
+  end-to-end test sets the Viewport's `intrinsicSize` through the
+  placement's `positional` overrides rather than through a `set` row in
+  the actor file, which is also how the stock Viewport will get its size
+  from the inspector.
