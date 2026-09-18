@@ -32,6 +32,11 @@ export class Space {
   readonly loads: MapLoad[] = [];
   /** The actor the space's camera keeps in the middle, if a map named one. */
   follows: Actor | undefined;
+  /**
+   * The path the Viewport's `map` property held when its map was last
+   * loaded, so a change to the property is noticed (`World.showHeldMap`).
+   */
+  shown: string | undefined;
 
   constructor(
     id: string,

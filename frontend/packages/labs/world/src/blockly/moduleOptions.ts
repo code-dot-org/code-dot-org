@@ -184,6 +184,11 @@ export function mapActorTypes(path: string): string[] {
   return projectMaps[path] ?? [];
 }
 
+/** Every map the project holds, by module path — what a world registers. */
+export function projectMapPaths(): string[] {
+  return Object.keys(projectMaps).sort();
+}
+
 /** What a dropdown holds before the project offers it anything real. */
 export const NONE_VALUE = '';
 

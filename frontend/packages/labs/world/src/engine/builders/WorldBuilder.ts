@@ -105,6 +105,8 @@ export class WorldBuilder {
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
   private readonly types = new Map<string, ActorBuilder>();
+  /** The project's maps by path — see {@link defineMap}. */
+  private readonly maps = new Map<string, WorldMap>();
   /** State this WORLD carries, without a rule to carry it (specs/WORLD_STATE.md). */
   private readonly own: Array<Property<unknown>> = [];
   /**
@@ -341,8 +343,9 @@ export class WorldBuilder {
     at: {x: number; y: number},
     radius: number,
     only?: Parameters<World['actorsNear']>[2],
+    sameSpaceAs?: Actor,
   ): Actor[] {
-    return this.getWorld().actorsNear(at, radius, only);
+    return this.getWorld().actorsNear(at, radius, only, sameSpaceAs);
   }
 
   /**
@@ -440,7 +443,13 @@ export class WorldBuilder {
    * `world` is the live World, and under `define world`, where it is this.
    */
   defineMap(path: string, map: WorldMap): this {
-    this.getWorld().defineMap(path, map);
+    // Declarative, like `define`: recorded, and handed over with the
+    // templates whenever the world is asked to load anything — so a world
+    // that registers its maps before it is built is not built early by it.
+    this.maps.set(path, map);
+    if (this.built) {
+      this.built.defineMap(path, map);
+    }
     return this;
   }
 
@@ -449,7 +458,7 @@ export class WorldBuilder {
     map: WorldMap | string,
     layer?: string,
   ): Actor[] {
-    return this.getWorld().loadMapInto(viewport, map, layer);
+    return this.readyWorld().loadMapInto(viewport, map, layer);
   }
 
   unloadViewport(viewport: Actor): void {
@@ -695,7 +704,18 @@ export class WorldBuilder {
    * reload (worldPreviewWorkerManager, specs/EFFECTS_PLAN.md §13).
    */
   getWorld(): World {
-    this.built ??= this.instantiate();
+    if (!this.built) {
+      this.built = this.instantiate();
+      // What was recorded before it existed — every template, every map —
+      // so a Viewport placed under `define world` finds its map registered
+      // on the first tick (`World.showHeldMap`).
+      for (const [type, builder] of this.types) {
+        this.built.define(type, builder);
+      }
+      for (const [path, map] of this.maps) {
+        this.built.defineMap(path, map);
+      }
+    }
     return this.built;
   }
 
@@ -750,11 +770,22 @@ export class WorldBuilder {
    * they are handed over here, on the way past.
    */
   loadMap(map: WorldMap, layer?: string): Actor[] {
+    return this.readyWorld().loadMap(map, layer);
+  }
+
+  /**
+   * The world, with every template and map this builder was told about
+   * handed over — what any load needs first.
+   */
+  private readyWorld(): World {
     const world = this.getWorld();
     for (const [type, builder] of this.types) {
       world.define(type, builder);
     }
-    return world.loadMap(map, layer);
+    for (const [path, map] of this.maps) {
+      world.defineMap(path, map);
+    }
+    return world;
   }
 
   /**

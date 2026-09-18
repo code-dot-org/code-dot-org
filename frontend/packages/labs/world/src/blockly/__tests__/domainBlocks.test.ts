@@ -432,8 +432,10 @@ describe('domain block generators', () => {
       generator as never,
       {} as never,
     );
+    // …with the loop's actor in hand around the body (specs/VIEWPORT_PLAN.md).
     expect(code).toBe(
-      'for (const each of world.actors) {\neach.set(X, Y);\n}\n',
+      'for (const each of world.actors) {\n' +
+        'world.enter(each);\ntry {\neach.set(X, Y);\n} finally {\nworld.leave();\n}\n}\n',
     );
   });
 

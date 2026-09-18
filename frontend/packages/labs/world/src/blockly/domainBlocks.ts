@@ -183,6 +183,7 @@ import {
   mapActorTypes,
   mapOptions,
   mapOptionsExtension,
+  projectMapPaths,
   NONE_VALUE,
   orNone,
   placementOptions,
@@ -6436,6 +6437,30 @@ const worldWorld = defineBlock({
           )}));\n`;
         })
         .join('');
+      // Every MAP the project holds, registered by path with the kinds it
+      // places defined, by the argument the animations above make: a map is
+      // a thing the project has, and a Viewport names one by path in a
+      // property, which no import can follow (specs/VIEWPORT_PLAN.md).
+      const maps = projectMapPaths()
+        .map(mapPath => {
+          const defines = mapActorTypes(mapPath)
+            .map(type => {
+              addImport(
+                generator,
+                `mod:${type}`,
+                `import ${importVar(type)} from ${str(type)};`,
+              );
+              return `world.define(${str(type)}, ${importVar(type)});\n`;
+            })
+            .join('');
+          addImport(
+            generator,
+            `map:${mapPath}`,
+            `import ${importVar(mapPath)} from ${str(mapPath)};`,
+          );
+          return `${defines}world.defineMap(${str(mapPath)}, ${importVar(mapPath)});\n`;
+        })
+        .join('');
       // Layers, hoisted (blockly/layers). Every `defineLayer` has to precede
       // the first placement — the first placement builds the World, and a
       // layer cannot be spliced into one that exists — so the declarations
@@ -6490,10 +6515,92 @@ const worldWorld = defineBlock({
         own +
         rules +
         animations +
+        maps +
         imageSizes +
         layers +
         body
       );
+    },
+  },
+});
+
+/**
+ * `map ⟨…⟩` — a map as a VALUE: its path, which is what a Viewport's `map`
+ * property holds and what `load map … into` takes (specs/VIEWPORT_PLAN.md).
+ *
+ * The dropdown is the same one `load map` has, shelf row and all; the block
+ * exists so that a map can be named where a value is wanted — plugged into
+ * `load map … into ⟨…⟩` as its shadow, or into `set map of ⟨viewport⟩`.
+ */
+const worldMapRef = defineBlock({
+  type: 'world_map_ref',
+  message0: 'map %1',
+  args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions}],
+  output: 'String',
+  extensions: [mapOptionsExtension, mapImportFieldExtension],
+  style: 'setup_blocks',
+  tooltip: 'A map of this project, by name — to load into a Viewport.',
+  generator: {
+    javascript(block) {
+      return [str(block.getFieldValue('MAP') ?? ''), Order.ATOMIC] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
+/**
+ * `load map ⟨map⟩ into ⟨viewport⟩` — replace what a Viewport holds.
+ *
+ * The map is a value (`map ⟨…⟩`, or whatever else holds a path), the
+ * Viewport an actor. Every map the project holds is registered on the
+ * world (`world_world`), so nothing is imported here: the world finds the
+ * map by its path (`World.loadMapInto`). Over several Viewports it loads
+ * into each, as `remove actor` removes each.
+ */
+const worldLoadMapInto = defineBlock({
+  type: 'world_load_map_into',
+  message0: 'load map %1 into %2',
+  args0: [
+    {type: 'input_value', name: 'MAP', check: 'String'},
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, worldContextExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Show a map inside a Viewport, in place of whatever it showed. The map ' +
+    'has a space of its own: its positions are its own, and its camera ' +
+    'follows what the map says.',
+  generator: {
+    javascript(block, generator) {
+      const map = generator.valueToCode(block, 'MAP', Order.NONE) || '""';
+      const target = actorTarget(block, generator, Order.MEMBER);
+      return forEachActor(
+        target,
+        actor => `world.loadMapInto(${actor}, ${map})`,
+      );
+    },
+  },
+});
+
+/** `unload ⟨viewport⟩` — take back everything a Viewport holds. */
+const worldUnloadViewport = defineBlock({
+  type: 'world_unload_viewport',
+  message0: 'unload %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, worldContextExtension],
+  style: 'setup_blocks',
+  tooltip: 'Empty a Viewport: remove everything the map in it placed.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator, Order.MEMBER);
+      return forEachActor(target, actor => `world.unloadViewport(${actor})`);
     },
   },
 });
@@ -9958,6 +10065,9 @@ export const DOMAIN_BLOCKS = [
   worldGameIsPaused,
   worldCreateInMap,
   worldLoadMap,
+  worldMapRef,
+  worldLoadMapInto,
+  worldUnloadViewport,
   worldWorld,
   worldUseRule,
   worldRule,
@@ -10226,6 +10336,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_add_actor',
+      // …and into a Viewport, a window onto a map in a space of its own
+      // (specs/VIEWPORT_PLAN.md).
+      'world_load_map_into',
+      'world_unload_viewport',
+      'world_map_ref',
       // Grouping what is placed, and what draws in front of what.
       'world_define_layer',
       // The opt-in to parallax, and the separate question of whether the

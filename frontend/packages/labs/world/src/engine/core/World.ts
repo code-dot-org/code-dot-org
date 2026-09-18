@@ -4,7 +4,7 @@
 // EventQueue. `tick(delta)` advances the simulation: run every Step in order,
 // then flush the events those steps raised.
 
-import {ViewportTrait} from '../rules/viewport';
+import {ViewportMapProperty, ViewportTrait} from '../rules/viewport';
 
 import type {Actor} from './Actor';
 import type {AnimationDef, FrameState} from './animationTypes';
@@ -1745,6 +1745,9 @@ export class World {
     // leaves a Viewport showing nothing, which is what the path says.
     this.unloadSpace(space);
     const held = typeof map === 'string' ? this.maps.get(map) : map;
+    if (typeof map === 'string') {
+      space.shown = map;
+    }
     if (!held) {
       return [];
     }
@@ -1784,8 +1787,28 @@ export class World {
    */
   private settleSpaces(): void {
     for (const space of this.viewportSpaces) {
+      this.showHeldMap(space);
       this.settleSpace(space);
     }
+  }
+
+  /**
+   * Load the map a Viewport's `map` property names, when it is not the one
+   * shown: at the first tick after the Viewport is placed, and again
+   * whenever the property changes (`rules/viewport`). A path nothing
+   * registered shows nothing, as `loadMapInto` says.
+   */
+  private showHeldMap(space: Space): void {
+    const owner = space.owner;
+    if (!owner || !owner.has(ViewportTrait)) {
+      return;
+    }
+    const path = String(owner.get(ViewportMapProperty) ?? '');
+    if (path === (space.shown ?? '')) {
+      return;
+    }
+    space.shown = path;
+    this.loadMapInto(owner, path);
   }
 
   private settleSpace(space: Space): void {
