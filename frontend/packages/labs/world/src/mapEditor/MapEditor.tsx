@@ -18,9 +18,11 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
 import {actorIconImage} from '../blockly/actorIcons';
+import {label} from '../blockly/label';
 import {placementKey} from '../blockly/mapPlacements';
 import {
   projectActorOptions,
+  projectMapActorTypes,
   projectWorldOptions,
 } from '../blockly/projectModules';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
@@ -41,6 +43,7 @@ import {
   clampTiles,
   MAX_MAP_TILES,
   MIN_MAP_TILES,
+  parseMap,
   type MapDoc,
   type WorkspaceState,
 } from './mapModel';
@@ -86,6 +89,20 @@ export const MapEditor = ({
   const actorOptions = useMemo(() => projectActorOptions(files), [files]);
   const worldPath = useMemo(
     () => projectWorldOptions(files)[0]?.[1] ?? '',
+    [files],
+  );
+
+  /**
+   * The project's maps, for a Viewport's `map` property, and the map each
+   * Viewport on this map holds, read from the file its property names
+   * (specs/VIEWPORT_PLAN.md). Parsed here rather than in the stage, which
+   * knows nothing of files.
+   */
+  const mapChoices = useMemo(
+    () =>
+      Object.keys(projectMapActorTypes(files))
+        .sort()
+        .map(path => [label(path.split('/').pop() ?? path), path] as const),
     [files],
   );
 
@@ -320,6 +337,19 @@ export const MapEditor = ({
     setFileText(written);
     onChange(written);
   };
+  const heldMaps = useMemo(() => {
+    const held: Record<string, MapDoc> = {};
+    for (const actor of map.actors) {
+      const path = actor.properties?.showsMap?.map;
+      const contents =
+        typeof path === 'string' && path ? files[`${path}.map`] : undefined;
+      if (contents) {
+        held[actor.id] = parseMap(contents);
+      }
+    }
+    return held;
+  }, [map, files]);
+
   const commit = (next: MapDoc) => {
     setMap(next);
     writeFile(document.write(contentsRef.current, next));
@@ -507,6 +537,8 @@ export const MapEditor = ({
         }}
         mapScriptLabel={document.hasMapScript ? 'Map script' : 'World'}
         world={worldInspector}
+        mapChoices={mapChoices}
+        heldMaps={heldMaps}
       />
     </div>
   );

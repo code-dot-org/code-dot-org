@@ -161,6 +161,20 @@ export interface MapStageProps {
    */
   world?: Omit<WorldInspectorProps, 'isReadOnly'>;
   /**
+   * The project's maps as `[name, path]`, for a Viewport's `map` property
+   * (specs/VIEWPORT_PLAN.md) — the one string the inspector offers a list
+   * for that the sandbox cannot supply, since which maps a project holds is
+   * the editor's to know.
+   */
+  mapChoices?: ReadonlyArray<readonly [string, string]>;
+  /**
+   * The map each Viewport placement holds, by placement id, parsed by the
+   * editor from the file its `map` names — drawn inside the Viewport's box,
+   * dimmed, so the main map reads as the game rather than as a readout over
+   * an empty box.
+   */
+  heldMaps?: Readonly<Record<string, MapDoc>>;
+  /**
    * The window this map will be seen through, in pixels — see the guide below.
    *
    * Given by the caller rather than read from the constant, because a world
@@ -188,6 +202,8 @@ export const MapStage = ({
   onEditScript,
   mapScriptLabel = 'Map script',
   world,
+  mapChoices,
+  heldMaps,
   placing,
   thumbnails,
   pictures,
@@ -847,6 +863,30 @@ export const MapStage = ({
             Add
           </Button>
         </div>
+      );
+    }
+    if (prop.ownerId === 'showsMap' && prop.propId === 'map') {
+      // A Viewport's map: the project's maps, by name (`mapChoices`).
+      return (
+        <SimpleDropdown
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          labelText="Map"
+          size="s"
+          className={styles.inspectorDropdown}
+          disabled={isReadOnly}
+          selectedValue={draft[fieldKey(prop)] ?? ''}
+          items={[
+            {value: '', text: '(none)'},
+            ...(mapChoices ?? []).map(([name, path]) => ({
+              value: path,
+              text: name,
+            })),
+          ]}
+          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+            selectOption(prop, event.target.value)
+          }
+        />
       );
     }
     if (prop.type === 'string' && prop.options) {
@@ -1514,6 +1554,39 @@ export const MapStage = ({
     }
     // Hover highlight (a lighter outline), drawn under the selection outline and
     // skipped when the hovered actor is already the selected one.
+    // What each Viewport holds, drawn inside its box: the held map's
+    // placements at their own positions from the box's top-left corner,
+    // clipped to the box and dimmed, over the Viewport's own face.
+    for (const [id, held] of Object.entries(heldMaps ?? {})) {
+      const t = transformById.get(id);
+      const owner = map.actors.find(actor => actor.id === id);
+      if (!t || !owner) {
+        continue;
+      }
+      const box =
+        remembered.current.get(id)?.size ?? sizeOf(owner.type, keyById.get(id));
+      const hw = (box.width * Math.abs(t.scale.x)) / 2;
+      const hh = (box.height * Math.abs(t.scale.y)) / 2;
+      ctx.save();
+      ctx.translate(t.pos.x, t.pos.y);
+      ctx.rotate(t.rotation * DEG2RAD);
+      ctx.beginPath();
+      ctx.rect(-hw, -hh, hw * 2, hh * 2);
+      ctx.clip();
+      ctx.translate(-hw, -hh);
+      for (const inside of held.actors) {
+        if (!positionOf(inside)) {
+          continue;
+        }
+        drawSprite(
+          inside.type,
+          worldTransformOf(inside, held.actors, scales),
+          0.45,
+          placementKey(inside.type, inside.properties),
+        );
+      }
+      ctx.restore();
+    }
     if (hoveredTransform && hoveredId !== selectedId) {
       // While POINTING a reference, the hover says what the click will choose
       // rather than what it will select — so it wears the reference color,
@@ -1585,6 +1658,8 @@ export const MapStage = ({
     visible,
     // …and the corner marks come and go with their toggle.
     showIcons,
+    // …and what each Viewport holds, which changes with the files.
+    heldMaps,
   ]);
 
   const canvasClass = [

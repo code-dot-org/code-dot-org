@@ -152,11 +152,12 @@ describe('every stock actor', () => {
     // project and there is nothing to import — `stockRuleByName` does not know
     // them, and a `requires` naming one would resolve to nothing. A Portrait
     // setting its own opacity names Appearance and needs no rule at all.
-    const foundation = new Set(['Space', 'Appearance']);
+    // …and Viewport, the third of them (specs/VIEWPORT_PLAN.md).
+    const foundation = new Set(['Space', 'Appearance', 'Viewport']);
     for (const actor of STOCK_ACTORS) {
-      const elected = [...actor.contents.matchAll(/"TRAIT": "([^#]+)#/g)].map(
-        match => slug(match[1]),
-      );
+      const elected = [...actor.contents.matchAll(/"TRAIT": "([^#]+)#/g)]
+        .map(match => slug(match[1]))
+        .filter(name => !foundation.has(name));
       // An OWN property's block is keyed by the declaring actor's module path
       // rather than by a rule, so `ActorsProgressBar_…` names an ACTOR
       // dependency and not a rule one — brought by `actors` rather than by

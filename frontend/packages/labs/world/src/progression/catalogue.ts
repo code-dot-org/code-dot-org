@@ -2496,6 +2496,12 @@ export const TILES: readonly Tile[] = [
       // (specs/PARENTING.md).
       {kind: 'actor', id: 'button'},
       {kind: 'actor', id: 'panel'},
+      // …and a window onto a level, with the blocks that change what it
+      // shows (specs/VIEWPORT_PLAN.md).
+      {kind: 'actor', id: 'viewport'},
+      {kind: 'block', type: 'world_map_ref'},
+      {kind: 'block', type: 'world_load_map_into'},
+      {kind: 'block', type: 'world_unload_viewport'},
       // …and an answer that stays answered: a Button that is on or off.
       {kind: 'actor', id: 'toggle'},
       // …and one answer out of several.

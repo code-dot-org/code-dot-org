@@ -27,6 +27,7 @@ import {speechBoxActor} from './speechBox';
 import {textAreaActor} from './textArea';
 import {textInputActor} from './textInput';
 import {toggleActor} from './toggle';
+import {viewportActor} from './viewport';
 
 /** One entry in the library. */
 export interface StockActor {
@@ -222,6 +223,17 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: [],
     actors: ['label'],
     contents: panelActor,
+  },
+  {
+    id: 'viewport',
+    name: 'Viewport',
+    description:
+      'A window onto a map of its own. Set its map and the level shows inside it, with a camera of its own; what is around the window stays put — a level inside its interface.',
+    // Shows a Map is the engine's own, in play everywhere (`rules/viewport`),
+    // so nothing to bring but the Label it reads its box through.
+    requires: [],
+    actors: ['label'],
+    contents: viewportActor,
   },
   {
     id: 'portrait',

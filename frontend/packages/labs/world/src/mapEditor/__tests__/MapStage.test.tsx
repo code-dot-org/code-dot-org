@@ -653,3 +653,119 @@ describe('the world, with nothing selected', () => {
     expect(view.queryByTestId('world-inspector')).toBeNull();
   });
 });
+
+describe('a Viewport on the map', () => {
+  /** A 100 by 80 window at (160,160) showing `maps/level1`, and its schema. */
+  const withViewport = (): {
+    map: MapDoc;
+    schemas: Record<string, ActorSchema>;
+  } => {
+    const map = doc();
+    map.actors = [
+      {
+        type: 'actors/viewport',
+        id: 'Game',
+        properties: {
+          positional: {
+            position: {x: 160, y: 160},
+            intrinsicSize: {x: 100, y: 80},
+          },
+          showsMap: {map: 'maps/level1'},
+        },
+      },
+      ...map.actors,
+    ];
+    const schemas: Record<string, ActorSchema> = {
+      'actors/viewport': [
+        {
+          trait: 'showsMap',
+          traitName: 'Shows a Map',
+          props: [
+            {
+              ownerId: 'showsMap',
+              propId: 'map',
+              name: 'map',
+              type: 'string',
+              default: '',
+            },
+          ],
+        },
+      ],
+    };
+    return {map, schemas};
+  };
+  const level = (): MapDoc => ({
+    type: 'map',
+    size: {width: 20, height: 10},
+    tile: {width: 32, height: 32},
+    actors: [
+      {
+        type: 'actors/coin',
+        id: 'inside',
+        properties: {positional: {position: {x: 30, y: 20}}},
+      },
+    ],
+  });
+
+  it('offers the project’s maps for its map, and writes the path', () => {
+    const {map, schemas} = withViewport();
+    const {canvas, written, ...view} = mount(map, {
+      schemas,
+      mapChoices: [
+        ['Level1', 'maps/level1'],
+        ['Menu', 'maps/menu'],
+      ],
+      sizes: {'actors/viewport': {width: 100, height: 80}},
+    });
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 160, y: 160}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 160, y: 160}));
+
+    const select = view.container.querySelector(
+      'select[name="prop-showsMap.map"]',
+    ) as HTMLSelectElement;
+    expect([...select.options].map(option => option.text)).toEqual([
+      '(none)',
+      'Level1',
+      'Menu',
+    ]);
+    expect(select.value).toBe('maps/level1');
+
+    fireEvent.change(select, {target: {value: 'maps/menu'}});
+    expect(
+      written().actors.find(actor => actor.id === 'Game')!.properties?.showsMap
+        ?.map,
+    ).toBe('maps/menu');
+  });
+
+  it('draws what it holds inside its box, dimmed and clipped', () => {
+    const {map, schemas} = withViewport();
+    mount(map, {
+      schemas,
+      heldMaps: {Game: level()},
+      sizes: {'actors/viewport': {width: 100, height: 80}},
+    });
+
+    const frame = lastFrame();
+    // A clip the size of the box, then the held coin drawn at less than full
+    // alpha. The recording context keeps no globalAlpha, so the clip and the
+    // draw inside it are what say the level was drawn there.
+    const clip = frame.findIndex(call => call.method === 'clip');
+    expect(clip).toBeGreaterThan(0);
+    const rect = frame
+      .slice(0, clip)
+      .reverse()
+      .find(call => call.method === 'rect');
+    expect(rect?.args).toEqual([-50, -40, 100, 80]);
+    // …and something is drawn after the clip and before it is restored.
+    const restore = frame.findIndex(
+      (call, index) => index > clip && call.method === 'restore',
+    );
+    expect(
+      frame
+        .slice(clip, restore)
+        .some(
+          call => call.method === 'fillRect' || call.method === 'drawImage',
+        ),
+    ).toBe(true);
+  });
+});
