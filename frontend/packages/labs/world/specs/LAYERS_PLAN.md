@@ -1,6 +1,6 @@
 # Plan: layers in the editor (MAP_FIRST.md, step 4)
 
-STATUS: BUILT, pending a look in the browser, less the look-through mode.
+STATUS: BUILT, and seen working in the browser, less the look-through mode.
 The fourth build step of specs/MAP_FIRST.md, after
 specs/MAP_SCRIPTS_PLAN.md, specs/MAIN_MAP_PLAN.md and specs/VIEWPORT_PLAN.md:
 a map's layers, backgrounds and foregrounds are part of the map, made in the
