@@ -37,6 +37,7 @@ import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
 import styles from './mapEditor.module.css';
+import {MapInspector} from './MapInspector';
 import {
   asVec,
   extentOf,
@@ -63,6 +64,8 @@ import {
   parentIdOf,
   removeLayer,
   renamePlacementReferences,
+  withCameraFollows,
+  withoutPlacement,
   withLayer,
   withPlacementLayer,
   withSlot,
@@ -454,10 +457,7 @@ export const MapStage = ({
   };
 
   const deleteActor = (id: string) => {
-    commit({
-      ...mapRef.current,
-      actors: mapRef.current.actors.filter(a => a.id !== id),
-    });
+    commit(withoutPlacement(mapRef.current, id));
     setSelectedId(null);
   };
 
@@ -1849,6 +1849,14 @@ export const MapStage = ({
           // World view, a version restored — is what the fields show.
           key={JSON.stringify(world.header)}
           {...world}
+          isReadOnly={isReadOnly}
+        />
+      )}
+      {!selectedActor && !(inspectingLayer && inspectedLayer) && !world && (
+        <MapInspector
+          follows={map.camera?.follows}
+          placements={map.actors.map(actor => actor.id)}
+          onFollow={id => commit(withCameraFollows(mapRef.current, id))}
           isReadOnly={isReadOnly}
         />
       )}

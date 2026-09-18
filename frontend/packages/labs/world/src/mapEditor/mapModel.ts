@@ -264,12 +264,35 @@ export function renamePlacementReferences(
   return {
     ...doc,
     ...(doc.blocks ? {blocks: rename(doc.blocks) as WorkspaceState} : {}),
+    // The camera names a placement as a block does, and is renamed as one.
+    ...(doc.camera?.follows === from ? {camera: {follows: to}} : {}),
     actors: doc.actors.map(actor =>
       actor.blocks
         ? {...actor, blocks: rename(actor.blocks) as WorkspaceState}
         : actor,
     ),
   };
+}
+
+/**
+ * The map with what its camera follows set to the placement `id`, or to
+ * nothing. A map that follows nothing carries no `camera` key, so a map that
+ * never says is the map it was.
+ */
+export function withCameraFollows(doc: MapDoc, id: string | undefined): MapDoc {
+  const rest: MapDoc = {...doc};
+  delete rest.camera;
+  return id ? {...rest, camera: {follows: id}} : rest;
+}
+
+/**
+ * The map without the placement `id`. A camera that followed it follows
+ * nothing, since a name no entry has would be read as nothing when the map
+ * is loaded and shown as something in the inspector.
+ */
+export function withoutPlacement(doc: MapDoc, id: string): MapDoc {
+  const next = {...doc, actors: doc.actors.filter(a => a.id !== id)};
+  return doc.camera?.follows === id ? withCameraFollows(next, undefined) : next;
 }
 /** An actor's resolved transform, with engine defaults (scale 1, rotation 0). */
 export interface Transform {
@@ -289,6 +312,12 @@ export interface MapDoc {
   blocks?: WorkspaceState;
   /** The map's layers, back to front; absent, the one default. */
   layers?: MapLayerDoc[];
+  /**
+   * What the camera of a space holding this map follows, by placement id
+   * (specs/VIEWPORT_PLAN.md). Read when the map is loaded into a Viewport;
+   * a load into the root leaves the world's camera to the world.
+   */
+  camera?: {follows?: string};
 }
 /** The camera: screen_px = world * scale + offset (offset in CSS pixels). */
 export interface View {
@@ -355,6 +384,9 @@ export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
             layer => layer && typeof layer.id === 'string',
           ),
         }
+      : {}),
+    ...(typeof raw.camera?.follows === 'string' && raw.camera.follows
+      ? {camera: {follows: raw.camera.follows}}
       : {}),
   };
 }

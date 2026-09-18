@@ -654,6 +654,56 @@ describe('the world, with nothing selected', () => {
   });
 });
 
+describe('a level, with nothing selected', () => {
+  const select = (view: {container: HTMLElement}) =>
+    view.container.querySelector(
+      'select[name="map-camera-follows"]',
+    ) as HTMLSelectElement;
+
+  it('offers its placements for the camera to follow, and writes the choice', () => {
+    const {written, ...view} = mount(doc());
+    expect(view.getByTestId('map-inspector')).toBeInTheDocument();
+    expect([...select(view).options].map(option => option.value)).toEqual([
+      '',
+      'a',
+      'b',
+    ]);
+
+    fireEvent.change(select(view), {target: {value: 'b'}});
+    expect(written().camera).toEqual({follows: 'b'});
+
+    // Following nothing is said by saying nothing.
+    fireEvent.change(select(view), {target: {value: ''}});
+    expect(written()).not.toHaveProperty('camera');
+  });
+
+  it('follows nothing once what it followed is deleted', () => {
+    const map = {...doc(), camera: {follows: 'a'}};
+    const {canvas, written} = mount(map);
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+    fireEvent.keyDown(canvas, {key: 'Delete'});
+    expect(written().actors.map(actor => actor.id)).toEqual(['b']);
+    expect(written()).not.toHaveProperty('camera');
+  });
+
+  it('gives way to a placement, and to the world on a main map', () => {
+    const map = doc();
+    const {canvas, ...view} = mount(map);
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(view.queryByTestId('map-inspector')).toBeNull();
+
+    const main = mount(doc(), {
+      world: {
+        header: {name: 'W', properties: []},
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+      },
+    });
+    expect(main.queryByTestId('map-inspector')).toBeNull();
+  });
+});
+
 describe('a Viewport on the map', () => {
   /** A 100 by 80 window at (160,160) showing `maps/level1`, and its schema. */
   const withViewport = (): {
