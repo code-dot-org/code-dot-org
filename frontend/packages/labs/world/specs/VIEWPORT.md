@@ -600,6 +600,13 @@ and `<actor> is in layer <layer name via dropdown>` query.
 
 ## Viewports
 
+PROPOSED DEPARTURE: specs/MAP_FIRST.md makes a Viewport a stock ACTOR placed
+on a world's main map, which CONTAINS the map it holds rather than selecting
+from the world's layers; a second view of the same contents is a Viewport
+that mirrors another. The three-way split below, and the camera and layer
+sections above, stand; the selection model in this section is what that
+proposal replaces, and the reasons are given there.
+
 Three things were sharing two names for most of this document's life, and
 separating them is what makes minimaps and split screens fall out rather than be
 built:

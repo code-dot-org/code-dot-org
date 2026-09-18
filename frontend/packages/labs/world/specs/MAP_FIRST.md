@@ -77,10 +77,11 @@ actors that load placed. Load the pause menu twice and each Resume closes its
 own menu. There is no registry, no global name, and nothing left behind on
 unload.
 
-## Levels: loading a map into a container
+## Levels: the Viewport
 
-This is the part that has no precedent in the lab, and the three answers are
-not equally good.
+This is the part that has no precedent in the lab. Three answers were
+weighed; the third grew into something better than the one first written
+here, and this section records where it ended.
 
 **Clear and load, as today.** `clear world; load map ⟨level2⟩`. It works
 because Breakout has nothing on screen it wants to keep. A game with a score
@@ -91,41 +92,110 @@ the main map is what was cleared.
 **A world per level.** A title screen "is a map you load into a world of its
 own" (INTERFACE.md, "User Interfaces"), and a world per level extends that.
 It duplicates the laws per level, restarts everything on a switch, and there
-is no `go to world` block; there is one entry world. It is the wrong grain for
-levels, and possibly the right grain for title-versus-game, which this
-proposal leaves alone.
+is no `go to world` block; there is one entry world. Wrong grain.
 
-**A slot in the main map.** A placement of a stock kind, `Map Slot`, with one
-property: the map it holds. It is an empty parent; the map's actors are placed
-as its children (PARENTING.md), positioned in its frame. `load map ⟨level2⟩
-into ⟨the Level⟩` replaces what the slot holds; `unload ⟨the Level⟩` empties
-it. The main map keeps its readouts and its pause key across every level,
-because they were never in the slot.
+**A slot in the main map**, first written as an empty parent whose children
+were the loaded map's actors. A parent is a frame, so a level's positions
+became locals in the slot's frame and the spec had to insist the frame be the
+identity. That caveat was the sign the primitive was wrong. What was wanted
+was not a parent but a WINDOW.
 
-The slot is the answer because it is an ACTOR. The map editor can place it,
-the inspector can set its starting map, a script can name it, and the engine
-already knows how to remove a parent and everything under it. It costs
-nothing new in the engine beyond a way for `loadMap` to parent what it places
-and to remember what a load placed so it can be undone.
+### What a Viewport is
 
-Two things the slot must get right:
+A **Viewport** is a stock actor placed on the main map. It is a rectangle on
+the screen, and it holds a map. What it holds lives in a coordinate space of
+its own: a level's positions are level positions wherever the Viewport sits,
+and the only thing between the level and the screen is the Viewport's camera,
+applied when the level is drawn and when a pointer lands on it. A Viewport is
+not a frame in PARENTING.md's sense; nothing inside it is its child.
 
-- **Its frame is the identity.** A slot at the world's origin with no rotation
-  or scale changes nothing about the positions in the map it holds, so a level
-  authored at world coordinates loads as authored. Rules read positions through
-  the parent (PARENTING.md, "Where the derivation lives"), so gravity and
-  collision see world space. A slot placed elsewhere offsets its level, which
-  is a feature, and a rotated slot rotates its level, which nobody should do
-  and nothing prevents.
-- **The editor draws what it holds.** A slot with a starting map draws that
-  map's placements inside it, dimmed and unselectable, so the main map reads as
-  the game rather than as a readout floating over an empty box. Editing the
-  level means opening its file, one click from the slot's inspector.
+Its inspector has one property that matters: the map it holds, offered as the
+project's maps, `New`, or `Import…` from the shelf. It draws that map's
+placements inside itself, dimmed and unselectable, so the main map reads as
+the game rather than as a readout floating over an empty box; a double-click
+opens the map in its own tab. It has a camera, with the pose properties
+VIEWPORT.md gives a camera, and a default that shows the map's top-left at
+1:1, which is what the implicit camera does today.
 
-Whether a slot owns a layer is open. A game with a camera wants its level to
-scroll and its readouts to stay, which is what layers are for; the simplest
-rule is that a map loaded into a slot lands on the slot's layer, and the slot
-is placed on the layer its owner wants scrolled.
+`load map ⟨level2⟩ into ⟨the Game⟩` replaces what a Viewport holds; `unload
+⟨the Game⟩` empties it. The same Viewport shows `title.map`, then `level1`,
+then `level2`, and what is outside it stays. `clear world` goes.
+
+### What it makes structural
+
+The main map is SCREEN SPACE and is the interface; anything that scrolls is
+inside a Viewport. VIEWPORT.md reached the same division with a `fit` flag on
+a layer, so a score would not scroll with the camera. Here the division is a
+box on the canvas rather than a property on a layer, and the box is what a
+learner points at when asked where the game is.
+
+This departs from VIEWPORT.md in one place, on purpose. There, a viewport
+SELECTS from the world's layers and contents belong to the world, so that
+"which viewport did I put the player in" can never be asked. Here a Viewport
+CONTAINS its map, and that question is exactly the one a box on the canvas
+answers. What the selection model was for comes back as one property: a
+Viewport either holds a map or **mirrors** another Viewport's contents with
+its own camera. A minimap is a second Viewport mirroring the first, zoomed
+out. Split screen is two Viewports, the second mirroring the first and
+following the other player. A Viewport may not mirror itself, and that is the
+only rule. A map held by a Viewport may hold Viewports of its own, which is
+how a level carries a minimap of itself.
+
+### The simple case
+
+A project with no Viewport puts its characters on the main map. The main map
+keeps its implicit camera, so a beginner's larger map scrolls with zero new
+concepts, exactly as today; a score on it scrolls too. The Viewport is taught
+as how you get an interface that stays put, and `fit` can go quietly once it
+has. A 10 by 10 map fills the window and never meets the question.
+
+### What it costs in the engine
+
+In order of size:
+
+- **Pairwise rules stay inside a space.** Collision and nearness pair every
+  actor with every other today. A brick in the level and a label on the main
+  map must never touch, so the pairwise steps partition by the space an actor
+  is in. Per-actor rules, gravity among them, do not care.
+- **Pointer input maps through a Viewport.** A click lands on the screen,
+  finds the Viewport under it, and goes through that camera's inverse to
+  become a point in the level. Keys stay global.
+- **Map bounds move to the space.** The held map's size is what the Viewport's
+  camera clamps to, not a world-wide value.
+- **Loading gains a target and an undo.** `loadMap` places into a space and
+  records what it placed, so unloading removes exactly that.
+- **The driver is on our side.** Phaser has several cameras per scene, each
+  with its own screen rectangle and an ignore list, which is one Phaser camera
+  per Viewport actor. The constraint that comes with it: a Viewport draws
+  axis-aligned. A rotated or scaled parent does not rotate or scale what is
+  inside a Viewport, and render-to-texture is the later answer if anyone wants
+  that.
+
+### Camera-follow lives in the level's script
+
+The main map's inspector cannot say "follows the Player", because the Player
+is in the level's file and the main map has no name for it. The level's own
+script can: `when this map loads, set camera to follow ⟨the Player⟩`, where
+the camera in scope is the one viewing that map. This is the first example of
+a map script doing something only it can, and it is the reason the
+`set actor to follow ⟨camera⟩` block stops living in the world file.
+
+### Layers, backgrounds and foregrounds belong to the map
+
+A layer is a depth slice of one space with a parallax factor and its own
+background and foreground (VIEWPORT.md, "Layers"). Under this proposal a
+space is a map's, so its layers are the map's too, and they are edited in the
+map editor rather than declared with `define layer` blocks in the world: a
+layer strip in the editor, a background and foreground per layer set from the
+inspector, and a placement's layer chosen where the placement is. A map
+loaded into a Viewport brings its layers with it; the main map has its own.
+
+It is not clear layers earn much beyond depth and a scrolling backdrop, and
+the editor is where that will be found out: a learner who never opens the
+layer strip should have one layer, a background and a foreground, and nothing
+to name. The `define layer` block and the layer effect blocks stay for what a
+script needs to change at run time, and the map editor becomes the place a
+layer is made.
 
 ## What the script drawer needs
 
@@ -150,8 +220,10 @@ The main map's drawer additionally holds what the world workspace holds today:
 `use rule` where a project still says it, `define property`, the world's `set`
 rows, and hats about kinds and world events. When nothing on the canvas is
 selected, the inspector shows the WORLD: its name, its own properties, its
-background. That is where `set target score to 30` goes, and it is a field
-rather than a block.
+layers and their backgrounds. That is where `set target score to 30` goes,
+and it is a field rather than a block. Every map's inspector shows the same
+on empty selection, minus the laws: a level has layers and a background of
+its own.
 
 ## Against the current shape
 
@@ -210,9 +282,15 @@ What map-first does better:
 - The named-actor block becomes the map script's `the ⟨Resume⟩`, scoped to its
   file. `World.named`, `World.actorsNamed`, `ActorBuilder.named` and the
   placement-name registry go.
-- `Map Slot` joins the stock actors. `load map … into ⟨slot⟩` and
-  `unload ⟨slot⟩` join the world's blocks; `load map` alone keeps meaning the
-  world's root, which is what a dialog wants.
+- `Viewport` joins the stock actors, with the map it holds, the Viewport it
+  mirrors, and its camera as properties. `load map … into ⟨viewport⟩` and
+  `unload ⟨viewport⟩` join the world's blocks; `load map` alone keeps meaning
+  the main map's own space, which is what a dialog wants. `clear world` and
+  `set actor to follow ⟨camera⟩` go; the second becomes a map script's.
+- `.map` gains layers, each with a background and a foreground, edited in the
+  map editor. `define layer` in a world stops being how a layer is made.
+- VIEWPORT.md's selection model for viewports is superseded by containment
+  with mirroring; its layer and camera sections stand.
 - The Pause Menu actor goes. The stock pause menu is a map with a script.
 
 ## Order of work
@@ -223,22 +301,29 @@ What map-first does better:
 2. **The main map.** Placements on the world root, the editor opening a
    `.world` as a map with the drawer as its workspace, the world inspector on
    empty selection. Migration of `create actor in map`.
-3. **The slot.** The stock kind, the two blocks, parented loading and undoable
-   loads in the engine, and the dimmed preview of a slot's map in the editor.
-4. **Retirements.** The Pause Menu actor, `create actor in map`, the global
-   name registry.
-5. **Curriculum.** Tiles that unlock editor affordances; levels re-pinned.
+3. **The Viewport.** The stock kind, the two blocks, spaces in the engine
+   (pairwise rules partitioned, pointer mapping, bounds per space, undoable
+   loads), one Phaser camera per Viewport in the driver, and the dimmed
+   preview of a held map in the editor. Mirroring last, since nothing in a
+   first game needs it.
+4. **Layers in the editor.** The layer strip, backgrounds and foregrounds per
+   layer in the inspector, and a placement's layer set where it is placed.
+5. **Retirements.** The Pause Menu actor, `create actor in map`, the global
+   name registry, `clear world`, the `fit` layer flag.
+6. **Curriculum.** Tiles that unlock editor affordances; levels re-pinned.
 
 Step 1 is worth doing even if the rest is refused. Steps 2 and 3 are the
-proposal.
+proposal; 4 is where the layer question gets its answer.
 
 ## Open
 
-- **Nested maps.** A map loaded into a slot may itself hold a slot. Nothing
-  here forbids it and nothing here needs it. Deferred until a game asks.
 - **A map loaded twice.** Two scripts, each about its own placements. A world
   hat about the map's events hears both. That is what two menus should do; it
-  is also what two levels in two slots would do, which nobody has asked for.
+  is also what two levels in two Viewports would do, which nobody has asked
+  for.
+- **How much a layer is worth.** Depth and a scrolling backdrop are certain;
+  whether anything else survives the editor is not. Settled by building step
+  4 and watching what gets used.
 - **Kinds that exist only in a map.** A switch that appears in one level with
   one behavior is a Button placement with a script today. When the same switch
   appears in six levels, it wants to be a kind, and the move from placement
@@ -248,7 +333,7 @@ proposal.
   (constants.ts, `MAIN_WORLD`). The drawer can show the rule rows if a lesson
   wants them said; the world inspector can list them; either is fine and
   neither is decided.
-- **The title screen.** A world of its own, or a map in a slot that the main
-  map starts with? The slot answer is cheaper and keeps one entry world; the
-  cost is that a title's laws are the game's laws. Left to the first game that
-  has a title.
+- **The title screen.** Settled in the small: the Viewport holds `title.map`
+  first and `level1` after, so there is one entry world and the title's laws
+  are the game's. Whether a game ever wants a title with different laws is
+  left to the first one that does.
