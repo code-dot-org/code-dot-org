@@ -5,6 +5,7 @@ import {
   FabricObject,
   IText,
   Line,
+  Path,
   PencilBrush,
   Rect,
   Triangle,
@@ -80,6 +81,15 @@ function kindFromFabricObject(
 
 // Maximum pixel length for the longer edge of the PNG export.
 const MAX_EXPORT_PX = 4096;
+
+// Builds an SVG path string from an array of canvas points for keyboard drawing.
+export function buildPathString(points: {x: number; y: number}[]): string {
+  if (points.length < 2) return '';
+  const [first, ...rest] = points;
+  return `M ${first.x} ${first.y} ${rest
+    .map(p => `L ${p.x} ${p.y}`)
+    .join(' ')}`;
+}
 
 function dataURLToBlob(dataUrl: string): Promise<Blob> {
   return fetch(dataUrl).then(r => r.blob());
@@ -201,6 +211,14 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       x: number;
       y: number;
     } | null>(null);
+
+    // Whether the user is actively drawing a keyboard path in freedraw mode.
+    const [keyDrawing, setKeyDrawing] = useState(false);
+    // Accumulated path points while keyboard drawing is active.
+    const keyDrawPointsRef = useRef<{x: number; y: number}[]>([]);
+    // The preview Path object currently on the canvas (starter-tagged so
+    // syncObjects ignores it; replaced on every step).
+    const keyDrawPreviewRef = useRef<Path | null>(null);
 
     // Keep refs in sync with state.
     toolRef.current = tool;
@@ -327,6 +345,59 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       []
     );
 
+    // --- Keyboard freedraw helpers ---
+
+    const cancelKeyDraw = useCallback(() => {
+      const canvas = fabricRef.current;
+      if (keyDrawPreviewRef.current && canvas) {
+        canvas.remove(keyDrawPreviewRef.current);
+        canvas.renderAll();
+        keyDrawPreviewRef.current = null;
+      }
+      keyDrawPointsRef.current = [];
+    }, []);
+
+    const commitKeyDraw = useCallback(() => {
+      const canvas = fabricRef.current;
+      if (!canvas) return;
+      if (keyDrawPreviewRef.current) {
+        canvas.remove(keyDrawPreviewRef.current);
+        keyDrawPreviewRef.current = null;
+      }
+      const points = keyDrawPointsRef.current;
+      keyDrawPointsRef.current = [];
+      const str = buildPathString(points);
+      if (!str) {
+        setAnnouncement(
+          'Move the cursor before pressing Enter to finish the drawing.'
+        );
+        return;
+      }
+      const path = new Path(str, {
+        stroke: colorRef.current,
+        strokeWidth: 3,
+        fill: 'transparent',
+        strokeLineCap: 'round',
+        strokeLineJoin: 'round',
+        strokeUniform: true,
+      });
+      setData(path, {id: createUuid(), description: ''});
+      canvas.add(path);
+      canvas.setActiveObject(path);
+      canvas.renderAll();
+      setAnnouncement('Drawing added.');
+      syncObjects(canvas);
+    }, [syncObjects]);
+
+    // Cancel any in-progress keyboard draw when the user switches away from
+    // the free draw tool.
+    useEffect(() => {
+      if (tool !== 'freedraw') {
+        cancelKeyDraw();
+        setKeyDrawing(false);
+      }
+    }, [tool, cancelKeyDraw]);
+
     // --- Expose getBlob for submission ---
 
     useImperativeHandle(ref, () => ({
@@ -426,8 +497,7 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       canvas.on('mouse:down', e => {
         if (readOnlyRef.current) return;
         const currentTool = toolRef.current;
-        if (currentTool === 'select' || currentTool === 'freedraw' || e.target)
-          return;
+        if (currentTool === 'select' || currentTool === 'freedraw') return;
 
         const p = canvas.getScenePoint(e.e as MouseEvent);
 
@@ -594,7 +664,14 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       if (!canvas) return;
       canvas.isDrawingMode = tool === 'freedraw';
       canvas.selection = tool === 'select';
+      // Disable hit-testing for shape/draw tools so clicking on an existing
+      // object cannot select it while a placement tool is active.
+      canvas.skipTargetFind = tool !== 'select';
       canvas.defaultCursor = tool === 'select' ? 'default' : 'crosshair';
+      if (tool !== 'select') {
+        canvas.discardActiveObject();
+        canvas.renderAll();
+      }
       if (tool === 'freedraw' && canvas.freeDrawingBrush) {
         canvas.freeDrawingBrush.color = colorRef.current;
       }
@@ -657,9 +734,89 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       // the accessible-list arrow-key navigation is unaffected.
       if (e.target !== e.currentTarget) return;
       if (readOnly) return;
-      if (tool === 'freedraw') return;
 
       const step = e.shiftKey ? CURSOR_STEP_LARGE : CURSOR_STEP;
+
+      if (tool === 'freedraw') {
+        const canvas = fabricRef.current;
+        if (!canvas) return;
+        const isArrow = [
+          'ArrowUp',
+          'ArrowDown',
+          'ArrowLeft',
+          'ArrowRight',
+        ].includes(e.key);
+        if (isArrow) {
+          e.preventDefault();
+          e.stopPropagation();
+          const cur = cursorPos ?? {x: 200, y: 150};
+          const next =
+            e.key === 'ArrowUp'
+              ? {x: cur.x, y: Math.max(0, cur.y - step)}
+              : e.key === 'ArrowDown'
+              ? {x: cur.x, y: cur.y + step}
+              : e.key === 'ArrowLeft'
+              ? {x: Math.max(0, cur.x - step), y: cur.y}
+              : {x: cur.x + step, y: cur.y};
+          setCursorPos(next);
+          if (keyDrawing) {
+            keyDrawPointsRef.current.push(next);
+            // Replace the preview path with one that includes the new point.
+            if (keyDrawPreviewRef.current)
+              canvas.remove(keyDrawPreviewRef.current);
+            const previewStr = buildPathString(keyDrawPointsRef.current);
+            if (previewStr) {
+              const preview = new Path(previewStr, {
+                stroke: colorRef.current,
+                strokeWidth: 3,
+                fill: 'transparent',
+                strokeLineCap: 'round',
+                strokeLineJoin: 'round',
+                strokeUniform: true,
+                selectable: false,
+                evented: false,
+              });
+              setData(preview, {
+                id: '__kd_preview__',
+                description: '',
+                starter: true,
+              });
+              canvas.add(preview);
+              keyDrawPreviewRef.current = preview;
+              canvas.renderAll();
+            }
+          }
+          return;
+        }
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const pos = cursorPos ?? {x: 200, y: 150};
+          if (!keyDrawing) {
+            setKeyDrawing(true);
+            keyDrawPointsRef.current = [pos];
+            setAnnouncement(
+              'Drawing started. Use arrow keys to draw, then press Enter to finish, or Escape to cancel.'
+            );
+          } else {
+            commitKeyDraw();
+            setKeyDrawing(false);
+          }
+          return;
+        }
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          if (keyDrawing) {
+            cancelKeyDraw();
+            setKeyDrawing(false);
+            setAnnouncement('Drawing cancelled.');
+          } else {
+            setTool('select');
+            setAnnouncement('Returned to select tool.');
+          }
+          return;
+        }
+        return;
+      }
 
       if (tool === 'select') {
         const canvas = fabricRef.current;
@@ -859,7 +1016,9 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
           ? 'Object selected. Arrow keys move, Alt and arrow keys resize, Shift for larger steps.'
           : 'Drawing canvas. Select tool. Tab to navigate objects in the list below.';
       if (tool === 'freedraw')
-        return 'Drawing canvas. Free draw tool selected; use a mouse or touch screen to draw.';
+        return keyDrawing
+          ? 'Drawing in progress. Arrow keys extend the path, Enter finishes, Escape cancels.'
+          : 'Free draw tool. Enter to start drawing, then use arrow keys. You can also draw with a mouse or touch. Escape returns to Select.';
       if (tool === 'line') {
         return lineKeyStart
           ? 'Line tool: start point set. Move cursor with arrow keys, then press Enter to complete the line, or Escape to cancel.'
@@ -873,11 +1032,7 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
     })();
 
     const showCursor =
-      !readOnly &&
-      canvasFocused &&
-      cursorPos !== null &&
-      tool !== 'select' &&
-      tool !== 'freedraw';
+      !readOnly && canvasFocused && cursorPos !== null && tool !== 'select';
 
     return (
       <div className={styles.svgCanvas}>
