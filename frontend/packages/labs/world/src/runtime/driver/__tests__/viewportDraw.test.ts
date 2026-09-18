@@ -29,6 +29,9 @@ interface FakeNode {
   visible: boolean;
   /** For a graphics: the rectangles filled since the last clear. */
   rects: number[][];
+  /** For a slot image: its texture and the size it was stretched to. */
+  key?: string;
+  size?: number[];
 }
 let nodes: FakeNode[] = [];
 let lastScene: {
@@ -83,10 +86,12 @@ vi.mock('phaser', () => {
       this.record.visible = visible;
       return this;
     }
-    setTexture() {
+    setTexture(key: string) {
+      this.record.key = key;
       return this;
     }
-    setDisplaySize() {
+    setDisplaySize(width: number, height: number) {
+      this.record.size = [width, height];
       return this;
     }
     destroy() {
@@ -97,6 +102,14 @@ vi.mock('phaser', () => {
     }
   }
   class Image extends Base {}
+  class TileSprite extends Image {
+    setSize() {
+      return this;
+    }
+    setTilePosition() {
+      return this;
+    }
+  }
   class Rectangle extends Base {}
   class Container extends Base {
     add(child: Base) {
@@ -208,10 +221,15 @@ vi.mock('phaser', () => {
       resize() {},
       refresh() {},
     },
-    textures: {exists: () => false},
+    textures: {exists: (key: string) => key === 'sky.png'},
     input: {mouse: {disableContextMenu() {}}, activePointer: pointer()},
     add: {
-      image: (x: number, y: number) => new Image(node('image', x, y)),
+      image: (x: number, y: number, key?: string) => {
+        const made = new Image(node('image', x, y));
+        made.record.key = key;
+        return made;
+      },
+      tileSprite: (x: number, y: number) => new TileSprite(node('image', x, y)),
       rectangle: (x: number, y: number) => new Rectangle(node('image', x, y)),
       container: (x: number, y: number) =>
         new Container(node('container', x, y)),
@@ -239,7 +257,7 @@ vi.mock('phaser', () => {
     GameObjects: {
       Components: {TransformMatrix: class {}},
       Image,
-      TileSprite: Image,
+      TileSprite,
       Rectangle,
       Container,
       Graphics,
@@ -274,7 +292,17 @@ const state = (actor: object, x: number, y: number, more = {}) => ({
   ...more,
 });
 
-/** A world with one Viewport at (160,160), 100 by 80, showing a coin. */
+const slot = (sprite?: string) => ({
+  ...(sprite ? {sprite} : {}),
+  effects: [],
+  offset: {x: 0, y: 0},
+  repeat: false,
+});
+
+/**
+ * A world with one Viewport at (160,160), 100 by 80, showing a coin on the
+ * map's `main` layer in front of a half-speed `sky` with a backdrop.
+ */
 const world = (held: {spaces: boolean}) =>
   ({
     useTextMetrics: () => {},
@@ -302,7 +330,10 @@ const world = (held: {spaces: boolean}) =>
     snapshot: () => ({world: {}}),
     renderSnapshot: () =>
       held.spaces
-        ? [state(WINDOW, 160, 160), state(COIN, 48, 48, {space: 'main/win'})]
+        ? [
+            state(WINDOW, 160, 160),
+            state(COIN, 48, 48, {space: 'main/win', layer: 1}),
+          ]
         : [state(WINDOW, 160, 160)],
     spaceSnapshot: () =>
       held.spaces
@@ -313,6 +344,22 @@ const world = (held: {spaces: boolean}) =>
               camera: {x: 320, y: 160},
               view: {x: 100, y: 80},
               bounds: {x: 640, y: 320},
+              layers: [
+                {
+                  id: 'sky',
+                  parallax: {x: 0.5, y: 0},
+                  fit: false,
+                  background: slot('sky.png'),
+                  foreground: slot(),
+                },
+                {
+                  id: 'main',
+                  parallax: {x: 1, y: 1},
+                  fit: false,
+                  background: slot(),
+                  foreground: slot(),
+                },
+              ],
             },
           ]
         : [],
@@ -357,7 +404,9 @@ describe('drawing a Viewport’s space', () => {
     const container = inner()!;
     expect(container.kind).toBe('container');
     expect(container.parent).toBeNull();
-    const coin = container.children.find(child => child.kind === 'image')!;
+    // In the map's `main` layer, the second of the space's two.
+    const [, main] = container.children;
+    const coin = main.children.find(child => child.kind === 'image')!;
     expect(coin.x).toBe(48);
     expect(coin.y).toBe(48);
     // …and nowhere else: the layer's container holds the Viewport's group,
@@ -372,6 +421,32 @@ describe('drawing a Viewport’s space', () => {
     expect(layer.children.filter(child => child.kind === 'image')).toEqual([]);
     // The space camera looks past the layers.
     expect(cameras[0].ignored).toContain(layer);
+  });
+
+  it('gives the space its map’s layers, each moved for its factor', () => {
+    new PhaserBinding(world({spaces: true}), pane());
+    runFrame();
+
+    const [sky, main] = inner()!.children;
+    expect([sky.depth, main.depth]).toEqual([0, 1]);
+    // The space camera scrolls by the whole offset, (270,120). A layer at
+    // factor 1 is left where it is; one at (0.5, 0) is given back half of x
+    // and all of y, so it nets half the camera's travel across and none up.
+    expect([main.x, main.y]).toEqual([0, 0]);
+    expect([sky.x, sky.y]).toEqual([135, 120]);
+  });
+
+  it('draws a layer’s background inside it, stretched over the map', () => {
+    new PhaserBinding(world({spaces: true}), pane());
+    runFrame();
+
+    const [sky] = inner()!.children;
+    const backdrop = sky.children.find(child => child.key === 'sky.png')!;
+    expect(backdrop.depth).toBe(0);
+    // `stretchedPlacement`: the view plus the factor's share of what the
+    // camera can travel — (640−100) across at 0.5, none up at 0.
+    expect(backdrop.size).toEqual([100 + 0.5 * 540, 80]);
+    expect([backdrop.x, backdrop.y]).toEqual([(100 + 0.5 * 540) / 2, 40]);
   });
 
   it('takes the camera and container down with a Viewport that is gone', () => {

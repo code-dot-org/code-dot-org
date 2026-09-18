@@ -278,6 +278,14 @@ export class PhaserBinding {
       {
         inner: Phaser.GameObjects.Container;
         camera: Phaser.Cameras.Scene2D.Camera;
+        /**
+         * The space's own layers, back to front (specs/LAYERS_PLAN.md): a
+         * container each inside `inner`, and the two slots' images by layer
+         * index, as the world's are kept.
+         */
+        layers: Array<Phaser.GameObjects.Container | undefined>;
+        backdrops: Array<SlotObject | undefined>;
+        foregrounds: Array<SlotObject | undefined>;
       }
     >();
     // The backdrop layers' images, by layer index — created on demand, because
@@ -557,6 +565,12 @@ export class PhaserBinding {
       mapSize: {x: number; y: number},
       /** How much of it is on screen — `World.viewSize`, in pixels. */
       viewSize: {x: number; y: number},
+      /**
+       * Where a new slot image goes: the world's layer by default, or a
+       * space's own layer container (specs/LAYERS_PLAN.md).
+       */
+      host: (index: number, image: SlotObject) => void = (index, image) =>
+        intoLayer(scene, index, image),
     ) => {
       slots.forEach((slot, index) => {
         let image = images[index];
@@ -585,7 +599,7 @@ export class PhaserBinding {
               )
             : scene.add.image(viewSize.x / 2, viewSize.y / 2, sprite);
           image.setDepth(depth);
-          intoLayer(scene, index, image);
+          host(index, image);
           images[index] = image;
         }
         image.setTexture(sprite);
@@ -902,9 +916,12 @@ export class PhaserBinding {
         if (parent) {
           return groupOf(parent);
         }
-        // An actor in a Viewport's space draws inside that Viewport.
+        // An actor in a Viewport's space draws inside that Viewport, in the
+        // space's own layer at its depth.
         const space = state.space ? spaceHosts.get(state.space) : undefined;
-        return space ? space.inner : containerFor(scene, state.layer);
+        return space
+          ? (space.layers[state.layer] ?? space.inner)
+          : containerFor(scene, state.layer);
       };
 
       // The spaces, BEFORE the actors: an actor in one goes into its
@@ -939,9 +956,77 @@ export class PhaserBinding {
             camera.ignore(other.inner);
             other.camera.ignore(inner);
           }
-          host = {inner, camera};
+          host = {inner, camera, layers: [], backdrops: [], foregrounds: []};
           spaceHosts.set(space.id, host);
         }
+        // The space's own layers: a container each, in the space's
+        // container, at its depth. The space camera scrolls by the whole
+        // offset, where the world's camera never moves and its layers are
+        // shifted instead; so a layer at factor `f` is given back what it
+        // should NOT have moved, `offset − offset × f`, and nets the same
+        // `−offset × f` the world's gets. A slot inside it is then placed
+        // by the same arithmetic (`backdropPlacement`).
+        const held = host;
+        const offset = {
+          x: space.camera.x - space.view.x / 2,
+          y: space.camera.y - space.view.y / 2,
+        };
+        const shiftOf = (index: number) =>
+          layerShift(space.layers[index], offset);
+        space.layers.forEach((_layer, index) => {
+          let container = held.layers[index];
+          if (!container) {
+            container = scene.add.container(0, 0);
+            container.setDepth(index);
+            held.inner.add(container);
+            held.layers[index] = container;
+            unsorted.add(held.inner);
+          }
+          const shift = shiftOf(index);
+          container.setPosition(offset.x - shift.x, offset.y - shift.y);
+          if (unsorted.has(container)) {
+            container.sort('depth');
+            unsorted.delete(container);
+          }
+        });
+        for (
+          let index = space.layers.length;
+          index < held.layers.length;
+          index++
+        ) {
+          held.layers[index]?.destroy();
+          held.layers[index] = undefined;
+        }
+        held.layers.length = space.layers.length;
+        const intoSpaceLayer = (index: number, image: SlotObject) => {
+          const container = held.layers[index] ?? held.inner;
+          container.add(image);
+          unsorted.add(container);
+        };
+        const parallaxOf = (index: number) =>
+          placementParallax(space.layers[index]);
+        syncSlots(
+          scene,
+          space.layers.map(layer => layer.background),
+          held.backdrops,
+          BACKGROUND_DEPTH,
+          shiftOf,
+          parallaxOf,
+          space.bounds,
+          space.view,
+          intoSpaceLayer,
+        );
+        syncSlots(
+          scene,
+          space.layers.map(layer => layer.foreground),
+          held.foregrounds,
+          FOREGROUND_DEPTH,
+          shiftOf,
+          parallaxOf,
+          space.bounds,
+          space.view,
+          intoSpaceLayer,
+        );
         if (unsorted.has(host.inner)) {
           host.inner.sort('depth');
           unsorted.delete(host.inner);
@@ -966,11 +1051,6 @@ export class PhaserBinding {
         const carrier: GameObject | Phaser.GameObjects.Container =
           group ?? object;
         into(hostFor(state), carrier, !state.parent);
-        // Inside a space there are no layer containers: the layer is the
-        // depth the space's one container sorts by.
-        if (state.space && !state.parent) {
-          carrier.setDepth(state.layer);
-        }
         const base = state.parent
           ? state.local!
           : {
