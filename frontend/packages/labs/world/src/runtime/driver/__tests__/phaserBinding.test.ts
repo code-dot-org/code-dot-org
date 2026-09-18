@@ -69,6 +69,7 @@ const world = (over: Record<string, unknown> = {}) =>
     tick: () => {},
     effects: () => [],
     renderSnapshot: () => [],
+    spaceSnapshot: () => [],
     // Drained after every tick (specs/SOUND.md).
     drainSounds: () => [],
     music: () => undefined,

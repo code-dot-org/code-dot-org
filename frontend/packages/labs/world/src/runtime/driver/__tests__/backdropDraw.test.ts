@@ -295,6 +295,7 @@ const world = (
       {id: 'unused', position: {x: -999, y: -999}, active: false},
       {id: 'main', position: camera, active: true},
     ],
+    spaceSnapshot: () => [],
     snapshot: () => ({world: {}}),
   }) as never;
 

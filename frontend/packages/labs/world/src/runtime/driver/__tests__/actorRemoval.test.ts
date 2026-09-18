@@ -162,6 +162,7 @@ const world = (actors: string[]) => {
       cameraSnapshot: () => [
         {id: 'main', position: {x: 0, y: 0}, active: true},
       ],
+      spaceSnapshot: () => [],
       renderSnapshot: () =>
         live.map((id, index) => ({
           actor: id,

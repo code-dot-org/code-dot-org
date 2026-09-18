@@ -260,6 +260,22 @@ export class PhaserBinding {
      * children is a plain object, as ever.
      */
     const groups = new Map<Actor, Phaser.GameObjects.Container>();
+    /**
+     * One pair of Containers per Viewport's space (specs/VIEWPORT_PLAN.md):
+     * the OUTER sits in the Viewport's own group at its top-left corner and
+     * is masked to its rectangle; the INNER holds the space's actors and is
+     * shifted by the space's camera, as a layer's container is shifted by
+     * the world's. Keyed by the space's id, as the frame names it.
+     */
+    const spaceHosts = new Map<
+      string,
+      {
+        outer: Phaser.GameObjects.Container;
+        inner: Phaser.GameObjects.Container;
+        mask: Phaser.GameObjects.Graphics;
+        view: {x: number; y: number};
+      }
+    >();
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.
     /**
@@ -857,11 +873,8 @@ export class PhaserBinding {
        * layer's container. A parent's group is made on the first child that
        * asks, taking the parent's own image in as its first child.
        */
-      const hostFor = (state: RenderState): Phaser.GameObjects.Container => {
-        const parent = state.parent && stateOf.get(state.parent);
-        if (!parent) {
-          return containerFor(scene, state.layer);
-        }
+      /** The group `parent` carries its children in, made on first ask. */
+      const groupOf = (parent: RenderState): Phaser.GameObjects.Container => {
         let group = groups.get(parent.actor);
         if (!group) {
           group = scene.add.container(0, 0);
@@ -876,6 +889,68 @@ export class PhaserBinding {
         }
         return group;
       };
+      const hostFor = (state: RenderState): Phaser.GameObjects.Container => {
+        const parent = state.parent && stateOf.get(state.parent);
+        if (parent) {
+          return groupOf(parent);
+        }
+        // An actor in a Viewport's space draws inside that Viewport.
+        const space = state.space ? spaceHosts.get(state.space) : undefined;
+        return space ? space.inner : containerFor(scene, state.layer);
+      };
+
+      // The spaces, BEFORE the actors: an actor in one goes into its inner
+      // container, so that has to exist. The outer goes into the Viewport's
+      // own group, which puts it where the Viewport is, in the Viewport's
+      // layer, and moves it with the Viewport (specs/VIEWPORT_PLAN.md).
+      const byId = new Map(snapshot.map(state => [state.actor.id, state]));
+      const liveSpaces = new Set<string>();
+      for (const space of world.spaceSnapshot()) {
+        const owner = byId.get(space.owner);
+        if (!owner) {
+          continue;
+        }
+        liveSpaces.add(space.id);
+        let host = spaceHosts.get(space.id);
+        if (!host) {
+          const outer = scene.add.container(0, 0);
+          const inner = scene.add.container(0, 0);
+          outer.add(inner);
+          // The clip: a rectangle the size of the Viewport, drawn where the
+          // outer container is on screen (below, once positions are set).
+          // Invisible, since a mask's shape is not a thing to see.
+          const mask = scene.add.graphics();
+          mask.setVisible(false);
+          outer.setMask(mask.createGeometryMask());
+          host = {outer, inner, mask, view: space.view};
+          spaceHosts.set(space.id, host);
+        }
+        host.view = space.view;
+        into(groupOf(owner), host.outer, false);
+        // The Viewport's image is centered on its group's origin; its
+        // top-left corner is half its size up and left of that.
+        host.outer.setPosition(-space.view.x / 2, -space.view.y / 2);
+        // The space's camera: the point it shows at the middle of the
+        // window is at the window's middle, so the contents slide the other
+        // way (`cameraOffset`, for the world's).
+        host.inner.setPosition(
+          -(space.camera.x - space.view.x / 2),
+          -(space.camera.y - space.view.y / 2),
+        );
+        if (unsorted.has(host.inner)) {
+          host.inner.sort('depth');
+          unsorted.delete(host.inner);
+        }
+      }
+      // A space gone — its Viewport removed — takes its containers with it.
+      // The actors it held were removed with it and swept above.
+      for (const [id, host] of [...spaceHosts]) {
+        if (!liveSpaces.has(id)) {
+          host.mask.destroy();
+          host.outer.destroy();
+          spaceHosts.delete(id);
+        }
+      }
 
       for (const state of snapshot) {
         const object = objectFor(state);
@@ -886,6 +961,11 @@ export class PhaserBinding {
         const carrier: GameObject | Phaser.GameObjects.Container =
           group ?? object;
         into(hostFor(state), carrier, !state.parent);
+        // Inside a space there are no layer containers: the layer is the
+        // depth the space's one container sorts by.
+        if (state.space && !state.parent) {
+          carrier.setDepth(state.layer);
+        }
         const base = state.parent
           ? state.local!
           : {
@@ -965,6 +1045,22 @@ export class PhaserBinding {
         // too; the image inside is then left solid, or the group's would
         // be counted twice.
         object.setAlpha(group ? 1 : state.opacity);
+      }
+
+      // The masks LAST, once every group is where this frame put it: the
+      // clip is the Viewport's rectangle on screen, read off the outer
+      // container's world transform so a Viewport carried by a parent, or
+      // on a scrolled layer, is still clipped where it is drawn.
+      for (const host of spaceHosts.values()) {
+        const matrix = host.outer.getWorldTransformMatrix();
+        host.mask.clear();
+        host.mask.fillStyle(0xffffff, 1);
+        host.mask.fillRect(
+          matrix.tx,
+          matrix.ty,
+          host.view.x * matrix.scaleX,
+          host.view.y * matrix.scaleY,
+        );
       }
     };
 
