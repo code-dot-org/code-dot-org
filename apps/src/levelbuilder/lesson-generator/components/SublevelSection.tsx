@@ -60,9 +60,12 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
         <ol className={moduleStyles.sublevelList}>
           {sublevels.map((sub, i) => {
             const unsupported = !!sub.unsupportedType;
-            const preview = sub.id.trim()
-              ? `${parentPreviewName}-${sub.id.trim()}`
-              : `${parentPreviewName}-${i + 1}`;
+            const preview =
+              sub.existingName ??
+              `${parentPreviewName}-${sub.id.trim() || i + 1}`;
+            const existingHint = sub.existingName
+              ? 'Existing levels keep their name and lab type.'
+              : undefined;
             return (
               <li key={sub.key}>
                 <ReorderableCard
@@ -96,7 +99,10 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
                           value={sub.id}
                           onChange={e => onPatch(sub.key, {id: e.target.value})}
                           placeholder="e.g. art"
-                          disabled={disabled || unsupported}
+                          disabled={
+                            disabled || unsupported || !!sub.existingName
+                          }
+                          title={existingHint}
                         />
                       </div>
                       <div className={sharedStyles.cardField}>
@@ -116,7 +122,8 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
                                 labType: e.target.value as LabType,
                               })
                             }
-                            disabled={disabled}
+                            disabled={disabled || !!sub.existingName}
+                            title={existingHint}
                           >
                             {labOptions.map(opt => (
                               <option key={opt.value} value={opt.value}>

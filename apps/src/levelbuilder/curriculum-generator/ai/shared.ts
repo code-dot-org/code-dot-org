@@ -19,6 +19,7 @@ export const PROMPT_TAGS = {
   AILAB_PLAN: 'lesson-gen/ailab-plan',
   AICHAT_PLAN: 'lesson-gen/aichat-plan',
   SKETCHLAB_PLAN: 'lesson-gen/sketchlab-plan',
+  EXTERNAL_PLAN: 'lesson-gen/external-plan',
   MULTI_PLAN: 'lesson-gen/multi-plan',
   MATCH_PLAN: 'lesson-gen/match-plan',
   FREE_RESPONSE_PLAN: 'lesson-gen/free-response-plan',
