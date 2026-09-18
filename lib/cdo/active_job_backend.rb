@@ -29,8 +29,10 @@ module Cdo
       pids, pid_file_hash = ExistingWorkers.pids
       n_workers_to_restart_per_batch = (pids.size.to_f / n_batches).ceil
       n_workers_to_restart_per_batch = 1 if n_workers_to_restart_per_batch < 1
+      worker_queues = self.worker_queues(n_workers_to_start)
+      worker_queues_log = worker_queues.tally.map {|queues, worker_count| "#{queues.join(',')}:#{worker_count}"}.join('; ')
 
-      chat_client_log("delayed_job: starting #{n_workers_to_start} workers, replacing #{pids.size} existing workers with a rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}")
+      chat_client_log("delayed_job: starting #{n_workers_to_start} workers, replacing #{pids.size} existing workers with a rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}; worker pools: #{worker_queues_log}")
 
       # We delete ALL existing delayed_job pid_files in pid_dir (dashboard/tmp/pids)
       # before we even start in order to work around a horrible bug in delayed_job:
@@ -56,18 +58,114 @@ module Cdo
 
         # Start (up to) an equal number of replacement workers
         n_workers = (n_workers_to_start - n_workers_started).clamp(0, pids_in_batch.size)
-        n_workers_started += start_n_workers(n_workers, initial_worker_index: n_workers_started) if n_workers > 0
+        n_workers_started += start_n_workers(n_workers, initial_worker_index: n_workers_started, worker_queues:) if n_workers > 0
       end
 
       # Start any remaining workers (=we're starting more workers than previously existed)
       n_workers = n_workers_to_start - n_workers_started
-      n_workers_started += start_n_workers(n_workers, initial_worker_index: n_workers_started) if n_workers > 0
+      n_workers_started += start_n_workers(n_workers, initial_worker_index: n_workers_started, worker_queues:) if n_workers > 0
 
       # Verify that our deploy was succesful: enough workers started, and no old workers still running
       verify_no_workers_older_than!(start_time)
       n_workers_running = verify_num_workers_running!(n_workers_to_start)
       chat_client_log("delayed_job: rolling restart complete, started #{n_workers_running} workers in #{Time.now - start_time}s")
       n_workers_running
+    end
+
+    # Builds the queue assignment for each indexed delayed_job worker.
+    #
+    # Dedicated pools come from `CDO.active_job_backend_worker_pool_percentages`.
+    # Each percentage is rounded up, and each configured pool receives one worker while capacity remains.
+    # Unconfigured queues and configured queues without a dedicated worker run in the main pool.
+    # The main pool is assigned first and keeps at least one worker when unconfigured queues exist.
+    # Without configured pools, delayed_job applies no queue filter.
+    #
+    # @param n_workers [Integer] Total number of workers to assign.
+    # @return [Array<Array<String>>] Queue names indexed by worker number.
+    #   Returns an empty array when no queue assignment is needed, so delayed_job
+    #   applies no queue filter and serves every queue.
+    #
+    # @note Workers in the same pool share one queue-name array.
+    #   Treat the returned inner arrays as immutable.
+    #
+    # @example Allocate a 10% `low_priority` pool
+    #   # Given main queues: default, mailers, mailjet
+    #   # And active_job_backend_worker_pool_percentages: {low_priority: 10}
+    #   worker_queues(1)
+    #   # => []
+    #
+    #   worker_queues(2)
+    #   # => [["default", "mailers", "mailjet"], ["low_priority"]]
+    #
+    #   worker_queues(4)
+    #   # => [
+    #   #      ["default", "mailers", "mailjet"],
+    #   #      ["default", "mailers", "mailjet"],
+    #   #      ["default", "mailers", "mailjet"],
+    #   #      ["low_priority"]
+    #   #    ]
+    #
+    #   worker_queues(140).tally
+    #   # => {
+    #   #      ["default", "mailers", "mailjet"] => 126,
+    #   #      ["low_priority"] => 14
+    #   #    }
+    def self.worker_queues(n_workers)
+      return [] if n_workers.to_i <= 1
+
+      queues = CDO.active_job_queues.values.map(&:to_s).uniq
+
+      pool_percentages = (CDO.active_job_backend_worker_pool_percentages || {}).each_with_object({}) do |(queue_key, percentage), percentages|
+        queue = CDO.active_job_queues[queue_key.to_sym] || queue_key
+        queue = queue.to_s
+        next unless queues.include?(queue)
+        next unless percentage.to_i.positive?
+
+        percentages[queue] = percentage.to_i
+      end
+      return [] if pool_percentages.empty?
+
+      main_queues = queues - pool_percentages.keys
+
+      desired_worker_counts = pool_percentages.transform_values do |percentage|
+        (n_workers * percentage / 100.0).ceil
+      end
+      reserved_worker_counts = pool_percentages.keys.to_h {|queue| [queue, 0]}
+      main_worker_required = main_queues.any? || pool_percentages.size > n_workers
+      available_worker_count = n_workers - (main_worker_required ? 1 : 0)
+
+      # Give each configured pool one worker before distributing its remaining share.
+      reserved_worker_counts.each_key do |queue|
+        break unless available_worker_count.positive?
+
+        reserved_worker_counts[queue] = 1
+        available_worker_count -= 1
+      end
+
+      while available_worker_count.positive?
+        queue = reserved_worker_counts.
+          select {|pool_queue, worker_count| worker_count < desired_worker_counts[pool_queue]}.
+          max_by {|pool_queue, worker_count| desired_worker_counts[pool_queue] - worker_count}&.
+          first
+        break unless queue
+
+        reserved_worker_counts[queue] += 1
+        available_worker_count -= 1
+      end
+
+      unallocated_queues = reserved_worker_counts.filter_map do |reserved_queue, worker_count|
+        reserved_queue if worker_count.zero?
+      end
+      main_queues |= unallocated_queues
+      main_worker_count = n_workers - reserved_worker_counts.values.sum
+      main_queues = queues if main_worker_count.positive? && main_queues.empty?
+
+      worker_queues = Array.new(main_worker_count, main_queues)
+      reserved_worker_counts.each do |reserved_queue, worker_count|
+        queues = [reserved_queue]
+        worker_queues.concat(Array.new(worker_count, queues))
+      end
+      worker_queues
     end
 
     # Warn/Error if we didn't start the intended number of workers
@@ -107,11 +205,11 @@ module Cdo
     end
 
     # run bin/delayed_job by forking our custom Cdo::DelayedJob::Command subclass
-    def self.start_n_workers(n_workers, initial_worker_index:)
+    def self.start_n_workers(n_workers, initial_worker_index:, worker_queues: nil)
       chat_client_log("delayed_job: starting #{n_workers} workers, initial_worker_index=#{initial_worker_index}")
 
-      Cdo::ActiveJobBackend::Command.new.start_n_workers(n_workers, initial_worker_index: initial_worker_index)
-      return n_workers
+      Cdo::ActiveJobBackend::Command.new.start_n_workers(n_workers, initial_worker_index:, worker_queues:)
+      n_workers
     end
 
     # Subclass Delayed::Command from delayed_job/command and add a new method to it
@@ -135,12 +233,17 @@ module Cdo
       end
 
       # New method that allows us to specify the initial worker index
-      def start_n_workers(n_workers, initial_worker_index: 0)
+      def start_n_workers(n_workers, initial_worker_index: 0, worker_queues: nil)
         Cdo::ActiveJobBackend.before_worker_fork
         n_workers.times do |worker_index|
-          process_name = "delayed_job.#{worker_index + initial_worker_index}"
-          Cdo::ActiveJobBackend.log "\tstarting delayed_job worker: #{process_name}"
-          run_process(process_name, @options)
+          global_worker_index = worker_index + initial_worker_index
+          process_name = "delayed_job.#{global_worker_index}"
+          queues = worker_queues&.[](global_worker_index)
+          worker_options = queues ? @options.merge(queues:) : @options
+          queue_log = queues&.any? ? queues.join(',') : '*'
+
+          Cdo::ActiveJobBackend.log "\tstarting delayed_job worker: #{process_name}, queues=#{queue_log}"
+          run_process(process_name, worker_options)
         end
       end
     end

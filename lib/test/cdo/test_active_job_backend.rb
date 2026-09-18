@@ -10,6 +10,19 @@ describe 'Cdo::ActiveJobBackend' do
 
     @pid_dir = Dir.mktmpdir
     Cdo::ActiveJobBackend.stubs(:pid_dir).returns(@pid_dir)
+    CDO.stubs(:active_job_queues).returns(
+      {
+        default: :default,
+        mailers: :mailers,
+        mailjet: :mailjet,
+        low_priority: :low_priority,
+      }
+    )
+    CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+      {
+        low_priority: 10,
+      }
+    )
 
     Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_fresh_workers)
   end
@@ -34,6 +47,8 @@ describe 'Cdo::ActiveJobBackend' do
   describe 'restart_workers()' do
     before do
       Cdo::ActiveJobBackend.expects(:verify_no_workers_older_than!)
+      @worker_queues = [%w[default mailers mailjet]]
+      Cdo::ActiveJobBackend.stubs(:worker_queues).returns(@worker_queues)
     end
 
     it 'can start 5 workers in 1 batch' do
@@ -49,9 +64,9 @@ describe 'Cdo::ActiveJobBackend' do
     it 'can start 5 workers in 2 batches' do
       sequence = Mocha::Sequence.new('stop then start')
       Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
-      Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0, worker_queues: @worker_queues).returns(3).in_sequence(sequence)
       Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89936, 89938]}.in_sequence(sequence)
-      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 3).returns(2).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 3, worker_queues: @worker_queues).returns(2).in_sequence(sequence)
 
       n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
       assert_equal 5, n_workers_running
@@ -62,10 +77,10 @@ describe 'Cdo::ActiveJobBackend' do
 
       sequence = Mocha::Sequence.new('stop then start')
       Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892,]}.in_sequence(sequence)
-      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 0).returns(2).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 0, worker_queues: @worker_queues).returns(2).in_sequence(sequence)
       Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89894, 89936]}.in_sequence(sequence)
-      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 2).returns(2).in_sequence(sequence)
-      Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 4).returns(1).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(2, initial_worker_index: 2, worker_queues: @worker_queues).returns(2).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 4, worker_queues: @worker_queues).returns(1).in_sequence(sequence)
       Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_fresh_workers).in_sequence(sequence)
 
       n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(5, n_batches: 2)
@@ -77,9 +92,9 @@ describe 'Cdo::ActiveJobBackend' do
 
       sequence = Mocha::Sequence.new('stop then start')
       Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89890, 89892, 89894]}.in_sequence(sequence)
-      Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0).returns(3).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(3, initial_worker_index: 0, worker_queues: @worker_queues).returns(3).in_sequence(sequence)
       Cdo::ActiveJobBackend.expects(:stop_workers).with {|pids, *| pids == [89936, 89938]}.in_sequence(sequence)
-      Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 3).returns(2).in_sequence(sequence)
+      Cdo::ActiveJobBackend.expects(:start_n_workers).with(1, initial_worker_index: 3, worker_queues: @worker_queues).returns(2).in_sequence(sequence)
       Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_4_fresh_workers).in_sequence(sequence)
 
       n_workers_running = Cdo::ActiveJobBackend.restart_workers_internal(4, n_batches: 2)
@@ -100,11 +115,195 @@ describe 'Cdo::ActiveJobBackend' do
     end
   end
 
+  describe 'worker_queues' do
+    subject {Cdo::ActiveJobBackend.worker_queues(n_workers)}
+
+    let(:n_workers) {nil}
+
+    it 'returns no queues when starting no workers' do
+      _(subject).must_equal([])
+    end
+
+    describe 'with one worker' do
+      let(:n_workers) {1}
+
+      it 'does not assign a queue pool' do
+        _(subject).must_equal []
+      end
+    end
+
+    describe 'with two workers' do
+      let(:n_workers) {2}
+
+      it 'splits workers one to one' do
+        _(subject).must_equal [
+          %w[default mailers mailjet],
+          %w[low_priority],
+        ]
+      end
+
+      context 'when no dedicated pool is configured' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns({})
+        end
+
+        it 'does not assign queues' do
+          _(subject).must_equal []
+        end
+      end
+
+      context 'when a configured queue cannot receive a dedicated worker' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              mailjet: 10,
+              low_priority: 10,
+            }
+          )
+        end
+
+        it 'keeps the queue in the main pool' do
+          _(subject).must_equal [
+            %w[default mailers low_priority],
+            %w[mailjet],
+          ]
+        end
+      end
+
+      context 'when dedicated pools outnumber workers' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              default: 25,
+              mailers: 25,
+              mailjet: 25,
+              low_priority: 25,
+            }
+          )
+        end
+
+        it 'keeps every queue served' do
+          _(subject).must_equal [
+            %w[mailers mailjet low_priority],
+            %w[default],
+          ]
+        end
+      end
+    end
+
+    describe 'with 140 workers' do
+      let(:n_workers) {140}
+
+      it 'allocates ten percent to low priority' do
+        _(subject.count {|queues| queues == %w[default mailers mailjet]}).must_equal 126
+        _(subject.count {|queues| queues == %w[low_priority]}).must_equal 14
+      end
+
+      context 'when a dedicated pool requests all workers' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              low_priority: 100,
+            }
+          )
+        end
+
+        it 'reserves the first worker for unconfigured queues' do
+          _(subject.first).must_equal %w[default mailers mailjet]
+          _(subject.drop(1)).must_equal Array.new(139, %w[low_priority])
+        end
+      end
+
+      context 'when multiple dedicated pools are configured' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              mailjet: 10,
+              low_priority: 10,
+            }
+          )
+        end
+
+        it 'puts unconfigured queues in the main pool' do
+          _(subject.count {|queues| queues == %w[default mailers]}).must_equal 112
+          _(subject.count {|queues| queues == %w[mailjet]}).must_equal 14
+          _(subject.count {|queues| queues == %w[low_priority]}).must_equal 14
+        end
+      end
+    end
+
+    describe 'with four workers' do
+      let(:n_workers) {4}
+
+      context 'when every queue has a dedicated pool' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              default: 25,
+              mailers: 25,
+              mailjet: 25,
+              low_priority: 25,
+            }
+          )
+        end
+
+        it 'does not reserve a main worker' do
+          _(subject).must_equal [
+            %w[default],
+            %w[mailers],
+            %w[mailjet],
+            %w[low_priority],
+          ]
+        end
+      end
+
+      it 'keeps at least one low priority worker' do
+        _(subject).must_equal [
+          %w[default mailers mailjet],
+          %w[default mailers mailjet],
+          %w[default mailers mailjet],
+          %w[low_priority],
+        ]
+      end
+    end
+  end
+
   describe 'start_n_workers()' do
-    it 'invokes run_process with correct process names' do
-      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.3', anything).once
-      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with('delayed_job.4', anything).once
+    it 'invokes run_process with correct process names and queues' do
+      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with do |process_name, options|
+        process_name == 'delayed_job.3' && options[:queues] == %w[default mailers mailjet]
+      end.once
+      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with do |process_name, options|
+        process_name == 'delayed_job.4' && options[:queues] == %w[low_priority]
+      end.once
+
+      worker_queues = Array.new(5)
+      worker_queues[3] = %w[default mailers mailjet]
+      worker_queues[4] = %w[low_priority]
+      Cdo::ActiveJobBackend.start_n_workers(
+        2,
+        initial_worker_index: 3,
+        worker_queues:
+      )
+    end
+
+    it 'does not apply queue options without worker queue assignments' do
+      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with do |process_name, options|
+        process_name == 'delayed_job.3' && !options.key?(:queues)
+      end.once
+      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with do |process_name, options|
+        process_name == 'delayed_job.4' && !options.key?(:queues)
+      end.once
       Cdo::ActiveJobBackend.start_n_workers(2, initial_worker_index: 3)
+    end
+
+    it 'runs all queues if a worker index is omitted from the assignments' do
+      Cdo::ActiveJobBackend::Command.any_instance.expects(:run_process).with do |process_name, options|
+        process_name == 'delayed_job.1' && !options.key?(:queues)
+      end.once
+
+      worker_queues = [%w[default mailers mailjet]]
+      Cdo::ActiveJobBackend.start_n_workers(1, initial_worker_index: 1, worker_queues:)
     end
   end
 
