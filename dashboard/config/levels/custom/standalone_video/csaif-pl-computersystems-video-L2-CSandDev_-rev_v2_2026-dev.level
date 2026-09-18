@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2026-07-29T14:55:27.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28731,
     "name_suffix": "_2026-dev",
     "encrypted": "false",
-    "long_instructions": "<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\">\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>A Computer System</strong> is a set of parts that work together to process information and complete tasks. It includes</p>\r\n<ul>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Hardware</strong> the physical parts.</li>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Software</strong> the programs that run on it.</li>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Operating System</strong> manages the hardware and software.</li>\r\n</ul>\r\n</div>\r\n\r\nComputer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars.\r\n\r\n<br>\r\n\r\n🔎 **Think About** \r\nAs you watch, listen for how the different parts of a computer system — hardware, software, and the operating system — work together.\r\n<br>"
+    "long_instructions": "<div style=\"background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px;\">\r\n<p>📖 <b>A Computer System</b> is a set of parts that work together to process information and complete tasks. It includes:</p>\r\n<p style=\"margin: 8px 0 0 0;\">• <b>Hardware:</b> the physical parts</p>\r\n<p style=\"margin: 8px 0 0 0;\">• <b>Software:</b> the programs that run on it</p>\r\n<p style=\"margin: 8px 0 0 0;\">• <b>Operating System:</b> manages the hardware and software</p>\r\n</div>\r\n<br>\r\n<p>Computer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars.</p>\r\n\r\n<div style=\"background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 16px 20px; margin: 20px 0;\">\r\n<p>🔎 <b>Think About:</b> as you watch, listen for how the different parts of a computer system, hardware, software, and the operating system, work together.</p>\r\n</div>"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-07-29T14:55:27.421+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-computersystems-video-L2-CSandDev_-rev_v2_2026\\\"\"],\"cloned_from\":\"csaif-pl-computersystems-video-L2-CSandDev_-rev_v2_2026\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-07-29T14:55:27.421+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-computersystems-video-L2-CSandDev_-rev_v2_2026\\\"\"],\"cloned_from\":\"csaif-pl-computersystems-video-L2-CSandDev_-rev_v2_2026\"},{\"changed_at\":\"2026-09-17 20:33:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
