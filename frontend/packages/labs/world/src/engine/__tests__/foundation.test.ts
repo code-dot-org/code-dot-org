@@ -22,7 +22,11 @@ describe('the foundation', () => {
   it('is in play in a world that asked for nothing', () => {
     const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
 
-    expect(world.snapshot().ruleIds).toEqual(['animation', 'spatial']);
+    expect(world.snapshot().ruleIds).toEqual([
+      'animation',
+      'spatial',
+      'viewport',
+    ]);
   });
 
   it('draws an actor that elected nothing at all', () => {
@@ -69,7 +73,11 @@ describe('the foundation', () => {
       .useRules([SpatialRule, AnimationRule])
       .instantiate();
 
-    expect(world.snapshot().ruleIds).toEqual(['animation', 'spatial']);
+    expect(world.snapshot().ruleIds).toEqual([
+      'animation',
+      'spatial',
+      'viewport',
+    ]);
   });
 
   it('lets an explicitly named rule of the same id win', () => {
@@ -81,7 +89,11 @@ describe('the foundation', () => {
       .useRules([ejected])
       .instantiate();
 
-    expect(world.snapshot().ruleIds).toEqual(['animation', 'spatial']);
+    expect(world.snapshot().ruleIds).toEqual([
+      'animation',
+      'spatial',
+      'viewport',
+    ]);
     // The seeded one has a step; this one has none, so the step list says which
     // of the two is actually in play.
     expect(world.stepOrder().map(step => step.ownerId)).not.toContain(

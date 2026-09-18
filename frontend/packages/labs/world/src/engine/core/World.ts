@@ -4,6 +4,8 @@
 // EventQueue. `tick(delta)` advances the simulation: run every Step in order,
 // then flush the events those steps raised.
 
+import {ViewportTrait} from '../rules/viewport';
+
 import type {Actor} from './Actor';
 import type {AnimationDef, FrameState} from './animationTypes';
 import {
@@ -35,6 +37,7 @@ import {parentingKeys} from './parenting';
 import {phaseIndex} from './phases';
 import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
+import {ROOT_SPACE_ID, Space} from './Space';
 import {SpatialIndex} from './spatialIndex';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
 import {text} from './textValue';
@@ -119,6 +122,13 @@ export interface WorldMap {
     /** Overrides keyed by owner id (rule or trait), then property id. */
     properties?: Record<string, Record<string, unknown>>;
   }>;
+  /**
+   * Where the space's camera looks once the map is loaded: the entry id of
+   * the placement it keeps in the middle (specs/MAP_FIRST.md, "Camera-follow
+   * is the level's property"). Read when the map is loaded into a Viewport;
+   * the world's own camera is the camera rules' to steer.
+   */
+  camera?: {follows?: string};
   /**
    * What the map DOES, run once per load — see {@link MapLoad}.
    *
@@ -367,6 +377,11 @@ export interface RenderState {
   opacity: number;
   /** Effects to play on this actor's image; empty for most actors. */
   effects: readonly AppliedEffectSpec[];
+  /**
+   * The Viewport's space this actor is in, by id, when it is not the root's
+   * — the driver draws it inside that Viewport (specs/VIEWPORT_PLAN.md).
+   */
+  space?: string;
   /** The current appearance frame to draw; absent means draw a plain rectangle. */
   frame?: FrameState;
   /**
@@ -629,7 +644,39 @@ export class World {
    * failure is silent: `x of ⟨map size⟩` is `undefined`, the arithmetic around
    * it is NaN, and nothing throws.
    */
-  private bounds = new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT);
+  private get bounds(): Vector {
+    return this.rootSpace.bounds;
+  }
+
+  private set bounds(value: Vector) {
+    this.rootSpace.bounds = value;
+  }
+
+  /**
+   * The world's spaces (specs/VIEWPORT_PLAN.md): the root, which the main
+   * map and every `load map` fill, and one per Viewport placed. Every actor
+   * is in exactly one; see `Actor.space`.
+   */
+  private readonly rootSpace = new Space(
+    ROOT_SPACE_ID,
+    undefined,
+    new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT),
+    undefined,
+  );
+  private readonly viewportSpaces: Space[] = [];
+
+  /**
+   * The actor IN HAND: the subject whose handler is running, the actor a
+   * per-kind step or a loop is at, the candidate a predicate is asked about.
+   * What the world is asked without an actor — the map's size, the mouse's
+   * place, what is near a point, where to put a spawn — is answered for this
+   * actor's space, so a rule written before spaces existed keeps meaning
+   * what it meant in each space (specs/VIEWPORT_PLAN.md).
+   */
+  private readonly inHand: Array<Actor | Camera> = [];
+
+  /** The project's maps by module path — see `defineMap`. */
+  private readonly maps = new Map<string, WorldMap>();
 
   /**
    * How much of the world is on screen at once, in pixels — the game's native
@@ -1017,7 +1064,7 @@ export class World {
         order: {kind: 'phase', phase: step.phase},
         run: (world, delta) => {
           for (const actor of world.actors.ofType(type)) {
-            step.run(actor, world, delta);
+            world.withActor(actor, () => step.run(actor, world, delta));
           }
         },
       });
@@ -1048,7 +1095,11 @@ export class World {
     return positional?.properties[id] as Property<Vector> | undefined;
   }
 
-  private place(actor: Actor, layer: string = DEFAULT_LAYER_ID): Actor {
+  private place(
+    actor: Actor,
+    layer: string = DEFAULT_LAYER_ID,
+    space?: Space,
+  ): Actor {
     // The back-reference an actor-scoped action or query reads to reach the
     // world (see `Actor.world`). Set here because placement is what makes it
     // true, and cleared by `clearActors` for the same reason.
@@ -1057,6 +1108,9 @@ export class World {
     // template instantiated and placed twice gives two actors of different ages.
     actor.bornAt = this.elapsed;
     actor.layer = this.layerIndex.has(layer) ? layer : DEFAULT_LAYER_ID;
+    // The space it is in: the one asked for, else the actor in hand's — a
+    // bullet a ball spawns lands in the ball's level — else the root.
+    actor.space = space ?? this.spaceOf(this.inHand.at(-1));
     // A drawn actor's size is DECLARED, so it is known the moment the actor
     // exists and never measured. Everything that asks how big an actor is
     // reads `intrinsic size` — the click box (rules/mouse), the collision box,
@@ -1076,6 +1130,23 @@ export class World {
     }
     this.actorList.push(actor);
     this.actorsById.set(actor.id, (this.actorsById.get(actor.id) ?? 0) + 1);
+    // A Viewport gets a space of its own, seen through a camera of its own
+    // that starts at the middle of what it shows (`rules/viewport`). After
+    // its size is known, since the space is as big as the window at first.
+    if (actor.has(ViewportTrait) && !this.viewportSpaceOf(actor)) {
+      const view = this.viewSizeOf(actor);
+      this.viewportSpaces.push(
+        new Space(
+          `${ROOT_SPACE_ID}/${actor.id}`,
+          actor,
+          new Vector(view.x, view.y),
+          makeCamera({
+            id: `${actor.id}:camera`,
+            position: new Vector(view.x / 2, view.y / 2),
+          }),
+        ),
+      );
+    }
     // …and the actor hears that it exists, which is the one event every actor
     // gets without electing anything (`rules/spatial`). Queued like the rest,
     // so a handler that adds ANOTHER actor — which is the commonest thing to
@@ -1279,6 +1350,14 @@ export class World {
     // be able to reach the world it used to be in, nor claim a layer in it.
     actor.world = undefined;
     actor.layer = undefined;
+    // A Viewport removed takes what it holds with it, as a parent takes its
+    // children: the level in it has nowhere to be seen.
+    const space = this.viewportSpaceOf(actor);
+    if (space) {
+      this.unloadSpace(space);
+      this.viewportSpaces.splice(this.viewportSpaces.indexOf(space), 1);
+    }
+    actor.space = undefined;
   }
 
   /**
@@ -1379,6 +1458,12 @@ export class World {
     at: {x: number; y: number},
     radius: number,
     only?: {type?: string; trait?: Trait},
+    /**
+     * Whose space `at` is a point in: this actor's, else the actor in hand's,
+     * else the root. A point means nothing without one, and what is near it
+     * in another space is not near it at all (specs/VIEWPORT_PLAN.md).
+     */
+    sameSpaceAs?: Actor,
   ): Actor[] {
     const found = this.positional();
     if (!found) {
@@ -1403,7 +1488,10 @@ export class World {
       this.indexAt = this.elapsed;
       this.indexCount = this.actorList.length;
     }
-    const near = this.index.near(at?.x ?? 0, at?.y ?? 0, radius, positionOf);
+    const space = this.spaceOf(sameSpaceAs ?? this.inHand.at(-1));
+    const near = this.index
+      .near(at?.x ?? 0, at?.y ?? 0, radius, positionOf)
+      .filter(actor => actor.space === space);
     // NARROWED HERE rather than by the caller, so a kind with two of it in a
     // world of a thousand allocates one short list instead of two long ones —
     // and so the block that asks for `the ⟨any Coin⟩ within ⟨80⟩` is one call.
@@ -1503,8 +1591,8 @@ export class World {
    *
    * Safe to hand out directly: a Vector is immutable.
    */
-  mapBounds(): Vector {
-    return this.bounds;
+  mapBounds(actor?: Actor | Camera): Vector {
+    return this.spaceOf(actor ?? this.inHand.at(-1)).bounds;
   }
 
   /**
@@ -1555,8 +1643,199 @@ export class World {
    * reads it the way it reads everything else about the world, and so making it
    * settable later changes nothing that asks.
    */
-  viewSize(): Vector {
-    return new Vector(this.view.x, this.view.y);
+  viewSize(actor?: Actor | Camera): Vector {
+    const space = this.spaceOf(actor ?? this.inHand.at(-1));
+    return space.owner
+      ? this.viewSizeOf(space.owner)
+      : new Vector(this.view.x, this.view.y);
+  }
+
+  /** How big a Viewport is on screen: its drawn size. */
+  private viewSizeOf(viewport: Actor): Vector {
+    const size = this.intrinsicSizeProperty();
+    const scale = this.scaleProperty();
+    const intrinsic = size ? viewport.get(size) : new Vector(0, 0);
+    const scaled = scale ? viewport.get(scale) : new Vector(1, 1);
+    return new Vector(
+      (intrinsic.x > 0 ? intrinsic.x : this.view.x) * Math.abs(scaled.x),
+      (intrinsic.y > 0 ? intrinsic.y : this.view.y) * Math.abs(scaled.y),
+    );
+  }
+
+  // ── Spaces (specs/VIEWPORT_PLAN.md) ──────────────────────────────────────
+
+  /** The space `subject` is in: an actor's own; a camera's is the root. */
+  spaceOf(subject: Actor | Camera | undefined): Space {
+    return subject && 'space' in subject && subject.space
+      ? subject.space
+      : this.rootSpace;
+  }
+
+  /** The space a Viewport owns, or nothing for an actor that is not one. */
+  viewportSpaceOf(actor: Actor): Space | undefined {
+    return this.viewportSpaces.find(space => space.owner === actor);
+  }
+
+  /** Every space a Viewport owns, in the order the Viewports were placed. */
+  get spaces(): readonly Space[] {
+    return this.viewportSpaces;
+  }
+
+  /**
+   * Take `subject` in hand for the length of `fn` — see the field. Nested,
+   * so a loop inside a handler is at its own actor and the handler is back
+   * at its subject after.
+   */
+  withActor<T>(subject: Actor | Camera, fn: () => T): T {
+    this.inHand.push(subject);
+    try {
+      return fn();
+    } finally {
+      this.inHand.pop();
+    }
+  }
+
+  /** The two halves of `withActor`, for a generated loop's body. */
+  enter(subject: Actor | Camera): void {
+    this.inHand.push(subject);
+  }
+
+  leave(): void {
+    this.inHand.pop();
+  }
+
+  /** The actor in hand, if any — for what asks after it by name. */
+  actorInHand(): Actor | Camera | undefined {
+    return this.inHand.at(-1);
+  }
+
+  /**
+   * Register a map under its module path, so it can be loaded by a path
+   * held in a property — a Viewport's `map`. The world module registers
+   * every map the project holds (specs/VIEWPORT_PLAN.md).
+   */
+  defineMap(path: string, map: WorldMap): void {
+    this.maps.set(path, map);
+  }
+
+  /** A registered map, by path. */
+  mapNamed(path: string): WorldMap | undefined {
+    return this.maps.get(path);
+  }
+
+  /**
+   * Replace what `viewport` holds with `map` — by value, or by the path a
+   * property holds. What it held is unloaded first, so a Viewport shows one
+   * map at a time; the space's bounds start over at the map's size, and its
+   * camera at the middle, on what the map's `camera.follows` names.
+   */
+  loadMapInto(
+    viewport: Actor,
+    map: WorldMap | string,
+    layer?: string,
+  ): Actor[] {
+    const space = this.viewportSpaceOf(viewport);
+    if (!space) {
+      throw new Error(
+        `world-lab: “${viewport.id}” is not a Viewport, so nothing can be ` +
+          `loaded into it`,
+      );
+    }
+    // What it held goes first, whatever comes: a path nothing registered
+    // leaves a Viewport showing nothing, which is what the path says.
+    this.unloadSpace(space);
+    const held = typeof map === 'string' ? this.maps.get(map) : map;
+    if (!held) {
+      return [];
+    }
+    const view = this.viewSizeOf(viewport);
+    space.bounds = new Vector(view.x, view.y);
+    space.camera!.position = new Vector(view.x / 2, view.y / 2);
+    const added = this.loadInto(space, held, layer);
+    const follows = held.camera?.follows;
+    space.follows = follows
+      ? added.find(
+          actor => actor.id === follows || actor.id.startsWith(`${follows}#`),
+        )
+      : undefined;
+    this.settleSpace(space);
+    return added;
+  }
+
+  /** Take back everything loaded into `viewport`. */
+  unloadViewport(viewport: Actor): void {
+    const space = this.viewportSpaceOf(viewport);
+    if (space) {
+      this.unloadSpace(space);
+    }
+  }
+
+  private unloadSpace(space: Space): void {
+    for (const load of space.loads.splice(0)) {
+      load.unload();
+    }
+    space.follows = undefined;
+  }
+
+  /**
+   * Keep each Viewport's camera on what it follows and inside what it
+   * shows — what the camera rules do for the world's camera, done here for
+   * a camera no block can elect a trait on. Run at the end of every tick.
+   */
+  private settleSpaces(): void {
+    for (const space of this.viewportSpaces) {
+      this.settleSpace(space);
+    }
+  }
+
+  private settleSpace(space: Space): void {
+    const camera = space.camera;
+    if (!camera || !space.owner) {
+      return;
+    }
+    const view = this.viewSizeOf(space.owner);
+    const position = this.positionalProperty(SPATIAL.position);
+    let at = camera.position;
+    if (space.follows && space.follows.world === this && position) {
+      at = space.follows.get(position);
+    }
+    // Inside the bounds, or at the middle of an axis the view is wider than.
+    const clamp = (value: number, half: number, size: number) =>
+      size <= half * 2
+        ? size / 2
+        : Math.min(Math.max(value, half), size - half);
+    camera.position = new Vector(
+      clamp(at.x, view.x / 2, space.bounds.x),
+      clamp(at.y, view.y / 2, space.bounds.y),
+    );
+  }
+
+  /**
+   * Every Viewport's space, for the driver: whose it is, where its camera
+   * looks, how much of it is shown, and how big it is.
+   */
+  spaceSnapshot(): ReadonlyArray<{
+    id: string;
+    owner: string;
+    camera: {x: number; y: number};
+    view: {x: number; y: number};
+    bounds: {x: number; y: number};
+  }> {
+    return this.viewportSpaces.flatMap(space => {
+      if (!space.owner || !space.camera) {
+        return [];
+      }
+      const view = this.viewSizeOf(space.owner);
+      return [
+        {
+          id: space.id,
+          owner: space.owner.id,
+          camera: {x: space.camera.position.x, y: space.camera.position.y},
+          view: {x: view.x, y: view.y},
+          bounds: {x: space.bounds.x, y: space.bounds.y},
+        },
+      ];
+    });
   }
 
   /**
@@ -1635,12 +1914,22 @@ export class World {
     size?: {width: number; height: number};
     tile?: {width: number; height: number};
   }): void {
+    this.growSpaceToFit(this.rootSpace, map);
+  }
+
+  private growSpaceToFit(
+    space: Space,
+    map: {
+      size?: {width: number; height: number};
+      tile?: {width: number; height: number};
+    },
+  ): void {
     if (!map.size || !map.tile) {
-      return; // a synthesised map has no size; the world keeps the one it had
+      return; // a synthesised map has no size; the space keeps the one it had
     }
-    this.bounds = new Vector(
-      Math.max(this.bounds.x, map.size.width * map.tile.width),
-      Math.max(this.bounds.y, map.size.height * map.tile.height),
+    space.bounds = new Vector(
+      Math.max(space.bounds.x, map.size.width * map.tile.width),
+      Math.max(space.bounds.y, map.size.height * map.tile.height),
     );
   }
 
@@ -1660,7 +1949,12 @@ export class World {
    * into is the whole of what makes it an interface (specs/VIEWPORT.md).
    */
   loadMap(map: WorldMap, layer?: string): Actor[] {
-    this.growToFit(map);
+    return this.loadInto(this.rootSpace, map, layer);
+  }
+
+  /** Place a map's actors into `space` — `loadMap`'s body, for any space. */
+  private loadInto(space: Space, map: WorldMap, layer?: string): Actor[] {
+    this.growSpaceToFit(space, map);
     const lookup = this.propertyLookup();
     const added: Actor[] = [];
     /**
@@ -1738,7 +2032,7 @@ export class World {
       // than inside `addActor` because this path builds the actor itself, so
       // the World never sees the template it came from.
       this.useActorKind(entry.type, builder);
-      this.addActor(actor, layer);
+      this.place(actor, layer, space);
       added.push(actor);
     }
     // Every entry exists now, so the references can be followed.
@@ -1776,8 +2070,10 @@ export class World {
     // What the map DOES, once everything it placed exists and every reference
     // is followed, so a hat about the Resume button registers on the button
     // and `the ⟨Door⟩` finds the door.
+    const load = new MapLoad(this, added);
+    space.loads.push(load);
     if (typeof map.script === 'function') {
-      map.script(this, Object.fromEntries(placed), new MapLoad(this, added));
+      map.script(this, Object.fromEntries(placed), load);
     }
     return added;
   }
@@ -1969,12 +2265,31 @@ export class World {
    * coordinate already assume, and the answer a game wants for the layer its
    * actors are on.
    */
-  mousePosition(): Vector {
-    const view = this.viewSize();
-    const camera = this.activeCamera();
+  mousePosition(actor?: Actor | Camera): Vector {
+    const space = this.spaceOf(actor ?? this.inHand.at(-1));
+    if (!space.owner || !space.camera) {
+      const camera = this.activeCamera();
+      const view = this.viewSize(camera);
+      return new Vector(
+        camera.position.x - view.x / 2 + this.pointer.x,
+        camera.position.y - view.y / 2 + this.pointer.y,
+      );
+    }
+    // Through the Viewport: where the pointer is in the Viewport's own
+    // space, less the Viewport's top-left corner, is where it is inside the
+    // window; the space's camera says which point of the space is there.
+    const owner = space.owner;
+    const position = this.positionalProperty(SPATIAL.position);
+    const at = position ? owner.get(position) : new Vector(0, 0);
+    const view = this.viewSizeOf(owner);
+    const outer = this.mousePosition(owner);
+    const inside = new Vector(
+      outer.x - (at.x - view.x / 2),
+      outer.y - (at.y - view.y / 2),
+    );
     return new Vector(
-      camera.position.x - view.x / 2 + this.pointer.x,
-      camera.position.y - view.y / 2 + this.pointer.y,
+      space.camera.position.x - view.x / 2 + inside.x,
+      space.camera.position.y - view.y / 2 + inside.y,
     );
   }
 
@@ -2116,6 +2431,7 @@ export class World {
       }
       this.leaving.clear();
     }
+    this.settleSpaces();
     // The keys this tick become "previous" for the next, so edge detection
     // (newlyPressed/Released) compares against exactly one frame back. The
     // mouse's buttons are the same mechanism and advance in the same breath.
@@ -2846,6 +3162,9 @@ export class World {
         drawing: drawingFor(actor),
         effects: actor.effects(),
         layer: this.depthOf(actor.layer ?? DEFAULT_LAYER_ID),
+        ...(actor.space && actor.space !== this.rootSpace
+          ? {space: actor.space.id}
+          : {}),
       });
     }
     return states;

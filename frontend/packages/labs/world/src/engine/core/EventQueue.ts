@@ -57,8 +57,11 @@ export class EventQueue {
         }
         continue;
       }
+      // With the subject IN HAND while its handlers run, so a spawn lands in
+      // its space and a query about the map is about its map
+      // (`World.withActor`).
       for (const handler of actor.handlersFor(event)) {
-        handler(world, actor, detail);
+        world.withActor(actor, () => handler(world, actor, detail));
       }
     }
   }

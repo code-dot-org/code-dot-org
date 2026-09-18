@@ -72,9 +72,17 @@ export function all(value: ActorValue): readonly Actor[] {
  */
 export function each(value: ActorValue, body: (actor: Actor) => void): void {
   for (const actor of all(value)) {
-    body(actor);
+    inHand(actor, () => body(actor));
   }
 }
+
+/**
+ * Run `fn` with `actor` as the actor in hand (`World.withActor`), so what
+ * the body asks about the map or the mouse is asked for that actor's space
+ * (specs/VIEWPORT_PLAN.md). An actor in no world has no space to be in.
+ */
+const inHand = <T>(actor: Actor, fn: () => T): T =>
+  actor.world ? actor.world.withActor(actor, fn) : fn();
 
 /**
  * The first actor `where` accepts — `for each … where` stopped at the match.
@@ -109,7 +117,7 @@ export function firstWhere(
   where: (actor: Actor) => boolean,
 ): readonly Actor[] {
   for (const actor of actors) {
-    if (where(actor)) {
+    if (inHand(actor, () => where(actor))) {
       return [actor];
     }
   }
@@ -212,7 +220,9 @@ export function filtered(
   const source = held(value);
   return new LazyActors(function* () {
     for (const actor of source) {
-      if (where(actor)) {
+      // The candidate in hand while it is asked about: `is the mouse over
+      // it` is answered in the candidate's space.
+      if (inHand(actor, () => where(actor))) {
         yield actor;
       }
     }

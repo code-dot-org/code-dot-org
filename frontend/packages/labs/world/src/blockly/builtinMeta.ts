@@ -9,7 +9,7 @@
 // in step with the engine — add a rule, or a member, and its blocks follow.
 
 import * as WorldLab from '../engine';
-import {AnimationRule, SpatialRule} from '../engine';
+import {AnimationRule, SpatialRule, ViewportRule} from '../engine';
 
 import {builtinRuleMeta, type RuleMeta} from './ruleMeta';
 import {registerBuiltinRules} from './ruleRegistry';
@@ -36,7 +36,7 @@ import {registerBuiltinRules} from './ruleRegistry';
  * (a position is not something a rule can invent), and animation, which reads
  * the sprite sheets the engine loads and the language cannot see.
  */
-export const BUILTIN_RULES = [SpatialRule, AnimationRule];
+export const BUILTIN_RULES = [SpatialRule, AnimationRule, ViewportRule];
 
 export const BUILTIN_RULE_META: RuleMeta[] = builtinRuleMeta(
   BUILTIN_RULES,

@@ -214,7 +214,7 @@ function outsideMapAt(actor: Actor, at: Vector): boolean {
     return false;
   }
   const half = halfExtent(actor);
-  const bounds = world.mapBounds();
+  const bounds = world.mapBounds(actor);
   return (
     at.x + half.x < 0 ||
     at.y + half.y < 0 ||
@@ -287,6 +287,8 @@ export function within(
         for (const near of world.actorsNear(
           center.get(PositionProperty),
           reach,
+          undefined,
+          center,
         )) {
           // A thing is not near itself, and near any of several is still once.
           if (!centers.includes(near) && !seen.has(near)) {

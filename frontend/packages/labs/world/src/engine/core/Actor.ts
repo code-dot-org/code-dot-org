@@ -13,6 +13,7 @@ import {
   toLocal,
   worldTransformOf,
 } from './parenting';
+import type {Space} from './Space';
 import {Trait} from './Trait';
 import {Traited} from './Traited';
 import type {TweenRun} from './tween';
@@ -68,6 +69,14 @@ export class Actor {
    * question about layers have two answers (core/Layer).
    */
   layer: string | undefined;
+
+  /**
+   * The coordinate space this actor's position is in, set when it is
+   * placed (`World.place`) and taken from the parent when one is set: a
+   * child sits in its parent's frame, so it is in its parent's space
+   * (specs/VIEWPORT_PLAN.md). Undefined until placed.
+   */
+  space: Space | undefined;
 
   /**
    * The world's clock when this actor was placed — the zero its age counts from.
@@ -205,6 +214,9 @@ export class Actor {
     }
     if (parent?.layer !== undefined) {
       this.layer = parent.layer;
+    }
+    if (parent?.space) {
+      this.space = parent.space;
     }
     const {events} = keys;
     const raise = this.world;

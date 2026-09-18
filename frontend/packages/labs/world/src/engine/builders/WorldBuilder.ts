@@ -52,6 +52,7 @@ import type {Vector} from '../core/Vector';
 import {World, type WorldMap} from '../core/World';
 import {AnimationRule} from '../rules/animation';
 import {SpatialRule} from '../rules/spatial';
+import {ViewportRule} from '../rules/viewport';
 
 import type {ActorBuilder} from './ActorBuilder';
 
@@ -61,7 +62,11 @@ import type {ActorBuilder} from './ActorBuilder';
  * Imported from their modules rather than through the engine's index, which
  * would be a cycle: the index re-exports this file.
  */
-const FOUNDATION_RULES: readonly Rule[] = [SpatialRule, AnimationRule];
+const FOUNDATION_RULES: readonly Rule[] = [
+  SpatialRule,
+  AnimationRule,
+  ViewportRule,
+];
 
 // A Map — the data a level is — is the World's now, because loading one is
 // (`World.loadMap`). Re-exported because every caller here named it here.
@@ -426,6 +431,41 @@ export class WorldBuilder {
 
   isPaused(): boolean {
     return this.getWorld().isPaused();
+  }
+
+  /**
+   * The world's spaces, forwarded (specs/VIEWPORT_PLAN.md): a map registered
+   * by path, a map loaded into a Viewport or taken out of it, and the actor
+   * in hand a generated loop keeps. All of them are said in handlers, where
+   * `world` is the live World, and under `define world`, where it is this.
+   */
+  defineMap(path: string, map: WorldMap): this {
+    this.getWorld().defineMap(path, map);
+    return this;
+  }
+
+  loadMapInto(
+    viewport: Actor,
+    map: WorldMap | string,
+    layer?: string,
+  ): Actor[] {
+    return this.getWorld().loadMapInto(viewport, map, layer);
+  }
+
+  unloadViewport(viewport: Actor): void {
+    this.getWorld().unloadViewport(viewport);
+  }
+
+  enter(subject: Actor | Camera): void {
+    this.getWorld().enter(subject);
+  }
+
+  leave(): void {
+    this.getWorld().leave();
+  }
+
+  withActor<T>(subject: Actor | Camera, fn: () => T): T {
+    return this.getWorld().withActor(subject, fn);
   }
 
   /**
