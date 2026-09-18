@@ -12,6 +12,8 @@ import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 import {
   clampTiles,
   extentOf,
+  hasScript,
+  renamePlacementReferences,
   MAX_MAP_TILES,
   MIN_MAP_TILES,
   parseMap,
@@ -477,5 +479,65 @@ describe('a placement carried by another (parenting)', () => {
     const b = at('b', 0, 0, {parent: 'a'});
     expect(withParent(a, 'b', [a, b])).toBe(a);
     expect(withParent(a, 'a', [a, b])).toBe(a);
+  });
+});
+
+describe('a placement’s workspace', () => {
+  /** `the ⟨name⟩`, as a workspace holds it inside some other block. */
+  const naming = (name: string) => ({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_remove_actor',
+          inputs: {
+            ACTOR: {block: {type: 'world_placement', fields: {NAME: name}}},
+          },
+        },
+      ],
+    },
+  });
+
+  it('is kept through parseMap, on the placement and the map', () => {
+    const map = parseMap(
+      JSON.stringify({
+        type: 'map',
+        actors: [{type: 'actors/button', id: 'Quit', blocks: naming('Pause')}],
+        blocks: {blocks: {blocks: [{type: 'world_rule_event'}]}},
+      }),
+    );
+    expect(map.actors[0].blocks).toEqual(naming('Pause'));
+    expect(map.blocks).toEqual({
+      blocks: {blocks: [{type: 'world_rule_event'}]},
+    });
+  });
+
+  it('is a script only when it holds a block', () => {
+    expect(hasScript(undefined)).toBe(false);
+    expect(hasScript({blocks: {blocks: []}})).toBe(false);
+    expect(hasScript(naming('Pause'))).toBe(true);
+  });
+
+  it('follows a rename of the placement it names, wherever it sits', () => {
+    const map: MapDoc = {
+      type: 'map',
+      size: {width: 10, height: 10},
+      tile: {width: 32, height: 32},
+      actors: [
+        {type: 'actors/panel', id: 'Pause'},
+        {type: 'actors/button', id: 'Quit', blocks: naming('Pause')},
+        {type: 'actors/button', id: 'Other', blocks: naming('Quit')},
+      ],
+      blocks: naming('Pause'),
+    };
+
+    const renamed = renamePlacementReferences(map, 'Pause', 'Menu');
+
+    expect(renamed.actors[1].blocks).toEqual(naming('Menu'));
+    expect(renamed.blocks).toEqual(naming('Menu'));
+    // A block naming something else is left as it was, and so is an actor
+    // with no workspace.
+    expect(renamed.actors[2].blocks).toEqual(naming('Quit'));
+    expect(renamed.actors[0]).toBe(map.actors[0]);
+    expect(map.actors[1].blocks).toEqual(naming('Pause'));
   });
 });

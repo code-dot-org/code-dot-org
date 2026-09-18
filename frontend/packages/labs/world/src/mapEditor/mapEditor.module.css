@@ -396,3 +396,39 @@
   flex: 1;
   min-width: 0;
 }
+
+/* The third view: a placement's or the map's workspace, in the editor's place.
+   A header says whose it is and the way back (the same bar a member's body
+   gets in the Blockly editor), and the workspace takes the rest. */
+.script {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.scriptHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--borders-neutral-light);
+  background: var(--background-neutral-primary);
+}
+
+.scriptBlocks {
+  display: contents;
+}
+
+.scriptWorkspace {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Toolbar toggles: pressed reads as the palette's selected cell does. */
+.toggleButton[aria-pressed='true'] {
+  background: var(
+    --background-neutral-tertiary,
+    var(--background-neutral-secondary)
+  );
+  font-weight: 600;
+}

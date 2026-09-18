@@ -10,6 +10,8 @@
 // synthesized from a block's own placements (MAPS.md §2). Both need these types
 // and these accessors; neither should own them.
 
+import type {BlocklySerialization} from '@code-dot-org/blockly';
+
 import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
 
 /** The grid a placement snaps to, in world pixels. */
@@ -62,6 +64,63 @@ export interface Placement {
   id: string;
   /** Per-instance overrides, keyed by owner (trait) id then property id. */
   properties?: Record<string, Record<string, unknown>>;
+  /**
+   * What this one placed instance does: a whole workspace serialization, the
+   * shape an actor file holds, or nothing (specs/MAP_FIRST.md, "The file").
+   */
+  blocks?: WorkspaceState;
+}
+
+/** A Blockly workspace as serialized — `{blocks: {blocks: […]}, …}`. */
+export type WorkspaceState = BlocklySerialization;
+
+/** Whether a stored workspace holds anything at all. */
+export const hasScript = (state: WorkspaceState | undefined): boolean =>
+  Boolean(state?.blocks?.blocks?.length);
+
+/**
+ * The document with every `the ⟨from⟩` renamed to `the ⟨to⟩`, in every
+ * placement's workspace and the map's own.
+ *
+ * A rename in the inspector would otherwise leave the blocks that name the
+ * placement pointing at a name no entry has (specs/MAP_FIRST.md, "Two
+ * edges"). The walk is over the serialization as data — a `world_placement`
+ * block is `{type, fields: {NAME}}` wherever it sits — so it needs no
+ * workspace. Untouched objects are returned as they were, so a map with no
+ * such block is the same map.
+ */
+export function renamePlacementReferences(
+  doc: MapDoc,
+  from: string,
+  to: string,
+): MapDoc {
+  const rename = (value: unknown): unknown => {
+    if (Array.isArray(value)) {
+      return value.map(rename);
+    }
+    if (!value || typeof value !== 'object') {
+      return value;
+    }
+    const record = value as Record<string, unknown>;
+    const fields = record.fields as Record<string, unknown> | undefined;
+    const renamed: Record<string, unknown> = {};
+    for (const [key, held] of Object.entries(record)) {
+      renamed[key] = rename(held);
+    }
+    if (record.type === 'world_placement' && fields?.NAME === from) {
+      renamed.fields = {...fields, NAME: to};
+    }
+    return renamed;
+  };
+  return {
+    ...doc,
+    ...(doc.blocks ? {blocks: rename(doc.blocks) as WorkspaceState} : {}),
+    actors: doc.actors.map(actor =>
+      actor.blocks
+        ? {...actor, blocks: rename(actor.blocks) as WorkspaceState}
+        : actor,
+    ),
+  };
 }
 /** An actor's resolved transform, with engine defaults (scale 1, rotation 0). */
 export interface Transform {
@@ -77,6 +136,8 @@ export interface MapDoc {
   size: MapSize;
   tile: Tile;
   actors: Placement[];
+  /** The map's own workspace: its events and the map hats, or nothing. */
+  blocks?: WorkspaceState;
 }
 /** The camera: screen_px = world * scale + offset (offset in CSS pixels). */
 export interface View {
@@ -135,6 +196,7 @@ export function parseMap(contents: string): MapDoc {
         height: raw.tile?.height ?? DEFAULT_TILE,
       },
       actors: Array.isArray(raw.actors) ? raw.actors : [],
+      ...(raw.blocks ? {blocks: raw.blocks} : {}),
     };
   } catch {
     return empty;

@@ -52,7 +52,9 @@ import {
   type Size,
   type Vec,
   type View,
+  hasScript,
   parentIdOf,
+  renamePlacementReferences,
   toLocalPosition,
   withParent,
   worldTransformOf,
@@ -87,6 +89,8 @@ const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered act
 // paler blue: it is not a weaker selection, it is a different relationship, and
 // two shades of one color would read as two strengths of the same thing.
 const REFERENCE = '#ffb454';
+/** The corner mark on a placement whose workspace holds blocks. */
+const SCRIPT = '#7c4dff';
 const DEG2RAD = Math.PI / 180;
 
 /**
@@ -144,6 +148,11 @@ export interface MapStageProps {
   scales?: Record<string, {x: number; y: number}>;
   isReadOnly: boolean;
   /**
+   * Open the workspace of one placement, or of the map itself (undefined) —
+   * the map editor's third view (specs/MAP_FIRST.md, "The editor's modes").
+   */
+  onEditScript?: (id: string | undefined) => void;
+  /**
    * The window this map will be seen through, in pixels — see the guide below.
    *
    * Given by the caller rather than read from the constant, because a world
@@ -168,6 +177,7 @@ export const MapStage = ({
   doc,
   onDocChange,
   onDocPreview,
+  onEditScript,
   placing,
   thumbnails,
   pictures,
@@ -194,6 +204,12 @@ export const MapStage = ({
   // select mode, where `selectedId` is the placed instance under edit.
   const selected = placing;
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  /**
+   * Whether placements with a script wear their corner mark. On by default:
+   * a map is read for where its behavior is; off for a screenshot or a
+   * crowded level.
+   */
+  const [showIcons, setShowIcons] = useState(true);
   /**
    * The actor-typed property being POINTED at something, if any.
    *
@@ -624,12 +640,17 @@ export const MapStage = ({
       setDraft(d => ({...d, id: selectedActor.id}));
       return;
     }
-    const updated = {
-      ...mapRef.current,
-      actors: mapRef.current.actors.map(a =>
-        a.id === selectedActor.id ? {...a, id: next} : a,
-      ),
-    };
+    // …and every block that named the old name, in any workspace of the map.
+    const updated = renamePlacementReferences(
+      {
+        ...mapRef.current,
+        actors: mapRef.current.actors.map(a =>
+          a.id === selectedActor.id ? {...a, id: next} : a,
+        ),
+      },
+      selectedActor.id,
+      next,
+    );
     mapRef.current = updated;
     commit(updated);
     setSelectedId(next);
@@ -1385,6 +1406,34 @@ export const MapStage = ({
       ctx.restore();
     };
     /**
+     * The corner mark on a placement whose workspace holds blocks: a filled
+     * disc at the box's top-right, ringed so it reads over any sprite. Sized
+     * in screen pixels, so it stays the same size at every zoom.
+     */
+    const markScripted = (
+      t: Transform,
+      type: string,
+      placement?: string,
+      id?: string,
+    ) => {
+      ctx.save();
+      ctx.translate(t.pos.x, t.pos.y);
+      ctx.rotate(t.rotation * DEG2RAD);
+      const box =
+        (id ? remembered.current.get(id)?.size : undefined) ??
+        sizeOf(type, placement);
+      const hw = (box.width * Math.abs(t.scale.x)) / 2;
+      const hh = (box.height * Math.abs(t.scale.y)) / 2;
+      ctx.beginPath();
+      ctx.arc(hw, -hh, 6 / view.scale, 0, Math.PI * 2);
+      ctx.fillStyle = SCRIPT;
+      ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.5 / view.scale;
+      ctx.stroke();
+      ctx.restore();
+    };
+    /**
      * Draw a line from the selected actor to one it names, labeled.
      *
      * DASHED, because it is a relationship and not a wall — the only other
@@ -1439,6 +1488,9 @@ export const MapStage = ({
       drawSprite(actor.type, t, 1, key, actor.id);
       transformById.set(actor.id, t);
       keyById.set(actor.id, key);
+      if (showIcons && hasScript(actor.blocks)) {
+        markScripted(t, actor.type, key, actor.id);
+      }
       if (actor.id === selectedId) {
         selectedTransform = t;
         selectedType = actor.type;
@@ -1521,6 +1573,8 @@ export const MapStage = ({
     picking,
     // The world may say how much of itself is on screen while this is open.
     visible,
+    // …and the corner marks come and go with their toggle.
+    showIcons,
   ]);
 
   const canvasClass = [
@@ -1563,6 +1617,23 @@ export const MapStage = ({
         >
           Reset view
         </button>
+        <button
+          type="button"
+          className={`${styles.resetButton} ${styles.toggleButton}`}
+          aria-pressed={showIcons}
+          onClick={() => setShowIcons(shown => !shown)}
+        >
+          Icons
+        </button>
+        {onEditScript && (
+          <button
+            type="button"
+            className={styles.resetButton}
+            onClick={() => onEditScript(undefined)}
+          >
+            Map script
+          </button>
+        )}
       </div>
       {selectedActor && (
         <div className={styles.inspector}>
@@ -1570,6 +1641,17 @@ export const MapStage = ({
             <Typography variant="subtitle2" component="span">
               {selectedActor.type.split('/').pop()}
             </Typography>
+            {/* The way into this one placement's workspace, beside the
+                values that are also its own. */}
+            {onEditScript && (
+              <Button
+                variant="text"
+                size="extraSmall"
+                onClick={() => onEditScript(selectedActor.id)}
+              >
+                Script
+              </Button>
+            )}
             <Button
               variant="text"
               size="extraSmall"

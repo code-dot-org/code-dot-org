@@ -27,7 +27,7 @@ import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import {agreedViewSize} from '../runtime/declaredSizes';
 import {browserTextMetrics} from '../runtime/driver/textMetrics';
 import type {ActorSchema} from '../runtime/messages';
-import {projectFiles} from '../runtime/projectFiles';
+import {filePath, projectFiles} from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {
@@ -43,13 +43,19 @@ import {
   MIN_MAP_TILES,
   parseMap,
   type MapDoc,
+  type WorkspaceState,
 } from './mapModel';
 import {MapStage} from './MapStage';
+import {PlacementScriptEditor} from './PlacementScriptEditor';
 
 /** How long after the last keystroke a placement's picture is asked for. */
 const PICTURE_DEBOUNCE_MS = 150;
 
+/** Which workspace the editor is showing instead of the map, if any. */
+type ScriptView = {kind: 'placement'; id: string} | {kind: 'map'};
+
 export const MapEditor = ({
+  fileId,
   initialContents,
   isReadOnly,
   onChange,
@@ -291,6 +297,57 @@ export const MapEditor = ({
   };
 
   /**
+   * The third view (specs/MAP_FIRST.md, "The editor's modes"): a placement's
+   * workspace, or the map's own, in the editor's place. The map document
+   * stays here, so what the workspace writes lands in it through `commit`
+   * as an inspector edit does, and the way back is one button.
+   */
+  const [script, setScript] = useState<ScriptView | null>(null);
+  const mapModule = useMemo(
+    () => (filePath(currentSources.source, fileId) ?? '').replace(/\.map$/, ''),
+    [currentSources, fileId],
+  );
+  const scripted =
+    script?.kind === 'placement'
+      ? (map.actors.find(actor => actor.id === script.id) ?? null)
+      : null;
+  const kindName = (type: string) =>
+    actorOptions.find(([, path]) => path === type)?.[0] ??
+    type.split('/').pop() ??
+    type;
+  const writeScript = (next: WorkspaceState) => {
+    if (!script) {
+      return;
+    }
+    if (script.kind === 'map') {
+      commit({...map, blocks: next});
+      return;
+    }
+    commit({
+      ...map,
+      actors: map.actors.map(actor =>
+        actor.id === script.id ? {...actor, blocks: next} : actor,
+      ),
+    });
+  };
+  if (script && (script.kind === 'map' || scripted)) {
+    return (
+      <PlacementScriptEditor
+        // A workspace per placement: opening another is a new one.
+        key={script.kind === 'map' ? 'map' : `placement:${script.id}`}
+        title={scripted ? `${scripted.id} (${kindName(scripted.type)})` : 'Map'}
+        kind={scripted ? 'placement' : 'map'}
+        mapModule={mapModule}
+        placements={map.actors.map(actor => actor.id)}
+        contents={scripted ? scripted.blocks : map.blocks}
+        onChange={writeScript}
+        onBack={() => setScript(null)}
+        isReadOnly={isReadOnly}
+      />
+    );
+  }
+
+  /**
    * Resize the map, in tiles.
    *
    * Placements are left exactly where they are, including any that the new size
@@ -388,6 +445,9 @@ export const MapEditor = ({
         scales={scales}
         isReadOnly={isReadOnly}
         visible={visible}
+        onEditScript={id =>
+          setScript(id === undefined ? {kind: 'map'} : {kind: 'placement', id})
+        }
       />
     </div>
   );

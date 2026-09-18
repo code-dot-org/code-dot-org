@@ -43,6 +43,7 @@ interface Call {
   method: string;
   args: unknown[];
   strokeStyle: unknown;
+  fillStyle: unknown;
 }
 
 let calls: Call[] = [];
@@ -57,7 +58,12 @@ const recordingContext = () => {
         prop in state
           ? state[prop]
           : (...args: unknown[]) => {
-              calls.push({method: prop, args, strokeStyle: state.strokeStyle});
+              calls.push({
+                method: prop,
+                args,
+                strokeStyle: state.strokeStyle,
+                fillStyle: state.fillStyle,
+              });
               return undefined;
             },
       set: (_, prop: string, value) => {
@@ -500,5 +506,98 @@ describe('what it draws', () => {
           (call.strokeStyle === SELECT || call.strokeStyle === REFERENCE),
       ),
     ).toHaveLength(0);
+  });
+});
+
+describe('a placement with a script', () => {
+  /** The corner mark's color (`MapStage.SCRIPT`). */
+  const SCRIPT = '#7c4dff';
+  const scripted = (): MapDoc => {
+    const map = doc();
+    map.actors[0].blocks = {blocks: {blocks: [{type: 'world_resume_game'}]}};
+    return map;
+  };
+  /** The discs filled in the script color in the last frame. */
+  const marks = () =>
+    lastFrame().filter(
+      call => call.method === 'fill' && call.fillStyle === SCRIPT,
+    );
+
+  it('wears a mark at its corner, and one that says nothing does not', () => {
+    mount(scripted());
+    expect(marks()).toHaveLength(1);
+    // The mark is an arc: the disc, before the fill.
+    const frame = lastFrame();
+    const at = frame.findIndex(
+      call => call.method === 'fill' && call.fillStyle === SCRIPT,
+    );
+    expect(frame.slice(0, at).some(call => call.method === 'arc')).toBe(true);
+  });
+
+  it('takes the marks off when the toolbar says so, and back on', () => {
+    const view = mount(scripted());
+    const toggle = view.getByRole('button', {name: 'Icons'});
+    expect(toggle).toHaveAttribute('aria-pressed', 'true');
+
+    fireEvent.click(toggle);
+    expect(toggle).toHaveAttribute('aria-pressed', 'false');
+    expect(marks()).toHaveLength(0);
+
+    fireEvent.click(toggle);
+    expect(marks()).toHaveLength(1);
+  });
+
+  it('opens its workspace from the inspector, and the map’s from the toolbar', () => {
+    const map = doc();
+    const onEditScript = vi.fn();
+    const {canvas, ...view} = mount(map, {onEditScript});
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+
+    fireEvent.click(view.getByRole('button', {name: 'Script'}));
+    expect(onEditScript).toHaveBeenLastCalledWith('a');
+
+    fireEvent.click(view.getByRole('button', {name: 'Map script'}));
+    expect(onEditScript).toHaveBeenLastCalledWith(undefined);
+  });
+
+  it('offers no way in when nobody is listening', () => {
+    const map = doc();
+    const {canvas, ...view} = mount(map);
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+
+    expect(view.queryByRole('button', {name: 'Script'})).toBeNull();
+    expect(view.queryByRole('button', {name: 'Map script'})).toBeNull();
+  });
+
+  it('renames what the other placements call it, when its id changes', () => {
+    const map = doc();
+    map.actors[1].blocks = {
+      blocks: {
+        blocks: [
+          {
+            type: 'world_remove_actor',
+            inputs: {
+              ACTOR: {block: {type: 'world_placement', fields: {NAME: 'a'}}},
+            },
+          },
+        ],
+      },
+    };
+    const {canvas, written, ...view} = mount(map);
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    const field = view.container.querySelector(
+      'input[name="actor-id"]',
+    ) as HTMLInputElement;
+
+    fireEvent.change(field, {target: {value: 'coin'}});
+    fireEvent.blur(field);
+
+    const next = written();
+    expect(next.actors.map(actor => actor.id)).toEqual(['coin', 'b']);
+    expect(JSON.stringify(next.actors[1].blocks)).toContain('"NAME":"coin"');
+    expect(JSON.stringify(next.actors[1].blocks)).not.toContain('"NAME":"a"');
   });
 });

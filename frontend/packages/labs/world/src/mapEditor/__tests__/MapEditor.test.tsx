@@ -14,20 +14,90 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {VIEWPORT_TILES} from '../../runtime/viewport';
 import type {MapDoc} from '../mapModel';
 
-/** The heavy half: a canvas, replaced by the document it was handed. */
+/**
+ * The heavy half: a canvas, replaced by the document it was handed — and
+ * the two ways into a workspace, as buttons.
+ */
 vi.mock('../MapStage', () => ({
-  MapStage: (props: {doc: MapDoc}) => (
+  MapStage: (props: {
+    doc: MapDoc;
+    onEditScript?: (id: string | undefined) => void;
+  }) => (
     <div
       data-testid="stage"
       data-size={`${props.doc.size.width}x${props.doc.size.height}`}
       data-actors={props.doc.actors.length}
-    />
+    >
+      <button type="button" onClick={() => props.onEditScript?.('a')}>
+        Script
+      </button>
+      <button type="button" onClick={() => props.onEditScript?.(undefined)}>
+        Map script
+      </button>
+    </div>
+  ),
+}));
+
+/**
+ * The other heavy half: a Blockly workspace, replaced by its title, a way
+ * back, and one edit it can report.
+ */
+vi.mock('../PlacementScriptEditor', () => ({
+  PlacementScriptEditor: (props: {
+    title: string;
+    kind: string;
+    mapModule: string;
+    placements: readonly string[];
+    contents: unknown;
+    onChange: (next: unknown) => void;
+    onBack: () => void;
+  }) => (
+    <div
+      data-testid="script"
+      data-kind={props.kind}
+      data-module={props.mapModule}
+      data-placements={props.placements.join(',')}
+      data-contents={JSON.stringify(props.contents ?? null)}
+    >
+      <span>{props.title}</span>
+      <button type="button" onClick={props.onBack}>
+        Map
+      </button>
+      <button
+        type="button"
+        onClick={() =>
+          props.onChange({blocks: {blocks: [{type: 'world_resume_game'}]}})
+        }
+      >
+        Edit
+      </button>
+    </div>
   ),
 }));
 
 const SOURCE: MultiFileSource = {
-  files: {},
-  folders: {},
+  files: {
+    '1': {
+      id: '1',
+      name: 'menu.map',
+      language: 'map',
+      folderId: '9',
+      contents: '',
+    },
+    '2': {
+      id: '2',
+      name: 'coin.actor',
+      language: 'actor',
+      folderId: '8',
+      contents: JSON.stringify({
+        blocks: {blocks: [{type: 'world_actor', fields: {NAME: 'Coin'}}]},
+      }),
+    },
+  },
+  folders: {
+    '9': {id: '9', name: 'maps', parentId: '0'},
+    '8': {id: '8', name: 'actors', parentId: '0'},
+  },
   openFiles: [],
 };
 
@@ -137,5 +207,49 @@ describe('MapEditor size controls', () => {
       target: {value: '999999'},
     });
     expect(written(onChange).size.height).toBe(200);
+  });
+});
+
+describe('a placement’s workspace, in the map’s place', () => {
+  it('opens for the placement, titled by its name and kind', () => {
+    open();
+    fireEvent.click(screen.getByRole('button', {name: 'Script'}));
+
+    const script = screen.getByTestId('script');
+    expect(script).toHaveAttribute('data-kind', 'placement');
+    expect(script).toHaveAttribute('data-module', 'maps/menu');
+    expect(script).toHaveAttribute('data-placements', 'a,b');
+    expect(script).toHaveAttribute('data-contents', 'null');
+    expect(screen.getByText('a (Coin)')).toBeInTheDocument();
+    expect(screen.queryByTestId('stage')).toBeNull();
+  });
+
+  it('writes what the workspace holds onto the placement, and comes back', () => {
+    const onChange = open();
+    fireEvent.click(screen.getByRole('button', {name: 'Script'}));
+
+    fireEvent.click(screen.getByRole('button', {name: 'Edit'}));
+    expect(written(onChange).actors[0].blocks).toEqual({
+      blocks: {blocks: [{type: 'world_resume_game'}]},
+    });
+    expect(written(onChange).actors[1].blocks).toBeUndefined();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Map'}));
+    expect(screen.getByTestId('stage')).toBeInTheDocument();
+    expect(screen.queryByTestId('script')).toBeNull();
+  });
+
+  it('opens the map’s own workspace too, and writes onto the map', () => {
+    const onChange = open();
+    fireEvent.click(screen.getByRole('button', {name: 'Map script'}));
+
+    const script = screen.getByTestId('script');
+    expect(script).toHaveAttribute('data-kind', 'map');
+    expect(script.querySelector('span')).toHaveTextContent('Map');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Edit'}));
+    expect(written(onChange).blocks).toEqual({
+      blocks: {blocks: [{type: 'world_resume_game'}]},
+    });
   });
 });
