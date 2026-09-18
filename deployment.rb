@@ -25,13 +25,6 @@ def rack_env?(*env)
   e.include? rack_env.to_sym
 end
 
-def with_rack_env(temporary_env)
-  require 'mocha/api'
-  CDO.stubs(rack_env: temporary_env)
-  yield
-  CDO.unstub(:rack_env)
-end
-
 def deploy_dir(*dirs)
   CDO.dir(*dirs)
 end
