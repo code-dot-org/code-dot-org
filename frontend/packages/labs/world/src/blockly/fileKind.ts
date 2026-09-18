@@ -8,7 +8,7 @@
 // both ask here.
 
 /** Which kind of file this is. */
-export type FileKind = 'actor' | 'world' | 'rule';
+export type FileKind = 'actor' | 'world' | 'rule' | 'map' | 'placement';
 
 /**
  * A Blockly file's kind, from its path — the one place the extensions are read.
@@ -18,9 +18,23 @@ export type FileKind = 'actor' | 'world' | 'rule';
  * callers with no path (tests), and treats it as "work it out from the blocks".
  */
 export const fileKindOf = (path?: string): FileKind | undefined => {
-  const match = /\.(rule|actor|world)$/.exec(path ?? '');
+  const match = /\.(rule|actor|world|map)$/.exec(path ?? '');
   return match ? (match[1] as FileKind) : undefined;
 };
+
+/**
+ * The two kinds a `.map` holds, and one of them is no file.
+ *
+ * A `.map` is JSON with a workspace on each placement and one for the map
+ * itself (specs/MAP_FIRST.md, "The file"). The map's own workspace is kind
+ * `map`: it declares events and hears the map load and unload. A
+ * placement's is kind `placement`: an actor file's shape for one placed
+ * instance, so it takes the kind's events with `this actor` as subject and
+ * none of the definition rows. `fileKindOf` never answers `placement`; the
+ * editor and the generator name it when they open one.
+ */
+export const isMapKind = (kind: FileKind | undefined): boolean =>
+  kind === 'map' || kind === 'placement';
 
 /**
  * The DEFINITION roots, and which kinds of file may hold one.
@@ -50,7 +64,7 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // (`ActorBuilder.defineEvent`). Not a `.world`, for the reason `define
   // block` beside it is not: a world's own `define actor` generates into a
   // block scope, and the declaration this emits is an `export const`.
-  ['world_rule_event', new Set<FileKind>(['rule', 'actor'])],
+  ['world_rule_event', new Set<FileKind>(['rule', 'actor', 'map'])],
   // …and an ACTOR file, where the same block declares a thing that kind of
   // actor does rather than a member of a rule (`ActorBuilder.defineAction`).
   // Not a `.world`: a world's own `define actor` generates into a block scope,
@@ -88,6 +102,13 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // world's in the world — and referenced by the defining block's id. A file
   // of shared ones is the same axis an actor sits on and is not built yet.
   ['world_define_tween', new Set<FileKind>(['actor', 'world'])],
+  // A map's own blocks (specs/MAP_FIRST.md): naming another placement and
+  // unloading the map belong to the map and its placements; hearing the map
+  // load and unload belongs to the map's own workspace alone.
+  ['world_placement', new Set<FileKind>(['map', 'placement'])],
+  ['world_unload_this_map', new Set<FileKind>(['map', 'placement'])],
+  ['world_on_map_loads', new Set<FileKind>(['map'])],
+  ['world_on_map_unloads', new Set<FileKind>(['map'])],
 ]);
 
 /**

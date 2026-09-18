@@ -15,10 +15,15 @@ import {
   useBlocklyContext,
 } from '@code-dot-org/blockly';
 
-import {assembleActorModule, assembleWorldModule} from './assembleActorModule';
+import {
+  assembleActorModule,
+  assembleMapModule,
+  assembleWorldModule,
+} from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {buildDomainPalette} from './domainBlocks';
-import {moduleShape} from './fileKind';
+import {fileKindOf, moduleShape} from './fileKind';
+import {setCurrentPlacements} from './moduleOptions';
 import {
   ownPropertyDeclarations,
   parseWorldOwnMeta,
@@ -50,6 +55,94 @@ import {standInBlocks} from './standInBlocks';
 //
 // The mounted workspace stays, and stays empty: it is what registers the blocks
 // and hands back the generator, and an empty injected workspace costs nothing.
+
+/** What a `.map` file holds that the generator reads (specs/MAP_FIRST.md). */
+interface MapSource {
+  actors?: Array<{id?: string; blocks?: object}>;
+  blocks?: object;
+}
+
+/**
+ * Generate a `.map` file's module: the map's own workspace, then one per
+ * placement that has one, into the same headless workspace in turn.
+ *
+ * One `finish` for the whole file. `init` empties the generator's import
+ * definitions, so they are gathered after each workspace and handed back
+ * before the end; Blockly's own `variables` entry is keyed per workspace so
+ * one loop's variable does not erase another's. `__ruleModule` is the map's
+ * path, so its own `emit` names the local event const rather than importing
+ * the module into itself; `__mapModule` tells `define event` to write that
+ * const (specs/MAP_SCRIPTS_PLAN.md).
+ */
+function generateMap(
+  generator: JavascriptGenerator,
+  workspace: Blockly.Workspace,
+  contents: string,
+  path: string,
+  rootTypes: ReadonlySet<string>,
+): string {
+  const modulePath = path.replace(/\.map$/, '');
+  const source = (contents.trim() ? JSON.parse(contents) : {}) as MapSource;
+  const ids = (source.actors ?? []).flatMap(entry =>
+    entry.id ? [entry.id] : [],
+  );
+  setCurrentPlacements(ids);
+  const definitions: Record<string, string> = {};
+  const asString = (code: string | [string, number]): string =>
+    Array.isArray(code) ? code[0] : code;
+  const generateOne = (state: object | undefined, key: string) => {
+    if (!state) {
+      return [];
+    }
+    workspace.clear();
+    Blockly.serialization.workspaces.load(state, workspace);
+    generator.init(workspace);
+    (generator as {__ruleModule?: string}).__ruleModule = modulePath;
+    (generator as {__mapModule?: string}).__mapModule = modulePath;
+    const generated = workspace
+      .getTopBlocks(true)
+      .filter(block => block.isEnabled())
+      .map(block => ({
+        type: block.type,
+        id: block.id,
+        code: asString(generator.blockToCode(block, rootTypes.has(block.type))),
+      }));
+    const made = (
+      generator as unknown as {definitions_: Record<string, string>}
+    ).definitions_;
+    for (const [name, code] of Object.entries(made)) {
+      definitions[name === 'variables' ? `variables:${key}` : name] = code;
+    }
+    return generated;
+  };
+  const mapLevel = generateOne(source.blocks, 'map');
+  const placements = (source.actors ?? []).flatMap(entry =>
+    entry.id && entry.blocks
+      ? [{id: entry.id, blocks: generateOne(entry.blocks, entry.id)}]
+      : [],
+  );
+  (generator as {__mapModule?: string}).__mapModule = undefined;
+  (generator as {__ruleModule?: string}).__ruleModule = undefined;
+  // What the file is when its workspaces are taken out of it.
+  const withoutBlocks = <T extends {blocks?: object}>(
+    held: T,
+  ): Omit<T, 'blocks'> => {
+    const copy: Partial<T> = {...held};
+    delete copy.blocks;
+    return copy as Omit<T, 'blocks'>;
+  };
+  const data = withoutBlocks(source);
+  const actors = (source.actors ?? []).map(withoutBlocks);
+  generator.init(workspace);
+  Object.assign(
+    (generator as unknown as {definitions_: Record<string, string>})
+      .definitions_,
+    definitions,
+  );
+  return generator.finish(
+    assembleMapModule({...data, actors}, mapLevel, placements),
+  );
+}
 
 export interface BlocklyGeneratorHandle {
   /**
@@ -184,6 +277,20 @@ export const BlocklyGenerator = forwardRef<
         // with, and only the serialized state / generated body is read. Set on
         // every call, before any block loads.
         (workspace as {isRuleGenerator?: boolean}).isRuleGenerator = true;
+        generator.addReservedWords(
+          'actor,camera,world,eventValue,delta,map,placed,mapData',
+        );
+        // A `.map` is several workspaces in one JSON document, each generated
+        // in turn there; everything else is one workspace and one shape.
+        if (fileKindOf(path) === 'map') {
+          return generateMap(
+            generator,
+            workspace,
+            contents,
+            path!,
+            rootTypesRef.current,
+          );
+        }
         workspace.clear();
         const state = contents.trim() ? JSON.parse(contents) : {};
         Blockly.serialization.workspaces.load(state, workspace);
@@ -199,7 +306,6 @@ export const BlocklyGenerator = forwardRef<
         // world, an event's value). Reserve them so a Blockly variable
         // (e.g. a `for each` loop's actor variable) is never named to collide —
         // it gets a numbered suffix instead of shadowing the identifier.
-        generator.addReservedWords('actor,camera,world,eventValue,delta');
         generator.init(workspace);
 
         // A `.rule` file: the declarative scaffolding comes from its metadata

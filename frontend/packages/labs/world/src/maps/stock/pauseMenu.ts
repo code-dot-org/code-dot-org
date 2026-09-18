@@ -1,25 +1,46 @@
-// The pause menu, as a map: a Pause Menu panel carrying a Resume and a Quit.
+// The pause menu, as a map with a script: a Panel, its title, and a Resume and
+// a Quit that know what they are for.
 //
-// The first stock interface map (specs/UI_ACTORS.md, "The second axis"). A
-// menu is three actors arranged, and arranging is what a map is; the two
-// buttons are the panel's CHILDREN, stored in its frame (specs/PARENTING.md),
-// so loading the map puts the menu on screen as one thing and removing the
-// panel takes it away as one thing.
+// The first stock interface map (specs/UI_ACTORS.md, "The second axis"), and
+// the first scripted one (specs/MAP_FIRST.md, "What a map script looks
+// like"). A menu is four actors arranged, and arranging is what a map is; the
+// title and the two buttons are the panel's CHILDREN, stored in its frame
+// (specs/PARENTING.md), so loading the map puts the menu on screen as one
+// thing and unloading it takes it away as one thing.
 //
-// THE BUTTONS ARE PLAIN BUTTONS, told apart by the NAMES this map gives
-// them: the Pause Menu's file says `when ⟨the actor named Resume⟩ is
-// clicked`, and Resume is whatever this map places under that name
-// (specs/MAPS.md, "A block naming a placement"). Rename one in the editor
-// and the menu stops hearing it, which is the one thing to know.
+// THE BUTTONS ARE PLAIN BUTTONS WITH SCRIPTS. Resume's workspace says `when
+// this actor is clicked: resume the game; unload this map`, because resuming
+// means one thing. Quit's says `emit quit`, an event the map's own workspace
+// declares, because what quitting means is the project's — breakout starts
+// the level over — and the world hears it with `when quit` under the map's
+// drawer. No kind of actor knows any of this; the map does.
 //
 // AT THE MIDDLE OF THE STANDARD WINDOW, which is where a project with a
 // square view wants it and which a project with another view moves in the
 // map editor — a map is a starting point to arrange, not a layout that
 // adapts (the anchoring UI_ACTORS.md defers is exactly this).
 
+import {chain, defineEvent, me} from '../../actors/stock/workspace';
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 
 const MIDDLE = (VIEWPORT_TILES * TILE_SIZE) / 2;
+
+/**
+ * A placement's workspace: one hat about this actor, and what follows. The
+ * value is a whole workspace serialization, as an actor file holds one.
+ */
+const script = (hat: object, ...then: object[]) => ({
+  blocks: {
+    blocks: {blocks: [{...hat, x: 20, y: 20, next: {block: chain(then)}}]},
+  },
+});
+
+/** `when this actor is clicked with ⟨any⟩` — the Mouse rule's own hat. */
+const whenClicked = () => ({
+  type: 'world_on_Mouse_IsClickedWithEvent',
+  fields: {FILTER0: ''},
+  inputs: {ACTOR: me()},
+});
 
 export const pauseMenuMap = JSON.stringify(
   {
@@ -28,11 +49,25 @@ export const pauseMenuMap = JSON.stringify(
     tile: {width: TILE_SIZE, height: TILE_SIZE},
     actors: [
       {
-        type: 'actors/pauseMenu',
+        type: 'actors/panel',
         id: 'Pause',
-        properties: {positional: {position: {x: MIDDLE, y: MIDDLE}}},
+        properties: {
+          positional: {position: {x: MIDDLE, y: MIDDLE}},
+          // Wide enough for two buttons and a title; no words of its own,
+          // since the title below has them.
+          Label: {text: '', width: 200, height: 120},
+        },
       },
-      // In the panel's frame: a little below its middle, and lower again.
+      // In the panel's frame: the title near the top, and the two buttons
+      // a little below its middle, and lower again.
+      {
+        type: 'actors/label',
+        id: 'Title',
+        properties: {
+          positional: {parent: 'Pause', position: {x: 0, y: -40}},
+          Label: {text: 'PAUSED'},
+        },
+      },
       {
         type: 'actors/button',
         id: 'Resume',
@@ -40,6 +75,11 @@ export const pauseMenuMap = JSON.stringify(
           positional: {parent: 'Pause', position: {x: 0, y: 4}},
           Label: {text: 'RESUME'},
         },
+        ...script(
+          whenClicked(),
+          {type: 'world_resume_game'},
+          {type: 'world_unload_this_map'},
+        ),
       },
       {
         type: 'actors/button',
@@ -48,8 +88,11 @@ export const pauseMenuMap = JSON.stringify(
           positional: {parent: 'Pause', position: {x: 0, y: 40}},
           Label: {text: 'QUIT'},
         },
+        ...script(whenClicked(), {type: 'world_emit_MapsPauseMenu_QuitEvent'}),
       },
     ],
+    // The map's own workspace: the one event it raises.
+    blocks: {blocks: {blocks: [{...defineEvent('quit'), x: 20, y: 20}]}},
   },
   null,
   2,

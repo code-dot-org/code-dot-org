@@ -510,7 +510,11 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
         sizesRef.current,
         projectSoundPaths(source),
       );
-      files = generateBlocklyFiles(projectFiles(source));
+      // The maps stubbed BEFORE generation, since a `.map` is generated now
+      // (specs/MAP_FIRST.md): the stub is source the generator turns into a
+      // module with the map's events and no placements, and a placement edit
+      // is a cache hit in the generator and in the compile alike.
+      files = generateBlocklyFiles(manifestFiles(projectFiles(source)));
     } catch {
       return {
         thumbnails: {},
@@ -522,11 +526,11 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       };
     }
     const entry = '__thumbnails__.js';
-    // With the maps stubbed, so a map edit is a cache hit rather than a
-    // compile (`manifestFiles`).
+    // With the maps stubbed above, so a map edit is a cache hit rather than
+    // a compile (`manifestFiles`).
     const moduleUrl = await pair.compile.compile(
       {
-        ...manifestFiles(files),
+        ...files,
         [entry]: thumbnailManifest(actorPaths, worldPath),
       },
       entry,

@@ -72,23 +72,6 @@ describe('assembleWorldModule', () => {
     );
   });
 
-  it('puts a hat about a NAMED actor after the world exists', () => {
-    // An actor's event, registered through the world: `world.named(…).on(…)`
-    // needs the binding as much as `world.on(…)` does, and its type says
-    // nothing about that — its subject does.
-    const code = assembleWorldModule([
-      {
-        type: 'world_on_ActorsButton_ClickedEvent',
-        code: 'world.named("Resume").on(E, (world, actor) => {\n});\n',
-      },
-      {type: 'world_world', code: 'const world = mk();\n'},
-    ]);
-
-    expect(code.indexOf('const world = mk();')).toBeLessThan(
-      code.indexOf('world.named('),
-    );
-  });
-
   it('keeps an ACTOR event\u2019s handler before it', () => {
     // The opposite constraint, and the reason this is a split rather than a
     // move: a template copies its handlers into each instance as it is made, so

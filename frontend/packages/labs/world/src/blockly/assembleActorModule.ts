@@ -100,16 +100,9 @@ export function assembleWorldModule(
   // and the whole project stopped — and because esbuild rewrites the `const`,
   // it threw as "Cannot read properties of undefined (reading 'on')" rather
   // than as the use-before-declaration it actually is.
-  //
-  // A hat about `the actor named ⟨…⟩` is an actor's event registered THROUGH
-  // the world (`world.named(…).on(…)`), so it needs the binding too. Told by
-  // its code rather than its type, because the type is the event's and the
-  // subject is what decides.
   const handlers = blocks.filter(block => block.type.startsWith('world_on_'));
-  const needsWorld = (block: GeneratedBlock) =>
-    worldEventTypes.has(block.type) || block.code.startsWith('world.');
-  const onActors = handlers.filter(block => !needsWorld(block));
-  const onWorld = handlers.filter(needsWorld);
+  const onActors = handlers.filter(block => !worldEventTypes.has(block.type));
+  const onWorld = handlers.filter(block => worldEventTypes.has(block.type));
   const rest = blocks.filter(
     block =>
       block !== world && !tweens.includes(block) && !handlers.includes(block),
@@ -122,4 +115,50 @@ export function assembleWorldModule(
     (world ? world.code : '') + onWorld.map(block => block.code).join('');
   const restCode = rest.map(block => block.code).join('');
   return `${actorsCode}${worldCode}${restCode}export default world;\n`;
+}
+
+/**
+ * Assemble a `.map` file's module (specs/MAP_FIRST.md, "What it compiles
+ * to").
+ *
+ * The arrangement is the file's JSON less its workspaces, as `mapData`; the
+ * map's own `define event` rows become exports beside it, so a world's hat
+ * can import one and the map's own `emit` names it locally; and everything
+ * that RUNS goes into `mapData.script`, which `World.loadMap` calls once per
+ * load with the placed actors and the load. Each placement's code sits in a
+ * block that binds `actor` to the actor placed under that id, which is what
+ * lets an actor file's generators — `this actor`, the hats, an own
+ * property's get and set — serve one placed instance unchanged.
+ *
+ * A map with nothing to run gets no script, so the engine can tell it from
+ * one that says something.
+ */
+export function assembleMapModule(
+  data: object,
+  mapLevel: GeneratedBlock[],
+  placements: ReadonlyArray<{id: string; blocks: GeneratedBlock[]}>,
+): string {
+  const events = mapLevel.filter(block => block.type === 'world_rule_event');
+  const runs = mapLevel.filter(block => block.type !== 'world_rule_event');
+  const eventsCode = events.map(block => block.code).join('');
+  const body =
+    runs.map(block => block.code).join('') +
+    placements
+      .filter(placement => placement.blocks.some(block => block.code))
+      .map(
+        placement =>
+          `{\n  const actor = placed[${JSON.stringify(placement.id)}];\n` +
+          placement.blocks.map(block => block.code).join('') +
+          '}\n',
+      )
+      .join('');
+  const script = body
+    ? `mapData.script = (world, placed, map) => {\n${body}};\n`
+    : '';
+  return (
+    `const mapData = ${JSON.stringify(data)};\n` +
+    eventsCode +
+    script +
+    'export default mapData;\n'
+  );
 }

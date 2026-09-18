@@ -15,6 +15,7 @@ import {FOUNDATION_RULE_NAMES} from './foundation';
 import {label} from './label';
 import {
   parseActorOwnMeta,
+  parseMapOwnMeta,
   parseWorldOwnMeta,
   type OwnMeta,
 } from './ownProperties';
@@ -224,32 +225,6 @@ export function projectEffectParameters(
  * the map's extension-less path. The `world_load_map` block reads this to emit
  * an import + `world.define` for each actor a map places, then `world.loadMap`.
  */
-/**
- * The names a project's maps give their placements, once each, sorted — what
- * `the actor named ⟨…⟩` offers (specs/MAPS.md). A placement with no id names
- * nothing and is left out.
- */
-export function projectPlacementNames(files: Record<string, string>): string[] {
-  const names = new Set<string>();
-  for (const [path, contents] of Object.entries(files)) {
-    if (!path.startsWith('maps/') || !path.endsWith('.map')) {
-      continue;
-    }
-    try {
-      const actors = (JSON.parse(contents) as {actors?: Array<{id?: unknown}>})
-        .actors;
-      for (const actor of Array.isArray(actors) ? actors : []) {
-        if (typeof actor?.id === 'string' && actor.id) {
-          names.add(actor.id);
-        }
-      }
-    } catch {
-      // mid-edit / not JSON, as everywhere else
-    }
-  }
-  return [...names].sort();
-}
-
 export function projectMapActorTypes(
   files: Record<string, string>,
 ): Record<string, string[]> {
@@ -339,6 +314,19 @@ export function projectOwnMetas(files: Record<string, string>): OwnMeta[] {
     if (path.startsWith('worlds/') && path.endsWith('.world')) {
       const world = path.replace(/\.world$/, '');
       const meta = parseWorldOwnMeta(world, contents);
+      if (meta) {
+        metas.push(meta);
+      }
+    }
+    // …and every MAP's own events (specs/MAP_FIRST.md): a pause menu's
+    // `quit`, which the world hears with a hat minted from this.
+    if (path.startsWith('maps/') && path.endsWith('.map')) {
+      const map = path.replace(/\.map$/, '');
+      const meta = parseMapOwnMeta(
+        map,
+        contents,
+        label(map.split('/').pop() ?? map),
+      );
       if (meta) {
         metas.push(meta);
       }

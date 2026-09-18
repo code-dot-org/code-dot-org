@@ -42,8 +42,15 @@ let projectEffectFiles: Array<[string, string]> = [];
 let projectRuleModules: Array<[string, string]> = [];
 // Map path -> the actor module paths it places (for the load-map generator).
 let projectMaps: Record<string, string[]> = {};
-/** The names the project's maps give their placements (`projectPlacementNames`). */
-let placementNames: string[] = [];
+/**
+ * The placements of the map whose workspace is open — `[id, id]` rows.
+ *
+ * Set by whoever opens one: the map editor when it shows a placement's or the
+ * map's own workspace, the headless generator before it loads one
+ * (specs/MAP_SCRIPTS_PLAN.md). A dropdown value the list does not hold is
+ * rejected by Blockly on load, so the list is set before the blocks are.
+ */
+let currentPlacements: string[] = [];
 // Effect path -> the parameters that effect declares (for the use-effect
 // mutator, which builds one socket row per parameter).
 let projectEffectParams: Record<string, EffectParameter[]> = {};
@@ -142,19 +149,20 @@ export function ruleModuleOptions(): Array<[string, string]> {
   return projectRuleModules;
 }
 
-/** Replace the map registry (path -> the actor modules each map places). */
-export function setPlacementNames(names: string[]): void {
-  placementNames = names;
+/** Name the placements of the map being edited or generated. */
+export function setCurrentPlacements(ids: readonly string[]): void {
+  currentPlacements = [...ids];
 }
 
-/** Rows for `the actor named ⟨…⟩`: every placement name, or a fallback. */
-export function placementNameOptions(): Array<[string, string]> {
+/** Rows for `the ⟨placement⟩`: this map's placements, or a fallback. */
+export function placementOptions(): Array<[string, string]> {
   return orNone(
-    placementNames.map(name => [name, name]),
+    currentPlacements.map(id => [id, id]),
     '(no placements yet)',
   );
 }
 
+/** Replace the map registry (path -> the actor modules each map places). */
 export function setProjectMaps(maps: Record<string, string[]>): void {
   projectMaps = maps;
 }
@@ -666,10 +674,10 @@ export const soundOptionsExtension = liveDropdown(
   soundImportOptions,
 );
 
-export const placementNameOptionsExtension = liveDropdown(
-  'world_placement_name_options',
+export const placementOptionsExtension = liveDropdown(
+  'world_placement_options',
   'NAME',
-  placementNameOptions,
+  placementOptions,
 );
 export const mapOptionsExtension = liveDropdown(
   'world_map_options',

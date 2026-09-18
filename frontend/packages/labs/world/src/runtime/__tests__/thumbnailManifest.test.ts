@@ -72,4 +72,23 @@ describe('manifestFiles', () => {
     });
     expect(after).toEqual(before);
   });
+
+  it('keeps a map’s own workspace, whose events a world imports by name', () => {
+    // A stub without them would fail the bundle on a missing export
+    // (specs/MAP_FIRST.md); a placement's workspace is not kept, since
+    // nothing in the manifest reads one.
+    const blocks = {blocks: {blocks: [{type: 'world_rule_event'}]}};
+    const stubbed = manifestFiles({
+      'maps/menu.map': JSON.stringify({
+        type: 'map',
+        actors: [{type: 'actors/button', id: 'Quit', blocks}],
+        blocks,
+      }),
+    });
+    expect(JSON.parse(stubbed['maps/menu.map'])).toEqual({
+      type: 'map',
+      actors: [],
+      blocks,
+    });
+  });
 });

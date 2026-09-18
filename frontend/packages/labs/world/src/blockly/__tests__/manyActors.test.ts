@@ -142,7 +142,6 @@ describe('yieldsMany', () => {
 
   it('answers for the literals without asking the workspace', () => {
     expect(yieldsMany({type: 'world_actor_kind'} as never)).toBe(true);
-    expect(yieldsMany({type: 'world_actor_named'} as never)).toBe(true);
     expect(yieldsMany({type: 'world_all_actors'} as never)).toBe(true);
     expect(yieldsMany({type: 'world_this_actor'} as never)).toBe(false);
   });

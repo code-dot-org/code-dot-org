@@ -136,20 +136,14 @@ export const setNumber = (type: string, value: number) => ({
  */
 /**
  * THE PAUSE MENU, wired the way any game wires one (specs/UI_ACTORS.md, "The
- * second axis"): P stops the game and loads the stock menu; the menu says
- * `resumed` or `quit` when a button is pressed, and the world decides what
- * each means — here, carry on, or start the level over. The menu is the
- * project's `maps/pauseMenu.map`, imported with the actors it places
- * (`maps/importStockMap`) — the menu and two plain Buttons it knows by
- * name — and a project may open it in the map editor and move things.
+ * second axis"; specs/MAP_FIRST.md): P stops the game and loads the stock
+ * menu. The menu's own script takes it away on Resume and says `quit` on
+ * Quit, and the world decides what quitting means — here, start the level
+ * over. The menu is the project's `maps/pauseMenu.map`, imported with the
+ * kinds it places (`maps/importStockMap`), and a project may open it in the
+ * map editor and move things or change what its buttons do.
  */
 export const pauseHandlers = (level: string) => {
-  // The hat's subject — the menu that spoke — is `this actor` in a world's
-  // handler; `event actor` is what an event CARRIES, and these carry nothing.
-  const menu = () => ({block: {type: 'world_this_actor'}});
-  const anyMenu = () => ({
-    block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/pauseMenu'}},
-  });
   return [
     {
       type: 'world_on_Input_IsPressedEvent',
@@ -176,24 +170,12 @@ export const pauseHandlers = (level: string) => {
         },
       },
     },
+    // The menu's Resume takes the menu away itself; Quit is the world's to
+    // answer, and here it starts the level over.
     {
-      type: 'world_on_ActorsPauseMenu_ResumedEvent',
+      type: 'world_on_MapsPauseMenu_QuitEvent',
       x: 20,
       y: 560,
-      inputs: {ACTOR: anyMenu()},
-      next: {
-        block: stack([
-          {type: 'world_resume_game'},
-          // The panel goes, and its buttons with it (specs/PARENTING.md).
-          {type: 'world_remove_actor', inputs: {ACTOR: menu()}},
-        ]),
-      },
-    },
-    {
-      type: 'world_on_ActorsPauseMenu_QuitEvent',
-      x: 20,
-      y: 660,
-      inputs: {ACTOR: anyMenu()},
       next: {
         block: stack([
           {type: 'world_resume_game'},

@@ -185,8 +185,8 @@ import {
   mapOptionsExtension,
   NONE_VALUE,
   orNone,
-  placementNameOptions,
-  placementNameOptionsExtension,
+  placementOptions,
+  placementOptionsExtension,
   ruleModuleOptions,
   backgroundImportOptions,
   soundImportOptions,
@@ -264,7 +264,7 @@ import {
   type ShadowSpec,
 } from './valueShadow';
 import {isRedeclaration} from './variableScope';
-import {definesRule, definesWorld, workspaceOfBlock} from './workspaceRoots';
+import {definesRule, workspaceOfBlock} from './workspaceRoots';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
@@ -1562,6 +1562,9 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_rule_step_in',
   // …and a set of choices, whose options chain below it.
   'world_rule_enum',
+  // A map's own hats (specs/MAP_FIRST.md): the body chains below them.
+  'world_on_map_loads',
+  'world_on_map_unloads',
 ]);
 
 // ── Property-driven "set" blocks ─────────────────────────────────────────────
@@ -4330,55 +4333,97 @@ const worldActorKind = defineBlock({
 // (`for (const actor of world.actors)`) and break "this actor is touching it".
 // The generator also reserves `actor` (see BlocklyGenerator) against a rename.
 /**
- * `the actor named ⟨…⟩` — one placement, by the name a map gave it.
+ * `the ⟨placement⟩` — another placement of the map this workspace is in.
  *
- * A hat names a KIND, and two placements of one kind could not be told apart
- * until this: a pause menu's Resume and Quit are both Buttons, and "when the
- * Resume button is clicked" had nowhere to be said (specs/MAPS.md). The
- * dropdown offers the names in the project's maps.
+ * A map's placements each carry a workspace about that one instance, and the
+ * one thing such a workspace needs to name that an actor file cannot is a
+ * NEIGHBOUR: `when this actor is pressed, open ⟨the Door⟩` (specs/MAP_FIRST.md,
+ * "What a map script looks like"). The dropdown is the map's own ids, set by
+ * whoever opened the workspace (`setCurrentPlacements`), and the value is the
+ * actor the load placed under that id (`placed`, a parameter of the map's
+ * script). One actor, not a list: a placement is one thing.
  *
- * TWO READINGS, as `any ⟨kind⟩` has. As a HAT'S SUBJECT it is something to
- * register on, which reaches the actor placed now and any placed later,
- * since a menu's buttons arrive when the menu is loaded: `world.named(…)` in
- * a world file, and `actor.named(…)` in an actor file, which has no world at
- * module scope and so leaves the handler with its template for the world to
- * register when the kind is first placed (`ActorBuilder.named`). As a VALUE
- * it is the actors so named, a list like every actor value, usually of one
- * (`World.actorsNamed`).
+ * A placement since deleted leaves `undefined` here and a block over it
+ * throws when it runs. Renaming rewrites the values that name it; nothing
+ * softer is built (specs/MAP_SCRIPTS_PLAN.md).
  */
-const worldActorNamed = defineBlock({
-  type: 'world_actor_named',
-  message0: 'the actor named %1',
-  args0: [
-    {
-      type: 'field_dropdown',
-      name: 'NAME',
-      options: placementNameOptions,
-    },
-  ],
+const worldPlacement = defineBlock({
+  type: 'world_placement',
+  message0: 'the %1',
+  args0: [{type: 'field_dropdown', name: 'NAME', options: placementOptions}],
   output: 'Actor',
-  extensions: [placementNameOptionsExtension, worldContextExtension],
+  extensions: [placementOptionsExtension],
   style: 'sprite_blocks',
   tooltip:
-    'The actor a map placed under this name — placed now, or placed later ' +
-    'when the map is loaded. Under a “when” block it is the one the block is ' +
-    'about; anywhere else it is that actor, to move, remove or ask.',
+    'Another actor placed on this map, by the name the map gives it — to ' +
+    'move, remove, ask or tell.',
   generator: {
     javascript(block) {
-      const name = String(block.getFieldValue('NAME') ?? '');
-      const parent = block.outputConnection?.targetConnection?.getSourceBlock();
-      const isSubject = Boolean(parent?.type.startsWith('world_on_'));
-      if (!name || name === NONE_VALUE) {
-        return [isSubject ? 'actor' : '[]', Order.ATOMIC] as [string, number];
+      const id = String(block.getFieldValue('NAME') ?? '');
+      if (!id || id === NONE_VALUE) {
+        return ['[]', Order.ATOMIC] as [string, number];
       }
-      if (!isSubject) {
-        return [`world.actorsNamed(${str(name)})`, Order.MEMBER] as [
-          string,
-          number,
-        ];
-      }
-      const scope = definesWorld(block.workspace) ? 'world' : 'actor';
-      return [`${scope}.named(${str(name)})`, Order.MEMBER] as [string, number];
+      return [`placed[${str(id)}]`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+/**
+ * `unload this map` — take back everything this load of the map placed.
+ *
+ * `map` is the load the script was handed (`MapLoad`): a pause menu's Resume
+ * says `resume the game` and this, and the menu goes, buttons and all,
+ * whichever of two loaded menus it was.
+ */
+const worldUnloadThisMap = defineBlock({
+  type: 'world_unload_this_map',
+  message0: 'unload this map',
+  previousStatement: true,
+  nextStatement: true,
+  style: 'setup_blocks',
+  tooltip:
+    'Remove everything this map placed, as if it had never been loaded. ' +
+    'What was here before the map stays.',
+  generator: {
+    javascript() {
+      return 'map.unload();\n';
+    },
+  },
+});
+
+/**
+ * The two hats a map's own workspace has: `when this map loads` and
+ * `when this map unloads`.
+ *
+ * Loading is when the script itself runs, so the first is its body run in
+ * place — scoped, so two of them do not share names. The second registers on
+ * the load, which calls it before it removes anything, so the body still
+ * finds the placements.
+ */
+const worldOnMapLoads = defineBlock({
+  type: 'world_on_map_loads',
+  message0: 'when this map loads',
+  nextStatement: true,
+  style: 'event_blocks',
+  tooltip: 'Run the blocks below as soon as this map has been placed.',
+  generator: {
+    javascript(block, generator) {
+      return `(() => {\n${nextChainCode(block, generator)}})();\n`;
+    },
+  },
+});
+
+const worldOnMapUnloads = defineBlock({
+  type: 'world_on_map_unloads',
+  message0: 'when this map unloads',
+  nextStatement: true,
+  style: 'event_blocks',
+  tooltip:
+    'Run the blocks below just before this map is unloaded, while its ' +
+    'actors are still here.',
+  generator: {
+    javascript(block, generator) {
+      return `map.onUnload((world) => {\n${nextChainCode(block, generator)}});\n`;
     },
   },
 });
@@ -7708,12 +7753,34 @@ const worldRuleEvent = defineBlock({
     'makes; the pencil opens what it is made of. A choice in it is what a ' +
     'handler filters on.',
   generator: {
-    javascript(block) {
+    javascript(block, generator) {
       // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `define block`
       // beside it makes (`worldRuleBlock`). In a `.rule` the module is
       // assembled from the file's metadata, so writing anything here would
       // declare the event twice; in an `.actor` file there is no metadata pass
-      // and this is the whole declaration.
+      // and this is the whole declaration. In a MAP's own workspace there is
+      // no actor to declare it on either: the event is a plain identity
+      // owned by the map's module (specs/MAP_FIRST.md), written as an export
+      // the world's hat imports and the map's own `emit` names locally.
+      const mapModule = (generator as {__mapModule?: string}).__mapModule;
+      if (mapModule) {
+        const named = designedName(
+          (
+            block as unknown as {
+              saveExtraState?: () => {
+                parts?: Array<{kind?: string; text?: string; var?: string}>;
+              };
+            }
+          ).saveExtraState?.()?.parts,
+        );
+        if (!named) {
+          return '';
+        }
+        return (
+          `export const ${pascal(named)}Event = {id: ${str(slug(named))}, ` +
+          `name: ${str(named)}, ownerId: ${str(mapModule)}};\n`
+        );
+      }
       if (!definesActorFile(block)) {
         return '';
       }
@@ -9847,7 +9914,10 @@ export const DOMAIN_BLOCKS = [
   worldVectorComponent,
   worldThisActor,
   worldActorKind,
-  worldActorNamed,
+  worldPlacement,
+  worldUnloadThisMap,
+  worldOnMapLoads,
+  worldOnMapUnloads,
   ActorVariable.getterBlock,
   worldAllActors,
   worldCameraValue,
@@ -10055,7 +10125,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_this_actor',
       // The 'any of this kind' counterpart, for a world file naming several.
       'world_actor_kind',
-      'world_actor_named',
       'world_all_actors',
       // …and the one filter written more often than every other put together
       // (specs/ACTOR_LISTS.md).
@@ -10210,10 +10279,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // holding several broadcasts, so the two blocks together are the bulk
       // operation, and no third block has to exist to say it.
       'world_actor_kind',
-      // …and one of them by name: the id a map gave a placement, which is how
-      // a world says "when the Resume button is clicked" about one of two
-      // Buttons (MAPS.md).
-      'world_actor_named',
       // Many of one kind, arranged on a map that lives in this world (MAPS.md).
       'world_create_in_map',
       'world_add_world_effect',
@@ -10237,6 +10302,17 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // score sharp (specs/VIEWPORT.md).
       'world_add_layer_effect',
       'world_remove_layer_effect',
+    ],
+  },
+  {
+    // A map's own blocks (specs/MAP_FIRST.md). Offered only in a map's
+    // workspaces — `ROOT_HOMES` empties the category everywhere else.
+    name: 'Map',
+    blocks: [
+      'world_placement',
+      'world_unload_this_map',
+      'world_on_map_loads',
+      'world_on_map_unloads',
     ],
   },
   {
@@ -11005,6 +11081,13 @@ export function buildDomainPalette(
      * the one being worked in. Nothing else about the palette turns on it.
      */
     ownWorldModule?: string;
+    /**
+     * The map whose workspace this palette is for — a placement's or the
+     * map's own (specs/MAP_FIRST.md). Its drawer is hoisted, and its `emit`
+     * blocks are offered, as an actor's are at home: the map is the only
+     * thing that knows when its own event happened.
+     */
+    ownMapModule?: string;
   } = {},
 ): {
   blocks: DomainBlock[];
@@ -11058,6 +11141,7 @@ export function buildDomainPalette(
   const actorCategories: ToolboxCategory[] = [];
   /** Hats of the actors' own events — roots, exactly as a rule's hats are. */
   const ownEventTypes: string[] = [];
+  const ownWorldEventTypes: string[] = [];
   /**
    * What each kind declares, in two readings: what its OWN file may do with
    * those declarations, and what everybody else may.
@@ -11105,6 +11189,12 @@ export function buildDomainPalette(
       types.push(hat.type);
       ownEventTypes.push(hat.type);
       away.push(hat.type);
+      // A MAP's event is the world's to hear (`parseMapOwnMeta`), and a hat
+      // that registers on `world` must come after the world block binds it
+      // (`assembleWorldModule`).
+      if (event.scope === 'world') {
+        ownWorldEventTypes.push(hat.type);
+      }
       const emit = defineEmitBlock(event);
       ownBlocks.push(emit);
       types.push(emit.type);
@@ -11168,7 +11258,9 @@ export function buildDomainPalette(
     // AT HOME IN WHAT IT INHERITS as well as in what it declared, which is
     // what makes a subclass an extension of its parent rather than a reader of
     // it (see `declared`).
-    const home = actor.modulePath === options.ownActorModule;
+    const home =
+      actor.modulePath === options.ownActorModule ||
+      actor.modulePath === options.ownMapModule;
     const blocks: string[] = [];
     const seen = new Set<string>();
     for (
@@ -11217,7 +11309,8 @@ export function buildDomainPalette(
 
   // An actor's drawer, or a world's own state — the two kinds of thing
   // `ownProperties` holds, and a file is at most one of them.
-  const ownModule = options.ownActorModule ?? options.ownWorldModule;
+  const ownModule =
+    options.ownActorModule ?? options.ownWorldModule ?? options.ownMapModule;
   const {rest: otherActors, current: currentActor} = hoist(
     actorCategories,
     ownModule === undefined
@@ -11268,8 +11361,8 @@ export function buildDomainPalette(
         ownEventTypes.length === 0
           ? ROOT_BLOCK_TYPES
           : new Set([...ROOT_BLOCK_TYPES, ...ownEventTypes]),
-      // The built-in rules declare no events, so there are none to order.
-      worldEventTypes: new Set<string>(),
+      // The built-in rules declare no events; a map's are the only ones.
+      worldEventTypes: new Set(ownWorldEventTypes),
     };
   }
   const palette = generateRulePalette(
@@ -11278,9 +11371,12 @@ export function buildDomainPalette(
     // `emit` is offered while writing a rule, and to the headless generator,
     // whose palette is never shown and is deliberately everything.
     editingRule || Boolean(options.allRuleModules),
-    options.fileKind === 'actor'
+    // A placement's workspace is an actor file's shape for one instance, so
+    // it takes the actor hats and none of the world's; a map's own workspace
+    // has hats of its own and takes none of a rule's (specs/MAP_FIRST.md).
+    options.fileKind === 'actor' || options.fileKind === 'placement'
       ? 'actorOnly'
-      : options.fileKind === 'rule'
+      : options.fileKind === 'rule' || options.fileKind === 'map'
         ? 'none'
         : 'all',
   );
@@ -11308,6 +11404,9 @@ export function buildDomainPalette(
       ...palette.eventTypes,
       ...ownEventTypes,
     ]),
-    worldEventTypes: new Set(palette.worldEventTypes),
+    worldEventTypes: new Set([
+      ...palette.worldEventTypes,
+      ...ownWorldEventTypes,
+    ]),
   };
 }

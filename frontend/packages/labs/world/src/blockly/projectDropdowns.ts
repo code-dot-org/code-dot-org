@@ -24,7 +24,6 @@ import {
   setProjectEffectFiles,
   setProjectEffectParameters,
   setProjectMaps,
-  setPlacementNames,
   setProjectRuleModules,
   setProjectBackgrounds,
   setProjectSounds,
@@ -38,7 +37,6 @@ import {
   projectEffectFileOptions,
   projectEffectParameters,
   projectMapActorTypes,
-  projectPlacementNames,
   projectOwnMetas,
   projectRuleMetas,
   projectRuleOptions,
@@ -137,7 +135,6 @@ export function refreshProjectDropdowns(
   setProjectEffectParameters(effectParameters);
   const maps = projectMapActorTypes(files);
   setProjectMaps(maps);
-  setPlacementNames(projectPlacementNames(files));
   // The `use rule` dropdown offers the project's own rule modules (under
   // `rules/`) alongside the built-ins.
   const ruleModules = projectRuleOptions(files);

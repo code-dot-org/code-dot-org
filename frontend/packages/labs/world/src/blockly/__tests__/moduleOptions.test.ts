@@ -10,8 +10,8 @@ import {
   backgroundOptions,
   bindLiveOptions,
   mapOptions,
-  placementNameOptions,
-  setPlacementNames,
+  placementOptions,
+  setCurrentPlacements,
   setProjectActors,
   soundImportOptions,
   spriteOptions,
@@ -20,19 +20,20 @@ import {
 // Registries are module state; reset between cases.
 afterEach(() => {
   setProjectActors([]);
-  setPlacementNames([]);
+  setCurrentPlacements([]);
   setActorThumbnails({});
 });
 
 const PIXEL = 'data:image/png;base64,AAAA';
 
 describe('moduleOptions', () => {
-  it('offers each placement name as its own label and value', () => {
-    // A name is what the map's author typed, and what the block says back.
-    setPlacementNames(['Quit', 'Resume']);
-    expect(placementNameOptions()).toEqual([
-      ['Quit', 'Quit'],
+  it('offers each placement of the open map as its own label and value', () => {
+    // A name is what the map's author typed, and what the block says back;
+    // the list is the one map's, set by whoever opened it.
+    setCurrentPlacements(['Resume', 'Quit']);
+    expect(placementOptions()).toEqual([
       ['Resume', 'Resume'],
+      ['Quit', 'Quit'],
     ]);
   });
 
@@ -76,7 +77,7 @@ describe('an empty dropdown', () => {
       // …and the two with a shelf, which is where the wording came from.
       // Their import row is listed after the fallback, never instead of it.
       ['maps', mapOptions().slice(0, 1)],
-      ['placements', placementNameOptions()],
+      ['placements', placementOptions()],
       ['sounds', soundImportOptions().slice(0, 1)],
     ];
 

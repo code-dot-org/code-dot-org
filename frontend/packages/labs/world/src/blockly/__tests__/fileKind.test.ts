@@ -12,7 +12,7 @@ import {describe, expect, it} from 'vitest';
 import {buildDomainPalette} from '../domainBlocks';
 import {fileKindOf, moduleShape, ROOT_HOMES, type FileKind} from '../fileKind';
 
-const KINDS: FileKind[] = ['actor', 'world', 'rule'];
+const KINDS: FileKind[] = ['actor', 'world', 'rule', 'map', 'placement'];
 
 /** Every block type a file kind's toolbox lists, categories flattened. */
 const offeredTypes = (fileKind?: FileKind): string[] => {
@@ -31,10 +31,13 @@ const categoryNames = (fileKind?: FileKind): string[] =>
   );
 
 describe('fileKindOf', () => {
-  it('reads the three extensions, and nothing else', () => {
+  it('reads the four extensions, and nothing else', () => {
     expect(fileKindOf('player.actor')).toBe('actor');
     expect(fileKindOf('levels/one.world')).toBe('world');
     expect(fileKindOf('rules/gravity.rule')).toBe('rule');
+    // A map is generated too, now that it carries workspaces
+    // (specs/MAP_FIRST.md); `placement` is a kind no file has.
+    expect(fileKindOf('maps/level1.map')).toBe('map');
     expect(fileKindOf('main.js')).toBeUndefined();
     expect(fileKindOf('')).toBeUndefined();
     expect(fileKindOf()).toBeUndefined();

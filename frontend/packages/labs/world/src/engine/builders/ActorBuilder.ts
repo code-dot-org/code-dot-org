@@ -16,7 +16,7 @@ import type {
   Property,
   PropertyType,
 } from '../core/types';
-import type {ActorStep, NamedHandler, World} from '../core/World';
+import type {ActorStep, World} from '../core/World';
 import {AppearanceTrait} from '../rules/animation';
 import {PositionalTrait} from '../rules/spatial';
 
@@ -65,8 +65,6 @@ export class ActorBuilder {
   private readonly handlers: Array<[GameEvent, EventHandler]> = [];
   private readonly effects: AppliedEffectSpec[] = [];
   private readonly steps: ActorStep[] = [];
-  /** Handlers about OTHER actors, by placement name — see {@link named}. */
-  private readonly namedHandlers: NamedHandler[] = [];
   private drawing: ActorDrawing | undefined;
 
   constructor(opts: {id: string; name: string}) {
@@ -136,7 +134,6 @@ export class ActorBuilder {
     this.traits = [...this.traits, ...other.traits];
     this.overrides.push(...other.overrides);
     this.handlers.push(...other.handlers);
-    this.namedHandlers.push(...other.namedHandlers);
     this.steps.push(...other.steps);
     // Through `addEffect` rather than pushed, so one path is worn once: the
     // parent RETUNES an effect the child already wears rather than adding a
@@ -349,31 +346,6 @@ export class ActorBuilder {
   on(event: GameEvent, handler: EventHandler): this {
     this.handlers.push([event, handler]);
     return this;
-  }
-
-  /**
-   * Respond to an event raised for ANOTHER actor, the one a map places under
-   * `name` — `when ⟨the actor named Resume⟩ is clicked`, written in a Pause
-   * Menu's file about the Button beside it.
-   *
-   * An actor file has no world at module scope to register on, so the
-   * handler is kept here and registered by the world the first time it
-   * places an actor of this kind (`World.useActorKind`), through
-   * `World.named`, which reaches the named actor whenever it arrives. Once
-   * per world and not per instance: two menus would otherwise answer one
-   * click twice.
-   */
-  named(name: string): {on(event: GameEvent, handler: EventHandler): void} {
-    return {
-      on: (event, handler) => {
-        this.namedHandlers.push([name, event, handler]);
-      },
-    };
-  }
-
-  /** The handlers about named actors this kind declared, for the World. */
-  get ownNamedHandlers(): readonly NamedHandler[] {
-    return this.namedHandlers;
   }
 
   /**

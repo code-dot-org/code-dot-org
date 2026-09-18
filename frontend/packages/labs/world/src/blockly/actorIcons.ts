@@ -23,7 +23,6 @@ import handPointer from '@fortawesome/fontawesome-free/svgs/solid/hand-pointer.s
 import heartPulse from '@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg?raw';
 import iCursor from '@fortawesome/fontawesome-free/svgs/solid/i-cursor.svg?raw';
 import paragraph from '@fortawesome/fontawesome-free/svgs/solid/paragraph.svg?raw';
-import pause from '@fortawesome/fontawesome-free/svgs/solid/pause.svg?raw';
 import sliders from '@fortawesome/fontawesome-free/svgs/solid/sliders.svg?raw';
 import squareCaretDown from '@fortawesome/fontawesome-free/svgs/solid/square-caret-down.svg?raw';
 import toggleOn from '@fortawesome/fontawesome-free/svgs/solid/toggle-on.svg?raw';
@@ -84,7 +83,6 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   panel: tile(windowMaximize),
   input: tile(iCursor),
   paragraph: tile(paragraph),
-  pause: tile(pause),
 };
 
 /** The dropdown's rows, in the order an interface is usually built. */

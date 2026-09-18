@@ -1,0 +1,9 @@
+Map Editor is main view
+
+Actors on top. When there isn't any, there's an option to make a new one.
+
+Actors are the main mechanism to add behavior although rules are the other. A World is derived by the map, so we would have the rules listed there, potentially.
+
+There is a World workspace that the map is essentially representing. The map offers a Script view which shows that main workspace. The main workspace is the place to put general event handling and your 'when run' style blocks.
+
+Actors have events that they can elect to handle. In those cases, we can click on an Actor that's inside a map and attach events to it. This happens by tapping on an actor and in the properties window tapping the 'Events' button. This switches the view to a blockly workspace where the view of the map showing the actor centered is in the corner above the toolbox entries. You can then drag out event blocks to script the Actor as a map-driven override. There is an actor definition button, as well, which goes to the Actor implementation where general events can be written as well. This opens the Actor as a new file tab since it is its own file.

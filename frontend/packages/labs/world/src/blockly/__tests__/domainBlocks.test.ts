@@ -1428,8 +1428,6 @@ describe('domain block generators', () => {
         // The subject a world file's blocks take, and half of "remove every
         // coin" — offered in the category that file is built from.
         'world_actor_kind',
-        // …and one placement by the name its map gave it.
-        'world_actor_named',
       ]),
     );
   });

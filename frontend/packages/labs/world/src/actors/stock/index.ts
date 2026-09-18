@@ -18,7 +18,6 @@ import {GROUND_SPRITE, groundActor} from './ground';
 import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
 import {panelActor} from './panel';
-import {pauseMenuActor} from './pauseMenu';
 import {PLAYER_ANIMATION, playerActor} from './player';
 import {PORTRAIT_SPRITE, portraitActor} from './portrait';
 import {progressBarActor} from './progressBar';
@@ -223,19 +222,6 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: [],
     actors: ['label'],
     contents: panelActor,
-  },
-  {
-    id: 'pauseMenu',
-    name: 'Pause Menu',
-    description:
-      'A panel that says PAUSED, with a Resume and a Quit button beside it in its map. It says “resumed” or “quit” when one is pressed; what those mean is the world’s to decide.',
-    // The Panel it is, and the Label whose box and words it reads through
-    // it. The buttons are plain Buttons the map places under the names its
-    // two hats listen for, brought by the map that arranges them
-    // (`maps/stock`).
-    requires: [],
-    actors: ['panel', 'label'],
-    contents: pauseMenuActor,
   },
   {
     id: 'portrait',

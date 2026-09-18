@@ -91,6 +91,8 @@ const A_FILE: Record<FileKind, string> = {
   actor: 'an actor file',
   world: 'a world',
   rule: 'a rule',
+  map: 'a map',
+  placement: 'a placed actor',
 };
 
 /**

@@ -17,6 +17,7 @@ describe('the pause menu, in breakout', () => {
     const actors = () => [...world.actors] as Actor[];
     const ofType = (type: string) =>
       actors().filter(actor => actor.type === type);
+    const byId = (id: string) => actors().find(actor => actor.id === id);
     const frame = () => {
       world.tick(1 / 60);
       world.renderSnapshot();
@@ -35,7 +36,7 @@ describe('the pause menu, in breakout', () => {
       frame();
       frame();
     };
-    return {world, ofType, tap, click, frame};
+    return {world, ofType, byId, tap, click, frame};
   };
 
   it('stops the game and shows the menu on P, and resumes on Resume', async () => {
@@ -50,24 +51,27 @@ describe('the pause menu, in breakout', () => {
 
     g.tap('p');
     expect(g.world.isPaused()).toBe(true);
-    const [menu] = g.ofType('actors/pauseMenu');
+    const menu = g.byId('Pause');
     expect(menu).toBeDefined();
-    expect(menu.children()).toHaveLength(2);
+    // The title and the two buttons, in the panel's frame.
+    expect(menu!.children()).toHaveLength(3);
     const held = ball.get(PositionProperty).y;
     for (let i = 0; i < 10; i++) {
       g.frame();
     }
     expect(ball.get(PositionProperty).y).toBe(held);
 
-    // Resume is a plain Button the map names, the panel's child four below
-    // its middle at (160, 160).
-    const [resume] = g.world.actorsNamed('Resume');
+    // Resume is a plain Button with a script of its own, the panel's child
+    // four below its middle at (160, 160). Its script resumes the game and
+    // unloads the map, so the whole menu goes.
+    const resume = g.byId('Resume')!;
     expect(resume.type).toBe('actors/button');
     const at = resume.get(PositionProperty);
     g.click(at.x, at.y);
     expect(g.world.isPaused()).toBe(false);
-    expect(g.ofType('actors/pauseMenu')).toHaveLength(0);
-    expect(g.world.actorsNamed('Resume')).toHaveLength(0);
+    expect(g.byId('Pause')).toBeUndefined();
+    expect(g.byId('Resume')).toBeUndefined();
+    expect(g.byId('Title')).toBeUndefined();
     g.frame();
     g.frame();
     expect(ball.get(PositionProperty).y).not.toBe(held);
@@ -80,11 +84,13 @@ describe('the pause menu, in breakout', () => {
       g.frame();
     }
     g.tap('p');
-    const [quit] = g.world.actorsNamed('Quit');
+    // Quit's script says `quit`, the map's own event; the world hears it
+    // and starts the level over, which clears the menu with the rest.
+    const quit = g.byId('Quit')!;
     const at = quit.get(PositionProperty);
     g.click(at.x, at.y);
     expect(g.world.isPaused()).toBe(false);
-    expect(g.ofType('actors/pauseMenu')).toHaveLength(0);
+    expect(g.byId('Pause')).toBeUndefined();
     // A fresh ball, unserved, where the map puts one.
     const [ball] = g.ofType('actors/ball');
     expect(ball).toBeDefined();

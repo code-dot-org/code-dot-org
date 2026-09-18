@@ -189,6 +189,69 @@ export function parseWorldOwnMeta(
   return declarationsIn(modulePath, contents, 'world_world', 'world', 'World');
 }
 
+/**
+ * A MAP's own declarations: the events its own workspace defines.
+ *
+ * A `.map` is JSON whose `blocks` is a workspace with no root — `define
+ * event` rows sit at the top level, alone or chained — so the walk is over
+ * every top block's chain rather than under a root (specs/MAP_FIRST.md, "The
+ * file"). What comes out is an `OwnMeta` with events only, so the palette
+ * mints the map's hat and emit through the same factories an actor's go
+ * through. WORLD-scoped, because a map is not an actor: the hat has no
+ * subject socket and registers on the world, which is what `when ⟨pause
+ * menu⟩ quit` in a world file wants. A map with no workspace declares
+ * nothing and is not listed.
+ */
+export function parseMapOwnMeta(
+  modulePath: string,
+  contents: string,
+  name: string,
+): OwnMeta | undefined {
+  let tops: ActorBlock[];
+  const variables = new Map<string, string>();
+  try {
+    // `blocks` is a whole workspace serialization, as an actor file is.
+    const parsed = JSON.parse(contents) as {
+      blocks?: {
+        blocks?: {blocks?: ActorBlock[]};
+        variables?: ReadonlyArray<{id?: string; name?: string}>;
+      };
+    };
+    for (const variable of parsed.blocks?.variables ?? []) {
+      if (variable.id) {
+        variables.set(variable.id, variable.name ?? variable.id);
+      }
+    }
+    tops = parsed.blocks?.blocks?.blocks ?? [];
+  } catch {
+    return undefined; // mid-edit / not JSON
+  }
+  const events: EventMeta[] = [];
+  const named = new Set<string>();
+  for (const top of tops) {
+    for (const block of [top, ...chain(top)]) {
+      if (block.type !== 'world_rule_event') {
+        continue;
+      }
+      const declared = designedEvent(
+        block,
+        modulePath,
+        name,
+        variables,
+        'world',
+      );
+      if (declared && !named.has(declared.id)) {
+        named.add(declared.id);
+        events.push(declared);
+      }
+    }
+  }
+  if (events.length === 0) {
+    return undefined;
+  }
+  return {modulePath, name, properties: [], actions: [], events};
+}
+
 /** The walk both share: a root's chain, and every declaration in it. */
 function declarationsIn(
   modulePath: string,
@@ -438,6 +501,7 @@ function designedEvent(
   modulePath: string,
   actorName: string,
   variables: ReadonlyMap<string, string>,
+  scope: 'actor' | 'world' = 'actor',
 ): EventMeta | undefined {
   const raw = block.extraState?.parts ?? [];
   const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
@@ -459,7 +523,7 @@ function designedEvent(
   return {
     id: slug(named),
     name: named,
-    scope: 'actor',
+    scope,
     ...(parts.length > 0 ? {parts} : {}),
     ref: {
       source: 'project',

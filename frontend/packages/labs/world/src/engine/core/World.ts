@@ -49,7 +49,6 @@ import type {
   WorldAction,
   WorldEventHandler,
   WorldQuery,
-  EventHandler,
 } from './types';
 import {Vector, type VectorLike} from './Vector';
 import {
@@ -65,9 +64,6 @@ import {
  * no phase — the Animation rule's frame advance is one — is work, and waits
  * with the rest; the only thing a paused world does is notice.
  */
-/** A placement's name: its id without the `#n` a second copy is given. */
-const nameOf = (id: string): string => id.replace(/#\d+$/, '');
-
 const SENSE = phaseIndex('sense') ?? 0;
 const whilePaused = (step: Step): boolean =>
   step.order.kind === 'phase' &&
@@ -94,15 +90,7 @@ export interface ActorTemplate {
    * the same structural reason `ownSteps` is.
    */
   readonly ownDrawing?: ActorDrawing;
-  /**
-   * Handlers this KIND declared about actors placed under a NAME — see
-   * `ActorBuilder.named`. Optional for the same structural reason.
-   */
-  readonly ownNamedHandlers?: readonly NamedHandler[];
 }
-
-/** A handler about the actor placed under a name: the name, then the pair. */
-export type NamedHandler = [string, GameEvent, EventHandler];
 
 /**
  * A Map: initial actor instances as data (GLOSSARY.md), loaded into a World.
@@ -619,8 +607,6 @@ export class World {
   // Which actor kinds have already contributed, by the TYPE they were placed
   // under: a kind contributes once however many of it there are.
   private readonly kindsWithSteps = new Set<string>();
-  /** The kinds whose handlers about named actors are registered already. */
-  private readonly kindsWithNamedHandlers = new Set<string>();
   /** How each kind that describes its own picture draws itself, by type. */
   private readonly kindDrawings = new Map<string, ActorDrawing>();
   /** The properties this world declared for itself — see `defineOwnProperty`. */
@@ -892,11 +878,6 @@ export class World {
   private inTick = false;
   /** Whether the game is paused — see {@link pause}. */
   private paused = false;
-  /** Handlers registered against a placement NAME — see {@link named}. */
-  private readonly namedHandlers = new Map<
-    string,
-    Array<[GameEvent, EventHandler]>
-  >();
 
   /**
    * Whether the world is inside a frame right now.
@@ -1024,16 +1005,6 @@ export class World {
     if (template.ownDrawing && !this.kindDrawings.has(type)) {
       this.kindDrawings.set(type, template.ownDrawing);
     }
-    // A kind's handlers about OTHER actors, by name — a Pause Menu's about
-    // its Resume — registered once for the kind, the first time the world
-    // holds one of it: a handler is a fact about the kind, not the instance.
-    const named = template.ownNamedHandlers ?? [];
-    if (named.length && !this.kindsWithNamedHandlers.has(type)) {
-      this.kindsWithNamedHandlers.add(type);
-      for (const [name, event, handler] of named) {
-        this.named(name).on(event, handler);
-      }
-    }
     const steps = template.ownSteps ?? [];
     if (!steps.length || this.kindsWithSteps.has(type)) {
       return;
@@ -1105,12 +1076,6 @@ export class World {
     }
     this.actorList.push(actor);
     this.actorsById.set(actor.id, (this.actorsById.get(actor.id) ?? 0) + 1);
-    // …and the handlers waiting on this NAME, if any (`named`): a hat about
-    // the actor named Resume reaches the one a map places later.
-    for (const [event, handler] of this.namedHandlers.get(nameOf(actor.id)) ??
-      []) {
-      actor.on(event, handler);
-    }
     // …and the actor hears that it exists, which is the one event every actor
     // gets without electing anything (`rules/spatial`). Queued like the rest,
     // so a handler that adds ANOTHER actor — which is the commonest thing to
@@ -1323,39 +1288,6 @@ export class World {
    */
   childrenOf(actor: Actor): Actor[] {
     return this.actorList.filter(candidate => candidate.parent() === actor);
-  }
-
-  /**
-   * The actors placed under `name` — the id a map gave a placement, which a
-   * block may name (`the actor named ⟨…⟩`, specs/MAPS.md).
-   *
-   * BY THE NAME, NOT THE ID: a map loaded twice numbers its second Resume
-   * `Resume#2` (`resolveInstanceId`), and a handler about "Resume" means
-   * both. Usually one; a list because an actor value is one, and because
-   * nothing forbids two.
-   */
-  actorsNamed(name: string): Actor[] {
-    return this.actorList.filter(actor => nameOf(actor.id) === name);
-  }
-
-  /**
-   * Something a hat may register on, for the actor named `name`: the ones
-   * placed already, and every one placed later. What `any ⟨kind⟩` gets from
-   * a template's handlers, a name gets from here — a pause menu's Resume is
-   * not in the world when the world is described, and its hat must still
-   * find it.
-   */
-  named(name: string): {on(event: GameEvent, handler: EventHandler): void} {
-    return {
-      on: (event, handler) => {
-        const list = this.namedHandlers.get(name) ?? [];
-        list.push([event, handler]);
-        this.namedHandlers.set(name, list);
-        for (const actor of this.actorsNamed(name)) {
-          actor.on(event, handler);
-        }
-      },
-    };
   }
 
   /**

@@ -32,6 +32,26 @@ export function thumbnailManifest(
 const EMPTY_MAP = JSON.stringify({type: 'map', actors: []});
 
 /**
+ * A map with its placements taken out and its own workspace kept.
+ *
+ * The placements are what an edit changes and what nothing in the manifest
+ * reads; the map's own workspace declares the events a world's hat imports
+ * by name (`parseMapOwnMeta`), and a stub without them would fail the bundle
+ * on a missing export. So the stub keeps that one part, and a map edit still
+ * leaves the bundle where it was unless it touched the map's events.
+ */
+const stubMap = (contents: string): string => {
+  try {
+    const parsed = JSON.parse(contents) as {blocks?: unknown};
+    return parsed.blocks
+      ? JSON.stringify({type: 'map', actors: [], blocks: parsed.blocks})
+      : EMPTY_MAP;
+  } catch {
+    return EMPTY_MAP;
+  }
+};
+
+/**
  * The project's files as the manifest compile should see them: every `.map`
  * replaced by an empty one.
  *
@@ -49,7 +69,7 @@ export function manifestFiles(
 ): Record<string, string> {
   const out: Record<string, string> = {};
   for (const [path, contents] of Object.entries(files)) {
-    out[path] = path.endsWith('.map') ? EMPTY_MAP : contents;
+    out[path] = path.endsWith('.map') ? stubMap(contents) : contents;
   }
   return out;
 }

@@ -7,7 +7,6 @@ import {
   projectEffectFileOptions,
   projectEffectParameters,
   projectMapActorTypes,
-  projectPlacementNames,
   projectRuleOptions,
   projectWorldOptions,
   projectWorldRules,
@@ -95,30 +94,6 @@ describe('projectMapActorTypes', () => {
     expect(maps['maps/level1']).toEqual(['actors/player', 'actors/coin']);
     expect(maps['maps/empty']).toEqual([]); // invalid JSON → no types
     expect(maps['actors/player']).toBeUndefined(); // not under maps/
-  });
-});
-
-describe('projectPlacementNames', () => {
-  it('is every name a map gives a placement, once, in order', () => {
-    const files = {
-      'maps/menu.map': JSON.stringify({
-        type: 'map',
-        actors: [
-          {type: 'actors/pauseMenu', id: 'Pause'},
-          {type: 'actors/button', id: 'Resume'},
-          {type: 'actors/button', id: 'Quit'},
-          {type: 'actors/coin'}, // unnamed: nothing to say
-        ],
-      }),
-      // Two maps may name the same thing; a block names it once.
-      'maps/level.map': JSON.stringify({
-        type: 'map',
-        actors: [{type: 'actors/button', id: 'Resume'}],
-      }),
-      'maps/empty.map': 'not json yet',
-      'actors/player.actor': '{}',
-    };
-    expect(projectPlacementNames(files)).toEqual(['Pause', 'Quit', 'Resume']);
   });
 });
 

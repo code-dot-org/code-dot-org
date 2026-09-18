@@ -69,14 +69,15 @@ function loaderFor(path: string): Loader {
   }
   if (
     path.endsWith('.json') ||
-    path.endsWith('.map') ||
     path.endsWith('.anim') ||
     path.endsWith('.effect')
   ) {
-    // `.map` (a world-population document), `.anim` (an animation file), and
-    // `.effect` (a shader graph) are all raw JSON on disk, imported like
-    // `.json` — a `.map` by the world's `load map` block, an `.anim` by the
-    // world's `use animations` block, an `.effect` by an `add effect` block.
+    // `.anim` (an animation file) and `.effect` (a shader graph) are raw JSON
+    // on disk, imported like `.json` — an `.anim` by the world's `use
+    // animations` block, an `.effect` by an `add effect` block. A `.map` is
+    // JSON on disk too, and used to be one of these; it carries workspaces
+    // now and is generated into a module before the bundler sees it
+    // (specs/MAP_FIRST.md), so it falls through to `js` with the rest.
     //
     // An `.effect` travels through the bundle as DATA, not as generated code:
     // it is compiled to GLSL in the preview surface, where Phaser is, so the
