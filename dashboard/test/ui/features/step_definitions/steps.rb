@@ -789,11 +789,10 @@ Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
 end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
-  # Legacy BaseDialog uses `.dialog-title`; DSCO dialogs put the title in a
-  # heading (h2 for Dialog, h3 for Modal) inside a `[role="dialog"]` or, for
-  # Dialog, `[role="alertdialog"]`. Accept any of them.
-  selector = %q($('.dialog-title:visible').first().text() || $('[role="dialog"]:visible :header, [role="alertdialog"]:visible :header').first().text())
-  wait_short_until {@browser.execute_script("return #{selector};")&.include?(expected_text)}
+  # DSCO's Dialog is an `alertdialog`, Modal a `dialog`; BaseDialog is neither.
+  # Gather every visible title: two can be open, and ours need not be first.
+  titles = %q($('.dialog-title:visible').add('[role="dialog"]:visible :header, [role="alertdialog"]:visible :header').map(function () {return $(this).text();}).get().join('\n'))
+  wait_short_until {@browser.execute_script("return #{titles};")&.include?(expected_text)}
 end
 
 Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
