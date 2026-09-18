@@ -117,7 +117,7 @@ class SchoolStatsByYear < ApplicationRecord
     ActiveRecord::Base.transaction do
       CSV.read(filename, **options).each do |row|
         parsed = yield row
-        loaded = find_by(primary_keys.map(&:to_sym).index_with {|k| parsed[k]})
+        loaded = find_by(primary_key.map(&:to_sym).index_with {|k| parsed[k]})
         if loaded.nil?
           begin
             SchoolStatsByYear.new(parsed).save!
