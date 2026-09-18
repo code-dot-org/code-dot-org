@@ -6,7 +6,7 @@
 #
 # -*- SkipSchemaAnnotations -*-
 class CourseOfferingsPdWorkshop < ApplicationRecord
-  self.primary_keys = :pd_workshop_id, :course_offering_id
+  self.primary_key = [:pd_workshop_id, :course_offering_id]
 
   export_to_analytics
 
