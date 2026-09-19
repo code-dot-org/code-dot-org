@@ -59,7 +59,7 @@ specs/CANVAS_FIRST.md's step 4, after Input and Motion
 ## Commits
 
 - `863d9eeae0d` — this plan.
-- (next) — the import row on a layer's slots; `look/background` on the map
+- `d3f2ebb54f4` — the import row on a layer's slots; `look/background` on the map
   and `look/sprite`'s last step; the tiles' grants; the specs.
 
 ## Learned while building
