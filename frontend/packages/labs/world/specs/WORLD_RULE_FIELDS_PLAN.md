@@ -67,7 +67,7 @@ the rule's, and a world that wants another says so with a `set` row under
 ## Commits
 
 - `e583d2b2f0e` — this plan.
-- (next) — the read and the write; the inspector's fields and the wiring;
+- `67a32ba69cb` — the read and the write; the inspector's fields and the wiring;
   `memory/score`; the specs.
 
 ## Learned while building
