@@ -1,7 +1,7 @@
 # Plan: the main map loads before the rows (CANVAS_FIRST.md, step 1)
 
-STATUS: IN PROGRESS. The first build step of specs/CANVAS_FIRST.md. The
-working record, as the MAP_FIRST.md plans were.
+STATUS: BUILT, pending a look in the browser. The first build step of
+specs/CANVAS_FIRST.md. The working record, as the MAP_FIRST.md plans were.
 
 ## The problem
 
@@ -53,8 +53,53 @@ and every row that names one hits this.
 
 ## Commits
 
-(recorded as they land)
+- `b7288e49725` — this plan.
+- `cc13038151d` — the world block loads the main map between its prologue
+  and its body; `use rule` rows lifted into the prologue; `place/layers`'
+  Hero on the map, and the test that the camera follows it; the older specs
+  corrected.
 
 ## Learned while building
 
-(recorded as it happens)
+- **The main map's code was already made before the world block ran.** The
+  generator compiles the map first, since its placements' workspaces are
+  loaded into the same headless workspace the world's blocks then replace.
+  So handing the code to the world block was one more field on the
+  generator, beside the map's layers, and `assembleWorldModule` lost a
+  parameter.
+- **Nothing that loads a main map depended on the old order.** Thirty-five
+  lessons paint a floor on the map and add a Hero by block; the starter and
+  Breakout hold their levels there. Every one passed unchanged. The one
+  visible difference is the one wanted: the Hero is drawn over the floor.
+- **MAIN_MAP_PLAN.md had argued the other order**, for a readout over a
+  level: the level from a `load map` row, the readout on the main map,
+  drawn last. That case is a Viewport now (the level inside it, the readout
+  beside it), and a `load map` in a HANDLER still lands on top, since it
+  runs after everything: Breakout's pause menu is that, and is unchanged.
+- **A test that matches text in a module has to know what else says it.**
+  The ordering test looked for `world.pause();` after the load, and found
+  the one inside a placement's script, which is part of the map's code and
+  so before it. The world's row in that test is `resume` now.
+- **`setInput` wants the driver's key names**, which are not the
+  browser's. A test that held `ArrowRight` by hand moved nobody and blamed
+  the camera. `playCheck` translates; a test about a lesson should drive
+  it the way its check does.
+
+## Not built, and known
+
+- A `load map` ROW under `define world`, in a world that also has a main
+  map, now draws over the main map where it drew under it. No fixture or
+  lesson has both. A readout wants a layer in front, or the level in a
+  Viewport.
+- A row still cannot name what a VIEWPORT's map placed by a block about a
+  kind and expect it to be alone: the Viewport's level is in the world by
+  then too (`loadMap` shows held maps as it loads), so `any ⟨Coin⟩` is
+  every Coin in every space.
+
+## What to look at in the browser
+
+`place/layers`: walk right, and the view should follow the Hero as it did
+when the Hero was a block. Any lesson with a painted floor and a Hero added
+by a block: the Hero should stand in front of the tiles. The starter
+project and Breakout should run as they did, and Breakout's pause menu
+should still come up over the game.
