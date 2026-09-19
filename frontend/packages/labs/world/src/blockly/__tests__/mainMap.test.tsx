@@ -1,11 +1,14 @@
 // A world's main map: the `map` beside its `blocks`, compiled into the world's
-// module and loaded after the world's own rows (specs/MAIN_MAP_PLAN.md).
+// module and loaded after the world's prologue and BEFORE its rows, so that a
+// row can name a placement (specs/MAIN_MAP_PLAN.md,
+// specs/MAP_BEFORE_ROWS_PLAN.md).
 
 import {render} from '@testing-library/react';
 import {createRef} from 'react';
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {PositionProperty} from '../../engine';
 import BlocklyGenerator, {
   type BlocklyGeneratorHandle,
 } from '../BlocklyGenerator';
@@ -30,8 +33,8 @@ const world = (map?: object) =>
         {
           type: 'world_world',
           fields: {NAME: 'Main'},
-          // A row of its own, so the main map's load can be seen to follow it.
-          next: {block: {type: 'world_pause_game'}},
+          // A row of its own, so the main map's load can be seen to precede it.
+          next: {block: {type: 'world_resume_game'}},
         },
       ],
     },
@@ -64,7 +67,7 @@ const generate = async (contents: string): Promise<string> => {
 };
 
 describe('the main map in the world’s module', () => {
-  it('is data, defined kinds, and a load, after the world’s own rows', async () => {
+  it('is data, defined kinds, and a load, before the world’s own rows', async () => {
     const js = await generate(world(MAIN));
     const data = JSON.parse(js.match(/^const mainMap = (.*);$/m)![1]) as {
       actors: Array<Record<string, unknown>>;
@@ -75,10 +78,45 @@ describe('the main map in the world’s module', () => {
     expect(js).toContain('import ActorsCoin from "actors/coin";');
     expect(js).toContain('world.define("actors/coin", ActorsCoin);');
     expect(js).toContain('world.loadMap(mainMap);');
-    // After the row chained under `define world`.
-    expect(js.indexOf('world.pause();')).toBeLessThan(
-      js.indexOf('world.loadMap(mainMap);'),
+    // Inside the world block: after `const world` and what has to precede
+    // a placement, before the row chained under `define world`, and before
+    // any hat of the world's.
+    const at = (text: string) => js.indexOf(text);
+    expect(at('const world = ')).toBeGreaterThanOrEqual(0);
+    expect(at('const world = ')).toBeLessThan(at('world.loadMap(mainMap);'));
+    expect(at('world.loadMap(mainMap);')).toBeLessThan(at('world.resume();'));
+  });
+
+  it('lifts a `use rule` row above the load, where a rule still may be used', async () => {
+    // `WorldBuilder` refuses a rule once an actor exists, and with the map
+    // loaded first every row is after an actor. A world does not need the
+    // row; one that has it must still build.
+    const contents = JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_world',
+            fields: {NAME: 'Main'},
+            next: {
+              block: {
+                type: 'world_resume_game',
+                next: {
+                  block: {type: 'world_use_rule', fields: {RULE: 'Space'}},
+                },
+              },
+            },
+          },
+        ],
+      },
+      map: MAIN,
+    });
+    const js = await generate(contents);
+    const at = (text: string) => js.indexOf(text);
+    expect(at('world.useRules([WorldLab.')).toBeGreaterThanOrEqual(0);
+    expect(at('world.useRules([WorldLab.')).toBeLessThan(
+      at('world.loadMap(mainMap);'),
     );
+    expect(at('world.loadMap(mainMap);')).toBeLessThan(at('world.resume();'));
   });
 
   it('carries each placement’s script, bound to that placement', async () => {
@@ -105,12 +143,76 @@ describe('a world with a main map, running', () => {
     });
 
     expect([...built.actors].map(actor => actor.id)).toEqual(['c', 'd']);
-    // The world block's own row paused it; resume, and see the placement's
-    // `is created` handler pause it again once the events are dispatched.
-    built.resume();
+    // Running until the placement's `is created` handler pauses it, once
+    // the events are dispatched.
     expect(built.isPaused()).toBe(false);
     built.tick(0);
     expect(built.isPaused()).toBe(true);
+  });
+});
+
+describe('a row under `define world`', () => {
+  it('can name what the main map placed', async () => {
+    // The reason the map loads first (specs/MAP_BEFORE_ROWS_PLAN.md): a row
+    // about `the ⟨Coin⟩` runs as the world is built, and the Coin is on the
+    // map. Loaded after the rows, there was no Coin for the row to move.
+    const contents = JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_world',
+            fields: {NAME: 'Main'},
+            next: {
+              block: {
+                type: 'world_set_position',
+                inputs: {
+                  ACTOR: {
+                    block: {
+                      type: 'world_actor_kind',
+                      fields: {ACTOR: 'actors/coin'},
+                    },
+                  },
+                  X: {shadow: {type: 'math_number', fields: {NUM: 200}}},
+                  Y: {shadow: {type: 'math_number', fields: {NUM: 100}}},
+                },
+              },
+            },
+          },
+        ],
+      },
+      map: {...MAIN, actors: [{type: 'actors/coin', id: 'only'}]},
+    });
+    const {world: built} = await compileProject({
+      'worlds/main.world': contents,
+      'actors/coin.actor': COIN,
+    });
+    const [coin] = [...built.actors];
+    expect(coin.id).toBe('only');
+    expect(coin.get(PositionProperty)).toMatchObject({x: 200, y: 100});
+  });
+
+  it('places its actors over the map’s, which are there first', async () => {
+    const contents = JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_world',
+            fields: {NAME: 'Main'},
+            next: {
+              block: {type: 'world_add_actor', fields: {ACTOR: 'actors/coin'}},
+            },
+          },
+        ],
+      },
+      map: {...MAIN, actors: [{type: 'actors/coin', id: 'onTheMap'}]},
+    });
+    const {world: built} = await compileProject({
+      'worlds/main.world': contents,
+      'actors/coin.actor': COIN,
+    });
+    // The world's list is its draw order within a layer.
+    expect([...built.actors][0].id).toBe('onTheMap');
+    expect([...built.actors]).toHaveLength(2);
   });
 });
 
@@ -138,8 +240,12 @@ describe('the main map’s layers', () => {
       'world.defineLayer({id: "layer1", name: "Sky", parallax: new WorldLab.Vector(0.2, 0)});',
     );
     expect(js).toContain('world.setBackground("sky.png", "layer1");');
+    // Before the load, which is the first placement, and so before the rows.
     expect(js.indexOf('world.defineLayer(')).toBeLessThan(
-      js.indexOf('world.pause();'),
+      js.indexOf('world.loadMap(mainMap);'),
+    );
+    expect(js.indexOf('world.loadMap(mainMap);')).toBeLessThan(
+      js.indexOf('world.resume();'),
     );
   });
 

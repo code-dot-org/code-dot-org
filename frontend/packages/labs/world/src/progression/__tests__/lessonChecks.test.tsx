@@ -2178,6 +2178,26 @@ describe('the layers lesson’s check', () => {
     expect(on('actors/ground')).toEqual(['main']);
   });
 
+  it('follows a Hero who is on the map, from a camera under `define world`', async () => {
+    // The camera is told whom to follow as the world is built. The Hero is a
+    // placement, and the map is loaded before the rows, so there is a Hero to
+    // be told about (specs/MAP_BEFORE_ROWS_PLAN.md). Loaded after them, the
+    // camera followed nobody and the view never moved.
+    const {world} = await compileProject(projectFiles(lesson.source));
+    const {samples} = playCheck(world, {
+      probes: {view: {kind: 'cameras'}},
+      trace: Array.from({length: 8}, () => ({
+        hold: ['ArrowRight'],
+        seconds: 0.5,
+      })),
+    });
+    const at = (index: number) =>
+      (
+        (samples.view ?? []).at(index) as Array<{active: boolean; x: number}>
+      ).find(camera => camera.active)!.x;
+    expect(at(-1)).toBeGreaterThan(at(0) + 100);
+  });
+
   it('refuses a fixed score with the hills left behind', async () => {
     const {passes} = await check('place/layers', onTheMap({fixed: true}));
     expect(passes).toBe(false);

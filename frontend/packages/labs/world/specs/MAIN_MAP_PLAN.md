@@ -13,8 +13,10 @@ before building, each commit as it lands, and what was decided or learned.
 - **The main map, in the world's file.** A `.world` gains a `map` beside its
   `blocks`: the same shape a `.map` holds — size, tile, placements each with
   an optional workspace. The generator compiles it into the world module and
-  loads it after the world's own rows, so it draws over whatever `load map`
-  rows placed. A world with no `map`, or an empty one, compiles as it did.
+  loaded it after the world's own rows, so it drew over whatever `load map`
+  rows placed. (Since reversed: it loads BEFORE the rows, so a row can name
+  a placement — specs/MAP_BEFORE_ROWS_PLAN.md.) A world with no `map`, or
+  an empty one, compiles as it did.
 - **The world editor.** Opening a `.world` opens the map editor on its main
   map. A switch at the top shows two views of the one file: Map, the canvas,
   palette and inspector; World, today's Blockly workspace. Both write the
@@ -39,7 +41,9 @@ before building, each commit as it lands, and what was decided or learned.
   file editor must carry the key through its own saves, which is one merge
   at the one place it reads a workspace back. MAPS.md §1's constraint — the
   arrangement of a world's own actors lives in the world's file — holds.
-- **The main map loads after the world's rows.** `use rule` must precede any
+- **The main map loads after the world's rows.** (REVERSED since, for the
+  reason this paragraph did not weigh: a row could not name a placement.
+  specs/MAP_BEFORE_ROWS_PLAN.md.) `use rule` must precede any
   load, and the rows chained under `define world` may hold `load map`s of
   their own; the main map's load is emitted after the whole root chain, so
   rules are in force and the main map draws over a loaded level, which is

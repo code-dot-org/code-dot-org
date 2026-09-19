@@ -1410,9 +1410,11 @@ const layers: WorldScenario = {
           placed('Hill3', 720, 272),
         ]),
         placeInMap(actorPath('score'), [placed('Score', 60, 30)]),
-        // The Hero stays a block: the camera below names who it follows when
-        // the world is built, which is before the map is loaded.
-        addActor(actorPath('hero'), [placeAt(160, 272)]),
+        // …and the Hero, whom the camera below is told to follow as the world
+        // is built. The map is loaded before these rows, so the Hero is there
+        // to be named (specs/MAP_BEFORE_ROWS_PLAN.md); until it was, this one
+        // actor had to stay a block.
+        placeInMap(actorPath('hero'), [placed('Hero', 160, 272)]),
         chaseCamera('hero'),
         {type: 'world_use_camera', fields: {CAMERA: 'camera:chase'}},
       ],

@@ -260,8 +260,9 @@ export const LEVEL1_ACTORS = [
 // rules and animations are emitted before the map is loaded, because loading
 // builds the World and a rule arriving after it is too late (WorldBuilder
 // throws rather than quietly dropping it). The rows under `define world` run
-// before the map is loaded too, so the target below is set on a world with
-// nothing in it yet, which is all it needs.
+// AFTER the map is loaded, so a row can name what the map placed
+// (specs/MAP_BEFORE_ROWS_PLAN.md); the target below names nothing, and would
+// do as well either side.
 const MAIN_WORLD = JSON.stringify(
   {
     blocks: {

@@ -6263,6 +6263,21 @@ const worldLoadMap = defineBlock({
 // Each body block targets the `const world` the root binds, mirroring the actor
 // pattern.
 
+/**
+ * A row's code, or nothing: lifted into the world block's prologue when the
+ * row is being generated under `define world`, which is when it has to
+ * precede the main map's placements (see `world_world`). Anywhere else the
+ * code is returned as it is.
+ */
+const hoistedInWorld = (generator: unknown, code: string): string => {
+  const hoist = (generator as {__worldHoist?: string[]}).__worldHoist;
+  if (!hoist) {
+    return code;
+  }
+  hoist.push(code);
+  return '';
+};
+
 const worldWorld = defineBlock({
   type: 'world_world',
   // The `with` is a word waiting for a field: the rules button is appended
@@ -6293,7 +6308,18 @@ const worldWorld = defineBlock({
         'world_lab',
         `import * as WorldLab from 'world-lab';`,
       );
+      // ROWS THAT MUST PRECEDE THE FIRST PLACEMENT are lifted out of the body
+      // as it is generated, into this list, and emitted with the prologue
+      // below. The main map is loaded between the prologue and the body
+      // (specs/MAP_BEFORE_ROWS_PLAN.md), so the first placement is no longer
+      // wherever the first `add actor` row sits: it is before every row. A
+      // `use rule` row is the one such row there is — `WorldBuilder` refuses
+      // a rule once an actor exists — and a world does not need one, but a
+      // world may have one. Layers are lifted the same way, by `layerPlan`.
+      const hoisted: string[] = [];
+      (generator as {__worldHoist?: string[]}).__worldHoist = hoisted;
       const body = nextChainCode(block, generator);
+      (generator as {__worldHoist?: string[]}).__worldHoist = undefined;
       // EVERY `.rule` THE PROJECT HOLDS, in play. Exactly the argument the
       // animations below have always made — a file is not a thing a world opts
       // into, it is a thing the project HAS — and it took a while to see that
@@ -6421,16 +6447,26 @@ const worldWorld = defineBlock({
       // second walk over live blocks that could drift from it — the same
       // bargain `__ruleModule` makes two lines below the same seam.
       const own = (generator as {__worldOwn?: string}).__worldOwn ?? '';
+      // THE MAIN MAP, loaded HERE: after everything that has to precede a
+      // placement, and before the rows, so that a row can name what the map
+      // placed — a camera told to follow `any ⟨Hero⟩`, a `set … of the
+      // ⟨Hero⟩`. It was after the rows, where no row could. What the rows
+      // place is then drawn over what the map placed. Compiled by the
+      // generator before this block runs and handed over on it, as the
+      // map's layers are (`BlocklyGenerator`, `assembleMainMap`).
+      const mainMap = (generator as {__mainMap?: string}).__mainMap ?? '';
       return (
         `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
           name,
         )}});\n` +
         own +
         rules +
+        hoisted.join('') +
         animations +
         maps +
         imageSizes +
         layers +
+        mainMap +
         body
       );
     },
@@ -6628,11 +6664,17 @@ const worldUseRule = defineBlock({
           `mod:${modulePath}`,
           `import ${importVar(modulePath)} from ${str(modulePath)};`,
         );
-        return `world.useRules([${importVar(modulePath)}]);\n`;
+        return hoistedInWorld(
+          generator,
+          `world.useRules([${importVar(modulePath)}]);\n`,
+        );
       }
       const exportName =
         located?.source === 'builtin' ? located.exportName : rule;
-      return `world.useRules([WorldLab.${exportName}]);\n`;
+      return hoistedInWorld(
+        generator,
+        `world.useRules([WorldLab.${exportName}]);\n`,
+      );
     },
   },
 });

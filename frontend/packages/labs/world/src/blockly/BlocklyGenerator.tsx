@@ -521,6 +521,11 @@ export const BlocklyGenerator = forwardRef<
         // its own (`mainMapLayers`). Cleared for every other kind of file.
         (generator as {__mainMapLayers?: unknown}).__mainMapLayers =
           shape === 'world' ? mainMapLayersOf(contents) : [];
+        // …and the main map ITSELF, which the world block loads between its
+        // prologue and its rows, so a row can name a placement
+        // (specs/MAP_BEFORE_ROWS_PLAN.md).
+        (generator as {__mainMap?: string}).__mainMap =
+          shape === 'world' ? (mainMap?.code ?? '') : '';
         // The world block emits these itself, right after `const world` and
         // before its body — the body is what reads them (`world_world`).
         (generator as {__worldOwn?: string}).__worldOwn = ownWorld
@@ -539,11 +544,7 @@ export const BlocklyGenerator = forwardRef<
         }
         return generator.finish(
           shape === 'world'
-            ? assembleWorldModule(
-                generated,
-                worldEventsRef.current,
-                mainMap?.code,
-              )
+            ? assembleWorldModule(generated, worldEventsRef.current)
             : assembleActorModule(
                 generated,
                 ownActor ? ownPropertyDeclarations(ownActor) : '',

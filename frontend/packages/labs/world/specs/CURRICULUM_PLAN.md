@@ -147,10 +147,10 @@ over.
 
 - The other three `editor` grants gate nothing: a gated learner can open
   the animation, effect and image editors before the tiles that grant them.
-- A row under `define world` cannot name a main-map placement, since the
-  map loads after the rows. `place/layers` works round it; a camera that
-  follows a placement wants either the map loaded first or the follow
-  resolved late.
+- (Built since: the main map loads before the rows, and `place/layers`'
+  Hero is on the map. specs/MAP_BEFORE_ROWS_PLAN.md. Before that, a row
+  under `define world` could not name a main-map placement, and the lesson
+  kept its Hero a block to work round it.)
 - `place/layers` still teaches a layer fixed to the screen (`fit`), not a
   Viewport with the interface outside it. MAP_FIRST.md retires `fit` when
   lessons teach the Viewport for an interface; they do not yet.

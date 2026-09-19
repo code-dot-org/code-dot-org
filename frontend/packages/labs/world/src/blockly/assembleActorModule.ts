@@ -80,13 +80,6 @@ export function assembleWorldModule(
    * an actor's, which is where every hat went before the split.
    */
   worldEventTypes: ReadonlySet<string> = new Set(),
-  /**
-   * The world's MAIN MAP, compiled — see {@link assembleMainMap} — or nothing
-   * for a world that holds none. Emitted after the world block's own code
-   * and before the world's hats: the rules are in force by then, any `load
-   * map` rows have placed theirs, and the main map draws over them.
-   */
-  mainMap = '',
 ): string {
   const world = blocks.find(block => block.type === 'world_world');
   // Tween definitions, hoisted for exactly the reason local actors are: they
@@ -118,10 +111,11 @@ export function assembleWorldModule(
     .map(block => block.code)
     .concat(onActors.map(block => block.code))
     .join('');
+  // The world's MAIN MAP is not here: the world block loads it itself,
+  // between its prologue and its rows (`world_world`), so that a row can
+  // name what the map placed (specs/MAP_BEFORE_ROWS_PLAN.md).
   const worldCode =
-    (world ? world.code : '') +
-    (world ? mainMap : '') +
-    onWorld.map(block => block.code).join('');
+    (world ? world.code : '') + onWorld.map(block => block.code).join('');
   const restCode = rest.map(block => block.code).join('');
   return `${actorsCode}${worldCode}${restCode}export default world;\n`;
 }
