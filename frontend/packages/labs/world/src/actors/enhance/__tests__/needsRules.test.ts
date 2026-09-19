@@ -3,10 +3,12 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {DEFAULT_PROJECT, buildProject} from '../../../constants';
-import type {ProjectSpec} from '../../../constants';
-import {ENHANCEMENTS} from '../enhancements';
-import type {EnhanceTarget} from '../enhancements';
+import {
+  buildProject,
+  DEFAULT_PROJECT,
+  type ProjectSpec,
+} from '../../../constants';
+import {ENHANCEMENTS, type EnhanceTarget} from '../enhancements';
 import {rulesAddedBy} from '../needsRules';
 
 /** A project with one actor in it and no rules at all. */
