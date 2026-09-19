@@ -1,12 +1,19 @@
 import {buildAnswerTypeRouterSection} from '@cdo/apps/aiTutor/helpers/aiTutorPromptHelpers';
-import {DEFAULT_ANSWER_TYPES} from '@cdo/apps/weblab2/constants';
+import {
+  BUILDER_ANSWER_TYPES,
+  DEFAULT_ANSWER_TYPES,
+} from '@cdo/apps/weblab2/constants';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
+import builderPrompt from '@cdo/apps/weblab2/prompts/builder/builderPrompt.md';
+import builderPreReplyCheck from '@cdo/apps/weblab2/prompts/builder/preReplyCheck.md';
 import environmentPrompt from '@cdo/apps/weblab2/prompts/environment.md';
 import preReplyCheckAllowJs from '@cdo/apps/weblab2/prompts/preReplyCheckAllowJs.md';
 import preReplyCheckNoJs from '@cdo/apps/weblab2/prompts/preReplyCheckNoJs.md';
 import {
   ANSWER_TYPE_CONTRACTS,
   ANSWER_TYPE_TRIGGERS,
+  BUILDER_ANSWER_TYPE_CONTRACTS,
+  BUILDER_ANSWER_TYPE_TRIGGERS,
 } from '@cdo/apps/weblab2/prompts/promptMaps';
 import securityIntro from '@cdo/apps/weblab2/prompts/securityIntro.md';
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
@@ -42,6 +49,21 @@ const ANSWER_TYPE_GROUPS: AnswerTypeGroup[] = [
   {
     heading: '### Refusal Modes',
     answerTypes: ['refusal', 'refusalJavaScriptSnippets'],
+  },
+];
+
+const BUILDER_ANSWER_TYPE_GROUPS: AnswerTypeGroup[] = [
+  {
+    heading: '### Build Modes (produce code now)',
+    answerTypes: ['buildCSS', 'buildHTML', 'buildJavaScript', 'buildJSON'],
+  },
+  {
+    heading: '### Discussion Modes',
+    answerTypes: ['ask', 'debug', 'explainCode'],
+  },
+  {
+    heading: '### Refusal Mode',
+    answerTypes: ['refusal'],
   },
 ];
 
@@ -120,5 +142,61 @@ export const generateAiTutorPrompt = (
     contracts,
     '',
     (allowJs ? preReplyCheckAllowJs : preReplyCheckNoJs).trim(),
+  ].join('\n');
+};
+
+/**
+ * Prompt for authoring mode: a levelbuilder editing shared widget2 sources.
+ * Same environment and security sections as the tutor prompt, but the
+ * Socratic base, tutoring modes and JS refusals are replaced by a
+ * pair-programmer that builds what the author asks for.
+ */
+export const generateAiTutorBuilderPrompt = (widgetId?: string): string => {
+  const answerTypes: AiTutorAnswerType[] = [...BUILDER_ANSWER_TYPES, 'refusal'];
+  const triggers: Record<AiTutorAnswerType, string> = {
+    ...ANSWER_TYPE_TRIGGERS,
+    ...BUILDER_ANSWER_TYPE_TRIGGERS,
+  };
+  const contracts = answerTypes
+    .map(answerType =>
+      (
+        BUILDER_ANSWER_TYPE_CONTRACTS[answerType] ??
+        ANSWER_TYPE_CONTRACTS[answerType]
+      ).trim()
+    )
+    .join('\n\n');
+  const widgetSection = widgetId
+    ? [
+        '## Current widget',
+        `You are editing the shared widget \`${widgetId}\`. Its files are included with each message.`,
+        '',
+      ]
+    : [];
+
+  return [
+    environmentPrompt.trim(),
+    '',
+    buildSecuritySection(),
+    '',
+    builderPrompt.trim(),
+    '',
+    ...widgetSection,
+    '---',
+    '',
+    '## Mode Router (deterministic)',
+    'Choose exactly one mode per reply using these rules:',
+    '',
+    buildAnswerTypeRouterSection(
+      BUILDER_ANSWER_TYPE_GROUPS,
+      triggers,
+      answerTypes
+    ),
+    '',
+    '--------',
+    '## Mode Answer Contracts',
+    '',
+    contracts,
+    '',
+    builderPreReplyCheck.trim(),
   ].join('\n');
 };

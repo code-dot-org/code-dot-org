@@ -10,7 +10,10 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {WIDGET2_SOURCES} from '@cdo/apps/lab2/constants';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
   AppName,
@@ -27,11 +30,15 @@ import {
   DEFAULT_ANSWER_TYPES,
   TUTOR_MODE_TO_ANSWER_TYPE,
   WEBLAB2_EDITABLE_FILE_TYPES,
+  WEBLAB2_BUILDER_WELCOME_CHAT_MESSAGE,
   WEBLAB2_SUPPORTED_FILE_TYPES,
   WEBLAB2_WELCOME_CHAT_MESSAGE,
 } from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
-import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
+import {
+  generateAiTutorBuilderPrompt,
+  generateAiTutorPrompt,
+} from './helpers/aiTutorPromptGenerator';
 import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
 import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
@@ -133,7 +140,22 @@ const Weblab2View: React.FC<
     });
   }, [source, levelProperties.longInstructions, hasEdited, hasRun]);
 
+  // Authoring mode: a levelbuilder editing shared widget2 sources wants the
+  // tutor to build what they ask for, not teach. Start-sources editing is the
+  // natural next candidate for the same treatment.
+  const isLevelbuilder = useAppSelector(
+    state => state.currentUser.isLevelbuilder
+  );
+  const isAuthoringMode =
+    !!isLevelbuilder && getAppOptionsEditBlocks() === WIDGET2_SOURCES;
+
   const systemPrompt = useMemo(() => {
+    if (isAuthoringMode) {
+      const widgetId = queryParams('widget2');
+      return generateAiTutorBuilderPrompt(
+        typeof widgetId === 'string' ? widgetId : undefined
+      );
+    }
     let answerTypes: AiTutorAnswerType[] | undefined =
       levelProperties.aiTutorPromptSettings?.answerTypes;
     if (
@@ -151,7 +173,11 @@ const Weblab2View: React.FC<
       answerTypes,
       levelProperties.aiTutorPromptSettings?.answerTypeCustomizations
     );
-  }, [levelProperties.aiTutorMode, levelProperties.aiTutorPromptSettings]);
+  }, [
+    isAuthoringMode,
+    levelProperties.aiTutorMode,
+    levelProperties.aiTutorPromptSettings,
+  ]);
 
   // Since there's no run button in Weblab2, set it to true by default
   // to enable the Submit button on edit on submittable levels.
@@ -214,7 +240,11 @@ const Weblab2View: React.FC<
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
           tutorVideos={weblab2VideoFiles}
-          aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
+          aiTutorInitialWelcomeMessage={
+            isAuthoringMode
+              ? WEBLAB2_BUILDER_WELCOME_CHAT_MESSAGE
+              : WEBLAB2_WELCOME_CHAT_MESSAGE
+          }
           enableUserAddedSelectionContext={true}
         />
       )}

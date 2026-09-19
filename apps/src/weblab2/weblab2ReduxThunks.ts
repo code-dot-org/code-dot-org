@@ -7,10 +7,13 @@ import {
   AI_TUTOR_VERSION_ACTION_ACCEPT,
   Notification,
 } from '@cdo/apps/aichat/types/chatEvents';
+import {START_SOURCES, WIDGET2_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   markProjectEdited,
   setAiTutorVersionFiles,
+  setProjectSource,
   setProjectSourceBeforeAiTutorVersion,
   setSource,
   setViewingAiTutorVersion,
@@ -56,7 +59,12 @@ export const acceptAiTutorVersion = createAsyncThunk<
     const state = thunkAPI.getState();
     const sources = state.lab2Project.projectSources;
     const channelId = state.lab.channel?.id;
-    if (!channelId || !sources) {
+    // Levelbuilder edit modes (widget2 sources, start sources) have no channel;
+    // the workspace is written to the widget or level by the header Save button.
+    const isLevelbuilderEditMode = [START_SOURCES, WIDGET2_SOURCES].includes(
+      getAppOptionsEditBlocks() ?? ''
+    );
+    if (!sources || (!channelId && !isLevelbuilderEditMode)) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError(
@@ -103,6 +111,12 @@ export const acceptAiTutorVersion = createAsyncThunk<
     const updatedSources = {
       source: updatedSource,
     };
+    if (!channelId) {
+      // Nothing to version: apply the accepted files locally and let the
+      // levelbuilder decide when to Save.
+      thunkAPI.dispatch(setProjectSource(updatedSources));
+      return;
+    }
     // Save sources before AI Tutor version if there were any changes to the project since the last saved version.
     await thunkAPI.dispatch(
       setAndSaveProjectSources(
