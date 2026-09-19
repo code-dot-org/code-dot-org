@@ -1,12 +1,9 @@
+import {Challenge, ChallengeResponse} from '@code-dot-org/lesson-deep-dive';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengeBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeBox';
-import {
-  Challenge,
-  ChallengeResponse,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
