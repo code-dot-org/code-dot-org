@@ -1,3 +1,9 @@
+import {
+  ApiClientProvider,
+  createApiClient,
+  createKyTransport,
+  resolveCsrfToken,
+} from '@code-dot-org/core/api';
 import React from 'react';
 
 import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
@@ -16,8 +22,20 @@ $(document).ready(() => {
     return;
   }
   const tutorGalleryData = getScriptData('tutorGalleryData');
+  // Same-origin so the requests ride the page's cookies and dev proxies.
+  const apiClient = createApiClient(
+    createKyTransport({
+      baseUrl: window.location.origin,
+      credentials: 'same-origin',
+      getCsrfToken: resolveCsrfToken,
+      // HttpClient had no timeout; ky defaults to 10 seconds.
+      kyOptions: {timeout: false},
+    })
+  );
   createReactRoot(
-    <ChallengeGallery tutorGalleryData={tutorGalleryData} />,
+    <ApiClientProvider client={apiClient}>
+      <ChallengeGallery tutorGalleryData={tutorGalleryData} />
+    </ApiClientProvider>,
     document.getElementById('tutor-gallery-container')
   );
 });
