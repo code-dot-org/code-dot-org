@@ -62,7 +62,7 @@ working record, as before.
 ## Commits
 
 - `2e61e8d1f92` — this plan.
-- (next) — `world.properties` in the registry and the world inspector
+- `9a2456ad9f5` — `world.properties` in the registry and the world inspector
   marked; `place/position` and `memory/world-state`; the tests; the specs.
 
 ## Learned while building
