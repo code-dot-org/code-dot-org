@@ -2,11 +2,14 @@ module OverrideUpdateTrackedFields
   def update_tracked_fields(request)
     super
     if persisted? && id
+      event_type, authentication_option_id = Services::SignInAttribution.resolve(self, request)
       SignIn.create(
         user_id: id,
         anon_user_id: request.anon_user_id,
         sign_in_at: DateTime.now,
-        sign_in_count: sign_in_count
+        sign_in_count: sign_in_count,
+        event_type: event_type,
+        authentication_option_id: authentication_option_id
       )
     end
     if persisted? && id && current_sign_in_ip && UserGeo.find_by_user_id(id).nil?
