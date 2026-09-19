@@ -78,7 +78,7 @@ import {
 } from './misplacedBlocks';
 import {redrawLiveDropdowns} from './moduleOptions';
 import {
-  OPENABLE_EXTENSIONS,
+  fileIdForModule,
   setModuleOpener,
   setModuleOpeningOffered,
 } from './openModule';
@@ -230,33 +230,6 @@ function initialMemberKeys(
 ): MemberKey[] {
   const meta = modulePath ? parseRuleMeta(modulePath, contents) : undefined;
   return meta ? memberKeys(meta) : [];
-}
-
-/**
- * The file a module path names — `rules/gravity` → `rules/gravity.rule`.
- *
- * A module path has no extension, which is what makes it a module path: the
- * compiler's own resolution tries `.rule`, then `.js`, then `.ts`, and this
- * follows it so the file a block opens is the file the project would compile.
- *
- * `.map` is tried last and is not part of that resolution — a map is data a
- * world names, not a module anything imports. It is here because the open button opens
- * FILES, and a map has an editor like the rest.
- */
-function fileIdForModule(
-  source: MultiFileSource,
-  modulePath: string,
-): string | undefined {
-  for (const extension of OPENABLE_EXTENSIONS.map(kind => `.${kind}`)) {
-    const wanted = `${modulePath}${extension}`;
-    const found = Object.keys(source.files).find(
-      id => filePath(source, id) === wanted,
-    );
-    if (found) {
-      return found;
-    }
-  }
-  return undefined;
 }
 
 /** Parse a file's contents into workspace state; empty/invalid → a blank workspace. */

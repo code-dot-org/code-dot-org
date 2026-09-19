@@ -103,8 +103,17 @@ export type UnlockTarget =
  *   that say which placements have one (specs/MAP_SCRIPTS_PLAN.md).
  * - `map-layers`: a map's layers — the strip, a layer's inspector, and the
  *   layer a placement is on (specs/LAYERS_PLAN.md).
+ * - `map-enhance`, `map-open-kind`, `map-new-actor`: from the map to a KIND
+ *   — the Enhance checklist on the selected placement's kind, that kind's
+ *   own file, and the Actor Creator from the palette
+ *   (specs/KINDS_FROM_THE_MAP_PLAN.md).
  */
-export type Affordance = 'map-scripts' | 'map-layers';
+export type Affordance =
+  | 'map-scripts'
+  | 'map-layers'
+  | 'map-enhance'
+  | 'map-open-kind'
+  | 'map-new-actor';
 
 export type Unlock = UnlockTarget & {
   /**

@@ -22,7 +22,10 @@ vi.mock('../MapStage', () => ({
   MapStage: (props: {
     doc: MapDoc;
     onEditScript?: (id: string | undefined) => void;
-    canEditLayers?: boolean;
+    withheld?: ReadonlySet<string>;
+    kinds?: Record<string, {name: string}>;
+    onEnhanceKind?: (type: string) => void;
+    onOpenKind?: (type: string) => void;
     world?: {
       header: {name: string};
       onRename: (name: string) => void;
@@ -33,9 +36,20 @@ vi.mock('../MapStage', () => ({
       data-testid="stage"
       data-size={`${props.doc.size.width}x${props.doc.size.height}`}
       data-actors={props.doc.actors.length}
-      data-scripts={String(Boolean(props.onEditScript))}
-      data-layers={String(props.canEditLayers !== false)}
+      data-withheld={[...(props.withheld ?? [])].sort().join(' ')}
+      data-kinds={Object.entries(props.kinds ?? {})
+        .map(([type, kind]) => `${type}=${kind.name}`)
+        .join(' ')}
     >
+      <button
+        type="button"
+        onClick={() => props.onEnhanceKind?.('actors/coin')}
+      >
+        Enhance kind
+      </button>
+      <button type="button" onClick={() => props.onOpenKind?.('actors/coin')}>
+        Open kind
+      </button>
       <button type="button" onClick={() => props.onEditScript?.('a')}>
         Script
       </button>
@@ -139,12 +153,19 @@ const SOURCE: MultiFileSource = {
   openFiles: [],
 };
 
+const updateSources = vi.fn();
 vi.mock('@code-dot-org/lab/contexts', () => ({
   useSources: () => ({
     currentSources: {source: SOURCE},
-    updateSources: vi.fn(),
+    updateSources,
     sourcesEpoch: 0,
   }),
+}));
+
+/** The lab's Enhance seam, answered by nobody here: what was asked is the test. */
+const requestActorEnhance = vi.fn();
+vi.mock('../../actors/enhance/actorEnhance', () => ({
+  requestActorEnhance: (target: unknown) => requestActorEnhance(target),
 }));
 
 vi.mock('../../runtime/WorldRuntimeContext', () => ({
@@ -374,22 +395,53 @@ describe('over a world’s file', () => {
   });
 });
 
-describe('what a gated lab has got to', () => {
+describe('what a gated lab withholds', () => {
   const stage = () => screen.getByTestId('stage');
 
-  it('holds scripts and layers when nothing gates them', () => {
+  it('is nothing when nothing gates the lab', () => {
     shelf = undefined;
     open();
-    expect(stage()).toHaveAttribute('data-scripts', 'true');
-    expect(stage()).toHaveAttribute('data-layers', 'true');
+    expect(stage()).toHaveAttribute('data-withheld', '');
   });
 
-  it('withholds each until the shelf holds it', () => {
-    const held = new Set(['affordance:map-layers']);
+  it('is each affordance the shelf does not hold', () => {
+    const held = new Set(['affordance:map-layers', 'affordance:map-enhance']);
     shelf = {holds: unlock => held.has(`${unlock.kind}:${unlock.id}`)};
     open();
-    expect(stage()).toHaveAttribute('data-scripts', 'false');
-    expect(stage()).toHaveAttribute('data-layers', 'true');
+    expect(stage()).toHaveAttribute(
+      'data-withheld',
+      'map-new-actor map-open-kind map-scripts',
+    );
     shelf = undefined;
+  });
+});
+
+describe('from the map to a kind', () => {
+  it('tells the stage which kinds have a file, by the name each declares', () => {
+    open();
+    expect(screen.getByTestId('stage')).toHaveAttribute(
+      'data-kinds',
+      'actors/coin=Coin',
+    );
+  });
+
+  it('asks the lab for the Enhance checklist on that kind’s file', () => {
+    open();
+    fireEvent.click(screen.getByRole('button', {name: 'Enhance kind'}));
+    expect(requestActorEnhance).toHaveBeenCalledWith({
+      kind: 'actor',
+      path: 'actors/coin',
+      name: 'Coin',
+    });
+  });
+
+  it('makes the kind’s file the active tab', () => {
+    open();
+    fireEvent.click(screen.getByRole('button', {name: 'Open kind'}));
+    const written = updateSources.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+    };
+    expect(written.source.files['2'].active).toBe(true);
+    expect(written.source.files['3'].active).not.toBe(true);
   });
 });

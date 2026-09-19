@@ -711,37 +711,108 @@ describe('what a gated lab withholds', () => {
     ...doc(),
     layers: [{id: 'sky'}, {id: 'main'}],
   });
+  const select = (canvas: HTMLCanvasElement, map: MapDoc) => {
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+  };
 
   it('offers no way into a script without `onEditScript`, nor the marks’ toggle', () => {
     const map = doc();
     const {canvas, ...view} = mount(map);
-    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
-    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    select(canvas, map);
     expect(view.queryByRole('button', {name: 'Script'})).toBeNull();
     expect(view.queryByRole('button', {name: 'Icons'})).toBeNull();
   });
 
-  it('shows the layer strip and a placement’s Layer unless told not to', () => {
+  it('draws a withheld Script disabled rather than leaving it out', () => {
+    // A learner looking round can tell what is not theirs yet from what does
+    // not exist (specs/KINDS_FROM_THE_MAP_PLAN.md).
+    const map = doc();
+    const onEditScript = vi.fn();
+    const {canvas, ...view} = mount(map, {
+      onEditScript,
+      mapScriptLabel: 'Map script',
+      withheld: new Set(['map-scripts'] as const),
+    });
+    select(canvas, map);
+    const script = view.getByRole('button', {name: 'Script'});
+    expect(script).toBeDisabled();
+    expect(script).toHaveAttribute('title', 'Not unlocked yet');
+    expect(view.getByRole('button', {name: 'Map script'})).toBeDisabled();
+    // The toggle is about the marks of scripts nobody here can open.
+    expect(view.queryByRole('button', {name: 'Icons'})).toBeNull();
+    fireEvent.click(script);
+    expect(onEditScript).not.toHaveBeenCalled();
+  });
+
+  it('shows the layer strip and a placement’s Layer unless withheld', () => {
     const map = layered();
     const {canvas, ...view} = mount(map);
     expect(view.getByTestId('layer-panel')).toBeInTheDocument();
-    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
-    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    select(canvas, map);
     expect(
       view.container.querySelector('select[name="actor-layer"]'),
     ).not.toBeNull();
   });
 
-  it('hides both with `canEditLayers` off, and leaves the map as it is', () => {
+  it('keeps the strip’s place when layers are withheld, and leaves the map as it is', () => {
     const map = layered();
-    const {canvas, onDocChange, ...view} = mount(map, {canEditLayers: false});
+    const {canvas, onDocChange, ...view} = mount(map, {
+      withheld: new Set(['map-layers'] as const),
+    });
     expect(view.queryByTestId('layer-panel')).toBeNull();
-    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
-    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+    expect(view.getByTestId('layer-panel-locked')).toHaveTextContent('Layers');
+    select(canvas, map);
     expect(
       view.container.querySelector('select[name="actor-layer"]'),
     ).toBeNull();
     expect(onDocChange).not.toHaveBeenCalled();
+  });
+});
+
+describe('from a placement to its kind', () => {
+  const kinds = {'actors/coin': {name: 'Coin'}};
+  const select = (canvas: HTMLCanvasElement, map: MapDoc) => {
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
+  };
+
+  it('offers Enhance and Open, named for the kind, and says which kind', () => {
+    const map = doc();
+    const onEnhanceKind = vi.fn();
+    const onOpenKind = vi.fn();
+    const {canvas, ...view} = mount(map, {kinds, onEnhanceKind, onOpenKind});
+    select(canvas, map);
+
+    fireEvent.click(view.getByRole('button', {name: 'Enhance Coin…'}));
+    expect(onEnhanceKind).toHaveBeenCalledWith(map.actors[0].type);
+    fireEvent.click(view.getByRole('button', {name: 'Open Coin'}));
+    expect(onOpenKind).toHaveBeenCalledWith(map.actors[0].type);
+  });
+
+  it('offers neither for a kind with no file of its own', () => {
+    const map = doc();
+    const {canvas, ...view} = mount(map, {
+      kinds: {},
+      onEnhanceKind: vi.fn(),
+      onOpenKind: vi.fn(),
+    });
+    select(canvas, map);
+    expect(view.queryByRole('button', {name: /^Enhance/})).toBeNull();
+    expect(view.queryByRole('button', {name: /^Open/})).toBeNull();
+  });
+
+  it('draws each disabled when withheld, and Enhance when read-only', () => {
+    const map = doc();
+    const {canvas, ...view} = mount(map, {
+      kinds,
+      onEnhanceKind: vi.fn(),
+      onOpenKind: vi.fn(),
+      withheld: new Set(['map-enhance', 'map-open-kind'] as const),
+    });
+    select(canvas, map);
+    expect(view.getByRole('button', {name: 'Enhance Coin…'})).toBeDisabled();
+    expect(view.getByRole('button', {name: 'Open Coin'})).toBeDisabled();
   });
 });
 

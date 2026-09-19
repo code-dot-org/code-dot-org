@@ -365,6 +365,9 @@ const unlockIcon = (unlock: Unlock): string => {
 const AFFORDANCE_NAMES: Record<Affordance, string> = {
   'map-scripts': 'Scripts on a map',
   'map-layers': 'Layers in a map',
+  'map-enhance': 'Abilities, from the map',
+  'map-open-kind': 'An actor’s blocks, from the map',
+  'map-new-actor': 'New actors, from the map',
 };
 
 /**

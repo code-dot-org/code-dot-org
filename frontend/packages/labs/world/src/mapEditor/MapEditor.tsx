@@ -11,16 +11,18 @@
 
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import {activateFile, type CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
 import {actorIconImage} from '../blockly/actorIcons';
 import {label} from '../blockly/label';
 import {placementKey} from '../blockly/mapPlacements';
+import {fileIdForModule} from '../blockly/openModule';
 import {
   projectActorOptions,
   projectMapActorTypes,
@@ -28,6 +30,7 @@ import {
 } from '../blockly/projectModules';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import {useMaybeProgression} from '../progression/progressionContext';
+import type {Affordance} from '../progression/types';
 import {agreedViewSize} from '../runtime/declaredSizes';
 import {browserTextMetrics} from '../runtime/driver/textMetrics';
 import type {ActorSchema} from '../runtime/messages';
@@ -77,6 +80,15 @@ export interface MapEditorProps extends CustomEditorProps {
   onOpenMapScript?: () => void;
 }
 
+/** What the shelf may withhold in the map editor, each asked for by name. */
+const MAP_AFFORDANCES: readonly Affordance[] = [
+  'map-scripts',
+  'map-layers',
+  'map-enhance',
+  'map-open-kind',
+  'map-new-actor',
+];
+
 export const MapEditor = ({
   fileId,
   initialContents,
@@ -86,22 +98,67 @@ export const MapEditor = ({
   onOpenMapScript,
 }: MapEditorProps) => {
   const {getActorInfo, hasCompiled} = useWorldRuntime();
-  const {currentSources, sourcesEpoch} = useSources<MultiFileSource>();
-  // What a gated lab has got to (specs/CURRICULUM_PLAN.md). With no
-  // progression, or an ungated one, both are held. A gate hides the control
-  // and nothing else: a map that has scripts or layers draws and runs as it
-  // is, and the script view cannot be reached without its button.
+  const {currentSources, sourcesEpoch, updateSources} =
+    useSources<MultiFileSource>();
+  // What a gated lab withholds here (specs/CURRICULUM_PLAN.md,
+  // specs/KINDS_FROM_THE_MAP_PLAN.md). With no progression, or an ungated
+  // one, nothing is. A withheld control is drawn disabled beside the lesson
+  // that grants it, and nothing else changes: a map that has scripts or
+  // layers draws and runs as it is.
   const progression = useMaybeProgression();
-  const canScript =
-    progression?.holds({kind: 'affordance', id: 'map-scripts'}) ?? true;
-  const canLayer =
-    progression?.holds({kind: 'affordance', id: 'map-layers'}) ?? true;
+  const withheld = useMemo(
+    () =>
+      new Set(
+        MAP_AFFORDANCES.filter(
+          id => !(progression?.holds({kind: 'affordance', id}) ?? true),
+        ),
+      ),
+    [progression],
+  );
 
   const files = useMemo(
     () => projectFiles(currentSources.source),
     [currentSources],
   );
   const actorOptions = useMemo(() => projectActorOptions(files), [files]);
+
+  /**
+   * The kinds with a file of their own, and what each calls itself — what
+   * `Enhance ⟨Hero⟩…` and `Open ⟨Hero⟩` say and act on. A world's own actor
+   * has no file to open and is not here.
+   */
+  const kinds = useMemo(
+    () =>
+      Object.fromEntries(
+        actorOptions
+          .filter(([, path]) => fileIdForModule(currentSources.source, path))
+          .map(([name, path]) => [path, {name}]),
+      ),
+    [actorOptions, currentSources],
+  );
+  /** The Enhance checklist on a kind, asked of the lab as the file menus ask. */
+  const enhanceKind = useCallback(
+    (type: string) => {
+      const kind = kinds[type];
+      if (kind) {
+        void requestActorEnhance({kind: 'actor', path: type, name: kind.name});
+      }
+    },
+    [kinds],
+  );
+  /** A kind's own file, made the active tab. */
+  const openKind = useCallback(
+    (type: string) => {
+      const fileId = fileIdForModule(currentSources.source, type);
+      if (fileId) {
+        updateSources({
+          ...currentSources,
+          source: activateFile(currentSources.source, fileId),
+        });
+      }
+    },
+    [currentSources, updateSources],
+  );
   const worldPath = useMemo(
     () => projectWorldOptions(files)[0]?.[1] ?? '',
     [files],
@@ -551,20 +608,19 @@ export const MapEditor = ({
         scales={scales}
         isReadOnly={isReadOnly}
         visible={visible}
-        onEditScript={
-          canScript
-            ? id => {
-                if (id !== undefined) {
-                  setScript({kind: 'placement', id});
-                } else if (document.hasMapScript) {
-                  setScript({kind: 'map'});
-                } else {
-                  onOpenMapScript?.();
-                }
-              }
-            : undefined
-        }
-        canEditLayers={canLayer}
+        onEditScript={id => {
+          if (id !== undefined) {
+            setScript({kind: 'placement', id});
+          } else if (document.hasMapScript) {
+            setScript({kind: 'map'});
+          } else {
+            onOpenMapScript?.();
+          }
+        }}
+        withheld={withheld}
+        kinds={kinds}
+        onEnhanceKind={enhanceKind}
+        onOpenKind={openKind}
         mapScriptLabel={document.hasMapScript ? 'Map script' : 'World'}
         world={worldInspector}
         mapChoices={mapChoices}

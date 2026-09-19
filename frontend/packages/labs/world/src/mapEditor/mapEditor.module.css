@@ -237,6 +237,16 @@
   text-transform: capitalize;
 }
 
+/* What is about the selected placement's KIND rather than about it: Enhance
+   and Open, side by side, wrapping under each other in a narrow inspector. A
+   lesson link for a withheld one takes a line of its own. */
+.inspectorKind {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+
 /* The vector pairs (Pos X/Y, Scale X/Y) two-up, each half width. */
 .inspectorGrid {
   display: grid;

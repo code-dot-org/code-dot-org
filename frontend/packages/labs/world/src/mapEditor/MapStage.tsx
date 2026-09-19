@@ -31,6 +31,9 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import TextField from '@code-dot-org/component-library/textField';
 
 import {placementKey} from '../blockly/mapPlacements';
+import {LessonLink, unlockLesson} from '../progression/LessonLink';
+import {useMaybeProgression} from '../progression/progressionContext';
+import type {Affordance} from '../progression/types';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 
@@ -171,14 +174,23 @@ export interface MapStageProps {
   /** What the toolbar's way into the map's own workspace says. */
   mapScriptLabel?: string;
   /**
-   * Whether the map's LAYERS can be edited: the strip, a layer's inspector,
-   * a placement's Layer dropdown. On unless a gated lab has not got there
-   * (specs/CURRICULUM_PLAN.md). Off hides the controls and nothing else —
-   * the canvas draws the layers the map has, and a new placement lands on
-   * the default one. Scripts are withheld the same way, by `onEditScript`
-   * being absent.
+   * What a gated lab WITHHOLDS here (specs/CURRICULUM_PLAN.md,
+   * specs/KINDS_FROM_THE_MAP_PLAN.md). A withheld control is drawn, disabled,
+   * beside the lesson that grants it — so a learner looking round can tell
+   * what is not theirs yet from what does not exist — and nothing else
+   * changes: the canvas draws the layers and the marks the map has, and a
+   * new placement lands on the default layer.
    */
-  canEditLayers?: boolean;
+  withheld?: ReadonlySet<Affordance>;
+  /**
+   * The kinds that have a file of their own, by type, with the name each
+   * declares: what `Enhance ⟨Hero⟩…` and `Open ⟨Hero⟩` say and act on.
+   */
+  kinds?: Readonly<Record<string, {name: string}>>;
+  /** Open the Enhance checklist on a kind — its abilities, ticked. */
+  onEnhanceKind?: (type: string) => void;
+  /** Make a kind's own file the active tab. */
+  onOpenKind?: (type: string) => void;
   /**
    * The world this map is the main map of, shown in the inspector with
    * nothing selected (`WorldInspector`); absent for a `.map`.
@@ -231,7 +243,10 @@ export const MapStage = ({
   onDocChange,
   onDocPreview,
   onEditScript,
-  canEditLayers = true,
+  withheld,
+  kinds,
+  onEnhanceKind,
+  onOpenKind,
   mapScriptLabel = 'Map script',
   world,
   mapChoices,
@@ -270,6 +285,22 @@ export const MapStage = ({
    * crowded level.
    */
   const [showIcons, setShowIcons] = useState(true);
+
+  // What a gated lab withholds, and the lesson that grants each. Read here
+  // rather than handed down, since it is only words: outside a lab there is
+  // no progression, nothing is withheld, and every answer is "no".
+  const progression = useMaybeProgression();
+  const locked = (id: Affordance): boolean => withheld?.has(id) ?? false;
+  const lockedTitle = (id: Affordance): string | undefined => {
+    if (!locked(id)) {
+      return undefined;
+    }
+    const lesson = unlockLesson(progression, {kind: 'affordance', id});
+    return lesson ? `Unlocked by: ${lesson.title}` : 'Not unlocked yet';
+  };
+  /** The way to the lesson that grants a withheld thing, or nothing. */
+  const lessonLink = (id: Affordance) =>
+    locked(id) ? <LessonLink unlock={{kind: 'affordance', id}} locked /> : null;
   /**
    * The layer a new placement lands on, and the one the strip shows as
    * selected; and whether its inspector is open, which it is from a click on
@@ -476,6 +507,8 @@ export const MapStage = ({
   const selectedActor = selectedId
     ? (map.actors.find(a => a.id === selectedId) ?? null)
     : null;
+  /** The selected placement's kind, when it has a file of its own. */
+  const selectedKind = selectedActor ? kinds?.[selectedActor.type] : undefined;
   /** The layer whose inspector is open, if the map still has it. */
   const inspectedLayer = layersOf(map).find(
     layer => layer.id === selectedLayer,
@@ -1796,7 +1829,7 @@ export const MapStage = ({
         >
           Reset view
         </button>
-        {onEditScript && (
+        {onEditScript && !locked('map-scripts') && (
           // Only with scripts to show or hide: the marks are about them.
           <button
             type="button"
@@ -1811,13 +1844,24 @@ export const MapStage = ({
           <button
             type="button"
             className={styles.resetButton}
+            disabled={locked('map-scripts')}
+            title={lockedTitle('map-scripts')}
             onClick={() => onEditScript(undefined)}
           >
             {mapScriptLabel}
           </button>
         )}
       </div>
-      {canEditLayers && (
+      {locked('map-layers') ? (
+        // The strip's place, kept: a list nobody can use yet is still where
+        // layers will be, and says which lesson brings them.
+        <div className={styles.layers} data-testid="layer-panel-locked">
+          <Typography variant="subtitle2" component="span">
+            Layers
+          </Typography>
+          {lessonLink('map-layers')}
+        </div>
+      ) : (
         <LayerPanel
           layers={layersOf(map)}
           selected={selectedLayer}
@@ -1887,6 +1931,8 @@ export const MapStage = ({
               <Button
                 variant="text"
                 size="extraSmall"
+                disabled={locked('map-scripts')}
+                title={lockedTitle('map-scripts')}
                 onClick={() => onEditScript(selectedActor.id)}
               >
                 Script
@@ -1901,6 +1947,37 @@ export const MapStage = ({
               Delete
             </Button>
           </div>
+          {selectedKind && (onEnhanceKind || onOpenKind) && (
+            // About the KIND, and saying so: a placement is one of many, and
+            // a tick in Enhance or a block in its file changes them all.
+            <div className={styles.inspectorKind}>
+              {onEnhanceKind && (
+                <Button
+                  variant="text"
+                  size="extraSmall"
+                  disabled={isReadOnly || locked('map-enhance')}
+                  title={lockedTitle('map-enhance')}
+                  onClick={() => onEnhanceKind(selectedActor.type)}
+                >
+                  Enhance {selectedKind.name}…
+                </Button>
+              )}
+              {onOpenKind && (
+                <Button
+                  variant="text"
+                  size="extraSmall"
+                  disabled={locked('map-open-kind')}
+                  title={lockedTitle('map-open-kind')}
+                  onClick={() => onOpenKind(selectedActor.type)}
+                >
+                  Open {selectedKind.name}
+                </Button>
+              )}
+              {lessonLink('map-enhance')}
+              {lessonLink('map-open-kind')}
+            </div>
+          )}
+          {lessonLink('map-scripts')}
           <TextField
             name="actor-id"
             label="ID"
@@ -1913,7 +1990,7 @@ export const MapStage = ({
             onBlur={applyRename}
             onKeyDown={blurOnEnter}
           />
-          {canEditLayers && layersOf(map).length > 1 && (
+          {!locked('map-layers') && layersOf(map).length > 1 && (
             <SimpleDropdown
               name="actor-layer"
               labelText="Layer"
