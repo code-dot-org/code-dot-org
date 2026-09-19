@@ -54,7 +54,7 @@ gate does not reach.
 ## Commits
 
 - `dfff959ec96` — this plan.
-- (next) — what a row would take; the checklist's gate; the tests.
+- `4b0f5440992` — what a row would take; the checklist's gate; the tests.
 
 ## Learned while building
 
