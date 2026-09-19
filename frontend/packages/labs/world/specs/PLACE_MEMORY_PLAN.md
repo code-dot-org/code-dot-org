@@ -106,8 +106,12 @@ working record, as before.
 
 ## What to look at in the browser
 
-`place/position`: three Markers in a heap should be three things to drag
-apart, and each one's **Pos X** and **Pos Y** should follow the drag and
-take a typed number. `memory/world-state`: after declaring **lives**, the
-Map tab with nothing selected should list it under the world's properties,
-and typing 5 there should be the same edit as changing the block's default.
+SEEN: a placement's **Pos X** and **Pos Y** follow a drag, which is what
+`place/position` step two rests on — dragging and typing being the same thing
+said two ways.
+
+Still to look at. `place/position`: typing an exact number into one of those
+fields should move the Marker, which is the other half of the same claim.
+`memory/world-state`: after declaring **lives**, the Map tab with nothing
+selected should list it under the world's properties, and typing 5 there
+should be the same edit as changing the block's default.
