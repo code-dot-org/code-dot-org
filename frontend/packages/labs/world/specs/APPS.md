@@ -1,0 +1,169 @@
+# Assessment: apps in this engine, and a progression for them
+
+STATUS: PROPOSED. Nothing here is built. What it would take for World Lab
+to build a mobile APP rather than a game, what the lab already has, what is
+missing in the order it blocks, and what a separate progression for app
+design would cost. Written when the curriculum work was put aside in favour
+of the engine.
+
+## Why this is a fair question and not a new lab
+
+The lab's interface half is further along than a game engine's usually is,
+because of one decision made early: **an interface element is an actor**
+(specs/UI_ACTORS.md). There is no widget layer, no DOM, no second scene
+graph. What follows from it is most of an app builder already:
+
+- **Eleven interface kinds are built**: Label, Button, Panel, Text Input,
+  Text Area, Dropdown, Toggle, Slider, Progress Bar, Speech Box, Viewport
+  (`src/actors/stock/`). Each is an `.actor` a learner can open and change.
+- **A screen is a map.** `load map` puts one over what is there, `load map
+⟨…⟩ into ⟨…⟩` replaces what a Viewport holds, `unload this map` takes one
+  away. The stock pause menu (`src/maps/stock/pauseMenu.ts`) is a panel, a
+  title and two buttons, each button carrying its own script — which is
+  exactly the shape of a screen in an app.
+- **A control carries its own behavior.** A placement's script is per-
+  instance blocks (specs/MAP_SCRIPTS_PLAN.md): "this button, this one, does
+  this". An app is mostly that.
+- **The map editor is a layout canvas.** Place, drag, and a field for every
+  property of every trait a kind elects — which is how a control is
+  configured.
+- **A phone shape already runs.** `set size of view to x ⟨10⟩ y ⟨18⟩ tiles`
+  is a block, and `src/fixtures/interfaceKit.ts` is that shape.
+- **Focus and tab order are a rule** (`tabNavigation`), with Escape
+  reserved, so keyboard access was designed in rather than bolted on.
+
+So "build an app here" is not a new engine. It is a different set of
+defaults and about six missing ideas.
+
+## What an app wants that a game does not
+
+1. **A shape it did not choose.** A game picks its view and the canvas is
+   letterboxed to it. An app meets whatever phone it is on.
+2. **Screens, and a way back.** Not "a menu over the level" but a stack
+   with a history.
+3. **Lists.** Most app screens are a repeated row over data.
+4. **Data that outlives the run.** A note-taking app that forgets is a
+   drawing of a note-taking app.
+5. **A finger.** Tap, drag, swipe, long press, scroll.
+6. **Text entry that behaves.** A hint, a kind, a "done", something that
+   says a value is wrong.
+
+## What is missing, in the order it blocks
+
+### 1. A finger
+
+`src/engine/core/pointer.ts` knows three MOUSE BUTTONS and nothing else.
+The driver reads `this.input.activePointer` once a frame: one pointer, no
+ids, no `addPointer`. The Mouse rule offers pressed, released and clicked;
+there is no drag, swipe, long press, double tap or hover, and the Slider
+fakes dragging by asking every frame whether the button is down.
+specs/UI_ACTORS.md says it plainly: "nothing in the lab has met a FINGER".
+
+This blocks everything else, because a control that cannot be dragged
+cannot be a list that scrolls. The smallest honest step is a pointer that
+reports where it came from and a rule that raises drag and swipe; multi-
+touch can wait, since one finger is what an app's controls use.
+
+### 2. Anchoring
+
+specs/UI_ACTORS.md defers layout on purpose — "No layout engine, and no
+anchoring to the viewport" — and names the exact trigger for building it:
+one interface shared between two worlds of different shapes. **An app is
+that trigger.** Its own proposed answer is worth keeping: an anchor on the
+interface layer's PLACEMENTS rather than on the actors, so a kind stays a
+kind and an arrangement says where it sits.
+
+Without it, an app authored on one phone is wrong on the next, and the
+canvas will not help: the view is fixed-aspect per world, so a narrow
+window scales the whole thing down rather than reflowing.
+
+### 3. A list that scrolls
+
+The only many-of-a-thing control is the Dropdown. There is no list view,
+no scroll view, no table. Value lists exist (`numbers`, `words`, `vectors`
+— specs/LISTS.md), so the data half is there; what is missing is a control
+that draws a row per item and scrolls. This is the single biggest gap in
+what an app can SHOW, and it needs the finger first.
+
+### 4. Data that survives
+
+There is none. specs/WORLD_STATE.md ends by saying so: "nothing here
+persists across a reload". Nothing in the engine, the blocks or the rules
+touches storage. The smallest step that makes apps honest is a world's own
+properties and value lists saved per project, and a block that says when to
+save.
+
+### 5. Navigation as an idea
+
+Screens exist as maps; "which screen is showing" is whatever maps are
+loaded, and there is no back. A stack — go to, go back, replace — is a
+rule over what already works, not new machinery.
+
+### 6. Text entry
+
+No placeholder, no input kind, no validity, no "done" or "next", no
+on-screen keyboard. On a phone the last one is not optional, and it is the
+piece most likely to be a real engine change rather than a rule.
+
+## What would NOT have to change
+
+Worth saying, because it is most of the lab: the file model, the actor
+model, rules and traits, the map editor, placement scripts, drawing,
+effects, sound, the sandbox, the generator. An app is a world with
+interface actors in it.
+
+## A progression for app design
+
+A separate catalogue, not more regions on this one: the audience arrives
+wanting a different thing, and the first lesson of a game ("a world with
+something in it") is not the first lesson of an app.
+
+Six regions, five or so tiles each, by the same shape the game tree has —
+foundations first, then what is built out of them:
+
+| Region         | What it is about                                        |
+| -------------- | ------------------------------------------------------- |
+| **Screen**     | a phone-shaped world; placing controls; anchoring       |
+| **Controls**   | label, button, field, toggle, slider, dropdown          |
+| **Navigation** | a screen is a map; going to one; coming back; a tab bar |
+| **Data**       | state; a list; a list view; saving it                   |
+| **Feel**       | touch, feedback, transitions, sound                     |
+| **Making**     | a control of one's own — an actor file, then a rule     |
+
+Every one of those depends on something in the missing list, except
+Controls, which could be written today.
+
+## What "separate" costs in the lab
+
+The progression module assumes ONE catalogue: `TILES` is imported by
+`progression/index.ts`, and `TILES_BY_ID`, `GRANTED_BY` and the shelf are
+module-level constants built from it; `progressStore` has one localStorage
+key; a level says whether it gates the shelf but never WHICH tree it is on.
+
+So a second progression means: the catalogue passed in rather than
+imported, the store keyed by which catalogue, and `levelData` naming one.
+Bounded, and touching most of the progression module's public surface. It
+is a day's work that should be done once, not twice.
+
+## Recommendation
+
+**Build the engine first, in this order**, and write the progression after:
+
+1. **The finger** — a pointer that knows it is a finger, and drag, swipe
+   and long press as a rule. Nothing else on this list is usable without
+   it, and it is also the thing that makes the EXISTING interface kit
+   honest on a phone.
+2. **Anchoring** — placements anchored to the interface layer's edges.
+3. **A list view** — a row per item of a value list, scrolling.
+4. **Saving** — world state and lists, per project.
+5. **Navigation** — go to, go back, over maps.
+6. **Text entry** — a hint, a kind, a done key; the on-screen keyboard
+   assessed on its own.
+
+Then the progression, and the parameterising that a second one needs.
+
+**One cheap thing worth doing first, whatever the order:** an APP template
+and a phone-shaped starter (`{kind: 'template', id: 'app'}` — every
+template today is a game genre). It costs a fixture, it makes the question
+concrete, and every item above can then be judged against a real app that
+somebody has tried to build.
