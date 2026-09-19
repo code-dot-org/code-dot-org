@@ -145,7 +145,7 @@ seen to work.
    inert with their lesson. BUILT (specs/KINDS_FROM_THE_MAP_PLAN.md).
 3. A pilot of three lessons, one of each kind: `origin/first-world` (map),
    `input/arrows` (map, with Enhance), `motion/gravity` (both). Seen in the
-   browser before going on.
+   browser before going on. BUILT (specs/PILOT_PLAN.md), not yet seen.
 4. The rest of Input, Motion, Look, Place and Memory by the table.
 5. The genres, by the same rule.
 

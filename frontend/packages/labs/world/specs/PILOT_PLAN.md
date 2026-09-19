@@ -1,9 +1,9 @@
 # Plan: a pilot of three lessons on the map (CANVAS_FIRST.md, step 3)
 
-STATUS: IN PROGRESS. The third build step of specs/CANVAS_FIRST.md: three
-lessons retold on the map, one of each kind the proposal's rule makes, to be
-seen in the browser before the other fifteen follow. The working record, as
-before.
+STATUS: BUILT, pending a look in the browser. The third build step of
+specs/CANVAS_FIRST.md: three lessons retold on the map, one of each kind the
+proposal's rule makes, to be seen in the browser before the other fifteen
+follow. The working record, as before.
 
 ## The three
 
@@ -52,8 +52,65 @@ before.
 
 ## Commits
 
-(recorded as they land)
+- `2107faf0d93` — this plan.
+- `2fdcdfa12b6` — the three lessons on the map; their tiles' words and
+  grants; their tests, each solved both ways; PROGRESSION.md.
 
 ## Learned while building
 
-(recorded as it happens)
+- **Not one check changed**, which was CANVAS_FIRST.md's claim and is now
+  a measurement. The three are outcome checks. A placement is an actor,
+  so "two actors drawn" counts a click on the map. Enhance writes `use
+trait` rows, so "the Hero falls and lands" is passed by two ticks. The
+  tests apply the real fold (`enhanceWith`) to the lesson's own project and
+  play the lesson's own check, and read the rows the ticks wrote.
+- **The old solutions still pass too.** A second Hero by `add actor`, the
+  two `use trait` rows by hand: each lesson keeps a test for the block
+  telling, since the World view is never locked and a learner who does it
+  there has done it.
+- **Two lessons stopped sending anybody to the toolbox.** The table of
+  blocks a lesson asks for (`toolboxShelf.test`) is empty for
+  `origin/first-world` and `input/arrows`. `motion/gravity` asks for a hat
+  and `print`, which is its blocks half.
+- **Enhance says more than the lesson does.** Its tick for four directions
+  elects three traits, the third being Reads the Keyboard, and its words
+  say "how fast it goes is a block in its file". The lesson names two of
+  the three rows and lets the third be found.
+- **The first lesson could not show a change of picture.** It asked for
+  one with one picture in the project. It has two now.
+
+## Not built, and known
+
+- Nothing pins a lesson's words to the editor's labels. These three say
+  "Enhance Hero…", "Open Hero", "the strip along the top", "Moves in all
+  four directions", "Falls when nothing holds it up", "Holds things up".
+  A renamed control or ability leaves a lesson pointing at nothing, and no
+  test would say so.
+- `input/arrows`' step four, pulling a row out and snapping it back, leaves
+  the lesson failing its check while the row is out. That is intended and
+  is what the row was for; it may still read as breakage to a learner who
+  presses Check then.
+- The genres and the other fifteen foundation lessons are as they were.
+
+## What to look at in the browser
+
+`origin/first-world`: it should open on the map with one Hero. Clicking
+Hero in the strip and then the map should place a second; `Open Hero`
+should bring `hero.actor` to the front, and changing `set sprite` there to
+the coin should change both when run. The check should pass with two on
+the map.
+
+`input/arrows`: `Enhance Hero…` should list "Moves in all four
+directions"; after ticking it the Hero should walk with the arrow keys, and
+`Open Hero` should show the rows it wrote. Dragging `use trait ⟨Moves
+Down⟩` aside should leave left and right working.
+
+`motion/gravity`: two ticks, one on the Hero and one on the Ground, should
+make it fall and land; painting more Ground should extend the floor; and
+`when ⟨this actor⟩ stops falling` should be in the Hero's toolbox under
+Gravity. In a gated lab opened on this lesson, Enhance should be usable
+although `input/arrows` has not been done.
+
+What to judge, beyond whether it works: whether the map is a better first
+screen than the workspace was, and whether opening blocks from a thing
+reads as natural or as a jump.
