@@ -62,6 +62,26 @@ const placed = (id: string, x: number, y: number) => ({
   properties: {positional: {position: {x, y}}},
 });
 
+/**
+ * …and one with a speed of its own: the field `motion/units` changes.
+ *
+ * Under `Can_Move`, the TRAIT's id rather than the Physics rule's, which is
+ * how a placement names a property (`World.loadInto` looks a placement's
+ * `owner.prop` up among the rules and traits in play).
+ */
+const movingAt = (
+  id: string,
+  x: number,
+  y: number,
+  velocity: {x: number; y: number},
+) => ({
+  id,
+  properties: {
+    positional: {position: {x, y}},
+    Can_Move: {velocity},
+  },
+});
+
 const firstWorld: WorldScenario = {
   // ON THE MAP, which is where a world starts (specs/CANVAS_FIRST.md,
   // specs/PILOT_PLAN.md). The task is an arrangement — a second Hero,
@@ -158,12 +178,16 @@ by itself: an actor has to *elect* what it offers.
 // ── motion/speed ─────────────────────────────────────────────────────────────
 
 const speed: WorldScenario = {
+  // ON THE MAP, THEN IN BLOCKS (specs/INPUT_MOTION_PLAN.md). Electing is
+  // what the lesson is ABOUT, so it keeps the row in front; what moves is
+  // the speed, which becomes a field on the one Hero the lesson has.
+  levelData: {worldView: 'map'},
   name: 'Speed is not a place',
   description: 'Moving by hand every frame, and the rule that replaces it.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(actorPath('hero'), [placeAt(40, 160)])],
+      rows: [placeInMap(actorPath('hero'), [placed('Hero', 40, 160)])],
       actors: [
         {
           id: 'hero',
@@ -223,20 +247,26 @@ const speed: WorldScenario = {
 ## Speed is not a place
 
 The Hero crosses the screen, and it does it the way everybody writes first:
-**every frame, put it two pixels further right**. Read the \`each frame\` under
-\`define actor ⟨Hero⟩\`, in the \`hero.actor\` tab, which is the whole of how
-it does it.
+**every frame, put it two pixels further right**. Press
+[Open Hero](#clickable=map.openKind:Hero) and read the \`each frame\` under
+\`define actor ⟨Hero⟩\`, which is the whole of how it does it.
 
 That works, and it is not how things move. It ties the speed to the frame rate,
 it cannot be pushed, and nothing else can affect it.
 
 ### What you do
 
-1. Add **use trait ⟨Can Move⟩** to the Hero — that is the Physics rule.
-2. Set its **speed** once, when the world starts.
-3. **Delete the whole \`each frame\` handler.** It should still cross the screen.
+1. In the Hero's blocks, add **use trait ⟨Can Move⟩** — that is the Physics
+   rule.
+2. Go back to the [Map](#clickable=view.map) and click the Hero. It has a
+   **Can Move** group in its properties now, with a **Velocity** in it. Put
+   **2** in the first box.
+3. **Delete the whole \`each frame\` handler** in the Hero's blocks. It should
+   still cross the screen.
 
 Nothing is moving it now. It has a speed, and having a speed is what moving is.
+The speed is on THAT Hero, not on Heroes: a second one placed beside it stands
+still until you give it one.
 `.trim(),
 };
 
@@ -698,13 +728,17 @@ and it is not an event — it is a block you can ask at any moment.
 // ── input/two-hands ──────────────────────────────────────────────────────────
 
 const twoHands: WorldScenario = {
+  // ON THE MAP, THEN IN BLOCKS (specs/INPUT_MOTION_PLAN.md). A tick in
+  // Enhance ADDS the second reading; taking the first off is a row deleted,
+  // which is the lesson's own sentence — never both — done by hand.
+  levelData: {worldView: 'map'},
   name: 'Two readings of four keys',
   description:
     'The same four keys as a walk, and as a ship. Elect one or the other, never both.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(actorPath('ship'), [placeAt(160, 160)])],
+      rows: [placeInMap(actorPath('ship'), [placed('Ship', 160, 160)])],
       actors: [
         {
           id: 'ship',
@@ -730,11 +764,16 @@ the way it is pointing.
 
 ### What you do
 
-1. Take **⟨Moves Across⟩** off the Ship and give it **⟨Driven by Arrow Keys⟩**
-   instead. Both at once is two rules fighting over the same four keys.
-2. Run it. Left and right turn; up thrusts; letting go leaves it coasting,
-   because nothing in space slows down.
-3. Add **⟨Slows Down⟩** and watch it become a car instead.
+1. Click the Ship and press [Enhance Ship…](#clickable=map.enhance:Ship). Tick
+   **Drives like a car**, and press **Enhance**.
+2. Run it. Left and right turn it AND walk it sideways: two rules reading the
+   same four keys, each doing exactly what it says. Both at once is neither.
+3. Press [Open Ship](#clickable=map.openKind:Ship) and delete the
+   **use trait ⟨Moves Across⟩** row. Run it again: left and right turn, up
+   thrusts, and letting go leaves it coasting, because nothing in space slows
+   down.
+4. Add **use trait ⟨Slows Down⟩** under the others and watch it become a car
+   instead.
 `.trim(),
 };
 
@@ -827,6 +866,9 @@ after you have let go.
 // ── motion/units ─────────────────────────────────────────────────────────────
 
 const units: WorldScenario = {
+  // ON THE MAP: the whole lesson is one number, and the number is a field on
+  // the one Ball it has (specs/INPUT_MOTION_PLAN.md).
+  levelData: {worldView: 'map'},
   name: 'Units per second',
   description:
     'A ball traveling far too fast, and the arithmetic that fixes it.',
@@ -834,7 +876,9 @@ const units: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(actorPath('ball'), [placeAt(16, 160), setVelocity(60, 0)]),
+        placeInMap(actorPath('ball'), [
+          movingAt('Ball', 16, 160, {x: 60, y: 0}),
+        ]),
       ],
       actors: [{id: 'ball', name: 'Ball', rows: BALL}],
     }),
@@ -844,25 +888,34 @@ const units: WorldScenario = {
   instructions: `
 ## Units per second
 
-The Ball is gone before you can see it. Its speed says **60**, and 60 is an
-enormous number here.
+The Ball is gone before you can see it. Click it on the map and open its
+**Can Move** group: its **Velocity** says **60** across, and 60 is an enormous
+number here.
 
 A speed is in **units per second**, and one unit is **100 pixels**. So 60 means
-six thousand pixels every second, and this world is only 384 across.
+six thousand pixels every second.
 
 The world is 10 tiles each way, and a tile is 32 pixels: **320 across**.
 
 ### What you do
 
-1. Work out the speed that crosses 384 pixels in **two seconds**, in units.
-2. Put it in the \`set speed\` block, in the world's \`add actor\`.
+1. Work out the speed that crosses 320 pixels in **two seconds**, in units.
+2. Type it into the Ball's **Velocity**, in the first box.
 3. Run it and count. If it arrives early, the number is too big.
+
+You changed nothing about what a Ball IS. The speed belongs to this one, the
+way its place on the map does.
 `.trim(),
 };
 
 // ── motion/drag ──────────────────────────────────────────────────────────────
 
 const drag: WorldScenario = {
+  // ON THE MAP, THEN IN BLOCKS (specs/INPUT_MOTION_PLAN.md): the push is a
+  // field on the Ball, and electing Slows Down is a row in its file — there
+  // is no Enhance row for Drag, and inventing one would put the engine's
+  // vocabulary in a checklist written to avoid it.
+  levelData: {worldView: 'map'},
   name: 'Coasting to a stop',
   description:
     'A ball that drifts forever, and the one trait that makes it a car.',
@@ -870,7 +923,9 @@ const drag: WorldScenario = {
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(actorPath('ball'), [placeAt(24, 160), setVelocity(2.5, 0)]),
+        placeInMap(actorPath('ball'), [
+          movingAt('Ball', 24, 160, {x: 2.5, y: 0}),
+        ]),
       ],
       // The wrap is what makes the first line of the instructions true. A
       // speed is in units a second and a unit is a hundred pixels
@@ -904,11 +959,17 @@ edges and keeps going, at exactly the speed it began with, forever.
 That is what having a speed MEANS — nothing takes it away unless something is
 written to. In space that is correct. On a road it is not.
 
+Click the Ball on the map and look at its **Can Move** group: the push it was
+given is a **Velocity** of 2.5, and nothing takes it away.
+
 ### What you do
 
-1. Give the Ball **use trait ⟨Slows Down⟩**.
+1. Press [Open Ball](#clickable=map.openKind:Ball) and add
+   **use trait ⟨Slows Down⟩**.
 2. Run it. It coasts to a halt instead of going round for ever.
 3. Find the trait's own numbers and make it slippery, then make it sticky.
+4. Change the Ball's **Velocity** on the map and watch how much further a
+   faster one gets before it stops.
 `.trim(),
 };
 

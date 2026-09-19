@@ -239,7 +239,7 @@ export const TILES: readonly Tile[] = [
     title: 'Two readings of four keys',
     teaches:
       'The same input can mean different things, and choosing which is a design decision.',
-    task: 'Walking, and steering a ship. Swap one for the other and feel the difference.',
+    task: 'Walking, and steering a ship. Add the second reading of the four keys with a tick, then take the first away by hand.',
     requires: ['input/mouse'],
     unlocks: [{kind: 'rule', id: 'drive'}],
     check: {
@@ -282,7 +282,7 @@ export const TILES: readonly Tile[] = [
     at: at('motion', 1, 0),
     title: 'Speed is not a place',
     teaches: 'Setting a position every frame is not how things move.',
-    task: 'An actor moved by a handler that runs every frame. Give it a velocity once instead, and delete the handler.',
+    task: 'An actor moved by a handler that runs every frame. Elect Can Move, give that one a speed in its properties, and delete the handler.',
     requires: ['origin/first-world'],
     unlocks: [{kind: 'rule', id: 'motion'}],
     check: {

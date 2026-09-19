@@ -258,7 +258,11 @@ describe('the view a lesson’s world opens on', () => {
     }
     expect(onTheMap.sort()).toEqual([
       'input/arrows',
+      'input/two-hands',
+      'motion/drag',
       'motion/gravity',
+      'motion/speed',
+      'motion/units',
       'origin/first-world',
       'place/layers',
       'place/map',

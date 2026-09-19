@@ -50,10 +50,15 @@ const ABOUT_A_KIND = new Set([
 ]);
 
 describe('Show me, in the lessons', () => {
-  it('is used by the lessons told on the map', () => {
+  it('is used by the lessons that name a control', () => {
+    // Not every lesson told on the map points: `motion/units` is one number
+    // in an inspector, and its own sentence says where.
     expect(pointing.sort()).toEqual([
       'input/arrows',
+      'input/two-hands',
+      'motion/drag',
       'motion/gravity',
+      'motion/speed',
       'origin/first-world',
     ]);
   });

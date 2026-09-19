@@ -68,12 +68,12 @@ and opens blocks for its second half.
 | `input/arrows`       | map    | Enhance ⟨Hero⟩: moves with the arrow keys; its speed is a field     |
 | `input/press`        | blocks | once per press is a handler: the first lesson to write one          |
 | `input/mouse`        | blocks | a reaction to a click is a handler                                  |
-| `input/two-hands`    | map    | swap one ability for another in Enhance                             |
-| `motion/speed`       | both   | velocity is a field; deleting the per-frame handler is blocks       |
+| `input/two-hands`    | both   | tick the second reading on in Enhance; delete the first's row       |
+| `motion/speed`       | both   | elect in blocks; the speed is a field on the placement              |
 | `motion/gravity`     | both   | Enhance: falls; paint ground. "Starts falling" is a hat             |
 | `motion/force`       | blocks | a push is an action in a handler                                    |
 | `motion/units`       | map    | one number, in the inspector                                        |
-| `motion/drag`        | map    | an ability and a field                                              |
+| `motion/drag`        | both   | the speed is a field; electing Drag is a row (no Enhance row)       |
 | `motion/tween`       | blocks | a tween is declared and played                                      |
 | `logic/*` (4)        | blocks | a condition is the definition of behavior                           |
 | `memory/variable`    | blocks |                                                                     |
@@ -94,8 +94,10 @@ and opens blocks for its second half.
 | `place/script`       | map    | BUILT; the first blocks a Place learner writes                      |
 | `place/camera` (2)   | blocks | until a world's camera is in its inspector (MAP_FIRST.md)           |
 
-Eighteen of thirty-three: twelve move and six half move. Logic does not
-move at all, which
+Eighteen of thirty-three: twelve move and six half move — a count made
+before any was built, and two of the twelve turned out to be half moves
+once it was clear what Enhance can and cannot do
+(specs/INPUT_MOTION_PLAN.md). Logic does not move at all, which
 is the decision's second line said as a region: Logic is where blocks are
 needed, and it is one step from Origin.
 
@@ -146,7 +148,8 @@ seen to work.
 3. A pilot of three lessons, one of each kind: `origin/first-world` (map),
    `input/arrows` (map, with Enhance), `motion/gravity` (both). Seen in the
    browser before going on. BUILT (specs/PILOT_PLAN.md), not yet seen.
-4. The rest of Input, Motion, Look, Place and Memory by the table.
+4. The rest of Input, Motion, Look, Place and Memory by the table. Input
+   and Motion are BUILT (specs/INPUT_MOTION_PLAN.md).
 5. The genres, by the same rule.
 
 ## Open

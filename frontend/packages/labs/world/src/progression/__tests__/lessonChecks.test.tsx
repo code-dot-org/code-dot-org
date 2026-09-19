@@ -411,6 +411,31 @@ describe('the speed lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
+  it('accepts a Hero whose speed is a field on the placement', async () => {
+    // How the lesson is told now (specs/INPUT_MOTION_PLAN.md): electing is a
+    // row in the Hero's file, and the speed is the Hero's own, typed into
+    // the map's inspector rather than set by a block.
+    const elected = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      without(actorIn(workspace, 'Hero'), 'world_trait_step');
+      return electing(
+        JSON.stringify(workspace),
+        'Physics#CanMoveTrait',
+        'Hero',
+      );
+    });
+    const solved = editing(elected, 'main.world', contents => {
+      const file = JSON.parse(contents) as {
+        map: {actors: Array<{properties: Record<string, unknown>}>};
+      };
+      file.map.actors[0].properties.Can_Move = {velocity: {x: 2, y: 0}};
+      return JSON.stringify(file);
+    });
+    const {passes, result} = await check('motion/speed', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
   it('accepts a Hero that moves because it has a speed', async () => {
     const solved = editing(lesson.source, 'main.world', contents => {
       // Drop the `each frame` that shuffles it along — a row of the Hero's,
@@ -823,6 +848,39 @@ describe('the two-hands lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
+  const SHIP = {kind: 'actor', path: 'actors/ship', name: 'Ship'} as const;
+  /** The tick the lesson asks for, through the fold Enhance itself uses. */
+  const driving = () =>
+    enhanceWith(lesson.source, SHIP, {picked: ['drives'], answers: {}});
+
+  it('refuses a Ship given the second reading with the first still on', async () => {
+    // Step two of the lesson, seen from the check: both rules read the same
+    // four keys, so holding left turns it AND walks it sideways.
+    const both = driving();
+    expect(projectFiles(both)['actors/ship.actor']).toContain(
+      'Arrow Drive#DrivenByArrowKeysTrait',
+    );
+    const {passes, result} = await check('input/two-hands', both);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(false);
+  });
+
+  it('accepts it once the walking row is deleted', async () => {
+    // Step three: the row that elects Moves Across comes out, by hand,
+    // because Enhance only ever adds (specs/INPUT_MOTION_PLAN.md).
+    const solved = editing(driving(), 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      without(actorIn(workspace, 'Ship'), 'world_use_trait');
+      return JSON.stringify(workspace);
+    });
+    expect(projectFiles(solved)['actors/ship.actor']).not.toContain(
+      'MovesAcrossTrait',
+    );
+    const {passes, result} = await check('input/two-hands', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
   it('accepts one that turns and thrusts', async () => {
     const solved = editing(lesson.source, 'main.world', contents =>
       electing(
@@ -899,12 +957,20 @@ describe('the units lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
+  /** The Ball's own speed, which is what the lesson's inspector changes. */
+  const goingAt = (across: number) =>
+    editing(lesson.source, 'main.world', contents => {
+      const file = JSON.parse(contents) as {
+        map: {actors: Array<{properties: {Can_Move: {velocity: {x: number}}}}>};
+      };
+      file.map.actors[0].properties.Can_Move.velocity.x = across;
+      return JSON.stringify(file);
+    });
+
   it('accepts the speed that crosses the world in two seconds', async () => {
     // 320 pixels in two seconds is 160 pixels a second, and a unit is a
     // hundred pixels: 1.6.
-    const solved = editing(lesson.source, 'main.world', contents =>
-      contents.replace('"x": 60', '"x": 1.6'),
-    );
+    const solved = goingAt(1.6);
     const {passes, result} = await check('motion/units', solved);
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
@@ -913,10 +979,7 @@ describe('the units lesson’s check', () => {
   it('refuses an answer that is out by a factor of a hundred', async () => {
     // The mistake the lesson exists to prevent: pixels per second, written
     // into a field that is counting units.
-    const inPixels = editing(lesson.source, 'main.world', contents =>
-      contents.replace('"x": 60', '"x": 160'),
-    );
-    const {passes} = await check('motion/units', inPixels);
+    const {passes} = await check('motion/units', goingAt(160));
     expect(passes).toBe(false);
   });
 });

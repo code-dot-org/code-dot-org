@@ -366,13 +366,14 @@ evidence, with its kind marked `[o]` outcome, `[t]` trace, `[s]` shape.
 
 ### Origin
 
-TOLD ON THE MAP, as `input/arrows` and `motion/gravity` are, in a pilot of
-what specs/CANVAS_FIRST.md proposes for the first lessons
-(specs/PILOT_PLAN.md): a task that is an arrangement, a value or an election
-is done on the canvas, and blocks are opened from the thing they are about
-when a lesson needs behavior. The checks did not change. Apart from these
-three and Place's three about the map, every lesson in these tables is
-still told in the workspace.
+TOLD ON THE MAP, by the rule specs/CANVAS_FIRST.md sets for every lesson: a
+task that is an arrangement, a value a thing holds, or an election is done
+on the canvas, and blocks are opened from the thing they are about when a
+lesson needs behavior. Ten lessons are told that way so far — this one, four
+in Input and Motion (specs/INPUT_MOTION_PLAN.md), Place's three about the
+map, and `input/arrows` and `motion/gravity` from the pilot
+(specs/PILOT_PLAN.md). No check changed for any of them. Everything else in
+these tables is still told in the workspace.
 
 | Tile                 | The lesson                                                                                                          | Unlocks                                                                                          | Check                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
@@ -387,18 +388,18 @@ The first thing anybody wants is for something to move when they press a key.
 | `input/arrows`    | A player that ignores you. Enhance it to move in all four directions, find the rows that wrote, change its speed.       | Arrow Keys rule; Enhance from the map          | `[o]` with right held for 1s the actor's x rises; with down held its y rises                       |
 | `input/press`     | A key HELD is not a key PRESSED. Make a lamp toggle once per press, not sixty times a second.                           | Input rule; `when key goes down`               | `[o]` a 1s hold toggles exactly once                                                               |
 | `input/mouse`     | The pointer is a place, and a click is an event. Move a crosshair to the pointer; make an actor react to being clicked. | Mouse rule; `Can Be Clicked`; `mouse position` | `[o]` after a scripted click on the actor its state changed; the crosshair tracks                  |
-| `input/two-hands` | Two readings of the same four keys: walking, and steering a ship. Swap one for the other and feel the difference.       | Arrow Drive rule                               | `[t]` both rules present across two saved states, or `[s]` the ship carries `Driven by Arrow Keys` |
+| `input/two-hands` | Two readings of the same four keys. Tick the second on, see them fight, and delete the row that elects the first.       | Arrow Drive rule                               | `[t]` both rules present across two saved states, or `[s]` the ship carries `Driven by Arrow Keys` |
 
 ### Foundation: Motion
 
-| Tile             | The lesson                                                                                                   | Unlocks                              | Check                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------- |
-| `motion/speed`   | Setting a position every frame is not how things move. Give the actor a velocity once and let it go.         | Physics rule; `Can Move`             | `[o]` position changes with no per-frame block in the workspace         |
-| `motion/units`   | A speed is units per second and a unit is 100 pixels. Make an actor cross the screen in exactly two seconds. | `pixels per unit`; the vector blocks | `[o]` the crossing takes 2s ± 0.2s on the scripted clock                |
-| `motion/force`   | A shove changes a speed; a speed changes a place. Push the actor with a force and watch the two steps.       | `apply force`                        | `[o]` velocity after the shove is within tolerance of the expected      |
-| `motion/drag`    | Nothing in space stops. Add Drag and turn a spaceship into a car.                                            | Drag rule                            | `[o]` speed decays below a tenth within the scripted window             |
-| `motion/gravity` | Down. Two ticks in Enhance and a painted floor; then a hat, to hear it land.                                 | Gravity rule; `Acts as Ground`       | `[o]` y rises then holds at the ground; `[t]` "stops falling" fired     |
-| `motion/tween`   | Movement described once and played wherever: a door that opens, a platform that slides.                      | `define tween`, `play tween`         | `[o]` the actor is at the tween's end position when it reports finished |
+| Tile             | The lesson                                                                                                         | Unlocks                              | Check                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------- |
+| `motion/speed`   | Setting a position every frame is not how things move. Elect Can Move, and give that one actor a speed of its own. | Physics rule; `Can Move`             | `[o]` position changes with no per-frame block in the workspace         |
+| `motion/units`   | A speed is units per second and a unit is 100 pixels. Make an actor cross the screen in exactly two seconds.       | `pixels per unit`; the vector blocks | `[o]` the crossing takes 2s ± 0.2s on the scripted clock                |
+| `motion/force`   | A shove changes a speed; a speed changes a place. Push the actor with a force and watch the two steps.             | `apply force`                        | `[o]` velocity after the shove is within tolerance of the expected      |
+| `motion/drag`    | Nothing in space stops. Add Drag and turn a spaceship into a car.                                                  | Drag rule                            | `[o]` speed decays below a tenth within the scripted window             |
+| `motion/gravity` | Down. Two ticks in Enhance and a painted floor; then a hat, to hear it land.                                       | Gravity rule; `Acts as Ground`       | `[o]` y rises then holds at the ground; `[t]` "stops falling" fired     |
+| `motion/tween`   | Movement described once and played wherever: a door that opens, a platform that slides.                            | `define tween`, `play tween`         | `[o]` the actor is at the tween's end position when it reports finished |
 
 ### Foundation: Logic
 
