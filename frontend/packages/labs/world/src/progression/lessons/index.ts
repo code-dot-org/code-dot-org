@@ -612,15 +612,22 @@ the entire view.
 // ── place/position ───────────────────────────────────────────────────────────
 
 const position: WorldScenario = {
+  // ON THE MAP, THEN A BLOCK (specs/PLACE_MEMORY_PLAN.md): a position is the
+  // inspector's own pair of numbers, and three Markers in a heap are three
+  // things to drag apart. A RANDOM place is worked out as the world is
+  // built, which no field can say, so the fourth Marker is a block.
+  levelData: {worldView: 'map'},
   name: 'x and y',
   description: 'Three markers in a heap, and three places to put them.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
       rows: [
-        addActor(actorPath('marker'), [placeAt(160, 160)]),
-        addActor(actorPath('marker'), [placeAt(160, 160)]),
-        addActor(actorPath('marker'), [placeAt(160, 160)]),
+        placeInMap(actorPath('marker'), [
+          placed('Marker', 160, 160),
+          placed('Marker2', 160, 160),
+          placed('Marker3', 160, 160),
+        ]),
       ],
       // A POST, which is what a marker is. Drawn as a coin, three of them in a
       // heap read as treasure to collect rather than as places, and the whole
@@ -641,10 +648,14 @@ down.
 
 ### What you do
 
-1. Put one Marker in the **top left** corner, one in the **bottom right**, and
-   leave one in the middle.
-2. Put a fourth somewhere **random** — there is a block for a whole place at
-   once, and it is the one a game actually wants.
+1. On the map, drag one Marker to the **top left** corner and another to the
+   **bottom right**. Leave the third in the middle.
+2. Click each one and read its **Pos X** and **Pos Y**. Dragging and typing
+   are the same thing said two ways; type an exact number into one and watch
+   it move.
+3. Put a fourth somewhere **random**. That one is a block, in the
+   [World](#clickable=view.world) tab: a random place is worked out as the
+   world is built, and there is nothing to type.
 `.trim(),
 };
 
@@ -6336,6 +6347,11 @@ thing that can happen.
    is in the Actor drawer, and it appeared the moment you declared it.
 3. Run it. Both say the same thing.
 4. Change the default to **5**. Both change, because there is one number now.
+
+The default has a field of its own: on the **Map** tab, with nothing selected,
+[the world's properties](#clickable=world.properties) are listed beside it and
+**lives** is one of them. Typing there and editing the block are the same
+edit — it is the world's one number either way.
 `.trim(),
 };
 
@@ -6357,6 +6373,13 @@ const actorState: WorldScenario = {
   // The Lamp is written out by hand rather than through the world spec's
   // `actors`, because it acts like the Label and declares nothing of its own
   // until the learner adds the property — which is the lesson.
+  //
+  // NOT ON THE MAP, and the reason is a constraint rather than a choice: the
+  // Lamps' text reads the WORLD's number, which an actor's own file cannot
+  // do — a `.actor` has no `world` to read, and importing the world that
+  // imports it would be a cycle. So the row that writes the text has to sit
+  // in the world's `add actor` body, and a placement has no room for one
+  // (specs/PLACE_MEMORY_PLAN.md).
   name: 'State an actor carries',
   description: 'Two Lamps that cannot tell each other apart.',
   source: lessonSource({

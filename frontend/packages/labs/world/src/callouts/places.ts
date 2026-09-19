@@ -116,6 +116,13 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
     'map.script',
     kind => `Script is at the top of the properties of ${kind}, beside Delete.`,
   ),
+  'world.properties': () => ({
+    mark: 'world.properties',
+    reveals: [onTheMap],
+    says:
+      'The world’s own properties are beside the map, with nothing ' +
+      'selected on it.',
+  }),
   'map.layers': () => ({
     mark: 'map.layers',
     reveals: [onTheMap],

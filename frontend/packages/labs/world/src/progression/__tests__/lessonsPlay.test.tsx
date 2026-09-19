@@ -268,6 +268,7 @@ describe('the view a lesson’s world opens on', () => {
       'origin/first-world',
       'place/layers',
       'place/map',
+      'place/position',
       'place/script',
     ]);
   });

@@ -62,7 +62,11 @@ export const WorldInspector = ({
   };
 
   return (
-    <div className={styles.inspector} data-testid="world-inspector">
+    <div
+      className={styles.inspector}
+      data-testid="world-inspector"
+      data-callout="world.properties"
+    >
       <div className={styles.inspectorHead}>
         <Typography variant="subtitle2" component="span">
           World

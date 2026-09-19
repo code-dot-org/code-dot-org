@@ -58,10 +58,12 @@ describe('Show me, in the lessons', () => {
       'input/two-hands',
       'look/background',
       'look/sprite',
+      'memory/world-state',
       'motion/drag',
       'motion/gravity',
       'motion/speed',
       'origin/first-world',
+      'place/position',
     ]);
   });
 

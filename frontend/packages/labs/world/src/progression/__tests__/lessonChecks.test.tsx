@@ -461,32 +461,25 @@ describe('the position lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  it('accepts one in each corner and one in the middle', async () => {
+  it('accepts one dragged to each corner, and one left in the middle', async () => {
+    // How the lesson is told now (specs/PLACE_MEMORY_PLAN.md): a position is
+    // the placement's own pair of numbers, whether it was dragged there or
+    // typed. Three placements, three places.
+    const places = [
+      {x: 48, y: 48},
+      {x: 272, y: 272},
+      {x: 160, y: 160},
+    ];
     const solved = editing(lesson.source, 'main.world', contents => {
-      const places = [
-        {x: 48, y: 48},
-        {x: 272, y: 272},
-        {x: 160, y: 160},
-      ];
-      // Walk the chain of rows under the world and move each `set position`
-      // to the next place. By walking rather than by regex: three actors are
-      // three identical pairs of numbers, and a text substitution cannot tell
-      // which pair belongs to which.
-      const workspace = JSON.parse(contents) as {
-        blocks: {blocks: Array<{next?: {block?: Row}}>};
+      const file = JSON.parse(contents) as {
+        map: {
+          actors: Array<{properties: {positional: {position: object}}}>;
+        };
       };
-      let row = workspace.blocks.blocks[0].next?.block;
-      let index = 0;
-      while (row) {
-        const at = inSocket(row, 'DO');
-        if (at?.type === 'world_set_position' && index < places.length) {
-          inSocket(at, 'X')!.fields!.NUM = places[index].x;
-          inSocket(at, 'Y')!.fields!.NUM = places[index].y;
-          index++;
-        }
-        row = row.next?.block;
-      }
-      return JSON.stringify(workspace);
+      file.map.actors.forEach((actor, at) => {
+        actor.properties.positional.position = places[at];
+      });
+      return JSON.stringify(file);
     });
     const {passes, result} = await check('place/position', solved);
     expect(result.error).toBeUndefined();

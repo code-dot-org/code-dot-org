@@ -1,7 +1,7 @@
 # Plan: Place and Memory onto the map (CANVAS_FIRST.md, step 4)
 
-STATUS: IN PROGRESS. The last two foundation regions of
-specs/CANVAS_FIRST.md's step 4, after Look (specs/LOOK_PLAN.md). The
+STATUS: BUILT, pending a look in the browser. The last two foundation regions
+of specs/CANVAS_FIRST.md's step 4, after Look (specs/LOOK_PLAN.md). The
 working record, as before.
 
 ## What moves, and how far
@@ -15,11 +15,8 @@ working record, as before.
   reading it are blocks, and stay. What moves is the last step, which is
   the lesson's point made twice: changing the default to five. That is a
   field in the world's own properties, with nothing selected on the map.
-- **`memory/actor-state`, blocks then map.** Declaring the property is a
-  row in the Lamp's file. Setting each Lamp's own copy is then a field on
-  each placement, which is the lesson's whole sentence — every copy the
-  world places carries one of its own — said in a place where two copies
-  are two things you can click.
+- **`memory/actor-state` was to move and does not.** It was written here
+  and taken out again; see "Learned".
 
 ## What does not move, and why
 
@@ -64,8 +61,53 @@ working record, as before.
 
 ## Commits
 
-(recorded as they land)
+- `2e61e8d1f92` — this plan.
+- (next) — `world.properties` in the registry and the world inspector
+  marked; `place/position` and `memory/world-state`; the tests; the specs.
 
 ## Learned while building
 
-(recorded as it happens)
+- **An actor's file cannot read the world's own state.** `memory/actor-state`
+  was moved onto the map and put back within the hour. Its two Lamps read
+  the WORLD's number to start with, which is the lesson's opening
+  complaint; a placement has no room for the row that does the reading, so
+  the row would have to live in the Lamp's file — and a `.actor` has no
+  `world` to read. The module compiled and threw `world is not defined` as
+  it loaded. The lesson's shape was never arbitrary: the reading has to be
+  in the world's `add actor` body, so the Lamps have to be blocks.
+- **Three of this step's five candidates did not move**, and the third
+  region running. The table was written from what each lesson is ABOUT; what
+  decides is what the editor can do and what the lesson would lose. Two
+  lost too much (`place/edges` is about the four trait names, which Enhance
+  hides), one was impossible (above), and one wants a feature nobody has
+  built (`memory/score`).
+- **What `memory/score` wants is already asked for.** specs/MAP_FIRST.md
+  says the world's window shows "the starting value of each property its
+  rows declare — that is where `set target score to 30` goes". What was
+  built reads the world's OWN `define property` rows only. A rule's
+  world-scoped property is set by a `set` row under `define world`, which
+  is a block to read and rewrite rather than a field's default: different
+  machinery, and a step of its own.
+- **A lesson that ends on the map need not open there.**
+  `memory/world-state` is four steps of blocks and one field, so it opens
+  on the workspace and points at the world's properties for the last one.
+  `worldView` and "is this lesson on the map" are not the same question.
+
+## Not built, and known
+
+- The world inspector shows the world's own properties and no rule's, so
+  `memory/score` stays in blocks and MAP_FIRST.md's sentence about
+  `set target score` is still unbuilt.
+- `world.properties` is not found when a placement is selected, since the
+  world's properties are what the inspector shows with nothing selected.
+  Show me then says where they are and rings nothing.
+- Every foundation region has now been through the rule. The genres have
+  not.
+
+## What to look at in the browser
+
+`place/position`: three Markers in a heap should be three things to drag
+apart, and each one's **Pos X** and **Pos Y** should follow the drag and
+take a typed number. `memory/world-state`: after declaring **lives**, the
+Map tab with nothing selected should list it under the world's properties,
+and typing 5 there should be the same edit as changing the block's default.

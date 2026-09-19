@@ -79,25 +79,26 @@ and opens blocks for its second half.
 | `memory/variable`    | blocks |                                                                     |
 | `memory/many`        | blocks | a loop                                                              |
 | `memory/world-state` | both   | declaring is a block; the starting value is a world field           |
-| `memory/actor-state` | both   | declaring is a block; each Lamp's number is a field on that Lamp    |
+| `memory/actor-state` | blocks | its Lamps read the WORLD's number, which an actor's file cannot do  |
 | `memory/lists`       | blocks |                                                                     |
-| `memory/score`       | map    | import Scoring; the target is a world field                         |
+| `memory/score`       | blocks | a rule's world property is not in the world inspector (yet)         |
 | `look/sprite`        | both   | import and paint as before; then make a kind that is offered it     |
 | `look/drawing`       | blocks | a drawing that reads a number is commands                           |
 | `look/background`    | map    | a layer's background, tiled and slid, in the layer's inspector      |
 | `look/animation`     | blocks | nowhere to pick one on the map; playing one is a row, not a handler |
 | `look/effect`        | blocks |                                                                     |
 | `place/position`     | both   | three places by drag and by field; a random place is a block        |
-| `place/edges`        | map    | two abilities                                                       |
+| `place/edges`        | blocks | Enhance names abilities; this lesson is about the trait names       |
 | `place/map`          | map    | BUILT                                                               |
 | `place/layers`       | map    | BUILT                                                               |
 | `place/script`       | map    | BUILT; the first blocks a Place learner writes                      |
 | `place/camera` (2)   | blocks | until a world's camera is in its inspector (MAP_FIRST.md)           |
 
-Eighteen of thirty-three: twelve move and six half move — a count made
-before any was built, and two of the twelve turned out to be half moves
-once it was clear what Enhance can and cannot do
-(specs/INPUT_MOTION_PLAN.md). Logic does not move at all, which
+Fourteen of twenty-nine in the end: seven told on the map and seven half
+told there — rather than the eighteen this table first counted, which was a
+count made before any was built. Five lessons it listed turned out to want
+what the lab has not got, or to be about the very thing a checklist hides;
+each region's plan says which and why. Logic does not move at all, which
 is the decision's second line said as a region: Logic is where blocks are
 needed, and it is one step from Origin.
 
@@ -150,7 +151,8 @@ seen to work.
    browser before going on. BUILT (specs/PILOT_PLAN.md), not yet seen.
 4. The rest of Input, Motion, Look, Place and Memory by the table. Input
    and Motion are BUILT (specs/INPUT_MOTION_PLAN.md), Look too
-   (specs/LOOK_PLAN.md).
+   (specs/LOOK_PLAN.md), Place and Memory too
+   (specs/PLACE_MEMORY_PLAN.md) — which is every foundation.
 5. The genres, by the same rule.
 
 ## Open
