@@ -58,7 +58,7 @@ Across⟩` row is what settles it. Step three adds Slows Down, a row in the
 ## Commits
 
 - `98c2c8d0a0d` — this plan.
-- (next) — the four lessons, their tiles' words, their Show me links and
+- `5b10d750f19` — the four lessons, their tiles' words, their Show me links and
   their tests; PROGRESSION.md and CANVAS_FIRST.md.
 
 ## Learned while building
