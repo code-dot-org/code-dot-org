@@ -1,15 +1,30 @@
 /* The ring "Show me" draws (specs/SHOW_ME_PLAN.md): an outline on the target
    itself, set by an attribute, so there is nothing to position or to follow
-   a scroll with. Offset, so it does not sit on the target's own focus ring
-   and the two can be told apart. */
+   a scroll with. While a thing is ringed the ring IS its focus indicator:
+   an element has one outline, and this one is wider than the design
+   system's focus ring and the same color, so focus is never less visible
+   for it. */
+
+/* `!important` ON THE OUTLINE, and it is not a shortcut. Show me moves focus
+   to what it rings, and a focus style is an `outline` too — one property,
+   one winner. The design system's Button says `&:focus { outline: none }`,
+   keeping its ring for `:focus-visible`, and that is a class and a
+   pseudo-class against this one attribute. A button focused by Show me after
+   a MOUSE press on the link is focused and not focus-visible, so the ring was
+   set and invisible for exactly as long as the button had focus: it showed
+   only while the mouse was held down on the link, which is when focus had
+   left. Seen in the browser. No selector this file could write out-ranks
+   every focus rule of every component a place may be, so the ring says it
+   wins. NOT on the offset, which the pulse animates: an important
+   declaration beats an animation. */
 :global([data-callout-ring='true']) {
-  outline: 3px solid var(--borders-brand-teal-primary, #0093a4);
+  outline: 3px solid var(--borders-brand-teal-primary, #0093a4) !important;
   outline-offset: 3px;
   border-radius: 4px;
-  animation: calloutPulse 1.6s ease-in-out infinite;
+  animation: callout-pulse 1.6s ease-in-out infinite;
 }
 
-@keyframes calloutPulse {
+@keyframes callout-pulse {
   0%,
   100% {
     outline-offset: 3px;

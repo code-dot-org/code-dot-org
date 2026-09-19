@@ -91,6 +91,18 @@ specs/CALLOUTS.md chosen to build. The working record, as before.
   toolbox. That is the pilot's recorded gap, "nothing pins a lesson's words
   to the editor's labels", closed for what a lesson POINTS at. The label
   text itself is still typed twice.
+- **The ring and a focus style are one property.** Show me moves focus to
+  what it rings, and the design system's Button clears its outline on
+  `:focus`, keeping a ring for `:focus-visible` only. A button focused after
+  a MOUSE press is focused and not focus-visible, so the ring was set and
+  drew nothing. What the browser showed was stranger than that, and is the
+  same fact: the ring appeared while the mouse was held DOWN on the
+  instruction link — the press had taken focus off the button, so the
+  outline came back — and vanished on release, when the button was focused
+  again. The palette's plain buttons, which override nothing, looked
+  correct beside it. The ring's outline is now `!important`, which is what
+  it takes to beat every focus rule of every component a place may be. Not
+  on the offset, which the pulse animates.
 - **Focusing a flyout block from outside Blockly does not scroll to it.**
   Seen in the browser on the first try: `when ⟨this actor⟩ stops falling`
   was focused, at the bottom of the Gravity drawer, out of sight. Blockly
@@ -111,6 +123,11 @@ specs/CALLOUTS.md chosen to build. The working record, as before.
   opens the drawer and the block takes Blockly's focus; what a screen reader
   then reads has not been heard. See "Learned" for what the browser showed
   that the stand-ins could not.
+- **While a thing is ringed, the ring is its focus indicator.** One
+  element, one outline. The ring is wider than the design system's and the
+  same color, so nothing is less visible for it, and it goes when the thing
+  is used — but a learner who tabs away and back sees the ring, not the
+  focus ring they would see elsewhere.
 - **A target in another tab is not revealed.** A place in `hero.actor`'s
   workspace while `main.world` is in front, or on the map while an actor's
   file is, has nobody to answer for it. The words are said and nothing is
