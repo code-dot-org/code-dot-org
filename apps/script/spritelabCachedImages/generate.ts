@@ -28,6 +28,7 @@ import {
 import {
   CachedSidecar,
   comboPath,
+  frameFileName,
   IMAGE_CACHE_VERSION,
   variantName,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
@@ -367,10 +368,6 @@ function stubDrawer(): Drawer {
   };
 }
 
-function extensionFor(mediaType: string): string {
-  return mediaType === 'image/jpeg' ? 'jpg' : mediaType.split('/')[1] || 'bin';
-}
-
 async function drawJob(job: Job, draw: Drawer, args: Args): Promise<void> {
   const adlib = imageAdlibById(job.adlibId)!;
   const prompt = adlibText(adlib, job.choices);
@@ -385,11 +382,14 @@ async function drawJob(job: Job, draw: Drawer, args: Args): Promise<void> {
 
   await fs.mkdir(job.folder, {recursive: true});
   const save = async (frame: string, text: string, picture: Picture) => {
-    const file = `${nn}${characterSet ? `-${frame}` : ''}.${extensionFor(
-      picture.mediaType
-    )}`;
-    await fs.writeFile(path.join(job.folder, file), picture.bytes);
-    frames[frame] = {file, mediaType: picture.mediaType, prompt: text};
+    await fs.writeFile(
+      path.join(
+        job.folder,
+        frameFileName(job.variant, frame, picture.mediaType, characterSet)
+      ),
+      picture.bytes
+    );
+    frames[frame] = {mediaType: picture.mediaType, prompt: text};
   };
 
   if (characterSet) {

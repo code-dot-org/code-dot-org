@@ -30,8 +30,9 @@ media/spritelab2/generate/            bucket cdo-curriculum, public-read
 One folder per combo, one per style inside it. Choice ids join in the
 order the sentence reads them. Sprites are five-frame character sets; the
 base frame also serves a student who asks for a single picture. The
-sidecar records what was sent: prompts per frame, seed, temperature, grid,
-key colour, model.
+sidecar records what was sent: the full prompt per frame, seed,
+temperature, grid, key colour, model, and each frame's media type, which
+fixes its file's extension.
 
 ## Flow
 

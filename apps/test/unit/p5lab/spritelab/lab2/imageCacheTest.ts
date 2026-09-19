@@ -1,6 +1,7 @@
 import {
   comboPath,
   findCachedImage,
+  frameFileName,
   ImageCacheManifest,
   ImageCacheMissError,
   resetManifestCache,
@@ -29,8 +30,8 @@ const MANIFEST: ImageCacheManifest = {
 
 const SIDECAR = {
   frames: {
-    base: {file: '00-base.png', mediaType: 'image/png', prompt: 'p'},
-    walking: {file: '00-walking.png', mediaType: 'image/png', prompt: 'p'},
+    base: {mediaType: 'image/png', prompt: 'p'},
+    walking: {mediaType: 'image/png', prompt: 'p'},
   },
   seed: 7,
 };
@@ -89,6 +90,11 @@ describe('imageCache', () => {
     );
     expect(variantName(0)).toBe('00');
     expect(variantName(12)).toBe('12');
+  });
+
+  it("names a frame's file by variant, frame and what the model returned", () => {
+    expect(frameFileName(0, 'base', 'image/png', true)).toBe('00-base.png');
+    expect(frameFileName(3, 'single', 'image/jpeg', false)).toBe('03.jpg');
   });
 
   it('has nothing when the manifest is missing, and asks once', async () => {

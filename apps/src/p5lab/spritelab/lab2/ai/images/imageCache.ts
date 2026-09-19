@@ -80,7 +80,9 @@ export interface CachedSidecar {
   keyColor?: string;
   model: string;
   generatedAt: string;
-  frames: Record<string, {file: string; mediaType: string; prompt: string}>;
+  /** Per frame: the model's media type (which fixes the file's extension,
+      see frameFileName) and the full prompt it was sent. */
+  frames: Record<string, {mediaType: string; prompt: string}>;
 }
 
 /** Thrown when a file the manifest promised is not there. */
@@ -104,6 +106,22 @@ export interface CachedImage {
 
 export function variantName(variant: number): string {
   return String(variant).padStart(2, '0');
+}
+
+/** The file a frame's bytes live in: `<NN>.png` for a single picture,
+    `<NN>-<frame>.png` for a set's frame, the extension following what the
+    model returned. */
+export function frameFileName(
+  variant: number,
+  frame: string,
+  mediaType: string,
+  characterSet: boolean
+): string {
+  const extension =
+    mediaType === 'image/jpeg' ? 'jpg' : mediaType.split('/')[1] || 'bin';
+  return `${variantName(variant)}${
+    characterSet ? `-${frame}` : ''
+  }.${extension}`;
 }
 
 export function comboPath(
@@ -238,11 +256,18 @@ export async function findCachedImage(
     async raw(frame) {
       const frames = (await loadSidecar()).frames;
       const wanted = entry.characterSet && frame === 'single' ? 'base' : frame;
-      const file = frames[wanted]?.file;
-      if (!file) {
+      const recorded = frames[wanted];
+      if (!recorded) {
         throw new ImageCacheMissError(`${folder}/<${wanted}>`);
       }
-      return fetchRaw(`${folder}/${file}`);
+      return fetchRaw(
+        `${folder}/${frameFileName(
+          variant,
+          wanted,
+          recorded.mediaType,
+          entry.characterSet
+        )}`
+      );
     },
   };
 }
