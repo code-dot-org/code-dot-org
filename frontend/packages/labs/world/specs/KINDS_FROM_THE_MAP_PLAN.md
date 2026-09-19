@@ -69,7 +69,7 @@ not theirs yet from a thing that does not exist.
 - `9954a697055` — Enhance and Open in a placement's inspector; withheld
   controls drawn rather than left out; three affordances; `fileIdForModule`
   moved to the open-module seam.
-- (next) — the Creator's seam; the file menus mounted without buttons;
+- `c5f79904e5d` — the Creator's seam; the file menus mounted without buttons;
   `New actor…` on the palette; withheld controls made focusable and
   described, after an accessibility review.
 
