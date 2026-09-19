@@ -1,0 +1,39 @@
+/* The ring "Show me" draws (specs/SHOW_ME_PLAN.md): an outline on the target
+   itself, set by an attribute, so there is nothing to position or to follow
+   a scroll with. Offset, so it does not sit on the target's own focus ring
+   and the two can be told apart. */
+:global([data-callout-ring='true']) {
+  outline: 3px solid var(--borders-brand-teal-primary, #0093a4);
+  outline-offset: 3px;
+  border-radius: 4px;
+  animation: calloutPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes calloutPulse {
+  0%,
+  100% {
+    outline-offset: 3px;
+  }
+
+  50% {
+    outline-offset: 6px;
+  }
+}
+
+/* The shape is the signal; the movement is decoration, and goes. */
+@media (prefers-reduced-motion: reduce) {
+  :global([data-callout-ring='true']) {
+    animation: none;
+  }
+}
+
+/* Heard, not seen: off screen rather than hidden, which a screen reader
+   would skip. */
+.announcer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
