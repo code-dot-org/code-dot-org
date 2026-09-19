@@ -1,10 +1,17 @@
 # Proposal: pointing at things
 
-STATUS: PROPOSED. Nothing here is built. A survey of what the repository
-has for drawing a learner's eye to a piece of the screen, the options for
-World Lab, and a recommendation. Written after the pilot of lessons on the
-map (specs/PILOT_PLAN.md), whose instructions say "press **Enhance Hero…**"
-and have no way to show where that is.
+STATUS: DECIDED IN PART. Options A and B, "Show me" and a simple ring, are
+being built (specs/SHOW_ME_PLAN.md). C to F are NOT being built, and are
+to be looked at again only if something later needs one. The legacy
+callouts and the Shepherd tours (G and H, and their paragraphs in the
+survey) are out of consideration: the first is ancient and the second more
+machinery than this wants. What follows is the survey and the options as
+they were weighed, with the revisions the weighing made.
+
+A survey of what the repository has for drawing a learner's eye to a piece of
+the screen, the options for World Lab, and a recommendation. Written after the
+pilot of lessons on the map (specs/PILOT_PLAN.md), whose instructions say
+"press **Enhance Hero…**" and have no way to show where that is.
 
 ## The question
 
@@ -214,7 +221,30 @@ the editor's labels. With the registry, a test can assert that every
 control's label FROM the registry, so a renamed button renames its
 mentions.
 
-## Recommendation
+## After weighing them
+
+Revisions made when the options were looked at a second time, before any
+was built:
+
+- **The handler's way in is one prop in one file.** The base
+  `ResourcePanel` already takes `onInstructionsTextClick` and hands it to
+  `Instructions`; only codebridge's `InfoPanel` does not pass it on.
+- **B is simpler than written above.** A positioned overlay has to follow
+  scrolling, the panel resizers and every layout change. An outline set by
+  an attribute on the target costs nothing and nothing here clips its
+  targets. The overlay waits until clipping is seen.
+- **A's cost is the revealing**, not the link: getting the target on
+  screen can change state (a view, a selection). A reveal never leaves a
+  script a learner has open; when the target cannot be shown, the words
+  are said and nothing else happens.
+- **E ranked too high.** It repeats D and the lesson's own text, and a
+  tile's `offers` are often a list of small blocks.
+- **C is the most work for the least certain gain.** "Used" is unclear for
+  a drawer or a shelf row.
+- **F is not needed.** Its one use was the Map and World tabs, which the
+  first lesson says in a sentence that A can make a pointer.
+
+## Recommendation (as first written)
 
 1. The registry, the ring, and Show me in instructions (A, B). This is the
    pilot's missing half, and everything else stands on the registry.
