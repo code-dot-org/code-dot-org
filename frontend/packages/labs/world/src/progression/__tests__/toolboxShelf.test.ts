@@ -13,6 +13,7 @@ import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette} from '../../blockly/domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
+import {clickableNames, parsePlaceName} from '../../callouts/places';
 import {projectFiles} from '../../runtime/projectFiles';
 import {TILES} from '../catalogue';
 import {GRANTED_BY, tile} from '../index';
@@ -302,6 +303,21 @@ const offeredAt = (id: TileId): Set<string> => {
 const written = Object.keys(LESSONS) as TileId[];
 
 describe.each(written)('the %s lesson', id => {
+  it('offers every block a Show me in it points at', () => {
+    // A pointer at a block the toolbox does not hold is refused by the
+    // toolbox and says only its words (`blockly/revealInToolbox`) — which is
+    // right for a learner looking round, and wrong for a lesson's own step.
+    const offered = offeredAt(id);
+    for (const name of clickableNames(LESSONS[id]!.instructions)) {
+      const {place, argument} = parsePlaceName(name);
+      if (place === 'toolbox.block') {
+        expect(offered.has(argument ?? ''), `${id} points at ${name}`).toBe(
+          true,
+        );
+      }
+    }
+  });
+
   it('offers every block its instructions send you to find', () => {
     const asked = ASKS_FOR[id];
     expect(asked, `${id} is not in ASKS_FOR`).toBeDefined();

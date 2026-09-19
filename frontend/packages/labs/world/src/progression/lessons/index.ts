@@ -91,18 +91,22 @@ of thing this project has. It has one, the **Hero**.
 
 ### What you do
 
-1. Click **Hero** in the strip, then click somewhere on the map the first
-   Hero is not. That is a second Hero. Drag either of them about.
+1. Click [Hero](#clickable=map.palette:Hero) in the strip, then click
+   somewhere on the map the first Hero is not. That is a second Hero. Drag either of them about.
 2. Run it. Two Heroes, from one kind: the map says how many there are and
    where, and nothing on the map says what a Hero IS.
-3. Click a Hero on the map and press **Open Hero**. These blocks are the
-   answer: **define actor ⟨Hero⟩**, in \`hero.actor\`, and under it one
+3. Click a Hero on the map and press
+   [Open Hero](#clickable=map.openKind:Hero). These blocks are the answer: **define actor ⟨Hero⟩**, in \`hero.actor\`, and under it one
    picture and nothing else.
 4. Change the picture with **set sprite**, go back to the \`main.world\` tab
    and run it again. Both change, because both are Heroes.
 
-The **World** tab beside **Map** is the same world as blocks. There is not
-much in it yet. Look whenever you like.
+The [World](#clickable=view.world) tab beside [Map](#clickable=view.map) is
+the same world as blocks. There is not much in it yet. Look whenever you
+like.
+
+Anything underlined with dots, like those two, is a **Show me**: press it and the lab
+points at the thing it names.
 `.trim(),
 };
 
@@ -134,11 +138,13 @@ by itself: an actor has to *elect* what it offers.
 
 ### What you do
 
-1. Click the Hero on the map and press **Enhance Hero…**. Tick **Moves in
-   all four directions**, and press **Enhance**.
+1. Click the Hero on the map and press
+   [Enhance Hero…](#clickable=map.enhance:Hero). Tick **Moves in all four
+   directions**, and press **Enhance**.
 2. Run it. It walks in every direction — which is what a game seen from above
    wants and a platformer does not.
-3. Now see what the tick did. Press **Open Hero**: under
+3. Now see what the tick did. Press
+   [Open Hero](#clickable=map.openKind:Hero): under
    \`define actor ⟨Hero⟩\` there are new rows, and two of them are
    **use trait ⟨Moves Across⟩** and **use trait ⟨Moves Down⟩**. That is
    electing, and it is all the tick was.
@@ -269,17 +275,21 @@ and nothing has elected it.
 
 ### What you do
 
-1. Click the Hero on the map, press **Enhance Hero…**, and tick **Falls when
+1. Click the Hero on the map, press
+   [Enhance Hero…](#clickable=map.enhance:Hero), and tick **Falls when
    nothing holds it up**. Run it: it falls, and it keeps falling, straight
    through the floor.
-2. Click the Ground, press **Enhance Ground…**, and tick **Holds things up**.
-   Now it lands.
-3. One tile is not much of a floor. Click **Ground** in the strip along the
-   top and paint a few more along the bottom.
+2. Click the Ground, press
+   [Enhance Ground…](#clickable=map.enhance:Ground), and tick **Holds things
+   up**. Now it lands.
+3. One tile is not much of a floor. Click
+   [Ground](#clickable=map.palette:Ground) in the strip along the top and
+   paint a few more along the bottom.
 4. Falling and landing are things that HAPPEN, and saying what to do when
-   something happens is what blocks are for. Press **Open Hero**, add
-   **when ⟨this actor⟩ stops falling**, and print something in it, so you
-   can see the moment.
+   something happens is what blocks are for. Press
+   [Open Hero](#clickable=map.openKind:Hero), add
+   [when ⟨this actor⟩ stops falling](#clickable=toolbox.block:world_on_Gravity_StopsFallingEvent),
+   and print something in it, so you can see the moment.
 5. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\` to open the
    rule itself, and find the number that says how hard it pulls. Change it and
    run again — it is your copy.

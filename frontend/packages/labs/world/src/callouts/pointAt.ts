@@ -92,7 +92,15 @@ const targetMarked = (mark: string): HTMLElement | null =>
  * Point at a place by name. Answers whether a target was found and ringed;
  * the words are announced either way, when the name is one the lab has.
  */
-export async function pointAt(name: string): Promise<boolean> {
+export async function pointAt(given: string): Promise<boolean> {
+  // A name with a space in it — a kind called Energy Ball — arrives
+  // percent-encoded, since it travelled as a link's address.
+  let name = given;
+  try {
+    name = decodeURIComponent(given);
+  } catch {
+    // Not encoded, and with a stray percent sign: taken as it is.
+  }
   const place = placeNamed(name);
   if (!place) {
     return false;
