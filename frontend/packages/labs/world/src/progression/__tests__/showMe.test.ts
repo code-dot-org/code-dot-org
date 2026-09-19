@@ -71,6 +71,12 @@ describe('Show me, in the lessons', () => {
       if (ABOUT_A_KIND.has(place) && argument) {
         expect(kinds, `${id} points at ${name}`).toContain(argument);
       }
+      // …and a place in another file names one too: `@Hero`.
+      for (const step of placeNamed(name)?.reveals ?? []) {
+        if (step.kind === 'file' && step.actor) {
+          expect(kinds, `${id} points at ${name}`).toContain(step.actor);
+        }
+      }
     }
   });
 

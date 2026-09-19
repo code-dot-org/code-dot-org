@@ -108,7 +108,7 @@ export async function pointAt(given: string): Promise<boolean> {
   const extra: string[] = [];
   let refused = false;
   for (const step of place.reveals) {
-    const answer = reveal(step);
+    const answer = await reveal(step);
     if (answer === false) {
       refused = true;
       break;

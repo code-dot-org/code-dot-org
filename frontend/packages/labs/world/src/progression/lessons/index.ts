@@ -288,7 +288,7 @@ and nothing has elected it.
 4. Falling and landing are things that HAPPEN, and saying what to do when
    something happens is what blocks are for. Press
    [Open Hero](#clickable=map.openKind:Hero), add
-   [when ⟨this actor⟩ stops falling](#clickable=toolbox.block:world_on_Gravity_StopsFallingEvent),
+   [when ⟨this actor⟩ stops falling](#clickable=toolbox.block:world_on_Gravity_StopsFallingEvent@Hero),
    and print something in it, so you can see the moment.
 5. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\` to open the
    rule itself, and find the number that says how hard it pulls. Change it and

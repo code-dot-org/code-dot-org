@@ -25,6 +25,7 @@ describe('pointAt', () => {
   });
   afterEach(() => {
     clearRing();
+    setRevealer('file', null);
     setRevealer('view', null);
     setRevealer('placement', null);
     setRevealer('toolbox', null);
@@ -109,6 +110,34 @@ describe('pointAt', () => {
     expect(heard.mock.calls[0][0]).not.toBe(heard.mock.calls[1][0]);
     expect(heard.mock.calls[1][0].trim()).toBe(heard.mock.calls[0][0].trim());
     stop();
+  });
+
+  it('waits for a revealer that answers with a promise', async () => {
+    // A workspace is injected after its editor mounts, so the toolbox waits
+    // for its own rather than making this guess a delay.
+    const order: string[] = [];
+    setRevealer('file', async () => {
+      await new Promise(resolve => setTimeout(resolve, 20));
+      order.push('file');
+      button('view.world');
+      return true;
+    });
+    setRevealer('view', () => {
+      order.push('view');
+    });
+
+    await pointAt('world.blocks');
+    expect(order).toEqual(['file', 'view']);
+  });
+
+  it('stops at a file it cannot find, and says the words', async () => {
+    setRevealer('file', () => false);
+    const asked = vi.fn();
+    setRevealer('toolbox', asked);
+
+    expect(await pointAt('toolbox.block:world_print@Dragon')).toBe(false);
+    expect(asked).not.toHaveBeenCalled();
+    expect(lastAnnounced()).toContain('The block is in the toolbox');
   });
 
   it('does nothing for a name the lab does not have', async () => {

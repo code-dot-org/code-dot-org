@@ -16,6 +16,14 @@
 
 /** What has to be true for a place to be on screen, asked of its owner. */
 export type Reveal =
+  /**
+   * A FILE in front, which is what every other reveal is asked of: only the
+   * active tab's editor is mounted, so a place in another file has nobody to
+   * answer for it until this (`layout/WorldLayout`). Named as a lesson names
+   * things — the actor by the name its file declares, the world by being the
+   * world — rather than by a path.
+   */
+  | {kind: 'file'; actor?: string; world?: boolean}
   /** One of a world's two views (`mapEditor/WorldEditor`). */
   | {kind: 'view'; view: 'map' | 'world'}
   /** A placement selected on the map, of a kind by name or any (`MapStage`). */
@@ -39,6 +47,30 @@ export interface Place {
 type PlaceOf = (argument: string | undefined) => Place;
 
 const onTheMap: Reveal = {kind: 'view', view: 'map'};
+const theWorldFile: Reveal = {kind: 'file', world: true};
+
+/**
+ * A block or a drawer may say WHICH FILE'S toolbox, after an `@`:
+ * `world_print@Hero` is in the Hero's file, `world_add_actor@world` in the
+ * world's own workspace. Without one, whichever file is in front, which is
+ * right for a lesson that has just said to open it.
+ */
+const inFile = (
+  argument: string | undefined,
+): {wanted: string | undefined; reveals: Reveal[]} => {
+  const at = argument?.indexOf('@') ?? -1;
+  if (!argument || at < 0) {
+    return {wanted: argument, reveals: []};
+  }
+  const file = argument.slice(at + 1);
+  return {
+    wanted: argument.slice(0, at) || undefined,
+    reveals:
+      file === 'world'
+        ? [theWorldFile, {kind: 'view', view: 'world'}]
+        : [{kind: 'file', actor: file}],
+  };
+};
 
 /** In a placement's properties, with that placement selected. */
 const inProperties =
@@ -89,14 +121,28 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
     reveals: [onTheMap],
     says: 'Layers is the list beside the map, front layer at the top.',
   }),
-  'toolbox.drawer': drawer => ({
-    reveals: [{kind: 'toolbox', drawer}],
-    says: `${drawer ?? 'The drawer'} is in the toolbox, beside the blocks.`,
+  'actor.blocks': actor => ({
+    reveals: [{kind: 'file', actor}],
+    says: `${actor ?? 'The actor'}'s blocks are the tab of its own name.`,
   }),
-  'toolbox.block': block => ({
-    reveals: [{kind: 'toolbox', block}],
-    says: 'The block is in the toolbox, beside the blocks.',
+  'world.blocks': () => ({
+    reveals: [theWorldFile, {kind: 'view', view: 'world'}],
+    says: 'The world’s blocks are under the World tab of the world’s file.',
   }),
+  'toolbox.drawer': argument => {
+    const {wanted, reveals} = inFile(argument);
+    return {
+      reveals: [...reveals, {kind: 'toolbox', drawer: wanted}],
+      says: `${wanted ?? 'The drawer'} is in the toolbox, beside the blocks.`,
+    };
+  },
+  'toolbox.block': argument => {
+    const {wanted, reveals} = inFile(argument);
+    return {
+      reveals: [...reveals, {kind: 'toolbox', block: wanted}],
+      says: 'The block is in the toolbox, beside the blocks.',
+    };
+  },
 };
 
 /** A name split at its first colon: `map.enhance:Hero`. */

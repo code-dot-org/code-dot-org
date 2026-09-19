@@ -5,6 +5,14 @@ specs/CALLOUTS.md chosen to build. The working record, as before.
 
 ## What is being built
 
+- **A place in another tab.** Only the active file's editor is mounted, so
+  a place in another file had nobody to answer for it. A `file` reveal puts
+  the file in front first, by the name a lesson uses: `actor.blocks:Hero`,
+  `world.blocks`, and an `@` on a block or a drawer for which file's
+  toolbox — `toolbox.block:world_print@Hero`, `…@world`. Answered by the
+  layout, which is what is always mounted; the lookup is a pure module
+  (`callouts/revealFile`), since the layout itself cannot be mounted in a
+  test without mounting the lab.
 - **Named places.** A small registry: a name for a place on the screen
   (`map.enhance`, `view.world`, `toolbox.block:world_print`), the words
   that say where it is, and what has to be done to get it on screen. A
@@ -103,6 +111,17 @@ specs/CALLOUTS.md chosen to build. The working record, as before.
   correct beside it. The ring's outline is now `!important`, which is what
   it takes to beat every focus rule of every component a place may be. Not
   on the offset, which the pulse animates.
+- **A reveal may answer with a promise.** Bringing a file to the front
+  mounts an editor, and a Blockly workspace is injected a tick or two after
+  that: the toolbox reveal arrived before there was a toolbox. A revealer
+  may now answer with a promise, and the toolbox's waits for its own
+  workspace — the waiting is where the thing waited for is known, rather
+  than `pointAt` guessing a delay for everybody.
+- **`fileIdForModule` does not try `.world`.** It follows the compiler's
+  resolution, and a world is not a module anything imports. The world's
+  file is found by path instead. Adding `.world` to the openable extensions
+  would have changed which modules a block's open button offers, which is
+  another feature's question.
 - **Focusing a flyout block from outside Blockly does not scroll to it.**
   Seen in the browser on the first try: `when ⟨this actor⟩ stops falling`
   was focused, at the bottom of the Gravity drawer, out of sight. Blockly
@@ -128,10 +147,7 @@ specs/CALLOUTS.md chosen to build. The working record, as before.
   same color, so nothing is less visible for it, and it goes when the thing
   is used — but a learner who tabs away and back sees the ring, not the
   focus ring they would see elsewhere.
-- **A target in another tab is not revealed.** A place in `hero.actor`'s
-  workspace while `main.world` is in front, or on the map while an actor's
-  file is, has nobody to answer for it. The words are said and nothing is
-  ringed. A reveal of a FILE is the missing kind.
+- (Built since: a reveal of a FILE. See "What is being built".)
 - **The ring is an outline on the target**, so a target inside a container
   that clips its overflow would lose part of it. None of the places marked
   is, that was seen.
@@ -150,8 +166,10 @@ pressed. Focus should land on the ringed thing: Tab from there should go
 on from it.
 
 In `motion/gravity`, `Enhance Ground…` should select the Ground, not the
-Hero. With `hero.actor` in front, `when ⟨this actor⟩ stops falling` should
-open the Gravity drawer and put Blockly's focus on that block.
+Hero. `when ⟨this actor⟩ stops falling` should work FROM THE MAP: bring
+`hero.actor` to the front, open the Gravity drawer, scroll to the block and
+focus it. With `hero.actor` already in front, the same without the tab
+change.
 
 With a placement's Script open, pressing a Show me for something on the map
 should change nothing on screen.

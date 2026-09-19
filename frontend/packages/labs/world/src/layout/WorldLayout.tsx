@@ -1,6 +1,6 @@
-import {useMemo, useState, type CSSProperties} from 'react';
+import {useEffect, useMemo, useRef, useState, type CSSProperties} from 'react';
 
-import {InfoPanel, Workspace} from '@code-dot-org/codebridge';
+import {activateFile, InfoPanel, Workspace} from '@code-dot-org/codebridge';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {
@@ -16,6 +16,8 @@ import {useWorldTutor} from '../aiTutor/useWorldTutor';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {CalloutAnnouncer} from '../callouts/CalloutAnnouncer';
 import {pointAt} from '../callouts/pointAt';
+import {setRevealer} from '../callouts/reveal';
+import {fileToReveal} from '../callouts/revealFile';
 import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {FileMenus} from '../files/FileMenus';
@@ -69,7 +71,34 @@ const WorldLayout = () => {
   // no list to reopen it from and no block left to ask. So it is pinned, and
   // only while the browser is hidden: with a browser, closing it is an
   // ordinary thing to do and one click to undo.
-  const {currentSources} = useSources<MultiFileSource>();
+  const {currentSources, updateSources} = useSources<MultiFileSource>();
+
+  // "Show me" for a place in another TAB. Only the active file's editor is
+  // mounted, so until the file is in front nobody answers for what is in it
+  // (`callouts/reveal`). Answered here because this is what is always
+  // mounted, and what has the project. A lesson names the actor, not a path:
+  // the Hero is whichever file declares an actor called Hero.
+  const sourcesRef = useRef(currentSources);
+  sourcesRef.current = currentSources;
+  const updateRef = useRef(updateSources);
+  updateRef.current = updateSources;
+  useEffect(() => {
+    setRevealer('file', step => {
+      const source = sourcesRef.current.source;
+      const fileId = fileToReveal(source, step);
+      if (!fileId) {
+        return false;
+      }
+      if (!source.files[fileId]?.active) {
+        updateRef.current({
+          ...sourcesRef.current,
+          source: activateFile(source, fileId),
+        });
+      }
+      return true;
+    });
+    return () => setRevealer('file', null);
+  }, []);
   const entryFileId = useMemo(
     () => (browsable ? undefined : fileIdAt(currentSources.source, ENTRY_FILE)),
     [browsable, currentSources],

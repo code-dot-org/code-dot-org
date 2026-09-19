@@ -28,8 +28,9 @@ describe('a Show me link', () => {
     expect(onActivate).toHaveBeenLastCalledWith('map.enhance:Ground');
 
     fireEvent.click(screen.getByText(/stops falling/));
+    // The `@Hero` says which file's toolbox, and survives as written.
     expect(onActivate).toHaveBeenLastCalledWith(
-      'toolbox.block:world_on_Gravity_StopsFallingEvent',
+      'toolbox.block:world_on_Gravity_StopsFallingEvent@Hero',
     );
     // …and what it hands over is a place.
     for (const [name] of onActivate.mock.calls) {

@@ -13,7 +13,7 @@ import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette} from '../../blockly/domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
-import {clickableNames, parsePlaceName} from '../../callouts/places';
+import {clickableNames, placeNamed} from '../../callouts/places';
 import {projectFiles} from '../../runtime/projectFiles';
 import {TILES} from '../catalogue';
 import {GRANTED_BY, tile} from '../index';
@@ -309,11 +309,11 @@ describe.each(written)('the %s lesson', id => {
     // right for a learner looking round, and wrong for a lesson's own step.
     const offered = offeredAt(id);
     for (const name of clickableNames(LESSONS[id]!.instructions)) {
-      const {place, argument} = parsePlaceName(name);
-      if (place === 'toolbox.block') {
-        expect(offered.has(argument ?? ''), `${id} points at ${name}`).toBe(
-          true,
-        );
+      // Read off the place, which is what parses `@Hero` and the rest.
+      for (const step of placeNamed(name)?.reveals ?? []) {
+        if (step.kind === 'toolbox' && step.block) {
+          expect(offered.has(step.block), `${id} points at ${name}`).toBe(true);
+        }
       }
     }
   });

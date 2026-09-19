@@ -70,6 +70,37 @@ describe('every place', () => {
   });
 });
 
+describe('a place in another file', () => {
+  it('asks for the file first, by the actor a lesson names', () => {
+    expect(placeNamed('actor.blocks:Hero')!.reveals).toEqual([
+      {kind: 'file', actor: 'Hero'},
+    ]);
+    expect(placeNamed('world.blocks')!.reveals).toEqual([
+      {kind: 'file', world: true},
+      {kind: 'view', view: 'world'},
+    ]);
+  });
+
+  it('reads `@` on a block or a drawer as which file’s toolbox', () => {
+    expect(placeNamed('toolbox.block:world_print@Hero')!.reveals).toEqual([
+      {kind: 'file', actor: 'Hero'},
+      {kind: 'toolbox', block: 'world_print'},
+    ]);
+    // The world's blocks are a VIEW of the world's file, so both.
+    expect(placeNamed('toolbox.drawer:Loops@world')!.reveals).toEqual([
+      {kind: 'file', world: true},
+      {kind: 'view', view: 'world'},
+      {kind: 'toolbox', drawer: 'Loops'},
+    ]);
+  });
+
+  it('asks for no file when none is said: whichever is in front', () => {
+    expect(placeNamed('toolbox.block:world_print')!.reveals).toEqual([
+      {kind: 'toolbox', block: 'world_print'},
+    ]);
+  });
+});
+
 describe('the names in a lesson’s instructions', () => {
   it('are read out of its markdown, in order', () => {
     const markdown =

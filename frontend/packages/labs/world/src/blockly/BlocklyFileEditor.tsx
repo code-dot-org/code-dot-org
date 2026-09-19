@@ -29,7 +29,7 @@ import {requestAppearanceImport} from '../appearance/appearanceImport';
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {projectSheets} from '../appearance/sheetFile';
 import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
-import {setRevealer} from '../callouts/reveal';
+import {setRevealer, waitFor} from '../callouts/reveal';
 import {
   hiddenToolboxCategories,
   showsRuleSource,
@@ -1282,8 +1282,12 @@ export const BlocklyFileEditor = ({
   // what points at a block, so that a keyboard and a screen reader are
   // pointed at it too (`revealInToolbox`).
   useEffect(() => {
-    setRevealer('toolbox', step => {
-      const workspace = workspaceRef.current;
+    setRevealer('toolbox', async step => {
+      // A workspace is INJECTED after the editor holding it has mounted, so
+      // a reveal that has just brought this file to the front arrives before
+      // there is a toolbox to open. Waited for here, where what is waited on
+      // is known, rather than by the caller guessing a delay.
+      const workspace = await waitFor(() => workspaceRef.current);
       if (!workspace) {
         return false;
       }
