@@ -963,6 +963,28 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       [selectedId, syncObjects]
     );
 
+    // --- Color change ---
+
+    const handleColorChange = useCallback(
+      (newColor: string) => {
+        setColor(newColor);
+        if (tool !== 'select' || !selectedId) return;
+        const canvas = fabricRef.current;
+        if (!canvas) return;
+        const obj = canvas
+          .getObjects()
+          .find(o => getData(o)?.id === selectedId);
+        if (!obj) return;
+        const kind = kindFromFabricObject(obj);
+        const useStroke = kind === 'line' || kind === 'path';
+        obj.set(useStroke ? {stroke: newColor} : {fill: newColor});
+        canvas.renderAll();
+        syncObjects(canvas);
+        setAnnouncement('Color changed.');
+      },
+      [tool, selectedId, syncObjects]
+    );
+
     // --- Delete via toolbar button ---
 
     const handleDeleteSelected = useCallback(() => {
@@ -1042,7 +1064,7 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
             color={color}
             selectedId={selectedId}
             onToolChange={setTool}
-            onColorChange={setColor}
+            onColorChange={handleColorChange}
             onDeleteSelected={handleDeleteSelected}
             onBringToFront={handleBringToFront}
             onBringForward={handleBringForward}
