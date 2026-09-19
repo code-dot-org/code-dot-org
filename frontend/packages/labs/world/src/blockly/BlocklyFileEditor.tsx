@@ -1293,6 +1293,9 @@ export const BlocklyFileEditor = ({
           step,
           node =>
             Blockly.getFocusManager().focusNode(node as Blockly.IFocusableNode),
+          // Once the flyout has laid its blocks out, so the block's place
+          // is its real one.
+          act => void Blockly.renderManagement.finishQueuedRenders().then(act),
         );
       } catch {
         // Pointing is a second channel: a Blockly that objects to being

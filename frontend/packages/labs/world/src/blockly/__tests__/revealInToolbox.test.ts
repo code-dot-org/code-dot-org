@@ -24,18 +24,27 @@ const GRAVITY = drawer('Gravity', [
 const VARIABLES = drawer('Variables', 'VARIABLE');
 const SEPARATOR = {isSelectable: () => false};
 
-const host = (flyoutBlocks: Array<{type: string}> = []) => {
+const host = (
+  flyoutBlocks: Array<{
+    type: string;
+    getBoundingRectangleWithoutChildren?: () => unknown;
+  }> = [],
+) => {
   const setSelectedItem = vi.fn();
+  const scrollBoundsIntoView = vi.fn();
   const workspace: ToolboxHost = {
     getToolbox: () => ({
       getToolboxItems: () => [TEXT, SEPARATOR, VARIABLES, GRAVITY],
       setSelectedItem,
     }),
     getFlyout: () => ({
-      getWorkspace: () => ({getTopBlocks: () => flyoutBlocks}),
+      getWorkspace: () => ({
+        getTopBlocks: () => flyoutBlocks,
+        scrollBoundsIntoView,
+      }),
     }),
   };
-  return {workspace, setSelectedItem};
+  return {workspace, setSelectedItem, scrollBoundsIntoView};
 };
 
 describe('revealInToolbox', () => {
@@ -49,6 +58,27 @@ describe('revealInToolbox', () => {
     );
     expect(setSelectedItem).toHaveBeenCalledWith(TEXT);
     expect(focus).toHaveBeenCalledWith(print);
+  });
+
+  it('scrolls the flyout to the block, once Blockly has drawn it', () => {
+    // Focusing from outside Blockly does not scroll: a block low in a long
+    // drawer was focused and hidden. Seen in the browser.
+    const bounds = {top: 900, bottom: 940, left: 8, right: 180};
+    const hat = {
+      type: 'world_on_Gravity_StopsFallingEvent',
+      getBoundingRectangleWithoutChildren: () => bounds,
+    };
+    const {workspace, scrollBoundsIntoView} = host([hat]);
+    let drawn: (() => void) | undefined;
+
+    revealInToolbox(workspace, {block: hat.type}, vi.fn(), act => {
+      drawn = act;
+    });
+    // Not before the flyout is laid out: a block not drawn yet is at the
+    // origin, and scrolling there would be scrolling to the top.
+    expect(scrollBoundsIntoView).not.toHaveBeenCalled();
+    drawn!();
+    expect(scrollBoundsIntoView).toHaveBeenCalledWith(bounds);
   });
 
   it('opens a drawer by its name, whatever the case, and focuses the drawer', () => {

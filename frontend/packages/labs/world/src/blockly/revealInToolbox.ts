@@ -20,6 +20,8 @@
 
 interface FlyoutBlock {
   type: string;
+  /** Where the block is in its workspace, without what is chained under it. */
+  getBoundingRectangleWithoutChildren?: () => unknown;
 }
 
 interface Drawer {
@@ -39,7 +41,11 @@ export interface ToolboxHost {
 }
 
 interface FlyoutHost {
-  getWorkspace(): {getTopBlocks(ordered: boolean): FlyoutBlock[]};
+  getWorkspace(): {
+    getTopBlocks(ordered: boolean): FlyoutBlock[];
+    /** Blockly's own: scroll a rectangle of this workspace into view. */
+    scrollBoundsIntoView?: (bounds: never) => void;
+  };
 }
 
 /** Whether a drawer's static contents list a block of this type. */
@@ -61,6 +67,12 @@ export function revealInToolbox(
   workspace: ToolboxHost,
   wanted: {block?: string; drawer?: string},
   focus: (node: unknown) => void,
+  /**
+   * Run something once Blockly has drawn what it has queued. The flyout has
+   * only just been filled when this asks where a block is, and a block not
+   * yet laid out is at the origin. In a test, at once.
+   */
+  afterRender: (act: () => void) => void = act => act(),
 ): string | false {
   const toolbox = workspace.getToolbox();
   if (!toolbox) {
@@ -88,6 +100,25 @@ export function revealInToolbox(
     .find(each => each.type === wanted.block);
   if (block) {
     focus(block);
+    // …AND SCROLL THE FLYOUT TO IT, which focusing from here does not do.
+    // Blockly scrolls a block into view when it takes focus, but only when
+    // focus came from another Blockly node (`BlockSvg.onNodeFocus`): arriving
+    // from a link in the instructions, it is skipped, and a block low in a
+    // long drawer was focused and out of sight. Seen in the browser, which is
+    // the only place it could be. The call is the one Blockly makes itself.
+    const flyoutWorkspace = flyout!.getWorkspace();
+    afterRender(() => {
+      try {
+        const bounds = block.getBoundingRectangleWithoutChildren?.();
+        if (bounds !== undefined) {
+          flyoutWorkspace.scrollBoundsIntoView?.(bounds as never);
+        }
+      } catch {
+        // Later than the caller's own guard can reach. Pointing is a second
+        // channel: a flyout that has gone by now costs the scroll, nothing
+        // else.
+      }
+    });
   }
   return `It is in the ${drawer.getName!()} drawer.`;
 }

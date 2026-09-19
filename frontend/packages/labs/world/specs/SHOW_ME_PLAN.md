@@ -91,16 +91,26 @@ specs/CALLOUTS.md chosen to build. The working record, as before.
   toolbox. That is the pilot's recorded gap, "nothing pins a lesson's words
   to the editor's labels", closed for what a lesson POINTS at. The label
   text itself is still typed twice.
+- **Focusing a flyout block from outside Blockly does not scroll to it.**
+  Seen in the browser on the first try: `when ⟨this actor⟩ stops falling`
+  was focused, at the bottom of the Gravity drawer, out of sight. Blockly
+  scrolls a block into view as it takes focus, but only when focus came
+  from another Blockly node (`BlockSvg.onNodeFocus` checks for a node
+  focused before it). A link in the instructions is not one. The reveal now
+  makes the same call Blockly does, `scrollBoundsIntoView` on the flyout's
+  workspace, after queued renders have finished, since a block not yet laid
+  out is at the origin. The stand-in tests could pin which block is focused
+  and never that it could be seen.
 - **My own rule for the words was too strict.** "No here, this, above or
   below" refused "above the editor". A spatial word is fine when it names
   what it is relative to; what is refused is a word that needs a finger.
 
 ## Not built, and known
 
-- **The Blockly half is unseen.** Which drawer is chosen and which block is
-  focused are tested against stand-ins. Whether Blockly 13 then draws its
-  focus ring on a flyout block focused from outside, scrolls the flyout to
-  it, and reads it aloud, only a browser and a screen reader say.
+- **The Blockly half is half seen.** In the browser, Show me on a block
+  opens the drawer and the block takes Blockly's focus; what a screen reader
+  then reads has not been heard. See "Learned" for what the browser showed
+  that the stand-ins could not.
 - **A target in another tab is not revealed.** A place in `hero.actor`'s
   workspace while `main.world` is in front, or on the map while an actor's
   file is, has nobody to answer for it. The words are said and nothing is
