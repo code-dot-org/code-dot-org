@@ -56,48 +56,69 @@ import {
 
 // ── origin/first-world ───────────────────────────────────────────────────────
 
+/** A placement, as the main map stores one: an id and where it sits. */
+const placed = (id: string, x: number, y: number) => ({
+  id,
+  properties: {positional: {position: {x, y}}},
+});
+
 const firstWorld: WorldScenario = {
+  // ON THE MAP, which is where a world starts (specs/CANVAS_FIRST.md,
+  // specs/PILOT_PLAN.md). The task is an arrangement — a second Hero,
+  // somewhere else — and an arrangement is made by clicking. Blocks are READ
+  // here and not written: the first thing a learner sees of them is the one
+  // file that says what a Hero is.
+  levelData: {worldView: 'map'},
   name: 'First light',
   description: 'A world with one actor in it, and a Run button.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
+      rows: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
       actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
     }),
-    sprites: ['player'],
+    // Two pictures, so that changing the Hero's can be seen.
+    sprites: ['player', 'coin'],
   }),
   instructions: `
 ## A world with something in it
 
 Press **Run**. There is a world, and there is one thing in it.
 
-Two files say all of it, and they are the two tabs above the blocks.
-**define world**, in \`main.world\`, is the world, and what is listed under it
-is what gets put in it. **define actor ⟨Hero⟩**, in \`hero.actor\`, says what a
-Hero *is* — here, one picture and nothing else.
-
-Read them in that order and you have read the whole project.
+What you are looking at is the world's **map**: what is on it is what the
+world starts with, where you see it. The strip along the top is every kind
+of thing this project has. It has one, the **Hero**.
 
 ### What you do
 
-1. **add actor** a second Hero to the world, somewhere the first is not.
-2. Run it. Two Heroes, from one \`define actor\`: the file says what a Hero is,
-   and the world says how many there are and where.
-3. Open the \`hero.actor\` tab and change its picture with **set sprite**. Run
-   it again — both change, because both are Heroes.
+1. Click **Hero** in the strip, then click somewhere on the map the first
+   Hero is not. That is a second Hero. Drag either of them about.
+2. Run it. Two Heroes, from one kind: the map says how many there are and
+   where, and nothing on the map says what a Hero IS.
+3. Click a Hero on the map and press **Open Hero**. These blocks are the
+   answer: **define actor ⟨Hero⟩**, in \`hero.actor\`, and under it one
+   picture and nothing else.
+4. Change the picture with **set sprite**, go back to the \`main.world\` tab
+   and run it again. Both change, because both are Heroes.
+
+The **World** tab beside **Map** is the same world as blocks. There is not
+much in it yet. Look whenever you like.
 `.trim(),
 };
 
 // ── input/arrows ─────────────────────────────────────────────────────────────
 
 const arrows: WorldScenario = {
+  // ON THE MAP, with Enhance: the task is an ELECTION, and a tick elects
+  // (specs/PILOT_PLAN.md). What a tick hides is the row that says so, which
+  // is the lesson's point — so the second half opens the Hero and finds it.
+  levelData: {worldView: 'map'},
   name: 'Make it go',
   description: 'A player that ignores you, and the trait that changes that.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
+      rows: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
       actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
     }),
     sprites: ['player'],
@@ -109,17 +130,22 @@ const arrows: WorldScenario = {
 Press the arrow keys. Nothing happens — the Hero does not know about them.
 
 This project holds the **Arrow Keys** rule. A rule a project holds does nothing
-by itself: an actor has to *elect* what it offers. (The count on \`define world\`
-says how many rules are in play; click it to see them.)
+by itself: an actor has to *elect* what it offers.
 
 ### What you do
 
-1. In the \`hero.actor\` tab, add **use trait ⟨Moves Across⟩** under
-   \`define actor ⟨Hero⟩\`.
-2. Run it. Left and right work; up and down do not.
-3. Add **Moves Down** as well, and now it walks in every direction — which is
-   what a top-down game wants and a platformer does not.
-4. Find the speed the trait gave the Hero, and change it.
+1. Click the Hero on the map and press **Enhance Hero…**. Tick **Moves in
+   all four directions**, and press **Enhance**.
+2. Run it. It walks in every direction — which is what a game seen from above
+   wants and a platformer does not.
+3. Now see what the tick did. Press **Open Hero**: under
+   \`define actor ⟨Hero⟩\` there are new rows, and two of them are
+   **use trait ⟨Moves Across⟩** and **use trait ⟨Moves Down⟩**. That is
+   electing, and it is all the tick was.
+4. Pull the **Moves Down** row out of the stack — drag it aside, do not throw
+   it away — and run it. Left and right work; up and down do not. Snap it
+   back.
+5. Find the speed the trait gave the Hero, and change it.
 `.trim(),
 };
 
@@ -211,6 +237,10 @@ Nothing is moving it now. It has a speed, and having a speed is what moving is.
 // ── motion/gravity ───────────────────────────────────────────────────────────
 
 const gravity: WorldScenario = {
+  // ON THE MAP FIRST, AND THEN IN BLOCKS (specs/PILOT_PLAN.md). Falling and
+  // ground are two elections and an arrangement, which is the map. Hearing
+  // "stops falling" is behavior, which is blocks, reached from the Hero.
+  levelData: {worldView: 'map'},
   name: 'Down',
   description: 'A thing in the air, some ground, and nothing pulling.',
   source: lessonSource({
@@ -220,8 +250,8 @@ const gravity: WorldScenario = {
         // Directly above the ground, and that is not decoration: at x 160 and
         // 192 the two 32-pixel sprites overlap by nothing at all, and the Hero
         // falls past the corner of the floor. The lesson's check found it.
-        addActor(actorPath('hero'), [placeAt(160, 40)]),
-        addActor(actorPath('ground'), [placeAt(160, 272)]),
+        placeInMap(actorPath('hero'), [placed('Hero', 160, 40)]),
+        placeInMap(actorPath('ground'), [placed('Ground', 160, 272)]),
       ],
       actors: [
         {id: 'hero', name: 'Hero', rows: [setSprite('player.png')]},
@@ -235,16 +265,22 @@ const gravity: WorldScenario = {
 ## Down
 
 The Hero is in the air and stays there. The **Gravity** rule is in this project
-— the count on \`define world\` says so — and nothing has elected it.
+and nothing has elected it.
 
 ### What you do
 
-1. Give the Hero **use trait ⟨Affected by Gravity⟩**. Run it: it falls, and it
-   keeps falling, straight through the floor.
-2. Give the Ground **use trait ⟨Acts as Ground⟩**. Now it lands.
-3. Add a **when ⟨Hero⟩ stops falling** handler and print something, so you can
-   see the moment happen.
-4. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\` to open the
+1. Click the Hero on the map, press **Enhance Hero…**, and tick **Falls when
+   nothing holds it up**. Run it: it falls, and it keeps falling, straight
+   through the floor.
+2. Click the Ground, press **Enhance Ground…**, and tick **Holds things up**.
+   Now it lands.
+3. One tile is not much of a floor. Click **Ground** in the strip along the
+   top and paint a few more along the bottom.
+4. Falling and landing are things that HAPPEN, and saying what to do when
+   something happens is what blocks are for. Press **Open Hero**, add
+   **when ⟨this actor⟩ stops falling**, and print something in it, so you
+   can see the moment.
+5. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\` to open the
    rule itself, and find the number that says how hard it pulls. Change it and
    run again — it is your copy.
 `.trim(),
@@ -1171,12 +1207,6 @@ moment: **⟨event actor⟩ is a ⟨Coin⟩**.
 };
 
 // ── place/map ────────────────────────────────────────────────────────────────
-
-/** A placement, as the main map stores one: an id and where it sits. */
-const placed = (id: string, x: number, y: number) => ({
-  id,
-  properties: {positional: {position: {x, y}}},
-});
 
 const map: WorldScenario = {
   // ON THE MAP, because the lesson is: the task is painting, and the canvas is

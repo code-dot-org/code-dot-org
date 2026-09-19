@@ -29,12 +29,13 @@ import type {TileId} from '../types';
  * the ones the instructions send somebody to the toolbox for.
  */
 const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
-  'origin/first-world': [
-    'world_add_actor',
-    'world_set_sprite',
-    'world_set_position',
-  ],
-  'input/arrows': ['world_use_trait'],
+  // Told on the map (specs/PILOT_PLAN.md): the second Hero is a click, and
+  // the one block the lesson reaches for is already on screen in the Hero's
+  // file, where its picture is changed.
+  'origin/first-world': [],
+  // Elected by a tick in Enhance; the rows it wrote are read and moved, and
+  // nothing is fetched.
+  'input/arrows': [],
   // …and step five, which writes what the event carried rather than a word of
   // the learner's — the same block either way, since it takes a value and
   // wears a text shadow (`domainBlocks.worldPrint`).
@@ -42,7 +43,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'input/mouse': ['world_use_trait', 'world_print'],
   'input/two-hands': ['world_use_trait'],
   'motion/speed': ['world_use_trait'],
-  'motion/gravity': ['world_use_trait', 'world_print'],
+  // Two ticks in Enhance, then the blocks half: a hat of the Gravity rule's,
+  // which nothing gates, and something to say in it.
+  'motion/gravity': ['world_on_Gravity_StopsFallingEvent', 'world_print'],
   'motion/force': [],
   'motion/units': [],
   'motion/drag': ['world_use_trait'],

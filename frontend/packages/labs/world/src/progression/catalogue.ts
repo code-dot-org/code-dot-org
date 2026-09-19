@@ -73,9 +73,15 @@ export const TILES: readonly Tile[] = [
     at: [0, 0],
     title: 'First light',
     teaches: 'A project is files; a world holds actors; something runs.',
-    task: 'A world with one actor in it, and a Run button. Add a second actor, give it a picture, and put it somewhere.',
+    task: 'A world with one actor in it, and a Run button. Place a second one on the map, then open what a Hero is and change its picture.',
     requires: [],
     unlocks: [
+      // The way from a thing on the map to what it IS: `Open ⟨Hero⟩`, which is
+      // how this lesson shows a learner their first blocks
+      // (specs/PILOT_PLAN.md). The lesson is told on the map; the blocks
+      // below are still what it grants, and what the World view's toolbox
+      // holds for anybody who looks.
+      {kind: 'affordance', id: 'map-open-kind'},
       // The seven blocks this lesson is done with, and not the drawers they
       // live in: a first lesson that opened the whole Actor drawer would offer
       // forty-two blocks to somebody who has met three (progression/toolboxShelf).
@@ -127,9 +133,15 @@ export const TILES: readonly Tile[] = [
     at: at('input', 1, 0),
     title: 'Make it go',
     teaches: 'A trait is elected, and then the world does something for you.',
-    task: 'A player that ignores you. Give it "Moves Across", then "Moves Down", and change its speed.',
+    task: 'A player that ignores you. Enhance it to move in all four directions, find the rows that wrote, and change its speed.',
     requires: ['origin/first-world'],
-    unlocks: [{kind: 'rule', id: 'arrows'}],
+    unlocks: [
+      {kind: 'rule', id: 'arrows'},
+      // The Enhance checklist, from a thing on the map: electing by a tick,
+      // which is what this lesson does before it opens the Hero and finds
+      // the rows the tick wrote (specs/PILOT_PLAN.md).
+      {kind: 'affordance', id: 'map-enhance'},
+    ],
     check: {
       kind: 'outcome',
       says: 'With right held for a second the actor’s x rises; with down held, its y.',
@@ -315,6 +327,10 @@ export const TILES: readonly Tile[] = [
       {kind: 'rule', id: 'gravity'},
       {kind: 'actor', id: 'ground'},
     ],
+    // Lent: Enhance is `input/arrows`' to give, and Motion is entered from
+    // Origin without passing through Input. The lesson elects by a tick and
+    // cannot be done on the map without it.
+    offers: [{kind: 'affordance', id: 'map-enhance'}],
     check: {
       kind: 'outcome',
       says: 'The actor’s y rises and then holds at the ground, and "stops falling" fires once.',

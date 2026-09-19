@@ -17,6 +17,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
+import {enhanceWith} from '../../actors/enhance/enhancements';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import {
@@ -308,6 +309,31 @@ describe('the gravity lesson’s check', () => {
     expect(passes).toBe(true);
   });
 
+  it('accepts it done on the map, by two ticks in Enhance', async () => {
+    // How the lesson is told now (specs/PILOT_PLAN.md): the Hero falls and
+    // the Ground holds things up, each by a tick. What the ticks write is
+    // the rows above, so the check that was there is the check there is.
+    const hero = {kind: 'actor', path: 'actors/hero', name: 'Hero'} as const;
+    const ground = {
+      kind: 'actor',
+      path: 'actors/ground',
+      name: 'Ground',
+    } as const;
+    const solved = enhanceWith(
+      enhanceWith(lesson.source, hero, {picked: ['falls'], answers: {}}),
+      ground,
+      {picked: ['holds-things-up'], answers: {}},
+    );
+    const files = projectFiles(solved);
+    expect(files['actors/hero.actor']).toContain(
+      'Gravity#AffectedByGravityTrait',
+    );
+    expect(files['actors/ground.actor']).toContain('Gravity#ActsAsGroundTrait');
+    const {passes, result} = await check('motion/gravity', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
   it('refuses a Hero that falls forever, which is half the lesson', async () => {
     // Step one of the instructions without step two: it falls, and it keeps
     // falling straight through the floor. The check has to be able to tell the
@@ -328,21 +354,37 @@ describe('the first world lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  it('accepts a world with a second actor that draws something', async () => {
+  it('accepts a second Hero placed on the map', async () => {
+    // How the lesson is told (specs/PILOT_PLAN.md): a click on the palette
+    // and a click on the map, which is one more entry in the world's `map`.
     const solved = editing(lesson.source, 'main.world', contents => {
-      const workspace = JSON.parse(contents) as {
-        blocks: {blocks: Array<{next?: {block?: Record<string, unknown>}}>};
+      const file = JSON.parse(contents) as {
+        map: {actors: Array<Record<string, unknown>>};
       };
-      // Chain a second `add actor` under the first — the lesson's step two.
-      let row = workspace.blocks.blocks[0].next?.block;
-      while (row?.next) {
-        row = (row.next as {block: Record<string, unknown>}).block;
-      }
-      if (row) {
-        row.next = {
-          block: {type: 'world_add_actor', fields: {ACTOR: actorPath('hero')}},
-        };
-      }
+      file.map.actors.push({
+        type: actorPath('hero'),
+        id: 'hero-1a2b3c4d',
+        properties: {positional: {position: {x: 240, y: 80}}},
+      });
+      return JSON.stringify(file);
+    });
+    const {passes, result} = await check('origin/first-world', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('accepts one added by a block, from the World view', async () => {
+    // The view is never locked, and `add actor` is one of the seven blocks
+    // its toolbox holds: a learner who does it there has done it.
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
+      const world = workspace.blocks.blocks.find(
+        block => block.type === 'world_world',
+      )!;
+      under(world, {
+        type: 'world_add_actor',
+        fields: {ACTOR: actorPath('hero')},
+      });
       return JSON.stringify(workspace);
     });
     const {passes, result} = await check('origin/first-world', solved);
@@ -464,8 +506,24 @@ describe('the arrow keys lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  // Across only is step two of three, and the lesson goes on to ask for down.
-  // A check that stopped at "it moved" would call the lesson done halfway.
+  it('accepts a Hero given all four directions by a tick in Enhance', async () => {
+    // How the lesson is told (specs/PILOT_PLAN.md). The tick writes the two
+    // rows the lesson then goes and finds, which is why the same check holds.
+    const hero = {kind: 'actor', path: 'actors/hero', name: 'Hero'} as const;
+    const solved = enhanceWith(lesson.source, hero, {
+      picked: ['top-down-controls'],
+      answers: {},
+    });
+    const written = projectFiles(solved)['actors/hero.actor'];
+    expect(written).toContain('Arrow Keys#MovesAcrossTrait');
+    expect(written).toContain('Arrow Keys#MovesDownTrait');
+    const {passes, result} = await check('input/arrows', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  // Step four of the lesson, left that way: the Moves Down row pulled out and
+  // never snapped back. A check that stopped at "it moved" would not notice.
   it('refuses a Hero that only walks across', async () => {
     const half = editing(lesson.source, 'main.world', contents =>
       electing(contents, 'Arrow Keys#MovesAcrossTrait', 'Hero'),

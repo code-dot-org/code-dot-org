@@ -257,6 +257,9 @@ describe('the view a lesson’s world opens on', () => {
       expect(LESSONS[id].levelData?.worldView, id).toBeDefined();
     }
     expect(onTheMap.sort()).toEqual([
+      'input/arrows',
+      'motion/gravity',
+      'origin/first-world',
       'place/layers',
       'place/map',
       'place/script',
