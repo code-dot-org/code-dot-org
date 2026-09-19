@@ -20,8 +20,9 @@ import {
   resolveCsrfToken,
 } from '@code-dot-org/core/api';
 
-import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+import ChallengeGallery from '../gallery/ChallengeGallery';
 
 import {DevPageChrome} from './devPageChrome';
 import {type TutorGalleryData} from './galleryFixtures';

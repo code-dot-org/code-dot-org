@@ -1,10 +1,11 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {ChallengeResponseDetail} from '@code-dot-org/lesson-deep-dive';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {FC} from 'react';
+import {FC} from 'react';
 
-import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
+import aiTutorAvatar from './ai-tutor-avatar.png';
+import {type ChallengeResponseDetail} from './types';
 
 import styles from './project-view.module.scss';
 
@@ -139,7 +140,7 @@ const AssessmentPanel: FC<AssessmentPanelProps> = ({detail}) => {
                 key={entry.level}
                 className={classNames(
                   styles.rubricItem,
-                  entry.level === assignedLevel && styles.rubricItemAssigned
+                  entry.level === assignedLevel && styles.rubricItemAssigned,
                 )}
               >
                 <div className={styles.rubricLevelRow}>

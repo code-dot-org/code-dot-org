@@ -1,34 +1,31 @@
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {type Mock, vi} from 'vitest';
+
+import {type ChallengeResponse} from '../../types';
 import {
   addReaction,
-  ChallengeResponse,
-  ChallengeResponseDetail,
   getChallengeResponse,
   getUnitCounts,
   listChallengeResponses,
-  TutorGalleryData,
-} from '@code-dot-org/lesson-deep-dive';
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
-
-import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
-jest.mock('@code-dot-org/core/api', () => {
+} from '../api';
+import ChallengeGallery from '../ChallengeGallery';
+import {type ChallengeResponseDetail, type TutorGalleryData} from '../types';
+vi.mock('@code-dot-org/core/api', () => {
   const client = {transport: {}};
   return {useApiClient: () => client};
 });
 
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  addReaction: jest.fn(),
-  getChallengeResponse: jest.fn(),
-  getUnitCounts: jest.fn(),
-  listChallengeResponses: jest.fn(),
+vi.mock('../api', () => ({
+  addReaction: vi.fn(),
+  getChallengeResponse: vi.fn(),
+  getUnitCounts: vi.fn(),
+  listChallengeResponses: vi.fn(),
 }));
 
-const mockList = listChallengeResponses as jest.Mock;
-const mockUnitCounts = getUnitCounts as jest.Mock;
-const mockDetail = getChallengeResponse as jest.Mock;
-const mockAddReaction = addReaction as jest.Mock;
+const mockList = listChallengeResponses as Mock;
+const mockUnitCounts = getUnitCounts as Mock;
+const mockDetail = getChallengeResponse as Mock;
+const mockAddReaction = addReaction as Mock;
 const listParams = () =>
   mockList.mock.calls.map(([, params]) => params.toString());
 
@@ -89,7 +86,7 @@ const whiteboardResponse: ChallengeResponse = {
 
 const stubFetches = (
   responses: ChallengeResponse[],
-  counts: Record<string, number> = {}
+  counts: Record<string, number> = {},
 ) => {
   mockList.mockResolvedValue(responses);
   mockUnitCounts.mockResolvedValue(counts);
@@ -121,7 +118,7 @@ describe('ChallengeGallery', () => {
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
 
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
     expect(listParams()).toContain('unit_id=100&section_id=5');
 
@@ -153,11 +150,11 @@ describe('ChallengeGallery', () => {
     fireEvent.click(
       screen.getByRole('button', {
         name: /Unit 2: Foundations of AI Programming/,
-      })
+      }),
     );
 
     await waitFor(() =>
-      expect(listParams()).toContain('unit_id=200&section_id=5')
+      expect(listParams()).toContain('unit_id=200&section_id=5'),
     );
   });
 
@@ -166,7 +163,7 @@ describe('ChallengeGallery', () => {
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
 
     fireEvent.change(screen.getByDisplayValue('Most recent'), {
@@ -174,7 +171,7 @@ describe('ChallengeGallery', () => {
     });
 
     await waitFor(() =>
-      expect(listParams()).toContain('unit_id=100&section_id=5&sort=oldest')
+      expect(listParams()).toContain('unit_id=100&section_id=5&sort=oldest'),
     );
   });
 
@@ -183,7 +180,7 @@ describe('ChallengeGallery', () => {
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
-      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument()
+      expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
     );
 
     fireEvent.change(screen.getByDisplayValue('Section 1 - CS Period 3'), {
@@ -198,7 +195,7 @@ describe('ChallengeGallery', () => {
     stubFetches([]);
 
     render(
-      <ChallengeGallery tutorGalleryData={{...galleryData, sections: []}} />
+      <ChallengeGallery tutorGalleryData={{...galleryData, sections: []}} />,
     );
 
     await waitFor(() => expect(listParams()).toContain('unit_id=100'));
@@ -212,8 +209,8 @@ describe('ChallengeGallery', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText('No projects have been submitted for this unit yet.')
-      ).toBeInTheDocument()
+        screen.getByText('No projects have been submitted for this unit yet.'),
+      ).toBeInTheDocument(),
     );
   });
 
@@ -225,8 +222,8 @@ describe('ChallengeGallery', () => {
 
     await waitFor(() =>
       expect(
-        screen.getByText(/We couldn't load the gallery/)
-      ).toBeInTheDocument()
+        screen.getByText(/We couldn't load the gallery/),
+      ).toBeInTheDocument(),
     );
   });
 
@@ -242,7 +239,7 @@ describe('ChallengeGallery', () => {
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
 
     fireEvent.click(screen.getByRole('link', {name: 'Grace Hopper'}));
@@ -250,8 +247,8 @@ describe('ChallengeGallery', () => {
     expect(window.location.search).toBe('?project=8');
     await waitFor(() =>
       expect(
-        screen.getByText('Project Prompt: Draw a network.')
-      ).toBeInTheDocument()
+        screen.getByText('Project Prompt: Draw a network.'),
+      ).toBeInTheDocument(),
     );
     expect(mockDetail).toHaveBeenCalledWith(expect.anything(), 8);
 
@@ -259,7 +256,7 @@ describe('ChallengeGallery', () => {
 
     expect(window.location.search).toBe('');
     await waitFor(() =>
-      expect(screen.getByText('Extension Activities')).toBeInTheDocument()
+      expect(screen.getByText('Extension Activities')).toBeInTheDocument(),
     );
   });
 
@@ -273,15 +270,15 @@ describe('ChallengeGallery', () => {
 
     render(<ChallengeGallery tutorGalleryData={galleryData} />);
     await waitFor(() =>
-      expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
+      expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
     );
 
     // Open the project page and add a reaction there.
     fireEvent.click(screen.getByRole('link', {name: 'Grace Hopper'}));
     await waitFor(() =>
       expect(
-        screen.getByText('Project Prompt: Draw a network.')
-      ).toBeInTheDocument()
+        screen.getByText('Project Prompt: Draw a network.'),
+      ).toBeInTheDocument(),
     );
     fireEvent.click(screen.getByRole('button', {name: 'Add reaction'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Heart'}));
@@ -293,8 +290,8 @@ describe('ChallengeGallery', () => {
     fireEvent.click(screen.getByRole('button', {name: /project gallery/}));
     await waitFor(() =>
       expect(
-        screen.getByRole('img', {name: /Heart, 1 reaction/})
-      ).toBeInTheDocument()
+        screen.getByRole('img', {name: /Heart, 1 reaction/}),
+      ).toBeInTheDocument(),
     );
   });
 });
