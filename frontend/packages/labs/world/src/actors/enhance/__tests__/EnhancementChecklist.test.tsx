@@ -44,6 +44,38 @@ const shelf = (groups: number) =>
     ],
   }));
 
+/** What a gated lab holds, and which lesson grants what. */
+let shelfHolds: ((unlock: {kind: string; id?: string}) => boolean) | undefined;
+vi.mock('../../../progression/progressionContext', () => ({
+  useMaybeProgression: () =>
+    shelfHolds
+      ? {holds: shelfHolds, grantedBy: () => 'motion/gravity'}
+      : undefined,
+}));
+vi.mock('../../../progression/LessonLink', () => ({
+  unlockLesson: () => ({title: 'Down', open: vi.fn()}),
+}));
+
+/** A row that writes a rule file, which is what the gate reads. */
+const takes = (id: string, rule: string): Enhancement => ({
+  ...ability(id),
+  apply: (source: MultiFileSource) =>
+    ({
+      ...source,
+      folders: {r: {id: 'r', name: 'rules', parentId: '0'}},
+      files: {
+        ...source.files,
+        [rule]: {
+          id: rule,
+          name: `${rule}.rule`,
+          language: 'rule',
+          contents: '',
+          folderId: 'r',
+        },
+      },
+    }) as never,
+});
+
 const groupsFor = vi.fn();
 vi.mock('../enhancements', async importActual => ({
   ...(await importActual<object>()),
@@ -116,5 +148,38 @@ describe('folding the groups', () => {
     fireEvent.click(screen.getByRole('button', {name: /Group 1/}));
 
     expect(screen.getByRole('checkbox', {name: 'a0'})).toBeTruthy();
+  });
+});
+
+describe('a row a gated lab has not got to', () => {
+  beforeEach(() => {
+    shelfHolds = undefined;
+  });
+
+  const oneRow = () => {
+    groupsFor.mockReturnValue([
+      {name: 'Gravity and ground', members: [takes('falls', 'gravity')]},
+    ]);
+    show();
+    return screen.getByRole('checkbox', {name: 'falls'});
+  };
+
+  it('is ticked as usual when nothing gates the lab', () => {
+    expect(oneRow()).toBeEnabled();
+    expect(screen.queryByText(/Unlocked by/)).toBeNull();
+  });
+
+  it('is shown, refused, and says which lesson brings it', () => {
+    // Shown rather than left out: what this one COULD do once a lesson is
+    // done is part of the answer (specs/ENHANCE_GATE_PLAN.md).
+    shelfHolds = unlock => !(unlock.kind === 'rule' && unlock.id === 'gravity');
+    expect(oneRow()).toBeDisabled();
+    expect(screen.getByText('Unlocked by: Down')).toBeInTheDocument();
+  });
+
+  it('is ticked when the rule it takes is one the learner has', () => {
+    shelfHolds = () => true;
+    expect(oneRow()).toBeEnabled();
+    expect(screen.queryByText(/Unlocked by/)).toBeNull();
   });
 });

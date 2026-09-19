@@ -109,8 +109,9 @@ not theirs yet from a thing that does not exist.
 
 - No tile grants the three new affordances, so a gated lab offers Enhance,
   Open and New actor from the first lesson. The pilot assigns them.
-- Enhance offers its whole checklist whatever the shelf holds. An ability
-  whose rule is not unlocked can be ticked from a lesson that has Enhance.
+- (Closed since: a row whose rules a gated lab has not unlocked is shown,
+  refused, and says which lesson brings it.
+  specs/ENHANCE_GATE_PLAN.md.)
 - The withheld state has not been heard through a screen reader or walked
   with a keyboard in a browser; the tests pin the attributes, not what is
   announced.

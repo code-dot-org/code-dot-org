@@ -1,9 +1,9 @@
 # Plan: Enhance behind the shelf
 
-STATUS: IN PROGRESS. The last of the gaps specs/KINDS_FROM_THE_MAP_PLAN.md
-recorded: the Enhance checklist offers every ability whatever a gated lab
-has unlocked, so a tick can bring in a rule no lesson has granted. The
-working record, as before.
+STATUS: BUILT, pending a look in the browser. The last of the gaps
+specs/KINDS_FROM_THE_MAP_PLAN.md recorded: the Enhance checklist offers every
+ability whatever a gated lab has unlocked, so a tick can bring in a rule no
+lesson has granted. The working record, as before.
 
 ## The problem
 
@@ -53,8 +53,40 @@ gate does not reach.
 
 ## Commits
 
-(recorded as they land)
+- `dfff959ec96` — this plan.
+- (next) — what a row would take; the checklist's gate; the tests.
 
 ## Learned while building
 
-(recorded as it happens)
+- **A tick takes more than it says.** "Falls when nothing holds it up"
+  brings Gravity, and Gravity brings three more. A gate written from each
+  row's own list of rules would have let three through per tick; taking
+  the row and diffing the project catches the whole chain without anybody
+  writing it down.
+- **The checklist already had two ways to say no**, and the right one was
+  neither. A row the actor cannot take is left out; a row it already has
+  is ticked and locked. A row a lesson has not reached yet is a third
+  thing: it is an answer to "what can this one do", just not yet, so it is
+  shown and refused with the lesson named.
+- **The words are the same as everywhere else** — "Unlocked by:" and the
+  lesson's title — and here they are words rather than a link, because
+  this list is inside a modal that it cannot close.
+
+## Not built, and known
+
+- A row is refused for the FIRST rule it would take that is not unlocked,
+  and says one lesson. A row that takes two withheld rules names the
+  first; finishing that lesson may leave the row still refused.
+- Nothing gates the actors, animations or sprites an enhancement brings —
+  the health bar row writes an actor. Those have their own unlocks and
+  their own dialogs, which do gate; this closes the rules' door only.
+- Working out what a row takes means applying it, which is a fold over the
+  project per row. It is memoized per draft, and the list is thirty rows.
+
+## What to look at in the browser
+
+In a gated lab early in the progression, open Enhance on any actor: the
+rows whose rules are not unlocked yet should be greyed with "Unlocked by:"
+and a lesson's name beside them, and should not tick. In an ungated lab —
+which is every lab unless a level says otherwise — nothing should look any
+different from before.

@@ -63,6 +63,12 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {unlockLesson} from '../../progression/LessonLink';
+import {
+  useMaybeProgression,
+  type Progression,
+} from '../../progression/progressionContext';
+
 import styles from './enhancementChecklist.module.css';
 import {
   enhancementsFor,
@@ -72,6 +78,7 @@ import {
   type EnhanceTarget,
   type Picks,
 } from './enhancements';
+import {rulesAddedBy} from './needsRules';
 
 export interface EnhancementChecklistProps {
   /** The actor as it stands, which is what "already has this" is asked of. */
@@ -96,6 +103,32 @@ const TIDY = 12;
 
 /** Nothing ticked yet, which is how both frames start. */
 export const NO_PICKS: Picks = {picked: [], answers: {}};
+
+/**
+ * Why a gated lab will not let this row be ticked, or nothing.
+ *
+ * A row takes rules (`needsRules`), and the shelf says which a learner has
+ * earned. An ungated lab, or no progression at all, holds everything and
+ * this answers nothing for every row (specs/ENHANCE_GATE_PLAN.md).
+ */
+const withheldBecause = (
+  progression: Progression | undefined,
+  draft: MultiFileSource,
+  target: EnhanceTarget,
+  enhancement: Enhancement,
+): string | undefined => {
+  if (!progression) {
+    return undefined;
+  }
+  for (const id of rulesAddedBy(draft, target, enhancement)) {
+    const unlock = {kind: 'rule', id} as const;
+    if (!progression.holds(unlock)) {
+      const lesson = unlockLesson(progression, unlock);
+      return lesson ? `Unlocked by: ${lesson.title}` : 'Not unlocked yet';
+    }
+  }
+  return undefined;
+};
 
 /** Whether a row is on the shelf for this target, as the project stands. */
 const onOffer = (
@@ -222,6 +255,22 @@ export const EnhancementChecklist = ({
     () => enhanceWith(source, target, {picked, answers}),
     [source, target, picked, answers],
   );
+  // What a gated lab has not got to. Memoized over the draft, since working
+  // it out means applying each row (`needsRules`).
+  const progression = useMaybeProgression();
+  const withheld = useMemo(() => {
+    const reasons = new Map<string, string | undefined>();
+    return (enhancement: Enhancement): string | undefined => {
+      if (!reasons.has(enhancement.id)) {
+        reasons.set(
+          enhancement.id,
+          withheldBecause(progression, draft, target, enhancement),
+        );
+      }
+      return reasons.get(enhancement.id);
+    };
+  }, [progression, draft, target]);
+
   /**
    * The shelf with the rows this actor cannot take left out — not offered
    * once the ticks are in, or refused — and any heading that is empty once
@@ -331,6 +380,7 @@ export const EnhancementChecklist = ({
               {group.members.map(enhancement => {
                 const already = alreadyHas(enhancement, source, target);
                 const ticked = already || picked.includes(enhancement.id);
+                const locked = withheld(enhancement);
                 const showing = open.includes(enhancement.id);
                 const panel = `${enhancement.id}-about`;
                 return (
@@ -340,7 +390,7 @@ export const EnhancementChecklist = ({
                         name={enhancement.id}
                         label={enhancement.name}
                         checked={ticked}
-                        disabled={already}
+                        disabled={already || locked !== undefined}
                         size="s"
                         className={styles.tick}
                         onChange={event =>
@@ -350,6 +400,15 @@ export const EnhancementChecklist = ({
                       {already && (
                         <Typography variant="body4" className={styles.note}>
                           already
+                        </Typography>
+                      )}
+                      {/* A row a gated lab has not got to. Named rather than
+                          linked: this list is inside a modal it cannot close,
+                          and two modals at once is what the accessibility
+                          checklist says to avoid (specs/ENHANCE_GATE_PLAN.md). */}
+                      {locked && (
+                        <Typography variant="body4" className={styles.note}>
+                          {locked}
                         </Typography>
                       )}
                       <MuiButton
