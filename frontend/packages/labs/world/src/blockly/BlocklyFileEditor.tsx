@@ -29,6 +29,7 @@ import {requestAppearanceImport} from '../appearance/appearanceImport';
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {projectSheets} from '../appearance/sheetFile';
 import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
+import {setRevealer} from '../callouts/reveal';
 import {
   hiddenToolboxCategories,
   showsRuleSource,
@@ -101,6 +102,7 @@ import {
   renameRuleReferences,
   type MemberKey,
 } from './renameRule';
+import {revealInToolbox, type ToolboxHost} from './revealInToolbox';
 import {requestRuleImport} from './ruleImport';
 import {designedName, parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
@@ -1274,6 +1276,32 @@ export const BlocklyFileEditor = ({
     // through an editor that is gone.
     return () => setModuleOpener(null);
   }, [updateSources]);
+
+  // "Show me" on a block or a drawer (`callouts/reveal`): this editor's
+  // toolbox, while this editor is the one on screen. Blockly's own focus is
+  // what points at a block, so that a keyboard and a screen reader are
+  // pointed at it too (`revealInToolbox`).
+  useEffect(() => {
+    setRevealer('toolbox', step => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return false;
+      }
+      try {
+        return revealInToolbox(
+          workspace as unknown as ToolboxHost,
+          step,
+          node =>
+            Blockly.getFocusManager().focusNode(node as Blockly.IFocusableNode),
+        );
+      } catch {
+        // Pointing is a second channel: a Blockly that objects to being
+        // steered from outside costs the ring, never the lesson.
+        return false;
+      }
+    });
+    return () => setRevealer('toolbox', null);
+  }, []);
 
   // Which rule this workspace is, so `use rule` can leave it out of its own list.
   // After mount rather than during: the workspace is created by a child, whose
