@@ -1,7 +1,7 @@
 // A world opened: its map first, its workspace one switch away, and one file
 // between the two (`WorldEditor`, specs/MAIN_MAP_PLAN.md).
 
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
@@ -78,6 +78,7 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
 }));
 
 const {WorldEditor} = await import('../WorldEditor');
+const {reveal} = await import('../../callouts/reveal');
 
 const CONTENTS = JSON.stringify({
   blocks: {blocks: [{type: 'world_world', fields: {NAME: 'W'}}]},
@@ -160,6 +161,26 @@ describe('WorldEditor', () => {
     open();
     expect(screen.getByRole('tab', {name: 'Map'})).toBeInTheDocument();
     expect(screen.getByRole('tab', {name: 'World'})).toBeInTheDocument();
+    expect(screen.getByTestId('map-view')).toBeInTheDocument();
+  });
+
+  it('shows the view Show me asks for, and marks the two tabs as places', () => {
+    open();
+    expect(screen.getByRole('tab', {name: 'Map'})).toHaveAttribute(
+      'data-callout',
+      'view.map',
+    );
+    expect(screen.getByRole('tab', {name: 'World'})).toHaveAttribute(
+      'data-callout',
+      'view.world',
+    );
+    act(() => {
+      reveal({kind: 'view', view: 'world'});
+    });
+    expect(screen.getByTestId('world-view')).toBeInTheDocument();
+    act(() => {
+      reveal({kind: 'view', view: 'map'});
+    });
     expect(screen.getByTestId('map-view')).toBeInTheDocument();
   });
 });

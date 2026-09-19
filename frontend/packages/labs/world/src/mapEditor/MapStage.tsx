@@ -31,9 +31,11 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import TextField from '@code-dot-org/component-library/textField';
 
 import {placementKey} from '../blockly/mapPlacements';
+import {setRevealer} from '../callouts/reveal';
 import type {Affordance} from '../progression/types';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
+
 
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
@@ -511,6 +513,42 @@ export const MapStage = ({
   const selectedActor = selectedId
     ? (map.actors.find(a => a.id === selectedId) ?? null)
     : null;
+  // "Show me" on something in a placement's properties needs a placement
+  // selected (`callouts/reveal`). By the NAME its kind declares — `Enhance
+  // Ground…` wants a Ground — or by its own id; with no name, whatever is
+  // selected stays, and with nothing selected the first placement is.
+  const selectedRef = useRef(selectedId);
+  selectedRef.current = selectedId;
+  const kindsRef = useRef(kinds);
+  kindsRef.current = kinds;
+  useEffect(() => {
+    setRevealer('placement', ({named}) => {
+      const actors = mapRef.current.actors;
+      const wanted = named?.toLowerCase();
+      const isWanted = (actor: Placement) =>
+        kindsRef.current?.[actor.type]?.name.toLowerCase() === wanted ||
+        actor.id.toLowerCase() === wanted;
+      const current = actors.find(actor => actor.id === selectedRef.current);
+      // Already one of those: a learner who selected the second Hero keeps
+      // it. Otherwise the first that answers to the name, or the first.
+      const found =
+        current && (!wanted || isWanted(current))
+          ? current
+          : wanted
+            ? actors.find(isWanted)
+            : actors[0];
+      if (!found) {
+        return false;
+      }
+      if (found !== current) {
+        setSelectedId(found.id);
+      }
+      setInspectingLayer(false);
+      return true;
+    });
+    return () => setRevealer('placement', null);
+  }, []);
+
   /** The selected placement's kind, when it has a file of its own. */
   const selectedKind = selectedActor ? kinds?.[selectedActor.type] : undefined;
   /** The layer whose inspector is open, if the map still has it. */
@@ -1943,6 +1981,7 @@ export const MapStage = ({
                 variant="text"
                 size="extraSmall"
                 className={withheldClass('map-scripts')}
+                data-callout="map.script"
                 {...orWithheld('map-scripts', 'inspector', () =>
                   onEditScript(selectedActor.id),
                 )}
@@ -1971,6 +2010,7 @@ export const MapStage = ({
                     size="extraSmall"
                     disabled={isReadOnly}
                     className={withheldClass('map-enhance')}
+                    data-callout="map.enhance"
                     {...orWithheld('map-enhance', 'inspector', () =>
                       onEnhanceKind(selectedActor.type),
                     )}
@@ -1986,6 +2026,7 @@ export const MapStage = ({
                     variant="text"
                     size="extraSmall"
                     className={withheldClass('map-open-kind')}
+                    data-callout="map.openKind"
                     {...orWithheld('map-open-kind', 'inspector', () =>
                       onOpenKind(selectedActor.type),
                     )}

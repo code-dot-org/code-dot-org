@@ -504,3 +504,31 @@ describe('`New actor…` on the palette', () => {
     shelf = undefined;
   });
 });
+
+describe('Show me, while a script is open', () => {
+  it('is refused a selection: a reveal never leaves a learner’s script', async () => {
+    const {reveal} = await import('../../callouts/reveal');
+    open();
+    // With the map up, the (stand-in) stage answers nothing here.
+    expect(reveal({kind: 'placement', named: 'Coin'})).toBeUndefined();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Script'}));
+    expect(screen.getByTestId('script')).toBeInTheDocument();
+    expect(reveal({kind: 'placement', named: 'Coin'})).toBe(false);
+
+    fireEvent.click(screen.getByRole('button', {name: 'Map'}));
+    expect(reveal({kind: 'placement', named: 'Coin'})).toBeUndefined();
+  });
+
+  it('marks the palette and its tiles as places', () => {
+    open();
+    expect(screen.getByRole('button', {name: 'Coin'})).toHaveAttribute(
+      'data-callout',
+      'map.palette:Coin',
+    );
+    expect(screen.getByRole('button', {name: 'New actor…'})).toHaveAttribute(
+      'data-callout',
+      'map.newActor',
+    );
+  });
+});

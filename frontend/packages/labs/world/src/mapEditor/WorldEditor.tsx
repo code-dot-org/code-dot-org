@@ -28,6 +28,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {BlocklyFileEditor} from '../blockly/BlocklyFileEditor';
+import {setRevealer} from '../callouts/reveal';
 import {worldOpensOn, type WorldLevelProperties} from '../levelData';
 
 import {MapEditor} from './MapEditor';
@@ -51,6 +52,15 @@ export const WorldEditor = (props: CustomEditorProps) => {
     setContents(props.initialContents);
   }, [sourcesEpoch, props.initialContents]);
 
+  // "Show me" may need one view or the other up before its target exists
+  // (`callouts/reveal`). Both are always offered, so there is nothing to
+  // refuse: the file is written as it is edited, and leaving a view loses
+  // nothing.
+  useEffect(() => {
+    setRevealer('view', step => setView(step.view));
+    return () => setRevealer('view', null);
+  }, []);
+
   const write = (next: string) => {
     setContents(next);
     props.onChange(next);
@@ -64,6 +74,7 @@ export const WorldEditor = (props: CustomEditorProps) => {
           role="tab"
           className={styles.viewButton}
           aria-selected={view === 'map'}
+          data-callout="view.map"
           onClick={() => setView('map')}
         >
           Map
@@ -73,6 +84,7 @@ export const WorldEditor = (props: CustomEditorProps) => {
           role="tab"
           className={styles.viewButton}
           aria-selected={view === 'world'}
+          data-callout="view.world"
           onClick={() => setView('world')}
         >
           World

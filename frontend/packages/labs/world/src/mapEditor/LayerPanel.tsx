@@ -35,7 +35,11 @@ export const LayerPanel = ({
 }: LayerPanelProps) => {
   const at = layers.findIndex(layer => layer.id === selected);
   return (
-    <div className={styles.layers} data-testid="layer-panel">
+    <div
+      className={styles.layers}
+      data-testid="layer-panel"
+      data-callout="map.layers"
+    >
       <Typography variant="subtitle2" component="span">
         Layers
       </Typography>

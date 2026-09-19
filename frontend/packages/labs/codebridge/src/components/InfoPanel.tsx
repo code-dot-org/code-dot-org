@@ -50,6 +50,15 @@ export interface InfoPanelProps {
    * and for the same reason: what belongs there is the lab's to know.
    */
   extraLinks?: ReactNode;
+  /**
+   * What a clickable in the instructions does: `[label](#clickable=id)` in a
+   * level's markdown is drawn as a button that calls this with the id
+   * (`@code-dot-org/markdown`, `clickableText`). Passed straight through to
+   * the base panel, which already takes it; omitted, a clickable is bold
+   * text. What an id MEANS is the lab's — a place on its screen to point at,
+   * in the one that uses it.
+   */
+  onInstructionsTextClick?: (id: string) => void;
 }
 
 /**
@@ -70,6 +79,7 @@ export const InfoPanel = ({
   extraSettings = [],
   aiTutor,
   extraLinks,
+  onInstructionsTextClick,
 }: InfoPanelProps) => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
@@ -163,6 +173,7 @@ export const InfoPanel = ({
       className={className}
       aiTutor={aiTutor}
       extraLinks={extraLinks}
+      onInstructionsTextClick={onInstructionsTextClick}
       levelProperties={levelProperties}
       isRunning={isRunning}
       hasRun={hasRun}

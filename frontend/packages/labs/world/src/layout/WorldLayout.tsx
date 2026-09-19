@@ -14,6 +14,8 @@ import type {Setting} from '@code-dot-org/lab/resourcePanel';
 
 import {useWorldTutor} from '../aiTutor/useWorldTutor';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
+import {CalloutAnnouncer} from '../callouts/CalloutAnnouncer';
+import {pointAt} from '../callouts/pointAt';
 import {ENTRY_FILE, ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {FileMenus} from '../files/FileMenus';
@@ -53,6 +55,9 @@ const PREVIEW = {initial: 460, min: 240, max: 900};
  * pane in split / preview-only view, and under the editor pane when the editor
  * is the only pane. It is not a full-width bar under both (web-lab's shape).
  */
+/** What a clickable in the instructions does: point at the place it names. */
+const showMe = (name: string) => void pointAt(name);
+
 const WorldLayout = () => {
   // A level about one file has nothing to browse (levelData).
   const level = useMaybeLevelProperties<WorldLevelProperties>();
@@ -120,6 +125,9 @@ const WorldLayout = () => {
         // in blocks. It offers no file edits, because a model cannot author a
         // Blockly workspace safely (`aiTutor/useWorldTutor`).
         aiTutor={aiTutor}
+        // "Show me": a link in a lesson's instructions names a place, and
+        // pressing it points there (`callouts/pointAt`).
+        onInstructionsTextClick={showMe}
         extraSettings={[blocklyThemeSetting]}
         // The way into the progression map, in the panel's bottom icon strip
         // (specs/PROGRESSION_UI.md).
@@ -180,6 +188,8 @@ const WorldLayout = () => {
                 row AND from the file menus, and the menus are on screen
                 whatever is open (`library/LibraryImports`). */}
             <LibraryImports />
+            {/* Where Show me says what it pointed at, and the ring's style. */}
+            <CalloutAnnouncer />
             {showEditor && (
               <div className={styles.editorPane}>
                 <div className={styles.editorMain}>

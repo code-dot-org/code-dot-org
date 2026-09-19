@@ -29,6 +29,7 @@ import {
   projectMapActorTypes,
   projectWorldOptions,
 } from '../blockly/projectModules';
+import {setRevealer} from '../callouts/reveal';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import {useMaybeProgression} from '../progression/progressionContext';
 import type {Affordance} from '../progression/types';
@@ -480,6 +481,18 @@ export const MapEditor = ({
    * as an inspector edit does, and the way back is one button.
    */
   const [script, setScript] = useState<ScriptView | null>(null);
+  // A REVEAL NEVER LEAVES A SCRIPT A LEARNER HAS OPEN
+  // (specs/SHOW_ME_PLAN.md). While one is, the stage is not mounted to
+  // answer for a selection, and this answers no: Show me then says where the
+  // thing is, and rings nothing.
+  const scriptOpen = script !== null;
+  useEffect(() => {
+    if (!scriptOpen) {
+      return undefined;
+    }
+    setRevealer('placement', () => false);
+    return () => setRevealer('placement', null);
+  }, [scriptOpen]);
   const mapModule = useMemo(
     () => document.modulePath(filePath(currentSources.source, fileId) ?? ''),
     [currentSources, fileId, document],
@@ -543,7 +556,7 @@ export const MapEditor = ({
 
   return (
     <div className={styles.editor}>
-      <div className={styles.picker}>
+      <div className={styles.picker} data-callout="map.palette">
         <label className={styles.sizeField}>
           <span className={styles.sizeLabel}>Width</span>
           <input
@@ -582,6 +595,7 @@ export const MapEditor = ({
             // stage does that itself, since that selection is its state.
             onClick={() => setSelected(path === selected ? null : path)}
             aria-pressed={path === selected}
+            data-callout={`map.palette:${name}`}
           >
             {/* THE GROUND IS THE CELL'S, not the image's, and it is the
                 PICKER'S ground rather than any world's. A thumbnail is a
@@ -620,6 +634,7 @@ export const MapEditor = ({
                   ? `${styles.actor} ${styles.withheld}`
                   : styles.actor
               }
+              data-callout="map.newActor"
               // Focusable when withheld, and described by the note beside
               // it, so a keyboard can reach it and hear why (`WithheldNote`).
               {...(withheld.has('map-new-actor')

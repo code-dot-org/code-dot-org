@@ -15,7 +15,7 @@
 // this pane — the same functions the stage uses, so a test and the stage
 // cannot disagree about where anything is.
 
-import {fireEvent, render} from '@testing-library/react';
+import {act, fireEvent, render} from '@testing-library/react';
 import {
   afterAll,
   beforeAll,
@@ -26,6 +26,7 @@ import {
   vi,
 } from 'vitest';
 
+import {reveal} from '../../callouts/reveal';
 import type {ActorSchema} from '../../runtime/messages';
 import type {MapDoc, Vec} from '../mapModel';
 import {extentOf} from '../mapModel';
@@ -865,6 +866,58 @@ describe('from a placement to its kind', () => {
     // Read-only refuses the click that selects, so say which is selected.
     select(canvas, map);
     expect(view.queryByRole('button', {name: 'Enhance Coin…'})).toBeNull();
+  });
+});
+
+describe('Show me, on the stage', () => {
+  const kinds = {'actors/coin': {name: 'Coin'}};
+  const handlers = {kinds, onEnhanceKind: vi.fn(), onOpenKind: vi.fn()};
+
+  it('selects a placement of the kind it names, so its properties exist', () => {
+    const {selectedId, ...view} = mount(doc(), handlers);
+    expect(selectedId()).toBeNull();
+    let answer: unknown;
+    act(() => {
+      answer = reveal({kind: 'placement', named: 'Coin'});
+    });
+    expect(answer).toBe(true);
+    expect(selectedId()).toBe('a');
+    // …and what it selected for is there, marked as the place it is.
+    expect(view.getByRole('button', {name: 'Enhance Coin…'})).toHaveAttribute(
+      'data-callout',
+      'map.enhance',
+    );
+    expect(view.getByRole('button', {name: 'Open Coin'})).toHaveAttribute(
+      'data-callout',
+      'map.openKind',
+    );
+  });
+
+  it('keeps a selection that already answers to the name', () => {
+    const {canvas, selectedId} = mount(doc(), handlers);
+    // The second Coin, by the keyboard: right, then right again.
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+    const chosen = selectedId();
+    act(() => {
+      reveal({kind: 'placement', named: 'Coin'});
+    });
+    expect(selectedId()).toBe(chosen);
+  });
+
+  it('says no when the map has nothing by that name', () => {
+    mount(doc(), handlers);
+    let answer: unknown;
+    act(() => {
+      answer = reveal({kind: 'placement', named: 'Dragon'});
+    });
+    expect(answer).toBe(false);
+  });
+
+  it('stops answering when it is gone', () => {
+    const view = mount(doc(), handlers);
+    view.unmount();
+    expect(reveal({kind: 'placement'})).toBeUndefined();
   });
 });
 
