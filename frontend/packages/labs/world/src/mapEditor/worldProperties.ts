@@ -17,6 +17,32 @@ export interface WorldProperty {
   type: string;
   /** The row's DEFAULT as stored — a string, whatever the type. */
   value: string;
+  /**
+   * The block that sets it, for a RULE's world-scoped property —
+   * `world_set_Scoring_TargetScoreProperty`. Absent for the world's own,
+   * which carry their starting value as a DEFAULT field instead.
+   */
+  setter?: string;
+  /** Which rule it came from, for the words beside it. */
+  rule?: string;
+}
+
+/**
+ * A rule's world-scoped property, as the caller describes one.
+ *
+ * Handed in rather than looked up, so this file stays what it is: surgery on
+ * a world's JSON, with no idea what a rule is. What a project holds and what
+ * each property's default is are the map editor's to know
+ * (`blockly/projectModules`, specs/WORLD_RULE_FIELDS_PLAN.md).
+ */
+export interface WorldRuleProperty {
+  /** The setter's block type. */
+  setter: string;
+  name: string;
+  type: string;
+  rule: string;
+  /** The rule's own starting value, shown when the world says nothing. */
+  default: string;
 }
 
 export interface WorldHeader {
@@ -27,6 +53,7 @@ export interface WorldHeader {
 interface Block {
   type?: string;
   fields?: Record<string, unknown>;
+  inputs?: Record<string, {block?: Block; shadow?: Block} | undefined>;
   next?: {block?: Block};
 }
 
@@ -57,8 +84,55 @@ function* rows(root: Block): Generator<Block> {
 const asText = (value: unknown): string =>
   value === undefined || value === null ? '' : String(value);
 
+/**
+ * The literal a `set` row holds, as text — or nothing when the row's value
+ * is anything but a literal, which is a world saying something a field
+ * cannot show.
+ */
+const literalOf = (row: Block): string | undefined => {
+  const value = row.inputs?.VALUE;
+  const held = value?.block ?? value?.shadow;
+  const fields = held?.fields;
+  if (!held || !fields) {
+    return undefined;
+  }
+  if (held.type === 'math_number') {
+    return 'NUM' in fields ? asText(fields.NUM) : undefined;
+  }
+  if (held.type === 'text') {
+    return 'TEXT' in fields ? asText(fields.TEXT) : undefined;
+  }
+  if (held.type === 'logic_boolean') {
+    return asText(fields.BOOL).toUpperCase() === 'TRUE' ? 'true' : 'false';
+  }
+  return undefined;
+};
+
+/** The value block a literal of this type is written as. */
+const literalBlock = (type: string, value: string): Block | undefined => {
+  if (type === 'number' || type === 'angle') {
+    const held = Number(value);
+    return Number.isFinite(held)
+      ? {type: 'math_number', fields: {NUM: held}}
+      : undefined;
+  }
+  if (type === 'string') {
+    return {type: 'text', fields: {TEXT: value}};
+  }
+  if (type === 'boolean') {
+    return {
+      type: 'logic_boolean',
+      fields: {BOOL: value === 'true' ? 'TRUE' : 'FALSE'},
+    };
+  }
+  return undefined;
+};
+
 /** The world's name and properties, or nothing when the file has no world. */
-export function readWorldHeader(contents: string): WorldHeader | undefined {
+export function readWorldHeader(
+  contents: string,
+  ruleProperties: readonly WorldRuleProperty[] = [],
+): WorldHeader | undefined {
   const root = rootOf(parse(contents));
   if (!root) {
     return undefined;
@@ -76,6 +150,22 @@ export function readWorldHeader(contents: string): WorldHeader | undefined {
         value: asText(row.fields?.DEFAULT),
       });
     }
+  }
+  // …and the world-scoped properties of the rules the project holds, each
+  // showing what the world says about it or, saying nothing, the rule's own
+  // (specs/WORLD_RULE_FIELDS_PLAN.md). The FIRST row that sets one is what
+  // is shown: a world may set a property twice and the last would win, but
+  // a field that showed the last and wrote the first would agree with
+  // neither.
+  for (const property of ruleProperties) {
+    const row = [...rows(root)].find(each => each.type === property.setter);
+    properties.push({
+      name: property.name,
+      type: property.type,
+      value: (row && literalOf(row)) ?? property.default,
+      setter: property.setter,
+      rule: property.rule,
+    });
   }
   return {name: asText(root.fields?.NAME), properties};
 }
@@ -109,6 +199,51 @@ export function writeWorldPropertyDefault(
       }
     }
     return false;
+  });
+}
+
+/**
+ * The file with a RULE's world property set to `value`.
+ *
+ * The row that sets it is rewritten, or added at the top of the world's rows
+ * when there is none — at the top because this is a STARTING value, and a
+ * row below something that reads it would be too late. A value equal to the
+ * rule's own default takes the row away again, so a world's file says only
+ * what differs from the rules it holds.
+ */
+export function writeWorldRuleValue(
+  contents: string,
+  property: WorldRuleProperty,
+  value: string,
+): string {
+  const held = literalBlock(property.type, value);
+  if (!held) {
+    return contents;
+  }
+  return rewrite(contents, root => {
+    let previous: Block = root;
+    for (const row of rows(root)) {
+      if (row.type === property.setter) {
+        if (value === property.default) {
+          previous.next = row.next;
+        } else {
+          row.inputs = {...row.inputs, VALUE: {shadow: held}};
+        }
+        return true;
+      }
+      previous = row;
+    }
+    if (value === property.default) {
+      return false;
+    }
+    root.next = {
+      block: {
+        type: property.setter,
+        inputs: {VALUE: {shadow: held}},
+        ...(root.next ? {next: root.next} : {}),
+      },
+    };
+    return true;
   });
 }
 

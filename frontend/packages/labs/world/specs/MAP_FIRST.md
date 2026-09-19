@@ -517,15 +517,21 @@ properties on the main map — the ones `define property` declares in the
 world's workspace, with their starting values as fields — beside its name,
 its camera, and its layers with their backgrounds and foregrounds. That is
 where `set target score to 30` goes, and it is a field rather than a block;
-the `set` block remains for a value that changes at run time. Every other
+the `set` block remains for a value that changes at run time. (BUILT, with
+one word corrected: a rule's property has no declaration in the world's
+file to carry a default, so the field is the FRONT of a `set` row rather
+than a replacement for one — it writes the row, and writing the rule's own
+value back takes the row away. specs/WORLD_RULE_FIELDS_PLAN.md.) Every other
 map's window shows the same on empty selection, minus the laws: a level has
 a camera, layers and a background of its own.
 
 BUILT for the name and the properties (`mapEditor/WorldInspector`): a
 number, angle, string or boolean is a field, and an edit rewrites the row's
 DEFAULT in the file without opening the blocks (`worldProperties`). The
-other types are shown and not edited. The camera and the layers arrive with
-steps 3 and 4.
+other types are shown and not edited. A RULE's world-scoped properties are
+listed under the world's own, each saying which rule it came from, and
+written as a `set` row (specs/WORLD_RULE_FIELDS_PLAN.md). The camera and
+the layers arrive with steps 3 and 4.
 
 ## Against the current shape
 

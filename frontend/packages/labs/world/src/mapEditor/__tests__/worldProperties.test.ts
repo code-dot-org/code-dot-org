@@ -6,6 +6,7 @@ import {describe, expect, it} from 'vitest';
 import {
   readWorldHeader,
   writeWorldName,
+  writeWorldRuleValue,
   writeWorldPropertyDefault,
 } from '../worldProperties';
 
@@ -79,5 +80,127 @@ describe('writing the header back', () => {
   it('leaves a file alone that has no such property, or no world', () => {
     expect(writeWorldPropertyDefault(WORLD, 'lives', '3')).toBe(WORLD);
     expect(writeWorldName('{broken', 'X')).toBe('{broken');
+  });
+});
+
+describe('a rule’s world property', () => {
+  const TARGET = {
+    setter: 'world_set_Scoring_TargetScoreProperty',
+    name: 'target score',
+    type: 'number',
+    rule: 'Scoring',
+    default: '0',
+  };
+
+  /** A world with the rows given, as a file. */
+  const world = (rows: object[] = []): string => {
+    const chained = rows.reduceRight<object | undefined>(
+      (next, row) => ({...row, ...(next ? {next: {block: next}} : {})}),
+      undefined,
+    );
+    return JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_world',
+            fields: {NAME: 'My World'},
+            ...(chained ? {next: {block: chained}} : {}),
+          },
+        ],
+      },
+    });
+  };
+  const setting = (value: number) => ({
+    type: TARGET.setter,
+    inputs: {VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}}},
+  });
+  const held = (contents: string) =>
+    readWorldHeader(contents, [TARGET])!.properties.find(
+      property => property.setter === TARGET.setter,
+    );
+
+  it('is the rule’s own value when the world says nothing', () => {
+    const property = held(world())!;
+    expect(property).toMatchObject({
+      name: 'target score',
+      type: 'number',
+      value: '0',
+      rule: 'Scoring',
+    });
+  });
+
+  it('is what the world’s own row says', () => {
+    expect(held(world([setting(30)]))!.value).toBe('30');
+  });
+
+  it('is the FIRST row’s, where a world sets it twice', () => {
+    expect(held(world([setting(30), setting(50)]))!.value).toBe('30');
+  });
+
+  it('is the rule’s own when the row holds something no field can show', () => {
+    const computed = {
+      type: TARGET.setter,
+      inputs: {VALUE: {block: {type: 'world_get_Scoring_ScoreProperty'}}},
+    };
+    expect(held(world([computed]))!.value).toBe('0');
+  });
+
+  it('is written into the row the world already has', () => {
+    const written = writeWorldRuleValue(world([setting(30)]), TARGET, '45');
+    expect(held(written)!.value).toBe('45');
+    // One row, not two.
+    expect(written.split(TARGET.setter)).toHaveLength(2);
+  });
+
+  it('adds a row at the top when the world has none', () => {
+    const other = {type: 'world_pause_game'};
+    const written = writeWorldRuleValue(world([other]), TARGET, '30');
+    const parsed = JSON.parse(written) as {
+      blocks: {
+        blocks: Array<{next?: {block?: {type?: string; next?: object}}}>;
+      };
+    };
+    // A starting value, so above whatever might read it.
+    expect(parsed.blocks.blocks[0].next?.block?.type).toBe(TARGET.setter);
+    expect(parsed.blocks.blocks[0].next?.block?.next).toBeDefined();
+    expect(held(written)!.value).toBe('30');
+  });
+
+  it('takes the row away again when the value is the rule’s own', () => {
+    const written = writeWorldRuleValue(world([setting(30)]), TARGET, '0');
+    expect(written).not.toContain(TARGET.setter);
+    expect(held(written)!.value).toBe('0');
+  });
+
+  it('adds nothing for a value that was already the rule’s own', () => {
+    const before = world([{type: 'world_pause_game'}]);
+    expect(writeWorldRuleValue(before, TARGET, '0')).toBe(before);
+  });
+
+  it('writes a string and a boolean as their own literals', () => {
+    const NAMED = {
+      ...TARGET,
+      setter: 'world_set_X_NameProperty',
+      type: 'string',
+      default: '',
+    };
+    const written = writeWorldRuleValue(world(), NAMED, 'Ada');
+    expect(written).toContain('"TEXT": "Ada"');
+    const FLAG = {
+      ...TARGET,
+      setter: 'world_set_X_OnProperty',
+      type: 'boolean',
+      default: 'false',
+    };
+    expect(writeWorldRuleValue(world(), FLAG, 'true')).toContain(
+      '"BOOL": "TRUE"',
+    );
+  });
+
+  it('refuses a value its type cannot hold, and a type no field edits', () => {
+    const before = world();
+    expect(writeWorldRuleValue(before, TARGET, 'lots')).toBe(before);
+    const VECTOR = {...TARGET, type: 'vector'};
+    expect(writeWorldRuleValue(before, VECTOR, '1,2')).toBe(before);
   });
 });

@@ -81,7 +81,7 @@ and opens blocks for its second half.
 | `memory/world-state` | both   | declaring is a block; the starting value is a world field           |
 | `memory/actor-state` | blocks | its Lamps read the WORLD's number, which an actor's file cannot do  |
 | `memory/lists`       | blocks |                                                                     |
-| `memory/score`       | blocks | a rule's world property is not in the world inspector (yet)         |
+| `memory/score`       | both   | import Scoring in blocks; the target score is a world field         |
 | `look/sprite`        | both   | import and paint as before; then make a kind that is offered it     |
 | `look/drawing`       | blocks | a drawing that reads a number is commands                           |
 | `look/background`    | map    | a layer's background, tiled and slid, in the layer's inspector      |
@@ -94,7 +94,7 @@ and opens blocks for its second half.
 | `place/script`       | map    | BUILT; the first blocks a Place learner writes                      |
 | `place/camera` (2)   | blocks | until a world's camera is in its inspector (MAP_FIRST.md)           |
 
-Fourteen of twenty-nine in the end: seven told on the map and seven half
+Fifteen of twenty-nine in the end: seven told on the map and eight half
 told there — rather than the eighteen this table first counted, which was a
 count made before any was built. Five lessons it listed turned out to want
 what the lab has not got, or to be about the very thing a checklist hides;

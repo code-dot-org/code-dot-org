@@ -62,6 +62,8 @@ import {MapStage} from './MapStage';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {WithheldNote} from './WithheldNote';
 import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
+import type {WorldProperty} from './worldProperties';
+import {worldRuleProperties} from './worldRuleProperties';
 
 /** How long after the last keystroke a placement's picture is asked for. */
 const PICTURE_DEBOUNCE_MS = 150;
@@ -451,11 +453,15 @@ export const MapEditor = ({
     setMap(next);
     writeFile(document.write(contentsRef.current, next));
   };
+  // What the world's window offers besides the world's own properties
+  // (`worldRuleProperties`, specs/WORLD_RULE_FIELDS_PLAN.md).
+  const ruleProperties = useMemo(() => worldRuleProperties(files), [files]);
+
   // The world itself, for the inspector with nothing selected — only when
   // the document is one (specs/MAIN_MAP_PLAN.md).
   const worldHeader = useMemo(
-    () => document.world?.read(fileText),
-    [document, fileText],
+    () => document.world?.read(fileText, ruleProperties),
+    [document, fileText, ruleProperties],
   );
   const worldInspector =
     document.world && worldHeader
@@ -463,14 +469,26 @@ export const MapEditor = ({
           header: worldHeader,
           onRename: (name: string) =>
             writeFile(document.world!.writeName(contentsRef.current, name)),
-          onSetDefault: (property: string, value: string) =>
+          // A rule's property is a `set` row; the world's own is a DEFAULT
+          // field on the row that declares it.
+          onSetDefault: (property: WorldProperty, value: string) => {
+            const found =
+              property.setter &&
+              ruleProperties.find(each => each.setter === property.setter);
             writeFile(
-              document.world!.writeDefault(
-                contentsRef.current,
-                property,
-                value,
-              ),
-            ),
+              found
+                ? document.world!.writeRuleValue(
+                    contentsRef.current,
+                    found,
+                    value,
+                  )
+                : document.world!.writeDefault(
+                    contentsRef.current,
+                    property.name,
+                    value,
+                  ),
+            );
+          },
         }
       : undefined;
 

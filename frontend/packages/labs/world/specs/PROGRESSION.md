@@ -369,10 +369,11 @@ evidence, with its kind marked `[o]` outcome, `[t]` trace, `[s]` shape.
 TOLD ON THE MAP, by the rule specs/CANVAS_FIRST.md sets for every lesson: a
 task that is an arrangement, a value a thing holds, or an election is done on
 the canvas, and blocks are opened from the thing they are about when a lesson
-needs behavior. Fourteen lessons are told that way — this one, four in Input
-and Motion (specs/INPUT_MOTION_PLAN.md), two in Look (specs/LOOK_PLAN.md), two
-in Place and Memory (specs/PLACE_MEMORY_PLAN.md), Place's three about the map,
-and `input/arrows` and `motion/gravity` from the pilot (specs/PILOT_PLAN.md).
+needs behavior. Fifteen lessons are told that way — this one, four in Input
+and Motion (specs/INPUT_MOTION_PLAN.md), two in Look (specs/LOOK_PLAN.md),
+three in Place and Memory (specs/PLACE_MEMORY_PLAN.md and
+specs/WORLD_RULE_FIELDS_PLAN.md), Place's three about the map, and
+`input/arrows` and `motion/gravity` from the pilot (specs/PILOT_PLAN.md).
 Every foundation region has been through it. No check changed for any of them.
 Everything else in these tables is still told in the workspace.
 

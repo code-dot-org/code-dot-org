@@ -9,9 +9,11 @@
 import {mapFromRaw, parseMap, type MapDoc} from './mapModel';
 import {
   readWorldHeader,
+  writeWorldRuleValue,
   writeWorldName,
   writeWorldPropertyDefault,
   type WorldHeader,
+  type WorldRuleProperty,
 } from './worldProperties';
 
 export interface MapDocumentAdapter {
@@ -31,9 +33,18 @@ export interface MapDocumentAdapter {
    * name and properties, and the two edits. Only a `.world` has one.
    */
   world?: {
-    read(contents: string): WorldHeader | undefined;
+    read(
+      contents: string,
+      ruleProperties?: readonly WorldRuleProperty[],
+    ): WorldHeader | undefined;
     writeName(contents: string, name: string): string;
     writeDefault(contents: string, property: string, value: string): string;
+    /** …and a RULE's, which is a `set` row rather than a DEFAULT field. */
+    writeRuleValue(
+      contents: string,
+      property: WorldRuleProperty,
+      value: string,
+    ): string;
   };
 }
 
@@ -77,5 +88,6 @@ export const worldFileDocument: MapDocumentAdapter = {
     read: readWorldHeader,
     writeName: writeWorldName,
     writeDefault: writeWorldPropertyDefault,
+    writeRuleValue: writeWorldRuleValue,
   },
 };

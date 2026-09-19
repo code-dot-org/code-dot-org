@@ -637,18 +637,56 @@ describe('the world, with nothing selected', () => {
     fireEvent.change(score, {target: {value: '30'}});
     fireEvent.keyDown(score, {key: 'Enter'});
     fireEvent.blur(score);
-    expect(onSetDefault).toHaveBeenCalledWith('score', '30');
+    // The PROPERTY, not its name: what setting one means differs by where
+    // it came from (`WorldInspector`, specs/WORLD_RULE_FIELDS_PLAN.md).
+    expect(onSetDefault).toHaveBeenCalledWith(
+      expect.objectContaining({name: 'score'}),
+      '30',
+    );
 
     const hard = view.container.querySelector(
       'input[name="world-hard"]',
     ) as HTMLInputElement;
     fireEvent.click(hard);
-    expect(onSetDefault).toHaveBeenCalledWith('hard', 'true');
+    expect(onSetDefault).toHaveBeenCalledWith(
+      expect.objectContaining({name: 'hard'}),
+      'true',
+    );
 
     // A placement selected takes its place.
     pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
     pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
     expect(view.queryByTestId('world-inspector')).toBeNull();
+  });
+
+  it('lists a rule’s world properties too, saying whose they are', () => {
+    // The world's own first, then the rules' (specs/WORLD_RULE_FIELDS_PLAN.md).
+    const onSetDefault = vi.fn();
+    const target = {
+      name: 'target score',
+      type: 'number',
+      value: '30',
+      setter: 'world_set_Scoring_TargetScoreProperty',
+      rule: 'Scoring',
+    };
+    const view = mount(doc(), {
+      world: {
+        header: {...header, properties: [...header.properties, target]},
+        onRename: vi.fn(),
+        onSetDefault,
+      },
+    });
+
+    // Named for the setter, since two rules may both have a `strength`.
+    const field = view.container.querySelector(
+      'input[name="world-world_set_Scoring_TargetScoreProperty"]',
+    ) as HTMLInputElement;
+    expect(field.value).toBe('30');
+    expect(view.getByText(/Target score \(Scoring\)/)).toBeInTheDocument();
+
+    fireEvent.change(field, {target: {value: '45'}});
+    fireEvent.blur(field);
+    expect(onSetDefault).toHaveBeenCalledWith(target, '45');
   });
 
   it('is absent for a map that is no world', () => {

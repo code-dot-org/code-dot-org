@@ -25,13 +25,10 @@ working record, as before.
   wants ("Comes back on the other side") rather than for the traits. This
   lesson is ABOUT the four trait names and which axis each is on, so a
   checklist that hides them works against it.
-- **`memory/score` stays in blocks.** CANVAS_FIRST.md's table said "the
-  target is a world field". It is not: the world inspector shows the
-  world's OWN `define property` rows (`mapEditor/worldProperties`), and a
-  target score is a Scoring RULE property, set by a `set` row under
-  `define world`. Showing a rule's world-scoped properties there is what
-  specs/MAP_FIRST.md asked for and is a step of its own, not a side errand
-  inside a lesson.
+- **`memory/score` stays in blocks**, for now: the world inspector shows
+  the world's OWN `define property` rows only. (Built since, as its own
+  step, and the lesson moved with it:
+  specs/WORLD_RULE_FIELDS_PLAN.md.)
 
 ## What has to be built first
 
@@ -95,9 +92,7 @@ working record, as before.
 
 ## Not built, and known
 
-- The world inspector shows the world's own properties and no rule's, so
-  `memory/score` stays in blocks and MAP_FIRST.md's sentence about
-  `set target score` is still unbuilt.
+- (Built since: specs/WORLD_RULE_FIELDS_PLAN.md.)
 - `world.properties` is not found when a placement is selected, since the
   world's properties are what the inspector shows with nothing selected.
   Show me then says where they are and rings nothing.

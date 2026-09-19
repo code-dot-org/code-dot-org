@@ -1,8 +1,9 @@
 # Plan: a rule's world properties in the world inspector
 
-STATUS: IN PROGRESS. The one sentence of specs/MAP_FIRST.md that was never
-built, found again by specs/PLACE_MEMORY_PLAN.md when `memory/score` could
-not move. The working record, as before.
+STATUS: BUILT, pending a look in the browser. The one sentence of
+specs/MAP_FIRST.md that was never built, found again by
+specs/PLACE_MEMORY_PLAN.md when `memory/score` could not move. The working
+record, as before.
 
 ## What MAP_FIRST.md asked for
 
@@ -65,8 +66,51 @@ the rule's, and a world that wants another says so with a `set` row under
 
 ## Commits
 
-(recorded as they land)
+- `e583d2b2f0e` — this plan.
+- (next) — the read and the write; the inspector's fields and the wiring;
+  `memory/score`; the specs.
 
 ## Learned while building
 
-(recorded as it happens)
+- **The rules say which of their properties are theirs to compute.**
+  `readonly` on the meta takes out Scoring's `won` AND Collisions' biggest
+  reach, which is worked out from what is in the world. Five of the
+  starter's seven world-scoped properties are left, which is a list short
+  enough to show unfolded — the guess this plan made about the shape of
+  the window turned out right for the wrong reason, since it counted seven.
+- **A property is keyed by its setter, not its name.** Two rules may each
+  have a `strength`, and the world's own properties may too. The field's
+  name attribute and the inspector's draft state are keyed by the block
+  type, and the label says which rule it came from.
+- **Setting a value back to the rule's own takes the row away.** A world's
+  file then says only what differs from the rules it holds, which is the
+  same bargain a placement makes (`withPlacementLayer`, and the default
+  layer said by saying nothing).
+- **The row goes at the TOP of the world's rows.** It is a starting value,
+  and a row below something that reads it would be too late.
+- **A row holding something other than a literal is shown as the rule's
+  default.** A world may set its target score to a computed value; the
+  field cannot show that, and showing the last literal it happened to find
+  would be a lie. What it shows is what a world with no row shows.
+
+## Not built, and known
+
+- A world that sets one property TWICE is read by its first row and
+  written to its first row. The last row is what the engine obeys, so a
+  world like that shows a value it does not use. Nothing writes two, and a
+  learner who does has said something the field cannot say.
+- Vectors and colours are shown and not edited, as the world's own are: the
+  direction of gravity is a vector, and it is the one world-scoped property
+  a learner might reasonably want and cannot have here.
+- The camera and the layers that MAP_FIRST.md lists beside the world's
+  properties are still the Layers panel's and nobody's.
+
+## What to look at in the browser
+
+Open the starter's world on the Map tab with nothing selected: under the
+world's own properties there should be **Amount of gravity (Gravity)**,
+**Grip strength (Solid Bodies)**, **Score (Scoring)** and **Target score
+(Scoring)**, and the last should read 30, which is what the starter's block
+sets. Typing 45 there should change that block; typing 9 into the amount of
+gravity should add a row and typing 9 again — the rule's own value — should
+take it away. `memory/score` step four should point at the list.

@@ -58,6 +58,7 @@ describe('Show me, in the lessons', () => {
       'input/two-hands',
       'look/background',
       'look/sprite',
+      'memory/score',
       'memory/world-state',
       'motion/drag',
       'motion/gravity',

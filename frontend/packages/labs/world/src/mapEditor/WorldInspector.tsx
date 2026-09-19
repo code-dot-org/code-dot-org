@@ -14,12 +14,18 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 
 import styles from './mapEditor.module.css';
-import type {WorldHeader} from './worldProperties';
+import type {WorldHeader, WorldProperty} from './worldProperties';
 
 export interface WorldInspectorProps {
   header: WorldHeader;
   onRename: (name: string) => void;
-  onSetDefault: (property: string, value: string) => void;
+  /**
+   * Set one property's starting value. What that MEANS differs by where the
+   * property comes from, and the caller knows: a `define property` row's
+   * DEFAULT for the world's own, a `set` row under `define world` for a
+   * rule's (specs/WORLD_RULE_FIELDS_PLAN.md).
+   */
+  onSetDefault: (property: WorldProperty, value: string) => void;
   isReadOnly: boolean;
 }
 
@@ -38,8 +44,11 @@ export const WorldInspector = ({
   // What is being typed, committed on blur or Enter as a placement's fields
   // are; the parent re-keys this on a change from outside.
   const [name, setName] = useState(header.name);
+  // Keyed by the SETTER where there is one: two rules may each have a
+  // property called `strength`, and the world's own may too.
+  const keyOf = (property: WorldProperty) => property.setter ?? property.name;
   const [values, setValues] = useState<Record<string, string>>(() =>
-    Object.fromEntries(header.properties.map(p => [p.name, p.value])),
+    Object.fromEntries(header.properties.map(p => [keyOf(p), p.value])),
   );
   const blurOnEnter = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
@@ -54,10 +63,10 @@ export const WorldInspector = ({
       setName(header.name);
     }
   };
-  const commitValue = (property: string) => {
-    const held = header.properties.find(p => p.name === property);
-    if (held && values[property] !== held.value) {
-      onSetDefault(property, values[property]);
+  const commitValue = (property: WorldProperty) => {
+    const key = keyOf(property);
+    if (values[key] !== property.value) {
+      onSetDefault(property, values[key]);
     }
   };
 
@@ -86,44 +95,48 @@ export const WorldInspector = ({
       />
       {header.properties.length > 0 && (
         <div className={styles.inspectorGroup}>
-          {header.properties.map(property =>
-            property.type === 'boolean' ? (
+          {header.properties.map(property => {
+            const key = keyOf(property);
+            // A rule's says whose it is: two rules may both have a
+            // `strength`, and "Gravity" is the only thing telling them
+            // apart (specs/WORLD_RULE_FIELDS_PLAN.md).
+            const label = property.rule
+              ? `${capitalize(property.name)} (${property.rule})`
+              : capitalize(property.name);
+            return property.type === 'boolean' ? (
               <Checkbox
-                key={property.name}
-                name={`world-${property.name}`}
-                label={capitalize(property.name)}
-                checked={values[property.name] === 'true'}
+                key={key}
+                name={`world-${key}`}
+                label={label}
+                checked={values[key] === 'true'}
                 disabled={isReadOnly}
                 onChange={(event: ChangeEvent<HTMLInputElement>) => {
                   const next = event.target.checked ? 'true' : 'false';
-                  setValues(held => ({...held, [property.name]: next}));
-                  onSetDefault(property.name, next);
+                  setValues(held => ({...held, [key]: next}));
+                  onSetDefault(property, next);
                 }}
               />
             ) : (
               <TextField
-                key={property.name}
-                name={`world-${property.name}`}
-                label={capitalize(property.name)}
+                key={key}
+                name={`world-${key}`}
+                label={label}
                 inputType={
                   property.type === 'number' || property.type === 'angle'
                     ? 'number'
                     : 'text'
                 }
                 size="s"
-                value={values[property.name] ?? ''}
+                value={values[key] ?? ''}
                 disabled={isReadOnly || !EDITABLE.has(property.type)}
                 onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                  setValues(held => ({
-                    ...held,
-                    [property.name]: event.target.value,
-                  }))
+                  setValues(held => ({...held, [key]: event.target.value}))
                 }
-                onBlur={() => commitValue(property.name)}
+                onBlur={() => commitValue(property)}
                 onKeyDown={blurOnEnter}
               />
-            ),
-          )}
+            );
+          })}
         </div>
       )}
     </div>
