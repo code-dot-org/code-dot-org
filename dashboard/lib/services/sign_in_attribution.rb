@@ -7,9 +7,14 @@
 # trusts -- have nothing to recover, so they say what they are by passing event_type: to
 # sign_in (see config/initializers/sign_in_attribution.rb).
 #
-# A sign-in this cannot account for is recorded with a NULL event_type, meaning "not
-# determined" -- the same thing every row written before the column existed means.
+# Anything left over is reported rather than silently stored as NULL: a sign-in path
+# nobody taught this module about should surface as an alert, not as a gap in the data
+# noticed six months later.
 module Services::SignInAttribution
+  # Nothing in the request accounted for a sign-in. Raised so that the one rescue in
+  # resolve decides what happens to it, the same as any other failure there.
+  class UnattributedSignIn < RuntimeError; end
+
   EVENT_TYPE_KEY = 'cdo.sign_in.event_type'.freeze
   AUTHENTICATION_OPTION_ID_KEY = 'cdo.sign_in.authentication_option_id'.freeze
   WARDEN_EVENT_KEY = 'cdo.sign_in.warden_event'.freeze
@@ -53,7 +58,33 @@ module Services::SignInAttribution
     declared = request.env[EVENT_TYPE_KEY]
     return [declared, request.env[AUTHENTICATION_OPTION_ID_KEY]] if declared
 
-    from_warden_strategy(user, request) || from_omniauth(request) || [nil, nil]
+    from_warden_strategy(user, request) || from_omniauth(request) ||
+      raise(UnattributedSignIn, "Sign-in recorded with no attribution: #{request.path}")
+  rescue StandardError => exception
+    # This runs inline in the sign-in path, inside Warden's set_user callback. Signing in
+    # must never fail because of how we label the event, so everywhere but the
+    # environments below, every failure here -- an unattributable sign-in, a database
+    # error in a credential lookup, a reporting hiccup -- is reported and swallowed. The
+    # row is then written with a NULL event_type, which is what every row predating the
+    # column holds anyway.
+    raise if raise_attribution_errors?
+
+    report_quietly(exception, user)
+    [nil, nil]
+  end
+
+  # Raise rather than swallow where a failure gets seen and fixed: the unit suite, CI,
+  # and the managed test server all run as :test. Production never raises.
+  def self.raise_attribution_errors?
+    CDO.rack_env?(:test)
+  end
+
+  # Reporting the failure must not become the failure: this is the last thing standing
+  # between a sign-in and an exception, so it swallows its own.
+  private_class_method def self.report_quietly(exception, user)
+    Observability::Errors.report(exception, context: {user_id: user&.id})
+  rescue StandardError
+    nil
   end
 
   private_class_method def self.from_warden_strategy(user, request)
@@ -65,6 +96,9 @@ module Services::SignInAttribution
       [SignIn::REMEMBERED, nil]
     when Devise::Strategies::DatabaseAuthenticatable
       [SignIn::CREDENTIAL, email_authentication_option_id(user, strategy)]
+    when nil
+      # Warden's login_as test helper claims :authentication without running a strategy; the application never does.
+      [nil, nil] if Warden.respond_to?(:on_next_request)
     end
   end
 
