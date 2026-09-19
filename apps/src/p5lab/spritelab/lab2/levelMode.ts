@@ -2,6 +2,7 @@
 // surfaces a student sees, and the image controls they get.
 
 import {ImageAdlibSet} from './ai/images/imageAdlibs';
+import {ImageSource} from './ai/images/imageCache';
 import {ImageStyle, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
@@ -17,6 +18,8 @@ export interface LevelMode {
   imageRole?: string;
   /** Word combos to offer, in place of the set the kind implies. */
   adlibs?: ImageAdlibSet;
+  /** Where a combo's image comes from (imageCache.ts); live when unset. */
+  imageSource?: ImageSource;
 }
 
 /** The style every generate form starts on; students can still switch. */
@@ -56,4 +59,9 @@ export function adlibSetForMode(
   mode: LevelMode | undefined
 ): ImageAdlibSet | undefined {
   return mode ? mode.adlibs ?? ADLIBS[mode.kind] : undefined;
+}
+
+/** The source a mode's combos draw from: live generation unless named. */
+export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
+  return mode?.imageSource ?? 'live';
 }

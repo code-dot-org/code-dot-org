@@ -1,5 +1,6 @@
 import {
   adlibSetForMode,
+  imageSourceForMode,
   isFreeplayMode,
   isImageMode,
   tabsForMode,
@@ -45,5 +46,15 @@ describe('adlibSetForMode', () => {
   it('offers no combos to a kind that generates no images', () => {
     expect(adlibSetForMode({kind: 'code'})).toBeUndefined();
     expect(adlibSetForMode(undefined)).toBeUndefined();
+  });
+});
+
+describe('imageSourceForMode', () => {
+  it('is live unless the level names a source', () => {
+    expect(imageSourceForMode({kind: 'image'})).toBe('live');
+    expect(imageSourceForMode(undefined)).toBe('live');
+    expect(
+      imageSourceForMode({kind: 'image', imageSource: 'cached-then-live'})
+    ).toBe('cached-then-live');
   });
 });

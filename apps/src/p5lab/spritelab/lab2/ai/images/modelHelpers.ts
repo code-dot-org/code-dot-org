@@ -14,8 +14,10 @@ const googleProvider = createGoogleGenerativeAI({
 // to four character reference images per request and thinks before drawing,
 // returning its interim drafts as images ahead of the final one — see
 // requestImage for how the final is picked.
+export const SINGLE_IMAGE_MODEL = AiChatModelIds.GEMINI_3_1_FLASH_IMAGE;
+
 export function getImageModel() {
-  return googleProvider(AiChatModelIds.GEMINI_3_1_FLASH_IMAGE);
+  return googleProvider(SINGLE_IMAGE_MODEL);
 }
 
 // Character-set frames: Flash, like single images; one constant to flip.

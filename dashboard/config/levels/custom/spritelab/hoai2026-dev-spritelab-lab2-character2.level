@@ -24,6 +24,7 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
+      "adlibs": "friend",
       "imageRole": "friend"
     },
     "guide_steps": [
