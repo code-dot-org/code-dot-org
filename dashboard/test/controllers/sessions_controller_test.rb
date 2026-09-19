@@ -134,6 +134,22 @@ class SessionsControllerTest < ActionController::TestCase
     assert_equal user.primary_contact_info.id, sign_in.authentication_option_id
   end
 
+  # Covers the path nothing can derive: no Warden strategy ran and no OmniAuth
+  # callback is in the env, so the row is attributed only because expire_other
+  # passes event_type: through Devise's sign_in.
+  test 'expiring other sessions records a reauthentication, not a credential' do
+    teacher = create(:teacher)
+    create_session_for_user(teacher)
+
+    assert_creates(SignIn) do
+      post :expire_other
+    end
+
+    sign_in = SignIn.where(user_id: teacher.id).order(:id).last
+    assert_equal SignIn::REAUTHENTICATION, sign_in.event_type
+    assert_nil sign_in.authentication_option_id
+  end
+
   test 'signing in user does not store a blank stable ID' do
     session[:statsig_stable_id] = ''
     user = create(:user)

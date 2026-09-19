@@ -465,6 +465,8 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal 1, sign_in.sign_in_count
     assert_equal frozen_time, sign_in.sign_in_at
     assert_equal anon_user_id, sign_in.anon_user_id
+    assert_equal SignIn::REGISTRATION, sign_in.event_type
+    assert_equal User.find(sign_in.user_id).primary_contact_info.id, sign_in.authentication_option_id
   end
 
   test "student can add a parent email without opt in" do

@@ -491,7 +491,7 @@ class TestController < ApplicationController
     else
       user = User.create!(**user_opts)
     end
-    sign_in user
+    sign_in user, event_type: SignIn::REGISTRATION, authentication_option: user.primary_contact_info
     head :ok
   end
 

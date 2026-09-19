@@ -160,7 +160,7 @@ class RegistrationsController < Devise::RegistrationsController
           error: exception
         }, status: :bad_request
       end
-      sign_in @user
+      sign_in @user, event_type: SignIn::REGISTRATION, authentication_option: @user.primary_contact_info
     end
 
     if current_user && current_user.errors.blank?

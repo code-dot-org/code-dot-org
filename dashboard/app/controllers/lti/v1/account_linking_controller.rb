@@ -42,7 +42,9 @@ module Lti
         end
         if existing_user&.valid_password?(params[:password])
           Services::Lti::AccountLinker.call(user: existing_user, session: session)
-          sign_in existing_user
+          sign_in existing_user,
+            event_type: SignIn::CREDENTIAL,
+            authentication_option: existing_user.primary_contact_info
           metadata = {
             'user_type' => existing_user.user_type,
             'lms_name' => existing_user.lti_user_identities.first.lti_integration[:platform_name],
