@@ -1,8 +1,8 @@
 # Plan: Input and Motion onto the map (CANVAS_FIRST.md, step 4)
 
-STATUS: BUILT, pending a look in the browser. The first two regions of
-specs/CANVAS_FIRST.md's step 4, after the pilot (specs/PILOT_PLAN.md) was seen
-working. The working record, as before.
+STATUS: BUILT, and the thing this record doubted seen working. The first two
+regions of specs/CANVAS_FIRST.md's step 4, after the pilot
+(specs/PILOT_PLAN.md) was seen working. The working record, as before.
 
 ## What moves, and how far
 
@@ -104,10 +104,13 @@ Across⟩` row is what settles it. Step three adds Slows Down, a row in the
 
 ## What to look at in the browser
 
-`input/two-hands`: after the tick, holding left should turn the Ship AND
-slide it sideways, which is step two's whole point; after the row is
-deleted, only turning. `motion/speed`: the Hero's properties should gain a
-**Can Move** group with a **Velocity** in it the moment the trait is
-elected, without a reload. `motion/units`: typing 1.6 into that field and
-running should cross the world in about two seconds. `motion/drag`: the
-Ball's speed on the map should change how far it coasts.
+SEEN: a placement's properties gain a trait's group the moment the trait is
+elected, with no reload — which is what `motion/speed` step two rests on,
+and the one thing here that could have needed a change to the editor rather
+than to a lesson.
+
+Still to look at. `input/two-hands`: after the tick, holding left should turn
+the Ship AND slide it sideways, which is step two's whole point; after the row
+is deleted, only turning. `motion/units`: typing 1.6 into that field and
+running should cross the world in about two seconds. `motion/drag`: the Ball's
+speed on the map should change how far it coasts.
