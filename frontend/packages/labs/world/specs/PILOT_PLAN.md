@@ -81,11 +81,13 @@ trait` rows, so "the Hero falls and lands" is passed by two ticks. The
 
 ## Not built, and known
 
-- Nothing pins a lesson's words to the editor's labels. These three say
-  "Enhance Hero…", "Open Hero", "the strip along the top", "Moves in all
-  four directions", "Falls when nothing holds it up", "Holds things up".
-  A renamed control or ability leaves a lesson pointing at nothing, and no
-  test would say so.
+- (Closed in part since, by Show me: what a lesson POINTS at is held to a
+  registry of places and to the lesson's own project. specs/SHOW_ME_PLAN.md.)
+  Nothing pins a lesson's words to the editor's labels. These three say
+  "Enhance Hero…", "Open Hero", "the strip along the top", "Moves in all four
+  directions", "Falls when nothing holds it up", "Holds things up". A renamed
+  control or ability leaves a lesson pointing at nothing, and no test would
+  say so.
 - `input/arrows`' step four, pulling a row out and snapping it back, leaves
   the lesson failing its check while the row is out. That is intended and
   is what the row was for; it may still read as breakage to a learner who
