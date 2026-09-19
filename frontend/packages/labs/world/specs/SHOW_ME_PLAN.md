@@ -1,6 +1,6 @@
 # Plan: "Show me" and the ring (CALLOUTS.md, options A and B)
 
-STATUS: BUILT, pending a look in the browser. The two options of
+STATUS: BUILT, and seen working in the browser. The two options of
 specs/CALLOUTS.md chosen to build. The working record, as before.
 
 ## What is being built
@@ -119,10 +119,10 @@ specs/CALLOUTS.md chosen to build. The working record, as before.
 
 ## Not built, and known
 
-- **The Blockly half is half seen.** In the browser, Show me on a block
-  opens the drawer and the block takes Blockly's focus; what a screen reader
-  then reads has not been heard. See "Learned" for what the browser showed
-  that the stand-ins could not.
+- **What a screen reader reads has not been heard.** Show me on a block
+  opens the drawer, scrolls to the block and gives it Blockly's focus, all
+  seen; whether a screen reader then announces the block, and the `status`
+  region's sentence, is unchecked.
 - **While a thing is ringed, the ring is its focus indicator.** One
   element, one outline. The ring is wider than the design system's and the
   same color, so nothing is less visible for it, and it goes when the thing

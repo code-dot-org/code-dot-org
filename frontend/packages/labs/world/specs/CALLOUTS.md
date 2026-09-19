@@ -1,7 +1,7 @@
 # Proposal: pointing at things
 
 STATUS: DECIDED IN PART. Options A and B, "Show me" and a simple ring, are
-BUILT (specs/SHOW_ME_PLAN.md), pending a look in the browser. C to F are NOT
+BUILT (specs/SHOW_ME_PLAN.md) and seen working. C to F are NOT
 being built, and are to be looked at again only if something later needs one.
 The legacy callouts and the Shepherd tours (G and H, and their paragraphs in
 the survey) are out of consideration: the first is ancient and the second more
