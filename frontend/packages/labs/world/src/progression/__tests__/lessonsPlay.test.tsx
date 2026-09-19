@@ -259,6 +259,8 @@ describe('the view a lesson’s world opens on', () => {
     expect(onTheMap.sort()).toEqual([
       'input/arrows',
       'input/two-hands',
+      'look/background',
+      'look/sprite',
       'motion/drag',
       'motion/gravity',
       'motion/speed',

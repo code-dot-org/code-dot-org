@@ -367,13 +367,13 @@ evidence, with its kind marked `[o]` outcome, `[t]` trace, `[s]` shape.
 ### Origin
 
 TOLD ON THE MAP, by the rule specs/CANVAS_FIRST.md sets for every lesson: a
-task that is an arrangement, a value a thing holds, or an election is done
-on the canvas, and blocks are opened from the thing they are about when a
-lesson needs behavior. Ten lessons are told that way so far — this one, four
-in Input and Motion (specs/INPUT_MOTION_PLAN.md), Place's three about the
-map, and `input/arrows` and `motion/gravity` from the pilot
-(specs/PILOT_PLAN.md). No check changed for any of them. Everything else in
-these tables is still told in the workspace.
+task that is an arrangement, a value a thing holds, or an election is done on
+the canvas, and blocks are opened from the thing they are about when a lesson
+needs behavior. Twelve lessons are told that way so far — this one, four in
+Input and Motion (specs/INPUT_MOTION_PLAN.md), two in Look
+(specs/LOOK_PLAN.md), Place's three about the map, and `input/arrows` and
+`motion/gravity` from the pilot (specs/PILOT_PLAN.md). No check changed for
+any of them. Everything else in these tables is still told in the workspace.
 
 | Tile                 | The lesson                                                                                                          | Unlocks                                                                                          | Check                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
@@ -422,13 +422,13 @@ The first thing anybody wants is for something to move when they press a key.
 
 ### Foundation: Look
 
-| Tile              | The lesson                                                                                      | Unlocks                                   | Check                                                            |
-| ----------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
-| `look/sprite`     | A picture is a file. Import one from the library, then paint your own and use that.             | image editor; the sprite library          | `[o]` the actor draws a sprite the project holds                 |
-| `look/drawing`    | An actor with no picture paints itself: two bars, both full, and one that should not be.        | Drawing drawer; Progress Bar; a color     | `[o]` the two Bars draw different pictures                       |
-| `look/background` | The backdrop is not an actor. Add one, tile it, slide it, and watch the actors stay put.        | `set background`, repeat, offset, color   | `[o]` the world's backdrop is set, tiles, and has been slid      |
-| `look/animation`  | An animation is a file of rectangles cut out of one image. Give a sliding Hero a walk cycle.    | animation editor; `play animation`        | `[o]` the frame changes across half a second                     |
-| `look/effect`     | A shader is a description of how to paint. One file, on one actor and then over the whole view. | effect editor; `add effect` (actor/world) | `[o]` the Coin carries one, the Hero does not, and the view does |
+| Tile              | The lesson                                                                                               | Unlocks                                   | Check                                                            |
+| ----------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
+| `look/sprite`     | A picture is a file. Import one from the library, then paint your own and use that.                      | image editor; the sprite library          | `[o]` the actor draws a sprite the project holds                 |
+| `look/drawing`    | An actor with no picture paints itself: two bars, both full, and one that should not be.                 | Drawing drawer; Progress Bar; a color     | `[o]` the two Bars draw different pictures                       |
+| `look/background` | The backdrop is a LAYER's. Add one in the Layers list, tile it, slide it, and watch the actors stay put. | `set background`, repeat, offset, color   | `[o]` the world's backdrop is set, tiles, and has been slid      |
+| `look/animation`  | An animation is a file of rectangles cut out of one image. Give a sliding Hero a walk cycle.             | animation editor; `play animation`        | `[o]` the frame changes across half a second                     |
+| `look/effect`     | A shader is a description of how to paint. One file, on one actor and then over the whole view.          | effect editor; `add effect` (actor/world) | `[o]` the Coin carries one, the Hero does not, and the view does |
 
 ### Foundation: Place
 

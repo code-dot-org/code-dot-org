@@ -56,6 +56,8 @@ describe('Show me, in the lessons', () => {
     expect(pointing.sort()).toEqual([
       'input/arrows',
       'input/two-hands',
+      'look/background',
+      'look/sprite',
       'motion/drag',
       'motion/gravity',
       'motion/speed',

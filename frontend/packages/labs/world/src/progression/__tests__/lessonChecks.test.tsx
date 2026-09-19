@@ -1759,6 +1759,41 @@ describe('the backdrop lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
+  it('accepts one set, tiled and slid on the map’s layer', async () => {
+    // How the lesson is told now (specs/LOOK_PLAN.md): the three steps are
+    // the layer inspector's three controls, and the generator hoists a main
+    // map's layer into the world's declaration, slots and all.
+    const solved = editing(lesson.source, 'main.world', contents => {
+      const file = JSON.parse(contents) as {map: Record<string, unknown>};
+      file.map.layers = [
+        {
+          id: 'main',
+          background: {
+            sprite: 'meadow.png',
+            repeat: true,
+            offset: {x: 40, y: 0},
+          },
+        },
+      ];
+      return JSON.stringify(file);
+    });
+    const {passes, result} = await check('look/background', solved);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+
+  it('refuses a backdrop set on the layer but never tiled', async () => {
+    const half = editing(lesson.source, 'main.world', contents => {
+      const file = JSON.parse(contents) as {map: Record<string, unknown>};
+      file.map.layers = [
+        {id: 'main', background: {sprite: 'meadow.png', offset: {x: 40, y: 0}}},
+      ];
+      return JSON.stringify(file);
+    });
+    const {passes} = await check('look/background', half);
+    expect(passes).toBe(false);
+  });
+
   it('accepts one that is set, tiled and slid', async () => {
     const solved = editing(lesson.source, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};

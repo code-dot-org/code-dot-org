@@ -333,13 +333,18 @@ const sprite: WorldScenario = {
   // the lesson's subject is the file. Step three opens the picture and paints
   // on it, and a `.png` opens by being opened — there is no open button on
   // `set sprite` the way there is on `use trait`, and no other way in.
-  levelData: {showFileBrowser: true},
+  //
+  // ON THE MAP, for the last step only (specs/LOOK_PLAN.md). The import and
+  // the painting are file work and stay where they are; what the map adds is
+  // the proof that the picture is the PROJECT's — a second kind, made from
+  // the palette, is offered the same file.
+  levelData: {showFileBrowser: true, worldView: 'map'},
   name: 'A picture is a file',
   description: 'An actor drawing a gray box, and the picture it could have.',
   source: lessonSource({
     world: worldFile({
       name: 'My World',
-      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
+      rows: [placeInMap(actorPath('hero'), [placed('Hero', 160, 160)])],
       actors: [
         {
           id: 'hero',
@@ -367,13 +372,17 @@ tab you have been opening — so they are in the list like everything else.
 
 ### What you do
 
-1. Add **set sprite** to the Hero, and use the \`(import…)\` row on its dropdown
-   to bring a picture in. Look at \`sprites/\` on the left afterwards — it is
-   really there, and it is yours, not a link to the library's.
+1. Press [Open Hero](#clickable=map.openKind:Hero) and add **set sprite**, using
+   the \`(import…)\` row on its dropdown to bring a picture in. Look at
+   \`sprites/\` on the left afterwards — it is really there, and it is yours,
+   not a link to the library's.
 2. Run it. The sprite wins; the drawing underneath is what an actor does when it
    has no picture.
 3. Open the picture you imported and **paint on it**. It is yours now — the copy
    in the library is untouched.
+4. Go back to the [Map](#clickable=view.map) and press
+   [New actor…](#clickable=map.newActor). Its picture step offers the picture
+   you imported: it was never the Hero's, it is the project's.
 `.trim(),
 };
 
@@ -457,6 +466,10 @@ actor's own.
 // ── look/background ──────────────────────────────────────────────────────────
 
 const background: WorldScenario = {
+  // ON THE MAP (specs/LOOK_PLAN.md): a backdrop is a LAYER's, and the layer
+  // inspector's four controls are this lesson's four steps. The blocks stay
+  // granted, for what changes while the game runs.
+  levelData: {worldView: 'map'},
   name: 'Behind everything',
   description:
     'A world on a flat color, and the picture that belongs behind it.',
@@ -468,7 +481,7 @@ const background: WorldScenario = {
           type: 'world_set_background_color',
           inputs: {COLOR: swatch('#7ec8e3')},
         },
-        addActor(actorPath('hero'), [placeAt(160, 200)]),
+        placeInMap(actorPath('hero'), [placed('Hero', 160, 200)]),
       ],
       actors: [{id: 'hero', name: 'Hero', rows: [setSprite('player.png')]}],
     }),
@@ -484,15 +497,21 @@ draws when nobody has given it a picture.
 A **backdrop** is that picture. It is not an actor: it has no position, nothing
 can touch it, and no rule can reach it. It is what is behind the game.
 
+A backdrop belongs to a **layer**, and every world has one to start with.
+The [Layers](#clickable=map.layers) list beside the map is where they are.
+
 ### What you do
 
-1. Add **set background to ⟨…⟩**, and use the \`(import…)\` row on its dropdown
-   to bring a backdrop in from the library.
+1. Click **main** in the Layers list. Its **Background** is (none): choose
+   \`(import…)\` and bring a backdrop in from the library.
 2. Run it. It is stretched to fill the view — one copy, whatever shape it is.
-3. Add **draw background ⟨tiled⟩**. Now it repeats instead of stretching, which
-   is what a picture of grass or bricks wants.
-4. Add **slide background to ⟨x 40 y 0⟩** and run it again. The backdrop moved
-   and the Hero did not: they are not in the same world at all.
+3. Tick **Tiled**. Now it repeats instead of stretching, which is what a
+   picture of grass or bricks wants.
+4. Put **40** in **Slide X** and run it again. The backdrop moved and the Hero
+   did not: they are not in the same world at all.
+
+There are blocks that say all of this too, for a backdrop that changes while
+the game is running. What you set here is where it STARTS.
 `.trim(),
 };
 

@@ -1075,10 +1075,13 @@ describe('the map’s layers', () => {
     const background = view.container.querySelector(
       'select[name="layer-background"]',
     ) as HTMLSelectElement;
+    // What the project holds, between nothing and the way to more
+    // (`LayerInspector`, specs/LOOK_PLAN.md).
     expect([...background.options].map(option => option.text)).toEqual([
       '(none)',
       'sky.png',
       'hills.png',
+      '(import…)',
     ]);
     fireEvent.change(background, {target: {value: 'sky.png'}});
     expect(written().layers![0].background).toEqual({sprite: 'sky.png'});

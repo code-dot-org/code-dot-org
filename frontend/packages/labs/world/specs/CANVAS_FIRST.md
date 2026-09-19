@@ -82,10 +82,10 @@ and opens blocks for its second half.
 | `memory/actor-state` | both   | declaring is a block; each Lamp's number is a field on that Lamp    |
 | `memory/lists`       | blocks |                                                                     |
 | `memory/score`       | map    | import Scoring; the target is a world field                         |
-| `look/sprite`        | map    | the Creator's picture step and the image editor                     |
+| `look/sprite`        | both   | import and paint as before; then make a kind that is offered it     |
 | `look/drawing`       | blocks | a drawing that reads a number is commands                           |
 | `look/background`    | map    | a layer's background, tiled and slid, in the layer's inspector      |
-| `look/animation`     | both   | pick the animation; playing it on a walk is a handler               |
+| `look/animation`     | blocks | nowhere to pick one on the map; playing one is a row, not a handler |
 | `look/effect`        | blocks |                                                                     |
 | `place/position`     | both   | three places by drag and by field; a random place is a block        |
 | `place/edges`        | map    | two abilities                                                       |
@@ -149,7 +149,8 @@ seen to work.
    `input/arrows` (map, with Enhance), `motion/gravity` (both). Seen in the
    browser before going on. BUILT (specs/PILOT_PLAN.md), not yet seen.
 4. The rest of Input, Motion, Look, Place and Memory by the table. Input
-   and Motion are BUILT (specs/INPUT_MOTION_PLAN.md).
+   and Motion are BUILT (specs/INPUT_MOTION_PLAN.md), Look too
+   (specs/LOOK_PLAN.md).
 5. The genres, by the same rule.
 
 ## Open

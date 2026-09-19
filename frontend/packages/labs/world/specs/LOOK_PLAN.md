@@ -1,8 +1,8 @@
 # Plan: Look onto the map (CANVAS_FIRST.md, step 4)
 
-STATUS: IN PROGRESS. The third region of specs/CANVAS_FIRST.md's step 4,
-after Input and Motion (specs/INPUT_MOTION_PLAN.md). The working record, as
-before.
+STATUS: BUILT, pending a look in the browser. The third region of
+specs/CANVAS_FIRST.md's step 4, after Input and Motion
+(specs/INPUT_MOTION_PLAN.md). The working record, as before.
 
 ## What moves, and how far
 
@@ -58,8 +58,46 @@ before.
 
 ## Commits
 
-(recorded as they land)
+- `863d9eeae0d` — this plan.
+- (next) — the import row on a layer's slots; `look/background` on the map
+  and `look/sprite`'s last step; the tiles' grants; the specs.
 
 ## Learned while building
 
-(recorded as it happens)
+- **A backdrop could be chosen and never brought in.** The map editor has
+  offered a layer's background since layers were built, from the project's
+  backgrounds folder, with no way to add to it. It went unnoticed because
+  nothing had needed a backdrop the project lacked — a lesson ships its
+  sprites, and a backdrop is the one appearance it cannot ship.
+- **Two of the region's three rows in CANVAS_FIRST.md were wrong**, and in
+  the same way as Input's: they named an affordance by what it ought to do
+  rather than by what it does. The Creator's picture step chooses among the
+  PROJECT's pictures, so it cannot be where a learner imports one; and
+  nothing on the map picks an animation. `look/sprite` half moves and
+  `look/animation` does not move.
+- **`look/sprite` had no tile to grant the Creator.** The step that proves
+  a picture belongs to the project — making a second kind and being offered
+  the same file — is also the only lesson that wants `New actor…`, so the
+  affordance and the lesson found each other.
+- **A lesson lends an affordance as it lends a block.** `look/background`
+  is not entered through Place, so the Layers list is not its to grant; it
+  offers `map-layers` the way it already offers the vector block.
+
+## Not built, and known
+
+- A world's background COLOUR has no control on the map, so the lesson's
+  starting state is still a block. It belongs with the world's own
+  properties, which is the world inspector's question.
+- The import row is on both slots, so a foreground can be brought in the
+  same way; no lesson uses a foreground yet.
+- `look/animation` and `look/drawing` and `look/effect` stay in the
+  workspace.
+
+## What to look at in the browser
+
+`look/background`: the Layers list should be there with one layer, `main`;
+its Background dropdown should end in `(import…)`, which should open the
+backdrop library and, on choosing one, set it — stretched at first. Ticking
+Tiled and putting 40 in Slide X should be visible in the preview without a
+run. `look/sprite`: after importing the Hero's picture, `New actor…` should
+offer that picture in its picture step.

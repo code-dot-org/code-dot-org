@@ -905,6 +905,11 @@ export const TILES: readonly Tile[] = [
       // not much of a first lesson. What this one adds is the EDITOR, and the
       // library to copy from.
       {kind: 'editor', id: 'image'},
+      // …and the way to a kind of one's own, from the map's palette: the
+      // lesson ends by making one, and its picture step is where a learner
+      // meets the picture they imported as the PROJECT's
+      // (specs/LOOK_PLAN.md).
+      {kind: 'affordance', id: 'map-new-actor'},
       {kind: 'asset', id: 'player'},
       {kind: 'asset', id: 'coin'},
     ],
@@ -959,7 +964,7 @@ export const TILES: readonly Tile[] = [
     at: at('look', 1, 1),
     title: 'Behind everything',
     teaches: 'The backdrop is not an actor, and neither is what sits in front.',
-    task: 'Add a backdrop, tile it, and slide it — and watch the actors stay where they are.',
+    task: 'Add a backdrop to the world’s layer, tile it, and slide it — and watch the actors stay where they are.',
     requires: ['look/sprite'],
     unlocks: [
       {kind: 'block', type: 'world_set_background'},
@@ -970,8 +975,13 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_set_background_color'},
       {kind: 'block', type: 'world_set_background_offset'},
     ],
-    // Sliding it takes a vector, which is Motion's lesson on another branch.
-    offers: [{kind: 'block', type: 'world_vector'}],
+    // Sliding it takes a vector, which is Motion's lesson on another branch
+    // — and the Layers list, which is `place/layers`' to grant, in a region
+    // this one is not entered through (specs/LOOK_PLAN.md).
+    offers: [
+      {kind: 'block', type: 'world_vector'},
+      {kind: 'affordance', id: 'map-layers'},
+    ],
     check: {
       kind: 'outcome',
       says: 'The world draws a backdrop, it tiles, and it has been slid off the origin.',

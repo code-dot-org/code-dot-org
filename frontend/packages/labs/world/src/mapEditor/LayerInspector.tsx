@@ -18,6 +18,8 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
+import {requestAppearanceImport} from '../appearance/appearanceImport';
+
 import styles from './mapEditor.module.css';
 import {layerName, type MapLayerDoc, type MapSlotDoc} from './mapModel';
 
@@ -33,6 +35,12 @@ export interface LayerInspectorProps {
   onClose: () => void;
   isReadOnly: boolean;
 }
+
+/**
+ * The dropdown row that opens the backdrop library. A value no file name
+ * would be, since a file name is what every other row holds.
+ */
+export const IMPORT_SLOT = '__import__';
 
 const asNumber = (text: string, fallback: number): number => {
   const value = Number(text);
@@ -89,10 +97,27 @@ export const LayerInspector = ({
         items={[
           {value: '', text: '(none)'},
           ...backgrounds.map(name => ({value: name, text: name})),
+          // …and the way to one the project has not got. Without it the map
+          // editor could set a layer's background to any backdrop already in
+          // the project and never bring one in, where the block that does the
+          // same has offered it all along (specs/LOOK_PLAN.md).
+          {value: IMPORT_SLOT, text: '(import…)'},
         ]}
-        onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-          onSlot(which, {sprite: event.target.value})
-        }
+        onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+          const chosen = event.target.value;
+          if (chosen !== IMPORT_SLOT) {
+            onSlot(which, {sprite: chosen});
+            return;
+          }
+          // Asked of the lab, as every other import is; the dropdown goes
+          // back to what the layer says until something comes back
+          // (`appearance/appearanceImport`).
+          void requestAppearanceImport('background').then(name => {
+            if (name) {
+              onSlot(which, {sprite: name});
+            }
+          });
+        }}
       />
       <Checkbox
         name={`layer-${which}-tiled`}
