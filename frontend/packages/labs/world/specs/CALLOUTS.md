@@ -232,10 +232,19 @@ No tour and no legacy callouts.
   Passing `onInstructionsTextClick` through it is a small change to a
   package other labs use; rendering World Lab's own instructions panel
   avoids that and duplicates a layout.
-- **Blockly.** The flyout is not the lab's DOM, and Blockly has no screen
-  reader support (`accessibility/blockly.md`). Pointing at a block is
-  visual; the words carry the rest, and "in the Gravity drawer" has to be
-  enough without the ring.
+- **Blockly.** The toolbox and flyout are Blockly's, not the lab's own
+  markup, so a ring or a "new" mark there goes through Blockly: a toolbox
+  category's style, a label in the flyout. The workspace itself IS
+  reachable: this lab is on Blockly 13, whose keyboard navigation is built
+  in and whose workspace exposes an accessibility tree, blocks as named
+  nodes (`accessibility/blockly.md`). So pointing at a block should be
+  more than visual. "Show me" can open the drawer and put Blockly's own
+  cursor on the block, which is focus a screen reader follows, and the
+  announcement names the drawer. What has to be found out is whether a
+  FLYOUT block can be given that cursor from outside, and what Blockly
+  reads for it. An earlier draft of this said Blockly has no screen reader
+  support. That was wrong, and was a summary repeated without reading the
+  file it cited.
 - **How long a ring stays** when the learner does nothing. Until used, or
   until the next one, is the proposal. A ring left up for an hour is
   noise; a ring that leaves on a timer is a WCAG question.
