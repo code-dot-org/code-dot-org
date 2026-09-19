@@ -31,8 +31,6 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import TextField from '@code-dot-org/component-library/textField';
 
 import {placementKey} from '../blockly/mapPlacements';
-import {LessonLink, unlockLesson} from '../progression/LessonLink';
-import {useMaybeProgression} from '../progression/progressionContext';
 import type {Affordance} from '../progression/types';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
@@ -91,6 +89,7 @@ import {
   rememberedPicture,
   type Remembered,
 } from './stageGeometry';
+import {WithheldNote} from './WithheldNote';
 import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
 
 /** What the stage can blit: a decoded thumbnail, or a canvas painted here. */
@@ -286,21 +285,26 @@ export const MapStage = ({
    */
   const [showIcons, setShowIcons] = useState(true);
 
-  // What a gated lab withholds, and the lesson that grants each. Read here
-  // rather than handed down, since it is only words: outside a lab there is
-  // no progression, nothing is withheld, and every answer is "no".
-  const progression = useMaybeProgression();
+  // What a gated lab withholds (`WithheldNote`). A withheld control is
+  // `aria-disabled`, NOT `disabled`: a disabled button leaves the tab order,
+  // and a keyboard then has no way to reach it and hear why. It keeps its
+  // place, does nothing, and is described by the note beside it, which names
+  // the lesson that grants it. `where` tells two notes about one affordance
+  // apart — scripts have a way in from the toolbar and one in the inspector.
   const locked = (id: Affordance): boolean => withheld?.has(id) ?? false;
-  const lockedTitle = (id: Affordance): string | undefined => {
-    if (!locked(id)) {
-      return undefined;
-    }
-    const lesson = unlockLesson(progression, {kind: 'affordance', id});
-    return lesson ? `Unlocked by: ${lesson.title}` : 'Not unlocked yet';
-  };
-  /** The way to the lesson that grants a withheld thing, or nothing. */
-  const lessonLink = (id: Affordance) =>
-    locked(id) ? <LessonLink unlock={{kind: 'affordance', id}} locked /> : null;
+  const noteId = (id: Affordance, where: string) => `withheld-${id}-${where}`;
+  const orWithheld = (id: Affordance, where: string, act: () => void) =>
+    locked(id)
+      ? {
+          'aria-disabled': true as const,
+          'aria-describedby': noteId(id, where),
+        }
+      : {onClick: act};
+  const withheldClass = (id: Affordance) =>
+    locked(id) ? styles.withheld : undefined;
+  /** The note a withheld control points at, or nothing when it is held. */
+  const note = (id: Affordance, where: string) =>
+    locked(id) ? <WithheldNote affordance={id} id={noteId(id, where)} /> : null;
   /**
    * The layer a new placement lands on, and the one the strip shows as
    * selected; and whether its inspector is open, which it is from a click on
@@ -1829,8 +1833,10 @@ export const MapStage = ({
         >
           Reset view
         </button>
-        {onEditScript && !locked('map-scripts') && (
-          // Only with scripts to show or hide: the marks are about them.
+        {onEditScript && (
+          // Only with scripts to show or hide: the marks are about them. It
+          // works whether or not scripts are withheld, since the marks are
+          // drawn either way: they say what the file holds.
           <button
             type="button"
             className={`${styles.resetButton} ${styles.toggleButton}`}
@@ -1841,15 +1847,20 @@ export const MapStage = ({
           </button>
         )}
         {onEditScript && (
-          <button
-            type="button"
-            className={styles.resetButton}
-            disabled={locked('map-scripts')}
-            title={lockedTitle('map-scripts')}
-            onClick={() => onEditScript(undefined)}
-          >
-            {mapScriptLabel}
-          </button>
+          <>
+            <button
+              type="button"
+              className={[styles.resetButton, withheldClass('map-scripts')]
+                .filter(Boolean)
+                .join(' ')}
+              {...orWithheld('map-scripts', 'toolbar', () =>
+                onEditScript(undefined),
+              )}
+            >
+              {mapScriptLabel}
+            </button>
+            {note('map-scripts', 'toolbar')}
+          </>
         )}
       </div>
       {locked('map-layers') ? (
@@ -1859,7 +1870,7 @@ export const MapStage = ({
           <Typography variant="subtitle2" component="span">
             Layers
           </Typography>
-          {lessonLink('map-layers')}
+          {note('map-layers', 'strip')}
         </div>
       ) : (
         <LayerPanel
@@ -1931,9 +1942,10 @@ export const MapStage = ({
               <Button
                 variant="text"
                 size="extraSmall"
-                disabled={locked('map-scripts')}
-                title={lockedTitle('map-scripts')}
-                onClick={() => onEditScript(selectedActor.id)}
+                className={withheldClass('map-scripts')}
+                {...orWithheld('map-scripts', 'inspector', () =>
+                  onEditScript(selectedActor.id),
+                )}
               >
                 Script
               </Button>
@@ -1947,37 +1959,44 @@ export const MapStage = ({
               Delete
             </Button>
           </div>
+          {onEditScript && note('map-scripts', 'inspector')}
           {selectedKind && (onEnhanceKind || onOpenKind) && (
             // About the KIND, and saying so: a placement is one of many, and
             // a tick in Enhance or a block in its file changes them all.
             <div className={styles.inspectorKind}>
               {onEnhanceKind && (
-                <Button
-                  variant="text"
-                  size="extraSmall"
-                  disabled={isReadOnly || locked('map-enhance')}
-                  title={lockedTitle('map-enhance')}
-                  onClick={() => onEnhanceKind(selectedActor.type)}
-                >
-                  Enhance {selectedKind.name}…
-                </Button>
+                <>
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    disabled={isReadOnly}
+                    className={withheldClass('map-enhance')}
+                    {...orWithheld('map-enhance', 'inspector', () =>
+                      onEnhanceKind(selectedActor.type),
+                    )}
+                  >
+                    Enhance {selectedKind.name}…
+                  </Button>
+                  {note('map-enhance', 'inspector')}
+                </>
               )}
               {onOpenKind && (
-                <Button
-                  variant="text"
-                  size="extraSmall"
-                  disabled={locked('map-open-kind')}
-                  title={lockedTitle('map-open-kind')}
-                  onClick={() => onOpenKind(selectedActor.type)}
-                >
-                  Open {selectedKind.name}
-                </Button>
+                <>
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    className={withheldClass('map-open-kind')}
+                    {...orWithheld('map-open-kind', 'inspector', () =>
+                      onOpenKind(selectedActor.type),
+                    )}
+                  >
+                    Open {selectedKind.name}
+                  </Button>
+                  {note('map-open-kind', 'inspector')}
+                </>
               )}
-              {lessonLink('map-enhance')}
-              {lessonLink('map-open-kind')}
             </div>
           )}
-          {lessonLink('map-scripts')}
           <TextField
             name="actor-id"
             label="ID"

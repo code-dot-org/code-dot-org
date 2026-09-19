@@ -161,6 +161,17 @@ vi.mock('@code-dot-org/codebridge', () => ({
     },
   }),
   createNewFile: (args: {source: MultiFileSource}) => createNewFile(args),
+  // The pure one, which the menus use to put a tab back in front
+  // (`actors/create/actorCreate`): one file active, the rest not.
+  activateFile: (source: MultiFileSource, fileId: string) => ({
+    ...source,
+    files: Object.fromEntries(
+      Object.entries(source.files).map(([id, file]) => [
+        id,
+        {...file, active: id === fileId},
+      ]),
+    ),
+  }),
   createExternalFile: (args: Parameters<typeof createExternalFile>[0]) =>
     createExternalFile(args),
   getNextFileId: () => 'new',
@@ -217,6 +228,7 @@ vi.mock('@code-dot-org/lab/redux', () => ({
 }));
 
 const {FileMenus} = await import('../FileMenus');
+const {requestActorCreate} = await import('../../actors/create/actorCreate');
 
 // Cleared between cases, because `toHaveBeenCalled` on a mock that ALREADY was
 // is a wait that ends immediately — and then `calls.at(-1)` reads the last
@@ -713,5 +725,39 @@ describe('the file menus', () => {
 
     expect(screen.queryByText(/^New/)).toBeNull();
     expect(screen.getByText('Import…')).toBeTruthy();
+  });
+});
+
+describe('the Actor Creator, asked for from the map', () => {
+  // A level with nothing to browse has no folder buttons, and the map
+  // editor's palette still has `New actor…` (specs/KINDS_FROM_THE_MAP_PLAN.md).
+  it('is mounted without its buttons, and still answers', async () => {
+    render(<FileMenus menus={false} />);
+    expect(screen.queryByRole('button', {name: 'Actors'})).toBeNull();
+
+    const asked = requestActorCreate();
+    await screen.findByText('Create my own');
+    fireEvent.click(screen.getByText('Create my own'));
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Chaser'}});
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Next'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Create'}));
+
+    // The asker is told which kind was made…
+    expect(await asked).toBe('actors/chaser');
+    // …and the tab that was in front stays in front, where the real
+    // `createNewFile` would have put the new file there.
+    const written = updateSources.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+    };
+    expect(written.source.files.a.active).toBe(true);
+  });
+
+  it('answers with nothing when the learner backs out', async () => {
+    render(<FileMenus menus={false} />);
+    const asked = requestActorCreate();
+    await screen.findByText('Create my own');
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(await asked).toBeUndefined();
   });
 });

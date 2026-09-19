@@ -193,7 +193,10 @@ const WorldLayout = () => {
                     // uploading included.
                     hideFileBrowser
                     pinnedFileId={entryFileId}
-                    tabBarStart={browsable ? <FileMenus /> : undefined}
+                    // Mounted either way, with its buttons off when there
+                    // is nothing to browse: the dialogs it owns are asked
+                    // for from elsewhere too (`files/FileMenus`, `menus`).
+                    tabBarStart={<FileMenus menus={browsable} />}
                   />
                 </div>
                 {/* Code-only view: the console falls back to under the editor. */}

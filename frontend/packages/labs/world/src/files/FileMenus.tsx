@@ -47,6 +47,7 @@ import {
 
 import {
   createExternalFile,
+  activateFile,
   createNewFile,
   getFileExtension,
   languageForFileName,
@@ -65,6 +66,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
+import {setActorCreateHandler} from '../actors/create/actorCreate';
 import {ActorCreator, type ActorDraft} from '../actors/create/ActorCreator';
 import {lookOf, withLook, withScale} from '../actors/create/actorLook';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
@@ -124,7 +126,18 @@ interface RowMenu {
   enhances: boolean;
 }
 
-export const FileMenus = () => {
+export interface FileMenusProps {
+  /**
+   * Whether the folder buttons are drawn. OFF for a level with nothing to
+   * browse (`levelData.showFileBrowser`), where this is still mounted: the
+   * dialogs it owns are asked for from elsewhere — the Actor Creator from the
+   * map editor's palette (`actors/create/actorCreate`) — and a seam with
+   * nobody behind it answers "nothing" to a learner who pressed a button.
+   */
+  menus?: boolean;
+}
+
+export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
   const ops = useFileOperations();
   // A rename rewrites the WHOLE project in one go — the file, its contents and
   // every reference to it — which is a write `useFileOperations` has no verb
@@ -618,11 +631,49 @@ export const FileMenus = () => {
   const commitActor = useCallback(
     async (source: MultiFileSource): Promise<boolean> => {
       await thenAsk();
-      commit(source);
+      // Asked for from the map (`actorCreate`): the tab the learner was on
+      // stays the active one, and the asker is told which kind was made.
+      const waiting = asked.current;
+      asked.current = null;
+      commit(
+        waiting?.returnTo && source.files[waiting.returnTo]
+          ? activateFile(source, waiting.returnTo)
+          : source,
+      );
+      waiting?.settle(lastBuilt.current);
       return true;
     },
     [thenAsk, commit],
   );
+
+  /** Who asked for the Creator from outside these menus, and their tab. */
+  const asked = useRef<{
+    settle: (path: string | undefined) => void;
+    returnTo?: string;
+  } | null>(null);
+  /** The path of the actor the Creator last built, which is what it writes. */
+  const lastBuilt = useRef<string | undefined>(undefined);
+  useEffect(() => {
+    setActorCreateHandler(
+      () =>
+        new Promise<string | undefined>(settle => {
+          // One Creator at a time: a second ask lets the first go.
+          asked.current?.settle(undefined);
+          if (isReadOnly) {
+            settle(undefined);
+            return;
+          }
+          asked.current = {
+            settle,
+            returnTo: Object.values(live.current.files).find(
+              file => file.active,
+            )?.id,
+          };
+          setCreating(true);
+        }),
+    );
+    return () => setActorCreateHandler(null);
+  }, [isReadOnly]);
 
   /**
    * Rename the THING, and let its file follow.
@@ -1069,7 +1120,7 @@ export const FileMenus = () => {
 
   return (
     <div className={styles.menus}>
-      {FOLDER_MENUS.map((menu, at) => (
+      {(menus ? FOLDER_MENUS : []).map((menu, at) => (
         // The lab's icon button, not a bare MUI one: its tooltip is the design
         // system's and takes the theme, where MUI's own renders dark-on-light
         // whatever the page is doing. It reports no event, so the menu hangs
@@ -1253,9 +1304,17 @@ export const FileMenus = () => {
               'actor',
             )
           }
-          build={buildActor}
+          build={draft => {
+            const made = buildActor(draft);
+            lastBuilt.current = made?.path;
+            return made;
+          }}
           onCreate={commitActor}
-          onCancel={() => setCreating(false)}
+          onCancel={() => {
+            setCreating(false);
+            asked.current?.settle(undefined);
+            asked.current = null;
+          }}
         />
       )}
       {playing && (

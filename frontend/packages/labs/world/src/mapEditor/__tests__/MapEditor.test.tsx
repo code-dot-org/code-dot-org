@@ -7,7 +7,7 @@
 // outside it.
 
 import {fireEvent, render, screen} from '@testing-library/react';
-import {describe, expect, it, vi} from 'vitest';
+import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -80,7 +80,10 @@ vi.mock('../MapStage', () => ({
  */
 /** What the shelf holds; absent, there is no progression at all. */
 let shelf:
-  | {holds: (unlock: {kind: string; id?: string}) => boolean}
+  | {
+      holds: (unlock: {kind: string; id?: string}) => boolean;
+      grantedBy: () => undefined;
+    }
   | undefined;
 vi.mock('../../progression/progressionContext', () => ({
   useMaybeProgression: () => shelf,
@@ -160,6 +163,13 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
     updateSources,
     sourcesEpoch: 0,
   }),
+}));
+
+/** The Actor Creator's seam, answered with whatever a test says was made. */
+let created: string | undefined;
+const requestActorCreate = vi.fn(async () => created);
+vi.mock('../../actors/create/actorCreate', () => ({
+  requestActorCreate: () => requestActorCreate(),
 }));
 
 /** The lab's Enhance seam, answered by nobody here: what was asked is the test. */
@@ -406,7 +416,10 @@ describe('what a gated lab withholds', () => {
 
   it('is each affordance the shelf does not hold', () => {
     const held = new Set(['affordance:map-layers', 'affordance:map-enhance']);
-    shelf = {holds: unlock => held.has(`${unlock.kind}:${unlock.id}`)};
+    shelf = {
+      holds: unlock => held.has(`${unlock.kind}:${unlock.id}`),
+      grantedBy: () => undefined,
+    };
     open();
     expect(stage()).toHaveAttribute(
       'data-withheld',
@@ -443,5 +456,51 @@ describe('from the map to a kind', () => {
     };
     expect(written.source.files['2'].active).toBe(true);
     expect(written.source.files['3'].active).not.toBe(true);
+  });
+});
+
+describe('`New actor…` on the palette', () => {
+  const tile = (name: string) => screen.getByRole('button', {name});
+  beforeEach(() => requestActorCreate.mockClear());
+
+  it('asks the lab for the Actor Creator, and takes the new kind in hand', async () => {
+    shelf = undefined;
+    created = 'actors/coin';
+    open();
+    expect(tile('Coin')).toHaveAttribute('aria-pressed', 'false');
+
+    fireEvent.click(tile('New actor…'));
+    expect(requestActorCreate).toHaveBeenCalled();
+    // What was made is what is about to be placed.
+    await vi.waitFor(() =>
+      expect(tile('Coin')).toHaveAttribute('aria-pressed', 'true'),
+    );
+  });
+
+  it('leaves the hand as it was when the learner backs out', async () => {
+    created = undefined;
+    open();
+    fireEvent.click(tile('New actor…'));
+    await Promise.resolve();
+    expect(tile('Coin')).toHaveAttribute('aria-pressed', 'false');
+  });
+
+  it('is drawn disabled when the shelf withholds it', () => {
+    shelf = {
+      holds: unlock =>
+        !(unlock.kind === 'affordance' && unlock.id === 'map-new-actor'),
+      grantedBy: () => undefined,
+    };
+    open();
+    // Where it was, focusable, inert, and saying why.
+    const button = tile('New actor…');
+    expect(button).toHaveAttribute('aria-disabled', 'true');
+    expect(button).not.toBeDisabled();
+    expect(
+      document.getElementById(button.getAttribute('aria-describedby')!),
+    ).toHaveTextContent('Not unlocked yet');
+    fireEvent.click(button);
+    expect(requestActorCreate).not.toHaveBeenCalled();
+    shelf = undefined;
   });
 });

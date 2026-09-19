@@ -724,7 +724,22 @@ describe('what a gated lab withholds', () => {
     expect(view.queryByRole('button', {name: 'Icons'})).toBeNull();
   });
 
-  it('draws a withheld Script disabled rather than leaving it out', () => {
+  /** Focusable, inert, and described by a note that is really there. */
+  const expectWithheld = (
+    view: {container: HTMLElement},
+    button: HTMLElement,
+  ) => {
+    expect(button).toHaveAttribute('aria-disabled', 'true');
+    // NOT `disabled`: that would take it out of the tab order, and a
+    // keyboard would have no way to reach it and hear why.
+    expect(button).not.toBeDisabled();
+    const described = button.getAttribute('aria-describedby')!;
+    expect(view.container.querySelector(`#${described}`)).toHaveTextContent(
+      'Not unlocked yet',
+    );
+  };
+
+  it('draws a withheld Script where it was, focusable and saying why', () => {
     // A learner looking round can tell what is not theirs yet from what does
     // not exist (specs/KINDS_FROM_THE_MAP_PLAN.md).
     const map = doc();
@@ -736,13 +751,18 @@ describe('what a gated lab withholds', () => {
     });
     select(canvas, map);
     const script = view.getByRole('button', {name: 'Script'});
-    expect(script).toBeDisabled();
-    expect(script).toHaveAttribute('title', 'Not unlocked yet');
-    expect(view.getByRole('button', {name: 'Map script'})).toBeDisabled();
-    // The toggle is about the marks of scripts nobody here can open.
-    expect(view.queryByRole('button', {name: 'Icons'})).toBeNull();
+    const mapScript = view.getByRole('button', {name: 'Map script'});
+    expectWithheld(view, script);
+    expectWithheld(view, mapScript);
+    // Two ways in, two notes: an id names one element.
+    expect(script.getAttribute('aria-describedby')).not.toBe(
+      mapScript.getAttribute('aria-describedby'),
+    );
     fireEvent.click(script);
+    fireEvent.click(mapScript);
     expect(onEditScript).not.toHaveBeenCalled();
+    // The marks are drawn either way, so their toggle still works.
+    expect(view.getByRole('button', {name: 'Icons'})).toBeInTheDocument();
   });
 
   it('shows the layer strip and a placement’s Layer unless withheld', () => {
@@ -761,7 +781,9 @@ describe('what a gated lab withholds', () => {
       withheld: new Set(['map-layers'] as const),
     });
     expect(view.queryByTestId('layer-panel')).toBeNull();
-    expect(view.getByTestId('layer-panel-locked')).toHaveTextContent('Layers');
+    expect(view.getByTestId('layer-panel-locked')).toHaveTextContent(
+      'LayersNot unlocked yet',
+    );
     select(canvas, map);
     expect(
       view.container.querySelector('select[name="actor-layer"]'),
@@ -802,17 +824,47 @@ describe('from a placement to its kind', () => {
     expect(view.queryByRole('button', {name: /^Open/})).toBeNull();
   });
 
-  it('draws each disabled when withheld, and Enhance when read-only', () => {
+  it('keeps each where it was when withheld, inert, with a note of its own', () => {
+    const map = doc();
+    const onEnhanceKind = vi.fn();
+    const onOpenKind = vi.fn();
+    const {canvas, ...view} = mount(map, {
+      kinds,
+      onEnhanceKind,
+      onOpenKind,
+      withheld: new Set(['map-enhance', 'map-open-kind'] as const),
+    });
+    select(canvas, map);
+    const enhance = view.getByRole('button', {name: 'Enhance Coin…'});
+    const openKind = view.getByRole('button', {name: 'Open Coin'});
+    for (const button of [enhance, openKind]) {
+      expect(button).toHaveAttribute('aria-disabled', 'true');
+      expect(button).not.toBeDisabled();
+      fireEvent.click(button);
+    }
+    expect(onEnhanceKind).not.toHaveBeenCalled();
+    expect(onOpenKind).not.toHaveBeenCalled();
+    // Each button names its OWN note, so two lessons cannot be confused.
+    const notes = [enhance, openKind].map(
+      button => button.getAttribute('aria-describedby')!,
+    );
+    expect(new Set(notes).size).toBe(2);
+    for (const id of notes) {
+      expect(view.container.querySelector(`#${id}`)).not.toBeNull();
+    }
+  });
+
+  it('really disables Enhance on a read-only map, which is not a lesson’s doing', () => {
     const map = doc();
     const {canvas, ...view} = mount(map, {
       kinds,
       onEnhanceKind: vi.fn(),
       onOpenKind: vi.fn(),
-      withheld: new Set(['map-enhance', 'map-open-kind'] as const),
+      isReadOnly: true,
     });
+    // Read-only refuses the click that selects, so say which is selected.
     select(canvas, map);
-    expect(view.getByRole('button', {name: 'Enhance Coin…'})).toBeDisabled();
-    expect(view.getByRole('button', {name: 'Open Coin'})).toBeDisabled();
+    expect(view.queryByRole('button', {name: 'Enhance Coin…'})).toBeNull();
   });
 });
 

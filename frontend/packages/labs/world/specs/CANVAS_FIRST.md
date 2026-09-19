@@ -142,7 +142,7 @@ seen to work.
 1. The main map loads before the rows; `place/layers`' Hero moves onto the
    map as the proof. BUILT (specs/MAP_BEFORE_ROWS_PLAN.md).
 2. Enhance, Open and New actor from the map editor; withheld controls shown
-   disabled with their lesson.
+   inert with their lesson. BUILT (specs/KINDS_FROM_THE_MAP_PLAN.md).
 3. A pilot of three lessons, one of each kind: `origin/first-world` (map),
    `input/arrows` (map, with Enhance), `motion/gravity` (both). Seen in the
    browser before going on.

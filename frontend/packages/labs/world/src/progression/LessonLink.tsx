@@ -39,6 +39,12 @@ export interface LessonLinkProps {
    */
   locked?: boolean;
   className?: string;
+  /**
+   * An id for the button, so the control this explains can point at it
+   * (`aria-describedby`): a withheld control in the map editor stays
+   * focusable, and what is read on focus is this sentence.
+   */
+  id?: string;
 }
 
 /** The lesson a thing comes from: what it is called, and the way to it. */
@@ -73,6 +79,7 @@ export const LessonLink = ({
   onNavigate,
   locked = false,
   className,
+  id,
 }: LessonLinkProps) => {
   const lesson = unlockLesson(useMaybeProgression(), unlock);
   if (!lesson) {
@@ -82,6 +89,7 @@ export const LessonLink = ({
 
   return (
     <Button
+      id={id}
       className={className}
       variant="text"
       size="small"

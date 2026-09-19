@@ -15,6 +15,7 @@ import {activateFile, type CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {requestActorCreate} from '../actors/create/actorCreate';
 import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {useProjectImages} from '../appearance/useProjectImages';
@@ -58,6 +59,7 @@ import {
 } from './mapModel';
 import {MapStage} from './MapStage';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
+import {WithheldNote} from './WithheldNote';
 import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
 
 /** How long after the last keystroke a placement's picture is asked for. */
@@ -146,6 +148,18 @@ export const MapEditor = ({
     },
     [kinds],
   );
+  /**
+   * A new kind, from the Actor Creator. The world stays the tab in front,
+   * and the kind that was made is the one in hand: a learner who asked from
+   * the map wants to place it.
+   */
+  const newActor = useCallback(() => {
+    void requestActorCreate().then(path => {
+      if (path) {
+        setSelected(path);
+      }
+    });
+  }, []);
   /** A kind's own file, made the active tab. */
   const openKind = useCallback(
     (type: string) => {
@@ -594,6 +608,44 @@ export const MapEditor = ({
             <span className={styles.name}>{name}</span>
           </button>
         ))}
+        {!isReadOnly && (
+          // The last tile of the palette, where a new kind will appear: the
+          // Actor Creator, asked of the lab (`actors/create/actorCreate`).
+          // Withheld, it is drawn disabled beside the lesson that grants it.
+          <>
+            <button
+              type="button"
+              className={
+                withheld.has('map-new-actor')
+                  ? `${styles.actor} ${styles.withheld}`
+                  : styles.actor
+              }
+              // Focusable when withheld, and described by the note beside
+              // it, so a keyboard can reach it and hear why (`WithheldNote`).
+              {...(withheld.has('map-new-actor')
+                ? {
+                    'aria-disabled': true,
+                    'aria-describedby': 'withheld-map-new-actor',
+                  }
+                : {onClick: newActor})}
+            >
+              {/* Decoration: the words beside it are the button's name. */}
+              <span
+                className={`${styles.thumb} ${styles.newActor}`}
+                aria-hidden="true"
+              >
+                +
+              </span>
+              <span className={styles.name}>New actor…</span>
+            </button>
+            {withheld.has('map-new-actor') && (
+              <WithheldNote
+                affordance="map-new-actor"
+                id="withheld-map-new-actor"
+              />
+            )}
+          </>
+        )}
       </div>
       <MapStage
         doc={map}
