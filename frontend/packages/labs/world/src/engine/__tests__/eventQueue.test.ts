@@ -83,7 +83,7 @@ describe('deferred event dispatch', () => {
 // several is the same call with more in it.
 describe('what an event carries', () => {
   it('hands an actor handler every value, in order', () => {
-    const seen: unknown[][] = [];
+    const seen: Array<readonly unknown[]> = [];
 
     const r = new RuleBuilder({id: 'carrier', name: 'Carrier'});
     const Marked = r.addTrait({id: 'marked', name: 'Marked'});
@@ -107,7 +107,7 @@ describe('what an event carries', () => {
   });
 
   it('hands a world handler every value, with no subject in front', () => {
-    const seen: unknown[][] = [];
+    const seen: Array<readonly unknown[]> = [];
 
     const r = new RuleBuilder({id: 'carrier2', name: 'Carrier2'});
     const Cleared = r.addEvent('cleared');
@@ -126,7 +126,7 @@ describe('what an event carries', () => {
   });
 
   it('carries nothing, and one thing, as it always did', () => {
-    const seen: unknown[][] = [];
+    const seen: Array<readonly unknown[]> = [];
 
     const r = new RuleBuilder({id: 'carrier3', name: 'Carrier3'});
     const Marked = r.addTrait({id: 'marked', name: 'Marked'});
