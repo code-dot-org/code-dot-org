@@ -2,6 +2,7 @@ import {
   allWithTrait,
   anyOf,
   both,
+  canBeReached,
   captureKey,
   choice,
   defineRule,
@@ -148,7 +149,7 @@ const inOrder = () =>
   orderedActors(ranked, {
     from: filter(listed, {
       from: allWithTrait(rule.traitRef('Can Be Focused')),
-      where: takesKeyboard.of(listed.get()),
+      where: both(takesKeyboard.of(listed.get()), canBeReached(listed.get())),
     }),
     key: tabOrder.of(ranked.get()),
   });
@@ -183,6 +184,10 @@ const release = () =>
  * that is only ever pointed at stays out of the way of whatever is being typed
  * into — the refusal is HERE rather than in each caller, because the Button
  * that calls this is on the shelf and a map that places one cannot edit it.
+ *
+ * AND NOTHING IF A SCREEN IN FRONT COVERS IT. Same place and same reason: a
+ * field on the screen behind a dialog is not somewhere the keyboard may go
+ * (specs/MODALITY_PLAN.md).
  */
 const takeFocus = focusable.block({
   returns: 'none',
@@ -195,7 +200,10 @@ const takeFocus = focusable.block({
     ),
     when([
       [
-        both(not(focused.of(thisActor())), takesKeyboard.of(thisActor())),
+        both(
+          not(focused.of(thisActor())),
+          both(takesKeyboard.of(thisActor()), canBeReached(thisActor())),
+        ),
         [
           note('Whoever had it lets go first, so the two never overlap.'),
           release(),
@@ -247,6 +255,11 @@ const somethingFocused = () =>
  *
  * What arriving at the game is, and what a game says when it opens a form.
  * Does nothing in a world with nothing focusable in it, which is most worlds.
+ *
+ * ASKED OF THE ROUTE, not of every focusable actor. They used to be the same
+ * list; they are not once a screen in front can cover one, and a world whose
+ * only fields are behind a dialog would otherwise have taken the first of
+ * them — reaching past the dialog for the thing the dialog is covering.
  */
 const focusFirst = rule.block({
   returns: 'none',
@@ -256,12 +269,47 @@ const focusFirst = rule.block({
   body: () => [
     when([
       [
-        anyOf(allWithTrait(rule.traitRef('Can Be Focused'))),
+        anyOf(inOrder()),
         [chosen.let(firstActor(inOrder())), takeFocus({}, chosen.get())],
       ],
     ]),
   ],
 });
+
+/**
+ * A screen opening takes the keyboard with it.
+ *
+ * The focus is a property of an actor, so it survives the thing in front
+ * arriving: open a dialog over a focused field and the field is still
+ * holding it — still drawing its ring, still the answer to `focused`, and
+ * still where Tab counts from. The typing stops reaching it (`rules/input`
+ * asks the same question), which is half of what modal means; this is the
+ * other half (specs/MODALITY_PLAN.md).
+ *
+ * IT MOVES THE FOCUS RATHER THAN DROPPING IT. Dropping would hand Tab back
+ * to the page, so the first Tab inside a freshly opened dialog would leave
+ * the game — which is the trap `capture the ⟨tab⟩ key` exists to avoid.
+ *
+ * In `sense`, the first moment of the frame: a screen is loaded in a handler,
+ * which runs after every step, so this catches it on the frame after — the
+ * same one frame everything else about a click is late by.
+ */
+rule.step('coveredLosesFocus', 'sense', [
+  doc(
+    'Whoever is holding the keyboard from behind a screen in front lets go, and the front of the route takes it. The route only has what can be reached, so "the front" is the first thing on the screen that is showing.',
+  ),
+  forEach(other, {
+    from: allWithTrait(rule.traitRef('Can Be Focused')),
+    body: [
+      when([
+        [
+          both(focused.of(other.get()), not(canBeReached(other.get()))),
+          [focusFirst({})],
+        ],
+      ]),
+    ],
+  }),
+]);
 
 /**
  * `focus the next control` — what Tab does, said as a block.

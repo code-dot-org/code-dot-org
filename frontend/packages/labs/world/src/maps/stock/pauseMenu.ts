@@ -51,6 +51,12 @@ export const pauseMenuMap = JSON.stringify(
     type: 'map',
     size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
+    // A SCREEN: while it is up, nothing behind it can be clicked, tabbed to
+    // or typed at (specs/MODALITY_PLAN.md). `pause the game` already stops
+    // the level MOVING, and the two are not the same thing — a paused game
+    // still turns clicks into events, so without this the level's buttons
+    // were live under the menu asking whether to quit.
+    modal: true,
     actors: [
       {
         type: 'actors/panel',

@@ -9762,6 +9762,45 @@ const worldPixelsPerUnit = defineBlock({
   },
 });
 
+/**
+ * `⟨actor⟩ can be reached` — whether input gets to it, or something covers it.
+ *
+ * THE ONE QUESTION EVERY INPUT RULE HAS TO ASK. A screen loaded over another
+ * is a dialog: the one in front takes the clicks, the tabbing and the typing.
+ * Before this, both screens took everything, and a key on an on-screen
+ * keyboard also pressed the button on the screen behind it
+ * (`World.canReach`, specs/MODALITY_PLAN.md).
+ *
+ * IN THE ENGINE DRAWER, because it is a rule's question rather than a
+ * project's. A `.world` that asked it would be second-guessing the rules that
+ * deliver its events; what a project says instead is which of its MAPS are
+ * screens, and it says that in the map.
+ */
+const worldCanReach = defineBlock({
+  type: 'world_can_reach',
+  message0: '%1 can be reached',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'False while a screen loaded over this one covers it. Input stops at ' +
+    'the topmost map that says it covers what is under it.',
+  generator: {
+    javascript(block, generator) {
+      const actor = generator.valueToCode(block, 'ACTOR', Order.NONE) || 'null';
+      return [`world.canReach(${actor})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+registerValueShadows('world_can_reach', [
+  {name: 'ACTOR', shadow: {type: 'world_this_actor'}},
+]);
+
 // `key <key> is down` — the polling side of input, which the engine has always
 // had (`World.isKeyDown`) and the palette never offered: only the edge-triggered
 // event hats ("when this actor presses space") were reachable from blocks, so a
@@ -10294,6 +10333,7 @@ export const DOMAIN_BLOCKS = [
   worldAsText,
   worldNewLine,
   worldTextWidth,
+  worldCanReach,
   worldCaptureKey,
   worldReleaseKey,
   worldType,
@@ -10871,6 +10911,10 @@ const ENGINE_CATEGORY: ToolboxCategory = {
   name: 'Engine',
   blocks: [
     'world_is_key_down', // the polling side: "while held"
+    // …and who is allowed to hear any of it. A screen over a screen is a
+    // dialog, and every rule that delivers input has to ask
+    // (specs/MODALITY_PLAN.md).
+    'world_can_reach',
     // …and what the game asks of the BROWSER, which is not the same question:
     // whether a key reaches the game at all, rather than whether it is down.
     // Tab is the one that cannot be a constant in the driver, and the arrival

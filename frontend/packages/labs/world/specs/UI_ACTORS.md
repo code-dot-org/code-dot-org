@@ -1201,31 +1201,24 @@ project's own `types ⟨character⟩` handler all fill from it unchanged, and a
 form of three fields needs no wiring at all — whichever one has the focus is
 the one already listening.
 
-### A screen over a screen is not modal, and should be
+### A screen over a screen is modal — BUILT
 
-Two maps stacked are two sets of actors, and a click goes to EVERY actor under
-the pointer (`rules/mouse`, `clickTargets`). So the first app built on this
-kit had a key on the on-screen keyboard also pressing the button on the home
-screen behind it, which opened a second copy of the form it was typing into
-(specs/APPS.md, `fixtures/app`).
+A dialog takes the clicks, and nothing here said so until the first app had a
+key on its on-screen keyboard also pressing the button on the screen behind
+it (specs/APPS.md). Now a map says whether it covers what is under it, and
+input stops at the topmost one that does — clicks, the tab route and the
+typing alike (specs/MODALITY_PLAN.md).
 
-Laid out around for now — each screen's controls kept clear of the one under
-it — which is not a fix and does not survive a second app.
+The shape worth remembering is that it is NOT "the topmost map wins", which
+is wrong by exactly one case: the on-screen keyboard is loaded OVER the form
+it fills, and a rule that measured from the top of the stack would lock out
+the field it exists to type into. So a map declares it, and a keyboard
+declares it does not.
 
-The answer is a design question rather than a bug. Every interface anybody has
-used treats a screen loaded over another as MODAL, and nothing here says so.
-Two candidates:
-
-- **A click stops at the topmost actor.** Matches what an interface does and
-  needs no new vocabulary — but it changes what a click means for every GAME
-  with overlapping actors, where hitting several at once may be the point.
-- **A screen says it swallows what it covers.** Opt-in, says what it does, and
-  costs a property on the Screens rule and a test in the Mouse rule's click
-  step.
-
-The second looks right for the same reason `takes the keyboard` did: the lab
-would rather a thing declare its own behaviour than change what a word means
-everywhere.
+The pause menu is a screen and always was; it got the flag for one line. That
+also closed something `pause the game` never promised — a paused game still
+turns clicks into events, so the level's buttons were live underneath a menu
+asking whether to quit.
 
 ### What a phone-shaped kit does not yet answer
 

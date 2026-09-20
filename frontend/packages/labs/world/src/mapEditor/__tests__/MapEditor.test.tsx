@@ -240,6 +240,22 @@ describe('MapEditor size controls', () => {
     expect(screen.getByTestId('stage')).toHaveAttribute('data-size', '20x4');
   });
 
+  it('marks a map as a screen, and unmarks it back to absent', () => {
+    // A dialog covers what is under it and a HUD does not, which is a fact
+    // about the MAP (specs/MODALITY_PLAN.md). Unticking writes `undefined`
+    // rather than `false`, so a map that is not a screen reads exactly as
+    // every map written before the flag existed.
+    const onChange = open();
+    const box = screen.getByLabelText('Covers what is under it');
+    expect(box).not.toBeChecked();
+
+    fireEvent.click(box);
+    expect(written(onChange).modal).toBe(true);
+
+    fireEvent.click(screen.getByLabelText('Covers what is under it'));
+    expect(written(onChange).modal).toBeUndefined();
+  });
+
   it('leaves the map alone while a field is empty', () => {
     // Clearing a field to type a new number is one keystroke. `Number('')` is
     // 0, so this once collapsed the map to a single tile mid-edit — and the

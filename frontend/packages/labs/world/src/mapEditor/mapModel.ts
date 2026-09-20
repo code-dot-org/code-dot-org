@@ -324,6 +324,15 @@ export interface MapDoc {
   size: MapSize;
   tile: Tile;
   actors: Placement[];
+  /**
+   * Whether loading this map COVERS what is already there.
+   *
+   * A screen says yes and an overlay says no: while a modal map is on, input
+   * stops at it and nothing under it can be clicked, tabbed to or typed at
+   * (`World.canReach`, specs/MODALITY_PLAN.md). Absent reads as false, which
+   * is every map written before the flag existed and every HUD since.
+   */
+  modal?: boolean;
   /** The map's own workspace: its events and the map hats, or nothing. */
   blocks?: WorkspaceState;
   /** The map's layers, back to front; absent, the one default. */

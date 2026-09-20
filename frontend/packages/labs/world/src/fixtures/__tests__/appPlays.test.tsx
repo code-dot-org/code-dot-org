@@ -70,6 +70,8 @@ const play = async (held?: Map<string, string>) => {
     /** A placement by the id its map gave it. */
     named: (id: string) => [...world.actors].find(actor => actor.id === id),
     field: () => ofKind(world, 'actors/textInput')[0],
+    /** Every form on screen — one, unless a screen behind opened another. */
+    fields: () => ofKind(world, 'actors/textInput'),
     list: () => ofKind(world, 'actors/list')[0],
     says: (actor: Actor) => actor.get(text as never) as unknown as string,
     listed: () => (
@@ -141,6 +143,34 @@ describe('Notes, the app', () => {
 
     expect(listed()).toEqual([]);
     expect(named('Key A')).toBeFalsy();
+  });
+
+  it('gives the screen in front the clicks, and the one behind none', async () => {
+    const {named, tap, field, fields, says, listed} = await play();
+    tap(named('New')!);
+
+    // `Key B` is the middle of the keyboard's third row, which sits exactly
+    // over NEW NOTE at the foot of the home screen. Both are under the
+    // pointer; only the one on the screen in front may have it.
+    tap(named('Key B')!);
+    expect(says(field())).toBe('b');
+    // …and no second form opened behind the first, which is what this did
+    // before a map could say it was a screen (specs/MODALITY_PLAN.md).
+    expect(fields()).toHaveLength(1);
+    expect(listed()).toEqual([]);
+  });
+
+  it('keeps the keyboard working, which is above the screen and not one', async () => {
+    const {named, tap, field, typeOnScreen, says} = await play();
+    tap(named('New')!);
+    tap(field());
+    // The keyboard is loaded OVER the form and is NOT modal, so the form it
+    // types into is still reachable — the key case for measuring from the
+    // topmost modal load rather than from the top of the stack.
+    typeOnScreen('hi');
+    expect(says(field())).toBe('hi');
+    tap(named('Save')!);
+    expect(named('Entry')).toBeFalsy();
   });
 
   it('is still there after a reload', async () => {

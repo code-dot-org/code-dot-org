@@ -100,12 +100,13 @@ const place = (
   ...(emits ? clickEmits(emits) : {}),
 });
 
-const mapFile = (actors: object[], events: readonly string[]) =>
+const mapFile = (actors: object[], events: readonly string[], modal = false) =>
   JSON.stringify(
     {
       type: 'map',
       size: {width: PORTRAIT.columns, height: PORTRAIT.rows},
       tile: {width: TILE_SIZE, height: TILE_SIZE},
+      ...(modal ? {modal: true} : {}),
       actors,
       // The map's own workspace: the events its placements raise.
       blocks: {
@@ -132,6 +133,14 @@ const mapFile = (actors: object[], events: readonly string[]) =>
  * That is the case anchoring exists for, met here rather than imagined — and
  * it is why the two of them are anchored and the list between them is not: a
  * list is the thing that should take up whatever room is left.
+ *
+ * Its controls do not dodge the screen that comes up over them, and for a
+ * while they had to. NEW NOTE sits at the foot of the screen, which is where a
+ * button like it belongs and is exactly where the on-screen keyboard's third
+ * row lands: tapping `b` also pressed NEW NOTE and opened a second copy of the
+ * form, mid-word. The layout was bent around that until the write map could
+ * say it was a SCREEN. It says so now, so this says what it means
+ * (specs/MODALITY_PLAN.md).
  */
 const HOME_MAP = mapFile(
   [
@@ -139,10 +148,10 @@ const HOME_MAP = mapFile(
       anchor: 'top',
       own: {Label: {text: 'NOTES'}},
     }),
-    place('actors/list', 'Notes', WIDTH / 2, 270, {
-      own: {Label: {width: 280, height: 180}},
+    place('actors/list', 'Notes', WIDTH / 2, 260, {
+      own: {Label: {width: 280, height: 320}},
     }),
-    place('actors/button', 'New', WIDTH / 2, 380, {
+    place('actors/button', 'New', WIDTH / 2, 520, {
       anchor: 'bottom',
       emits: 'world_emit_MapsHome_NewNoteEvent',
       own: {Label: {text: 'NEW NOTE', width: 200}},
@@ -188,6 +197,12 @@ const WRITE_MAP = mapFile(
     }),
   ],
   ['save', 'cancel'],
+  // A SCREEN, not an overlay: while it is up, nothing on home can be clicked,
+  // tabbed to or typed at (specs/MODALITY_PLAN.md). The keyboard loaded OVER
+  // it is not modal, which is the whole reason the flag is on the map rather
+  // than on whatever is topmost — a keyboard that locked out the form it fills
+  // would be useless.
+  true,
 );
 
 // ── The world ───────────────────────────────────────────────────────────────

@@ -338,6 +338,18 @@ export const pixelsPerUnit = () => ({type: 'world_pixels_per_unit'});
 /** Where the pointer is, as a place in the world (`World.mousePosition`). */
 export const mousePosition = () => ({type: 'world_mouse_position'});
 
+/**
+ * `<subject> can be reached` — false while something modal covers it.
+ *
+ * Every rule that DELIVERS input asks this, and the three that do are the
+ * three that had to be edited for it: the pointer's hit test, the keyboard's
+ * trait walk and the tab route (specs/MODALITY_PLAN.md).
+ */
+export const canBeReached = subject => ({
+  type: 'world_can_reach',
+  inputs: {ACTOR: value(subject)},
+});
+
 /** `<subject> has trait <Rule#Trait>`. */
 /** `add <actor> to <list>` — the list is a VARIABLE, named in a field. */
 export const pushActor = (list, actor) => ({

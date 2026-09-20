@@ -85,6 +85,11 @@ const RUNTIME_ONLY: Record<string, string> = {
     'typing is read by the frame after the one that typed it, and a world ' +
     'still being described has no frames at all (specs/KEYBOARD_PLAN.md)',
   pressKey: 'the same, for the keys that type nothing',
+  canReach:
+    'what covers what is a fact about the maps that are LOADED, and a world ' +
+    'still being described has loaded none of them \u2014 it is also a ' +
+    "rule's question rather than a project's, which is why the block is in " +
+    'the Engine drawer (specs/MODALITY_PLAN.md)',
 };
 
 /**

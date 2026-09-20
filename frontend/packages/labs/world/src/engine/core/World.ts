@@ -119,6 +119,14 @@ export interface WorldMap {
    */
   size?: {width: number; height: number};
   tile?: {width: number; height: number};
+  /**
+   * Whether loading this map COVERS what is already there.
+   *
+   * A screen says yes and an overlay says no. It is a fact about the map
+   * rather than about the block that loads it: a dialog is a dialog wherever
+   * it is put on, and a HUD is never one (specs/MODALITY_PLAN.md).
+   */
+  modal?: boolean;
   actors: Array<{
     type: string;
     /** Stable instance id; a random unique one is assigned when omitted. */
@@ -194,11 +202,28 @@ export class MapLoad {
   private readonly among: MapLoad[];
   /** Every actor this load placed, in placement order. */
   readonly actors: readonly Actor[];
+  /**
+   * Whether this load COVERS what is under it — a dialog rather than a HUD.
+   *
+   * Input stops at the topmost modal load: everything placed by it or by a
+   * load above it can be clicked, tabbed to and typed at, and everything
+   * below cannot (`World.canReach`). A screen is modal; an overlay is not,
+   * and the difference is not "which is on top" — an on-screen keyboard sits
+   * ABOVE the form it types into and must not lock it out
+   * (specs/MODALITY_PLAN.md).
+   */
+  readonly modal: boolean;
 
-  constructor(world: World, actors: readonly Actor[], among: MapLoad[] = []) {
+  constructor(
+    world: World,
+    actors: readonly Actor[],
+    among: MapLoad[] = [],
+    modal = false,
+  ) {
     this.world = world;
     this.actors = actors;
     this.among = among;
+    this.modal = modal;
   }
 
   /**
@@ -778,6 +803,10 @@ export class World {
   // added or removed while the world runs (they are structural — a layer cannot
   // be spliced into a live scene graph, see `snapshot`).
   private readonly layerIndex = new Map<string, number>();
+  // Which load placed each actor, for `canReach`. A WeakMap because an actor
+  // removed from the world should not be held alive by this, and because the
+  // question is only ever asked of an actor somebody already has in hand.
+  private readonly loadOf = new WeakMap<Actor, MapLoad>();
   // The set of currently-pressed input keys, refreshed by the driver each frame
   // before `tick` (the engine is DOM-free, so input arrives as plain data).
   // Rule steps read it through `isKeyDown`; keys carry OUR names — 'left arrow',
@@ -2319,8 +2348,11 @@ export class World {
     // What the map DOES, once everything it placed exists and every reference
     // is followed, so a hat about the Resume button registers on the button
     // and `the ⟨Door⟩` finds the door.
-    const load = new MapLoad(this, added, space.loads);
+    const load = new MapLoad(this, added, space.loads, map.modal === true);
     space.loads.push(load);
+    for (const actor of added) {
+      this.loadOf.set(actor, load);
+    }
     if (typeof map.script === 'function') {
       map.script(this, Object.fromEntries(placed), load);
     }
@@ -2792,6 +2824,47 @@ export class World {
 
   animation(id: string): AnimationDef | undefined {
     return this.animationDefs.get(id);
+  }
+
+  /**
+   * Whether input reaches this actor — `⟨…⟩ can be reached`.
+   *
+   * FALSE WHILE SOMETHING MODAL COVERS IT. A screen loaded over another is a
+   * dialog: the one in front takes the clicks, the tabbing and the typing,
+   * and what is behind waits. Every interface anybody has used works this
+   * way, and nothing here said so until an on-screen keyboard's keys started
+   * pressing the button on the screen behind them (specs/MODALITY_PLAN.md).
+   *
+   * MEASURED FROM THE TOPMOST MODAL LOAD, not from the top of the stack, and
+   * that is the whole of the design. A keyboard sits ABOVE the form it fills
+   * and must not lock it out; a dialog sits above a list and must. So a map
+   * says which it is (`WorldMap.modal`), and everything placed by the topmost
+   * modal load OR BY ANYTHING ABOVE IT can be reached.
+   *
+   * AN ACTOR NO MAP PLACED IS BEHIND EVERYTHING. `add actor` in a world's
+   * body, a bullet a handler made: they belong to no load, which puts them
+   * under the bottom one, so a dialog covers them too. That is what a dialog
+   * over a game has to mean.
+   *
+   * THE ROOT SPACE DECIDES FOR EVERYBODY. Screens are the root's stack, and a
+   * level playing inside a Viewport is behind whatever is over the window —
+   * so a modal in the root covers the other spaces whole. A modal loaded
+   * INSIDE a Viewport is not a case anybody has needed and is not answered.
+   */
+  canReach(actor: Actor): boolean {
+    const loads = this.rootSpace.loads;
+    let topModal = -1;
+    for (let at = loads.length - 1; at >= 0; at -= 1) {
+      if (loads[at].modal) {
+        topModal = at;
+        break;
+      }
+    }
+    if (topModal < 0) {
+      return true;
+    }
+    const load = this.loadOf.get(actor);
+    return load ? loads.indexOf(load) >= topModal : false;
   }
 
   /** The ids of every registered animation (active rules' stock + world extras). */

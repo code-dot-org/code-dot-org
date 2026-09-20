@@ -600,6 +600,25 @@ export const MapEditor = ({
           />
         </label>
         <span className={styles.sizeUnit}>tiles</span>
+        {/*
+          A SCREEN COVERS WHAT IS UNDER IT. This is the one fact about a map
+          that is not about where things are: a dialog loaded over a game
+          takes the clicks, the tabbing and the typing, and a HUD does not
+          (specs/MODALITY_PLAN.md). It is on the MAP rather than on the block
+          that loads it because a dialog is a dialog wherever it is put on.
+        */}
+        <label className={styles.sizeField}>
+          <input
+            type="checkbox"
+            name="map-modal"
+            checked={map.modal === true}
+            disabled={isReadOnly}
+            onChange={event =>
+              commit({...map, modal: event.target.checked || undefined})
+            }
+          />
+          <span className={styles.sizeLabel}>Covers what is under it</span>
+        </label>
         {actorOptions.map(([name, path]) => (
           <button
             key={path}

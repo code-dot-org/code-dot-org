@@ -234,20 +234,22 @@ This is the bug an app was always going to hit first, because a game's world
 body says `load map` — a method on the builder — and an app's says `go to
 screen`, which is a rule ACTION. Nothing before this fixture took that path.
 
-**A screen does not block the screen underneath it.** Two maps stacked means
-two sets of actors, and a click goes to EVERY actor under the pointer
-(`rules/mouse`, `clickTargets`) — so a key on the on-screen keyboard also
-pressed the NEW NOTE button on the home screen behind it, which opened a second
-copy of the form. Laid out around here, by keeping each screen's controls clear
-of the one under it, which is not a fix.
+**A screen did not block the screen underneath it — FIXED.** Two maps stacked
+means two sets of actors, and a click went to EVERY actor under the pointer
+(`rules/mouse`, `clickTargets`), so a key on the on-screen keyboard also
+pressed the NEW NOTE button on the home screen behind it and opened a second
+copy of the form, mid-word.
 
-It wants an answer before a second app is written, and the answer is a design
-question rather than a bug: a screen loaded over another is MODAL in every
-interface anybody has used, and nothing in this lab says so. The candidates are
-a click that stops at the topmost actor, or a screen that can say it swallows
-what it covers. The first changes what a click means for every game that has
-overlapping actors; the second is opt-in and says what it does. Neither is
-built.
+A map now says whether it covers what is under it, and input stops at the
+topmost one that does — the pointer, the tab route and the keyboard all ask
+(specs/MODALITY_PLAN.md). Notes' write screen says yes and its keyboard says
+no, which is the case that decides the design: measured from the top of the
+stack instead, the keyboard would have locked out the form it types into.
+
+The Notes layout was bent around the bug for a while — NEW NOTE moved up off
+the foot of the screen, the list shortened to clear the form. It is back where
+it belongs, and `appPlays` taps the key that sits exactly over NEW NOTE to
+prove the dodge is unnecessary.
 
 **`save` and `recall` report rather than act**, which is right, and means they
 cannot be chained as statements — the answer has to go somewhere. Notes keeps

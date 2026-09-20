@@ -1,7 +1,9 @@
 import {
   allWithTrait,
+  canBeReached,
   defineRule,
   doc,
+  filter,
   forEach,
   forEachKey,
   forEachTyped,
@@ -63,6 +65,23 @@ const releases = takesInput.event(['releases', param('released key', KEY)]);
 const types = takesInput.event(['types', param('character', 'string')]);
 
 const each = rule.local('each', 'Actor');
+const listening = rule.local('listening', 'Actor');
+
+/**
+ * Who hears the keyboard: the actors that elected it, minus the ones a screen
+ * in front is covering.
+ *
+ * A dialog over a game means the game stops hearing keys — otherwise the
+ * player walks around behind the dialog they are reading
+ * (specs/MODALITY_PLAN.md). The world-level events below are NOT filtered:
+ * they are not about anybody, and a project handling "space is pressed" with
+ * no actor is saying it wants the key however the screen is arranged.
+ */
+const audience = () =>
+  filter(listening, {
+    from: allWithTrait(rule.traitRef('Takes Keyboard Input')),
+    where: canBeReached(listening.get()),
+  });
 const key = rule.local('key', 'String');
 const character = rule.local('character', 'String');
 
@@ -70,7 +89,7 @@ const character = rule.local('character', 'String');
 const announce = (worldEvent, actorEvent, paramName) => [
   worldEvent({[paramName]: key.get()}),
   forEach(each, {
-    from: allWithTrait(rule.traitRef('Takes Keyboard Input')),
+    from: audience(),
     body: [actorEvent({[paramName]: key.get()}, each.get())],
   }),
 ];
@@ -87,7 +106,7 @@ rule.step('keyEvents', 'sense', [
   forEachTyped(character, [
     typed({character: character.get()}),
     forEach(each, {
-      from: allWithTrait(rule.traitRef('Takes Keyboard Input')),
+      from: audience(),
       body: [types({character: character.get()}, each.get())],
     }),
   ]),

@@ -16,6 +16,7 @@ import {
   atMost,
   axisOf,
   both,
+  canBeReached,
   minus,
   mousePosition,
   moreThan,
@@ -59,6 +60,19 @@ const withinAxis = (which, subject) =>
     halfSize(which, subject),
   );
 
-/** Whether the pointer is over this actor. */
+/**
+ * Whether the pointer HITS this actor: over it, and allowed to be.
+ *
+ * THE REACHABILITY IS IN HERE rather than at the call sites, and that is
+ * deliberate. Both askers want the same thing — what a press landed on, what
+ * a drag began on — and a hit test that answered "yes" for an actor behind a
+ * dialog would be answering a question nobody asks. Putting it here is also
+ * one place to be right instead of two to remember, which is exactly the bug
+ * this fixes: a key on the on-screen keyboard was pressing the button on the
+ * screen behind it (`World.canReach`, specs/MODALITY_PLAN.md).
+ */
 export const under = subject =>
-  both(withinAxis('x', subject), withinAxis('y', subject));
+  both(
+    both(withinAxis('x', subject), withinAxis('y', subject)),
+    canBeReached(subject),
+  );
