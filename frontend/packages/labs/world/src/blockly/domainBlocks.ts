@@ -1593,10 +1593,10 @@ const defineEmitBlock = (event: EventMeta) => {
     // sayable at all, and the param vanished from both sides rather than
     // falling back to a treatment that works.
     //
-    // The hat still filters only on enums, because a filter is a dropdown of
-    // named choices and a kind of actor is not one. It simply offers no filter
-    // for the rest; the handler reads what came through with `event value`,
-    // which is untyped for exactly this reason.
+    // The hat filters on enums and on kinds of actor, and says the rest of
+    // what it carries in words; the handler reads each value with the block
+    // named after it (`defineCarriedBlocks`), or with `event value` when the
+    // event was never designed a signature at all.
     const built = typedValueInputs(part, args0.length + 1, names[paramIndex], {
       enumAsSocket: true,
     });
