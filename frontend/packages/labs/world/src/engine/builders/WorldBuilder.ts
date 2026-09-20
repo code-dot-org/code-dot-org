@@ -761,6 +761,18 @@ export class WorldBuilder {
   }
 
   /**
+   * …and taking the newest one back, which a description may also say.
+   *
+   * Here for the same reason `loadMap` is: the block means the same thing in
+   * a handler as it does under `define world` (`domainBlocks.worldLoadMap`),
+   * and a surface that carried one and not the other would make the pair mean
+   * two different things depending on where it was written.
+   */
+  unloadNewestMap(): boolean {
+    return this.readyWorld().unloadNewestMap();
+  }
+
+  /**
    * The world, with every template and map this builder was told about
    * handed over — what any load needs first.
    */

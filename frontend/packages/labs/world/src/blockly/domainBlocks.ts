@@ -4567,6 +4567,40 @@ const worldUnloadThisMap = defineBlock({
 });
 
 /**
+ * `unload the newest map` — close the screen on top, from anywhere.
+ *
+ * The counterpart of the block above, and the one thing a stack of screens
+ * needed that the lab did not have (specs/SCREENS_PLAN.md). `unload this map`
+ * says "this one", through a binding only a map's own script is given; a Back
+ * button on the screen BELOW, or a rule that manages screens, has no such
+ * binding and no way to say what it means.
+ *
+ * THE WORLD'S OWN MAPS, not a Viewport's. A Viewport shows one map and
+ * swapping it is `load map ⟨…⟩ into ⟨…⟩`, which says so; this is about the
+ * maps a world loads over itself, which is what a screen is.
+ *
+ * Nothing loaded is not an error. A project that goes back once too often has
+ * asked for an empty world and gets one, and a rule that wants a floor under
+ * its stack keeps one itself.
+ */
+const worldUnloadNewestMap = defineBlock({
+  type: 'world_unload_newest_map',
+  message0: 'unload the newest map',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Remove everything the most recently loaded map placed. What was here ' +
+    'before it — including the map under it — stays.',
+  generator: {
+    javascript() {
+      return 'world.unloadNewestMap();\n';
+    },
+  },
+});
+
+/**
  * The two hats a map's own workspace has: `when this map loads` and
  * `when this map unloads`.
  *
@@ -10101,6 +10135,7 @@ export const DOMAIN_BLOCKS = [
   worldActorKind,
   worldPlacement,
   worldUnloadThisMap,
+  worldUnloadNewestMap,
   worldOnMapLoads,
   worldOnMapUnloads,
   ActorVariable.getterBlock,
@@ -10408,6 +10443,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // and still a real statement. It goes entirely once nothing holds one.
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
+      'world_unload_newest_map',
       'world_add_actor',
       // …and into a Viewport, a window onto a map in a space of its own
       // (specs/VIEWPORT_PLAN.md).

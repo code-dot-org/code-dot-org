@@ -124,3 +124,53 @@ describe('a map script', () => {
     expect(world.actorCount()).toBe(0);
   });
 });
+
+// The stack a screen sits on (specs/SCREENS_PLAN.md). `load map` ADDS one over
+// what is there, so the loads a space holds are a stack already; what was
+// missing is closing the one on top from OUTSIDE it, which is the whole of
+// what "back" means.
+describe('closing the newest map', () => {
+  it('takes back the last one loaded, and leaves the ones under it', () => {
+    const world = makeWorld();
+    world.loadMap(menu(undefined));
+    world.loadMap(menu(undefined));
+
+    expect(world.unloadNewestMap()).toBe(true);
+    world.tick(1 / 60);
+
+    // Two buttons left, which is the first load's — the second is gone.
+    expect([...world.actors]).toHaveLength(2);
+  });
+
+  it('goes back down to nothing, one at a time', () => {
+    const world = makeWorld();
+    world.loadMap(menu(undefined));
+    world.loadMap(menu(undefined));
+
+    expect(world.unloadNewestMap()).toBe(true);
+    expect(world.unloadNewestMap()).toBe(true);
+    // …and says so when there is nothing left to close, which is what lets a
+    // rule keep a floor under its own stack.
+    expect(world.unloadNewestMap()).toBe(false);
+    world.tick(1 / 60);
+
+    expect([...world.actors]).toHaveLength(0);
+  });
+
+  it('does not count a load that has already gone', () => {
+    // A load used to stay on its space's list after unloading itself, which
+    // nothing noticed because nothing asked which was on top. `unload this
+    // map` from inside a script is the ordinary way one goes.
+    const world = makeWorld();
+    let held: MapLoad | undefined;
+    world.loadMap(menu((_world, _placed, load) => (held = load)));
+    world.loadMap(menu(undefined));
+    held!.unload();
+    world.tick(1 / 60);
+
+    // The first is gone; the newest is the second, and after it there is
+    // nothing — not a stale entry reporting itself as the top.
+    expect(world.unloadNewestMap()).toBe(true);
+    expect(world.unloadNewestMap()).toBe(false);
+  });
+});

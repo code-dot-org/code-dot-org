@@ -170,12 +170,23 @@ export interface WorldMap {
 export class MapLoad {
   private readonly unloadHandlers: Array<(world: World) => void> = [];
   private readonly world: World;
+  /**
+   * The list this load is ON, so it can take itself off.
+   *
+   * A space keeps its loads oldest first and nothing used to come off that
+   * list except by clearing the whole of it — which was harmless while the
+   * only question asked of it was "unload everything", and is wrong the
+   * moment anything asks which load is on TOP. `go back` asks exactly that
+   * (specs/SCREENS_PLAN.md).
+   */
+  private readonly among: MapLoad[];
   /** Every actor this load placed, in placement order. */
   readonly actors: readonly Actor[];
 
-  constructor(world: World, actors: readonly Actor[]) {
+  constructor(world: World, actors: readonly Actor[], among: MapLoad[] = []) {
     this.world = world;
     this.actors = actors;
+    this.among = among;
   }
 
   /**
@@ -188,6 +199,14 @@ export class MapLoad {
    * the ball itself may still unload the level.
    */
   unload(): void {
+    // OFF THE LIST FIRST, and before the handlers, because a handler is a
+    // map's own `when this map unloads` and may unload another — a screen
+    // that closes the one under it. Left on, it would still look like the
+    // newest to whatever ran next.
+    const at = this.among.indexOf(this);
+    if (at >= 0) {
+      this.among.splice(at, 1);
+    }
     for (const handler of this.unloadHandlers) {
       handler(this.world);
     }
@@ -2053,6 +2072,26 @@ export class World {
     return added;
   }
 
+  /**
+   * Close the newest map the world itself holds, and say whether there was
+   * one — `unload the newest map`, and the whole of what "back" is.
+   *
+   * THE WORLD'S OWN SPACE, not a Viewport's: a Viewport shows one map and
+   * swapping it is `load map ⟨…⟩ into ⟨…⟩`, which has its own block and its
+   * own meaning. This is the stack a screen sits on
+   * (specs/SCREENS_PLAN.md).
+   *
+   * The map a world was BUILT from is a load like any other, so a project
+   * that goes back often enough closes its own first screen and is left with
+   * nothing. That is what it asked for; a rule that keeps a floor under it is
+   * the rule's business, and `Screens` keeps one.
+   */
+  unloadNewestMap(): boolean {
+    const load = this.rootSpace.loads.at(-1);
+    load?.unload();
+    return load !== undefined;
+  }
+
   /** Place a map's actors into `space` — `loadMap`'s body, for any space. */
   private loadInto(space: Space, map: WorldMap, layer?: string): Actor[] {
     this.growSpaceToFit(space, map);
@@ -2171,7 +2210,7 @@ export class World {
     // What the map DOES, once everything it placed exists and every reference
     // is followed, so a hat about the Resume button registers on the button
     // and `the ⟨Door⟩` finds the door.
-    const load = new MapLoad(this, added);
+    const load = new MapLoad(this, added, space.loads);
     space.loads.push(load);
     if (typeof map.script === 'function') {
       map.script(this, Object.fromEntries(placed), load);
