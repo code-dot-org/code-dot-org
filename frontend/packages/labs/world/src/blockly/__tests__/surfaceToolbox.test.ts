@@ -175,7 +175,7 @@ describe('an event surface', () => {
     } as unknown as ToolboxCategory;
     const signature = {
       name: 'Block',
-      blocks: ['world_signature_choice'],
+      blocks: ['world_signature_argument'],
     } as ToolboxCategory;
 
     expect(
@@ -187,23 +187,20 @@ describe('an event surface', () => {
     ).toContain('Variables');
   });
 
-  it('offers choices and wording, not the typed argument', () => {
-    // An event's parameter is a FILTER, and a filter over "any number" is a
-    // comparison rather than a hat.
+  it('offers what a `define block` offers', () => {
+    // An event's parameter was a filter and is a VALUE THE EVENT CARRIES now,
+    // named and typed like a block's argument (specs/EVENT_VALUES_PLAN.md),
+    // so the same blocks design both signatures.
     const shown = offered(toolboxForSurface(palette(), 'event'));
 
-    expect(shown).toContain('world_signature_choice');
+    expect(shown).toContain('world_signature_argument');
     expect(shown).toContain('world_signature_text');
-    expect(shown).not.toContain('world_signature_argument');
   });
 
-  it('is the other way round inside a body', () => {
-    // A `define block` says the same thing by picking an enum in `argument`'s
-    // type dropdown, so the choice item is the event's alone.
+  it('offers the same inside a body', () => {
     const shown = offered(toolboxForSurface(palette(), 'body'));
 
     expect(shown).toContain('world_signature_argument');
-    expect(shown).not.toContain('world_signature_choice');
   });
 });
 

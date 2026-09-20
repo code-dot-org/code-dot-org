@@ -53,7 +53,9 @@ type Shape = 'value' | 'statement';
 /**
  * The rule a member block type belongs to, read back out of the type.
  *
- * The type is minted as `world_<kind>_<RuleSlug>_<Export>`, and the slug has
+ * The type is minted as `world_<kind>_<RuleSlug>_<Export>` — and for a value
+ * an event carries, `world_carried_<RuleSlug>_<Event>_<Name>`, whose trailing
+ * name simply becomes another word on the face. The slug has
  * had its punctuation taken out (`ruleSlug`), so "Arrow Keys" comes back as
  * "ArrowKeys" and has to be split on its capitals again. That is lossy for a
  * rule whose name is not simply words — but the name is for a sentence in a
@@ -61,7 +63,9 @@ type Shape = 'value' | 'statement';
  */
 function ruleNameOfType(type: string): string | undefined {
   const match =
-    /^world_(?:on|emit|do|query|get|set|push|drop)_([A-Za-z0-9]+)_/.exec(type);
+    /^world_(?:on|emit|carried|do|query|get|set|push|drop)_([A-Za-z0-9]+)_/.exec(
+      type,
+    );
   if (!match) {
     return undefined;
   }
@@ -71,7 +75,7 @@ function ruleNameOfType(type: string): string | undefined {
 /** The member's own words, for the block's face: `IsOnTheGroundQuery` → "is on the ground". */
 function memberWordsOfType(type: string): string {
   const rest = type.replace(
-    /^world_(?:on|emit|do|query|get|set|push|drop)_[A-Za-z0-9]+_/,
+    /^world_(?:on|emit|carried|do|query|get|set|push|drop)_[A-Za-z0-9]+_/,
     '',
   );
   const words = rest

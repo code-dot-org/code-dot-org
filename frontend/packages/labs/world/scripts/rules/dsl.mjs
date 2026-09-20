@@ -870,23 +870,12 @@ function declareBlock(ruleSlug, into, variables, spec, scoped) {
  * one declaration, so raising an event a rule declares needs no string.
  */
 function declareEvent(rule, ruleSlug, into, say, scope, variables) {
-  // At most ONE value that is not a set of choices. The hat binds such a value
-  // to a name for the handler, and the transport is a single `eventValue` — a
-  // second would be a second name for the same thing, which is worse than not
-  // being allowed. Failing here means `yarn build:rules` says so, rather than
-  // the editor quietly showing two variables that are always equal.
-  // A set of choices is spelled `enum:<Rule>#<Enum>`; anything else is bound.
-  const bindable = say.filter(
-    part => typeof part !== 'string' && !String(part.type).startsWith('enum:'),
-  );
-  if (bindable.length > 1) {
-    const named = bindable.map(part => part.name).join(', ');
-    throw new Error(
-      `event "${say.filter(p => typeof p === 'string').join(' ')}" carries ` +
-        `more than one value (${named}). An event carries at most one: the ` +
-        'handler binds it by name, and there is one `eventValue` to bind.',
-    );
-  }
+  // AS MANY VALUES AS THE SIGNATURE NAMES. This used to refuse a second value
+  // that was not a set of choices, because the transport was a single
+  // `eventValue` and a second name would have been a second name for the same
+  // thing. The queue carries a list now and a handler reads each value by the
+  // name its author gave it (specs/EVENT_VALUES_PLAN.md), so there is nothing
+  // left to refuse.
   const parts = say.map(part => {
     if (typeof part === 'string') {
       return {kind: 'label', text: part};

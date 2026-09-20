@@ -720,8 +720,18 @@ export function parseRuleMeta(
         return [
           {
             kind: 'param',
-            name: (part.var && variableNames.get(part.var)) || 'choice',
+            // `value` rather than `choice` when the variable is missing: an
+            // event's parameter was a filter over a set of choices and is a
+            // VALUE THE EVENT CARRIES now, of whatever type its author gave
+            // it (specs/EVENT_VALUES_PLAN.md).
+            name: (part.var && variableNames.get(part.var)) || 'value',
             type: (part.type ?? 'string') as ParamType,
+            // What the `emit` socket starts with, carried through for the
+            // same reason a `define block`'s argument carries one: an event
+            // designed with a `let` says what a raiser gets by default, and
+            // dropping it here made that row do nothing.
+            ...(part.default === undefined ? {} : {default: part.default}),
+            ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
           },
         ];
       }

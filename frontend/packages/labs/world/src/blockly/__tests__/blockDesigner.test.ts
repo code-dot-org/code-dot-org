@@ -7,13 +7,15 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {buildDomainPalette, DOMAIN_BLOCKS} from '../domainBlocks';
+import {
+  buildDomainPalette,
+  DOMAIN_BLOCKS,
+  SIGNATURE_CATEGORY,
+} from '../domainBlocks';
 import {
   isActorScoped,
-  itemTypeFor,
   paramTypeOf,
   SIGNATURE_ARGUMENT,
-  SIGNATURE_BLOCK_TYPES,
 } from '../extensions/blockDesigner';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
@@ -441,55 +443,43 @@ describe('a designed block', () => {
     ).toBe(false);
   });
 
-  it('offers a flyout of blocks that are actually registered', () => {
-    // Blockly builds the mutator bubble's flyout by TYPE NAME, and throws on one
-    // it cannot find — at the moment the ⚙ is clicked, not at startup. This is
-    // the check that a renamed or dropped item block is caught here instead.
+  it('offers only item blocks that are actually registered', () => {
+    // Blockly builds a flyout by TYPE NAME and throws on one it cannot find —
+    // at the moment the drawer is opened, not at startup. This is the check
+    // that a renamed or dropped item block is caught here instead.
     const registered = new Set(DOMAIN_BLOCKS.map(block => block.type));
-    for (const type of SIGNATURE_BLOCK_TYPES) {
-      expect(registered.has(type), type).toBe(true);
+    for (const type of SIGNATURE_CATEGORY.blocks ?? []) {
+      expect(registered.has(type as string), String(type)).toBe(true);
     }
   });
 
-  it('reads every item block back as the part it stands for', () => {
-    // The bubble is the only writer of the signature, so this mapping is what
-    // makes a design survive being opened and closed.
-    for (const part of [
-      {kind: 'label', text: 'push'},
-      ...['number', 'boolean', 'string', 'vector', 'actor'].map(type => ({
-        kind: 'param' as const,
-        type,
-        var: '',
-      })),
-    ] as Parameters<typeof itemTypeFor>[0][]) {
-      const type = itemTypeFor(part);
-      expect(SIGNATURE_BLOCK_TYPES).toContain(type);
-      // The item block, as the bubble would hold it: `paramTypeOf` reads the
-      // block rather than its type, because the choice item carries which enum
-      // it is typed by in a field.
-      expect(paramTypeOf({type, getFieldValue: () => null})).toBe(
-        part.kind === 'param' ? part.type : undefined,
-      );
+  it('reads the argument item back as the type its dropdown names', () => {
+    // The arguments row is the only writer of a signature, so this mapping is
+    // what makes a design survive being opened and closed. The type is a
+    // FIELD, so the block is read rather than just its type.
+    for (const type of ['number', 'boolean', 'string', 'vector', 'actor']) {
+      expect(
+        paramTypeOf({
+          type: 'world_signature_argument',
+          getFieldValue: () => type,
+        }),
+      ).toBe(type);
     }
   });
 
-  it('edits an enum parameter as the one choice item, whichever enum', () => {
-    // One item block for every enum — which one is a field on it — so a rule
-    // that declares a new set of choices needs no new block type.
-    const part = {
-      kind: 'param' as const,
-      type: 'enum:Engine#Key',
-      var: '',
-    };
-    const type = itemTypeFor(part);
-
-    expect(type).toBe('world_signature_choice');
-    expect(SIGNATURE_BLOCK_TYPES).toContain(type);
-    expect(paramTypeOf({type, getFieldValue: () => 'Engine#Key'})).toBe(
-      'enum:Engine#Key',
-    );
-    // A choice item with no enum picked yet is not a parameter of any type.
-    expect(paramTypeOf({type, getFieldValue: () => ''})).toBeUndefined();
+  it('reads an enum-typed argument as that enum, whichever enum', () => {
+    // No item of its own: an enum-typed parameter is an argument whose type
+    // happens to be a named set of words, and the dropdown holds them all.
+    expect(
+      paramTypeOf({
+        type: 'world_signature_argument',
+        getFieldValue: () => 'enum:Engine#Key',
+      }),
+    ).toBe('enum:Engine#Key');
+    // …and a label is a parameter of no type at all.
+    expect(
+      paramTypeOf({type: 'world_signature_text', getFieldValue: () => null}),
+    ).toBeUndefined();
   });
 
   it('ignores a signature with no wording at all', () => {

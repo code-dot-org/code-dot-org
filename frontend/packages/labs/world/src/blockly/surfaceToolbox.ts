@@ -33,7 +33,9 @@ import {
  * is the odd one: `define event` has a surface but no implementation — an
  * event is a declaration, and the blocks that run for it live under the hat it
  * makes, in whatever file cares — so there is nowhere on it to put a
- * statement, and offering any would be offering blocks with no socket.
+ * statement, and offering any would be offering blocks with no socket. What it
+ * does have is a signature, designed with the same blocks a `define block`'s
+ * is, so it gets the same one drawer and nothing else.
  *
  * `drawing` is a body with ONE MORE DRAWER. The pen and the shapes are the
  * only blocks in the lab that can be used in exactly one place — `pen` is
@@ -49,9 +51,8 @@ import {
  */
 export type Surface = 'interface' | 'body' | 'event' | 'drawing' | 'block';
 
-/** What each surface writes its arguments in. */
+/** What a surface writes its arguments in. */
 const ARGUMENT_BLOCK = 'world_signature_argument';
-const CHOICE_BLOCK = 'world_signature_choice';
 
 /**
  * Blocks that say what a rule OFFERS.
@@ -90,7 +91,6 @@ const IMPLEMENTATION: ReadonlySet<string> = new Set([
   // definition's own surface — the interface has no such row, so offering them
   // there would be offering blocks with nowhere to put them.
   ARGUMENT_BLOCK,
-  CHOICE_BLOCK,
   'world_signature_text',
 ]);
 
@@ -109,16 +109,13 @@ const wanted = (surface: Surface, entry: unknown): boolean => {
     // A separator, a label, a button — not a block, and not ours to judge.
     return true;
   }
-  if (surface === 'event') {
-    // An event's argument is a FILTER, and a filter over "any number" is a
-    // comparison rather than a hat — so it takes choices and wording, and the
-    // typed `argument` is not offered rather than offered and then refused.
-    return type === CHOICE_BLOCK || type === 'world_signature_text';
-  }
-  if (surface === 'body' || surface === 'block') {
-    // …and the choice item is the event's alone: a `define block` says the
-    // same thing by picking an enum in `argument`'s type dropdown.
-    return !DECLARATIONS.has(type) && type !== CHOICE_BLOCK;
+  if (surface === 'event' || surface === 'body' || surface === 'block') {
+    // ONE ANSWER FOR ALL THREE. An event's argument used to be a filter over
+    // a set of choices, written with an item of its own; it is a VALUE THE
+    // EVENT CARRIES now, named and typed like a block's argument
+    // (specs/EVENT_VALUES_PLAN.md), so the same blocks design both signatures
+    // and there is nothing left for this to tell apart.
+    return !DECLARATIONS.has(type);
   }
   return !IMPLEMENTATION.has(type);
 };
@@ -145,7 +142,12 @@ export function toolboxForSurface(toolbox: Toolbox, surface: Surface): Toolbox {
   // it is what this surface is FOR.
   const chosen =
     surface === 'event'
-      ? categories.filter(category => category.name === SIGNATURE_DRAWER)
+      ? // ONE DRAWER, and it is the `define block`'s version of it — the `let`
+        // blocks first, then wording, then `argument`. An event's signature is
+        // designed with the blocks a block's signature is designed with
+        // (specs/EVENT_VALUES_PLAN.md), so there is no second arrangement of
+        // them to keep.
+        [SIGNATURE_CATEGORY]
       : surface === 'drawing'
         ? [DRAWING_CATEGORY, ...categories]
         : surface === 'block'

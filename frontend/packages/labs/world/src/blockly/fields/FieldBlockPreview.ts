@@ -18,6 +18,7 @@
 import * as Blockly from 'blockly/core';
 
 import {enumOptions, enumRefOfParamType} from '../enums';
+import {actorFieldOptions} from '../moduleOptions';
 import {paramFlavour} from '../typedVariables';
 
 import {beginGetterDrag} from './dragGetterOut';
@@ -250,9 +251,29 @@ export class FieldBlockPreview extends FieldBlockDrawing {
           continue;
         }
         const choice = enumRefOfParamType(part.type ?? '');
-        // An event filters on a set of choices or on nothing; a parameter of
-        // any other kind has nothing to draw and no meaning here.
         if (!choice) {
+          // AN ACTOR FILTERS BY KIND, and the hat draws that dropdown
+          // (`domainBlocks.defineEventBlock`); this drew nothing, so the one
+          // thing the preview promises — that what is designed is what turns
+          // up — was not true of the contact hats.
+          if (part.type === 'actor') {
+            args.push({
+              type: 'field_dropdown',
+              name: `F${args.length}`,
+              options: [
+                ANY_CHOICE,
+                ...actorFieldOptions().filter(([, value]) => value !== ''),
+              ],
+            } as unknown as Blockly.utils.toolbox.BlockInfo);
+            push(`%${args.length}`);
+            continue;
+          }
+          // Anything else has no set of choices to wait for, so the hat has no
+          // filter to draw for it — but it still carries the value, and the
+          // name is how the sentence says so (specs/EVENT_VALUES_PLAN.md).
+          if (part.name) {
+            push(part.name);
+          }
           continue;
         }
         args.push({

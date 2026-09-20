@@ -46,9 +46,9 @@ import {
   type Extension,
 } from '@code-dot-org/blockly';
 
-import {enumOptions, enumParamType, enumRefOfParamType} from '../enums';
+import {enumOptions, enumRefOfParamType} from '../enums';
 import {FieldBlockPreview} from '../fields/FieldBlockPreview';
-import {PARAM_FLAVOURS, paramFlavour} from '../typedVariables';
+import {paramFlavour} from '../typedVariables';
 import type {ShadowSpec} from '../valueShadow';
 
 export const BLOCK_DESIGNER_MUTATOR = 'block_designer_mutator';
@@ -135,18 +135,6 @@ export const RETURNS_ROW = 'RETURNS_ROW';
 
 /** …and the row `DESCRIPTION` sits on, for the same reason. */
 export const DESCRIPTION_ROW = 'DESCRIPTION_ROW';
-
-/** The item block that edits a part, in `define event`'s bubble. */
-export const itemTypeFor = (part: BlockPart): string => {
-  if (part.kind === 'label') {
-    return 'world_signature_text';
-  }
-  // Every enum shares ONE item block; which enum is a field on it, so a new
-  // `define choices` needs no new block type.
-  return enumRefOfParamType(part.type)
-    ? SIGNATURE_CHOICE
-    : `world_signature_${part.type}`;
-};
 
 /**
  * The `let` blocks that declare an argument, and what each one declares.
@@ -343,8 +331,9 @@ const seedLetShadow = (
 /**
  * The parameter type an item block stands for, or undefined if it is a label.
  *
- * Reads the BLOCK, not just its type, because the choice item carries the enum
- * it is typed by in a field.
+ * Two items declare one: `argument`, which names the type in a dropdown, and a
+ * `let`, which IS one per type and so needs no dropdown. Takes the block
+ * rather than its type because the first of those keeps its answer in a field.
  */
 export const paramTypeOf = (item: {
   type: string;
@@ -358,33 +347,12 @@ export const paramTypeOf = (item: {
     // `enum:number`, which rebound the variable and renamed it on every read.
     return item.getFieldValue(TYPE_FIELD) || undefined;
   }
-  if (item.type === SIGNATURE_CHOICE) {
-    const ref = item.getFieldValue(ENUM_FIELD);
-    return ref ? enumParamType(ref) : undefined;
-  }
   // A `let` in the arguments row declares one (`LET_ARGUMENTS`). Its type is
   // the block's own — a `let` is one block per flavour, which is exactly why
   // it needs no dropdown.
-  const declared = letType(item.type);
-  if (declared) {
-    return declared;
-  }
-  return PARAM_FLAVOURS.map(flavour => flavour.type).find(
-    type => item.type === `world_signature_${type}`,
-  );
+  return letType(item.type);
 };
 
-/** The item block a parameter typed by an enum is edited as. */
-export const SIGNATURE_CHOICE = 'world_signature_choice';
-/** The field on it naming which enum. */
-export const ENUM_FIELD = 'ENUM';
-
-/** Every block the mutator's flyout offers, in order. */
-export const SIGNATURE_BLOCK_TYPES: string[] = [
-  'world_signature_text',
-  ...PARAM_FLAVOURS.map(flavour => `world_signature_${flavour.type}`),
-  SIGNATURE_CHOICE,
-];
 /** The one field on the preview row: the drawing of the block being defined. */
 const PREVIEW_FIELD = 'DRAWING';
 
@@ -615,18 +583,19 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
     let at: Blockly.Connection | null = connection;
     for (const part of this.parts_ ?? []) {
       const item = this.workspace.newBlock(
-        // `define event`'s arguments are CHOICES and nothing else — its
-        // parameter is a filter, and a filter over "any number" is a
-        // comparison rather than a hat — so it writes them as the choice item
-        // rather than the `argument` block with its type dropdown.
-        this.type === 'world_rule_event'
-          ? itemTypeFor(part)
-          : part.kind === 'label'
-            ? 'world_signature_text'
-            : // A `let` for the types one can say, and `argument` for the rest
-              // — an enum-typed parameter and a `kind` have no `let`, and are
-              // what that block is still here for (`LET_ARGUMENTS`).
-              (letBlockFor(part.type) ?? SIGNATURE_ARGUMENT),
+        // THE SAME ITEMS FOR BOTH DESIGNERS. An event's parameter used to be
+        // written as the choice item, because an event's parameter was a
+        // filter and a filter over "any number" is a comparison rather than a
+        // hat. It is a VALUE THE EVENT CARRIES now, named and typed, and the
+        // filter is what the hat does with the ones it can filter on
+        // (specs/EVENT_VALUES_PLAN.md) — so an event's signature is designed
+        // with the blocks a block's signature is designed with.
+        part.kind === 'label'
+          ? 'world_signature_text'
+          : // A `let` for the types one can say, and `argument` for the rest
+            // — an enum-typed parameter and a `kind` have no `let`, and are
+            // what that block is still here for (`LET_ARGUMENTS`).
+            (letBlockFor(part.type) ?? SIGNATURE_ARGUMENT),
       );
       (item as Blockly.BlockSvg).initSvg?.();
       if (part.kind === 'label') {
@@ -652,15 +621,6 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
               ? {shadow: {type: 'world_this_actor'}}
               : undefined),
         );
-      } else if (item.type === SIGNATURE_CHOICE) {
-        // Which enum, before the name: the choice item's dropdown is what
-        // makes it this parameter rather than a differently-typed one.
-        const choice = enumRefOfParamType(part.type);
-        if (choice) {
-          item.setFieldValue(choice, ENUM_FIELD);
-        }
-        item.setFieldValue(part.name ?? part.type, TEXT_FIELD);
-        (item as {varId_?: string}).varId_ = part.var;
       } else {
         // The type as stored, plain or `enum:`-prefixed: the dropdown's
         // values are parameter types, so this is the value.

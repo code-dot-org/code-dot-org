@@ -121,7 +121,11 @@ import {
   type EffectParamState,
 } from './extensions/effectParamsMutator';
 import {enhanceButtonExtension} from './extensions/enhanceButton';
-import {eventActorToolboxExtension} from './extensions/eventActorToolbox';
+import {
+  eventActorToolboxExtension,
+  eventValuesToolboxExtension,
+  registerEventFlyout,
+} from './extensions/eventActorToolbox';
 import {glyphIcon} from './extensions/glyphIcon';
 import {installIfPlusMinus} from './extensions/ifPlusMinus';
 import {lessonButtonExtension} from './extensions/lessonButton';
@@ -1211,11 +1215,17 @@ const worldPlayAnimation = defineBlock({
 // SUBJECT rather than a target, so it takes `actorSubjectExtension` and reads
 // `any <kind>` in a world file. A handler runs at RUNTIME, so its args
 // are the live `world` and `actor` (they shadow the outer `actor` builder) and
-// `eventValue` (the event's detail — the animation frame, the key pressed).
+// one name per value the event carries — `eventValue` for the first, which is
+// all an undesigned event has (`carriedName`).
 
 /** Wrap a handler body as the runtime `.on` registration on the target actor. */
-const onHandler = (target: string, eventRef: string, body: string): string =>
-  `${target}.on(${eventRef}, (world, actor, eventValue) => {\n` +
+const onHandler = (
+  target: string,
+  eventRef: string,
+  body: string,
+  carried: readonly string[] = [CARRIED_FIRST],
+): string =>
+  `${target}.on(${eventRef}, (world, actor, ${carried.join(', ')}) => {\n` +
   `${body}});\n`;
 
 /**
@@ -1236,8 +1246,12 @@ const onHandler = (target: string, eventRef: string, body: string): string =>
 const subjectInputExtension = (scope: MemberScope) =>
   scope === 'camera' ? cameraInputExtension : actorInputExtension;
 
-const onWorldHandler = (eventRef: string, body: string): string =>
-  `world.on(${eventRef}, (world, eventValue) => {\n${body}});\n`;
+const onWorldHandler = (
+  eventRef: string,
+  body: string,
+  carried: readonly string[] = [CARRIED_FIRST],
+): string =>
+  `world.on(${eventRef}, (world, ${carried.join(', ')}) => {\n${body}});\n`;
 
 /**
  * The generated code of the blocks chained below `block` — its handler body.
@@ -1255,6 +1269,31 @@ const nextChainCode = (
 
 /** The field an event's filter dropdown occupies, by position in the phrasing. */
 const filterFieldName = (index: number): string => `FILTER${index}`;
+
+/**
+ * The name the FIRST thing an event carries arrives under, in a handler.
+ *
+ * Unchanged since there was only one, which is the point: every handler
+ * written before an event could carry two generates exactly what it did, and
+ * `event value` and `event actor` go on meaning this.
+ */
+const CARRIED_FIRST = 'eventValue';
+
+/**
+ * …and the name of the one at `index`.
+ *
+ * Numbered from two, as a learner counts them. THE `$` IS THE POINT OF THE
+ * SPELLING: Blockly's name table replaces every character outside
+ * `[A-Za-z0-9_]` when it turns a variable's name into an identifier, so no
+ * variable anybody can name will ever collide with one of these
+ * (specs/EVENT_VALUES_PLAN.md).
+ */
+const carriedName = (index: number): string =>
+  index === 0 ? CARRIED_FIRST : `${CARRIED_FIRST}$${index + 1}`;
+
+/** The block that names one of an event's carried values, in a handler. */
+const carriedBlockType = (event: EventMeta, name: string): string =>
+  `world_carried_${memberKey(event.ref)}_${pascal(name)}`;
 
 /** The dropdown entry meaning "whatever was emitted" — no filter at all. */
 const ANY_CHOICE: [string, string] = ['(any)', ''];
@@ -1280,25 +1319,43 @@ const defineEventBlock = (event: EventMeta) => {
   const extensions: Extension[] = forActor ? [actorSubjectExtension] : [];
   // `%1` is the actor, when there is one; the phrasing follows it.
   let message0 = forActor ? 'when %1' : 'when';
-  const filters: Array<{field: string; ref: string}> = [];
+  // A filter and the value it is a filter FOR. The value matters now that
+  // there can be more than one: a guard comparing `eventValue` was right when
+  // that was the only thing an event carried, and would compare the wrong one
+  // the moment a signature named two (specs/EVENT_VALUES_PLAN.md).
+  const filters: Array<{field: string; ref: string; carried: number}> = [];
   // An ACTOR parameter filters by KIND. "Starts touching a brick" is what a
   // game means almost every time, and a kind is a set of named choices like an
   // enum is — just a live one, since it is the project's own actors.
   //
-  // The value itself is not offered as a name here. An earlier version bound it
-  // to a variable field, which listed every other Actor variable in the file as
-  // though picking one were a choice; the handler reaches it with `event actor`
-  // instead. So a hat filters, and never binds.
-  const kinds: string[] = [];
+  // The value itself is not offered as a name HERE — a hat filters, and never
+  // binds. An earlier version bound it to a variable field, which listed every
+  // other Actor variable in the file as though picking one were a choice. What
+  // names it is a block behind the `+`, below.
+  const kinds: Array<{field: string; carried: number}> = [];
+  // Every value the event carries, in the signature's order, so the blocks
+  // that name them can be minted and the handler's closure can take them.
+  const carried: Array<{name: string; type: string}> = [];
   for (const part of event.parts ?? [{kind: 'label', text: event.name}]) {
     if (part.kind === 'label') {
       message0 += ` ${part.text}`;
       continue;
     }
+    const at = carried.length;
+    carried.push({name: part.name, type: part.type});
     const choice = enumRefOfParamType(part.type);
     if (!choice) {
       if (part.type !== 'actor') {
-        continue; // nothing else has a set of choices to wait for
+        // NOTHING TO FILTER ON, BUT SOMETHING TO SAY. A filter is a dropdown
+        // of named choices, and a number has no such set. The name goes into
+        // the phrasing as a word, so `when ⟨this actor⟩ is damaged by
+        // ⟨amount⟩` reads as a sentence and says what it hands over, rather
+        // than trailing off after "by" as it did when a value the hat could
+        // not filter on was dropped from the wording altogether.
+        if (part.name) {
+          message0 += ` ${part.name}`;
+        }
+        continue;
       }
       const field = filterFieldName(filters.length + kinds.length);
       // Pictures where the project has them, names where it does not — and
@@ -1316,18 +1373,21 @@ const defineEventBlock = (event: EventMeta) => {
       extensions.push(
         liveDropdown(`world_event_kind_${field}`, field, options),
       );
-      kinds.push(field);
-      // So `event actor` under this hat can draw the kind it was filtered to
-      // (`actorAbout`): from here, an enum filter and a kind filter are two
+      kinds.push({field, carried: at});
+      // So the block that names this actor can draw the kind it was filtered
+      // to (`actorAbout`): from here, an enum filter and a kind filter are two
       // dropdowns with numbered names, and only this side knows which is which.
       registerKindFilter(eventBlockType(event), field);
       message0 += ` %${args0.length}`;
-      // The hat carries an actor, so offer the block that names it — a flyout
-      // inside the block, opened by a `+` (extensions/eventActorToolbox).
-      extensions.push(eventActorToolboxExtension);
       continue;
     }
-    const field = filterFieldName(filters.length);
+    // NUMBERED ACROSS BOTH KINDS OF FILTER. An enum filter used to be
+    // numbered among the enum filters alone, so an event that filtered on a
+    // kind AND on a set of choices gave both dropdowns the name `FILTER0` —
+    // one field, two fields' worth of meaning. Nothing in the library mixes
+    // the two, which is why it went unseen; a signature that may now name
+    // several values makes mixing them ordinary.
+    const field = filterFieldName(filters.length + kinds.length);
     const options = (): Array<[string, string]> => [
       ANY_CHOICE,
       ...enumOptions(choice),
@@ -1340,8 +1400,30 @@ const defineEventBlock = (event: EventMeta) => {
         options,
       ),
     );
-    filters.push({field, ref: choice});
+    filters.push({field, ref: choice, carried: at});
     message0 += ` %${args0.length}`;
+  }
+  // What the `+` offers, and whether there is one at all.
+  //
+  // A LONE ACTOR KEEPS `event actor`. That is every contact hat in the
+  // library — `when ⟨this actor⟩ starts touching ⟨Brick⟩` carries one actor,
+  // which the stock rule's signature calls `other` — and of the two names for
+  // that one value, `event actor` is the one the lessons point at and the one
+  // that draws the kind it was filtered to. Two blocks for one value would be
+  // worse than either alone, so the author's name is not also offered there.
+  // Every other shape of signature offers the author's names and nothing else.
+  const lonelyActor =
+    carried.length === 1 && carried[0].type === 'actor'
+      ? carried[0]
+      : undefined;
+  if (lonelyActor) {
+    extensions.push(eventActorToolboxExtension);
+  } else if (carried.length > 0) {
+    registerEventFlyout(
+      eventBlockType(event),
+      carried.map(value => carriedBlockType(event, value.name)),
+    );
+    extensions.push(eventValuesToolboxExtension);
   }
   registerMemberBlockType(eventBlockType(event), event.ref);
   return defineBlock({
@@ -1364,29 +1446,110 @@ const defineEventBlock = (event: EventMeta) => {
           return '';
         }
         // The guard a learner would otherwise write themselves: compare the
-        // event's value against the choice and leave if it is not the one.
+        // value this filter is for against the choice, and leave if it is not
+        // the one.
         const guards = filters
-          .map(filter => block.getFieldValue(filter.field))
-          .filter(value => value)
-          .map(value => `  if (eventValue !== ${str(value)}) return;\n`)
+          .map(filter => ({
+            chosen: block.getFieldValue(filter.field),
+            name: carriedName(filter.carried),
+          }))
+          .filter(({chosen}) => chosen)
+          .map(
+            ({chosen, name}) => `  if (${name} !== ${str(chosen)}) return;\n`,
+          )
           .join('');
         // A kind filter tests what the carried actor IS, where an enum filter
         // tests what the carried value equals — the same guard shape over the
         // same `.type` that `is a` compares: the module path the world stamps
         // on each placed actor.
         const kindGuards = kinds
-          .map(field => block.getFieldValue(field))
-          .filter(chosen => chosen)
-          .map(type => `  if (eventValue?.type !== ${str(type)}) return;\n`)
+          .map(kind => ({
+            chosen: block.getFieldValue(kind.field),
+            name: carriedName(kind.carried),
+          }))
+          .filter(({chosen}) => chosen)
+          .map(
+            ({chosen, name}) =>
+              `  if (${name}?.type !== ${str(chosen)}) return;\n`,
+          )
           .join('');
         const body = guards + kindGuards + nextChainCode(block, generator);
+        // The closure takes one parameter per value the event carries, and
+        // ONE when it carries nothing — an undesigned event still hands over
+        // whatever was emitted, and `event value` is how a handler reads it.
+        const parameters =
+          carried.length > 0
+            ? carried.map((_value, index) => carriedName(index))
+            : [CARRIED_FIRST];
         if (!forActor) {
-          return onWorldHandler(refCode(event.ref, generator), body);
+          return onWorldHandler(
+            refCode(event.ref, generator),
+            body,
+            parameters,
+          );
         }
         const target = actorTarget(block, generator, Order.MEMBER);
-        return onHandler(target.code, refCode(event.ref, generator), body);
+        return onHandler(
+          target.code,
+          refCode(event.ref, generator),
+          body,
+          parameters,
+        );
       },
     },
+  });
+};
+
+/**
+ * The blocks that name what an event carries — one per value in its signature.
+ *
+ * A BLOCK PER VALUE, MINTED WITH THE HAT, for the same two reasons
+ * `event actor` is a block rather than a variable the hat binds: the name is
+ * what a learner is looking for, and the type is what stops it being plugged
+ * in where it means nothing. What it could not be is a variable: the handler
+ * is in another file from the declaration, so there is no workspace the two
+ * could share one on.
+ *
+ * KEYED BY THE PARAMETER'S NAME, not its position. Renaming a parameter then
+ * loses what a handler had plugged in, and reordering the signature does not
+ * — which is the bargain the `emit` block's sockets already make
+ * (`paramValueNames`), so the two halves of an event break in the same place
+ * or not at all.
+ *
+ * Only meaningful inside a handler for this event, and unguarded about it for
+ * the reason `event value` is: a block cannot know which hat it will end up
+ * under. It is offered only behind that hat's `+`, which is as close to
+ * saying so as a palette can get.
+ */
+const defineCarriedBlocks = (event: EventMeta) => {
+  const params = (event.parts ?? []).filter(part => part.kind === 'param');
+  // The one case the hat answers with `event actor` instead
+  // (`defineEventBlock`), so there is no second block for the same value.
+  if (params.length === 1 && params[0].type === 'actor') {
+    return [];
+  }
+  return params.map((param, index) => {
+    const type = carriedBlockType(event, param.name);
+    registerMemberBlockType(type, event.ref);
+    const check = checkOf(param.type);
+    return defineBlock({
+      type,
+      message0: '%1',
+      args0: [{type: 'field_label', name: 'WORD', text: param.name}],
+      ...(check ? {output: check} : {output: null}),
+      // The color a variable of that flavour is read in, so what an event
+      // hands over looks like what it is rather than like an event block.
+      style: paramFlavour(param.type).getterBlock.style ?? 'variable_blocks',
+      ...(param.type === 'actor' ? {extensions: [actorPictureExtension]} : {}),
+      tooltip:
+        `The ${param.name} this event carries. Only meaningful inside a ` +
+        `“when ${event.name}” block.`,
+      generator: {
+        javascript() {
+          return [carriedName(index), Order.ATOMIC] as [string, number];
+        },
+      },
+    });
   });
 };
 
@@ -1529,6 +1692,12 @@ const defineEmitBlock = (event: EventMeta) => {
 // own could not have.
 const EVENT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
   rule.events.map(event => defineEventBlock(event)),
+);
+// …and the blocks that name what each of them carries. Kept apart from the
+// hats: `ROOT_BLOCK_TYPES` is built from the list above, and one of these is a
+// reporter, not a root.
+const EVENT_VALUE_BLOCKS = AUTHORING_RULES.flatMap(rule =>
+  rule.events.flatMap(event => defineCarriedBlocks(event)),
 );
 // AND NO BLOCK RAISES ONE OF THESE. Every other rule's events get an `emit`
 // beside the hat, minted from the same signature (`defineEmitBlock`, called
@@ -7915,61 +8084,17 @@ const worldRuleEnumOption = defineBlock({
 
 // ── The blocks a signature is written in ─────────────────────────────────────
 // A stack of these IS the signature, read left-to-right as top-to-bottom: a
-// `text` adds wording, an `argument` adds an input, reordering the statements
-// reorders the block. They live in the `arguments` row on a definition's own
-// surface, and are offered in a toolbox drawer only there (`surfaceToolbox`).
+// `text` adds wording, a `let` or an `argument` adds an input, reordering the
+// statements reorders the block. They live in the `arguments` row on a
+// definition's own surface, and are offered in a toolbox drawer only there
+// (`surfaceToolbox`).
 //
-// `define block` writes its arguments as `argument`, which carries a type;
-// `define event` writes them as `choice`, because an event's parameter is a
-// filter and a filter over "any number" is a comparison rather than a hat.
-
-/** One item block per parameter type, plus the label. */
-const SIGNATURE_ITEMS: Array<{type: string; label: string; param?: string}> = [
-  {type: 'world_signature_text', label: 'text'},
-  ...PARAM_TYPE_OPTIONS.map(([label, value]) => ({
-    type: `world_signature_${value}`,
-    label,
-    param: value,
-  })),
-];
-
-/**
- * The `choice` item: a parameter typed by an ENUM.
- *
- * One item rather than one per enum, because which enum is a FIELD on it. The
- * dropdown is live, so a `define choices` written a minute ago is offered here
- * without the bubble being rebuilt, and an enum that has gone away leaves the
- * name it had rather than silently becoming another one.
- */
-const SIGNATURE_CHOICE = 'world_signature_choice';
-
-const enumChoiceOptions = (): Array<[string, string]> => {
-  const enums = allEnums();
-  return enums.length > 0
-    ? enums.map(meta => [`${meta.name} (${meta.owner})`, enumRef(meta)])
-    : [['(no choices yet)', '']];
-};
-
-const signatureChoice = defineBlock({
-  type: SIGNATURE_CHOICE,
-  // The enum first, then the name, so the row reads as "a Key called `key`".
-  message0: 'choice %1 %2',
-  args0: [
-    {type: 'field_dropdown', name: 'ENUM', options: enumChoiceOptions()},
-    {type: 'field_input', name: 'TEXT', text: 'choice'},
-  ],
-  inputsInline: true,
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [
-    liveDropdown('world_signature_choice_options', 'ENUM', enumChoiceOptions),
-  ],
-  style: 'variable_blocks',
-  tooltip:
-    'An input the block takes, chosen from a named set of choices. Its name ' +
-    'is the variable the body reads.',
-  generator: noGenerator,
-});
+// BOTH DESIGNERS WRITE THE SAME ITEMS. `define event` used to write a `choice`
+// item and one item per parameter type, because an event's parameter was a
+// filter over a set of choices; it is a VALUE THE EVENT CARRIES now, named and
+// typed like a block's argument (specs/EVENT_VALUES_PLAN.md). Those items are
+// retired: nothing wrote them, nothing offered them, and `argument`'s type
+// dropdown already holds every enum.
 
 /**
  * `argument ⟨number⟩ ⟨amount⟩` — one input a `define block` takes.
@@ -8028,32 +8153,23 @@ const signatureArgument = defineBlock({
   generator: noGenerator,
 });
 
-const signatureItems = SIGNATURE_ITEMS.map(item =>
-  defineBlock({
-    type: item.type,
-    // Both carry one text field, named TEXT so the designer reads them the same
-    // way: on a label it is the wording, on an input it is the parameter's name.
-    // An input's name is the name of the VARIABLE the body reads, so typing here
-    // renames it everywhere it is used — which is why it is edited here and not
-    // through the preview's variable dropdown.
-    message0: item.param ? `${item.label} %1` : 'text %1',
-    args0: [
-      {
-        type: 'field_input',
-        name: 'TEXT',
-        text: item.param ? item.param : 'word',
-      },
-    ],
-    previousStatement: true,
-    nextStatement: true,
-    style: item.param ? 'variable_blocks' : 'text_blocks',
-    tooltip: item.param
-      ? `An input the block takes: a ${item.label}. Its name is the variable ` +
-        'the body reads.'
-      : 'Wording that appears on the block at this position.',
-    generator: noGenerator,
-  }),
-);
+/**
+ * `text ⟨word⟩` — wording at this position in the block being designed.
+ *
+ * Its field is named TEXT, as `argument`'s name field is, so the designer
+ * reads the two the same way: on a label it is the wording, on an input it is
+ * the parameter's name.
+ */
+const signatureText = defineBlock({
+  type: 'world_signature_text',
+  message0: 'text %1',
+  args0: [{type: 'field_input', name: 'TEXT', text: 'word'}],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'text_blocks',
+  tooltip: 'Wording that appears on the block at this position.',
+  generator: noGenerator,
+});
 
 // Blockly clips a text field's DISPLAY at 50 characters (`maxDisplayLength`) —
 // enough for a name, not for a sentence. The value was always whole; only the
@@ -9944,6 +10060,7 @@ export const DOMAIN_BLOCKS = [
   ...ACTION_BLOCKS,
   ...QUERY_BLOCKS,
   ...EVENT_BLOCKS,
+  ...EVENT_VALUE_BLOCKS,
   worldPrint,
   worldEventActor,
   worldEventValue,
@@ -10030,8 +10147,7 @@ export const DOMAIN_BLOCKS = [
   worldRuleBlock,
   worldRuleEnum,
   worldRuleEnumOption,
-  ...signatureItems,
-  signatureChoice,
+  signatureText,
   signatureArgument,
   worldDoc,
   worldReturn,
@@ -10419,7 +10535,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     // offers is `surfaceToolbox`'s business — a `define block` takes
     // `argument`, a `define event` takes `choice`.
     name: SIGNATURE_DRAWER,
-    blocks: [SIGNATURE_ARGUMENT, SIGNATURE_CHOICE, 'world_signature_text'],
+    blocks: [SIGNATURE_ARGUMENT, 'world_signature_text'],
   },
 ];
 
@@ -11026,6 +11142,10 @@ function generateRulePalette(
     for (const event of rule.events) {
       const block = defineEventBlock(event);
       blocks.push(block);
+      // The blocks that name what it carries, defined beside the hat and
+      // offered only behind that hat's `+` — so they go into the file's
+      // definitions and into no drawer.
+      blocks.push(...defineCarriedBlocks(event));
       if (
         eventHats === 'all' ||
         (eventHats === 'actorOnly' && event.scope !== 'world')
@@ -11261,6 +11381,10 @@ export function buildDomainPalette(
       const hat = defineEventBlock(event);
       ownBlocks.push(hat);
       types.push(hat.type);
+      // Defined, and in no drawer: what an event carries is offered behind
+      // the hat's `+` and nowhere else, because it means nothing anywhere
+      // else.
+      ownBlocks.push(...defineCarriedBlocks(event));
       ownEventTypes.push(hat.type);
       away.push(hat.type);
       // A MAP's event is the world's to hear (`parseMapOwnMeta`), and a hat

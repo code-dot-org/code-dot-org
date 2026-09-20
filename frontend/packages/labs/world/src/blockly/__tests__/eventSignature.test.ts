@@ -17,6 +17,7 @@ import {Blockly} from '@code-dot-org/blockly';
 
 import {inputRule} from '../../rules/stock/input';
 import {buildDomainPalette} from '../domainBlocks';
+import {eventFlyoutBlocks} from '../extensions/eventActorToolbox';
 import {setProjectActors} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
@@ -396,5 +397,186 @@ describe('an event that carries an ACTOR', () => {
     // …and NOT `(none)`, which is `orNone`'s way of saying a list is empty and
     // carries the same empty value `(any)` does. Two entries, one meaning.
     expect(shown.map(([label]) => label)).not.toContain('(none)');
+  });
+});
+
+// What an event CARRIES, once its signature may name more than one thing
+// (specs/EVENT_VALUES_PLAN.md). The hat filters on what a filter can be
+// written over, says the rest in words, hands every value to the handler, and
+// offers a block per value behind its `+`.
+describe('an event that carries several values', () => {
+  /** `define event ⟨damaged by⟩ ⟨who: actor⟩ ⟨amount: number⟩`. */
+  const DAMAGED = {
+    parts: [
+      {kind: 'label', text: 'is damaged by'},
+      {kind: 'param', name: 'who', type: 'actor', var: 'w'},
+      {kind: 'param', name: 'amount', type: 'number', var: 'a'},
+    ],
+  };
+  const DAMAGE_VARS = [
+    {id: 'w', name: 'who', type: 'Actor'},
+    {id: 'a', name: 'amount', type: 'Number'},
+  ];
+
+  /** Every block the palette holds for this rule. */
+  const blocksFor = (meta: ReturnType<typeof ruleWithEvent>) =>
+    paletteFor([meta]).blocks;
+
+  it('names the values it cannot filter on, so the hat reads as a sentence', () => {
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    // The kind dropdown for the actor, the WORD for the number — a filter is a
+    // dropdown of named choices and a number has no such set, but the hat
+    // still carries the value and the name is how it says so.
+    expect(hat.message0).toContain('is damaged by');
+    expect(hat.message0).toContain('amount');
+    expect(hat.args0.filter(arg => arg.type === 'field_dropdown')).toHaveLength(
+      1,
+    );
+  });
+
+  it('hands the handler one parameter per value', () => {
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = codeFor(hat, '');
+
+    // Declared on the rule, so it is the WORLD's and there is no subject in
+    // front of the values (`EventMeta.scope`).
+    expect(code).toContain('(world, eventValue, eventValue$2)');
+  });
+
+  it('filters on the value the filter is FOR', () => {
+    // The kind filter is the FIRST value here, and a guard comparing
+    // `eventValue` would have been right by luck. The next test is the one
+    // that could not have passed before.
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = codeFor(hat, 'actors/brick');
+
+    expect(code).toContain('if (eventValue?.type !== "actors/brick") return;');
+  });
+
+  it('…and on the SECOND value when that is the filtered one', () => {
+    const meta = ruleWithEvent(
+      {
+        parts: [
+          {kind: 'label', text: 'is pressed on'},
+          {kind: 'param', name: 'amount', type: 'number', var: 'a'},
+          {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+        ],
+      },
+      [
+        {id: 'a', name: 'amount', type: 'Number'},
+        {id: 'k', name: 'key', type: 'String'},
+      ],
+    );
+
+    const code = codeFor(hatFor(meta), ' ');
+
+    expect(code).toContain('if (eventValue$2 !== " ") return;');
+    expect(code).not.toContain('if (eventValue !==');
+  });
+
+  it('offers a block per value, named and typed', () => {
+    const blocks = blocksFor(ruleWithEvent(DAMAGED, DAMAGE_VARS)) as Array<{
+      type: string;
+      args0?: Array<{text?: string}>;
+      output?: string | null;
+      generator: {javascript: (...args: unknown[]) => [string, number]};
+    }>;
+
+    const who = blocks.find(block => block.type.endsWith('_Who'))!;
+    const amount = blocks.find(block => block.type.endsWith('_Amount'))!;
+
+    expect(who.args0?.[0].text).toBe('who');
+    expect(who.output).toBe('Actor');
+    expect(amount.output).toBe('Number');
+    // Each reads the position it was declared in.
+    expect(who.generator.javascript()[0]).toBe('eventValue');
+    expect(amount.generator.javascript()[0]).toBe('eventValue$2');
+  });
+
+  it('mints none for a lone actor, which `event actor` already names', () => {
+    // Every contact hat in the library. Two blocks for one value is worse
+    // than either alone, and of the two `event actor` is the one the lessons
+    // point at and the one that draws the kind it was filtered to.
+    const blocks = blocksFor(
+      ruleWithEvent({
+        parts: [
+          {kind: 'label', text: 'is touched by'},
+          {kind: 'param', name: 'other', type: 'actor'},
+        ],
+      }),
+    );
+
+    expect(blocks.map(block => block.type)).not.toContain(
+      'world_carried_Keys_IsTouchedByEvent_Other',
+    );
+  });
+
+  it('offers those blocks behind the hat\u2019s `+`, in signature order', () => {
+    const meta = ruleWithEvent(DAMAGED, DAMAGE_VARS);
+    const hat = hatFor(meta) as unknown as {
+      type: string;
+      extensions: Array<{name: string}>;
+    };
+
+    expect(hat.extensions.map(extension => extension.name)).toContain(
+      'world_event_values_toolbox',
+    );
+    expect(eventFlyoutBlocks(hat.type)).toEqual([
+      'world_carried_Keys_IsDamagedByEvent_Who',
+      'world_carried_Keys_IsDamagedByEvent_Amount',
+    ]);
+  });
+
+  it('gives a kind filter and a choice filter different fields', () => {
+    // One field, two fields' worth of meaning: both were `FILTER0` while an
+    // enum filter was numbered among the enum filters alone.
+    const hat = hatFor(
+      ruleWithEvent(
+        {
+          parts: [
+            {kind: 'label', text: 'is hit by'},
+            {kind: 'param', name: 'who', type: 'actor', var: 'w'},
+            {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+          ],
+        },
+        [
+          {id: 'w', name: 'who', type: 'Actor'},
+          {id: 'k', name: 'key', type: 'String'},
+        ],
+      ),
+    );
+
+    const fields = hat.args0
+      .filter(arg => arg.type === 'field_dropdown')
+      .map(arg => arg.name);
+
+    expect(new Set(fields).size).toBe(fields.length);
+  });
+
+  it('raises them all, in order, through the `emit` block', () => {
+    const emit = emitFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = emit.generator.javascript(
+      {
+        getFieldValue: () => null,
+        getInputTargetBlock: () => null,
+      },
+      {
+        valueToCode: (_block: unknown, name: string) =>
+          name === 'WHO' ? 'theBrick' : name === 'AMOUNT' ? '3' : 'Player',
+        blockToCode: () => '',
+        definitions_: {},
+      },
+      {},
+    );
+
+    // The actor is narrowed to one, as every actor socket is; the number goes
+    // as it was written. Both reach the queue, which is what the engine
+    // change was for.
+    expect(code).toContain('WorldLab.one(theBrick)');
+    expect(code).toContain(', 3)');
   });
 });

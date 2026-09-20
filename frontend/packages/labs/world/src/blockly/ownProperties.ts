@@ -37,6 +37,7 @@
 import type {PropertyType} from '../engine/core/types';
 
 import type {ParamType} from './enums';
+import type {SocketState} from './extensions/blockDesigner';
 import {
   designedName,
   propertyDefault,
@@ -62,6 +63,9 @@ interface ActorBlock {
       text?: string;
       var?: string;
       type?: string;
+      /** What a call site starts with — a value, or the whole block. */
+      default?: unknown;
+      shadow?: SocketState;
     }>;
   };
 }
@@ -509,8 +513,15 @@ function designedEvent(
       return [
         {
           kind: 'param',
-          name: (part.var && variables.get(part.var)) || 'choice',
+          // `value`, not `choice`: an event's parameter was a filter over a
+          // set of choices and is a VALUE THE EVENT CARRIES now, of whatever
+          // type its author gave it (specs/EVENT_VALUES_PLAN.md).
+          name: (part.var && variables.get(part.var)) || 'value',
           type: (part.type ?? 'string') as ParamType,
+          // What the `emit` socket starts with, as a rule's own events carry
+          // one (`ruleMeta.addEvent`).
+          ...(part.default === undefined ? {} : {default: part.default}),
+          ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
         },
       ];
     }
