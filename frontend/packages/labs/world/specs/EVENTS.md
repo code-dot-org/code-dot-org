@@ -112,11 +112,36 @@ leaves somebody writing the row that copies it into the text.
 - **Buys:** the five hand-rolled change events collapse into one idea; a
   HUD stops being handwritten; data binding becomes sayable without the
   word.
-- **Costs:** real engine work. Properties are set through `Traited.set`,
-  so the hook has a home, but "changed" needs a comparison per set, a
-  decision about vectors and lists (copied on write — specs/LISTS.md), and
-  care that a standing instruction cannot loop. The queue's one-round-per-
-  tick rule is what keeps that safe, and is worth keeping.
+- **Costs:** less than this first said for the event, and more for the
+  binding. Looked at properly (Sep 2026), and each of these was read
+  rather than assumed:
+  - **The hook exists and has a user.** `Actor.set` funnels every actor
+    write into a private `store`, which reads the old value, writes, reads
+    back, and calls the property's watchers. `watchProperty` is the way one
+    is added, and `rules/spatial` already uses it to raise "left the map"
+    — so the idiom, including raising a queued event from inside a write,
+    is demonstrated rather than hypothetical.
+  - **The world's properties have no hook at all.** `World.set` writes a
+    separate store through its own copy of `coerce`, and consults no
+    watcher. There are two `coerce` functions in the engine, one in
+    `Traited` and one in `World`, which is worth reconciling whatever is
+    built on top. This is the bulk of the new work.
+  - **A camera's writes bypass it too**, going straight to the trait.
+  - **The comparison is mandatory and is not `===`.** Coercion copies on
+    write — a vector is rebuilt, a list is copied — so every write to one
+    of those looks like a change. `sameValue` is the helper that exists;
+    it is private to `core/lists` and does not compare lists, so it needs
+    exporting and extending.
+  - **`keep` needs a lifetime that watchers do not have.** A watcher is
+    registered against the PROPERTY, globally, at module load, and there
+    is nothing to unsubscribe. A standing instruction belongs to one
+    actor and has to end when that actor does, so it wants a registry of
+    its own keyed by actor, and teardown on removal.
+  - Care that a standing instruction cannot loop. The queue's
+    one-round-per-tick rule is what keeps that safe, and is worth keeping.
+  - **So the two halves can be split.** "When a value changes" for an
+    actor's properties is a small piece on machinery that is already
+    there; the world's properties, and `keep`, are each their own.
 - **The risk worth naming:** a binding that is cheap to write is cheap to
   write a hundred of. It wants a way to see what is bound (idea 10).
 
