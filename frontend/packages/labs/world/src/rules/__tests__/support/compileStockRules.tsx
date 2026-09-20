@@ -64,6 +64,7 @@ import {
   mouseRule,
   pathRule,
   patrolRule,
+  screensRule,
   scoreRule,
   zapsRule,
   solidRule,
@@ -252,6 +253,8 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   // through Mouse's events, because an event is a tick late and a drag that
   // lags the finger by a frame is a broken drag.
   'rules/gestures': gesturesRule,
+  // Needs nothing: a screen is a map, and loading one is the world's own.
+  'rules/screens': screensRule,
   // Needs nothing: it reads the keyboard's edges straight off the World, the
   // way Input does, rather than through another rule's events.
   'rules/tabNavigation': tabNavigationRule,

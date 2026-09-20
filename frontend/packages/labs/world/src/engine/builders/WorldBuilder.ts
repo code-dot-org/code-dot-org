@@ -760,6 +760,11 @@ export class WorldBuilder {
     return this.readyWorld().loadMap(map, layer);
   }
 
+  /** …and one named by its path, which a description may also say. */
+  loadMapNamed(path: string, layer?: string): Actor[] {
+    return this.readyWorld().loadMapNamed(path, layer);
+  }
+
   /**
    * …and taking the newest one back, which a description may also say.
    *

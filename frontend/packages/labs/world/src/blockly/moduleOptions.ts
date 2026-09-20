@@ -555,6 +555,23 @@ export function liveDropdown(
 }
 
 /** What an ACTOR dropdown offers: the actor templates the project holds. */
+/**
+ * The project's maps, for a rule PARAMETER typed `map`.
+ *
+ * `mapOptions` is the built-in block's list and ends with `(import…)`, a row
+ * that means "open the shelf" rather than "this map". A rule's argument has
+ * nowhere to put an import and no way to answer one, so it offers the maps
+ * that exist and nothing else — the same division `actorFieldOptions` makes
+ * beside it.
+ */
+export function mapFieldOptions(): Array<[string, string]> {
+  const paths = Object.keys(projectMaps);
+  return orNone(
+    paths.map(path => [label(path.split('/').pop() ?? path), path]),
+    '(no maps yet)',
+  ) as Array<[string, string]>;
+}
+
 export function actorFieldOptions(): DropdownOptions {
   return orNone(projectActors, '(no actors yet)').map(([label, value]) =>
     pictured(label, value),

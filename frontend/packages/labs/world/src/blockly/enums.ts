@@ -182,17 +182,19 @@ export function enumRefOfParamType(type: string): string | undefined {
 }
 
 /**
- * A designed parameter's type: one of the plain kinds, an enum, or a KIND.
+ * A designed parameter's type: one of the plain kinds, an enum, a KIND, or a
+ * MAP.
  *
- * `ArgType` is the ENGINE's list, and neither of the other two is on it — the
- * engine never hears about an enum, and what reaches it for a `kind` is the
- * module path as an ordinary string. This is the editor's wider list, and the
- * two places the two differ are both about what a SOCKET offers rather than
- * about what arrives through it.
+ * `ArgType` is the ENGINE's list, and none of the other three is on it — the
+ * engine never hears about an enum, and what reaches it for a `kind` or a
+ * `map` is a module path as an ordinary string. This is the editor's wider
+ * list, and every place the two differ is about what a SOCKET offers rather
+ * than about what arrives through it.
  */
 export type ParamType =
   | ArgType
   | 'kind'
+  | 'map'
   | `${typeof ENUM_TYPE_PREFIX}${string}`;
 
 /**

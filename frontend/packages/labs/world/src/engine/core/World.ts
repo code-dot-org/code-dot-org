@@ -2073,6 +2073,22 @@ export class World {
   }
 
   /**
+   * Load a map the project holds, BY PATH — `load the map named ⟨…⟩`.
+   *
+   * The counterpart of `loadMap`, which takes the map itself and so can only
+   * name one a file imported. A path can be worked out: which screen to go
+   * to, which level is next. Every map a project holds is registered here
+   * whether or not anything imports it, for the reason a Viewport needs
+   * (`defineMap`), so a path is enough.
+   *
+   * A path nothing registered loads nothing, which is what the path says.
+   */
+  loadMapNamed(path: string, layer?: string): Actor[] {
+    const held = this.maps.get(path);
+    return held ? this.loadMap(held, layer) : [];
+  }
+
+  /**
    * Close the newest map the world itself holds, and say whether there was
    * one — `unload the newest map`, and the whole of what "back" is.
    *

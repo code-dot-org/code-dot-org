@@ -184,6 +184,7 @@ import {
   effectFileOptionsExtension,
   liveDropdown,
   mapActorTypes,
+  mapFieldOptions,
   mapOptions,
   mapOptionsExtension,
   projectMapPaths,
@@ -2015,6 +2016,10 @@ const typedValueCode = (
       // socket — and it holds the module path the world stamps on each placed
       // actor, which is what `kind of ⟨actor⟩` answers with.
       return str(String(block.getFieldValue(names.value) ?? d ?? ''));
+    case 'map':
+      // The same again, holding a map file's path — which is what `load map`
+      // names one by, so a rule's argument and the built-in block agree.
+      return str(String(block.getFieldValue(names.value) ?? d ?? ''));
     case 'number':
       return read(names.value) || String(Number(d ?? 0));
     default:
@@ -2040,7 +2045,7 @@ const typedValueCode = (
  * anything would take a number where an actor was meant.
  */
 const checkOf = (type: ParamType): string | undefined => {
-  if (enumRefOfParamType(type) || type === 'kind') {
+  if (enumRefOfParamType(type) || type === 'kind' || type === 'map') {
     return 'String';
   }
   switch (type) {
@@ -2324,6 +2329,38 @@ const typedValueInputs = (
             `world_kind_field_${names.value}`,
             names.value,
             actorFieldOptions,
+          ),
+        ],
+      };
+    case 'map':
+      // A SOCKET where a value is meant, the same exception an enum makes
+      // above: an `emit` supplies the path the code worked out — which screen
+      // was opened — and a dropdown there could only ever name a literal.
+      if (opts.enumAsSocket) {
+        return {
+          message: `%${slot}`,
+          args: [{type: 'input_value', name: names.value, check: 'String'}],
+          shadows: [],
+        };
+      }
+      // Otherwise the project's maps, as a dropdown, for the reasons the
+      // kinds above are one: the maps are the whole of what the argument can
+      // be, and the list is LIVE so a map made a moment ago is in it.
+      return {
+        message: `%${slot}`,
+        args: [
+          {
+            type: 'field_dropdown',
+            name: names.value,
+            options: mapFieldOptions(),
+          },
+        ],
+        shadows: [],
+        extensions: [
+          liveDropdown(
+            `world_map_field_${names.value}`,
+            names.value,
+            mapFieldOptions,
           ),
         ],
       };
@@ -4562,6 +4599,39 @@ const worldUnloadThisMap = defineBlock({
   generator: {
     javascript() {
       return 'map.unload();\n';
+    },
+  },
+});
+
+/**
+ * `load the map named ⟨…⟩` — a map chosen while the world runs.
+ *
+ * `load map ⟨…⟩` names one in a dropdown, which is right when a project knows
+ * which map it means and wrong when it works it out: which screen to go to,
+ * which level is next. Every map a project holds is registered by path
+ * (`World.defineMap`), for the reason a Viewport needs, so a path is all this
+ * takes.
+ *
+ * A path nothing registered loads nothing. That is the answer `load map into`
+ * already gives a Viewport whose property names a map that is not there.
+ */
+const worldLoadMapNamed = defineBlock({
+  type: 'world_load_map_named',
+  message0: 'load the map named %1',
+  args0: [{type: 'input_value', name: 'PATH', check: 'String'}],
+  previousStatement: true,
+  nextStatement: true,
+  inputsInline: true,
+  extensions: [worldContextExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Add a map to the world, named by its file. What is already here stays, ' +
+    'as “load map” does — so a screen loaded this way comes up over the one ' +
+    'before it.',
+  generator: {
+    javascript(block, generator) {
+      const path = generator.valueToCode(block, 'PATH', Order.NONE) || "''";
+      return `world.loadMapNamed(${path});\n`;
     },
   },
 });
@@ -10136,6 +10206,7 @@ export const DOMAIN_BLOCKS = [
   worldPlacement,
   worldUnloadThisMap,
   worldUnloadNewestMap,
+  worldLoadMapNamed,
   worldOnMapLoads,
   worldOnMapUnloads,
   ActorVariable.getterBlock,
@@ -10443,6 +10514,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // and still a real statement. It goes entirely once nothing holds one.
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
+      'world_load_map_named',
       'world_unload_newest_map',
       'world_add_actor',
       // …and into a Viewport, a window onto a map in a space of its own

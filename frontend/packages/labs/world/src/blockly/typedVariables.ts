@@ -146,6 +146,7 @@ export const paramFlavour = (type: string): TypedVariable => {
   // A KIND parameter is a string parameter for the same reason an enum one is:
   // what the body is handed is the module path of the kind that was chosen, and
   // the dropdown is about what may be chosen rather than about what arrives.
+  // …and a MAP parameter is the same again, holding a map file's path.
   // …and a POSITION parameter is a vector parameter: the type says how the
   // call site is drawn — an x and a y rather than an arrow grid
   // (`typedValueInputs`) — and what arrives is a vector either way, read with
@@ -154,7 +155,7 @@ export const paramFlavour = (type: string): TypedVariable => {
   // position is a vector one: the type says the call site starts with a dial
   // rather than a plain number, and what arrives is a number either way.
   const wanted =
-    enumRefOfParamType(type) || type === 'kind'
+    enumRefOfParamType(type) || type === 'kind' || type === 'map'
       ? 'string'
       : type === 'position'
         ? 'vector'
@@ -177,6 +178,11 @@ export const paramFlavour = (type: string): TypedVariable => {
 export const PARAM_TYPE_OPTIONS: Array<[string, string]> = [
   ...PARAM_FLAVOURS.map(({type}) => [type, type] as [string, string]),
   ['kind', 'kind'],
+  // …and a MAP, for the same reason and in the same shape: it arrives as the
+  // path of a file, and what makes it its own type is the socket, which is a
+  // dropdown of the project's maps rather than a text box. A rule that takes
+  // a screen to go to is what asked for it (specs/SCREENS_PLAN.md).
+  ['map', 'map'],
 ];
 
 /** The getter blocks that read a parameter — one per flavour. */

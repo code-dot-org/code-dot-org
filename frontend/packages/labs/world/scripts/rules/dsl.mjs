@@ -60,8 +60,16 @@ const withInputs = (block, inputs) =>
 const VARIABLE_TYPE = type =>
   // A `kind` is a String for the same reason an enum choice is: the dropdown is
   // about what may be CHOSEN, and what the body is handed is the name of the
-  // kind that was.
-  type.startsWith('enum:') || type === 'string' || type === 'kind'
+  // kind that was. A `map` is the same again, holding a map file's path.
+  //
+  // THE FALLBACK IS A NUMBER, so a type this does not know is bound to a
+  // Number variable and the body's getter refuses to connect — which is how a
+  // `map` parameter failed the moment one existed, at workspace load and not
+  // at authoring time.
+  type.startsWith('enum:') ||
+  type === 'string' ||
+  type === 'kind' ||
+  type === 'map'
     ? 'String'
     : type === 'actor'
       ? 'Actor'

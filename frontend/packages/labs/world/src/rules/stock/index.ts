@@ -42,6 +42,7 @@ import {mouseRule} from './mouse';
 import {pathRule} from './path';
 import {patrolRule} from './patrol';
 import {prowlingRule} from './prowling';
+import {screensRule} from './screens';
 import {scoreRule} from './score';
 import {solidRule} from './solid';
 import {spawnerRule} from './spawner';
@@ -263,6 +264,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'What a press, a movement and a release add up to: a drag, a swipe, a hold. A gesture belongs to what the press began on, so a thing stays yours to drag once the finger has left it. How far and how fast before a press counts as one of these are numbers you can change.',
     provides: ['Takes Gestures'],
     contents: gesturesRule,
+  },
+  {
+    id: 'screens',
+    name: 'Screens',
+    ability: 'Shows Screens',
+    description:
+      'A stack of maps and a way back down it. A screen is a map, and loading one puts it over what is already there; “go to screen” puts one on top, “go back” takes the top one off, and “the screen showing” says which is in front. Going back from the last one does nothing, so a project cannot empty its own world.',
+    provides: [],
+    contents: screensRule,
   },
   {
     id: 'tabNavigation',
@@ -528,6 +538,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 export {
   arrowsRule,
   gesturesRule,
+  screensRule,
   climbRule,
   surfacesRule,
   turningRule,

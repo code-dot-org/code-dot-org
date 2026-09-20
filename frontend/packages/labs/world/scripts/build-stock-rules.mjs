@@ -19,6 +19,7 @@ const RULES = [
   'input',
   'mouse',
   'gestures',
+  'screens',
   'tabNavigation',
   'arrows',
   'drive',

@@ -297,6 +297,90 @@ describe('Gestures', () => {
   });
 });
 
+describe('Screens', () => {
+  // A screen is a MAP, and the stack is the loads a world holds. What is
+  // checked here is the going BACK, which is the whole of what was missing
+  // (specs/SCREENS_PLAN.md).
+  const HOME = 'maps/home';
+  const AWAY = 'maps/away';
+
+  /** A world with the rule in it and two one-actor maps registered. */
+  const stacked = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/screens')])
+      .instantiate();
+    world.define('actors/card', new ActorBuilder({id: 'card', name: 'card'}));
+    world.defineMap(HOME, {actors: [{type: 'actors/card', id: 'home'}]});
+    world.defineMap(AWAY, {actors: [{type: 'actors/card', id: 'away'}]});
+    return world;
+  };
+
+  const goTo = (world: World, path: string) =>
+    (
+      of('rules/screens', 'GoToScreenAction') as {
+        apply(world: World, path: string): void;
+      }
+    ).apply(world, path);
+  const goBack = (world: World) =>
+    (of('rules/screens', 'GoBackAction') as {apply(world: World): void}).apply(
+      world,
+    );
+  const stack = (world: World) =>
+    world.get(of('rules/screens', 'ScreensProperty')) as string[];
+
+  it('puts a screen in front, and remembers it', () => {
+    const world = stacked();
+
+    goTo(world, HOME);
+    goTo(world, AWAY);
+    world.tick(1 / 60);
+
+    expect(stack(world)).toEqual([HOME, AWAY]);
+    expect([...world.actors]).toHaveLength(2);
+  });
+
+  it('goes back, closing the one in front and leaving the one behind', () => {
+    const world = stacked();
+    goTo(world, HOME);
+    goTo(world, AWAY);
+    world.tick(1 / 60);
+
+    goBack(world);
+    world.tick(1 / 60);
+
+    expect(stack(world)).toEqual([HOME]);
+    expect([...world.actors]).toHaveLength(1);
+  });
+
+  it('will not go back off the last screen', () => {
+    // The engine would close it and leave an empty world. A stack with a
+    // floor under it is what a project means by "back".
+    const world = stacked();
+    goTo(world, HOME);
+    world.tick(1 / 60);
+
+    goBack(world);
+    goBack(world);
+    world.tick(1 / 60);
+
+    expect(stack(world)).toEqual([HOME]);
+    expect([...world.actors]).toHaveLength(1);
+  });
+
+  it('says nothing about a map the project does not have', () => {
+    // A path nothing registered loads nothing, which is the answer a
+    // Viewport already gives. The stack still records the asking, so `back`
+    // returns to where it was rather than stranding anybody.
+    const world = stacked();
+    goTo(world, HOME);
+    goTo(world, 'maps/nowhere');
+    world.tick(1 / 60);
+
+    expect(stack(world)).toEqual([HOME, 'maps/nowhere']);
+    expect([...world.actors]).toHaveLength(1);
+  });
+});
+
 describe('Health', () => {
   it('takes one hit from a contact, not one per frame', () => {
     // The whole point of mercy time. Touching a spike for half a second is
