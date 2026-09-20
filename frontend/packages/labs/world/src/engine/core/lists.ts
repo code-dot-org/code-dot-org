@@ -120,6 +120,28 @@ export function takeFirst(list: unknown): unknown {
   return first;
 }
 
+/**
+ * The list with the thing at `place` taken out — a COPY, not a mutation.
+ *
+ * Counted from one, as `item ⟨n⟩ of` is. A place that is not in the list
+ * changes nothing, which is what the rest of the list vocabulary does with a
+ * place it does not have: reading past the end is nothing, and taking the last
+ * off an empty list is nothing (specs/LISTS.md).
+ *
+ * A copy because the one caller writes the answer back through a property's
+ * setter, which copies anyway — and because a `splice` in place would change a
+ * list some other variable is holding, which is the opposite of what "remove
+ * the third row from THIS list" means to the person who wrote it.
+ */
+export function without(list: unknown, place: unknown): unknown[] {
+  const all = items(list);
+  const at = Math.trunc(Number(place));
+  if (!Number.isFinite(at) || at < 1 || at > all.length) {
+    return [...all];
+  }
+  return [...all.slice(0, at - 1), ...all.slice(at)];
+}
+
 export function addTo(list: unknown, value: unknown): unknown[] {
   if (Array.isArray(list)) {
     list.push(value);

@@ -28,7 +28,7 @@ const chain = (rows: object[]) =>
   rows.reduceRight((next, row) => ({...row, next: {block: next}}));
 
 /** A List at (100, 100) holding eight words, and a Label it writes into. */
-const project = (): MultiFileSource => {
+const project = (canRemove = true): MultiFileSource => {
   let source = WORLD_SCENARIOS.empty.source;
   source = importStockActor(source, stockActorById('list')!).source;
   source = importStockActor(source, stockActorById('label')!).source;
@@ -52,6 +52,18 @@ const project = (): MultiFileSource => {
                       {
                         type: 'world_set_position',
                         inputs: {ACTOR: me(), X: number(100), Y: number(100)},
+                      },
+                      {
+                        type: 'world_set_ActorsList_CanRemoveProperty',
+                        inputs: {
+                          ACTOR: me(),
+                          VALUE: {
+                            block: {
+                              type: 'logic_boolean',
+                              fields: {BOOL: canRemove ? 'TRUE' : 'FALSE'},
+                            },
+                          },
+                        },
                       },
                       {
                         type: 'world_set_ActorsList_ItemsProperty',
@@ -154,12 +166,15 @@ const project = (): MultiFileSource => {
 };
 
 describe('a List', () => {
-  const open = async () => {
-    const {world, modules} = await compileProject(projectFiles(project()));
+  const open = async (options: {canRemove?: boolean} = {}) => {
+    const {world, modules} = await compileProject(
+      projectFiles(project(options.canRemove ?? true)),
+    );
     const actors = [...world.actors] as Actor[];
     const list = actors.find(actor => actor.type === 'actors/list')!;
     const label = actors.find(actor => actor.type === 'actors/label')!;
     const scroll = modules['actors/list'].ScrollProperty as Property<number>;
+    const rows = modules['actors/list'].ItemsProperty as Property<string[]>;
     const highlighted = modules['actors/list']
       .HighlightedProperty as Property<number>;
     const text = modules['actors/label'].TextProperty as Property<string>;
@@ -168,6 +183,7 @@ describe('a List', () => {
       world,
       list,
       scrolled: () => list.get(scroll),
+      rows: () => list.get(rows),
       onRow: () => list.get(highlighted),
       said: () => label.get(text),
       /** Put the pointer here, with the button in this state, and tick. */
@@ -257,6 +273,43 @@ describe('a List', () => {
     l.press('page down');
 
     expect(l.onRow()).toBe(7);
+  }, 60000);
+
+  it('loses a row to a sideways swipe, and says which it was', async () => {
+    // The phone idiom, and the first thing in the lab to use the swipe event.
+    const l = await open();
+
+    // A press on the third row, flicked sideways and let go: far enough and
+    // quick enough to be a swipe (`rules/gestures`).
+    l.point(100, 80, true);
+    l.point(220, 82, true);
+    l.point(220, 82, false);
+
+    expect(l.said()).toBe('C3');
+    expect(l.rows()).toEqual(['A', 'B', 'D', 'E', 'F', 'G', 'H']);
+  }, 60000);
+
+  it('loses the highlighted row to Delete, with no pointer', async () => {
+    const l = await open();
+    l.point(100, 40, true);
+    l.point(100, 40, false);
+    l.press('down arrow');
+
+    l.press('delete');
+
+    expect(l.rows()).toEqual(['A', 'C', 'D', 'E', 'F', 'G', 'H']);
+  }, 60000);
+
+  it('will not lose a row when a project has not allowed it', async () => {
+    // A list of answers to choose between is not one a player should be able
+    // to empty, so this is off unless somebody says otherwise.
+    const l = await open({canRemove: false});
+    l.point(100, 40, true);
+    l.point(100, 40, false);
+
+    l.press('delete');
+
+    expect(l.rows()).toHaveLength(8);
   }, 60000);
 
   it('chooses the highlighted row on Enter', async () => {

@@ -35,6 +35,7 @@ export {
   lastOf,
   listHas,
   takeFirst,
+  without,
 } from './core/lists';
 export {
   all,

@@ -2388,6 +2388,9 @@ const pushPropertyBlockType = (exportName: string): string =>
   `world_push_${exportName}`;
 const dropPropertyBlockType = (exportName: string): string =>
   `world_drop_${exportName}`;
+/** …and the one that takes the item at a PLACE out of a list property. */
+const cutPropertyBlockType = (exportName: string): string =>
+  `world_cut_${exportName}`;
 
 // The `output` check for a value kind. A `vector` reports a whole `Vector`; a
 // `point` getter reports one axis (a Number, chosen by a dropdown).
@@ -2749,7 +2752,7 @@ const defineValueListPropertyBlocks = (property: PropertyMeta) => {
   const ownerArg = (): BlockArgDefinition[] =>
     subjectScoped ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}] : [];
   const build = (
-    verb: 'push' | 'pop',
+    verb: 'push' | 'pop' | 'cut',
     args0: BlockArgDefinition[],
     message0: string,
     tooltip: string,
@@ -2757,7 +2760,9 @@ const defineValueListPropertyBlocks = (property: PropertyMeta) => {
     const type =
       verb === 'push'
         ? pushPropertyBlockType(memberKey(property.ref))
-        : dropPropertyBlockType(memberKey(property.ref));
+        : verb === 'pop'
+          ? dropPropertyBlockType(memberKey(property.ref))
+          : cutPropertyBlockType(memberKey(property.ref));
     registerMemberBlockType(type, property.ref);
     return defineBlock({
       type,
@@ -2783,12 +2788,22 @@ const defineValueListPropertyBlocks = (property: PropertyMeta) => {
             verb === 'push'
               ? generator.valueToCode(block, 'ITEM', Order.NONE) || '0'
               : '';
+          // COUNTED FROM ONE, as `item ⟨n⟩ of` is and as Blockly's own
+          // convention has it (specs/LISTS.md). A place that is not in the
+          // list takes nothing out rather than taking the last, which is what
+          // `slice` would do with a negative number.
+          const at =
+            verb === 'cut'
+              ? generator.valueToCode(block, 'PLACE', Order.NONE) || '1'
+              : '';
           // Read, change, write — through the setter, so the store's own
           // copying happens (`core/lists`) and a watcher sees the change.
           const write = (subject: string) =>
             verb === 'push'
               ? `${subject}.set(${ref}, [...WorldLab.items(${subject}.get(${ref})), ${item}])`
-              : `${subject}.set(${ref}, WorldLab.items(${subject}.get(${ref})).slice(0, -1))`;
+              : verb === 'pop'
+                ? `${subject}.set(${ref}, WorldLab.items(${subject}.get(${ref})).slice(0, -1))`
+                : `${subject}.set(${ref}, WorldLab.without(WorldLab.items(${subject}.get(${ref})), ${at}))`;
           return subjectScoped
             ? forEachActor(actorTarget(block, generator, Order.MEMBER), write)
             : `${write('world')};\n`;
@@ -2816,6 +2831,15 @@ const defineValueListPropertyBlocks = (property: PropertyMeta) => {
       `Take the last thing off ${
         subjectScoped ? "an actor's" : "the world's"
       } ${name}. Nothing happens if it is already empty.`,
+    ),
+    build(
+      'cut',
+      [{type: 'input_value', name: 'PLACE', check: 'Number'}, ...ownerArg()],
+      `remove item %1 of ${owner(name)}`,
+      `Take one thing out of ${
+        subjectScoped ? "an actor's" : "the world's"
+      } ${name}, counting from one. Nothing happens if there is no such ` +
+        `item, and everything after it moves up.`,
     ),
   ];
 };
@@ -11401,6 +11425,28 @@ export function buildDomainPalette(
       ownBlocks.push(getBlock);
       types.push(getBlock.type);
       away.push(getBlock.type);
+      // …and, for a LIST, the blocks that change one without replacing it.
+      // A rule's list properties have had these all along; an actor's had
+      // only the setter, so the one way to take a row out of a kind's own
+      // list was to rebuild the whole list around the gap. Nobody had needed
+      // it: the Dropdown sets its choices and never edits them. The List
+      // does, and met exactly the failure the note above describes — a block
+      // nothing minted, a stand-in that generates nothing, and a Delete key
+      // that silently did not.
+      if (isList(property)) {
+        for (const block of defineListPropertyBlocks(property)) {
+          ownBlocks.push(block);
+          types.push(block.type);
+          away.push(block.type);
+        }
+      }
+      if (isValueList(property)) {
+        for (const block of defineValueListPropertyBlocks(property)) {
+          ownBlocks.push(block);
+          types.push(block.type);
+          away.push(block.type);
+        }
+      }
     }
     declared.set(actor.modulePath, {atHome: types, away});
   }

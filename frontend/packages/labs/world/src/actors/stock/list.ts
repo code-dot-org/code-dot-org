@@ -20,10 +20,15 @@
 // the scroll is clamped rather than the rows: there is nothing to draw past
 // either end.
 //
+// A ROW CAN BE TAKEN OUT, when a project says so. Swiping a row sideways
+// removes it — the phone idiom, and the first use of the swipe event — and so
+// does Delete on the highlighted row. Off by default, because a list of
+// answers to choose between is not one a player should be able to empty.
+//
 // IT CAN BE DRIVEN WITHOUT A POINTER. Tab reaches it, the arrows move the
 // highlight and drag the window along with it, Page Up and Page Down move by a
-// windowful, and Enter chooses. The ring is drawn INSIDE the face, because
-// outside is clipped away.
+// windowful, Enter chooses and Delete removes. The ring is drawn INSIDE the
+// face, because outside is clipped away.
 
 import {labelHalf, labelSizeOf} from './label';
 import {
@@ -111,6 +116,7 @@ const read = (own: string, exportName: string) => ({
 const width = () => labelSizeOf('Width');
 const height = () => labelSizeOf('Height');
 const items = () => read(OWN, 'ItemsProperty');
+const canRemove = () => read(OWN, 'CanRemoveProperty');
 const scroll = () => read(OWN, 'ScrollProperty');
 const highlighted = () => read(OWN, 'HighlightedProperty');
 const focused = () => ({
@@ -252,6 +258,38 @@ const choose = (n: () => object) =>
     },
   ]);
 
+/**
+ * Take row `n` out, if a project allows it and there is such a row.
+ *
+ * The word is read BEFORE the row goes, which is the whole of why it is a
+ * `let` and not two reads: `item ⟨n⟩ of` after the removal answers with
+ * whatever moved up into its place.
+ */
+const remove = (n: () => object) =>
+  either(
+    both(
+      canRemove(),
+      both(compare('GTE', n(), num(1)), compare('LTE', n(), count())),
+    ),
+    [
+      {
+        type: `world_emit_${OWN}_LosesAtEvent`,
+        inputs: {ACTOR: me(), WORD: item(n()), PLACE: n()},
+      },
+      {
+        type: `world_cut_${OWN}_ItemsProperty`,
+        inputs: {ACTOR: me(), PLACE: n()},
+      },
+      // The highlight cannot point past the end, and the window cannot sit
+      // below a list that just got shorter.
+      // `count` is read after the cut, so this is the list as it now is. An
+      // emptied list leaves the highlight on nothing, which every use of it
+      // already guards against.
+      set('HighlightedProperty', clamp(highlighted(), num(1), count())),
+      scrollTo(scroll()),
+    ],
+  );
+
 /** Move the highlight by `by` rows, and bring it into view. */
 const step = (by: number) => [
   set(
@@ -299,7 +337,11 @@ export const listActor = actorFile(
     defineProperty('words', 'items', ''),
     defineProperty('number', 'scroll', '0'),
     defineProperty('number', 'highlighted', '1'),
+    // Whether a row may be taken out. FALSE unless a project says otherwise:
+    // a list of answers is not one a player should be able to empty.
+    defineProperty('boolean', 'can remove', 'false'),
     defineEvent('is chosen', WORD, 'at', PLACE),
+    defineEvent('loses', WORD, 'at', PLACE),
     useTrait('Mouse#CanBeClickedTrait'),
     // …and the drag that scrolls it, which is the whole reason this actor
     // could not exist before (specs/GESTURES_PLAN.md).
@@ -365,6 +407,22 @@ export const listActor = actorFile(
             ),
           ]),
         },
+      },
+      // A swipe takes the row it began on out — the phone idiom, and the
+      // first thing in the lab to use the swipe event. Either way sideways:
+      // which way a row is flicked is not a second meaning.
+      ...(['left', 'right'] as const).map(way => ({
+        type: 'world_on_Gestures_IsSwipedEvent',
+        fields: {FILTER0: way},
+        inputs: {ACTOR: me()},
+        next: {block: remove(rowUnderPointer)},
+      })),
+      // …and Delete does it from the keyboard, on the highlighted row.
+      {
+        type: 'world_on_Input_PressesEvent',
+        fields: {FILTER0: 'delete'},
+        inputs: {ACTOR: me()},
+        next: {block: either(focused(), [remove(highlighted)])},
       },
       // Enter chooses whatever the highlight is on.
       {

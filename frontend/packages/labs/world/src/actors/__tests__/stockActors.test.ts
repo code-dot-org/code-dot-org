@@ -99,7 +99,7 @@ describe('every stock actor', () => {
       // A list's words, how far the window has travelled, and which row the
       // keys are on. The scroll is a number of PIXELS and not of rows, which
       // is what lets a drag move it by whatever it moved by.
-      list: ['items', 'scroll', 'highlighted'],
+      list: ['items', 'scroll', 'highlighted', 'can_remove'],
       // A dropdown's words, whether it is open, and which row the keys are on.
       dropdown: ['choices', 'open', 'highlighted'],
       // A text area's caret; its lines are newlines in the words themselves.

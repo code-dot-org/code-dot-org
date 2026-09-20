@@ -8,7 +8,14 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {ActorBuilder, itemOf, RuleBuilder, Vector, WorldBuilder} from '..';
+import {
+  ActorBuilder,
+  itemOf,
+  RuleBuilder,
+  Vector,
+  without,
+  WorldBuilder,
+} from '..';
 
 /** A rule with one list property of each shape, world- and actor-scoped. */
 const listRule = () => {
@@ -108,5 +115,40 @@ describe('item n of', () => {
     expect(itemOf(lines, 0)).toBeUndefined();
     expect(itemOf(lines, -1)).toBeUndefined();
     expect(itemOf('not a list', 1)).toBeUndefined();
+  });
+});
+
+// Taking one thing out at a PLACE — what a list has lacked, and what any app
+// that edits a list needs first (specs/LIST_PLAN.md). Counted from one, as
+// `item ⟨n⟩ of` is.
+describe('without', () => {
+  it('takes the thing at that place out, and moves the rest up', () => {
+    expect(without(['a', 'b', 'c'], 2)).toEqual(['a', 'c']);
+    expect(without(['a', 'b', 'c'], 1)).toEqual(['b', 'c']);
+    expect(without(['a', 'b', 'c'], 3)).toEqual(['a', 'b']);
+  });
+
+  it('changes nothing for a place the list does not have', () => {
+    // The answer the rest of the vocabulary gives: reading past the end is
+    // nothing, and taking the last off an empty list is nothing. A negative
+    // place must not mean "from the end", which is what `slice` would do.
+    expect(without(['a', 'b'], 0)).toEqual(['a', 'b']);
+    expect(without(['a', 'b'], 3)).toEqual(['a', 'b']);
+    expect(without(['a', 'b'], -1)).toEqual(['a', 'b']);
+    expect(without(['a', 'b'], NaN)).toEqual(['a', 'b']);
+  });
+
+  it('leaves the list it was given alone', () => {
+    // A COPY, because the caller writes the answer back through a setter that
+    // copies anyway — and because splicing in place would change a list some
+    // other variable is holding.
+    const held = ['a', 'b', 'c'];
+
+    expect(without(held, 2)).toEqual(['a', 'c']);
+    expect(held).toEqual(['a', 'b', 'c']);
+  });
+
+  it('answers an empty list for something that is not one', () => {
+    expect(without(undefined, 1)).toEqual([]);
   });
 });
