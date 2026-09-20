@@ -1,5 +1,5 @@
 # Fully qualified for podman compat; tag tracks .ruby-version.
-FROM docker.io/library/ruby:3.2.11-slim-bookworm
+FROM docker.io/library/ruby:4.0.0-slim-bookworm
 
 ARG \
   USERNAME=cdo \
