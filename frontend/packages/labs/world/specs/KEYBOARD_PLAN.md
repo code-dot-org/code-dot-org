@@ -205,18 +205,39 @@ which is tolerable only because anybody with a keyboard does not need them.
 That is also the general shape of the lab's missing screen-reader story
 (specs/UI_ACTORS.md), not a debt this map invented.
 
-## A held key is missing
+## A held key composes; it is not missing
 
-`press the ⟨…⟩ key` is one frame — a keystroke. That is right for backspace and
-enter, and it is NOT enough for the other thing a map of buttons would obviously
-want to be: a touch D-pad feeding a control scheme that reads the arrow keys. A
-finger held on such a button gives one press and one release rather than a key
-that stays down.
+`press the ⟨…⟩ key` is one frame — a keystroke. The obvious worry is that this
+cannot feed the other thing a map of buttons wants to be: a touch D-pad, for a
+platformer whose control scheme polls `key ⟨left arrow⟩ is down` every frame
+(`rules/arrows`, `whileHeld`). A finger held on such a button would give one
+press and one release, and the character would twitch.
 
-The missing pair is `hold the ⟨…⟩ key` and `let go of the ⟨…⟩ key`, over a set
-that persists across frames instead of a queue drained each tick. Not built,
-not needed by a keyboard, and the first thing to reach for when somebody wants
-to play a platformer with a thumb.
+IT IS NOT MISSING. The Gestures rule already carries the piece that was
+wanted, and it is a state rather than an event: `being pressed` on
+`Takes Gestures`, set true on the press and false on the release
+(`rules/gestures`). A D-pad button is a per-frame step over it —
+
+    every frame: if ⟨being pressed of this actor⟩, press the ⟨left arrow⟩ key
+
+— and pressing every frame IS holding, because what is pending is merged at
+the top of each tick. The edges come out exactly right rather than
+approximately: the first frame the finger is down is a rising edge against an
+empty previous set, every frame after has the key in both sets and so raises
+nothing while `is key down` stays true, and the frame after the finger lifts
+is the one falling edge. One `is pressed`, a held key, one `is released`.
+
+So a touch D-pad is a stock actor and a map, which is the same shape as this
+keyboard — no new events, and no new blocks. It costs one frame of latency at
+each end, which is the latency `type` has and for the same reason.
+
+WHAT THIS RECORD IS FOR. It said the opposite first, and the correction came
+from trying to build the example rather than reasoning about the primitive.
+The general lesson is the one this lab keeps relearning: reach for an existing
+binder, property or per-tick step before minting a block, and go and look at
+what the consumer actually does — `whileHeld` polls, which is what made the
+one-frame press look fatal, and `being pressed` persists, which is what made it
+fine.
 
 ## What it found, in the end
 
