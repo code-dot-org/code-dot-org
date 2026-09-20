@@ -7,6 +7,7 @@
 import {ViewportMapProperty, ViewportTrait} from '../rules/viewport';
 
 import type {Actor} from './Actor';
+import {anchored, isAnchor, type Anchor} from './anchors';
 import type {AnimationDef, FrameState} from './animationTypes';
 import {
   DEFAULT_CAMERA_ID,
@@ -129,6 +130,16 @@ export interface WorldMap {
      * block said otherwise.
      */
     layer?: string;
+    /**
+     * Where this placement holds on, when the window is not the shape the map
+     * was drawn at — one of nine named places (`core/anchors`).
+     *
+     * A fact about the ARRANGEMENT and not about the kind, which is why it is
+     * here and not a property: a Label is a Label wherever it is put
+     * (specs/ANCHORS_PLAN.md). Absent means what it has always meant, which
+     * is a position in the map.
+     */
+    anchor?: string;
   }>;
   /**
    * The map's layers, back to front, with their slots. They become a
@@ -2021,6 +2032,48 @@ export class World {
     this.growSpaceToFit(this.rootSpace, map);
   }
 
+  /**
+   * Move each anchored placement to where it belongs in this window.
+   *
+   * WHAT IS MEASURED is how far the placement sits from its anchor's point in
+   * the MAP; what is applied is that same distance from the anchor's point in
+   * the VIEW. A learner drags a thing into the corner and says which corner;
+   * nobody types an offset (specs/ANCHORS_PLAN.md).
+   *
+   * A map with no size anchors nothing: there is nothing to measure against,
+   * and a synthesised map — one a `map` block builds out of blocks — has
+   * none.
+   *
+   * A CHILD IS LEFT ALONE. A parented placement's position is its local one,
+   * measured from its parent rather than from the map, so an anchor on one
+   * would move it by the distance between two things it is not between. The
+   * parent's anchor carries the child, which is what parenting is for.
+   */
+  private applyAnchors(
+    space: Space,
+    map: WorldMap,
+    anchoring: ReadonlyArray<[Actor, Anchor]>,
+  ): void {
+    if (anchoring.length === 0 || !map.size || !map.tile) {
+      return;
+    }
+    const property = this.positionalProperty(SPATIAL.position);
+    if (!property) {
+      return;
+    }
+    const drawn = new Vector(
+      map.size.width * map.tile.width,
+      map.size.height * map.tile.height,
+    );
+    const view = space.owner ? this.viewSize(space.owner) : this.viewSize();
+    for (const [actor, anchor] of anchoring) {
+      if (actor.parent()) {
+        continue;
+      }
+      actor.set(property, anchored(actor.get(property), anchor, drawn, view));
+    }
+  }
+
   private growSpaceToFit(
     space: Space,
     map: {
@@ -2113,6 +2166,8 @@ export class World {
     this.growSpaceToFit(space, map);
     const lookup = this.propertyLookup();
     const added: Actor[] = [];
+    /** The placements that hold on to an edge, and which edge. */
+    const anchoring: Array<[Actor, Anchor]> = [];
     /**
      * Placements by the id the MAP gave them, and the actor-typed values
      * waiting on one.
@@ -2189,6 +2244,9 @@ export class World {
       // the World never sees the template it came from.
       this.useActorKind(entry.type, builder);
       this.place(actor, entry.layer ?? layer, space);
+      if (isAnchor(entry.anchor)) {
+        anchoring.push([actor, entry.anchor]);
+      }
       added.push(actor);
     }
     // Every entry exists now, so the references can be followed.
@@ -2223,6 +2281,10 @@ export class World {
       }
       actor.set(property, target as never);
     }
+    // …and the anchored ones moved to where they belong in THIS window,
+    // after the references are followed so a parent is known, and before the
+    // script runs so it sees final positions (specs/ANCHORS_PLAN.md).
+    this.applyAnchors(space, map, anchoring);
     // What the map DOES, once everything it placed exists and every reference
     // is followed, so a hat about the Resume button registers on the button
     // and `the ⟨Door⟩` finds the door.

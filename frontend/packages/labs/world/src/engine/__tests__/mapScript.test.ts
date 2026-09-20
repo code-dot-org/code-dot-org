@@ -11,6 +11,7 @@ import {ActorBuilder} from '../builders/ActorBuilder';
 import {RuleBuilder} from '../builders/RuleBuilder';
 import {WorldBuilder} from '../builders/WorldBuilder';
 import type {MapLoad, WorldMap} from '../core/World';
+import {PositionProperty} from '../rules/spatial';
 
 const Ping = new RuleBuilder({id: 'pinger', name: 'Pinger'}).addEvent('ping');
 const Button = new ActorBuilder({id: 'button', name: 'Button'});
@@ -172,5 +173,67 @@ describe('closing the newest map', () => {
     // nothing — not a stale entry reporting itself as the top.
     expect(world.unloadNewestMap()).toBe(true);
     expect(world.unloadNewestMap()).toBe(false);
+  });
+});
+
+// One map, two worlds of different shapes (specs/ANCHORS_PLAN.md). The trigger
+// the interface spec named: a stock interface map is loaded over whatever
+// world asked for it, and a panel placed at a corner has to stay at one.
+describe('an anchored placement', () => {
+  /** A 10x10 map of 32-pixel tiles: 320 by 320, with one card in a corner. */
+  const cornered = (anchor?: string) => ({
+    size: {width: 10, height: 10},
+    tile: {width: 32, height: 32},
+    actors: [
+      {
+        type: 'actors/button',
+        id: 'card',
+        anchor,
+        properties: {positional: {position: {x: 300, y: 300}}},
+      },
+    ],
+  });
+
+  const placed = (world: ReturnType<typeof makeWorld>) =>
+    [...world.actors].find(one => one.id === 'card')!.get(PositionProperty);
+
+  it('holds its distance from the corner in a wider window', () => {
+    const world = makeWorld();
+    // Twenty tiles across and ten down: 640 by 320, where the map is square.
+    world.setViewSize(20, 10);
+
+    world.loadMap(cornered('bottom right') as never);
+
+    // Twenty in from the right and twenty up from the bottom, as it was.
+    expect(placed(world)).toMatchObject({x: 620, y: 300});
+  });
+
+  it('stays exactly where it was put when nothing anchors it', () => {
+    const world = makeWorld();
+    world.setViewSize(20, 10);
+
+    world.loadMap(cornered(undefined) as never);
+
+    expect(placed(world)).toMatchObject({x: 300, y: 300});
+  });
+
+  it('moves nothing when the window is the map’s own shape', () => {
+    const world = makeWorld();
+    world.setViewSize(10, 10);
+
+    world.loadMap(cornered('bottom right') as never);
+
+    expect(placed(world)).toMatchObject({x: 300, y: 300});
+  });
+
+  it('ignores an anchor it does not know', () => {
+    // A map is JSON and may say anything. A word nothing recognises has to
+    // mean "not anchored" rather than take the whole level away.
+    const world = makeWorld();
+    world.setViewSize(20, 10);
+
+    world.loadMap(cornered('middle') as never);
+
+    expect(placed(world)).toMatchObject({x: 300, y: 300});
   });
 });
