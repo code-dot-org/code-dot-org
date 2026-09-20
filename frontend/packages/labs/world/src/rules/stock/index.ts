@@ -28,6 +28,7 @@ import {driveRule} from './drive';
 import {expiresRule} from './expires';
 import {flappingRule} from './flapping';
 import {goalsRule} from './goals';
+import {gesturesRule} from './gestures';
 import {gravityRule} from './gravity';
 import {gridRule} from './grid';
 import {healthRule} from './health';
@@ -253,6 +254,15 @@ export const STOCK_RULES: readonly StockRule[] = [
       'Raises an event when a mouse button goes down or comes up, on the same terms as the keyboard rule, and tells an actor when a press landed on it. Where the pointer is is not an event — it is the “mouse position” block, which answers at any moment.',
     provides: ['Takes Mouse Input', 'Can Be Clicked'],
     contents: mouseRule,
+  },
+  {
+    id: 'gestures',
+    name: 'Gestures',
+    ability: 'Reads Gestures',
+    description:
+      'What a press, a movement and a release add up to: a drag, a swipe, a hold. A gesture belongs to what the press began on, so a thing stays yours to drag once the finger has left it. How far and how fast before a press counts as one of these are numbers you can change.',
+    provides: ['Takes Gestures'],
+    contents: gesturesRule,
   },
   {
     id: 'tabNavigation',
@@ -517,6 +527,7 @@ export function stockRuleByName(name: string): StockRule | undefined {
 
 export {
   arrowsRule,
+  gesturesRule,
   climbRule,
   surfacesRule,
   turningRule,

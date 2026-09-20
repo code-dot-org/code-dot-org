@@ -23,6 +23,7 @@ import {beforeAll, describe, expect, it} from 'vitest';
 
 import {
   ActorBuilder,
+  IntrinsicSizeProperty,
   PositionProperty,
   Vector,
   WorldBuilder,
@@ -123,6 +124,160 @@ describe('Collection', () => {
     const {world} = play(RULE_DEMOS.collect);
 
     expect([...world.actors].map(actor => actor.id)).toEqual(['walker']);
+  });
+});
+
+describe('Gestures', () => {
+  // A press, some frames, a release — driven through `setPointer`, which is
+  // the one door the driver uses, so what runs here is what runs in a browser
+  // (specs/GESTURES_PLAN.md).
+
+  /** A world with the rule in it and one big actor under the pointer. */
+  const feeling = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([rule('rules/gestures')])
+      .instantiate();
+    // Where the pointer will be, in the WORLD, which the camera decides. Asked
+    // rather than assumed, so this says the same thing if the view changes.
+    world.setPointer({x: 100, y: 100}, []);
+    const where = world.mousePosition();
+    const pad = new ActorBuilder({id: 'pad', name: 'pad'})
+      .useTraits([of('rules/gestures', 'TakesGesturesTrait')])
+      .set(PositionProperty, where)
+      .set(IntrinsicSizeProperty, at(400, 400))
+      .instantiate('pad');
+    world.addActor(pad);
+    world.tick(1 / 60);
+    return {world, pad};
+  };
+
+  /** Put the pointer here, with the left button in this state, and tick. */
+  const point = (world: World, x: number, y: number, down: boolean) => {
+    world.setPointer({x, y}, down ? ['left'] : []);
+    world.tick(1 / 60);
+  };
+
+  it('drags the thing the press began on, carrying how far it moved', () => {
+    const {world, pad} = feeling();
+    const moves: Vector[] = [];
+    pad.on(of('rules/gestures', 'IsDraggedByEvent'), (_w, _a, movement) => {
+      moves.push(movement as Vector);
+    });
+
+    point(world, 100, 100, true);
+    point(world, 130, 100, true);
+
+    // One drag, of thirty across and nothing down. The movement is since the
+    // LAST FRAME, which is what a list that scrolls adds up.
+    expect(moves).toHaveLength(1);
+    expect(moves[0].x).toBeCloseTo(30);
+    expect(moves[0].y).toBeCloseTo(0);
+  });
+
+  it('says nothing about a press that never moves', () => {
+    // Otherwise every click is a one-pixel drag, which is what the threshold
+    // is for.
+    const {world, pad} = feeling();
+    const moves: unknown[] = [];
+    pad.on(of('rules/gestures', 'IsDraggedByEvent'), () => moves.push(1));
+
+    point(world, 100, 100, true);
+    point(world, 101, 100, true);
+    point(world, 100, 100, false);
+
+    expect(moves).toEqual([]);
+  });
+
+  it('keeps dragging after the finger has left the actor', () => {
+    // The whole reason a gesture belongs to what it BEGAN on. The pad is 400
+    // across, so this ends well outside it.
+    const {world, pad} = feeling();
+    const moves: unknown[] = [];
+    pad.on(of('rules/gestures', 'IsDraggedByEvent'), () => moves.push(1));
+
+    point(world, 100, 100, true);
+    point(world, 400, 100, true);
+    point(world, 700, 100, true);
+
+    expect(moves).toHaveLength(2);
+  });
+
+  it('calls a fast far flick a swipe, and says which way', () => {
+    const {world, pad} = feeling();
+    const ways: string[] = [];
+    pad.on(of('rules/gestures', 'IsSwipedEvent'), (_w, _a, direction) => {
+      ways.push(direction as string);
+    });
+
+    point(world, 100, 100, true);
+    point(world, 300, 100, true);
+    point(world, 300, 100, false);
+
+    expect(ways).toEqual(['right']);
+  });
+
+  it('reads a swipe up as up, though +y is down', () => {
+    // The one place the arithmetic reads backwards from what a learner
+    // expects: gravity's default direction is `y: 1`, so up is negative.
+    const {world, pad} = feeling();
+    const ways: string[] = [];
+    pad.on(of('rules/gestures', 'IsSwipedEvent'), (_w, _a, direction) => {
+      ways.push(direction as string);
+    });
+
+    point(world, 100, 100, true);
+    point(world, 100, 20, true);
+    point(world, 100, 20, false);
+
+    expect(ways).toEqual(['up']);
+  });
+
+  it('is a drop AND a swipe when the flick was also a drag', () => {
+    // Two questions, not a choice. A swipe travels far by definition, so it
+    // has already become a drag by the time the finger lifts; asking "a drag,
+    // or else a swipe?" would mean a swipe never happened.
+    const {world, pad} = feeling();
+    const seen: string[] = [];
+    pad.on(of('rules/gestures', 'IsDroppedEvent'), () => seen.push('dropped'));
+    pad.on(of('rules/gestures', 'IsSwipedEvent'), () => seen.push('swiped'));
+
+    point(world, 100, 100, true);
+    point(world, 300, 100, true);
+    point(world, 300, 100, false);
+
+    expect(seen.sort()).toEqual(['dropped', 'swiped']);
+  });
+
+  it('holds once while the finger is still down', () => {
+    // Announced during the press, not at the release, which is what makes
+    // "hold to confirm" work at all — and once, however long the hold lasts.
+    const {world, pad} = feeling();
+    let holds = 0;
+    pad.on(of('rules/gestures', 'IsHeldEvent'), () => {
+      holds += 1;
+    });
+
+    point(world, 100, 100, true);
+    for (let frame = 0; frame < 60; frame++) {
+      point(world, 100, 100, true);
+    }
+
+    expect(holds).toBe(1);
+  });
+
+  it('does not call a drag a hold', () => {
+    const {world, pad} = feeling();
+    let holds = 0;
+    pad.on(of('rules/gestures', 'IsHeldEvent'), () => {
+      holds += 1;
+    });
+
+    point(world, 100, 100, true);
+    for (let frame = 0; frame < 60; frame++) {
+      point(world, 100 + frame * 4, 100, true);
+    }
+
+    expect(holds).toBe(0);
   });
 });
 

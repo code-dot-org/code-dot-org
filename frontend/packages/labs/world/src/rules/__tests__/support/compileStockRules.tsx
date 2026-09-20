@@ -51,6 +51,7 @@ import {
   driveRule,
   expiresRule,
   goalsRule,
+  gesturesRule,
   gravityRule,
   gridRule,
   healthRule,
@@ -247,6 +248,10 @@ export const ALL_STOCK_SOURCES: Record<string, string> = {
   'rules/digging': diggingRule,
   'rules/drive': driveRule,
   'rules/mouse': mouseRule,
+  // Needs nothing either: it reads the button edges off the World rather than
+  // through Mouse's events, because an event is a tick late and a drag that
+  // lags the finger by a frame is a broken drag.
+  'rules/gestures': gesturesRule,
   // Needs nothing: it reads the keyboard's edges straight off the World, the
   // way Input does, rather than through another rule's events.
   'rules/tabNavigation': tabNavigationRule,
