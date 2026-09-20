@@ -105,8 +105,10 @@ dropped`, `is swiped ⟨left⟩`, and `is long pressed`.
 - `6885bd41c22` — the `Direction` enum.
 - `117199496f9` — one shared definition of what is under the pointer.
 - `22da232dc43` — the `Gestures` rule and eight tests that run it.
-- the Slider onto the drag event, the demo the shelf asks for, and the
-  tile that grants the rule.
+- `300e09d9485` — the Slider onto the drag event, the demo the shelf asks
+  for, and the tile that grants the rule.
+- `6195df8cd0a` — a test that runs the demo, because a recorded strip is
+  the one half of it nothing else can read.
 
 ## Learned while building
 
