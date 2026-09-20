@@ -127,6 +127,12 @@ block`'s body shares one with its signature, and a generated closure
 - `38ed3232a0b`, `63166c7c289` — the tests that hold the two halves of the
   designer together: both designers write the same items, and a parameter's
   default reaches the `emit` socket.
+- `1d2407a65ba` — a mini toolbox may offer a block carrying field values,
+  which is what lets the `+` hand out a getter that already names what it
+  reads.
+- `2274f206b73` — the revision: the hat binds its values as locals, the
+  `+` offers the ordinary getter, the handler opens by binding each name
+  to its position, and the bespoke blocks are deleted.
 
 ## Verified
 
@@ -167,6 +173,17 @@ actor⟩ is damaged by` — the sentence trailed off and the number was
   the two dropdowns the name `FILTER0`. Nothing in the library mixes them,
   which is why it went unseen, and a signature that may name several
   values makes mixing them ordinary. Both are numbered across both now.
+- **Blockly had already solved "a name that is not real yet".** A flyout's
+  workspace reads the target's variables and creates new ones in a
+  POTENTIAL map instead (`Flyout.init` calls `setVariableMap` then
+  `createPotentialVariableMap`), and `getOrCreateVariablePackage` looks in
+  both. So a getter offered in the hat's `+` names `character` without any
+  file having one, and the variable becomes real when somebody drags the
+  block out. That is exactly the rule this wanted, and it needed no code.
+- **Both ends agree on the identifier by construction.** The getter
+  generates `generator.getVariableName(id)` and the hat's binding line
+  calls the same function with the same id, looked up on the same
+  workspace. There is no second naming rule to keep in step.
 - **Retiring the `choice` item retired six more.** `define event` wrote its
   parts as one item block per parameter type, and those items were in no
   drawer — only the designer ever made one. With both designers writing the
