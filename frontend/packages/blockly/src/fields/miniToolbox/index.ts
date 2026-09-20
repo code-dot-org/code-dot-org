@@ -42,9 +42,24 @@ const glyph = (character: string): SVGElement => {
   return icon;
 };
 
+/**
+ * One block the flyout offers.
+ *
+ * A bare type is the usual case. The object form is for a block that has to
+ * arrive carrying something — a variable getter that already names what it
+ * reads, so dragging it out is the whole of picking that name.
+ */
+export type MiniToolboxBlock =
+  | string
+  | {
+      type: string;
+      /** Field values, as a toolbox entry writes them. */
+      fields?: Record<string, unknown>;
+    };
+
 export interface MiniToolboxOptions {
-  /** The block types the flyout offers, in order. */
-  blocks: readonly string[];
+  /** The blocks the flyout offers, in order. */
+  blocks: readonly MiniToolboxBlock[];
   /** Tooltip on the toggle. */
   tooltip?: string;
 }
@@ -144,7 +159,7 @@ function setIcon(toggle: FieldButton, character: string): void {
  */
 function registerFlyoutContents(
   block: Blockly.BlockSvg,
-  blocks: readonly string[],
+  blocks: readonly MiniToolboxBlock[],
 ): void {
   if (!block.workspace.rendered) {
     return;
@@ -152,9 +167,9 @@ function registerFlyoutContents(
   (block.workspace as Blockly.WorkspaceSvg).registerToolboxCategoryCallback(
     FieldFlyout.flyoutIdFor(block),
     () =>
-      blocks.map(type => ({
+      blocks.map(entry => ({
         kind: 'block',
-        type,
+        ...(typeof entry === 'string' ? {type: entry} : entry),
         // Which block opened this flyout, for a block that wants to know what
         // it came from — Sprite Lab's pointers read it to show the right image.
         extraState: {miniToolboxSourceId: block.id},
