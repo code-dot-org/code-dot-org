@@ -240,9 +240,14 @@ rule about.
   an actor does not show the author's name for it. Every contact hat in the
   library is that shape.
 - **`event actor` and `event value` still mean the FIRST value**, wherever
-  they are used. Under a hat whose signature puts an actor second, `event
-actor` is wrong — it is not offered there, and nothing stops a learner
-  dragging one in from the Actor drawer.
+  they are used. Under a hat whose signature puts an actor second, the
+  actor block is wrong. It is not offered there, and nothing stops a
+  learner dragging one in from the Actor drawer.
+- **A name the file already holds is the SAME variable.** A file with its
+  own `character` of the same flavour has the hat bind that one, which
+  reads correctly under the hat and takes the name out of the menus
+  elsewhere. That is what any binder in this lab already does to a free
+  local of its name, so it is the rule working rather than a new hazard.
 - **The subject is not in the `+`.** The flyout holds what the event
   carries; `this actor` is the default in every actor socket already and is
   a drawer away.
