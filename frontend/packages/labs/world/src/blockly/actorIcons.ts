@@ -22,6 +22,7 @@ import font from '@fortawesome/fontawesome-free/svgs/solid/font.svg?raw';
 import handPointer from '@fortawesome/fontawesome-free/svgs/solid/hand-pointer.svg?raw';
 import heartPulse from '@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg?raw';
 import iCursor from '@fortawesome/fontawesome-free/svgs/solid/i-cursor.svg?raw';
+import listDots from '@fortawesome/fontawesome-free/svgs/solid/list-dots.svg?raw';
 import paragraph from '@fortawesome/fontawesome-free/svgs/solid/paragraph.svg?raw';
 import sliders from '@fortawesome/fontawesome-free/svgs/solid/sliders.svg?raw';
 import squareCaretDown from '@fortawesome/fontawesome-free/svgs/solid/square-caret-down.svg?raw';
@@ -76,6 +77,9 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   toggle: tile(toggleOn),
   slider: tile(sliders),
   dropdown: tile(squareCaretDown),
+  // A List is not a Dropdown that is open: one is a menu you summon and the
+  // other is content you scroll, and a caret on both would say they were.
+  list: tile(listDots),
   bar: tile(barsProgress),
   // A Health Bar is not a Progress Bar wearing the same face. One is filled by
   // whatever the project decides; the other reads a subject's health and is

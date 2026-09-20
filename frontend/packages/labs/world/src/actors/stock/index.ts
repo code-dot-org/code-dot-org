@@ -17,6 +17,7 @@ import {dropdownActor} from './dropdown';
 import {GROUND_SPRITE, groundActor} from './ground';
 import {healthBarActor} from './healthBar';
 import {labelActor} from './label';
+import {listActor} from './list';
 import {panelActor} from './panel';
 import {PLAYER_ANIMATION, playerActor} from './player';
 import {PORTRAIT_SPRITE, portraitActor} from './portrait';
@@ -167,6 +168,18 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: ['Mouse', 'Gestures', 'Tab Navigation', 'Input'],
     actors: ['progressBar'],
     contents: sliderActor,
+  },
+  {
+    id: 'list',
+    name: 'List',
+    description:
+      'A box of words you scroll with a finger and choose one of. The arrows move the highlight, Page Up and Page Down move by a boxful, and Enter chooses — so it works with no pointer at all. Hear “is chosen” for the word and where it was.',
+    // Mouse for the press that chooses a row, Gestures for the drag that
+    // scrolls, Tab Navigation for the focus its ring reads, and Input for the
+    // keys; its colours and size are the Label's, which it acts like.
+    requires: ['Mouse', 'Gestures', 'Tab Navigation', 'Input'],
+    actors: ['label'],
+    contents: listActor,
   },
   {
     id: 'textInput',

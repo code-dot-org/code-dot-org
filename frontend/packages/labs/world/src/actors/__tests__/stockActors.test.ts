@@ -96,6 +96,10 @@ describe('every stock actor', () => {
       // A slider is as big as it says. What it was following is the Gestures
       // rule's to remember now, so it keeps nothing else of its own.
       slider: ['width', 'height'],
+      // A list's words, how far the window has travelled, and which row the
+      // keys are on. The scroll is a number of PIXELS and not of rows, which
+      // is what lets a drag move it by whatever it moved by.
+      list: ['items', 'scroll', 'highlighted'],
       // A dropdown's words, whether it is open, and which row the keys are on.
       dropdown: ['choices', 'open', 'highlighted'],
       // A text area's caret; its lines are newlines in the words themselves.
