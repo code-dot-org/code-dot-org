@@ -6439,6 +6439,86 @@ const worldWithinLayer = defineBlock({
 // the game behind them stands still — and what lets a project say "pause" in
 // one block rather than guarding every rule it uses.
 
+// ── Remembering between runs ─────────────────────────────────────────────────
+// A world's own memory, under a name the project chooses
+// (specs/SAVING_PLAN.md). The world-state spec refused persistence until
+// somebody could say what a saved thing IS; it is every property a world
+// declared for itself, written together and read back together.
+//
+// NOT ACTORS. What a saved GAME is — which enemies are alive and where —
+// wants a vocabulary for identity across runs that this language does not
+// have. An app's data is not that: the notes survive and the screen showing
+// them is built again.
+//
+// EACH ANSWERS WHETHER IT HAPPENED, which is why they report rather than act.
+// `load` answering false is how a project tells a first run from a later one,
+// and that is the whole of what an app's start screen needs; the other two
+// answer for the same reason a browser with its site data blocked is a real
+// thing and not a crash.
+
+const MEMORY_NAME = {name: 'NAME', shadow: {type: 'text', fields: {TEXT: ''}}};
+
+const worldSaveMemory = defineBlock({
+  type: 'world_save_memory',
+  message0: 'save what the world remembers as %1',
+  args0: [{type: 'input_value', name: 'NAME', check: 'String'}],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Write every property this world keeps of its own, under a name. ' +
+    'Answers whether it could be written — a browser may refuse.',
+  generator: {
+    javascript(block, generator) {
+      const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
+      return [`world.save(${name})`, Order.FUNCTION_CALL] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_save_memory', [MEMORY_NAME]);
+
+const worldRecallMemory = defineBlock({
+  type: 'world_recall_memory',
+  message0: 'load what the world remembered as %1',
+  args0: [{type: 'input_value', name: 'NAME', check: 'String'}],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Put back every property saved under that name, and answer whether ' +
+    'there was anything. A property the saved data does not mention keeps ' +
+    'what it has.',
+  generator: {
+    javascript(block, generator) {
+      const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
+      return [`world.recall(${name})`, Order.FUNCTION_CALL] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_recall_memory', [MEMORY_NAME]);
+
+const worldForgetMemory = defineBlock({
+  type: 'world_forget_memory',
+  message0: 'forget what the world remembered as %1',
+  args0: [{type: 'input_value', name: 'NAME', check: 'String'}],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Throw a saved memory away, so an app that can save can also start ' +
+    'over. Answers whether it could be done.',
+  generator: {
+    javascript(block, generator) {
+      const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
+      return [`world.forget(${name})`, Order.FUNCTION_CALL] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_forget_memory', [MEMORY_NAME]);
+
 const worldPauseGame = defineBlock({
   type: 'world_pause_game',
   message0: 'pause the game',
@@ -10242,6 +10322,9 @@ export const DOMAIN_BLOCKS = [
   worldAddActor,
   worldRemoveActor,
   worldPauseGame,
+  worldSaveMemory,
+  worldRecallMemory,
+  worldForgetMemory,
   worldResumeGame,
   worldGameIsPaused,
   worldLoadMap,
@@ -10572,6 +10655,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_pause_game',
       'world_resume_game',
       'world_game_is_paused',
+      // …and what survives a reload: a world's own memory, under a name the
+      // project chooses (specs/SAVING_PLAN.md).
+      'world_save_memory',
+      'world_recall_memory',
+      'world_forget_memory',
       // Here as well as in Actor, because this is the category a world file is
       // built from and `any ⟨Coin⟩` is what its blocks take as a subject. It is
       // also how "remove every coin" is written: `remove actor` over a value

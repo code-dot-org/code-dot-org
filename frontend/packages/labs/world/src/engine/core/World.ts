@@ -55,6 +55,7 @@ import type {
   WorldAction,
   WorldEventHandler,
   WorldQuery,
+  WorldStorage,
 } from './types';
 import {Vector, type VectorLike} from './Vector';
 import {
@@ -2390,6 +2391,112 @@ export class World {
    */
   useTextMetrics(measure: (words: string, size: number) => number): void {
     this.measure = measure;
+  }
+
+  /**
+   * Lend the world somewhere to remember things — see `save`, `recall` and
+   * `forget` below (specs/SAVING_PLAN.md).
+   *
+   * LENT, NOT REACHED FOR, exactly as the measuring tape above is. The engine
+   * knows nothing about browsers; a world with no storage behind it — the
+   * headless check runner, every test that does not ask for one — remembers
+   * nothing and loses nothing, which is what it should do rather than throw.
+   */
+  useStorage(storage: WorldStorage): void {
+    this.storage = storage;
+  }
+
+  private storage: WorldStorage | undefined;
+
+  /** The key a name is stored under, namespaced so nothing else collides. */
+  private memoryKey(name: string): string {
+    return `world-lab.memory.${name}`;
+  }
+
+  /**
+   * Write every property this world declared for itself, under `name`.
+   *
+   * THE WORLD'S OWN MEMORY and nothing else. What a saved GAME is — which
+   * actors are alive and where — wants a vocabulary for identity across runs
+   * that nothing here has; an app's data is not that, and this is an app's
+   * data (specs/SAVING_PLAN.md).
+   *
+   * Answers whether it was written, which is false when nothing lent this
+   * world a storage and false when the storage refused — a browser with its
+   * site data blocked is a real thing and not a crash.
+   */
+  save(name: string): boolean {
+    if (!this.storage) {
+      return false;
+    }
+    const written: Record<string, unknown> = {};
+    for (const property of this.ownProperties) {
+      written[`${property.ownerId}.${property.id}`] = this.store.get(property);
+    }
+    try {
+      this.storage.setItem(this.memoryKey(name), JSON.stringify(written));
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Read a memory back, and say whether there was one.
+   *
+   * A project asks the answer to tell a first run from a later one, which is
+   * the whole of what an app's start screen needs.
+   *
+   * A PROPERTY THE DATA DOES NOT MENTION KEEPS WHAT IT HAS. A project that
+   * adds a property after saving should not find its other values wiped, and
+   * what an unmentioned property holds is already its default. A property the
+   * world no longer DECLARES is ignored: saved data outlives edits, and a
+   * value nothing can hold is not worth taking a project down for.
+   */
+  recall(name: string): boolean {
+    if (!this.storage) {
+      return false;
+    }
+    let raw: string | null = null;
+    try {
+      raw = this.storage.getItem(this.memoryKey(name));
+    } catch {
+      return false;
+    }
+    if (raw === null) {
+      return false;
+    }
+    let read: unknown;
+    try {
+      read = JSON.parse(raw);
+    } catch {
+      // Somebody else's key, or a half-written one. Not a memory.
+      return false;
+    }
+    if (!read || typeof read !== 'object') {
+      return false;
+    }
+    const held = read as Record<string, unknown>;
+    for (const property of this.ownProperties) {
+      const key = `${property.ownerId}.${property.id}`;
+      if (key in held) {
+        this.set(property, held[key] as never);
+      }
+    }
+    return true;
+  }
+
+  /** Throw a memory away, so an app that can save can also reset. */
+  forget(name: string): boolean {
+    if (!this.storage) {
+      return false;
+    }
+    try {
+      this.storage.removeItem(this.memoryKey(name));
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   /**

@@ -247,6 +247,22 @@ export class PhaserBinding {
     if (metrics) {
       world.useTextMetrics(metrics);
     }
+    // …AND SOMEWHERE TO REMEMBER THINGS, on the same terms
+    // (specs/SAVING_PLAN.md). This is the sandbox origin's storage, which is
+    // deliberately isolated from the lab's session: the learner's own game
+    // data, reaching nothing of theirs.
+    //
+    // Reading `localStorage` at all can THROW where site data is blocked, so
+    // the test is the access and not a property check; a world lent nothing
+    // saves nothing and says so.
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.getItem('world-lab.probe');
+        world.useStorage(localStorage);
+      }
+    } catch {
+      // No storage here. The blocks answer false, which is what they are for.
+    }
     // Whether the game's element was focused by a click rather than by a Tab
     // from the page. Read and cleared by the focus handler below.
     let viaPointer = false;

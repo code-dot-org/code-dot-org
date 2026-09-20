@@ -73,6 +73,14 @@ const RUNTIME_ONLY: Record<string, string> = {
   releaseKey: 'the same, at the other end',
   keyboardJustArrived:
     'a world being described is not on a screen anybody could have tabbed onto',
+  save:
+    'the storage is lent by the driver, once the world exists — a world still ' +
+    'being described has nowhere to write (specs/SAVING_PLAN.md)',
+  recall:
+    'the same, and why restoring belongs in a handler rather than in a ' +
+    'world\u2019s body: `when \u27e8…\u27e9 is created` runs on the first tick, ' +
+    'which is after the driver has lent the storage',
+  forget: 'the same again',
 };
 
 /**

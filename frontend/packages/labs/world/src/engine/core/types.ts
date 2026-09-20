@@ -274,6 +274,20 @@ export interface GameEvent {
 }
 
 /**
+ * Somewhere a world can remember things between runs (specs/SAVING_PLAN.md).
+ *
+ * The three methods of the browser's `Storage` this needs, named as an
+ * interface so the engine depends on the SHAPE and not on a browser: the
+ * driver lends the real one, a test lends a Map, and a headless world is lent
+ * nothing at all.
+ */
+export interface WorldStorage {
+  getItem(key: string): string | null;
+  setItem(key: string, value: string): void;
+  removeItem(key: string): void;
+}
+
+/**
  * Handler an Actor registers for a GameEvent; runs after the tick.
  *
  * The values after the subject are what the event carries — one per value its
