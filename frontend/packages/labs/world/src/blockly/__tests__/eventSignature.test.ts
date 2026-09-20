@@ -1,8 +1,10 @@
-// An event's phrasing, and the filter in it (specs/ENUMS.md step 4).
+// An event's phrasing, the filter in it (specs/ENUMS.md step 4), and what it
+// carries (specs/EVENT_VALUES_PLAN.md).
 //
 // `define event` is designed like `define block`: labels are its wording, and a
-// parameter is what a handler filters on. The hat shows that enum's choices
-// with `(any)` at the front, and generates the guard a learner would otherwise
+// parameter is a value the event carries — which a handler may also FILTER on
+// when it is one of a named set of choices. The hat shows those choices with
+// `(any)` at the front, and generates the guard a learner would otherwise
 // write themselves — which is the difference between
 //
 //   when any Player a key is pressed / if (event value) = (key ⟨space⟩) / …
