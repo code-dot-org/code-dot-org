@@ -123,7 +123,8 @@ when this actor [ space ▾ ] is pressed        (was: a key is pressed → if �
 - **One parameter on an event, for now.** `emit … with` carries a single
   detail, so one filter falls out of the existing runtime for free. Several
   would mean the detail becomes a list and the guard compares positionally —
-  worth doing when something wants it, not before.
+  worth doing when something wants it, not before. (Since done, and exactly
+  that way: specs/EVENT_VALUES_PLAN.md.)
 - **Equality is `!==`.** Sound for enums, which are strings by construction.
   A filter on a vector parameter would need `WorldLab.sameValue`; enums do not,
   so that arrives with multi-parameter filters or not at all.

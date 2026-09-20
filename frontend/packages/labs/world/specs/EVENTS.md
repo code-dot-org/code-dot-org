@@ -1,6 +1,8 @@
 # Exploration: the event model, for interfaces
 
 STATUS: PROPOSED, and deliberately a list of ideas rather than a design.
+Ideas 1 and 2 have since been built (specs/EVENT_VALUES_PLAN.md); the rest
+stand as written.
 Written beside specs/UI_ACTORS.md, which argues that an interface element
 is an actor, and after specs/APPS.md, which found six things an app wants
 that a game did not. This one asks a narrower question: what would an event
@@ -47,6 +49,8 @@ Each with what it buys, what it costs, and whether a game wants it too.
 
 ### 1. An event carries named values
 
+BUILT — specs/EVENT_VALUES_PLAN.md.
+
 `define event ⟨changed⟩ with ⟨text was⟩ ⟨text now⟩`, and the hat hands both
 over. Today a handler gets one unnamed thing, so an event that is about two
 things either picks one and loses the other, or smuggles a pair through as
@@ -66,6 +70,8 @@ hands over its item, rather than a socket.
   today the amount is lost.
 
 ### 2. Those values are typed
+
+BUILT — specs/EVENT_VALUES_PLAN.md.
 
 `event value` reports `null`, which fits every socket: plug the Text
 Input's `changed` into a number and nothing complains until it runs.

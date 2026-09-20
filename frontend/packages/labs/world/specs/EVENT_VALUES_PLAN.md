@@ -1,7 +1,8 @@
 # Plan: named, typed values on an event (EVENTS.md, ideas 1 and 2)
 
-STATUS: PROPOSED. The first two ideas of specs/EVENTS.md, which is otherwise
-deferred. The working record, as the other plans are.
+STATUS: BUILT, not yet seen in the browser. The first two ideas of
+specs/EVENTS.md, which is otherwise deferred. The working record, as the
+other plans are.
 
 ## What an event can say today, and what it cannot
 
@@ -45,8 +46,9 @@ reads each one by that name, typed.**
   the signature drawer `define block`'s surface offers — the `let` blocks
   first, then wording, then `argument` with its type dropdown — and
   `buildArguments_` writes an event's parts as those same blocks. The
-  `choice` item stops being offered and stops being written; it stays
-  DEFINED and readable, because a saved document may hold one.
+  `choice` item stops being offered and stops being written, and is
+  retired outright with the per-type items beside it — nothing in the
+  repository holds one, and this lab has never shipped.
 - **A value the author named gets a block with that name on it.** Per
   event, per parameter: `world_carried_<Rule>_<Event>_<Name>`, wearing the
   parameter's name, typed by the parameter's type, generating the
@@ -114,8 +116,92 @@ block`'s body shares one with its signature, and a generated closure
 
 ## Commits
 
+- `631e6ba418e` — this plan.
+- `9c6d54f2731` — the engine: the queue carries a list, `emit` and
+  `emitToWorld` take as many values as they are given, handlers are called
+  with them spread.
+- `1d7a83bfb11` — the editor: the signature drawer on the event surface,
+  the hat's wording and per-value filters, the blocks that name what an
+  event carries and the `+` that offers them, the preview, and the stock
+  DSL's guard. The retired signature items go with it.
+
 ## Learned while building
+
+- **Half of this was already built, and could never have worked.** The
+  `emit` block has made a socket per parameter of any type since
+  specs/ENUMS.md, and generated `world.emit(Ev, actor, a, b)` — every
+  value, positionally. The engine took the first and dropped the rest with
+  no complaint anywhere. The block half was right and the transport was
+  never widened to meet it.
+- **One line said the quiet part.** The stock-rule DSL refused a second
+  value outright, in `declareEvent`, with the reason written out: "there
+  is one `eventValue` to bind". Nothing else in the lab said so, which is
+  why the `emit` block could be built past it without anybody noticing.
+- **Every filter compared the same value, and was right by luck.** The
+  guard a hat generates read `eventValue` whatever parameter the filter
+  was for. With one carried value that is the only value there is; with
+  two it would have compared the wrong one. The filters carry the index of
+  the value they are for now.
+- **A value the hat could not filter on was dropped from its wording.**
+  `define event ⟨is damaged by⟩ ⟨amount: number⟩` drew as `when ⟨this
+actor⟩ is damaged by` — the sentence trailed off and the number was
+  invisible on both the hat and the `define event` preview. An unfiltered
+  value is a word on the hat now.
+- **The preview never drew an actor's kind dropdown**, though the hat has
+  drawn one since contact events were designed. The one thing a preview
+  promises is that what is designed is what turns up, and for every
+  contact hat in the library it was not.
+
+- **Two filters could be the same field.** A kind filter was numbered among
+  the kind filters and the enum filters together; an enum filter was
+  numbered among the enum filters alone. An event filtering on both gave
+  the two dropdowns the name `FILTER0`. Nothing in the library mixes them,
+  which is why it went unseen, and a signature that may name several
+  values makes mixing them ordinary. Both are numbered across both now.
+- **Retiring the `choice` item retired six more.** `define event` wrote its
+  parts as one item block per parameter type, and those items were in no
+  drawer — only the designer ever made one. With both designers writing the
+  same items, `world_signature_choice` and `world_signature_<type>` are
+  written by nothing and offered by nothing, so they are gone rather than
+  left registered.
 
 ## Not built, and known
 
+- **A value is read by a block, not bound to a variable.** The handler is
+  in another file from the declaration, so the two cannot share a variable;
+  what a learner gets is a block per value, which is what `event actor`
+  already was. It cannot be renamed from the handler, and renaming the
+  parameter in the signature loses what was plugged in — the same bargain
+  the `emit` block's sockets make.
+- **A lone actor still says `event actor`**, so an event whose one value is
+  an actor does not show the author's name for it. Every contact hat in the
+  library is that shape.
+- **`event actor` and `event value` still mean the FIRST value**, wherever
+  they are used. Under a hat whose signature puts an actor second, `event
+actor` is wrong — it is not offered there, and nothing stops a learner
+  dragging one in from the Actor drawer.
+- **The subject is not in the `+`.** The flyout holds what the event
+  carries; `this actor` is the default in every actor socket already and is
+  a drawer away.
+- **Nothing in the library carries two values yet.** The path is exercised
+  by tests over a project-declared event, not by a shipped rule.
+
 ## What to look at in the browser
+
+In a `.rule`, `define event` → pencil: the drawer should lead with the
+`let` blocks, as a `define block`'s does, and there should be no `choice`
+item anywhere. Design `is damaged by ⟨who: actor⟩ ⟨amount: number⟩`: the
+preview row should draw a kind dropdown for `who` and the word `amount`,
+and the hat in the toolbox should match it exactly.
+
+On that hat, the `+` should open a flyout holding `who` and `amount`.
+Dragging `amount` out should give a block that plugs into a number socket
+and refuses an actor one; `who` should plug into an actor socket and draw
+the kind's picture.
+
+The `emit` block should show two sockets. Raise it with a number in one and
+watch the handler read the same number back — the whole point, and the half
+that could not work before.
+
+On a contact hat (`starts touching`), the `+` should be unchanged: one
+block, `event actor`.
