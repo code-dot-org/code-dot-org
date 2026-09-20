@@ -128,6 +128,12 @@ rule over what already works, not new machinery.
 
 ### 6. Text entry
 
+BUILT but for the keyboard — specs/FIELDS_PLAN.md. A hint, a number kind,
+a "looks wrong" a project sets, and Enter saying the answer is finished.
+The on-screen keyboard is the remainder, and the guess below was wrong
+about it: it is a stock map of Buttons and one action on the field, not an
+engine change, because nothing needs to press a key.
+
 No placeholder, no input kind, no validity, no "done" or "next", no
 on-screen keyboard. On a phone the last one is not optional, and it is the
 piece most likely to be a real engine change rather than a rule.
@@ -188,8 +194,9 @@ is a day's work that should be done once, not twice.
    the one thing that came out differently.
 5. **Navigation** — DONE (specs/SCREENS_PLAN.md): go to, go back,
    replace, and which screen is showing.
-6. **Text entry** — a hint, a kind, a done key; the on-screen keyboard
-   assessed on its own.
+6. **Text entry** — DONE but for the keyboard (specs/FIELDS_PLAN.md): a
+   hint, a number kind, a validity a project sets, and a done key. The
+   on-screen keyboard is a stock map, not an engine change.
 
 Then the progression, and the parameterising that a second one needs.
 

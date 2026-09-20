@@ -165,7 +165,7 @@ a rule pulls its dependencies.
 | Progress Bar | a bar whose length is a number                    | DONE                                        |
 | Health Bar   | a Progress Bar filled from somebody's health      | DONE (acts like)                            |
 | Speech Box   | a Label that lets its line out a letter at a time | DONE                                        |
-| Text Input   | one line you can type in                          | BUILT, on the shelf (`story/form`)          |
+| Text Input   | one line you can type in                          | BUILT — hint, numbers only, validity, done  |
 | Text Area    | several lines you can type in                     | BUILT — Enter is a line; no wrap, no scroll |
 | Dropdown     | a list of words, one of them chosen               | BUILT — `choices`, `chosen`, keyboard too   |
 | Panel        | a background behind a group                       | BUILT — a Label with no words, and children |

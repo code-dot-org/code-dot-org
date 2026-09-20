@@ -1,6 +1,6 @@
 # Plan: a field you can build a form out of (APPS.md, missing thing 6)
 
-STATUS: PROPOSED. The last of the six things specs/APPS.md says an app
+STATUS: BUILT, not yet seen in the browser. The last of the six things specs/APPS.md says an app
 wants. The working record, as the other plans are.
 
 ## What the Text Input is, and what a form asks of it
@@ -74,8 +74,45 @@ not an engine change, and it is the next piece rather than this one.
 
 ## Commits
 
+- `3e9cae9bd1b` — this plan, and the on-screen keyboard priced.
+- `c62554f8b21` — the four, the drawing, and seven cases that play them.
+
 ## Learned while building
+
+- **An outline is paint, not a command.** It arrives in the picture as
+  `stroke` on the shape it was drawn with (`core/drawing`), so a test
+  looking for an `outline` command finds nothing however red the edge is.
+- **`draw paragraph` draws the actor's OWN words.** Every other caller
+  wants exactly that, so the hint is the one line in the file that says
+  the same thing with the text swapped.
+- **The digits test wanted no new block.** The text drawer says plainly
+  that `indexOf` and its family are "string surgery with no reading in a
+  world yet"; a list of twelve characters and `has` reads better than
+  either a new block or a regular expression.
 
 ## Not built, and known
 
+- **One kind, and it is numbers.** Letters-only, no-spaces and a length
+  limit are each a line in a project's own handler, and each would be a
+  word in a vocabulary this does not have.
+- **Nothing validates.** `looks wrong` is a boolean somebody else sets.
+  The field will not tell you an email is not one, and should not.
+- **Enter does not move on.** Tab does, through Tab Navigation; a form
+  where Enter goes to the next field rather than submitting is a decision
+  a project can make in the `is done` handler.
+- **The Text Area gets none of this.** A hint would suit it; a number
+  kind would not, and `is done` means something else where Enter makes a
+  line.
+- **The on-screen keyboard**, which is the last thing on the apps list
+  and, per the section above, a stock map rather than an engine change.
+
 ## What to look at in the browser
+
+A form. Two fields, one with a hint and one that takes numbers only. The
+hint should be dim, should be there before anything is typed, and should
+go on the first keystroke rather than needing deleting. The number field
+should refuse letters while taking `-1.5`.
+
+Set `looks wrong` on one from a handler and its edge should go red while
+the other stays. Press Enter in a field and the handler should fire with
+what was typed still in it.
