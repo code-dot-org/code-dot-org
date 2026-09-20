@@ -1765,9 +1765,15 @@ export class World {
    * The sum of every `delta` it has been ticked by, NOT a reading of the wall
    * clock. Three things follow, and all three are the point:
    *
-   * A world that is not ticking does not age. Pause the game and time stops
-   * with it, which is what a learner means by "two seconds later" — two seconds
-   * of game, not two seconds of sitting in a paused tab.
+   * A world that is not RUNNING does not age. A world nobody ticks does not,
+   * and neither does a paused one — `tick` leaves this alone while the game is
+   * paused, though it still runs the `sense` steps so the menu that paused it
+   * can be clicked. That is what a learner means by "two seconds later": two
+   * seconds of game, not two seconds of sitting in a menu.
+   *
+   * It is why `the time now` is a separate block. Everything measured in this
+   * — a cooldown, a lifetime, a delay — should wait while the game does, and
+   * the wall clock should not (specs/CLOCK_PLAN.md).
    *
    * It agrees exactly with anything integrated from `delta`. A bullet that has
    * traveled `speed × 2` has an age of exactly 2, because the same numbers
@@ -2966,7 +2972,17 @@ export class World {
     this.inTick = true;
     // Before the steps, so every step in this frame reads one value, and that
     // value is the time the positions they compute belong to (see `time`).
-    this.elapsed += delta;
+    //
+    // AND NOT WHILE PAUSED, which is what `time` has always said it did and
+    // did not do. A paused world still TICKS — the driver keeps calling this
+    // so `sense` runs and a menu's buttons still work — so "a world that is
+    // not ticking does not age" was true of a world nobody ticked and false of
+    // a paused one. The cost was quiet: a cooldown started before a pause
+    // expired during it, so a menu was somewhere to go and wait for your
+    // weapon to reload.
+    if (!this.paused) {
+      this.elapsed += delta;
+    }
     // …and the same for what time it is out there, for the same reason: two
     // blocks a line apart must not land on opposite sides of a second.
     if (this.clock) {

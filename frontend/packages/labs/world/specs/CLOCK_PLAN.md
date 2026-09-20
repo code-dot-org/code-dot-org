@@ -16,7 +16,22 @@ two minutes of wall time moves them differently, and that is not a bug in
 either — it is the difference between game time and real time, and the lab
 would be lying to hide it behind one word.
 
-Nothing was changed about `time`.
+One thing WAS changed about `time`, and finding it is what building this
+clock was good for. `World.time`'s own documentation said "pause the game and
+time stops with it", the block's tooltip said the same, and the code added the
+delta unconditionally — so it did not. A paused world still ticks, because the
+driver keeps calling `tick` so the `sense` steps run and the menu that paused
+the game can be clicked; "a world that is not ticking does not age" was true of
+a world nobody ticked and false of a paused one.
+
+The cost was quiet and real: everything measured in `time` is a cooldown, a
+lifetime or a delay, so a menu was somewhere to go and wait for your weapon to
+reload, and a bullet could expire behind a pause screen. `tick` now leaves
+`elapsed` alone while paused, which is what both docs always claimed.
+
+An existing test asserted the opposite ("keeps its clock running") with no
+reason given, so the repo had been contradicting itself in three places. It
+asserts the documented behaviour now, and says which way it used to read.
 
 ## Lent, not read
 

@@ -80,10 +80,38 @@ describe('a paused world', () => {
     expect(ran).toEqual(['sense:', 'decide', 'react']);
   });
 
-  it('keeps its clock running', () => {
+  it('stops its clock, because a paused game is not two seconds later', () => {
+    // THIS ASSERTED THE OPPOSITE, and the repo disagreed with itself about
+    // which was right: `World.time` said "pause the game and time stops with
+    // it" and the block's tooltip said the same, while the code added the
+    // delta unconditionally and this test pinned that.
+    //
+    // The docs had it. Everything measured in `time` is a cooldown, a
+    // lifetime or a delay, and all of them should wait while the game does —
+    // otherwise a menu is somewhere to go and wait for your weapon to reload.
+    // The wall clock is the one that should keep running, and it is a block
+    // of its own now (`the time now`, specs/CLOCK_PLAN.md).
     const {world} = fallingWorld();
     world.pause();
     world.tick(1);
+    expect(world.time()).toBe(0);
+
+    world.resume();
+    world.tick(1);
     expect(world.time()).toBeCloseTo(1, 5);
+  });
+
+  it('leaves an actor the age it was when the game stopped', () => {
+    // The same fact read through the other number a project asks: an age is
+    // measured against the same clock, so a bullet does not expire behind a
+    // pause menu.
+    const {world} = fallingWorld();
+    world.tick(1);
+    const [actor] = [...world.actors];
+    const aged = actor.age();
+
+    world.pause();
+    world.tick(5);
+    expect(actor.age()).toBeCloseTo(aged, 5);
   });
 });
