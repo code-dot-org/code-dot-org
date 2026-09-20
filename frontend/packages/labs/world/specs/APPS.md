@@ -104,6 +104,11 @@ what an app can SHOW, and it needs the finger first.
 
 ### 4. Data that survives
 
+BUILT — specs/SAVING_PLAN.md, and on the condition the world-state spec
+set: what a saved thing IS was said before one was built. It is the
+world's own properties and value lists, under a name the project chooses,
+written when a block says so.
+
 There is none. specs/WORLD_STATE.md ends by saying so: "nothing here
 persists across a reload". Nothing in the engine, the blocks or the rules
 touches storage. The smallest step that makes apps honest is a world's own
@@ -178,7 +183,9 @@ is a day's work that should be done once, not twice.
    one of nine named places, resolved against the window at load.
 3. **A list view** — DONE for words (specs/LIST_PLAN.md); a row per item
    of a value list, scrolling. Rows made of ACTORS are still open.
-4. **Saving** — world state and lists, per project.
+4. **Saving** — DONE (specs/SAVING_PLAN.md): the world's own memory under
+   a name the project chooses. Per NAME rather than per project, which is
+   the one thing that came out differently.
 5. **Navigation** — DONE (specs/SCREENS_PLAN.md): go to, go back,
    replace, and which screen is showing.
 6. **Text entry** — a hint, a kind, a done key; the on-screen keyboard

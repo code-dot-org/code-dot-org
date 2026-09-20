@@ -1,6 +1,6 @@
 # Plan: data that survives (APPS.md, missing thing 4)
 
-STATUS: PROPOSED. The fourth of the six things specs/APPS.md says an app
+STATUS: BUILT, not yet seen in the browser. The fourth of the six things specs/APPS.md says an app
 wants, and the one it puts most bluntly: "a note-taking app that forgets
 is a drawing of a note-taking app". The working record, as the other plans
 are.
@@ -94,8 +94,52 @@ behind it should do.
 
 ## Commits
 
+- `cde900a5bfb` — this plan, and what a saved thing is.
+- `fd1dcf23410` — the seam, the three operations, the three blocks, the
+  driver lending the preview's storage.
+
 ## Learned while building
+
+- **Restoring belongs in a handler, not in a world's body**, and a test
+  said so before any browser could. The storage is lent once the world
+  EXISTS, and a world's body runs while it is still being described — so
+  `load what the world remembered` written there would answer false every
+  time. `when ⟨…⟩ is created` runs on the first tick, which is after, and
+  is where an app should put it.
+- **The check that caught it is the builder-surface one**, which asks that
+  every `world.<call>` a block can emit either exists on the builder or is
+  written down as runtime-only with a reason. Three new calls, three
+  reasons, and the reason turned out to be the design note above.
+- **Reading `localStorage` can throw**, not merely answer nothing, where a
+  browser has site data blocked. So the driver's test is an access in a
+  `try` rather than a property check, and every operation answers false
+  rather than taking the game down.
 
 ## Not built, and known
 
+- **Nothing is saved automatically.** A block says when. An app that saves
+  halfway through an edit is a bug nobody asked for, and when a thing is
+  "done" is the project's to decide.
+- **No actors.** What a saved GAME is stays unanswered, deliberately: it
+  wants a vocabulary for identity across runs that this language does not
+  have.
+- **The name is the whole key.** Two projects that both save as `notes`
+  share one memory on one browser. That is visible in the blocks rather
+  than hidden in plumbing, which is the trade; keying by project instead
+  wants an identity that reaches the running game.
+- **Nothing lists or clears memories from the lab.** A learner can forget
+  one by name from inside their own project and no other way.
+- **No versioning.** A saved shape that changes is one a learner clears.
+
 ## What to look at in the browser
+
+An app that outlives a reload, which is the only way to see this at all. A
+world with a list of its own, a Text Input that adds to it, `save what the
+world remembers as ⟨notes⟩` after each change, and `when ⟨…⟩ is created`
+doing the `load`. Type two notes, reload the preview, and they should
+still be there.
+
+Then `forget`, a reload, and they should be gone.
+
+The answers matter as much as the values: on a first run `load` should be
+false, and a start screen can say so.

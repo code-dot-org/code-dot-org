@@ -206,3 +206,8 @@ deferred calls, where order is the meaning.
 Saving. A world's state is a starting value and whatever the game has done to it
 since; nothing here persists across a reload, and nothing should until there is
 a reason to say what a saved game IS.
+
+ANSWERED SINCE, on that condition — specs/SAVING_PLAN.md. What a saved thing is
+was said first: the world's own memory, under a name the project chooses. Every
+property a world declared for itself, together. What a saved GAME is — which
+actors are alive and where — is still unanswered, and still deliberately.
