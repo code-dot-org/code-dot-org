@@ -783,6 +783,11 @@ export class World {
   // Rule steps read it through `isKeyDown`; keys carry OUR names — 'left arrow',
   // 'a', 'space' — which the driver translates the DOM's into (core/keys).
   private keys: ReadonlySet<string> = new Set();
+  // What the DRIVER last said, before anything the world pressed itself is
+  // folded in. `keys` is the two together and is what everything reads; this
+  // is kept apart so that a key the world pressed lasts one frame rather than
+  // sticking until the driver next speaks (`pendingKeys`).
+  private held: ReadonlySet<string> = new Set();
   /**
    * The characters TYPED since the last tick, in the order they were typed.
    *
@@ -796,6 +801,31 @@ export class World {
    * Drained by `tick`, so a frame sees exactly what was typed into it.
    */
   private typed: string[] = [];
+  /**
+   * What the WORLD typed, waiting for the next frame.
+   *
+   * A SEPARATE QUEUE FROM THE ONE ABOVE, because of when it is filled. The
+   * driver adds to `typed` between frames, which is before the Input rule's
+   * step reads it; a block adds here from a handler, and handlers run after
+   * every step and before the drain — so a character added to `typed` from an
+   * on-screen keyboard would be cleared at the end of the same tick without
+   * ever having been read (specs/KEYBOARD_PLAN.md).
+   *
+   * Folded into `typed` at the top of the next `tick`, in FRONT of that
+   * frame's own: an on-screen key was pressed a frame ago and a real keystroke
+   * arrived since, so that is the order they happened in.
+   */
+  private pendingTyped: string[] = [];
+  /**
+   * Keys the world pressed, waiting for the next frame — same reasoning.
+   *
+   * Held for exactly one tick, which is what makes it a keystroke rather than
+   * a key held down: the frame it is folded into is a rising edge against the
+   * previous frame's set, and the frame after — with nothing pending — is a
+   * falling edge. The Input rule turns both into events without knowing either
+   * came from a button.
+   */
+  private pendingKeys = new Set<string>();
   /**
    * Keys the game has asked the browser to leave alone.
    *
@@ -2329,7 +2359,10 @@ export class World {
 
   /** Replace the pressed-key set (driver calls this each frame before `tick`). */
   setInput(keys: Iterable<string>): void {
-    this.keys = new Set(keys);
+    this.held = new Set(keys);
+    // Answered straight away as well as at the top of `tick`, so a caller that
+    // sets the keys and asks `isKeyDown` without ticking gets what it said.
+    this.keys = this.held;
   }
 
   /**
@@ -2341,6 +2374,34 @@ export class World {
    */
   addTyped(characters: Iterable<string>): void {
     this.typed.push(...characters);
+  }
+
+  /**
+   * Type as if the player had — `type ⟨"a"⟩`.
+   *
+   * READ NEXT FRAME, not this one, and the lag is honest rather than a
+   * compromise: this is called from a handler, a handler runs after the step
+   * that reads what was typed, and a click IS a frame late. See `pendingTyped`
+   * and specs/KEYBOARD_PLAN.md.
+   *
+   * Nothing hears this as "the world typed" — it arrives exactly where the
+   * keyboard's characters arrive, so a Text Input, a Text Area and a project's
+   * own `types ⟨character⟩` handler all work with no change at all. That is the
+   * whole reason an on-screen keyboard types instead of reaching into a field.
+   */
+  type(characters: Iterable<string>): void {
+    this.pendingTyped.push(...characters);
+  }
+
+  /**
+   * Press and release a key as if the player had — `press the ⟨backspace⟩ key`.
+   *
+   * The counterpart to `type` for the keys that make no character: backspace,
+   * delete and enter are edits and commands, and a field handles them as
+   * `presses ⟨key⟩` (`actors/textInput`). Down for one frame, up the next.
+   */
+  pressKey(key: string): void {
+    this.pendingKeys.add(key);
   }
 
   /** What was typed since the last tick, in order. */
@@ -2744,6 +2805,19 @@ export class World {
     // Before the steps, so every step in this frame reads one value, and that
     // value is the time the positions they compute belong to (see `time`).
     this.elapsed += delta;
+    // …and so is anything the world typed or pressed last frame, which is the
+    // frame this one is (specs/KEYBOARD_PLAN.md). In front of what the driver
+    // added, since the button was clicked before those keystrokes arrived.
+    if (this.pendingTyped.length > 0) {
+      this.typed = [...this.pendingTyped, ...this.typed];
+      this.pendingTyped = [];
+    }
+    if (this.pendingKeys.size > 0) {
+      this.keys = new Set([...this.held, ...this.pendingKeys]);
+      this.pendingKeys = new Set();
+    } else {
+      this.keys = this.held;
+    }
     try {
       this.scheduler.run(this, delta, this.paused ? whilePaused : undefined);
       // Handlers run here, and a handler is where "remove that coin" comes

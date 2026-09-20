@@ -106,10 +106,30 @@ const focused = focusable.boolean('focused', 'false', {readonly: true});
  */
 const tabOrder = focusable.number('tab order', 0);
 
+/**
+ * Whether pointing at this actor brings the keyboard to it.
+ *
+ * TRUE FOR EVERYBODY, and the one thing it is false for is a key on an
+ * on-screen keyboard. Such a key is a Button, and a Button takes the focus
+ * when it is clicked — which is right for every button in a menu and exactly
+ * wrong here: tapping `a` would take the typing away from the field the `a`
+ * was meant for, and the field would go dark on the first keystroke
+ * (specs/KEYBOARD_PLAN.md).
+ *
+ * It is also out of the TAB ROUTE while this is false, which is the same fact
+ * read the other way: an actor the keyboard cannot come to is not somewhere
+ * Tab should stop, and a Tab that stopped there would find `take the focus`
+ * doing nothing and leave the focus where it was — a route with a hole that
+ * swallows it. A keyboard user has a keyboard and does not need this one.
+ */
+const takesKeyboard = focusable.boolean('takes the keyboard', 'true');
+
 const gainsFocus = focusable.event(['gains focus']);
 const losesFocus = focusable.event(['loses focus']);
 
 const other = rule.local('other', 'Actor');
+/** The route's own local, so the filter inside it cannot collide with a walk. */
+const listed = rule.local('listed', 'Actor');
 const ranked = rule.local('ranked', 'Actor');
 const candidate = rule.local('candidate', 'Actor');
 const chosen = rule.local('chosen', 'Actor');
@@ -118,10 +138,18 @@ const passed = rule.local('passed', 'Boolean');
 const found = rule.local('found', 'Boolean');
 const key = rule.local('key', 'String');
 
-/** Everyone who can hold the focus, in the order Tab visits them. */
+/**
+ * Everyone Tab visits, in the order it visits them.
+ *
+ * NOT everyone who can hold the focus: an actor with `takes the keyboard` off
+ * is one the pointer presses and the keyboard passes over (see the property).
+ */
 const inOrder = () =>
   orderedActors(ranked, {
-    from: allWithTrait(rule.traitRef('Can Be Focused')),
+    from: filter(listed, {
+      from: allWithTrait(rule.traitRef('Can Be Focused')),
+      where: takesKeyboard.of(listed.get()),
+    }),
     key: tabOrder.of(ranked.get()),
   });
 
@@ -150,6 +178,11 @@ const release = () =>
  * call from a click handler that fires every frame the button is held. Without
  * the guard, re-focusing would raise `loses focus` and `gains focus` on one
  * actor, over and over, and a handler counting either would count nonsense.
+ *
+ * AND NOTHING IF THIS ACTOR SAYS NOT TO. `takes the keyboard` is how a control
+ * that is only ever pointed at stays out of the way of whatever is being typed
+ * into — the refusal is HERE rather than in each caller, because the Button
+ * that calls this is on the shelf and a map that places one cannot edit it.
  */
 const takeFocus = focusable.block({
   returns: 'none',
@@ -162,7 +195,7 @@ const takeFocus = focusable.block({
     ),
     when([
       [
-        not(focused.of(thisActor())),
+        both(not(focused.of(thisActor())), takesKeyboard.of(thisActor())),
         [
           note('Whoever had it lets go first, so the two never overlap.'),
           release(),

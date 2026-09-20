@@ -569,6 +569,17 @@ The policy, and it is an accessibility contract rather than a convenience:
 - Tabbing ONTO the game from elsewhere on the page focuses the first focusable
   actor in it. Clicking onto it does not — a click says where it landed.
 - The element announces this to a screen reader on arrival.
+- **A control may say it never takes the keyboard.** `takes the keyboard` is
+  true for everybody; a control that turns it off is one the pointer presses
+  and the route skips, and `take the focus` refuses it. It exists for the keys
+  of the on-screen keyboard (specs/KEYBOARD_PLAN.md), which must not take the
+  typing away from the field they are filling — and skipping them in the route
+  is right on its own terms, since somebody tabbing has a keyboard already.
+  The refusal lives in `take the focus` rather than in each caller, because the
+  Button that calls it is on the shelf and a map that places one cannot edit
+  it. Skipping them is not optional either: a Tab that stopped on such a
+  control would call `take the focus`, have it do nothing, and leave the focus
+  where it was — a hole in the route that swallows it.
 
 How it is built, in three pieces:
 
@@ -1103,7 +1114,7 @@ button ⟨left⟩ is down`, letting go when it comes up. There is no drag
    worse; and nothing scrolls — long lines and long paragraphs are clipped.
    Both are the next things to add.
 
-### The second axis: stock interface MAPS — the first one is built
+### The second axis: stock interface MAPS — two of them are built
 
 The pause menu is on the shelf (`maps/stock`, `maps/importStockMap`): a
 `.map` placing a Pause Menu panel and two plain Buttons named Resume and
@@ -1159,16 +1170,43 @@ It is also the case that forces the two questions this document has deferred:
   than an imagined one, and it should be answered then: probably an anchor
   property on the interface layer's placements, not on the actors.
 
-The import for a map does not exist and is the one piece of machinery in this
-section: `ImportRuleDialog` has a shape, `importStockActor` walks
-dependencies, and a stock map is a `.map` file plus the actors it places,
-which is the same walk one level further out.
+The import for a map is built (`maps/importStockMap`): a stock map is a `.map`
+file plus the actors it places, so the import walks the actors first — each
+walking its own rules and pictures — and writes the map last, never over one
+the project already has.
+
+**The second stock map is the on-screen keyboard** (specs/KEYBOARD_PLAN.md):
+`maps/keyboard`, a Panel holding five rows of Buttons, anchored to the bottom
+of the window. It is the case that proves the axis, because it is plainly a
+LAYOUT and not a control — a `Keyboard` actor would have had forty captions
+and a grid inside it, and a project could not have moved one key.
+
+What building it found, both of which are about a frame rather than about
+keyboards:
+
+- **What the world types belongs to the NEXT frame.** A key's handler runs at
+  the event flush, which is after the step that reads what was typed and before
+  the drain at the end of the tick — so a character added the driver's way
+  would be cleared without ever being read. `type ⟨…⟩` and `press the ⟨…⟩ key`
+  queue for the following frame, which is honest: a click IS a frame late.
+- **A key must not take the focus.** A Button takes the focus when it is
+  clicked, and here that takes the keyboard away from the field the keystroke
+  was meant for. `Tab Navigation` grew `takes the keyboard`, true for
+  everybody and off on each key — which also keeps forty keys out of the tab
+  route, where they have no business.
+
+And what it did NOT need: no field is named anywhere on that map. Every key
+raises what the real keyboard raises, so a Text Input, a Text Area and a
+project's own `types ⟨character⟩` handler all fill from it unchanged, and a
+form of three fields needs no wiring at all — whichever one has the focus is
+the one already listening.
 
 ### What a phone-shaped kit does not yet answer
 
 The Interface Kit runs at a phone's shape, and nothing in the lab has met a
-FINGER. Phaser reports a tap as a pointer press, so a Button works; what a
-touch screen has no answer for is hover, a right button, Tab, and Escape as
+FINGER. Phaser reports a tap as a pointer press, so a Button works, and a
+finger now has something to type on (`maps/keyboard`, above); what a touch
+screen still has no answer for is hover, a right button, Tab, and Escape as
 "drop the focus". None of the rows above adds a dependency on those, and that
 is deliberate — but before any of this is claimed for mobile, the driver's
 touch path wants a test that taps, the way the play test clicks.

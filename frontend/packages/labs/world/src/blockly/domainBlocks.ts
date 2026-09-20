@@ -9825,6 +9825,80 @@ const worldCaptureKey = defineBlock({
   },
 });
 
+/**
+ * `type ⟨"a"⟩` — put characters in as if the player had typed them.
+ *
+ * WHAT AN ON-SCREEN KEYBOARD IS MADE OF. A phone has no keyboard until
+ * something draws one, and what it draws is a map of Buttons; the script on
+ * the `a` button is this block with an `a` in it (specs/KEYBOARD_PLAN.md).
+ *
+ * IT DOES NOT NAME A FIELD, which is the point. A keyboard written as "put an
+ * `a` in the Text Input" works for the Text Input and nothing else — not the
+ * Text Area, not a project's own `types ⟨character⟩` handler, not a form where
+ * the keyboard has to find whichever field has the focus. Everything that
+ * fills with text already listens to the same event, so this raises that event
+ * and they all work unchanged.
+ *
+ * READ NEXT FRAME. This runs in a handler, and a handler runs after the step
+ * that reads what was typed — so the character belongs to the frame after the
+ * click, which is the frame the click was a frame late for anyway
+ * (`World.type`).
+ */
+const worldType = defineBlock({
+  type: 'world_type',
+  message0: 'type %1',
+  args0: [{type: 'input_value', name: 'TEXT', check: 'String'}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'Type these characters as if they came from the keyboard. Whatever is ' +
+    'listening for typing hears them — a text field, or your own handler.',
+  generator: {
+    javascript(block, generator) {
+      const text = generator.valueToCode(block, 'TEXT', Order.NONE) || "''";
+      return `world.type(String(${text}));\n`;
+    },
+  },
+});
+registerValueShadows('world_type', [
+  {name: 'TEXT', shadow: {type: 'text', fields: {TEXT: ''}}},
+]);
+
+/**
+ * `press the ⟨backspace⟩ key` — as if the player had, down one frame and up
+ * the next.
+ *
+ * THE OTHER HALF OF AN ON-SCREEN KEYBOARD. Backspace, delete and enter make no
+ * character, so `type` cannot say them; a field handles all three as
+ * `presses ⟨key⟩` (`actors/textInput`), and this is what a button on the map
+ * puts in front of that handler.
+ *
+ * ONE FRAME, which is what makes it a keystroke rather than a key held down:
+ * the frame it lands in is a rising edge and the frame after is a falling one,
+ * so the Input rule raises `is pressed` and then `is released` without knowing
+ * either came from a button (`World.pressKey`).
+ */
+const worldPressKey = defineBlock({
+  type: 'world_press_key',
+  message0: 'press the %1 key',
+  args0: [{type: 'field_dropdown', name: 'KEY', options: keyOptions()}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'Press and release this key as if the player had. For the keys that ' +
+    'type nothing — backspace, delete, enter.',
+  generator: {
+    javascript(block) {
+      return `world.pressKey(${str(block.getFieldValue('KEY'))});\n`;
+    },
+  },
+});
+
 /** `release the ⟨tab⟩ key` — hand it back, which is half the bargain above. */
 const worldReleaseKey = defineBlock({
   type: 'world_release_key',
@@ -10222,6 +10296,8 @@ export const DOMAIN_BLOCKS = [
   worldTextWidth,
   worldCaptureKey,
   worldReleaseKey,
+  worldType,
+  worldPressKey,
   worldKeyboardArrived,
   worldDefineTween,
   worldPlayTween,
@@ -10660,6 +10736,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_save_memory',
       'world_recall_memory',
       'world_forget_memory',
+      // …and how a world types without a keyboard, which is what an app on a
+      // touch screen has to do. A map of Buttons calls these, and whatever is
+      // listening for typing hears them (specs/KEYBOARD_PLAN.md).
+      'world_type',
+      'world_press_key',
       // Here as well as in Actor, because this is the category a world file is
       // built from and `any ⟨Coin⟩` is what its blocks take as a subject. It is
       // also how "remove every coin" is written: `remove actor` over a value

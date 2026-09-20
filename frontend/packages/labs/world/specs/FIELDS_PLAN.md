@@ -64,13 +64,19 @@ Four small things on the Text Input, which is where all four belong.
 
 ## What this deliberately leaves
 
-**The on-screen keyboard**, which specs/APPS.md calls the piece most
-likely to be a real engine change. Looked at, it is not one: `capture the
-⟨…⟩ key` only stops the browser's default and cannot press anything, but
-nothing needs to press anything. An on-screen keyboard is a MAP of Buttons
-and one action on the field — put this character in — which is the same
-insert the `types` handler already does. It is a stock map and an action,
-not an engine change, and it is the next piece rather than this one.
+**The on-screen keyboard** — BUILT since, and specs/KEYBOARD_PLAN.md has
+it. Half of the pricing below held and half did not, which is worth
+leaving standing rather than editing away.
+
+The guess was: an on-screen keyboard is a MAP of Buttons and one action on
+the field — put this character in — so a stock map and an action, not an
+engine change. The map was right. The action was wrong twice over. An
+action on the FIELD names the field, and a keyboard that names a field
+works for that field and nothing else; and `type ⟨…⟩`, which names
+nothing, could not be written over `addTyped` because a click handler runs
+after the step that reads what was typed. It took two engine additions —
+what the world types belongs to the next frame, and a control may say it
+never takes the focus.
 
 ## Commits
 
@@ -103,8 +109,9 @@ not an engine change, and it is the next piece rather than this one.
 - **The Text Area gets none of this.** A hint would suit it; a number
   kind would not, and `is done` means something else where Enter makes a
   line.
-- **The on-screen keyboard**, which is the last thing on the apps list
-  and, per the section above, a stock map rather than an engine change.
+- **The on-screen keyboard**, the last thing on the apps list — built
+  since, and it cost two engine additions the pricing above did not
+  foresee (specs/KEYBOARD_PLAN.md).
 
 ## What to look at in the browser
 

@@ -6,6 +6,7 @@
 // actors it places, and importing one walks that list the way importing an
 // actor walks its rules (`maps/importStockMap`).
 
+import {keyboardMap} from './keyboard';
 import {pauseMenuMap} from './pauseMenu';
 
 export interface StockMap {
@@ -28,6 +29,14 @@ export const STOCK_MAPS: readonly StockMap[] = [
       'A panel that says PAUSED with a Resume and a Quit button. Load it when a key is pressed and “pause the game”; Resume takes it away, and Quit says “quit” for the world to decide what that means.',
     actors: ['panel', 'label', 'button'],
     contents: pauseMenuMap,
+  },
+  {
+    id: 'keyboard',
+    name: 'On-Screen Keyboard',
+    description:
+      'Five rows of keys that type. Load it when a text field takes the focus and unload it when nothing has the focus — every key types as if the real keyboard had, so whichever field is focused fills.',
+    actors: ['panel', 'button'],
+    contents: keyboardMap,
   },
 ];
 

@@ -81,6 +81,10 @@ const RUNTIME_ONLY: Record<string, string> = {
     'world\u2019s body: `when \u27e8…\u27e9 is created` runs on the first tick, ' +
     'which is after the driver has lent the storage',
   forget: 'the same again',
+  type:
+    'typing is read by the frame after the one that typed it, and a world ' +
+    'still being described has no frames at all (specs/KEYBOARD_PLAN.md)',
+  pressKey: 'the same, for the keys that type nothing',
 };
 
 /**

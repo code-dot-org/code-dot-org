@@ -128,15 +128,23 @@ rule over what already works, not new machinery.
 
 ### 6. Text entry
 
-BUILT but for the keyboard — specs/FIELDS_PLAN.md. A hint, a number kind,
-a "looks wrong" a project sets, and Enter saying the answer is finished.
-The on-screen keyboard is the remainder, and the guess below was wrong
-about it: it is a stock map of Buttons and one action on the field, not an
-engine change, because nothing needs to press a key.
+BUILT, keyboard and all — specs/FIELDS_PLAN.md and
+specs/KEYBOARD_PLAN.md. A hint, a number kind, a "looks wrong" a project
+sets, and Enter saying the answer is finished; and `maps/keyboard`, five
+rows of Buttons that type.
 
-No placeholder, no input kind, no validity, no "done" or "next", no
-on-screen keyboard. On a phone the last one is not optional, and it is the
-piece most likely to be a real engine change rather than a rule.
+The guess below was half right. The keyboard IS a stock map, and no
+new kind of actor was wanted — but it took two engine additions after
+all, neither of them the one anybody would have guessed. `type ⟨…⟩` and
+`press the ⟨…⟩ key` exist because a click handler runs after the step
+that reads what was typed, so what the world types has to belong to the
+NEXT frame; and `takes the keyboard` exists because a Button takes the
+focus when it is clicked, which would have taken the keyboard away from
+the field on the first keystroke.
+
+The old note read: no placeholder, no input kind, no validity, no "done"
+or "next", no on-screen keyboard — and the last one is not optional on a
+phone.
 
 ## What would NOT have to change
 
@@ -194,9 +202,11 @@ is a day's work that should be done once, not twice.
    the one thing that came out differently.
 5. **Navigation** — DONE (specs/SCREENS_PLAN.md): go to, go back,
    replace, and which screen is showing.
-6. **Text entry** — DONE but for the keyboard (specs/FIELDS_PLAN.md): a
-   hint, a number kind, a validity a project sets, and a done key. The
-   on-screen keyboard is a stock map, not an engine change.
+6. **Text entry** — DONE (specs/FIELDS_PLAN.md, specs/KEYBOARD_PLAN.md):
+   a hint, a number kind, a validity a project sets, a done key, and a
+   keyboard to type it all on. The keyboard is a stock map, and what it
+   needed from the engine was a frame's worth of ordering rather than a
+   new control.
 
 Then the progression, and the parameterising that a second one needs.
 

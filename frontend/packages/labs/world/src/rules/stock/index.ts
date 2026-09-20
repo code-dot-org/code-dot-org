@@ -27,8 +27,8 @@ import {dragRule} from './drag';
 import {driveRule} from './drive';
 import {expiresRule} from './expires';
 import {flappingRule} from './flapping';
-import {goalsRule} from './goals';
 import {gesturesRule} from './gestures';
+import {goalsRule} from './goals';
 import {gravityRule} from './gravity';
 import {gridRule} from './grid';
 import {healthRule} from './health';
@@ -42,8 +42,8 @@ import {mouseRule} from './mouse';
 import {pathRule} from './path';
 import {patrolRule} from './patrol';
 import {prowlingRule} from './prowling';
-import {screensRule} from './screens';
 import {scoreRule} from './score';
+import {screensRule} from './screens';
 import {solidRule} from './solid';
 import {spawnerRule} from './spawner';
 import {steeringRule} from './steering';
@@ -279,7 +279,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     name: 'Tab Navigation',
     ability: 'Moves Focus with Tab',
     description:
-      'One actor at a time holds the keyboard. Tab moves the focus to the next control and Escape drops it, which is also what hands Tab back to the page. An actor can take the focus when it is clicked.',
+      'One actor at a time holds the keyboard. Tab moves the focus to the next control and Escape drops it, which is also what hands Tab back to the page. An actor can take the focus when it is clicked — or say it never does, for a control that is only ever pointed at.',
     provides: ['Can Be Focused'],
     contents: tabNavigationRule,
   },
