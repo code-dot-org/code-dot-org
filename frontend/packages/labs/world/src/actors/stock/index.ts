@@ -22,6 +22,7 @@ import {panelActor} from './panel';
 import {PLAYER_ANIMATION, playerActor} from './player';
 import {PORTRAIT_SPRITE, portraitActor} from './portrait';
 import {progressBarActor} from './progressBar';
+import {scrollViewActor} from './scrollView';
 import {shotActor} from './shot';
 import {sliderActor} from './slider';
 import {speechBoxActor} from './speechBox';
@@ -248,6 +249,20 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: [],
     actors: ['label'],
     contents: viewportActor,
+  },
+  {
+    id: 'scrollView',
+    name: 'Scroll View',
+    description:
+      'A window onto something taller than itself. Set its map and drag it, or tab to it and use the arrows; a bar down the edge says where you are. What a long screen, a settings page or a list of real rows is made of.',
+    // Shows a Map is the engine's own; the finger, the click and the keyboard
+    // are not. MOUSE IS EASY TO FORGET and fails silently: a hat naming a rule
+    // the project lacks is a stand-in, which generates nothing for itself and
+    // leaves what was chained under it at the top of the module — where it ran
+    // `actor.act(…)` with no actor to run it on.
+    requires: ['Gestures', 'Mouse', 'Tab Navigation', 'Input'],
+    actors: ['label'],
+    contents: scrollViewActor,
   },
   {
     id: 'portrait',

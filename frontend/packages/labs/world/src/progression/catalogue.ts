@@ -2669,6 +2669,11 @@ export const TILES: readonly Tile[] = [
       {kind: 'actor', id: 'list'},
       // …and the one that takes a paragraph.
       {kind: 'actor', id: 'textArea'},
+      // …and the one that shows more than fits WITHOUT knowing what is in it:
+      // a window onto a map of its own that a finger moves. A long screen, a
+      // settings page and a list whose rows are real actors are all this
+      // (specs/SCROLLING_PLAN.md).
+      {kind: 'actor', id: 'scrollView'},
       // …and a starting point that is an APP rather than a game genre. Every
       // other template is a kind of game; this is the one a learner opens to
       // find two screens, a form, a keyboard and a list already talking to

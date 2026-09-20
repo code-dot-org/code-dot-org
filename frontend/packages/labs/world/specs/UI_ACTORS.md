@@ -172,6 +172,7 @@ a rule pulls its dependencies.
 | Toggle       | a Button that is on or off                        | BUILT — `on`, `turned on`, `turned off`     |
 | Slider       | a Progress Bar the pointer drags                  | BUILT — `fraction`, `changed`, arrow keys   |
 | List         | a box of words you scroll and choose one of       | BUILT — drag, arrows, page keys, Enter      |
+| Scroll View  | a window onto something taller than itself        | BUILT — drag, arrows, a bar; holds a MAP    |
 
 Six of the eleven are built, and the three that arrived after this document was
 first written are the ones that changed what the rest should be. The two new
@@ -1219,6 +1220,24 @@ The pause menu is a screen and always was; it got the flag for one line. That
 also closed something `pause the game` never promised — a paused game still
 turns clicks into events, so the level's buttons were live underneath a menu
 asking whether to quit.
+
+### Showing more than fits — BUILT
+
+`actors/scrollView` (specs/SCROLLING_PLAN.md). The clip decided the design: a
+mask is a no-op in this Phaser, so anything that clips OTHER actors is a
+camera, and the thing with a camera of its own is the Viewport. A scrolling
+container is a Viewport plus a way to say where it is scrolled to — `scroll`
+and `content` on the trait, converted to the camera and clamped by the same
+`settleSpace` that already kept a level's camera inside its map.
+
+The clamped answer is written BACK, which is the part to remember: a project
+that scrolls past the end reads where it actually stopped, so a bar drawn from
+it cannot run off its track.
+
+It is not a List and knows nothing about rows. **A list whose rows are ACTORS
+is this with a map of rows in it** — which was the open question this table
+has carried since the List was built, and it is answered by building nothing
+further.
 
 ### What a phone-shaped kit does not yet answer
 

@@ -4,7 +4,12 @@
 // EventQueue. `tick(delta)` advances the simulation: run every Step in order,
 // then flush the events those steps raised.
 
-import {ViewportMapProperty, ViewportTrait} from '../rules/viewport';
+import {
+  ViewportContentProperty,
+  ViewportMapProperty,
+  ViewportScrollProperty,
+  ViewportTrait,
+} from '../rules/viewport';
 
 import type {Actor} from './Actor';
 import {anchored, isAnchor, type Anchor} from './anchors';
@@ -1992,11 +1997,19 @@ export class World {
     if (!camera || !space.owner) {
       return;
     }
-    const view = this.viewSizeOf(space.owner);
+    const owner = space.owner;
+    const view = this.viewSizeOf(owner);
     const position = this.positionalProperty(SPATIAL.position);
     let at = camera.position;
     if (space.follows && space.follows.world === this && position) {
       at = space.follows.get(position);
+    } else if (owner.has(ViewportTrait)) {
+      // NOTHING TO FOLLOW, so what the project SCROLLED to is where it looks.
+      // A scroll is measured from the top left of the content and a camera
+      // from its middle, so the two differ by half a window
+      // (specs/SCROLLING_PLAN.md).
+      const scrolled = owner.get(ViewportScrollProperty) as VectorLike;
+      at = new Vector(scrolled.x + view.x / 2, scrolled.y + view.y / 2);
     }
     // Inside the bounds, or at the middle of an axis the view is wider than.
     const clamp = (value: number, half: number, size: number) =>
@@ -2007,6 +2020,24 @@ export class World {
       clamp(at.x, view.x / 2, space.bounds.x),
       clamp(at.y, view.y / 2, space.bounds.y),
     );
+    // …and the answer written back, so what a project reads is where it
+    // actually stopped rather than what it asked for. A scrollbar drawn from
+    // an unclamped number runs off its track, and "am I at the bottom" would
+    // never be true for anybody who dragged past it.
+    if (owner.has(ViewportTrait)) {
+      const settled = new Vector(
+        camera.position.x - view.x / 2,
+        camera.position.y - view.y / 2,
+      );
+      const was = owner.get(ViewportScrollProperty) as VectorLike;
+      if (was.x !== settled.x || was.y !== settled.y) {
+        owner.set(ViewportScrollProperty, settled);
+      }
+      const bounds = owner.get(ViewportContentProperty) as VectorLike;
+      if (bounds.x !== space.bounds.x || bounds.y !== space.bounds.y) {
+        owner.set(ViewportContentProperty, space.bounds);
+      }
+    }
   }
 
   /**

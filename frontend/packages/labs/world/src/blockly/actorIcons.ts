@@ -28,6 +28,7 @@ import sliders from '@fortawesome/fontawesome-free/svgs/solid/sliders.svg?raw';
 import squareCaretDown from '@fortawesome/fontawesome-free/svgs/solid/square-caret-down.svg?raw';
 import toggleOn from '@fortawesome/fontawesome-free/svgs/solid/toggle-on.svg?raw';
 import tv from '@fortawesome/fontawesome-free/svgs/solid/tv.svg?raw';
+import upDown from '@fortawesome/fontawesome-free/svgs/solid/up-down.svg?raw';
 import windowMaximize from '@fortawesome/fontawesome-free/svgs/solid/window-maximize.svg?raw';
 
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
@@ -87,6 +88,10 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   health: tile(heartPulse),
   panel: tile(windowMaximize),
   viewport: tile(tv),
+  // A Scroll View is a Viewport in every other respect, so the symbol has to
+  // carry the one difference: it MOVES. A second screen glyph would have been
+  // the same smudge twice at 24 pixels, which is what these exist to avoid.
+  scroll: tile(upDown),
   input: tile(iCursor),
   paragraph: tile(paragraph),
 };

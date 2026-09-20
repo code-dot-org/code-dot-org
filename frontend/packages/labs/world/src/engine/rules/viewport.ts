@@ -18,6 +18,8 @@ export const VIEWPORT = {
   rule: 'viewport',
   trait: 'showsMap',
   map: 'map',
+  scroll: 'scroll',
+  content: 'content',
 } as const;
 
 const rule = new RuleBuilder({
@@ -37,6 +39,43 @@ export const ViewportMapProperty = ViewportTrait.addProperty(
   'string',
   '',
   {name: 'map'},
+);
+
+/**
+ * How far the window has been scrolled over what it holds, in pixels.
+ *
+ * FROM THE TOP LEFT OF THE CONTENT TO THE TOP LEFT OF THE WINDOW, which is
+ * what a scroll offset means everywhere else and is not what the camera holds.
+ * The camera is a MIDDLE, which is the right shape for a level a player walks
+ * around and the wrong one for a list: "scrolled to 0" should mean the top,
+ * not the middle of the first screenful (specs/SCROLLING_PLAN.md).
+ *
+ * KEPT HONEST BY THE ENGINE. `World.settleSpace` clamps the camera into the
+ * space's bounds every tick and writes the result back here, so a project that
+ * scrolls past the end reads back the place it actually stopped — which is
+ * what a scrollbar has to draw and what "am I at the bottom" has to ask.
+ */
+export const ViewportScrollProperty = ViewportTrait.addProperty(
+  VIEWPORT.scroll,
+  'vector',
+  {x: 0, y: 0},
+  {name: 'scroll'},
+);
+
+/**
+ * How big the thing being scrolled is, in pixels — the space's bounds.
+ *
+ * READ-ONLY, and written by the engine when a map is loaded
+ * (`World.growSpaceToFit`). A project needs it for the two questions a scroll
+ * view always asks: how far there is left to go, and how long a scrollbar's
+ * thumb should be. Working it out from the map would mean knowing which map is
+ * loaded and how big its tiles are, which is the engine's business.
+ */
+export const ViewportContentProperty = ViewportTrait.addProperty(
+  VIEWPORT.content,
+  'vector',
+  {x: 0, y: 0},
+  {name: 'content', readonly: true},
 );
 
 export const ViewportRule = rule.build();
