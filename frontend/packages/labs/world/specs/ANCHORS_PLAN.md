@@ -1,6 +1,6 @@
 # Plan: anchoring a placement (APPS.md, missing thing 2)
 
-STATUS: PROPOSED. The thing specs/UI_ACTORS.md deferred on purpose and
+STATUS: BUILT, not yet seen in the browser. The thing specs/UI_ACTORS.md deferred on purpose and
 named a trigger for. The working record, as the other plans are.
 
 ## The trigger, and that it has been pulled
@@ -84,8 +84,46 @@ arrangement says where things sit.
 
 ## Commits
 
+- `7461f62fc5c` — this plan.
+- `bd6a3cfc835` — the arithmetic, the format and the loader.
+- `83625da1d47` — the inspector's dropdown.
+- the stock pause menu anchored to the middle.
+
 ## Learned while building
+
+- **The pause menu needed one anchor, not four.** Its panel is in the
+  middle and its title and two buttons are its CHILDREN, so anchoring the
+  panel carries them — which is the parenting spec's whole argument
+  arriving unasked, and the reason a child is deliberately left alone by
+  the loader.
+- **Where to apply it was the only real decision.** After the reference
+  pass, so a parent is known and a child can be skipped; before the
+  script, so a map's own blocks see final positions rather than the ones
+  it was drawn with.
 
 ## Not built, and known
 
+- **No scaling, only placing.** A panel 200 wide is 200 wide in a window
+  of any shape, so a wide thing in a narrow window still overhangs.
+  Stretching is a size question and wants a vocabulary for "as wide as
+  the window" that this does not invent.
+- **The editor draws the map's own shape**, which is the arrangement at
+  the map's size. What a placement does in a window of another shape is
+  not previewed, and the honest way to see it is to load the map into a
+  world of that shape.
+- **Nothing anchors to another PLACEMENT.** Beside, above, after — that
+  is a layout engine, and parenting answers the part of it worth having.
+- **A map with no size anchors nothing**, which is every map a `map`
+  block synthesises.
+
 ## What to look at in the browser
+
+Two worlds of different shapes, and the stock pause menu in both. Before
+this, the panel sat in the middle of a square world and off to one side of
+a phone-shaped one. It should be in the middle of each now, with its title
+and buttons where they were relative to it.
+
+Then a map of your own: put a Label hard in a corner, set "Holds on to" to
+that corner, and load the map into a wider world. It should be the same
+distance from the corner rather than adrift in the middle. Set it back to
+"nothing" and it should go back to being a plain position.

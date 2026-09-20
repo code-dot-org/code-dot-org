@@ -55,6 +55,12 @@ export const pauseMenuMap = JSON.stringify(
       {
         type: 'actors/panel',
         id: 'Pause',
+        // THE MIDDLE OF WHATEVER WINDOW IT COMES UP IN. This map is loaded
+        // over any world that asks for it, and the worlds are not one shape:
+        // a menu centred on a square level is off to one side of a
+        // phone-shaped one. Its three buttons are its children and ride along
+        // (specs/ANCHORS_PLAN.md).
+        anchor: 'center',
         properties: {
           positional: {position: {x: MIDDLE, y: MIDDLE}},
           // Wide enough for two buttons and a title; no words of its own,

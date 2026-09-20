@@ -73,6 +73,10 @@ touch can wait, since one finger is what an app's controls use.
 
 ### 2. Anchoring
 
+BUILT — specs/ANCHORS_PLAN.md, and its own proposed answer is what was
+built: an anchor on the interface layer's placements rather than on the
+actors.
+
 specs/UI_ACTORS.md defers layout on purpose — "No layout engine, and no
 anchoring to the viewport" — and names the exact trigger for building it:
 one interface shared between two worlds of different shapes. **An app is
@@ -170,7 +174,8 @@ is a day's work that should be done once, not twice.
 1. **The finger** — DONE for one finger (specs/GESTURES_PLAN.md), and it
    needed no pointer change: drag, swipe and hold are a rule over what the
    world already answers.
-2. **Anchoring** — placements anchored to the interface layer's edges.
+2. **Anchoring** — DONE (specs/ANCHORS_PLAN.md): a placement holds on to
+   one of nine named places, resolved against the window at load.
 3. **A list view** — DONE for words (specs/LIST_PLAN.md); a row per item
    of a value list, scrolling. Rows made of ACTORS are still open.
 4. **Saving** — world state and lists, per project.

@@ -721,8 +721,11 @@ A drawing routine reads the actor's own properties and emits commands, so the
 engine names nothing. The contradiction does not arise, the foundation does not
 change, and text is a rule like gravity is.
 
-**No layout engine, and no anchoring to the viewport.** A position is a
-position. This is safe _today_ and only today: the viewport is a fixed window
+**No layout engine, and no anchoring to the viewport.** ANSWERED since, and
+by exactly the trigger this paragraph names: specs/ANCHORS*PLAN.md. A
+placement may hold on to one of nine named places, measured at load against
+the window it is loaded into. The rest of the paragraph is what was true
+before it. A position is a position. This is safe \_today* and only today: the viewport is a fixed window
 (VIEWPORT.md's correction — nothing scales the game to the pane), so a label at
 (16, 16) is sixteen pixels from the corner on every screen. The day the viewport
 becomes resizable, every HUD in every project silently mislays itself, and that
@@ -1147,7 +1150,9 @@ It is also the case that forces the two questions this document has deferred:
 
 - **Grouping.** A dialog map moved as one thing is a Panel and its children
   (specs/PARENTING.md), tried on something real.
-- **Anchoring.** A HUD map shared between a square world and the portrait one
+- **Anchoring — DONE** (specs/ANCHORS_PLAN.md), and the guess below was
+  right: an anchor on the interface layer's placements, not on the actors.
+  A HUD map shared between a square world and the portrait one
   is the first interface that lands on two windows of different shapes, and a
   score at (304, 16) is in the corner of one and in the middle of the other.
   That is the trigger named under "Decisions", pulled by a real case rather
