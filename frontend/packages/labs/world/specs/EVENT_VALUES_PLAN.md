@@ -124,6 +124,15 @@ block`'s body shares one with its signature, and a generated closure
   the hat's wording and per-value filters, the blocks that name what an
   event carries and the `+` that offers them, the preview, and the stock
   DSL's guard. The retired signature items go with it.
+- `38ed3232a0b`, `63166c7c289` — the tests that hold the two halves of the
+  designer together: both designers write the same items, and a parameter's
+  default reaches the `emit` socket.
+
+## Verified
+
+Typecheck and lint clean. The suite passes in two halves, 229 files and
+2822 tests on the first, 151 and 2612 on the second. Nothing here has been
+seen in a browser.
 
 ## Learned while building
 
