@@ -1207,6 +1207,14 @@ The Interface Kit runs at a phone's shape, and nothing in the lab has met a
 FINGER. Phaser reports a tap as a pointer press, so a Button works, and a
 finger now has something to type on (`maps/keyboard`, above); what a touch
 screen still has no answer for is hover, a right button, Tab, and Escape as
-"drop the focus". None of the rows above adds a dependency on those, and that
+"drop the focus".
+
+The keyboard map is also the only way to type on a phone, rather than a
+convenience beside the real one: a mobile browser raises its keyboard for an
+editable element, and the game is a focusable `div`, not an editable one. The
+proxy that would change that — a hidden `<input>` forwarding into `addTyped` —
+is deliberately punted, and the reason to build it eventually is accessibility
+rather than convenience, since canvas-drawn keys are reachable by a finger and
+by nothing else (specs/KEYBOARD_PLAN.md). None of the rows above adds a dependency on those, and that
 is deliberate — but before any of this is claimed for mobile, the driver's
 touch path wants a test that taps, the way the play test clicks.

@@ -1,9 +1,39 @@
 # The on-screen keyboard
 
-A phone has no keyboard until something draws one. The Text Input is a field
-now (specs/FIELDS_PLAN.md) and it fills the way a field fills — from what was
-typed — so an app on a touch screen needs something that types. That is this
-plan, and it is the last item on the apps list (specs/APPS.md).
+The Text Input is a field now (specs/FIELDS_PLAN.md) and it fills the way a
+field fills — from what was typed — so an app needs something that types. That
+is this plan, and it is the last item on the apps list (specs/APPS.md).
+
+## Who it is actually for
+
+TWO AUDIENCES, and the one that comes first is not the one the name suggests.
+
+**A learner at a desk, building a phone app.** This is the common case and the
+reason to have it at all: the progression is about apps, the window is phone
+shaped, and a form with a keyboard under it is what an app looks like. Drawing
+that keyboard is how a desktop shows the thing being built. The learner has a
+real keyboard an inch from their hands and does not need this one — the SCREEN
+needs it.
+
+**A finger on a real phone**, where it is not a convenience but the only way in.
+See below.
+
+## Why a phone does not offer its own
+
+The obvious objection is that a phone already has a keyboard, so drawing a
+second one would present the interface twice. It would not, and the reason is
+worth stating rather than assuming.
+
+A mobile browser raises the software keyboard when an EDITABLE element takes
+the focus — an `<input>`, a `<textarea>`, something `contenteditable`. The game
+is none of those. It is a `div#game` with `tabIndex = 0` and `keydown`/`keyup`
+listeners on it (`runtime/driver/PhaserBinding`), and a focusable div is not an
+editable one. So tapping a Text Input focuses it in OUR world, no keyboard
+comes up, `keydown` never fires, `addTyped` is never called, and the field
+cannot be filled at all.
+
+Nothing is presented twice, because there is nothing else to present. On a
+phone this map is the only way to type into a world.
 
 ## What it is
 
@@ -133,8 +163,60 @@ NO AUTOMATIC PLACEMENT. It comes up at the bottom of the standard window and
 holds on to the bottom edge (specs/ANCHORS_PLAN.md), so a taller window puts
 it where a keyboard goes. Whether it is on screen at all is the project's:
 `load map ⟨maps/keyboard⟩` when a field is focused, `unload` when it is not.
-The field does not summon it, because a field that summoned a keyboard would
-summon one on a desktop too.
+
+The field does not summon it, and that is the decision the two audiences make
+necessary. An app being shown off on a desktop wants it up whenever a field is
+focused, because that is what a phone looks like; a desktop game with one name
+box wants it never, because there is a real keyboard right there. A field that
+summoned a keyboard would be wrong for one of them and there would be no way
+to say so. The project says.
+
+## The alternative, deliberately not built
+
+There IS a way to have the real keyboard, and it is what Flutter Web, Unity
+WebGL and most canvas editors do: park a real hidden `<input>` over the canvas,
+focus it inside the same gesture that focuses our field, and forward its
+`input` events into `World.addTyped`. The engine would not change — characters
+would arrive exactly where this map's characters arrive.
+
+It is a driver change with sharp edges, none of which are guesses about the
+lab and all of which are facts about browsers: the focus has to move inside the
+user gesture or iOS ignores it; the proxy cannot be `display:none` or
+zero-sized, which suppresses the keyboard on some browsers; the OS keyboard
+covers the bottom of the viewport, so the app has to be told the visible area
+shrank (`visualViewport`) or the field being typed into is underneath it; and
+IME and autocorrect arrive as composition events rather than as clean
+characters. It is also browser-only to verify.
+
+PUNTED, knowingly. The map is enough to build apps with and is the right thing
+on a desktop regardless.
+
+THE REASON TO DO IT EVENTUALLY IS ACCESSIBILITY, and it is the honest weakness
+of this map: its keys are drawn on a canvas, and the lab's accessibility
+surface is one `role="application"` and one `aria-label` on the whole game
+element (`runtime/driver/PhaserBinding`). No actor is in the accessibility tree
+— so these forty keys can be used by a finger and a mouse and by nobody using a
+screen reader, switch access, dictation or an IME. A real `<input>` would be
+usable by all of them, because it would be a real control rather than a
+picture of one. `takes the keyboard` keeping the keys out of the tab route is
+right, but it is not the whole story: there is no keyboard path to them at all,
+which is tolerable only because anybody with a keyboard does not need them.
+
+That is also the general shape of the lab's missing screen-reader story
+(specs/UI_ACTORS.md), not a debt this map invented.
+
+## A held key is missing
+
+`press the ⟨…⟩ key` is one frame — a keystroke. That is right for backspace and
+enter, and it is NOT enough for the other thing a map of buttons would obviously
+want to be: a touch D-pad feeding a control scheme that reads the arrow keys. A
+finger held on such a button gives one press and one release rather than a key
+that stays down.
+
+The missing pair is `hold the ⟨…⟩ key` and `let go of the ⟨…⟩ key`, over a set
+that persists across frames instead of a queue drained each tick. Not built,
+not needed by a keyboard, and the first thing to reach for when somebody wants
+to play a platformer with a thumb.
 
 ## What it found, in the end
 
