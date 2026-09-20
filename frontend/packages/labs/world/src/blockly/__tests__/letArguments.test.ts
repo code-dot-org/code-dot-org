@@ -18,11 +18,14 @@ import {beforeEach, describe, expect, it} from 'vitest';
 
 import {
   blockDesignerMutator,
+  eventDesignerMutator,
   paramTypeOf,
   type BlockPart,
 } from '../extensions/blockDesigner';
 
 const HOST = 'test_define_block';
+/** The same host, standing in for `define event` — which has no body row. */
+const EVENT_HOST = 'world_rule_event';
 
 /**
  * The shapes the real blocks have, in the parts this code reads.
@@ -42,10 +45,24 @@ const define = () => {
       blockDesignerMutator.mutator as never,
     );
   }
+  if (!Blockly.Extensions.isRegistered(eventDesignerMutator.name)) {
+    Blockly.Extensions.registerMutator(
+      eventDesignerMutator.name,
+      eventDesignerMutator.mutator as never,
+    );
+  }
   if (Blockly.Blocks[HOST]) {
     return;
   }
   Blockly.defineBlocksWithJsonArray([
+    {
+      // `define event` writes its signature with the same items, and has no
+      // body row to write it above (specs/EVENT_VALUES_PLAN.md).
+      type: EVENT_HOST,
+      message0: 'define event %1',
+      args0: [{type: 'input_statement', name: 'ARGUMENTS'}],
+      mutator: eventDesignerMutator.name,
+    },
     {
       type: HOST,
       message0: 'define block %1 do %2',
@@ -308,6 +325,33 @@ describe('a `let` in the arguments row', () => {
     block.buildArguments_();
 
     expect(row(block)).toEqual(['world_signature_argument']);
+  });
+
+  it('writes an EVENT\u2019s arguments as the same items', () => {
+    // `define event` used to write a `choice` item and one item per parameter
+    // type, because an event's parameter was a filter. It is a value the
+    // event carries now, so both designers write the same blocks and the
+    // items that said otherwise are gone.
+    const block = workspace.newBlock(EVENT_HOST) as unknown as Blockly.Block &
+      Designer;
+    const amount = workspace
+      .getVariableMap()
+      .createVariable('amount', 'Number');
+    block.loadExtraState({
+      parts: [
+        {kind: 'label', text: 'is damaged by'},
+        {kind: 'param', type: 'number', var: amount.getId(), name: 'amount'},
+        {kind: 'param', type: 'kind', var: '', name: 'what'},
+      ],
+    });
+
+    block.buildArguments_();
+
+    expect(row(block)).toEqual([
+      'world_signature_text',
+      'world_let_number',
+      'world_signature_argument',
+    ]);
   });
 
   it('starts an actor argument at `this actor`', () => {
