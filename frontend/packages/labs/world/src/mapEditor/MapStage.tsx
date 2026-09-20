@@ -32,10 +32,10 @@ import TextField from '@code-dot-org/component-library/textField';
 
 import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
+import {ANCHORS} from '../engine';
 import type {Affordance} from '../progression/types';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
-
 
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
@@ -70,6 +70,7 @@ import {
   withCameraFollows,
   withoutPlacement,
   withLayer,
+  withPlacementAnchor,
   withPlacementLayer,
   withSlot,
   type MapSlotDoc,
@@ -2049,6 +2050,35 @@ export const MapStage = ({
             }
             onBlur={applyRename}
             onKeyDown={blurOnEnter}
+          />
+          {/*
+           * WHERE IT HOLDS ON, when this map is loaded into a window that is
+           * not its own shape — a menu over a square level and over a
+           * phone-shaped one (specs/ANCHORS_PLAN.md). Beside the layer
+           * dropdown because it is the same kind of fact: not what the thing
+           * IS, but where in an arrangement it sits.
+           */}
+          <SimpleDropdown
+            name="actor-anchor"
+            labelText="Holds on to"
+            size="s"
+            className={styles.inspectorDropdown}
+            disabled={isReadOnly}
+            selectedValue={selectedActor.anchor ?? ''}
+            items={[
+              {value: '', text: 'nothing'},
+              ...ANCHORS.map(anchor => ({value: anchor, text: anchor})),
+            ]}
+            onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+              commit({
+                ...mapRef.current,
+                actors: mapRef.current.actors.map(actor =>
+                  actor.id === selectedActor.id
+                    ? withPlacementAnchor(actor, event.target.value)
+                    : actor,
+                ),
+              })
+            }
           />
           {!locked('map-layers') && layersOf(map).length > 1 && (
             <SimpleDropdown

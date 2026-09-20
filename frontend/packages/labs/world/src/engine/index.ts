@@ -75,6 +75,16 @@ export {
   type Pen,
   type TextAnchor,
 } from './core/drawing';
+// …and where a PLACEMENT holds on when the window is not the map's shape
+// (specs/ANCHORS_PLAN.md). The map editor offers the nine; the loader applies
+// them.
+export {
+  ANCHORS,
+  anchored,
+  anchorPoint,
+  isAnchor,
+  type Anchor,
+} from './core/anchors';
 export {Scheduler} from './core/Scheduler';
 export {EventQueue} from './core/EventQueue';
 export {DependencySet} from './core/traits';

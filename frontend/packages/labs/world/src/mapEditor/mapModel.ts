@@ -71,6 +71,12 @@ export interface Placement {
   blocks?: WorkspaceState;
   /** The layer it is on, by id; absent, the default (specs/LAYERS_PLAN.md). */
   layer?: string;
+  /**
+   * The edge it holds on to when the window is not the map's shape — one of
+   * nine named places, or absent for a plain position
+   * (specs/ANCHORS_PLAN.md).
+   */
+  anchor?: string;
 }
 
 /** The id of the layer every map has, and an unlayered placement is on. */
@@ -201,6 +207,16 @@ export function withPlacementLayer(
   const rest: Placement = {...placement};
   delete rest.layer;
   return id === DEFAULT_LAYER ? rest : {...rest, layer: id};
+}
+
+/** A placement's anchor; holding on to nothing is said by saying nothing. */
+export function withPlacementAnchor(
+  placement: Placement,
+  anchor: string,
+): Placement {
+  const rest: Placement = {...placement};
+  delete rest.anchor;
+  return anchor ? {...rest, anchor} : rest;
 }
 
 /**

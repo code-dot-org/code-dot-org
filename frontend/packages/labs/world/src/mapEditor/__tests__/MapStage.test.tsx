@@ -814,6 +814,32 @@ describe('what a gated lab withholds', () => {
     ).not.toBeNull();
   });
 
+  it('offers where a placement holds on, and writes the choice', () => {
+    // The trigger the interface spec named: one map, two windows of
+    // different shapes (specs/ANCHORS_PLAN.md). Holding on to nothing is
+    // said by saying nothing, so the field goes rather than being written
+    // empty.
+    const map = layered();
+    const {canvas, onDocChange, ...view} = mount(map);
+    select(canvas, map);
+    const anchor = () =>
+      view.container.querySelector(
+        'select[name="actor-anchor"]',
+      ) as HTMLSelectElement;
+
+    expect([...anchor().options].map(option => option.value)).toContain(
+      'bottom right',
+    );
+
+    fireEvent.change(anchor(), {target: {value: 'bottom right'}});
+    const written = onDocChange.mock.calls.at(-1)?.[0] as MapDoc;
+    expect(written.actors[0].anchor).toBe('bottom right');
+
+    fireEvent.change(anchor(), {target: {value: ''}});
+    const cleared = onDocChange.mock.calls.at(-1)?.[0] as MapDoc;
+    expect('anchor' in cleared.actors[0]).toBe(false);
+  });
+
   it('keeps the strip’s place when layers are withheld, and leaves the map as it is', () => {
     const map = layered();
     const {canvas, onDocChange, ...view} = mount(map, {
