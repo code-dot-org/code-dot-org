@@ -105,7 +105,10 @@ scrollbar and nobody else is told.
 - `62c566834b5` — this plan, and what scrolling costs here.
 - `ea41360e130` — `defineEvent` with parameters.
 - `6a742776a92` — the List, and the seven cases that play it.
-- the tile that grants it.
+- `b9a1e880d1f` — the tile that grants it.
+- `e54baa05500` — `remove item ⟨n⟩ of ⟨list⟩`, the change blocks an
+  actor's own list property never had, and a row taken out by a swipe or
+  by Delete.
 
 ## Learned while building
 
@@ -131,6 +134,18 @@ scrollbar and nobody else is told.
   would have parked the window below the only rows there are. The `if` in
   `scrollTo` is not decoration.
 
+- **The language could not take one thing out of a list.** Add at either
+  end, take the first, empty, read — and that was the whole vocabulary. So
+  no control that EDITS a list was buildable, which is most of what an app
+  does with one. `remove item ⟨n⟩ of ⟨list⟩` is the block, and the use that
+  argued for it is this actor (specs/LISTS.md).
+- **A second gap sat behind the first, and its own comment predicted it.**
+  An actor's OWN properties get a getter and a setter and nothing else, so
+  a kind's own list had no block that could change it in place. The note
+  beside that code spells out the failure exactly: a block nothing mints
+  becomes a stand-in that generates nothing, and the write silently does
+  not happen. That is precisely what the Delete key did.
+
 ## Not built, and known
 
 - **No demo.** A stock rule must have one and a stock actor need not; the
@@ -142,6 +157,12 @@ scrollbar and nobody else is told.
   wants answering together.
 - **No momentum.** Letting go stops it dead. A flick is already a swipe,
   so the event to carry it exists.
+- **Nothing is inserted.** A row can be taken out and one can be added to
+  the end; putting one BACK where it was, which is what an undo of a
+  removal wants, has no block. Reordering wants the same one.
+- **A swipe either way removes.** Which way a row is flicked is not a
+  second meaning yet, so there is no swipe-to-archive beside
+  swipe-to-delete, and no undo.
 - **Rows are words, not actors.** A row with a picture and a button in it
   is the other kind of list, and it needs the clipping a Viewport has.
 - **One column, no wrap.** A word wider than the box is drawn past its
@@ -160,3 +181,7 @@ should jump a boxful. Enter should choose.
 
 A list SHORTER than its box should not move at all, however hard it is
 dragged.
+
+With `can remove` turned on, flicking a row sideways should take it out
+and the rows below should move up. Delete should do the same to the
+highlighted row. With it off, neither should do anything.

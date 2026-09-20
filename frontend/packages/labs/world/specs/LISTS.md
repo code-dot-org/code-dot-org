@@ -114,6 +114,7 @@ for each ⟨score⟩ in ⟨scores⟩      the loop, the shape a learner already 
 ⟨scores⟩ has ⟨5⟩                  membership, like `⟨actor⟩ is in ⟨…⟩`
 empty ⟨scores⟩                    emptying, like `empty ⟨these coins⟩`
 item ⟨2⟩ of ⟨lines⟩               ...and the index
+remove item ⟨2⟩ of ⟨lines⟩        ...and taking one out again
 ```
 
 **The index is the difference from the actor design, and it is forced.** Actor
@@ -274,3 +275,30 @@ of` gave it a reason.
    to tell a player they are going in circles — and asking into a list wants an
    index, which is still step 3. The rule's header says so rather than pretending
    the feature moved.
+
+## 6. ✅ Taking one out, and the use that forced it
+
+`remove item ⟨n⟩ of ⟨list⟩`, counted from one like the index beside it.
+Held back for the same discipline as everything above: the vocabulary
+could add at either end, take the first, and empty, and nothing had argued
+for more.
+
+**What argued for it was an app.** A list that a person edits — a todo
+crossed off, a row swiped away, a playlist reordered — cannot be edited at
+all without it, and every interface control that wanted one ran into the
+same wall (specs/LIST_PLAN.md). The List is the one that hit it.
+
+**A place the list does not have changes nothing**, which is the answer
+the rest of this vocabulary already gives. It is also the one that had to
+be decided rather than inherited: `slice` reads a negative index from the
+END, so "remove item −1" would have quietly taken the last thing off.
+
+**It answers a COPY.** The caller writes it back through a property's
+setter, which copies anyway, and splicing in place would change a list
+another variable is holding — which is not what "take the third row out of
+this list" means to the person who wrote it.
+
+**A gap sat behind it.** An actor's OWN list property had no block that
+could change it without replacing it: a rule's list properties have had
+push and pop all along, and an actor's had a getter and a setter. Nobody
+had noticed, because the Dropdown sets its choices and never edits them.
