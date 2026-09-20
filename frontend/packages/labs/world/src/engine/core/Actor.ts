@@ -236,13 +236,15 @@ export class Actor {
   /**
    * Set a property's value; returns `this` so instance setup can chain.
    *
-   * A watched property (`watchProperty`) is read back after the write and the
-   * watchers told what changed. Read BACK rather than passing `value` on,
-   * because `Traited.set` coerces and a watcher comparing the two must be
-   * comparing stored values or it will see changes that did not happen.
+   * Two things happen here and nowhere else, both about PARENTING: setting the
+   * `parent` property is the door a `set parent of` block comes through, and a
+   * world transform written to a child is converted into the parent's frame
+   * first. Everything else goes straight to the store.
    *
-   * Unwatched — which is every property but one, and the case this is on the
-   * hot path for — costs one field read.
+   * NOTHING OBSERVES THE WRITE. There was a hook here once — a property could
+   * carry watchers, called with the value before and after — and one rule used
+   * it to notice an actor leaving the map. A step does that now
+   * (`rules/spatial`), and the hook is gone: a write is a write.
    */
   set<T>(property: Property<T>, value: T): this {
     const keys = parentingKeys();
@@ -280,19 +282,9 @@ export class Actor {
     return this.store(property, value);
   }
 
-  /** The write itself: coerce, store, and tell the watchers. */
+  /** The write itself: coerce and store. */
   private store<T>(property: Property<T>, value: T): this {
-    const watchers = property.watch;
-    if (!watchers) {
-      this.traited.set(property, value);
-      return this;
-    }
-    const previous = this.traited.get(property);
     this.traited.set(property, value);
-    const next = this.traited.get(property);
-    for (const watcher of watchers) {
-      watcher(this, previous, next);
-    }
     return this;
   }
 

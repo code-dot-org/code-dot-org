@@ -115,12 +115,19 @@ leaves somebody writing the row that copies it into the text.
 - **Costs:** less than this first said for the event, and more for the
   binding. Looked at properly (Sep 2026), and each of these was read
   rather than assumed:
-  - **The hook exists and has a user.** `Actor.set` funnels every actor
-    write into a private `store`, which reads the old value, writes, reads
-    back, and calls the property's watchers. `watchProperty` is the way one
-    is added, and `rules/spatial` already uses it to raise "left the map"
-    — so the idiom, including raising a queued event from inside a write,
-    is demonstrated rather than hypothetical.
+  - **There is no hook, by decision.** `Actor.set` funnels every actor
+    write into one private method, so there is a place to put one; there
+    was one, and it is gone. A property could carry watchers called with
+    the value before and after, and one rule used it to notice an actor
+    leaving the map. That rule uses a step now, which turned out to be
+    both cheaper and more correct, and the hook was retired with it. So
+    this idea starts from a plain write.
+  - **A step is the shape that worked.** Leaving the map is decided once
+    a tick, on the position the tick ended with, against a private map of
+    where each actor was last tick. No slot on the actor, nothing to
+    sweep, and no event raised on an intermediate value that a later step
+    undoes. What it gives up is a value that changes and changes back
+    inside one tick, which nothing draws and nobody sees.
   - **The world's properties have no hook at all.** `World.set` writes a
     separate store through its own copy of `coerce`, and consults no
     watcher. There are two `coerce` functions in the engine, one in

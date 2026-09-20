@@ -66,7 +66,7 @@ That was rejected for three reasons, in order of weight:
    Two spellings for one idea is a thing to learn before you can read anybody's
    project.
 3. **A property is introspectable and a binding is not.** The map editor's
-   inspector, `watchProperty`, and the snapshot all work on properties.
+   inspector and the snapshot both work on properties.
 
 ## Where it lives at run time
 

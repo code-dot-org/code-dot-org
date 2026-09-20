@@ -92,7 +92,7 @@ where the child already is, so nothing jumps.
 ### Where the derivation lives
 
 Every property read goes through one method on the actor (`Actor.get`), and
-properties already carry set-time watchers (`Property.watch`). Position,
+every write goes through one method beside it (`Actor.set`). Position,
 rotation and scale on an actor whose `parent` is set are intercepted there:
 a read composes up the chain; a write converts and stores locally. Nothing
 else in the engine learns about parents — the Phaser driver goes on receiving
@@ -538,8 +538,8 @@ no-op.
 
 - **The read is a walk.** Three levels deep at most in anything imagined, and
   the walk is three vector operations per level. If a profile ever shows it,
-  a per-frame cache invalidated by the watchers is the answer, and it is not
-  built in advance.
+  a cache invalidated where a transform is written is the answer, and it is
+  not built in advance.
 - **A child under a solid parent** is not part of the parent's collision
   shape. A Panel is one box and its buttons are their own boxes; a tank and
   its turret collide as two things. Compound shapes are a collision question
