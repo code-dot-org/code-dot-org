@@ -1,6 +1,6 @@
 # Plan: the List, and what a gesture lets a control be
 
-STATUS: PROPOSED. The first interface actor the finger makes possible
+STATUS: BUILT, not yet seen in the browser. The first interface actor the finger makes possible
 (specs/GESTURES_PLAN.md), and the one specs/APPS.md calls "the single
 biggest gap in what an app can SHOW". The working record, as the other
 plans are.
@@ -85,8 +85,10 @@ scrollbar and nobody else is told.
   carry labels, because until specs/EVENT_VALUES_PLAN.md an event could
   only carry one unnamed thing. The List is the first actor with something
   worth saying, so the helper grows the ability the language already has.
-- **It acts like a Panel**, for the box and the face, as the Dropdown acts
-  like a Label for the word.
+- **It acts like a LABEL**, not a Panel, which is what the plan first said.
+  A Label is where the size, the anchor and the text colours live, and the
+  Dropdown already takes them that way; a Panel is a Label with no words,
+  so acting like one would be a step further for nothing.
 
 ## Order of work
 
@@ -100,8 +102,61 @@ scrollbar and nobody else is told.
 
 ## Commits
 
+- `62c566834b5` — this plan, and what scrolling costs here.
+- `ea41360e130` — `defineEvent` with parameters.
+- `6a742776a92` — the List, and the seven cases that play it.
+- the tile that grants it.
+
 ## Learned while building
+
+- **A part's type and a variable's type are different spellings.** A
+  signature part is typed in the language's words (`vector`); a workspace
+  variable is typed with Blockly's own flavour tag (`Vector`). Declared
+  with the wrong one, the getter finds nothing of its flavour and INVENTS
+  a variable — so the handler read a name nothing had ever written and
+  scrolled by `undefined`, silently. The helper that converts one to the
+  other is three lines and exists so nobody meets this twice.
+- **An event is named by its labels JOINED.** `define event ⟨is chosen⟩
+⟨word⟩ ⟨at⟩ ⟨place⟩` is the event "is chosen at", because a carried value
+  is not part of the name. The hat and the `emit` are `…IsChosenAtEvent`,
+  and naming them by the first label alone produced a hat that generated
+  nothing and a handler body that leaked out above the world it belonged
+  to.
+- **Two blocks I reached for do not exist.** There is no two-argument
+  `min`, and `text_join` was retired for a `text` block that chains. Both
+  were caught at workspace load rather than at authoring time, which is
+  the cost of writing a `.actor` as JSON.
+- **A clamp whose bottom is above its top answers with the bottom.** A
+  list shorter than its box overflows by a negative amount, so the clamp
+  would have parked the window below the only rows there are. The `if` in
+  `scrollTo` is not decoration.
 
 ## Not built, and known
 
+- **No demo.** A stock rule must have one and a stock actor need not; the
+  List would be a good one, and a drag is a thing a still picture cannot
+  say.
+- **No scrollbar.** Nothing says how far down the list you are, which is
+  exactly the thing a sighted user reads and a keyboard user is told
+  nowhere. That is the same gap as the missing screen-reader story and it
+  wants answering together.
+- **No momentum.** Letting go stops it dead. A flick is already a swipe,
+  so the event to carry it exists.
+- **Rows are words, not actors.** A row with a picture and a button in it
+  is the other kind of list, and it needs the clipping a Viewport has.
+- **One column, no wrap.** A word wider than the box is drawn past its
+  edge and clipped.
+
 ## What to look at in the browser
+
+Put a List on a map and give it eight or ten words. Drag it with the
+pointer: the words should follow the finger and stop dead at either end
+rather than rubber-banding. Click a row and it should highlight.
+
+Then leave the pointer alone. Tab to it, and the ring should appear inside
+the box. The arrows should move the highlight, and when the highlight
+reaches the bottom row the window should start moving with it. Page Down
+should jump a boxful. Enter should choose.
+
+A list SHORTER than its box should not move at all, however hard it is
+dragged.

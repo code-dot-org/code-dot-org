@@ -171,6 +171,7 @@ a rule pulls its dependencies.
 | Panel        | a background behind a group                       | BUILT — a Label with no words, and children |
 | Toggle       | a Button that is on or off                        | BUILT — `on`, `turned on`, `turned off`     |
 | Slider       | a Progress Bar the pointer drags                  | BUILT — `fraction`, `changed`, arrow keys   |
+| List         | a box of words you scroll and choose one of       | BUILT — drag, arrows, page keys, Enter      |
 
 Six of the eleven are built, and the three that arrived after this document was
 first written are the ones that changed what the rest should be. The two new

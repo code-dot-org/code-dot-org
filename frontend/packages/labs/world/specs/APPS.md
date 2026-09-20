@@ -86,6 +86,12 @@ window scales the whole thing down rather than reflowing.
 
 ### 3. A list that scrolls
 
+BUILT, for a list of WORDS — specs/LIST_PLAN.md. What made it possible was
+not the finger alone but the finding underneath it: a clip comes from a
+camera or from an actor's own canvas, so a control that draws its own rows
+scrolls and a container that holds children does not. A list whose rows are
+actors still wants the Viewport's camera.
+
 The only many-of-a-thing control is the Dropdown. There is no list view,
 no scroll view, no table. Value lists exist (`numbers`, `words`, `vectors`
 — specs/LISTS.md), so the data half is there; what is missing is a control
@@ -160,7 +166,8 @@ is a day's work that should be done once, not twice.
    needed no pointer change: drag, swipe and hold are a rule over what the
    world already answers.
 2. **Anchoring** — placements anchored to the interface layer's edges.
-3. **A list view** — a row per item of a value list, scrolling.
+3. **A list view** — DONE for words (specs/LIST_PLAN.md); a row per item
+   of a value list, scrolling. Rows made of ACTORS are still open.
 4. **Saving** — world state and lists, per project.
 5. **Navigation** — go to, go back, over maps.
 6. **Text entry** — a hint, a kind, a done key; the on-screen keyboard

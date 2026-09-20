@@ -2655,6 +2655,11 @@ export const TILES: readonly Tile[] = [
       // whole of what Gestures answers (specs/GESTURES_PLAN.md).
       {kind: 'rule', id: 'gestures'},
       {kind: 'actor', id: 'slider'},
+      // …and the one that shows MORE THAN FITS, which is the other thing a
+      // drag is for: a box of words you scroll and choose from
+      // (specs/LIST_PLAN.md). It arrives with the Slider because the two are
+      // one idea met twice — a control whose answer is somewhere you move to.
+      {kind: 'actor', id: 'list'},
       // …and the one that takes a paragraph.
       {kind: 'actor', id: 'textArea'},
     ],
