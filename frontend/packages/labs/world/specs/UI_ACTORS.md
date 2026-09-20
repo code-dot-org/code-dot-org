@@ -1115,7 +1115,7 @@ button ⟨left⟩ is down`, letting go when it comes up. There is no drag
    worse; and nothing scrolls — long lines and long paragraphs are clipped.
    Both are the next things to add.
 
-### The second axis: stock interface MAPS — two of them are built
+### The second axis: stock interface MAPS — five of them are built
 
 The pause menu is on the shelf (`maps/stock`, `maps/importStockMap`): a
 `.map` placing a Pause Menu panel and two plain Buttons named Resume and
@@ -1196,7 +1196,27 @@ keyboards:
   everybody and off on each key — which also keeps forty keys out of the tab
   route, where they have no business.
 
-And what it did NOT need: no field is named anywhere on that map. Every key
+**And three more that modality made possible** (`maps/confirm`, `maps/tabs`,
+`maps/message`). Each is a Panel and some Buttons placed, and each speaks only
+through its OWN events — a confirm does not know what it is confirming and a
+tab bar does not know what screens the project has, so the same map serves
+every use of it.
+
+- **Are You Sure?** is modal, which is the whole point of a confirm: while the
+  question is up, the thing it is asking about cannot be clicked again. Before
+  a map could say that, this would have been a panel you could click past.
+- **Tab Bar** is not, and does not unload itself — a tab bar is the one thing
+  on screen that stays. It says WHICH tab by the word on it rather than
+  declaring an event per tab, so adding a fourth tab is adding a Button. That
+  is also the first stock map whose own event carries a value, which needed its
+  workspace to hold a variable like an actor file's.
+- **Message** is not modal either: a message that stopped the app being used
+  would be a dialog, and the one above already is. It is dismissed BY HAND,
+  and that limit is the map format's — `each frame` lives in a trait, a
+  world's own `define actor` or an `.actor` file, and not in a map's script,
+  so a map cannot time anything. The project loads it and takes it away.
+
+And what the keyboard did NOT need: no field is named anywhere on that map. Every key
 raises what the real keyboard raises, so a Text Input, a Text Area and a
 project's own `types ⟨character⟩` handler all fill from it unchanged, and a
 form of three fields needs no wiring at all — whichever one has the focus is
