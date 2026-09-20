@@ -128,27 +128,28 @@ leaves somebody writing the row that copies it into the text.
     sweep, and no event raised on an intermediate value that a later step
     undoes. What it gives up is a value that changes and changes back
     inside one tick, which nothing draws and nobody sees.
-  - **The world's properties have no hook at all.** `World.set` writes a
-    separate store through its own copy of `coerce`, and consults no
-    watcher. There are two `coerce` functions in the engine, one in
-    `Traited` and one in `World`, which is worth reconciling whatever is
-    built on top. This is the bulk of the new work.
+  - **The world's properties are a second store.** `World.set` writes
+    its own map through its own copy of `coerce`. There are two `coerce`
+    functions in the engine, one in `Traited` and one in `World`, which
+    is worth reconciling whatever is built on top. A step over the
+    world's properties would have to compare the whole set each tick,
+    where an actor's step compares one value per actor.
   - **A camera's writes bypass it too**, going straight to the trait.
   - **The comparison is mandatory and is not `===`.** Coercion copies on
     write — a vector is rebuilt, a list is copied — so every write to one
     of those looks like a change. `sameValue` is the helper that exists;
     it is private to `core/lists` and does not compare lists, so it needs
     exporting and extending.
-  - **`keep` needs a lifetime that watchers do not have.** A watcher is
-    registered against the PROPERTY, globally, at module load, and there
-    is nothing to unsubscribe. A standing instruction belongs to one
-    actor and has to end when that actor does, so it wants a registry of
-    its own keyed by actor, and teardown on removal.
+  - **`keep` wants a step too, and always did.** A standing instruction
+    has to re-run when anything its expression reads changes. Finding
+    that out from the block tree is real analysis; re-evaluating each
+    tick is none, costs work proportional to the number of bindings
+    rather than to the number of writes, and cannot recurse.
   - Care that a standing instruction cannot loop. The queue's
     one-round-per-tick rule is what keeps that safe, and is worth keeping.
-  - **So the two halves can be split.** "When a value changes" for an
-    actor's properties is a small piece on machinery that is already
-    there; the world's properties, and `keep`, are each their own.
+  - **So the two halves can be split**, and both are steps. "When a
+    value changes" for an actor's properties is one; the world's
+    properties are a second; `keep` is a third.
 - **The risk worth naming:** a binding that is cheap to write is cheap to
   write a hundred of. It wants a way to see what is bound (idea 10).
 
