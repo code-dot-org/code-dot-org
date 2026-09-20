@@ -265,6 +265,22 @@ describe('Gestures', () => {
     expect(holds).toBe(1);
   });
 
+  it('moves the demo card with the finger, and stops when it lifts', () => {
+    // The demo is the strip the shelf animates, so what it SHOWS has to be
+    // the thing the rule does. Asserted by running it rather than by looking
+    // at the picture, which is the only half of a recording a test can read.
+    const {cast} = play(RULE_DEMOS.gestures);
+    const card = cast.card as {get(p: unknown): Vector};
+
+    const ended = card.get(PositionProperty);
+    // The pointer pressed at the card and dragged to x 150, so the card is
+    // carried most of the way across and well down the frame.
+    expect(ended.x).toBeGreaterThan(130);
+    // …and the pointer then left, up and to the right, with the button UP.
+    // A card that followed that would be higher than where it was dropped.
+    expect(ended.y).toBeGreaterThan(90);
+  });
+
   it('does not call a drag a hold', () => {
     const {world, pad} = feeling();
     let holds = 0;
