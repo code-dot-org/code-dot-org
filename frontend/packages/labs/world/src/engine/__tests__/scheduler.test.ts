@@ -29,6 +29,10 @@ describe('Scheduler', () => {
       // the stock rules are phased too, so `adjust` lands after `move` and a
       // tween is the later word on a position than the simulation is.
       'spatial.advanceTweens',
+      // …and `react` is later still: leaving the map is decided on the
+      // position the tick ended with, after wrapping and clamping
+      // (`spatial.NoticeLeavingStep`).
+      'spatial.noticeLeaving',
       // Appearance is in play whether or not a world says so (WorldBuilder's
       // foundation), and its step is unanchored, so it sorts to the front.
       'animation.advanceAnimation',

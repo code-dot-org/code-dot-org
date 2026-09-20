@@ -15,7 +15,6 @@ import {registerParenting} from '../core/parenting';
 import {SPATIAL} from '../core/spatialKeys';
 import {advanceTween} from '../core/tween';
 import {Vector, type VectorLike} from '../core/Vector';
-import {watchProperty} from '../core/watchProperty';
 
 // Ids come from the shared SPATIAL table so core's renderSnapshot and this rule
 // cannot drift apart.
@@ -326,36 +325,61 @@ export const LeftMapEvent = rule.addEvent('leftMap', {
   name: 'leaves the map',
 });
 
-// Noticed at the moment the position changes, not by a step that checks every
-// actor every frame.
-//
-// A step would have to remember, per actor, whether it was inside last time, or
-// it could not tell LEAVING from BEING outside — a bit on every actor in every
-// world, maintained by a loop that runs in every world, to answer a question
-// most worlds never ask. The setter already has both halves of the crossing in
-// hand and runs only when the answer can have changed, so there is nothing to
-// remember and nothing to sweep.
-//
-// What this does NOT catch, and a frame loop would: an actor that ends up
-// outside without moving, by being scaled down at the edge, or by its picture
-// finally being measured. Leaving is something an actor does by moving, and
-// `is outside the map` answers the other case for anyone who needs it.
-watchProperty(PositionProperty, (actor, previous: Vector, next: Vector) => {
-  const world = actor.world;
-  if (!world) {
-    // Not placed yet: this is an actor being built, not one going anywhere.
-    return;
-  }
-  if (outsideMapAt(actor, previous) || !outsideMapAt(actor, next)) {
-    return;
-  }
-  // At most once a tick. Out, back, and out again inside one tick is two
-  // crossings and one departure — a handler that removes the actor or takes a
-  // life must not be run twice for a wobble nobody saw drawn.
-  if (!world.hasPendingEvent(LeftMapEvent, actor)) {
-    world.emit(LeftMapEvent, actor);
-  }
-});
+/**
+ * Whether each actor was WHOLLY outside at the end of the last tick.
+ *
+ * The one thing telling LEAVING from BEING outside needs. A `WeakMap` rather
+ * than a property on the trait, for two reasons: nobody should see a
+ * bookkeeping bit in the inspector or in a getter block, and an actor that is
+ * removed takes its entry with it, so there is nothing to sweep.
+ *
+ * ABSENT MEANS NEVER SEEN, and is why this is a map of booleans rather than a
+ * set of the ones outside. An actor placed off the edge — which is how a
+ * bullet spawner works — must not be reported as having left on the first
+ * tick it is looked at. Its first sighting records where it is and says
+ * nothing.
+ */
+const wasOutside = new WeakMap<Actor, boolean>();
+
+/**
+ * Leaving, decided once a tick on the position the tick ended with.
+ *
+ * IN `react`, which is after `move` has integrated velocity, after `adjust`
+ * has wrapped or clamped, and after `settle` has pushed bodies apart. That
+ * ordering is the point rather than an incidental: this used to be noticed
+ * inside the write itself, so a fast actor whose step carried it past the edge
+ * raised "leaves the map" on an intermediate position that the Bounds rule's
+ * clamp then pulled back inside — the handler ran after the tick and found an
+ * actor sitting comfortably in the middle. A step judges the position the
+ * frame actually ended on.
+ *
+ * It also catches the two cases the write could not see: an actor that ends up
+ * outside without moving, by being scaled down at the edge, or by its picture
+ * finally being measured.
+ *
+ * WHAT IT NO LONGER NOTICES, and this is the one thing given up: an actor that
+ * goes in and back out inside a single tick. The write knew about both moves;
+ * a step sees only where the tick ended, which is the same place it started.
+ * Nothing was drawn in between, so nobody watched a departure — and the
+ * engine already explains itself in ticks rather than in writes, since that is
+ * why events are queued and flushed once per tick. A round trip the other way
+ * — out, back, out — is still ONE departure, for free, because the ends of two
+ * ticks are all this compares.
+ */
+export const NoticeLeavingStep = rule.addStepIn(
+  'noticeLeaving',
+  'react',
+  world => {
+    for (const actor of world.actors.with(PositionalTrait)) {
+      const outside = outsideMapAt(actor, actor.get(PositionProperty));
+      const before = wasOutside.get(actor);
+      wasOutside.set(actor, outside);
+      if (outside && before === false) {
+        world.emit(LeftMapEvent, actor);
+      }
+    }
+  },
+);
 
 /**
  * Raised on an actor the first time a world holds it.

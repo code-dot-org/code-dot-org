@@ -157,27 +157,51 @@ describe('when an actor leaves the map', () => {
     world.tick(0.016);
     expect(left).toEqual([]);
 
-    // It counts once it has been in and gone out again.
+    // It counts once it has been in for a frame and gone out again. IN FOR A
+    // FRAME is the part that matters: leaving is decided once a tick, on the
+    // position the tick ended with, so an actor has to have been seen inside
+    // before it can be seen to go.
     actor.set(PositionProperty, new Vector(10, 10));
+    world.tick(0.016);
     actor.set(PositionProperty, new Vector(-500, 10));
     world.tick(0.016);
     expect(left).toEqual(['ao']);
   });
 
   it('is raised once for a wobble that crosses twice in one tick', () => {
-    // Two crossings, one departure. A handler that removes the actor or takes a
-    // life must not run twice for a round trip nobody saw drawn — so the raiser
-    // asks whether it has already raised this tick rather than keeping a flag
-    // (World.hasPendingEvent).
+    // Two crossings, one departure. A handler that removes the actor or takes
+    // a life must not run twice for a round trip nobody saw drawn — and it
+    // costs nothing to get right, because leaving compares the ends of two
+    // ticks and a wobble between them is not one of the ends.
     const {world, actor} = makeWorld();
     actor.on(LeftMapEvent, (_world, who) => left.push(who.id));
 
+    // A tick inside first, so there is a frame it was seen in.
+    world.tick(0.016);
     actor.set(PositionProperty, new Vector(10, 10));
     actor.set(PositionProperty, new Vector(-500, 10));
     actor.set(PositionProperty, new Vector(10, 10));
     actor.set(PositionProperty, new Vector(-500, 10));
     world.tick(0.016);
     expect(left).toEqual(['a']);
+  });
+
+  it('says nothing about a round trip finished inside one tick', () => {
+    // Out and back in, between two ticks: both ends are inside, so nothing
+    // left. The write knew about both moves and a step does not, which is the
+    // one thing given up by deciding this once a tick instead of inside the
+    // setter. Nothing was drawn in between, and the engine already explains
+    // itself in ticks rather than in writes — that is why events are queued
+    // and flushed once a tick.
+    const {world, actor} = makeWorld();
+    actor.on(LeftMapEvent, (_world, who) => left.push(who.id));
+
+    world.tick(0.016);
+    actor.set(PositionProperty, new Vector(-500, 10));
+    actor.set(PositionProperty, new Vector(10, 10));
+    world.tick(0.016);
+
+    expect(left).toEqual([]);
   });
 
   it('is raised again for an actor that comes back and leaves again', () => {

@@ -304,6 +304,10 @@ describe('gravity simulation', () => {
       // `move`, which is the point: a tween is the later word on a position
       // than the simulation is.
       'spatial.advanceTweens',
+      // …and `react` is later still: leaving the map is decided on the
+      // position the tick ended with, after wrapping and clamping
+      // (`spatial.NoticeLeavingStep`).
+      'spatial.noticeLeaving',
       // The foundation's, which no world asks for (WorldBuilder.rulesInPlay).
       'animation.advanceAnimation',
       'gravity.applyVelocity',
