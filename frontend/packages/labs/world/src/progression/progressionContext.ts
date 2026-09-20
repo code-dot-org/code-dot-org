@@ -7,9 +7,16 @@
 
 import {createContext, useContext} from 'react';
 
-import type {TileId, TileState, UnlockTarget} from './types';
+import type {Catalogue, TileId, TileState, UnlockTarget} from './types';
 
 export interface Progression {
+  /**
+   * The tree this learner is on — its tiles are what the map draws.
+   *
+   * Here rather than imported by each component, which is the whole of the
+   * change that let a second tree exist (`progression/catalogues`).
+   */
+  catalogue: Catalogue;
   /** What this learner has finished. */
   completed: ReadonlySet<TileId>;
   /** Whether a tile is done, open, or shut. */

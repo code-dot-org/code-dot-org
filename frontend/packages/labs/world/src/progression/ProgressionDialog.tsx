@@ -17,7 +17,6 @@ import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {useAppSelector} from '@code-dot-org/lab/redux';
 
-import {TILES} from './catalogue';
 import {lessonChannel} from './lessonRoute';
 import {useProgression} from './progressionContext';
 import styles from './progressionDialog.module.css';
@@ -26,7 +25,7 @@ import {ProgressionMap} from './ProgressionMap';
 import {TileDetail} from './TileDetail';
 import type {TileId} from './types';
 
-import {TILES_BY_ID} from './index';
+import {indexOf} from './index';
 
 /** The query parameter that says the map is open, and on what. */
 export const TREE_PARAM = 'tree';
@@ -41,7 +40,11 @@ type View = 'map' | 'list';
 export const ProgressionDialog = ({
   initialSelection,
 }: ProgressionDialogProps) => {
-  const {completed, stateOf, closeTree, complete} = useProgression();
+  const {catalogue, completed, stateOf, closeTree, complete} = useProgression();
+  // The tree in play, not the one this module imported — which is what lets a
+  // second one be drawn by the same dialog (`progression/catalogues`).
+  const TILES = catalogue.tiles;
+  const TILES_BY_ID = indexOf(catalogue).byId;
   const [selected, setSelected] = useState<TileId | undefined>(
     initialSelection,
   );
@@ -131,12 +134,14 @@ export const ProgressionDialog = ({
         <div className={styles.mapPane}>
           {view === 'map' ? (
             <ProgressionMap
+              tiles={TILES}
               completed={completed}
               selected={selected}
               onSelect={setSelected}
             />
           ) : (
             <ProgressionList
+              tiles={TILES}
               stateOf={stateOf}
               selected={selected}
               onSelect={setSelected}

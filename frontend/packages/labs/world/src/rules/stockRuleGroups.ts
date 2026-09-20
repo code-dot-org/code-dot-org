@@ -23,7 +23,7 @@
 // what `Also adds:` says on the chosen tile, in words, where it was already
 // being said.
 
-import {GRANTED_BY, TILES} from '../progression';
+import {activeCatalogue, indexOf} from '../progression';
 import {REGIONS} from '../progression/regions';
 import type {Region} from '../progression/types';
 
@@ -61,8 +61,9 @@ export interface RuleGroup {
 
 /** The region a rule comes from, or nothing when no lesson grants it. */
 export function regionOfRule(rule: StockRule): Region | undefined {
-  const tile = GRANTED_BY.get(`rule:${rule.id}`);
-  const region = TILES.find(one => one.id === tile)?.region;
+  const catalogue = activeCatalogue();
+  const tile = indexOf(catalogue).grantedBy.get(`rule:${rule.id}`);
+  const region = catalogue.tiles.find(one => one.id === tile)?.region;
   return REGIONS.find(one => one.id === region);
 }
 

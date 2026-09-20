@@ -10,33 +10,41 @@
 // The stored set carries the CATALOGUE VERSION it was written against, so the
 // tile-id migration rules in specs/PROGRESSION.md are enforceable rather than
 // aspirational: a set written against a version this build does not understand
-// is dropped rather than half-believed.
+// is dropped rather than half-believed. The version is the CATALOGUE's, since
+// two trees are edited independently and neither should invalidate the other.
 
-import type {TileId} from './types';
-
-const KEY = 'world-lab.progression';
+import type {Catalogue, TileId} from './types';
 
 /**
- * Bumped when a change to the catalogue makes an older stored set wrong —
- * a tile renamed, split, or retired. Adding tiles is not such a change.
+ * Where one tree's progress is filed.
+ *
+ * KEYED BY THE CATALOGUE, because two trees are two sets of finished tiles.
+ * One key for both would count a lesson from one against the other, and the
+ * version check below would make each tree's edits invalidate the other's
+ * progress (specs/APPS.md).
+ *
+ * The old key was `world-lab.progression`, unsuffixed. Nothing reads it any
+ * more and nothing converts it: the lab has never shipped, so a stored set
+ * from a previous build is not something to carry forward.
  */
-export const CATALOGUE_VERSION = 1;
+const keyFor = (catalogue: Catalogue): string =>
+  `world-lab.progression.${catalogue.id}`;
 
 interface Stored {
   version: number;
   completed: string[];
 }
 
-/** Whatever was stored, or nothing at all. Never throws. */
-export const loadProgress = (): ReadonlySet<TileId> => {
+/** Whatever was stored for this tree, or nothing at all. Never throws. */
+export const loadProgress = (catalogue: Catalogue): ReadonlySet<TileId> => {
   try {
-    const raw = window.localStorage.getItem(KEY);
+    const raw = window.localStorage.getItem(keyFor(catalogue));
     if (!raw) {
       return new Set();
     }
     const stored = JSON.parse(raw) as Partial<Stored>;
     if (
-      stored.version !== CATALOGUE_VERSION ||
+      stored.version !== catalogue.version ||
       !Array.isArray(stored.completed)
     ) {
       return new Set();
@@ -50,22 +58,25 @@ export const loadProgress = (): ReadonlySet<TileId> => {
 };
 
 /** Write it back. Never throws, for the same reasons. */
-export const saveProgress = (completed: ReadonlySet<TileId>): void => {
+export const saveProgress = (
+  catalogue: Catalogue,
+  completed: ReadonlySet<TileId>,
+): void => {
   try {
     const stored: Stored = {
-      version: CATALOGUE_VERSION,
+      version: catalogue.version,
       completed: [...completed],
     };
-    window.localStorage.setItem(KEY, JSON.stringify(stored));
+    window.localStorage.setItem(keyFor(catalogue), JSON.stringify(stored));
   } catch {
     // Nothing to do about it, and nothing worth interrupting a lesson for.
   }
 };
 
-/** Forget everything. For a test, and for the day there is a reset button. */
-export const clearProgress = (): void => {
+/** Forget one tree. For a test, and for the day there is a reset button. */
+export const clearProgress = (catalogue: Catalogue): void => {
   try {
-    window.localStorage.removeItem(KEY);
+    window.localStorage.removeItem(keyFor(catalogue));
   } catch {
     // As above.
   }

@@ -127,14 +127,15 @@ describe('what the references stand for', () => {
   });
 
   it('has a library that no longer sets a ceiling on a project', () => {
-    // 47 rules, 4.19MB. This used to be "the reason the ceiling rises every
-    // time a rule is added", because a project copied from it. It does not any
-    // more: what a project holds is one line per rule, so the shelf can grow
-    // without a project growing with it. The number is kept because it is
-    // still what the BUNDLE carries.
+    // 46 rules. This used to be "the reason the ceiling rises every time a
+    // rule is added", because a project copied from it. It does not any more:
+    // what a project holds is one line per rule, so the shelf can grow without
+    // a project growing with it. The number is kept because it is still what
+    // the BUNDLE carries, and because a count nobody updates is a count
+    // nobody reads — Gestures and Screens both landed without it moving.
     const shelf = STOCK_RULES.map(rule => bytes(rule.contents));
 
-    expect(shelf).toHaveLength(44);
+    expect(shelf).toHaveLength(46);
     expect(shelf.reduce((sum, one) => sum + one, 0)).toBeLessThan(4_600_000);
   });
 });

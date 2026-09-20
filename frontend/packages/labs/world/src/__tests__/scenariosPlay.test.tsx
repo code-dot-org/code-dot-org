@@ -47,10 +47,13 @@ describe.each(WORLD_SCENARIO_TAGS)('the %s scenario', tag => {
     if (tag !== 'empty') {
       // More than three is what a GAME places — a board, a player, the things
       // it is about. A novel places two, a portrait and a box, and everything
-      // that happens after that is somebody talking. So the floor is one: the
-      // failure worth catching is a world that built EMPTY, and two is not
-      // that.
-      expect(placed).toBeGreaterThan(tag === 'novel' ? 1 : 3);
+      // that happens after that is somebody talking. An APP places three: a
+      // header, a list and the button that opens the form, with every other
+      // screen arriving when it is asked for. So the floor for those two is
+      // one: the failure worth catching is a world that built EMPTY, and two
+      // is not that.
+      const sparse = tag === 'novel' || tag === 'app';
+      expect(placed).toBeGreaterThan(sparse ? 1 : 3);
     }
   });
 

@@ -39,8 +39,8 @@
 
 import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
-import {TILES} from './catalogue';
-import type {UnlockTarget} from './types';
+import {DEFAULT_CATALOGUE} from './catalogues';
+import type {Catalogue, UnlockTarget} from './types';
 
 /** A flyout entry's block type, when it names one. */
 const typeOf = (item: unknown): string | undefined => {
@@ -68,24 +68,32 @@ const typeOf = (item: unknown): string | undefined => {
 const generatedElsewhere = (type: string): boolean =>
   /^world_(do|get|set|on|query|emit)_(?!Space_|Appearance_)[A-Z]/.test(type);
 
-/** Every block type the catalogue grants and that gating applies to. */
-export const EARNED_BLOCKS: ReadonlySet<string> = new Set(
-  TILES.flatMap(tile =>
-    tile.unlocks
-      .filter(unlock => unlock.kind === 'block')
-      .map(unlock => (unlock as {type: string}).type)
-      .filter(type => !generatedElsewhere(type)),
-  ),
-);
+/** Every block type a catalogue grants and that gating applies to. */
+export const earnedBlocksOf = (catalogue: Catalogue): ReadonlySet<string> =>
+  new Set(
+    catalogue.tiles.flatMap(tile =>
+      tile.unlocks
+        .filter(unlock => unlock.kind === 'block')
+        .map(unlock => (unlock as {type: string}).type)
+        .filter(type => !generatedElsewhere(type)),
+    ),
+  );
 
-/** Every drawer the catalogue grants whole. */
-export const EARNED_CATEGORIES: ReadonlySet<string> = new Set(
-  TILES.flatMap(tile =>
-    tile.unlocks
-      .filter(unlock => unlock.kind === 'category')
-      .map(unlock => (unlock as {name: string}).name),
-  ),
-);
+/** Every drawer a catalogue grants whole. */
+export const earnedCategoriesOf = (catalogue: Catalogue): ReadonlySet<string> =>
+  new Set(
+    catalogue.tiles.flatMap(tile =>
+      tile.unlocks
+        .filter(unlock => unlock.kind === 'category')
+        .map(unlock => (unlock as {name: string}).name),
+    ),
+  );
+
+/** The default tree's, for callers that have only ever known one. */
+export const EARNED_BLOCKS: ReadonlySet<string> =
+  earnedBlocksOf(DEFAULT_CATALOGUE);
+export const EARNED_CATEGORIES: ReadonlySet<string> =
+  earnedCategoriesOf(DEFAULT_CATALOGUE);
 
 /** Whether this drawer has anything earned in it — see the header. */
 const isEarned = (category: ToolboxCategory): boolean =>

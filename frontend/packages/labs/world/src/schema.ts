@@ -45,6 +45,13 @@ export const WorldLevelDataSchema = z.object({
   // `world`, so a learner lands where the instructions are
   // (specs/CURRICULUM_PLAN.md).
   worldView: z.enum(['map', 'world']).optional(),
+  // Which TREE of lessons this level belongs to, by catalogue id. Default is
+  // the original one, which is every level written before there was more than
+  // one. An app progression is a second tree over the same machinery, and it
+  // is the thing a level has to name so that the map, the shelf and the
+  // learner's finished tiles all agree which one is meant
+  // (progression/catalogues, specs/APPS.md).
+  catalogue: z.string().optional(),
 });
 
 /**

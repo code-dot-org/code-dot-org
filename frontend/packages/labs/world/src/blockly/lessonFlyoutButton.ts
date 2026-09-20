@@ -15,8 +15,7 @@
 
 import type * as Blockly from 'blockly/core';
 
-import {TILES} from '../progression/catalogue';
-import {TILES_BY_ID} from '../progression/index';
+import {activeCatalogue, indexOf} from '../progression';
 import {lessonFor, openLesson} from '../progression/lessonSeam';
 import {stockRuleByName} from '../rules/stock';
 
@@ -42,7 +41,7 @@ export function lessonFlyoutButton(
     kind: 'button',
     // The lesson's own name, as everywhere else this link appears: somebody
     // deciding whether to go is deciding about that lesson.
-    text: `How this works: ${TILES_BY_ID.get(tile)?.title ?? tile}`,
+    text: `How this works: ${indexOf(activeCatalogue()).byId.get(tile)?.title ?? tile}`,
     callbackkey: key(tile),
   };
 }
@@ -55,7 +54,7 @@ export function lessonFlyoutButton(
  * rebuilt — which is often, and for reasons that have nothing to do with this.
  */
 export function registerLessonButtons(workspace: Blockly.WorkspaceSvg): void {
-  for (const tile of TILES) {
+  for (const tile of activeCatalogue().tiles) {
     workspace.registerButtonCallback(key(tile.id), () => {
       // After the press, not during it: opening the map takes focus while
       // Blockly is still inside its own gesture handling (the same reason the

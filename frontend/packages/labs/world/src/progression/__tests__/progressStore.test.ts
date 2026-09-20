@@ -8,37 +8,71 @@
 
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
-import {
-  CATALOGUE_VERSION,
-  clearProgress,
-  loadProgress,
-  saveProgress,
-} from '../progressStore';
+import {WORLD_CATALOGUE} from '../catalogues';
+import {clearProgress, loadProgress, saveProgress} from '../progressStore';
+import type {Catalogue} from '../types';
 
-const KEY = 'world-lab.progression';
+const WORLD = WORLD_CATALOGUE;
+const CATALOGUE_VERSION = WORLD.version;
+const KEY = `world-lab.progression.${WORLD.id}`;
+
+/** A second tree, to show the two do not share a key. */
+const APPS: Catalogue = {id: 'apps', name: 'Apps', version: 1, tiles: []};
 
 beforeEach(() => {
   window.localStorage.clear();
   vi.restoreAllMocks();
 });
 
+describe('two trees', () => {
+  it('keep their progress apart', () => {
+    // The reason the store takes a catalogue at all: a lesson finished on one
+    // tree is not a lesson finished on the other (specs/APPS.md).
+    saveProgress(WORLD, new Set(['place/first']));
+    saveProgress(APPS, new Set(['app/first']));
+
+    expect([...loadProgress(WORLD)]).toEqual(['place/first']);
+    expect([...loadProgress(APPS)]).toEqual(['app/first']);
+  });
+
+  it('are forgotten one at a time', () => {
+    saveProgress(WORLD, new Set(['place/first']));
+    saveProgress(APPS, new Set(['app/first']));
+
+    clearProgress(APPS);
+    expect([...loadProgress(WORLD)]).toEqual(['place/first']);
+    expect([...loadProgress(APPS)]).toEqual([]);
+  });
+
+  it('do not invalidate each other when one is renumbered', () => {
+    // Each tree's version is its own. A tile renamed on the app tree must not
+    // drop what somebody finished on the world tree.
+    saveProgress(WORLD, new Set(['place/first']));
+    const renumbered: Catalogue = {...APPS, version: APPS.version + 1};
+    saveProgress(APPS, new Set(['app/first']));
+
+    expect([...loadProgress(renumbered)]).toEqual([]);
+    expect([...loadProgress(WORLD)]).toEqual(['place/first']);
+  });
+});
+
 describe('progress', () => {
   it('starts empty', () => {
-    expect([...loadProgress()]).toEqual([]);
+    expect([...loadProgress(WORLD)]).toEqual([]);
   });
 
   it('comes back', () => {
-    saveProgress(new Set(['origin/first-world', 'motion/speed']));
-    expect([...loadProgress()].sort()).toEqual([
+    saveProgress(WORLD, new Set(['origin/first-world', 'motion/speed']));
+    expect([...loadProgress(WORLD)].sort()).toEqual([
       'motion/speed',
       'origin/first-world',
     ]);
   });
 
   it('is forgettable', () => {
-    saveProgress(new Set(['origin/first-world']));
-    clearProgress();
-    expect([...loadProgress()]).toEqual([]);
+    saveProgress(WORLD, new Set(['origin/first-world']));
+    clearProgress(WORLD);
+    expect([...loadProgress(WORLD)]).toEqual([]);
   });
 
   // The migration rule in specs/PROGRESSION.md made enforceable: a set written
@@ -48,12 +82,12 @@ describe('progress', () => {
       KEY,
       JSON.stringify({version: CATALOGUE_VERSION + 1, completed: ['a', 'b']}),
     );
-    expect([...loadProgress()]).toEqual([]);
+    expect([...loadProgress(WORLD)]).toEqual([]);
   });
 
   it('survives rubbish in the slot', () => {
     window.localStorage.setItem(KEY, 'not json at all');
-    expect([...loadProgress()]).toEqual([]);
+    expect([...loadProgress(WORLD)]).toEqual([]);
   });
 
   it('survives a storage that refuses', () => {
@@ -62,11 +96,13 @@ describe('progress', () => {
     vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
       throw new Error('QuotaExceededError');
     });
-    expect(() => saveProgress(new Set(['origin/first-world']))).not.toThrow();
+    expect(() =>
+      saveProgress(WORLD, new Set(['origin/first-world'])),
+    ).not.toThrow();
 
     vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => {
       throw new Error('SecurityError');
     });
-    expect([...loadProgress()]).toEqual([]);
+    expect([...loadProgress(WORLD)]).toEqual([]);
   });
 });

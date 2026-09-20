@@ -92,3 +92,17 @@ export function gatesShelf(
 ): boolean {
   return properties?.levelData?.gateShelf === true;
 }
+
+/**
+ * Which tree of lessons this level is on, by its catalogue id.
+ *
+ * Absent means the original one, which is every level written before there
+ * was more than one. It decides what the map draws, what the shelf holds and
+ * where the learner's finished tiles are filed — two trees are two sets of
+ * progress (`progression/catalogues`, specs/APPS.md).
+ */
+export function catalogueName(
+  properties: WorldLevelProperties | undefined,
+): string | undefined {
+  return properties?.levelData?.catalogue;
+}

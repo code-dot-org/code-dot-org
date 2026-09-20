@@ -231,3 +231,30 @@ export interface LessonProperties {
   levelData?: WorldScenario['levelData'];
   source: MultiFileSource;
 }
+
+/**
+ * One tree of lessons, and everything that identifies it.
+ *
+ * THE MODULE USED TO BE ONE TREE, spelled `TILES` and imported wherever it was
+ * wanted — so the shelf, the store and the map all reached for the same global
+ * and a second tree could not exist beside them. An app progression is a
+ * second tree: the same machinery over a different list (specs/APPS.md).
+ *
+ * The id is what a level names (`levelData.catalogue`) and what a learner's
+ * progress is filed under, which is the point of it: two trees are two sets of
+ * finished tiles, and one store for both would have a lesson from one counted
+ * against the other.
+ */
+export interface Catalogue {
+  /** Short, url-shaped; the store key and what a level names. */
+  id: string;
+  /** What a learner sees at the top of the map. */
+  name: string;
+  /**
+   * Bumped when a change to THIS catalogue makes an older stored set wrong —
+   * a tile renamed, split or retired. Adding tiles is not such a change, and
+   * the versions of two catalogues have nothing to do with each other.
+   */
+  version: number;
+  tiles: readonly Tile[];
+}

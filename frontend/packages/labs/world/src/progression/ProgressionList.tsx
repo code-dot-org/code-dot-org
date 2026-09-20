@@ -11,18 +11,21 @@
 // summarised away; a tile that is locked says what it is waiting for, in words,
 // where the map says it in a padlock and a dashed edge.
 
-import {TILES} from './catalogue';
+import {DEFAULT_CATALOGUE} from './catalogues';
 import {regionColors} from './palette';
 import styles from './progressionList.module.css';
 import {REGIONS, regionHue} from './regions';
-import type {TileId, TileState} from './types';
-
-import {TILES_BY_ID} from './index';
+import type {Tile, TileId, TileState} from './types';
 
 export interface ProgressionListProps {
   stateOf: (id: TileId) => TileState;
   selected?: TileId;
   onSelect: (id: TileId) => void;
+  /**
+   * The tree to list. Passed in rather than imported, as the map's `tiles`
+   * already was, so a second one renders with the same component.
+   */
+  tiles?: readonly Tile[];
 }
 
 const STATE_WORDS: Record<TileState, string> = {
@@ -35,11 +38,13 @@ export const ProgressionList = ({
   stateOf,
   selected,
   onSelect,
+  tiles: all = DEFAULT_CATALOGUE.tiles,
 }: ProgressionListProps) => {
+  const byId = new Map<TileId, Tile>(all.map(one => [one.id, one]));
   return (
     <div className={styles.list}>
       {REGIONS.map(region => {
-        const tiles = TILES.filter(tile => tile.region === region.id);
+        const tiles = all.filter(tile => tile.region === region.id);
         // Both themes; the stylesheet picks, on the same `[data-theme]` the design
         // system's tokens are scoped by (see progressionMap.module.css).
         const hue = regionHue(region.id);
@@ -72,7 +77,7 @@ export const ProgressionList = ({
                 const state = stateOf(tile.id);
                 const waiting = tile.requires
                   .filter(id => stateOf(id) !== 'done')
-                  .map(id => TILES_BY_ID.get(id)?.title ?? id);
+                  .map(id => byId.get(id)?.title ?? id);
                 return (
                   <li key={tile.id}>
                     <button

@@ -18,7 +18,11 @@ import {useEffect, useMemo, useState, type PropsWithChildren} from 'react';
 import {useMaybeLevelProperties} from '@code-dot-org/lab/contexts';
 import {useAppSelector} from '@code-dot-org/lab/redux';
 
-import {gatesShelf, type WorldLevelProperties} from '../levelData';
+import {
+  catalogueName,
+  gatesShelf,
+  type WorldLevelProperties,
+} from '../levelData';
 
 import {tileForChannel} from './lessonRoute';
 import {setLessonOpener} from './lessonSeam';
@@ -28,7 +32,13 @@ import {loadProgress, saveProgress} from './progressStore';
 import {holds, shelfKeys} from './shelf';
 import type {TileId} from './types';
 
-import {grantedBy, GRANTED_BY, TILES, TILES_BY_ID, tileState} from './index';
+import {
+  catalogueById,
+  grantedByIn,
+  indexOf,
+  setActiveCatalogue,
+  tileStateIn,
+} from './index';
 
 export interface ProgressionProviderProps {
   /**
@@ -42,15 +52,18 @@ export const ProgressionProvider = ({
   children,
   initiallyCompleted,
 }: PropsWithChildren<ProgressionProviderProps>) => {
-  const [completed, setCompleted] = useState<ReadonlySet<TileId>>(() =>
-    initiallyCompleted ? new Set(initiallyCompleted) : loadProgress(),
-  );
-  const [open, setOpen] = useState<{focus?: TileId} | undefined>();
-  // Whether this level gates the libraries. `useMaybeLevelProperties` because
-  // the provider is mounted in tests and stories with no level at all, where
-  // "not gated" is the right answer rather than a crash.
+  // Whether this level gates the libraries, and which TREE it is on.
+  // `useMaybeLevelProperties` because the provider is mounted in tests and
+  // stories with no level at all, where "not gated, the usual tree" is the
+  // right answer rather than a crash.
   const level = useMaybeLevelProperties() as WorldLevelProperties | undefined;
   const gated = gatesShelf(level);
+  const catalogue = useMemo(() => catalogueById(catalogueName(level)), [level]);
+
+  const [completed, setCompleted] = useState<ReadonlySet<TileId>>(() =>
+    initiallyCompleted ? new Set(initiallyCompleted) : loadProgress(catalogue),
+  );
+  const [open, setOpen] = useState<{focus?: TileId} | undefined>();
 
   // The lesson being done, if this project is one — a lesson lives at a channel
   // of its own (./lessonRoute), so the open channel is the whole of the
@@ -61,23 +74,25 @@ export const ProgressionProvider = ({
     () =>
       tileForChannel(
         channel ?? '',
-        TILES.map(tile => tile.id),
+        catalogue.tiles.map(tile => tile.id),
       ),
-    [channel],
+    [channel, catalogue],
   );
 
   // Written on every change rather than on close: a learner who finishes a tile
-  // and then closes the tab has finished it (./progressStore).
+  // and then closes the tab has finished it (./progressStore). Filed under the
+  // tree it belongs to, so two of them do not count against each other.
   useEffect(() => {
     if (!initiallyCompleted) {
-      saveProgress(completed);
+      saveProgress(catalogue, completed);
     }
-  }, [completed, initiallyCompleted]);
+  }, [catalogue, completed, initiallyCompleted]);
 
   const value = useMemo<Progression>(
     () => ({
+      catalogue,
       completed,
-      stateOf: (id: TileId) => tileState(completed, id),
+      stateOf: (id: TileId) => tileStateIn(catalogue, completed, id),
       openTree: (focus?: TileId) => setOpen({focus}),
       closeTree: () => setOpen(undefined),
       isOpen: open !== undefined,
@@ -85,18 +100,18 @@ export const ProgressionProvider = ({
         setCompleted(previous =>
           previous.has(id) ? previous : new Set([...previous, id]),
         ),
-      grantedBy: unlock => grantedBy(unlock)?.id,
+      grantedBy: unlock => grantedByIn(catalogue, unlock)?.id,
       gated,
       openLesson,
       holds: unlock =>
         !gated ||
         holds(
           shelfKeys(completed, openLesson),
-          new Set(GRANTED_BY.keys()),
+          new Set(indexOf(catalogue).grantedBy.keys()),
           unlock,
         ),
     }),
-    [completed, open, gated, openLesson],
+    [catalogue, completed, open, gated, openLesson],
   );
 
   // …and the same door for callers that cannot use a hook: a Blockly field, a
@@ -107,6 +122,13 @@ export const ProgressionProvider = ({
     return () => setLessonOpener(null);
   }, []);
 
+  // …and which TREE those callers are answering about. A flyout's "How this
+  // works" and the rule library's grouping both ask which lesson taught a
+  // thing, and neither is a component (./catalogues, `activeCatalogue`).
+  useEffect(() => {
+    setActiveCatalogue(catalogue);
+  }, [catalogue]);
+
   return (
     <ProgressionContext.Provider value={value}>
       {children}
@@ -116,7 +138,9 @@ export const ProgressionProvider = ({
           // than as an error: the id may have come off a URL somebody typed, or
           // a link that outlived a catalogue change.
           initialSelection={
-            open.focus && TILES_BY_ID.has(open.focus) ? open.focus : undefined
+            open.focus && indexOf(catalogue).byId.has(open.focus)
+              ? open.focus
+              : undefined
           }
         />
       )}

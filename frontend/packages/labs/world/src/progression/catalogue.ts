@@ -2674,6 +2674,25 @@ export const TILES: readonly Tile[] = [
       // find two screens, a form, a keyboard and a list already talking to
       // each other (`fixtures/app`, specs/APPS.md).
       {kind: 'template', id: 'app'},
+      // …and the two blocks an on-screen keyboard is built out of. A key
+      // TYPES rather than reaching into a field, which is what lets one
+      // keyboard fill any form (specs/KEYBOARD_PLAN.md); `press the ⟨…⟩ key`
+      // is for the keys that make no character, and is also how a touch
+      // D-pad feeds a control scheme that reads the arrows.
+      {kind: 'block', type: 'world_type'},
+      {kind: 'block', type: 'world_press_key'},
+      // …and what survives a reload, which is the other half of a form being
+      // worth filling in. A world's own properties, under a name the project
+      // chooses (specs/SAVING_PLAN.md).
+      //
+      // HERE FOR WANT OF A BETTER TILE. Saving is not what this lesson
+      // teaches, and a high score is a GAME wanting it as much as an app is.
+      // They are on the shelf at all because the alternative was three
+      // blocks nobody could reach; an app progression should re-home them
+      // (specs/APPS.md, “What is not taught”).
+      {kind: 'block', type: 'world_save_memory'},
+      {kind: 'block', type: 'world_recall_memory'},
+      {kind: 'block', type: 'world_forget_memory'},
     ],
     offers: [
       {kind: 'block', type: 'world_this_actor'},

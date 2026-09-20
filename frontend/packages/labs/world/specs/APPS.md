@@ -174,17 +174,39 @@ foundations first, then what is built out of them:
 Every one of those depends on something in the missing list, except
 Controls, which could be written today.
 
-## What "separate" costs in the lab
+## What "separate" costs in the lab — PAID
 
-The progression module assumes ONE catalogue: `TILES` is imported by
-`progression/index.ts`, and `TILES_BY_ID`, `GRANTED_BY` and the shelf are
-module-level constants built from it; `progressStore` has one localStorage
-key; a level says whether it gates the shelf but never WHICH tree it is on.
+The progression module assumed ONE catalogue: `TILES` was imported by
+`progression/index.ts`, `TILES_BY_ID`/`GRANTED_BY`/the shelf were
+module-level constants built from it, `progressStore` had one localStorage
+key, and a level said whether it gated the shelf but never WHICH tree it
+was on.
 
-So a second progression means: the catalogue passed in rather than
-imported, the store keyed by which catalogue, and `levelData` naming one.
-Bounded, and touching most of the progression module's public surface. It
-is a day's work that should be done once, not twice.
+All three are done. A `Catalogue` is `{id, name, version, tiles}`
+(`progression/catalogues`); the questions asked of one are functions of it
+(`indexOf`, `tileIn`, `tileStateIn`, `shelfOf`, `grantedByIn`,
+`earnedBlocksOf`), memoized per catalogue rather than computed once for a
+global. The store is keyed `world-lab.progression.<id>` and checks the
+CATALOGUE's version, so two trees keep their progress apart and editing one
+does not invalidate the other. A level names its tree with
+`levelData.catalogue`, defaulting to the original.
+
+What made it a day rather than an afternoon is the callers. The map already
+took its `tiles` as a prop; the dialog and the list did not, and now do. The
+two callers that are not components — the flyout's "How this works" button
+and the rule library's region grouping — read an `activeCatalogue()` seam the
+provider sets as it mounts, which is the same shape `lessonSeam` already uses
+for the same reason.
+
+The old exports are still there (`TILES_BY_ID`, `tile`, `tileState`,
+`GRANTED_BY`, `grantedBy`, `shelf`, `EARNED_BLOCKS`), defined in terms of the
+default catalogue. A test, a story and the headless generator all want the
+world tree, and saying so once beats saying it in forty places — what changed
+is that a caller which SHOULD care can now take a catalogue.
+
+NOT DONE, and not needed yet: a learner on two trees at once, one tree
+requiring another, and any UI for choosing between them. There is one
+catalogue; the second is now possible rather than present.
 
 ## Recommendation
 
@@ -256,6 +278,26 @@ cannot be chained as statements — the answer has to go somewhere. Notes keeps
 two booleans of its own, `saved` and `remembered`, which is what the blocks are
 for and reads better than discarding them. Worth knowing before writing the
 lesson: there is no "just save it" row.
+
+**A shipped block can be reachable by nobody.** `toolboxShelf` gates a drawer
+the moment the catalogue grants anything in it — once one World block is
+earned, every other World block is hidden until some tile grants it too. That
+is the right rule and it has a silent failure: saving and the on-screen
+keyboard were built, tested, specced and finished, and their five blocks sat in
+the World drawer where no learner could reach them, with every test in the repo
+passing.
+
+They are granted now, on `story/form` for want of a better tile — saving is not
+what that lesson teaches, and a high score is a game wanting it as much as an
+app is. An app progression should re-home them.
+
+The guard is a LEDGER rather than a rule (`shelfCoverage.test`), because the
+honest count is 98 more: every hidden block is listed with its drawer, and a
+new one must be either granted or written down. Most are things no lesson has
+been written for yet; some are plainly missing, and the list is how anybody
+would know which — `world_time`, `math_random_int`, `math_constrain` and
+`text_length` are all on it. It is the cheapest survey of what the progression
+does not cover.
 
 **A stock actor's defaults show through until something fills it.** The List
 came up holding the rows it was born with on a first run, because the fill was
