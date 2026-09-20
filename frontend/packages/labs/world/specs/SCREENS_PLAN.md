@@ -85,6 +85,8 @@ stack does.
   the newest map.
 - `2761d841f84` — loading a map by PATH, a `map` parameter type, and the
   `Screens` rule.
+- `e826e5f1a41` — the demo the shelf asks for, the tile that grants it,
+  and this record.
 
 ## Learned while building
 
@@ -102,6 +104,12 @@ to screen ⟨…⟩` takes the map as an argument, and neither half of that
   `emit`**, which is the exception an enum already makes and for the same
   reason: an `emit` supplies the path the code worked out. Missed, the
   rule failed at workspace load with a socket nothing could fill.
+- **A demo that comes home looks like a demo that did nothing.** Every
+  demo answers to a check that compares the first frame with the last, so
+  the obvious script — go in, come back — passes through every
+  interesting state and ends in the one it started in. Two forward and one
+  back is the shortest run that shows both directions and still ends
+  somewhere new.
 - **The rule DSL binds an unknown parameter type to a Number.** So the
   moment a `map` parameter existed, its getter refused to connect — at
   workspace load, not where it was written. A fallback that guesses is
