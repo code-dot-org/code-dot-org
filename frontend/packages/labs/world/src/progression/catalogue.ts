@@ -2669,6 +2669,11 @@ export const TILES: readonly Tile[] = [
       {kind: 'actor', id: 'list'},
       // …and the one that takes a paragraph.
       {kind: 'actor', id: 'textArea'},
+      // …and a picture laid out with the rest of them: a box the project
+      // chooses, with the picture fitted to it. The one boxed control that is
+      // not a Label underneath, because a Label's drawing would hide the
+      // picture (specs/UI_ACTORS.md).
+      {kind: 'actor', id: 'image'},
       // …and the one that shows more than fits WITHOUT knowing what is in it:
       // a window onto a map of its own that a finger moves. A long screen, a
       // settings page and a list whose rows are real actors are all this

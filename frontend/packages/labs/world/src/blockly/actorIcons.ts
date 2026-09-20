@@ -22,6 +22,7 @@ import font from '@fortawesome/fontawesome-free/svgs/solid/font.svg?raw';
 import handPointer from '@fortawesome/fontawesome-free/svgs/solid/hand-pointer.svg?raw';
 import heartPulse from '@fortawesome/fontawesome-free/svgs/solid/heart-pulse.svg?raw';
 import iCursor from '@fortawesome/fontawesome-free/svgs/solid/i-cursor.svg?raw';
+import image from '@fortawesome/fontawesome-free/svgs/solid/image.svg?raw';
 import listDots from '@fortawesome/fontawesome-free/svgs/solid/list-dots.svg?raw';
 import paragraph from '@fortawesome/fontawesome-free/svgs/solid/paragraph.svg?raw';
 import sliders from '@fortawesome/fontawesome-free/svgs/solid/sliders.svg?raw';
@@ -87,6 +88,7 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   // told nothing. Sharing `bar` made them one smudge in a dropdown.
   health: tile(heartPulse),
   panel: tile(windowMaximize),
+  image: tile(image),
   viewport: tile(tv),
   // A Scroll View is a Viewport in every other respect, so the symbol has to
   // carry the one difference: it MOVES. A second screen glyph would have been

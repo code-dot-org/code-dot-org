@@ -102,6 +102,13 @@ describe('every stock actor', () => {
       list: ['items', 'scroll', 'highlighted', 'can_remove'],
       // A dropdown's words, whether it is open, and which row the keys are on.
       dropdown: ['choices', 'open', 'highlighted'],
+      // How an Image meets its box: fill it exactly, or fit inside it keeping
+      // the picture's shape. Nobody else's idea — a Label has no picture and a
+      // Coin has no box it must sit in.
+      // Its box and how the picture meets it. The box is the Image's OWN
+      // rather than the Label's, because acting like a Label brings a drawing
+      // and a drawing wins over a sprite (`actors/stock/image`).
+      image: ['width', 'height', 'stretches'],
       // A text area's caret; its lines are newlines in the words themselves.
       textArea: ['caret'],
       // …and what a bar IS: how far along it is, and the two colors it is

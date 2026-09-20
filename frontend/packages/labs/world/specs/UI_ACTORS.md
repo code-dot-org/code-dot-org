@@ -173,6 +173,7 @@ a rule pulls its dependencies.
 | Slider       | a Progress Bar the pointer drags                  | BUILT — `fraction`, `changed`, arrow keys   |
 | List         | a box of words you scroll and choose one of       | BUILT — drag, arrows, page keys, Enter      |
 | Scroll View  | a window onto something taller than itself        | BUILT — drag, arrows, a bar; holds a MAP    |
+| Image        | a picture in a box you choose the size of         | BUILT — fits or stretches; no crop          |
 
 Six of the eleven are built, and the three that arrived after this document was
 first written are the ones that changed what the rest should be. The two new
@@ -1258,6 +1259,32 @@ It is not a List and knows nothing about rows. **A list whose rows are ACTORS
 is this with a map of rows in it** — which was the open question this table
 has carried since the List was built, and it is answered by building nothing
 further.
+
+### A picture in a box — BUILT
+
+`actors/image`. Any actor could already show a sprite; what none of them was
+is a picture laid out with the rest of an interface — a thumbnail in a row, an
+avatar beside a name. That wants a BOX the project chooses, with the picture
+made to sit in it whatever size the file happens to be.
+
+The fitting is SCALE, because that is the only thing the engine offers: an
+actor is drawn at its intrinsic size times its scale. So **fit** takes the
+smaller of the two ratios on both axes and keeps the picture's shape, and
+**stretch** gives each axis its own and fills the box exactly.
+
+**And not CROP**, which is what an avatar usually wants. Cropping means drawing
+outside a box and clipping it away; a mask is a no-op, and the two things that
+clip cannot clip a texture — a Scroll View clips ACTORS and a drawing clips
+what the drawing drew. An Image that crops is a Scroll View with one picture
+in it, and is not worth a stock actor until somebody wants one.
+
+**It is the one boxed interface actor that does NOT act like a Label**, and
+the reason is worth remembering: `acts like` brings the Label's DRAWING, and a
+drawing wins over a sprite when an actor has both
+(`World.renderSnapshot`). An Image that acted like a Label drew a
+label-shaped rectangle and never showed its picture. So its width and height
+are its own — which reads better anyway: an Image is not a Label with a
+picture in it, it is a picture with a box around it.
 
 ### What a phone-shaped kit does not yet answer
 

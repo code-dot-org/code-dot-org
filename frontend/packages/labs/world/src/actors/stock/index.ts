@@ -16,6 +16,7 @@ import {COIN_ANIMATION, coinActor} from './coin';
 import {dropdownActor} from './dropdown';
 import {GROUND_SPRITE, groundActor} from './ground';
 import {healthBarActor} from './healthBar';
+import {imageActor} from './image';
 import {labelActor} from './label';
 import {listActor} from './list';
 import {panelActor} from './panel';
@@ -249,6 +250,19 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     requires: [],
     actors: ['label'],
     contents: viewportActor,
+  },
+  {
+    id: 'image',
+    name: 'Image',
+    description:
+      'A picture in a box you decide the size of — a thumbnail in a row, an avatar beside a name. Give it a width, a height and a picture and it fits the picture to them; turn on “stretches” to fill the box exactly instead.',
+    // Nothing at all. The picture is the engine's own Appearance, in every
+    // world, and the box is two properties of the Image's own — it does NOT
+    // act like a Label, because a Label brings a drawing and a drawing wins
+    // over a sprite, so it would never show its picture.
+    requires: [],
+    sprites: [PORTRAIT_SPRITE],
+    contents: imageActor,
   },
   {
     id: 'scrollView',
