@@ -558,6 +558,34 @@ describe('an event that carries several values', () => {
     expect(new Set(fields).size).toBe(fields.length);
   });
 
+  it('starts the `emit` socket at the default its author gave', () => {
+    // An event designed with a `let` says what a raiser gets when it is left
+    // alone, exactly as a `define block`'s argument does. Dropping that on
+    // the way through `ruleMeta` made the row do nothing.
+    const emit = emitFor(
+      ruleWithEvent(
+        {
+          parts: [
+            {kind: 'label', text: 'is damaged by'},
+            {
+              kind: 'param',
+              name: 'amount',
+              type: 'number',
+              var: 'a',
+              shadow: {shadow: {type: 'math_number', fields: {NUM: 5}}},
+            },
+          ],
+        },
+        [{id: 'a', name: 'amount', type: 'Number'}],
+      ),
+    );
+
+    expect(shadowsFor(emit.type)?.[0]?.shadow).toMatchObject({
+      type: 'math_number',
+      fields: {NUM: 5},
+    });
+  });
+
   it('raises them all, in order, through the `emit` block', () => {
     const emit = emitFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
 
