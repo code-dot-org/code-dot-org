@@ -11,14 +11,27 @@ interface QueuedEvent {
   event: GameEvent;
   /** Absent for a world event — there is nobody it happened to. */
   actor?: Actor;
-  detail?: unknown;
+  /**
+   * What the event carries, one per value its signature names.
+   *
+   * A LIST, because an event's signature is a list: `define event ⟨damaged
+   * by⟩ ⟨who⟩ ⟨how much⟩` is about two things, and an event that carried one
+   * made its author pick which one to lose (specs/EVENT_VALUES_PLAN.md).
+   * Empty for an event that carries nothing, one long for every event the
+   * rule library raises today.
+   */
+  values: readonly unknown[];
 }
 
 export class EventQueue {
   private pending: QueuedEvent[] = [];
 
-  enqueue(event: GameEvent, actor: Actor | undefined, detail?: unknown): void {
-    this.pending.push({event, actor, detail});
+  enqueue(
+    event: GameEvent,
+    actor: Actor | undefined,
+    ...values: readonly unknown[]
+  ): void {
+    this.pending.push({event, actor, values});
   }
 
   /**
@@ -48,12 +61,12 @@ export class EventQueue {
   flush(world: World): void {
     const batch = this.pending;
     this.pending = [];
-    for (const {event, actor, detail} of batch) {
+    for (const {event, actor, values} of batch) {
       if (!actor) {
         // A world event: the world holds the handlers, and there is no subject
         // to pass. One dispatch, however many actors are in the world.
         for (const handler of world.handlersFor(event)) {
-          handler(world, detail);
+          handler(world, ...values);
         }
         continue;
       }
@@ -61,7 +74,7 @@ export class EventQueue {
       // its space and a query about the map is about its map
       // (`World.withActor`).
       for (const handler of actor.handlersFor(event)) {
-        world.withActor(actor, () => handler(world, actor, detail));
+        world.withActor(actor, () => handler(world, actor, ...values));
       }
     }
   }

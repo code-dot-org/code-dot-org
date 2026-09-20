@@ -306,11 +306,18 @@ export interface GameEvent {
   readonly ownerId: string;
 }
 
-/** Handler an Actor registers for a GameEvent; runs after the tick. */
+/**
+ * Handler an Actor registers for a GameEvent; runs after the tick.
+ *
+ * The values after the subject are what the event carries — one per value its
+ * signature names, in its order (specs/EVENT_VALUES_PLAN.md). A handler
+ * written for an event that carries one takes one, which is every handler the
+ * rule library registers.
+ */
 export type EventHandler = (
   world: World,
   actor: Actor,
-  detail?: unknown,
+  ...values: readonly unknown[]
 ) => void;
 
 /**
@@ -322,7 +329,10 @@ export type EventHandler = (
  * hand a handler, and pretending otherwise is what made `rules/input` raise its
  * key events once per actor per frame just to have somebody to raise them for.
  */
-export type WorldEventHandler = (world: World, detail?: unknown) => void;
+export type WorldEventHandler = (
+  world: World,
+  ...values: readonly unknown[]
+) => void;
 
 /**
  * Where a Step sits in the per-tick order. `before`/`after` anchor to another

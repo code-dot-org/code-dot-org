@@ -1556,9 +1556,16 @@ export class World {
     return this.actorList.length;
   }
 
-  /** Raise an event for `actor`; dispatched after the current tick's steps. */
-  emit(event: GameEvent, actor: Actor, detail?: unknown): void {
-    this.events.enqueue(event, actor, detail);
+  /**
+   * Raise an event for `actor`; dispatched after the current tick's steps.
+   *
+   * AS MANY VALUES AS THE EVENT'S SIGNATURE NAMES, in its order. One is the
+   * ordinary case and every rule in the library makes that call; a designed
+   * event may carry several, and a handler reads each by the name its author
+   * gave it (specs/EVENT_VALUES_PLAN.md).
+   */
+  emit(event: GameEvent, actor: Actor, ...values: readonly unknown[]): void {
+    this.events.enqueue(event, actor, ...values);
   }
 
   /**
@@ -1576,15 +1583,15 @@ export class World {
    * cleared — with no actor it happened to.
    *
    * A separate method rather than an optional argument, because the two say
-   * different things and `emit(event, detail)` would read as an actor with the
-   * detail in its place. Which of the two a rule uses is decided by where it
+   * different things and `emit(event, value)` would read as an actor with the
+   * value in its place. Which of the two a rule uses is decided by where it
    * declared the event: under a trait it is an actor's, on the rule it is the
    * world's.
    *
    * Dispatched with the actor ones, after this tick's steps.
    */
-  emitToWorld(event: GameEvent, detail?: unknown): void {
-    this.events.enqueue(event, undefined, detail);
+  emitToWorld(event: GameEvent, ...values: readonly unknown[]): void {
+    this.events.enqueue(event, undefined, ...values);
   }
 
   /**
