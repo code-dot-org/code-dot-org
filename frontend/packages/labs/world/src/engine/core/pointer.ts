@@ -1,4 +1,4 @@
-// What a mouse button is called, and where the mouse is.
+// What a mouse button is called, which way a swipe went, and where the mouse is.
 //
 // The keyboard's counterpart (core/keys), and the same bargain: the browser
 // names a button by NUMBER — `MouseEvent.button` is 0, 1, 2 — and a rule that
@@ -34,3 +34,27 @@ export function buttonName(button: number): string {
  */
 export const BUTTON_CHOICES: ReadonlyArray<readonly [string, string]> =
   NAMED_BUTTONS.map(([, name]) => [name, name] as const);
+
+/**
+ * The four ways a swipe can go.
+ *
+ * Here beside the buttons because a swipe is a thing the pointer does, and
+ * this file exists to name those. If something that is not a gesture ever
+ * wants a direction, this moves somewhere more general; nothing does yet.
+ *
+ * FOUR AND NOT EIGHT. A diagonal is a swipe whose two axes are close, and
+ * deciding which of eight it was means a learner has to know where the
+ * boundaries are before they can predict what their program does. Four is the
+ * set every phone gesture is built from, and the axis that moved further is a
+ * rule anybody can hold in their head.
+ */
+const NAMED_DIRECTIONS: ReadonlyArray<readonly [string, string]> = [
+  ['left', 'left'],
+  ['right', 'right'],
+  ['up', 'up'],
+  ['down', 'down'],
+];
+
+/** The directions worth offering in a dropdown, as `[label, name]`. */
+export const DIRECTION_CHOICES: ReadonlyArray<readonly [string, string]> =
+  NAMED_DIRECTIONS;

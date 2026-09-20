@@ -9,7 +9,7 @@ import {afterEach, describe, expect, it, vi} from 'vitest';
 import {buildDomainPalette} from '../domainBlocks';
 import {
   allEnums,
-  BUTTON_ENUM,
+  ENGINE_ENUMS,
   duplicateEnumNames,
   enumByRef,
   enumOptions,
@@ -48,7 +48,10 @@ describe('enum references', () => {
     registerProjectEnums([GUSTS]);
 
     expect(enumByRef('Wind#Gusts')).toBe(GUSTS);
-    expect(allEnums()).toEqual([KEY_ENUM, BUTTON_ENUM, GUSTS]);
+    // THE ENGINE'S FIRST, then the project's, which is the claim. Named as a
+    // list rather than spelled out, so adding an engine enum is not a failing
+    // test somewhere that is not about it.
+    expect(allEnums()).toEqual([...ENGINE_ENUMS, GUSTS]);
   });
 
   it('gives an unknown reference no options rather than throwing', () => {

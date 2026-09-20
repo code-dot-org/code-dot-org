@@ -17,7 +17,7 @@
 
 import type {ArgType} from '../engine';
 import {KEY_CHOICES} from '../engine/core/keys';
-import {BUTTON_CHOICES} from '../engine/core/pointer';
+import {BUTTON_CHOICES, DIRECTION_CHOICES} from '../engine/core/pointer';
 
 /** A named set of string choices. */
 export interface EnumMeta {
@@ -80,8 +80,25 @@ export const BUTTON_ENUM: EnumMeta = {
   options: BUTTON_CHOICES.map(([label, value]) => [label, value] as const),
 };
 
+/**
+ * Which way a swipe went, as an enum.
+ *
+ * The same argument again: the engine decides what counts as a swipe and which
+ * way it went, so naming the four is the engine's and `rules/gestures.rule`
+ * points at this (specs/GESTURES_PLAN.md).
+ */
+export const DIRECTION_ENUM: EnumMeta = {
+  owner: ENGINE_OWNER,
+  name: 'Direction',
+  options: DIRECTION_CHOICES.map(([label, value]) => [label, value] as const),
+};
+
 /** The enums the engine provides. */
-export const ENGINE_ENUMS: readonly EnumMeta[] = [KEY_ENUM, BUTTON_ENUM];
+export const ENGINE_ENUMS: readonly EnumMeta[] = [
+  KEY_ENUM,
+  BUTTON_ENUM,
+  DIRECTION_ENUM,
+];
 
 let projectEnums: readonly EnumMeta[] = [];
 
