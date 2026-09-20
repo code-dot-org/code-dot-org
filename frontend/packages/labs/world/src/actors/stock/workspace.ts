@@ -153,13 +153,24 @@ export const defineProperty = (
  * `define event` — something that HAPPENS to this kind.
  *
  * The words are the hat it makes: `finishes revealing` becomes
- * `when ⟨…⟩ finishes revealing`. Labels only, which is every event a stock
- * actor has wanted; a designed parameter is a filter and belongs to a rule
- * with choices to filter on (specs/ENUMS.md).
+ * `when ⟨…⟩ finishes revealing`.
+ *
+ * A part is either wording or a VALUE THE EVENT CARRIES. It could only be
+ * wording until an event could carry more than one unnamed thing
+ * (specs/EVENT_VALUES_PLAN.md); a carried value is named and typed, the hat
+ * says its name, and a handler reads it with the ordinary getter for that
+ * name. A parameter is a workspace variable like a `define block`'s, so its
+ * id has to be in the file's `variables` as well (`ActorExtras`).
  */
-export const defineEvent = (...labels: string[]) => ({
+export const defineEvent = (...parts: Array<string | BlockParam>) => ({
   type: 'world_rule_event',
-  extraState: {parts: labels.map(text => ({kind: 'label', text}))},
+  extraState: {
+    parts: parts.map(part =>
+      typeof part === 'string'
+        ? {kind: 'label', text: part}
+        : {kind: 'param', name: part.name, type: part.type, var: part.id},
+    ),
+  },
 });
 
 /** A `define block` parameter: a workspace variable the body reads. */
