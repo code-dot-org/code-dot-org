@@ -133,7 +133,10 @@ describe('every stock actor', () => {
       // (`actors/stock/textInput`). `focused` is NOT here, and used to be:
       // which control is listening is the screen's business and belongs to Tab
       // Navigation (specs/UI_ACTORS.md).
-      textInput: ['caret', 'scroll'],
+      // …and what a FORM asks of a field, which the four after the caret are:
+      // what it says while empty, whether it takes digits only, and whether a
+      // project has called the answer wrong (specs/FIELDS_PLAN.md).
+      textInput: ['caret', 'scroll', 'hint', 'only_numbers', 'looks_wrong'],
     };
 
     for (const actor of STOCK_ACTORS) {

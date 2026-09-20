@@ -94,11 +94,41 @@ const play = async (measure?: (words: string, size: number) => number) => {
     world.useTextMetrics(measure);
   }
   const text = modules['actors/label'].TextProperty;
+  const own = (name: string) => modules['actors/textInput'][name] as never;
   const [top, bottom] = [...world.actors];
   return {
     world,
     top,
     bottom,
+    /** One of the field's own events, for a handler to listen on. */
+    event: (name: string) => own(name),
+    /** One of the field's own properties, read or written. */
+    get: (one: Actor, name: string) => one.get(own(name)) as unknown,
+    set: (one: Actor, name: string, value: unknown) =>
+      one.set(own(name), value as never),
+    /** Every word the picture draws for this field, in order. */
+    linesOf: (one: Actor) => {
+      const state = [...world.renderSnapshot()].find(
+        entry => entry.actor === one,
+      );
+      return (state?.drawing?.commands ?? []).flatMap(command =>
+        command.op === 'text' ? [command.text] : [],
+      );
+    },
+    /**
+     * Every edge colour the picture draws with, in order.
+     *
+     * An outline is not a command: it is the PAINT a shape is drawn with, so
+     * it arrives as `stroke` on the rectangles themselves (`core/drawing`).
+     */
+    edgesOf: (one: Actor) => {
+      const state = [...world.renderSnapshot()].find(
+        entry => entry.actor === one,
+      );
+      return (state?.drawing?.commands ?? []).flatMap(command =>
+        'stroke' in command && command.stroke ? [command.stroke] : [],
+      );
+    },
     says: (one: typeof world.actors extends Iterable<infer T> ? T : never) =>
       one.get(text as never) as unknown as string,
     /** A click at a point, which is a press and then the frame that reads it. */
@@ -510,5 +540,101 @@ describe('its insertion point', () => {
     // came back because the bar walked, which is the whole difference from a
     // slide that watched the end of the text.
     expect(it_.wordsOf(it_.top)).toBe(8);
+  });
+});
+
+// What a FORM asks of a field, which is everything after being able to type
+// into one (specs/FIELDS_PLAN.md).
+describe('a Text Input in a form', () => {
+  it('says what belongs in it while it is empty, and stops when it is not', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.set(it_.top, 'HintProperty', 'your name');
+
+    it_.world.tick(1 / 60);
+    expect(it_.linesOf(it_.top)).toContain('your name');
+
+    it_.clickAt(80, 60);
+    it_.type(['a']);
+
+    // The hint is DRAWN and never held: the field's own value is what was
+    // typed, and the hint is gone rather than needing to be deleted.
+    expect(it_.says(it_.top)).toBe('a');
+    expect(it_.linesOf(it_.top)).not.toContain('your name');
+  });
+
+  it('takes digits and refuses letters when it is a number field', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.set(it_.top, 'OnlyNumbersProperty', true);
+    it_.clickAt(80, 60);
+
+    it_.type(['1']);
+    it_.type(['a']);
+    it_.type(['2']);
+
+    expect(it_.says(it_.top)).toBe('12');
+  });
+
+  it('takes a minus and a dot, because −2 and 1.5 are numbers', async () => {
+    // A number field that cannot say them is a counting field wearing the
+    // wrong name.
+    const it_ = await play(sixPerCharacter);
+    it_.set(it_.top, 'OnlyNumbersProperty', true);
+    it_.clickAt(80, 60);
+
+    it_.type(['-']);
+    it_.type(['1']);
+    it_.type(['.']);
+    it_.type(['5']);
+
+    expect(it_.says(it_.top)).toBe('-1.5');
+  });
+
+  it('takes anything when nobody said otherwise', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+
+    it_.type(['a']);
+    it_.type(['1']);
+
+    expect(it_.says(it_.top)).toBe('a1');
+  });
+
+  it('shows a red edge once a project has called the answer wrong', async () => {
+    // The field has no idea what an email is. What it owns is saying so once
+    // somebody has decided.
+    const it_ = await play(sixPerCharacter);
+    it_.world.tick(1 / 60);
+    expect(it_.edgesOf(it_.top)).not.toContain('#e06c75');
+
+    it_.set(it_.top, 'LooksWrongProperty', true);
+    it_.world.tick(1 / 60);
+
+    expect(it_.edgesOf(it_.top)).toContain('#e06c75');
+  });
+
+  it('says it is done on Enter, and keeps the answer', async () => {
+    const it_ = await play(sixPerCharacter);
+    let done = 0;
+    it_.top.on(it_.event('IsDoneEvent'), () => void (done += 1));
+    it_.clickAt(80, 60);
+    it_.type(['h', 'i']);
+
+    it_.press('Enter');
+
+    expect(done).toBe(1);
+    // A field that emptied itself would take the answer away before a
+    // handler could read it.
+    expect(it_.says(it_.top)).toBe('hi');
+  });
+
+  it('says nothing on Enter when the typing is going elsewhere', async () => {
+    const it_ = await play(sixPerCharacter);
+    let done = 0;
+    it_.top.on(it_.event('IsDoneEvent'), () => void (done += 1));
+    it_.clickAt(80, 200);
+
+    it_.press('Enter');
+
+    expect(done).toBe(0);
   });
 });

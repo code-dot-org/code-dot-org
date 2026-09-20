@@ -152,6 +152,96 @@ const held = () => textOf('TextProperty');
 /** …and the size it is drawn at, which every measurement needs. */
 const atSize = () => textOf('TextSizeProperty');
 
+const OWN = 'ActorsTextInput';
+
+/** One of this field's own properties, read off itself. */
+const own = (exportName: string) => ({
+  block: {type: `world_get_${OWN}_${exportName}`, inputs: {ACTOR: me()}},
+});
+
+/** `⟨hint⟩ of this actor` — what the field says while it is empty. */
+const hint = () => own('HintProperty');
+/** …whether it takes digits only, and whether a project has called it wrong. */
+const digitsOnly = () => own('OnlyNumbersProperty');
+const looksWrong = () => own('LooksWrongProperty');
+
+/** `⟨a⟩ = ⟨b⟩`, for the one equality this file does. */
+const isEmpty = () => ({
+  block: {
+    type: 'logic_compare',
+    fields: {OP: 'EQ'},
+    inputs: {A: length(), B: num(0)},
+  },
+});
+
+/** `not ⟨a⟩`. */
+const not = (a: object) => ({block: {type: 'logic_negate', inputs: {BOOL: a}}});
+
+/**
+ * What a number field will take: the ten digits, a minus and a dot.
+ *
+ * A NUMBER FIELD THAT CANNOT SAY `-2` OR `1.5` is a counting field wearing
+ * the wrong name. What it refuses is letters (specs/FIELDS_PLAN.md).
+ */
+const DIGITS = [...'0123456789-.'];
+
+/**
+ * A line of words the field does not HOLD — the hint.
+ *
+ * `drawParagraph` draws the actor's own `text`, which is the whole of what
+ * every other caller wants; this is the one line that draws something else,
+ * so it says the same thing with the text swapped.
+ */
+const drawWords = (text: object, x: object, y: object) => ({
+  type: 'world_draw_paragraph',
+  inputs: {
+    TEXT: text,
+    WIDTH: num(0),
+    X: x,
+    Y: y,
+    SIZE: textOf('TextSizeProperty'),
+    ANCHOR: textOf('TextAnchorProperty'),
+  },
+});
+
+/**
+ * Whether this field will take the character that was just typed.
+ *
+ * A list and `has`, rather than a new block for asking about a string: the
+ * text category says plainly that `indexOf` and its family are "string
+ * surgery with no reading in a world yet", and twelve characters is a list
+ * anybody can read.
+ */
+const takes = () => ({
+  block: {
+    type: 'logic_operation',
+    fields: {OP: 'OR'},
+    inputs: {
+      A: not(digitsOnly()),
+      B: {
+        block: {
+          type: 'world_list_has',
+          inputs: {
+            LIST: {
+              block: {
+                type: 'lists_create_with',
+                extraState: {itemCount: DIGITS.length},
+                inputs: Object.fromEntries(
+                  DIGITS.map((character, at) => [
+                    `ADD${at}`,
+                    {block: {type: 'text', fields: {TEXT: character}}},
+                  ]),
+                ),
+              },
+            },
+            ITEM: {block: {type: 'world_event_value'}},
+          },
+        },
+      },
+    },
+  },
+});
+
 /** `length of ⟨what it holds⟩`. */
 const length = () => ({block: {type: 'text_length', inputs: {VALUE: held()}}});
 
@@ -457,7 +547,23 @@ export const textInputActor = actorFile(
     // …and how far left the words are pushed so it stays in the box. Kept by
     // the step below, read twice by the drawing.
     defineProperty('number', 'scroll', '0'),
+    // WHAT BELONGS IN IT, said in the field rather than beside it. Drawn
+    // while the field is empty and gone the moment anything is typed — it is
+    // never the text, because a hint the first keystroke has to delete is the
+    // bug this file avoided by shipping empty (specs/FIELDS_PLAN.md).
+    defineProperty('string', 'hint', ''),
+    // …and the one KIND worth having. A number is what an app asks for that a
+    // word is not: a quantity, an amount, how many. Anything else a field
+    // might restrict is a vocabulary this does not invent.
+    defineProperty('boolean', 'only numbers', 'false'),
+    // …and whether somebody has decided the answer is wrong. A PROJECT's
+    // word: the field has no idea what an email is, and what it owns is
+    // saying so once somebody has decided.
+    defineProperty('boolean', 'looks wrong', 'false'),
     defineEvent('changed'),
+    // Enter, while this field is listening — a form's submit, and the
+    // keyboard half of the button beside it.
+    defineEvent('is done'),
     {
       type: 'world_set_ActorsLabel_HeightProperty',
       inputs: {
@@ -494,7 +600,7 @@ export const textInputActor = actorFile(
         type: 'world_on_Input_TypesEvent',
         inputs: {ACTOR: me()},
         next: {
-          block: onlyIf(focused(), [
+          block: onlyIf(both(focused(), takes()), [
             setText(
               'TextProperty',
               joined([
@@ -544,6 +650,22 @@ export const textInputActor = actorFile(
           ]),
         },
       },
+      // Enter says the answer is finished. It changes nothing: what happens
+      // after a form is submitted is the project's, and a field that emptied
+      // itself would take the answer away before a handler could read it.
+      {
+        type: 'world_on_Input_PressesEvent',
+        fields: {FILTER0: 'enter'},
+        inputs: {ACTOR: me()},
+        next: {
+          block: onlyIf(focused(), [
+            {
+              type: `world_emit_${OWN}_IsDoneEvent`,
+              inputs: {ACTOR: me()},
+            },
+          ]),
+        },
+      },
       // The arrows walk the bar. They do not wrap and they do not run off
       // either end: a caret at the start that answered a left arrow by going
       // negative would put every later sum out by one, silently.
@@ -572,11 +694,26 @@ export const textInputActor = actorFile(
       width: width(),
       height: height(),
       commands: [
-        // The field: dark, with an edge that says whether it is listening.
+        // The field: dark, with an edge that says whether it is listening —
+        // and RED when a project has called the answer wrong, which is the
+        // one thing about a field a form needs to be able to show
+        // (specs/FIELDS_PLAN.md).
         fill(swatch('#1a1a22')),
         outline(swatch('#8890b0'), 2),
         rectangle(0, 0, width(), height()),
+        onlyIf(looksWrong(), [
+          outline(swatch('#e06c75'), 2),
+          rectangle(0, 0, width(), height()),
+        ]),
         noOutline(),
+        // …and the hint, while there is nothing in it. Dimmed, so it reads as
+        // a label for the box rather than as something somebody typed, and
+        // drawn instead of the words rather than under them — an empty field
+        // has no words to be under.
+        onlyIf(isEmpty(), [
+          fill(swatch('#6b7394')),
+          drawWords(hint(), num(PAD), labelHalf(height())),
+        ]),
         fill(textOf('TextColorProperty')),
         // Inset from the left edge, since the words are anchored there — less
         // however far they have slid to keep the caret in view.
