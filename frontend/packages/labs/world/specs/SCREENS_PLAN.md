@@ -1,6 +1,6 @@
 # Plan: screens, and a way back (APPS.md, missing thing 5)
 
-STATUS: PROPOSED. What turns the Interface Kit from one screen into an
+STATUS: BUILT, not yet seen in the browser. What turns the Interface Kit from one screen into an
 app. The working record, as the other plans are.
 
 ## What a screen already is
@@ -80,8 +80,56 @@ stack does.
 
 ## Commits
 
+- `d021f8ea403` — this plan.
+- `64b4e381021` — a load takes itself off its list, and anything can close
+  the newest map.
+- `2761d841f84` — loading a map by PATH, a `map` parameter type, and the
+  `Screens` rule.
+
 ## Learned while building
+
+- **The stack needed two things the plan had not counted.** A rule's `go
+to screen ⟨…⟩` takes the map as an argument, and neither half of that
+  existed: `load map` names one in a dropdown and cannot take a path a
+  rule worked out, and a parameter could not BE a map at all. Both are
+  small and both are useful past this rule — a level chosen by number
+  wants the first, and anything that takes a screen wants the second.
+- **Every map is already registered by path**, because a Viewport names
+  one in a property and no import can follow that. So loading by path
+  needed no bookkeeping whatever; the registry was built for somebody
+  else and was waiting.
+- **A `map` parameter is a FIELD at a call site and a SOCKET on an
+  `emit`**, which is the exception an enum already makes and for the same
+  reason: an `emit` supplies the path the code worked out. Missed, the
+  rule failed at workspace load with a socket nothing could fill.
+- **The rule DSL binds an unknown parameter type to a Number.** So the
+  moment a `map` parameter existed, its getter refused to connect — at
+  workspace load, not where it was written. A fallback that guesses is
+  worse than one that refuses, and the comment there now says so.
 
 ## Not built, and known
 
+- **No transitions.** A screen appears and is there. Sliding one in is a
+  tween over a whole map's actors and wants the anchoring question
+  answered first.
+- **Nothing pauses the screen underneath.** A menu over a running game is
+  the existing idea and still works; a project that wants the game to stop
+  says `pause the game` itself.
+- **Going back is the only way off the stack.** There is no "back to the
+  first screen", which a deep flow wants.
+- **The stack is the world's**, so a Viewport showing screens of its own
+  is not this. That is `load map into`, which has its own meaning.
+
 ## What to look at in the browser
+
+Two maps and three blocks. `go to screen ⟨the second⟩` should bring it up
+over the first, with the first still there underneath. `go back` should
+take it off and leave the first exactly as it was, including anything the
+player had changed on it — that is the whole difference between a stack
+and reloading.
+
+`go back` on the last screen should do nothing at all rather than leaving
+an empty world.
+
+`the screen showing` should say the second while it is up and the first
+after.

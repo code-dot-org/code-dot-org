@@ -108,6 +108,11 @@ save.
 
 ### 5. Navigation as an idea
 
+BUILT — specs/SCREENS_PLAN.md. And the assessment below was right that it
+is a rule over what already works, with one correction: it needed two
+small language additions first, because a rule could neither load a map by
+a path it worked out nor take a map as an argument at all.
+
 Screens exist as maps; "which screen is showing" is whatever maps are
 loaded, and there is no back. A stack — go to, go back, replace — is a
 rule over what already works, not new machinery.
@@ -169,7 +174,8 @@ is a day's work that should be done once, not twice.
 3. **A list view** — DONE for words (specs/LIST_PLAN.md); a row per item
    of a value list, scrolling. Rows made of ACTORS are still open.
 4. **Saving** — world state and lists, per project.
-5. **Navigation** — go to, go back, over maps.
+5. **Navigation** — DONE (specs/SCREENS_PLAN.md): go to, go back,
+   replace, and which screen is showing.
 6. **Text entry** — a hint, a kind, a done key; the on-screen keyboard
    assessed on its own.
 

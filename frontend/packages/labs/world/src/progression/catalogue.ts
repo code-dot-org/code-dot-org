@@ -1131,6 +1131,13 @@ export const TILES: readonly Tile[] = [
       // between worlds is. The lesson keeps its own in the world's main map,
       // which is what a world opens on (specs/RETIREMENTS_PLAN.md).
       {kind: 'block', type: 'world_load_map'},
+      // …and the two that make maps a STACK rather than a pile: one named
+      // while the world runs, and the newest taken back again. A pause menu
+      // over a game is already this; the rule beside them gives it a
+      // vocabulary (specs/SCREENS_PLAN.md).
+      {kind: 'block', type: 'world_load_map_named'},
+      {kind: 'block', type: 'world_unload_newest_map'},
+      {kind: 'rule', id: 'screens'},
       // How big the level is, and how a world with no map says so. Both are
       // ideas about a world BIGGER than the view, which is `place/camera`.
       {kind: 'block', type: 'world_set_map_size'},
