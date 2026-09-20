@@ -268,7 +268,11 @@ import {
   valueShadowExtension,
   type ShadowSpec,
 } from './valueShadow';
-import {isRedeclaration} from './variableScope';
+import {
+  eventLocalIds,
+  isRedeclaration,
+  registerEventLocals,
+} from './variableScope';
 import {definesRule, workspaceOfBlock} from './workspaceRoots';
 
 /** JS string literal for a field value. */
@@ -1291,10 +1295,6 @@ const CARRIED_FIRST = 'eventValue';
 const carriedName = (index: number): string =>
   index === 0 ? CARRIED_FIRST : `${CARRIED_FIRST}$${index + 1}`;
 
-/** The block that names one of an event's carried values, in a handler. */
-const carriedBlockType = (event: EventMeta, name: string): string =>
-  `world_carried_${memberKey(event.ref)}_${pascal(name)}`;
-
 /** The dropdown entry meaning "whatever was emitted" — no filter at all. */
 const ANY_CHOICE: [string, string] = ['(any)', ''];
 
@@ -1409,19 +1409,33 @@ const defineEventBlock = (event: EventMeta) => {
   // library — `when ⟨this actor⟩ starts touching ⟨Brick⟩` carries one actor,
   // which the stock rule's signature calls `other` — and of the two names for
   // that one value, `event actor` is the one the lessons point at and the one
-  // that draws the kind it was filtered to. Two blocks for one value would be
-  // worse than either alone, so the author's name is not also offered there.
-  // Every other shape of signature offers the author's names and nothing else.
+  // that draws the kind it was filtered to. Two names for one value would be
+  // worse than either alone, so the author's name is not also offered there,
+  // and the hat binds no local. Every other shape of signature hands its
+  // values over as LOCALS, read with the getter every other local is read
+  // with (specs/EVENT_VALUES_PLAN.md).
   const lonelyActor =
     carried.length === 1 && carried[0].type === 'actor'
       ? carried[0]
       : undefined;
+  const locals = carried.map(value => ({
+    name: value.name,
+    type: paramFlavour(value.type).type,
+  }));
   if (lonelyActor) {
     extensions.push(eventActorToolboxExtension);
   } else if (carried.length > 0) {
+    registerEventLocals(eventBlockType(event), locals);
     registerEventFlyout(
       eventBlockType(event),
-      carried.map(value => carriedBlockType(event, value.name)),
+      carried.map((value, index) => ({
+        type: paramFlavour(value.type).getterType,
+        // BY NAME, not by id. The getter is offered in a file that has never
+        // seen this event's declaration, so the name is the only thing the
+        // two ends share; Blockly makes the variable real when the block is
+        // dragged out (`Workspace.getPotentialVariableMap`).
+        fields: {VAR: {name: locals[index].name, type: locals[index].type}},
+      })),
     );
     extensions.push(eventValuesToolboxExtension);
   }
@@ -1473,7 +1487,33 @@ const defineEventBlock = (event: EventMeta) => {
               `  if (${name}?.type !== ${str(chosen)}) return;\n`,
           )
           .join('');
-        const body = guards + kindGuards + nextChainCode(block, generator);
+        // THE NAMES, BOUND TO THE POSITIONS. What crosses the queue is a
+        // list, and what the handler reads is a local — so the body opens by
+        // binding one to the other, for each name this file actually has. A
+        // file that never dragged a getter out of the hat's `+` has none, and
+        // gets none of these lines (specs/EVENT_VALUES_PLAN.md).
+        //
+        // `let`, not `const`: two declarations of one name in one body are a
+        // declaration and then an assignment (`isRedeclaration`), and
+        // assigning to a `const` throws where assigning to a `let` is what
+        // the author meant.
+        const bound = new Set<string>();
+        let bindings = '';
+        eventLocalIds(block).forEach((id, index) => {
+          // Two parameters with one name are one variable, and two `let`s for
+          // one identifier are a SyntaxError that takes the module with them.
+          // The first position wins, as reading the signature left to right
+          // would suggest.
+          if (id === undefined || bound.has(id)) {
+            return;
+          }
+          bound.add(id);
+          bindings +=
+            `  let ${generator.getVariableName(id)} = ` +
+            `${carriedName(index)};\n`;
+        });
+        const body =
+          guards + kindGuards + bindings + nextChainCode(block, generator);
         // The closure takes one parameter per value the event carries, and
         // ONE when it carries nothing — an undesigned event still hands over
         // whatever was emitted, and `event value` is how a handler reads it.
@@ -1497,59 +1537,6 @@ const defineEventBlock = (event: EventMeta) => {
         );
       },
     },
-  });
-};
-
-/**
- * The blocks that name what an event carries — one per value in its signature.
- *
- * A BLOCK PER VALUE, MINTED WITH THE HAT, for the same two reasons
- * `event actor` is a block rather than a variable the hat binds: the name is
- * what a learner is looking for, and the type is what stops it being plugged
- * in where it means nothing. What it could not be is a variable: the handler
- * is in another file from the declaration, so there is no workspace the two
- * could share one on.
- *
- * KEYED BY THE PARAMETER'S NAME, not its position. Renaming a parameter then
- * loses what a handler had plugged in, and reordering the signature does not
- * — which is the bargain the `emit` block's sockets already make
- * (`paramValueNames`), so the two halves of an event break in the same place
- * or not at all.
- *
- * Only meaningful inside a handler for this event, and unguarded about it for
- * the reason `event value` is: a block cannot know which hat it will end up
- * under. It is offered only behind that hat's `+`, which is as close to
- * saying so as a palette can get.
- */
-const defineCarriedBlocks = (event: EventMeta) => {
-  const params = (event.parts ?? []).filter(part => part.kind === 'param');
-  // The one case the hat answers with `event actor` instead
-  // (`defineEventBlock`), so there is no second block for the same value.
-  if (params.length === 1 && params[0].type === 'actor') {
-    return [];
-  }
-  return params.map((param, index) => {
-    const type = carriedBlockType(event, param.name);
-    registerMemberBlockType(type, event.ref);
-    const check = checkOf(param.type);
-    return defineBlock({
-      type,
-      message0: '%1',
-      args0: [{type: 'field_label', name: 'WORD', text: param.name}],
-      ...(check ? {output: check} : {output: null}),
-      // The color a variable of that flavour is read in, so what an event
-      // hands over looks like what it is rather than like an event block.
-      style: paramFlavour(param.type).getterBlock.style ?? 'variable_blocks',
-      ...(param.type === 'actor' ? {extensions: [actorPictureExtension]} : {}),
-      tooltip:
-        `The ${param.name} this event carries. Only meaningful inside a ` +
-        `“when ${event.name}” block.`,
-      generator: {
-        javascript() {
-          return [carriedName(index), Order.ATOMIC] as [string, number];
-        },
-      },
-    });
   });
 };
 
@@ -1594,9 +1581,9 @@ const defineEmitBlock = (event: EventMeta) => {
     // falling back to a treatment that works.
     //
     // The hat filters on enums and on kinds of actor, and says the rest of
-    // what it carries in words; the handler reads each value with the block
-    // named after it (`defineCarriedBlocks`), or with `event value` when the
-    // event was never designed a signature at all.
+    // what it carries in words; the handler reads each value as a LOCAL of
+    // that name (`variableScope`), or with `event value` when the event was
+    // never designed a signature at all.
     const built = typedValueInputs(part, args0.length + 1, names[paramIndex], {
       enumAsSocket: true,
     });
@@ -1692,12 +1679,6 @@ const defineEmitBlock = (event: EventMeta) => {
 // own could not have.
 const EVENT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
   rule.events.map(event => defineEventBlock(event)),
-);
-// …and the blocks that name what each of them carries. Kept apart from the
-// hats: `ROOT_BLOCK_TYPES` is built from the list above, and one of these is a
-// reporter, not a root.
-const EVENT_VALUE_BLOCKS = AUTHORING_RULES.flatMap(rule =>
-  rule.events.flatMap(event => defineCarriedBlocks(event)),
 );
 // AND NO BLOCK RAISES ONE OF THESE. Every other rule's events get an `emit`
 // beside the hat, minted from the same signature (`defineEmitBlock`, called
@@ -10060,7 +10041,6 @@ export const DOMAIN_BLOCKS = [
   ...ACTION_BLOCKS,
   ...QUERY_BLOCKS,
   ...EVENT_BLOCKS,
-  ...EVENT_VALUE_BLOCKS,
   worldPrint,
   worldEventActor,
   worldEventValue,
@@ -11142,10 +11122,6 @@ function generateRulePalette(
     for (const event of rule.events) {
       const block = defineEventBlock(event);
       blocks.push(block);
-      // The blocks that name what it carries, defined beside the hat and
-      // offered only behind that hat's `+` — so they go into the file's
-      // definitions and into no drawer.
-      blocks.push(...defineCarriedBlocks(event));
       if (
         eventHats === 'all' ||
         (eventHats === 'actorOnly' && event.scope !== 'world')
@@ -11381,10 +11357,6 @@ export function buildDomainPalette(
       const hat = defineEventBlock(event);
       ownBlocks.push(hat);
       types.push(hat.type);
-      // Defined, and in no drawer: what an event carries is offered behind
-      // the hat's `+` and nowhere else, because it means nothing anywhere
-      // else.
-      ownBlocks.push(...defineCarriedBlocks(event));
       ownEventTypes.push(hat.type);
       away.push(hat.type);
       // A MAP's event is the world's to hear (`parseMapOwnMeta`), and a hat

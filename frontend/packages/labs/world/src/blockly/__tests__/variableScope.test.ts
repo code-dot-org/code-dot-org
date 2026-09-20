@@ -19,7 +19,7 @@ import * as Blockly from 'blockly/core';
 import {beforeEach, describe, expect, it} from 'vitest';
 
 import {BODY_OWNER_ID} from '../bodySurfaces';
-import {idsInScope} from '../variableScope';
+import {idsInScope, registerEventLocals} from '../variableScope';
 
 /**
  * The two messages Blockly's own variable menu ends with.
@@ -79,6 +79,13 @@ const define = () => {
         },
       ],
       previousStatement: true,
+      nextStatement: true,
+    },
+    {
+      // An event's hat, with only the part the scope rule reads: a handler's
+      // body is the chain below it, and the hat has no previous connection.
+      type: 'world_on_Test_TypedEvent',
+      message0: 'when typed',
       nextStatement: true,
     },
   ]);
@@ -255,5 +262,69 @@ describe('a `define block`’s parameters', () => {
     // scope of the next member's body. The identity is what tells them apart.
     const {reader, id} = withHead('someMember', 'next');
     expect(idsInScope(reader).has(id)).toBe(false);
+  });
+});
+
+// What an event hands its handler is a LOCAL of the author's name, bound by
+// the hat over the rows below it (specs/EVENT_VALUES_PLAN.md). Matched on the
+// hat's own workspace by NAME, because the declaration is in another file and
+// there is no shared variable id.
+describe('what an event hat binds', () => {
+  beforeEach(() => {
+    defineMessages();
+    define();
+    workspace = new Blockly.Workspace();
+    registerEventLocals('world_on_Test_TypedEvent', [
+      {name: 'character', type: 'Number'},
+    ]);
+  });
+
+  it('is seen from the handler body', () => {
+    const hat = workspace.newBlock('world_on_Test_TypedEvent');
+    const variable = workspace
+      .getVariableMap()
+      .createVariable('character', 'Number');
+    const body = workspace.newBlock('reader');
+    hat.nextConnection!.connect(body.previousConnection!);
+
+    expect(idsInScope(body).has(variable.getId())).toBe(true);
+  });
+
+  it('is not seen anywhere else in the file', () => {
+    // The whole point of it being a local. A name the hat binds is the hat's,
+    // and a getter in another stack reads a different variable by that id.
+    const hat = workspace.newBlock('world_on_Test_TypedEvent');
+    const variable = workspace
+      .getVariableMap()
+      .createVariable('character', 'Number');
+    const body = workspace.newBlock('reader');
+    hat.nextConnection!.connect(body.previousConnection!);
+    const elsewhere = workspace.newBlock('reader');
+
+    expect(idsInScope(elsewhere).has(variable.getId())).toBe(false);
+  });
+
+  it('binds nothing when the file has no such name', () => {
+    // A getter enters a file by being dragged out of the hat's `+`. Until
+    // then the name is one of Blockly's potential variables and the file
+    // holds none, which is not a fault and not a warning.
+    const hat = workspace.newBlock('world_on_Test_TypedEvent');
+    const body = workspace.newBlock('reader');
+    hat.nextConnection!.connect(body.previousConnection!);
+
+    expect(idsInScope(body).size).toBe(0);
+  });
+
+  it('binds by flavour as well as by name', () => {
+    // `character` the word and `character` the actor are two variables, and
+    // the hat hands over the one its signature typed.
+    const hat = workspace.newBlock('world_on_Test_TypedEvent');
+    const other = workspace
+      .getVariableMap()
+      .createVariable('character', 'String');
+    const body = workspace.newBlock('reader');
+    hat.nextConnection!.connect(body.previousConnection!);
+
+    expect(idsInScope(body).has(other.getId())).toBe(false);
   });
 });

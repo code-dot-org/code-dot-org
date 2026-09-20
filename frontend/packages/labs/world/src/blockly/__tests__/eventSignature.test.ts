@@ -420,9 +420,43 @@ describe('an event that carries several values', () => {
     {id: 'a', name: 'amount', type: 'Number'},
   ];
 
-  /** Every block the palette holds for this rule. */
-  const blocksFor = (meta: ReturnType<typeof ruleWithEvent>) =>
-    paletteFor([meta]).blocks;
+  /**
+   * The hat's code, with `names` the variables the FILE happens to hold.
+   *
+   * What a hat binds is looked up on its own workspace by name and flavour,
+   * so a file that never dragged a getter out of the `+` has nothing to bind
+   * and gets no binding lines.
+   */
+  const codeWithLocals = (
+    hat: ReturnType<typeof hatFor>,
+    names: ReadonlyArray<{name: string; type: string; id: string}>,
+  ) =>
+    hat.generator.javascript(
+      {
+        type: hat.type,
+        getFieldValue: () => null,
+        getNextBlock: () => ({}),
+        workspace: {
+          getVariableMap: () => ({
+            getVariable: (name: string, type: string) => {
+              const found = names.find(
+                one => one.name === name && one.type === type,
+              );
+              return found ? {getId: () => found.id} : null;
+            },
+          }),
+        },
+      },
+      {
+        valueToCode: () => 'Player',
+        blockToCode: () => 'log("hi");\n',
+        // The same mapping the getter uses, so the two agree by construction.
+        getVariableName: (id: string) =>
+          names.find(one => one.id === id)?.name ?? id,
+        definitions_: {},
+      },
+      {},
+    );
 
   it('names the values it cannot filter on, so the hat reads as a sentence', () => {
     const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
@@ -479,46 +513,12 @@ describe('an event that carries several values', () => {
     expect(code).not.toContain('if (eventValue !==');
   });
 
-  it('offers a block per value, named and typed', () => {
-    const blocks = blocksFor(ruleWithEvent(DAMAGED, DAMAGE_VARS)) as Array<{
-      type: string;
-      args0?: Array<{text?: string}>;
-      output?: string | null;
-      generator: {javascript: (...args: unknown[]) => [string, number]};
-    }>;
-
-    const who = blocks.find(block => block.type.endsWith('_Who'))!;
-    const amount = blocks.find(block => block.type.endsWith('_Amount'))!;
-
-    expect(who.args0?.[0].text).toBe('who');
-    expect(who.output).toBe('Actor');
-    expect(amount.output).toBe('Number');
-    // Each reads the position it was declared in.
-    expect(who.generator.javascript()[0]).toBe('eventValue');
-    expect(amount.generator.javascript()[0]).toBe('eventValue$2');
-  });
-
-  it('mints none for a lone actor, which `event actor` already names', () => {
-    // Every contact hat in the library. Two blocks for one value is worse
-    // than either alone, and of the two `event actor` is the one the lessons
-    // point at and the one that draws the kind it was filtered to.
-    const blocks = blocksFor(
-      ruleWithEvent({
-        parts: [
-          {kind: 'label', text: 'is touched by'},
-          {kind: 'param', name: 'other', type: 'actor'},
-        ],
-      }),
-    );
-
-    expect(blocks.map(block => block.type)).not.toContain(
-      'world_carried_Keys_IsTouchedByEvent_Other',
-    );
-  });
-
-  it('offers those blocks behind the hat\u2019s `+`, in signature order', () => {
-    const meta = ruleWithEvent(DAMAGED, DAMAGE_VARS);
-    const hat = hatFor(meta) as unknown as {
+  it('offers the ordinary getter for each value, named and typed', () => {
+    // NOT A BLOCK OF ITS OWN. What an event hands over is a local like any
+    // other, so what reads it is the block that reads every local — bound by
+    // NAME, because the handler is in another file from the declaration and
+    // the name is all the two ends share.
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS)) as unknown as {
       type: string;
       extensions: Array<{name: string}>;
     };
@@ -527,9 +527,67 @@ describe('an event that carries several values', () => {
       'world_event_values_toolbox',
     );
     expect(eventFlyoutBlocks(hat.type)).toEqual([
-      'world_carried_Keys_IsDamagedByEvent_Who',
-      'world_carried_Keys_IsDamagedByEvent_Amount',
+      {
+        type: 'variables_get_Actor',
+        fields: {VAR: {name: 'who', type: 'Actor'}},
+      },
+      {
+        type: 'variables_get_Number',
+        fields: {VAR: {name: 'amount', type: 'Number'}},
+      },
     ]);
+  });
+
+  it('binds no local for a lone actor, which `event actor` names', () => {
+    // Every contact hat in the library. Two names for one value is worse
+    // than either alone, and of the two `event actor` is the one the lessons
+    // point at and the one that draws the kind it was filtered to.
+    const hat = hatFor(
+      ruleWithEvent({
+        parts: [
+          {kind: 'label', text: 'is touched by'},
+          {kind: 'param', name: 'other', type: 'actor'},
+        ],
+      }),
+    ) as unknown as {type: string; extensions: Array<{name: string}>};
+
+    expect(hat.extensions.map(extension => extension.name)).toContain(
+      'world_event_actor_toolbox',
+    );
+    expect(eventFlyoutBlocks(hat.type)).toEqual([]);
+  });
+
+  it('opens the handler by binding each name to its value', () => {
+    // Positional at the boundary, named inside: what crosses the queue is a
+    // list, and what the body reads is a local of the author's name.
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = codeWithLocals(hat, [
+      {name: 'who', type: 'Actor', id: 'w1'},
+      {name: 'amount', type: 'Number', id: 'a1'},
+    ]);
+
+    expect(code).toContain('let who = eventValue;');
+    expect(code).toContain('let amount = eventValue$2;');
+  });
+
+  it('binds only the names the file actually has', () => {
+    // A getter enters a file by being dragged out of the `+`; until then the
+    // name is Blockly's "potential" variable and the file has none.
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = codeWithLocals(hat, [
+      {name: 'amount', type: 'Number', id: 'a1'},
+    ]);
+
+    expect(code).toContain('let amount = eventValue$2;');
+    expect(code).not.toContain('let who');
+  });
+
+  it('binds nothing at all when the file reads none of them', () => {
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    expect(codeWithLocals(hat, [])).not.toContain('let ');
   });
 
   it('gives a kind filter and a choice filter different fields', () => {

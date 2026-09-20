@@ -21,7 +21,10 @@
 // be dragged out of one — that version was built and rejected for exactly that.
 
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
-import {addMiniToolbox} from '@code-dot-org/blockly/fields/miniToolbox';
+import {
+  addMiniToolbox,
+  type MiniToolboxBlock,
+} from '@code-dot-org/blockly/fields/miniToolbox';
 
 export const EVENT_ACTOR_TOOLBOX_EXTENSION = 'world_event_actor_toolbox';
 
@@ -48,29 +51,38 @@ export const eventActorToolboxExtension: Extension = defineExtension(
  * one shared extension that asks, at the moment a hat is built, what that
  * hat's event carries.
  */
-const flyoutBlocks = new Map<string, readonly string[]>();
+const flyoutBlocks = new Map<string, readonly MiniToolboxBlock[]>();
 
 /** Say what the `+` on `hatType` offers. Called wherever a hat is minted. */
 export const registerEventFlyout = (
   hatType: string,
-  blocks: readonly string[],
+  blocks: readonly MiniToolboxBlock[],
 ): void => {
   flyoutBlocks.set(hatType, blocks);
 };
 
 /** What the `+` on `hatType` offers — empty when it has no flyout. */
-export const eventFlyoutBlocks = (hatType: string): readonly string[] =>
-  flyoutBlocks.get(hatType) ?? [];
+export const eventFlyoutBlocks = (
+  hatType: string,
+): readonly MiniToolboxBlock[] => flyoutBlocks.get(hatType) ?? [];
 
 export const EVENT_VALUES_TOOLBOX_EXTENSION = 'world_event_values_toolbox';
 
 /**
  * The `+` on a hat whose event carries values its author named.
  *
- * One block per value, in the signature's order, wearing the name the author
- * gave it (specs/EVENT_VALUES_PLAN.md). Same reasoning as the actor above:
- * the way to name what the event brought should start on the block that
- * brought it.
+ * ONE ORDINARY GETTER PER VALUE, already naming it. What an event hands over
+ * is a local like any other (`variableScope`), so what reads it is the block
+ * that reads every local — `variables_get_String` with `character` in it —
+ * rather than a block of its own (specs/EVENT_VALUES_PLAN.md).
+ *
+ * A getter in a flyout names a variable that is not real yet; Blockly calls
+ * those potential variables and makes them real when a reference is dragged
+ * into the workspace. So the name enters a file when somebody drags it out,
+ * and a file that never reads `character` never has one.
+ *
+ * Same reasoning as the actor above for the affordance itself: the way to name
+ * what the event brought should start on the block that brought it.
  */
 export const eventValuesToolboxExtension: Extension = defineExtension(
   EVENT_VALUES_TOOLBOX_EXTENSION,

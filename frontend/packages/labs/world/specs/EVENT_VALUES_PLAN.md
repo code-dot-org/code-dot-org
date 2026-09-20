@@ -50,13 +50,13 @@ reads each one by that name, typed.**
   retired outright with the per-type items beside it — nothing in the
   repository holds one, and this lab has never shipped.
 - **A value the author named gets a block with that name on it.** Per
-  event, per parameter: `world_carried_<Rule>_<Event>_<Name>`, wearing the
-  parameter's name, typed by the parameter's type, generating the
-  positional name that parameter arrives under.
+  event, per parameter, typed by the parameter's type. (Revised below: it
+  is a local and the ordinary getter reads it.)
 - **The hat offers them behind its `+`.** The mini toolbox that today
-  holds `event actor` holds one block per carried value instead, in
+  holds `event actor` holds one entry per carried value instead, in
   signature order, so the way to name what the event brought starts on the
-  block that brought it.
+  block that brought it. (Revised below: the entry is the ordinary getter,
+  not a block of its own.)
 - **The hat says what it carries.** A parameter with no filter is drawn as
   its own name, so `when ⟨this actor⟩ is damaged by ⟨amount⟩` reads as a
   sentence rather than trailing off. The preview on `define event` draws
@@ -174,14 +174,51 @@ actor⟩ is damaged by` — the sentence trailed off and the number was
   written by nothing and offered by nothing, so they are gone rather than
   left registered.
 
+## Revised: a carried value is a LOCAL, read with the ordinary getter
+
+The first build gave each carried value a block of its own — a fixed label
+wearing the name, typed, offered behind the hat's `+`. That is not how the
+rest of the language reads a name, and the difference was not earning
+anything.
+
+**The lab's variables are already local and never global**
+(`blockly/variableScope`). A name is visible inside whatever binds it and
+nowhere else; a name nobody binds is visible everywhere, which is what a
+rule's free locals are. The scoped dropdown offers exactly what the block
+can see (`fields/scopedVariable`). So "the values an event hands over" is
+not a new kind of thing. It is a binder that nothing had taught the scope
+rule about.
+
+- **The hat binds its parameters' names over the rows below it.** The
+  handler body chains off the hat's `next`, which is what `REST` already
+  means, and `define block` already has the same case for its own
+  parameters over `DO`.
+- **The names are matched on the hat's OWN workspace, by name and
+  flavour.** The declaration is in another file, so there is no shared
+  variable id to carry; what is shared is the name the author wrote.
+- **Nothing is created by the hat existing.** A getter in a flyout refers
+  to a variable that is not real yet — Blockly calls these potential
+  variables and makes them real when a reference is dragged into the
+  workspace. So the name comes into the file when somebody drags the
+  getter out, and not before. A file that never reads `character` never
+  has one.
+- **The `+` offers the flavour's getter, bound by name.** Not a block of
+  its own: `variables_get_String` with `character` in it, which is the
+  same block the drawer offers and behaves like every other getter from
+  the moment it lands.
+- **The handler binds the name to the value.** The closure keeps its
+  positional parameters, and the body opens with `let character =
+eventValue;` for each name the file actually has. Positional at the
+  boundary, named inside — so `event value` and `event actor` go on
+  meaning what they meant, and a getter reads the name.
+
 ## Not built, and known
 
-- **A value is read by a block, not bound to a variable.** The handler is
-  in another file from the declaration, so the two cannot share a variable;
-  what a learner gets is a block per value, which is what `event actor`
-  already was. It cannot be renamed from the handler, and renaming the
-  parameter in the signature loses what was plugged in — the same bargain
-  the `emit` block's sockets make.
+- **A local is matched by NAME, so renaming a parameter orphans a getter.**
+  The getter goes on naming the variable it named, which is then bound by
+  nothing and out of scope — drawn as a name the block cannot see, which
+  is what the scope rule already does for a getter carried out of the
+  mouth that named it.
 - **A lone actor still says `event actor`**, so an event whose one value is
   an actor does not show the author's name for it. Every contact hat in the
   library is that shape.
@@ -203,14 +240,19 @@ item anywhere. Design `is damaged by ⟨who: actor⟩ ⟨amount: number⟩`: the
 preview row should draw a kind dropdown for `who` and the word `amount`,
 and the hat in the toolbox should match it exactly.
 
-On that hat, the `+` should open a flyout holding `who` and `amount`.
-Dragging `amount` out should give a block that plugs into a number socket
-and refuses an actor one; `who` should plug into an actor socket and draw
-the kind's picture.
+On that hat, the `+` should open a flyout holding two ordinary getters,
+reading `who` and `amount`. Dragging `amount` out should give a getter that
+plugs into a number socket and refuses an actor one.
+
+Then the part that is the point of the revision. That name should be
+offered in the dropdown of any getter under the same hat, and in no
+dropdown anywhere else in the file. Carrying the getter out from under the
+hat should leave it naming something it can no longer see. A file that has
+never opened the `+` should have no `character` in any menu at all.
 
 The `emit` block should show two sockets. Raise it with a number in one and
 watch the handler read the same number back — the whole point, and the half
 that could not work before.
 
 On a contact hat (`starts touching`), the `+` should be unchanged: one
-block, `event actor`.
+block, `event actor`, and no local bound.

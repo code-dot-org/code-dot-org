@@ -88,6 +88,57 @@ export const BINDERS: Readonly<Record<string, Binder>> = {
 const PARAMS_BLOCK = 'world_rule_block';
 
 /**
+ * One name an event hands its handler, and the flavour it arrives as.
+ *
+ * NOT AN ID, which is the whole difficulty an event has and a `define block`
+ * does not. A block's parameters and its body share a workspace, so they share
+ * one variable with one id. An event is declared in one file and heard in
+ * another — `⟨character⟩ is typed` is the input rule's and the handler is a
+ * world's — and a Blockly variable belongs to a workspace, so there is no id
+ * the two ends could both hold. What they share is the name the author wrote,
+ * and the flavour its type maps to (specs/EVENT_VALUES_PLAN.md).
+ */
+export interface EventLocal {
+  readonly name: string;
+  /** The variable type tag — `String`, `Actor`, … (`typedVariables`). */
+  readonly type: string;
+}
+
+/** What each event hat hands over, by hat block type. */
+const eventLocals = new Map<string, readonly EventLocal[]>();
+
+/**
+ * Say what a hat binds. Called wherever a hat is minted (`domainBlocks`).
+ *
+ * A registry rather than a property of the block, because this has to be
+ * answerable about a hat on a HEADLESS workspace during generation, where no
+ * extension has run and the only thing in hand is the type.
+ */
+export function registerEventLocals(
+  hatType: string,
+  locals: readonly EventLocal[],
+): void {
+  eventLocals.set(hatType, locals);
+}
+
+/**
+ * The variable each of `block`'s locals names on ITS OWN workspace, in order.
+ *
+ * `undefined` where the file has no such variable, which is the ordinary case
+ * and not a fault: the name comes into a file when somebody drags the getter
+ * out of the hat's `+`, and a handler that never reads what it was handed
+ * never makes one. A hat that is not an event hat has no locals and no ids.
+ */
+export function eventLocalIds(block: Block): Array<string | undefined> {
+  const locals = eventLocals.get(block.type);
+  if (!locals) {
+    return [];
+  }
+  const map = block.workspace.getVariableMap();
+  return locals.map(local => map.getVariable(local.name, local.type)?.getId());
+}
+
+/**
  * Where a `define block`'s parameters reach, which is two places and was one.
  *
  * IN THE FILE the implementation sits in the head's `DO` mouth, so that is the
@@ -126,6 +177,16 @@ function bindingsOf(block: Block): {ids: string[]; over: readonly string[]} {
       ids: paramIds(block),
       over: block.id === BODY_OWNER_ID ? [PARAMS_OVER, REST] : [PARAMS_OVER],
     };
+  }
+  // An event's hat binds what the event hands over, across the rows below it
+  // — a handler's body is the hat's `next` chain, which is what {@link REST}
+  // means. The same shape `define block` has above, over a different input,
+  // and keyed by name rather than by id for the reason `EventLocal` gives.
+  const carried = eventLocalIds(block).filter(
+    (id): id is string => id !== undefined,
+  );
+  if (carried.length > 0) {
+    return {ids: carried, over: [REST]};
   }
   const binder = BINDERS[block.type];
   if (!binder) {
