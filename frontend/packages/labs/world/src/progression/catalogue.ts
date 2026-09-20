@@ -2693,6 +2693,14 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_save_memory'},
       {kind: 'block', type: 'world_recall_memory'},
       {kind: 'block', type: 'world_forget_memory'},
+      // …and what a saved thing is usually saved WITH: the wall clock, which
+      // is the only one that can answer what day it is. `time` is seconds
+      // since the world started and stops meaning anything across a reload; a
+      // moment is a number, so it files in a property beside everything else
+      // (specs/CLOCK_PLAN.md).
+      {kind: 'block', type: 'world_now'},
+      {kind: 'block', type: 'world_time_part'},
+      {kind: 'block', type: 'world_time_text'},
     ],
     offers: [
       {kind: 'block', type: 'world_this_actor'},

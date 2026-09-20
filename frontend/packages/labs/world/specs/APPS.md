@@ -232,6 +232,12 @@ catalogue; the second is now possible rather than present.
 
 Then the progression, and the parameterising that a second one needs.
 
+7. **A clock** — DONE (specs/CLOCK_PLAN.md): what time it is out there, its
+   parts, and a date written so it sorts. Not on the original list, and it
+   should have been: `time` is seconds since the world started, so until this
+   there was no way to ask what DAY it is, and every app whose point is _when_
+   was out of reach — a timer, a journal, a streak, "due tomorrow".
+
 **One cheap thing worth doing first, whatever the order — DONE:** an APP
 template and a phone-shaped starter (`{kind: 'template', id: 'app'}` — every
 other template is a game genre). `fixtures/app`, the Notes scenario: two

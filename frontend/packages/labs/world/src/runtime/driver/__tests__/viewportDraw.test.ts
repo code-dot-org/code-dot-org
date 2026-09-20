@@ -370,6 +370,8 @@ const world = (held: {spaces: boolean; around?: boolean; carried?: boolean}) =>
       {id: 'main', position: {x: 160, y: 160}, active: true},
     ],
     snapshot: () => ({world: {}}),
+    // The clock the binding lends at set-up (specs/CLOCK_PLAN.md).
+    useClock: () => {},
     renderSnapshot: () => [
       ...(held.around ? [state(FLOOR, 10, 10)] : []),
       state(WINDOW, 160, 160),

@@ -117,7 +117,10 @@ describe('Notes, the app', () => {
     expect(says(field())).toBe('milk');
 
     tap(named('Save')!);
-    expect(listed()).toEqual(['milk']);
+    // Filed by its day. The date is exact rather than approximate because a
+    // world nobody lent a clock sits at one fixed moment — which is the whole
+    // reason the headless default is fixed (specs/CLOCK_PLAN.md).
+    expect(listed()).toEqual(['2000-01-01  milk']);
   });
 
   it('takes the form AND the keyboard away on the way back', async () => {
@@ -179,11 +182,13 @@ describe('Notes, the app', () => {
     first.tap(first.field());
     first.typeOnScreen('milk');
     first.tap(first.named('Save')!);
-    expect(first.listed()).toEqual(['milk']);
+    expect(first.listed()).toEqual(['2000-01-01  milk']);
 
-    // A NEW WORLD over the same storage, which is what a reload is.
+    // A NEW WORLD over the same storage, which is what a reload is. The date
+    // comes back with the note because a moment is a NUMBER turned into words
+    // at the moment it is written — there is nothing extra to save.
     const again = await play(first.store.held);
-    expect(again.listed()).toEqual(['milk']);
+    expect(again.listed()).toEqual(['2000-01-01  milk']);
   });
 
   it('starts empty on a browser that remembers nothing', async () => {

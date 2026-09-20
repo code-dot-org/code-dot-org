@@ -15,6 +15,14 @@ import {
   type Camera,
   type CameraInit,
 } from './Camera';
+import {
+  isTimePart,
+  NO_CLOCK,
+  partOf,
+  timeText as clockText,
+  TIME_STYLES,
+  type TimeStyle,
+} from './clock';
 import {rgba, type ColorValue, type Rgba} from './color';
 import {
   CommandPen,
@@ -899,6 +907,31 @@ export class World {
    * Undefined is the headless case and answers zero rather than guessing.
    */
   private measure: ((words: string, size: number) => number) | undefined;
+  /**
+   * What time it is out there, and which zone that is — lent by the driver.
+   *
+   * THE THIRD THING THE ENGINE CANNOT KNOW, beside the width of a letter and
+   * the browser's storage, and lent the same way and for the same reason: this
+   * half has no machine and no locale by design, and `time` answers a
+   * different question — seconds since the world STARTED, which is what a
+   * cooldown is measured in (specs/CLOCK_PLAN.md).
+   *
+   * Undefined is the headless case and answers a FIXED moment rather than the
+   * real one (`core/clock`, NO_CLOCK). A test, a rule demo and a check all run
+   * headless, and a clock that answered the real time there would make every
+   * one of them differ between runs.
+   */
+  private clock: (() => number) | undefined;
+  private zoneOffset = 0;
+  /**
+   * The moment this frame is at, sampled once at the top of `tick`.
+   *
+   * For the same reason `elapsed` is advanced there: every step and handler in
+   * one frame should read ONE value, or two blocks a line apart could land on
+   * opposite sides of a second and a project that compared them would see time
+   * run backwards within a frame.
+   */
+  private moment = NO_CLOCK;
   /** Actor templates by the module path a map names them with (`define`). */
   private readonly types = new Map<string, ActorTemplate>();
   // The previous tick's pressed set, so a rule step can detect rising/falling
@@ -2617,6 +2650,62 @@ export class World {
     return this.measure(words, at) || 0;
   }
 
+  /**
+   * Lend the world a clock — the driver calls this once, at set-up.
+   *
+   * `now` reports SECONDS since the epoch, because everything else in the lab
+   * is in seconds and a learner subtracting two moments should get an answer
+   * in the unit a tween and a cooldown already use.
+   *
+   * `offsetMinutes` is minutes to ADD to UTC to reach the zone being shown —
+   * so New York in winter is -300. That is the sign a person writes, and the
+   * opposite of `Date.getTimezoneOffset`; the driver flips it on the way in.
+   */
+  useClock(now: () => number, offsetMinutes = 0): this {
+    this.clock = now;
+    this.zoneOffset = offsetMinutes;
+    // Sampled straight away as well as per tick, so a world asked before it
+    // has ticked answers the time it was lent rather than the fixed default.
+    this.moment = now();
+    return this;
+  }
+
+  /**
+   * What time it is — `the time now`, in seconds since the epoch.
+   *
+   * ONE VALUE FOR THE WHOLE FRAME (see `moment`). A world nobody lent a clock
+   * answers the same fixed moment every time, which is a visible wrong answer
+   * rather than an invisible one.
+   */
+  now(): number {
+    return this.moment;
+  }
+
+  /** The zone the clock is being read in, in minutes from UTC. */
+  timeZoneOffset(): number {
+    return this.zoneOffset;
+  }
+
+  /** One part of a moment — `⟨the hour⟩ of ⟨…⟩` (`core/clock`). */
+  timePart(seconds: unknown, part: unknown): number {
+    const at = Number(seconds);
+    return isTimePart(part) && Number.isFinite(at)
+      ? partOf(at, part, this.zoneOffset)
+      : 0;
+  }
+
+  /** A moment as words — `⟨…⟩ as ⟨a date⟩` (`core/clock`). */
+  timeText(seconds: unknown, style: unknown): string {
+    const at = Number(seconds);
+    if (!Number.isFinite(at)) {
+      return '';
+    }
+    const how = (TIME_STYLES as readonly string[]).includes(String(style))
+      ? (String(style) as TimeStyle)
+      : 'date';
+    return clockText(at, how, this.zoneOffset);
+  }
+
   /** Whether `key` (a name from `core/keys`) is currently pressed. */
   isKeyDown(key: string): boolean {
     return this.keys.has(key);
@@ -2878,6 +2967,11 @@ export class World {
     // Before the steps, so every step in this frame reads one value, and that
     // value is the time the positions they compute belong to (see `time`).
     this.elapsed += delta;
+    // …and the same for what time it is out there, for the same reason: two
+    // blocks a line apart must not land on opposite sides of a second.
+    if (this.clock) {
+      this.moment = this.clock();
+    }
     // …and so is anything the world typed or pressed last frame, which is the
     // frame this one is (specs/KEYBOARD_PLAN.md). In front of what the driver
     // added, since the button was clicked before those keystrokes arrived.

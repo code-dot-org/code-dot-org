@@ -79,6 +79,10 @@ const world = (over: Record<string, unknown> = {}) =>
     // attaches to the game's element (`World.captureKey`).
     capturedKeys: () => new Set<string>(),
     gainedKeyboard: () => {},
+    // The clock the binding lends at set-up, as it lends the measuring tape
+    // and the storage. A double that lacks it is a world the driver cannot
+    // start (specs/CLOCK_PLAN.md).
+    useClock: () => {},
     ...over,
   }) as never;
 

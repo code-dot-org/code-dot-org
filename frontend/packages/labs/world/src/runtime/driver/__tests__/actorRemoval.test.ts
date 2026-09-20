@@ -180,6 +180,8 @@ const world = (actors: string[]) => {
       drainSounds: () => [],
       music: () => undefined,
       snapshot: () => ({world: {}}),
+      // The clock the binding lends at set-up (specs/CLOCK_PLAN.md).
+      useClock: () => {},
     } as never,
     remove: (id: string) => live.splice(live.indexOf(id), 1),
   };

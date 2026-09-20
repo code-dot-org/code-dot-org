@@ -263,6 +263,12 @@ export class PhaserBinding {
     } catch {
       // No storage here. The blocks answer false, which is what they are for.
     }
+    // …and the clock, lent the same way and for the same reason: the engine
+    // half has no machine and no locale (specs/CLOCK_PLAN.md). Seconds, since
+    // everything else in the lab is in seconds; and the zone as minutes to ADD
+    // to UTC, which is the sign a person writes and the opposite of what
+    // `getTimezoneOffset` reports.
+    world.useClock(() => Date.now() / 1000, -new Date().getTimezoneOffset());
     // Whether the game's element was focused by a click rather than by a Tab
     // from the page. Read and cleared by the focus handler below.
     let viaPointer = false;

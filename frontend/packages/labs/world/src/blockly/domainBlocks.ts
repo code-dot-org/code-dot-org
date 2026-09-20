@@ -5035,6 +5035,138 @@ const worldTime = defineBlock({
 });
 
 /**
+ * `the time now` — what time it is out there, in seconds since 1970.
+ *
+ * THE OTHER CLOCK, and the distinction is the whole reason it is a second
+ * block rather than a second meaning for `time`. `time` is seconds since this
+ * WORLD started, which is what a cooldown, a tween and a respawn delay are
+ * measured in and which stops while the game is paused. This is the wall
+ * clock: it keeps running while the game is paused, it is the same number in
+ * every world on the machine, and it is the only one that can answer what DAY
+ * it is (specs/CLOCK_PLAN.md).
+ *
+ * A NUMBER, so it saves. A moment kept in a world's own property is a number
+ * like any other, which means `save what the world remembers` already carries
+ * it and "when did I last open this" needs nothing new (specs/SAVING_PLAN.md).
+ *
+ * A world nobody lent a clock answers one fixed moment forever, which is what
+ * every test, demo and check runs on — a real clock there would make each of
+ * them differ between runs (`World.now`).
+ */
+const worldNow = defineBlock({
+  type: 'world_now',
+  message0: 'the time now',
+  output: 'Number',
+  extensions: [worldContextExtension],
+  style: 'variable_blocks',
+  tooltip:
+    'Seconds since the start of 1970 — the clock outside the game. Subtract ' +
+    'two of these for how long apart they were. Keeps running while paused.',
+  generator: {
+    javascript() {
+      return ['world.now()', Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+/** What `⟨…⟩ of ⟨a moment⟩` offers, in the order a date is written. */
+const TIME_PART_OPTIONS: Array<[string, string]> = [
+  ['the year', 'year'],
+  ['the month', 'month'],
+  ['the day', 'day'],
+  ['the hour', 'hour'],
+  ['the minute', 'minute'],
+  ['the second', 'second'],
+  ['the weekday', 'weekday'],
+];
+
+/**
+ * `⟨the hour⟩ of ⟨the time now⟩` — one part of a moment, as a number.
+ *
+ * ONE BLOCK WITH A DROPDOWN rather than seven blocks, because they are one
+ * idea asked seven ways and a drawer with seven near-identical rows is a
+ * drawer nobody reads. Months count from one and weekdays from Monday, which
+ * is what somebody writing `if the month is 12` means (`core/clock`).
+ *
+ * It takes the moment rather than assuming "now", so the same block reads a
+ * date a project SAVED — which is the whole of what a journal, a streak and
+ * "due tomorrow" are made of.
+ */
+const worldTimePart = defineBlock({
+  type: 'world_time_part',
+  message0: '%1 of %2',
+  args0: [
+    {type: 'field_dropdown', name: 'PART', options: TIME_PART_OPTIONS},
+    {type: 'input_value', name: 'TIME', check: 'Number'},
+  ],
+  inputsInline: true,
+  output: 'Number',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'variable_blocks',
+  tooltip:
+    'Part of a moment, as a number. Months count from 1 and weekdays from ' +
+    'Monday, so Saturday and Sunday are 6 and 7.',
+  generator: {
+    javascript(block, generator) {
+      const at = generator.valueToCode(block, 'TIME', Order.NONE) || '0';
+      return [
+        `world.timePart(${at}, ${str(block.getFieldValue('PART'))})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_time_part', [
+  {name: 'TIME', shadow: {type: 'world_now'}},
+]);
+
+/**
+ * `⟨the time now⟩ as ⟨a date⟩` — a moment as words, for showing and for filing.
+ *
+ * NOT THE BROWSER'S LOCALE FORMATTING, which is the one decision worth
+ * defending. A date a project saves is a key: a heading, a filename, a row in
+ * a list it later looks up. Locale formatting would write `20/09/2026` on one
+ * machine and `9/20/2026` on another, so a project that filed entries by date
+ * would stop finding its own. `a date` is year-month-day, which also sorts
+ * correctly as text — which is why that order exists (`core/clock`).
+ */
+const worldTimeText = defineBlock({
+  type: 'world_time_text',
+  message0: '%1 as %2',
+  args0: [
+    {type: 'input_value', name: 'TIME', check: 'Number'},
+    {
+      type: 'field_dropdown',
+      name: 'STYLE',
+      options: [
+        ['a date', 'date'],
+        ['a clock time', 'clock'],
+        ['a date and time', 'both'],
+      ],
+    },
+  ],
+  inputsInline: true,
+  output: 'String',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'variable_blocks',
+  tooltip:
+    'A moment as words. A date is written year-month-day, so dates sort ' +
+    'into order and read the same on every machine.',
+  generator: {
+    javascript(block, generator) {
+      const at = generator.valueToCode(block, 'TIME', Order.NONE) || '0';
+      return [
+        `world.timeText(${at}, ${str(block.getFieldValue('STYLE'))})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_time_text', [
+  {name: 'TIME', shadow: {type: 'world_now'}},
+]);
+
+/**
  * How long an actor has been in the world.
  *
  * The half of time that a spawned thing needs about ITSELF. A bullet cannot ask
@@ -10334,6 +10466,9 @@ export const DOMAIN_BLOCKS = [
   worldNewLine,
   worldTextWidth,
   worldCanReach,
+  worldNow,
+  worldTimePart,
+  worldTimeText,
   worldCaptureKey,
   worldReleaseKey,
   worldType,
@@ -10764,6 +10899,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // …and how long it has been going, which is what every delay, cooldown
       // and lifetime is measured against.
       'world_time',
+      // …and what time it is OUT THERE, which is a different question and the
+      // only one that can answer what day it is (specs/CLOCK_PLAN.md).
+      'world_now',
+      'world_time_part',
+      'world_time_text',
       // …and taking one back out again, while the game runs. Taking ALL of
       // them out was `clear world`, for changing level; a level is what a
       // Viewport holds now, and `load map ⟨…⟩ into ⟨…⟩` replaces it.

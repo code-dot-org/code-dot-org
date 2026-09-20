@@ -215,6 +215,45 @@ const typed = () => ({
   },
 });
 
+/**
+ * `⟨the time now⟩ as ⟨a date⟩ + ⟨what was typed⟩` — a note, filed by its day.
+ *
+ * WHY A NOTE CARRIES ITS DATE AT ALL: it is what the clock is for, and it is
+ * the smallest honest demonstration that the three pieces compose — the wall
+ * clock reports a number, `as a date` turns it into words that sort, and a
+ * word is what the list already holds and what `save` already keeps
+ * (specs/CLOCK_PLAN.md).
+ *
+ * A world nobody lent a clock writes `2000-01-01` every time, which is why
+ * the play test can assert the whole row.
+ */
+const dated = () =>
+  joined([
+    {
+      block: {
+        type: 'world_time_text',
+        fields: {STYLE: 'date'},
+        inputs: {TIME: {block: {type: 'world_now'}}},
+      },
+    },
+    words('  '),
+    typed(),
+  ]);
+
+/** `⟨a⟩ + ⟨b⟩ + ⟨c⟩`, as the chain of `as text` blocks that says it. */
+const joined = (parts: object[]): object => {
+  let chained: object | undefined;
+  for (let at = parts.length - 1; at >= 0; at -= 1) {
+    chained = {
+      block: {
+        type: 'world_as_text',
+        inputs: {VALUE: parts[at], ...(chained ? {ADD: chained} : {})},
+      },
+    };
+  }
+  return chained as object;
+};
+
 /** The world's own list of notes — `notes` in `main.world`. */
 const notes = () => ({block: {type: 'world_get_WorldsMain_NotesProperty'}});
 
@@ -361,7 +400,7 @@ const MAIN_WORLD = JSON.stringify(
             block: chain([
               {
                 type: 'world_push_WorldsMain_NotesProperty',
-                inputs: {ITEM: typed()},
+                inputs: {ITEM: dated()},
               },
               showNotes(),
               {

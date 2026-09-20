@@ -263,6 +263,10 @@ const world = (
     tick: () => {},
     effects: () => [],
     renderSnapshot: () => [],
+    // The clock the binding lends at set-up, as it lends the measuring tape
+    // and the storage. A double that lacks it is a world the driver cannot
+    // start (specs/CLOCK_PLAN.md).
+    useClock: () => {},
     // Drained after every tick (specs/SOUND.md).
     drainSounds: () => [],
     music: () => undefined,
