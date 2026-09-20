@@ -32,6 +32,7 @@ import {inputDemo} from './input';
 import {inventoryDemo} from './inventory';
 import {jetpackDemo} from './jetpack';
 import {jumpDemo} from './jump';
+import {gesturesDemo} from './gestures';
 import {mouseDemo} from './mouse';
 import {pathDemo} from './path';
 import {patrolDemo} from './patrol';
@@ -73,6 +74,7 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   history: historyDemo,
   turns: turnsDemo,
   input: inputDemo,
+  gestures: gesturesDemo,
   mouse: mouseDemo,
   arrows: arrowsDemo,
   gravity: gravityDemo,

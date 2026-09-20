@@ -52,6 +52,13 @@ defaults and about six missing ideas.
 
 ### 1. A finger
 
+BUILT, for one finger — specs/GESTURES_PLAN.md. The paragraph below is
+what was true before it, and one sentence of it was wrong: the smallest
+honest step turned out to need no pointer change at all, because a rule
+can already read the button edges, the pointer's place and the clock. The
+`Gestures` rule raises drag, swipe and hold, and the Slider stopped
+faking. Multi-touch and telling a finger from a mouse are still absent.
+
 `src/engine/core/pointer.ts` knows three MOUSE BUTTONS and nothing else.
 The driver reads `this.input.activePointer` once a frame: one pointer, no
 ids, no `addPointer`. The Mouse rule offers pressed, released and clicked;
@@ -149,10 +156,9 @@ is a day's work that should be done once, not twice.
 
 **Build the engine first, in this order**, and write the progression after:
 
-1. **The finger** — a pointer that knows it is a finger, and drag, swipe
-   and long press as a rule. Nothing else on this list is usable without
-   it, and it is also the thing that makes the EXISTING interface kit
-   honest on a phone.
+1. **The finger** — DONE for one finger (specs/GESTURES_PLAN.md), and it
+   needed no pointer change: drag, swipe and hold are a rule over what the
+   world already answers.
 2. **Anchoring** — placements anchored to the interface layer's edges.
 3. **A list view** — a row per item of a value list, scrolling.
 4. **Saving** — world state and lists, per project.

@@ -160,10 +160,11 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Slider',
     description:
       'A bar the player drags. Press it and the knob follows the pointer; the arrow keys nudge it once the keyboard is on it. Read its fraction, or hear “changed” when it moves.',
-    // Mouse for the press it follows, Tab Navigation for the focus its ring
-    // reads, and Input for the arrows; its fraction and colours are the
-    // Progress Bar's, which it acts like.
-    requires: ['Mouse', 'Tab Navigation', 'Input'],
+    // Mouse for the press that jumps it and Gestures for the drag that moves
+    // it after, Tab Navigation for the focus its ring reads, and Input for the
+    // arrows; its fraction and colours are the Progress Bar's, which it acts
+    // like.
+    requires: ['Mouse', 'Gestures', 'Tab Navigation', 'Input'],
     actors: ['progressBar'],
     contents: sliderActor,
   },

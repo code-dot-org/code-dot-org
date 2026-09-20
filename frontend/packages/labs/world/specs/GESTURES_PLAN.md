@@ -1,6 +1,6 @@
 # Plan: the finger (APPS.md, missing thing 1)
 
-STATUS: PROPOSED. The first of the six things specs/APPS.md says an app
+STATUS: BUILT, not yet seen in the browser. The first of the six things specs/APPS.md says an app
 wants and this lab does not have, and the one it says blocks the rest: "a
 control that cannot be dragged cannot be a list that scrolls". The working
 record, as the other plans are.
@@ -101,8 +101,66 @@ dropped`, `is swiped ⟨left⟩`, and `is long pressed`.
 
 ## Commits
 
+- `2b49586115b` — this plan.
+- `6885bd41c22` — the `Direction` enum.
+- `117199496f9` — one shared definition of what is under the pointer.
+- `22da232dc43` — the `Gestures` rule and eight tests that run it.
+- the Slider onto the drag event, the demo the shelf asks for, and the
+  tile that grants the rule.
+
 ## Learned while building
+
+- **A swipe is not an alternative to a drag.** It travels far by
+  definition, so by the time the finger lifts it has already crossed the
+  drag threshold. The release asked "was it a drag, or else a swipe?" and
+  the answer was always the first, so a swipe could never happen. They are
+  two questions now, and a fast far release is both — which is also what a
+  phone does when you flick a list.
+- **A release arrives with the pointer wherever it was let go**, and the
+  step read that as one more frame of dragging. The Slider ended a drag by
+  jumping to wherever the pointer had stopped. Handling the release BEFORE
+  the frames in between is the whole fix, and the order is now the first
+  thing the step says about itself.
+- **`choice` names a set without the prefix a parameter's type carries.**
+  `param('direction', 'enum:Engine#Direction')` and
+  `choice('Engine#Direction', 'left')` are the same set spelled two ways,
+  and the wrong one fails as "Invalid block definition" when the workspace
+  loads rather than when the rule is written.
+- **The shelf and the progression each hold a rule to something.** A rule
+  on the shelf needs a DEMO — a small recorded world showing what it does,
+  which every other stock rule has — and a tile that grants it, or it is
+  something a learner can only meet by accident. Two tests said so, which
+  is the library keeping its own promises rather than a person
+  remembering to.
+- **The Slider had a drag written out by hand**, and it is exactly what
+  the rule exists to stop every control writing again: a `held` boolean,
+  and a step asking every frame whether the button was still down. It is a
+  handler for one event now, and keeps no state of its own.
 
 ## Not built, and known
 
+- **One finger.** Multi-touch needs pointer identities and a second call
+  to Phaser, and nothing in the interface kit is waiting on it.
+- **A finger is not told from a mouse.** Only hover wants that.
+- **No double tap.** It wants the time and the place of the last release,
+  which is two more properties.
+- **A gesture is decided once a tick**, so a press and release inside one
+  frame is invisible — the same bargain the whole engine makes, since
+  events are queued and flushed once a tick.
+- **Nothing scrolls yet.** A list view is the next thing that needs this,
+  and it is its own piece of work.
+
 ## What to look at in the browser
+
+The Slider is the one to try, because it is the control that changed.
+Press it and the knob should jump to the press, as before. Drag, and the
+knob should follow. THEN drag off the end and keep going: the knob should
+stay pinned at the end and come back when the pointer returns, because the
+gesture still belongs to the slider. Letting go anywhere should leave the
+knob where the finger left it rather than jumping.
+
+On a touch screen, the same with a finger.
+
+A swipe wants a project of its own: an actor with `Takes Gestures` and a
+`when ⟨this⟩ is swiped ⟨left⟩` hat. A quick flick should fire it; a slow
+drag the same distance should not.

@@ -201,55 +201,13 @@ rule.step('gestures', 'sense', [
     ]),
   ]),
 
-  // The frames in between: a drag once it has moved far enough, a hold once it
-  // has stayed put long enough.
-  when([
-    [
-      pressing.of(),
-      [
-        moved.let(vectorMinus(mousePosition(), lastPlace.of())),
-        travelled.let(travelSoFar()),
-        lasted.let(minus(time(), pressStarted.of())),
-        when([
-          [
-            both(not(dragging.of()), moreThan(travelled.get(), dragDistance.of())),
-            [dragging.set(yes())],
-          ],
-        ]),
-        when([
-          [
-            dragging.of(),
-            [
-              screenDragged({movement: moved.get()}),
-              ...tellPressed(who => [
-                dragged({movement: moved.get()}, who.get()),
-              ]),
-            ],
-          ],
-        ]),
-        // A HOLD IS ANNOUNCED WHILE THE FINGER IS STILL DOWN, which is what
-        // makes "hold to confirm" work at all, and once per press, which is
-        // what the flag is for.
-        when([
-          [
-            both(
-              both(not(dragging.of()), not(heldTold.of())),
-              moreThan(lasted.get(), holdTime.of()),
-            ),
-            [
-              heldTold.set(yes()),
-              screenHeld(),
-              ...tellPressed(who => [held({}, who.get())]),
-            ],
-          ],
-        ]),
-        lastPlace.set(mousePosition()),
-      ],
-    ],
-  ]),
-
-  // The release: a drag ends, or a short fast press that never became one was
-  // a swipe.
+  // The release, BEFORE the frames in between, and the order is the point. A
+  // release arrives with the pointer wherever it was let go, and a step that
+  // read that as one more frame of dragging would drag the thing to there
+  // after the finger had gone — which is how the Slider jumped back to the
+  // middle when a drag ended with the pointer near the middle.
+  //
+  // A drag ends, and a short fast press is a swipe.
   forEachButton('RELEASED', button, [
     when([
       [
@@ -297,6 +255,53 @@ rule.step('gestures', 'sense', [
       ],
     ]),
   ]),
+  // The frames in between: a drag once it has moved far enough, a hold once it
+  // has stayed put long enough.
+  when([
+    [
+      pressing.of(),
+      [
+        moved.let(vectorMinus(mousePosition(), lastPlace.of())),
+        travelled.let(travelSoFar()),
+        lasted.let(minus(time(), pressStarted.of())),
+        when([
+          [
+            both(not(dragging.of()), moreThan(travelled.get(), dragDistance.of())),
+            [dragging.set(yes())],
+          ],
+        ]),
+        when([
+          [
+            dragging.of(),
+            [
+              screenDragged({movement: moved.get()}),
+              ...tellPressed(who => [
+                dragged({movement: moved.get()}, who.get()),
+              ]),
+            ],
+          ],
+        ]),
+        // A HOLD IS ANNOUNCED WHILE THE FINGER IS STILL DOWN, which is what
+        // makes "hold to confirm" work at all, and once per press, which is
+        // what the flag is for.
+        when([
+          [
+            both(
+              both(not(dragging.of()), not(heldTold.of())),
+              moreThan(lasted.get(), holdTime.of()),
+            ),
+            [
+              heldTold.set(yes()),
+              screenHeld(),
+              ...tellPressed(who => [held({}, who.get())]),
+            ],
+          ],
+        ]),
+        lastPlace.set(mousePosition()),
+      ],
+    ],
+  ]),
+
 ]);
 
 export default () => moduleFor(rule, 'gestures');

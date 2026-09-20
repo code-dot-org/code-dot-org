@@ -93,8 +93,9 @@ describe('every stock actor', () => {
       healthBar: ['subject'],
       // Whether the switch is on: the Toggle's, and what its two events say.
       toggle: ['on'],
-      // A slider is as big as it says, and remembers a press it is following.
-      slider: ['width', 'height', 'held'],
+      // A slider is as big as it says. What it was following is the Gestures
+      // rule's to remember now, so it keeps nothing else of its own.
+      slider: ['width', 'height'],
       // A dropdown's words, whether it is open, and which row the keys are on.
       dropdown: ['choices', 'open', 'highlighted'],
       // A text area's caret; its lines are newlines in the words themselves.

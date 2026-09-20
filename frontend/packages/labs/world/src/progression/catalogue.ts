@@ -2649,7 +2649,11 @@ export const TILES: readonly Tile[] = [
       // …and the first actor that takes something other than a press. It
       // brings the Label it acts like, and the two rules it reads.
       {kind: 'actor', id: 'textInput'},
-      // …and the one that takes a number: a bar the pointer drags.
+      // …and the one that takes a number: a bar the pointer drags, with the
+      // rule that says what dragging IS. A slider is the first control that
+      // cares what happens BETWEEN the press and the release, which is the
+      // whole of what Gestures answers (specs/GESTURES_PLAN.md).
+      {kind: 'rule', id: 'gestures'},
       {kind: 'actor', id: 'slider'},
       // …and the one that takes a paragraph.
       {kind: 'actor', id: 'textArea'},

@@ -6,11 +6,16 @@
 // changes is who sets the fraction. Here the pointer does (specs/UI_ACTORS.md,
 // "The rest of the toolkit").
 //
-// THERE IS NO DRAG EVENT, AND NONE IS NEEDED. A click on the slider marks it
-// HELD and jumps the fraction to where the click landed; a step then follows
-// the pointer each frame for as long as the left button stays down, and lets
-// go when it comes up. `mouse position` and `mouse button ⟨left⟩ is down` are
-// the two blocks that exist, and that is a drag.
+// A PRESS JUMPS IT, AND A DRAG MOVES IT. The click sets the fraction to where
+// the press landed and takes the keyboard; after that the Gestures rule says
+// `is dragged by` on every frame the pointer moves, and this follows it. That
+// event belongs to the actor the press BEGAN on, which is what lets the
+// pointer leave the slider mid-drag and keep moving it (specs/GESTURES_PLAN.md).
+//
+// It used to do this itself: a `held` boolean set by the click, and a step
+// that asked every frame whether the left button was still down. That was a
+// drag written out by hand in the one control that needed one, and it is the
+// thing the gesture rule exists to stop every control writing again.
 //
 // `changed` IS ITS OWN EVENT, as the Text Input's is: raised when the fraction
 // moves and not otherwise, so a volume screen hears the slider rather than
@@ -60,7 +65,6 @@ const read = (own: string, exportName: string) => ({
 const width = () => read(OWN, 'WidthProperty');
 const height = () => read(OWN, 'HeightProperty');
 const fraction = () => read(BAR, 'FractionProperty');
-const held = () => read(OWN, 'HeldProperty');
 const focused = () => ({
   block: {
     type: 'world_get_TabNavigation_FocusedProperty',
@@ -120,15 +124,6 @@ const fractionAtPointer = () => ({
 const setFraction = (to: object) => ({
   type: `world_set_${BAR}_FractionProperty`,
   inputs: {ACTOR: me(), VALUE: to},
-});
-const setHeld = (to: boolean) => ({
-  type: `world_set_${OWN}_HeldProperty`,
-  inputs: {
-    ACTOR: me(),
-    VALUE: {
-      block: {type: 'logic_boolean', fields: {BOOL: to ? 'TRUE' : 'FALSE'}},
-    },
-  },
 });
 const emitChanged = () => ({
   type: `world_emit_${OWN}_ChangedEvent`,
@@ -191,26 +186,6 @@ const knobX = () =>
     arithmetic('MULTIPLY', less(width(), KNOB * 2), fraction()),
   );
 
-/**
- * The drag: while held and the button is down, be where the pointer is;
- * when the button comes up, let go. A row of the definition, as a step is.
- */
-const followsThePointer = () => ({
-  type: 'world_trait_step',
-  fields: {PHASE: 'decide', NAME: 'follow the pointer'},
-  inputs: {
-    DO: {
-      block: either(held(), [
-        either(
-          {block: {type: 'world_is_button_down', fields: {BUTTON: 'left'}}},
-          [moveTo(fractionAtPointer)],
-          [setHeld(false)],
-        ),
-      ]),
-    },
-  },
-});
-
 export const sliderActor = actorFile(
   'Slider',
   [
@@ -219,28 +194,36 @@ export const sliderActor = actorFile(
     actsLike('actors/progressBar'),
     defineProperty('number', 'width', String(WIDTH)),
     defineProperty('number', 'height', String(HEIGHT)),
-    // Whether a press began on this slider and has not been let go of.
-    defineProperty('boolean', 'held', 'false'),
     defineEvent('changed'),
     useTrait('Mouse#CanBeClickedTrait'),
+    // …and the gestures that begin on it, which is how the knob follows a
+    // finger that has slid off the end of the track.
+    useTrait('Gestures#TakesGesturesTrait'),
     useTrait('Tab Navigation#CanBeFocusedTrait'),
     useTrait('Input#TakesKeyboardInputTrait'),
     showAs('slider'),
     // Halfway, which is where a volume starts; a bar starts full.
     setFraction(num(0.5)),
-    followsThePointer(),
   ],
   {
     handlers: [
-      // A press on it: this is the one being dragged, the keyboard comes
-      // here, and the fraction jumps to the press.
+      // A press on it: the keyboard comes here, and the fraction jumps to
+      // where the press landed.
       {
         type: 'world_on_Mouse_IsClickedWithEvent',
         fields: {FILTER0: ''},
         inputs: {ACTOR: me()},
         next: {
-          block: chain([takeFocus(), setHeld(true), moveTo(fractionAtPointer)]),
+          block: chain([takeFocus(), moveTo(fractionAtPointer)]),
         },
+      },
+      // …and every frame the finger moves after it. The event carries how far
+      // it moved, which this does not need — where it IS is the whole answer,
+      // and `mouse position` is where that lives.
+      {
+        type: 'world_on_Gestures_IsDraggedByEvent',
+        inputs: {ACTOR: me()},
+        next: {block: chain([moveTo(fractionAtPointer)])},
       },
       onKey('left arrow', -STEP),
       onKey('right arrow', STEP),
