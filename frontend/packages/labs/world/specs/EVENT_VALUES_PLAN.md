@@ -224,8 +224,8 @@ rule about.
   same block the drawer offers and behaves like every other getter from
   the moment it lands.
 - **The handler binds the name to the value.** The closure keeps its
-  positional parameters, and the body opens with `let character =
-eventValue;` for each name the file actually has. Positional at the
+  positional parameters, and the body opens by binding each name to its
+  position, for each name the file actually has. Positional at the
   boundary, named inside — so `event value` and `event actor` go on
   meaning what they meant, and a getter reads the name.
 
