@@ -31,6 +31,7 @@ import type {WorldLevelData} from '../levelData';
 import {importStockMap} from '../maps/importStockMap';
 import {stockMapById} from '../maps/stock';
 
+import {notesApp} from './app';
 import {BREAKOUT_SPEC} from './breakout';
 import {FLAPPY_SPEC} from './flappy';
 import {interfaceKit} from './interfaceKit';
@@ -60,6 +61,7 @@ export const WORLD_SCENARIO_TAGS = [
   'sokoban',
   'novel',
   'interface',
+  'app',
   'empty',
 ] as const;
 
@@ -331,9 +333,10 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       'field, the button, the bar and the box are placements on a ' +
       'phone-shaped canvas; the words on the title and the button are ' +
       'property overrides on their placements, in the inspector\n' +
-      '- Click the FIELD before you type. Any click lets every field go and ' +
-      'the one clicked on takes over, which is how two of them on a screen ' +
-      'stay apart — and it is the Mouse rule doing it, not the field\n' +
+      '- Click the FIELD before you type. Clicking one brings the keyboard ' +
+      'to it and takes it from whatever had it, which is how two of them on ' +
+      'a screen stay apart — and it is the Tab Navigation rule doing it, ' +
+      'not the field. Tab moves between them and Escape lets go\n' +
       '- The bar follows what you type, because the field raises `changed` ' +
       'and the world answers it. That event is the FIELD\u2019s own, ' +
       'declared in `textInput.actor` — an actor may say something happened ' +
@@ -343,6 +346,35 @@ export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> = {
       '- Every one of these ACTS LIKE the Label: open one and the first row ' +
       'says so. What each adds is one idea — an edge and a click, a panel ' +
       'and a clock, a focus and two handlers',
+  },
+  app: {
+    name: 'Notes',
+    description:
+      'An app rather than a game: two screens, a form with an on-screen ' +
+      'keyboard, a list of what you wrote, and it is all still there after a ' +
+      'reload.',
+    source: notesApp(buildProject(EMPTY_SPEC).source),
+    instructions:
+      '## Notes\n\nWrite something down. Come back tomorrow and it is ' +
+      'still there.\n\n' +
+      '- Every piece of this was built on its own and this is where they ' +
+      'meet: two SCREENS, a FORM, a KEYBOARD, a LIST, ANCHORING and ' +
+      'SAVING (specs/APPS.md)\n' +
+      '- NEW NOTE is `go to screen`, which puts a map over what is showing; ' +
+      'SAVE and CANCEL are `go back`, twice, because the keyboard went on ' +
+      'over the form and comes off with it\n' +
+      '- The keys type. None of them names the field — each one raises what ' +
+      'a real keyboard raises, so the field that has the focus is the one ' +
+      'that fills, and you can use your own keyboard instead\n' +
+      '- The notes are a property of the WORLD, so `save what the world ' +
+      'remembers` is one block and not a format. Reload the preview and ' +
+      'they come back, because `when ⟨…⟩ is created` does the `load`\n' +
+      '- Open `maps/home.map`: the header holds the TOP and the button holds ' +
+      'the BOTTOM, so the list takes whatever room is left on a window that ' +
+      'is not the shape this was drawn at\n' +
+      '- The buttons talk through their map\u2019s own events. Open the ' +
+      'map\u2019s workspace and `save` and `cancel` are declared there; the ' +
+      'world answers them, so moving a button rewires nothing',
   },
   empty: {
     name: 'Empty',

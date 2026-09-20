@@ -210,8 +210,51 @@ is a day's work that should be done once, not twice.
 
 Then the progression, and the parameterising that a second one needs.
 
-**One cheap thing worth doing first, whatever the order:** an APP template
-and a phone-shaped starter (`{kind: 'template', id: 'app'}` — every
-template today is a game genre). It costs a fixture, it makes the question
-concrete, and every item above can then be judged against a real app that
-somebody has tried to build.
+**One cheap thing worth doing first, whatever the order — DONE:** an APP
+template and a phone-shaped starter (`{kind: 'template', id: 'app'}` — every
+other template is a game genre). `fixtures/app`, the Notes scenario: two
+screens, a form, the keyboard, a list, anchoring and saving, in one artifact.
+
+It was priced at "a fixture", and as a piece of work that was right. What it
+was WORTH was not the fixture; it was what assembling the six found, which no
+one of them could have found alone.
+
+## What the first app found
+
+**A world's body could not start a screen.** `go to screen ⟨maps/home⟩` as the
+first row of a `.world` did nothing at all — no throw, no empty map, a blank
+world that looked deliberate. A body's rows are DEFERRED and replayed when the
+world is built (`WorldBuilder.defer`), and the replay ran before the builder
+handed over the actor templates and the maps it had been told about. So any
+deferred call that needed one quietly got nothing: a rule action that loads a
+map by path, or an `add actor` of a defined kind. The handover moved ahead of
+the replay (`WorldBuilder.instantiate`), and `builderDefers.test` pins it.
+
+This is the bug an app was always going to hit first, because a game's world
+body says `load map` — a method on the builder — and an app's says `go to
+screen`, which is a rule ACTION. Nothing before this fixture took that path.
+
+**A screen does not block the screen underneath it.** Two maps stacked means
+two sets of actors, and a click goes to EVERY actor under the pointer
+(`rules/mouse`, `clickTargets`) — so a key on the on-screen keyboard also
+pressed the NEW NOTE button on the home screen behind it, which opened a second
+copy of the form. Laid out around here, by keeping each screen's controls clear
+of the one under it, which is not a fix.
+
+It wants an answer before a second app is written, and the answer is a design
+question rather than a bug: a screen loaded over another is MODAL in every
+interface anybody has used, and nothing in this lab says so. The candidates are
+a click that stops at the topmost actor, or a screen that can say it swallows
+what it covers. The first changes what a click means for every game that has
+overlapping actors; the second is opt-in and says what it does. Neither is
+built.
+
+**`save` and `recall` report rather than act**, which is right, and means they
+cannot be chained as statements — the answer has to go somewhere. Notes keeps
+two booleans of its own, `saved` and `remembered`, which is what the blocks are
+for and reads better than discarding them. Worth knowing before writing the
+lesson: there is no "just save it" row.
+
+**A stock actor's defaults show through until something fills it.** The List
+came up holding the rows it was born with on a first run, because the fill was
+inside `if ⟨recall⟩`. An app fills its list either way.

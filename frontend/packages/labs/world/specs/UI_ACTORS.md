@@ -1201,6 +1201,32 @@ project's own `types ⟨character⟩` handler all fill from it unchanged, and a
 form of three fields needs no wiring at all — whichever one has the focus is
 the one already listening.
 
+### A screen over a screen is not modal, and should be
+
+Two maps stacked are two sets of actors, and a click goes to EVERY actor under
+the pointer (`rules/mouse`, `clickTargets`). So the first app built on this
+kit had a key on the on-screen keyboard also pressing the button on the home
+screen behind it, which opened a second copy of the form it was typing into
+(specs/APPS.md, `fixtures/app`).
+
+Laid out around for now — each screen's controls kept clear of the one under
+it — which is not a fix and does not survive a second app.
+
+The answer is a design question rather than a bug. Every interface anybody has
+used treats a screen loaded over another as MODAL, and nothing here says so.
+Two candidates:
+
+- **A click stops at the topmost actor.** Matches what an interface does and
+  needs no new vocabulary — but it changes what a click means for every GAME
+  with overlapping actors, where hitting several at once may be the point.
+- **A screen says it swallows what it covers.** Opt-in, says what it does, and
+  costs a property on the Screens rule and a test in the Mouse rule's click
+  step.
+
+The second looks right for the same reason `takes the keyboard` did: the lab
+would rather a thing declare its own behaviour than change what a word means
+everywhere.
+
 ### What a phone-shaped kit does not yet answer
 
 The Interface Kit runs at a phone's shape, and nothing in the lab has met a

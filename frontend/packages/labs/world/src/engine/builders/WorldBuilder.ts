@@ -706,15 +706,6 @@ export class WorldBuilder {
   getWorld(): World {
     if (!this.built) {
       this.built = this.instantiate();
-      // What was recorded before it existed — every template, every map —
-      // so a Viewport placed under `define world` finds its map registered
-      // on the first tick (`World.showHeldMap`).
-      for (const [type, builder] of this.types) {
-        this.built.define(type, builder);
-      }
-      for (const [path, map] of this.maps) {
-        this.built.defineMap(path, map);
-      }
     }
     return this.built;
   }
@@ -883,6 +874,23 @@ export class WorldBuilder {
       layers: this.layers.map(layer => ({...layer})),
       ownProperties: this.own,
     });
+    // What was recorded before it existed — every template, every map — so a
+    // Viewport placed under `define world` finds its map registered on the
+    // first tick (`World.showHeldMap`).
+    //
+    // BEFORE THE LOG, which is the whole of why this is here rather than
+    // around the call that builds the world. A deferred call may NEED one of
+    // them: `go to screen ⟨maps/home⟩` in a world's body is a rule action that
+    // loads a map by path, and `add actor ⟨Coin⟩` needs the template. Replayed
+    // against a world that has not been told, each one quietly does nothing —
+    // no throw, no empty map, just a screen that never appears. That is how
+    // the Notes fixture opened on a blank world (specs/APPS.md).
+    for (const [type, builder] of this.types) {
+      world.define(type, builder);
+    }
+    for (const [path, map] of this.maps) {
+      world.defineMap(path, map);
+    }
     for (const call of this.log) {
       apply(world, call);
     }

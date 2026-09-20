@@ -2669,6 +2669,11 @@ export const TILES: readonly Tile[] = [
       {kind: 'actor', id: 'list'},
       // …and the one that takes a paragraph.
       {kind: 'actor', id: 'textArea'},
+      // …and a starting point that is an APP rather than a game genre. Every
+      // other template is a kind of game; this is the one a learner opens to
+      // find two screens, a form, a keyboard and a list already talking to
+      // each other (`fixtures/app`, specs/APPS.md).
+      {kind: 'template', id: 'app'},
     ],
     offers: [
       {kind: 'block', type: 'world_this_actor'},
