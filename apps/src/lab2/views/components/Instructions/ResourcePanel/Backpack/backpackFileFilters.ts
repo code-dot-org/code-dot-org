@@ -51,6 +51,12 @@ const FILE_TYPES: FileTypeConfig[] = [
     extensions: ['gif'],
   },
   {
+    id: 'webp',
+    label: 'WebP',
+    icon: {iconName: 'file-image', iconStyle: 'solid'},
+    extensions: ['webp'],
+  },
+  {
     id: 'wav',
     label: 'WAV',
     icon: {iconName: 'file-music', iconStyle: 'solid'},
@@ -143,40 +149,56 @@ export function findConfigForFile(
   return foundConfig ? foundConfig.config : OTHER_CATEGORY;
 }
 
-/** File types holding at least one of the given files, in menu order, with their counts. */
+/**
+ * File types holding at least one of the given files, in menu order, with their counts.
+ */
 export function getPopulatedFileTypeConfigs(
   fileNames: string[],
   supportedFileTypes: string[]
-) {
-  const countsById = new Map<FileExtension, number>();
-  fileNames.forEach(fileName => {
-    const {id} = getFileTypeConfig(fileName);
-    countsById.set(id, (countsById.get(id) || 0) + 1);
-  });
-  const populatedFileTypes: PopulatedFileTypes = [];
-  const otherFileExtensions: string[] = [];
+): PopulatedFileTypes {
+  const countsByExtension = new Map<string, number>();
+  // Names with no extension, or with one no entry above claims, can only be "Other".
   let otherCount = 0;
-  FILE_TYPES.forEach(fileType => {
-    if (
-      countsById.has(fileType.id) &&
-      supportedFileTypes.includes(fileType.id as FileExtension)
-    ) {
-      populatedFileTypes.push({
-        config: FILE_TYPES.find(ft => ft.id === fileType.id)!,
-        count: countsById.get(fileType.id)!,
-      });
-    } else if (countsById.has(fileType.id)) {
-      // Backpack has file types not supported by the current lab; use the "Other" category.
-      otherFileExtensions.push(fileType.id);
-      otherCount += countsById.get(fileType.id)!;
+  fileNames.forEach(fileName => {
+    const extension = getFileExtension(fileName);
+    if (getFileTypeConfig(fileName).extensions.includes(extension)) {
+      countsByExtension.set(
+        extension,
+        (countsByExtension.get(extension) || 0) + 1
+      );
+    } else {
+      otherCount += 1;
     }
   });
-  if (otherFileExtensions.length > 0) {
+
+  const populatedFileTypes: PopulatedFileTypes = [];
+  const otherExtensions: string[] = [];
+  FILE_TYPES.forEach(fileType => {
+    const supportedExtensions: string[] = [];
+    let supportedCount = 0;
+    fileType.extensions.forEach(extension => {
+      const count = countsByExtension.get(extension);
+      if (!count) {
+        return;
+      }
+      if (supportedFileTypes.includes(extension)) {
+        supportedExtensions.push(extension);
+        supportedCount += count;
+      } else {
+        otherExtensions.push(extension);
+        otherCount += count;
+      }
+    });
+    if (supportedExtensions.length > 0) {
+      populatedFileTypes.push({
+        config: {...fileType, extensions: supportedExtensions},
+        count: supportedCount,
+      });
+    }
+  });
+  if (otherCount > 0) {
     populatedFileTypes.push({
-      config: {
-        ...OTHER_CATEGORY,
-        extensions: otherFileExtensions,
-      },
+      config: {...OTHER_CATEGORY, extensions: otherExtensions},
       count: otherCount,
     });
   }

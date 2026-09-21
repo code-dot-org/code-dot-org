@@ -25,12 +25,30 @@ describe('getPopulatedFileTypeConfigs', () => {
     ]);
   });
 
+  it('lists webp as its own file type', () => {
+    const populated = getPopulatedFileTypeConfigs(
+      ['photo.webp'],
+      ['png', 'webp']
+    );
+    expect(idsAndCounts(populated)).toEqual([['webp', 1]]);
+  });
+
   it('counts jpg and jpeg as one file type', () => {
     const populated = getPopulatedFileTypeConfigs(
       ['a.jpg', 'b.jpeg'],
       ['jpeg', 'jpg']
     );
     expect(idsAndCounts(populated)).toEqual([['jpeg', 2]]);
+  });
+
+  it('keys support off extensions, not file type ids', () => {
+    const populated = getPopulatedFileTypeConfigs(['a.jpg', 'b.jpeg'], ['jpg']);
+    expect(idsAndCounts(populated)).toEqual([
+      ['jpeg', 1],
+      ['other', 1],
+    ]);
+    expect(populated[0].config.extensions).toEqual(['jpg']);
+    expect(populated[1].config.extensions).toEqual(['jpeg']);
   });
 
   it('is case insensitive', () => {
