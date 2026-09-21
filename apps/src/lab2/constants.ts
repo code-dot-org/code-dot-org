@@ -62,17 +62,24 @@ export enum FontSize {
 
 export const INITIAL_VERSION_ID = 'initial-version';
 
-export const IMAGE_MIME_TO_EXTENSIONS: Record<string, readonly string[]> = {
+export const IMAGE_MIME_TO_EXTENSIONS = {
   'image/gif': ['gif'],
   'image/jpeg': ['jpeg', 'jpg'],
   'image/png': ['png'],
   'image/webp': ['webp'],
-};
+} as const satisfies Record<string, readonly string[]>;
 
-export const SUPPORTED_IMAGE_EXTENSIONS = SafeAndSupportedImageTypes.flatMap(
-  mime => IMAGE_MIME_TO_EXTENSIONS[mime] ?? []
-);
+export type ImageExtension =
+  (typeof IMAGE_MIME_TO_EXTENSIONS)[keyof typeof IMAGE_MIME_TO_EXTENSIONS][number];
+
+// Annotated as string[] so callers can keep comparing against arbitrary strings.
+export const SUPPORTED_IMAGE_EXTENSIONS: string[] =
+  SafeAndSupportedImageTypes.flatMap(mime => IMAGE_MIME_TO_EXTENSIONS[mime]);
 
 // Audio formats a project file can be played back as. Kept narrow on purpose;
 // wav is widely supported across browsers.
-export const SUPPORTED_AUDIO_EXTENSIONS = ['wav'];
+const AUDIO_EXTENSIONS = ['wav'] as const;
+
+export type AudioExtension = (typeof AUDIO_EXTENSIONS)[number];
+
+export const SUPPORTED_AUDIO_EXTENSIONS: string[] = [...AUDIO_EXTENSIONS];

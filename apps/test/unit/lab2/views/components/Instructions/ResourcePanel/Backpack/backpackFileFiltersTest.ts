@@ -1,33 +1,33 @@
 import {
-  getFileCategory,
-  getPopulatedCategories,
+  getFileTypeConfig,
+  getPopulatedFileTypes,
   sortBackpackFiles,
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/backpackFileFilters';
 
 const named = (...fileNames: string[]) =>
   fileNames.map(fileName => ({fileName}));
 
-describe('getFileCategory', () => {
+describe('getFileTypeConfig', () => {
   it('maps known extensions to their category', () => {
-    expect(getFileCategory('sprite.PNG').id).toBe('images');
-    expect(getFileCategory('beep.wav').id).toBe('audio');
-    expect(getFileCategory('index.html').id).toBe('html');
-    expect(getFileCategory('style.css').id).toBe('css');
-    expect(getFileCategory('app.js').id).toBe('javascript');
-    expect(getFileCategory('main.py').id).toBe('python');
-    expect(getFileCategory('scores.csv').id).toBe('data');
-    expect(getFileCategory('notes.md').id).toBe('text');
+    expect(getFileTypeConfig('sprite.PNG').id).toBe('images');
+    expect(getFileTypeConfig('beep.wav').id).toBe('audio');
+    expect(getFileTypeConfig('index.html').id).toBe('html');
+    expect(getFileTypeConfig('style.css').id).toBe('css');
+    expect(getFileTypeConfig('app.js').id).toBe('javascript');
+    expect(getFileTypeConfig('main.py').id).toBe('python');
+    expect(getFileTypeConfig('scores.csv').id).toBe('data');
+    expect(getFileTypeConfig('notes.md').id).toBe('text');
   });
 
   it('falls back to other for unknown and extensionless names', () => {
-    expect(getFileCategory('mystery.xyz').id).toBe('other');
-    expect(getFileCategory('README').id).toBe('other');
+    expect(getFileTypeConfig('mystery.xyz').id).toBe('other');
+    expect(getFileTypeConfig('README').id).toBe('other');
   });
 });
 
-describe('getPopulatedCategories', () => {
+describe('getPopulatedFileTypes', () => {
   it('lists only categories with files, in menu order, with counts', () => {
-    const categories = getPopulatedCategories([
+    const categories = getPopulatedFileTypes([
       'app.js',
       'a.png',
       'b.jpg',
@@ -41,7 +41,7 @@ describe('getPopulatedCategories', () => {
   });
 
   it('returns nothing for an empty backpack', () => {
-    expect(getPopulatedCategories([])).toEqual([]);
+    expect(getPopulatedFileTypes([])).toEqual([]);
   });
 });
 
