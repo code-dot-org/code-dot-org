@@ -22,9 +22,4 @@
   &:hover {
     color: var(--text-neutral-primary);
   }
-
-  &:focus-visible {
-    outline: 2px solid var(--borders-brand-teal-primary);
-    outline-offset: 1px;
-  }
 }

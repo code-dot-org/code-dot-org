@@ -370,6 +370,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     anchor: DOMRect;
   } | null>(null);
   const closeBlockHelp = useCallback(() => setBlockHelp(null), []);
+  const openBlockHelp = blockHelp && BLOCK_HELP[blockHelp.blockType];
 
   // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
@@ -1723,9 +1724,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         >
           {WorkspaceAlert}
-          {blockHelp && BLOCK_HELP[blockHelp.blockType] && (
+          {openBlockHelp && blockHelp && (
             <BlockHelpCallout
-              help={BLOCK_HELP[blockHelp.blockType]}
+              help={openBlockHelp}
               anchor={blockHelp.anchor}
               onClose={closeBlockHelp}
             />

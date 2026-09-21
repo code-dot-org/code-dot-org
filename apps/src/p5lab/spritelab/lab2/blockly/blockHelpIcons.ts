@@ -10,12 +10,11 @@ const ICON_GAP_PX = 6;
 const FIRST_ROW_PX = 36;
 const ICON_CLASS = 'spritelab2BlockHelpIcon';
 
-export type OpenBlockHelp = (blockType: string, anchor: DOMRect) => void;
-
 interface BlockHelpIconOptions {
   /** The help title for a block type, or nothing: only those get an icon. */
   helpTitle: (blockType: string) => string | undefined;
-  onOpen: OpenBlockHelp;
+  /** The icon's screen rectangle comes along, for placing the callout. */
+  onOpen: (blockType: string, anchor: DOMRect) => void;
   /** The flyout changed under an open callout (scrolled, re-laid out, closed). */
   onInvalidate: () => void;
 }
@@ -33,10 +32,12 @@ export function installBlockHelpIcons(
   if (!workspace) {
     return () => undefined;
   }
-  const flyouts = [workspace.getFlyout(), workspace.getToolbox()?.getFlyout()]
-    .filter((f): f is BlocklyCore.IFlyout => !!f)
-    .filter((f, i, all) => all.indexOf(f) === i);
-  const disposers = flyouts.map(flyout => decorateFlyout(flyout, options));
+  const flyouts = new Set(
+    [workspace.getFlyout(), workspace.getToolbox()?.getFlyout()].filter(
+      (f): f is BlocklyCore.IFlyout => !!f
+    )
+  );
+  const disposers = [...flyouts].map(flyout => decorateFlyout(flyout, options));
   return () => disposers.forEach(dispose => dispose());
 }
 
@@ -101,22 +102,17 @@ function decorateFlyout(
 
   // Blockly lays the flyout out inside show() and reflow(); icons follow
   // both. Either also moves the blocks an open callout points at.
-  const patched = flyout as BlocklyCore.IFlyout & {
-    show: (def: unknown) => void;
-    hide: () => void;
-    reflow: () => void;
-  };
-  const {show, hide, reflow} = patched;
-  patched.show = function (def: unknown) {
+  const {show, hide, reflow} = flyout;
+  flyout.show = function (def) {
     show.call(this, def);
     onInvalidate();
     decorate();
   };
-  patched.hide = function () {
+  flyout.hide = function () {
     hide.call(this);
     onInvalidate();
   };
-  patched.reflow = function () {
+  flyout.reflow = function () {
     reflow.call(this);
     onInvalidate();
     decorate();
@@ -129,9 +125,9 @@ function decorateFlyout(
     decorate();
   }
   return () => {
-    patched.show = show;
-    patched.hide = hide;
-    patched.reflow = reflow;
+    flyout.show = show;
+    flyout.hide = hide;
+    flyout.reflow = reflow;
     svg.removeEventListener('wheel', onInvalidate);
     flyoutWorkspace
       .getCanvas()

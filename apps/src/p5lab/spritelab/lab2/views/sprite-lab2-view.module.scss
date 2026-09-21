@@ -362,6 +362,10 @@ $tab-segment-height: $tab-item-height - 2px;
 
 // --- Block help callout ---
 
+// The popover's tail size (its $m-tail-length); BlockHelpCallout's TAIL_PX
+// is the same number.
+$block-help-tail: 12px;
+
 .blockHelpAnchor {
   // Above Blockly's own drop-down div.
   position: relative;
@@ -387,10 +391,10 @@ $tab-segment-height: $tab-item-height - 2px;
       position: absolute;
       inset-inline-end: 100%;
       inset-block-start: calc(var(--tail-top) - 1px);
-      border: 13px solid transparent;
+      border: ($block-help-tail + 1px) solid transparent;
       border-inline-start-width: 0;
       border-inline-end-color: var(--borders-neutral-strong);
-      margin-inline-start: -13px;
+      margin-inline-start: -($block-help-tail + 1px);
     }
   }
 
