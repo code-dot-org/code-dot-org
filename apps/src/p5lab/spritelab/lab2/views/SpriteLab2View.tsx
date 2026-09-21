@@ -985,7 +985,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return;
       }
       capturingSceneRef.current = sceneId;
-      engine.captureFirstFrame().then((stage: HTMLCanvasElement | null) => {
+      engine.captureFirstFrame((stage: HTMLCanvasElement | null) => {
         if (!stage || capturingSceneRef.current !== sceneId) {
           return;
         }

@@ -122,6 +122,9 @@ $tab-segment-height: $tab-item-height - 2px;
   border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
   background: var(--background-neutral-primary);
+  // The group is labels and a menu, not text to copy: a drag that starts
+  // on the picker or crosses into the tabs selects nothing.
+  user-select: none;
 
   .tab {
     height: $tab-segment-height;
@@ -308,6 +311,8 @@ $tab-segment-height: $tab-item-height - 2px;
 // of its own, one divider on its right. The design-system trigger is an
 // MUI text button; its own hover/focus styling stays.
 .sceneDropdown {
+  user-select: none;
+
   // Higher specificity than the dropdown's own black/gray container rules.
   .tabGroup & > button.sceneTrigger,
   > button.sceneTrigger {

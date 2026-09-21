@@ -11,6 +11,10 @@ import {RuntimeAnimationList, Scene} from './types';
 /** Thumbnails are square, like the stage. */
 export const THUMBNAIL_PX = 160;
 
+/** Part of every fingerprint. Bump it when the way a picture is taken
+    changes, so stored pictures are retaken once. */
+const CAPTURE_VERSION = 2;
+
 /** How long the scene must go unchanged before a captured frame is kept. */
 export const THUMBNAIL_QUIET_MS = 3000;
 
@@ -29,7 +33,7 @@ export function sceneFingerprint(
     .filter(props => namesImage(body, props.name))
     .map(props => `${props.name}=${props.sourceUrl ?? ''}`)
     .sort();
-  return hashString(body + '\n' + images.join('\n'));
+  return hashString(`${CAPTURE_VERSION}\n${body}\n${images.join('\n')}`);
 }
 
 // An image name appears in serialized scene JSON as a plain string (a world
