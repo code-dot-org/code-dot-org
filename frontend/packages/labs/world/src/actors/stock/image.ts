@@ -115,7 +115,8 @@ export const imageActor = actorFile('Image', [
   // rectangle and never showed its picture at all. It is a picture with a box
   // round it, not a Label with a picture in it.
   //
-  // THE BOX IS STILL SHARED, though: `Has a Box` is a trait nine kinds elect,
+  // THE BOX IS STILL SHARED, though: `Has a Box` is a trait every
+  // interface kind elects,
   // and an Image not being a Label is no reason for it to invent a second
   // `width` (specs/BOXES_PLAN.md). Not acting like a Label only means it has
   // to say this itself.

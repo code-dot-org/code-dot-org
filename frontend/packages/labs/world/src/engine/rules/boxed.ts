@@ -12,7 +12,7 @@
 // arriving at from both directions: `text` is the Label's because a Label and
 // a Button and a Score all mean the same by it, and `fraction` is the Progress
 // Bar's because nobody else means anything by it. A box is the first kind:
-// nine kinds mean exactly the same thing, and the map editor wants to ask
+// every interface kind means exactly the same thing, and the map editor asks
 // "does this have a box" without knowing any of their names.
 //
 // A FOUNDATION RULE, in play in every world, for the same reason the Viewport
@@ -56,9 +56,14 @@ export const HasABoxTrait = rule.addTrait({
 });
 
 /** How wide the project asked for this to be, in pixels. */
-export const WidthProperty = HasABoxTrait.addProperty(BOXED.width, 'number', 0, {
-  name: 'width',
-});
+export const WidthProperty = HasABoxTrait.addProperty(
+  BOXED.width,
+  'number',
+  0,
+  {
+    name: 'width',
+  },
+);
 
 /** …and how tall. */
 export const HeightProperty = HasABoxTrait.addProperty(

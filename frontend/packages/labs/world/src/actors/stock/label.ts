@@ -50,7 +50,8 @@ const HEIGHT = 24;
  * `⟨width⟩ of this actor`, and its sibling — what the box is drawn from.
  *
  * THE BOX IS NOT THE LABEL'S ANY MORE. It is the `Has a Box` trait's, which
- * nine kinds elect and which the map editor can ask about without knowing what
+ * every interface kind elects and which the map editor can ask about without
+ * knowing what
  * it is looking at (`engine/rules/boxed`, specs/BOXES_PLAN.md). This still
  * lives here and is still what everything reads through, because everything
  * that ACTS LIKE a Label inherits the election along with the properties

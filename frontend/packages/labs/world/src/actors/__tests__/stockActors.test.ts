@@ -109,7 +109,7 @@ describe('every stock actor', () => {
       // the picture's shape. Nobody else's idea — a Label has no picture and a
       // Coin has no box it must sit in.
       // How the picture meets its box. The BOX is nobody's own any more — it
-      // is the `Has a Box` trait's, which nine kinds elect
+      // is the `Has a Box` trait's, which every interface kind elects
       // (specs/BOXES_PLAN.md).
       image: ['stretches'],
       // A text area's caret; its lines are newlines in the words themselves.
@@ -123,12 +123,7 @@ describe('every stock actor', () => {
       // are laid into. The first four were the Writing rule — four properties
       // and no behavior — and the base of the interface set holds them now, so
       // everything that acts like a Label has them (specs/UI_ACTORS.md).
-      label: [
-        'text',
-        'text_size',
-        'text_color',
-        'text_anchor',
-      ],
+      label: ['text', 'text_size', 'text_color', 'text_anchor'],
       // The typewriter. `the whole line` is what is being said, where `text`
       // is however much of it has arrived — Writing's, because every actor
       // with words means the same thing by it. A rule for these two would be
@@ -307,7 +302,15 @@ describe('Progress Bar', () => {
     // every file's palette, so a world may say `set fraction of ⟨any ⟨Progress
     // Bar⟩⟩` (blockly/ownProperties). It could not when this was written,
     // which is why it was a rule.
-    expect(progressBarActor).not.toContain('world_use_trait');
+    // It elects `Has a Box` and nothing else. A box is shared by every interface kind,
+    // which is exactly the test this lab applies — `fraction` is the bar's
+    // because nobody else means anything by it, and a width is everybody's
+    // (specs/BOXES_PLAN.md). What it must NOT have is a rule holding its
+    // three numbers, which is what this is really about.
+    expect(
+      types(progressBarActor).filter(one => one === 'world_use_trait'),
+    ).toHaveLength(1);
+    expect(progressBarActor).toContain('Boxed#HasABoxTrait');
     expect(
       parseActorOwnMeta('actors/progressBar', progressBarActor)?.properties.map(
         property => property.id,
@@ -440,9 +443,9 @@ describe('every trait a stock actor elects', () => {
     }
 
     for (const actor of STOCK_ACTORS) {
-      const elected = [
-        ...actor.contents.matchAll(/"TRAIT": "([^"]+)"/g),
-      ].map(match => match[1]);
+      const elected = [...actor.contents.matchAll(/"TRAIT": "([^"]+)"/g)].map(
+        match => match[1],
+      );
       for (const value of elected) {
         expect(known.has(value), `${actor.id} elects ${value}`).toBe(true);
       }

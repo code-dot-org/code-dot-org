@@ -29,19 +29,34 @@
 // along y, and rotation is already every actor's, so there is no direction to
 // choose here.
 
+import {setBox} from './label';
 import {
   actorFile,
   defineProperty,
   fill,
   me,
   num,
-  rectangle,
   showAs,
+  useTrait,
 } from './workspace';
 
-/** The canvas, and so also the actor's size for clicks and collisions. */
+/** How big a bar is unless a project says otherwise. */
 const WIDTH = 64;
 const HEIGHT = 8;
+
+/**
+ * The box, read from the trait every interface actor is measured by.
+ *
+ * IT WAS THE ONE THAT HAD NONE. Every other boxed control took its width and
+ * height from `Has a Box`; a bar drew at two constants, so it was the single
+ * thing in the kit a project could not resize and the map editor could not
+ * put handles on (specs/BOXES_PLAN.md).
+ */
+const box = (name: 'Width' | 'Height') => ({
+  block: {type: `world_get_Boxed_${name}Property`, inputs: {ACTOR: me()}},
+});
+const width = () => box('Width');
+const height = () => box('Height');
 
 /**
  * What a bar is made of: how far along it is, and the two colors it is drawn
@@ -86,13 +101,16 @@ const progressOf = (own: string, exportName: string) => ({
  * picture with everything else.
  */
 export const progressBarDrawing = (own = 'ActorsProgressBar') => ({
-  width: WIDTH,
-  height: HEIGHT,
+  width: width(),
+  height: height(),
   commands: [
     // The track first and whole, so what is left of it IS the empty part —
     // there is no second rectangle for "the rest", and none to keep in step.
     fill(progressOf(own, 'TrackColorProperty')),
-    rectangle(0, 0, WIDTH, HEIGHT),
+    {
+      type: 'world_draw_rectangle',
+      inputs: {X: num(0), Y: num(0), WIDTH: width(), HEIGHT: height()},
+    },
     fill(progressOf(own, 'BarColorProperty')),
     {
       type: 'world_draw_rectangle',
@@ -106,10 +124,10 @@ export const progressBarDrawing = (own = 'ActorsProgressBar') => ({
           block: {
             type: 'math_arithmetic',
             fields: {OP: 'MULTIPLY'},
-            inputs: {A: num(WIDTH), B: progressOf(own, 'FractionProperty')},
+            inputs: {A: width(), B: progressOf(own, 'FractionProperty')},
           },
         },
-        HEIGHT: num(HEIGHT),
+        HEIGHT: height(),
       },
     },
   ],
@@ -117,6 +135,15 @@ export const progressBarDrawing = (own = 'ActorsProgressBar') => ({
 
 export const progressBarActor = actorFile(
   'Progress Bar',
-  [...PROGRESS_BAR_PROPERTIES, showAs('bar')],
+  [
+    ...PROGRESS_BAR_PROPERTIES,
+    // The box, elected here so everything that ACTS LIKE a bar — the Health
+    // Bar, the jetpack's fuel — gets it too (`ActorBuilder.actsLike` copies
+    // the traits).
+    useTrait('Boxed#HasABoxTrait'),
+    setBox('Width', WIDTH),
+    setBox('Height', HEIGHT),
+    showAs('bar'),
+  ],
   {drawing: progressBarDrawing()},
 );
