@@ -75,6 +75,21 @@ Nothing is lost: `how many actors in ⟨…⟩` and `any actors in ⟨…⟩` al
 exist, so the count and "was there anything saved" are each one block away and
 neither had to be built into this.
 
+**WHERE THEY GO, AND WHY NO BLOCK WAS NEEDED FOR IT.** They land in the space
+the caller is in — `addActor` takes the space of the actor in HAND, the same
+rule a bullet a ball spawns already follows — and on the default layer. From
+there the project moves them with what it already has, because a STATEMENT
+broadcasts over an actor value: `set position of ⟨bring back …⟩` means every
+one of them, and so does `set parent of ⟨…⟩ to ⟨…⟩`. A parent carries its
+children's layer AND space, so rows brought back into a Scroll View get there
+by being parented to something already in it.
+
+**A RECORD CANNOT BE PARENTED, and that is right rather than a gap.** Parenting
+is the positional trait's, and `is data` is the absence of that trait: a thing
+with nowhere to be has nowhere to be RELATIVE to either. `setParent` answers
+false rather than pretending. The kinds that get parented are the DRAWN ones —
+rows, cards, tokens — which is the case parenting is for.
+
 **THEY ARE IN THE WORLD when they come back.** An actor outside one has no age
 and is found by nothing, so a set of unplaced actors would be a value that
 leaks the moment a project dropped it. They are added and then handed over,

@@ -8,6 +8,9 @@ import {describe, expect, it} from 'vitest';
 
 import {ActorBuilder} from '../builders/ActorBuilder';
 import {WorldBuilder} from '../builders/WorldBuilder';
+import {each} from '../core/actorValue';
+import {Vector} from '../core/Vector';
+import {PositionProperty} from '../rules/spatial';
 
 const store = () => {
   const held = new Map<string, string>();
@@ -213,6 +216,75 @@ describe('what comes back', () => {
     again.world.define('actors/tag', kind);
     const back = again.world.recallActors('notes');
     expect(back.map(one => one.type)).toEqual(['actors/note', 'actors/tag']);
+  });
+});
+
+describe('putting back what came back', () => {
+  it('takes a whole set at once, because a statement broadcasts', () => {
+    // No new block was needed for this. `set position of ⟨any Coin⟩` already
+    // means every coin (`core/actorValue`), so it equally means every actor
+    // that came back — which is why `bring back` answers the SET.
+    const first = open();
+    first.write('milk');
+    first.write('bread');
+    first.world.rememberActors(first.held(), 'notes');
+
+    const again = open(first.storage);
+    const back = again.world.recallActors('notes');
+    each(back, one => one.set(PositionProperty, new Vector(5, 7)));
+    expect(back.map(one => one.get(PositionProperty))).toEqual([
+      new Vector(5, 7),
+      new Vector(5, 7),
+    ]);
+  });
+
+  it('is reparented by the ordinary block — for a kind that is DRAWN', () => {
+    // Which is the answer to "where do they go": wherever the project puts
+    // them, with the blocks it already has. A parent carries its children's
+    // LAYER and SPACE (`Actor.setParent`), so rows brought back into a Scroll
+    // View go into that view's space by being parented to something in it.
+    const row = new ActorBuilder({id: 'row', name: 'Row'});
+    const label = row.defineProperty('label', 'string', '');
+    const storage = store();
+    const first = new WorldBuilder({id: 'w', name: 'W'})
+      .define('actors/row', row)
+      .getWorld();
+    first.useStorage(storage);
+    const made = first.addActor(row, undefined, 'actors/row');
+    made.set(label, 'milk');
+    first.rememberActors([made], 'rows');
+
+    const again = new WorldBuilder({id: 'w', name: 'W'})
+      .define('actors/row', row)
+      .define('actors/panel', new ActorBuilder({id: 'panel', name: 'Panel'}))
+      .getWorld();
+    again.useStorage(storage);
+    const holder = again.addActor(
+      new ActorBuilder({id: 'panel', name: 'Panel'}),
+      'Holder',
+      'actors/panel',
+    );
+    const back = again.recallActors('rows');
+    each(back, one => one.setParent(holder));
+
+    expect(back).toHaveLength(1);
+    expect(back[0].parent()).toBe(holder);
+    expect(back[0].layer).toBe(holder.layer);
+  });
+
+  it('cannot parent a RECORD, which is right: it has no place', () => {
+    // Parenting is the positional trait's, and `is data` is the absence of
+    // it. A thing with nowhere to be has nowhere to be RELATIVE to either,
+    // and the engine says so rather than pretending (specs/RECORDS_PLAN.md).
+    const one = open();
+    const note = one.write('milk');
+    const holder = one.world.addActor(
+      new ActorBuilder({id: 'panel', name: 'Panel'}),
+      'Holder',
+      'actors/panel',
+    );
+    expect(note.setParent(holder)).toBe(false);
+    expect(note.parent()).toBeUndefined();
   });
 });
 
