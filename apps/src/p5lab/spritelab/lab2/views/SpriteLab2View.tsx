@@ -46,6 +46,7 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
+import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
@@ -601,6 +602,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // TODO: does this need to live in redux?
   useEffect(() => {
     dispatch(setScenes(sceneMetadata));
+    // Go-to-scene blocks draw the pictures from that store.
+    refreshSceneDropdowns();
   }, [sceneMetadata, dispatch]);
 
   // Cleanup on level switch.
@@ -1600,13 +1603,31 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     workspaceVersion,
   ]);
 
+  // The scene tab last edited in, so choosing a scene from elsewhere (the
+  // gallery, or its picker while the gallery is open) lands back where the
+  // student was working. World only if the chosen scene has one.
+  const lastSceneTabRef = useRef<Tab>('Code');
+  useEffect(() => {
+    if (activeTab === 'Code' || activeTab === 'World') {
+      lastSceneTabRef.current = activeTab;
+    }
+  }, [activeTab]);
   const handleSelectScene = useCallback(
     (sceneId: string) => {
-      if (scenes.some(s => s.id === sceneId)) {
-        setActiveSceneId(sceneId);
+      const scene = scenes.find(s => s.id === sceneId);
+      if (!scene) {
+        return;
+      }
+      setActiveSceneId(sceneId);
+      if (activeTab !== 'Code' && activeTab !== 'World') {
+        const target =
+          lastSceneTabRef.current === 'World' && scene.type !== 'story'
+            ? 'World'
+            : 'Code';
+        dispatch(setActiveTab(target));
       }
     },
-    [scenes]
+    [scenes, activeTab, dispatch]
   );
 
   const handleCreateScene = useCallback(
@@ -1680,14 +1701,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const handleManageScenes = useCallback(() => {
     dispatch(setActiveTab('Scenes'));
   }, [dispatch]);
-
-  const handleOpenScene = useCallback(
-    (sceneId: string) => {
-      handleSelectScene(sceneId);
-      dispatch(setActiveTab('Code'));
-    },
-    [handleSelectScene, dispatch]
-  );
 
   const handleTabChange = useCallback(
     (tab: Tab) => {
@@ -1925,7 +1938,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   scenes={sceneMetadata}
                   activeSceneId={activeSceneId}
                   editable={scenesEditable}
-                  onOpenScene={handleOpenScene}
+                  onOpenScene={handleSelectScene}
                   onCreateScene={handleCreateScene}
                   onRenameScene={handleRenameScene}
                   onDeleteScene={handleDeleteScene}
