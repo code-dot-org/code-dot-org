@@ -49,7 +49,8 @@ const Guide: React.FunctionComponent<GuideProps> = ({
       <div
         id={id}
         ref={panelRef}
-        // Collapsed shrink-wraps its controls; a fixed width yields to that.
+        // A collapsed panel is only as wide as its buttons, so the fixed
+        // width applies only while it is open.
         style={typeof width === 'number' && !collapsed ? {width} : undefined}
         className={classNames(
           styles.guide,

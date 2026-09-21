@@ -17,7 +17,7 @@ export const PLAY_GUIDE_WIDTH_PX = 400;
 /**
  * The panel's size once its animations end: a hidden copy laid out with the
  * transitions off and the body at its natural height. The live panel's size
- * mid-animation is a place it only passes through.
+ * mid-animation is not a size anything should be laid out against.
  */
 function settledSize(
   panel: HTMLElement,
