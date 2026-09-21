@@ -30,23 +30,39 @@ interface SceneSelectorProps {
   chipOpensGallery?: boolean;
 }
 
-/** A scene's picture at thumbnail size, or a blank tile until it has one. */
-export const SceneThumb: React.FunctionComponent<{
+/**
+ * A scene's picture, or a blank tile until it has one. A picture that fails
+ * to load (an asset since deleted) shows the blank tile too; `className`
+ * sizes it.
+ */
+export const ScenePicture: React.FunctionComponent<{
+  src: string | undefined;
+  className: string;
+}> = ({src, className}) => {
+  const [failed, setFailed] = useState<string | null>(null);
+  return (
+    <span className={className}>
+      {src && failed !== src ? (
+        <img src={src} alt="" onError={() => setFailed(src)} />
+      ) : (
+        <FontAwesomeV6Icon iconName="image" iconStyle="regular" />
+      )}
+    </span>
+  );
+};
+
+/** A scene's picture at menu or chip size. */
+const SceneThumb: React.FunctionComponent<{
   scene: SceneMetadata | undefined;
   small?: boolean;
 }> = ({scene, small}) => (
-  <span
+  <ScenePicture
+    src={scene?.thumbnail}
     className={classNames(
       moduleStyles.sceneThumb,
       small && moduleStyles.sceneThumbSmall
     )}
-  >
-    {scene?.thumbnail ? (
-      <img src={scene.thumbnail} alt="" />
-    ) : (
-      <FontAwesomeV6Icon iconName="image" iconStyle="regular" />
-    )}
-  </span>
+  />
 );
 
 interface SceneMenuProps {

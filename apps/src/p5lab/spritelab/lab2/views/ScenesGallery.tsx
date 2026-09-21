@@ -1,5 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import Tags from '@code-dot-org/component-library/tags';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -7,6 +9,7 @@ import {SceneMetadata} from '../redux/spriteLab2Redux';
 import {SceneType} from '../types';
 
 import NewSceneDialog, {SCENE_NAME_MAX_LENGTH} from './NewSceneDialog';
+import {ScenePicture} from './SceneSelector';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -72,97 +75,136 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
         aria-label={`Open ${scene.name}`}
         onClick={() => onOpen(scene.id)}
       >
-        {scene.thumbnail ? (
-          <img src={scene.thumbnail} alt="" />
-        ) : (
-          <FontAwesomeV6Icon iconName="image" iconStyle="regular" />
-        )}
-        {startsHere && (
-          <span className={moduleStyles.sceneStartBadge}>
-            <FontAwesomeV6Icon iconName="flag" iconStyle="solid" />
-            Starts here
-          </span>
-        )}
-      </button>
-      {renaming ? (
-        // A bare input: the design system's TextField carries a label and
-        // helper row, and this edits the caption in place under the tile.
-        <input
-          ref={inputRef}
-          className={moduleStyles.sceneNameInput}
-          aria-label="Scene name"
-          value={draft}
-          maxLength={SCENE_NAME_MAX_LENGTH}
-          onChange={e => setDraft(e.target.value)}
-          onBlur={commitRename}
-          onKeyDown={e => {
-            if (e.key === 'Enter') {
-              commitRename();
-            } else if (e.key === 'Escape') {
-              setRenaming(false);
-            }
-          }}
+        <ScenePicture
+          src={scene.thumbnail}
+          className={moduleStyles.sceneTilePicture}
         />
-      ) : (
-        <button
-          type="button"
-          className={moduleStyles.sceneNameButton}
-          title={editable ? 'Rename' : undefined}
-          aria-label={editable ? `Rename ${scene.name}` : undefined}
-          disabled={!editable}
-          onClick={startRename}
-        >
-          {scene.name}
-        </button>
-      )}
-      {editable && (
-        <div className={moduleStyles.sceneCardActions}>
-          {confirming ? (
-            <>
-              <span>Delete this scene?</span>
-              <MuiButton
-                variant="contained"
-                color="error"
-                size="extraSmall"
-                onClick={() => onDelete(scene.id)}
+      </button>
+      {/* The image dialog's rename: a pencil beside the name swaps in a
+          field with save and cancel. */}
+      <div className={moduleStyles.sceneNameRow}>
+        {renaming ? (
+          <>
+            <TextField
+              ref={inputRef}
+              name="sceneName"
+              aria-label="Scene name"
+              className={moduleStyles.sceneNameField}
+              size="s"
+              value={draft}
+              maxLength={SCENE_NAME_MAX_LENGTH}
+              onChange={e => setDraft(e.target.value)}
+              onKeyDown={e => {
+                if (e.key === 'Enter') {
+                  commitRename();
+                } else if (e.key === 'Escape') {
+                  setRenaming(false);
+                }
+              }}
+            />
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
+              aria-label="Save name"
+              disabled={!draft.trim()}
+              onClick={commitRename}
+            >
+              <FontAwesomeV6Icon iconName="check" />
+            </MuiIconButton>
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
+              aria-label="Cancel rename"
+              onClick={() => setRenaming(false)}
+            >
+              <FontAwesomeV6Icon iconName="xmark" />
+            </MuiIconButton>
+          </>
+        ) : (
+          <>
+            <span className={moduleStyles.sceneName}>{scene.name}</span>
+            {editable && (
+              <MuiIconButton
+                variant="text"
+                color="tertiary"
+                size="small"
+                aria-label={`Rename ${scene.name}`}
+                onClick={startRename}
               >
-                Delete
-              </MuiButton>
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="extraSmall"
-                onClick={() => setConfirming(false)}
-              >
-                Keep
-              </MuiButton>
-            </>
-          ) : (
-            <>
-              {!startsHere && (
+                <FontAwesomeV6Icon iconName="pencil" />
+              </MuiIconButton>
+            )}
+          </>
+        )}
+      </div>
+      <div className={moduleStyles.sceneCardActions}>
+        {confirming ? (
+          <>
+            <span>Delete this scene?</span>
+            <MuiButton
+              variant="contained"
+              color="error"
+              size="extraSmall"
+              startIcon={<FontAwesomeV6Icon iconName="trash-can" />}
+              onClick={() => onDelete(scene.id)}
+            >
+              Delete
+            </MuiButton>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              onClick={() => setConfirming(false)}
+            >
+              Keep
+            </MuiButton>
+          </>
+        ) : (
+          <>
+            {startsHere ? (
+              <Tags
+                size="s"
+                tagsList={[
+                  {
+                    label: 'Starts here',
+                    icon: {
+                      iconName: 'flag',
+                      iconStyle: 'solid',
+                      placement: 'left',
+                    },
+                    tooltipContent: null,
+                  },
+                ]}
+              />
+            ) : (
+              editable && (
                 <MuiButton
-                  variant="text"
+                  variant="outlined"
                   color="secondary"
                   size="extraSmall"
+                  startIcon={<FontAwesomeV6Icon iconName="flag" />}
                   onClick={() => onMakeStart(scene.id)}
                 >
                   Start here
                 </MuiButton>
-              )}
-              {deletable && (
-                <MuiButton
-                  variant="text"
-                  color="secondary"
-                  size="extraSmall"
-                  onClick={() => setConfirming(true)}
-                >
-                  Delete
-                </MuiButton>
-              )}
-            </>
-          )}
-        </div>
-      )}
+              )
+            )}
+            {editable && deletable && (
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="extraSmall"
+                startIcon={<FontAwesomeV6Icon iconName="trash-can" />}
+                onClick={() => setConfirming(true)}
+              >
+                Delete
+              </MuiButton>
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 };

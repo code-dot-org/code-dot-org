@@ -474,10 +474,17 @@ $tab-segment-height: $tab-item-height - 2px;
 .sceneTile {
   @include tile.image-tile(128px);
 
-  position: relative;
   border-radius: 4px;
   color: var(--text-neutral-secondary);
   font-size: 28px;
+}
+
+.sceneTilePicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 
   img {
     width: 100%;
@@ -491,64 +498,35 @@ $tab-segment-height: $tab-item-height - 2px;
   outline-offset: 2px;
 }
 
-// Where Play begins. Sits over the tile's bottom edge.
-.sceneStartBadge {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+// The name with its pencil, or the field with save and cancel; one height
+// either way so the card does not jump.
+.sceneNameRow {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  padding: 2px 0;
-  background: var(--background-brand-teal-primary);
-  color: var(--text-neutral-white-fixed);
-  font-size: 11px;
-  font-weight: 600;
+  gap: 2px;
+  width: 100%;
+  min-height: 32px;
 }
 
-// The name doubles as the rename control; a disabled one is a plain label.
-.sceneNameButton {
-  max-width: 100%;
-  margin: 0;
-  padding: 2px 6px;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  background: none;
-  box-shadow: none;
+.sceneName {
+  max-width: 110px;
+  padding: 0 4px;
   color: var(--text-neutral-primary);
   font-size: 13px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
-  &:not(:disabled) {
-    cursor: text;
-
-    &:hover {
-      border-color: var(--borders-neutral-primary);
-    }
-  }
-
-  &:disabled {
-    color: var(--text-neutral-primary);
-    opacity: 1;
-  }
 }
 
-.sceneNameInput {
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 2px 6px;
-  border: 1px solid var(--borders-brand-teal-primary);
-  border-radius: 3px;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  font-size: 13px;
-  text-align: center;
+.sceneNameField {
+  min-width: 0;
+  flex: 1 1 auto;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 
 .sceneCardActions {

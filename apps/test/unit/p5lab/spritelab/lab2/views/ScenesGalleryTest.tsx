@@ -44,7 +44,7 @@ describe('ScenesGallery', () => {
     expect(onOpenScene).toHaveBeenCalledWith('b');
   });
 
-  it('renames inline on Enter and drops an unchanged or blank name', () => {
+  it('renames from the pencil, saving on Enter or the check', () => {
     const {onRenameScene} = renderGallery();
     fireEvent.click(screen.getByRole('button', {name: 'Rename Cave'}));
     const input = screen.getByRole('textbox', {name: 'Scene name'});
@@ -54,12 +54,28 @@ describe('ScenesGallery', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Rename Cave'}));
     fireEvent.change(screen.getByRole('textbox', {name: 'Scene name'}), {
+      target: {value: 'Cavern'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Save name'}));
+    expect(onRenameScene).toHaveBeenCalledWith('b', 'Cavern');
+  });
+
+  it('drops a blank name and cancels on the cross or Escape', () => {
+    const {onRenameScene} = renderGallery();
+    fireEvent.click(screen.getByRole('button', {name: 'Rename Cave'}));
+    fireEvent.change(screen.getByRole('textbox', {name: 'Scene name'}), {
       target: {value: '   '},
     });
+    expect(screen.getByRole('button', {name: 'Save name'})).toBeDisabled();
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel rename'}));
+    expect(screen.queryByRole('textbox', {name: 'Scene name'})).toBeNull();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Rename Cave'}));
     fireEvent.keyDown(screen.getByRole('textbox', {name: 'Scene name'}), {
-      key: 'Enter',
+      key: 'Escape',
     });
-    expect(onRenameScene).toHaveBeenCalledTimes(1);
+    expect(screen.queryByRole('textbox', {name: 'Scene name'})).toBeNull();
+    expect(onRenameScene).not.toHaveBeenCalled();
   });
 
   it('deletes only after confirming', () => {
@@ -92,6 +108,7 @@ describe('ScenesGallery', () => {
     expect(screen.queryByRole('button', {name: 'Delete'})).toBeNull();
     expect(screen.queryByRole('button', {name: 'Start here'})).toBeNull();
     expect(screen.queryByText('New scene')).toBeNull();
-    expect(screen.getByRole('button', {name: 'Cave'})).toBeDisabled();
+    expect(screen.queryByRole('button', {name: 'Rename Cave'})).toBeNull();
+    expect(screen.getByText('Cave')).toBeTruthy();
   });
 });
