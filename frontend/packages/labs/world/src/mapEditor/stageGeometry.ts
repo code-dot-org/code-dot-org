@@ -114,14 +114,45 @@ export function zoomToward(
  * center (the engine draws it centered, the hit test measures from it), so
  * a snapped actor sits in its cell rather than straddling four.
  */
-export function snapToTile(pos: Vec, tile: Tile, free: boolean): Vec {
+export function snapToTile(
+  pos: Vec,
+  tile: Tile,
+  free: boolean,
+  box?: {width: number; height: number},
+): Vec {
   if (free) {
     return {x: Math.round(pos.x), y: Math.round(pos.y)};
+  }
+  // A BOXED ACTOR SNAPS BY ITS EDGES, not by its middle. A Ground block is a
+  // tile and sits in a cell, so the cell's centre is exactly where it wants to
+  // be. A Button is 96 by 32 and a Panel is 300 wide, and a middle on the grid
+  // puts neither edge on it — a 48-wide thing centred on a 32 grid has its
+  // sides at 8 and 56, which is the awkwardness the grid exists to prevent
+  // (specs/BOXES_PLAN.md).
+  //
+  // Nearest line rather than the one before it, because the thing being
+  // dragged is already the size it is: a box whose left edge is a pixel past a
+  // line should settle back onto it, not jump a whole tile.
+  if (box) {
+    const left = Math.round((pos.x - box.width / 2) / tile.width) * tile.width;
+    const top =
+      Math.round((pos.y - box.height / 2) / tile.height) * tile.height;
+    return {x: left + box.width / 2, y: top + box.height / 2};
   }
   return {
     x: Math.floor(pos.x / tile.width) * tile.width + tile.width / 2,
     y: Math.floor(pos.y / tile.height) * tile.height + tile.height / 2,
   };
+}
+
+/** One point put on the nearest grid crossing — what a resize handle lands on. */
+export function snapPoint(pos: Vec, tile: Tile, free: boolean): Vec {
+  return free
+    ? {x: Math.round(pos.x), y: Math.round(pos.y)}
+    : {
+        x: Math.round(pos.x / tile.width) * tile.width,
+        y: Math.round(pos.y / tile.height) * tile.height,
+      };
 }
 
 /**
@@ -138,6 +169,7 @@ export function steppedBy(
   dx: number,
   dy: number,
   free: boolean,
+  box?: {width: number; height: number},
 ): Vec {
   return free
     ? snapToTile({x: pos.x + dx, y: pos.y + dy}, tile, true)
@@ -145,6 +177,7 @@ export function steppedBy(
         {x: pos.x + dx * tile.width, y: pos.y + dy * tile.height},
         tile,
         false,
+        box,
       );
 }
 

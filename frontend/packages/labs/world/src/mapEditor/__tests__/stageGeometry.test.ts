@@ -23,6 +23,7 @@ import {
   nextSelection,
   panIntoView,
   screenToWorld,
+  snapPoint,
   snapToTile,
   steppedBy,
   toLocalFrame,
@@ -106,6 +107,54 @@ describe('snapToTile', () => {
   it('is a whole pixel when freed', () => {
     expect(snapToTile({x: 33.4, y: 63.6}, TILE, true)).toEqual({x: 33, y: 64});
   });
+
+  it('lands a BOX on the lines, not in a cell', () => {
+    // A 96 by 32 Button on a 32 grid: three cells wide, one tall, with its
+    // left edge on a line. Centred in a cell it would straddle four
+    // (specs/BOXES_PLAN.md).
+    const button = {width: 96, height: 32};
+    expect(snapToTile({x: 50, y: 20}, TILE, false, button)).toEqual({
+      x: 48,
+      y: 16,
+    });
+  });
+
+  it('keeps an odd-sized box on the lines by its EDGE', () => {
+    // 48 wide on a 32 grid does not fit the grid, and is the case that makes
+    // centring awkward: edges at 8 and 56 either way. Edge-snapped it starts
+    // on a line and ends where it ends.
+    const half = {width: 48, height: 48};
+    const at = snapToTile({x: 40, y: 40}, TILE, false, half);
+    expect(at).toEqual({x: 56, y: 56});
+    expect(at.x - half.width / 2).toBe(32); // the left edge, on a line
+  });
+
+  it('goes to the NEAREST line, so a box one pixel off settles back', () => {
+    const box = {width: 64, height: 64};
+    expect(snapToTile({x: 65, y: 31}, TILE, false, box)).toEqual({
+      x: 64,
+      y: 32,
+    });
+  });
+
+  it('leaves a box alone when freed, like anything else', () => {
+    expect(
+      snapToTile({x: 33.4, y: 63.6}, TILE, true, {
+        width: 96,
+        height: 32,
+      }),
+    ).toEqual({x: 33, y: 64});
+  });
+});
+
+describe('snapPoint', () => {
+  it('is the nearest crossing — where a resize handle lands', () => {
+    expect(snapPoint({x: 33, y: 63}, TILE, false)).toEqual({x: 32, y: 64});
+  });
+
+  it('is a whole pixel when freed', () => {
+    expect(snapPoint({x: 33.4, y: 63.6}, TILE, true)).toEqual({x: 33, y: 64});
+  });
 });
 
 describe('steppedBy', () => {
@@ -126,6 +175,18 @@ describe('steppedBy', () => {
       x: 80,
       y: 48,
     });
+  });
+
+  it('takes a box the same way a drag does', () => {
+    // The keyboard's nudge and the pointer's drag are one gesture said twice,
+    // so a Button steps a tile and keeps its left edge on a line either way
+    // (specs/BOXES_PLAN.md).
+    expect(
+      steppedBy({x: 56, y: 16}, TILE, 1, 0, false, {
+        width: 96,
+        height: 32,
+      }),
+    ).toEqual({x: 80, y: 16});
   });
 
   it('is one pixel when freed, from wherever it was', () => {

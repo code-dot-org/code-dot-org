@@ -98,6 +98,7 @@ import {
   nextSelection,
   panIntoView,
   screenToWorld as toWorld,
+  snapPoint,
   snapToTile,
   steppedBy,
   zoomToward,
@@ -420,6 +421,8 @@ export const MapStage = ({
     offY: number;
     pointerId: number;
     moved: boolean;
+    /** What its edges snap by, or nothing if it snaps by its middle. */
+    box?: {width: number; height: number};
   } | null>(null);
 
   // Entering place mode drops any placed-actor selection: the two modes are
@@ -501,9 +504,14 @@ export const MapStage = ({
     return toWorld(view!, clientX - rect.left, clientY - rect.top);
   };
 
-  // Snap the actor's center to a tile cell center unless Alt frees it.
-  const snap = (pos: Vec, free: boolean): Vec =>
-    snapToTile(pos, map.tile, free);
+  // Put a position on the grid unless Alt frees it. WITH a box, the box's
+  // edges land on the grid lines; without one, the actor's middle lands on a
+  // cell's middle, which is what a tile-sized thing wants (`snapToTile`).
+  const snap = (
+    pos: Vec,
+    free: boolean,
+    box?: {width: number; height: number},
+  ): Vec => snapToTile(pos, map.tile, free, box);
 
   // How big a kind is drawn — the size the outline hugs and the hit test
   // reaches for (`stageGeometry.drawnSize`).
@@ -694,6 +702,41 @@ export const MapStage = ({
     const size = (prop: PropertySchema) => asNum(valueOf(actor, prop)) ?? 0;
     return {width: size(width), height: size(height)};
   };
+
+  /**
+   * The size to snap an actor's EDGES by, in world space — or nothing, when
+   * the actor has no edges the grid can line up with.
+   *
+   * Nothing for two reasons. A kind with no box is a Coin or a Ground: a tile
+   * that wants to sit IN a cell, which is the older snap and still the right
+   * one for it. And a box turned off the axes has no side parallel to a grid
+   * line, so there is nothing to put on one — a quarter turn does, with the
+   * width and the height swapped.
+   */
+  const snapBoxOf = (
+    actor: Placement,
+  ): {width: number; height: number} | undefined => {
+    const size = boxOf(actor);
+    if (!size) {
+      return undefined;
+    }
+    const at = worldTransformOf(actor, mapRef.current.actors, scales);
+    const quarter = normalizeRotation(at.rotation) / 90;
+    if (Math.abs(quarter - Math.round(quarter)) > 1e-6) {
+      return undefined;
+    }
+    const width = size.width * Math.abs(at.scale.x);
+    const height = size.height * Math.abs(at.scale.y);
+    return Math.round(quarter) % 2 === 0
+      ? {width, height}
+      : {width: height, height: width};
+  };
+
+  /**
+   * The box of the kind that is about to be PLACED, at the size its file was
+   * built at — so the ghost sits where the click will leave it.
+   */
+  const ghostBox = selected ? boxOf({type: selected, id: 'ghost'}) : undefined;
 
   /**
    * The selection as a box in WORLD space — what the grips are placed around
@@ -1423,6 +1466,9 @@ export const MapStage = ({
         offY: pos.y - world.y,
         pointerId: event.pointerId,
         moved: false,
+        // Once, at the grab: the transform it snaps through cannot change
+        // while the pointer is down, and a drag asks on every move.
+        box: snapBoxOf(hit),
       };
       canvasRef.current?.setPointerCapture(event.pointerId);
       canvasRef.current?.focus(); // so Delete/Backspace reach onKeyDown
@@ -1440,10 +1486,28 @@ export const MapStage = ({
       if (grip.handle === 'turn') {
         turnTo(angleTo(grip.start.center, world), event.altKey);
       } else {
+        // SNAP THE HANDLE, not the size. A resize has one edge that moves and
+        // one that stays, so putting the moving edge on a grid line is what
+        // makes the box's sides line up — snapping the WIDTH instead would
+        // only do that when the far edge already happened to be on the grid.
+        //
+        // Which means measuring from where the handle WAS rather than from
+        // where the pointer went down: the two differ by however far into the
+        // grip the pointer landed, and carrying that offset along would keep
+        // the edge a few pixels off every line. Alt wants the offset kept,
+        // because Alt means "leave it exactly where I put it".
+        //
+        // A TURNED BOX IS LEFT ALONE, for the reason `snapBoxOf` gives: its
+        // sides are not along the grid, so a grid crossing is not a place any
+        // edge of it can be.
+        const free =
+          event.altKey || normalizeRotation(grip.start.rotation) % 90 !== 0;
+        const from = free ? grip.from : handlePoint(grip.start, grip.handle);
+        const to = free ? world : snapPoint(world, map.tile, false);
         const next = resizeBox({
           start: grip.start,
           handle: grip.handle,
-          pointerDelta: {x: world.x - grip.from.x, y: world.y - grip.from.y},
+          pointerDelta: {x: to.x - from.x, y: to.y - from.y},
           minWidth: MIN_BOX,
           minHeight: MIN_BOX,
         });
@@ -1461,7 +1525,11 @@ export const MapStage = ({
         'position',
         storedPosition(
           drag.id,
-          snap({x: world.x + drag.offX, y: world.y + drag.offY}, event.altKey),
+          snap(
+            {x: world.x + drag.offX, y: world.y + drag.offY},
+            event.altKey,
+            drag.box,
+          ),
         ),
       );
       return;
@@ -1476,7 +1544,13 @@ export const MapStage = ({
     // Idle: in place mode track the placement ghost; in select mode track which
     // placed actor sits under the cursor, so the render highlights it.
     if (selected && view) {
-      setHover(snap(screenToWorld(event.clientX, event.clientY), event.altKey));
+      setHover(
+        snap(
+          screenToWorld(event.clientX, event.clientY),
+          event.altKey,
+          ghostBox,
+        ),
+      );
       return;
     }
     if (view) {
@@ -1557,7 +1631,7 @@ export const MapStage = ({
     ).pos;
     const to = storedPosition(
       selectedActor.id,
-      steppedBy(from, map.tile, dx, dy, free),
+      steppedBy(from, map.tile, dx, dy, free, snapBoxOf(selectedActor)),
     );
     const next = {
       ...mapRef.current,
@@ -1757,7 +1831,11 @@ export const MapStage = ({
     if (isReadOnly || !selected || !view || panRef.current) {
       return;
     }
-    const pos = snap(screenToWorld(event.clientX, event.clientY), event.altKey);
+    const pos = snap(
+      screenToWorld(event.clientX, event.clientY),
+      event.altKey,
+      ghostBox,
+    );
     const name = selected.split('/').pop() ?? selected;
     commit({
       ...map,

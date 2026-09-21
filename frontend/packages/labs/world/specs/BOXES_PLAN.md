@@ -19,8 +19,8 @@ This lab keeps arriving at that rule from both directions. `text` is the
 Label's because a Label and a Button and a Score all mean the same by it;
 `fraction` is the Progress Bar's because nobody else means anything by it; a
 `Progress` rule with three properties and no behaviour was deleted for being
-neither. A box is squarely the first kind: nine kinds mean exactly the same
-thing, and the editor wants to ask "does this have a box" without knowing any
+neither. A box is squarely the first kind: every interface kind
+there is means exactly the same thing by it, and the editor wants to ask "does this have a box" without knowing any
 of their names.
 
 So `Has a Box` — a trait with `width` and `height`, on a rule called `Boxed`.
@@ -159,16 +159,52 @@ lost `Can Be Clicked` the same way, and a hat naming an absent rule put its
 body at the top of the module — and the first time a guard has been written
 for it.
 
+## The grid, for things that are not tiles
+
+A map's grid was built for TILES: `snapToTile` puts an actor's position on a
+cell's middle, which is exactly right for a Ground or a Coin, because an
+actor's position IS its middle and a tile-sized thing centred in a cell fills
+it.
+
+A boxed actor is not tile-sized. A Button is 96 by 32, a Panel is 300 wide,
+and centring one of those in a 32-cell puts NEITHER edge on a line — a 48-wide
+thing centred at a cell's middle has its sides at 8 and 56, so two of them side
+by side line up with each other and with nothing else. The grid stops being
+the thing that makes an interface tidy and becomes one more offset to fight.
+
+So a boxed actor snaps by its EDGES. `snapToTile` takes the box as a fourth
+argument: it puts the top-left corner on the nearest crossing and adds the
+half-size back, and without a box it does what it always did. The NEAREST
+crossing rather than the one before it, because the thing being dragged is
+already the size it is — a box a pixel past a line should settle back onto it,
+not jump a whole tile. `steppedBy` takes the box too, so the arrow keys and
+the pointer agree.
+
+Two cases keep the older snap, both because they have no edge to offer:
+
+- **A kind with no box.** A Coin wants to sit in a cell, and does.
+- **A box turned off the axes.** A quarter turn has sides along the grid, with
+  the width and the height swapped, and takes the edge snap. Forty-five
+  degrees has no side parallel to a line, so there is nothing to put on one.
+
+A RESIZE SNAPS THE HANDLE, not the size. A resize has one edge that moves and
+one that stays; putting the moving edge on a line is what makes the sides line
+up, where snapping the width instead would only do that when the far edge
+already happened to be on the grid. That means measuring from where the handle
+WAS rather than from where the pointer went down — the two differ by however
+far into the grip the pointer landed, and carrying that offset along would
+leave the edge a few pixels off every line. Alt frees it, as it frees a drag
+and a turn.
+
 ## Not done
 
 - **A minimum size floor only.** `MIN_BOX` is eight pixels, enough to grab
-  again. Nothing stops the inspector's number fields going lower.
-- **No snapping while resizing.** A drag moves in whole pixels; the nudge
-  snaps to the tile and a resize does not.
+  again. Nothing stops the inspector's number fields going lower. Clamping at
+  the floor can also pull an edge back off the grid.
+- **The keyboard's resize steps by eight, not by the tile.** Eight divides the
+  usual 32 and keeps the fine control that a fixed tile step would lose; it
+  does not line an edge up by itself.
 - **No multi-selection**, so nothing to resize together.
 - **The keyboard cannot reach a single grip.** It resizes from the box's own
   axes rather than by choosing a corner, which is simpler to operate and
   cannot express "grow from the top left". The inspector is the exact route.
-- **The Progress Bar still has no box**, and draws at constants. It is the one
-  interface actor whose size is not the project's to set, which is a gap this
-  did not close.

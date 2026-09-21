@@ -1402,33 +1402,62 @@ describe('resizing and turning with a pointer', () => {
     pointer(canvas, 'pointerup', screenPoint(map, pos));
   };
 
-  it('grows from the corner that was grabbed', () => {
+  /** Grab the bottom-right grip, drag it by (dx, dy), let go. */
+  const dragGrip = (
+    canvas: Element,
+    map: MapDoc,
+    dx: number,
+    dy: number,
+    init: MouseEventInit = {},
+  ) => {
+    const grip = handlePoint(boxAt({x: 48, y: 48}), 'bottom-right');
+    const to = screenPoint(map, {x: grip.x + dx, y: grip.y + dy});
+    pointer(canvas, 'pointerdown', screenPoint(map, grip));
+    pointer(canvas, 'pointermove', to, init);
+    pointer(canvas, 'pointerup', to, init);
+  };
+
+  it('grows from the corner that was grabbed, onto the grid', () => {
+    // The box is 64 by 32 about (48, 48), so the grabbed corner is at
+    // (80, 64) and the drag takes it to (100, 74) — which snaps to the
+    // crossing at (96, 64). Sixteen wider, no taller.
     const map = doc();
     const {canvas, written} = mount(map, {schemas: BOXED});
     select(canvas, map, {x: 48, y: 48});
+    dragGrip(canvas, map, 20, 10);
 
-    const grip = handlePoint(boxAt({x: 48, y: 48}), 'bottom-right');
-    pointer(canvas, 'pointerdown', screenPoint(map, grip));
-    pointer(
-      canvas,
-      'pointermove',
-      screenPoint(map, {
-        x: grip.x + 20,
-        y: grip.y + 10,
-      }),
-    );
-    pointer(
-      canvas,
-      'pointerup',
-      screenPoint(map, {
-        x: grip.x + 20,
-        y: grip.y + 10,
-      }),
-    );
+    const after = written().actors.find(one => one.id === 'a');
+    expect(after?.properties?.hasABox).toEqual({width: 80, height: 32});
+    // Growing from a corner MOVES the middle: the far corner is what stays.
+    expect(after?.properties?.positional?.position).toEqual({x: 56, y: 48});
+  });
+
+  it('puts the edge that moved ON a line', () => {
+    // Which is the point of snapping the HANDLE rather than the size: the
+    // far edge stays where it was, so only a moving edge can be made to line
+    // up, and it is (specs/BOXES_PLAN.md).
+    const map = doc();
+    const {canvas, written} = mount(map, {schemas: BOXED});
+    select(canvas, map, {x: 48, y: 48});
+    dragGrip(canvas, map, 37, 3);
+
+    const after = written().actors.find(one => one.id === 'a');
+    const box = after?.properties?.hasABox as {width: number; height: number};
+    const at = after?.properties?.positional?.position as Vec;
+    expect(at.x + box.width / 2).toBe(128);
+    expect((at.y + box.height / 2) % map.tile.height).toBe(0);
+  });
+
+  it('takes the pointer exactly when Alt says so', () => {
+    // The same modifier that frees a drag and a turn frees a resize, and it
+    // has to: a grid is a help until the thing being built is not on one.
+    const map = doc();
+    const {canvas, written} = mount(map, {schemas: BOXED});
+    select(canvas, map, {x: 48, y: 48});
+    dragGrip(canvas, map, 20, 10, {altKey: true});
 
     const after = written().actors.find(one => one.id === 'a');
     expect(after?.properties?.hasABox).toEqual({width: 84, height: 42});
-    // Growing from a corner MOVES the middle: the far corner is what stays.
     expect(after?.properties?.positional?.position).toEqual({x: 58, y: 53});
   });
 
