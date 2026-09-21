@@ -7,7 +7,7 @@ import React from 'react';
 
 import {QuizQuestionEditableFields} from '../types';
 
-import styles from '../quiz-question-card.module.scss';
+import styles from './quiz-question-card.module.scss';
 
 interface AnswersTabProps {
   draft: QuizQuestionEditableFields;

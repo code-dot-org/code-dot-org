@@ -5,10 +5,11 @@ import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import isEqual from 'lodash/isEqual';
 import React, {useEffect, useState} from 'react';
 
-import AnswersTab from './QuizQuestionCard/AnswersTab';
-import QuestionTab from './QuizQuestionCard/QuestionTab';
-import UsageTab from './QuizQuestionCard/UsageTab';
-import {QuizBuilderQuestion, QuizQuestionEditableFields} from './types';
+import {QuizBuilderQuestion, QuizQuestionEditableFields} from '../types';
+
+import AnswersTab from './AnswersTab';
+import QuestionTab from './QuestionTab';
+import UsageTab from './UsageTab';
 
 import styles from './quiz-question-card.module.scss';
 

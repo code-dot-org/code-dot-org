@@ -3,7 +3,7 @@ import React from 'react';
 
 import {QuizBuilderQuestion} from '../types';
 
-import styles from '../quiz-question-card.module.scss';
+import styles from './quiz-question-card.module.scss';
 
 interface UsageTabProps {
   question: QuizBuilderQuestion;
