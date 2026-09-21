@@ -99,6 +99,10 @@ const RUNTIME_ONLY: Record<string, string> = {
     '(specs/CLOCK_PLAN.md)',
   timePart: 'the same: it reads the zone the clock was lent with',
   timeText: 'the same again',
+  styleNamed:
+    'a drawing ASKS the theme what a role means, and a drawing runs against ' +
+    'the live world by definition — a world still being described has ' +
+    'painted nothing (specs/STYLES_PLAN.md)',
   canReach:
     'what covers what is a fact about the maps that are LOADED, and a world ' +
     'still being described has loaded none of them \u2014 it is also a ' +

@@ -57,6 +57,12 @@ import {ROOT_SPACE_ID, Space} from './Space';
 import {SpatialIndex} from './spatialIndex';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
 import {text} from './textValue';
+import {
+  NO_THEME,
+  resolveTheme,
+  type ResolvedStyle,
+  type ResolvedTheme,
+} from './theme';
 import type {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {
@@ -2587,6 +2593,41 @@ export class World {
   }
 
   private channel = '';
+
+  /**
+   * Lend the world the theme its interface is painted in.
+   *
+   * LENT, like the storage, the clock and the channel — and read the same way,
+   * by whoever draws. A `.style` file is JSON the bundler loads, so this takes
+   * the document and resolves it ONCE: `styleNamed` is then a map lookup,
+   * which matters because a drawing asks for one per shape per actor per
+   * frame (specs/STYLES_PLAN.md).
+   *
+   * A world lent none draws in whatever its routines set for themselves, which
+   * is what every world did before this and what every headless test does.
+   */
+  useTheme(document: unknown): void {
+    this.theme = resolveTheme(document);
+  }
+
+  private theme: ResolvedTheme = NO_THEME;
+
+  /** The theme in play — what it is called, and what it could not resolve. */
+  currentTheme(): ResolvedTheme {
+    return this.theme;
+  }
+
+  /**
+   * One style by name, or nothing.
+   *
+   * NOTHING RATHER THAN A DEFAULT. The pen leaves itself alone when handed
+   * nothing (`CommandPen.useStyle`), so a drawing naming a style the theme
+   * lacks paints in whatever came before rather than vanishing — and the name
+   * is worth reporting, not worth guessing at.
+   */
+  styleNamed(name: string): ResolvedStyle | undefined {
+    return this.theme.styles.get(name);
+  }
 
   /**
    * The key a name is stored under.

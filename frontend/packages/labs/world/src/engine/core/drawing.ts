@@ -15,6 +15,7 @@
 
 import {cssColor, type ColorValue} from './color';
 import {fnv1a} from './hash';
+import type {ResolvedStyle} from './theme';
 
 /** A shape lifted off what is behind it — see `Pen.shadow`. */
 export interface Shadow {
@@ -152,6 +153,14 @@ export interface Pen {
   noShadow(): void;
   /** Draw the letters after this heavier, or ordinary again. */
   weight(bold: boolean): void;
+  /**
+   * Set everything a named style says at once — `use style ⟨button face⟩`.
+   *
+   * VALUES, NOT A NAME. What is handed over is already resolved against the
+   * world's theme (`core/theme`), so the commands this produces carry colours
+   * and numbers and the cache key means what it says.
+   */
+  useStyle(style: ResolvedStyle | undefined): void;
   rectangle(x: number, y: number, width: number, height: number): void;
   circle(x: number, y: number, radius: number): void;
   line(x1: number, y1: number, x2: number, y2: number): void;
@@ -286,6 +295,45 @@ export class CommandPen implements Pen {
 
   weight(bold: boolean): void {
     this.currentBold = bold;
+  }
+
+  /**
+   * Take a style, field by field.
+   *
+   * A STYLE THAT IS NOT THERE CHANGES NOTHING. Naming a style the active
+   * theme lacks leaves the pen exactly as it was — which draws the control in
+   * whatever came before, usually the pen's own white. That is on purpose:
+   * the alternative is a control that vanishes, and a learner cannot act on a
+   * thing that is not on the screen. The theme keeps the name so a sandbox
+   * can say which one was missing (`ResolvedTheme.unresolved`).
+   *
+   * ABSENT LEAVES ALONE, NULL CLEARS. A style that says nothing about the
+   * outline keeps whatever outline the pen had, so `use style ⟨chosen row⟩`
+   * can change a fill and keep a corner; one that says `"stroke": null` means
+   * no outline and says so.
+   */
+  useStyle(style: ResolvedStyle | undefined): void {
+    if (!style) {
+      return;
+    }
+    if (style.fill !== undefined) {
+      this.currentFill = style.fill ?? undefined;
+    }
+    if (style.stroke !== undefined) {
+      this.currentStroke = style.stroke ?? undefined;
+    }
+    if (style.strokeWidth !== undefined) {
+      this.currentWidth = style.strokeWidth;
+    }
+    if (style.corner !== undefined) {
+      this.currentRadius = Math.max(0, style.corner);
+    }
+    if (style.shadow !== undefined) {
+      this.currentShadow = style.shadow ?? undefined;
+    }
+    if (style.weight !== undefined) {
+      this.currentBold = style.weight === 'bold';
+    }
   }
 
   rectangle(x: number, y: number, width: number, height: number): void {

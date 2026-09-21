@@ -76,6 +76,15 @@ export {
   type Pen,
   type TextAnchor,
 } from './core/drawing';
+// …and the theme those commands are painted from (specs/STYLES_PLAN.md).
+export {
+  NO_THEME,
+  resolveTheme,
+  type ResolvedStyle,
+  type ResolvedTheme,
+  type StyleSpec,
+  type ThemeDocument,
+} from './core/theme';
 // …and where a PLACEMENT holds on when the window is not the map's shape
 // (specs/ANCHORS_PLAN.md). The map editor offers the nine; the loader applies
 // them.

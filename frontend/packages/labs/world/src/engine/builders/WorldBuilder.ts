@@ -506,6 +506,19 @@ export class WorldBuilder {
     return this.defer('setForeground', sprite, layer);
   }
 
+  /**
+   * Say which theme this world's interface is painted in.
+   *
+   * DEFERRED LIKE THE REST, because `use theme` is a row under `define world`
+   * and a world's body runs against the builder. It is also legal in a
+   * handler, where it runs against the live World — which is how a project
+   * could change theme mid-game if it wanted to, though nothing offers a
+   * reason to yet (specs/STYLES_PLAN.md).
+   */
+  useTheme(document: unknown): this {
+    return this.defer('useTheme', document);
+  }
+
   /** Set the color behind the backdrop. See {@link World.setBackgroundColor}. */
   setBackgroundColor(color: ColorValue): this {
     return this.defer('setBackgroundColor', color);
