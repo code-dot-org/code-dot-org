@@ -23,20 +23,15 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     isLoading,
     isCreating,
     error,
+    errorQuestionId,
     createQuestion,
     updateQuestion,
     removeQuestion,
-    clearError,
   } = useQuizBuilderQuestions(levelId);
   // Only one card is expanded at a time - opening one collapses whichever
   // was open before it. A create opens the just-created question straight
   // into editing.
   const [expandedId, setExpandedId] = useState<number | null>(null);
-
-  const handleExpandedChange = (id: number, expanded: boolean) => {
-    setExpandedId(expanded ? id : null);
-    clearError();
-  };
 
   const handleCreate = async () => {
     const id = await createQuestion();
@@ -61,9 +56,9 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               question={question}
               isExpanded={question.id === expandedId}
               onExpandedChange={expanded =>
-                handleExpandedChange(question.id, expanded)
+                setExpandedId(expanded ? question.id : null)
               }
-              error={question.id === expandedId ? error : null}
+              error={question.id === errorQuestionId ? error : null}
               onUpdate={updateQuestion}
               onRemove={removeQuestion}
             />
@@ -85,8 +80,8 @@ const QuizBuilderWorkspace: React.FunctionComponent<
           </Typography>
         </header>
 
-        {/* Once a card is expanded, its own footer shows this error instead - see error prop below. */}
-        {error && expandedId === null && (
+        {/* A question-specific error shows on that question's card instead - see error prop below. */}
+        {error && errorQuestionId === null && (
           <Typography variant="body2" color="error" role="alert">
             {error}
           </Typography>
