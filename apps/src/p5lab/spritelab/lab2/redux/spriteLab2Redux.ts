@@ -1,5 +1,7 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
+import {ModelCard} from '../ai/traits/modelCard';
+
 // The full set of tabs for the SpriteLab2 full-screen UI.
 export const ALL_TABS = ['Images', 'World', 'Code', 'Play'] as const;
 export type Tab = (typeof ALL_TABS)[number];
@@ -35,6 +37,14 @@ export interface SpriteLab2State {
   scenes: SceneMetadata[];
   externalScenes: ExternalSceneOption[];
   musicProjects: MusicProjectOption[];
+  /**
+   * The imported AI Lab model. Its feature list is what the trait editor
+   * draws and what the trait-name dropdown offers, so a project with no
+   * model imported has no traits to set.
+   */
+  modelCard?: ModelCard;
+  /** Every model this user has trained, loaded when the picker opens. */
+  availableModels: ModelCard[];
 }
 
 const initialState: SpriteLab2State = {
@@ -43,6 +53,7 @@ const initialState: SpriteLab2State = {
   scenes: [],
   externalScenes: [],
   musicProjects: [],
+  availableModels: [],
 };
 
 const spriteLab2Slice = createSlice({
@@ -67,6 +78,12 @@ const spriteLab2Slice = createSlice({
     setMusicProjects: (state, action: PayloadAction<MusicProjectOption[]>) => {
       state.musicProjects = action.payload;
     },
+    setModelCard: (state, action: PayloadAction<ModelCard | undefined>) => {
+      state.modelCard = action.payload;
+    },
+    setAvailableModels: (state, action: PayloadAction<ModelCard[]>) => {
+      state.availableModels = action.payload;
+    },
     resetSpriteLab2: () => initialState,
   },
 });
@@ -77,6 +94,8 @@ export const {
   setScenes,
   setExternalScenes,
   setMusicProjects,
+  setModelCard,
+  setAvailableModels,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;
 

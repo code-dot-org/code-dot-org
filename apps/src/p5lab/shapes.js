@@ -72,6 +72,8 @@ export const CurrentAnimations = PropTypes.shape({
  *           absent on classic animations and non-pixel-art images.
  * @property {number[][]} [recentColors] - Pixel-editor recently-used colors
  *           ([r,g,b,a] rows, in first-seen order); absent until edited there.
+ * @property {Object.<string,(string|number)>} [traits] - Feature values for an
+ *           imported AI Lab model, keyed by the stripped feature id.
  */
 const serializedAnimationPropsShape = {
   name: PropTypes.string.isRequired,
@@ -84,6 +86,9 @@ const serializedAnimationPropsShape = {
   role: PropTypes.string,
   pixelGridSize: PropTypes.number,
   recentColors: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+  traits: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  ),
 };
 
 /**
@@ -141,6 +146,7 @@ function getSerializedAnimationProps(animation) {
     'trimmed',
     'generation',
     'poses',
+    'traits',
   ]);
 }
 

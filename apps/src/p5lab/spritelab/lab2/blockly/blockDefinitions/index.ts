@@ -13,11 +13,15 @@ import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
 import playMusic from './playMusic';
+import predictForSprite from './predictForSprite';
+import predictionOfSprite from './predictionOfSprite';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
+import setTraitOfSprite from './setTraitOfSprite';
 import thePlayer from './thePlayer';
+import traitOfSprite from './traitOfSprite';
 import whenRun from './whenRun';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
@@ -44,6 +48,10 @@ const labBlockDefinitions: {
   setAsPlatformPlayer,
   setCameraZoom,
   thePlayer,
+  setTraitOfSprite,
+  traitOfSprite,
+  predictForSprite,
+  predictionOfSprite,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,

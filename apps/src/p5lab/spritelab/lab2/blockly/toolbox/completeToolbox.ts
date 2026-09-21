@@ -6,8 +6,12 @@ import {
 
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
+import {PREDICT_BLOCK_TYPE} from '../blockDefinitions/predictForSprite';
+import {PREDICTION_OF_BLOCK_TYPE} from '../blockDefinitions/predictionOfSprite';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {SET_TRAIT_BLOCK_TYPE} from '../blockDefinitions/setTraitOfSprite';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {TRAIT_OF_BLOCK_TYPE} from '../blockDefinitions/traitOfSprite';
 
 import {ToolboxInfo} from './types';
 
@@ -32,6 +36,12 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     RESTART_SCENE_BLOCK_TYPE,
     'spritelab2_setPlatformGravity',
     'spritelab2_setCameraZoom',
+  ],
+  AI: [
+    SET_TRAIT_BLOCK_TYPE,
+    TRAIT_OF_BLOCK_TYPE,
+    PREDICT_BLOCK_TYPE,
+    PREDICTION_OF_BLOCK_TYPE,
   ],
 };
 

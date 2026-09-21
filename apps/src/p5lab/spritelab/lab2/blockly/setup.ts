@@ -32,6 +32,7 @@ import {
   FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
   MusicProjectDropdown,
 } from './musicProjectDropdown';
+import {registerTraitFields} from './traitFields';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -73,6 +74,7 @@ function installLabBlocks(): void {
   );
   Blockly.fieldRegistry.register(FIELD_COSTUME_TYPE, CostumeField);
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
+  registerTraitFields();
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
   Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
   for (const {definition, generator} of labBlockDefinitions) {

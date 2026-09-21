@@ -12,6 +12,8 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {createTraitCommands} from './ai/traits/traitCommands';
+import {traitsByCostumeName} from './ai/traits/traitStore';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {
   backgroundFrame,
@@ -471,6 +473,15 @@ export default class SpriteLab2Engine extends SpriteLab {
         0
       );
     };
+    // Costume traits and the imported model are read once per run. A student
+    // editing a trait in the Images tab changes the animation list, which
+    // reruns the program, so the snapshot is never stale for long.
+    const state = getStore().getState();
+    library.animationTraits = traitsByCostumeName(
+      this.preloadAnimationsOverride || state.animationList
+    );
+    library.modelCard = state.spriteLab2?.modelCard;
+    Object.assign(library.commands, createTraitCommands(library));
     return library;
   }
 

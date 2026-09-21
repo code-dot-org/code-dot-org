@@ -14,8 +14,12 @@ import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
+import {PREDICT_BLOCK_TYPE} from '../blockDefinitions/predictForSprite';
+import {PREDICTION_OF_BLOCK_TYPE} from '../blockDefinitions/predictionOfSprite';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {SET_TRAIT_BLOCK_TYPE} from '../blockDefinitions/setTraitOfSprite';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {TRAIT_OF_BLOCK_TYPE} from '../blockDefinitions/traitOfSprite';
 
 import {
   BlockInfo,
@@ -91,6 +95,10 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_spriteSay',
       GO_TO_SCENE_BLOCK_TYPE,
       GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
+      SET_TRAIT_BLOCK_TYPE,
+      TRAIT_OF_BLOCK_TYPE,
+      PREDICT_BLOCK_TYPE,
+      PREDICTION_OF_BLOCK_TYPE,
     ],
   },
   {
@@ -111,6 +119,10 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_addBehaviorSimple',
       'spritelab2_movingLeft',
       'spritelab2_patrollingLeftRight',
+      SET_TRAIT_BLOCK_TYPE,
+      TRAIT_OF_BLOCK_TYPE,
+      PREDICT_BLOCK_TYPE,
+      PREDICTION_OF_BLOCK_TYPE,
     ],
   },
 ];

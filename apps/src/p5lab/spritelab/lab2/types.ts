@@ -3,6 +3,7 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {ImageGenerationMetadata} from './ai/images/types';
+import {TraitValues} from './ai/traits/traitStore';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
@@ -38,6 +39,13 @@ export interface SerializedAnimationProps {
   generation?: ImageGenerationMetadata;
   /** Present on a character set: where each pose lives in the sheet. */
   poses?: AnimationPoses;
+  /**
+   * Feature values for an imported AI Lab model, keyed by the stripped
+   * feature id that MLTrainers.predict looks for. Values for more than one
+   * model live in the same map: feature ids are unique across the models a
+   * project uses, and a re-import must not delete what the last model held.
+   */
+  traits?: TraitValues;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.
@@ -81,6 +89,17 @@ export interface Sources extends ProjectSources {
   animations?: SerializedAnimationList;
   /** Per-scene code workspaces. */
   scenes?: Scene[];
+  /**
+   * The imported AI Lab model. One per project, because the trait editor
+   * shows one field set and a costume answers for one model at a time.
+   */
+  aiModelId?: string;
+  /**
+   * Image prompt with {Feature name} placeholders, filled from a costume's
+   * own trait values. One per project, because it describes the kind of
+   * thing the whole data set pictures.
+   */
+  imagePromptTemplate?: string;
 }
 
 /**

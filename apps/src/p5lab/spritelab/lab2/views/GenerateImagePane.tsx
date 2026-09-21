@@ -30,6 +30,7 @@ import {
   ImageStyle,
   ImageType,
 } from '../ai/images/types';
+import {TraitValues} from '../ai/traits/traitStore';
 import {AnimationPoses} from '../characterAnimations';
 import {
   categoriesForType,
@@ -46,6 +47,7 @@ import {BACKGROUND_GROUND_COLOR, blankPaintImage} from '../paintBlank';
 
 import type {NewImageDraft} from './GenerateImageView';
 import ImageDetailsDialog, {AlternativeImage} from './ImageDetailsDialog';
+import ModelPicker from './ModelPicker';
 import {
   alternativeFromAnimation,
   framesFromAnimation,
@@ -283,6 +285,13 @@ interface GenerateImagePaneProps {
   /** The image panel is the level: no gallery, no modal, always open on a
       blank generate form. */
   imageLevel?: boolean;
+  /** The AI Lab model this project predicts with, if it stored one. */
+  aiModelId?: string;
+  /** Persist a new choice of model. */
+  onAiModelIdChange?: (modelId: string | undefined) => void;
+  /** Image prompt with {Feature name} placeholders. */
+  imagePromptTemplate?: string;
+  onImagePromptTemplateChange?: (template: string) => void;
 }
 
 /**
@@ -329,6 +338,10 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   defaultStyle,
   paintDisabled,
   imageLevel,
+  aiModelId,
+  onAiModelIdChange,
+  imagePromptTemplate,
+  onImagePromptTemplateChange,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -618,7 +631,11 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // Persist an accepted generation: upload, then create the animation (new
   // image) or repoint the existing one, with the generation metadata.
   const handleAcceptGenerated = useCallback(
-    async (result: GeneratedImageResult, newName?: string) => {
+    async (
+      result: GeneratedImageResult,
+      newName?: string,
+      traits?: TraitValues
+    ) => {
       // Stamped when the generation was requested, so a dialog closed or
       // moved during the request drops its result here.
       const epoch = generationEpochRef.current;
@@ -668,6 +685,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           pixelGridSize: result.pixelGridSize,
           trimmed: !!result.trimmed,
           generation: result.generation,
+          ...(traits && Object.keys(traits).length && {traits}),
         });
         // A new subject, even though the session continues.
         sessionEpochRef.current++;
@@ -897,6 +915,14 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       : imageTypeFromCategories(targetProps?.categories);
   return (
     <div className={moduleStyles.imagesManager}>
+      {!imageLevel && onAiModelIdChange && (
+        <ModelPicker
+          modelId={aiModelId}
+          onModelIdChange={onAiModelIdChange}
+          promptTemplate={imagePromptTemplate}
+          onPromptTemplateChange={onImagePromptTemplateChange}
+        />
+      )}
       {!imageLevel && (
         <div className={moduleStyles.imageGallery}>
           {/* First slot, so it never hides behind a scroll. */}
@@ -987,6 +1013,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}
           onAcceptGenerated={handleAcceptGenerated}
+          promptTemplate={imagePromptTemplate}
           alternatives={alternatives.map(
             (alt): AlternativeImage => ({
               id: alt.id,

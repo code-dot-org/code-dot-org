@@ -12,6 +12,7 @@ import {
   ImageGenerationMetadata,
   ImageType,
 } from '../ai/images/types';
+import {TraitValues} from '../ai/traits/traitStore';
 import {AnimationPoses} from '../characterAnimations';
 import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 
@@ -22,6 +23,7 @@ import GenerateImageView, {
   NewImageDraft,
 } from './GenerateImageView';
 import ImagePaneButton from './ImagePaneButton';
+import TraitEditor from './TraitEditor';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -78,12 +80,15 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
   /** Persist an accepted generation (newName set when creating). */
   onAcceptGenerated: (
     result: GeneratedImageResult,
-    newName?: string
+    newName?: string,
+    traits?: TraitValues
   ) => Promise<void>;
   /** This dialog session's recent generations; shown when there's a choice. */
   alternatives?: AlternativeImage[];
   /** Make this alternative the image. */
   onSelectAlternative?: (id: string) => void;
+  /** Image prompt with {Feature name} placeholders. */
+  promptTemplate?: string;
 }
 
 /**
@@ -151,6 +156,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onAcceptGenerated,
   alternatives,
   onSelectAlternative,
+  promptTemplate,
 }) => {
   const isNew = animKey === null;
   const {theme} = useTheme();
@@ -311,8 +317,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           defaultStyle={defaultStyle}
           onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
           onGenerateStart={onGenerateStart}
-          onAccept={async (result, newName) => {
-            await onAcceptGenerated(result, newName);
+          promptTemplate={promptTemplate}
+          onAccept={async (result, newName, traits) => {
+            await onAcceptGenerated(result, newName, traits);
             setView('details');
           }}
           // A brand-new image has no summary to fall back to.
@@ -388,6 +395,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                     </>
                   )}
                 </dl>
+              )}
+              {animKey && (
+                <TraitEditor
+                  animKey={animKey}
+                  promptTemplate={promptTemplate}
+                  onAcceptGenerated={onAcceptGenerated}
+                />
               )}
               {alternatives && alternatives.length > 1 && (
                 <div className={moduleStyles.alternatives}>

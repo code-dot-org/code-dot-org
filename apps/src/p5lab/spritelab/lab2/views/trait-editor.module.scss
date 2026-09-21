@@ -1,0 +1,59 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.heading {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+}
+
+.row {
+  display: block;
+}
+
+.picker {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.templateField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-basis: 100%;
+  max-width: 520px;
+}
+
+.generateRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.problem {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #cd2f23;
+}
+
+.note,
+.empty {
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.empty {
+  margin-top: 12px;
+}

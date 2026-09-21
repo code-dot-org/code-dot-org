@@ -35,6 +35,7 @@ export const ADD_ANIMATION_AT = 'AnimationList/ADD_ANIMATION_AT';
 export const EDIT_ANIMATION = 'AnimationList/EDIT_ANIMATION';
 // Args: {AnimationKey} key, {string} name
 const SET_ANIMATION_NAME = 'AnimationList/SET_ANIMATION_NAME';
+const SET_ANIMATION_TRAITS = 'AnimationList/SET_ANIMATION_TRAITS';
 // Args: {AnimationKey} key, {bool} looping
 const SET_ANIMATION_LOOPING = 'AnimationList/SET_ANIMATION_LOOPING';
 // Args: {AnimationKey} key, {number} frameDelay
@@ -136,6 +137,7 @@ function propsByKey(state, action) {
     case ADD_ANIMATION_AT:
     case EDIT_ANIMATION:
     case SET_ANIMATION_NAME:
+    case SET_ANIMATION_TRAITS:
     case SET_ANIMATION_LOOPING:
     case SET_ANIMATION_FRAME_DELAY:
     case START_LOADING_FROM_SOURCE:
@@ -174,6 +176,13 @@ function animationPropsReducer(state, action) {
     case SET_ANIMATION_NAME:
       return Object.assign({}, state, {
         name: action.name,
+      });
+
+    // Unlike EDIT_ANIMATION this leaves sourceUrl alone: a trait is metadata
+    // about the picture, so the stored spritesheet is still the right one.
+    case SET_ANIMATION_TRAITS:
+      return Object.assign({}, state, {
+        traits: action.traits,
       });
 
     case SET_ANIMATION_FRAME_DELAY:
@@ -596,6 +605,23 @@ export function setAnimationName(key, name) {
       type: SET_ANIMATION_NAME,
       key,
       name,
+    });
+    projectChanged();
+  };
+}
+
+/**
+ * Replace the feature values stored on one animation.
+ * @param {string} key
+ * @param {Object.<string,(string|number)>} traits
+ * @returns {{type: string, key: string, traits: Object}}
+ */
+export function setAnimationTraits(key, traits) {
+  return dispatch => {
+    dispatch({
+      type: SET_ANIMATION_TRAITS,
+      key,
+      traits,
     });
     projectChanged();
   };

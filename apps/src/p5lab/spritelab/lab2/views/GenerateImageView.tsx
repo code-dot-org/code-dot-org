@@ -9,6 +9,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import Adlib, {AdlibChoices} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
 import aiBot2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-2.png';
@@ -42,6 +43,8 @@ import {
   ImageStyle,
   ImageType,
 } from '../ai/images/types';
+import {fillTraitPrompt, promptIsUsable} from '../ai/traits/traitPrompt';
+import {TraitValues} from '../ai/traits/traitStore';
 import {AnimationPoses} from '../characterAnimations';
 import {
   IMAGE_NAME_MAX_LENGTH,
@@ -53,8 +56,10 @@ import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
 import ImagePaneButton from './ImagePaneButton';
 import TemperatureBot from './TemperatureBot';
+import TraitFields from './TraitFields';
 
 import moduleStyles from './image-details-dialog.module.scss';
+import traitStyles from './trait-editor.module.scss';
 
 // Our own copies (not Music Lab's) — these may not live long.
 const BOT_IMAGES = [aiBot0, aiBot1, aiBot2, aiBot3];
@@ -148,10 +153,13 @@ interface GenerateImageViewProps extends ImageFormOptions {
       field (new images name themselves), no Start from, no temperature,
       and Paint manually moves from the footer into the blank image area. */
   advanced?: boolean;
-  /** Persist a finished result (name set when creating). */
+  /** Image prompt with {Feature name} placeholders. */
+  promptTemplate?: string;
+  /** Persist a finished result (name and traits set when creating). */
   onAccept: (
     result: GeneratedImageResult,
-    name?: string
+    name?: string,
+    traits?: TraitValues
   ) => Promise<void> | void;
   /** Leave without generating: back to the summary, or out of the dialog
       for a brand-new image. */
@@ -182,6 +190,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   adlibSet,
   adlibOnly,
   defaultStyle,
+  promptTemplate,
   onPaintManually,
   onGenerateStart,
   onAccept,
@@ -191,6 +200,24 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
+  // A new costume's feature values have no animation to live on yet, so
+  // they are held here and written when the generation is accepted.
+  const [traits, setTraits] = useState<TraitValues>({});
+  const modelCard = useAppSelector(state => state.spriteLab2?.modelCard);
+  const traitFill = fillTraitPrompt(promptTemplate || '', modelCard, {
+    costumeTraits: traits,
+  });
+  const promptFromTraits = !!create && !!promptTemplate && !!modelCard;
+  const filledPrompt = traitFill.prompt;
+  const traitsFillPrompt = promptFromTraits && promptIsUsable(traitFill);
+
+  // While a costume is being created the features write the prompt. The box
+  // stays editable; changing a feature afterwards rewrites it.
+  useEffect(() => {
+    if (traitsFillPrompt) {
+      setPrompt(filledPrompt);
+    }
+  }, [traitsFillPrompt, filledPrompt]);
   const [name, setName] = useState(create?.initial?.name || '');
   const initialImageType =
     existing?.imageType ||
@@ -342,12 +369,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             }
           }
         );
-        await onAccept(result, create ? newImageName() : undefined);
+        await onAccept(result, create ? newImageName() : undefined, traits);
         return;
       }
       const result = await generateImage(promptText, options);
       // Apply immediately; the caller flips back to the summary view.
-      await onAccept(result, create ? newImageName() : undefined);
+      await onAccept(result, create ? newImageName() : undefined, traits);
     } catch (e) {
       if (e instanceof ImageSafetyError) {
         setError(
@@ -384,6 +411,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     onGenerateStart,
     onAccept,
     makingSet,
+    traits,
   ]);
 
   const botImage =
@@ -491,6 +519,27 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </fieldset>
           )}
           <div className={moduleStyles.formRow}>
+            {promptFromTraits && modelCard && (
+              <div className={traitStyles.editor}>
+                <TraitFields
+                  card={modelCard}
+                  values={traits}
+                  disabled={generating}
+                  onChange={setTraits}
+                />
+                {traitFill.missing.length > 0 && (
+                  <span className={traitStyles.problem}>
+                    Set {traitFill.missing.join(', ')} to build the prompt.
+                  </span>
+                )}
+                {traitFill.unknown.length > 0 && (
+                  <span className={traitStyles.problem}>
+                    The image prompt asks for {traitFill.unknown.join(', ')},
+                    which {modelCard.name} does not have.
+                  </span>
+                )}
+              </div>
+            )}
             {/* Adlib-only levels have no free-text box; the combo above is
                 the whole prompt. */}
             {!(adlibOnly && adlib) && (

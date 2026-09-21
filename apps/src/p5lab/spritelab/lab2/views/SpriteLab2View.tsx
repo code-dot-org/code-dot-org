@@ -1378,6 +1378,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch, updateSources, scheduleRun]
   );
 
+  // The model id is the project's, not the level's: a student picks it in
+  // the Images tab and it must survive a reload. The card itself is not
+  // stored, because the model may have been retrained since.
+  const handleAiModelIdChange = useCallback(
+    (modelId: string | undefined) => {
+      updateSources(prev => ({...prev, aiModelId: modelId}));
+    },
+    [updateSources]
+  );
+
+  const handleImagePromptTemplateChange = useCallback(
+    (template: string) => {
+      updateSources(prev => ({...prev, imagePromptTemplate: template}));
+    },
+    [updateSources]
+  );
+
   const handleDeleteImage = useCallback(
     (name: string) => {
       updateSources(prev => removeImageReferences(prev, name));
@@ -1593,6 +1610,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       !isFreeplayMode(levelProperties.levelMode) && !imageFreeTextParam,
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
+    aiModelId: currentSources.aiModelId,
+    onAiModelIdChange: handleAiModelIdChange,
+    imagePromptTemplate: currentSources.imagePromptTemplate,
+    onImagePromptTemplateChange: handleImagePromptTemplateChange,
   };
 
   return (
