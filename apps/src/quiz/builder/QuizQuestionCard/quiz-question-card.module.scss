@@ -81,8 +81,6 @@
   background: var(--background-neutral-secondary);
 }
 
-// IconButton has no border or fill by default - this is what gives the
-// unselected checkmark its resting, bordered-square appearance.
 .correctToggle {
   background: var(--background-neutral-primary);
   border: 1px solid var(--border-neutral-secondary);

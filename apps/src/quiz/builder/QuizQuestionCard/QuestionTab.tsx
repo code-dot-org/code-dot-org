@@ -10,8 +10,6 @@ interface QuestionTabProps {
   onChange: (draft: QuizQuestionEditableFields) => void;
 }
 
-// The Question tab: identity fields only. Description (rich text, shown in
-// the Figma design) has no backend field yet, so it's left out for now.
 const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
   draft,
   onChange,

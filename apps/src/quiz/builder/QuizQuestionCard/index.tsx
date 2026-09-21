@@ -17,8 +17,6 @@ interface QuizQuestionCardProps {
   question: QuizBuilderQuestion;
   isExpanded: boolean;
   onExpandedChange: (expanded: boolean) => void;
-  // The outline's last save/remove error, shown here only while this card
-  // is the expanded one - see QuizBuilderWorkspace.
   error?: string | null;
   onUpdate: (
     id: number,

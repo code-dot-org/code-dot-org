@@ -17,9 +17,6 @@ interface AnswersTabProps {
 // MultipleChoiceQuestion#validate_choices rejects fewer than 2 choices.
 const MIN_CHOICES = 2;
 
-// Choice ids are opaque to the backend - just unique non-blank strings - so
-// a counter is enough. Matches the 0/1 scheme NEW_QUESTION_DEFAULTS seeds
-// (see useQuizBuilderQuestions).
 function nextChoiceId(existingIds: string[]): string {
   const used = new Set(existingIds);
   let n = 0;
