@@ -47,7 +47,7 @@ class MatchAssessmentsOverviewContainer extends Component {
       <div>
         {questionAnswerData.length > 0 && studentId === ALL_STUDENT_FILTER && (
           <div>
-            <Typography variant="h2">
+            <Typography variant="h6" component="h2">
               {i18n.matchQuestionsOverview({
                 numSubmissions: totalStudentSubmissions,
                 numStudents: totalStudentCount,
