@@ -123,6 +123,8 @@ export default function useQuizBuilderQuestions(
     [levelId]
   );
 
+  const clearError = useCallback(() => setError(null), []);
+
   return {
     questions,
     isLoading,
@@ -132,5 +134,6 @@ export default function useQuizBuilderQuestions(
     updateQuestion,
     removeQuestion,
     load,
+    clearError,
   };
 }

@@ -49,6 +49,7 @@ export interface QuizBuilderQuestionsState {
   isLoading: boolean;
   isCreating: boolean;
   error: string | null;
+  clearError: () => void;
   // Resolves with the created question's id on success, undefined on
   // failure (with `error` set).
   createQuestion: () => Promise<number | undefined>;

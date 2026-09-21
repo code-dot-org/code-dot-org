@@ -26,11 +26,17 @@ const QuizBuilderWorkspace: React.FunctionComponent<
     createQuestion,
     updateQuestion,
     removeQuestion,
+    clearError,
   } = useQuizBuilderQuestions(levelId);
   // Only one card is expanded at a time - opening one collapses whichever
   // was open before it. A create opens the just-created question straight
   // into editing.
   const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const handleExpandedChange = (id: number, expanded: boolean) => {
+    setExpandedId(expanded ? id : null);
+    clearError();
+  };
 
   const handleCreate = async () => {
     const id = await createQuestion();
@@ -55,7 +61,7 @@ const QuizBuilderWorkspace: React.FunctionComponent<
               question={question}
               isExpanded={question.id === expandedId}
               onExpandedChange={expanded =>
-                setExpandedId(expanded ? question.id : null)
+                handleExpandedChange(question.id, expanded)
               }
               error={question.id === expandedId ? error : null}
               onUpdate={updateQuestion}

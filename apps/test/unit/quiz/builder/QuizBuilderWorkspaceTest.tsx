@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -38,7 +38,17 @@ const BASE_STATE: QuizBuilderQuestionsState = {
   updateQuestion: jest.fn(),
   removeQuestion: jest.fn(),
   load: jest.fn(),
+  clearError: jest.fn(),
 };
+
+function workspace() {
+  return (
+    <QuizBuilderWorkspace
+      levelId={42}
+      quizTitle="AI Foundations Certification Exam"
+    />
+  );
+}
 
 function renderWorkspace(
   stateOverrides: Partial<QuizBuilderQuestionsState> = {}
@@ -47,12 +57,13 @@ function renderWorkspace(
     ...BASE_STATE,
     ...stateOverrides,
   });
-  return render(
-    <QuizBuilderWorkspace
-      levelId={42}
-      quizTitle="AI Foundations Certification Exam"
-    />
-  );
+  const {rerender} = render(workspace());
+  return {
+    // Updating the mock's return value doesn't itself trigger a render -
+    // call this after it changes. A fresh element each time is required;
+    // React bails out on a repeated identical one.
+    rerenderWorkspace: () => rerender(workspace()),
+  };
 }
 
 describe('QuizBuilderWorkspace', () => {
@@ -142,17 +153,54 @@ describe('QuizBuilderWorkspace', () => {
     );
   });
 
-  it('moves the server error onto the expanded card instead of the top banner', () => {
-    renderWorkspace({
+  it('shows a failed save on the card that failed', async () => {
+    const updateQuestion = jest.fn().mockImplementation(async () => {
+      mockUseQuizBuilderQuestions.mockReturnValue({
+        ...BASE_STATE,
+        questions: [question()],
+        updateQuestion,
+        error: 'stem cannot be blank',
+      });
+      return undefined;
+    });
+    const {rerenderWorkspace} = renderWorkspace({
       questions: [question()],
-      error: 'Something went wrong.',
+      updateQuestion,
     });
 
     fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+    fireEvent.change(screen.getByLabelText('Internal name'), {
+      target: {value: 'Renamed question'},
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+    });
+    rerenderWorkspace();
 
-    // Still shown exactly once - on the card now open, not duplicated at
-    // the top where it's easy to miss while editing further down the page.
+    // Shown exactly once - on the card now open, not duplicated at the top
+    // where it's easy to miss while editing further down the page.
     expect(screen.getAllByRole('alert')).toHaveLength(1);
+    expect(screen.getByRole('alert')).toHaveTextContent('stem cannot be blank');
+  });
+
+  it('clears the error when a different card is opened', () => {
+    const clearError = jest.fn();
+    renderWorkspace({
+      questions: [
+        question(),
+        question({id: 2, questionName: 'MVC frameworks'}),
+      ],
+      error: 'stem cannot be blank',
+      clearError,
+    });
+
+    fireEvent.click(screen.getAllByRole('button', {name: 'Edit question'})[0]);
+    expect(clearError).toHaveBeenCalledTimes(1);
+
+    // Only the second card's button is still labeled "Edit question" - the
+    // first one now reads "Collapse question" since it's expanded.
+    fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
+    expect(clearError).toHaveBeenCalledTimes(2);
   });
 
   it('collapses the previously expanded question when another is opened', () => {

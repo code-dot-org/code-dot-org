@@ -116,6 +116,29 @@ describe('useQuizBuilderQuestions', () => {
     expect(result.current.questions.map(q => q.id)).toEqual([7]);
   });
 
+  it('clearError resets the error to null', async () => {
+    postSpy.mockRejectedValue(
+      new NetworkError('400 Bad Request', {
+        json: async () => ({error: 'a specific reason'}),
+      } as Response)
+    );
+
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    await act(async () => {
+      await result.current.createQuestion();
+    });
+    expect(result.current.error).toBe('a specific reason');
+
+    act(() => {
+      result.current.clearError();
+    });
+    expect(result.current.error).toBeNull();
+  });
+
   it('reports a generic error when the load fails', async () => {
     getSpy.mockRejectedValue(new Error('offline'));
 
