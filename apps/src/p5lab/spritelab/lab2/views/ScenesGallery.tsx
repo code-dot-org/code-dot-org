@@ -1,5 +1,4 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Tags from '@code-dot-org/component-library/tags';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
@@ -79,6 +78,9 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
           src={scene.thumbnail}
           className={moduleStyles.sceneTilePicture}
         />
+        {startsHere && (
+          <span className={moduleStyles.sceneStartBadge}>Starts here</span>
+        )}
       </button>
       {/* The image dialog's rename: a pencil beside the name swaps in a
           field with save and cancel. */}
@@ -106,6 +108,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
               variant="text"
               color="tertiary"
               size="small"
+              className={moduleStyles.sceneNameIconButton}
               aria-label="Save name"
               disabled={!draft.trim()}
               onClick={commitRename}
@@ -116,6 +119,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
               variant="text"
               color="tertiary"
               size="small"
+              className={moduleStyles.sceneNameIconButton}
               aria-label="Cancel rename"
               onClick={() => setRenaming(false)}
             >
@@ -130,6 +134,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
                 variant="text"
                 color="tertiary"
                 size="small"
+                className={moduleStyles.sceneNameIconButton}
                 aria-label={`Rename ${scene.name}`}
                 onClick={startRename}
               >
@@ -139,72 +144,58 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
           </>
         )}
       </div>
-      <div className={moduleStyles.sceneCardActions}>
-        {confirming ? (
-          <>
-            <span>Delete this scene?</span>
-            <MuiButton
-              variant="contained"
-              color="error"
-              size="extraSmall"
-              startIcon={<FontAwesomeV6Icon iconName="trash-can" />}
-              onClick={() => onDelete(scene.id)}
-            >
-              Delete
-            </MuiButton>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="extraSmall"
-              onClick={() => setConfirming(false)}
-            >
-              Keep
-            </MuiButton>
-          </>
-        ) : (
-          <>
-            {startsHere ? (
-              <Tags
-                size="s"
-                tagsList={[
-                  {
-                    label: 'Starts here',
-                    icon: {
-                      iconName: 'flag',
-                      iconStyle: 'solid',
-                      placement: 'left',
-                    },
-                    tooltipContent: null,
-                  },
-                ]}
-              />
-            ) : (
-              editable && (
+      {editable && !startsHere && (
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
+          fullWidth
+          onClick={() => onMakeStart(scene.id)}
+        >
+          Start here
+        </MuiButton>
+      )}
+      {editable && deletable && (
+        <div className={moduleStyles.sceneCardFooter}>
+          {confirming ? (
+            <>
+              <span className={moduleStyles.sceneDeleteQuestion}>
+                Delete this scene?
+              </span>
+              <div className={moduleStyles.sceneDeleteChoices}>
+                <MuiButton
+                  variant="contained"
+                  color="error"
+                  size="extraSmall"
+                  fullWidth
+                  onClick={() => onDelete(scene.id)}
+                >
+                  Delete
+                </MuiButton>
                 <MuiButton
                   variant="outlined"
                   color="secondary"
                   size="extraSmall"
-                  startIcon={<FontAwesomeV6Icon iconName="flag" />}
-                  onClick={() => onMakeStart(scene.id)}
+                  fullWidth
+                  onClick={() => setConfirming(false)}
                 >
-                  Start here
+                  Keep
                 </MuiButton>
-              )
-            )}
-            {editable && deletable && (
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="extraSmall"
-                startIcon={<FontAwesomeV6Icon iconName="trash-can" />}
-                onClick={() => setConfirming(true)}
-              >
-                Delete
-              </MuiButton>
-            )}
-          </>
-        )}
-      </div>
+              </div>
+            </>
+          ) : (
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              fullWidth
+              onClick={() => setConfirming(true)}
+            >
+              Delete
+            </MuiButton>
+          )}
+        </div>
+      )}
     </div>
   );
 };
