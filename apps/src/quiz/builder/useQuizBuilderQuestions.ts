@@ -24,9 +24,9 @@ const NEW_QUESTION_DEFAULTS = {
   correctChoiceId: '0',
 };
 
-// Loads a quiz's placed questions and creates new ones. The GET also
-// carries the quiz's configuration fields; those are owned by
-// QuizConfigurationPanel, so this hook reads only `questions`.
+// A hook for managing a quiz's questions.
+// Provides the current state of the quiz's questions, including loading and error states.
+// Also returns functions to create, update, and remove a quiz's questions.
 export default function useQuizBuilderQuestions(
   levelId: number
 ): QuizBuilderQuestionsState {
@@ -76,11 +76,9 @@ export default function useQuizBuilderQuestions(
     }
   }, [levelId]);
 
-  // On success, replaces the edited question in place. Its id may differ
-  // from the one saved - QuizQuestionsController#update forks a question
-  // that's used in a published unit rather than editing it in place, so
-  // the response is the new source of truth for this row, not just a
-  // confirmation of what was sent.
+  // Resolves with the saved question's id, which may differ from the one
+  // passed in - QuizQuestionsController#update forks a question that's
+  // used in a published unit rather than editing it in place.
   const updateQuestion = useCallback(
     async (id: number, payload: QuizQuestionEditableFields) => {
       setError(null);
@@ -95,10 +93,10 @@ export default function useQuizBuilderQuestions(
         setQuestions(prev =>
           prev.map(question => (question.id === id ? updated : question))
         );
-        return true;
+        return updated.id;
       } catch (e) {
         setError(await networkErrorMessage(e));
-        return false;
+        return undefined;
       }
     },
     [levelId]

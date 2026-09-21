@@ -147,9 +147,9 @@ describe('useQuizBuilderQuestions', () => {
       );
       await waitForNextUpdate();
 
-      let succeeded = false;
+      let updatedId;
       await act(async () => {
-        succeeded = await result.current.updateQuestion(7, PAYLOAD);
+        updatedId = await result.current.updateQuestion(7, PAYLOAD);
       });
 
       expect(putSpy).toHaveBeenCalledWith(
@@ -158,11 +158,11 @@ describe('useQuizBuilderQuestions', () => {
         true,
         {'Content-Type': 'application/json'}
       );
-      expect(succeeded).toBe(true);
+      expect(updatedId).toBe(QUESTION.id);
       expect(result.current.questions).toEqual([updated]);
     });
 
-    it('replaces the question by its new id when the server forks it', async () => {
+    it('resolves with the new id and replaces the question by it when the server forks it', async () => {
       const forked = {...QUESTION, ...PAYLOAD, id: 123};
       putSpy.mockResolvedValue({json: async () => forked} as Response);
 
@@ -171,10 +171,12 @@ describe('useQuizBuilderQuestions', () => {
       );
       await waitForNextUpdate();
 
+      let updatedId;
       await act(async () => {
-        await result.current.updateQuestion(7, PAYLOAD);
+        updatedId = await result.current.updateQuestion(7, PAYLOAD);
       });
 
+      expect(updatedId).toBe(123);
       expect(result.current.questions.map(q => q.id)).toEqual([123]);
     });
 
@@ -190,12 +192,12 @@ describe('useQuizBuilderQuestions', () => {
       );
       await waitForNextUpdate();
 
-      let succeeded = true;
+      let updatedId;
       await act(async () => {
-        succeeded = await result.current.updateQuestion(7, PAYLOAD);
+        updatedId = await result.current.updateQuestion(7, PAYLOAD);
       });
 
-      expect(succeeded).toBe(false);
+      expect(updatedId).toBeUndefined();
       expect(result.current.error).toBe('stem cannot be blank');
       expect(result.current.questions).toEqual([QUESTION]);
     });

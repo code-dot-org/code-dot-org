@@ -52,12 +52,15 @@ export interface QuizBuilderQuestionsState {
   // Resolves with the created question's id on success, undefined on
   // failure (with `error` set).
   createQuestion: () => Promise<number | undefined>;
-  // Resolves false (and sets `error`) on failure, leaving `questions`
-  // untouched so a caller can keep showing the user's unsaved edits.
+  // Resolves with the saved question's id on success (see
+  // useQuizBuilderQuestions for why it may differ from `id`). On
+  // failure, resolves undefined (with `error` set) and leaves
+  // `questions` untouched, so a caller can keep showing the user's
+  // unsaved edits.
   updateQuestion: (
     id: number,
     payload: QuizQuestionEditableFields
-  ) => Promise<boolean>;
+  ) => Promise<number | undefined>;
   removeQuestion: (id: number) => Promise<boolean>;
   load: () => Promise<void>;
 }
