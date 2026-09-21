@@ -1,7 +1,6 @@
-// Sizes placeholder blocks (blockDefinitions/placeholder.ts) like the block
-// each stands in for, once a workspace has loaded: the block is built on
-// the workspace, measured and disposed with events off, so nothing paints
-// or saves.
+// Sizes a placeholder block (blockDefinitions/placeholder.ts) like the block
+// it stands in for: that block is built on the workspace, measured and
+// disposed with events off, so nothing paints or saves.
 
 import * as BlocklyCore from 'blockly/core';
 
@@ -35,8 +34,8 @@ function measureBlock(
 }
 
 /** Grow a placeholder's spacer so the block matches its `like`'s size. */
-function sizeLike(block: BlocklyCore.BlockSvg & PlaceholderBlock) {
-  if (!block.like) {
+export function sizeLike(block: BlocklyCore.BlockSvg & PlaceholderBlock) {
+  if (!block.like || block.disposed || !block.workspace.rendered) {
     return;
   }
   const target = measureBlock(block.like, block.workspace);
@@ -64,13 +63,4 @@ function sizeLike(block: BlocklyCore.BlockSvg & PlaceholderBlock) {
     PLACEHOLDER_SPACER_FIELD
   );
   block.render();
-}
-
-/** Size every placeholder on a rendered workspace. */
-export function sizePlaceholders(workspace: BlocklyCore.WorkspaceSvg) {
-  for (const block of workspace.getAllBlocks(false)) {
-    if (block.type === PLACEHOLDER_BLOCK_TYPE) {
-      sizeLike(block as BlocklyCore.BlockSvg & PlaceholderBlock);
-    }
-  }
 }

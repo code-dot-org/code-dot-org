@@ -49,7 +49,6 @@ import {
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
-import {sizePlaceholders} from '../blockly/placeholders';
 import defaultSources from '../defaultSources.json';
 import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {imageTypeFromCategories} from '../imageGallery';
@@ -1446,7 +1445,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeScene.id === pinnedSceneId && levelProperties.starterBlocks) {
       addStarterBlocks(workspace, levelProperties.starterBlocks);
     }
-    sizePlaceholders(workspace);
     runLocalScene(activeScene);
   }, [
     animationsSeeded,

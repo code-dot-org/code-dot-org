@@ -15,6 +15,7 @@ import {
   PLACEHOLDER_CLASS,
   PLACEHOLDER_MUTATOR,
   PLACEHOLDER_OUTLINE_EXTENSION,
+  PlaceholderBlock,
   placeholderMutator,
 } from './blockDefinitions/placeholder';
 import {
@@ -38,6 +39,7 @@ import {
   FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
   MusicProjectDropdown,
 } from './musicProjectDropdown';
+import {sizeLike} from './placeholders';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -104,7 +106,8 @@ let placeholderCount = 0;
 // Blockly draws a shadow with no stroke; the class restores one, dashed
 // (cdoCss.ts), once the block has an SVG to carry it. The path clips its
 // own stroke to its inside, so the dashes never cross the block above.
-// Sizing happens after the workspace loads (placeholders.ts).
+// Sizing waits for a microtask: it builds probe blocks, which must not
+// happen inside the deserialization that is building this one.
 function placeholderOutline(this: BlocklyCore.Block) {
   // Headless blocks (code generation, tests) have no SVG to draw.
   if (!(this instanceof BlocklyCore.BlockSvg)) {
@@ -130,6 +133,9 @@ function placeholderOutline(this: BlocklyCore.Block) {
     );
     BlocklyCore.utils.dom.createSvgElement('use', {href: `#${id}-path`}, clip);
     path.setAttribute('clip-path', `url(#${id})`);
+    queueMicrotask(() =>
+      sizeLike(this as BlocklyCore.BlockSvg & PlaceholderBlock)
+    );
   };
   this.dispose = (...args) => {
     clip?.remove();
