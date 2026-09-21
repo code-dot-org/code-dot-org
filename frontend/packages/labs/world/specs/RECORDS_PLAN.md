@@ -66,6 +66,31 @@ duplicates a project can see.
 
 **Order is kept**, because a list's order is part of what was saved.
 
+## The key is the PROJECT and the name, not the name
+
+Today a memory is filed under `world-lab.memory.<name>` — the name and nothing
+else — on the sandbox origin, which every project that runs there shares.
+specs/SAVING_PLAN.md records that as a known trade: two projects that both save
+as `notes` share one memory on one browser.
+
+That is tolerable while a learner has one project and is a BUG the moment apps
+are shared, which is the point of saving at all: every published app that keeps
+a `score` would be reading and writing the same slot as every other. It has to
+be fixed BEFORE anything is built on top, because changing a key's shape later
+throws away whatever anybody had saved.
+
+**A CHANNEL ID IS THE ANSWER and it already exists.** A project is identified by
+its channel — `/projects/world/<channel>/edit` — and the lab shell already reads
+one (`state.lab.channel?.id`, `progression/lessonRoute`). So the key becomes
+`world-lab.memory.<channel>.<name>`, and the demo host can mint a stable
+per-scenario id the same way it mints scenario tags.
+
+What it costs is a seam, not a mechanism: the channel has to reach the engine
+the way the storage and the clock do — lent by the driver at set-up
+(`World.useStorage`, `World.useClock`), because this half has no notion of a
+project. A world lent no channel files under a shared slot exactly as it does
+now, which is the headless case and is what every test already runs on.
+
 ## What a record holds
 
 **The actor's OWN properties, and nothing else.** A kind's `define property`
@@ -86,6 +111,74 @@ wants a remembered place declares one.
 and across two runs there is nothing for it to point at. `loadMap` resolves a
 reference in a second pass because both ends are in the same map; two runs are
 not. These are refused rather than stored as something that will not resolve.
+
+## A record with no place
+
+A record that is a row on screen is an actor and wants to be drawn. A record
+that is a saved game, a table of levels or a set of enemy stats is an actor
+and wants to be nowhere at all — and today every actor is somewhere, because
+the engine SEEDS `Can Be Positioned` and `Has Appearance` onto all of them
+(`ActorBuilder`, FOUNDATION_TRAITS).
+
+That seeding was deliberate and the reason is on the record: without it, an
+actor with a forgotten `use trait` row existed and could not be seen, and
+`renderSnapshot` skipping it looked like a bug rather than a decision. The
+mechanism being asked for here is exactly the one that was taken away — an
+actor with no positional trait is not drawn, is not in the spatial index, is
+not hit-tested and is walked by no step that asks for positioned actors.
+
+**So it comes back as a DECLARATION rather than as an omission.** A kind says:
+
+    define actor Note
+      is data
+      define property words   text
+      define property boolean done
+
+`is data` suppresses the seeding for that kind. The accident case stays fixed,
+because forgetting a row still gives you a normal actor; only saying so gives
+you one with no place. It names the INTENT rather than the mechanism, which is
+the choice worth defending — "has no place" describes what the engine does and
+leaves a learner to work out why they would want it.
+
+Everything else about such an actor is unchanged. It has own properties, it
+has an age, it raises and hears events, it runs its own steps, and it is in
+`all actors` and `filter actors where …` — which is how a project finds its
+records at all. It is a live object; it is simply not a LOCATED one.
+
+## One mechanism, not two
+
+An earlier draft of this split it: records you SHOW are actors, values you
+merely KEEP are key/value entries. `is data` dissolves that. Records are
+actors, drawn or not, and the same `remember every ⟨Note⟩` saves both — which
+is the argument for the whole design, because the list example and the saved
+game stop being different features.
+
+A saved game, then, is data actors holding what the level knows plus the
+world's own properties, and it is written with the blocks an app already uses.
+
+The key/value store over the lab's value types is still worth having for
+single named values — a score, a preference, a last-opened date — but it is
+now a CONVENIENCE beside this rather than the other half of it, and should be
+judged on its own. Much of what it would carry, a world's own properties and
+`save what the world remembers` already carry.
+
+## Where a project authors one
+
+A map is a canvas of positions and a data actor has none, so it cannot be
+placed. But a project will want to author some — three starting todos, a table
+of levels — and the map is where a project's authored content lives.
+
+So the map editor grows **a list beside the canvas** of what this map holds
+that is not anywhere: the same inspector, the same delete, no drag and no
+handles. In the file they are placements like any other, minus the position —
+which the format allows, since a placement's `positional.position` is an
+override and a data kind has nothing to override.
+
+This is the piece with the most unknown in it. Everything that assumes an
+actor has a transform has to tolerate one that does not: the map editor's
+`worldTransformOf`, the preview reader, the hit test, the layer panel.
+`renderSnapshot` already skips them, which is a good sign — that path was
+written when this was the ordinary case.
 
 ## What it costs
 
@@ -120,6 +213,10 @@ in a Scroll View, remembered by kind.
 - **Actors the MAP placed.** `bring back` makes new actors; it does not
   reconcile with what a map already put there. A project saving a kind it also
   places in a map will get both, and should place none.
+- **A record that is sometimes shown.** A high-score table behind a menu is
+  either data actors that a screen reads to build rows, or row actors removed
+  when the screen closes. Both work and neither is blessed; `is data` is what
+  makes the first possible at all.
 - **No schema, no versioning, no migration.** Consistent with what saving
   already promises: a saved shape that changes is one a learner clears.
 - **No query.** There is no "the notes where `done` is false" — that is
