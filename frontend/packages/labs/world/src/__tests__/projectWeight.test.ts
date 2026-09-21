@@ -56,9 +56,16 @@ describe('what a new project weighs', () => {
     // rules that held nothing but properties have become declarations in the
     // actors that draw them, so a project carries a little more of itself and
     // a great deal less of the library (specs/UI_ACTORS.md).
+    //
+    // The last three kilobytes are THEMING: every interface kind elects `Has
+    // a Style` and says `use style` before each thing it paints, which is
+    // what lets one file decide how the whole kit looks and what lets one
+    // placement be the dangerous button (specs/STYLES_PLAN.md). Three
+    // kilobytes for that is a bargain; the ceiling moves and the reason is
+    // written down, which is what this test is for.
     const whole = bytes(JSON.stringify(DEFAULT_PROJECT.source));
 
-    expect(whole).toBeLessThan(90_000);
+    expect(whole).toBeLessThan(100_000);
   });
 
   it('is dominated by the game, which is the inversion', () => {

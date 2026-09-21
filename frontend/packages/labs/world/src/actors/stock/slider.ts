@@ -234,6 +234,10 @@ export const sliderActor = actorFile(
     // Bar, which has no box of its own, so this is the one other kind that
     // says it itself (specs/BOXES_PLAN.md).
     useTrait('Boxed#HasABoxTrait'),
+    // …and which theme it is painted out of, when it is not the world's
+    // (specs/STYLES_PLAN.md). Elected by the same kinds for the same reason:
+    // an inspector cannot ask a Coin what its theme is.
+    useTrait('Styled#HasAStyleTrait'),
     setBox('Width', WIDTH),
     setBox('Height', HEIGHT),
     defineEvent('changed'),
@@ -300,7 +304,7 @@ export const sliderActor = actorFile(
           noFill(),
           outline(swatch(LOOK.focus), RING_WIDTH),
           corner(ringRadius(RADIUS_BAR)),
-          useStyle('focus ring'),
+          useStyle('ring'),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

@@ -63,17 +63,27 @@ export const modernStyle = JSON.stringify(
       'ring radius': ringRadius(RADIUS),
     },
     styles: {
-      // A sheet things sit ON.
+      // WHAT A CONTROL IS. Five classes cover every shape the kit paints;
+      // everything below them is a part that any of the five may wear.
+      //
+      // The Button is borderless and RAISED, which is the pair Classic turns
+      // inside out — it has an edge and casts nothing. That pair is the whole
+      // reason a class holds a bundle rather than a colour.
+      button: {
+        fill: '$accent',
+        stroke: null,
+        corner: '$radius',
+        shadow: cast(SHADOW),
+      },
+      // A sheet things sit ON: a Panel, a Dropdown's face, a List's face.
       surface: {
         fill: '$surface',
         stroke: '$surface edge',
         strokeWidth: '$border',
         corner: '$radius',
         shadow: null,
-        weight: 'normal',
       },
-      'surface edge': {stroke: '$surface edge', strokeWidth: '$border'},
-      // A recess things sit IN — a Viewport, a Scroll View, a Speech Box.
+      // A recess things sit IN: a Viewport, a Scroll View.
       well: {
         fill: '$well',
         stroke: '$surface edge',
@@ -81,17 +91,16 @@ export const modernStyle = JSON.stringify(
         corner: '$radius tight',
         shadow: null,
       },
-      // A sheet that is OVER the page rather than in it — a Speech Box. The
-      // pair `well`/`floating` is the one distinction the kit needs that
-      // colour alone cannot carry: both are dark recesses, and only one of
-      // them is in front of the scene.
+      // A sheet OVER the page: a Speech Box, an open menu. The one
+      // distinction colour alone cannot carry — a Viewport is the same dark
+      // and is part of the page.
       floating: {
-        fill: '$well',
+        fill: '$surface raised',
         stroke: null,
         corner: '$radius',
         shadow: cast(SHADOW_OVER),
       },
-      // …and a well you may put a caret in.
+      // …and one you may put a caret in.
       field: {
         fill: '$field',
         stroke: '$surface edge',
@@ -99,45 +108,34 @@ export const modernStyle = JSON.stringify(
         corner: '$radius tight',
         shadow: null,
       },
-      // The one colour that means "press this". BORDERLESS AND RAISED, which
-      // is the pair Classic inverts: it has an edge and casts nothing.
-      'button face': {
-        fill: '$accent',
-        stroke: null,
-        corner: '$radius',
-        shadow: cast(SHADOW),
-      },
-      'button caption': {
-        fill: '$ink',
-        stroke: null,
-        shadow: null,
-        weight: 'bold',
-      },
-      // A menu is over the page rather than on it, so it casts further.
-      menu: {
-        fill: '$surface raised',
-        stroke: null,
-        corner: '$radius',
-        shadow: cast(SHADOW_OVER),
-      },
-      'chosen row': {fill: '$accent raised', stroke: null, shadow: null},
-      'pointed row': {fill: '$surface raised', stroke: null, shadow: null},
-      bar: {fill: '$accent', stroke: null, corner: '$radius bar', shadow: null},
-      'bar track': {fill: '$muted', stroke: null, corner: '$radius bar'},
-      knob: {fill: '$ink', stroke: null, shadow: null},
-      'switch on': {fill: '$positive', stroke: null},
-      'switch off': {fill: '$muted', stroke: null},
+
+      // THE PARTS, shared by every control that has them. `caption` is the
+      // one worth arguing about: a Button's words and a Panel's title look
+      // the same here and looked different in the first cut. They can be the
+      // same, because within one theme every surface is dark, so one ink
+      // serves both. A theme that wants two defines a second class and the
+      // drawing names it.
+      caption: {fill: '$ink', stroke: null, shadow: null, weight: 'bold'},
+      hint: {fill: '$muted ink', stroke: null, weight: 'normal'},
       // An outline and nothing else: the pen may be carrying a word's fill,
       // and a filled ring is a rectangle painted over the word.
-      'focus ring': {
+      ring: {
         fill: null,
         stroke: '$focus',
         strokeWidth: '$ring width',
         corner: '$ring radius',
         shadow: null,
       },
-      'wrong edge': {fill: null, stroke: '$danger', strokeWidth: 2},
-      hint: {fill: '$muted ink', stroke: null, weight: 'normal'},
+      track: {fill: '$muted', stroke: null, corner: '$radius bar'},
+      bar: {fill: '$accent', stroke: null, corner: '$radius bar', shadow: null},
+      knob: {fill: '$ink', stroke: null, shadow: null},
+      chosen: {fill: '$accent raised', stroke: null, shadow: null},
+      pointed: {fill: '$surface raised', stroke: null, shadow: null},
+      on: {fill: '$positive', stroke: null},
+      off: {fill: '$muted', stroke: null},
+      wrong: {fill: null, stroke: '$danger', strokeWidth: 2},
+      // Defined, and read by no drawing yet — see `STYLE_ROLES`.
+      pressed: {fill: '$accent raised', shadow: null},
     },
   },
   undefined,

@@ -157,32 +157,34 @@ describe('readDrawing, over the shelf', () => {
     }
   });
 
+  /** The shelf, every stock theme, and a world naming one of them. */
+  const withTheme = (id: string) => ({
+    ...SHELF,
+    ...Object.fromEntries(
+      STOCK_STYLES.map(one => [`styles/${one.id}.style`, one.contents]),
+    ),
+    'worlds/my.world': JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_world',
+            fields: {NAME: 'My World'},
+            next: {
+              block: {
+                type: 'world_use_theme',
+                fields: {THEME: `styles/${id}`},
+              },
+            },
+          },
+        ],
+      },
+    }),
+  });
+
   it('paints the stock kit out of whichever theme the world names', () => {
     // END TO END, through the map editor's own path: the stock Button's own
     // rows, the stock themes, the `use theme` row on a world, and the reader
     // finding it. Nothing here is a fixture — it is the kit a learner gets.
-    const withTheme = (id: string) => ({
-      ...SHELF,
-      'styles/modern.style': STOCK_STYLES[0].contents,
-      'styles/classic.style': STOCK_STYLES[1].contents,
-      'worlds/my.world': JSON.stringify({
-        blocks: {
-          blocks: [
-            {
-              type: 'world_world',
-              fields: {NAME: 'My World'},
-              next: {
-                block: {
-                  type: 'world_use_theme',
-                  fields: {THEME: `styles/${id}`},
-                },
-              },
-            },
-          ],
-        },
-      }),
-    });
-
     const face = (id: string) =>
       rectangles(readDrawing(withTheme(id), 'actors/button')!.commands)[0];
 
@@ -198,6 +200,36 @@ describe('readDrawing, over the shelf', () => {
     // pair that tokens alone could not have expressed.
     expect(face('classic').stroke).toBe('#41403c');
     expect(face('modern')).not.toHaveProperty('stroke');
+  });
+
+  it('lets a MAP override the world, and a placement override the map', () => {
+    // The cascade, through the map editor's own path. Same kind, same
+    // drawing, three answers (specs/STYLES_PLAN.md).
+    const files = withTheme('modern');
+    const fillOf = (drawing: ReturnType<typeof readDrawing>) =>
+      (rectangles(drawing!.commands)[0] as {fill?: string}).fill;
+
+    // The world's.
+    expect(fillOf(readDrawing(files, 'actors/button'))).toBe('#3050a0');
+    // …the map's, which is the argument a caller passes when it has one.
+    expect(
+      fillOf(
+        readDrawing(files, 'actors/button', {}, undefined, 'styles/classic'),
+      ),
+    ).toBe('#d4d0c8');
+    // …and the placement's, which beats both and is read off its overrides.
+    expect(
+      fillOf(
+        readDrawing(
+          files,
+          'actors/button',
+          {hasAStyle: {theme: 'styles/danger'}},
+          undefined,
+          'styles/classic',
+        ),
+      ),
+      // `danger.style` says one class and extends Modern for the rest.
+    ).toBe('#e06c75');
   });
 
   it('draws the kit as it always did when no world names a theme', () => {

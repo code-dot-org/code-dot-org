@@ -710,7 +710,7 @@ export const textInputActor = actorFile(
           // The wrong edge is drawn THICKER as well as red, so that the one
           // thing a form must be able to shout is not said in colour alone.
           outline(swatch(LOOK.danger), BORDER + 1),
-          useStyle('wrong edge'),
+          useStyle('wrong'),
           rectangle(0, 0, width(), height()),
         ]),
         noOutline(),
@@ -723,6 +723,7 @@ export const textInputActor = actorFile(
           useStyle('hint'),
           drawWords(hint(), num(PAD), labelHalf(height())),
         ]),
+        useStyle('caption'),
         fill(textOf('TextColorProperty')),
         // Inset from the left edge, since the words are anchored there — less
         // however far they have slid to keep the caret in view.

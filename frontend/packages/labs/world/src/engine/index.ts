@@ -123,6 +123,8 @@ export type {
 export * from './rules/spatial';
 export * from './rules/animation';
 export * from './rules/boxed';
+// …and which theme it is painted out of (specs/STYLES_PLAN.md).
+export * from './rules/styled';
 export * from './rules/viewport';
 export {Space, ROOT_SPACE_ID} from './core/Space';
 export type {MapLayer, MapSlot} from './core/Layer';

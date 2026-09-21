@@ -99,6 +99,10 @@ const RUNTIME_ONLY: Record<string, string> = {
     '(specs/CLOCK_PLAN.md)',
   timePart: 'the same: it reads the zone the clock was lent with',
   timeText: 'the same again',
+  styleFor:
+    'the same, and more so: it takes the ACTOR, and resolves the actor’s own ' +
+    'theme, then its map’s, then the world’s — none of which a world still ' +
+    'being described has (specs/STYLES_PLAN.md)',
   styleNamed:
     'a drawing ASKS the theme what a role means, and a drawing runs against ' +
     'the live world by definition — a world still being described has ' +

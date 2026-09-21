@@ -1,6 +1,9 @@
 # Plan: styles, tokens, and an interface that looks like one
 
-STATUS: PLANNED. Nothing here is built.
+STATUS: BUILT, and reshaped once after it was. The four steps below are done;
+the section "Reshaped: classes, and a file that cascades" is what a first
+use of it found and is the shape that now stands. The rest is kept as the
+working record — the arguments are still the arguments.
 
 The interface kit works and looks cheap. This is what to do about it, and the
 argument for a shape rather than the first shape that occurred to anybody —
@@ -394,6 +397,137 @@ only "set it to something" could not have written either.
 paints it: a world paints its own background. But a theme that expects a dark
 page and one that expects a light page both look wrong on the other's, and
 neither could say so in a style — so the preview would have had to guess.
+
+## Reshaped: classes, and a file that cascades
+
+Everything above was built and then reshaped, because the first cut named its
+styles after COMPONENTS — `button face`, `button caption`, `menu`, `chosen
+row`. That is eighteen names for six ideas, and it has two consequences that
+only show up once somebody uses it:
+
+- **The vocabulary grows with the kit.** Every new control needs its own
+  `⟨thing⟩ face` and `⟨thing⟩ caption`, and every theme has to define them
+  before that control can be drawn at all.
+- **There is no way to say "this one button is the dangerous one."** The
+  drawing names one style, so every Button in the project draws the same. A
+  variant needed a second KIND, which breaks `any ⟨Button⟩` — the thing this
+  whole plan exists to avoid.
+
+### One axis, three levels
+
+- A `.style` file defines named CLASSES. A class is a set of paint properties.
+- A drawing says `use style ⟨class name⟩` and nothing else. It never names a
+  file, and it never knows which theme it is being drawn under.
+- **Which file is in play cascades**: the main world sets the base, a map may
+  override it, a placement may override that.
+
+So `use style` answers "what is this shape FOR" and the cascade answers "what
+does that look like here". A danger button is a placement pointed at a file
+that says a button is red; nothing about the Button's kind, its drawing or its
+handlers changes, and `any ⟨Button⟩` still finds it.
+
+Each level has a home that already exists:
+
+| Level | Where it is set                                        | Precedent                                        |
+| ----- | ------------------------------------------------------ | ------------------------------------------------ |
+| World | `use theme ⟨styles/modern⟩` under `define world`       | built above                                      |
+| Map   | `theme` on the map document, a field in the map editor | `MapDoc.modal`, a map-level flag with a tick box |
+| Actor | `theme` on the `Has a Style` trait, in the inspector   | `Has a Box`, elected by the same nine kinds      |
+
+Resolution is the actor's own, else the theme of the map that PLACED it, else
+the world's. The engine already knows the middle one: `World.loadOf` is a
+`WeakMap<Actor, MapLoad>` kept so that `canReach` can ask which load an actor
+belongs to (specs/MODALITY_PLAN.md), and a load is made from a map document.
+
+### A class name is a string, deliberately
+
+`use style` offers a dropdown of what the project's files define AND takes
+what is typed, so `use style ⟨my fancy button⟩` is a thing a learner can
+invent and then define. That is a retreat from "a dropdown, never free text"
+and it is a smaller one than it looks: the failure that rule guards against is
+a name resolving to nothing, and a class that resolves to nothing leaves the
+pen exactly as it was — the control is drawn in whatever came before rather
+than vanishing, and the theme keeps the name.
+
+No enum property type is added. An actor's own properties have no closed-set
+type (`blockly/ruleMeta`, PROPERTY_TYPES) and this does not need one: the
+class lives in a block FIELD, which already has a dropdown, and the theme
+lives in a string property the inspector special-cases. An enum property is
+worth having the day a second property wants one.
+
+### A file may extend another
+
+The moment a placement can point at its own file, a file that defines only
+what differs is the obvious thing to want — and without help it does not work:
+a class the file does not define leaves the pen alone, so a `danger.style`
+holding one class would draw the rest of the control in whatever came before.
+The alternative is that every variant is a full copy of the base, which drifts
+the moment the base changes. That is the copy-paste problem again, at the
+scale of a file.
+
+So a file may name one parent:
+
+    {"name": "Danger", "extends": "styles/modern",
+     "styles": {"button": {"fill": "$danger"}}}
+
+**This is not the cascade this document refused.** There are no selectors, no
+specificity and no walking a chain of actors: one named parent, merged once
+when the theme is loaded, class by class and then field by field. A file that
+names none stands alone. It is the same shape as `acts like` for an actor and
+`requires` for a rule, both of which this lab already has, and it is resolved
+the same way — at load, once, with a cycle guarded rather than followed.
+
+### The classes
+
+Named for what a thing IS rather than for which control it belongs to, which
+is what lets one name serve six kinds:
+
+| Class        | What wears it                                           |
+| ------------ | ------------------------------------------------------- |
+| `button`     | a control you press                                     |
+| `surface`    | a sheet things sit on — Panel, Dropdown face, List face |
+| `well`       | a recess things sit in — Viewport, Scroll View          |
+| `floating`   | a sheet over the page — Speech Box, an open menu        |
+| `field`      | something typed into                                    |
+| `caption`    | the words on a control                                  |
+| `hint`       | words that are a prompt rather than an answer           |
+| `ring`       | the focus ring                                          |
+| `track`      | a groove — a bar's, a scrollbar's                       |
+| `bar`        | the filled part of one                                  |
+| `knob`       | the piece that slides                                   |
+| `chosen`     | the row a click would take                              |
+| `pointed`    | the row under the pointer                               |
+| `on` / `off` | a switch's track                                        |
+| `wrong`      | a field that failed                                     |
+| `pressed`    | a control being held                                    |
+
+`caption` is the one worth arguing about, because a Button's words and a
+Panel's title look different in the first cut and the same here. They can be
+the same: within one theme every surface is light or every surface is dark, so
+one ink serves both. Where a theme genuinely wants two, it defines a second
+class and the drawing names it — which is the escape hatch, not the default.
+
+**`pressed` is defined and not read.** Every stock theme names it so the slot
+is there, and no drawing uses it yet: reading it needs `being pressed`, which
+is the Gestures rule's, which means the Button starts pulling a rule granted
+two lessons after it. That is a curriculum decision and not a styling one. The
+day it is made, it is one `if` per control.
+
+### And the caption bug, fixed at the pen
+
+`text color` is a per-instance property defaulting to `#ffffff`, so the row
+that reads it overrode whatever the class set and Classic's dark caption never
+landed — a white caption on a light grey face. Ordering answered this for the
+Progress Bar, where the learner's `bar color` SHOULD win; it is wrong here,
+because `#ffffff` is not a choice anybody made.
+
+An UNSET COLOUR NOW LEAVES THE PEN ALONE. `text color` defaults to empty, and
+`pen.fill('')` keeps whatever the pen was carrying — which is the same
+absent-leaves-alone rule a style field already follows, one level down. No
+branch per control, and the no-theme case is unchanged, because the pen's own
+default fill is `#ffffff`, exactly what the property's default was. Every text
+row is preceded by a `use style`, so there is always a class-provided fill
+underneath it for the empty case to fall through to.
 
 ## What it does not do
 

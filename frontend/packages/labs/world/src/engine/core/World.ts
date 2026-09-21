@@ -4,6 +4,7 @@
 // EventQueue. `tick(delta)` advances the simulation: run every Step in order,
 // then flush the events those steps raised.
 
+import {STYLED} from '../rules/styled';
 import {
   ViewportContentProperty,
   ViewportMapProperty,
@@ -146,6 +147,16 @@ export interface WorldMap {
    * it is put on, and a HUD is never one (specs/MODALITY_PLAN.md).
    */
   modal?: boolean;
+  /**
+   * The theme this map's controls are painted out of, by module path.
+   *
+   * THE MIDDLE OF THREE. A drawing names a class and never a file; which file
+   * cascades — the world sets the base, this overrides it for everything the
+   * map places, and a placement overrides that. A map that says nothing takes
+   * the world's, which is every map written before this
+   * (specs/STYLES_PLAN.md).
+   */
+  theme?: string;
   actors: Array<{
     type: string;
     /** Stable instance id; a random unique one is assigned when omitted. */
@@ -233,16 +244,21 @@ export class MapLoad {
    */
   readonly modal: boolean;
 
+  /** The theme this map named, or empty — see `WorldMap.theme`. */
+  readonly theme: string;
+
   constructor(
     world: World,
     actors: readonly Actor[],
     among: MapLoad[] = [],
     modal = false,
+    theme = '',
   ) {
     this.world = world;
     this.actors = actors;
     this.among = among;
     this.modal = modal;
+    this.theme = theme;
   }
 
   /**
@@ -1238,6 +1254,20 @@ export class World {
   /** …and `scale`, which is the other half of how big a thing is drawn. */
   private scaleProperty(): Property<Vector> | undefined {
     return this.positionalProperty(SPATIAL.scale);
+  }
+
+  /**
+   * The `Has a Style` trait's `theme`, if this world's rules declare it.
+   *
+   * Asked of the RULES rather than imported, exactly as the positional
+   * properties above are: the rule is a foundation one, but a world that
+   * shadowed it with one of its own should be answered from the rule that is
+   * actually in play.
+   */
+  private styleThemeProperty(): Property<string> | undefined {
+    const styled = this.membership.items().find(r => r.id === STYLED.rule);
+    const trait: Trait | undefined = styled?.traits[STYLED.trait];
+    return trait?.properties[STYLED.theme] as Property<string> | undefined;
   }
 
   private positionalProperty(id: string): Property<Vector> | undefined {
@@ -2424,7 +2454,13 @@ export class World {
     // What the map DOES, once everything it placed exists and every reference
     // is followed, so a hat about the Resume button registers on the button
     // and `the ⟨Door⟩` finds the door.
-    const load = new MapLoad(this, added, space.loads, map.modal === true);
+    const load = new MapLoad(
+      this,
+      added,
+      space.loads,
+      map.modal === true,
+      typeof map.theme === 'string' ? map.theme : '',
+    );
     space.loads.push(load);
     for (const actor of added) {
       this.loadOf.set(actor, load);
@@ -2606,15 +2642,88 @@ export class World {
    * A world lent none draws in whatever its routines set for themselves, which
    * is what every world did before this and what every headless test does.
    */
-  useTheme(document: unknown): void {
-    this.theme = resolveTheme(document);
+  useTheme(document: unknown, parentAt?: (path: string) => unknown): void {
+    this.baseTheme = resolveTheme(document, parentAt);
+    this.findTheme = parentAt;
+    this.themeCache = new Map();
   }
 
-  private theme: ResolvedTheme = NO_THEME;
+  private baseTheme: ResolvedTheme = NO_THEME;
+  /**
+   * How to find a theme by path — the same function `useTheme` resolved the
+   * base with, kept because the OTHER two levels are found at draw time: a
+   * map names its theme in its own document, and a placement in a property,
+   * and neither is known when the world is built.
+   */
+  private findTheme: ((path: string) => unknown) | undefined;
+  /**
+   * Resolved themes by path.
+   *
+   * A CACHE BECAUSE A DRAWING ASKS PER SHAPE PER ACTOR PER FRAME. Resolving a
+   * theme walks its parent and every class in both, which is fine once and
+   * absurd sixty times a second. Cleared whenever the base changes, which is
+   * the only time a file can have been reloaded.
+   */
+  private themeCache = new Map<string, ResolvedTheme>();
 
-  /** The theme in play — what it is called, and what it could not resolve. */
+  /** The world's own theme — the base of the cascade. */
   currentTheme(): ResolvedTheme {
-    return this.theme;
+    return this.baseTheme;
+  }
+
+  /** One theme by path, resolved once and kept. */
+  private themeAt(path: string): ResolvedTheme | undefined {
+    if (!path || !this.findTheme) {
+      return undefined;
+    }
+    const known = this.themeCache.get(path);
+    if (known) {
+      return known;
+    }
+    const found = this.findTheme(path);
+    if (found === undefined) {
+      return undefined;
+    }
+    const resolved = resolveTheme(found, this.findTheme, [path]);
+    this.themeCache.set(path, resolved);
+    return resolved;
+  }
+
+  /**
+   * The theme an ACTOR is painted out of: its own, else its map's, else the
+   * world's.
+   *
+   * THREE LEVELS AND NO MORE. The actor's own is a property a placement sets
+   * in the inspector; the map's is a field on the map document; the world's
+   * is the `use theme` row. Each is a whole FILE rather than a class, which
+   * is what keeps the drawings out of it — a drawing names a class and never
+   * learns which file answered (specs/STYLES_PLAN.md).
+   *
+   * `loadOf` is what makes the middle one possible, and it was already there:
+   * the world keeps which load placed each actor so `canReach` can ask
+   * (specs/MODALITY_PLAN.md).
+   */
+  themeFor(actor: Actor): ResolvedTheme {
+    // ASKED WHETHER IT HAS ONE, not assumed. `use style` is a pen block and
+    // any drawing may write it, including one on an actor that never elected
+    // `Has a Style` — a project's own Scoreboard, a learner's first drawing.
+    // Reading a property an actor does not carry THROWS (`Traited.get`), and
+    // it would throw inside a drawing routine, sixty times a second, on an
+    // actor whose only mistake was not opting into a trait it does not need.
+    // An actor with no theme of its own simply takes its map's.
+    const property = this.styleThemeProperty();
+    const own =
+      property && actor.hasProperty(property) ? actor.get(property) : '';
+    return (
+      (typeof own === 'string' ? this.themeAt(own) : undefined) ??
+      this.themeAt(this.loadOf.get(actor)?.theme ?? '') ??
+      this.baseTheme
+    );
+  }
+
+  /** One class, for this actor, or nothing — what `use style` generates. */
+  styleFor(actor: Actor, name: string): ResolvedStyle | undefined {
+    return this.themeFor(actor).styles.get(name);
   }
 
   /**
@@ -2626,7 +2735,7 @@ export class World {
    * is worth reporting, not worth guessing at.
    */
   styleNamed(name: string): ResolvedStyle | undefined {
-    return this.theme.styles.get(name);
+    return this.baseTheme.styles.get(name);
   }
 
   /**

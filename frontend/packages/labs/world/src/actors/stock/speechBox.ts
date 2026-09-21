@@ -124,6 +124,7 @@ export const speechBoxActor = actorFile(
         // The edge belongs to the panel and not to the letters: a stroked
         // sentence at this size is a smudge.
         noOutline(),
+        useStyle('caption'),
         fill(textOf('TextColorProperty')),
         // Inset from the box it is given, rather than from the size this file
         // happens to name: a wider box is a wider column.

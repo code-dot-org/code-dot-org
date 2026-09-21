@@ -36,9 +36,10 @@ import {
   fill,
   me,
   setText,
-  useTrait,
   showAs,
   textOf,
+  useStyle,
+  useTrait,
   words,
 } from './workspace';
 
@@ -96,7 +97,16 @@ export const LABEL_PROPERTIES = [
   // score anchored left grows to the right and off the screen.
   defineProperty('string', 'text', ''),
   defineProperty('number', 'text size', '12'),
-  defineProperty('color', 'text color', '#ffffff'),
+  // EMPTY, NOT WHITE, and the difference is the whole of how a theme reaches
+  // a caption. `#ffffff` is not a choice anybody made, and the row that reads
+  // this property overrode whatever the actor's class had just set — so a
+  // Classic button drew a white caption on a light grey face. An unset colour
+  // now leaves the pen as it was (`CommandPen.fill`), and every text row is
+  // preceded by its `use style`, so what it falls through to is the class.
+  //
+  // A project with NO theme is unchanged: the pen's own default fill is
+  // `#ffffff`, which is exactly what this default used to be.
+  defineProperty('color', 'text color', ''),
   defineProperty('string', 'text anchor', 'center'),
 ];
 
@@ -117,6 +127,10 @@ export const labelActor = actorFile(
     // kinds that act like a Label get it without each saying so
     // (specs/BOXES_PLAN.md).
     useTrait('Boxed#HasABoxTrait'),
+    // …and which theme it is painted out of, when it is not the world's
+    // (specs/STYLES_PLAN.md). Elected by the same kinds for the same reason:
+    // an inspector cannot ask a Coin what its theme is.
+    useTrait('Styled#HasAStyleTrait'),
     setBox('Width', WIDTH),
     setBox('Height', HEIGHT),
     showAs('text'),
@@ -129,6 +143,7 @@ export const labelActor = actorFile(
       width: labelSizeOf('Width'),
       height: labelSizeOf('Height'),
       commands: [
+        useStyle('caption'),
         fill(textOf('TextColorProperty')),
         // The column is the whole box, so the words wrap where the box ends.
         drawParagraph(

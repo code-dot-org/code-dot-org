@@ -48,15 +48,28 @@ export const classicStyle = JSON.stringify(
       'ring radius': 0,
     },
     styles: {
+      // THE SAME FIVE CLASSES, turned inside out. Nothing in any drawing
+      // changes between this file and Modern; what changes is four numbers
+      // and whether the shadows are there — which is the claim the two of
+      // them exist to make (specs/STYLES_PLAN.md).
+      //
+      // The Button has an EDGE and casts NOTHING, where Modern's is
+      // borderless and raised. That pair is the case a token could not
+      // express: a drawing composing its own look would have needed a branch.
+      button: {
+        fill: '$surface',
+        stroke: '$surface edge',
+        strokeWidth: '$border',
+        corner: '$radius',
+        shadow: null,
+      },
       surface: {
         fill: '$surface',
         stroke: '$surface edge',
         strokeWidth: '$border',
         corner: '$radius',
         shadow: null,
-        weight: 'normal',
       },
-      'surface edge': {stroke: '$surface edge', strokeWidth: '$border'},
       well: {
         fill: '$well',
         stroke: '$surface edge',
@@ -65,7 +78,7 @@ export const classicStyle = JSON.stringify(
         shadow: null,
       },
       floating: {
-        fill: '$surface',
+        fill: '$surface raised',
         stroke: '$surface edge',
         strokeWidth: '$border',
         corner: '$radius',
@@ -78,50 +91,36 @@ export const classicStyle = JSON.stringify(
         corner: '$radius tight',
         shadow: null,
       },
-      // AN EDGE AND NO SHADOW, which is Modern's button turned inside out.
-      'button face': {
-        fill: '$surface',
-        stroke: '$surface edge',
-        strokeWidth: '$border',
-        corner: '$radius',
-        shadow: null,
-      },
-      // …and its caption is INK on that surface rather than white on accent,
-      // which is the other half of the same inversion.
-      'button caption': {
-        fill: '$ink',
-        stroke: null,
-        shadow: null,
-        weight: 'normal',
-      },
-      menu: {
-        fill: '$surface raised',
-        stroke: '$surface edge',
-        strokeWidth: '$border',
-        corner: '$radius',
-        shadow: null,
-      },
-      'chosen row': {fill: '$accent raised', stroke: null, shadow: null},
-      'pointed row': {fill: '$surface raised', stroke: null, shadow: null},
-      bar: {fill: '$accent', stroke: null, corner: '$radius bar', shadow: null},
-      'bar track': {fill: '$muted', stroke: null, corner: '$radius bar'},
-      knob: {
-        fill: '$surface raised',
-        stroke: '$surface edge',
-        strokeWidth: 1,
-        shadow: null,
-      },
-      'switch on': {fill: '$positive', stroke: null},
-      'switch off': {fill: '$muted', stroke: null},
-      'focus ring': {
+
+      // …and the parts. The caption is INK on a light surface rather than
+      // white on accent, and NOT bold — the other half of the inversion, and
+      // the case that found the bug this reshape fixed: `text color` used to
+      // override this and a white caption sat on a light grey face.
+      caption: {fill: '$ink', stroke: null, shadow: null, weight: 'normal'},
+      hint: {fill: '$muted ink', stroke: null, weight: 'normal'},
+      ring: {
         fill: null,
         stroke: '$focus',
         strokeWidth: '$ring width',
         corner: '$ring radius',
         shadow: null,
       },
-      'wrong edge': {fill: null, stroke: '$danger', strokeWidth: 2},
-      hint: {fill: '$muted ink', stroke: null, weight: 'normal'},
+      track: {fill: '$muted', stroke: null, corner: '$radius bar'},
+      bar: {fill: '$accent', stroke: null, corner: '$radius bar', shadow: null},
+      knob: {
+        fill: '$surface raised',
+        stroke: '$surface edge',
+        strokeWidth: 1,
+        shadow: null,
+      },
+      chosen: {fill: '$accent raised', stroke: null, shadow: null},
+      pointed: {fill: '$surface raised', stroke: null, shadow: null},
+      on: {fill: '$positive', stroke: null},
+      off: {fill: '$muted', stroke: null},
+      wrong: {fill: null, stroke: '$danger', strokeWidth: 2},
+      // A pressed control on a flat interface goes DARKER, where a raised one
+      // would sink. Defined and read by no drawing yet — see `STYLE_ROLES`.
+      pressed: {fill: '$muted', shadow: null},
     },
   },
   undefined,

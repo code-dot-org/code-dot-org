@@ -164,12 +164,13 @@ describe('the pen', () => {
     );
   });
 
-  it('looks a style up in the WORLD, which is what makes a theme swappable', () => {
-    // The drawing names a role; which file that role means is the world's to
-    // say (`use theme`). So the generated call reaches for `world`, which a
-    // drawing's closure binds alongside the pen (specs/STYLES_PLAN.md).
-    expect(codeFor('world_pen_style', {fields: {STYLE: 'button face'}})).toBe(
-      'pen.useStyle(world.styleNamed("button face"));\n',
+  it('looks a class up FOR THIS ACTOR, which is what makes a theme cascade', () => {
+    // The drawing names a class and never a file. Which file that class is
+    // looked up in is the actor's own theme, else its map's, else the
+    // world's — so the call takes the ACTOR, which a drawing's closure binds
+    // alongside the pen (specs/STYLES_PLAN.md).
+    expect(codeFor('world_pen_style', {fields: {STYLE: 'button'}})).toBe(
+      'pen.useStyle(world.styleFor(actor, "button"));\n',
     );
   });
 

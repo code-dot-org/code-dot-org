@@ -26,6 +26,7 @@ describe('the foundation', () => {
       'animation',
       'boxed',
       'spatial',
+      'styled',
       'viewport',
     ]);
   });
@@ -78,6 +79,7 @@ describe('the foundation', () => {
       'animation',
       'boxed',
       'spatial',
+      'styled',
       'viewport',
     ]);
   });
@@ -95,6 +97,7 @@ describe('the foundation', () => {
       'animation',
       'boxed',
       'spatial',
+      'styled',
       'viewport',
     ]);
     // The seeded one has a step; this one has none, so the step list says which

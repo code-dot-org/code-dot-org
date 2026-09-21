@@ -122,6 +122,10 @@ export const imageActor = actorFile('Image', [
   // to say this itself.
   showAs('image'),
   useTrait('Boxed#HasABoxTrait'),
+  // …and which theme it is painted out of, when it is not the world's
+  // (specs/STYLES_PLAN.md). Elected by the same kinds for the same reason:
+  // an inspector cannot ask a Coin what its theme is.
+  useTrait('Styled#HasAStyleTrait'),
   setBox('Width', WIDTH),
   setBox('Height', HEIGHT),
   // A picture to start with, so an Image placed in the map editor is

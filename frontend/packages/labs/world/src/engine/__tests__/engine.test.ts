@@ -725,6 +725,7 @@ describe('snapshot + setWorldProperty (hot-reload support)', () => {
       'gravity',
       'motion',
       'spatial',
+      'styled',
       'viewport',
     ]);
     expect(snap.actorIds).toEqual(['ground', 'player']);

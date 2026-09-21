@@ -87,6 +87,7 @@ export const panelActor = actorFile(
         rectangle(0, 0, width(), height()),
         // The edge belongs to the face, not to the caption.
         noOutline(),
+        useStyle('caption'),
         fill(textOf('TextColorProperty')),
         drawParagraph(labelHalf(width()), labelHalf(height()), width()),
       ],

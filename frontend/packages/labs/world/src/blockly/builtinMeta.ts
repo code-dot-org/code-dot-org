@@ -9,7 +9,13 @@
 // in step with the engine — add a rule, or a member, and its blocks follow.
 
 import * as WorldLab from '../engine';
-import {AnimationRule, BoxedRule, SpatialRule, ViewportRule} from '../engine';
+import {
+  AnimationRule,
+  BoxedRule,
+  SpatialRule,
+  StyledRule,
+  ViewportRule,
+} from '../engine';
 
 import {builtinRuleMeta, type RuleMeta} from './ruleMeta';
 import {registerBuiltinRules} from './ruleRegistry';
@@ -44,6 +50,11 @@ export const BUILTIN_RULES = [
   // resize handle writes. A rule rather than a Label to act like, because nine
   // kinds mean the same thing by it (specs/BOXES_PLAN.md).
   BoxedRule,
+  // …and which theme an actor is painted out of. A `use trait` row naming a
+  // rule that is not on this list resolves to nothing and elects nothing,
+  // silently — which is the bug the guard in `stockActors.test` exists for,
+  // and which it caught on this rule's first day (specs/BOXES_PLAN.md).
+  StyledRule,
 ];
 
 export const BUILTIN_RULE_META: RuleMeta[] = builtinRuleMeta(

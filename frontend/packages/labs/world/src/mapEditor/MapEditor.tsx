@@ -26,6 +26,7 @@ import {placementKey} from '../blockly/mapPlacements';
 import {fileIdForModule} from '../blockly/openModule';
 import {
   projectActorOptions,
+  projectStyleFileOptions,
   projectMapActorTypes,
   projectWorldOptions,
 } from '../blockly/projectModules';
@@ -126,6 +127,9 @@ export const MapEditor = ({
     [currentSources],
   );
   const actorOptions = useMemo(() => projectActorOptions(files), [files]);
+  // The project's themes, for the map's own choice and for each placement's
+  // (specs/STYLES_PLAN.md).
+  const themeOptions = useMemo(() => projectStyleFileOptions(files), [files]);
 
   /**
    * The kinds with a file of their own, and what each calls itself — what
@@ -619,6 +623,31 @@ export const MapEditor = ({
           />
           <span className={styles.sizeLabel}>Covers what is under it</span>
         </label>
+        {/*
+          …AND WHAT IT IS PAINTED OUT OF, which is the other fact about a map
+          that is not about where things are. A drawing names a class and
+          never a file; this says which file, for everything the map places.
+          Empty takes the world's (specs/STYLES_PLAN.md).
+        */}
+        <label className={styles.sizeField}>
+          <span className={styles.sizeLabel}>Theme</span>
+          <select
+            name="map-theme"
+            className={styles.mapTheme}
+            value={map.theme ?? ''}
+            disabled={isReadOnly}
+            onChange={event =>
+              commit({...map, theme: event.target.value || undefined})
+            }
+          >
+            <option value="">(the world’s)</option>
+            {themeOptions.map(([label, path]) => (
+              <option key={path} value={path}>
+                {label}
+              </option>
+            ))}
+          </select>
+        </label>
         {actorOptions.map(([name, path]) => (
           <button
             key={path}
@@ -707,6 +736,7 @@ export const MapEditor = ({
         thumbnails={thumbnails}
         pictures={shown.pictures}
         schemas={shownSchemas}
+        themeOptions={themeOptions}
         sizes={shown.sizes}
         placementSizes={shown.placementSizes}
         scales={scales}

@@ -60,7 +60,7 @@ describe('the theme editor', () => {
   it('says what a style field points at, and can repoint it', () => {
     const onChange = vi.fn();
     render(<StyleFileEditor {...props({onChange})} />);
-    fireEvent.click(screen.getByRole('button', {name: 'button face'}));
+    fireEvent.click(screen.getByRole('button', {name: 'button'}));
     // The label is VISIBLE rather than an aria-label: the form fields are the
     // component library's, which draw the label they are named by.
     const source = screen.getByLabelText('Fill') as HTMLSelectElement;
@@ -68,7 +68,7 @@ describe('the theme editor', () => {
     // recolouring from meaning "edit four styles".
     expect(source.value).toBe('$accent');
     fireEvent.change(source, {target: {value: '$positive'}});
-    expect(written(onChange).styles['button face'].fill).toBe('$positive');
+    expect(written(onChange).styles.button.fill).toBe('$positive');
   });
 
   it('can say "leave alone" and "none", which are different answers', () => {
@@ -76,14 +76,14 @@ describe('the theme editor', () => {
     // as it was, null clears it (`engine/core/theme`).
     const onChange = vi.fn();
     render(<StyleFileEditor {...props({onChange})} />);
-    fireEvent.click(screen.getByRole('button', {name: 'button face'}));
+    fireEvent.click(screen.getByRole('button', {name: 'button'}));
     const source = screen.getByLabelText('Fill');
 
     fireEvent.change(source, {target: {value: 'unset'}});
-    expect('fill' in written(onChange).styles['button face']).toBe(false);
+    expect('fill' in written(onChange).styles.button).toBe(false);
 
     fireEvent.change(source, {target: {value: 'none'}});
-    expect(written(onChange).styles['button face'].fill).toBeNull();
+    expect(written(onChange).styles.button.fill).toBeNull();
   });
 
   it('shows the file rather than replacing it when it will not parse', () => {

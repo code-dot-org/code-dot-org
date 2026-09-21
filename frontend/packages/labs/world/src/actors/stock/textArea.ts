@@ -374,6 +374,7 @@ export const textAreaActor = actorFile(
         useStyle('field'),
         rectangle(0, 0, width(), height()),
         noOutline(),
+        useStyle('caption'),
         fill(textOf('TextColorProperty')),
         // From the corner, breaking on newlines only: a column of zero is
         // `draw paragraph`'s "do not wrap".

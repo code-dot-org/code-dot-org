@@ -143,6 +143,7 @@ export const toggleActor = actorFile(
       commands: [
         // The caption, in the Label's own words and colour.
         noOutline(),
+        useStyle('caption'),
         fill(textOf('TextColorProperty')),
         drawParagraph(
           num(4),
@@ -156,8 +157,8 @@ export const toggleActor = actorFile(
         corner(TRACK_HEIGHT / 2),
         either(
           on(),
-          [fill(swatch(LOOK.positive)), useStyle('switch on')],
-          [fill(swatch(LOOK.muted)), useStyle('switch off')],
+          [fill(swatch(LOOK.positive)), useStyle('on')],
+          [fill(swatch(LOOK.muted)), useStyle('off')],
         ),
         rectangle(
           less(width(), TRACK_WIDTH + 2),
@@ -185,7 +186,7 @@ export const toggleActor = actorFile(
           noFill(),
           outline(swatch(LOOK.focus), RING_WIDTH),
           corner(ringRadius(RADIUS)),
-          useStyle('focus ring'),
+          useStyle('ring'),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

@@ -9434,7 +9434,11 @@ const worldPenStyle = defineBlock({
       const name = block.getFieldValue('STYLE');
       // A project with no themes yet emits nothing rather than a lookup of
       // the empty name, which would quietly set nothing every frame.
-      return name ? `pen.useStyle(world.styleNamed(${str(name)}));\n` : '';
+      // FOR THIS ACTOR, not for the world. Which file the class is looked up
+      // in cascades — the actor's own theme, else its map's, else the
+      // world's — and a drawing is handed the actor, so the whole of that
+      // question is answered by one call (specs/STYLES_PLAN.md).
+      return name ? `pen.useStyle(world.styleFor(actor, ${str(name)}));\n` : '';
     },
   },
 });

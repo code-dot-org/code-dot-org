@@ -53,6 +53,7 @@ import {World, type WorldMap} from '../core/World';
 import {AnimationRule} from '../rules/animation';
 import {BoxedRule} from '../rules/boxed';
 import {SpatialRule} from '../rules/spatial';
+import {StyledRule} from '../rules/styled';
 import {ViewportRule} from '../rules/viewport';
 
 import type {ActorBuilder} from './ActorBuilder';
@@ -71,6 +72,10 @@ const FOUNDATION_RULES: readonly Rule[] = [
   // the map editor must be able to ask about without knowing what it is
   // looking at (specs/BOXES_PLAN.md).
   BoxedRule,
+  // …and which theme an actor is painted out of, for the same reason: an
+  // inspector cannot ask whether a project imported the rule that lets one
+  // button be the red one (specs/STYLES_PLAN.md).
+  StyledRule,
 ];
 
 // A Map — the data a level is — is the World's now, because loading one is

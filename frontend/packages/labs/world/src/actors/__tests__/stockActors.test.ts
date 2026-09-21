@@ -166,7 +166,13 @@ describe('every stock actor', () => {
     // …and Viewport, the third of them (specs/VIEWPORT_PLAN.md); and Boxed,
     // the fourth, which is a width and a height and which every interface
     // actor elects (specs/BOXES_PLAN.md).
-    const foundation = new Set(['Space', 'Appearance', 'Viewport', 'Boxed']);
+    const foundation = new Set([
+      'Space',
+      'Appearance',
+      'Viewport',
+      'Boxed',
+      'Styled',
+    ]);
     for (const actor of STOCK_ACTORS) {
       const elected = [...actor.contents.matchAll(/"TRAIT": "([^#]+)#/g)]
         .map(match => slug(match[1]))
@@ -307,10 +313,16 @@ describe('Progress Bar', () => {
     // because nobody else means anything by it, and a width is everybody's
     // (specs/BOXES_PLAN.md). What it must NOT have is a rule holding its
     // three numbers, which is what this is really about.
+    // TWO ELECTIONS AND NO MORE: a box and a theme, both shared by every
+    // interface kind and neither of them the bar's own. `fraction` and the
+    // two colours are declared right here, which is the point — a rule that
+    // only held properties was deleted for being neither a file nor a
+    // behaviour (specs/UI_ACTORS.md).
     expect(
       types(progressBarActor).filter(one => one === 'world_use_trait'),
-    ).toHaveLength(1);
+    ).toHaveLength(2);
     expect(progressBarActor).toContain('Boxed#HasABoxTrait');
+    expect(progressBarActor).toContain('Styled#HasAStyleTrait');
     expect(
       parseActorOwnMeta('actors/progressBar', progressBarActor)?.properties.map(
         property => property.id,

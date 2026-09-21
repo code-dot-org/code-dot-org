@@ -248,8 +248,33 @@ export class CommandPen implements Pen {
   // command carries the paint it was drawn with — so the command list, which
   // is also the cache key, should hold one spelling of a color rather than
   // two spellings of the same one.
+  /**
+   * AN UNSET COLOUR LEAVES WHAT THE PEN HAD, which is the third state a colour
+   * needs and did not have.
+   *
+   * `text color` is a per-instance property, so a Button's caption reads it —
+   * and its default was `#ffffff`, which is not a choice anybody made and
+   * which overrode whatever the actor's style had just set. Classic's dark
+   * caption therefore never landed, and a white caption sat on a light grey
+   * face (specs/STYLES_PLAN.md).
+   *
+   * So that default is now EMPTY, and painting with an empty colour keeps
+   * what was there. It is the same absent-leaves-alone rule a style field
+   * already follows, one level down, and it needs no branch in any drawing:
+   * every text row is preceded by its `use style`, so there is always a
+   * class-provided fill underneath. A project with no theme is unchanged,
+   * because the pen's own default fill is `#ffffff` — exactly what the
+   * property's default was.
+   *
+   * `no fill` remains how a drawing says NONE. Empty is "I have no opinion";
+   * none is an opinion.
+   */
   fill(color: ColorValue): void {
-    this.currentFill = cssColor(color);
+    const settled = cssColor(color);
+    if (settled === '') {
+      return;
+    }
+    this.currentFill = settled;
   }
 
   outline(color: ColorValue, width: number): void {

@@ -11,6 +11,7 @@ import {drawingKey, type Pen} from '../core/drawing';
 import {resolveTheme} from '../core/theme';
 import type {World} from '../core/World';
 import {ActorBuilder, PositionProperty, Vector, WorldBuilder} from '../index';
+import {HasAStyleTrait, ThemeProperty} from '../rules/styled';
 
 const MODERN = {
   name: 'Modern',
@@ -100,6 +101,95 @@ describe('reading a theme', () => {
       styles: {face: {fill: '$a'}},
     });
     expect(theme.styles.get('face')!.fill).toBe('$b');
+  });
+});
+
+describe('the cascade', () => {
+  // THE WHOLE POINT OF THE RESHAPE. A drawing names a CLASS and never a file;
+  // which file that class is looked up in is the world's, the map's, or the
+  // placement's — so "this one button is the dangerous one" costs a property
+  // on a placement rather than a second kind (specs/STYLES_PLAN.md).
+  const FILES: Record<string, unknown> = {
+    'styles/base': MODERN,
+    'styles/danger': {
+      extends: 'styles/base',
+      styles: {'button face': {fill: '#b0303a'}},
+    },
+  };
+  const findFile = (path: string) => FILES[path];
+
+  /** A world on the base theme, holding one kind that paints its button. */
+  const worldOnBase = () => {
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const world = builder.getWorld();
+    world.useTheme(MODERN, findFile);
+    return {builder, world};
+  };
+
+  const kind = () =>
+    new ActorBuilder({id: 'a', name: 'A'})
+      .set(PositionProperty, new Vector(0, 0))
+      .useTraits([HasAStyleTrait])
+      .defineDrawing(20, 10, (actor: Actor, pen: Pen, world: World) => {
+        pen.useStyle(world.styleFor(actor, 'button face'));
+        pen.rectangle(0, 0, 20, 10);
+      });
+
+  const fillsOf = (world: World) =>
+    world
+      .renderSnapshot()
+      .map(one => (one.drawing?.commands[0] as {fill?: string})?.fill);
+
+  it('takes the world’s theme when nobody says otherwise', () => {
+    const {builder, world} = worldOnBase();
+    builder.addActor(kind(), 'a', 'label');
+    expect(fillsOf(world)).toEqual(['#3050a0']);
+  });
+
+  it('takes the ACTOR’s own theme over the world’s', () => {
+    const {builder, world} = worldOnBase();
+    builder.addActor(kind().set(ThemeProperty, 'styles/danger'), 'a', 'label');
+    // …and `danger` says only the one class, so `extends` is doing the rest.
+    expect(fillsOf(world)).toEqual(['#b0303a']);
+  });
+
+  it('is two looks in ONE world, from one kind and one drawing', () => {
+    // The case the first cut could not express at all: two Buttons, same
+    // kind, same drawing, same `any ⟨Button⟩` — different files.
+    const {builder, world} = worldOnBase();
+    builder.addActor(kind(), 'plain', 'label');
+    builder.addActor(
+      kind().set(ThemeProperty, 'styles/danger'),
+      'risky',
+      'label',
+    );
+    expect(fillsOf(world).sort()).toEqual(['#3050a0', '#b0303a']);
+  });
+
+  it('falls through a theme that names no such file', () => {
+    // A placement pointing at a theme somebody deleted takes its map's, which
+    // is the world's here — visible and ordinary rather than blank.
+    const {builder, world} = worldOnBase();
+    builder.addActor(kind().set(ThemeProperty, 'styles/gone'), 'a', 'label');
+    expect(fillsOf(world)).toEqual(['#3050a0']);
+  });
+
+  it('leaves an actor that never elected the trait alone', () => {
+    // `use style` is a pen block and ANY drawing may write it, including one
+    // on an actor with no theme of its own. Reading a property an actor does
+    // not carry throws, and it would throw inside a drawing routine.
+    const {builder, world} = worldOnBase();
+    builder.addActor(
+      new ActorBuilder({id: 'b', name: 'B'})
+        .set(PositionProperty, new Vector(0, 0))
+        .defineDrawing(20, 10, (actor: Actor, pen: Pen, other: World) => {
+          pen.useStyle(other.styleFor(actor, 'button face'));
+          pen.rectangle(0, 0, 20, 10);
+        }),
+      'b',
+      'label',
+    );
+    expect(fillsOf(world)).toEqual(['#3050a0']);
   });
 });
 

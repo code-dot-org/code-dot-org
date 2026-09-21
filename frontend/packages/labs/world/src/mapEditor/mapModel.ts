@@ -333,6 +333,18 @@ export interface MapDoc {
    * is every map written before the flag existed and every HUD since.
    */
   modal?: boolean;
+  /**
+   * The theme everything this map places is painted out of, by module path.
+   *
+   * THE MIDDLE OF THREE. A drawing names a class and never a file; which file
+   * cascades — the world sets the base, this overrides it for the map, and a
+   * placement overrides that (specs/STYLES_PLAN.md). Absent takes the
+   * world's, which is every map written before this.
+   *
+   * Beside `modal` because it is the same kind of fact: something true of the
+   * map rather than of any one thing on it, and edited in the same panel.
+   */
+  theme?: string;
   /** The map's own workspace: its events and the map hats, or nothing. */
   blocks?: WorkspaceState;
   /** The map's layers, back to front; absent, the one default. */

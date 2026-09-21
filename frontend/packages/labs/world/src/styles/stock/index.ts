@@ -16,6 +16,7 @@
 // theme and forgotten in the other.
 
 import {classicStyle} from './classic';
+import {dangerStyle} from './danger';
 import {modernStyle} from './modern';
 
 export interface StockStyle {
@@ -29,31 +30,43 @@ export interface StockStyle {
 }
 
 /**
- * The roles a theme must name, which is the vocabulary the kit draws with.
+ * The classes a theme must name, which is the vocabulary the kit draws with.
+ *
+ * NAMED FOR WHAT A THING IS rather than for which control it belongs to,
+ * which is what lets one name serve six kinds. The first cut named them after
+ * components — `button face`, `button caption`, `menu`, `chosen row` — which
+ * is eighteen names for six ideas, grows with the kit, and gives a project no
+ * way to say "this one button is the dangerous one" (specs/STYLES_PLAN.md).
  *
  * Read as a table: a surface is a sheet things sit ON, a well is a recess
- * things sit IN, a field is a well you may put a caret in, and an accent is
- * the one colour that means "this is the thing to press".
+ * things sit IN, a field is a well you may put a caret in, and a floating
+ * sheet is one over the page.
  */
 export const STYLE_ROLES = [
+  // What a control IS.
+  'button',
   'surface',
-  'surface edge',
   'well',
   'floating',
   'field',
-  'button face',
-  'button caption',
-  'menu',
-  'chosen row',
-  'pointed row',
-  'bar',
-  'bar track',
-  'knob',
-  'switch on',
-  'switch off',
-  'focus ring',
-  'wrong edge',
+  // …and the parts every control shares.
+  'caption',
   'hint',
+  'ring',
+  'track',
+  'bar',
+  'knob',
+  'chosen',
+  'pointed',
+  'on',
+  'off',
+  'wrong',
+  // Defined by every theme and read by no drawing yet: a control that looks
+  // pressed needs `being pressed`, which is the Gestures rule's, which means
+  // the Button starts pulling a rule granted two lessons after it. That is a
+  // curriculum decision. The slot is here so that the day it is made, it is
+  // one `if` per control (specs/STYLES_PLAN.md).
+  'pressed',
 ] as const;
 
 export const STOCK_STYLES: readonly StockStyle[] = [
@@ -70,5 +83,12 @@ export const STOCK_STYLES: readonly StockStyle[] = [
     description:
       'Square corners and a visible border on everything, with no shadows. The same controls, drawn the way a desktop program drew them.',
     contents: classicStyle,
+  },
+  {
+    id: 'danger',
+    name: 'Danger',
+    description:
+      'Modern with a red button, as four lines that say only what differs. Point one placement at it in the map editor to make that one button the dangerous one.',
+    contents: dangerStyle,
   },
 ];

@@ -118,7 +118,7 @@ export const progressBarDrawing = (own = 'ActorsProgressBar') => ({
     // keeps whatever colours its own `bar color` and `track color` hold —
     // which is the whole point of their being properties
     // (specs/STYLES_PLAN.md, "The tension to settle").
-    useStyle('bar track'),
+    useStyle('track'),
     // The track first and whole, so what is left of it IS the empty part —
     // there is no second rectangle for "the rest", and none to keep in step.
     fill(progressOf(own, 'TrackColorProperty')),
@@ -157,6 +157,10 @@ export const progressBarActor = actorFile(
     // Bar, the jetpack's fuel — gets it too (`ActorBuilder.actsLike` copies
     // the traits).
     useTrait('Boxed#HasABoxTrait'),
+    // …and which theme it is painted out of, when it is not the world's
+    // (specs/STYLES_PLAN.md). Elected by the same kinds for the same reason:
+    // an inspector cannot ask a Coin what its theme is.
+    useTrait('Styled#HasAStyleTrait'),
     setBox('Width', WIDTH),
     setBox('Height', HEIGHT),
     showAs('bar'),

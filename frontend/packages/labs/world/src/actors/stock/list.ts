@@ -472,7 +472,7 @@ export const listActor = actorFile(
               block: chain([
                 either(compare('EQ', row(), highlighted()), [
                   fill(swatch(LOOK.accentRaised)),
-                  useStyle('chosen row'),
+                  useStyle('chosen'),
                   rectangle(
                     num(0),
                     arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
@@ -480,6 +480,7 @@ export const listActor = actorFile(
                     ROW,
                   ),
                 ]),
+                useStyle('caption'),
                 fill(textOf('TextColorProperty')),
                 drawWords(item(row()), rowMiddle(row())),
               ]),
@@ -491,7 +492,7 @@ export const listActor = actorFile(
           noFill(),
           outline(swatch(LOOK.focus), RING_WIDTH),
           corner(ringRadius(RADIUS)),
-          useStyle('focus ring'),
+          useStyle('ring'),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

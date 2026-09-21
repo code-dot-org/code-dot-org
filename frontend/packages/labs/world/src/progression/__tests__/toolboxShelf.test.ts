@@ -334,7 +334,27 @@ describe('a gated first lesson', () => {
   // says the lesson unlocks the Actor drawer.
   it('is small enough to read', () => {
     const offered = offeredAt('origin/first-world');
-    expect(offered.size).toBeLessThan(20);
+    expect(offered.size).toBeLessThan(24);
+  });
+
+  it('and eleven of what it offers are a FOUNDATION rule’s own blocks', () => {
+    // Which is where the number above actually comes from, and is worth
+    // asserting rather than leaving as a surprise. A rule's own property
+    // blocks are never gated — that is deliberate, and it is what lets a
+    // project reach `set width` on a kind it just gave a box — but the
+    // foundation rules are in play in EVERY world, so their getters and
+    // setters are in play in every lesson, including the one whose detail
+    // pane says it unlocks the Actor drawer.
+    //
+    // Nine before this and eleven after: `Has a Style` is the fourth
+    // foundation trait and it costs two (specs/STYLES_PLAN.md). Nobody chose
+    // that and nothing is broken by it; the day it matters, the fix is to
+    // gate a foundation rule's blocks with the trait that elects them, which
+    // is a curriculum decision rather than a styling one.
+    const foundation = [...offeredAt('origin/first-world')].filter(type =>
+      /^world_(get|set)_(Boxed|Styled|Viewport)_/.test(type),
+    );
+    expect(foundation).toHaveLength(11);
   });
 
   it('is not so small the lesson cannot be done', () => {

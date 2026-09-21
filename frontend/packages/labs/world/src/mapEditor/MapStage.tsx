@@ -33,6 +33,7 @@ import TextField from '@code-dot-org/component-library/textField';
 import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
+import {STYLED} from '../engine/rules/styled';
 import type {Affordance} from '../progression/types';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
@@ -177,6 +178,11 @@ export interface MapStageProps {
   /** Editable property schemas by type — what the inspector offers. */
   schemas: Record<string, ActorSchema>;
   /**
+   * The project's themes as `[label, path]` — what a placement's `theme`
+   * property offers instead of a text box (specs/STYLES_PLAN.md).
+   */
+  themeOptions?: ReadonlyArray<readonly [string, string]>;
+  /**
    * How big each kind is in the world, for the kinds that declare a picture.
    *
    * Absent for a sprite-backed one, which falls back to the nominal tile — see
@@ -290,6 +296,7 @@ export const MapStage = ({
   thumbnails,
   pictures,
   schemas,
+  themeOptions = [],
   sizes,
   placementSizes,
   scales,
@@ -1222,6 +1229,39 @@ export const MapStage = ({
           items={[
             {value: '', text: '(none)'},
             ...prop.options.map(option => ({value: option, text: option})),
+          ]}
+          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+            selectOption(prop, event.target.value)
+          }
+        />
+      );
+    }
+    // THE ONE PROPERTY THE INSPECTOR KNOWS BY NAME, and the comment is the
+    // justification. `theme` is a string, because an actor's own properties
+    // have no closed-set type (`blockly/ruleMeta`, PROPERTY_TYPES) — and a
+    // free-text box for a module path is the silent-name failure this lab
+    // keeps meeting: type it wrong and the placement takes its map's theme,
+    // quietly. So this one is special-cased into a dropdown of the project's
+    // themes, and an enum property type is what would replace it the day a
+    // second property wants one (specs/STYLES_PLAN.md).
+    if (prop.ownerId === STYLED.trait && prop.propId === STYLED.theme) {
+      return (
+        <SimpleDropdown
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          labelText="Theme"
+          size="s"
+          className={styles.inspectorDropdown}
+          disabled={isReadOnly}
+          selectedValue={draft[fieldKey(prop)] ?? ''}
+          items={[
+            // Empty is INHERIT, not "none": a placement that says nothing
+            // takes its map's theme, and the map takes the world's.
+            {value: '', text: '(the map’s)'},
+            ...themeOptions.map(([label, path]) => ({
+              value: path,
+              text: label,
+            })),
           ]}
           onChange={(event: ChangeEvent<HTMLSelectElement>) =>
             selectOption(prop, event.target.value)

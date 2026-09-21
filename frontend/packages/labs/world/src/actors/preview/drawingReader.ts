@@ -40,6 +40,7 @@ import {
   resolveTheme,
   type ResolvedTheme,
 } from '../../engine/core/theme';
+import {STYLED} from '../../engine/rules/styled';
 
 /** A block as it sits in a saved workspace — only what is read here. */
 export interface Node {
@@ -449,7 +450,36 @@ function written(root: Node, into: Map<string, unknown>, reading: Reading) {
  * a thing the editor cannot draw one picture for; it draws the first, which
  * is also what a palette thumbnail can mean at all.
  */
-function themeOf(files: Files): ResolvedTheme {
+function themeDocumentAt(files: Files, path: string): unknown {
+  const contents = files[`${path}.style`];
+  if (contents === undefined) {
+    return undefined;
+  }
+  try {
+    return JSON.parse(contents);
+  } catch {
+    // A theme mid-edit is no theme, not a broken editor.
+    return undefined;
+  }
+}
+
+/**
+ * The theme a drawing is read under: the one given, else the world's.
+ *
+ * THE READER SEES TWO OF THE THREE LEVELS. A still is of a KIND — the map
+ * editor's palette thumbnail, the picker's picture — so there is no placement
+ * to ask, and the caller passes one in when it has one (a placement being
+ * drawn on the stage does). What is found here is the base: the first `use
+ * theme` row under a `define world` (specs/STYLES_PLAN.md).
+ */
+function themeOf(files: Files, override?: string): ResolvedTheme {
+  const parentAt = (path: string) => themeDocumentAt(files, path);
+  if (override) {
+    const named = themeDocumentAt(files, override);
+    if (named !== undefined) {
+      return resolveTheme(named, parentAt, [override]);
+    }
+  }
   for (const [path, contents] of Object.entries(files)) {
     if (!path.endsWith('.world')) {
       continue;
@@ -462,16 +492,11 @@ function themeOf(files: Files): ResolvedTheme {
     if (typeof named !== 'string' || !named) {
       continue;
     }
-    const style = files[`${named}.style`];
-    if (style === undefined) {
-      continue;
-    }
-    try {
-      return resolveTheme(JSON.parse(style));
-    } catch {
-      // A theme mid-edit is no theme, not a broken editor.
+    const document = themeDocumentAt(files, named);
+    if (document === undefined) {
       return NO_THEME;
     }
+    return resolveTheme(document, parentAt, [named]);
   }
   return NO_THEME;
 }
@@ -481,6 +506,16 @@ export function readDrawing(
   actorPath: string,
   overrides: Overrides = {},
   measure?: Measure,
+  /**
+   * The theme of the MAP this is being drawn on, if it is being drawn on one.
+   *
+   * The middle level of the cascade, and the one a reading cannot find for
+   * itself: the placement's own theme is in `overrides` and the world's is in
+   * a `.world` file, but which map a still belongs to is the caller's
+   * question. A palette thumbnail belongs to no map and passes nothing
+   * (specs/STYLES_PLAN.md).
+   */
+  mapTheme?: string,
 ): ReadDrawing | undefined {
   // …AND WHAT IT ACTS LIKE, nearest first. A Health Bar says nothing about a
   // picture: it acts like a Progress Bar and inherits one, so a reading of
@@ -521,7 +556,14 @@ export function readDrawing(
   // drawing's: the reading starts clean here.
   reading.complete = true;
 
-  const theme = themeOf(files);
+  // The actor's own theme beats the map's, which beats the world's — the
+  // same order `World.themeFor` resolves in, because a still that disagreed
+  // with the game would be a second picture.
+  const own = overrides[STYLED.trait]?.[STYLED.theme];
+  const theme = themeOf(
+    files,
+    (typeof own === 'string' && own) || mapTheme || undefined,
+  );
   const commands: DrawCommand[] = [];
   // The pen, which is state: a fill or an outline set once applies to every
   // shape after it, exactly as it does in the engine (`core/drawing`).
@@ -552,9 +594,19 @@ export function readDrawing(
   const run = (rows: Node[]): void => {
     for (const row of rows) {
       switch (row.type) {
-        case 'world_pen_fill':
-          fill = reading.color(socket(row, 'COLOR'));
+        case 'world_pen_fill': {
+          // AN UNSET COLOUR LEAVES WHAT THE PEN HAD, exactly as
+          // `CommandPen.fill` leaves it. `text color` defaults to empty so a
+          // class can reach a caption, and a reader that took the empty
+          // string as a colour would draw every caption in nothing — a still
+          // and the live picture that differ are two pictures
+          // (specs/STYLES_PLAN.md).
+          const chosen = reading.color(socket(row, 'COLOR'));
+          if (chosen !== '') {
+            fill = chosen;
+          }
           break;
+        }
         case 'world_pen_outline':
           stroke = reading.color(socket(row, 'COLOR'));
           strokeWidth = number(row, 'WIDTH', 1);

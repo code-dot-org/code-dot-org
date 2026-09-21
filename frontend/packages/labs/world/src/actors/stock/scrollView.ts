@@ -213,7 +213,7 @@ export const scrollViewActor = actorFile(
         // it is a lozenge.
         corner(RADIUS_BAR),
         fill(swatch(LOOK.muted)),
-        useStyle('bar track'),
+        useStyle('track'),
         rectangle(
           maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
           num(BAR_INSET),
