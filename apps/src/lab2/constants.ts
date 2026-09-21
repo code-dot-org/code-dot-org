@@ -72,7 +72,6 @@ export const IMAGE_MIME_TO_EXTENSIONS = {
 export type ImageExtension =
   (typeof IMAGE_MIME_TO_EXTENSIONS)[keyof typeof IMAGE_MIME_TO_EXTENSIONS][number];
 
-// Annotated as string[] so callers can keep comparing against arbitrary strings.
 export const SUPPORTED_IMAGE_EXTENSIONS: string[] =
   SafeAndSupportedImageTypes.flatMap(mime => IMAGE_MIME_TO_EXTENSIONS[mime]);
 

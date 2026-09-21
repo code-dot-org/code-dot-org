@@ -150,14 +150,14 @@ export function findConfigForFile(
 }
 
 /**
- * File types holding at least one of the given files, in menu order, with their counts.
+ * Returns an array of populated file type configurations, including counts for each type.
+ * Unsupported file types are folded into the "Other" category.
  */
 export function getPopulatedFileTypeConfigs(
   fileNames: string[],
   supportedFileTypes: string[]
 ): PopulatedFileTypes {
   const countsByExtension = new Map<string, number>();
-  // Names with no extension, or with one no entry above claims, can only be "Other".
   let otherCount = 0;
   fileNames.forEach(fileName => {
     const extension = getFileExtension(fileName);
@@ -167,6 +167,7 @@ export function getPopulatedFileTypeConfigs(
         (countsByExtension.get(extension) || 0) + 1
       );
     } else {
+      // This file has an unknown/non-existent file extension, which will be counted under "Other".
       otherCount += 1;
     }
   });
