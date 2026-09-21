@@ -37,7 +37,14 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {chain, defineEvent, me} from '../actors/stock/workspace';
+import {
+  actorFile,
+  chain,
+  defineEvent,
+  defineProperty,
+  isData,
+  me,
+} from '../actors/stock/workspace';
 import {importStockMap} from '../maps/importStockMap';
 import {stockMapById} from '../maps/stock';
 import {importStockRule} from '../rules/importStockRule';
@@ -215,31 +222,6 @@ const typed = () => ({
   },
 });
 
-/**
- * `⟨the time now⟩ as ⟨a date⟩ + ⟨what was typed⟩` — a note, filed by its day.
- *
- * WHY A NOTE CARRIES ITS DATE AT ALL: it is what the clock is for, and it is
- * the smallest honest demonstration that the three pieces compose — the wall
- * clock reports a number, `as a date` turns it into words that sort, and a
- * word is what the list already holds and what `save` already keeps
- * (specs/CLOCK_PLAN.md).
- *
- * A world nobody lent a clock writes `2000-01-01` every time, which is why
- * the play test can assert the whole row.
- */
-const dated = () =>
-  joined([
-    {
-      block: {
-        type: 'world_time_text',
-        fields: {STYLE: 'date'},
-        inputs: {TIME: {block: {type: 'world_now'}}},
-      },
-    },
-    words('  '),
-    typed(),
-  ]);
-
 /** `⟨a⟩ + ⟨b⟩ + ⟨c⟩`, as the chain of `as text` blocks that says it. */
 const joined = (parts: object[]): object => {
   let chained: object | undefined;
@@ -254,6 +236,42 @@ const joined = (parts: object[]): object => {
   return chained as object;
 };
 
+/** The loop's name for one record, as the rebuild below walks them. */
+const ROW = {id: 'appNoteRow', name: 'note', type: 'Actor'};
+const row = () => ({
+  block: {
+    type: 'variables_get_Actor',
+    fields: {VAR: {id: ROW.id, name: ROW.name}},
+  },
+});
+
+/**
+ * A Note: a RECORD, which in this lab is an actor with no place.
+ *
+ * `is data` is what makes it that — not drawn, in no search over places, hit
+ * tested by nothing, and still findable with `any ⟨Note⟩`, which is how the
+ * rebuild below walks them (specs/RECORDS_PLAN.md).
+ *
+ * TWO FIELDS RATHER THAN ONE STRING. This used to be a list of words, and a
+ * note that wanted a date had the date glued to the front of it —
+ * `2000-01-01  milk`, one string doing two jobs, because a string was all
+ * there was. The date is a number on the record now, and the row on screen is
+ * built from the two at the moment it is shown.
+ */
+const NOTE_ACTOR = actorFile('Note', [
+  isData(),
+  defineProperty('string', 'text', ''),
+  defineProperty('number', 'at', '0'),
+]);
+
+/** `⟨text⟩ of ⟨the note⟩`, and `⟨at⟩ of ⟨the note⟩`. */
+const fieldOf = (exportName: string) => ({
+  block: {
+    type: `world_get_ActorsNote_${exportName}`,
+    inputs: {ACTOR: row()},
+  },
+});
+
 /** The world's own list of notes — `notes` in `main.world`. */
 const notes = () => ({block: {type: 'world_get_WorldsMain_NotesProperty'}});
 
@@ -262,6 +280,47 @@ const showNotes = () => ({
   type: 'world_set_ActorsList_ItemsProperty',
   inputs: {ACTOR: kind('actors/list'), VALUE: notes()},
 });
+
+/**
+ * Build the words the List shows, out of the records.
+ *
+ * THE RECORDS ARE WHAT IS TRUE and this list is a VIEW of them, rebuilt
+ * whenever they change. That is the difference records made: what is kept has
+ * fields, and what is shown is made from them — so a row can be dated without
+ * the date living inside the words.
+ */
+const rebuildRows = () => [
+  {
+    type: 'world_set_WorldsMain_NotesProperty',
+    inputs: {VALUE: {block: {type: 'lists_create_empty'}}},
+  },
+  {
+    type: 'world_for_each',
+    fields: {VAR: {id: ROW.id, name: ROW.name}},
+    inputs: {
+      SOURCE: kind('actors/note'),
+      DO: {
+        block: {
+          type: 'world_push_WorldsMain_NotesProperty',
+          inputs: {
+            ITEM: joined([
+              {
+                block: {
+                  type: 'world_time_text',
+                  fields: {STYLE: 'date'},
+                  inputs: {TIME: fieldOf('AtProperty')},
+                },
+              },
+              words('  '),
+              fieldOf('TextProperty'),
+            ]),
+          },
+        },
+      },
+    },
+  },
+  showNotes(),
+];
 
 /** `set size of ⟨map|view⟩ to x ⟨columns⟩ y ⟨rows⟩ tiles`. */
 const sized = (what: 'map' | 'view') => ({
@@ -356,13 +415,23 @@ const MAIN_WORLD = JSON.stringify(
                 inputs: {
                   VALUE: {
                     block: {
-                      type: 'world_recall_memory',
-                      inputs: {NAME: words(MEMORY)},
+                      type: 'logic_compare',
+                      fields: {OP: 'GT'},
+                      inputs: {
+                        A: {
+                          block: {
+                            type: 'world_recall_actors',
+                            fields: {ACTOR: 'actors/note'},
+                            inputs: {NAME: words(MEMORY)},
+                          },
+                        },
+                        B: number(0),
+                      },
                     },
                   },
                 },
               },
-              showNotes(),
+              ...rebuildRows(),
             ]),
           },
         },
@@ -398,17 +467,37 @@ const MAIN_WORLD = JSON.stringify(
           y: 600,
           next: {
             block: chain([
+              // A RECORD, not a line of words: the note and when it was
+              // written, each in a field of its own.
               {
-                type: 'world_push_WorldsMain_NotesProperty',
-                inputs: {ITEM: dated()},
+                type: 'world_add_actor',
+                fields: {ACTOR: 'actors/note'},
+                inputs: {
+                  DO: {
+                    block: chain([
+                      {
+                        type: 'world_set_ActorsNote_TextProperty',
+                        inputs: {ACTOR: me(), VALUE: typed()},
+                      },
+                      {
+                        type: 'world_set_ActorsNote_AtProperty',
+                        inputs: {
+                          ACTOR: me(),
+                          VALUE: {block: {type: 'world_now'}},
+                        },
+                      },
+                    ]),
+                  },
+                },
               },
-              showNotes(),
+              ...rebuildRows(),
               {
                 type: 'world_set_WorldsMain_SavedProperty',
                 inputs: {
                   VALUE: {
                     block: {
-                      type: 'world_save_memory',
+                      type: 'world_remember_actors',
+                      fields: {ACTOR: 'actors/note'},
                       inputs: {NAME: words(MEMORY)},
                     },
                   },
@@ -462,6 +551,9 @@ export const notesApp = (empty: MultiFileSource): MultiFileSource => {
   const maps = Object.values(source.folders).find(
     folder => folder.name === 'maps' && folder.parentId === '0',
   );
+  const actorsFolder = Object.values(source.folders).find(
+    folder => folder.name === 'actors' && folder.parentId === '0',
+  );
   if (!main) {
     return source;
   }
@@ -471,6 +563,16 @@ export const notesApp = (empty: MultiFileSource): MultiFileSource => {
     files: {
       ...source.files,
       [main.id]: {...main, contents: MAIN_WORLD},
+      // The record kind. Written here rather than imported, because a Note is
+      // this app's own idea — a stock actor is something several projects
+      // share, and nobody else's notes have these two fields.
+      appNoteActor: {
+        id: 'appNoteActor',
+        name: 'note.actor',
+        language: 'actor',
+        contents: NOTE_ACTOR,
+        folderId: actorsFolder?.id ?? '0',
+      },
       appHomeMap: {
         id: 'appHomeMap',
         name: 'home.map',

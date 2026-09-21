@@ -6723,9 +6723,27 @@ const worldRecallActors = defineBlock({
   generator: {
     javascript(block, generator) {
       const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
+      const kind = block.getFieldValue('ACTOR');
+      if (!kind) {
+        return ['0', Order.ATOMIC] as [string, number];
+      }
+      // THE KIND HAS TO BE REGISTERED BY PATH, because this names one by path
+      // and no import can follow that — the world is handed a string and has
+      // to find a template. `load map` has the same problem and answers it the
+      // same way: it defines what it needs at its own call site rather than
+      // hoisting every kind the project holds into every world.
+      //
+      // As one expression, since this block REPORTS. `define` answers the
+      // world, so the pair reads left to right and the value is the count.
+      addImport(
+        generator,
+        `mod:${kind}`,
+        `import ${importVar(kind)} from ${str(kind)};`,
+      );
       return [
-        `world.recallActors(${str(block.getFieldValue('ACTOR'))}, ${name})`,
-        Order.FUNCTION_CALL,
+        `(world.define(${str(kind)}, ${importVar(kind)}), ` +
+          `world.recallActors(${str(kind)}, ${name}))`,
+        Order.ATOMIC,
       ] as [string, number];
     },
   },

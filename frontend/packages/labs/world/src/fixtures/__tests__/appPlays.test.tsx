@@ -10,6 +10,7 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import type {Actor, World} from '../../engine';
+import {NO_CLOCK} from '../../engine/core/clock';
 import {projectFiles} from '../../runtime/projectFiles';
 import {WORLD_SCENARIOS} from '../scenarios';
 
@@ -174,6 +175,41 @@ describe('Notes, the app', () => {
     expect(says(field())).toBe('hi');
     tap(named('Save')!);
     expect(named('Entry')).toBeFalsy();
+  });
+
+  it('keeps a note as a RECORD, with its fields apart', async () => {
+    // The row on screen still reads `2000-01-01  milk`, and that is now a
+    // VIEW: the date is a number on the record and the words are a field
+    // beside it, joined at the moment the list is built. Before records there
+    // was one string doing both jobs (specs/RECORDS_PLAN.md).
+    const {world, named, tap, field, typeOnScreen} = await play();
+    tap(named('New')!);
+    tap(field());
+    typeOnScreen('milk');
+    tap(named('Save')!);
+
+    const notes = [...world.actors].filter(one => one.type === 'actors/note');
+    expect(notes).toHaveLength(1);
+    const kept = Object.fromEntries(
+      notes[0].ownProperties().map(one => [one.id, notes[0].get(one)]),
+    );
+    expect(kept).toEqual({text: 'milk', at: NO_CLOCK});
+  });
+
+  it('keeps its records nowhere, so they are not on the screen', async () => {
+    // `is data`: a record has fields and no place. Fifty notes are not fifty
+    // things drawn behind the list showing them.
+    const {world, named, tap, field, typeOnScreen} = await play();
+    tap(named('New')!);
+    tap(field());
+    typeOnScreen('milk');
+    tap(named('Save')!);
+
+    const drawn = world.renderSnapshot().map(state => state.actor.type);
+    expect(drawn).not.toContain('actors/note');
+    expect([...world.actors].some(one => one.type === 'actors/note')).toBe(
+      true,
+    );
   });
 
   it('is still there after a reload', async () => {

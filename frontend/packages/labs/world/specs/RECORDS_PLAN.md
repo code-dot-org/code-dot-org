@@ -245,6 +245,28 @@ registered and offered, and `shelfCoverage.test` failed because no tile
 granted it — which is the exact bug that ledger exists for, caught in the
 commit that introduced it rather than months later.
 
+## Notes, rewritten — the demonstration
+
+The fixture kept a list of WORDS and glued the date to the front of each one:
+`2000-01-01  milk`, one string doing two jobs because a string was all there
+was. It keeps `actors/note` records now — `is data`, a `text` and an `at` —
+and the row on screen is built from the two at the moment the list is shown.
+
+What that changes is the direction the truth flows. The records are what is
+true; the List's words are a VIEW, rebuilt from them whenever they change. The
+row still reads `2000-01-01  milk`, and `appPlays` asserts both halves: that
+the row is unchanged, and that the record behind it holds `{text: 'milk', at:
+946684800}` with the fields apart. It also asserts that nothing of that kind
+is DRAWN, which is what `is data` bought.
+
+**One thing the rewrite found.** `world.define` was only emitted for kinds a
+MAP places, so `bring back every ⟨Note⟩` — which names a kind by a path and
+has to find a template — got nothing on a fresh world and answered 0, while
+saving worked. `load map` has the same problem and already answers it the same
+way, by defining what it needs at its own call site rather than hoisting every
+kind the project holds into every world; `bring back` does that now. It had to
+be one expression, since the block reports a count.
+
 ## Obligations
 
 - Engine tests for the round trip, for the refusals (references, absent
