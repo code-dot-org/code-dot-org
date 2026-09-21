@@ -360,6 +360,90 @@ $tab-segment-height: $tab-item-height - 2px;
   transition: height 0.25s ease;
 }
 
+// --- Block help callout ---
+
+.blockHelpAnchor {
+  // Above Blockly's own drop-down div.
+  position: relative;
+  z-index: 1100;
+
+  // The popover's tail sits at its vertical middle. Ours points at the help
+  // icon even when the body is clamped to the viewport, so the tail's offset
+  // comes from the callout (--tail-top). Repeated class: the design system's
+  // own rule is `.popover-m.popover-onRight::after`, and this must outrank
+  // it by specificity, not by load order.
+  > .blockHelpCallout.blockHelpCallout::after {
+    inset-block-start: var(--tail-top);
+  }
+
+  // The popover has no border of its own; against the dark workspace its
+  // edge needs one. The tail is a CSS triangle (::after), so a second,
+  // one-pixel-larger triangle behind it draws the tail's rim.
+  > .blockHelpCallout.blockHelpCallout {
+    border: 1px solid var(--borders-neutral-strong);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset-inline-end: 100%;
+      inset-block-start: calc(var(--tail-top) - 1px);
+      border: 13px solid transparent;
+      border-inline-start-width: 0;
+      border-inline-end-color: var(--borders-neutral-strong);
+      margin-inline-start: -13px;
+    }
+  }
+
+  // A notch below the popover's defaults, to sit with the lab's own type.
+  > .blockHelpCallout h5 {
+    font-size: 16px;
+  }
+
+  > .blockHelpCallout p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  // The popover's own (empty) content paragraph; see BlockHelpCallout.
+  > .blockHelpCallout p:empty {
+    display: none;
+  }
+
+  // The popover zeroes paragraph margins at four classes deep; this
+  // outranks that by specificity, not by load order.
+  > .blockHelpCallout.blockHelpCallout .blockHelpBody p {
+    margin: 0 0 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.blockHelpCallout {
+  // Hidden until measured, so the first paint is already in place.
+  visibility: hidden;
+}
+
+.blockHelpCalloutPlaced {
+  visibility: visible;
+}
+
+// Everything below the title scrolls as one.
+.blockHelpBody {
+  max-height: 40vh;
+  margin-top: 4px;
+  overflow-y: auto;
+  // Plain paragraphs, so they take the popover's text color rather than
+  // the page's.
+  color: var(--text-neutral-primary);
+
+  img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+}
+
 // The new-scene dialog: name above the type choice.
 .newSceneFields {
   display: flex;

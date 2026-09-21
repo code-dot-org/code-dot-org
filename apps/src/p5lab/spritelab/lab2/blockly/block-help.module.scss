@@ -1,0 +1,30 @@
+// The help icon beside a toolbox block. It lives in the flyout's SVG (a
+// foreignObject), so it scrolls with the block it belongs to.
+
+.helpButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  box-shadow: none;
+  color: var(--text-neutral-secondary);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 1px;
+  }
+}
