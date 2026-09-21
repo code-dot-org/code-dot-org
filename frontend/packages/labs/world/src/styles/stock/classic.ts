@@ -20,6 +20,10 @@ export const classicStyle = JSON.stringify(
       // A LIGHTER PALETTE, because a bordered flat interface reads better as
       // one: shadows are what separated things on the dark one, and with none
       // the surfaces have to differ from each other by value instead.
+      // …and the reason this token earns its place: the two themes expect to
+      // be read against opposite backgrounds, and neither can say so in a
+      // style, because no control paints the page.
+      page: '#8a8a82',
       surface: '#d4d0c8',
       'surface edge': '#41403c',
       'surface raised': '#e8e6e0',

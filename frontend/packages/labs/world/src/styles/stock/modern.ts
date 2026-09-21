@@ -34,6 +34,11 @@ export const modernStyle = JSON.stringify(
     tokens: {
       // The palette, which is the kit's own and was already coherent — it was
       // just written thirty-nine times instead of once.
+      // WHAT THE CONTROLS SIT ON. No style names it — a world paints its own
+      // background, and this is not that block's business — but a theme that
+      // could not say what it expects to be read against would be a theme
+      // nobody could preview honestly (`editor/ThemePreview`).
+      page: '#141826',
       surface: LOOK.surface,
       'surface edge': LOOK.surfaceEdge,
       'surface raised': LOOK.surfaceRaised,

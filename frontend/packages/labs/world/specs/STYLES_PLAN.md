@@ -319,8 +319,8 @@ it is not made here.
    `modern.style` and `classic.style`, the full role vocabulary in each, a
    `use theme` row on the world, and every control moved. See below for the
    two things it settled that this plan had left open.
-4. **The editor.** A surface for editing tokens and styles with a live
-   preview of each control. The `.effect` editor is the shape.
+4. **The editor — BUILT.** A surface for editing tokens and styles with a
+   live preview of each control, on the `.effect` editor's seam.
 
 Steps 1 and 2 are worth having alone. If 3 and 4 never earn themselves, the
 kit still looks right; it just takes editing drawings to restyle.
@@ -361,9 +361,42 @@ kit still looks right; it just takes editing drawings to restyle.
   under `define world` actually runs — so `use theme` would have thrown on
   every world that used it, at build time, before anything drew.
 
+## What the editor turned out to be
+
+`.style` joins `.rule`, `.actor`, `.map`, `.anim` and `.effect` on Codebridge's
+`editorComponents` seam, so a theme persists through the same file `onChange`
+as any text file. Two panels, because a theme has two levels: a list of
+VALUES, and a list of BUNDLES that point at them.
+
+**The preview draws the real controls.** Not a mock-up of a button — the stock
+Button's own `.actor` file, read by `preview/drawingReader`, which is the
+reader that makes the map editor's stills, painted by `paintDrawing`, which is
+the painter that makes the game's textures. The only thing that differs
+between the preview and the game is which canvas it lands on, so a theme that
+looks right here looks right there. What has to be invented is the PROJECT
+around it, because the reader finds a theme the way the game does — the first
+`use theme` row under a `define world` — and the file being edited has no path
+yet. `editor/previewFiles` makes a world whose only row names it.
+
+**It cannot add a style, and that is not an omission.** A style nothing names
+does nothing: a drawing has to say `use style ⟨…⟩` for a role to exist at all,
+and that is a block in an `.actor` file. A "new style" button would make a
+thing whose only effect is to be unused and would say nothing about where to
+go next. Adding a TOKEN is the same argument one level down. So the editor
+edits what the file already holds.
+
+**A field has four answers, not two.** Leave alone, none, a token, or a value
+of its own. The first two are the distinction the whole compose story rests
+on — absent leaves the pen as it was, null clears it — and a form that offered
+only "set it to something" could not have written either.
+
+**A `page` token was added to both themes.** No style names it and no control
+paints it: a world paints its own background. But a theme that expects a dark
+page and one that expects a light page both look wrong on the other's, and
+neither could say so in a style — so the preview would have had to guess.
+
 ## What it does not do
 
-- **No editor.** A theme is JSON a learner edits as text. Step 4.
 - **No runtime theme change.** The theme is a file a world names, resolved at
   load. A dark-mode toggle and a UI that flushes red on damage both want `set
 ⟨accent⟩ to ⟨…⟩` while the game runs, which is the override layer the

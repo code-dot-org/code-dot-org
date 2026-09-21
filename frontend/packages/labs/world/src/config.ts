@@ -16,6 +16,7 @@ import {MapEditor} from './mapEditor/MapEditor';
 import {WorldEditor} from './mapEditor/WorldEditor';
 import {whyKeepFile} from './rules/deleteGuard';
 import {resolveRuleContents} from './rules/ruleReference';
+import {StyleFileEditor} from './styles/StyleFileEditor';
 
 /**
  * World Lab's Codebridge configuration. A World project is the game defined by
@@ -103,6 +104,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     map: 'map',
     anim: 'anim',
     effect: 'effect',
+    style: 'style',
     sheet: 'json',
   },
   languageExtensions: {
@@ -124,6 +126,8 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     map: MapEditor,
     anim: AnimationEditor,
     effect: EffectFileEditor,
+    // A theme: values, and what each control is made of (specs/STYLES_PLAN.md).
+    style: StyleFileEditor,
   },
   /**
    * What a TAB calls a file: the name the file declares.
