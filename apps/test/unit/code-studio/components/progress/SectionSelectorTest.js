@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {MemoryRouter, Route, Routes, useLocation} from 'react-router-dom';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
@@ -14,6 +15,11 @@ import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disa
 const fakeSection = {
   name: 'My Section',
   id: 123,
+};
+
+const otherSection = {
+  name: 'My Other Section',
+  id: 456,
 };
 
 const testSectionId = 11;
@@ -153,6 +159,83 @@ describe('SectionSelector', () => {
         testSectionId
       );
       expect(utils.reload).not.to.have.been.called;
+    });
+  });
+
+  // Regression test for TEACHING-322. On the teacher dashboard the route's
+  // :sectionId drives the selected section, and TeacherNavigationBar dispatches
+  // selectSection to match it. A selector that dispatched instead of navigating
+  // got reverted by that effect, so the dropdown snapped back to the old
+  // section while the query param showed the new one.
+  describe('inside the teacher dashboard router', () => {
+    const UNIT_OVERVIEW_PATH = '/sections/:sectionId/unit/:unitName?';
+
+    // Renders the selector at a dashboard route and reports the resulting path.
+    const mountAtRoute = (path, props) => {
+      let pathname;
+      const ShowLocation = () => {
+        pathname = useLocation().pathname;
+        return null;
+      };
+      const wrapper = mount(
+        <MemoryRouter initialEntries={[path]}>
+          <Routes>
+            <Route
+              path={UNIT_OVERVIEW_PATH}
+              element={
+                <div>
+                  <SectionSelector
+                    sections={[fakeSection, otherSection]}
+                    selectSection={() => {}}
+                    {...props}
+                  />
+                  <ShowLocation />
+                </div>
+              }
+            />
+          </Routes>
+        </MemoryRouter>
+      );
+      return {wrapper, currentPath: () => pathname};
+    };
+
+    beforeEach(() => {
+      sinon.stub(utils, 'reload');
+      sinon.stub(codeStudioUtils, 'updateQueryParam');
+    });
+
+    afterEach(() => {
+      codeStudioUtils.updateQueryParam.restore();
+      utils.reload.restore();
+    });
+
+    it('navigates to the same route with the new section id', () => {
+      const selectSection = sinon.spy();
+      const {wrapper, currentPath} = mountAtRoute(
+        '/sections/123/unit/my-unit',
+        {selectSection, selectedSectionId: fakeSection.id}
+      );
+
+      wrapper
+        .find('select')
+        .simulate('change', {target: {value: String(otherSection.id)}});
+
+      expect(currentPath()).to.equal('/sections/456/unit/my-unit');
+      expect(selectSection).not.to.have.been.called;
+      expect(codeStudioUtils.updateQueryParam).not.to.have.been.called;
+    });
+
+    it('leaves the route alone when the section is unselected', () => {
+      const {wrapper, currentPath} = mountAtRoute(
+        '/sections/123/unit/my-unit',
+        {selectedSectionId: fakeSection.id}
+      );
+
+      wrapper
+        .find('select')
+        .simulate('change', {target: {value: NO_SELECTED_SECTION_VALUE}});
+
+      expect(currentPath()).to.equal('/sections/123/unit/my-unit');
     });
   });
 });
