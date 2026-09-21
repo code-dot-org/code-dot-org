@@ -83,8 +83,6 @@ export default class KNNTrainer implements Trainer {
         bestPredictedLabels = predictedLabels;
       }
     });
-    // The loop leaves `this.knn` on the last candidate it tried. Restore the
-    // winner, so a later batchPredict uses the model the lab stored.
     this.knn = bestModel;
     return {
       model: bestModel!,
