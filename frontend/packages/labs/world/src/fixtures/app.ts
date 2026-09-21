@@ -415,17 +415,18 @@ const MAIN_WORLD = JSON.stringify(
                 inputs: {
                   VALUE: {
                     block: {
-                      type: 'logic_compare',
-                      fields: {OP: 'GT'},
+                      // `any actors in ⟨…⟩` rather than a count the block
+                      // answers itself: bringing them back hands over the
+                      // ACTORS, and asking whether there were any is a block
+                      // the lab already has (specs/RECORDS_PLAN.md).
+                      type: 'world_any_actors',
                       inputs: {
-                        A: {
+                        LIST: {
                           block: {
                             type: 'world_recall_actors',
-                            fields: {ACTOR: 'actors/note'},
                             inputs: {NAME: words(MEMORY)},
                           },
                         },
-                        B: number(0),
                       },
                     },
                   },
@@ -497,8 +498,10 @@ const MAIN_WORLD = JSON.stringify(
                   VALUE: {
                     block: {
                       type: 'world_remember_actors',
-                      fields: {ACTOR: 'actors/note'},
-                      inputs: {NAME: words(MEMORY)},
+                      inputs: {
+                        ACTORS: kind('actors/note'),
+                        NAME: words(MEMORY),
+                      },
                     },
                   },
                 },

@@ -189,6 +189,20 @@ export function projectMapPaths(): string[] {
   return Object.keys(projectMaps).sort();
 }
 
+/**
+ * Every actor module the project holds, by path.
+ *
+ * For the world's preamble, which registers each so a kind can be found by
+ * NAME at runtime. `bring back what was remembered` is handed a path that was
+ * stored in a browser — one no import could have followed — so unlike
+ * `add actor`, which has the template in hand, it can only look one up
+ * (specs/RECORDS_PLAN.md). Maps are registered for the same reason one level
+ * over: a Viewport names one by path in a property.
+ */
+export function projectActorPaths(): string[] {
+  return projectActors.map(([, path]) => path).sort();
+}
+
 /** What a dropdown holds before the project offers it anything real. */
 export const NONE_VALUE = '';
 

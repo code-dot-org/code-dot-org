@@ -2678,13 +2678,21 @@ export class World {
   }
 
   /**
-   * Write every actor of `kind`, in order — `remember every ⟨Note⟩ as ⟨…⟩`.
+   * Keep these actors — `remember ⟨…⟩ as ⟨"notes"⟩`.
    *
    * A RECORD IS AN ACTOR. It has named typed fields, an inspector that edits
    * them, blocks that read them and a picture; a second thing with named
    * fields beside it would be a second way to say what the lab already says
    * (specs/RECORDS_PLAN.md). So what was missing was never a way to describe
    * a record — only a way to keep one.
+   *
+   * IT TAKES THE ACTORS, not a kind. `any ⟨Note⟩` is the ordinary way to say
+   * "all of them", and taking a value rather than a dropdown means a project
+   * can keep a SUBSET with the block it already filters by:
+   *
+   *     remember ⟨the ⟨Note⟩s where ⟨done⟩ is false⟩ as ⟨"todo"⟩
+   *
+   * …and a mixed set, since each row carries the kind it came from.
    *
    * ITS OWN PROPERTIES AND NOTHING ELSE. A kind's `define property` rows are
    * what that kind says its state is; trait properties are a rule's business
@@ -2697,27 +2705,22 @@ export class World {
    * ends are in the same map, and two runs are not. Storing it would write
    * something that cannot come back.
    */
-  rememberActors(kind: string, name: string): boolean {
+  rememberActors(actors: Iterable<Actor>, name: string): boolean {
     if (!this.storage) {
       return false;
     }
-    const rows = this.actorList
-      .filter(actor => actor.type === kind)
-      .map(actor => {
-        const row: Record<string, unknown> = {};
-        for (const property of actor.ownProperties()) {
-          if (property.type === 'actor' || property.type === 'actors') {
-            continue;
-          }
-          row[property.id] = actor.get(property);
+    const rows = [...actors].map(actor => {
+      const fields: Record<string, unknown> = {};
+      for (const property of actor.ownProperties()) {
+        if (property.type === 'actor' || property.type === 'actors') {
+          continue;
         }
-        return row;
-      });
+        fields[property.id] = actor.get(property);
+      }
+      return {kind: actor.type, fields};
+    });
     try {
-      this.storage.setItem(
-        this.memoryKey(name),
-        JSON.stringify({kind, rows}),
-      );
+      this.storage.setItem(this.memoryKey(name), JSON.stringify({rows}));
       return true;
     } catch {
       return false;
@@ -2725,62 +2728,76 @@ export class World {
   }
 
   /**
-   * Make one actor per stored record — `bring back every ⟨Note⟩ from ⟨…⟩`.
+   * Make them again — `bring back what was remembered as ⟨"notes"⟩`.
    *
-   * ANSWERS HOW MANY, where its neighbours answer whether. "Was there
-   * anything saved" is `> 0`, and the count is what a project actually wants
-   * — a first run answers zero, which is the same thing a start screen asks
-   * `recall` for.
+   * ANSWERS THE ACTORS, not a count and not a boolean, which is the whole
+   * shape of it. A record has nowhere to be and does not care; anything DRAWN
+   * has to be PUT somewhere, and only the project knows where. Handing the
+   * set back is what lets it say:
    *
-   * IT ADDS, IT DOES NOT REPLACE. Called twice it makes two sets. A project
-   * that might is expected to `remove actor ⟨any ⟨Note⟩⟩` first, which is one
-   * block it already has; quietly clearing first would destroy actors this
-   * was never shown, which is a worse surprise than duplicates anybody can
-   * see.
+   *     let row be each actor in ⟨bring back what was remembered as ⟨…⟩⟩
+   *       do set position of row to …
    *
-   * FORGIVING ON BOTH SIDES, as `recall` is: a field the data does not
-   * mention keeps the kind's default, and a stored field the kind no longer
-   * declares is ignored. Saved data outlives edits.
+   * Nothing is lost by not answering a number. `how many actors in ⟨…⟩` and
+   * `any actors in ⟨…⟩` are blocks the lab already has, so "how many" and
+   * "was there anything saved" are each one block away and neither had to be
+   * built into this.
+   *
+   * NO KIND IS NAMED, because each row carries its own — which is what lets
+   * a mixed set come back as a mixed set. The kinds are found by path in what
+   * the world was TOLD about (`define`), since a path stored in a browser is
+   * one no import could have followed.
+   *
+   * THEY ARE IN THE WORLD when they come back. An actor outside one has no
+   * age and is found by nothing, so a set of unplaced actors would be a value
+   * that leaks the moment a project dropped it. They are added and then
+   * handed over, and a handler that moves them does so before the frame is
+   * drawn.
    */
-  recallActors(kind: string, name: string): number {
+  recallActors(name: string, layer?: string): Actor[] {
     if (!this.storage) {
-      return 0;
-    }
-    const template = this.types.get(kind);
-    if (!template) {
-      return 0; // a kind this world does not have is nothing to make
+      return [];
     }
     let raw: string | null = null;
     try {
       raw = this.storage.getItem(this.memoryKey(name));
     } catch {
-      return 0;
+      return [];
     }
     if (raw === null) {
-      return 0;
+      return [];
     }
     let read: unknown;
     try {
       read = JSON.parse(raw);
     } catch {
-      return 0; // somebody else's key, or a half-written one
+      return []; // somebody else's key, or a half-written one
     }
-    const held = read as {kind?: unknown; rows?: unknown};
-    if (held.kind !== kind || !Array.isArray(held.rows)) {
-      return 0;
+    const held = read as {rows?: unknown};
+    if (!Array.isArray(held.rows)) {
+      return [];
     }
-    let made = 0;
-    for (const row of held.rows as Array<Record<string, unknown>>) {
-      if (!row || typeof row !== 'object') {
+    const made: Actor[] = [];
+    for (const row of held.rows as Array<{
+      kind?: unknown;
+      fields?: Record<string, unknown>;
+    }>) {
+      const kind = typeof row?.kind === 'string' ? row.kind : '';
+      const template = this.types.get(kind);
+      // A kind this world no longer holds is a row it cannot make. Skipped
+      // rather than thrown: saved data outlives edits, and the rest of the
+      // set is still worth having.
+      if (!template) {
         continue;
       }
-      const actor = this.addActor(template, undefined, kind);
+      const actor = this.addActor(template, undefined, kind, layer);
+      const fields = row.fields ?? {};
       for (const property of actor.ownProperties()) {
-        if (property.id in row) {
-          actor.set(property, row[property.id] as never);
+        if (property.id in fields) {
+          actor.set(property, fields[property.id] as never);
         }
       }
-      made += 1;
+      made.push(actor);
     }
     return made;
   }

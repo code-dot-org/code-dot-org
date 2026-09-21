@@ -48,6 +48,8 @@ const open = (storage = store()) => {
       actor.set(at, when);
       return actor;
     },
+    /** The notes in the world, which is what `any ⟨Note⟩` is. */
+    held: () => [...world.actors].filter(one => one.type === 'actors/note'),
     notes: () =>
       [...world.actors]
         .filter(actor => actor.type === 'actors/note')
@@ -64,11 +66,11 @@ describe('remembering a kind', () => {
     const first = open();
     first.write('milk', false, 10);
     first.write('bread', true, 20);
-    expect(first.world.rememberActors('actors/note', 'notes')).toBe(true);
+    expect(first.world.rememberActors(first.held(), 'notes')).toBe(true);
 
     // A NEW WORLD over the same storage, which is what a reload is.
     const again = open(first.storage);
-    expect(again.world.recallActors('actors/note', 'notes')).toBe(2);
+    expect(again.world.recallActors('notes').length).toBe(2);
     expect(again.notes()).toEqual([
       {text: 'milk', done: false, at: 10},
       {text: 'bread', done: true, at: 20},
@@ -77,7 +79,7 @@ describe('remembering a kind', () => {
 
   it('answers zero on a first run, which is how a start screen tells', () => {
     const fresh = open();
-    expect(fresh.world.recallActors('actors/note', 'notes')).toBe(0);
+    expect(fresh.world.recallActors('notes').length).toBe(0);
     expect(fresh.notes()).toEqual([]);
   });
 
@@ -85,28 +87,43 @@ describe('remembering a kind', () => {
     // Quietly clearing first would destroy actors it was never shown.
     const first = open();
     first.write('milk');
-    first.world.rememberActors('actors/note', 'notes');
+    first.world.rememberActors(first.held(), 'notes');
 
     const again = open(first.storage);
-    again.world.recallActors('actors/note', 'notes');
-    again.world.recallActors('actors/note', 'notes');
+    again.world.recallActors('notes');
+    again.world.recallActors('notes');
     expect(again.notes()).toHaveLength(2);
   });
 
-  it('keeps nothing of a kind that is not there', () => {
-    const one = open();
-    one.write('milk');
-    one.world.rememberActors('actors/nothing', 'notes');
-    const again = open(one.storage);
-    expect(again.world.recallActors('actors/note', 'notes')).toBe(0);
+  it('keeps a SUBSET, which is what taking the actors buys', () => {
+    // The first cut took a KIND and could only ever keep all of them. A
+    // socket takes `the ⟨Note⟩s where ⟨done⟩ is false` just as happily.
+    const first = open();
+    first.write('milk', false);
+    first.write('bread', true);
+    const undone = first.held().filter(one => !one.get(first.done));
+    first.world.rememberActors(undone, 'notes');
+
+    const again = open(first.storage);
+    expect(again.world.recallActors('notes')).toHaveLength(1);
+    expect(again.notes()).toEqual([{text: 'milk', done: false, at: 0}]);
   });
 
-  it('refuses a memory saved for another kind', () => {
+  it('skips a row whose kind this world no longer holds', () => {
+    // Saved data outlives edits, and the REST of the set is still worth
+    // having — so a row nothing can make is passed over rather than thrown.
     const one = open();
-    one.write('milk');
-    one.world.rememberActors('actors/note', 'notes');
-    const again = open(one.storage);
-    expect(again.world.recallActors('actors/other', 'notes')).toBe(0);
+    one.storage.held.set(
+      'world-lab.memory.notes',
+      JSON.stringify({
+        rows: [
+          {kind: 'actors/gone', fields: {text: 'x'}},
+          {kind: 'actors/note', fields: {text: 'milk'}},
+        ],
+      }),
+    );
+    expect(one.world.recallActors('notes')).toHaveLength(1);
+    expect(one.notes()).toEqual([{text: 'milk', done: false, at: 0}]);
   });
 
   it('takes a field the data does not mention as the kind has it', () => {
@@ -115,9 +132,9 @@ describe('remembering a kind', () => {
     const one = open();
     one.storage.held.set(
       'world-lab.memory.notes',
-      JSON.stringify({kind: 'actors/note', rows: [{text: 'milk'}]}),
+      JSON.stringify({rows: [{kind: 'actors/note', fields: {text: 'milk'}}]}),
     );
-    expect(one.world.recallActors('actors/note', 'notes')).toBe(1);
+    expect(one.world.recallActors('notes').length).toBe(1);
     expect(one.notes()).toEqual([{text: 'milk', done: false, at: 0}]);
   });
 
@@ -126,24 +143,76 @@ describe('remembering a kind', () => {
     one.storage.held.set(
       'world-lab.memory.notes',
       JSON.stringify({
-        kind: 'actors/note',
-        rows: [{text: 'milk', colour: 'red'}],
+        rows: [{kind: 'actors/note', fields: {text: 'milk', colour: 'red'}}],
       }),
     );
-    expect(one.world.recallActors('actors/note', 'notes')).toBe(1);
+    expect(one.world.recallActors('notes').length).toBe(1);
     expect(one.notes()).toEqual([{text: 'milk', done: false, at: 0}]);
   });
 
   it('is not taken down by a key that is not a memory', () => {
     const one = open();
     one.storage.held.set('world-lab.memory.notes', 'not json at all');
-    expect(one.world.recallActors('actors/note', 'notes')).toBe(0);
+    expect(one.world.recallActors('notes').length).toBe(0);
   });
 
   it('remembers nothing where a browser lends no storage', () => {
     const bare = new WorldBuilder({id: 'w', name: 'W'}).getWorld();
-    expect(bare.rememberActors('actors/note', 'notes')).toBe(false);
-    expect(bare.recallActors('actors/note', 'notes')).toBe(0);
+    expect(bare.rememberActors([], 'notes')).toBe(false);
+    expect(bare.recallActors('notes').length).toBe(0);
+  });
+});
+
+describe('what comes back', () => {
+  it('is the actors, so a project can put them where they belong', () => {
+    // THE REASON IT IS NOT A COUNT. A record has nowhere to be and does not
+    // care; anything DRAWN has to be put somewhere, and only the project
+    // knows where. Handing the set over is what lets it say so
+    // (specs/RECORDS_PLAN.md).
+    const first = open();
+    first.write('milk');
+    first.write('bread');
+    first.world.rememberActors(first.held(), 'notes');
+
+    const again = open(first.storage);
+    const back = again.world.recallActors('notes');
+    expect(back).toHaveLength(2);
+    // …and they are ACTORS, with everything an actor has.
+    expect(back.map(one => one.get(again.text))).toEqual(['milk', 'bread']);
+  });
+
+  it('is already in the world, so nothing leaks if it is dropped', () => {
+    // An actor outside a world has no age and is found by nothing, so a set
+    // of unplaced actors would be a value that leaked.
+    const first = open();
+    first.write('milk');
+    first.world.rememberActors(first.held(), 'notes');
+
+    const again = open(first.storage);
+    again.world.recallActors('notes');
+    expect(again.held()).toHaveLength(1);
+  });
+
+  it('comes back mixed when it went in mixed', () => {
+    // Every row carries its own kind, which is what a socket over a KIND
+    // dropdown buys: one memory, two sorts of thing.
+    const kind = new ActorBuilder({id: 'tag', name: 'Tag'}).isData();
+    const label = kind.defineProperty('label', 'string', '');
+    const first = open();
+    first.world.define('actors/tag', kind);
+    first.write('milk');
+    const tag = first.world.addActor(kind, undefined, 'actors/tag');
+    tag.set(label, 'shopping');
+
+    first.world.rememberActors(
+      [...first.world.actors].filter(one => one.type !== 'actors/list'),
+      'notes',
+    );
+
+    const again = open(first.storage);
+    again.world.define('actors/tag', kind);
+    const back = again.world.recallActors('notes');
+    expect(back.map(one => one.type)).toEqual(['actors/note', 'actors/tag']);
   });
 });
 
@@ -164,8 +233,11 @@ describe('what a record refuses to keep', () => {
     const other = world.addActor(kind, undefined, 'actors/note');
     one.set(friend, other as never);
 
-    world.rememberActors('actors/note', 'notes');
+    world.rememberActors([one, other], 'notes');
     const written = JSON.parse(storage.held.get('world-lab.memory.notes')!);
-    expect(written.rows[0]).toEqual({text: 'milk'});
+    expect(written.rows[0]).toEqual({
+      kind: 'actors/note',
+      fields: {text: 'milk'},
+    });
   });
 });

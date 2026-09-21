@@ -187,6 +187,7 @@ import {
   mapFieldOptions,
   mapOptions,
   mapOptionsExtension,
+  projectActorPaths,
   projectMapPaths,
   NONE_VALUE,
   orNone,
@@ -6647,12 +6648,18 @@ const worldSaveMemory = defineBlock({
 registerValueShadows('world_save_memory', [MEMORY_NAME]);
 
 /**
- * `remember every ⟨Note⟩ as ⟨"notes"⟩` — keep a kind's actors.
+ * `remember ⟨any ⟨Note⟩⟩ as ⟨"notes"⟩` — keep these actors.
  *
- * A RECORD IS AN ACTOR. It has named typed fields, an inspector that edits
- * them and blocks that read them, so a `record` value type beside it would be
- * a second way to say what the lab already says. What was missing was never a
- * way to DESCRIBE a record, only a way to keep one (specs/RECORDS_PLAN.md).
+ * A RECORD IS AN ACTOR: named typed fields, an inspector that edits them,
+ * blocks that read them. A `record` value type beside it would be a second
+ * way to say what the lab already says, so what was missing was never a way
+ * to DESCRIBE a record — only a way to keep one (specs/RECORDS_PLAN.md).
+ *
+ * IT TAKES THE ACTORS, NOT A KIND, and that is the difference between this
+ * and the first cut of it. `any ⟨Note⟩` is how a project says "all of them",
+ * and a socket rather than a dropdown means it can equally say
+ * `⟨the ⟨Note⟩s where ⟨done⟩ is false⟩` — a subset, with a block it already
+ * has — or a mixed set, since every row carries the kind it came from.
  *
  * Its own properties and nothing else: a kind's `define property` rows are
  * what that kind says its state is, and where it happens to be is a rule's
@@ -6661,89 +6668,70 @@ registerValueShadows('world_save_memory', [MEMORY_NAME]);
  */
 const worldRememberActors = defineBlock({
   type: 'world_remember_actors',
-  message0: 'remember every %1 as %2',
+  message0: 'remember %1 as %2',
   args0: [
-    {type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions},
+    {type: 'input_value', name: 'ACTORS', check: 'Actor'},
     {type: 'input_value', name: 'NAME', check: 'String'},
   ],
   inputsInline: true,
   output: 'Boolean',
-  extensions: [
-    actorOptionsExtension,
-    worldContextExtension,
-    valueShadowExtension,
-  ],
+  extensions: [worldContextExtension, valueShadowExtension],
   style: 'setup_blocks',
   tooltip:
-    'Keep every actor of this kind, with the properties it declares for ' +
+    'Keep these actors, each with the properties its kind declares for ' +
     'itself. Answers whether it could be written — a browser may refuse.',
   generator: {
     javascript(block, generator) {
+      const actors =
+        generator.valueToCode(block, 'ACTORS', Order.NONE) || '[]';
       const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
       return [
-        `world.rememberActors(${str(block.getFieldValue('ACTOR'))}, ${name})`,
+        `world.rememberActors(WorldLab.all(${actors}), ${name})`,
         Order.FUNCTION_CALL,
       ] as [string, number];
     },
   },
 });
-registerValueShadows('world_remember_actors', [MEMORY_NAME]);
+registerValueShadows('world_remember_actors', [
+  {name: 'ACTORS', shadow: {type: 'world_all_actors'}},
+  MEMORY_NAME,
+]);
 
 /**
- * `bring back every ⟨Note⟩ from ⟨"notes"⟩` — and say how many there were.
+ * `bring back what was remembered as ⟨"notes"⟩` — and hand the actors over.
  *
- * A NUMBER where its neighbours answer whether: "was there anything saved" is
- * `> 0`, and the count is what a project actually wants. A first run answers
- * zero, which is the same thing a start screen asks `load` for.
+ * ANSWERS THE ACTORS, not a count, which is the whole shape of it. A record
+ * has nowhere to be and does not care; anything DRAWN has to be PUT
+ * somewhere, and only the project knows where — so the set comes back and the
+ * project places it:
  *
- * IT ADDS. Called twice it makes two sets; a project that might is expected
- * to `remove actor ⟨any ⟨Note⟩⟩` first. Clearing quietly would destroy actors
- * this was never shown, which is a worse surprise than duplicates anybody can
- * see.
+ *     let row be each actor in ⟨bring back what was remembered as ⟨…⟩⟩
+ *       do set position of row to …
+ *
+ * Nothing is lost by not answering a number: `how many actors in ⟨…⟩` and
+ * `any actors in ⟨…⟩` already exist, so the count and "was there anything"
+ * are each one block away.
+ *
+ * NO KIND IS NAMED — every row carries its own, which is what lets a mixed
+ * set come back mixed.
  */
 const worldRecallActors = defineBlock({
   type: 'world_recall_actors',
-  message0: 'bring back every %1 from %2',
-  args0: [
-    {type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions},
-    {type: 'input_value', name: 'NAME', check: 'String'},
-  ],
+  message0: 'bring back what was remembered as %1',
+  args0: [{type: 'input_value', name: 'NAME', check: 'String'}],
   inputsInline: true,
-  output: 'Number',
-  extensions: [
-    actorOptionsExtension,
-    worldContextExtension,
-    valueShadowExtension,
-  ],
+  output: 'Actor',
+  extensions: [worldContextExtension, valueShadowExtension],
   style: 'setup_blocks',
   tooltip:
-    'Make one actor of this kind for every one that was kept under that ' +
-    'name, and answer how many. None saved answers 0. It ADDS to what is ' +
-    'already there.',
+    'Make every actor that was kept under that name, and hand them over so ' +
+    'you can put them where they belong. Nothing saved answers none.',
   generator: {
     javascript(block, generator) {
       const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
-      const kind = block.getFieldValue('ACTOR');
-      if (!kind) {
-        return ['0', Order.ATOMIC] as [string, number];
-      }
-      // THE KIND HAS TO BE REGISTERED BY PATH, because this names one by path
-      // and no import can follow that — the world is handed a string and has
-      // to find a template. `load map` has the same problem and answers it the
-      // same way: it defines what it needs at its own call site rather than
-      // hoisting every kind the project holds into every world.
-      //
-      // As one expression, since this block REPORTS. `define` answers the
-      // world, so the pair reads left to right and the value is the count.
-      addImport(
-        generator,
-        `mod:${kind}`,
-        `import ${importVar(kind)} from ${str(kind)};`,
-      );
       return [
-        `(world.define(${str(kind)}, ${importVar(kind)}), ` +
-          `world.recallActors(${str(kind)}, ${name}))`,
-        Order.ATOMIC,
+        `world.recallActors(${name})`,
+        Order.FUNCTION_CALL,
       ] as [string, number];
     },
   },
@@ -7007,6 +6995,21 @@ const worldWorld = defineBlock({
       // places defined, by the argument the animations above make: a map is
       // a thing the project has, and a Viewport names one by path in a
       // property, which no import can follow (specs/VIEWPORT_PLAN.md).
+      // …and every ACTOR the project holds, registered by path. `add actor`
+      // has its template in hand and needs none of this; `bring back what was
+      // remembered` is handed a path that was stored in a BROWSER, which no
+      // import could have followed, so it can only look one up
+      // (specs/RECORDS_PLAN.md).
+      const kinds = projectActorPaths()
+        .map(path => {
+          addImport(
+            generator,
+            `mod:${path}`,
+            `import ${importVar(path)} from ${str(path)};`,
+          );
+          return `world.define(${str(path)}, ${importVar(path)});\n`;
+        })
+        .join('');
       const maps = projectMapPaths()
         .map(mapPath => {
           const defines = mapActorTypes(mapPath)
@@ -7093,6 +7096,7 @@ const worldWorld = defineBlock({
         rules +
         hoisted.join('') +
         animations +
+        kinds +
         maps +
         imageSizes +
         layers +

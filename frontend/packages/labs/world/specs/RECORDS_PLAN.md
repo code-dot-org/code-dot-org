@@ -49,14 +49,36 @@ what about a level half finished?).
 
 Two blocks, beside the two a world already has:
 
-    remember every ⟨Note⟩ as ⟨"notes"⟩
-    bring back every ⟨Note⟩ from ⟨"notes"⟩
+    remember ⟨any ⟨Note⟩⟩ as ⟨"notes"⟩
+    bring back what was remembered as ⟨"notes"⟩
 
-`remember every` writes one record per actor of that kind, in order. `bring
-back every` makes one actor per stored record and answers HOW MANY — a number
-rather than the boolean its neighbours answer, because "was there anything
-saved" is `> 0` and the count is strictly more useful. A first run answers 0,
-which is the same thing a start screen already asks `recall` for.
+**IT TAKES THE ACTORS, NOT A KIND**, and that is not cosmetic. The first cut
+of this had a kind dropdown on both blocks, which could only ever keep ALL of
+them and could only ever bring back one sort. A socket takes what the lab
+already filters by:
+
+    remember ⟨the ⟨Note⟩s where ⟨done⟩ is false⟩ as ⟨"todo"⟩
+
+…and a mixed set, since every row carries the kind it came from. `bring back`
+then names no kind at all: it reads what was stored.
+
+**IT ANSWERS THE ACTORS, NOT A COUNT**, which is the same decision read the
+other way. A record has nowhere to be and does not care; anything DRAWN has to
+be PUT somewhere, and only the project knows where. The first cut added them
+at the origin and answered a number, which is right for records and wrong for
+every row, card and token. Handing the set over is what lets a project say:
+
+    let row be each actor in ⟨bring back what was remembered as ⟨…⟩⟩
+      do set position of row to …
+
+Nothing is lost: `how many actors in ⟨…⟩` and `any actors in ⟨…⟩` already
+exist, so the count and "was there anything saved" are each one block away and
+neither had to be built into this.
+
+**THEY ARE IN THE WORLD when they come back.** An actor outside one has no age
+and is found by nothing, so a set of unplaced actors would be a value that
+leaks the moment a project dropped it. They are added and then handed over,
+and a handler that moves them does so before the frame is drawn.
 
 **IT ADDS, IT DOES NOT REPLACE.** Calling it twice makes two sets. A project
 that might is expected to say `remove actor ⟨any ⟨Note⟩⟩` first, which is one
@@ -259,13 +281,17 @@ the row is unchanged, and that the record behind it holds `{text: 'milk', at:
 946684800}` with the fields apart. It also asserts that nothing of that kind
 is DRAWN, which is what `is data` bought.
 
-**One thing the rewrite found.** `world.define` was only emitted for kinds a
-MAP places, so `bring back every ⟨Note⟩` — which names a kind by a path and
-has to find a template — got nothing on a fresh world and answered 0, while
-saving worked. `load map` has the same problem and already answers it the same
-way, by defining what it needs at its own call site rather than hoisting every
-kind the project holds into every world; `bring back` does that now. It had to
-be one expression, since the block reports a count.
+**One thing the rewrite found**, and the reshape then settled. `world.define`
+was only emitted for kinds a MAP places, so bringing records back got nothing
+on a fresh world while saving worked perfectly. With a kind on the block that
+could be answered at the call site, as `load map` answers it; with no kind on
+the block there is nothing to answer it WITH, because the path comes out of a
+browser and no import could have followed it.
+
+So the world's preamble registers every actor the project holds, beside every
+map it holds, for the reason already written beside the maps: a thing the
+project HAS, named by a path that no import can follow. `add actor` needs none
+of this — it has the template in hand.
 
 ## Obligations
 
