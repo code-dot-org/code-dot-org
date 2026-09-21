@@ -118,7 +118,7 @@ class LessonsController < ApplicationController
       unitLabel: unit_label
     }
     @tutor_gallery_data = build_tutor_gallery_data(script, unit_context)
-    render 'tutor_app'
+    render 'tutor'
   end
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/tutor/gallery
@@ -135,7 +135,7 @@ class LessonsController < ApplicationController
     return render_404 unless find_tutor_lesson(script)
 
     @tutor_gallery_data = build_tutor_gallery_data(script, unit_context)
-    render 'tutor_app'
+    render 'tutor'
   end
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/edit
