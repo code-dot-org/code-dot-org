@@ -46,10 +46,7 @@ const BottomNav: React.FC<BottomNavProps> = ({
             onClick={() => onNavChange(label)}
           >
             <div
-              className={classNames(
-                style.itemContent,
-                active && style.active
-              )}
+              className={classNames(style.itemContent, active && style.active)}
             >
               <Badge
                 variant="dot"
