@@ -66,7 +66,7 @@ function initPage() {
   }
 
   // AI Differentiation FAB to be shown only if rubric FAB is not.
-  const renderAiDiffButton = () => {
+  const renderAiDiffButton = ({hideButton = false} = {}) => {
     const reportingData = {
       unitName: config.script_name,
       courseName: config.course_name,
@@ -92,6 +92,7 @@ function initPage() {
             scriptName={reportingData.unitName}
             canStartOpen={false}
             canDefaultOpen={false}
+            hideButton={hideButton}
           />
         </Provider>,
         aiDiffFabMountPoint,
@@ -195,9 +196,11 @@ function initPage() {
         // legacy floating rubric panel instead), so on rubric levels
         // TeacherPanelHandle's "open the drawer to Roster" click would
         // otherwise have no drawer to open. Mount one, same as non-rubric
-        // levels, whenever the TA teacher panel experiment is active.
+        // levels, whenever the TA teacher panel experiment is active — but
+        // without its own FAB icon, since the teacher panel handle's arrow
+        // is the only intended entry point on rubric levels.
         if (experiments.isEnabled('ta-teacher-panel')) {
-          renderAiDiffButton();
+          renderAiDiffButton({hideButton: true});
         }
       }
     } else {
