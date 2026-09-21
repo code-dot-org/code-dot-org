@@ -35,7 +35,12 @@ export default function useQuizAttemptView({
     unitId,
   });
 
-  const totalPages = new Set(quizQuestions.map(q => q.page)).size || 1;
+  // currentPageNumber is a 1-based position into this list, not a raw page
+  // value - placements don't guarantee pages are contiguous or start at 1.
+  const pageNumbers = Array.from(new Set(quizQuestions.map(q => q.page))).sort(
+    (a, b) => a - b
+  );
+  const totalPages = pageNumbers.length || 1;
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
     useState<Record<number, string>>({});
@@ -129,7 +134,10 @@ export default function useQuizAttemptView({
           ) : (
             <div className={styles.questions}>
               {quizQuestions
-                .filter(question => question.page === currentPageNumber)
+                .filter(
+                  question =>
+                    question.page === pageNumbers[currentPageNumber - 1]
+                )
                 // Only MultipleChoiceQuestion has a container built so far.
                 .filter(question => question.type === 'MultipleChoiceQuestion')
                 .map(question => (

@@ -160,6 +160,22 @@ describe('useQuizAttemptView', () => {
     expect(screen.queryByText('Page 2 question')).not.toBeInTheDocument();
   });
 
+  it('navigates by page position, not raw page value, when pages are non-contiguous', () => {
+    renderView({
+      hookState: {attempt: ATTEMPT},
+      quizQuestions: [
+        question({id: 1, stem: 'Page 1 question', page: 1}),
+        question({id: 2, stem: 'Page 3 question', page: 3}),
+      ],
+    });
+
+    // Two distinct pages exist (1 and 3), so the footer offers two position
+    // buttons - "2" must reach the question on raw page 3, not an empty page.
+    fireEvent.click(screen.getByRole('button', {name: '2'}));
+
+    expect(screen.getByText('Page 3 question')).toBeInTheDocument();
+  });
+
   it('omits the question label for a single-question quiz', () => {
     renderView({
       hookState: {attempt: ATTEMPT},
