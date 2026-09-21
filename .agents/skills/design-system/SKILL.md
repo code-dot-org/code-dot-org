@@ -8,7 +8,7 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 ## Overview
 - Our design system has two types of components:
   - **DSCO components**: our custom React components in `frontend/packages/component-library/` (TypeScript).
-  - **MUI components**: from `@mui/material`, with custom style overrides in `frontend/packages/component-library/src/themes/code.org/styleOverrides/` to match our design system look and feel.
+  - **MUI components**: from `@mui/material`, with custom style overrides in `frontend/packages/component-library/src/themes/.../styleOverrides/` to match our design system look and feel.
 - Shared styles (colors, typography, shape and spacing, mixins) live in `frontend/packages/component-library-styles/`.
 - **Always prefer design system components** over custom or legacy alternatives (e.g. `apps/src/sharedComponents/`, `apps/src/legacySharedComponents/`). Only create custom UI components when no design system equivalent exists.
 
@@ -28,8 +28,9 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 - Font variables are in `@code-dot-org/component-library-styles/fontVariables.css`.
 
 ## Themes and brands
-- `@code-dot-org/component-library/themes` exports three MUI themes, defined under `src/themes/`: `CdoTheme` (`code.org/`), `CodeaiTheme` (`codeai/`), `CodeaiAuditTheme` (`codeai-audit/`). Each defines custom typography variants, button sizes and colors, and the CSS variables backing light/dark theming.
-- `apps/` picks one per page in `apps/src/util/createReactRoot.tsx` via `getMuiThemeForBrand()`. The brand comes from `data-brand` on `<html>`, set server-side by `Cdo::Brand`; absent or unrecognized means `codeai-next`, which resolves to `CodeaiTheme`.
+- **`CodeaiTheme` is the default theme.** The theme is resolved per page from the `data-brand` attribute on `<html>`, which Rails sets from `Cdo::Brand`. An absent or unrecognized value means `codeai-next`, which is `CodeaiTheme`. `CdoTheme` is the legacy Code.org theme, now reached only by `data-brand="code"` or the older `codeai`. Assume CodeAI unless you know otherwise.
+- `@code-dot-org/component-library/themes` exports `CdoTheme` (`src/themes/code.org/`), `CodeaiTheme` (`codeai/`) and `CodeaiAuditTheme` (`codeai-audit/`, all pink, for spotting surfaces that bypass the token system). `apps/` does the lookup in `apps/src/util/createReactRoot.tsx`; `frontend/` packages have their own copy in `src/themes/getMuiThemeForBrand.ts`.
+- Only `code.org/` holds `styleOverrides/` and `muiAugmentation.ts`. The brand themes come from `createBrandTheme`, which deep-merges those in and changes only the palette — so typography, component overrides and type augmentation are shared by every theme despite living under `code.org/`. An override you add lands in all three; check it in each.
 - Semantic color tokens resolve through **both** `data-brand` and `data-theme` (light/dark). A token that reads correctly in the default pair can fail in another — check every brand and theme the surface can actually reach.
 - The per-brand token files (`brandCodeAiNext.css` and friends) are generated. Edit the canonical source named in the file header and re-run its script; never hand-edit the generated file.
 
@@ -44,6 +45,6 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 ## Contributing & Extending the Design System
 - For building new DSCO components, see `frontend/packages/component-library/CONTRIBUTING.md` and `README.md`.
 - **MUI style overrides** live in `frontend/packages/component-library/src/themes/`. When migrating a DSCO component to MUI, add or update the corresponding style override file here.
-- **MUI type augmentation**: custom button sizes, colors, and typography variants are declared in `src/themes/code.org/muiAugmentation.ts`. Module augmentation does not cross package boundaries, so `frontend/apps/studio/src/types/mui.d.ts` mirrors it and must be kept in sync; `apps/` no longer carries a copy.
+- **MUI type augmentation**: custom button sizes, colors, and typography variants are declared in `src/themes/code.org/muiAugmentation.ts` — under `code.org/`, but in force for every theme. Module augmentation does not cross package boundaries, so `frontend/apps/studio/src/types/mui.d.ts` mirrors it and must be kept in sync; `apps/` no longer carries a copy.
 - `apps/` resolves the package through its `exports` map to `dist/`, not to the source. Run `yarn build` in `frontend/packages/component-library` before expecting a dev server to see an edit to the package.
 - When making major changes to `frontend/packages/component-library/` or `frontend/packages/component-library-styles/`, update this skill file and any relevant component library docs (README, CONTRIBUTING, MIGRATION_STATUS) to keep them in sync.
