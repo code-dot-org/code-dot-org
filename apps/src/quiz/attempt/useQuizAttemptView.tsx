@@ -15,8 +15,11 @@ import styles from './quiz-attempt-view.module.scss';
 export default function useQuizAttemptView({
   levelProperties,
 }: LabProps): QuizViewContent {
-  const {id: levelId, quizQuestions = []} =
-    levelProperties as QuizLevelProperties;
+  const {
+    id: levelId,
+    quizQuestions = [],
+    allowMultipleAttempts,
+  } = levelProperties as QuizLevelProperties;
 
   const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
 
@@ -158,6 +161,7 @@ export default function useQuizAttemptView({
             totalPages={totalPages}
             onNavigateToPage={setCurrentPageNumber}
             onNext={handleNext}
+            finishButtonLabel={allowMultipleAttempts ? 'Finish' : 'Submit'}
           />
         )}
       </div>

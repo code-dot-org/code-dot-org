@@ -12,6 +12,9 @@ export interface QuizFooterProps {
   totalPages: number;
   onNavigateToPage: (pageNumber: number) => void;
   onNext: () => void;
+  // Label for the last-page button - "Finish" when a retake is possible,
+  // "Submit" when this is the student's only or last attempt.
+  finishButtonLabel: string;
 }
 
 // Always visible during an attempt, even for a single-question quiz - back
@@ -22,6 +25,7 @@ const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
   totalPages,
   onNavigateToPage,
   onNext,
+  finishButtonLabel,
 }) => {
   const isFirstPage = currentPageNumber === 1;
   const isLastPage = currentPageNumber === totalPages;
@@ -69,7 +73,7 @@ const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
           endIcon={!isLastPage && <FontAwesomeV6Icon iconName="arrow-right" />}
           onClick={onNext}
         >
-          {isLastPage ? 'Finish' : 'Next'}
+          {isLastPage ? finishButtonLabel : 'Next'}
         </MuiButton>
       </div>
     </div>
