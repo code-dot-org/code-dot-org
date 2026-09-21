@@ -49,6 +49,7 @@ import {
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {sizePlaceholders} from '../blockly/placeholders';
 import defaultSources from '../defaultSources.json';
 import {countImagesByType, useGuideSteps} from '../guideSteps';
 import {imageTypeFromCategories} from '../imageGallery';
@@ -1439,14 +1440,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     loadCode(source);
+    const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
     // The level's starters join the pinned scene once it is on screen, so
     // they can sit below what the workspace has rendered.
     if (activeScene.id === pinnedSceneId && levelProperties.starterBlocks) {
-      addStarterBlocks(
-        Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg,
-        levelProperties.starterBlocks
-      );
+      addStarterBlocks(workspace, levelProperties.starterBlocks);
     }
+    sizePlaceholders(workspace);
     runLocalScene(activeScene);
   }, [
     animationsSeeded,

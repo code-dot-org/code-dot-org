@@ -13,6 +13,12 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     `.blocklyFieldGrid {
       margin: 5px;
     }
+    .blocklyPlaceholder > .blocklyPath {
+      stroke: var(--text-neutral-primary, #fff);
+      stroke-width: 3px;
+      stroke-dasharray: 10 6;
+      fill-opacity: 0.2;
+    }
     .blocklyFieldGrid .blocklyFieldGridItem {
       border: none !important;
       padding: 0px !important;

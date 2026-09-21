@@ -11,7 +11,12 @@ import {
   GO_TO_SCENE_BLOCK_TYPE,
   SceneDropdown,
 } from './blockDefinitions/goToScene';
-import {PLACEHOLDER_OUTLINE_EXTENSION} from './blockDefinitions/placeholder';
+import {
+  PLACEHOLDER_CLASS,
+  PLACEHOLDER_MUTATOR,
+  PLACEHOLDER_OUTLINE_EXTENSION,
+  placeholderMutator,
+} from './blockDefinitions/placeholder';
 import {
   ExternalSceneDropdown,
   FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
@@ -80,6 +85,10 @@ function installLabBlocks(): void {
     PLACEHOLDER_OUTLINE_EXTENSION,
     placeholderOutline
   );
+  BlocklyCore.Extensions.registerMutator(
+    PLACEHOLDER_MUTATOR,
+    placeholderMutator
+  );
   for (const {definition, generator} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
       init: function (this: BlocklyCore.Block) {
@@ -90,11 +99,9 @@ function installLabBlocks(): void {
   }
 }
 
-// The renderer strokes a block's path in its style's tertiary colour; the
-// placeholder's is dashed, over a fill faded to read as an outline.
-const PLACEHOLDER_DASH = '6 4';
-const PLACEHOLDER_FILL_OPACITY = '0.35';
-
+// Blockly draws a shadow with no stroke; the class restores one, dashed
+// (cdoCss.ts), once the block has an SVG to carry it. Sizing happens after
+// the workspace loads (placeholders.ts).
 function placeholderOutline(this: BlocklyCore.Block) {
   // Headless blocks (code generation, tests) have no SVG to draw.
   if (!(this instanceof BlocklyCore.BlockSvg)) {
@@ -103,9 +110,7 @@ function placeholderOutline(this: BlocklyCore.Block) {
   const initSvg = this.initSvg.bind(this);
   this.initSvg = () => {
     initSvg();
-    const path = this.pathObject.svgPath;
-    path.setAttribute('stroke-dasharray', PLACEHOLDER_DASH);
-    path.setAttribute('fill-opacity', PLACEHOLDER_FILL_OPACITY);
+    this.getSvgRoot().classList.add(PLACEHOLDER_CLASS);
   };
 }
 
