@@ -23,8 +23,6 @@ interface SceneSelectorProps {
   activeSceneId: string | null;
   // Disabled off the scene tabs, where switching has no effect.
   disabled?: boolean;
-  // Locked to the current scene: disallows changing or creating scenes.
-  locked?: boolean;
   allowCreate?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string, type: SceneType) => void;
@@ -40,7 +38,6 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   scenes,
   activeSceneId,
   disabled,
-  locked,
   allowCreate = true,
   onSelectScene,
   onCreateScene,
@@ -77,14 +74,6 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
     }
     closeDialog();
   }, [newName, newType, onCreateScene, closeDialog]);
-
-  if (locked) {
-    return (
-      <span className={moduleStyles.sceneName}>
-        {scenes.find(scene => scene.id === activeSceneId)?.name ?? ''}
-      </span>
-    );
-  }
 
   return (
     <>

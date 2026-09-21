@@ -157,7 +157,6 @@ $tab-segment-height: $tab-item-height - 2px;
   cursor: pointer;
 }
 
-// Action buttons beside the Play tab (shown only while playing), not tabs.
 // The song a playing game is using, sized to sit among the tab controls.
 .musicBar {
   display: flex;
@@ -180,22 +179,6 @@ $tab-segment-height: $tab-item-height - 2px;
   white-space: nowrap;
 }
 
-.startOver {
-  height: $tab-item-height;
-  padding: 0 12px;
-  // The tab bar's gap spaces these; cancel the legacy global button margin.
-  margin: 0;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: transparent;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-  font-size: 14px;
-
-  &:hover {
-    background: var(--background-neutral-primary);
-  }
-}
 
 .sceneSelect {
   height: $tab-segment-height;
@@ -232,18 +215,6 @@ $tab-segment-height: $tab-item-height - 2px;
 
 // Pinned-scene levels show the scene's name where the picker would be: the
 // select's geometry without the chevron or the affordances.
-.sceneName {
-  display: inline-flex;
-  align-items: center;
-  height: $tab-segment-height;
-  max-width: 160px;
-  padding: 0 10px;
-  overflow: hidden;
-  border-left: 1px solid var(--borders-neutral-primary);
-  color: var(--text-neutral-primary);
-  font-size: 14px;
-  white-space: nowrap;
-}
 
 .tabContent {
   position: relative;
@@ -493,6 +464,37 @@ $tab-segment-height: $tab-item-height - 2px;
   &:focus-visible {
     outline: 2px solid var(--borders-neutral-primary);
     outline-offset: 2px;
+  }
+}
+
+// The restart buttons, hung off the game's top-right corner. The overlay
+// lets clicks through; these take them back.
+.playControls {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 8px;
+  transform: translateX(-100%);
+  pointer-events: auto;
+}
+
+.playControl {
+  height: $tab-item-height;
+  padding: 0 12px;
+  // Cancel the legacy global button margin; the column's gap spaces these.
+  margin: 0;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.92;
+
+  &:hover {
+    opacity: 1;
   }
 }
 

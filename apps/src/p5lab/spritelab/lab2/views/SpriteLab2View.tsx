@@ -1651,13 +1651,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
           sceneTabsExtra={
             // A toolbox has no scenes; "New scene…" here would put the student
-            // default onto the canvas and into the saved toolbox.
-            animationsSeeded && !isToolboxMode ? (
+            // default onto the canvas and into the saved toolbox. A pinned
+            // level has nothing to switch, so it shows no scene control.
+            animationsSeeded && !isToolboxMode && !pinnedSceneId ? (
               <SceneSelector
                 scenes={sceneMetadata}
                 activeSceneId={activeSceneId}
                 disabled={!onSceneTab}
-                locked={!!pinnedSceneId}
                 // Only freeplay adds scenes; a level with no mode is unconstrained.
                 allowCreate={
                   !levelProperties.levelMode ||
@@ -1666,34 +1666,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 onSelectScene={handleSelectScene}
                 onCreateScene={handleCreateScene}
               />
-            ) : undefined
-          }
-          playTabExtra={
-            playspaceMode === 'play' ? (
-              <>
-                {/* On a pinned-scene level the game IS the one scene, so no
-                  whole-game restart. */}
-                {!pinnedSceneId && (
-                  <button
-                    type="button"
-                    className={moduleStyles.startOver}
-                    onClick={event =>
-                      handleRestartClick(event, handleRestartGame)
-                    }
-                  >
-                    Restart game
-                  </button>
-                )}
-                <button
-                  type="button"
-                  className={moduleStyles.startOver}
-                  onClick={event =>
-                    handleRestartClick(event, handleRestartScene)
-                  }
-                >
-                  Restart scene
-                </button>
-              </>
             ) : undefined
           }
         >
@@ -1754,6 +1726,32 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           <Playspace
             boxRef={playspaceRef}
             mode={playspaceMode}
+            controls={
+              <>
+                {/* On a pinned-scene level the game IS the one scene, so no
+                  whole-game restart. */}
+                {!pinnedSceneId && (
+                  <button
+                    type="button"
+                    className={moduleStyles.playControl}
+                    onClick={event =>
+                      handleRestartClick(event, handleRestartGame)
+                    }
+                  >
+                    Restart game
+                  </button>
+                )}
+                <button
+                  type="button"
+                  className={moduleStyles.playControl}
+                  onClick={event =>
+                    handleRestartClick(event, handleRestartScene)
+                  }
+                >
+                  Restart scene
+                </button>
+              </>
+            }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
             loading={externalLoading}

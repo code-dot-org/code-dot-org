@@ -26,8 +26,6 @@ interface TabShellProps {
   // Rendered in the tab bar leading the scene-editing tabs (the scene
   // selector).
   sceneTabsExtra?: React.ReactNode;
-  // Rendered immediately after the Play button (the restart controls).
-  playTabExtra?: React.ReactNode;
   // Rendered at the right, before Start Over.
   startOverExtra?: React.ReactNode;
   children: React.ReactNode;
@@ -46,7 +44,6 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   enabledTabs,
   visibleTabs = ALL_TABS,
   sceneTabsExtra,
-  playTabExtra,
   startOverExtra,
   children,
   onClickStartOver,
@@ -135,15 +132,6 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                     </React.Fragment>
                   ))}
                 </div>
-              );
-            }
-            // The restart controls sit just right of the Play button.
-            if (tab === 'Play' && playTabExtra) {
-              return (
-                <React.Fragment key={tab}>
-                  {renderTab(tab)}
-                  {playTabExtra}
-                </React.Fragment>
               );
             }
             return <React.Fragment key={tab}>{renderTab(tab)}</React.Fragment>;

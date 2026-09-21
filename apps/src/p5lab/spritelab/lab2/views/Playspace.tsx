@@ -49,6 +49,10 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
+  // Shown in the game's top-right corner while playing (the restart
+  // buttons). Laid out beside the box, not inside it, so they keep their
+  // size whatever the box's scale.
+  controls?: React.ReactNode;
 }
 
 /**
@@ -64,6 +68,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
+  controls,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -219,23 +224,32 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return () => observer.disconnect();
   }, []);
 
-  let transform: string;
+  let placement: {x: number; y: number; scale: number};
   if (mode === 'play') {
     const scale = Math.max(
       0.1,
       (Math.min(size.w, size.h) - 2 * MARGIN) / CANVAS
     );
-    const x = (size.w - CANVAS * scale) / 2;
-    const y = (size.h - CANVAS * scale) / 2;
-    transform = `translate(${x}px, ${y}px) scale(${scale})`;
+    placement = {
+      scale,
+      x: (size.w - CANVAS * scale) / 2,
+      y: (size.h - CANVAS * scale) / 2,
+    };
   } else {
     // Preview: small box pinned to the top-right corner.
-    const x = Math.max(
-      PREVIEW_MARGIN,
-      size.w - CANVAS * PREVIEW_SCALE - PREVIEW_MARGIN
-    );
-    transform = `translate(${x}px, ${PREVIEW_MARGIN}px) scale(${PREVIEW_SCALE})`;
+    placement = {
+      scale: PREVIEW_SCALE,
+      x: Math.max(
+        PREVIEW_MARGIN,
+        size.w - CANVAS * PREVIEW_SCALE - PREVIEW_MARGIN
+      ),
+      y: PREVIEW_MARGIN,
+    };
   }
+  const transform = `translate(${placement.x}px, ${placement.y}px) scale(${placement.scale})`;
+  const boxTransition = animate
+    ? 'transform 0.45s ease, opacity 0.18s ease-in, box-shadow 0.45s ease'
+    : 'opacity 0.18s ease-in';
 
   return (
     <div
@@ -270,9 +284,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
             mode === 'play'
               ? '0 0 0 1px transparent'
               : '0 0 0 1px var(--borders-neutral-primary)',
-          transition: animate
-            ? 'transform 0.45s ease, opacity 0.18s ease-in, box-shadow 0.45s ease'
-            : 'opacity 0.18s ease-in',
+          transition: boxTransition,
           // Interactive in Play, and while picking a location (so the preview
           // can be clicked even on the Code tab).
           pointerEvents: mode === 'play' || picking ? 'auto' : 'none',
@@ -344,6 +356,18 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           </div>
         )}
       </div>
+      {mode === 'play' && controls && (
+        <div
+          className={moduleStyles.playControls}
+          style={{
+            left: placement.x + CANVAS * placement.scale,
+            top: placement.y,
+            transition: animate ? 'left 0.45s ease, top 0.45s ease' : undefined,
+          }}
+        >
+          {controls}
+        </div>
+      )}
     </div>
   );
 };
