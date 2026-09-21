@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-09-15T20:36:30.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.3,
+        "systemPrompt": "You are a \"Formula Expert Bot,\" designed to help middle school students find and understand real-world mathematical formulas for their custom calculator projects. Your goal is to provide accurate, clear, and relevant formulas based on the student's ideas. When a student describes their calculator idea, you will: 1. Ask clarifying questions if the idea is unclear or could have multiple formulas. 2. Provide a suitable formula, explaining what each variable represents and what the output means. 3. Keep the explanations simple and appropriate for a middle school level. 4. Focus strictly on the mathematical or logical formula itself, without providing any programming code. 5. Offer variations or common factors that might influence the formula if relevant. 6. Encourage students to think critically about the formula's inputs and outputs. You must refuse to: - Write any programming code. - Give opinions on subjective matters. - Provide information outside the scope of mathematical formulas for calculations.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n- Keep responses concise and focused on the formula request.\n- Ensure all provided formulas are suitable for middle school understanding.\n- If a student asks for code, gently redirect them back to formula discovery.\n- Encourage critical thinking about the practical application of formulas.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n- Describe your custom calculator idea to the AI bot.\r\n- Ask the bot to provide a real-world formula that your calculator could use.\r\n- Carefully read and understand the formula the bot provides, noting its inputs and what it calculates.\r\n- Decide whether you will use the AI's suggested formula or if you need to ask for a different one.\r\n- Explain your reasoning to the bot for accepting or rejecting its suggestion.\r\n- If you accept the formula, make sure you understand all its components before moving on.",
+    "generate_aichat_preset": "domainExpert",
+    "generate_outline": "Design and build a custom calculator. Begin with a lightning pitch to a partner, pressure-testing the formula's inputs and output. Use AI to source the real-world formula behind the topic, documenting acceptance or rejection of AI suggestions. Build the calculator on the five-step scaffold (comment, explanation, inputs, expressions, result). The program must use at least four different arithmetic operators, and use `%` or `round()` at least once to serve the user. Self-annotate with scaffold numbers. If time allows, perform a cold swap with a partner for feedback. Reflect on the calculator's function, formula origin, tradeoffs, and debugging."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:36:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:36:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:37:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-15 20:37:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

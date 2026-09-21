@@ -37,6 +37,7 @@ module TestRunUtils
     # Data:
     # - All fixture files
     # - CSV data (only videos right now, may want to add more; cdo-languages.csv particularly)
+    # - Game::GAMES_BY_INDEX
     #
     # Config:
     # - schema.rb
@@ -48,6 +49,7 @@ module TestRunUtils
         push(dashboard_dir('config/videos.csv')).
         push("#{fixture_path}/schools.tsv").
         push(dashboard_dir('lib/tasks/seed.rake')).
+        push(dashboard_dir('app/models/game.rb')).
         select {|filename| File.file?(filename)}.
         sort.
         map {|filename| Digest::MD5.file(filename)}.

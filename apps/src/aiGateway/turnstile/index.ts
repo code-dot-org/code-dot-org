@@ -1,6 +1,7 @@
 export {TurnstileManager} from './manager';
 export {
   isTurnstileChallengeError,
+  isTurnstileDevToolsError,
   TurnstileChallengeError,
   TurnstileDevToolsError,
 } from './types';
@@ -12,7 +13,6 @@ export {
 } from './enforcementMode';
 export {
   fetchTurnstileToken,
-  isTurnstileDevToolsError,
   turnstileErrorTags,
   turnstileHeaders,
   turnstileUserMessage,
