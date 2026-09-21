@@ -211,11 +211,28 @@ handles. In the file they are placements like any other, minus the position —
 which the format allows, since a placement's `positional.position` is an
 override and a data kind has nothing to override.
 
-This is the piece with the most unknown in it. Everything that assumes an
-actor has a transform has to tolerate one that does not: the map editor's
-`worldTransformOf`, the preview reader, the hit test, the layer panel.
-`renderSnapshot` already skips them, which is a good sign — that path was
-written when this was the ordinary case.
+**IT NEEDED ALMOST NOTHING**, which was not the expectation: this was written
+down as the piece with the most unknown in it, since everything assuming an
+actor has a transform would have to tolerate one that does not.
+
+It turns out they already do. `renderSnapshot` skips an actor with no
+positional trait, `loadMap` places a map's record without complaint, and the
+stage's draw loop and its hit test BOTH skip a placement with no stored
+position — `if (!positionOf(actor)) continue`, written long before any of
+this. A record is therefore invisible and unclickable on the canvas by virtue
+of being a record, and nothing had to be taught to ignore it.
+
+So the work was the panel and nothing else: a list beside the canvas, an Add
+per record kind, the same inspector on selection, the same delete. What makes
+a kind a record, as far as the editor can see, is that its schema has no
+`positional` group — the sandbox lists a group per trait the actor HAS, so
+that is the same fact said where the editor can read it, with no second flag
+to keep in step.
+
+The one thing that did need care was a name. The panel's Remove sits beside
+the layer strip's Remove, and a reader hearing two of them cannot tell which
+is which; it is `Remove record` to a screen reader and `Remove` on screen,
+which keeps a voice command working (WCAG 2.5.3).
 
 ## What it costs
 

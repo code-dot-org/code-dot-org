@@ -1490,3 +1490,111 @@ describe('resizing and turning with a pointer', () => {
     expect(after?.properties?.positional?.position).toEqual({x: 112, y: 48});
   });
 });
+
+// The records a map holds — what is in it that is not anywhere.
+//
+// A record has no position, so it cannot be placed, dragged or resized, and
+// the canvas is the wrong shape for one. It lives in a list beside the canvas
+// instead, with the same inspector and the same delete
+// (specs/RECORDS_PLAN.md).
+describe('the records panel', () => {
+  /** A kind that said `is data`: no positional group in its schema. */
+  const RECORD_SCHEMA = {
+    'actors/note': [
+      {
+        trait: 'Note',
+        traitName: 'Note',
+        props: [
+          {
+            ownerId: 'Note',
+            propId: 'text',
+            name: 'text',
+            type: 'string',
+            default: '',
+          },
+        ],
+      },
+    ],
+    // …and an ordinary kind beside it, which HAS a place.
+    'actors/coin': [
+      {
+        trait: 'positional',
+        traitName: 'Can Be Positioned',
+        props: [
+          {
+            ownerId: 'positional',
+            propId: 'position',
+            name: 'position',
+            type: 'vector',
+            default: {x: 0, y: 0},
+          },
+        ],
+      },
+    ],
+  } as never;
+
+  const withRecord = (): MapDoc => ({
+    ...doc(),
+    actors: [
+      ...doc().actors,
+      // No position at all, which is what makes it a record in a map.
+      {type: 'actors/note', id: 'Note-1'},
+    ],
+  });
+
+  it('says nothing at all when the project has no record kinds', () => {
+    const {queryByTestId} = mount(doc());
+    expect(queryByTestId('record-panel')).toBeNull();
+  });
+
+  it('lists what the map holds that is nowhere', () => {
+    const {getByTestId, getByRole} = mount(withRecord(), {
+      schemas: RECORD_SCHEMA,
+    });
+    expect(getByTestId('record-panel')).toBeInTheDocument();
+    expect(getByRole('button', {name: /Note-1/})).toBeInTheDocument();
+  });
+
+  it('leaves the placed actors off the list and the records off the canvas', () => {
+    // The two halves of the same fact. The coins are on the canvas and not in
+    // the panel; the note is in the panel and cannot be clicked on the map.
+    const map = withRecord();
+    const {canvas, getByTestId, queryByRole, selectedId} = mount(map, {
+      schemas: RECORD_SCHEMA,
+    });
+    expect(queryByRole('button', {name: /^a/})).toBeNull();
+    expect(getByTestId('record-panel')).toBeInTheDocument();
+
+    // A press where a positionless placement would be if it were at the
+    // origin selects nothing: the hit test skips one with no position.
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 0, y: 0}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 0, y: 0}));
+    expect(selectedId()).toBeNull();
+  });
+
+  it('adds one with no position, which is what makes it a record', () => {
+    const {getByRole, written} = mount(doc(), {schemas: RECORD_SCHEMA});
+    fireEvent.click(getByRole('button', {name: 'Add Note'}));
+
+    const added = written().actors.find(one => one.type === 'actors/note');
+    expect(added).toBeTruthy();
+    expect(added?.properties?.positional?.position).toBeUndefined();
+  });
+
+  it('selects one into the inspector, where it is edited like anything else', () => {
+    const {getByRole, selectedId} = mount(withRecord(), {
+      schemas: RECORD_SCHEMA,
+    });
+    fireEvent.click(getByRole('button', {name: /Note-1/}));
+    expect(selectedId()).toBe('Note-1');
+  });
+
+  it('removes the selected one', () => {
+    const {getByRole, written} = mount(withRecord(), {
+      schemas: RECORD_SCHEMA,
+    });
+    fireEvent.click(getByRole('button', {name: /Note-1/}));
+    fireEvent.click(getByRole('button', {name: 'Remove record'}));
+    expect(written().actors.some(one => one.id === 'Note-1')).toBe(false);
+  });
+});

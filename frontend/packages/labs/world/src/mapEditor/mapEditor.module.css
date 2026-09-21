@@ -569,3 +569,15 @@
   white-space: nowrap;
   border: 0;
 }
+
+/* The records a map holds — beside the canvas, because they are nowhere on
+ * it (specs/RECORDS_PLAN.md). The same strip the layers use. */
+.records {
+  composes: layers;
+}
+
+/* What kind a record is, beside its name and quieter than it. */
+.recordKind {
+  margin-left: 0.5em;
+  opacity: 0.6;
+}

@@ -79,6 +79,7 @@ import {
   withParent,
   worldTransformOf,
 } from './mapModel';
+import {RecordPanel} from './RecordPanel';
 import {
   angleTo,
   handlePoint,
@@ -615,6 +616,58 @@ export const MapStage = ({
   // The property's current value: the placement's override, else the default.
   const valueOf = (actor: Placement, prop: PropertySchema): unknown =>
     propValue(actor, prop.ownerId, prop.propId) ?? prop.default;
+
+  /**
+   * Whether a kind is a RECORD — fields, and nowhere to be.
+   *
+   * ASKED OF THE SCHEMA, because that is the one place the editor can see it.
+   * The sandbox lists a trait group per trait the actor HAS, so a kind that
+   * said `is data` has no positional trait and therefore no `positional`
+   * group. There is no separate flag to keep in step with the truth
+   * (specs/RECORDS_PLAN.md).
+   *
+   * A kind whose schema has not arrived yet is not a record. It is the
+   * honest answer while nothing is known, and it is the one that keeps a
+   * placement on the canvas rather than making it vanish into the list for a
+   * frame.
+   */
+  const isRecordKind = (type: string): boolean => {
+    const schema = schemas[type];
+    return (
+      schema !== undefined &&
+      schema.length > 0 &&
+      !schema.some(group => group.trait === 'positional')
+    );
+  };
+
+  /** What this map holds that is not anywhere — the panel's rows. */
+  const records = map.actors.filter(actor => isRecordKind(actor.type));
+  /** …and every record kind the project has, for the panel's Add. */
+  const recordKinds = Object.keys(schemas).filter(isRecordKind).sort();
+  /** `actors/note` → `Note`, which is what a kind is called. */
+  const kindName = (type: string) => {
+    const stem = type.split('/').pop() ?? type;
+    return stem.charAt(0).toUpperCase() + stem.slice(1);
+  };
+
+  /**
+   * Put a record in the map — with NO POSITION, which is what makes it one.
+   *
+   * The stage's draw loop and its hit test both skip a placement with no
+   * stored position already (`stageGeometry`), so this needs nothing of them:
+   * a record is invisible and unclickable on the canvas by virtue of being a
+   * record (specs/RECORDS_PLAN.md).
+   */
+  const addRecord = (type: string) => {
+    const name = type.split('/').pop() ?? type;
+    const id = `${name}-${crypto.randomUUID().slice(0, 8)}`;
+    commit({
+      ...mapRef.current,
+      actors: [...mapRef.current.actors, {type, id}],
+    });
+    setSelectedId(id);
+    setInspectingLayer(false);
+  };
 
   /**
    * The box a placement has, when it has one — `Has a Box`, which every
@@ -2298,6 +2351,19 @@ export const MapStage = ({
           isReadOnly={isReadOnly}
         />
       )}
+      <RecordPanel
+        records={records}
+        kinds={recordKinds}
+        selected={selectedId}
+        onSelect={id => {
+          setSelectedId(id);
+          setInspectingLayer(false);
+        }}
+        onAdd={addRecord}
+        onRemove={deleteActor}
+        isReadOnly={isReadOnly}
+        nameOf={kindName}
+      />
       {!selectedActor && inspectingLayer && inspectedLayer && (
         <LayerInspector
           // Re-keyed on what the document says, so a change from outside —
