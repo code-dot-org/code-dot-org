@@ -34,11 +34,11 @@ const WORLD = JSON.stringify({
             inputs: {
               DO: {
                 block: {
-                  type: 'world_set_ActorsImage_WidthProperty',
+                  type: 'world_set_Boxed_WidthProperty',
                   inputs: {ACTOR: me(), VALUE: number(100)},
                   next: {
                     block: {
-                      type: 'world_set_ActorsImage_HeightProperty',
+                      type: 'world_set_Boxed_HeightProperty',
                       inputs: {ACTOR: me(), VALUE: number(50)},
                     },
                   },

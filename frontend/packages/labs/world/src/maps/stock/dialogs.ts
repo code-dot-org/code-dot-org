@@ -107,7 +107,8 @@ export const confirmMap = mapFile({
   modal: true,
   actors: [
     place('actors/panel', 'Ask', MIDDLE, MIDDLE, {
-      Label: {text: '', width: 240, height: 140},
+      Label: {text: ''},
+      hasABox: {width: 240, height: 140},
     }),
     place('actors/label', 'Question', 0, -36, {
       positional: {parent: 'Ask'},
@@ -118,7 +119,7 @@ export const confirmMap = mapFile({
       'Yes',
       -56,
       28,
-      {positional: {parent: 'Ask'}, Label: {text: 'YES', width: 96}},
+      {positional: {parent: 'Ask'}, Label: {text: 'YES'}, hasABox: {width: 96}},
       script({type: 'world_emit_MapsConfirm_YesEvent'}, unloadThis),
     ),
     place(
@@ -126,7 +127,7 @@ export const confirmMap = mapFile({
       'No',
       56,
       28,
-      {positional: {parent: 'Ask'}, Label: {text: 'NO', width: 96}},
+      {positional: {parent: 'Ask'}, Label: {text: 'NO'}, hasABox: {width: 96}},
       script({type: 'world_emit_MapsConfirm_NoEvent'}, unloadThis),
     ),
   ],
@@ -172,7 +173,8 @@ const TABS = ['HOME', 'SEARCH', 'YOU'];
 export const tabsMap = mapFile({
   actors: [
     place('actors/panel', 'Bar', MIDDLE, VIEW - 24, {
-      Label: {text: '', width: VIEW, height: 48},
+      Label: {text: ''},
+      hasABox: {width: VIEW, height: 48},
     }),
     ...TABS.map((caption, at) =>
       place(
@@ -180,7 +182,11 @@ export const tabsMap = mapFile({
         `Tab ${caption}`,
         (VIEW / TABS.length) * (at + 0.5) - MIDDLE,
         0,
-        {positional: {parent: 'Bar'}, Label: {text: caption, width: 92}},
+        {
+          positional: {parent: 'Bar'},
+          Label: {text: caption},
+          hasABox: {width: 92},
+        },
         script(chose(caption)),
       ),
     ),
@@ -209,18 +215,20 @@ export const tabsMap = mapFile({
 export const messageMap = mapFile({
   actors: [
     place('actors/panel', 'Note', MIDDLE, VIEW - 96, {
-      Label: {text: '', width: VIEW - 32, height: 56},
+      Label: {text: ''},
+      hasABox: {width: VIEW - 32, height: 56},
     }),
     place('actors/label', 'Words', -40, 0, {
       positional: {parent: 'Note'},
-      Label: {text: 'SAVED', width: 180},
+      Label: {text: 'SAVED'},
+      hasABox: {width: 180},
     }),
     place(
       'actors/button',
       'Dismiss',
       92,
       0,
-      {positional: {parent: 'Note'}, Label: {text: 'OK', width: 64}},
+      {positional: {parent: 'Note'}, Label: {text: 'OK'}, hasABox: {width: 64}},
       script({type: 'world_emit_MapsMessage_DismissedEvent'}, unloadThis),
     ),
   ],

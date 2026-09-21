@@ -49,7 +49,7 @@ const BAR_INSET = 3;
 /** How far an arrow key moves it, and a page key. */
 const STEP = 24;
 
-const OWN = 'ActorsLabel';
+const OWN = 'Boxed';
 const VIEW = 'Viewport';
 
 const read = (own: string, exportName: string) => ({
@@ -61,7 +61,7 @@ const scroll = () => read(VIEW, 'ViewportScrollProperty');
 const content = () => read(VIEW, 'ViewportContentProperty');
 
 const sized = (name: 'Width' | 'Height', value: number) => ({
-  type: `world_set_ActorsLabel_${name}Property`,
+  type: `world_set_Boxed_${name}Property`,
   inputs: {
     ACTOR: me(),
     VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},

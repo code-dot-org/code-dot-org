@@ -36,6 +36,7 @@ import {
   fill,
   me,
   setText,
+  useTrait,
   showAs,
   textOf,
   words,
@@ -48,13 +49,17 @@ const HEIGHT = 24;
 /**
  * `⟨width⟩ of this actor`, and its sibling — what the box is drawn from.
  *
- * EXPORTED, because everything that ACTS LIKE a Label inherits these two and
- * paints its own face out of them: a Button's panel and a Speech Box's panel
- * are both "as big as this actor says it is" (`ActorBuilder.actsLike`).
+ * THE BOX IS NOT THE LABEL'S ANY MORE. It is the `Has a Box` trait's, which
+ * nine kinds elect and which the map editor can ask about without knowing what
+ * it is looking at (`engine/rules/boxed`, specs/BOXES_PLAN.md). This still
+ * lives here and is still what everything reads through, because everything
+ * that ACTS LIKE a Label inherits the election along with the properties
+ * (`ActorBuilder.actsLike` copies the traits) — a Button's panel and a Speech
+ * Box's panel are both "as big as this actor says it is".
  */
 export const labelSizeOf = (name: 'Width' | 'Height') => ({
   block: {
-    type: `world_get_ActorsLabel_${name}Property`,
+    type: `world_get_Boxed_${name}Property`,
     inputs: {ACTOR: me()},
   },
 });
@@ -92,15 +97,27 @@ export const LABEL_PROPERTIES = [
   defineProperty('number', 'text size', '12'),
   defineProperty('color', 'text color', '#ffffff'),
   defineProperty('string', 'text anchor', 'center'),
-  // …and the box they are laid into.
-  defineProperty('number', 'width', String(WIDTH)),
-  defineProperty('number', 'height', String(HEIGHT)),
 ];
+
+/** `set ⟨width|height⟩ of this actor to ⟨n⟩` — the trait's, not the Label's. */
+export const setBox = (name: 'Width' | 'Height', value: number) => ({
+  type: `world_set_Boxed_${name}Property`,
+  inputs: {
+    ACTOR: me(),
+    VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},
+  },
+});
 
 export const labelActor = actorFile(
   'Label',
   [
     ...LABEL_PROPERTIES,
+    // The box, elected rather than declared — and elected HERE, so the eight
+    // kinds that act like a Label get it without each saying so
+    // (specs/BOXES_PLAN.md).
+    useTrait('Boxed#HasABoxTrait'),
+    setBox('Width', WIDTH),
+    setBox('Height', HEIGHT),
     showAs('text'),
     // A default, so a Label dragged onto a map is visible before anybody has
     // typed anything into it — and so the picker has a picture to show.

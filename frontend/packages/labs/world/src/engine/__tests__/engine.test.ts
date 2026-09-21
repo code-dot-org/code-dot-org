@@ -720,6 +720,7 @@ describe('snapshot + setWorldProperty (hot-reload support)', () => {
     // foundation every world runs on, the second also required by motion.
     expect(snap.ruleIds).toEqual([
       'animation',
+      'boxed',
       'collision',
       'gravity',
       'motion',

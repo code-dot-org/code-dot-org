@@ -35,7 +35,7 @@ const width = () => labelSizeOf('Width');
 const height = () => labelSizeOf('Height');
 
 const sized = (name: 'Width' | 'Height', value: number) => ({
-  type: `world_set_ActorsLabel_${name}Property`,
+  type: `world_set_Boxed_${name}Property`,
   inputs: {
     ACTOR: me(),
     VALUE: {shadow: {type: 'math_number', fields: {NUM: value}}},

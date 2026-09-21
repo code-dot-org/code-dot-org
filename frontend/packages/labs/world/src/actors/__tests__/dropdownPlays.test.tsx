@@ -8,6 +8,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {type Actor, PositionProperty, type Property} from '../../engine';
+import {HeightProperty} from '../../engine/rules/boxed';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
@@ -94,7 +95,9 @@ describe('a Dropdown', () => {
     const menu = actors.find(actor => actor.type === 'actors/dropdown')!;
     const label = actors.find(actor => actor.type === 'actors/label')!;
     const text = modules['actors/label'].TextProperty as Property<string>;
-    const height = modules['actors/label'].HeightProperty as Property<number>;
+    // The box is the `Has a Box` trait's, not the Label's — a foundation rule
+    // in every world, so it comes from the engine (specs/BOXES_PLAN.md).
+    const height = HeightProperty;
     const isOpen = modules['actors/dropdown'].OpenProperty as Property<boolean>;
     // A frame, as the driver plays one: a tick, then the snapshot the
     // driver draws from — which is where a grown menu's size reaches its

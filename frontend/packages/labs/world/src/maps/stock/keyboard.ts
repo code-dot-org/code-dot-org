@@ -151,7 +151,8 @@ export const keyboardMap = JSON.stringify(
         properties: {
           positional: {position: {x: VIEW / 2, y: PANEL_MIDDLE}},
           // No words of its own; the keys have them all.
-          Label: {text: '', width: VIEW, height: PANEL_HEIGHT},
+          Label: {text: ''},
+          hasABox: {width: VIEW, height: PANEL_HEIGHT},
         },
       },
       ...placements().map(({key, at, id}) => ({
@@ -161,8 +162,8 @@ export const keyboardMap = JSON.stringify(
           positional: {parent: 'Keyboard', position: at},
           // See the header: a key is pointed at, never focused.
           Can_Be_Focused: {takes_the_keyboard: false},
-          Label: {
-            text: key.cap,
+          Label: {text: key.cap},
+          hasABox: {
             width: (key.span ?? 1) * PITCH - (PITCH - KEY_WIDTH),
             height: KEY_HEIGHT,
           },

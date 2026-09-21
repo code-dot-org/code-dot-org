@@ -9,7 +9,7 @@
 // in step with the engine — add a rule, or a member, and its blocks follow.
 
 import * as WorldLab from '../engine';
-import {AnimationRule, SpatialRule, ViewportRule} from '../engine';
+import {AnimationRule, BoxedRule, SpatialRule, ViewportRule} from '../engine';
 
 import {builtinRuleMeta, type RuleMeta} from './ruleMeta';
 import {registerBuiltinRules} from './ruleRegistry';
@@ -36,7 +36,15 @@ import {registerBuiltinRules} from './ruleRegistry';
  * (a position is not something a rule can invent), and animation, which reads
  * the sprite sheets the engine loads and the language cannot see.
  */
-export const BUILTIN_RULES = [SpatialRule, AnimationRule, ViewportRule];
+export const BUILTIN_RULES = [
+  SpatialRule,
+  AnimationRule,
+  ViewportRule,
+  // …and a box, which is what every interface actor is measured by and what a
+  // resize handle writes. A rule rather than a Label to act like, because nine
+  // kinds mean the same thing by it (specs/BOXES_PLAN.md).
+  BoxedRule,
+];
 
 export const BUILTIN_RULE_META: RuleMeta[] = builtinRuleMeta(
   BUILTIN_RULES,

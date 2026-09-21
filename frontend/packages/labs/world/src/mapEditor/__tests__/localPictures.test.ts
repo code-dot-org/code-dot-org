@@ -45,7 +45,8 @@ describe('localPictures', () => {
     id: 'Title',
     properties: {
       positional: {position: {x: 160, y: 30}},
-      Label: {text: 'WHAT IS YOUR NAME?', width: 200},
+      Label: {text: 'WHAT IS YOUR NAME?'},
+      hasABox: {width: 200},
     },
   };
   const key = placementKey(title.type, title.properties)!;
@@ -97,7 +98,7 @@ describe('localPictures', () => {
     const field = {
       type: 'actors/textInput',
       id: 'Name',
-      properties: {Label: {width: 120}},
+      properties: {hasABox: {width: 120}},
     };
     const local = localPictures(
       SHELF,

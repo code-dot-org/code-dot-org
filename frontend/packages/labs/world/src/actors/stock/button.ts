@@ -99,7 +99,7 @@ export const buttonActor = actorFile(
     useTrait('Input#TakesKeyboardInputTrait'),
     showAs('button'),
     {
-      type: 'world_set_ActorsLabel_HeightProperty',
+      type: 'world_set_Boxed_HeightProperty',
       inputs: {
         ACTOR: me(),
         VALUE: {shadow: {type: 'math_number', fields: {NUM: HEIGHT}}},

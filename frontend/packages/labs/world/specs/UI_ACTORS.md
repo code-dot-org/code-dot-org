@@ -1260,6 +1260,22 @@ is this with a map of rows in it** — which was the open question this table
 has carried since the List was built, and it is answered by building nothing
 further.
 
+### Every one of them has a box, and now they share one — BUILT
+
+Nine of the actors above are a width and a height with something drawn in
+them, and they had those two numbers by ACTING LIKE a Label. A Button is not a
+kind of Label; it inherited one because `width` happened to live there. The
+two kinds that could not act like a Label — the Slider and the Image — each
+grew a `width` of their own, so one idea had three properties.
+
+`Has a Box` is a trait now, on a foundation rule in play in every world
+(specs/BOXES_PLAN.md). The Label elects it and the eight kinds that act like a
+Label inherit the election, so only the Slider and the Image had to say it
+themselves. The box is in nobody's own-property ledger any more.
+
+It exists for the map editor: a resize handle wants ONE question — does this
+placement have a box — and one pair of properties to write.
+
 ### A picture in a box — BUILT
 
 `actors/image`. Any actor could already show a sprite; what none of them was

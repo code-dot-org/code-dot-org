@@ -71,7 +71,8 @@ export const pauseMenuMap = JSON.stringify(
           positional: {position: {x: MIDDLE, y: MIDDLE}},
           // Wide enough for two buttons and a title; no words of its own,
           // since the title below has them.
-          Label: {text: '', width: 200, height: 120},
+          Label: {text: ''},
+          hasABox: {width: 200, height: 120},
         },
       },
       // In the panel's frame: the title near the top, and the two buttons

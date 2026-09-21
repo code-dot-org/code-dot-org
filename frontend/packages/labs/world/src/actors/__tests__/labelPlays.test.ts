@@ -32,7 +32,7 @@ const place = (width: number) => ({
   inputs: {
     DO: {
       block: {
-        type: 'world_set_ActorsLabel_WidthProperty',
+        type: 'world_set_Boxed_WidthProperty',
         inputs: {ACTOR: me(), VALUE: number(width)},
       },
     },

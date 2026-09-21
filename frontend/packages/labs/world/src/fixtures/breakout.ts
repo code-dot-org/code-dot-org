@@ -465,7 +465,8 @@ const BREAKOUT_WORLD = JSON.stringify({
         id: 'Game',
         properties: {
           positional: {position: {x: SCREEN / 2, y: SCREEN / 2}},
-          Label: {text: '', width: SCREEN, height: SCREEN},
+          Label: {text: ''},
+          hasABox: {width: SCREEN, height: SCREEN},
           showsMap: {map: 'maps/breakout'},
         },
       },

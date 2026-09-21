@@ -177,7 +177,7 @@ describe('placementSize', () => {
       id: 'w',
       properties: {
         positional: {position: {x: 100, y: 100}},
-        Label: {width: 200},
+        hasABox: {width: 200},
       },
     };
     const key = placementKey(wide.type, wide.properties)!;
@@ -336,7 +336,7 @@ describe('hitTest', () => {
       id: 'w',
       properties: {
         positional: {position: {x: 100, y: 100}},
-        Label: {width: 200},
+        hasABox: {width: 200},
       },
     };
     const key = placementKey(wide.type, wide.properties)!;

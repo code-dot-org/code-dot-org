@@ -112,6 +112,7 @@ export type {
 // Animation).
 export * from './rules/spatial';
 export * from './rules/animation';
+export * from './rules/boxed';
 export * from './rules/viewport';
 export {Space, ROOT_SPACE_ID} from './core/Space';
 export type {MapLayer, MapSlot} from './core/Layer';

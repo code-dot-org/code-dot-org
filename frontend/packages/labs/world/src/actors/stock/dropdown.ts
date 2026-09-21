@@ -141,7 +141,7 @@ const setBoolean = (exportName: string, to: boolean) =>
   set(exportName, {
     block: {type: 'logic_boolean', fields: {BOOL: to ? 'TRUE' : 'FALSE'}},
   });
-const setHeight = (to: object) => set('HeightProperty', to, 'ActorsLabel');
+const setHeight = (to: object) => set('HeightProperty', to, 'Boxed');
 /** `set position of this to x ⟨x⟩ y ⟨y⟩`. */
 const moveTo = (x: object, y: object) => ({
   type: 'world_set_position',
@@ -295,7 +295,7 @@ export const dropdownActor = actorFile(
     useTrait('Tab Navigation#CanBeFocusedTrait'),
     useTrait('Input#TakesKeyboardInputTrait'),
     showAs('dropdown'),
-    set('WidthProperty', num(WIDTH), 'ActorsLabel'),
+    set('WidthProperty', num(WIDTH), 'Boxed'),
     setHeight(num(ROW)),
     setText('TextAnchorProperty', words('left')),
     // Three placeholders, so a Dropdown dragged onto a map has something

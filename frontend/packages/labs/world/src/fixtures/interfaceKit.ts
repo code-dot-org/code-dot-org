@@ -107,7 +107,7 @@ const INTERFACE_MAP = JSON.stringify(
       // they always did: the panel is at (160, 100) and the field 20 above
       // its middle is at (160, 80).
       place('actors/panel', 'Dialog', 160, 100, {
-        Label: {width: 300, height: 296},
+        hasABox: {width: 300, height: 296},
       }),
       // A title, which is a Label doing the one thing a Label does.
       place('actors/label', 'Title', 0, -70, {
@@ -133,7 +133,8 @@ const INTERFACE_MAP = JSON.stringify(
       // state and says when it changes.
       place('actors/toggle', 'Sound', 0, 96, {
         positional: {parent: 'Dialog'},
-        Label: {text: 'SOUND', width: 120},
+        Label: {text: 'SOUND'},
+        hasABox: {width: 120},
       }),
       // A bar the pointer drags, whose fraction a game reads as a volume.
       place('actors/slider', 'Volume', 0, 124, {

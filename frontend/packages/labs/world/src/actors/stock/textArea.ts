@@ -282,14 +282,14 @@ export const textAreaActor = actorFile(
     defineProperty('number', 'caret', '0'),
     defineEvent('changed'),
     {
-      type: 'world_set_ActorsLabel_WidthProperty',
+      type: 'world_set_Boxed_WidthProperty',
       inputs: {
         ACTOR: me(),
         VALUE: {shadow: {type: 'math_number', fields: {NUM: WIDTH}}},
       },
     },
     {
-      type: 'world_set_ActorsLabel_HeightProperty',
+      type: 'world_set_Boxed_HeightProperty',
       inputs: {
         ACTOR: me(),
         VALUE: {shadow: {type: 'math_number', fields: {NUM: HEIGHT}}},

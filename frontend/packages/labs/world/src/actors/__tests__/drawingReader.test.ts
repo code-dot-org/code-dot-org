@@ -85,10 +85,12 @@ describe('readDrawing, over the shelf', () => {
   });
 
   it('is as wide as its placement made it, box and all', () => {
-    const label = readDrawing(SHELF, 'actors/label', {Label: {width: 200}})!;
+    const label = readDrawing(SHELF, 'actors/label', {hasABox: {width: 200}})!;
     expect(label.width).toBe(200);
     // A Button draws its box from the same width.
-    const button = readDrawing(SHELF, 'actors/button', {Label: {width: 200}})!;
+    const button = readDrawing(SHELF, 'actors/button', {
+      hasABox: {width: 200},
+    })!;
     expect(button.width).toBe(200);
     expect(rectangles(button.commands).some(box => box.width === 200)).toBe(
       true,

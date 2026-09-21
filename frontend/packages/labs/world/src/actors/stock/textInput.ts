@@ -565,7 +565,7 @@ export const textInputActor = actorFile(
     // keyboard half of the button beside it.
     defineEvent('is done'),
     {
-      type: 'world_set_ActorsLabel_HeightProperty',
+      type: 'world_set_Boxed_HeightProperty',
       inputs: {
         ACTOR: me(),
         VALUE: {shadow: {type: 'math_number', fields: {NUM: HEIGHT}}},

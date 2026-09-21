@@ -5460,7 +5460,8 @@ const rooms: WorldScenario = {
             id: 'Game',
             properties: {
               positional: {position: {x: 160, y: 160}},
-              Label: {text: '', width: 320, height: 320},
+              Label: {text: ''},
+              hasABox: {width: 320, height: 320},
               showsMap: {map: 'maps/room1'},
             },
           },

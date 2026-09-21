@@ -349,8 +349,8 @@ export const listActor = actorFile(
     useTrait('Tab Navigation#CanBeFocusedTrait'),
     useTrait('Input#TakesKeyboardInputTrait'),
     showAs('list'),
-    set('WidthProperty', num(WIDTH), 'ActorsLabel'),
-    set('HeightProperty', num(HEIGHT), 'ActorsLabel'),
+    set('WidthProperty', num(WIDTH), 'Boxed'),
+    set('HeightProperty', num(HEIGHT), 'Boxed'),
     setText('TextAnchorProperty', words('left')),
     // Placeholders, so a List dragged onto a map has something to show; a
     // project replaces them.

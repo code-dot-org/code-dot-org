@@ -149,12 +149,12 @@ const HOME_MAP = mapFile(
       own: {Label: {text: 'NOTES'}},
     }),
     place('actors/list', 'Notes', WIDTH / 2, 260, {
-      own: {Label: {width: 280, height: 320}},
+      own: {hasABox: {width: 280, height: 320}},
     }),
     place('actors/button', 'New', WIDTH / 2, 520, {
       anchor: 'bottom',
       emits: 'world_emit_MapsHome_NewNoteEvent',
-      own: {Label: {text: 'NEW NOTE', width: 200}},
+      own: {Label: {text: 'NEW NOTE'}, hasABox: {width: 200}},
     }),
   ],
   ['new note'],
@@ -175,7 +175,7 @@ const WRITE_MAP = mapFile(
     // not blocking what is under it.
     place('actors/panel', 'Sheet', WIDTH / 2, 88, {
       anchor: 'top',
-      own: {Label: {width: WIDTH, height: 176}},
+      own: {hasABox: {width: WIDTH, height: 176}},
     }),
     place('actors/label', 'Prompt', WIDTH / 2, 36, {
       anchor: 'top',
@@ -183,17 +183,17 @@ const WRITE_MAP = mapFile(
     }),
     place('actors/textInput', 'Entry', WIDTH / 2, 88, {
       anchor: 'top',
-      own: {Label: {width: 280}},
+      own: {hasABox: {width: 280}},
     }),
     place('actors/button', 'Save', 96, 144, {
       anchor: 'top',
       emits: 'world_emit_MapsWrite_SaveEvent',
-      own: {Label: {text: 'SAVE', width: 120}},
+      own: {Label: {text: 'SAVE'}, hasABox: {width: 120}},
     }),
     place('actors/button', 'Cancel', 224, 144, {
       anchor: 'top',
       emits: 'world_emit_MapsWrite_CancelEvent',
-      own: {Label: {text: 'CANCEL', width: 120}},
+      own: {Label: {text: 'CANCEL'}, hasABox: {width: 120}},
     }),
   ],
   ['save', 'cancel'],

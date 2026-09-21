@@ -29,11 +29,13 @@
 // picture in it, and is not worth a stock actor until somebody wants one
 // (specs/SCROLLING_PLAN.md).
 
+import {setBox} from './label';
 import {PORTRAIT_SPRITE} from './portrait';
 import {
   actorFile,
   defineProperty,
   me,
+  useTrait,
   num,
   setSprite,
   showAs,
@@ -45,11 +47,11 @@ const HEIGHT = 64;
 
 const OWN = 'ActorsImage';
 
-const own = (exportName: string) => ({
-  block: {type: `world_get_${OWN}_${exportName}`, inputs: {ACTOR: me()}},
+const box = (name: 'Width' | 'Height') => ({
+  block: {type: `world_get_Boxed_${name}Property`, inputs: {ACTOR: me()}},
 });
-const width = () => own('WidthProperty');
-const height = () => own('HeightProperty');
+const width = () => box('Width');
+const height = () => box('Height');
 
 /**
  * `⟨x|y⟩ of how big the picture is` — zero until there is one.
@@ -110,12 +112,17 @@ export const imageActor = actorFile('Image', [
   // which was the first thing tried. A Label brings its DRAWING, and a
   // drawing WINS OVER A SPRITE when an actor has both (`World.renderSnapshot`,
   // `drawing`) — so an Image that acted like a Label drew a label-shaped
-  // rectangle and never showed its picture at all. The box is two properties
-  // of its own instead, which is the honest reading anyway: an Image is not
-  // a Label with a picture in it, it is a picture with a box around it.
+  // rectangle and never showed its picture at all. It is a picture with a box
+  // round it, not a Label with a picture in it.
+  //
+  // THE BOX IS STILL SHARED, though: `Has a Box` is a trait nine kinds elect,
+  // and an Image not being a Label is no reason for it to invent a second
+  // `width` (specs/BOXES_PLAN.md). Not acting like a Label only means it has
+  // to say this itself.
   showAs('image'),
-  defineProperty('number', 'width', String(WIDTH)),
-  defineProperty('number', 'height', String(HEIGHT)),
+  useTrait('Boxed#HasABoxTrait'),
+  setBox('Width', WIDTH),
+  setBox('Height', HEIGHT),
   // A picture to start with, so an Image placed in the map editor is
   // something you can see and move before you have chosen what it shows.
   setSprite(`${PORTRAIT_SPRITE}.png`),

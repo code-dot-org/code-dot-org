@@ -51,6 +51,7 @@ import type {
 import type {Vector} from '../core/Vector';
 import {World, type WorldMap} from '../core/World';
 import {AnimationRule} from '../rules/animation';
+import {BoxedRule} from '../rules/boxed';
 import {SpatialRule} from '../rules/spatial';
 import {ViewportRule} from '../rules/viewport';
 
@@ -66,6 +67,10 @@ const FOUNDATION_RULES: readonly Rule[] = [
   SpatialRule,
   AnimationRule,
   ViewportRule,
+  // …and a box, which every interface actor has and which a resize handle in
+  // the map editor must be able to ask about without knowing what it is
+  // looking at (specs/BOXES_PLAN.md).
+  BoxedRule,
 ];
 
 // A Map — the data a level is — is the World's now, because loading one is

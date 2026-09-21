@@ -26,12 +26,12 @@
 // thing to catch with a pointer: the canvas is the actor's click box, and a
 // slider is as big as it says it is, like a Label.
 
+import {setBox} from './label';
 import {
   actorFile,
   actsLike,
   chain,
   defineEvent,
-  defineProperty,
   fill,
   me,
   noFill,
@@ -62,8 +62,8 @@ const STEP = 0.1;
 const read = (own: string, exportName: string) => ({
   block: {type: `world_get_${own}_${exportName}`, inputs: {ACTOR: me()}},
 });
-const width = () => read(OWN, 'WidthProperty');
-const height = () => read(OWN, 'HeightProperty');
+const width = () => read('Boxed', 'WidthProperty');
+const height = () => read('Boxed', 'HeightProperty');
 const fraction = () => read(BAR, 'FractionProperty');
 const focused = () => ({
   block: {
@@ -192,8 +192,12 @@ export const sliderActor = actorFile(
     // FIRST, so everything below overrides it: the fraction, and the face
     // this paints instead of the bar's.
     actsLike('actors/progressBar'),
-    defineProperty('number', 'width', String(WIDTH)),
-    defineProperty('number', 'height', String(HEIGHT)),
+    // The box, elected rather than declared. A Slider acts like a Progress
+    // Bar, which has no box of its own, so this is the one other kind that
+    // says it itself (specs/BOXES_PLAN.md).
+    useTrait('Boxed#HasABoxTrait'),
+    setBox('Width', WIDTH),
+    setBox('Height', HEIGHT),
     defineEvent('changed'),
     useTrait('Mouse#CanBeClickedTrait'),
     // …and the gestures that begin on it, which is how the knob follows a

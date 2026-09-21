@@ -95,7 +95,7 @@ describe('every stock actor', () => {
       toggle: ['on'],
       // A slider is as big as it says. What it was following is the Gestures
       // rule's to remember now, so it keeps nothing else of its own.
-      slider: ['width', 'height'],
+      slider: [],
       // A list's words, how far the window has travelled, and which row the
       // keys are on. The scroll is a number of PIXELS and not of rows, which
       // is what lets a drag move it by whatever it moved by.
@@ -105,10 +105,10 @@ describe('every stock actor', () => {
       // How an Image meets its box: fill it exactly, or fit inside it keeping
       // the picture's shape. Nobody else's idea — a Label has no picture and a
       // Coin has no box it must sit in.
-      // Its box and how the picture meets it. The box is the Image's OWN
-      // rather than the Label's, because acting like a Label brings a drawing
-      // and a drawing wins over a sprite (`actors/stock/image`).
-      image: ['width', 'height', 'stretches'],
+      // How the picture meets its box. The BOX is nobody's own any more — it
+      // is the `Has a Box` trait's, which nine kinds elect
+      // (specs/BOXES_PLAN.md).
+      image: ['stretches'],
       // A text area's caret; its lines are newlines in the words themselves.
       textArea: ['caret'],
       // …and what a bar IS: how far along it is, and the two colors it is
@@ -125,8 +125,6 @@ describe('every stock actor', () => {
         'text_size',
         'text_color',
         'text_anchor',
-        'width',
-        'height',
       ],
       // The typewriter. `the whole line` is what is being said, where `text`
       // is however much of it has arrived — Writing's, because every actor
@@ -167,8 +165,10 @@ describe('every stock actor', () => {
     // project and there is nothing to import — `stockRuleByName` does not know
     // them, and a `requires` naming one would resolve to nothing. A Portrait
     // setting its own opacity names Appearance and needs no rule at all.
-    // …and Viewport, the third of them (specs/VIEWPORT_PLAN.md).
-    const foundation = new Set(['Space', 'Appearance', 'Viewport']);
+    // …and Viewport, the third of them (specs/VIEWPORT_PLAN.md); and Boxed,
+    // the fourth, which is a width and a height and which every interface
+    // actor elects (specs/BOXES_PLAN.md).
+    const foundation = new Set(['Space', 'Appearance', 'Viewport', 'Boxed']);
     for (const actor of STOCK_ACTORS) {
       const elected = [...actor.contents.matchAll(/"TRAIT": "([^#]+)#/g)]
         .map(match => slug(match[1]))
@@ -257,8 +257,8 @@ describe('Label', () => {
     // that could be said.
     const drawn = types(labelActor);
 
-    expect(drawn).toContain('world_get_ActorsLabel_WidthProperty');
-    expect(drawn).toContain('world_get_ActorsLabel_HeightProperty');
+    expect(drawn).toContain('world_get_Boxed_WidthProperty');
+    expect(drawn).toContain('world_get_Boxed_HeightProperty');
   });
 
   it('arrives with something to show', () => {

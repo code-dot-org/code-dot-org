@@ -29,6 +29,7 @@
 // from one walk over the project's declarations, so a placement's overrides
 // translate without anybody typing the correspondence twice.
 
+import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {parseRuleMeta, type PropertyMeta} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
@@ -117,6 +118,20 @@ export function declarationsOf(files: Files): Declarations {
         if (property.ownerTraitId) {
           blockKeyOf.set(`${property.ownerTraitId}.${property.id}`, key);
         }
+      }
+    }
+  }
+  // …and the rules the ENGINE provides, which are in every world and are in
+  // no `.rule` file to walk. A Label's box is one of them now (`Has a Box`,
+  // specs/BOXES_PLAN.md), so a preview that did not know them drew every
+  // interface actor at whatever literal its drawing fell back to.
+  for (const meta of BUILTIN_RULE_META) {
+    for (const property of meta.properties) {
+      const key = `${meta.name.replaceAll(' ', '')}_${property.ref.exportName}`;
+      defaults.set(key, property);
+      blockKeyOf.set(`${meta.id}.${property.id}`, key);
+      if (property.ownerTraitId) {
+        blockKeyOf.set(`${property.ownerTraitId}.${property.id}`, key);
       }
     }
   }
