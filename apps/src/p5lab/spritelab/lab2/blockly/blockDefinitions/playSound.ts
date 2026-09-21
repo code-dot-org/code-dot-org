@@ -1,7 +1,11 @@
+import * as BlocklyCore from 'blockly/core';
+
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 export const PLAY_SOUND_BLOCK_TYPE = 'spritelab2_playSound';
+export const FIELD_SOUND_DROPDOWN_TYPE = 'field_spritelab2_sound';
 
 // Values are the sound:// URLs the playSound command resolves.
 export const PLAY_SOUND_OPTIONS: [string, string][] = [
@@ -25,10 +29,32 @@ export const PLAY_SOUND_OPTIONS: [string, string][] = [
   ['dog', 'sound://category_animals/dog.mp3'],
 ];
 
+/**
+ * The sound dropdown. Picking from the open menu plays the sound once, the
+ * same way the block does at run time; a value set any other way (a saved
+ * block loading) stays silent.
+ */
+export class SoundDropdown extends BlocklyCore.FieldDropdown {
+  static fromJson(_options: BlocklyCore.FieldConfig) {
+    return new SoundDropdown(PLAY_SOUND_OPTIONS);
+  }
+
+  protected override onItemSelected_(
+    menu: BlocklyCore.Menu,
+    menuItem: BlocklyCore.MenuItem
+  ) {
+    super.onItemSelected_(menu, menuItem);
+    const url = this.getValue();
+    if (url) {
+      audioCommands.playSound({url, loop: false});
+    }
+  }
+}
+
 const definition: BlockJson = {
   type: PLAY_SOUND_BLOCK_TYPE,
   message0: 'play sound %1',
-  args0: [{type: 'field_dropdown', name: 'SOUND', options: PLAY_SOUND_OPTIONS}],
+  args0: [{type: FIELD_SOUND_DROPDOWN_TYPE, name: 'SOUND'}],
   previousStatement: null,
   nextStatement: null,
   style: BlockStyles.DEFAULT,
