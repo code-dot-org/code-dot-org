@@ -217,8 +217,8 @@ async function loadPackages() {
       // here on purpose: it is fetched per run for a program that imports it,
       // see ON_DEMAND_PACKAGE_URLS.
       `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/pythonlab_setup-0.3.0-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/neighborhood-0.5.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.4.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/neighborhood-0.6.0-py3-none-any.whl`,
     ],
     {
       errorCallback: (message: string) => {

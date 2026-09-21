@@ -112,7 +112,11 @@ module UserMultiAuthHelper
             hashed_email: hashed_email || '',
             credential_type: provider,
             authentication_id: uid,
-            version: provider == AuthenticationOption::CLASSLINK ? AuthenticationOption::Classlink.version_for(uid) : nil,
+            version:
+              case provider
+              when AuthenticationOption::CLEVER then AuthenticationOption::Clever::VERSION[:v3]
+              when AuthenticationOption::CLASSLINK then AuthenticationOption::Classlink.version_for(uid)
+              end,
             data: new_data
           )
         elsif hashed_email.present?

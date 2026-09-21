@@ -22,7 +22,6 @@ import {ExplanationTypes} from '../types';
 import AudioRecorder from './AudioRecorder';
 import {requestEvaluation} from './requestEvaluation';
 
-import videoChallengeStyles from './video-challenge.module.scss';
 import styles from './whiteboard-challenge.module.scss';
 
 const DEFAULT_SOURCES: ReactFlowSketchLabSources = {
@@ -130,6 +129,12 @@ interface WhiteboardChallengeProps {
   textExplanation: string;
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
   setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
+  // Reports whether the current drawing can be submitted, and hands the
+  // top-bar "Submit for feedback" / "Start over" buttons this modality's
+  // submit and reset handlers.
+  onSubmittableChange: (canSubmit: boolean) => void;
+  submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
+  resetRef: React.MutableRefObject<(() => void) | null>;
 }
 
 // Split from the default export so useReactFlow (needed by the snapshot
@@ -149,6 +154,9 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   textExplanation,
   setEvaluationStatus,
   setChallengeResponseId,
+  onSubmittableChange,
+  submitRef,
+  resetRef,
 }) => {
   // ReactFlowCanvas reports edits through the same updateSources contract
   // as sketchlab's SourcesContainer; here the drawing lives in local state
@@ -164,7 +172,9 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   >(starterImageUrl ? null : []);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
+  const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
+  // Bumped to remount the canvas with an empty drawing on "Start over".
+  const [resetKey, setResetKey] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const reactFlow = useReactFlow();
@@ -173,6 +183,9 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
     !submitted &&
     !submitting &&
     challengeId !== null &&
+    ((explanationType === ExplanationTypes.AUDIO && hasRecording) ||
+      (explanationType === ExplanationTypes.TEXT &&
+        textExplanation !== null)) &&
     sources.source.nodes.length > 0;
 
   const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
@@ -212,17 +225,14 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   }, [starterImageUrl, starterImageAltText]);
 
   const transcribeAudio = async (timedOut = false) => {
-    if (!recordedUrl) return null;
+    if (!recordedBlob) return null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     try {
-      const audio = await fetch(recordedUrl).then(r => r.blob());
-
       const aichatClientApi = await getClientApi();
-      const text = await aichatClientApi.transcribeAudio(audio);
+      const text = await aichatClientApi.transcribeAudio(recordedBlob);
       return text;
-      // setTranscribedText(text);
     } catch (error) {
       console.log(error);
       return null;
@@ -296,13 +306,39 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
     }
   };
 
+  // Clear the drawing (by remounting the canvas) and any pending audio.
+  const handleReset = () => {
+    setResetKey(key => key + 1);
+    setSources(DEFAULT_SOURCES);
+    setSubmitError(null);
+    setRecordedBlob(null);
+  };
+
+  // Keep the top bar's "Submit for feedback" enabled state in sync.
+  useEffect(() => {
+    onSubmittableChange(canSubmit);
+  }, [canSubmit, onSubmittableChange]);
+
+  // Register this modality's handlers for the top-bar buttons. Runs every
+  // render so the refs hold the latest closures, and clears them on unmount
+  // (e.g. switching to the video modality).
+  useEffect(() => {
+    submitRef.current = handleSubmit;
+    resetRef.current = handleReset;
+    return () => {
+      submitRef.current = null;
+      resetRef.current = null;
+    };
+  });
+
   return (
-    <div>
+    <div className={styles.whiteboardChallenge}>
       <div className={styles.whiteboardPane}>
         {initialNodes === null ? (
           <div className={styles.starterLoading}>Loading starter image…</div>
         ) : (
           <ReactFlowCanvas
+            key={resetKey}
             updateSources={setSources}
             initialNodes={initialNodes}
             initialEdges={[]}
@@ -318,22 +354,15 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
               isRecording={isRecording}
               onRecordingChange={setHasRecording}
               onIsRecordingChange={setIsRecording}
-              recordedUrl={recordedUrl}
-              setRecordedUrl={setRecordedUrl}
+              recordedBlob={recordedBlob}
+              setRecordedBlob={setRecordedBlob}
               disabled={submitted}
+              timeLimitSeconds={60}
             />
           </div>
         )}
       </div>
       {submitError && <p className={styles.submitError}>{submitError}</p>}
-      <button
-        type="button"
-        className={videoChallengeStyles.submitButton}
-        disabled={!canSubmit}
-        onClick={handleSubmit}
-      >
-        {submitting ? 'Submitting…' : 'Submit'}
-      </button>
     </div>
   );
 };

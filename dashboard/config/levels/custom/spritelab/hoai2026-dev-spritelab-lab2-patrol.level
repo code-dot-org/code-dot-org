@@ -21,40 +21,34 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Images",
-      "World",
-      "Code",
-      "Play"
-    ],
-    "locked_image_type": "sprite",
-    "pinned_scene_id": "platform-scene",
-    "pinned_scene_name": "Platformer",
-    "guide_mode": "instructions",
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "sprite": "friend",
+      "gamelab_checkTouching": [
+        "hero",
+        "friend"
+      ]
+    },
+    "pinned_scene": {
+      "id": "platform-scene",
+      "name": "Platformer",
+      "type": "platform"
+    },
     "guide_steps": [
       {
-        "text": "**Make another character**, whoever or whatever you like."
+        "text": "**Set them walking.** Use **sprite [them] begins [patrolling left and right on blocks]**.  Then add **when [ ] touches [ ]**, pick your player and your second character, and decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start.  Click **Play** and go and meet them."
       },
       {
-        "text": "**Give them a platform.** In the **World** tab, place them on top of some blocks. They will walk back and forth along them.",
+        "text": "**Your world has company.** Continue when you're ready.",
+        "showContinue": true,
         "after": {
-          "images": 5
-        }
-      },
-      {
-        "text": "**Set them walking.** In the **Code** tab, use **sprite [them] begins [patrolling left and right on blocks]**.",
-        "after": {
-          "worldSprites": 3
-        }
-      },
-      {
-        "text": "**Now your choice.** Add **when [ ] touches [ ]** and pick your player and your new character from the dropdowns. Then decide what happens: a **say** block for a friendly hello, or **restart scene** to send your player back to the start. Press **Play** and go and meet them.",
-        "after": {
-          "tab": "Code"
+          "tab": "Play"
         }
       }
     ],
-    "long_instructions": "# Add someone else\nMake a second character and place it on a platform, walking back and forth. Then decide what happens when your player meets them: a friendly hello, or back to the start.",
+    "long_instructions": "# Set them walking\nUse **sprite [them] begins [patrolling left and right on blocks]**, then decide what happens when your player meets them: a friendly hello, or back to the start.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [

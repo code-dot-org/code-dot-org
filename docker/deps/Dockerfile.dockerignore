@@ -3,7 +3,7 @@
 # needs to sync the venv, and nothing else.
 #
 # A denylist was rejected: it makes every new large directory in the repo a
-# silent context regression, and the k8s/docker equivalent is 486 lines.
+# silent context regression.
 #
 # Re-including a nested path needs its parents un-excluded, hence the
 # dashboard two-step: allow the directory, drop its contents, allow engines.

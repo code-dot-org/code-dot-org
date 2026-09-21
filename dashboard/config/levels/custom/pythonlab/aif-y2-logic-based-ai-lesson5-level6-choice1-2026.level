@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T02:44:38.000Z",
   "level_num": "custom",
@@ -33,7 +32,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "def get_average_length(length1, length2):\n    # TODO 1: Return the average length\n    return\n\nlength1 = 3\nlength2 = 5\n\nprint(f\"The first song in your playlist is {length1} minutes long.\")\nprint(f\"The second song in your playlist is {length2} minutes long.\")\n\n# TODO 2: Call get_average_length and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average length\n",
+          "contents": "def get_average_length(length1, length2):\n  # TODO 1: Return the average length\n  return\n\nlength1 = 3\nlength2 = 5\n\nprint(f\"The first song in your playlist is {length1} minutes long.\")\nprint(f\"The second song in your playlist is {length2} minutes long.\")\n\n# TODO 2: Call get_average_length and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average length\n",
           "folderId": "0",
           "active": true
         }
@@ -44,8 +43,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqmq85ntKounpXY\nGGmIBTr7BZc7jXF2X/dzhHRbvfDWyvCkpK9Sy2Du/wtjwicnKxpW59KOBcjs\nye+Re93kvpw2hyAASmGROc9OlQ3oxIfpIV3cCXuZRVNCVUYzKyaCnD2a8B65\n2htcgCT2pTu37pEpYCObRayP1Vw7KO9erfguoCNYDAdYRjSm99JY6xhosilS\n0J5DrUlYh26YBXE2GgTH4FuYwRxoRSjV8V/C2RzlQhIUmvOOOdnKTH4ycfdv\n5d5JPlIyT+23Sm8H810Y11eYEM6aysl554hJUvQPMwSuCrbr5u6YyarsQ+F5\nS8V86mU5udYoXrksg4asrQTqrqU0sgDsiwShm3W8yBZn0UvDTRT7LTq9XmPM\nsoDHKg92gg7WQ95fNhl+s/GlEE+fPuRVZxqP+CKSqcWUISfDJBwgeRZ9nJLL\nGzB5MjSqxqJgoop6KJaqcX3S6Pwcc5kLTQaokF2As7ruAE8WL0xM1CAMVoMl\nbdoJKoSz5O0zK33qKn9/efIuM5bFMYWDXM3CmHnK1cj6h3hYzUlV/79BpVqQ\ngUx++HCoQr3kmPdWDqMapp4iw0mpJwmiOMYcGBoo1NwVxFCVFSbh+cMGx967\n0ZPF0g==\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqEQhkjukiQnaHF\n6x9+601MFHSAvqpzjHoODxqR3mxdcLmqzs/dPo7T68/DcmVXtRkyWoDUwIzk\nYJXqM3y4GtDgXDA2T6+DetuIVxlgNiVBtLKz6YEksvAafli/YdF6YtNCH9F6\nYXM6fO/jSSWa55EpJJB4JEzcaPQUd7K8sRovboLAPZXVvb5Qi0VYHbJGAwrA\nWS6BZU+cUSv+vXMuJo/mExnilbshVjrHRVgF+iQ6Sq5WFjc9yxMAVqCHYwch\nM8aIupB1SOmoH6S+9cG+rvsjQgNB9mdUPppDrmO8avjo/1TsWTpj1olXoXLn\nk73dOR4cXA69/FZGGBfMo4wVl76ZQBttE/jSCpdmGs2R7/zamF5lz4frIMAo\nHw4JY7ZDgRyCvKitArC2qfr29pkQyFBUW6ZqgChlTEOTt7nV7Fr8XvyLPEio\ncgpU2q4Vx6AlIl+oqbOQWredtAsHi4cg/FVj9KMuvTOqexOInkvxWNH1PTrL\n28KTSEh8NB8W+dkm1CjJj488KWE28Dp88GTh5kaU301vWRQrl1iNTK+4ERrv\nk0wj2TIvYOcR0/hTompCFSkShbJ0KPQPMubBwDoOT8HX\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:45:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-29 19:14:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:21 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:45:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-29 19:14:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 14:59:03 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-23 15:40:21 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:09:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 18:10:01 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

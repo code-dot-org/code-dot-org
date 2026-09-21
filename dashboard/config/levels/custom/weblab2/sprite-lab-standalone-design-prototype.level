@@ -1,0 +1,54 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-09-16T21:43:52.000Z",
+  "level_num": "custom",
+  "user_id": 887,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "require_edit_to_continue": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Sprite Lab Prototype</title>\n  <style>\n    body {\n      margin: 0;\n      min-height: 100vh;\n      display: grid;\n      place-items: center;\n    }\n\n    a {\n      padding: 24px 40px;\n      background: #6c47ff;\n      color: white;\n      font: bold 24px Arial, sans-serif;\n      text-decoration: none;\n      border-radius: 12px;\n    }\n  </style>\n</head>\n<body>\n  <a href=\"https://studio.code.org/projects/weblab2/c5e64008-3b62-4962-ac5b-5bd79289463f\">Sprite Lab Prototype</a>\n</body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-16 21:44:44 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-09-16 21:45:45 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-09-17 00:15:30 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-09-17 00:18:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-09-17 00:18:05 +0000\",\"changed\":[],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]"
+}]]></config>
+</Weblab2>

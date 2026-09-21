@@ -7,7 +7,6 @@ import {
 } from '../lessonDeepDive/types';
 
 import ReactionChips from './ReactionChips';
-import {Reaction} from './types';
 
 import styles from './challenge-gallery.module.scss';
 
@@ -16,10 +15,7 @@ export type ProjectVariant = 'video' | 'whiteboard';
 interface ProjectCardProps {
   response: ChallengeResponse;
   variant: ProjectVariant;
-  // The position of the response's unit within the course, for the
-  // "Unit N, Lesson M" label. Null when the unit is unknown.
   unitPosition: number | null;
-  reactions?: Reaction[];
   // Opens the project's page. The card links to ?project=<id> and lets
   // this handler do the in-page navigation.
   onOpen?: () => void;
@@ -74,7 +70,6 @@ const ProjectCard: FC<ProjectCardProps> = ({
   response,
   variant,
   unitPosition,
-  reactions = [],
   onOpen,
 }) => {
   const projectHref = `?project=${response.id}`;
@@ -154,7 +149,11 @@ const ProjectCard: FC<ProjectCardProps> = ({
             {response.user_name}
           </a>
         </p>
-        <ReactionChips reactions={reactions} />
+        <ReactionChips
+          responseId={response.id}
+          reactions={response.reactions}
+          readOnly
+        />
       </div>
     </div>
   );

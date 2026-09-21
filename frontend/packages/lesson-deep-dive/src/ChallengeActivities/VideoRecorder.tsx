@@ -82,29 +82,35 @@ function pickAudioMimeType(): string {
 }
 
 interface VideoRecorderProps {
+  // Caller-controlled: flip this to start/stop the recording (e.g. from a
+  // button in a parent component) rather than clicking a button here.
+  isRecording: boolean;
   onRecordingChange: (hasRecording: boolean) => void;
+  // Called when the recording stops on its own (countdown expiry), so the
+  // caller can bring its `isRecording` state back in sync.
   onIsRecordingChange?: (isRecording: boolean) => void;
-  recordedUrl: string | null;
-  setRecordedUrl: Dispatch<SetStateAction<string | null>>;
-  recordedAudioUrl: string | null;
-  setRecordedAudioUrl: Dispatch<SetStateAction<string | null>>;
+  recordedBlob: Blob | null;
+  setRecordedBlob: Dispatch<SetStateAction<Blob | null>>;
+  recordedAudioBlob: Blob | null;
+  setRecordedAudioBlob: Dispatch<SetStateAction<Blob | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
 }
 
 const VideoRecorder: FC<VideoRecorderProps> = ({
+  isRecording,
   onRecordingChange,
   onIsRecordingChange,
-  recordedUrl,
-  setRecordedUrl,
-  recordedAudioUrl,
-  setRecordedAudioUrl,
+  recordedBlob,
+  setRecordedBlob,
+  setRecordedAudioBlob,
   timeLimitSeconds = 30,
   disabled = false,
 }) => {
   const [recordingState, setRecordingState] = useState<RecordingState>('idle');
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   const previewRef = useRef<HTMLVideoElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -157,18 +163,17 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     // run once on mount; startStream is stable
   }, []);
 
-  // Revoke the object URLs whenever they change or on unmount.
+  // Derive the preview URL from the recorded Blob, revoking the previous one
+  // whenever the Blob changes or on unmount.
   useEffect(() => {
-    return () => {
-      if (recordedUrl) URL.revokeObjectURL(recordedUrl);
-    };
-  }, [recordedUrl]);
-
-  useEffect(() => {
-    return () => {
-      if (recordedAudioUrl) URL.revokeObjectURL(recordedAudioUrl);
-    };
-  }, [recordedAudioUrl]);
+    if (!recordedBlob) {
+      setPreviewUrl(null);
+      return;
+    }
+    const url = URL.createObjectURL(recordedBlob);
+    setPreviewUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [recordedBlob]);
 
   const stopRecording = useCallback(() => {
     clearTimer();
@@ -185,7 +190,21 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     }
   }, [timeRemaining, recordingState, stopRecording]);
 
-  const startRecording = () => {
+  const startRecording = useCallback(async () => {
+    // Re-recording over a previous take: that stream's tracks were stopped
+    // when the previous recording finished, so get a fresh one first.
+    // Clearing recordedBlob (rather than setting recordingState) is what
+    // switches back to the preview render so the <video ref={previewRef}>
+    // element is mounted in time to receive it — recordingState itself
+    // stays 'recorded' until the new recorder actually starts, since
+    // changing it here would re-trigger the isRecording effect below mid-await
+    // and race a second startRecording() against this one's stale stream.
+    if (recordingState === 'recorded') {
+      setRecordedBlob(null);
+      setRecordedAudioBlob(null);
+      onRecordingChange(false);
+      await startStream();
+    }
     if (!streamRef.current) return;
     chunksRef.current = [];
     audioChunksRef.current = [];
@@ -197,7 +216,7 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     };
     recorder.onstop = () => {
       const blob = new Blob(chunksRef.current, {type: 'video/webm'});
-      setRecordedUrl(URL.createObjectURL(blob));
+      setRecordedBlob(blob);
       onRecordingChange(true);
       onIsRecordingChange?.(false);
     };
@@ -215,54 +234,55 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
     };
     audioRecorder.onstop = () => {
       const blob = new Blob(audioChunksRef.current, {type: 'audio/webm'});
-      setRecordedAudioUrl(URL.createObjectURL(blob));
+      setRecordedAudioBlob(blob);
     };
     audioRecorderRef.current = audioRecorder;
 
     recorder.start();
     audioRecorder.start();
-    onIsRecordingChange?.(true);
     setRecordingState('recording');
 
     timerRef.current = setInterval(() => {
       setTimeRemaining(prev => (prev > 0 ? prev - 1 : 0));
     }, 1000);
-  };
+  }, [
+    recordingState,
+    startStream,
+    timeLimitSeconds,
+    setRecordedBlob,
+    setRecordedAudioBlob,
+    onRecordingChange,
+    onIsRecordingChange,
+  ]);
 
-  const reRecord = async () => {
-    setRecordedUrl(null);
-    setRecordedAudioUrl(null);
-    setTimeRemaining(timeLimitSeconds);
-    onRecordingChange(false);
-    setRecordingState('idle');
-    await startStream();
-  };
+  // Start or stop in response to the caller flipping `isRecording`, rather
+  // than from a button owned by this component. Flipping it back on while
+  // `recordingState` is 'recorded' re-records over the previous take.
+  useEffect(() => {
+    if (disabled) return;
+    if (isRecording && recordingState !== 'recording') {
+      startRecording();
+    } else if (!isRecording && recordingState === 'recording') {
+      stopRecording();
+    }
+  }, [isRecording, recordingState, disabled, startRecording, stopRecording]);
 
   if (error) {
     return <p className={styles.error}>{error}</p>;
   }
 
-  if (recordingState === 'recorded' && recordedUrl) {
+  if (recordingState === 'recorded' && previewUrl) {
     return (
       <div className={styles.container}>
         <div className={styles.previewWrapper}>
           {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
           <video
             className={styles.video}
-            src={recordedUrl}
+            src={previewUrl}
             controls
             key="playback"
           />
         </div>
-        {!disabled && (
-          <button
-            type="button"
-            className={styles.reRecordButton}
-            onClick={reRecord}
-          >
-            Re-record
-          </button>
-        )}
       </div>
     );
   }
@@ -285,23 +305,6 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
           />
         )}
       </div>
-      {recordingState === 'idle' ? (
-        <button
-          type="button"
-          className={styles.recordButton}
-          onClick={startRecording}
-        >
-          Start Recording
-        </button>
-      ) : (
-        <button
-          type="button"
-          className={styles.stopButton}
-          onClick={stopRecording}
-        >
-          Stop Recording
-        </button>
-      )}
     </div>
   );
 };

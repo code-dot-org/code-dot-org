@@ -27,7 +27,7 @@ markdown <<MARKDOWN
 </div>
 
 <div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
-<p><strong>💡 Teacher tip:</strong> this trips students up constantly. If they write "Hello " + name and get literally "Hello Sonia" with no space, or nothing shows up at all, the fix is almost always in how the pieces were joined, not the variable itself.</p>
+<p><strong>💡 Teacher tip:</strong> remind students to check for the little things: a space inside the quotes, like <code style="font-size: 16px;">"Hello "</code> instead of <code style="font-size: 16px;">"Hello"</code>, is what keeps the joined text from running together. If a name doesn't show up at all, the fix is almost always in how the pieces were joined, not the variable itself.</p>
 </div>
 
 <p>Next, you'll evaluate AI-generated code the way a QA Engineer would, and one of the bugs you'll spot uses exactly this operator.</p>

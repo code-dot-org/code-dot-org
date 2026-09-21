@@ -5,7 +5,7 @@ import pytest
 from PIL import Image as PILImage
 
 import theater
-from theater import Image, Instrument, Scene
+from theater import Font, FontStyle, Image, Instrument, Scene
 from theater.support.audio import read_samples_from_wav_bytes
 from theater.support.constants import (
   MAX_AUDIO_SECONDS,
@@ -420,6 +420,59 @@ def test_text_height_accepts_the_whole_documented_range(height):
   scene.set_text_height(height)
   scene.draw_text("A", 0, THEATER_HEIGHT)
   scene.pause(0.1)
+  assert _render_gif(scene.get_actions())
+
+
+@pytest.mark.parametrize("font", ["SERIF", "serif", Font.SERIF])
+def test_text_font_accepts_a_name_or_the_enum(font):
+  scene = Scene()
+  scene.set_text_style(font, FontStyle.NORMAL)
+  scene.draw_text("Hi", 10, 10)
+  assert scene.get_actions()[0].font is Font.SERIF
+
+
+@pytest.mark.parametrize(
+  "style", ["BOLD_ITALIC", "bold_italic", FontStyle.BOLD_ITALIC]
+)
+def test_text_style_accepts_a_name_or_the_enum(style):
+  scene = Scene()
+  scene.set_text_style(Font.SANS, style)
+  scene.draw_text("Hi", 10, 10)
+  assert scene.get_actions()[0].font_style is FontStyle.BOLD_ITALIC
+
+
+@pytest.mark.parametrize("font", ["COMIC", "", None, 3])
+def test_unknown_font_raises_at_the_call(font):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.set_text_style(font, FontStyle.NORMAL)
+
+
+@pytest.mark.parametrize("style", ["UNDERLINE", "", None, 3])
+def test_unknown_text_style_raises_at_the_call(style):
+  scene = Scene()
+  with pytest.raises(ValueError):
+    scene.set_text_style(Font.SANS, style)
+
+
+def test_a_rejected_text_style_leaves_the_previous_one():
+  # The font is coerced first, so a bad style must not let a good font through.
+  scene = Scene()
+  scene.set_text_style(Font.SERIF, FontStyle.BOLD)
+  with pytest.raises(ValueError):
+    scene.set_text_style(Font.MONO, "UNDERLINE")
+  scene.draw_text("Hi", 10, 10)
+  action = scene.get_actions()[0]
+  assert action.font is Font.SERIF
+  assert action.font_style is FontStyle.BOLD
+
+
+def test_text_style_named_by_string_renders():
+  # The renderer looks the bundled face up by enum, so a name that reached it
+  # uncoerced would fail there rather than at the call.
+  scene = Scene()
+  scene.set_text_style("serif", "bold_italic")
+  scene.draw_text("Hi", 50, 50)
   assert _render_gif(scene.get_actions())
 
 

@@ -2767,4 +2767,68 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal 'new answer', by_user[@student.id].level_source.data
     assert_equal 'new answer', by_user[both_student.id].level_source.data
   end
+
+  # Teacher-only content gating. Two consumers of a level's teacher_markdown
+  # defer to Policies::InlineAnswer.visible_for_script_level?: LevelsHelper
+  # sets appOptions['teacherMarkdown'] at the top level of the options hash,
+  # and levels/_teacher_markdown.html.haml wraps the text in
+  # #markdown.teacher.hide-as-student. External levels emit both, so one page
+  # exercises both.
+  TEACHER_ONLY_MARKDOWN = 'the answer is 42'.freeze
+
+  def get_show_external_level_with_teacher_markdown(user)
+    unit = create(:script, :in_single_unit_course, instructor_audience: 'teacher', participant_audience: 'student')
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    level = create(:external, teacher_markdown: TEACHER_ONLY_MARKDOWN)
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    sign_in user
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position
+    }
+    assert_response :success
+  end
+
+  # levels/show.html.haml embeds the options hash as a single line of JSON.
+  def embedded_app_options
+    json = @response.body[/var appOptions = (.*);$/, 1]
+    refute_nil json, 'expected the rendered page to embed appOptions'
+    JSON.parse(json)
+  end
+
+  test 'renders teacher-only markdown for an instructor of the unit' do
+    # visible_for_script_level? short-circuits to true under levelbuilder_mode,
+    # which would make this pass without consulting the user at all.
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    get_show_external_level_with_teacher_markdown create(:authorized_teacher)
+
+    assert_select '#markdown.teacher.hide-as-student', 1
+    assert_equal TEACHER_ONLY_MARKDOWN, embedded_app_options['teacherMarkdown']
+  end
+
+  test 'does not render teacher-only markdown for a teacher who cannot instruct the unit' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    # An unauthorized teacher account clears the current_user&.teacher? check
+    # in the partial, so only the InlineAnswer policy keeps the markdown off
+    # the page.
+    get_show_external_level_with_teacher_markdown create(:teacher)
+
+    assert_select '#markdown.teacher.hide-as-student', 0
+    assert_nil embedded_app_options['teacherMarkdown']
+  end
+
+  test 'does not render teacher-only markdown for a student' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    get_show_external_level_with_teacher_markdown create(:student)
+
+    assert_select '#markdown.teacher.hide-as-student', 0
+    assert_nil embedded_app_options['teacherMarkdown']
+  end
 end

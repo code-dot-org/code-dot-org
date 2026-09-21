@@ -31,6 +31,25 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
     end
   end
 
+  describe '.exported_table_names' do
+    it 'strips the database qualifier a cross-database model carries' do
+      model = create_base_model('QualifiedTableModel', table_name: 'pegasus_development.hoc_activity')
+      model.export_to_analytics
+      _(described_class.exported_table_names).must_equal ['hoc_activity']
+    end
+
+    it 'leaves an unqualified table name alone' do
+      model = create_base_model('UnqualifiedTableModel', table_name: 'users')
+      model.export_to_analytics
+      _(described_class.exported_table_names).must_equal ['users']
+    end
+
+    it 'omits models that fail exportability checks' do
+      create_base_model('NoPkModel', table_name: 'no_pk', db_primary_key: nil).export_to_analytics
+      _(described_class.exported_table_names).must_be_empty
+    end
+  end
+
   describe '.exported_models' do
     it 'is empty when nothing is registered' do
       _(described_class.exported_models).must_be_empty
@@ -192,6 +211,29 @@ class AnalyticsExportableTest < ActiveSupport::TestCase
 
         _(described_class.valid_exported_models).must_equal Set[a, b]
       end
+    end
+
+    # A model dropped from this set stops having its Redshift materialized views provisioned and
+    # refreshed, and stays that way until someone notices. Logging here, in the method that does the
+    # filtering, is what keeps a caller from taking the valid subset without the exclusion being
+    # recorded anywhere.
+    it 'logs each exclusion with the model name and the reason' do
+      valid = create_base_model('LoggedValidModel')
+      no_pk = create_base_model('LoggedNoPkModel', db_primary_key: nil)
+      valid.export_to_analytics
+      no_pk.export_to_analytics
+
+      CDO.log.expects(:error).with(regexp_matches(/LoggedNoPkModel cannot be exported.*primary key/))
+
+      _(described_class.valid_exported_models).must_equal Set[valid]
+    end
+
+    it 'logs nothing when every model is exportable' do
+      create_base_model('QuietValidModel').export_to_analytics
+
+      CDO.log.expects(:error).never
+
+      _(described_class.valid_exported_models).wont_be_empty
     end
   end
 

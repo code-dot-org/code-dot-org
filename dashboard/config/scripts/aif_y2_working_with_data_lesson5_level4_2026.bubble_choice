@@ -1,0 +1,12 @@
+name 'aif-y2-working-with-data-lesson5-level4-2026'
+display_name 'Check Your Understanding'
+description 'Check your understanding of the program you have written.'
+
+sublevels
+level 'aif-y2-working-with-data-lesson5-level3-choice1-2026'
+level 'aif-y2-working-with-data-lesson5-level3-choice2-2026'
+level 'aif-y2-working-with-data-lesson5-level3-choice3-2026'
+
+uses_lab2
+
+navigation_type 'next_level'

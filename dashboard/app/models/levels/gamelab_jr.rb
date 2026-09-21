@@ -39,13 +39,10 @@ class GamelabJr < Gamelab
     standalone_app_name
     enable_big_playspace
     uses_lab2
-    guide_mode
-    show_world_tab
-    world_grid_size
-    visible_tabs
-    locked_image_type
-    pinned_scene_id
-    pinned_scene_name
+    level_mode
+    image_role_defaults
+    pinned_scene
+    world_start_pattern
     guide_steps
   )
 

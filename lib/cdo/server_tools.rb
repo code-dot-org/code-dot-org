@@ -7,9 +7,7 @@ require 'json'
 
 class ServerTools
   # For each of the production frontend servers whose name matches `name_glob`,
-  # do all of the following:
-  # - deregister it from the load balancer
-  # - terminate it (requires that automatic termination protection is disabled)
+  # terminate it (requires that automatic termination protection is disabled).
   #
   # Before doing so, however, we prompt the user with the affect servers and
   # make them confirm the action.
@@ -31,18 +29,9 @@ class ServerTools
     end
 
     validate_ids(ids)
-    return unless prompt_for_action('deregister and terminate the EC2 instances', ids)
+    return unless prompt_for_action('terminate the EC2 instances', ids)
 
-    deregister_frontends_internal(ids)
     terminate_frontends_internal(ids)
-  end
-
-  # Deregister the frontend instances matching `name_glob` from the production elbs.
-  def self.deregister_frontends(name_glob)
-    ids = find_frontend_identifiers(name_glob)
-    validate_ids(ids)
-    return unless prompt_for_action('deregister from the ELB', ids)
-    deregister_frontends_internal(ids)
   end
 
   # Terminates the frontend instances matching `name_glob`. The instances must allow automatic
@@ -100,16 +89,6 @@ class ServerTools
   def self.validate_ids(ids)
     raise "No matching instances" if ids.empty?
     raise "Refusing to match all instances" if ids.length == find_frontend_identifiers('*').length
-  end
-
-  def self.deregister_frontends_internal(ids)
-    instance_ids = ids.map(&:instance_id)
-    load_balancers = %w{production-dashboard production-pegasus production-redirects}
-    puts "Deregistering #{instance_ids.join(', ')} on #{load_balancers.join(', ')}"
-
-    %w{production-dashboard production-pegasus production-redirects}.each do |elb_name|
-      `aws elb deregister-instances-from-load-balancer --load-balancer-name #{elb_name} --instances #{instance_ids.join(' ')}`
-    end
   end
 
   def self.terminate_frontends_internal(ids)

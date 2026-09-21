@@ -298,8 +298,71 @@
 .reactions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 4px;
   padding-top: 4px;
+}
+
+// The "add reaction" button, and the emoji picker popover it anchors.
+.addReactionWrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+// A ghost icon button matching the Figma: a 32px rounded square (shape-sm),
+// no border, white thumbs-up, with a state layer on hover.
+.addReaction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: var(--shape-sm);
+  font-size: 14px;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+}
+
+.picker {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
+  z-index: 1;
+  display: flex;
+  gap: 2px;
+  padding: 0 4px;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-round);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 40%);
+}
+
+// 32px emoji cells matching the Figma picker, each glyph ~24px so it fills
+// the cell with the designed padding.
+.pickerOption {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: var(--shape-round);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
 }
 
 .chip {
@@ -311,9 +374,37 @@
   background-color: var(--background-neutral-primary);
   border: 1px solid var(--border-neutral-secondary);
   border-radius: var(--shape-round);
+  font-family: inherit;
   font-size: 12px;
   line-height: 18px;
   color: var(--text-neutral-primary);
+}
+
+// The project page's chips toggle the viewer's reaction; the gallery card
+// shows the same chips read-only, without these affordances.
+.chipInteractive {
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+}
+
+// The viewer's own reaction: the Figma's filled "selected" chip — light
+// green field, navy text.
+.chipSelected {
+  background-color: var(--background-selected-primary);
+  border-color: var(--background-selected-primary);
+  color: var(--text-selected-primary);
+
+  &:hover:not(:disabled) {
+    background-color: var(--background-selected-primary);
+  }
 }
 
 .count {

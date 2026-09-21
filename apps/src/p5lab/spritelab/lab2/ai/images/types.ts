@@ -1,8 +1,10 @@
 // What the image generator produces, owned here beside the code that makes it.
 
-// 'block' is a square platform tile: keyed and cropped to its content so
-// copies tile seamlessly when laid out on the grid.
-export type ImageType = 'sprite' | 'background' | 'block';
+// Every image kind, in canonical display order: the gallery's groups and the
+// dialog's Type choice both follow it. 'block' is a square platform tile:
+// keyed and cropped to its content so copies tile seamlessly on the grid.
+export const IMAGE_TYPES = ['background', 'sprite', 'block'] as const;
+export type ImageType = (typeof IMAGE_TYPES)[number];
 
 // Visual style. 'pixel' yields crisp pixel art with hard edges; 'smooth' a
 // shaded illustration. See removeBackground's MatteOptions.
@@ -33,6 +35,10 @@ export interface ImageGenerationMetadata {
   seed: number;
   /** Sampling wildness the user chose; absent = the service default. */
   temperature?: number;
+  /** Logical grid the pixel prompt asked for (e.g. 64 for 64x64); absent on
+      pixel images generated before this was recorded. What came back can
+      differ — the model honors the grid softly. */
+  pixelGrid?: number;
   /** True when the image was made by modifying its previous version. */
   editedPrevious?: boolean;
 }

@@ -21,14 +21,30 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
-    "visible_tabs": [
-      "Code",
-      "Play"
+    "level_mode": {
+      "kind": "code"
+    },
+    "image_role_defaults": {
+      "background": "story-background"
+    },
+    "pinned_scene": {
+      "id": "story-scene",
+      "name": "Story",
+      "type": "story"
+    },
+    "guide_steps": [
+      {
+        "text": "**Set the scene.** Use the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far."
+      },
+      {
+        "text": "**That's your story!** Watch it play, then continue when you're ready.",
+        "showContinue": true,
+        "after": {
+          "tab": "Play"
+        }
+      }
     ],
-    "pinned_scene_id": "story-scene",
-    "pinned_scene_name": "Story",
-    "guide_mode": "instructions",
-    "long_instructions": "# Code your story scene\nUse the blocks to set your background, add your character, and make them speak or move. Your changes run live in the preview.",
+    "long_instructions": "# Set the scene\nUse the **set background** block to put your new background behind your story. Then press **Play** and watch the whole story so far.",
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -38,17 +54,7 @@
         },
         {
           "kind": "block",
-          "type": "gamelab_makeNewSpriteAnon",
-          "inputs": {
-            "LOCATION": {
-              "block": {
-                "type": "gamelab_location_picker",
-                "fields": {
-                  "LOCATION": "{\"x\":200,\"y\":200}"
-                }
-              }
-            }
-          }
+          "type": "spritelab2_makeSpriteAtPosition"
         },
         {
           "kind": "block",

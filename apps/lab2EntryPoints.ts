@@ -7,6 +7,7 @@
  * Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
  */
 
+import {AdaptiveEntryPoint} from '@cdo/apps/adaptive/entrypoint';
 import {AIChatEntryPoint} from '@cdo/apps/aichatLab/entrypoint';
 import {AilabEntryPoint} from '@cdo/apps/ailab/lab2/entrypoint';
 import {BubbleChoiceEntryPoint} from '@cdo/apps/bubbleChoice/entrypoint';
@@ -17,11 +18,13 @@ import {MusicEntryPoint} from '@cdo/apps/music/entrypoint';
 import {SpriteLab2EntryPoint} from '@cdo/apps/p5lab/spritelab/lab2/entrypoint';
 import {PanelsEntryPoint} from '@cdo/apps/panels/entrypoint';
 import {PythonlabEntryPoint} from '@cdo/apps/pythonlab/entrypoint';
+import {QuizEntryPoint} from '@cdo/apps/quiz/entrypoint';
 import {SketchlabEntryPoint} from '@cdo/apps/sketchlab/entrypoint';
 import {StandaloneVideoEntryPoint} from '@cdo/apps/standaloneVideo/entrypoint';
 import {Weblab2EntryPoint} from '@cdo/apps/weblab2/entrypoint';
 
 export const lab2EntryPoints = {
+  adaptive: AdaptiveEntryPoint,
   aichat: AIChatEntryPoint,
   ailab: AilabEntryPoint,
   bubble_choice: BubbleChoiceEntryPoint,
@@ -30,6 +33,7 @@ export const lab2EntryPoints = {
   music: MusicEntryPoint,
   panels: PanelsEntryPoint,
   pythonlab: PythonlabEntryPoint,
+  quiz: QuizEntryPoint,
   standalone_video: StandaloneVideoEntryPoint,
   weblab2: Weblab2EntryPoint,
   sketchlab: SketchlabEntryPoint,

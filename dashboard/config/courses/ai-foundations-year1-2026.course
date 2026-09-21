@@ -11,10 +11,11 @@
     "building-data-driven-systems-with-ai-2026",
     "iterating-with-ai-2026",
     "designing-reliable-apps-with-ai-and-apis-2026",
-    "web-apps-with-ai-capstone-project-2026"
+    "web-apps-with-ai-capstone-project-2026",
+    "ai-history-year1-2026"
   ],
   "original_script_names": [
-
+    "ai-history-year1-2026"
   ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
@@ -49,6 +50,17 @@
       },
       "seeding_key": {
         "resource.key": "ai_foundations_syllabus_1"
+      }
+    },
+    {
+      "name": "AI Foundations & the AI Ready Skills Certification",
+      "url": "https://docs.google.com/document/d/1Pl6f3WpcbSDmJCLMOiCDHMaszkdb5qnjISfanb7lZyA/edit?usp=sharing",
+      "key": "ai_foundations_the_ai_ready_skills_certification",
+      "properties": {
+        "embeddability_type": "embed_and_resource_dropdown"
+      },
+      "seeding_key": {
+        "resource.key": "ai_foundations_the_ai_ready_skills_certification"
       }
     },
     {

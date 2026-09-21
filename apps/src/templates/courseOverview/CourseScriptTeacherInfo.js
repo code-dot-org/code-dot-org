@@ -1,5 +1,4 @@
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import _ from 'lodash';
+import {Tooltip} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -13,10 +12,6 @@ export default class CourseScriptTeacherInfo extends Component {
     isHidden: PropTypes.bool.isRequired,
     onToggleHiddenScript: PropTypes.func.isRequired,
   };
-
-  // Stable per-instance id so `aria-describedby` does not change between
-  // renders and the tooltip doesn't re-mount unnecessarily.
-  tooltipId = _.uniqueId('hidden-script-tooltip-');
 
   render() {
     const {disabled, isHidden, onToggleHiddenScript} = this.props;
@@ -32,14 +27,10 @@ export default class CourseScriptTeacherInfo extends Component {
     return (
       <TeacherInfoBox>
         {disabled ? (
-          <WithTooltip
-            tooltipProps={{
-              text: i18n.hiddenScriptTooltip(),
-              tooltipId: this.tooltipId,
-            }}
-          >
-            <div>{toggle}</div>
-          </WithTooltip>
+          <Tooltip title={i18n.hiddenScriptTooltip()} placement="top">
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- the control inside is disabled, so this wrapper is the only way to reach the reason */}
+            <div tabIndex={0}>{toggle}</div>
+          </Tooltip>
         ) : (
           <div>{toggle}</div>
         )}

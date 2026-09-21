@@ -12,12 +12,13 @@ class LevelsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze, :extra_links]
   load_and_authorize_resource except: [:create]
 
-  before_action :set_level, only: [:show, :edit, :update, :destroy]
+  before_action :set_level, only: [:show, :edit, :update, :destroy, :build_quiz_questions]
 
   LEVELS_PER_PAGE = 30
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Adaptive,
     Aichat,
     Ailab,
     Applab,
@@ -51,6 +52,7 @@ class LevelsController < ApplicationController
     Poetry,
     PublicKeyCryptography,
     Pythonlab,
+    Quiz,
     Sketchlab,
     StandaloneVideo,
     StarWarsGrid,
@@ -186,7 +188,6 @@ class LevelsController < ApplicationController
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
-    @skills = @level.skills.map {|skill| skill.attributes.deep_transform_keys {|key| key.to_s.camelize(:lower)}}
     if @level.is_a? Applab
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end
@@ -269,6 +270,19 @@ class LevelsController < ApplicationController
 
     @is_start_mode = type == 'start_blocks'
 
+    show
+    render :show
+  end
+
+  # GET /levels/:id/build_quiz_questions
+  #
+  # Renders the lab2 show page, but with is_building_quiz_questions threaded
+  # through app_options (see LevelsHelper#lab2_options) so the
+  # question-building UI is shown instead of the quiz-taking UI.
+  def build_quiz_questions
+    return head :not_found unless @level.is_a?(Quiz)
+
+    level_view_options(@level.id, is_building_quiz_questions: true)
     show
     render :show
   end
@@ -518,6 +532,8 @@ class LevelsController < ApplicationController
       elsif @type_class == Weblab2
         @game = Game.weblab2
         @widget2_ids = get_widget2_ids
+      elsif @type_class == Adaptive
+        @game = Game.adaptive
       end
       @level = @type_class.new
       render :edit
@@ -595,6 +611,10 @@ class LevelsController < ApplicationController
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
         end
+
+        if @level.is_a?(Quiz)
+          links[@level.name] << {text: 'Build quiz questions', url: build_quiz_questions_level_path(@level)}
+        end
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}
       end
@@ -657,60 +677,6 @@ class LevelsController < ApplicationController
       script_level_path_links: script_level_path_links,
       parent_level_path_links: parent_level_path_links
     }
-  end
-
-  def add_skill
-    level_id = params[:id].to_i
-    skill_id  = params[:skillId].to_i
-
-    begin
-      @level = Level.find(level_id)
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "No level with id #{level_id}"
-    end
-
-    begin
-      @skill = Skill.find(skill_id)
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "No skill with id #{skill_id}"
-    end
-
-    unless @level.skills.include?(@skill)
-      @level.skills << @skill
-      @level.add_skill_key(@skill.key)
-    end
-
-    if @level.save
-      render json: {status: 'success', message: "Skill #{@skill.id} successfully added to #{@level.id}"}, status: :created
-    else
-      render json: {status: 'error', message: @level.errors.full_messages.to_sentence}, status: :bad_request
-    end
-  end
-
-  def remove_skill
-    level_id = params[:id].to_i
-    skill_id  = params[:skillId].to_i
-
-    begin
-      @level = Level.find(level_id)
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "No level with id #{level_id}"
-    end
-
-    begin
-      @skill = Skill.find(skill_id)
-    rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "No skill with id #{skill_id}"
-    end
-
-    @level.skills.delete(@skill)
-    @level.remove_skill_key(@skill.key)
-
-    if @level.save
-      render json: {status: 'success', message: "Skill #{@skill.id} successfully removed from #{@level.id}"}, status: :ok
-    else
-      render json: {status: 'error', message: @level.errors.full_messages.to_sentence}, status: :bad_request
-    end
   end
 
   # Use callbacks to share common setup or constraints between actions.

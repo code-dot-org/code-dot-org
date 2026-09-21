@@ -1802,6 +1802,23 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal lesson2.id, section.reload.suggested_lesson['lesson_id']
   end
 
+  test 'compute_suggested_lesson skips a lesson with no lesson plan' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: false)
+    lesson3 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
+    sl1 = create(:script_level, lesson: lesson1, script: unit)
+    create(:script_level, lesson: lesson2, script: unit)
+    create(:script_level, lesson: lesson3, script: unit)
+    section = create(:section, teacher: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    assert_equal lesson3.id, section.reload.suggested_lesson['lesson_id']
+  end
+
   test 'compute_suggested_lesson sets completed_unit when all lessons are completed' do
     unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
     create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
@@ -1823,7 +1840,7 @@ class SectionTest < ActiveSupport::TestCase
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)
     pre_assessment = create(:lesson, script: unit, lesson_group: lesson_group, lockable: true, has_lesson_plan: false)
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
     sl_pre = create(:script_level, lesson: pre_assessment, script: unit)
     create(:script_level, lesson: lesson1, script: unit)
     section = create(:section, teacher: @teacher, script: unit)
@@ -1922,36 +1939,82 @@ class SectionTest < ActiveSupport::TestCase
     assert_nil entry['lesson_id']
   end
 
-  test 'compute_suggested_lesson history entry includes coming_up with next lesson id' do
+  test 'compute_suggested_lesson stores coming_up with next lesson id on suggested_lesson' do
     _unit, _lesson1, lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
     section.compute_suggested_lesson
-    entry = section.reload.suggested_lesson_history.first
-    assert_equal lesson2.id, entry.dig('coming_up', 'lesson_id')
+    assert_equal lesson2.id, section.reload.suggested_lesson.dig('coming_up', 'lesson_id')
   end
 
-  test 'compute_suggested_lesson history entry coming_up has completed_unit when current is the last numbered lesson' do
+  test 'compute_suggested_lesson coming_up has completed_unit when current is the last numbered lesson' do
     unit, _lesson1, _lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
     create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
     section.compute_suggested_lesson
-    entry = section.reload.suggested_lesson_history.first
     # lesson2 is last; no further lesson exists
-    assert entry.dig('coming_up', 'completed_unit')
+    assert section.reload.suggested_lesson.dig('coming_up', 'completed_unit')
   end
 
-  test 'compute_suggested_lesson history entry coming_up has completed_unit when unit is finished' do
+  test 'compute_suggested_lesson coming_up has completed_unit when unit is finished' do
     unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
     create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
     create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
     section.compute_suggested_lesson
+    assert section.reload.suggested_lesson.dig('coming_up', 'completed_unit')
+  end
+
+  test 'compute_suggested_lesson coming_up matches suggested_lesson when unit is finished' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    suggested_lesson = section.reload.suggested_lesson
+    assert suggested_lesson['completed_unit']
+    assert_equal suggested_lesson.except('timestamp', 'coming_up'), suggested_lesson['coming_up']
+  end
+
+  test 'compute_suggested_lesson does not store coming_up in the history entry' do
+    _unit, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
     entry = section.reload.suggested_lesson_history.first
-    assert entry.dig('coming_up', 'completed_unit')
+    assert_nil entry['coming_up']
+  end
+
+  test 'compute_suggested_lesson creates a history entry for each day the unit stays completed' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    dates = (0..2).map {|days_ago| Time.zone.today - days_ago}
+    dates.reverse_each do |date|
+      Timecop.freeze(date.to_time) {section.compute_suggested_lesson}
+    end
+
+    history = section.reload.suggested_lesson_history
+    dates.each do |date|
+      entry = history.find {|e| e['date'] == date.iso8601}
+      assert entry, "expected a history entry for #{date.iso8601}"
+      assert entry['completed_unit'], "expected #{date.iso8601}'s entry to show completed_unit"
+    end
+  end
+
+  # Bandaid: a section assigned an exempt unit reports AVAILABLE, which is what
+  # quiets the AI settings warning, its nav icon, and the teacher homepage alert.
+  # This test goes away with the exemption.
+  test 'assigned_ai_chat_tools_dependency is available, not essential, for an exempt unit' do
+    # The unit needs a course: Section validates that a section with a script
+    # has a course_id, and the factory takes that from the unit's course.
+    unit = create(:script, :in_single_unit_course, name: 'csd2-2026')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+    section = create(:section, teacher: @teacher, script: unit)
+
+    assert_equal SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE], section.assigned_ai_chat_tools_dependency
   end
 
   private def build_suggested_lesson_section
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
-    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group, has_lesson_plan: true)
     sl1 = create(:script_level, lesson: lesson1, script: unit)
     sl2 = create(:script_level, lesson: lesson2, script: unit)
     section = create(:section, teacher: @teacher, script: unit)

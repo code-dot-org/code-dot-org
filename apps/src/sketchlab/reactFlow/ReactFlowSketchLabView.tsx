@@ -11,6 +11,7 @@ import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
@@ -29,9 +30,11 @@ import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
@@ -124,6 +127,17 @@ function ReactFlowSketchLabViewInner({
     [currentUserId]
   );
 
+  const saveBackpackApi = useMemo(() => {
+    if (
+      experiments.isEnabledAllowingQueryString(experiments.UNIFIED_BACKPACK)
+    ) {
+      return currentUserId
+        ? Lab2Registry.getInstance().getUnifiedBackpackApi()
+        : undefined;
+    }
+    return backpackContext?.primaryApi;
+  }, [currentUserId, backpackContext]);
+
   // Remount the canvas to re-read sources, same pattern as Excalidraw's
   // key={excalidrawMountKey}.
   const [mountKey, setMountKey] = useState(0);
@@ -208,13 +222,13 @@ function ReactFlowSketchLabViewInner({
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
       saveToBackpackButton: {
-        onClick: (fileList: string[], errorCallback: (error: string) => void) =>
+        onClick: (fileList: string[], notify: BackpackNotify) =>
           handleSaveToBackpack(
             reactFlow,
-            backpackContext?.primaryApi,
+            saveBackpackApi,
             dialogControl,
             fileList,
-            errorCallback
+            notify
           ),
         text: 'Save Sketch to Backpack',
       },
@@ -225,7 +239,7 @@ function ReactFlowSketchLabViewInner({
         addImageNode: (data: ImageNodeData) => setPendingImageImport(data),
       }),
     }),
-    [reactFlow, backpackContext, dialogControl, uploadImage]
+    [reactFlow, saveBackpackApi, dialogControl, uploadImage]
   );
 
   // Read sources, converting from Excalidraw if this project was last

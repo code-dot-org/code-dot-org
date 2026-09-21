@@ -37,8 +37,4 @@ class UserLevelEvaluation < StudentWorkEvaluation
   has_many :student_work_evaluation_summaries,
            foreign_key: :student_work_evaluation_summary_id,
            class_name: 'StudentWorkEvaluationSummary'
-
-  has_many :user_level_skill_evaluations,
-           through: :student_work_evaluation_summaries,
-           source: :student_work_evaluation
 end

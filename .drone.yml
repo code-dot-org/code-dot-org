@@ -234,8 +234,6 @@ steps:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly passed to the corresponding
       # config value in test.yml.erb.
-      PROPERTIES_ENCRYPTION_KEY:
-        from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
@@ -328,8 +326,6 @@ steps:
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
-      PROPERTIES_ENCRYPTION_KEY:
-        from_secret: PROPERTIES_ENCRYPTION_KEY
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
@@ -366,6 +362,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 9ee193103461bb8af7b7d2b0b6eb9a4bb9a0c7079097b9b0ca4e8ea75f0bc543
+hmac: b7c4aa7434ba8933cc99f6a2a3d4c5c403941f36c21d23b6896444aa3b507ed5
 
 ...

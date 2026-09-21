@@ -5,13 +5,18 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ShareFailure, ShareFailureType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
+  isUnifiedApi,
+  SaveToBackpackApi,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Backpack/saveToBackpackHelper';
+import {
   DialogControlInterface,
   DialogType,
   extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
-import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts';
+import {FilenamesByAppType} from '@cdo/apps/sharedComponents/backpack/types';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
 
@@ -51,10 +56,10 @@ export const getShareFailureMessage = (shareFailure: ShareFailure) => {
 
 export const handleSaveToBackpack = async (
   reactFlow: ReactFlowInstance | null,
-  backpackApi: BackpackClientApi | undefined,
+  backpackApi: SaveToBackpackApi | undefined,
   dialogControl: DialogControlInterface,
   backpackFileList: string[],
-  errorCallback: (error: string) => void
+  notify: BackpackNotify
 ) => {
   if (!reactFlow || !backpackApi) {
     return;
@@ -65,7 +70,7 @@ export const handleSaveToBackpack = async (
     await Lab2Registry.getInstance().getProjectManager()?.flushSave();
     await waitForShareFailureRefresh();
   } catch (error) {
-    errorCallback('Could not save your sketch. Please try again.');
+    notify('danger', 'Could not save your sketch. Please try again.');
     return;
   }
 
@@ -84,6 +89,24 @@ export const handleSaveToBackpack = async (
     return;
   }
 
+  const unifiedApi = isUnifiedApi(backpackApi) ? backpackApi : undefined;
+
+  // The unified backpack writes to the universal backpack, so a name taken in any
+  // backpack collides. The legacy path reuses the list the panel already loaded.
+  let filenamesByAppType: FilenamesByAppType;
+  try {
+    filenamesByAppType = isUnifiedApi(backpackApi)
+      ? await backpackApi.getFileLists()
+      : {[backpackApi.appType]: backpackFileList};
+  } catch (error) {
+    notify('danger', 'Could not read your Backpack. Please try again.');
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Backpack file list fetch error', error as Error);
+    return;
+  }
+  const existingFilenames = Object.values(filenamesByAppType).flat();
+
   const validateSketchName = (
     sketchName: string
   ): {type: 'error' | 'warning'; text: string} | undefined => {
@@ -97,7 +120,7 @@ export const handleSaveToBackpack = async (
         text: 'Sketch names can only contain letters, numbers, hyphens and underscores.',
       };
     }
-    if (backpackFileList.includes(sketchName + '.png')) {
+    if (existingFilenames.includes(sketchName + '.png')) {
       return {
         type: 'warning',
         text: 'A file with this name already exists in your Backpack.',
@@ -119,31 +142,77 @@ export const handleSaveToBackpack = async (
   }
 
   const newFileName = extractUserInput(dialogResults) + '.png';
-  const {blob, error} = await createSketchSnapshotBlob(reactFlow);
-  if (error) {
-    errorCallback(error);
+  if (unifiedApi) {
+    notify('info', `Saving ${newFileName} to your Backpack...`);
+  }
+
+  const saveErrorMessage = `Error saving ${newFileName} to your Backpack. Please try again`;
+
+  // The progress toast above never expires on its own, so every path from here
+  // has to end in a toast that replaces it.
+  let snapshot: {blob?: Blob; error?: string};
+  try {
+    snapshot = await createSketchSnapshotBlob(reactFlow);
+  } catch (error) {
+    notify('danger', saveErrorMessage);
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Sketch snapshot error', error as Error);
     return;
   }
-  if (!blob) {
-    errorCallback(
-      `Error saving ${newFileName} to your Backpack. Please try again`
+  if (snapshot.error) {
+    notify('danger', snapshot.error);
+    return;
+  }
+  if (!snapshot.blob) {
+    notify('danger', saveErrorMessage);
+    return;
+  }
+  const {blob} = snapshot;
+
+  const isDuplicateFileName = existingFilenames.includes(newFileName);
+  const eventName = isDuplicateFileName
+    ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+    : EVENTS.SAVE_TO_BACKPACK_NEW;
+  const saved = await new Promise<boolean>(resolve => {
+    backpackApi.saveBlobFile(
+      newFileName,
+      blob,
+      () => {
+        notify('danger', saveErrorMessage);
+        resolve(false);
+      },
+      () => {
+        if (unifiedApi) {
+          notify('success', `${newFileName} saved to your Backpack.`);
+        }
+        sendLab2AnalyticsEvent(eventName, {fileType: 'png'});
+        resolve(true);
+      }
     );
+  }).catch(error => {
+    notify('danger', saveErrorMessage);
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Save to backpack error', error as Error);
+    return false;
+  });
+
+  if (!unifiedApi || !saved || !isDuplicateFileName) {
     return;
   }
 
-  const eventName = backpackFileList.includes(newFileName)
-    ? EVENTS.SAVE_TO_BACKPACK_REPLACE
-    : EVENTS.SAVE_TO_BACKPACK_NEW;
-  backpackApi.saveBlobFile(
-    newFileName,
-    blob,
-    () => {
-      errorCallback(
-        `Error saving ${newFileName} to your Backpack. Please try again`
-      );
-    },
-    () => {
-      sendLab2AnalyticsEvent(eventName, {fileType: 'png'});
-    }
-  );
+  // Writes go to the universal backpack, so a name replaced in a legacy backpack is
+  // still there. Deleting it after the save keeps a failed save non-destructive.
+  try {
+    await unifiedApi.deleteFromLegacyBackpacks(newFileName, filenamesByAppType);
+  } catch (error) {
+    notify(
+      'danger',
+      "We saved your sketch, but couldn't delete your old file. You can retry the delete in the Backpack."
+    );
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Backpack duplicate delete error', error as Error);
+  }
 };

@@ -21,7 +21,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "from helpers import predict_category\n\ntraining_images = [\n  # TODO 1: Replace the dictionaries below with one dictionary per training image\n  {\"category\": \"Category A\", \"feature1\": True, \"feature2\": False, \"feature3\": True},\n  {\"category\": \"Category B\", \"feature1\": False, \"feature2\": True, \"feature3\": False},\n]\n\n\ndef distance(image1, image2):\n    # TODO 3: Return a value representing how different the two images are\n    return 0\n\n# TODO 2: Replace the dictionary below with features from one of your test images\ntest_image = {\"feature1\": True, \"feature2\": True, \"feature3\": True}\n\nprediction = predict_category(test_image, training_images, distance)\nprint(f\"Predicted category for test image: {prediction}\")",
+          "contents": "from helpers import predict_category\n\ntraining_images = [\n  # TODO 1: Replace the dictionaries below with one dictionary per training image\n  {\"category\": \"Category A\", \"feature1\": True, \"feature2\": False, \"feature3\": True},\n  {\"category\": \"Category B\", \"feature1\": False, \"feature2\": True, \"feature3\": False},\n]\n\n\ndef distance(image1, image2):\n  # TODO 3: Return a value representing how different the two images are\n  return 0\n\n# TODO 2: Replace the dictionary below with features from one of your test images\ntest_image = {\"feature1\": True, \"feature2\": True, \"feature3\": True}\n\nprediction = predict_category(test_image, training_images, distance)\nprint(f\"Predicted category for test image: {prediction}\")",
           "folderId": "0",
           "active": true
         },
@@ -43,6 +43,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-22 01:04:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-22 01:04:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-22 01:04:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-22 01:04:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:21:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

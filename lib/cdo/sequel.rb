@@ -121,10 +121,6 @@ module Cdo
         db.pool.connection_validation_timeout = validation_frequency
       end
 
-      # Uncomment this for Pegasus logging.  Only appears to work when started
-      # using bin/pegasus-server.
-      #db.loggers << $log if rack_env?(:development) && $log
-
       db
     end
   end

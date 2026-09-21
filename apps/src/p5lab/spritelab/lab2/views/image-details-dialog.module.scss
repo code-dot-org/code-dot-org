@@ -1,3 +1,4 @@
+@use './imageTile' as tile;
 // The image dialog: image large on the left, details or the generate form
 // on the right, actions in a footer bar. Wears the same rounded chrome as
 // the pixel editor (dialogChrome.scss), following the page's light/dark
@@ -20,6 +21,34 @@
   // One width for both views; the panel's max-width still shrinks it on
   // narrow browsers.
   width: 850px;
+}
+
+// No modal entrance and no card chrome. The painted panel color (the
+// alternatives ring gap) must match the lab's ground, not the card's.
+.dialogHost .imageLevelPanel {
+  animation: none;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  --dialog-panel-bg: var(--background-neutral-primary);
+
+  .footer {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  // The image sits on the stage itself: no frame, and no checkerboard (that
+  // is for the dialog, whose opaque panel would otherwise hide transparency).
+  .imagePane {
+    border: none;
+  }
+
+  .imagePaneChecker {
+    background-color: transparent;
+    background-image: none;
+  }
 }
 
 .dialogHost .dialog :focus-visible {
@@ -52,6 +81,7 @@
 }
 
 .imagePane {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,15 +89,64 @@
   width: 380px;
   height: 380px;
   flex-shrink: 0;
-  border: 1px solid chrome.$border-subtle;
   border-radius: 6px;
+  // Rounds the image's own corners: it fills the pane to the true edge.
+  overflow: hidden;
   background-color: transparent;
 
+  // The border sits ABOVE the image instead of on the pane box: a real
+  // border shrinks the content box to 378px, and the image then leaves a
+  // 1px ring of the checkerboard showing around itself.
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid chrome.$border-subtle;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+
   img {
+    width: 100%;
+    height: 100%;
+    // Fill the pane even when the stored image is smaller than it (small
+    // crisp-scaled pixel art stops at 8x its logical size).
+    object-fit: contain;
+  }
+
+  // The sheet preview's canvas holds one full-resolution frame scaled to
+  // the pane; hard edges keep crisp frames crisp on the way down.
+  canvas {
     max-width: 100%;
     max-height: 100%;
-    // Art-pixel edges stay crisp when upscaled.
     image-rendering: pixelated;
+  }
+
+  // Only pixel art wants hard edges on that upscale; smooth art keeps its
+  // anti-aliasing.
+  img.pixelArt {
+    image-rendering: pixelated;
+  }
+
+  // A character set plays one pose at a time at full size (the canvas takes
+  // the pane's own img/canvas sizing), named in the pane's top left corner.
+  .sheetPreview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+  }
+
+  .sheetPreviewCaption {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgb(0 0 0 / 45%);
+    color: #fff;
+    font-size: 13px;
   }
 }
 
@@ -121,9 +200,13 @@
   transition: opacity 0.12s ease;
 }
 
-.imageButton:hover .paintOverlay,
+.imageButton:hover:not(:disabled) .paintOverlay,
 .imageButton:focus-visible .paintOverlay {
   opacity: 1;
+}
+
+.imageButton:disabled {
+  cursor: default;
 }
 
 .imagePlaceholder {
@@ -210,6 +293,21 @@
 }
 
 // --- Generate view ---
+
+// Hosts the transplanted guide Adlib (it brings its own dark panel and
+// glowing border); the native fieldset disable dims it while typed text
+// has precedence.
+.adlibGroup {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition: opacity 0.15s ease;
+
+  &[disabled] {
+    opacity: 0.45;
+  }
+}
 
 .formRow {
   display: flex;
@@ -333,4 +431,86 @@
   color: var(--dialog-danger-text);
   font-size: 13px;
   font-weight: 600;
+}
+
+// This dialog session's recent generations, pinned to the pane's bottom so
+// they sit beside the jumbo image's foot.
+.alternatives {
+  margin-top: auto;
+}
+
+.alternativesLabel {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.alternativesRow {
+  display: flex;
+  gap: 10px;
+  // Room for the selection ring, which extends past the tiles.
+  padding: 4px;
+}
+
+.alternativeThumb {
+  @include tile.image-tile(72px);
+}
+
+.alternativeSelected {
+  // The chosen one wears a ring in the active-selection brand color (the
+  // active tab's), held off the image by a panel-colored gap so it reads
+  // against any image in any theme.
+  box-shadow: 0 0 0 2px var(--dialog-panel-bg),
+    0 0 0 4px var(--borders-brand-teal-primary);
+  cursor: default;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+// A field's error, beside it rather than below, so its appearance doesn't
+// change the dialog's height.
+.nameRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+// Without a width the design system wrapper stretches to the whole pane,
+// leaving the error no room.
+.nameRow .nameField {
+  width: 240px;
+  min-width: 0;
+  flex-shrink: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+// Wraps within its row's leftover width instead of overflowing the panel;
+// the field beside it is taller than a few wrapped lines, so the dialog's
+// height still never changes.
+.inlineFieldError {
+  margin-bottom: 10px;
+  color: var(--dialog-danger-text);
+  font-size: 13px;
+  flex: 1;
+  min-width: 0;
+}
+
+// The fields can't take TextField's errorMessage prop (it renders its own
+// message below); restore the red border it would have drawn, keyed on the
+// aria-invalid the views set. Weighted to outrank the design system's
+// resting border (.textField.textField-color-* input).
+.dialogHost .nameRow .nameField input[aria-invalid='true'],
+.dialogHost .header .headerNameField input[aria-invalid='true'] {
+  border-color: var(--borders-error-primary);
+}
+
+.generateProgress {
+  font-size: 13px;
+  opacity: 0.8;
 }

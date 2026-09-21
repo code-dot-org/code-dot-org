@@ -152,7 +152,36 @@ class Unit < ApplicationRecord
 
   scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
 
-  scope :with_essential_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools)}
+  # Bandaid. Units that do not count as requiring AI chat tools, even though
+  # Level.with_essential_ai_chat_tools says every Weblab2 level does.
+  #
+  # Web Lab 2 builds an AI Tutor panel into the lab, so a unit built in Web Lab 2
+  # is reported as requiring AI chat tools, and so is any course containing it.
+  # That is right for AI Foundations and wrong for CS Discoveries 2026, whose
+  # Unit 2 was rebuilt in Web Lab 2 but whose curriculum never asks students to
+  # use the tutor: teachers were being told the course cannot be completed
+  # without AI chat tools.
+  #
+  # A unit named here reports AVAILABLE rather than ESSENTIAL, which quiets the
+  # alerts that state the stronger claim. It does not change what students and
+  # teachers may do -- level-by-level access is decided by
+  # Level.with_essential_ai_chat_tools, which this does not touch -- nor whether
+  # assigning the course turns AI chat tools on, which follows has_ai_chat_tools?.
+  #
+  # Emptying the list restores the previous reporting. The real fix, which lets a
+  # Web Lab 2 level say whether its tutor is essential, makes the list unnecessary.
+  NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS = %w(
+    csd2-2026
+  ).freeze
+
+  # Every caller reaches this through Unit#requires_ai_chat_tools? or
+  # UnitGroup#requires_ai_chat_tools?, so excluding the exempt units here reaches
+  # the course, unit, and section dependencies together. An empty exempt list is
+  # a no-op.
+  scope :with_essential_ai_chat_tools, (lambda do
+    joins(:levels).merge(Level.with_essential_ai_chat_tools).
+      where.not(scripts: {name: NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS})
+  end)
 
   attr_accessor :skip_name_format_validation
 
@@ -308,6 +337,8 @@ class Unit < ApplicationRecord
     topic_tags
     enable_blockly_keyboard_navigation
     generate_outline
+    generate_drafting_rules
+    generate_authoring_rules
   )
 
   def self.starwars_unit
@@ -1142,10 +1173,16 @@ class Unit < ApplicationRecord
   # to operate on units with more than one user-facing lesson group, since
   # cross-group reordering is out of scope for this page.
   #
-  # `unit_generate_outline`, when supplied, is persisted on the Unit so the
-  # /generate page can restore it across reloads. nil leaves the existing
-  # value alone; '' clears it.
-  def update_lesson_outlines(raw_lessons, unit_generate_outline = nil)
+  # `prompts` holds GENERATOR_PROMPTS keys; a key left out keeps the stored
+  # value, '' clears it.
+  # Request keys of the /generate pages' unit prompts -> the property each saves.
+  GENERATOR_PROMPTS = {
+    generateOutline: :generate_outline,
+    generateDraftingRules: :generate_drafting_rules,
+    generateAuthoringRules: :generate_authoring_rules,
+  }.freeze
+
+  def update_lesson_outlines(raw_lessons, prompts = {})
     user_facing_groups = lesson_groups.select(&:user_facing)
     if user_facing_groups.length > 1
       raise 'Cannot bulk-edit lessons on a unit with multiple user-facing lesson groups.'
@@ -1207,10 +1244,12 @@ class Unit < ApplicationRecord
       target_group.lessons = new_lessons
       target_group.save!
 
-      unless unit_generate_outline.nil?
-        self.generate_outline = unit_generate_outline
-        save! if changed?
+      GENERATOR_PROMPTS.each do |param, attr|
+        next unless prompts.key?(param)
+        value = prompts[param].to_s
+        public_send("#{attr}=", value) unless value.presence == public_send(attr)
       end
+      save! if changed?
     end
 
     if Rails.application.config.levelbuilder_mode
@@ -1534,11 +1573,8 @@ class Unit < ApplicationRecord
       # page's bulk-write path. The page degrades to "edit prompts only"
       # when multiple user-facing lesson groups are present.
       multipleLessonGroups: user_facing_groups.length > 1,
-      # Persisted unit-level outline prompt — same role as the lesson's
-      # generate_outline, but at the unit scope. The page restores it on
-      # reload so the levelbuilder doesn't have to retype the unit
-      # description on every visit.
-      generateOutline: generate_outline,
+      # Persisted unit-level generator prompts, restored on reload.
+      **GENERATOR_PROMPTS.transform_values {|attr| public_send(attr)},
     }
   end
 

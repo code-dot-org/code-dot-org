@@ -50,6 +50,7 @@ class ContactRollupsV2
   #
   # This method is used to write to the database.
   # @see +retrieve_query_results+ method to fetch data from the database.
+  # @return [Integer] the number of rows the query affected
   def self.execute_query_in_transaction(query)
     # For long-running queries, we use Sequel connection instead of ActiveRecord connection.
     # ActiveRecord has a default 30s read_timeout that we cannot override. Sequel allows us
@@ -63,9 +64,11 @@ class ContactRollupsV2
     #
     # The workaround is to use different database connections in different environments.
     if Rails.env.test?
-      ActiveRecord::Base.transaction {ActiveRecord::Base.connection.exec_query(query)}
+      ActiveRecord::Base.transaction {ActiveRecord::Base.connection.exec_update(query)}
     else
-      DASHBOARD_DB_WRITER.transaction {DASHBOARD_DB_WRITER.run(query)}
+      # with_sql_update is the public API for running raw SQL and returning
+      # the affected-row count (execute_dui is adapter-internal).
+      DASHBOARD_DB_WRITER.transaction {DASHBOARD_DB_WRITER.dataset.with_sql_update(query)}
     end
   end
 
@@ -94,25 +97,6 @@ class ContactRollupsV2
     DCDO.get(USE_REPORTING_DCDO_KEY, false)
   end
 
-  # Set all database configurations the pipeline will need
-  def self.set_db_variables
-    # In the test environment every pipeline query runs on the ActiveRecord
-    # connection (see retrieve_query_results), so there is no Sequel
-    # connection to configure — and CI cannot serve one (its Sequel URIs
-    # point at hosts the test container cannot reach).
-    return if Rails.env.test?
-
-    # Set group_concat_max_len to 65535 (same as VARCHAR max length).
-    # Its default value is 1024, too short for the amount of data we need to concat.
-    # @see:
-    #   ContactRollupsProcessed.get_data_aggregation_query
-    #   https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len
-    DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
-    # The aggregation query that relies on group_concat_max_len runs on the
-    # reporting connection when the contact_rollups_use_reader flag is enabled.
-    DASHBOARD_REPORTING_DB.run('SET SESSION group_concat_max_len = 65535')
-  end
-
   attr_accessor :limit
 
   # @param is_dry_run [Boolean] If true, do not send requests to Pardot and do not
@@ -127,7 +111,6 @@ class ContactRollupsV2
       "is_dry_run: #{is_dry_run}, " \
       "limit_extraction = #{limit_extraction || 'nil'}"
     )
-    self.class.set_db_variables
   end
 
   # Build contact rollups and sync the results to Pardot.
@@ -149,18 +132,26 @@ class ContactRollupsV2
       truncate_or_delete_table ContactRollupsProcessed
     end
 
-    # Extract dashboard data
-    @log_collector.time!('extract_email_preferences') {ContactRollupsRaw.extract_email_preferences(@limit)}
-    @log_collector.time!('extract_parent_emails') {ContactRollupsRaw.extract_parent_emails(@limit)}
-    @log_collector.time!('extract_scripts_taught') {ContactRollupsRaw.extract_scripts_taught(@limit)}
-    @log_collector.time!('extract_courses_taught') {ContactRollupsRaw.extract_courses_taught(@limit)}
-    @log_collector.time!('extract_roles_from_user_permissions') {ContactRollupsRaw.extract_roles_from_user_permissions(@limit)}
-    @log_collector.time!('extract_users_and_geos') {ContactRollupsRaw.extract_users_and_geos(@limit)}
-    @log_collector.time!('extract_pd_enrollments') {ContactRollupsRaw.extract_pd_enrollments(@limit)}
-    @log_collector.time!('extract_census_submissions') {ContactRollupsRaw.extract_census_submissions(@limit)}
-    @log_collector.time!('extract_school_geos') {ContactRollupsRaw.extract_school_geos(@limit)}
-    @log_collector.time!('extract_professional_learning_attendance') do
-      ContactRollupsRaw.extract_professional_learning_attendance(@limit)
+    # Extract dashboard data. Each extraction returns the number of rows it
+    # inserted into contact_rollups_raw; record one metric per source so the
+    # logs and CloudWatch show which sources dominate the nightly volume.
+    extraction_methods = %i(
+      extract_email_preferences
+      extract_parent_emails
+      extract_sections_taught
+      extract_roles_from_user_permissions
+      extract_users_and_geos
+      extract_pd_enrollments
+      extract_census_submissions
+      extract_school_geos
+      extract_professional_learning_attendance
+    )
+    extraction_methods.each do |extraction_method|
+      @log_collector.time!(extraction_method.to_s) do
+        rows_inserted = ContactRollupsRaw.public_send(extraction_method, @limit)
+        source = extraction_method.to_s.delete_prefix('extract_')
+        @log_collector.record_metrics({:"RowsExtracted_#{source}" => rows_inserted})
+      end
     end
   ensure
     @log_collector.record_metrics(
@@ -267,7 +258,7 @@ class ContactRollupsV2
       upload_metrics
       url = upload_to_s3
       report_to_slack log_url: url
-      @log_collector.exceptions.each {|e| Honeybadger.notify(e)}
+      @log_collector.exceptions.each {|e| Observability::Errors.report(e)}
     end
 
     print_logs

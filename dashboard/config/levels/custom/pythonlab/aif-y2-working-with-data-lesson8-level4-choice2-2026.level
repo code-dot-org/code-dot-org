@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-09-07T23:22:30.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "NBA vs. WNBA",
+    "project_template_level_name": "aif-y2-working-with-data-lesson8-choice2-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n- Read the documentation given to you.\r\n- Improve your plot’s honesty. Set accurate limits for your plot.\r\n- Be prepared to summarize what your visualization shows.\r\n",
+    "bubble_choice_description": "A free throw—in both the NBA and the WNBA—is the same shot every time. How do the two leagues compare?",
+    "thumbnail_url": "https://images.code.org/23571e993fab7fa6eb6b8b70d4d56ac1-basketball.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqoVfYEI82jkD8j\nXoxdj+oOHg1k+jHas2Bhy465KYq0WBo734MmBwFAtjs45Nis2oI4VwucCbR7\nsQGO5k7+QF+e1hWnNs24VJf56FPLoPWW4kx2JLWbB5p+2TqKbRaW2RMQKZe6\nq29vg16wTx0uZTsZijYxxzYuu47NccaBeXcgc9mt9oim0XmrG2kmvpuNVNxz\n4jS3oM6F8zitNRGczOOBd5OmFZRYXzj9BgWcJb/M64uoNWyCc8l2WLYSByrW\nFXHvy7vm3pF2j/8vV4dIZgtdoe/FiqovqlQKueP6+gHe5PqiFYau/4UQrQi0\nmoJBlNQ7pXBQ/BIPkK4hxy3zWge5WXvAX+1KcJdki9FFvf92Psqf+RgC+T3E\nC8PUc6uokEDt4BimCyqyGHMqp9aMVPBBsg5Gpx8DI2YqsQDmuEuuLcnGXBaT\nCZJaZUiyl4j+ztuE9LsRQvv3Zwg3f9z+5i/Vz73V3IQAeFXnVCX8DiQvQ6Im\n5dva3PR6vgou9ofqnBP+lEnlETYuOlrEkOPMRyagUqKzITmf7BmT7Xgy4jWe\n8vIVbTP8snWucvGWOMkSoTNkbiDSCPNblIooMOti5ljmaGv0zgUNGfXW04jr\n2VdK5aVdTWZOy0NlgAVlDLyHl0VRXRzopY+53xoPfrYLcoyvV5JWAajd0ZmN\nBCF88kygLmVGEJ9RiRD/dRfspN3IBkjP0FHt7ldLETpE1aCQguLYX1wOHWrV\nDnWtvAh8MKZcnnCYE+MIXV5HDGGCrT3K3j5XyWr4fxgGRL5ZuzbnBg+wJrO7\nEl9r0MXbw339dG0DY/HHSkXjKNkzlqBlKVHfZi6nL384okCNk6bP9ykfEpNn\npIHBtbUy87dSdc4TPXWgIp9IWq01ZMJh4z/Hc0Ro99rJlpbcplXVsIzDBge6\nEeZYGhV3n4zBOlKCR9GpeoQ4ICXId054AC/hZ6G5cLtoQ5k+sVrK0VAQ6RQw\nUDpVEHFSMF/2X03AlmB3YSc01fDp4fp2q/gVOTAbgIsG+FiQ81T9Wp0t8JN+\nKUNzVEiP26Icpm1TxR75eYyBe69w6896DHoUwh6y5cOkzq5eO3Kx+gS+5B4Z\n6wkzgXw6bBMUWLtbtJkSIfo8pmJk4bBPhl6iuplscV6sd4K2TZv+pGSv3E5d\nMVPz8+ErJk7LELdL/sNEFQSQThlW48//w3hR85aEItTI6y2EFN/QDu1yTQqD\nag05NKaUg70uoyXT0xDYIPUw/UCSvMFsq1Mjd3GG0X5LlQiwUJAwDc0cMUJN\nrdGnDSU=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-07 23:25:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-09-07 23:26:39 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

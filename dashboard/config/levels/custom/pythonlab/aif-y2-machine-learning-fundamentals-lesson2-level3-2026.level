@@ -22,7 +22,7 @@
         "0": {
           "id": "0",
           "name": "main.py",
-          "contents": "import random\n\n\ndef get_random_slices():\n    return random.randint(1, 3)\n\n\ndef simulate_party():\n    total = 0\n    for i in range(20):\n        slices = get_random_slices()\n        total += slices\n    return total\n\n# TODO 1: Define a variable to keep track of how many parties were successful\n\nfor i in range(100):\n    slices = simulate_party()\n    \n    # TODO 2: If there was enough pizza, add 1 to the number of successes\n\n# TODO 3: Print how many successful parties there were",
+          "contents": "import random\n\n\ndef get_random_slices():\n  return random.randint(1, 3)\n\n\ndef simulate_party():\n  total = 0\n  for i in range(20):\n    slices = get_random_slices()\n    total += slices\n  return total\n\n# TODO 1: Define a variable to keep track of how many parties were successful\n\nfor i in range(100):\n  slices = simulate_party()\n  \n  # TODO 2: If there was enough pizza, add 1 to the number of successes\n\n# TODO 3: Print how many successful parties there were",
           "folderId": "0",
           "active": true
         }
@@ -33,9 +33,9 @@
         "0"
       ]
     },
-    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp15aD/3n9ZCX4a\n2320JEOqPay9m6/TloB0vn1b17LwibrCX/bra7I92YgM0zqilsD1skmZE46e\niXjRCuUSpHDpnUx27yVYJcIK5/UzlXC4j80ETcrB/ct3Ly9fmLmZSoalMzV5\n2u5eCznHQBV1ktN+pAmEkH90L9Ec+/d8We6HSozKEs60QXhrc36O3yIFUa6M\nOiQNSjVxzEGy2o1+hOOOF8sGFQy6I5EhpZcceO6O3Jmr+MvFhpGP9OpkUVcv\nBPBfQVWLACAVybDdlkZmTXlm4K6pf8/NhKmKhnN4FGrummjcCxYbVqkKQ+8G\n9XEMRIJOI9e1p6l8++1AhnLh1oDAAoSqDnu/2L5GUTU44YHTKw5C6amt2ANE\nl1eEqy5FpYe8AUiYTKprDT2bsIfj5rZumYwPQzvVqDc9+T6rJBg2wdhS0YXe\nJ7hMiLYon7U9B73zsaoxyRNvPun/yBMWZtOS7zKKLrz1rbk5zlOeNZFSlK7p\nDXJ/z3KEGPXxNEEvysPjyXFTji1ZOc/VRrMDd3E6Z2F4tyoYc/WRzrFB8s0x\nmDr9eDmK9k0m/xT6o5YIjLN9xvyTcSB+6X04QNF+qmL3jo1UPSZ+0aisuPz0\nIx86sQ==\n"
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqUrH9XWp8A7dNi\nWtN6Lo10JPj1jEH3oNxjTpU2ChLeEc1oq8n+Kp0fxbCxlzzE/4UErDP1DDui\nJrAQCjO11NM0em1+Xqpa2M14aivuY6ZDwzZHn3JAjrCXGpZ09UKvvr+jHQnu\n0QrgOPTiq+8TbzRQ+96zqk8WhkfduyEiFO7QloHN0lpRu55BfMgJZtIuJa4q\nSeUfYMR80XRmOESsLPCp8P5jmYemqzRzIBqIdKNVMaypuOHai9ef+/jkz8Ja\nUJcd+7O4ykZcsCSsTboozAEtIp11DsY+HRtyG17EIXrcVot0gb/6cpKkP/c6\n8In+HZFNc3e3gQcSO5eplgNEi2kYJ8fcUBPpF24JDESQeG+4j+26510Qj9xD\nmhZRCpASfS1jp3s1j3IXvf3jMqqK6Stv4Xo7bWbJR4/9QbjuzH/Y/3CNud3Y\nIiT8SrU4eKhhQMn7IICpsPLH8QHdRHJi7JjqDja3xTtq/YKjhgfxhPqNYcE9\nriGolS82edTnYlbL60rVS1Fv3VJy7feRBVJst4weSTScmjZ8siOrRS4eV1A1\n/D38S1GJLwtTtW5AyUENhyVw7IzjKAX11/QZyKINmOrm\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-21 18:40:41 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 18:41:14 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-21 18:40:41 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-21 18:41:14 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:13:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-09-07 20:13:37 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

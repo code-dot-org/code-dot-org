@@ -14,6 +14,16 @@
           "visibility": "Teacher-only",
           "dismissible": true,
           "buttonText": "Let's go!"
+        },
+        {
+          "key": "4faa7518-e834-4b9e-a607-bce90349b444",
+          "notice": "Notice for Educators Outside the United States",
+          "details": "Unit 1: Thinking Critically About AI is currently only available to schools in the 50 U.S. states (excluding U.S. territories). Teachers outside the U.S. can continue to use all other units in this course.",
+          "link": "",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": ""
         }
       ],
       "content_area": "curriculum_6_8",
@@ -34,7 +44,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-25 14:00:23 UTC",
+    "serialized_at": "2026-09-15 23:02:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1154,7 +1164,7 @@
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students brainstorm different possible use cases for AI and participate in explorations in which they test how helpful or unhelpful AI might be for the purpose that they have identified.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Large Language Model (LLM)*.\n",
         "duration": "15",
-        "name": "Brainstorm Your Purpose"
+        "name": "Brainstorm AI Uses"
       },
       "seeding_key": {
         "activity_section.key": "cf4ce4bf-fc73-49c8-b1bc-0dfaa60322b5",
@@ -1216,7 +1226,7 @@
       "key": "6e8210c4-7cb0-45ce-982a-08b47b5cf59d",
       "position": 6,
       "properties": {
-        "description": "Every good guide starts here, before you open any tool. Designers who know their theme, audience, and purpose make better decisions at every step.\n",
+        "description": "Every good guide starts here, before you open any tool. Designers who know their theme, audience, and AI uses make better decisions at every step\n",
         "remarks": true
       },
       "seeding_key": {
@@ -1228,8 +1238,8 @@
       "key": "5d5a4b6b-df18-4fb4-b8ff-08caa3596a48",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review audience and theme from the previous lesson. Introduce purpose to define how AI might be able to assist their chosen audience and theme.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example using Basketball as the main theme.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 1. Students will use learn how to use the text tool in Sketch Lab, adding their guide's theme, audience, and purpose to the project template.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling with Sketch Lab. Specifically, students will need to know how to navigate, how to zoom, and how to click a box to add text. Encourage students to add as many different purposes as they can brainstorm!\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students turn to a shoulder partner and share some of the different purposes for AI that they've identified for their theme.",
-        "progression_name": "Brainstorm Purpose"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review audience and theme from the previous lesson. Introduce AI Uses to define how AI might be able to assist their chosen audience and theme.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example using Basketball as the main theme.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 1. Students will use learn how to use the text tool in Sketch Lab, adding their guide's theme, audience, and AI uses to the project template.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling with Sketch Lab. Specifically, students will need to know how to navigate, how to zoom, and how to click a box to add text. Encourage students to add as many different purposes as they can brainstorm!\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students turn to a shoulder partner and share some of the different purposes for AI that they've identified for their theme.",
+        "progression_name": "Brainstorm AI Uses"
       },
       "seeding_key": {
         "activity_section.key": "5d5a4b6b-df18-4fb4-b8ff-08caa3596a48",
@@ -1288,7 +1298,7 @@
       "key": "6e11c1dc-e283-4e20-a722-816477127805",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that when they use AI to build something toward their own purpose, that's AI-assisted creation.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use AI Chat to test using AI to assist with co-creation. They note their findings in their AI Audit Field Notes. Students should copy an outputs that show good and bad uses of AI for their purpose.\n- Level 3: Students paste their chat into Sketch Lab to use as a piece of evidence for their Generate and Judge project. They can use the shapes and formatting provided in the template to begin creating this section of their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling to write effective prompts for the AI Chat. Ask students how changing their prompts affected the output of the AI Chat. As students experiment with prompting and examining the outputs, remind them to copy text that they want to use as an example. Check that students are completing the 'what this tells me' field — that's the one that requires actual analysis, not just observation. Ask: \"Which of your chats represents a good example of how to effectively use AI? Which uses of AI didn't quite work for your purpose?\" Ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their experience to a specific person's needs rather than writing a generic tip. On Level 3, point out to students that there are resources on the template to help them format and visualize their information.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that when they use AI to build something toward their own purpose, that's AI-assisted creation.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use AI Chat to test using AI to assist with co-creation. They note their findings in their AI Audit Field Notes. Students should copy outputs that show good and bad uses of AI.\n- Level 3: Students paste their chat into Sketch Lab to use as a piece of evidence for their Generate and Judge project. They can use the shapes and formatting provided in the template to begin creating this section of their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling to write effective prompts for the AI Chat. Ask students how changing their prompts affected the output of the AI Chat. As students experiment with prompting and examining the outputs, remind them to copy text that they want to use as an example. Check that students are completing the 'what this tells me' field — that's the one that requires actual analysis, not just observation. Ask: \"Which of your chats represents a good example of how to effectively use AI? Which uses of AI didn't quite work for your purpose?\" Ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their experience to a specific person's needs rather than writing a generic tip. On Level 3, point out to students that there are resources on the template to help them format and visualize their information.",
         "progression_name": "AI-Assisted Creation",
         "tips": [
           {
@@ -1491,7 +1501,7 @@
       "key": "c37803bd-040d-44f7-86d6-b6002017ee4d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Prepare students to use AI to generate images and participate in explorations. They will test how adjusting their prompt affects the images generated for the purpose they identified.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take out their AI Audit Field Notes activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review theme, audience, and purpose for their project.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 4.\n- Level 2: Students use AI to generate an image for their project.\n- Level 3: Students read about AI's impact on human skills and/or artists.\n- Level 4: Students add their image to their project and a tip about image generation that applies to their audience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students accepting the first image without any refinement. Ask: \"Is this exactly what you wanted? What would you change?\" Listen for students saying \"the AI just did it\" or \"I got lucky.\" These are signals to redirect toward ownership. Ask: \"What decisions did you make that got you there?\" On Level 4, ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their image generation experience to a specific person's needs rather than writing a generic tip.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Prepare students to use AI to generate images and participate in explorations. They will test how adjusting their prompt affects the images generated for the purpose they identified.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take out their AI Audit Field Notes activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review theme, audience, and AI uses for their project.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 4.\n- Level 2: Students use AI to generate an image for their project.\n- Level 3: Students read about AI's impact on human skills and/or artists.\n- Level 4: Students add their image to their project and a tip about image generation that applies to their audience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students accepting the first image without any refinement. Ask: \"Is this exactly what you wanted? What would you change?\" Listen for students saying \"the AI just did it\" or \"I got lucky.\" These are signals to redirect toward ownership. Ask: \"What decisions did you make that got you there?\" On Level 4, ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their image generation experience to a specific person's needs rather than writing a generic tip.",
         "duration": "15",
         "name": "Create Images for Your Project",
         "progression_name": "Create Images for Your Project",
@@ -2852,7 +2862,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Brainstorm Purpose"
+        "progression": "Brainstorm AI Uses"
       },
       "bonus": false,
       "seeding_key": {
@@ -3960,6 +3970,17 @@
       }
     },
     {
+      "name": "All Standards",
+      "url": "/courses/ai-discoveries-2026/units/1/standards",
+      "key": "all_standards_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_9"
+      }
+    },
+    {
       "name": "All Vocabulary",
       "url": "/courses/ai-discoveries-2026/units/1/vocab",
       "key": "all_vocabulary_9",
@@ -4260,6 +4281,12 @@
     {
       "seeding_key": {
         "resource.key": "all_resources_9",
+        "script.name": "thinking-critically-about-ai-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_9",
         "script.name": "thinking-critically-about-ai-2026"
       }
     },
@@ -4617,7 +4644,272 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-42"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: The Final Verdict",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Investigating AI Tools",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: A Deeper Look Into AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Responsible Co-Creation",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Responsible Co-Creation",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Responsible Co-Creation",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Guidelines for Working with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Guidelines for Working with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Guidelines for Working with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-42"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Trust and Credibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: The AI Credibility Guide",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Exploring Data in AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Defending Your Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Defending Your Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-DAT-IM-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Defending Your Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Refining Our Product",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Refining Our Product",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Refining Our Product",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-SOC-HU-43"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

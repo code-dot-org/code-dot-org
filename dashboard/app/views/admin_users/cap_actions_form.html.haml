@@ -1,0 +1,64 @@
+%h1 CAP Actions
+
+%p Look up a student to correct their US state or CAP permission status.
+
+= form_tag cap_actions_form_path, method: 'get', class: 'form-inline', enforce_utf8: false do
+  = label_tag :user_identifier, 'Student ID, email, or username'
+  = text_field_tag :user_identifier, params[:user_identifier], class: 'form-control', size: 60
+  %button.btn{type: 'submit', 'aria-label': 'Search'}
+    %i.fa-solid.fa-magnifying-glass
+
+- if @target_user
+  %h2 Student information
+  %table.table.table-hover.table-condensed
+    %thead
+      %tr
+        %th ID
+        %th Email
+        %th Username
+        %th User type
+        %th US state
+        %th CAP status
+        %th Permission request
+    %tbody
+      %tr
+        %td= @target_user.id
+        %td= @target_user.email
+        %td= @target_user.username
+        %td= @target_user.user_type
+        %td= @target_user.us_state
+        %td= @target_user.cap_status
+        %td= @permission_request ? 'Yes' : 'No'
+
+  %h2 Change US state
+  %p Saving a state clears the student's current CAP compliance status.
+  = form_tag update_cap_state_path, method: 'post', class: 'form-inline' do
+    = hidden_field_tag :user_id, @target_user.id
+    = label_tag :us_state, 'US state'
+    = select_tag :us_state, options_for_select(@us_state_options.map {|code, name| [name, code]}, @target_user.us_state), class: 'form-control', required: true
+    = submit_tag 'Save', class: 'btn btn-primary'
+
+  %h2 Grant permission request
+  %p This grants the latest request and schedules the standard confirmation email to the parent.
+  - if @permission_request
+    = form_tag grant_cap_permission_path, method: 'post' do
+      = hidden_field_tag :user_id, @target_user.id
+      = submit_tag 'Grant Permission', class: 'btn btn-primary'
+  - else
+    %button.btn{type: 'button', disabled: true} Grant Permission
+    %p No parental permission request exists for this student.
+
+  %h2 Force permission granted
+  %p Use this only when a CAP policy applies but no permission request exists.
+  - if @force_cap_permission_available
+    = form_tag force_cap_permission_path, method: 'post' do
+      = hidden_field_tag :user_id, @target_user.id
+      = submit_tag 'Force Permission Granted', class: 'btn btn-warning', data: {confirm: 'Grant CAP permission without a parental permission request?'}
+  - else
+    %button.btn{type: 'button', disabled: true} Force Permission Granted
+    - if @permission_request
+      %p Grant the existing parental permission request instead.
+    - else
+      %p No configured CAP policy applies to this student.
+
+= render partial: 'home/admin'

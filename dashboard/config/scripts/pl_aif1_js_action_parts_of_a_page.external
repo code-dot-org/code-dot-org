@@ -86,12 +86,17 @@ markdown <<MARKDOWN
       Browser<br>Renders<br>Update
     </p>
   </div>
+  </div>
+
   
 ---
 
-</div>
+<h2>Try It: A Worked Example</h2>
+
+<p>Here's what those five steps look like with a real example: a shop page that checks whether an item is in stock near a customer's zip code. Click the arrow to step through it.</p>
+
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
-<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/how-change-happens-example.html" width="100%" height="520" style="border:none;" title="How Change Happens: the zip code stock check example"></iframe>
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/how-change-happens-example.html" width="100%" height="350" style="border:none;" title="How Change Happens: the zip code stock check example"></iframe>
 </div>
 
 ---

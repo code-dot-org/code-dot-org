@@ -596,7 +596,7 @@ class ProjectsController < ApplicationController
     begin
       authorize! :submit, project
     rescue CanCan::AccessDenied => exception
-      Honeybadger.notify(
+      Observability::Errors.report(
         "Project submission error: #{exception.message}",
         context: {
           message:  "Project submission failed due to unauthorized submission status - user unexpectedly bypassed submission_status restriction in the share dialog and attempted to submit project."

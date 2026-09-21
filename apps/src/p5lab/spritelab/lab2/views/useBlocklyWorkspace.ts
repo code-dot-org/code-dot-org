@@ -1,5 +1,5 @@
 import * as BlocklyCore from 'blockly/core';
-import {useCallback, useEffect, useRef} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
@@ -38,12 +38,19 @@ interface UseBlocklyWorkspaceOptions {
 }
 
 interface UseBlocklyWorkspaceResult {
+  /**
+   * Increments on every injection. A new workspace starts empty, so whoever
+   * owns its contents must reload them when this changes.
+   */
+  workspaceVersion: number;
   /** Compile the workspace to JavaScript for the runtime; null before inject. */
   getCode: () => string | null;
   /** Returns the serialization the workspace holds; null before inject. */
   getCurrentBlocks: () => WorkspaceSerialization | null;
   /** Serialize the workspace blocks into a toolbox definition; null before inject. */
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
+  /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
+  refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
   /** Load code into the workspace. */
   loadCode: (source: WorkspaceSerialization) => void;
   /**
@@ -68,6 +75,9 @@ export default function useBlocklyWorkspace({
   theme,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
+  const toolboxRef = useRef<
+    BlocklyCore.utils.toolbox.ToolboxDefinition | undefined
+  >(undefined);
   // Store initial theme as a ref to prevent theme changes from re-injecting the workspace.
   const themeRef = useRef(theme);
   themeRef.current = theme;
@@ -78,6 +88,7 @@ export default function useBlocklyWorkspace({
     () => {}
   );
   const onIntermediateChangeRef = useRef<(() => void) | undefined>(undefined);
+  const [workspaceVersion, setWorkspaceVersion] = useState(0);
 
   // Inject the workspace once enabled; re-injects when the level data changes.
   useEffect(() => {
@@ -117,6 +128,7 @@ export default function useBlocklyWorkspace({
       );
     };
 
+    toolboxRef.current = toolbox;
     workspaceRef.current = Blockly.inject(blocklyDiv, {
       toolbox,
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
@@ -173,6 +185,7 @@ export default function useBlocklyWorkspace({
     };
 
     workspaceRef.current.addChangeListener(onChange);
+    setWorkspaceVersion(version => version + 1);
 
     return () => {
       workspaceRef.current?.dispose();
@@ -246,11 +259,39 @@ export default function useBlocklyWorkspace({
     []
   );
 
+  // A definition swaps the toolbox in place; without one the current
+  // toolbox is re-applied (to pick up options that load late). Edit modes
+  // own their toolbox and ignore a passed definition.
+  const refreshToolbox = useCallback(
+    (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => {
+      // Blockly cannot swap a category toolbox for a flyout on a live
+      // workspace, so a definition of the other kind is declined: the scene
+      // keeps the blocks the workspace was injected with.
+      const installed = toolboxRef.current;
+      const installedKind =
+        installed && typeof installed !== 'string' && 'kind' in installed
+          ? installed.kind
+          : undefined;
+      const kindMatches = definition?.kind === installedKind;
+      if (definition && kindMatches && !isToolboxMode && !isStartMode) {
+        toolboxRef.current = filterToolboxToRegisteredBlocks(
+          applyToolboxAdditions(definition)
+        );
+      }
+      if (workspaceRef.current?.rendered && toolboxRef.current) {
+        workspaceRef.current.updateToolbox(toolboxRef.current);
+      }
+    },
+    []
+  );
+
   return {
+    workspaceVersion,
     getCode,
     getCurrentBlocks,
     getToolboxDefinition,
     loadCode,
+    refreshToolbox,
     subscribeToChanges,
   };
 }

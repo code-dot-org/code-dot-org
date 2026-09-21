@@ -1,10 +1,14 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import Adlib, {AdlibChoices} from '@cdo/apps/lab2/views/components/guide/Adlib';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
 import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
 import aiBot2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-2.png';
@@ -14,20 +18,40 @@ import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generatin
 import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
 
 import {
+  CHARACTER_SET_PICTURE_COUNT,
+  CharacterSetProgress,
+  generateCharacterSet,
+} from '../ai/images/characterSet';
+import {
+  ImageAdlibSet,
+  imageAdlibFor,
+  imageAdlibId,
+} from '../ai/images/imageAdlibs';
+import {
   GeneratedImageResult,
   generateImage,
   GenerateImageOptions,
 } from '../ai/images/imageGeneration';
+import {ImageSafetyError} from '../ai/images/imageSafety';
+import {defaultPixelGrid} from '../ai/images/modelHelpers';
 import {
   IMAGE_STYLE_LABELS,
   IMAGE_TYPE_LABELS,
+  IMAGE_TYPES,
   ImageGenerationMetadata,
   ImageStyle,
   ImageType,
 } from '../ai/images/types';
-import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
+import {AnimationPoses} from '../characterAnimations';
+import {
+  IMAGE_NAME_MAX_LENGTH,
+  nextImageName,
+  sanitizeImageName,
+} from '../imageReferences';
 
+import AnimatedSheetPreview from './AnimatedSheetPreview';
 import DeleteImageButton from './DeleteImageButton';
+import ImagePaneButton from './ImagePaneButton';
 import TemperatureBot from './TemperatureBot';
 
 import moduleStyles from './image-details-dialog.module.scss';
@@ -46,6 +70,14 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
+// Where the slider goes when a character set is asked for: every posed
+// frame must agree with the base, so less wildness. Level 3 is a
+// temperature of 0.6, the setting a good live run used.
+const CHARACTER_SET_TEMPERATURE_LEVEL = 3;
+
+// The input is the only bound on prompt length: prompts persist verbatim
+// into each image's generation metadata and travel in every request.
+const MAX_PROMPT_LENGTH = 1000;
 
 // Prompt hints, one per type, so the example suits what is being made.
 const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
@@ -54,10 +86,37 @@ const PROMPT_PLACEHOLDERS: Record<ImageType, string> = {
   block: 'e.g. a mossy stone brick',
 };
 
+// The advanced form's pixel Resolution choices, as divisors of the type's
+// default grid (64/32/16 for a sprite, 128/64/32 for a background).
+const PIXEL_SCALES = [1, 2, 4];
+
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
 
-interface GenerateImageViewProps {
+/** What the new-image form has settled on, enough to start painting. */
+export interface NewImageDraft {
+  name: string;
+  imageType: ImageType;
+  style: ImageStyle;
+}
+
+/** Level and session choices the image dialog forwards to the generate
+    view unchanged. */
+export interface ImageFormOptions {
+  /** Level-imposed type for new images; the Type choice is locked to it. */
+  lockedImageType?: ImageType;
+  /** Offer this tier of adlib prompt combos (student form only). */
+  adlibSet?: ImageAdlibSet;
+  /** The adlib is the only prompt input: hide the free-text box. */
+  adlibOnly?: boolean;
+  /** Style the form starts on for new images (default smooth). */
+  defaultStyle?: ImageStyle;
+  /** A generation request is leaving; fires before the model call, so the
+      caller can stamp what the eventual result belongs to. */
+  onGenerateStart?: () => void;
+}
+
+interface GenerateImageViewProps extends ImageFormOptions {
   /** Set for an existing image; absent when generating a brand-new one. */
   existing?: {
     generation?: ImageGenerationMetadata;
@@ -68,13 +127,27 @@ interface GenerateImageViewProps {
   };
   /** The image's current pixels, shown on the left while prompting. */
   thumb?: string;
+  /** An existing character set's sheet, shown playing instead of `thumb`. */
+  sheet?: {
+    src: string;
+    frameSize: {x: number; y: number};
+    poses: AnimationPoses;
+  };
+  /** The image is pixel art: the pane upscales it with hard edges. */
+  thumbPixelated?: boolean;
   /** Set when creating a brand-new image. */
   create?: {
     /** Whether another image already uses this name. */
     isNameTaken: (name: string) => boolean;
+    /** Form values to reopen with (returning from a cancelled paint). */
+    initial?: NewImageDraft;
   };
-  /** Level-imposed type for new images; the Type choice is locked to it. */
-  lockedImageType?: ImageType;
+  /** Open the paint editor on a blank canvas instead of generating. */
+  onPaintManually?: (draft: NewImageDraft) => void;
+  /** Show the full internal form. The default student form has no name
+      field (new images name themselves), no Start from, no temperature,
+      and Paint manually moves from the footer into the blank image area. */
+  advanced?: boolean;
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -83,13 +156,16 @@ interface GenerateImageViewProps {
   /** Leave without generating: back to the summary, or out of the dialog
       for a brand-new image. */
   onCancel: () => void;
+  /** An image level, brand-new image: there is nowhere to cancel to. */
+  hideCancel?: boolean;
   /** Delete this image (existing images). */
   onDelete?: () => void;
 }
 
 /**
  * The image dialog's Generate view: the current image (or a blank area) on
- * the left; on the right the prompt, style, a choice of where the
+ * the left, the form on the right. The student form asks only for a prompt,
+ * type and style; the advanced form adds a name, a choice of where the
  * randomness comes from, and a temperature slider with a bot whose
  * expression follows it. A finished generation is applied immediately —
  * the caller returns to the summary showing the new image. Renders the
@@ -98,56 +174,150 @@ interface GenerateImageViewProps {
 const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
   thumb,
+  sheet,
+  thumbPixelated,
   create,
   lockedImageType,
+  advanced,
+  adlibSet,
+  adlibOnly,
+  defaultStyle,
+  onPaintManually,
+  onGenerateStart,
   onAccept,
   onCancel,
+  hideCancel,
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
-  const [name, setName] = useState('');
-  const [imageType, setImageType] = useState<ImageType>(
-    existing?.imageType || lockedImageType || 'sprite'
-  );
+  const [name, setName] = useState(create?.initial?.name || '');
+  const initialImageType =
+    existing?.imageType ||
+    lockedImageType ||
+    create?.initial?.imageType ||
+    'sprite';
+  const [imageType, setImageType] = useState<ImageType>(initialImageType);
   const [style, setStyle] = useState<ImageStyle>(
-    existing?.generation?.style || 'smooth'
+    existing?.generation?.style ||
+      create?.initial?.style ||
+      defaultStyle ||
+      'smooth'
   );
+  // Advanced-only pixel resolution choice, held as a divisor of the type's
+  // default grid so it keeps meaning across a Type switch. Seeded from the
+  // recorded grid: a seed replay must ask for the grid it recorded, or the
+  // same seed draws a different image.
+  const [pixelScale, setPixelScale] = useState(() => {
+    const recorded = existing?.generation?.pixelGrid;
+    const scale = recorded && defaultPixelGrid(initialImageType) / recorded;
+    return scale && PIXEL_SCALES.includes(scale) ? scale : 1;
+  });
+  // Calm when the set checkbox starts checked (posed frames must agree
+  // with the base), as checking it by hand also sets.
   const [temperatureLevel, setTemperatureLevel] = useState(
-    TEMPERATURE_LEVEL_DEFAULT
+    sheet ? CHARACTER_SET_TEMPERATURE_LEVEL : TEMPERATURE_LEVEL_DEFAULT
   );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
+  // A whole character — idling, walking, jumping — instead of one picture.
+  // Pre-checked when the image already is one: regenerating a character
+  // should keep it a character unless the student unchecks it.
+  const [characterSet, setCharacterSet] = useState(!!sheet);
+  const [progress, setProgress] = useState<CharacterSetProgress | null>(null);
+  // Counts generate runs; progress callbacks from older runs are dropped.
+  const progressEpochRef = useRef(0);
+  // Sets are drawn from a fresh base, so the offer follows the 'new' source.
+  const canMakeSet = imageType === 'sprite' && source === 'new';
+  const makingSet = canMakeSet && characterSet;
+
+  // Adlib prompt combos (student form): a sentence with word choices, an
+  // alternative to typing. Typed text wins while present.
+  const adlib =
+    adlibSet && !advanced ? imageAdlibFor(imageType, adlibSet) : undefined;
+  const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>({});
+  const [adlibText, setAdlibText] = useState('');
+  const handleAdlibText = useCallback((text: string) => setAdlibText(text), []);
+  // A fresh combo (opening, or a Type switch swapping templates) rolls its
+  // own choices, so not every sentence starts the same.
+  useEffect(() => {
+    if (adlib) {
+      setAdlibChoices(
+        Object.fromEntries(
+          Object.entries(adlib.options).map(([slot, options]) => [
+            slot,
+            options[Math.floor(Math.random() * options.length)].id,
+          ])
+        )
+      );
+    }
+  }, [adlib]);
+  const freeTextEntered = !!prompt.trim();
+  // What Generate will send: typed text when present, else the combo's
+  // sentence.
+  const usingAdlib = !!adlib && !freeTextEntered;
+  const promptText = usingAdlib ? adlibText : prompt.trim();
 
   // Flag a duplicate as it's typed and hold the buttons until it's unique.
+  // The student form has no name field, so the name never holds it back.
   const trimmedName = name.trim();
   const duplicateName =
     !!create && !!trimmedName && create.isNameTaken(trimmedName);
-  const nameUsable = !create || (!!trimmedName && !duplicateName);
+  const nameUsable = !create || !advanced || (!!trimmedName && !duplicateName);
   const nameError = duplicateName ? 'That name is already used.' : null;
+
+  const newImageName = useCallback(
+    () =>
+      create && !advanced
+        ? nextImageName(imageType, create.isNameTaken)
+        : trimmedName,
+    [create, advanced, imageType, trimmedName]
+  );
 
   // Cycle the bot's generating frames while a request is out.
   const [generatingTick, setGeneratingTick] = useState(0);
   useEffect(() => {
-    if (mode !== 'generating') {
+    if (!advanced || mode !== 'generating') {
       return;
     }
     const timer = setInterval(() => setGeneratingTick(t => t + 1), 350);
     return () => clearInterval(timer);
-  }, [mode]);
+  }, [advanced, mode]);
 
   const canUseSeed = existing?.generation?.seed !== undefined;
   const canUsePrevious = !!existing;
 
   const generate = useCallback(async () => {
+    // true attaches the project context (level path, app) for per-level
+    // breakdowns.
+    analyticsReporter.sendEvent(
+      EVENTS.HOAI2026_IMAGE_PROMPT,
+      {
+        promptText,
+        method: usingAdlib ? 'adlib' : 'freeText',
+        imageType,
+        ...(usingAdlib && adlibSet
+          ? {adlibId: imageAdlibId(imageType, adlibSet)}
+          : {}),
+      },
+      true
+    );
+    onGenerateStart?.();
     setMode('generating');
     setError(null);
+    // Progress from a superseded run must not paint over this one's: a set
+    // abandoned to its error handler can still call back.
+    const epoch = ++progressEpochRef.current;
+    setProgress(null);
     try {
       const options: GenerateImageOptions = {
         imageType,
         style,
         temperature: levelToTemperature(temperatureLevel),
       };
+      if (style === 'pixel') {
+        options.pixelGrid = defaultPixelGrid(imageType) / pixelScale;
+      }
       if (source === 'seed' && canUseSeed) {
         options.seed = existing?.generation?.seed;
       }
@@ -158,24 +328,62 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         }
         options.inputImageDataURI = dataURI;
       }
-      const result = await generateImage(prompt.trim(), options);
+      if (makingSet) {
+        const result = await generateCharacterSet(
+          promptText,
+          {
+            style,
+            temperature: options.temperature,
+            pixelGrid: options.pixelGrid,
+          },
+          p => {
+            if (epoch === progressEpochRef.current) {
+              setProgress(p);
+            }
+          }
+        );
+        await onAccept(result, create ? newImageName() : undefined);
+        return;
+      }
+      const result = await generateImage(promptText, options);
       // Apply immediately; the caller flips back to the summary view.
-      await onAccept(result, create ? trimmedName : undefined);
-    } catch {
-      setError("Couldn't generate the image. Try again.");
+      await onAccept(result, create ? newImageName() : undefined);
+    } catch (e) {
+      if (e instanceof ImageSafetyError) {
+        setError(
+          e.phase === 'prompt'
+            ? "This prompt isn't appropriate for class. Try a different idea."
+            : "The image didn't pass our safety check. Try a different prompt."
+        );
+      } else {
+        // The message stays generic; the cause (judge failure, gateway
+        // error, no image, upload failure) goes to the console.
+        console.error('Image generation failed:', e);
+        setError(
+          makingSet
+            ? "Couldn't finish the character. Try again."
+            : "Couldn't generate the image. Try again."
+        );
+      }
       setMode('prompt');
+      setProgress(null);
     }
   }, [
-    prompt,
+    promptText,
+    usingAdlib,
+    adlibSet,
     imageType,
     style,
+    pixelScale,
     temperatureLevel,
     source,
     existing,
     canUseSeed,
     create,
-    trimmedName,
+    newImageName,
+    onGenerateStart,
     onAccept,
+    makingSet,
   ]);
 
   const botImage =
@@ -195,50 +403,115 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   return (
     <>
       <div className={moduleStyles.body}>
-        <div
-          className={classNames(
-            moduleStyles.imagePane,
-            thumb && moduleStyles.imagePaneChecker
-          )}
-        >
-          {thumb ? (
-            <img src={thumb} alt="" />
-          ) : (
-            <div className={moduleStyles.imagePlaceholder} aria-hidden />
-          )}
-        </div>
+        {generating && progress?.preview ? (
+          // The latest frame of the set as it comes in — also in the student
+          // form, where the pane is otherwise the paint button.
+          <div
+            className={classNames(
+              moduleStyles.imagePane,
+              moduleStyles.imagePaneChecker
+            )}
+          >
+            <img src={progress.preview} alt="" />
+          </div>
+        ) : !advanced && create && onPaintManually ? (
+          /* The student form's blank pane is itself the way into the paint
+             editor; its footer keeps just Cancel/Generate. */
+          <ImagePaneButton
+            iconName="paintbrush"
+            label="Paint manually"
+            disabled={generating}
+            onClick={() =>
+              onPaintManually({name: newImageName(), imageType, style})
+            }
+          />
+        ) : (
+          <div
+            className={classNames(
+              moduleStyles.imagePane,
+              (thumb || sheet) && moduleStyles.imagePaneChecker
+            )}
+          >
+            {sheet ? (
+              <AnimatedSheetPreview {...sheet} />
+            ) : thumb ? (
+              <img
+                src={thumb}
+                alt=""
+                className={classNames(thumbPixelated && moduleStyles.pixelArt)}
+              />
+            ) : (
+              <div className={moduleStyles.imagePlaceholder} aria-hidden />
+            )}
+          </div>
+        )}
         <div className={moduleStyles.detailsPane}>
-          {create && (
-            <div>
+          {advanced && create && (
+            <div className={moduleStyles.nameRow}>
               <TextField
                 name="newImageName"
                 label="Name"
+                className={moduleStyles.nameField}
                 value={name}
-                errorMessage={nameError || undefined}
+                aria-invalid={!!nameError || undefined}
+                aria-describedby={
+                  nameError ? 'new-image-name-error' : undefined
+                }
                 disabled={generating}
                 maxLength={IMAGE_NAME_MAX_LENGTH}
                 onChange={e => setName(sanitizeImageName(e.target.value))}
               />
+              {/* Beside the field, not below it, so showing the message
+                  never changes the dialog's height. */}
+              {nameError && (
+                <span
+                  id="new-image-name-error"
+                  role="status"
+                  className={moduleStyles.inlineFieldError}
+                >
+                  {nameError}
+                </span>
+              )}
             </div>
           )}
 
-          <div className={moduleStyles.formRow}>
-            <label
-              className={classNames(
-                moduleStyles.promptLabel,
-                moduleStyles.wide
-              )}
+          {adlib && (
+            // Native disable dims the combo while typed text wins.
+            <fieldset
+              className={moduleStyles.adlibGroup}
+              disabled={generating || freeTextEntered}
             >
-              <span>Prompt</span>
-              <textarea
-                className={moduleStyles.promptInput}
-                value={prompt}
-                rows={5}
-                placeholder={PROMPT_PLACEHOLDERS[imageType]}
-                disabled={generating}
-                onChange={e => setPrompt(e.target.value)}
+              <Adlib
+                adlib={adlib}
+                adlibChoices={adlibChoices}
+                glowSpeed={freeTextEntered ? undefined : 'normal'}
+                onChoicesChange={setAdlibChoices}
+                onTextChange={handleAdlibText}
               />
-            </label>
+            </fieldset>
+          )}
+          <div className={moduleStyles.formRow}>
+            {/* Adlib-only levels have no free-text box; the combo above is
+                the whole prompt. */}
+            {!(adlibOnly && adlib) && (
+              <label
+                className={classNames(
+                  moduleStyles.promptLabel,
+                  moduleStyles.wide
+                )}
+              >
+                <span>{adlib ? 'Or prompt' : 'Prompt'}</span>
+                <textarea
+                  className={moduleStyles.promptInput}
+                  value={prompt}
+                  rows={5}
+                  maxLength={MAX_PROMPT_LENGTH}
+                  placeholder={PROMPT_PLACEHOLDERS[imageType]}
+                  disabled={generating}
+                  onChange={e => setPrompt(e.target.value)}
+                />
+              </label>
+            )}
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
                   level can lock the choice for new images too. */}
@@ -247,7 +520,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 disabled={generating || !!existing || !!lockedImageType}
               >
                 <legend>Type</legend>
-                {(['sprite', 'background', 'block'] as const).map(type => (
+                {IMAGE_TYPES.map(type => (
                   <RadioButton
                     key={type}
                     name="generation-type"
@@ -276,88 +549,156 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                   />
                 ))}
               </fieldset>
+              {/* Internal knob: ask the model for a coarser grid than the
+                  type's default, to survey what it returns at lower asks. */}
+              {advanced && style === 'pixel' && (
+                <fieldset
+                  className={moduleStyles.radioGroup}
+                  disabled={generating}
+                >
+                  <legend>Resolution</legend>
+                  {PIXEL_SCALES.map(scale => {
+                    const grid = defaultPixelGrid(imageType) / scale;
+                    return (
+                      <RadioButton
+                        key={scale}
+                        name="generation-pixel-grid"
+                        value={String(scale)}
+                        label={`${grid} × ${grid}${
+                          scale === 1 ? ' (default)' : ''
+                        }`}
+                        size="s"
+                        checked={pixelScale === scale}
+                        onChange={() => setPixelScale(scale)}
+                      />
+                    );
+                  })}
+                </fieldset>
+              )}
             </div>
           </div>
 
-          <div className={moduleStyles.formRow}>
-            <fieldset
-              className={classNames(moduleStyles.radioGroup, moduleStyles.wide)}
-              disabled={generating}
-            >
-              <legend>Start from</legend>
-              <RadioButton
-                name="generation-source"
-                value="new"
-                label="Create new image"
+          {/* In both forms: making animated characters is the student
+              feature. Checking it still calms the temperature the student
+              form doesn't show — the state drives the request either way. */}
+          {canMakeSet && (
+            <div className={moduleStyles.formRow}>
+              <Checkbox
+                name="character-set"
+                label={
+                  advanced
+                    ? `Make a character set: idling, walking and jumping (${CHARACTER_SET_PICTURE_COUNT} pictures; takes a minute)`
+                    : 'Generate animation'
+                }
                 size="s"
-                checked={source === 'new'}
-                onChange={() => setSource('new')}
+                checked={characterSet}
+                disabled={generating}
+                onChange={e => {
+                  setCharacterSet(e.target.checked);
+                  if (e.target.checked) {
+                    setTemperatureLevel(CHARACTER_SET_TEMPERATURE_LEVEL);
+                  }
+                }}
               />
-              <RadioButton
-                name="generation-source"
-                value="seed"
-                label="Use same seed (small prompt changes keep the picture similar)"
-                size="s"
-                checked={source === 'seed'}
-                disabled={!canUseSeed}
-                onChange={() => setSource('seed')}
-              />
-              <RadioButton
-                name="generation-source"
-                value="previous"
-                label="Use previous image (the prompt modifies it)"
-                size="s"
-                checked={source === 'previous'}
-                disabled={!canUsePrevious}
-                onChange={() => setSource('previous')}
-              />
-            </fieldset>
-            <fieldset
-              className={classNames(
-                moduleStyles.radioGroup,
-                moduleStyles.temperatureGroup
-              )}
-              disabled={generating}
-            >
-              <legend id="temperature-label">Temperature</legend>
-              {/* A wink: choosing pixel-art style pixelates the bot too. */}
-              <TemperatureBot src={botImage} pixelated={style === 'pixel'} />
+            </div>
+          )}
 
-              <Slider
-                name="temperature-slider"
-                aria-labelledby="temperature-label"
-                minValue={0}
-                maxValue={TEMPERATURE_LEVEL_MAX}
-                step={1}
-                value={temperatureLevel}
-                onChange={e => setTemperatureLevel(+e.target.value)}
-                hideValue={true}
-                color="aqua"
-                leftButtonProps={{
-                  children: (
-                    <FontAwesomeV6Icon
-                      iconName="minus"
-                      title="Lower temperature"
-                    />
-                  ),
-                  ['aria-label']: 'Lower temperature',
-                }}
-                rightButtonProps={{
-                  children: (
-                    <FontAwesomeV6Icon
-                      iconName="plus"
-                      title="Raise temperature"
-                    />
-                  ),
-                  ['aria-label']: 'Raise temperature',
-                }}
-              />
-            </fieldset>
-          </div>
+          {advanced && (
+            <div className={moduleStyles.formRow}>
+              <fieldset
+                className={classNames(
+                  moduleStyles.radioGroup,
+                  moduleStyles.wide
+                )}
+                disabled={generating}
+              >
+                <legend>Start from</legend>
+                <RadioButton
+                  name="generation-source"
+                  value="new"
+                  label="Create new image"
+                  size="s"
+                  checked={source === 'new'}
+                  onChange={() => setSource('new')}
+                />
+                <RadioButton
+                  name="generation-source"
+                  value="seed"
+                  label="Use same seed (small prompt changes keep the picture similar)"
+                  size="s"
+                  checked={source === 'seed'}
+                  disabled={!canUseSeed}
+                  onChange={() => setSource('seed')}
+                />
+                <RadioButton
+                  name="generation-source"
+                  value="previous"
+                  label="Use previous image (the prompt modifies it)"
+                  size="s"
+                  checked={source === 'previous'}
+                  disabled={!canUsePrevious}
+                  onChange={() => setSource('previous')}
+                />
+              </fieldset>
+              <fieldset
+                className={classNames(
+                  moduleStyles.radioGroup,
+                  moduleStyles.temperatureGroup
+                )}
+                disabled={generating}
+              >
+                <legend id="temperature-label">Temperature</legend>
+                {/* A wink: choosing pixel-art style pixelates the bot too. */}
+                <TemperatureBot src={botImage} pixelated={style === 'pixel'} />
+
+                <Slider
+                  name="temperature-slider"
+                  aria-labelledby="temperature-label"
+                  minValue={0}
+                  maxValue={TEMPERATURE_LEVEL_MAX}
+                  step={1}
+                  value={temperatureLevel}
+                  onChange={e => setTemperatureLevel(+e.target.value)}
+                  hideValue={true}
+                  color="aqua"
+                  leftButtonProps={{
+                    children: (
+                      <FontAwesomeV6Icon
+                        iconName="minus"
+                        title="Lower temperature"
+                      />
+                    ),
+                    ['aria-label']: 'Lower temperature',
+                  }}
+                  rightButtonProps={{
+                    children: (
+                      <FontAwesomeV6Icon
+                        iconName="plus"
+                        title="Raise temperature"
+                      />
+                    ),
+                    ['aria-label']: 'Raise temperature',
+                  }}
+                />
+              </fieldset>
+            </div>
+          )}
 
           {error && (
             <div aria-live="polite" className={moduleStyles.generateError}>
               {error}
+            </div>
+          )}
+          {generating && progress && (
+            <div aria-live="polite" className={moduleStyles.generateProgress}>
+              {!advanced
+                ? // The step in progress; assembly counts as the last step.
+                  `Step ${Math.min(progress.done + 1, progress.total)} of ${
+                    progress.total
+                  }`
+                : progress.done < progress.total
+                ? `Drew ${progress.done} of ${progress.total} (${progress.label})…`
+                : 'Putting the frames together…'}
             </div>
           )}
         </div>
@@ -369,18 +710,35 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             <DeleteImageButton onDelete={onDelete} />
           </div>
         )}
-        <button
-          type="button"
-          className={moduleStyles.button}
-          disabled={generating}
-          onClick={onCancel}
-        >
-          Cancel
-        </button>
+        {advanced && create && onPaintManually && (
+          <div className={moduleStyles.footerLeft}>
+            <button
+              type="button"
+              className={moduleStyles.button}
+              disabled={generating || !nameUsable}
+              onClick={() =>
+                onPaintManually({name: trimmedName, imageType, style})
+              }
+            >
+              <FontAwesomeV6Icon iconName="paintbrush" />
+              Paint manually
+            </button>
+          </div>
+        )}
+        {!hideCancel && (
+          <button
+            type="button"
+            className={moduleStyles.button}
+            disabled={generating}
+            onClick={onCancel}
+          >
+            Cancel
+          </button>
+        )}
         <button
           type="button"
           className={moduleStyles.primaryButton}
-          disabled={generating || !prompt.trim() || !nameUsable}
+          disabled={generating || !promptText || !nameUsable}
           onClick={generate}
         >
           <FontAwesomeV6Icon iconName="sparkles" />

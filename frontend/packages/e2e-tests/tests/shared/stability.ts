@@ -43,25 +43,3 @@ export async function waitForVisualStability(
     await waitUntilStable(locator);
   }
 }
-
-/**
- * Wait for the shared header to relayout against the loaded web fonts.
- *
- * Keys on the HeaderMiddle.jsx flags, not on #header_middle_content, which is
- * always present and lands before the relayout starts. Returns at once on a
- * page that never mounts this header. Does not cover the lesson-progress
- * strip; use LessonLevelPage.waitForLessonHeaderRendered() for that.
- */
-export async function waitForHeaderSettled(page: Page): Promise<void> {
-  await expect
-    .poll(() =>
-      page.evaluate(() => {
-        const de = document.documentElement;
-        return (
-          de.dataset.headerPresent !== 'true' ||
-          de.dataset.headerFontsRelaidOut === 'true'
-        );
-      }),
-    )
-    .toBe(true);
-}

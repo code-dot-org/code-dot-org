@@ -34,9 +34,12 @@
   cursor: pointer;
   // reset for when rendered as a <button>
   width: 100%;
+  margin: 0;
   font: inherit;
   color: inherit;
   text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
 
   &:hover {
     background: var(--background-neutral-secondary, #f8f9fa);
@@ -49,10 +52,26 @@
   flex-direction: column;
 }
 
+.sectionNameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
 .sectionName {
+  min-width: 0;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activeTag {
+  flex-shrink: 0;
+  margin-bottom: 4px;
 }
 
 .lessonName {
@@ -139,4 +158,50 @@
   color: var(--text-neutral-secondary);
   font-size: 0.875rem;
   text-align: center;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-bottom: 16px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--text-neutral-primary);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sectionEmptyState {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.sectionEmptyStateTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-neutral-primary);
+  margin: 0;
+}
+
+.sectionEmptyStateDescription {
+  max-width: 300px;
+  margin: 0 0 8px;
+  color: var(--text-neutral-secondary);
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
