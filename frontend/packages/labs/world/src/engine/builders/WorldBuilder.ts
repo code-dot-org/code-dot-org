@@ -524,6 +524,11 @@ export class WorldBuilder {
     return this.defer('useTheme', document);
   }
 
+  /** Register a theme by path. See {@link World.defineTheme}. */
+  defineTheme(path: string, document: unknown): this {
+    return this.defer('defineTheme', path, document);
+  }
+
   /** Set the color behind the backdrop. See {@link World.setBackgroundColor}. */
   setBackgroundColor(color: ColorValue): this {
     return this.defer('setBackgroundColor', color);

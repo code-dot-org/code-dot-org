@@ -24,6 +24,120 @@ const at = (world: {actors: Iterable<unknown>}, type: string) =>
     act(a: unknown, ...rest: unknown[]): void;
   };
 
+describe('the theme, through the whole path', () => {
+  // THE ONLY TEST THAT TAKES IT END TO END, which is why it exists: the world
+  // preamble, the generated `use theme` row, the bundler resolving a `.style`
+  // import, the engine resolving `extends`, and a drawing asking for a class.
+  //
+  // Everything else exercises a piece. The reader tests read files off disk,
+  // the engine tests hand `useTheme` a document already in hand, and the
+  // theme tests only ever parse. Two bugs lived in the gap between them: the
+  // bundler had never heard of `.style`, and `useTheme` was generated with no
+  // way to find a theme BY PATH — so a file's `extends`, a map's theme and a
+  // placement's all fell back to the base, silently (specs/STYLES_PLAN.md).
+  const open = async () =>
+    (await compileProject(projectFiles(WORLD_SCENARIOS.interface.source)))
+      .world;
+
+  /** The theme an actor is painted out of, which is the cascade's answer. */
+  const themeFor = (world: unknown, actor: Actor) =>
+    (
+      world as {
+        themeFor(a: Actor): {name: string; styles: Map<string, unknown>};
+      }
+    ).themeFor(actor);
+
+  it('paints the kit out of the theme the world names', async () => {
+    const world = await open();
+    expect(world.currentTheme().name).toBe('Modern');
+    // A class the drawings actually ask for, resolved.
+    expect(world.styleNamed('button')).toMatchObject({fill: '#3050a0'});
+  });
+
+  it('answers a class for an actor, which is what a drawing asks', async () => {
+    const world = await open();
+    const button = at(world, 'actors/button') as unknown as Actor;
+    expect(
+      (world as unknown as {styleFor(a: Actor, n: string): unknown}).styleFor(
+        button,
+        'button',
+      ),
+    ).toMatchObject({fill: '#3050a0'});
+  });
+
+  it('lets a MAP override the world, all the way through', async () => {
+    // Compiled, not constructed: the map's field goes into its document, the
+    // document into a module, the module into `loadMap`, and the load
+    // remembers it for every actor it placed.
+    const files = projectFiles(WORLD_SCENARIOS.interface.source);
+    const mapPath = Object.keys(files).find(one =>
+      one.endsWith('interface.map'),
+    )!;
+    const doc = JSON.parse(files[mapPath]) as {theme?: string};
+    doc.theme = 'styles/classic';
+    const {world} = await compileProject({
+      ...files,
+      [mapPath]: JSON.stringify(doc),
+    });
+
+    const button = at(world, 'actors/button') as unknown as Actor;
+    expect(world.currentTheme().name).toBe('Modern');
+    expect(themeFor(world, button).name).toBe('Classic');
+  });
+
+  it('lets a PLACEMENT override the map, and resolves its `extends`', async () => {
+    // The third level, and the one that needs `extends` to mean anything:
+    // `danger.style` holds one class and inherits the rest, so a button
+    // pointed at it has to come out red AND keep its corner.
+    const files = projectFiles(WORLD_SCENARIOS.interface.source);
+    const mapPath = Object.keys(files).find(one =>
+      one.endsWith('interface.map'),
+    )!;
+    const doc = JSON.parse(files[mapPath]) as {
+      actors: Array<{type: string; properties?: Record<string, unknown>}>;
+    };
+    for (const placed of doc.actors) {
+      if (placed.type === 'actors/button') {
+        placed.properties = {
+          ...placed.properties,
+          hasAStyle: {theme: 'styles/danger'},
+        };
+      }
+    }
+    const {world} = await compileProject({
+      ...files,
+      [mapPath]: JSON.stringify(doc),
+    });
+
+    const button = at(world, 'actors/button') as unknown as Actor;
+    const theme = themeFor(world, button);
+    expect(theme.name).toBe('Danger');
+    // Its own class…
+    expect(theme.styles.get('button')).toMatchObject({fill: '#e06c75'});
+    // …and one it never mentions, which only `extends` can have supplied.
+    expect(theme.styles.get('ring')).toEqual(
+      world.currentTheme().styles.get('ring'),
+    );
+  });
+
+  it('knows every theme the project holds, by path', async () => {
+    // The preamble's whole job. Without it `extends` cannot resolve, and
+    // neither can a map's theme or a placement's — none of the three is a
+    // path an import could have followed.
+    const world = await open();
+    const found = world as unknown as {
+      themeAt?: unknown;
+      defineTheme(p: string, d: unknown): void;
+    };
+    expect(found.defineTheme).toBeTypeOf('function');
+    // Classic is in the project and is NOT the world's — so the only way to
+    // see it is the registry.
+    world.useTheme('styles/classic');
+    expect(world.currentTheme().name).toBe('Classic');
+    expect(world.styleNamed('button')).toMatchObject({fill: '#d4d0c8'});
+  });
+});
+
 describe('the interface kit', () => {
   const open = async () => {
     const {world, modules} = await compileProject(

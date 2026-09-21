@@ -2642,10 +2642,41 @@ export class World {
    * A world lent none draws in whatever its routines set for themselves, which
    * is what every world did before this and what every headless test does.
    */
-  useTheme(document: unknown, parentAt?: (path: string) => unknown): void {
-    this.baseTheme = resolveTheme(document, parentAt);
+  /**
+   * Register a theme by path, before anything names one.
+   *
+   * WHY THE WORLD IS HANDED THE LOT. Only one of the three ways a theme is
+   * chosen is a path an import could follow: the world's own `use theme` row.
+   * A map's is a string in its document, a placement's is a string in a
+   * property, and a file's `extends` is a fourth — none of which a bundler
+   * can see. So the preamble imports every `.style` the project holds and
+   * says so here, exactly as it does for actor kinds and maps
+   * (specs/STYLES_PLAN.md).
+   */
+  defineTheme(path: string, document: unknown): void {
+    this.themeDocuments.set(path, document);
+    this.themeCache.delete(path);
+  }
+
+  private readonly themeDocuments = new Map<string, unknown>();
+
+  /**
+   * Name the world's own theme — the base of the cascade.
+   *
+   * TAKES A PATH OR A DOCUMENT. The block passes the imported document, which
+   * is what a bundler gives it; a test passes one in hand. Either way the
+   * lookup below is what answers `extends`, a map's theme and a placement's.
+   */
+  useTheme(
+    document: unknown,
+    parentAt: (path: string) => unknown = path => this.themeDocuments.get(path),
+  ): void {
     this.findTheme = parentAt;
     this.themeCache = new Map();
+    this.baseTheme = resolveTheme(
+      typeof document === 'string' ? parentAt(document) : document,
+      parentAt,
+    );
   }
 
   private baseTheme: ResolvedTheme = NO_THEME;

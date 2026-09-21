@@ -193,6 +193,7 @@ import {
   mapOptions,
   mapOptionsExtension,
   projectActorPaths,
+  projectStylePaths,
   projectMapPaths,
   NONE_VALUE,
   orNone,
@@ -7004,6 +7005,22 @@ const worldWorld = defineBlock({
       // remembered` is handed a path that was stored in a BROWSER, which no
       // import could have followed, so it can only look one up
       // (specs/RECORDS_PLAN.md).
+      // …and every THEME, by path, for the same reason one level along: a
+      // drawing names a class and the FILE is chosen three ways — the world's
+      // `use theme` row, a map's field, a placement's property — and only the
+      // first of those is a path an import could have followed. The other two
+      // are strings in data, and a file that says `extends` is a fourth. So
+      // the world is handed the lot and looks one up (specs/STYLES_PLAN.md).
+      const themes = projectStylePaths()
+        .map(path => {
+          addImport(
+            generator,
+            `mod:${path}`,
+            `import ${importVar(path)} from ${str(path)};`,
+          );
+          return `world.defineTheme(${str(path)}, ${importVar(path)});\n`;
+        })
+        .join('');
       const kinds = projectActorPaths()
         .map(path => {
           addImport(
@@ -7100,6 +7117,10 @@ const worldWorld = defineBlock({
         rules +
         hoisted.join('') +
         animations +
+        // BEFORE the body, which is where `use theme` sits: the row names a
+        // base and the world has to be able to find it, and every other
+        // theme besides, before anything draws.
+        themes +
         kinds +
         maps +
         imageSizes +

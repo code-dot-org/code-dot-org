@@ -582,7 +582,23 @@ theme defining no classes changes nothing and gives a learner nothing to edit.
 the demonstration, and a demonstration of theming with no theme in it was
 asking the reader to imagine the entire point.
 
-That last change found the worst of the three, which nothing else could have:
+And a third, reported after the other two were fixed: **changing or
+overriding a theme did nothing.** `use theme` generated `world.useTheme(mod)`
+with one argument, so the world was never given a way to find a theme BY PATH
+— and all three of the things that need one are paths in data rather than
+imports: a file's `extends`, a map's `theme` field, and a placement's
+property. Every one of them fell through to the base, silently, which is
+exactly what "does not seem to work" looks like from outside.
+
+The world preamble now imports every `.style` the project holds and registers
+it with `defineTheme`, which is the same answer `world.define` is for actor
+kinds and `defineMap` is for maps, reached for the same reason: a path that
+arrives as DATA is a path no bundler could have followed. `interfaceKitPlays`
+now takes all three levels and `extends` through the compiler, which is the
+only test in the repo that walks the whole path.
+
+That first change found the worst of the three, which nothing else could
+have:
 **`use theme` had never worked outside a test.** The block generates an import
 of the `.style` file, and neither the bundler (`runtime/compile/
 virtualFsPlugin`) nor the test compiler knew the extension — so the import

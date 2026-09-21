@@ -157,7 +157,18 @@ export function setProjectStyleNames(names: string[]): void {
  * The import row is listed last and is never the fallback — `orNone` still
  * supplies "(no themes yet)" — so a saved block whose theme was deleted does
  * not silently become the import row.
+ *
+ * `projectStylePaths` above it is the same list without the labels, for the
+ * world preamble: only ONE of the three ways a theme is chosen is a path an
+ * import could follow, which is the world's own `use theme` row. A map's is a
+ * string in its document, a placement's is a string in a property, and a
+ * file's `extends` is a fourth — so the world is handed the lot and looks one
+ * up (specs/STYLES_PLAN.md).
  */
+export function projectStylePaths(): string[] {
+  return projectStyleFileList.map(([, path]) => path);
+}
+
 export function styleFileOptions(): Array<[string, string]> {
   return [
     ...orNone(projectStyleFileList, '(no themes yet)'),

@@ -284,7 +284,10 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
   // BOTH THEMES, because the point of the kit is that you can swap one for
   // the other and watch every control follow. The world names Modern; opening
   // the world and picking Classic is the whole demonstration.
-  for (const style of ['modern', 'classic']) {
+  // …and DANGER, which is neither: four lines that extend Modern and make a
+  // button red. It is in the kit so that `extends` and a per-placement
+  // override are things a learner can try, not things a spec describes.
+  for (const style of ['modern', 'classic', 'danger']) {
     source = importStockStyle(source, stockStyleById(style)!).source;
   }
 
