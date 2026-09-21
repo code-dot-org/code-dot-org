@@ -15,9 +15,13 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     }
     .blocklyPlaceholder > .blocklyPath {
       stroke: var(--text-neutral-primary, #fff);
-      stroke-width: 3px;
-      stroke-dasharray: 10 6;
+      stroke-width: 6px;
+      stroke-dasharray: 6 4;
       fill-opacity: 0.2;
+    }
+    .blocklyPlaceholderActive > .blocklyPath {
+      stroke-dasharray: none;
+      fill-opacity: 0.4;
     }
     .blocklyFieldGrid .blocklyFieldGridItem {
       border: none !important;

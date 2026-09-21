@@ -99,18 +99,42 @@ function installLabBlocks(): void {
   }
 }
 
+let placeholderCount = 0;
+
 // Blockly draws a shadow with no stroke; the class restores one, dashed
-// (cdoCss.ts), once the block has an SVG to carry it. Sizing happens after
-// the workspace loads (placeholders.ts).
+// (cdoCss.ts), once the block has an SVG to carry it. The path clips its
+// own stroke to its inside, so the dashes never cross the block above.
+// Sizing happens after the workspace loads (placeholders.ts).
 function placeholderOutline(this: BlocklyCore.Block) {
   // Headless blocks (code generation, tests) have no SVG to draw.
   if (!(this instanceof BlocklyCore.BlockSvg)) {
     return;
   }
   const initSvg = this.initSvg.bind(this);
+  const dispose = this.dispose.bind(this);
+  let clip: SVGClipPathElement | null = null;
   this.initSvg = () => {
     initSvg();
     this.getSvgRoot().classList.add(PLACEHOLDER_CLASS);
+    const defs = this.workspace.getParentSvg().querySelector('defs');
+    if (clip || !defs) {
+      return;
+    }
+    const id = `spritelab2-placeholder-${placeholderCount++}`;
+    const path = this.pathObject.svgPath;
+    path.setAttribute('id', `${id}-path`);
+    clip = BlocklyCore.utils.dom.createSvgElement(
+      BlocklyCore.utils.Svg.CLIPPATH,
+      {id},
+      defs
+    );
+    BlocklyCore.utils.dom.createSvgElement('use', {href: `#${id}-path`}, clip);
+    path.setAttribute('clip-path', `url(#${id})`);
+  };
+  this.dispose = (...args) => {
+    clip?.remove();
+    clip = null;
+    dispose(...args);
   };
 }
 

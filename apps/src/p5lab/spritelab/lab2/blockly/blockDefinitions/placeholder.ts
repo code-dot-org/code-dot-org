@@ -10,8 +10,10 @@ export const PLACEHOLDER_BLOCK_TYPE = 'spritelab2_placeholder';
 export const PLACEHOLDER_OUTLINE_EXTENSION = 'spritelab2_placeholder_outline';
 export const PLACEHOLDER_MUTATOR = 'spritelab2_placeholder_like';
 
-/** The svg class the outline's CSS hangs on (cdoCss.ts). */
+/** The svg classes the outline's CSS hangs on (cdoCss.ts): the block, and
+    the block while a dragged block hovers over its connection. */
 export const PLACEHOLDER_CLASS = 'blocklyPlaceholder';
+export const PLACEHOLDER_ACTIVE_CLASS = 'blocklyPlaceholderActive';
 
 // The block is an empty box: one transparent image gives it a size, which
 // the outline extension then matches to the block it stands in for.
