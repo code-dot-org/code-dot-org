@@ -13,6 +13,7 @@
 // written in, and the driver receives commands that need no state to draw — it
 // never has to know what came before.
 
+import {cssColor, type ColorValue} from './color';
 import {fnv1a} from './hash';
 
 /** A shape lifted off what is behind it — see `Pen.shadow`. */
@@ -140,14 +141,14 @@ export type DrawCommand =
  * `pen.…`. Nothing here reads: a routine describes and does not ask.
  */
 export interface Pen {
-  fill(color: string): void;
-  outline(color: string, width: number): void;
+  fill(color: ColorValue): void;
+  outline(color: ColorValue, width: number): void;
   noFill(): void;
   noOutline(): void;
   /** Round the corners of every rectangle after this. Zero squares them. */
   corner(radius: number): void;
   /** Cast a shadow under every shape after this. */
-  shadow(color: string, blur: number, offsetY: number): void;
+  shadow(color: ColorValue, blur: number, offsetY: number): void;
   noShadow(): void;
   /** Draw the letters after this heavier, or ordinary again. */
   weight(bold: boolean): void;
@@ -233,12 +234,17 @@ export class CommandPen implements Pen {
     };
   }
 
-  fill(color: string): void {
-    this.currentFill = color;
+  // SETTLED HERE, not in the driver. A color arrives as a hex string or as
+  // four floats depending on which block produced it (`core/color`), and a
+  // command carries the paint it was drawn with — so the command list, which
+  // is also the cache key, should hold one spelling of a color rather than
+  // two spellings of the same one.
+  fill(color: ColorValue): void {
+    this.currentFill = cssColor(color);
   }
 
-  outline(color: string, width: number): void {
-    this.currentStroke = color;
+  outline(color: ColorValue, width: number): void {
+    this.currentStroke = cssColor(color);
     this.currentWidth = width;
   }
 
@@ -266,8 +272,12 @@ export class CommandPen implements Pen {
     this.currentRadius = Math.max(0, radius);
   }
 
-  shadow(color: string, blur: number, offsetY: number): void {
-    this.currentShadow = {color, blur: Math.max(0, blur), offsetY};
+  shadow(color: ColorValue, blur: number, offsetY: number): void {
+    this.currentShadow = {
+      color: cssColor(color),
+      blur: Math.max(0, blur),
+      offsetY,
+    };
   }
 
   noShadow(): void {

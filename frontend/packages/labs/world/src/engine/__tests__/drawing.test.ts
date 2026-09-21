@@ -149,6 +149,36 @@ describe('the pen', () => {
     expect(circle).toMatchObject({stroke: '#333333'});
   });
 
+  it('settles four floats into a color a canvas can use', () => {
+    // The two color blocks disagree on purpose: a picker answers `#rrggbb`
+    // and `r g b a` answers floats, so that reaching past the swatch keeps an
+    // alpha. Assigned to `fillStyle` an array is not a color at all, so a
+    // canvas handed one kept whatever it was already using and `set fill ⟨r g
+    // b a⟩` drew in the previous color, silently (`core/color`).
+    const {world} = drawnWorld((_actor, pen) => {
+      pen.fill([1, 0.5, 0, 0.25]);
+      pen.rectangle(0, 0, 1, 1);
+    });
+
+    expect(world.renderSnapshot()[0].drawing!.commands[0]).toMatchObject({
+      fill: 'rgba(255, 128, 0, 0.25)',
+    });
+  });
+
+  it('leaves a hex string exactly as it was written', () => {
+    // Rewriting every swatch into `rgba(…)` would re-rasterize every picture
+    // in the lab to say the same thing a different way: the command list is
+    // the cache key (`drawingKey`).
+    const {world} = drawnWorld((_actor, pen) => {
+      pen.fill('#ff8800');
+      pen.rectangle(0, 0, 1, 1);
+    });
+
+    expect(world.renderSnapshot()[0].drawing!.commands[0]).toMatchObject({
+      fill: '#ff8800',
+    });
+  });
+
   it('draws a line in the fill color when there is no outline', () => {
     // The trap this exists to remove: `draw line` with the pen untouched is the
     // first drawing anybody writes, and a line has no interior — so without the

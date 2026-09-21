@@ -79,6 +79,32 @@ export function rgba(value: ColorValue): Rgba {
 }
 
 /**
+ * A color as a CANVAS wants it, which is neither of the two above.
+ *
+ * A shader takes floats and a drawing command takes a CSS string, and the two
+ * color blocks disagree about which they produce: `colour_picker` answers
+ * `'#rrggbb'` and the `r g b a` block answers `[r, g, b, a]`, deliberately, so
+ * that a learner reaching past the swatch keeps their alpha and their
+ * precision. Assigned to `fillStyle` an array is not a color at all, and a
+ * canvas given one keeps whatever it was using — so `set fill ⟨r g b a⟩` drew
+ * in the previous color and said nothing.
+ *
+ * A STRING IS PASSED THROUGH UNTOUCHED, rather than parsed and rebuilt. Canvas
+ * takes `#rgb`, `#rrggbb`, `#rrggbbaa` and every name there is, and a command
+ * list is a drawing's identity (`drawingKey`) — rewriting every hex into
+ * `rgba(…)` would re-rasterize every picture in the lab to say the same thing
+ * a different way.
+ */
+export function cssColor(value: ColorValue): string {
+  if (!Array.isArray(value)) {
+    return String(value ?? '');
+  }
+  const [r, g, b, a] = channels(value);
+  const byte = (channel: number) => Math.round(channel * 255);
+  return `rgba(${byte(r)}, ${byte(g)}, ${byte(b)}, ${a})`;
+}
+
+/**
  * Back the other way: three 0–1 floats to `#rrggbb`.
  *
  * Needed because an effect declares its default color the shader way, and the
