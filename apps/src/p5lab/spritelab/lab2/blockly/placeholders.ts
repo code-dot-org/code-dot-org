@@ -39,7 +39,8 @@ export function sizeLike(block: BlocklyCore.BlockSvg & PlaceholderBlock) {
     return;
   }
   const target = measureBlock(block.like, block.workspace);
-  // A bare placeholder's size, less its spacer, is the chrome around it.
+  // A bare placeholder's size, less its spacer, is the border and padding
+  // around the spacer.
   const bare = measureBlock({type: PLACEHOLDER_BLOCK_TYPE}, block.workspace);
   if (!target || !bare) {
     return;

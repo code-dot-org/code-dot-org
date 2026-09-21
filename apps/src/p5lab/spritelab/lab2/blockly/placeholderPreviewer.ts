@@ -11,7 +11,7 @@ import {
 
 export default class PlaceholderPreviewer extends BlocklyCore.InsertionMarkerPreviewer {
   private activePlaceholder: BlocklyCore.BlockSvg | null = null;
-  // The connection the placeholder hangs from, highlighted while active.
+  // The connection the placeholder is attached to, highlighted while active.
   private activeConn: BlocklyCore.RenderedConnection | null = null;
 
   previewConnection(

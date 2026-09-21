@@ -10,7 +10,7 @@ export const PLACEHOLDER_BLOCK_TYPE = 'spritelab2_placeholder';
 export const PLACEHOLDER_OUTLINE_EXTENSION = 'spritelab2_placeholder_outline';
 export const PLACEHOLDER_MUTATOR = 'spritelab2_placeholder_like';
 
-/** The svg classes the outline's CSS hangs on (cdoCss.ts): the block, and
+/** The svg classes the outline's CSS selects (cdoCss.ts): the block, and
     the block while a dragged block hovers over its connection. */
 export const PLACEHOLDER_CLASS = 'blocklyPlaceholder';
 export const PLACEHOLDER_ACTIVE_CLASS = 'blocklyPlaceholderActive';
@@ -42,7 +42,7 @@ export const placeholderMutator = {
 };
 
 // A slot a level marks for the student to fill, used as the shadow on a
-// connection: it draws where a block should go, gives way to the block
+// connection: it draws where a block should go, is replaced by the block
 // dropped there, and runs nothing.
 const definition: BlockJson = {
   type: PLACEHOLDER_BLOCK_TYPE,
