@@ -58,6 +58,7 @@ import {
   type Vec,
   type View,
   addLayer,
+  asNum,
   DEFAULT_LAYER,
   hasScript,
   layerName,
@@ -79,6 +80,16 @@ import {
   worldTransformOf,
 } from './mapModel';
 import {
+  angleTo,
+  handlePoint,
+  normalizeRotation,
+  RESIZE_HANDLES,
+  resizeBox,
+  rotationPoint,
+  type Box,
+  type ResizeHandle,
+} from './rotatedResize';
+import {
   DRAW_SIZE,
   drawnSize,
   fitView,
@@ -97,6 +108,24 @@ import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
 
 /** What the stage can blit: a decoded thumbnail, or a canvas painted here. */
 type Picture = HTMLImageElement | HTMLCanvasElement;
+
+/**
+ * Who owns `width` and `height` — the `Has a Box` trait, not any one kind.
+ *
+ * Nine interface actors mean the same thing by a box, so the editor asks one
+ * owner about all of them instead of knowing which kind is which
+ * (specs/BOXES_PLAN.md).
+ */
+const BOX_OWNER = 'hasABox';
+/** Small enough to grab again, which is the only floor a box needs. */
+const MIN_BOX = 8;
+/** How far a keyboard step resizes by, and turns by. */
+const RESIZE_STEP = 8;
+const TURN_STEP = 15;
+/** How big a grip is drawn and grabbed, in SCREEN pixels at any zoom. */
+const HANDLE_SIZE = 9;
+/** How far beyond the top edge the turn grip sits, in screen pixels. */
+const TURN_REACH = 22;
 
 const OUTSIDE_BG = '#0b0b12'; // the space beyond the map
 const MAP_BG = '#151521'; // the map region itself
@@ -368,6 +397,22 @@ export const MapStage = ({
   } | null>(null);
   // Active actor-move gesture: which instance, the grab offset (actor − pointer,
   // in world units), the pointer id, and whether it actually moved.
+  /**
+   * A grip being dragged: which one, the box as it was when the drag began,
+   * and where the pointer started.
+   *
+   * THE BOX AS IT WAS, not as it is. Each move works out the answer from the
+   * TOTAL movement since the press rather than accumulating per-event deltas,
+   * so a slow drag and a fast one over the same distance land in the same
+   * place and nothing rounds away (`rotatedResize`, ported from Sketch Lab).
+   */
+  const gripRef = useRef<{
+    handle: ResizeHandle | 'turn';
+    start: Box;
+    from: {x: number; y: number};
+    pointerId: number;
+  } | null>(null);
+
   const dragRef = useRef<{
     id: string;
     offX: number;
@@ -570,6 +615,60 @@ export const MapStage = ({
   // The property's current value: the placement's override, else the default.
   const valueOf = (actor: Placement, prop: PropertySchema): unknown =>
     propValue(actor, prop.ownerId, prop.propId) ?? prop.default;
+
+  /**
+   * The box a placement has, when it has one — `Has a Box`, which every
+   * interface actor elects (specs/BOXES_PLAN.md).
+   *
+   * Through the SCHEMA rather than by reading the override alone, so an actor
+   * that has never been resized reports the size its kind was built at rather
+   * than nothing. A kind with no box at all — a Coin, a Ground — answers
+   * undefined, which is how the handles know not to draw.
+   */
+  const boxOf = (
+    actor: Placement,
+  ): {width: number; height: number} | undefined => {
+    const schema = schemas[actor.type] ?? [];
+    const find = (propId: string) =>
+      schema
+        .flatMap(group => group.props)
+        .find(prop => prop.ownerId === BOX_OWNER && prop.propId === propId);
+    const width = find('width');
+    const height = find('height');
+    if (!width || !height) {
+      return undefined;
+    }
+    const size = (prop: PropertySchema) => asNum(valueOf(actor, prop)) ?? 0;
+    return {width: size(width), height: size(height)};
+  };
+
+  /**
+   * The selection as a box in WORLD space — what the grips are placed around
+   * and what a drag resizes. Undefined for a kind with no box, which is how
+   * everything below knows to draw and grab nothing.
+   */
+  const selectedBox: Box | undefined = (() => {
+    if (!selectedActor) {
+      return undefined;
+    }
+    const size = boxOf(selectedActor);
+    if (!size) {
+      return undefined;
+    }
+    // In WORLD space, through the parent chain — a child's stored transform is
+    // its parent's frame, and a grip has to be where the thing is drawn.
+    const at = worldTransformOf(selectedActor, map.actors, scales);
+    return {
+      center: at.pos,
+      width: size.width * Math.abs(at.scale.x),
+      height: size.height * Math.abs(at.scale.y),
+      rotation: at.rotation,
+    };
+  })();
+
+  /** Every grip and where it is, for drawing and for hit-testing alike. */
+  const handlesOf = (box: Box) =>
+    RESIZE_HANDLES.map(handle => ({handle, at: handlePoint(box, handle)}));
 
   /** A list property's rows, as the inspector draws them. */
   const listItems = (value: unknown): unknown[] =>
@@ -1145,6 +1244,20 @@ export const MapStage = ({
   };
 
   const endGesture = () => {
+    const grip = gripRef.current;
+    if (grip) {
+      canvasRef.current?.releasePointerCapture(grip.pointerId);
+      gripRef.current = null;
+      // Once, at the end. Every move wrote the map in memory so the grips and
+      // the outline follow the pointer; writing it back recompiles the game,
+      // which must happen when the drag is finished and not sixty times a
+      // second while it is happening.
+      commit(mapRef.current);
+      seedDraft(
+        mapRef.current.actors.find(one => one.id === selectedId) ?? null,
+      );
+      say(announceBox(selectedId ?? ''));
+    }
     const drag = dragRef.current;
     if (drag) {
       canvasRef.current?.releasePointerCapture(drag.pointerId);
@@ -1222,6 +1335,30 @@ export const MapStage = ({
       // should not be destructive.
       return;
     }
+    // A GRIP FIRST, before whatever is under it. The grips sit on the
+    // selection's edge, which is usually over the actor itself or over its
+    // neighbour, so a press there means "resize this" rather than "select
+    // that" (specs/BOXES_PLAN.md).
+    if (selectedBox && selectedId && !isReadOnly) {
+      const reach = HANDLE_SIZE / view.scale;
+      const near = (at: {x: number; y: number}) =>
+        Math.abs(at.x - world.x) <= reach && Math.abs(at.y - world.y) <= reach;
+      const turnAt = rotationPoint(selectedBox, TURN_REACH / view.scale);
+      const grabbed = near(turnAt)
+        ? ('turn' as const)
+        : handlesOf(selectedBox).find(one => near(one.at))?.handle;
+      if (grabbed) {
+        event.preventDefault();
+        gripRef.current = {
+          handle: grabbed,
+          start: selectedBox,
+          from: world,
+          pointerId: event.pointerId,
+        };
+        canvasRef.current?.setPointerCapture(event.pointerId);
+        return;
+      }
+    }
     // Left button in SELECT mode: grab a placed actor, else deselect + pan.
     if (hit) {
       event.preventDefault();
@@ -1244,6 +1381,23 @@ export const MapStage = ({
   };
 
   const handlePointerMove = (event: ReactPointerEvent) => {
+    const grip = gripRef.current;
+    if (grip) {
+      const world = screenToWorld(event.clientX, event.clientY);
+      if (grip.handle === 'turn') {
+        turnTo(angleTo(grip.start.center, world), event.altKey);
+      } else {
+        const next = resizeBox({
+          start: grip.start,
+          handle: grip.handle,
+          pointerDelta: {x: world.x - grip.from.x, y: world.y - grip.from.y},
+          minWidth: MIN_BOX,
+          minHeight: MIN_BOX,
+        });
+        sizeTo(next);
+      }
+      return;
+    }
     const drag = dragRef.current;
     if (drag) {
       drag.moved = true;
@@ -1308,6 +1462,21 @@ export const MapStage = ({
   };
 
   /** One keyboard step, in tiles, per arrow. */
+  /**
+   * What just happened, for a screen reader.
+   *
+   * A CANVAS HAS NO ACCESSIBILITY TREE. Everything on this stage is painted
+   * pixels: a placement is not an element, a handle is not a button, and a
+   * resize changes nothing a reader can observe. So the editor says it out
+   * loud instead — which is the only way the keyboard half of this feature is
+   * usable by the people it is FOR (specs/BOXES_PLAN.md).
+   *
+   * Polite rather than assertive: a stream of sizes while somebody holds an
+   * arrow down should not interrupt them mid-word.
+   */
+  const [announcement, setAnnouncement] = useState('');
+  const say = (what: string) => setAnnouncement(what);
+
   const ARROW_STEPS: Record<string, {dx: number; dy: number}> = {
     ArrowRight: {dx: 1, dy: 0},
     ArrowLeft: {dx: -1, dy: 0},
@@ -1350,6 +1519,130 @@ export const MapStage = ({
     seedDraft(next.actors.find(a => a.id === selectedActor.id) ?? null);
   };
 
+  /**
+   * Resize the selection, and say what it became.
+   *
+   * THE KEYBOARD'S RESIZE IS THE WHOLE RESIZE for anybody who cannot use the
+   * handles — a canvas has no accessibility tree, so a drawn handle is
+   * reachable by a pointer and by nothing else. So this is not a shortcut for
+   * the drag; it is the other half of the same feature, and the drag reads the
+   * same floor (specs/BOXES_PLAN.md).
+   */
+  const resizeSelection = (dw: number, dh: number) => {
+    const actor = selectedActor;
+    const box = actor ? boxOf(actor) : undefined;
+    if (!actor || !box) {
+      return;
+    }
+    const width = Math.max(MIN_BOX, Math.round(box.width + dw));
+    const height = Math.max(MIN_BOX, Math.round(box.height + dh));
+    commit({
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(one =>
+        one.id === actor.id
+          ? withProperty(
+              withProperty(one, BOX_OWNER, 'width', width),
+              BOX_OWNER,
+              'height',
+              height,
+            )
+          : one,
+      ),
+    });
+    say(`${actor.id} is ${width} by ${height}`);
+  };
+
+  /**
+   * Write a size and a middle onto the selection, in memory.
+   *
+   * IN MEMORY, not committed: a drag calls this on every move so the outline
+   * and the grips follow the pointer, and `endGesture` writes the map back
+   * once at the end. The middle comes too because resizing from a corner MOVES
+   * the thing — the far corner is what stays put.
+   */
+  const sizeTo = (next: {
+    center: {x: number; y: number};
+    width: number;
+    height: number;
+  }) => {
+    const actor = selectedActor;
+    if (!actor) {
+      return;
+    }
+    const width = Math.max(MIN_BOX, Math.round(next.width));
+    const height = Math.max(MIN_BOX, Math.round(next.height));
+    mapRef.current = {
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(one =>
+        one.id === actor.id
+          ? withProperty(
+              withProperty(
+                withProperty(one, BOX_OWNER, 'width', width),
+                BOX_OWNER,
+                'height',
+                height,
+              ),
+              'positional',
+              'position',
+              storedPosition(actor.id, next.center),
+            )
+          : one,
+      ),
+    };
+    setMap(mapRef.current);
+  };
+
+  /** …and a rotation, on the same terms. Alt turns freely, else by the step. */
+  const turnTo = (degrees: number, free: boolean) => {
+    const actor = selectedActor;
+    if (!actor) {
+      return;
+    }
+    const turned = normalizeRotation(
+      free ? degrees : Math.round(degrees / TURN_STEP) * TURN_STEP,
+    );
+    mapRef.current = {
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(one =>
+        one.id === actor.id
+          ? withProperty(one, 'positional', 'rotation', turned)
+          : one,
+      ),
+    };
+    setMap(mapRef.current);
+  };
+
+  /** What a finished drag says out loud — see `say`. */
+  const announceBox = (id: string): string => {
+    const actor = mapRef.current.actors.find(one => one.id === id);
+    const size = actor ? boxOf(actor) : undefined;
+    const turned = actor
+      ? (asNum(propValue(actor, 'positional', 'rotation')) ?? 0)
+      : 0;
+    return size
+      ? `${id} is ${size.width} by ${size.height}, turned to ${turned} degrees`
+      : '';
+  };
+
+  /** Turn the selection, and say what it became. */
+  const turnSelection = (degrees: number) => {
+    const actor = selectedActor;
+    if (!actor) {
+      return;
+    }
+    const was = asNum(propValue(actor, 'positional', 'rotation')) ?? 0;
+    const turned = normalizeRotation(was + degrees);
+    commit({
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(one =>
+        one.id === actor.id
+          ? withProperty(one, 'positional', 'rotation', turned)
+          : one,
+      ),
+    });
+    say(`${actor.id} turned to ${turned} degrees`);
+  };
+
   const handleKeyDown = (event: ReactKeyboardEvent) => {
     // Escape disarms a reference pick, which is what Escape means everywhere:
     // the next click goes back to selecting, and nothing was changed.
@@ -1367,6 +1660,22 @@ export const MapStage = ({
     if (step && event.shiftKey && selectedId && !isReadOnly) {
       event.preventDefault();
       nudgeSelection(step.dx, step.dy, event.altKey);
+      return;
+    }
+    // …and Alt+arrow RESIZES it, which is the same arrows with the modifier
+    // Shift already took. Only for a kind that has a box; for anything else
+    // the arrows go on cycling the selection.
+    if (step && event.altKey && selectedId && !isReadOnly) {
+      event.preventDefault();
+      resizeSelection(step.dx * RESIZE_STEP, step.dy * RESIZE_STEP);
+      return;
+    }
+    // …and the two brackets turn it. A quarter turn is six presses, which is
+    // what a fifteen-degree step is for: the angles somebody wants are mostly
+    // multiples of it, and the inspector has the exact number.
+    if ((event.key === '[' || event.key === ']') && selectedId && !isReadOnly) {
+      event.preventDefault();
+      turnSelection(event.key === ']' ? TURN_STEP : -TURN_STEP);
       return;
     }
     if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
@@ -1797,6 +2106,38 @@ export const MapStage = ({
         selectedKey,
         selectedId ?? undefined,
       );
+      // …and the eight grips, on a kind that has a box to grab. Drawn in
+      // SCREEN pixels so they stay the same size to grab at any zoom, and
+      // placed by the same `handlePoint` the press hit-tests with, so what is
+      // drawn and what is grabbable cannot drift apart (specs/BOXES_PLAN.md).
+      const grips = selectedBox && selectedId ? handlesOf(selectedBox) : [];
+      for (const {at} of grips) {
+        const size = HANDLE_SIZE / view.scale;
+        ctx.fillStyle = MAP_BG;
+        ctx.strokeStyle = SELECT;
+        ctx.lineWidth = 2 / view.scale;
+        ctx.beginPath();
+        ctx.rect(at.x - size / 2, at.y - size / 2, size, size);
+        ctx.fill();
+        ctx.stroke();
+      }
+      if (selectedBox && selectedId) {
+        // …and the turn grip, beyond the top edge, on a stalk so it reads as
+        // apart from the corners rather than as a ninth resize.
+        const top = handlePoint(selectedBox, 'top');
+        const grip = rotationPoint(selectedBox, TURN_REACH / view.scale);
+        ctx.strokeStyle = SELECT;
+        ctx.lineWidth = 2 / view.scale;
+        ctx.beginPath();
+        ctx.moveTo(top.x, top.y);
+        ctx.lineTo(grip.x, grip.y);
+        ctx.stroke();
+        ctx.fillStyle = MAP_BG;
+        ctx.beginPath();
+        ctx.arc(grip.x, grip.y, HANDLE_SIZE / view.scale / 2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      }
     }
     if (selected && hover) {
       drawSprite(
@@ -1860,7 +2201,29 @@ export const MapStage = ({
         onPointerLeave={handlePointerLeave}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
+        /*
+         * APPLICATION, though the rule below calls that a non-interactive role
+         * on an interactive element. It is the honest one and the same one the
+         * running game's element carries (`runtime/driver/PhaserBinding`): this
+         * stage takes the arrow keys, and a screen reader left in browse mode
+         * would eat every one of them before it arrived.
+         */
+        // eslint-disable-next-line jsx-a11y/no-interactive-element-to-noninteractive-role
+        role="application"
+        aria-label={
+          'Map. Arrow keys move between the actors on it. Shift and an arrow ' +
+          'moves the selected one, Alt and an arrow resizes it, and the ' +
+          'square brackets turn it. Delete removes it.'
+        }
       />
+      <div
+        className={styles.announcer}
+        aria-live="polite"
+        role="status"
+        data-testid="stage-announcer"
+      >
+        {announcement}
+      </div>
       <div className={styles.toolbar}>
         <span className={styles.zoom}>
           {view ? `${Math.round(view.scale * 100)}%` : '—'}

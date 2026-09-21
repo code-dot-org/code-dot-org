@@ -85,12 +85,64 @@ rotation normalised 0–359, and minimum sizes. That module is pure and
 framework-free; the React Flow components around it are not portable and
 should not be copied.
 
+## The handles — BUILT
+
+Eight grips round the selection and a ninth on a stalk above it, drawn in
+SCREEN pixels so they stay the same size to grab at any zoom, and placed by
+the same `handlePoint` the press hit-tests with — one answer for where a grip
+is, rather than two that drift. A grip wins over whatever is under it, since
+they sit on the selection's edge and usually overlap the actor or its
+neighbour.
+
+The maths is `mapEditor/rotatedResize`, ported from Sketch Lab and adapted to
+this lab's one divergence: a placement is stored by its MIDDLE, not its top
+left, so it takes a centre and answers a centre. Everything else is theirs —
+the handle names, the rule that the point opposite the dragged handle stays
+put, clamping in local space BEFORE the new middle is worked out (clamping
+after lets the box slide away from the edge being held), and working from the
+TOTAL pointer movement so a slow drag and a fast one land in the same place.
+
+A drag writes the map in memory on every move so the outline follows the
+pointer, and commits ONCE at the end — writing the `.map` recompiles the game.
+
+## …and the keyboard, which is the same feature
+
+**A CANVAS HAS NO ACCESSIBILITY TREE.** Everything on this stage is painted
+pixels: a placement is not an element, a grip is not a button, and a resize
+changes nothing a reader can observe. So the keyboard path is not a shortcut
+for the handles — for anybody who cannot use a pointer it is the whole
+feature, and it was built alongside them rather than after.
+
+It extends the vocabulary the stage already had (arrows cycle the selection,
+Shift and an arrow nudges it, Alt makes a nudge fine):
+
+- **Alt and an arrow resizes**, by eight pixels a press. Only on a kind that
+  has a box; on anything else the arrows go on cycling, rather than inventing
+  a width for a Coin.
+- **`[` and `]` turn**, by fifteen degrees — most of the angles anybody wants
+  are multiples of it, and the inspector has the exact number for the rest.
+- **Everything says what it did**, into a polite live region. Polite rather
+  than assertive: a stream of sizes while an arrow is held down should not
+  interrupt somebody mid-word. The region is clipped to a pixel rather than
+  `display: none`, which is the usual way this is got wrong — both `none` and
+  `visibility: hidden` take it out of the accessibility tree and it announces
+  nothing at all.
+- **The canvas carries `role="application"` and a label naming the keys.** The
+  role is what the running game's element already uses and for the same
+  reason: this takes the arrow keys, and a reader left in browse mode would
+  eat every one of them. The a11y lint calls that a non-interactive role on an
+  interactive element; the disable says why.
+
 ## Not done
 
-- **The handles themselves.** This is the seam they need, not the UI.
-- **A minimum size.** Nothing stops a box being set to zero or negative.
-- **Rotation is untouched.** It already exists and already works; it has never
-  had a handle.
+- **A minimum size floor only.** `MIN_BOX` is eight pixels, enough to grab
+  again. Nothing stops the inspector's number fields going lower.
+- **No snapping while resizing.** A drag moves in whole pixels; the nudge
+  snaps to the tile and a resize does not.
+- **No multi-selection**, so nothing to resize together.
+- **The keyboard cannot reach a single grip.** It resizes from the box's own
+  axes rather than by choosing a corner, which is simpler to operate and
+  cannot express "grow from the top left". The inspector is the exact route.
 - **The Progress Bar still has no box**, and draws at constants. It is the one
   interface actor whose size is not the project's to set, which is a gap this
   did not close.

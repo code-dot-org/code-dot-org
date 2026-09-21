@@ -31,6 +31,7 @@ import type {ActorSchema} from '../../runtime/messages';
 import type {MapDoc, Vec} from '../mapModel';
 import {extentOf} from '../mapModel';
 import {MapStage} from '../MapStage';
+import {handlePoint, rotationPoint} from '../rotatedResize';
 import {fitView, worldToScreen} from '../stageGeometry';
 
 const PANE = {w: 800, h: 600};
@@ -1243,5 +1244,249 @@ describe('the map’s layers', () => {
       );
     expect(sprites).toHaveLength(2);
     expect(sprites.every(({index}) => index > backdrop)).toBe(true);
+  });
+});
+
+// Resizing and turning, from the keyboard.
+//
+// THE KEYBOARD IS NOT A SHORTCUT FOR THE HANDLES, it is the other half of the
+// same feature: the stage is a canvas, a canvas has no accessibility tree, and
+// a drawn handle is reachable by a pointer and by nothing else. So these are
+// the tests that say the feature is usable at all by somebody who cannot use
+// one (specs/BOXES_PLAN.md).
+describe('resizing and turning with the keyboard', () => {
+  /** A kind with a box, as the sandbox would introspect one. */
+  const BOXED_SCHEMA = {
+    'actors/coin': [
+      {
+        name: 'Has a Box',
+        props: [
+          {
+            ownerId: 'hasABox',
+            propId: 'width',
+            name: 'width',
+            type: 'number',
+            default: 64,
+          },
+          {
+            ownerId: 'hasABox',
+            propId: 'height',
+            name: 'height',
+            type: 'number',
+            default: 32,
+          },
+        ],
+      },
+    ],
+  } as never;
+
+  const boxOf = (written: MapDoc, id: string) =>
+    written.actors.find(one => one.id === id)?.properties?.hasABox;
+
+  it('grows the selection with Alt and an arrow', () => {
+    const map = doc();
+    const {canvas, written} = mount(map, {schemas: BOXED_SCHEMA});
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'}); // select a
+
+    fireEvent.keyDown(canvas, {key: 'ArrowRight', altKey: true});
+    // Its kind's default, plus one step — a placement that has never been
+    // resized still reports the size it was built at.
+    expect(boxOf(written(), 'a')).toEqual({width: 72, height: 32});
+  });
+
+  it('shrinks the other way, and stops before it vanishes', () => {
+    const map = doc();
+    const {canvas, written} = mount(map, {schemas: BOXED_SCHEMA});
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+
+    for (let press = 0; press < 20; press += 1) {
+      fireEvent.keyDown(canvas, {key: 'ArrowLeft', altKey: true});
+    }
+    // Small enough to grab again is the only floor a box needs.
+    expect(boxOf(written(), 'a')?.width).toBe(8);
+  });
+
+  it('leaves a kind with no box alone', () => {
+    // Alt and an arrow on a Coin must not invent a width for it.
+    const map = doc();
+    const {canvas, onDocChange} = mount(map);
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+
+    fireEvent.keyDown(canvas, {key: 'ArrowRight', altKey: true});
+    expect(onDocChange).not.toHaveBeenCalled();
+  });
+
+  it('turns the selection with the brackets, wrapping round', () => {
+    const map = doc();
+    const {canvas, written} = mount(map, {schemas: BOXED_SCHEMA});
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+
+    fireEvent.keyDown(canvas, {key: ']'});
+    expect(
+      written().actors.find(one => one.id === 'a')?.properties?.positional
+        ?.rotation,
+    ).toBe(15);
+
+    fireEvent.keyDown(canvas, {key: '['});
+    fireEvent.keyDown(canvas, {key: '['});
+    expect(
+      written().actors.find(one => one.id === 'a')?.properties?.positional
+        ?.rotation,
+    ).toBe(345);
+  });
+
+  it('says what it did, because nothing on a canvas can be read', () => {
+    const map = doc();
+    const {canvas, getByTestId} = mount(map, {schemas: BOXED_SCHEMA});
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+
+    fireEvent.keyDown(canvas, {key: 'ArrowDown', altKey: true});
+    expect(getByTestId('stage-announcer')).toHaveTextContent('a is 64 by 40');
+
+    fireEvent.keyDown(canvas, {key: ']'});
+    expect(getByTestId('stage-announcer')).toHaveTextContent(
+      'a turned to 15 degrees',
+    );
+  });
+
+  it('tells a reader what the keys do', () => {
+    const {canvas} = mount(doc());
+    expect(canvas).toHaveAttribute('role', 'application');
+    expect(canvas.getAttribute('aria-label')).toMatch(
+      /Alt and an arrow resizes it/,
+    );
+  });
+});
+
+// …and the same two things with a pointer.
+//
+// The grips are painted on the canvas, so there is nothing to query: a test
+// presses at the point `handlePoint` says the grip is at, which is the same
+// answer the stage draws it at and hit-tests it with. One source for where a
+// grip IS, rather than two that can drift (specs/BOXES_PLAN.md).
+describe('resizing and turning with a pointer', () => {
+  const BOXED = {
+    'actors/coin': [
+      {
+        name: 'Has a Box',
+        props: [
+          {
+            ownerId: 'hasABox',
+            propId: 'width',
+            name: 'width',
+            type: 'number',
+            default: 64,
+          },
+          {
+            ownerId: 'hasABox',
+            propId: 'height',
+            name: 'height',
+            type: 'number',
+            default: 32,
+          },
+        ],
+      },
+    ],
+  } as never;
+
+  /** The selection's box, as the stage computes it: centred on the actor. */
+  const boxAt = (pos: Vec) => ({
+    center: pos,
+    width: 64,
+    height: 32,
+    rotation: 0,
+  });
+
+  const select = (canvas: Element, map: MapDoc, pos: Vec) => {
+    pointer(canvas, 'pointerdown', screenPoint(map, pos));
+    pointer(canvas, 'pointerup', screenPoint(map, pos));
+  };
+
+  it('grows from the corner that was grabbed', () => {
+    const map = doc();
+    const {canvas, written} = mount(map, {schemas: BOXED});
+    select(canvas, map, {x: 48, y: 48});
+
+    const grip = handlePoint(boxAt({x: 48, y: 48}), 'bottom-right');
+    pointer(canvas, 'pointerdown', screenPoint(map, grip));
+    pointer(
+      canvas,
+      'pointermove',
+      screenPoint(map, {
+        x: grip.x + 20,
+        y: grip.y + 10,
+      }),
+    );
+    pointer(
+      canvas,
+      'pointerup',
+      screenPoint(map, {
+        x: grip.x + 20,
+        y: grip.y + 10,
+      }),
+    );
+
+    const after = written().actors.find(one => one.id === 'a');
+    expect(after?.properties?.hasABox).toEqual({width: 84, height: 42});
+    // Growing from a corner MOVES the middle: the far corner is what stays.
+    expect(after?.properties?.positional?.position).toEqual({x: 58, y: 53});
+  });
+
+  it('writes the map once, at the end of the drag', () => {
+    // Every move writes in memory so the outline follows the pointer; writing
+    // the map back recompiles the game and must happen once.
+    const map = doc();
+    const {canvas, onDocChange} = mount(map, {schemas: BOXED});
+    select(canvas, map, {x: 48, y: 48});
+    onDocChange.mockClear();
+
+    const grip = handlePoint(boxAt({x: 48, y: 48}), 'right');
+    pointer(canvas, 'pointerdown', screenPoint(map, grip));
+    for (let step = 1; step <= 5; step += 1) {
+      pointer(
+        canvas,
+        'pointermove',
+        screenPoint(map, {
+          x: grip.x + step * 4,
+          y: grip.y,
+        }),
+      );
+    }
+    pointer(canvas, 'pointerup', screenPoint(map, {x: grip.x + 20, y: grip.y}));
+
+    expect(onDocChange).toHaveBeenCalledTimes(1);
+  });
+
+  it('turns to where the turn grip is dragged, in steps', () => {
+    const map = doc();
+    const {canvas, written} = mount(map, {schemas: BOXED});
+    select(canvas, map, {x: 48, y: 48});
+
+    const grip = rotationPoint(boxAt({x: 48, y: 48}), 22 / camera(map).scale);
+    pointer(canvas, 'pointerdown', screenPoint(map, grip));
+    // Straight out to the right of the middle is a quarter turn.
+    pointer(canvas, 'pointermove', screenPoint(map, {x: 148, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 148, y: 48}));
+
+    expect(
+      written().actors.find(one => one.id === 'a')?.properties?.positional
+        ?.rotation,
+    ).toBe(90);
+  });
+
+  it('leaves a kind with no box draggable as ever', () => {
+    // No schema, so no grips: a press where one would be still selects and
+    // drags the actor, which is what the stage did before any of this.
+    const map = doc();
+    const {canvas, written} = mount(map);
+    select(canvas, map, {x: 48, y: 48});
+
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
+    pointer(canvas, 'pointermove', screenPoint(map, {x: 112, y: 48}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 112, y: 48}));
+
+    const after = written().actors.find(one => one.id === 'a');
+    expect(after?.properties?.hasABox).toBeUndefined();
+    expect(after?.properties?.positional?.position).toEqual({x: 112, y: 48});
   });
 });
