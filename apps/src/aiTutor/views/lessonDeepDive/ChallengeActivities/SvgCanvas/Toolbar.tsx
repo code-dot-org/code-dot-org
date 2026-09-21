@@ -108,7 +108,12 @@ const Toolbar: FC<ToolbarProps> = ({
           }`}
           title={t.label}
         >
-          <span aria-hidden="true">{t.symbol}</span>
+          <span
+            aria-hidden="true"
+            className={t.id === 'paintbucket' ? styles.monoEmoji : undefined}
+          >
+            {t.symbol}
+          </span>
         </button>
       ))}
 

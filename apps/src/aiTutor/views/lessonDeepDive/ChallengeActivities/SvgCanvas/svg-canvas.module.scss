@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css2?family=Noto+Emoji&display=swap';
+
 // Fills whatever container the whiteboard challenge gives it.
 .svgCanvas {
   display: flex;
@@ -101,6 +103,13 @@
   background: #3a6ea8;
   color: #fff;
   border-color: #4a90e2;
+}
+
+// Forces the Noto Emoji monochrome font for emoji that would otherwise render
+// in full color and ignore the CSS color property.
+.monoEmoji {
+  font-family: 'Noto Emoji', sans-serif;
+  font-variant-emoji: text;
 }
 
 .colorSwatch {
