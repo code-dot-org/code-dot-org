@@ -152,6 +152,12 @@ export const axisOf = (which, vector) => ({
   inputs: {VEC: value(vector)},
 });
 
+/** `vector x ⟨…⟩ y ⟨…⟩` — two numbers made into one value. */
+export const vectorOf = (x, y) => ({
+  type: 'world_vector_of',
+  inputs: {X: value(x), Y: value(y)},
+});
+
 export const anyOf = list => ({
   type: 'world_any_actors',
   inputs: {LIST: value(list)},

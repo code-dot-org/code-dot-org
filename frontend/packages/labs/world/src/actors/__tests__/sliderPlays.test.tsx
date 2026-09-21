@@ -7,6 +7,11 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {type Actor, type Property} from '../../engine';
+import {Vector} from '../../engine/core/Vector';
+import {
+  IntrinsicSizeProperty,
+  RotationProperty,
+} from '../../engine/rules/spatial';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
@@ -168,4 +173,72 @@ describe('a Slider', () => {
     s.world.tick(1 / 60);
     expect(s.at()).toBe(0);
   }, 60000);
+});
+
+// A Slider stood on end, which is the ordinary reason to turn one: a volume
+// fader runs up and down, not left to right.
+//
+// Before, the pointer's distance was measured on the SCREEN's x axis, so a
+// vertical slider could only be dragged sideways — along an axis it no longer
+// had (`actors/stock/slider`, `alongX`).
+describe('a Slider that has been turned', () => {
+  /** The one in `project()`: 96 wide, 24 tall, middle at (100, 100). */
+  const WIDE = 96;
+  const MIDDLE = {x: 100, y: 100};
+
+  const upright = async (degrees: number) => {
+    const {world, modules} = await compileProject(projectFiles(project()));
+    const slider = [...world.actors].find(
+      actor => actor.type === 'actors/slider',
+    )!;
+    const fraction = modules['actors/progressBar']
+      .FractionProperty as Property<number>;
+    slider.set(RotationProperty, degrees);
+    // The hit test measures what was DRAWN, and a headless world has
+    // rasterized nothing — so the size a driver would have measured is said
+    // here (`rules/pointing`, `halfSize`).
+    slider.set(IntrinsicSizeProperty, new Vector(WIDE, 24));
+    world.tick(1 / 60);
+    return {
+      at: () => slider.get(fraction),
+      press: (x: number, y: number) => {
+        world.setPointer({x, y}, ['left']);
+        world.tick(1 / 60);
+        world.tick(1 / 60);
+      },
+    };
+  };
+
+  it('follows the pointer ALONG it when it is stood on end', async () => {
+    // Turned a quarter clockwise, the slider's own "along" runs down the
+    // screen: a third of the way past the middle is a third down.
+    const {at, press} = await upright(90);
+    press(MIDDLE.x, MIDDLE.y + WIDE / 4);
+    expect(at()).toBeCloseTo(0.75, 2);
+
+    press(MIDDLE.x, MIDDLE.y - WIDE / 4);
+    expect(at()).toBeCloseTo(0.25, 2);
+  });
+
+  it('does not answer a sideways press any more', async () => {
+    // Along the screen's x is ACROSS a vertical slider — twelve pixels of it
+    // and then nothing, so this misses the actor altogether.
+    const {at, press} = await upright(90);
+    press(MIDDLE.x + WIDE / 2, MIDDLE.y);
+    expect(at()).toBe(0.5);
+  });
+
+  it('runs the other way when it is upside down', async () => {
+    // Half a turn makes the cosine negative, so the far end is on the left —
+    // which is what the thing on screen looks like it should do.
+    const {at, press} = await upright(180);
+    press(MIDDLE.x - WIDE / 4, MIDDLE.y);
+    expect(at()).toBeCloseTo(0.75, 2);
+  });
+
+  it('is unchanged lying flat', async () => {
+    const {at, press} = await upright(0);
+    press(MIDDLE.x + WIDE / 4, MIDDLE.y);
+    expect(at()).toBeCloseTo(0.75, 2);
+  });
 });

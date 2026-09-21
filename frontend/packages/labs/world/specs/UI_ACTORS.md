@@ -1317,6 +1317,33 @@ resize does in the other direction (`mapEditor/rotatedResize`) — which is what
 made the bug findable: the editor grew rotation handles, somebody turned a
 button, and the clicks stopped landing.
 
+### …and so does what a gesture MEANS to it
+
+The hit box was half of it. A rotated actor was then pressed correctly and
+still behaved as though it were square on, because what a drag MEANS was
+measured on the screen's axes too. A Slider stood on end — which is the
+ordinary reason to turn one, a volume fader runs up and down — could only be
+dragged sideways, along an axis it no longer had.
+
+Two fixes, on one principle: **an event about an actor carries the actor's
+frame.**
+
+- `is dragged by ⟨movement⟩` now carries the movement in the subject's own
+  axes (`rules/gestures`). `the screen is dragged by` keeps the screen's, and
+  that is the line — it is about nobody, so there is no frame to be relative
+  to.
+- The Slider reads where the pointer is ALONG it rather than along x
+  (`actors/stock/slider`). Upside down falls out for free: a half turn makes
+  the cosine negative and the fraction runs the other way, which is what the
+  thing on screen looks like it should do.
+
+The general lesson is worth keeping: rotation is not just how a thing is
+DRAWN. Every question of the form "where is the pointer relative to this" has
+to be asked in that thing's frame, and there were three such questions —
+what was pressed, how far a drag moved, and where along a control the pointer
+is. All three were wrong in the same way and none of them was noticed until
+the map editor could turn something.
+
 ### What a phone-shaped kit does not yet answer
 
 The Interface Kit runs at a phone's shape, and nothing in the lab has met a

@@ -81,22 +81,63 @@ const arithmetic = (
 });
 const half = (of: object) => arithmetic('DIVIDE', of, num(2));
 
-/** `x of ⟨where the pointer is⟩`, in the world's own coordinates. */
-const pointerX = () => ({
+/** `⟨x|y⟩ of ⟨where the pointer is⟩`, in the world's own coordinates. */
+const pointerOn = (axis: 'x' | 'y') => ({
   block: {
     type: 'world_vector_component',
-    fields: {COMPONENT: 'x'},
+    fields: {COMPONENT: axis},
     inputs: {VEC: {block: {type: 'world_mouse_position'}}},
   },
 });
-/** `x of ⟨where this actor is⟩`, which is its MIDDLE. */
-const middleX = () => ({
+/** `⟨x|y⟩ of ⟨where this actor is⟩`, which is its MIDDLE. */
+const middleOn = (axis: 'x' | 'y') => ({
   block: {
     type: 'world_get_Space_PositionProperty',
-    fields: {COMPONENT: 'x'},
+    fields: {COMPONENT: axis},
     inputs: {ACTOR: me()},
   },
 });
+
+/** `sin ⟨…⟩` and `cos ⟨…⟩`, in degrees — which is what a rotation is. */
+const trig = (op: 'SIN' | 'COS', of: object) => ({
+  block: {type: 'math_trig', fields: {OP: op}, inputs: {NUM: of}},
+});
+const turned = () => ({
+  block: {
+    type: 'world_get_Space_RotationProperty',
+    inputs: {ACTOR: me()},
+  },
+});
+
+/**
+ * How far the pointer is along the slider's OWN length.
+ *
+ * A SLIDER THAT HAS BEEN TURNED IS STILL A SLIDER. Measuring the pointer's
+ * distance on the screen's x axis is right for one lying flat and wrong for
+ * every other: stand one on end to make a volume fader — which is the ordinary
+ * reason to turn one — and it could only be dragged sideways, along an axis it
+ * no longer has.
+ *
+ * So the offset from the middle is expressed in the slider's own axes before
+ * anything is measured, which is the same correction the pointer's hit test
+ * makes (`rules/pointing`). Upside down works for free: a half turn makes the
+ * cosine negative and the fraction runs the other way, which is what the thing
+ * on screen looks like it should do.
+ */
+const alongX = () =>
+  arithmetic(
+    'ADD',
+    arithmetic(
+      'MULTIPLY',
+      arithmetic('MINUS', pointerOn('x'), middleOn('x')),
+      trig('COS', turned()),
+    ),
+    arithmetic(
+      'MULTIPLY',
+      arithmetic('MINUS', pointerOn('y'), middleOn('y')),
+      trig('SIN', turned()),
+    ),
+  );
 
 /**
  * Where the pointer is along the slider, from 0 at the left edge to 1 at the
@@ -108,11 +149,7 @@ const fractionAtPointer = () => ({
     inputs: {
       VALUE: arithmetic(
         'DIVIDE',
-        arithmetic(
-          'MINUS',
-          pointerX(),
-          arithmetic('MINUS', middleX(), half(width())),
-        ),
+        arithmetic('ADD', alongX(), half(width())),
         width(),
       ),
       LOW: num(0),

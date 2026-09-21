@@ -2,7 +2,9 @@ import {
   absolute,
   allWithTrait,
   atLeast,
+  add,
   axisOf,
+  cosine,
   both,
   choice,
   defineRule,
@@ -14,6 +16,9 @@ import {
   hasTrait,
   lessThan,
   minus,
+  sine,
+  times,
+  vectorOf,
   moduleFor,
   moreThan,
   mousePosition,
@@ -27,6 +32,7 @@ import {
   when,
   yes,
 } from './dsl.mjs';
+import {rotation} from './builtins.mjs';
 import {under} from './pointing.mjs';
 
 // A parameter's TYPE carries the `enum:` prefix; a reference to the set, which
@@ -154,6 +160,31 @@ const tellPressed = body => [
     body: [when([[beingPressed.of(each.get()), body(each)]])],
   }),
 ];
+
+/**
+ * How far the finger moved, said in the ACTOR's own axes.
+ *
+ * THE EVENT IS ABOUT THAT ACTOR, so the movement it carries should be the
+ * actor's and not the screen's. A slider stood on end, a panel turned to sit
+ * along an edge, a scroll view at an angle: each reads `movement` to decide
+ * what a drag means to IT, and a screen-space vector makes every one of them
+ * work only while it happens to be square on.
+ *
+ * `the screen is dragged by` keeps the screen's, and that is the line: it is
+ * about nobody, so there is no frame to be relative TO.
+ *
+ * The same correction the pointer's hit test makes to decide what was pressed
+ * in the first place (`./pointing`), and for the same reason.
+ */
+const inFrameOf = subject => {
+  const turn = rotation.of(subject);
+  const dx = axisOf('x', moved.get());
+  const dy = axisOf('y', moved.get());
+  return vectorOf(
+    add(times(dx, cosine(turn)), times(dy, sine(turn))),
+    minus(times(dy, cosine(turn)), times(dx, sine(turn))),
+  );
+};
 
 /**
  * Which way a swipe went: the axis that moved further decides.
