@@ -156,6 +156,21 @@ actors are ordinary `.actor` files, so what is needed is the dialog, shaped like
 and what may it still take. Importing `Label` pulls `Writing` the way importing
 a rule pulls its dependencies.
 
+## How they LOOK is a separate question — PLANNED
+
+Everything above is about what a control is and does. What it looks like is
+`specs/STYLES_PLAN.md`: the kit paints with eighteen colour literals retyped
+thirty-nine times across thirteen files, square corners, a hard 2px outline on
+everything, no elevation and no pressed state. The plan is tokens and named
+styles in a theme file the world points at, and three small additions to the
+pen — a corner radius, a shadow and a text weight — without which a theme only
+changes the colour of a square.
+
+It also records why the obvious answer does not work: a `Modern Button` that
+acts like a `Button` is not one of `any ⟨Button⟩`, every placement names a
+kind, and a stock actor is COPIED into the project, so there is no library to
+re-theme.
+
 ## The base set, and what each one still waits on
 
 | actor        | what it is                                        | state                                       |

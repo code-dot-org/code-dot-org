@@ -323,6 +323,20 @@ along with `set fill`. Registering them at the top of `buildDomainPalette`, wher
 - `yarn setup:world` after anything in `src/engine` moves — the sandbox runs a
   prebuilt bundle, and it has caught this twice.
 
+## The vocabulary is missing three things a control wants — PLANNED
+
+A corner radius, a shadow and a text weight (`specs/STYLES_PLAN.md`). The pen
+carries a fill, a stroke and a stroke width and nothing else, so every
+interface control in the lab is a square box with a hard edge, which is most
+of why they look unfinished. All three belong on the PEN, carried in `Paint`
+and stamped onto the command like the rest, so the cache below keeps working
+unchanged.
+
+That plan also names the one way to get the cache wrong: a named style must
+resolve to concrete values before the command reaches the list. Carry the NAME
+instead and two themes hash to one key, and the second serves the first's
+picture.
+
 ## What this does not solve
 
 Layout — nothing here arranges anything relative to
