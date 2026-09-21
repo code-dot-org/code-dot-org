@@ -41,7 +41,12 @@
 
   // The image sits on the stage itself: no frame, and no checkerboard (that
   // is for the dialog, whose opaque panel would otherwise hide transparency).
+  // The pane sets the row's height, so on a short screen it gives way: the
+  // footer's Generate button must clear the guide pinned below it (about
+  // 120px of viewport), and the header, paddings and footer take the rest.
   .imagePane {
+    width: clamp(220px, calc(100vh - 290px), 380px);
+    height: clamp(220px, calc(100vh - 290px), 380px);
     border: none;
   }
 

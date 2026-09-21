@@ -514,24 +514,29 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             )}
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
-                  level can lock the choice for new images too. */}
-              <fieldset
-                className={moduleStyles.radioGroup}
-                disabled={generating || !!existing || !!lockedImageType}
-              >
-                <legend>Type</legend>
-                {IMAGE_TYPES.map(type => (
-                  <RadioButton
-                    key={type}
-                    name="generation-type"
-                    value={type}
-                    label={IMAGE_TYPE_LABELS[type]}
-                    size="s"
-                    checked={imageType === type}
-                    onChange={() => setImageType(type)}
-                  />
-                ))}
-              </fieldset>
+                  level can lock the choice for new images too. The student
+                  form drops the group altogether when the level locks it:
+                  a row of choices that cannot be made only pushes Generate
+                  down, under the floating guide on short screens. */}
+              {!(lockedImageType && !advanced) && (
+                <fieldset
+                  className={moduleStyles.radioGroup}
+                  disabled={generating || !!existing || !!lockedImageType}
+                >
+                  <legend>Type</legend>
+                  {IMAGE_TYPES.map(type => (
+                    <RadioButton
+                      key={type}
+                      name="generation-type"
+                      value={type}
+                      label={IMAGE_TYPE_LABELS[type]}
+                      size="s"
+                      checked={imageType === type}
+                      onChange={() => setImageType(type)}
+                    />
+                  ))}
+                </fieldset>
+              )}
               <fieldset
                 className={moduleStyles.radioGroup}
                 disabled={generating}
