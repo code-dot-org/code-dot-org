@@ -920,7 +920,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     frame: HTMLCanvasElement;
   } | null>(null);
   const thumbnailTimer = useRef<number>();
-  // The scene whose run the armed capture belongs to. A capture that never
+  // The scene whose run the pending capture belongs to. A capture that never
   // got a run resolves at the next run's first frame, which is some other
   // scene's picture.
   const capturingSceneRef = useRef<string | null>(null);

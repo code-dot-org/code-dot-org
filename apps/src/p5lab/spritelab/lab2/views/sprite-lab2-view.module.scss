@@ -150,7 +150,7 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 
   // The trigger is the group's first segment; the group's own radius shows
-  // through where the segment is transparent, so it carries none.
+  // through where the segment is transparent, so the segment has none.
   .sceneDropdown {
     height: $tab-segment-height;
   }
@@ -308,7 +308,7 @@ $tab-segment-height: $tab-item-height - 2px;
 // of its own, one divider on its right. The design-system trigger is an
 // MUI text button; its own hover/focus styling stays.
 .sceneDropdown {
-  // Beats the dropdown's own black/gray container rules.
+  // Higher specificity than the dropdown's own black/gray container rules.
   .tabGroup & > button.sceneTrigger,
   > button.sceneTrigger {
     height: 100%;
@@ -324,7 +324,7 @@ $tab-segment-height: $tab-item-height - 2px;
     font-size: 14px;
     font-weight: 400;
     text-transform: none;
-    // Labels, not copy: a drag across them should not select text.
+    // These are labels, not text to copy: a drag across them selects nothing.
     user-select: none;
 
     // Unusable off the scene tabs, but not dimmed: it reads as one of the
@@ -708,8 +708,8 @@ $tab-segment-height: $tab-item-height - 2px;
 }
 
 // Restart buttons in the play area's top-right corner, clear of the game
-// wherever the canvas lands. The overlay lets clicks through; these take
-// them back.
+// wherever the canvas lands. The overlay ignores pointer events; these
+// buttons accept them.
 .playControls {
   position: absolute;
   top: 8px;

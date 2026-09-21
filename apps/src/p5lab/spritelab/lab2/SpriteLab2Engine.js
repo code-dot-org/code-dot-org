@@ -136,7 +136,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
     setRetainBlobsOnLoad(false);
-    // captureFirstFrame() callers, settled with the canvas after the first
+    // captureFirstFrame() callers, resolved with the canvas after the first
     // frame the next run draws (see onP5Setup and the draw loop).
     this.frameCaptureWaiters_ = [];
     this.frameCaptureArmed_ = false;

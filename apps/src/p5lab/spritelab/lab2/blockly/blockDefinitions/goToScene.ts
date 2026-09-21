@@ -83,7 +83,8 @@ export class SceneDropdown extends BlocklyCore.FieldDropdown {
       thumb.setAttribute('y', String((this.size_.height - FACE_THUMB_PX) / 2));
     }
     // The text and the arrow (everything but the border and the picture)
-    // make room for the picture. Set, not accumulated: render_ runs often.
+    // make room for the picture. Set fresh each time, not added to: render_
+    // runs often.
     Array.from(group.children).forEach(child => {
       if (child !== this.borderRect_ && child !== thumb) {
         child.setAttribute('transform', `translate(${dx}, 0)`);
