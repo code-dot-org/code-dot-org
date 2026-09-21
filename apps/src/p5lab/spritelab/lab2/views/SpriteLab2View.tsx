@@ -18,6 +18,7 @@ import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {GUIDE_RIGHT_OFFSET_PX} from '@cdo/apps/lab2/views/components/guide/Guide';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
@@ -116,7 +117,7 @@ import {isPointerClick} from './blurAfterPointerClick';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
-import GenerateSpriteLab from './GenerateSpriteLab';
+import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -1754,6 +1755,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           <Playspace
             boxRef={playspaceRef}
             mode={playspaceMode}
+            clearRight={
+              levelProperties.levelMode
+                ? PLAY_GUIDE_WIDTH_PX + GUIDE_RIGHT_OFFSET_PX
+                : 0
+            }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
             loading={externalLoading}
@@ -1762,10 +1768,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           />
 
           {/* Floating guide, when the level asks for it; it follows the
-          student across every tab. */}
+          student across every tab, narrowing on Play to leave the game its
+          room. */}
           {!!levelProperties.levelMode && (
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}
+              width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
               instructions={guide.text}
               showContinue={guide.showContinue}
               levelProperties={levelProperties}

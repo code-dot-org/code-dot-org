@@ -4,10 +4,16 @@ import React from 'react';
 
 import styles from './Guide.module.scss';
 
+/** The guide's distance from its container's right edge (.guide in
+    Guide.module.scss), for siblings that lay out beside it. */
+export const GUIDE_RIGHT_OFFSET_PX = 32;
+
 interface GuideProps {
   id?: string;
   children: React.ReactNode;
-  width?: 'normal' | 'narrow' | 'very-narrow';
+  /** A named share of the container, or a fixed width in px. A change
+      animates (the panel transitions its width). */
+  width?: 'normal' | 'narrow' | 'very-narrow' | number;
   position?: 'normal' | 'bottom';
   modal?: 'full' | 'gap';
   cornerIcon?: 'minimize' | 'maximize';
@@ -38,9 +44,13 @@ const Guide: React.FunctionComponent<GuideProps> = ({
     >
       <div
         id={id}
+        // Collapsed shrink-wraps its controls; a fixed width yields to that.
+        style={typeof width === 'number' && !collapsed ? {width} : undefined}
         className={classNames(
           styles.guide,
-          width === 'very-narrow'
+          typeof width === 'number'
+            ? undefined
+            : width === 'very-narrow'
             ? styles.guideVeryNarrowWidth
             : width === 'narrow'
             ? styles.guideNarrowWidth

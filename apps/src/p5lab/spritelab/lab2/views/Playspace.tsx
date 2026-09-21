@@ -49,6 +49,9 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
+  // Width along the right edge the play view keeps clear of (the floating
+  // guide's footprint), in px. The box centers in what is left.
+  clearRight?: number;
 }
 
 /**
@@ -64,6 +67,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
+  clearRight = 0,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -221,11 +225,14 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   let transform: string;
   if (mode === 'play') {
+    // Centered in the width beside the guide; when even that is too narrow
+    // the box shrinks rather than sliding under the guide.
+    const freeWidth = size.w - clearRight;
     const scale = Math.max(
       0.1,
-      (Math.min(size.w, size.h) - 2 * MARGIN) / CANVAS
+      (Math.min(freeWidth, size.h) - 2 * MARGIN) / CANVAS
     );
-    const x = (size.w - CANVAS * scale) / 2;
+    const x = (freeWidth - CANVAS * scale) / 2;
     const y = (size.h - CANVAS * scale) / 2;
     transform = `translate(${x}px, ${y}px) scale(${scale})`;
   } else {

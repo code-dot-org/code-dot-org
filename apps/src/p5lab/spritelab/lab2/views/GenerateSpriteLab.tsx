@@ -10,9 +10,15 @@ import {SpriteLab2LevelProperties} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
+/** The guide's width on the Play tab, where it shares the room with the
+    game: the play view keeps this much plus the guide's offset clear. */
+export const PLAY_GUIDE_WIDTH_PX = 400;
+
 interface GenerateSpriteLabProps {
   levelMode?: LevelMode;
   instructions?: string;
+  /** Fixed width in px; the default is the Guide's normal share. */
+  width?: number;
   /** Offer the Continue button: the guide reached a step that marks the
       level's task complete. */
   showContinue?: boolean;
@@ -27,6 +33,7 @@ interface GenerateSpriteLabProps {
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   levelMode,
   instructions,
+  width,
   showContinue,
   levelProperties,
 }) => {
@@ -65,7 +72,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   return (
     <Guide
       position="bottom"
-      width="normal"
+      width={width ?? 'normal'}
       collapsed={collapsed}
       cornerIcon={
         !collapsible ? undefined : collapsed ? 'maximize' : 'minimize'
