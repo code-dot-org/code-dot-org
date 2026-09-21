@@ -1,22 +1,16 @@
 import {useDropdownContext} from '@code-dot-org/component-library/common/contexts';
-import Dialog from '@code-dot-org/component-library/dialog';
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import RadioButton from '@code-dot-org/component-library/radioButton';
-import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {useState} from 'react';
 
 import {SceneMetadata} from '../redux/spriteLab2Redux';
 import {SceneType} from '../types';
 
-import moduleStyles from './sprite-lab2-view.module.scss';
+import NewSceneDialog from './NewSceneDialog';
 
-// What each scene type is called for a student choosing one.
-const SCENE_TYPE_LABELS: {value: SceneType; label: string}[] = [
-  {value: 'story', label: 'A story'},
-  {value: 'platform', label: 'A platformer'},
-];
+import moduleStyles from './sprite-lab2-view.module.scss';
 
 interface SceneSelectorProps {
   scenes: SceneMetadata[];
@@ -28,10 +22,13 @@ interface SceneSelectorProps {
   onCreateScene: (name: string, type: SceneType) => void;
   /** Opens the Scenes gallery; the menu offers it only when given. */
   onManageScenes?: () => void;
+  /** The chip goes straight to the gallery instead of opening the menu
+      (the ?scenes=gallery variant, for comparing the two). */
+  chipOpensGallery?: boolean;
 }
 
 /** A scene's picture at thumbnail size, or a blank tile until it has one. */
-const SceneThumb: React.FunctionComponent<{
+export const SceneThumb: React.FunctionComponent<{
   scene: SceneMetadata | undefined;
   small?: boolean;
 }> = ({scene, small}) => (
@@ -140,105 +137,67 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   onSelectScene,
   onCreateScene,
   onManageScenes,
+  chipOpensGallery = false,
 }) => {
   const [naming, setNaming] = useState(false);
-  const [newName, setNewName] = useState('');
-  // A scene's type decides the blocks it offers and how big its sprites are,
-  // so it is chosen once, here, rather than changed later.
-  const [newType, setNewType] = useState<SceneType>('story');
-
-  const closeDialog = useCallback(() => {
-    setNaming(false);
-    setNewName('');
-    setNewType('story');
-  }, []);
-
-  const handleCreate = useCallback(() => {
-    const name = newName.trim();
-    if (name) {
-      onCreateScene(name, newType);
-    }
-    closeDialog();
-  }, [newName, newType, onCreateScene, closeDialog]);
-
   const active = scenes.find(s => s.id === activeSceneId);
+  const chipContent = (
+    <>
+      <SceneThumb scene={active} small />
+      <span className={moduleStyles.sceneTriggerName}>
+        {active?.name ?? ''}
+      </span>
+      <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
+    </>
+  );
 
   return (
     <>
-      <CustomDropdown
-        name="scene"
-        className={moduleStyles.sceneDropdown}
-        size="s"
-        labelText="Scene"
-        aria-label={`Scene: ${active?.name ?? ''}`}
-        disabled={disabled}
-        useMuiButtonAsTrigger
-        triggerButtonProps={{
-          variant: 'text',
-          color: 'secondary',
-          size: 'extraSmall',
-          className: moduleStyles.sceneTrigger,
-          children: (
-            <>
-              <SceneThumb scene={active} small />
-              <span className={moduleStyles.sceneTriggerName}>
-                {active?.name ?? ''}
-              </span>
-              <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
-            </>
-          ),
-        }}
-      >
-        <SceneMenu
-          scenes={scenes}
-          activeSceneId={activeSceneId}
-          allowCreate={allowCreate}
-          onSelectScene={onSelectScene}
-          onNewScene={() => setNaming(true)}
-          onManageScenes={onManageScenes}
-        />
-      </CustomDropdown>
+      {chipOpensGallery && onManageScenes ? (
+        <div className={moduleStyles.sceneDropdown}>
+          <MuiButton
+            variant="text"
+            color="secondary"
+            size="extraSmall"
+            className={moduleStyles.sceneTrigger}
+            aria-label={`Scene: ${active?.name ?? ''}. Manage scenes`}
+            disabled={disabled}
+            onClick={onManageScenes}
+          >
+            {chipContent}
+          </MuiButton>
+        </div>
+      ) : (
+        <CustomDropdown
+          name="scene"
+          className={moduleStyles.sceneDropdown}
+          size="s"
+          labelText="Scene"
+          aria-label={`Scene: ${active?.name ?? ''}`}
+          disabled={disabled}
+          useMuiButtonAsTrigger
+          triggerButtonProps={{
+            variant: 'text',
+            color: 'secondary',
+            size: 'extraSmall',
+            className: moduleStyles.sceneTrigger,
+            children: chipContent,
+          }}
+        >
+          <SceneMenu
+            scenes={scenes}
+            activeSceneId={activeSceneId}
+            allowCreate={allowCreate}
+            onSelectScene={onSelectScene}
+            onNewScene={() => setNaming(true)}
+            onManageScenes={onManageScenes}
+          />
+        </CustomDropdown>
+      )}
       {naming && (
-        <Dialog
-          title="New scene"
-          onClose={closeDialog}
-          customContent={
-            <div className={moduleStyles.newSceneFields}>
-              <TextField
-                name="sceneName"
-                label="Scene name"
-                value={newName}
-                onChange={e => setNewName(e.target.value)}
-              />
-              <fieldset className={moduleStyles.sceneTypeGroup}>
-                <legend>What is this scene for?</legend>
-                {SCENE_TYPE_LABELS.map(({value, label}) => (
-                  <RadioButton
-                    key={value}
-                    name="sceneType"
-                    value={value}
-                    label={label}
-                    size="s"
-                    checked={newType === value}
-                    onChange={() => setNewType(value)}
-                  />
-                ))}
-              </fieldset>
-            </div>
-          }
-          primaryButtonProps={{
-            children: 'Create',
-            size: 'small',
-            disabled: !newName.trim(),
-            onClick: handleCreate,
-          }}
-          secondaryButtonProps={{
-            children: 'Cancel',
-            size: 'small',
-            color: 'tertiary',
-            variant: 'outlined',
-            onClick: closeDialog,
-          }}
+        <NewSceneDialog
+          onCreate={onCreateScene}
+          onClose={() => setNaming(false)}
         />
       )}
     </>

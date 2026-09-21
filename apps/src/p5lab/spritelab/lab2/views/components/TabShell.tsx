@@ -48,7 +48,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   children,
   onClickStartOver,
 }) => {
-  const sceneTabs = useMemo(
+  const sceneTabs = useMemo<readonly Tab[]>(
     () =>
       ALL_TABS.filter(
         tab => SCENE_TABS.includes(tab) && visibleTabs.includes(tab)
@@ -106,6 +106,9 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                   key={tab}
                   className={classNames(
                     moduleStyles.tabGroup,
+                    // The gallery is the group's own view: no tab lights up,
+                    // so the picker does.
+                    activeTab === 'Scenes' && moduleStyles.tabGroupActive,
                     // Only offer the pointer when a click here would move
                     // the tab; on a scene tab it would do nothing.
                     !sceneTabs.includes(activeTab) &&

@@ -129,6 +129,7 @@ import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
+import ScenesGallery from './ScenesGallery';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useSceneMusic from './useSceneMusic';
 import WorldTab from './WorldTab';
@@ -295,10 +296,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // level, say) needs the selection steered onto a tab that exists. A mode
   // with no tabs at all renders no shell, so leave the selection alone.
   useEffect(() => {
-    if (tabs.length && !tabs.includes(activeTab)) {
+    if (tabs.length && activeTab !== 'Scenes' && !tabs.includes(activeTab)) {
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
+  // ?scenes=gallery: the scene chip opens the gallery directly instead of a
+  // menu that ends in it. Two candidates under trial.
+  const chipOpensGallery = useMemo(
+    () => queryParams('scenes') === 'gallery',
+    []
+  );
   // The Images tab mounts once (idle pre-mount after seeding, or first
   // visit) and stays mounted clipped, so no visit pays the mount cost.
   const [imagesMounted, setImagesMounted] = useState(false);
@@ -1618,6 +1625,70 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources]
   );
 
+  const handleRenameScene = useCallback(
+    (sceneId: string, name: string) => {
+      updateSources(prev => ({
+        ...prev,
+        scenes: getScenes(prev).map(s => (s.id === sceneId ? {...s, name} : s)),
+      }));
+    },
+    [updateSources]
+  );
+
+  // Never the last scene (the gallery offers no delete for it). A go-to-scene
+  // block naming the deleted scene falls back to its dropdown's first option.
+  const handleDeleteScene = useCallback(
+    (sceneId: string) => {
+      const doomed = scenesRef.current.find(s => s.id === sceneId);
+      const remaining = scenesRef.current.filter(s => s.id !== sceneId);
+      if (!doomed || remaining.length === 0) {
+        return;
+      }
+      if (activeSceneId === sceneId) {
+        setActiveSceneId(remaining[0].id);
+      }
+      updateSources(prev => ({
+        ...prev,
+        scenes: getScenes(prev).filter(s => s.id !== sceneId),
+      }));
+      const thumbnail = doomed.thumbnail?.url;
+      if (
+        thumbnail &&
+        channelId &&
+        thumbnail.startsWith(`/v3/assets/${channelId}/`)
+      ) {
+        HttpClient.delete(thumbnail, true).catch(() => undefined);
+      }
+    },
+    [updateSources, activeSceneId, channelId]
+  );
+
+  // Play and other projects' jumps start at index 0.
+  const handleMakeStartScene = useCallback(
+    (sceneId: string) => {
+      updateSources(prev => {
+        const all = getScenes(prev);
+        const chosen = all.find(s => s.id === sceneId);
+        return chosen
+          ? {...prev, scenes: [chosen, ...all.filter(s => s !== chosen)]}
+          : prev;
+      });
+    },
+    [updateSources]
+  );
+
+  const handleManageScenes = useCallback(() => {
+    dispatch(setActiveTab('Scenes'));
+  }, [dispatch]);
+
+  const handleOpenScene = useCallback(
+    (sceneId: string) => {
+      handleSelectScene(sceneId);
+      dispatch(setActiveTab('Code'));
+    },
+    [handleSelectScene, dispatch]
+  );
+
   const handleTabChange = useCallback(
     (tab: Tab) => {
       // Entering Play from the tab button starts from the beginning.
@@ -1691,6 +1762,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
   const onSceneTab = activeTab === 'Code' || activeTab === 'World';
+  // Only freeplay adds, renames, reorders or deletes scenes; a level with no
+  // mode is unconstrained.
+  const scenesEditable =
+    !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play' ? 'play' : onSceneTab ? 'preview' : 'hidden';
 
@@ -1800,14 +1875,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <SceneSelector
                 scenes={sceneMetadata}
                 activeSceneId={activeSceneId}
-                disabled={!onSceneTab}
-                // Only freeplay adds scenes; a level with no mode is unconstrained.
-                allowCreate={
-                  !levelProperties.levelMode ||
-                  isFreeplayMode(levelProperties.levelMode)
-                }
+                disabled={!onSceneTab && activeTab !== 'Scenes'}
+                allowCreate={scenesEditable}
                 onSelectScene={handleSelectScene}
                 onCreateScene={handleCreateScene}
+                onManageScenes={handleManageScenes}
+                chipOpensGallery={chipOpensGallery}
               />
             ) : undefined
           }
@@ -1841,6 +1914,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             >
               <div className={moduleStyles.imagesTab}>
                 <GenerateImagePane {...imagePaneProps} />
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'Scenes' && (
+            <div className={moduleStyles.codeTabWrapper}>
+              <div className={moduleStyles.imagesTab}>
+                <ScenesGallery
+                  scenes={sceneMetadata}
+                  activeSceneId={activeSceneId}
+                  editable={scenesEditable}
+                  onOpenScene={handleOpenScene}
+                  onCreateScene={handleCreateScene}
+                  onRenameScene={handleRenameScene}
+                  onDeleteScene={handleDeleteScene}
+                  onMakeStartScene={handleMakeStartScene}
+                />
               </div>
             </div>
           )}
