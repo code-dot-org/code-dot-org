@@ -9,6 +9,7 @@ import {SceneMetadata} from '../redux/spriteLab2Redux';
 import {SceneType} from '../types';
 
 import NewSceneDialog from './NewSceneDialog';
+import ScenePicture from './ScenePicture';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -29,27 +30,6 @@ interface SceneSelectorProps {
       (the ?scenes=gallery variant, for comparing the two). */
   chipOpensGallery?: boolean;
 }
-
-/**
- * A scene's picture, or a blank tile until it has one. A picture that fails
- * to load (an asset since deleted) shows the blank tile too; `className`
- * sizes it.
- */
-export const ScenePicture: React.FunctionComponent<{
-  src: string | undefined;
-  className: string;
-}> = ({src, className}) => {
-  const [failed, setFailed] = useState<string | null>(null);
-  return (
-    <span className={className}>
-      {src && failed !== src ? (
-        <img src={src} alt="" onError={() => setFailed(src)} />
-      ) : (
-        <FontAwesomeV6Icon iconName="image" iconStyle="regular" />
-      )}
-    </span>
-  );
-};
 
 /** A scene's picture at menu or chip size. */
 const SceneThumb: React.FunctionComponent<{

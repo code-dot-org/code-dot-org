@@ -1,7 +1,9 @@
 // A picture of each scene for the scene picker: the first frame of the
 // scene's most recent run, kept as a project asset. Captured cheaply on every
 // run, but persisted only when the scene has changed in a way that could
-// change the picture, and only once the student has paused editing.
+// change the picture, and only once the student has paused editing. Also
+// the scene list those pictures decorate, and the removal of a superseded
+// picture's asset.
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {hashString} from '@cdo/apps/utils';

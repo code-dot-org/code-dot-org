@@ -51,6 +51,9 @@ $tab-item-height: 34px;
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  // The tabs are distinct destinations, not a continuous strip: separate them
+  // enough to be told apart at a glance.
+  gap: 10px;
   // Tab labels and controls, not text to copy. code-studio.css sets
   // `p, pre, span` back to selectable, so the labels are named too.
   user-select: none;
@@ -59,9 +62,6 @@ $tab-item-height: 34px;
   p {
     user-select: none;
   }
-  // The tabs are distinct destinations, not a continuous strip: separate them
-  // enough to be told apart at a glance.
-  gap: 10px;
 }
 
 .tab {
@@ -339,8 +339,6 @@ $tab-segment-height: $tab-item-height - 2px;
     font-size: 14px;
     font-weight: 400;
     text-transform: none;
-    // These are labels, not text to copy: a drag across them selects nothing.
-    user-select: none;
 
     // Unusable off the scene tabs, but not dimmed: it reads as one of the
     // group's labels, and those stay bright when their tab isn't the active

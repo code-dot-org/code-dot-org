@@ -1,6 +1,7 @@
 import {
   sceneBackgroundImage,
   sceneFingerprint,
+  sceneMetadataFor,
   thumbnailFileName,
 } from '@cdo/apps/p5lab/spritelab/lab2/sceneThumbnails';
 import {
@@ -99,6 +100,41 @@ describe('sceneThumbnails', () => {
           } as unknown as Scene['source'],
         })
       ).toBeNull();
+    });
+  });
+
+  describe('sceneMetadataFor', () => {
+    const forest = animations([['forest', '/forest.png']]);
+
+    it('uses the stored picture when there is one', () => {
+      const [meta] = sceneMetadataFor(
+        [
+          {
+            id: 's',
+            name: 'S',
+            source: source('"forest"'),
+            thumbnail: {url: '/thumb.png', fingerprint: 'x'},
+          },
+        ],
+        forest
+      );
+      expect(meta).toEqual({id: 's', name: 'S', thumbnail: '/thumb.png'});
+    });
+
+    it('falls back to the background the scene names', () => {
+      const [meta] = sceneMetadataFor(
+        [{id: 's', name: 'S', source: source('"forest"')}],
+        forest
+      );
+      expect(meta.thumbnail).toBe('/forest.png');
+    });
+
+    it('has no picture for a scene naming an unknown image', () => {
+      const [meta] = sceneMetadataFor(
+        [{id: 's', name: 'S', source: source('"sky"')}],
+        forest
+      );
+      expect(meta.thumbnail).toBeUndefined();
     });
   });
 

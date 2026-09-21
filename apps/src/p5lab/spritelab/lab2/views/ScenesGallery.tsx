@@ -8,7 +8,7 @@ import {SceneMetadata} from '../redux/spriteLab2Redux';
 import {SceneType} from '../types';
 
 import NewSceneDialog, {SCENE_NAME_MAX_LENGTH} from './NewSceneDialog';
-import {ScenePicture} from './SceneSelector';
+import ScenePicture from './ScenePicture';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
