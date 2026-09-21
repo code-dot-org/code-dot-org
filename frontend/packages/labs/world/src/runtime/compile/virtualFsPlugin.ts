@@ -19,6 +19,7 @@ const EXT_ORDER = [
   '.map',
   '.anim',
   '.effect',
+  '.style',
   '.rule',
   '.actor',
   '.world',
@@ -70,7 +71,11 @@ function loaderFor(path: string): Loader {
   if (
     path.endsWith('.json') ||
     path.endsWith('.anim') ||
-    path.endsWith('.effect')
+    path.endsWith('.effect') ||
+    // …and `.style`, a theme, imported by a world's `use theme` block and
+    // read by the engine as data — the same deal an `.effect` gets, for the
+    // same reason: nothing about it is code (specs/STYLES_PLAN.md).
+    path.endsWith('.style')
   ) {
     // `.anim` (an animation file) and `.effect` (a shader graph) are raw JSON
     // on disk, imported like `.json` — an `.anim` by the world's `use

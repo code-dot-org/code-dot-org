@@ -129,7 +129,11 @@ export async function compileProject(
   for (const [path, contents] of Object.entries(files)) {
     if (fileKindOf(path) !== undefined) {
       code[modulePath(path)] = ref.current!.generate(contents, path);
-    } else if (/\.(map|anim|sheet|effect)$/.test(path)) {
+      // …and `.style`, for the same reason the four beside it are here: a
+      // theme is JSON a world imports as data (specs/STYLES_PLAN.md). Left
+      // out, `use theme` compiled to an import of nothing and every fixture
+      // that named a theme died reading `default` of undefined.
+    } else if (/\.(map|anim|sheet|effect|style)$/.test(path)) {
       modules[modulePath(path)] = {default: JSON.parse(contents)};
     }
   }
