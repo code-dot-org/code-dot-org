@@ -35,11 +35,11 @@ function renderCard(
     return (
       <QuizQuestionCard
         question={QUESTION}
-        isExpanded={isExpanded}
-        onExpandedChange={setIsExpanded}
         onUpdate={onUpdate}
         onRemove={onRemove}
         {...props}
+        isExpanded={isExpanded}
+        onExpandedChange={setIsExpanded}
       />
     );
   };
@@ -87,6 +87,7 @@ describe('QuizQuestionCard', () => {
       7,
       expect.objectContaining({questionName: 'Renamed question'})
     );
+    expect(screen.queryByRole('tab', {name: 'Question'})).toBeNull();
   });
 
   it('disables Save and Discard until something is edited', () => {
