@@ -28,7 +28,7 @@ const QUESTION: QuizBuilderQuestion = {
 function renderCard(
   props: Partial<React.ComponentProps<typeof QuizQuestionCard>> = {}
 ) {
-  const onUpdate = jest.fn().mockResolvedValue(true);
+  const onUpdate = jest.fn().mockResolvedValue(QUESTION.id);
   const onRemove = jest.fn().mockResolvedValue(true);
   const Wrapper = () => {
     const [isExpanded, setIsExpanded] = useState(props.isExpanded ?? false);
@@ -133,14 +133,11 @@ describe('QuizQuestionCard', () => {
     expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
   });
 
-  it('confirms before removing the question from the quiz', async () => {
+  it('removes the question from the quiz on click, with no confirmation step', async () => {
     const {onRemove} = renderCard({isExpanded: true});
 
-    fireEvent.click(screen.getByRole('button', {name: 'Remove from quiz'}));
-    expect(onRemove).not.toHaveBeenCalled();
-
     await act(async () => {
-      fireEvent.click(screen.getByRole('button', {name: 'Remove'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Remove from quiz'}));
     });
     expect(onRemove).toHaveBeenCalledWith(7);
   });

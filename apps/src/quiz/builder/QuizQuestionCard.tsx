@@ -1,5 +1,4 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button, IconButton, Tooltip, Typography} from '@mui/material';
@@ -23,7 +22,7 @@ interface QuizQuestionCardProps {
   onUpdate: (
     id: number,
     payload: QuizQuestionEditableFields
-  ) => Promise<boolean>;
+  ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
 }
 
@@ -51,7 +50,6 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
   const [isRemoving, setIsRemoving] = useState(false);
-  const [isConfirmingRemove, setIsConfirmingRemove] = useState(false);
   const isDirty = !isEqual(draft, toDraft(question));
 
   // A save can fork the question into a new id (see
@@ -63,9 +61,9 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
 
   const handleSave = async () => {
     setIsSaving(true);
-    const succeeded = await onUpdate(question.id, draft);
+    const updatedId = await onUpdate(question.id, draft);
     setIsSaving(false);
-    if (succeeded) {
+    if (updatedId !== undefined) {
       onExpandedChange(false);
     }
   };
@@ -74,11 +72,10 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
     setDraft(toDraft(question));
   };
 
-  const handleConfirmRemove = async () => {
+  const handleRemove = async () => {
     setIsRemoving(true);
     await onRemove(question.id);
     setIsRemoving(false);
-    setIsConfirmingRemove(false);
   };
 
   return (
@@ -167,7 +164,8 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
               size="extraSmall"
               type="button"
               disabled={isRemoving}
-              onClick={() => setIsConfirmingRemove(true)}
+              loading={isRemoving}
+              onClick={handleRemove}
             >
               Remove from quiz
             </Button>
@@ -199,26 +197,6 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
             </div>
           </div>
         </>
-      )}
-
-      {isConfirmingRemove && (
-        <Dialog
-          title="Remove from quiz"
-          description="This only removes the question from this quiz - it stays in the question bank and on any other quiz that uses it."
-          onClose={() => setIsConfirmingRemove(false)}
-          primaryButtonProps={{
-            children: 'Remove',
-            color: 'error',
-            loading: isRemoving,
-            onClick: handleConfirmRemove,
-          }}
-          secondaryButtonProps={{
-            children: 'Cancel',
-            color: 'tertiary',
-            variant: 'outlined',
-            onClick: () => setIsConfirmingRemove(false),
-          }}
-        />
       )}
     </div>
   );
