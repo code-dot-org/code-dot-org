@@ -43,6 +43,7 @@ import {
   rectangle,
   showAs,
   swatch,
+  useStyle,
   useTrait,
 } from './workspace';
 
@@ -292,12 +293,14 @@ export const sliderActor = actorFile(
         ),
         // The knob.
         fill(swatch(LOOK.ink)),
+        useStyle('knob'),
         circle(knobX(), half(height()), KNOB),
         // …and the ring, when the keyboard is on this one.
         either(focused(), [
           noFill(),
           outline(swatch(LOOK.focus), RING_WIDTH),
           corner(ringRadius(RADIUS_BAR)),
+          useStyle('focus ring'),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

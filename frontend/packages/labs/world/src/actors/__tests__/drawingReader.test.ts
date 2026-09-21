@@ -6,6 +6,7 @@ import {describe, expect, it} from 'vitest';
 
 import type {DrawCommand} from '../../engine/core/drawing';
 import {STOCK_RULES} from '../../rules/stock';
+import {STOCK_STYLES} from '../../styles/stock';
 import {
   ancestry,
   declarationsOf,
@@ -154,6 +155,57 @@ describe('readDrawing, over the shelf', () => {
     for (const id of ['textInput', 'textArea', 'list', 'scrollView']) {
       expect(readDrawing(SHELF, `actors/${id}`)?.complete, id).toBe(false);
     }
+  });
+
+  it('paints the stock kit out of whichever theme the world names', () => {
+    // END TO END, through the map editor's own path: the stock Button's own
+    // rows, the stock themes, the `use theme` row on a world, and the reader
+    // finding it. Nothing here is a fixture — it is the kit a learner gets.
+    const withTheme = (id: string) => ({
+      ...SHELF,
+      'styles/modern.style': STOCK_STYLES[0].contents,
+      'styles/classic.style': STOCK_STYLES[1].contents,
+      'worlds/my.world': JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_world',
+              fields: {NAME: 'My World'},
+              next: {
+                block: {
+                  type: 'world_use_theme',
+                  fields: {THEME: `styles/${id}`},
+                },
+              },
+            },
+          ],
+        },
+      }),
+    });
+
+    const face = (id: string) =>
+      rectangles(readDrawing(withTheme(id), 'actors/button')!.commands)[0];
+
+    // THE WHOLE CLAIM OF THE PLAN, in one assertion. The Button's drawing is
+    // byte-for-byte the same in both readings; what differs is the file the
+    // world points at (specs/STYLES_PLAN.md).
+    expect(face('modern')).toMatchObject({fill: '#3050a0', radius: 8});
+    expect(face('modern').shadow).toBeDefined();
+    expect(face('classic')).toMatchObject({fill: '#d4d0c8'});
+    expect(face('classic')).not.toHaveProperty('radius');
+    expect(face('classic').shadow).toBeUndefined();
+    // …and Classic's has the edge Modern's traded for a shadow, which is the
+    // pair that tokens alone could not have expressed.
+    expect(face('classic').stroke).toBe('#41403c');
+    expect(face('modern')).not.toHaveProperty('stroke');
+  });
+
+  it('draws the kit as it always did when no world names a theme', () => {
+    // Every project that existed before themes did. `use style` of a name no
+    // theme defines leaves the pen alone, so the literals above each row are
+    // the picture — which is why they are still in the files.
+    const face = rectangles(readDrawing(SHELF, 'actors/button')!.commands)[0];
+    expect(face).toMatchObject({fill: '#3050a0', radius: 8});
   });
 
   it('reads a corner and a shadow as the engine writes them', () => {

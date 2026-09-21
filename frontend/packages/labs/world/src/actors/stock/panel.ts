@@ -29,10 +29,10 @@ import {BORDER, LOOK, RADIUS} from './look';
 import {
   actorFile,
   actsLike,
+  corner,
   drawParagraph,
   fill,
   me,
-  corner,
   noOutline,
   outline,
   rectangle,
@@ -40,6 +40,7 @@ import {
   showAs,
   swatch,
   textOf,
+  useStyle,
   words,
 } from './workspace';
 
@@ -82,6 +83,7 @@ export const panelActor = actorFile(
         fill(swatch(LOOK.surface)),
         outline(swatch(LOOK.surfaceEdge), BORDER),
         corner(RADIUS),
+        useStyle('surface'),
         rectangle(0, 0, width(), height()),
         // The edge belongs to the face, not to the caption.
         noOutline(),

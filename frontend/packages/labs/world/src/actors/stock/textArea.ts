@@ -59,6 +59,7 @@ import {
   showAs,
   swatch,
   textOf,
+  useStyle,
   useTrait,
   words,
 } from './workspace';
@@ -370,6 +371,7 @@ export const textAreaActor = actorFile(
         fill(swatch(LOOK.field)),
         outline(swatch(LOOK.surfaceEdge), BORDER),
         corner(RADIUS_TIGHT),
+        useStyle('field'),
         rectangle(0, 0, width(), height()),
         noOutline(),
         fill(textOf('TextColorProperty')),

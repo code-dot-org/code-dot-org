@@ -25,6 +25,7 @@ import {
   setText,
   showAs,
   swatch,
+  useStyle,
   useTrait,
   words,
 } from './workspace';
@@ -62,6 +63,7 @@ export const viewportActor = actorFile(
         fill(swatch(LOOK.well)),
         outline(swatch(LOOK.surfaceEdge), BORDER),
         corner(RADIUS_TIGHT),
+        useStyle('well'),
         rectangle(0, 0, width(), height()),
       ],
     },

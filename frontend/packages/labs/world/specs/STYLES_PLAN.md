@@ -315,18 +315,55 @@ it is not made here.
    one exported constant. This is the step that makes them look professional,
    and it is worth doing whether or not step 4 ever happens. The pressed state
    is NOT in it, for the reason above.
-3. **The style file and the `use style` block.** Stock `modern.style` and
-   `classic.style`, the full role vocabulary in each, a `use theme` row on the
-   world, and the drawings moved one control at a time. Tokens and styles
-   coexist with literals during the move, so it is not a flag day.
+3. **The style file and the `use style` block — BUILT.** Stock
+   `modern.style` and `classic.style`, the full role vocabulary in each, a
+   `use theme` row on the world, and every control moved. See below for the
+   two things it settled that this plan had left open.
 4. **The editor.** A surface for editing tokens and styles with a live
    preview of each control. The `.effect` editor is the shape.
 
 Steps 1 and 2 are worth having alone. If 3 and 4 never earn themselves, the
 kit still looks right; it just takes editing drawings to restyle.
 
+## What step three settled
+
+- **The literals stayed, under the styles.** Every control says its own look
+  and then says `use style`, in that order. A style the active theme does not
+  define leaves the pen exactly as it was, so the rows above are the picture a
+  project with NO theme gets — which is every project that existed before
+  themes did, drawn exactly as it was. It costs one row per control and a pair
+  of colours stated twice. It buys: nothing breaks, the default is visible in
+  the file a learner opens rather than hidden in the engine, and the literals
+  can be deleted the day a theme is guaranteed.
+- **Ordering IS the answer to "what wins".** The tension below — a style's
+  colour against a per-instance property — needed no sentinel and no optional
+  property after all. The Progress Bar says `use style ⟨bar track⟩` and THEN
+  `fill ⟨track color⟩`, so the theme decides the corner of every bar in the
+  project and each bar keeps the colours its own properties hold. The pen is
+  ambient and ordered; that was already the mechanism.
+- **A role vocabulary of eighteen, pinned both ways.** `stockStyles.test`
+  checks that each theme defines every role AND no others: a missing role is a
+  control painted in whatever the pen last held, an extra one is a role
+  somebody meant to draw with and a `use style` somebody forgot to write.
+- **`well` and `floating` are two roles, not one.** A Viewport and a Speech
+  Box are the same dark recess and only one of them is in front of the scene.
+  That distinction is the one thing colour alone could not carry.
+- **The reader needed the theme too.** `preview/drawingReader` finds it the
+  way the game does — the first `use theme` row under a `define world` — and
+  applies a style with the same absent-leaves-alone rule. A still and the live
+  picture have to be wrong in the same way, or they are two pictures.
+- **Two guards earned themselves on the way in, neither of them this plan's.**
+  `shelfCoverage` caught `world_use_theme` sitting in the gated World drawer
+  with no tile granting it — a block that would have shipped reachable by
+  nobody. (`use style` needed no grant: it is a pen block and arrives with the
+  Drawing drawer at `look/drawing`.) And `builderSurface` caught `useTheme`
+  existing on the live World and not on `WorldBuilder`, which is where a row
+  under `define world` actually runs — so `use theme` would have thrown on
+  every world that used it, at build time, before anything drew.
+
 ## What it does not do
 
+- **No editor.** A theme is JSON a learner edits as text. Step 4.
 - **No runtime theme change.** The theme is a file a world names, resolved at
   load. A dark-mode toggle and a UI that flushes red on damage both want `set
 ⟨accent⟩ to ⟨…⟩` while the game runs, which is the override layer the

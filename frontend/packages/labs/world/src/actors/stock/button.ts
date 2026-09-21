@@ -52,6 +52,7 @@ import {
   showAs,
   swatch,
   textOf,
+  useStyle,
   useTrait,
   weight,
   words,
@@ -164,6 +165,7 @@ export const buttonActor = actorFile(
         fill(swatch(LOOK.accent)),
         corner(RADIUS),
         shadow(SHADOW),
+        useStyle('button face'),
         rectangle(0, 0, width(), height()),
         // Nothing after the face is raised — a shadow under the caption would
         // be a drop-shadowed word, which is a different decade.
@@ -172,6 +174,7 @@ export const buttonActor = actorFile(
         // control you press from a label that describes it, when everything
         // in the kit is one family at one size.
         weight('bold'),
+        useStyle('button caption'),
         fill(textOf('TextColorProperty')),
         drawParagraph(labelHalf(width()), labelHalf(height()), width()),
         // …AND THE RING, when the keyboard is on this one. Drawn INSIDE the
@@ -191,6 +194,7 @@ export const buttonActor = actorFile(
           // …and it follows the corner it is inset from. A square ring inside
           // a rounded face reads as a mistake rather than as an answer.
           corner(ringRadius(RADIUS)),
+          useStyle('focus ring'),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

@@ -34,6 +34,7 @@ import {RADIUS_BAR} from './look';
 import {
   actorFile,
   corner,
+  useStyle,
   defineProperty,
   fill,
   me,
@@ -110,6 +111,14 @@ export const progressBarDrawing = (own = 'ActorsProgressBar') => ({
     // own shape, so a square fill inside a rounded track would show its
     // corners poking out at the left end (specs/STYLES_PLAN.md).
     corner(RADIUS_BAR),
+    // THE STYLE COMES FIRST AND THE PROPERTY AFTER IT, which is the rule for
+    // every control whose colour a project sets per instance: the actor's own
+    // property wins, and the style fills in what the property does not say.
+    // So a theme decides the CORNER of every bar in the project, and each bar
+    // keeps whatever colours its own `bar color` and `track color` hold —
+    // which is the whole point of their being properties
+    // (specs/STYLES_PLAN.md, "The tension to settle").
+    useStyle('bar track'),
     // The track first and whole, so what is left of it IS the empty part —
     // there is no second rectangle for "the rest", and none to keep in step.
     fill(progressOf(own, 'TrackColorProperty')),
@@ -117,6 +126,7 @@ export const progressBarDrawing = (own = 'ActorsProgressBar') => ({
       type: 'world_draw_rectangle',
       inputs: {X: num(0), Y: num(0), WIDTH: width(), HEIGHT: height()},
     },
+    useStyle('bar'),
     fill(progressOf(own, 'BarColorProperty')),
     {
       type: 'world_draw_rectangle',

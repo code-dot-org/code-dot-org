@@ -62,6 +62,7 @@ import {
   showAs,
   swatch,
   textOf,
+  useStyle,
   useTrait,
   words,
 } from './workspace';
@@ -394,6 +395,7 @@ export const dropdownActor = actorFile(
         fill(swatch(LOOK.surface)),
         outline(swatch(LOOK.surfaceEdge), BORDER),
         corner(RADIUS),
+        useStyle('surface'),
         rectangle(0, 0, width(), ROW),
         noOutline(),
         fill(textOf('TextColorProperty')),
@@ -408,6 +410,7 @@ export const dropdownActor = actorFile(
           fill(swatch(LOOK.surfaceRaised)),
           corner(RADIUS),
           shadow(SHADOW_OVER),
+          useStyle('menu'),
           rectangle(0, ROW, width(), arithmetic('MINUS', height(), num(ROW))),
           // The rows inside it are flat: a shadow under each would be a stack
           // of cards rather than a list.
@@ -423,6 +426,7 @@ export const dropdownActor = actorFile(
                 block: chain([
                   either(compare('EQ', row(), highlighted()), [
                     fill(swatch(LOOK.accentRaised)),
+                    useStyle('chosen row'),
                     rectangle(
                       num(0),
                       arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
@@ -442,6 +446,7 @@ export const dropdownActor = actorFile(
           noFill(),
           outline(swatch(LOOK.focus), RING_WIDTH),
           corner(ringRadius(RADIUS)),
+          useStyle('focus ring'),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

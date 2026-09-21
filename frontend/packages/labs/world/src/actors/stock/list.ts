@@ -35,6 +35,7 @@ import {BORDER, LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
   actorFile,
   actsLike,
+  type BlockParam,
   chain,
   corner,
   defineEvent,
@@ -51,9 +52,9 @@ import {
   showAs,
   swatch,
   textOf,
+  useStyle,
   useTrait,
   words,
-  type BlockParam,
 } from './workspace';
 
 const OWN = 'ActorsList';
@@ -455,6 +456,7 @@ export const listActor = actorFile(
         fill(swatch(LOOK.surface)),
         outline(swatch(LOOK.surfaceEdge), BORDER),
         corner(RADIUS),
+        useStyle('surface'),
         rectangle(0, 0, width(), height()),
         noOutline(),
         // …and the rows that show, which is a window over the list rather
@@ -470,6 +472,7 @@ export const listActor = actorFile(
               block: chain([
                 either(compare('EQ', row(), highlighted()), [
                   fill(swatch(LOOK.accentRaised)),
+                  useStyle('chosen row'),
                   rectangle(
                     num(0),
                     arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
@@ -488,6 +491,7 @@ export const listActor = actorFile(
           noFill(),
           outline(swatch(LOOK.focus), RING_WIDTH),
           corner(ringRadius(RADIUS)),
+          useStyle('focus ring'),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

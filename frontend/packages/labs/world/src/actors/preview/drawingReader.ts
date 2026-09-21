@@ -35,6 +35,11 @@ import {parseRuleMeta, type PropertyMeta} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
 import {cssColor} from '../../engine/core/color';
 import type {DrawCommand, Shadow, TextAnchor} from '../../engine/core/drawing';
+import {
+  NO_THEME,
+  resolveTheme,
+  type ResolvedTheme,
+} from '../../engine/core/theme';
 
 /** A block as it sits in a saved workspace — only what is read here. */
 export interface Node {
@@ -170,6 +175,21 @@ export function defineActorIn(contents: string | undefined): Node | undefined {
     ).find(root => root.type === 'world_actor');
   } catch {
     return undefined; // mid-edit / not JSON, as everywhere else
+  }
+}
+
+/** The `define world` root of a world file, if it parses. */
+function defineWorldIn(contents: string | undefined): Node | undefined {
+  if (contents === undefined) {
+    return undefined;
+  }
+  try {
+    return (
+      (JSON.parse(contents) as {blocks?: {blocks?: Node[]}}).blocks?.blocks ??
+      []
+    ).find(root => root.type === 'world_world');
+  } catch {
+    return undefined;
   }
 }
 
@@ -415,6 +435,47 @@ function written(root: Node, into: Map<string, unknown>, reading: Reading) {
  * the actor's own values — or nothing, for an actor with no drawing to read
  * (one that wears a picture instead).
  */
+/**
+ * The theme the project's worlds point at, resolved.
+ *
+ * THE READER IS A SECOND IMPLEMENTATION OF THE PEN — it makes the map
+ * editor's stills without running a game — so it has to find the theme the
+ * same way the game does, which is a `use theme` row under `define world`.
+ * Without this every drawing naming a style would read INCOMPLETE and every
+ * interface picture in the editor would fall back to the sandbox's slow path
+ * (specs/STYLES_PLAN.md).
+ *
+ * THE FIRST WORLD THAT NAMES ONE. A project with two worlds on two themes is
+ * a thing the editor cannot draw one picture for; it draws the first, which
+ * is also what a palette thumbnail can mean at all.
+ */
+function themeOf(files: Files): ResolvedTheme {
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.endsWith('.world')) {
+      continue;
+    }
+    const root = defineWorldIn(contents);
+    const row =
+      root &&
+      chain(root.next?.block).find(one => one.type === 'world_use_theme');
+    const named = row && field(row, 'THEME');
+    if (typeof named !== 'string' || !named) {
+      continue;
+    }
+    const style = files[`${named}.style`];
+    if (style === undefined) {
+      continue;
+    }
+    try {
+      return resolveTheme(JSON.parse(style));
+    } catch {
+      // A theme mid-edit is no theme, not a broken editor.
+      return NO_THEME;
+    }
+  }
+  return NO_THEME;
+}
+
 export function readDrawing(
   files: Files,
   actorPath: string,
@@ -460,6 +521,7 @@ export function readDrawing(
   // drawing's: the reading starts clean here.
   reading.complete = true;
 
+  const theme = themeOf(files);
   const commands: DrawCommand[] = [];
   // The pen, which is state: a fill or an outline set once applies to every
   // shape after it, exactly as it does in the engine (`core/drawing`).
@@ -525,6 +587,35 @@ export function readDrawing(
         case 'world_pen_weight':
           bold = field(row, 'WEIGHT') === 'bold';
           break;
+        // …and all of them at once, out of the project's theme. A style the
+        // theme does not define LEAVES THE PEN ALONE, exactly as
+        // `CommandPen.useStyle` leaves it — the still and the live picture
+        // have to be wrong in the same way, or they are two pictures.
+        case 'world_pen_style': {
+          const style = theme.styles.get(String(field(row, 'STYLE') ?? ''));
+          if (!style) {
+            break;
+          }
+          if (style.fill !== undefined) {
+            fill = style.fill ?? undefined;
+          }
+          if (style.stroke !== undefined) {
+            stroke = style.stroke ?? undefined;
+          }
+          if (style.strokeWidth !== undefined) {
+            strokeWidth = style.strokeWidth;
+          }
+          if (style.corner !== undefined) {
+            radius = Math.max(0, style.corner);
+          }
+          if (style.shadow !== undefined) {
+            shadow = style.shadow ?? undefined;
+          }
+          if (style.weight !== undefined) {
+            bold = style.weight === 'bold';
+          }
+          break;
+        }
         case 'world_draw_rectangle':
           commands.push({
             op: 'rectangle',

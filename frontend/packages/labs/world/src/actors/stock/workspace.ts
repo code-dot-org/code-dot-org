@@ -406,6 +406,26 @@ export const shadow = (cast: {
 /** `no shadow`. */
 export const noShadow = () => ({type: 'world_pen_no_shadow'});
 
+/**
+ * `use style ⟨button face⟩` — everything the theme says, at once.
+ *
+ * WRITTEN AFTER THE LITERALS, everywhere in this kit, and that is deliberate.
+ * A style the active theme does not define leaves the pen exactly as it was
+ * (`CommandPen.useStyle`), so the rows above this one are the picture a
+ * project with NO theme gets — which is every project that existed before
+ * themes did, drawn exactly as it was.
+ *
+ * So each control says its own look and then offers to be overruled. It costs
+ * one row and a pair of colours that are stated twice; what it buys is that
+ * nothing breaks, that the default is visible in the file a learner opens
+ * rather than hidden in the engine, and that the literals can be deleted the
+ * day a theme is guaranteed (specs/STYLES_PLAN.md).
+ */
+export const useStyle = (name: string) => ({
+  type: 'world_pen_style',
+  fields: {STYLE: name},
+});
+
 /** `draw letters ⟨bold|normal⟩` — the one thing that tells a title from a
  *  caption when everything is one family at one size. */
 export const weight = (of: 'bold' | 'normal') => ({

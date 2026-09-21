@@ -42,6 +42,7 @@ import {
   showAs,
   swatch,
   textOf,
+  useStyle,
   words,
 } from './workspace';
 
@@ -153,7 +154,11 @@ export const toggleActor = actorFile(
         // height of corner is as round as a rectangle goes — the engine
         // clamps anything more to exactly this (`CommandPen.rectangle`).
         corner(TRACK_HEIGHT / 2),
-        either(on(), [fill(swatch(LOOK.positive))], [fill(swatch(LOOK.muted))]),
+        either(
+          on(),
+          [fill(swatch(LOOK.positive)), useStyle('switch on')],
+          [fill(swatch(LOOK.muted)), useStyle('switch off')],
+        ),
         rectangle(
           less(width(), TRACK_WIDTH + 2),
           less(labelHalf(height()), TRACK_HEIGHT / 2),
@@ -162,6 +167,7 @@ export const toggleActor = actorFile(
         ),
         // The knob, at whichever end `on` says.
         fill(swatch(LOOK.ink)),
+        useStyle('knob'),
         either(
           on(),
           [circle(less(width(), KNOB + 4), labelHalf(height()), KNOB)],
@@ -179,6 +185,7 @@ export const toggleActor = actorFile(
           noFill(),
           outline(swatch(LOOK.focus), RING_WIDTH),
           corner(ringRadius(RADIUS)),
+          useStyle('focus ring'),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

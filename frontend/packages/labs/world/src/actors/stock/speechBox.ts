@@ -38,6 +38,7 @@ import {
   showAs,
   swatch,
   textOf,
+  useStyle,
   useTrait,
   words,
 } from './workspace';
@@ -116,6 +117,9 @@ export const speechBoxActor = actorFile(
         outline(swatch(LOOK.surfaceEdge), BORDER),
         corner(RADIUS),
         shadow(SHADOW_OVER),
+        // A sheet OVER the scene, which is the one thing colour alone cannot
+        // say: a Viewport is the same dark and is part of the page.
+        useStyle('floating'),
         rectangle(0, 0, width(), height()),
         // The edge belongs to the panel and not to the letters: a stroked
         // sentence at this size is a smudge.

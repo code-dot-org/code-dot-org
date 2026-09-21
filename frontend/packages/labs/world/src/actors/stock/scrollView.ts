@@ -38,6 +38,7 @@ import {
   setText,
   showAs,
   swatch,
+  useStyle,
   useTrait,
   words,
 } from './workspace';
@@ -203,6 +204,7 @@ export const scrollViewActor = actorFile(
         fill(swatch(LOOK.well)),
         outline(swatch(LOOK.surfaceEdge), BORDER),
         corner(RADIUS_TIGHT),
+        useStyle('well'),
         rectangle(0, 0, width(), height()),
         // The bar, down the right edge, over the face and under the content.
         noOutline(),
@@ -211,6 +213,7 @@ export const scrollViewActor = actorFile(
         // it is a lozenge.
         corner(RADIUS_BAR),
         fill(swatch(LOOK.muted)),
+        useStyle('bar track'),
         rectangle(
           maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
           num(BAR_INSET),
@@ -218,6 +221,7 @@ export const scrollViewActor = actorFile(
           maths(height(), 'MINUS', num(BAR_INSET * 2)),
         ),
         fill(swatch(LOOK.surfaceEdge)),
+        useStyle('knob'),
         rectangle(
           maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
           thumbTop(),

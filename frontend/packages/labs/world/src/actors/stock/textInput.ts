@@ -86,6 +86,7 @@ import {
   showAs,
   swatch,
   textOf,
+  useStyle,
   useTrait,
   words,
 } from './workspace';
@@ -703,11 +704,13 @@ export const textInputActor = actorFile(
         fill(swatch(LOOK.field)),
         outline(swatch(LOOK.surfaceEdge), BORDER),
         corner(RADIUS_TIGHT),
+        useStyle('field'),
         rectangle(0, 0, width(), height()),
         onlyIf(looksWrong(), [
           // The wrong edge is drawn THICKER as well as red, so that the one
           // thing a form must be able to shout is not said in colour alone.
           outline(swatch(LOOK.danger), BORDER + 1),
+          useStyle('wrong edge'),
           rectangle(0, 0, width(), height()),
         ]),
         noOutline(),
@@ -717,6 +720,7 @@ export const textInputActor = actorFile(
         // has no words to be under.
         onlyIf(isEmpty(), [
           fill(swatch(LOOK.mutedInk)),
+          useStyle('hint'),
           drawWords(hint(), num(PAD), labelHalf(height())),
         ]),
         fill(textOf('TextColorProperty')),
