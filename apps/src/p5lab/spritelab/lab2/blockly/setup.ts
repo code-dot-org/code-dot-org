@@ -104,10 +104,9 @@ function installLabBlocks(): void {
 let placeholderCount = 0;
 
 // Blockly draws a shadow with no stroke; the class restores one, dashed
-// (cdoCss.ts), once the block has an SVG to carry it. The path clips its
-// own stroke to its inside, so the dashes never cross the block above.
-// Sizing waits for a microtask: it builds probe blocks, which must not
-// happen inside the deserialization that is building this one.
+// (cdoCss.ts), clipped to the path's inside so it never crosses the block
+// above. Sizing builds probe blocks, so it waits for a microtask: never
+// inside the deserialization that is building this one.
 function placeholderOutline(this: BlocklyCore.Block) {
   // Headless blocks (code generation, tests) have no SVG to draw.
   if (!(this instanceof BlocklyCore.BlockSvg)) {

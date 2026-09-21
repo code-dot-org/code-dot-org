@@ -11,6 +11,8 @@ import {
 
 export default class PlaceholderPreviewer extends BlocklyCore.InsertionMarkerPreviewer {
   private activePlaceholder: BlocklyCore.BlockSvg | null = null;
+  // The connection the placeholder hangs from, highlighted while active.
+  private activeConn: BlocklyCore.RenderedConnection | null = null;
 
   previewConnection(
     draggedConn: BlocklyCore.RenderedConnection,
@@ -23,6 +25,7 @@ export default class PlaceholderPreviewer extends BlocklyCore.InsertionMarkerPre
       }
       this.hidePreview();
       this.activePlaceholder = target as BlocklyCore.BlockSvg;
+      this.activeConn = staticConn;
       this.activePlaceholder
         .getSvgRoot()
         .classList.add(PLACEHOLDER_ACTIVE_CLASS);
@@ -37,8 +40,9 @@ export default class PlaceholderPreviewer extends BlocklyCore.InsertionMarkerPre
       this.activePlaceholder
         .getSvgRoot()
         .classList.remove(PLACEHOLDER_ACTIVE_CLASS);
-      this.activePlaceholder.previousConnection?.unhighlight();
+      this.activeConn?.unhighlight();
       this.activePlaceholder = null;
+      this.activeConn = null;
     }
     super.hidePreview();
   }
