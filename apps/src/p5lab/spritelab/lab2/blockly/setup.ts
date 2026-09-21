@@ -100,8 +100,7 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
   return blockUtils.installCustomBlocks({
     blockly: Blockly,
     // The pool's event blocks carry a mini toolbox of pointer blocks, the
-    // "+" on "when clicked". This lab does not teach them, and students
-    // took the "+" for something they had to press.
+    // "+" on "when clicked". This lab does not teach them.
     blockDefinitions: (sharedBlocks || []).map(definition => ({
       ...definition,
       config: omit(definition.config, 'miniToolboxBlocks') as BlockConfig,

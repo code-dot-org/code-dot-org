@@ -7,8 +7,7 @@ export const IMAGE_TYPES = ['background', 'sprite', 'block'] as const;
 export type ImageType = (typeof IMAGE_TYPES)[number];
 
 // What a sprite depicts. A character can be drawn as an animated set; an
-// object (a treasure, a prop) is one still picture, since a set would give
-// it limbs and a face.
+// object (a treasure, a prop) is one still picture.
 export const IMAGE_SUBJECTS = ['character', 'object'] as const;
 export type ImageSubject = (typeof IMAGE_SUBJECTS)[number];
 
