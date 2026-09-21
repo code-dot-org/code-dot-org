@@ -503,10 +503,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [initialSources]
   );
   // The guide's rendered size: the Play tab lays the game out around it.
+  // Reports repeat the same size through an animation; an equal one keeps
+  // the old object so nothing below re-renders.
   const [guideSize, setGuideSize] = useState<{
     width: number;
     height: number;
   } | null>(null);
+  const handleGuideLayout = useCallback(
+    (size: {width: number; height: number}) =>
+      setGuideSize(prev =>
+        prev && prev.width === size.width && prev.height === size.height
+          ? prev
+          : size
+      ),
+    []
+  );
   const guide = useGuideSteps({
     steps: levelProperties.guideSteps,
     grid: activeWorld.grid,
@@ -1774,7 +1785,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}
               width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
-              onLayout={setGuideSize}
+              onLayout={handleGuideLayout}
               instructions={guide.text}
               collapsedText={guide.collapsedText}
               showContinue={guide.showContinue}

@@ -16,9 +16,8 @@ export const PLAY_GUIDE_WIDTH_PX = 400;
 
 /**
  * The panel's size once its animations end: a hidden copy laid out with the
- * transitions off and the body at its natural height. A size read from the
- * live panel mid-animation would send siblings to a place the guide only
- * passes through, and it can pass through several.
+ * transitions off and the body at its natural height. The live panel's size
+ * mid-animation is a place it only passes through.
  */
 function settledSize(
   panel: HTMLElement,
@@ -74,9 +73,8 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   const [collapsed, setCollapsed] = useState(false);
 
   const panelRef = useRef<HTMLDivElement | null>(null);
-  // Before paint, so a sibling laid out from the size moves once: a report
-  // after paint would first place it against the old size. The observer
-  // covers what props do not change, the container resizing.
+  // Before paint, so a sibling laid out from the size is never placed
+  // against the old one. The observer covers the container resizing.
   useLayoutEffect(() => {
     const panel = panelRef.current;
     if (panel && onLayout) {
