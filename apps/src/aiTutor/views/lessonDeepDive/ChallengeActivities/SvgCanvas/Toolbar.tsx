@@ -10,6 +10,7 @@ const TOOLS: {id: DrawingTool; label: string; symbol: string}[] = [
   {id: 'circle', label: 'Circle', symbol: '○'},
   {id: 'triangle', label: 'Triangle', symbol: '△'},
   {id: 'text', label: 'Text', symbol: 'T'},
+  {id: 'emoji', label: 'Emoji', symbol: '☺'},
   {id: 'line', label: 'Line', symbol: '╱'},
   {id: 'freedraw', label: 'Free draw', symbol: '✏'},
   {id: 'paintbucket', label: 'Paint bucket', symbol: '🪣'},

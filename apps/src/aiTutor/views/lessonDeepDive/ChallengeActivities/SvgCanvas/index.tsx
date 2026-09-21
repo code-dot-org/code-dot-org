@@ -55,6 +55,9 @@ const STARTER_IMAGE_MAX_PX = 600;
 // Pixels moved per arrow key press; Shift multiplies by this factor.
 const CURSOR_STEP = 10;
 const CURSOR_STEP_LARGE = 50;
+// Degrees rotated per [ / ] key press; Shift uses the large step.
+const ROTATE_STEP = 5;
+const ROTATE_STEP_LARGE = 45;
 
 const TOOL_NAMES: Record<DrawingTool, string> = {
   select: 'Select',
@@ -65,7 +68,42 @@ const TOOL_NAMES: Record<DrawingTool, string> = {
   line: 'Line',
   freedraw: 'Free draw',
   paintbucket: 'Paint bucket',
+  emoji: 'Emoji',
 };
+
+// Curated emoji available in the stamp picker: friendly faces and cute animals.
+const EMOJI_LIST = [
+  '😊',
+  '😄',
+  '😂',
+  '🥰',
+  '😎',
+  '🤔',
+  '😴',
+  '🥳',
+  '😢',
+  '😡',
+  '🤩',
+  '🥺',
+  '😋',
+  '😅',
+  '😇',
+  '🐶',
+  '🐱',
+  '🐰',
+  '🦊',
+  '🐻',
+  '🐼',
+  '🐨',
+  '🐯',
+  '🦁',
+  '🐸',
+  '🐧',
+  '🦄',
+  '🐙',
+  '🦋',
+  '🐢',
+];
 
 function kindFromFabricObject(
   obj: FabricObject
@@ -226,10 +264,16 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       () => {}
     );
 
+    const [selectedEmoji, setSelectedEmoji] = useState(EMOJI_LIST[0]);
+    // Ref mirrors selectedEmoji so the once-bound mouse:down handler sees the
+    // latest value without re-binding.
+    const selectedEmojiRef = useRef(EMOJI_LIST[0]);
+
     // Keep refs in sync with state.
     toolRef.current = tool;
     colorRef.current = color;
     readOnlyRef.current = readOnly;
+    selectedEmojiRef.current = selectedEmoji;
 
     // --- Accessible model sync ---
 
@@ -320,15 +364,32 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
           });
           break;
         }
+        case 'emoji': {
+          obj = new IText(selectedEmojiRef.current, {
+            left: x,
+            top: y,
+            fontSize: 40,
+          });
+          break;
+        }
       }
 
       if (obj) {
-        setData(obj, {id: createUuid(), description: ''});
+        const isEmoji = currentTool === 'emoji';
+        setData(obj, {
+          id: createUuid(),
+          description: isEmoji ? selectedEmojiRef.current : '',
+        });
         canvas.add(obj);
         canvas.setActiveObject(obj);
-        if (obj instanceof IText) obj.enterEditing();
+        // Enter editing for text input but not for emoji stamps.
+        if (obj instanceof IText && !isEmoji) obj.enterEditing();
         const kind = kindFromFabricObject(obj);
-        setAnnouncement(`Added ${kind ?? 'object'}.`);
+        setAnnouncement(
+          isEmoji
+            ? `Stamped ${selectedEmojiRef.current}.`
+            : `Added ${kind ?? 'object'}.`
+        );
       }
     }, []);
 
@@ -616,13 +677,28 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
               fontSize: 20,
             });
             break;
+          case 'emoji':
+            obj = new IText(selectedEmojiRef.current, {
+              left: p.x,
+              top: p.y,
+              fontSize: 40,
+            });
+            break;
         }
         if (obj) {
-          setData(obj, {id: createUuid(), description: ''});
+          const isEmoji = currentTool === 'emoji';
+          setData(obj, {
+            id: createUuid(),
+            description: isEmoji ? selectedEmojiRef.current : '',
+          });
           canvas.add(obj);
           canvas.setActiveObject(obj);
-          if (obj instanceof IText) obj.enterEditing();
-          setAnnouncement(`Added ${kindFromFabricObject(obj) ?? 'object'}.`);
+          if (obj instanceof IText && !isEmoji) obj.enterEditing();
+          setAnnouncement(
+            isEmoji
+              ? `Stamped ${selectedEmojiRef.current}.`
+              : `Added ${kindFromFabricObject(obj) ?? 'object'}.`
+          );
         }
       });
 
@@ -916,10 +992,16 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
           'ArrowLeft',
           'ArrowRight',
         ].includes(e.key);
-        if (!isArrow) return;
+        const isRotate = e.key === '[' || e.key === ']';
+        if (!isArrow && !isRotate) return;
         e.preventDefault();
         e.stopPropagation();
-        if (e.altKey) {
+        if (isRotate) {
+          const rotateStep = e.shiftKey ? ROTATE_STEP_LARGE : ROTATE_STEP;
+          const delta = e.key === ']' ? rotateStep : -rotateStep;
+          obj.set({angle: ((obj.angle ?? 0) + delta + 360) % 360});
+          setAnnouncement(`Rotation: ${Math.round(obj.angle ?? 0)} degrees.`);
+        } else if (e.altKey) {
           // Alt + Arrow: resize along the arrow axis.
           if (e.key === 'ArrowRight') {
             const w = obj.getScaledWidth();
@@ -1123,7 +1205,7 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       if (readOnly) return 'Drawing canvas, read only.';
       if (tool === 'select')
         return selectedId
-          ? 'Object selected. Arrow keys move, Alt and arrow keys resize, Shift for larger steps.'
+          ? 'Object selected. Arrow keys move, Alt and arrow keys resize, [ and ] rotate, Shift for larger steps.'
           : 'Drawing canvas. Select tool. Tab to navigate objects in the list below.';
       if (tool === 'freedraw')
         return keyDrawing
@@ -1131,6 +1213,8 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
           : 'Free draw tool. Enter to start drawing, then use arrow keys. You can also draw with a mouse or touch. Escape returns to Select.';
       if (tool === 'paintbucket')
         return 'Paint bucket tool. Arrow keys move cursor, Shift for larger steps. Press Enter to apply the current color to the object under the cursor, or to the background when no object is there. Escape returns to Select.';
+      if (tool === 'emoji')
+        return `Emoji tool. ${selectedEmoji} selected. Arrow keys move cursor, Shift for larger steps. Press Enter to stamp the emoji. Escape returns to Select.`;
       if (tool === 'line') {
         return lineKeyStart
           ? 'Line tool: start point set. Move cursor with arrow keys, then press Enter to complete the line, or Escape to cancel.'
@@ -1149,18 +1233,44 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
     return (
       <div className={styles.svgCanvas}>
         {!readOnly && (
-          <Toolbar
-            tool={tool}
-            color={color}
-            selectedId={selectedId}
-            onToolChange={setTool}
-            onColorChange={handleColorChange}
-            onDeleteSelected={handleDeleteSelected}
-            onBringToFront={handleBringToFront}
-            onBringForward={handleBringForward}
-            onSendBackward={handleSendBackward}
-            onSendToBack={handleSendToBack}
-          />
+          <div className={styles.toolbarWrapper}>
+            <Toolbar
+              tool={tool}
+              color={color}
+              selectedId={selectedId}
+              onToolChange={setTool}
+              onColorChange={handleColorChange}
+              onDeleteSelected={handleDeleteSelected}
+              onBringToFront={handleBringToFront}
+              onBringForward={handleBringForward}
+              onSendBackward={handleSendBackward}
+              onSendToBack={handleSendToBack}
+            />
+            {tool === 'emoji' && (
+              <div
+                className={styles.emojiPicker}
+                role="group"
+                aria-label="Choose an emoji to stamp"
+              >
+                {EMOJI_LIST.map(emoji => (
+                  <button
+                    key={emoji}
+                    type="button"
+                    aria-label={emoji}
+                    aria-pressed={selectedEmoji === emoji}
+                    onClick={() => setSelectedEmoji(emoji)}
+                    className={`${styles.emojiPickerBtn}${
+                      selectedEmoji === emoji
+                        ? ` ${styles.emojiPickerBtnSelected}`
+                        : ''
+                    }`}
+                  >
+                    {emoji}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         )}
 
         <div className={styles.canvasColumn}>

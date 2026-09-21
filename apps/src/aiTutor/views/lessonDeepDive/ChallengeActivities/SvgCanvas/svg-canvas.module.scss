@@ -62,6 +62,13 @@
   }
 }
 
+// Wraps the toolbar so the emoji picker flyout can position relative to it.
+.toolbarWrapper {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+}
+
 .toolbar {
   display: flex;
   flex-direction: column;
@@ -72,6 +79,50 @@
   border-right: 1px solid #444;
   flex-shrink: 0;
   overflow-y: auto;
+}
+
+// Flyout panel that appears to the right of the toolbar when the emoji tool
+// is active. z-index sits above the canvas cursor (10) but below any modal.
+.emojiPicker {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  display: grid;
+  grid-template-columns: repeat(5, 32px);
+  gap: 2px;
+  padding: 6px;
+  z-index: 20;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.emojiPickerBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background: #3a3a3a;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #4a90e2;
+    outline-offset: 1px;
+  }
+}
+
+.emojiPickerBtnSelected {
+  border-color: #4a90e2;
+  background: #1e4a7a;
 }
 
 .toolButton {
