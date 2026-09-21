@@ -324,6 +324,8 @@ $tab-segment-height: $tab-item-height - 2px;
     font-size: 14px;
     font-weight: 400;
     text-transform: none;
+    // Labels, not copy: a drag across them should not select text.
+    user-select: none;
 
     // Unusable off the scene tabs, but not dimmed: it reads as one of the
     // group's labels, and those stay bright when their tab isn't the active
@@ -371,6 +373,7 @@ $tab-segment-height: $tab-item-height - 2px;
 .sceneMenu {
   margin: 0;
   padding: 4px 0;
+  user-select: none;
   min-width: 200px;
   max-height: 60vh;
   overflow-y: auto;
@@ -706,14 +709,16 @@ $tab-segment-height: $tab-item-height - 2px;
 
 // The restart buttons, hung off the game's top-right corner. The overlay
 // lets clicks through; these take them back.
+// Restart buttons: the top-right corner of the whole play area, clear of
+// the game wherever the canvas lands.
 .playControls {
   position: absolute;
+  top: 8px;
+  right: 8px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 6px;
-  padding: 8px;
-  transform: translateX(-100%);
   pointer-events: auto;
 }
 

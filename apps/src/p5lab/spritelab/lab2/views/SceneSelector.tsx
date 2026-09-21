@@ -3,7 +3,7 @@ import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {SceneMetadata} from '../redux/spriteLab2Redux';
 import {SceneType} from '../types';
@@ -11,6 +11,9 @@ import {SceneType} from '../types';
 import NewSceneDialog from './NewSceneDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
+
+// CustomDropdown derives its element ids from this.
+const SCENE_DROPDOWN_NAME = 'scene';
 
 interface SceneSelectorProps {
   scenes: SceneMetadata[];
@@ -64,11 +67,29 @@ const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
   onNewScene,
   onManageScenes,
 }) => {
-  const {setActiveDropdownName} = useDropdownContext();
+  const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
   const choose = (action: () => void) => () => {
     setActiveDropdownName('');
     action();
   };
+  // The dropdown closes itself on a bubbled mousedown outside. Blockly stops
+  // pointerdown at the workspace and cancels it, so neither reaches the
+  // document and a click on the blocks leaves the menu open. Listen in the
+  // capture phase, ahead of Blockly.
+  useEffect(() => {
+    if (activeDropdownName !== SCENE_DROPDOWN_NAME) {
+      return;
+    }
+    const closeOnOutsidePress = (event: PointerEvent) => {
+      const target = event.target as Element | null;
+      if (!target?.closest?.(`#${SCENE_DROPDOWN_NAME}-dropdown`)) {
+        setActiveDropdownName('');
+      }
+    };
+    document.addEventListener('pointerdown', closeOnOutsidePress, true);
+    return () =>
+      document.removeEventListener('pointerdown', closeOnOutsidePress, true);
+  }, [activeDropdownName, setActiveDropdownName]);
   return (
     <ul className={moduleStyles.sceneMenu} role="listbox" aria-label="Scenes">
       {scenes.map(scene => (
@@ -169,7 +190,7 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
         </div>
       ) : (
         <CustomDropdown
-          name="scene"
+          name={SCENE_DROPDOWN_NAME}
           className={moduleStyles.sceneDropdown}
           size="s"
           labelText="Scene"

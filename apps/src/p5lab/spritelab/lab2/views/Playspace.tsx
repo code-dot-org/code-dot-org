@@ -49,7 +49,7 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
-  // Shown in the game's top-right corner while playing (the restart
+  // Shown in the play area's top-right corner while playing (the restart
   // buttons). Laid out beside the box, not inside it, so they keep their
   // size whatever the box's scale.
   controls?: React.ReactNode;
@@ -357,16 +357,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         )}
       </div>
       {mode === 'play' && controls && (
-        <div
-          className={moduleStyles.playControls}
-          style={{
-            left: placement.x + CANVAS * placement.scale,
-            top: placement.y,
-            transition: animate ? 'left 0.45s ease, top 0.45s ease' : undefined,
-          }}
-        >
-          {controls}
-        </div>
+        <div className={moduleStyles.playControls}>{controls}</div>
       )}
     </div>
   );
