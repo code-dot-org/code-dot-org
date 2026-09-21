@@ -926,6 +926,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const capturingSceneRef = useRef<string | null>(null);
   const thumbnailsEnabled = !!channelId && !!uploadImage && !isToolboxMode;
 
+  // Best-effort removal of one of this project's own uploads.
+  const deleteOwnAsset = useCallback(
+    (url: string | undefined) => {
+      if (url && channelId && url.startsWith(`/v3/assets/${channelId}/`)) {
+        HttpClient.delete(url, true).catch(() => undefined);
+      }
+    },
+    [channelId]
+  );
+
   const commitThumbnail = useCallback(async () => {
     const pending = pendingThumbnail.current;
     pendingThumbnail.current = null;
@@ -958,18 +968,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             : s
         ),
       }));
-      if (
-        previous &&
-        previous !== url &&
-        previous.startsWith(`/v3/assets/${channelId}/`)
-      ) {
-        HttpClient.delete(previous, true).catch(() => undefined);
+      if (previous !== url) {
+        deleteOwnAsset(previous);
       }
     } catch (e) {
       // Best effort; the next quiet moment tries again.
       console.warn('Scene thumbnail not saved', e);
     }
-  }, [channelId, uploadImage, updateSources]);
+  }, [channelId, uploadImage, updateSources, deleteOwnAsset]);
 
   // Call before starting the run whose first frame should be the picture.
   const requestThumbnail = useCallback(
@@ -1672,16 +1678,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ...prev,
         scenes: getScenes(prev).filter(s => s.id !== sceneId),
       }));
-      const thumbnail = doomed.thumbnail?.url;
-      if (
-        thumbnail &&
-        channelId &&
-        thumbnail.startsWith(`/v3/assets/${channelId}/`)
-      ) {
-        HttpClient.delete(thumbnail, true).catch(() => undefined);
-      }
+      deleteOwnAsset(doomed.thumbnail?.url);
     },
-    [updateSources, activeSceneId, channelId]
+    [updateSources, activeSceneId, deleteOwnAsset]
   );
 
   // Play and other projects' jumps start at index 0.

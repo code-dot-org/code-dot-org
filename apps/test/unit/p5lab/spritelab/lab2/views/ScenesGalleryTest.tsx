@@ -46,13 +46,13 @@ describe('ScenesGallery', () => {
 
   it('renames inline on Enter and drops an unchanged or blank name', () => {
     const {onRenameScene} = renderGallery();
-    fireEvent.click(screen.getByRole('button', {name: 'Cave'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Rename Cave'}));
     const input = screen.getByRole('textbox', {name: 'Scene name'});
     fireEvent.change(input, {target: {value: '  Deep Cave '}});
     fireEvent.keyDown(input, {key: 'Enter'});
     expect(onRenameScene).toHaveBeenCalledWith('b', 'Deep Cave');
 
-    fireEvent.click(screen.getByRole('button', {name: 'Cave'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Rename Cave'}));
     fireEvent.change(screen.getByRole('textbox', {name: 'Scene name'}), {
       target: {value: '   '},
     });

@@ -4,6 +4,10 @@ import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 import {getStore} from '@cdo/apps/redux';
 
+import {SceneMetadata} from '../../redux/spriteLab2Redux';
+
+import moduleStyles from '../scene-dropdown.module.scss';
+
 export const GO_TO_SCENE_BLOCK_TYPE = 'spritelab2_goToScene';
 export const FIELD_SCENE_DROPDOWN_TYPE = 'field_spritelab2_scene';
 
@@ -19,22 +23,16 @@ function sceneMenuOptions(): [string, string][] {
 
 // Scene id → the picture the scene picker shows for it, when it has one.
 function sceneThumbnails(): Map<string, string> {
-  const scenes = getStore().getState().spriteLab2?.scenes || [];
+  const scenes: SceneMetadata[] =
+    getStore().getState().spriteLab2?.scenes || [];
   return new Map(
-    scenes
-      .filter((s: {thumbnail?: string}) => s.thumbnail)
-      .map((s: {id: string; thumbnail?: string}) => [s.id, s.thumbnail!])
+    scenes.flatMap(s => (s.thumbnail ? [[s.id, s.thumbnail]] : []))
   );
 }
 
-// Thumbnail sizes: on the block face, and in the open menu.
+// The picture on the block face, and its gap before the text.
 const FACE_THUMB_PX = 20;
 const FACE_THUMB_GAP_PX = 4;
-const MENU_THUMB_PX = 28;
-// The checkmark's slot, matching Blockly's own glyph width and the negative
-// margin its stylesheet gives the selected item's glyph.
-const MENU_CHECK_PX = 16;
-const MENU_CHECK_INSET_PX = -24;
 
 /**
  * Registered field type (see setup.ts) so the JSON definition gets a dropdown
@@ -116,28 +114,11 @@ export class SceneDropdown extends BlocklyCore.FieldDropdown {
       const img = document.createElement('img');
       img.src = url;
       img.alt = '';
-      img.style.width = `${MENU_THUMB_PX}px`;
-      img.style.height = `${MENU_THUMB_PX}px`;
-      img.style.objectFit = 'cover';
-      img.style.borderRadius = '2px';
-      img.style.marginRight = '8px';
-      content.style.display = 'inline-flex';
-      content.style.alignItems = 'center';
-      content.style.whiteSpace = 'nowrap';
-      // After the checkmark. Blockly lays the glyph out inline, pulled into
-      // the item's left padding by a negative margin on the selected item
-      // only; giving every item the same box keeps the pictures in a
-      // column whether or not they are checked.
-      const checkmark = content.querySelector<HTMLElement>(
-        '.blocklyMenuItemCheckbox'
-      );
-      if (checkmark) {
-        checkmark.style.display = 'inline-block';
-        checkmark.style.flex = `0 0 ${MENU_CHECK_PX}px`;
-        checkmark.style.width = `${MENU_CHECK_PX}px`;
-        checkmark.style.marginLeft = `${MENU_CHECK_INSET_PX}px`;
-        checkmark.style.marginRight = '4px';
-      }
+      img.className = moduleStyles.menuThumb;
+      content.classList.add(moduleStyles.menuItemContent);
+      // After the checkmark (see the stylesheet for why it gets a class).
+      const checkmark = content.querySelector('.blocklyMenuItemCheckbox');
+      checkmark?.classList.add(moduleStyles.menuCheck);
       content.insertBefore(img, checkmark?.nextSibling ?? content.firstChild);
       decorated = true;
     });

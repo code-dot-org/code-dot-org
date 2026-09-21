@@ -7,6 +7,8 @@ import {SceneType} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
+export const SCENE_NAME_MAX_LENGTH = 40;
+
 // What each scene type is called for a student choosing one.
 const SCENE_TYPE_LABELS: {value: SceneType; label: string}[] = [
   {value: 'story', label: 'A story'},
@@ -48,6 +50,7 @@ const NewSceneDialog: React.FunctionComponent<NewSceneDialogProps> = ({
             name="sceneName"
             label="Scene name"
             value={name}
+            maxLength={SCENE_NAME_MAX_LENGTH}
             onChange={e => setName(e.target.value)}
           />
           <fieldset className={moduleStyles.sceneTypeGroup}>

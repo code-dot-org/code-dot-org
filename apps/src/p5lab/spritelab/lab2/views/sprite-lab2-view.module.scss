@@ -707,10 +707,9 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-// The restart buttons, hung off the game's top-right corner. The overlay
-// lets clicks through; these take them back.
-// Restart buttons: the top-right corner of the whole play area, clear of
-// the game wherever the canvas lands.
+// Restart buttons in the play area's top-right corner, clear of the game
+// wherever the canvas lands. The overlay lets clicks through; these take
+// them back.
 .playControls {
   position: absolute;
   top: 8px;

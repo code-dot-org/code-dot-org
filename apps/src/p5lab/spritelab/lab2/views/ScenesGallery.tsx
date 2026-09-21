@@ -6,7 +6,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {SceneMetadata} from '../redux/spriteLab2Redux';
 import {SceneType} from '../types';
 
-import NewSceneDialog from './NewSceneDialog';
+import NewSceneDialog, {SCENE_NAME_MAX_LENGTH} from './NewSceneDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -85,12 +85,14 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
         )}
       </button>
       {renaming ? (
+        // A bare input: the design system's TextField carries a label and
+        // helper row, and this edits the caption in place under the tile.
         <input
           ref={inputRef}
           className={moduleStyles.sceneNameInput}
           aria-label="Scene name"
           value={draft}
-          maxLength={40}
+          maxLength={SCENE_NAME_MAX_LENGTH}
           onChange={e => setDraft(e.target.value)}
           onBlur={commitRename}
           onKeyDown={e => {
@@ -106,6 +108,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
           type="button"
           className={moduleStyles.sceneNameButton}
           title={editable ? 'Rename' : undefined}
+          aria-label={editable ? `Rename ${scene.name}` : undefined}
           disabled={!editable}
           onClick={startRename}
         >

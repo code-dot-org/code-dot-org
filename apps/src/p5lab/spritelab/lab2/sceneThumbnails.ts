@@ -26,10 +26,19 @@ export function sceneFingerprint(
   const body = JSON.stringify([scene.source ?? null, scene.world ?? null]);
   const images = animations.orderedKeys
     .map(key => animations.propsByKey[key])
-    .filter(props => body.includes(JSON.stringify(props.name).slice(1, -1)))
+    .filter(props => namesImage(body, props.name))
     .map(props => `${props.name}=${props.sourceUrl ?? ''}`)
     .sort();
   return hashString(body + '\n' + images.join('\n'));
+}
+
+// An image name appears in serialized scene JSON as a plain string (a world
+// cell) or as the quoted literal a picker field stores, which the outer
+// JSON escapes.
+function namesImage(body: string, name: string): boolean {
+  const plain = JSON.stringify(name);
+  const literal = JSON.stringify(`"${name}"`).slice(1, -1);
+  return body.includes(plain) || body.includes(literal);
 }
 
 /** The asset a thumbnail is stored under; the fingerprint keeps a stale

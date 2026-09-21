@@ -91,13 +91,12 @@ const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
       document.removeEventListener('pointerdown', closeOnOutsidePress, true);
   }, [activeDropdownName, setActiveDropdownName]);
   return (
-    <ul className={moduleStyles.sceneMenu} role="listbox" aria-label="Scenes">
+    <ul className={moduleStyles.sceneMenu} aria-label="Scenes">
       {scenes.map(scene => (
         <li key={scene.id}>
           <button
             type="button"
-            role="option"
-            aria-selected={scene.id === activeSceneId}
+            aria-current={scene.id === activeSceneId ? 'true' : undefined}
             className={classNames(
               moduleStyles.sceneMenuItem,
               scene.id === activeSceneId && moduleStyles.sceneMenuItemActive
