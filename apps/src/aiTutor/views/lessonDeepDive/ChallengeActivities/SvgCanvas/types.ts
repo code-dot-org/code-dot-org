@@ -8,7 +8,8 @@ export type DrawingTool =
   | 'triangle'
   | 'text'
   | 'line'
-  | 'freedraw';
+  | 'freedraw'
+  | 'paintbucket';
 
 // Mirrors just the semantic fields needed for the accessible object list and
 // aria output. Fabric is authoritative for position, dimensions, and style.

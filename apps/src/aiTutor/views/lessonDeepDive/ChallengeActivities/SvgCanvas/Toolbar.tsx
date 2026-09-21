@@ -12,6 +12,7 @@ const TOOLS: {id: DrawingTool; label: string; symbol: string}[] = [
   {id: 'text', label: 'Text', symbol: 'T'},
   {id: 'line', label: 'Line', symbol: '╱'},
   {id: 'freedraw', label: 'Free draw', symbol: '✏'},
+  {id: 'paintbucket', label: 'Paint bucket', symbol: '🪣'},
 ];
 
 // Named colors with accessible labels for the color palette.

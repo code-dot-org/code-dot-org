@@ -64,6 +64,7 @@ const TOOL_NAMES: Record<DrawingTool, string> = {
   text: 'Text',
   line: 'Line',
   freedraw: 'Free draw',
+  paintbucket: 'Paint bucket',
 };
 
 function kindFromFabricObject(
@@ -219,6 +220,11 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
     // The preview Path object currently on the canvas (starter-tagged so
     // syncObjects ignores it; replaced on every step).
     const keyDrawPreviewRef = useRef<Path | null>(null);
+    // Always-current ref so the canvas mouse:down handler (bound once) can
+    // call the latest applyColorAt without re-binding.
+    const applyColorAtRef = useRef<(pos: {x: number; y: number}) => void>(
+      () => {}
+    );
 
     // Keep refs in sync with state.
     toolRef.current = tool;
@@ -389,6 +395,48 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       syncObjects(canvas);
     }, [syncObjects]);
 
+    // Applies the current color to the topmost non-starter object that contains
+    // `pos`, or to the canvas background when no object is found.
+    const applyColorAt = useCallback(
+      (pos: {x: number; y: number}) => {
+        const canvas = fabricRef.current;
+        if (!canvas) return;
+        const objs = canvas.getObjects();
+        let target: FabricObject | null = null;
+        for (let i = objs.length - 1; i >= 0; i--) {
+          const obj = objs[i];
+          const d = getData(obj);
+          if (!d?.id || d.starter) continue;
+          const b = obj.getBoundingRect();
+          if (
+            pos.x >= b.left &&
+            pos.x <= b.left + b.width &&
+            pos.y >= b.top &&
+            pos.y <= b.top + b.height
+          ) {
+            target = obj;
+            break;
+          }
+        }
+        if (target) {
+          const kind = kindFromFabricObject(target);
+          const useStroke = kind === 'line' || kind === 'path';
+          target.set(
+            useStroke ? {stroke: colorRef.current} : {fill: colorRef.current}
+          );
+          canvas.renderAll();
+          syncObjects(canvas);
+          setAnnouncement('Color applied.');
+        } else {
+          canvas.backgroundColor = colorRef.current;
+          canvas.renderAll();
+          setAnnouncement('Background color changed.');
+        }
+      },
+      [syncObjects]
+    );
+    applyColorAtRef.current = applyColorAt;
+
     // Cancel any in-progress keyboard draw when the user switches away from
     // the free draw tool.
     useEffect(() => {
@@ -497,6 +545,11 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       canvas.on('mouse:down', e => {
         if (readOnlyRef.current) return;
         const currentTool = toolRef.current;
+        if (currentTool === 'paintbucket') {
+          const p = canvas.getScenePoint(e.e as MouseEvent);
+          applyColorAtRef.current(p);
+          return;
+        }
         if (currentTool === 'select' || currentTool === 'freedraw') return;
 
         const p = canvas.getScenePoint(e.e as MouseEvent);
@@ -818,6 +871,41 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
         return;
       }
 
+      if (tool === 'paintbucket') {
+        const isArrow = [
+          'ArrowUp',
+          'ArrowDown',
+          'ArrowLeft',
+          'ArrowRight',
+        ].includes(e.key);
+        if (isArrow) {
+          e.preventDefault();
+          e.stopPropagation();
+          setCursorPos(p => {
+            const cur = p ?? {x: 200, y: 150};
+            if (e.key === 'ArrowUp')
+              return {x: cur.x, y: Math.max(0, cur.y - step)};
+            if (e.key === 'ArrowDown') return {x: cur.x, y: cur.y + step};
+            if (e.key === 'ArrowLeft')
+              return {x: Math.max(0, cur.x - step), y: cur.y};
+            return {x: cur.x + step, y: cur.y};
+          });
+          return;
+        }
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          applyColorAt(cursorPos ?? {x: 200, y: 150});
+          return;
+        }
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          setTool('select');
+          setAnnouncement('Returned to select tool.');
+          return;
+        }
+        return;
+      }
+
       if (tool === 'select') {
         const canvas = fabricRef.current;
         const obj = canvas?.getActiveObject();
@@ -1041,6 +1129,8 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
         return keyDrawing
           ? 'Drawing in progress. Arrow keys extend the path, Enter finishes, Escape cancels.'
           : 'Free draw tool. Enter to start drawing, then use arrow keys. You can also draw with a mouse or touch. Escape returns to Select.';
+      if (tool === 'paintbucket')
+        return 'Paint bucket tool. Arrow keys move cursor, Shift for larger steps. Press Enter to apply the current color to the object under the cursor, or to the background when no object is there. Escape returns to Select.';
       if (tool === 'line') {
         return lineKeyStart
           ? 'Line tool: start point set. Move cursor with arrow keys, then press Enter to complete the line, or Escape to cancel.'
