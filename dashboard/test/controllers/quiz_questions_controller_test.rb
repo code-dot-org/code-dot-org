@@ -278,6 +278,38 @@ class QuizQuestionsControllerTest < ActionController::TestCase
     assert_equal @question.id, @quiz.reload.placements.sole.quiz_question_id
   end
 
+  # --- update: standards ---
+
+  test "update preserves existing standards when the field is not supplied" do
+    standard = create(:standard)
+    @question.standards << standard
+
+    put :update, params: {
+      id: @question.id, quizLevelId: @quiz.id,
+      questionName: 'Edited name', stem: 'Edited stem',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a'
+    }
+
+    assert_response :success
+    assert_equal [standard], @question.reload.standards
+  end
+
+  test "update replaces standards when the field is supplied" do
+    old_standard = create(:standard)
+    new_standard = create(:standard)
+    @question.standards << old_standard
+
+    put :update, params: {
+      id: @question.id, quizLevelId: @quiz.id,
+      questionName: 'Edited name', stem: 'Edited stem',
+      choices: [{id: 'a', text: '1'}, {id: 'b', text: '2'}], correctChoiceId: 'a',
+      standards: [{frameworkShortcode: new_standard.framework.shortcode, shortcode: new_standard.shortcode}]
+    }
+
+    assert_response :success
+    assert_equal [new_standard], @question.reload.standards
+  end
+
   # quizLevelId is optional - editing a question with no particular quiz
   # in view (e.g. a future standalone bank-management screen) still works,
   # touching no placement.
