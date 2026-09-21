@@ -21,8 +21,9 @@ interface GenerateSpriteLabProps {
   collapsedText?: string;
   /** Fixed width in px; the default is the Guide's normal share. */
   width?: number;
-  /** The student collapsed or restored the guide (freeplay only). */
-  onCollapsedChange?: (collapsed: boolean) => void;
+  /** The panel's rendered size, whenever it changes: collapsing, a new
+      step's text, a width change. For siblings that lay out around it. */
+  onLayout?: (size: {width: number; height: number}) => void;
   /** Offer the Continue button: the guide reached a step that marks the
       level's task complete. */
   showContinue?: boolean;
@@ -39,17 +40,26 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   instructions,
   collapsedText,
   width,
-  onCollapsedChange,
+  onLayout,
   showContinue,
   levelProperties,
 }) => {
   // Collapsed hides the instructions but keeps Continue reachable.
   const [collapsed, setCollapsed] = useState(false);
-  const toggleCollapsed = () => {
-    const next = !collapsed;
-    setCollapsed(next);
-    onCollapsedChange?.(next);
-  };
+
+  const panelRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!panel || !onLayout) {
+      return;
+    }
+    const observer = new ResizeObserver(() => {
+      const rect = panel.getBoundingClientRect();
+      onLayout({width: rect.width, height: rect.height});
+    });
+    observer.observe(panel);
+    return () => observer.disconnect();
+  }, [onLayout]);
 
   // Animate the Guide's height: the outer wrapper gets an explicit height
   // (which CSS can transition) tracking the natural height of the inner body.
@@ -88,7 +98,8 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
       cornerIcon={
         !collapsible ? undefined : collapsed ? 'maximize' : 'minimize'
       }
-      onCornerIconClick={toggleCollapsed}
+      onCornerIconClick={() => setCollapsed(current => !current)}
+      panelRef={panelRef}
     >
       <div
         className={moduleStyles.guideAnimator}

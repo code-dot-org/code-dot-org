@@ -3,6 +3,10 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {AnyAction} from 'redux';
 
 import {
+  GUIDE_BOTTOM_OFFSET_PX,
+  GUIDE_RIGHT_OFFSET_PX,
+} from '@cdo/apps/lab2/views/components/guide/Guide';
+import {
   isPickingLocation,
   selectLocation,
   updateLocation,
@@ -49,9 +53,9 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
-  // Width along the right edge the play view keeps clear of (the floating
-  // guide's footprint), in px. The box centers in what is left.
-  clearRight?: number;
+  // The floating guide's footprint, pinned to the overlay's bottom-right,
+  // which the play view keeps clear of.
+  guideSize?: {width: number; height: number} | null;
 }
 
 /**
@@ -67,7 +71,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
-  clearRight = 0,
+  guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -225,15 +229,35 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   let transform: string;
   if (mode === 'play') {
-    // Centered in the width beside the guide; when even that is too narrow
-    // the box shrinks rather than sliding under the guide.
-    const freeWidth = size.w - clearRight;
-    const scale = Math.max(
-      0.1,
-      (Math.min(freeWidth, size.h) - 2 * MARGIN) / CANVAS
-    );
-    const x = (freeWidth - CANVAS * scale) / 2;
-    const y = (size.h - CANVAS * scale) / 2;
+    // The box centers in the whole overlay when that keeps it off the
+    // guide (a collapsed guide is small enough), else beside the guide or
+    // above it, whichever leaves it bigger: beside on a landscape window,
+    // above on a portrait one. It shrinks rather than sliding under.
+    const placed = (room: {w: number; h: number}) => {
+      const scale = Math.max(
+        0.1,
+        (Math.min(room.w, room.h) - 2 * MARGIN) / CANVAS
+      );
+      return {
+        scale,
+        x: (room.w - CANVAS * scale) / 2,
+        y: (room.h - CANVAS * scale) / 2,
+      };
+    };
+    let placement = placed(size);
+    if (guideSize) {
+      const guideLeft = size.w - guideSize.width - GUIDE_RIGHT_OFFSET_PX;
+      const guideTop = size.h - guideSize.height - GUIDE_BOTTOM_OFFSET_PX;
+      const overlapsGuide =
+        placement.x + CANVAS * placement.scale > guideLeft - MARGIN &&
+        placement.y + CANVAS * placement.scale > guideTop - MARGIN;
+      if (overlapsGuide) {
+        const beside = placed({w: guideLeft - MARGIN, h: size.h});
+        const above = placed({w: size.w, h: guideTop - MARGIN});
+        placement = above.scale > beside.scale ? above : beside;
+      }
+    }
+    const {x, y, scale} = placement;
     transform = `translate(${x}px, ${y}px) scale(${scale})`;
   } else {
     // Preview: small box pinned to the top-right corner.

@@ -4,9 +4,10 @@ import React from 'react';
 
 import styles from './Guide.module.scss';
 
-/** The guide's distance from its container's right edge (.guide in
-    Guide.module.scss), for siblings that lay out beside it. */
+/** The guide's distances from its container's right and bottom edges
+    (.guide in Guide.module.scss), for siblings that lay out around it. */
 export const GUIDE_RIGHT_OFFSET_PX = 32;
+export const GUIDE_BOTTOM_OFFSET_PX = 20;
 
 interface GuideProps {
   id?: string;
@@ -20,6 +21,8 @@ interface GuideProps {
   /** Shrink-wrap whatever is left showing, e.g. a single button. */
   collapsed?: boolean;
   onCornerIconClick?: () => void;
+  /** The floating panel itself, for a caller that measures it. */
+  panelRef?: React.Ref<HTMLDivElement>;
 }
 
 // A floating container for instructional content, larger and more prominent
@@ -33,6 +36,7 @@ const Guide: React.FunctionComponent<GuideProps> = ({
   cornerIcon,
   collapsed,
   onCornerIconClick,
+  panelRef,
 }) => {
   return (
     <div
@@ -44,6 +48,7 @@ const Guide: React.FunctionComponent<GuideProps> = ({
     >
       <div
         id={id}
+        ref={panelRef}
         // Collapsed shrink-wraps its controls; a fixed width yields to that.
         style={typeof width === 'number' && !collapsed ? {width} : undefined}
         className={classNames(

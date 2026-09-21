@@ -18,7 +18,6 @@ import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {GUIDE_RIGHT_OFFSET_PX} from '@cdo/apps/lab2/views/components/guide/Guide';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
@@ -503,8 +502,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     [initialSources]
   );
-  // A collapsed guide (freeplay) hands the Play tab its room back.
-  const [guideCollapsed, setGuideCollapsed] = useState(false);
+  // The guide's rendered size: the Play tab lays the game out around it.
+  const [guideSize, setGuideSize] = useState<{
+    width: number;
+    height: number;
+  } | null>(null);
   const guide = useGuideSteps({
     steps: levelProperties.guideSteps,
     grid: activeWorld.grid,
@@ -1757,11 +1759,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           <Playspace
             boxRef={playspaceRef}
             mode={playspaceMode}
-            clearRight={
-              levelProperties.levelMode && !guideCollapsed
-                ? PLAY_GUIDE_WIDTH_PX + GUIDE_RIGHT_OFFSET_PX
-                : 0
-            }
+            guideSize={levelProperties.levelMode ? guideSize : null}
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
             loading={externalLoading}
@@ -1776,7 +1774,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}
               width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
-              onCollapsedChange={setGuideCollapsed}
+              onLayout={setGuideSize}
               instructions={guide.text}
               collapsedText={guide.collapsedText}
               showContinue={guide.showContinue}
