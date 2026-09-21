@@ -24,20 +24,40 @@ function recordingContext() {
     font: '',
     textAlign: '',
     textBaseline: '',
+    // A real context has these set to nothing; the painter has to put them
+    // back that way after every shadowed shape, which is what the tests below
+    // read them for.
+    shadowColor: '',
+    shadowBlur: 0,
+    shadowOffsetY: 0,
     save: () => calls.push('save'),
     restore: () => calls.push('restore'),
     beginPath: () => calls.push('beginPath'),
     moveTo: (...a: number[]) => calls.push(`moveTo(${a})`),
     lineTo: (...a: number[]) => calls.push(`lineTo(${a})`),
     arc: (...a: number[]) => calls.push(`arc(${a.slice(0, 3)})`),
-    fill: function () {
-      calls.push(`fill:${this.fillStyle}`);
+    rect: (...a: number[]) => calls.push(`rect(${a})`),
+    roundRect: (...a: number[]) => calls.push(`roundRect(${a})`),
+    fill: function (this: {fillStyle: string; shadowColor: string}) {
+      calls.push(
+        `fill:${this.fillStyle}${
+          this.shadowColor && this.shadowColor !== 'transparent'
+            ? `+shadow:${this.shadowColor}`
+            : ''
+        }`,
+      );
     },
     stroke: function () {
       calls.push(`stroke:${this.strokeStyle}@${this.lineWidth}`);
     },
     fillRect: function (...a: number[]) {
-      calls.push(`fillRect(${a}):${this.fillStyle}`);
+      calls.push(
+        `fillRect(${a}):${this.fillStyle}${
+          this.shadowColor && this.shadowColor !== 'transparent'
+            ? `+shadow:${this.shadowColor}@${this.shadowBlur}/${this.shadowOffsetY}`
+            : ''
+        }`,
+      );
     },
     strokeRect: function (...a: number[]) {
       calls.push(`strokeRect(${a}):${this.strokeStyle}`);
@@ -183,6 +203,135 @@ const state = (key: string): DrawingState => ({
   commands: [
     {op: 'rectangle', x: 0, y: 0, width: 8, height: 8, strokeWidth: 1},
   ],
+});
+
+describe('a corner, a shadow and a weight', () => {
+  // The three the interface kit was missing, and most of why every control in
+  // it was a square box with a hard edge (specs/STYLES_PLAN.md).
+  /** The calls one rectangle makes, less the save/restore around every one. */
+  const box = (extra: Partial<DrawCommand>) =>
+    paint([
+      {
+        op: 'rectangle',
+        x: 0,
+        y: 0,
+        width: 20,
+        height: 10,
+        fill: '#ff0000',
+        strokeWidth: 1,
+        ...extra,
+      } as DrawCommand,
+    ]).filter(call => call !== 'save' && call !== 'restore');
+
+  it('stays a fillRect when no corner was asked for', () => {
+    // Not a path. A square rectangle is every rectangle drawn before corners
+    // existed, and a path would be a different set of calls for an identical
+    // picture.
+    expect(box({})).toEqual(['fillRect(0,0,20,10):#ff0000']);
+  });
+
+  it('goes through roundRect when one was', () => {
+    expect(box({radius: 4})).toEqual([
+      'beginPath',
+      'roundRect(0,0,20,10,4)',
+      'fill:#ff0000',
+    ]);
+  });
+
+  it('draws a square box rather than nothing where roundRect is missing', () => {
+    // The failure without a fallback is the whole control vanishing, which is
+    // a bug report nobody can act on. A square corner is merely a style.
+    const context = recordingContext() as unknown as {
+      calls: string[];
+      roundRect?: unknown;
+    };
+    context.roundRect = undefined;
+    paintDrawing(
+      context as unknown as CanvasRenderingContext2D,
+      [
+        {
+          op: 'rectangle',
+          x: 0,
+          y: 0,
+          width: 20,
+          height: 10,
+          radius: 4,
+          fill: '#ff0000',
+          strokeWidth: 1,
+        },
+      ],
+      () => undefined,
+    );
+    expect(
+      context.calls.filter(call => call !== 'save' && call !== 'restore'),
+    ).toEqual(['beginPath', 'rect(0,0,20,10)', 'fill:#ff0000']);
+  });
+
+  it('puts the shadow under the FILL and not under the edge', () => {
+    // Both under one shadow is two shadows, the edge's over the interior's,
+    // which reads as a smudge rather than as depth.
+    expect(
+      box({
+        stroke: '#00ff00',
+        shadow: {color: '#000000', blur: 4, offsetY: 2},
+      }),
+    ).toEqual([
+      'fillRect(0,0,20,10):#ff0000+shadow:#000000@4/2',
+      'strokeRect(0,0,20,10):#00ff00',
+    ]);
+  });
+
+  it('takes the shadow off again, so the edge of the SAME shape has none', () => {
+    // Between commands this is already safe — `paintDrawing` wraps each one in
+    // save/restore. Within one, it is not: the stroke follows the fill inside
+    // that pair, and a recording context has no state to restore, which is
+    // what makes this readable here at all.
+    const calls = paint([
+      {
+        op: 'rectangle',
+        x: 0,
+        y: 0,
+        width: 4,
+        height: 4,
+        fill: '#ff0000',
+        strokeWidth: 1,
+        shadow: {color: '#000000', blur: 4, offsetY: 2},
+      },
+      {
+        op: 'rectangle',
+        x: 8,
+        y: 0,
+        width: 4,
+        height: 4,
+        fill: '#0000ff',
+        strokeWidth: 1,
+      },
+    ]);
+    expect(calls.filter(call => call !== 'save' && call !== 'restore')).toEqual(
+      [
+        'fillRect(0,0,4,4):#ff0000+shadow:#000000@4/2',
+        'fillRect(8,0,4,4):#0000ff',
+      ],
+    );
+  });
+
+  it('sets a heavier font for bold text, and the plain one otherwise', () => {
+    const bold = paint([
+      {
+        op: 'text',
+        text: 'Hi',
+        x: 0,
+        y: 0,
+        size: 12,
+        anchor: 'center',
+        weight: 'bold',
+        fill: '#ffffff',
+        strokeWidth: 1,
+      },
+    ]);
+    expect(bold.join(' ')).toContain(`:${fontAt(12, 'bold')}:`);
+    expect(fontAt(12, 'bold')).toBe(`bold ${fontAt(12)}`);
+  });
 });
 
 describe('the texture cache', () => {

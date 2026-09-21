@@ -72,6 +72,7 @@ export {
 export {
   TEXT_ANCHORS,
   type DrawCommand,
+  type Shadow,
   type Pen,
   type TextAnchor,
 } from './core/drawing';

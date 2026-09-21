@@ -6682,8 +6682,7 @@ const worldRememberActors = defineBlock({
     'itself. Answers whether it could be written — a browser may refuse.',
   generator: {
     javascript(block, generator) {
-      const actors =
-        generator.valueToCode(block, 'ACTORS', Order.NONE) || '[]';
+      const actors = generator.valueToCode(block, 'ACTORS', Order.NONE) || '[]';
       const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
       return [
         `world.rememberActors(WorldLab.all(${actors}), ${name})`,
@@ -6729,10 +6728,10 @@ const worldRecallActors = defineBlock({
   generator: {
     javascript(block, generator) {
       const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
-      return [
-        `world.recallActors(${name})`,
-        Order.FUNCTION_CALL,
-      ] as [string, number];
+      return [`world.recallActors(${name})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
     },
   },
 });
@@ -9235,6 +9234,118 @@ const worldPenNoOutline = defineBlock({
   },
 });
 
+// …and the three the interface kit was missing, which is most of why every
+// control in it was a square box with a hard edge (specs/STYLES_PLAN.md).
+// All three are PEN state, like the fill: they say how everything after them
+// is drawn, so one `use style` can eventually set them together.
+const worldPenCorner = defineBlock({
+  type: 'world_pen_corner',
+  message0: 'round corners by %1',
+  args0: [{type: 'input_value', name: 'RADIUS', check: 'Number'}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  // No "square corners" block to go with it: zero IS square and reads as
+  // square, where an absent fill is not a fill of nothing.
+  tooltip:
+    'Round the corners of every rectangle drawn after this. 0 is square. ' +
+    'Nothing else has corners, so nothing else changes.',
+  generator: {
+    javascript(block, generator) {
+      const radius = generator.valueToCode(block, 'RADIUS', Order.NONE);
+      return radius ? `pen.corner(${radius});\n` : '';
+    },
+  },
+});
+registerValueShadows('world_pen_corner', [
+  {name: 'RADIUS', shadow: {type: 'math_number', fields: {NUM: 8}}},
+]);
+
+const worldPenShadow = defineBlock({
+  type: 'world_pen_shadow',
+  message0: 'shadow %1 blur %2 down %3',
+  args0: [
+    paintArg('COLOR'),
+    {type: 'input_value', name: 'BLUR', check: 'Number'},
+    {type: 'input_value', name: 'DOWN', check: 'Number'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  // DOWN and not a direction, because an interface casts one way: the light
+  // is above the screen. A drawing that wants another puts a second shape
+  // behind the first, which is what it would be doing anyway.
+  tooltip:
+    'Lift every shape drawn after this off what is behind it. The shadow ' +
+    'goes under the inside of a shape, not around its edge.',
+  generator: {
+    javascript(block, generator) {
+      const color = generator.valueToCode(block, 'COLOR', Order.NONE);
+      const blur = generator.valueToCode(block, 'BLUR', Order.NONE) || '0';
+      const down = generator.valueToCode(block, 'DOWN', Order.NONE) || '0';
+      return color ? `pen.shadow(${color}, ${blur}, ${down});\n` : '';
+    },
+  },
+});
+registerValueShadows('world_pen_shadow', [
+  {
+    name: 'COLOR',
+    shadow: {type: 'colour_picker', fields: {COLOUR: '#000000'}},
+  },
+  {name: 'BLUR', shadow: {type: 'math_number', fields: {NUM: 4}}},
+  {name: 'DOWN', shadow: {type: 'math_number', fields: {NUM: 2}}},
+]);
+
+const worldPenNoShadow = defineBlock({
+  type: 'world_pen_no_shadow',
+  message0: 'no shadow',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Stop lifting shapes off what is behind them.',
+  generator: {
+    javascript() {
+      return 'pen.noShadow();\n';
+    },
+  },
+});
+
+const worldPenWeight = defineBlock({
+  type: 'world_pen_weight',
+  message0: 'draw letters %1',
+  args0: [
+    {
+      type: 'field_dropdown',
+      name: 'WEIGHT',
+      options: [
+        ['bold', 'bold'],
+        ['normal', 'normal'],
+      ],
+    },
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension],
+  style: 'sprite_blocks',
+  // ONE BLOCK WITH A DROPDOWN, where fill and outline each needed a second
+  // block for their absence. Bold has an opposite and "no fill" does not:
+  // normal is a weight, where an absent fill is the lack of one.
+  tooltip:
+    'How heavy the letters of every text drawn after this are. It changes ' +
+    'how wide the words come out, so a column of bold wraps sooner.',
+  generator: {
+    javascript(block) {
+      return `pen.weight(${block.getFieldValue('WEIGHT') === 'bold'});\n`;
+    },
+  },
+});
+
 /** A shape block: statement, drawing-only, and seeded with numbers. */
 const drawBlock = (
   type: string,
@@ -10769,6 +10880,10 @@ export const DOMAIN_BLOCKS = [
   worldPenOutline,
   worldPenNoFill,
   worldPenNoOutline,
+  worldPenCorner,
+  worldPenShadow,
+  worldPenNoShadow,
+  worldPenWeight,
   worldDrawRectangle,
   worldDrawCircle,
   worldDrawLine,
@@ -10851,6 +10966,12 @@ export const DRAWING_CATEGORY: ToolboxCategory = {
     'world_pen_outline',
     'world_pen_no_fill',
     'world_pen_no_outline',
+    // …and the three that decide what a control LOOKS like rather than what
+    // color it is (specs/STYLES_PLAN.md).
+    'world_pen_corner',
+    'world_pen_shadow',
+    'world_pen_no_shadow',
+    'world_pen_weight',
     // …and the five things there are to draw.
     'world_draw_rectangle',
     'world_draw_circle',

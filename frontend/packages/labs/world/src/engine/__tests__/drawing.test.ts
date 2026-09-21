@@ -165,6 +165,97 @@ describe('the pen', () => {
   });
 });
 
+describe('a corner, a shadow and a weight', () => {
+  const commandsOf = (routine: Parameters<typeof drawnWorld>[0]) =>
+    drawnWorld(routine).world.renderSnapshot()[0].drawing!.commands;
+
+  it('says nothing at all when nobody asked for any of them', () => {
+    // THE RULE EVERY OPTIONAL FIELD HERE FOLLOWS, and the reason is
+    // `drawingKey`: the command list IS the drawing's identity, so a radius of
+    // zero and a blank shadow carried on every command would differ from every
+    // command made before these existed — and re-rasterize the whole lab for
+    // pictures nobody changed (specs/DRAWING.md).
+    const [box, letters] = commandsOf((_actor, pen) => {
+      pen.rectangle(0, 0, 8, 8);
+      pen.text('Hi', 0, 0, 12, 'center');
+    });
+    expect(box).not.toHaveProperty('radius');
+    expect(box).not.toHaveProperty('shadow');
+    expect(letters).not.toHaveProperty('weight');
+  });
+
+  it('rounds a rectangle, and nothing else, because nothing else has corners', () => {
+    // A CIRCLE ALSO CARRIES A `radius`, and it is its own size. So the test
+    // is that the pen's corner does not reach it — drawn at seven under a
+    // corner of four, it is still seven.
+    const [box, ball] = commandsOf((_actor, pen) => {
+      pen.corner(4);
+      pen.rectangle(0, 0, 20, 20);
+      pen.circle(4, 4, 7);
+    });
+    expect(box).toMatchObject({radius: 4});
+    expect(ball).toMatchObject({op: 'circle', radius: 7});
+  });
+
+  it('never rounds a corner wider than the box can hold', () => {
+    // Two corners of half the width each meet in the middle; past that there
+    // is no room for the shape asked for. Said in the ENGINE so the key
+    // records what was drawn rather than what was requested.
+    const [wide, tall] = commandsOf((_actor, pen) => {
+      pen.corner(50);
+      pen.rectangle(0, 0, 20, 10);
+      pen.rectangle(0, 0, 10, 20);
+    });
+    expect(wide).toMatchObject({radius: 5});
+    expect(tall).toMatchObject({radius: 5});
+  });
+
+  it('refuses a negative corner rather than taking the picture down', () => {
+    // `roundRect` throws on one, and a drawing computing its corner from its
+    // own box would lose the whole control for a frame the box was small.
+    const [box] = commandsOf((_actor, pen) => {
+      pen.corner(-4);
+      pen.rectangle(0, 0, 20, 20);
+    });
+    expect(box).not.toHaveProperty('radius');
+  });
+
+  it('carries a shadow onto every shape, a line included', () => {
+    const [box, ball, edge] = commandsOf((_actor, pen) => {
+      pen.shadow('#000000', 4, 2);
+      pen.rectangle(0, 0, 8, 8);
+      pen.circle(4, 4, 4);
+      pen.line(0, 0, 8, 8);
+    });
+    const cast = {shadow: {color: '#000000', blur: 4, offsetY: 2}};
+    expect(box).toMatchObject(cast);
+    expect(ball).toMatchObject(cast);
+    // The line builds its paint by hand, so it is the one that forgets.
+    expect(edge).toMatchObject(cast);
+  });
+
+  it('stops casting one when told to', () => {
+    const [, second] = commandsOf((_actor, pen) => {
+      pen.shadow('#000000', 4, 2);
+      pen.rectangle(0, 0, 8, 8);
+      pen.noShadow();
+      pen.rectangle(0, 0, 8, 8);
+    });
+    expect(second).not.toHaveProperty('shadow');
+  });
+
+  it('puts a weight on letters and takes it off again', () => {
+    const [heavy, plain] = commandsOf((_actor, pen) => {
+      pen.weight(true);
+      pen.text('Title', 0, 0, 16, 'center');
+      pen.weight(false);
+      pen.text('body', 0, 0, 12, 'center');
+    });
+    expect(heavy).toMatchObject({weight: 'bold'});
+    expect(plain).not.toHaveProperty('weight');
+  });
+});
+
 describe('the appearance chain', () => {
   it('lets a drawing win over a sprite', () => {
     // Two things said about one actor; the more specific is the routine in its

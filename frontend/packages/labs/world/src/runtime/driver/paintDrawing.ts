@@ -11,7 +11,7 @@
 // ONE PAINTER, so a preview of an actor and the actor in the game cannot
 // disagree about what its drawing means.
 
-import type {DrawCommand, TextAnchor} from 'world-lab';
+import type {DrawCommand, Shadow, TextAnchor} from 'world-lab';
 
 /**
  * The typeface a drawing's text is set in.
@@ -35,7 +35,8 @@ const FONT_STACK = '"Trebuchet MS", "Segoe UI", system-ui, sans-serif';
  * (`runtime/driver/textMetrics`). Two font strings would be two fonts, in the
  * one place nobody would look.
  */
-export const fontAt = (size: number): string => `${size}px ${FONT_STACK}`;
+export const fontAt = (size: number, weight?: 'bold'): string =>
+  `${weight ? `${weight} ` : ''}${size}px ${FONT_STACK}`;
 
 /** How far apart the lines of a wrapped block sit, as a multiple of the size. */
 const LINE_SPACING = 1.25;
@@ -98,6 +99,61 @@ const ALIGNMENT: Record<
   'bottom right': {align: 'right', baseline: 'bottom'},
 };
 
+/**
+ * Paint under a shadow, and take it off again.
+ *
+ * ON THE FILL ALONE, which is why this wraps rather than being set once at the
+ * top. A shape with a fill AND an outline drawn under one shadow casts two —
+ * the edge's over the interior's — which reads as a smudge instead of as
+ * depth. The interior is what the shape is; it is what lifts off the page.
+ *
+ * Cleared afterwards, and NOT because it would otherwise reach the next
+ * command — `paintDrawing` wraps every command in `save`/`restore`, so it
+ * would not. It is cleared because the STROKE of this same shape comes next,
+ * inside that same pair, and that is the one it must not reach.
+ */
+function shaded(
+  context: CanvasRenderingContext2D,
+  shadow: Shadow | undefined,
+  paint: () => void,
+): void {
+  if (!shadow) {
+    paint();
+    return;
+  }
+  context.shadowColor = shadow.color;
+  context.shadowBlur = shadow.blur;
+  context.shadowOffsetY = shadow.offsetY;
+  paint();
+  context.shadowColor = 'transparent';
+  context.shadowBlur = 0;
+  context.shadowOffsetY = 0;
+}
+
+/**
+ * A rectangle's path, round-cornered where it asked to be.
+ *
+ * `roundRect` is native in every browser this lab supports, and the fallback
+ * is here anyway because the failure without one is the whole control
+ * vanishing rather than a corner being square. A square box is a style
+ * (specs/STYLES_PLAN.md); no box is a bug report nobody can act on.
+ */
+function rectanglePath(
+  context: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  radius: number | undefined,
+): void {
+  context.beginPath();
+  if (radius !== undefined && radius > 0 && context.roundRect) {
+    context.roundRect(x, y, width, height, radius);
+    return;
+  }
+  context.rect(x, y, width, height);
+}
+
 /** Draw one command. Every command carries its own paint, so nothing persists. */
 function draw(
   context: CanvasRenderingContext2D,
@@ -138,14 +194,48 @@ function draw(
     context.fillStyle = command.fill;
   }
   switch (command.op) {
-    case 'rectangle':
+    case 'rectangle': {
+      // THE SQUARE ONE STAYS `fillRect`, rather than everything going through
+      // a path. It is every rectangle drawn before corners existed, it is
+      // what the driver's tests read, and a path is a different set of calls
+      // for an identical picture.
+      if (command.radius === undefined) {
+        if (command.fill !== undefined) {
+          shaded(context, command.shadow, () =>
+            context.fillRect(
+              command.x,
+              command.y,
+              command.width,
+              command.height,
+            ),
+          );
+        }
+        if (command.stroke !== undefined) {
+          context.strokeRect(
+            command.x,
+            command.y,
+            command.width,
+            command.height,
+          );
+        }
+        return;
+      }
+      rectanglePath(
+        context,
+        command.x,
+        command.y,
+        command.width,
+        command.height,
+        command.radius,
+      );
       if (command.fill !== undefined) {
-        context.fillRect(command.x, command.y, command.width, command.height);
+        shaded(context, command.shadow, () => context.fill());
       }
       if (command.stroke !== undefined) {
-        context.strokeRect(command.x, command.y, command.width, command.height);
+        context.stroke();
       }
       return;
+    }
     case 'circle':
       context.beginPath();
       context.arc(
@@ -156,7 +246,7 @@ function draw(
         Math.PI * 2,
       );
       if (command.fill !== undefined) {
-        context.fill();
+        shaded(context, command.shadow, () => context.fill());
       }
       if (command.stroke !== undefined) {
         context.stroke();
@@ -175,7 +265,7 @@ function draw(
       return;
     case 'text': {
       const {align, baseline} = ALIGNMENT[command.anchor] ?? ALIGNMENT.center;
-      context.font = fontAt(command.size);
+      context.font = fontAt(command.size, command.weight);
       context.textAlign = align;
       context.textBaseline = baseline;
       // WHERE THE LINES BREAK IS DECIDED HERE, because this is the half

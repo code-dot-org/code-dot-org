@@ -15,6 +15,15 @@
 
 import {fnv1a} from './hash';
 
+/** A shape lifted off what is behind it — see `Pen.shadow`. */
+export interface Shadow {
+  color: string;
+  /** How soft, in pixels. Zero is a hard offset copy, which is also a look. */
+  blur: number;
+  /** How far DOWN, which is the only direction interfaces ever cast one. */
+  offsetY: number;
+}
+
 /** How a shape is painted, captured at the moment it is drawn. */
 interface Paint {
   /** The interior, or absent for `no fill`. */
@@ -24,6 +33,16 @@ interface Paint {
   /** Pixels. Meaningless without `stroke`, and carried anyway so the driver
    *  never has to invent one. */
   strokeWidth: number;
+  /**
+   * What it casts, or absent for none.
+   *
+   * ABSENT RATHER THAN A ZEROED ONE, which is the rule every optional field
+   * here follows and the reason is `drawingKey`: the command list IS the
+   * drawing's identity, so a shadow of zero carried on every command would
+   * differ from every command made before this existed and re-rasterize the
+   * whole lab for a picture nobody changed.
+   */
+  shadow?: Shadow;
 }
 
 /** Which part of the text sits at the point it is drawn at. */
@@ -63,6 +82,15 @@ export type DrawCommand =
       y: number;
       width: number;
       height: number;
+      /**
+       * How round the corners are, or absent for square.
+       *
+       * ON THE RECTANGLE AND NOT IN `Paint`, because it is the only shape
+       * that can mean anything by it: a circle is already round and a line
+       * has no corner. Putting it in the paint would carry a number every
+       * circle and line had to ignore, and change their keys to say it.
+       */
+      radius?: number;
     } & Paint)
   | ({op: 'circle'; x: number; y: number; radius: number} & Paint)
   | ({op: 'line'; x1: number; y1: number; x2: number; y2: number} & Paint)
@@ -84,6 +112,15 @@ export type DrawCommand =
        * decides where the words fall (specs/DRAWING.md).
        */
       wrapWidth?: number;
+      /**
+       * Heavier letters, or absent for the ordinary ones.
+       *
+       * The one thing that tells a caption from a title when everything is
+       * the same family at the same size (specs/STYLES_PLAN.md). On the text
+       * command for the reason `radius` is on the rectangle: no other shape
+       * has letters.
+       */
+      weight?: 'bold';
     } & Paint)
   | {
       op: 'image';
@@ -107,6 +144,13 @@ export interface Pen {
   outline(color: string, width: number): void;
   noFill(): void;
   noOutline(): void;
+  /** Round the corners of every rectangle after this. Zero squares them. */
+  corner(radius: number): void;
+  /** Cast a shadow under every shape after this. */
+  shadow(color: string, blur: number, offsetY: number): void;
+  noShadow(): void;
+  /** Draw the letters after this heavier, or ordinary again. */
+  weight(bold: boolean): void;
   rectangle(x: number, y: number, width: number, height: number): void;
   circle(x: number, y: number, radius: number): void;
   line(x1: number, y1: number, x2: number, y2: number): void;
@@ -176,12 +220,16 @@ export class CommandPen implements Pen {
   private currentFill: string | undefined = DEFAULT_FILL;
   private currentStroke: string | undefined = undefined;
   private currentWidth = 1;
+  private currentRadius = 0;
+  private currentShadow: Shadow | undefined = undefined;
+  private currentBold = false;
 
   private paint(): Paint {
     return {
       ...(this.currentFill === undefined ? {} : {fill: this.currentFill}),
       ...(this.currentStroke === undefined ? {} : {stroke: this.currentStroke}),
       strokeWidth: this.currentWidth,
+      ...(this.currentShadow === undefined ? {} : {shadow: this.currentShadow}),
     };
   }
 
@@ -202,8 +250,50 @@ export class CommandPen implements Pen {
     this.currentStroke = undefined;
   }
 
+  /**
+   * Round corners, from here on.
+   *
+   * NO `noCorner()` TO GO WITH IT, where fill and outline each have their
+   * absence as a block. A radius of zero IS square and reads as square; an
+   * absent fill is not a fill of nothing, which is why those two needed a
+   * word of their own and this does not.
+   *
+   * Clamped at zero because a negative radius is not a shape — `roundRect`
+   * throws on one, and a drawing that computed its corner from the box would
+   * take the whole picture down for a box briefly smaller than nothing.
+   */
+  corner(radius: number): void {
+    this.currentRadius = Math.max(0, radius);
+  }
+
+  shadow(color: string, blur: number, offsetY: number): void {
+    this.currentShadow = {color, blur: Math.max(0, blur), offsetY};
+  }
+
+  noShadow(): void {
+    this.currentShadow = undefined;
+  }
+
+  weight(bold: boolean): void {
+    this.currentBold = bold;
+  }
+
   rectangle(x: number, y: number, width: number, height: number): void {
-    this.commands.push({op: 'rectangle', x, y, width, height, ...this.paint()});
+    this.commands.push({
+      op: 'rectangle',
+      x,
+      y,
+      width,
+      height,
+      // Never wider than the box can hold: two corners of half the width
+      // each meet in the middle, and asking for more draws a shape the
+      // canvas has no room for. Said here rather than in the driver so the
+      // KEY says what was drawn.
+      ...(this.currentRadius > 0
+        ? {radius: Math.min(this.currentRadius, width / 2, height / 2)}
+        : {}),
+      ...this.paint(),
+    });
   }
 
   circle(x: number, y: number, radius: number): void {
@@ -227,6 +317,7 @@ export class CommandPen implements Pen {
       x2,
       y2,
       strokeWidth: paint.strokeWidth,
+      ...(paint.shadow === undefined ? {} : {shadow: paint.shadow}),
       ...(paint.stroke === undefined
         ? paint.fill === undefined
           ? {}
@@ -255,6 +346,7 @@ export class CommandPen implements Pen {
       // every unwrapped line would differ from every drawing made before this
       // existed, and re-rasterize the lot.
       ...(wrapWidth !== undefined && wrapWidth > 0 ? {wrapWidth} : {}),
+      ...(this.currentBold ? {weight: 'bold' as const} : {}),
       ...this.paint(),
     });
   }
