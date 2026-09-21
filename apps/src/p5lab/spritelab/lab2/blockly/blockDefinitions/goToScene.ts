@@ -31,6 +31,10 @@ function sceneThumbnails(): Map<string, string> {
 const FACE_THUMB_PX = 20;
 const FACE_THUMB_GAP_PX = 4;
 const MENU_THUMB_PX = 28;
+// The checkmark's slot, matching Blockly's own glyph width and the negative
+// margin its stylesheet gives the selected item's glyph.
+const MENU_CHECK_PX = 16;
+const MENU_CHECK_INSET_PX = -24;
 
 /**
  * Registered field type (see setup.ts) so the JSON definition gets a dropdown
@@ -120,7 +124,21 @@ export class SceneDropdown extends BlocklyCore.FieldDropdown {
       content.style.display = 'inline-flex';
       content.style.alignItems = 'center';
       content.style.whiteSpace = 'nowrap';
-      content.insertBefore(img, content.firstChild);
+      // After the checkmark. Blockly lays the glyph out inline, pulled into
+      // the item's left padding by a negative margin on the selected item
+      // only; giving every item the same box keeps the pictures in a
+      // column whether or not they are checked.
+      const checkmark = content.querySelector<HTMLElement>(
+        '.blocklyMenuItemCheckbox'
+      );
+      if (checkmark) {
+        checkmark.style.display = 'inline-block';
+        checkmark.style.flex = `0 0 ${MENU_CHECK_PX}px`;
+        checkmark.style.width = `${MENU_CHECK_PX}px`;
+        checkmark.style.marginLeft = `${MENU_CHECK_INSET_PX}px`;
+        checkmark.style.marginRight = '4px';
+      }
+      content.insertBefore(img, checkmark?.nextSibling ?? content.firstChild);
       decorated = true;
     });
     // The panel was sized before the pictures went in: Blockly pins the
