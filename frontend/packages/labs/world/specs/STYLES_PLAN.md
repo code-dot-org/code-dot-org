@@ -489,7 +489,7 @@ is what lets one name serve six kinds:
 | ------------ | ------------------------------------------------------- |
 | `button`     | a control you press                                     |
 | `surface`    | a sheet things sit on — Panel, Dropdown face, List face |
-| `well`       | a recess things sit in — Viewport, Scroll View          |
+| `inset`      | a recess things sit in — Viewport, Scroll View          |
 | `floating`   | a sheet over the page — Speech Box, an open menu        |
 | `field`      | something typed into                                    |
 | `caption`    | the words on a control                                  |
@@ -523,7 +523,7 @@ targeted press, because a press is announced to every actor with `Takes Mouse
 Input` whether the pointer is over it or not.
 
 **It is also the clearest demonstration of why a style field has three states
-rather than two.** Modern's `pressed` NAMES a darker fill, says `null` to the
+rather than two.** Modern's `pressed` NAMES a lifted fill, says `null` to the
 shadow — so a raised button sinks into the page while it is held — and says
 NOTHING about the corner, which therefore survives from the face. Mention,
 clear, and leave alone, in one four-line class.
@@ -550,6 +550,47 @@ branch per control, and the no-theme case is unchanged, because the pen's own
 default fill is `#ffffff`, exactly what the property's default was. Every text
 row is preceded by a `use style`, so there is always a class-provided fill
 underneath it for the empty case to fall through to.
+
+## The palette, renamed
+
+The colour names were the kit's own, lifted out of the drawings and left as
+they were found: `surface`, `surface edge`, `surface raised`, `well`, `muted`,
+`muted ink`, `page`. Six words for what is really two families with a quiet
+end and a loud one, plus one — `well` — that said nothing to anybody who had
+not written it.
+
+| was              | is               |                                                    |
+| ---------------- | ---------------- | -------------------------------------------------- |
+| `page`           | `background`     | what the controls are read against                 |
+| `surface`        | `primary`        | the main surface                                   |
+| `surface raised` | `primary light`  | a gentle lift — the row under a pointer            |
+| `surface edge`   | `primary strong` | the end with contrast; borders live here           |
+| `muted`          | `secondary`      | the quiet furniture — tracks, a switch that is off |
+| `accent raised`  | `accent light`   | the chosen row, a button held down                 |
+| `muted ink`      | `ink light`      | a placeholder                                      |
+| `well`           | —                | folded into `field`                                |
+| —                | `warning`        | new, and read by nothing                           |
+
+**`light` and `strong` are said RELATIVE TO THE SURFACE**, not as absolute
+lightness, and that is what lets one pair of names serve both themes: on
+Modern the strong end is lighter than the panel and on Classic it is darker,
+and in both it is the end with contrast enough to be a border. A name that
+meant "lighter" would have been wrong in one of the two files.
+
+**`well` folded into `field`, not into `background`**, which was the first
+guess and was wrong: a Classic desktop is `#8a8a82` and a Classic text area is
+`#ffffff`, so those two cannot be one token. Against `field` the difference is
+a few points in both themes — `#f4f2ee` against `#ffffff`, `#10141c` against
+`#1a1a22` — which is exactly the drift this exercise exists to remove. What
+`well` MEANT is the inside of anything that holds content: a field's words, a
+scroll view's rows, a viewport's map. The class keeps the idea under a name
+that says it, `inset`.
+
+**`warning` is a token nothing reads.** A palette with a danger and a positive
+and no warning is one a theme author has to extend before they can say an
+ordinary thing, and a token costs a line and no behaviour. That is not the
+argument that keeps unused CLASSES out — a class nothing names does nothing
+visible, where a token is a value waiting to be referred to.
 
 ## What opening it found
 

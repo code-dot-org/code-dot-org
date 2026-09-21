@@ -38,15 +38,17 @@ export interface StockStyle {
  * is eighteen names for six ideas, grows with the kit, and gives a project no
  * way to say "this one button is the dangerous one" (specs/STYLES_PLAN.md).
  *
- * Read as a table: a surface is a sheet things sit ON, a well is a recess
- * things sit IN, a field is a well you may put a caret in, and a floating
- * sheet is one over the page.
+ * Read as a table: `surface` is a sheet things sit ON, `inset` is a recess
+ * things sit IN, `field` is an inset you may put a caret in, and `floating`
+ * is a sheet over the page.
  */
 export const STYLE_ROLES = [
   // What a control IS.
   'button',
   'surface',
-  'well',
+  // `inset`, not `well`: the one class name in the first cut that said
+  // nothing to anybody who had not written it (specs/STYLES_PLAN.md).
+  'inset',
   'floating',
   'field',
   // …and the parts every control shares.

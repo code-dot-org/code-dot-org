@@ -369,7 +369,7 @@ export const textAreaActor = actorFile(
       height: height(),
       commands: [
         fill(swatch(LOOK.field)),
-        outline(swatch(LOOK.surfaceEdge), BORDER),
+        outline(swatch(LOOK.primaryStrong), BORDER),
         corner(RADIUS_TIGHT),
         useStyle('field'),
         rectangle(0, 0, width(), height()),

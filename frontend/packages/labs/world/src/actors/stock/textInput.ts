@@ -702,7 +702,7 @@ export const textInputActor = actorFile(
         // one thing about a field a form needs to be able to show
         // (specs/FIELDS_PLAN.md).
         fill(swatch(LOOK.field)),
-        outline(swatch(LOOK.surfaceEdge), BORDER),
+        outline(swatch(LOOK.primaryStrong), BORDER),
         corner(RADIUS_TIGHT),
         useStyle('field'),
         rectangle(0, 0, width(), height()),
@@ -719,7 +719,7 @@ export const textInputActor = actorFile(
         // drawn instead of the words rather than under them — an empty field
         // has no words to be under.
         onlyIf(isEmpty(), [
-          fill(swatch(LOOK.mutedInk)),
+          fill(swatch(LOOK.inkLight)),
           useStyle('hint'),
           drawWords(hint(), num(PAD), labelHalf(height())),
         ]),

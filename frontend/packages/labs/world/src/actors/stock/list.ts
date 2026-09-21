@@ -453,8 +453,8 @@ export const listActor = actorFile(
       height: height(),
       commands: [
         // The box.
-        fill(swatch(LOOK.surface)),
-        outline(swatch(LOOK.surfaceEdge), BORDER),
+        fill(swatch(LOOK.primary)),
+        outline(swatch(LOOK.primaryStrong), BORDER),
         corner(RADIUS),
         useStyle('surface'),
         rectangle(0, 0, width(), height()),
@@ -471,7 +471,7 @@ export const listActor = actorFile(
             DO: {
               block: chain([
                 either(compare('EQ', row(), highlighted()), [
-                  fill(swatch(LOOK.accentRaised)),
+                  fill(swatch(LOOK.accentLight)),
                   useStyle('chosen'),
                   rectangle(
                     num(0),

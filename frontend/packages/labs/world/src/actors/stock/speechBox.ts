@@ -113,8 +113,8 @@ export const speechBoxActor = actorFile(
         // frame was saying and said loudly. A shadow says it instead, and the
         // face can then be quiet enough to read words over
         // (specs/STYLES_PLAN.md).
-        fill(swatch(LOOK.well)),
-        outline(swatch(LOOK.surfaceEdge), BORDER),
+        fill(swatch(LOOK.field)),
+        outline(swatch(LOOK.primaryStrong), BORDER),
         corner(RADIUS),
         shadow(SHADOW_OVER),
         // A sheet OVER the scene, which is the one thing colour alone cannot

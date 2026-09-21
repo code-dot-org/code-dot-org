@@ -172,7 +172,7 @@ export const toggleActor = actorFile(
         either(
           on(),
           [fill(swatch(LOOK.positive)), useStyle('on')],
-          [fill(swatch(LOOK.muted)), useStyle('off')],
+          [fill(swatch(LOOK.secondary)), useStyle('off')],
         ),
         rectangle(
           less(width(), TRACK_WIDTH + 2),

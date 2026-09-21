@@ -201,10 +201,10 @@ export const scrollViewActor = actorFile(
       width: width(),
       height: height(),
       commands: [
-        fill(swatch(LOOK.well)),
-        outline(swatch(LOOK.surfaceEdge), BORDER),
+        fill(swatch(LOOK.field)),
+        outline(swatch(LOOK.primaryStrong), BORDER),
         corner(RADIUS_TIGHT),
-        useStyle('well'),
+        useStyle('inset'),
         rectangle(0, 0, width(), height()),
         // The bar, down the right edge, over the face and under the content.
         noOutline(),
@@ -212,7 +212,7 @@ export const scrollViewActor = actorFile(
         // looks like everywhere: at three pixels of corner on a six-wide bar
         // it is a lozenge.
         corner(RADIUS_BAR),
-        fill(swatch(LOOK.muted)),
+        fill(swatch(LOOK.secondary)),
         useStyle('track'),
         rectangle(
           maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
@@ -220,7 +220,7 @@ export const scrollViewActor = actorFile(
           num(BAR_WIDTH),
           maths(height(), 'MINUS', num(BAR_INSET * 2)),
         ),
-        fill(swatch(LOOK.surfaceEdge)),
+        fill(swatch(LOOK.primaryStrong)),
         useStyle('knob'),
         rectangle(
           maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),

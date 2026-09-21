@@ -60,10 +60,10 @@ export const viewportActor = actorFile(
       width: width(),
       height: height(),
       commands: [
-        fill(swatch(LOOK.well)),
-        outline(swatch(LOOK.surfaceEdge), BORDER),
+        fill(swatch(LOOK.field)),
+        outline(swatch(LOOK.primaryStrong), BORDER),
         corner(RADIUS_TIGHT),
-        useStyle('well'),
+        useStyle('inset'),
         rectangle(0, 0, width(), height()),
       ],
     },

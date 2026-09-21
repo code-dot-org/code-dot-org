@@ -9,6 +9,7 @@
 import {useEffect, useRef} from 'react';
 
 import {readDrawing} from '../../actors/preview/drawingReader';
+import {LOOK} from '../../actors/stock/look';
 import {paintDrawing} from '../../runtime/driver/paintDrawing';
 
 import {PREVIEW_KINDS, previewFiles} from './previewFiles';
@@ -28,12 +29,12 @@ export const ThemePreview = ({theme}: ThemePreviewProps) => {
   // What the controls are read AGAINST. A theme that expects a dark page and
   // one that expects a light one both look wrong on the other's, and neither
   // can say so in a style because no control paints the page.
-  let page = '#141826';
+  let page: string = LOOK.background;
   try {
     const tokens = (JSON.parse(theme) as {tokens?: Record<string, unknown>})
       .tokens;
-    if (typeof tokens?.page === 'string') {
-      page = tokens.page;
+    if (typeof tokens?.background === 'string') {
+      page = tokens.background;
     }
   } catch {
     // Mid-edit. The previous page colour is a better answer than none.

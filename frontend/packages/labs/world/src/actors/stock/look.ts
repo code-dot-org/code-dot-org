@@ -19,37 +19,63 @@
 // make a learner's project themeable. That is the `.style` file, which is the
 // step after this one and which will take its role names from this table.
 
-/** The dark palette the kit already had, named. */
+/**
+ * The dark palette the kit already had, named.
+ *
+ * NAMED AS A PALETTE IS NAMED, which the first cut was not: it had `surface`,
+ * `surface edge`, `surface raised`, `well`, `muted` and `muted ink` — six
+ * words for what is really two families with a light and a strong end. The
+ * names here are the ones a theme file uses, so the lab's own authoring and a
+ * learner's file say the same words (specs/STYLES_PLAN.md).
+ *
+ * `light` and `strong` are said RELATIVE TO THE SURFACE rather than as
+ * absolute lightness, which is what lets one pair of names serve a dark theme
+ * and a light one: on Modern the strong end is lighter than the panel, on
+ * Classic it is darker, and in both it is the one with contrast enough to be
+ * a border.
+ */
 export const LOOK = {
-  /** A raised sheet: a Panel, a Dropdown's face, a List's face. */
-  surface: '#202840',
-  /** …and its quiet edge. */
-  surfaceEdge: '#8890b0',
-  /** A recess — something is INSIDE this: a Scroll View, a Viewport, a Speech
-   *  Box. One colour where there were three, within a few points of blue. */
-  well: '#10141c',
-  /** Something typed into, which is a well you may put a caret in. */
-  field: '#1a1a22',
+  /** Behind everything. What the controls are read against. */
+  background: '#141826',
+  /** The main surface: a Panel, a Dropdown's face, a List's face. */
+  primary: '#202840',
+  /** …a gentle lift off it — the row under the pointer. */
+  primaryLight: '#303a58',
+  /** …and the end with contrast enough for a border. */
+  primaryStrong: '#8890b0',
+  /** The quiet furniture: a track, a scrollbar, a switch that is off. */
+  secondary: '#505870',
   /** The one colour that means "this is the thing to press". */
   accent: '#3050a0',
-  /** …and the same thing lifted: the row a click would choose. */
-  accentRaised: '#4050a0',
-  /** A row merely under the pointer, which is the surface lifted rather than
-   *  the accent: pointing at a thing is not choosing it. */
-  surfaceRaised: '#303a58',
+  /** …and the same lifted: the row a click would take, a button held down. */
+  accentLight: '#4050a0',
   /** Words, and the knob of a Toggle or a Slider. */
   ink: '#ffffff',
-  /** Words that are a hint rather than an answer. */
-  mutedInk: '#6b7394',
-  /** A track, a scrollbar, a switch that is off: present and not the point. */
-  muted: '#505870',
-  /** The keyboard is HERE. Nothing else in the kit is this colour, which is
-   *  the whole job: a thicker white edge reads as a rounding artifact. */
+  /** …and words that are a prompt rather than an answer. */
+  inkLight: '#6b7394',
+  /**
+   * The inside of anything that HOLDS content: a Text Input's words, a Scroll
+   * View's rows, a Viewport's map.
+   *
+   * IT ABSORBED `well`, which was a second name for the same idea and was one
+   * nobody could read off the page. The two values differed by a few points
+   * in both themes, which is the drift this whole module exists to stop.
+   */
+  field: '#1a1a22',
+  /** The keyboard is HERE. Nothing else in the kit is this colour. */
   focus: '#ffd45e',
   /** What a field says when it looks wrong. */
   danger: '#e06c75',
   /** A Toggle that is on. */
   positive: '#40c060',
+  /**
+   * …and the third of that set, which nothing reads yet.
+   *
+   * Here because a palette with a danger and a positive and no warning is a
+   * palette a theme author has to extend before they can say the ordinary
+   * thing. A token costs a line and no behaviour.
+   */
+  warning: '#e0a030',
 } as const;
 
 // THE SHAPE OF A CONTROL, which is the half that makes these look unfinished

@@ -80,8 +80,8 @@ export const panelActor = actorFile(
         // A SHEET, which is what a Panel is: rounded, with an edge quiet
         // enough to read the contents over. It was square with a 2px border —
         // an edge you read before the thing it is around (specs/STYLES_PLAN.md).
-        fill(swatch(LOOK.surface)),
-        outline(swatch(LOOK.surfaceEdge), BORDER),
+        fill(swatch(LOOK.primary)),
+        outline(swatch(LOOK.primaryStrong), BORDER),
         corner(RADIUS),
         useStyle('surface'),
         rectangle(0, 0, width(), height()),

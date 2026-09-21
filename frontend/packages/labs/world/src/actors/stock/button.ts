@@ -187,7 +187,7 @@ export const buttonActor = actorFile(
         useStyle('button'),
         // …and pressed while it is held. A CLASS ON TOP OF A CLASS, and it
         // is the clearest demonstration of why a style field has three
-        // states rather than two: Modern's `pressed` SAYS a darker fill, says
+        // states rather than two: Modern's `pressed` SAYS a lifted fill, says
         // `null` to the shadow — so a raised button sinks into the page while
         // you hold it — and says NOTHING about the corner, which therefore
         // stays exactly as the face set it. Mention, clear, and leave alone

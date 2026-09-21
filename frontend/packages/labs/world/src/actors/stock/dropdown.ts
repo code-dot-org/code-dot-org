@@ -248,7 +248,7 @@ const pointerInside = () =>
 const circleArrow = () => [
   // A caret: two strokes meeting at the bottom, in the outline colour.
   noFill(),
-  outline(swatch(LOOK.surfaceEdge), 2),
+  outline(swatch(LOOK.primaryStrong), 2),
   {
     type: 'world_draw_line',
     inputs: {
@@ -392,8 +392,8 @@ export const dropdownActor = actorFile(
       height: height(),
       commands: [
         // The face: a box, the chosen word, and a caret.
-        fill(swatch(LOOK.surface)),
-        outline(swatch(LOOK.surfaceEdge), BORDER),
+        fill(swatch(LOOK.primary)),
+        outline(swatch(LOOK.primaryStrong), BORDER),
         corner(RADIUS),
         useStyle('surface'),
         rectangle(0, 0, width(), ROW),
@@ -415,7 +415,7 @@ export const dropdownActor = actorFile(
           // AN OPEN MENU IS OVER THE PAGE, and a menu with no shadow reads as
           // part of it — which is the clearest case for elevation in the whole
           // kit (specs/STYLES_PLAN.md).
-          fill(swatch(LOOK.surfaceRaised)),
+          fill(swatch(LOOK.primaryLight)),
           corner(RADIUS),
           shadow(SHADOW_OVER),
           useStyle('floating'),
@@ -433,7 +433,7 @@ export const dropdownActor = actorFile(
               DO: {
                 block: chain([
                   either(compare('EQ', row(), highlighted()), [
-                    fill(swatch(LOOK.accentRaised)),
+                    fill(swatch(LOOK.accentLight)),
                     useStyle('chosen'),
                     rectangle(
                       num(0),

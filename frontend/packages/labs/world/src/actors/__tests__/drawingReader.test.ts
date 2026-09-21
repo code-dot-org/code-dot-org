@@ -270,12 +270,12 @@ describe('readDrawing, over the shelf', () => {
     }
   });
 
-  it('draws a Button darker while it is held', () => {
+  it('draws a Button differently while it is held', () => {
     // THE PRESSED STATE, which is the plainest thing this kit was missing: a
     // Button held down was pixel-identical to one at rest.
     //
     // A CLASS ON TOP OF A CLASS, exercising all three states a style field
-    // has: `pressed` names a darker fill, clears the shadow so a raised
+    // has: `pressed` names a lifted fill, clears the shadow so a raised
     // button sinks, and says nothing about the corner — which therefore
     // survives from the face (specs/STYLES_PLAN.md).
     const files = withTheme('modern');
@@ -288,7 +288,9 @@ describe('readDrawing, over the shelf', () => {
         })!.commands,
       )[0] as {fill?: string; radius?: number; shadow?: unknown};
 
-    // Named: a darker fill.
+    // Named: a lifted fill — `accent light`, which on this theme is a
+    // shade UP from the face rather than down. Which way it goes is the
+    // theme's to choose; Classic's `pressed` goes the other way.
     expect(face(false).fill).toBe('#3050a0');
     expect(face(true).fill).toBe('#4050a0');
     // Cleared: the shadow, so it sinks.

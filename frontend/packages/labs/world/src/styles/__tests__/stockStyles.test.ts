@@ -89,6 +89,59 @@ describe('a theme that extends one', () => {
     );
   });
 
+  it('names its colours as a palette, not as the kit’s furniture', () => {
+    // THE RENAME, pinned. The first cut lifted the names straight out of the
+    // drawings — `surface edge`, `surface raised`, `well`, `muted ink` — which
+    // is six words for two families with a quiet end and a loud one, plus one
+    // nobody could read (specs/STYLES_PLAN.md).
+    for (const {id, theme} of bases) {
+      expect(Object.keys(theme.tokens).sort(), id).toEqual(
+        [
+          'accent',
+          'accent light',
+          'background',
+          'border',
+          'danger',
+          'field',
+          'focus',
+          'ink',
+          'ink light',
+          'positive',
+          'primary',
+          'primary light',
+          'primary strong',
+          'radius',
+          'radius bar',
+          'radius tight',
+          'ring radius',
+          'ring width',
+          'secondary',
+          'warning',
+        ].sort(),
+      );
+    }
+  });
+
+  it('means "strong" as contrast, which points opposite ways', () => {
+    // WHY THE NAMES ARE NOT `light`/`dark`. On Modern the strong end is
+    // lighter than the panel; on Classic it is darker. Both are the end with
+    // contrast enough to be a border, which is the only thing a theme needs
+    // it for — and a name meaning "lighter" would have been wrong in one of
+    // the two files.
+    const brightness = (hex: string) =>
+      [1, 3, 5].reduce(
+        (sum, at) => sum + parseInt(hex.slice(at, at + 2), 16),
+        0,
+      );
+    const [modernBase, classicBase] = bases;
+    const strongerThanPrimary = (of: (typeof bases)[number]) =>
+      brightness(String(of.theme.tokens['primary strong'])) >
+      brightness(String(of.theme.tokens.primary));
+
+    expect(strongerThanPrimary(modernBase)).toBe(true);
+    expect(strongerThanPrimary(classicBase)).toBe(false);
+  });
+
   it('does not hang on a ring, and says which file made one', () => {
     const loop = (path: string) =>
       path === 'styles/a'
