@@ -305,9 +305,12 @@ carries a read-only `being pressed` — which is exactly why the Slider stopped
 keeping a `held` boolean of its own.
 
 So a Button that looks pressed elects Gestures, and importing a Button then
-pulls that rule. Gestures is granted at `story/form` today and Buttons arrive
-at `story/choice`, so this is a curriculum change as well as a visual one, and
-it is not made here.
+pulls that rule. Gestures was granted at `story/form` and Buttons arrive at
+`story/choice`, so this was a curriculum change as well as a visual one.
+
+_It has since been made._ The grant moved to `story/choice` — see "Reshaped",
+below, where the pressed state is built. Everything in this section stands;
+only the last sentence of it was overtaken.
 
 ## What gets built, in order
 
@@ -316,8 +319,8 @@ it is not made here.
 2. **The kit, redrawn against them.** Corners, most outlines dropped for
    elevation, and a focus ring that follows the corner. `RING_INSET` becomes
    one exported constant. This is the step that makes them look professional,
-   and it is worth doing whether or not step 4 ever happens. The pressed state
-   is NOT in it, for the reason above.
+   and it is worth doing whether or not step 4 ever happens. The pressed
+   state was not in it, for the reason above; it arrived with the reshape.
 3. **The style file and the `use style` block — BUILT.** Stock
    `modern.style` and `classic.style`, the full role vocabulary in each, a
    `use theme` row on the world, and every control moved. See below for the
@@ -507,11 +510,30 @@ the same: within one theme every surface is light or every surface is dark, so
 one ink serves both. Where a theme genuinely wants two, it defines a second
 class and the drawing names it — which is the escape hatch, not the default.
 
-**`pressed` is defined and not read.** Every stock theme names it so the slot
-is there, and no drawing uses it yet: reading it needs `being pressed`, which
-is the Gestures rule's, which means the Button starts pulling a rule granted
-two lessons after it. That is a curriculum decision and not a styling one. The
-day it is made, it is one `if` per control.
+**`pressed` is read by the Button**, and the curriculum decision it was
+waiting on was made: the Gestures grant moved from `story/form` to
+`story/choice`, which is where the first control you press arrives.
+
+That pairing was right for what Gestures ANSWERS — a Slider is the control
+that cares most about the middle of a press — and wrong for when it is first
+NEEDED. A Button that does not look pressed while you hold it is the plainest
+thing this kit was missing, and `being pressed` is the only per-actor answer
+to "am I the one being held": the Mouse rule raises a targeted CLICK and no
+targeted press, because a press is announced to every actor with `Takes Mouse
+Input` whether the pointer is over it or not.
+
+**It is also the clearest demonstration of why a style field has three states
+rather than two.** Modern's `pressed` NAMES a darker fill, says `null` to the
+shadow — so a raised button sinks into the page while it is held — and says
+NOTHING about the corner, which therefore survives from the face. Mention,
+clear, and leave alone, in one four-line class.
+
+**The Toggle does not take it**, though it acts like a Button and so carries
+`Takes Gestures` along with everything else. `pressed` says a FILL, and a
+switch's track fill is the whole of what `on` and `off` mean — a switch that
+looked the same pressed as it does off would be saying the wrong thing rather
+than an extra thing. Press feedback on a switch wants a class of its own, and
+nobody has asked.
 
 ### And the caption bug, fixed at the pen
 
@@ -544,8 +566,6 @@ underneath it for the empty case to fall through to.
   stay literal. The kit stops at the interface.
 - **No style for the map editor's own chrome**, which is React and CSS and has
   nothing to do with this.
-- **No pressed state**, which wants the Gestures rule and therefore a
-  curriculum decision. See above.
 
 ## What building the painter and the redraw found
 

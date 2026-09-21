@@ -2600,6 +2600,16 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_pause_game'},
       {kind: 'block', type: 'world_resume_game'},
       {kind: 'block', type: 'world_game_is_paused'},
+      // …and what happens BETWEEN a press and a release, which arrives with
+      // the first control you press rather than with the first one you drag.
+      //
+      // IT MOVED HERE FROM `story/form`, where it came in with the Slider.
+      // That was the right pairing for what Gestures ANSWERS — a slider is
+      // the control that cares about the middle of a press — and the wrong
+      // one for when it is first NEEDED: a Button that does not look pressed
+      // while you hold it is the plainest thing missing from this kit, and
+      // `being pressed` is the Gestures rule's (specs/STYLES_PLAN.md).
+      {kind: 'rule', id: 'gestures'},
     ],
     offers: [
       {kind: 'block', type: 'controls_if'},
@@ -2656,11 +2666,11 @@ export const TILES: readonly Tile[] = [
       // …and the first actor that takes something other than a press. It
       // brings the Label it acts like, and the two rules it reads.
       {kind: 'actor', id: 'textInput'},
-      // …and the one that takes a number: a bar the pointer drags, with the
-      // rule that says what dragging IS. A slider is the first control that
-      // cares what happens BETWEEN the press and the release, which is the
-      // whole of what Gestures answers (specs/GESTURES_PLAN.md).
-      {kind: 'rule', id: 'gestures'},
+      // …and the one that takes a number: a bar the pointer drags. It reads
+      // the Gestures rule, which arrived one lesson earlier with the first
+      // control that looks pressed — a slider is the control that cares most
+      // about the middle of a press, and it is not the first that cares at
+      // all (specs/GESTURES_PLAN.md, specs/STYLES_PLAN.md).
       {kind: 'actor', id: 'slider'},
       // …and the one that shows MORE THAN FITS, which is the other thing a
       // drag is for: a box of words you scroll and choose from

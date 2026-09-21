@@ -73,6 +73,14 @@ const less = (of: object, n: number) => ({
   },
 });
 
+/** `⟨being pressed⟩ of this actor` — the Gestures rule's, and read-only. */
+const beingPressed = () => ({
+  block: {
+    type: 'world_get_Gestures_BeingPressedProperty',
+    inputs: {ACTOR: me()},
+  },
+});
+
 /** `⟨focused⟩ of this actor` — the rule's, and read-only. */
 const focused = () => ({
   block: {
@@ -96,6 +104,17 @@ export const buttonActor = actorFile(
     // The whole of what makes it pressable. `is clicked with ⟨button⟩` is
     // raised on this actor alone, so a handler needs no hit test of its own.
     useTrait('Mouse#CanBeClickedTrait'),
+    // …and the whole of what makes it look pressed while you hold it, which
+    // is the plainest thing this kit was missing: a Button held down was
+    // pixel-identical to one at rest.
+    //
+    // THE MOUSE RULE CANNOT ANSWER THIS. It raises a targeted CLICK and no
+    // targeted press — a press is announced to every actor with `Takes Mouse
+    // Input` whether the pointer is over it or not, which is the wrong
+    // granularity for "am I the one being held". Gestures keeps `being
+    // pressed` per actor, set only for those UNDER the pointer when the
+    // button went down, and it turns with the actor (specs/GESTURES_PLAN.md).
+    useTrait('Gestures#TakesGesturesTrait'),
     // …and the whole of what makes it reachable: the keyboard can be moved to
     // it, and it hears the key that presses it.
     useTrait('Tab Navigation#CanBeFocusedTrait'),
@@ -166,6 +185,14 @@ export const buttonActor = actorFile(
         corner(RADIUS),
         shadow(SHADOW),
         useStyle('button'),
+        // …and pressed while it is held. A CLASS ON TOP OF A CLASS, and it
+        // is the clearest demonstration of why a style field has three
+        // states rather than two: Modern's `pressed` SAYS a darker fill, says
+        // `null` to the shadow — so a raised button sinks into the page while
+        // you hold it — and says NOTHING about the corner, which therefore
+        // stays exactly as the face set it. Mention, clear, and leave alone
+        // (specs/STYLES_PLAN.md).
+        onlyIf(beingPressed(), [useStyle('pressed')]),
         rectangle(0, 0, width(), height()),
         // Nothing after the face is raised — a shadow under the caption would
         // be a drop-shadowed word, which is a different decade.

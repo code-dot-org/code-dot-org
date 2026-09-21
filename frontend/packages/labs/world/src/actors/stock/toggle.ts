@@ -155,6 +155,13 @@ export const toggleActor = actorFile(
         // height of corner is as round as a rectangle goes — the engine
         // clamps anything more to exactly this (`CommandPen.rectangle`).
         corner(TRACK_HEIGHT / 2),
+        // NO `pressed` HERE, though a Toggle acts like a Button and so has
+        // `Takes Gestures` along with everything else. `pressed` says a FILL,
+        // and this track's fill is the whole of what `on` and `off` mean — a
+        // switch that looked the same pressed as it does off would be saying
+        // the wrong thing rather than an extra thing. A switch that wants
+        // press feedback wants a class of its own, and nobody has asked
+        // (specs/STYLES_PLAN.md).
         either(
           on(),
           [fill(swatch(LOOK.positive)), useStyle('on')],

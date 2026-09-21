@@ -138,7 +138,12 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     // Navigation for the focus that decides WHICH button Enter presses. The
     // words it paints are the Label's own properties, which arrive with the
     // Label it acts like.
-    requires: ['Mouse', 'Input', 'Tab Navigation'],
+    //
+    // …AND GESTURES FOR THE PRESSED LOOK, which is the one thing Mouse cannot
+    // answer: it raises a targeted click and no targeted press, so "am I the
+    // one being held" is a question only Gestures keeps per actor
+    // (specs/STYLES_PLAN.md).
+    requires: ['Mouse', 'Input', 'Tab Navigation', 'Gestures'],
     // …and the Label it IS, which is where the words, their size and the box
     // they are laid into come from.
     actors: ['label'],

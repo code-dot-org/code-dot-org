@@ -232,6 +232,34 @@ describe('readDrawing, over the shelf', () => {
     ).toBe('#e06c75');
   });
 
+  it('draws a Button darker while it is held', () => {
+    // THE PRESSED STATE, which is the plainest thing this kit was missing: a
+    // Button held down was pixel-identical to one at rest.
+    //
+    // A CLASS ON TOP OF A CLASS, exercising all three states a style field
+    // has: `pressed` names a darker fill, clears the shadow so a raised
+    // button sinks, and says nothing about the corner — which therefore
+    // survives from the face (specs/STYLES_PLAN.md).
+    const files = withTheme('modern');
+    const face = (held: boolean) =>
+      rectangles(
+        readDrawing(files, 'actors/button', {
+          // Keyed as a MAP keys a trait's property: the owning trait's id and
+          // the property's (`declarationsOf`).
+          Takes_Gestures: {being_pressed: held},
+        })!.commands,
+      )[0] as {fill?: string; radius?: number; shadow?: unknown};
+
+    // Named: a darker fill.
+    expect(face(false).fill).toBe('#3050a0');
+    expect(face(true).fill).toBe('#4050a0');
+    // Cleared: the shadow, so it sinks.
+    expect(face(false).shadow).toBeDefined();
+    expect(face(true).shadow).toBeUndefined();
+    // Left alone: the corner, which the face set and `pressed` never mentions.
+    expect(face(true).radius).toBe(face(false).radius);
+  });
+
   it('draws the kit as it always did when no world names a theme', () => {
     // Every project that existed before themes did. `use style` of a name no
     // theme defines leaves the pen alone, so the literals above each row are
