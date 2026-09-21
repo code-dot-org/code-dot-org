@@ -503,6 +503,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       ),
     [initialSources]
   );
+  // A collapsed guide (freeplay) hands the Play tab its room back.
+  const [guideCollapsed, setGuideCollapsed] = useState(false);
   const guide = useGuideSteps({
     steps: levelProperties.guideSteps,
     grid: activeWorld.grid,
@@ -1756,7 +1758,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             boxRef={playspaceRef}
             mode={playspaceMode}
             clearRight={
-              levelProperties.levelMode
+              levelProperties.levelMode && !guideCollapsed
                 ? PLAY_GUIDE_WIDTH_PX + GUIDE_RIGHT_OFFSET_PX
                 : 0
             }
@@ -1774,7 +1776,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}
               width={activeTab === 'Play' ? PLAY_GUIDE_WIDTH_PX : undefined}
+              onCollapsedChange={setGuideCollapsed}
               instructions={guide.text}
+              collapsedText={guide.collapsedText}
               showContinue={guide.showContinue}
               levelProperties={levelProperties}
             />

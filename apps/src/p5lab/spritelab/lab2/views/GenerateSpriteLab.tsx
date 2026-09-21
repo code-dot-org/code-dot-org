@@ -17,8 +17,12 @@ export const PLAY_GUIDE_WIDTH_PX = 400;
 interface GenerateSpriteLabProps {
   levelMode?: LevelMode;
   instructions?: string;
+  /** Shown in place of the instructions while collapsed. */
+  collapsedText?: string;
   /** Fixed width in px; the default is the Guide's normal share. */
   width?: number;
+  /** The student collapsed or restored the guide (freeplay only). */
+  onCollapsedChange?: (collapsed: boolean) => void;
   /** Offer the Continue button: the guide reached a step that marks the
       level's task complete. */
   showContinue?: boolean;
@@ -33,12 +37,19 @@ interface GenerateSpriteLabProps {
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   levelMode,
   instructions,
+  collapsedText,
   width,
+  onCollapsedChange,
   showContinue,
   levelProperties,
 }) => {
   // Collapsed hides the instructions but keeps Continue reachable.
   const [collapsed, setCollapsed] = useState(false);
+  const toggleCollapsed = () => {
+    const next = !collapsed;
+    setCollapsed(next);
+    onCollapsedChange?.(next);
+  };
 
   // Animate the Guide's height: the outer wrapper gets an explicit height
   // (which CSS can transition) tracking the natural height of the inner body.
@@ -77,7 +88,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
       cornerIcon={
         !collapsible ? undefined : collapsed ? 'maximize' : 'minimize'
       }
-      onCornerIconClick={() => setCollapsed(current => !current)}
+      onCornerIconClick={toggleCollapsed}
     >
       <div
         className={moduleStyles.guideAnimator}
@@ -85,7 +96,11 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
       >
         <div ref={bodyRef} className={moduleStyles.guideBody}>
           {collapsed
-            ? null
+            ? collapsedText && (
+                <p className={moduleStyles.guideCollapsedText}>
+                  {collapsedText}
+                </p>
+              )
             : instructionsBlock || 'Build a program, then press Run.'}
           {showContinue && (
             <div className={moduleStyles.guideContinue}>
