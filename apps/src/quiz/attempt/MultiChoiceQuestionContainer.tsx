@@ -5,7 +5,7 @@ import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
 
-import QuestionContainerBase from './QuestionContainerBase';
+import AttemptCard from './AttemptCard';
 
 import styles from './multi-choice-question-container.module.scss';
 
@@ -22,7 +22,7 @@ const CHOICE_LETTERS = 'ABCDEFGHIJ';
 const MultiChoiceQuestionContainer: React.FunctionComponent<
   MultiChoiceQuestionContainerProps
 > = ({question, questionLabel, selectedChoiceId, onSelectChoice}) => (
-  <QuestionContainerBase questionLabel={questionLabel} title={question.stem}>
+  <AttemptCard questionLabel={questionLabel} title={question.stem}>
     <div className={styles.choices}>
       {(question.choices ?? []).map((choice, index) => {
         const isSelected = choice.id === selectedChoiceId;
@@ -48,7 +48,7 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
         );
       })}
     </div>
-  </QuestionContainerBase>
+  </AttemptCard>
 );
 
 export default MultiChoiceQuestionContainer;

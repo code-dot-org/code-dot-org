@@ -1,9 +1,9 @@
 import {Typography} from '@mui/material';
 import React from 'react';
 
-import styles from './question-container-base.module.scss';
+import styles from './attempt-card.module.scss';
 
-export interface QuestionContainerBaseProps {
+export interface AttemptCardProps {
   // Omit for a quiz with only one question.
   questionLabel?: string;
   title: string;
@@ -13,10 +13,14 @@ export interface QuestionContainerBaseProps {
   children: React.ReactNode;
 }
 
-// Shared card shell every question type renders through.
-const QuestionContainerBase: React.FunctionComponent<
-  QuestionContainerBaseProps
-> = ({questionLabel, title, answerExplanation, children}) => (
+// Shared card shell used throughout the attempt flow - intro screen,
+// individual questions, and results all render through this.
+const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
+  questionLabel,
+  title,
+  answerExplanation,
+  children,
+}) => (
   <div className={styles.card}>
     <div className={styles.content}>
       <div className={styles.header}>
@@ -44,4 +48,4 @@ const QuestionContainerBase: React.FunctionComponent<
   </div>
 );
 
-export default QuestionContainerBase;
+export default AttemptCard;
