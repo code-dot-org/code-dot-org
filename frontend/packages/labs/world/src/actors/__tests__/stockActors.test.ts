@@ -9,7 +9,10 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
+import {parseRuleMeta} from '../../blockly/ruleMeta';
+import {STOCK_RULES} from '../../rules/stock';
 import {STOCK_ACTORS} from '../stock';
 import {buttonActor} from '../stock/button';
 import {healthBarActor} from '../stock/healthBar';
@@ -398,5 +401,51 @@ describe('Button', () => {
     expect(buttonActor.indexOf('world_pen_no_outline')).toBeLessThan(
       buttonActor.indexOf('world_draw_paragraph'),
     );
+  });
+});
+
+// Every `use trait` names a trait that EXISTS.
+//
+// The failure this closes has now happened three times, and every time it was
+// silent by construction: a `use trait` row whose value resolves to nothing
+// elects nothing. No error, no warning, no missing block — the file loads, the
+// actor is built, and the trait is simply not there.
+//
+//   • the Scroll View elected Takes Gestures and not Can Be Clicked, so it
+//     could be dragged and not clicked;
+//   • the Scroll View's hat named a rule the project lacked, so what was
+//     chained under it ran at the top of the module;
+//   • and `Boxed#HasABoxTrait` named an export called `BoxedTrait`, so NINE
+//     interface actors had no box — which nothing noticed until a person
+//     looked at the map editor and saw no resize handles
+//     (specs/BOXES_PLAN.md).
+//
+// The other checks in this file read what a file READS, through property
+// blocks. An election reads nothing, which is exactly why it needed its own.
+describe('every trait a stock actor elects', () => {
+  it('is one that some rule actually declares', () => {
+    // Both halves of what a project can hold: the rules the engine provides,
+    // and the stock `.rule` files an actor's `requires` brings.
+    const known = new Set<string>();
+    for (const meta of BUILTIN_RULE_META) {
+      for (const trait of meta.traits) {
+        known.add(`${meta.name}#${trait.ref.exportName}`);
+      }
+    }
+    for (const rule of STOCK_RULES) {
+      const meta = parseRuleMeta(`rules/${rule.id}`, rule.contents);
+      for (const trait of meta?.traits ?? []) {
+        known.add(`${meta?.name}#${trait.ref.exportName}`);
+      }
+    }
+
+    for (const actor of STOCK_ACTORS) {
+      const elected = [
+        ...actor.contents.matchAll(/"TRAIT": "([^"]+)"/g),
+      ].map(match => match[1]);
+      for (const value of elected) {
+        expect(known.has(value), `${actor.id} elects ${value}`).toBe(true);
+      }
+    }
   });
 });

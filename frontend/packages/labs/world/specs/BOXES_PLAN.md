@@ -133,6 +133,32 @@ Shift and an arrow nudges it, Alt makes a nudge fine):
   eat every one of them. The a11y lint calls that a non-interactive role on an
   interactive element; the disable says why.
 
+## The election that elected nothing
+
+The trait was added, the actors said `use trait ⟨Has a Box⟩`, every test
+passed, and NO ACTOR HAD A BOX. It took somebody opening the map editor and
+seeing no resize handles to find it.
+
+A built-in rule's members are referenced by their EXPORT name: a `use trait`
+row stores `Boxed#HasABoxTrait`, and the editor resolves that against the
+engine module's exports (`blockly/builtinMeta`, `builtinRuleMeta`). The export
+was called `BoxedTrait`. So every one of those rows resolved to nothing and
+elected nothing — no error, no warning, no missing block.
+
+It passed the tests because the properties still worked: an override set on a
+kind is stored whether or not the trait it belongs to was applied, so a
+Label's width read back 200 and every play test was happy. The only visible
+symptom was the absence of something — a group missing from the inspector, and
+handles that never drew.
+
+`stockActors.test` now checks that every `use trait` in the library names a
+trait some rule actually declares, built from the engine's rules and the stock
+`.rule` files. It fails on exactly this, naming the actor and the reference.
+That is the third time an election silently elected nothing — the Scroll View
+lost `Can Be Clicked` the same way, and a hat naming an absent rule put its
+body at the top of the module — and the first time a guard has been written
+for it.
+
 ## Not done
 
 - **A minimum size floor only.** `MIN_BOX` is eight pixels, enough to grab

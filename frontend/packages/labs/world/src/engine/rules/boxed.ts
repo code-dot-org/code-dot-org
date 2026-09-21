@@ -40,18 +40,28 @@ const rule = new RuleBuilder({
   ability: 'Has a Box',
 });
 
-export const BoxedTrait = rule.addTrait({
+/**
+ * NAMED FOR THE TRAIT, not for the rule, and the name is load-bearing.
+ *
+ * A built-in rule's members are referenced by their EXPORT name — a `use
+ * trait` row stores `Boxed#HasABoxTrait` and the editor resolves that against
+ * this module's exports (`blockly/builtinMeta`, `builtinRuleMeta`). Exported
+ * as `BoxedTrait` it resolved to nothing, so every `use trait` row naming it
+ * elected nothing, silently: no error, no warning, and nine interface actors
+ * with no box at all (specs/BOXES_PLAN.md).
+ */
+export const HasABoxTrait = rule.addTrait({
   id: BOXED.trait,
   name: 'Has a Box',
 });
 
 /** How wide the project asked for this to be, in pixels. */
-export const WidthProperty = BoxedTrait.addProperty(BOXED.width, 'number', 0, {
+export const WidthProperty = HasABoxTrait.addProperty(BOXED.width, 'number', 0, {
   name: 'width',
 });
 
 /** …and how tall. */
-export const HeightProperty = BoxedTrait.addProperty(
+export const HeightProperty = HasABoxTrait.addProperty(
   BOXED.height,
   'number',
   0,
