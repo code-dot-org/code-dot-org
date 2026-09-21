@@ -275,7 +275,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const promptText = usingAdlib ? adlibText : prompt.trim();
   // Sets are for characters drawn from a fresh base and the level's words:
   // an object given limbs, or a typed prompt, is not what was asked for.
-  // The checkbox's state outlives the offer, so the offer gates the request.
+  // The checkbox stays checked after it is hidden, so the request also
+  // requires that the checkbox is being offered.
   const canMakeSet =
     imageType === 'sprite' &&
     subject === 'character' &&
