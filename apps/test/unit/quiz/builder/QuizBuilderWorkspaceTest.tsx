@@ -35,6 +35,8 @@ const BASE_STATE: QuizBuilderQuestionsState = {
   isCreating: false,
   error: null,
   createQuestion: jest.fn(),
+  updateQuestion: jest.fn(),
+  removeQuestion: jest.fn(),
   load: jest.fn(),
 };
 
