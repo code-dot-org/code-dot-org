@@ -2684,6 +2684,17 @@ export const TILES: readonly Tile[] = [
       // find two screens, a form, a keyboard and a list already talking to
       // each other (`fixtures/app`, specs/APPS.md).
       {kind: 'template', id: 'app'},
+      // …and how the whole kit LOOKS, which is a file rather than an edit to
+      // every control: the drawings name a role — "button face", "field" —
+      // and this says which theme those roles are looked up in
+      // (specs/STYLES_PLAN.md). `use style` itself needs no grant; it is a pen
+      // block and arrives with the Drawing drawer at `look/drawing`.
+      //
+      // HERE FOR THE SAME REASON SAVING IS, and it should re-home with it: a
+      // theme is not what this lesson teaches, but it is the first lesson at
+      // which a learner has enough controls on the screen for one to mean
+      // anything (specs/APPS.md, "What is not taught").
+      {kind: 'block', type: 'world_use_theme'},
       // …and the two blocks an on-screen keyboard is built out of. A key
       // TYPES rather than reaching into a field, which is what lets one
       // keyboard fill any form (specs/KEYBOARD_PLAN.md); `press the ⟨…⟩ key`

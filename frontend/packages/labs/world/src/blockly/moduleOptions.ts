@@ -14,6 +14,7 @@ import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
 import {IMPORT_MAP_VALUE} from '../maps/mapImport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
+import {IMPORT_STYLE_VALUE} from '../styles/styleImport';
 
 import {actorIconImage} from './actorIcons';
 import {actorIcon, actorThumbnail} from './actorThumbnails';
@@ -36,6 +37,11 @@ let projectBackgrounds: Array<[string, string]> = [];
 let projectSounds: Array<[string, string]> = [];
 // `[label, path]` for the project's `.effect` files — the `add effect` dropdown.
 let projectEffectFiles: Array<[string, string]> = [];
+// The same for `.style` files — the `use theme` dropdown — and, separately,
+// every style NAME they define between them, which is what `use style` offers
+// (specs/STYLES_PLAN.md).
+let projectStyleFileList: Array<[string, string]> = [];
+let projectStyleNameList: string[] = [];
 // `[label, path]` for the project's own rule modules under `rules/` — the
 // `world_use_rule` dropdown offers these ALONGSIDE the built-in rules, and its
 // generator imports the module (a path value) rather than reading `WorldLab`.
@@ -132,6 +138,44 @@ export function setProjectAnimationFiles(
   options: Array<[string, string]>,
 ): void {
   projectAnimationFiles = options;
+}
+
+/** Replace the style-file options the THEME dropdown offers. */
+export function setProjectStyleFiles(options: Array<[string, string]>): void {
+  projectStyleFileList = options;
+}
+
+/** Replace the style names the `use style` dropdown offers. */
+export function setProjectStyleNames(names: string[]): void {
+  projectStyleNameList = names;
+}
+
+/**
+ * Current THEME dropdown options: the project's `.style` files, and a way to
+ * fetch one.
+ *
+ * The import row is listed last and is never the fallback — `orNone` still
+ * supplies "(no themes yet)" — so a saved block whose theme was deleted does
+ * not silently become the import row.
+ */
+export function styleFileOptions(): Array<[string, string]> {
+  return [
+    ...orNone(projectStyleFileList, '(no themes yet)'),
+    ['(import…)', IMPORT_STYLE_VALUE],
+  ];
+}
+
+/**
+ * Current STYLE dropdown options — a name, which is also its own value.
+ *
+ * A NAME AND NOT A PATH, which is what makes a theme swappable: a drawing
+ * says `button face` and the world says which file that is looked up in.
+ */
+export function styleNameOptions(): Array<[string, string]> {
+  return orNone(
+    projectStyleNameList.map(name => [name, name] as [string, string]),
+    '(no styles yet)',
+  );
 }
 
 /** Replace the effect-file options the EFFECT dropdown offers. */
@@ -697,6 +741,16 @@ export const effectFileOptionsExtension = liveDropdown(
   'world_effect_file_options',
   'EFFECT',
   effectFileOptions,
+);
+export const styleFileOptionsExtension = liveDropdown(
+  'world_style_file_options',
+  'THEME',
+  styleFileOptions,
+);
+export const styleNameOptionsExtension = liveDropdown(
+  'world_style_name_options',
+  'STYLE',
+  styleNameOptions,
 );
 export const effectFileImportOptionsExtension = liveDropdown(
   'world_effect_import_options',

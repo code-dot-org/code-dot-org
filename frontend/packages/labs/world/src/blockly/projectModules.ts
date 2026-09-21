@@ -183,6 +183,69 @@ export function projectEffectFileOptions(
 }
 
 /**
+ * The project's `.style` files, as `[label, modulePath]`.
+ *
+ * The same shape as the effect scan above, and the same courtesy: the label is
+ * the theme's authored name, so a learner picks "Modern" rather than a file
+ * stem (specs/STYLES_PLAN.md).
+ */
+export function projectStyleFileOptions(
+  files: Record<string, string>,
+): Array<[string, string]> {
+  const options: Array<[string, string]> = [];
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.startsWith('styles/') || !path.endsWith('.style')) {
+      continue;
+    }
+    const modulePath = path.replace(/\.style$/, '');
+    const stem = modulePath.split('/').pop() ?? modulePath;
+    let name: string | undefined;
+    try {
+      const parsed = JSON.parse(contents) as {name?: unknown};
+      if (typeof parsed.name === 'string' && parsed.name.trim()) {
+        name = parsed.name;
+      }
+    } catch {
+      // Not valid JSON yet (mid-edit); fall back to the file name.
+    }
+    options.push([name ?? label(stem), modulePath]);
+  }
+  return options;
+}
+
+/**
+ * Every style name the project's themes between them define.
+ *
+ * THE UNION, not one theme's. A drawing names a style and the WORLD says which
+ * theme is in play, so the two are different files and this dropdown cannot
+ * know which theme an actor will end up drawn under — an actor file is shared
+ * between worlds. Offering the union means a name is offered wherever some
+ * theme defines it, and a theme that lacks one leaves the pen alone and keeps
+ * the name (`core/theme`, `CommandPen.useStyle`).
+ *
+ * Sorted, because it is a menu built from an object's key order otherwise,
+ * which is the order somebody happened to type them in.
+ */
+export function projectStyleNames(files: Record<string, string>): string[] {
+  const names = new Set<string>();
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.startsWith('styles/') || !path.endsWith('.style')) {
+      continue;
+    }
+    try {
+      const parsed = JSON.parse(contents) as {styles?: Record<string, unknown>};
+      for (const name of Object.keys(parsed.styles ?? {})) {
+        names.add(name);
+      }
+    } catch {
+      // Mid-edit. A theme that does not parse offers nothing rather than
+      // emptying the menu of the ones that do.
+    }
+  }
+  return [...names].sort();
+}
+
+/**
  * The parameters each effect declares, keyed by its extension-less module path.
  *
  * Read straight off the `.effect` document rather than from `compileEffect`.

@@ -138,6 +138,7 @@ import {rulesButtonExtension} from './extensions/rulesButton';
 import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
+import {styleImportFieldExtension} from './extensions/styleImportField';
 import {worldContextExtension} from './extensions/worldContext';
 import fieldAnglePlugin, {fieldAngleArg} from './fields/FieldAngle';
 import {
@@ -183,6 +184,10 @@ import {
   effectFileOptions,
   effectFileOptionsExtension,
   liveDropdown,
+  styleFileOptions,
+  styleFileOptionsExtension,
+  styleNameOptions,
+  styleNameOptionsExtension,
   mapActorTypes,
   mapFieldOptions,
   mapOptions,
@@ -9346,6 +9351,94 @@ const worldPenWeight = defineBlock({
   },
 });
 
+/**
+ * `use theme ⟨styles/modern⟩` — which file a drawing's style names mean.
+ *
+ * ON THE WORLD, and that is the point of the split: the drawings name roles
+ * and this says what a role looks like, so swapping a theme is one row rather
+ * than an edit to every control (specs/STYLES_PLAN.md).
+ *
+ * The file is imported as DATA, the way an `.effect` is — the bundler loads
+ * the JSON, the engine resolves its tokens once, and nothing about styles
+ * reaches the generated code beyond this call.
+ */
+const worldUseTheme = defineBlock({
+  type: 'world_use_theme',
+  message0: 'use theme %1',
+  args0: [{type: 'field_dropdown', name: 'THEME', options: styleFileOptions}],
+  previousStatement: true,
+  nextStatement: true,
+  // The import extension AFTER the options one, so it wraps that validator
+  // rather than being wrapped by it (see styleImportField).
+  extensions: [
+    styleFileOptionsExtension,
+    styleImportFieldExtension,
+    openSourceButtonExtension,
+  ],
+  style: 'behavior_blocks',
+  tooltip:
+    'Say which theme this world\u2019s interface is painted in. Every ' +
+    '\u201cuse style\u201d in every drawing is looked up in this file.',
+  generator: {
+    javascript(block, generator) {
+      const path = block.getFieldValue('THEME');
+      // A project with no themes yet emits nothing rather than an import of
+      // the empty path, which does not resolve and takes the module down.
+      if (!path) {
+        return '';
+      }
+      addImport(
+        generator,
+        `mod:${path}`,
+        `import ${importVar(path)} from ${str(path)};`,
+      );
+      return `world.useTheme(${importVar(path)});\n`;
+    },
+  },
+});
+
+/**
+ * `use style ⟨button face⟩` — the pen, set from the theme, all at once.
+ *
+ * THE BLOCK THE OTHER PEN BLOCKS ARE FOR. A drawing that says "fill accent,
+ * outline at one pixel, corner eight" has the LOOK written into it, so one
+ * drawing cannot be both a bordered Classic and a shadowed borderless Modern.
+ * This says what the shape IS FOR and lets a file decide what that means
+ * (specs/STYLES_PLAN.md).
+ *
+ * A NAME, NOT A FILE. Which file the name is looked up in is the WORLD's to
+ * say (`use theme`), which is the whole of what makes a theme swappable: the
+ * drawings do not change when it does.
+ *
+ * A DROPDOWN, NEVER FREE TEXT, for the reason this lab has met four times —
+ * a name that resolves to nothing does nothing and says nothing
+ * (specs/BOXES_PLAN.md). It offers the union of what the project's themes
+ * define, because an actor file is shared between worlds and cannot know
+ * which theme it will be drawn under.
+ */
+const worldPenStyle = defineBlock({
+  type: 'world_pen_style',
+  message0: 'use style %1',
+  args0: [{type: 'field_dropdown', name: 'STYLE', options: styleNameOptions}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension, styleNameOptionsExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Paint everything after this the way the project\u2019s theme says a ' +
+    '\u201cbutton face\u201d or a \u201cpanel\u201d looks. Change the ' +
+    'theme and every control that names it changes with it.',
+  generator: {
+    javascript(block) {
+      const name = block.getFieldValue('STYLE');
+      // A project with no themes yet emits nothing rather than a lookup of
+      // the empty name, which would quietly set nothing every frame.
+      return name ? `pen.useStyle(world.styleNamed(${str(name)}));\n` : '';
+    },
+  },
+});
+
 /** A shape block: statement, drawing-only, and seeded with numbers. */
 const drawBlock = (
   type: string,
@@ -10884,6 +10977,8 @@ export const DOMAIN_BLOCKS = [
   worldPenShadow,
   worldPenNoShadow,
   worldPenWeight,
+  worldPenStyle,
+  worldUseTheme,
   worldDrawRectangle,
   worldDrawCircle,
   worldDrawLine,
@@ -10968,6 +11063,9 @@ export const DRAWING_CATEGORY: ToolboxCategory = {
     'world_pen_no_outline',
     // …and the three that decide what a control LOOKS like rather than what
     // color it is (specs/STYLES_PLAN.md).
+    // …and the one the other four are for: everything a named style says, at
+    // once, out of the theme the world points at (specs/STYLES_PLAN.md).
+    'world_pen_style',
     'world_pen_corner',
     'world_pen_shadow',
     'world_pen_no_shadow',
@@ -11117,6 +11215,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // that projects saved with one keep loading and keep meaning what they
       // meant, and stays offered under Rule, where it is a rule's `requires`
       // and still a real statement. It goes entirely once nothing holds one.
+      // Which theme the interface is painted in — the file every `use style`
+      // in every drawing is looked up in (specs/STYLES_PLAN.md).
+      'world_use_theme',
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_load_map_named',

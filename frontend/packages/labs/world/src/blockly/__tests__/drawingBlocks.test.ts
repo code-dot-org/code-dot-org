@@ -145,6 +145,39 @@ describe('the pen', () => {
     // driver made of that.
     expect(codeFor('world_pen_fill')).toBe('');
   });
+
+  it('rounds, casts and weights', () => {
+    expect(codeFor('world_pen_corner', {values: {RADIUS: '8'}})).toBe(
+      'pen.corner(8);\n',
+    );
+    expect(
+      codeFor('world_pen_shadow', {
+        values: {COLOR: "'#000000'", BLUR: '4', DOWN: '2'},
+      }),
+    ).toBe("pen.shadow('#000000', 4, 2);\n");
+    expect(codeFor('world_pen_no_shadow')).toBe('pen.noShadow();\n');
+    expect(codeFor('world_pen_weight', {fields: {WEIGHT: 'bold'}})).toBe(
+      'pen.weight(true);\n',
+    );
+    expect(codeFor('world_pen_weight', {fields: {WEIGHT: 'normal'}})).toBe(
+      'pen.weight(false);\n',
+    );
+  });
+
+  it('looks a style up in the WORLD, which is what makes a theme swappable', () => {
+    // The drawing names a role; which file that role means is the world's to
+    // say (`use theme`). So the generated call reaches for `world`, which a
+    // drawing's closure binds alongside the pen (specs/STYLES_PLAN.md).
+    expect(codeFor('world_pen_style', {fields: {STYLE: 'button face'}})).toBe(
+      'pen.useStyle(world.styleNamed("button face"));\n',
+    );
+  });
+
+  it('says nothing for a project with no themes yet', () => {
+    // Rather than a lookup of the empty name, which would quietly set nothing
+    // on every shape of every frame.
+    expect(codeFor('world_pen_style')).toBe('');
+  });
 });
 
 describe('the five things there are to draw', () => {

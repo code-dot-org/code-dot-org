@@ -73,6 +73,10 @@ import {importStockSound} from '../sound/importStockSound';
 import {setSoundImportHandler} from '../sound/soundImport';
 import {SoundLibraryDialog} from '../sound/SoundLibraryDialog';
 import type {StockSound} from '../sound/stock';
+import {importStockStyle} from '../styles/importStockStyle';
+import {ImportStyleDialog} from '../styles/ImportStyleDialog';
+import type {StockStyle} from '../styles/stock';
+import {setStyleImportHandler} from '../styles/styleImport';
 
 import {refreshFor} from './refreshRegistries';
 
@@ -82,6 +86,7 @@ type Shelf =
   | 'rule'
   | 'actor'
   | 'map'
+  | 'style'
   | AppearanceKind
   | 'sound'
   // …and the one that is not a shelf: enhancing carries the actor it is being
@@ -128,6 +133,7 @@ export const LibraryImports = () => {
     setRuleImportHandler(() => open('rule'));
     setActorImportHandler(() => open('actor'));
     setMapImportHandler(() => open('map'));
+    setStyleImportHandler(() => open('style'));
     setActorEnhanceHandler((target: EnhanceTarget) =>
       open({enhancing: target}),
     );
@@ -139,6 +145,7 @@ export const LibraryImports = () => {
       setRuleImportHandler(null);
       setActorImportHandler(null);
       setMapImportHandler(null);
+      setStyleImportHandler(null);
       setActorEnhanceHandler(null);
       setSoundImportHandler(null);
       setAppearanceImportHandler(null);
@@ -279,6 +286,19 @@ export const LibraryImports = () => {
             const {source, path} = importStockMap(
               sourcesRef.current.source,
               map,
+            );
+            took(source, path);
+          }}
+          onCancel={cancel}
+        />
+      )}
+      {shelf === 'style' && (
+        <ImportStyleDialog
+          onImport={(style: StockStyle) => {
+            // The THEME's path, which is what a `use theme` dropdown stores.
+            const {source, path} = importStockStyle(
+              sourcesRef.current.source,
+              style,
             );
             took(source, path);
           }}

@@ -22,6 +22,8 @@ import {
   setProjectActors,
   setProjectAnimationFiles,
   setProjectEffectFiles,
+  setProjectStyleFiles,
+  setProjectStyleNames,
   setProjectEffectParameters,
   setProjectMaps,
   setProjectRuleModules,
@@ -35,6 +37,8 @@ import {
   projectActorOptions,
   projectAnimationFileOptions,
   projectEffectFileOptions,
+  projectStyleFileOptions,
+  projectStyleNames,
   projectEffectParameters,
   projectMapActorTypes,
   projectOwnMetas,
@@ -131,6 +135,11 @@ export function refreshProjectDropdowns(
   setProjectAnimationFiles(animationFiles);
   const effectFiles = projectEffectFileOptions(files);
   setProjectEffectFiles(effectFiles);
+  // The themes, and the style names they define between them: one dropdown for
+  // `use theme` on a world, one for `use style` in a drawing
+  // (specs/STYLES_PLAN.md).
+  setProjectStyleFiles(projectStyleFileOptions(files));
+  setProjectStyleNames(projectStyleNames(files));
   const effectParameters = projectEffectParameters(files);
   setProjectEffectParameters(effectParameters);
   const maps = projectMapActorTypes(files);
