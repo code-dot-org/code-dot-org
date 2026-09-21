@@ -51,6 +51,8 @@ $tab-item-height: 34px;
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  // Tab labels and controls, not text to copy.
+  user-select: none;
   // The tabs are distinct destinations, not a continuous strip: separate them
   // enough to be told apart at a glance.
   gap: 10px;
@@ -122,9 +124,6 @@ $tab-segment-height: $tab-item-height - 2px;
   border: 1px solid var(--borders-neutral-strong);
   border-radius: 4px 4px 0 0;
   background: var(--background-neutral-primary);
-  // The group is labels and a menu, not text to copy: a drag that starts
-  // on the picker or crosses into the tabs selects nothing.
-  user-select: none;
 
   .tab {
     height: $tab-segment-height;
