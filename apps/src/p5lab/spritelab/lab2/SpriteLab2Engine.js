@@ -136,6 +136,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
     setRetainBlobsOnLoad(false);
+    // captureFirstFrame() callers, settled with the canvas after the first
+    // frame the next run draws (see onP5Setup and the draw loop).
+    this.frameCaptureWaiters_ = [];
+    this.frameCaptureArmed_ = false;
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
@@ -330,6 +334,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
+    // Wraps whichever draw loop the scene uses, so a captured frame is a
+    // finished one: every pass drawn, nothing overdrawn.
+    const drawLoop = library.commands.executeDrawLoopAndCallbacks;
+    library.commands.executeDrawLoopAndCallbacks = function () {
+      drawLoop.apply(this, arguments);
+      if (engine.frameCaptureArmed_) {
+        engine.frameCaptureArmed_ = false;
+        engine.settleFrameCaptures_(this.p5.canvas);
+      }
+    };
     // Story lanes: placement by name instead of coordinates, sized so two
     // characters share a scene; the right-lane character faces its partner
     // (generated art faces right natively).
@@ -653,6 +667,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     super.onP5Setup();
+    // A run has begun: the next frame drawn is its first.
+    this.frameCaptureArmed_ = this.frameCaptureWaiters_.length > 0;
     const p5 = this.p5Wrapper.p5;
     const density = Math.ceil(
       CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
@@ -730,6 +746,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.stopTickTimer();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
+    this.frameCaptureArmed_ = false;
+    this.settleFrameCaptures_(null);
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
@@ -937,6 +955,21 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       this.commands.drawStoryLabText.apply(this);
     };
+  }
+
+  /**
+   * The canvas as it stands after the first frame of the next run, or null
+   * if the engine is torn down first. Every caller waiting on the same run
+   * gets the same frame.
+   */
+  captureFirstFrame() {
+    return new Promise(resolve => this.frameCaptureWaiters_.push(resolve));
+  }
+
+  settleFrameCaptures_(canvas) {
+    const waiters = this.frameCaptureWaiters_;
+    this.frameCaptureWaiters_ = [];
+    waiters.forEach(resolve => resolve(canvas));
   }
 
   // Platformer physics for players and marked sprites (see

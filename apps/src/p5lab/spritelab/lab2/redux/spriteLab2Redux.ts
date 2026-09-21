@@ -9,6 +9,8 @@ export type Tab = (typeof ALL_TABS)[number];
 export interface SceneMetadata {
   id: string;
   name: string;
+  /** A picture of the scene, when it has one (sceneThumbnails.ts). */
+  thumbnail?: string;
 }
 
 // A scene from a section-mate's project, offered by the go-to-external-scene

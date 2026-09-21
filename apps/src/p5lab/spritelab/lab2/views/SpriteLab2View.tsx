@@ -35,6 +35,7 @@ import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -84,6 +85,7 @@ import spriteLab2Reducer, {
   ExternalSceneOption,
   MusicProjectOption,
   resetSpriteLab2,
+  SceneMetadata,
   setActiveTab,
   setExternalScenes,
   setMusicProjects,
@@ -98,6 +100,14 @@ import {
   parseExternalSceneKey,
   toExternalSceneOptions,
 } from '../scenesApi';
+import {
+  canvasToPngBytes,
+  copyFrame,
+  sceneBackgroundImage,
+  sceneFingerprint,
+  THUMBNAIL_QUIET_MS,
+  thumbnailFileName,
+} from '../sceneThumbnails';
 import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
@@ -378,10 +388,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [animationsSeeded, imagesMounted]);
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
-  const sceneMetadata = useMemo(
-    () => scenes.map(s => ({id: s.id, name: s.name})),
-    [scenes]
-  );
 
   // Create the pinned scene on first load, and again after
   // Start Over (the reinit count in the deps). On a scene-less project the
@@ -459,6 +465,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
+
+  // A scene shows its captured first frame; until it has one, the
+  // background its blocks name stands in.
+  const sceneMetadata: SceneMetadata[] = useMemo(
+    () =>
+      scenes.map(s => {
+        let thumbnail = s.thumbnail?.url;
+        if (!thumbnail) {
+          const background = sceneBackgroundImage(s);
+          const key =
+            background &&
+            animationList.orderedKeys.find(
+              k => animationList.propsByKey[k]?.name === background
+            );
+          const props = key ? animationList.propsByKey[key] : undefined;
+          thumbnail = props?.sourceUrl ?? props?.dataURI ?? undefined;
+        }
+        return {id: s.id, name: s.name, thumbnail};
+      }),
+    [scenes, animationList]
+  );
 
   // Keep activeSceneId pointing at a real scene: locked to the pin once the
   // ensure effect lands it, otherwise reset to the first scene when the
@@ -863,10 +890,122 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // so world edits don't churn their identities.
   const activeWorldRef = useRef<World | undefined>(undefined);
   const activeSceneTypeRef = useRef<SceneType | undefined>(undefined);
+  const activeSceneIdRef = useRef<string | undefined>(undefined);
   useEffect(() => {
     activeWorldRef.current = worldFor(activeScene);
     activeSceneTypeRef.current = activeScene?.type;
+    activeSceneIdRef.current = activeScene?.id;
   }, [activeScene, worldFor]);
+
+  // --- Scene thumbnails ---
+  // Every run's first frame is copied (cheap); the copy is kept only once
+  // the scene has held still for THUMBNAIL_QUIET_MS, and only if the scene
+  // differs from the one its stored picture shows. Project channels only:
+  // in level edit mode the uploads would land in the level's starter assets.
+  const scenesRef = useRef(scenes);
+  scenesRef.current = scenes;
+  const pendingThumbnail = useRef<{
+    sceneId: string;
+    fingerprint: string;
+    frame: HTMLCanvasElement;
+  } | null>(null);
+  const thumbnailTimer = useRef<number>();
+  // The scene whose run the armed capture belongs to. A capture that never
+  // got a run resolves at the next run's first frame, which is some other
+  // scene's picture.
+  const capturingSceneRef = useRef<string | null>(null);
+  const thumbnailsEnabled = !!channelId && !!uploadImage && !isToolboxMode;
+
+  const commitThumbnail = useCallback(async () => {
+    const pending = pendingThumbnail.current;
+    pendingThumbnail.current = null;
+    if (!pending || !channelId || !uploadImage) {
+      return;
+    }
+    const scene = scenesRef.current.find(s => s.id === pending.sceneId);
+    // Edited again while we waited: the run that followed armed its own
+    // capture, so this one is stale.
+    if (
+      !scene ||
+      sceneFingerprint(scene, getStore().getState().animationList) !==
+        pending.fingerprint
+    ) {
+      return;
+    }
+    try {
+      const bytes = await canvasToPngBytes(pending.frame);
+      const url = await uploadImage(
+        thumbnailFileName(scene.id, pending.fingerprint),
+        bytes,
+        'image/png'
+      );
+      const previous = scene.thumbnail?.url;
+      updateSources(prev => ({
+        ...prev,
+        scenes: getScenes(prev).map(s =>
+          s.id === scene.id
+            ? {...s, thumbnail: {url, fingerprint: pending.fingerprint}}
+            : s
+        ),
+      }));
+      if (
+        previous &&
+        previous !== url &&
+        previous.startsWith(`/v3/assets/${channelId}/`)
+      ) {
+        HttpClient.delete(previous, true).catch(() => undefined);
+      }
+    } catch (e) {
+      // Best effort; the next quiet moment tries again.
+      console.warn('Scene thumbnail not saved', e);
+    }
+  }, [channelId, uploadImage, updateSources]);
+
+  // Call before starting the run whose first frame should be the picture.
+  const requestThumbnail = useCallback(
+    (sceneId: string) => {
+      const engine = engineRef.current;
+      if (!engine || !thumbnailsEnabled) {
+        return;
+      }
+      capturingSceneRef.current = sceneId;
+      engine.captureFirstFrame().then((stage: HTMLCanvasElement | null) => {
+        if (!stage || capturingSceneRef.current !== sceneId) {
+          return;
+        }
+        const scene = scenesRef.current.find(s => s.id === sceneId);
+        if (!scene) {
+          return;
+        }
+        const fingerprint = sceneFingerprint(
+          scene,
+          getStore().getState().animationList
+        );
+        if (scene.thumbnail?.fingerprint === fingerprint) {
+          return;
+        }
+        pendingThumbnail.current = {
+          sceneId,
+          fingerprint,
+          frame: copyFrame(stage),
+        };
+        window.clearTimeout(thumbnailTimer.current);
+        thumbnailTimer.current = window.setTimeout(
+          commitThumbnail,
+          THUMBNAIL_QUIET_MS
+        );
+      });
+    },
+    [thumbnailsEnabled, commitThumbnail]
+  );
+
+  useEffect(
+    () => () => {
+      window.clearTimeout(thumbnailTimer.current);
+      pendingThumbnail.current = null;
+    },
+    []
+  );
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
@@ -878,8 +1017,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     const {result: program, referencedImages} = collectImageReferences(
       () => compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
     );
+    if (activeSceneIdRef.current) {
+      requestThumbnail(activeSceneIdRef.current);
+    }
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
-  }, [dispatch, getCode]);
+  }, [dispatch, getCode, requestThumbnail]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -921,9 +1063,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return prelude + code;
       });
       dispatch(setIsRunning(true));
+      requestThumbnail(scene.id);
       engine.runProgram(program, referencedImages, scene.type);
     },
-    [dispatch, activeSceneId, getCode, worldFor]
+    [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
   );
 
   const runScene = useCallback(

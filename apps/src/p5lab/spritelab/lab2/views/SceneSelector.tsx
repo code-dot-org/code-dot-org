@@ -1,16 +1,16 @@
+import {useDropdownContext} from '@code-dot-org/component-library/common/contexts';
 import Dialog from '@code-dot-org/component-library/dialog';
+import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
+import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
 import {SceneMetadata} from '../redux/spriteLab2Redux';
 import {SceneType} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
-
-// Sentinel option value for "create a new scene" (scene ids are uuids, so no
-// collision).
-const NEW_SCENE_VALUE = '__new_scene__';
 
 // What each scene type is called for a student choosing one.
 const SCENE_TYPE_LABELS: {value: SceneType; label: string}[] = [
@@ -26,13 +26,111 @@ interface SceneSelectorProps {
   allowCreate?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string, type: SceneType) => void;
+  /** Opens the Scenes gallery; the menu offers it only when given. */
+  onManageScenes?: () => void;
 }
+
+/** A scene's picture at thumbnail size, or a blank tile until it has one. */
+const SceneThumb: React.FunctionComponent<{
+  scene: SceneMetadata | undefined;
+  small?: boolean;
+}> = ({scene, small}) => (
+  <span
+    className={classNames(
+      moduleStyles.sceneThumb,
+      small && moduleStyles.sceneThumbSmall
+    )}
+  >
+    {scene?.thumbnail ? (
+      <img src={scene.thumbnail} alt="" />
+    ) : (
+      <FontAwesomeV6Icon iconName="image" iconStyle="regular" />
+    )}
+  </span>
+);
+
+interface SceneMenuProps {
+  scenes: SceneMetadata[];
+  activeSceneId: string | null;
+  allowCreate: boolean;
+  onSelectScene: (sceneId: string) => void;
+  onNewScene: () => void;
+  onManageScenes?: () => void;
+}
+
+// Rendered inside the dropdown, where its context closes the menu.
+const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
+  scenes,
+  activeSceneId,
+  allowCreate,
+  onSelectScene,
+  onNewScene,
+  onManageScenes,
+}) => {
+  const {setActiveDropdownName} = useDropdownContext();
+  const choose = (action: () => void) => () => {
+    setActiveDropdownName('');
+    action();
+  };
+  return (
+    <ul className={moduleStyles.sceneMenu} role="listbox" aria-label="Scenes">
+      {scenes.map(scene => (
+        <li key={scene.id}>
+          <button
+            type="button"
+            role="option"
+            aria-selected={scene.id === activeSceneId}
+            className={classNames(
+              moduleStyles.sceneMenuItem,
+              scene.id === activeSceneId && moduleStyles.sceneMenuItemActive
+            )}
+            onClick={choose(() => onSelectScene(scene.id))}
+          >
+            <SceneThumb scene={scene} />
+            <span className={moduleStyles.sceneMenuName}>{scene.name}</span>
+          </button>
+        </li>
+      ))}
+      {(allowCreate || onManageScenes) && (
+        <li className={moduleStyles.sceneMenuDivider} role="presentation" />
+      )}
+      {allowCreate && (
+        <li>
+          <button
+            type="button"
+            className={moduleStyles.sceneMenuItem}
+            onClick={choose(onNewScene)}
+          >
+            <span className={moduleStyles.sceneMenuIcon}>
+              <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+            </span>
+            <span className={moduleStyles.sceneMenuName}>New scene…</span>
+          </button>
+        </li>
+      )}
+      {onManageScenes && (
+        <li>
+          <button
+            type="button"
+            className={moduleStyles.sceneMenuItem}
+            onClick={choose(onManageScenes)}
+          >
+            <span className={moduleStyles.sceneMenuIcon}>
+              <FontAwesomeV6Icon iconName="table-cells" iconStyle="solid" />
+            </span>
+            <span className={moduleStyles.sceneMenuName}>Manage scenes…</span>
+          </button>
+        </li>
+      )}
+    </ul>
+  );
+};
 
 /**
  * Scene picker in the tab bar: choose which scene the World and Code sub-tabs
- * operate on, or create a new scene via the option at the bottom (which opens
- * a naming dialog). Scene names are labels only; the ids underneath are the
- * source of truth.
+ * operate on, each shown with its picture; make a new scene via the option
+ * at the bottom (which opens a naming dialog); or open the Scenes gallery.
+ * Scene names are labels only; the ids underneath are the source of truth.
  */
 const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   scenes,
@@ -41,6 +139,7 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   allowCreate = true,
   onSelectScene,
   onCreateScene,
+  onManageScenes,
 }) => {
   const [naming, setNaming] = useState(false);
   const [newName, setNewName] = useState('');
@@ -54,19 +153,6 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
     setNewType('story');
   }, []);
 
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLSelectElement>) => {
-      if (e.target.value === NEW_SCENE_VALUE) {
-        // Open the naming dialog; the controlled value snaps back to the active
-        // scene until a new one is actually created.
-        setNaming(true);
-      } else {
-        onSelectScene(e.target.value);
-      }
-    },
-    [onSelectScene]
-  );
-
   const handleCreate = useCallback(() => {
     const name = newName.trim();
     if (name) {
@@ -75,22 +161,43 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
     closeDialog();
   }, [newName, newType, onCreateScene, closeDialog]);
 
+  const active = scenes.find(s => s.id === activeSceneId);
+
   return (
     <>
-      <select
-        className={moduleStyles.sceneSelect}
-        value={activeSceneId ?? ''}
-        onChange={handleChange}
+      <CustomDropdown
+        name="scene"
+        className={moduleStyles.sceneDropdown}
+        size="s"
+        labelText="Scene"
+        aria-label={`Scene: ${active?.name ?? ''}`}
         disabled={disabled}
-        aria-label="Scene"
+        useMuiButtonAsTrigger
+        triggerButtonProps={{
+          variant: 'text',
+          color: 'secondary',
+          size: 'extraSmall',
+          className: moduleStyles.sceneTrigger,
+          children: (
+            <>
+              <SceneThumb scene={active} small />
+              <span className={moduleStyles.sceneTriggerName}>
+                {active?.name ?? ''}
+              </span>
+              <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
+            </>
+          ),
+        }}
       >
-        {scenes.map(scene => (
-          <option key={scene.id} value={scene.id}>
-            {scene.name}
-          </option>
-        ))}
-        {allowCreate && <option value={NEW_SCENE_VALUE}>＋ New scene…</option>}
-      </select>
+        <SceneMenu
+          scenes={scenes}
+          activeSceneId={activeSceneId}
+          allowCreate={allowCreate}
+          onSelectScene={onSelectScene}
+          onNewScene={() => setNaming(true)}
+          onManageScenes={onManageScenes}
+        />
+      </CustomDropdown>
       {naming && (
         <Dialog
           title="New scene"
