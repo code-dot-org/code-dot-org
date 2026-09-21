@@ -67,7 +67,7 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
       },
       ...populatedFileTypeConfigs.map(({config, count}) => ({
         value: config.id,
-        label: `${config.label} ${count}`,
+        label: `${config.label} (${count})`,
         icon: config.icon,
       })),
     ],
