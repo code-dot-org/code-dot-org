@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
@@ -14,6 +14,32 @@ import moduleStyles from './sprite-lab2-view.module.scss';
     game. */
 export const PLAY_GUIDE_WIDTH_PX = 400;
 
+/**
+ * The panel's size once its animations end: a hidden copy laid out with the
+ * transitions off and the body at its natural height. A size read from the
+ * live panel mid-animation would send siblings to a place the guide only
+ * passes through, and it can pass through several.
+ */
+function settledSize(
+  panel: HTMLElement,
+  animatorClass: string
+): {width: number; height: number} {
+  const copy = panel.cloneNode(true) as HTMLElement;
+  copy.removeAttribute('id');
+  copy.style.transition = 'none';
+  copy.style.animation = 'none';
+  copy.style.visibility = 'hidden';
+  const animator = copy.querySelector<HTMLElement>(`.${animatorClass}`);
+  if (animator) {
+    animator.style.transition = 'none';
+    animator.style.height = 'auto';
+  }
+  panel.parentElement?.appendChild(copy);
+  const {width, height} = copy.getBoundingClientRect();
+  copy.remove();
+  return {width, height};
+}
+
 interface GenerateSpriteLabProps {
   levelMode?: LevelMode;
   instructions?: string;
@@ -21,8 +47,8 @@ interface GenerateSpriteLabProps {
   collapsedText?: string;
   /** Fixed width in px; the default is the Guide's normal share. */
   width?: number;
-  /** The panel's rendered size, whenever it changes, for siblings that lay
-      out around it. */
+  /** The size the panel is settling to, whenever it changes, for siblings
+      that lay out around it. */
   onLayout?: (size: {width: number; height: number}) => void;
   /** Offer the Continue button: the guide reached a step that marks the
       level's task complete. */
@@ -48,15 +74,23 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   const [collapsed, setCollapsed] = useState(false);
 
   const panelRef = useRef<HTMLDivElement | null>(null);
+  // Before paint, so a sibling laid out from the size moves once: a report
+  // after paint would first place it against the old size. The observer
+  // covers what props do not change, the container resizing.
+  useLayoutEffect(() => {
+    const panel = panelRef.current;
+    if (panel && onLayout) {
+      onLayout(settledSize(panel, moduleStyles.guideAnimator));
+    }
+  }, [onLayout, width, collapsed, instructions, collapsedText, showContinue]);
   useEffect(() => {
     const panel = panelRef.current;
     if (!panel || !onLayout) {
       return;
     }
-    const observer = new ResizeObserver(() => {
-      const rect = panel.getBoundingClientRect();
-      onLayout({width: rect.width, height: rect.height});
-    });
+    const observer = new ResizeObserver(() =>
+      onLayout(settledSize(panel, moduleStyles.guideAnimator))
+    );
     observer.observe(panel);
     return () => observer.disconnect();
   }, [onLayout]);
