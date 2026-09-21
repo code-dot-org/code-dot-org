@@ -514,10 +514,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             )}
             <div className={moduleStyles.formStack}>
               {/* Regenerating can't change what kind of image this is, and a
-                  level can lock the choice for new images too. The student
-                  form drops the group altogether when the level locks it:
-                  a row of choices that cannot be made only pushes Generate
-                  down, under the floating guide on short screens. */}
+                  level can lock the choice for new images too; the student
+                  form drops a locked group, which would only push Generate
+                  down. */}
               {!(lockedImageType && !advanced) && (
                 <fieldset
                   className={moduleStyles.radioGroup}

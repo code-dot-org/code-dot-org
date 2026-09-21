@@ -90,8 +90,8 @@ export interface Sources extends ProjectSources {
  */
 export interface GuideStep {
   text: string;
-  /** A short line the guide keeps when the student collapses it (freeplay),
-      so the Continue button does not sit there alone. */
+  /** A short line the guide keeps when the student collapses it, so the
+      Continue button does not sit there alone. */
   collapsedText?: string;
   /** Offer the Continue button to the next level while on this step. */
   showContinue?: boolean;

@@ -11,7 +11,7 @@ import {SpriteLab2LevelProperties} from '../types';
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 /** The guide's width on the Play tab, where it shares the room with the
-    game: the play view keeps this much plus the guide's offset clear. */
+    game. */
 export const PLAY_GUIDE_WIDTH_PX = 400;
 
 interface GenerateSpriteLabProps {
@@ -21,8 +21,8 @@ interface GenerateSpriteLabProps {
   collapsedText?: string;
   /** Fixed width in px; the default is the Guide's normal share. */
   width?: number;
-  /** The panel's rendered size, whenever it changes: collapsing, a new
-      step's text, a width change. For siblings that lay out around it. */
+  /** The panel's rendered size, whenever it changes, for siblings that lay
+      out around it. */
   onLayout?: (size: {width: number; height: number}) => void;
   /** Offer the Continue button: the guide reached a step that marks the
       level's task complete. */
