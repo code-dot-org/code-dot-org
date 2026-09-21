@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
+  max-width: 800px;
   background: var(--background-neutral-primary);
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-lg);

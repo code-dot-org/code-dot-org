@@ -15,12 +15,8 @@ import styles from './quiz-attempt-view.module.scss';
 export default function useQuizAttemptView({
   levelProperties,
 }: LabProps): QuizViewContent {
-  const {
-    id: levelId,
-    name,
-    displayName,
-    quizQuestions = [],
-  } = levelProperties as QuizLevelProperties;
+  const {id: levelId, quizQuestions = []} =
+    levelProperties as QuizLevelProperties;
 
   const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
 
@@ -87,7 +83,6 @@ export default function useQuizAttemptView({
     workspaceContent: (
       <div className={styles.attemptView}>
         <div className={styles.attemptBody}>
-          <Typography variant="h2">{displayName || name}</Typography>
           {error && (
             <Typography variant="body3" color="error">
               {error}
