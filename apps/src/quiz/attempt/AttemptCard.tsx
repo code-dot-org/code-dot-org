@@ -7,8 +7,6 @@ export interface AttemptCardProps {
   // Omit for a quiz with only one question.
   questionLabel?: string;
   title: string;
-  // Shown once the question has been answered if enabled.
-  answerExplanation?: string;
   // The type-specific answer area (choices, free response, etc).
   children: React.ReactNode;
 }
@@ -18,7 +16,6 @@ export interface AttemptCardProps {
 const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
   questionLabel,
   title,
-  answerExplanation,
   children,
 }) => (
   <div className={styles.card}>
@@ -32,18 +29,6 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
         <Typography variant="h4">{title}</Typography>
       </div>
       <div className={styles.questionBody}>{children}</div>
-      {answerExplanation && (
-        <div className={styles.explanation}>
-          <div className={styles.explanationHeader}>
-            <Typography variant="overline2" className={styles.explanationLabel}>
-              Answer explanation
-            </Typography>
-          </div>
-          <Typography variant="body3" className={styles.explanationBody}>
-            {answerExplanation}
-          </Typography>
-        </div>
-      )}
     </div>
   </div>
 );

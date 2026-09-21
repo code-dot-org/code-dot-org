@@ -25,23 +25,3 @@
 .questionLabel {
   color: var(--text-neutral-tertiary);
 }
-
-.explanation {
-  overflow: hidden;
-  border: 1px solid var(--border-success-mid);
-  border-radius: var(--shape-sm);
-}
-
-.explanationHeader {
-  padding: 10px 12px;
-  background: var(--background-success-light);
-  border-bottom: 1px solid var(--border-success-mid);
-}
-
-.explanationLabel {
-  color: var(--text-success-primary);
-}
-
-.explanationBody {
-  padding: 12px;
-}
