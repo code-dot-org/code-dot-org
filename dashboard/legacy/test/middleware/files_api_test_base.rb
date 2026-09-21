@@ -1,5 +1,4 @@
 require_relative 'middleware_test_helper' # Must be required first to establish load paths
-require 'mocha/minitest'
 require_relative '../../middleware/files_api'
 require_relative '../../middleware/channels_api'
 require 'cdo/aws/s3'
