@@ -175,7 +175,7 @@ const UnifiedBackpackPanel: React.FC<UnifiedBackpackPanelProps> = ({
   }, [backpackApi, loadFiles, markRecentlyAdded]);
 
   useEffect(() => {
-    // Deleting the last file of a extension group retires that extension, so fall back to
+    // Deleting the last file of an extension group retires that extension, so fall back to
     // showing everything rather than leaving an empty filter selected.
     if (
       selectedExtension !== ALL_FILES_ID &&
