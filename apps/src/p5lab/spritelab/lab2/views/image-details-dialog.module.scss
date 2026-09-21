@@ -34,9 +34,29 @@
 
   --dialog-panel-bg: var(--background-neutral-primary);
 
+  // Two columns: the pane on the left spans both rows; the details and the
+  // footer stack on the right with the footer at the bottom, so Generate
+  // ends level with the image. The body's own box gives way to the grid.
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 16px 20px;
+  padding: 16px;
+
+  .body {
+    display: contents;
+  }
+
+  .detailsPane {
+    grid-column: 2;
+  }
+
   .footer {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    padding: 0;
     border-top: none;
-    padding-top: 0;
   }
 
   // The image sits on the stage itself: no frame, and no checkerboard (that
@@ -45,6 +65,7 @@
   // footer's Generate button must clear the guide pinned below it (about
   // 120px of viewport), and the header, paddings and footer take the rest.
   .imagePane {
+    grid-row: 1 / -1;
     width: clamp(220px, calc(100vh - 290px), 380px);
     height: clamp(220px, calc(100vh - 290px), 380px);
     border: none;
