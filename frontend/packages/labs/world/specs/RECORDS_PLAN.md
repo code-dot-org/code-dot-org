@@ -225,6 +225,26 @@ in a Scroll View, remembered by kind.
   of this is a real product (specs/SAVING_PLAN.md).
 - **Nothing is saved automatically.** A block says when.
 
+## Built
+
+The engine and the blocks, in the order the plan argued for:
+
+- **The key carries the project first.** `World.useChannel`, lent like the
+  storage and the clock, and `world-lab.memory.<channel>.<name>`. A world lent
+  no channel files under the shared slot the lab used before, which is what
+  every headless test runs on.
+- **`is data`** — `ActorBuilder.isData()` and a row in `define actor`, which
+  suppresses the seeded position and appearance for that kind.
+- **`remember every ⟨Note⟩ as ⟨…⟩`** and **`bring back every ⟨Note⟩ from
+⟨…⟩`**, over each actor's own properties, refusing references, answering
+  a count rather than a boolean, and forgiving a field either side does not
+  know.
+
+The shelf ledger earned itself again on the way: `is data` was written,
+registered and offered, and `shelfCoverage.test` failed because no tile
+granted it — which is the exact bug that ledger exists for, caught in the
+commit that introduced it rather than months later.
+
 ## Obligations
 
 - Engine tests for the round trip, for the refusals (references, absent

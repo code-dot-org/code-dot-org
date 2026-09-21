@@ -72,6 +72,37 @@ export class ActorBuilder {
     this.name = opts.name;
   }
 
+  /**
+   * `is data` — a kind that is a RECORD and not a thing in the world.
+   *
+   * WHAT IT SUPPRESSES is the seeding below: an actor with no positional
+   * trait is not drawn, is not in the spatial index, is not hit-tested, and
+   * is walked by no step that asks for positioned actors. That was the
+   * ordinary behaviour once, and was taken away ON PURPOSE — a forgotten
+   * `use trait` row gave an actor that existed and could not be seen, which
+   * reads as a bug rather than as a decision.
+   *
+   * So it comes back as a DECLARATION rather than as an omission. Forgetting
+   * a row still gives a normal actor; only saying this gives one with no
+   * place (specs/RECORDS_PLAN.md).
+   *
+   * EVERYTHING ELSE IS UNCHANGED. It has its own properties, it has an age,
+   * it raises and hears events, it runs its own steps, and it is in
+   * `all actors` — which is how a project finds its records at all. It is a
+   * live object; it is not a LOCATED one.
+   */
+  isData(): this {
+    this.data = true;
+    return this;
+  }
+
+  /** Whether this kind is a record rather than a thing on the screen. */
+  get isRecord(): boolean {
+    return this.data;
+  }
+
+  private data = false;
+
   useTraits(traits: Trait[]): this {
     this.traits = [...this.traits, ...traits];
     return this;
@@ -132,6 +163,9 @@ export class ActorBuilder {
    */
   actsLike(other: ActorBuilder): this {
     this.traits = [...this.traits, ...other.traits];
+    // …and whether it is a record. A kind acting like a data kind is one too;
+    // saying `is data` itself is the other way to become one.
+    this.data = this.data || other.data;
     this.overrides.push(...other.overrides);
     this.handlers.push(...other.handlers);
     this.steps.push(...other.steps);
@@ -410,7 +444,10 @@ export class ActorBuilder {
       id: instanceId ?? this.id,
       type: type ?? this.id,
       name: this.name,
-      traits: [...FOUNDATION_TRAITS, ...this.traits],
+      // The foundation, unless this kind said it has no place (`isData`).
+      traits: this.data
+        ? [...this.traits]
+        : [...FOUNDATION_TRAITS, ...this.traits],
       overrides: [...this.overrides],
       handlers: [...this.handlers],
       effects: [...this.effects],

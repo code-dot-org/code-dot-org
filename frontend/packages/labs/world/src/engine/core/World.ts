@@ -2571,9 +2571,37 @@ export class World {
 
   private storage: WorldStorage | undefined;
 
-  /** The key a name is stored under, namespaced so nothing else collides. */
+  /**
+   * Which PROJECT this is, for filing what it remembers under.
+   *
+   * LENT, like the storage and the clock, and for the same reason: a project
+   * is a thing the lab knows about and this half does not. The driver hands
+   * over the channel the project lives at (`/projects/world/<channel>/edit`).
+   *
+   * A world lent none files under a slot shared with every other project on
+   * the browser, which is what the whole lab did before this and is what
+   * every headless test still does.
+   */
+  useChannel(channel: string): void {
+    this.channel = channel;
+  }
+
+  private channel = '';
+
+  /**
+   * The key a name is stored under.
+   *
+   * THE PROJECT IS IN IT, and that is not a nicety. Storage belongs to an
+   * ORIGIN, and every project in the lab runs on the same sandbox origin —
+   * so a key of the name alone means every published app that keeps a
+   * `score` reads and writes the same slot as every other. Tolerable while a
+   * learner has one project; a bug the moment anybody shares one, which is
+   * the point of saving at all (specs/RECORDS_PLAN.md).
+   */
   private memoryKey(name: string): string {
-    return `world-lab.memory.${name}`;
+    return this.channel
+      ? `world-lab.memory.${this.channel}.${name}`
+      : `world-lab.memory.${name}`;
   }
 
   /**
@@ -2647,6 +2675,114 @@ export class World {
       }
     }
     return true;
+  }
+
+  /**
+   * Write every actor of `kind`, in order — `remember every ⟨Note⟩ as ⟨…⟩`.
+   *
+   * A RECORD IS AN ACTOR. It has named typed fields, an inspector that edits
+   * them, blocks that read them and a picture; a second thing with named
+   * fields beside it would be a second way to say what the lab already says
+   * (specs/RECORDS_PLAN.md). So what was missing was never a way to describe
+   * a record — only a way to keep one.
+   *
+   * ITS OWN PROPERTIES AND NOTHING ELSE. A kind's `define property` rows are
+   * what that kind says its state is; trait properties are a rule's business
+   * — where it is, whether it holds the keyboard, how much health it has. A
+   * project that wants something kept declares it on the kind, which is the
+   * direction this lab already pushes.
+   *
+   * REFERENCES ARE REFUSED. A property holding an actor has nothing to point
+   * at in another run: `loadMap` resolves one in a second pass because both
+   * ends are in the same map, and two runs are not. Storing it would write
+   * something that cannot come back.
+   */
+  rememberActors(kind: string, name: string): boolean {
+    if (!this.storage) {
+      return false;
+    }
+    const rows = this.actorList
+      .filter(actor => actor.type === kind)
+      .map(actor => {
+        const row: Record<string, unknown> = {};
+        for (const property of actor.ownProperties()) {
+          if (property.type === 'actor' || property.type === 'actors') {
+            continue;
+          }
+          row[property.id] = actor.get(property);
+        }
+        return row;
+      });
+    try {
+      this.storage.setItem(
+        this.memoryKey(name),
+        JSON.stringify({kind, rows}),
+      );
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Make one actor per stored record — `bring back every ⟨Note⟩ from ⟨…⟩`.
+   *
+   * ANSWERS HOW MANY, where its neighbours answer whether. "Was there
+   * anything saved" is `> 0`, and the count is what a project actually wants
+   * — a first run answers zero, which is the same thing a start screen asks
+   * `recall` for.
+   *
+   * IT ADDS, IT DOES NOT REPLACE. Called twice it makes two sets. A project
+   * that might is expected to `remove actor ⟨any ⟨Note⟩⟩` first, which is one
+   * block it already has; quietly clearing first would destroy actors this
+   * was never shown, which is a worse surprise than duplicates anybody can
+   * see.
+   *
+   * FORGIVING ON BOTH SIDES, as `recall` is: a field the data does not
+   * mention keeps the kind's default, and a stored field the kind no longer
+   * declares is ignored. Saved data outlives edits.
+   */
+  recallActors(kind: string, name: string): number {
+    if (!this.storage) {
+      return 0;
+    }
+    const template = this.types.get(kind);
+    if (!template) {
+      return 0; // a kind this world does not have is nothing to make
+    }
+    let raw: string | null = null;
+    try {
+      raw = this.storage.getItem(this.memoryKey(name));
+    } catch {
+      return 0;
+    }
+    if (raw === null) {
+      return 0;
+    }
+    let read: unknown;
+    try {
+      read = JSON.parse(raw);
+    } catch {
+      return 0; // somebody else's key, or a half-written one
+    }
+    const held = read as {kind?: unknown; rows?: unknown};
+    if (held.kind !== kind || !Array.isArray(held.rows)) {
+      return 0;
+    }
+    let made = 0;
+    for (const row of held.rows as Array<Record<string, unknown>>) {
+      if (!row || typeof row !== 'object') {
+        continue;
+      }
+      const actor = this.addActor(template, undefined, kind);
+      for (const property of actor.ownProperties()) {
+        if (property.id in row) {
+          actor.set(property, row[property.id] as never);
+        }
+      }
+      made += 1;
+    }
+    return made;
   }
 
   /** Throw a memory away, so an app that can save can also reset. */

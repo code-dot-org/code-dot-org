@@ -35,6 +35,15 @@ export const useTrait = (trait: string) => ({
  * Bars (`ActorBuilder.actsLike`). The actor named has to be a file the project
  * holds, which is what a shelf entry's `actors` brings.
  */
+/**
+ * `is data` — this kind is a RECORD, with fields and nowhere to be.
+ *
+ * Not drawn, in no search over places, hit-tested by nothing; still has its
+ * properties, its events and its place in `all actors`
+ * (specs/RECORDS_PLAN.md).
+ */
+export const isData = () => ({type: 'world_actor_is_data'});
+
 export const actsLike = (path: string) => ({
   type: 'world_acts_like',
   fields: {ACTOR: path},

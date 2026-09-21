@@ -660,6 +660,42 @@ const worldUseTrait = defineBlock({
  * because that is what reading a file downwards should mean. The builder says
  * how; this only has to be a row.
  */
+/**
+ * `is data` — a kind that is a RECORD and not a thing on the screen.
+ *
+ * A todo, a contact, the state of a saved game: named fields a project keeps,
+ * with nowhere to be. Saying this suppresses the position and the appearance
+ * every actor is otherwise given, so it is not drawn, is in no search over
+ * places, and is hit-tested by nothing — while still having its properties,
+ * its events, its steps and its place in `all actors`, which is how a project
+ * finds its records (specs/RECORDS_PLAN.md).
+ *
+ * A DECLARATION, NOT AN OMISSION, which is the whole of why it exists. An
+ * actor with no positional trait was the ordinary case once and was taken
+ * away on purpose: a forgotten `use trait` row gave an actor that existed and
+ * could not be seen, which reads as a bug rather than a decision. Forgetting
+ * a row still gives a normal actor; only saying this gives one with no place.
+ */
+const worldActorIsData = defineBlock({
+  type: 'world_actor_is_data',
+  message0: 'is data',
+  previousStatement: true,
+  nextStatement: true,
+  // Under `define actor`, where `actor` is the builder — the same home and
+  // the same warning `acts like` has.
+  extensions: [traitContextExtension],
+  style: 'behavior_blocks',
+  tooltip:
+    'This kind is a record, not something on the screen: it has fields and ' +
+    'no place. It is not drawn and cannot be clicked, and everything that ' +
+    'reads or writes its properties still works.',
+  generator: {
+    javascript() {
+      return 'actor.isData();\n';
+    },
+  },
+});
+
 const worldActsLike = defineBlock({
   type: 'world_acts_like',
   message0: 'acts like %1',
@@ -6610,6 +6646,92 @@ const worldSaveMemory = defineBlock({
 });
 registerValueShadows('world_save_memory', [MEMORY_NAME]);
 
+/**
+ * `remember every ⟨Note⟩ as ⟨"notes"⟩` — keep a kind's actors.
+ *
+ * A RECORD IS AN ACTOR. It has named typed fields, an inspector that edits
+ * them and blocks that read them, so a `record` value type beside it would be
+ * a second way to say what the lab already says. What was missing was never a
+ * way to DESCRIBE a record, only a way to keep one (specs/RECORDS_PLAN.md).
+ *
+ * Its own properties and nothing else: a kind's `define property` rows are
+ * what that kind says its state is, and where it happens to be is a rule's
+ * business. A field holding another ACTOR is left out, because across two
+ * runs there is nothing for it to point at.
+ */
+const worldRememberActors = defineBlock({
+  type: 'world_remember_actors',
+  message0: 'remember every %1 as %2',
+  args0: [
+    {type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions},
+    {type: 'input_value', name: 'NAME', check: 'String'},
+  ],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [
+    actorOptionsExtension,
+    worldContextExtension,
+    valueShadowExtension,
+  ],
+  style: 'setup_blocks',
+  tooltip:
+    'Keep every actor of this kind, with the properties it declares for ' +
+    'itself. Answers whether it could be written — a browser may refuse.',
+  generator: {
+    javascript(block, generator) {
+      const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
+      return [
+        `world.rememberActors(${str(block.getFieldValue('ACTOR'))}, ${name})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_remember_actors', [MEMORY_NAME]);
+
+/**
+ * `bring back every ⟨Note⟩ from ⟨"notes"⟩` — and say how many there were.
+ *
+ * A NUMBER where its neighbours answer whether: "was there anything saved" is
+ * `> 0`, and the count is what a project actually wants. A first run answers
+ * zero, which is the same thing a start screen asks `load` for.
+ *
+ * IT ADDS. Called twice it makes two sets; a project that might is expected
+ * to `remove actor ⟨any ⟨Note⟩⟩` first. Clearing quietly would destroy actors
+ * this was never shown, which is a worse surprise than duplicates anybody can
+ * see.
+ */
+const worldRecallActors = defineBlock({
+  type: 'world_recall_actors',
+  message0: 'bring back every %1 from %2',
+  args0: [
+    {type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions},
+    {type: 'input_value', name: 'NAME', check: 'String'},
+  ],
+  inputsInline: true,
+  output: 'Number',
+  extensions: [
+    actorOptionsExtension,
+    worldContextExtension,
+    valueShadowExtension,
+  ],
+  style: 'setup_blocks',
+  tooltip:
+    'Make one actor of this kind for every one that was kept under that ' +
+    'name, and answer how many. None saved answers 0. It ADDS to what is ' +
+    'already there.',
+  generator: {
+    javascript(block, generator) {
+      const name = generator.valueToCode(block, 'NAME', Order.NONE) || "''";
+      return [
+        `world.recallActors(${str(block.getFieldValue('ACTOR'))}, ${name})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_recall_actors', [MEMORY_NAME]);
+
 const worldRecallMemory = defineBlock({
   type: 'world_recall_memory',
   message0: 'load what the world remembered as %1',
@@ -10574,6 +10696,9 @@ export const DOMAIN_BLOCKS = [
   worldRemoveActor,
   worldPauseGame,
   worldSaveMemory,
+  worldActorIsData,
+  worldRememberActors,
+  worldRecallActors,
   worldRecallMemory,
   worldForgetMemory,
   worldResumeGame,
@@ -10826,6 +10951,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // the hat — the same block a rule declares its events with
       // (`ActorBuilder.defineEvent`).
       'world_rule_event',
+      // …and whether this kind is a RECORD at all: fields, and nowhere to be
+      // (specs/RECORDS_PLAN.md).
+      'world_actor_is_data',
       // …and the fourth: what this kind LOOKS like. A declaration like the
       // three above it and reached the same way — the pencil opens the pen and
       // the shapes on a surface of its own, which is why the Drawing drawer is
@@ -10916,6 +11044,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_save_memory',
       'world_recall_memory',
       'world_forget_memory',
+      // …and the records themselves, which are ACTORS: a kind's own
+      // properties, kept and brought back (specs/RECORDS_PLAN.md).
+      'world_remember_actors',
+      'world_recall_actors',
       // …and how a world types without a keyboard, which is what an app on a
       // touch screen has to do. A map of Buttons calls these, and whatever is
       // listening for typing hears them (specs/KEYBOARD_PLAN.md).

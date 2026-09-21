@@ -81,6 +81,13 @@ const RUNTIME_ONLY: Record<string, string> = {
     'world\u2019s body: `when \u27e8…\u27e9 is created` runs on the first tick, ' +
     'which is after the driver has lent the storage',
   forget: 'the same again',
+  rememberActors:
+    'the storage is lent once the world exists, and there are no actors to ' +
+    'keep while it is still being described (specs/RECORDS_PLAN.md)',
+  recallActors:
+    'the same, and bringing records back belongs in a handler for the same ' +
+    'reason restoring a world\u2019s own memory does',
+  useChannel: 'which project this is arrives with the driver, like the storage',
   type:
     'typing is read by the frame after the one that typed it, and a world ' +
     'still being described has no frames at all (specs/KEYBOARD_PLAN.md)',

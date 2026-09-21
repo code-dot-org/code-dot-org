@@ -242,6 +242,8 @@ describe('what an earned drawer hides', () => {
       'world_now',
       'world_time_part',
       'world_time_text',
+      'world_remember_actors',
+      'world_recall_actors',
     ]) {
       expect(everything, `${type} is reachable`).not.toContain(type);
     }

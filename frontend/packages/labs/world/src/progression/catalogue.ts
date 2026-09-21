@@ -2703,6 +2703,15 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_save_memory'},
       {kind: 'block', type: 'world_recall_memory'},
       {kind: 'block', type: 'world_forget_memory'},
+      // …and RECORDS, which is what an app keeps once one field is not
+      // enough: a kind's actors, with the properties that kind declares
+      // (specs/RECORDS_PLAN.md).
+      // …and the kind that IS a record: fields, and nowhere to be. Granted
+      // with the blocks that keep them, since one without the other is half
+      // a sentence (specs/RECORDS_PLAN.md).
+      {kind: 'block', type: 'world_actor_is_data'},
+      {kind: 'block', type: 'world_remember_actors'},
+      {kind: 'block', type: 'world_recall_actors'},
       // …and what a saved thing is usually saved WITH: the wall clock, which
       // is the only one that can answer what day it is. `time` is seconds
       // since the world started and stops meaning anything across a reload; a
