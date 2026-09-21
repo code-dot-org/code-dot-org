@@ -232,10 +232,17 @@ catalogue; the second is now possible rather than present.
 
 Then the progression, and the parameterising that a second one needs.
 
-7. **A clock** — DONE (specs/CLOCK_PLAN.md): what time it is out there, its
+8. **Records** — PLANNED, not built (specs/RECORDS_PLAN.md). An app keeps
+   records, and a project can save a list of WORDS and nothing else, which
+   is why Notes files each entry as `2000-01-01  milk`. The record already
+   exists — it is an actor — so what is missing is a way to KEEP one, and
+   the identity question that blocked it splits: a collection needs none,
+   a saved game does.
+
+9. **A clock** — DONE (specs/CLOCK*PLAN.md): what time it is out there, its
    parts, and a date written so it sorts. Not on the original list, and it
    should have been: `time` is seconds since the world started, so until this
-   there was no way to ask what DAY it is, and every app whose point is _when_
+   there was no way to ask what DAY it is, and every app whose point is \_when*
    was out of reach — a timer, a journal, a streak, "due tomorrow".
 
 **One cheap thing worth doing first, whatever the order — DONE:** an APP

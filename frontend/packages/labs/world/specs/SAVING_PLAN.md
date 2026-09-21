@@ -120,9 +120,14 @@ behind it should do.
 - **Nothing is saved automatically.** A block says when. An app that saves
   halfway through an edit is a bug nobody asked for, and when a thing is
   "done" is the project's to decide.
-- **No actors.** What a saved GAME is stays unanswered, deliberately: it
-  wants a vocabulary for identity across runs that this language does not
-  have.
+- **No actors** — HALF ANSWERED SINCE, and the half matters
+  (specs/RECORDS_PLAN.md). That sentence was one covering two problems.
+  Restoring a COLLECTION — fifty notes, a contact list — needs no identity at
+  all: there were none before and there are fifty after, and nothing has to be
+  matched to anything. Restoring a PARTICULAR actor, the player whose position
+  should be put back rather than a second player made, is the one that wants a
+  name surviving a reload. The first is what an app is made of and is built;
+  the second is a saved GAME and stays unanswered.
 - **The name is the whole key.** Two projects that both save as `notes`
   share one memory on one browser. That is visible in the blocks rather
   than hidden in plumbing, which is the trade; keying by project instead
