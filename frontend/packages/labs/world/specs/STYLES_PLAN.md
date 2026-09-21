@@ -293,18 +293,28 @@ somewhere the drawing does not mention. If the branching turns out to be noisy
 across fifteen controls, style-side states can come later; they cannot be
 taken back.
 
-`Can Be Clicked` already tracks held — the Slider reads it every frame — so
-the pressed state costs a branch and no new engine work.
+**AND THE PRESSED STATE IS NOT FREE, which this said it was.** The claim was
+that `Can Be Clicked` tracks held and the Slider reads it. It does not: the
+Mouse rule offers a targeted CLICK and no targeted press, because a press is
+announced to every actor with `Takes Mouse Input` whether the pointer is over
+it or not. What knows is the GESTURES rule, whose `Takes Gestures` trait
+carries a read-only `being pressed` — which is exactly why the Slider stopped
+keeping a `held` boolean of its own.
+
+So a Button that looks pressed elects Gestures, and importing a Button then
+pulls that rule. Gestures is granted at `story/form` today and Buttons arrive
+at `story/choice`, so this is a curriculum change as well as a visual one, and
+it is not made here.
 
 ## What gets built, in order
 
 1. **The painter.** Corner radius, shadow, text weight, on the pen and in the
    drawing vocabulary. Nothing else depends on a decision.
 2. **The kit, redrawn against them.** Corners, most outlines dropped for
-   elevation, a pressed state on every control that can be pressed, and a
-   focus ring that follows the corner. `RING_INSET` becomes one exported
-   constant. This is the step that makes them look professional, and it is
-   worth doing whether or not step 4 ever happens.
+   elevation, and a focus ring that follows the corner. `RING_INSET` becomes
+   one exported constant. This is the step that makes them look professional,
+   and it is worth doing whether or not step 4 ever happens. The pressed state
+   is NOT in it, for the reason above.
 3. **The style file and the `use style` block.** Stock `modern.style` and
    `classic.style`, the full role vocabulary in each, a `use theme` row on the
    world, and the drawings moved one control at a time. Tokens and styles
@@ -330,6 +340,30 @@ kit still looks right; it just takes editing drawings to restyle.
   stay literal. The kit stops at the interface.
 - **No style for the map editor's own chrome**, which is React and CSS and has
   nothing to do with this.
+- **No pressed state**, which wants the Gestures rule and therefore a
+  curriculum decision. See above.
+
+## What building the painter and the redraw found
+
+- **The reader is a second implementation of the pen.** `preview/drawingReader`
+  makes the map editor's stills without running a game, and it did not know
+  the three new blocks — so the Button's still went INCOMPLETE, and an
+  incomplete reading falls back to the sandbox's picture. One assertion
+  noticed, naming one kind. The test now names every kind that can be read and
+  every kind that cannot, so the next pen block says which it broke.
+- **`set fill ⟨r g b a⟩` drew in the previous colour.** The two colour blocks
+  disagree on purpose — a picker answers `'#rrggbb'` and `r g b a` answers
+  four floats, so that reaching past the swatch keeps an alpha — and the pen
+  passed whichever arrived straight to `fillStyle`, where an array is not a
+  colour and a canvas keeps what it had. Settled at the pen now
+  (`core/color.cssColor`), which is also what let a shadow have an alpha at
+  all. A hex string passes through untouched: rewriting every swatch as
+  `rgba(…)` would re-rasterize every picture in the lab to say the same thing
+  differently.
+- **A `.style` file cannot hold a colour a `colour_picker` cannot.** The swatch
+  field speaks six digits. That is fine for every token but the shadow, which
+  is written as `r g b a` — and it is a reason the style file should hold its
+  tokens as values of its own rather than as swatch fields.
 
 ## Obligations
 

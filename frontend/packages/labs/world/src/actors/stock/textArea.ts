@@ -40,10 +40,12 @@
 //     need it.
 
 import {labelSizeOf} from './label';
+import {BORDER, LOOK, RADIUS_TIGHT} from './look';
 import {
   actorFile,
   actsLike,
   chain,
+  corner,
   defineEvent,
   defineProperty,
   drawParagraph,
@@ -365,8 +367,9 @@ export const textAreaActor = actorFile(
       width: width(),
       height: height(),
       commands: [
-        fill(swatch('#1a1a22')),
-        outline(swatch('#8890b0'), 2),
+        fill(swatch(LOOK.field)),
+        outline(swatch(LOOK.surfaceEdge), BORDER),
+        corner(RADIUS_TIGHT),
         rectangle(0, 0, width(), height()),
         noOutline(),
         fill(textOf('TextColorProperty')),

@@ -27,10 +27,12 @@
 // slider is as big as it says it is, like a Label.
 
 import {setBox} from './label';
+import {LOOK, RADIUS_BAR, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
   actorFile,
   actsLike,
   chain,
+  corner,
   defineEvent,
   fill,
   me,
@@ -54,8 +56,6 @@ const HEIGHT = 20;
 /** The knob's radius, which is also how far the track is inset at each end. */
 const KNOB = 7;
 const TRACK_HEIGHT = 6;
-const RING_INSET = 1;
-const RING_WIDTH = 2;
 /** How far an arrow key moves it. */
 const STEP = 0.1;
 
@@ -291,12 +291,13 @@ export const sliderActor = actorFile(
           TRACK_HEIGHT,
         ),
         // The knob.
-        fill(swatch('#ffffff')),
+        fill(swatch(LOOK.ink)),
         circle(knobX(), half(height()), KNOB),
         // …and the ring, when the keyboard is on this one.
         either(focused(), [
           noFill(),
-          outline(swatch('#ffd45e'), RING_WIDTH),
+          outline(swatch(LOOK.focus), RING_WIDTH),
+          corner(ringRadius(RADIUS_BAR)),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

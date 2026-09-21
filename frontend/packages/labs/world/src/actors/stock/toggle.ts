@@ -22,10 +22,12 @@
 // not find it. What they share is what they can do, which is the traits.
 
 import {labelHalf, labelSizeOf} from './label';
+import {LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
   actorFile,
   actsLike,
   chain,
+  corner,
   defineEvent,
   defineProperty,
   drawParagraph,
@@ -50,9 +52,6 @@ const OWN = 'ActorsToggle';
 const TRACK_WIDTH = 36;
 const TRACK_HEIGHT = 16;
 const KNOB = 6;
-/** How far in from the face's edge the focus ring is drawn. */
-const RING_INSET = 2;
-const RING_WIDTH = 2;
 
 const width = () => labelSizeOf('Width');
 const height = () => labelSizeOf('Height');
@@ -150,7 +149,11 @@ export const toggleActor = actorFile(
           less(width(), TRACK_WIDTH + 8),
         ),
         // The track: green when on, grey when off.
-        either(on(), [fill(swatch('#40c060'))], [fill(swatch('#505870'))]),
+        // A PILL, which is what a switch is everywhere. Half the track's
+        // height of corner is as round as a rectangle goes — the engine
+        // clamps anything more to exactly this (`CommandPen.rectangle`).
+        corner(TRACK_HEIGHT / 2),
+        either(on(), [fill(swatch(LOOK.positive))], [fill(swatch(LOOK.muted))]),
         rectangle(
           less(width(), TRACK_WIDTH + 2),
           less(labelHalf(height()), TRACK_HEIGHT / 2),
@@ -158,7 +161,7 @@ export const toggleActor = actorFile(
           TRACK_HEIGHT,
         ),
         // The knob, at whichever end `on` says.
-        fill(swatch('#ffffff')),
+        fill(swatch(LOOK.ink)),
         either(
           on(),
           [circle(less(width(), KNOB + 4), labelHalf(height()), KNOB)],
@@ -174,7 +177,8 @@ export const toggleActor = actorFile(
         // as the Button's is, since anything past the edge is clipped away.
         either(focused(), [
           noFill(),
-          outline(swatch('#ffd45e'), RING_WIDTH),
+          outline(swatch(LOOK.focus), RING_WIDTH),
+          corner(ringRadius(RADIUS)),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

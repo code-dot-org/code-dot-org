@@ -31,10 +31,12 @@
 // face, because outside is clipped away.
 
 import {labelHalf, labelSizeOf} from './label';
+import {BORDER, LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
   actorFile,
   actsLike,
   chain,
+  corner,
   defineEvent,
   defineProperty,
   fill,
@@ -62,8 +64,6 @@ const WIDTH = 160;
 const ROWS = 6;
 const HEIGHT = ROW * ROWS;
 const PAD = 6;
-const RING_INSET = 2;
-const RING_WIDTH = 2;
 
 /** The counter the rows are drawn by. */
 const ROW_VARIABLE = {id: 'listRow', name: 'row', type: 'Number'};
@@ -452,8 +452,9 @@ export const listActor = actorFile(
       height: height(),
       commands: [
         // The box.
-        fill(swatch('#202840')),
-        outline(swatch('#8890b0'), 2),
+        fill(swatch(LOOK.surface)),
+        outline(swatch(LOOK.surfaceEdge), BORDER),
+        corner(RADIUS),
         rectangle(0, 0, width(), height()),
         noOutline(),
         // …and the rows that show, which is a window over the list rather
@@ -468,7 +469,7 @@ export const listActor = actorFile(
             DO: {
               block: chain([
                 either(compare('EQ', row(), highlighted()), [
-                  fill(swatch('#4050a0')),
+                  fill(swatch(LOOK.accentRaised)),
                   rectangle(
                     num(0),
                     arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
@@ -485,7 +486,8 @@ export const listActor = actorFile(
         // …and the ring, when the keyboard is on this one.
         either(focused(), [
           noFill(),
-          outline(swatch('#ffd45e'), RING_WIDTH),
+          outline(swatch(LOOK.focus), RING_WIDTH),
+          corner(ringRadius(RADIUS)),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

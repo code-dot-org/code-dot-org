@@ -123,12 +123,98 @@ describe('readDrawing, over the shelf', () => {
     expect(text(drawing.commands).text).toBe('Label');
   });
 
-  it('finishes every interface actor but the one that blinks', () => {
-    for (const id of ['label', 'button', 'progressBar', 'healthBar']) {
+  it('finishes every interface actor that CAN be finished', () => {
+    // EVERY KIND, not the four this used to name. Adding a pen block the
+    // reader did not know turned the Button's still incomplete, and exactly
+    // one assertion noticed — where the symptom is that an interface picture
+    // in the map editor falls back to the sandbox's slow path, for however
+    // many kinds happened to use the new block (specs/STYLES_PLAN.md).
+    for (const id of [
+      'label',
+      'button',
+      'toggle',
+      'panel',
+      'speechBox',
+      'dropdown',
+      'slider',
+      'progressBar',
+      'healthBar',
+      'viewport',
+    ]) {
       expect(readDrawing(SHELF, `actors/${id}`)?.complete, id).toBe(true);
     }
-    // The Text Input's caret reads the time, which a still cannot know.
-    expect(readDrawing(SHELF, 'actors/textInput')?.complete).toBe(false);
+  });
+
+  it('and says so about the four that cannot be', () => {
+    // ASSERTED RATHER THAN LEFT OUT, so that a kind which becomes readable
+    // says so here rather than nowhere. Each of these draws from something a
+    // still has no way to know: the caret blinks against the clock, and the
+    // other three draw a WINDOW onto content — which row is at the top, how
+    // far it has scrolled — that only a running world has.
+    for (const id of ['textInput', 'textArea', 'list', 'scrollView']) {
+      expect(readDrawing(SHELF, `actors/${id}`)?.complete, id).toBe(false);
+    }
+  });
+
+  it('reads a corner and a shadow as the engine writes them', () => {
+    // The reader is a SECOND implementation of the pen: the engine's runs in
+    // the game, this one makes the map editor's stills without one. Two
+    // implementations that disagree are two pictures, and the editor shows
+    // the wrong one — so what this puts in a command has to be what
+    // `CommandPen` would have put there.
+    const number = (value: number) => ({
+      shadow: {type: 'math_number', fields: {NUM: value}},
+    });
+    const drawing = readDrawing(
+      {
+        'actors/styled.actor': drawnActor(
+          'Styled',
+          [
+            {type: 'world_pen_corner', inputs: {RADIUS: number(50)}},
+            {
+              type: 'world_pen_shadow',
+              inputs: {
+                COLOR: {
+                  block: {
+                    type: 'world_rgba',
+                    inputs: {
+                      R: number(0),
+                      G: number(0.5),
+                      B: number(1),
+                      A: number(0.25),
+                    },
+                  },
+                },
+                BLUR: number(4),
+                DOWN: number(2),
+              },
+            },
+            {
+              type: 'world_draw_rectangle',
+              inputs: {
+                X: number(0),
+                Y: number(0),
+                WIDTH: number(20),
+                HEIGHT: number(10),
+              },
+            },
+          ],
+          [20, 10],
+        ),
+      },
+      'actors/styled',
+    )!;
+
+    expect(drawing.complete).toBe(true);
+    expect(drawing.commands[0]).toMatchObject({
+      op: 'rectangle',
+      // Clamped to half the box, exactly as `CommandPen.rectangle` clamps it:
+      // two corners of half the width each meet in the middle.
+      radius: 5,
+      // …and the alpha kept, through the engine's own `cssColor`. A shadow is
+      // the first thing in the kit that needs one.
+      shadow: {color: 'rgba(0, 128, 255, 0.25)', blur: 4, offsetY: 2},
+    });
   });
 
   it('has nothing for an actor that wears a picture', () => {

@@ -30,8 +30,10 @@
 // choose here.
 
 import {setBox} from './label';
+import {RADIUS_BAR} from './look';
 import {
   actorFile,
+  corner,
   defineProperty,
   fill,
   me,
@@ -104,6 +106,10 @@ export const progressBarDrawing = (own = 'ActorsProgressBar') => ({
   width: width(),
   height: height(),
   commands: [
+    // ROUNDED, for both rectangles. The fill is a rectangle of the track's
+    // own shape, so a square fill inside a rounded track would show its
+    // corners poking out at the left end (specs/STYLES_PLAN.md).
+    corner(RADIUS_BAR),
     // The track first and whole, so what is left of it IS the empty part —
     // there is no second rectangle for "the rest", and none to keep in step.
     fill(progressOf(own, 'TrackColorProperty')),

@@ -67,10 +67,12 @@
 // should come back.
 
 import {labelHalf, labelSizeOf} from './label';
+import {BORDER, LOOK, RADIUS_TIGHT} from './look';
 import {
   actorFile,
   actsLike,
   chain,
+  corner,
   defineEvent,
   defineProperty,
   drawParagraph,
@@ -698,11 +700,14 @@ export const textInputActor = actorFile(
         // and RED when a project has called the answer wrong, which is the
         // one thing about a field a form needs to be able to show
         // (specs/FIELDS_PLAN.md).
-        fill(swatch('#1a1a22')),
-        outline(swatch('#8890b0'), 2),
+        fill(swatch(LOOK.field)),
+        outline(swatch(LOOK.surfaceEdge), BORDER),
+        corner(RADIUS_TIGHT),
         rectangle(0, 0, width(), height()),
         onlyIf(looksWrong(), [
-          outline(swatch('#e06c75'), 2),
+          // The wrong edge is drawn THICKER as well as red, so that the one
+          // thing a form must be able to shout is not said in colour alone.
+          outline(swatch(LOOK.danger), BORDER + 1),
           rectangle(0, 0, width(), height()),
         ]),
         noOutline(),
@@ -711,7 +716,7 @@ export const textInputActor = actorFile(
         // drawn instead of the words rather than under them — an empty field
         // has no words to be under.
         onlyIf(isEmpty(), [
-          fill(swatch('#6b7394')),
+          fill(swatch(LOOK.mutedInk)),
           drawWords(hint(), num(PAD), labelHalf(height())),
         ]),
         fill(textOf('TextColorProperty')),

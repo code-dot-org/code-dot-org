@@ -23,10 +23,12 @@
 // shows a map and moves over it. A list whose rows are actors is this with a
 // map of rows in it, and the choosing is that map's business.
 
+import {BORDER, LOOK, RADIUS_BAR, RADIUS_TIGHT} from './look';
 import {
   actorFile,
   actsLike,
   chain,
+  corner,
   fill,
   me,
   noOutline,
@@ -198,19 +200,24 @@ export const scrollViewActor = actorFile(
       width: width(),
       height: height(),
       commands: [
-        fill(swatch('#10141c')),
-        outline(swatch('#8890b0'), 2),
+        fill(swatch(LOOK.well)),
+        outline(swatch(LOOK.surfaceEdge), BORDER),
+        corner(RADIUS_TIGHT),
         rectangle(0, 0, width(), height()),
         // The bar, down the right edge, over the face and under the content.
         noOutline(),
-        fill(swatch('#3b4252')),
+        // The bar is rounder than the box it is in, which is what a scrollbar
+        // looks like everywhere: at three pixels of corner on a six-wide bar
+        // it is a lozenge.
+        corner(RADIUS_BAR),
+        fill(swatch(LOOK.muted)),
         rectangle(
           maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
           num(BAR_INSET),
           num(BAR_WIDTH),
           maths(height(), 'MINUS', num(BAR_INSET * 2)),
         ),
-        fill(swatch('#8890b0')),
+        fill(swatch(LOOK.surfaceEdge)),
         rectangle(
           maths(width(), 'MINUS', num(BAR_WIDTH + BAR_INSET)),
           thumbTop(),

@@ -25,12 +25,14 @@
 // as somewhere to put things.
 
 import {labelHalf, labelSizeOf} from './label';
+import {BORDER, LOOK, RADIUS} from './look';
 import {
   actorFile,
   actsLike,
   drawParagraph,
   fill,
   me,
+  corner,
   noOutline,
   outline,
   rectangle,
@@ -74,8 +76,12 @@ export const panelActor = actorFile(
       width: width(),
       height: height(),
       commands: [
-        fill(swatch('#202840')),
-        outline(swatch('#8890b0'), 2),
+        // A SHEET, which is what a Panel is: rounded, with an edge quiet
+        // enough to read the contents over. It was square with a 2px border —
+        // an edge you read before the thing it is around (specs/STYLES_PLAN.md).
+        fill(swatch(LOOK.surface)),
+        outline(swatch(LOOK.surfaceEdge), BORDER),
+        corner(RADIUS),
         rectangle(0, 0, width(), height()),
         // The edge belongs to the face, not to the caption.
         noOutline(),

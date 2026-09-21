@@ -22,9 +22,11 @@
 import {typewriterFor} from '../typewriter';
 
 import {labelSizeOf} from './label';
+import {BORDER, LOOK, RADIUS, SHADOW_OVER} from './look';
 import {
   actorFile,
   actsLike,
+  corner,
   drawParagraph,
   fill,
   me,
@@ -32,6 +34,7 @@ import {
   outline,
   rectangle,
   setText,
+  shadow,
   showAs,
   swatch,
   textOf,
@@ -105,8 +108,14 @@ export const speechBoxActor = actorFile(
       commands: [
         // The panel: dark, with a light edge, which is what makes the words on
         // it legible over whatever the scene happens to be.
-        fill(swatch('#101828')),
-        outline(swatch('#ffffff'), 2),
+        // IT FLOATS OVER THE SCENE, which is the one thing its old white 2px
+        // frame was saying and said loudly. A shadow says it instead, and the
+        // face can then be quiet enough to read words over
+        // (specs/STYLES_PLAN.md).
+        fill(swatch(LOOK.well)),
+        outline(swatch(LOOK.surfaceEdge), BORDER),
+        corner(RADIUS),
+        shadow(SHADOW_OVER),
         rectangle(0, 0, width(), height()),
         // The edge belongs to the panel and not to the letters: a stroked
         // sentence at this size is a smudge.

@@ -33,7 +33,8 @@ import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {parseRuleMeta, type PropertyMeta} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
-import type {DrawCommand, TextAnchor} from '../../engine/core/drawing';
+import {cssColor} from '../../engine/core/color';
+import type {DrawCommand, Shadow, TextAnchor} from '../../engine/core/drawing';
 
 /** A block as it sits in a saved workspace — only what is read here. */
 export interface Node {
@@ -248,6 +249,18 @@ class Reading {
       }
       case 'colour_picker':
         return String(field(node, 'COLOUR') ?? '#000000');
+      // …and the other colour block, which is the one with an ALPHA and
+      // therefore the one a shadow is written in. Through the engine's own
+      // `cssColor` rather than a second spelling of the same arithmetic: a
+      // still and the live picture that disagree by a rounding are two
+      // pictures, and the map editor would show the wrong one.
+      case 'world_rgba':
+        return cssColor([
+          this.number(socket(node, 'R')),
+          this.number(socket(node, 'G')),
+          this.number(socket(node, 'B')),
+          this.number(socket(node, 'A'), 1),
+        ]);
       case 'logic_boolean':
         return field(node, 'BOOL') === 'TRUE';
       case 'math_arithmetic': {
@@ -453,12 +466,23 @@ export function readDrawing(
   let fill: string | undefined = '#ffffff';
   let stroke: string | undefined;
   let strokeWidth = 1;
+  let radius = 0;
+  let shadow: Shadow | undefined;
+  let bold = false;
   // `strokeWidth` is always carried, with or without a stroke: the engine's
-  // own `Paint` requires it so the driver never has to invent one.
-  const paint = (): {fill?: string; stroke?: string; strokeWidth: number} => ({
+  // own `Paint` requires it so the driver never has to invent one. Everything
+  // else is absent when it was not asked for, which is that same `Paint`'s
+  // rule and is why a still of a drawing hashes the same as the live one.
+  const paint = (): {
+    fill?: string;
+    stroke?: string;
+    strokeWidth: number;
+    shadow?: Shadow;
+  } => ({
     ...(fill === undefined ? {} : {fill}),
     ...(stroke === undefined ? {} : {stroke}),
     strokeWidth,
+    ...(shadow === undefined ? {} : {shadow}),
   });
   const number = (node: Node, name: string, fallback = 0) =>
     reading.number(socket(node, name), fallback);
@@ -479,6 +503,28 @@ export function readDrawing(
         case 'world_pen_no_outline':
           stroke = undefined;
           break;
+        // …and the three that decide the SHAPE of a control rather than its
+        // colour. A reader that did not know them reported the drawing
+        // INCOMPLETE — which is not nothing: an incomplete reading falls back
+        // to the sandbox's picture, so every still of every interface actor
+        // in the map editor would have gone the slow way round
+        // (specs/STYLES_PLAN.md).
+        case 'world_pen_corner':
+          radius = Math.max(0, number(row, 'RADIUS', 0));
+          break;
+        case 'world_pen_shadow':
+          shadow = {
+            color: reading.color(socket(row, 'COLOR')) ?? '#000000',
+            blur: Math.max(0, number(row, 'BLUR', 0)),
+            offsetY: number(row, 'DOWN', 0),
+          };
+          break;
+        case 'world_pen_no_shadow':
+          shadow = undefined;
+          break;
+        case 'world_pen_weight':
+          bold = field(row, 'WEIGHT') === 'bold';
+          break;
         case 'world_draw_rectangle':
           commands.push({
             op: 'rectangle',
@@ -486,6 +532,18 @@ export function readDrawing(
             y: number(row, 'Y'),
             width: number(row, 'WIDTH'),
             height: number(row, 'HEIGHT'),
+            // Clamped as `CommandPen.rectangle` clamps it, because the two
+            // have to agree: a still and the live picture that differ are two
+            // pictures, and the editor shows the wrong one.
+            ...(radius > 0
+              ? {
+                  radius: Math.min(
+                    radius,
+                    number(row, 'WIDTH') / 2,
+                    number(row, 'HEIGHT') / 2,
+                  ),
+                }
+              : {}),
             ...paint(),
           });
           break;
@@ -521,6 +579,7 @@ export function readDrawing(
             ...(row.type === 'world_draw_paragraph'
               ? {wrapWidth: number(row, 'WIDTH', 0) || undefined}
               : {}),
+            ...(bold ? {weight: 'bold' as const} : {}),
             ...paint(),
           });
           break;

@@ -362,6 +362,57 @@ export const noOutline = () => ({type: 'world_pen_no_outline'});
 /** `no fill` — for a shape that is an outline and nothing else, like a ring. */
 export const noFill = () => ({type: 'world_pen_no_fill'});
 
+/** `round corners by ⟨n⟩`. Zero is square, and there is no block for that. */
+export const corner = (radius: number | object) => ({
+  type: 'world_pen_corner',
+  inputs: {RADIUS: typeof radius === 'number' ? num(radius) : radius},
+});
+
+/**
+ * A colour with an alpha, as the `r g b a` block.
+ *
+ * NOT `swatch`, which is a `colour_picker` and speaks `#rrggbb` — six digits,
+ * no alpha. A shadow is the first thing in this kit that needs one: an opaque
+ * black under a control on a dark page is a hole, not a shadow. `r g b a` is
+ * the block that exists for exactly this and it opens as four sliders, which
+ * is also the right thing to hand somebody who wants a softer one.
+ */
+export const rgbaColor = (r: number, g: number, b: number, a: number) => ({
+  block: {
+    type: 'world_rgba',
+    inputs: {
+      R: num(r),
+      G: num(g),
+      B: num(b),
+      A: num(a),
+    },
+  },
+});
+
+/** `shadow ⟨color⟩ blur ⟨n⟩ down ⟨n⟩` — what lifts a control off the page. */
+export const shadow = (cast: {
+  color: readonly [number, number, number, number];
+  blur: number;
+  down: number;
+}) => ({
+  type: 'world_pen_shadow',
+  inputs: {
+    COLOR: rgbaColor(...cast.color),
+    BLUR: num(cast.blur),
+    DOWN: num(cast.down),
+  },
+});
+
+/** `no shadow`. */
+export const noShadow = () => ({type: 'world_pen_no_shadow'});
+
+/** `draw letters ⟨bold|normal⟩` — the one thing that tells a title from a
+ *  caption when everything is one family at one size. */
+export const weight = (of: 'bold' | 'normal') => ({
+  type: 'world_pen_weight',
+  fields: {WEIGHT: of},
+});
+
 /** `draw rectangle at x ⟨⟩ y ⟨⟩ size ⟨⟩ by ⟨⟩`. */
 export const rectangle = (
   x: number | object,

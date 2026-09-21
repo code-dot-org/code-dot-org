@@ -32,31 +32,33 @@
 // asks for.
 
 import {labelHalf, labelSizeOf} from './label';
+import {LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius, SHADOW} from './look';
 import {
   actorFile,
   actsLike,
   chain,
+  corner,
   drawParagraph,
   fill,
   me,
   noFill,
   noOutline,
+  noShadow,
   num,
   outline,
   rectangle,
   setText,
+  shadow,
   showAs,
   swatch,
   textOf,
   useTrait,
+  weight,
   words,
 } from './workspace';
 
 /** Taller than a Label, because a face wants room around the word. */
 const HEIGHT = 32;
-/** How far the focus ring sits inside the face, and how thick it is. */
-const RING_INSET = 4;
-const RING_WIDTH = 2;
 
 const width = () => labelSizeOf('Width');
 const height = () => labelSizeOf('Height');
@@ -153,12 +155,23 @@ export const buttonActor = actorFile(
       width: width(),
       height: height(),
       commands: [
-        fill(swatch('#3050a0')),
-        outline(swatch('#ffffff'), 2),
-        rectangle(0, 0, width(), height()),
-        // The edge belongs to the face, not to the word: a stroked letter at
-        // this size is a smudge.
+        // A RAISED SHEET IN THE ONE COLOUR THAT MEANS "PRESS THIS", and no
+        // edge at all. It had a white 2px outline, which was the loudest
+        // thing in the kit and was doing the job a shadow does better: saying
+        // the face is above the page rather than drawn on it
+        // (specs/STYLES_PLAN.md).
         noOutline(),
+        fill(swatch(LOOK.accent)),
+        corner(RADIUS),
+        shadow(SHADOW),
+        rectangle(0, 0, width(), height()),
+        // Nothing after the face is raised — a shadow under the caption would
+        // be a drop-shadowed word, which is a different decade.
+        noShadow(),
+        // …and the caption is BOLD, which is the one thing that tells a
+        // control you press from a label that describes it, when everything
+        // in the kit is one family at one size.
+        weight('bold'),
         fill(textOf('TextColorProperty')),
         drawParagraph(labelHalf(width()), labelHalf(height()), width()),
         // …AND THE RING, when the keyboard is on this one. Drawn INSIDE the
@@ -174,7 +187,10 @@ export const buttonActor = actorFile(
           // fill at this point, and a filled ring is a rectangle painted over
           // the word.
           noFill(),
-          outline(swatch('#ffd45e'), RING_WIDTH),
+          outline(swatch(LOOK.focus), RING_WIDTH),
+          // …and it follows the corner it is inset from. A square ring inside
+          // a rounded face reads as a mistake rather than as an answer.
+          corner(ringRadius(RADIUS)),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

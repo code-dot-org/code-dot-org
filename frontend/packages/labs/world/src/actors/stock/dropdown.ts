@@ -34,19 +34,31 @@
 
 import {labelHalf, labelSizeOf} from './label';
 import {
+  BORDER,
+  LOOK,
+  RADIUS,
+  RING_INSET,
+  RING_WIDTH,
+  ringRadius,
+  SHADOW_OVER,
+} from './look';
+import {
   actorFile,
   actsLike,
   chain,
+  corner,
   defineEvent,
   defineProperty,
   fill,
   me,
   noFill,
   noOutline,
+  noShadow,
   num,
   outline,
   rectangle,
   setText,
+  shadow,
   showAs,
   swatch,
   textOf,
@@ -60,8 +72,6 @@ const OWN = 'ActorsDropdown';
 const ROW = 24;
 const WIDTH = 120;
 const PAD = 6;
-const RING_INSET = 2;
-const RING_WIDTH = 2;
 
 /** The counter the rows are drawn and picked by. */
 const ROW_VARIABLE = {id: 'dropdownRow', name: 'row', type: 'Number'};
@@ -237,7 +247,7 @@ const pointerInside = () =>
 const circleArrow = () => [
   // A caret: two strokes meeting at the bottom, in the outline colour.
   noFill(),
-  outline(swatch('#8890b0'), 2),
+  outline(swatch(LOOK.surfaceEdge), 2),
   {
     type: 'world_draw_line',
     inputs: {
@@ -381,8 +391,9 @@ export const dropdownActor = actorFile(
       height: height(),
       commands: [
         // The face: a box, the chosen word, and a caret.
-        fill(swatch('#202840')),
-        outline(swatch('#8890b0'), 2),
+        fill(swatch(LOOK.surface)),
+        outline(swatch(LOOK.surfaceEdge), BORDER),
+        corner(RADIUS),
         rectangle(0, 0, width(), ROW),
         noOutline(),
         fill(textOf('TextColorProperty')),
@@ -391,8 +402,16 @@ export const dropdownActor = actorFile(
         // …and the rows, when it is open: a darker sheet, the highlighted
         // row lit, and one word per row.
         either(open(), [
-          fill(swatch('#303a58')),
+          // AN OPEN MENU IS OVER THE PAGE, and a menu with no shadow reads as
+          // part of it — which is the clearest case for elevation in the whole
+          // kit (specs/STYLES_PLAN.md).
+          fill(swatch(LOOK.surfaceRaised)),
+          corner(RADIUS),
+          shadow(SHADOW_OVER),
           rectangle(0, ROW, width(), arithmetic('MINUS', height(), num(ROW))),
+          // The rows inside it are flat: a shadow under each would be a stack
+          // of cards rather than a list.
+          noShadow(),
           {
             type: 'world_count_with',
             fields: {VAR: ROW_VARIABLE},
@@ -403,7 +422,7 @@ export const dropdownActor = actorFile(
               DO: {
                 block: chain([
                   either(compare('EQ', row(), highlighted()), [
-                    fill(swatch('#4050a0')),
+                    fill(swatch(LOOK.accentRaised)),
                     rectangle(
                       num(0),
                       arithmetic('MINUS', rowMiddle(row()), num(ROW / 2)),
@@ -421,7 +440,8 @@ export const dropdownActor = actorFile(
         // …and the ring, when the keyboard is on this one.
         either(focused(), [
           noFill(),
-          outline(swatch('#ffd45e'), RING_WIDTH),
+          outline(swatch(LOOK.focus), RING_WIDTH),
+          corner(ringRadius(RADIUS)),
           rectangle(
             num(RING_INSET),
             num(RING_INSET),

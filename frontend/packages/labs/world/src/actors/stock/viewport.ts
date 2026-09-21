@@ -13,9 +13,11 @@
 // under whatever the map in it draws. The map's own backgrounds are step 4's.
 
 import {labelSizeOf} from './label';
+import {BORDER, LOOK, RADIUS_TIGHT} from './look';
 import {
   actorFile,
   actsLike,
+  corner,
   fill,
   me,
   outline,
@@ -57,8 +59,9 @@ export const viewportActor = actorFile(
       width: width(),
       height: height(),
       commands: [
-        fill(swatch('#10141c')),
-        outline(swatch('#8890b0'), 2),
+        fill(swatch(LOOK.well)),
+        outline(swatch(LOOK.surfaceEdge), BORDER),
+        corner(RADIUS_TIGHT),
         rectangle(0, 0, width(), height()),
       ],
     },
