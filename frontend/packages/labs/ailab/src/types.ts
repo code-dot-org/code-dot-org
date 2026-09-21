@@ -152,7 +152,7 @@ export interface ModelDataToSave {
   features: ModelCardColumn[];
   summaryStat: {type: string; stat: string};
   trainedModel: object | null;
-  kValue: number | null;
+  hyperparameters: Record<string, number>;
 }
 
 export type SaveTrainedModel = (
