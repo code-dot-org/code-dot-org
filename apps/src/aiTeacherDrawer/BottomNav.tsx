@@ -28,11 +28,9 @@ const BottomNav: React.FC<BottomNavProps> = ({
   const navItems: NavItem[] = [
     // {label: 'Home', iconName: 'house'},
     {label: 'Chats', iconName: 'comment'},
-    ...(showLearn ? [{label: 'Prepare', iconName: 'file-lines'}] : []),
-    ...(showTeacherPanel
-      ? [{label: 'Teacher Panel', iconName: 'chalkboard'}]
-      : []),
+    ...(showLearn ? [{label: 'Prepare', iconName: 'folder-check'}] : []),
     {label: 'Alerts', iconName: 'bell'},
+    ...(showTeacherPanel ? [{label: 'Roster', iconName: 'users'}] : []),
   ];
 
   return (
@@ -44,23 +42,30 @@ const BottomNav: React.FC<BottomNavProps> = ({
           <button
             key={label}
             type="button"
-            className={classNames(style.item, active && style.active)}
+            className={style.item}
             onClick={() => onNavChange(label)}
           >
-            <Badge
-              variant="dot"
-              invisible={!showDot}
-              color="error"
-              overlap="circular"
-              sx={{'& .MuiBadge-badge': {top: -1, right: -1}}}
+            <div
+              className={classNames(
+                style.itemContent,
+                active && style.active
+              )}
             >
-              <FontAwesomeV6Icon
-                iconName={iconName}
-                iconStyle={active ? 'solid' : 'regular'}
-                className={style.icon}
-              />
-            </Badge>
-            <span className={style.label}>{label}</span>
+              <Badge
+                variant="dot"
+                invisible={!showDot}
+                color="error"
+                overlap="circular"
+                sx={{'& .MuiBadge-badge': {top: -1, right: -1}}}
+              >
+                <FontAwesomeV6Icon
+                  iconName={iconName}
+                  iconStyle="solid"
+                  className={style.icon}
+                />
+              </Badge>
+              <span className={style.label}>{label}</span>
+            </div>
           </button>
         );
       })}

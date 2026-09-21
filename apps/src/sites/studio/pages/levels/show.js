@@ -191,6 +191,14 @@ function initPage() {
             legacyReactDomRender: true,
           }
         );
+        // The branch above doesn't mount the AI TA drawer (it renders the
+        // legacy floating rubric panel instead), so on rubric levels
+        // TeacherPanelHandle's "open the drawer to Roster" click would
+        // otherwise have no drawer to open. Mount one, same as non-rubric
+        // levels, whenever the TA teacher panel experiment is active.
+        if (experiments.isEnabled('ta-teacher-panel')) {
+          renderAiDiffButton();
+        }
       }
     } else {
       renderAiDiffButton();
