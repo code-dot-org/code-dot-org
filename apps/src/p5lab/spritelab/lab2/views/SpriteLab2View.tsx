@@ -35,9 +35,7 @@ import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {ImageAdlibSet, isImageAdlibSet} from '../ai/images/imageAdlibs';
@@ -86,7 +84,6 @@ import spriteLab2Reducer, {
   ExternalSceneOption,
   MusicProjectOption,
   resetSpriteLab2,
-  SceneMetadata,
   setActiveTab,
   setExternalScenes,
   setMusicProjects,
@@ -101,14 +98,7 @@ import {
   parseExternalSceneKey,
   toExternalSceneOptions,
 } from '../scenesApi';
-import {
-  canvasToPngBytes,
-  copyFrame,
-  sceneBackgroundImage,
-  sceneFingerprint,
-  THUMBNAIL_QUIET_MS,
-  thumbnailFileName,
-} from '../sceneThumbnails';
+import {sceneMetadataFor} from '../sceneThumbnails';
 import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
@@ -124,6 +114,7 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {isPointerClick} from './blurAfterPointerClick';
+import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
@@ -132,7 +123,9 @@ import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
+import useSceneThumbnails from './useSceneThumbnails';
 import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -474,24 +467,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
 
-  // A scene shows its captured first frame; until it has one, the
-  // background its blocks name stands in.
-  const sceneMetadata: SceneMetadata[] = useMemo(
-    () =>
-      scenes.map(s => {
-        let thumbnail = s.thumbnail?.url;
-        if (!thumbnail) {
-          const background = sceneBackgroundImage(s);
-          const key =
-            background &&
-            animationList.orderedKeys.find(
-              k => animationList.propsByKey[k]?.name === background
-            );
-          const props = key ? animationList.propsByKey[key] : undefined;
-          thumbnail = props?.sourceUrl ?? props?.dataURI ?? undefined;
-        }
-        return {id: s.id, name: s.name, thumbnail};
-      }),
+  const sceneMetadata = useMemo(
+    () => sceneMetadataFor(scenes, animationList),
     [scenes, animationList]
   );
 
@@ -907,121 +884,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeSceneIdRef.current = activeScene?.id;
   }, [activeScene, worldFor]);
 
-  // --- Scene thumbnails ---
-  // Every run's first frame is copied (cheap); the copy is kept only once
-  // the scene has held still for THUMBNAIL_QUIET_MS, and only if the scene
-  // differs from the one its stored picture shows. Project channels only:
-  // in level edit mode the uploads would land in the level's starter assets.
-  const scenesRef = useRef(scenes);
-  scenesRef.current = scenes;
-  const pendingThumbnail = useRef<{
-    sceneId: string;
-    fingerprint: string;
-    frame: HTMLCanvasElement;
-  } | null>(null);
-  const thumbnailTimer = useRef<number>();
-  // The scene whose run the pending capture belongs to. A capture that never
-  // got a run resolves at the next run's first frame, which is some other
-  // scene's picture.
-  const capturingSceneRef = useRef<string | null>(null);
-  const thumbnailsEnabled = !!channelId && !!uploadImage && !isToolboxMode;
-
-  // Best-effort removal of one of this project's own uploads.
-  const deleteOwnAsset = useCallback(
-    (url: string | undefined) => {
-      if (url && channelId && url.startsWith(`/v3/assets/${channelId}/`)) {
-        HttpClient.delete(url, true).catch(() => undefined);
-      }
-    },
-    [channelId]
-  );
-
-  const commitThumbnail = useCallback(async () => {
-    const pending = pendingThumbnail.current;
-    pendingThumbnail.current = null;
-    if (!pending || !channelId || !uploadImage) {
-      return;
-    }
-    const scene = scenesRef.current.find(s => s.id === pending.sceneId);
-    // Edited again while we waited: the run that followed armed its own
-    // capture, so this one is stale.
-    if (
-      !scene ||
-      sceneFingerprint(scene, getStore().getState().animationList) !==
-        pending.fingerprint
-    ) {
-      return;
-    }
-    try {
-      const bytes = await canvasToPngBytes(pending.frame);
-      const url = await uploadImage(
-        thumbnailFileName(scene.id, pending.fingerprint),
-        bytes,
-        'image/png'
-      );
-      const previous = scene.thumbnail?.url;
-      updateSources(prev => ({
-        ...prev,
-        scenes: getScenes(prev).map(s =>
-          s.id === scene.id
-            ? {...s, thumbnail: {url, fingerprint: pending.fingerprint}}
-            : s
-        ),
-      }));
-      if (previous !== url) {
-        deleteOwnAsset(previous);
-      }
-    } catch (e) {
-      // Best effort; the next quiet moment tries again.
-      console.warn('Scene thumbnail not saved', e);
-    }
-  }, [channelId, uploadImage, updateSources, deleteOwnAsset]);
-
-  // Call before starting the run whose first frame should be the picture.
-  const requestThumbnail = useCallback(
-    (sceneId: string) => {
-      const engine = engineRef.current;
-      if (!engine || !thumbnailsEnabled) {
-        return;
-      }
-      capturingSceneRef.current = sceneId;
-      engine.captureFirstFrame((stage: HTMLCanvasElement | null) => {
-        if (!stage || capturingSceneRef.current !== sceneId) {
-          return;
-        }
-        const scene = scenesRef.current.find(s => s.id === sceneId);
-        if (!scene) {
-          return;
-        }
-        const fingerprint = sceneFingerprint(
-          scene,
-          getStore().getState().animationList
-        );
-        if (scene.thumbnail?.fingerprint === fingerprint) {
-          return;
-        }
-        pendingThumbnail.current = {
-          sceneId,
-          fingerprint,
-          frame: copyFrame(stage),
-        };
-        window.clearTimeout(thumbnailTimer.current);
-        thumbnailTimer.current = window.setTimeout(
-          commitThumbnail,
-          THUMBNAIL_QUIET_MS
-        );
-      });
-    },
-    [thumbnailsEnabled, commitThumbnail]
-  );
-
-  useEffect(
-    () => () => {
-      window.clearTimeout(thumbnailTimer.current);
-      pendingThumbnail.current = null;
-    },
-    []
-  );
+  const requestThumbnail = useSceneThumbnails({
+    engineRef,
+    scenes,
+    channelId,
+    uploadImage,
+    updateSources,
+    getScenes,
+    enabled: !isToolboxMode,
+  });
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
@@ -1609,97 +1480,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     workspaceVersion,
   ]);
 
-  // The scene tab last edited in, so choosing a scene from elsewhere (the
-  // gallery, or its picker while the gallery is open) lands back where the
-  // student was working. World only if the chosen scene has one.
-  const lastSceneTabRef = useRef<Tab>('Code');
-  useEffect(() => {
-    if (activeTab === 'Code' || activeTab === 'World') {
-      lastSceneTabRef.current = activeTab;
-    }
-  }, [activeTab]);
-  const handleSelectScene = useCallback(
-    (sceneId: string) => {
-      const scene = scenes.find(s => s.id === sceneId);
-      if (!scene) {
-        return;
-      }
-      setActiveSceneId(sceneId);
-      if (activeTab !== 'Code' && activeTab !== 'World') {
-        const target =
-          lastSceneTabRef.current === 'World' && scene.type !== 'story'
-            ? 'World'
-            : 'Code';
-        dispatch(setActiveTab(target));
-      }
-    },
-    [scenes, activeTab, dispatch]
-  );
-
-  const handleCreateScene = useCallback(
-    (name: string, type: SceneType) => {
-      const scene: Scene = {
-        id: createUuid(),
-        name,
-        type,
-        source: DEFAULT_SCENE_SOURCE,
-      };
-      updateSources(prev => ({...prev, scenes: [...getScenes(prev), scene]}));
-      // Both state updates land in one commit, so the reconcile effect
-      // sees the new scene in the derived list.
-      setActiveSceneId(scene.id);
-    },
-    [updateSources]
-  );
-
-  const handleRenameScene = useCallback(
-    (sceneId: string, name: string) => {
-      updateSources(prev => ({
-        ...prev,
-        scenes: getScenes(prev).map(s => (s.id === sceneId ? {...s, name} : s)),
-      }));
-    },
-    [updateSources]
-  );
-
-  // Never the last scene (the gallery offers no delete for it). A go-to-scene
-  // block naming the deleted scene falls back to its dropdown's first option.
-  const handleDeleteScene = useCallback(
-    (sceneId: string) => {
-      const doomed = scenesRef.current.find(s => s.id === sceneId);
-      const remaining = scenesRef.current.filter(s => s.id !== sceneId);
-      if (!doomed || remaining.length === 0) {
-        return;
-      }
-      if (activeSceneId === sceneId) {
-        setActiveSceneId(remaining[0].id);
-      }
-      updateSources(prev => ({
-        ...prev,
-        scenes: getScenes(prev).filter(s => s.id !== sceneId),
-      }));
-      deleteOwnAsset(doomed.thumbnail?.url);
-    },
-    [updateSources, activeSceneId, deleteOwnAsset]
-  );
-
-  // Play and other projects' jumps start at index 0.
-  const handleMakeStartScene = useCallback(
-    (sceneId: string) => {
-      updateSources(prev => {
-        const all = getScenes(prev);
-        const chosen = all.find(s => s.id === sceneId);
-        return chosen
-          ? {...prev, scenes: [chosen, ...all.filter(s => s !== chosen)]}
-          : prev;
-      });
-    },
-    [updateSources]
-  );
-
-  const handleManageScenes = useCallback(() => {
-    dispatch(setActiveTab('Scenes'));
-  }, [dispatch]);
+  const sceneEditing = useSceneEditing({
+    scenes,
+    activeSceneId,
+    setActiveSceneId,
+    activeTab,
+    channelId,
+    updateSources,
+    getScenes,
+  });
 
   const handleTabChange = useCallback(
     (tab: Tab) => {
@@ -1889,9 +1678,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 activeSceneId={activeSceneId}
                 disabled={!onSceneTab && activeTab !== 'Scenes'}
                 allowCreate={scenesEditable}
-                onSelectScene={handleSelectScene}
-                onCreateScene={handleCreateScene}
-                onManageScenes={handleManageScenes}
+                onSelectScene={sceneEditing.selectScene}
+                onCreateScene={sceneEditing.createScene}
+                onManageScenes={sceneEditing.openGallery}
                 chipOpensGallery={chipOpensGallery}
               />
             ) : undefined
@@ -1937,11 +1726,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   scenes={sceneMetadata}
                   activeSceneId={activeSceneId}
                   editable={scenesEditable}
-                  onOpenScene={handleSelectScene}
-                  onCreateScene={handleCreateScene}
-                  onRenameScene={handleRenameScene}
-                  onDeleteScene={handleDeleteScene}
-                  onMakeStartScene={handleMakeStartScene}
+                  onOpenScene={sceneEditing.selectScene}
+                  onCreateScene={sceneEditing.createScene}
+                  onRenameScene={sceneEditing.renameScene}
+                  onDeleteScene={sceneEditing.deleteScene}
+                  onMakeStartScene={sceneEditing.makeStartScene}
                 />
               </div>
             </div>
@@ -1972,30 +1761,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             boxRef={playspaceRef}
             mode={playspaceMode}
             controls={
-              <>
-                {/* On a pinned-scene level the game IS the one scene, so no
-                  whole-game restart. */}
-                {!pinnedSceneId && (
-                  <button
-                    type="button"
-                    className={moduleStyles.playControl}
-                    onClick={event =>
-                      handleRestartClick(event, handleRestartGame)
-                    }
-                  >
-                    Restart game
-                  </button>
-                )}
-                <button
-                  type="button"
-                  className={moduleStyles.playControl}
-                  onClick={event =>
-                    handleRestartClick(event, handleRestartScene)
-                  }
-                >
-                  Restart scene
-                </button>
-              </>
+              <PlayControls
+                // On a pinned-scene level the game IS the one scene, so no
+                // whole-game restart.
+                onRestartGame={
+                  pinnedSceneId
+                    ? undefined
+                    : event => handleRestartClick(event, handleRestartGame)
+                }
+                onRestartScene={event =>
+                  handleRestartClick(event, handleRestartScene)
+                }
+              />
             }
             fadeTrigger={fadeTrigger}
             covered={jumpCover}

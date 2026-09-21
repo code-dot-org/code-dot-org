@@ -3,8 +3,10 @@
 // run, but persisted only when the scene has changed in a way that could
 // change the picture, and only once the student has paused editing.
 
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {hashString} from '@cdo/apps/utils';
 
+import {SceneMetadata} from './redux/spriteLab2Redux';
 import {forEachSavedBlock} from './scenesApi';
 import {RuntimeAnimationList, Scene} from './types';
 
@@ -98,4 +100,36 @@ export function sceneBackgroundImage(scene: Scene): string | null {
     }
   });
   return found;
+}
+
+/** The scene list for the picker and the go-to-scene block: each with its
+    stored picture, or, until it has one, the background its blocks name. */
+export function sceneMetadataFor(
+  scenes: Scene[],
+  animations: RuntimeAnimationList
+): SceneMetadata[] {
+  return scenes.map(scene => {
+    let thumbnail = scene.thumbnail?.url;
+    if (!thumbnail) {
+      const background = sceneBackgroundImage(scene);
+      const key =
+        background &&
+        animations.orderedKeys.find(
+          k => animations.propsByKey[k]?.name === background
+        );
+      const props = key ? animations.propsByKey[key] : undefined;
+      thumbnail = props?.sourceUrl ?? props?.dataURI ?? undefined;
+    }
+    return {id: scene.id, name: scene.name, thumbnail};
+  });
+}
+
+/** Best-effort removal of one of this project's own uploads. */
+export function deleteProjectAsset(
+  channelId: string | undefined,
+  url: string | undefined
+): void {
+  if (url && channelId && url.startsWith(`/v3/assets/${channelId}/`)) {
+    HttpClient.delete(url, true).catch(() => undefined);
+  }
 }
