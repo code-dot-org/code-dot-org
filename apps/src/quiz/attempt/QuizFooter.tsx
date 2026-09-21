@@ -12,14 +12,9 @@ export interface QuizFooterProps {
   totalPages: number;
   onNavigateToPage: (pageNumber: number) => void;
   onNext: () => void;
-  // Label for the last-page button - "Finish" when a retake is possible,
-  // "Submit" when this is the student's only or last attempt.
   finishButtonLabel: string;
 }
 
-// Always visible during an attempt, even for a single-question quiz - back
-// and pagination hide themselves via isFirstPage/hasPagination below, but
-// Submit/Next stays.
 const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
   currentPageNumber,
   totalPages,
