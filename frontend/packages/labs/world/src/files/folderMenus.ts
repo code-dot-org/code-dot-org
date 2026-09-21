@@ -29,6 +29,7 @@ import {requestEffectImport} from '../blockly/effectImport';
 import {requestRuleImport} from '../blockly/ruleImport';
 import {requestMapImport} from '../maps/mapImport';
 import {requestSoundImport} from '../sound/soundImport';
+import {requestStyleImport} from '../styles/styleImport';
 
 /**
  * The actors' folder, named because two places need to agree about it: this
@@ -182,5 +183,17 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     icon: 'map',
     makes: [{label: 'New map', extension: 'map', placeholder: 'Level 2'}],
     shelf: requestMapImport,
+  },
+  {
+    // HOW A PROJECT GETS ITS FIRST THEME, and the reason this row exists: a
+    // project starts with none, so every dropdown that offers one starts
+    // empty — and an empty menu says nothing about where a theme comes from.
+    // The file browser is where a learner looks for a kind of file they have
+    // not got yet (specs/STYLES_PLAN.md).
+    folder: 'styles',
+    label: 'Themes',
+    icon: 'palette',
+    makes: [{label: 'New theme', extension: 'style', placeholder: 'Midnight'}],
+    shelf: requestStyleImport,
   },
 ];

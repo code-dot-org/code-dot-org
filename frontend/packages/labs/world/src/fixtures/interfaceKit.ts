@@ -51,6 +51,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
 import {TILE_SIZE} from '../runtime/viewport';
+import {importStockStyle, stockStyleById} from '../styles/importStockStyle';
 
 /** `any ⟨kind⟩` — how a world names the actor a handler is about. */
 const kind = (path: string) => ({
@@ -183,6 +184,13 @@ const MAIN_WORLD = JSON.stringify(
               // say, and it costs one row.
               sized('view'),
               sized('map'),
+              // …AND WHAT IT IS ALL PAINTED OUT OF, which is the row this
+              // fixture exists to show off. Every control below names a
+              // CLASS — `button`, `caption`, `ring` — and this says which
+              // file those classes are looked up in. Point it at
+              // `styles/classic` and the whole kit changes without a drawing
+              // being edited (specs/STYLES_PLAN.md).
+              {type: 'world_use_theme', fields: {THEME: 'styles/modern'}},
               {type: 'world_load_map', fields: {MAP: 'maps/interface'}},
             ]),
           },
@@ -273,6 +281,12 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
     source = importStockActor(source, stockActorById(actor)!).source;
   }
   source = importStockActor(source, stockActorById('textInput')!).source;
+  // BOTH THEMES, because the point of the kit is that you can swap one for
+  // the other and watch every control follow. The world names Modern; opening
+  // the world and picking Classic is the whole demonstration.
+  for (const style of ['modern', 'classic']) {
+    source = importStockStyle(source, stockStyleById(style)!).source;
+  }
 
   const main = Object.values(source.files).find(
     file => file.name === 'main.world',

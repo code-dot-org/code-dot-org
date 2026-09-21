@@ -551,6 +551,47 @@ default fill is `#ffffff`, exactly what the property's default was. Every text
 row is preceded by a `use style`, so there is always a class-provided fill
 underneath it for the empty case to fall through to.
 
+## What opening it found
+
+Two things, both of which needed somebody to actually run it.
+
+**Every caption was invisible in a project with no theme.** The reshape put
+`use style ⟨caption⟩` in front of every text row and took the literal away,
+on the reasoning that the class would supply the fill. It does — when there is
+a theme. A class no theme defines LEAVES THE PEN ALONE, so with no theme the
+words inherited whatever the FACE had just set, and a Button drew `#3050a0`
+on `#3050a0`. The Label was fine and hid the bug, because a Label paints
+nothing before its words.
+
+This is the pattern every other row in the kit follows and the caption was the
+one that did not: say your own look, then offer to be overruled. The ink is a
+literal again, under the class. `drawingReader.test` now asserts that no
+control draws its words in the colour of what they sit on, with no theme and
+with both — the failure only shows up in the case a theme papers over.
+
+**There was no way to get a first theme.** A project starts with none, so
+every dropdown that offers one starts empty, and an empty menu says nothing
+about where a theme comes from. The `use theme` block had an `(import…)` row;
+nothing else did. Now the map's theme field, a placement's theme field and the
+file browser all reach the same seam, and the browser has a Themes section
+with **New theme** beside it — which seeds a copy of Modern rather than an
+empty document, for the same reason a new `.effect` is a passthrough graph: a
+theme defining no classes changes nothing and gives a learner nothing to edit.
+
+**And the Interface Kit fixture ships with both themes and names one.** It is
+the demonstration, and a demonstration of theming with no theme in it was
+asking the reader to imagine the entire point.
+
+That last change found the worst of the three, which nothing else could have:
+**`use theme` had never worked outside a test.** The block generates an import
+of the `.style` file, and neither the bundler (`runtime/compile/
+virtualFsPlugin`) nor the test compiler knew the extension — so the import
+resolved to nothing and reading `default` of it threw. Every test passed the
+whole time, because no test had ever compiled a project that NAMED a theme:
+the reader tests read files directly, and the engine tests call `useTheme`
+with a document in hand. The fixture is the first thing in the repo to take
+the whole path, and it took it on its first run.
+
 ## What it does not do
 
 - **No runtime theme change.** The theme is a file a world names, resolved at

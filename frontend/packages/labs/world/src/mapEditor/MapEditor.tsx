@@ -43,6 +43,7 @@ import {
   projectImagePaths,
 } from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
+import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import {
   drawsItself,
@@ -637,7 +638,11 @@ export const MapEditor = ({
             value={map.theme ?? ''}
             disabled={isReadOnly}
             onChange={event =>
-              commit({...map, theme: event.target.value || undefined})
+              event.target.value === IMPORT_STYLE_VALUE
+                ? void requestStyleImport().then(
+                    path => path && commit({...map, theme: path}),
+                  )
+                : commit({...map, theme: event.target.value || undefined})
             }
           >
             <option value="">(the world’s)</option>
@@ -646,6 +651,14 @@ export const MapEditor = ({
                 {label}
               </option>
             ))}
+            {/*
+              …AND A WAY IN, which this did not have. A project starts with no
+              themes, so the list above starts EMPTY — and a menu whose only
+              row is "the world's" is a dead end that says nothing about where
+              a theme comes from. The same `(import…)` row the `use theme`
+              block offers, on the same seam (`styles/styleImport`).
+            */}
+            <option value={IMPORT_STYLE_VALUE}>(import…)</option>
           </select>
         </label>
         {actorOptions.map(([name, path]) => (

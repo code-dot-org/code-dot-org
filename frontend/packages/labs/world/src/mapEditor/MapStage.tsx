@@ -37,6 +37,7 @@ import {STYLED} from '../engine/rules/styled';
 import type {Affordance} from '../progression/types';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
+import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
@@ -1262,10 +1263,23 @@ export const MapStage = ({
               value: path,
               text: label,
             })),
+            // …and a way in, because a project starts with no themes and a
+            // menu of one row says nothing about where one comes from. The
+            // same seam the `use theme` block's `(import…)` uses.
+            {value: IMPORT_STYLE_VALUE, text: '(import…)'},
           ]}
-          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-            selectOption(prop, event.target.value)
-          }
+          onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+            if (event.target.value === IMPORT_STYLE_VALUE) {
+              // The import writes the file and answers its path, and the
+              // placement takes it — so picking a theme and fetching one are
+              // one gesture.
+              void requestStyleImport().then(
+                path => path && selectOption(prop, path),
+              );
+              return;
+            }
+            selectOption(prop, event.target.value);
+          }}
         />
       );
     }

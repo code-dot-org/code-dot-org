@@ -232,6 +232,44 @@ describe('readDrawing, over the shelf', () => {
     ).toBe('#e06c75');
   });
 
+  it('never draws words in the colour of what they sit on', () => {
+    // THE BUG THIS EXISTS FOR, found by opening the Interface Kit fixture and
+    // seeing nothing on the buttons. A caption went straight to `use style
+    // ⟨caption⟩` with no literal under it — and a class that no theme defines
+    // leaves the pen ALONE, so in a project with no theme the words inherited
+    // whatever the FACE had just set. A Button drew `#3050a0` on `#3050a0`.
+    //
+    // Every other row in this kit says its own look and then offers to be
+    // overruled; the caption was the one that did not (specs/STYLES_PLAN.md).
+    //
+    // CHECKED WITH NO THEME AND WITH BOTH, because the failure is in exactly
+    // the case a theme papers over: with one, the class supplies the fill and
+    // the bug is invisible.
+    const withNone = SHELF;
+    for (const files of [withNone, withTheme('modern'), withTheme('classic')]) {
+      for (const kind of [
+        'button',
+        'panel',
+        'toggle',
+        'dropdown',
+        'label',
+        'speechBox',
+      ]) {
+        const commands = readDrawing(files, `actors/${kind}`)!.commands;
+        const face = commands.find(one => one.op === 'rectangle') as
+          | {fill?: string}
+          | undefined;
+        const words = commands.find(one => one.op === 'text') as
+          | {fill?: string}
+          | undefined;
+        if (!face || !words) {
+          continue;
+        }
+        expect(words.fill, `${kind} words on its own face`).not.toBe(face.fill);
+      }
+    }
+  });
+
   it('draws a Button darker while it is held', () => {
     // THE PRESSED STATE, which is the plainest thing this kit was missing: a
     // Button held down was pixel-identical to one at rest.

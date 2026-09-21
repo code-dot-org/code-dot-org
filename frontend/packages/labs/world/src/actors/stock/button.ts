@@ -201,6 +201,13 @@ export const buttonActor = actorFile(
         // control you press from a label that describes it, when everything
         // in the kit is one family at one size.
         weight('bold'),
+        // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+        // its own look and then offers to be overruled, and the caption was the one
+        // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+        // pen alone when no theme defines one. So in a project with NO theme the
+        // caption inherited whatever the FACE had just set, and a Button drew its
+        // words in the button colour: invisible (specs/STYLES_PLAN.md).
+        fill(swatch(LOOK.ink)),
         useStyle('caption'),
         fill(textOf('TextColorProperty')),
         drawParagraph(labelHalf(width()), labelHalf(height()), width()),

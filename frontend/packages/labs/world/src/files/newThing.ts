@@ -19,6 +19,7 @@
 
 import {createEffectDocument} from '../effect/model/document';
 import {DEFAULT_MAP_SIZE, DEFAULT_TILE} from '../mapEditor/mapModel';
+import {modernStyle} from '../styles/stock/modern';
 
 /** What a new file is made of: text, or bytes that live on a URL. */
 export type Seed = {contents: string} | {url: string; mimeType: string};
@@ -125,6 +126,20 @@ export const seedFor = (extension: string, name: string): Seed | undefined => {
       // to start changing that (`effect/model/document`).
       return {
         contents: `${JSON.stringify(createEffectDocument(name), null, 2)}\n`,
+      };
+    case 'style':
+      // MODERN UNDER ANOTHER NAME, rather than an empty theme — which is the
+      // same reasoning as the passthrough effect above. A theme that defines
+      // no classes is a theme that changes nothing, because a class nobody
+      // defines leaves the pen alone; so a new one would look identical to
+      // having none and give a learner nothing to edit
+      // (specs/STYLES_PLAN.md).
+      return {
+        contents: `${JSON.stringify(
+          {...(JSON.parse(modernStyle) as object), name},
+          null,
+          2,
+        )}\n`,
       };
     case 'map':
       // The empty map the editor would make, rather than nothing (see above).

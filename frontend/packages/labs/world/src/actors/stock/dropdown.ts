@@ -398,6 +398,13 @@ export const dropdownActor = actorFile(
         useStyle('surface'),
         rectangle(0, 0, width(), ROW),
         noOutline(),
+        // THE INK, AS A LITERAL, BEFORE THE CLASS. Every other row in this kit says
+        // its own look and then offers to be overruled, and the caption was the one
+        // that did not — it went straight to `use style ⟨caption⟩`, which leaves the
+        // pen alone when no theme defines one. So in a project with NO theme the
+        // caption inherited whatever the FACE had just set, and a Button drew its
+        // words in the button colour: invisible (specs/STYLES_PLAN.md).
+        fill(swatch(LOOK.ink)),
         useStyle('caption'),
         fill(textOf('TextColorProperty')),
         drawWords(textOf('TextProperty'), num(ROW / 2)),
@@ -435,6 +442,7 @@ export const dropdownActor = actorFile(
                       ROW,
                     ),
                   ]),
+                  fill(swatch(LOOK.ink)),
                   useStyle('caption'),
                   fill(textOf('TextColorProperty')),
                   drawWords(choice(row()), rowMiddle(row())),
