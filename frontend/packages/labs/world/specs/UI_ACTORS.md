@@ -1302,6 +1302,21 @@ label-shaped rectangle and never showed its picture. So its width and height
 are its own — which reads better anyway: an Image is not a Label with a
 picture in it, it is a picture with a box around it.
 
+### A hit box turns with what it is on
+
+A box test only works in the BOX's own frame. The pointer test compared screen
+distances against half the actor's size, which is right for an actor square on
+and wrong for every other one: a button turned forty-five degrees kept a hit
+box still square to the screen, so it answered clicks outside itself and
+ignored clicks on its own corners.
+
+Rotating the OFFSET into the actor's axes is the whole fix, in the one shared
+helper both pointer rules read (`rules/pointing`, `under`), so a press and a
+drag were corrected together. It is the same arithmetic the map editor's
+resize does in the other direction (`mapEditor/rotatedResize`) — which is what
+made the bug findable: the editor grew rotation handles, somebody turned a
+button, and the clicks stopped landing.
+
 ### What a phone-shaped kit does not yet answer
 
 The Interface Kit runs at a phone's shape, and nothing in the lab has met a

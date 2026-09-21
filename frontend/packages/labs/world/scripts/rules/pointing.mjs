@@ -10,19 +10,22 @@
 // transparent corner counts as a hit, which is the same bargain collisions
 // already make and the one a learner already has a feel for.
 
-import {intrinsicSize, position, scale} from './builtins.mjs';
+import {intrinsicSize, position, rotation, scale} from './builtins.mjs';
 import {
   absolute,
+  add,
   atMost,
   axisOf,
   both,
   canBeReached,
+  cosine,
   minus,
   mousePosition,
   moreThan,
   n,
   over,
   pick,
+  sine,
   times,
 } from './dsl.mjs';
 
@@ -51,14 +54,34 @@ const halfSize = (which, subject) =>
     n(2),
   );
 
+/** How far the pointer is from the actor's middle, on one SCREEN axis. */
+const offset = (which, subject) =>
+  minus(axisOf(which, mousePosition()), position.axis(which, subject));
+
+/**
+ * …and the same offset said in the ACTOR's own axes, which is what makes a
+ * turned actor's box turn with it.
+ *
+ * A BOX TEST ONLY WORKS IN THE BOX'S OWN FRAME. Comparing screen distances
+ * against half the width is the right test for an actor square on and the
+ * wrong one for every other: a button turned forty-five degrees kept a hit
+ * box that was still square to the screen, so its corners answered clicks it
+ * does not cover and its own corners answered nothing. Rotating the OFFSET is
+ * the whole fix, and it is the same arithmetic the map editor's resize does
+ * in the other direction (`mapEditor/rotatedResize`).
+ */
+const localOffset = (which, subject) => {
+  const turn = rotation.of(subject);
+  const dx = offset('x', subject);
+  const dy = offset('y', subject);
+  return which === 'x'
+    ? add(times(dx, cosine(turn)), times(dy, sine(turn)))
+    : minus(times(dy, cosine(turn)), times(dx, sine(turn)));
+};
+
 /** Whether the pointer is inside the actor's box, one axis at a time. */
 const withinAxis = (which, subject) =>
-  atMost(
-    absolute(
-      minus(axisOf(which, mousePosition()), position.axis(which, subject)),
-    ),
-    halfSize(which, subject),
-  );
+  atMost(absolute(localOffset(which, subject)), halfSize(which, subject));
 
 /**
  * Whether the pointer HITS this actor: over it, and allowed to be.

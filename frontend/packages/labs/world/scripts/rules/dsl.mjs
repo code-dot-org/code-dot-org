@@ -258,6 +258,19 @@ const single = (op, a) => ({
   inputs: {NUM: value(a)},
 });
 export const absolute = a => single('ABS', a);
+
+/**
+ * `sin ⟨n⟩` and `cos ⟨n⟩`, in DEGREES — which is what every angle in this lab
+ * is, so nothing has to convert (`math_trig` takes degrees too).
+ */
+const trig = (op, a) => ({
+  type: 'math_trig',
+  fields: {OP: op},
+  inputs: {NUM: value(a)},
+});
+export const sine = a => trig('SIN', a);
+export const cosine = a => trig('COS', a);
+
 export const negated = a => single('NEG', a);
 export const root = a => single('ROOT', a);
 
