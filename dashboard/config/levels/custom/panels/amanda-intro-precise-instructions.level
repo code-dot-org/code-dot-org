@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-15T20:59:06.000Z",
+  "level_num": "custom",
+  "user_id": 19028,
+  "properties": {
+    "panels": [
+      {
+        "key": "amanda-intro-precise-instructions-c87db7e7-1bbf-4ea0-8a3e-42af2276e21c",
+        "text": "Every day, we give and follow instructions. How would you tell someone how to make a sandwich?",
+        "imageUrl": "https://images.code.org/17d3cfb68961261d7828f6a2cd4630d2-amanda-intro-precise-instructions-panel-1-4ab8cd41-3d48-4499-94b6-e2526983f15f.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "amanda-intro-precise-instructions-1fc38485-18ae-4182-be1b-b722ca3425ad",
+        "text": "But what if your instructions aren't super clear? What if you just said, 'Make a sandwich,' and walked away?",
+        "imageUrl": "https://images.code.org/002f9d95be69a609ec95473d13370353-amanda-intro-precise-instructions-panel-2-9f2945d0-bf93-419e-8f58-e37e3c36f9b4.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "amanda-intro-precise-instructions-ff9f1e3b-71e4-4c61-8765-8aaec85a66f6",
+        "text": "Computers don't guess or understand implied meanings. They need every single step described *exactly*, in the correct order, without any missing details.",
+        "imageUrl": "https://images.code.org/3e9eff739d4138f51f890165c1897c88-amanda-intro-precise-instructions-panel-3-d74169c1-98c1-4b06-9e6b-fbd3d7db0a7f.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "amanda-intro-precise-instructions-9838b353-131f-4828-9791-b58e99797349",
+        "text": "Coding is simply the process of writing these precise, step-by-step instructions in a language a computer can understand.",
+        "imageUrl": "https://images.code.org/b6481e639e86678a299947dea78d2be3-amanda-intro-precise-instructions-panel-4-6227fb23-979b-43c5-b037-8aa323ed03f6.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "This introductory level explains what coding is: the act of giving computers precise, step-by-step instructions. It uses real-world examples to illustrate the importance of clear communication."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-15 20:59:48 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-15 20:59:48 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

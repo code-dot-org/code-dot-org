@@ -3,6 +3,10 @@ display_name 'Troubleshooting Software and Optimization'
 description 'Choose one of the clients below based on the career track of your interest. You will assist them in troubleshooting software and optimizing their devices.'
 
 sublevels
-level 'ai-and-the-systems-that-power-it-lesson5-amara'
+level 'ai-and-the-systems-that-power-it-lesson5-amara2'
+level 'ai-and-the-systems-that-power-it-lesson5-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson5-denise'
+level 'ai-and-the-systems-that-power-it-lesson5-marcus'
+level 'ai-and-the-systems-that-power-it-lesson5-layla'
 
 uses_lab2

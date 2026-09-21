@@ -50,13 +50,6 @@ export function turnstileHeaders(token: string | null): Record<string, string> {
   return token ? {'X-Turnstile-Token': token} : {};
 }
 
-// instanceof cannot be used across webpack chunk boundaries — the dynamic
-// import of getClientApi() produces a separate copy of the class object,
-// so instanceof always returns false for errors thrown inside that chunk.
-export function isTurnstileDevToolsError(error: Error): boolean {
-  return error.name === 'TurnstileDevToolsError';
-}
-
 // Errors are sampled far below 1.0 — metrics and logs are authoritative.
 export function turnstileErrorTags(
   error: unknown
@@ -109,6 +102,7 @@ export function turnstileUserMessage(error: unknown): string | undefined {
       );
 
     case 'challenge_failed':
+    case 'devtools_breakpoints':
     case 'render_threw':
     case 'render_failed':
     case 'remove_failed':

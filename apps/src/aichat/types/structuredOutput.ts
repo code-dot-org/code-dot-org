@@ -1,10 +1,22 @@
 export interface ResponseSchemaSettings {
   jsonSchema: JsonObjectSchema;
-  // Only ever invoked for a jsonSchema-configured session, so it always
-  // receives the parsed structured output -- never a raw string. Parsing
-  // (both paths' string forms) happens once, at the call site in
-  // submitChatContents, not here.
-  jsonSchemaResponseCallback: (response: unknown) => string;
+
+  /**
+   * Renders a parsed structured response as the text shown to the reader.
+   *
+   * Must be pure. It runs on every message in the transcript, on every render,
+   * including a teacher reading a student's history -- so a side effect here
+   * fires once per historical message against whoever is looking.
+   */
+  formatForDisplay: (response: unknown) => string;
+
+  /**
+   * Optional callback to act on a structured response that just arrived.
+   *
+   * May perform side effects. Called once for the new response only, never when
+   * loading the response from the stored history.
+   */
+  onResponse?: (response: unknown) => void;
 }
 
 export interface JsonObjectSchema {

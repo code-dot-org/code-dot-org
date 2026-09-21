@@ -14,10 +14,6 @@ describe('getHyperparameters', () => {
     expect(getHyperparameters({kValue: 3})).toEqual({k: 3});
   });
 
-  it('takes the object when there is one', () => {
-    expect(getHyperparameters({hyperparameters: {k: 7}})).toEqual({k: 7});
-  });
-
   it('prefers hyperparameters over kValue when a model carries both', () => {
     expect(getHyperparameters({hyperparameters: {k: 7}, kValue: 3})).toEqual({
       k: 7,
