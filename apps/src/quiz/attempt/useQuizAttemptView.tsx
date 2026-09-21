@@ -6,6 +6,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {QuizLevelProperties, QuizViewContent} from '../types';
 
+import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
 import useQuizAttempt from './useQuizAttempt';
 
@@ -23,18 +24,26 @@ export default function useQuizAttemptView({
 
   const unitId = useAppSelector(state => state.progress.scriptId) ?? undefined;
 
-  const {attempt, isLoading, error, beginAttempt, finishAttempt} =
-    useQuizAttempt({
-      levelId,
-      unitId,
-    });
+  const {
+    attempt,
+    isLoading,
+    error,
+    beginAttempt,
+    finishAttempt,
+    submitQuestionResponse,
+  } = useQuizAttempt({
+    levelId,
+    unitId,
+  });
 
   const totalPages = new Set(quizQuestions.map(q => q.page)).size || 1;
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
+  const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
+    useState<Record<number, string>>({});
 
-  // A new attempt (begin or retake) starts back on page 1.
   useEffect(() => {
     setCurrentPageNumber(1);
+    setSelectedChoicesByQuestionId({});
   }, [attempt?.id]);
 
   const handleBeginAttempt = async () => {
@@ -48,6 +57,15 @@ export default function useQuizAttemptView({
   const handleFinishAttempt = async () => {
     try {
       await finishAttempt();
+    } catch {
+      // Already recorded as a user-facing error in useQuizAttempt.
+    }
+  };
+
+  const handleSelectChoice = async (questionId: number, choiceId: string) => {
+    setSelectedChoicesByQuestionId(prev => ({...prev, [questionId]: choiceId}));
+    try {
+      await submitQuestionResponse(questionId, {selectedChoiceId: choiceId});
     } catch {
       // Already recorded as a user-facing error in useQuizAttempt.
     }
@@ -111,7 +129,32 @@ export default function useQuizAttemptView({
               )}
             </div>
           ) : (
-            <Typography variant="body2">Quiz in progress.</Typography>
+            <div className={styles.questions}>
+              {quizQuestions
+                .filter(question => question.page === currentPageNumber)
+                // Only MultipleChoiceQuestion has a container built so far.
+                .filter(question => question.type === 'MultipleChoiceQuestion')
+                .map(question => (
+                  <MultiChoiceQuestionContainer
+                    key={question.id}
+                    question={question}
+                    questionLabel={
+                      quizQuestions.length > 1
+                        ? `Question ${
+                            quizQuestions.findIndex(q => q.id === question.id) +
+                            1
+                          } of ${quizQuestions.length}`
+                        : undefined
+                    }
+                    selectedChoiceId={
+                      selectedChoicesByQuestionId[question.id] ?? null
+                    }
+                    onSelectChoice={choiceId =>
+                      handleSelectChoice(question.id, choiceId)
+                    }
+                  />
+                ))}
+            </div>
           )}
         </div>
         {isAttemptInProgress && (
