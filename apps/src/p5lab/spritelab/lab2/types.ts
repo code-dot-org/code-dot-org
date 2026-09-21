@@ -7,6 +7,7 @@ import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
 import {Tab} from './redux/spriteLab2Redux';
+import {StarterBlock} from './starterBlocks';
 import {World} from './world';
 
 /** The animation-list category marking an image as a background, not a costume. */
@@ -137,6 +138,10 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;
+  /** Blocks added to the pinned scene when the student arrives and the
+      scene has none of that type (starterBlocks.ts), in Blockly's block
+      state form: an event to fill in, a placeholder shadow on its `next`. */
+  starterBlocks?: StarterBlock[];
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

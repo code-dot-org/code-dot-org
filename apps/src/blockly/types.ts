@@ -444,6 +444,7 @@ export interface BlockJson<BlockType extends string = string> {
   nextStatement?: string | string[] | null;
   output?: string | string[] | null;
   tooltip?: string;
+  extensions?: string[];
   helpUrl?: string;
 }
 

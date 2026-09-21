@@ -1,4 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
@@ -100,6 +101,7 @@ import {
 } from '../scenesApi';
 import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
+import {addStarterBlocks} from '../starterBlocks';
 import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
@@ -1437,6 +1439,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     loadCode(source);
+    // The level's starters join the pinned scene once it is on screen, so
+    // they can sit below what the workspace has rendered.
+    if (activeScene.id === pinnedSceneId && levelProperties.starterBlocks) {
+      addStarterBlocks(
+        Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg,
+        levelProperties.starterBlocks
+      );
+    }
     runLocalScene(activeScene);
   }, [
     animationsSeeded,
@@ -1448,6 +1458,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sourcesReinitializedCount,
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
+    pinnedSceneId,
+    levelProperties.starterBlocks,
   ]);
 
   const handleSelectScene = useCallback(

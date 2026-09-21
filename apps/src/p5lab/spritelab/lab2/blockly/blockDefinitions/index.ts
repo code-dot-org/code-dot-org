@@ -12,6 +12,7 @@ import movingLeft from './movingLeft';
 import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
+import placeholder from './placeholder';
 import playMusic from './playMusic';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
@@ -44,6 +45,7 @@ const labBlockDefinitions: {
   setAsPlatformPlayer,
   setCameraZoom,
   thePlayer,
+  placeholder,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,
