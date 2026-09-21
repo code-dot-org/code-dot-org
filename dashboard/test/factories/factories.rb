@@ -1110,6 +1110,12 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :adaptive, parent: :level, class: Adaptive do
+    game {Game.adaptive}
+    level_num {'custom'}
+    adaptive_id {'sample'}
+  end
+
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
     sublevels do
@@ -1169,18 +1175,6 @@ FactoryBot.define do
     script
     level
     level_source {create(:level_source, level: level)}
-  end
-
-  factory :skill do
-    sequence(:key) {|n| "skill-#{n}}"}
-    description {"Declares variables with conventional names"}
-    concept {"Variables"}
-    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
-  end
-
-  factory :levels_skill do
-    association :level
-    association :skill
   end
 
   factory :unit, aliases: [:script] do
@@ -2374,16 +2368,6 @@ FactoryBot.define do
   factory :student_work_evaluation_summary do
     student_work_evaluation_id {1}
     student_work_evaluation_summary_id {1}
-  end
-
-  factory :user_level_skill_evaluation do
-    association :student, factory: :student
-    association :level
-    association :unit
-    evaluator {"AI"}
-    evaluation {"Great"}
-    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
-    reasoning {"The student's work demonstrated the skill."}
   end
 
   factory :user_level_evaluation do

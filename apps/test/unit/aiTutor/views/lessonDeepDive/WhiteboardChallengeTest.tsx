@@ -50,9 +50,16 @@ jest.mock(
   }
 );
 
-// AudioRecorder relies on MediaRecorder / getUserMedia, unavailable in jsdom.
-// The stub mirrors the real state machine: Start sets recording-in-progress,
-// Stop commits the blob and clears the in-progress flag.
+// Referenced from inside jest.mock() below, so named with the "mock" prefix
+// babel-plugin-jest-hoist requires for out-of-scope variables.
+const mockRecordedAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
+
+// AudioRecorder relies on MediaRecorder and getUserMedia, unavailable in
+// jsdom. The stub mirrors VideoRecorder's test double: two buttons drive the
+// same callbacks the real recorder's state machine would fire.
+// - "Start Recording" signals recording-in-progress via onIsRecordingChange(true)
+// - "Stop Recording" fires the same sequence as the real onstop handler:
+//   setRecordedBlob, onRecordingChange(true), onIsRecordingChange(false)
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/AudioRecorder',
   () => {
@@ -62,7 +69,7 @@ jest.mock(
       default: (props: {
         onRecordingChange: (hasRecording: boolean) => void;
         onIsRecordingChange?: (isRecording: boolean) => void;
-        setRecordedUrl: (url: string | null) => void;
+        setRecordedBlob: (blob: Blob | null) => void;
         disabled?: boolean;
       }) =>
         React.createElement(
@@ -83,7 +90,7 @@ jest.mock(
               type: 'button',
               disabled: props.disabled,
               onClick: () => {
-                props.setRecordedUrl('blob:fake-recording');
+                props.setRecordedBlob(mockRecordedAudioBlob);
                 props.onRecordingChange(true);
                 props.onIsRecordingChange?.(false);
               },
@@ -98,7 +105,6 @@ jest.mock(
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
 
-const fakeAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
 const createdResponse = {
   id: 7,
   assets: [
@@ -182,7 +188,7 @@ describe('WhiteboardChallenge', () => {
     mockTranscribeAudio.mockReset();
     mockTranscribeAudio.mockResolvedValue('Hello this is a recording');
     originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
-    fetchMock = jest.fn().mockResolvedValue({blob: async () => fakeAudioBlob});
+    fetchMock = jest.fn();
     (globalThis as unknown as {fetch?: jest.Mock}).fetch = fetchMock;
   });
 
@@ -356,8 +362,7 @@ describe('WhiteboardChallenge', () => {
 
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
-    expect(fetchMock).toHaveBeenCalledWith('blob:fake-recording');
-    expect(mockTranscribeAudio).toHaveBeenCalledWith(fakeAudioBlob);
+    expect(mockTranscribeAudio).toHaveBeenCalledWith(mockRecordedAudioBlob);
     expect(post).toHaveBeenCalledWith(
       '/challenge_responses',
       expect.stringContaining('"transcript":"Hello this is a recording"'),

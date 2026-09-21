@@ -1,8 +1,8 @@
 import {useCallback, useEffect, useState} from 'react';
 
+import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {networkErrorMessage} from './networkError';
 import {QuizBuilderQuestion, QuizBuilderQuestionsState} from './types';
 
 // A newly created question needs placeholder-but-valid content:

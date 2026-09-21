@@ -94,7 +94,7 @@ const WhiteboardChallenge: FC<WhiteboardChallengeProps> = ({
   const [hasObjects, setHasObjects] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
+  const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
   // Bumped to remount the canvas with an empty drawing on "Start over".
   const [resetKey, setResetKey] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout>();
@@ -120,14 +120,13 @@ const WhiteboardChallenge: FC<WhiteboardChallengeProps> = ({
   }, [clientType, lessonId]);
 
   const transcribeAudio = async () => {
-    if (!recordedUrl) return null;
+    if (!recordedBlob) return null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     try {
-      const audio = await fetch(recordedUrl).then(r => r.blob());
       const aichatClientApi = await getClientApi();
-      return await aichatClientApi.transcribeAudio(audio);
+      return await aichatClientApi.transcribeAudio(recordedBlob);
     } catch (error) {
       console.log(error);
       return null;
@@ -222,7 +221,7 @@ const WhiteboardChallenge: FC<WhiteboardChallengeProps> = ({
     setResetKey(key => key + 1);
     setHasObjects(false);
     setSubmitError(null);
-    setRecordedUrl(null);
+    setRecordedBlob(null);
   };
 
   useEffect(() => {
@@ -255,9 +254,10 @@ const WhiteboardChallenge: FC<WhiteboardChallengeProps> = ({
               isRecording={isRecording}
               onRecordingChange={setHasRecording}
               onIsRecordingChange={setIsRecording}
-              recordedUrl={recordedUrl}
-              setRecordedUrl={setRecordedUrl}
+              recordedBlob={recordedBlob}
+              setRecordedBlob={setRecordedBlob}
               disabled={submitted}
+              timeLimitSeconds={60}
             />
           </div>
         )}
