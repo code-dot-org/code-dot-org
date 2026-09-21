@@ -1779,8 +1779,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           />
 
           {/* Floating guide, when the level asks for it; it follows the
-          student across every tab, narrowing on Play to leave the game its
-          room. */}
+          student across every tab, narrowing on Play to leave the game more
+          space. */}
           {!!levelProperties.levelMode && (
             <GenerateSpriteLab
               levelMode={levelProperties.levelMode}

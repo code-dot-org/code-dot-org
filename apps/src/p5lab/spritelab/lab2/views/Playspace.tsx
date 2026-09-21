@@ -45,13 +45,13 @@ interface Placement {
   y: number;
 }
 
-/** The box centered and scaled to fill a room, MARGIN kept all round. */
-function centeredIn(room: Size): Placement {
-  const scale = Math.max(0.1, (Math.min(room.w, room.h) - 2 * MARGIN) / CANVAS);
+/** The box centered and scaled to fill an area, MARGIN kept all round. */
+function centeredIn(area: Size): Placement {
+  const scale = Math.max(0.1, (Math.min(area.w, area.h) - 2 * MARGIN) / CANVAS);
   return {
     scale,
-    x: (room.w - CANVAS * scale) / 2,
-    y: (room.h - CANVAS * scale) / 2,
+    x: (area.w - CANVAS * scale) / 2,
+    y: (area.h - CANVAS * scale) / 2,
   };
 }
 

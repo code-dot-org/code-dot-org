@@ -10,7 +10,7 @@ import {SpriteLab2LevelProperties} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
-/** The guide's width on the Play tab, where it shares the room with the
+/** The guide's width on the Play tab, where it shares the space with the
     game. */
 export const PLAY_GUIDE_WIDTH_PX = 400;
 
