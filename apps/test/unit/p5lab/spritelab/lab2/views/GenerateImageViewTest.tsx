@@ -31,6 +31,30 @@ describe('GenerateImageView character-set offer', () => {
     expect(screen.getByLabelText(SET_CHECKBOX)).not.toBeChecked();
   });
 
+  it('does not offer a set for an object: a set would give it limbs', () => {
+    renderView({create: {isNameTaken: () => false}});
+    fireEvent.click(screen.getByRole('radio', {name: 'Object'}));
+    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('radio', {name: 'Character'}));
+    expect(screen.getByLabelText(SET_CHECKBOX)).toBeInTheDocument();
+  });
+
+  it('does not offer a set once a prompt is typed', () => {
+    renderView({create: {isNameTaken: () => false}});
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'a fox'}});
+    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+  });
+
+  it("locks a new sprite to the level's subject", () => {
+    renderView({
+      create: {isNameTaken: () => false},
+      lockedImageType: 'sprite',
+      lockedImageSubject: 'object',
+    });
+    expect(screen.getByRole('radio', {name: 'Object'})).toBeChecked();
+    expect(screen.queryByLabelText(SET_CHECKBOX)).not.toBeInTheDocument();
+  });
+
   it('does not offer a set when the type is not sprite', () => {
     renderView({
       create: {isNameTaken: () => false},

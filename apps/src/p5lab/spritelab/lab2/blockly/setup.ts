@@ -1,7 +1,12 @@
 import * as BlocklyCore from 'blockly/core';
+import {omit} from 'lodash';
 
 import * as blockUtils from '@cdo/apps/block_utils';
-import {BlockDefinition, CustomInputTypes} from '@cdo/apps/blockly/types';
+import {
+  BlockConfig,
+  BlockDefinition,
+  CustomInputTypes,
+} from '@cdo/apps/blockly/types';
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
@@ -94,7 +99,13 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
 } {
   return blockUtils.installCustomBlocks({
     blockly: Blockly,
-    blockDefinitions: sharedBlocks || [],
+    // The pool's event blocks carry a mini toolbox of pointer blocks, the
+    // "+" on "when clicked". This lab does not teach them, and students
+    // took the "+" for something they had to press.
+    blockDefinitions: (sharedBlocks || []).map(definition => ({
+      ...definition,
+      config: omit(definition.config, 'miniToolboxBlocks') as BlockConfig,
+    })),
     customInputTypes: {
       ...(spritelabBlocks.customInputTypes as unknown as CustomInputTypes),
       // Lab2 pickers: trim-aware costume thumbnails (backgrounds stay

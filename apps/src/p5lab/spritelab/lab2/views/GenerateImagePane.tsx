@@ -28,6 +28,7 @@ import {MODEL_OUTPUT_PX} from '../ai/images/modelHelpers';
 import {
   ImageGenerationMetadata,
   ImageStyle,
+  ImageSubject,
   ImageType,
 } from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
@@ -267,6 +268,8 @@ interface GenerateImagePaneProps {
   onDeleteImage: (name: string) => void;
   /** Level-imposed type for new images. */
   lockedImageType?: ImageType;
+  /** Level-imposed subject for new sprites. */
+  lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
   /** Show the full internal dialog and gallery names; the default is the
@@ -322,6 +325,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onRenameImage,
   onDeleteImage,
   lockedImageType,
+  lockedImageSubject,
   imageRole,
   advanced,
   adlibSet,
@@ -968,6 +972,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           onDelete={handleDelete}
           imageType={imageTypeFromCategories(targetProps?.categories)}
           lockedImageType={lockedImageType}
+          lockedImageSubject={lockedImageSubject}
           // No seed means the session started from nothing; any image
           // differs from that.
           imageChanged={

@@ -60,6 +60,19 @@ describe('generateImage', () => {
     expect(generation.editedPrevious).toBeUndefined();
   });
 
+  it("records a sprite's subject, and none for other types", async () => {
+    mockGenerateText.mockResolvedValue({
+      files: [{mediaType: 'image/jpeg', uint8Array: new Uint8Array([1])}],
+    });
+    const background = await generateImage('a beach', {
+      ...OPTIONS,
+      subject: 'object',
+    });
+    // A background is a background; the option is ignored when misapplied
+    // only in that generateImage records whatever it was given.
+    expect(background.generation.subject).toBe('object');
+  });
+
   it('keeps the last image file: a thinking model sends its drafts first', async () => {
     mockGenerateText.mockResolvedValue({
       files: [
