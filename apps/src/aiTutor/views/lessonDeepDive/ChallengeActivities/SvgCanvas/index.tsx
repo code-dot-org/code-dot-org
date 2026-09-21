@@ -23,6 +23,7 @@ import React, {
 import {createUuid} from '@cdo/apps/utils';
 
 import AccessibleObjectList from './AccessibleObjectList';
+import EmojiPicker from './EmojiPicker';
 import PropertyPanel from './PropertyPanel';
 import Toolbar from './Toolbar';
 import {DrawingObjectRecord, DrawingTool} from './types';
@@ -1155,6 +1156,12 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
       [tool, selectedId, syncObjects]
     );
 
+    // Moves focus from the emoji picker back to the canvas so the user can
+    // immediately use arrow keys and Enter to stamp the selected emoji.
+    const handleEmojiConfirm = useCallback(() => {
+      containerRef.current?.focus();
+    }, []);
+
     // --- Delete via toolbar button ---
 
     const handleDeleteSelected = useCallback(() => {
@@ -1247,28 +1254,12 @@ const SvgCanvas = forwardRef<SvgCanvasHandle, SvgCanvasProps>(
               onSendToBack={handleSendToBack}
             />
             {tool === 'emoji' && (
-              <div
-                className={styles.emojiPicker}
-                role="group"
-                aria-label="Choose an emoji to stamp"
-              >
-                {EMOJI_LIST.map(emoji => (
-                  <button
-                    key={emoji}
-                    type="button"
-                    aria-label={emoji}
-                    aria-pressed={selectedEmoji === emoji}
-                    onClick={() => setSelectedEmoji(emoji)}
-                    className={`${styles.emojiPickerBtn}${
-                      selectedEmoji === emoji
-                        ? ` ${styles.emojiPickerBtnSelected}`
-                        : ''
-                    }`}
-                  >
-                    {emoji}
-                  </button>
-                ))}
-              </div>
+              <EmojiPicker
+                emojis={EMOJI_LIST}
+                selectedEmoji={selectedEmoji}
+                onEmojiChange={setSelectedEmoji}
+                onConfirm={handleEmojiConfirm}
+              />
             )}
           </div>
         )}
