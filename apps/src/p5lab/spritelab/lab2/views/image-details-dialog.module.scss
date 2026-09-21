@@ -37,7 +37,7 @@
   // Two columns: the pane on the left spans both rows; the details and the
   // footer stack on the right with the footer at the bottom, so Generate
   // ends level with the image. The body's usual padding and column are
-// dropped in favor of the grid.
+  // dropped in favor of the grid.
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr) auto;
