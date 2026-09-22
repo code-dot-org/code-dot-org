@@ -647,10 +647,14 @@ Return the structured verdict. pass is true only when no pair is a mismatch.`
 // Every pair must come back in all four theme/direction renders; the agent's own pass
 // flag is not trusted over a hole in its coverage.
 const expectedRenders = storyPairs.flatMap(p =>
-  ['Light', 'Dark'].flatMap(theme => ['ltr', 'rtl'].map(dir => ({dsco: p.dsco, theme, dir}))),
+  ['Light', 'Dark'].flatMap(theme => ['ltr', 'rtl'].map(dir => ({dsco: p.dsco, mui: p.mui, theme, dir}))),
 )
+// Both ids must match: a render of the right DSCO story against the wrong MUI story
+// is not coverage.
 const missingRenders = pairs =>
-  expectedRenders.filter(e => !pairs.some(p => p.dscoStoryId === e.dsco && p.theme === e.theme && p.dir === e.dir))
+  expectedRenders.filter(
+    e => !pairs.some(p => p.dscoStoryId === e.dsco && p.muiStoryId === e.mui && p.theme === e.theme && p.dir === e.dir),
+  )
 
 let parity = null
 let parityAttempt = 0
@@ -1135,10 +1139,13 @@ or any *.png outside the screenshots branch step.
   more commit on this branch, "[MUI Migration] ${componentTitle}: leftovers", and into leftovers in your report.
 ${publish ? `
 ─── 4. Screenshots branch ───────────────────────────────────────────────────────
-  Park the showcase PNGs where a PR body can reference them without polluting any PR:
+  Park the showcase PNGs where a PR body can reference them without polluting any PR.
+  The PNGs live only in THIS tree (ignored dist/), so resolve them to absolute paths
+  before leaving it:
+    ROOT=$(git rev-parse --show-toplevel)
     git worktree add --detach ../.mui-shots-${component} HEAD   (path outside this tree; remove it at the end)
     cd there; git checkout --orphan ${branchPrefix}/screenshots; git rm -rfq .
-    copy these files in, flat, keeping basenames: ${JSON.stringify(showcase.flatMap(p => [p.dscoPng, p.muiPng]))}
+    cp "$ROOT/<each path below>" . (flat, keeping basenames): ${JSON.stringify(showcase.flatMap(p => [p.dscoPng, p.muiPng]))}
     git add . ; commit "MUI ${componentTitle} parity screenshots (not for merge)"; git push -u origin ${branchPrefix}/screenshots
     SHA=$(git rev-parse HEAD); cd back; git worktree remove --force ../.mui-shots-${component}
   Image URL form (public repo): https://raw.githubusercontent.com/code-dot-org/code-dot-org/<SHA>/<basename>
