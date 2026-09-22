@@ -117,4 +117,7 @@ Still exported as `Dialog`, `CustomDialog` and the default export, with
 move. `Dialog` is a general purpose dialog with predefined structure;
 `CustomDialog` is the base it is built on, with only the dialog behavior (focus
 trap, close on escape, scroll lock) and no content structure. `Modal` in
-`src/modal` is still built on the legacy `CustomDialog`.
+`src/modal` is built on `MuiCustomDialog`. Two `apps/` callers remain on the
+legacy `CustomDialog` because they depend on in-place rendering:
+`pixelEditor/PixelEditorModal.tsx` and
+`p5lab/spritelab/lab2/views/ImageDetailsDialog.tsx`.
