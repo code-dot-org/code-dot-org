@@ -5,7 +5,7 @@ wrong 'The data was collected more than a year ago'
 wrong 'The data includes categorical labels instead of numerical values'
 right 'The data is missing at least one relevant subgroup'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following is a sign that a dataset is not representative?

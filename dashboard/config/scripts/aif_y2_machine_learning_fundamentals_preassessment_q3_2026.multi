@@ -5,7 +5,7 @@ wrong 'The program has an extra parenthesis'
 wrong 'The program is missing a variable'
 wrong 'The program calls a function with the wrong arguments'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Below is an entire program. It is meant to print a random number from 1 to 10, but it has a bug. What is the bug?

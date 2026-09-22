@@ -5,7 +5,7 @@ right '`statistics`'
 wrong '`math`'
 wrong '`mathematics`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which Python module offers functions such as `mean` and `stdev`?
