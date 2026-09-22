@@ -6,7 +6,7 @@ import {
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import CustomDialog from '@/dialog/CustomDialog';
+import MuiCustomDialog from '@/dialog/MuiCustomDialog';
 
 import moduleStyles from './modal.module.scss';
 
@@ -53,7 +53,9 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
  * ###  Status: ```Ready for dev```
  *
  * Design System: Modal Component.
- * Renders Modal window that user should interact with.
+ * Renders Modal window that user should interact with. Built on
+ * `MuiCustomDialog`, so it portals to `document.body` and takes the panel
+ * surface from the `MuiDialog` theme entry; see src/dialog/README.md.
  *
  * ## Deprecation Notice
  * The `mode` prop is deprecated and will be removed in a future version.
@@ -84,7 +86,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   }
 
   return (
-    <CustomDialog
+    <MuiCustomDialog
       role="dialog"
       className={classnames(
         moduleStyles.modal,
@@ -137,7 +139,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
         />
       </div>
       {customBottomContent}
-    </CustomDialog>
+    </MuiCustomDialog>
   );
 };
 
