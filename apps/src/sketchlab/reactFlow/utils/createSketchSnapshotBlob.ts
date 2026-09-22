@@ -6,6 +6,7 @@ import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
+import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
@@ -55,8 +56,13 @@ export const createSketchSnapshotBlob = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
+  // Supplying this, even empty, stops html-to-image from inlining every font
+  // the page declares. See getSketchFontEmbedCss.
+  const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
+
   const blob = await toBlob(viewport, {
     backgroundColor,
+    fontEmbedCSS,
     width: imageWidth,
     height: imageHeight,
     style: {
