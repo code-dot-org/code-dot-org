@@ -24,8 +24,8 @@ class MultipleChoiceQuestion < QuizQuestion
   # `content` shape:
   #   {
   #     "stem" => "What is 2 + 2?",
-  #     "choices" => [{"id" => "a", "text" => "3"}, {"id" => "b", "text" => "4"}, ...],
-  #     "correct_choice_id" => "b"
+  #     "choices" => [{"id" => "0", "text" => "Option A"}, {"id" => "1", "text" => "Option B"}, ...],
+  #     "correct_choice_id" => "0"
   #   }
   #
   # Choices are keyed by a stable `id`, not by text or position, so grading
