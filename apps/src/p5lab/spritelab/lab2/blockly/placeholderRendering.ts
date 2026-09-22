@@ -1,7 +1,7 @@
-// What a placeholder block (blockDefinitions/placeholder.ts) does on the
-// workspace: its dashed outline, and its size, matched to the block it
-// stands in for by building that block, measuring it and disposing it with
-// events off, so nothing paints or saves.
+// How a placeholder block (blockDefinitions/placeholder.ts) is drawn: its
+// dashed outline, and its size, matched to the block it stands in for by
+// building that block, measuring it and disposing it with events off, so
+// nothing paints or saves.
 
 import * as BlocklyCore from 'blockly/core';
 

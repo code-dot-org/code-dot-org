@@ -37,7 +37,7 @@ import {
   FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
   MusicProjectDropdown,
 } from './musicProjectDropdown';
-import {placeholderOutline} from './placeholders';
+import {placeholderOutline} from './placeholderRendering';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
