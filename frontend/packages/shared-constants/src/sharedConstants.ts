@@ -60,6 +60,8 @@ export const GlobalEditionExcludedPaths = [
   "/home/health_check"
 ] as const;
 
+export const StatsigStableIdKey = 'statsig_stable_id' as const;
+
 export const ArtistAutorunOptions = {
   "full_auto_run": "FULL_AUTO_RUN"
 } as const;
@@ -103,6 +105,7 @@ export const SectionLoginType = {
   "email": "email",
   "google_classroom": "google_classroom",
   "clever": "clever",
+  "classlink": "classlink",
   "lti_v1": "lti_v1"
 } as const;
 
@@ -124,6 +127,8 @@ export const StudentGradeLevels = [
 ] as const;
 
 export const PlGradeValue = 'pl' as const;
+
+export const UniversalAppType = 'universal' as const;
 
 export const PostMilestoneMode = {
   "all": "all",
@@ -327,13 +332,31 @@ export const StudentWorkEvaluationStatus = {
 export const AiChatModelIds = {
   "MISTRAL": "gen-ai-mistral-7b-inst-v01",
   "CHATGPT": "gpt-4o-mini",
-  "LEARNLM": "learnlm-2.0-flash-experimental",
   "GEMINI_2_0_FLASH": "gemini-2.0-flash",
   "GEMINI_2_5_FLASH": "gemini-2.5-flash",
   "GEMINI_2_5_FLASH_LITE": "gemini-2.5-flash-lite",
   "GEMINI_2_5_PRO": "gemini-2.5-pro",
-  "GEMINI_2_5_FLASH_IMAGE": "gemini-2.5-flash-image"
+  "GEMINI_2_5_FLASH_IMAGE": "gemini-2.5-flash-image",
+  "GEMINI_3_1_FLASH_IMAGE": "gemini-3.1-flash-image"
 } as const;
+
+export const AiChatGeminiModelIds = [
+  "gemini-2.0-flash",
+  "gemini-2.5-flash",
+  "gemini-2.5-flash-lite",
+  "gemini-2.5-pro",
+  "gemini-2.5-flash-image",
+  "gemini-3.1-flash-image"
+] as const;
+
+export const AiChatUsOnlyModelIds = [
+  "gemini-2.0-flash",
+  "gemini-2.5-flash",
+  "gemini-2.5-flash-lite",
+  "gemini-2.5-pro",
+  "gemini-2.5-flash-image",
+  "gemini-3.1-flash-image"
+] as const;
 
 export const AiChatClientTypes = {
   "AI_CHAT_LAB": "ai-chat-lab",
@@ -569,7 +592,8 @@ export const BubbleChoiceCustomModes = {
 
 export const BubbleChoiceNavigationTypes = {
   "PARENT": "parent",
-  "NEXT_LEVEL": "next_level"
+  "NEXT_LEVEL": "next_level",
+  "NEXT_SUBLEVEL": "next_sublevel"
 } as const;
 
 export const AllowedHostnameSuffixes = [
