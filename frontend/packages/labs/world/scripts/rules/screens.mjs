@@ -22,7 +22,10 @@ there — which is how a pause menu comes up over a game. What was missing is
 going back.
 
 **go to screen ⟨…⟩** puts one on top, **go back** takes the top one off, and
-**the screen showing** says which is in front. Nothing else has to know.`,
+**the screen showing** says which is in front. Nothing else has to know.
+
+Your app's home is usually your world's own map, which sits under every screen
+and is never one of them — so going back from the last screen shows home.`,
   header: `// "Shows Screens" — a stack of maps, and a way back down it.
 //
 // A screen is a MAP and always has been: \`load map\` ADDS one over what is
@@ -37,10 +40,20 @@ going back.
 // the path is the project's, and the two stay in step because every way on and
 // off the stack goes through the blocks below.
 //
-// GOING BACK FROM THE LAST ONE DOES NOTHING. The engine would happily close
-// it and leave an empty world; a stack with a floor under it is what a project
-// means by "back", and keeping that floor is this rule's job rather than the
-// engine's.`,
+// GOING BACK FROM AN EMPTY STACK DOES NOTHING, and that is the whole of the
+// floor. It used to keep one screen back as well, on the reasoning that the
+// engine would happily close the last one and leave an empty world.
+//
+// WHICH STOPPED BEING TRUE when a world got a main map. An app's home screen
+// is the world's own arrangement — it is never pushed, never popped, and
+// always under everything (specs/MAIN_MAP_PLAN.md) — so the floor is the
+// world itself, and a rule keeping a second one meant the last screen a
+// project put up could never be taken down. A form you cannot close.
+//
+// A project that pushes ALL of its screens, home included, can now pop the
+// last of them and see whatever its world holds under it. That is the honest
+// answer: what is underneath is the world's business, and it is a thing that
+// can be looked at rather than a state the rule pretends is impossible.`,
 });
 
 rule.doc(`The screens showing, deepest first. The last one is in front.
@@ -87,11 +100,11 @@ rule.block({
   say: ['go back'],
   body: () => [
     doc(
-      'Nothing happens when there is one screen left. The engine would close it and leave an empty world; a stack with a floor under it is what "back" means.',
+      'Nothing happens when no screen is showing. An app\u2019s home is usually its world\u2019s own map, which is under every screen and is never one of them \u2014 so going back from the last screen shows home.',
     ),
     when([
       [
-        moreThan(countIn(showing.of()), n(1)),
+        moreThan(countIn(showing.of()), n(0)),
         [
           closed({screen: lastOf(showing.of())}),
           unloadNewest(),

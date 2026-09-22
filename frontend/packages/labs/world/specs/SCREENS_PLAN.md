@@ -115,6 +115,25 @@ to screen ⟨…⟩` takes the map as an argument, and neither half of that
   workspace load, not where it was written. A fallback that guesses is
   worse than one that refuses, and the comment there now says so.
 
+## The floor moved, because a world got a map under it
+
+`go back` used to refuse to pop the LAST screen. The reasoning was sound at
+the time: the engine would happily close it and leave an empty world, and a
+stack with a floor under it is what a project means by "back".
+
+It stopped being sound when an app's home became the world's own map
+(specs/MAIN_MAP_PLAN.md). Home is then never pushed and never popped — it is
+what the stack SITS ON — so a rule keeping a second floor meant the last
+screen a project put up could never be taken down. The Notes fixture is
+exactly that shape, and the symptom is a write form with no way to close it:
+`go back` from `[write]` saw a count of one and did nothing.
+
+So the floor is now an EMPTY stack, and nothing else. A project that pushes
+all of its screens, home included, can pop the last of them and see whatever
+its world holds underneath — which is the honest answer, because what is
+underneath is the world's business and is a thing to be looked at rather than
+a state the rule pretends is impossible.
+
 ## Not built, and known
 
 - **No transitions.** A screen appears and is there. Sliding one in is a

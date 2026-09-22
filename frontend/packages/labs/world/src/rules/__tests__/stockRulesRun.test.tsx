@@ -352,19 +352,35 @@ describe('Screens', () => {
     expect([...world.actors]).toHaveLength(1);
   });
 
-  it('will not go back off the last screen', () => {
-    // The engine would close it and leave an empty world. A stack with a
-    // floor under it is what a project means by "back".
+  it('goes back off the LAST screen too, onto whatever is under it', () => {
+    // IT USED TO REFUSE, keeping one screen back on the reasoning that the
+    // engine would otherwise leave an empty world.
+    //
+    // That stopped being true when a world got a main map. An app's home is
+    // the world's own arrangement — never pushed, never popped, always under
+    // everything (specs/MAIN_MAP_PLAN.md) — so the floor is the world, and a
+    // second one meant the last screen a project put up could never be taken
+    // down. Notes was exactly that: a write form with no way to close it.
     const world = stacked();
     goTo(world, HOME);
     world.tick(1 / 60);
 
     goBack(world);
+    world.tick(1 / 60);
+
+    expect(stack(world)).toEqual([]);
+    expect([...world.actors]).toHaveLength(0);
+  });
+
+  it('does nothing when no screen is showing', () => {
+    // The floor that is left, and the only one a stack can honestly keep.
+    const world = stacked();
+
+    goBack(world);
     goBack(world);
     world.tick(1 / 60);
 
-    expect(stack(world)).toEqual([HOME]);
-    expect([...world.actors]).toHaveLength(1);
+    expect(stack(world)).toEqual([]);
   });
 
   it('says nothing about a map the project does not have', () => {

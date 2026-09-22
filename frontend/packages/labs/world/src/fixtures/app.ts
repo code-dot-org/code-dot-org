@@ -70,12 +70,23 @@ interface PlaceOpts {
   anchor?: string;
   /** The event this placement's own script emits when it is clicked. */
   emits?: string;
+  /** …or what it DOES when clicked, for a placement on the world's own map. */
+  does?: object[];
   /** Per-owner property overrides, keyed as the engine keys them. */
   own?: Record<string, Record<string, unknown>>;
 }
 
 /** `when this actor is clicked with ⟨any⟩: emit ⟨the map's event⟩`. */
-const clickEmits = (blockType: string) => ({
+/**
+ * A placement's own workspace: when it is clicked, do these.
+ *
+ * THE ROWS USED TO BE ONE `emit`, always, because a screen was a separate
+ * file and a map that wanted the world to act had to say so and be heard. The
+ * world's OWN map needs no such message — the world is right there — so
+ * home's button goes to the write screen itself, and only the maps that are
+ * still files announce (specs/MAIN_MAP_PLAN.md).
+ */
+const onClick = (rows: object[]) => ({
   blocks: {
     blocks: {
       blocks: [
@@ -85,12 +96,14 @@ const clickEmits = (blockType: string) => ({
           inputs: {ACTOR: me()},
           x: 20,
           y: 20,
-          next: {block: chain([{type: blockType}])},
+          next: {block: chain(rows)},
         },
       ],
     },
   },
 });
+
+const clickEmits = (blockType: string) => onClick([{type: blockType}]);
 
 /** One placement: a kind, a name, its centre, and what it overrides. */
 const place = (
@@ -98,13 +111,28 @@ const place = (
   id: string,
   x: number,
   y: number,
-  {anchor, emits, own = {}}: PlaceOpts = {},
+  {anchor, emits, does, own = {}}: PlaceOpts = {},
 ) => ({
   type,
   id,
   ...(anchor ? {anchor} : {}),
   properties: {...own, positional: {position: {x, y}, ...own.positional}},
-  ...(emits ? clickEmits(emits) : {}),
+  ...(does ? onClick(does) : emits ? clickEmits(emits) : {}),
+});
+
+/**
+ * The main map's shape: the placements, and no workspace.
+ *
+ * A `.map` carries its own events; a world's map does not, because the world's
+ * workspace IS its workspace (`mapEditor/worldDocument`, `hasMapScript`). So
+ * home's `new note` is declared up there with everything else the world hears,
+ * and the button emits the WORLD's event rather than a map's.
+ */
+const mainMap = (actors: object[]) => ({
+  type: 'map' as const,
+  size: {width: PORTRAIT.columns, height: PORTRAIT.rows},
+  tile: {width: TILE_SIZE, height: TILE_SIZE},
+  actors,
 });
 
 const mapFile = (actors: object[], events: readonly string[], modal = false) =>
@@ -149,23 +177,37 @@ const mapFile = (actors: object[], events: readonly string[], modal = false) =>
  * say it was a SCREEN. It says so now, so this says what it means
  * (specs/MODALITY_PLAN.md).
  */
-const HOME_MAP = mapFile(
-  [
-    place('actors/label', 'Header', WIDTH / 2, 48, {
-      anchor: 'top',
-      own: {Label: {text: 'NOTES'}},
-    }),
-    place('actors/list', 'Notes', WIDTH / 2, 260, {
-      own: {hasABox: {width: 280, height: 320}},
-    }),
-    place('actors/button', 'New', WIDTH / 2, 520, {
-      anchor: 'bottom',
-      emits: 'world_emit_MapsHome_NewNoteEvent',
-      own: {Label: {text: 'NEW NOTE'}, hasABox: {width: 200}},
-    }),
-  ],
-  ['new note'],
-);
+const HOME_MAP = mainMap([
+  place('actors/label', 'Header', WIDTH / 2, 48, {
+    anchor: 'top',
+    own: {Label: {text: 'NOTES'}},
+  }),
+  place('actors/list', 'Notes', WIDTH / 2, 260, {
+    own: {hasABox: {width: 280, height: 320}},
+  }),
+  place('actors/button', 'New', WIDTH / 2, 520, {
+    anchor: 'bottom',
+    own: {Label: {text: 'NEW NOTE'}, hasABox: {width: 200}},
+    // IT GOES, RATHER THAN ANNOUNCING. A map that is a file has to say what
+    // happened and let the world decide, because the two are written apart;
+    // home is the world's OWN map, so the button goes to the write screen
+    // itself. Write and the keyboard still announce — they are still files
+    // (specs/MAIN_MAP_PLAN.md).
+    does: [
+      {
+        type: 'world_do_Screens_GoToScreenAction',
+        fields: {VALUE: 'maps/write'},
+      },
+      // …and the keyboard over it, so a finger has something to type on. A
+      // screen of its own, so `go back` takes both away in the order they
+      // went on.
+      {
+        type: 'world_do_Screens_GoToScreenAction',
+        fields: {VALUE: 'maps/keyboard'},
+      },
+    ],
+  }),
+]);
 
 /**
  * Write: one field, two answers, and room under them for a keyboard.
@@ -332,6 +374,16 @@ const MEMORY = 'notes';
 
 const MAIN_WORLD = JSON.stringify(
   {
+    // HOME IS THE WORLD'S OWN MAP, under `map` beside `blocks`
+    // (specs/MAIN_MAP_PLAN.md). It was `maps/home.map` with a `go to screen`
+    // row naming it, and the difference is not one file: it is that home is
+    // no longer ON the stack. It is what the stack sits on.
+    //
+    // Which is why the Screens rule's floor moved. It used to refuse to pop
+    // the last screen, on the reasoning that the engine would leave an empty
+    // world; with home underneath, that floor meant the write screen could
+    // never be closed (specs/SCREENS_PLAN.md).
+    map: HOME_MAP,
     blocks: {
       blocks: [
         {
@@ -382,12 +434,9 @@ const MAIN_WORLD = JSON.stringify(
                   DEFAULT: 'FALSE',
                 },
               },
-              // The first screen. `go to screen` rather than `load map`,
-              // because the stack is what `go back` reads.
-              {
-                type: 'world_do_Screens_GoToScreenAction',
-                fields: {VALUE: 'maps/home'},
-              },
+              // …AND NO FIRST SCREEN. Home is the world's own map, loaded
+              // before any of these rows run, so there is nothing to go to:
+              // the app starts on it and the stack starts empty.
             ]),
           },
         },
@@ -433,27 +482,6 @@ const MAIN_WORLD = JSON.stringify(
                 },
               },
               ...rebuildRows(),
-            ]),
-          },
-        },
-        // Home's one button: go and write.
-        {
-          type: 'world_on_MapsHome_NewNoteEvent',
-          x: 20,
-          y: 420,
-          next: {
-            block: chain([
-              {
-                type: 'world_do_Screens_GoToScreenAction',
-                fields: {VALUE: 'maps/write'},
-              },
-              // …and the keyboard over it, so a finger has something to type
-              // on. Loaded as a screen of its own so that `go back` from the
-              // form takes both away in the order they went on.
-              {
-                type: 'world_do_Screens_GoToScreenAction',
-                fields: {VALUE: 'maps/keyboard'},
-              },
             ]),
           },
         },
@@ -575,13 +603,6 @@ export const notesApp = (empty: MultiFileSource): MultiFileSource => {
         language: 'actor',
         contents: NOTE_ACTOR,
         folderId: actorsFolder?.id ?? '0',
-      },
-      appHomeMap: {
-        id: 'appHomeMap',
-        name: 'home.map',
-        language: 'map',
-        contents: HOME_MAP,
-        folderId,
       },
       appWriteMap: {
         id: 'appWriteMap',
