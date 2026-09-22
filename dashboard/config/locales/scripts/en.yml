@@ -30319,6 +30319,20 @@ en:
               name: 'Lesson 30: Project - Wrapped'
             lesson-14:
               name: 'Lesson 12: Generative AI and LLMs'
+            lesson-15:
+              name: 'Lesson 1: Welcome to Computer Science Principles'
+            lesson-16:
+              name: 'Lesson 3: Inputs, Outputs, and App Behavior'
+            lesson-17:
+              name: 'Lesson 4: Representing Information'
+            lesson-18:
+              name: 'Lesson 5: Circle Patterns'
+            lesson-19:
+              name: 'Lesson 6: Binary Numbers'
+            lesson-20:
+              name: 'Lesson 13: Automate or Augment?'
+            lesson-21:
+              name: 'Lesson 14: Trustworthy AI: Transparency and Maintenance'
           lesson_groups: {}
           name: csp-unit1-dev-27-28
           title: Unit 1 - Creating Purposeful Apps and Programs
