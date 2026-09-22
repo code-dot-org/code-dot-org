@@ -82,7 +82,10 @@ export function getHyperparameters(modelData) {
 export function predict(modelData) {
   // Determine which algorithm to use.
   const isKNN = KNNTrainers.includes(modelData.selectedTrainer);
-  const TreeKind = Object.hasOwn(treeKindsByTrainer, modelData.selectedTrainer)
+  const TreeKind = Object.prototype.hasOwnProperty.call(
+    treeKindsByTrainer,
+    modelData.selectedTrainer
+  )
     ? treeKindsByTrainer[modelData.selectedTrainer]
     : undefined;
 
