@@ -1,4 +1,7 @@
 import {
+  adlibChoiceIds,
+  adlibSlots,
+  adlibText,
   imageAdlibFor,
   imageAdlibId,
   ImageAdlibSet,
@@ -42,5 +45,52 @@ describe('imageAdlibs manifest', () => {
 
   it('names a combo by its type and set', () => {
     expect(imageAdlibId('sprite', 'expanded')).toBe('sprite-expanded');
+  });
+});
+
+describe('imageAdlibs role sets', () => {
+  it('carries the sets the hoai2026-dev image levels name, by type', () => {
+    expect(imageAdlibFor('sprite', 'hero')).toBeDefined();
+    expect(imageAdlibFor('sprite', 'friend')).toBeDefined();
+    expect(imageAdlibFor('sprite', 'treasure')).toBeDefined();
+    expect(imageAdlibFor('background', 'story')).toBeDefined();
+    expect(imageAdlibFor('background', 'platform')).toBeDefined();
+  });
+
+  it('gives the hero and the friend different creatures', () => {
+    const creatures = (set: ImageAdlibSet) =>
+      imageAdlibFor('sprite', set)!.options.creature.map(o => o.id);
+    expect(creatures('hero')).not.toEqual(
+      expect.arrayContaining(creatures('friend'))
+    );
+  });
+});
+
+describe('adlib helpers', () => {
+  const adlib = {
+    template: 'A {look} {treasure}',
+    options: {
+      treasure: [{id: 'gem', text: 'gem'}],
+      look: [{id: 'shiny', text: 'shiny'}],
+    },
+    variantCount: 1,
+  };
+
+  it('orders slots as the sentence reads them, not as the options list', () => {
+    expect(adlibSlots(adlib)).toEqual(['look', 'treasure']);
+    expect(adlibChoiceIds(adlib, {treasure: 'gem', look: 'shiny'})).toEqual([
+      'shiny',
+      'gem',
+    ]);
+  });
+
+  it('has no ids while a slot is unchosen', () => {
+    expect(adlibChoiceIds(adlib, {look: 'shiny'})).toBeUndefined();
+  });
+
+  it('spells the sentence with the chosen words', () => {
+    expect(adlibText(adlib, {treasure: 'gem', look: 'shiny'})).toBe(
+      'A shiny gem'
+    );
   });
 });

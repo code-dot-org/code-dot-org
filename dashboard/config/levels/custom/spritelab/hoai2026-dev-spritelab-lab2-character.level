@@ -24,6 +24,7 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
+      "adlibs": "hero",
       "imageRole": "hero"
     },
     "guide_steps": [

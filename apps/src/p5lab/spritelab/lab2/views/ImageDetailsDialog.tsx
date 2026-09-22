@@ -139,6 +139,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   advanced,
   adlibSet,
   adlibOnly,
+  imageSource,
+  imageCacheUrl,
   defaultStyle,
   paintDisabled,
   imageLevel,
@@ -308,6 +310,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           advanced={advanced}
           adlibSet={adlibSet}
           adlibOnly={adlibOnly}
+          imageSource={imageSource}
+          imageCacheUrl={imageCacheUrl}
           defaultStyle={defaultStyle}
           onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
           onGenerateStart={onGenerateStart}

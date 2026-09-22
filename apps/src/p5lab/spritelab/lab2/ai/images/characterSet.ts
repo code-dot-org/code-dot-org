@@ -17,120 +17,33 @@ import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 import {createUuid} from '@cdo/apps/utils';
 
 import {bytesToDataURI} from './encoding';
+import {CachedImage} from './imageCache';
 import {
   GeneratedImageResult,
-  logicalGridFor,
   pixelBlockFor,
   RawImage,
   rawImageToBlob,
   requestImage,
-  styleClause,
 } from './imageGeneration';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
-import {chooseKeyColor, KeyColor} from './keyColor';
+import {chooseKeyColor, KEY_COLORS} from './keyColor';
 import {
   CHARACTER_SET_IMAGE_SIZE,
   getCharacterSetImageModel,
 } from './modelHelpers';
+import {
+  basePrompt,
+  CHARACTER_SET_PICTURE_COUNT,
+  logicalGridFor,
+  POSED_FRAMES,
+  posePrompt,
+} from './prompts';
 import {
   canvasToBlob,
   loadImageFromBlob,
   removeKeyColor,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle} from './types';
-
-/** One frame of the strip after the base: its label and pose description. */
-interface PosedFrame {
-  label: string;
-  pose: string;
-}
-
-// The frames drawn from the base. Each pose text is sent as an edit
-// request together with the base picture, so it describes only what
-// changes from the base. List order is strip order, except that the base
-// itself is inserted after the first entry (CHARACTER_STRIP_POSES).
-const POSED_FRAMES: PosedFrame[] = [
-  {
-    label: 'idling',
-    pose:
-      'a second idle frame: the very same standing pose with only a subtle ' +
-      'change — a small breath, the head or shoulders shifted a touch. The ' +
-      'feet do not move',
-  },
-  {
-    label: 'walking',
-    pose:
-      'halfway through a walking stride, seen from the side — mainly the ' +
-      'legs moving, one leg forward and one back, the arms swinging slightly',
-  },
-  {
-    label: 'jumping',
-    pose:
-      'the rising frame of a jump: knees bent and tucked, body springing ' +
-      'upward',
-  },
-  {
-    label: 'landing',
-    pose:
-      'the falling frame of a jump: body upright in the air, legs loose ' +
-      'beneath it, coming down',
-  },
-];
-
-/** How many pictures a set costs: the base and each posed frame. */
-export const CHARACTER_SET_PICTURE_COUNT = 1 + POSED_FRAMES.length;
-
-// Each frame is drawn on its own, so a companion or prop the model adds to
-// one frame has no reason to recur in the next.
-const ONLY_THIS_CHARACTER =
-  'Only this one character, alone: no other creatures, people, pets, objects or companions, and nothing added that is not part of the character itself.';
-
-/** The one flat colour every frame is drawn on, keyed out afterwards. */
-function keyClause(key: KeyColor): string {
-  return `Use a plain, solid, flat background of exactly one color, ${key.name} (${key.hex}), filling the image to every edge — no gradient, no scenery, no ground, and no shadow under the character. Only the character on that flat ${key.name}. The character itself must contain no ${key.name} or anything close to it anywhere — not on clothes, hat, hair, skin or accessories; choose other colors for those.`;
-}
-
-/**
- * The prompt for the base frame: the whole character, standing, facing
- * right — the picture every other frame is drawn from.
- */
-export function basePrompt(
-  prompt: string,
-  style: ImageStyle,
-  key: KeyColor,
-  pixelBlock: number
-): string {
-  return (
-    `${prompt}. Show the whole character standing, facing right: its face ` +
-    'and body point toward the right side of the image. Arms hanging ' +
-    'relaxed at the sides, hands open and empty. Feet near the bottom of ' +
-    'the image, nothing cut off. ' +
-    `${ONLY_THIS_CHARACTER} ${styleClause(style, pixelBlock)} ${keyClause(key)}`
-  );
-}
-
-/**
- * The prompt for one posed frame, drawn as an edit of the base picture.
- * The same-size-and-position clause is what keeps the frames registered:
- * they play in place, so a character that drifts or rescales between
- * frames reads as jitter.
- */
-export function posePrompt(
-  prompt: string,
-  frame: PosedFrame,
-  style: ImageStyle,
-  key: KeyColor,
-  pixelBlock: number
-): string {
-  return (
-    `The provided image shows this character: ${prompt}. Redraw the same ` +
-    `character as ${frame.pose}. Keep everything else exactly as in the ` +
-    'provided image: the same design, colors, proportions, outfit and art ' +
-    'style, facing right, and the character at exactly the same size and ' +
-    'position in the frame. ' +
-    `${ONLY_THIS_CHARACTER} ${keyClause(key)} ${styleClause(style, pixelBlock)}`
-  );
-}
 
 // The strip's square cell. 512 covers typical on-screen sprite sizes 1:1
 // (a large story-scene sprite on a high-density screen can exceed it and
@@ -259,6 +172,9 @@ export interface CharacterSetOptions {
   seed?: number;
   /** Logical grid to ask for (pixel style); absent = the sprite default. */
   pixelGrid?: number;
+  /** Take every frame from the cache instead of the model; see
+      GenerateImageOptions.cached. */
+  cached?: CachedImage;
 }
 
 export interface CharacterSetProgress {
@@ -285,12 +201,29 @@ export async function generateCharacterSet(
   options: CharacterSetOptions,
   onProgress?: (progress: CharacterSetProgress) => void
 ): Promise<GeneratedImageResult> {
-  const key = chooseKeyColor(prompt);
+  const {cached} = options;
+  const sidecar = cached ? await cached.sidecar() : undefined;
+  // A cached set was keyed on the colour its generator chose from the
+  // words of its day; the sidecar says which, in case the words changed.
+  const key =
+    (sidecar?.keyColor &&
+      KEY_COLORS[sidecar.keyColor as keyof typeof KEY_COLORS]) ||
+    chooseKeyColor(prompt);
   // One seed for the whole set; parallel frames offset it so alike prompts
   // don't collapse into alike drawings.
-  const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
-  const pixelBlock = pixelBlockFor('sprite', options.pixelGrid);
+  const seed =
+    sidecar?.seed ?? options.seed ?? Math.floor(Math.random() * 2 ** 31);
+  const temperature = sidecar ? sidecar.temperature : options.temperature;
+  const pixelBlock = pixelBlockFor(
+    'sprite',
+    sidecar?.pixelGrid ?? options.pixelGrid
+  );
   const total = CHARACTER_SET_PICTURE_COUNT;
+  const drawFrame = (
+    frame: string,
+    text: string,
+    request: Parameters<typeof requestImage>[1]
+  ) => (cached ? cached.raw(frame) : requestFrameWithRetry(text, request));
   const keyFrame = (raw: RawImage) =>
     removeKeyColor(rawImageToBlob(raw), key.rgb, {
       soft: options.style === 'smooth',
@@ -299,19 +232,23 @@ export async function generateCharacterSet(
     bytesToDataURI(new Uint8Array(await blob.arrayBuffer()), 'image/png');
 
   // The prompt judge runs while the base picture draws; its verdict gates
-  // everything after (the posed frames embed the same student text).
-  const promptVerdict = markHandled(checkPromptSafety(prompt));
+  // everything after (the posed frames embed the same student text). A
+  // cached set was reviewed before upload: neither judge runs.
+  const promptVerdict = cached
+    ? Promise.resolve()
+    : markHandled(checkPromptSafety(prompt));
   // Judge every generated frame. Each verdict is awaited before that
   // frame's preview shows, so flagged pixels never reach the progress UI.
   const judgeFrame = (raw: RawImage): Promise<void> =>
-    markHandled(checkImageSafety(raw));
+    cached ? Promise.resolve() : markHandled(checkImageSafety(raw));
 
   onProgress?.({done: 0, total, label: 'the character'});
-  const base = await requestFrameWithRetry(
+  const base = await drawFrame(
+    'base',
     basePrompt(prompt, options.style, key, pixelBlock),
     {
       seed,
-      temperature: options.temperature,
+      temperature,
       imageSize: CHARACTER_SET_IMAGE_SIZE,
       model: getCharacterSetImageModel(),
     }
@@ -331,11 +268,12 @@ export async function generateCharacterSet(
   // parallel: a set costs two round trips, not five.
   const posed = await Promise.all(
     POSED_FRAMES.map(async (frame, index) => {
-      const raw = await requestFrameWithRetry(
+      const raw = await drawFrame(
+        frame.label,
         posePrompt(prompt, frame, options.style, key, pixelBlock),
         {
           seed: seed + index + 1,
-          temperature: options.temperature,
+          temperature,
           references: [baseURI],
           imageSize: CHARACTER_SET_IMAGE_SIZE,
           model: getCharacterSetImageModel(),
@@ -370,9 +308,7 @@ export async function generateCharacterSet(
     imageType: 'sprite',
     style: options.style,
     seed,
-    ...(options.temperature !== undefined && {
-      temperature: options.temperature,
-    }),
+    ...(temperature !== undefined && {temperature}),
     ...(options.style === 'pixel' && {
       pixelGrid: logicalGridFor(pixelBlock),
     }),

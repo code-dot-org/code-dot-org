@@ -1,10 +1,10 @@
+import {pixelBlockFor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
 import {
   CHARACTER_SET_PICTURE_COUNT,
   basePrompt,
   posePrompt,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
-import {pixelBlockFor} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
-import {KEY_COLORS} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/keyColor';
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/prompts';
 
 const key = KEY_COLORS.magenta;
 

@@ -24,6 +24,7 @@
     "level_mode": {
       "kind": "image",
       "imageType": "background",
+      "adlibs": "story",
       "imageRole": "story-background"
     },
     "guide_steps": [

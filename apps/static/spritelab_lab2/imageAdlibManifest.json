@@ -515,6 +515,238 @@
         ]
       },
       "variantCount": 1
+    },
+    "sprite-hero": {
+      "template": "A {adjective} {creature}",
+      "options": {
+        "adjective": [
+          {
+            "id": "brave",
+            "text": "brave"
+          },
+          {
+            "id": "sparkly",
+            "text": "sparkly"
+          },
+          {
+            "id": "grumpy",
+            "text": "grumpy"
+          },
+          {
+            "id": "friendly",
+            "text": "friendly"
+          },
+          {
+            "id": "cute",
+            "text": "cute"
+          }
+        ],
+        "creature": [
+          {
+            "id": "robot",
+            "text": "robot"
+          },
+          {
+            "id": "dragon",
+            "text": "dragon"
+          },
+          {
+            "id": "cat",
+            "text": "cat"
+          },
+          {
+            "id": "monster",
+            "text": "monster"
+          },
+          {
+            "id": "wizard",
+            "text": "wizard"
+          },
+          {
+            "id": "penguin",
+            "text": "penguin"
+          },
+          {
+            "id": "witch",
+            "text": "witch"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "sprite-friend": {
+      "template": "A {adjective} {creature}",
+      "options": {
+        "adjective": [
+          {
+            "id": "silly",
+            "text": "silly"
+          },
+          {
+            "id": "sleepy",
+            "text": "sleepy"
+          },
+          {
+            "id": "tiny",
+            "text": "tiny"
+          },
+          {
+            "id": "fluffy",
+            "text": "fluffy"
+          },
+          {
+            "id": "clever",
+            "text": "clever"
+          }
+        ],
+        "creature": [
+          {
+            "id": "fox",
+            "text": "fox"
+          },
+          {
+            "id": "owl",
+            "text": "owl"
+          },
+          {
+            "id": "frog",
+            "text": "frog"
+          },
+          {
+            "id": "bunny",
+            "text": "bunny"
+          },
+          {
+            "id": "puppy",
+            "text": "puppy"
+          },
+          {
+            "id": "turtle",
+            "text": "turtle"
+          },
+          {
+            "id": "hamster",
+            "text": "hamster"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "background-story": {
+      "template": "A {mood} {place}",
+      "options": {
+        "mood": [
+          {
+            "id": "sunny",
+            "text": "sunny"
+          },
+          {
+            "id": "spooky",
+            "text": "spooky"
+          },
+          {
+            "id": "frozen",
+            "text": "frozen"
+          },
+          {
+            "id": "magical",
+            "text": "magical"
+          },
+          {
+            "id": "misty",
+            "text": "misty"
+          },
+          {
+            "id": "starry",
+            "text": "starry"
+          }
+        ],
+        "place": [
+          {
+            "id": "forest",
+            "text": "forest"
+          },
+          {
+            "id": "castle",
+            "text": "castle"
+          },
+          {
+            "id": "city",
+            "text": "city"
+          },
+          {
+            "id": "beach",
+            "text": "beach"
+          },
+          {
+            "id": "cave",
+            "text": "cave"
+          },
+          {
+            "id": "planetscape",
+            "text": "planetscape"
+          }
+        ]
+      },
+      "variantCount": 1
+    },
+    "background-platform": {
+      "template": "A {mood} {place}",
+      "options": {
+        "mood": [
+          {
+            "id": "sunny",
+            "text": "sunny"
+          },
+          {
+            "id": "stormy",
+            "text": "stormy"
+          },
+          {
+            "id": "glowing",
+            "text": "glowing"
+          },
+          {
+            "id": "frozen",
+            "text": "frozen"
+          },
+          {
+            "id": "dusty",
+            "text": "dusty"
+          },
+          {
+            "id": "neon",
+            "text": "neon"
+          }
+        ],
+        "place": [
+          {
+            "id": "mountains",
+            "text": "mountains"
+          },
+          {
+            "id": "volcano",
+            "text": "volcano"
+          },
+          {
+            "id": "jungle",
+            "text": "jungle"
+          },
+          {
+            "id": "desert",
+            "text": "desert"
+          },
+          {
+            "id": "sky-islands",
+            "text": "sky-islands"
+          },
+          {
+            "id": "underwater-reef",
+            "text": "underwater-reef"
+          }
+        ]
+      },
+      "variantCount": 1
     }
   }
 }
