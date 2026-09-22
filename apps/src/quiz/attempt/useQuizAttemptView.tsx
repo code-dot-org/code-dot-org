@@ -1,5 +1,5 @@
 import {Button as MuiButton, Typography} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {LabProps} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -44,10 +44,17 @@ export default function useQuizAttemptView({
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const [selectedChoicesByQuestionId, setSelectedChoicesByQuestionId] =
     useState<Record<number, string>>({});
+  // One chained promise per question, so a rapid second pick waits for the
+  // first write to settle instead of racing it, and finishAttempt can wait
+  // for all of them before the server locks the attempt.
+  const pendingWritesByQuestionIdRef = useRef<Record<number, Promise<unknown>>>(
+    {}
+  );
 
   useEffect(() => {
     setCurrentPageNumber(1);
     setSelectedChoicesByQuestionId({});
+    pendingWritesByQuestionIdRef.current = {};
   }, [attempt?.id]);
 
   const handleBeginAttempt = async () => {
@@ -66,17 +73,49 @@ export default function useQuizAttemptView({
     }
   };
 
-  const handleSelectChoice = async (questionId: number, choiceId: string) => {
+  const handleSelectChoice = (questionId: number, choiceId: string) => {
+    const previousChoiceId = selectedChoicesByQuestionId[questionId];
     setSelectedChoicesByQuestionId(prev => ({...prev, [questionId]: choiceId}));
-    try {
-      await submitQuestionResponse(questionId, {selectedChoiceId: choiceId});
-    } catch {
-      // Already recorded as a user-facing error in useQuizAttempt.
-    }
+
+    // Chain onto this question's own pending write, if any, so writes for
+    // the same question reach the server in the order they were made.
+    const previousWrite =
+      pendingWritesByQuestionIdRef.current[questionId] ?? Promise.resolve();
+    const thisWrite = previousWrite
+      .catch(() => {
+        // An earlier write's failure shouldn't stop this one from sending.
+      })
+      .then(() =>
+        submitQuestionResponse(questionId, {selectedChoiceId: choiceId})
+      )
+      .catch(() => {
+        // Already recorded as a user-facing error in useQuizAttempt. Only
+        // roll back if nothing newer has been picked since this write
+        // started - a later choice landing after this failure must stand.
+        setSelectedChoicesByQuestionId(prev => {
+          if (prev[questionId] !== choiceId) {
+            return prev;
+          }
+          const next = {...prev};
+          if (previousChoiceId === undefined) {
+            delete next[questionId];
+          } else {
+            next[questionId] = previousChoiceId;
+          }
+          return next;
+        });
+      });
+    pendingWritesByQuestionIdRef.current[questionId] = thisWrite;
   };
 
   const handleNext = async () => {
     if (currentPageNumber >= totalPages) {
+      // Every answer must reach the server before it locks the attempt -
+      // otherwise a still-in-flight write loses the race and is recorded
+      // as skipped.
+      await Promise.allSettled(
+        Object.values(pendingWritesByQuestionIdRef.current)
+      );
       await handleFinishAttempt();
     } else {
       setCurrentPageNumber(currentPageNumber + 1);

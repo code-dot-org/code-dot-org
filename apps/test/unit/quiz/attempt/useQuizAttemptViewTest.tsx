@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -27,6 +27,18 @@ const ATTEMPT: QuizAttemptData = {
   expiresAt: null,
   canRetake: false,
 };
+
+// A promise whose settlement the test controls directly, for asserting on
+// state while a write is still in flight.
+function deferred<T>() {
+  let resolve!: (value: T) => void;
+  let reject!: (reason?: unknown) => void;
+  const promise = new Promise<T>((res, rej) => {
+    resolve = res;
+    reject = rej;
+  });
+  return {promise, resolve, reject};
+}
 
 const BASE_HOOK_STATE = {
   attempt: undefined as QuizAttemptData | null | undefined,
@@ -195,7 +207,7 @@ describe('useQuizAttemptView', () => {
     expect(screen.getByText('Question 2 of 2')).toBeInTheDocument();
   });
 
-  it('submits the chosen answer when a choice is selected', () => {
+  it('submits the chosen answer when a choice is selected', async () => {
     const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
     renderView({
       hookState: {attempt: ATTEMPT, submitQuestionResponse},
@@ -204,10 +216,14 @@ describe('useQuizAttemptView', () => {
 
     fireEvent.click(screen.getByRole('radio', {name: /8/}));
 
-    expect(submitQuestionResponse).toHaveBeenCalledWith(5, {
-      selectedChoiceId: 'b',
-    });
+    // The optimistic UI update is synchronous; the write itself is queued
+    // onto a per-question promise chain, so it lands a tick later.
     expect(screen.getByRole('radio', {name: /8/})).toBeChecked();
+    await waitFor(() =>
+      expect(submitQuestionResponse).toHaveBeenCalledWith(5, {
+        selectedChoiceId: 'b',
+      })
+    );
   });
 
   it('advances to the next page instead of finishing when not on the last page', () => {
@@ -226,7 +242,7 @@ describe('useQuizAttemptView', () => {
     expect(screen.getByText('Page 2 question')).toBeInTheDocument();
   });
 
-  it('finishes the attempt when the last-page button is clicked', () => {
+  it('finishes the attempt when the last-page button is clicked', async () => {
     const finishAttempt = jest.fn().mockResolvedValue(undefined);
     renderView({
       hookState: {attempt: ATTEMPT, finishAttempt},
@@ -235,7 +251,7 @@ describe('useQuizAttemptView', () => {
 
     fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
 
-    expect(finishAttempt).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
   });
 
   it('labels the last-page button Submit when the quiz allows only one attempt', () => {
@@ -256,6 +272,99 @@ describe('useQuizAttemptView', () => {
     });
 
     expect(screen.getByRole('button', {name: 'Finish'})).toBeInTheDocument();
+  });
+
+  it('sends writes for the same question in the order they were picked', async () => {
+    const firstWrite = deferred<void>();
+    const submitQuestionResponse = jest
+      .fn()
+      .mockReturnValueOnce(firstWrite.promise)
+      .mockResolvedValueOnce(undefined);
+    renderView({
+      hookState: {attempt: ATTEMPT, submitQuestionResponse},
+      quizQuestions: [question({id: 5})],
+    });
+
+    fireEvent.click(screen.getByRole('radio', {name: /8/})); // choice b
+    fireEvent.click(screen.getByRole('radio', {name: /5/})); // choice a, right after
+
+    // The second pick is queued behind the first write, not racing it.
+    await waitFor(() =>
+      expect(submitQuestionResponse).toHaveBeenCalledTimes(1)
+    );
+    expect(submitQuestionResponse).toHaveBeenCalledWith(5, {
+      selectedChoiceId: 'b',
+    });
+
+    firstWrite.resolve();
+    await waitFor(() =>
+      expect(submitQuestionResponse).toHaveBeenCalledTimes(2)
+    );
+    expect(submitQuestionResponse).toHaveBeenLastCalledWith(5, {
+      selectedChoiceId: 'a',
+    });
+  });
+
+  it('rolls back the optimistic choice when its write fails and nothing newer was picked', async () => {
+    const submitQuestionResponse = jest
+      .fn()
+      .mockRejectedValue(new Error('network down'));
+    renderView({
+      hookState: {attempt: ATTEMPT, submitQuestionResponse},
+      quizQuestions: [question({id: 5})],
+    });
+
+    fireEvent.click(screen.getByRole('radio', {name: /8/}));
+    expect(screen.getByRole('radio', {name: /8/})).toBeChecked();
+
+    await waitFor(() =>
+      expect(screen.getByRole('radio', {name: /8/})).not.toBeChecked()
+    );
+    expect(screen.getByRole('radio', {name: /5/})).not.toBeChecked();
+  });
+
+  it('does not roll back a newer choice when an earlier write for the same question fails', async () => {
+    const firstWrite = deferred<void>();
+    const submitQuestionResponse = jest
+      .fn()
+      .mockReturnValueOnce(firstWrite.promise)
+      .mockResolvedValueOnce(undefined);
+    renderView({
+      hookState: {attempt: ATTEMPT, submitQuestionResponse},
+      quizQuestions: [question({id: 5})],
+    });
+
+    fireEvent.click(screen.getByRole('radio', {name: /8/})); // b, will fail
+    fireEvent.click(screen.getByRole('radio', {name: /5/})); // a, picked after
+
+    firstWrite.reject(new Error('network down'));
+    await waitFor(() =>
+      expect(submitQuestionResponse).toHaveBeenCalledTimes(2)
+    );
+
+    expect(screen.getByRole('radio', {name: /5/})).toBeChecked();
+  });
+
+  it('waits for a pending answer write to settle before finishing the attempt', async () => {
+    const pendingWrite = deferred<void>();
+    const submitQuestionResponse = jest
+      .fn()
+      .mockReturnValue(pendingWrite.promise);
+    const finishAttempt = jest.fn().mockResolvedValue(undefined);
+    renderView({
+      hookState: {attempt: ATTEMPT, submitQuestionResponse, finishAttempt},
+      quizQuestions: [question({id: 5})],
+    });
+
+    fireEvent.click(screen.getByRole('radio', {name: /8/}));
+    fireEvent.click(screen.getByRole('button', {name: /Submit|Finish/}));
+
+    // The answer write is still in flight - finishing must wait for it,
+    // not race it to the server.
+    expect(finishAttempt).not.toHaveBeenCalled();
+
+    pendingWrite.resolve();
+    await waitFor(() => expect(finishAttempt).toHaveBeenCalledTimes(1));
   });
 
   it('does not render the footer outside of an in-progress attempt', () => {
