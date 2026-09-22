@@ -38,11 +38,11 @@ describe('FreeplayTourGuide', () => {
       expect(tour.done).not.toHaveBeenCalled();
     });
 
-    it('offers Done on the last step', () => {
+    it("offers Let's go on the last step", () => {
       const last = TOUR_STEPS[TOUR_STEPS.length - 1];
       const tour = renderGuide({current: last, isLast: true});
       expect(screen.queryByRole('button', {name: 'Next'})).toBeNull();
-      fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+      fireEvent.click(screen.getByRole('button', {name: "Let's go"}));
       expect(tour.done).toHaveBeenCalled();
     });
   });
@@ -69,10 +69,10 @@ describe('FreeplayTourGuide', () => {
       ).toHaveAttribute('aria-pressed', 'false');
     });
 
-    it('finishes with a single Done', () => {
+    it("finishes with a single Let's go", () => {
       const tour = renderGuide({variant: 'list', current: undefined});
-      expect(screen.getAllByRole('button', {name: 'Done'})).toHaveLength(1);
-      fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+      expect(screen.getAllByRole('button', {name: "Let's go"})).toHaveLength(1);
+      fireEvent.click(screen.getByRole('button', {name: "Let's go"}));
       expect(tour.done).toHaveBeenCalled();
     });
   });

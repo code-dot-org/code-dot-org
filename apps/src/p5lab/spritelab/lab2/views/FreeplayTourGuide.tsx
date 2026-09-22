@@ -29,7 +29,7 @@ const FreeplayTourGuide: React.FunctionComponent<{tour: FreeplayTour}> = ({
             size="small"
             onClick={tour.isLast ? tour.done : tour.next}
           >
-            {tour.isLast ? 'Done' : 'Next'}
+            {tour.isLast ? "Let's go" : 'Next'}
           </MuiButton>
         </div>
       </div>
@@ -62,7 +62,7 @@ const FreeplayTourGuide: React.FunctionComponent<{tour: FreeplayTour}> = ({
           size="small"
           onClick={tour.done}
         >
-          Done
+          Let&apos;s go
         </MuiButton>
       </div>
     </div>
