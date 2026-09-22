@@ -78,6 +78,7 @@ class UnitEditor extends React.Component {
     ]),
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
+    initialHideHeaderProgress: PropTypes.bool,
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
@@ -136,6 +137,7 @@ class UnitEditor extends React.Component {
       topicTags: this.props.initialTopicTags,
       contentArea: this.props.initialContentArea,
       tts: this.props.initialTts,
+      hideHeaderProgress: this.props.initialHideHeaderProgress,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
@@ -246,6 +248,7 @@ class UnitEditor extends React.Component {
       topic_tags: this.state.topicTags,
       content_area: this.state.contentArea,
       tts: this.state.tts,
+      hide_header_progress: this.state.hideHeaderProgress,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
@@ -425,6 +428,23 @@ class UnitEditor extends React.Component {
                 If checked, the "Sharing" column in the "Manage Students" tab of
                 Teacher Dashboard will be displayed by default for sections
                 assigned to this unit.
+              </p>
+            </HelpTip>
+          </label>
+          <label>
+            Hide progress bubbles in the level header
+            <input
+              type="checkbox"
+              checked={this.state.hideHeaderProgress}
+              style={styles.checkbox}
+              onChange={e =>
+                this.setState({hideHeaderProgress: e.target.checked})
+              }
+            />
+            <HelpTip>
+              <p>
+                The header keeps its layout, but the row of level bubbles is
+                invisible and cannot be clicked.
               </p>
             </HelpTip>
           </label>

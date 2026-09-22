@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hide_header_progress": true,
       "is_migrated": true,
       "tts": true
     },

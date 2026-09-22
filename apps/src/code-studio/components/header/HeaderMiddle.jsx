@@ -292,8 +292,11 @@ class HeaderMiddle extends React.Component {
               style={{
                 float: 'left',
                 width: widths.progress,
+                // A unit can ask for no bubbles; they still take their
+                // space, so the rest of the header sits where it always does.
                 visibility:
-                  widths.progress === lessonProgressExtraWidth
+                  widths.progress === lessonProgressExtraWidth ||
+                  scriptData.hideHeaderProgress
                     ? 'hidden'
                     : undefined,
               }}
