@@ -1,35 +1,14 @@
 /*
-  Which trainer a level gets, and which id its saved model records.
-
-  `mode` reaches the store as whatever JSON a curriculum author typed into the
-  level editor, so these cover the names nobody meant to write as well as the
-  ones they did.
+  Which trainer a level gets, and which id its saved model records. `mode` is
+  whatever JSON an author typed into the level editor, so misspellings count.
 */
-import {createStore} from 'redux';
-
 import {ColumnTypes} from '../../src/constants';
-import rootReducer, {
-  addSelectedFeature,
-  getTrainedModelDataToSave,
-  setColumnsByDataType,
-  setImportedData,
-  setLabelColumn,
-  setMode,
-} from '../../src/redux';
+import {getTrainedModelDataToSave} from '../../src/redux';
 import {buildTrainer} from '../../src/trainers';
 import DecisionTreeTrainer from '../../src/trainers/DecisionTreeTrainer';
 import KNNTrainer from '../../src/trainers/KNNTrainer';
 
-const CATEGORICAL = ColumnTypes.CATEGORICAL;
-const NUMERICAL = ColumnTypes.NUMERICAL;
-
-const ANIMALS = [
-  {animal: 'bird', legs: '2'},
-  {animal: 'dog', legs: '4'},
-  {animal: 'snake', legs: '0'},
-  {animal: 'bird', legs: '2'},
-  {animal: 'dog', legs: '4'},
-];
+import {levelStore} from './levelStore';
 
 const JEANS = [
   {price: '10', size: '1'},
@@ -39,22 +18,13 @@ const JEANS = [
   {price: '30', size: '3'},
 ];
 
-// Builds the store a level would have once its label and features are chosen.
-function levelStore(mode, data = ANIMALS, label = 'animal', columns) {
-  const store = createStore(rootReducer);
-  const types = columns || {animal: CATEGORICAL, legs: NUMERICAL};
+const JEANS_COLUMNS = {
+  price: ColumnTypes.NUMERICAL,
+  size: ColumnTypes.NUMERICAL,
+};
 
-  store.dispatch(setMode(mode));
-  store.dispatch(setImportedData(data, false));
-  Object.entries(types).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type)),
-  );
-  store.dispatch(setLabelColumn(label));
-  Object.keys(types)
-    .filter(column => column !== label)
-    .forEach(column => store.dispatch(addSelectedFeature(column)));
-
-  return store;
+function savedTrainerId(store) {
+  return getTrainedModelDataToSave(store.getState()).selectedTrainer;
 }
 
 describe('trainer selection from mode', () => {
@@ -80,57 +50,33 @@ describe('trainer selection from mode', () => {
     );
   });
 
-  /*
-    The editor takes free text, so a typo must not take the level down with it.
-    Without the guard this throws, because the dispatch table has no such key.
-  */
-  test('an unrecognized trainer falls back rather than throwing', () => {
-    expect(buildTrainer(levelStore({trainer: 'decisionTre'}))).toBeInstanceOf(
-      KNNTrainer,
-    );
-    expect(buildTrainer(levelStore({trainer: ''}))).toBeInstanceOf(KNNTrainer);
-  });
+  test.each(['decisionTre', '', 'toString', 'constructor', '__proto__'])(
+    'an unrecognized trainer %j falls back rather than throwing',
+    trainer => {
+      expect(buildTrainer(levelStore({trainer}))).toBeInstanceOf(KNNTrainer);
+    },
+  );
 });
 
 describe('the trainer id recorded on a saved model', () => {
-  /*
-    App Lab reloads the saved blob with the algorithm this id names, so a tree
-    saved under a KNN id is a model no reader can open.
-  */
   test('a decision tree level records the tree ids', () => {
-    const classify = levelStore({trainer: 'decisionTree'});
-    expect(getTrainedModelDataToSave(classify.getState()).selectedTrainer).toBe(
-      'treeClassify',
-    );
+    const mode = {trainer: 'decisionTree'};
 
-    const regress = levelStore({trainer: 'decisionTree'}, JEANS, 'price', {
-      price: NUMERICAL,
-      size: NUMERICAL,
-    });
-    expect(getTrainedModelDataToSave(regress.getState()).selectedTrainer).toBe(
-      'treeRegress',
-    );
+    expect(savedTrainerId(levelStore(mode))).toBe('treeClassify');
+    expect(
+      savedTrainerId(levelStore(mode, JEANS, JEANS_COLUMNS, 'price')),
+    ).toBe('treeRegress');
   });
 
   test('a knn level records the knn ids', () => {
-    const classify = levelStore(undefined);
-    expect(getTrainedModelDataToSave(classify.getState()).selectedTrainer).toBe(
-      'knnClassify',
-    );
-
-    const regress = levelStore(undefined, JEANS, 'price', {
-      price: NUMERICAL,
-      size: NUMERICAL,
-    });
-    expect(getTrainedModelDataToSave(regress.getState()).selectedTrainer).toBe(
-      'knnRegress',
-    );
+    expect(savedTrainerId(levelStore(undefined))).toBe('knnClassify');
+    expect(
+      savedTrainerId(levelStore(undefined, JEANS, JEANS_COLUMNS, 'price')),
+    ).toBe('knnRegress');
   });
 
-  // The class that trains and the id that is saved read the same setting.
   test('an unrecognized trainer records the default family ids', () => {
-    const store = levelStore({trainer: 'randomForest'});
-    expect(getTrainedModelDataToSave(store.getState()).selectedTrainer).toBe(
+    expect(savedTrainerId(levelStore({trainer: 'randomForest'}))).toBe(
       'knnClassify',
     );
   });
