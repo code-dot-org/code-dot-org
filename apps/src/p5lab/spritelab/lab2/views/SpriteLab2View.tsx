@@ -45,7 +45,9 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
+import {BLOCK_HELP} from '../blockHelp/blockHelpContent';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
+import {installBlockHelpIcons} from '../blockly/blockHelpIcons';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import defaultSources from '../defaultSources.json';
@@ -112,6 +114,7 @@ import {
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
 
+import BlockHelpCallout from './BlockHelpCallout';
 import {isPointerClick} from './blurAfterPointerClick';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
@@ -361,6 +364,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
   const [showStartOver, setShowStartOver] = useState(false);
+  // The toolbox help callout: which block, and where its icon is on screen.
+  const [blockHelp, setBlockHelp] = useState<{
+    blockType: string;
+    anchor: DOMRect;
+  } | null>(null);
+  const closeBlockHelp = useCallback(() => setBlockHelp(null), []);
+  const openBlockHelp = blockHelp && BLOCK_HELP[blockHelp.blockType];
 
   // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
@@ -1139,6 +1149,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [animationsSeeded, sceneToolbox, workspaceVersion, refreshToolbox]);
 
+  // Help icons beside the toolbox's blocks, for the freeplay level (and a
+  // level with no mode); the guided levels teach their blocks themselves.
+  const blockHelpEnabled =
+    !isToolboxMode &&
+    (!levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode));
+  useEffect(() => {
+    if (!workspaceVersion || !blockHelpEnabled) {
+      return;
+    }
+    return installBlockHelpIcons(Blockly.getMainWorkspace(), {
+      helpTitle: type => BLOCK_HELP[type]?.title,
+      onOpen: (blockType, anchor) => setBlockHelp({blockType, anchor}),
+      onInvalidate: closeBlockHelp,
+    });
+  }, [workspaceVersion, blockHelpEnabled, closeBlockHelp]);
+
   const {nowPlaying, playMusic} = useSceneMusic(
     activeTab === 'Play',
     musicProjects
@@ -1698,6 +1724,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
         >
           {WorkspaceAlert}
+          {openBlockHelp && blockHelp && (
+            <BlockHelpCallout
+              help={openBlockHelp}
+              anchor={blockHelp.anchor}
+              onClose={closeBlockHelp}
+            />
+          )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
           <div
