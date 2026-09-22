@@ -1,4 +1,4 @@
-# Reads Adaptive pathway and skill content from dashboard/config/level_content/adaptive.
+# Reads Adaptive pathway content from dashboard/config/level_content/adaptive.
 # The format is defined in apps/src/adaptive/schema. Parsed files are cached and
 # shared across requests; callers must not mutate them.
 module AdaptiveContent
@@ -11,10 +11,6 @@ module AdaptiveContent
     Rails.root.join('config', 'level_content', 'adaptive')
   end
 
-  def self.skills_dir
-    content_dir.join('skills')
-  end
-
   def self.valid_id?(id)
     id.is_a?(String) && id.match?(ID_PATTERN)
   end
@@ -24,58 +20,29 @@ module AdaptiveContent
     content_dir.join("#{id}.json")
   end
 
-  def self.skill_path(id)
-    raise ArgumentError, "invalid adaptive skill id: #{id.inspect}" unless valid_id?(id)
-    skills_dir.join("#{id}.json")
-  end
-
   def self.exist?(id)
     valid_id?(id) && File.file?(path(id))
   end
 
-  def self.skill_exist?(id)
-    valid_id?(id) && File.file?(skill_path(id))
-  end
-
   def self.ids
-    ids_in(content_dir)
+    Dir.glob(content_dir.join('*.json')).
+      map {|file| File.basename(file, '.json')}.
+      select {|id| valid_id?(id)}.
+      sort
   end
 
-  def self.skill_ids
-    ids_in(skills_dir)
-  end
-
-  # Skill IDs referenced by the pathway's skill tree steps, in first-seen order.
-  def self.referenced_skill_ids(level)
-    steps = level.is_a?(Hash) && level['steps'].is_a?(Array) ? level['steps'] : []
-    steps.
-      select {|step| step.is_a?(Hash) && step['kind'] == 'skillTree' && step['skills'].is_a?(Array)}.
-      flat_map {|step| step['skills'].filter_map {|ref| ref['skillId'] if ref.is_a?(Hash)}}.
-      uniq
-  end
-
-  # The served pathway for `id`: the source file with referenced skills inlined
-  # under `skills` and each skill's standards resolved. Nil when no pathway file
-  # exists. Skills with no file are omitted; unresolvable standards pass through.
+  # The served pathway for `id`: the source file with each skill's standards
+  # resolved. Nil when no pathway file exists. Unresolvable standards pass through.
   def self.load(id)
     return nil unless exist?(id)
-    level = read(path(id))
-    skills = referenced_skill_ids(level).filter_map do |skill_id|
-      next unless skill_exist?(skill_id)
-      [skill_id, with_resolved_standards(read(skill_path(skill_id)))]
-    end
-    level.merge('skills' => skills.to_h)
+    pathway = read(path(id))
+    skills = pathway['skills']
+    return pathway unless skills.is_a?(Hash)
+    pathway.merge('skills' => skills.transform_values {|skill| with_resolved_standards(skill)})
   end
 
   def self.reset_cache!
     @cache.clear
-  end
-
-  private_class_method def self.ids_in(dir)
-    Dir.glob(dir.join('*.json')).
-      map {|file| File.basename(file, '.json')}.
-      select {|id| valid_id?(id)}.
-      sort
   end
 
   private_class_method def self.refs_in(object)

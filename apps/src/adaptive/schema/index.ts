@@ -1,3 +1,5 @@
+export * from './ability';
+export * from './checkpoint';
 export * from './common';
 export * from './pathway';
 export * from './helpers';

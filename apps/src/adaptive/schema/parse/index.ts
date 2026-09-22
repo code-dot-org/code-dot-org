@@ -1,16 +1,14 @@
-// Utilities for parsing pathway and skill content, both for resolved
-// server content and source files.
+// Utilities for parsing pathway content, both for resolved server content
+// and source files.
 
 import {z} from 'zod';
 
 import {pathwaySchema, pathwaySourceSchema} from '../pathway';
-import {skillSourceSchema} from '../skill';
 
 import {referenceProblems} from './references';
 
 type Pathway = z.infer<typeof pathwaySchema>;
 type PathwaySource = z.infer<typeof pathwaySourceSchema>;
-type SkillSource = z.infer<typeof skillSourceSchema>;
 
 export class AdaptiveContentError extends Error {
   constructor(public readonly problems: string[]) {
@@ -38,17 +36,6 @@ export function parsePathway(raw: unknown): Pathway {
   return result.data;
 }
 
-/** Parses and validates a skill JSON source file. */
-export function parseSkillSource(raw: unknown): SkillSource {
-  const result = skillSourceSchema.safeParse(raw);
-  if (!result.success) {
-    throw new AdaptiveContentError(formatIssues(result.error));
-  }
-  return result.data;
-}
-
-export {referenceProblems} from './references';
-
 /** Parses and validates a pathway JSON source file. */
 export function parsePathwaySource(raw: unknown): PathwaySource {
   const result = pathwaySourceSchema.safeParse(raw);
@@ -57,3 +44,5 @@ export function parsePathwaySource(raw: unknown): PathwaySource {
   }
   return result.data;
 }
+
+export {referenceProblems} from './references';

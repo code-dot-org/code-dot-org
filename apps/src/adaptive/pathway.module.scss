@@ -1,0 +1,685 @@
+$purple: var(--background-brand-purple-primary, #7665a5);
+$purple-light: var(--background-brand-purple-light, #d9d3ea);
+$purple-extra-light: var(--background-brand-purple-extra-light, #f1eef8);
+$border: var(--borders-neutral-primary, #c9c9c9);
+$surface: var(--background-neutral-primary, #fff);
+$surface-alt: var(--background-neutral-secondary, #f5f5f7);
+$text: var(--text-neutral-primary, #292f36);
+$text-muted: var(--text-neutral-secondary, #5b5f66);
+$text-disabled: var(--text-neutral-disabled, #a2a4a8);
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: $surface;
+  color: $text;
+}
+
+.muted {
+  color: $text-muted;
+}
+
+// Map screen
+
+.mapScreen {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.mapScroll {
+  position: relative;
+  flex: 1;
+  // No scrolling: the map is sized to fit, and a scrollbar appearing while
+  // zooming would shift the board.
+  overflow: hidden;
+  padding: 24px 24px 48px;
+}
+
+.mapBack {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+}
+
+// Doubled selector outranks the site's global button rules.
+.linkButton.linkButton {
+  display: inline;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-brand-purple-primary, #7665a5);
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.mapHeader {
+  max-width: 760px;
+  margin: 0 auto 8px;
+  transition: opacity 300ms;
+}
+
+// Hidden while a checkpoint is focused, but still laid out so the board
+// does not jump.
+.mapHeaderHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.board {
+  position: relative;
+  margin: 0 auto;
+  transition: transform 450ms ease;
+  transform-origin: center top;
+}
+
+.edges {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: visible;
+}
+
+.edge {
+  fill: none;
+  stroke: $border;
+  stroke-width: 3;
+  stroke-dasharray: 8 8;
+  transition: stroke 300ms;
+}
+
+.edgeActive {
+  stroke: var(--borders-success-primary, #2e8540);
+  stroke-dasharray: none;
+}
+
+.node {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 190px;
+  transform: translateX(-50%);
+  transition: opacity 300ms;
+}
+
+.nodeLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  max-width: 100%;
+  margin-bottom: 8px;
+  padding: 0 10px;
+  border: 1px solid $border;
+  border-radius: 8px;
+  background: $surface;
+  font-size: 13px;
+  line-height: 1.15;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.recommended {
+  position: absolute;
+  top: -22px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: $purple;
+  color: var(--text-neutral-white-fixed, #fff);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  padding: 0;
+  border: 4px solid $border;
+  border-radius: 50%;
+  background: $surface;
+  color: $text-disabled;
+  font-size: 22px;
+  cursor: pointer;
+  transition:
+    transform 200ms,
+    box-shadow 200ms,
+    background 200ms;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
+  }
+}
+
+.locked .circle {
+  background: $surface-alt;
+}
+
+.available .circle {
+  border-color: $purple;
+  color: var(--text-brand-purple-primary, #7665a5);
+  animation: pulse 1.8s ease-out infinite;
+}
+
+.inProgress .circle {
+  border-color: var(--borders-warning-primary, #e8a317);
+  border-style: dashed;
+  color: var(--text-warning-primary, #b8770a);
+}
+
+.complete .circle {
+  border-color: var(--borders-success-primary, #2e8540);
+  background: var(--background-success-primary, #2e8540);
+  color: var(--text-neutral-white-fixed, #fff);
+}
+
+.dimmed {
+  opacity: 0.2;
+}
+
+.focused .circle {
+  box-shadow: 0 0 0 10px $purple-light;
+  animation: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(118 101 165 / 45%);
+  }
+
+  60% {
+    box-shadow: 0 0 0 14px rgb(118 101 165 / 0%);
+  }
+}
+
+// Side column
+
+.editable {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.editButton {
+  flex: none;
+  padding: 4px 6px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: $text-muted;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 150ms;
+
+  &:hover {
+    background: $surface-alt;
+  }
+}
+
+.editable:hover .editButton,
+.editButton:focus-visible {
+  opacity: 1;
+}
+
+.editInput {
+  width: 100%;
+  padding: 6px 8px;
+  border: 2px solid $purple;
+  border-radius: 8px;
+  color: inherit;
+  font: inherit;
+}
+
+.editTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid $border;
+  border-radius: 8px;
+  background: #fff;
+}
+
+// The sample page is laid out at 1024px and scaled to the card's inner
+// width (312px).
+.thumbnailFrame {
+  width: 1024px;
+  height: 640px;
+  border: none;
+  pointer-events: none;
+  transform: scale(0.3047);
+  transform-origin: top left;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  gap: 16px;
+  width: 400px;
+  padding: 24px;
+  overflow-y: auto;
+  // Reserve the scrollbar's column so the card does not shift when the
+  // card grows tall enough to scroll.
+  scrollbar-gutter: stable;
+  border-left: 1px solid $border;
+  background: $surface-alt;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 12px;
+  background: $surface;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 6%);
+}
+
+.statusPill {
+  align-self: flex-start;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: $surface-alt;
+  color: $text-muted;
+}
+
+.pillAvailable {
+  background: $purple-extra-light;
+  color: var(--text-brand-purple-primary, #7665a5);
+}
+
+.pillInProgress {
+  background: var(--background-warning-extra-light, #fdf3dc);
+  color: var(--text-warning-primary, #b8770a);
+}
+
+.pillComplete {
+  background: var(--background-success-primary, #2e8540);
+  color: var(--text-neutral-white-fixed, #fff);
+}
+
+.plainList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.listIcon {
+  width: 16px;
+  color: var(--text-brand-purple-primary, #7665a5);
+  text-align: center;
+}
+
+.abilityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.abilityIcon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: $purple-extra-light;
+  color: var(--text-brand-purple-primary, #7665a5);
+}
+
+.abilityIconLocked {
+  background: $surface-alt;
+  color: $text-disabled;
+}
+
+.abilityIconUnlocked {
+  background: var(--background-success-extra-light, #e6f4ea);
+  color: var(--text-success-primary, #2e8540);
+}
+
+.sideFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.resetButton {
+  flex: none;
+  white-space: nowrap;
+}
+
+// Step player
+
+.player {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.playerBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 20px;
+  border-bottom: 1px solid $border;
+  background: $surface-alt;
+}
+
+.playerBarTitle {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $border;
+}
+
+.dotDone {
+  background: $purple;
+}
+
+.dotCurrent {
+  background: $purple;
+  box-shadow: 0 0 0 3px $purple-light;
+}
+
+.playerBody {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+// Panels step
+
+.panels {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 40px 40px 64px;
+  text-align: center;
+}
+
+.panelCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 680px;
+  min-height: 260px;
+  padding: 40px;
+  border-radius: 16px;
+  background: $purple-extra-light;
+}
+
+.panelImage {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.panelNav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+// Questions step
+
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 680px;
+  padding: 32px;
+  border-radius: 16px;
+  background: $surface-alt;
+  text-align: left;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.option {
+  padding: 12px 14px;
+  border: 2px solid $border;
+  border-radius: 10px;
+  background: $surface;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $purple;
+  }
+}
+
+.optionSelected {
+  border-color: $purple;
+  background: $purple-extra-light;
+}
+
+.textArea {
+  width: 100%;
+  min-height: 96px;
+  padding: 10px;
+  border: 2px solid $border;
+  border-radius: 8px;
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+}
+
+// Lab step and project workspace
+
+.lab {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.instructions {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: 380px;
+  border-right: 1px solid $border;
+  background: $surface-alt;
+}
+
+.instructionsBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.instructionsFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  // Bottom room keeps the buttons clear of the fixed site footer.
+  padding: 16px 20px 56px;
+  border-top: 1px solid $border;
+}
+
+.promptBox {
+  width: 100%;
+  min-height: 72px;
+  padding: 10px;
+  border: 1px solid $border;
+  border-radius: 8px;
+  font: inherit;
+  resize: vertical;
+
+  &:disabled {
+    background: $surface-alt;
+    color: $text-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.lockNote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: $text-muted;
+  font-size: 13px;
+}
+
+.footerButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.fakeLab {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  background: #1e1e1e;
+}
+
+.fileTabs {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 12px 0;
+  background: #2b2b2b;
+}
+
+.fileTab {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px 6px 0 0;
+  background: transparent;
+  color: #bbb;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.fileTabActive {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.fileTab:disabled {
+  color: #666;
+  cursor: not-allowed;
+}
+
+.lockedPane {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  background: #1e1e1e;
+  color: #9a9a9a;
+  font-size: 14px;
+  text-align: center;
+}
+
+.lockedPaneIcon {
+  font-size: 28px;
+}
+
+.labBadge {
+  margin-left: auto;
+  padding-bottom: 6px;
+  color: #888;
+  font-size: 12px;
+}
+
+.labPanes {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.code {
+  flex: 1;
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+  background: #1e1e1e;
+  color: #e6e6e6;
+  font-family: Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.preview {
+  flex: 1;
+  border: none;
+  background: #fff;
+}

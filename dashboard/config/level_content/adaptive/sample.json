@@ -1,206 +1,799 @@
 {
-  "formatVersion": 3,
+  "formatVersion": 4,
   "id": "sample",
   "title": "Build a website with AI",
-  "objective": "Build a personal website with an AI build partner by developing two skills, prompting and debugging, then applying them to a project of the student's own.",
+  "objective": "Build a personal website with an AI build partner. Learn to prompt with structure, understand what makes up a web page, then take those skills into a project of your own.",
   "project": {
     "lab": {
       "type": "weblab2"
     },
-    "description": "A one-page website about something the student cares about: a team, their art, a cause, a business idea."
+    "description": "A one-page website about something you care about: a team, your art, a cause, a business idea. You will build it up piece by piece as you unlock new checkpoints."
   },
-  "steps": [
-    {
-      "id": "welcome",
-      "kind": "panels",
-      "title": "You can make this yourself",
-      "panels": [
+  "skills": {
+    "prompting": {
+      "id": "prompting",
+      "title": "Prompting",
+      "description": "Write structural, specific prompts that direct an AI precisely: naming sections, layout, and placement instead of vague wishes.",
+      "standards": [
         {
-          "caption": "In this lesson you will build a website of your own with an AI build partner."
+          "framework": "csta2026",
+          "shortcode": "MS-ALG-PS-05"
         },
         {
-          "caption": "First, a few quick questions so the lesson can start you in the right place."
+          "framework": "csta2026",
+          "shortcode": "MS-PRO-RD-18"
+        }
+      ]
+    },
+    "webStructure": {
+      "id": "webStructure",
+      "title": "Web Page Structure",
+      "description": "Know the parts of a web page, what HTML does, and how header, main content, and footer fit together.",
+      "standards": [
+        {
+          "framework": "csta2026",
+          "shortcode": "MS-PRO-PD-13"
+        }
+      ]
+    },
+    "css": {
+      "id": "css",
+      "title": "Styling with CSS",
+      "description": "Control color, spacing, and layout with CSS."
+    },
+    "javascript": {
+      "id": "javascript",
+      "title": "Interactivity with JavaScript",
+      "description": "Make a page respond to clicks and change over time.",
+      "standards": [
+        {
+          "framework": "csta2026",
+          "shortcode": "MS-PRO-TR-19"
+        }
+      ]
+    }
+  },
+  "abilities": {
+    "aiBuilder": {
+      "id": "aiBuilder",
+      "title": "AI code builder",
+      "description": "Describe what you want and the AI writes the code for your site.",
+      "icon": "wand-magic-sparkles",
+      "grants": "aiPrompt"
+    },
+    "htmlEditing": {
+      "id": "htmlEditing",
+      "title": "HTML editing",
+      "description": "See and edit your site's HTML files directly.",
+      "icon": "code",
+      "grants": "htmlEditing"
+    }
+  },
+  "recommendedCheckpointId": "prompting-basics",
+  "checkpoints": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "description": "Welcome to the world of web development with prompting. Tell us what you already know, then see what you will be able to build.",
+      "steps": [
+        {
+          "id": "intro-welcome",
+          "title": "Welcome",
+          "kind": "panels",
+          "panels": [
+            {
+              "caption": "Welcome to the world of web development with prompting."
+            },
+            {
+              "caption": "In this pathway you will build a website of your own, with an AI build partner that writes code from your instructions."
+            },
+            {
+              "caption": "You decide what to build. The AI helps you get there. Along the way you will learn what makes a web page tick."
+            }
+          ]
+        },
+        {
+          "id": "intro-familiarity",
+          "title": "Let's get to know you",
+          "kind": "questions",
+          "description": "There are no wrong answers. This helps us start you in the right place.",
+          "questions": [
+            {
+              "id": "familiar-html",
+              "type": "multipleChoice",
+              "prompt": "How familiar are you with HTML?",
+              "options": [
+                {
+                  "id": "none",
+                  "label": "Not at all"
+                },
+                {
+                  "id": "little",
+                  "label": "A little bit"
+                },
+                {
+                  "id": "some",
+                  "label": "I have some experience"
+                },
+                {
+                  "id": "very",
+                  "label": "Very familiar"
+                }
+              ],
+              "branches": [
+                {
+                  "optionIds": [
+                    "none",
+                    "little"
+                  ],
+                  "message": "Great, thanks for sharing! We will start from the beginning together."
+                },
+                {
+                  "optionIds": [
+                    "some",
+                    "very"
+                  ],
+                  "questions": [
+                    {
+                      "id": "diag-html-link",
+                      "type": "multipleChoice",
+                      "prompt": "Which of these lets you link to another page?",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "<a>",
+                          "correct": true
+                        },
+                        {
+                          "id": "p",
+                          "label": "<p>"
+                        },
+                        {
+                          "id": "div",
+                          "label": "<div>"
+                        },
+                        {
+                          "id": "img",
+                          "label": "<img>"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "diag-html-close",
+                      "type": "multipleChoice",
+                      "prompt": "What is wrong with this code? <p>Hello world",
+                      "options": [
+                        {
+                          "id": "closing",
+                          "label": "The paragraph is missing its closing </p> tag",
+                          "correct": true
+                        },
+                        {
+                          "id": "h1",
+                          "label": "It should use <h1> instead"
+                        },
+                        {
+                          "id": "quotes",
+                          "label": "Hello world needs quotes"
+                        },
+                        {
+                          "id": "nothing",
+                          "label": "Nothing, it is fine"
+                        }
+                      ]
+                    }
+                  ],
+                  "completes": "web-structure"
+                }
+              ]
+            },
+            {
+              "id": "familiar-css",
+              "type": "multipleChoice",
+              "prompt": "How familiar are you with CSS?",
+              "options": [
+                {
+                  "id": "none",
+                  "label": "Not at all"
+                },
+                {
+                  "id": "little",
+                  "label": "A little bit"
+                },
+                {
+                  "id": "some",
+                  "label": "I have some experience"
+                },
+                {
+                  "id": "very",
+                  "label": "Very familiar"
+                }
+              ],
+              "branches": [
+                {
+                  "optionIds": [
+                    "none",
+                    "little"
+                  ],
+                  "message": "Great, thanks for sharing! We will start from the beginning together."
+                },
+                {
+                  "optionIds": [
+                    "some",
+                    "very"
+                  ],
+                  "questions": [
+                    {
+                      "id": "diag-css-color",
+                      "type": "multipleChoice",
+                      "prompt": "Which CSS rule makes text blue?",
+                      "options": [
+                        {
+                          "id": "color",
+                          "label": "color: blue;",
+                          "correct": true
+                        },
+                        {
+                          "id": "text",
+                          "label": "text: blue;"
+                        },
+                        {
+                          "id": "font-color",
+                          "label": "font-color: blue;"
+                        },
+                        {
+                          "id": "blue",
+                          "label": "blue: text;"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "diag-css-center",
+                      "type": "multipleChoice",
+                      "prompt": "What does h1 { text-align: center; } do?",
+                      "options": [
+                        {
+                          "id": "center",
+                          "label": "Centers every h1 heading",
+                          "correct": true
+                        },
+                        {
+                          "id": "bold",
+                          "label": "Makes the heading bold"
+                        },
+                        {
+                          "id": "border",
+                          "label": "Adds a border around it"
+                        },
+                        {
+                          "id": "page",
+                          "label": "Centers the whole page"
+                        }
+                      ]
+                    }
+                  ],
+                  "completes": "css-style"
+                }
+              ]
+            },
+            {
+              "id": "familiar-js",
+              "type": "multipleChoice",
+              "prompt": "How familiar are you with JavaScript?",
+              "options": [
+                {
+                  "id": "none",
+                  "label": "Not at all"
+                },
+                {
+                  "id": "little",
+                  "label": "A little bit"
+                },
+                {
+                  "id": "some",
+                  "label": "I have some experience"
+                },
+                {
+                  "id": "very",
+                  "label": "Very familiar"
+                }
+              ],
+              "branches": [
+                {
+                  "optionIds": [
+                    "none",
+                    "little"
+                  ],
+                  "message": "Great, thanks for sharing! We will start from the beginning together."
+                },
+                {
+                  "optionIds": [
+                    "some",
+                    "very"
+                  ],
+                  "questions": [
+                    {
+                      "id": "diag-js-alert",
+                      "type": "multipleChoice",
+                      "prompt": "Which line shows a popup message in the browser?",
+                      "options": [
+                        {
+                          "id": "alert",
+                          "label": "alert(\"Hi\")",
+                          "correct": true
+                        },
+                        {
+                          "id": "print",
+                          "label": "print(\"Hi\")"
+                        },
+                        {
+                          "id": "echo",
+                          "label": "echo \"Hi\""
+                        },
+                        {
+                          "id": "p",
+                          "label": "<p>Hi</p>"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "diag-js-id",
+                      "type": "multipleChoice",
+                      "prompt": "The button has id=\"button\", but document.getElementById('buton') finds nothing. Why?",
+                      "options": [
+                        {
+                          "id": "typo",
+                          "label": "The id is misspelled in the JavaScript",
+                          "correct": true
+                        },
+                        {
+                          "id": "method",
+                          "label": "getElementById does not exist"
+                        },
+                        {
+                          "id": "semicolon",
+                          "label": "A semicolon is missing"
+                        },
+                        {
+                          "id": "nothing",
+                          "label": "Nothing is wrong"
+                        }
+                      ]
+                    }
+                  ],
+                  "completes": "js-motion"
+                }
+              ]
+            },
+            {
+              "id": "familiar-ai",
+              "type": "multipleChoice",
+              "prompt": "How familiar are you with coding with AI?",
+              "options": [
+                {
+                  "id": "none",
+                  "label": "Not at all"
+                },
+                {
+                  "id": "little",
+                  "label": "A little bit"
+                },
+                {
+                  "id": "some",
+                  "label": "I have some experience"
+                },
+                {
+                  "id": "very",
+                  "label": "Very familiar"
+                }
+              ],
+              "branches": [
+                {
+                  "optionIds": [
+                    "none",
+                    "little"
+                  ],
+                  "message": "Great, thanks for sharing! We will start from the beginning together."
+                },
+                {
+                  "optionIds": [
+                    "some",
+                    "very"
+                  ],
+                  "message": "Nice! You will feel right at home with the AI code builder."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intro-example",
+          "title": "A finished site",
+          "kind": "lab",
+          "sourceMode": "practice",
+          "lab": {
+            "type": "weblab2",
+            "initialViewMode": "preview",
+            "starterFiles": {
+              "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Sunny Side Bakery</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <header>\n      <div class=\"brand\">Sunny Side Bakery</div>\n      <nav>\n        <a href=\"#menu\">Menu</a>\n        <a href=\"#story\">Our Story</a>\n        <a href=\"#visit\">Visit</a>\n      </nav>\n    </header>\n    <section class=\"hero\">\n      <h1>Fresh every morning.</h1>\n      <p>Sourdough, croissants, and cinnamon rolls baked before sunrise.</p>\n      <a class=\"button\" href=\"#menu\">See the menu</a>\n    </section>\n    <section id=\"menu\" class=\"cards\">\n      <article>\n        <h2>Sourdough</h2>\n        <p>A 24-hour rise and a crackling crust.</p>\n      </article>\n      <article>\n        <h2>Croissants</h2>\n        <p>Butter, folded 27 times.</p>\n      </article>\n      <article>\n        <h2>Cinnamon Rolls</h2>\n        <p>Still warm at 7am. Gone by 9.</p>\n      </article>\n    </section>\n    <section id=\"story\" class=\"story\">\n      <h2>Our story</h2>\n      <p>We started with one oven and a folding table at the farmers market. Twelve years later, we still use the same starter.</p>\n    </section>\n    <footer id=\"visit\">\n      <p>42 Maple Street, open 6am to 2pm</p>\n      <p>hello@sunnysidebakery.example</p>\n    </footer>\n  </body>\n</html>\n",
+              "style.css": "* { box-sizing: border-box; }\nbody {\n  margin: 0;\n  font-family: Georgia, serif;\n  color: #3b2a1a;\n  background: #fff8ee;\n}\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 16px 32px;\n  background: #f4c95d;\n}\n.brand { font-weight: bold; font-size: 20px; }\nnav a {\n  margin-left: 20px;\n  color: #3b2a1a;\n  text-decoration: none;\n}\n.hero {\n  padding: 72px 32px;\n  text-align: center;\n  background: linear-gradient(180deg, #f4c95d 0%, #fff8ee 100%);\n}\n.hero h1 { font-size: 44px; margin: 0 0 12px; }\n.button {\n  display: inline-block;\n  margin-top: 16px;\n  padding: 12px 24px;\n  border-radius: 999px;\n  background: #3b2a1a;\n  color: #fff8ee;\n  text-decoration: none;\n}\n.cards {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 24px;\n  padding: 32px;\n}\n.cards article {\n  padding: 24px;\n  border-radius: 12px;\n  background: #ffffff;\n  box-shadow: 0 4px 16px rgba(59, 42, 26, 0.08);\n}\n.cards h2 { margin-top: 0; }\n.story { padding: 32px; max-width: 640px; margin: 0 auto; }\nfooter {\n  padding: 24px 32px;\n  text-align: center;\n  background: #3b2a1a;\n  color: #fff8ee;\n}\nfooter p { margin: 4px 0; }\n"
+            }
+          },
+          "instructions": "Here is a site someone built in this pathway, with an AI build partner.\n\nLook around. Notice the **header** with the name and links, the big **hero** section, the three **cards**, and the **footer** at the bottom.\n\nBy the end of this pathway you will be able to build something like this, about anything you want."
+        },
+        {
+          "id": "intro-you-can",
+          "title": "You can build this yourself!",
+          "kind": "panels",
+          "panels": [
+            {
+              "caption": "You can build this yourself!"
+            },
+            {
+              "caption": "Every checkpoint on your map teaches one thing you can take straight into your project. Complete a checkpoint, then decide: keep learning, or go build."
+            }
+          ]
+        },
+        {
+          "id": "intro-project",
+          "title": "What do you want to build?",
+          "kind": "questions",
+          "description": "You can change these any time from your project card.",
+          "questions": [
+            {
+              "id": "project-title",
+              "type": "freeResponse",
+              "prompt": "What do you want to call your website?",
+              "placeholder": "My Website",
+              "saveAs": "projectTitle"
+            },
+            {
+              "id": "project-description",
+              "type": "freeResponse",
+              "prompt": "What is it about? Describe your vision in a sentence or two.",
+              "placeholder": "A site about...",
+              "saveAs": "projectDescription"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "diagnostic",
-      "kind": "questions",
-      "title": "What do you already know?",
-      "description": "Places the student in each skill. No penalty for guessing.",
-      "questions": [
+      "id": "prompting-basics",
+      "title": "Basics of Prompting",
+      "description": "Learn what a prompt is and write your first prompts to build a page.",
+      "skillIds": [
+        "prompting"
+      ],
+      "requires": [
+        "introduction"
+      ],
+      "unlocks": [
+        "aiBuilder"
+      ],
+      "steps": [
         {
-          "id": "q-footer",
-          "type": "multipleChoice",
-          "prompt": "Where do you usually find the footer on a website?",
-          "options": [
+          "id": "prompting-what",
+          "title": "What is prompting?",
+          "kind": "panels",
+          "panels": [
             {
-              "id": "top",
-              "label": "At the very top"
+              "caption": "A prompt is an instruction you give to an AI. For a website, it describes what you want on the page."
             },
             {
-              "id": "bottom",
-              "label": "At the very bottom",
-              "correct": true
+              "caption": "Vague wishes get vague pages. \"Make it nice\" could mean anything."
             },
             {
-              "id": "side",
-              "label": "Along the left side"
-            },
-            {
-              "id": "popup",
-              "label": "In a popup window"
+              "caption": "Specific instructions get specific pages. \"A header with my name and a paragraph about my favorite hobby\" tells the AI exactly what to build."
             }
           ]
         },
         {
-          "id": "q-header",
-          "type": "multipleChoice",
-          "prompt": "What does a website header usually contain?",
-          "options": [
-            {
-              "id": "name-nav",
-              "label": "The site name and main navigation",
-              "correct": true
-            },
-            {
-              "id": "legal",
-              "label": "Copyright and legal fine print"
-            },
-            {
-              "id": "comments",
-              "label": "The comments section"
-            },
-            {
-              "id": "everything",
-              "label": "The full text of every page"
+          "id": "prompting-about-me",
+          "title": "An About Me page",
+          "kind": "lab",
+          "sourceMode": "practice",
+          "lab": {
+            "type": "weblab2",
+            "initialViewMode": "split",
+            "starterFiles": {
+              "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>About Me</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <h1>About Me</h1>\n    <p>Nothing here yet. Write a prompt to fill this in!</p>\n  </body>\n</html>\n",
+              "style.css": "body {\n  font-family: sans-serif;\n  margin: 40px;\n}\n"
             }
-          ]
+          },
+          "instructions": "This is a sandbox. Nothing you do here changes your project.\n\nWrite a prompt that asks the AI to create a simple **About Me** page. Include:\n\n- your name as a heading\n- one paragraph about something you like\n- a list of three favorite things\n\nRun the prompt and see what comes back."
         },
         {
-          "id": "q-prompt",
-          "type": "multipleChoice",
-          "prompt": "Which prompt is most likely to get the layout you want?",
-          "options": [
-            {
-              "id": "nice",
-              "label": "Make it look nice"
-            },
-            {
-              "id": "structure",
-              "label": "A header with the site name, a section with three cards, and a footer",
-              "correct": true
-            },
-            {
-              "id": "colors",
-              "label": "Use blue and white"
-            },
-            {
-              "id": "better",
-              "label": "Make it better than before"
-            }
-          ]
+          "id": "prompting-project-start",
+          "title": "Start your website",
+          "kind": "lab",
+          "sourceMode": "project",
+          "lab": {
+            "type": "weblab2",
+            "initialViewMode": "split"
+          },
+          "instructions": "Now the real thing. This is **your project**, and everything you build here stays.\n\nDecide what your website is about. Then write a prompt that asks for a first version: a heading with the name of your site and a paragraph that says what it is.\n\nKeep it small. You will add more as you unlock checkpoints."
         },
         {
-          "id": "q-css",
-          "type": "multipleChoice",
-          "prompt": "The heading should be blue but is black. Which file most likely has the bug?",
-          "options": [
+          "id": "prompting-check",
+          "title": "Check for understanding",
+          "kind": "questions",
+          "questions": [
             {
-              "id": "html",
-              "label": "index.html"
+              "id": "good-prompt",
+              "type": "multipleChoice",
+              "prompt": "Which prompt is most likely to get the page you want?",
+              "options": [
+                {
+                  "id": "nice",
+                  "label": "Make it look nice"
+                },
+                {
+                  "id": "specific",
+                  "label": "Add a heading that says Welcome and a paragraph introducing my dog-walking business",
+                  "correct": true
+                },
+                {
+                  "id": "better",
+                  "label": "Make it better"
+                },
+                {
+                  "id": "cool",
+                  "label": "Add some cool stuff"
+                }
+              ]
             },
             {
-              "id": "css",
-              "label": "style.css",
-              "correct": true
-            },
-            {
-              "id": "js",
-              "label": "script.js"
-            },
-            {
-              "id": "none",
-              "label": "None of them"
-            }
-          ]
-        },
-        {
-          "id": "q-js",
-          "type": "multipleChoice",
-          "prompt": "A button does nothing when clicked. Which file most likely has the bug?",
-          "options": [
-            {
-              "id": "html",
-              "label": "index.html"
-            },
-            {
-              "id": "css",
-              "label": "style.css"
-            },
-            {
-              "id": "js",
-              "label": "script.js",
-              "correct": true
-            },
-            {
-              "id": "none",
-              "label": "None of them"
-            }
-          ]
-        },
-        {
-          "id": "q-symptom",
-          "type": "multipleChoice",
-          "prompt": "Two paragraphs run together as one. What is the most likely cause?",
-          "options": [
-            {
-              "id": "closing",
-              "label": "A missing closing tag",
-              "correct": true
-            },
-            {
-              "id": "font",
-              "label": "The wrong font"
-            },
-            {
-              "id": "js-off",
-              "label": "JavaScript is turned off"
-            },
-            {
-              "id": "slow",
-              "label": "A slow connection"
+              "id": "prompt-reflect",
+              "type": "freeResponse",
+              "prompt": "In your own words, what makes a good prompt?",
+              "placeholder": "A good prompt..."
             }
           ]
         }
       ]
     },
     {
-      "id": "skill-tree",
-      "kind": "skillTree",
-      "title": "Your skill map",
-      "description": "Reach the first checkpoint of each skill, then take them to your project. Keep going deeper if you want.",
-      "skills": [
+      "id": "web-structure",
+      "title": "Structure of a Webpage",
+      "description": "Learn the main parts of a web page and what HTML does, then give your site a header and footer.",
+      "skillIds": [
+        "webStructure"
+      ],
+      "requires": [
+        "introduction"
+      ],
+      "unlocks": [
+        "htmlEditing"
+      ],
+      "steps": [
         {
-          "skillId": "prompting",
-          "requiredCheckpointId": "basics"
+          "id": "structure-parts",
+          "title": "The parts of a webpage",
+          "kind": "panels",
+          "panels": [
+            {
+              "caption": "Most web pages share the same skeleton: a header at the top, main content in the middle, and a footer at the bottom."
+            },
+            {
+              "caption": "The header usually holds the site name and navigation links. The footer holds contact info and fine print."
+            },
+            {
+              "caption": "The main content is everything in between: text, images, cards, forms. It is where the page does its job."
+            }
+          ]
         },
         {
-          "skillId": "debugging",
-          "requiredCheckpointId": "symptoms"
+          "id": "structure-html",
+          "title": "What does HTML do?",
+          "kind": "panels",
+          "panels": [
+            {
+              "caption": "HTML describes what is on the page and how it is organized. Every heading, paragraph, and link is an HTML element."
+            },
+            {
+              "caption": "Elements like <header>, <main>, and <footer> name the parts of the page. That helps browsers, screen readers, and the AI understand your page."
+            }
+          ]
+        },
+        {
+          "id": "structure-recipes",
+          "title": "Change the header and footer",
+          "kind": "lab",
+          "sourceMode": "practice",
+          "lab": {
+            "type": "weblab2",
+            "initialViewMode": "split",
+            "starterFiles": {
+              "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Weeknight Recipes</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <header>\n      <h1>Weeknight Recipes</h1>\n    </header>\n    <main>\n      <article>\n        <h2>Ten-minute tomato pasta</h2>\n        <p>Garlic, olive oil, cherry tomatoes, and whatever pasta is in the cupboard.</p>\n      </article>\n      <article>\n        <h2>Sheet-pan chicken and veggies</h2>\n        <p>One pan, one oven, no fuss.</p>\n      </article>\n      <article>\n        <h2>Black bean tacos</h2>\n        <p>Faster than delivery.</p>\n      </article>\n    </main>\n    <footer>\n      <p>Footer goes here</p>\n    </footer>\n  </body>\n</html>\n",
+              "style.css": "body {\n  margin: 0;\n  font-family: sans-serif;\n  color: #222;\n}\nheader {\n  padding: 24px;\n  background: #e8f1e4;\n}\nheader h1 { margin: 0; }\nmain { padding: 24px; }\narticle { margin-bottom: 20px; }\nfooter {\n  padding: 16px 24px;\n  background: #333;\n  color: #fff;\n}\n"
+            }
+          },
+          "instructions": "This recipes page has a header and a footer, but they are bare.\n\nWrite a prompt that changes **only the header and footer**:\n\n- the header should add navigation links for Breakfast, Dinner, and Dessert\n- the footer should show a copyright line and an email address\n\nCheck that the recipes in the middle did not change."
+        },
+        {
+          "id": "structure-project",
+          "title": "Add a header and footer",
+          "kind": "lab",
+          "sourceMode": "project",
+          "lab": {
+            "type": "weblab2",
+            "initialViewMode": "split"
+          },
+          "instructions": "Back to **your project**.\n\nWrite a prompt that adds a header with your site's name and a footer with a way to contact you. Say exactly what should go in each.\n\nIf the AI changes something you did not ask for, tell it to put that back."
+        },
+        {
+          "id": "structure-check",
+          "title": "Check for understanding",
+          "kind": "questions",
+          "questions": [
+            {
+              "id": "part-header",
+              "type": "multipleChoice",
+              "prompt": "What usually goes in the header of a web page?",
+              "options": [
+                {
+                  "id": "name-nav",
+                  "label": "The site name and navigation links",
+                  "correct": true
+                },
+                {
+                  "id": "legal",
+                  "label": "Copyright and legal fine print"
+                },
+                {
+                  "id": "articles",
+                  "label": "The main articles"
+                },
+                {
+                  "id": "comments",
+                  "label": "The comments section"
+                }
+              ]
+            },
+            {
+              "id": "part-footer",
+              "type": "multipleChoice",
+              "prompt": "What usually goes in the footer?",
+              "options": [
+                {
+                  "id": "hero",
+                  "label": "The big welcome message"
+                },
+                {
+                  "id": "contact",
+                  "label": "Contact info and fine print",
+                  "correct": true
+                },
+                {
+                  "id": "nav-only",
+                  "label": "Only the site logo"
+                },
+                {
+                  "id": "nothing",
+                  "label": "Nothing, footers are empty"
+                }
+              ]
+            },
+            {
+              "id": "part-html",
+              "type": "multipleChoice",
+              "prompt": "What does HTML do?",
+              "options": [
+                {
+                  "id": "structure",
+                  "label": "Describes what is on the page and how it is organized",
+                  "correct": true
+                },
+                {
+                  "id": "colors",
+                  "label": "Picks the colors and fonts"
+                },
+                {
+                  "id": "clicks",
+                  "label": "Makes buttons respond to clicks"
+                },
+                {
+                  "id": "hosting",
+                  "label": "Puts the page on the internet"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "id": "build-project",
-      "kind": "lab",
-      "lab": {
-        "type": "weblab2",
-        "initialViewMode": "preview"
-      },
-      "title": "Build your site",
-      "sourceMode": "project",
-      "instructions": "Time to build your own site.\n\nStart with structure: write a prompt that names the sections your site needs and where they go. Then refine one element at a time. When something breaks, name the symptom before you fix it."
+      "id": "prompting-refine",
+      "title": "Refine your Prompts",
+      "description": "Turn vague wishes into precise instructions that name an element and the change you want.",
+      "skillIds": [
+        "prompting"
+      ],
+      "requires": [
+        "prompting-basics"
+      ],
+      "steps": [
+        {
+          "id": "refine-placeholder",
+          "title": "Refine your Prompts",
+          "kind": "panels",
+          "panels": [
+            {
+              "caption": "Placeholder for Refine your Prompts checkpoint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prompting-iterate",
+      "title": "Iterating with AI",
+      "description": "Build in small steps: prompt, look, adjust, repeat.",
+      "skillIds": [
+        "prompting"
+      ],
+      "requires": [
+        "prompting-basics"
+      ],
+      "steps": [
+        {
+          "id": "iterate-placeholder",
+          "title": "Iterating with AI",
+          "kind": "panels",
+          "panels": [
+            {
+              "caption": "Placeholder for Iterating with AI checkpoint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-style",
+      "title": "Style with CSS",
+      "description": "Give your site color, spacing, and a look of its own.",
+      "skillIds": [
+        "css"
+      ],
+      "requires": [
+        "web-structure"
+      ],
+      "steps": [
+        {
+          "id": "css-placeholder",
+          "title": "Style with CSS",
+          "kind": "panels",
+          "panels": [
+            {
+              "caption": "Placeholder for Style with CSS checkpoint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "js-motion",
+      "title": "Motion with JavaScript",
+      "description": "Make your site respond to clicks and move.",
+      "skillIds": [
+        "javascript"
+      ],
+      "requires": [
+        "web-structure"
+      ],
+      "steps": [
+        {
+          "id": "js-placeholder",
+          "title": "Motion with JavaScript",
+          "kind": "panels",
+          "panels": [
+            {
+              "caption": "Placeholder for Motion with JavaScript checkpoint"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
