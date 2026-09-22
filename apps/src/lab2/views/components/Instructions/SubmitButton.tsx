@@ -36,10 +36,10 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
   tooltipMessage,
 }) => {
   const hasSubmitted = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted,
   );
   const scriptId = useAppSelector(
-    state => state.progress.scriptId || undefined
+    state => state.progress.scriptId || undefined,
   );
   const buttonText = hasSubmitted
     ? commonI18n.unsubmit()
@@ -52,7 +52,7 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
     // We either submit or unsubmit the project, depending on the current state.
     const submit = !hasSubmitted;
     await dispatch(
-      sendSubmitReport({appType: appName || '', submitted: submit})
+      sendSubmitReport({appType: appName || '', submitted: submit}),
     );
     // If we just submitted, continue or finish the lesson.
     if (submit) {
@@ -85,10 +85,8 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
       <WithConditionalTooltip
         showTooltip={!enabled && !!tooltipMessage}
         tooltipProps={{
-          text: tooltipMessage,
-          direction: 'onTop',
-          tooltipId: 'submit-button-tooltip',
-          size: 'xs',
+          title: tooltipMessage,
+          id: 'submit-button-tooltip',
         }}
       >
         <MuiButton
