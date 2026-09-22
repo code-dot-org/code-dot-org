@@ -302,6 +302,7 @@ describe('UsersSettingsPage — Login Information', () => {
     fireEvent.change(within(dialog).getByLabelText(/current password/i), {
       target: {value: 'currentpass'},
     });
+    fireEvent.click(within(dialog).getByRole('radio', {name: 'Yes'}));
     fireEvent.click(
       within(dialog).getByRole('button', {name: /update email/i}),
     );
