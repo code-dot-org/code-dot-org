@@ -621,9 +621,32 @@ yarn build in ${STORYBOOK}. Report every file touched.`,
   if (fix) {
     build.filesTouched = [...new Set([...build.filesTouched, ...fix.filesTouched])]
     build.notes += `\nParity fix ${parityAttempt}: ${fix.notes}`
+    build.checks = fix.checks
+    build.allChecksPass = fix.allChecksPass
   }
 }
 const parityStatus = parity.pass ? 'pass' : 'mismatches-remain'
+// A parity fix may have left the package checks red; the commit below must not carry that.
+if (!build.allChecksPass) {
+  log(`Design-system checks red after parity fixes (${JSON.stringify(build.checks)}); one repair pass`)
+  const repaired = await agent(
+    `Parity fixes to the MUI "${component}" left design-system checks failing. Repair them
+without changing what the stories render (the parity gate already judged that).
+
+${TREE_RULES}
+
+Failing checks: ${JSON.stringify(build.checks)}
+Files touched so far: ${JSON.stringify(build.filesTouched)}
+
+Re-run yarn test / typecheck / lint / build in ${LIB} and yarn build in ${STORYBOOK};
+report each. filesTouched = the list above plus anything you changed. Copy muiStories,
+legacyExports and codemodCommand unchanged:
+${JSON.stringify({muiStories: build.muiStories, legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
+    {schema: BUILD_SCHEMA, label: 'parity-checks-repair', phase: 'Parity'},
+  )
+  if (repaired) build = repaired
+  if (!build.allChecksPass) throw new Error(`Design-system checks still failing after parity: ${JSON.stringify(build.checks)}`)
+}
 if (!parity.pass) log(`Parity budget exhausted; ${parity.pairs.filter(p => p.verdict === 'mismatch').length} mismatch(es) go into the PR body for human review`)
 
 // Showcase for the PR body: Light+LTR first, one per story, then Dark, capped at six
@@ -875,10 +898,13 @@ const verifyStatus = verify.pass ? 'green' : 'failing'
 // ── Phase 6: Docs ────────────────────────────────────────────────────────────
 phase('Docs')
 
-// Agents' own reports are necessary but not sufficient: the Verify grep is the
-// evidence that no legacy import is left.
+// Agents' own reports are necessary but not sufficient: the Verify grep is the evidence
+// that no legacy import is left, and a red Verify means the migration is not done.
 const fullyMigrated =
-  allSkippedFiles.length === 0 && skippedChunks.length === 0 && verify.remainingLegacyImports.length === 0
+  verify.pass &&
+  allSkippedFiles.length === 0 &&
+  skippedChunks.length === 0 &&
+  verify.remainingLegacyImports.length === 0
 if (!fullyMigrated && verify.remainingLegacyImports.length) {
   log(`${verify.remainingLegacyImports.length} file(s) still import the legacy ${component}: ${verify.remainingLegacyImports.join(', ')}`)
 }
@@ -893,6 +919,7 @@ STATE
   codemod:          ${build.codemodCommand || 'none'}
   consumers total:  ${scout.consumers.length}; left on DSCO: ${JSON.stringify(allSkippedFiles)}
   legacy imports still found by grep: ${JSON.stringify(verify.remainingLegacyImports)}
+  verify:           ${verifyStatus}
   fully migrated:   ${fullyMigrated}
   parity:           ${parityStatus}; known Figma drift: ${scout.knownDeviations}
   dropped props:    ${JSON.stringify(dropped)}
@@ -902,8 +929,7 @@ STATE
    what remains). Keep the STYLE_OVERRIDES block and Internal Dependency Blockers section
    truthful. Fix any stale statement you have to read to do this (for example a file path
    that no longer exists) but touch nothing unrelated.
-2. ${SKILL_DOC}: move ${componentTitle} into the "Use MUI" list with the import to use, and
-   out of the "Use DSCO" list. Keep the file's terse style.
+2. ${SKILL_DOC}: ${fullyMigrated ? `move ${componentTitle} into the "Use MUI" list with the import to use, and out of the "Use DSCO" list.` : `keep ${componentTitle} in the "Use DSCO" list; consumers remain on it. Do not advertise the MUI version there yet.`} Keep the file's terse style.
 3. ${COMPONENT_DIR}/README.md: confirm it documents the MUI path first and the legacy
    path as deprecated. ${CODEMODS_DIR}/README.md: confirm the codemod is documented if
    one exists.
