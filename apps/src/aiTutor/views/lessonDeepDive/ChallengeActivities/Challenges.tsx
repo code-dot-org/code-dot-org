@@ -1,10 +1,8 @@
-import React, {FC, useCallback, useState} from 'react';
-
-import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
+import React, {FC, useCallback} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import {Challenge} from '../types';
 
-import ChallengeBox from './ChallengeBox';
 import ChallengePicker from './ChallengePicker';
 
 interface ChallengesProps {
@@ -12,29 +10,20 @@ interface ChallengesProps {
 }
 
 const Challenges: FC<ChallengesProps> = ({lessonId}) => {
-  const [challenge, setChallenge] = useState<Challenge | null>(null);
-  const [challengeType, setChallengeType] = useState<string | null>(null);
+  const navigate = useNavigate();
 
-  // Both challenge modalities report submission through this callback; the
-  // confirmation dialog is shared here rather than duplicated per modality.
   const challengeSetCallback = useCallback(
     (pickedChallenge: Challenge | null, pickedChallengeType: string | null) => {
-      setChallenge(pickedChallenge);
-      setChallengeType(pickedChallengeType);
+      if (pickedChallenge && pickedChallengeType) {
+        navigate(`/challenge/${pickedChallenge.id}/${pickedChallengeType}`);
+      }
     },
-    []
+    [navigate]
   );
 
-  return challenge === null ? (
+  return (
     <ChallengePicker
       lessonId={lessonId}
-      challengeSetCallback={challengeSetCallback}
-    />
-  ) : (
-    <ChallengeBox
-      lessonId={lessonId}
-      challenge={challenge}
-      challengeType={challengeType || ChallengeTypes.WHITEBOARD}
       challengeSetCallback={challengeSetCallback}
     />
   );
