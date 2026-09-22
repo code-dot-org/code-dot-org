@@ -152,7 +152,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           }}
         />
       );
-    } else if (activeNav === 'Teacher Panel') {
+    } else if (activeNav === 'Roster') {
       content = <TeacherPanelScreen />;
     } else if (activeNav === 'Rubrics') {
       content = <RubricsScreen />;
