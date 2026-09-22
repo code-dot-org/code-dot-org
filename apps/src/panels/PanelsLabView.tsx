@@ -51,6 +51,14 @@ const PanelsLabView: React.FunctionComponent<
     [dispatch, appName]
   );
 
+  // A link that leaves the level is a choice of where to go next, not a
+  // completion, so no success report: a student resumes at the level after
+  // their most recent completion, and marking the choice passed would send
+  // them past the path they picked.
+  const onFollowLink = useCallback((url: string) => {
+    window.location.href = url;
+  }, []);
+
   const onSkip = useCallback(() => {
     if (dialogControl) {
       dialogControl.showDialog({
@@ -114,6 +122,7 @@ const PanelsLabView: React.FunctionComponent<
     <PanelsView
       panels={panels}
       onContinue={onContinue}
+      onFollowLink={onFollowLink}
       onSkip={skipUrl ? onSkip : undefined}
       targetWidth={windowWidth}
       targetHeight={windowHeight}

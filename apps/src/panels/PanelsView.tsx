@@ -39,6 +39,7 @@ const childrenAreaHeight = 70;
 interface PanelsProps {
   panels: Panel[];
   onContinue: (nextUrl?: string) => void;
+  onFollowLink?: (url: string) => void;
   onSkip?: () => void;
   targetWidth: number;
   targetHeight: number;
@@ -66,6 +67,7 @@ interface PanelsProps {
 const PanelsView: React.FunctionComponent<PanelsProps> = ({
   panels,
   onContinue,
+  onFollowLink,
   onSkip,
   targetWidth,
   targetHeight,
@@ -155,12 +157,16 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   const handleLinkClick = useCallback(
     (link: PanelLink) => {
+      if (link.url) {
+        onFollowLink?.(link.url);
+        return;
+      }
       const targetIndex = panels.findIndex(p => p.key === link.targetKey);
       if (targetIndex !== -1) {
         changePanel(targetIndex, 'bubble');
       }
     },
-    [panels, changePanel]
+    [panels, changePanel, onFollowLink]
   );
 
   // Reset to first panel whenever panels content changes if specified.

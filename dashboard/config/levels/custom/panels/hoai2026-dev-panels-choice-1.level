@@ -1,0 +1,42 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-09-22T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "## Pick a path\nYou will make both parts of your game. Which one first?",
+        "imageUrl": "",
+        "key": "hoai2026-dev-panels-choice-1-d6b20c6b-ddd9-40cd-9bb3-43943830a464",
+        "layout": "text-top-center",
+        "links": [
+          {
+            "text": "**Story**\n\nTwo characters, a place, and something to say.",
+            "x": 30,
+            "y": 62,
+            "width": 32,
+            "targetKey": "",
+            "url": "/s/hoai2026-dev/lessons/1/levels/3"
+          },
+          {
+            "text": "**Platformer**\n\nA player, a world of blocks, treasure, and a patrol.",
+            "x": 70,
+            "y": 62,
+            "width": 32,
+            "targetKey": "",
+            "url": "/s/hoai2026-dev/lessons/1/levels/11"
+          }
+        ],
+        "showContinueButton": true,
+        "nextUrl": "/s/hoai2026-dev/lessons/1/levels/25"
+      }
+    ],
+    "use_links": "true"
+  }
+}]]></config>
+</Panels>
