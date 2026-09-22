@@ -1,3 +1,4 @@
+import {Reaction} from '@code-dot-org/lesson-deep-dive';
 import {render, screen, waitFor} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
@@ -5,7 +6,6 @@ import React from 'react';
 
 import ReactionChips from '@cdo/apps/aiTutor/views/gallery/ReactionChips';
 import * as reactionsApi from '@cdo/apps/aiTutor/views/gallery/reactionsApi';
-import {Reaction} from '@cdo/apps/aiTutor/views/gallery/types';
 
 describe('ReactionChips', () => {
   let addReaction: jest.SpyInstance;
