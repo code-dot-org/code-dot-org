@@ -10,6 +10,8 @@ export const MLTypes = {
 
 export const RegressionTrainer = 'knnRegress';
 export const ClassificationTrainer = 'knnClassify';
+export const TreeRegressionTrainer = 'treeRegress';
+export const TreeClassificationTrainer = 'treeClassify';
 
 export const REGRESSION_ERROR_TOLERANCE = 5;
 

@@ -1,6 +1,7 @@
 import {render, screen, act, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
+import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import LessonDeepDiveContainer from '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer';
 import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
@@ -14,7 +15,25 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   TimeSpentBox: () => <div>time-spent</div>,
   ValidatedLevelsBox: () => <div>validated-levels</div>,
   LessonSummaryCard: () => <div>lesson-summary</div>,
+  PreReviewBox: () => <div>pre-review</div>,
+  PreSkillsCheck: () => <div>pre-skills-check</div>,
+  TutorSummaryBox: () => <div>tutor-summary</div>,
 }));
+
+jest.mock(
+  '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox',
+  () => ({__esModule: true, default: () => <div>reflection</div>})
+);
+
+jest.mock(
+  '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',
+  () => ({__esModule: true, default: () => <div>intervention</div>})
+);
+
+jest.mock(
+  '@cdo/apps/aiTutor/views/lessonDeepDive/SkillsCheck/SkillsCheck',
+  () => ({__esModule: true, default: () => <div>skills-check</div>})
+);
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
@@ -42,8 +61,17 @@ const LESSON_DATA: LessonDeepDiveData = {
   nextLessonUrl: null,
 };
 
-function renderContainer() {
-  render(<LessonDeepDiveContainer lessonDeepDiveData={LESSON_DATA} />);
+function renderContainer(initialScreen = 'welcome') {
+  render(
+    <MemoryRouter initialEntries={[`/${initialScreen}`]}>
+      <Routes>
+        <Route
+          path=":screenId"
+          element={<LessonDeepDiveContainer lessonDeepDiveData={LESSON_DATA} />}
+        />
+      </Routes>
+    </MemoryRouter>
+  );
 }
 
 describe('LessonDeepDiveContainer story card sequence', () => {
@@ -126,5 +154,32 @@ describe('LessonDeepDiveContainer story card sequence', () => {
       act(() => fireEvent.keyDown(window, {key: 'ArrowRight'}));
     }
     expect(screen.queryByText('Continue')).not.toBeInTheDocument();
+  });
+});
+
+describe('LessonDeepDiveContainer URL param routing', () => {
+  beforeEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR, true);
+  });
+
+  afterEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR, false);
+  });
+
+  it.each([
+    ['reflection', 'reflection'],
+    ['pre-review', 'pre-review'],
+    ['intervention', 'intervention'],
+    ['pre-skills-check', 'pre-skills-check'],
+    ['skills-check', 'skills-check'],
+    ['tutor-summary', 'tutor-summary'],
+  ])('renders the %s screen when :screenId is "%s"', (screenId, label) => {
+    renderContainer(screenId);
+    expect(screen.getByText(label)).toBeInTheDocument();
+  });
+
+  it('falls back to welcome when :screenId is not a known screen', () => {
+    renderContainer('not-a-real-screen');
+    expect(screen.getByText('welcome')).toBeInTheDocument();
   });
 });

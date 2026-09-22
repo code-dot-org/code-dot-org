@@ -5,7 +5,7 @@ wrong 'Yes, because hill climbing will eventually explore all possible outcomes 
 right 'No, because hill climbing can get stuck and not have any nearby better solutions'
 wrong 'No, because hill climbing can sometimes incorrectly think that a better outcome is actually worse'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Does using a hill climbing algorithm always find the best possible answer to a problem?

@@ -2,10 +2,10 @@
 
 ## Which one to use
 
-| Component                          | Built on                        | Notes                                 |
-| ---------------------------------- | ------------------------------- | ------------------------------------- |
-| MUI `Tooltip`                      | MUI `Tooltip` + `CdoTheme`      | Use this for new code.                |
-| [`WithTooltip`](./WithTooltip.tsx) | our own SCSS + positioning code | Still what most of the codebase uses. |
+| Component                          | Built on                        | Notes                                     |
+| ---------------------------------- | ------------------------------- | ----------------------------------------- |
+| MUI `Tooltip`                      | MUI `Tooltip` + `CdoTheme`      | Use this for new code.                    |
+| [`WithTooltip`](./WithTooltip.tsx) | our own SCSS + positioning code | Legacy. No callers left; do not add more. |
 
 Import `Tooltip` straight from `@mui/material`; the `MuiTooltip` entry in
 [`styleOverrides/tooltip.ts`](../themes/code.org/styleOverrides/tooltip.ts) (on
@@ -24,8 +24,14 @@ const RunButton = () => (
 ```
 
 The override is **global** — it styles every MUI tooltip in the app, the Sketch
-Lab ones included. This is the first step of the migration; `WithTooltip` and
-its callers are unchanged.
+Lab ones included.
+
+`WithTooltip` and `LegacyTooltip` still ship, but nothing calls them any more
+— not the design system, not `apps/`. A `no-restricted-imports` entry in
+`apps/.eslintrc.js` keeps it that way; it names the three components, so
+`keyboardOnlyTooltipProps` and the `TooltipProps` type still import freely. The `TooltipProps` type still refers to
+the legacy component and is imported by `codebridge` `WithConditionalTooltip`,
+so deleting the sources means keeping or relocating that type.
 
 ### What the theme sets
 
@@ -95,16 +101,17 @@ surrounding `data-theme` subtree. Pass it through `slotProps` when needed:
 (Or, as a follow-up, the bubble could use `-fixed` tokens and stop caring about
 the surrounding theme at all.)
 
-## `WithTooltip`
+## `WithTooltip` (legacy)
 
 This package exports following styled React
 components: [WithTooltip](./WithTooltip.tsx), [LegacyTooltip](./_Tooltip.tsx), [TooltipOverlay](./_Tooltip.tsx).
 
-`WithTooltip` is a recommended way to use a tooltip. It wraps `TooltipOverlay` and `LegacyTooltip` components and provides a
-way to add tooltip to any element, handles all the logic behind showing and hiding, positioning and accessibility of the
-tooltip.
+`WithTooltip` is what we used before the MUI `Tooltip` override existed. It
+wraps `TooltipOverlay` and `LegacyTooltip` and handles showing and hiding,
+positioning and accessibility itself. New code uses MUI `Tooltip`; this section
+is here only for reading the history.
 
-**_Here's a recommended way_** to use `WithTooltip` component and adding Tooltips where needed in general:
+The shape its callers used:
 
 ```javascript
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
