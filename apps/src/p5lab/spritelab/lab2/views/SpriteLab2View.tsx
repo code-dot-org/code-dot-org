@@ -2,6 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import FocusLock from 'react-focus-lock';
 import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -1819,7 +1820,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {tour?.arrowTarget && <TourArrow target={tour.arrowTarget} />}
           {tour ? (
             <div id={TOUR_LAYER_ID} className={moduleStyles.tourLayer}>
-              {floatingGuide}
+              <FocusLock returnFocus className={moduleStyles.tourFocus}>
+                {floatingGuide}
+              </FocusLock>
             </div>
           ) : (
             floatingGuide

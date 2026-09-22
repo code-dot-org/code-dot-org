@@ -7,13 +7,20 @@ import {FreeplayTour} from './useFreeplayTour';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
+// The tour holds focus and takes every click, so it reads as a modal.
+const dialogProps = {
+  role: 'dialog',
+  'aria-modal': true,
+  'aria-label': 'Welcome tour',
+} as const;
+
 /** What the guide shows while the freeplay tour runs. */
 const FreeplayTourGuide: React.FunctionComponent<{tour: FreeplayTour}> = ({
   tour,
 }) => {
   if (tour.variant === 'steps') {
     return (
-      <div className={moduleStyles.tourGuide}>
+      <div className={moduleStyles.tourGuide} {...dialogProps}>
         <p className={moduleStyles.tourText}>{tour.current?.text}</p>
         <div className={moduleStyles.tourActions}>
           <MuiButton
@@ -29,7 +36,7 @@ const FreeplayTourGuide: React.FunctionComponent<{tour: FreeplayTour}> = ({
     );
   }
   return (
-    <div className={moduleStyles.tourGuide}>
+    <div className={moduleStyles.tourGuide} {...dialogProps}>
       <p className={moduleStyles.tourText}>{TOUR_WELCOME}</p>
       <ul className={moduleStyles.tourList}>
         {tour.lines.map(step => (

@@ -624,6 +624,12 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// The focus lock's wrapper takes no box of its own; the guide still
+// positions against the layer.
+.tourFocus {
+  display: contents;
+}
+
 .tourGuide {
   display: flex;
   flex-direction: column;
