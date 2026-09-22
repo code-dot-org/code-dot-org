@@ -41,7 +41,7 @@ class GamelabJr < Gamelab
     uses_lab2
     level_mode
     image_role_defaults
-    starter_blocks
+    add_blocks
     pinned_scene
     world_start_pattern
     guide_steps

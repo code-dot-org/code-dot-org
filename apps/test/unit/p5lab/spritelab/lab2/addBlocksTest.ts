@@ -1,23 +1,23 @@
 import {
-  missingStarters,
+  missingBlocks,
   placeBelow,
-} from '@cdo/apps/p5lab/spritelab/lab2/starterBlocks';
+} from '@cdo/apps/p5lab/spritelab/lab2/addBlocks';
 
 const AT_TIME = {type: 'gamelab_atTime'};
 const CLICKED = {type: 'gamelab_spriteClicked'};
 
-describe('starterBlocks', () => {
-  it('adds only the starters whose type the workspace lacks', () => {
+describe('addBlocks', () => {
+  it('keeps only the blocks whose type the workspace lacks', () => {
     expect(
-      missingStarters(
+      missingBlocks(
         ['spritelab2_whenRun', 'gamelab_atTime'],
         [AT_TIME, CLICKED]
       )
     ).toEqual([CLICKED]);
-    expect(missingStarters([], [AT_TIME])).toEqual([AT_TIME]);
+    expect(missingBlocks([], [AT_TIME])).toEqual([AT_TIME]);
   });
 
-  it('places a starter under the lowest stack, at the leftmost x, with room', () => {
+  it('places a block under the lowest stack, at the leftmost x, with room', () => {
     const at = placeBelow([
       {x: 20, y: 20, height: 100},
       {x: 300, y: 60, height: 200},

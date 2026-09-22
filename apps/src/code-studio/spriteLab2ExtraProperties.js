@@ -18,7 +18,7 @@ export const RAW_EDITABLE_PROPERTIES = [
   'image_role_defaults',
   'level_mode',
   'pinned_scene',
-  'starter_blocks',
+  'add_blocks',
   'world_start_pattern',
 ];
 

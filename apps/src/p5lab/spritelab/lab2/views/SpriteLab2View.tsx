@@ -40,6 +40,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {addMissingBlocks} from '../addBlocks';
 import {ImageAdlibSet, isImageAdlibSet} from '../ai/images/imageAdlibs';
 import {
   uploadAssetToLevel,
@@ -101,7 +102,6 @@ import {
 } from '../scenesApi';
 import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
-import {addStarterBlocks} from '../starterBlocks';
 import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
 import {
   compileWorldPrelude,
@@ -1440,10 +1440,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     loadCode(source);
     const workspace = Blockly.getMainWorkspace() as BlocklyCore.WorkspaceSvg;
-    // The level's starters join the pinned scene once it is on screen, so
+    // The level's added blocks join the pinned scene once it is on screen, so
     // they can sit below what the workspace has rendered.
-    if (activeScene.id === pinnedSceneId && levelProperties.starterBlocks) {
-      addStarterBlocks(workspace, levelProperties.starterBlocks);
+    if (activeScene.id === pinnedSceneId && levelProperties.addBlocks) {
+      addMissingBlocks(workspace, levelProperties.addBlocks);
     }
     runLocalScene(activeScene);
   }, [
@@ -1457,7 +1457,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
     pinnedSceneId,
-    levelProperties.starterBlocks,
+    levelProperties.addBlocks,
   ]);
 
   const handleSelectScene = useCallback(

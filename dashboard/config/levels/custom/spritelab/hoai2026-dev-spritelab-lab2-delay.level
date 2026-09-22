@@ -32,7 +32,7 @@
       "name": "Story",
       "type": "story"
     },
-    "starter_blocks": [
+    "add_blocks": [
       {
         "type": "gamelab_atTime",
         "fields": {
