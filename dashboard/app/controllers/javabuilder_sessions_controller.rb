@@ -92,7 +92,7 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def get_encoded_payload(additional_payload)
-    teacher_list = get_teacher_list.join(',')
+    verified_teacher_ids_csv = Policies::JavabuilderAccess.verified_teacher_ids(current_user).join(',')
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
@@ -114,16 +114,12 @@ class JavabuilderSessionsController < ApplicationController
       execution_type: execution_type,
       mini_app_type: mini_app_type,
       options: options,
-      verified_teachers: teacher_list,
+      verified_teachers: verified_teacher_ids_csv,
       can_access_dashboard_assets: can_access_dashboard_assets
     }.merge(additional_payload)
 
     log_token_creation(payload)
     create_encoded_payload(payload)
-  end
-
-  private def get_teacher_list
-    Policies::Javabuilder.verified_teacher_ids(current_user)
   end
 
   private def log_token_creation(payload)

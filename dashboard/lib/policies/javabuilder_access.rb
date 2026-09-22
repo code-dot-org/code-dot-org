@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-class Policies::Javabuilder
+class Policies::JavabuilderAccess
+  def self.allowed?(user)
+    verified_teacher_ids(user).any?
+  end
+
   def self.verified_teacher_ids(user)
     return [user.id] if user.verified_instructor?
 

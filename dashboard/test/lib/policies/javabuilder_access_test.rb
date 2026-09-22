@@ -1,23 +1,25 @@
 require 'test_helper'
-require 'policies/javabuilder'
+require 'policies/javabuilder_access'
 
-class Policies::JavabuilderTest < ActiveSupport::TestCase
-  test 'active co-teacher of verified teacher in CSA section inherits teacher id' do
+class Policies::JavabuilderAccessTest < ActiveSupport::TestCase
+  test 'active co-teacher of verified teacher in CSA section is allowed and inherits teacher id' do
     verified_teacher = create(:authorized_teacher)
     co_teacher = create(:teacher)
     section = create_csa_section(verified_teacher)
     create(:section_instructor, section: section, instructor: co_teacher, status: :active)
 
-    assert_equal [verified_teacher.id], Policies::Javabuilder.verified_teacher_ids(co_teacher)
+    assert Policies::JavabuilderAccess.allowed?(co_teacher)
+    assert_equal [verified_teacher.id], Policies::JavabuilderAccess.verified_teacher_ids(co_teacher)
   end
 
-  test 'invited co-teacher does not inherit teacher id' do
+  test 'invited co-teacher is not allowed and does not inherit teacher id' do
     verified_teacher = create(:authorized_teacher)
     co_teacher = create(:teacher)
     section = create_csa_section(verified_teacher)
     create(:section_instructor, section: section, instructor: co_teacher, status: :invited)
 
-    assert_empty Policies::Javabuilder.verified_teacher_ids(co_teacher)
+    refute Policies::JavabuilderAccess.allowed?(co_teacher)
+    assert_empty Policies::JavabuilderAccess.verified_teacher_ids(co_teacher)
   end
 
   test 'co-teacher does not inherit id from non-CSA section' do
@@ -26,7 +28,7 @@ class Policies::JavabuilderTest < ActiveSupport::TestCase
     section = create(:section, user: verified_teacher)
     create(:section_instructor, section: section, instructor: co_teacher, status: :active)
 
-    assert_empty Policies::Javabuilder.verified_teacher_ids(co_teacher)
+    assert_empty Policies::JavabuilderAccess.verified_teacher_ids(co_teacher)
   end
 
   test 'co-teacher does not inherit id from unverified teacher' do
@@ -35,7 +37,7 @@ class Policies::JavabuilderTest < ActiveSupport::TestCase
     section = create_csa_section(teacher)
     create(:section_instructor, section: section, instructor: co_teacher, status: :active)
 
-    assert_empty Policies::Javabuilder.verified_teacher_ids(co_teacher)
+    assert_empty Policies::JavabuilderAccess.verified_teacher_ids(co_teacher)
   end
 
   private def create_csa_section(teacher)
