@@ -30,6 +30,8 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
+import fields from '../formFields.module.css';
+
 import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
@@ -1313,7 +1315,7 @@ export const MapStage = ({
           />
           <input
             type="color"
-            className={styles.swatch}
+            className={fields.swatch}
             name={`prop-${fieldKey(prop)}-swatch`}
             // NOT the property's own name, which the field beside it already
             // answers to: two controls in a row with one accessible name is a
@@ -2539,8 +2541,11 @@ export const MapStage = ({
           isReadOnly={isReadOnly}
         />
       )}
+      {/* `fields.narrow` below is what makes the design system's form widths
+          fit a panel this size — see `formFields.module.css`, which says what
+          the overrides are for and what each one was found by. */}
       {selectedActor && (
-        <div className={styles.inspector}>
+        <div className={`${styles.inspector} ${fields.narrow}`}>
           <div className={styles.inspectorHead}>
             <Typography variant="subtitle2" component="span">
               {selectedActor.type.split('/').pop()}

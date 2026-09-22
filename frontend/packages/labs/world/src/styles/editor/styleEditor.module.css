@@ -82,33 +82,6 @@
   min-height: 1.75rem;
 }
 
-/* WHY THE FIELDS NEED AN OVERRIDE AT ALL. The design system's
-   `FormFieldWrapper` is a <label> with `min-width: 18.75rem` — sensible for a
-   form on a page, and three hundred pixels of nothing in a row this size. Left
-   alone it pushed every swatch to the far right of its row, nowhere near the
-   field it belongs to. The map editor's inspector overrides it the same way
-   and says so (`mapEditor.module.css`). */
-.panel label {
-  min-width: 0;
-  width: 100%;
-}
-
-/* …AND THE INPUT INSIDE IT, which is the other half and the half that was
-   missing. The wrapper is `align-items: flex-start`, so it does NOT stretch
-   what it holds: constraining the label to six rems left the <input> at its
-   own intrinsic width — about 212px, which is what twenty characters comes to
-   — overflowing its own container and pushing the swatch out of reach.
-
-   A <select> is excluded for the reason a checkbox and a swatch are in the
-   map editor's copy of this rule: they are sized by what they hold rather
-   than stretched to fit, and a color input stretched to a column is a stripe
-   of paint where a swatch should be. */
-.panel input:not([type='color']) {
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 0;
-}
-
 /* The hex a swatch sits beside: wide enough for `#rrggbbaa` and no wider.
 
    The same lane the number fields sit in, so a list mixing colours and
@@ -116,41 +89,6 @@
 .hex,
 .number {
   flex: 0 0 6rem;
-}
-
-/* A SQUARE THE HEIGHT OF THE FIELD BESIDE IT, which is the whole of looking
-   tidy — and WORKED OUT FROM THE FIELD'S OWN TOKENS rather than typed, so it
-   follows if they move.
-
-   A `size="s"` input is body-three — `--font-size-body-sm` over a line-height
-   of 1.54 — inside 0.3125rem of padding and a 1px border, top and bottom. The
-   first guess here was the map editor's 2.25rem, taken on the grounds that
-   somebody had looked at it; 2.25rem is 36px and the input is a shade over
-   33, which is three pixels of daylight on every colour row. The inspector
-   has the same mismatch beside the same component — since fixed, with a
-   second copy of this calc. A third should be a shared token rather than a
-   third copy (`mapEditor/mapEditor.module.css`).
-
-   Bottom-aligned by the row, so it sits level with the INPUT rather than with
-   the label above it. */
-.swatch {
-  --field-height: calc(
-    var(--font-size-body-sm, 0.875rem) * 1.54 + 0.625rem + 2px
-  );
-
-  flex: 0 0 auto;
-  width: var(--field-height);
-  height: var(--field-height);
-  padding: 2px;
-  border: 1px solid var(--border-neutral, rgba(0, 0, 0, 0.25));
-  border-radius: 4px;
-  background: none;
-  cursor: pointer;
-}
-
-.swatch:disabled {
-  cursor: default;
-  opacity: 0.5;
 }
 
 /* A dropdown has the same 18.75rem in it — `styleAsFormField` sets it

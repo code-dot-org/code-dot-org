@@ -25,6 +25,8 @@ import TextField from '@code-dot-org/component-library/textField';
 
 import type {StyleSpec, ThemeDocument} from '../../engine/core/theme';
 
+import fields from '../../formFields.module.css';
+
 import styles from './styleEditor.module.css';
 import {
   asReference,
@@ -173,7 +175,7 @@ export const StyleEditor = ({
           (field.kind === 'color' ? (
             <input
               type="color"
-              className={styles.swatch}
+              className={fields.swatch}
               disabled={readOnly}
               aria-label={`${field.label} colour`}
               value={String(value)}
@@ -202,7 +204,10 @@ export const StyleEditor = ({
       <ThemePreview theme={serialized} />
 
       <div className={styles.panels}>
-        <section className={styles.panel} aria-labelledby="theme-values">
+        <section
+          className={`${styles.panel} ${fields.narrow}`}
+          aria-labelledby="theme-values"
+        >
           <Typography
             id="theme-values"
             component="h2"
@@ -249,7 +254,7 @@ export const StyleEditor = ({
                   />
                   <input
                     type="color"
-                    className={styles.swatch}
+                    className={fields.swatch}
                     disabled={readOnly}
                     // NOT the token's own name, which the field beside it
                     // already answers to: two controls in a row with one
@@ -287,7 +292,10 @@ export const StyleEditor = ({
           </ul>
         </section>
 
-        <section className={styles.panel} aria-labelledby="theme-styles">
+        <section
+          className={`${styles.panel} ${fields.narrow}`}
+          aria-labelledby="theme-styles"
+        >
           <Typography
             id="theme-styles"
             component="h2"

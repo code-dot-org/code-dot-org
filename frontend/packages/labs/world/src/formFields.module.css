@@ -1,0 +1,72 @@
+/* What every narrow surface in this lab needs from the design system's form
+   fields, said once.
+
+   THE LIBRARY'S FIELDS ARE BUILT FOR A FORM ON A PAGE — a full-width column,
+   one field per line — and every surface here is the other thing: an
+   inspector panel a few inches wide, a row of values beside a preview. Three
+   facts follow from that and each of them was found the hard way, twice:
+
+     • `FormFieldWrapper` is a <label> with `min-width: 18.75rem`. Left alone
+       it overflows the panel and pushes anything beside it out of reach.
+     • That wrapper is `align-items: flex-start`, so it does NOT stretch what
+       it holds: constraining the label does nothing to the <input> inside,
+       which keeps its own intrinsic width — twenty characters, about 212px —
+       and overflows its own container.
+     • A `size="s"` field is a shade over 33px tall, which is what anything
+       standing next to one has to be.
+
+   A colour input and a checkbox are excluded from the stretch for the same
+   reason: they are sized by what they hold rather than by the column, and a
+   colour input stretched to a panel is a stripe of paint where a swatch
+   should be.
+
+   USED BY adding `formFields.narrow` to the container's class list. It was
+   two copies before this — the map editor's inspector and the theme editor —
+   and the second copy was written by reading the first, wrongly, twice. */
+.narrow label {
+  width: 100%;
+  min-width: 0;
+}
+
+.narrow input:not([type='checkbox'], [type='color']) {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+/* A colour swatch: the browser's picker, dressed to sit beside a field.
+
+   NOT A DESIGN-SYSTEM COMPONENT, because there is not one — the library has
+   no colour input and `TextField`'s `inputType` does not admit `color` — so
+   this borrows the library's border and radius rather than inventing a second
+   look for the same idea.
+
+   ITS SIZE IS THE FIELD'S, worked out from that field's own tokens rather
+   than typed, so it follows if they move: a `size="s"` input is body-three —
+   `--font-size-body-sm` over a line-height of 1.54 — inside 0.3125rem of
+   padding and a 1px border, top and bottom. Typed, it was 2.25rem in both
+   copies, which is 36px against an input a shade over 33: three pixels of
+   daylight on every colour row, in two places, for months.
+
+   A row places it AFTER the field and bottom-aligns it, so every field on the
+   surface starts at the same x and the swatch sits level with the input
+   rather than with the label above it. */
+.swatch {
+  --field-height: calc(
+    var(--font-size-body-sm, 0.875rem) * 1.54 + 0.625rem + 2px
+  );
+
+  flex: none;
+  width: var(--field-height);
+  height: var(--field-height);
+  padding: 2px;
+  border: 1px solid var(--border-neutral, #ccc);
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+}
+
+.swatch:disabled {
+  cursor: default;
+  opacity: 0.5;
+}

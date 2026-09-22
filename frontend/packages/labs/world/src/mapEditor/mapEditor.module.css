@@ -301,43 +301,6 @@
   min-width: 0;
 }
 
-/* The browser's own color input, made to look like it belongs: the design
-   system has no color component, so this borrows its border and radius rather
-   than inventing a second look for the same idea.
-   The swatch is a SQUARE, which is why `.inspector input` above excludes it —
-   that rule stretches every field to the panel, and a color input stretched
-   to the panel is a stripe of paint where a swatch should be.
-
-   ITS SIZE IS THE FIELD'S, worked out from that field's own tokens rather
-   than typed, so it follows if they move: a `size="s"` input is body-three —
-   `--font-size-body-sm` over a line-height of 1.54 — inside 0.3125rem of
-   padding and a 1px border, top and bottom. It was 2.25rem, which is 36px
-   against an input a shade over 33: three pixels of daylight on every color
-   row.
-
-   SECOND COPY of this calc; the theme editor has the other
-   (`styles/editor/styleEditor.module.css`). A third should be a shared
-   token rather than a third copy. */
-.swatch {
-  --field-height: calc(
-    var(--font-size-body-sm, 0.875rem) * 1.54 + 0.625rem + 2px
-  );
-
-  width: var(--field-height);
-  height: var(--field-height);
-  flex: none;
-  padding: 2px;
-  border: 1px solid var(--border-neutral, #ccc);
-  border-radius: 4px;
-  background: none;
-  cursor: pointer;
-}
-
-.swatch:disabled {
-  cursor: default;
-  opacity: 0.5;
-}
-
 /* One trait's property fields, inside its accordion panel. */
 .inspectorGroup {
   display: flex;
@@ -368,20 +331,6 @@
 
 .inspectorAccordion.inspectorAccordion details summary strong {
   font-size: small;
-}
-
-/* DSCO's FormFieldWrapper (a <label>) defaults to min-width 18.75rem, which
-   overflows this narrow panel (the horizontal scroll) and blocks the half-width
-   pairs. Override it by specificity and let each field fill its column. */
-.inspector label {
-  width: 100%;
-  min-width: 0;
-}
-
-.inspector input:not([type='checkbox'], [type='color']) {
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 0;
 }
 
 /* A set-valued reference: its members listed, each with a way out of the set.
