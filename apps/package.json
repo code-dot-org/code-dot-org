@@ -294,6 +294,7 @@
     "dapjs": "^2.3.0",
     "ejs": "^3.1.10",
     "eslint-linter-browserify": "^9.31.0",
+    "fabric": "6",
     "fast-memoize": "2.0.2",
     "filesaver.js": "0.2.0",
     "firmata": "^2.2.0",

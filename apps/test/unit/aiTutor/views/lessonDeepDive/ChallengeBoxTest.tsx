@@ -7,8 +7,6 @@ import {
   Challenge,
   ChallengeResponse,
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
-import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
-import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -17,46 +15,55 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
 }));
 
+// WhiteboardChallenge renders SvgCanvas (Fabric.js + canvas API), which does
+// not work in jsdom. The stub mirrors the real component's canSubmit gate:
+// the submit button stays disabled until both a drawing exists and an
+// explanation modality (explanationType) has been chosen.
 jest.mock(
-  '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob',
-  () => ({
-    createSketchSnapshotBlob: jest.fn(),
-  })
+  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/WhiteboardChallenge',
+  () => {
+    const React = require('react');
+
+    // Named so the hooks linter recognises it as a React component.
+    function WhiteboardChallengeStub(props: {
+      onSubmittableChange: (can: boolean) => void;
+      explanationType: string | null;
+      submitRef: {current: (() => void | Promise<void>) | null};
+      resetRef: {current: (() => void) | null};
+      setEvaluationStatus: (s: string) => void;
+      setChallengeResponseId: (id: number) => void;
+      submitCallback: (v: boolean) => void;
+    }) {
+      const [hasDrawing, setHasDrawing] = React.useState(false);
+
+      // Mirror WhiteboardChallenge's canSubmit: both a drawing and a
+      // modality are required.
+      React.useEffect(() => {
+        props.onSubmittableChange(hasDrawing && props.explanationType !== null);
+      }, [hasDrawing, props.explanationType]); // eslint-disable-line react-hooks/exhaustive-deps
+
+      props.submitRef.current = () => {
+        props.setChallengeResponseId(7);
+        props.setEvaluationStatus('pending');
+        props.submitCallback(true);
+      };
+      props.resetRef.current = () => setHasDrawing(false);
+
+      return React.createElement(
+        'button',
+        {type: 'button', onClick: () => setHasDrawing(true)},
+        'Draw something'
+      );
+    }
+
+    return {
+      __esModule: true,
+      default: WhiteboardChallengeStub,
+    };
+  }
 );
 
-// React Flow does not render in jsdom; the whiteboard canvas is stubbed out.
-// The stub's button reports one node through updateSources, simulating the
-// student drawing (which enables the submit button).
-jest.mock('@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas', () => {
-  const React = require('react');
-  return {
-    __esModule: true,
-    default: (props: {
-      updateSources: (sources: ReactFlowSketchLabSources) => void;
-    }) =>
-      React.createElement(
-        'div',
-        null,
-        'Whiteboard canvas stub',
-        React.createElement(
-          'button',
-          {
-            type: 'button',
-            onClick: () =>
-              props.updateSources({
-                source: {nodes: [{id: 'n1'}], edges: []},
-              } as unknown as ReactFlowSketchLabSources),
-          },
-          'Draw something'
-        )
-      ),
-  };
-});
-
 const fetchJson = HttpClient.fetchJson as jest.Mock;
-const post = HttpClient.post as jest.Mock;
-const put = HttpClient.put as jest.Mock;
-const snapshot = createSketchSnapshotBlob as jest.Mock;
 
 const fakeChallenge: Challenge = {
   id: 1,
@@ -65,11 +72,6 @@ const fakeChallenge: Challenge = {
   default_modality: 'whiteboard',
   whiteboard_starter_image_alt_text: null,
   whiteboard_starter_image_url: null,
-};
-
-const createdResponse = {
-  id: 7,
-  assets: [{id: 9, asset_type: 'whiteboard_image'}],
 };
 
 // Shape of the ChallengeResponse the polling effect fetches from
@@ -95,11 +97,9 @@ const fakeChallengeResponse = (
   ...overrides,
 });
 
-// Selects the text explanation modality (WhiteboardChallenge only reports
-// canSubmit once an explanation modality is chosen), draws on the
-// whiteboard, and submits, past the point where ChallengeBox has created
-// the response and kicked off evaluation (setEvaluationStatus only
-// resolves to PENDING when the /evaluate POST reports response.ok).
+// Selects the text explanation modality, draws on the whiteboard, and
+// submits. The WhiteboardChallenge stub drives ChallengeBox state directly,
+// so no HTTP calls are needed here.
 const submitWhiteboardChallenge = async () => {
   await waitFor(() =>
     expect(
@@ -122,18 +122,10 @@ const tick = async (ms: number) => {
 describe('ChallengeBox', () => {
   beforeEach(() => {
     fetchJson.mockReset();
-    post.mockReset();
-    put.mockReset();
-    snapshot.mockReset();
   });
 
   it('shows the waiting-for-feedback text and image once the response is submitted', async () => {
     fetchJson.mockResolvedValue({value: fakeChallengeResponse()});
-    snapshot.mockResolvedValue({
-      blob: new Blob(['png-bytes'], {type: 'image/png'}),
-    });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
@@ -161,11 +153,6 @@ describe('ChallengeBox', () => {
         student_feedback: 'Great job explaining the flowchart!',
       }),
     });
-    snapshot.mockResolvedValue({
-      blob: new Blob(['png-bytes'], {type: 'image/png'}),
-    });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
@@ -226,11 +213,6 @@ describe('ChallengeBox', () => {
         student_feedback: 'Great job explaining the flowchart!',
       }),
     });
-    snapshot.mockResolvedValue({
-      blob: new Blob(['png-bytes'], {type: 'image/png'}),
-    });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
@@ -296,11 +278,6 @@ describe('ChallengeBox', () => {
         pollResponses.length > 1 ? pollResponses.shift()! : pollResponses[0];
       return Promise.resolve({value: next});
     });
-    snapshot.mockResolvedValue({
-      blob: new Blob(['png-bytes'], {type: 'image/png'}),
-    });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
