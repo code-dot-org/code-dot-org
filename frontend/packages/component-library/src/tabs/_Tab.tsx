@@ -14,7 +14,6 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './tabs.module.scss';
 
-/** MUI Tooltip's props without `children`, which `_Tab` fills in itself. */
 export type TabTooltipProps = Omit<MuiTooltipProps, 'children'>;
 
 export interface TabModel {
@@ -28,7 +27,7 @@ export interface TabModel {
   iconRight?: FontAwesomeV6IconProps;
   /** Whether button should be icon only */
   isIconOnly?: boolean;
-  /** Tab tooltip props, minus the element it wraps (the tab supplies that) */
+  /** Tab tooltip props */
   tooltip?: TabTooltipProps;
   /** Tab icon */
   icon?: FontAwesomeV6IconProps;

@@ -4,7 +4,6 @@ import React from 'react';
 interface WithConditionalTooltipProps {
   children: React.ReactNode;
   tooltipOverlayClassName?: string;
-  /** MUI Tooltip's props without `children`, which this component supplies. */
   tooltipProps: Omit<MuiTooltipProps, 'children'>;
   showTooltip: boolean;
 }
