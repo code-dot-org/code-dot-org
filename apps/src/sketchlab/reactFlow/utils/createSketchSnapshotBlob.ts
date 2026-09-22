@@ -5,6 +5,7 @@ import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
+import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
 import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
 
@@ -60,17 +61,34 @@ export const createSketchSnapshotBlob = async (
   // the page declares. See getSketchFontEmbedCss.
   const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
 
-  const blob = await toBlob(viewport, {
-    backgroundColor,
-    fontEmbedCSS,
-    width: imageWidth,
-    height: imageHeight,
-    style: {
-      width: `${imageWidth}px`,
-      height: `${imageHeight}px`,
-      transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
-    },
-  });
+  // html-to-image multiplies the output by the device pixel ratio, which would
+  // take a retina export past the dimension cap above.
+  const pixelRatio = Math.min(
+    Math.max(window.devicePixelRatio || 1, 1),
+    MAX_EXPORT_DIMENSION_PX / Math.max(imageWidth, imageHeight)
+  );
+
+  const restoreImageSources = downscaleImagesForExport(
+    viewport,
+    scale * pixelRatio
+  );
+  let blob: Blob | null;
+  try {
+    blob = await toBlob(viewport, {
+      backgroundColor,
+      fontEmbedCSS,
+      pixelRatio,
+      width: imageWidth,
+      height: imageHeight,
+      style: {
+        width: `${imageWidth}px`,
+        height: `${imageHeight}px`,
+        transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
+      },
+    });
+  } finally {
+    restoreImageSources();
+  }
 
   if (!blob) {
     return {error: 'Could not capture your sketch. Please try again.'};
