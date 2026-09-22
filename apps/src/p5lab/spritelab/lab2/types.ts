@@ -94,12 +94,6 @@ export interface Sources extends ProjectSources {
    * shows one field set and a costume answers for one model at a time.
    */
   aiModelId?: string;
-  /**
-   * Image prompt with {Feature name} placeholders, filled from a costume's
-   * own trait values. One per project, because it describes the kind of
-   * thing the whole data set pictures.
-   */
-  imagePromptTemplate?: string;
 }
 
 /**

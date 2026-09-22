@@ -4,7 +4,7 @@ import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import Adlib, {AdlibChoices} from '@cdo/apps/lab2/views/components/guide/Adlib';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -43,7 +43,7 @@ import {
   ImageStyle,
   ImageType,
 } from '../ai/images/types';
-import {fillTraitPrompt, promptIsUsable} from '../ai/traits/traitPrompt';
+import {choicesFromTraits, featureKeys} from '../ai/traits/traitAdlib';
 import {TraitValues} from '../ai/traits/traitStore';
 import {AnimationPoses} from '../characterAnimations';
 import {
@@ -153,8 +153,6 @@ interface GenerateImageViewProps extends ImageFormOptions {
       field (new images name themselves), no Start from, no temperature,
       and Paint manually moves from the footer into the blank image area. */
   advanced?: boolean;
-  /** Image prompt with {Feature name} placeholders. */
-  promptTemplate?: string;
   /** Persist a finished result (name and traits set when creating). */
   onAccept: (
     result: GeneratedImageResult,
@@ -190,7 +188,6 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   adlibSet,
   adlibOnly,
   defaultStyle,
-  promptTemplate,
   onPaintManually,
   onGenerateStart,
   onAccept,
@@ -204,20 +201,6 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   // they are held here and written when the generation is accepted.
   const [traits, setTraits] = useState<TraitValues>({});
   const modelCard = useAppSelector(state => state.spriteLab2?.modelCard);
-  const traitFill = fillTraitPrompt(promptTemplate || '', modelCard, {
-    costumeTraits: traits,
-  });
-  const promptFromTraits = !!create && !!promptTemplate && !!modelCard;
-  const filledPrompt = traitFill.prompt;
-  const traitsFillPrompt = promptFromTraits && promptIsUsable(traitFill);
-
-  // While a costume is being created the features write the prompt. The box
-  // stays editable; changing a feature afterwards rewrites it.
-  useEffect(() => {
-    if (traitsFillPrompt) {
-      setPrompt(filledPrompt);
-    }
-  }, [traitsFillPrompt, filledPrompt]);
   const [name, setName] = useState(create?.initial?.name || '');
   const initialImageType =
     existing?.imageType ||
@@ -265,20 +248,34 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [adlibChoices, setAdlibChoices] = useState<AdlibChoices>({});
   const [adlibText, setAdlibText] = useState('');
   const handleAdlibText = useCallback((text: string) => setAdlibText(text), []);
+  const dataKeys = useMemo(() => featureKeys(adlib), [adlib]);
   // A fresh combo (opening, or a Type switch swapping templates) rolls its
-  // own choices, so not every sentence starts the same.
+  // own choices, so not every sentence starts the same. Feature-bound
+  // blanks are not rolled: their words come from the costume's data.
   useEffect(() => {
     if (adlib) {
       setAdlibChoices(
         Object.fromEntries(
-          Object.entries(adlib.options).map(([slot, options]) => [
-            slot,
-            options[Math.floor(Math.random() * options.length)].id,
-          ])
+          Object.entries(adlib.options)
+            .filter(([slot]) => !featureKeys(adlib).includes(slot))
+            .map(([slot, options]) => [
+              slot,
+              options[Math.floor(Math.random() * options.length)].id,
+            ])
         )
       );
     }
   }, [adlib]);
+
+  const traitChoices = useMemo(
+    () => choicesFromTraits(adlib, modelCard, {costumeTraits: traits}),
+    [adlib, modelCard, traits]
+  );
+  // The data blanks follow the fields above them, so the sentence changes
+  // as the student sets a feature.
+  useEffect(() => {
+    setAdlibChoices(prev => ({...prev, ...traitChoices.choices}));
+  }, [traitChoices]);
   const freeTextEntered = !!prompt.trim();
   // What Generate will send: typed text when present, else the combo's
   // sentence.
@@ -512,6 +509,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
               <Adlib
                 adlib={adlib}
                 adlibChoices={adlibChoices}
+                lockedKeys={dataKeys}
                 glowSpeed={freeTextEntered ? undefined : 'normal'}
                 onChoicesChange={setAdlibChoices}
                 onTextChange={handleAdlibText}
@@ -519,7 +517,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             </fieldset>
           )}
           <div className={moduleStyles.formRow}>
-            {promptFromTraits && modelCard && (
+            {!!create && !!modelCard && dataKeys.length > 0 && (
               <div className={traitStyles.editor}>
                 <TraitFields
                   card={modelCard}
@@ -527,15 +525,10 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                   disabled={generating}
                   onChange={setTraits}
                 />
-                {traitFill.missing.length > 0 && (
+                {traitChoices.missing.length > 0 && (
                   <span className={traitStyles.problem}>
-                    Set {traitFill.missing.join(', ')} to build the prompt.
-                  </span>
-                )}
-                {traitFill.unknown.length > 0 && (
-                  <span className={traitStyles.problem}>
-                    The image prompt asks for {traitFill.unknown.join(', ')},
-                    which {modelCard.name} does not have.
+                    Set {traitChoices.missing.join(', ')} to finish the
+                    sentence.
                   </span>
                 )}
               </div>

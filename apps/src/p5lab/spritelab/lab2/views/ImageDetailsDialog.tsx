@@ -87,8 +87,6 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
   alternatives?: AlternativeImage[];
   /** Make this alternative the image. */
   onSelectAlternative?: (id: string) => void;
-  /** Image prompt with {Feature name} placeholders. */
-  promptTemplate?: string;
 }
 
 /**
@@ -156,7 +154,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onAcceptGenerated,
   alternatives,
   onSelectAlternative,
-  promptTemplate,
 }) => {
   const isNew = animKey === null;
   const {theme} = useTheme();
@@ -317,7 +314,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           defaultStyle={defaultStyle}
           onPaintManually={isNew && !paintDisabled ? onPaintNew : undefined}
           onGenerateStart={onGenerateStart}
-          promptTemplate={promptTemplate}
           onAccept={async (result, newName, traits) => {
             await onAcceptGenerated(result, newName, traits);
             setView('details');
@@ -399,7 +395,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               {animKey && (
                 <TraitEditor
                   animKey={animKey}
-                  promptTemplate={promptTemplate}
+                  adlibSet={adlibSet}
+                  imageType={imageType}
                   onAcceptGenerated={onAcceptGenerated}
                 />
               )}

@@ -289,9 +289,6 @@ interface GenerateImagePaneProps {
   aiModelId?: string;
   /** Persist a new choice of model. */
   onAiModelIdChange?: (modelId: string | undefined) => void;
-  /** Image prompt with {Feature name} placeholders. */
-  imagePromptTemplate?: string;
-  onImagePromptTemplateChange?: (template: string) => void;
 }
 
 /**
@@ -340,8 +337,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   imageLevel,
   aiModelId,
   onAiModelIdChange,
-  imagePromptTemplate,
-  onImagePromptTemplateChange,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -916,12 +911,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   return (
     <div className={moduleStyles.imagesManager}>
       {!imageLevel && onAiModelIdChange && (
-        <ModelPicker
-          modelId={aiModelId}
-          onModelIdChange={onAiModelIdChange}
-          promptTemplate={imagePromptTemplate}
-          onPromptTemplateChange={onImagePromptTemplateChange}
-        />
+        <ModelPicker modelId={aiModelId} onModelIdChange={onAiModelIdChange} />
       )}
       {!imageLevel && (
         <div className={moduleStyles.imageGallery}>
@@ -1013,7 +1003,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           isNameTaken={isNameTaken}
           onGenerateStart={handleGenerateStart}
           onAcceptGenerated={handleAcceptGenerated}
-          promptTemplate={imagePromptTemplate}
           alternatives={alternatives.map(
             (alt): AlternativeImage => ({
               id: alt.id,

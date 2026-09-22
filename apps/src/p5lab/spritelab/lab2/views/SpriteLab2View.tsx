@@ -1388,13 +1388,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources]
   );
 
-  const handleImagePromptTemplateChange = useCallback(
-    (template: string) => {
-      updateSources(prev => ({...prev, imagePromptTemplate: template}));
-    },
-    [updateSources]
-  );
-
   const handleDeleteImage = useCallback(
     (name: string) => {
       updateSources(prev => removeImageReferences(prev, name));
@@ -1612,8 +1605,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
     aiModelId: currentSources.aiModelId,
     onAiModelIdChange: handleAiModelIdChange,
-    imagePromptTemplate: currentSources.imagePromptTemplate,
-    onImagePromptTemplateChange: handleImagePromptTemplateChange,
   };
 
   return (

@@ -515,6 +515,48 @@
         ]
       },
       "variantCount": 1
+    },
+    "sprite-cars": {
+      "template": "A car that is {Maintenance Cost}, and {Safety Rating}",
+      "features": [
+        "Maintenance Cost",
+        "Safety Rating"
+      ],
+      "options": {
+        "Maintenance Cost": [
+          {
+            "id": "Low",
+            "text": "plain and well kept, a sensible little hatchback"
+          },
+          {
+            "id": "Medium",
+            "text": "an ordinary family car, a few years old"
+          },
+          {
+            "id": "High",
+            "text": "sleek and expensive looking, low to the ground"
+          },
+          {
+            "id": "Very High",
+            "text": "a rare supercar with exotic bodywork"
+          }
+        ],
+        "Safety Rating": [
+          {
+            "id": "Low",
+            "text": "small and flimsy, with thin doors and tiny wheels"
+          },
+          {
+            "id": "Medium",
+            "text": "an average size, with normal doors and wheels"
+          },
+          {
+            "id": "High",
+            "text": "solid and heavy, with thick pillars and big wheels"
+          }
+        ]
+      },
+      "variantCount": 1
     }
   }
 }

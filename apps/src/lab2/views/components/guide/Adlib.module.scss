@@ -62,3 +62,12 @@
     color: initial;
   }
 }
+
+// A blank the student can't change: it reads as a chosen word, not a control.
+.lockedWord {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border-bottom: 1px dashed rgb(255 255 255 / 0.55);
+  padding-bottom: 1px;
+}

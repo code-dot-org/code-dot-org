@@ -12,6 +12,8 @@ export type AdlibType = {
   template: string;
   options: {[key: string]: {id: string; text: string}[]};
   variantCount: number;
+  /** Blanks whose choice comes from data rather than from the student. */
+  features?: string[];
 };
 
 export type AdlibsType = {
@@ -24,6 +26,8 @@ interface AdlibProps {
   children?: React.ReactNode;
   adlib: AdlibType;
   adlibChoices: AdlibChoices;
+  /** Blanks the student cannot change: shown as the chosen word. */
+  lockedKeys?: string[];
   readOnly?: boolean;
   glowSpeed?: 'normal' | 'fast';
   hidden?: boolean;
@@ -39,6 +43,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
   children,
   adlib,
   adlibChoices,
+  lockedKeys,
   readOnly,
   glowSpeed,
   hidden,
@@ -109,6 +114,14 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     let output: React.ReactNode[] = [localizedTemplate];
     Object.keys(options).forEach(key => {
       output = reactStringReplace(output, `{${key}}`, match => {
+        if (lockedKeys?.includes(key)) {
+          const chosen = options[key].find(o => o.id === adlibChoices[key]);
+          return (
+            <span key={key} className={styles.lockedWord}>
+              {chosen ? localization.translate(chosen.text) : `(${key})`}
+            </span>
+          );
+        }
         return (
           <select
             key={key}
@@ -133,7 +146,7 @@ const Adlib: React.FunctionComponent<AdlibProps> = ({
     });
 
     return output;
-  }, [adlibChoices, onChoicesChange, options, localizedTemplate]);
+  }, [adlibChoices, onChoicesChange, options, localizedTemplate, lockedKeys]);
 
   return (
     <div

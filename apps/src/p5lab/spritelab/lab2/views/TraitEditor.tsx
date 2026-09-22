@@ -4,13 +4,18 @@ import React, {useState} from 'react';
 import {setAnimationTraits} from '@cdo/apps/p5lab/redux/animationList';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {ImageAdlibSet, imageAdlibFor} from '../ai/images/imageAdlibs';
 import {
   GeneratedImageResult,
   generateImage,
 } from '../ai/images/imageGeneration';
 import {ImageSafetyError} from '../ai/images/imageSafety';
-import {ImageGenerationMetadata} from '../ai/images/types';
-import {fillTraitPrompt, promptIsUsable} from '../ai/traits/traitPrompt';
+import {ImageGenerationMetadata, ImageType} from '../ai/images/types';
+import {
+  adlibIsFilled,
+  choicesFromTraits,
+  fillAdlib,
+} from '../ai/traits/traitAdlib';
 import {TraitValues} from '../ai/traits/traitStore';
 
 import TraitFields from './TraitFields';
@@ -19,8 +24,9 @@ import moduleStyles from './trait-editor.module.scss';
 
 interface TraitEditorProps {
   animKey: string;
-  /** Image prompt with {Feature name} placeholders. */
-  promptTemplate?: string;
+  /** The level's word combos; a feature-bound set draws the redraw prompt. */
+  adlibSet?: ImageAdlibSet;
+  imageType?: ImageType;
   onAcceptGenerated?: (result: GeneratedImageResult) => Promise<void>;
 }
 
@@ -37,7 +43,8 @@ function optionsFrom(generation: ImageGenerationMetadata | undefined) {
 /** An existing costume's feature values, and a redraw from them. */
 const TraitEditor: React.FunctionComponent<TraitEditorProps> = ({
   animKey,
-  promptTemplate,
+  adlibSet,
+  imageType,
   onAcceptGenerated,
 }) => {
   const dispatch = useAppDispatch();
@@ -57,11 +64,14 @@ const TraitEditor: React.FunctionComponent<TraitEditorProps> = ({
     );
   }
 
-  const fill = fillTraitPrompt(promptTemplate || '', modelCard, {
+  const adlib = adlibSet
+    ? imageAdlibFor(imageType || 'sprite', adlibSet)
+    : undefined;
+  const {choices, missing} = choicesFromTraits(adlib, modelCard, {
     costumeTraits: traits,
   });
-  const canGenerate =
-    !!promptTemplate && !!onAcceptGenerated && promptIsUsable(fill);
+  const prompt = fillAdlib(adlib, choices);
+  const canGenerate = !!onAcceptGenerated && adlibIsFilled(adlib, prompt);
 
   const generate = async () => {
     if (!onAcceptGenerated) {
@@ -71,7 +81,7 @@ const TraitEditor: React.FunctionComponent<TraitEditorProps> = ({
     setError(null);
     try {
       const result = await generateImage(
-        fill.prompt,
+        prompt,
         optionsFrom(props?.generation)
       );
       await onAcceptGenerated(result);
@@ -106,7 +116,7 @@ const TraitEditor: React.FunctionComponent<TraitEditorProps> = ({
         The model predicts {modelCard.labelName}. It is not stored here, so the
         answer stays out of the student&apos;s reach.
       </div>
-      {promptTemplate && onAcceptGenerated && (
+      {adlib && onAcceptGenerated && (
         <div className={moduleStyles.generateRow}>
           <MuiButton
             variant="outlined"
@@ -117,18 +127,10 @@ const TraitEditor: React.FunctionComponent<TraitEditorProps> = ({
           >
             {generating ? 'Drawing…' : 'Draw from features'}
           </MuiButton>
-          {canGenerate && (
-            <span className={moduleStyles.note}>{fill.prompt}</span>
-          )}
-          {!!fill.missing.length && (
+          {canGenerate && <span className={moduleStyles.note}>{prompt}</span>}
+          {!!missing.length && (
             <span className={moduleStyles.problem}>
-              Set {fill.missing.join(', ')} first.
-            </span>
-          )}
-          {!!fill.unknown.length && (
-            <span className={moduleStyles.problem}>
-              The prompt asks for {fill.unknown.join(', ')}, which{' '}
-              {modelCard.name} does not have.
+              Set {missing.join(', ')} first.
             </span>
           )}
         </div>

@@ -8,13 +8,11 @@
  */
 
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import TextField from '@code-dot-org/component-library/textField';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {fetchModelCards} from '../ai/traits/modelApi';
-import {availablePlaceholders} from '../ai/traits/traitPrompt';
 import {setAvailableModels, setModelCard} from '../redux/spriteLab2Redux';
 
 import moduleStyles from './trait-editor.module.scss';
@@ -23,9 +21,6 @@ interface ModelPickerProps {
   /** The model this project stored, applied once the list arrives. */
   modelId?: string;
   onModelIdChange: (modelId: string | undefined) => void;
-  /** Image prompt with {Feature name} placeholders. */
-  promptTemplate?: string;
-  onPromptTemplateChange?: (template: string) => void;
 }
 
 const NONE = '';
@@ -33,8 +28,6 @@ const NONE = '';
 const ModelPicker: React.FunctionComponent<ModelPickerProps> = ({
   modelId,
   onModelIdChange,
-  promptTemplate,
-  onPromptTemplateChange,
 }) => {
   const dispatch = useAppDispatch();
   const models = useAppSelector(state => state.spriteLab2?.availableModels);
@@ -102,22 +95,6 @@ const ModelPicker: React.FunctionComponent<ModelPickerProps> = ({
         <span className={moduleStyles.note}>
           {chosen.fields.length} features, predicts {chosen.labelName}
         </span>
-      )}
-      {chosen && onPromptTemplateChange && (
-        <div className={moduleStyles.templateField}>
-          <TextField
-            name="imagePromptTemplate"
-            label="Image prompt"
-            size="s"
-            value={promptTemplate || ''}
-            placeholder="A houseplant with {Leaf spots} spots"
-            onChange={event => onPromptTemplateChange(event.target.value)}
-          />
-          <span className={moduleStyles.note}>
-            Use {availablePlaceholders(chosen).join(' ')} to draw an image from
-            an image&apos;s own feature values.
-          </span>
-        </div>
       )}
     </div>
   );

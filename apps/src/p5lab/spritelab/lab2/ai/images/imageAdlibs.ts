@@ -12,8 +12,15 @@ import manifest from '@cdo/static/spritelab_lab2/imageAdlibManifest.json';
 import {ImageType} from './types';
 
 /** Which combo set a level offers; expanded is the freeplay set, treasure
-    the collectible-flavored sprite set for the treasure level. */
-export const IMAGE_ADLIB_SETS = ['simple', 'expanded', 'treasure'] as const;
+    the collectible-flavored sprite set for the treasure level. A set whose
+    blanks are feature-bound (cars) is tied to one imported model: its option
+    ids are that model's feature values. */
+export const IMAGE_ADLIB_SETS = [
+  'simple',
+  'expanded',
+  'treasure',
+  'cars',
+] as const;
 
 export type ImageAdlibSet = (typeof IMAGE_ADLIB_SETS)[number];
 
