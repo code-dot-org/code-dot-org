@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "## Pick a path\nYou will make both parts of your game. Which one first?",
+        "text": "## One down\nNice work. Ready for the other part of your game?",
         "imageUrl": "",
         "key": "hoai2026-dev-panels-choice-2-47011dbf-478c-4ec0-86f9-077ecccb3b46",
         "layout": "text-top-center",
