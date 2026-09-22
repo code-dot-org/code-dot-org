@@ -6,6 +6,7 @@ import {setActiveTab} from '../redux/spriteLab2Redux';
 import {Scene} from '../types';
 
 import {
+  SCENE_MENU_SELECTOR,
   TOUR_LIST_STEPS,
   TOUR_STEPS,
   TourStep,
@@ -17,15 +18,30 @@ import {
 // SceneSelector).
 const SCENE_CHIP_SELECTOR = '#scene-dropdown-button';
 
+// The chip toggles its menu; a click when already in the wanted state
+// would flip it back.
+function toggleSceneMenu(open: boolean) {
+  const chip = document.querySelector<HTMLButtonElement>(SCENE_CHIP_SELECTOR);
+  const menu = document.querySelector(SCENE_MENU_SELECTOR);
+  const isOpen =
+    !!menu && getComputedStyle(menu.parentElement!).display !== 'none';
+  if (chip && isOpen !== open) {
+    chip.click();
+  }
+}
+
 interface FreeplayTourOptions {
   variant: TourVariant | undefined;
   scenes: Scene[];
   selectScene: (sceneId: string) => void;
+  /** Enter the Play tab from the start of the game. */
+  startPlay: () => void;
 }
 
 export interface FreeplayTour {
   variant: TourVariant;
-  /** The lab below the bar is blacked out (before the first view). */
+  /** The lab below the bar is blacked out: before the first view, and
+      behind the open scene menu. */
   coverBlack: boolean;
   /** The step whose view is up: the current one, or the clicked line. */
   current: TourStep | undefined;
@@ -47,6 +63,7 @@ export default function useFreeplayTour({
   variant,
   scenes,
   selectScene,
+  startPlay,
 }: FreeplayTourOptions): FreeplayTour | undefined {
   const dispatch = useAppDispatch();
   const [active, setActive] = useState(!!variant);
@@ -78,17 +95,11 @@ export default function useFreeplayTour({
       case 'scene-menu': {
         dispatch(setActiveTab('Code'));
         // After the tab lands, so the chip is enabled.
-        const handle = window.setTimeout(() => {
-          const chip =
-            document.querySelector<HTMLButtonElement>(SCENE_CHIP_SELECTOR);
-          const menu = document.querySelector('ul[aria-label="Scenes"]');
-          const open =
-            menu && getComputedStyle(menu.parentElement!).display !== 'none';
-          if (chip && !open) {
-            chip.click();
-          }
-        }, 50);
-        return () => window.clearTimeout(handle);
+        const handle = window.setTimeout(() => toggleSceneMenu(true), 50);
+        return () => {
+          window.clearTimeout(handle);
+          toggleSceneMenu(false);
+        };
       }
       case 'gallery':
         dispatch(setActiveTab('Scenes'));
@@ -105,14 +116,14 @@ export default function useFreeplayTour({
         }
         dispatch(setActiveTab('Code'));
         return;
-      case 'play-hint':
-        dispatch(setActiveTab('Code'));
+      case 'play':
+        startPlay();
         return;
       default:
         return;
     }
-    // selectScene changes with the active tab; re-running on that would
-    // re-apply the view after the student's own tab clicks.
+    // selectScene and startPlay change with the active tab; re-running on
+    // them would re-apply the view after the student's own tab clicks.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active, current, dispatch, platformScene]);
 
@@ -140,7 +151,8 @@ export default function useFreeplayTour({
   }
   return {
     variant,
-    coverBlack: variant === 'steps' ? current?.view === 'blank' : !shownId,
+    coverBlack:
+      !current || current.view === 'blank' || current.view === 'scene-menu',
     current,
     arrowTarget: current?.target,
     isLast: variant === 'steps' && stepIndex === TOUR_STEPS.length - 1,

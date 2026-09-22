@@ -1494,6 +1494,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getScenes,
   });
 
+  const handleTabChange = useCallback(
+    (tab: Tab) => {
+      // Entering Play from the tab button starts from the beginning.
+      if (tab === 'Play') {
+        setPlayStartSceneId(null);
+      }
+      dispatch(setActiveTab(tab));
+    },
+    [dispatch]
+  );
+
   // The welcome tour, on freeplay, while ?tour= asks for one.
   const tourVariant = useMemo(
     () =>
@@ -1506,18 +1517,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     variant: tourVariant,
     scenes,
     selectScene: sceneEditing.selectScene,
+    startPlay: () => handleTabChange('Play'),
   });
-
-  const handleTabChange = useCallback(
-    (tab: Tab) => {
-      // Entering Play from the tab button starts from the beginning.
-      if (tab === 'Play') {
-        setPlayStartSceneId(null);
-      }
-      dispatch(setActiveTab(tab));
-    },
-    [dispatch]
-  );
 
   // Restart the whole game from the first scene.
   // Restarting must not leave focus parked on the clicked button, where

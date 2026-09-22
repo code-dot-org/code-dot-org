@@ -15,7 +15,7 @@ export type TourView =
   | 'gallery'
   | 'world'
   | 'code'
-  | 'play-hint';
+  | 'play';
 
 /** Where the arrow points, and from which side. */
 export interface TourTarget {
@@ -30,6 +30,9 @@ export interface TourStep {
   target?: TourTarget;
 }
 
+/** The open scene menu (SceneSelector's CustomDropdown names it). */
+export const SCENE_MENU_SELECTOR = 'ul[aria-label="Scenes"]';
+
 export const TOUR_WELCOME =
   'Welcome to free play, where you can keep working on your project, and ' +
   'do so much more.';
@@ -40,7 +43,7 @@ export const TOUR_STEPS: TourStep[] = [
     id: 'scenes',
     text: 'Switch between your scenes, and make new ones.',
     view: 'scene-menu',
-    target: {selector: 'ul[aria-label="Scenes"]', direction: 'left'},
+    target: {selector: SCENE_MENU_SELECTOR, direction: 'left'},
   },
   {
     id: 'gallery',
@@ -62,7 +65,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     id: 'play',
     text: 'Play your game.',
-    view: 'play-hint',
+    view: 'play',
     target: {selector: '[role="tab"][data-label="Play"]', direction: 'up'},
   },
 ];

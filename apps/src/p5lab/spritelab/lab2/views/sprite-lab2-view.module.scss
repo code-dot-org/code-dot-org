@@ -642,8 +642,8 @@ $tab-segment-height: $tab-item-height - 2px;
 
 .tourList {
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding-left: 20px;
+  list-style: disc;
 
   li {
     margin: 0;
