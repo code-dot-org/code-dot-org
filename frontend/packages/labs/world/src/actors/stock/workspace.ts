@@ -497,3 +497,84 @@ export const drawParagraph = (
     ANCHOR: textOf('TextAnchorProperty', own),
   },
 });
+
+// ── Where the pointer is, in the ACTOR's own frame ──────────────────────────
+//
+// THE SAME QUESTION, ASKED FOUR TIMES, and got wrong on three of them: the hit
+// test decided a click landed on a turned button by its unturned box
+// (`scripts/rules/pointing`, `under`); a turned Slider read a drag along the
+// screen's x rather than its own; and a turned List and Dropdown picked rows
+// by how far down the SCREEN the click was.
+//
+// A rotation takes the actor's local +x to `(cos, sin)` and its local +y to
+// `(−sin, cos)`, so the offset from the middle projects onto each with two
+// multiplies. Upside down works for free: a half turn makes the cosine
+// negative and the axis runs the other way, which is what the thing on screen
+// looks like it should do.
+//
+// ANYTHING THAT ASKS "where is the pointer relative to THIS" USES THESE, and
+// anything that asks it some other way is almost certainly a fourth instance
+// of the same bug.
+
+/** `⟨x|y⟩ of ⟨where the mouse is⟩`, in the world's coordinates. */
+export const pointerOn = (axis: 'x' | 'y') => ({
+  block: {
+    type: 'world_vector_component',
+    fields: {COMPONENT: axis},
+    inputs: {VEC: {block: {type: 'world_mouse_position'}}},
+  },
+});
+
+/** `⟨x|y⟩ of ⟨where this actor is⟩`, which is its MIDDLE. */
+export const middleOn = (axis: 'x' | 'y') => ({
+  block: {
+    type: 'world_get_Space_PositionProperty',
+    fields: {COMPONENT: axis},
+    inputs: {ACTOR: me()},
+  },
+});
+
+/** `sin ⟨…⟩` and `cos ⟨…⟩`, in degrees — which is what a rotation is. */
+const trig = (op: 'SIN' | 'COS', of: object) => ({
+  block: {type: 'math_trig', fields: {OP: op}, inputs: {NUM: of}},
+});
+
+const turned = () => ({
+  block: {type: 'world_get_Space_RotationProperty', inputs: {ACTOR: me()}},
+});
+
+const maths = (op: 'ADD' | 'MINUS' | 'MULTIPLY', a: object, b: object) => ({
+  block: {type: 'math_arithmetic', fields: {OP: op}, inputs: {A: a, B: b}},
+});
+
+/** How far the pointer is along the actor's OWN width, from its middle. */
+export const alongX = () =>
+  maths(
+    'ADD',
+    maths(
+      'MULTIPLY',
+      maths('MINUS', pointerOn('x'), middleOn('x')),
+      trig('COS', turned()),
+    ),
+    maths(
+      'MULTIPLY',
+      maths('MINUS', pointerOn('y'), middleOn('y')),
+      trig('SIN', turned()),
+    ),
+  );
+
+/** …and how far DOWN its own height, from its middle. */
+export const alongY = () =>
+  maths(
+    'MINUS',
+    maths(
+      'MULTIPLY',
+      maths('MINUS', pointerOn('y'), middleOn('y')),
+      trig('COS', turned()),
+    ),
+    maths(
+      'MULTIPLY',
+      maths('MINUS', pointerOn('x'), middleOn('x')),
+      trig('SIN', turned()),
+    ),
+  );

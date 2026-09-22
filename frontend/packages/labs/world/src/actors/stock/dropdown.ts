@@ -45,6 +45,8 @@ import {
 import {
   actorFile,
   actsLike,
+  alongX,
+  alongY,
   chain,
   corner,
   defineEvent,
@@ -127,14 +129,6 @@ const choice = (n: object) => ({
   block: {type: 'world_list_item', inputs: {N: n, LIST: choices()}},
 });
 
-/** The pointer, in the world's coordinates. */
-const pointer = (axis: 'x' | 'y') => ({
-  block: {
-    type: 'world_vector_component',
-    fields: {COMPONENT: axis},
-    inputs: {VEC: {block: {type: 'world_mouse_position'}}},
-  },
-});
 /** Where this actor is, which is its MIDDLE. */
 const middle = (axis: 'x' | 'y') => ({
   block: {
@@ -194,16 +188,27 @@ const closeUp = () => [
   setHeight(num(ROW)),
 ];
 
-/** The top edge of the box, wherever it is. */
-const top = () => arithmetic('MINUS', middle('y'), labelHalf(height()));
-/** Which row the pointer is on, counting from one below the face. */
+/**
+ * Which row the pointer is on, counting from one below the face.
+ *
+ * MEASURED DOWN THE DROPDOWN'S OWN LENGTH, not down the screen's. Asking for
+ * the pointer's plain `y` against the box's plain top is the row only while
+ * the menu is upright: turned on its side every click picks from the wrong
+ * axis, and turned over the rows run backwards (`workspace.alongY`).
+ */
 const rowUnderPointer = () =>
   arithmetic(
     'ADD',
     floor(
       arithmetic(
         'DIVIDE',
-        arithmetic('MINUS', pointer('y'), arithmetic('ADD', top(), num(ROW))),
+        // From the top of the box — half its height up its own axis — and
+        // then past the face, which is the first row's worth.
+        arithmetic(
+          'MINUS',
+          arithmetic('ADD', alongY(), labelHalf(height())),
+          num(ROW),
+        ),
         num(ROW),
       ),
     ),
@@ -218,31 +223,24 @@ const choose = (n: () => object) =>
     {type: `world_emit_${OWN}_ChosenEvent`, inputs: {ACTOR: me()}},
   ]);
 
-/** Whether the pointer is inside the box, whatever size it is. */
+/**
+ * Whether the pointer is inside the box, whatever size it is.
+ *
+ * IN THE BOX'S OWN AXES. An open menu is taller than the face that opened it,
+ * so this cannot use the ordinary hit test — it asks about a rectangle the
+ * actor has grown into. What it must not do is ask about an UNTURNED one: a
+ * menu on its side stayed open for clicks beside it and closed for clicks on
+ * it, which is the same fault the hit test itself had before it turned the
+ * offset (`scripts/rules/pointing`, `under`).
+ */
+const abs = (of: object) => ({
+  block: {type: 'math_single', fields: {OP: 'ABS'}, inputs: {NUM: of}},
+});
+
 const pointerInside = () =>
   both(
-    compare(
-      'LTE',
-      {
-        block: {
-          type: 'math_single',
-          fields: {OP: 'ABS'},
-          inputs: {NUM: arithmetic('MINUS', pointer('x'), middle('x'))},
-        },
-      },
-      labelHalf(width()),
-    ),
-    compare(
-      'LTE',
-      {
-        block: {
-          type: 'math_single',
-          fields: {OP: 'ABS'},
-          inputs: {NUM: arithmetic('MINUS', pointer('y'), middle('y'))},
-        },
-      },
-      labelHalf(height()),
-    ),
+    compare('LTE', abs(alongX()), labelHalf(width())),
+    compare('LTE', abs(alongY()), labelHalf(height())),
   );
 
 const circleArrow = () => [

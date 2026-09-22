@@ -11,7 +11,7 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {type Actor, type Property} from '../../engine';
+import {RotationProperty, type Actor, type Property} from '../../engine';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
@@ -191,6 +191,11 @@ describe('a List', () => {
         world.setPointer({x, y}, down ? ['left'] : []);
         world.tick(1 / 60);
       },
+      /** Turn the list, as the map editor's rotate handle does. */
+      turn: (degrees: number) => {
+        list.set(RotationProperty, degrees);
+        world.tick(1 / 60);
+      },
       /** A tap of a key, by the world's own name for it (`engine/core/keys`). */
       press: (key: string) => {
         world.setInput([key]);
@@ -231,6 +236,47 @@ describe('a List', () => {
     // third row runs from 76 to 100.
     l.point(100, 80, true);
     l.point(100, 80, false);
+
+    expect(l.onRow()).toBe(3);
+    expect(l.said()).toBe('C3');
+  }, 60000);
+
+  it('picks a row by the list’s OWN down, not the screen’s', async () => {
+    // A LIST THAT HAS BEEN TURNED IS STILL A LIST. Measuring the pointer's
+    // plain `y` against the box's plain top asks how far down the SCREEN a
+    // click was, which is the row only while the list is upright: on its side
+    // every click picks from the wrong axis, and upside down the rows run
+    // backwards.
+    //
+    // Third of its kind. The hit test had it (`rules/pointing`, `under`), the
+    // Slider's drag had it (`alongX`), and this is the same question a third
+    // time: where is the pointer relative to THIS thing.
+    const l = await open();
+    l.turn(90);
+
+    // Turned a quarter, the list's own "down" points to the screen's LEFT —
+    // a rotation takes local +y to (−sin, cos), which at ninety degrees is
+    // (−1, 0). So the rows run right to left, row one at the right-hand end.
+    //
+    // Upright, the click that picks row three is twenty ABOVE the middle
+    // (row three's band is 48 to 72 down a 144-tall box). Twenty up the
+    // list's own length is now twenty to the screen's RIGHT: (120, 100).
+    l.point(120, 100, true);
+    l.point(120, 100, false);
+
+    expect(l.onRow()).toBe(3);
+    expect(l.said()).toBe('C3');
+  }, 60000);
+
+  it('runs its rows the right way up when it is upside down', async () => {
+    // Half a turn makes the cosine negative, so the list's own down is the
+    // screen's up — and the row under a click follows the thing on screen
+    // rather than the axis it was authored on.
+    const l = await open();
+    l.turn(180);
+
+    l.point(100, 120, true);
+    l.point(100, 120, false);
 
     expect(l.onRow()).toBe(3);
     expect(l.said()).toBe('C3');

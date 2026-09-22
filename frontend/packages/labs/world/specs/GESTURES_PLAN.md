@@ -139,6 +139,36 @@ dropped`, `is swiped ⟨left⟩`, and `is long pressed`.
   and a step asking every frame whether the button was still down. It is a
   handler for one event now, and keeps no state of its own.
 
+## The same bug, four times: ask in the thing's own frame
+
+Four places have asked "where is the pointer relative to THIS actor", and
+three of them got it wrong the same way — by measuring against the screen's
+axes rather than the actor's:
+
+1. **The hit test.** A click on a turned Button missed, because `under`
+   compared the offset with an unturned box (`scripts/rules/pointing`).
+2. **The Slider's drag.** A slider stood on end only moved when dragged
+   sideways, because the fraction read the pointer's screen `x`.
+3. **The List's rows.** A turned list picked its row from how far down the
+   SCREEN the click was, so on its side every click read the wrong axis and
+   upside down the rows ran backwards.
+4. **The Dropdown's, twice.** Its open menu picked rows the same way, and its
+   own "is the pointer inside me" test compared an axis-aligned box — so a
+   turned menu stayed open for clicks beside it and closed for clicks on it.
+
+Each was reported by somebody turning a control and using it, and each was
+invisible to every test in the repo, because every test drove an upright one.
+
+**The arithmetic is now said once** (`actors/stock/workspace`, `alongX` and
+`alongY`): a rotation takes the actor's local +x to `(cos, sin)` and its local
++y to `(−sin, cos)`, so the offset from the middle projects onto each with two
+multiplies. Upside down works for free — a half turn makes the cosine negative
+and the axis runs the other way, which is what the thing on screen looks like
+it should do.
+
+Anything asking that question uses those two. Anything asking it some other
+way is almost certainly the fifth instance.
+
 ## Not built, and known
 
 - **One finger.** Multi-touch needs pointer identities and a second call

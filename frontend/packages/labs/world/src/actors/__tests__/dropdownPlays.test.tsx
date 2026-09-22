@@ -7,7 +7,12 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {type Actor, PositionProperty, type Property} from '../../engine';
+import {
+  type Actor,
+  PositionProperty,
+  type Property,
+  RotationProperty,
+} from '../../engine';
 import {HeightProperty} from '../../engine/rules/boxed';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
@@ -122,6 +127,11 @@ describe('a Dropdown', () => {
       tall: () => menu.get(height),
       isOpen: () => menu.get(isOpen),
       y: () => menu.get(PositionProperty).y,
+      /** Turn it, as the map editor's rotate handle does. */
+      turn: (degrees: number) => {
+        menu.set(RotationProperty, degrees);
+        frame();
+      },
     };
   };
 
@@ -150,6 +160,32 @@ describe('a Dropdown', () => {
     expect(d.y()).toBe(100);
     d.world.tick(1 / 60);
     expect(d.heard()).toBe('CHOSEN');
+  }, 60000);
+
+  it('picks a row by its OWN down when it has been turned', async () => {
+    // SAME FAULT, SAME SHAPE, fourth time: the hit test had it, the Slider's
+    // drag had it, the List's rows had it, and an open menu picked its row by
+    // how far down the SCREEN the click was (`workspace.alongY`).
+    //
+    // Turned a quarter, the menu's own "down" is the screen's LEFT — a
+    // rotation takes local +y to (−sin, cos).
+    //
+    // The grown box is 120 by 96 about (100, 136), so turned it covers x 52
+    // to 148 and y 76 to 196. The point below is inside it either way, and
+    // the two readings disagree: 24 to the RIGHT of the middle is 24 UP the
+    // menu's own length, which is the FIRST row — while its plain screen `y`
+    // of 176 is 64 below the box's top edge, which by the old arithmetic was
+    // the third. One click, two answers, and only one of them is what the
+    // thing on screen shows.
+    const d = await open();
+    d.click(100, 100);
+    expect(d.isOpen()).toBe(true);
+    d.turn(90);
+
+    d.click(124, 176);
+
+    expect(d.says()).toBe('ONE');
+    expect(d.isOpen()).toBe(false);
   }, 60000);
 
   it('chooses with the arrows and Enter once it holds the focus', async () => {

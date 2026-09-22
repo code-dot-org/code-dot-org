@@ -35,6 +35,7 @@ import {BORDER, LOOK, RADIUS, RING_INSET, RING_WIDTH, ringRadius} from './look';
 import {
   actorFile,
   actsLike,
+  alongY,
   type BlockParam,
   chain,
   corner,
@@ -161,23 +162,6 @@ const item = (n: object) => ({
   block: {type: 'world_list_item', inputs: {N: n, LIST: items()}},
 });
 
-/** The pointer, in the world's coordinates. */
-const pointer = (axis: 'x' | 'y') => ({
-  block: {
-    type: 'world_vector_component',
-    fields: {COMPONENT: axis},
-    inputs: {VEC: {block: {type: 'world_mouse_position'}}},
-  },
-});
-/** Where this actor is, which is its MIDDLE. */
-const middle = (axis: 'x' | 'y') => ({
-  block: {
-    type: 'world_get_Space_PositionProperty',
-    fields: {COMPONENT: axis},
-    inputs: {ACTOR: me()},
-  },
-});
-
 const set = (exportName: string, value: object, own = OWN) => ({
   type: `world_set_${own}_${exportName}`,
   inputs: {ACTOR: me(), VALUE: value},
@@ -210,9 +194,6 @@ const scrollTo = (to: object) =>
     [set('ScrollProperty', num(0))],
   );
 
-/** The top edge of the box. */
-const top = () => arithmetic('MINUS', middle('y'), labelHalf(height()));
-
 /** Which row the pointer is on, counting from one. */
 const rowUnderPointer = () =>
   arithmetic(
@@ -220,7 +201,14 @@ const rowUnderPointer = () =>
     floor(
       arithmetic(
         'DIVIDE',
-        arithmetic('ADD', arithmetic('MINUS', pointer('y'), top()), scroll()),
+        // …measured from the TOP of the box, which is half its height up its
+        // own axis from the middle, and then down by however far it has been
+        // scrolled.
+        arithmetic(
+          'ADD',
+          arithmetic('ADD', alongY(), labelHalf(height())),
+          scroll(),
+        ),
         num(ROW),
       ),
     ),
