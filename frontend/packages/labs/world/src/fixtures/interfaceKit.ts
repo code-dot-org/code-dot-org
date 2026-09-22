@@ -94,68 +94,64 @@ const typedIn = () => ({
 export const PORTRAIT = {columns: 10, rows: 18};
 
 /** The screen, as the map editor sees it: five placements, top to bottom. */
-const INTERFACE_MAP = JSON.stringify(
-  {
-    type: 'map',
-    size: {width: PORTRAIT.columns, height: PORTRAIT.rows},
-    tile: {width: TILE_SIZE, height: TILE_SIZE},
-    actors: [
-      // THE FORM IS A DIALOG: a Panel, and the title, the field, the button
-      // and the bar as its children (specs/PARENTING.md). Each child's
-      // stored position is measured from the panel — the same slot the
-      // engine keeps a child's local position in — so moving the panel in
-      // the editor moves the form, and the play test's clicks land where
-      // they always did: the panel is at (160, 100) and the field 20 above
-      // its middle is at (160, 80).
-      place('actors/panel', 'Dialog', 160, 100, {
-        hasABox: {width: 300, height: 296},
-      }),
-      // A title, which is a Label doing the one thing a Label does.
-      place('actors/label', 'Title', 0, -70, {
-        positional: {parent: 'Dialog'},
-        Label: {text: 'WHAT IS YOUR NAME?'},
-      }),
-      // The field. Click it and type.
-      place('actors/textInput', 'Name', 0, -20, {
-        positional: {parent: 'Dialog'},
-      }),
-      // A button that answers the field.
-      place('actors/button', 'Hello', 0, 30, {
-        positional: {parent: 'Dialog'},
-        Label: {text: 'SAY HELLO'},
-      }),
-      // How full the field is, as a bar — empty until something is typed.
-      place('actors/progressBar', 'Bar', 0, 68, {
-        positional: {parent: 'Dialog'},
-        Progress_Bar: {fraction: 0},
-      }),
-      // A switch, which is a Button that stays answered. Nothing listens to
-      // it here; what it demonstrates is a control on a panel that keeps a
-      // state and says when it changes.
-      place('actors/toggle', 'Sound', 0, 96, {
-        positional: {parent: 'Dialog'},
-        Label: {text: 'SOUND'},
-        hasABox: {width: 120},
-      }),
-      // A bar the pointer drags, whose fraction a game reads as a volume.
-      place('actors/slider', 'Volume', 0, 124, {
-        positional: {parent: 'Dialog'},
-      }),
-      // One answer out of several, with the choices on the placement: a
-      // list of words the inspector edits a row at a time.
-      place('actors/dropdown', 'Size', 0, 152, {
-        positional: {parent: 'Dialog'},
-        Dropdown: {choices: ['SMALL', 'MEDIUM', 'LARGE']},
-        Label: {text: 'SMALL'},
-      }),
-      // …and the box that says the answer, a letter at a time. At the foot
-      // of the screen, where a phone keeps its replies, and nobody's child.
-      place('actors/speechBox', 'Reply', 160, 500),
-    ],
-  },
-  null,
-  2,
-);
+const INTERFACE_MAP = {
+  type: 'map' as const,
+  size: {width: PORTRAIT.columns, height: PORTRAIT.rows},
+  tile: {width: TILE_SIZE, height: TILE_SIZE},
+  actors: [
+    // THE FORM IS A DIALOG: a Panel, and the title, the field, the button
+    // and the bar as its children (specs/PARENTING.md). Each child's
+    // stored position is measured from the panel — the same slot the
+    // engine keeps a child's local position in — so moving the panel in
+    // the editor moves the form, and the play test's clicks land where
+    // they always did: the panel is at (160, 100) and the field 20 above
+    // its middle is at (160, 80).
+    place('actors/panel', 'Dialog', 160, 100, {
+      hasABox: {width: 300, height: 296},
+    }),
+    // A title, which is a Label doing the one thing a Label does.
+    place('actors/label', 'Title', 0, -70, {
+      positional: {parent: 'Dialog'},
+      Label: {text: 'WHAT IS YOUR NAME?'},
+    }),
+    // The field. Click it and type.
+    place('actors/textInput', 'Name', 0, -20, {
+      positional: {parent: 'Dialog'},
+    }),
+    // A button that answers the field.
+    place('actors/button', 'Hello', 0, 30, {
+      positional: {parent: 'Dialog'},
+      Label: {text: 'SAY HELLO'},
+    }),
+    // How full the field is, as a bar — empty until something is typed.
+    place('actors/progressBar', 'Bar', 0, 68, {
+      positional: {parent: 'Dialog'},
+      Progress_Bar: {fraction: 0},
+    }),
+    // A switch, which is a Button that stays answered. Nothing listens to
+    // it here; what it demonstrates is a control on a panel that keeps a
+    // state and says when it changes.
+    place('actors/toggle', 'Sound', 0, 96, {
+      positional: {parent: 'Dialog'},
+      Label: {text: 'SOUND'},
+      hasABox: {width: 120},
+    }),
+    // A bar the pointer drags, whose fraction a game reads as a volume.
+    place('actors/slider', 'Volume', 0, 124, {
+      positional: {parent: 'Dialog'},
+    }),
+    // One answer out of several, with the choices on the placement: a
+    // list of words the inspector edits a row at a time.
+    place('actors/dropdown', 'Size', 0, 152, {
+      positional: {parent: 'Dialog'},
+      Dropdown: {choices: ['SMALL', 'MEDIUM', 'LARGE']},
+      Label: {text: 'SMALL'},
+    }),
+    // …and the box that says the answer, a letter at a time. At the foot
+    // of the screen, where a phone keeps its replies, and nobody's child.
+    place('actors/speechBox', 'Reply', 160, 500),
+  ],
+};
 
 /** `set size of ⟨map|view⟩ to x ⟨columns⟩ y ⟨rows⟩ tiles`. */
 const sized = (what: 'map' | 'view') => ({
@@ -169,6 +165,16 @@ const chain = (rows: object[]) =>
 
 const MAIN_WORLD = JSON.stringify(
   {
+    // THE ARRANGEMENT IS THE WORLD'S OWN, under `map` beside `blocks`
+    // (specs/MAIN_MAP_PLAN.md). It was a `maps/interface.map` with a `load
+    // map` row naming it, which is one file and one row more than the idea
+    // needs: this world IS the interface, and opening it should show it.
+    //
+    // Nothing downstream changes. A world's main map compiles to the same
+    // `world.loadMap` a named one does (`blockly/assembleActorModule`), so
+    // its placements get a load, modality still asks of that load, and a
+    // screen put up over this one still covers it.
+    map: INTERFACE_MAP,
     blocks: {
       blocks: [
         {
@@ -191,7 +197,6 @@ const MAIN_WORLD = JSON.stringify(
               // `styles/classic` and the whole kit changes without a drawing
               // being edited (specs/STYLES_PLAN.md).
               {type: 'world_use_theme', fields: {THEME: 'styles/modern'}},
-              {type: 'world_load_map', fields: {MAP: 'maps/interface'}},
             ]),
           },
         },
@@ -294,23 +299,10 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
   const main = Object.values(source.files).find(
     file => file.name === 'main.world',
   );
-  const maps = Object.values(source.folders).find(
-    folder => folder.name === 'maps' && folder.parentId === '0',
-  );
   return main
     ? {
         ...source,
-        files: {
-          ...source.files,
-          [main.id]: {...main, contents: MAIN_WORLD},
-          interfaceMap: {
-            id: 'interfaceMap',
-            name: 'interface.map',
-            language: 'map',
-            contents: INTERFACE_MAP,
-            folderId: maps?.id ?? '0',
-          },
-        },
+        files: {...source.files, [main.id]: {...main, contents: MAIN_WORLD}},
       }
     : source;
 };

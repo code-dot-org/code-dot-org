@@ -65,20 +65,35 @@ describe('the theme, through the whole path', () => {
     ).toMatchObject({fill: '#3050a0'});
   });
 
-  it('lets a MAP override the world, all the way through', async () => {
-    // Compiled, not constructed: the map's field goes into its document, the
-    // document into a module, the module into `loadMap`, and the load
-    // remembers it for every actor it placed.
+  /**
+   * The project with its MAIN MAP edited — which is the world's own file now,
+   * under `map` beside `blocks` (specs/MAIN_MAP_PLAN.md).
+   */
+  const withMainMap = (
+    edit: (map: {
+      theme?: string;
+      actors: Array<{type: string; properties?: Record<string, unknown>}>;
+    }) => void,
+  ) => {
     const files = projectFiles(WORLD_SCENARIOS.interface.source);
-    const mapPath = Object.keys(files).find(one =>
-      one.endsWith('interface.map'),
-    )!;
-    const doc = JSON.parse(files[mapPath]) as {theme?: string};
-    doc.theme = 'styles/classic';
-    const {world} = await compileProject({
-      ...files,
-      [mapPath]: JSON.stringify(doc),
-    });
+    const path = Object.keys(files).find(one => one.endsWith('.world'))!;
+    const world = JSON.parse(files[path]) as {
+      map: Parameters<typeof edit>[0];
+    };
+    edit(world.map);
+    return {...files, [path]: JSON.stringify(world)};
+  };
+
+  it('lets a MAP override the world, all the way through', async () => {
+    // Compiled, not constructed: the field goes into the world's document,
+    // the document into a module, the module into `loadMap`, and the load
+    // remembers it for every actor it placed. A main map is a map — it
+    // compiles to the same call a named one does.
+    const {world} = await compileProject(
+      withMainMap(map => {
+        map.theme = 'styles/classic';
+      }),
+    );
 
     const button = at(world, 'actors/button') as unknown as Actor;
     expect(world.currentTheme().name).toBe('Modern');
@@ -89,25 +104,19 @@ describe('the theme, through the whole path', () => {
     // The third level, and the one that needs `extends` to mean anything:
     // `danger.style` holds one class and inherits the rest, so a button
     // pointed at it has to come out red AND keep its corner.
-    const files = projectFiles(WORLD_SCENARIOS.interface.source);
-    const mapPath = Object.keys(files).find(one =>
-      one.endsWith('interface.map'),
-    )!;
-    const doc = JSON.parse(files[mapPath]) as {
-      actors: Array<{type: string; properties?: Record<string, unknown>}>;
-    };
-    for (const placed of doc.actors) {
-      if (placed.type === 'actors/button') {
-        placed.properties = {
-          ...placed.properties,
-          hasAStyle: {theme: 'styles/danger'},
-        };
-      }
-    }
-    const {world} = await compileProject({
-      ...files,
-      [mapPath]: JSON.stringify(doc),
-    });
+    const {world} = await compileProject(
+      withMainMap(map => {
+        map.theme = 'styles/classic';
+        for (const placed of map.actors) {
+          if (placed.type === 'actors/button') {
+            placed.properties = {
+              ...placed.properties,
+              hasAStyle: {theme: 'styles/danger'},
+            };
+          }
+        }
+      }),
+    );
 
     const button = at(world, 'actors/button') as unknown as Actor;
     const theme = themeFor(world, button);
