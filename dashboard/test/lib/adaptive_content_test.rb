@@ -3,13 +3,11 @@ require 'test_helper'
 class AdaptiveContentTest < ActiveSupport::TestCase
   setup do
     @dir = Pathname.new(Dir.mktmpdir)
-    @dir.join('skills').mkpath
     AdaptiveContent.stubs(:content_dir).returns(@dir)
     AdaptiveContent.reset_cache!
     write_content('alpha', {'title' => 'Alpha'})
     write_content('beta-2', {'title' => 'Beta'})
     @dir.join('Not Valid.json').write('{}')
-    write_skill('prompting', {'id' => 'prompting', 'title' => 'Prompting'})
   end
 
   teardown do
@@ -17,12 +15,8 @@ class AdaptiveContentTest < ActiveSupport::TestCase
     FileUtils.remove_entry(@dir)
   end
 
-  test "ids lists only valid top-level file basenames, sorted" do
+  test "ids lists only valid file basenames, sorted" do
     assert_equal %w[alpha beta-2], AdaptiveContent.ids
-  end
-
-  test "skill_ids lists skill files" do
-    assert_equal %w[prompting], AdaptiveContent.skill_ids
   end
 
   test "exist? rejects ids outside the pattern before touching the filesystem" do
@@ -34,7 +28,6 @@ class AdaptiveContentTest < ActiveSupport::TestCase
 
   test "path raises for an invalid id" do
     assert_raises(ArgumentError) {AdaptiveContent.path('../alpha')}
-    assert_raises(ArgumentError) {AdaptiveContent.skill_path('../prompting')}
   end
 
   test "load returns nil for a missing id" do
@@ -42,31 +35,17 @@ class AdaptiveContentTest < ActiveSupport::TestCase
     assert_nil AdaptiveContent.load('../alpha')
   end
 
-  test "load inlines the skills the pathway's skill trees reference" do
-    write_content('treed', {
-                    'steps' => [
-                      {'id' => 'intro', 'kind' => 'panels'},
-                      {'id' => 'tree', 'kind' => 'skillTree', 'skills' => [{'skillId' => 'prompting'}, {'skillId' => 'unknown'}]},
-                    ],
-                  }
-)
-
-    loaded = AdaptiveContent.load('treed')
-
-    assert_equal %w[prompting], loaded['skills'].keys
-    assert_equal 'Prompting', loaded['skills']['prompting']['title']
-  end
-
   test "load resolves each skill's standards, passing unknown ones through" do
     framework = create(:framework, shortcode: 'fw', name: 'Fake Framework')
     create(:standard, framework: framework, shortcode: 'FW-1', description: 'Do the thing')
-    write_skill('prompting', {
-                  'id' => 'prompting',
-      'standards' => [{'framework' => 'fw', 'shortcode' => 'FW-1'}, {'framework' => 'fw', 'shortcode' => 'NOPE'}],
-                }
-)
     write_content('standardized', {
-                    'steps' => [{'id' => 'tree', 'kind' => 'skillTree', 'skills' => [{'skillId' => 'prompting'}]}],
+                    'skills' => {
+                      'prompting' => {
+                        'id' => 'prompting',
+                        'standards' => [{'framework' => 'fw', 'shortcode' => 'FW-1'}, {'framework' => 'fw', 'shortcode' => 'NOPE'}],
+                      },
+                      'plain' => {'id' => 'plain'},
+                    },
                   }
 )
 
@@ -79,21 +58,20 @@ class AdaptiveContentTest < ActiveSupport::TestCase
       ],
       loaded['skills']['prompting']['standards']
     )
-    refute loaded.key?('standards')
+    assert_equal({'id' => 'plain'}, loaded['skills']['plain'])
   end
 
   test "load leaves the cached parse untouched when resolving standards" do
     create(:standard, framework: create(:framework, shortcode: 'fw'), shortcode: 'FW-1')
-    write_skill('cached', {'id' => 'cached', 'standards' => [{'framework' => 'fw', 'shortcode' => 'FW-1'}]})
-    write_content('uses-cached', {'steps' => [{'id' => 'tree', 'kind' => 'skillTree', 'skills' => [{'skillId' => 'cached'}]}]})
+    write_content('cached', {'skills' => {'s' => {'id' => 's', 'standards' => [{'framework' => 'fw', 'shortcode' => 'FW-1'}]}}})
 
-    AdaptiveContent.load('uses-cached')
-    assert AdaptiveContent.load('uses-cached')['skills']['cached']['standards'].first.key?('frameworkName')
-    refute AdaptiveContent.send(:read, AdaptiveContent.skill_path('cached'))['standards'].first.key?('frameworkName')
+    AdaptiveContent.load('cached')
+    assert AdaptiveContent.load('cached')['skills']['s']['standards'].first.key?('frameworkName')
+    refute AdaptiveContent.send(:read, AdaptiveContent.path('cached'))['skills']['s']['standards'].first.key?('frameworkName')
   end
 
-  test "load of a pathway without skill trees has no skills" do
-    assert_equal({}, AdaptiveContent.load('alpha')['skills'])
+  test "load of a pathway without skills is returned as written" do
+    assert_equal({'title' => 'Alpha'}, AdaptiveContent.load('alpha'))
   end
 
   test "load parses and caches until the file's mtime changes" do
@@ -112,9 +90,5 @@ class AdaptiveContentTest < ActiveSupport::TestCase
 
   private def write_content(id, hash)
     @dir.join("#{id}.json").write(hash.to_json)
-  end
-
-  private def write_skill(id, hash)
-    @dir.join('skills', "#{id}.json").write(hash.to_json)
   end
 end
