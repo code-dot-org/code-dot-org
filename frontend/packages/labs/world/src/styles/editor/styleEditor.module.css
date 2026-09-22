@@ -66,25 +66,30 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  /* Wide enough for a field, a swatch and the gap between them, so no row
+     wraps and every column lines up with the one above it. */
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   gap: 0.25rem 0.75rem;
 }
 
+/* A row is its own control, which now carries its own label: these used to
+   hold a name of their own beside a field that draws one too. */
 .token,
 .field {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.5rem;
   min-height: 1.75rem;
 }
 
-.tokenName {
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 0.8125rem;
+/* The hex a swatch sits after: wide enough for `#rrggbbaa` and no wider.
+
+   Fixed rather than flexible, and the same lane the number fields sit in, so
+   that a list mixing colours and numbers reads as one column of fields with
+   swatches hanging off the ends. */
+.hex {
+  flex: 0 0 auto;
+  width: 6rem;
 }
 
 .swatch {
@@ -97,9 +102,10 @@
   background: none;
 }
 
+/* …and the same lane, so a number row and a colour row start together. */
 .number {
   flex: 0 0 auto;
-  width: 4rem;
+  width: 6rem;
 }
 
 .select {

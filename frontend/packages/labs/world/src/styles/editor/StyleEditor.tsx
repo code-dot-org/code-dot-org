@@ -163,6 +163,12 @@ export const StyleEditor = ({
             }
           }}
         />
+        {/*
+          NO LABEL ON THIS ONE. The dropdown beside it already says which
+          field this is; a second caption reading "Fill value" next to one
+          reading "Fill" is the same word twice. The name it answers to is an
+          `aria-label`, which the field forwards to its input.
+        */}
         {setting === 'literal' &&
           (field.kind === 'color' ? (
             <input
@@ -176,11 +182,11 @@ export const StyleEditor = ({
           ) : (
             <TextField
               name={`field-${String(field.key)}-value`}
-              label={`${field.label} value`}
               inputType="number"
               size="s"
               className={styles.number}
               disabled={readOnly}
+              aria-label={`${field.label} value`}
               value={String(value)}
               onChange={(event: ChangeEvent<HTMLInputElement>) =>
                 set(Number(event.target.value))
@@ -209,23 +215,60 @@ export const StyleEditor = ({
             Every control is painted out of these. Change one and everything
             that uses it changes.
           </Typography>
+          {/*
+            ONE VISIBLE LABEL PER ROW, and it is the field's own. These rows
+            carried a name of their own beside a control that draws a label
+            too, so every number token read its name twice.
+
+            The colour row is the map editor's inspector shape, copied: a
+            native swatch carrying only an `aria-label`, and the labelled
+            field beside it holding the hex. The swatch is for picking and the
+            field is for pasting a colour somebody was given — which this
+            editor had no way to do at all (`mapEditor/MapStage`).
+          */}
           <ul className={styles.tokens}>
-            {tokens.map(([name, value]) => (
-              <li key={name} className={styles.token}>
-                <span className={styles.tokenName}>{name}</span>
-                {isColorToken(value) ? (
-                  // A NATIVE SWATCH, which is the house answer and the effect
-                  // editor's: it is both the preview and the picker, and it
-                  // portals nothing (`effect/editor/EffectFlowNode`).
+            {tokens.map(([name, value]) =>
+              isColorToken(value) ? (
+                <li key={name} className={styles.token}>
+                  {/*
+                    THE FIELD FIRST AND THE SWATCH AFTER IT, so that every
+                    field in the list starts at the same x whether or not its
+                    row has a swatch. With the picker leading, the colour rows
+                    were indented by its width and the number rows were not.
+                  */}
+                  <TextField
+                    name={`token-${name}`}
+                    label={name}
+                    size="s"
+                    className={styles.hex}
+                    disabled={readOnly}
+                    value={String(value)}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                      setToken(name, event.target.value)
+                    }
+                  />
                   <input
                     type="color"
                     className={styles.swatch}
                     disabled={readOnly}
-                    aria-label={name}
-                    value={String(value)}
+                    // NOT the token's own name, which the field beside it
+                    // already answers to: two controls in a row with one
+                    // accessible name is a reader saying "accent" twice and
+                    // no way to tell which is which.
+                    aria-label={`pick ${name}`}
+                    // The picker shows six digits or nothing: a value it
+                    // cannot parse would silently become black, so it falls
+                    // back and the field beside it still holds the truth.
+                    value={
+                      /^#[0-9a-fA-F]{6}$/.test(String(value))
+                        ? String(value)
+                        : '#ffffff'
+                    }
                     onChange={event => setToken(name, event.target.value)}
                   />
-                ) : (
+                </li>
+              ) : (
+                <li key={name} className={styles.token}>
                   <TextField
                     name={`token-${name}`}
                     label={name}
@@ -238,9 +281,9 @@ export const StyleEditor = ({
                       setToken(name, Number(event.target.value))
                     }
                   />
-                )}
-              </li>
-            ))}
+                </li>
+              ),
+            )}
           </ul>
         </section>
 

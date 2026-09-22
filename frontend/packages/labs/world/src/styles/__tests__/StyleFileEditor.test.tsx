@@ -31,8 +31,25 @@ describe('the theme editor', () => {
   it('lists every value the theme holds', () => {
     render(<StyleFileEditor {...props()} />);
     // Named, because a token's NAME is the whole of how a style refers to it.
+    // ONE control answers to each name: a colour row is a swatch beside a hex
+    // field, and only the field is called `accent` — two controls with one
+    // accessible name is a reader saying it twice with no way to tell them
+    // apart.
     expect(screen.getByLabelText('accent')).toBeTruthy();
     expect(screen.getByLabelText('radius')).toBeTruthy();
+    expect(screen.getByLabelText('pick accent')).toBeTruthy();
+  });
+
+  it('takes a hex somebody pasted, not only what the picker offers', () => {
+    // What the field beside the swatch is FOR. The native picker cannot
+    // express an alpha and cannot be pasted into; a colour somebody was given
+    // arrives as text (`mapEditor/MapStage` says the same of its inspector).
+    const onChange = vi.fn();
+    render(<StyleFileEditor {...props({onChange})} />);
+    fireEvent.change(screen.getByLabelText('accent'), {
+      target: {value: '#11223344'},
+    });
+    expect(written(onChange).tokens.accent).toBe('#11223344');
   });
 
   it('writes a changed value straight back to the file', () => {
