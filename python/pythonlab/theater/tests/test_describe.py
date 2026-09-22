@@ -51,6 +51,27 @@ def test_only_a_leading_clear_is_folded_into_the_summary():
   assert _transcript(scene) == "Cleared to blue.\nShapes: black rectangle."
 
 
+def test_a_later_frame_says_added_for_drawing_but_not_for_sound():
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  scene.pause(0.25)
+  scene.draw_ellipse(0, 0, 10, 10)
+  scene.play_note(60, 0.25)
+  assert _transcript(scene).splitlines()[-2:] == [
+    "Added shapes: black ellipse.",
+    "Sound: piano C4.",
+  ]
+
+
+def test_a_frame_that_clears_starts_over_rather_than_adding():
+  scene = Scene()
+  scene.draw_rectangle(0, 0, 10, 10)
+  scene.pause(0.25)
+  scene.clear("red")
+  scene.draw_ellipse(0, 0, 10, 10)
+  assert _transcript(scene).splitlines()[-1] == "Shapes: black ellipse."
+
+
 def test_drawings_are_grouped_by_kind(tmp_path):
   path = tmp_path / "cat.png"
   PILImage.new("RGBA", (10, 10)).save(path)
@@ -152,6 +173,13 @@ def test_repeated_shapes_are_counted_rather_than_listed():
   for _ in range(12):
     scene.draw_rectangle(0, 0, 10, 10)
   assert _transcript(scene) == "Shapes: 12 black rectangles."
+
+
+def test_repeated_sounds_put_the_count_after_the_name():
+  scene = Scene()
+  scene.play_note(60, 0.25)
+  scene.play_note(60, 0.25)
+  assert _transcript(scene) == "Sound: piano C4 2 times."
 
 
 def test_a_long_list_of_drawings_is_cut_off():

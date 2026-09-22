@@ -26,8 +26,16 @@ _GROUPS = {
   SceneActionType.PLAY_SOUND: "Sound",
 }
 
-# Groups whose repeats read naturally as a count: "12 black rectangles".
-_COUNTABLE = frozenset({"Shapes", "Sound"})
+# How each group counts repeats. A shape name takes an s; a sound's name is a
+# file or a description, so the count goes after it.
+_COUNT_FORMS = {
+  "Shapes": "{count} {phrase}s",
+  "Sound": "{phrase} {count} times",
+}
+
+# Groups the renderer leaves on the canvas once drawn. Sound is not one: it
+# plays during its frame and is gone.
+_PERSISTENT = frozenset({"Shapes", "Images", "Text"})
 
 # Shapes drawn with a fill and an outline, either of which may be removed.
 _FILLABLE = frozenset({
@@ -92,33 +100,44 @@ def _summary(actions, background, frame_count, durations):
 
 def _transcript(frames, durations):
   if len(frames) == 1:
-    return "\n".join(_frame_lines(frames[0]))
+    lines, _ = _frame_lines(frames[0])
+    return "\n".join(lines)
   blocks = []
+  onscreen = False
   for index, frame in enumerate(frames[:_MAX_FRAMES_SHOWN]):
     length = durations[index]
     held = "final" if length == 0 else _seconds(length / 1000)
     heading = f"Frame {index + 1} of {len(frames)}, {held}"
-    blocks.append("\n".join([heading] + _frame_lines(frame)))
+    lines, onscreen = _frame_lines(frame, onscreen)
+    blocks.append("\n".join([heading] + lines))
   remaining = len(frames) - len(blocks)
   if remaining:
     blocks.append(f"and {remaining} more frames.")
   return "\n\n".join(blocks)
 
 
-def _frame_lines(frame):
+def _frame_lines(frame, onscreen=False):
+  """The frame's lines, and whether any drawing is left on screen after it.
+
+  The renderer keeps one canvas, so a drawing stays until a clear. A frame that
+  adds to a picture already on screen says "Added" rather than repeating it.
+  """
   groups = {label: [] for label in dict.fromkeys(_GROUPS.values())}
   lines = []
   for action in frame:
     if action.type is SceneActionType.CLEAR_SCENE:
       lines.append(f"Cleared to {_color_name(action.color)}.")
+      onscreen = False
       continue
     phrase = _phrase(action)
     if phrase:
       groups[_GROUPS[action.type]].append(phrase)
   for label, items in groups.items():
     if items:
-      lines.append(f"{label}: {_join(items, collapse=label in _COUNTABLE)}.")
-  return lines
+      name = f"Added {label.lower()}" if onscreen and label in _PERSISTENT else label
+      lines.append(f"{name}: {_join(items, _COUNT_FORMS.get(label))}.")
+  drawn = any(groups[label] for label in _PERSISTENT)
+  return lines, onscreen or drawn
 
 
 def _phrase(action):
@@ -182,9 +201,9 @@ def _note_name(note):
   return _NOTE_NAMES[note % 12] + str(note // 12 - 1)
 
 
-def _join(items, collapse):
-  if collapse:
-    items = _with_counts(items)
+def _join(items, count_form):
+  if count_form:
+    items = _with_counts(items, count_form)
   shown = items[:_MAX_ITEMS_PER_GROUP]
   hidden = len(items) - len(shown)
   if hidden:
@@ -192,14 +211,17 @@ def _join(items, collapse):
   return ", ".join(shown)
 
 
-def _with_counts(items):
+def _with_counts(items, count_form):
   counted = []
   for item in items:
     if counted and counted[-1][0] == item:
       counted[-1][1] += 1
     else:
       counted.append([item, 1])
-  return [item if count == 1 else f"{count} {item}s" for item, count in counted]
+  return [
+    item if count == 1 else count_form.format(phrase=item, count=count)
+    for item, count in counted
+  ]
 
 
 def _article(word):
