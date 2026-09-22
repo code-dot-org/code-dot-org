@@ -30,8 +30,16 @@ const idsByFamily: Record<
   },
 };
 
-// Reads no level configuration yet, so every level gets the default family.
+/*
+  The one place the family is chosen. Both the class that trains and the id
+  stamped onto the saved model come from this, so they cannot disagree. Reads
+  no level configuration yet, so every level gets the default family.
+*/
+export function getTrainerFamily(): TrainerFamily {
+  return DEFAULT_TRAINER_FAMILY;
+}
+
 export function getTrainerId(state: RootState): TrainerId {
-  const ids = idsByFamily[DEFAULT_TRAINER_FAMILY];
+  const ids = idsByFamily[getTrainerFamily()];
   return isRegression(state) ? ids.regress : ids.classify;
 }

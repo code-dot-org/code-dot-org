@@ -14,9 +14,10 @@ import type {RootState} from '../redux';
 
   The two types are deliberately different in kind. TrainerFamily keys the
   dispatch table in ./index, so it must stay total. TrainerId is the string
-  that a saved model carries and that apps/src/MLTrainers.js reads.
+  that a saved model carries and that apps/src/MLTrainers.js reads, so adding
+  a family means teaching that module to load it.
 */
-export type TrainerFamily = 'knn' | 'decisionTree';
+export type {TrainerFamily} from '../types';
 
 export type TrainerId =
   | typeof ClassificationTrainer
