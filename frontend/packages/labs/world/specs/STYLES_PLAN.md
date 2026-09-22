@@ -651,13 +651,19 @@ the whole path, and it took it on its first run.
 
 ## What it does not do
 
-- **No runtime theme change.** The theme is a file a world names, resolved at
-  load. A dark-mode toggle and a UI that flushes red on damage both want `set
-⟨accent⟩ to ⟨…⟩` while the game runs, which is the override layer the
-  rejected alternative would have given for free. It is the first thing to add
-  if anybody asks.
-- **No per-actor theme.** One world, one theme. A settings screen in a
-  different skin is not answered.
+- **No runtime change to a TOKEN.** What the reshape did make possible is a
+  runtime change of FILE, in both of the places a file is named: `use theme`
+  carries no context guard, so it is a legal row in a handler and swaps the
+  world's base; and `theme` is an ordinary per-instance property, so `set
+theme of ⟨that button⟩ to ⟨styles/danger⟩` works while the game runs. A
+  dark-mode toggle is therefore two themes and one row.
+  What is still absent is `set ⟨accent⟩ to ⟨…⟩` — one value of the file in
+  play, changed in place, which is what a UI that flushes red on damage
+  actually wants. That is the override layer the rejected alternative would
+  have given for free, and it is the first thing to add if anybody asks.
+  (This entry used to say there was no runtime change at all, and that a
+  per-actor theme was unanswered. The cascade answered both; the note
+  outlived it.)
 - **No gradients.** Flat fills with elevation, which is what current interface
   design does anyway and what the painter can reach without a new command.
 - **Nothing for game actors.** The Progress Bar's red and the Shot's yellow
