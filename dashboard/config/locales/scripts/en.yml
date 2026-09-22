@@ -30898,3 +30898,19 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-teaching-foundations-of-ai-programming-javascript-2026:
+          title: Unit 6B - Teaching Foundations of AI Programming (Javascript)
+          description: |-
+            ##### This professional learning module is designed to help you prepare to teach CodeAI’s [**Foundations of AI Programming (Javascript) Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/7).
+
+            ##### This unit is part of the [**AI Foundations Curriculum: Exploring AI & CS**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
+
+            > **Choose Python or JavaScript, not both.** This unit and Foundations of AI Programming (Python) cover the same core concepts and similar standards in two different languages. They exist so you can pick the language that best fits your students or pathway — teach one or the other, not both.
+          student_description: |-
+            ##### This professional learning module is designed to help you prepare to teach CodeAI’s [**Foundations of AI Programming (Javascript) Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/7).
+
+            ##### This unit is part of the [**AI Foundations Curriculum: Exploring AI & CS**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
+
+            > **Choose Python or JavaScript, not both.** This unit and Foundations of AI Programming (Python) cover the same core concepts and similar standards in two different languages. They exist so you can pick the language that best fits your students or pathway — teach one or the other, not both.
+          description_short: ''
+          description_audience: ''
