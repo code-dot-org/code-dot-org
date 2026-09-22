@@ -49,7 +49,6 @@ import {BackpackNotify} from '@cdo/apps/sharedComponents/backpack/backpackToasts
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import experiments from '@cdo/apps/util/experiments';
-import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -587,30 +586,31 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     const selectedWithKeyboard = selectedTabWithKeyboard.current;
     selectedTabWithKeyboard.current = false;
     const isAiTutor = currentTab === Tabs.AiTutor;
+    // Panes unmount while collapsed, so this is null then and fresh on expand.
     const panelContent = visiblePaneRef.current;
     if (!panelContent || (!selectedWithKeyboard && !isAiTutor)) {
       return;
     }
     // Use setTimeout to ensure the panel is rendered and visible before focusing.
     const timeoutId = setTimeout(() => {
-      const focusableElement = isAiTutor
+      const chatInput = isAiTutor
         ? panelContent.querySelector<HTMLTextAreaElement>(
             '#uitest-chat-textarea'
           )
-        : findFirstFocusableElement(panelContent);
+        : null;
       // preventScroll: focusing the chat input must not scroll an ancestor
       // to bring it into view, which momentarily shifts the whole panel up
       // while the chat is still animating open.
-      if (focusableElement) {
-        focusableElement.focus({preventScroll: true});
+      if (chatInput) {
+        chatInput.focus({preventScroll: true});
       } else {
-        // If no focusable element exists, make the panel content focusable and focus it
+        // Focus the pane, not a control inside it, so a reader starts at the top.
         panelContent.setAttribute('tabindex', '-1');
         panelContent.focus({preventScroll: true});
       }
     }, 0);
     return () => clearTimeout(timeoutId);
-  }, [currentTab]);
+  }, [currentTab, isStandaloneCollapsed]);
 
   // Hide the page footer and extra links when the resource panel is shown, and show when unmounting.
   const {setShowExtraLinksButton} = useExtraLinksButtonContext();
@@ -626,7 +626,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const onClickTab = useCallback(
     (tab: string, event: React.MouseEvent<HTMLElement>) => {
       // Enter or space leaves the button focus-visible; a mouse click does not.
+      // A no-op activation would never reach the effect that clears this.
       selectedTabWithKeyboard.current =
+        (tab !== currentTab || !!isStandaloneCollapsed) &&
         event.currentTarget.matches(':focus-visible');
       if (currentTab && currentTab !== tab) {
         sendLab2AnalyticsEvent(EVENTS.RESOURCE_PANEL_TAB_CLICKED, {
@@ -698,6 +700,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           if (!hidden) {
             visiblePaneRef.current = el;
           }
+        } else {
+          // Without this a collapse would leave a removed node here.
+          visiblePaneRef.current = null;
         }
       }}
     >
