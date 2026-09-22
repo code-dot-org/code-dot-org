@@ -167,44 +167,32 @@ class SectionAssessments extends Component {
     return (
       // eslint-disable-next-line react/forbid-dom-props
       <div data-testid={'assessments-tab'}>
-        <div className={moduleStyles.selectors}>
-          <div className={moduleStyles.unitSelection}>
-            <Typography variant="h4" className={moduleStyles.header}>
-              {i18n.selectACourse()}
-            </Typography>
-            <UnitSelectorV2 v1Styles />
-          </div>
+        <div className={moduleStyles.fieldRow}>
+          <UnitSelectorV2 isLabelVisible labelText={i18n.selectACourse()} />
           {!isLoading && assessmentList.length > 0 && (
-            <div className={moduleStyles.assessmentSelection}>
-              <Typography variant="h4" className={moduleStyles.header}>
-                {i18n.selectAssessment()}
-              </Typography>
-              <AssessmentSelector
-                assessmentList={assessmentList}
-                assessmentId={assessmentId}
-                onChange={this.onSelectAssessment}
-              />
-            </div>
+            <AssessmentSelector
+              assessmentList={assessmentList}
+              assessmentId={assessmentId}
+              onChange={this.onSelectAssessment}
+            />
           )}
         </div>
         {!isLoading && assessmentList.length > 0 && (
-          <div className={moduleStyles.tableContent}>
+          <div>
             {/* Assessments */}
             {!isCurrentAssessmentSurvey &&
               !isCurrentAssessmentFeedbackOption && (
                 <div>
-                  <Typography variant="h4" className={moduleStyles.header}>
-                    {i18n.selectStudent()}
-                  </Typography>
-                  <StudentSelector
-                    studentList={studentList}
-                    studentId={studentId}
-                    onChange={this.onSelectStudent}
-                  />
-                  {totalStudentSubmissions > 0 && (
-                    <div className={moduleStyles.download}>
+                  <div className={moduleStyles.fieldRow}>
+                    <StudentSelector
+                      studentList={studentList}
+                      studentId={studentId}
+                      onChange={this.onSelectStudent}
+                    />
+                    {totalStudentSubmissions > 0 && (
                       <MuiButton
                         component={CSVLink}
+                        className={moduleStyles.downloadButton}
                         size="small"
                         variant="text"
                         color="secondary"
@@ -215,8 +203,8 @@ class SectionAssessments extends Component {
                       >
                         {i18n.downloadAssessmentCSV()}
                       </MuiButton>
-                    </div>
-                  )}
+                    )}
+                  </div>
                   {totalStudentSubmissions <= 0 && (
                     <Typography variant="body3" gutterBottom>
                       {i18n.emptyAssessmentSubmissions()}
