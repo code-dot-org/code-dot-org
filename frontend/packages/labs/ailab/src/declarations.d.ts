@@ -25,11 +25,6 @@ declare module 'ml-cart' {
     gainThreshold?: number;
   }
 
-  /*
-    A flat array is never a single row: the classifier rejects it, and the
-    regression tree reads it as one column of many rows and returns a
-    prediction per element. Neither type accepts one.
-  */
   export class DecisionTreeClassifier {
     constructor(options?: DecisionTreeOptions);
     train(dataset: number[][], labels: number[]): void;
