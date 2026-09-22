@@ -1,20 +1,12 @@
 // Builds the `fontEmbedCSS` we hand to html-to-image when exporting a sketch.
-//
-// Left to itself, html-to-image walks every stylesheet on the page, follows the
-// @import of Google's Noto fonts, and inlines every face it finds as base64 --
-// including the CJK families, which run to tens of megabytes across their
-// unicode-range subsets. Safari and iPadOS refuse to decode an SVG that large,
-// so exporting a sketch with any meaningful amount of content fails there.
+// By default, html-to-image inlines every font it finds on the page as base64,
+// which can get very large. Safari and iPadOS refuse to decode an SVG that large,
+// so exporting a sketch with any meaningful amount of content fails.
 //
 // Instead we inline only the faces the sketch actually draws with, from
-// stylesheets we are allowed to read. Anything we can't resolve is left out and
-// renders in the next font of the stack, which is what already happens for the
-// font options that rely on OS fonts.
+// stylesheets we are allowed to read. Any other fonts will fall back to OS fonts.
 
-// The only web font our canvas text can land on. The other stacks in
-// FONT_FAMILY_OPTIONS name OS fonts, and the Noto families exist as fallbacks
-// for scripts Geist doesn't cover -- those are the ones that are too big to
-// inline, so non-Latin text falls back to a system font in the export.
+// Geist is the only web font we rely on.
 const EMBEDDABLE_FONT_FAMILIES = new Set(['geist']);
 
 const DEFAULT_FONT_WEIGHT = 400;
