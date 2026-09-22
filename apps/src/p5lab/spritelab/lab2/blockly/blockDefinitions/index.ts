@@ -14,6 +14,7 @@ import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
 import placeholder from './placeholder';
 import playMusic from './playMusic';
+import playSound from './playSound';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
@@ -30,6 +31,7 @@ const labBlockDefinitions: {
 }[] = [
   goToScene,
   playMusic,
+  playSound,
   whenRun,
   goToExternalScene,
   restartScene,

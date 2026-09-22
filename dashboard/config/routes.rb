@@ -533,6 +533,7 @@ Dashboard::Application.routes.draw do
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
         get 'tutor/gallery', to: 'lessons#tutor_gallery', format: false
+        get 'tutor/*path', to: 'lessons#tutor', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -1229,6 +1230,12 @@ Dashboard::Application.routes.draw do
         get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
+
+        resources :scripts, only: [] do
+          resources :lessons, only: [], param: 'position' do
+            resource :tutor_gallery_data, only: :show, defaults: {format: 'json'}
+          end
+        end
 
         get 'projects/gallery/public/:project_type(/:featured_before)', to: 'projects/public_gallery#index', defaults: {format: 'json'}
 

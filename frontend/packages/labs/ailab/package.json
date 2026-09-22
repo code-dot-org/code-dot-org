@@ -52,6 +52,7 @@
     "eslint": "catalog:",
     "jsdom": "catalog:",
     "messageformat": "^2.3.0",
+    "ml-cart": "2.1.1",
     "ml-knn": "^3.0.0",
     "papaparse": "^5.4.1",
     "prettier": "catalog:",

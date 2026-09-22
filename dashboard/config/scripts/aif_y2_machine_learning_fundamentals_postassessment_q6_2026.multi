@@ -5,7 +5,7 @@ wrong 'The output of the line will always be a positive number'
 right 'Increasing the input will also increase the output'
 wrong 'The line will predict a positive number when the input is 0'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What could you say about a linear regression line with a positive slope?
