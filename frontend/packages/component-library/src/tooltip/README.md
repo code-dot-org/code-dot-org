@@ -27,7 +27,9 @@ The override is **global** — it styles every MUI tooltip in the app, the Sketc
 Lab ones included.
 
 `WithTooltip` and `LegacyTooltip` still ship, but nothing calls them any more
-— not the design system, not `apps/`. The `TooltipProps` type still refers to
+— not the design system, not `apps/`. A `no-restricted-imports` entry in
+`apps/.eslintrc.js` keeps it that way; it names the three components, so
+`keyboardOnlyTooltipProps` and the `TooltipProps` type still import freely. The `TooltipProps` type still refers to
 the legacy component and is imported by `codebridge` `WithConditionalTooltip`,
 so deleting the sources means keeping or relocating that type.
 
