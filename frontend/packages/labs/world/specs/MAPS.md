@@ -24,6 +24,14 @@ actors of one type, with a field that opens the map editor scoped to that type.
 Sugar over `add actor`, in the same sense a map file is sugar over twenty of
 them, and the arrangement lives in the world rather than beside it.
 
+## A map's EVENTS are proposed to move — PLANNED
+
+What is said below of `.map` files, placements and `load map` stands. What is
+changing is where a map's events are DECLARED: `specs/MAP_EVENTS_PLAN.md`
+proposes that a world declares them and a map says which it raises, for the
+reason a map already places actor kinds it does not declare. A hundred level
+maps minting a hundred different `complete` events is the case that found it.
+
 ## 1. The map is not a file
 
 The placements are part of the `.world` file — its Blockly serialization —
