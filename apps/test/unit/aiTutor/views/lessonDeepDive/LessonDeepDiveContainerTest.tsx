@@ -117,4 +117,14 @@ describe('LessonDeepDiveContainer story card sequence', () => {
     act(() => jest.runOnlyPendingTimers());
     expect(screen.getByText('time-spent')).toBeInTheDocument();
   });
+
+  it('does not show a Continue button on the reflection screen', () => {
+    renderContainer();
+    // advance through the five story screens: welcome → levels-attempted →
+    // time-spent → validated-levels → lesson-summary → reflection
+    for (let i = 0; i < 5; i++) {
+      act(() => fireEvent.keyDown(window, {key: 'ArrowRight'}));
+    }
+    expect(screen.queryByText('Continue')).not.toBeInTheDocument();
+  });
 });
