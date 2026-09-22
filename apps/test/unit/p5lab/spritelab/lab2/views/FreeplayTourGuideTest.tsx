@@ -2,16 +2,20 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {
-  TOUR_LIST_STEPS,
-  TOUR_STEPS,
+  tourListSteps,
+  tourSteps,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/freeplayTour';
 import FreeplayTourGuide from '@cdo/apps/p5lab/spritelab/lab2/views/FreeplayTourGuide';
 import {FreeplayTour} from '@cdo/apps/p5lab/spritelab/lab2/views/useFreeplayTour';
+
+const TOUR_STEPS = tourSteps(false);
+const TOUR_LIST_STEPS = tourListSteps(TOUR_STEPS);
 
 function renderGuide(overrides: Partial<FreeplayTour> = {}) {
   const tour: FreeplayTour = {
     variant: 'steps',
     coverBlack: false,
+    lines: TOUR_LIST_STEPS,
     current: TOUR_STEPS[1],
     arrowTarget: undefined,
     isLast: false,

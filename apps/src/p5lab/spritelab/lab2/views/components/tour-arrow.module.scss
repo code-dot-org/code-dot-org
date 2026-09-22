@@ -33,6 +33,12 @@
   transform: translateY(-50%) rotate(-90deg);
 }
 
+.arrowRight {
+  @extend %arrow;
+
+  transform: translateY(-50%) rotate(90deg);
+}
+
 .arrowImage {
   display: block;
   width: 32px;

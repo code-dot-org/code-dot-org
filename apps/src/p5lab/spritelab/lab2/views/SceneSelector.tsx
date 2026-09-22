@@ -15,6 +15,10 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 // CustomDropdown derives its element ids from this.
 const SCENE_DROPDOWN_NAME = 'scene';
+/** CustomDropdown's id for its trigger; the gallery-opening chip takes the
+    same one, so either can be found by it. */
+export const SCENE_CHIP_ID = `${SCENE_DROPDOWN_NAME}-dropdown-button`;
+export const SCENE_MANAGE_ITEM_ID = 'scene-menu-manage';
 
 interface SceneSelectorProps {
   scenes: SceneMetadata[];
@@ -125,6 +129,7 @@ const SceneMenu: React.FunctionComponent<SceneMenuProps> = ({
         <li>
           <button
             type="button"
+            id={SCENE_MANAGE_ITEM_ID}
             className={moduleStyles.sceneMenuItem}
             onClick={choose(onManageScenes)}
           >
@@ -172,6 +177,7 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
       {chipOpensGallery && onManageScenes ? (
         <div className={moduleStyles.sceneDropdown}>
           <MuiButton
+            id={SCENE_CHIP_ID}
             variant="text"
             color="secondary"
             size="extraSmall"

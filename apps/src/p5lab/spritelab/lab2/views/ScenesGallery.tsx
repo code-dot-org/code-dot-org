@@ -12,6 +12,9 @@ import ScenePicture from './ScenePicture';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
+/** On each scene's card (not the new-scene card), in display order. */
+export const SCENE_CARD_ATTRIBUTE = 'data-scene-card';
+
 interface SceneCardProps {
   scene: SceneMetadata;
   active: boolean;
@@ -67,6 +70,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
         moduleStyles.sceneCard,
         active && moduleStyles.sceneCardActive
       )}
+      {...{[SCENE_CARD_ATTRIBUTE]: scene.id}}
     >
       <button
         type="button"

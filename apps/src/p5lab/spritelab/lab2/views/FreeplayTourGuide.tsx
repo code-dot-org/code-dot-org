@@ -2,7 +2,7 @@ import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {TOUR_LIST_STEPS, TOUR_WELCOME} from './freeplayTour';
+import {TOUR_WELCOME} from './freeplayTour';
 import {FreeplayTour} from './useFreeplayTour';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -32,7 +32,7 @@ const FreeplayTourGuide: React.FunctionComponent<{tour: FreeplayTour}> = ({
     <div className={moduleStyles.tourGuide}>
       <p className={moduleStyles.tourText}>{TOUR_WELCOME}</p>
       <ul className={moduleStyles.tourList}>
-        {TOUR_LIST_STEPS.map(step => (
+        {tour.lines.map(step => (
           <li key={step.id}>
             <button
               type="button"

@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -7,21 +7,35 @@ import {Scene} from '../types';
 
 import {
   SCENE_MENU_SELECTOR,
-  TOUR_LIST_STEPS,
-  TOUR_STEPS,
+  tourListSteps,
+  tourSteps,
   TourStep,
   TourTarget,
   TourVariant,
 } from './freeplayTour';
+import {SCENE_CHIP_ID} from './SceneSelector';
 
-// CustomDropdown names its trigger after the dropdown's name (see
-// SceneSelector).
-const SCENE_CHIP_SELECTOR = '#scene-dropdown-button';
+/** The layer holding the guide: the one place clicks land during a tour. */
+export const TOUR_LAYER_ID = 'spritelab2-tour-guide';
+
+// Everything a pointer can start; wheel and keys stay free.
+const POINTER_EVENTS = [
+  'pointerdown',
+  'pointerup',
+  'mousedown',
+  'mouseup',
+  'click',
+  'dblclick',
+  'touchstart',
+  'touchend',
+  'contextmenu',
+];
+const MENU_CLOSING_EVENTS = ['pointerdown', 'mousedown'];
 
 // The chip toggles its menu; a click when already in the wanted state
 // would flip it back.
 function toggleSceneMenu(open: boolean) {
-  const chip = document.querySelector<HTMLButtonElement>(SCENE_CHIP_SELECTOR);
+  const chip = document.getElementById(SCENE_CHIP_ID);
   const menu = document.querySelector(SCENE_MENU_SELECTOR);
   const isOpen =
     !!menu && getComputedStyle(menu.parentElement!).display !== 'none';
@@ -32,6 +46,8 @@ function toggleSceneMenu(open: boolean) {
 
 interface FreeplayTourOptions {
   variant: TourVariant | undefined;
+  /** The scene chip opens the gallery rather than a menu. */
+  chipOpensGallery: boolean;
   scenes: Scene[];
   selectScene: (sceneId: string) => void;
   /** Enter the Play tab from the start of the game. */
@@ -43,6 +59,8 @@ export interface FreeplayTour {
   /** The lab below the bar is blacked out: before the first view, and
       behind the open scene menu. */
   coverBlack: boolean;
+  /** The list variant's lines. */
+  lines: TourStep[];
   /** The step whose view is up: the current one, or the clicked line. */
   current: TourStep | undefined;
   arrowTarget: TourTarget | undefined;
@@ -61,6 +79,7 @@ export interface FreeplayTour {
  */
 export default function useFreeplayTour({
   variant,
+  chipOpensGallery,
   scenes,
   selectScene,
   startPlay,
@@ -70,15 +89,56 @@ export default function useFreeplayTour({
   const [stepIndex, setStepIndex] = useState(0);
   const [shownId, setShownId] = useState<string | null>(null);
 
+  const steps = useMemo(() => tourSteps(chipOpensGallery), [chipOpensGallery]);
+  const lines = useMemo(() => tourListSteps(steps), [steps]);
+
   const current = useMemo(() => {
     if (!variant) {
       return undefined;
     }
     if (variant === 'steps') {
-      return TOUR_STEPS[stepIndex];
+      return steps[stepIndex];
     }
-    return TOUR_LIST_STEPS.find(step => step.id === shownId);
-  }, [variant, stepIndex, shownId]);
+    return lines.find(step => step.id === shownId);
+  }, [variant, steps, lines, stepIndex, shownId]);
+
+  // Only the guide takes clicks while the tour runs. A capture listener on
+  // window runs before every other handler, so stopping the event there
+  // keeps it from all of them, Blockly's and the scene menu's included.
+  // The scene menu also closes on a press anywhere outside it, heard at
+  // the document on pointerdown and mousedown; while a step shows the menu,
+  // presses in the guide stop short of the document too, so Next leaves it
+  // up. The click itself still arrives, so the buttons work.
+  const menuShownRef = useRef(false);
+  menuShownRef.current = current?.view === 'scene-menu';
+  useEffect(() => {
+    if (!active) {
+      return;
+    }
+    const guard = (event: Event) => {
+      // Script-made clicks are the tour's own (the chip, below).
+      if (!event.isTrusted) {
+        return;
+      }
+      const layer = document.getElementById(TOUR_LAYER_ID);
+      if (event.target instanceof Node && layer?.contains(event.target)) {
+        if (menuShownRef.current && MENU_CLOSING_EVENTS.includes(event.type)) {
+          event.stopPropagation();
+        }
+        return;
+      }
+      event.stopPropagation();
+      event.preventDefault();
+    };
+    const options = {capture: true, passive: false};
+    POINTER_EVENTS.forEach(type =>
+      window.addEventListener(type, guard, options)
+    );
+    return () =>
+      POINTER_EVENTS.forEach(type =>
+        window.removeEventListener(type, guard, options)
+      );
+  }, [active]);
 
   // The platform scene the world and code steps show; the first scene if
   // the project has none.
@@ -87,11 +147,14 @@ export default function useFreeplayTour({
     [scenes]
   );
 
+  // Keyed on the view, not the step: two steps in a row with the scene
+  // menu up keep it up rather than closing and reopening it.
+  const view = current?.view;
   useEffect(() => {
-    if (!active || !current) {
+    if (!active || !view) {
       return;
     }
-    switch (current.view) {
+    switch (view) {
       case 'scene-menu': {
         dispatch(setActiveTab('Code'));
         // After the tab lands, so the chip is enabled.
@@ -125,7 +188,7 @@ export default function useFreeplayTour({
     // selectScene and startPlay change with the active tab; re-running on
     // them would re-apply the view after the student's own tab clicks.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [active, current, dispatch, platformScene]);
+  }, [active, view, dispatch, platformScene]);
 
   const done = useCallback(() => {
     setActive(false);
@@ -137,12 +200,12 @@ export default function useFreeplayTour({
   }, [scenes, selectScene, dispatch]);
 
   const next = useCallback(() => {
-    if (stepIndex + 1 >= TOUR_STEPS.length) {
+    if (stepIndex + 1 >= steps.length) {
       done();
     } else {
       setStepIndex(stepIndex + 1);
     }
-  }, [stepIndex, done]);
+  }, [stepIndex, steps, done]);
 
   const show = useCallback((stepId: string) => setShownId(stepId), []);
 
@@ -153,9 +216,10 @@ export default function useFreeplayTour({
     variant,
     coverBlack:
       !current || current.view === 'blank' || current.view === 'scene-menu',
+    lines,
     current,
     arrowTarget: current?.target,
-    isLast: variant === 'steps' && stepIndex === TOUR_STEPS.length - 1,
+    isLast: variant === 'steps' && stepIndex === steps.length - 1,
     next,
     show,
     done,

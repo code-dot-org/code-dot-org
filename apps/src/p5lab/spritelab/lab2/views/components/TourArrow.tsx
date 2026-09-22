@@ -11,11 +11,16 @@ const arrowImage = require('@cdo/static/music/music-callout-arrow-outline.png');
 // the position is re-read on these delays, then on every resize.
 const REMEASURE_DELAYS_MS = [0, 80, 250, 600];
 const GAP_PX = 4;
+const ARROW_PX = 32;
 
-/**
- * A bobbing arrow pointing at an element: from below, pointing up, or from
- * the right, pointing left.
- */
+const CLASS_BY_DIRECTION = {
+  up: 'arrowUp',
+  left: 'arrowLeft',
+  right: 'arrowRight',
+} as const;
+
+/** A bobbing arrow pointing at an element from below, its right or its
+    left. */
 const TourArrow: React.FunctionComponent<{target: TourTarget}> = ({target}) => {
   const [position, setPosition] = useState<{left: number; top: number}>();
 
@@ -27,11 +32,20 @@ const TourArrow: React.FunctionComponent<{target: TourTarget}> = ({target}) => {
         setPosition(undefined);
         return;
       }
-      setPosition(
-        target.direction === 'left'
-          ? {left: rect.right + GAP_PX, top: rect.top + rect.height / 2}
-          : {left: rect.left + rect.width / 2, top: rect.bottom + GAP_PX}
-      );
+      const middle = rect.top + rect.height / 2;
+      switch (target.direction) {
+        case 'left':
+          setPosition({left: rect.right + GAP_PX, top: middle});
+          break;
+        case 'right':
+          setPosition({left: rect.left - GAP_PX - ARROW_PX, top: middle});
+          break;
+        default:
+          setPosition({
+            left: rect.left + rect.width / 2,
+            top: rect.bottom + GAP_PX,
+          });
+      }
     };
     const timers = REMEASURE_DELAYS_MS.map(ms =>
       window.setTimeout(measure, ms)
@@ -48,11 +62,7 @@ const TourArrow: React.FunctionComponent<{target: TourTarget}> = ({target}) => {
   }
   return (
     <div
-      className={
-        target.direction === 'left'
-          ? moduleStyles.arrowLeft
-          : moduleStyles.arrowUp
-      }
+      className={moduleStyles[CLASS_BY_DIRECTION[target.direction]]}
       style={position}
       aria-hidden
     >

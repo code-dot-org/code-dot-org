@@ -126,7 +126,7 @@ import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
-import useFreeplayTour from './useFreeplayTour';
+import useFreeplayTour, {TOUR_LAYER_ID} from './useFreeplayTour';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -1515,6 +1515,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const tour = useFreeplayTour({
     variant: tourVariant,
+    chipOpensGallery,
     scenes,
     selectScene: sceneEditing.selectScene,
     startPlay: () => handleTabChange('Play'),
@@ -1817,7 +1818,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           {tour?.coverBlack && <div className={moduleStyles.tourCover} />}
           {tour?.arrowTarget && <TourArrow target={tour.arrowTarget} />}
           {tour ? (
-            <div className={moduleStyles.tourLayer}>{floatingGuide}</div>
+            <div id={TOUR_LAYER_ID} className={moduleStyles.tourLayer}>
+              {floatingGuide}
+            </div>
           ) : (
             floatingGuide
           )}

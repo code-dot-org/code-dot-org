@@ -1,6 +1,6 @@
 import {
-  TOUR_LIST_STEPS,
-  TOUR_STEPS,
+  tourListSteps,
+  tourSteps,
   tourVariantFromParams,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/freeplayTour';
 
@@ -30,8 +30,34 @@ describe('freeplayTour', () => {
   });
 
   it('lists every step but the welcome', () => {
-    expect(TOUR_STEPS[0].view).toBe('blank');
-    expect(TOUR_LIST_STEPS).toEqual(TOUR_STEPS.slice(1));
-    expect(TOUR_LIST_STEPS.some(step => step.view === 'blank')).toBe(false);
+    const steps = tourSteps(false);
+    expect(steps[0]).toMatchObject({id: 'welcome', view: 'blank'});
+    expect(tourListSteps(steps)).toEqual(steps.slice(1));
+  });
+
+  it('with a scene menu, keeps the menu up for both scene lines', () => {
+    const [, scenes, gallery] = tourSteps(false);
+    expect(scenes.view).toBe('scene-menu');
+    expect(scenes.target?.direction).toBe('right');
+    expect(gallery.view).toBe('scene-menu');
+    expect(gallery.target).toMatchObject({
+      selector: '#scene-menu-manage',
+      direction: 'left',
+    });
+  });
+
+  it('with a gallery chip, shows the gallery for the second scene line', () => {
+    const [, scenes, gallery] = tourSteps(true);
+    expect(scenes.view).toBe('blank');
+    expect(scenes.target?.selector).toBe('#scene-dropdown-button');
+    expect(gallery.view).toBe('gallery');
+    expect(gallery.target).toMatchObject({
+      selector: '[data-scene-card]',
+      direction: 'left',
+    });
+  });
+
+  it('shares the lines after the scene ones', () => {
+    expect(tourSteps(true).slice(3)).toEqual(tourSteps(false).slice(3));
   });
 });
