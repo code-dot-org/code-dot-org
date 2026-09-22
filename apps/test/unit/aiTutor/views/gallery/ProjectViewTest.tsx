@@ -2,20 +2,27 @@ import {
   ChallengeResponse,
   ChallengeResponseDetail,
   GalleryUnit,
+  getChallengeResponse,
+  listChallengeResponses,
 } from '@code-dot-org/lesson-deep-dive';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
 import ProjectView from '@cdo/apps/aiTutor/views/gallery/ProjectView';
-import HttpClient from '@cdo/apps/util/HttpClient';
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
 
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {fetchJson: jest.fn()},
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  getChallengeResponse: jest.fn(),
+  listChallengeResponses: jest.fn(),
 }));
 
-const fetchJson = HttpClient.fetchJson as jest.Mock;
+const mockDetail = getChallengeResponse as jest.Mock;
+const mockList = listChallengeResponses as jest.Mock;
 
 const units: GalleryUnit[] = [
   {id: 100, name: 'Problem Solving with AI', position: 1, link: '/s/ai-1'},
@@ -55,17 +62,12 @@ const versionOf = (id: number, created_at: string): ChallengeResponse => ({
   created_at,
 });
 
-// Routes the mocked HttpClient: /challenge_responses/:id returns the given
-// detail, the list endpoint returns the given versions.
 const stubFetches = (
   detailResponse: ChallengeResponseDetail,
   versions: ChallengeResponse[] = [detailResponse]
 ) => {
-  fetchJson.mockImplementation((url: string) =>
-    url.startsWith('/challenge_responses?')
-      ? Promise.resolve({value: versions})
-      : Promise.resolve({value: detailResponse})
-  );
+  mockDetail.mockResolvedValue(detailResponse);
+  mockList.mockResolvedValue(versions);
 };
 
 const renderView = (
@@ -84,7 +86,8 @@ const renderView = (
 
 describe('ProjectView', () => {
   beforeEach(() => {
-    fetchJson.mockReset();
+    mockDetail.mockReset();
+    mockList.mockReset();
   });
 
   it('fetches the project and renders its media, prompt, and details', async () => {
@@ -95,11 +98,7 @@ describe('ProjectView', () => {
     await waitFor(() =>
       expect(screen.getByText('Grace Hopper')).toBeInTheDocument()
     );
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenge_responses/8',
-      {},
-      expect.any(Function)
-    );
+    expect(mockDetail).toHaveBeenCalledWith(expect.anything(), 8);
 
     // The stage and details card render from the fetched detail; their
     // contents are covered by ProjectStageTest and ProjectDetailsCardTest.
@@ -128,10 +127,8 @@ describe('ProjectView', () => {
     await waitFor(() =>
       expect(screen.getByText('Response #2')).toBeInTheDocument()
     );
-    expect(fetchJson).toHaveBeenCalledWith(
-      '/challenge_responses?challenge_id=1&user_id=99&sort=oldest',
-      {},
-      expect.any(Function)
+    expect(mockList.mock.calls[0][1].toString()).toBe(
+      'challenge_id=1&user_id=99&sort=oldest'
     );
 
     expect(screen.getByRole('button', {name: 'Next response'})).toBeDisabled();
@@ -200,15 +197,11 @@ describe('ProjectView', () => {
     expect(
       screen.queryByRole('button', {name: 'Next response'})
     ).not.toBeInTheDocument();
-    expect(fetchJson).not.toHaveBeenCalledWith(
-      expect.stringContaining('/challenge_responses?'),
-      expect.anything(),
-      expect.anything()
-    );
+    expect(mockList).not.toHaveBeenCalled();
   });
 
   it('shows an error message when the fetch fails', async () => {
-    fetchJson.mockRejectedValue(new Error('network'));
+    mockDetail.mockRejectedValue(new Error('network'));
 
     renderView();
 
