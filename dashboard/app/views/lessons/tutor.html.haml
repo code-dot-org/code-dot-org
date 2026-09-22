@@ -1,3 +1,4 @@
-%script{src: webpack_asset_path('js/lessons/tutor.js'), data: {lessonDeepDiveData: @lesson_deep_dive_data.to_json}}
-
-#lesson-deep-dive-container
+%script{src: webpack_asset_path('js/lessons/tutor.js'),
+        data: {lessonDeepDiveData: @lesson_deep_dive_data.to_json,
+               tutorGalleryData: @tutor_gallery_data.to_json}}
+#tutor-app-container
