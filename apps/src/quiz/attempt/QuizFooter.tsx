@@ -29,6 +29,7 @@ const QuizFooter: React.FunctionComponent<QuizFooterProps> = ({
   const paginationButtons = Array.from({length: totalPages}, (_, i) => ({
     value: String(i + 1),
     label: String(i + 1),
+    ariaLabel: `Go to page ${i + 1}`,
   }));
 
   return (

@@ -25,7 +25,8 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
             {questionLabel}
           </Typography>
         )}
-        <Typography variant="h4" component="h2">
+        {/* Lets a page-change handler focus this heading programmatically. */}
+        <Typography variant="h4" component="h2" tabIndex={-1}>
           {title}
         </Typography>
       </div>

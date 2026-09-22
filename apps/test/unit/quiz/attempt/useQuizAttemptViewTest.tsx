@@ -183,7 +183,7 @@ describe('useQuizAttemptView', () => {
 
     // Two distinct pages exist (1 and 3), so the footer offers two position
     // buttons - "2" must reach the question on raw page 3, not an empty page.
-    fireEvent.click(screen.getByRole('button', {name: '2'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Go to page 2'}));
 
     expect(screen.getByText('Page 3 question')).toBeInTheDocument();
   });
@@ -240,6 +240,33 @@ describe('useQuizAttemptView', () => {
 
     expect(finishAttempt).not.toHaveBeenCalled();
     expect(screen.getByText('Page 2 question')).toBeInTheDocument();
+  });
+
+  it('moves focus to the new page heading after Next, since nothing else indicates a page change', () => {
+    renderView({
+      hookState: {attempt: ATTEMPT},
+      quizQuestions: [
+        question({id: 1, stem: 'Page 1 question', page: 1}),
+        question({id: 2, stem: 'Page 2 question', page: 2}),
+      ],
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: /Next/}));
+
+    expect(
+      screen.getByRole('heading', {name: 'Page 2 question'})
+    ).toHaveFocus();
+  });
+
+  it('moves focus to the first question heading once the attempt begins', () => {
+    renderView({
+      hookState: {attempt: ATTEMPT},
+      quizQuestions: [question({id: 1, stem: 'Page 1 question', page: 1})],
+    });
+
+    expect(
+      screen.getByRole('heading', {name: 'Page 1 question'})
+    ).toHaveFocus();
   });
 
   it('finishes the attempt when the last-page button is clicked', async () => {

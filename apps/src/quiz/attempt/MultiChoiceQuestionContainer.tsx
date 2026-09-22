@@ -23,7 +23,11 @@ const MultiChoiceQuestionContainer: React.FunctionComponent<
   MultiChoiceQuestionContainerProps
 > = ({question, questionLabel, selectedChoiceId, onSelectChoice}) => (
   <AttemptCard questionLabel={questionLabel} title={question.stem}>
-    <div className={styles.choices}>
+    <div
+      className={styles.choices}
+      role="radiogroup"
+      aria-label={question.stem}
+    >
       {(question.choices ?? []).map((choice, index) => {
         const isSelected = choice.id === selectedChoiceId;
         return (

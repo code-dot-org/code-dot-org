@@ -51,11 +51,22 @@ export default function useQuizAttemptView({
     {}
   );
 
+  const questionsRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setCurrentPageNumber(1);
     setSelectedChoicesByQuestionId({});
     pendingWritesByQuestionIdRef.current = {};
   }, [attempt?.id]);
+
+  const isAttemptInProgress =
+    !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
+
+  // Focusing the new page's heading is what gets a page change announced
+  // to screen readers.
+  useEffect(() => {
+    questionsRef.current?.querySelector<HTMLElement>('h2')?.focus();
+  }, [currentPageNumber, isAttemptInProgress]);
 
   const handleBeginAttempt = async () => {
     try {
@@ -122,16 +133,13 @@ export default function useQuizAttemptView({
     }
   };
 
-  const isAttemptInProgress =
-    !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
-
   return {
     resourcePanelProps: {},
     workspaceContent: (
       <div className={styles.attemptView}>
         <div className={styles.attemptBody}>
           {error && (
-            <Typography variant="body3" color="error">
+            <Typography variant="body3" color="error" role="alert">
               {error}
             </Typography>
           )}
@@ -171,7 +179,7 @@ export default function useQuizAttemptView({
               )}
             </div>
           ) : (
-            <div className={styles.questions}>
+            <div className={styles.questions} ref={questionsRef}>
               {quizQuestions
                 .filter(
                   question =>

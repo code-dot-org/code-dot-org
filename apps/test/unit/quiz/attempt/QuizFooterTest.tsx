@@ -49,7 +49,9 @@ describe('QuizFooter', () => {
       />
     );
 
-    expect(screen.queryByRole('button', {name: '1'})).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Go to page 1'})
+    ).not.toBeInTheDocument();
   });
 
   it('shows one pagination button per page for a multi-page quiz, and navigates on click', () => {
@@ -64,11 +66,17 @@ describe('QuizFooter', () => {
       />
     );
 
-    expect(screen.getByRole('button', {name: '1'})).toBeInTheDocument();
-    expect(screen.getByRole('button', {name: '2'})).toBeInTheDocument();
-    expect(screen.getByRole('button', {name: '3'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Go to page 1'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Go to page 2'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Go to page 3'})
+    ).toBeInTheDocument();
 
-    fireEvent.click(screen.getByRole('button', {name: '3'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Go to page 3'}));
 
     expect(onNavigateToPage).toHaveBeenCalledWith(3);
   });
