@@ -32,14 +32,18 @@ const idsByFamily: Record<
 
 /*
   The one place the family is chosen. Both the class that trains and the id
-  stamped onto the saved model come from this, so they cannot disagree. Reads
-  no level configuration yet, so every level gets the default family.
+  stamped onto the saved model come from this, so they cannot disagree.
+
+  `mode` is hand-written JSON from the level editor, so the declared type is a
+  claim about it rather than a guarantee; an unrecognized name falls back to
+  the default instead of failing the level.
 */
-export function getTrainerFamily(): TrainerFamily {
-  return DEFAULT_TRAINER_FAMILY;
+export function getTrainerFamily(state: RootState): TrainerFamily {
+  const family = state.mode?.trainer;
+  return family && family in idsByFamily ? family : DEFAULT_TRAINER_FAMILY;
 }
 
 export function getTrainerId(state: RootState): TrainerId {
-  const ids = idsByFamily[getTrainerFamily()];
+  const ids = idsByFamily[getTrainerFamily(state)];
   return isRegression(state) ? ids.regress : ids.classify;
 }

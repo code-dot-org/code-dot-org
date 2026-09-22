@@ -15,14 +15,16 @@ import rootReducer, {
   setLabelColumn,
   addSelectedFeature,
   setColumnsByDataType,
+  setMode,
   setTestData,
 } from '../../src/redux';
 import train from '../../src/train';
-import DecisionTreeTrainer from '../../src/trainers/DecisionTreeTrainer';
+import {buildTrainer} from '../../src/trainers';
 
 function setUp(data, columns, label) {
   const store = createStore(rootReducer);
 
+  store.dispatch(setMode({trainer: 'decisionTree'}));
   store.dispatch(setImportedData(data, false));
   Object.entries(columns).forEach(([column, type]) =>
     store.dispatch(setColumnsByDataType(column, type)),
@@ -35,7 +37,7 @@ function setUp(data, columns, label) {
   train.reset();
   train.init(store);
 
-  return {store, trainer: new DecisionTreeTrainer(store)};
+  return {store, trainer: buildTrainer(store)};
 }
 
 // Mirrors `prepareTestData` in train.ts, which is not exported.
