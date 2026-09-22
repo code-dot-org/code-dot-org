@@ -5,7 +5,7 @@ wrong 'Collect data from all members of a population.'
 wrong 'Test a hypothesis on a small portion of a population.'
 wrong 'Test a hypothesis on all members of a population.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 To sample is to...
