@@ -1,11 +1,4 @@
 /*
-  The decision tree trainer, driven the way `train.test.js` drives KNN.
-
-  No level can select a family yet, so `train.init` builds the KNN trainer for
-  every level. These tests call it for what it prepares — the feature number
-  keys and the training/accuracy split — then drive a `DecisionTreeTrainer`
-  over that store directly.
-
   The last 10% of each dataset below is reserved for the accuracy check, so the
   row order matters to every expected value here.
 */
@@ -64,7 +57,6 @@ const CATEGORICAL = ColumnTypes.CATEGORICAL;
 
 describe('DecisionTreeTrainer: the full train and predict flow', () => {
   test('trains a classification tree and predicts a categorical label', () => {
-    // `legs` fixes `animal`, so the tree has something clean to split on.
     const data = [
       {animal: 'bird', legs: '2', tail: 'yes'},
       {animal: 'bird', legs: '2', tail: 'no'},
@@ -108,7 +100,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
   /*
     One feature separates the label completely, so a depth of 1 is already
     perfect and every deeper candidate ties with it. The sweep must keep the
-    shallowest of them. This is the rule that differs from the k sweep.
+    shallowest of them.
   */
   test('a tie across depths stores the shallowest tree', () => {
     const data = [
@@ -135,7 +127,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
-    expect(state.hyperparameters).toEqual({maxDepth: 1, minNumSamples: 3});
+    expect(state.hyperparameters).toEqual({maxDepth: 1});
   });
 
   /*
@@ -171,7 +163,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     trainer.startTraining();
 
     const state = store.getState();
-    expect(state.hyperparameters).toEqual({maxDepth: 2, minNumSamples: 3});
+    expect(state.hyperparameters).toEqual({maxDepth: 2});
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
@@ -180,10 +172,8 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
 
 describe('DecisionTreeTrainer: regression', () => {
   /*
-    The reason to prefer a regression tree over the KNN "regression" it
-    replaces. A leaf holds rows whose labels differ, and the tree returns their
-    mean, so a prediction can be a value that appears in no training row. KNN
-    always returns one of the labels it was given.
+    A leaf holds rows whose labels differ, and the tree returns their
+    mean, so a prediction can be a value that appears in no training row. 
   */
   test('a prediction can fall between the observed label values', () => {
     const data = [

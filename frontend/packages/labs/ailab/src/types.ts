@@ -2,10 +2,7 @@ export type DataRow = Record<string, string | number>;
 
 export type TrainerFamily = 'knn' | 'decisionTree';
 
-// The trainer id saved beside these names which family wrote them.
-export type Hyperparameters =
-  | {k: number}
-  | {maxDepth: number; minNumSamples: number};
+export type Hyperparameters = {k: number} | {maxDepth: number};
 
 export interface Mode {
   datasets?: string[];

@@ -92,8 +92,6 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
         bestAccuracy = accuracy;
         best = {model, predictedLabels, candidate};
       } else if (!best) {
-        // An empty accuracy-check set grades every candidate NaN, which loses
-        // every comparison. Keep the first so training still stores a model.
         best = {model, predictedLabels, candidate};
       }
     });
