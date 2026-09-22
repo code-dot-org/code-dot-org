@@ -4,8 +4,7 @@ import React from 'react';
 import styles from './attempt-card.module.scss';
 
 export interface AttemptCardProps {
-  // Omit for a quiz with only one question.
-  questionLabel?: string;
+  questionLabel: string;
   title: string;
   // The type-specific answer area (choices, free response, etc).
   children: React.ReactNode;
