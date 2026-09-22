@@ -1,0 +1,93 @@
+// Layout of the standard dialog on top of the MuiCustomDialog panel.
+// Selectors carry two classes so they outrank MUI's single-class emotion rules
+// (Paper's max-width and overflow, DialogTitle/Content/Actions padding), which
+// the host page injects after this sheet. `.MuiDialog-paper` is the stable MUI
+// class on the panel, the same element `.dialog` lands on.
+
+// Same specificity as muiCustomDialog.module.scss's `display: block` on the
+// panel; this sheet wins by loading later (see the note there).
+.dialog:global(.MuiDialog-paper) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 39.375rem;
+  max-width: 50rem;
+  padding: 2.25rem 3.5rem 2.5rem;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
+  // The icon badge hangs over the top edge; MUI Paper would clip and scroll it.
+  overflow: visible;
+
+  &:has(.dialogIcon) {
+    padding-top: 3.5rem;
+  }
+}
+
+.dialog .dialogTextSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  align-self: stretch;
+
+  img {
+    width: 16.25rem;
+    height: 8.625rem;
+  }
+}
+
+// Heading and description only; customContent keeps its own alignment.
+.dialog .dialogTitle {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.dialog .dialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  align-self: stretch;
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: visible;
+}
+
+.dialog .dialogDescription {
+  margin: 0;
+  text-align: center;
+}
+
+.dialog .dialogActionsSection {
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+}
+
+// Two classes also settle the legacy TODO: Font Awesome's own `display` rule
+// no longer beats the badge, so the icon needs no inline style.
+.dialog .dialogIcon {
+  position: absolute;
+  inset-block-start: -32px;
+  display: flex;
+  width: 64px;
+  height: 64px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: var(--background-brand-teal-primary);
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 0.2);
+
+  &::before {
+    color: var(--background-neutral-primary);
+    text-align: center;
+    font-size: 32px;
+    width: 40px;
+    line-height: 125%;
+  }
+}

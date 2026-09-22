@@ -53,10 +53,13 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
  *  * (see ./__tests__/Dialog.test.tsx)
  *  * (?) passes accessibility checks;
  *
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```Deprecated```
  *
  * Design System: Dialog Component.
  * Renders Dialog window that user should interact with.
+ *
+ * @deprecated Use `MuiDialog` from `@code-dot-org/component-library/dialog`,
+ * which takes the same props on top of MUI `Dialog`. See ./README.md.
  */
 const Dialog: React.FunctionComponent<DialogProps> = ({
   title,

@@ -2,6 +2,7 @@ import {Components, Theme} from '@mui/material/styles';
 
 import {BREADCRUMBS_OVERRIDES} from './breadcrumbs';
 import {BUTTON_OVERRIDES} from './button';
+import {DIALOG_OVERRIDES} from './dialog';
 import {FOOTER_OVERRIDES} from './footer';
 import {ICON_BUTTON_OVERRIDES} from './iconButton';
 import {LINK_OVERRIDES} from './link';
@@ -23,4 +24,5 @@ export const STYLE_OVERRIDES: Components<Theme> = {
   MuiIconButton: ICON_BUTTON_OVERRIDES,
   MuiFooter: FOOTER_OVERRIDES,
   MuiTooltip: TOOLTIP_OVERRIDES,
+  MuiDialog: DIALOG_OVERRIDES,
 };
