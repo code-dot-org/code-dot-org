@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -64,7 +64,7 @@ class MatchDetailsDialog extends Component {
     if (!isDialogOpen) return null;
 
     return (
-      <Dialog
+      <MuiDialog
         title={i18n.questionDetails()}
         customContent={this.renderContent()}
         onClose={closeDialog}

@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -34,7 +34,7 @@ class ConfirmDeleteButton extends React.Component {
     return (
       <div style={{display: 'inline-block', ...this.props.containerStyle}}>
         {this.state.open && (
-          <Dialog
+          <MuiDialog
             title={this.props.title}
             description={this.props.body}
             onClose={this.handleClose}

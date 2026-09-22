@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -73,7 +73,7 @@ class MultipleChoiceDetailsDialog extends Component {
     if (!isDialogOpen) return null;
 
     return (
-      <Dialog
+      <MuiDialog
         title={i18n.questionDetails()}
         customContent={this.renderContent()}
         onClose={closeDialog}

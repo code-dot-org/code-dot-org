@@ -1,6 +1,6 @@
 import ActionBlock from '@code-dot-org/component-library/actionBlock';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';
@@ -28,7 +28,7 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
   const mode = theme === 'Light' ? 'light' : 'dark';
   return (
     <div className={moduleStyles.dialogContainer}>
-      <CustomDialog
+      <MuiCustomDialog
         mode={mode}
         className={moduleStyles.pickerDialog}
         aria-labelledby="project-picker-title"
@@ -82,7 +82,7 @@ const ProjectTypePicker: React.FunctionComponent<ProjectTypePickerProps> = ({
             />
           </div>
         </div>
-      </CustomDialog>
+      </MuiCustomDialog>
     </div>
   );
 };

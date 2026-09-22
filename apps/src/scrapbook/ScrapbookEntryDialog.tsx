@@ -1,8 +1,7 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import Tags from '@code-dot-org/component-library/tags';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
-import {createPortal} from 'react-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
@@ -173,8 +172,8 @@ export default function ScrapbookEntryDialog({
 
   const canSave = !saving && !loading && !uploading && hasKey;
 
-  return createPortal(
-    <Dialog
+  return (
+    <MuiDialog
       title="Add to Scrapbook"
       onClose={handleClose}
       primaryButtonProps={{
@@ -233,8 +232,7 @@ export default function ScrapbookEntryDialog({
           )}
         </div>
       }
-    />,
-    document.body
+    />
   );
 }
 

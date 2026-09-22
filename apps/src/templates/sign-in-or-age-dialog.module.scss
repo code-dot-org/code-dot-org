@@ -1,8 +1,9 @@
 /* Built on CustomDialog rather than Modal because Modal fixes its content into
    a single column, and this dialog's two columns are the design. The box rules
    below mirror the design system's modal.module.scss so it still looks like one
-   of the family. */
-.dialog {
+   of the family. Two classes: the panel is MUI Paper, and the wrapper's own
+   two-class panel rule (display: block, overflow: visible) would win over one. */
+.dialog:global(.MuiDialog-paper) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -1,4 +1,7 @@
-import {CustomDialog, Dialog} from '@code-dot-org/component-library/dialog';
+import {
+  MuiCustomDialog,
+  MuiDialog,
+} from '@code-dot-org/component-library/dialog';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
@@ -81,7 +84,7 @@ class SignInOrAgeDialog extends Component {
     // sign in or give us an age.
     if (this.state.tooYoung) {
       return (
-        <Dialog
+        <MuiDialog
           className={moduleStyles.tooYoungDialog}
           title={i18n.tutorialUnavailable()}
           description={i18n.tutorialUnavailableExplanation()}
@@ -98,7 +101,7 @@ class SignInOrAgeDialog extends Component {
     }
 
     return (
-      <CustomDialog
+      <MuiCustomDialog
         className={classNames('signInOrAgeDialog', moduleStyles.dialog)}
         aria-label={i18n.signinOrAge()}
       >
@@ -158,7 +161,7 @@ class SignInOrAgeDialog extends Component {
           external
           openInNewTab
         />
-      </CustomDialog>
+      </MuiCustomDialog>
     );
   }
 }

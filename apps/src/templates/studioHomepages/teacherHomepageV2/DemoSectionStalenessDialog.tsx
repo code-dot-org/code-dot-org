@@ -1,4 +1,4 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
 interface DemoSectionStalenessDialogProps {
@@ -15,7 +15,7 @@ const DemoSectionStalenessDialog: React.FC<DemoSectionStalenessDialogProps> = ({
   onCancel,
   onReset,
 }) => (
-  <Dialog
+  <MuiDialog
     title="Your onboarding experience is just one step away"
     description="To use the onboarding experience, your practice class needs to have the default course assigned. Reset the course assignment to use the onboarding experience."
     onClose={onCancel}

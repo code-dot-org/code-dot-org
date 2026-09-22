@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import Modal from '@code-dot-org/component-library/modal';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
@@ -129,7 +129,7 @@ export default class VersionHistory extends React.Component {
 
   renderStartOverDialog() {
     return (
-      <Dialog
+      <MuiDialog
         title={i18n.versionHistory_clearProgress_header()}
         description={i18n.versionHistory_clearProgress_prompt()}
         onClose={this.onCancelClearPuzzle}

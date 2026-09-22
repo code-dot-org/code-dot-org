@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -79,7 +79,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
     }
 
     return (
-      <Dialog
+      <MuiDialog
         title={this.headerText()}
         customContent={
           <div id="dsco-dialog-description">{this.renderBody()}</div>
@@ -87,7 +87,6 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
         icon={{
           iconName: 'circle-exclamation',
           iconFamily: 'solid',
-          style: {display: 'flex'},
         }}
         onClose={onCancel}
         primaryButtonProps={{

@@ -1,4 +1,4 @@
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {LinearProgress} from '@mui/material';
 import React from 'react';
@@ -72,7 +72,7 @@ export const CreateDemoSectionPopup: React.FC<CreateDemoSectionPopupProps> = ({
     dispatch(fetchDemoPresets());
   }, [dispatch]);
 
-  // CustomDialog closes on Escape and the close button but not on an outside
+  // MuiCustomDialog closes on Escape and the close button but not on an outside
   // click, so we close it ourselves when a mousedown lands outside the dialog
   // box (i.e. on the surrounding overlay). Don't close mid-creation so we
   // don't tear down the dialog before the request resolves.
@@ -110,7 +110,7 @@ export const CreateDemoSectionPopup: React.FC<CreateDemoSectionPopupProps> = ({
   };
 
   return (
-    <CustomDialog
+    <MuiCustomDialog
       onClose={onClose}
       aria-labelledby="dsco-dialog-description"
       className={styles.dialog}
@@ -159,6 +159,6 @@ export const CreateDemoSectionPopup: React.FC<CreateDemoSectionPopupProps> = ({
           </button>
         ))}
       </div>
-    </CustomDialog>
+    </MuiCustomDialog>
   );
 };

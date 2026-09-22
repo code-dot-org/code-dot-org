@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -34,7 +34,7 @@ describe('ConfirmDeleteButton', () => {
 
       const wrapper = createOpenConfirmDeleteButton();
 
-      const dialog = wrapper.find(Dialog).at(0);
+      const dialog = wrapper.find(MuiDialog).at(0);
       expect(dialog.prop('secondaryButtonProps').children).toContain(
         'i18n-cancel'
       );
@@ -48,7 +48,7 @@ describe('ConfirmDeleteButton', () => {
 
       const wrapper = createOpenConfirmDeleteButton();
 
-      const dialog = wrapper.find(Dialog).at(0);
+      const dialog = wrapper.find(MuiDialog).at(0);
       expect(dialog.prop('primaryButtonProps').children).toContain(
         'i18n-delete'
       );
