@@ -30,17 +30,12 @@ const idsByFamily: Record<
   },
 };
 
-/*
-  The one place the family is chosen. Both the class that trains and the id
-  stamped onto the saved model come from this, so they cannot disagree.
-
-  `mode` is hand-written JSON from the level editor, so the declared type is a
-  claim about it rather than a guarantee; an unrecognized name falls back to
-  the default instead of failing the level.
-*/
+// The trainer class and the saved model's id both come from here, so they cannot disagree.
 export function getTrainerFamily(state: RootState): TrainerFamily {
   const family = state.mode?.trainer;
-  return family && family in idsByFamily ? family : DEFAULT_TRAINER_FAMILY;
+  return typeof family === 'string' && Object.hasOwn(idsByFamily, family)
+    ? family
+    : DEFAULT_TRAINER_FAMILY;
 }
 
 export function getTrainerId(state: RootState): TrainerId {
