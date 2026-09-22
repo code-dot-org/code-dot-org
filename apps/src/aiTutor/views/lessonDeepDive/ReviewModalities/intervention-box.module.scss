@@ -1,5 +1,4 @@
 $border: #69788a;
-$card-bg: #424d59;
 $nav-bg: #292f36;
 
 // ── Outer shell ───────────────────────────────────────────────────────────────
@@ -17,81 +16,117 @@ $nav-bg: #292f36;
   min-height: 0;
 }
 
-// ── Menu (unselected state) ───────────────────────────────────────────────────
+// ── Choice menu (no modality selected) ───────────────────────────────────────
 
 .prompt {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
 }
 
-.overline {
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #d4dae1;
-  margin: 0 0 12px;
+.promptInner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 600px;
+  max-width: 100%;
 }
 
 .heading {
-  font-family: var(--font-family-main);
-  font-size: clamp(2rem, 8vw, 3.75rem);
-  font-weight: 800;
-  line-height: 1;
-  color: #fff;
-  margin: 0 0 12px;
+  font-family: var(--font-family-heading);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -0.48px;
+  color: #6fcaff;
+  margin: 0;
 }
 
-.subtitle {
-  font-size: 1.25rem;
+.subtext {
+  font-size: 18px;
   font-weight: 600;
-  color: #d4dae1;
-  line-height: 1.4;
-  margin: 0 0 24px;
-  max-width: 700px;
+  line-height: 28px;
+  color: #fff;
+  margin: 0;
 }
 
-.menuList {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 440px;
-}
-
-.menuCard {
-  display: flex;
-  align-items: center;
+.choiceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   width: 100%;
-  padding: 20px;
-  background: $card-bg;
-  border: 1px solid $border;
-  border-radius: 4px;
+}
+
+.choiceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 100px;
+  background: #121212;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  padding: 8px 4px;
+  overflow: hidden;
   cursor: pointer;
-  color: #f0f2f5;
-  text-align: left;
-  font-size: 1rem;
   transition: filter 0.12s ease;
 
   &:hover {
-    filter: brightness(1.12);
+    filter: brightness(1.15);
   }
 
   &:focus-visible {
-    outline: 2px solid #a374d6;
+    outline: 2px solid #6fcaff;
     outline-offset: 2px;
   }
 }
 
-.menuCardIcon {
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
   flex-shrink: 0;
-  font-size: 1.5rem;
-  width: 25px;
-  text-align: center;
 }
 
-// ── Bottom nav ────────────────────────────────────────────────────────────────
+.cardLabel {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.challengeLink {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #f1f2f4;
+  text-decoration: underline;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #6fcaff;
+    outline-offset: 2px;
+  }
+}
+
+// ── Bottom nav (modality selected) ───────────────────────────────────────────
 
 .bottomNav {
   flex-shrink: 0;
@@ -104,7 +139,6 @@ $nav-bg: #292f36;
   padding: 0 24px;
 }
 
-// Menu / grid icon (left slot)
 .navMenuButton {
   display: flex;
   align-items: center;
@@ -130,10 +164,6 @@ $nav-bg: #292f36;
   }
 }
 
-.navMenuButtonActive {
-  border-bottom-color: #fff;
-}
-
 .navDivider {
   width: 1px;
   background: $border;
@@ -141,7 +171,6 @@ $nav-bg: #292f36;
   flex-shrink: 0;
 }
 
-// Mode icon tabs
 .navItem {
   display: flex;
   flex-direction: column;
@@ -181,7 +210,6 @@ $nav-bg: #292f36;
   white-space: nowrap;
 }
 
-// Done button (right slot)
 .doneWrapper {
   display: flex;
   align-items: center;
@@ -206,7 +234,7 @@ $nav-bg: #292f36;
   transition: background-color 0.12s ease;
 
   &:hover {
-    background: rgba(255 255 255 / 0.08);
+    background: rgb(255 255 255 / 0.08);
   }
 
   &:focus-visible {
