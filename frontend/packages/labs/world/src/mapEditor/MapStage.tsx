@@ -2627,15 +2627,19 @@ export const MapStage = ({
             onKeyDown={blurOnEnter}
           />
           {/*
-           * WHERE IT HOLDS ON, when this map is loaded into a window that is
-           * not its own shape — a menu over a square level and over a
-           * phone-shaped one (specs/ANCHORS_PLAN.md). Beside the layer
-           * dropdown because it is the same kind of fact: not what the thing
-           * IS, but where in an arrangement it sits.
+           * WHICH EDGE IT KEEPS ITS DISTANCE FROM, when this map is loaded
+           * into a window that is not its own shape — a menu over a square
+           * level and over a phone-shaped one (specs/ANCHORS_PLAN.md).
+           * Beside the layer dropdown because it is the same kind of fact:
+           * not what the thing IS, but where in an arrangement it sits.
+           *
+           * "Anchored to" rather than "Holds on to", which was oblique out of
+           * context and was the one place in the lab not using the word the
+           * spec, the engine and the property all use.
            */}
           <SimpleDropdown
             name="actor-anchor"
-            labelText="Holds on to"
+            labelText="Anchored to"
             size="s"
             className={styles.inspectorDropdown}
             disabled={isReadOnly}
