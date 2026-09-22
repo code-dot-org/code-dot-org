@@ -119,18 +119,26 @@
 }
 
 /* A SQUARE THE HEIGHT OF THE FIELD BESIDE IT, which is the whole of looking
-   tidy. 2.25rem is the map editor's number, next to the same component at the
-   same size, and it is taken rather than derived on purpose: the arithmetic
-   says 2.1rem — body-three at 0.875rem over 1.54, plus 0.3125rem of padding
-   and a 1px border each side — and the inspector's value is the one somebody
-   has actually looked at.
+   tidy — and WORKED OUT FROM THE FIELD'S OWN TOKENS rather than typed, so it
+   follows if they move.
+
+   A `size="s"` input is body-three — `--font-size-body-sm` over a line-height
+   of 1.54 — inside 0.3125rem of padding and a 1px border, top and bottom. The
+   first guess here was the map editor's 2.25rem, taken on the grounds that
+   somebody had looked at it; 2.25rem is 36px and the input is a shade over
+   33, which is three pixels of daylight on every colour row. The inspector
+   has the same mismatch beside the same component.
 
    Bottom-aligned by the row, so it sits level with the INPUT rather than with
    the label above it. */
 .swatch {
+  --field-height: calc(
+    var(--font-size-body-sm, 0.875rem) * 1.54 + 0.625rem + 2px
+  );
+
   flex: 0 0 auto;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: var(--field-height);
+  height: var(--field-height);
   padding: 2px;
   border: 1px solid var(--border-neutral, rgba(0, 0, 0, 0.25));
   border-radius: 4px;
