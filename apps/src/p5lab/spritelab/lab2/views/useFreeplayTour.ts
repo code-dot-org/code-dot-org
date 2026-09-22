@@ -12,6 +12,7 @@ import {
   TourStep,
   TourTarget,
   TourVariant,
+  TourView,
 } from './freeplayTour';
 import {SCENE_CHIP_ID} from './SceneSelector';
 
@@ -150,41 +151,49 @@ export default function useFreeplayTour({
   // Keyed on the view, not the step: two steps in a row with the scene
   // menu up keep it up rather than closing and reopening it.
   const view = current?.view;
+  // The effect runs after the render that changed the step has painted, so
+  // the cover stays up until the view it applies is the one on screen.
+  const [appliedView, setAppliedView] = useState<TourView>();
+  const coverRef = useRef(true);
   useEffect(() => {
     if (!active || !view) {
       return;
     }
+    let cleanup: (() => void) | undefined;
     switch (view) {
       case 'scene-menu': {
         dispatch(setActiveTab('Code'));
         // After the tab lands, so the chip is enabled.
         const handle = window.setTimeout(() => toggleSceneMenu(true), 50);
-        return () => {
+        cleanup = () => {
           window.clearTimeout(handle);
           toggleSceneMenu(false);
         };
+        break;
       }
       case 'gallery':
         dispatch(setActiveTab('Scenes'));
-        return;
+        break;
       case 'world':
         if (platformScene) {
           selectScene(platformScene.id);
         }
         dispatch(setActiveTab('World'));
-        return;
+        break;
       case 'code':
         if (platformScene) {
           selectScene(platformScene.id);
         }
         dispatch(setActiveTab('Code'));
-        return;
+        break;
       case 'play':
         startPlay();
-        return;
+        break;
       default:
-        return;
+        break;
     }
+    setAppliedView(view);
+    return cleanup;
     // selectScene and startPlay change with the active tab; re-running on
     // them would re-apply the view after the student's own tab clicks.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -209,13 +218,19 @@ export default function useFreeplayTour({
 
   const show = useCallback((stepId: string) => setShownId(stepId), []);
 
+  // The cover is held, never raised, while a view is pending: dropped
+  // early it would show the tab underneath for a frame, raised it would
+  // blink black between two open views.
+  const wantsCover = !view || view === 'blank' || view === 'scene-menu';
+  const coverBlack = wantsCover || (coverRef.current && appliedView !== view);
+  coverRef.current = coverBlack;
+
   if (!variant || !active) {
     return undefined;
   }
   return {
     variant,
-    coverBlack:
-      !current || current.view === 'blank' || current.view === 'scene-menu',
+    coverBlack,
     lines,
     current,
     arrowTarget: current?.target,
