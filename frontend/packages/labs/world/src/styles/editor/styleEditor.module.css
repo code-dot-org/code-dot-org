@@ -66,9 +66,9 @@
   margin: 0;
   padding: 0;
   display: grid;
-  /* Wide enough for a field, a swatch and the gap between them, so no row
-     wraps and every column lines up with the one above it. */
-  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  /* A field, a swatch and the gap between them, and no more: a wider column
+     would leave the swatch adrift from the field again. */
+  grid-template-columns: repeat(auto-fill, 9.25rem);
   gap: 0.25rem 0.75rem;
 }
 
@@ -82,30 +82,49 @@
   min-height: 1.75rem;
 }
 
-/* The hex a swatch sits after: wide enough for `#rrggbbaa` and no wider.
-
-   Fixed rather than flexible, and the same lane the number fields sit in, so
-   that a list mixing colours and numbers reads as one column of fields with
-   swatches hanging off the ends. */
-.hex {
-  flex: 0 0 auto;
-  width: 6rem;
+/* WHY THE FIELDS NEED AN OVERRIDE AT ALL. The design system's
+   `FormFieldWrapper` is a <label> with `min-width: 18.75rem` — sensible for a
+   form on a page, and three hundred pixels of nothing in a row this size. Left
+   alone it pushed every swatch to the far right of its row, nowhere near the
+   field it belongs to. The map editor's inspector overrides it the same way
+   and says so (`mapEditor.module.css`). */
+.panel label {
+  min-width: 0;
+  width: 100%;
 }
 
+/* The hex a swatch sits beside: wide enough for `#rrggbbaa` and no wider.
+
+   The same lane the number fields sit in, so a list mixing colours and
+   numbers reads as one column of fields with swatches down its right. */
+.hex,
+.number {
+  flex: 0 0 6rem;
+}
+
+/* A SQUARE THE HEIGHT OF THE FIELD BESIDE IT, which is the whole of looking
+   tidy. 2.25rem is the map editor's number, next to the same component at the
+   same size, and it is taken rather than derived on purpose: the arithmetic
+   says 2.1rem — body-three at 0.875rem over 1.54, plus 0.3125rem of padding
+   and a 1px border each side — and the inspector's value is the one somebody
+   has actually looked at.
+
+   Bottom-aligned by the row, so it sits level with the INPUT rather than with
+   the label above it. */
 .swatch {
   flex: 0 0 auto;
   width: 2.25rem;
-  height: 1.5rem;
-  padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
+  height: 2.25rem;
+  padding: 2px;
+  border: 1px solid var(--border-neutral, rgba(0, 0, 0, 0.25));
+  border-radius: 4px;
   background: none;
+  cursor: pointer;
 }
 
-/* …and the same lane, so a number row and a colour row start together. */
-.number {
-  flex: 0 0 auto;
-  width: 6rem;
+.swatch:disabled {
+  cursor: default;
+  opacity: 0.5;
 }
 
 .select {
