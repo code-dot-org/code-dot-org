@@ -4,14 +4,22 @@ import {
   makeDynamicCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
 
+import {AI_ANSWER_BLOCK_TYPE} from '../blockDefinitions/aiAnswer';
+import {ASK_AI_BLOCK_TYPE} from '../blockDefinitions/askAi';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
+import {MAKE_BUTTON_BLOCK_TYPE} from '../blockDefinitions/makeButton';
+import {MAKE_IMAGE_GRID_BLOCK_TYPE} from '../blockDefinitions/makeImageGrid';
 import {PREDICT_BLOCK_TYPE} from '../blockDefinitions/predictForSprite';
 import {PREDICTION_OF_BLOCK_TYPE} from '../blockDefinitions/predictionOfSprite';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {SET_TRAIT_BLOCK_TYPE} from '../blockDefinitions/setTraitOfSprite';
+import {SHOW_TEXT_BLOCK_TYPE} from '../blockDefinitions/showText';
+import {SPRITE_CALLED_BLOCK_TYPE} from '../blockDefinitions/spriteCalled';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 import {TRAIT_OF_BLOCK_TYPE} from '../blockDefinitions/traitOfSprite';
+import {WHEN_BUTTON_CLICKED_BLOCK_TYPE} from '../blockDefinitions/whenButtonClicked';
+import {WHEN_IMAGE_CLICKED_BLOCK_TYPE} from '../blockDefinitions/whenImageClicked';
 
 import {ToolboxInfo} from './types';
 
@@ -42,6 +50,16 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
     TRAIT_OF_BLOCK_TYPE,
     PREDICT_BLOCK_TYPE,
     PREDICTION_OF_BLOCK_TYPE,
+    ASK_AI_BLOCK_TYPE,
+    AI_ANSWER_BLOCK_TYPE,
+  ],
+  App: [
+    SHOW_TEXT_BLOCK_TYPE,
+    MAKE_BUTTON_BLOCK_TYPE,
+    WHEN_BUTTON_CLICKED_BLOCK_TYPE,
+    MAKE_IMAGE_GRID_BLOCK_TYPE,
+    WHEN_IMAGE_CLICKED_BLOCK_TYPE,
+    SPRITE_CALLED_BLOCK_TYPE,
   ],
 };
 

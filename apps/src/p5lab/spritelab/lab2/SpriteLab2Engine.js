@@ -12,6 +12,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
+import {askAi} from './ai/text/askAi';
 import {createTraitCommands} from './ai/traits/traitCommands';
 import {traitsByCostumeName} from './ai/traits/traitStore';
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
@@ -47,6 +48,12 @@ import {
   PLATFORM_GRAVITY,
   resolvePlatformPhysics,
 } from './platformPhysics';
+import {
+  createImageCommands,
+  expandReferencedImages,
+  resolveImageName,
+} from './runtimeImages';
+import {createUiCommands, displayText} from './uiSprites';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 const NOOP = () => {};
@@ -164,6 +171,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // When set, re-runs preload from this list instead of the project's own
     // (external scenes carry their own images).
     this.preloadAnimationsOverride = null;
+    // The costume a student clicked, kept across scene jumps.
+    this.imageChoice_ = {};
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -482,7 +491,56 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
     library.modelCard = state.spriteLab2?.modelCard;
     Object.assign(library.commands, createTraitCommands(library));
+    this.installAppCommands_(library);
     return library;
+  }
+
+  /**
+   * Text, buttons, the chosen image, and AI answers: what an app screen needs
+   * beyond pictures. The chosen-image mapping wraps outermost, so every
+   * command and CoreLibrary's own lookups see a real costume name.
+   */
+  installAppCommands_(library) {
+    const list = () =>
+      this.preloadAnimationsOverride || getStore().getState().animationList;
+    const resolve = name =>
+      resolveImageName(name, this.imageChoice_.chosen, list());
+
+    const getSpriteArray = library.getSpriteArray.bind(library);
+    library.getSpriteArray = spriteArg =>
+      getSpriteArray(
+        spriteArg && typeof spriteArg === 'object' && 'costume' in spriteArg
+          ? {...spriteArg, costume: resolve(spriteArg.costume)}
+          : spriteArg
+      );
+    const addSprite = library.addSprite.bind(library);
+    library.addSprite = opts =>
+      addSprite(
+        opts?.animation ? {...opts, animation: resolve(opts.animation)} : opts
+      );
+    const setAnimation = library.commands.setAnimation;
+    library.commands.setAnimation = function (spriteArg, animation) {
+      return setAnimation.call(this, spriteArg, resolve(animation));
+    };
+
+    Object.assign(
+      library.commands,
+      createUiCommands(library),
+      createImageCommands(library, this.imageChoice_, list())
+    );
+
+    let aiAnswer = '';
+    library.commands.askAi = (question, callback) => {
+      askAi(displayText(question)).then(answer => {
+        // A rerun built a new library; this answer belongs to a dead program.
+        if (this.library !== library) {
+          return;
+        }
+        aiAnswer = answer;
+        callback?.();
+      });
+    };
+    library.commands.aiAnswer = () => aiAnswer;
   }
 
   /**
@@ -838,8 +896,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
-    const scoped = this.referencedImages
-      ? filterAnimationsToNames(animationList, this.referencedImages)
+    const referenced = expandReferencedImages(
+      this.referencedImages,
+      this.imageChoice_.chosen,
+      animationList
+    );
+    const scoped = referenced
+      ? filterAnimationsToNames(animationList, referenced)
       : animationList;
     const preloaded = await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(

@@ -14,6 +14,7 @@ import {noteImageFieldValue} from '../imageReferences';
 import {defaultImageName, ImageSlot} from '../imageRoleDefaults';
 import {getImageThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
+import {CHOSEN_IMAGE} from '../runtimeImages';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import moduleStyles from './image-dropdown.module.scss';
@@ -40,6 +41,22 @@ const EMPTY_IMAGE_OPTION: [string, string][] = [
       ),
     'null',
   ],
+];
+
+// The last costume tile: whichever image a "when any image clicked" block
+// chose, drawn as a star since it has no picture of its own until run time.
+const CHOSEN_IMAGE_OPTION: [string, string] = [
+  'data:image/svg+xml,' +
+    encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">' +
+        '<rect x="3" y="3" width="34" height="34" rx="5" fill="#fff8e1"' +
+        ` stroke="${EMPTY_TILE_STROKE}" stroke-width="2"` +
+        ' stroke-dasharray="4 3"/>' +
+        '<polygon points="20,8 23.5,16 32,16.5 25.5,22 27.5,30.5 20,26' +
+        ' 12.5,30.5 14.5,22 8,16.5 16.5,16" fill="#f9a825"/>' +
+        '</svg>'
+    ),
+  `"${CHOSEN_IMAGE}"`,
 ];
 
 // One button below the image grid: jump to the Images tab, where images are
@@ -88,7 +105,10 @@ function animationOptions(kind: AnimationKind): [string, string][] {
       animationSourceUrl(key, animation, state.pageConstants?.channelId);
     results.push([url, `"${animation.name}"`]);
   });
-  return results.length ? results : EMPTY_IMAGE_OPTION;
+  if (!results.length) {
+    return EMPTY_IMAGE_OPTION;
+  }
+  return kind === 'costume' ? [...results, CHOSEN_IMAGE_OPTION] : results;
 }
 
 const IMAGE_TYPE_OF: Record<AnimationKind, ImageType> = {

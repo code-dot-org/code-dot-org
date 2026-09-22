@@ -77,10 +77,11 @@ function installLabBlocks(): void {
   registerTraitFields();
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
   Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
-  for (const {definition, generator} of labBlockDefinitions) {
+  for (const {definition, generator, extendedOptions} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
       init: function (this: BlocklyCore.Block) {
         this.jsonInit(definition);
+        Object.assign(this, extendedOptions);
       },
     };
     Blockly.getGenerator().forBlock[definition.type] = generator;

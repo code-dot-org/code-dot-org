@@ -1,0 +1,1005 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-09-22T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "level_mode": {
+      "kind": "freeplay",
+      "adlibs": "plants"
+    },
+    "guide_steps": [
+      {
+        "text": "**Plant Doctor.** Choose the **plant health** model in the Images tab, then make six plant images with **New image**, setting each plant's features. Play the **Home** scene to try the app.",
+        "showContinue": true
+      }
+    ],
+    "long_instructions": "# Plant Doctor\nThis project starts with a four-scene app: Home, Camera Roll, Plant Detail and About.\n\n1. In the Images tab, choose the **plant health** model.\n2. Make six plant images with **New image**. Set each plant's features; the picture is drawn from them.\n3. Play **Home**. Click **Camera Roll**, click a plant, then click **Help Me!**.",
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "App",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_showText",
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Hello"
+                    }
+                  }
+                },
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":60}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeButton",
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":300}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_whenButtonClicked"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeImageGrid"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_whenImageClicked"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_spriteCalled"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setBackground",
+              "inputs": {
+                "COLOR": {
+                  "block": {
+                    "type": "colour_picker",
+                    "fields": {
+                      "COLOUR": "#e8f5e9"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_goToScene"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_predictForSprite"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_predictionOfSprite"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_traitOfSprite"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setTraitOfSprite"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_askAi",
+              "inputs": {
+                "QUESTION": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Give one tip for watering a fern"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_aiAnswer"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Sprites",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_makeNewSpriteAnon",
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":200}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setProp",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "VAL": {
+                  "block": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 100
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_destroy",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "spritelab2_spriteCalled"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSay"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteClicked"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Text",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "text"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_textJoin",
+              "inputs": {
+                "TEXT2": {
+                  "block": {
+                    "type": "spritelab2_aiAnswer"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Platform",
+          "contents": []
+        }
+      ]
+    },
+    "start_sources": {
+      "animations": {
+        "orderedKeys": [],
+        "propsByKey": {}
+      },
+      "scenes": [
+        {
+          "id": "home",
+          "name": "Home",
+          "source": {
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "whenRun-13",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackground",
+                      "id": "setBackground-2",
+                      "inputs": {
+                        "COLOR": {
+                          "block": {
+                            "type": "colour_picker",
+                            "id": "picker-1",
+                            "fields": {
+                              "COLOUR": "#e8f5e9"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_showText",
+                          "id": "showText-5",
+                          "fields": {
+                            "SIZE": "title",
+                            "NAME": "title"
+                          },
+                          "inputs": {
+                            "TEXT": {
+                              "block": {
+                                "type": "text",
+                                "id": "text-3",
+                                "fields": {
+                                  "TEXT": "Plant Doctor"
+                                }
+                              }
+                            },
+                            "LOCATION": {
+                              "block": {
+                                "type": "gamelab_location_picker",
+                                "id": "picker-4",
+                                "fields": {
+                                  "LOCATION": "{\"x\":200,\"y\":90}"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_showText",
+                              "id": "showText-8",
+                              "fields": {
+                                "SIZE": "body",
+                                "NAME": "intro"
+                              },
+                              "inputs": {
+                                "TEXT": {
+                                  "block": {
+                                    "type": "text",
+                                    "id": "text-6",
+                                    "fields": {
+                                      "TEXT": "Find out if your plant is healthy, and what to do next."
+                                    }
+                                  }
+                                },
+                                "LOCATION": {
+                                  "block": {
+                                    "type": "gamelab_location_picker",
+                                    "id": "picker-7",
+                                    "fields": {
+                                      "LOCATION": "{\"x\":200,\"y\":160}"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "spritelab2_makeButton",
+                                  "id": "makeButton-10",
+                                  "fields": {
+                                    "COLOR": "green",
+                                    "LABEL": "Camera Roll"
+                                  },
+                                  "inputs": {
+                                    "LOCATION": {
+                                      "block": {
+                                        "type": "gamelab_location_picker",
+                                        "id": "picker-9",
+                                        "fields": {
+                                          "LOCATION": "{\"x\":200,\"y\":250}"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "spritelab2_makeButton",
+                                      "id": "makeButton-12",
+                                      "fields": {
+                                        "COLOR": "gray",
+                                        "LABEL": "About This App"
+                                      },
+                                      "inputs": {
+                                        "LOCATION": {
+                                          "block": {
+                                            "type": "gamelab_location_picker",
+                                            "id": "picker-11",
+                                            "fields": {
+                                              "LOCATION": "{\"x\":200,\"y\":310}"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenButtonClicked",
+                  "id": "whenButtonClicked-15",
+                  "fields": {
+                    "LABEL": "Camera Roll"
+                  },
+                  "x": 20,
+                  "y": 330,
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_goToScene",
+                      "id": "goToScene-14",
+                      "fields": {
+                        "SCENE": "camera"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenButtonClicked",
+                  "id": "whenButtonClicked-17",
+                  "fields": {
+                    "LABEL": "About This App"
+                  },
+                  "x": 20,
+                  "y": 420,
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_goToScene",
+                      "id": "goToScene-16",
+                      "fields": {
+                        "SCENE": "about"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "camera",
+          "name": "Camera Roll",
+          "source": {
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "whenRun-29",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackground",
+                      "id": "setBackground-19",
+                      "inputs": {
+                        "COLOR": {
+                          "block": {
+                            "type": "colour_picker",
+                            "id": "picker-18",
+                            "fields": {
+                              "COLOUR": "#e8f5e9"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_showText",
+                          "id": "showText-22",
+                          "fields": {
+                            "SIZE": "heading",
+                            "NAME": "title"
+                          },
+                          "inputs": {
+                            "TEXT": {
+                              "block": {
+                                "type": "text",
+                                "id": "text-20",
+                                "fields": {
+                                  "TEXT": "Camera Roll"
+                                }
+                              }
+                            },
+                            "LOCATION": {
+                              "block": {
+                                "type": "gamelab_location_picker",
+                                "id": "picker-21",
+                                "fields": {
+                                  "LOCATION": "{\"x\":200,\"y\":40}"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_showText",
+                              "id": "showText-25",
+                              "fields": {
+                                "SIZE": "small",
+                                "NAME": "hint"
+                              },
+                              "inputs": {
+                                "TEXT": {
+                                  "block": {
+                                    "type": "text",
+                                    "id": "text-23",
+                                    "fields": {
+                                      "TEXT": "Click a plant."
+                                    }
+                                  }
+                                },
+                                "LOCATION": {
+                                  "block": {
+                                    "type": "gamelab_location_picker",
+                                    "id": "picker-24",
+                                    "fields": {
+                                      "LOCATION": "{\"x\":200,\"y\":75}"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "spritelab2_makeImageGrid",
+                                  "id": "makeImageGrid-26",
+                                  "next": {
+                                    "block": {
+                                      "type": "spritelab2_makeButton",
+                                      "id": "makeButton-28",
+                                      "fields": {
+                                        "COLOR": "gray",
+                                        "LABEL": "Back"
+                                      },
+                                      "inputs": {
+                                        "LOCATION": {
+                                          "block": {
+                                            "type": "gamelab_location_picker",
+                                            "id": "picker-27",
+                                            "fields": {
+                                              "LOCATION": "{\"x\":60,\"y\":40}"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenImageClicked",
+                  "id": "whenImageClicked-30",
+                  "x": 20,
+                  "y": 330,
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_goToScene",
+                      "id": "goToScene-31",
+                      "fields": {
+                        "SCENE": "detail"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenButtonClicked",
+                  "id": "whenButtonClicked-33",
+                  "fields": {
+                    "LABEL": "Back"
+                  },
+                  "x": 20,
+                  "y": 420,
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_goToScene",
+                      "id": "goToScene-32",
+                      "fields": {
+                        "SCENE": "home"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "detail",
+          "name": "Plant Detail",
+          "source": {
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "whenRun-45",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackground",
+                      "id": "setBackground-35",
+                      "inputs": {
+                        "COLOR": {
+                          "block": {
+                            "type": "colour_picker",
+                            "id": "picker-34",
+                            "fields": {
+                              "COLOUR": "#e8f5e9"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "gamelab_makeNewSpriteAnon",
+                          "id": "makeNewSpriteAnon-37",
+                          "fields": {
+                            "ANIMATION_NAME": "\"@chosen\""
+                          },
+                          "inputs": {
+                            "LOCATION": {
+                              "block": {
+                                "type": "gamelab_location_picker",
+                                "id": "picker-36",
+                                "fields": {
+                                  "LOCATION": "{\"x\":200,\"y\":150}"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "gamelab_setProp",
+                              "id": "setProp-40",
+                              "fields": {
+                                "PROPERTY": "\"scale\""
+                              },
+                              "inputs": {
+                                "SPRITE": {
+                                  "block": {
+                                    "type": "gamelab_allSpritesWithAnimation",
+                                    "id": "allSpritesWithAnimation-38",
+                                    "fields": {
+                                      "ANIMATION": "\"@chosen\""
+                                    }
+                                  }
+                                },
+                                "VAL": {
+                                  "block": {
+                                    "type": "math_number",
+                                    "id": "number-39",
+                                    "fields": {
+                                      "NUM": 160
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "spritelab2_makeButton",
+                                  "id": "makeButton-42",
+                                  "fields": {
+                                    "COLOR": "green",
+                                    "LABEL": "Help Me!"
+                                  },
+                                  "inputs": {
+                                    "LOCATION": {
+                                      "block": {
+                                        "type": "gamelab_location_picker",
+                                        "id": "picker-41",
+                                        "fields": {
+                                          "LOCATION": "{\"x\":200,\"y\":265}"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "spritelab2_makeButton",
+                                      "id": "makeButton-44",
+                                      "fields": {
+                                        "COLOR": "gray",
+                                        "LABEL": "Back"
+                                      },
+                                      "inputs": {
+                                        "LOCATION": {
+                                          "block": {
+                                            "type": "gamelab_location_picker",
+                                            "id": "picker-43",
+                                            "fields": {
+                                              "LOCATION": "{\"x\":60,\"y\":40}"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenButtonClicked",
+                  "id": "whenButtonClicked-60",
+                  "fields": {
+                    "LABEL": "Help Me!"
+                  },
+                  "x": 20,
+                  "y": 380,
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_showText",
+                      "id": "showText-48",
+                      "fields": {
+                        "SIZE": "heading",
+                        "NAME": "result"
+                      },
+                      "inputs": {
+                        "TEXT": {
+                          "block": {
+                            "type": "text",
+                            "id": "text-46",
+                            "fields": {
+                              "TEXT": "Thinking..."
+                            }
+                          }
+                        },
+                        "LOCATION": {
+                          "block": {
+                            "type": "gamelab_location_picker",
+                            "id": "picker-47",
+                            "fields": {
+                              "LOCATION": "{\"x\":200,\"y\":300}"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_predictForSprite",
+                          "id": "predict-49",
+                          "fields": {
+                            "ANIMATION_NAME": "\"@chosen\""
+                          },
+                          "inputs": {
+                            "DO": {
+                              "block": {
+                                "type": "spritelab2_showText",
+                                "id": "showText-53",
+                                "fields": {
+                                  "SIZE": "heading",
+                                  "NAME": "result"
+                                },
+                                "inputs": {
+                                  "TEXT": {
+                                    "block": {
+                                      "type": "gamelab_textJoin",
+                                      "id": "textJoin-51",
+                                      "fields": {
+                                        "TEXT1": "This plant is "
+                                      },
+                                      "inputs": {
+                                        "TEXT2": {
+                                          "block": {
+                                            "type": "spritelab2_predictionOfSprite",
+                                            "id": "predictionOfSprite-50",
+                                            "fields": {
+                                              "ANIMATION_NAME": "\"@chosen\""
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "LOCATION": {
+                                    "block": {
+                                      "type": "gamelab_location_picker",
+                                      "id": "picker-52",
+                                      "fields": {
+                                        "LOCATION": "{\"x\":200,\"y\":300}"
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "spritelab2_askAi",
+                                    "id": "askAi-54",
+                                    "inputs": {
+                                      "QUESTION": {
+                                        "block": {
+                                          "type": "gamelab_textJoin",
+                                          "id": "textJoin-56",
+                                          "fields": {
+                                            "TEXT1": "Give next steps to care for a houseplant that is "
+                                          },
+                                          "inputs": {
+                                            "TEXT2": {
+                                              "block": {
+                                                "type": "spritelab2_predictionOfSprite",
+                                                "id": "predictionOfSprite-55",
+                                                "fields": {
+                                                  "ANIMATION_NAME": "\"@chosen\""
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "DO": {
+                                        "block": {
+                                          "type": "spritelab2_showText",
+                                          "id": "showText-59",
+                                          "fields": {
+                                            "SIZE": "small",
+                                            "NAME": "advice"
+                                          },
+                                          "inputs": {
+                                            "TEXT": {
+                                              "block": {
+                                                "type": "spritelab2_aiAnswer",
+                                                "id": "aiAnswer-57"
+                                              }
+                                            },
+                                            "LOCATION": {
+                                              "block": {
+                                                "type": "gamelab_location_picker",
+                                                "id": "picker-58",
+                                                "fields": {
+                                                  "LOCATION": "{\"x\":200,\"y\":355}"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenButtonClicked",
+                  "id": "whenButtonClicked-62",
+                  "fields": {
+                    "LABEL": "Back"
+                  },
+                  "x": 20,
+                  "y": 640,
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_goToScene",
+                      "id": "goToScene-61",
+                      "fields": {
+                        "SCENE": "camera"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "about",
+          "name": "About This App",
+          "source": {
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "whenRun-73",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_setBackground",
+                      "id": "setBackground-64",
+                      "inputs": {
+                        "COLOR": {
+                          "block": {
+                            "type": "colour_picker",
+                            "id": "picker-63",
+                            "fields": {
+                              "COLOUR": "#e8f5e9"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_showText",
+                          "id": "showText-67",
+                          "fields": {
+                            "SIZE": "heading",
+                            "NAME": "title"
+                          },
+                          "inputs": {
+                            "TEXT": {
+                              "block": {
+                                "type": "text",
+                                "id": "text-65",
+                                "fields": {
+                                  "TEXT": "About This App"
+                                }
+                              }
+                            },
+                            "LOCATION": {
+                              "block": {
+                                "type": "gamelab_location_picker",
+                                "id": "picker-66",
+                                "fields": {
+                                  "LOCATION": "{\"x\":200,\"y\":50}"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_showText",
+                              "id": "showText-70",
+                              "fields": {
+                                "SIZE": "body",
+                                "NAME": "about"
+                              },
+                              "inputs": {
+                                "TEXT": {
+                                  "block": {
+                                    "type": "text",
+                                    "id": "text-68",
+                                    "fields": {
+                                      "TEXT": "This app uses an AI model trained on plant data. The model looks at leaf spots, leaf color, drooping and soil moisture, and predicts if a plant is healthy or sick. It can be wrong, so check with a person who knows plants."
+                                    }
+                                  }
+                                },
+                                "LOCATION": {
+                                  "block": {
+                                    "type": "gamelab_location_picker",
+                                    "id": "picker-69",
+                                    "fields": {
+                                      "LOCATION": "{\"x\":200,\"y\":190}"
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "spritelab2_makeButton",
+                                  "id": "makeButton-72",
+                                  "fields": {
+                                    "COLOR": "gray",
+                                    "LABEL": "Back"
+                                  },
+                                  "inputs": {
+                                    "LOCATION": {
+                                      "block": {
+                                        "type": "gamelab_location_picker",
+                                        "id": "picker-71",
+                                        "fields": {
+                                          "LOCATION": "{\"x\":200,\"y\":340}"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenButtonClicked",
+                  "id": "whenButtonClicked-75",
+                  "fields": {
+                    "LABEL": "Back"
+                  },
+                  "x": 20,
+                  "y": 330,
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_goToScene",
+                      "id": "goToScene-74",
+                      "fields": {
+                        "SCENE": "home"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}]]></config>
+</GamelabJr>

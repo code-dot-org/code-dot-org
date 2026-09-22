@@ -1,9 +1,17 @@
 import category from '@cdo/apps/blockly/blockDefinitions/category';
 import custom_category from '@cdo/apps/blockly/blockDefinitions/custom_category';
-import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
+import {
+  BlockJson,
+  ExtendedBlock,
+  GeneratorFunction,
+} from '@cdo/apps/blockly/types';
 
+import aiAnswer from './aiAnswer';
+import askAi from './askAi';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
+import makeButton from './makeButton';
+import makeImageGrid from './makeImageGrid';
 import makePlatformBlocks from './makePlatformBlocks';
 import makePlatformPlayer from './makePlatformPlayer';
 import makeSpriteAtGrid from './makeSpriteAtGrid';
@@ -20,8 +28,12 @@ import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import setTraitOfSprite from './setTraitOfSprite';
+import showText from './showText';
+import spriteCalled from './spriteCalled';
 import thePlayer from './thePlayer';
 import traitOfSprite from './traitOfSprite';
+import whenButtonClicked from './whenButtonClicked';
+import whenImageClicked from './whenImageClicked';
 import whenRun from './whenRun';
 
 // Lab-owned blocks, defined client-side rather than in the DB block pool. A
@@ -30,6 +42,8 @@ const labBlockDefinitions: {
   definition: BlockJson;
   generator: GeneratorFunction;
   helperCode?: string;
+  /** Instance properties set on each block at init. */
+  extendedOptions?: Partial<ExtendedBlock>;
 }[] = [
   goToScene,
   playMusic,
@@ -52,6 +66,14 @@ const labBlockDefinitions: {
   traitOfSprite,
   predictForSprite,
   predictionOfSprite,
+  showText,
+  makeButton,
+  whenButtonClicked,
+  whenImageClicked,
+  makeImageGrid,
+  spriteCalled,
+  askAi,
+  aiAnswer,
   // Toolbox edit mode's category marker blocks.
   category,
   custom_category,
