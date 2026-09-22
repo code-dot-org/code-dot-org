@@ -2,55 +2,14 @@
 https://github.com/mljs/knn */
 
 import KNN from 'ml-knn';
-import type {Store} from 'redux';
 
-import {
-  gradeAccuracy,
-  getGradeOptions,
-  getPercentCorrect,
-} from '../helpers/accuracy';
 import {isRegression} from '../helpers/columnDetails';
-import {logMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
-import {
-  setHyperparameters,
-  setTrainedModel,
-  setPrediction,
-  setAccuracyCheckPredictedLabels,
-  setHistoricResult,
-} from '../redux';
-import type {TrainedModel} from '../types';
+import type {Hyperparameters, TrainedModel} from '../types';
 
-import type {Trainer} from './types';
+import BaseTrainer from './BaseTrainer';
 
-export interface OptimalModelDetails {
-  model: TrainedModel;
-  predictedLabels: (number | string)[];
-  kValue: number;
-}
-
-export default class KNNTrainer implements Trainer {
-  private readonly store: Store<RootState>;
-  private knn: KNN | undefined;
-
-  constructor(store: Store<RootState>) {
-    this.store = store;
-  }
-
-  startTraining(): void {
-    const state = this.store.getState();
-
-    const optimalModel = this.getOptimalModelDetails(state);
-
-    this.storeTrainedModel(optimalModel);
-
-    const trainedState = this.store.getState();
-
-    logMetric('train-model', trainedState);
-
-    this.storeHistoricResult(trainedState);
-  }
-
+export default class KNNTrainer extends BaseTrainer<number> {
   /*
     We modify algorithm hyperparameters (k) based on dataset size and type of
     machine learning in attempt to increase the liklihood of accurate
@@ -58,37 +17,16 @@ export default class KNNTrainer implements Trainer {
     the curriculum. For large classification datasets we try a variety of K
     values and select the one that yields the most accurate model.
   */
-  getOptimalModelDetails(state: RootState): OptimalModelDetails {
-    let bestModel: KNN | undefined;
-    let bestPredictedLabels: (number | string)[] = [];
-    let bestK = -1;
-    let bestAccuracy = -1;
-    const gradeOptions = getGradeOptions(state);
+  protected candidates(state: RootState): number[] {
+    return this.possibleKValues(state);
+  }
 
-    this.possibleKValues(state).forEach((kValue: number) => {
-      const model = new KNN(state.trainingExamples, state.trainingLabels, {
-        k: kValue,
-      });
-      const predictedLabels = model.predict(state.accuracyCheckExamples);
-      const {percentCorrect} = gradeAccuracy(
-        predictedLabels,
-        state.accuracyCheckLabels,
-        gradeOptions,
-      );
-      // "NaN" from an empty check set loses this, so no model is stored.
-      if (parseFloat(percentCorrect) > bestAccuracy) {
-        bestAccuracy = parseFloat(percentCorrect);
-        bestK = kValue;
-        bestModel = model;
-        bestPredictedLabels = predictedLabels;
-      }
-    });
-    this.knn = bestModel;
-    return {
-      model: bestModel!,
-      predictedLabels: bestPredictedLabels,
-      kValue: bestK,
-    };
+  protected buildModel(state: RootState, kValue: number): TrainedModel {
+    return new KNN(state.trainingExamples, state.trainingLabels, {k: kValue});
+  }
+
+  protected hyperparameters(kValue: number): Hyperparameters {
+    return {k: kValue};
   }
 
   possibleKValues(state: RootState): number[] {
@@ -132,40 +70,6 @@ export default class KNNTrainer implements Trainer {
     possibleKValues.push(oneThird);
     return possibleKValues.filter(
       (kValue: number) => kValue <= trainingExamplesSize,
-    );
-  }
-
-  batchPredict(accuracyCheckExamples: number[][]): (number | string)[] {
-    if (!this.knn) {
-      return [];
-    }
-
-    const predictedLabels = this.knn.predict(accuracyCheckExamples);
-    this.store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
-    return predictedLabels;
-  }
-
-  predict(testValues: number[]): void {
-    const state = this.store.getState();
-
-    if (state.trainedModel) {
-      const predictions = state.trainedModel.predict([testValues]);
-      this.store.dispatch(setPrediction(predictions[0]));
-    }
-  }
-
-  storeTrainedModel(optimalModel: OptimalModelDetails): void {
-    this.store.dispatch(setHyperparameters({k: optimalModel.kValue}));
-    this.store.dispatch(
-      setAccuracyCheckPredictedLabels(optimalModel.predictedLabels),
-    );
-    this.store.dispatch(setTrainedModel(optimalModel.model));
-  }
-
-  storeHistoricResult(state: RootState): void {
-    const accuracy = getPercentCorrect(state);
-    this.store.dispatch(
-      setHistoricResult(state.labelColumn!, state.selectedFeatures, accuracy),
     );
   }
 }

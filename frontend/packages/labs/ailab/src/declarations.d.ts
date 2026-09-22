@@ -25,8 +25,11 @@ declare module 'ml-cart' {
     gainThreshold?: number;
   }
 
-  // `predict` throws on a flat array — "Data must be a 2D array with at least
-  // one element" — so the type must not accept one.
+  /*
+    A flat array is never a single row: the classifier rejects it, and the
+    regression tree reads it as one column of many rows and returns a
+    prediction per element. Neither type accepts one.
+  */
   export class DecisionTreeClassifier {
     constructor(options?: DecisionTreeOptions);
     train(dataset: number[][], labels: number[]): void;

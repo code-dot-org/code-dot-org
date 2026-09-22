@@ -1,11 +1,10 @@
 /*
   The decision tree trainer, driven the way `train.test.js` drives KNN.
 
-  `train.init` still builds the KNN trainer for every level, because no level
-  can select a family yet. These tests therefore call `train.init` for what it
-  prepares — the feature number keys and the training/accuracy split — and then
-  drive a `DecisionTreeTrainer` over that store directly. The trainer becomes
-  reachable through `train` when `mode.trainer` lands.
+  No level can select a family yet, so `train.init` builds the KNN trainer for
+  every level. These tests call it for what it prepares — the feature number
+  keys and the training/accuracy split — then drive a `DecisionTreeTrainer`
+  over that store directly.
 
   The last 10% of each dataset below is reserved for the accuracy check, so the
   row order matters to every expected value here.
@@ -28,11 +27,6 @@ import rootReducer, {
 import train from '../../src/train';
 import DecisionTreeTrainer from '../../src/trainers/DecisionTreeTrainer';
 
-/*
-  Builds the store a level would have at the moment training starts, then
-  returns a trainer over it. `columns` gives each column's type, `label` names
-  the label, and every other column becomes a feature.
-*/
 function setUp(data, columns, label) {
   const store = createStore(rootReducer);
 
@@ -96,6 +90,18 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
     expect(predictWith(store, trainer, {legs: 0, tail: 'no'})).toBe('snake');
   });
 
+  test('batchPredict returns no labels before training', () => {
+    const {trainer} = setUp(
+      [
+        {animal: 'bird', legs: '2'},
+        {animal: 'dog', legs: '4'},
+      ],
+      {animal: CATEGORICAL, legs: NUMERICAL},
+      'animal',
+    );
+
+    expect(trainer.batchPredict([[2]])).toEqual([]);
+  });
 });
 
 describe('DecisionTreeTrainer: the maxDepth sweep', () => {
@@ -129,9 +135,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
-    // minNumSamples is pinned here rather than read from the trainer: the
-    // library default of 3 collapses a set this size to a single leaf.
-    expect(state.hyperparameters).toEqual({maxDepth: 1, minNumSamples: 1});
+    expect(state.hyperparameters).toEqual({maxDepth: 1, minNumSamples: 3});
   });
 
   /*
@@ -167,7 +171,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     trainer.startTraining();
 
     const state = store.getState();
-    expect(state.hyperparameters).toEqual({maxDepth: 2, minNumSamples: 1});
+    expect(state.hyperparameters).toEqual({maxDepth: 2, minNumSamples: 3});
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels,
     );
