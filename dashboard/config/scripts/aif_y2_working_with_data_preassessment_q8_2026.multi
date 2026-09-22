@@ -5,7 +5,7 @@ right 'What\'s the most expensive drink to make?'
 wrong 'What\'s the most popular drink?'
 wrong 'What\'s the average price of a drink?'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which question **can't** be answered by the given data?
