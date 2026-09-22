@@ -25,6 +25,8 @@ declare module 'ml-cart' {
     gainThreshold?: number;
   }
 
+  // `predict` throws on a flat array for classification trees. Regression
+  // trees accept one but return a prediction per feature, so both are 2D only.
   export class DecisionTreeClassifier {
     constructor(options?: DecisionTreeOptions);
     train(dataset: number[][], labels: number[]): void;
