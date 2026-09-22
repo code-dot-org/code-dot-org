@@ -26,7 +26,8 @@ export const meta = {
 //   jira         ticket for the PR bodies' Links section (default none).
 //   publish      false carves the local stacked branches and stops: no push, no PRs.
 //   force        true proceeds even when the status doc already lists the component as
-//                In Progress or Migrated (use to redo an interrupted run).
+//                In Progress or Migrated. It does not reuse branches: a redo after an
+//                interrupted run needs the old branches deleted or a new branchPrefix.
 //   maxParityAttempts / maxHealAttempts  loop budgets (default 3 each).
 //
 // Run from a checkout that has apps/node_modules, frontend/node_modules and apps/build.
@@ -34,18 +35,24 @@ export const meta = {
 // The working tree must have no tracked modifications: the run commits as it goes.
 const a = typeof args === 'string' ? {component: args.trim()} : args || {}
 const component = a.component
-if (!component) {
+// One directory name: the value is spliced into paths every agent reads and stages.
+if (!component || !/^[a-zA-Z][a-zA-Z0-9-]*$/.test(component)) {
   throw new Error(
-    'args must name one DSCO component directory, e.g. "dialog" or {component: "dialog"}',
+    'args must name one DSCO component directory (letters, digits, dashes), e.g. "dialog" or {component: "dialog"}',
   )
 }
+const positiveInt = (v, dflt, name) => {
+  if (v === undefined) return dflt
+  if (!Number.isInteger(v) || v < 1) throw new Error(`${name} must be a positive integer, got ${JSON.stringify(v)}`)
+  return v
+}
 const base = a.base || 'staging'
-const chunkSize = a.chunkSize || 25
+const chunkSize = positiveInt(a.chunkSize, 25, 'chunkSize')
 const jira = a.jira || ''
 const publish = a.publish !== false
 const force = !!a.force
-const maxParityAttempts = a.maxParityAttempts || 3
-const maxHealAttempts = a.maxHealAttempts || 3
+const maxParityAttempts = positiveInt(a.maxParityAttempts, 3, 'maxParityAttempts')
+const maxHealAttempts = positiveInt(a.maxHealAttempts, 3, 'maxHealAttempts')
 
 const LIB = 'frontend/packages/component-library'
 const LIB_SRC = `${LIB}/src`
@@ -105,7 +112,7 @@ phase('Scout')
 const SCOUT_SCHEMA = {
   type: 'object',
   required: [
-    'preflight', 'startRef', 'headOnBase', 'branchOwner', 'preexistingUntracked',
+    'preflight', 'startRef', 'headOnBase', 'branchOwner', 'existingBranches', 'preexistingUntracked',
     'alreadyMigrated', 'componentFiles', 'exports', 'dscoStories', 'approach',
     'muiComponents', 'propMap', 'consumers', 'uiTestFiles', 'codemodFeasible',
     'knownDeviations', 'risks',
@@ -130,6 +137,10 @@ const SCOUT_SCHEMA = {
     branchOwner: {
       type: 'string',
       description: "Namespace this developer uses for branches: the first segment of startRef when it contains '/', else the most common first segment among local branches that contain '/', else the first word of git config user.name in lowercase",
+    },
+    existingBranches: {
+      type: 'array', items: {type: 'string'},
+      description: `Local or origin branches matching */mui-${component}/* (git branch --list, git ls-remote --heads origin). A previous run left them; this run cannot reuse them.`,
     },
     preexistingUntracked: {
       type: 'array', items: {type: 'string'},
@@ -238,6 +249,8 @@ ${MIGRATION_RULES}
     - ${publish ? 'gh auth status succeeds and origin is the code-dot-org remote (publish is on).' : 'publish is off; skip the gh check.'}
   Also record startRef, branchOwner, and whether HEAD is an ancestor of origin/${base}
   (git fetch origin ${base} first; git merge-base --is-ancestor HEAD origin/${base}).
+  List existingBranches: git branch --list '*/mui-${component}/*' and
+  git ls-remote --heads origin '*/mui-${component}/*'.
 
 ─── STEP 1 — The component ────────────────────────────────────────────────────
   Read every file under ${COMPONENT_DIR}: sources, scss modules, README, stories, tests.
@@ -251,10 +264,13 @@ ${MIGRATION_RULES}
   entry per prop, classified. Be exact about what a consumer loses (kind: drop).
 
 ─── STEP 3 — Consumers ────────────────────────────────────────────────────────
-  grep for '@code-dot-org/component-library/${component}' across apps/src, apps/test,
-  frontend/packages, frontend/apps, dashboard (exclude ${LIB} itself), AND for relative
-  imports of ${COMPONENT_DIR} from sibling components inside ${LIB_SRC} (these are the
-  inside-out consumers; kind component-library-internal). For each apps consumer, find
+  grep for BOTH import forms everywhere: the package path
+  '@code-dot-org/component-library/${component}' and relative paths into ${COMPONENT_DIR}
+  (../${component}, ../../${component}, ./${component}). Search apps/src, apps/test,
+  frontend/packages, frontend/apps, dashboard, AND ${LIB_SRC} itself; exclude only
+  ${COMPONENT_DIR}. Sibling components, their stories and tests inside ${LIB_SRC} use
+  either form (snackbar's story imports '@code-dot-org/component-library/alert'); they
+  are the inside-out consumers, kind component-library-internal. For each apps consumer, find
   its unit test under apps/test/unit by the mirrored path or by grep for its basename.
   dashboard/ has no JS consumers; its exposure is UI tests. For uiTestFiles, grep
   dashboard/test/ui/features and frontend/packages/e2e-tests/tests for the DSCO class
@@ -277,6 +293,14 @@ if (!scout.preflight.ok) {
 if (scout.alreadyMigrated && !force) {
   log(`${component} is already In Progress or Migrated per ${STATUS_DOC}. Pass force: true to redo.`)
   return {component, status: 'already-migrated'}
+}
+// Branches are created with checkout -b and pushed without --force, so a leftover
+// from an earlier run would stop the carve halfway. Fail before any file changes.
+if (scout.existingBranches.length && !(a.branchPrefix && !scout.existingBranches.some(b => b.includes(a.branchPrefix)))) {
+  throw new Error(
+    `Branches from an earlier run exist: ${scout.existingBranches.join(', ')}. ` +
+      'Delete them (local and origin) or pass a different branchPrefix.',
+  )
 }
 if (!scout.headOnBase) {
   log(`WARNING: HEAD (${scout.startRef}) is not on origin/${base}; the first PR will carry unrelated commits.`)
@@ -302,7 +326,10 @@ const slugOf = group =>
     .replace(/[^a-zA-Z0-9]+/g, '-')
     .toLowerCase()
 
-const chunkConsumers = (consumers, size) => {
+const chunkConsumers = (rawConsumers, size) => {
+  // Scout may list one file twice (two import forms); a file belongs to one chunk.
+  const seen = new Set()
+  const consumers = rawConsumers.filter(c => (seen.has(c.file) ? false : seen.add(c.file)))
   const groups = new Map()
   for (const c of consumers) {
     const g = groupOf(c.file)
@@ -332,12 +359,20 @@ const chunkConsumers = (consumers, size) => {
     cur.consumers.push(...items)
   }
   flush()
+  // Chunk agents edit concurrently, so a test shared by two consumers must belong to
+  // exactly one chunk: the first that claims it.
+  const claimed = new Set()
   for (const ch of chunks) {
     if (!ch.slug) {
       const names = ch.groups.map(slugOf)
       ch.slug = names.length > 2 ? `${names.slice(0, 2).join('-')}-and-${names.length - 2}-more` : names.join('-')
     }
-    ch.files = [...new Set(ch.consumers.flatMap(c => [c.file, ...(c.testFiles || [])]))]
+    ch.files = []
+    for (const f of ch.consumers.flatMap(c => [c.file, ...(c.testFiles || [])])) {
+      if (claimed.has(f)) continue
+      claimed.add(f)
+      ch.files.push(f)
+    }
   }
   return chunks
 }
@@ -354,9 +389,13 @@ phase('Build')
 
 const BUILD_SCHEMA = {
   type: 'object',
-  required: ['filesTouched', 'muiStories', 'codemodCommand', 'checks', 'allChecksPass', 'notes'],
+  required: ['filesTouched', 'legacyExports', 'muiStories', 'codemodCommand', 'checks', 'allChecksPass', 'notes'],
   properties: {
     filesTouched: {type: 'array', items: {type: 'string'}},
+    legacyExports: {
+      type: 'array', items: {type: 'string'},
+      description: `Names exported from ${COMPONENT_DIR}/index.ts that are now deprecated DSCO code (the wrapper's own exports are NOT listed). Verify greps consumers for these.`,
+    },
     muiStories: {
       type: 'array',
       description: 'One MUI story per DSCO story, same visual state',
@@ -456,8 +495,8 @@ Build notes: ${build.notes}
 
 Re-run every check (yarn test / typecheck / lint / build in ${LIB}; yarn build in
 ${STORYBOOK}) and report. filesTouched = the build's list plus anything you changed.
-muiStories and codemodCommand: copy from the build unless you changed them:
-${JSON.stringify({muiStories: build.muiStories, codemodCommand: build.codemodCommand})}`,
+muiStories, legacyExports and codemodCommand: copy from the build unless you changed them:
+${JSON.stringify({muiStories: build.muiStories, legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
     {schema: BUILD_SCHEMA, label: 'build-repair', phase: 'Build'},
   )
   if (repaired) build = repaired
@@ -711,9 +750,13 @@ phase('Verify')
 
 const VERIFY_SCHEMA = {
   type: 'object',
-  required: ['pass', 'checks', 'failures', 'filesTouched'],
+  required: ['pass', 'checks', 'failures', 'remainingLegacyImports', 'filesTouched'],
   properties: {
     pass: {type: 'boolean'},
+    remainingLegacyImports: {
+      type: 'array', items: {type: 'string'},
+      description: `Files outside ${COMPONENT_DIR} that still import a legacy export of the component, from a fresh repo-wide grep (not from the chunk reports)`,
+    },
     checks: {
       type: 'object',
       required: ['appsTypecheck', 'appsUnit', 'appsLint', 'libTests', 'libTypecheck', 'libBuild', 'frontendPackages', 'storybookBuild', 'uiTestSelectors'],
@@ -771,6 +814,12 @@ UI-TEST FILES TO AUDIT: ${JSON.stringify(scout.uiTestFiles)}
    the MUI DOM by reading the migrated consumer and the MUI component's rendered
    structure (MUI class names via *Classes exports are stable; prefer role/name or
    data-testid). Report which files you changed in filesTouched. Do not run Cucumber.
+7. Import audit, independent of what the chunk agents reported: grep the whole repo
+   (apps/src, apps/test, frontend, dashboard, ${LIB_SRC}; exclude ${COMPONENT_DIR}) for
+   both import forms of the component (package path and relative) and list every file
+   whose named imports include one of these legacy exports:
+   ${JSON.stringify(build.legacyExports)}. That list is remainingLegacyImports. It does
+   not affect pass; the Docs phase uses it to decide whether the component is Migrated.
 
 pass is true only when every check is clean. For failures, name the files most likely
 at fault so a healer can start there.`
@@ -809,7 +858,13 @@ const verifyStatus = verify.pass ? 'green' : 'failing'
 // ── Phase 6: Docs ────────────────────────────────────────────────────────────
 phase('Docs')
 
-const fullyMigrated = allSkippedFiles.length === 0 && skippedChunks.length === 0
+// Agents' own reports are necessary but not sufficient: the Verify grep is the
+// evidence that no legacy import is left.
+const fullyMigrated =
+  allSkippedFiles.length === 0 && skippedChunks.length === 0 && verify.remainingLegacyImports.length === 0
+if (!fullyMigrated && verify.remainingLegacyImports.length) {
+  log(`${verify.remainingLegacyImports.length} file(s) still import the legacy ${component}: ${verify.remainingLegacyImports.join(', ')}`)
+}
 const docs = await agent(
   `You update the DOCS for the MUI "${component}" migration. Docs only; no component or
 consumer code.
@@ -820,6 +875,7 @@ STATE
   approach:         ${scout.approach}; MUI ${scout.muiComponents.join(', ')}
   codemod:          ${build.codemodCommand || 'none'}
   consumers total:  ${scout.consumers.length}; left on DSCO: ${JSON.stringify(allSkippedFiles)}
+  legacy imports still found by grep: ${JSON.stringify(verify.remainingLegacyImports)}
   fully migrated:   ${fullyMigrated}
   parity:           ${parityStatus}; known Figma drift: ${scout.knownDeviations}
   dropped props:    ${JSON.stringify(dropped)}
@@ -848,15 +904,16 @@ const docsTouched = docs ? docs.filesTouched : []
 phase('Publish')
 
 // Heal and Verify edits go to the chunk that owns the file, else to the chunk whose
-// area contains it, else to the design-system fixup, else to the last chunk.
+// area contains it (this keeps component-library-internal consumers out of the
+// design-system fixup), else to the design-system fixup, else to the last chunk.
 const ownerOf = file => {
   for (let i = 0; i < chunks.length; i++) {
     const touched = migrated[i].result && migrated[i].result.filesTouched.includes(file)
     if (chunks[i].files.includes(file) || touched) return i
   }
-  if (file.startsWith(LIB) || file.startsWith(STORYBOOK)) return 'ds'
   const g = groupOf(file)
   for (let i = 0; i < chunks.length; i++) if (chunks[i].groups.includes(g)) return i
+  if (file.startsWith(LIB) || file.startsWith(STORYBOOK)) return 'ds'
   return chunks.length ? chunks.length - 1 : 'ds'
 }
 const extraFiles = [...new Set([...healTouched, ...touchedByMigrate])].filter(f => !chunks.some(c => c.files.includes(f)))
@@ -910,9 +967,11 @@ NEVER stage: ${JSON.stringify(scout.preexistingUntracked)}, anything under ${STO
 or any *.png outside the screenshots branch step.
 
 ─── 1. Design-system fixups (still on ${DS_BRANCH}) ─────────────────────────────
-  Files that changed under ${LIB} or ${STORYBOOK} after the first commit:
-  ${JSON.stringify(dsFixups)} plus anything git status shows there. If any exist:
-  git add -- <them>; commit "[Design System] MUI ${componentTitle}: fixups from the consumer sweep" with the trailer
+  Exactly these files, and nothing else under ${LIB} (the docs and the internal
+  consumer chunks also changed files there; those belong to later branches):
+  ${JSON.stringify(dsFixups)}
+  If the list is non-empty: git add -- <them>; commit
+  "[Design System] MUI ${componentTitle}: fixups from the consumer sweep" with the trailer
   ${COMMIT_TRAILER}
 
 ─── 2. Consumer commits, one branch each, stacked ───────────────────────────────
