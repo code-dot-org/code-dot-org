@@ -1,11 +1,13 @@
-// Sizes a placeholder block (blockDefinitions/placeholder.ts) like the block
-// it stands in for: that block is built on the workspace, measured and
-// disposed with events off, so nothing paints or saves.
+// What a placeholder block (blockDefinitions/placeholder.ts) does on the
+// workspace: its dashed outline, and its size, matched to the block it
+// stands in for by building that block, measuring it and disposing it with
+// events off, so nothing paints or saves.
 
 import * as BlocklyCore from 'blockly/core';
 
 import {
   PLACEHOLDER_BLOCK_TYPE,
+  PLACEHOLDER_CLASS,
   PLACEHOLDER_SPACER,
   PLACEHOLDER_SPACER_FIELD,
   PlaceholderBlock,
@@ -34,7 +36,7 @@ function measureBlock(
 }
 
 /** Grow a placeholder's spacer so the block matches its `like`'s size. */
-export function sizeLike(block: BlocklyCore.BlockSvg & PlaceholderBlock) {
+function sizeLike(block: BlocklyCore.BlockSvg & PlaceholderBlock) {
   if (!block.like || block.disposed || !block.workspace.rendered) {
     return;
   }
@@ -64,4 +66,46 @@ export function sizeLike(block: BlocklyCore.BlockSvg & PlaceholderBlock) {
     PLACEHOLDER_SPACER_FIELD
   );
   block.render();
+}
+
+let placeholderCount = 0;
+
+// Blockly draws a shadow with no stroke; the class restores one, dashed
+// (cdoCss.ts), clipped to the path's inside so it never crosses the block
+// above. Sizing builds probe blocks, so it waits for a microtask: never
+// inside the deserialization that is building this one.
+export function placeholderOutline(this: BlocklyCore.Block) {
+  // Headless blocks (code generation, tests) have no SVG to draw.
+  if (!(this instanceof BlocklyCore.BlockSvg)) {
+    return;
+  }
+  const initSvg = this.initSvg.bind(this);
+  const dispose = this.dispose.bind(this);
+  let clip: SVGClipPathElement | null = null;
+  this.initSvg = () => {
+    initSvg();
+    this.getSvgRoot().classList.add(PLACEHOLDER_CLASS);
+    const defs = this.workspace.getParentSvg().querySelector('defs');
+    if (clip || !defs) {
+      return;
+    }
+    const id = `spritelab2-placeholder-${placeholderCount++}`;
+    const path = this.pathObject.svgPath;
+    path.setAttribute('id', `${id}-path`);
+    clip = BlocklyCore.utils.dom.createSvgElement(
+      BlocklyCore.utils.Svg.CLIPPATH,
+      {id},
+      defs
+    );
+    BlocklyCore.utils.dom.createSvgElement('use', {href: `#${id}-path`}, clip);
+    path.setAttribute('clip-path', `url(#${id})`);
+    queueMicrotask(() =>
+      sizeLike(this as BlocklyCore.BlockSvg & PlaceholderBlock)
+    );
+  };
+  this.dispose = (...args) => {
+    clip?.remove();
+    clip = null;
+    dispose(...args);
+  };
 }

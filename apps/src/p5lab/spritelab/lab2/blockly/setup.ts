@@ -12,10 +12,8 @@ import {
   SceneDropdown,
 } from './blockDefinitions/goToScene';
 import {
-  PLACEHOLDER_CLASS,
   PLACEHOLDER_MUTATOR,
   PLACEHOLDER_OUTLINE_EXTENSION,
-  PlaceholderBlock,
   placeholderMutator,
 } from './blockDefinitions/placeholder';
 import {
@@ -39,7 +37,7 @@ import {
   FIELD_MUSIC_PROJECT_DROPDOWN_TYPE,
   MusicProjectDropdown,
 } from './musicProjectDropdown';
-import {sizeLike} from './placeholders';
+import {placeholderOutline} from './placeholders';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -99,48 +97,6 @@ function installLabBlocks(): void {
     };
     Blockly.getGenerator().forBlock[definition.type] = generator;
   }
-}
-
-let placeholderCount = 0;
-
-// Blockly draws a shadow with no stroke; the class restores one, dashed
-// (cdoCss.ts), clipped to the path's inside so it never crosses the block
-// above. Sizing builds probe blocks, so it waits for a microtask: never
-// inside the deserialization that is building this one.
-function placeholderOutline(this: BlocklyCore.Block) {
-  // Headless blocks (code generation, tests) have no SVG to draw.
-  if (!(this instanceof BlocklyCore.BlockSvg)) {
-    return;
-  }
-  const initSvg = this.initSvg.bind(this);
-  const dispose = this.dispose.bind(this);
-  let clip: SVGClipPathElement | null = null;
-  this.initSvg = () => {
-    initSvg();
-    this.getSvgRoot().classList.add(PLACEHOLDER_CLASS);
-    const defs = this.workspace.getParentSvg().querySelector('defs');
-    if (clip || !defs) {
-      return;
-    }
-    const id = `spritelab2-placeholder-${placeholderCount++}`;
-    const path = this.pathObject.svgPath;
-    path.setAttribute('id', `${id}-path`);
-    clip = BlocklyCore.utils.dom.createSvgElement(
-      BlocklyCore.utils.Svg.CLIPPATH,
-      {id},
-      defs
-    );
-    BlocklyCore.utils.dom.createSvgElement('use', {href: `#${id}-path`}, clip);
-    path.setAttribute('clip-path', `url(#${id})`);
-    queueMicrotask(() =>
-      sizeLike(this as BlocklyCore.BlockSvg & PlaceholderBlock)
-    );
-  };
-  this.dispose = (...args) => {
-    clip?.remove();
-    clip = null;
-    dispose(...args);
-  };
 }
 
 /**
