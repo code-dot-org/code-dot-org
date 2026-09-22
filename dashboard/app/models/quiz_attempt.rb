@@ -65,23 +65,6 @@ class QuizAttempt < ApplicationRecord
     level.max_attempts.blank? || attempt_number < level.max_attempts.to_i
   end
 
-  # Per-question saved answers while still in progress - nil once submitted.
-  def saved_choices
-    return nil if submitted_at.present?
-
-    responses = quiz_question_responses
-    if level
-      in_quiz_question_ids = QuizQuestionPlacement.where(level_id: level_id).select(:quiz_question_id)
-      responses = responses.where(quiz_question_id: in_quiz_question_ids)
-    end
-
-    responses.filter_map do |response|
-      selected_choice_id = response.response_data['selectedChoiceId']
-      next if selected_choice_id.blank?
-      {quiz_question_id: response.quiz_question_id, selected_choice_id: selected_choice_id}
-    end
-  end
-
   # Per-question review data, once submitted - nil beforehand.
   # One entry per response recorded for this attempt - a skipped question
   # still has one, since the client posts a response for every question on

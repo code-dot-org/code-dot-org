@@ -110,13 +110,6 @@ class QuizAttemptsController < ApplicationController
           explanation: result[:explanation],
           correctChoiceId: result[:correct_choice_id]
         }
-      end,
-      # nil once submitted - use questionResults instead.
-      savedChoices: attempt.saved_choices&.map do |choice|
-        {
-          quizQuestionId: choice[:quiz_question_id],
-          selectedChoiceId: choice[:selected_choice_id]
-        }
       end
     }
   end
