@@ -46,7 +46,7 @@
       }
     ],
     "long_instructions": "# Add your second character\nGive them a platform: place them on top of some blocks.",
-    "header_label": "Platformer"
+    "header_label": "Let's make a platformer"
   }
 }]]></config>
 </GamelabJr>

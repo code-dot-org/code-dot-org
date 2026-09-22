@@ -58,7 +58,7 @@
       }
     ],
     "long_instructions": "# Make this world yours\nPaint platforms onto the grid in the World tab - add blocks, erase blocks, build new paths and towers. Then press **Play** to try your layout.",
-    "header_label": "Platformer"
+    "header_label": "Let's make a platformer"
   }
 }]]></config>
 </GamelabJr>

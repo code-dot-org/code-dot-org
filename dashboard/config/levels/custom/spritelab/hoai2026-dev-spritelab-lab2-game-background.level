@@ -39,7 +39,7 @@
       }
     ],
     "long_instructions": "# Make a background for your game\nYour platformer needs scenery behind it. Pick the words for a place and press **Generate**.",
-    "header_label": "Platformer"
+    "header_label": "Let's make a platformer"
   }
 }]]></config>
 </GamelabJr>
