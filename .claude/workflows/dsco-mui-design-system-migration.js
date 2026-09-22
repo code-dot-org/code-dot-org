@@ -20,7 +20,8 @@ export const meta = {
 //             args: {component: 'dialog', jira: 'RE-190', chunkSize: 25, publish: false}})
 //
 //   component    required. A family that shares a base (the dropdowns) is one run.
-//   base         branch the first PR targets (default 'staging'). HEAD should sit on it.
+//   base         branch the first PR targets (default 'staging'). HEAD must be an ancestor
+//                of origin/<base>; Scout aborts otherwise.
 //   branchPrefix branch namespace (default '<first segment of current branch>/mui-<component>').
 //   chunkSize    consumer files per PR, roughly (default 25).
 //   jira         ticket for the PR bodies' Links section (default none).
@@ -46,7 +47,16 @@ const positiveInt = (v, dflt, name) => {
   if (!Number.isInteger(v) || v < 1) throw new Error(`${name} must be a positive integer, got ${JSON.stringify(v)}`)
   return v
 }
-const base = a.base || 'staging'
+// Both end up inside git and gh commands an agent types, so they must be plain ref names.
+const refName = (v, name) => {
+  if (v === undefined) return undefined
+  if (typeof v !== 'string' || !/^[A-Za-z0-9][A-Za-z0-9._\/-]*$/.test(v) || v.includes('..') || v.endsWith('/')) {
+    throw new Error(`${name} must be a plain git ref name, got ${JSON.stringify(v)}`)
+  }
+  return v
+}
+const base = refName(a.base, 'base') || 'staging'
+const branchPrefixArg = refName(a.branchPrefix, 'branchPrefix')
 const chunkSize = positiveInt(a.chunkSize, 25, 'chunkSize')
 const jira = a.jira || ''
 const publish = a.publish !== false
@@ -296,14 +306,17 @@ if (scout.alreadyMigrated && !force) {
 }
 // Branches are created with checkout -b and pushed without --force, so a leftover
 // from an earlier run would stop the carve halfway. Fail before any file changes.
-if (scout.existingBranches.length && !(a.branchPrefix && !scout.existingBranches.some(b => b.includes(a.branchPrefix)))) {
+if (scout.existingBranches.length && !(branchPrefixArg && !scout.existingBranches.some(b => b.includes(branchPrefixArg)))) {
   throw new Error(
     `Branches from an earlier run exist: ${scout.existingBranches.join(', ')}. ` +
       'Delete them (local and origin) or pass a different branchPrefix.',
   )
 }
+// The stack is built on HEAD, so anything not on the base branch would ride into PR 1.
 if (!scout.headOnBase) {
-  log(`WARNING: HEAD (${scout.startRef}) is not on origin/${base}; the first PR will carry unrelated commits.`)
+  throw new Error(
+    `HEAD (${scout.startRef}) is not an ancestor of origin/${base}. Check out ${base} (or pass base) before running.`,
+  )
 }
 
 // Chunks are keyed by the consumer's home directory so one PR reads as one area.
@@ -394,7 +407,7 @@ const BUILD_SCHEMA = {
     filesTouched: {type: 'array', items: {type: 'string'}},
     legacyExports: {
       type: 'array', items: {type: 'string'},
-      description: `Names exported from ${COMPONENT_DIR}/index.ts that are now deprecated DSCO code (the wrapper's own exports are NOT listed). Verify greps consumers for these.`,
+      description: `Names exported from ${COMPONENT_DIR}/index.ts that are now deprecated DSCO code (the wrapper's own exports are NOT listed). Include the literal "default" when the default export is still the legacy component. Verify greps consumers for these.`,
     },
     muiStories: {
       type: 'array',
@@ -627,7 +640,9 @@ for (const pref of [{theme: 'Light', dir: 'ltr'}, {theme: 'Dark', dir: 'ltr'}]) 
 // ── Commit the design-system PR before consumers start ──────────────────────
 // Consumers build on top of this commit, so it is carved now, while the only changes in
 // the tree are the design-system ones.
-const branchPrefix = a.branchPrefix || `${scout.branchOwner || 'mui'}/mui-${component}`
+// branchOwner is agent output and lands in a branch name: accept only a plain segment.
+const owner = /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(scout.branchOwner || '') ? scout.branchOwner : 'mui'
+const branchPrefix = branchPrefixArg || `${owner}/mui-${component}`
 const DS_BRANCH = `${branchPrefix}/1-design-system`
 const componentTitle = component.charAt(0).toUpperCase() + component.slice(1)
 
@@ -817,7 +832,9 @@ UI-TEST FILES TO AUDIT: ${JSON.stringify(scout.uiTestFiles)}
 7. Import audit, independent of what the chunk agents reported: grep the whole repo
    (apps/src, apps/test, frontend, dashboard, ${LIB_SRC}; exclude ${COMPONENT_DIR}) for
    both import forms of the component (package path and relative) and list every file
-   whose named imports include one of these legacy exports:
+   whose named imports include one of these legacy exports, or whose DEFAULT import
+   (import X from '...', or require().default) hits a path whose default export is
+   legacy ("default" appears in the list):
    ${JSON.stringify(build.legacyExports)}. That list is remainingLegacyImports. It does
    not affect pass; the Docs phase uses it to decide whether the component is Migrated.
 
