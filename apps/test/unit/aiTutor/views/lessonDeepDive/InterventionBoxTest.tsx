@@ -7,6 +7,11 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 
+jest.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {}};
+  return {useApiClient: () => client};
+});
+
 // The modality content components pull in heavy dependencies (audio, video,
 // chat, redux) that are irrelevant to the navigation behavior under test, so
 // each is replaced with a lightweight marker whose text we can assert on.
