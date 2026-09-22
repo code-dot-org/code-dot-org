@@ -26,15 +26,13 @@ _GROUPS = {
   SceneActionType.PLAY_SOUND: "Sound",
 }
 
-# How each group counts repeats. A shape name takes an s; a sound's name is a
-# file or a description, so the count goes after it.
+# How each group counts repeats; a sound's name cannot simply take an s.
 _COUNT_FORMS = {
   "Shapes": "{count} {phrase}s",
   "Sound": "{phrase} {count} times",
 }
 
-# Groups the renderer leaves on the canvas once drawn. Sound is not one: it
-# plays during its frame and is gone.
+# Groups that stay on the canvas; a sound plays with its frame and is gone.
 _PERSISTENT = frozenset({"Shapes", "Images", "Text"})
 
 # Shapes drawn with a fill and an outline, either of which may be removed.
@@ -119,8 +117,7 @@ def _transcript(frames, durations):
 def _frame_lines(frame, onscreen=False):
   """The frame's lines, and whether any drawing is left on screen after it.
 
-  The renderer keeps one canvas, so a drawing stays until a clear. A frame that
-  adds to a picture already on screen says "Added" rather than repeating it.
+  The renderer keeps one canvas, so a drawing stays until a clear.
   """
   groups = {label: [] for label in dict.fromkeys(_GROUPS.values())}
   lines = []
