@@ -46,7 +46,7 @@
       }
     ],
     "long_instructions": "# Put your treasure in the world\nPick your treasure from the palette and place it somewhere your player can reach.",
-    "header_label": "Let's make a platformer"
+    "header_label": "Make a platformer"
   }
 }]]></config>
 </GamelabJr>
