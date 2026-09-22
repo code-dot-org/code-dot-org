@@ -101,8 +101,8 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
 describe('DecisionTreeTrainer: the maxDepth sweep', () => {
   /*
     One feature separates the label completely, so a depth of 1 is already
-    perfect. Every candidate with a greater depth ties with it. The sweep must
-    keep the shallowest of them.
+    perfect. Every candidate with a greater depth ties with it. The sweep must keep the 
+    shallowest of them.
   */
   test('a tie across depths stores the shallowest tree', () => {
     const data = [
