@@ -1,0 +1,40 @@
+// The tour's pointer: Music Lab's callout arrow, bobbing, fixed to the
+// screen position of what it points at.
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(8px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
+
+%arrow {
+  position: fixed;
+  // Over the guide and the scene menu.
+  z-index: 1200;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+}
+
+.arrowUp {
+  @extend %arrow;
+
+  transform: translateX(-50%);
+}
+
+.arrowLeft {
+  @extend %arrow;
+
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.arrowImage {
+  display: block;
+  width: 32px;
+  animation: bob 0.9s ease-in-out infinite;
+}

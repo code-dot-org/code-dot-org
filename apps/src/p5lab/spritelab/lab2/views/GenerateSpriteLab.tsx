@@ -18,6 +18,8 @@ interface GenerateSpriteLabProps {
   showContinue?: boolean;
   /** For the Continue button's progression handling. */
   levelProperties: SpriteLab2LevelProperties;
+  /** Shown in place of the instructions and Continue (the welcome tour). */
+  override?: React.ReactNode;
 }
 
 /**
@@ -29,6 +31,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   instructions,
   showContinue,
   levelProperties,
+  override,
 }) => {
   // Collapsed hides the instructions but keeps Continue reachable.
   const [collapsed, setCollapsed] = useState(false);
@@ -59,8 +62,9 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     />
   );
 
-  // Freeplay's guide sits over a full lab; the guided levels need theirs open.
-  const collapsible = isFreeplayMode(levelMode);
+  // Freeplay's guide sits over a full lab; the guided levels need theirs
+  // open, and so does a tour.
+  const collapsible = isFreeplayMode(levelMode) && !override;
 
   return (
     <Guide
@@ -77,10 +81,11 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
         style={bodyHeight === undefined ? undefined : {height: bodyHeight}}
       >
         <div ref={bodyRef} className={moduleStyles.guideBody}>
-          {collapsed
-            ? null
-            : instructionsBlock || 'Build a program, then press Run.'}
-          {showContinue && (
+          {override ??
+            (collapsed
+              ? null
+              : instructionsBlock || 'Build a program, then press Run.')}
+          {!override && showContinue && (
             <div className={moduleStyles.guideContinue}>
               <NavigationArea
                 levelProperties={levelProperties}

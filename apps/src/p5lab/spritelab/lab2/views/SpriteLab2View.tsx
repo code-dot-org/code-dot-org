@@ -117,12 +117,16 @@ import {isPointerClick} from './blurAfterPointerClick';
 import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
+import TourArrow from './components/TourArrow';
+import {tourVariantFromParams} from './freeplayTour';
+import FreeplayTourGuide from './FreeplayTourGuide';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import ScenesGallery from './ScenesGallery';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import useFreeplayTour from './useFreeplayTour';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -1490,6 +1494,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getScenes,
   });
 
+  // The welcome tour, on freeplay, while ?tour= asks for one.
+  const tourVariant = useMemo(
+    () =>
+      isFreeplayMode(levelProperties.levelMode)
+        ? tourVariantFromParams()
+        : undefined,
+    [levelProperties.levelMode]
+  );
+  const tour = useFreeplayTour({
+    variant: tourVariant,
+    scenes,
+    selectScene: sceneEditing.selectScene,
+  });
+
   const handleTabChange = useCallback(
     (tab: Tab) => {
       // Entering Play from the tab button starts from the beginning.
@@ -1613,6 +1631,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     defaultStyle: DEFAULT_IMAGE_STYLE,
     paintDisabled: !isFreeplayMode(levelProperties.levelMode),
   };
+
+  const floatingGuide = !!levelProperties.levelMode && (
+    <GenerateSpriteLab
+      levelMode={levelProperties.levelMode}
+      instructions={guide.text}
+      showContinue={guide.showContinue}
+      levelProperties={levelProperties}
+      override={tour && <FreeplayTourGuide tour={tour} />}
+    />
+  );
 
   return (
     <div className={moduleStyles.labRow}>
@@ -1783,13 +1811,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
           {/* Floating guide, when the level asks for it; it follows the
           student across every tab. */}
-          {!!levelProperties.levelMode && (
-            <GenerateSpriteLab
-              levelMode={levelProperties.levelMode}
-              instructions={guide.text}
-              showContinue={guide.showContinue}
-              levelProperties={levelProperties}
-            />
+          {/* The tour blacks out the lab below the bar until its first view,
+          and points at what each line describes. */}
+          {tour?.coverBlack && <div className={moduleStyles.tourCover} />}
+          {tour?.arrowTarget && <TourArrow target={tour.arrowTarget} />}
+          {tour ? (
+            <div className={moduleStyles.tourLayer}>{floatingGuide}</div>
+          ) : (
+            floatingGuide
           )}
         </TabShell>
       )}

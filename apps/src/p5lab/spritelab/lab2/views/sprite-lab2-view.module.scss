@@ -601,6 +601,90 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// --- Freeplay welcome tour ---
+
+// Everything below the bar, blacked out. Blockly's toolbox is at 70.
+.tourCover {
+  position: absolute;
+  inset: 0;
+  z-index: 71;
+  background: #000;
+}
+
+// Lifts the guide over the cover without changing where it sits: the layer
+// spans the same box the guide would otherwise position against.
+.tourLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 72;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
+}
+
+.tourGuide {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tourText {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.tourActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tourList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+}
+
+// A line of the list variant: reads as text, acts as a button.
+.tourLine {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  box-shadow: none;
+  color: var(--text-neutral-primary);
+  font-size: inherit;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-neutral-tertiary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+  }
+}
+
+.tourLineActive {
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+
+  &:hover {
+    background: var(--background-brand-teal-primary);
+  }
+}
+
 // The new-scene dialog: name above the type choice.
 .newSceneFields {
   display: flex;
@@ -644,6 +728,11 @@ $tab-segment-height: $tab-item-height - 2px;
     justify-content: center;
     min-width: 24px;
     min-height: 24px;
+  }
+
+  // The tour's list lines carry aria-pressed too; they stay left-aligned.
+  .tourLine[aria-pressed] {
+    justify-content: flex-start;
   }
 }
 
