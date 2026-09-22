@@ -9,15 +9,20 @@ $anim-duration: 220ms;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 460px;
   width: 100%;
+  max-width: 380px;
+  flex: 1;
+  min-height: 0;
+  margin: 0 auto;
   box-sizing: border-box;
+  overflow: hidden;
   color: #fff;
 }
 
 .overline {
   font-size: 14px;
   font-weight: 600;
+  line-height: 22px;
   letter-spacing: 0.84px;
   text-transform: uppercase;
   color: #fff;
@@ -32,7 +37,7 @@ $anim-duration: 220ms;
 }
 
 .heading {
-  font-family: var(--font-family-main) !important;
+  font-family: var(--font-family-heading) !important;
   font-size: 38px !important;
   font-weight: 700 !important;
   line-height: 40px !important;
@@ -52,12 +57,12 @@ $anim-duration: 220ms;
 // ── Content area (poll card + dots) ─────────────────────────────────────────
 
 .content {
-  flex: 1;
+  flex: 1 0 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 20px 0;
-  min-height: 0;
+  min-height: 1px;
 }
 
 .pollWrapper {
@@ -71,6 +76,8 @@ $anim-duration: 220ms;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 // ── Objective reflection content (rendered inside pollCard) ─────────────────
@@ -99,6 +106,8 @@ $anim-duration: 220ms;
   cursor: pointer;
   width: 100%;
   text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
   transition: background-color 0.12s ease, color 0.12s ease;
 
   &:hover:not(.ratingOptionActive) {
@@ -208,6 +217,9 @@ $anim-duration: 220ms;
 }
 
 .backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: none;
   padding: 5px 12px;
@@ -231,6 +243,9 @@ $anim-duration: 220ms;
 
 .nextButton,
 .doneButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #121212;
   border: none;
   padding: 5px 12px;
