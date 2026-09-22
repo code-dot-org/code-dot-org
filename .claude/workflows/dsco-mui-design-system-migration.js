@@ -96,7 +96,10 @@ const TREE_RULES = `## Working-tree rules
   (@code-dot-org/component-library-styles/colors.css) before primitives.
 - Comments state a fact the code cannot show; never narrate the code.
 - apps/ resolves @code-dot-org/component-library to its dist/. After editing the package,
-  run \`yarn build\` in ${LIB} or apps sees stale code.`
+  run \`yarn build\` in ${LIB} or apps sees stale code.
+- Inside a frontend package, \`yarn lint\` fails with "command not found: eslint": the
+  binary is hoisted. Run \`../../node_modules/.bin/eslint .\` from the package (or
+  \`yarn turbo run lint --filter=<package>\` from frontend/).`
 
 const MIGRATION_RULES = `## Migration rules
 - The MUI version reproduces what the DSCO component renders TODAY. Figma is out of scope:
@@ -622,7 +625,9 @@ STORY PAIRS (dsco -> mui): ${JSON.stringify(storyPairs)}
 
 1. Build Storybook if dist/ is missing or older than the sources: yarn build in
    ${STORYBOOK}. Serve dist/component-library-storybook statically (npx http-server or
-   python3 -m http.server) on a free port. Confirm every storyId exists in
+   python3 -m http.server) on a free port and open it as http://localhost:<port>, not
+   127.0.0.1: the Font Awesome sheets on dsco.code.org allow the localhost origin only,
+   and stories do not render without them. Confirm every storyId exists in
    dist/component-library-storybook/index.json; if an id is off, use the id the index
    shows for that export and record it.
 2. Screenshot with Playwright from frontend/node_modules (require it from that path; use
@@ -941,8 +946,11 @@ UI-TEST FILES TO AUDIT: ${JSON.stringify(scout.uiTestFiles)}
    the MUI DOM by reading the migrated consumer and the MUI component's rendered
    structure (MUI class names via *Classes exports are stable; prefer role/name or
    data-testid). Report each edited UI-test file in uiTestEdits with the consumer whose
-   DOM change forced it (the edit ships in that consumer's PR), and in filesTouched. Do
-   not run Cucumber.
+   DOM change forced it (the edit ships in that consumer's PR), and in filesTouched.
+   forConsumer is a file from the migration list, including component-library-internal
+   ones (a selector on the DS Modal's DOM names ${LIB_SRC}/modal/Modal.tsx, not ""); ""
+   is only for a selector that the design-system commit alone already changes. Do not
+   run Cucumber.
 7. Import audit, independent of what the chunk agents reported: grep the whole repo
    (apps/src, apps/test, frontend, dashboard, ${LIB_SRC}; exclude ${COMPONENT_DIR}) for
    both import forms of the component (package path and relative) and list every file
@@ -1049,10 +1057,14 @@ const ownerOf = file => {
     const touched = migrated[i].result && migrated[i].result.filesTouched.includes(file)
     if (chunks[i].files.includes(file) || touched) return i
   }
-  // A UI-test edit follows the consumer whose DOM change forced it.
+  // A UI-test edit follows the consumer whose DOM change forced it. With no consumer
+  // named it goes to the LAST chunk: a selector for MUI DOM only holds once every
+  // consumer has moved, and the design-system PR merges first. (The dialog shakedown
+  // put a Modal selector edit on PR 1 this way, where it would break Cucumber.)
   if (uiTestOwner.has(file)) {
     const consumer = uiTestOwner.get(file)
-    return consumer ? ownerOf(consumer) : 'ds'
+    if (consumer) return ownerOf(consumer)
+    return chunks.length ? chunks.length - 1 : 'ds'
   }
   const g = groupOf(file)
   if (g === DS_CORE_GROUP) return 'ds'
