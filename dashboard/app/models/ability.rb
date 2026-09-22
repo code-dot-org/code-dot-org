@@ -587,8 +587,9 @@ class Ability
       end
 
       # These checks control access to Javabuilder.
-      # Only verified instructors, and students assigned to a CSA section with a
-      # verified instructor, can generate a Javabuilder session token to run Java code.
+      # Only verified instructors, and participants or active co-teachers assigned
+      # to a CSA section with a verified primary instructor, can generate a
+      # Javabuilder session token to run Java code.
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
@@ -596,7 +597,7 @@ class Ability
       # channel's saved sources (access_token_with_override_validation) or
       # alongside override sources (access_token_with_override_sources_and_validation).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
-        user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
+        Policies::Javabuilder.verified_teacher_ids(user).any?
       end
 
       can [:access_token_with_override_validation, :access_token_with_override_sources_and_validation], :javabuilder_session do

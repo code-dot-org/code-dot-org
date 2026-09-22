@@ -123,15 +123,7 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   private def get_teacher_list
-    if current_user.verified_instructor?
-      return [current_user.id]
-    end
-    teachers = []
-    current_user.sections_as_student.each do |section|
-      next unless section.assigned_csa? && section.teacher&.verified_instructor?
-      teachers << section.teacher.id
-    end
-    teachers.uniq
+    Policies::Javabuilder.verified_teacher_ids(current_user)
   end
 
   private def log_token_creation(payload)
