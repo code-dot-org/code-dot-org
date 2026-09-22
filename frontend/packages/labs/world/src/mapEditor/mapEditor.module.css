@@ -273,9 +273,11 @@
   gap: 0.5rem;
 }
 
-/* A color property: the swatch, then the hex it wrote. The swatch is a fixed
-   square and the field takes the rest, so the row lines up with the labeled
-   fields above and below it whatever the panel's width. */
+/* A color property: the hex, then the swatch that picks it. The field takes
+   the row and the swatch is a fixed square after it, so this row's field
+   starts where every other row's does whatever the panel's width — leading
+   with the picker indented the color rows by its width and left the rest
+   where they were. */
 .inspectorColor {
   display: flex;
   align-items: flex-end;
@@ -304,10 +306,25 @@
    than inventing a second look for the same idea.
    The swatch is a SQUARE, which is why `.inspector input` above excludes it —
    that rule stretches every field to the panel, and a color input stretched
-   to the panel is a stripe of paint where a swatch should be. */
+   to the panel is a stripe of paint where a swatch should be.
+
+   ITS SIZE IS THE FIELD'S, worked out from that field's own tokens rather
+   than typed, so it follows if they move: a `size="s"` input is body-three —
+   `--font-size-body-sm` over a line-height of 1.54 — inside 0.3125rem of
+   padding and a 1px border, top and bottom. It was 2.25rem, which is 36px
+   against an input a shade over 33: three pixels of daylight on every color
+   row.
+
+   SECOND COPY of this calc; the theme editor has the other
+   (`styles/editor/styleEditor.module.css`). A third should be a shared
+   token rather than a third copy. */
 .swatch {
-  width: 2.25rem;
-  height: 2.25rem;
+  --field-height: calc(
+    var(--font-size-body-sm, 0.875rem) * 1.54 + 0.625rem + 2px
+  );
+
+  width: var(--field-height);
+  height: var(--field-height);
   flex: none;
   padding: 2px;
   border: 1px solid var(--border-neutral, #ccc);

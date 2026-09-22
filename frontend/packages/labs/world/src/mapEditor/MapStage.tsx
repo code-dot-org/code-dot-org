@@ -1286,28 +1286,19 @@ export const MapStage = ({
     if (prop.type === 'color') {
       // NOT A DESIGN-SYSTEM COMPONENT, because there is not one: the library
       // has no color input, and `TextField`'s `inputType` does not admit
-      // `color`. So this is the browser's swatch beside an ordinary field —
-      // the swatch for picking, the field for pasting a hex somebody was
-      // given, and both writing the same `#rrggbb` the engine and every color
-      // block already speak (engine/core/color).
+      // `color`. So this is an ordinary field with the browser's swatch beside
+      // it — the field for pasting a hex somebody was given, the swatch for
+      // picking, and both writing the same `#rrggbb` the engine and every
+      // color block already speak (engine/core/color).
+      //
+      // THE FIELD COMES FIRST and the swatch after it, so that every field in
+      // this panel starts at the same x whether or not its row has a swatch.
+      // Leading with the picker indented the color rows by its width and left
+      // every other row where it was (`styles/editor/styleEditor.module.css`
+      // says the same of the theme editor, which is the same row).
       const typed = draft[fieldKey(prop)] ?? '';
       return (
         <div key={fieldKey(prop)} className={styles.inspectorColor}>
-          <input
-            type="color"
-            className={styles.swatch}
-            name={`prop-${fieldKey(prop)}-swatch`}
-            aria-label={capitalize(prop.name)}
-            // The picker can only show a full six-digit hex. A value it cannot
-            // parse would silently become black, so it shows white and the
-            // field beside it still holds what is really stored.
-            value={/^#[0-9a-fA-F]{6}$/.test(typed) ? typed : '#ffffff'}
-            disabled={isReadOnly}
-            onChange={(event: ChangeEvent<HTMLInputElement>) =>
-              editScalar(prop, event.target.value)
-            }
-            onBlur={commitEdit}
-          />
           <TextField
             name={`prop-${fieldKey(prop)}`}
             label={capitalize(prop.name)}
@@ -1319,6 +1310,24 @@ export const MapStage = ({
             }
             onBlur={commitEdit}
             onKeyDown={blurOnEnter}
+          />
+          <input
+            type="color"
+            className={styles.swatch}
+            name={`prop-${fieldKey(prop)}-swatch`}
+            // NOT the property's own name, which the field beside it already
+            // answers to: two controls in a row with one accessible name is a
+            // reader saying "Color" twice and no way to tell them apart.
+            aria-label={`pick ${prop.name}`}
+            // The picker can only show a full six-digit hex. A value it cannot
+            // parse would silently become black, so it shows white and the
+            // field beside it still holds what is really stored.
+            value={/^#[0-9a-fA-F]{6}$/.test(typed) ? typed : '#ffffff'}
+            disabled={isReadOnly}
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              editScalar(prop, event.target.value)
+            }
+            onBlur={commitEdit}
           />
         </div>
       );

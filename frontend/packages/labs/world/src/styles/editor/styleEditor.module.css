@@ -127,7 +127,9 @@
    first guess here was the map editor's 2.25rem, taken on the grounds that
    somebody had looked at it; 2.25rem is 36px and the input is a shade over
    33, which is three pixels of daylight on every colour row. The inspector
-   has the same mismatch beside the same component.
+   has the same mismatch beside the same component — since fixed, with a
+   second copy of this calc. A third should be a shared token rather than a
+   third copy (`mapEditor/mapEditor.module.css`).
 
    Bottom-aligned by the row, so it sits level with the INPUT rather than with
    the label above it. */
