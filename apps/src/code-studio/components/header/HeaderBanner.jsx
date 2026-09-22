@@ -69,7 +69,10 @@ const styles = {
   image: {
     width: IMAGE_SIZE,
     height: IMAGE_SIZE,
+    boxSizing: 'border-box',
+    border: `1px solid ${color.white}`,
     borderRadius: 6,
+    backgroundColor: color.black,
     flex: 'none',
     objectFit: 'cover',
   },
