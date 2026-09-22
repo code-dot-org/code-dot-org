@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -187,7 +187,7 @@ class AnimationPicker extends React.Component {
           projectType={this.props.projectType}
         />
         {this.state.exitingDialog && (
-          <Dialog
+          <MuiDialog
             title={msg.animationPicker_leaveSelectionTitle()}
             description={msg.animationPicker_leaveSelectionText({contextName})}
             primaryButtonProps={{

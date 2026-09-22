@@ -1,12 +1,12 @@
 import {
-  CustomDialog,
-  type CustomDialogProps,
+  MuiCustomDialog,
+  type MuiCustomDialogProps,
 } from '@code-dot-org/component-library/dialog';
 import React from 'react';
 
 import moduleStyles from './craftDialog.module.css';
 
-export interface CraftDialogProps extends CustomDialogProps {
+export interface CraftDialogProps extends MuiCustomDialogProps {
   isOpen: boolean;
 }
 
@@ -15,7 +15,7 @@ export interface CraftDialogProps extends CustomDialogProps {
  */
 const CraftDialog = ({isOpen, ...props}: CraftDialogProps) =>
   isOpen ? (
-    <CustomDialog
+    <MuiCustomDialog
       className={moduleStyles.craftDialog}
       data-theme="Dark"
       {...props}

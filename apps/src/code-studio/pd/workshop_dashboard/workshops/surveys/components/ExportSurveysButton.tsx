@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
@@ -67,7 +67,7 @@ export const ExportSurveysButton = () => {
         {'Export survey results'}
       </MuiButton>
       {formsDialogOpen && (
-        <CustomDialog
+        <MuiCustomDialog
           className={commonStyles.customDialog}
           onClose={handleClose}
           aria-labelledby="export-survey-dialog-title"
@@ -133,7 +133,7 @@ export const ExportSurveysButton = () => {
           >
             {'Close'}
           </MuiButton>
-        </CustomDialog>
+        </MuiCustomDialog>
       )}
     </>
   );

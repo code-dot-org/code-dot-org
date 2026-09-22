@@ -102,7 +102,7 @@ describe('showLevelGroupSubmitDialog', () => {
     // act() flushes the effects that install the dialog's key handlers.
     act(() => showLevelGroupSubmitDialog(DIALOG_PROPS, onConfirm));
 
-    fireEvent.keyDown(document, {key: 'Escape'});
+    fireEvent.keyDown(screen.getByRole('alertdialog'), {key: 'Escape'});
     expect(onConfirm).not.toHaveBeenCalled();
     expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument();
   });

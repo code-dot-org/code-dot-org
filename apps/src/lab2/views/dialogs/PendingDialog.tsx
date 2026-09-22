@@ -1,4 +1,4 @@
-import Dialog from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';
@@ -51,7 +51,7 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
   );
 
   return (
-    <Dialog
+    <MuiDialog
       title={title}
       customContent={<div id="dsco-dialog-description">{customContent}</div>}
       className={moduleStyles.genericDialog}

@@ -1,4 +1,4 @@
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog} from '@code-dot-org/component-library/dialog';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
@@ -394,7 +394,7 @@ export class LibraryManagerDialog extends React.Component {
 
     return (
       <div>
-        <CustomDialog
+        <MuiCustomDialog
           className={classNames(styles.dialog, {
             [styles.hidden]: displayLibrary,
           })}
@@ -499,7 +499,7 @@ export class LibraryManagerDialog extends React.Component {
           >
             {errorMessages.importFromId}
           </MuiTypography>
-        </CustomDialog>
+        </MuiCustomDialog>
         {displayLibrary && this.renderDisplayLibrary()}
       </div>
     );

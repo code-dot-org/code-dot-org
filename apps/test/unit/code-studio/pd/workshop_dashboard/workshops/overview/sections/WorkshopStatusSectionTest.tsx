@@ -1,4 +1,4 @@
-import {act, render, screen, waitFor} from '@testing-library/react';
+import {act, render, screen, waitFor, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -235,14 +235,15 @@ describe('WorkshopStatusSection', () => {
       // Wait for dialog to appear
       expect(screen.getByText('Start Workshop?')).toBeInTheDocument();
 
-      // Get all buttons with "Start Workshop" text and click the second one (dialog button)
-      const startButtons = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      });
-      expect(startButtons).toHaveLength(2);
+      // The open dialog aria-hides the card, so its Start button is the only
+      // one left in the accessibility tree.
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
-        await user.click(startButtons[1]); // Click the dialog confirm button
+        await user.click(confirmButton);
       });
 
       await waitFor(() => {
@@ -424,9 +425,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);
@@ -454,9 +456,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);
@@ -480,9 +483,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);
@@ -509,9 +513,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);
@@ -536,9 +541,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);
@@ -559,9 +565,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);
@@ -587,9 +594,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);
@@ -623,9 +631,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);
@@ -663,9 +672,10 @@ describe('WorkshopStatusSection', () => {
       const startButton = screen.getByText('Start Workshop');
       await user.click(startButton);
 
-      const confirmButton = screen.getAllByRole('button', {
-        name: 'Start Workshop',
-      })[1];
+      const confirmButton = within(screen.getByRole('alertdialog')).getByRole(
+        'button',
+        {name: 'Start Workshop'}
+      );
 
       await act(async () => {
         await user.click(confirmButton);

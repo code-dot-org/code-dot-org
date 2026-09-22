@@ -1,4 +1,4 @@
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -40,7 +40,7 @@ describe('VocabulariesEditor', () => {
 
   it('opens the delete vocabulary dialog', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
-    expect(wrapper.find('Dialog').exists()).toBe(false);
+    expect(wrapper.find(MuiDialog).exists()).toBe(false);
     const numVocabularies = wrapper.find('tr').length;
     expect(numVocabularies).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
@@ -48,7 +48,7 @@ describe('VocabulariesEditor', () => {
       .find('.unit-test-remove-vocabulary')
       .first();
     removeVocabularyButton.simulate('mouseDown');
-    const removeDialog = wrapper.find(Dialog);
+    const removeDialog = wrapper.find(MuiDialog);
     expect(removeDialog.exists()).toBe(true);
     expect(removeDialog.text()).toEqual(
       expect.stringContaining('Delete Vocabulary')

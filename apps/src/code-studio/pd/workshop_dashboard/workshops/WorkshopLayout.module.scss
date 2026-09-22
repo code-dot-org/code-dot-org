@@ -230,7 +230,9 @@ div.card {
   }
 }
 
-.customDialog {
+// The panel is MUI Paper. Two classes so the radius outranks the theme's
+// emotion rule and the flex layout outranks the wrapper's `display: block`.
+.customDialog:global(.MuiDialog-paper) {
   border-radius: 4px;
   padding: 1.5rem;
   display: flex;

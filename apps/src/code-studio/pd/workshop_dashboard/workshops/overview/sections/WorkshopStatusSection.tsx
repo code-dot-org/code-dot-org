@@ -1,5 +1,5 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
 import {
@@ -345,7 +345,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
       </Card>
       {dialogs.map(({stateKey, label, description, primaryButtonProps}) =>
         activeDialog === stateKey ? (
-          <Dialog
+          <MuiDialog
             key={stateKey}
             onClose={() => setActiveDialog(null)}
             title={`${label} Workshop?`}
