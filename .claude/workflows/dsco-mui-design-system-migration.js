@@ -58,7 +58,11 @@ const refName = (v, name) => {
 const base = refName(a.base, 'base') || 'staging'
 const branchPrefixArg = refName(a.branchPrefix, 'branchPrefix')
 const chunkSize = positiveInt(a.chunkSize, 25, 'chunkSize')
-const jira = a.jira || ''
+// A ticket key or its browse URL; anything else is text that would land inside a prompt.
+const jira = a.jira === undefined ? '' : a.jira
+if (jira !== '' && !(typeof jira === 'string' && /^(https:\/\/[a-z0-9.-]+\.atlassian\.net\/browse\/)?[A-Z][A-Z0-9]+-\d+$/.test(jira))) {
+  throw new Error(`jira must be a ticket key like RE-190 or its Atlassian browse URL, got ${JSON.stringify(jira)}`)
+}
 const publish = a.publish !== false
 const force = !!a.force
 const maxParityAttempts = positiveInt(a.maxParityAttempts, 3, 'maxParityAttempts')
@@ -322,8 +326,13 @@ if (!scout.headOnBase) {
 // Chunks are keyed by the consumer's home directory so one PR reads as one area.
 // Inside-out consumers sort first: other DSCO components must stop importing this one
 // before its source can ever be deleted.
+const INTERNAL_GROUP = '0-component-library-internal'
+// The component's own files and its theme override are design-system core, never a
+// consumer chunk. Only ownerOf sees this group; Scout never lists these as consumers.
+const DS_CORE_GROUP = 'ds-core'
 const groupOf = file => {
-  if (file.startsWith(LIB_SRC)) return '0-component-library-internal'
+  if (file.startsWith(COMPONENT_DIR) || file.startsWith(OVERRIDES_DIR) || file === AUGMENTATION) return DS_CORE_GROUP
+  if (file.startsWith(LIB_SRC)) return INTERNAL_GROUP
   let m = file.match(/^apps\/test\/unit\/([^/]+)(?:\/([^/]+))?/)
   if (m) return `apps/src/${m[1]}${m[2] && !/\.[jt]sx?$/.test(m[2]) ? '/' + m[2] : ''}`
   m = file.match(/^apps\/src\/([^/]+)(?:\/([^/]+))?/)
@@ -358,11 +367,14 @@ const chunkConsumers = (rawConsumers, size) => {
   }
   for (const g of ordered) {
     const items = groups.get(g)
-    if (items.length > size) {
+    // Inside-out consumers are their own PR even when small: that PR is the one a
+    // later source deletion depends on, so it must not share a review with apps code.
+    if (items.length > size || g === INTERNAL_GROUP) {
       flush()
       const parts = Math.ceil(items.length / size)
       for (let i = 0; i < parts; i++) {
-        chunks.push({slug: `${slugOf(g)}-${i + 1}`, groups: [g], consumers: items.slice(i * size, (i + 1) * size)})
+        const slug = parts > 1 ? `${slugOf(g)}-${i + 1}` : slugOf(g)
+        chunks.push({slug, groups: [g], consumers: items.slice(i * size, (i + 1) * size)})
       }
       continue
     }
@@ -515,6 +527,45 @@ ${JSON.stringify({muiStories: build.muiStories, legacyExports: build.legacyExpor
   if (repaired) build = repaired
   if (!build.allChecksPass) throw new Error(`Build checks still failing: ${JSON.stringify(build.checks)}`)
 }
+// Every DSCO story needs exactly one MUI twin, or the parity gate has a blind spot.
+const twinGaps = stories => {
+  const twinned = stories.map(m => m.pairsWithDscoStoryId)
+  const known = new Set(scout.dscoStories.map(s => s.storyId))
+  return {
+    missing: scout.dscoStories.filter(s => !twinned.includes(s.storyId)).map(s => s.storyId),
+    unknown: twinned.filter(id => !known.has(id)),
+    duplicate: twinned.filter((id, i) => twinned.indexOf(id) !== i),
+  }
+}
+let gaps = twinGaps(build.muiStories)
+if (gaps.missing.length || gaps.unknown.length || gaps.duplicate.length) {
+  log(`Build twins incomplete: ${JSON.stringify(gaps)}; one repair pass`)
+  const twinned = await agent(
+    `The BUILD of the MUI "${component}" did not twin every DSCO story. Add the missing MUI
+stories and fix the pairing, same rules as the Build phase.
+
+${MIGRATION_RULES}
+
+${TREE_RULES}
+
+DSCO stories (authoritative ids): ${JSON.stringify(scout.dscoStories)}
+Twins reported so far: ${JSON.stringify(build.muiStories)}
+Gaps: ${JSON.stringify(gaps)}
+
+Every DSCO story id must appear exactly once as pairsWithDscoStoryId, and only those ids.
+Re-run yarn test / typecheck / lint / build in ${LIB} and yarn build in ${STORYBOOK}.
+filesTouched = the build's list ${JSON.stringify(build.filesTouched)} plus your changes.
+Copy legacyExports and codemodCommand unchanged unless you changed them:
+${JSON.stringify({legacyExports: build.legacyExports, codemodCommand: build.codemodCommand})}`,
+    {schema: BUILD_SCHEMA, label: 'build-twins', phase: 'Build'},
+  )
+  if (twinned) build = twinned
+  gaps = twinGaps(build.muiStories)
+  if (gaps.missing.length || gaps.unknown.length || gaps.duplicate.length) {
+    throw new Error(`MUI story twins still incomplete: ${JSON.stringify(gaps)}`)
+  }
+  if (!build.allChecksPass) throw new Error(`Build checks failing after twin repair: ${JSON.stringify(build.checks)}`)
+}
 log(`Build: ${build.filesTouched.length} file(s), ${build.muiStories.length} MUI story twin(s)${build.codemodCommand ? ', codemod ready' : ''}`)
 
 // ── Phase 3: Parity ──────────────────────────────────────────────────────────
@@ -593,16 +644,33 @@ STORY PAIRS (dsco -> mui): ${JSON.stringify(storyPairs)}
 
 Return the structured verdict. pass is true only when no pair is a mismatch.`
 
+// Every pair must come back in all four theme/direction renders; the agent's own pass
+// flag is not trusted over a hole in its coverage.
+const expectedRenders = storyPairs.flatMap(p =>
+  ['Light', 'Dark'].flatMap(theme => ['ltr', 'rtl'].map(dir => ({dsco: p.dsco, theme, dir}))),
+)
+const missingRenders = pairs =>
+  expectedRenders.filter(e => !pairs.some(p => p.dscoStoryId === e.dsco && p.theme === e.theme && p.dir === e.dir))
+
 let parity = null
 let parityAttempt = 0
+let missingNote = ''
 while (parityAttempt < maxParityAttempts) {
   parityAttempt++
-  parity = await agent(parityPrompt(parityAttempt), {schema: PARITY_SCHEMA, label: `parity-${parityAttempt}`, phase: 'Parity'})
+  parity = await agent(parityPrompt(parityAttempt) + missingNote, {schema: PARITY_SCHEMA, label: `parity-${parityAttempt}`, phase: 'Parity'})
   if (!parity) throw new Error('parity agent was skipped')
+  const missing = missingRenders(parity.pairs)
   const bad = parity.pairs.filter(p => p.verdict === 'mismatch')
-  log(`Parity ${parityAttempt}: ${parity.pairs.length} pair(s), ${bad.length} mismatch(es)`)
+  parity.pass = parity.pass && bad.length === 0 && missing.length === 0
+  log(`Parity ${parityAttempt}: ${parity.pairs.length} pair(s), ${bad.length} mismatch(es), ${missing.length} render(s) missing`)
   if (parity.pass) break
   if (parityAttempt >= maxParityAttempts) break
+  if (missing.length && !bad.length) {
+    // Coverage gap, not a component defect: rerun the gate itself, no fix agent.
+    missingNote = `\n\nYOUR PREVIOUS ATTEMPT DID NOT RENDER THESE: ${JSON.stringify(missing)}. Render every listed combination this time; if a story id does not resolve, say so in that pair's notes and grade it mismatch.`
+    continue
+  }
+  missingNote = missing.length ? `\n\nALSO MISSING LAST TIME (render them): ${JSON.stringify(missing)}` : ''
   const fix = await agent(
     `The PARITY GATE rejected the MUI "${component}". Fix the design-system side so the
 MUI stories render like their DSCO twins. Same role and rules as the Build phase.
@@ -623,9 +691,11 @@ yarn build in ${STORYBOOK}. Report every file touched.`,
     build.notes += `\nParity fix ${parityAttempt}: ${fix.notes}`
     build.checks = fix.checks
     build.allChecksPass = fix.allChecksPass
+    if (fix.muiStories.length) build.muiStories = fix.muiStories
+    if (fix.legacyExports.length) build.legacyExports = fix.legacyExports
   }
 }
-const parityStatus = parity.pass ? 'pass' : 'mismatches-remain'
+const parityStatus = parity.pass ? 'pass' : missingRenders(parity.pairs).length ? 'incomplete' : 'mismatches-remain'
 // A parity fix may have left the package checks red; the commit below must not carry that.
 if (!build.allChecksPass) {
   log(`Design-system checks red after parity fixes (${JSON.stringify(build.checks)}); one repair pass`)
@@ -754,7 +824,7 @@ PROP MAP: ${JSON.stringify(scout.propMap)}
 MUI COMPONENTS: ${scout.muiComponents.join(', ')}
 BUILD NOTES: ${build.notes}
 ${build.codemodCommand ? `CODEMOD: from ${LIB}, run \`${build.codemodCommand} <path>\` per file (paths relative to that directory, see ${CODEMODS_DIR}/README.md), then hand-fix what it leaves.` : 'CODEMOD: none. Migrate by hand.'}
-${chunk.groups[0] === '0-component-library-internal' ? `This chunk is the inside-out replacement: other design-system components importing the legacy ${componentTitle}. After editing, run yarn test and yarn typecheck in ${LIB}.` : ''}
+${chunk.groups[0] === INTERNAL_GROUP ? `This chunk is the inside-out replacement: other design-system components importing the legacy ${componentTitle}. After editing, run yarn test and yarn typecheck in ${LIB}.` : ''}
 
 For each consumer: replace the DSCO import and JSX with the MUI equivalent per the prop
 map and ${COMPONENT_DIR}/README.md. Keep behavior: callbacks, ids, data-testids,
@@ -764,10 +834,13 @@ that only styled the DSCO internals. Where a consumer depends on a dropped prop 
 MUI path, leave it on DSCO and record it in filesSkipped with the reason.
 Match the file's existing language: JS files stay JS.
 
-Tests: run each consumer's unit test. apps: from apps/, yarn test:unit <test files>.
-frontend packages: from that package, yarn test <file>. Update snapshots only when the
-diff is exactly the DSCO->MUI DOM change. Lint your files: from apps/, npx eslint
-<files>; frontend: yarn lint in the package. Fix what you broke.
+Tests: run the test files that appear in YOUR FILES. apps: from apps/, yarn test:unit
+<test files>. frontend packages: from that package, yarn test <file>. Update snapshots
+only when the diff is exactly the DSCO->MUI DOM change. A test that exercises one of
+your consumers but is NOT in YOUR FILES belongs to another chunk running right now:
+run it read-only if you like, never edit it, and note in notes what it will need.
+Lint your files: from apps/, npx eslint <files>; frontend: yarn lint in the package.
+Fix what you broke.
 
 Return the structured result.`,
         {schema: CHUNK_SCHEMA, label: `migrate:${chunk.slug}`, phase: 'Migrate'},
@@ -788,9 +861,21 @@ phase('Verify')
 
 const VERIFY_SCHEMA = {
   type: 'object',
-  required: ['pass', 'checks', 'failures', 'remainingLegacyImports', 'filesTouched'],
+  required: ['pass', 'checks', 'failures', 'remainingLegacyImports', 'uiTestEdits', 'filesTouched'],
   properties: {
     pass: {type: 'boolean'},
+    uiTestEdits: {
+      type: 'array',
+      description: 'Every UI-test file this phase edited, with the migrated consumer whose DOM change forced the edit. Publish puts the test edit in that consumer\'s PR.',
+      items: {
+        type: 'object',
+        required: ['file', 'forConsumer'],
+        properties: {
+          file: {type: 'string'},
+          forConsumer: {type: 'string', description: 'A consumer file from the migration list, or "" if the selector change is owed to the design-system change itself'},
+        },
+      },
+    },
     remainingLegacyImports: {
       type: 'array', items: {type: 'string'},
       description: `Files outside ${COMPONENT_DIR} that still import a legacy export of the component, from a fresh repo-wide grep (not from the chunk reports)`,
@@ -851,7 +936,9 @@ UI-TEST FILES TO AUDIT: ${JSON.stringify(scout.uiTestFiles)}
    DOM this migration changed (class name, wrapper nesting, role), rewrite it to match
    the MUI DOM by reading the migrated consumer and the MUI component's rendered
    structure (MUI class names via *Classes exports are stable; prefer role/name or
-   data-testid). Report which files you changed in filesTouched. Do not run Cucumber.
+   data-testid). Report each edited UI-test file in uiTestEdits with the consumer whose
+   DOM change forced it (the edit ships in that consumer's PR), and in filesTouched. Do
+   not run Cucumber.
 7. Import audit, independent of what the chunk agents reported: grep the whole repo
    (apps/src, apps/test, frontend, dashboard, ${LIB_SRC}; exclude ${COMPONENT_DIR}) for
    both import forms of the component (package path and relative) and list every file
@@ -867,12 +954,15 @@ at fault so a healer can start there.`
 let verify = null
 let healAttempt = 0
 let healTouched = []
+// UI-test file -> the consumer whose PR carries the selector edit ('' = design system).
+const uiTestOwner = new Map()
 while (true) {
   healAttempt++
   verify = await agent(verifyPrompt(healAttempt), {schema: VERIFY_SCHEMA, label: `verify-${healAttempt}`, phase: 'Verify'})
   if (!verify) throw new Error('verify agent was skipped')
   log(`Verify ${healAttempt}: ${verify.pass ? 'clean' : verify.failures.length + ' failure(s): ' + verify.failures.map(f => f.check).join(', ')}`)
   healTouched = [...new Set([...healTouched, ...verify.filesTouched])]
+  for (const e of verify.uiTestEdits) if (!uiTestOwner.has(e.file)) uiTestOwner.set(e.file, e.forConsumer)
   if (verify.pass || healAttempt >= maxHealAttempts) break
   const heal = await agent(
     `You HEAL failing checks in the MUI "${component}" migration (attempt ${healAttempt}/${maxHealAttempts}).
@@ -933,12 +1023,13 @@ STATE
 3. ${COMPONENT_DIR}/README.md: confirm it documents the MUI path first and the legacy
    path as deprecated. ${CODEMODS_DIR}/README.md: confirm the codemod is documented if
    one exists.
-4. ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' next to the button entry, message naming the MUI replacement${build.codemodCommand ? ' and the codemod command' : ''}. Skip this if the wrapper lives at that same import path (then the path stays legitimate).` : `Do NOT add the eslint no-restricted-imports rule: consumers remain on DSCO.`}
+4. ${fullyMigrated ? `${ESLINT_APPS}: add a no-restricted-imports entry for '@code-dot-org/component-library/${component}' next to the button entry, message naming the MUI replacement${build.codemodCommand ? ' and the codemod command' : ''}. If ANY non-legacy export still lives at that path (a wrapper, a helper like tooltip's keyboardOnlyTooltipProps), ban only the legacy names with importNames: ${JSON.stringify(build.legacyExports)}; a bare name ban would break the legitimate imports. Ban the whole path only when nothing legitimate remains there.` : `Do NOT add the eslint no-restricted-imports rule: consumers remain on DSCO.`}
 5. Run prettier on the markdown you changed if the package has a prettier script.
 
 Return filesTouched (and notes on anything you could not make truthful).`,
   {schema: TOUCHED_SCHEMA, label: 'docs', phase: 'Docs'},
 )
+if (!docs) log(`WARNING: docs agent produced nothing; ${STATUS_DOC}, ${SKILL_DOC} and the eslint rule were not updated`)
 const docsTouched = docs ? docs.filesTouched : []
 
 // ── Phase 7: Publish ─────────────────────────────────────────────────────────
@@ -954,7 +1045,13 @@ const ownerOf = file => {
     const touched = migrated[i].result && migrated[i].result.filesTouched.includes(file)
     if (chunks[i].files.includes(file) || touched) return i
   }
+  // A UI-test edit follows the consumer whose DOM change forced it.
+  if (uiTestOwner.has(file)) {
+    const consumer = uiTestOwner.get(file)
+    return consumer ? ownerOf(consumer) : 'ds'
+  }
   const g = groupOf(file)
+  if (g === DS_CORE_GROUP) return 'ds'
   for (let i = 0; i < chunks.length; i++) if (chunks[i].groups.includes(g)) return i
   if (file.startsWith(LIB) || file.startsWith(STORYBOOK)) return 'ds'
   return chunks.length ? chunks.length - 1 : 'ds'
@@ -1031,7 +1128,9 @@ or any *.png outside the screenshots branch step.
   The pre-commit hook lints staged files; fix lint errors in the staged files, re-stage, retry.
 
 ─── 3. Docs commit on the last branch (${lastBranch}) ───────────────────────────
-  git add -- ${JSON.stringify(docsTouched)}; commit "[MUI Migration] ${componentTitle}: docs, skill, deprecation${fullyMigrated ? ', eslint rule' : ''}" with the trailer.
+  Docs files: ${docsTouched.length ? JSON.stringify(docsTouched) : '(none reported)'}
+  If any exist: git add -- <the docs files>; commit
+  "[MUI Migration] ${componentTitle}: docs, skill, deprecation${fullyMigrated ? ', eslint rule' : ''}" with the trailer.
   Then git status --porcelain: anything left besides the never-stage list goes into one
   more commit on this branch, "[MUI Migration] ${componentTitle}: leftovers", and into leftovers in your report.
 ${publish ? `
