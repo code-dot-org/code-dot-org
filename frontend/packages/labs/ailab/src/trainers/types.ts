@@ -1,6 +1,11 @@
 import type {Store} from 'redux';
 
-import type {ClassificationTrainer, RegressionTrainer} from '../constants';
+import type {
+  ClassificationTrainer,
+  RegressionTrainer,
+  TreeClassificationTrainer,
+  TreeRegressionTrainer,
+} from '../constants';
 import type {RootState} from '../redux';
 
 /*
@@ -8,18 +13,16 @@ import type {RootState} from '../redux';
   classification or regression, and a TrainerId names that pair.
 
   The two types are deliberately different in kind. TrainerFamily keys the
-  dispatch table in ./index, so it must stay total and gains a second family
-  only when a second trainer exists. TrainerId is the string that a saved
-  model carries and that apps/src/MLTrainers.js reads, so all four ids are
-  declared now and none of them has to change later.
+  dispatch table in ./index, so it must stay total. TrainerId is the string
+  that a saved model carries and that apps/src/MLTrainers.js reads.
 */
-export type TrainerFamily = 'knn';
+export type TrainerFamily = 'knn' | 'decisionTree';
 
 export type TrainerId =
   | typeof ClassificationTrainer
   | typeof RegressionTrainer
-  | 'treeClassify'
-  | 'treeRegress';
+  | typeof TreeClassificationTrainer
+  | typeof TreeRegressionTrainer;
 
 export interface Trainer {
   startTraining(): void;
