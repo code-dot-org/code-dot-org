@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-13T16:38:46.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "trampoline--intro-owl-webpage-385befc5-6dbd-4b5d-933f-4a1dab4c413e",
+        "text": "Have you ever wanted to share amazing facts about your favorite animal, like the mysterious owl? What if you could create a digital poster or brochure to show off everything you know?",
+        "imageUrl": "https://images.code.org/627fa9c8eb2f28a89896bec4b4af0a1c-trampoline--intro-owl-webpage-panel-1-1f8b34fa-219d-4696-8a82-45dfdea6bcd8.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "trampoline--intro-owl-webpage-80bb72ea-de7b-4cfe-9a67-8eb921db55cf",
+        "text": "We'll start by adding all the *content* to our page. Think of it like organizing your facts, headings, and pictures onto a blank sheet. This is where HTML comes in!",
+        "imageUrl": "https://images.code.org/c6d557ee87d0fe32693068a8ee4b003c-trampoline--intro-owl-webpage-panel-2-f4503590-a185-4bc8-a04e-230744bc271f.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "trampoline--intro-owl-webpage-eecc6a96-e643-4323-8d0f-8a9f6ab3cea2",
+        "text": "Once we have our content, it's time to make it look awesome! We'll use CSS to add colors, choose cool fonts, and arrange everything beautifully, just like designing a professional poster.",
+        "imageUrl": "https://images.code.org/6e524271c863ded6a16d9806328fd1a1-trampoline--intro-owl-webpage-panel-3-13448643-76ed-4b10-9644-cd2ff954d19c.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "trampoline--intro-owl-webpage-70bb04c4-fa79-4ca3-aab5-bb4caf058dae",
+        "text": "And just like that, you'll have created your very own engaging webpage all about owls, ready to share with the world! It's both informative and beautiful.",
+        "imageUrl": "https://images.code.org/7387bdb775201c6de76f9217c2b81159-trampoline--intro-owl-webpage-panel-4-e46d4f8e-6809-42c6-9b1c-8722fda45c95.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_prompt": "Introduce the concept of building a webpage about owls. Explain that students will learn HTML and CSS to create a beautiful and informative page, similar to a digital poster or brochure about owls."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-13 16:39:25 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-13 16:39:25 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

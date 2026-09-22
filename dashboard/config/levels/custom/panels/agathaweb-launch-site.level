@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T23:40:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "agathaweb-launch-site-871d3e77-825c-4c4c-80a9-0aed5b38402d",
+        "text": "Agatha dreamed of her online potions shop. We started by structuring her website with HTML, like building the skeleton of a potion bottle.",
+        "imageUrl": "https://images.code.org/f1ea237e2658dec01afb7ae1ebd19e80-agathaweb-launch-site-panel-1-7a520046-e1ab-4356-9176-5f939e70218d.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "agathaweb-launch-site-53155522-3bd3-4eeb-9d64-0e16f49571b9",
+        "text": "Next, we added CSS to make her shop beautiful! We chose colors, fonts, and layouts to make it look inviting and magical, like adding vibrant labels and glowing liquids to the potion bottles.",
+        "imageUrl": "https://images.code.org/3ab09b44ca3168879414bb31bdc8dd1b-agathaweb-launch-site-panel-2-bb516f4b-c9bd-4b06-98b0-11fbdca87c4f.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "agathaweb-launch-site-b0d6bea1-6ac1-4b60-898a-5d4676c95e61",
+        "text": "Then came JavaScript, bringing her website to life! It handles interactive elements like order forms and glowing product displays, making the user experience dynamic and engaging.",
+        "imageUrl": "https://images.code.org/42cb008b5e5ae4223bc9573b83d645a6-agathaweb-launch-site-panel-3-77848d96-ce22-4cb3-b927-2e73e258750c.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "agathaweb-launch-site-ad6245d3-55e8-4f91-9599-d92495cc056a",
+        "text": "*Success!* Agatha's online potions store is officially open! Customers are enchanted, and orders are flying in.",
+        "imageUrl": "https://images.code.org/0905f7f38a1b1caa5ccbffd425f0838c-agathaweb-launch-site-panel-4-8fe5de25-2464-45f3-9a33-fca6ad1dc38e.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "agathaweb-launch-site-7c074cd5-dc6a-4de4-8f48-ea8a49ac2241",
+        "text": "You've helped Agatha build an amazing website. Now, it's your turn to cast your own web development spells! What magical creations will you conjure next?",
+        "imageUrl": "https://images.code.org/7712056ef35fcb41973028895ad703c6-agathaweb-launch-site-panel-5-9b057eb2-43a9-4209-9eb8-ecc71fdc5a28.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_prompt": "Review the journey of building Agatha's potions website, summarizing the roles of HTML, CSS, and JavaScript. Celebrate the successful launch of her online store and encourage students to explore more web development spells."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 23:41:31 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 23:41:32 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

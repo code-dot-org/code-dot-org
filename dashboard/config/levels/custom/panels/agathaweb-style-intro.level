@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T23:38:21.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "agathaweb-style-intro-3089b500-ec1b-41c8-86f6-ed416d3441ef",
+        "text": "Agatha has built the *bones* of her website with HTML, but it looks a bit... plain, doesn't it? It needs some magic to make it shine!",
+        "imageUrl": "https://images.code.org/597aafc9ec3ff0496e38d44cc35a6648-agathaweb-style-intro-panel-1-0e390b7e-e2e5-4ec6-8569-272a6b4cc262.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "agathaweb-style-intro-548672e0-f722-4159-9cf6-bafee02ee6d6",
+        "text": "This is where **CSS** comes in! Think of CSS (Cascading Style Sheets) as Agatha's magic spellbook for making things look *good*.",
+        "imageUrl": "https://images.code.org/78d78b017f7dc7cb3cc554ae487ddcb7-agathaweb-style-intro-panel-2-7e271a41-d3c5-46af-bf7b-ee57deeabfff.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "agathaweb-style-intro-6dfdd7a8-66f9-4e16-951b-b6fd29fe4a8e",
+        "text": "With CSS, Agatha can easily change colors, pick fun fonts, and arrange everything exactly how she wants it on her potion shop website!",
+        "imageUrl": "https://images.code.org/c573940542f490cccf52b34beb6f5e7c-agathaweb-style-intro-panel-3-7e79bcac-400f-4334-9bbb-a2cb18e9f17d.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "agathaweb-style-intro-9a651951-959f-412e-bdb1-2d036f63539d",
+        "text": "To apply her stylish spells, Agatha just needs to *link* her CSS stylesheet to her HTML document. It's like connecting her spellbook to her website!",
+        "imageUrl": "https://images.code.org/366e02e3334bff76aba2aded93b3ec86-agathaweb-style-intro-panel-4-e58ea045-51b8-4f62-a4d3-b654efe4d3f9.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_prompt": "Introduce CSS (Cascading Style Sheets) as the magic spell to make Agatha's website look good. Explain how CSS is used to control colors, fonts, layout, and how to link a stylesheet to an HTML document."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 23:39:13 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 23:39:14 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

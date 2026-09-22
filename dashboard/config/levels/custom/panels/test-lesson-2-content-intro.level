@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-13T15:48:36.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-2-content-intro-48cc27ed-1523-4468-9ec8-bae8f121d9d7",
+        "text": "HTML uses special *tags* to tell your web browser how to display content. These tags act like instructions for building a webpage.",
+        "imageUrl": "https://images.code.org/bfe5b1ebe92ab5c36b3c0e418d676fd7-test-lesson-2-content-intro-panel-1-2d8be3b6-00b2-4385-ad32-dc2e8c3f9dbf.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-2-content-intro-be746ec6-b575-4cad-a2b4-6bd500cc094e",
+        "text": "Think of tags as different tools in a builder's kit. For example, heading tags are used for titles and subtitles, giving your page a clear hierarchy.",
+        "imageUrl": "https://images.code.org/b778f8de44bdfbefcb8fd2c451d94b3d-test-lesson-2-content-intro-panel-2-1c082539-ded2-4d6a-bba4-e19b9e459300.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-2-content-intro-7279d731-ec2b-4c56-b649-97a893e1e293",
+        "text": "Other tags help organize text into distinct paragraphs or create clear, structured lists of information, making your content easy to read.",
+        "imageUrl": "https://images.code.org/0a2c14385b3a48cb61b488c5e12c442f-test-lesson-2-content-intro-panel-3-e8df92d4-806e-4ff2-8953-db5508bc2ed8.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-lesson-2-content-intro-4cbe9f4a-8e2a-477d-b036-9d1871d8bc5f",
+        "text": "You can also use tags to embed engaging *images* directly into your page and create clickable *hyperlinks* to other pages or websites.",
+        "imageUrl": "https://images.code.org/c17cb5733cd08c22319486e5dbb03bc2-test-lesson-2-content-intro-panel-4-9d024fa3-1e8a-4f7a-a426-c6db914223bf.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "test-lesson-2-content-intro-a46b8679-70da-45a4-81e9-2e227b0adc20",
+        "text": "In this lesson, we'll learn about tags for headings, paragraphs, lists, images, and links. Get ready to start structuring your very own webpages!",
+        "imageUrl": "https://images.code.org/818575bb67ffcc195048ea94e04fa81d-test-lesson-2-content-intro-panel-5-09b32e98-856b-4983-84e8-972a3191711a.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_prompt": "Introduce the core concept of HTML tags being used to structure and display different types of content on a webpage. Explain that the lesson will cover headings, paragraphs, lists, images, and hyperlinks."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-13 15:49:27 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-13 15:49:27 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

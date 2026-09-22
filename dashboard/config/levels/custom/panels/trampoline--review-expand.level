@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-13T16:41:26.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "trampoline--review-expand-a4b96a89-29b9-438c-b3ee-a66cb85f7591",
+        "text": "Remember how we built the strong *structure* of our owl webpage? HTML helped us organize all our fascinating facts into clear sections like the header, main content, and footer.",
+        "imageUrl": "https://images.code.org/710f1fac0d1dbb28dd482ab3dd6e9bf8-trampoline--review-expand-panel-1-8236ffb2-6a2a-4b1d-9fb7-3a6a9ede2935.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "trampoline--review-expand-0d9232d5-8675-4cd1-9853-bc9f248b7a61",
+        "text": "Then, with CSS, we transformed that structure into a beautiful digital poster! We added colors, chose stylish fonts, and arranged everything to look fantastic and easy to read.",
+        "imageUrl": "https://images.code.org/88bf5ab3c38a015b607fdba4203e4a51-trampoline--review-expand-panel-2-c87b2a87-4925-4c36-b4ec-34fd0d584486.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "trampoline--review-expand-5987c71b-2f1d-4a23-b26b-8272cd9e953c",
+        "text": "Now you have a complete, beautiful owl webpage! How could you expand it? What other amazing facts or pictures would you add, or how might you make it even more interactive and engaging?",
+        "imageUrl": "https://images.code.org/b0249b2488cf359772832c28752c7adc-trampoline--review-expand-panel-3-0bd31707-41f1-4e7d-b1b7-bd1622254f94.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_prompt": "Review the concepts of HTML structure and CSS styling learned throughout the lesson. Encourage students to think about how they could further customize or expand their owl fact page with new content or styles."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-13 16:41:59 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-13 16:41:59 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

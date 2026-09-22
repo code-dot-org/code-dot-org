@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-27T23:01:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-html-tags-13098f8b-eb31-4092-88aa-49d6672215f0",
+        "text": "Imagine a webpage like a beautiful house! What kind of house would you build?",
+        "imageUrl": "https://images.code.org/1260ce423273225f5d7e660e78ef17d4-test-lesson-intro-html-tags-panel-1-a7964312-8d80-433c-b136-d96317a7963c.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-intro-html-tags-03b801c0-c0e9-448f-aeaa-4832818454f5",
+        "text": "HTML is like the 'bones' or the *frame* of that house. It gives the webpage its shape and tells it where everything goes.",
+        "imageUrl": "https://images.code.org/c6c5c917b3e8de331ab1f45caad58b68-test-lesson-intro-html-tags-panel-2-34cc0671-45ec-4fdb-a1e5-f2b311de046b.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-intro-html-tags-ca10d8db-db38-463a-bbc1-a1c62f25bd06",
+        "text": "Just like a house has a main roof or a big front door, web pages have important titles! We use the `<h1>` tag to create big, important headings.",
+        "imageUrl": "https://images.code.org/585bac9cc2a23496910eb333774b0521-test-lesson-intro-html-tags-panel-3-c905bd84-665d-43a3-b12b-8ba8e52853b8.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-intro-html-tags-8636fc12-8697-4ef1-a24a-24f5d3da886b",
+        "text": "And just like rooms have walls for pictures or furniture, web pages have paragraphs of text. The `<p>` tag helps us make regular paragraphs of text for our stories or descriptions.",
+        "imageUrl": "https://images.code.org/399bb1317ed976ae4f4c7cee1b3434f3-test-lesson-intro-html-tags-panel-4-60e8973c-f1f9-45fd-a2e5-db001322e244.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Introduce students to what a webpage is and explain that HTML is like the 'bones' or 'structure' of a webpage. Use simple analogies suitable for K-5 students. Show visual examples of how tags look and their basic purpose in defining content like titles and paragraphs."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-27 23:02:23 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-27 23:02:23 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

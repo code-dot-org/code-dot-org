@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-09T00:22:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "agathaweb-what-is-css-db3e824d-03f2-4c39-b215-3b90f8b27682",
+        "text": "Great job! We used HTML tags like `<h1>` and `<p>` to build the *structure* of Fayea's website. But right now, it looks a little... plain.",
+        "imageUrl": "https://images.code.org/deea50b29d8b8418838296dcf90bbfba-agathaweb-what-is-css-panel-1-a43d0fd7-ba2a-4494-bd5d-549c9ec7fe2d.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "agathaweb-what-is-css-2c368469-05ad-41a5-9295-d07c3da22d58",
+        "text": "That's where **CSS** comes in! CSS stands for **C**ascading **S**tyle **S**heets. Think of CSS as the artist or interior decorator for your website!",
+        "imageUrl": "https://images.code.org/13bcb00e39c300c2ddc2194bdc4f5359-agathaweb-what-is-css-panel-2-66cb655f-7d23-4b7c-a1f0-8e2c521a26eb.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "agathaweb-what-is-css-f751d688-92cc-4caf-ae2e-651f3f418aa2",
+        "text": "CSS lets us change colors, pick cool fonts, adjust sizes, and arrange everything on the page. It makes Fayea's website look amazing and inviting!",
+        "imageUrl": "https://images.code.org/31bc7cfba7bf7b747b7ccac6c749902d-agathaweb-what-is-css-panel-3-31e2c116-f7f8-498d-adf8-a7dab66b9f60.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "agathaweb-what-is-css-00de8ece-ae41-4d99-9fdd-673095ea4e83",
+        "text": "So, HTML builds the house, and CSS decorates it! Together, they make a beautiful, functional website for Fayea to share her self-defense lessons.",
+        "imageUrl": "https://images.code.org/a3b99b8f22396e2e9868afc3cfed5571-agathaweb-what-is-css-panel-4-10a1a0e4-03d5-44c2-82b7-99bfe5c6a7fd.png",
+        "layout": "text-top-right"
+      }
+    ],
+    "generate_prompt": "Explain that after building the structure with HTML, we can make the website look colorful and stylish with 'CSS'. CSS is like the paint and decorations for our website, letting us change colors, fonts, and sizes."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-09 00:23:19 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 00:23:20 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

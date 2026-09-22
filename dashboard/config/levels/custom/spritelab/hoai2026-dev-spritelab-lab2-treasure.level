@@ -83,7 +83,8 @@
           }
         }
       ]
-    }
+    },
+    "header_label": "Platformer"
   }
 }]]></config>
 </GamelabJr>

@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-27T23:17:41.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-wrap-up-de3f45e9-21b4-49d7-abb1-f059cc561d3b",
+        "text": "We've learned how to precisely place objects in our 3D world using the **`position`** property. Remember, this controls an object's location along the X, Y, and Z axes.",
+        "imageUrl": "https://images.code.org/b39e980b74ca8e91df1cc75f8600bfe8-test-lesson-wrap-up-panel-1-619c1c93-f607-48af-b334-ad92a0cdb91f.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-wrap-up-ac550062-905a-4037-a61b-73e196eae676",
+        "text": "We also discovered the **`scale`** property, which allows us to change an object's size and proportion. You can stretch or shrink objects along any of the three axes.",
+        "imageUrl": "https://images.code.org/69290e3ffc7eb65ee84964db1e433948-test-lesson-wrap-up-panel-2-b04b7ac5-ad71-4dd4-b06f-311c02e27494.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "test-lesson-wrap-up-ac982b6b-c158-4c48-bf27-8197c9345fb9",
+        "text": "And finally, the **`rotation`** property lets you spin objects around the X, Y, and Z axes. This controls their orientation and how they face in the scene.",
+        "imageUrl": "https://images.code.org/c6aba2df41053158d01db963e261a18b-test-lesson-wrap-up-panel-3-ba78f153-6c3a-4653-bf27-8423c58693c8.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-wrap-up-b3170090-3a1b-434a-a6c8-c4646424995a",
+        "text": "By combining `position`, `scale`, and `rotation` on multiple objects, you can build intricate static compositions. Each object can be uniquely transformed to fit your creative vision.",
+        "imageUrl": "https://images.code.org/8e65cae44c4773748c6d40de8445222c-test-lesson-wrap-up-panel-4-50d236c5-80e1-4734-9205-723b2ecf3ffa.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-lesson-wrap-up-57081a15-7113-453b-9bc3-13921b751832",
+        "text": "These are your fundamental tools for shaping virtual worlds! How will you use them to construct your own unique 3D creations?",
+        "imageUrl": "https://images.code.org/603f486a0e611750d4cee419136d149f-test-lesson-wrap-up-panel-5-07cb5c5b-3ef0-4be8-b2fa-f279fab922a3.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Summarize the key concepts learned about 3D object manipulation (position, scale, rotation) and their use in creating static compositions. Provide a small creative challenge for students to consider for future projects, encouraging further experimentation with these properties."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-27 23:18:47 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-27 23:18:48 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T21:24:59.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "testlesson-images-panels-0dbc17e3-771d-49c9-ab4e-3986f9656866",
+        "text": "Our Harry Potter rave page needs to be exciting! Text alone can be a bit... dull.",
+        "imageUrl": "https://images.code.org/98e7f9d9c4881208fb7210e1cfdd9339-testlesson-images-panels-panel-1-50a63c01-5075-4ae3-a4c3-81eb454b5457.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "testlesson-images-panels-5e607780-6234-4126-85ef-52b956095460",
+        "text": "That's where the `<img>` tag comes in! It lets us embed pictures right into our web page.",
+        "imageUrl": "https://images.code.org/54290b5402de8aa6d9ac98848166bc0d-testlesson-images-panels-panel-2-43f3be0b-739c-4242-b2b3-652baabd4f46.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "testlesson-images-panels-04b4a1ea-da0a-4dea-955e-506fd22d43d1",
+        "text": "But how does the browser know _which_ picture to show? We use the `src` attribute to tell it where to find the image file.",
+        "imageUrl": "https://images.code.org/3f600d7397b717fb5ea8c3f2a6a1827a-testlesson-images-panels-panel-3-fcfef8d3-8789-4154-b44d-59088dddad0b.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "testlesson-images-panels-53fce7e3-d9ba-4df5-905b-2eca1ec1bd9a",
+        "text": "What if the image doesn't load? Or for visually impaired users? The `alt` attribute provides a text description of the image.",
+        "imageUrl": "https://images.code.org/96098b9ec4672e7a0bdb730990f4ec2b-testlesson-images-panels-panel-4-d00ba265-cdf4-471b-ac6d-59a84beff8b7.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "testlesson-images-panels-27de195b-9b85-439f-9085-6be98eb83ee8",
+        "text": "Now our Harry Potter rave page is vibrant and engaging! Images bring the party to life for everyone.",
+        "imageUrl": "https://images.code.org/dde451a01da493536a3a3cf28f0bb6cd-testlesson-images-panels-panel-5-8ac0cf68-4306-41ae-be1d-2e334037f4ae.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_prompt": "Introduce the <img> tag for embedding images. Explain the src attribute for the image source and the alt attribute for accessibility. Discuss how images can make a web page more engaging, especially for a rave theme."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 21:25:49 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 21:25:49 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

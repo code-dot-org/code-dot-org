@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-19T22:05:38.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-content-review-c0d7946e-69ec-43bb-a82d-143dccea8703",
+        "text": "Congratulations! You've learned the essential HTML tags for adding meaningful content to your webpages.",
+        "imageUrl": "https://images.code.org/98bf623f3675700a5b7ed50236081490-test-lesson-content-review-panel-1-263b8737-2574-41f9-b528-0f6d8d9d27e0.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-content-review-f90d12cf-19e3-4bc2-8430-056c0578299d",
+        "text": "You mastered headings (`<h1>` - `<h6>`) for titles and subtitles, and paragraphs (`<p>`) for your main text. These make your content easy to read and understand!",
+        "imageUrl": "https://images.code.org/a71b037a6716032348e8f905b2960f3d-test-lesson-content-review-panel-2-4fac9407-7326-4199-b49f-1b2b2c7a5526.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-content-review-0a767c3f-14e1-4d5d-855e-2e0441daa915",
+        "text": "You also learned to use lists: `<ul>` for unordered items (like a shopping list) and `<ol>` for ordered steps (like a recipe), with `<li>` for each item.",
+        "imageUrl": "https://images.code.org/b4b2b1fccf606b50b2ba7ae54e89593b-test-lesson-content-review-panel-3-73d66e0a-e023-41bc-8381-50018a0277c3.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-content-review-f48a72ca-8455-4a91-897c-94995df813f6",
+        "text": "And the super-powerful hyperlink (`<a>`) with its `href` attribute connects your page to other websites or even different sections within your own page!",
+        "imageUrl": "https://images.code.org/059da5cd28a501c136e8a397676042dd-test-lesson-content-review-panel-4-63692848-4849-421a-bd63-2d88b50c4af9.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-lesson-content-review-8c445bc2-5142-41b4-8612-4bc37ab05600",
+        "text": "By using these tags, you're not just putting words on a page; you're structuring information, improving readability, and making your webpage engaging and easy to navigate for everyone!",
+        "imageUrl": "https://images.code.org/5ad1e51be269fe9f0e60034c882baee6-test-lesson-content-review-panel-5-ea30f7f7-a775-48ba-a8bd-dcbb5087e682.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Summarize all the HTML content tags learned in this lesson: headings, paragraphs, lists, and hyperlinks. Emphasize how these tags help structure information, improve readability, and allow for navigation on a webpage, making content accessible and engaging."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-19 22:06:26 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 22:06:27 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

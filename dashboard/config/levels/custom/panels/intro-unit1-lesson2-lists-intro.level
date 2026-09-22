@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-10T02:16:05.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "intro-unit1-lesson2-lists-intro-2dba620e-e73c-4e7d-94aa-73f5f2a68697",
+        "text": "Web pages often need to organize information clearly. What if you have a series of items or steps you want to present in an easy-to-read way?",
+        "imageUrl": "https://images.code.org/f590208e74b8c89ccd651e0c79308d56-intro-unit1-lesson2-lists-intro-panel-1-ea802d1a-67cd-49a1-9848-de1d6b99993e.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-lists-intro-dc7a158a-5281-47e0-b106-d23bc2450d29",
+        "text": "For items where order doesn't matter, like a grocery list or a collection of fun facts, we use **unordered lists** with the `<ul>` tag. Each item in the list gets its own `<li>` tag.",
+        "imageUrl": "https://images.code.org/8713471d57108e43fa57e03aed4db86c-intro-unit1-lesson2-lists-intro-panel-2-bee15506-4b77-47f8-9c7c-1fa5cbe3e98a.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-lists-intro-df187ae2-a9de-4962-93a6-61c6efb82285",
+        "text": "The `<ul>` tag acts as a container for your entire unordered list. Inside it, every single list item is placed within an `<li>` (list item) tag.",
+        "imageUrl": "https://images.code.org/0b4a1897142dda9a7302386c2778e2cc-intro-unit1-lesson2-lists-intro-panel-3-59120abe-b7e5-408f-a570-785a8340baf0.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "intro-unit1-lesson2-lists-intro-ca35996a-19b3-4338-b2c4-ae72ce0e0f57",
+        "text": "When the order *does* matter, like steps in a recipe, instructions, or a countdown, we use **ordered lists** with the `<ol>` tag. Just like `<ul>`, each item is still an `<li>`!",
+        "imageUrl": "https://images.code.org/89cc8bc255af2800cf67298bb9d1d644-intro-unit1-lesson2-lists-intro-panel-4-c7dd4c9a-2479-421a-9898-7bff49853bbb.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "intro-unit1-lesson2-lists-intro-39034db5-bd65-443d-83f1-2d3ede89fcc9",
+        "text": "The main difference is how they look! Unordered lists usually have bullet points, while ordered lists automatically show numbers (or letters) to indicate sequence.",
+        "imageUrl": "https://images.code.org/c5e32f2af847bf10249eb27d6c36a8f9-intro-unit1-lesson2-lists-intro-panel-5-39f44ac8-fdd8-49c1-a892-f5a8403304ad.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-lists-intro-d9566dfa-2fd8-4849-9ff1-06fe211ceb21",
+        "text": "Remember: `<ul>` for items where order doesn't matter (like a list of features), and `<ol>` for steps or sequences where order is important (like instructions for a game)! Use `<li>` for every item in both!",
+        "imageUrl": "https://images.code.org/469ae86be8708d2fc9f99278acb3b105-intro-unit1-lesson2-lists-intro-panel-6-84e4fb8e-1b72-4dcd-be59-b58c07f5d648.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_prompt": "Introduce ordered lists (<ol>) and unordered lists (<ul>) with <li> items. Explain the difference between ordered and unordered lists and when to use each."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-10 02:16:56 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-10 02:16:56 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

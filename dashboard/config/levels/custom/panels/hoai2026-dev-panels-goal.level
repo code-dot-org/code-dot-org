@@ -15,7 +15,8 @@
         "key": "hoai2026-dev-panels-goal-5c165dc5-ec80-4be2-8a4b-9cf8dc768b75"
       }
     ],
-    "use_links": "false"
+    "use_links": "false",
+    "header_label": "Platformer"
   }
 }]]></config>
 </Panels>

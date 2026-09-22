@@ -458,6 +458,9 @@ class ScriptLevel < ApplicationRecord
         summary[:name] = level.display_name || level.name
       end
 
+      # Shown in the level header's banner when the unit uses one.
+      summary[:headerLabel] = level.header_label if level.header_label.present?
+
       if bubble_choice?
         summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id, unit_group_unit: unit_group_unit)
       end

@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-07-01T05:34:58.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-web-dev-06203858-73ab-4d49-ba8c-b88a81c4beb1",
+        "text": "Every day, you explore countless web pages. But have you ever wondered what they're actually made of?",
+        "imageUrl": "https://images.code.org/7ecc4ffb44dd07501fda5a279f993d24-test-lesson-intro-web-dev-panel-1-c188e0c8-fa18-4900-b235-a5632105c224.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-intro-web-dev-4b4512c7-bd5a-4d12-ac4e-fb34cc418914",
+        "text": "Think of a web page like a house. **HTML** provides the basic structure, like the blueprint and the skeleton framework of the house.",
+        "imageUrl": "https://images.code.org/4f1229525b9a49f9145d139b12bba92a-test-lesson-intro-web-dev-panel-2-82b30a1b-8f80-4c3c-a9e4-0114980c9891.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-intro-web-dev-7514b2b6-cb37-4c4c-802d-aff6e6b36dee",
+        "text": "**CSS** is like the interior designer and painter. It adds the style: the colors, wallpaper, furniture, and how everything is arranged.",
+        "imageUrl": "https://images.code.org/f4d986798bf5da09f7df81a3eddf87b3-test-lesson-intro-web-dev-panel-3-f3ab5bf5-c955-4504-aaec-1c25c7b3691b.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-intro-web-dev-0ecb5112-1155-4d33-b277-51fba67c8e8b",
+        "text": "Then there's **JavaScript**, which brings the house to life! It's like the working lights, the opening doors, or a doorbell that actually rings.",
+        "imageUrl": "https://images.code.org/9b900d36711fa4817318a5c081ed136a-test-lesson-intro-web-dev-panel-4-5bdf3310-57e8-4cf4-be53-b26fe6f2c3ab.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-lesson-intro-web-dev-e26a12d0-25eb-4756-a984-d358a7b07657",
+        "text": "Your web browser acts like the builder and decorator. It reads all these instructions (HTML, CSS, JavaScript) and constructs the beautiful, interactive web page you see!",
+        "imageUrl": "https://images.code.org/10aef58c2065f2f05b66369b284ab6f1-test-lesson-intro-web-dev-panel-5-60a3c61f-0bca-4e8d-8e1e-94ab861d21c2.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Introduce students to the concept of web pages, what they are made of (HTML, CSS, JavaScript), and how web browsers display them. Use analogies to make it relatable for middle schoolers."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-01 05:35:48 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-01 05:35:48 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

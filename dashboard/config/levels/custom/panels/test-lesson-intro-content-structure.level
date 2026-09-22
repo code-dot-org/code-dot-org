@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-19T22:21:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-content-structure-69735df8-e5bd-4786-8484-509f6bed2e43",
+        "text": "What makes a website easy to read and understand? It's all about creating **meaningful content**!",
+        "imageUrl": "https://images.code.org/462dbe9002a2faafc42bdc184b5a02fc-test-lesson-intro-content-structure-panel-1-a7117322-b9f0-4f2f-98b8-af3f0cc3edff.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-intro-content-structure-f0f09ef6-a02f-4230-9d2f-2eeac648ee4c",
+        "text": "In HTML, we use special 'tags' to give our text structure and meaning. These tags tell the web browser exactly what each piece of content is.",
+        "imageUrl": "https://images.code.org/17efacda9e60b24e1d747247cbdc8196-test-lesson-intro-content-structure-panel-2-ad9efca5-5724-45d8-a827-40ccbe94e318.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-intro-content-structure-341b1b79-f28d-45e2-8176-ce119f339780",
+        "text": "Imagine a page without tags — it would just be one long, confusing block of text. Hard to follow, right?",
+        "imageUrl": "https://images.code.org/452e90a77283bc4436b42a6728d434d6-test-lesson-intro-content-structure-panel-3-1b723d91-eaf7-497f-b565-a69d46e3db8e.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-intro-content-structure-3f088acf-670f-41e8-aa3b-cbe5d9aad5e8",
+        "text": "But with tags, your browser knows if something is a heading, a paragraph, or a list. This makes your webpage super clear and easy for anyone to read!",
+        "imageUrl": "https://images.code.org/17a20c53c944ec617119f4bae38c5206-test-lesson-intro-content-structure-panel-4-edf5d167-2075-453c-8da5-cd2f1228683f.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Introduce students to the concept of meaningful content in HTML and how tags are used to give text structure and meaning, making it easy to read and understand."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-19 22:21:57 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 22:21:58 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

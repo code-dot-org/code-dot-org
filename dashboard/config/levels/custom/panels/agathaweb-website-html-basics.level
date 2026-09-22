@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-09T00:09:55.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "agathaweb-website-html-basics-435a434a-d11a-44b8-929c-ba1dd982ac29",
+        "text": "Remember Fayea's goal to make a website? Think of a website like building a house. Before you can paint walls or add furniture, what does a house need?",
+        "imageUrl": "https://images.code.org/7138cf43775fc905826f7930d4ad9efc-agathaweb-website-html-basics-panel-1-ae739e05-51a2-4c2f-bf73-fa9208828bde.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "agathaweb-website-html-basics-1b4cc93e-e378-4273-b8da-21e3ae41a83f",
+        "text": "It needs a sturdy frame, right? For a website, this frame is built with something called HTML. HTML stands for 'HyperText Markup Language' – it's the bones of your website!",
+        "imageUrl": "https://images.code.org/4db9b475e9883d79774efae6a014621e-agathaweb-website-html-basics-panel-2-0c4c9a2c-c000-4afc-8d6a-620938fbe539.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "agathaweb-website-html-basics-9370affb-7b4a-4501-a34c-f5bb26c55cb3",
+        "text": "Every website starts with important HTML tags that tell the computer what kind of document it is. The `<html>` tag tells the browser, 'Hey, this is an HTML page!'",
+        "imageUrl": "https://images.code.org/70f3f80023574e3143e5682f8fe34448-agathaweb-website-html-basics-panel-3-27de518e-b909-49b3-ad78-6e276d2f1513.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "agathaweb-website-html-basics-dc8f7f15-311d-49a3-a7ed-df4b6a0dedef",
+        "text": "Inside the `<head>` section, we put the website's title. This is what shows up in your browser tab. In the `<body>` section, we put all the content you see on the actual page!",
+        "imageUrl": "https://images.code.org/8ab24b19cefa39613f7b5d0994ec3b52-agathaweb-website-html-basics-panel-4-8e4387b3-afd5-4c89-a18e-3198498ba341.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "agathaweb-website-html-basics-b2b26ead-1e9a-4827-aac5-905607de6ac0",
+        "text": "For the main heading of our page, we use an `<h1>` tag. Fayea's website needs a clear title, like 'Fayea's Self-Defense Lessons,' so everyone knows what it's about right away!",
+        "imageUrl": "https://images.code.org/11540cb49961d0f4e6a339e3fbdeb268-agathaweb-website-html-basics-panel-5-e594c1cd-7e12-4ec3-9f57-6c6d74b0a664.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_prompt": "Explain in simple terms what a website is, comparing it to a house with a frame. Introduce HTML as the 'frame' or 'bones' of a website. Show basic HTML elements like a title and a main heading for Fayea's page."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-09 00:10:35 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 00:10:36 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 00:16:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

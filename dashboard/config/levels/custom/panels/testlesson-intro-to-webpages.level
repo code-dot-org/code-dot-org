@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T21:07:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "testlesson-intro-to-webpages-ba14db43-921c-4124-bf52-1405d8938e6f",
+        "text": "Ever wonder how websites like this one are made? They're called webpages, and they're everywhere online!",
+        "imageUrl": "https://images.code.org/5f72eda922c6f7d34eba7cdbc0c66244-testlesson-intro-to-webpages-panel-1-da3e2759-dfe3-4124-9161-62f6a67ea14b.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "testlesson-intro-to-webpages-01e76600-d4de-4954-bbdc-f8ea3fdd8ead",
+        "text": "Behind every webpage is code, and a big part of it is **HTML**. Think of it like building a house.",
+        "imageUrl": "https://images.code.org/1a68f36afdb1475e45e8e8b8af6b14c6-testlesson-intro-to-webpages-panel-2-67cf1f63-1ab2-45a4-b7fb-b5eadc9fc93f.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "testlesson-intro-to-webpages-c3602f52-d354-4ead-80cf-5f213436bc9f",
+        "text": "Just as a house needs a strong frame to stand, webpages need a structure. HTML provides that frame, defining where things like headings, paragraphs, and images go.",
+        "imageUrl": "https://images.code.org/cb5e0190ff20984afb18a147fb7414ee-testlesson-intro-to-webpages-panel-3-f0158521-a732-486d-8f80-55c66d000990.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "testlesson-intro-to-webpages-2970f98a-8be4-4fa2-ae1f-85ca8c9ee270",
+        "text": "Without HTML, a webpage would just be a jumble of words and pictures! It organizes everything so your web browser knows how to display it nicely.",
+        "imageUrl": "https://images.code.org/0adba259d0e0ecf2bddc05ff1c23acf1-testlesson-intro-to-webpages-panel-4-439c3cdd-15e4-4e38-bbfd-cddecc4fc5fe.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_prompt": "Explain what a webpage is, introducing HTML as the language for structure. Use an analogy to building a house, where HTML provides the frame."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 21:07:59 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 21:08:00 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

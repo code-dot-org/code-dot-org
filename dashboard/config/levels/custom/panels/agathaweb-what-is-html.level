@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-09T00:21:26.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "agathaweb-what-is-html-b4398280-4f4c-47c2-a057-8c194b77744b",
+        "text": "So, how do we actually *build* this amazing website for Fayea's self-defense lessons?",
+        "imageUrl": "https://images.code.org/04af3a979f1ce08dc6081795eb2703a7-agathaweb-what-is-html-panel-1-7f5d01f6-0b00-4462-8d17-d39d9214ce9e.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "agathaweb-what-is-html-0fad794d-0093-4da5-9df6-ec920a9959b3",
+        "text": "Every website starts with something called **HTML**. Think of it as the basic skeleton or the sturdy building blocks of your page!",
+        "imageUrl": "https://images.code.org/a12a247c6e6fbbef706ce7285daa7729-agathaweb-what-is-html-panel-2-bd8c97c5-5936-4bf9-b1fc-196f574140e4.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "agathaweb-what-is-html-92b68bae-ae98-4bf4-ad96-ed44e60fc309",
+        "text": "HTML uses special secret words called 'tags' to tell the computer what each piece of content is. For a big, important title, we might use a `<h1>` tag!",
+        "imageUrl": "https://images.code.org/154858b3be751715242d8c0b4bbd979b-agathaweb-what-is-html-panel-3-aba34f18-e77a-4de0-a89d-31d8ff8bb9b8.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "agathaweb-what-is-html-67e4a848-634e-4c79-b191-e1664063327c",
+        "text": "For regular text, like a description of a self-defense move or a helpful tip, we use a `<p>` tag. It's for paragraphs!",
+        "imageUrl": "https://images.code.org/3e84a9ad6974ff7abd0613cc55307e56-agathaweb-what-is-html-panel-4-91169288-3403-40eb-b773-619e232bfe2f.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "agathaweb-what-is-html-a4010dbd-8096-44da-9f27-500b0d1abb73",
+        "text": "These tags help organize everything and tell the web browser exactly how to show your content. It's like giving clear instructions to build your page!",
+        "imageUrl": "https://images.code.org/c2827d3220a9a08859b6b3340330aa34-agathaweb-what-is-html-panel-5-62e5800c-9573-4d21-b9c1-9d572acfa05a.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_prompt": "Explain in simple terms that a website is built with 'HTML', which is like the skeleton or building blocks. Show how HTML uses special words called tags to tell the computer what kind of content something is, like a title or a paragraph."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-09 00:22:16 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 00:22:17 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

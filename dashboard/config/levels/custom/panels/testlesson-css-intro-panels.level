@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T21:25:59.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "testlesson-css-intro-panels-c4baca56-67e2-4e65-849f-2cdc2c70e41c",
+        "text": "HTML gives structure to your web page, but it's pretty plain! Think of **CSS** as the *magic spell* that makes your page look amazing. It's how we add colors, fonts, and layouts.",
+        "imageUrl": "https://images.code.org/0dbf1a4358c2e2702a69a302def06f28-testlesson-css-intro-panels-panel-1-7ddaec08-2ee3-4909-8f78-7a933c053d71.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "testlesson-css-intro-panels-aa1dbe32-d77c-4e18-892b-10efa219b3a0",
+        "text": "To use CSS, we often link to a separate file, like a spellbook! We add a special `<link>` tag within the `<head>` section of our HTML to connect them.",
+        "imageUrl": "https://images.code.org/a5b618d38b3e8a8678de12b2f6b40571-testlesson-css-intro-panels-panel-2-54cbf1db-1dc7-44c8-91ed-79f52d97da28.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "testlesson-css-intro-panels-5816e079-c14a-4dd7-847c-06b5e902674b",
+        "text": "Let's try some basic spells! The `background-color` property changes the entire page's background, and `color` changes the text color. Make your rave page vibrant!",
+        "imageUrl": "https://images.code.org/6acdb986ee8731d5b40705578ba93453-testlesson-css-intro-panels-panel-3-47d57966-1cb1-4697-9bc1-bd05e68c9f4f.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "testlesson-css-intro-panels-4ad426ab-89c1-44e0-9022-1a91c4599a30",
+        "text": "Want to change the font to something more exciting? The `font-family` property lets you pick from different typefaces, just like choosing different magical writing styles for your web page!",
+        "imageUrl": "https://images.code.org/39e731f771273bedca34ff01a2577138-testlesson-css-intro-panels-panel-4-d37bb46f-3f05-407d-93bc-1cde50f75fe9.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_prompt": "Introduce the concept of CSS for styling web pages. Explain how to link an external CSS file using a <link> tag in the <head>. Cover basic CSS properties like background-color, color for text, and font-family."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 21:26:42 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 21:26:42 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

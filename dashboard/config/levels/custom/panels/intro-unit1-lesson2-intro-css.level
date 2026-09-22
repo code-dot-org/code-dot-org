@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-12T19:25:48.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "intro-unit1-lesson2-intro-css-f64f1524-4b9c-434f-8aab-9c956d34d1dd",
+        "text": "Our 'Owl Facts' page has all its content and structure thanks to HTML. But right now, it looks a little plain, like a sketch without any color!",
+        "imageUrl": "https://images.code.org/6dd85a07b101b2be0c764c9d20ba564e-intro-unit1-lesson2-intro-css-panel-1-8c8798b4-e676-446a-a529-5b814d2a5b51.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "intro-unit1-lesson2-intro-css-ed71e7d2-a2c4-404b-aa24-96a4b545aeb9",
+        "text": "This is where CSS comes in! It's like the artist's brush, letting us add colors, choose cool fonts, and arrange everything perfectly to make our page shine.",
+        "imageUrl": "https://images.code.org/5c4aa03bf4d1b7b57da3d5ddb53edc89-intro-unit1-lesson2-intro-css-panel-2-8adb753a-024f-4622-9b88-85d6df0d5990.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-intro-css-b2d29c6b-3a0b-44f6-8836-1698e1da317a",
+        "text": "CSS uses _selectors_ to pick which HTML elements to style. Then, _properties_ tell us what to change (like `color` or `font-size`), and _values_ tell us *how* to change it (like `blue` or `24px`).",
+        "imageUrl": "https://images.code.org/469dc47a4e29779b66b2ebe973cfb047-intro-unit1-lesson2-intro-css-panel-3-9df25a56-89dd-49d4-ac99-cf6ab8f7c3fd.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "intro-unit1-lesson2-intro-css-377ece92-e012-4f6d-b27a-8bc28525ef2a",
+        "text": "Remember the `<link>` tag we added in the `<head>`? That's what connects our HTML to our `style.css` file, so all our design choices can be applied!",
+        "imageUrl": "https://images.code.org/ec976917df414a2c6cd06d2b7bf44ade-intro-unit1-lesson2-intro-css-panel-4-d8d87570-d80c-4592-972f-864392ddb676.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "intro-unit1-lesson2-intro-css-5fc814fe-3941-419c-a99d-3a92a9453894",
+        "text": "With just a little CSS, our 'Owl Facts' page goes from looking like a simple document to a beautifully designed and engaging website!",
+        "imageUrl": "https://images.code.org/2e774ded6ef69e6a382f371c4f86c216-intro-unit1-lesson2-intro-css-panel-5-1b2bd797-aae1-4050-bba1-fd98ccd99faf.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_prompt": "Explain how CSS is used to style HTML content, making webpages visually appealing. Cover basic CSS concepts like selectors, properties, and values. Demonstrate how linking a CSS file transforms the appearance of the 'Owl Facts' page from basic to engaging."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-12 19:26:41 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-12 19:26:42 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-13 00:18:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-13 00:18:35 +0000\",\"changed\":[\"generate_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T22:14:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "testlesson-welcome-to-hogwarts-2dd399c5-2abc-4bc7-8cd0-8790416f085d",
+        "text": "First day at Hogwarts! So much to learn, so many new spells...",
+        "imageUrl": "https://images.code.org/146049d83f84e520514af9d59f2e2e30-testlesson-welcome-to-hogwarts-panel-1-1eb2def6-5dfa-45aa-857b-5cce3b869a7b.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "testlesson-welcome-to-hogwarts-aa11d910-ed6e-4a5f-aaff-071898d9cd13",
+        "text": "But before potions and charms, Professor Dumbledore has a special task: create your own *digital spellbook*!",
+        "imageUrl": "https://images.code.org/43de4a923f29b27d63c59bb471c7ed41-testlesson-welcome-to-hogwarts-panel-2-b0bdeaa2-6bbf-4baf-b8e7-e4d5bb202c4d.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "testlesson-welcome-to-hogwarts-3a677445-466c-4ee7-b3a4-7c7985d132f2",
+        "text": "This device lets you weave magic with words! Building a webpage is like casting a spell to make information appear.",
+        "imageUrl": "https://images.code.org/23777d8f716e57173b63f86581f87a15-testlesson-welcome-to-hogwarts-panel-3-4cde1441-829e-494d-a92e-2f2057254443.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "testlesson-welcome-to-hogwarts-7e6304b4-3eed-4f05-b635-072d8a716f16",
+        "text": "To cast these digital spells, we use *special words* and *structures* – like ingredients and incantations for a potion!",
+        "imageUrl": "https://images.code.org/67e41f9969a1ae2bd2f51f921f7ed8d9-testlesson-welcome-to-hogwarts-panel-4-b169a1b4-6618-4baf-be7a-6c69deb3100c.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_prompt": "Harry Potter arrives at Hogwarts for his first day. He is given a magical device (a computer/tablet) and tasked by Professor Dumbledore to create his very first 'digital spellbook' (a web page). The level should set the scene, introduce the concept of building a web page as casting spells, and explain that web pages are made of special 'words' and 'structures'."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 22:14:53 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 22:14:54 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T21:08:24.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "testlesson-intro-to-css-acf1a12b-6d7e-4c4b-a45a-fe0883095ac1",
+        "text": "Have you ever wondered what makes a website look so good? How do they get all those colors, fonts, and layouts?",
+        "imageUrl": "https://images.code.org/de090e96016b7bd9610860b26b29911e-testlesson-intro-to-css-panel-1-565e4d5e-c441-45f8-93fe-571be6a34bc0.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "testlesson-intro-to-css-7eaad6a0-4632-41b1-90a1-f971ccee745e",
+        "text": "That's where **CSS** comes in! It stands for Cascading Style Sheets.",
+        "imageUrl": "https://images.code.org/43111bd6441f0251c6741e01b1156703-testlesson-intro-to-css-panel-2-cbab8ba2-3f31-42b0-9155-3e99ca886676.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "testlesson-intro-to-css-0c89fbf0-55c0-4fe8-b371-0fe9c2c5e89a",
+        "text": "Think of it this way: if HTML is like the basic structure of a house – the walls, rooms, and roof.",
+        "imageUrl": "https://images.code.org/5374cc0c9b81711bb80f51f105d6d450-testlesson-intro-to-css-panel-3-2da7440f-eaba-4311-8a35-d04183c1581d.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "testlesson-intro-to-css-a955bc8a-c065-4e34-b9ee-4630165ad85e",
+        "text": "Then CSS is like painting the walls, choosing furniture, and adding all the decorations. It makes the house beautiful and inviting!",
+        "imageUrl": "https://images.code.org/2ebbf27f02de1805f091fcf25f523939-testlesson-intro-to-css-panel-4-bda5ec43-cdac-4930-9009-8d609c63df6a.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_prompt": "Introduce CSS as the language for styling webpages, explaining that it makes the page look good. Continue the house analogy, comparing CSS to painting and decorating."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 21:09:02 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 21:09:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-02T03:41:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "testlesson-intro-dc3c2ef6-da96-4024-9cd2-030e198a8483",
+        "text": "Harry, usually found in dusty libraries, found himself at an unexpected destination. The bass throbbed even from outside.",
+        "imageUrl": "https://images.code.org/672d602428a27108d9e4825970827a11-testlesson-intro-panel-1-1191f2fd-e7cd-4587-a328-6d387c3e9de0.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "testlesson-intro-7c99a30a-71a9-4f29-8ee0-509bbd326f90",
+        "text": "Inside, a kaleidoscope of lights and booming music enveloped him. Wizards and Muggles alike danced in a trance, bathed in neon.",
+        "imageUrl": "https://images.code.org/83dd2f844dceab97dc557c2acd436dba-testlesson-intro-panel-2-3934d290-65d7-4dc6-bda7-ba3302e7eea3.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "testlesson-intro-ac5e38b0-17a9-467a-9e4d-eb3c159bce96",
+        "text": "He initially felt out of place, clutching his invisibility cloak a little too tightly. But the rhythm was infectious, a pulsating heartbeat.",
+        "imageUrl": "https://images.code.org/9bce2ebd93b088cddedcbbf4f7e18caa-testlesson-intro-panel-3-c33cee78-1441-42ff-af55-310cdbaa5e70.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "testlesson-intro-c5ffc58d-32dc-4805-87d7-b6d580b37f07",
+        "text": "Suddenly, a dazzling light show erupted, feeling almost like a Muggle charm. Harry felt a surge of exhilaration he hadn't experienced since a Quidditch match.",
+        "imageUrl": "https://images.code.org/98c19c54254fa1479ac5eb009812f95d-testlesson-intro-panel-4-5fdc4e00-3353-4099-9932-772e7134bc4d.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "testlesson-intro-1f685730-6728-4425-ab34-d6a7ecf2eab2",
+        "text": "He let go, losing himself in the music. For a few hours, the weight of the wizarding world faded, replaced by pure, unadulterated joy.",
+        "imageUrl": "https://images.code.org/ebb4d00b373fec46503a6656665c6f66-testlesson-intro-panel-5-102ba83a-363a-49ca-977a-763b405f4cec.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "testlesson-intro-35df8632-df13-4362-9739-20b9a6540c74",
+        "text": "As dawn broke, Harry emerged, tired but strangely invigorated. He knew Hogwarts would never be quite the same again.",
+        "imageUrl": "https://images.code.org/a46ebcd806efa8622be14fb5bb666598-testlesson-intro-panel-6-bb823924-06e7-457a-9e16-c18d4ca133d6.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_prompt": "Make 6 panels as fan fiction about Harry Potter attending his first rave."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-02 03:52:01 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 03:55:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 04:55:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 04:55:32 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 05:47:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 06:12:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 06:13:00 +0000\",\"changed\":[\"generate_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 06:16:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 06:16:06 +0000\",\"changed\":[\"generate_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-02 06:25:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-04 02:32:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 17:42:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 20:32:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 20:44:08 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 20:46:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 20:48:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 20:48:42 +0000\",\"changed\":[\"generate_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 20:54:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 20:54:13 +0000\",\"changed\":[\"generate_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-09-03T22:24:30.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-to-web-7ad27dbb-f0fa-4005-ad41-aabe5ad96384",
+        "text": "When you visit a website, you're looking at a web page! It's how information, like text and pictures, is shown online.",
+        "imageUrl": "https://images.code.org/87d4de1a22a81dd67ca4ff6d9966a8af-test-lesson-intro-to-web-panel-1-8f65024c-f5ad-4c9c-9264-8505a4d01fcb.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-intro-to-web-94243d7c-2105-4a3e-a3ee-c5fd6c8a4e34",
+        "text": "Web pages are built with special languages. The first is HTML, which provides the basic structure and content, like the words, headings, and images.",
+        "imageUrl": "https://images.code.org/7f58e22a86e5c725283cef7ba60e8d29-test-lesson-intro-to-web-panel-2-9f9a03ab-55b7-4c35-b94b-a70667714eb9.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-intro-to-web-f3bd3d2a-3cf4-4daf-b2d9-eeb5fc6e67c3",
+        "text": "Then there's CSS! CSS tells the web page how to *look* – its colors, fonts, and layout. It's like decorating the house built by HTML.",
+        "imageUrl": "https://images.code.org/53a74ff3264c17ec352e23c278fbc33f-test-lesson-intro-to-web-panel-3-239968cb-b578-4d8e-92e1-768eccec9f49.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-intro-to-web-e2f33024-afd3-4af6-bebd-faa5ecced83a",
+        "text": "Together, HTML and CSS create the engaging web pages we see every day. HTML gives it purpose, and CSS makes it pop!",
+        "imageUrl": "https://images.code.org/ff18a7830fa1b6c8ed496f75f1aa577f-test-lesson-intro-to-web-panel-4-03e25be4-afb7-47fd-902a-f543e353c3b6.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Learn about what a web page is, and the basic components like HTML and CSS that are used to build it."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-03 22:25:08 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 22:25:08 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

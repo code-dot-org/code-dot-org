@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-27T23:03:45.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-review-and-share-d533e677-03b6-4a92-abfc-82ce56c739dd",
+        "text": "You built your first webpage house! Remember, HTML is like the strong frame that holds everything together.",
+        "imageUrl": "https://images.code.org/667ca293b777584282e34694782be04b-test-lesson-review-and-share-panel-1-0850a428-769d-497f-88b9-51801e427bbb.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-review-and-share-2341fba8-fa68-47f7-9b03-e87109ab6c86",
+        "text": "You added a big title with <code>&lt;h1&gt;</code> and told your story with <code>&lt;p&gt;</code>! You're making your webpage unique.",
+        "imageUrl": "https://images.code.org/604abe0456e3a32c5971e25c0893fcbf-test-lesson-review-and-share-panel-2-95cdbded-bd88-4cc2-8aa4-a31d69292873.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-review-and-share-2b39b0cd-61cf-496c-a35c-d4c361f17cdf",
+        "text": "And you even added a fun picture using <code>&lt;img&gt;</code>! Your webpage is starting to look amazing!",
+        "imageUrl": "https://images.code.org/3e365ab6e3ce0811b3f0cd6a0eb68dd0-test-lesson-review-and-share-panel-3-91c77942-1810-48ef-907a-eddaeedfc4b6.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-review-and-share-a6ad8888-505d-47a7-85e5-bce9f2c7b44d",
+        "text": "You just built your very own webpage! Give yourselves a big cheer – you're web creators!",
+        "imageUrl": "https://images.code.org/393858e144f0cd57ddd0dbb87c19bfee-test-lesson-review-and-share-panel-4-3ec443ea-e954-4e76-a616-bbcafcb19e2b.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-review-and-share-32e9bc54-5497-496f-a334-fdceae932131",
+        "text": "What if you could change the colors, make things bigger, or move them around? There's even more to discover!",
+        "imageUrl": "https://images.code.org/5e3e25824bc901381552f6f77d8ce332-test-lesson-review-and-share-panel-5-d5c3ac1d-2e4f-4100-bd2a-50b02f8b16a8.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Summarize what students learned about HTML structure and the `<h1>`, `<p>`, and `<img>` tags. Congratulate them on building their very first webpage and encourage them to think about what else they could add or change, hinting at styling with CSS."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-27 23:04:31 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-27 23:04:32 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

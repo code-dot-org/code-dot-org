@@ -103,7 +103,8 @@
           "type": "spritelab2_restartScene"
         }
       ]
-    }
+    },
+    "header_label": "Platformer"
   }
 }]]></config>
 </GamelabJr>

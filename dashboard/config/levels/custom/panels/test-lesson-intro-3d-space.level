@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-27T23:13:44.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-3d-space-b1f22b93-2e06-4b71-8c04-a86f8a00ec23",
+        "text": "Imagine a digital canvas that isn't just flat! We're stepping into **3D space**, where objects have not just width and height, but also depth.",
+        "imageUrl": "https://images.code.org/78594e678964e854d60a67fc6b005c66-test-lesson-intro-3d-space-panel-1-b227f497-9a4e-4e6a-8175-2e4e9534bc75.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-intro-3d-space-9196654a-0d67-4d4c-845f-487755b787cd",
+        "text": "In 3D, we use three main directions to describe location: the **X-axis** (left/right), the **Y-axis** (up/down), and the **Z-axis** (forward/backward).",
+        "imageUrl": "https://images.code.org/7fd035014df56345ccf5993e863002c7-test-lesson-intro-3d-space-panel-2-d81d613b-0560-42ce-b298-8cf7482e043a.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-intro-3d-space-9b17ce8f-c009-4644-8453-cee904644777",
+        "text": "Every object in your 3D world has a **position** property. This property tells the computer exactly where the object is located along these three axes.",
+        "imageUrl": "https://images.code.org/240ac4061342d50e43a7872b7ed1c2fb-test-lesson-intro-3d-space-panel-3-cc56d74b-e6f3-4f19-a9bf-f53c1a78730b.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-lesson-intro-3d-space-29c4b264-b21b-4f1d-9338-675e6100eef9",
+        "text": "Adjusting the **X-value** of an object's position will move it horizontally, sliding it across the screen from left to right or vice-versa.",
+        "imageUrl": "https://images.code.org/9f7f2931df1bc1f412c7e19016a27ab0-test-lesson-intro-3d-space-panel-4-38c9f74e-a0fe-42c7-a7e7-e3ba9801a3e8.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-intro-3d-space-d201bcb9-f531-4865-98eb-c312a225d9bc",
+        "text": "Changing the **Y-value** moves the object vertically, lifting it up or lowering it down, as if on an elevator.",
+        "imageUrl": "https://images.code.org/5f590763bf8699d769971b1676ef330c-test-lesson-intro-3d-space-panel-5-1dacf51f-2a1d-403c-8e32-9d3b14e272c9.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-intro-3d-space-7bc854b6-9b95-463e-abfc-bbbf4d8ca21d",
+        "text": "And finally, the **Z-value** controls the object's depth, moving it closer to or further from your view, affecting its perceived size.",
+        "imageUrl": "https://images.code.org/3f4cf188a7c98316366557bc0cfa3812-test-lesson-intro-3d-space-panel-6-6f9897e4-c720-4fe5-ba8a-b6987cd1d1a4.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Introduce the concept of 3D space with X, Y, and Z axes. Explain how changing an object's 'position' property moves it along these axes, defining its location."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-27 23:14:39 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-27 23:14:40 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

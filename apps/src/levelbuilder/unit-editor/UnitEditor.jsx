@@ -78,7 +78,8 @@ class UnitEditor extends React.Component {
     ]),
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
-    initialHideHeaderProgress: PropTypes.bool,
+    initialHeaderBanner: PropTypes.bool,
+    initialHeaderBannerImage: PropTypes.string,
     hasCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
@@ -137,7 +138,8 @@ class UnitEditor extends React.Component {
       topicTags: this.props.initialTopicTags,
       contentArea: this.props.initialContentArea,
       tts: this.props.initialTts,
-      hideHeaderProgress: this.props.initialHideHeaderProgress,
+      headerBanner: this.props.initialHeaderBanner,
+      headerBannerImage: this.props.initialHeaderBannerImage || '',
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
@@ -248,7 +250,8 @@ class UnitEditor extends React.Component {
       topic_tags: this.state.topicTags,
       content_area: this.state.contentArea,
       tts: this.state.tts,
-      hide_header_progress: this.state.hideHeaderProgress,
+      header_banner: this.state.headerBanner,
+      header_banner_image: this.state.headerBannerImage,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
       description_short: this.state.descriptionShort,
@@ -432,22 +435,33 @@ class UnitEditor extends React.Component {
             </HelpTip>
           </label>
           <label>
-            Hide progress bubbles in the level header
+            Show a banner instead of progress bubbles in the level header
             <input
               type="checkbox"
-              checked={this.state.hideHeaderProgress}
+              checked={this.state.headerBanner}
               style={styles.checkbox}
-              onChange={e =>
-                this.setState({hideHeaderProgress: e.target.checked})
-              }
+              onChange={e => this.setState({headerBanner: e.target.checked})}
             />
             <HelpTip>
               <p>
-                The header keeps its layout, but the row of level bubbles is
-                invisible and cannot be clicked.
+                The header shows the image below and each level's header label
+                where the row of level bubbles would be.
               </p>
             </HelpTip>
           </label>
+          {this.state.headerBanner && (
+            <label>
+              Header banner image URL
+              <input
+                value={this.state.headerBannerImage}
+                style={styles.input}
+                placeholder="/blockly/media/hoai2026/logo.png"
+                onChange={e =>
+                  this.setState({headerBannerImage: e.target.value})
+                }
+              />
+            </label>
+          )}
           <label>
             Enable Text-to-Speech
             <input

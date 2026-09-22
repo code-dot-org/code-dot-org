@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 
 import LessonProgress from '../progress/LessonProgress';
 
+import HeaderBanner from './HeaderBanner';
 import HeaderFinish from './HeaderFinish';
 import HeaderPopup from './HeaderPopup';
 import ProjectInfo from './ProjectInfo';
@@ -109,7 +110,8 @@ class HeaderMiddle extends React.Component {
     lessonProgressDesiredWidth,
     numScriptLessons,
     finishDesiredWidth,
-    showFinish
+    showFinish,
+    allowPopup = true
   ) {
     // For levels that show only project info, do an early return.
     if (projectInfoOnly) {
@@ -158,7 +160,9 @@ class HeaderMiddle extends React.Component {
     // or because we have cropped the lesson progress bubbles.
     let showPopup = false;
     let showPopupBecauseProgressCropped = false;
-    if (numScriptLessons > 1) {
+    if (!allowPopup) {
+      // A banner replaces the bubbles, so there is no lesson list to open.
+    } else if (numScriptLessons > 1) {
       showPopup = true;
     } else if (progressWidth < lessonProgressDesiredWidthAdjusted) {
       showPopup = true;
@@ -200,6 +204,14 @@ class HeaderMiddle extends React.Component {
     };
   }
 
+  // The current level's header label, from the lesson's level summaries.
+  static headerLabelFor(lessonData, currentLevelId) {
+    const level = lessonData?.levels?.find(l =>
+      (l.ids || [l.id]).includes(currentLevelId)
+    );
+    return level?.headerLabel || '';
+  }
+
   render() {
     const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
       this.props;
@@ -207,6 +219,9 @@ class HeaderMiddle extends React.Component {
     const showFinish = !!(
       this.props.lessonData && this.props.lessonData.finishLink
     );
+
+    // The banner takes the bubbles' slot and reports its width the same way.
+    const showBanner = !!scriptData?.headerBanner;
 
     const widths = HeaderMiddle.getWidths(
       this.state.width,
@@ -217,7 +232,8 @@ class HeaderMiddle extends React.Component {
       this.state.lessonProgressDesiredWidth,
       this.props.lessonData ? this.props.lessonData.num_script_lessons : 0,
       this.state.finishDesiredWidth,
-      showFinish
+      showFinish,
+      !showBanner
     );
 
     const extraScriptNameData = scriptNameData
@@ -292,22 +308,33 @@ class HeaderMiddle extends React.Component {
               style={{
                 float: 'left',
                 width: widths.progress,
-                // A unit can ask for no bubbles; they still take their
-                // space, so the rest of the header sits where it always does.
                 visibility:
-                  widths.progress === lessonProgressExtraWidth ||
-                  scriptData.hideHeaderProgress
+                  widths.progress === lessonProgressExtraWidth
                     ? 'hidden'
                     : undefined,
               }}
             >
-              <LessonProgress
-                width={widths.progress - lessonProgressExtraWidth}
-                setDesiredWidth={width => {
-                  this.setDesiredWidth('lessonProgress', width);
-                }}
-                lessonName={lessonData.name}
-              />
+              {showBanner ? (
+                <HeaderBanner
+                  imageUrl={scriptData.headerBannerImage}
+                  label={HeaderMiddle.headerLabelFor(
+                    lessonData,
+                    currentLevelId
+                  )}
+                  width={widths.progress - lessonProgressExtraWidth}
+                  setDesiredWidth={width => {
+                    this.setDesiredWidth('lessonProgress', width);
+                  }}
+                />
+              ) : (
+                <LessonProgress
+                  width={widths.progress - lessonProgressExtraWidth}
+                  setDesiredWidth={width => {
+                    this.setDesiredWidth('lessonProgress', width);
+                  }}
+                  lessonName={lessonData.name}
+                />
+              )}
             </div>
           )}
 

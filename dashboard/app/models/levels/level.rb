@@ -133,6 +133,7 @@ class Level < ApplicationRecord
     use_secondary_finish_button
     skip_url
     stay_on_level_after_submit
+    header_label
     additional_ai_evaluation_instructions
     product_tours
     generate_outline

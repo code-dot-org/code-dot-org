@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-10T02:17:06.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "intro-unit1-lesson2-links-intro-e9e7f680-0ef2-4f6b-90ca-a7afe3ceeba3",
+        "text": "Now, let's make our webpages *interactive*! The `<a>` tag, short for 'anchor', lets you create clickable links to other web pages or even other parts of the *same* page.",
+        "imageUrl": "https://images.code.org/5b36ef0a005575a476b4337cc327bef7-intro-unit1-lesson2-links-intro-panel-1-c7c31636-ae03-459a-a5d1-90c61cfb11c4.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-links-intro-ab0df787-4aa8-4e49-a0be-5bcc5ddb9a21",
+        "text": "The most important attribute for the `<a>` tag is `href`. It stands for 'hypertext reference' and tells the browser *where* the link should go when clicked, like an address!",
+        "imageUrl": "https://images.code.org/fea42d34a3293fda2034f7038d7d3489-intro-unit1-lesson2-links-intro-panel-2-405bdb48-82d1-4b85-a110-480e388191c7.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-links-intro-52231df5-0e3f-45cf-b82c-0299b8dbbde9",
+        "text": "To link to an external website, you'll use the full web address: `<a href='https://www.example.com'>Visit Example Website</a>`. The text 'Visit Example Website' is what users will see and click.",
+        "imageUrl": "https://images.code.org/95559dee765c7033c31f2fab1e4c8241-intro-unit1-lesson2-links-intro-panel-3-2518031f-953b-4163-80b9-68c154bb79d5.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "intro-unit1-lesson2-links-intro-09a31c2f-8c07-46da-9840-770155898f30",
+        "text": "You can also link to another page *within your own website*! If you have a file named `about.html`, you might write: `<a href='about.html'>Learn About Us</a>`. This keeps users exploring your site!",
+        "imageUrl": "https://images.code.org/2523d43a74dda852d22ef5b46e891f59-intro-unit1-lesson2-links-intro-panel-4-55d1a00b-ece6-4aa4-8c48-0d399b2ab11d.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_prompt": "Explain how to create hyperlinks using the <a> tag and the href attribute to link to other pages or websites. Show examples of external and internal links."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-10 02:17:41 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-10 02:17:42 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

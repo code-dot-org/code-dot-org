@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-21T01:57:43.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-html-a7edfa3a-4f85-441f-8485-b60865e3adcb",
+        "text": "Imagine building a house. HTML is like the blueprint, giving your webpage its basic structure!",
+        "imageUrl": "https://images.code.org/c5d7a372c73439f1ac93ef2479f0fc74-test-lesson-intro-html-panel-1-2efd6547-eebc-4d12-b0fe-3eed02cfd0fa.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-intro-html-1f651529-4357-4df8-978a-7a1d9d9ea435",
+        "text": "HTML uses special instructions called 'tags' to tell the browser how to display content. Think of a tag as a command for the web!",
+        "imageUrl": "https://images.code.org/4aeb5698f29fe7015a85d307e267c5a8-test-lesson-intro-html-panel-2-04fc5524-7ad1-488d-ae1d-be4a685219d6.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-intro-html-56b9bb9d-1b34-4793-83d6-d1e47d712bc2",
+        "text": "For example, to make a big, important title, we use a heading tag like `<h1>`. It tells the browser, \"This is a main title!\"",
+        "imageUrl": "https://images.code.org/e3c75d14e9795c05f5a86e78083a880b-test-lesson-intro-html-panel-3-3e513463-0721-4e9d-ace0-000f65beef69.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-intro-html-6c39abd7-503b-47eb-a4d4-f4925fd2579b",
+        "text": "And for regular text, we use a paragraph tag `<p>`. These tags give meaning and structure to *everything* on your page!",
+        "imageUrl": "https://images.code.org/38a69448dc348fe9d89878b7d1262ba0-test-lesson-intro-html-panel-4-9a99fc46-4271-4fdf-8d57-b4b9228844f7.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Introduce HTML as the language for structuring web content. Explain what tags and elements are, and show simple examples like a heading and paragraph tag, emphasizing their role in giving meaning to content."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-21 01:58:18 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-21 01:58:19 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

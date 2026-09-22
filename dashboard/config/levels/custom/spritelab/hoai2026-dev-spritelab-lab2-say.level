@@ -70,7 +70,8 @@
           }
         }
       ]
-    }
+    },
+    "header_label": "Story"
   }
 }]]></config>
 </GamelabJr>

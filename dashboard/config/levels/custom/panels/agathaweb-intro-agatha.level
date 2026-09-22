@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T23:37:02.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "agathaweb-intro-agatha-4da0a839-f7de-4a44-bf9f-456a3bb483d6",
+        "text": "Meet Agatha, a young witch with a passion for brewing magical potions!",
+        "imageUrl": "https://images.code.org/1d0bf57fff9493eead720fa548461fd7-agathaweb-intro-agatha-panel-1-1bffeafb-e542-4aac-87ce-1fa7f765c778.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "agathaweb-intro-agatha-8c9f8583-38dc-4993-afc7-92d368946c22",
+        "text": "She wants to share her wondrous creations with the world, but how can she reach more customers beyond her local village?",
+        "imageUrl": "https://images.code.org/3fe2308d93d359f2df61b2c079dc1fc7-agathaweb-intro-agatha-panel-2-66b8b1be-3148-4ccf-9cd0-f1ca0467dcfb.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "agathaweb-intro-agatha-a4eee1d7-811a-42cc-8beb-a8d96cdd7ed0",
+        "text": "A **website** is like a magical digital storefront, open to everyone, everywhere, at any time!",
+        "imageUrl": "https://images.code.org/9d6f9744d3acdfc24459fcc7bd67f25e-agathaweb-intro-agatha-panel-3-1f77ce56-dd9b-4a8b-bf57-177d89a4ee4a.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "agathaweb-intro-agatha-1bb567e2-7182-45a7-ad16-7d787db1d255",
+        "text": "It's the perfect place for customers to browse her enchanted elixirs, learn their benefits, and make purchases with ease!",
+        "imageUrl": "https://images.code.org/20e6b8c79078fbae12d33021cab66e61-agathaweb-intro-agatha-panel-4-3badf7a4-5427-4ae3-b3d2-d52c2a524d82.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "agathaweb-intro-agatha-4cb6934a-a89d-4655-a173-0a16b0e2c0e1",
+        "text": "Now, let's join Agatha as she prepares to conjure her very own online shop!",
+        "imageUrl": "https://images.code.org/d806894d50096cd542b78b91f9c57a45-agathaweb-intro-agatha-panel-5-2548db89-8fa7-4b55-90c8-f0cc420dde49.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_prompt": "Introduce Agatha, a young witch starting her first potions business. She needs a website to sell her magical concoctions. Explain the purpose of a website and set the stage for building one."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 23:37:57 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 23:37:57 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-06 02:29:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-06 02:29:40 +0000\",\"changed\":[\"generate_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-06 03:18:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-06 03:30:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

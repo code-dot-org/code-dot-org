@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-21T01:59:32.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-reflection-summary-37f95a1e-1c00-4288-a090-0811ec9d5dcc",
+        "text": "We've learned how **HTML tags** like `<h1>` and `<p>` create **elements**, giving our webpages their basic structure. They're the building blocks!",
+        "imageUrl": "https://images.code.org/02d1ee9dc18d27de8eb65614ea653ea1-test-lesson-reflection-summary-panel-1-ca19fae9-d83e-487d-9599-060d6cc25866.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-reflection-summary-29d0fdf3-78d0-4257-a874-0e87678dba3c",
+        "text": "We also used `<img>` tags for pictures and `<a>` tags for links. These elements help us add engaging content and connect our page to the rest of the web!",
+        "imageUrl": "https://images.code.org/8262dea01a50ab011ca9fc4fc98d1f19-test-lesson-reflection-summary-panel-2-82a9c8ff-7c28-4698-b7ab-db733c699ad4.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-reflection-summary-e1ebebeb-9593-4ea2-b3ba-fd907fca5c11",
+        "text": "Remember the main HTML **document structure** with `<head>` and `<body>`? All our elements need to be correctly **nested** inside, like rooms in a house!",
+        "imageUrl": "https://images.code.org/8b5953c939e1e00a3b6540d88c9c3d34-test-lesson-reflection-summary-panel-3-d5d5011e-e045-45c4-a681-8a038c258664.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-reflection-summary-63a933f7-1fd2-4487-9800-d5f47a07c8f0",
+        "text": "Our pages have structure, but they're still a bit plain. Next, we'll learn **CSS** to add colors, fonts, and layouts, making them look fantastic!",
+        "imageUrl": "https://images.code.org/f766b44baa5b05dd8797301df8f787fa-test-lesson-reflection-summary-panel-4-314b968c-91fd-4f70-a851-c8e5ffc27f88.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Summarize the key HTML concepts learned: tags, elements, basic text, image, and link tags, and the overall document structure. Briefly introduce the idea that CSS will be used to make these structured pages look good."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-21 02:00:12 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-21 02:00:12 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

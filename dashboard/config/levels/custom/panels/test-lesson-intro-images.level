@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-27T23:02:43.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-images-84181d32-ec24-4646-9b70-93c1ebccebd6",
+        "text": "Our webpage house has a big title (<code>&lt;h1&gt;</code>) and some words (<code>&lt;p&gt;</code>). But what about fun decorations, like pictures?",
+        "imageUrl": "https://images.code.org/a5f6e6c188755f9972c4f4228b42f614-test-lesson-intro-images-panel-1-d48bf672-1c6e-4aa1-8675-291f871fb37f.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-intro-images-6f65470e-bb67-4bf9-8a1c-6b85e89508f5",
+        "text": "To add a picture to our webpage house, we use a special tag called <code>&lt;img&gt;</code>! It's like finding a perfect spot on your wall to hang a picture frame.",
+        "imageUrl": "https://images.code.org/ca481c8ed9d247f842da20d6ad14980c-test-lesson-intro-images-panel-2-f6e0f41e-1fd6-4720-942b-710115f6678b.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-intro-images-544b79ff-8610-4b33-89dd-7fd4ccad1130",
+        "text": "But how does the computer know *which* picture to put in the frame? We need to tell it the picture's 'address' or 'location' using <code>src=\"\"</code>!",
+        "imageUrl": "https://images.code.org/3192939abf31237c1f3a02d5818a388c-test-lesson-intro-images-panel-3-e7f05c39-19a7-405e-86ca-907477baeb46.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-intro-images-75023422-84f5-4c78-ab03-2ad5be7249ed",
+        "text": "When you give the <code>&lt;img&gt;</code> tag a <code>src</code> address, suddenly, your picture appears! Just like magic, your webpage house gets a lovely new decoration.",
+        "imageUrl": "https://images.code.org/c1196c2ab9ead504e337a0fec6f371bd-test-lesson-intro-images-panel-4-978e1060-ac69-45b1-ac89-fa8d761a2d39.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Explain how to add images to a webpage using the `<img>` tag. Focus on the `src` attribute, explaining it as the 'address' or 'location' of the picture. Use simple, visual examples to demonstrate how images appear on a page."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-27 23:03:25 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-27 23:03:25 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-07T02:20:26.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "agathaweb-intro-to-css-7fdd3118-291c-4dc8-aec6-ffc2d062ee3a",
+        "text": "Fayea's website has all her great content, but it's a little plain. She wants it to look as exciting as her self-defense lessons!",
+        "imageUrl": "https://images.code.org/68657637818f11bf676ee477263f0295-agathaweb-intro-to-css-panel-1-3734138d-4528-4604-b47f-c723e008eb65.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "agathaweb-intro-to-css-72c78d09-efa0-43c6-a4c1-1288028ff5b1",
+        "text": "This is where CSS, or Cascading Style Sheets, comes in! CSS is like a magic wand for your website's appearance. It tells the browser *how* to display your HTML.",
+        "imageUrl": "https://images.code.org/203219108ae25567d6349333e38fc57a-agathaweb-intro-to-css-panel-2-e0ef1952-9a62-4a08-b837-77bb00bed0ad.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "agathaweb-intro-to-css-77b29e04-965e-4ea0-b7a1-09851b9e77a3",
+        "text": "CSS lets you select specific HTML elements, like headings or paragraphs, and apply styles to them. You can change colors, fonts, sizes, and much more!",
+        "imageUrl": "https://images.code.org/78b4e311c18c13f6998bf883f22a17d0-agathaweb-intro-to-css-panel-3-9c1a8507-3ea2-4e4c-beb4-4685025c4dab.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "agathaweb-intro-to-css-915c21a2-83a5-4eed-8ba5-3574de378208",
+        "text": "With CSS, Fayea's website can transform into a vibrant, engaging place where her students will love to learn! Get ready to make her site shine!",
+        "imageUrl": "https://images.code.org/4d2f5243641184f766ab6c2631b9d8fb-agathaweb-intro-to-css-panel-4-4fab979f-ede6-465c-a938-842d9134ae15.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_prompt": "Introduce CSS (Cascading Style Sheets) as the language used to make websites look good. Explain how CSS works by selecting HTML elements and applying styles like colors, fonts, and sizes. Use Fayea's website as an example to show how styling can improve its appearance."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-07 02:21:11 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-07 02:21:11 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

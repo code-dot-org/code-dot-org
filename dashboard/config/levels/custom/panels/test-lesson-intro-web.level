@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-07-01T03:09:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-web-cc85f49a-850c-4143-9fbf-fa30f2a1bf48",
+        "text": "Imagine a web page like a digital poster or a page in a book you read online. It's how information is shown on the internet!",
+        "imageUrl": "https://images.code.org/5ee4bbe17f599b4513286f5317ea1728-test-lesson-intro-web-panel-1-b932be6d-f606-46a7-ab5d-d09f32b8a4d4.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-lesson-intro-web-b8f8e658-b68b-42b3-8fbf-1eea7a9398cc",
+        "text": "To build this digital page, we use a special language called HTML. Think of HTML as the skeleton or blueprint that gives the page its basic shape and structure.",
+        "imageUrl": "https://images.code.org/5827ab03b4b374634399146ebff846e4-test-lesson-intro-web-panel-2-8a376337-364a-4271-8a57-ffe3ca7a567f.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-intro-web-47a42efe-e677-4eb5-bc7c-1246f1880378",
+        "text": "Just like a book has chapters, paragraphs, and headings, HTML uses tags to tell the web browser where different parts of the content belong. This organizes everything!",
+        "imageUrl": "https://images.code.org/893cf78665236f4e3fb6580b783ce19a-test-lesson-intro-web-panel-3-72dacc94-0ba6-49db-b53b-92a06938e26a.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-intro-web-f5b2b0f4-acc6-4b7b-9601-8b4c5e03adf0",
+        "text": "So, HTML gives the page its structure. Other things, like CSS, add style (colors, fonts) and JavaScript adds interactivity. But it all starts with HTML!",
+        "imageUrl": "https://images.code.org/ef658ff1bd36be58df16a81842d8f7ab-test-lesson-intro-web-panel-4-ada4bbd5-5db8-496e-b9eb-5984ba75f676.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Introduce the basic concept of a web page, what HTML is, and its role in structuring web content using simple analogies."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-01 03:10:10 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-01 03:10:11 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-01 03:31:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-01 03:31:06 +0000\",\"changed\":[\"generate_outline\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-01 04:13:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-01 04:13:00 +0000\",\"changed\":[\"generate_outline\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

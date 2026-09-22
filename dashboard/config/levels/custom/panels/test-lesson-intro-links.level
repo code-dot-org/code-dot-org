@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-19T19:58:53.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-intro-links-dee9f38f-d9f9-4982-b1ad-fc4ac23f22ea",
+        "text": "Imagine a giant web connecting every piece of information online. That's what **hyperlinks**, or **links**, do! They let you jump from one webpage to another with a single click.",
+        "imageUrl": "https://images.code.org/f5edd7d433ae59e92bf3f5d20c7b68f7-test-lesson-intro-links-panel-1-4224c15b-2390-45cf-b885-d3352d5bb9ab.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-intro-links-fb74cc0b-60fd-4be7-b8ae-e86ab37729b6",
+        "text": "In HTML, we use the `<a>` tag to create a link. The most important part is the `href` attribute, which tells the browser *where* to go when someone clicks the link.",
+        "imageUrl": "https://images.code.org/7d5278e5336b3e18da5404dfa92b3aa0-test-lesson-intro-links-panel-2-300d03e4-ad96-4b5a-98da-616c4cd326cd.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-intro-links-bdfaff45-23ab-4d38-a450-561e214fd5c3",
+        "text": "To link to another website, you put the full web address inside the `href` attribute, like this: `<a href=\"https://www.example.com\">Visit Example Site</a>`. The text 'Visit Example Site' is what the user actually sees and clicks.",
+        "imageUrl": "https://images.code.org/bf17262ce461a403c7f7280652ea4f60-test-lesson-intro-links-panel-3-f3c6d747-a26c-43b0-922a-dc80544b1d8a.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-intro-links-0c9397e4-a4fd-4eba-9bdf-b73b6448fd86",
+        "text": "You can also use links to jump to different sections *within the same page*! This is super useful for long pages, helping users quickly find what they need.",
+        "imageUrl": "https://images.code.org/47a21892874dba160a6be9d9fe225a69-test-lesson-intro-links-panel-4-4a39a245-ea3f-48c2-9f34-8cef00528413.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_prompt": "Explain what hyperlinks (<a>) are, how they connect web pages, and the importance of the `href` attribute. Discuss linking to external sites and within the same page."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-19 19:59:31 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 19:59:31 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

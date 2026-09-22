@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-19T22:03:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-lesson-understand-lists-5c0e4324-118c-4fb1-b7ef-25c4949ee732",
+        "text": "Remember how we talked about lists helping organize ideas? HTML has two main types of lists, perfect for different situations!",
+        "imageUrl": "https://images.code.org/41988663e5d52cd43b3d1ba0e24ffe68-test-lesson-understand-lists-panel-1-f2d725da-2797-480f-9b24-732ed80b8b80.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "test-lesson-understand-lists-5707b163-8016-4797-8ba2-45271edcd179",
+        "text": "First, there are *unordered lists* (`<ul>`). These are great for items where the order doesn't matter, like a grocery list or a brainstorm!",
+        "imageUrl": "https://images.code.org/144c914baa9c1103a2b9d66da2a4f90c-test-lesson-understand-lists-panel-2-cef22983-67c5-45a5-92eb-4af886c2f869.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-lesson-understand-lists-cdc01f8e-1b1f-4d9d-bcdc-e944caa11c4d",
+        "text": "Then we have *ordered lists* (`<ol>`). Use these when the sequence is important, like steps in a recipe or instructions to build something.",
+        "imageUrl": "https://images.code.org/31e134cb5d7e88b7d3ad5afb0461bbc7-test-lesson-understand-lists-panel-3-fd73e38a-d38e-480c-8c36-c5d1a5610ea1.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-lesson-understand-lists-7ed7acd7-5175-4932-af7a-8e43a772c248",
+        "text": "No matter if it's ordered or unordered, each individual item in your list uses an `<li>` tag. Think of it as the specific note or ingredient in your list!",
+        "imageUrl": "https://images.code.org/a6bcbb964cb04474e513be8eabbba892-test-lesson-understand-lists-panel-4-3c767d2e-b29e-43af-b2d0-8f4ed6270ab9.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-lesson-understand-lists-3a405b52-50ba-403e-a6ea-61637c2f63c6",
+        "text": "Choosing `<ul>` or `<ol>` helps make your webpage super clear. Just ask yourself: *Does the order of these items matter?*",
+        "imageUrl": "https://images.code.org/e2f9a03c654379c3f204bb89445290c6-test-lesson-understand-lists-panel-5-a01d048b-828f-465d-bd2d-678ce20b4539.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Explain the difference between unordered lists (<ul>) and ordered lists (<ol>) using real-world examples, such as a grocery list versus a step-by-step instruction guide. Show how <li> tags are used for individual list items within both types of lists."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-19 22:04:27 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 22:04:28 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

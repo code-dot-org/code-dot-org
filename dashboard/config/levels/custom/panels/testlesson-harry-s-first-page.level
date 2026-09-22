@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-05T22:16:19.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "testlesson-harry-s-first-page-806b3cb2-bda9-4339-a108-9017f83cd4bf",
+        "text": "Look what Harry made! His very first magical web page is complete, powered by clever *spells*!",
+        "imageUrl": "https://images.code.org/a5c79186172f516d7fe81dbe29cb6857-testlesson-harry-s-first-page-panel-1-60469a51-9a47-41a5-a0be-13a3d541144c.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "testlesson-harry-s-first-page-c93aef21-26fa-4b5b-8c7c-4c4f3b911c58",
+        "text": "Just like a magical parchment scroll, *HTML* gives our page its structure. It's the blueprint!",
+        "imageUrl": "https://images.code.org/df699d8e7450685ddd6291c52b4d4c85-testlesson-harry-s-first-page-panel-2-48a723dc-4711-43d1-a250-03e50ab0f1fb.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "testlesson-harry-s-first-page-07149ecd-bb78-4b7c-b326-b0e55ea5e7bf",
+        "text": "*CSS* then adds all the dazzling style, making it as unique and vibrant as a personalized Hogwarts cloak!",
+        "imageUrl": "https://images.code.org/3061fc311135a0474d8b339358574146-testlesson-harry-s-first-page-panel-3-164360af-25ee-4bee-b0f2-1d3d3de97b9b.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "testlesson-harry-s-first-page-4a5c3f51-54c9-4f7d-8c9a-a9d214c4ebdf",
+        "text": "You've learned the fundamental spells! What other incredible magical web pages will *you* conjure next?",
+        "imageUrl": "https://images.code.org/5db6e01b977c76ec32187d4a83359983-testlesson-harry-s-first-page-panel-4-96798ada-61c0-4432-9efb-9be42a7c90b8.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_prompt": "Harry has successfully created his first magical web page! This level should review the HTML structure and CSS styling concepts learned. Celebrate Harry's achievement and encourage students to think about what other 'spells' they could learn to make more elaborate pages."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-05 22:17:08 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-05 22:17:09 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-08T23:59:04.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "agathaweb-intro-fayea-d629156b-38e6-4afa-ae1e-bce2986fd65d",
+        "text": "Meet Fayea! She's a brave rabbit who loves teaching self-defense. She wants to share her awesome moves with everyone!",
+        "imageUrl": "https://images.code.org/7b7c3052934485468ed93f61632133ba-agathaweb-intro-fayea-panel-1-017757a6-a92f-4d6b-aa5c-af5942348f7f.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "agathaweb-intro-fayea-1e12c48d-0901-4ae5-b0a0-47e79d993d1c",
+        "text": "But how can she reach lots of friends? Holding classes in just one spot might not be enough to teach everyone!",
+        "imageUrl": "https://images.code.org/ef72389e589074b763bf16b6a8ad890e-agathaweb-intro-fayea-panel-2-1601f952-1201-46cd-998d-e3b56a4907d5.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "agathaweb-intro-fayea-12128ae5-3c9e-42de-90b6-650bde216801",
+        "text": "That's where a website comes in! It's like having a big, open classroom that anyone can visit on the internet.",
+        "imageUrl": "https://images.code.org/6c009e406bcd3172f140c51744a07907-agathaweb-intro-fayea-panel-3-b7d19f34-5933-4fae-ac55-37796749d5cb.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "agathaweb-intro-fayea-bb17ef2a-70a7-41ea-900f-c52c0e3a8f75",
+        "text": "With a website, anyone can learn Fayea's self-defense tips, anytime, from anywhere! It's super easy to share her knowledge.",
+        "imageUrl": "https://images.code.org/b5bfec124c73ba3a8b4396e9408cc5c9-agathaweb-intro-fayea-panel-4-9a7dbc3d-800c-4bb9-8778-6272ce52e5e0.png",
+        "layout": "text-top-right"
+      }
+    ],
+    "generate_prompt": "Introduce Fayea, a rabbit with glasses, a wand, and a sword, who wants to create a simple website to teach self-defense lessons. Explain why a website is a good tool for her to share her knowledge with others."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-08 23:59:45 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-08 23:59:45 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 00:04:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 00:21:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-09 00:21:25 +0000\",\"changed\":[\"generate_prompt\"],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

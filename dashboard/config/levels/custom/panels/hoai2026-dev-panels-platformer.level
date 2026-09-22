@@ -21,7 +21,8 @@
         "fadeInOverPrevious": true
       }
     ],
-    "use_links": "false"
+    "use_links": "false",
+    "header_label": "Platformer"
   }
 }]]></config>
 </Panels>

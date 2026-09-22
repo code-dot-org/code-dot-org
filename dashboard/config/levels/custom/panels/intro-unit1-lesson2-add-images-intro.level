@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-10T02:15:20.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "intro-unit1-lesson2-add-images-intro-57d56d1d-303a-467d-bcaf-9c79d0d6cc20",
+        "text": "Ready to add some visual flair? The `<img>` tag is how we embed images into our webpages. It's a special tag that doesn't need a closing tag!",
+        "imageUrl": "https://images.code.org/e14b3000d159bbd6b1dc1fb54a623c76-intro-unit1-lesson2-add-images-intro-panel-1-d7937baa-da30-48b4-9615-1f288959a265.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-add-images-intro-6f28ed45-85af-49e5-87de-69e08e02df6e",
+        "text": "Every `<img>` tag needs a `src` attribute. This attribute tells the browser *where* to find the image file, like a path to its location.",
+        "imageUrl": "https://images.code.org/5f3d7c22e775925ff71540501e77cc99-intro-unit1-lesson2-add-images-intro-panel-2-fa2abd59-f8be-4ec5-a1e3-5015752e44a2.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-add-images-intro-652e5747-ed82-4890-bf9b-1840e63b9e1e",
+        "text": "But what if the image can't load, or someone can't see it? That's where the `alt` attribute comes in! It provides 'alternative text' describing the image.",
+        "imageUrl": "https://images.code.org/6bd455e94ca9adc051f9d967db42eee3-intro-unit1-lesson2-add-images-intro-panel-3-ce67f969-3e29-447c-a31a-2e4405db5bfe.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "intro-unit1-lesson2-add-images-intro-a3d23977-4e27-4d56-98e7-f114f4218886",
+        "text": "Putting it together, a simple image tag looks like this: `<img src='image.jpg' alt='A descriptive image description'>`. Now your webpage can display awesome visuals!",
+        "imageUrl": "https://images.code.org/b150b3592274af7c680d2a7f60ca18a9-intro-unit1-lesson2-add-images-intro-panel-4-2df4d510-b6e4-45d8-9d38-dd44332065ef.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_prompt": "Explain how to add images to a webpage using the <img> tag, covering essential attributes like src and alt. Show a simple example of an image in HTML."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-10 02:15:55 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-10 02:15:55 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

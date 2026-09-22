@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-13T00:19:01.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "panels": [
+      {
+        "key": "intro-unit1-lesson2-review-conclusion-5716b5ba-3d2a-4e06-b407-409ebede37c2",
+        "text": "You've come so far! Remember how we started by building the structure and adding all the content for our 'All About Owls' page using **HTML**?",
+        "imageUrl": "https://images.code.org/c488c124aa9e9f03b6c8d873df50b79a-intro-unit1-lesson2-review-conclusion-panel-1-a5d26f9f-2800-4690-a84e-63a47ab86d33.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-review-conclusion-65eb208e-0976-48a5-a902-1d1002aa0f37",
+        "text": "Then, with **CSS**, you became the designer! You added colors, picked fonts, and arranged everything to transform that basic structure into a beautiful, engaging website.",
+        "imageUrl": "https://images.code.org/3d4ea60d4a7049204ceb67290dd91ae8-intro-unit1-lesson2-review-conclusion-panel-2-bce4865e-ad1f-40d4-94a7-f3cb31027461.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "intro-unit1-lesson2-review-conclusion-a0788e0b-ba5c-4263-b916-de0dcd8b41c0",
+        "text": "See how HTML gives your page its **bones and brain**, while CSS provides the **beauty and personality**? They work together to create an amazing user experience!",
+        "imageUrl": "https://images.code.org/d59ddd71295c3baa0290eb02e392d72d-intro-unit1-lesson2-review-conclusion-panel-3-2e302698-a34e-498e-9b63-8721595b48d6.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "intro-unit1-lesson2-review-conclusion-37e51090-c0e8-493c-b9ae-f596f997b72f",
+        "text": "Now that you've mastered the basics, think about all the ways you could customize and expand your 'Owl Facts' page. What else could you add or change to make it even more unique?",
+        "imageUrl": "https://images.code.org/576112309e028b0de267a74750fcb849-intro-unit1-lesson2-review-conclusion-panel-4-adb92486-ccb3-4d6c-894c-71ff4a553d60.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_prompt": "Summarize the key HTML and CSS concepts learned throughout the lesson by reviewing the completed 'Owl Facts' webpage. Encourage students to reflect on how structure and style work together and suggest ideas for further customization or expansion of their page."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-13 00:19:39 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-13 00:19:40 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

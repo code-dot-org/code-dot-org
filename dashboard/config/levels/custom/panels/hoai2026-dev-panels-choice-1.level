@@ -34,7 +34,8 @@
         ]
       }
     ],
-    "use_links": "true"
+    "use_links": "true",
+    "header_label": "Getting started"
   }
 }]]></config>
 </Panels>
