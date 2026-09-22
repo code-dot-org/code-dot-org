@@ -18,7 +18,7 @@ const QUESTION: QuizQuestionSummary = {
 };
 
 describe('MultiChoiceQuestionContainer', () => {
-  it("renders the question's stem as the title", () => {
+  it("renders the question's stem as an h2 title", () => {
     render(
       <MultiChoiceQuestionContainer
         question={QUESTION}
@@ -27,8 +27,14 @@ describe('MultiChoiceQuestionContainer', () => {
       />
     );
 
+    // Level matters here, not just presence - AttemptCard keeps the h4
+    // visual size but must render as an actual <h2> to avoid skipping
+    // heading levels for assistive technology.
     expect(
-      screen.getByRole('heading', {name: 'What is the value of x?'})
+      screen.getByRole('heading', {
+        name: 'What is the value of x?',
+        level: 2,
+      })
     ).toBeInTheDocument();
   });
 

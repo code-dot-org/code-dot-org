@@ -11,8 +11,7 @@ export interface AttemptCardProps {
   children: React.ReactNode;
 }
 
-// Shared card shell used throughout the attempt flow - intro screen,
-// individual questions, and results all render through this.
+// Shared card shell every question type renders through.
 const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
   questionLabel,
   title,
@@ -26,7 +25,9 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
             {questionLabel}
           </Typography>
         )}
-        <Typography variant="h4">{title}</Typography>
+        <Typography variant="h4" component="h2">
+          {title}
+        </Typography>
       </div>
       <div className={styles.questionBody}>{children}</div>
     </div>
