@@ -557,6 +557,70 @@
         ]
       },
       "variantCount": 1
+    },
+    "sprite-plants": {
+      "template": "A potted houseplant with {Leaf Color}, {Leaf Spots}, {Drooping}, {Soil Moisture}",
+      "features": [
+        "Leaf Color",
+        "Leaf Spots",
+        "Drooping",
+        "Soil Moisture"
+      ],
+      "options": {
+        "Leaf Color": [
+          {
+            "id": "green",
+            "text": "deep green leaves"
+          },
+          {
+            "id": "pale",
+            "text": "washed-out pale leaves"
+          },
+          {
+            "id": "yellow",
+            "text": "yellowing leaves"
+          }
+        ],
+        "Leaf Spots": [
+          {
+            "id": "none",
+            "text": "smooth unmarked leaves"
+          },
+          {
+            "id": "few",
+            "text": "a few small brown spots"
+          },
+          {
+            "id": "many",
+            "text": "leaves covered in dark blotches"
+          }
+        ],
+        "Drooping": [
+          {
+            "id": "no",
+            "text": "standing upright"
+          },
+          {
+            "id": "yes",
+            "text": "leaves hanging limply over the rim"
+          }
+        ],
+        "Soil Moisture": [
+          {
+            "id": "dry",
+            "text": "in cracked dry soil"
+          },
+          {
+            "id": "damp",
+            "text": "in dark damp soil"
+          },
+          {
+            "id": "wet",
+            "text": "in soaked waterlogged soil"
+          }
+        ]
+      },
+      "variantCount": 1
     }
   }
 }

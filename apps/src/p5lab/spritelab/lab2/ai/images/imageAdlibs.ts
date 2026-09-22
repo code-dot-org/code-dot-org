@@ -20,6 +20,7 @@ export const IMAGE_ADLIB_SETS = [
   'expanded',
   'treasure',
   'cars',
+  'plants',
 ] as const;
 
 export type ImageAdlibSet = (typeof IMAGE_ADLIB_SETS)[number];
