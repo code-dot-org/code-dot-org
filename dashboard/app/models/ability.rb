@@ -597,7 +597,8 @@ class Ability
       # channel's saved sources (access_token_with_override_validation) or
       # alongside override sources (access_token_with_override_sources_and_validation).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
-        Policies::JavabuilderAccess.allowed?(user)
+        user.verified_instructor? ||
+          (user.sections_as_student + user.sections_instructed).any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
       can [:access_token_with_override_validation, :access_token_with_override_sources_and_validation], :javabuilder_session do

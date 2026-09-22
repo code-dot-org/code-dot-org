@@ -737,6 +737,35 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(co_teacher).can? :access_token_with_override_sources, :javabuilder_session
   end
 
+  test 'invited co-teacher cannot access javabuilder' do
+    teacher = create(:authorized_teacher)
+    csa_script = create(:csa_script, :in_single_unit_course)
+    section = create(:section, user: teacher, script: csa_script)
+    co_teacher = create(:teacher)
+    create(:section_instructor, section: section, instructor: co_teacher, status: :invited)
+
+    refute Ability.new(co_teacher).can? :get_access_token, :javabuilder_session
+  end
+
+  test 'co-teacher of verified teacher in non-CSA section cannot access javabuilder' do
+    teacher = create(:authorized_teacher)
+    section = create(:section, user: teacher)
+    co_teacher = create(:teacher)
+    create(:section_instructor, section: section, instructor: co_teacher, status: :active)
+
+    refute Ability.new(co_teacher).can? :get_access_token, :javabuilder_session
+  end
+
+  test 'co-teacher of unverified teacher in CSA section cannot access javabuilder' do
+    teacher = create(:teacher)
+    csa_script = create(:csa_script, :in_single_unit_course)
+    section = create(:section, user: teacher, script: csa_script)
+    co_teacher = create(:teacher)
+    create(:section_instructor, section: section, instructor: co_teacher, status: :active)
+
+    refute Ability.new(co_teacher).can? :get_access_token, :javabuilder_session
+  end
+
   test 'unverified teacher cannot access javabuilder' do
     teacher = create(:teacher)
     refute Ability.new(teacher).can? :get_access_token, :javabuilder_session
