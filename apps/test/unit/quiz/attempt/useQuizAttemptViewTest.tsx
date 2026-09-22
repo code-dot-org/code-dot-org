@@ -143,6 +143,34 @@ describe('useQuizAttemptView', () => {
     expect(beginAttempt).toHaveBeenCalledTimes(1);
   });
 
+  it('moves focus to the Retake button once submitted, since the footer button is gone', () => {
+    renderView({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          canRetake: true,
+        },
+      },
+    });
+
+    expect(screen.getByRole('button', {name: 'Retake Quiz'})).toHaveFocus();
+  });
+
+  it('moves focus to the result message when submitted with no Retake button', () => {
+    renderView({
+      hookState: {
+        attempt: {
+          ...ATTEMPT,
+          submittedAt: '2026-01-01T00:00:00Z',
+          canRetake: false,
+        },
+      },
+    });
+
+    expect(screen.getByText(/Submitted\. Score:/)).toHaveFocus();
+  });
+
   it('does not show a Retake button when the attempt cannot be retaken', () => {
     renderView({
       hookState: {

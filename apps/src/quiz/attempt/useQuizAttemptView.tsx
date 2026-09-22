@@ -52,6 +52,7 @@ export default function useQuizAttemptView({
   );
 
   const questionsRef = useRef<HTMLDivElement>(null);
+  const submittedRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setCurrentPageNumber(1);
@@ -62,11 +63,21 @@ export default function useQuizAttemptView({
   const isAttemptInProgress =
     !isLoading && !!unitId && !!attempt && !attempt.submittedAt;
 
-  // Focusing the new page's heading is what gets a page change announced
-  // to screen readers.
+  // Focus on the new page's heading when navigating to a new page.
   useEffect(() => {
     questionsRef.current?.querySelector<HTMLElement>('h2')?.focus();
   }, [currentPageNumber, isAttemptInProgress]);
+
+  // Focus on the Retake button or the result message when the attempt is submitted.
+  useEffect(() => {
+    if (!attempt?.submittedAt) {
+      return;
+    }
+    const target =
+      submittedRef.current?.querySelector<HTMLElement>('button') ??
+      submittedRef.current?.querySelector<HTMLElement>('[tabindex]');
+    target?.focus();
+  }, [attempt?.submittedAt]);
 
   const handleBeginAttempt = async () => {
     try {
@@ -162,8 +173,8 @@ export default function useQuizAttemptView({
               Begin Quiz
             </MuiButton>
           ) : attempt.submittedAt ? (
-            <div>
-              <Typography variant="body2">
+            <div ref={submittedRef}>
+              <Typography variant="body2" tabIndex={-1}>
                 Submitted. Score: {attempt.score} / {attempt.maxScore}
               </Typography>
               {attempt.canRetake && (
