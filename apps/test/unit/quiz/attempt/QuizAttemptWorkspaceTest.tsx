@@ -61,19 +61,21 @@ function question(
 function renderWorkspace({
   hookState = {},
   quizQuestions = [],
+  // null (not undefined) signals "no unit" - a default parameter only
+  // kicks in for undefined, so this lets callers opt out of the default.
   unitId = 7,
   allowMultipleAttempts,
 }: {
   hookState?: Partial<typeof BASE_HOOK_STATE>;
   quizQuestions?: QuizQuestionSummary[];
-  unitId?: number | undefined;
+  unitId?: number | null;
   allowMultipleAttempts?: boolean;
 } = {}) {
   mockUseQuizAttempt.mockReturnValue({...BASE_HOOK_STATE, ...hookState});
   return render(
     <QuizAttemptWorkspace
       levelId={42}
-      unitId={unitId}
+      unitId={unitId ?? undefined}
       quizQuestions={quizQuestions}
       allowMultipleAttempts={allowMultipleAttempts}
     />
@@ -91,7 +93,7 @@ describe('QuizAttemptWorkspace', () => {
   });
 
   it('shows a standalone-level message when there is no unit', () => {
-    renderWorkspace({unitId: undefined});
+    renderWorkspace({unitId: null});
     expect(
       screen.getByText('Quiz attempts are not allowed on a standalone level.')
     ).toBeInTheDocument();
