@@ -74,7 +74,9 @@ class ProjectUpdatedAt extends React.Component {
 const styles = {
   container: {
     display: 'block',
-    width: 160,
+    // A floor, not a cap: in some locales the save-error badge is wider, and a
+    // cap slides it under the Rename button.
+    minWidth: 160,
     height: 14,
     overflow: 'visible',
   },

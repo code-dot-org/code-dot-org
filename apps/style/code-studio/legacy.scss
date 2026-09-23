@@ -1442,6 +1442,11 @@ $default-modal-width: 640px;
       padding-right: 5px;
     }
   }
+  // .header_text's overflow serves the ellipsis on the name and status lines;
+  // on their wrapper it only clips the taller save-error badge.
+  .project_name_wrapper.header_text {
+    overflow: visible;
+  }
   .project_name_wrapper .header_text {
     float: left;
     clear: left;
