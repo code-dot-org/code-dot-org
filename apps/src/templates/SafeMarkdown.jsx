@@ -15,8 +15,6 @@ import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
 
-import localization from '@cdo/apps/localization';
-
 import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
 
 import externalLinks from './plugins/externalLinks';
@@ -57,19 +55,6 @@ class SafeMarkdown extends React.Component {
      */
     allowEmbeds: PropTypes.bool,
   };
-
-  // Translation happens synchronously inside render() (see the
-  // localizeParagraphs rehype plugin below), so we must re-render whenever the
-  // active locale changes to pick up the new strings.
-  componentDidMount() {
-    localization.on('change', this.onLocaleChange);
-  }
-
-  componentWillUnmount() {
-    localization.off('change', this.onLocaleChange);
-  }
-
-  onLocaleChange = () => this.forceUpdate();
 
   render() {
     // We only open external links in a new tab if it's explicitly specified

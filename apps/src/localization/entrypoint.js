@@ -22,6 +22,7 @@ const csd_prefixes = [
 const csf_prefixes = [
   '/courses/k5-unplugged',
   '/courses/express-2024',
+  '/courses/express-2025',
   '/courses/pre-express-2024',
   '/courses/k5-onlinepd-2024',
   '/courses/teaching-csf-2025',
@@ -161,6 +162,7 @@ function loadLocalize() {
     rememberLanguage: true,
     retranslateOnNewPhrases: true,
     disableWidget: true,
+    allowIgnoredChildrenInIsolate: true,
     saveNewPhrases: !(
       window.location.host === 'studio.code.org' ||
       window.location.host === 'code.org'
