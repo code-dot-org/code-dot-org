@@ -1,0 +1,434 @@
+import * as Blockly from 'blockly/core';
+import * as En from 'blockly/msg/en';
+import EventEmitter from 'events';
+import type TypedEmitter from 'typed-emitter';
+import type {EventMap} from 'typed-emitter';
+
+import type Driver from './Driver';
+import {DriverEvent} from './Driver';
+import {positionBlocksOnWorkspace} from './serialization';
+import type {Toolbox} from './toolbox';
+import {buildToolbox} from './toolbox';
+import type {Environment, BlocklySerialization} from './types';
+
+export const AgentEvent = {
+  /** The workspace was injected into the environment */
+  Injected: 'injected',
+  /** A callback for when anything in the workspace updates */
+  BlocklyEvent: 'blockly-event',
+} as const;
+
+interface AgentEvents<T extends Environment = Environment> extends EventMap {
+  [AgentEvent.Injected]: (
+    workspace: Blockly.WorkspaceSvg,
+    environment: T,
+  ) => void;
+  [AgentEvent.BlocklyEvent]: (
+    event: Blockly.Events.Abstract,
+    environment: T,
+  ) => void;
+}
+
+const TypedEventEmitter = EventEmitter as unknown as {
+  new <T extends Environment = Environment>(): TypedEmitter<AgentEvents<T>>;
+};
+
+class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
+  // An instance of our overall driver
+  protected _driver: Driver<T>;
+  // The Blockly options to use when injecting the workspace
+  protected _options: Blockly.BlocklyOptions;
+  // Whether or not the workspace is intended to be inlined on the page or not
+  protected _inline: boolean;
+  // Whether or not the workspace is intended to be embedded (readonly) on the page or not
+  protected _embedded: boolean;
+  // Whether or not the workspace is hidden from view
+  protected _hidden: boolean;
+  // A reference to the Blockly Workspace
+  protected _workspace?: Blockly.WorkspaceSvg;
+  // A reference to the document element that contains the injected Workspace
+  protected _container?: HTMLDivElement | HTMLSpanElement;
+  // Holds the blocks/categories in the toolbox
+  protected _toolbox?: Toolbox;
+  // The unique renderer-registry name this workspace was injected with, held so
+  // it can be released when the workspace is torn down.
+  protected _rendererName?: string;
+  /** Re-measure on `loadingdone`; held so `deconstruct` can unsubscribe. */
+  protected _reMeasureForFonts?: () => void;
+  // The font size of the currently applied theme, tracked so a theme change that
+  // alters the font size can trigger a re-layout (see _themeChangedEvent).
+  protected _appliedFontSize?: number;
+  protected _themeChangedEvent: () => void;
+
+  /**
+   * Constructs a driver to power a Blockly Workspace in the given container.
+   */
+  constructor(
+    driver: Driver<T>,
+    options: Blockly.BlocklyOptions,
+    inline: boolean,
+    hidden: boolean,
+    embedded: boolean,
+    container?: HTMLDivElement | HTMLSpanElement,
+  ) {
+    super();
+
+    this._driver = driver;
+    this._options = options;
+    this._inline = inline;
+    this._hidden = hidden;
+    this._embedded = embedded;
+    this._container = container;
+
+    this.driver.initialize(this);
+    this._themeChangedEvent = () => {
+      const workspace = this._workspace;
+      if (!workspace) {
+        return;
+      }
+      const theme = this.driver.theme.instance;
+      workspace.setTheme(theme);
+
+      // Blockly does not re-lay-out blocks when only the font size changes
+      // (RaspberryPiFoundation/blockly#7782): setTheme enlarges the rendered text via injected
+      // CSS, but block geometry keeps the measurements taken at the old size, so
+      // text overflows. Re-render against the new font when the size changes.
+      const fontSize = theme.fontStyle?.size;
+      if (fontSize !== this._appliedFontSize) {
+        this._appliedFontSize = fontSize;
+        this.rerenderForFontChange(workspace);
+      }
+    };
+    this.driver.addListener(DriverEvent.ThemeChanged, this._themeChangedEvent);
+  }
+
+  /**
+   * Re-measures and re-renders every block (and the flyout's, if open) so their
+   * geometry matches the current theme's font size. Blockly only refreshes block
+   * colours on a theme change, not their layout, so a font-size change needs an
+   * explicit re-render (see RaspberryPiFoundation/blockly#7782).
+   */
+  private rerenderForFontChange(workspace: Blockly.WorkspaceSvg) {
+    const rerender = (ws: Blockly.WorkspaceSvg) => {
+      // markDirty repoints each block at the renderer's freshly rebuilt
+      // constants; render() then queues a re-measure against them.
+      (ws.getAllBlocks(false) as Blockly.BlockSvg[]).forEach(block =>
+        block.markDirty(),
+      );
+      ws.render();
+    };
+
+    rerender(workspace);
+    const flyout = workspace.getFlyout();
+    if (flyout) {
+      rerender(flyout.getWorkspace());
+    }
+    // Flush the queued renders synchronously so a flyout reflow measures the
+    // freshly sized blocks rather than their stale bounds.
+    Blockly.renderManagement.triggerQueuedRenders();
+    flyout?.reflow();
+  }
+
+  get driver(): Driver<T> {
+    return this._driver;
+  }
+
+  /**
+   * Whether or not the current Workspace is meant to be hidden from view.
+   */
+  get hidden(): boolean {
+    return this._hidden;
+  }
+
+  /**
+   * Whether or not the current Workspace is meant to be embedded within the view.
+   */
+  get embedded(): boolean {
+    return this._embedded;
+  }
+
+  /**
+   * Whether or not the current Workspace is meant to be inlined.
+   */
+  get inline(): boolean {
+    return this._inline;
+  }
+
+  /**
+   * Retrieve a potential reference to the Blockly Workspace.
+   */
+  get workspace(): Blockly.WorkspaceSvg | undefined {
+    return this._workspace;
+  }
+
+  /**
+   * Retrieve a reference to the current container element.
+   */
+  get container(): HTMLDivElement | HTMLSpanElement | undefined {
+    return this._container;
+  }
+
+  set container(newContainer: HTMLDivElement | HTMLSpanElement) {
+    const oldContainer = this._container;
+
+    // Retain the reference to the container
+    this._container = newContainer;
+
+    if (oldContainer) {
+      // Move the workspace to the new container
+      this.move();
+    } else {
+      // Inject the workspace into the container
+      this.inject();
+    }
+  }
+
+  setContainer(newContainer: HTMLDivElement | HTMLSpanElement) {
+    this.container = newContainer;
+  }
+
+  getToolbox(): Toolbox | undefined {
+    return this._toolbox;
+  }
+
+  setToolbox(toolbox: Toolbox | undefined) {
+    this._toolbox = toolbox;
+
+    // Apply to the live workspace when it is already injected. setToolbox may
+    // be called after injection (e.g. async data changes the toolbox, or a
+    // flyout block's field defaults depend on a library that loads later), and
+    // the injection-time toolbox alone would leave a stale flyout. Blockly only
+    // supports updateToolbox when the workspace was injected with a toolbox, so
+    // guard on an existing toolbox/flyout.
+    if (
+      toolbox &&
+      this._workspace &&
+      (this._workspace.getToolbox() || this._workspace.getFlyout())
+    ) {
+      this._workspace.updateToolbox(buildToolbox(toolbox));
+    }
+  }
+
+  /**
+   * Injects a new Blockly Workspace into the current container.
+   */
+  protected inject() {
+    if (!this._container) {
+      throw new Error(
+        'Blockly inject attempted to be called before establishing a container',
+      );
+    }
+
+    if (this._workspace) {
+      throw new Error('Blockly inject attempted a second time');
+    }
+
+    // Blockly v13 reads Blockly.Msg while building ARIA labels during inject, so
+    // a locale must be loaded first. Fall back to English only when the embedder
+    // has not already set one, so we do not clobber a chosen locale.
+    if (Object.keys(Blockly.Msg).length === 0) {
+      Blockly.setLocale(En as unknown as {[key: string]: string});
+    }
+
+    const container = this._inline
+      ? document.createElement('div')
+      : this._container;
+
+    // Register a renderer unique to this workspace, carrying the driver's
+    // current input-plugin shapes, and inject with its name. Released in
+    // deconstruct().
+    this._rendererName = this.driver.acquireRenderer();
+
+    // Inject!
+    this._workspace = Blockly.inject(container, {
+      ...this._options,
+      renderer: this._rendererName,
+      theme: this.driver.theme.instance,
+      toolbox: this._toolbox ? buildToolbox(this._toolbox) : undefined,
+    });
+
+    // The workspace was injected with this theme's font size; track it so a
+    // later font-size change can be detected and trigger a re-layout.
+    this._appliedFontSize = this.driver.theme.instance.fontStyle?.size;
+
+    Blockly.svgResize(this._workspace);
+    this.driver.onInject(this);
+    this.emit(AgentEvent.Injected, this._workspace, this.driver.environment);
+
+    // Attach the event listener as an upcall for our own event
+    this._workspace.addChangeListener((event: Blockly.Events.Abstract) => {
+      this.emit(AgentEvent.BlocklyEvent, event, this.driver.environment);
+    });
+
+    this.reMeasureWhenFontsArrive();
+  }
+
+  /**
+   * Measure the workspace again once the web fonts have arrived.
+   *
+   * A field records its size the first time it renders, and a block that
+   * re-renders reuses what its fields recorded ("Other fields on the same block
+   * will not rerender, because their sizes have already been recorded" —
+   * Blockly's own note on `markDirty`). So a workspace injected while a web font
+   * is still loading measures every field against the fallback and KEEPS those
+   * measurements: fields sit off their centres, blocks are the wrong width, and
+   * the font visibly changing underneath them fixes none of it.
+   *
+   * Hence both halves here — mark every field dirty, which is what makes the
+   * re-render a re-measure, and then render.
+   *
+   * Twice, too. `fonts.ready` settles when nothing is *currently* loading, and
+   * a font is not fetched until something using it is laid out — so a font that
+   * starts loading after inject is missed by `ready` alone. `loadingdone` fires
+   * for each batch that finishes, which covers the rest.
+   */
+  protected reMeasureWhenFontsArrive() {
+    const fonts = document.fonts;
+    if (!fonts) {
+      return;
+    }
+    const workspace = this._workspace;
+    this._reMeasureForFonts = async () => {
+      // The workspace can be gone by now — a file switched, a lab unmounted.
+      if (!workspace || this._workspace !== workspace || !workspace.rendered) {
+        return;
+      }
+      for (const block of workspace.getAllBlocks(false)) {
+        for (const input of block.inputList) {
+          for (const field of input.fieldRow) {
+            field.markDirty();
+          }
+        }
+        void block.queueRender();
+      }
+      await Blockly.renderManagement.finishQueuedRenders();
+      if (this._workspace === workspace && workspace.rendered) {
+        Blockly.svgResize(workspace);
+      }
+    };
+    void fonts.ready.then(() => this._reMeasureForFonts?.());
+    fonts.addEventListener('loadingdone', this._reMeasureForFonts);
+  }
+
+  /**
+   * Moves the current Workspace to be inside a different containing element.
+   *
+   * This generally means re-injecting the Blockly Workspace.
+   */
+  protected move() {}
+
+  load(blocks: BlocklySerialization) {
+    if (!this._workspace) {
+      throw new Error(
+        'Attempted to serialize blocks before workspace was injected',
+      );
+    }
+
+    Blockly.serialization.workspaces.load(blocks, this._workspace);
+
+    // Reposition blocks if this is a full workspace
+    if (!this._inline) {
+      positionBlocksOnWorkspace(this._workspace);
+    }
+
+    // If this is an inline workspace, fit it to the container
+    if (this._inline) {
+      // Move top block to corner (hopefully there is only one)
+      for (const block of this._workspace.getTopBlocks()) {
+        block.moveTo(new Blockly.utils.Coordinate(0, 0));
+      }
+
+      const container = this._workspace.getInjectionDiv();
+      if (!container) {
+        return;
+      }
+
+      // Copy over SVG rendered blocks to the span in our anchor
+      document.body.appendChild(container);
+      if (this._workspace) {
+        Blockly.svgResize(this._workspace);
+      }
+
+      const svg = container.querySelector('svg')?.cloneNode(true) as SVGElement;
+      if (svg && this._container) {
+        svg.style.background = 'none';
+        svg.style.position = 'relative';
+        svg.style.display = 'inline-block';
+        svg.style.border = 'none';
+        svg.querySelector('.blocklyMainBackground')?.remove();
+        this._container.innerHTML = '';
+        this._container.appendChild(svg);
+
+        // Fit the copy to the BLOCKS, which is the only thing an inline
+        // workspace is meant to show.
+        //
+        // Asked of the workspace rather than measured off the copy, and that
+        // is the fix rather than a tidy-up. The measurement used to be
+        // `.blocklyWorkspace`'s client rect, taken a frame later — but by then
+        // the injection div has been moved to `document.body` and resized
+        // against it, so what came back was the size of the WINDOW. Every
+        // inline block was a canvas of empty space with a block in the corner
+        // of it, and the taller the window the worse it got.
+        //
+        // `getBlocksBoundingBox` is in workspace units, so the scale turns it
+        // into the pixels the copy is drawn at. An empty workspace has no box
+        // and keeps the old floor of thirty, which is a small square rather
+        // than nothing at all.
+        const bounds = this._workspace.getBlocksBoundingBox();
+        const scale = this._workspace.scale || 1;
+        const width = Math.max(30, (bounds.right - bounds.left) * scale);
+        const height = Math.max(30, (bounds.bottom - bounds.top) * scale);
+        svg.style.width = width + 'px';
+        svg.style.height = height + 'px';
+
+        // Copy classes over
+        for (const blocklyClassName of Array.from(
+          (container?.querySelector('svg')?.parentNode as HTMLElement | null)
+            ?.classList || [],
+        )) {
+          this._container.classList.add(blocklyClassName);
+        }
+      }
+
+      // Destroy the original container
+      container?.remove();
+    } else {
+      if (this._workspace) {
+        Blockly.svgResize(this._workspace);
+      }
+    }
+  }
+
+  /**
+   * Removes the workspace.
+   */
+  deconstruct() {
+    if (this._reMeasureForFonts) {
+      document.fonts?.removeEventListener(
+        'loadingdone',
+        this._reMeasureForFonts,
+      );
+      this._reMeasureForFonts = undefined;
+    }
+
+    // Remove from the Driver's awareness
+    this.driver.uninitialize(this);
+    this.driver.removeListener(
+      DriverEvent.ThemeChanged,
+      this._themeChangedEvent,
+    );
+
+    // Deconstruct the workspace
+    this._workspace?.dispose();
+    this._workspace = undefined;
+
+    // Release the per-workspace renderer registered at inject. The workspace
+    // held its own renderer instance, so the registry entry is no longer needed.
+    if (this._rendererName) {
+      this.driver.releaseRenderer(this._rendererName);
+      this._rendererName = undefined;
+    }
+  }
+}
+
+export default Agent;
