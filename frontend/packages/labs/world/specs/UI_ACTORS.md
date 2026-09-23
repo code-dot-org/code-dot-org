@@ -1376,3 +1376,27 @@ rather than convenience, since canvas-drawn keys are reachable by a finger and
 by nothing else (specs/KEYBOARD_PLAN.md). None of the rows above adds a dependency on those, and that
 is deliberate — but before any of this is claimed for mobile, the driver's
 touch path wants a test that taps, the way the play test clicks.
+
+## Shipped and never seen
+
+Four stock actors were on the shelf and placed by no fixture at all — a Text
+Area, a Scroll View, a Health Bar and an Image. Each had headless tests, so
+none was unverified; every one of them was UNSEEN, which turns out to be a
+different thing.
+
+The List is the measure of the difference. It had twelve passing tests and
+three real defects, and all three were found by somebody using it: it drew six
+rows however tall its box was, it would not scroll with the wheel, and holding
+an arrow moved one row. None of those is arithmetic a test was missing — they
+are the answers to "what does a hand do to this", and a headless suite has no
+hand.
+
+So a control is not finished when its tests pass. It is finished when a
+fixture places it and somebody has used it. The Interface Kit places the Text
+Area and the Scroll View now, and `interfaceKitPlays` types into one and
+scrolls the other — the kit had never been played either, only checked for the
+presence of its files.
+
+Still unplaced: the Health Bar and the Image, both of which read as game
+furniture rather than interface, and both of which want a game fixture rather
+than this one.

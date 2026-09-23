@@ -85,8 +85,12 @@ knowing: it checks the rules an actor READS through property blocks, and a
 
 - **No momentum, no rubber band.** A drag stops where it is let go. Both are
   arithmetic over a velocity nobody keeps yet.
-- **No wheel.** The driver reports no wheel events; the lab has never had
-  them, and a touch-first kit does not miss one.
+- ~~**No wheel.**~~ BUILT. It was true that the lab had never had one; it was
+  not true that nothing missed it — the first person to put a Scroll View and
+  a List on a screen reached for it immediately. The wheel is its own trait
+  (`Can Be Scrolled`) and arrives in pixels, so the handler is one addition to
+  the offset the view already keeps (specs/LIST_PLAN.md, "Found in the
+  browser").
 - **The bar is not draggable.** It says where you are; it is not a Slider. A
   project that wants one can place a Slider and write `scroll` from it, which
   is two blocks and reads better than a second dragging mechanism inside this.
@@ -96,9 +100,16 @@ knowing: it checks the rules an actor READS through property blocks, and a
 - **Nothing keeps the focus ring inside it.** Tabbing into a Scroll View's
   content will one day want the view to scroll to whatever got the focus, and
   it does not.
+- **No easing and no overscroll.** A wheel moves it instantly, and a view
+  already at the end gives no sign that the wheel was turned.
 
 ## Obligations
 
 - `actors/scrollView` on the shelf and granted by a tile.
 - `engine/scrolling.test` for the arithmetic, `scrollViewPlays` for the
   finger and the keys.
+- **A FIXTURE THAT PLACES ONE**, which this did not have for months: it was
+  on the shelf with five passing tests and had never once been seen running.
+  The Interface Kit places one now, showing a settings map taller than its
+  window, and `interfaceKitPlays` scrolls it. A headless test says the
+  arithmetic is right; it cannot say anybody can see the thing.

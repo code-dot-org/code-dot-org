@@ -102,9 +102,16 @@ const by = (pixels: number) =>
     point(axis(scroll(), 'x'), maths(axis(scroll(), 'y'), 'ADD', num(pixels))),
   );
 
-/** `when this actor presses ⟨key⟩: move by ⟨pixels⟩` — only while focused. */
-const onKey = (key: string, pixels: number) => ({
-  type: 'world_on_Input_PressesEvent',
+/**
+ * `when this actor presses ⟨key⟩: move by ⟨pixels⟩` — only while focused.
+ *
+ * Made TWICE by the caller, once for the press and once for the repeat: a key
+ * raises `presses` exactly once however long it is down, so a window that only
+ * heard the press moved a single step for an arrow held all day
+ * (`World.repeatingKeys`).
+ */
+const onKey = (key: string, pixels: number, hat = 'Presses') => ({
+  type: `world_on_Input_${hat}Event`,
   fields: {FILTER0: key},
   inputs: {ACTOR: me()},
   next: {
@@ -153,6 +160,8 @@ export const scrollViewActor = actorFile(
     // Clicked, so without this the click that should bring the keyboard here
     // never happened and the arrows went on moving whatever had it before.
     useTrait('Mouse#CanBeClickedTrait'),
+    // …and the wheel, which is what a window onto something taller is FOR.
+    useTrait('Mouse#CanBeScrolledTrait'),
     useTrait('Tab Navigation#CanBeFocusedTrait'),
     useTrait('Input#TakesKeyboardInputTrait'),
     showAs('scroll'),
@@ -192,10 +201,30 @@ export const scrollViewActor = actorFile(
           ]),
         },
       },
-      onKey('up arrow', -STEP),
-      onKey('down arrow', STEP),
-      onKey('page up', -HEIGHT),
-      onKey('page down', HEIGHT),
+      // The wheel, which is the drag said the other way round: a drag carries
+      // the content with the finger and is subtracted, a wheel pushes it away
+      // and is added. Both are pixels, and `scrollTo` clamps either into the
+      // content the engine has already measured.
+      {
+        type: 'world_on_Mouse_IsScrolledByEvent',
+        inputs: {ACTOR: me()},
+        next: {
+          block: scrollTo(
+            point(
+              axis(scroll(), 'x'),
+              maths(axis(scroll(), 'y'), 'ADD', {
+                block: {type: 'world_event_value'},
+              }),
+            ),
+          ),
+        },
+      },
+      ...['up arrow', 'down arrow', 'page up', 'page down'].flatMap(
+        (key, at) => {
+          const pixels = [-STEP, STEP, -HEIGHT, HEIGHT][at];
+          return [onKey(key, pixels), onKey(key, pixels, 'Repeats')];
+        },
+      ),
     ],
     drawing: {
       width: width(),

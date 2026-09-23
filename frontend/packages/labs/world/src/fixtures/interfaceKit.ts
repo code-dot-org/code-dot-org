@@ -93,6 +93,42 @@ const typedIn = () => ({
 /** The screen, in tiles: the standard width, and a phone's height. */
 export const PORTRAIT = {columns: 10, rows: 18};
 
+/**
+ * What the Scroll View shows: a settings page taller than the window onto it.
+ *
+ * A MAP, because that is what a Scroll View holds — it is a Viewport with a
+ * finger, and a Viewport shows a map (`actors/scrollView`). So the content is
+ * a file of its own, and the thing being demonstrated is that the rows in it
+ * are REAL ACTORS: each one is a Label and a Toggle that can be clicked
+ * through the window, which is the case a List cannot answer.
+ *
+ * SIX TILES TALL against the four the window is, so there is something below
+ * the fold to drag up to. A map the same size as its window would scroll
+ * nowhere and demonstrate nothing.
+ */
+const SETTINGS_MAP = JSON.stringify(
+  {
+    type: 'map',
+    size: {width: 9, height: 6},
+    tile: {width: TILE_SIZE, height: TILE_SIZE},
+    actors: [
+      ...['SOUND', 'MUSIC', 'HINTS', 'SHAKE', 'INVERT'].flatMap(
+        (what, at) => [
+          place('actors/label', `${what} label`, 76, 26 + at * 36, {
+            Label: {text: what},
+          }),
+          place('actors/toggle', what, 214, 26 + at * 36, {
+            Label: {text: ''},
+            hasABox: {width: 64},
+          }),
+        ],
+      ),
+    ],
+  },
+  null,
+  2,
+);
+
 /** The screen, as the map editor sees it: five placements, top to bottom. */
 const INTERFACE_MAP = {
   type: 'map' as const,
@@ -147,9 +183,25 @@ const INTERFACE_MAP = {
       Dropdown: {choices: ['SMALL', 'MEDIUM', 'LARGE']},
       Label: {text: 'SMALL'},
     }),
+    // MORE THAN ONE LINE, which is the one thing a Text Input cannot do. It
+    // is the kit's only control that grows downward as it is typed into, and
+    // it is here because it had been shipped and placed nowhere — three
+    // headless tests and never once seen running.
+    place('actors/textArea', 'Notes', 160, 320, {
+      hasABox: {width: 300, height: 88},
+    }),
+    // …and a window onto something taller than itself, which is the other
+    // thing nothing had ever put on a screen. What is IN it is a map
+    // (`SETTINGS_MAP`) rather than rows of words: its toggles are actors, and
+    // clicking one through the window is the case a List cannot answer
+    // (specs/SCROLLING_PLAN.md).
+    place('actors/scrollView', 'Settings', 160, 428, {
+      hasABox: {width: 300, height: 128},
+      showsMap: {map: 'maps/settings'},
+    }),
     // …and the box that says the answer, a letter at a time. At the foot
     // of the screen, where a phone keeps its replies, and nobody's child.
-    place('actors/speechBox', 'Reply', 160, 500),
+    place('actors/speechBox', 'Reply', 160, 530),
   ],
 };
 
@@ -282,6 +334,8 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
     'toggle',
     'slider',
     'dropdown',
+    'textArea',
+    'scrollView',
   ]) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }
@@ -299,10 +353,27 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
   const main = Object.values(source.files).find(
     file => file.name === 'main.world',
   );
-  return main
-    ? {
-        ...source,
-        files: {...source.files, [main.id]: {...main, contents: MAIN_WORLD}},
-      }
-    : source;
+  if (!main) {
+    return source;
+  }
+  const maps = Object.values(source.folders).find(
+    folder => folder.name === 'maps' && folder.parentId === '0',
+  );
+  return {
+    ...source,
+    files: {
+      ...source.files,
+      [main.id]: {...main, contents: MAIN_WORLD},
+      // The Scroll View's contents. Written here rather than imported: a
+      // stock map is something several projects share, and a settings page
+      // is this kit's own idea of something to scroll.
+      kitSettingsMap: {
+        id: 'kitSettingsMap',
+        name: 'settings.map',
+        language: 'map',
+        contents: SETTINGS_MAP,
+        folderId: maps?.id ?? '0',
+      },
+    },
+  };
 };
