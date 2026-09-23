@@ -19,6 +19,7 @@ import {
 import {getTrainerId} from './trainers/ids';
 import type {
   DataRow,
+  Hyperparameters,
   Metadata,
   Mode,
   TrainedModelDetailsSave,
@@ -66,7 +67,7 @@ export interface RootState {
   historicResults: HistoricResult[];
   showResultsDetails: boolean;
   resultsHighlightRow: number | undefined;
-  hyperparameters: Record<string, number>;
+  hyperparameters: Hyperparameters | undefined;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
@@ -115,7 +116,7 @@ export const initialState: RootState = {
   historicResults: [],
   showResultsDetails: false,
   resultsHighlightRow: undefined,
-  hyperparameters: {},
+  hyperparameters: undefined,
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
@@ -417,7 +418,7 @@ const ailabSlice = createSlice({
       state.showOverlay = false;
       state.showResultsDetails = action.payload;
     },
-    setHyperparameters(state, action: PayloadAction<Record<string, number>>) {
+    setHyperparameters(state, action: PayloadAction<Hyperparameters>) {
       state.hyperparameters = action.payload;
     },
     setInstructionsDismissed(state) {
@@ -561,7 +562,7 @@ export function getTrainedModelDataToSave(state: RootState): ModelDataToSave {
     features: getFeaturesToSave(state),
     summaryStat: getSummaryStat(state),
     trainedModel: state.trainedModel ? state.trainedModel.toJSON() : null,
-    hyperparameters: state.hyperparameters,
+    hyperparameters: state.hyperparameters ?? null,
   };
 
   return dataToSave;

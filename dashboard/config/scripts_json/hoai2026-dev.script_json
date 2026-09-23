@@ -631,6 +631,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "hoai2026-dev-spritelab-lab2-patrol-meet"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai2026-dev-spritelab-lab2-patrol-meet"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "hoai2026-dev",
+        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
+      },
+      "level_keys": [
+        "hoai2026-dev-spritelab-lab2-patrol-meet"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 25,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "hoai2026-dev-panels-choice-3"
         ]
       },
@@ -649,9 +673,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
-      "activity_section_position": 25,
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 26,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -673,9 +697,9 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
-      "activity_section_position": 26,
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 27,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -697,9 +721,9 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
-      "activity_section_position": 27,
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 28,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -721,9 +745,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
-      "activity_section_position": 28,
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 29,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -751,18 +775,6 @@
         "level.key": "hoai2026-dev-panels-welcome",
         "script_level.level_keys": [
           "hoai2026-dev-panels-welcome"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2026-dev",
-        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hoai2026-dev-panels-choice-1",
-        "script_level.level_keys": [
-          "hoai2026-dev-panels-choice-1"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -847,18 +859,6 @@
         "level.key": "hoai2026-dev-spritelab-lab2-story",
         "script_level.level_keys": [
           "hoai2026-dev-spritelab-lab2-story"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "hoai2026-dev",
-        "activity_section.key": "5f274703-fce0-44f3-ac27-9df0a8406534"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hoai2026-dev-panels-choice-2",
-        "script_level.level_keys": [
-          "hoai2026-dev-panels-choice-2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1024,9 +1024,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "hoai2026-dev-panels-choice-3",
+        "level.key": "hoai2026-dev-spritelab-lab2-patrol-meet",
         "script_level.level_keys": [
-          "hoai2026-dev-panels-choice-3"
+          "hoai2026-dev-spritelab-lab2-patrol-meet"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

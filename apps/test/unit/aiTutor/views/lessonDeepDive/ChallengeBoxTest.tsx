@@ -17,6 +17,11 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
 }));
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+}));
+
 jest.mock(
   '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob',
   () => ({
@@ -140,7 +145,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -172,7 +176,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -237,7 +240,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -307,7 +309,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
     await submitWhiteboardChallenge();
@@ -360,7 +361,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
 
@@ -395,7 +395,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
 
@@ -422,7 +421,6 @@ describe('ChallengeBox', () => {
         lessonId={42}
         challenge={fakeChallenge}
         challengeType={ChallengeTypes.WHITEBOARD}
-        challengeSetCallback={jest.fn()}
       />
     );
 
