@@ -86,3 +86,20 @@ export const ImperativeApi: StoryObj<{autoHideDuration: number}> = {
     );
   },
 };
+
+/**
+ * A custom icon replaces the one the `type` would pick. 
+ * Excluded from Eyes - a spinning icon never holds a stable frame.
+ */
+export const CustomIcon: Story = {
+  args: {
+    open: true,
+    message: 'Saving to your backpack...',
+    type: 'info',
+    autoHideDuration: null,
+    alertProps: {icon: {iconName: 'spinner', animationType: 'spin'}},
+  },
+  parameters: {
+    eyes: {include: false},
+  },
+};
