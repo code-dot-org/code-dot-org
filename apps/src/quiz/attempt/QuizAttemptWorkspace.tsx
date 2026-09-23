@@ -7,7 +7,7 @@ import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import QuizFooter from './QuizFooter';
 import useQuizAttempt from './useQuizAttempt';
 
-import styles from './quiz-attempt-view.module.scss';
+import styles from './quiz-attempt-workspace.module.scss';
 
 export interface QuizAttemptWorkspaceProps {
   levelId: number;
@@ -32,8 +32,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     unitId,
   });
 
-  // currentPageNumber is a 1-based position into this list, not a raw page
-  // value - placements don't guarantee pages are contiguous or start at 1.
+  // currentPageNumber is a 1-based position into this list, not a raw page value.
   const pageNumbers = Array.from(new Set(quizQuestions.map(q => q.page))).sort(
     (a, b) => a - b
   );
@@ -142,7 +141,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   };
 
   return (
-    <div className={styles.attemptView}>
+    <div className={styles.attemptWorkspace}>
       <div className={styles.attemptBody}>
         {error && (
           <Typography variant="body3" color="error" role="alert">
