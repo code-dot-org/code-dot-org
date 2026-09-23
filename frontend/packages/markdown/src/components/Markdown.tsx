@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import type {Components} from 'hast-util-to-jsx-runtime';
 import {
   useMemo,
-  useSyncExternalStore,
   type CSSProperties,
   type ElementType,
   type ReactNode,
@@ -32,16 +31,8 @@ import {
   composeSanitizeSchema,
   preprocessMarkdown,
   type MarkdownExtension,
-  type SanitizeSchema,
 } from '../extension';
-import {
-  getLocalizationVersion,
-  isLocalizationActive,
-  subscribeLocalization,
-  translateHtml,
-} from '../localization';
 import rehypeListItemParagraphs from '../rehypeListItemParagraphs';
-import rehypeLocalize from '../rehypeLocalize';
 
 import moduleStyles from './markdown.module.css';
 
@@ -102,11 +93,9 @@ const LOCALIZE_LINK_ATTRS = {
   'data-lz-url': 'true',
   'data-localize': 'markdown-url',
 };
-// data-isolate marks a paragraph as a runtime translation unit; data-notranslate
-// marks one already translated at build time by rehypeLocalize, so the runtime
-// engine leaves it alone.
+// data-isolate makes a paragraph one translation unit; an extension marks
+// content inside it that must not be translated with data-ignore.
 const LOCALIZE_PARAGRAPH_ATTRS = {'data-isolate': 'true'};
-const LOCALIZE_NOTRANSLATE_ATTRS = {'data-notranslate': 'true'};
 
 /*
  * Every component below forwards `className` and `style`. A mapped element
@@ -135,20 +124,17 @@ const makeLink =
 
 /*
  * MUI Typography forwards unknown props (including our `data-*` localization
- * attributes) to the rendered element, so the isolation/notranslate markers
- * survive. When localization is active, rehypeLocalize has already translated
- * the content at build time, so we mark the paragraph data-notranslate;
- * otherwise data-isolate marks it for the runtime translation path.
+ * attributes) to the rendered element, so the isolation marker survives.
  */
 const makeParagraph =
-  (localized: boolean, variant: BodyTextSizeVariant): Components['p'] =>
+  (variant: BodyTextSizeVariant): Components['p'] =>
   ({children, className, style}) => (
     <Typography
       variant={variant}
       component="p"
       className={className}
       style={style}
-      {...(localized ? LOCALIZE_NOTRANSLATE_ATTRS : LOCALIZE_PARAGRAPH_ATTRS)}
+      {...LOCALIZE_PARAGRAPH_ATTRS}
     >
       {children}
     </Typography>
@@ -184,7 +170,6 @@ const muiText =
   );
 
 const baseComponents = (
-  localized: boolean,
   bodyVariant: BodyTextSizeVariant,
 ): Partial<Components> => ({
   h1: muiText('h1', 'h1'),
@@ -196,7 +181,7 @@ const baseComponents = (
   strong: muiText('strong', 'strong'),
   em: muiText('em', 'em'),
   a: makeLink(bodyVariant),
-  p: makeParagraph(localized, bodyVariant),
+  p: makeParagraph(bodyVariant),
   // `---` renders as a themed design-system divider. (Divider is not yet
   // MUI-migrated, so the DSCO component is the design-system component here.)
   hr: ({className, style}) => <Divider className={className} style={style} />,
@@ -225,29 +210,14 @@ const BLOCK_CONSTRUCTS = [
 ];
 
 /*
- * A sanitize pass with a fresh attacher identity. unified de-duplicates plugins
- * by reference, so calling `.use(rehypeSanitize, schema)` twice reconfigures the
- * single registration instead of adding a second pass. Wrapping mints a distinct
- * attacher each call, so the before- and after-localization passes both run.
- */
-const sanitizePass = (schema: SanitizeSchema) => () => rehypeSanitize(schema);
-
-/*
  * Compose the pipeline from the base behavior plus the enabled extensions.
  * Extension remark plugins run before the markdown-to-HTML transform; extension
  * rehype plugins run after raw-HTML reparsing but before sanitization, so their
  * output is still constrained by the (extension-widened) allowlist; extension
  * components are merged over the base mappings.
- *
- * Sanitization runs before localization. rehypeLocalize round-trips block
- * content through a live DOM (innerHTML) inside the translator, so the tree must
- * already be safe at that point — sanitizing only afterward would be too late to
- * stop markup that auto-executes on parse. When localization is active, a second
- * sanitize pass then constrains the translator's reparsed output.
  */
 const buildProcessor = (
   extensions: MarkdownExtension[],
-  localized: boolean,
   bodyVariant: BodyTextSizeVariant,
   inline: boolean,
 ) => {
@@ -267,24 +237,7 @@ const buildProcessor = (
     // wrapper already classifies correctly.
     .use(rehypeListItemParagraphs)
     .use(collectRehypePlugins(extensions))
-    // Sanitize before localization, not after: rehypeLocalize serializes each
-    // block and reparses it through a live DOM, so the content it handles has
-    // to be safe going in.
-    .use(sanitizePass(sanitizeSchema));
-
-  if (localized) {
-    // `summary` is included so details summaries (inline content after
-    // unwrapping) are translated like paragraph text.
-    processor.use(rehypeLocalize, {
-      translate: translateHtml,
-      blockTags: ['p', 'summary'],
-    });
-    // Re-sanitize the localized tree: the stashed originals are already safe,
-    // but the translator's output was reparsed and spliced back in, so hold it
-    // to the same allowlist. A distinct attacher (sanitizePass) so this is a
-    // genuine second pass, not a reconfiguration of the first.
-    processor.use(sanitizePass(sanitizeSchema));
-  }
+    .use(rehypeSanitize, sanitizeSchema);
 
   if (inline) {
     // Append rather than assign: remark-gfm has already registered its own
@@ -309,8 +262,8 @@ const buildProcessor = (
       inline
         ? // The one paragraph the parser still produces is the wrapping span
           // itself, which carries the localization marker in its place.
-          {...baseComponents(localized, bodyVariant), p: PassThrough}
-        : baseComponents(localized, bodyVariant),
+          {...baseComponents(bodyVariant), p: PassThrough}
+        : baseComponents(bodyVariant),
       extensions,
     ),
   });
@@ -325,9 +278,8 @@ const buildProcessor = (
  * `bodyVariant` to size body text, and `inline` for markdown that has to render
  * as phrasing content.
  *
- * Localization is automatic: when the core localization plugin has loaded
- * LocalizeJS, content is translated in place and re-translated on locale change
- * (see `localization.ts`); otherwise it is a no-op.
+ * Output is not translated here: paragraphs carry `data-isolate`, and the
+ * on-page translator (LocalizeJS) translates the rendered DOM.
  */
 const Markdown = ({
   content,
@@ -337,19 +289,9 @@ const Markdown = ({
   extensions = NO_EXTENSIONS,
   children,
 }: MarkdownProps) => {
-  // Re-render (and re-run the synchronous translate) when LocalizeJS loads or
-  // the locale changes. Inactive until then — the runtime data-isolate path,
-  // with no per-render translation cost.
-  useSyncExternalStore(
-    subscribeLocalization,
-    getLocalizationVersion,
-    getLocalizationVersion,
-  );
-  const localized = isLocalizationActive();
-
   const processor = useMemo(
-    () => buildProcessor(extensions, localized, bodyVariant, inline),
-    [extensions, localized, bodyVariant, inline],
+    () => buildProcessor(extensions, bodyVariant, inline),
+    [extensions, bodyVariant, inline],
   );
 
   const source = preprocessMarkdown(content ?? children ?? '', extensions);
@@ -357,10 +299,7 @@ const Markdown = ({
 
   if (inline) {
     return (
-      <span
-        className={className}
-        {...(localized ? LOCALIZE_NOTRANSLATE_ATTRS : LOCALIZE_PARAGRAPH_ATTRS)}
-      >
+      <span className={className} {...LOCALIZE_PARAGRAPH_ATTRS}>
         {rendered}
       </span>
     );
