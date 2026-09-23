@@ -28,7 +28,13 @@ const chain = (rows: object[]) =>
   rows.reduceRight((next, row) => ({...row, next: {block: next}}));
 
 /** A List at (100, 100) holding eight words, and a Label it writes into. */
-const project = (canRemove = true): MultiFileSource => {
+const WORDS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+
+const project = (
+  canRemove = true,
+  boxHeight?: number,
+  words: readonly string[] = WORDS,
+): MultiFileSource => {
   let source = WORLD_SCENARIOS.empty.source;
   source = importStockActor(source, stockActorById('list')!).source;
   source = importStockActor(source, stockActorById('label')!).source;
@@ -53,6 +59,17 @@ const project = (canRemove = true): MultiFileSource => {
                         type: 'world_set_position',
                         inputs: {ACTOR: me(), X: number(100), Y: number(100)},
                       },
+                      ...(boxHeight === undefined
+                        ? []
+                        : [
+                            {
+                              type: 'world_set_Boxed_HeightProperty',
+                              inputs: {
+                                ACTOR: me(),
+                                VALUE: number(boxHeight),
+                              },
+                            },
+                          ]),
                       {
                         type: 'world_set_ActorsList_CanRemoveProperty',
                         inputs: {
@@ -72,19 +89,17 @@ const project = (canRemove = true): MultiFileSource => {
                           VALUE: {
                             block: {
                               type: 'lists_create_with',
-                              extraState: {itemCount: 8},
+                              extraState: {itemCount: words.length},
                               inputs: Object.fromEntries(
-                                ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].map(
-                                  (word, at) => [
-                                    `ADD${at}`,
-                                    {
-                                      block: {
-                                        type: 'text',
-                                        fields: {TEXT: word},
-                                      },
+                                words.map((word, at) => [
+                                  `ADD${at}`,
+                                  {
+                                    block: {
+                                      type: 'text',
+                                      fields: {TEXT: word},
                                     },
-                                  ],
-                                ),
+                                  },
+                                ]),
                               ),
                             },
                           },
@@ -166,9 +181,17 @@ const project = (canRemove = true): MultiFileSource => {
 };
 
 describe('a List', () => {
-  const open = async (options: {canRemove?: boolean} = {}) => {
+  const open = async (
+    options: {
+      canRemove?: boolean;
+      boxHeight?: number;
+      words?: readonly string[];
+    } = {},
+  ) => {
     const {world, modules} = await compileProject(
-      projectFiles(project(options.canRemove ?? true)),
+      projectFiles(
+        project(options.canRemove ?? true, options.boxHeight, options.words),
+      ),
     );
     const actors = [...world.actors] as Actor[];
     const list = actors.find(actor => actor.type === 'actors/list')!;
@@ -319,6 +342,32 @@ describe('a List', () => {
     l.press('page down');
 
     expect(l.onRow()).toBe(7);
+  }, 60000);
+
+  it('shows a TALLER box’s worth, not the default box’s', async () => {
+    // THE WINDOW COMES FROM THE BOX. `ROWS` is what the default box holds, and
+    // the window was written with it as though every List were that size — so
+    // a List given a taller box scrolled through every row but drew six of
+    // them. Notes' list is 320 tall, showed seven, and looked as though it had
+    // stopped taking new notes.
+    //
+    // A page key moves by a windowful, which is the observable half of the
+    // same expression: eight rows in a box tall enough for thirteen means one
+    // page down lands on the last of them, where the default box lands on the
+    // seventh (the test above).
+    // Thirty rows, so nothing clamps: a box 320 tall holds thirteen, and the
+    // page key must move by thirteen rather than by the default box's six.
+    const l = await open({
+      boxHeight: 320,
+      words: Array.from({length: 30}, (_, at) => `row ${at + 1}`),
+    });
+    l.point(100, 40, true);
+    l.point(100, 40, false);
+    const from = l.onRow();
+
+    l.press('page down');
+
+    expect(l.onRow() - from).toBe(13);
   }, 60000);
 
   it('loses a row to a sideways swipe, and says which it was', async () => {

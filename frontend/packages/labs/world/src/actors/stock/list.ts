@@ -280,10 +280,10 @@ const remove = (n: () => object) =>
   );
 
 /** Move the highlight by `by` rows, and bring it into view. */
-const step = (by: number) => [
+const step = (by: object) => [
   set(
     'HighlightedProperty',
-    clamp(arithmetic('ADD', highlighted(), num(by)), num(1), count()),
+    clamp(arithmetic('ADD', highlighted(), by), num(1), count()),
   ),
   reveal(highlighted),
 ];
@@ -291,6 +291,19 @@ const step = (by: number) => [
 /** The first row the window shows, counting from one. */
 const firstShown = () =>
   arithmetic('ADD', floor(arithmetic('DIVIDE', scroll(), num(ROW))), num(1));
+/**
+ * How many rows this box is tall enough to show.
+ *
+ * FROM THE BOX, not from `ROWS`, which is only what the DEFAULT box holds.
+ * Every other measurement here already reads `height()` — the scroll limit,
+ * the reveal, the border — and the window alone was written as though every
+ * List were the size the first one was. A List given a taller box scrolled
+ * through all of its rows and drew six of them: Notes' list is 320 tall,
+ * showed SEVEN, and looked as though it had stopped accepting new notes,
+ * with the empty band below the last row reading as room to spare.
+ */
+const rowsShown = () => floor(arithmetic('DIVIDE', height(), num(ROW)));
+
 /**
  * …and the last, never past the end of the list.
  *
@@ -300,7 +313,7 @@ const firstShown = () =>
  * end of the list.
  */
 const lastShown = () =>
-  clamp(arithmetic('ADD', firstShown(), num(ROWS)), num(1), count());
+  clamp(arithmetic('ADD', firstShown(), rowsShown()), num(1), count());
 
 /** The y of the middle of row `n`, once the window has moved. */
 const rowMiddle = (n: object) =>
@@ -424,16 +437,18 @@ export const listActor = actorFile(
       // thing that makes a long list bearable without a pointer.
       ...(
         [
-          ['up arrow', -1],
-          ['down arrow', 1],
-          ['page up', -ROWS],
-          ['page down', ROWS],
+          ['up arrow', () => num(-1)],
+          ['down arrow', () => num(1)],
+          // A WINDOWFUL, which is what the box holds rather than what the
+          // default box holds — the same correction as `rowsShown` above.
+          ['page up', () => arithmetic('MULTIPLY', rowsShown(), num(-1))],
+          ['page down', () => rowsShown()],
         ] as const
       ).map(([key, by]) => ({
         type: 'world_on_Input_PressesEvent',
         fields: {FILTER0: key},
         inputs: {ACTOR: me()},
-        next: {block: either(focused(), step(by))},
+        next: {block: either(focused(), step(by()))},
       })),
     ],
     drawing: {
