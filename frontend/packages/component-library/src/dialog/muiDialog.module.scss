@@ -41,6 +41,13 @@
     width: 16.25rem;
     height: 8.625rem;
   }
+
+  // As the legacy section did: customContent headings and paragraphs get no
+  // browser bottom margin, the flex gap spaces them.
+  h2,
+  p {
+    margin-bottom: 0;
+  }
 }
 
 // Heading and description only; customContent keeps its own alignment.
