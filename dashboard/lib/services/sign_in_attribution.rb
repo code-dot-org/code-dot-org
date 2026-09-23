@@ -16,12 +16,14 @@ module Services::SignInAttribution
   # Mutates the hash in place; Devise's own extract_options! discards it afterwards
   # whether or not anything is left.
   def self.extract!(request, args)
-    options = args.last
-    return unless options.is_a?(Hash)
+    guard do
+      options = args.last
+      next unless options.is_a?(Hash)
 
-    event_type = options.delete(:event_type)
-    authentication_option = options.delete(:authentication_option)
-    declare(request, event_type, authentication_option: authentication_option) if event_type
+      event_type = options.delete(:event_type)
+      authentication_option = options.delete(:authentication_option)
+      declare(request, event_type, authentication_option: authentication_option) if event_type
+    end
   end
 
   # @param event_type [String] one of SignIn::EVENT_TYPES
@@ -38,20 +40,30 @@ module Services::SignInAttribution
   # the proxy for the rest of the request, so a later sign_in would otherwise inherit the
   # credentials of an earlier one.
   def self.record_warden_event(warden, options)
-    return unless warden.request.respond_to?(:env)
+    guard do
+      next unless warden.request.respond_to?(:env)
 
-    warden.request.env[WARDEN_EVENT_KEY] = options[:event]
+      warden.request.env[WARDEN_EVENT_KEY] = options[:event]
+    end
   end
 
   # @return [Array(String, Integer)] event_type and authentication_option_id, either of
   #   which may be nil.
   def self.resolve(user, request)
-    return [nil, nil] unless request.respond_to?(:env)
+    guard([nil, nil]) do
+      next [nil, nil] unless request.respond_to?(:env)
 
-    declared = request.env[EVENT_TYPE_KEY]
-    return [declared, request.env[AUTHENTICATION_OPTION_ID_KEY]] if declared
+      declared = request.env[EVENT_TYPE_KEY]
+      next [declared, request.env[AUTHENTICATION_OPTION_ID_KEY]] if declared
 
-    from_warden_strategy(user, request) || [nil, nil]
+      from_warden_strategy(user, request) || [nil, nil]
+    end
+  end
+
+  # Raise rather than swallow where a failure gets seen and fixed: unit tests, continuous integration builds, and the
+  # managed test server all run as `:test`. Production never raises.
+  def self.raise_attribution_errors?
+    CDO.rack_env?(:test)
   end
 
   private_class_method def self.from_warden_strategy(user, request)
@@ -77,5 +89,25 @@ module Services::SignInAttribution
       credential_type: AuthenticationOption::EMAIL,
       hashed_email: hashed_email
     )&.id
+  end
+
+  private_class_method def self.guard(fallback = nil)
+    # Toggle attribution dynamically. The sign_ins entry is still logged, just without the event_type, and
+    # authentication_option_id attribution columns populated.
+    return fallback unless DCDO.get('sign_in_attribution_enabled', false)
+
+    yield
+  rescue StandardError => exception
+    raise if raise_attribution_errors? # Only raise in test environments.
+
+    report_quietly(exception)
+    fallback
+  end
+
+  private_class_method def self.report_quietly(exception, user = nil)
+    Observability::Errors.report(exception, context: {user_id: user&.id})
+  # Swallow exceptions so that reporting failures does not disrupt whatever.
+  rescue StandardError
+    nil
   end
 end

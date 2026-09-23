@@ -6,6 +6,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
+    DCDO.set('sign_in_attribution_enabled', true)
   end
 
   test 'login error derives locale from I18n.locale' do
