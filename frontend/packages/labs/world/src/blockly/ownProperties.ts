@@ -333,8 +333,22 @@ function declarationsFrom(
       continue;
     }
     if (block.type === 'world_rule_event') {
-      if (actorFile) {
-        const declared = designedEvent(block, modulePath, name, variables);
+      // AN ACTOR'S, or a WORLD'S. An actor's event is about a subject — the
+      // hat takes one and the emit names it. A world's has none: it is the
+      // app's own vocabulary, the words its maps raise, and the hat registers
+      // on the world exactly as a map's used to (specs/MAP_EVENTS_PLAN.md).
+      //
+      // Nothing else declares one. A rule's go through `parseRuleMeta`, and a
+      // `.map` through `parseMapOwnMeta`, which walks top blocks rather than
+      // a root because a map has none to walk under — yet.
+      if (actorFile || scope === 'world') {
+        const declared = designedEvent(
+          block,
+          modulePath,
+          name,
+          variables,
+          actorFile ? undefined : 'world',
+        );
         // First wins, as for the rest: two events designed to read the same
         // way are one hat minted twice, and which one a handler was written
         // for would depend on registration order.

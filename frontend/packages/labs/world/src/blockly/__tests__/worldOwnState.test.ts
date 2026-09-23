@@ -15,6 +15,7 @@ import {
   WorldBuilder,
 } from '../../engine';
 import {buildDomainPalette} from '../domainBlocks';
+import {ROOT_HOMES} from '../fileKind';
 import {
   parseActorOwnMeta,
   parseWorldOwnMeta,
@@ -181,6 +182,56 @@ describe('a `.world` file’s own properties', () => {
 
     expect(offered).toContain('world_get_WorldsMain_ScoreProperty');
     expect(offered).not.toContain('world_set_WorldsMain_ScoreProperty');
+  });
+});
+
+describe('a `.world` file’s own EVENTS', () => {
+  // THE APP'S VOCABULARY: the words its maps raise. A map used to declare its
+  // own and the world heard them, which meant a hundred level maps minted a
+  // hundred different `complete` events — and a world that wanted to hear "a
+  // level finished" needed a hundred handlers, because many maps raising ONE
+  // signal was a sentence the language could not say
+  // (specs/MAP_EVENTS_PLAN.md).
+  const DONE = {
+    type: 'world_rule_event',
+    extraState: {parts: [{kind: 'label', text: 'level complete'}]},
+  };
+
+  it('are read off the `define world` chain, world-scoped', () => {
+    // No subject, which is the whole of what differs from an actor's. An
+    // event ABOUT something is an actor's, and that is untouched.
+    const meta = parseWorldOwnMeta('worlds/main', worldFile([DONE]))!;
+
+    expect(meta.events).toHaveLength(1);
+    expect(meta.events[0]).toMatchObject({
+      id: 'level_complete',
+      scope: 'world',
+    });
+  });
+
+  it('mint a hat and an emit, as an actor’s and a map’s do', () => {
+    const meta = parseWorldOwnMeta('worlds/main', worldFile([DONE]))!;
+    const types = buildDomainPalette([], {ownProperties: [meta]})
+      .blocks.map(block => block.type)
+      .filter(type => type.includes('LevelComplete'));
+
+    expect(types.sort()).toEqual([
+      'world_emit_WorldsMain_LevelCompleteEvent',
+      'world_on_WorldsMain_LevelCompleteEvent',
+    ]);
+  });
+
+  it('were refused by a rule that outlived its reason', () => {
+    // `fileKind` banned `define event` from a `.world` because "a world's own
+    // `define actor` generates into a block scope" — and a world has not been
+    // able to hold a `define actor` since every actor became a file, which
+    // the same file enforces by throwing. The block scope that reason turns
+    // on cannot be created, so the ban was a leftover rather than a policy.
+    expect(ROOT_HOMES.get('world_rule_event')?.has('world')).toBe(true);
+    expect(ROOT_HOMES.get('world_actor')?.has('world')).toBe(false);
+    // …and the same dead reason read the other way: `acts like` was offered
+    // in a `.world` so it could be a row under that definition.
+    expect(ROOT_HOMES.get('world_acts_like')?.has('world')).toBe(false);
   });
 });
 

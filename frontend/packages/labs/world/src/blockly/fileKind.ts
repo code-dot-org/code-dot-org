@@ -61,20 +61,41 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_rule_trait', new Set<FileKind>(['rule'])],
   // …and an ACTOR file, where the same block declares a thing that HAPPENS to
   // that kind of actor rather than a member of a rule
-  // (`ActorBuilder.defineEvent`). Not a `.world`, for the reason `define
-  // block` beside it is not: a world's own `define actor` generates into a
-  // block scope, and the declaration this emits is an `export const`.
-  ['world_rule_event', new Set<FileKind>(['rule', 'actor', 'map'])],
+  // (`ActorBuilder.defineEvent`).
+  //
+  // …AND A WORLD, which is the app's own vocabulary: the events its maps
+  // raise. A map used to declare its own and the world heard them, which
+  // meant a hundred level maps minted a hundred different `complete` events
+  // and a hundred drawers to hold them (specs/MAP_EVENTS_PLAN.md).
+  //
+  // This entry USED TO EXCLUDE a `.world`, "for the reason `define block`
+  // beside it is not: a world's own `define actor` generates into a block
+  // scope, and the declaration this emits is an `export const`." A world has
+  // not been able to hold a `define actor` since every actor became a file —
+  // see `DEFINING_ROOTS` below, which refuses one outright — so the block
+  // scope that reason turns on cannot be created any more. The restriction
+  // outlived its cause by some months, and the two entries under it are the
+  // rest of the same wreckage.
+  ['world_rule_event', new Set<FileKind>(['rule', 'actor', 'map', 'world'])],
   // …and an ACTOR file, where the same block declares a thing that kind of
   // actor does rather than a member of a rule (`ActorBuilder.defineAction`).
-  // Not a `.world`: a world's own `define actor` generates into a block scope,
-  // and the declaration this emits is an `export const`.
+  //
+  // STILL NOT A `.world`, and now for a reason that is true: nobody has asked
+  // for one. The old reason was the dead block scope above; a `define block`
+  // at a world file's top level would generate as happily as an actor's does,
+  // and what it would BE is a helper local to one program. That is a real
+  // thing and a separate question, and the day it is asked this line is one
+  // word (specs/MAP_EVENTS_PLAN.md).
   ['world_rule_block', new Set<FileKind>(['rule', 'actor'])],
-  // `acts like` names another ACTOR's module, so it belongs in the two homes
-  // that define one and not in a `.rule`. Unlike `define block` beside it, a
-  // world's own `define actor` may hold one: it emits a builder call rather
-  // than an `export const`, and a block scope takes that quite happily.
-  ['world_acts_like', new Set<FileKind>(['actor', 'world'])],
+  // `acts like` names another ACTOR's module, so it belongs in the file that
+  // defines one and nowhere else.
+  //
+  // IT USED TO BE OFFERED IN A `.world` TOO, so that it could be a row under
+  // a world's own `define actor` — which is the same dead reason read the
+  // other way round, an ALLOWANCE for a position that cannot exist. A world
+  // has no actor definition for it to sit in, so the block was offered in a
+  // file that could do nothing with it.
+  ['world_acts_like', new Set<FileKind>(['actor'])],
   ['world_rule_enum', new Set<FileKind>(['rule'])],
   ['world_rule_enum_option', new Set<FileKind>(['rule'])],
   ['world_rule_step_tick', new Set<FileKind>(['rule'])],

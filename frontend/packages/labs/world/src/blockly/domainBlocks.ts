@@ -11235,6 +11235,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // rule and an actor declare with, in a fourth home, because it already
       // takes its meaning from where it sits (specs/WORLD_STATE.md).
       'world_rule_property',
+      // …and the VOCABULARY it carries: the words its maps raise. A map used
+      // to declare its own, which meant a hundred level maps minted a hundred
+      // different `complete` events and a hundred drawers to hold them; the
+      // world declares them once and any map may raise them
+      // (specs/MAP_EVENTS_PLAN.md).
+      'world_rule_event',
       // NO `use rule`. A world runs the rules the project holds, so the block
       // says nothing here (blockly/projectModules) — it stays registered so
       // that projects saved with one keep loading and keep meaning what they
