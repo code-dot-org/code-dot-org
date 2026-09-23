@@ -24,8 +24,20 @@ function setup({playing = true, hasPlatformScene = true} = {}) {
       useGameAudio({current: engine}, {hasPlatformScene, playing: play}),
     {initialProps: {play: playing}}
   );
-  const setting = () => view.result.current[0];
+  const setting = () => view.result.current.settings[0];
   return {engine, view, setting};
+}
+
+/** Counts contexts built through `new AudioContext()`. */
+function countContexts() {
+  const w = window as unknown as {AudioContext: () => unknown};
+  const build = w.AudioContext;
+  const count = {built: 0};
+  w.AudioContext = function () {
+    count.built++;
+    return build();
+  };
+  return count;
 }
 
 describe('SpriteLab2 useGameAudio', () => {
@@ -37,7 +49,7 @@ describe('SpriteLab2 useGameAudio', () => {
 
   it('offers one setting, off until chosen', () => {
     const {setting, view} = setup();
-    expect(view.result.current).toHaveLength(1);
+    expect(view.result.current.settings).toHaveLength(1);
     expect(setting().label).toBe('Obstacle sounds');
     expect(setting().selectedValue).toBe('off');
   });
@@ -91,7 +103,7 @@ describe('SpriteLab2 useGameAudio', () => {
   it('offers nothing on a level with no platformer to hear', () => {
     localStorage.setItem(CUES, 'on');
     const {engine, view} = setup({hasPlatformScene: false});
-    expect(view.result.current).toEqual([]);
+    expect(view.result.current.settings).toEqual([]);
     expect(engine.observer).toBeNull();
   });
 
@@ -106,5 +118,33 @@ describe('SpriteLab2 useGameAudio', () => {
   it('builds nothing while the setting is off', () => {
     const {engine} = setup();
     expect(engine.observer).toBeNull();
+  });
+
+  it('unlock makes and wakes the context, which the run then reuses', () => {
+    localStorage.setItem(CUES, 'on');
+    const {context} = installFakeAudioContext();
+    const count = countContexts();
+    const {view} = setup({playing: false});
+    act(() => view.result.current.unlock());
+    expect(count.built).toBe(1);
+    expect(context.resumed).toBe(1);
+    view.rerender({play: true});
+    expect(count.built).toBe(1);
+  });
+
+  it('unlock does nothing while the setting is off', () => {
+    const {context} = installFakeAudioContext();
+    const count = countContexts();
+    const {view} = setup({playing: false});
+    act(() => view.result.current.unlock());
+    expect(count.built).toBe(0);
+    expect(context.resumed).toBe(0);
+  });
+
+  it('turning the setting on wakes the context in that gesture', () => {
+    const {context} = installFakeAudioContext();
+    const {setting} = setup({playing: false});
+    act(() => setting().onChange('on'));
+    expect(context.resumed).toBe(1);
   });
 });

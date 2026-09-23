@@ -2,10 +2,11 @@
 // setting. Rebuilt per visit to the Play tab, over one context, since
 // browsers limit how many a page may hold.
 
-import {useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
+import {wake} from './audioVoice';
 import {createHeightTone} from './heightTone';
 import {createPlayerObserver, PlayerObserver} from './playerObserver';
 import {createPlayerSounds} from './playerSounds';
@@ -65,17 +66,55 @@ interface GameAudioOptions {
   playing: boolean;
 }
 
-/** The settings-panel entries, or none where the level makes no sound. */
+export interface GameAudio {
+  /** The settings-panel entries, or none where the level makes no sound. */
+  settings: ReturnType<typeof useStoredToggle>[1][];
+  /** Call from the click or key that opens Play: browsers let a context
+      start only inside a user gesture, and the run's effect is outside it. */
+  unlock: () => void;
+}
+
 export default function useGameAudio(
   engineRef: React.RefObject<AudioEngine | null>,
   {hasPlatformScene, playing}: GameAudioOptions
-) {
+): GameAudio {
   // Off by default: the cues are for a student who cannot see the screen,
   // and are noise to one who can.
-  const [obstacleSounds, obstacleSoundsSetting] = useStoredToggle(
+  const [obstacleSounds, storedSetting] = useStoredToggle(
     OBSTACLE_SOUNDS_KEY,
     'Obstacle sounds',
     'off'
+  );
+
+  // One context, made or woken in the gesture, then used by the run.
+  const contextRef = useRef<AudioContext | null>(null);
+  const startContext = () => {
+    contextRef.current ||= audioContext();
+    if (contextRef.current) {
+      wake(contextRef.current);
+    }
+  };
+  const wanted = hasPlatformScene && obstacleSounds;
+  const wantedRef = useRef(wanted);
+  wantedRef.current = wanted;
+  const unlock = useCallback(() => {
+    if (wantedRef.current) {
+      startContext();
+    }
+  }, []);
+
+  // Turning the setting on is a gesture too.
+  const setting = useMemo(
+    () => ({
+      ...storedSetting,
+      onChange: (value: string) => {
+        storedSetting.onChange(value);
+        if (value === 'on' && hasPlatformScene) {
+          startContext();
+        }
+      },
+    }),
+    [storedSetting, hasPlatformScene]
   );
 
   useEffect(() => {
@@ -83,7 +122,7 @@ export default function useGameAudio(
     if (!engine || !hasPlatformScene || !playing || !obstacleSounds) {
       return;
     }
-    const context = audioContext();
+    const context = (contextRef.current ||= audioContext());
     if (!context) {
       return;
     }
@@ -103,8 +142,18 @@ export default function useGameAudio(
       height.stop();
       sounds.stop();
       context.close().catch(() => undefined);
+      contextRef.current = null;
     };
   }, [engineRef, hasPlatformScene, playing, obstacleSounds]);
 
-  return hasPlatformScene ? [obstacleSoundsSetting] : [];
+  // A context the gesture made but no run used.
+  useEffect(
+    () => () => {
+      contextRef.current?.close().catch(() => undefined);
+      contextRef.current = null;
+    },
+    []
+  );
+
+  return {settings: hasPlatformScene ? [setting] : [], unlock};
 }

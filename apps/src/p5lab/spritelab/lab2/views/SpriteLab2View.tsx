@@ -1528,12 +1528,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Entering Play by keyboard leaves focus on the tab button, where
   // swallowOnControls eats every game key and the game can't be played.
   const focusPlayspaceRef = useRef(false);
+  // Set once the audio hook below exists; the handler is defined first.
+  const unlockGameAudioRef = useRef<() => void>(() => undefined);
   const handleTabChange = useCallback(
     (tab: Tab, event: React.MouseEvent<HTMLElement>) => {
       // Entering Play from the tab button starts from the beginning.
       if (tab === 'Play') {
         setPlayStartSceneId(null);
         focusPlayspaceRef.current = !isPointerClick(event);
+        // Inside the gesture, where browsers let an audio context start.
+        unlockGameAudioRef.current();
       }
       dispatch(setActiveTab(tab));
     },
@@ -1641,11 +1645,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => scenes.some(scene => scene.type === 'platform'),
     [scenes]
   );
-  const audioSettings = useGameAudio(engineRef, {
+  const gameAudio = useGameAudio(engineRef, {
     hasPlatformScene,
     // A hidden document has already stopped the engine feeding it.
     playing: engineReady && playspaceMode === 'play' && !documentHidden,
   });
+  unlockGameAudioRef.current = gameAudio.unlock;
 
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
@@ -1690,7 +1695,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         isRunning={isRunning}
         hasRun={hasRun}
         hasEdited={hasEdited}
-        settings={[...blocklySettings, themeSetting, ...audioSettings]}
+        settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
         className={classNames(
           !levelProperties.levelMode && moduleStyles.instructionsArea,
           !!levelProperties.levelMode && moduleStyles.resourceSidebar
