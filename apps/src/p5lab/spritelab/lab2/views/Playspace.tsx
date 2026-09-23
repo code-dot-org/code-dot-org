@@ -3,6 +3,10 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {AnyAction} from 'redux';
 
 import {
+  GUIDE_BOTTOM_OFFSET_PX,
+  GUIDE_RIGHT_OFFSET_PX,
+} from '@cdo/apps/lab2/views/components/guide/Guide';
+import {
   isPickingLocation,
   selectLocation,
   updateLocation,
@@ -30,6 +34,55 @@ const PREVIEW_SCALE = 0.64;
 // content clear of it (it floats over the active tab's top-right corner).
 export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
 
+interface Size {
+  w: number;
+  h: number;
+}
+
+interface Placement {
+  scale: number;
+  x: number;
+  y: number;
+}
+
+/** The box centered and scaled to fill an area, MARGIN kept all round. */
+function centeredIn(area: Size): Placement {
+  const scale = Math.max(0.1, (Math.min(area.w, area.h) - 2 * MARGIN) / CANVAS);
+  return {
+    scale,
+    x: (area.w - CANVAS * scale) / 2,
+    y: (area.h - CANVAS * scale) / 2,
+  };
+}
+
+/**
+ * Where the play view goes in an overlay of `size` with the guide pinned at
+ * its bottom-right: centered in the whole overlay when that clears the
+ * guide, else beside the guide or above it, whichever leaves the box
+ * bigger (beside on a landscape window, above on a portrait one). It
+ * shrinks rather than sliding under the guide.
+ */
+export function playPlacement(
+  size: Size,
+  guideSize?: {width: number; height: number} | null
+): Placement {
+  const whole = centeredIn(size);
+  if (!guideSize) {
+    return whole;
+  }
+  const guideLeft = size.w - guideSize.width - GUIDE_RIGHT_OFFSET_PX;
+  const guideTop = size.h - guideSize.height - GUIDE_BOTTOM_OFFSET_PX;
+  const clearsGuide =
+    whole.x + CANVAS * whole.scale <= guideLeft - MARGIN ||
+    whole.y + CANVAS * whole.scale <= guideTop - MARGIN;
+  if (clearsGuide) {
+    return whole;
+  }
+  const beside = centeredIn({w: guideLeft - MARGIN, h: size.h});
+  const above = centeredIn({w: size.w, h: guideTop - MARGIN});
+  return above.scale > beside.scale ? above : beside;
+}
+
 interface PlayspaceProps {
   mode: PlayspaceMode;
   // Scenes UI variant: increment to play a quick fade-in-from-black over the
@@ -49,6 +102,12 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
+  // Shown in the play area's top-right corner while playing (the restart
+  // buttons). Outside the box, so they keep their size whatever its scale.
+  controls?: React.ReactNode;
+  // The floating guide's footprint, pinned to the overlay's bottom-right
+  // (playPlacement).
+  guideSize?: {width: number; height: number} | null;
 }
 
 /**
@@ -64,6 +123,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
+  controls,
+  guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -221,12 +282,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   let transform: string;
   if (mode === 'play') {
-    const scale = Math.max(
-      0.1,
-      (Math.min(size.w, size.h) - 2 * MARGIN) / CANVAS
-    );
-    const x = (size.w - CANVAS * scale) / 2;
-    const y = (size.h - CANVAS * scale) / 2;
+    const {x, y, scale} = playPlacement(size, guideSize);
     transform = `translate(${x}px, ${y}px) scale(${scale})`;
   } else {
     // Preview: small box pinned to the top-right corner.
@@ -344,6 +400,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           </div>
         )}
       </div>
+      {mode === 'play' && controls && (
+        <div className={moduleStyles.playControls}>{controls}</div>
+      )}
     </div>
   );
 };

@@ -13,6 +13,7 @@ describe('camelize', () => {
       image_role_defaults: 'imageRoleDefaults',
       level_mode: 'levelMode',
       pinned_scene: 'pinnedScene',
+      add_blocks: 'addBlocks',
       world_start_pattern: 'worldStartPattern',
     };
     expect(Object.keys(expected).sort()).toEqual(

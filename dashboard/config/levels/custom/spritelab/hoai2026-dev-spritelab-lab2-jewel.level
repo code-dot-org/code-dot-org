@@ -24,6 +24,7 @@
     "level_mode": {
       "kind": "image",
       "imageType": "sprite",
+      "imageSubject": "object",
       "adlibs": "treasure",
       "imageRole": "treasure"
     },
