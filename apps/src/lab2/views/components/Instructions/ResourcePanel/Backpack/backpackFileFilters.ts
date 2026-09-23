@@ -155,7 +155,7 @@ export function findConfigForFile(
  */
 export function getPopulatedFileTypeConfigs(
   fileNames: string[],
-  supportedFileTypes: string[]
+  supportedExtensions: string[]
 ): PopulatedFileTypes {
   const countsByExtension = new Map<string, number>();
   let otherCount = 0;
@@ -175,24 +175,24 @@ export function getPopulatedFileTypeConfigs(
   const populatedFileTypes: PopulatedFileTypes = [];
   const otherExtensions: string[] = [];
   FILE_TYPES.forEach(fileType => {
-    const supportedExtensions: string[] = [];
+    const includedExtensions: string[] = [];
     let supportedCount = 0;
     fileType.extensions.forEach(extension => {
       const count = countsByExtension.get(extension);
       if (!count) {
         return;
       }
-      if (supportedFileTypes.includes(extension)) {
-        supportedExtensions.push(extension);
+      if (supportedExtensions.includes(extension)) {
+        includedExtensions.push(extension);
         supportedCount += count;
       } else {
         otherExtensions.push(extension);
         otherCount += count;
       }
     });
-    if (supportedExtensions.length > 0) {
+    if (includedExtensions.length > 0) {
       populatedFileTypes.push({
-        config: {...fileType, extensions: supportedExtensions},
+        config: {...fileType, extensions: includedExtensions},
         count: supportedCount,
       });
     }
