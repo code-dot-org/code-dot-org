@@ -67,13 +67,13 @@ describe('QuizFooter', () => {
     );
 
     expect(
-      screen.getByRole('button', {name: 'Go to page 1'})
+      screen.getByRole('button', {name: 'Go to page 1', pressed: true})
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Go to page 2'})
+      screen.getByRole('button', {name: 'Go to page 2', pressed: false})
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', {name: 'Go to page 3'})
+      screen.getByRole('button', {name: 'Go to page 3', pressed: false})
     ).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', {name: 'Go to page 3'}));
