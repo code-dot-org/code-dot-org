@@ -168,7 +168,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
     refute result.key?(:explanation)
   end
 
-  test "question_results_in_progress omits a response with no selectedChoiceId yet" do
+  test "question_results_in_progress omits a response with no answer recorded yet" do
     quiz = create(:quiz)
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: quiz, quiz_question: question)

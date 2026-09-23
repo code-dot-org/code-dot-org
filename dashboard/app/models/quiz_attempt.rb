@@ -71,6 +71,7 @@ class QuizAttempt < ApplicationRecord
 
     quiz_question_responses.in_quiz(level).filter_map do |response|
       selected_choice_id = response.response_data['selectedChoiceId']
+      # TODO: other question types - each needs its own notion of "unanswered".
       next if selected_choice_id.blank?
       {quiz_question_id: response.quiz_question_id, selected_choice_id: selected_choice_id}
     end
