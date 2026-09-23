@@ -221,6 +221,64 @@ describe('a `.world` file’s own EVENTS', () => {
     ]);
   });
 
+  it('compile to an identity AND a registration', () => {
+    // The second line is the whole plan. The export is what a hat in this
+    // module refers to; the registration puts the same identity in the
+    // world's registry under the words a MAP raises it by, because a map
+    // cannot import this module — the world loads the map, which is a cycle
+    // (specs/MAP_EVENTS_PLAN.md).
+    const meta = parseWorldOwnMeta('worlds/main', worldFile([DONE]))!;
+
+    expect(worldOwnPropertyDeclarations(meta)).toBe(
+      'export const LevelCompleteEvent = {id: "level_complete", ' +
+        'name: "level complete", ownerId: "worlds/main"};\n' +
+        'world.defineEvent("level complete", LevelCompleteEvent);\n',
+    );
+  });
+
+  it('are raised BY NAME from a map, and offered there', () => {
+    // A map is not a reader of the world's vocabulary, it is one of the two
+    // places that speaks it — so the `emit` beside the hat is offered in a
+    // placement's workspace and the map's own, and generates a named raise
+    // rather than an import that would be a cycle.
+    const meta = parseWorldOwnMeta('worlds/main', worldFile([DONE]))!;
+    const palette = buildDomainPalette([], {
+      ownProperties: [meta],
+      ownMapModule: 'maps/level',
+    });
+
+    // Named for the world, as every own-declaration drawer is — while the
+    // block TYPES are namespaced by the module, which is `worlds/main`.
+    const drawer = (
+      palette.toolbox as Array<{name?: string; blocks?: unknown[]}>
+    ).find(one => one.name === 'Tapper');
+    expect(
+      (drawer?.blocks ?? []).map(one =>
+        typeof one === 'string' ? one : (one as {type: string}).type,
+      ),
+    ).toContain('world_emit_WorldsMain_LevelCompleteEvent');
+
+    const emit = palette.blocks.find(
+      one => one.type === 'world_emit_WorldsMain_LevelCompleteEvent',
+    ) as unknown as {
+      generator: {javascript: (block: unknown, generator: unknown) => unknown};
+    };
+    expect(
+      emit.generator.javascript(
+        {
+          getFieldValue: () => null,
+          getParent: () => null,
+          workspace: {getTopBlocks: () => []},
+        },
+        {
+          valueToCode: () => '',
+          statementToCode: () => '',
+          __mapModule: 'maps/level',
+        },
+      ),
+    ).toBe('world.emitNamed("level complete");\n');
+  });
+
   it('were refused by a rule that outlived its reason', () => {
     // `fileKind` banned `define event` from a `.world` because "a world's own
     // `define actor` generates into a block scope" — and a world has not been

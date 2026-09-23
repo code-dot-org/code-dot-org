@@ -99,6 +99,10 @@ const RUNTIME_ONLY: Record<string, string> = {
     '(specs/CLOCK_PLAN.md)',
   timePart: 'the same: it reads the zone the clock was lent with',
   timeText: 'the same again',
+  emitNamed:
+    'a MAP raises the world\u2019s event by name, and a map is loaded into a ' +
+    'world that already exists \u2014 there is no map, and so no raising, ' +
+    'while one is still being described (specs/MAP_EVENTS_PLAN.md)',
   styleFor:
     'the same, and more so: it takes the ACTOR, and resolves the actor’s own ' +
     'theme, then its map’s, then the world’s — none of which a world still ' +

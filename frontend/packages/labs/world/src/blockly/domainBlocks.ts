@@ -1692,11 +1692,25 @@ const defineEmitBlock = (event: EventMeta) => {
           }
           return param.type === 'actor' ? `WorldLab.one(${code})` : code;
         });
+        const values = carried.map(code => `, ${code}`).join('');
+        // A MAP RAISING THE WORLD'S EVENT NAMES IT, because it cannot import
+        // it: the world LOADS the map, so a map module importing the world's
+        // is a cycle, and a `.map` is meant to be loadable by several worlds
+        // anyway (specs/MAP_EVENTS_PLAN.md).
+        //
+        // So the world registers what it declares and the map says the word.
+        // A name that names nothing raises nothing and is kept where somebody
+        // can act on it (`World.emitNamed`), which is the check a `define map
+        // for ⟨world⟩` binding would have made at author time and is better
+        // made here — a map may then serve two worlds that both declare it.
+        const inMap = (generator as {__mapModule?: string}).__mapModule;
+        if (inMap && refModule(event.ref)?.startsWith('worlds/')) {
+          return `world.emitNamed(${str(event.name)}${values});\n`;
+        }
         // `refCode` resolves a project event to the bare local name when the
         // rule is emitting its OWN event (it is an `export const` in the module
         // being written), and imports it otherwise.
         const event_ = refCode(event.ref, generator);
-        const values = carried.map(code => `, ${code}`).join('');
         if (!forActor) {
           // Once, however many actors are in the world.
           return `world.emitToWorld(${event_}${values});\n`;
@@ -12344,7 +12358,17 @@ export function buildDomainPalette(
     // it (see `declared`).
     const home =
       actor.modulePath === options.ownActorModule ||
-      actor.modulePath === options.ownMapModule;
+      actor.modulePath === options.ownMapModule ||
+      // …AND THE WORLD'S DRAWER, WHILE A MAP IS OPEN. A map raises the
+      // world's events, which is the whole of this plan, so the `emit` beside
+      // each hat has to be offered where the raising happens — a placement's
+      // workspace and the map's own (specs/MAP_EVENTS_PLAN.md).
+      //
+      // "At home" is the right word for it rather than a special case: a map
+      // is not a reader of the world's vocabulary, it is one of the two
+      // places that speaks it.
+      (options.ownMapModule !== undefined &&
+        actor.modulePath.startsWith('worlds/'));
     const blocks: string[] = [];
     const seen = new Set<string>();
     for (

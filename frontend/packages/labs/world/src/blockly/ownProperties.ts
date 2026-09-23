@@ -594,7 +594,39 @@ export function ownPropertyDeclarations(meta: OwnMeta): string {
  * named is the whole difference (specs/WORLD_STATE.md).
  */
 export function worldOwnPropertyDeclarations(meta: OwnMeta): string {
-  return declarations(meta, 'world');
+  return declarations(meta, 'world') + worldOwnEventDeclarations(meta);
+}
+
+/**
+ * …and the world's own EVENTS: the identity, and the name a map raises it by.
+ *
+ * TWO LINES EACH, and the second is the whole of this plan. The `export const`
+ * is what a hat in this module refers to, exactly as a map's event is an
+ * export its own module refers to. The `defineEvent` beside it puts the same
+ * identity in the world's registry under the words it reads by, because a MAP
+ * cannot import this module — the world loads the map, which is a cycle, and
+ * a `.map` is meant for several worlds anyway (specs/MAP_EVENTS_PLAN.md).
+ *
+ * The third registry of its kind, beside `define` for actor kinds and
+ * `defineTheme` for themes, and reached for the same reason each time: a name
+ * that arrives as DATA cannot be followed by an import.
+ *
+ * Emitted where a world's properties are, at the module's top level directly
+ * after `const world` — so the export precedes every hat that refers to it and
+ * the registration precedes every map that could raise it.
+ */
+function worldOwnEventDeclarations(meta: OwnMeta): string {
+  return meta.events
+    .map(event => {
+      const constant = event.ref.exportName;
+      return (
+        `export const ${constant} = {id: ${JSON.stringify(event.id)}, ` +
+        `name: ${JSON.stringify(event.name)}, ` +
+        `ownerId: ${JSON.stringify(meta.modulePath)}};\n` +
+        `world.defineEvent(${JSON.stringify(event.name)}, ${constant});\n`
+      );
+    })
+    .join('');
 }
 
 function declarations(meta: OwnMeta, receiver: string): string {

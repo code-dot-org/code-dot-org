@@ -1749,6 +1749,63 @@ export class World {
   }
 
   /**
+   * Register one of the world's own events under the name it reads by.
+   *
+   * WHY A REGISTRY AND NOT AN IMPORT. A map raises the world's events, and a
+   * map's module cannot import the world's: the world LOADS the map, so that
+   * is a cycle, and a `.map` is meant to be loadable by several worlds, so it
+   * cannot name one anyway (specs/MAP_EVENTS_PLAN.md).
+   *
+   * So the world says what it holds and the map names one — the third time a
+   * name arriving as DATA has needed this, beside `define` for actor kinds and
+   * `defineTheme` for themes. The preamble emits one call per declared event.
+   */
+  defineEvent(name: string, event: GameEvent): void {
+    this.namedEvents.set(name, event);
+  }
+
+  private readonly namedEvents = new Map<string, GameEvent>();
+
+  /** The events this world declares, by name — what a map may raise. */
+  eventNames(): readonly string[] {
+    return [...this.namedEvents.keys()];
+  }
+
+  /**
+   * Raise one of the world's events, by name.
+   *
+   * A NAME THAT NAMES NOTHING RAISES NOTHING, and says so where somebody can
+   * act on it rather than throwing into a frame. The editor's dropdown is the
+   * ordinary guard; this is the one that catches a map loaded into a world
+   * whose vocabulary it does not fit, which is the case a `define map for
+   * ⟨world⟩` binding would have prevented and which is better caught here —
+   * a map may then serve two worlds that both declare the name.
+   */
+  emitNamed(name: string, ...values: readonly unknown[]): boolean {
+    const event = this.namedEvents.get(name);
+    if (!event) {
+      this.unheardEvents.add(name);
+      return false;
+    }
+    this.events.enqueue(event, undefined, ...values);
+    return true;
+  }
+
+  private readonly unheardEvents = new Set<string>();
+
+  /**
+   * Every name a map tried to raise that this world does not declare.
+   *
+   * Kept rather than thrown, for the reason the theme's unresolved list is
+   * (`core/theme`): a project mid-edit is ordinary, and a sandbox reporting
+   * "this map raises `quit` and nothing hears it" is worth more than a frame
+   * that stopped.
+   */
+  unheardEventNames(): readonly string[] {
+    return [...this.unheardEvents];
+  }
+
+  /**
    * Handle a world event. The counterpart of `Actor.on`, and the reason a world
    * event needs no actor to be raised for: the world holds the handlers.
    */

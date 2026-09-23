@@ -529,6 +529,11 @@ export class WorldBuilder {
     return this.defer('defineTheme', path, document);
   }
 
+  /** Register one of the world's own events by name. See {@link World.defineEvent}. */
+  defineEvent(name: string, event: GameEvent): this {
+    return this.defer('defineEvent', name, event);
+  }
+
   /** Set the color behind the backdrop. See {@link World.setBackgroundColor}. */
   setBackgroundColor(color: ColorValue): this {
     return this.defer('setBackgroundColor', color);
