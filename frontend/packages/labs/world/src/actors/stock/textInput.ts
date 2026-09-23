@@ -279,9 +279,18 @@ const column = () => sum('MINUS', width(), num(2 * PAD));
 const shown = () => ({
   block: {
     type: 'world_text_width',
+    fields: {STYLE: CAPTION},
     inputs: {TEXT: held(), SIZE: atSize()},
   },
 });
+
+/**
+ * The style the words are DRAWN in, which is the style they must be MEASURED
+ * in: the Modern theme makes a caption bold, bold is wider than regular, and a
+ * tape that did not know put the bar a little before the end of a short line
+ * and several characters adrift on a long one (`World.textWidth`).
+ */
+const CAPTION = 'caption';
 
 /** `⟨caret⟩ of this actor` — how many characters are before the bar. */
 const caretAt = () => ({
@@ -319,6 +328,7 @@ const from = (n: object) => ({
 const widthTo = (n: object) => ({
   block: {
     type: 'world_text_width',
+    fields: {STYLE: CAPTION},
     inputs: {TEXT: upTo(n), SIZE: atSize()},
   },
 });

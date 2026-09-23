@@ -21,10 +21,23 @@ import {WORLD_SCENARIOS} from '../scenarios';
 const ofKind = (world: World, kind: string): Actor[] =>
   [...world.actors].filter(actor => actor.type === kind);
 
-const play = async () => {
+/**
+ * A tape where BOLD IS TWICE AS WIDE, so a measurement that forgot the weight
+ * cannot pass by accident.
+ *
+ * A real font's bold is a few percent wider and the error only shows up over a
+ * long line; doubling it makes the same mistake visible in one word.
+ */
+const boldIsWider = (words: string, size: number, weight?: 'bold') =>
+  words.length * (size / 2) * (weight === 'bold' ? 2 : 1);
+
+const play = async (measure?: typeof boldIsWider) => {
   const {world, modules} = await compileProject(
     projectFiles(WORLD_SCENARIOS.interface.source),
   );
+  if (measure) {
+    world.useTextMetrics(measure);
+  }
   world.tick(1 / 60);
   const text = modules['actors/label'].TextProperty;
   const at = (actor: Actor) => {
@@ -84,6 +97,39 @@ describe('the Interface Kit', () => {
     ]) {
       expect(ofKind(world, kind).length, kind).toBeGreaterThan(0);
     }
+  }, 60000);
+
+  it('measures its words in the WEIGHT they are drawn in', async () => {
+    // The kit is themed Modern, whose `caption` is bold, and a field's words
+    // are drawn under that class. The tape was built without a weight, so bold
+    // words measured as regular: every prefix came back short, and the caret
+    // sat a little before the end of a word and several characters adrift down
+    // a paragraph (`World.textWidth`).
+    //
+    // The bar is drawn after the whole of what was typed, so with a tape where
+    // bold is twice as wide it belongs at twice the plain width — and at the
+    // plain width if the weight was dropped on the way.
+    const {named, click, type, world} = await play(boldIsWider);
+    const field = named('Name')!;
+
+    // FIVE characters, not eight: the field's box is 96 wide with 8 of inset
+    // either side, so eight bold ones overflow and the bar pins to the right
+    // edge — where it sits whether the weight was read or not, which is a test
+    // that cannot fail. Five bold ones are 60 and fit.
+    click(field);
+    type('iiiii');
+    world.tick(1 / 60);
+
+    const drawn = world.renderSnapshot().find(one => one.actor === field);
+    const bar = (drawn?.drawing?.commands ?? []).filter(
+      command => command.op === 'rectangle',
+    );
+    // The caret is the last rectangle drawn: the box, then the bar.
+    const caret = bar.at(-1);
+    // Eight characters at twelve is 48 plain and 96 bold, plus the inset.
+    // Five characters at twelve is 30 plain and 60 bold, and the words start
+    // at the 8 of inset. A tape that dropped the weight puts the bar at 38.
+    expect(caret && caret.op === 'rectangle' && caret.x).toBe(68);
   }, 60000);
 
   it('takes more than one line into the Text Area', async () => {

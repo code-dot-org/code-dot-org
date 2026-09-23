@@ -347,3 +347,43 @@ painter's alone, and both are wanted the day a caret can be placed by clicking
 into a word. And a drawing that genuinely wants the clock, which is the case this
 deliberately refuses; if one turns up that is not better served by an animation,
 it is evidence to reopen the cache decision rather than to add a block.
+
+## The measuring tape has to know the weight
+
+`World.textWidth` is the one question about a picture the engine cannot answer
+alone, and it shipped asking half of it. The painter draws text with
+`fontAt(size, weight)`; the tape built its font with `fontAt(size)`. So
+anything drawn BOLD was measured as regular.
+
+The Modern theme makes a `caption` bold, and a field's words are drawn under
+that class — so every caret in the lab was placed from a short measurement.
+Bold is wider by a small amount PER CHARACTER, which is why it read as drift:
+a bar a touch before the end of a word, and several characters adrift down a
+paragraph. Worst on the narrow glyphs, where the bold stem is most of the
+difference — a row of `i` shows it in a dozen characters.
+
+**The style is an argument, not "the current style".** There is no current one
+to read: the pen is ambient and exists only while painting, and a caret asks
+its question in a HANDLER. So the block names the style it is about to draw in
+— `width of ⟨…⟩ at size ⟨…⟩ in style ⟨caption⟩` — and the world resolves it
+through the same cascade `use style` resolves it through. `(plain)` is first in
+the dropdown so that a block saved before the field existed keeps the answer it
+had.
+
+The preview's reader takes the same argument, because a still that measured
+differently from the game would put the caret in two places
+(`actors/preview/drawingReader`).
+
+**No test could have caught this**, and that is the part worth keeping: the
+tape a test lends was `(text, size)`, so there was no weight for the two halves
+to disagree about. Widening the seam is what made it testable, and the test
+that now pins it lends a tape where bold is twice as wide — a real font's few
+percent would hide in rounding.
+
+One thing the fix got wrong on the way, caught by `lessonsPlay`'s dropdown
+guard: the new field's options were read at BLOCK DEFINITION time, which is
+before any project has been scanned, so the list was `(plain)` alone and a
+stock actor naming `caption` had its value silently replaced. Every other
+project-backed dropdown in the lab is made live by an extension, and this one
+needed the same. A dropdown that does not re-read the project is not a
+narrower dropdown; it is one that quietly rewrites what it is given.

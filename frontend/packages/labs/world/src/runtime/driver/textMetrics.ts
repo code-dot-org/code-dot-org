@@ -23,10 +23,23 @@
 // visibly nothing rather than invisibly wrong. A guess from a character count
 // would be off by a little at one text size and by a word at another.
 
+import type {TextMeasure} from '../../engine/core/World';
+
 import {fontAt} from './paintDrawing';
 
-/** What a World is handed: how wide `text` is, set at `size` pixels. */
-export type TextMeasure = (text: string, size: number) => number;
+/**
+ * What a World is handed, which the ENGINE declares (`core/World`).
+ *
+ * IT TAKES A WEIGHT, which it did not and had to. The painter draws with
+ * `fontAt(size, weight)` and this built its font with `fontAt(size)`, so
+ * anything drawn BOLD measured as regular — the Modern theme's `caption` is
+ * bold, and a field's words are drawn under it. Bold is wider, so every prefix
+ * measured short, and the error is per character: a caret a little before the
+ * end of a short line and several characters adrift on a long one, worst on
+ * the narrow glyphs where the bold stem is most of the difference (a row of
+ * `i`).
+ */
+export type {TextMeasure};
 
 /**
  * A measurer backed by a canvas of this document's own, or nothing.
@@ -47,8 +60,8 @@ export function browserTextMetrics(): TextMeasure | undefined {
   if (!context) {
     return undefined;
   }
-  return (text, size) => {
-    context.font = fontAt(size);
+  return (text, size, weight) => {
+    context.font = fontAt(size, weight);
     return context.measureText(text).width;
   };
 }

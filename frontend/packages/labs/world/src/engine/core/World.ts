@@ -129,6 +129,20 @@ export interface ActorTemplate {
  * The only way a project expresses an arrangement of actors — a level, a menu,
  * a HUD. A world may load several.
  */
+/**
+ * How wide `text` is, drawn at `size` and in `weight` — lent by the driver.
+ *
+ * DECLARED HERE rather than beside the canvas that implements it, because the
+ * engine is the one that asks: a type owned by the driver would have the
+ * engine importing from it, which is the direction this lab keeps apart
+ * (`runtime/driver/textMetrics`).
+ */
+export type TextMeasure = (
+  text: string,
+  size: number,
+  weight?: 'bold',
+) => number;
+
 export interface WorldMap {
   /**
    * How big the map is, in tiles, and how big one tile is.
@@ -937,7 +951,7 @@ export class World {
    *
    * Undefined is the headless case and answers zero rather than guessing.
    */
-  private measure: ((words: string, size: number) => number) | undefined;
+  private measure: TextMeasure | undefined;
   /**
    * What time it is out there, and which zone that is — lent by the driver.
    *
@@ -2734,7 +2748,7 @@ export class World {
    * Once, at set-up, and not per frame: a measurer is a canvas and a font, and
    * neither changes while a game runs.
    */
-  useTextMetrics(measure: (words: string, size: number) => number): void {
+  useTextMetrics(measure: TextMeasure): void {
     this.measure = measure;
   }
 
@@ -3149,7 +3163,7 @@ export class World {
    * brackets. A size that is not a positive number measures nothing: there is
    * no text at zero pixels, and a negative one is a typo.
    */
-  textWidth(value: unknown, size: number): number {
+  textWidth(value: unknown, size: number, style?: ResolvedStyle): number {
     if (!this.measure) {
       return 0;
     }
@@ -3158,7 +3172,12 @@ export class World {
     if (!words || !Number.isFinite(at) || at <= 0) {
       return 0;
     }
-    return this.measure(words, at) || 0;
+    // IN THE STYLE IT WILL BE DRAWN IN. A caret asks how wide a prefix is in
+    // a handler, where there is no pen — the pen is ambient and exists only
+    // while painting — so the style cannot be read off the pen and has to be
+    // handed in. Which is the same style the drawing names a line later, and
+    // resolved through the same cascade (`styleFor`).
+    return this.measure(words, at, style?.weight === 'bold' ? 'bold' : undefined) || 0;
   }
 
   /**

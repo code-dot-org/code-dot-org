@@ -189,6 +189,22 @@ export function styleNameOptions(): Array<[string, string]> {
   );
 }
 
+/**
+ * The same list with PLAIN in front of it, for a block a style is optional on.
+ *
+ * FIRST, and that is the whole of why this exists rather than `styleNameOptions`
+ * with a row appended: a dropdown given a value it does not hold falls back to
+ * its FIRST option, and a block saved before the field existed has no value at
+ * all. So the fallback has to be the behaviour that block already had, which is
+ * no style (`world_text_width`).
+ */
+export function styleNameOrPlainOptions(): Array<[string, string]> {
+  return [
+    ['(plain)', NONE_VALUE],
+    ...projectStyleNameList.map(name => [name, name] as [string, string]),
+  ];
+}
+
 
 /** Replace the effect-file options the EFFECT dropdown offers. */
 export function setProjectEffectFiles(options: Array<[string, string]>): void {
@@ -763,6 +779,21 @@ export const styleNameOptionsExtension = liveDropdown(
   'world_style_name_options',
   'STYLE',
   styleNameOptions,
+);
+/**
+ * …and the same for the block a style is OPTIONAL on.
+ *
+ * LIVE, like every other project-backed dropdown, and that is not decoration:
+ * a block's own `options` are read when the block is DEFINED, which is before
+ * any project has been scanned. Without this the list is `(plain)` alone
+ * forever, and a stock actor naming `caption` had its value refused and
+ * silently replaced — which is exactly what `lessonsPlay`'s dropdown guard was
+ * written to catch, and did.
+ */
+export const styleNameOrPlainOptionsExtension = liveDropdown(
+  'world_style_or_plain_options',
+  'STYLE',
+  styleNameOrPlainOptions,
 );
 export const effectFileImportOptionsExtension = liveDropdown(
   'world_effect_import_options',

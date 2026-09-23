@@ -44,6 +44,26 @@ describe('measuring text', () => {
     expect(world.textWidth('hello', 24)).toBe(60);
   });
 
+  it('asks in the WEIGHT the style will be drawn in', () => {
+    // THE BUG THIS SEAM SHIPPED WITH. The painter draws with the pen's weight
+    // and the Modern theme makes a `caption` bold; the tape was built without
+    // one, so bold words measured as regular. Bold is wider, so every prefix
+    // came back short — a caret a little before the end of a word, and several
+    // characters adrift down a paragraph, worst on the narrow glyphs where the
+    // bold stem is most of the difference.
+    const world = makeWorld();
+    const asked: Array<string | undefined> = [];
+    world.useTextMetrics((words, size, weight) => {
+      asked.push(weight);
+      return words.length * (size / 2) * (weight === 'bold' ? 2 : 1);
+    });
+
+    expect(world.textWidth('iiii', 12)).toBe(24);
+    expect(world.textWidth('iiii', 12, {weight: 'bold'})).toBe(48);
+    expect(world.textWidth('iiii', 12, {weight: 'normal'})).toBe(24);
+    expect(asked).toEqual([undefined, 'bold', undefined]);
+  });
+
   it('says a list as the sentence it would be drawn as', () => {
     // `the words in ⟨…⟩` hands back a list, and a Label draws one as a
     // sentence joined by spaces (`core/textValue`). Measuring `String(list)`

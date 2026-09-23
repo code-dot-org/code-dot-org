@@ -202,8 +202,22 @@ const linePrefix = () => from(sum('ADD', lineStart(), num(1)), before());
 /** …and the same with one more character, which the scan compares against. */
 const linePrefixPlusOne = () =>
   from(sum('ADD', lineStart(), num(1)), upTo(sum('ADD', caretAt(), num(1))));
+/**
+ * The style the words are DRAWN in, and so the one they must be MEASURED in.
+ *
+ * The Modern theme makes a caption bold and bold is wider, so a tape that did
+ * not know came back short by a little per character — which is a bar a touch
+ * before the end of one line and several letters adrift down a paragraph
+ * (`World.textWidth`).
+ */
+const CAPTION = 'caption';
+
 const widthOf = (text: object) => ({
-  block: {type: 'world_text_width', inputs: {TEXT: text, SIZE: atSize()}},
+  block: {
+    type: 'world_text_width',
+    fields: {STYLE: CAPTION},
+    inputs: {TEXT: text, SIZE: atSize()},
+  },
 });
 
 // ── Scrolling, which is one clamp said twice ────────────────────────────────

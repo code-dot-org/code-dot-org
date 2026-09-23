@@ -64,7 +64,11 @@ export interface ReadDrawing {
 }
 
 /** How wide `text` is at `size`, in pixels — the painter's own font. */
-export type Measure = (text: string, size: number) => number;
+export type Measure = (
+  text: string,
+  size: number,
+  weight?: 'bold',
+) => number;
 
 /** The project as text: `actors/label.actor` → its JSON, and so on. */
 export type Files = Record<string, string>;
@@ -240,15 +244,26 @@ class Reading {
   private readonly set: Map<string, unknown>;
   private readonly declarations: Declarations;
   private readonly measure: Measure | undefined;
+  /**
+   * The theme this reading is under, so a measurement can name its style.
+   *
+   * `world_text_width` asks how wide words are IN A STYLE, because the painter
+   * draws them in one and a bold caption is wider than a regular one. The
+   * still has to ask the same question the game asks or the two disagree about
+   * where a caret goes (`World.textWidth`).
+   */
+  private readonly theme: ResolvedTheme;
 
   constructor(
     set: Map<string, unknown>,
     declarations: Declarations,
     measure: Measure | undefined,
+    theme: ResolvedTheme,
   ) {
     this.set = set;
     this.declarations = declarations;
     this.measure = measure;
+    this.theme = theme;
   }
 
   /** A value socket, resolved — or undefined, which also marks the reading. */
@@ -360,9 +375,12 @@ class Reading {
           this.complete = false;
           return undefined;
         }
+        const named = String(node.fields?.STYLE ?? '');
+        const style = named ? this.theme.styles.get(named) : undefined;
         return this.measure(
           this.text(socket(node, 'TEXT')),
           this.number(socket(node, 'SIZE'), 12),
+          style?.weight === 'bold' ? 'bold' : undefined,
         );
       }
       case 'world_any_actors':
@@ -537,7 +555,17 @@ export function readDrawing(
   }
   const declarations = declarationsOf(files);
   const set = new Map<string, unknown>();
-  const reading = new Reading(set, declarations, measure);
+  // The actor's own theme beats the map's, which beats the world's — the
+  // same order `World.themeFor` resolves in, because a still that disagreed
+  // with the game would be a second picture. Resolved BEFORE the reading
+  // because the reading needs it: a measurement names the style it will be
+  // drawn in, and the style is the theme's to give.
+  const own = overrides[STYLED.trait]?.[STYLED.theme];
+  const theme = themeOf(
+    files,
+    (typeof own === 'string' && own) || mapTheme || undefined,
+  );
+  const reading = new Reading(set, declarations, measure, theme);
   // Merged from the far end inward, so a child's `set` overrides an inherited
   // one — the order overrides are applied in when the actor is really built.
   for (const root of [...roots].reverse()) {
@@ -556,14 +584,6 @@ export function readDrawing(
   // drawing's: the reading starts clean here.
   reading.complete = true;
 
-  // The actor's own theme beats the map's, which beats the world's — the
-  // same order `World.themeFor` resolves in, because a still that disagreed
-  // with the game would be a second picture.
-  const own = overrides[STYLED.trait]?.[STYLED.theme];
-  const theme = themeOf(
-    files,
-    (typeof own === 'string' && own) || mapTheme || undefined,
-  );
   const commands: DrawCommand[] = [];
   // The pen, which is state: a fill or an outline set once applies to every
   // shape after it, exactly as it does in the engine (`core/drawing`).

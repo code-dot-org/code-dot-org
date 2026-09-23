@@ -187,6 +187,8 @@ import {
   styleFileOptions,
   styleFileOptionsExtension,
   styleNameOptions,
+  styleNameOrPlainOptions,
+  styleNameOrPlainOptionsExtension,
   styleNameOptionsExtension,
   mapActorTypes,
   mapFieldOptions,
@@ -10014,8 +10016,21 @@ const worldNewLine = defineBlock({
  */
 const worldTextWidth = defineBlock({
   type: 'world_text_width',
-  message0: 'width of %1 at size %2',
-  args0: [{type: 'input_value', name: 'TEXT'}, numberArg('SIZE')],
+  // IN A STYLE, because the answer depends on one. The painter draws with the
+  // pen's weight and the Modern theme's `caption` is bold; a measurement made
+  // without it came back narrow, and the error is per character — a caret a
+  // little short on a word and several letters adrift on a paragraph.
+  //
+  // AN ARGUMENT AND NOT "THE CURRENT STYLE", because there is no current one
+  // here: the pen is ambient and exists only while painting, and this is asked
+  // in a handler. So the caller names the style it is about to draw in, and it
+  // is looked up through the same cascade `use style` looks it up through.
+  message0: 'width of %1 at size %2 in style %3',
+  args0: [
+    {type: 'input_value', name: 'TEXT'},
+    numberArg('SIZE'),
+    {type: 'field_dropdown', name: 'STYLE', options: styleNameOrPlainOptions},
+  ],
   inputsInline: true,
   output: 'Number',
   style: 'text_blocks',
@@ -10025,15 +10040,23 @@ const worldTextWidth = defineBlock({
   // It asks the WORLD, so it warns where there is no world to ask — which
   // includes an actor's setup body, where a size that measured its own words
   // would be tempting and would throw (`extensions/worldContext`).
-  extensions: [valueShadowExtension, worldContextExtension],
+  extensions: [
+    valueShadowExtension,
+    worldContextExtension,
+    styleNameOrPlainOptionsExtension,
+  ],
   generator: {
     javascript(block, generator) {
       const words = generator.valueToCode(block, 'TEXT', Order.NONE) || "''";
       const size = generator.valueToCode(block, 'SIZE', Order.NONE) || '12';
-      return [`world.textWidth(${words}, ${size})`, Order.FUNCTION_CALL] as [
-        string,
-        number,
-      ];
+      const name = block.getFieldValue('STYLE');
+      // Plain unless a style is named, which is what a block saved before this
+      // field existed asks for and what `(plain)` says outright.
+      const style = name ? `, world.styleFor(actor, ${str(name)})` : '';
+      return [
+        `world.textWidth(${words}, ${size}${style})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
     },
   },
 });
