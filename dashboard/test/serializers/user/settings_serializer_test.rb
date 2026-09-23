@@ -127,16 +127,6 @@ class User::SettingsSerializerTest < ActiveSupport::TestCase
     let(:payload) {User::SettingsSerializer.new(user, country_code: 'US').as_json}
     let(:integrations) {payload[:integrations]}
 
-    before do
-      DCDO.set('settings-integrations-tab', true)
-    end
-
-    it 'omits the block when the flag is off' do
-      DCDO.set('settings-integrations-tab', false)
-
-      _(payload.keys).wont_include :integrations
-    end
-
     it 'serializes the linked-account gates for a migrated teacher' do
       _(integrations).must_equal(
         can_manage_linked_accounts: true,

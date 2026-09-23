@@ -42,7 +42,7 @@ class User::SettingsSerializer
       age_options: age_options,
       us_state_options: us_state_options,
       **educator_profile,
-      **integrations,
+      integrations: integrations,
     }
   end
 
@@ -86,19 +86,15 @@ class User::SettingsSerializer
   end
 
   private def integrations
-    return {} unless DCDO.get('settings-integrations-tab', false)
-
     {
-      integrations: {
-        can_manage_linked_accounts: user.migrated? && !Policies::Lti.restricted_user?(user),
-        is_google_classroom_student: user.google_classroom_student?,
-        is_clever_student: user.clever_student?,
-        personal_account_linking_enabled: Policies::ChildAccount.personal_account_linking_enabled?(
-          user, request_in_usa: Policies::User.in_usa?(@country_code)
-        ),
-        lms_name: Queries::Lti.get_lms_name_from_user(user),
-        **lti_roster_sync,
-      },
+      can_manage_linked_accounts: user.migrated? && !Policies::Lti.restricted_user?(user),
+      is_google_classroom_student: user.google_classroom_student?,
+      is_clever_student: user.clever_student?,
+      personal_account_linking_enabled: Policies::ChildAccount.personal_account_linking_enabled?(
+        user, request_in_usa: Policies::User.in_usa?(@country_code)
+      ),
+      lms_name: Queries::Lti.get_lms_name_from_user(user),
+      **lti_roster_sync,
     }
   end
 
