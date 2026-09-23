@@ -399,18 +399,28 @@ describe('Health Bar', () => {
   });
 });
 
+/**
+ * Shorter than any block Blockly can draw.
+ *
+ * A hat with nothing under it is about fifty pixels tall in the lab's theme.
+ * The number is only used to say that the file's steps are smaller than that,
+ * so whatever the renderer decides, the stacks it lays out will overlap and
+ * the tidy will run.
+ */
+const SHORTEST_BLOCK = 50;
+
 describe('where a stock actor’s blocks sit', () => {
-  // A LAYOUT THAT OVERLAPS IS REARRANGED, and every rearrangement used to be
-  // saved: the project went dirty, every file was copied, the world recompiled
-  // and RESTARTED — for a tidy-up nobody asked for. The editor ignores an
-  // automatic move now (`blockly/editorEvents`), so this is no longer a
-  // performance question; it is still the difference between a file that opens
-  // readable and one that shuffles itself while you look at it.
+  // THE FILE DOES NOT DECIDE, AND THAT IS THE POINT. Two guesses at a layout
+  // came and went here: handlers under the definition (wrong the moment an
+  // actor carried a `define drawing`), then handlers in a column 220 apart
+  // (wrong the moment one handler ran past 220 tall). Both were the same
+  // mistake — a file working out a height that only a renderer knows.
   //
-  // The handlers used to start at y=180, which is a guess about how tall a
-  // `define actor` stack is. True of a small actor; the Text Area's definition
-  // carries a whole `define drawing` and is far taller, so its first handler
-  // began INSIDE the definition.
+  // So the positions say ORDER and nothing else. The handlers are stacked a
+  // short step apart, deliberately overlapping, and the editor measures them
+  // and arranges them on open (`blockly/tidyLayout`). What is worth guarding
+  // is that the order survives, because the tidy reads it off these numbers
+  // and has nothing else to go on.
 
   /** Every top-level block's corner, as the file stores it. */
   const corners = (contents: string) =>
@@ -420,7 +430,7 @@ describe('where a stock actor’s blocks sit', () => {
       }
     ).blocks?.blocks ?? [];
 
-  it('puts the definition and the handlers in different columns', () => {
+  it('puts the definition above every handler', () => {
     for (const actor of STOCK_ACTORS) {
       const top = corners(actor.contents);
       const root = top.find(one => one.type === 'world_actor');
@@ -429,22 +439,45 @@ describe('where a stock actor’s blocks sit', () => {
         continue;
       }
       for (const handler of handlers) {
+        // Strictly, not merely no lower: the tidy sorts by y, and a tie would
+        // put the definition wherever the array happened to hold it.
         expect(
-          (handler.x ?? 0) > (root.x ?? 0),
-          `${actor.id}: a handler shares the definition's column`,
+          (handler.y ?? 0) > (root.y ?? 0),
+          `${actor.id}: a handler is level with the definition`,
         ).toBe(true);
       }
     }
   });
 
-  it('never puts two top blocks in the same place', () => {
+  it('keeps the handlers in the order they are written in', () => {
     for (const actor of STOCK_ACTORS) {
-      const seen = new Set<string>();
-      for (const one of corners(actor.contents)) {
-        const at = `${one.x ?? 0},${one.y ?? 0}`;
-        expect(seen.has(at), `${actor.id}: two blocks at ${at}`).toBe(false);
-        seen.add(at);
+      const handlers = corners(actor.contents).filter(
+        one => one.type !== 'world_actor',
+      );
+      for (let index = 1; index < handlers.length; index += 1) {
+        expect(
+          (handlers[index].y ?? 0) > (handlers[index - 1].y ?? 0),
+          `${actor.id}: handler ${index} does not read after ${index - 1}`,
+        ).toBe(true);
       }
+    }
+  });
+
+  it('gives the editor something to arrange: the handlers overlap', () => {
+    // Not a defect being tolerated — the trigger. The tidy leaves a workspace
+    // alone unless its blocks sit on top of one another, so a stock actor that
+    // laid itself out neatly enough would never be measured at all, and would
+    // open in whatever this file had guessed.
+    for (const actor of STOCK_ACTORS) {
+      const top = corners(actor.contents);
+      if (top.length < 2) {
+        continue;
+      }
+      const step = (top[1].y ?? 0) - (top[0].y ?? 0);
+      expect(
+        step < SHORTEST_BLOCK,
+        `${actor.id}: top blocks are ${step} apart, far enough not to overlap`,
+      ).toBe(true);
     }
   });
 });

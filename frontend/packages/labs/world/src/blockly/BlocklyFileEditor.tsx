@@ -113,6 +113,7 @@ import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
 import {standInBlocks} from './standInBlocks';
 import {toolboxForSurface, type Surface} from './surfaceToolbox';
+import {anyOverlap, arrangeTopBlocks} from './tidyLayout';
 import {withoutCategories, withoutEmptyHeadings} from './toolboxFilter';
 import {DesignSystemToolboxPlugin} from './toolboxStyle';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
@@ -246,6 +247,50 @@ function parseWorkspace(contents: string): BlocklySerialization {
     return {};
   }
 }
+
+/**
+ * Move overlapping top blocks apart, using sizes only the renderer knows.
+ *
+ * A generated actor gives its handlers an order and not a layout
+ * (`blockly/tidyLayout`), so opening one lands here and this is where it gets
+ * its columns. A learner's own file is touched only if its blocks have come to
+ * sit on top of each other, which is a state nobody arranges on purpose.
+ *
+ * WITH EVENTS OFF, and that is the whole reason this can run at all. A
+ * `BLOCK_MOVE` is an edit: it dirties the project, rewrites the file and
+ * restarts the running world. Opening a file is not editing it, so the moves
+ * are made silently and the file keeps whatever it said until the learner
+ * changes something — at which point the workspace it is saved from is the
+ * tidy one.
+ */
+const tidyTopBlocks = (workspace: Blockly.WorkspaceSvg): void => {
+  const tops = workspace.getTopBlocks(false);
+  if (tops.length < 2) {
+    return;
+  }
+  const boxes = tops.map(block => {
+    const corner = block.getRelativeToSurfaceXY();
+    // The block AND the stack under it: a handler is one top block and a dozen
+    // rows, and it is the dozen rows that decide where the next one goes.
+    const size = block.getHeightWidth();
+    return {x: corner.x, y: corner.y, width: size.width, height: size.height};
+  });
+  if (!anyOverlap(boxes)) {
+    return;
+  }
+  const places = arrangeTopBlocks(boxes);
+  Blockly.Events.disable();
+  try {
+    tops.forEach((block, index) => {
+      block.moveBy(
+        places[index].x - boxes[index].x,
+        places[index].y - boxes[index].y,
+      );
+    });
+  } finally {
+    Blockly.Events.enable();
+  }
+};
 
 export const BlocklyFileEditor = ({
   fileId,
@@ -1082,7 +1127,13 @@ export const BlocklyFileEditor = ({
     for (const block of workspace.getAllBlocks(false)) {
       block.queueRender();
     }
-    void Blockly.renderManagement.finishQueuedRenders();
+    // …and only once they have all reported their size is there anything to
+    // arrange, which is why the tidy hangs off the promise rather than
+    // following the loop. Asking a block how tall it is before it has rendered
+    // is what this function exists to work around.
+    void Blockly.renderManagement
+      .finishQueuedRenders()
+      .then(() => tidyTopBlocks(workspace));
   }, []);
 
   const handleChange = useCallback(
@@ -1102,6 +1153,10 @@ export const BlocklyFileEditor = ({
       if (loadedWorkspace.current !== workspace) {
         if (event.type === Blockly.Events.FINISHED_LOADING) {
           loadedWorkspace.current = workspace;
+          // The first load of this workspace goes through `BlocklyWorkspace`'s
+          // own seeding and not through either of the reload effects, so this
+          // is the only place it can be measured and arranged.
+          layOut(workspace);
         }
         return;
       }
@@ -1237,6 +1292,7 @@ export const BlocklyFileEditor = ({
       isReadOnly,
       readFile,
       syncFlyoutMetrics,
+      layOut,
     ],
   );
 

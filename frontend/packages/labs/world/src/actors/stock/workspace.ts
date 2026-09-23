@@ -14,17 +14,16 @@ import {pathSlug} from '../../blockly/ruleRegistry';
 import {MAIN_WORLD_PATH} from '../../mainWorld';
 
 /**
- * Where a stock actor's handlers sit: a column to the right of its definition,
- * and how far apart they are down it.
+ * How far apart a stock actor's handlers are listed.
  *
- * GENEROUS ON PURPOSE. Both are guesses — a block's real height is the
- * renderer's to know and no file can ask — so they are picked to be too big
- * rather than nearly right: blocks that do not overlap are never tidied, and a
- * gap that is too wide costs a reader one scroll where one that is too narrow
- * costs them the layout being rearranged under them.
+ * NOT A LAYOUT — AN ORDER. A block's real height is the renderer's to know and
+ * no file can ask, so this file stopped guessing. The handlers are stacked one
+ * short step apart, which means they overlap, which means the editor measures
+ * and arranges them the moment the file is opened (`blockly/tidyLayout`). All
+ * this number has to do is keep them in the order they are written in, since
+ * that ordering is the only thing the tidy reads out of the positions.
  */
-const HANDLER_COLUMN = 560;
-const HANDLER_GAP = 220;
+const HANDLER_STEP = 40;
 
 /** Chain statement blocks, first at the top. */
 export const chain = (blocks: object[]): object =>
@@ -363,26 +362,29 @@ export const actorFile = (
                 }
               : {}),
           },
-          // The handlers, in a COLUMN OF THEIR OWN beside the definition.
+          // The handlers, LISTED RATHER THAN PLACED.
           //
-          // They used to start at y=180 under it, which is a guess about how
-          // tall a `define actor` stack is — true of a small actor and wildly
-          // wrong for one with a big `define drawing`, where the first handler
-          // began INSIDE the definition and the rest overlapped each other at
-          // 120 apart. Blockly tidies what overlaps, every tidy is a
-          // `BLOCK_MOVE`, and a move used to be saved: opening the Text Area
-          // rewrote it, dirtied the project and RESTARTED the running world,
-          // for a layout nobody asked for (`BlocklyFileEditor.movedItself`).
+          // Two guesses at a layout came before this one. Starting them at
+          // y=180 under the definition assumed a `define actor` stack was
+          // short, which is true of a Label and wildly wrong for an actor with
+          // a big `define drawing`: the first handler began inside the
+          // definition and the rest overlapped each other. Moving them into a
+          // second column fixed the definition running into them and left them
+          // still running into each other, because 220 apart is a guess about a
+          // handler's height in just the same way.
           //
-          // A second column cannot be wrong later. The definition may grow to
-          // any height without reaching the handlers, and the handlers keep
-          // their reading order down the page — which is what a learner
-          // opening the file meets first, and the reason they were in one
-          // column to begin with.
+          // There is no third guess to make. The file says which handlers there
+          // are and what order to read them in, and the editor — where a
+          // renderer exists and the sizes are real — decides where they go
+          // (`blockly/tidyLayout`). They are stacked a short step apart so that
+          // they overlap on purpose, which is what asks for the arrangement.
           ...(extras.handlers ?? []).map((handler, index) => ({
             ...handler,
-            x: HANDLER_COLUMN,
-            y: 20 + index * HANDLER_GAP,
+            x: 20,
+            // Strictly below the definition, which sits at the origin: the
+            // tidy reads the order off the positions, and a tie would leave it
+            // to depend on which came first in the array.
+            y: 20 + (index + 1) * HANDLER_STEP,
           })),
         ],
       },
