@@ -5,7 +5,7 @@ import useGameAudio from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/useGameAu
 
 import {FakeVoice, installFakeAudioContext} from './fakeAudioContext';
 
-const CUES = 'spritelab2ProximitySound';
+const CUES = 'spritelab2NavigationSounds';
 
 interface Engine {
   observer: PlayerObserver | null;
@@ -50,7 +50,7 @@ describe('SpriteLab2 useGameAudio', () => {
   it('offers one setting, off until chosen', () => {
     const {setting, view} = setup();
     expect(view.result.current.settings).toHaveLength(1);
-    expect(setting().label).toBe('Obstacle sounds');
+    expect(setting().label).toBe('Navigation sounds');
     expect(setting().selectedValue).toBe('off');
   });
 

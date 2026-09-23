@@ -15,7 +15,7 @@ import {createPlayerObserver, PlayerObserver} from './playerObserver';
 import {createPlayerSounds} from './playerSounds';
 import {createProximityAudio} from './proximityAudio';
 
-const NAVIGATION_SOUNDS_KEY = 'spritelab2ProximitySound';
+const NAVIGATION_SOUNDS_KEY = 'spritelab2NavigationSounds';
 
 const ON_OFF = [
   {value: 'on', text: 'On'},
@@ -85,7 +85,7 @@ export default function useGameAudio(
   // and are noise to one who can.
   const [navigationSounds, storedSetting] = useStoredToggle(
     NAVIGATION_SOUNDS_KEY,
-    'Obstacle sounds',
+    'Navigation sounds',
     'off'
   );
 
