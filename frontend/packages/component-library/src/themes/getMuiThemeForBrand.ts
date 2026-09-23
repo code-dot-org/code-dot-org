@@ -11,16 +11,22 @@ import CodeaiAuditTheme from './codeai-audit';
  * BrandCode union) because frontend/ has no shared brand type: callers pass
  * `document.documentElement.dataset.brand` directly.
  *
+ * An absent or unrecognized brand resolves to DEFAULT_BRAND, matching what
+ * Cdo::Brand serves when the DCDO flag is off. CdoTheme is reached only by
+ * asking for the legacy brands by name.
+ *
  * apps/src/util/brand.ts has its own getMuiThemeForBrand for the same
  * purpose in the legacy apps/ webpack workspace, which frontend/ packages
- * cannot import from.
+ * cannot import from. Keep the two defaults in step.
  */
+export const DEFAULT_BRAND = 'codeai-next';
+
 export function getMuiThemeForBrand(brand: string | undefined): Theme {
-  if (brand === 'codeai-next') {
-    return CodeaiTheme;
+  if (brand === 'code' || brand === 'codeai') {
+    return CdoTheme;
   }
   if (brand === 'codeai-audit') {
     return CodeaiAuditTheme;
   }
-  return CdoTheme;
+  return CodeaiTheme;
 }

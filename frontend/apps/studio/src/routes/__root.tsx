@@ -22,7 +22,10 @@ import {
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
+import {
+  DEFAULT_BRAND,
+  getMuiThemeForBrand,
+} from '@code-dot-org/component-library/themes';
 import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
@@ -109,6 +112,13 @@ const responsiveFloorStyles = (
 const cssLayerOrder = (
   <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
 );
+
+// Rails stamps data-brand on dashboard pages; this shell serves its own
+// index.html, so it declares the brand itself. The CSS tokens key off the
+// attribute and the MUI palette off the same value, and they have to agree.
+if (!document.documentElement.dataset.brand) {
+  document.documentElement.dataset.brand = DEFAULT_BRAND;
+}
 
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 

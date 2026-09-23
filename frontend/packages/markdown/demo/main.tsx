@@ -12,7 +12,10 @@ import {ThemeProvider} from '@mui/material';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
-import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
+import {
+  DEFAULT_BRAND,
+  getMuiThemeForBrand,
+} from '@code-dot-org/component-library/themes';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import {Demo} from './Demo';
@@ -32,9 +35,7 @@ if (!root) {
 // tokens react to [data-brand] whenever it changes, but the MUI theme is
 // chosen once at boot.
 const brand = new URLSearchParams(window.location.search).get('brand');
-if (brand) {
-  document.documentElement.dataset.brand = brand;
-}
+document.documentElement.dataset.brand = brand ?? DEFAULT_BRAND;
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 
 createRoot(root).render(
