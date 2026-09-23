@@ -102,6 +102,9 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
+  // Shown in the play area's top-right corner while playing (the restart
+  // buttons). Outside the box, so they keep their size whatever its scale.
+  controls?: React.ReactNode;
   // The floating guide's footprint, pinned to the overlay's bottom-right
   // (playPlacement).
   guideSize?: {width: number; height: number} | null;
@@ -120,6 +123,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
+  controls,
   guideSize,
   getDefaultSpriteSize,
   onPreviewClick,
@@ -396,6 +400,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           </div>
         )}
       </div>
+      {mode === 'play' && controls && (
+        <div className={moduleStyles.playControls}>{controls}</div>
+      )}
     </div>
   );
 };

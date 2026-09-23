@@ -74,6 +74,14 @@ export interface Scene {
   source?: WorkspaceSerialization;
   /** Starter sprite and block placements, spawned ahead of the program. */
   world?: World;
+  /** The scene's first frame as last captured (sceneThumbnails.ts): a
+      project asset, and the fingerprint of the scene it shows. */
+  thumbnail?: SceneThumbnail;
+}
+
+export interface SceneThumbnail {
+  url: string;
+  fingerprint: string;
 }
 
 /** The single ProjectSources.source JSON for a SpriteLab2 project. */

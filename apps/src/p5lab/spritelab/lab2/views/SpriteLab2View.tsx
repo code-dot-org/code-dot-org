@@ -37,7 +37,6 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {addMissingBlocks} from '../addBlocks';
@@ -47,6 +46,7 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/images/imageGeneration';
+import {refreshSceneDropdowns} from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
@@ -100,6 +100,7 @@ import {
   parseExternalSceneKey,
   toExternalSceneOptions,
 } from '../scenesApi';
+import {sceneMetadataFor} from '../sceneThumbnails';
 import {toolboxForSceneType} from '../sceneToolbox';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SceneType, SpriteLab2LevelProperties, Scene, Sources} from '../types';
@@ -115,14 +116,18 @@ import {
 import {useWorldStartPattern} from '../worldStartPattern';
 
 import {isPointerClick} from './blurAfterPointerClick';
+import PlayControls from './components/PlayControls';
 import SceneMusicBar from './components/SceneMusicBar';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab, {PLAY_GUIDE_WIDTH_PX} from './GenerateSpriteLab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
+import ScenesGallery from './ScenesGallery';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
+import useSceneThumbnails from './useSceneThumbnails';
 import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -287,10 +292,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // level, say) needs the selection steered onto a tab that exists. A mode
   // with no tabs at all renders no shell, so leave the selection alone.
   useEffect(() => {
-    if (tabs.length && !tabs.includes(activeTab)) {
+    if (tabs.length && activeTab !== 'Scenes' && !tabs.includes(activeTab)) {
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
+  // ?scenes=gallery: the scene chip opens the gallery directly instead of a
+  // menu that ends in it. Two candidates under trial.
+  const chipOpensGallery = useMemo(
+    () => queryParams('scenes') === 'gallery',
+    []
+  );
   // The Images tab mounts once (idle pre-mount after seeding, or first
   // visit) and stays mounted clipped, so no visit pays the mount cost.
   const [imagesMounted, setImagesMounted] = useState(false);
@@ -380,10 +391,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [animationsSeeded, imagesMounted]);
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
-  const sceneMetadata = useMemo(
-    () => scenes.map(s => ({id: s.id, name: s.name})),
-    [scenes]
-  );
 
   // Create the pinned scene on first load, and again after
   // Start Over (the reinit count in the deps). On a scene-less project the
@@ -461,6 +468,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
+
+  const sceneMetadata = useMemo(
+    () => sceneMetadataFor(scenes, animationList),
+    [scenes, animationList]
+  );
 
   // Keep activeSceneId pointing at a real scene: locked to the pin once the
   // ensure effect lands it, otherwise reset to the first scene when the
@@ -585,6 +597,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // TODO: does this need to live in redux?
   useEffect(() => {
     dispatch(setScenes(sceneMetadata));
+    // Go-to-scene blocks draw the pictures from that store.
+    refreshSceneDropdowns();
   }, [sceneMetadata, dispatch]);
 
   // Cleanup on level switch.
@@ -881,10 +895,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // so world edits don't churn their identities.
   const activeWorldRef = useRef<World | undefined>(undefined);
   const activeSceneTypeRef = useRef<SceneType | undefined>(undefined);
+  const activeSceneIdRef = useRef<string | undefined>(undefined);
   useEffect(() => {
     activeWorldRef.current = worldFor(activeScene);
     activeSceneTypeRef.current = activeScene?.type;
+    activeSceneIdRef.current = activeScene?.id;
   }, [activeScene, worldFor]);
+
+  const requestThumbnail = useSceneThumbnails({
+    engineRef,
+    scenes,
+    channelId,
+    uploadImage,
+    updateSources,
+    getScenes,
+    enabled: !isToolboxMode,
+  });
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
@@ -896,8 +922,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     const {result: program, referencedImages} = collectImageReferences(
       () => compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
     );
+    if (activeSceneIdRef.current) {
+      requestThumbnail(activeSceneIdRef.current);
+    }
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
-  }, [dispatch, getCode]);
+  }, [dispatch, getCode, requestThumbnail]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -939,9 +968,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return prelude + code;
       });
       dispatch(setIsRunning(true));
+      requestThumbnail(scene.id);
       engine.runProgram(program, referencedImages, scene.type);
     },
-    [dispatch, activeSceneId, getCode, worldFor]
+    [dispatch, activeSceneId, getCode, worldFor, requestThumbnail]
   );
 
   const runScene = useCallback(
@@ -1476,30 +1506,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     levelProperties.addBlocks,
   ]);
 
-  const handleSelectScene = useCallback(
-    (sceneId: string) => {
-      if (scenes.some(s => s.id === sceneId)) {
-        setActiveSceneId(sceneId);
-      }
-    },
-    [scenes]
-  );
-
-  const handleCreateScene = useCallback(
-    (name: string, type: SceneType) => {
-      const scene: Scene = {
-        id: createUuid(),
-        name,
-        type,
-        source: DEFAULT_SCENE_SOURCE,
-      };
-      updateSources(prev => ({...prev, scenes: [...getScenes(prev), scene]}));
-      // Both state updates land in one commit, so the reconcile effect
-      // sees the new scene in the derived list.
-      setActiveSceneId(scene.id);
-    },
-    [updateSources]
-  );
+  const sceneEditing = useSceneEditing({
+    scenes,
+    activeSceneId,
+    setActiveSceneId,
+    activeTab,
+    channelId,
+    updateSources,
+    getScenes,
+  });
 
   const handleTabChange = useCallback(
     (tab: Tab) => {
@@ -1574,6 +1589,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // World and Code are the scene-editing tabs: they share the corner
   // preview and the scene selector.
   const onSceneTab = activeTab === 'Code' || activeTab === 'World';
+  // Only freeplay adds, renames, reorders or deletes scenes; a level with no
+  // mode is unconstrained.
+  const scenesEditable =
+    !levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode);
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play' ? 'play' : onSceneTab ? 'preview' : 'hidden';
 
@@ -1678,49 +1697,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }
           sceneTabsExtra={
             // A toolbox has no scenes; "New scene…" here would put the student
-            // default onto the canvas and into the saved toolbox.
-            animationsSeeded && !isToolboxMode ? (
+            // default onto the canvas and into the saved toolbox. A pinned
+            // level has nothing to switch, so it shows no scene control.
+            animationsSeeded && !isToolboxMode && !pinnedSceneId ? (
               <SceneSelector
                 scenes={sceneMetadata}
                 activeSceneId={activeSceneId}
-                disabled={!onSceneTab}
-                locked={!!pinnedSceneId}
-                // Only freeplay adds scenes; a level with no mode is unconstrained.
-                allowCreate={
-                  !levelProperties.levelMode ||
-                  isFreeplayMode(levelProperties.levelMode)
-                }
-                onSelectScene={handleSelectScene}
-                onCreateScene={handleCreateScene}
+                disabled={!onSceneTab && activeTab !== 'Scenes'}
+                allowCreate={scenesEditable}
+                onSelectScene={sceneEditing.selectScene}
+                onCreateScene={sceneEditing.createScene}
+                onManageScenes={sceneEditing.openGallery}
+                chipOpensGallery={chipOpensGallery}
               />
-            ) : undefined
-          }
-          playTabExtra={
-            playspaceMode === 'play' ? (
-              <>
-                {/* On a pinned-scene level the game IS the one scene, so no
-                  whole-game restart. */}
-                {!pinnedSceneId && (
-                  <button
-                    type="button"
-                    className={moduleStyles.startOver}
-                    onClick={event =>
-                      handleRestartClick(event, handleRestartGame)
-                    }
-                  >
-                    Restart game
-                  </button>
-                )}
-                <button
-                  type="button"
-                  className={moduleStyles.startOver}
-                  onClick={event =>
-                    handleRestartClick(event, handleRestartScene)
-                  }
-                >
-                  Restart scene
-                </button>
-              </>
             ) : undefined
           }
         >
@@ -1757,6 +1746,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             </div>
           )}
 
+          {activeTab === 'Scenes' && (
+            <div className={moduleStyles.codeTabWrapper}>
+              <div className={moduleStyles.imagesTab}>
+                <ScenesGallery
+                  scenes={sceneMetadata}
+                  activeSceneId={activeSceneId}
+                  editable={scenesEditable}
+                  onOpenScene={sceneEditing.selectScene}
+                  onCreateScene={sceneEditing.createScene}
+                  onRenameScene={sceneEditing.renameScene}
+                  onDeleteScene={sceneEditing.deleteScene}
+                  onMakeStartScene={sceneEditing.makeStartScene}
+                />
+              </div>
+            </div>
+          )}
+
           {worldTabEnabled && worldMounted && (
             <div
               ref={worldWrapperRef}
@@ -1781,6 +1787,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           <Playspace
             boxRef={playspaceRef}
             mode={playspaceMode}
+            controls={
+              <PlayControls
+                // On a pinned-scene level the game IS the one scene, so no
+                // whole-game restart.
+                onRestartGame={
+                  pinnedSceneId
+                    ? undefined
+                    : event => handleRestartClick(event, handleRestartGame)
+                }
+                onRestartScene={event =>
+                  handleRestartClick(event, handleRestartScene)
+                }
+              />
+            }
             guideSize={levelProperties.levelMode ? guideSize : null}
             fadeTrigger={fadeTrigger}
             covered={jumpCover}
