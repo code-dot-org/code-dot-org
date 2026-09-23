@@ -1,14 +1,19 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Button as MuiButton, Typography} from '@mui/material';
-import classNames from 'classnames';
 import React, {FC, useEffect, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {Challenge, challengeValidator} from '../types';
 
-import styles from './challenge-box.module.scss';
+import styles from './challenge-picker.module.scss';
+
+type Modality = 'video' | 'whiteboard';
+
+const MODALITIES: {id: Modality; label: string; icon: string}[] = [
+  {id: 'video', label: 'Create a video', icon: 'video'},
+  {id: 'whiteboard', label: 'Create on a whiteboard', icon: 'chalkboard'},
+];
 
 interface ChallengePickerProps {
   lessonId: number;
@@ -22,155 +27,121 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
   lessonId,
   challengeSetCallback,
 }) => {
-  const [currentChallengeIndex, setCurrentChallengeIndex] = useState(0);
+  const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [loadFailed, setLoadFailed] = useState(false);
-  const [challengeList, setChallengeList] = useState<Challenge[]>([]);
-  const [challenge, setChallenge] = useState<Challenge | null>(null);
-  const [challengeType, setChallengeType] = useState<string | null>(null);
+  const [modality, setModality] = useState<Modality | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let cancelled = false;
     const params = new URLSearchParams();
     params.append('lesson_id', lessonId.toString());
-    const query = params.toString();
     HttpClient.fetchJson<Challenge[]>(
-      `/challenges?${query}`,
+      `/challenges?${params}`,
       {},
       challengeValidator
     )
       .then(({value}) => {
-        if (cancelled) {
-          return;
-        }
-        if (!value || value?.length === 0) {
+        if (cancelled) return;
+        if (!value || value.length === 0) {
           setLoadFailed(true);
           return;
         }
-        setChallengeList(value);
-        setChallenge(value[0]);
-        setChallengeType(value[0].default_modality);
+        setChallenges(value);
       })
       .catch(() => {
-        if (!cancelled) {
-          setLoadFailed(true);
-        }
+        if (!cancelled) setLoadFailed(true);
       });
     return () => {
       cancelled = true;
     };
   }, [lessonId]);
 
-  const onCarouselPress = (buttonValue: number) => {
-    let currentIndex = currentChallengeIndex;
-    currentIndex += buttonValue;
-    if (currentIndex < 0) {
-      currentIndex = challengeList.length - 1;
-    } else if (currentIndex >= challengeList.length) {
-      currentIndex = 0;
-    }
-    setCurrentChallengeIndex(currentIndex);
-    setChallenge(challengeList[currentIndex]);
-    setChallengeType(challengeList[currentIndex].default_modality);
-  };
+  const filtered = modality
+    ? challenges.filter(c => c.default_modality === modality)
+    : [];
 
-  return loadFailed ? (
-    <Typography>We couldn&apos;t load challenges for this lesson.</Typography>
-  ) : (
-    <div className={styles.challengePickerContainer}>
-      <div className={styles.challengeCarousel}>
-        <IconButton
+  return (
+    <div className={styles.container}>
+      <div className={styles.inner}>
+        <h2 className={styles.heading}>Choose your challenge</h2>
+
+        <div className={styles.section}>
+          <p className={styles.sectionLabel}>
+            How do you want to create today?
+          </p>
+          <div className={styles.modalityRow}>
+            {MODALITIES.map(m => {
+              const isActive = modality === m.id;
+              return (
+                <button
+                  key={m.id}
+                  type="button"
+                  className={`${styles.modalityCard} ${
+                    isActive ? styles.modalityCardActive : ''
+                  }`}
+                  onClick={() => setModality(m.id)}
+                >
+                  <span
+                    className={`${styles.modalityIcon} ${
+                      isActive ? styles.modalityIconActive : ''
+                    }`}
+                  >
+                    <FontAwesomeV6Icon iconName={m.icon} />
+                  </span>
+                  <span
+                    className={`${styles.modalityLabel} ${
+                      isActive ? styles.modalityLabelActive : ''
+                    }`}
+                  >
+                    {m.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {modality && (
+          <div className={styles.challengeList}>
+            {loadFailed || filtered.length === 0 ? (
+              <p className={styles.emptyState}>
+                No challenges available for this mode.
+              </p>
+            ) : (
+              filtered.map(challenge => (
+                <div key={challenge.id} className={styles.challengeCard}>
+                  <div className={styles.challengeCardText}>
+                    <p className={styles.challengeCardOverline}>
+                      Your Challenge
+                    </p>
+                    <p className={styles.challengeCardBody}>
+                      {challenge.question}
+                    </p>
+                  </div>
+                  <div className={styles.challengeCardCta}>
+                    <button
+                      type="button"
+                      className={styles.startButton}
+                      onClick={() => challengeSetCallback(challenge, modality)}
+                    >
+                      Start challenge
+                    </button>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        )}
+
+        <button
           type="button"
-          variant="text"
-          color="secondary"
-          aria-label={'scroll challenge left'}
-          onClick={() => onCarouselPress(-1)}
+          className={styles.reviewLink}
+          onClick={() => navigate('/intervention')}
         >
-          <FontAwesomeV6Icon iconName="angle-left" />
-        </IconButton>
-        <Typography variant="h3" className={styles.challengePickerText}>
-          {challenge?.question}
-        </Typography>
-        <IconButton
-          type="button"
-          variant="text"
-          color="secondary"
-          aria-label={'scroll challenge right'}
-          onClick={() => onCarouselPress(1)}
-        >
-          <FontAwesomeV6Icon iconName="angle-right" />
-        </IconButton>
+          I want to review instead
+        </button>
       </div>
-      <div className={styles.challengePickerButtons}>
-        <MuiButton
-          className={classNames([
-            styles.challengeTypeButton,
-            challengeType === ChallengeTypes.WHITEBOARD
-              ? styles.Selected
-              : null,
-          ])}
-          size="medium"
-          color="secondary"
-          startIcon={
-            <FontAwesomeV6Icon
-              iconStyle="solid"
-              iconName="pen-paintbrush"
-              title="Whiteboard"
-            />
-          }
-          variant="outlined"
-          onClick={() => setChallengeType(ChallengeTypes.WHITEBOARD)}
-        >
-          Whiteboard
-          {challenge?.default_modality === ChallengeTypes.WHITEBOARD && (
-            <Typography variant="overline3" gutterBottom={false}>
-              (recommended)
-            </Typography>
-          )}
-        </MuiButton>
-        <MuiButton
-          className={classNames([
-            styles.challengeTypeButton,
-            challengeType === ChallengeTypes.VIDEO ? styles.Selected : null,
-          ])}
-          size="medium"
-          color="secondary"
-          startIcon={
-            <FontAwesomeV6Icon
-              iconStyle="solid"
-              iconName="camera-movie"
-              title="Video"
-            />
-          }
-          variant="outlined"
-          onClick={() => setChallengeType(ChallengeTypes.VIDEO)}
-        >
-          Video
-          {challenge?.default_modality === ChallengeTypes.VIDEO && (
-            <Typography variant="overline3" gutterBottom={false}>
-              (recommended)
-            </Typography>
-          )}
-        </MuiButton>
-      </div>
-      <MuiButton
-        size="medium"
-        color="primary"
-        endIcon={
-          <FontAwesomeV6Icon
-            iconStyle="solid"
-            iconName="arrow-right"
-            title="Video"
-          />
-        }
-        variant="contained"
-        onClick={() => {
-          if (challenge && challengeType) {
-            challengeSetCallback(challenge, challengeType);
-          }
-        }}
-      >
-        Start the Challenge!
-      </MuiButton>
     </div>
   );
 };

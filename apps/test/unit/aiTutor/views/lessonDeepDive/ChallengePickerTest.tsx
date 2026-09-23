@@ -1,12 +1,7 @@
-import {
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-  within,
-} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
+import {MemoryRouter} from 'react-router-dom';
 
 import ChallengePicker from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengePicker';
 import {
@@ -14,7 +9,6 @@ import {
   challengeValidator,
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
@@ -40,141 +34,174 @@ const fakeChallenges: Challenge[] = [
     whiteboard_starter_image_url: null,
     whiteboard_starter_image_alt_text: null,
   },
+  {
+    id: 3,
+    lesson_id: 42,
+    question: 'Sketch another diagram.',
+    default_modality: 'whiteboard',
+    whiteboard_starter_image_url: null,
+    whiteboard_starter_image_alt_text: null,
+  },
 ];
 
-const renderPicker = (challengeSetCallback = jest.fn()) => {
+function renderPicker(challengeSetCallback = jest.fn()) {
   render(
-    <ChallengePicker
-      lessonId={42}
-      challengeSetCallback={challengeSetCallback}
-    />
+    <MemoryRouter>
+      <ChallengePicker
+        lessonId={42}
+        challengeSetCallback={challengeSetCallback}
+      />
+    </MemoryRouter>
   );
   return challengeSetCallback;
-};
-
-const waitForQuestion = async (question: string) =>
-  waitFor(() => expect(screen.getByText(question)).toBeInTheDocument());
+}
 
 describe('ChallengePicker', () => {
   beforeEach(() => {
     fetchJson.mockReset();
   });
 
-  it('fetches the challenges for the lesson', async () => {
+  it('fetches the challenges for the lesson on mount', () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
-
     renderPicker();
-
     expect(fetchJson).toHaveBeenCalledWith(
       '/challenges?lesson_id=42',
       {},
       challengeValidator
     );
-    await waitForQuestion(fakeChallenges[0].question);
   });
 
-  it('shows the fetched challenges in the carousel', async () => {
+  it('renders the heading and modality buttons', () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
-
     renderPicker();
-
-    await waitForQuestion(fakeChallenges[0].question);
+    expect(
+      screen.getByRole('heading', {name: 'Choose your challenge'})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: /Create a video/i})
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    ).toBeInTheDocument();
   });
 
-  it('changes the shown challenge when the left and right arrows are clicked', async () => {
+  it('shows no challenge cards before a modality is selected', () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
-
     renderPicker();
-    await waitForQuestion(fakeChallenges[0].question);
+    expect(screen.queryByText('Your Challenge')).not.toBeInTheDocument();
+  });
+
+  it('shows only whiteboard challenges after selecting the whiteboard modality', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    renderPicker();
 
     fireEvent.click(
-      screen.getByRole('button', {name: 'scroll challenge right'})
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
     );
-    await waitForQuestion(fakeChallenges[1].question);
+
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
+    );
+    expect(screen.getByText(fakeChallenges[2].question)).toBeInTheDocument();
+    // Video challenge must not appear.
+    expect(
+      screen.queryByText(fakeChallenges[1].question)
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows only video challenges after selecting the video modality', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    renderPicker();
+
+    fireEvent.click(screen.getByRole('button', {name: /Create a video/i}));
+
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[1].question)).toBeInTheDocument()
+    );
     expect(
       screen.queryByText(fakeChallenges[0].question)
     ).not.toBeInTheDocument();
-
-    // Only two challenges exist, so scrolling right again wraps back around.
-    fireEvent.click(
-      screen.getByRole('button', {name: 'scroll challenge right'})
-    );
-    await waitForQuestion(fakeChallenges[0].question);
-
-    // Scrolling left from the first challenge wraps to the last one.
-    fireEvent.click(
-      screen.getByRole('button', {name: 'scroll challenge left'})
-    );
-    await waitForQuestion(fakeChallenges[1].question);
-  });
-
-  it('selects and recommends the challenge type button matching the shown challenge', async () => {
-    fetchJson.mockResolvedValue({value: fakeChallenges});
-
-    renderPicker();
-    await waitForQuestion(fakeChallenges[0].question);
-
-    // fakeChallenges[0]'s default modality is whiteboard.
-    const whiteboardButton = screen.getByRole('button', {
-      name: /^Whiteboard/,
-    });
-    const videoButton = screen.getByRole('button', {name: /^Video/});
-
     expect(
-      within(whiteboardButton).getByText('(recommended)')
-    ).toBeInTheDocument();
-    expect(
-      within(videoButton).queryByText('(recommended)')
+      screen.queryByText(fakeChallenges[2].question)
     ).not.toBeInTheDocument();
-    // eslint-disable-next-line no-restricted-properties
-    expect(whiteboardButton).toHaveClass('Selected');
-    // eslint-disable-next-line no-restricted-properties
-    expect(videoButton).not.toHaveClass('Selected');
   });
 
-  it('changes the challenge type when the whiteboard or video buttons are clicked', async () => {
+  it('re-filters when the modality selection changes', async () => {
     fetchJson.mockResolvedValue({value: fakeChallenges});
-
     renderPicker();
-    await waitForQuestion(fakeChallenges[0].question);
 
-    const whiteboardButton = screen.getByRole('button', {
-      name: /^Whiteboard/,
-    });
-    const videoButton = screen.getByRole('button', {name: /^Video/});
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
+    );
 
-    fireEvent.click(videoButton);
-
-    // eslint-disable-next-line no-restricted-properties
-    expect(videoButton).toHaveClass('Selected');
-    // eslint-disable-next-line no-restricted-properties
-    expect(whiteboardButton).not.toHaveClass('Selected');
-    // The recommended label tracks the challenge's default modality, not
-    // which type is currently selected.
+    fireEvent.click(screen.getByRole('button', {name: /Create a video/i}));
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[1].question)).toBeInTheDocument()
+    );
     expect(
-      within(whiteboardButton).getByText('(recommended)')
-    ).toBeInTheDocument();
-
-    fireEvent.click(whiteboardButton);
-
-    // eslint-disable-next-line no-restricted-properties
-    expect(whiteboardButton).toHaveClass('Selected');
-    // eslint-disable-next-line no-restricted-properties
-    expect(videoButton).not.toHaveClass('Selected');
+      screen.queryByText(fakeChallenges[0].question)
+    ).not.toBeInTheDocument();
   });
 
-  it('calls the callback with the shown challenge and selected type when the begin button is clicked', async () => {
-    fetchJson.mockResolvedValue({value: fakeChallenges});
-    const challengeSetCallback = renderPicker();
+  it('shows an empty state when no challenges match the selected modality', async () => {
+    const videoOnly: Challenge[] = [fakeChallenges[1]];
+    fetchJson.mockResolvedValue({value: videoOnly});
+    renderPicker();
 
-    await waitForQuestion(fakeChallenges[0].question);
-
-    fireEvent.click(screen.getByRole('button', {name: /^Video/}));
-    fireEvent.click(screen.getByRole('button', {name: 'Start the Challenge!'}));
-
-    expect(challengeSetCallback).toHaveBeenCalledWith(
-      fakeChallenges[0],
-      ChallengeTypes.VIDEO
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
     );
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(/No challenges available for this mode/)
+      ).toBeInTheDocument()
+    );
+  });
+
+  it('shows an empty state when the fetch fails', async () => {
+    fetchJson.mockRejectedValue(new Error('network error'));
+    renderPicker();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(/No challenges available for this mode/)
+      ).toBeInTheDocument()
+    );
+  });
+
+  it('calls the callback with the challenge and selected modality when Start challenge is clicked', async () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    const callback = renderPicker();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /Create on a whiteboard/i})
+    );
+    await waitFor(() =>
+      expect(screen.getByText(fakeChallenges[0].question)).toBeInTheDocument()
+    );
+
+    // Two whiteboard challenges → two Start challenge buttons. Click the first.
+    const startButtons = screen.getAllByRole('button', {
+      name: 'Start challenge',
+    });
+    fireEvent.click(startButtons[0]);
+
+    expect(callback).toHaveBeenCalledWith(fakeChallenges[0], 'whiteboard');
+  });
+
+  it('renders the "I want to review instead" link', () => {
+    fetchJson.mockResolvedValue({value: fakeChallenges});
+    renderPicker();
+    expect(
+      screen.getByRole('button', {name: /I want to review instead/i})
+    ).toBeInTheDocument();
   });
 });
