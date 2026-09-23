@@ -83,7 +83,7 @@ describe('UsersSettingsPage', () => {
     ]);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
     expect(tabs[1]).not.toHaveAttribute('aria-disabled');
-    expect(tabs[2]).toHaveAttribute('aria-disabled', 'true');
+    expect(tabs[2]).not.toHaveAttribute('aria-disabled');
 
     for (const name of [
       'My Information',
@@ -790,5 +790,62 @@ describe('UsersSettingsPage — Educator Profile tab across a type change', () =
       within(tablist).getByRole('tab', {name: 'Account Details'}),
     ).toHaveAttribute('aria-selected', 'true');
     expect(currentTab()).toBe('account-details');
+  });
+
+  it('keeps Integrations disabled while its flag is off', async () => {
+    renderPage('integrations-off');
+    const tablist = await screen.findByRole('tablist');
+
+    expect(
+      within(tablist).getByRole('tab', {name: 'Integrations'}),
+    ).toHaveAttribute('aria-disabled', 'true');
+  });
+
+  it('shows linked accounts on the Integrations tab', async () => {
+    renderPage('multi-sso-teacher', {tab: 'integrations'});
+
+    expect(
+      await screen.findByRole('heading', {
+        level: 2,
+        name: 'Manage linked accounts',
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getAllByRole('button', {name: /disconnect account classlink/i}),
+    ).toHaveLength(2);
+    expect(
+      screen.queryByRole('heading', {level: 2, name: 'Settings'}),
+    ).toBeNull();
+  });
+
+  it('shows only roster sync to a teacher in a restricted LMS deployment', async () => {
+    renderPage('restricted-lti-teacher', {tab: 'integrations'});
+
+    expect(
+      await screen.findByRole('heading', {level: 2, name: 'Settings'}),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', {level: 2, name: 'Manage linked accounts'}),
+    ).toBeNull();
+  });
+
+  it('saves the roster sync setting through the save bar', async () => {
+    renderPage('lti-teacher', {tab: 'integrations'});
+
+    const toggle = await screen.findByRole('checkbox', {
+      name: 'Sync LMS rosters',
+    });
+    expect(toggle).toBeChecked();
+    fireEvent.click(toggle);
+    fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
+
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent('Changes saved.'),
+    );
+    await waitFor(() =>
+      expect(
+        screen.getByRole('checkbox', {name: 'Sync LMS rosters'}),
+      ).not.toBeChecked(),
+    );
   });
 });

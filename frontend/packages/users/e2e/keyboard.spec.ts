@@ -13,9 +13,7 @@ async function gotoLoaded(page: Page, scenario = 'teacher') {
 const expectFocusInside = (dialog: Locator) =>
   expect(dialog.locator(':focus')).toHaveCount(1);
 
-test('the live tabs are keyboard-focusable; the placeholder tab is disabled', async ({
-  page,
-}) => {
+test('the tabs are keyboard-focusable', async ({page}) => {
   await gotoLoaded(page);
 
   const tabs = page.getByRole('tab');
@@ -25,7 +23,30 @@ test('the live tabs are keyboard-focusable; the placeholder tab is disabled', as
   await expect(tabs.first()).toBeFocused();
 
   await expect(tabs.nth(1)).toBeEnabled();
-  await expect(tabs.last()).toBeDisabled();
+  await expect(tabs.last()).toBeEnabled();
+});
+
+test('the Integrations tab is disabled while its flag is off', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'integrations-off');
+
+  await expect(page.getByRole('tab', {name: 'Integrations'})).toBeDisabled();
+});
+
+test('a disconnect blocked for want of another login says why', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'lti-only-teacher');
+  await page.getByRole('tab', {name: 'Integrations'}).click();
+
+  const disconnect = page.getByRole('button', {
+    name: /disconnect account canvas/i,
+  });
+  await expect(disconnect).toBeDisabled();
+  await expect(disconnect).toHaveAccessibleDescription(
+    /add a password or another linked account/,
+  );
 });
 
 test('Save button submits on Enter when focused', async ({page}) => {

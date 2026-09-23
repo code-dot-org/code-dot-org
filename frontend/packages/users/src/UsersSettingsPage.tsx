@@ -12,13 +12,14 @@ import {
 } from '@code-dot-org/core/api';
 
 import EducatorProfileForm from './components/EducatorProfileForm';
+import IntegrationsForm from './components/IntegrationsForm';
 import UsersDetailsForm from './components/UsersDetailsForm';
 import styles from './UsersSettingsPage.module.css';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
 const EDUCATOR_PROFILE_TAB = 'educator-profile';
+const INTEGRATIONS_TAB = 'integrations';
 
-// The Integrations placeholder ships disabled rather than hidden, for legacy parity.
 const TAB_META = [
   {value: ACCOUNT_DETAILS_TAB, text: 'Account Details'},
   {
@@ -26,7 +27,7 @@ const TAB_META = [
     text: 'Educator Profile',
     educatorOnly: true,
   },
-  {value: 'integrations', text: 'Integrations', disabled: true},
+  {value: INTEGRATIONS_TAB, text: 'Integrations'},
 ];
 
 const NO_OP = () => {};
@@ -54,7 +55,19 @@ export default function UsersSettingsPage({
   const settings = useUserSettings(DashboardApiClient);
 
   const isStudent = settings.data?.userType === 'student';
-  const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent));
+  const integrations = settings.data?.integrations;
+  // Disabled rather than hidden while its flag is off or it has nothing to
+  // show (e.g. a restricted LMS student), as the placeholder was.
+  const integrationsDisabled =
+    !integrations ||
+    (!integrations.canManageLinkedAccounts &&
+      integrations.ltiRosterSyncEnabled === undefined);
+  const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent)).map(
+    t => ({
+      ...t,
+      disabled: t.value === INTEGRATIONS_TAB && integrationsDisabled,
+    }),
+  );
 
   const activeTab =
     tab && visibleTabs.some(t => t.value === tab && !t.disabled)
@@ -118,6 +131,20 @@ export default function UsersSettingsPage({
       return (
         <FormProvider initialValues={{educator_role: data.educatorRole ?? ''}}>
           <EducatorProfileForm settings={data} />
+        </FormProvider>
+      );
+    }
+
+    if (value === INTEGRATIONS_TAB && data.integrations) {
+      return (
+        <FormProvider
+          initialValues={{
+            lti_roster_sync_enabled: String(
+              data.integrations.ltiRosterSyncEnabled ?? false,
+            ),
+          }}
+        >
+          <IntegrationsForm settings={data} integrations={data.integrations} />
         </FormProvider>
       );
     }

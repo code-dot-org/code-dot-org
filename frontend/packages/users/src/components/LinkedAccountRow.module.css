@@ -1,0 +1,48 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: var(--shape-sm);
+}
+
+.icon {
+  flex: none;
+  width: 40px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.identity {
+  display: flex;
+  flex: 1 1 200px;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.status {
+  overflow-wrap: anywhere;
+  color: var(--text-neutral-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+/* WCAG 2.2 target size (2.5.8): at least 24px tall. */
+.learnMore {
+  gap: 8px;
+  align-items: center;
+  min-height: 24px;
+}
+
+.blockedMessage {
+  flex-basis: 100%;
+  color: var(--text-neutral-secondary);
+}

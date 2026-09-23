@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/shared-constants": "workspace:*",
     "@mui/utils": "catalog:",
     "tabbable": "^6.5.0"
   },

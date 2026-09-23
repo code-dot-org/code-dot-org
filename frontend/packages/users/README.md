@@ -4,11 +4,17 @@ The "My Account" feature module: the page where a signed-in user edits their
 profile, login, school, role, and account actions. Consumed by the Studio app
 (`apps/studio`), which lazy-loads it at `/users/edit`.
 
-Two tabs are implemented: **Account Details** (profile, login, parent/guardian
-email, account actions) and **Educator Profile** (school information and
-educator role, educators only). **Integrations** is still a disabled
-placeholder, for legacy parity. The email opt-in lives in the Update email
-dialog, as in legacy.
+Three tabs are implemented: **Account Details** (profile, login, parent/guardian
+email, account actions), **Educator Profile** (school information and educator
+role, educators only), and **Integrations** (linked accounts and LMS roster
+sync). The email opt-in lives in the Update email dialog, as in legacy.
+
+Integrations is gated by the DCDO flag `settings-integrations-tab` (default
+off): Rails sends the settings' `integrations` block only while it is on, and
+the tab stays disabled without it. Connecting and disconnecting a linked account
+are native form POSTs to the legacy OAuth and disconnect routes, and land on the
+legacy `/users/edit` page with its flash message, as unlinking an LMS login
+does.
 
 Each tab is its own form: one `FormProvider`, one `SaveBar`, one PATCH. School
 information is a modal flow instead, because it needs a zip search and a
@@ -61,7 +67,10 @@ backend at `localhost-studio.code.org:3000`. A
 `?scenario=` switch picks the persona — `teacher` (default), `student`,
 `sso-teacher` (SSO-only educator), `sso-student` (oauth-only student),
 `minimal` (word/picture student with optional fields null and edits locked), or
-`teacher-no-school` (educator with no school and no role) — and a corner
+`teacher-no-school` (educator with no school and no role) — plus Integrations
+personas (`multi-sso-teacher`, `lti-teacher`, `lti-only-teacher`,
+`restricted-lti-teacher`, `rostered-student`, `cap-locked-student`,
+`integrations-off`) — and a corner
 dropdown switches it live; the QA-only scenarios are in the dropdown too. Append `?devChrome=off` to suppress that
 dropdown (tool-agnostic: visual-comparison runs, embeds, or a clean screenshot
 opt in the same way). The host page's chrome (header/footer) is Studio's;
