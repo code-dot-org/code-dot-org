@@ -89,17 +89,77 @@ generates a call that names one; the dropdown is sourced from the project's
 `.world` files, so the name cannot fail silently, which is the rule every
 name-shaped field in this lab now follows (specs/BOXES_PLAN.md).
 
-### The world's `define event` ban has to go, and it was always coarse
+### The world's `define event` ban is not a policy to change; it is a leftover
 
 `fileKind` bans `world_rule_event` from a `.world` with this reason:
 
 > a world's own `define actor` generates into a block scope, and the
 > declaration this emits is an `export const`.
 
-That is a ban on the whole FILE because of one POSITION inside it. A `define
-event` at a world file's top level has the same shape as one at an actor
-file's top level, which is allowed. What must stay banned is one nested inside
-a world's own `define actor`, which is a narrower rule than the one written.
+**A world has not been able to hold a `define actor` for some time.** The same
+file says so, two maps down, in the comment on `DEFINING_ROOTS`:
+
+> `define actor` joined the list when every actor became a file — until then a
+> world could hold one
+
+And it is enforced rather than documented: a `define actor` in a `.world`
+throws, naming the file and telling you to move the block. Every `world_actor`
+in this repo is the root of an `.actor` file.
+
+So the block scope those three entries defend against cannot be created any
+more, and the restriction outlived its reason. Two of them ban something for
+it — `world_rule_event`, `world_rule_block` — and a third ALLOWS something for
+it: `world_acts_like` is legal in a `.world` so that it may be a row under a
+`define actor` that cannot be there, which is an allowance for nothing.
+
+Lifting the event ban is therefore not a change of policy. It is deleting a
+restriction whose cause was deleted, and the other two want the same audit.
+
+## One world per project, which settles a question this raised
+
+A world is a whole PROGRAM. Nothing composes them: a world cannot load a
+world, a Viewport holds a map, `go to screen` loads a map, and the compiler
+has one entry point. A second world is a second program in the same folder,
+not a part of one — which is why every case you would reach for it is already
+a map. Levels are maps. Screens are maps. A title screen is a map.
+
+So the model this plan is written against is:
+
+|           | holds                                        |                 |
+| --------- | -------------------------------------------- | --------------- |
+| **World** | the app's general state, and its vocabulary  | one per project |
+| **Map**   | an arrangement — a level, a screen, a dialog | many            |
+| **Actor** | a thing in one                               | many            |
+
+### `define map for ⟨world⟩`, considered and left out
+
+The obvious way to make a map's dependency explicit is to have it name the
+world it belongs to, which would also let the `emit` dropdown offer exactly
+that world's events rather than a union.
+
+It is left out for three reasons, in order:
+
+1. **One world per project makes the union exact.** There is nothing for the
+   binding to narrow.
+2. **The one documented reason to have SEVERAL worlds is the one case where a
+   map must belong to more than one.** "One interface shared between two
+   worlds of different shapes" is the stated trigger for anchoring, in
+   `ANCHORS_PLAN`, `APPS` and `UI_ACTORS`. Binding a map to a world closes off
+   the scenario three specs were written about. (That case turns out not to
+   need two worlds — `applyAnchors` compares the MAP's size against the
+   VIEW's, which differ inside one world — but the intent is on the record.)
+3. **`emits` already carries the dependency.** A map that states what it
+   raises is legible to a reader and satisfiable by an importer, which is what
+   the binding was for.
+
+**The safety comes from the LOAD, not from a bind.** A world loading a map
+that emits something it does not declare can say so. That catches the real
+mistake at the moment it matters, and it still lets one map serve two worlds
+that both declare `quit` — which is why the registry is keyed by NAME and not
+by path.
+
+Revisit if projects start routinely holding several worlds with genuinely
+different vocabularies. That is a "when somebody hits it" change.
 
 ## `define map`, which this makes worth building
 
@@ -157,16 +217,20 @@ bearable:
 
 ## What gets built, in order
 
-1. **`define event` under `define world`**, and the narrower ban: not inside a
-   world's own `define actor`. The hat and the emit are the blocks a world's
-   own declarations already mint.
-2. **`world.defineEvent` and the preamble**, and an `emit` that names one.
+1. **The stale restrictions**, first and on their own, because they are what
+   made this look like a policy change: correct the three `ROOT_HOMES`
+   comments that justify themselves by a world's `define actor`, and audit
+   `world_rule_block` and `world_acts_like` while the reason is in hand.
+2. **`define event` under `define world`**. The hat and the emit are the
+   blocks a world's own declarations already mint.
+3. **`world.defineEvent` and the preamble**, and an `emit` that names one.
    The dropdown reads the project's `.world` files.
-3. **`define map`**, with the map's name and its `emits` rows. The map's
+4. **`define map`**, with the map's name and its `emits` rows. The map's
    events move out; its hats hang under the root.
-4. **The five maps, and the import.** `importStockMap` carries a map's
+5. **The five maps, and the import.** `importStockMap` carries a map's
    `emits` into the world it is imported to, the way it carries actors.
-5. **The Notes fixture**, which is the only project that will notice.
+6. **The load-time check**, which is the safety the binding would have given.
+7. **The Notes fixture**, which is the only project that will notice.
 
 ## What it does not do
 
@@ -176,6 +240,31 @@ bearable:
 - **No namespacing.** Two worlds in one project share a vocabulary, which is
   the intent — see the decision above.
 - **Nothing for the map's settings**, which stay in the document.
+
+## A map that cares about only some actors — noted, not built
+
+A dialog wants interface actors and not a Ghost; a level wants the Ghost and
+not a Text Input. The map editor's palette offers every actor the project
+holds, to every map, which is the right default while a project has eight
+kinds and the wrong one when it has fifty.
+
+Worth recording now because it is the same SHAPE as this plan and should not
+be solved a different way:
+
+- **A map already says which actors it uses** — its placements name them, and
+  `mapActorTypes` reads that list to generate the loader's `define` calls. So
+  scoping is a question about the PALETTE, not about the language: there is
+  nothing new for a map to declare.
+- **Which makes it an editor affordance**, not a `uses ⟨…⟩` row beside
+  `emits ⟨…⟩`. `emits` exists because an event's declaration is genuinely
+  elsewhere and must be satisfied; a kind's is already named by the placement.
+- The likely shape is the palette offering what this map already places first,
+  and everything else behind one more click — which needs no file format
+  change and can be undone.
+
+What would change the answer is a map wanting to REFUSE a kind rather than
+merely not offer it, which is a constraint and would want saying in the file.
+Nobody has asked.
 
 ## Obligations
 
@@ -189,3 +278,5 @@ bearable:
   that the world's drawer is still readable with a dozen events in it.
 - A test that many maps raise ONE event and a world hears it once, which is
   the sentence the current design cannot say and the whole reason for this.
+- A test that a world loading a map which emits what it does not declare says
+  so, since that is the safety `for ⟨world⟩` was going to buy.
