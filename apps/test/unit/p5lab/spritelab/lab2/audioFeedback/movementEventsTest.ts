@@ -1,11 +1,11 @@
 import {
-  initialPlayerEventState,
-  playerEvents,
-  PlayerEventState,
-  PlayerFrame,
-} from '@cdo/apps/p5lab/spritelab/lab2/playerEvents';
+  initialMovementEventState,
+  movementEvents,
+  MovementEventState,
+  MovementFrame,
+} from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/movementEvents';
 
-const STILL: PlayerFrame = {
+const STILL: MovementFrame = {
   moved: 0,
   requested: 0,
   movedUp: 0,
@@ -13,22 +13,22 @@ const STILL: PlayerFrame = {
   grounded: true,
 };
 
-const frame = (over: Partial<PlayerFrame>): PlayerFrame => ({
+const frame = (over: Partial<MovementFrame>): MovementFrame => ({
   ...STILL,
   ...over,
 });
 
-describe('SpriteLab2 playerEvents', () => {
-  let state: PlayerEventState;
+describe('SpriteLab2 movementEvents', () => {
+  let state: MovementEventState;
   beforeEach(() => {
-    state = initialPlayerEventState();
+    state = initialMovementEventState();
   });
 
-  const run = (...frames: PlayerFrame[]) =>
-    frames.map(f => playerEvents(state, f));
+  const run = (...frames: MovementFrame[]) =>
+    frames.map(f => movementEvents(state, f));
 
   it('is silent on the first frame of a run', () => {
-    // A spawn is a position, not a stride.
+    // Appearing somewhere is not a move.
     expect(run(STILL)).toEqual([[]]);
   });
 
@@ -93,8 +93,8 @@ describe('SpriteLab2 playerEvents', () => {
   });
 
   it('reports a step the wall only stopped partway', () => {
-    // Release the key and no later frame catches it, so it lands here —
-    // and the two px that did happen still earn their step.
+    // No later frame would show the refusal, so it is reported now. The two
+    // px that did happen still count toward a step.
     expect(run(frame({moved: 2, requested: 4}))).toEqual([['step', 'blocked']]);
   });
 

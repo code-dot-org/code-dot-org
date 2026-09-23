@@ -1,5 +1,5 @@
-// The player's height as a pitch, sounded while they are off the ground.
-// The only voice that slides, so the note you land on says how far you fell.
+// The player's height as a pitch, heard while they are off the ground. This
+// is the only voice whose pitch slides; proximityAudio's tones hold theirs.
 
 import {endVoice, startVoice, wake} from './audioVoice';
 
@@ -9,7 +9,7 @@ const VOLUME = 0.16;
 
 const GLIDE_S = 0.02;
 const ATTACK_S = 0.01;
-// Outlasts the landing, so the note you land on can be heard.
+// Fades slowly enough after landing that the landing pitch is heard.
 const RELEASE_S = 0.08;
 
 export interface PlayerHeight {
@@ -18,7 +18,7 @@ export interface PlayerHeight {
   airborne: boolean;
 }
 
-/** Curved, so the same climb sounds like the same step anywhere. */
+/** Exponential, so a climb of one distance is one musical interval anywhere. */
 export function heightPitch(above: number): number {
   const up = Math.min(Math.max(above, 0), 1);
   return LOW_HZ * Math.pow(HIGH_HZ / LOW_HZ, up);
@@ -40,7 +40,7 @@ export function createHeightTone(context: AudioContext): HeightTone {
       }
       wake(context);
       const now = context.currentTime;
-      // Followed on the ground too, so a jump opens on the right note.
+      // Tracked while grounded too, so a jump starts at the right pitch.
       voice.oscillator.frequency.setTargetAtTime(
         heightPitch(above),
         now,

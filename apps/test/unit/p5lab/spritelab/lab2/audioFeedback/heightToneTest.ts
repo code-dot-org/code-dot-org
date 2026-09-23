@@ -1,7 +1,7 @@
 import {
   createHeightTone,
   heightPitch,
-} from '@cdo/apps/p5lab/spritelab/lab2/heightTone';
+} from '@cdo/apps/p5lab/spritelab/lab2/audioFeedback/heightTone';
 
 import {fakeAudioContext} from './fakeAudioContext';
 

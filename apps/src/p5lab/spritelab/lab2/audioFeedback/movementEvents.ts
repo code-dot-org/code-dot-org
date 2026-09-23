@@ -1,36 +1,40 @@
-// Blips for what happens on the ground; being off it is heightTone's.
+// Decides from one frame of movement whether a footstep or a bump should
+// sound. Height while airborne is heightTone's.
 
-import {isMoving} from './characterAnimations';
+import {isMoving} from '../characterAnimations';
+
 import {PlayerSoundEvent} from './playerSounds';
 
 // Pixels walked between footsteps, so the beat follows the player's speed.
 const STEP_DISTANCE = 16;
 
-// A bump, not a graze: px of a move the walls must swallow to count.
+// A move cut short by less than this is rounding, not a bump.
 const REFUSED_PX = 0.5;
 
-// Signed along the way it was asked for, so leftward reads like rightward.
+// Compared in the direction asked for, so a leftward move is judged like a
+// rightward one.
 function refused(asked: number, got: number): boolean {
   return Math.abs(asked) - got * Math.sign(asked) > REFUSED_PX;
 }
 
-export interface PlayerFrame {
+export interface MovementFrame {
   moved: number;
-  // What the keys asked for; its gap from `moved` is a wall.
+  // The move the keys asked for. Less `moved` than this means a wall.
   requested: number;
-  // The same pair against gravity, so their gap is a block overhead.
+  // The same two measured against gravity, so a shortfall means a block
+  // overhead.
   movedUp: number;
   requestedUp: number;
   grounded: boolean;
 }
 
-export interface PlayerEventState {
+export interface MovementEventState {
   intoWall: boolean;
   intoBlock: boolean;
   stride: number;
 }
 
-export function initialPlayerEventState(): PlayerEventState {
+export function initialMovementEventState(): MovementEventState {
   return {
     intoWall: false,
     intoBlock: false,
@@ -39,9 +43,9 @@ export function initialPlayerEventState(): PlayerEventState {
   };
 }
 
-export function playerEvents(
-  state: PlayerEventState,
-  frame: PlayerFrame
+export function movementEvents(
+  state: MovementEventState,
+  frame: MovementFrame
 ): PlayerSoundEvent[] {
   const events: PlayerSoundEvent[] = [];
 
@@ -55,13 +59,14 @@ export function playerEvents(
     state.stride = STEP_DISTANCE;
   }
 
-  // Two latches, or a wall held in the air masks the ceiling above it. A
-  // move that came back short counts: release the key and no later frame
-  // would catch it.
+  // A move that fell short counts this frame: once the key is released, no
+  // later frame shows the refusal.
   const intoWall =
     isMoving(frame.requested) && refused(frame.requested, frame.moved);
   const intoBlock =
     frame.requestedUp > 0 && refused(frame.requestedUp, frame.movedUp);
+  // One flag per direction, so a bump sounds once per contact, and a wall
+  // held against does not hide a block overhead.
   if ((intoWall && !state.intoWall) || (intoBlock && !state.intoBlock)) {
     events.push('blocked');
   }

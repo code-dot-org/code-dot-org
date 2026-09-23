@@ -1,4 +1,4 @@
-// Blips for what the player does on the ground; jumping is heightTone's.
+// Short footstep and bump sounds. Height in the air is heightTone's.
 
 import {startVoice, wake} from './audioVoice';
 
@@ -12,7 +12,7 @@ interface Sweep {
   volume: number;
 }
 
-// Both stay above ~200Hz: laptop speakers can't really play below that.
+// Pitched for laptop speakers, which play little below about 200Hz.
 const SWEEPS: Record<PlayerSoundEvent, Sweep> = {
   // Quiet: it plays several times a second.
   step: {from: 300, to: 200, seconds: 0.07, type: 'triangle', volume: 0.18},
@@ -20,7 +20,8 @@ const SWEEPS: Record<PlayerSoundEvent, Sweep> = {
   blocked: {from: 320, to: 140, seconds: 0.12, type: 'sawtooth', volume: 0.22},
 };
 
-// The other foot. Alternating sounds like walking rather than ticking.
+// Pitch of every second step. Two alternating pitches sound like walking
+// rather than ticking.
 const OTHER_FOOT = 0.84;
 
 // Long enough that the blip doesn't start with a click.
