@@ -76,7 +76,14 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // scope that reason turns on cannot be created any more. The restriction
   // outlived its cause by some months, and the two entries under it are the
   // rest of the same wreckage.
-  ['world_rule_event', new Set<FileKind>(['rule', 'actor', 'map', 'world'])],
+  //
+  // NOT A `.map`, which it was until the inversion: a map used to declare the
+  // events its placements raised, and the world heard them through a drawer
+  // per map. A map now declares which of the WORLD's events it RAISES
+  // (`world_map_raises`) and no events of its own, so that a hundred maps
+  // raising one event is one declaration and one handler
+  // (specs/MAP_EVENTS_PLAN.md).
+  ['world_rule_event', new Set<FileKind>(['rule', 'actor', 'world'])],
   // …and an ACTOR file, where the same block declares a thing that kind of
   // actor does rather than a member of a rule (`ActorBuilder.defineAction`).
   //
@@ -126,6 +133,10 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // A map's own blocks (specs/MAP_FIRST.md): naming another placement and
   // unloading the map belong to the map and its placements; hearing the map
   // load and unload belongs to the map's own workspace alone.
+  // …and the root a map's workspace opens with, which every other Blockly
+  // file kind already had (specs/MAP_EVENTS_PLAN.md). `raises` is its one row.
+  ['world_map', new Set<FileKind>(['map'])],
+  ['world_map_raises', new Set<FileKind>(['map'])],
   ['world_placement', new Set<FileKind>(['map', 'placement'])],
   ['world_unload_this_map', new Set<FileKind>(['map', 'placement'])],
   ['world_on_map_loads', new Set<FileKind>(['map'])],
@@ -147,6 +158,7 @@ const DEFINING_ROOTS: ReadonlyMap<string, string> = new Map([
   ['world_world', 'define world'],
   ['world_actor', 'define actor'],
   ['world_rule', 'define rule'],
+  ['world_map', 'define map'],
 ]);
 
 /** Which module a file's blocks are assembled into. */

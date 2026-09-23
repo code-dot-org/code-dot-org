@@ -10,10 +10,10 @@
 //
 // THE BUTTONS ARE PLAIN BUTTONS WITH SCRIPTS. Resume's workspace says `when
 // this actor is clicked: resume the game; unload this map`, because resuming
-// means one thing. Quit's says `emit quit; unload this map`: `quit` is an
-// event the map's own workspace declares, because what quitting means is the
-// project's — breakout starts the level over — and the world hears it with
-// `when quit` under the map's drawer. The menu takes ITSELF away either way.
+// means one thing. Quit's says `emit quit; unload this map`: `quit` is one of
+// the WORLD's events, which this map declares it RAISES and the world declares
+// and hears (specs/MAP_EVENTS_PLAN.md). What quitting means is the project's —
+// breakout starts the level over. The menu takes ITSELF away either way.
 // It used not to on Quit, while breakout answered with `clear world`, which
 // took the menu with everything else; a level restarted inside a Viewport
 // leaves the main map alone, so a menu that has been answered has to go by
@@ -24,7 +24,12 @@
 // map editor — a map is a starting point to arrange, not a layout that
 // adapts (the anchoring UI_ACTORS.md defers is exactly this).
 
-import {chain, defineEvent, me} from '../../actors/stock/workspace';
+import {
+  chain,
+  defineMap,
+  emitWorldEvent,
+  me,
+} from '../../actors/stock/workspace';
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 
 const MIDDLE = (VIEWPORT_TILES * TILE_SIZE) / 2;
@@ -107,13 +112,14 @@ export const pauseMenuMap = JSON.stringify(
         },
         ...script(
           whenClicked(),
-          {type: 'world_emit_MapsPauseMenu_QuitEvent'},
+          emitWorldEvent('quit'),
           {type: 'world_unload_this_map'},
         ),
       },
     ],
-    // The map's own workspace: the one event it raises.
-    blocks: {blocks: {blocks: [{...defineEvent('quit'), x: 20, y: 20}]}},
+    // The map's own workspace: what it is called, and the one world event it
+    // raises.
+    blocks: defineMap('Pause Menu', 'quit'),
   },
   null,
   2,

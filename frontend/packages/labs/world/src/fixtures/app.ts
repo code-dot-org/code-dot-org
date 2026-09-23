@@ -41,7 +41,10 @@ import {
   actorFile,
   chain,
   defineEvent,
+  defineMap,
   defineProperty,
+  emitWorldEvent,
+  hearWorldEvent,
   isData,
   me,
 } from '../actors/stock/workspace';
@@ -68,8 +71,8 @@ const kind = (path: string) => ({
 interface PlaceOpts {
   /** Which edge of the window this placement holds on to. */
   anchor?: string;
-  /** The event this placement's own script emits when it is clicked. */
-  emits?: string;
+  /** The `emit` block this placement's own script runs when it is clicked. */
+  emits?: object;
   /** …or what it DOES when clicked, for a placement on the world's own map. */
   does?: object[];
   /** Per-owner property overrides, keyed as the engine keys them. */
@@ -103,7 +106,7 @@ const onClick = (rows: object[]) => ({
   },
 });
 
-const clickEmits = (blockType: string) => onClick([{type: blockType}]);
+const clickEmits = (emit: object) => onClick([emit]);
 
 /** One placement: a kind, a name, its centre, and what it overrides. */
 const place = (
@@ -123,10 +126,10 @@ const place = (
 /**
  * The main map's shape: the placements, and no workspace.
  *
- * A `.map` carries its own events; a world's map does not, because the world's
- * workspace IS its workspace (`mapEditor/worldDocument`, `hasMapScript`). So
- * home's `new note` is declared up there with everything else the world hears,
- * and the button emits the WORLD's event rather than a map's.
+ * A `.map` has a workspace of its own — its `define map` root and the `raises`
+ * rows under it — and a world's map does not, because the world's workspace IS
+ * its workspace (`mapEditor/worldDocument`, `hasMapScript`). So home has
+ * nothing to declare and its button goes to the write screen itself.
  */
 const mainMap = (actors: object[]) => ({
   type: 'map' as const,
@@ -135,7 +138,12 @@ const mainMap = (actors: object[]) => ({
   actors,
 });
 
-const mapFile = (actors: object[], events: readonly string[], modal = false) =>
+const mapFile = (
+  name: string,
+  actors: object[],
+  raises: readonly string[],
+  modal = false,
+) =>
   JSON.stringify(
     {
       type: 'map',
@@ -143,16 +151,9 @@ const mapFile = (actors: object[], events: readonly string[], modal = false) =>
       tile: {width: TILE_SIZE, height: TILE_SIZE},
       ...(modal ? {modal: true} : {}),
       actors,
-      // The map's own workspace: the events its placements raise.
-      blocks: {
-        blocks: {
-          blocks: events.map((name, index) => ({
-            ...defineEvent(name),
-            x: 20,
-            y: 20 + index * 80,
-          })),
-        },
-      },
+      // The map's own workspace: what it is called, and which of the world's
+      // events its placements raise.
+      blocks: defineMap(name, ...raises),
     },
     null,
     2,
@@ -217,6 +218,7 @@ const HOME_MAP = mainMap([
  * one import rather than forty placements copied into every screen that types.
  */
 const WRITE_MAP = mapFile(
+  'Write',
   [
     // A backdrop, so the form READS as a screen over the list rather than as
     // controls floating among it. It is only paint: a Panel is not something
@@ -236,12 +238,12 @@ const WRITE_MAP = mapFile(
     }),
     place('actors/button', 'Save', 96, 144, {
       anchor: 'top',
-      emits: 'world_emit_MapsWrite_SaveEvent',
+      emits: emitWorldEvent('save'),
       own: {Label: {text: 'SAVE'}, hasABox: {width: 120}},
     }),
     place('actors/button', 'Cancel', 224, 144, {
       anchor: 'top',
-      emits: 'world_emit_MapsWrite_CancelEvent',
+      emits: emitWorldEvent('cancel'),
       own: {Label: {text: 'CANCEL'}, hasABox: {width: 120}},
     }),
   ],
@@ -434,6 +436,13 @@ const MAIN_WORLD = JSON.stringify(
                   DEFAULT: 'FALSE',
                 },
               },
+              // …AND WHAT THE WRITE SCREEN SAYS BACK. Both events are the
+              // WORLD's, declared here and raised by a map (`maps/write`
+              // raises them; its two buttons say them). A map declares no
+              // events of its own: one vocabulary, held where the handlers
+              // are (specs/MAP_EVENTS_PLAN.md).
+              defineEvent('save'),
+              defineEvent('cancel'),
               // …AND NO FIRST SCREEN. Home is the world's own map, loaded
               // before any of these rows run, so there is nothing to go to:
               // the app starts on it and the stack starts empty.
@@ -491,7 +500,7 @@ const MAIN_WORLD = JSON.stringify(
         // note goes on the list before the screen goes away, because the
         // field it came from is on the screen that is about to be unloaded.
         {
-          type: 'world_on_MapsWrite_SaveEvent',
+          type: hearWorldEvent('save'),
           x: 20,
           y: 600,
           next: {
@@ -542,7 +551,7 @@ const MAIN_WORLD = JSON.stringify(
         },
         // CANCEL: the same way back, and nothing kept.
         {
-          type: 'world_on_MapsWrite_CancelEvent',
+          type: hearWorldEvent('cancel'),
           x: 20,
           y: 820,
           next: {

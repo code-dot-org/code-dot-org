@@ -25,6 +25,7 @@ import {
 } from './appearance/stock';
 import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
+import {MAIN_WORLD_PATH} from './mainWorld';
 import {referenceToStock} from './rules/ruleReference';
 import {TILE_SIZE, VIEWPORT_TILES} from './runtime/viewport';
 
@@ -32,7 +33,7 @@ import {TILE_SIZE, VIEWPORT_TILES} from './runtime/viewport';
  * The world the game starts in — the driver's compile + run entry point
  * (PLAN §6). Fixed for the slice; later a level/appOptions field selects it.
  */
-export const ENTRY_FILE = 'worlds/main.world';
+export const ENTRY_FILE = `${MAIN_WORLD_PATH}.world`;
 
 /**
  * The default project for a new World Lab: a small gravity game across the

@@ -11,12 +11,13 @@
 // `Coin Spin` writes `coinSpin.anim` holding `"name": "Coin Spin"` — the same
 // pair an import leaves behind (`appearance/importStock`).
 //
-// A `.map` carries no name — it is an arrangement rather than a thing with one
-// — but it is still seeded, with the empty map the editor would have made. A
-// file created with no contents at all gets Codebridge's "Add your changes to
-// …" placeholder, and that sentence inside a `.map` is a document nothing can
-// parse.
+// A `.map` is seeded twice over: with the empty map the editor would have made
+// — a file created with no contents at all gets Codebridge's "Add your changes
+// to …" placeholder, and that sentence inside a `.map` is a document nothing
+// can parse — and with the `define map` its workspace now opens with, so that
+// it declares its name like every other kind (specs/MAP_EVENTS_PLAN.md).
 
+import {namedRootOf} from '../blockly/topBlocks';
 import {createEffectDocument} from '../effect/model/document';
 import {DEFAULT_MAP_SIZE, DEFAULT_TILE} from '../mapEditor/mapModel';
 import {modernStyle} from '../styles/stock/modern';
@@ -150,6 +151,18 @@ export const seedFor = (extension: string, name: string): Seed | undefined => {
             size: {...DEFAULT_MAP_SIZE},
             tile: {width: DEFAULT_TILE, height: DEFAULT_TILE},
             actors: [],
+            // …and the root its workspace opens with, seeded here rather than
+            // when the script is first opened, so that a map DECLARES ITS NAME
+            // from the moment it exists — which is what every other Blockly
+            // file kind does and what lets a rename carry
+            // (specs/MAP_EVENTS_PLAN.md).
+            blocks: {
+              blocks: {
+                blocks: [
+                  {type: 'world_map', x: 20, y: 20, fields: {NAME: name}},
+                ],
+              },
+            },
           },
           null,
           2,
@@ -201,13 +214,8 @@ export const renamed = (contents: string, name: string): string => {
     return contents;
   }
   try {
-    const parsed = JSON.parse(trimmed) as {
-      blocks?: {blocks?: Array<{type?: string; fields?: {NAME?: string}}>};
-      name?: unknown;
-    };
-    const root = parsed.blocks?.blocks?.find(
-      block => block?.fields?.NAME !== undefined,
-    );
+    const parsed = JSON.parse(trimmed) as {name?: unknown};
+    const root = namedRootOf(parsed);
     if (root?.fields) {
       root.fields.NAME = name;
       return `${JSON.stringify(parsed, null, 2)}\n`;

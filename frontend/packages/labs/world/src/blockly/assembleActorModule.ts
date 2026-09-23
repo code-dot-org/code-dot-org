@@ -124,14 +124,18 @@ export function assembleWorldModule(
  * Assemble a `.map` file's module (specs/MAP_FIRST.md, "What it compiles
  * to").
  *
- * The arrangement is the file's JSON less its workspaces, as `mapData`; the
- * map's own `define event` rows become exports beside it, so a world's hat
- * can import one and the map's own `emit` names it locally; and everything
- * that RUNS goes into `mapData.script`, which `World.loadMap` calls once per
- * load with the placed actors and the load. Each placement's code sits in a
- * block that binds `actor` to the actor placed under that id, which is what
- * lets an actor file's generators — `this actor`, the hats, an own
+ * The arrangement is the file's JSON less its workspaces, as `mapData`, and
+ * everything that RUNS goes into `mapData.script`, which `World.loadMap` calls
+ * once per load with the placed actors and the load. Each placement's code
+ * sits in a block that binds `actor` to the actor placed under that id, which
+ * is what lets an actor file's generators — `this actor`, the hats, an own
  * property's get and set — serve one placed instance unchanged.
+ *
+ * A MAP EXPORTS NOTHING. It used to export a `define event` per row in its own
+ * workspace, for a world's hat to import; events are the world's now and a map
+ * names one (`World.emitNamed`), so what is left of a map's own workspace is
+ * its `define map` root, which generates nothing, and its two hats, which run
+ * (specs/MAP_EVENTS_PLAN.md).
  *
  * A map with nothing to run gets no script, so the engine can tell it from
  * one that says something.
@@ -141,13 +145,9 @@ export function assembleMapModule(
   mapLevel: GeneratedBlock[],
   placements: ReadonlyArray<{id: string; blocks: GeneratedBlock[]}>,
 ): string {
-  const events = mapLevel.filter(block => block.type === 'world_rule_event');
-  const runs = mapLevel.filter(block => block.type !== 'world_rule_event');
-  const eventsCode = events.map(block => block.code).join('');
   return (
     `const mapData = ${JSON.stringify(data)};\n` +
-    eventsCode +
-    scriptAssignment('mapData', runs, placements) +
+    scriptAssignment('mapData', mapLevel, placements) +
     'export default mapData;\n'
   );
 }

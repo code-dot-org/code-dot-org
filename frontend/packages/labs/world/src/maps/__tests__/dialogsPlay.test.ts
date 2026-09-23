@@ -55,19 +55,23 @@ const play = async (id: string) => {
   for (const actor of ['label', 'panel', 'button']) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }
-  source = importStockMap(source, stockMapById(id)!).source;
+  // THE WORLD IS WRITTEN FIRST, and the map imported over it. A map raises the
+  // world's events and declares none, so it is the import that writes `define
+  // event ⟨yes⟩` into the world file (`maps/declareEvents`) — and a test that
+  // replaced the world afterwards would throw those rows away and leave the
+  // dialog's `emit` naming a block nothing defines.
   const main = Object.values(source.files).find(
     file => file.name === 'main.world',
   )!;
-  const {world, modules} = await compileProject(
-    projectFiles({
-      ...source,
-      files: {
-        ...source.files,
-        [main.id]: {...main, contents: WORLD(`maps/${id}`)},
-      },
-    }),
-  );
+  source = {
+    ...source,
+    files: {
+      ...source.files,
+      [main.id]: {...main, contents: WORLD(`maps/${id}`)},
+    },
+  };
+  source = importStockMap(source, stockMapById(id)!).source;
+  const {world, modules} = await compileProject(projectFiles(source));
   world.tick(1 / 60);
 
   const named = (of: string) => [...world.actors].find(one => one.id === of);
@@ -86,11 +90,17 @@ const play = async (id: string) => {
       world.setPointer(point, []);
       world.tick(1 / 60);
     },
-    /** Count what a map's own event says, by listening for it on the world. */
+    /**
+     * Count what one of the WORLD's events says, by listening for it there.
+     *
+     * On the world's module and not the map's: the map raises it by name and
+     * the declaration the export comes from is the world's
+     * (specs/MAP_EVENTS_PLAN.md).
+     */
     counting: (event: string) => {
       const said: unknown[] = [];
       world.on(
-        modules[`maps/${id}`][event] as never,
+        modules['worlds/main'][event] as never,
         ((_w: World, value: unknown) => said.push(value)) as never,
       );
       return said;

@@ -9,6 +9,10 @@
 // reads, and the first thing they read is that a Label is an actor that elects
 // one trait and draws one thing (specs/UI_ACTORS.md).
 
+import {pascal} from '../../blockly/ruleMeta';
+import {pathSlug} from '../../blockly/ruleRegistry';
+import {MAIN_WORLD_PATH} from '../../mainWorld';
+
 /** Chain statement blocks, first at the top. */
 export const chain = (blocks: object[]): object =>
   blocks.reduceRight((next, block) => ({...block, next: {block: next}}));
@@ -578,3 +582,59 @@ export const alongY = () =>
       trig('SIN', turned()),
     ),
   );
+
+// ── A map, and the world's events ───────────────────────────────────────────
+
+/**
+ * `define map ⟨Pause Menu⟩` — the root a map's workspace opens with.
+ *
+ * The map's name and, chained under it, one `raises` row per world event the
+ * map expects to be able to say. Returns a whole workspace serialization,
+ * which is what a `.map`'s `blocks` key holds (specs/MAP_EVENTS_PLAN.md).
+ */
+export const defineMap = (name: string, ...raises: string[]) => ({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_map',
+        x: 20,
+        y: 20,
+        fields: {NAME: name},
+        ...(raises.length
+          ? {
+              next: {
+                block: chain(
+                  raises.map(event => ({
+                    type: 'world_map_raises',
+                    fields: {EVENT: event},
+                  })),
+                ),
+              },
+            }
+          : {}),
+      },
+    ],
+  },
+});
+
+/**
+ * `emit ⟨quit⟩` as a MAP says it — the world's event, raised from a placement.
+ *
+ * The block type is minted from the module the event is DECLARED in, and a
+ * map's events are the world's, so this is `world_emit_WorldsMain_QuitEvent`.
+ * A shipped map can name that only because a project has one world and it is
+ * always at the same path (`mainWorld`).
+ *
+ * `carrying` is the value input for an event with a parameter — `a tab is
+ * chosen ⟨"HOME"⟩` — and is left off for the events that carry nothing.
+ */
+export const emitWorldEvent = (name: string, carrying?: object) => ({
+  type: worldEventBlock('emit', name),
+  ...(carrying ? {inputs: {VALUE: carrying}} : {}),
+});
+
+/** `when ⟨quit⟩` — the hat a WORLD hangs on one of its own events. */
+export const hearWorldEvent = (name: string) => worldEventBlock('on', name);
+
+const worldEventBlock = (prefix: 'emit' | 'on', name: string) =>
+  `world_${prefix}_${pathSlug(MAIN_WORLD_PATH)}_${pascal(name)}Event`;

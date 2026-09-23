@@ -34,6 +34,7 @@ import {
   parseActorOwnMeta,
   type OwnMeta,
 } from './ownProperties';
+import {parseMapManifest} from './ownProperties';
 import {
   extractRuleBodies,
   parseRuleMeta,
@@ -180,10 +181,24 @@ function generateMap(
   );
   const data = withoutBlocks(source);
   const actors = (source.actors ?? []).map(withoutBlocks);
+  // What the map's root says it is and what it says it raises, carried into
+  // the data so that `World.loadMap` can check the second against what the
+  // world declares (specs/MAP_EVENTS_PLAN.md). Absent when there is nothing
+  // to say, so a map that raises nothing is the JSON it always was.
+  const manifest = parseMapManifest(contents);
   generator.init(workspace);
   mergeDefinitions(generator, definitions);
   return generator.finish(
-    assembleMapModule({...data, actors}, mapLevel, placements),
+    assembleMapModule(
+      {
+        ...data,
+        ...(manifest?.name ? {name: manifest.name} : {}),
+        ...(manifest?.raises.length ? {raises: manifest.raises} : {}),
+        actors,
+      },
+      mapLevel,
+      placements,
+    ),
   );
 }
 

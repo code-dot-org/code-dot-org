@@ -7,17 +7,18 @@
 // it covers what is under it, so a dialog is a dialog rather than a picture of
 // one (specs/MODALITY_PLAN.md).
 //
-// EACH ONE SPEAKS THROUGH ITS OWN EVENTS and knows nothing about the project.
-// A confirm does not know what it is confirming; a tab bar does not know what
-// screens the project has. The map declares what happens ON it, a placement
-// script emits that, and the world answers — so moving a button on the map
-// rewires nothing and the same map serves every use of it.
+// EACH ONE SPEAKS THROUGH AN EVENT and knows nothing about the project. A
+// confirm does not know what it is confirming; a tab bar does not know what
+// screens the project has. The map declares which of the WORLD's events it
+// raises, a placement script raises one, and the world answers — so moving a
+// button on the map rewires nothing and the same map serves every use of it
+// (specs/MAP_EVENTS_PLAN.md).
 
 import {
   chain,
-  defineEvent,
+  defineMap,
+  emitWorldEvent,
   me,
-  type BlockParam,
 } from '../../actors/stock/workspace';
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 
@@ -75,14 +76,6 @@ const mapFile = (spec: {
     2,
   );
 
-/** One event declared in a map's own workspace, laid out down the left. */
-const declares = (events: object[], variables: object[] = []) => ({
-  blocks: {
-    blocks: events.map((event, at) => ({...event, x: 20, y: 20 + at * 90})),
-  },
-  ...(variables.length ? {variables} : {}),
-});
-
 const unloadThis = {type: 'world_unload_this_map'};
 
 // ── Are you sure? ───────────────────────────────────────────────────────────
@@ -120,7 +113,7 @@ export const confirmMap = mapFile({
       -56,
       28,
       {positional: {parent: 'Ask'}, Label: {text: 'YES'}, hasABox: {width: 96}},
-      script({type: 'world_emit_MapsConfirm_YesEvent'}, unloadThis),
+      script(emitWorldEvent('yes'), unloadThis),
     ),
     place(
       'actors/button',
@@ -128,34 +121,29 @@ export const confirmMap = mapFile({
       56,
       28,
       {positional: {parent: 'Ask'}, Label: {text: 'NO'}, hasABox: {width: 96}},
-      script({type: 'world_emit_MapsConfirm_NoEvent'}, unloadThis),
+      script(emitWorldEvent('no'), unloadThis),
     ),
   ],
-  workspace: declares([defineEvent('yes'), defineEvent('no')]),
+  workspace: defineMap('Are You Sure?', 'yes', 'no'),
 });
 
 // ── Where you are in the app ────────────────────────────────────────────────
 
 /**
- * The tab whose button was pressed, by the word on it.
+ * `emit a tab is chosen ⟨"HOME"⟩` — the tab that was pressed, by the word on
+ * it.
  *
  * A VALUE RATHER THAN AN EVENT EACH, so adding a fourth tab is adding a
  * Button with a different caption and nothing else. Three events named for
  * three tabs would have put the project's own screen names inside a stock map,
- * which is exactly what this is trying not to know.
+ * which is exactly what this is trying not to know — and it is now the world
+ * that would hold those three names, which makes it worse rather than better
+ * (specs/MAP_EVENTS_PLAN.md).
  */
-const WHICH: BlockParam = {
-  id: 'tabsWhich',
-  name: 'which',
-  type: 'string',
-  binds: 'String',
-};
-
-/** `emit a tab is chosen ⟨"HOME"⟩` — the caption, said back. */
-const chose = (caption: string) => ({
-  type: 'world_emit_MapsTabs_ATabIsChosenEvent',
-  inputs: {VALUE: {block: {type: 'text', fields: {TEXT: caption}}}},
-});
+const chose = (caption: string) =>
+  emitWorldEvent('a tab is chosen', {
+    block: {type: 'text', fields: {TEXT: caption}},
+  });
 
 const TABS = ['HOME', 'SEARCH', 'YOU'];
 
@@ -191,10 +179,7 @@ export const tabsMap = mapFile({
       ),
     ),
   ],
-  workspace: declares(
-    [defineEvent('a tab is chosen', WHICH)],
-    [{id: WHICH.id, name: WHICH.name, type: WHICH.binds}],
-  ),
+  workspace: defineMap('Tab Bar', 'a tab is chosen'),
 });
 
 // ── Something to say, briefly ───────────────────────────────────────────────
@@ -229,8 +214,8 @@ export const messageMap = mapFile({
       92,
       0,
       {positional: {parent: 'Note'}, Label: {text: 'OK'}, hasABox: {width: 64}},
-      script({type: 'world_emit_MapsMessage_DismissedEvent'}, unloadThis),
+      script(emitWorldEvent('dismissed'), unloadThis),
     ),
   ],
-  workspace: declares([defineEvent('dismissed')]),
+  workspace: defineMap('Message', 'dismissed'),
 });

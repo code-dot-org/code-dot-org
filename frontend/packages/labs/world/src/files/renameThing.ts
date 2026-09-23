@@ -29,6 +29,7 @@ import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 import {pathSlug} from '../blockly/domainBlocks';
 import {renameRuleInSource} from '../blockly/renameRule';
 import {mapWorkspaces, rewriteWorkspace} from '../blockly/rewriteWorkspaces';
+import {namedRootOf} from '../blockly/topBlocks';
 import {ENTRY_FILE} from '../constants';
 import {resolveRuleContents} from '../rules/ruleReference';
 
@@ -235,13 +236,8 @@ function declaredName(contents: string): string | undefined {
     return undefined;
   }
   try {
-    const parsed = JSON.parse(trimmed) as {
-      blocks?: {blocks?: Array<{fields?: {NAME?: string}}>};
-      name?: unknown;
-    };
-    const root = parsed.blocks?.blocks?.find(
-      block => block?.fields?.NAME !== undefined,
-    );
+    const parsed = JSON.parse(trimmed) as {name?: unknown};
+    const root = namedRootOf(parsed);
     return (
       root?.fields?.NAME ??
       (typeof parsed.name === 'string' ? parsed.name : undefined)

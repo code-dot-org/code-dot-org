@@ -33,7 +33,7 @@
 // takes the focus. The field does not summon it, because a field that summoned
 // a keyboard would summon one on a desktop too.
 
-import {chain, me, words} from '../../actors/stock/workspace';
+import {chain, defineMap, me, words} from '../../actors/stock/workspace';
 import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
 
 /** How far apart the keys sit, and how big the face inside that is. */
@@ -171,6 +171,9 @@ export const keyboardMap = JSON.stringify(
         ...script(key),
       })),
     ],
+    // No `raises` under it: a key types, and typing is not an event the
+    // project hears about (specs/MAP_EVENTS_PLAN.md).
+    blocks: defineMap('On-Screen Keyboard'),
   },
   null,
   2,

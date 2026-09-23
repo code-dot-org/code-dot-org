@@ -189,6 +189,31 @@ export function styleNameOptions(): Array<[string, string]> {
   );
 }
 
+/** Replace the event names the world declares, for a map's `raises` row. */
+export function setWorldEventNames(names: readonly string[]): void {
+  worldEventNameList = [...new Set(names)];
+}
+
+let worldEventNameList: string[] = [];
+
+/**
+ * Current WORLD EVENT dropdown options — a name, which is its own value.
+ *
+ * A NAME AND NOT A PATH, for the reason `styleNameOptions` above is: the world
+ * registers what it declares under a name and a map says the word, because a
+ * map cannot import the world that loads it (specs/MAP_EVENTS_PLAN.md).
+ *
+ * This is the guard that keeps a `raises` row from being a typo. It is a
+ * dropdown and not a text field for exactly that: a name that names nothing
+ * raises nothing, quietly, which is the failure this lab keeps meeting.
+ */
+export function worldEventOptions(): Array<[string, string]> {
+  return orNone(
+    worldEventNameList.map(name => [name, name] as [string, string]),
+    '(no events yet)',
+  );
+}
+
 /** Replace the effect-file options the EFFECT dropdown offers. */
 export function setProjectEffectFiles(options: Array<[string, string]>): void {
   projectEffectFiles = options;

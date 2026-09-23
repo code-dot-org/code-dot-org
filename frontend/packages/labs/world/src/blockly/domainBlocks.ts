@@ -197,6 +197,7 @@ import {
   projectMapPaths,
   NONE_VALUE,
   orNone,
+  worldEventOptions,
   placementOptions,
   placementOptionsExtension,
   ruleModuleOptions,
@@ -1774,6 +1775,12 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   // A map's own hats (specs/MAP_FIRST.md): the body chains below them.
   'world_on_map_loads',
   'world_on_map_unloads',
+  // …and a map's definition root, whose `raises` rows chain below it
+  // (specs/MAP_EVENTS_PLAN.md). Neither generates anything today, so this
+  // changes no output; it is here because the rows are its BODY, and a root
+  // whose body the default `scrub_` appends after it is a bug waiting for the
+  // first row that has something to say.
+  'world_map',
 ]);
 
 // ── Property-driven "set" blocks ─────────────────────────────────────────────
@@ -7984,6 +7991,65 @@ const worldRule = defineBlock({
   generator: noGenerator,
 });
 
+/**
+ * `define map ⟨Write⟩` — the root a map's workspace never had.
+ *
+ * EVERY OTHER BLOCKLY FILE OPENS WITH A DECLARATION. A `.rule` has `define
+ * rule`, an `.actor` has `define actor`, a `.world` has `define world` — and a
+ * `.map`'s workspace was bare hats floating on a canvas, which is a good part
+ * of why a map and a world felt like the same kind of thing edited two ways
+ * (specs/MAP_EVENTS_PLAN.md).
+ *
+ * It buys three things. A map can NAME itself, where the name was read off the
+ * file stem and every other kind declares its own. Its hats hang under
+ * something, so an arrangement reads as one. And it is where `raises` goes —
+ * what this map expects of whatever loads it, which is the `requires` shape a
+ * rule already uses and what lets an import wire a stock map up.
+ *
+ * NOT its size, its tile, its modal flag or its theme. Those live in the
+ * document and the map editor's panel edits them; moving them here would be a
+ * move of where the truth lives, which is a separate question.
+ */
+const worldMap = defineBlock({
+  type: 'world_map',
+  message0: 'define map %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'My Map'}],
+  // A definition root: no previous connection; its declarations chain below.
+  nextStatement: true,
+  style: 'setup_blocks',
+  tooltip:
+    'Name this map, and say which of the world’s events it raises. What it ' +
+    'places is on the canvas beside this.',
+  generator: noGenerator,
+});
+
+/**
+ * `raises ⟨save⟩` — a row under `define map`.
+ *
+ * A DECLARATION OF DEPENDENCY, not of vocabulary. The world declares its
+ * events and this says which of them this map expects to be able to raise, so
+ * that a reader knows what the file wants of its host and an importer can put
+ * the declaration in the world it is imported to.
+ *
+ * It generates nothing. What raises the event is the `emit` in a placement's
+ * workspace; this is the manifest beside it (specs/MAP_EVENTS_PLAN.md).
+ */
+const worldMapRaises = defineBlock({
+  type: 'world_map_raises',
+  message0: 'raises %1',
+  // A DROPDOWN AND NOT A TEXT FIELD. A name that names nothing raises nothing,
+  // quietly, which is the failure this lab keeps meeting; the world's declared
+  // events are the only names that mean anything here.
+  args0: [{type: 'field_dropdown', name: 'EVENT', options: worldEventOptions}],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'setup_blocks',
+  tooltip:
+    'Say that this map raises one of the world’s events, so that whoever ' +
+    'loads it knows to declare it.',
+  generator: noGenerator,
+});
+
 // A trait is a DEFINITION, like the rule itself, so it is a top block: it sits
 // beside `define rule` in the workspace rather than chained inside it, and its
 // members chain below it the same way the rule's do.
@@ -11018,6 +11084,8 @@ export const DOMAIN_BLOCKS = [
   worldPenWeight,
   worldPenStyle,
   worldUseTheme,
+  worldMap,
+  worldMapRaises,
   worldDrawRectangle,
   worldDrawCircle,
   worldDrawLine,
@@ -11381,6 +11449,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     // workspaces — `ROOT_HOMES` empties the category everywhere else.
     name: 'Map',
     blocks: [
+      // The root a map opens with, and what it says it needs of its host.
+      'world_map',
+      'world_map_raises',
       'world_placement',
       'world_unload_this_map',
       'world_on_map_loads',
@@ -12265,9 +12336,9 @@ export function buildDomainPalette(
       types.push(hat.type);
       ownEventTypes.push(hat.type);
       away.push(hat.type);
-      // A MAP's event is the world's to hear (`parseMapOwnMeta`), and a hat
-      // that registers on `world` must come after the world block binds it
-      // (`assembleWorldModule`).
+      // A WORLD's event is the world's to hear (`parseWorldOwnMeta`), and a
+      // hat that registers on `world` must come after the world block binds
+      // it (`assembleWorldModule`).
       if (event.scope === 'world') {
         ownWorldEventTypes.push(hat.type);
       }

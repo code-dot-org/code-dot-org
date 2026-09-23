@@ -8,7 +8,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import type {Actor, GameEvent, World, WorldMap} from '../../engine';
+import type {Actor, World, WorldMap} from '../../engine';
 import {projectFiles} from '../../runtime/projectFiles';
 import {WORLD_SCENARIOS} from '../scenarios';
 
@@ -41,17 +41,17 @@ describe('breakout, in a Viewport', () => {
 
     // A brick taken, and the menu up over the game.
     world.removeActor(ofKind(world, 'actors/brick')[0]);
-    const menu = modules['maps/pauseMenu'] as unknown as {
-      default: WorldMap;
-      QuitEvent: GameEvent;
-    };
+    const menu = modules['maps/pauseMenu'] as unknown as {default: WorldMap};
     world.loadMap(menu.default);
     world.tick(16);
     expect(ofKind(world, 'actors/brick')).toHaveLength(15);
     const panel = ofKind(world, 'actors/panel');
     expect(panel).toHaveLength(1);
 
-    world.emitToWorld(menu.QuitEvent);
+    // BY NAME, which is how the menu's Quit button says it: `quit` is the
+    // WORLD's event and the map only declares that it raises it
+    // (specs/MAP_EVENTS_PLAN.md).
+    world.emitNamed('quit');
     world.tick(16);
     world.tick(16);
 

@@ -157,6 +157,20 @@ export interface WorldMap {
    * (specs/STYLES_PLAN.md).
    */
   theme?: string;
+  /** What the map calls itself — its `define map` NAME, for a report to cite. */
+  name?: string;
+  /**
+   * The world events this map says it RAISES, from its `raises` rows.
+   *
+   * Carried into the data so that the mismatch is caught when the map is
+   * LOADED rather than when a button is finally clicked: a map dropped into a
+   * world that never declared `quit` is a dialog whose answer goes nowhere,
+   * and waiting for the click to find out means the learner meets it as "the
+   * button does nothing" (specs/MAP_EVENTS_PLAN.md).
+   *
+   * Absent when the map raises nothing, which is most of them.
+   */
+  raises?: readonly string[];
   actors: Array<{
     type: string;
     /** Stable instance id; a random unique one is assigned when omitted. */
@@ -1794,6 +1808,26 @@ export class World {
   private readonly unheardEvents = new Set<string>();
 
   /**
+   * What this map says it raises, against what this world declares.
+   *
+   * THE CHECK A `define map for ⟨world⟩` BINDING WOULD HAVE MADE, made at the
+   * moment the two meet instead of at author time — which is the right moment,
+   * because it is the LOAD that pairs them and a map may be loaded by more
+   * than one world (specs/MAP_EVENTS_PLAN.md).
+   *
+   * Recorded, not thrown, in the same list a raise of an unknown name goes in:
+   * the map still loads and everything on it still works, and what is missing
+   * is one `define event` in the world.
+   */
+  private checkRaises(map: WorldMap): void {
+    for (const name of map.raises ?? []) {
+      if (!this.namedEvents.has(name)) {
+        this.unheardEvents.add(name);
+      }
+    }
+  }
+
+  /**
    * Every name a map tried to raise that this world does not declare.
    *
    * Kept rather than thrown, for the reason the theme's unresolved list is
@@ -2386,6 +2420,7 @@ export class World {
 
   /** Place a map's actors into `space` — `loadMap`'s body, for any space. */
   private loadInto(space: Space, map: WorldMap, layer?: string): Actor[] {
+    this.checkRaises(map);
     this.growSpaceToFit(space, map);
     const lookup = this.propertyLookup();
     const added: Actor[] = [];

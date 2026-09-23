@@ -1277,6 +1277,10 @@ export const TILES: readonly Tile[] = [
       // were parked on `story/choice` until there was a lesson about scripts.
       {kind: 'block', type: 'world_placement'},
       {kind: 'block', type: 'world_unload_this_map'},
+      // …and the root that workspace opens with. Every map is seeded with a
+      // `define map` and so nobody has to drag one; this is so that a learner
+      // who deletes it can put it back (specs/MAP_EVENTS_PLAN.md).
+      {kind: 'block', type: 'world_map'},
     ],
     check: {
       kind: 'outcome',

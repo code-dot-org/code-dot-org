@@ -11,6 +11,12 @@ PROPOSED). What follows is the design as it was argued, written after the
 pause menu showed where the current shape strains (UI_ACTORS.md, "The second
 axis"; MAPS.md, "A block naming a placement").
 
+SUPERSEDED IN ONE PART: everything below about a map DECLARING its own events
+was inverted afterwards. A map declares no events now — the world declares
+them and a map says which of them it RAISES, under a `define map` root
+(specs/MAP_EVENTS_PLAN.md). What the map's workspace is FOR, and that it is
+opened with nothing selected, is unchanged.
+
 The question: what does World Lab look like if a project opens on its MAP
 rather than on its world's block workspace? You place actors on a canvas, set
 their properties in an inspector, and attach behavior to the things you can

@@ -1,6 +1,7 @@
 # Plan: a map wires into the world's events rather than minting its own
 
-STATUS: PLANNED. Nothing here is built.
+STATUS: BUILT. All seven steps are in; see "What got built" at the foot for
+what each one turned out to be and the two things it changed on the way.
 
 A map may declare events today, and the world hears them. This proposes the
 inversion: the WORLD declares the events, a map says which of them it raises,
@@ -215,7 +216,7 @@ bearable:
   its path; an event is a word the project chose. Two worlds in one project
   declaring the same name is the same event, which is what a project means.
 
-## What gets built, in order
+## What got built, in order
 
 1. **The stale restrictions**, first and on their own, because they are what
    made this look like a policy change: correct the three `ROOT_HOMES`
@@ -280,3 +281,76 @@ Nobody has asked.
   the sentence the current design cannot say and the whole reason for this.
 - A test that a world loading a map which emits what it does not declare says
   so, since that is the safety `for ⟨world⟩` was going to buy.
+
+## What got built
+
+The seven steps, as they landed, and what each one turned out to be.
+
+**1–3, the declaration and the raise.** `define event` under `define world`,
+`World.defineEvent`/`emitNamed`/`eventNames`/`unheardEventNames`, and the
+preamble that registers one call per declared event. The `emit` generator
+short-circuits in a map: a map's `emit` of a world's event compiles to
+`world.emitNamed("quit")` rather than to an import of a module that would be a
+cycle.
+
+**4, `define map`.** The root and its `raises` rows, plus three smaller things
+that the root made possible or necessary:
+
+- **A map declares its name.** `world_map` joined `NAMED_ROOTS`, so the file
+  menus and a rename read a map the way they read every other kind. Three
+  callers walked a file's top blocks to find its root and each handled one
+  shape; a `.map` is a DOCUMENT holding a workspace under `blocks`, one level
+  further down, so they share `blockly/topBlocks` now.
+- **A new map is seeded with its root**, in `newThing`, rather than growing one
+  when its script is first opened. A map that declares its name from the moment
+  it exists is a map a rename can carry.
+- **`parseMapManifest`** reads the pair back: the name, and the `raises` names
+  in the order written.
+
+**5, the five maps and the import.** The stock maps and Notes' `write` moved
+off `define event` onto `define map ⟨…⟩` + `raises ⟨…⟩`; `world_rule_event`
+lost `'map'` from `ROOT_HOMES`; `parseMapOwnMeta` and the events branch of
+`assembleMapModule` are gone, because a map exports nothing now.
+
+`importStockMap` declares what the map raises in the project's world
+(`maps/declareEvents`). It only ever ADDS — an event the world already declares
+is left alone, signature and all — and it appends to the end of `define world`'s
+chain, so nothing above moves. It runs even for a map the project already
+holds, because the reason to import a second time is that something is missing.
+
+A stock map's `emit` block type is minted from the module the event is DECLARED
+in, which is the project's one world; `mainWorld.ts` is the one constant that
+fixes where that is, and `ENTRY_FILE` derives from it.
+
+**6, the load-time check.** The map's `raises` are carried into the compiled
+`mapData`, and `World.loadMap` compares them against what the world declares.
+Recorded in `unheardEventNames` rather than thrown, as the theme's unresolved
+list is — the map still loads and everything on it still works. Finding it at
+LOAD rather than at the click matters: a raise that goes nowhere is met by the
+learner as "the button does nothing".
+
+**7, the fixtures.** Notes' world declares `save` and `cancel` and its write
+map raises them; Breakout's declares `quit` and hears it.
+
+### Two things this changed that the plan did not anticipate
+
+**A test that rebuilt the world after the import threw the declarations away.**
+`dialogsPlay` imported the stock map and then replaced `main.world` with its
+own, which is exactly the failure mode the cost section predicted — the
+declaration lives in a file somebody else owns. The test writes the world
+first and imports over it now, which is also the honest order.
+
+**`world_map_raises` has no lesson.** `world_map` is granted by `place/script`,
+the tile that opens a map's workspace. A `raises` row needs a map script AND a
+world event, and no tile asks for the pair, so it is on the not-taught ledger
+beside the two map hats.
+
+### Still open
+
+- **Nothing reports `unheardEventNames`.** It is recorded and askable, at the
+  same level `ResolvedTheme.unresolved` is. A sandbox that said "this map
+  raises `quit` and nothing hears it" would be worth more than either.
+- **A map's `raises` rows are written twice for a stock map** — once in the
+  map's workspace and once on the `StockMap` entry, because the rows carry only
+  a name and a declaration needs the signature. `stockMaps.test` holds the two
+  in step, the way nothing holds `actors` against what a map places.

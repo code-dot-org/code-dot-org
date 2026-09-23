@@ -50,6 +50,7 @@ import {
   type MemberRef,
   type PropertyMeta,
 } from './ruleMeta';
+import {topBlocksOf} from './topBlocks';
 
 /** A block as it appears in a serialized workspace. */
 interface ActorBlock {
@@ -193,67 +194,56 @@ export function parseWorldOwnMeta(
   return declarationsIn(modulePath, contents, 'world_world', 'world', 'World');
 }
 
+/** What a map's `define map` root says about the map. */
+export interface MapManifest {
+  /** What the map calls itself, which used to come from its file's stem. */
+  readonly name: string;
+  /**
+   * The world events it declares it raises, in the order they are written.
+   *
+   * A DECLARATION OF DEPENDENCY, not of vocabulary. The events themselves are
+   * the world's (`parseWorldOwnMeta`); these rows say which of them this map
+   * expects to be able to raise, so that an import can put the declaration in
+   * the world it is imported to and a load can check that it is there
+   * (specs/MAP_EVENTS_PLAN.md).
+   */
+  readonly raises: readonly string[];
+}
+
 /**
- * A MAP's own declarations: the events its own workspace defines.
+ * A map's root, read off the file.
  *
- * A `.map` is JSON whose `blocks` is a workspace with no root — `define
- * event` rows sit at the top level, alone or chained — so the walk is over
- * every top block's chain rather than under a root (specs/MAP_FIRST.md, "The
- * file"). What comes out is an `OwnMeta` with events only, so the palette
- * mints the map's hat and emit through the same factories an actor's go
- * through. WORLD-scoped, because a map is not an actor: the hat has no
- * subject socket and registers on the world, which is what `when ⟨pause
- * menu⟩ quit` in a world file wants. A map with no workspace declares
- * nothing and is not listed.
+ * Undefined for a `.map` with no workspace or no root in it — which is every
+ * map made before `define map` existed, and is not an error: nothing that
+ * reads this needs a map to have one, they need to know when it does.
  */
-export function parseMapOwnMeta(
-  modulePath: string,
-  contents: string,
-  name: string,
-): OwnMeta | undefined {
-  let tops: ActorBlock[];
-  const variables = new Map<string, string>();
+export function parseMapManifest(contents: string): MapManifest | undefined {
+  let parsed: unknown;
   try {
-    // `blocks` is a whole workspace serialization, as an actor file is.
-    const parsed = JSON.parse(contents) as {
-      blocks?: {
-        blocks?: {blocks?: ActorBlock[]};
-        variables?: ReadonlyArray<{id?: string; name?: string}>;
-      };
-    };
-    for (const variable of parsed.blocks?.variables ?? []) {
-      if (variable.id) {
-        variables.set(variable.id, variable.name ?? variable.id);
-      }
-    }
-    tops = parsed.blocks?.blocks?.blocks ?? [];
+    parsed = JSON.parse(contents);
   } catch {
     return undefined; // mid-edit / not JSON
   }
-  const events: EventMeta[] = [];
-  const named = new Set<string>();
-  for (const top of tops) {
-    for (const block of [top, ...chain(top)]) {
-      if (block.type !== 'world_rule_event') {
-        continue;
-      }
-      const declared = designedEvent(
-        block,
-        modulePath,
-        name,
-        variables,
-        'world',
-      );
-      if (declared && !named.has(declared.id)) {
-        named.add(declared.id);
-        events.push(declared);
-      }
-    }
-  }
-  if (events.length === 0) {
+  const root = (topBlocksOf(parsed) as ActorBlock[]).find(
+    block => block?.type === 'world_map',
+  );
+  if (!root) {
     return undefined;
   }
-  return {modulePath, name, properties: [], actions: [], events};
+  const raises: string[] = [];
+  for (const block of chain(root)) {
+    if (block.type !== 'world_map_raises') {
+      continue;
+    }
+    const event = block.fields?.EVENT;
+    // Deduplicated, because two rows naming one event is one dependency said
+    // twice and every reader of this wants the set.
+    if (typeof event === 'string' && event && !raises.includes(event)) {
+      raises.push(event);
+    }
+  }
+  const name = root.fields?.NAME;
+  return {name: typeof name === 'string' ? name : '', raises};
 }
 
 /** The walk both share: a root's chain, and every declaration in it. */

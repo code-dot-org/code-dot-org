@@ -15,23 +15,15 @@ import {FOUNDATION_RULE_NAMES} from './foundation';
 import {label} from './label';
 import {
   parseActorOwnMeta,
-  parseMapOwnMeta,
   parseWorldOwnMeta,
   type OwnMeta,
 } from './ownProperties';
 import {parseRuleMeta, type RuleMeta} from './ruleMeta';
 import {cellCount} from './spriteCells';
+import {namedRootOf} from './topBlocks';
 
 // Code files that define a module: a Blockly rule/actor/world, or plain JS/TS.
 const CODE_EXT = /\.(rule|actor|world|ts|js)$/;
-
-// The root blocks whose NAME field names a Blockly-authored module.
-//
-// Rules among them, which they were not: a `.rule`'s options list fell through
-// to the file's stem, and every caller that wanted "Has Gravity" got it from
-// the rule REGISTRY instead. That is still where a `use rule` dropdown reads
-// it; this is for everything that has only the file (`files/itemName`).
-const NAMED_ROOTS = ['world_actor', 'world_world', 'world_rule'];
 
 /**
  * Best-effort authored name: what the file calls the thing it declares.
@@ -46,16 +38,8 @@ export function authoredName(contents: string): string | undefined {
   const trimmed = contents.trim();
   if (trimmed.startsWith('{')) {
     try {
-      const parsed = JSON.parse(trimmed) as {
-        blocks?: {blocks?: unknown[]};
-        name?: unknown;
-      };
-      const blocks = parsed.blocks?.blocks;
-      const root = Array.isArray(blocks)
-        ? (blocks.find(b =>
-            NAMED_ROOTS.includes((b as {type?: string})?.type ?? ''),
-          ) as {fields?: {NAME?: string}} | undefined)
-        : undefined;
+      const parsed = JSON.parse(trimmed) as {name?: unknown};
+      const root = namedRootOf(parsed);
       if (root?.fields?.NAME) {
         return root.fields.NAME;
       }
@@ -381,19 +365,10 @@ export function projectOwnMetas(files: Record<string, string>): OwnMeta[] {
         metas.push(meta);
       }
     }
-    // …and every MAP's own events (specs/MAP_FIRST.md): a pause menu's
-    // `quit`, which the world hears with a hat minted from this.
-    if (path.startsWith('maps/') && path.endsWith('.map')) {
-      const map = path.replace(/\.map$/, '');
-      const meta = parseMapOwnMeta(
-        map,
-        contents,
-        label(map.split('/').pop() ?? map),
-      );
-      if (meta) {
-        metas.push(meta);
-      }
-    }
+    // …AND NOT A MAP's. A map declared its own events until the inversion,
+    // which put every event on the world and left a map saying only which of
+    // them it RAISES (specs/MAP_EVENTS_PLAN.md). Nothing is minted from a
+    // `.map` any more.
   }
   return metas;
 }

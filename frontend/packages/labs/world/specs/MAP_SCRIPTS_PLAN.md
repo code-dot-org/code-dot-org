@@ -8,6 +8,12 @@ working record: the plan as set out before building, then each commit as it
 lands, and what was decided or learned on the way. The design is in
 MAP_FIRST.md; this is how it is being built.
 
+SUPERSEDED IN ONE PART, as MAP_FIRST.md is: a map's own `define event` rows
+are gone. The world declares the events and the map's workspace holds a
+`define map` root saying which of them it raises; the map exports nothing, so
+`assembleMapModule` has no events section any more
+(specs/MAP_EVENTS_PLAN.md).
+
 ## What is being built
 
 - **A `.map` is a generated module.** It was data loaded as JSON. It keeps

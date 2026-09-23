@@ -2,9 +2,12 @@
 // to"; specs/MAP_SCRIPTS_PLAN.md).
 //
 // The file is JSON with a workspace on each placement and one for the map.
-// What comes out is the arrangement as data, the map's own events as exports,
-// and a script that registers each placement's hats on the actor the load
-// placed under that id.
+// What comes out is the arrangement as data and a script that registers each
+// placement's hats on the actor the load placed under that id.
+//
+// NOTHING IS EXPORTED. A map used to export a `define event` per row in its
+// own workspace; events are the WORLD's now, a map declares which of them it
+// RAISES, and raising one names it (specs/MAP_EVENTS_PLAN.md).
 
 import {render} from '@testing-library/react';
 import {createRef} from 'react';
@@ -16,15 +19,44 @@ import BlocklyGenerator, {
 } from '../BlocklyGenerator';
 import {DOMAIN_BLOCKS} from '../domainBlocks';
 import {NONE_VALUE, setCurrentPlacements} from '../moduleOptions';
-import {parseMapOwnMeta} from '../ownProperties';
+import {parseMapManifest} from '../ownProperties';
 import {projectOwnMetas} from '../projectModules';
 
 /** A workspace holding `tops` as its top blocks. */
 const workspace = (...tops: object[]) => ({blocks: {blocks: tops}});
 
-const defineEvent = (text: string) => ({
-  type: 'world_rule_event',
-  extraState: {parts: [{kind: 'label', text}]},
+/** `define map ⟨Menu⟩` with a `raises` row under it, as a map's root. */
+const defineMap = (name: string, ...raises: string[]) => ({
+  type: 'world_map',
+  fields: {NAME: name},
+  next: {
+    block: raises.reduceRight<object | undefined>(
+      (next, event) => ({
+        type: 'world_map_raises',
+        fields: {EVENT: event},
+        ...(next ? {next: {block: next}} : {}),
+      }),
+      undefined,
+    ),
+  },
+});
+
+/** The project's one world, declaring the event the menu raises. */
+const WORLD = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_world',
+        fields: {NAME: 'Main'},
+        next: {
+          block: {
+            type: 'world_rule_event',
+            extraState: {parts: [{kind: 'label', text: 'quit'}]},
+          },
+        },
+      },
+    ],
+  },
 });
 
 /**
@@ -59,7 +91,7 @@ const MENU = JSON.stringify({
       type: 'actors/button',
       id: 'Quit',
       blocks: workspace(
-        whenClicked({type: 'world_emit_MapsMenu_QuitEvent'}),
+        whenClicked({type: 'world_emit_WorldsMain_QuitEvent'}),
         // …and a neighbour named as a value, plugged into `remove actor`.
         whenClicked({
           type: 'world_remove_actor',
@@ -70,19 +102,20 @@ const MENU = JSON.stringify({
       ),
     },
   ],
-  blocks: workspace(defineEvent('quit'), {type: 'world_on_map_unloads'}),
+  blocks: workspace(defineMap('Menu', 'quit'), {type: 'world_on_map_unloads'}),
 });
 
 /**
- * Generate one map, through the generator the runtime uses, with the map's
- * own events in the palette as the runtime would have them.
+ * Generate one map, through the generator the runtime uses, with the WORLD's
+ * events in the palette as the runtime would have them — a map's `emit` names
+ * one the world declared, so the world file has to be in the project.
  */
 const generate = async (
   contents: string,
   path = 'maps/menu.map',
 ): Promise<string> => {
   const ref = createRef<BlocklyGeneratorHandle>();
-  const files = {[path]: contents};
+  const files = {[path]: contents, 'worlds/main.world': WORLD};
   render(
     <BlocklyGenerator
       ref={ref}
@@ -94,34 +127,22 @@ const generate = async (
   return ref.current!.generate(contents, path);
 };
 
-describe('a map’s own events', () => {
-  it('are read from the map’s workspace, world-scoped, owned by the map', () => {
-    const meta = parseMapOwnMeta('maps/menu', MENU, 'Menu');
-    expect(meta).toMatchObject({
-      modulePath: 'maps/menu',
-      name: 'Menu',
-      properties: [],
-      actions: [],
-    });
-    expect(meta!.events).toEqual([
-      expect.objectContaining({
-        id: 'quit',
-        name: 'quit',
-        scope: 'world',
-        ref: expect.objectContaining({
-          exportName: 'QuitEvent',
-          modulePath: 'maps/menu',
-          own: true,
-        }),
-      }),
-    ]);
+describe('a map’s root', () => {
+  it('is what the map calls itself and what it says it raises', () => {
+    expect(parseMapManifest(MENU)).toEqual({name: 'Menu', raises: ['quit']});
   });
 
-  it('are nothing for a map with no workspace, which is not listed', () => {
+  it('is undefined for a map with no workspace and no root in one', () => {
+    expect(parseMapManifest('{"type":"map","actors":[]}')).toBeUndefined();
     expect(
-      parseMapOwnMeta('maps/level', '{"type":"map","actors":[]}', 'Level'),
+      parseMapManifest(
+        JSON.stringify({type: 'map', blocks: workspace({type: 'text'})}),
+      ),
     ).toBeUndefined();
-    expect(projectOwnMetas({'maps/menu.map': MENU})).toHaveLength(1);
+  });
+
+  it('declares nothing the project can import, which a map used to', () => {
+    expect(projectOwnMetas({'maps/menu.map': MENU})).toHaveLength(0);
   });
 });
 
@@ -144,13 +165,6 @@ describe('the module a map compiles to', () => {
     expect(js).toContain('export default mapData;');
   });
 
-  it('declares the map’s events as exports the world can import', async () => {
-    const js = await generate(MENU);
-    expect(js).toContain(
-      'export const QuitEvent = {id: "quit", name: "quit", ownerId: "maps/menu"};',
-    );
-  });
-
   it('registers each placement’s hats on the actor placed under its id', async () => {
     const js = await generate(MENU);
     const script = js.slice(js.indexOf('mapData.script'));
@@ -167,11 +181,13 @@ describe('the module a map compiles to', () => {
     expect(script).toContain('map.unload();');
   });
 
-  it('raises the map’s own event locally, and names a neighbour', async () => {
+  it('raises the world’s event BY NAME, and names a neighbour', async () => {
     const js = await generate(MENU);
-    // The map's own module: the const, not an import of itself.
-    expect(js).toContain('world.emitToWorld(QuitEvent);');
-    expect(js).not.toContain("from 'maps/menu'");
+    // By name and not by import: the world LOADS the map, so a map importing
+    // the world's module would be a cycle (specs/MAP_EVENTS_PLAN.md).
+    expect(js).toContain('world.emitNamed("quit");');
+    expect(js).not.toContain("from 'worlds/main'");
+    expect(js).not.toContain('export const QuitEvent');
     expect(js).toContain('world.removeActor(placed["Pause"]);');
   });
 
@@ -190,18 +206,17 @@ describe('the module a map compiles to', () => {
 });
 
 describe('assembleMapModule', () => {
-  it('orders data, events, script, export', () => {
+  it('orders data, script, export — and a root that says nothing adds nothing', () => {
     const js = assembleMapModule(
       {type: 'map', actors: []},
       [
-        {type: 'world_rule_event', code: 'export const E = 1;\n'},
+        {type: 'world_map', code: ''},
         {type: 'world_on_map_loads', code: '(() => {\n})();\n'},
       ],
       [{id: 'a', blocks: [{type: 'x', code: 'actor.on();\n'}]}],
     );
     expect(js).toBe(
       'const mapData = {"type":"map","actors":[]};\n' +
-        'export const E = 1;\n' +
         'mapData.script = (world, placed, map) => {\n' +
         '(() => {\n})();\n' +
         '{\n  const actor = placed["a"];\nactor.on();\n}\n' +

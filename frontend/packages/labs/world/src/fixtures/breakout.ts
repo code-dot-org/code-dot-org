@@ -45,6 +45,7 @@
 // The serve was on that list until the ball was left at rest, which is the
 // smaller lesson: some of what is missing is missing because nobody wrote it.
 
+import {defineEvent, hearWorldEvent} from '../actors/stock/workspace';
 import {stack, starterSprites, useTrait, type ProjectSpec} from '../constants';
 import {} from '../rules/stock';
 import {referenceToStock} from '../rules/ruleReference';
@@ -174,9 +175,11 @@ export const pauseHandlers = (level: string, viewport = 'actors/viewport') => {
       },
     },
     // The menu's Resume takes the menu away itself; Quit is the world's to
-    // answer, and here it starts the level over.
+    // answer, and here it starts the level over. `quit` is the WORLD's event
+    // — declared under `define world` below and raised by the menu, which
+    // says it raises it and declares nothing (specs/MAP_EVENTS_PLAN.md).
     {
-      type: 'world_on_MapsPauseMenu_QuitEvent',
+      type: hearWorldEvent('quit'),
       x: 20,
       y: 560,
       next: {
@@ -446,6 +449,10 @@ const BREAKOUT_WORLD = JSON.stringify({
         x: 20,
         y: 20,
         fields: {NAME: 'Breakout'},
+        // The one word the pause menu says back. The import writes this row
+        // when a learner adds the menu themselves (`maps/declareEvents`);
+        // here the fixture ships with it.
+        next: {block: defineEvent('quit')},
       },
       serveHandler('actors/ball'),
       ...pauseHandlers('maps/breakout'),
