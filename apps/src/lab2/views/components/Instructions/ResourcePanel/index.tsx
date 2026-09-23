@@ -586,7 +586,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     const selectedWithKeyboard = selectedTabWithKeyboard.current;
     selectedTabWithKeyboard.current = false;
     const isAiTutor = currentTab === Tabs.AiTutor;
-    // Panes unmount while collapsed, so this is null then and fresh on expand.
     const panelContent = visiblePaneRef.current;
     if (!panelContent || (!selectedWithKeyboard && !isAiTutor)) {
       return;
