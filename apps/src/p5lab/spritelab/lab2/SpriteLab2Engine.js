@@ -143,6 +143,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
     setRetainBlobsOnLoad(false);
+    // captureFirstFrame() callbacks, called with the canvas as the first
+    // frame of the next run is drawn (see onP5Setup and the draw loops).
+    this.frameCaptureWaiters_ = [];
+    this.frameCaptureArmed_ = false;
     this.isBlockly = true;
     this.studioApp_ = makeStudioAppStub(this);
     this.mobileControls = NOOP_MOBILE_CONTROLS;
@@ -344,6 +348,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
+    // Wraps whichever draw loop the scene uses, so a captured frame is a
+    // finished one: every pass drawn, nothing overdrawn. The platform loop
+    // takes its own picture (at zoom 1) and clears the flag first.
+    const drawLoop = library.commands.executeDrawLoopAndCallbacks;
+    library.commands.executeDrawLoopAndCallbacks = function () {
+      drawLoop.apply(this, arguments);
+      if (engine.frameCaptureArmed_) {
+        engine.frameCaptureArmed_ = false;
+        engine.settleFrameCaptures_(this.p5.canvas);
+      }
+    };
     // Story lanes: placement by name instead of coordinates, sized so two
     // characters share a scene; the right-lane character faces its partner
     // (generated art faces right natively).
@@ -666,6 +681,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     super.onP5Setup();
+    // A run has begun: the next frame drawn is its first.
+    this.frameCaptureArmed_ = this.frameCaptureWaiters_.length > 0;
     const p5 = this.p5Wrapper.p5;
     const density = Math.ceil(
       CANVAS_DENSITY_FACTOR * (window.devicePixelRatio || 1)
@@ -743,6 +760,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.stopTickTimer();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
+    this.frameCaptureArmed_ = false;
+    this.settleFrameCaptures_(null);
   }
 
   // Backgrounds come from the Items tab, not backgrounds.json — and the base
@@ -932,15 +951,15 @@ export default class SpriteLab2Engine extends SpriteLab {
       engine.physicsResolvedThisFrame_ = true;
       const player = this.getSpriteArray({group: 'players'})[0];
       const focus = cameraFocus(zoom, player ? player.position : null);
-      camera.off();
-      this.drawBackground(backgroundFrame(zoom, focus));
-      camera.zoom = zoom;
-      camera.position.x = focus.x;
-      camera.position.y = focus.y;
-      camera.on();
-      p5.drawSprites();
-      this.drawSpeechBubbles();
-      camera.off();
+      if (engine.frameCaptureArmed_) {
+        // The picture shows the whole world: drawn at zoom 1, copied by the
+        // callbacks (synchronously), then painted over by the real frame
+        // below, so nothing of it reaches the screen.
+        engine.frameCaptureArmed_ = false;
+        engine.drawWorld_(this, 1, cameraFocus(1, null));
+        engine.settleFrameCaptures_(p5.canvas);
+      }
+      engine.drawWorld_(this, zoom, focus);
       this.drawVariableBubbles();
       if (!this.isPreviewFrame()) {
         this.foregroundEffects.forEach(effect => effect.func());
@@ -950,6 +969,37 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       this.commands.drawStoryLabText.apply(this);
     };
+  }
+
+  /** Background, sprites and speech bubbles through the camera. */
+  drawWorld_(library, zoom, focus) {
+    const {p5} = library;
+    const {camera} = p5;
+    camera.off();
+    library.drawBackground(backgroundFrame(zoom, focus));
+    camera.zoom = zoom;
+    camera.position.x = focus.x;
+    camera.position.y = focus.y;
+    camera.on();
+    p5.drawSprites();
+    library.drawSpeechBubbles();
+    camera.off();
+  }
+
+  /**
+   * Calls back with the canvas while the first frame of the next run is
+   * being drawn, or with null if the engine is torn down first. The callback
+   * must copy what it wants at once: the canvas is repainted right after.
+   * Every caller waiting on the same run gets the same frame.
+   */
+  captureFirstFrame(onFrame) {
+    this.frameCaptureWaiters_.push(onFrame);
+  }
+
+  settleFrameCaptures_(canvas) {
+    const waiters = this.frameCaptureWaiters_;
+    this.frameCaptureWaiters_ = [];
+    waiters.forEach(onFrame => onFrame(canvas));
   }
 
   // Platformer physics for players and marked sprites (see

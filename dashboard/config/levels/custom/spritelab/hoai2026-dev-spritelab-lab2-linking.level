@@ -24,6 +24,9 @@
     "level_mode": {
       "kind": "code"
     },
+    "image_role_defaults": {
+      "sprite": "friend"
+    },
     "guide_steps": [
       {
         "text": "**Link your scenes.** Use the new **go to scene** block to jump from one scene to another - for example, when your character is clicked. Press **Play** to try the jump."
@@ -38,25 +41,44 @@
     ],
     "long_instructions": "# Link your scenes\nUse the new **go to scene** block to jump from one scene to another - for example, when your character is clicked.",
     "toolbox_definition": {
-      "kind": "flyoutToolbox",
+      "kind": "categoryToolbox",
       "contents": [
         {
-          "kind": "block",
-          "type": "gamelab_spriteClicked",
-          "inputs": {
-            "SPRITE": {
-              "shadow": {
-                "type": "gamelab_allSpritesWithAnimation"
+          "kind": "category",
+          "name": "Story",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_spriteClicked",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_goToScene",
+              "fields": {
+                "SCENE": "platform-scene"
               }
             }
-          }
+          ]
         },
         {
-          "kind": "block",
-          "type": "spritelab2_goToScene",
-          "fields": {
-            "SCENE": "platform-scene"
-          }
+          "kind": "category",
+          "name": "Platform",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_goToScene",
+              "fields": {
+                "SCENE": "story-scene"
+              }
+            }
+          ]
         }
       ]
     }

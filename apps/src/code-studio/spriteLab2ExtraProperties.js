@@ -15,8 +15,10 @@ import initializeCodeMirror6 from './initializeCodeMirror6';
 export const RAW_EDITABLE_PROPERTIES = [
   'guide_steps',
   'hide_custom_blocks',
+  'image_role_defaults',
   'level_mode',
   'pinned_scene',
+  'add_blocks',
   'world_start_pattern',
 ];
 

@@ -8,8 +8,8 @@ import React, {useState} from 'react';
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {
   IMAGE_STYLE_LABELS,
-  IMAGE_TYPE_LABELS,
   ImageGenerationMetadata,
+  imageKindLabel,
   ImageType,
 } from '../ai/images/types';
 import {AnimationPoses} from '../characterAnimations';
@@ -135,6 +135,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onDelete,
   imageType,
   lockedImageType,
+  lockedImageSubject,
   imageChanged,
   advanced,
   adlibSet,
@@ -305,6 +306,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
           thumbPixelated={pixelated}
           create={isNew ? {isNameTaken, initial: newImageDraft} : undefined}
           lockedImageType={lockedImageType}
+          lockedImageSubject={lockedImageSubject}
           advanced={advanced}
           adlibSet={adlibSet}
           adlibOnly={adlibOnly}
@@ -368,8 +370,11 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                       <dt>Type</dt>
                       <dd>
                         {sheet
-                          ? 'Sprite (animated)'
-                          : IMAGE_TYPE_LABELS[generation.imageType]}
+                          ? 'Character (animated)'
+                          : imageKindLabel(
+                              generation.imageType,
+                              generation.subject
+                            )}
                       </dd>
                       <dt>Style</dt>
                       <dd>{IMAGE_STYLE_LABELS[generation.style]}</dd>

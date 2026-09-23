@@ -5,6 +5,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {
   setChatIsOpen,
   fetchThreadMessages,
+  openDrawerToNav,
 } from '@cdo/apps/aiTeacherDrawer/redux';
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
@@ -45,6 +46,21 @@ interface AiDiffFloatingActionButtonProps {
   canShowPulse?: boolean;
   canStartOpen?: boolean;
   canDefaultOpen?: boolean;
+  /**
+   * When set, clicking always opens the drawer straight to this nav label
+   * (see BottomNav's labels/AiDiffDrawer's activeNav switch) instead of the
+   * default toggle-open-to-whatever-was-last-active behavior. Used to
+   * repurpose this FAB as the entry point for a specific drawer screen, e.g.
+   * the rubrics-drawer experiment's Rubrics screen.
+   */
+  openToNav?: string;
+  /**
+   * Mounts the drawer (and all of its supporting data-fetching/websocket
+   * effects) without rendering the round AI-bot FAB icon itself. Used when
+   * some other UI element (e.g. TeacherPanelHandle's arrow tab) is meant to
+   * be the only visible entry point to the drawer.
+   */
+  hideButton?: boolean;
 }
 
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
@@ -64,6 +80,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
    * Does not prevent auto-opening if the user has interacted with the FAB before.
    */
   canDefaultOpen = true,
+  openToNav,
+  hideButton = false,
 }) => {
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
@@ -285,14 +303,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
-    dispatch(setChatIsOpen(!chatIsOpen));
-    dispatch(
-      fetchThreadMessages({
-        contextType: context.type,
-        thread: 0,
-        curriculumCourses: curriculumCourses,
-      })
-    );
+    if (openToNav) {
+      dispatch(openDrawerToNav(openToNav));
+    } else {
+      dispatch(setChatIsOpen(!chatIsOpen));
+      dispatch(
+        fetchThreadMessages({
+          contextType: context.type,
+          thread: 0,
+          curriculumCourses: curriculumCourses,
+        })
+      );
+    }
     trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
     updateUnreadNotificationCount();
   };
@@ -301,7 +323,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   return (
     <div id="fab-contained">
-      {!chatIsOpen && (
+      {!hideButton && !chatIsOpen && (
         <button
           ref={buttonRef}
           id="ui-floatingActionButton"

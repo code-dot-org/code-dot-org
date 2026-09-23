@@ -4,9 +4,8 @@ import Toggle from '@code-dot-org/component-library/toggle';
 import {Alert} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
-
-import {networkErrorMessage} from './networkError';
 
 import styles from './quiz-configuration-panel.module.scss';
 

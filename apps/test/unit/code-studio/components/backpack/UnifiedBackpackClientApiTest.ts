@@ -312,9 +312,12 @@ describe('UnifiedBackpackClientApi (jest)', () => {
     );
     await flushPromises();
 
+    // The relay names the backpack the event came from; a filename alone does not
+    // identify a file across backpacks.
     expect(listener).toHaveBeenCalledWith(
       BackpackEvent.FileDeleted,
-      'old.java'
+      'old.java',
+      'javalab'
     );
   });
 

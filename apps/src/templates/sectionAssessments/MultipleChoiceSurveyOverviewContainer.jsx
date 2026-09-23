@@ -27,7 +27,7 @@ class MultipleChoiceSurveyOverviewContainer extends Component {
     } = this.props;
     return (
       <div>
-        <Typography variant="h2">
+        <Typography variant="h6" component="h2">
           {i18n.multipleChoiceQuestionsOverview({
             numSubmissions: totalStudentSubmissions,
             numStudents: totalStudentCount,

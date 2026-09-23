@@ -73,6 +73,10 @@ module GitUtils
 
   def self.git_revision
     `git rev-parse HEAD`.strip
+  rescue Errno::ENOENT
+    # ENOENT means the executable could not be found (e.g. Docker image
+    # intentionally does not have git installed). Return no revision.
+    ''
   end
 
   def self.git_revision_short(project_directory = Dir.pwd)

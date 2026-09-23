@@ -149,11 +149,18 @@ class AdminUsersController < ApplicationController
     set_target_user_from_identifier(params[:user_identifier])
 
     if @target_user
-      @user_scripts = UserScript.
-        where(user_id: @target_user.id).
-        order(updated_at: :desc).
-        limit(100).
-        offset(script_offset)
+      if @target_user.teacher?
+        @sections = @target_user.sections_instructed.includes(:students).order(:name)
+        all_student_ids = @sections.flat_map {|s| s.students.map(&:id)}.uniq
+        script_ids = UserScript.where(user_id: all_student_ids).distinct.pluck(:script_id)
+        @all_scripts = Unit.where(id: script_ids).order(:name).sort.uniq
+      else
+        @user_scripts = UserScript.
+          where(user_id: @target_user.id).
+          order(updated_at: :desc).
+          limit(100).
+          offset(script_offset)
+      end
     end
   end
 

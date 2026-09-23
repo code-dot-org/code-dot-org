@@ -3,7 +3,14 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import QuizBuilderWorkspace from '@cdo/apps/quiz/builder/QuizBuilderWorkspace';
-import {QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
+import {
+  QuizBuilderQuestion,
+  QuizBuilderQuestionsState,
+} from '@cdo/apps/quiz/builder/types';
+import useQuizBuilderQuestions from '@cdo/apps/quiz/builder/useQuizBuilderQuestions';
+
+jest.mock('@cdo/apps/quiz/builder/useQuizBuilderQuestions');
+const mockUseQuizBuilderQuestions = jest.mocked(useQuizBuilderQuestions);
 
 const question = (
   overrides: Partial<QuizBuilderQuestion> = {}
@@ -22,23 +29,42 @@ const question = (
   ...overrides,
 });
 
-const BASE_PROPS = {
-  quizTitle: 'AI Foundations Certification Exam',
+const BASE_STATE: QuizBuilderQuestionsState = {
   questions: [],
   isLoading: false,
   isCreating: false,
   error: null,
   createQuestion: jest.fn(),
+  updateQuestion: jest.fn(),
+  removeQuestion: jest.fn(),
   load: jest.fn(),
 };
 
 function renderWorkspace(
-  overrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
+  stateOverrides: Partial<QuizBuilderQuestionsState> = {}
 ) {
-  return render(<QuizBuilderWorkspace {...BASE_PROPS} {...overrides} />);
+  mockUseQuizBuilderQuestions.mockReturnValue({
+    ...BASE_STATE,
+    ...stateOverrides,
+  });
+  return render(
+    <QuizBuilderWorkspace
+      levelId={42}
+      quizTitle="AI Foundations Certification Exam"
+    />
+  );
 }
 
 describe('QuizBuilderWorkspace', () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+  });
+
+  it('fetches questions for the given level', () => {
+    renderWorkspace();
+    expect(mockUseQuizBuilderQuestions).toHaveBeenCalledWith(42);
+  });
+
   it('shows a loading message while questions load', () => {
     renderWorkspace({isLoading: true});
     expect(screen.getByText('Loading questions…')).toBeInTheDocument();

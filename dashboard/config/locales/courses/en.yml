@@ -5895,7 +5895,7 @@ en:
             #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Foundations of AI Programming unit. However, you can engage with the content in the order that best meets your needs.
           version_title: "'25-'26"
         idaho-digital-literacy-2025:
-          title: Idaho Digital Literacy
+          title: Idaho Digital Literacy (2025)
           description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
           description_student: In Idaho Digital Literacy, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
           description_teacher: |-
@@ -6718,7 +6718,7 @@ en:
           description_teacher: ''
           version_title: 25-26
         idaho-digital-literacy-2026:
-          title: Idaho Digital Literacy
+          title: Idaho Digital Literacy (2026)
           description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
           description_student: In Idaho Digital Literacy, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
           description_teacher: |-
@@ -7599,6 +7599,12 @@ en:
           version_title: ''
         hoai26-playtesting-course:
           title: Hour of AI 2026 Playtesting Course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sprite-lab-design-prototype:
+          title: sprite-lab-design-prototype
           description_short: ''
           description_student: ''
           description_teacher: ''
